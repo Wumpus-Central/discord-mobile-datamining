@@ -1,31 +1,49 @@
 // === Module 16749: ? ===
 
 // Module 16749
-import _mod16750 from "module_16750" /* 16750 */;
-import _mod16752 from "module_16752" /* 16752 */;
-import text from "text" /* 16759 */;
-import _mod16770 from "module_16770" /* 16770 */;
-import _mod16780 from "module_16780" /* 16780 */;
-import _mod16782 from "module_16782" /* 16782 */;
-import _mod16784 from "module_16784" /* 16784 */;
-import _mod16785 from "module_16785" /* 16785 */;
+import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 16750 */;
+import compareKV from "compareKV" /* 16751 */;
+import likelySubtags from "likelySubtags" /* 16754 */;
+import _mod16755 from "module_16755" /* 16755 */;
+import e_mod from "e" /* 1159 */;
 
-if (!_mod16750) {
-  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
-    const tmp3 = _mod16752(arg0);
-    const tmp4 = text(arg1);
-    if (!_mod16782) {
-      if (_mod16770(tmp3, tmp4)) {
-        const tmpResult = _mod16784;
-        return tmpResult(!_mod16780(_mod16785.f, tmp3, tmp4), tmp3[tmp4]);
-      }
-    } else {
-      try {
-        return getOwnPropertyDescriptor(tmp3, tmp4);
-      } catch (err) {
-      }
+const require = globalThis.__r;
+
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod16755, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
+
+export function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
+  } else {
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
     }
-  };
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_16753").parseUnicodeLocaleId(arr3[num3])));
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
+  }
+  return items;
 }
-
-export const f = getOwnPropertyDescriptor;
+export const isStructurallyValidLanguageTag = require("module_16753").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("module_16753").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("module_16753").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("module_16753").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("module_16753").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("module_16753").parseUnicodeLocaleId;

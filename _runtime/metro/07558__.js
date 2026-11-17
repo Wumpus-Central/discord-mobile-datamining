@@ -1,150 +1,99 @@
 // === Module 7558: ? ===
 
 // Module 7558
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod7531 from "module_7531" /* 7531 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-({ Animated, Platform } = get_ActivityIndicator);
-({ add: closure_0, multiply: closure_1 } = Animated);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+const container = StyleSheet.create({ container: { flex: 1 }, content: { flex: 1 }, header: { zIndex: 1 }, absolute: { position: "absolute", top: 0, start: 0, end: 0 } });
 
-export function forUIKit(arg0) {
-  ({ next, layouts } = arg0);
-  let num = 100;
-  let num2 = 100;
-  ({ current, direction } = arg0);
-  if (layouts.leftLabel) {
-    num2 = (layouts.screen.width - layouts.leftLabel.width) / 2 - 27;
+export function Screen(aria_hidden) {
+  const safeAreaInsets = modal(headerStatusBarHeight[4]).useSafeAreaInsets();
+  const context = noop.useContext(modal(headerStatusBarHeight[5]).HeaderShownContext);
+  let num = noop.useContext(modal(headerStatusBarHeight[6]).HeaderHeightContext);
+  modal = aria_hidden.modal;
+  let tmp5 = undefined !== modal;
+  if (tmp5) {
+    tmp5 = modal;
   }
-  if (layouts.title) {
-    num = (layouts.screen.width - layouts.title.width) / 2 - 27;
+  modal = tmp5;
+  const headerShown = aria_hidden.headerShown;
+  let tmp6 = undefined === headerShown;
+  if (!tmp6) {
+    tmp6 = headerShown;
   }
-  const result = layouts.screen.width / 4;
-  let num7 = 1;
-  if ("rtl" === direction) {
-    num7 = -1;
+  ({ headerStatusBarHeight, headerTransparent } = aria_hidden);
+  if (undefined === headerStatusBarHeight) {
+    let num2 = 0;
+    if (!context) {
+      num2 = safeAreaInsets.top;
+    }
+    headerStatusBarHeight = num2;
   }
-  const progress = current.progress;
-  let num8 = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num8 = progress2.interpolate(obj);
+  ({ route, navigation, children, style } = aria_hidden);
+  const obj = modal(headerStatusBarHeight[4]);
+  const frameSize = modal(headerStatusBarHeight[7]).useFrameSize((layout) => _mod7531.getDefaultHeaderHeight(layout, modal, headerStatusBarHeight));
+  const ref = noop.useRef(null);
+  const tmpResult = modal(headerStatusBarHeight[7]);
+  [tmp10, noop] = ref(noop.useState(frameSize), 2);
+  items = [route.name];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    const current = ref.current;
+    if (current != null) {
+      current.measure((arg0, arg1, arg2, arg3) => {
+        closure_1_3(arg3);
+      });
+    }
+  }, items);
+  const obj3 = { "aria-hidden": !aria_hidden.focused, style: null, collapsable: false, children: null };
+  const items1 = [container.container, style];
+  obj3.style = items1;
+  let tmp15Result = null;
+  if (tmp6) {
+    const obj4 = { route, navigation, children: null };
+    const items2 = [container.header, ];
+    let tmp17 = null;
+    if (headerTransparent) {
+      const items3 = [container.absolute, ];
+      const obj5 = { minHeight: tmp10 };
+      items3[1] = obj5;
+      tmp17 = items3;
+    }
+    const obj6 = { style: null, children: null };
+    items2[1] = tmp17;
+    obj6.style = items2;
+    const obj7 = {
+      ref,
+      pointerEvents: "box-none",
+      onLayout(nativeEvent) {
+          noop(nativeEvent.nativeEvent.layout.height);
+        },
+      children: aria_hidden.header
+    };
+    obj6.children = closure_5(closure_4, obj7);
+    obj4.children = closure_5(closure_4, obj6);
+    tmp15Result = closure_5(tmp(tmp2[10]).NavigationProvider, obj4);
   }
-  const tmp2Result = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num8);
-  const obj2 = { leftButtonStyle: null, leftLabelStyle: null, rightButtonStyle: null, titleStyle: null, backgroundStyle: null };
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  obj2.leftButtonStyle = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
-  const obj4 = { transform: null };
-  const obj5 = { translateX: null };
-  const obj6 = { inputRange: [0, 1, 2], outputRange: null };
-  items = [num2, 0, -result];
-  obj6.outputRange = items;
-  obj5.translateX = duration(num7, tmp2Result.interpolate(obj6));
-  const items1 = [obj5];
-  obj4.transform = items1;
-  obj2.leftLabelStyle = obj4;
-  const obj3 = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
-  obj2.rightButtonStyle = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
-  const obj8 = { opacity: tmp2Result.interpolate({ inputRange: [0, 0.5, 0.75, 1, 1.5], outputRange: [0, 0, 0.1, 1, 0] }), transform: null };
-  const obj9 = { translateX: null };
-  const obj10 = { inputRange: [0.5, 1, 2], outputRange: null };
-  const items2 = [result, 0, -num];
-  obj10.outputRange = items2;
-  obj9.translateX = duration(num7, tmp2Result.interpolate(obj10));
-  const items3 = [obj9];
-  obj8.transform = items3;
-  obj2.titleStyle = obj8;
-  const obj11 = { transform: null };
-  const obj12 = { translateX: null };
-  const obj13 = { inputRange: [0, 1, 2], outputRange: null };
-  const items4 = [layouts.screen.width, 0, -layouts.screen.width];
-  obj13.outputRange = items4;
-  obj12.translateX = duration(num7, tmp2Result.interpolate(obj13));
-  const items5 = [obj12];
-  obj11.transform = items5;
-  obj2.backgroundStyle = obj11;
-  return obj2;
-}
-export function forFade(next) {
-  next = next.next;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
+  const items4 = [tmp15Result, ];
+  const obj8 = { style: container.content, children: null };
+  let tmp20 = context;
+  if (!context) {
+    tmp20 = false !== tmp6;
   }
-  const tmpResult = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
-  const interpolateResult1 = tmpResult.interpolate({ inputRange: [0, 1, 2], outputRange: [0, 1, 0] });
-  const obj2 = { leftButtonStyle: { opacity: interpolateResult1 }, rightButtonStyle: { opacity: interpolateResult1 }, titleStyle: { opacity: interpolateResult1 }, backgroundStyle: null };
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  obj2.backgroundStyle = { opacity: tmpResult.interpolate({ inputRange: [0, 1, 1.9, 2], outputRange: [0, 1, 1, 0] }) };
-  return obj2;
-}
-export function forSlideLeft(next) {
-  next = next.next;
-  const screen = next.layouts.screen;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
+  const obj9 = { value: tmp20, children: null };
+  if (!tmp6) {
+    if (num == null) {
+      num = 0;
+    }
   }
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const obj2 = { inputRange: [0, 1, 2], outputRange: null };
-  if ("rtl" === next.direction) {
-    items = [-screen.width, 0, screen.width];
-    let items1 = items;
-  } else {
-    items1 = [screen.width, 0, -screen.width];
-  }
-  const tmpResult = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
-  obj2.outputRange = items1;
-  const items2 = [{ translateX: React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj2) }];
-  return { leftButtonStyle: { transform: items2 }, rightButtonStyle: { transform: items2 }, titleStyle: { transform: items2 }, backgroundStyle: { transform: items2 } };
-}
-export function forSlideRight(next) {
-  next = next.next;
-  const screen = next.layouts.screen;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
-  }
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const obj2 = { inputRange: [0, 1, 2], outputRange: null };
-  if ("rtl" === next.direction) {
-    items = [screen.width, 0, -screen.width];
-    let items1 = items;
-  } else {
-    items1 = [-screen.width, 0, screen.width];
-  }
-  const tmpResult = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
-  obj2.outputRange = items1;
-  const items2 = [{ translateX: React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj2) }];
-  return { leftButtonStyle: { transform: items2 }, rightButtonStyle: { transform: items2 }, titleStyle: { transform: items2 }, backgroundStyle: { transform: items2 } };
-}
-export function forSlideUp(next) {
-  next = next.next;
-  const header = next.layouts.header;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
-  }
-  const obj2 = { translateY: null };
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const obj3 = { inputRange: [0, 1, 2], outputRange: null };
-  items = [-header.height, 0, -header.height];
-  obj3.outputRange = items;
-  obj2.translateY = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj3);
-  const items1 = [obj2];
-  return { leftButtonStyle: { transform: items1 }, rightButtonStyle: { transform: items1 }, titleStyle: { transform: items1 }, backgroundStyle: { transform: items1 } };
-}
-export function forNoAnimation() {
-  return {};
+  obj9.children = closure_5(modal(headerStatusBarHeight[6]).HeaderHeightContext.Provider, { value: tmp10, children });
+  obj8.children = closure_5(modal(headerStatusBarHeight[5]).HeaderShownContext.Provider, obj9);
+  items4[1] = closure_5(closure_4, obj8);
+  obj3.children = items4;
+  return closure_6(modal(headerStatusBarHeight[9]).Background, obj3);
 }

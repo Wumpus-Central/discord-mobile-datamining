@@ -1,192 +1,443 @@
 // === Module 9805: ? ===
 
 // Module 9805
-import _mod9798 from "module_9798" /* 9798 */;
-import _mod9804 from "module_9804" /* 9804 */;
+import errorCallback from "errorCallback" /* 9806 */;
+import _mod9807 from "module_9807" /* 9807 */;
+import _mod9808 from "module_9808" /* 9808 */;
+import _mod9810 from "module_9810" /* 9810 */;
+import _mod9811 from "module_9811" /* 9811 */;
+import _mod9812 from "module_9812" /* 9812 */;
+import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 9813 */;
+import _mod9814 from "module_9814" /* 9814 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 9815 */;
+import _mod9816 from "module_9816" /* 9816 */;
+import _mod9817 from "module_9817" /* 9817 */;
+import _mod9818 from "module_9818" /* 9818 */;
+import _mod9819 from "module_9819" /* 9819 */;
+import generatePropagationContext from "generatePropagationContext" /* 9820 */;
+import _mod9821 from "module_9821" /* 9821 */;
+import _mod9822 from "module_9822" /* 9822 */;
+import _mod9823 from "module_9823" /* 9823 */;
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 9825 */;
+import _mod9826 from "module_9826" /* 9826 */;
+import _mod9827 from "module_9827" /* 9827 */;
+import _mod9828 from "module_9828" /* 9828 */;
+import _mod9829 from "module_9829" /* 9829 */;
+import ScopeClass from "ScopeClass" /* 9831 */;
+import _mod9833 from "module_9833" /* 9833 */;
+import _mod9834 from "module_9834" /* 9834 */;
+import _mod9836 from "module_9836" /* 9836 */;
+import _mod9837 from "module_9837" /* 9837 */;
+import _mod9839 from "module_9839" /* 9839 */;
+import _mod9840 from "module_9840" /* 9840 */;
+import _mod9841 from "module_9841" /* 9841 */;
+import _mod9842 from "module_9842" /* 9842 */;
+import _mod9843 from "module_9843" /* 9843 */;
+import _mod9844 from "module_9844" /* 9844 */;
+import _mod9845 from "module_9845" /* 9845 */;
+import _mod9846 from "module_9846" /* 9846 */;
+import _mod9847 from "module_9847" /* 9847 */;
+import _mod9848 from "module_9848" /* 9848 */;
+import _mod9849 from "module_9849" /* 9849 */;
+import _mod9850 from "module_9850" /* 9850 */;
+import _mod9851 from "module_9851" /* 9851 */;
+import _mod9852 from "module_9852" /* 9852 */;
+import _mod9853 from "module_9853" /* 9853 */;
+import _mod9854 from "module_9854" /* 9854 */;
+import _mod9855 from "module_9855" /* 9855 */;
+import memoBuilder from "memoBuilder" /* 9856 */;
+import _mod9857 from "module_9857" /* 9857 */;
+import _flush from "_flush" /* 9858 */;
+import _mod9859 from "module_9859" /* 9859 */;
+import applyScopeDataToEvent from "applyScopeDataToEvent" /* 9860 */;
+import notifyEventProcessors from "notifyEventProcessors" /* 9861 */;
+import _mod9862 from "module_9862" /* 9862 */;
+import SessionFlusher from "SessionFlusher" /* 9863 */;
+import _mod9864 from "module_9864" /* 9864 */;
+import _mod9865 from "module_9865" /* 9865 */;
+import _mod9866 from "module_9866" /* 9866 */;
+import _mod9867 from "module_9867" /* 9867 */;
+import _mod9868 from "module_9868" /* 9868 */;
+import _mod9869 from "module_9869" /* 9869 */;
+import eventFromMessage from "eventFromMessage" /* 9870 */;
+import _mod9871 from "module_9871" /* 9871 */;
+import _mod9872 from "module_9872" /* 9872 */;
+import _mod9873 from "module_9873" /* 9873 */;
+import _mod9874 from "module_9874" /* 9874 */;
+import _mod9875 from "module_9875" /* 9875 */;
+import _mod9876 from "module_9876" /* 9876 */;
+import _mod9877 from "module_9877" /* 9877 */;
+import _mod9878 from "module_9878" /* 9878 */;
+import _mod9879 from "module_9879" /* 9879 */;
+import _mod9880 from "module_9880" /* 9880 */;
+import _mod9881 from "module_9881" /* 9881 */;
+import _mod9882 from "module_9882" /* 9882 */;
+import _mod9883 from "module_9883" /* 9883 */;
+import _mod9884 from "module_9884" /* 9884 */;
+import _getEventFilterUrl from "_getEventFilterUrl" /* 9885 */;
+import _mod9886 from "module_9886" /* 9886 */;
+import _mod9887 from "module_9887" /* 9887 */;
+import _mod9888 from "module_9888" /* 9888 */;
+import _mod9890 from "module_9890" /* 9890 */;
+import extractRequestData from "extractRequestData" /* 9891 */;
+import stripUrlQueryAndFragment from "stripUrlQueryAndFragment" /* 9892 */;
+import _mod9895 from "module_9895" /* 9895 */;
+import _mod9896 from "module_9896" /* 9896 */;
+import _mod9897 from "module_9897" /* 9897 */;
+import debugIntegration from "debugIntegration" /* 9898 */;
+import _mod9899 from "module_9899" /* 9899 */;
+import extraErrorDataIntegration from "extraErrorDataIntegration" /* 9900 */;
+import _mod9901 from "module_9901" /* 9901 */;
+import _mod9902 from "module_9902" /* 9902 */;
+import sessionTimingIntegration from "sessionTimingIntegration" /* 9903 */;
+import _mod9904 from "module_9904" /* 9904 */;
+import _mod9905 from "module_9905" /* 9905 */;
+import _mod9906 from "module_9906" /* 9906 */;
+import _mod9908 from "module_9908" /* 9908 */;
+import metricsDefault from "metricsDefault" /* 9909 */;
+import BrowserMetricsAggregator from "BrowserMetricsAggregator" /* 9914 */;
+import _mod9915 from "module_9915" /* 9915 */;
+import _mod9916 from "module_9916" /* 9916 */;
+import _mod9917 from "module_9917" /* 9917 */;
+import _mod9918 from "module_9918" /* 9918 */;
+import _mod9919 from "module_9919" /* 9919 */;
+import _mod9920 from "module_9920" /* 9920 */;
+import _mod9921 from "module_9921" /* 9921 */;
+import supportsFetch from "supportsFetch" /* 9922 */;
+import _mod9923 from "module_9923" /* 9923 */;
+import _mod9924 from "module_9924" /* 9924 */;
+import _mod9925 from "module_9925" /* 9925 */;
+import _mod9926 from "module_9926" /* 9926 */;
+import _mod9927 from "module_9927" /* 9927 */;
+import _mod9928 from "module_9928" /* 9928 */;
+import _mod9929 from "module_9929" /* 9929 */;
+import _mod9930 from "module_9930" /* 9930 */;
+import _mod9931 from "module_9931" /* 9931 */;
+import supportsHistory from "supportsHistory" /* 9932 */;
+import _asyncNullishCoalesce2 from "_asyncNullishCoalesce2" /* 9933 */;
+import _nullishCoalesce from "_nullishCoalesce" /* 9934 */;
+import _asyncOptionalChain2 from "_asyncOptionalChain2" /* 9935 */;
+import _asyncOptionalChainDelete2 from "_asyncOptionalChainDelete2" /* 9936 */;
+import _optionalChain from "_optionalChain" /* 9937 */;
+import _optionalChainDelete from "_optionalChainDelete" /* 9938 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function _htmlElementAsString(tagName, arr) {
-  items = [];
-  if (tagName) {
-    if (tagName.tagName) {
-      if (_mod9798.GLOBAL_OBJ.HTMLElement) {
-        if (tagName instanceof globalThis.HTMLElement) {
-          if (tagName.dataset) {
-            const dataset = tagName.dataset;
-            if (tagName.dataset.sentryComponent) {
-              return dataset.sentryComponent;
-            } else if (dataset.sentryElement) {
-              return tagName.dataset.sentryElement;
-            }
-          }
-        }
-      }
-      arr = items.push(tagName.tagName.toLowerCase());
-      let mapped = null;
-      if (arr) {
-        mapped = null;
-        if (arr.length) {
-          const found = arr.filter((item) => tagName.getAttribute(item));
-          mapped = found.map((item) => {
-            items = [item, tagName.getAttribute(item)];
-            return items;
-          });
-        }
-      }
-      if (mapped) {
-        if (mapped.length) {
-          const item = mapped.forEach((item) => {
-            items.push("[" + item[0] + "=\"" + item[1] + "\"]");
-          });
-        }
-        const items1 = ["aria-label", "type", "name", "title", "alt"];
-        const iter = items1[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp22 = nextResult;
-          let attr = tagName.getAttribute(nextResult);
-          if (attr) {
-            let _HermesInternal3 = HermesInternal;
-            let str8 = "[";
-            let str9 = "=\"";
-            let str10 = "\"]";
-            let arr2 = items.push("[" + tmp22 + "=\"" + tmp24 + "\"]");
-          }
-          continue;
-        }
-        return items.join("");
-      }
-      if (tagName.id) {
-        const _HermesInternal = HermesInternal;
-        items.push("#" + tagName.id);
-      }
-      if (tagName.className) {
-        if (tmpResult.isString(str3)) {
-          const parts = str3.split(/\s+/);
-          const tmp11 = parts[Symbol.iterator]();
-          while (tmp11 !== undefined) {
-            let _HermesInternal2 = HermesInternal;
-            let arr7 = items.push("." + tmp14);
-            continue;
-          }
-        }
-        tmpResult = _mod9804;
-      }
-    }
-  }
-  return "";
-}
+const require = globalThis.__r;
 
-export function getComponentName(arg0) {
-  let parentNode = arg0;
-  let num = 0;
-  if (_mod9798.GLOBAL_OBJ.HTMLElement) {
-    while (parentNode) {
-      if (parentNode instanceof globalThis.HTMLElement) {
-        let dataset = parentNode.dataset;
-        if (parentNode.dataset.sentryComponent) {
-          return dataset.sentryComponent;
-        } else if (dataset.sentryElement) {
-          return parentNode.dataset.sentryElement;
-        }
-      }
-      parentNode = parentNode.parentNode;
-      num = num + 1;
-      if (num < 5) {
-        continue;
-      } else {
-        return null;
-      }
-    }
-    return null;
-  } else {
-    return null;
-  }
-}
-export function getDomElement(arg0) {
-  let element = null;
-  if (_mod9798.GLOBAL_OBJ.document) {
-    element = null;
-    if (_mod9798.GLOBAL_OBJ.document.querySelector) {
-      const _document = _mod9798.GLOBAL_OBJ.document;
-      element = _document.querySelector(arg0);
-    }
-  }
-  return element;
-}
-export function getLocationHref() {
-  try {
-    return _mod9798.GLOBAL_OBJ.document.location.href;
-  } catch (err) {
-    return "";
-  }
-}
-export function htmlTreeAsString(arg0) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  if (arg0) {
-    try {
-      let tmp = arg0;
-      items = [];
-      let num2 = 0;
-      const _Array = Array;
-      let keyAttrs = obj;
-      if (!Array.isArray(obj)) {
-        keyAttrs = obj.keyAttrs;
-      }
-      const _Array2 = Array;
-      const isArray = Array.isArray(obj);
-      let num3 = !isArray;
-      if (!isArray) {
-        num3 = obj.maxStringLength;
-      }
-      if (!num3) {
-        num3 = 80;
-      }
-      if (tmp) {
-        let sum = tmp7 + 1;
-        if (+0 < 5) {
-          const tmp33 = _htmlElementAsString(tmp, tmp3);
-          let arr2 = tmp33;
-          if ("html" !== tmp33) {
-            if (sum <= 1) {
-              items.push(arr2);
-              num2 = num2 + arr2.length;
-              const parentNode = tmp.parentNode;
-              tmp = parentNode;
-              while (parentNode) {
-                let tmp19 = +sum;
-                sum = tmp19 + 1;
-                if (tmp19 >= 5) {
-                  break;
-                } else {
-                  let tmp23 = _htmlElementAsString(tmp, tmp3);
-                  arr2 = tmp23;
-                  if ("html" === tmp23) {
-                    break;
-                  } else {
-                    if (sum <= 1) {
-                      continue;
-                    } else if (num2 + 3 * items.length + arr2.length >= num3) {
-                      break;
-                    }
-                    continue;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      const reversed = items.reverse();
-      return reversed.join(" > ");
-    } catch (err) {
-      return "<unknown>";
-    }
-  } else {
-    return "<unknown>";
-  }
-}
+
+export const registerSpanErrorInstrumentation = errorCallback.registerSpanErrorInstrumentation;
+export const getCapturedScopesOnSpan = _mod9839.getCapturedScopesOnSpan;
+export const setCapturedScopesOnSpan = _mod9839.setCapturedScopesOnSpan;
+export const addTracingExtensions = _mod9840.addTracingExtensions;
+export const TRACING_DEFAULTS = _mod9841.TRACING_DEFAULTS;
+export const startIdleSpan = _mod9841.startIdleSpan;
+export const SentrySpan = _mod9851.SentrySpan;
+export const SentryNonRecordingSpan = _mod9843.SentryNonRecordingSpan;
+export const SPAN_STATUS_ERROR = _mod9827.SPAN_STATUS_ERROR;
+export const SPAN_STATUS_OK = _mod9827.SPAN_STATUS_OK;
+export const SPAN_STATUS_UNSET = _mod9827.SPAN_STATUS_UNSET;
+export const getSpanStatusFromHttpCode = _mod9827.getSpanStatusFromHttpCode;
+export const setHttpStatus = _mod9827.setHttpStatus;
+export const continueTrace = _mod9844.continueTrace;
+export const startInactiveSpan = _mod9844.startInactiveSpan;
+export const startNewTrace = _mod9844.startNewTrace;
+export const startSpan = _mod9844.startSpan;
+export const startSpanManual = _mod9844.startSpanManual;
+export const suppressTracing = _mod9844.suppressTracing;
+export const withActiveSpan = _mod9844.withActiveSpan;
+export const getDynamicSamplingContextFromClient = _mod9846.getDynamicSamplingContextFromClient;
+export const getDynamicSamplingContextFromScope = _mod9846.getDynamicSamplingContextFromScope;
+export const getDynamicSamplingContextFromSpan = _mod9846.getDynamicSamplingContextFromSpan;
+export const spanToBaggageHeader = _mod9846.spanToBaggageHeader;
+export const setMeasurement = _mod9852.setMeasurement;
+export const timedEventsToMeasurements = _mod9852.timedEventsToMeasurements;
+export const sampleSpan = _mod9849.sampleSpan;
+export const logSpanEnd = _mod9848.logSpanEnd;
+export const logSpanStart = _mod9848.logSpanStart;
+export const SEMANTIC_ATTRIBUTE_CACHE_HIT = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_CACHE_HIT;
+export const SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE;
+export const SEMANTIC_ATTRIBUTE_CACHE_KEY = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_CACHE_KEY;
+export const SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME;
+export const SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD;
+export const SEMANTIC_ATTRIBUTE_PROFILE_ID = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_PROFILE_ID;
+export const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME;
+export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON;
+export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT;
+export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE;
+export const SEMANTIC_ATTRIBUTE_SENTRY_OP = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP;
+export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN;
+export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE;
+export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE;
+export const SEMANTIC_ATTRIBUTE_URL_FULL = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_URL_FULL;
+export const createEventEnvelope = _mod9853.createEventEnvelope;
+export const createSessionEnvelope = _mod9853.createSessionEnvelope;
+export const createSpanEnvelope = _mod9853.createSpanEnvelope;
+export const addEventProcessor = _flush.addEventProcessor;
+export const captureCheckIn = _flush.captureCheckIn;
+export const captureEvent = _flush.captureEvent;
+export const captureException = _flush.captureException;
+export const captureMessage = _flush.captureMessage;
+export const captureSession = _flush.captureSession;
+export const close = _flush.close;
+export const endSession = _flush.endSession;
+export const flush = _flush.flush;
+export const isEnabled = _flush.isEnabled;
+export const isInitialized = _flush.isInitialized;
+export const lastEventId = _flush.lastEventId;
+export const setContext = _flush.setContext;
+export const setExtra = _flush.setExtra;
+export const setExtras = _flush.setExtras;
+export const setTag = _flush.setTag;
+export const setTags = _flush.setTags;
+export const setUser = _flush.setUser;
+export const startSession = _flush.startSession;
+export const withMonitor = _flush.withMonitor;
+export const getClient = _mod9837.getClient;
+export const getCurrentScope = _mod9837.getCurrentScope;
+export const getGlobalScope = _mod9837.getGlobalScope;
+export const getIsolationScope = _mod9837.getIsolationScope;
+export const getTraceContextFromScope = _mod9837.getTraceContextFromScope;
+export const withIsolationScope = _mod9837.withIsolationScope;
+export const withScope = _mod9837.withScope;
+export const getDefaultCurrentScope = _mod9836.getDefaultCurrentScope;
+export const getDefaultIsolationScope = _mod9836.getDefaultIsolationScope;
+export const setAsyncContextStrategy = _mod9829.setAsyncContextStrategy;
+export const getMainCarrier = _mod9828.getMainCarrier;
+export const closeSession = _mod9833.closeSession;
+export const makeSession = _mod9833.makeSession;
+export const updateSession = _mod9833.updateSession;
+export const SessionFlusher = SessionFlusher.SessionFlusher;
+export const Scope = ScopeClass.Scope;
+export const notifyEventProcessors = notifyEventProcessors.notifyEventProcessors;
+export const getEnvelopeEndpointWithUrlEncodedAuth = _mod9864.getEnvelopeEndpointWithUrlEncodedAuth;
+export const getReportDialogEndpoint = _mod9864.getReportDialogEndpoint;
+export const BaseClient = _mod9865.BaseClient;
+export const ServerRuntimeClient = _mod9869.ServerRuntimeClient;
+export const initAndBind = _mod9872.initAndBind;
+export const setCurrentClient = _mod9872.setCurrentClient;
+export const createTransport = _mod9873.createTransport;
+export const makeOfflineTransport = _mod9876.makeOfflineTransport;
+export const makeMultiplexedTransport = _mod9877.makeMultiplexedTransport;
+export const addIntegration = _mod9866.addIntegration;
+export const defineIntegration = _mod9866.defineIntegration;
+export const getIntegrationsToSetup = _mod9866.getIntegrationsToSetup;
+export const applyScopeDataToEvent = applyScopeDataToEvent.applyScopeDataToEvent;
+export const mergeScopeData = applyScopeDataToEvent.mergeScopeData;
+export const prepareEvent = _mod9859.prepareEvent;
+export const createCheckInEnvelope = _mod9871.createCheckInEnvelope;
+export const hasTracingEnabled = _mod9842.hasTracingEnabled;
+export const isSentryRequestUrl = _mod9878.isSentryRequestUrl;
+export const handleCallbackErrors = _mod9845.handleCallbackErrors;
+export const parameterize = _mod9879.parameterize;
+export const addChildSpanToSpan = spanTimeInputToSeconds.addChildSpanToSpan;
+export const getActiveSpan = spanTimeInputToSeconds.getActiveSpan;
+export const getRootSpan = spanTimeInputToSeconds.getRootSpan;
+export const getSpanDescendants = spanTimeInputToSeconds.getSpanDescendants;
+export const getStatusMessage = spanTimeInputToSeconds.getStatusMessage;
+export const spanIsSampled = spanTimeInputToSeconds.spanIsSampled;
+export const spanTimeInputToSeconds = spanTimeInputToSeconds.spanTimeInputToSeconds;
+export const spanToJSON = spanTimeInputToSeconds.spanToJSON;
+export const spanToTraceContext = spanTimeInputToSeconds.spanToTraceContext;
+export const spanToTraceHeader = spanTimeInputToSeconds.spanToTraceHeader;
+export const updateSpanName = spanTimeInputToSeconds.updateSpanName;
+export const parseSampleRate = _mod9850.parseSampleRate;
+export const applySdkMetadata = _mod9880.applySdkMetadata;
+export const getTraceData = _mod9881.getTraceData;
+export const getTraceMetaTags = _mod9882.getTraceMetaTags;
+export const DEFAULT_ENVIRONMENT = _mod9847.DEFAULT_ENVIRONMENT;
+export const addBreadcrumb = _mod9883.addBreadcrumb;
+export const functionToStringIntegration = _mod9884.functionToStringIntegration;
+export const inboundFiltersIntegration = _getEventFilterUrl.inboundFiltersIntegration;
+export const linkedErrorsIntegration = _mod9886.linkedErrorsIntegration;
+export const moduleMetadataIntegration = _mod9888.moduleMetadataIntegration;
+export const requestDataIntegration = _mod9890.requestDataIntegration;
+export const captureConsoleIntegration = _mod9895.captureConsoleIntegration;
+export const debugIntegration = debugIntegration.debugIntegration;
+export const dedupeIntegration = _mod9899.dedupeIntegration;
+export const extraErrorDataIntegration = extraErrorDataIntegration.extraErrorDataIntegration;
+export const rewriteFramesIntegration = _mod9901.rewriteFramesIntegration;
+export const sessionTimingIntegration = sessionTimingIntegration.sessionTimingIntegration;
+export const zodErrorsIntegration = _mod9904.zodErrorsIntegration;
+export const thirdPartyErrorFilterIntegration = _mod9905.thirdPartyErrorFilterIntegration;
+export const metrics = _mod9906.metrics;
+export const profiler = _mod9908.profiler;
+export const metricsDefault = metricsDefault.metricsDefault;
+export const BrowserMetricsAggregator = BrowserMetricsAggregator.BrowserMetricsAggregator;
+export const getMetricSummaryJsonForSpan = _mod9826.getMetricSummaryJsonForSpan;
+export const addTracingHeadersToFetchRequest = _mod9915.addTracingHeadersToFetchRequest;
+export const instrumentFetchRequest = _mod9915.instrumentFetchRequest;
+export const trpcMiddleware = _mod9916.trpcMiddleware;
+export const captureFeedback = _mod9917.captureFeedback;
+export const getCurrentHub = _mod9918.getCurrentHub;
+export const getCurrentHubShim = _mod9918.getCurrentHubShim;
+export const applyAggregateErrorsToEvent = _mod9887.applyAggregateErrorsToEvent;
+export const flatten = _mod9919.flatten;
+export const getBreadcrumbLogLevelFromHttpStatusCode = _mod9920.getBreadcrumbLogLevelFromHttpStatusCode;
+export const getComponentName = _mod9818.getComponentName;
+export const getDomElement = _mod9818.getDomElement;
+export const getLocationHref = _mod9818.getLocationHref;
+export const htmlTreeAsString = _mod9818.htmlTreeAsString;
+export const dsnFromString = _mod9857.dsnFromString;
+export const dsnToString = _mod9857.dsnToString;
+export const makeDsn = _mod9857.makeDsn;
+export const SentryError = _mod9867.SentryError;
+export const GLOBAL_OBJ = _mod9811.GLOBAL_OBJ;
+export const getGlobalSingleton = _mod9811.getGlobalSingleton;
+export const addConsoleInstrumentationHandler = _mod9896.addConsoleInstrumentationHandler;
+export const addFetchEndInstrumentationHandler = _mod9921.addFetchEndInstrumentationHandler;
+export const addFetchInstrumentationHandler = _mod9921.addFetchInstrumentationHandler;
+export const addGlobalErrorInstrumentationHandler = _mod9807.addGlobalErrorInstrumentationHandler;
+export const addGlobalUnhandledRejectionInstrumentationHandler = _mod9814.addGlobalUnhandledRejectionInstrumentationHandler;
+export const addHandler = _mod9808.addHandler;
+export const maybeInstrument = _mod9808.maybeInstrument;
+export const resetInstrumentationHandlers = _mod9808.resetInstrumentationHandlers;
+export const triggerHandlers = _mod9808.triggerHandlers;
+export const isDOMError = _mod9817.isDOMError;
+export const isDOMException = _mod9817.isDOMException;
+export const isElement = _mod9817.isElement;
+export const isError = _mod9817.isError;
+export const isErrorEvent = _mod9817.isErrorEvent;
+export const isEvent = _mod9817.isEvent;
+export const isInstanceOf = _mod9817.isInstanceOf;
+export const isParameterizedString = _mod9817.isParameterizedString;
+export const isPlainObject = _mod9817.isPlainObject;
+export const isPrimitive = _mod9817.isPrimitive;
+export const isRegExp = _mod9817.isRegExp;
+export const isString = _mod9817.isString;
+export const isSyntheticEvent = _mod9817.isSyntheticEvent;
+export const isThenable = _mod9817.isThenable;
+export const isVueViewModel = _mod9817.isVueViewModel;
+export const isBrowser = _mod9923.isBrowser;
+export const CONSOLE_LEVELS = _mod9810.CONSOLE_LEVELS;
+export const consoleSandbox = _mod9810.consoleSandbox;
+export const logger = _mod9810.logger;
+export const originalConsoleMethods = _mod9810.originalConsoleMethods;
+export const memoBuilder = memoBuilder.memoBuilder;
+export const addContextToFrame = _mod9821.addContextToFrame;
+export const addExceptionMechanism = _mod9821.addExceptionMechanism;
+export const addExceptionTypeValue = _mod9821.addExceptionTypeValue;
+export const arrayify = _mod9821.arrayify;
+export const checkOrSetAlreadyCaught = _mod9821.checkOrSetAlreadyCaught;
+export const getEventDescription = _mod9821.getEventDescription;
+export const parseSemver = _mod9821.parseSemver;
+export const uuid4 = _mod9821.uuid4;
+export const dynamicRequire = _mod9924.dynamicRequire;
+export const isNodeEnv = _mod9924.isNodeEnv;
+export const loadModule = _mod9924.loadModule;
+export const normalize = _mod9855.normalize;
+export const normalizeToSize = _mod9855.normalizeToSize;
+export const normalizeUrlToBase = _mod9855.normalizeUrlToBase;
+export const addNonEnumerableProperty = _mod9816.addNonEnumerableProperty;
+export const convertToPlainObject = _mod9816.convertToPlainObject;
+export const dropUndefinedKeys = _mod9816.dropUndefinedKeys;
+export const extractExceptionKeysForMessage = _mod9816.extractExceptionKeysForMessage;
+export const fill = _mod9816.fill;
+export const getOriginalFunction = _mod9816.getOriginalFunction;
+export const markFunctionWrapped = _mod9816.markFunctionWrapped;
+export const objectify = _mod9816.objectify;
+export const urlEncode = _mod9816.urlEncode;
+export const basename = _mod9902.basename;
+export const dirname = _mod9902.dirname;
+export const isAbsolute = _mod9902.isAbsolute;
+export const join = _mod9902.join;
+export const normalizePath = _mod9902.normalizePath;
+export const relative = _mod9902.relative;
+export const resolve = _mod9902.resolve;
+export const makePromiseBuffer = _mod9874.makePromiseBuffer;
+export const DEFAULT_USER_INCLUDES = extractRequestData.DEFAULT_USER_INCLUDES;
+export const addNormalizedRequestDataToEvent = extractRequestData.addNormalizedRequestDataToEvent;
+export const addRequestDataToEvent = extractRequestData.addRequestDataToEvent;
+export const extractPathForTransaction = extractRequestData.extractPathForTransaction;
+export const extractQueryParamsFromUrl = extractRequestData.extractQueryParamsFromUrl;
+export const extractRequestData = extractRequestData.extractRequestData;
+export const headersToDict = extractRequestData.headersToDict;
+export const httpRequestToRequestData = extractRequestData.httpRequestToRequestData;
+export const winterCGHeadersToDict = extractRequestData.winterCGHeadersToDict;
+export const winterCGRequestToRequestData = extractRequestData.winterCGRequestToRequestData;
+export const severityLevelFromString = _mod9897.severityLevelFromString;
+export const validSeverityLevels = _mod9897.validSeverityLevels;
+export const UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
+export const createStackParser = stackParserFromStackParserOptions.createStackParser;
+export const getFramesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent;
+export const getFunctionName = stackParserFromStackParserOptions.getFunctionName;
+export const stackParserFromStackParserOptions = stackParserFromStackParserOptions.stackParserFromStackParserOptions;
+export const stripSentryFramesAndReverse = stackParserFromStackParserOptions.stripSentryFramesAndReverse;
+export const filenameIsInApp = _mod9926.filenameIsInApp;
+export const node = _mod9926.node;
+export const nodeStackLineParser = _mod9926.nodeStackLineParser;
+export const isMatchingPattern = _mod9819.isMatchingPattern;
+export const safeJoin = _mod9819.safeJoin;
+export const snipLine = _mod9819.snipLine;
+export const stringMatchesSomePattern = _mod9819.stringMatchesSomePattern;
+export const truncate = _mod9819.truncate;
+export const isNativeFunction = supportsFetch.isNativeFunction;
+export const supportsDOMError = supportsFetch.supportsDOMError;
+export const supportsDOMException = supportsFetch.supportsDOMException;
+export const supportsErrorEvent = supportsFetch.supportsErrorEvent;
+export const supportsFetch = supportsFetch.supportsFetch;
+export const supportsNativeFetch = supportsFetch.supportsNativeFetch;
+export const supportsReferrerPolicy = supportsFetch.supportsReferrerPolicy;
+export const supportsReportingObserver = supportsFetch.supportsReportingObserver;
+export const SyncPromise = _mod9834.SyncPromise;
+export const rejectedSyncPromise = _mod9834.rejectedSyncPromise;
+export const resolvedSyncPromise = _mod9834.resolvedSyncPromise;
+export const _browserPerformanceTimeOriginMode = require("module_9824")._browserPerformanceTimeOriginMode;
+export const browserPerformanceTimeOrigin = require("module_9824").browserPerformanceTimeOrigin;
+export const dateTimestampInSeconds = require("module_9824").dateTimestampInSeconds;
+export const timestampInSeconds = require("module_9824").timestampInSeconds;
+export const TRACEPARENT_REGEXP = _mod9822.TRACEPARENT_REGEXP;
+export const extractTraceparentData = _mod9822.extractTraceparentData;
+export const generateSentryTraceHeader = _mod9822.generateSentryTraceHeader;
+export const propagationContextFromHeaders = _mod9822.propagationContextFromHeaders;
+export const getSDKSource = _mod9925.getSDKSource;
+export const isBrowserBundle = _mod9925.isBrowserBundle;
+export const addItemToEnvelope = _mod9854.addItemToEnvelope;
+export const createAttachmentEnvelopeItem = _mod9854.createAttachmentEnvelopeItem;
+export const createEnvelope = _mod9854.createEnvelope;
+export const createEventEnvelopeHeaders = _mod9854.createEventEnvelopeHeaders;
+export const createSpanEnvelopeItem = _mod9854.createSpanEnvelopeItem;
+export const envelopeContainsItemType = _mod9854.envelopeContainsItemType;
+export const envelopeItemTypeToDataCategory = _mod9854.envelopeItemTypeToDataCategory;
+export const forEachEnvelopeItem = _mod9854.forEachEnvelopeItem;
+export const getSdkMetadataForEnvelopeHeader = _mod9854.getSdkMetadataForEnvelopeHeader;
+export const parseEnvelope = _mod9854.parseEnvelope;
+export const serializeEnvelope = _mod9854.serializeEnvelope;
+export const createClientReportEnvelope = _mod9868.createClientReportEnvelope;
+export const DEFAULT_RETRY_AFTER = _mod9875.DEFAULT_RETRY_AFTER;
+export const disabledUntil = _mod9875.disabledUntil;
+export const isRateLimited = _mod9875.isRateLimited;
+export const parseRetryAfterHeader = _mod9875.parseRetryAfterHeader;
+export const updateRateLimits = _mod9875.updateRateLimits;
+export const BAGGAGE_HEADER_NAME = _mod9823.BAGGAGE_HEADER_NAME;
+export const MAX_BAGGAGE_STRING_LENGTH = _mod9823.MAX_BAGGAGE_STRING_LENGTH;
+export const SENTRY_BAGGAGE_KEY_PREFIX = _mod9823.SENTRY_BAGGAGE_KEY_PREFIX;
+export const SENTRY_BAGGAGE_KEY_PREFIX_REGEX = _mod9823.SENTRY_BAGGAGE_KEY_PREFIX_REGEX;
+export const baggageHeaderToDynamicSamplingContext = _mod9823.baggageHeaderToDynamicSamplingContext;
+export const dynamicSamplingContextToSentryBaggageHeader = _mod9823.dynamicSamplingContextToSentryBaggageHeader;
+export const parseBaggageHeader = _mod9823.parseBaggageHeader;
+export const getNumberOfUrlSegments = stripUrlQueryAndFragment.getNumberOfUrlSegments;
+export const getSanitizedUrlString = stripUrlQueryAndFragment.getSanitizedUrlString;
+export const parseUrl = stripUrlQueryAndFragment.parseUrl;
+export const stripUrlQueryAndFragment = stripUrlQueryAndFragment.stripUrlQueryAndFragment;
+export const makeFifoCache = _mod9927.makeFifoCache;
+export const eventFromMessage = eventFromMessage.eventFromMessage;
+export const eventFromUnknownInput = eventFromMessage.eventFromUnknownInput;
+export const exceptionFromError = eventFromMessage.exceptionFromError;
+export const parseStackFrames = eventFromMessage.parseStackFrames;
+export const callFrameToStackFrame = _mod9928.callFrameToStackFrame;
+export const watchdogTimer = _mod9928.watchdogTimer;
+export const LRUMap = _mod9929.LRUMap;
+export const generatePropagationContext = generatePropagationContext.generatePropagationContext;
+export const generateSpanId = generatePropagationContext.generateSpanId;
+export const generateTraceId = generatePropagationContext.generateTraceId;
+export const vercelWaitUntil = _mod9930.vercelWaitUntil;
+export const SDK_VERSION = _mod9812.SDK_VERSION;
+export const getDebugImagesForResources = _mod9862.getDebugImagesForResources;
+export const getFilenameToDebugIdMap = _mod9862.getFilenameToDebugIdMap;
+export const escapeStringForRegex = _mod9931.escapeStringForRegex;
+export const supportsHistory = supportsHistory.supportsHistory;
+export const _asyncNullishCoalesce = _asyncNullishCoalesce2._asyncNullishCoalesce;
+export const _asyncOptionalChain = _asyncOptionalChain2._asyncOptionalChain;
+export const _asyncOptionalChainDelete = _asyncOptionalChainDelete2._asyncOptionalChainDelete;
+export const _nullishCoalesce = _nullishCoalesce._nullishCoalesce;
+export const _optionalChain = _optionalChain._optionalChain;
+export const _optionalChainDelete = _optionalChainDelete._optionalChainDelete;

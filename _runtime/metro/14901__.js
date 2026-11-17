@@ -1,7 +1,18 @@
 // === Module 14901: ? ===
 
 // Module 14901
-import registerAsset from "module_1119" /* 1119 */;
+import _mod14852 from "module_14852" /* 14852 */;
 
+const CDC = _mod14852.TYPE.CDC;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "76fb8109cdd9e459537ee050fc2f3187", name: "ic_header_members_24px", type: "png" });
+export default {
+  name: "CDC",
+  structure: [],
+  parse() {
+    this.eat(CDC);
+    return { type: "CDC", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart) };
+  },
+  generate() {
+    this.chunk("-->");
+  }
+};

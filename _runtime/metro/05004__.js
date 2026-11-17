@@ -1,20 +1,20 @@
 // === Module 5004: ? ===
 
 // Module 5004
-import module_4589_mod from "module_4589" /* 4589 */;
-import _typeof_mod from "module_4585" /* 4585 */;
-import module_4733_mod from "module_4733" /* 4733 */;
-import module_4856_mod from "module_4856" /* 4856 */;
-import requiredArgs_mod from "requiredArgs" /* 4586 */;
+import _mod4594 from "module_4594" /* 4594 */;
+import module_4737_mod from "module_4737" /* 4737 */;
+import _typeof_mod from "module_4589" /* 4589 */;
+import module_4593_mod from "module_4593" /* 4593 */;
+import requiredArgs_mod from "requiredArgs" /* 4590 */;
 
-let module_4589 = module_4589_mod;
-if (!module_4589) {
-  const obj = { default: module_4589 };
+let module_4737 = module_4737_mod;
+if (!module_4737) {
+  const obj = { default: module_4737 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4589;
+  tmp3 = module_4737;
 }
-module_4589 = tmp3;
+module_4737 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -23,34 +23,89 @@ if (!_typeof) {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
-let module_4733 = module_4733_mod;
-if (!module_4733) {
-  const obj3 = { default: module_4733 };
+let module_4593 = module_4593_mod;
+if (!module_4593) {
+  const obj3 = { default: module_4593 };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4733;
+  tmp7 = module_4593;
 }
-module_4733 = tmp7;
-let module_4856 = module_4856_mod;
-if (!module_4856) {
-  const obj4 = { default: module_4856 };
-  let tmp9 = obj4;
-} else {
-  tmp9 = module_4856;
-}
-module_4856 = tmp9;
+module_4593 = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj5 = { default: requiredArgs };
-  let tmp11 = obj5;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
-  tmp11 = requiredArgs;
+  tmp9 = requiredArgs;
 }
-requiredArgs = tmp11;
+requiredArgs = tmp9;
 
-export default function setISODay(arg0, arg1) {
+export default function setDay(arg0, arg1, weekStartsOn) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  return module_4733.default(defaultResult1, module_4589.default(arg1) - module_4856.default(defaultResult1));
+  const defaultOptions = _mod4594.getDefaultOptions();
+  weekStartsOn = undefined;
+  if (null != weekStartsOn) {
+    weekStartsOn = weekStartsOn.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    let weekStartsOn1;
+    if (null != weekStartsOn) {
+      const locale = weekStartsOn.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              weekStartsOn1 = options.weekStartsOn;
+            }
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn1;
+  }
+  if (null === weekStartsOn) {
+    weekStartsOn = defaultOptions.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    const locale2 = defaultOptions.locale;
+    let weekStartsOn2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            weekStartsOn2 = options2.weekStartsOn;
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn2;
+  }
+  let num = 0;
+  if (null !== weekStartsOn) {
+    num = 0;
+    if (undefined !== weekStartsOn) {
+      num = weekStartsOn;
+    }
+  }
+  const defaultResult1 = module_4593.default(num);
+  if (defaultResult1 >= 0) {
+    if (defaultResult1 <= 6) {
+      const defaultResult2 = _typeof.default(arg0);
+      const defaultResult3 = module_4593.default(arg1);
+      const day = defaultResult2.getDay();
+      const diff = 7 - defaultResult1;
+      if (defaultResult3 >= 0) {
+        if (defaultResult3 <= 6) {
+          let diff1 = ((defaultResult3 % 7 + 7) % 7 + diff) % 7 - (day + diff) % 7;
+        }
+        return module_4737.default(defaultResult2, diff1);
+      }
+      diff1 = defaultResult3 - (day + diff) % 7;
+    }
+  }
+  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  throw rangeError;
 };
 export default exports.default;

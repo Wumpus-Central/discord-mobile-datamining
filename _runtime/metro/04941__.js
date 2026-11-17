@@ -1,17 +1,17 @@
 // === Module 4941: ? ===
 
 // Module 4941
-import module_4930_mod from "module_4930" /* 4930 */;
-import requiredArgs_mod from "requiredArgs" /* 4586 */;
+import startOfQuarter_mod from "startOfQuarter" /* 4801 */;
+import requiredArgs_mod from "requiredArgs" /* 4590 */;
 
-let module_4930 = module_4930_mod;
-if (!module_4930) {
-  const obj = { default: module_4930 };
+let startOfQuarter = startOfQuarter_mod;
+if (!startOfQuarter) {
+  const obj = { default: startOfQuarter };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4930;
+  tmp3 = startOfQuarter;
 }
-module_4930 = tmp3;
+startOfQuarter = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisHour(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4930.default(Date.now(), arg0);
+export default function isSameQuarter(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfQuarter.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfQuarter.default(arg1).getTime();
 };
 export default exports.default;

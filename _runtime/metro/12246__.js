@@ -1,140 +1,85 @@
 // === Module 12246: ? ===
 
 // Module 12246
-import _mod12158 from "module_12158" /* 12158 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 12100 */;
+import _mod12247 from "module_12247" /* 12247 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const require = globalThis.__r;
-
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const UKTimeUnitWithinFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+}
+let closure_6 = "(?:(?:\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E|\u043E\u0440\u0456\u0454\u043D\u0442\u043E\u0432\u043D\u043E)\\s*(?:~\\s*)?)?(" + _mod12247.TIME_UNITS_PATTERN + ")" + _mod12247.REGEX_PARTS.rightBoundary;
+class UKTimeUnitWithinFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, UKTimeUnitWithinFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(UKTimeUnitWithinFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    if (!fn) {
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          for (const key10009 in arg0) {
-            let tmp9 = "default" !== key10009;
-            if (!tmp9) {
-              if (!tmp9) {
-                continue;
-              } else {
-                let tmp6 = self2(obj, arg0, key10009);
-                continue;
-              }
-              continue;
-            } else {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10009);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10009);
-              }
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    exports.ZodISODate = undefined;
-    exports.ZodISODateTime = undefined;
-    exports.ZodISODuration = undefined;
-    exports.ZodISOTime = undefined;
-    exports.datetime = function datetime(zodLazy) {
-      return closure_5._isoDateTime(require("module_12240").ZodISODateTime, zodLazy);
-    };
-    exports.date = function date(zodLazy) {
-      return closure_5._isoDate(require("module_12240").ZodISODate, zodLazy);
-    };
-    exports.time = function time(zodLazy) {
-      return closure_5._isoTime(require("module_12240").ZodISOTime, zodLazy);
-    };
-    exports.duration = function duration(zodLazy) {
-      return closure_5._isoDuration(require("module_12240").ZodISODuration, zodLazy);
-    };
-    let closure_5 = fn(_mod12158);
-    const _Object4 = Object;
-    let obj = {
-      enumerable: true,
-      get() {
-            return require("module_12240").ZodISODate;
-          }
-    };
-    Object.defineProperty(exports, "ZodISODate", obj);
-    const _Object5 = Object;
-    const obj2 = {
-      enumerable: true,
-      get() {
-            return require("module_12240").ZodISODateTime;
-          }
-    };
-    Object.defineProperty(exports, "ZodISODateTime", obj2);
-    const _Object6 = Object;
-    const obj3 = {
-      enumerable: true,
-      get() {
-            return require("module_12240").ZodISODuration;
-          }
-    };
-    Object.defineProperty(exports, "ZodISODuration", obj3);
-    const _Object7 = Object;
-    const obj4 = {
-      enumerable: true,
-      get() {
-            return require("module_12240").ZodISOTime;
-          }
-    };
-    Object.defineProperty(exports, "ZodISOTime", obj4);
-    (() => {
-      let tmp = exports;
-      const ownPropertyNames = Object.getOwnPropertyNames(exports);
-      let num = 0;
-      if (0 < ownPropertyNames.length) {
-        const _Object = Object;
-        const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(exports, ownPropertyNames[num]);
-        if (ownPropertyDescriptor) {
-          if (ownPropertyDescriptor.get) {
-            if (ownPropertyDescriptor.configurable) {
-              try {
-                value = ownPropertyDescriptor.get();
-                if (undefined !== value) {
-                  const _Object2 = Object;
-                  const obj = { value, writable: false, enumerable: ownPropertyDescriptor.enumerable, configurable: false };
-                  Object.defineProperty(exports, ownPropertyNames[num], obj);
-                }
-              } catch (err) {
-              }
-            }
-          }
-        }
-        num = num + 1;
-        tmp = exports;
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(UKTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return UKTimeUnitWithinFormatParser(12247).REGEX_PARTS.leftBoundary;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerPattern",
+    value: function innerPattern(option) {
+      const _RegExp = RegExp;
+      if (option.option.forwardDate) {
+        let _RegExp1 = new _RegExp(closure_6, "i");
+      } else {
+        const _HermesInternal = HermesInternal;
+        const combined = "(?:\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u043D\u0430 \u043F\u0440\u043E\u0442\u044F\u0437\u0456|\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u0443\u043F\u0440\u043E\u0434\u043E\u0432\u0436|\u0432\u043F\u0440\u043E\u0434\u043E\u0432\u0436)\\s*" + closure_6;
+        _RegExp1 = new _RegExp(combined, UKTimeUnitWithinFormatParser(12247).REGEX_PARTS.flags);
       }
-      const frozen = Object.freeze(tmp);
-    })();
-  } else {
-    let _Object2 = Object;
+      return _RegExp1;
+    }
+  },
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = UKTimeUnitWithinFormatParser(12096).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, UKTimeUnitWithinFormatParser(12247).parseDuration(arg1[1]));
+    }
   }
-} else {
-  let _Object = Object;
-}
+];
+
+export default _createClass(UKTimeUnitWithinFormatParser, items);

@@ -1,107 +1,87 @@
 // === Module 12250: ? ===
 
 // Module 12250
-import _mod12158 from "module_12158" /* 12158 */;
-import _mod12240 from "module_12240" /* 12240 */;
+import _mod12249 from "module_12249" /* 12249 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const UkMonthNameParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+}
+class UkMonthNameParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, UkMonthNameParser);
+    tmp2 = closure_4;
+    obj = closure_4(UkMonthNameParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    if (!fn) {
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(UkMonthNameParser, _mod12249.AbstractParserWithLeftBoundaryChecking);
+const entry = {
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "((?:\u0432|\u0443)\\s*)?(" + UkMonthNameParser(12093).matchAnyPattern(UkMonthNameParser(12247).MONTH_DICTIONARY) + ")\\s*(?:[,-]?\\s*(" + UkMonthNameParser(12247).YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)";
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!UkMonthNameParser(12247).FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
         }
-        const obj = {};
-        if (null != __esModule) {
-          for (const key10009 in arg0) {
-            let tmp9 = "default" !== key10009;
-            if (!tmp9) {
-              if (!tmp9) {
-                continue;
-              } else {
-                let tmp6 = self2(obj, arg0, key10009);
-                continue;
-              }
-              continue;
-            } else {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10009);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10009);
-              }
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    exports.string = function string(zodLazy) {
-      return closure_3._coercedString(closure_4.ZodString, zodLazy);
-    };
-    exports.number = function number(zodLazy) {
-      return closure_3._coercedNumber(closure_4.ZodNumber, zodLazy);
-    };
-    exports.boolean = function boolean(zodLazy) {
-      return closure_3._coercedBoolean(closure_4.ZodBoolean, zodLazy);
-    };
-    exports.bigint = function bigint(zodLazy) {
-      return closure_3._coercedBigint(closure_4.ZodBigInt, zodLazy);
-    };
-    exports.date = function date(zodLazy) {
-      return closure_3._coercedDate(closure_4.ZodDate, zodLazy);
-    };
-    let closure_3 = fn(_mod12158);
-    let closure_4 = fn(_mod12240);
-    (() => {
-      let tmp = exports;
-      const ownPropertyNames = Object.getOwnPropertyNames(exports);
-      let num = 0;
-      if (0 < ownPropertyNames.length) {
-        const _Object = Object;
-        const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(exports, ownPropertyNames[num]);
-        if (ownPropertyDescriptor) {
-          if (ownPropertyDescriptor.get) {
-            if (ownPropertyDescriptor.configurable) {
-              try {
-                value = ownPropertyDescriptor.get();
-                if (undefined !== value) {
-                  const _Object2 = Object;
-                  const obj = { value, writable: false, enumerable: ownPropertyDescriptor.enumerable, configurable: false };
-                  Object.defineProperty(exports, ownPropertyNames[num], obj);
-                }
-              } catch (err) {
-              }
-            }
-          }
-        }
-        num = num + 1;
-        tmp = exports;
       }
-      const frozen = Object.freeze(tmp);
-    })();
-  } else {
-    let _Object2 = Object;
+      const parsingResult = createParsingResult.createParsingResult(index.index, index.index + index[0].length);
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const tmp9 = UkMonthNameParser(12247).MONTH_DICTIONARY[formatted];
+      const start2 = parsingResult.start;
+      start2.assign("month", tmp9);
+      if (index[3]) {
+        const start4 = parsingResult.start;
+        start4.assign("year", UkMonthNameParser(12247).parseYearPattern(index[3]));
+      } else {
+        const start3 = parsingResult.start;
+        start3.imply("year", UkMonthNameParser(12094).findYearClosestToRef(createParsingResult.reference.instant, 1, tmp9));
+      }
+      return parsingResult;
+    }
   }
-} else {
-  let _Object = Object;
-}
+];
+
+export default _createClass(UkMonthNameParser, items);

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/billing/native/images", width: 223, height: 126, scales: [2, 3], hash: "06b6cfc90c8de0a27298c16b4f578563", name: "blocked-purchases-light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 302, height: 42, scales: [2, 3], hash: "2192040384b5c0bcacd48b43d2555bec", name: "img_plan_activated_light", type: "png" });

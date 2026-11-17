@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==", scales: [1], hash: "e770f1ce4644c4c69498a06b8bbbda2b", name: "bg.messages.e770f1ce4644c4c69498a06b8bbbda2b.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/waterwheels", scales: [1], hash: "ccd37efb93974078ef2fd158cf61001f", name: "WaterwheelsUntranslated.compiled.messages", type: "jsona" });

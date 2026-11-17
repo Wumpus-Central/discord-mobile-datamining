@@ -1,9 +1,7 @@
 // === Module 5610: ? ===
 
 // Module 5610
-let closure_0 = 1;
+import noop from "module_19" /* 19 */;
 
-export function getNextHandlerTag() {
-  closure_0 = tmp + 1;
-  return +closure_0;
-}
+
+export default noop.createContext(false);

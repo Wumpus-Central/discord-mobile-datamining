@@ -1,35 +1,35 @@
 // === Module 4870: ? ===
 
 // Module 4870
-import differenceInCalendarWeeks_mod from "differenceInCalendarWeeks" /* 4774 */;
-import lastDayOfMonth_mod from "lastDayOfMonth" /* 4871 */;
-import startOfMonth_mod from "startOfMonth" /* 4801 */;
-import requiredArgs_mod from "requiredArgs" /* 4586 */;
+import startOfWeek_mod from "startOfWeek" /* 4748 */;
+import startOfWeekYear_mod from "startOfWeekYear" /* 4871 */;
+import _typeof_mod from "module_4589" /* 4589 */;
+import requiredArgs_mod from "requiredArgs" /* 4590 */;
 
-let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
-if (!differenceInCalendarWeeks) {
-  const obj = { default: differenceInCalendarWeeks };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = differenceInCalendarWeeks;
+  tmp3 = startOfWeek;
 }
-differenceInCalendarWeeks = tmp3;
-let lastDayOfMonth = lastDayOfMonth_mod;
-if (!lastDayOfMonth) {
-  const obj2 = { default: lastDayOfMonth };
+startOfWeek = tmp3;
+let startOfWeekYear = startOfWeekYear_mod;
+if (!startOfWeekYear) {
+  const obj2 = { default: startOfWeekYear };
   let tmp5 = obj2;
 } else {
-  tmp5 = lastDayOfMonth;
+  tmp5 = startOfWeekYear;
 }
-lastDayOfMonth = tmp5;
-let startOfMonth = startOfMonth_mod;
-if (!startOfMonth) {
-  const obj3 = { default: startOfMonth };
+startOfWeekYear = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfMonth;
+  tmp7 = _typeof;
 }
-startOfMonth = tmp7;
+_typeof = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -38,9 +38,13 @@ if (!requiredArgs) {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function getWeeksInMonth(arg0, arg1) {
+export default function getWeek(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
+  const defaultResult1 = _typeof.default(arg0);
+  const time = startOfWeek.default(defaultResult1, arg1).getTime();
+  const defaultResult2 = startOfWeek.default(defaultResult1, arg1);
+  return Math.round((time - startOfWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
 };
 export default exports.default;

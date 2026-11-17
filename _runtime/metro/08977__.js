@@ -1,68 +1,16 @@
 // === Module 8977: ? ===
 
 // Module 8977
-import _mod8938 from "module_8938" /* 8938 */;
-import _modDef8955 from "module_8955" /* 8955 */;
-import _modDef8978 from "module_8978" /* 8978 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod8974 from "module_8974" /* 8974 */;
 
 require = arg1;
-function getTagName(dataView, sum1) {
-  const tmp = _slicedToArray(_mod8938.getPascalStringFromDataView(dataView, sum1), 2);
-  const first = tmp[0];
-  const obj2 = { tagName: tmp[1], tagNameSize: null };
-  let num = 0;
-  const sum = 1 + first;
-  if (first % 2 === 0) {
-    num = 1;
-  }
-  obj2.tagNameSize = sum + num;
-  return obj2;
-}
-let c4 = "8BIM";
-let c5 = 2;
-let c6 = 4;
-({ length, length: metroImportDefault } = "8BIM");
-
-export default {
-  read(arg0, arg1) {
-    const uint8Array = new Uint8Array(arg0);
-    const dataView = _mod8938.getDataView(uint8Array.buffer);
-    const obj2 = {};
-    let num = 0;
-    if (0 < arg0.length) {
-      const sum = num + metroImportDefault;
-      const stringFromDataView = _mod8938.getStringFromDataView(dataView, num, metroImportDefault);
-      const shortAt = _modDef8955.getShortAt(dataView, sum);
-      const sum1 = sum + c5;
-      const tmp15 = getTagName(dataView, sum1);
-      let name = tmp15.tagName;
-      const sum2 = sum1 + tmp15.tagNameSize;
-      const longAt = _modDef8955.getLongAt(dataView, sum2);
-      const sum3 = sum2 + c6;
-      if (stringFromDataView === c4) {
-        const dataView1 = _mod8938.getDataView(dataView.buffer, sum3, longAt);
-        const obj7 = { id: shortAt, value: null };
-        const tmp5Result = _mod8938;
-        obj7.value = _mod8938.getStringFromDataView(dataView1, 0, longAt);
-        if (_modDef8978[shortAt]) {
-          try {
-            obj7.description = _modDef8978[shortAt].description(dataView1);
-            if (!name) {
-              name = _modDef8978[shortAt].name;
-            }
-            obj2[name] = obj7;
-          } catch (err) {
-            tmp.description = tmp2;
-          }
-        } else if (arg1) {
-          const _HermesInternal = HermesInternal;
-          obj2["undefined-" + shortAt] = obj7;
-        }
-        const tmp5Result2 = _mod8938;
-      }
-      num = sum3 + (longAt + longAt % 2);
-    }
-    return obj2;
+const dependencyMap = arg6;
+const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "ImageUIDList", 45060: "TotalFrames" };
+obj[45056] = {
+  name: "MPFVersion",
+  description(value) {
+    return _mod8974.getStringValue(value);
   }
 };
+
+export default obj;

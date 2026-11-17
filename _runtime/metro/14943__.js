@@ -1,7 +1,13 @@
 // === Module 14943: ? ===
 
 // Module 14943
-import registerAsset from "module_1119" /* 1119 */;
+const obj = {
+  parse: {
+    prelude: null,
+    block() {
+      return this.Block(true);
+    }
+  }
+};
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 240, height: 130, scales: [2, 3], hash: "2f876cc58ec4f702ded646dd5a7d0ecf", name: "no_mutual_friends_light", type: "png" });
+export default obj;

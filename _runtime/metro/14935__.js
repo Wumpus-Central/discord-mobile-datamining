@@ -1,7 +1,9 @@
 // === Module 14935: ? ===
 
 // Module 14935
-import registerAsset from "module_1119" /* 1119 */;
+import defaultRecognizer from "defaultRecognizer" /* 14936 */;
+import _mod14938 from "module_14938" /* 14938 */;
+import _mod14939 from "module_14939" /* 14939 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 240, height: 130, scales: [2, 3], hash: "931bea5d9b6a7fc7a53130a431abe666", name: "no_mutual_servers_dark", type: "png" });
+export default { AtrulePrelude: defaultRecognizer, Selector: _mod14938, Value: _mod14939 };

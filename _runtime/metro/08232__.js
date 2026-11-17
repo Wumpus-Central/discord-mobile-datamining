@@ -1,10 +1,7 @@
 // === Module 8232: ? ===
 
 // Module 8232
-import baseAssignValue from "baseAssignValue" /* 667 */;
-import _mod8233 from "module_8233" /* 8233 */;
+import _mod17 from "module_17" /* 17 */;
 
 
-export default _mod8233((arg0, arg1, arg2) => {
-  baseAssignValue(arg0, arg2, arg1);
-});
+export default _mod17.requireNativeComponent("RNCWebViewContainer");

@@ -1,17 +1,15 @@
 // === Module 6137: ? ===
 
 // Module 6137
-import identity from "identity" /* 549 */;
-import _mod668 from "module_668" /* 668 */;
-import constant from "constant" /* 6138 */;
+import _process from "_process" /* 539 */;
+import baseUnary from "baseUnary" /* 540 */;
+import baseIsMap from "baseIsMap" /* 6138 */;
 
-if (_mod668) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod668(arg0, "toString", obj);
-  };
+const tmp = _process && _process.isMap;
+if (tmp) {
+  let _module = baseUnary(tmp);
 } else {
-  fn = identity;
+  _module = baseIsMap;
 }
 
-export default fn;
+export default _module;

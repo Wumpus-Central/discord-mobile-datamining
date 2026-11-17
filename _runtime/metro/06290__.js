@@ -3,21 +3,31 @@
 // Module 6290
 import get_ActivityIndicator from "module_17" /* 17 */;
 
-({ BackHandler: closure_0, Platform } = get_ActivityIndicator);
-const items = ["ios", "android"];
+({ Platform, UIManager: closure_0 } = get_ActivityIndicator);
 
-export const isSearchBarAvailableForCurrentPlatform = items.includes("android");
-export const isHeaderBarButtonsAvailableForCurrentPlatform = false;
-export function executeNativeBackPress() {
-  React.exitApp();
-  return true;
-}
-export function parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled) {
-  if (undefined === fullScreenSwipeEnabled) {
-    return "undefined";
-  } else if (true === fullScreenSwipeEnabled) {
-    return "true";
-  } else if (false === fullScreenSwipeEnabled) {
-    return "false";
+export const isNativePlatformSupported = true;
+export function enableScreens() {
+  flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
   }
+  if (flag) {
+    flag = !viewManagerConfig.getViewManagerConfig("RNSScreen");
+  }
+  if (flag) {
+    const _console = console;
+    console.error("Screen native module hasn't been linked. Please check the react-native-screens README for more details");
+  }
+}
+export function enableFreeze() {
+  flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+}
+export function screensEnabled() {
+  return flag;
+}
+export function freezeEnabled() {
+  return flag;
 }

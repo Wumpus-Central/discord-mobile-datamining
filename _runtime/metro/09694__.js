@@ -1,7 +1,21 @@
 // === Module 9694: ? ===
 
 // Module 9694
-import registerAsset from "module_1119" /* 1119 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef9695 from "module_9695" /* 9695 */;
 
+const useRef = _mod19.useRef;
+let closure_3 = [];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 106, height: 80, scales: [2, 3], hash: "f9a535d371ee710b8f1909e45896c667", name: "img_wumpus_nitro_rev", type: "png" });
+export default function useStableMemo(fn, items) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = fn();
+    tmp2.current = items;
+  } else if (!_modDef9695(items, tmp2.current)) {
+    tmp.current = fn();
+    tmp2.current = items;
+  }
+  return tmp.current;
+};

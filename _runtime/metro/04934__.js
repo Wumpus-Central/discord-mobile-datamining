@@ -1,17 +1,17 @@
 // === Module 4934: ? ===
 
 // Module 4934
-import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4746 */;
-import requiredArgs_mod from "requiredArgs" /* 4586 */;
+import startOfHour_mod from "startOfHour" /* 4935 */;
+import requiredArgs_mod from "requiredArgs" /* 4590 */;
 
-let startOfISOWeekYear = startOfISOWeekYear_mod;
-if (!startOfISOWeekYear) {
-  const obj = { default: startOfISOWeekYear };
+let startOfHour = startOfHour_mod;
+if (!startOfHour) {
+  const obj = { default: startOfHour };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfISOWeekYear;
+  tmp3 = startOfHour;
 }
-startOfISOWeekYear = tmp3;
+startOfHour = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameISOWeekYear(arg0, arg1) {
+export default function isSameHour(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const defaultResult1 = startOfHour.default(arg0);
   const time = defaultResult1.getTime();
-  return time === startOfISOWeekYear.default(arg1).getTime();
+  return time === startOfHour.default(arg1).getTime();
 };
 export default exports.default;

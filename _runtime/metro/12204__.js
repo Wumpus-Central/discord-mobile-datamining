@@ -1,200 +1,629 @@
 // === Module 12204: ? ===
 
 // Module 12204
-import _mod12160 from "module_12160" /* 12160 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 12100 */;
+import NUMBER from "NUMBER" /* 12201 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+const ZHHansTimeExpressionParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (!fn) {
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const keys = Object.keys(NUMBER.NUMBER);
+const text = `(?:从|自)?(?:(今|明|前|大前|后|大后|昨)(早|朝|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s,，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj.join("")}`;
+const keys1 = Object.keys(NUMBER.NUMBER);
+const text1 = `${`(?:从|自)?(?:(今|明|前|大前|后|大后|昨)(早|朝|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s,，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj.join("")}`}]+)(?:\\s*)(?:点|时|:|：)(?:\\s*)(\\d+|半|正|整|[${obj2.join("")}`;
+const keys2 = Object.keys(NUMBER.NUMBER);
+const regExp = new RegExp(text1 + "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)(\\d+|[" + keys2.join("") + "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?", "i");
+const keys3 = Object.keys(NUMBER.NUMBER);
+const text2 = `(?:^\\s*(?:到|至|\\-|\\–|\\~|\\〜)\\s*)(?:(今|明|前|大前|后|大后|昨)(早|朝|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s,，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj4.join("")}`;
+const keys4 = Object.keys(NUMBER.NUMBER);
+const text3 = `${`(?:^\\s*(?:到|至|\\-|\\–|\\~|\\〜)\\s*)(?:(今|明|前|大前|后|大后|昨)(早|朝|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s,，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj4.join("")}`}]+)(?:\\s*)(?:点|时|:|：)(?:\\s*)(\\d+|半|正|整|[${obj5.join("")}`;
+const keys5 = Object.keys(NUMBER.NUMBER);
+const regExp1 = new RegExp(text3 + "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)(\\d+|[" + keys5.join("") + "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?", "i");
+class ZHHansTimeExpressionParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ZHHansTimeExpressionParser);
+    tmp2 = closure_4;
+    obj = closure_4(ZHHansTimeExpressionParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ZHHansTimeExpressionParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      if (index.index > 0) {
+        if (str.match(/\w/)) {
+          return null;
+        }
+        str = createParsingResult.text[index.index - 1];
+      }
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const refDate = createParsingResult.refDate;
+      const date = new Date(refDate.getTime());
+      if (index[1]) {
+        if ("\u660E" == index[1]) {
+          const refDate2 = createParsingResult.refDate;
+          if (refDate2.getHours() > 1) {
+            date.setDate(date.getDate() + 1);
+          }
+        } else if ("\u6628" == tmp14) {
+          date.setDate(date.getDate() - 1);
+        } else if ("\u524D" == tmp14) {
+          date.setDate(date.getDate() - 2);
+        } else {
+          if ("\u5927\u524D" == tmp14) {
+            date.setDate(date.getDate() - 3);
+          } else if ("\u540E" != tmp14) {
+            if ("\u5927\u540E" == tmp14) {
+              date.setDate(date.getDate() + 3);
+            }
+          }
+          date.setDate(date.getDate() + 2);
+        }
+        const start7 = parsingResult.start;
+        start7.assign("day", date.getDate());
+        const start8 = parsingResult.start;
+        start8.assign("month", date.getMonth() + 1);
+        const start9 = parsingResult.start;
+        start9.assign("year", date.getFullYear());
+      } else {
+        if (index[4]) {
+          if ("\u660E" == index[4]) {
+            date.setDate(date.getDate() + 1);
+          } else if ("\u6628" == tmp5) {
+            date.setDate(date.getDate() - 1);
+          } else if ("\u524D" == tmp5) {
+            date.setDate(date.getDate() - 2);
+          } else if ("\u5927\u524D" == tmp5) {
+            date.setDate(date.getDate() - 3);
+          } else if ("\u540E" == tmp5) {
+            date.setDate(date.getDate() + 2);
+          } else if ("\u5927\u540E" == tmp5) {
+            date.setDate(date.getDate() + 3);
+          }
+          const start4 = parsingResult.start;
+          start4.assign("day", date.getDate());
+          const start5 = parsingResult.start;
+          start5.assign("month", date.getMonth() + 1);
+          const start6 = parsingResult.start;
+          start6.assign("year", date.getFullYear());
+        } else {
+          const start = parsingResult.start;
+          start.imply("day", date.getDate());
+          const start2 = parsingResult.start;
+          start2.imply("month", date.getMonth() + 1);
+          const start3 = parsingResult.start;
+          start3.imply("year", date.getFullYear());
+        }
+        if (index[8]) {
+          const _parseInt = parseInt;
+          const parsed = parseInt(index[8]);
+          const _isNaN = isNaN;
+          let zhStringToNumberResult = parsed;
+          if (isNaN(parsed)) {
+            zhStringToNumberResult = ZHHansTimeExpressionParser(12201).zhStringToNumber(index[8]);
+          }
+          if (zhStringToNumberResult >= 60) {
+            return null;
+          } else {
+            const start27 = parsingResult.start;
+            start27.assign("second", zhStringToNumberResult);
           }
         }
-        const obj = {};
-        if (null != __esModule) {
-          for (const key10009 in arg0) {
-            let tmp9 = "default" !== key10009;
-            if (!tmp9) {
-              if (!tmp9) {
-                continue;
-              } else {
-                let tmp6 = self2(obj, arg0, key10009);
-                continue;
-              }
-              continue;
-            } else {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10009);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10009);
+        const _parseInt2 = parseInt;
+        let parsed1 = parseInt(index[6]);
+        const _isNaN2 = isNaN;
+        if (isNaN(parsed1)) {
+          parsed1 = ZHHansTimeExpressionParser(12201).zhStringToNumber(index[6]);
+        }
+        if (index[7]) {
+          let num17 = 30;
+          let rounded = parsed1;
+          if ("\u534A" != index[7]) {
+            num17 = 0;
+            rounded = parsed1;
+            if ("\u6B63" != index[7]) {
+              num17 = 0;
+              rounded = parsed1;
+              if ("\u6574" != index[7]) {
+                const _parseInt3 = parseInt;
+                const parsed2 = parseInt(index[7]);
+                const _isNaN3 = isNaN;
+                num17 = parsed2;
+                rounded = parsed1;
+                if (isNaN(parsed2)) {
+                  num17 = ZHHansTimeExpressionParser(12201).zhStringToNumber(index[7]);
+                  rounded = parsed1;
+                }
               }
             }
           }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    exports.default = function default_1() {
-      if (typeof error === "function") {
-        const obj = { localeError: null };
-        const obj2 = { string: { unit: "\u0437\u043D\u0430\u0446\u0438", verb: "\u0434\u0430 \u0438\u043C\u0430\u0430\u0442" }, file: { unit: "\u0431\u0430\u0458\u0442\u0438", verb: "\u0434\u0430 \u0438\u043C\u0430\u0430\u0442" }, array: { unit: "\u0441\u0442\u0430\u0432\u043A\u0438", verb: "\u0434\u0430 \u0438\u043C\u0430\u0430\u0442" }, set: { unit: "\u0441\u0442\u0430\u0432\u043A\u0438", verb: "\u0434\u0430 \u0438\u043C\u0430\u0430\u0442" }, map: { unit: "\u0441\u0442\u0430\u0432\u043A\u0438", verb: "\u0434\u0430 \u0438\u043C\u0430\u0430\u0442" } };
-        closure_1 = { regex: "\u0432\u043D\u0435\u0441", email: "\u0430\u0434\u0440\u0435\u0441\u0430 \u043D\u0430 \u0435-\u043F\u043E\u0448\u0442\u0430", url: "URL", emoji: "\u0435\u043C\u043E\u045F\u0438", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO \u0434\u0430\u0442\u0443\u043C \u0438 \u0432\u0440\u0435\u043C\u0435", date: "ISO \u0434\u0430\u0442\u0443\u043C", time: "ISO \u0432\u0440\u0435\u043C\u0435", duration: "ISO \u0432\u0440\u0435\u043C\u0435\u0442\u0440\u0430\u0435\u045A\u0435", ipv4: "IPv4 \u0430\u0434\u0440\u0435\u0441\u0430", ipv6: "IPv6 \u0430\u0434\u0440\u0435\u0441\u0430", mac: "MAC \u0430\u0434\u0440\u0435\u0441\u0430", cidrv4: "IPv4 \u043E\u043F\u0441\u0435\u0433", cidrv6: "IPv6 \u043E\u043F\u0441\u0435\u0433", base64: "base64-\u0435\u043D\u043A\u043E\u0434\u0438\u0440\u0430\u043D\u0430 \u043D\u0438\u0437\u0430", base64url: "base64url-\u0435\u043D\u043A\u043E\u0434\u0438\u0440\u0430\u043D\u0430 \u043D\u0438\u0437\u0430", json_string: "JSON \u043D\u0438\u0437\u0430", e164: "E.164 \u0431\u0440\u043E\u0458", credit_card: "\u0431\u0440\u043E\u0458 \u043D\u0430 \u043A\u0440\u0435\u0434\u0438\u0442\u043D\u0430 \u043A\u0430\u0440\u0442\u0438\u0447\u043A\u0430", currency_code: "\u043A\u043E\u0434 \u043D\u0430 \u0432\u0430\u043B\u0443\u0442\u0430", iban: "IBAN", jwt: "JWT", template_literal: "\u0432\u043D\u0435\u0441" };
-        closure_2 = { nan: "NaN", number: "\u0431\u0440\u043E\u0458", array: "\u043D\u0438\u0437\u0430" };
-        obj.localeError = (code) => {
-          switch (code.code) {
-            case "invalid_type":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp48 = closure_2[parsedTypeResult];
-              if (tmp48 == null) {
-                tmp48 = parsedTypeResult;
-              }
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined = "\u0413\u0440\u0435\u0448\u0435\u043D \u0432\u043D\u0435\u0441: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 instanceof " + code.expected + ", \u043F\u0440\u0438\u043C\u0435\u043D\u043E " + tmp48;
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined = "\u0413\u0440\u0435\u0448\u0435\u043D \u0432\u043D\u0435\u0441: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 " + expected + ", \u043F\u0440\u0438\u043C\u0435\u043D\u043E " + tmp48;
-              }
-              return combined;
-            case "invalid_value":
-              if (1 === code.values.length) {
-                const _HermesInternal15 = HermesInternal;
-                let combined1 = "Invalid input: expected " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal14 = HermesInternal;
-                combined1 = "\u0413\u0440\u0435\u0448\u0430\u043D\u0430 \u043E\u043F\u0446\u0438\u0458\u0430: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 \u0435\u0434\u043D\u0430 " + closure_2.joinValues(code.values, "|");
-              }
-              return combined1;
-            case "too_big":
-              let str24 = "<";
-              if (code.inclusive) {
-                str24 = "<=";
-              }
-              let tmp27 = obj2[code.origin];
-              if (tmp27 == null) {
-                tmp27 = null;
-              }
-              let str25 = code.origin;
-              if (tmp27) {
-                if (str25 == null) {
-                  str25 = "\u0432\u0440\u0435\u0434\u043D\u043E\u0441\u0442\u0430";
-                }
-                const str1 = code.maximum.toString();
-                let str31 = tmp27.unit;
-                if (str31 == null) {
-                  str31 = "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0438";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined2 = "\u041F\u0440\u0435\u043C\u043D\u043E\u0433\u0443 \u0433\u043E\u043B\u0435\u043C: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 " + str25 + " \u0434\u0430 \u0438\u043C\u0430 " + str24 + str1 + " " + str31;
-              } else {
-                let str26 = str25;
-                if (str25 == null) {
-                  str26 = "\u0432\u0440\u0435\u0434\u043D\u043E\u0441\u0442\u0430";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined2 = "\u041F\u0440\u0435\u043C\u043D\u043E\u0433\u0443 \u0433\u043E\u043B\u0435\u043C: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 " + str26 + " \u0434\u0430 \u0431\u0438\u0434\u0435 " + str24 + code.maximum.toString();
-              }
-              return combined2;
-            case "too_small":
-              let str18 = ">";
-              if (code.inclusive) {
-                str18 = ">=";
-              }
-              let tmp15 = obj2[code.origin];
-              if (tmp15 == null) {
-                tmp15 = null;
-              }
-              ({ origin, minimum } = code);
-              const str45 = minimum.toString();
-              if (tmp15) {
-                const _HermesInternal11 = HermesInternal;
-                let combined3 = "\u041F\u0440\u0435\u043C\u043D\u043E\u0433\u0443 \u043C\u0430\u043B: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 " + origin + " \u0434\u0430 \u0438\u043C\u0430 " + str18 + str45 + " " + tmp15.unit;
-              } else {
-                const _HermesInternal10 = HermesInternal;
-                combined3 = "\u041F\u0440\u0435\u043C\u043D\u043E\u0433\u0443 \u043C\u0430\u043B: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 " + origin + " \u0434\u0430 \u0431\u0438\u0434\u0435 " + str18 + str45;
-              }
-              return combined3;
-            case "invalid_format":
-              if ("starts_with" === code.format) {
-                const _HermesInternal9 = HermesInternal;
-                let combined4 = "\u041D\u0435\u0432\u0430\u0436\u0435\u0447\u043A\u0430 \u043D\u0438\u0437\u0430: \u043C\u043E\u0440\u0430 \u0434\u0430 \u0437\u0430\u043F\u043E\u0447\u043D\u0443\u0432\u0430 \u0441\u043E \"" + code.prefix + "\"";
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                combined4 = "\u041D\u0435\u0432\u0430\u0436\u0435\u0447\u043A\u0430 \u043D\u0438\u0437\u0430: \u043C\u043E\u0440\u0430 \u0434\u0430 \u0437\u0430\u0432\u0440\u0448\u0443\u0432\u0430 \u0441\u043E \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                combined4 = "\u041D\u0435\u0432\u0430\u0436\u0435\u0447\u043A\u0430 \u043D\u0438\u0437\u0430: \u043C\u043E\u0440\u0430 \u0434\u0430 \u0432\u043A\u043B\u0443\u0447\u0443\u0432\u0430 \"" + code.includes + "\"";
-              } else if ("regex" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined4 = "\u041D\u0435\u0432\u0430\u0436\u0435\u0447\u043A\u0430 \u043D\u0438\u0437\u0430: \u043C\u043E\u0440\u0430 \u0434\u0430 \u043E\u0434\u0433\u043E\u0430\u0440\u0430 \u043D\u0430 \u043F\u0430\u0442\u0435\u0440\u043D\u043E\u0442 " + code.pattern;
-              } else {
-                let format = closure_1[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal5 = HermesInternal;
-                combined4 = "Invalid " + format;
-              }
-              return combined4;
-            case "not_multiple_of":
-              const _HermesInternal4 = HermesInternal;
-              return "\u0413\u0440\u0435\u0448\u0435\u043D \u0431\u0440\u043E\u0458: \u043C\u043E\u0440\u0430 \u0434\u0430 \u0431\u0438\u0434\u0435 \u0434\u0435\u043B\u0438\u0432 \u0441\u043E " + code.divisor;
-            case "unrecognized_keys":
-              let str3 = "\u041D\u0435\u043F\u0440\u0435\u043F\u043E\u0437\u043D\u0430\u0435\u043D \u043A\u043B\u0443\u0447";
-              if (code.keys.length > 1) {
-                str3 = "\u041D\u0435\u043F\u0440\u0435\u043F\u043E\u0437\u043D\u0430\u0435\u043D\u0438 \u043A\u043B\u0443\u0447\u0435\u0432\u0438";
-              }
-              const _HermesInternal3 = HermesInternal;
-              return "" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
-            case "invalid_key":
-              const _HermesInternal2 = HermesInternal;
-              return "\u0413\u0440\u0435\u0448\u0435\u043D \u043A\u043B\u0443\u0447 \u0432\u043E " + code.origin;
-            case "invalid_union":
-              return "\u0413\u0440\u0435\u0448\u0435\u043D \u0432\u043D\u0435\u0441";
-            case "invalid_element":
-              const _HermesInternal = HermesInternal;
-              return "\u0413\u0440\u0435\u0448\u043D\u0430 \u0432\u0440\u0435\u0434\u043D\u043E\u0441\u0442 \u0432\u043E " + code.origin;
-            default:
-              return "\u0413\u0440\u0435\u0448\u0435\u043D \u0432\u043D\u0435\u0441";
+        } else {
+          num17 = 0;
+          rounded = parsed1;
+          if (parsed1 > 100) {
+            num17 = parsed1 % 100;
+            const _Math = Math;
+            rounded = Math.floor(parsed1 / 100);
           }
-        };
-        return obj;
-      } else {
-        throw new TypeError("Trying to call a non-function");
+        }
+        if (num17 >= 60) {
+          return null;
+        } else if (rounded > 24) {
+          return null;
+        } else {
+          let num39 = -1;
+          let num19 = -1;
+          if (rounded >= 12) {
+            num19 = 1;
+          }
+          if (index[9]) {
+            if (rounded > 12) {
+              return null;
+            } else {
+              const formatted = index[9][0].toLowerCase();
+              let tmp42 = rounded;
+              if ("a" == formatted) {
+                let num22 = rounded;
+                if (12 == rounded) {
+                  num22 = 0;
+                }
+                tmp42 = num22;
+                num19 = 0;
+              }
+              let num20 = num19;
+              let num21 = tmp42;
+              if ("p" == formatted) {
+                let sum = tmp42;
+                if (12 != tmp42) {
+                  sum = tmp42 + 12;
+                }
+                num20 = 1;
+                num21 = sum;
+              }
+            }
+          } else if (index[2]) {
+            const first = index[2][0];
+            if ("\u65E9" == first) {
+              num20 = 0;
+              num21 = rounded;
+              if (12 == rounded) {
+                num20 = 0;
+                num21 = 0;
+              }
+            } else {
+              num20 = num19;
+              num21 = rounded;
+              if ("\u665A" == first) {
+                let sum1 = rounded;
+                if (12 != rounded) {
+                  sum1 = rounded + 12;
+                }
+                num20 = 1;
+                num21 = sum1;
+              }
+            }
+          } else if (index[3]) {
+            const first1 = index[3][0];
+            if ("\u4E0A" != first1) {
+              if ("\u65E9" != first1) {
+                if ("\u51CC" != first1) {
+                  let tmp38 = "\u4E0B" != first1;
+                  if (tmp38) {
+                    tmp38 = "\u665A" != first1;
+                  }
+                  num20 = num19;
+                  num21 = rounded;
+                  if (!tmp38) {
+                    let sum2 = rounded;
+                    if (12 != rounded) {
+                      sum2 = rounded + 12;
+                    }
+                    num20 = 1;
+                    num21 = sum2;
+                  }
+                }
+              }
+            }
+            num20 = 0;
+            num21 = rounded;
+            if (12 == rounded) {
+              num20 = 0;
+              num21 = 0;
+            }
+          } else {
+            num20 = num19;
+            num21 = rounded;
+            if (index[5]) {
+              const first2 = index[5][0];
+              if ("\u4E0A" != first2) {
+                if ("\u65E9" != first2) {
+                  if ("\u51CC" != first2) {
+                    let tmp35 = "\u4E0B" != first2;
+                    if (tmp35) {
+                      tmp35 = "\u665A" != first2;
+                    }
+                    num20 = num19;
+                    num21 = rounded;
+                    if (!tmp35) {
+                      let sum3 = rounded;
+                      if (12 != rounded) {
+                        sum3 = rounded + 12;
+                      }
+                      num20 = 1;
+                      num21 = sum3;
+                    }
+                  }
+                }
+              }
+              num20 = 0;
+              num21 = rounded;
+              if (12 == rounded) {
+                num20 = 0;
+                num21 = 0;
+              }
+            }
+          }
+          const start10 = parsingResult.start;
+          start10.assign("hour", num21);
+          const start11 = parsingResult.start;
+          start11.assign("minute", num17);
+          if (0 <= num20) {
+            const start14 = parsingResult.start;
+            start14.assign("meridiem", num20);
+          } else if (num21 < 12) {
+            const start13 = parsingResult.start;
+            start13.imply("meridiem", 0);
+          } else {
+            const start12 = parsingResult.start;
+            start12.imply("meridiem", 1);
+          }
+          const match = regExp1.exec(createParsingResult.text.substring(parsingResult.index + parsingResult.text.length));
+          if (match) {
+            const _Date = Date;
+            let date1 = new Date(date.getTime());
+            parsingResult.end = createParsingResult.createParsingComponents();
+            if (match[1]) {
+              if ("\u660E" == match[1]) {
+                const refDate3 = createParsingResult.refDate;
+                if (refDate3.getHours() > 1) {
+                  date1.setDate(date1.getDate() + 1);
+                }
+              } else if ("\u6628" == tmp66) {
+                date1.setDate(date1.getDate() - 1);
+              } else if ("\u524D" == tmp66) {
+                date1.setDate(date1.getDate() - 2);
+              } else {
+                if ("\u5927\u524D" == tmp66) {
+                  date1.setDate(date1.getDate() - 3);
+                } else if ("\u540E" != tmp66) {
+                  if ("\u5927\u540E" == tmp66) {
+                    date1.setDate(date1.getDate() + 3);
+                  }
+                }
+                date1.setDate(date1.getDate() + 2);
+              }
+              const end7 = parsingResult.end;
+              end7.assign("day", date1.getDate());
+              const end8 = parsingResult.end;
+              end8.assign("month", date1.getMonth() + 1);
+              const end9 = parsingResult.end;
+              date1 = date1.getFullYear();
+              end9.assign("year", date1);
+            } else {
+              if (match[4]) {
+                if ("\u660E" == match[4]) {
+                  date1.setDate(date1.getDate() + 1);
+                } else if ("\u6628" == tmp57) {
+                  date1.setDate(date1.getDate() - 1);
+                } else if ("\u524D" == tmp57) {
+                  date1.setDate(date1.getDate() - 2);
+                } else if ("\u5927\u524D" == tmp57) {
+                  date1.setDate(date1.getDate() - 3);
+                } else if ("\u540E" == tmp57) {
+                  date1.setDate(date1.getDate() + 2);
+                } else if ("\u5927\u540E" == tmp57) {
+                  date1.setDate(date1.getDate() + 3);
+                }
+                const end4 = parsingResult.end;
+                end4.assign("day", date1.getDate());
+                const end5 = parsingResult.end;
+                end5.assign("month", date1.getMonth() + 1);
+                const end6 = parsingResult.end;
+                end6.assign("year", date1.getFullYear());
+              } else {
+                const end = parsingResult.end;
+                end.imply("day", date1.getDate());
+                const end2 = parsingResult.end;
+                end2.imply("month", date1.getMonth() + 1);
+                const end3 = parsingResult.end;
+                end3.imply("year", date1.getFullYear());
+              }
+              if (match[8]) {
+                const _parseInt4 = parseInt;
+                const parsed3 = parseInt(match[8]);
+                const _isNaN4 = isNaN;
+                let zhStringToNumberResult1 = parsed3;
+                if (isNaN(parsed3)) {
+                  zhStringToNumberResult1 = ZHHansTimeExpressionParser(12201).zhStringToNumber(match[8]);
+                }
+                if (zhStringToNumberResult1 >= 60) {
+                  return null;
+                } else {
+                  const end18 = parsingResult.end;
+                  end18.assign("second", zhStringToNumberResult1);
+                }
+              }
+              const _parseInt5 = parseInt;
+              let parsed4 = parseInt(match[6]);
+              const _isNaN5 = isNaN;
+              if (isNaN(parsed4)) {
+                parsed4 = ZHHansTimeExpressionParser(12201).zhStringToNumber(match[6]);
+              }
+              if (match[7]) {
+                let num38 = 30;
+                let rounded1 = parsed4;
+                if ("\u534A" != match[7]) {
+                  num38 = 0;
+                  rounded1 = parsed4;
+                  if ("\u6B63" != match[7]) {
+                    num38 = 0;
+                    rounded1 = parsed4;
+                    if ("\u6574" != match[7]) {
+                      const _parseInt6 = parseInt;
+                      const parsed5 = parseInt(match[7]);
+                      const _isNaN6 = isNaN;
+                      num38 = parsed5;
+                      rounded1 = parsed4;
+                      if (isNaN(parsed5)) {
+                        num38 = ZHHansTimeExpressionParser(12201).zhStringToNumber(match[7]);
+                        rounded1 = parsed4;
+                      }
+                    }
+                  }
+                }
+              } else {
+                num38 = 0;
+                rounded1 = parsed4;
+                if (parsed4 > 100) {
+                  num38 = parsed4 % 100;
+                  const _Math2 = Math;
+                  rounded1 = Math.floor(parsed4 / 100);
+                }
+              }
+              if (num38 >= 60) {
+                return null;
+              } else if (rounded1 > 24) {
+                return null;
+              } else {
+                if (rounded1 >= 12) {
+                  num39 = 1;
+                }
+                if (match[9]) {
+                  if (rounded1 > 12) {
+                    return null;
+                  } else {
+                    const formatted1 = match[9][0].toLowerCase();
+                    let tmp94 = rounded1;
+                    if ("a" == formatted1) {
+                      let num42 = rounded1;
+                      if (12 == rounded1) {
+                        num42 = 0;
+                      }
+                      tmp94 = num42;
+                      num39 = 0;
+                    }
+                    let tmp95 = tmp94;
+                    if ("p" == formatted1) {
+                      let sum4 = tmp94;
+                      if (12 != tmp94) {
+                        sum4 = tmp94 + 12;
+                      }
+                      num39 = 1;
+                      tmp95 = sum4;
+                    }
+                    const start15 = parsingResult.start;
+                    let num40 = num39;
+                    let num41 = tmp95;
+                    if (!start15.isCertain("meridiem")) {
+                      if (0 === num39) {
+                        const start20 = parsingResult.start;
+                        start20.imply("meridiem", 0);
+                        const start21 = parsingResult.start;
+                        num40 = num39;
+                        num41 = tmp95;
+                        if (12 == start21.get("hour")) {
+                          const start22 = parsingResult.start;
+                          start22.assign("hour", 0);
+                          num40 = num39;
+                          num41 = tmp95;
+                        }
+                      } else {
+                        const start16 = parsingResult.start;
+                        start16.imply("meridiem", 1);
+                        const start17 = parsingResult.start;
+                        num40 = num39;
+                        num41 = tmp95;
+                        if (12 != start17.get("hour")) {
+                          ({ start: start18, start: start19 } = parsingResult);
+                          start18.assign("hour", start19.get("hour") + 12);
+                          num40 = num39;
+                          num41 = tmp95;
+                        }
+                      }
+                    }
+                  }
+                } else if (match[2]) {
+                  const first3 = match[2][0];
+                  if ("\u65E9" == first3) {
+                    num40 = 0;
+                    num41 = rounded1;
+                    if (12 == rounded1) {
+                      num40 = 0;
+                      num41 = 0;
+                    }
+                  } else {
+                    num40 = num39;
+                    num41 = rounded1;
+                    if ("\u665A" == first3) {
+                      let sum5 = rounded1;
+                      if (12 != rounded1) {
+                        sum5 = rounded1 + 12;
+                      }
+                      num40 = 1;
+                      num41 = sum5;
+                    }
+                  }
+                } else if (match[3]) {
+                  const first4 = match[3][0];
+                  if ("\u4E0A" != first4) {
+                    if ("\u65E9" != first4) {
+                      if ("\u51CC" != first4) {
+                        let tmp90 = "\u4E0B" != first4;
+                        if (tmp90) {
+                          tmp90 = "\u665A" != first4;
+                        }
+                        num40 = num39;
+                        num41 = rounded1;
+                        if (!tmp90) {
+                          let sum6 = rounded1;
+                          if (12 != rounded1) {
+                            sum6 = rounded1 + 12;
+                          }
+                          num40 = 1;
+                          num41 = sum6;
+                        }
+                      }
+                    }
+                  }
+                  num40 = 0;
+                  num41 = rounded1;
+                  if (12 == rounded1) {
+                    num40 = 0;
+                    num41 = 0;
+                  }
+                } else {
+                  num40 = num39;
+                  num41 = rounded1;
+                  if (match[5]) {
+                    const first5 = match[5][0];
+                    if ("\u4E0A" != first5) {
+                      if ("\u65E9" != first5) {
+                        if ("\u51CC" != first5) {
+                          let tmp87 = "\u4E0B" != first5;
+                          if (tmp87) {
+                            tmp87 = "\u665A" != first5;
+                          }
+                          num40 = num39;
+                          num41 = rounded1;
+                          if (!tmp87) {
+                            let sum7 = rounded1;
+                            if (12 != rounded1) {
+                              sum7 = rounded1 + 12;
+                            }
+                            num40 = 1;
+                            num41 = sum7;
+                          }
+                        }
+                      }
+                    }
+                    num40 = 0;
+                    num41 = rounded1;
+                    if (12 == rounded1) {
+                      num40 = 0;
+                      num41 = 0;
+                    }
+                  }
+                }
+                parsingResult.text = parsingResult.text + match[0];
+                const end10 = parsingResult.end;
+                end10.assign("hour", num41);
+                const end11 = parsingResult.end;
+                end11.assign("minute", num38);
+                if (0 <= num40) {
+                  const end14 = parsingResult.end;
+                  end14.assign("meridiem", num40);
+                } else {
+                  const start23 = parsingResult.start;
+                  if (start23.isCertain("meridiem")) {
+                    const start24 = parsingResult.start;
+                    if (1 == start24.get("meridiem")) {
+                      const start25 = parsingResult.start;
+                      if (start25.get("hour") > num41) {
+                        const end13 = parsingResult.end;
+                        end13.imply("meridiem", 0);
+                      }
+                    }
+                  }
+                  if (num41 > 12) {
+                    const end12 = parsingResult.end;
+                    end12.imply("meridiem", 1);
+                  }
+                }
+                const end15 = parsingResult.end;
+                const start26 = parsingResult.start;
+                const time = end15.date().getTime();
+                const dateResult = end15.date();
+                if (time < dateResult1.getTime()) {
+                  ({ end: end16, end: end17 } = parsingResult);
+                  end16.imply("day", end17.get("day") + 1);
+                }
+                return parsingResult;
+              }
+            }
+          } else {
+            let tmp51 = null;
+            if (!str39.match(/^\d+$/)) {
+              tmp51 = parsingResult;
+            }
+            return tmp51;
+          }
+        }
       }
-    };
-    let closure_2 = fn(_mod12160);
-    function error() {
-
     }
-    module.exports = exports.default;
-  } else {
-    const _Object2 = Object;
   }
-} else {
-  let _Object = Object;
-}
+];
+
+export default _createClass(ZHHansTimeExpressionParser, items);

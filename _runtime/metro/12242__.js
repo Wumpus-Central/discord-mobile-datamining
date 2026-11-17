@@ -1,11 +1,36 @@
 // === Module 12242: ? ===
 
 // Module 12242
-import _mod12243 from "module_12243" /* 12243 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 12100 */;
+import now from "now" /* 12117 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const require = globalThis.__r;
-
-const self = this;
+let self = this;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -21,6 +46,33 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
+      fn = function o(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
       fn = (__esModule) => {
         if (__esModule) {
           if (__esModule.__esModule) {
@@ -29,25 +81,10 @@ if (self2) {
         }
         const obj = {};
         if (null != __esModule) {
-          for (const key10009 in arg0) {
-            let tmp9 = "default" !== key10009;
-            if (!tmp9) {
-              if (!tmp9) {
-                continue;
-              } else {
-                let tmp6 = self2(obj, arg0, key10009);
-                continue;
-              }
-              continue;
-            } else {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10009);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10009);
-              }
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
             }
           }
         }
@@ -56,78 +93,57 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.parse = undefined;
-    exports.parseAsync = undefined;
-    exports.safeParse = undefined;
-    exports.safeParseAsync = undefined;
-    exports.validate = undefined;
-    exports.validateAsync = undefined;
-    exports.encode = undefined;
-    exports.decode = undefined;
-    exports.encodeAsync = undefined;
-    exports.decodeAsync = undefined;
-    exports.safeEncode = undefined;
-    exports.safeDecode = undefined;
-    exports.safeEncodeAsync = undefined;
-    exports.safeDecodeAsync = undefined;
-    const fnResult = fn(require("module_12158"));
-    exports.parse = fnResult._parse(_mod12243.ZodRealError);
-    exports.parseAsync = fnResult._parseAsync(_mod12243.ZodRealError);
-    exports.safeParse = fnResult._safeParse(_mod12243.ZodRealError);
-    exports.safeParseAsync = fnResult._safeParseAsync(_mod12243.ZodRealError);
-    const _Object4 = Object;
-    let obj = {
-      enumerable: true,
-      get() {
-            return require("module_12158").validate;
+    let closure_7 = fn(now);
+    class ESCasualDateParser {
+      constructor() {
+        self = this;
+        tmp = closure_0(this, ESCasualDateParser);
+        tmp2 = c2;
+        obj = c2(ESCasualDateParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
+      }
+    }
+    _classCallCheck = ESCasualDateParser;
+    _inherits(ESCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern(arg0) {
+            return /(ahora|hoy|mañana|ayer)(?=\W|$)/i;
           }
     };
-    Object.defineProperty(exports, "validate", obj);
-    const _Object5 = Object;
-    const obj2 = {
-      enumerable: true,
-      get() {
-            return require("module_12158").validateAsync;
-          }
-    };
-    Object.defineProperty(exports, "validateAsync", obj2);
-    exports.encode = fnResult._encode(_mod12243.ZodRealError);
-    exports.decode = fnResult._decode(_mod12243.ZodRealError);
-    exports.encodeAsync = fnResult._encodeAsync(_mod12243.ZodRealError);
-    exports.decodeAsync = fnResult._decodeAsync(_mod12243.ZodRealError);
-    exports.safeEncode = fnResult._safeEncode(_mod12243.ZodRealError);
-    exports.safeDecode = fnResult._safeDecode(_mod12243.ZodRealError);
-    exports.safeEncodeAsync = fnResult._safeEncodeAsync(_mod12243.ZodRealError);
-    exports.safeDecodeAsync = fnResult._safeDecodeAsync(_mod12243.ZodRealError);
-    (() => {
-      let tmp = exports;
-      const ownPropertyNames = Object.getOwnPropertyNames(exports);
-      let num = 0;
-      if (0 < ownPropertyNames.length) {
-        const _Object = Object;
-        const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(exports, ownPropertyNames[num]);
-        if (ownPropertyDescriptor) {
-          if (ownPropertyDescriptor.get) {
-            if (ownPropertyDescriptor.configurable) {
-              try {
-                value = ownPropertyDescriptor.get();
-                if (undefined !== value) {
-                  const _Object2 = Object;
-                  const obj = { value, writable: false, enumerable: ownPropertyDescriptor.enumerable, configurable: false };
-                  Object.defineProperty(exports, ownPropertyNames[num], obj);
-                }
-              } catch (err) {
-              }
+    let items = [entry, ];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+            const formatted = arg1[0].toLowerCase();
+            if ("ahora" === formatted) {
+              return closure_7.now(reference.reference);
+            } else if ("hoy" === formatted) {
+              return closure_7.today(reference.reference);
+            } else if ("ma\u00F1ana" === formatted) {
+              return closure_7.tomorrow(reference.reference);
+            } else if ("ayer" === formatted) {
+              return closure_7.yesterday(reference.reference);
+            } else {
+              return tmp2;
             }
           }
-        }
-        num = num + 1;
-        tmp = exports;
-      }
-      const frozen = Object.freeze(tmp);
-    })();
+    };
+    items[1] = entry1;
+    exports.default = _createClass(ESCasualDateParser, items);
   } else {
-    let _Object2 = Object;
+    const _Object2 = Object;
   }
 } else {
   let _Object = Object;

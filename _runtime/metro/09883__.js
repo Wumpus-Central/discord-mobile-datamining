@@ -1,38 +1,44 @@
 // === Module 9883: ? ===
 
 // Module 9883
-import _mod9795 from "module_9795" /* 9795 */;
-import _mod9797 from "module_9797" /* 9797 */;
-import _mod9798 from "module_9798" /* 9798 */;
+import _mod9810 from "module_9810" /* 9810 */;
+import _mod9824 from "module_9824" /* 9824 */;
+import _mod9837 from "module_9837" /* 9837 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function instrumentConsole() {
-  if ("console" in _mod9798.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = _mod9797.CONSOLE_LEVELS;
-    const item = CONSOLE_LEVELS.forEach((item) => {
-      closure_0 = item;
-      if (item in closure_0(9798).GLOBAL_OBJ.console) {
-        tmp(9803).fill(tmp(9798).GLOBAL_OBJ.console, item, (arg0) => {
-          _mod9797.originalConsoleMethods[level] = arg0;
-          return () => {
-            items = [...arguments];
-            level(9795).triggerHandlers("console", { args: items, level });
-            const obj3 = level(9797).originalConsoleMethods[level];
-            if (obj3) {
-              obj3.apply(level(9798).GLOBAL_OBJ.console, items);
-            }
-            const obj = { args: items, level };
-            const obj2 = level(9795);
-          };
-        });
-        const tmpResult = tmp(9803);
-      }
-    });
-  }
-}
 
-export function addConsoleInstrumentationHandler(errorCallback) {
-  _mod9795.addHandler("console", errorCallback);
-  _mod9795.maybeInstrument("console", instrumentConsole);
+export function addBreadcrumb(arg0, arg1) {
+  closure_0 = arg1;
+  const client = _mod9837.getClient();
+  const isolationScope = _mod9837.getIsolationScope();
+  if (client) {
+    const options = client.getOptions();
+    let beforeBreadcrumb = options.beforeBreadcrumb;
+    let tmp5 = null;
+    if (undefined !== beforeBreadcrumb) {
+      tmp5 = beforeBreadcrumb;
+    }
+    beforeBreadcrumb = tmp5;
+    const maxBreadcrumbs = options.maxBreadcrumbs;
+    let num = 100;
+    if (undefined !== maxBreadcrumbs) {
+      num = maxBreadcrumbs;
+    }
+    if (num > 0) {
+      let obj2 = { timestamp: _mod9824.dateTimestampInSeconds() };
+      const merged = Object.assign(arg0);
+      if (tmp5) {
+        obj2 = _mod9810.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = _mod9810;
+      }
+      if (null !== obj2) {
+        if (client.emit) {
+          client.emit("beforeAddBreadcrumb", obj2, arg1);
+        }
+        isolationScope.addBreadcrumb(obj2, num);
+      }
+      const tmpResult = _mod9824;
+    }
+  }
 }

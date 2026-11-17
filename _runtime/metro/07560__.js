@@ -1,18 +1,7 @@
 // === Module 7560: ? ===
 
 // Module 7560
+import registerAsset from "module_1119" /* 1119 */;
 
-export function throttle(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return function() {
-    if (null == timeout) {
-      const self = this;
-      closure_0.apply(this, tmp);
-      const _setTimeout = setTimeout;
-      timeout = setTimeout(() => {
-        c2 = undefined;
-      }, closure_1);
-    }
-  };
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1998c882c99c2bfa1f4c01d3c0fdc31d", name: "XSmallIcon", type: "png" });

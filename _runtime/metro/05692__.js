@@ -1,35 +1,19 @@
 // === Module 5692: ? ===
 
 // Module 5692
-import _mod17 from "module_17" /* 17 */;
+import ComposedGestureName from "ComposedGestureName" /* 5654 */;
+import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5663 */;
+import _mod5680 from "module_5680" /* 5680 */;
 
-const Platform = _mod17.Platform;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export function getTVProps(focusable) {
-  if (Platform.isTV) {
-    let flag = focusable.focusable;
-    if (flag == null) {
-      flag = focusable.isTVSelectable;
-    }
-    if (flag == null) {
-      flag = true;
-    }
-    const obj2 = { isTVSelectable: flag };
-    let obj = obj2;
-  } else {
-    obj = {};
+export function useNativeGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
   }
-  return obj;
-}
-export function applyRelationProp(arg0, arg1, arg2) {
-  if (arg2) {
-    const _Array = Array;
-    if (Array.isArray(arg2)) {
-      items = [];
-      HermesBuiltin.arraySpread(arg2, 0);
-      HermesBuiltin.apply(items, arg0);
-    } else {
-      tmp4(arg2);
-    }
-  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5680.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
 }

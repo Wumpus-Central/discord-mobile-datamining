@@ -1,17 +1,33 @@
 // === Module 9884: ? ===
 
 // Module 9884
+import setupIntegration from "module_9866" /* 9866 */;
 
-export function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
+const weakMap = new WeakMap();
+
+export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
+  name: "FunctionToString",
+  setupOnce() {
+    toString = Function.prototype.toString;
+    try {
+      const _Function = Function;
+      Function.prototype.toString = function() {
+        items = [...arguments];
+        const originalFunction = closure_1_0(9816).getOriginalFunction(this);
+        const obj = closure_1_0(9816);
+        let self = this;
+        if (set.has(obj2.getClient())) {
+          self = this;
+          if (undefined !== originalFunction) {
+            self = originalFunction;
+          }
+        }
+        return toString.apply(self, items);
+      };
+    } catch (err) {
     }
-    str = str2;
+  },
+  setup(arg0) {
+    const result = weakMap.set(arg0, true);
   }
-  return str;
-}
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];
+}));

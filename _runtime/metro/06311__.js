@@ -1,11 +1,11 @@
 // === Module 6311: ? ===
 
 // Module 6311
-import _mod17 from "module_17" /* 17 */;
-import module_65 from "module_65" /* 65 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSSafeAreaView", validAttributes: { edges: true, insetType: true } };
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
+const context = noop.createContext((children) => duration(React, { children: children.children }));
 
-export default module_65.get("RNSSafeAreaView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const GHContext = context;
+export const RNSScreensRefContext = noop.createContext(null);

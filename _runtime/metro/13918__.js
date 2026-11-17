@@ -1,9 +1,7 @@
 // === Module 13918: ? ===
 
 // Module 13918
-import _mod13916 from "module_13916" /* 13916 */;
-import _mod13919 from "module_13919" /* 13919 */;
-import _mod13920 from "module_13920" /* 13920 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default { getNode: _mod13916, expression: _mod13919, var: _mod13920 };
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "0cbd606a7d77f46a42c156cab0771b02", name: "ic_mention_24px", type: "png" });

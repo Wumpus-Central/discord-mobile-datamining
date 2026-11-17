@@ -133,7 +133,7 @@ let items = [
     key: "setUser",
     value: function setUser(user) {
       if (!user) {
-        user = { email: "loadJsonAsset", id: "ao", ip_address: "flags", username: "paddingHorizontal" };
+        user = { email: "Array", id: "s", ip_address: "channel_id", username: "space" };
       }
       const self = this;
       this._user = user;

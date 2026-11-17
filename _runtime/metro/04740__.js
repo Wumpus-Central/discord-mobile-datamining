@@ -1,39 +1,33 @@
 // === Module 4740: ? ===
 
 // Module 4740
-import module_4589_mod from "module_4589" /* 4589 */;
-import _typeof_mod from "module_4585" /* 4585 */;
-import requiredArgs_mod from "requiredArgs" /* 4586 */;
+import _typeof_mod from "module_4589" /* 4589 */;
+import requiredArgs_mod from "requiredArgs" /* 4590 */;
 
-let module_4589 = module_4589_mod;
-if (!module_4589) {
-  const obj = { default: module_4589 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4589;
-}
-module_4589 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp3 = _typeof;
 }
-_typeof = tmp5;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function addMilliseconds(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  return new Date(time + module_4589.default(arg1));
+export default function isWeekend(arg0) {
+  requiredArgs.default(1, arguments);
+  const day = _typeof.default(arg0).getDay();
+  let tmp3 = 0 === day;
+  if (!tmp3) {
+    tmp3 = 6 === day;
+  }
+  return tmp3;
 };
 export default exports.default;

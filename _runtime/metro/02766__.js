@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2dpZnRpbmc=", scales: [1], hash: "d7cf54d6daf5eea56d47c432d2581666", name: "bg.messages.d7cf54d6daf5eea56d47c432d2581666.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/powerups", scales: [1], hash: "ddd86817da2beab12455866b3868a66e", name: "GuildPowerups.compiled.messages", type: "jsona" });

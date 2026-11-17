@@ -4,96 +4,166 @@
 import _mod2169 from "module_2169" /* 2169 */;
 
 const fn = function n(moment) {
-  function translateSingular(arg0, arg1, arg2, arg3) {
-    const parts = dependencyMap[arg2].split("_");
-    if (arg1) {
-      let first = parts[0];
-    } else {
-      first = arg3 ? parts[1] : parts[2];
-    }
-    return first;
-  }
   function translate(arg0, arg1, arg2, arg3) {
-    const text = `${arg0} `;
-    if (1 === arg0) {
-      const parts = dependencyMap[arg2[0]].split("_");
-      if (arg1) {
-        let first = parts[0];
-      } else {
-        first = arg3 ? parts[1] : parts[2];
-      }
-      const sum = text + first;
-    } else if (arg1) {
-      const result = arg0 % 10;
-      let tmp10 = result === 0;
-      if (result !== 0) {
-        let tmp11 = arg0 > 10;
-        if (tmp11) {
-          tmp11 = arg0 < 20;
+    switch (arg2) {
+      case "s":
+        if (arg3) {
+          let str17 = "n\u00E9h\u00E1ny m\u00E1sodperc";
+        } else {
+          str17 = "n\u00E9h\u00E1ny m\u00E1sodperce";
         }
-        tmp10 = tmp11;
-      }
-      const parts1 = dependencyMap[arg2].split("_");
-      const sum1 = text + (tmp10 ? parts1[1] : parts1[0]);
-    } else {
-      if (arg3) {
-        let sum2 = text + dependencyMap[arg2].split("_")[1];
-      } else {
-        const result1 = arg0 % 10;
-        let tmp3 = result1 === 0;
-        if (result1 !== 0) {
-          let tmp4 = arg0 > 10;
-          if (tmp4) {
-            tmp4 = arg0 < 20;
-          }
-          tmp3 = tmp4;
+        return str17;
+      case "ss":
+        let tmp = arg3;
+        if (!arg3) {
+          tmp = arg1;
         }
-        const parts2 = dependencyMap[arg2].split("_");
-        sum2 = text + (tmp3 ? parts2[1] : parts2[2]);
-      }
-      return sum2;
+        let str16 = " m\u00E1sodperce";
+        if (arg0 + tmp) {
+          str16 = " m\u00E1sodperc";
+        }
+        return str16;
+      case "m":
+        if (arg3) {
+          let str14 = " perc";
+        } else {
+          str14 = " perce";
+        }
+        return "egy" + str14;
+      case "mm":
+        if (arg3) {
+          let str13 = " perc";
+        } else {
+          str13 = " perce";
+        }
+        return arg0 + str13;
+      case "h":
+        if (arg3) {
+          let str11 = " \u00F3ra";
+        } else {
+          str11 = " \u00F3r\u00E1ja";
+        }
+        return "egy" + str11;
+      case "hh":
+        if (arg3) {
+          let str10 = " \u00F3ra";
+        } else {
+          str10 = " \u00F3r\u00E1ja";
+        }
+        return arg0 + str10;
+      case "d":
+        if (arg3) {
+          let str8 = " nap";
+        } else {
+          str8 = " napja";
+        }
+        return "egy" + str8;
+      case "dd":
+        if (arg3) {
+          let str7 = " nap";
+        } else {
+          str7 = " napja";
+        }
+        return arg0 + str7;
+      case "M":
+        if (arg3) {
+          let str5 = " h\u00F3nap";
+        } else {
+          str5 = " h\u00F3napja";
+        }
+        return "egy" + str5;
+      case "MM":
+        if (arg3) {
+          let str4 = " h\u00F3nap";
+        } else {
+          str4 = " h\u00F3napja";
+        }
+        return arg0 + str4;
+      case "y":
+        if (arg3) {
+          let str2 = " \u00E9v";
+        } else {
+          str2 = " \u00E9ve";
+        }
+        return "egy" + str2;
+      case "yy":
+        if (arg3) {
+          let str = " \u00E9v";
+        } else {
+          str = " \u00E9ve";
+        }
+        return arg0 + str;
+      default:
+        return "";
     }
   }
-  dependencyMap = { ss: "sekund\u0117_sekund\u017Ei\u0173_sekundes", m: "minut\u0117_minut\u0117s_minut\u0119", mm: "minut\u0117s_minu\u010Di\u0173_minutes", h: "valanda_valandos_valand\u0105", hh: "valandos_valand\u0173_valandas", d: "diena_dienos_dien\u0105", dd: "dienos_dien\u0173_dienas", M: "m\u0117nuo_m\u0117nesio_m\u0117nes\u012F", MM: "m\u0117nesiai_m\u0117nesi\u0173_m\u0117nesius", y: "metai_met\u0173_metus", yy: "metai_met\u0173_metus" };
-  const obj = { months: { format: "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split("_"), standalone: "sausis_vasaris_kovas_balandis_gegu\u017E\u0117_bir\u017Eelis_liepa_rugpj\u016Btis_rugs\u0117jis_spalis_lapkritis_gruodis".split("_"), isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/ }, monthsShort: "sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd".split("_"), weekdays: null, weekdaysShort: null, weekdaysMin: null, weekdaysParseExact: true, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: null, week: null };
-  const obj2 = { format: "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split("_"), standalone: "sausis_vasaris_kovas_balandis_gegu\u017E\u0117_bir\u017Eelis_liepa_rugpj\u016Btis_rugs\u0117jis_spalis_lapkritis_gruodis".split("_"), isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/ };
-  obj.weekdays = { format: "sekmadien\u012F_pirmadien\u012F_antradien\u012F_tre\u010Diadien\u012F_ketvirtadien\u012F_penktadien\u012F_\u0161e\u0161tadien\u012F".split("_"), standalone: "sekmadienis_pirmadienis_antradienis_tre\u010Diadienis_ketvirtadienis_penktadienis_\u0161e\u0161tadienis".split("_"), isFormat: /dddd HH:mm/ };
-  obj.weekdaysShort = "Sek_Pir_Ant_Tre_Ket_Pen_\u0160e\u0161".split("_");
-  obj.weekdaysMin = "S_P_A_T_K_Pn_\u0160".split("_");
-  obj.longDateFormat = { LT: "HH:mm", LTS: "HH:mm:ss", L: "YYYY-MM-DD", LL: "YYYY [m.] MMMM D [d.]", LLL: "YYYY [m.] MMMM D [d.], HH:mm [val.]", LLLL: "YYYY [m.] MMMM D [d.], dddd, HH:mm [val.]", l: "YYYY-MM-DD", ll: "YYYY [m.] MMMM D [d.]", lll: "YYYY [m.] MMMM D [d.], HH:mm [val.]", llll: "YYYY [m.] MMMM D [d.], ddd, HH:mm [val.]" };
-  obj.calendar = { sameDay: "[\u0160iandien] LT", nextDay: "[Rytoj] LT", nextWeek: "dddd LT", lastDay: "[Vakar] LT", lastWeek: "[Pra\u0117jus\u012F] dddd LT", sameElse: "L" };
-  obj.relativeTime = {
-    future: "po %s",
-    past: "prie\u0161 %s",
-    s: function translateSeconds(arg0, arg1, arg2, arg3) {
-      let str = "kelios sekund\u0117s";
-      if (!arg1) {
-        let str2 = "kelias sekundes";
-        if (arg3) {
-          str2 = "keli\u0173 sekund\u017Ei\u0173";
+  function week(arg0) {
+    let str = "[m\u00FAlt] ";
+    if (arg0) {
+      str = "";
+    }
+    return str + "[" + dependencyMap[this.day(this)] + "] LT[-kor]";
+  }
+  dependencyMap = "vas\u00E1rnap h\u00E9tf\u0151n kedden szerd\u00E1n cs\u00FCt\u00F6rt\u00F6k\u00F6n p\u00E9nteken szombaton".split(" ");
+  return moment.defineLocale("hu", {
+    months: "janu\u00E1r_febru\u00E1r_m\u00E1rcius_\u00E1prilis_m\u00E1jus_j\u00FAnius_j\u00FAlius_augusztus_szeptember_okt\u00F3ber_november_december".split("_"),
+    monthsShort: "jan._feb._m\u00E1rc._\u00E1pr._m\u00E1j._j\u00FAn._j\u00FAl._aug._szept._okt._nov._dec.".split("_"),
+    monthsParseExact: true,
+    weekdays: "vas\u00E1rnap_h\u00E9tf\u0151_kedd_szerda_cs\u00FCt\u00F6rt\u00F6k_p\u00E9ntek_szombat".split("_"),
+    weekdaysShort: "vas_h\u00E9t_kedd_sze_cs\u00FCt_p\u00E9n_szo".split("_"),
+    weekdaysMin: "v_h_k_sze_cs_p_szo".split("_"),
+    longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "YYYY.MM.DD.", LL: "YYYY. MMMM D.", LLL: "YYYY. MMMM D. H:mm", LLLL: "YYYY. MMMM D., dddd H:mm" },
+    meridiemParse: /de|du/i,
+    isPM(str) {
+      str = str.charAt(1);
+      return "u" === str.toLowerCase();
+    },
+    meridiem(arg0, arg1, arg2) {
+      if (arg0 < 12) {
+        let str2 = "DE";
+        if (true === arg2) {
+          str2 = "de";
         }
-        str = str2;
+        let str = str2;
+      } else {
+        str = "DU";
+        if (true === arg2) {
+          str = "du";
+        }
       }
       return str;
     },
-    ss: translate,
-    m: translateSingular,
-    mm: translate,
-    h: translateSingular,
-    hh: translate,
-    d: translateSingular,
-    dd: translate,
-    M: translateSingular,
-    MM: translate,
-    y: translateSingular,
-    yy: translate
-  };
-  obj.dayOfMonthOrdinalParse = /\d{1,2}-oji/;
-  obj.ordinal = function ordinal(arg0) {
-    return arg0 + "-oji";
-  };
-  obj.week = { dow: 1, doy: 4 };
-  return moment.defineLocale("lt", obj);
+    calendar: {
+      sameDay: "[ma] LT[-kor]",
+      nextDay: "[holnap] LT[-kor]",
+      nextWeek() {
+        const self = this;
+        const call = week.call;
+        if (typeof call === "unknown") {
+          let text = `${"[" + closure_0[self.day(self)]}] LT[-kor]`;
+        } else {
+          text = call(self, true);
+        }
+        return text;
+      },
+      lastDay: "[tegnap] LT[-kor]",
+      lastWeek() {
+        const self = this;
+        const call = week.call;
+        if (typeof call === "unknown") {
+          let text = `${"[m\u00FAlt] [" + closure_0[self.day(self)]}] LT[-kor]`;
+        } else {
+          text = call(self, false);
+        }
+        return text;
+      },
+      sameElse: "L"
+    },
+    relativeTime: { future: "%s m\u00FAlva", past: "%s", s: translate, ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: translate, dd: translate, M: translate, MM: translate, y: translate, yy: translate },
+    dayOfMonthOrdinalParse: /\d{1,2}\./,
+    ordinal: "%d.",
+    week: { dow: 1, doy: 4 }
+  });
 };
 if (typeof exports === "object") {
   if (undefined !== module) {

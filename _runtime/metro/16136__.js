@@ -1,12 +1,7 @@
 // === Module 16136: ? ===
 
 // Module 16136
-import _mod16150 from "module_16150" /* 16150 */;
-import assign from "module_16137" /* 16137 */;
-import Deflate from "Deflate" /* 16138 */;
-import Inflate from "Inflate" /* 16146 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod16150);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 16, height: 16, scales: [2, 3], hash: "e75d6cb3291053e29f69fac93519aa0b", name: "spectator", type: "png" });

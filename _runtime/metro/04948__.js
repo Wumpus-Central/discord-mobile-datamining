@@ -2,7 +2,7 @@
 
 // Module 4948
 import module_4940_mod from "module_4940" /* 4940 */;
-import requiredArgs_mod from "requiredArgs" /* 4586 */;
+import requiredArgs_mod from "requiredArgs" /* 4590 */;
 
 let module_4940 = module_4940_mod;
 if (!module_4940) {
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisYear(arg0) {
+export default function isThisMonth(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4940.default(arg0, Date.now());
+  return module_4940.default(Date.now(), arg0);
 };
 export default exports.default;

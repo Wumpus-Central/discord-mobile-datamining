@@ -1,71 +1,61 @@
 // === Module 9824: ? ===
 
 // Module 9824
-import _mod9798 from "module_9798" /* 9798 */;
-import _mod9803 from "module_9803" /* 9803 */;
-import _mod9815 from "module_9815" /* 9815 */;
-import _mod9816 from "module_9816" /* 9816 */;
-import ScopeClass from "ScopeClass" /* 9818 */;
+import _mod9811 from "module_9811" /* 9811 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function getClient() {
-  const mainCarrier = _mod9815.getMainCarrier();
-  const asyncContextStrategy = _mod9816.getAsyncContextStrategy(mainCarrier);
-  const currentScope = asyncContextStrategy.getCurrentScope();
-  return currentScope.getClient();
+function dateTimestampInSeconds() {
+  return Date.now() / 1000;
 }
-export function getCurrentScope() {
-  const mainCarrier = _mod9815.getMainCarrier();
-  const asyncContextStrategy = _mod9816.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getCurrentScope();
-}
-export function getGlobalScope() {
-  return _mod9798.getGlobalSingleton("globalScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
-export function getIsolationScope() {
-  const mainCarrier = _mod9815.getMainCarrier();
-  const asyncContextStrategy = _mod9816.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getIsolationScope();
-}
-export function getTraceContextFromScope(getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  ({ traceId, spanId, parentSpanId } = propagationContext);
-  return _mod9803.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
-}
-export function withIsolationScope() {
-  items = [...arguments];
-  const mainCarrier = _mod9815.getMainCarrier();
-  const asyncContextStrategy = _mod9816.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
-    } else {
-      result = asyncContextStrategy.withIsolationScope(tmp3);
+let timeOrigin;
+const _performance = _mod9811.GLOBAL_OBJ.performance;
+let fn = dateTimestampInSeconds;
+if (_performance) {
+  fn = dateTimestampInSeconds;
+  if (_performance.now) {
+    const _Date = Date;
+    const timestamp = Date.now();
+    timeOrigin = timestamp - _performance.now();
+    if (null != _performance.timeOrigin) {
+      timeOrigin = _performance.timeOrigin;
     }
-    return result;
-  } else {
-    return asyncContextStrategy.withIsolationScope(items[0]);
+    fn = () => (timeOrigin + _performance.now()) / 1000;
   }
 }
-export function withScope() {
-  items = [...arguments];
-  const mainCarrier = _mod9815.getMainCarrier();
-  const asyncContextStrategy = _mod9816.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
-    } else {
-      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
+const _performance2 = _mod9811.GLOBAL_OBJ.performance;
+if (_performance2) {
+  if (_performance2.now) {
+    const nowResult = _performance2.now();
+    const _Date2 = Date;
+    const timestamp1 = Date.now();
+    let num2 = 3600000;
+    if (_performance2.timeOrigin) {
+      const _Math = Math;
+      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
     }
-    return withSetScopeResult;
-  } else {
-    return asyncContextStrategy.withScope(items[0]);
+    let timeOrigin2 = _performance2.timing;
+    if (timeOrigin2) {
+      timeOrigin2 = _performance2.timing.navigationStart;
+    }
+    let num3 = 3600000;
+    if (typeof timeOrigin2 === "number") {
+      const _Math2 = Math;
+      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
+    }
+    if (!tmp6) {
+      if (num3 >= 3600000) {
+        exports._browserPerformanceTimeOriginMode = "dateNow";
+      }
+    }
+    if (num2 <= num3) {
+      exports._browserPerformanceTimeOriginMode = "timeOrigin";
+      timeOrigin2 = _performance2.timeOrigin;
+    } else {
+      exports._browserPerformanceTimeOriginMode = "navigationStart";
+    }
+    tmp6 = num2 < 3600000;
   }
 }
+
+export const _browserPerformanceTimeOriginMode = "none";
+export { dateTimestampInSeconds };
+export const timestampInSeconds = fn;

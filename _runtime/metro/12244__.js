@@ -1,118 +1,70 @@
 // === Module 12244: ? ===
 
 // Module 12244
-const require = globalThis.__r;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 12100 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+const ESTimeUnitWithinFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (!fn) {
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          for (const key10009 in arg0) {
-            let tmp9 = "default" !== key10009;
-            if (!tmp9) {
-              if (!tmp9) {
-                continue;
-              } else {
-                let tmp6 = self2(obj, arg0, key10009);
-                continue;
-              }
-              continue;
-            } else {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10009);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10009);
-              }
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    exports.ZodIssueCode = undefined;
-    exports.$brand = undefined;
-    exports.config = undefined;
-    exports.ZodFirstPartyTypeKind = undefined;
-    exports.setErrorMap = function setErrorMap(customError) {
-      closure_5.config({ customError });
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
     };
-    exports.getErrorMap = function getErrorMap() {
-      return closure_5.config().customError;
-    };
-    let closure_5 = fn(require("module_12158"));
-    exports.ZodIssueCode = { invalid_type: "invalid_type", too_big: "too_big", too_small: "too_small", invalid_format: "invalid_format", not_multiple_of: "not_multiple_of", unrecognized_keys: "unrecognized_keys", invalid_union: "invalid_union", invalid_key: "invalid_key", invalid_element: "invalid_element", invalid_value: "invalid_value", custom: "custom" };
-    const _Object4 = Object;
-    let obj = {
-      enumerable: true,
-      get() {
-            return require("module_12158").$brand;
-          }
-    };
-    Object.defineProperty(exports, "$brand", obj);
-    const _Object5 = Object;
-    const obj2 = {
-      enumerable: true,
-      get() {
-            return require("module_12158").config;
-          }
-    };
-    Object.defineProperty(exports, "config", obj2);
-    exports.ZodFirstPartyTypeKind = {};
-    (() => {
-      let tmp = exports;
-      const ownPropertyNames = Object.getOwnPropertyNames(exports);
-      let num = 0;
-      if (0 < ownPropertyNames.length) {
-        const _Object = Object;
-        const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(exports, ownPropertyNames[num]);
-        if (ownPropertyDescriptor) {
-          if (ownPropertyDescriptor.get) {
-            if (ownPropertyDescriptor.configurable) {
-              try {
-                value = ownPropertyDescriptor.get();
-                if (undefined !== value) {
-                  const _Object2 = Object;
-                  const obj = { value, writable: false, enumerable: ownPropertyDescriptor.enumerable, configurable: false };
-                  Object.defineProperty(exports, ownPropertyNames[num], obj);
-                }
-              } catch (err) {
-              }
-            }
-          }
-        }
-        num = num + 1;
-        tmp = exports;
-      }
-      const frozen = Object.freeze(tmp);
-    })();
-  } else {
-    let _Object2 = Object;
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-} else {
-  let _Object = Object;
 }
+class ESTimeUnitWithinFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ESTimeUnitWithinFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ESTimeUnitWithinFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ESTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp("(?:en|por|durante|de|dentro de)\\s*(" + ESTimeUnitWithinFormatParser(12237).TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+    return regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = ESTimeUnitWithinFormatParser(12096).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, ESTimeUnitWithinFormatParser(12237).parseDuration(arg1[1]));
+    }
+  }
+];
+
+export default _createClass(ESTimeUnitWithinFormatParser, items);

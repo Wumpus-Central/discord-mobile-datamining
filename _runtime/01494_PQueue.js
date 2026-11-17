@@ -57,7 +57,7 @@ class VBox {
 }
 class CMap {
   constructor() {
-    f125951 = (vbox, vbox2) => {
+    f126242 = (vbox, vbox2) => {
       vbox = vbox.vbox;
       vbox2 = vbox.vbox;
       const vbox3 = vbox2.vbox;

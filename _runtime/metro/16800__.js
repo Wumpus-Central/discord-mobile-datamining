@@ -1,5 +1,16 @@
 // === Module 16800: ? ===
 
 // Module 16800
+import prop_mod from "module_16801" /* 16801 */;
 
-export const f = Object.getOwnPropertySymbols;
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
+
+export default prop;

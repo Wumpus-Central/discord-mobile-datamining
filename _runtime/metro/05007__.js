@@ -1,18 +1,18 @@
 // === Module 5007: ? ===
 
 // Module 5007
-import module_4589_mod from "module_4589" /* 4589 */;
-import _typeof_mod from "module_4585" /* 4585 */;
-import requiredArgs_mod from "requiredArgs" /* 4586 */;
+import module_4593_mod from "module_4593" /* 4593 */;
+import _typeof_mod from "module_4589" /* 4589 */;
+import requiredArgs_mod from "requiredArgs" /* 4590 */;
 
-let module_4589 = module_4589_mod;
-if (!module_4589) {
-  const obj = { default: module_4589 };
+let module_4593 = module_4593_mod;
+if (!module_4593) {
+  const obj = { default: module_4593 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4589;
+  tmp3 = module_4593;
 }
-module_4589 = tmp3;
+module_4593 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -30,10 +30,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setMinutes(module_4589, arg1) {
+export default function setHours(module_4593, uTCMinutes) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_4589);
-  defaultResult1.setMinutes(module_4589.default(arg1));
+  const defaultResult1 = _typeof.default(module_4593);
+  defaultResult1.setHours(module_4593.default(uTCMinutes));
   return defaultResult1;
 };
 export default exports.default;

@@ -1,18 +1,18 @@
 // === Module 5414: ? ===
 
 // Module 5414
-import c from "c" /* 5398 */;
-import _mod5411 from "module_5411" /* 5411 */;
+import c from "c" /* 5402 */;
+import _mod5415 from "module_5415" /* 5415 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getBooleanProperty(booleanProperty, arg1) {
-  return booleanProperty.booleanProperty(arg1);
+function getNumberProperty(numberProperty, arg1) {
+  return numberProperty.numberProperty(arg1);
 }
 
-export function useRiveBoolean(reducedMotion, instance) {
+export function useRiveNumber(chapterID, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod5411.useRiveProperty(instance, reducedMotion, getBooleanProperty);
+  [tmp3, tmp4, tmp5] = _mod5415.useRiveProperty(instance, chapterID, getNumberProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

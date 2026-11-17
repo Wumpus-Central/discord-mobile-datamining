@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/seasonal", width: 144, height: 150, scales: [1], hash: "9326b8f858addb08d8cfb2f4710ba77a", name: "coffee_idle", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 45.5, height: 8.5, scales: [2, 3], hash: "8d16389f341b45c184ca21d1deb5fd2e", name: "img_logo_discord", type: "png" });

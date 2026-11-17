@@ -1,8 +1,8 @@
 // === Module 4863: ? ===
 
 // Module 4863
-import _typeof_mod from "module_4585" /* 4585 */;
-import requiredArgs_mod from "requiredArgs" /* 4586 */;
+import _typeof_mod from "module_4589" /* 4589 */;
+import requiredArgs_mod from "requiredArgs" /* 4590 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getSeconds(arg0) {
+export default function getMilliseconds(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getSeconds();
+  return _typeof.default(arg0).getMilliseconds();
 };
 export default exports.default;

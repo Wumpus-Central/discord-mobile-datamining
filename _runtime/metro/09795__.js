@@ -1,57 +1,21 @@
 // === Module 9795: ? ===
 
 // Module 9795
-import _mod9796 from "module_9796" /* 9796 */;
-import _mod9797 from "module_9797" /* 9797 */;
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 9800 */;
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = {};
-let closure_3 = {};
-
-export function addHandler(console, errorCallback) {
-  dependencyMap[console] = dependencyMap[console] || [];
-  dependencyMap[console].push(errorCallback);
-  const tmp2 = dependencyMap[console] || [];
+for (const key10013 in require("RNIapAmazonModule")) {
+  arg5[key10013] = require("RNIapAmazonModule")[key10013];
+  continue;
 }
-export function maybeInstrument(console, fn) {
-  if (!closure_3[console]) {
-    tmp2[console] = true;
-    try {
-      fn();
-    } catch (tmp5) {
-      if (_mod9796.DEBUG_BUILD) {
-        const logger = _mod9797.logger;
-        const _HermesInternal = HermesInternal;
-        logger.error("Error while instrumenting " + tmp, tmp5);
-      }
-    }
-  }
+for (const key10017 in require("module_9788")) {
+  arg5[key10017] = require("module_9788")[key10017];
+  continue;
 }
-export function resetInstrumentationHandlers() {
-  const keys = Object.keys(closure_2);
-  const item = keys.forEach((item) => {
-    dependencyMap[item] = undefined;
-  });
+for (const key10021 in require("module_9789")) {
+  arg5[key10021] = require("module_9789")[key10021];
+  continue;
 }
-export function triggerHandlers(arg0, arg1) {
-  let tmp8 = arg0;
-  if (arg0) {
-    tmp8 = dependencyMap[arg0];
-  }
-  if (tmp8) {
-    const iter = tmp8[Symbol.iterator]();
-    if (iter !== undefined) {
-      try {
-        tmp15(arg1);
-      } catch (tmp18) {
-        if (_mod9796.DEBUG_BUILD) {
-          const logger = _mod9797.logger;
-          logger.error(tmp2 + tmp6 + tmp3 + stackParserFromStackParserOptions.getFunctionName(tmp7) + tmp4, tmp18);
-          const tmp19Result = stackParserFromStackParserOptions;
-        }
-      }
-    }
-    const nextResult = iter.next();
-  }
+for (const key10025 in require("module_9796")) {
+  arg5[key10025] = require("module_9796")[key10025];
+  continue;
 }

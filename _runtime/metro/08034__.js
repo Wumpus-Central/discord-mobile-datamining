@@ -1,7 +1,37 @@
 // === Module 8034: ? ===
 
 // Module 8034
-import registerAsset from "module_1119" /* 1119 */;
+import _mod8035 from "module_8035" /* 8035 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
+({ NativeModules: c3, Platform, TurboModuleRegistry: closure_4, requireNativeComponent: hasOwnProperty } = get_ActivityIndicator);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e06e2e681624b5a052b477a4af8dc512", name: "ThreadLockIcon", type: "png" });
+export () => {
+  try {
+    return hasOwnProperty("RNDatePicker");
+  } catch (err) {
+    if (global.ignoreDatePickerWarning) {
+      return null;
+    } else {
+      const _Error = Error;
+      throw Error(_mod8035.getInstallationErrorMessage());
+    }
+  }
+}
+export () => {
+  try {
+    if (React4) {
+      RNDatePicker = React4.get("RNDatePicker");
+    } else {
+      RNDatePicker = RNDatePicker.RNDatePicker;
+    }
+    return RNDatePicker;
+  } catch (err) {
+    if (global.ignoreDatePickerWarning) {
+      return null;
+    } else {
+      const _Error = Error;
+      throw Error(_mod8035.getInstallationErrorMessage());
+    }
+  }
+}

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/slayer_storefront/intl", scales: [1], hash: "c5ace346e7366b8aac2c5727cfa7c3f3", name: "BlackFridayGameExitPromo.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zbGF5ZXJfc3RvcmVmcm9udC9pbnRs", scales: [1], hash: "7df2b0db6c52de3b30d05174fcfba54a", name: "zh-CN.messages.7df2b0db6c52de3b30d05174fcfba54a.compiled.messages", type: "jsona" });

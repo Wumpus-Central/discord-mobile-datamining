@@ -1,15 +1,23 @@
 // === Module 7579: ? ===
 
 // Module 7579
-import _mod17 from "module_17" /* 17 */;
 
-const Platform = _mod17.Platform;
-
-export function getShadowStyle(color) {
-  let shadowColor = color.color;
-  ({ offset, radius, opacity } = color);
-  if (shadowColor === undefined) {
-    shadowColor = "#000";
+export function getInvertedMultiplier(gestureDirection, arg1) {
+  if ("vertical" === gestureDirection) {
+    return 1;
+  } else if ("vertical-inverted" === gestureDirection) {
+    return -1;
+  } else if ("horizontal" === gestureDirection) {
+    let num2 = 1;
+    if (arg1) {
+      num2 = -1;
+    }
+    return num2;
+  } else if ("horizontal-inverted" === gestureDirection) {
+    let num = -1;
+    if (arg1) {
+      num = 1;
+    }
+    return num;
   }
-  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
 }

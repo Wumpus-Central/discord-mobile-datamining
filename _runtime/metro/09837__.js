@@ -1,39 +1,71 @@
 // === Module 9837: ? ===
 
 // Module 9837
-import _mod9797 from "module_9797" /* 9797 */;
-import _mod9825 from "module_9825" /* 9825 */;
+import _mod9811 from "module_9811" /* 9811 */;
+import _mod9816 from "module_9816" /* 9816 */;
+import _mod9828 from "module_9828" /* 9828 */;
+import _mod9829 from "module_9829" /* 9829 */;
+import ScopeClass from "ScopeClass" /* 9831 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
+export function getClient() {
+  const mainCarrier = _mod9828.getMainCarrier();
+  const asyncContextStrategy = _mod9829.getAsyncContextStrategy(mainCarrier);
+  const currentScope = asyncContextStrategy.getCurrentScope();
+  return currentScope.getClient();
+}
+export function getCurrentScope() {
+  const mainCarrier = _mod9828.getMainCarrier();
+  const asyncContextStrategy = _mod9829.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getCurrentScope();
+}
+export function getGlobalScope() {
+  return _mod9811.getGlobalSingleton("globalScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+}
+export function getIsolationScope() {
+  const mainCarrier = _mod9828.getMainCarrier();
+  const asyncContextStrategy = _mod9829.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getIsolationScope();
+}
+export function getTraceContextFromScope(getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  ({ traceId, spanId, parentSpanId } = propagationContext);
+  return _mod9816.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+}
+export function withIsolationScope() {
+  items = [...arguments];
+  const mainCarrier = _mod9828.getMainCarrier();
+  const asyncContextStrategy = _mod9829.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+    } else {
+      result = asyncContextStrategy.withIsolationScope(tmp3);
+    }
+    return result;
   } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
+    return asyncContextStrategy.withIsolationScope(items[0]);
+  }
+}
+export function withScope() {
+  items = [...arguments];
+  const mainCarrier = _mod9828.getMainCarrier();
+  const asyncContextStrategy = _mod9829.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+    } else {
+      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
     }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
-          }
-        }
-      }
-    }
-    if (_mod9825.DEBUG_BUILD) {
-      const logger = _mod9797.logger;
-      const _JSON = JSON;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
-    }
+    return withSetScopeResult;
+  } else {
+    return asyncContextStrategy.withScope(items[0]);
   }
 }

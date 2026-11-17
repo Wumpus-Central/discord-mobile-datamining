@@ -1,38 +1,81 @@
 // === Module 4710: ? ===
 
 // Module 4710
-let closure_0 = { lessThanXSeconds: { one: "mindre \u00E4n en sekund", other: "mindre \u00E4n {{count}} sekunder" }, xSeconds: { one: "en sekund", other: "{{count}} sekunder" }, halfAMinute: "en halv minut", lessThanXMinutes: { one: "mindre \u00E4n en minut", other: "mindre \u00E4n {{count}} minuter" }, xMinutes: { one: "en minut", other: "{{count}} minuter" }, aboutXHours: { one: "ungef\u00E4r en timme", other: "ungef\u00E4r {{count}} timmar" }, xHours: { one: "en timme", other: "{{count}} timmar" }, xDays: { one: "en dag", other: "{{count}} dagar" }, aboutXWeeks: { one: "ungef\u00E4r en vecka", other: "ungef\u00E4r {{count}} vecka" }, xWeeks: { one: "en vecka", other: "{{count}} vecka" }, aboutXMonths: { one: "ungef\u00E4r en m\u00E5nad", other: "ungef\u00E4r {{count}} m\u00E5nader" }, xMonths: { one: "en m\u00E5nad", other: "{{count}} m\u00E5nader" }, aboutXYears: { one: "ungef\u00E4r ett \u00E5r", other: "ungef\u00E4r {{count}} \u00E5r" }, xYears: { one: "ett \u00E5r", other: "{{count}} \u00E5r" }, overXYears: { one: "\u00F6ver ett \u00E5r", other: "\u00F6ver {{count}} \u00E5r" }, almostXYears: { one: "n\u00E4stan ett \u00E5r", other: "n\u00E4stan {{count}} \u00E5r" } };
-let closure_1 = ["noll", "en", "tv\u00E5", "tre", "fyra", "fem", "sex", "sju", "\u00E5tta", "nio", "tio", "elva", "tolv"];
+import module_4591_mod from "module_4591" /* 4591 */;
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp8 = tmp;
-    if (null != addSuffix) {
-      tmp8 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} sedan`;
-        }
-        text = `om ${tmp}`;
+let module_4591 = module_4591_mod;
+if (!module_4591) {
+  const obj = { default: module_4591 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4591;
+}
+module_4591 = tmp3;
+const dependencyMap = ["\u0432\u043E\u0441\u043A\u0440\u0435\u0441\u0435\u043D\u044C\u0435", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440\u0433", "\u043F\u044F\u0442\u043D\u0438\u0446\u0443", "\u0441\u0443\u0431\u0431\u043E\u0442\u0443"];
+let closure_2 = {
+  lastWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_4591.default(getUTCDay, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'во ${tmp2}`;
+        let text1 = `'во ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'во ${tmp2}`} в' p`;
       }
-    }
-    return tmp8;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    if (addSuffix) {
-      if (addSuffix.onlyNumeric) {
-        const _String2 = String;
-        one = tmp.other.replace("{{count}}", String(arg1));
-      }
-    }
-    if (arg1 < 13) {
-      let StringResult = closure_1[arg1];
     } else {
-      const _String = String;
-      StringResult = String(arg1);
+      if (0 === uTCDay) {
+        let text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u0435 " + tmp2} в' p`;
+      } else {
+        if (1 !== uTCDay) {
+          if (2 !== uTCDay) {
+            if (4 !== uTCDay) {
+              text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u0443\u044E " + tmp2} в' p`;
+            }
+          }
+        }
+        text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u044B\u0439 " + tmp2} в' p`;
+      }
+      return text2;
     }
-    one = tmp.other.replace("{{count}}", StringResult);
+  },
+  yesterday: "'\u0432\u0447\u0435\u0440\u0430 \u0432' p",
+  today: "'\u0441\u0435\u0433\u043E\u0434\u043D\u044F \u0432' p",
+  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u0432' p",
+  nextWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_4591.default(getUTCDay, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'во ${tmp2}`;
+        let text1 = `'во ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'во ${tmp2}`} в' p`;
+      }
+    } else {
+      if (0 === uTCDay) {
+        let text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0435 " + tmp2} в' p`;
+      } else {
+        if (1 !== uTCDay) {
+          if (2 !== uTCDay) {
+            if (4 !== uTCDay) {
+              text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E " + tmp2} в' p`;
+            }
+          }
+        }
+        text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 " + tmp2} в' p`;
+      }
+      return text2;
+    }
+  },
+  other: "P"
+};
+
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_2[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
   }
+  return tmpResult;
 };
 export default exports.default;

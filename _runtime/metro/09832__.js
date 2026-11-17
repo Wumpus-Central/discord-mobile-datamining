@@ -1,40 +1,19 @@
 // === Module 9832: ? ===
 
 // Module 9832
-import _mod9804 from "module_9804" /* 9804 */;
+import _mod9816 from "module_9816" /* 9816 */;
 
 require = arg1;
 const dependencyMap = arg6;
+const _sentrySpan = "_sentrySpan";
 
-export function handleCallbackErrors(fn, arg1) {
-  fn = arg2;
-  if (arg2 === undefined) {
-    fn = function t() {
-
-    };
-  }
-  try {
-    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
-      closure_0 = arg1;
-      closure_1 = fn;
-      if (obj.isThenable(promise)) {
-        return promise.then((result) => {
-          closure_1();
-          return result;
-        }, (arg0) => {
-          closure_0(arg0);
-          closure_1();
-          throw arg0;
-        });
-      } else {
-        fn();
-        return promise;
-      }
-      obj = _mod9804;
-    })(fn(), arg1, fn);
-  } catch (tmp5) {
-    tmp3(tmp5);
-    tmp2();
-    throw tmp5;
+export function _getSpanForScope(currentScope) {
+  return currentScope[_sentrySpan];
+}
+export function _setSpanForScope(arg0, arg1) {
+  if (arg1) {
+    const result = _mod9816.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
+  } else {
+    delete tmp2[tmp];
   }
 }
