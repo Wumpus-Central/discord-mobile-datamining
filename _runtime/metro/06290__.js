@@ -1,23 +1,21 @@
 // _runtime/metro/06290__.js
-import _mod17 from "00017__.js";
-import resolveAssetSource_mod from "../00081_resolveAssetSource.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import get_ActivityIndicator from "00017__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsScreenAndroid", directEventTypes: { topWillAppear: { registrationName: "onWillAppear" }, topDidAppear: { registrationName: "onDidAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topDidDisappear: { registrationName: "onDidDisappear" } }, validAttributes: null };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-const obj2 = { screenKey: true, preventNativeSelection: true, title: true, badgeValue: true, tabBarItemTestID: true, tabBarItemAccessibilityLabel: true, specialEffects: true, drawableIconResourceName: true, imageIconResource: { process: resolveAssetSource }, selectedDrawableIconResourceName: true, selectedImageIconResource: null, standardAppearance: true };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-obj2.selectedImageIconResource = { process: resolveAssetSource };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onWillAppear: true, onDidAppear: true, onWillDisappear: true, onDidDisappear: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = obj2;
+({ BackHandler: closure_0, Platform } = get_ActivityIndicator);
+const items = ["ios", "android"];
 
-export default module_65.get("RNSTabsScreenAndroid", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const isSearchBarAvailableForCurrentPlatform = items.includes("android");
+export const isHeaderBarButtonsAvailableForCurrentPlatform = false;
+export function executeNativeBackPress() {
+  React.exitApp();
+  return true;
+}
+export function parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled) {
+  if (undefined === fullScreenSwipeEnabled) {
+    return "undefined";
+  } else if (true === fullScreenSwipeEnabled) {
+    return "true";
+  } else if (false === fullScreenSwipeEnabled) {
+    return "false";
+  }
+}

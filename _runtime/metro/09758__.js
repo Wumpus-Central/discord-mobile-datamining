@@ -1,8 +1,8 @@
 // _runtime/metro/09758__.js
 import colorPropType from "../09742_colorPropType.js";
 import _mod9749 from "09749__.js";
-import emptyFunction_mod from "05357__.js";
-import "module_5357";
+import emptyFunction_mod from "05347__.js";
+import "module_5347";
 
 const obj = {};
 const module_9749 = Object.assign(_mod9749);

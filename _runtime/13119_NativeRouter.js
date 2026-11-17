@@ -1,6 +1,6 @@
 // _runtime/13119_NativeRouter.js
-import _modDef5357 from "metro/05357__.js";
-import _mod5360 from "metro/05360__.js";
+import _modDef5347 from "metro/05347__.js";
+import _mod5350 from "metro/05350__.js";
 import noop from "metro/00019__.js";
 
 require = fn;
@@ -34,11 +34,11 @@ NativeRouter.defaultProps = {
   },
 };
 NativeRouter.propTypes = {
-  initialEntries: _modDef5357.array,
-  initialIndex: _modDef5357.number,
-  getUserConfirmation: _modDef5357.func,
-  keyLength: _modDef5357.number,
-  children: _modDef5357.node,
+  initialEntries: _modDef5347.array,
+  initialIndex: _modDef5347.number,
+  getUserConfirmation: _modDef5347.func,
+  keyLength: _modDef5347.number,
+  children: _modDef5347.node,
 };
 
 export default NativeRouter;

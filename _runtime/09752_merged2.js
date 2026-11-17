@@ -1,6 +1,6 @@
 // _runtime/09752_merged2.js
-import "module_5357";
-import emptyFunction_mod from "metro/05357__.js";
+import "module_5347";
+import emptyFunction_mod from "metro/05347__.js";
 
 const obj = {
   transform: null,

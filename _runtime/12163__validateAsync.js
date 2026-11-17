@@ -333,7 +333,7 @@ function handleCatchall(items, value, value, abortEarly, value2, inst, arg6) {
                         code: "invalid_type",
                         expected: "nonoptional",
                         input: "Array",
-                        path: "UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID",
+                        path: "THREEDS_LOOKUP_ERROR",
                       };
                       const items1 = [closure_0];
                       obj.path = items1;
@@ -384,7 +384,7 @@ function handleCatchall(items, value, value, abortEarly, value2, inst, arg6) {
                     code: "invalid_type",
                     expected: "nonoptional",
                     input: "Array",
-                    path: "UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID",
+                    path: "THREEDS_LOOKUP_ERROR",
                   };
                   let items2 = [tmp6];
                   obj.path = items2;
@@ -2444,7 +2444,7 @@ if (self2) {
                             code: "invalid_type",
                             expected: "nonoptional",
                             input: "Array",
-                            path: "UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID",
+                            path: "THREEDS_LOOKUP_ERROR",
                           };
                           const items1 = [iter];
                           obj.path = items1;
@@ -2483,7 +2483,7 @@ if (self2) {
                         code: "invalid_type",
                         expected: "nonoptional",
                         input: "Array",
-                        path: "UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID",
+                        path: "THREEDS_LOOKUP_ERROR",
                       };
                       let items1 = [iter];
                       obj.path = items1;

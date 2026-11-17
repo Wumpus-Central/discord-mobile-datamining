@@ -1,5 +1,5 @@
 // _runtime/metro/09755__.js
-import emptyFunction from "05357__.js";
+import emptyFunction from "05347__.js";
 
 const point = { x: emptyFunction.number, y: emptyFunction.number };
 

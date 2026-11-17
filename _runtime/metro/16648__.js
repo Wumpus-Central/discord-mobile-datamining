@@ -24,7 +24,7 @@ function addLikelySubtags(arr3) {
           let obj3 = obj2;
           const tmpResult8 = e;
         } else {
-          obj3 = { lang: "und", script: "Array", region: "channel_id", variants };
+          obj3 = { lang: "und", script: "Array", region: "alignItems", variants };
         }
         parseUnicodeLocaleIdResult.lang = obj3;
         return _mod16714.emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
@@ -619,7 +619,7 @@ let tmp2 = (() => {
                 lang = "und";
               }
               const obj5 = { lang: null };
-              const obj6 = { lang, script: "Array", region: "channel_id", variants };
+              const obj6 = { lang, script: "Array", region: "alignItems", variants };
               obj5.lang = obj6;
               let emitUnicodeLocaleIdResult = Locale(16714).emitUnicodeLocaleId(
                 tmp3Result.__assign(Locale(1159).__assign({}, parseUnicodeLocaleIdResult), obj5),

@@ -77,7 +77,7 @@ let items = [
     key: "render",
     value: function render() {
       const self = this;
-      return jsx(BackButton(5360).__HistoryContext.Consumer, {
+      return jsx(BackButton(5350).__HistoryContext.Consumer, {
         children(history) {
           self.history = history;
           return self.props.children || null;

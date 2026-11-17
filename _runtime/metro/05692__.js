@@ -1,17 +1,33 @@
 // _runtime/metro/05692__.js
-import ComposedGestureName from "../05660_ComposedGestureName.js";
-import resolveInternalConfigProps from "../05669_resolveInternalConfigProps.js";
-import _mod5686 from "05686__.js";
+import _mod17 from "00017__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+const Platform = _mod17.Platform;
 
-export function useFlingGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
+export function getTVProps(focusable) {
+  if (Platform.isTV) {
+    let flag = focusable.focusable;
+    if (flag == null) {
+      flag = focusable.isTVSelectable;
+    }
+    if (flag == null) {
+      flag = true;
+    }
+    const obj2 = { isTVSelectable: flag };
+    let obj = obj2;
+  } else {
+    obj = {};
   }
-  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
-  return _mod5686.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
+  return obj;
+}
+export function applyRelationProp(arg0, arg1, arg2) {
+  if (arg2) {
+    const _Array = Array;
+    if (Array.isArray(arg2)) {
+      items = [];
+      HermesBuiltin.arraySpread(arg2, 0);
+      HermesBuiltin.apply(items, arg0);
+    } else {
+      tmp4(arg2);
+    }
+  }
 }

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "88d061a76594f03187e4bf612ecd1256",
-  name: "RecordPlayerIcon",
+  hash: "fa8fba4f08666ddc130e1c29719257b7",
+  name: "PawPrintIcon",
   type: "png",
 });

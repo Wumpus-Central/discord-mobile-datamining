@@ -1,6 +1,12 @@
 // _runtime/metro/20635__.js
-const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+import _mod20636 from "20636__.js";
+import capitalize from "../20643_capitalize.js";
 
-export default function hasUnicodeWord(arg0) {
-  return re0.test(arg0);
-}
+export default _mod20636((arg0, str, arg2) => {
+  const formatted = str.toLowerCase();
+  let tmp2 = formatted;
+  if (arg2) {
+    tmp2 = capitalize(formatted);
+  }
+  return arg0 + tmp2;
+});

@@ -1,13 +1,9 @@
 // _runtime/metro/06296__.js
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-({ useEffect: closure_0, useRef: closure_1 } = noop);
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStackHeaderSubview", validAttributes: { type: true, hidesSharedBackground: true, synchronousShadowStateUpdatesEnabled: true } };
 
-export function usePrevious(current) {
-  const tmp = duration(undefined);
-  closure_1 = tmp;
-  React(() => {
-    closure_1.current = current;
-  });
-  return tmp.current;
-}
+export default module_65.get("RNSScreenStackHeaderSubview", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

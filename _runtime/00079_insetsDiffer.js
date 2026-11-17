@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "analyticsLocations", left: "space", right: "Reflect", bottom: "r" };
+let closure_0 = { top: "loadJsonAsset", left: "ao", right: "flags", bottom: "paddingHorizontal" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

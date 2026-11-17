@@ -1,86 +1,210 @@
 // _runtime/metro/05720__.js
-import tagMessage from "../05602_tagMessage.js";
-import _mod5603 from "05603__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-const items = [
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+let items = [
   {
-    code: "(function pnpm_gestureStateManagerTs1(handlerTag,state){let[tagMessage]=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}})",
+    code: "(function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};})",
   },
-  tagMessage.tagMessage,
 ];
-let c0;
-[tmp2, tmp3] = items;
-function pnpm_gestureStateManagerTs1(arg0, arg1) {
-  const _globalThis = globalThis;
-  if (globalThis._setGestureStateSync) {
-    _globalThis._setGestureStateSync(arg0, arg1);
-  } else if (_globalThis._setGestureStateAsync) {
-    const _globalThis2 = globalThis;
-    const result = globalThis._setGestureStateAsync(arg0, arg1);
+[tmp4] = items;
+function changeEventCalculator(translationX, translationX2) {
+  if (undefined === translationX2) {
+    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
   } else {
-    const _Error = Error;
-    const error = new Error(_undefined("Failed to set gesture state"));
-    throw error;
+    obj = {
+      changeX: translationX.translationX - translationX2.translationX,
+      changeY: translationX.translationY - translationX2.translationY,
+    };
+  }
+  const merged = Object.assign(translationX);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__workletHash = 9504511538526;
+changeEventCalculator.__initData = tmp4;
+class PanGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, PanGesture);
+    tmp2 = c2;
+    obj = c2(PanGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "PanGestureHandler";
+    return tmp3Result;
   }
 }
-const items1 = [tmp3];
-pnpm_gestureStateManagerTs1.__closure = items1;
-pnpm_gestureStateManagerTs1.__workletHash = 7329582373210;
-pnpm_gestureStateManagerTs1.__initData = tmp2;
-const items2 = [
-  {
-    code: "(function activate_Pnpm_gestureStateManagerTs2(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.ACTIVE);})",
+_classCallCheck = PanGesture;
+_inherits(PanGesture, fn(5608).ContinousBaseGesture);
+const entry = {
+  key: "activeOffsetY",
+  value: function activeOffsetY(items23) {
+    const self = this;
+    if (Array.isArray(items23)) {
+      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items23;
+    } else if (items23 < 0) {
+      self.config.activeOffsetYStart = items23;
+    } else {
+      self.config.activeOffsetYEnd = items23;
+    }
+    return self;
   },
-  pnpm_gestureStateManagerTs1,
-  _mod5603.State,
-];
-let closure_129_0;
-let closure_129_1;
-[tmp4, tmp5, tmp6] = items2;
-const obj = { activate: null, fail: null, deactivate: null };
-function activate(arg0) {
-  _undefined(arg0, constants.ACTIVE);
-}
-const items3 = [tmp5, tmp6];
-activate.__closure = items3;
-activate.__workletHash = 1857335023251;
-activate.__initData = tmp4;
-obj.activate = activate;
-const items4 = [
+};
+const items1 = [
+  entry,
   {
-    code: "(function fail_Pnpm_gestureStateManagerTs3(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.FAILED);})",
+    key: "activeOffsetX",
+    value: function activeOffsetX(items18) {
+      const self = this;
+      if (Array.isArray(items18)) {
+        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items18;
+      } else if (items18 < 0) {
+        self.config.activeOffsetXStart = items18;
+      } else {
+        self.config.activeOffsetXEnd = items18;
+      }
+      return self;
+    },
   },
-  pnpm_gestureStateManagerTs1,
-  _mod5603.State,
-];
-let closure_130_0;
-let closure_130_1;
-[tmp7, tmp8, tmp9] = items4;
-function fail(arg0) {
-  _undefined(arg0, constants.FAILED);
-}
-const items5 = [tmp8, tmp9];
-fail.__closure = items5;
-fail.__workletHash = 2377190791686;
-fail.__initData = tmp7;
-obj.fail = fail;
-const items6 = [
   {
-    code: "(function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.END);})",
+    key: "failOffsetY",
+    value: function failOffsetY(GestureDetector) {
+      const self = this;
+      if (Array.isArray(GestureDetector)) {
+        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = GestureDetector;
+      } else if (GestureDetector < 0) {
+        self.config.failOffsetYStart = GestureDetector;
+      } else {
+        self.config.failOffsetYEnd = GestureDetector;
+      }
+      return self;
+    },
   },
-  pnpm_gestureStateManagerTs1,
-  _mod5603.State,
+  {
+    key: "failOffsetX",
+    value: function failOffsetX(items) {
+      const self = this;
+      if (Array.isArray(items)) {
+        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items;
+      } else if (items < 0) {
+        self.config.failOffsetXStart = items;
+      } else {
+        self.config.failOffsetXEnd = items;
+      }
+      return self;
+    },
+  },
+  {
+    key: "minPointers",
+    value: function minPointers(minPointers) {
+      this.config.minPointers = minPointers;
+      return this;
+    },
+  },
+  {
+    key: "maxPointers",
+    value: function maxPointers(maxPointers) {
+      this.config.maxPointers = maxPointers;
+      return this;
+    },
+  },
+  {
+    key: "minDistance",
+    value: function minDistance(MIN_PAN_GESTURE_MOVE) {
+      this.config.minDist = MIN_PAN_GESTURE_MOVE;
+      return this;
+    },
+  },
+  {
+    key: "minVelocity",
+    value: function minVelocity(minVelocity) {
+      this.config.minVelocity = minVelocity;
+      return this;
+    },
+  },
+  {
+    key: "minVelocityX",
+    value: function minVelocityX(minVelocityX) {
+      this.config.minVelocityX = minVelocityX;
+      return this;
+    },
+  },
+  {
+    key: "minVelocityY",
+    value: function minVelocityY(minVelocityY) {
+      this.config.minVelocityY = minVelocityY;
+      return this;
+    },
+  },
+  {
+    key: "averageTouches",
+    value: function averageTouches(avgTouches) {
+      this.config.avgTouches = avgTouches;
+      return this;
+    },
+  },
+  {
+    key: "enableTrackpadTwoFingerGesture",
+    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
+      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
+      return this;
+    },
+  },
+  {
+    key: "activateAfterLongPress",
+    value: function activateAfterLongPress(activateAfterLongPress) {
+      this.config.activateAfterLongPress = activateAfterLongPress;
+      return this;
+    },
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [arg0];
+      return fn(items);
+    },
+  },
 ];
-let closure_131_0;
-let closure_131_1;
-[tmp10, tmp11, tmp12] = items6;
-function deactivate(arg0) {
-  _undefined(arg0, constants.END);
-}
-const items7 = [tmp11, tmp12];
-deactivate.__closure = items7;
-deactivate.__workletHash = 3880091307703;
-deactivate.__initData = tmp10;
-obj.deactivate = deactivate;
 
-export const GestureStateManager = obj;
+export const PanGesture = _createClass(PanGesture, items1);

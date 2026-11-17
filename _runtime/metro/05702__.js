@@ -1,33 +1,8 @@
 // _runtime/metro/05702__.js
-import _mod17 from "00017__.js";
+import _mod5703 from "05703__.js";
+import _mod5705 from "05705__.js";
+import _mod5706 from "05706__.js";
 
-const Platform = _mod17.Platform;
-
-export function getTVProps(focusable) {
-  if (Platform.isTV) {
-    let flag = focusable.focusable;
-    if (flag == null) {
-      flag = focusable.isTVSelectable;
-    }
-    if (flag == null) {
-      flag = true;
-    }
-    const obj2 = { isTVSelectable: flag };
-    let obj = obj2;
-  } else {
-    obj = {};
-  }
-  return obj;
-}
-export function applyRelationProp(arg0, arg1, arg2) {
-  if (arg2) {
-    const _Array = Array;
-    if (Array.isArray(arg2)) {
-      items = [];
-      HermesBuiltin.arraySpread(arg2, 0);
-      HermesBuiltin.apply(items, arg0);
-    } else {
-      tmp4(arg2);
-    }
-  }
-}
+export const useCompetingGestures = _mod5703.useCompetingGestures;
+export const useExclusiveGestures = _mod5705.useExclusiveGestures;
+export const useSimultaneousGestures = _mod5706.useSimultaneousGestures;

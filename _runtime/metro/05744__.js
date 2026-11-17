@@ -1,19 +1,14 @@
 // _runtime/metro/05744__.js
-import _modDef5741 from "05741__.js";
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
+import _mod5572 from "05572__.js";
 
-const jsx = fn(21).jsx;
+const useContext = _mod19.useContext;
 
-export default function _default(delayLongPress) {
-  let num = delayLongPress.delayLongPress;
-  if (num === undefined) {
-    num = 600;
+export () => {
+  const tmp = useContext(_mod5572.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
   }
-  let extraButtonProps = delayLongPress.extraButtonProps;
-  if (extraButtonProps === undefined) {
-    extraButtonProps = { rippleColor: "transparent", exclusive: true };
-  }
-  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
-  const merged1 = Object.assign(merged);
-  return jsx(_modDef5741, { delayLongPress: num, extraButtonProps });
 }

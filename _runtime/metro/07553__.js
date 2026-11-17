@@ -54,14 +54,19 @@ class StackView {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.state = {
+    obj1 = {
       routes: [],
       previousState: "y",
-      openingRouteKeys: [],
-      closingRouteKeys: [],
-      replacingRouteKeys: [],
-      descriptors: {},
+      openingRouteKeys: "_deduplicateBeaconData",
+      closingRouteKeys: null,
+      replacingRouteKeys: "ISO Media, MPEG v4 system, or iTunes AVC-LC file",
+      descriptors: 4,
     };
+    obj1.openingRouteKeys = [];
+    obj1.closingRouteKeys = [];
+    obj1.replacingRouteKeys = [];
+    obj1.descriptors = {};
+    tmp3Result.state = obj1;
     tmp3Result.getPreviousRoute = (route) => {
       route = route.route;
       c1 = undefined;

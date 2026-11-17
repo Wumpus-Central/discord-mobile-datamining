@@ -1,6 +1,6 @@
 // _runtime/09751_merged1.js
 import colorPropType from "09742_colorPropType.js";
-import emptyFunction from "metro/05357__.js";
+import emptyFunction from "metro/05347__.js";
 
 const obj = { shadowColor: colorPropType, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
 const size = { width: emptyFunction.number, height: emptyFunction.number };

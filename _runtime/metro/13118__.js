@@ -6,7 +6,7 @@ import hasOwnProperty from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
-import emptyFunction from "05357__.js";
+import emptyFunction from "05347__.js";
 
 let Link = fn;
 function _isNativeReflectConstruct() {
@@ -73,7 +73,7 @@ const entry = {
     const props = this.props;
     ({ component: dependencyMap, to, replace } = props);
     Link = _objectWithoutProperties(props, self);
-    return jsx(Link(5360).__HistoryContext.Consumer, {
+    return jsx(Link(5350).__HistoryContext.Consumer, {
       children(arg0) {
         closure_0 = arg0;
         const obj = {};

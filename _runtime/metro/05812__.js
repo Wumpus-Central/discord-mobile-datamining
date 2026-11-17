@@ -1,7 +1,11 @@
 // _runtime/metro/05812__.js
+import _mod5813 from "05813__.js";
 
-export default function _arrayWithHoles(arg0) {
-  if (Array.isArray(arg0)) {
-    return arg0;
+export default function toPropertyKey(arg0) {
+  const tmp = _mod5813(arg0, "string");
+  let text = tmp;
+  if ("symbol" != obj.default(tmp)) {
+    text = `${tmp}`;
   }
+  return text;
 }

@@ -1,6 +1,6 @@
 // _runtime/11711_ScrollViewGesture.js
 import _mod1655 from "metro/01655__.js";
-import LegacyBaseButton from "05598_LegacyBaseButton.js";
+import LegacyBaseButton from "05588_LegacyBaseButton.js";
 import DATA_LENGTH from "11693_DATA_LENGTH.js";
 import _mod11699 from "metro/11699__.js";
 import dealWithAnimation from "11709_dealWithAnimation.js";

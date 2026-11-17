@@ -3,7 +3,7 @@ import _mod9744 from "09744__.js";
 import _mod9749 from "09749__.js";
 import _mod9753 from "09753__.js";
 import flattenStyle from "09747__.js";
-import emptyFunction_mod from "05357__.js";
+import emptyFunction_mod from "05347__.js";
 
 const obj = {
   accessible: null,

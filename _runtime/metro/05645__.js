@@ -1,49 +1,160 @@
 // _runtime/metro/05645__.js
-import _mod19 from "00019__.js";
-import _modDef5634 from "05634__.js";
-import _mod5646 from "05646__.js";
-import needsToReattach from "../05647_needsToReattach.js";
-import dropHandlers from "../05648_dropHandlers.js";
-import attachHandlers from "../05649_attachHandlers.js";
-import _mod5650 from "05650__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const require = globalThis.__r;
-
-_mod19.useCallback;
-
-export function useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers) {
-  _require = current;
-  const preparedGesture = current2;
-  dependencyMap = gesturesToAttach;
-  const forceRender = require("convertToHandlerTag").useForceRender();
-  items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
-  return gesture((arg0) => {
-    const tmp2 = _modDef5634;
-    const tmp2Result = tmp2(_mod5646.resolveHostInstance(current.viewRef));
-    if (tmp2Result === current.previousViewTag) {
-      if (!tmp3Result.needsToReattach(preparedGesture, gesturesToAttach)) {
-        if (!arg0) {
-          _mod5650.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
-          const tmp3Result4 = _mod5650;
-        }
-      }
-      tmp3Result = needsToReattach;
+const Wrap = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    dropHandlers.dropHandlers(preparedGesture);
-    const tmp3Result5 = dropHandlers;
-    attachHandlers.attachHandlers({
-      preparedGesture,
-      gestureConfig,
-      gesturesToAttach,
-      webEventHandlersRef,
-      viewTag: tmp2Result,
-    });
-    if (tmp2Result !== current.previousViewTag) {
-      current.previousViewTag = tmp2Result;
-      current.forceRebuildReanimatedEvent = true;
-      forceRender();
-    }
-    const obj2 = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp2Result };
-    const tmp3Result6 = attachHandlers;
-  }, items);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
+class Wrap {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, Wrap);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(Wrap);
+    tmp3 = closure_3;
+    if (closure_6()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.childInstance = null;
+    tmp3Result.hostInstance = null;
+    tmp3Result.childRef = undefined;
+    tmp3Result.attachedChildRef = undefined;
+    tmp3Result.childRefCleanup = undefined;
+    tmp3Result.handleChildRef = (childInstance) => {
+      closure_0.childInstance = childInstance;
+      const preferHostInstanceResult = Wrap(5636).preferHostInstance(childInstance);
+      const obj2 = Wrap(5636);
+      let tmp2 = null;
+      if (obj3.isHostInstance(preferHostInstanceResult)) {
+        tmp2 = preferHostInstanceResult;
+      }
+      closure_0.hostInstance = tmp2;
+      closure_0.detachChildRef();
+      if (null != childInstance) {
+        closure_0.attachChildRef(childInstance);
+      }
+      obj3 = Wrap(5636);
+    };
+    return tmp3Result;
+  }
+}
+_inherits(Wrap, noop.Component);
+const entry = {
+  key: "getHostInstance",
+  value: function getHostInstance() {
+    return this.hostInstance;
+  },
+};
+let items = [
+  entry,
+  {
+    key: "getAnimatableRef",
+    value: function getAnimatableRef() {
+      let self = this;
+      if (obj.reanimatedRefreshesAnimatableRef()) {
+        self = Wrap(5636).resolveHostInstance(this);
+        const tmpResult = Wrap(5636);
+      }
+      return self;
+    },
+  },
+  {
+    key: "detachChildRef",
+    value: function detachChildRef() {
+      const self = this;
+      if (undefined !== this.childRefCleanup) {
+        self.childRefCleanup();
+      } else if (self.attachedChildRef) {
+        Wrap(5636).assignRef(self.attachedChildRef, null);
+        const obj = Wrap(5636);
+      }
+      self.childRefCleanup = undefined;
+      self.attachedChildRef = undefined;
+    },
+  },
+  {
+    key: "attachChildRef",
+    value: function attachChildRef(childInstance) {
+      this.attachedChildRef = this.childRef;
+      this.childRefCleanup = Wrap(5636).assignRef(this.attachedChildRef, childInstance);
+    },
+  },
+  {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      const self = this;
+      let tmp = this.childRef !== this.attachedChildRef;
+      if (tmp) {
+        tmp = null !== self.childInstance;
+      }
+      if (tmp) {
+        self.detachChildRef();
+        self.attachChildRef(self.childInstance);
+      }
+    },
+  },
+  {
+    key: "render",
+    value: function render() {
+      try {
+        const self = this;
+        const Children = noop.Children;
+        const onlyResult = Children.only(this.props.children);
+        self.childRef = onlyResult.props.ref;
+        const obj2 = { collapsable: false, ref: self.handleChildRef };
+        return noop.cloneElement(onlyResult, obj2, onlyResult.props.children);
+      } catch (err) {
+        const _Error = Error;
+        const error = new Error(
+          Wrap(5592).tagMessage(
+            "GestureDetector got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view.",
+          ),
+        );
+        throw error;
+      }
+    },
+  },
+];
+const importDefaultResultResult = _createClass(Wrap, items);
+const Reanimated = fn(5632).Reanimated;
+let animatedComponent;
+if (Reanimated != null) {
+  if (Reanimated.default != null) {
+    animatedComponent = _default.createAnimatedComponent(importDefaultResultResult);
+  }
+}
+if (animatedComponent == null) {
+  animatedComponent = importDefaultResultResult;
+}
+
+export const Wrap = importDefaultResultResult;
+export const AnimatedWrap = animatedComponent;

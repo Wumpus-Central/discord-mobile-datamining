@@ -9,7 +9,7 @@ let closure_2 = _classPrivateFieldKeyDefault("registry");
 class EventEmitter {
   constructor() {
     tmp = closure_0(this, EventEmitter);
-    definePropertyResult = Object.defineProperty(this, c2, { writable: true, value: "Array" });
+    definePropertyResult = Object.defineProperty(this, c2, { writable: true, value: "a" });
     closure_1(this, c2)[c2] = {};
     return;
   }

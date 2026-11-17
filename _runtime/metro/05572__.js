@@ -1,4 +1,8 @@
 // _runtime/metro/05572__.js
-import BottomSheetDefault from "../05573_BottomSheet.js";
+import _mod19 from "00019__.js";
 
-export default BottomSheetDefault;
+const createContext = _mod19.createContext;
+const context = createContext(null);
+
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

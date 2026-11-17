@@ -1,11 +1,14 @@
 // _runtime/metro/05730__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _modDef5731 from "05731__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
+const TouchableHighlight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,187 +27,119 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
+let closure_3 = ["style"];
 _possibleConstructorReturnDefault;
-let items = [
-  {
-    code: "(function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};})",
-  },
-];
-[tmp4] = items;
-function changeEventCalculator(translationX, translationX2) {
-  if (undefined === translationX2) {
-    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
-    let obj = { changeX: null, changeY: null };
-    const obj3 = { changeX: null, changeY: null };
-  } else {
-    obj = {
-      changeX: translationX.translationX - translationX2.translationX,
-      changeY: translationX.translationY - translationX2.translationY,
-    };
-  }
-  const merged = Object.assign(translationX);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__workletHash = 9504511538526;
-changeEventCalculator.__initData = tmp4;
-class PanGesture {
-  constructor() {
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+class TouchableHighlight {
+  constructor(arg0) {
     self = this;
-    tmp = closure_0(this, PanGesture);
-    tmp2 = c2;
-    obj = c2(PanGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
+    tmp = hasOwnProperty(this, TouchableHighlight);
+    items = [];
+    items[0] = global;
+    tmp2 = metroImportDefault;
+    obj = metroImportDefault(TouchableHighlight);
+    tmp3 = closure_6;
+    if (closure_11()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "PanGestureHandler";
+    closure_0 = tmp3Result;
+    tmp3Result.showUnderlay = () => {
+      if (closure_0.hasPressHandler()) {
+        const obj2 = { extraChildStyle: null, extraUnderlayStyle: null };
+        const obj3 = { opacity: closure_0.props.activeOpacity };
+        obj2.extraChildStyle = obj3;
+        const obj4 = { backgroundColor: closure_0.props.underlayColor };
+        obj2.extraUnderlayStyle = obj4;
+        closure_0.setState(obj2);
+        const props = closure_0.props;
+        const onShowUnderlay = props.onShowUnderlay;
+        if (onShowUnderlay != null) {
+          onShowUnderlay();
+        }
+      }
+    };
+    tmp3Result.hasPressHandler = () =>
+      closure_0.props.onPress || closure_0.props.onPressIn || closure_0.props.onPressOut || closure_0.props.onLongPress;
+    tmp3Result.hideUnderlay = () => {
+      closure_0.setState({ extraChildStyle: null, extraUnderlayStyle: null });
+      const props = closure_0.props;
+      const onHideUnderlay = props.onHideUnderlay;
+      if (onHideUnderlay != null) {
+        onHideUnderlay();
+      }
+    };
+    tmp3Result.onStateChange = (arg0, arg1) => {
+      if (arg1 === TouchableHighlight(5731).TOUCHABLE_STATE.BEGAN) {
+        closure_0.showUnderlay();
+      } else {
+        if (!tmp3) {
+          closure_0.hideUnderlay();
+        }
+        tmp3 =
+          arg1 !== TouchableHighlight(5731).TOUCHABLE_STATE.UNDETERMINED &&
+          arg1 !== TouchableHighlight(5731).TOUCHABLE_STATE.MOVED_OUTSIDE;
+      }
+    };
+    tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };
     return tmp3Result;
   }
 }
-_classCallCheck = PanGesture;
-_inherits(PanGesture, fn(5618).ContinousBaseGesture);
+_inherits(TouchableHighlight, fn(19).Component);
 const entry = {
-  key: "activeOffsetY",
-  value: function activeOffsetY(items23) {
+  key: "renderChildren",
+  value: function renderChildren() {
     const self = this;
-    if (Array.isArray(items23)) {
-      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items23;
-    } else if (items23 < 0) {
-      self.config.activeOffsetYStart = items23;
+    if (this.props.children) {
+      const Children = noop.Children;
+      const onlyResult = Children.only(self.props.children);
+      const style = onlyResult.props.style;
+      if (self.state.extraChildStyle) {
+        items = [style, self.state.extraChildStyle];
+        let tmp5 = items;
+      } else {
+        tmp5 = style;
+      }
+      const obj = { style: tmp5 };
+      return noop.cloneElement(onlyResult, obj);
     } else {
-      self.config.activeOffsetYEnd = items23;
+      return <View />;
     }
-    return self;
   },
 };
-const items1 = [
+let items = [
   entry,
   {
-    key: "activeOffsetX",
-    value: function activeOffsetX(items18) {
+    key: "render",
+    value: function render() {
       const self = this;
-      if (Array.isArray(items18)) {
-        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items18;
-      } else if (items18 < 0) {
-        self.config.activeOffsetXStart = items18;
-      } else {
-        self.config.activeOffsetXEnd = items18;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
       }
-      return self;
-    },
-  },
-  {
-    key: "failOffsetY",
-    value: function failOffsetY(GestureDetector) {
-      const self = this;
-      if (Array.isArray(GestureDetector)) {
-        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = GestureDetector;
-      } else if (GestureDetector < 0) {
-        self.config.failOffsetYStart = GestureDetector;
-      } else {
-        self.config.failOffsetYEnd = GestureDetector;
-      }
-      return self;
-    },
-  },
-  {
-    key: "failOffsetX",
-    value: function failOffsetX(items) {
-      const self = this;
-      if (Array.isArray(items)) {
-        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items;
-      } else if (items < 0) {
-        self.config.failOffsetXStart = items;
-      } else {
-        self.config.failOffsetXEnd = items;
-      }
-      return self;
-    },
-  },
-  {
-    key: "minPointers",
-    value: function minPointers(minPointers) {
-      this.config.minPointers = minPointers;
-      return this;
-    },
-  },
-  {
-    key: "maxPointers",
-    value: function maxPointers(maxPointers) {
-      this.config.maxPointers = maxPointers;
-      return this;
-    },
-  },
-  {
-    key: "minDistance",
-    value: function minDistance(MIN_PAN_GESTURE_MOVE) {
-      this.config.minDist = MIN_PAN_GESTURE_MOVE;
-      return this;
-    },
-  },
-  {
-    key: "minVelocity",
-    value: function minVelocity(minVelocity) {
-      this.config.minVelocity = minVelocity;
-      return this;
-    },
-  },
-  {
-    key: "minVelocityX",
-    value: function minVelocityX(minVelocityX) {
-      this.config.minVelocityX = minVelocityX;
-      return this;
-    },
-  },
-  {
-    key: "minVelocityY",
-    value: function minVelocityY(minVelocityY) {
-      this.config.minVelocityY = minVelocityY;
-      return this;
-    },
-  },
-  {
-    key: "averageTouches",
-    value: function averageTouches(avgTouches) {
-      this.config.avgTouches = avgTouches;
-      return this;
-    },
-  },
-  {
-    key: "enableTrackpadTwoFingerGesture",
-    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
-      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
-      return this;
-    },
-  },
-  {
-    key: "activateAfterLongPress",
-    value: function activateAfterLongPress(activateAfterLongPress) {
-      this.config.activateAfterLongPress = activateAfterLongPress;
-      return this;
-    },
-  },
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = hasOwnProperty;
-      const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      items = [arg0];
-      return fn(items);
+      const obj = {};
+      const tmp = _objectWithoutProperties(props, closure_3);
+      const merged = Object.assign(tmp);
+      items = [style, self.state.extraUnderlayStyle];
+      obj.style = items;
+      obj.onStateChange = self.onStateChange;
+      obj.children = self.renderChildren();
+      return jsx(_modDef5731, {});
     },
   },
 ];
+const importDefaultResultResult = _createClass(TouchableHighlight, items);
+let obj = {};
+let merged = Object.assign(_modDef5731.defaultProps);
+obj.activeOpacity = 0.85;
+obj.delayPressOut = 100;
+obj.underlayColor = "black";
+importDefaultResultResult.defaultProps = obj;
 
-export const PanGesture = _createClass(PanGesture, items1);
+export default importDefaultResultResult;

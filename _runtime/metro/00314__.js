@@ -1265,7 +1265,7 @@ let items = [
           const obj29 = { style: debug.debug, children: null };
           const items3 = [tmp73Result, self._renderDebugOverlay()];
           obj29.children = items3;
-          tmp78 = expandedHeight(closure_1_16, obj29);
+          tmp78 = closure_1_19(closure_1_16, obj29);
         }
         return tmp78;
       } else {

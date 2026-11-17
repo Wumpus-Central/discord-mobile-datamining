@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "83020ea8b4c0b0d88670e8fd546ddc69",
-  name: "CompassIcon",
+  hash: "84a1e2a3b13ea7ae45e68f1bb8755810",
+  name: "TreehouseIcon",
   type: "png",
 });

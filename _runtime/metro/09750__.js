@@ -1,5 +1,5 @@
 // _runtime/metro/09750__.js
-import emptyFunction_mod from "05357__.js";
+import emptyFunction_mod from "05347__.js";
 
 const size = {
   display: null,

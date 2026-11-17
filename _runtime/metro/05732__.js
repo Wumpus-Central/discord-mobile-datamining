@@ -1,11 +1,14 @@
 // _runtime/metro/05732__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _modDef5731 from "05731__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import hasOwnProperty from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
+const TouchableNativeFeedback = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,61 +27,91 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-let items = [
-  {
-    code: "(function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};})",
-  },
-];
-[tmp4] = items;
-function changeEventCalculator(rotation, rotation2) {
-  if (undefined === rotation2) {
-    const obj2 = { rotationChange: rotation.rotation };
-    let obj = obj2;
-  } else {
-    obj = { rotationChange: rotation.rotation - rotation2.rotation };
-  }
-  const merged = Object.assign(rotation);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__workletHash = 6562048285106;
-changeEventCalculator.__initData = tmp4;
-class RotationGesture {
+let closure_2 = ["style"];
+const Platform = fn(17).Platform;
+const jsx = fn(21).jsx;
+class TouchableNativeFeedback {
   constructor() {
     self = this;
-    tmp = closure_0(this, RotationGesture);
-    tmp2 = c2;
-    obj = c2(RotationGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
+    tmp = closure_4(this, TouchableNativeFeedback);
+    tmp2 = closure_6;
+    obj = closure_6(TouchableNativeFeedback);
+    tmp3 = hasOwnProperty;
+    if (closure_9()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "RotationGestureHandler";
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_classCallCheck = RotationGesture;
-_inherits(RotationGesture, fn(5618).ContinousBaseGesture);
+_inherits(TouchableNativeFeedback, fn(19).Component);
 const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
+  key: "getExtraButtonProps",
+  value: function getExtraButtonProps() {
+    const obj = {};
+    let rippleRadius = this.props.background;
+    if (!rippleRadius) {
+      obj.foreground = this.props.useForeground;
+      return obj;
+    } else {
+      if ("RippleAndroid" === rippleRadius.type) {
+        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
+      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
+        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
+      }
+      rippleRadius = rippleRadius.rippleRadius;
+      obj.rippleRadius = rippleRadius;
     }
-    items = [arg0];
-    return fn(items);
   },
 };
-const items1 = [entry];
+const items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
+      }
+      const obj = {};
+      const tmp = _objectWithoutProperties(props, closure_2);
+      const merged = Object.assign(tmp);
+      obj.style = style;
+      obj.extraButtonProps = self.getExtraButtonProps();
+      return jsx(TouchableNativeFeedback(5731), {});
+    },
+  },
+];
+const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
+let obj = {};
+let merged = Object.assign(_modDef5731.defaultProps);
+obj.useForeground = true;
+obj.extraButtonProps = { rippleColor: null };
+importDefaultResultResult.defaultProps = obj;
+importDefaultResultResult.SelectableBackground = (rippleRadius) => ({
+  type: "ThemeAttrAndroid",
+  attribute: "selectableItemBackground",
+  rippleRadius,
+});
+importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({
+  type: "ThemeAttrAndroid",
+  attribute: "selectableItemBackgroundBorderless",
+  rippleRadius,
+});
+importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({
+  type: "RippleAndroid",
+  color,
+  borderless,
+  rippleRadius,
+});
+importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
 
-export const RotationGesture = _createClass(RotationGesture, items1);
+export default importDefaultResultResult;

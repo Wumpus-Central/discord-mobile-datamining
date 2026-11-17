@@ -1,96 +1,77 @@
 // _runtime/metro/05640__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
+import handlerIDToTag from "../05591_handlerIDToTag.js";
+import convertToHandlerTag from "../05612_convertToHandlerTag.js";
+import RNGestureHandlerModuleDefault from "../05617_RNGestureHandlerModule.js";
+import transformIntoHandlerTags from "../05619_transformIntoHandlerTags.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+const require = globalThis.__r;
+
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
+  _require = attachedGestures;
+  prepare.prepare();
+  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
+    let tmp2 = attachedGestures.attachedGestures[num];
+    let obj = require("convertToHandlerTag");
+    let result = obj.checkGestureCallbacksForWorklets(tmp2);
+    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
+      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-let items = [
-  {
-    code: "(function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};})",
-  },
-];
-[tmp4] = items;
-function changeEventCalculator(arg0, arg1) {
-  if (undefined === arg1) {
-    ({ x: obj2.changeX, y: obj2.changeY } = arg0);
-    let obj = { changeX: null, changeY: null };
-    const obj3 = { changeX: null, changeY: null };
-  } else {
-    obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
   }
-  const merged = Object.assign(arg0);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__workletHash = 8313798372423;
-changeEventCalculator.__initData = tmp4;
-class HoverGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, HoverGesture);
-    tmp2 = c2;
-    obj = c2(HoverGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "HoverGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = HoverGesture;
-_inherits(HoverGesture, fn(5618).ContinousBaseGesture);
-const entry = {
-  key: "effect",
-  value: function effect(hoverEffect) {
-    this.config.hoverEffect = hoverEffect;
-    return this;
-  },
-};
-const items1 = [
-  entry,
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = hasOwnProperty;
-      const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
+  attachedGestures = attachedGestures.attachedGestures;
+  attachedGestures.hasExternalRelations = true;
+  require("ghQueueMicrotask").ghQueueMicrotask(() => {
+    if (attachedGestures.isMounted) {
+      let arr = attachedGestures;
+      if (attachedGestures === tmp.attachedGestures) {
+        let tmp23 = gesturesToAttach;
+        let tmp21 = arr.length !== gesturesToAttach.length;
+        let num = 0;
+        let tmp22 = tmp21;
+        if (0 < gesturesToAttach.length) {
+          do {
+            let tmp3 = attachedGestures[num];
+            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
+            let flag = tmp21;
+            if (tmp4) {
+              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
+              tmp4 = tmp6;
+            }
+            if (tmp4) {
+              flag = true;
+            }
+            tmp3.config = gesturesToAttach[num].config;
+            tmp3.handlers = gesturesToAttach[num].handlers;
+            let obj = RNGestureHandlerModuleDefault;
+            let obj2 = transformIntoHandlerTags;
+            let result = obj.setGestureHandlerConfig(
+              tmp3.handlerTag,
+              obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS),
+            );
+            let obj3 = RNGestureHandlerModuleDefault;
+            let obj4 = convertToHandlerTag;
+            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
+            let obj5 = handlerIDToTag;
+            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
+            num = num + 1;
+            tmp21 = flag;
+            tmp22 = flag;
+            tmp23 = gesturesToAttach;
+            arr = attachedGestures;
+          } while (num < gesturesToAttach.length);
+        }
+        attachedGestures.hasExternalRelations = convertToHandlerTag.hasExternalRelations(tmp23);
+        if (attachedGestures.animatedHandlers) {
+          if (tmp22) {
+            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
+            attachedGestures.animatedHandlers.value = found.map((handlers) => handlers.handlers);
+          }
+        }
+        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
       }
-      items = [arg0];
-      return fn(items);
-    },
-  },
-];
-
-export const hoverGestureHandlerProps = ["hoverEffect"];
-export const HoverGesture = _createClass(HoverGesture, items1);
+    }
+  });
+}

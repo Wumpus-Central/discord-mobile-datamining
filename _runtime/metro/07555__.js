@@ -1,5 +1,5 @@
 // _runtime/metro/07555__.js
-import LegacyBaseButton from "../05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../05588_LegacyBaseButton.js";
 import GestureHandlerRefContext from "../07556_GestureHandlerRefContext.js";
 import noop from "00019__.js";
 
@@ -15,5 +15,5 @@ export function PanGestureHandler(arg0) {
   obj.children = jsx(LegacyBaseButton.PanGestureHandler, {});
   return jsx(GestureHandlerRefContext.GestureHandlerRefContext.Provider, { value: ref, children: null });
 }
-export const GestureHandlerRootView = fn(5598).GestureHandlerRootView;
-export const GestureState = fn(5598).State;
+export const GestureHandlerRootView = fn(5588).GestureHandlerRootView;
+export const GestureState = fn(5588).State;

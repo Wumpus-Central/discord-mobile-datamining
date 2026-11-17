@@ -179,7 +179,7 @@ export function useHeaderConfigProps(headerLargeTitle) {
   }
   let headerLeftResult;
   if (headerLeft != null) {
-    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "Path" };
+    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "Array" };
     let tmp20 = headerBackTitle;
     if (headerBackTitle == null) {
       let title1;
@@ -201,10 +201,10 @@ export function useHeaderConfigProps(headerLargeTitle) {
     let obj7 = { tintColor: text, children: headerTitle1 };
     headerTitleResult = headerTitle(obj7);
   }
-  const isSearchBarAvailableForCurrentPlatform = colors(6276).isSearchBarAvailableForCurrentPlatform;
+  const isSearchBarAvailableForCurrentPlatform = colors(6266).isSearchBarAvailableForCurrentPlatform;
   let isSearchBarAvailableForCurrentPlatform2 = typeof isSearchBarAvailableForCurrentPlatform === "boolean";
   if (typeof isSearchBarAvailableForCurrentPlatform === "boolean") {
-    isSearchBarAvailableForCurrentPlatform2 = colors(6276).isSearchBarAvailableForCurrentPlatform;
+    isSearchBarAvailableForCurrentPlatform2 = colors(6266).isSearchBarAvailableForCurrentPlatform;
   }
   if (isSearchBarAvailableForCurrentPlatform2) {
     isSearchBarAvailableForCurrentPlatform2 = null != headerSearchBarOptions;
@@ -250,7 +250,7 @@ export function useHeaderConfigProps(headerLargeTitle) {
     if ("center" === headerTitleAlign) {
       items5[1] = null;
       obj11.children = items5;
-      let tmp32Result = closure_12(colors(6276).ScreenStackHeaderLeftView, obj11);
+      let tmp32Result = closure_12(colors(6266).ScreenStackHeaderLeftView, obj11);
     } else {
       if (typeof headerTitle === "function") {
         const obj12 = { style: { flex: 1 }, children: headerTitleResult };
@@ -273,7 +273,7 @@ export function useHeaderConfigProps(headerLargeTitle) {
       headerTitleResult = closure_10(colors(7500).HeaderTitle, obj15);
     }
     const obj16 = { children: headerTitleResult };
-    tmp38Result = closure_10(colors(6276).ScreenStackHeaderCenterView, obj16);
+    tmp38Result = closure_10(colors(6266).ScreenStackHeaderCenterView, obj16);
   }
   items6[1] = tmp38Result;
   const items7 = [closure_12(closure_11, { children: items6 }), , ,];
@@ -286,7 +286,7 @@ export function useHeaderConfigProps(headerLargeTitle) {
       source = headerBackImageSource;
     }
     const obj17 = { source };
-    let tmp40Result = closure_10(colors(6276).ScreenStackHeaderBackButtonImage, obj17);
+    let tmp40Result = closure_10(colors(6266).ScreenStackHeaderBackButtonImage, obj17);
   } else {
     tmp40Result = null;
   }
@@ -294,7 +294,7 @@ export function useHeaderConfigProps(headerLargeTitle) {
   let tmp42 = null;
   if (null != headerRightResult) {
     const obj18 = { hidesSharedBackground: true, children: headerRightResult };
-    tmp42 = closure_10(colors(6276).ScreenStackHeaderRightView, obj18);
+    tmp42 = closure_10(colors(6266).ScreenStackHeaderRightView, obj18);
   }
   items7[2] = tmp42;
   let tmp44 = null;
@@ -302,8 +302,8 @@ export function useHeaderConfigProps(headerLargeTitle) {
     const obj19 = { children: null };
     const obj20 = {};
     let merged = Object.assign(headerSearchBarOptions);
-    obj19.children = closure_10(colors(6276).SearchBar, obj20);
-    tmp44 = closure_10(colors(6276).ScreenStackHeaderSearchBarView, obj19);
+    obj19.children = closure_10(colors(6266).SearchBar, obj20);
+    tmp44 = closure_10(colors(6266).ScreenStackHeaderSearchBarView, obj19);
   }
   items7[3] = tmp44;
   const obj21 = {
@@ -327,9 +327,9 @@ export function useHeaderConfigProps(headerLargeTitle) {
     largeTitleFontFamily: true,
     largeTitleFontSize: true,
     largeTitleFontWeight: true,
-    largeTitleHideShadow: "unicodeEmoji",
+    largeTitleHideShadow: "NATIVE_AUDIO_SET_OUTPUT_DEVICE",
     title: null,
-    titleColor: 99,
+    titleColor: "idle",
     titleFontFamily: null,
     titleFontSize: false,
     titleFontWeight: null,
@@ -338,11 +338,11 @@ export function useHeaderConfigProps(headerLargeTitle) {
     disableLeftInsetApplication: null,
     disableRightInsetApplication: null,
     disableBottomInsetApplication: true,
-    translucent: "sentences",
-    children: 343.42,
-    headerLeftBarButtonItems: 302.235,
-    headerRightBarButtonItems: "man_mountain_biking_tone5",
-    experimental_userInterfaceStyle: "man_mountain_biking_dark_skin_tone",
+    translucent: null,
+    children: null,
+    headerLeftBarButtonItems: null,
+    headerRightBarButtonItems: null,
+    experimental_userInterfaceStyle: null,
   };
   let tmp50 = false === headerShadowVisible;
   const tmpResult2 = colors(7500);

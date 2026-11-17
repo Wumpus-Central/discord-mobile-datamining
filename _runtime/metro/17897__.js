@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 16,
-  height: 16,
-  scales: [1, 2, 3],
-  hash: "feb0699dba8bf9a96f37b026eba6ef56",
-  name: "arrow-sm-down",
+  height: 16.5,
+  scales: [2, 3],
+  hash: "5854380fa0e0fd8bc925e2e46e9e8246",
+  name: "ic_lock_short_16px",
   type: "png",
 });

@@ -90,5 +90,5 @@ let items = [
 const value = _createClass(ReanimatedScreenWrapper, items);
 
 export default function ReanimatedScreenProvider(children) {
-  return jsx(ReanimatedScreenWrapper(6293).ScreenContext.Provider, { value, children: children.children });
+  return jsx(ReanimatedScreenWrapper(6283).ScreenContext.Provider, { value, children: children.children });
 }

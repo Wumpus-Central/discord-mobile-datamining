@@ -1,20 +1,15 @@
 // _runtime/metro/06137__.js
-import _mod523 from "00523__.js";
+import identity from "../00549_identity.js";
+import _mod668 from "00668__.js";
+import constant from "../06138_constant.js";
 
-let prototype;
-if (_mod523) {
-  prototype = _mod523.prototype;
-}
-let valueOf;
-if (prototype) {
-  valueOf = prototype.valueOf;
+if (_mod668) {
+  let fn = (arg0, arg1) => {
+    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
+    return _mod668(arg0, "toString", obj);
+  };
+} else {
+  fn = identity;
 }
 
-export default function cloneSymbol(arg0) {
-  if (valueOf) {
-    const call = valueOf.call;
-    Object(typeof call === "unknown" ? valueOf() : call(arg0));
-  } else {
-    return {};
-  }
-}
+export default fn;

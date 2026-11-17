@@ -1,5 +1,5 @@
 // _runtime/11313_chunk.js
-import _mod6084 from "metro/06084__.js";
+import _mod6074 from "metro/06074__.js";
 import _mod7671 from "metro/07671__.js";
 import baseSlice from "11314_baseSlice.js";
 
@@ -12,7 +12,7 @@ export default function chunk(arg0, arg1, arg2) {
   }
   let num = 1;
   if (!tmp) {
-    num = max(_mod6084(arg1), 0);
+    num = max(_mod6074(arg1), 0);
   }
   let num3 = 0;
   if (null != arg0) {

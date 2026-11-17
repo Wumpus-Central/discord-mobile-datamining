@@ -2,8 +2,8 @@
 import _mod9746 from "09746__.js";
 import _mod9754 from "09754__.js";
 import flattenStyle from "09747__.js";
-import "module_5357";
-import emptyFunction_mod from "05357__.js";
+import "module_5347";
+import emptyFunction_mod from "05347__.js";
 
 const obj = {};
 const module_9746 = Object.assign(_mod9746);
