@@ -55,7 +55,7 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
               color: "mobile-text-heading-primary",
               children: "DevTools",
             };
-            items[1] = closure_1_4(closure_1_0(5929).Text, obj2);
+            items[1] = closure_1_4(closure_1_0(5919).Text, obj2);
             obj.children = items;
             return closure_1_5(closure_1_3, obj);
           },
@@ -65,8 +65,8 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
     }),
     ,
   ];
-  let merged = Object.assign(tmp(18214).DevToolsScreens);
-  let merged1 = Object.assign(tmp(18214).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(18216).DevToolsScreens);
+  let merged1 = Object.assign(tmp(18216).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp] = item;
@@ -97,7 +97,7 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
             color: "mobile-text-heading-primary",
             children: "DevTools",
           };
-          items[1] = closure_1_4(closure_1_0(5929).Text, obj2);
+          items[1] = closure_1_4(closure_1_0(5919).Text, obj2);
           obj.children = items;
           return closure_1_5(closure_1_3, obj);
         },

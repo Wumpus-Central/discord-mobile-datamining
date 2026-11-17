@@ -27,7 +27,7 @@ require = fn;
 const DraftType = fn(8725).DraftType;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AutoCompleteResultTypes: closure_9, WHITESPACE_RE: closure_10 } = Constants);
-const ChannelAutocompleteConstants = fn(6346);
+const ChannelAutocompleteConstants = fn(6336);
 ({ COMMAND_SENTINEL: closure_11, formatGameMentionRaw: closure_12 } = ChannelAutocompleteConstants);
 const MediaKeyboardTarget = fn(1626).MediaKeyboardTarget;
 const constants3 = { FULL_COMMAND: 0, [0]: "FULL_COMMAND", PARTIAL_COMMAND: 1, [1]: "PARTIAL_COMMAND" };
@@ -1365,9 +1365,9 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
     if (tmp84) {
       let focused2 = editId.focused;
       if (!focused2) {
-        const keyboardType = obj10(5503).getKeyboardType();
+        const keyboardType = obj10(5493).getKeyboardType();
         focused2 = keyboardType !== obj10(1628).KeyboardTypes.SYSTEM;
-        const obj6 = obj10(5503);
+        const obj6 = obj10(5493);
       }
       currentOption = self.getCurrentOption(focused2, editId.selectionStart);
       activeOption = currentOption;
@@ -1718,9 +1718,9 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       tmp140 = activeOption.type !== tmp113(2119).ApplicationCommandOptionType.ATTACHMENT;
     }
     if (tmp140) {
-      const keyboardType1 = tmp113(5503).getKeyboardType();
+      const keyboardType1 = tmp113(5493).getKeyboardType();
       tmp140 = keyboardType1 !== tmp113(1628).KeyboardTypes.SYSTEM;
-      const tmp113Result2 = tmp113(5503);
+      const tmp113Result2 = tmp113(5493);
     }
     if (tmp140) {
       const current3 = self.ref.current;

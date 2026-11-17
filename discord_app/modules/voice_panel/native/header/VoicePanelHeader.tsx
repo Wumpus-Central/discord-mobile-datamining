@@ -72,8 +72,8 @@ function MusicMuteButton(channelId) {
         return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
       },
     };
-    closure_24(tmp(19944), obj4);
-    const tmpResult = tmp(19944);
+    closure_24(tmp(19946), obj4);
+    const tmpResult = tmp(19946);
   }
   return tmp10;
 }
@@ -89,7 +89,7 @@ const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 const EDGE_GUTTER = fn(11988).EDGE_GUTTER;
 const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
 const DOCK_PULL_SNAP_DISTANCE = fn(12009).DOCK_PULL_SNAP_DISTANCE;
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_24, jsxs: closure_25 } = jsxProd);
@@ -833,7 +833,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   if (channelType !== require("ChannelTypes").ChannelTypes.GUILD_STAGE_VOICE) {
     flag =
       obj4.useConfig({ location: "VoicePanelHeader" }).treatment ===
-      tmp5(19986).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
+      tmp5(19988).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
   }
   const tmp5Result21 = require("../../../../../_runtime/metro/01655__.js");
   let canInviteMembers = require("useCanInviteMembers").useCanInviteMembers(channelId);
@@ -986,8 +986,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
     tmp107Result = null;
     if (!isDockEnabled) {
       const obj10 = { baseColor: tmp2(575).colors.BLACK, minHeight: 0 };
-      tmp107Result = closure_24(tmp2(19359), obj10);
-      const tmp2Result7 = tmp2(19359);
+      tmp107Result = closure_24(tmp2(19361), obj10);
+      const tmp2Result7 = tmp2(19361);
     }
   }
   items28[1] = tmp107Result;
@@ -995,7 +995,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   let tmp107Result7 = null;
   if (tmp13 === ParticipantTypes.USER) {
     const obj12 = { isHeaderHidden: derivedValue2 };
-    tmp107Result7 = closure_24(tmp2(19989), obj12);
+    tmp107Result7 = closure_24(tmp2(19991), obj12);
   }
   const items29 = [tmp107Result7];
   const obj13 = { style: null, animatedProps, children: null };
@@ -1038,7 +1038,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   let tmp107Result10 = null;
   if (null != stateFromStores) {
     const obj20 = { channel: stateFromStores, inCall: tmp107Result12 };
-    tmp107Result10 = closure_24(tmp2(20002), obj20);
+    tmp107Result10 = closure_24(tmp2(20004), obj20);
   }
   items34[3] = tmp107Result10;
   if (canInviteMembers) {
@@ -1047,15 +1047,15 @@ export default noop.memo(function VoicePanelHeader(layout) {
     const obj22 = { channelName: stateFromStores1 };
     obj21.accessibilityLabel = intl3.formatToPlainString(tmp5(1113).t["dHHb/2"], obj22);
     obj21.onPress = inviteMembersCallback;
-    canInviteMembers = closure_24(tmp2(19944), obj21);
-    const tmp2Result11 = tmp2(19944);
+    canInviteMembers = closure_24(tmp2(19946), obj21);
+    const tmp2Result11 = tmp2(19946);
   }
   items34[4] = canInviteMembers;
   let tmp107Result11 = null;
   if (null != stateFromStores2) {
-    const obj23 = { icon: tmp2(20004), onPress: callback1, accessibilityLabel: stateFromStores2 };
-    tmp107Result11 = closure_24(tmp2(19944), obj23);
-    const tmp2Result12 = tmp2(19944);
+    const obj23 = { icon: tmp2(20006), onPress: callback1, accessibilityLabel: stateFromStores2 };
+    tmp107Result11 = closure_24(tmp2(19946), obj23);
+    const tmp2Result12 = tmp2(19946);
   }
   items34[5] = tmp107Result11;
   if (tmp107Result12) {
@@ -1063,7 +1063,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   }
   if (tmp107Result12) {
     const obj24 = { channelId };
-    tmp107Result12 = closure_24(tmp2(20005), obj24);
+    tmp107Result12 = closure_24(tmp2(20007), obj24);
   }
   items34[6] = tmp107Result12;
   obj18.children = items34;

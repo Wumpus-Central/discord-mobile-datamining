@@ -40,7 +40,7 @@ export default {
             const intl = util.intl;
             obj2.body = intl.string(util.t.bL21zs);
             obj2.onConfirm = function onConfirm() {
-              const result = closure_0(5348).UNSAFE_markDismissibleContentAsDismissed(
+              const result = closure_0(5338).UNSAFE_markDismissibleContentAsDismissed(
                 closure_0(5139).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT,
               );
               closure_0();

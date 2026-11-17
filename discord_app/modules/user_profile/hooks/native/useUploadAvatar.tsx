@@ -71,8 +71,8 @@ export default function useUploadAvatar(guildId) {
               let originalMd5;
               closure_128_3 = undefined;
               closure_128_4 = undefined;
-              tmp22(5552).hideActionSheet();
-              const obj13 = tmp22(5552);
+              tmp22(5542).hideActionSheet();
+              const obj13 = tmp22(5542);
               const obj6 = { size };
               dependencyMap = 1;
               c3 = 1;

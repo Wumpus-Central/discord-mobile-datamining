@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/hooks/useControlsHoverGesture.tsx
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

@@ -155,7 +155,7 @@ export function EditCollectiblesListItemShop(analyticsSource) {
   };
   const intl = analyticsSource(1113).intl;
   obj3.children = intl.string(analyticsSource(1113).t.pWG4ze);
-  items1[1] = closure_7(analyticsSource(5929).Text, obj3);
+  items1[1] = closure_7(analyticsSource(5919).Text, obj3);
   items1[2] = closure_7(analyticsSource(9433).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_8(EditCollectibleListItem, obj);

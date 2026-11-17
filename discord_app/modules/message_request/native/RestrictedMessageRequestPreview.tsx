@@ -157,9 +157,9 @@ export default function RestrictedMessageRequestPreview(channelId) {
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items9 = [closure_10(tmp2(19763), obj6), ,];
+      const items9 = [closure_10(tmp2(19765), obj6), ,];
       const obj7 = { channelId };
-      items9[1] = closure_10(tmp2(19765), obj7);
+      items9[1] = closure_10(tmp2(19767), obj7);
       let tmp19Result = null;
       if (isEmpty) {
         const obj8 = { style: tmp.emptyChat };

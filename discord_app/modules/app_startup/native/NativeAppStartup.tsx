@@ -702,9 +702,9 @@ let closure_40 = async function _initializeApp() {
           closure_0(paths[45])(paths[55], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[56]).computeInitialNavigationState(), 1)[0], async () => {
             closure_0(16890).updateSaturation(closure_0(5307).default.saturation);
             obj = closure_0(16890);
-            closure_0(19856).updateVisualRefresh(true);
-            const obj2 = closure_0(19856);
-            closure_0(19857).updateTheme(closure_0(1192).default.theme);
+            closure_0(19858).updateVisualRefresh(true);
+            const obj2 = closure_0(19858);
+            closure_0(19859).updateTheme(closure_0(1192).default.theme);
             closure_1_0();
           }));
         });
@@ -848,14 +848,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_20133 = fn(20133);
-const superagentPatch = fn(20135);
+const module_20135 = fn(20135);
+const superagentPatch = fn(20137);
 get_ActivityIndicator = fn(17);
 ({ AppState: closure_6, NativeEventEmitter: metroImportDefault, Linking: closure_8, LogBox: closure_9, NativeModules: closure_10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(20158);
+const logThirdPartyImportsDone = fn(20161);
 let closure_11 = fn(2190).subscribeToIntlLoadingSuccess;
 const AnalyticsTrackingStore = fn(8664);
-const ManagerRegistry = fn(20159);
+const ManagerRegistry = fn(20162);
 const Constants = fn(1072);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;

@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import _modDef15350 from "../../../../../_runtime/metro/15350__.js";
 import _modDef15351 from "../../../../../_runtime/metro/15351__.js";
@@ -269,7 +269,7 @@ obj2.cell = { paddingVertical: 12 };
 obj2.labelCell = { flex: 1, justifyContent: "flex-start" };
 obj2.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
 let obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-obj2.themedHighlightedCell = { backgroundColor: fn(6961).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+obj2.themedHighlightedCell = { backgroundColor: fn(6951).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj2.nitroHomeHightlightedBorderLeftRight = {
   borderLeftColor: "rgba(184, 69, 193, 0.5)",
   borderLeftWidth: 2,
@@ -282,7 +282,7 @@ obj2.priceText = { textAlign: "center" };
 let closure_14 = createStyles.createStyles(obj2);
 createStyles = fn(5306);
 let obj7 = { icon: null };
-let obj5 = { backgroundColor: fn(6961).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+let obj5 = { backgroundColor: fn(6951).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj7.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
 let closure_16 = createStyles.createStyles(obj7);
 let size = fn(2);

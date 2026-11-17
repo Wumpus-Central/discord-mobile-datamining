@@ -1,6 +1,6 @@
 // discord_app/modules/hexagon_campaign/native/HexagonCampaignPromoGradient.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05883_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";

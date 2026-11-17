@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/slayer_storefront/resolveStoref
 export default function resolveStorefrontCodedLink(arg0, code) {
   const result = obj3(12434).parseStorefrontCodedLink(code);
   if (null != result) {
-    if (arg0 === tmp(6055).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (arg0 === tmp(6045).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       let obj2 = { type: "application", applicationId: result.scopeId };
       obj3 = obj2;
     } else {
@@ -98,7 +98,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
           });
           if (!set.has(combined)) {
             set.add(combined);
-            const result1 = tmp(20298).queueMessageLinkFetch(
+            const result1 = tmp(20301).queueMessageLinkFetch(
               asyncGeneratorStep(async () => {
                 if (c4 === 2) {
                   c4 = 3;
@@ -162,7 +162,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                 }
               }),
             );
-            const tmpResult6 = tmp(20298);
+            const tmpResult6 = tmp(20301);
           }
         }
         tmpResult5 = tmp(12436);
@@ -255,7 +255,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         });
         if (!set.has(storefrontCodedLink)) {
           set.add(storefrontCodedLink);
-          const result2 = tmp(20298).queueMessageLinkFetch(
+          const result2 = tmp(20301).queueMessageLinkFetch(
             asyncGeneratorStep(async () => {
               if (c4 === 2) {
                 c4 = 3;
@@ -319,7 +319,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
               }
             }),
           );
-          const tmpResult8 = tmp(20298);
+          const tmpResult8 = tmp(20301);
         }
         const tmpResult7 = tmp(12434);
       }

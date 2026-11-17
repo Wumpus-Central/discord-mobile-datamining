@@ -595,7 +595,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                       const obj3 = tmp4(tmp93[16]);
                     }
                     if (null != result) {
-                      expandedHeight(result);
+                      closure_2_19(result);
                       c4 = 3;
                       return { value: "project", done: true };
                     } else {

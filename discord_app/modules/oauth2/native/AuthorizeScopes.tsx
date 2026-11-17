@@ -44,11 +44,11 @@ function Scope(arg0) {
   if (isFake) {
     str3 = "text-muted";
   }
-  const items1 = [React4(tmp6(5929).Text, { variant: "body-md/normal", color: str3, children: text })];
+  const items1 = [React4(tmp6(5919).Text, { variant: "body-md/normal", color: str3, children: text })];
   let tmp10Result2 = null;
   if (null != error) {
     const obj6 = { variant: "body-xs/normal", children: error };
-    tmp10Result2 = React4(tmp6(5929).Text, obj6);
+    tmp10Result2 = React4(tmp6(5919).Text, obj6);
   }
   items1[1] = tmp10Result2;
   obj5.children = items1;
@@ -90,7 +90,7 @@ export default function AuthorizeScopes(accountScopes) {
       PZpY9c = t["1Hz+Sl"];
       tmp5 = tmp15;
     }
-    let hasItem = integrationType === tmp5(5953).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === tmp5(5943).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
       hasItem = requestedScopes.includes(tmp5(7307).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
@@ -99,7 +99,7 @@ export default function AuthorizeScopes(accountScopes) {
     const intl = tmp5(1113).intl;
     const obj3 = { application: application.name };
     obj2.children = intl.format(PZpY9c, obj3);
-    items = [closure_4(tmp5(5929).Text, obj2)];
+    items = [closure_4(tmp5(5919).Text, obj2)];
     const obj4 = { style: tmp.scopes, children: null };
     const mapped = accountScopes.map((item) => {
       closure_0 = item;

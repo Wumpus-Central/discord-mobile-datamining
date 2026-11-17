@@ -50,7 +50,7 @@ export default function EmptyState(showsGenericMessage) {
     stringResult = string(t.LSNOYf);
   }
   obj4.children = stringResult;
-  obj3.children = jsx(flag(5929).Text, {
+  obj3.children = jsx(flag(5919).Text, {
     style: tmp.text,
     variant: "body-sm/medium",
     color: "text-default",

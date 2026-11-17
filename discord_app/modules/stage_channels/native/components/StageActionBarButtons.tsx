@@ -112,7 +112,7 @@ class StartStagePrompt {
   }
 }
 const View = fn(17).View;
-let closure_10 = fn(6906).REQUEST_TO_SPEAK_SHEET_KEY;
+let closure_10 = fn(6896).REQUEST_TO_SPEAK_SHEET_KEY;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -244,9 +244,9 @@ export function RequestToSpeakListButton(channel) {
     });
   }
   analyticsLocations = analyticsLocations(7918)().analyticsLocations;
-  const stageParticipantsCount = channel(6949).useStageParticipantsCount(
+  const stageParticipantsCount = channel(6939).useStageParticipantsCount(
     channel.id,
-    channel(6943).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY,
+    channel(6933).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY,
   );
   if (stageParticipantsCount > 0) {
     const obj2 = {

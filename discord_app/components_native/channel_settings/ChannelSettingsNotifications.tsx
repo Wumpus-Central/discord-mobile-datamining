@@ -32,7 +32,7 @@ const Constants = fn(1072);
   SettingsPaneTypes: closure_14,
   MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_15,
 } = Constants);
-const UnreadSetting = fn(6959).UnreadSetting;
+const UnreadSetting = fn(6949).UnreadSetting;
 let closure_17 = fn(1082).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
@@ -195,7 +195,7 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     const obj6 = { children: null };
     items[1] = null;
     obj6.children = items;
-    return closure_1_20(expandedHeight, obj6);
+    return closure_1_20(closure_1_19, obj6);
   } else {
     const obj7 = { muteConfig: props.muteConfig, type: null };
     if (channel.type === constants3.GUILD_CATEGORY) {
@@ -443,7 +443,7 @@ prototype["render"] = function render() {
   }
   return tmp9Result2;
 };
-ChannelSettingsNotifications.contextType = fn(5377).ThemeContext;
+ChannelSettingsNotifications.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsNotifications.tsx");
 

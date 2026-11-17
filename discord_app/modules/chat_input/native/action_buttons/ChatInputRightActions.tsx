@@ -121,7 +121,7 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "Path",
-    shouldShowThread: 3377,
+    shouldShowThread: "Maldives",
   });
   return metroImportDefault(_modDef1655.View, obj2);
 }

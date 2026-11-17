@@ -915,7 +915,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
             let isValidResult1 = closure_138_10.isValid();
             if (isValidResult1) {
               isValidResult1 = !(function isJoinFailureAlreadyShown(body) {
-                if (body instanceof closure_1_0(6922).JoinGuildRefusedError) {
+                if (body instanceof closure_1_0(6912).JoinGuildRefusedError) {
                   return true;
                 } else {
                   let code;
@@ -2258,7 +2258,7 @@ let closure_23 = async function _runGuarded(arg0) {
 };
 const Constants = fn(1072);
 ({ AbortCodes, Endpoints: closure_9, PlatformTypes } = Constants);
-let closure_10 = fn(6902).NotificationAuthorizationStatus;
+let closure_10 = fn(6892).NotificationAuthorizationStatus;
 let items = [, ,];
 ({
   USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED: arr[0],
@@ -2268,7 +2268,7 @@ let items = [, ,];
 const set = new Set(items);
 const set1 = new Set(Object.values(PlatformTypes));
 const waterwheels = "waterwheels";
-const set2 = new Set(Object.values(fn(5352).GuildJoinRequestApplicationStatuses));
+const set2 = new Set(Object.values(fn(5342).GuildJoinRequestApplicationStatuses));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/actions/native/useWaterwheelsActions.tsx");
 

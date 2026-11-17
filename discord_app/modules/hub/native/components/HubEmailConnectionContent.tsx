@@ -301,10 +301,10 @@ export default function HubEmailConnectionContent(arg0) {
     onClick: handleLearnMore,
   };
   const tmp7 = value(noop.useState(null), 2);
-  items1[1] = { paddingBottom: invite(5913)().insets.bottom + invite(575).space.PX_16 };
+  items1[1] = { paddingBottom: invite(5903)().insets.bottom + invite(575).space.PX_16 };
   obj6.contentContainerStyle = items1;
   let obj8 = { style: tmp3.container, children: null };
-  let obj7 = { paddingBottom: invite(5913)().insets.bottom + invite(575).space.PX_16 };
+  let obj7 = { paddingBottom: invite(5903)().insets.bottom + invite(575).space.PX_16 };
   const tmp17 = ref;
   const items2 = [
     closure_12(c6, {

@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useFriendsAnimationState.tsx");
 
 export { FriendsAnimationState };
-export function useFriendsAnimationState(route, stateFromStores3) {
+export function useFriendsAnimationState(route, stateFromStores2) {
   [first] = noop.useState({
     route,
     hasShownSquad: route === CheckpointNavigation.CheckpointRoute.SQUAD,
@@ -35,8 +35,8 @@ export function useFriendsAnimationState(route, stateFromStores3) {
       hasShownSquad: first.hasShownSquad || route === CheckpointNavigation.CheckpointRoute.SQUAD,
       isTransitioning: null,
     };
-    let tmp7 = !stateFromStores3;
-    if (!stateFromStores3) {
+    let tmp7 = !stateFromStores2;
+    if (!stateFromStores2) {
       tmp7 = first.route === CheckpointNavigation.CheckpointRoute.SQUAD;
     }
     if (tmp7) {
@@ -70,7 +70,7 @@ export function useFriendsAnimationState(route, stateFromStores3) {
   } else if (CheckpointNavigation.CheckpointRoute.SIDEKICK === route) {
     return first.isTransitioning ? noop.TRANSITION : noop.BEST;
   } else if (CheckpointNavigation.CheckpointRoute.SIDEKICK_LEAVE === route) {
-    return stateFromStores3 ? noop.BEST : noop.LEAVE;
+    return stateFromStores2 ? noop.BEST : noop.LEAVE;
   } else {
     return noop.START;
   }

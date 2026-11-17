@@ -35,7 +35,7 @@ function ClearAllHistory(searchContext) {
   const obj2 = { variant: "body-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1113).intl;
   obj2.children = intl2.string(searchContext(1113).t.LFTAUp);
-  obj.children = jsx(searchContext(5929).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
+  obj.children = jsx(searchContext(5919).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
   return jsx(searchContext(7428).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);

@@ -121,7 +121,7 @@ export default function _default() {
   };
   obj9.source = analyticsLocations(11214);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(6020), obj9);
+  obj8.icon = closure_11(analyticsLocations(6010), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {

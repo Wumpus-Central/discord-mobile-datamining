@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -108,8 +108,8 @@ function YouBarAvatarLarge(transitionState) {
       const obj = { nativeCutouts: null };
       const point = {
         shape: ClipView.CutoutShape.Circle,
-        x: diff + expandedHeight,
-        y: diff + expandedHeight,
+        x: diff + closure_2_19,
+        y: diff + closure_2_19,
         size: 2 * sum,
       };
       items = [point];
@@ -232,7 +232,7 @@ function YouBarAvatarLarge(transitionState) {
       status: null,
       statusSizeOverride: null,
       cutout: null,
-      statusStyle: "GREEN_NEW_55",
+      statusStyle: "PLUM_23",
     };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
@@ -654,10 +654,10 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
       },
       renderItem: callback2,
     };
-    obj6.children = closure_22(tmp(5377).TransitionGroup, obj7);
+    obj6.children = closure_22(tmp(5367).TransitionGroup, obj7);
     obj5.children = closure_22(_modDef1655.View, obj6);
     obj4.children = closure_22(closure_7, obj5);
-    tmp16 = closure_22(tmp(5598).GestureDetector, obj4);
+    tmp16 = closure_22(tmp(5588).GestureDetector, obj4);
   }
   return tmp16;
 });

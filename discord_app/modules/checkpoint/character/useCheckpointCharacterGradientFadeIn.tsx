@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const CheckpointConstants = fn(6377);
+const CheckpointConstants = fn(6367);
 ({
   CHECKPOINT_INTRODUCTION_FADE_IN_DURATION_MS: hasOwnProperty,
   CHECKPOINT_INTRODUCTION_REVEAL_DURATION_MS: closure_6,
@@ -19,7 +19,7 @@ export function useCheckpointCharacterGradientFadeIn(dataBinding) {
   noop = undefined;
   items = [AccessibilityStore];
   const stateFromStores = dataBinding(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp2 = dataBinding.stage === dataBinding(6745).CheckpointCharacterStage.INTRODUCTION && !stateFromStores;
+  const tmp2 = dataBinding.stage === dataBinding(6735).CheckpointCharacterStage.INTRODUCTION && !stateFromStores;
   dependencyMap = tmp2;
   let num = 1;
   let num2 = 1;

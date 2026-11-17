@@ -48,7 +48,7 @@ export default function ConjureAttachmentPills(projectId) {
           const obj2 = { name: id.name };
           obj.accessibilityLabel = intl.formatToPlainString(closure_1(4131).GtNukg, obj2);
           const obj3 = { variant: "body-xs/medium", color: "text-default", children: id.name };
-          obj.children = jsx(projectId(5929).Text, {
+          obj.children = jsx(projectId(5919).Text, {
             variant: "body-xs/medium",
             color: "text-default",
             children: id.name,
@@ -71,7 +71,7 @@ export default function ConjureAttachmentPills(projectId) {
           const intl2 = projectId(1113).intl;
           const obj6 = { name: id.name };
           obj5.children = intl2.formatToPlainString(closure_1(4131).nd81jR, obj6);
-          obj4.children = jsx(projectId(5929).Text, { variant: "body-xs/medium", color: "text-muted", children: null });
+          obj4.children = jsx(projectId(5919).Text, { variant: "body-xs/medium", color: "text-muted", children: null });
           const _HermesInternal = HermesInternal;
           tmp12 = (
             <View key={"" + id.name + "-" + index} style={closure_1.attachmentPill}>

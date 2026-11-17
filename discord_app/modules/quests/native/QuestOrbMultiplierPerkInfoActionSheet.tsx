@@ -187,5 +187,5 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
     orbMultiplierEligibility === multiplier(10154).QuestOrbMultiplierEligibilityType.UPSELL;
   obj3.children = closure_8(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
   obj2.children = closure_8(orbMultiplierEligibility(17768), obj3);
-  return closure_8(multiplier(5566).BottomSheet, obj2);
+  return closure_8(multiplier(5556).BottomSheet, obj2);
 }

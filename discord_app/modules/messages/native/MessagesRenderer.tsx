@@ -5,9 +5,9 @@ import discord_common_shallowEqualDefault from "../../../../discord_common/js/pa
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
-import QuestTypes from "../../quests/QuestTypes.tsx";
 import Client from "../../../flow/Client.tsx";
 import CodedLink from "../../coded_links/CodedLink.tsx";
+import QuestTypes from "../../quests/QuestTypes.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
 import QuestActionCreators from "../../quests/QuestActionCreators.tsx";

@@ -105,7 +105,7 @@ let items = [
   500,
   fn(1655).withDelay,
   fn(1655).withRepeat,
-  fn(5548).withTiming,
+  fn(5538).withTiming,
   obj,
 ];
 let closure_129_0;

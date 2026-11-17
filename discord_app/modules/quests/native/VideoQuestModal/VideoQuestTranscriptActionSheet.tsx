@@ -97,7 +97,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
       ),
   ];
   obj4.children = items2;
-  obj3.children = closure_8(quest(6337).Stack, obj4);
-  obj.children = closure_7(quest(5570).BottomSheetScrollView, obj3);
+  obj3.children = closure_8(quest(6327).Stack, obj4);
+  obj.children = closure_7(quest(5560).BottomSheetScrollView, obj3);
   return closure_7(quest(7951).ActionSheet, obj);
 }

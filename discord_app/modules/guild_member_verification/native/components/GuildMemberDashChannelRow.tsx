@@ -13,7 +13,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 let obj2 = {
   container: {
-    marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -21,7 +21,7 @@ let obj2 = {
   badgeText: null,
 };
 let obj3 = {
-  marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -39,7 +39,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   let hasItem;
   const tmp = closure_8();
   const id = guild.id;
-  let num = id(18932).useSubmittedGuildJoinRequestTotal({ guildId: id });
+  let num = id(18934).useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
   }
@@ -69,7 +69,7 @@ export default function GuildMemberDashChannelRow(arg0) {
     icon: null,
     channelInfo: null,
   };
-  let obj = id(18932);
+  let obj = id(18934);
   const intl = tmp2(1113).intl;
   obj2.accessibilityLabel = intl.string(id(1113).t["9Oq93m"]);
   obj2.accessibilityState = { selected };

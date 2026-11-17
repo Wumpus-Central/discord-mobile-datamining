@@ -90,7 +90,7 @@ export default function InstantInviteEmptyState(link) {
     const intl5 = tmp2(1113).intl;
     obj8.text = intl5.string(tmp2(1113).t.Ej3B3Y);
     obj8.onPress = onShare;
-    items1[3] = closure_5(tmp2(5936).Button, obj8);
+    items1[3] = closure_5(tmp2(5926).Button, obj8);
     obj2.children = items1;
     return closure_6(View, obj2);
   } else {

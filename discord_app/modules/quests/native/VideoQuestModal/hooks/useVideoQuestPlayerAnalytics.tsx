@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoQuestPlayerAnalytics.tsx
+import MonitoringAgentDefault from "../../../../monitoring/MonitoringAgent.tsx";
+import MetricEvents from "../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import QuestTypes from "../../../QuestTypes.tsx";
 import QuestContent from "../../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import AdCreativeType from "../../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import MonitoringAgentDefault from "../../../../monitoring/MonitoringAgent.tsx";
-import MetricEvents from "../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import DiscordVideoPlayerTypes from "../../../../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx";
 import AnalyticsActions from "../../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../../lib/analytics/AnalyticsTypes.tsx";
@@ -78,7 +78,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               closure_131_1 = undefined;
               closure_131_2 = undefined;
               closure_131_3 = undefined;
-              const VIDEO_MODAL_MOBILE = closure_0(5343).QuestContent.VIDEO_MODAL_MOBILE;
+              const VIDEO_MODAL_MOBILE = closure_0(6959).QuestContent.VIDEO_MODAL_MOBILE;
               closure_131_1 = VIDEO_MODAL_MOBILE;
               c6 = 1;
               closure_131_2 = getQuestImpressionId();

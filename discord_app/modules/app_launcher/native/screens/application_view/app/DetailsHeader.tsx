@@ -129,7 +129,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
   }, items2);
   const tmp6Result5 = first1(noop.useState(false), 2);
   isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
-  const tmp26 = first(6836)(isScreenLandscape);
+  const tmp26 = first(6826)(isScreenLandscape);
   closure_18 = tmp26;
   const items3 = [isScreenLandscape, tmp26];
   const effect = obj2.useEffect(() => {
@@ -173,7 +173,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
       lineClamp: 1,
       children: sectionName,
     };
-    tmp32Result = tmp32(tmp2(5929).Heading, obj8);
+    tmp32Result = tmp32(tmp2(5919).Heading, obj8);
   }
   const items6 = [tmp32Result];
   let tmp32Result5 = null;
@@ -182,7 +182,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
     const obj10 = { variant: "body-xs/medium", color: "text-default", children: null };
     const intl = tmp2(1113).intl;
     obj10.children = intl.string(tmp2(1113).t.LO4f0P);
-    obj9.children = tmp32(tmp2(5929).Text, obj10);
+    obj9.children = tmp32(tmp2(5919).Text, obj10);
     tmp32Result5 = tmp32(tmp33, obj9);
   }
   items6[1] = tmp32Result5;
@@ -252,7 +252,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
         colors,
         style: tmp.maskFade,
       };
-      items10[1] = tmp32(tmp25(5893), obj17);
+      items10[1] = tmp32(tmp25(5883), obj17);
       if (num2 == null) {
         num2 = 0;
       }
@@ -264,7 +264,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
       items8[1] = tmp30(tmp33, obj14);
       obj13.children = items8;
       let tmp32Result6 = tmp30(tmp33, obj13);
-      const tmp25Result2 = tmp25(5893);
+      const tmp25Result2 = tmp25(5883);
     } else {
       const items11 = [absoluteFill, tmp.maskFill];
       obj12.style = items11;
@@ -272,7 +272,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
     }
     const obj20 = { maskElement: tmp32Result6, children: null };
     const obj21 = { variant: "body-sm/medium", color: "text-default", lineClamp: num4, children: memo };
-    obj20.children = tmp32(tmp2(5929).Text, obj21);
+    obj20.children = tmp32(tmp2(5919).Text, obj21);
     const items12 = [tmp32(tmp25(7533), obj20), ,];
     let tmp32Result7 = null;
     if (tmp29) {
@@ -290,7 +290,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
       const intl2 = tmp2(1113).intl;
       const items13 = ["\u2026 ", intl2.string(tmp2(1113).t["OBCR+p"])];
       obj23.children = items13;
-      obj22.children = tmp30(tmp2(5929).Text, obj23);
+      obj22.children = tmp30(tmp2(5919).Text, obj23);
       tmp32Result7 = tmp32(tmp33, obj22);
     }
     items12[1] = tmp32Result7;
@@ -306,7 +306,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
         };
         const intl3 = tmp2(1113).intl;
         obj24.children = intl3.string(tmp2(1113).t.D5xGUK);
-        tmp32Result8 = tmp32(tmp2(5929).Text, obj24);
+        tmp32Result8 = tmp32(tmp2(5919).Text, obj24);
       }
     }
     items12[2] = tmp32Result8;
@@ -336,7 +336,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
     let tmp32Result9 = !hideName;
     if (!hideName) {
       const obj26 = { variant: "heading-lg/semibold", color: "text-default", children: sectionName };
-      tmp32Result9 = tmp32(tmp2(5929).Heading, obj26);
+      tmp32Result9 = tmp32(tmp2(5919).Heading, obj26);
     }
     const items16 = [tmp32Result9];
     if (tmp30Result5) {
@@ -364,7 +364,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
         },
         children: memo,
       };
-      const items17 = [tmp32(tmp2(5929).Text, obj28)];
+      const items17 = [tmp32(tmp2(5919).Text, obj28)];
       const obj29 = {
         variant: "body-sm/medium",
         color: "text-brand",
@@ -373,7 +373,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
       };
       const intl4 = tmp2(1113).intl;
       obj29.children = intl4.string(tmp2(1113).t.D5xGUK);
-      items17[1] = tmp32(tmp2(5929).Text, obj29);
+      items17[1] = tmp32(tmp2(5919).Text, obj29);
       obj27.children = items17;
       tmp30Result5 = tmp30(tmp33, obj27);
     }

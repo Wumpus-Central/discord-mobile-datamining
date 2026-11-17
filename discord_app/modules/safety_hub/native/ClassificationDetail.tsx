@@ -71,7 +71,7 @@ function ClassificationHeader(classificationTypeText) {
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(5929).Text, {
+  obj.children = closure_13(classificationTypeText(5919).Text, {
     variant: "body-lg/normal",
     style: tmp.headerText,
     color: "mobile-text-heading-primary",
@@ -225,7 +225,7 @@ function ClassificationPolicyCard(classificationDescription) {
   obj6.children = intl.format(policyExplainerLink(1113).t.zxUdpj, {
     classificationDescription: classificationDescription.classificationTypeText,
   });
-  obj5.children = closure_13(policyExplainerLink(5929).Text, obj6);
+  obj5.children = closure_13(policyExplainerLink(5919).Text, obj6);
   items[1] = closure_13(closure_4, obj5);
   obj2.children = items;
   obj.children = closure_14(tmp2, obj2);

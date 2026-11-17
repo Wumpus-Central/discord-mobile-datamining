@@ -1,7 +1,7 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsBountyQaScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import AdCreativeType from "../../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import ToastActionCreatorsDefault from "../../../../toast/native/ToastActionCreators.tsx";
+import AdCreativeType from "../../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import QuestActionCreators from "../../../../quests/QuestActionCreators.tsx";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -67,7 +67,7 @@ export default function DevToolsBountyQaScreen() {
                 const obj7 = {
                   value: tmp3(15256).resetCreativePreviewDeliveryState(
                     tmp22,
-                    tmp3(5341).AdPlacement.MOBILE_HOME_DOCK_AREA,
+                    tmp3(6957).AdPlacement.MOBILE_HOME_DOCK_AREA,
                   ),
                   done: false,
                 };
@@ -103,7 +103,7 @@ export default function DevToolsBountyQaScreen() {
               return obj;
             }
             const questToDeliver = tmp3(10133).fetchQuestToDeliver(
-              tmp3(5341).AdPlacement.MOBILE_HOME_DOCK_AREA,
+              tmp3(6957).AdPlacement.MOBILE_HOME_DOCK_AREA,
               "devTools-bountyQa",
             );
             toast("Reset delivery state and refreshing dock", "bounty-qa-reset-and-refresh");
@@ -130,7 +130,7 @@ export default function DevToolsBountyQaScreen() {
   items = [AdDeliveryStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     let first = adDecisionsForPlacement.getAdDecisionsForPlacement(
-      stateFromStores(5341).AdPlacement.MOBILE_HOME_DOCK_AREA,
+      stateFromStores(6957).AdPlacement.MOBILE_HOME_DOCK_AREA,
     )[0];
     if (first == null) {
       first = null;
@@ -178,7 +178,7 @@ export default function DevToolsBountyQaScreen() {
     str4 = "Last dock bounty still in memory: " + stateFromStores + ".";
   }
   const items5 = [
-    closure_8(stateFromStores(5929).Text, { variant: "body-sm/medium", color: "text-muted", children: str4 }),
+    closure_8(stateFromStores(5919).Text, { variant: "body-sm/medium", color: "text-muted", children: str4 }),
     ,
   ];
   let obj = stateFromStores(504);
@@ -247,11 +247,11 @@ export default function DevToolsBountyQaScreen() {
     icon: closure_8(stateFromStores(17710).RedoIcon, {}),
     onPress: function handleRefreshOrganicServe() {
       const questToDeliver = stateFromStores(10133).fetchQuestToDeliver(
-        stateFromStores(5341).AdPlacement.MOBILE_HOME_DOCK_AREA,
+        stateFromStores(6957).AdPlacement.MOBILE_HOME_DOCK_AREA,
         "devTools-bountyQa",
       );
       const obj = stateFromStores(10133);
-      str(6015).open("bounty-qa-refresh", { text: "Refreshing dock serve" });
+      str(6005).open("bounty-qa-refresh", { text: "Refreshing dock serve" });
     },
   });
   let tmp13Result = null;

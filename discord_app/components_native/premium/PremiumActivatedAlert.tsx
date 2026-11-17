@@ -62,7 +62,7 @@ obj2.description = {
   lineHeight: 16,
   textAlign: "center",
   marginTop: 20,
-  color: fn(6961).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+  color: fn(6951).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
 };
 let closure_7 = createStyles.createStyles(obj2);
 createStyles = fn(5306);

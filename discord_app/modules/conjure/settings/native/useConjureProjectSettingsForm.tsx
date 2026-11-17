@@ -365,7 +365,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     let obj4 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl = tmp6(1113).intl;
     obj4.children = intl.string(tmp2(4131).s7VnVF);
-    tmp11 = closure_9(tmp6(5929).Text, obj4);
+    tmp11 = closure_9(tmp6(5919).Text, obj4);
   }
   const items1 = [tmp11, , , , , , , , ,];
   if (isConjureManagedCopy) {
@@ -497,7 +497,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   if (null != saveError) {
     const obj20 = { accessibilityRole: "alert", children: null };
     const obj21 = { variant: "body-xs/normal", color: "text-feedback-critical", children: saveError };
-    obj20.children = tmp15(tmp6(5929).Text, obj21);
+    obj20.children = tmp15(tmp6(5919).Text, obj21);
     tmp15Result15 = tmp15(View, obj20);
   }
   const obj22 = {
@@ -539,7 +539,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   if (null != experimentalError) {
     const obj28 = { accessibilityRole: "alert", children: null };
     const obj54 = { variant: "body-xs/normal", color: "text-feedback-critical", children: experimentalError };
-    obj28.children = tmp15(tmp6(5929).Text, obj54);
+    obj28.children = tmp15(tmp6(5919).Text, obj54);
     tmp15Result16 = tmp15(View, obj28);
   }
   items3[2] = tmp15Result16;

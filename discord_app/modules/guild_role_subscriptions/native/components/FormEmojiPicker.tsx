@@ -19,17 +19,17 @@ export default function FormEmojiPicker(emoji) {
     emojiId = onChange(5252).convertSurrogateToName(emojiName, false);
     let obj = onChange(5252);
   }
-  const emojiByIdOrName = guildId(17859).useEmojiByIdOrName(guildId, emojiId);
+  const emojiByIdOrName = guildId(17861).useEmojiByIdOrName(guildId, emojiId);
   let allEmojiNamesString = null;
   if (null != emojiByIdOrName) {
     allEmojiNamesString = tmp3(5256).getAllEmojiNamesString(emojiByIdOrName);
     const tmp3Result = tmp3(5256);
   }
   const intl = tmp3(1113).intl;
-  let obj2 = guildId(17859);
+  let obj2 = guildId(17861);
   if (null != emojiId) {
     const obj3 = { guildId, id: emojiId };
-    let tmp9 = jsx(onChange(17858), { guildId, id: emojiId });
+    let tmp9 = jsx(onChange(17860), { guildId, id: emojiId });
     let tmp8 = jsx;
   } else {
     tmp8 = jsx;
@@ -39,7 +39,7 @@ export default function FormEmojiPicker(emoji) {
   const obj5 = { icon: tmp9, label: null, arrow: true, onPress: null };
   if (allEmojiNamesString == null) {
     const obj6 = { variant: "body-md/medium", color: "text-muted", children: stringResult };
-    allEmojiNamesString = tmp8(tmp3(5929).Text, obj6);
+    allEmojiNamesString = tmp8(tmp3(5919).Text, obj6);
   }
   obj5.label = allEmojiNamesString;
   obj5.onPress = function handleSelectEmoji() {

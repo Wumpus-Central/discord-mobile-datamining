@@ -3,13 +3,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import Link from "../../../../_runtime/01503_Link.js";
 import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
-import QuestTypes from "../QuestTypes.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import QuestTypes from "../QuestTypes.tsx";
 import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import getQuestLogger from "../lib/getQuestLogger.tsx";
@@ -271,7 +271,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
     }
   }
 };
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({
   QuestsExperimentLocations: hasOwnProperty,
   QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_6,

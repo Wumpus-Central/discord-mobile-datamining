@@ -72,7 +72,7 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
   const tmp3 = useConjureRemoveFromServerDefault(onRemoved.target);
   ({ optionalItems, notes, pending, error, submit: c1 } = tmp3);
   const children = [
-    closure_4(onRemoved(5929).Text, {
+    closure_4(onRemoved(5919).Text, {
       variant: "heading-sm/medium",
       color: "text-feedback-warning",
       children: tmp3.body,
@@ -109,12 +109,12 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
   };
   obj2.loading = pending;
   obj2.disabled = pending;
-  children[3] = closure_4(onRemoved(5936).Button, obj2);
+  children[3] = closure_4(onRemoved(5926).Button, obj2);
   let tmp6Result2 = null;
   if (null != error) {
     let obj3 = { variant: "body-md/semibold", color: "input-text-error-default", children: error };
-    tmp6Result2 = closure_4(tmp5(5929).Text, obj3);
+    tmp6Result2 = closure_4(tmp5(5919).Text, obj3);
   }
   children[4] = tmp6Result2;
-  return closure_5(onRemoved(6337).Stack, { spacing: 16, children });
+  return closure_5(onRemoved(6327).Stack, { spacing: 16, children });
 }

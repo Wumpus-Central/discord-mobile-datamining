@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/native/components/GameProfileHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";

@@ -9,7 +9,7 @@ import AppLauncherOnboardingPersistedStore from "../stores/AppLauncherOnboarding
 import AppLauncherOnboardingStore from "../stores/AppLauncherOnboardingStore.tsx";
 
 const require = fn;
-const BuiltInSectionId = fn(6345).BuiltInSectionId;
+const BuiltInSectionId = fn(6335).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;
 let closure_12 = 14 * DurationsDefault.Millis.DAY;
@@ -104,16 +104,16 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     const applicationId = recentApplicationCommandMetadata.applicationId;
   }
   const tmp2Result13 = channelId(504);
-  result = channelId(5348).useIsDismissibleContentDismissed_UNSAFE(
+  result = channelId(5338).useIsDismissibleContentDismissed_UNSAFE(
     tmp2(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER,
   );
-  const tmp2Result14 = channelId(5348);
-  let result1 = channelId(5348).useIsDismissibleContentDismissed_UNSAFE(
+  const tmp2Result14 = channelId(5338);
+  let result1 = channelId(5338).useIsDismissibleContentDismissed_UNSAFE(
     tmp2(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
   );
-  const tmp2Result15 = channelId(5348);
+  const tmp2Result15 = channelId(5338);
   let tmp30 = null != stateFromStores4;
-  const result2 = channelId(5348).useIsDismissibleContentDismissed_UNSAFE(
+  const result2 = channelId(5338).useIsDismissibleContentDismissed_UNSAFE(
     tmp2(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
   );
   if (tmp30) {

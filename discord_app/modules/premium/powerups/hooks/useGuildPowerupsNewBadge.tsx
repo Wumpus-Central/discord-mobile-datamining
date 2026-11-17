@@ -8,7 +8,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(5524).GuildPowerupNewPerkMarketingVersion;
+const constants = fn(5514).GuildPowerupNewPerkMarketingVersion;
 const ContentDismissActionType = fn(5152).ContentDismissActionType;
 let closure_8 = fn(5139).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 const size = fn(2);

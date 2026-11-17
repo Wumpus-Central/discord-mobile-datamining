@@ -70,7 +70,7 @@ function handleVisibilityChange() {
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const asLaunched = fn(7020).asLaunched;
 let obj = null;
 let set = new Set();

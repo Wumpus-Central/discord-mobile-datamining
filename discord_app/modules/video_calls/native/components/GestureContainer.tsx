@@ -5,7 +5,7 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

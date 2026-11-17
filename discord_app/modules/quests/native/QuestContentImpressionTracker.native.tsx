@@ -10,7 +10,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   let obj = adContentIds2(504);
   const ref = noop.useRef(null);
   const tmp5 = visibilityRef;
-  let tmp6 = visibilityRef(6836)(tmp3);
+  let tmp6 = visibilityRef(6826)(tmp3);
   const adContentImpressionTrackerProps = adContentIds2(10168).useAdContentImpressionTrackerProps(skipRemountKey);
   const adContentIds = adContentImpressionTrackerProps.adContentIds;
   const obj3 = {};
@@ -136,7 +136,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   const merged1 = Object.assign(skipRemountKey);
   const merged2 = Object.assign({
     visible: overrideVisibility,
-    visibleChanged: overrideVisibility !== tmp5(6836)(overrideVisibility),
+    visibleChanged: overrideVisibility !== tmp5(6826)(overrideVisibility),
   });
   obj6.focused = tmp3;
   obj6.focusedChanged = tmp3 !== tmp6;
@@ -151,7 +151,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   obj7.key = key;
   obj7.adContentIds = adContentIds;
   if (tmp17) {
-    obj7.adCreativeType = tmp(5345).AdCreativeType.QUEST;
+    obj7.adCreativeType = tmp(6961).AdCreativeType.QUEST;
     let tmp19 = obj7;
   } else {
     obj7.adCreativeType = skipRemountKey.adCreativeType;

@@ -168,7 +168,7 @@ function PlanOverlayDesign(projectId) {
       obj8.source = obj9;
       obj8.style = tmp.overlayFullWidget;
       obj8.onError = handleError;
-      obj7.children = closure_10(tmp7(6020), obj8);
+      obj7.children = closure_10(tmp7(6010), obj8);
       tmp12Result = closure_10(closure_8, obj7);
     } else {
       const obj10 = { projectId, src, alt: stringResult1, size: projectId.size, onError: handleError };
@@ -274,7 +274,7 @@ function PlanReferences(projectId) {
     const obj3 = { variant: "body-xs/medium", color: "text-muted", children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(_modDef4131.ubBJcy);
-    items = [closure_10(tmp2(5929).Text, obj3)];
+    items = [closure_10(tmp2(5919).Text, obj3)];
     const obj4 = {
       style: tmp.referenceList,
       children: result.map((alt, index) => {
@@ -565,7 +565,7 @@ export default function ConjurePlanProposalCard(projectId) {
       const obj13 = { variant: "body-md/normal", color: "text-default", children: null };
       const obj14 = { markup: memo, commandNames: conjurePlanSlashCommandNames, size: "body-md" };
       obj13.children = closure_10(tmp4(13726).ConjurePlanCommandMarkup, obj14);
-      tmp12Result2 = closure_10(tmp4(5929).Text, obj13);
+      tmp12Result2 = closure_10(tmp4(5919).Text, obj13);
     }
     const items4 = [tmp12Result2, ,];
     const obj15 = { projectId, proposal };
@@ -576,11 +576,11 @@ export default function ConjurePlanProposalCard(projectId) {
       const obj17 = { variant: "body-xs/medium", color: "text-muted", children: null };
       const intl8 = tmp4(1113).intl;
       obj17.children = intl8.string(tmp10(4131).iNS4dl);
-      const items5 = [closure_10(tmp4(5929).Text, obj17)];
+      const items5 = [closure_10(tmp4(5919).Text, obj17)];
       const obj18 = { variant: "body-md/normal", color: "text-default", children: null };
       const obj19 = { text: str3, commandNames: conjurePlanSlashCommandNames, size: "body-md" };
       obj18.children = closure_10(tmp4(13726).ConjurePlanCommandText, obj19);
-      items5[1] = closure_10(tmp4(5929).Text, obj18);
+      items5[1] = closure_10(tmp4(5919).Text, obj18);
       obj16.children = items5;
       tmp9Result = closure_11(tmp13, obj16);
     }
@@ -670,11 +670,11 @@ export default function ConjurePlanProposalCard(projectId) {
         const intl6 = tmp4(1113).intl;
         obj22.text = intl6.string(tmp10(4131)["6S+wRM"]);
         obj22.onPress = onApprove;
-        const items7 = [closure_10(tmp4(5936).Button, obj22)];
+        const items7 = [closure_10(tmp4(5926).Button, obj22)];
         const obj23 = { variant: "body-sm/normal", color: "text-subtle", style: tmp.replyHint, children: null };
         const intl7 = tmp4(1113).intl;
         obj23.children = intl7.string(tmp10(4131).IZoqbR);
-        items7[1] = closure_10(tmp4(5929).Text, obj23);
+        items7[1] = closure_10(tmp4(5919).Text, obj23);
         obj21.children = items7;
         tmp9Result2 = closure_11(tmp13, obj21);
       }

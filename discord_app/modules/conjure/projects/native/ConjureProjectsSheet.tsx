@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef4131 from "../../intl/ConjureUntranslated.messages.js";
-import BottomSheetModal from "../../../../../_runtime/05570_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05560_BottomSheetModal.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import ConjureActionCreators from "../ConjureActionCreators.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";

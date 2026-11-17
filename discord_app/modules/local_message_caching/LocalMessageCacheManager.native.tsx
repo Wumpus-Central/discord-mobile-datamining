@@ -983,7 +983,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6795);
+                let obj9 = values(6785);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

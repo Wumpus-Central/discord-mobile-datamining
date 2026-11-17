@@ -140,7 +140,7 @@ function ProfileFrameSectionPreview(arg0) {
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
-  items1[1] = closure_9(purchase(5893), obj2);
+  items1[1] = closure_9(purchase(5883), obj2);
   obj.children = items1;
   return closure_10(closure_5, obj);
 }

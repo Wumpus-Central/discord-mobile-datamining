@@ -116,11 +116,11 @@ export default function WebAuthnRegisterStep() {
     stringResult = string(t.Lh5vTW);
   }
   obj6.children = stringResult;
-  items3[1] = closure_8(navigation(5929).Text, obj6);
+  items3[1] = closure_8(navigation(5919).Text, obj6);
   let tmp17Result = "" !== tmp10;
   if (tmp17Result) {
     const obj7 = { variant: "body-md/normal", color: "text-feedback-critical", children: tmp10 };
-    tmp17Result = closure_8(tmp(5929).Text, obj7);
+    tmp17Result = closure_8(tmp(5919).Text, obj7);
   }
   items3[2] = tmp17Result;
   obj5.children = items3;
@@ -140,7 +140,7 @@ export default function WebAuthnRegisterStep() {
     string2Result = string2(t2.oibaQa);
   }
   const obj9 = {
-    children: closure_8(navigation(5936).Button, {
+    children: closure_8(navigation(5926).Button, {
       text: string2Result,
       disabled: tmp7,
       loading: tmp7,
@@ -150,7 +150,7 @@ export default function WebAuthnRegisterStep() {
       size: "lg",
     }),
   };
-  items4[2] = closure_8(navigation(6951).ButtonGroup, obj9);
+  items4[2] = closure_8(navigation(6941).ButtonGroup, obj9);
   rect.children = items4;
   obj4.children = closure_9(navigation(7415).SafeAreaPaddingView, rect);
   return closure_8(closure_5, obj4);

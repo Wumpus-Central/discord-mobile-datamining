@@ -68,14 +68,14 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = closure_29();
   let SMALL = dependencyMap;
-  const notifCenterV2MessagePreviewParser = message_channel_id(6341).getNotifCenterV2MessagePreviewParser(
+  const notifCenterV2MessagePreviewParser = message_channel_id(6331).getNotifCenterV2MessagePreviewParser(
     closure_27(),
     closure_28,
     roleStyle,
   );
   const intl = item(1113).intl;
   const stringResult = intl.string(item(1113).t.BOi07B);
-  const obj = message_channel_id(6341);
+  const obj = message_channel_id(6331);
   let message = item.message;
   let num;
   if (message != null) {
@@ -249,7 +249,7 @@ function ForYouMessagePreviewV2(item) {
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj5.children = items5;
-    items3[1] = closure_22(tmp2(5929).Text, obj5);
+    items3[1] = closure_22(tmp2(5919).Text, obj5);
     obj3.children = items3;
     return closure_22(closure_7, obj3);
   } else {
@@ -325,21 +325,21 @@ const Constants = fn(1072);
   MessageTypes: closure_18,
   EMPTY_STRING_SNOWFLAKE_ID: closure_19,
 } = Constants);
-const NotificationTypes = fn(6847).NotificationTypes;
+const NotificationTypes = fn(6837).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
 let createStyles = fn(5306);
 let obj = { strong: null };
 let obj3 = {};
-const merged = Object.assign(fn(5929).TextStyleSheet["body-md/medium"]);
+const merged = Object.assign(fn(5919).TextStyleSheet["body-md/medium"]);
 obj3.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj3;
 let closure_24 = createStyles.createStyles(obj);
 createStyles = fn(5306);
 let obj4 = { strong: null };
 let obj6 = {};
-const merged1 = Object.assign(fn(5929).TextStyleSheet["body-md/medium"]);
+const merged1 = Object.assign(fn(5919).TextStyleSheet["body-md/medium"]);
 obj6.color = nativeDefault.colors.TEXT_MUTED;
 obj4.strong = obj6;
 let closure_25 = createStyles.createStyles(obj4);
@@ -538,12 +538,12 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
   const callback2 = str.useCallback(() => {
     items = [];
     if (item.type === item(notificationCenterItemAcked[33]).NotificationCenterItems.TRENDING_CONTENT) {
-      let obj2 = { label: null, icon: null, IconComponent: null, onPress: null };
-      const intl2 = tmp2(notificationCenterItemAcked[18]).intl;
-      obj2.label = intl2.string(tmp2(notificationCenterItemAcked[18]).t["gSMz/x"]);
-      obj2.icon = rowIndex(notificationCenterItemAcked[35]);
-      obj2.IconComponent = tmp2(notificationCenterItemAcked[36]).LightbulbIcon;
-      obj2.onPress = function onPress() {
+      let obj = { label: null, icon: null, IconComponent: null, onPress: null };
+      let intl = tmp2(notificationCenterItemAcked[18]).intl;
+      obj.label = intl.string(tmp2(notificationCenterItemAcked[18]).t["gSMz/x"]);
+      obj.icon = rowIndex(notificationCenterItemAcked[35]);
+      obj.IconComponent = tmp2(notificationCenterItemAcked[36]).LightbulbIcon;
+      obj.onPress = function onPress() {
         try {
           str = closure_0.deeplink;
           if (str == null) {
@@ -577,15 +577,15 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
           const obj = rowIndex(notificationCenterItemAcked[38]);
         }
       };
-      items.push(obj2);
+      items.push(obj);
       let tmp6 = rowIndex;
     } else {
-      let obj = { label: null, icon: null, IconComponent: null, onPress: null };
-      let intl = tmp2(notificationCenterItemAcked[18]).intl;
-      obj.label = intl.string(tmp2(notificationCenterItemAcked[18]).t["08rqg5"]);
-      obj.icon = rowIndex(notificationCenterItemAcked[35]);
-      obj.IconComponent = tmp2(notificationCenterItemAcked[36]).LightbulbIcon;
-      obj.onPress = function onPress() {
+      let obj2 = { label: null, icon: null, IconComponent: null, onPress: null };
+      const intl2 = tmp2(notificationCenterItemAcked[18]).intl;
+      obj2.label = intl2.string(tmp2(notificationCenterItemAcked[18]).t["08rqg5"]);
+      obj2.icon = rowIndex(notificationCenterItemAcked[35]);
+      obj2.IconComponent = tmp2(notificationCenterItemAcked[36]).LightbulbIcon;
+      obj2.onPress = function onPress() {
         try {
           const tmp5 = item(notificationCenterItemAcked[40])(
             notificationCenterItemAcked[39],
@@ -602,7 +602,7 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
           const obj3 = rowIndex(notificationCenterItemAcked[38]);
         }
       };
-      items.push(obj);
+      items.push(obj2);
       tmp6 = rowIndex;
     }
     if (null == tmp.local_id) {
@@ -612,15 +612,15 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(19244).deleteNotificationCenterItem(tmp3);
+        yield tmp3(19246).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };
           const intl = tmp3(1113).intl;
           obj7.text = intl.string(tmp3(1113).t.WDxhvB);
-          rowIndex(6015).open("REMOVE_NOTIFICATION_ERROR", obj7);
+          rowIndex(6005).open("REMOVE_NOTIFICATION_ERROR", obj7);
           c4 = 3;
-          rowIndex(6015);
+          rowIndex(6005);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;

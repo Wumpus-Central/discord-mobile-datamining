@@ -365,7 +365,7 @@ let closure_27 = async function _openInviteFromQuickSwitcher(arg0) {
     }
   }
 };
-const InAppNavigationType = fn(6963).InAppNavigationType;
+const InAppNavigationType = fn(6953).InAppNavigationType;
 const ChannelRecordBase = fn(5159).ChannelRecordBase;
 const Constants = fn(1072);
 ({

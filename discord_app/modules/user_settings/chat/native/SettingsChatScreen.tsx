@@ -47,7 +47,7 @@ function VideoUploadQualityNitroUpsell() {
       },
     };
     obj8.children = intl2.format(tmp(1113).t.uW1zul, obj9);
-    items2[1] = closure_9(tmp(5929).Text, obj8);
+    items2[1] = closure_9(tmp(5919).Text, obj8);
     obj6.children = items2;
     obj5.children = closure_10(View, obj6);
     obj4.children = closure_9(tmp(7445).Card, obj5);

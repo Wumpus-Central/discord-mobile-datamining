@@ -93,7 +93,7 @@ export default noop.memo(function UserSettingsAppIcons() {
             const obj10 = { text: null };
             const intl = stateFromStores(1113).intl;
             obj10.text = intl.string(stateFromStores(1113).t.F8FvUy);
-            closure_1(6015).open("HEXAGON_CAMPAIGN_ENROLLMENT_ERROR", obj10);
+            closure_1(6005).open("HEXAGON_CAMPAIGN_ENROLLMENT_ERROR", obj10);
             c5 = 0;
             closure_132_7(null);
             c8 = 3;
@@ -137,7 +137,7 @@ export default noop.memo(function UserSettingsAppIcons() {
             const obj17 = { perks: null, content: null, contentSurface: null };
             items = [constants.APP_ICON];
             obj17.perks = items;
-            obj17.content = stateFromStores(5341).QuestContent.APP_ICON_SETTINGS;
+            obj17.content = stateFromStores(6957).QuestContent.APP_ICON_SETTINGS;
             obj17.contentSurface = stateFromStores(17085).HexagonCampaignContentSurface.APP_ICON_PICKER;
             const result1 = stateFromStores(17085).trackHexagonCampaignPerkAction(obj17);
             const obj2 = stateFromStores(17085);

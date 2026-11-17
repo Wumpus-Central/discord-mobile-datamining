@@ -28,8 +28,8 @@ export function createDefaultReaction(arg0) {
           id: emojiId,
           name: "a",
           animated: customGuildEmoji.animated,
-          src: "InterfaceOrientation",
-          displayName: "NIO",
+          src: "dola\u015Fma",
+          displayName: "erkek",
         };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
@@ -96,7 +96,7 @@ export function createForumPostActions(arg0) {
   }
   if (null != assetUriForEmbed) {
     let stringResult;
-    const assetUriForEmbed1 = tmp8(8655).getAssetUriForEmbed(tmp6(6030));
+    const assetUriForEmbed1 = tmp8(8655).getAssetUriForEmbed(tmp6(6020));
     if (!hasReactions) {
       let emoji;
       if (defaultReaction != null) {

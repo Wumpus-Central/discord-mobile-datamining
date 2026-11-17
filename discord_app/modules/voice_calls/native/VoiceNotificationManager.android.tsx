@@ -31,10 +31,10 @@ class VoiceNotificationManager {
       channelId: "s",
       connectionState: "container",
       selfMute: false,
-      deafened: 0,
-      isPushToTalk: 0,
-      embeddedActivity: 0,
-      isStreaming: 0,
+      deafened: "configure",
+      isPushToTalk: null,
+      embeddedActivity: "\u{1FAF8}",
+      isStreaming: true,
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
@@ -172,7 +172,7 @@ class VoiceNotificationManager {
             callIcon: null,
           };
           const obj3 = RTCConnectionUtilsDefault;
-          obj.title = obj2(5954).computeChannelName(channel, UserStore, RelationshipStore);
+          obj.title = obj2(5944).computeChannelName(channel, UserStore, RelationshipStore);
           const _HermesInternal2 = HermesInternal;
           obj.content = "" + obj3.getStatus(connectionState).connectionStatusText + str2;
           obj.priority = obj2(8859).ServiceNotificationPriority.HIGH;
@@ -200,7 +200,7 @@ class VoiceNotificationManager {
           obj.type = isStreaming ? intl3.SCREEN_SHARE : intl3.VOICE_CALL;
           obj.icon = stringResult1;
           obj.color = callIcon;
-          const obj5 = obj2(5954);
+          const obj5 = obj2(5944);
           obj.acquireWifiLock = obj2(16907).shouldAcquireCallWifiLock();
           intl3 = tmp23(1113).intl;
           stringResult1 = intl3.string(obj2(1113).t["6vrfgt"]);
@@ -275,10 +275,10 @@ obj2.state = {
   channelId: "s",
   connectionState: "container",
   selfMute: false,
-  deafened: 0,
-  isPushToTalk: 0,
-  embeddedActivity: 0,
-  isStreaming: 0,
+  deafened: "configure",
+  isPushToTalk: null,
+  embeddedActivity: "\u{1FAF8}",
+  isStreaming: true,
 };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
@@ -416,7 +416,7 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
         callIcon: null,
       };
       const obj3 = RTCConnectionUtilsDefault;
-      obj.title = obj2(5954).computeChannelName(channel, UserStore, RelationshipStore);
+      obj.title = obj2(5944).computeChannelName(channel, UserStore, RelationshipStore);
       const _HermesInternal2 = HermesInternal;
       obj.content = "" + obj3.getStatus(connectionState).connectionStatusText + str2;
       obj.priority = obj2(8859).ServiceNotificationPriority.HIGH;
@@ -444,7 +444,7 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
       obj.type = isStreaming ? intl3.SCREEN_SHARE : intl3.VOICE_CALL;
       obj.icon = stringResult1;
       obj.color = callIcon;
-      const obj5 = obj2(5954);
+      const obj5 = obj2(5944);
       obj.acquireWifiLock = obj2(16907).shouldAcquireCallWifiLock();
       intl3 = tmp23(1113).intl;
       stringResult1 = intl3.string(obj2(1113).t["6vrfgt"]);

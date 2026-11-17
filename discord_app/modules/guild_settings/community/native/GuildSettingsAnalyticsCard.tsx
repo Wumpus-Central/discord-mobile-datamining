@@ -33,7 +33,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
   let obj = { variant: "secondary", border: "subtle", style: tmp.card, children: null };
   let obj2 = { style: tmp.line, children: null };
   const items1 = [
-    closure_6(metricKey(5929).Text, { variant: "body-md/medium", color: "text-subtle", children: title }),
+    closure_6(metricKey(5919).Text, { variant: "body-md/medium", color: "text-subtle", children: title }),
   ];
   let tmp7Result = null;
   if (null != description) {
@@ -45,7 +45,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       children: null,
     };
     const obj4 = { size: "xs", color: description(575).colors.INTERACTIVE_ICON_DEFAULT };
-    obj3.children = closure_6(tmp4(6037).CircleInformationIcon, obj4);
+    obj3.children = closure_6(tmp4(6027).CircleInformationIcon, obj4);
     tmp7Result = closure_6(closure_4, obj3);
   }
   items1[1] = tmp7Result;
@@ -61,7 +61,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
     localizedNumber = intl.string(tmp4(1113).t.jHpxwo);
   }
   obj5.children = localizedNumber;
-  items2[1] = closure_6(metricKey(5929).Text, obj5);
+  items2[1] = closure_6(metricKey(5919).Text, obj5);
   let tmp3Result = null;
   if (null != subtext) {
     const obj6 = { style: tmp.line, children: null };
@@ -88,11 +88,11 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       };
       const intl3 = tmp4(1113).intl;
       obj8.accessibilityLabel = intl3.string(tmp4(1113).t.NLl6Q3);
-      tmp7Result4 = closure_6(tmp4(20650).ArrowLargeDownIcon, obj8);
+      tmp7Result4 = closure_6(tmp4(20653).ArrowLargeDownIcon, obj8);
     }
     items3[1] = tmp7Result4;
     const obj9 = { variant: "body-xs/normal", color: "text-subtle", children: subtext };
-    items3[2] = closure_6(tmp4(5929).Text, obj9);
+    items3[2] = closure_6(tmp4(5919).Text, obj9);
     obj6.children = items3;
     tmp3Result = closure_7(closure_5, obj6);
   }

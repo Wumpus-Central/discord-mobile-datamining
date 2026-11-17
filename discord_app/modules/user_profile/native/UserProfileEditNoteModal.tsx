@@ -48,7 +48,7 @@ export default function UserProfileEditNoteModal(arg0) {
     const obj = { variant: "heading-md/semibold", accessibilityRole: "header", children: null };
     const intl = navigation(1113).intl;
     obj.children = intl.string(navigation(1113).t.sHHsOM);
-    return jsx(navigation(5929).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
+    return jsx(navigation(5919).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
   };
   tmpResult = navigation(1360);
   obj6.headerLeft = navigation(7493).getHeaderCloseButton(handleClose);

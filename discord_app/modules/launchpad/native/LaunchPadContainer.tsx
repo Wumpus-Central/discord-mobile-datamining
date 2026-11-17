@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/LaunchPadContainer.tsx
 import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import HomeDrawerExperiment from "../../home_drawer/native/HomeDrawerExperiment.tsx";
-import LegacyBaseButton from "../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05588_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import useStateFromSharedValueDefault from "../../reanimated/native/useStateFromSharedValue.tsx";
 import useLaunchPadTypeDefault from "useLaunchPadType.tsx";

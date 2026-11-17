@@ -41,7 +41,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj3.children = closure_7(zIndex(5443).BountiesScrollGradientRive, {
+  obj3.children = closure_7(zIndex(5433).BountiesScrollGradientRive, {
     stateMachine: "State Machine 1",
     fit: "fill",
     alignment: "bottom-center",
@@ -56,7 +56,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(_modDef1655.View, obj2);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6954).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5306);
@@ -80,8 +80,8 @@ let items = [
   {
     code: "(function BountiesScrollPromptFooterTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})",
   },
-  fn(5548).withTiming,
-  fn(5551).timingStandard,
+  fn(5538).withTiming,
+  fn(5541).timingStandard,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -100,8 +100,8 @@ let items2 = [
   {
     code: "(function BountiesScrollPromptFooterTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})",
   },
-  fn(5548).withTiming,
-  fn(5551).timingStandard,
+  fn(5538).withTiming,
+  fn(5541).timingStandard,
 ];
 let closure_130_0;
 let closure_130_1;

@@ -7,7 +7,7 @@ import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import _modDef6041 from "../../../../../_runtime/metro/06041__.js";
+import _modDef6031 from "../../../../../_runtime/metro/06031__.js";
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import LegacyTokens from "../../../../design/migrations/native/LegacyTokens.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
@@ -382,7 +382,7 @@ const jsxProd = fn(21);
 let module_1655 = module_1655_mod;
 let closure_16 = module_1655.createAnimatedComponent(fn(1187).Icon);
 let module_1655 = module_1655_mod;
-let closure_17 = module_1655.createAnimatedComponent(fn(5929).Text);
+let closure_17 = module_1655.createAnimatedComponent(fn(5919).Text);
 let closure_18 = apply.memoize(() => module_1655.createAnimatedComponent(inlineStyles.Ellipse));
 const createStyles = fn(5306);
 let closure_19 = createStyles.createStyles(() => {
@@ -773,7 +773,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   const obj7 = { isRecording: tmp7, initialAnimation: sharedValue, leftAccessory: null, rightAccessory: null };
   const tmpResult10 = require("WakeLock");
   const obj8 = {
-    icon: _modDef6041,
+    icon: _modDef6031,
     variant: null,
     size: "sm",
     maxFontSizeMultiplier: 2,
@@ -818,7 +818,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
     floatingSendButtonIconActive: obj15.activeIconStyle,
   } = tmp5);
   if (tmp7) {
-    SendMessageIcon = tmp(6031).SendMessageIcon;
+    SendMessageIcon = tmp(6021).SendMessageIcon;
   }
   const obj10 = { children: null };
   obj9.IconComponent = SendMessageIcon;

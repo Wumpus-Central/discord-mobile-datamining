@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/components/event_detail/EventDetailRsvpSheet.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import BottomSheetModal from "../../../../../../_runtime/05570_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/05560_BottomSheetModal.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
@@ -149,8 +149,8 @@ const memoResult = noop.memo(function UserRow(eventUser) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = tmp2(5372).getName(eventUser.user);
-    const tmp2Result2 = tmp2(5372);
+    nick = tmp2(5362).getName(eventUser.user);
+    const tmp2Result2 = tmp2(5362);
   }
   obj6.nick = nick;
   ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);

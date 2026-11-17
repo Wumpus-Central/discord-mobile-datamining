@@ -120,11 +120,11 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   };
   const intl = directoryChannelId(1113).intl;
   obj4.children = intl.string(directoryChannelId(1113).t["5bQcoa"]);
-  items = [closure_6(directoryChannelId(5929).Text, obj4)];
+  items = [closure_6(directoryChannelId(5919).Text, obj4)];
   let obj5 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = directoryChannelId(1113).intl;
   obj5.children = intl2.string(directoryChannelId(1113).t.Ie60Wc);
-  items[1] = closure_6(directoryChannelId(5929).Text, obj5);
+  items[1] = closure_6(directoryChannelId(5919).Text, obj5);
   obj3.children = items;
   const items1 = [closure_7(closure_4, obj3)];
   let obj6 = {

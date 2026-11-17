@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const QuestDockMode = fn(5338).QuestDockMode;
+const QuestDockMode = fn(6954).QuestDockMode;
 const QuestDockConstants = fn(17698);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({
@@ -68,7 +68,7 @@ let items = [
   {
     code: "(function questDockHeaderLayoutAnimation_QuestDockBackgroundBlurHeaderTsx1(values){let[withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED]=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:withSpring(values.targetOriginX,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),originY:withSpring(values.targetOriginY,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:withSpring(values.targetHeight,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:withSpring(values.targetWidth,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}};})",
   },
-  fn(5939).withSpring,
+  fn(5929).withSpring,
   QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
 ];
 let closure_129_0;
@@ -457,7 +457,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     const obj5 = { color: "interactive-text-active", variant: "body-sm/medium", children: null };
     const intl2 = tmp(1113).intl;
     obj5.children = intl2.string(tmp(1113).t.o6FLcF);
-    const items17 = [closure_12(tmp(5929).Text, obj5)];
+    const items17 = [closure_12(tmp(5919).Text, obj5)];
     const obj6 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp67.actionDisclosuresIcon };
     items17[1] = closure_12(tmp(10059).CircleQuestionIcon, obj6);
     obj4.children = items17;
@@ -472,7 +472,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     const obj8 = { color: "text-default", variant: "body-sm/medium", children: null };
     const intl = tmp(1113).intl;
     obj8.children = intl.string(tmp(1113).t.o6FLcF);
-    obj7.children = closure_12(tmp(5929).Text, obj8);
+    obj7.children = closure_12(tmp(5919).Text, obj8);
     tmp68Result = closure_12(c6, obj7);
     tmp71 = closure_12;
   }
@@ -488,7 +488,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
         opacityAnimatedStyle: animatedStyle6,
         layoutAnimation: questDockHeaderLayoutAnimation,
       };
-      let tmp71Result = tmp71(tmp7(17794), obj10);
+      let tmp71Result = tmp71(tmp7(17801), obj10);
     }
     const items20 = [tmp71Result, ,];
     let tmp71Result2 = children;
@@ -530,7 +530,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     let tmp74Result = !flag;
     if (!flag) {
       const obj18 = { children: null };
-      const items27 = [tmp68Result, tmp71(tmp7(17796), {})];
+      const items27 = [tmp68Result, tmp71(tmp7(17803), {})];
       obj18.children = items27;
       tmp74Result = closure_14(closure_13, obj18);
     }

@@ -26,7 +26,7 @@ const Constants = fn(1072);
 const ChannelConstants = fn(5162);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
 const ChannelListGuildActionRow = fn(8737).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6959).ReadStateTypes;
+const ReadStateTypes = fn(6949).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 

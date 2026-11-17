@@ -143,8 +143,8 @@ export default function QRScannerModal(showHelp) {
         actions_AlertActionCreatorsDefault.show(obj4);
         tmp9 = importDefault;
       }
-      tmp9(6848).pop();
-      const tmp9Result = tmp9(6848);
+      tmp9(6838).pop();
+      const tmp9Result = tmp9(6838);
     };
     tmp10Result = closure_8(DCDQRScanner, obj3);
     tmp14 = closure_8;

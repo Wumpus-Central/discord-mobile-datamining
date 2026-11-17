@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import _modDef15345 from "../../../../../_runtime/metro/15345__.js";
@@ -57,7 +57,7 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   noop = undefined;
   const tmp = closure_14();
-  const isScreenReaderEnabled = onEndReached(5568).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = onEndReached(5558).useIsScreenReaderEnabled();
   const tmp5 = mapped(noop.useState(0), 2);
   const currentIndex = tmp5[0];
   dependencyMap = tmp7;
@@ -151,7 +151,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj2.children = items3;
     return closure_11(closure_6, obj2);
   }
-  let obj = onEndReached(5568);
+  let obj = onEndReached(5558);
   tmp19 = closure_10(closure_5, {
     style: tmp.carousel,
     contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 },
@@ -253,7 +253,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   const intl = analyticsLocations(1113).intl;
   obj4.children = intl.string(analyticsLocations(1113).t.RGadQR);
   const items2 = [
-    closure_10(analyticsLocations(5929).Text, obj4),
+    closure_10(analyticsLocations(5919).Text, obj4),
     closure_10(PremiumFeaturesCarousel, { width, onEndReached: callback }),
   ];
   obj3.children = items2;

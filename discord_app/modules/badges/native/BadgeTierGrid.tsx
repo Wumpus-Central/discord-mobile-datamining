@@ -59,7 +59,7 @@ export default function BadgeTierGrid(badge) {
     let intl = badge(1113).intl;
     let obj3 = { username: targetUsername };
     obj2.children = intl.formatToPlainString(badge(1113).t.KyTwIh, obj3);
-    isViewingOtherUser = closure_4(badge(5929).Text, obj2);
+    isViewingOtherUser = closure_4(badge(5919).Text, obj2);
   }
   items = [isViewingOtherUser];
   let obj4 = { style: tmp.grid, accessibilityRole: "list", children: null };
@@ -121,7 +121,7 @@ export default function BadgeTierGrid(badge) {
               str = "text-default";
             }
             const obj5 = { variant: "body-sm/semibold", color: str, style: item.centeredText, children: owned.name };
-            tmp13Result = closure_2_4(badge(5929).Text, obj5);
+            tmp13Result = closure_2_4(badge(5919).Text, obj5);
           }
           items2[1] = tmp13Result;
           let tmp5Result = "" !== tierRowSubtitle;
@@ -143,7 +143,7 @@ export default function BadgeTierGrid(badge) {
               style: item.centeredText,
               children: tierRowSubtitle,
             };
-            items3[1] = closure_2_4(badge(5929).Text, obj8);
+            items3[1] = closure_2_4(badge(5919).Text, obj8);
             obj6.children = items3;
             tmp5Result = closure_2_5(closure_3, obj6);
           }

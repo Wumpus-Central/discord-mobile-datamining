@@ -5,7 +5,7 @@ import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../_runtime/metro/01708__.js";
-import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05883_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -65,7 +65,7 @@ function ConnectionBannerContent(state) {
 function BackOnlineGlow(opacity) {
   let token;
   const tmp = closure_21();
-  token = token(5902).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
+  token = token(5892).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
   items = [token];
   const memo = noop.useMemo(() => {
     const obj = _modDef671(token);
@@ -82,7 +82,7 @@ function BackOnlineGlow(opacity) {
   const items1 = [tmp.glow, { opacity: opacity.progress }];
   obj2.style = items1;
   const obj3 = { style: tmp.glow, maskElement: null, children: null };
-  let obj = token(5902);
+  let obj = token(5892);
   obj3.maskElement = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors, locations, start, end });
   obj3.children = closure_12(LinearGradientDefault, {
     style: tmp.glowMaskGradient,

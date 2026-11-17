@@ -126,7 +126,7 @@ function SystemNotifPermissionHeader() {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
-let closure_10 = fn(6902).NotificationAuthorizationStatus;
+let closure_10 = fn(6892).NotificationAuthorizationStatus;
 const NotificationPermissionConstants = fn(14826);
 ({
   EventActionLocation: closure_11,

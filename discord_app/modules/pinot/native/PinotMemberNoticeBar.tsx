@@ -73,7 +73,7 @@ export function PinotMemberNoticeBar(channel) {
       );
     },
   });
-  const items1 = [closure_6(channel(5929).Text, obj3)];
+  const items1 = [closure_6(channel(5919).Text, obj3)];
   const obj5 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
   const intl2 = channel(1113).intl;
   obj5.accessibilityLabel = intl2.string(channel(1113).t.WAI6xu);

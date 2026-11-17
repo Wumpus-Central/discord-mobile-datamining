@@ -306,11 +306,11 @@ export default noop.memo(function UserRow(type) {
             location: isMobileOnline,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(6014).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(6014);
+                const result = type(6004).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(6004);
               } else {
-                const result1 = type(6014).presentFriendRequestAcceptedToast();
-                obj = type(6014);
+                const result1 = type(6004).presentFriendRequestAcceptedToast();
+                obj = type(6004);
               }
             },
           });
@@ -500,11 +500,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
           if (null != closure_0) {
-            const result = type(6014).presentGameFriendRequestAcceptedToast();
-            const obj2 = type(6014);
+            const result = type(6004).presentGameFriendRequestAcceptedToast();
+            const obj2 = type(6004);
           } else {
-            const result1 = type(6014).presentFriendRequestAcceptedToast();
-            obj = type(6014);
+            const result1 = type(6004).presentFriendRequestAcceptedToast();
+            obj = type(6004);
           }
         },
       };

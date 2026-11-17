@@ -97,7 +97,7 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
         const intl = tmp2(1113).intl;
         const obj11 = { count: length };
         obj10.children = intl.format(tmp2(1113).t.ZJ1tPW, obj11);
-        items2[1] = closure_7(tmp2(5929).Text, obj10);
+        items2[1] = closure_7(tmp2(5919).Text, obj10);
         obj8.children = items2;
         tmp9Result = closure_8(View, obj8);
       }

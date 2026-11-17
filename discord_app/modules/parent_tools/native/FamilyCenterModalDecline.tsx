@@ -10,11 +10,11 @@ function FamilyCenterModalDeclineScreen(otherUser) {
   let declineLinkRequest;
   const tmp = closure_7();
   const callback = noop.useCallback(() => {
-    declineLinkRequest(6848).pop();
+    declineLinkRequest(6838).pop();
   }, []);
   const callback1 = noop.useCallback(() => {
     const intl = otherUser(1113).intl;
-    otherUser(6014).presentFailedToast(intl.string(otherUser(1113).t.R0RpRX));
+    otherUser(6004).presentFailedToast(intl.string(otherUser(1113).t.R0RpRX));
   }, []);
   const tmp2 = declineLinkRequest(9617)();
   const familyCenterActions = otherUser(14224).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
@@ -35,7 +35,7 @@ function FamilyCenterModalDeclineScreen(otherUser) {
   const obj6 = { style: tmp.headerText, variant: "body-lg/semibold", children: null };
   let intl = otherUser(1113).intl;
   obj6.children = intl.string(declineLinkRequest(2701).teIRCR);
-  items1[1] = closure_5(otherUser(5929).Text, obj6);
+  items1[1] = closure_5(otherUser(5919).Text, obj6);
   items1[2] = closure_5(declineLinkRequest(17422), { user: otherUser });
   obj4.children = items1;
   const items2 = [closure_6(View, obj4)];
@@ -48,11 +48,11 @@ function FamilyCenterModalDeclineScreen(otherUser) {
   };
   const intl2 = otherUser(1113).intl;
   obj8.children = intl2.string(declineLinkRequest(2701).cXgKMD);
-  const items3 = [closure_5(otherUser(5929).Text, obj8)];
+  const items3 = [closure_5(otherUser(5919).Text, obj8)];
   const obj9 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl3 = otherUser(1113).intl;
   obj9.children = intl3.string(declineLinkRequest(2701).LcM8BS);
-  items3[1] = closure_5(otherUser(5929).Text, obj9);
+  items3[1] = closure_5(otherUser(5919).Text, obj9);
   obj7.children = items3;
   items2[1] = closure_6(View, obj7);
   obj3.children = items2;
@@ -69,14 +69,14 @@ function FamilyCenterModalDeclineScreen(otherUser) {
   const intl4 = otherUser(1113).intl;
   obj12.text = intl4.string(declineLinkRequest(2701).dKxFcn);
   obj12.onPress = callback2;
-  const items5 = [closure_5(otherUser(5936).Button, obj12)];
+  const items5 = [closure_5(otherUser(5926).Button, obj12)];
   const obj13 = { variant: "tertiary", text: null, onPress: null };
   const intl5 = otherUser(1113).intl;
   obj13.text = intl5.string(otherUser(1113).t["ETE/oC"]);
-  obj13.onPress = declineLinkRequest(6848).pop;
-  items5[1] = closure_5(otherUser(5936).Button, obj13);
+  obj13.onPress = declineLinkRequest(6838).pop;
+  items5[1] = closure_5(otherUser(5926).Button, obj13);
   obj11.children = items5;
-  obj10.children = closure_6(otherUser(6951).ButtonGroup, obj11);
+  obj10.children = closure_6(otherUser(6941).ButtonGroup, obj11);
   items4[1] = closure_5(otherUser(14079).ModalFooter, obj10);
   obj2.children = items4;
   return closure_6(otherUser(8208).ModalScreen, obj2);

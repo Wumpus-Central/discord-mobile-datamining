@@ -164,7 +164,7 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
     },
     items4,
   );
-  stateFromStores(5899)(() => {
+  stateFromStores(5889)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, {
       type: QUARANTINE_USER_ALERT_KEY,
       guild_id: guildId,

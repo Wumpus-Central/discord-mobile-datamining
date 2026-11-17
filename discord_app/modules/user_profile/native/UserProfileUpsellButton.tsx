@@ -56,7 +56,7 @@ export default function UserProfileUpsellButton(analyticsObject) {
   }
   obj2.text = label;
   obj2.icon = jsx(analyticsObject(9436).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
-  return jsx(analyticsObject(5936).Button, {
+  return jsx(analyticsObject(5926).Button, {
     onPress() {
       const obj2 = {
         initialUpsellKey: constants2.CUSTOM_PROFILES,

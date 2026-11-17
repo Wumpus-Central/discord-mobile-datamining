@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/NitroBadg
 export default function NitroBadgeUnhiddenCoachmark(markAsDismissed) {
   ({ targetRef, visible } = markAsDismissed);
   markAsDismissed = markAsDismissed.markAsDismissed;
-  const tmp = markAsDismissed(19645)(targetRef, visible);
+  const tmp = markAsDismissed(19647)(targetRef, visible);
   dependencyMap = tmp;
   items = [visible, tmp, markAsDismissed];
   const memo = noop.useMemo(() => {
@@ -38,7 +38,7 @@ export default function NitroBadgeUnhiddenCoachmark(markAsDismissed) {
     obj.buttonLabel = intl3.string(util.t.hvVgAZ);
     obj.onButtonPress = function onButtonPress() {
       closure_1_1(constants2.TAKE_ACTION);
-      const obj = markAsDismissed(6012);
+      const obj = markAsDismissed(6002);
       obj.openURL(markAsDismissed(2188).getArticleURL(constants.PROFILE_BADGES_MANAGEMENT));
     };
     return obj;

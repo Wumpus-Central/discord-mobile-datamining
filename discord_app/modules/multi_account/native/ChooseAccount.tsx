@@ -111,10 +111,10 @@ export default function ChooseAccount() {
             intl2 = closure_0(1113).intl;
             string = intl2.string;
             obj5.cancelText = string(closure_0(1113).t["ETE/oC"]);
-            obj5 = tmp2(6269).confirm(obj5);
+            obj5 = tmp2(6259).confirm(obj5);
             dependencyMap = 1;
             c4 = 1;
-            const obj8 = tmp2(6269);
+            const obj8 = tmp2(6259);
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -125,8 +125,8 @@ export default function ChooseAccount() {
           return obj7;
         } else {
           if (value) {
-            tmp2(5552).hideActionSheet();
-            const obj = tmp2(5552);
+            tmp2(5542).hideActionSheet();
+            const obj = tmp2(5542);
             tmp5(14833).removeAccount(closure_129_0.id);
             const obj2 = tmp5(14833);
           }
@@ -174,8 +174,8 @@ export default function ChooseAccount() {
       let obj2 = {
         accessibilityRole: "button",
         onPress() {
-          multiAccountUsers(5552).hideActionSheet();
-          let obj = multiAccountUsers(5552);
+          multiAccountUsers(5542).hideActionSheet();
+          let obj = multiAccountUsers(5542);
           const obj3 = { key: "RemoveAccount", options: null, hasIcons: false };
           const obj4 = { label: null, onPress: null };
           const intl = user(1113).intl;
@@ -213,7 +213,7 @@ export default function ChooseAccount() {
         },
         children: null,
       };
-      const tmp = multiAccountUsers(18655);
+      const tmp = multiAccountUsers(18657);
       obj2.children = closure_1_11(user(1187).Icon, {
         size: user(1187).Icon.Sizes.SMALL_20,
         source: multiAccountUsers(8437),
@@ -228,7 +228,7 @@ export default function ChooseAccount() {
   obj6.leading = closure_11(require("Form").FormRow.Icon, {
     themedColor: multiAccountUsers(575).colors.TEXT_LINK,
     size: require("native").Icon.Sizes.SMALL_20,
-    source: multiAccountUsers(18656),
+    source: multiAccountUsers(18658),
   });
   let intl3 = require("util").intl;
   obj6.label = intl3.string(require("util").t.bPP34Q);

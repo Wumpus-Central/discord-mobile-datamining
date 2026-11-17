@@ -101,7 +101,7 @@ function ConnectionsSection(onAdd) {
       accounts.map((account) => closure_2_11(ConnectedAccountDefault, { theme, locale, account }, account.id)),
     ];
     obj12.children = items7;
-    let tmp12Result = closure_12(tmp4(6337).Stack, obj12);
+    let tmp12Result = closure_12(tmp4(6327).Stack, obj12);
   } else {
     if (!fetching) {
       if (!tmp7.isLoading) {
@@ -139,7 +139,7 @@ function ConnectionsSection(onAdd) {
         const intl5 = tmp4(1113).intl;
         obj15.text = intl5.string(tmp4(1113).t["UKOtz+"]);
         obj15.onPress = onAdd;
-        obj14.children = closure_11(tmp4(5936).Button, obj15);
+        obj14.children = closure_11(tmp4(5926).Button, obj15);
         items8[1] = closure_11(closure_5, obj14);
         obj13.children = items8;
         tmp12Result = closure_12(closure_5, obj13);

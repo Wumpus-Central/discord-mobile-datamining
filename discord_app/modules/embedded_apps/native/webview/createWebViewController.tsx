@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_4 = fn(12855).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
 let ComponentActions = fn(1072).ComponentActions;
-const TransportTypes = fn(6761).TransportTypes;
+const TransportTypes = fn(6751).TransportTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/native/webview/createWebViewController.tsx");
 

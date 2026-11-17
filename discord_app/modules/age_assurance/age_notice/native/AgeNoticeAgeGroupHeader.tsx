@@ -32,14 +32,14 @@ function AccountStatusNotice(arg0) {
       const obj3 = { style: tmp.notice, children: null };
       const obj4 = {
         style: tmp.noticeIcon,
-        children: closure_8(tmp2(6037).CircleInformationIcon, { size: "xs", color: "text-link" }),
+        children: closure_8(tmp2(6027).CircleInformationIcon, { size: "xs", color: "text-link" }),
       };
       items = [closure_8(View, obj4), ,];
       const obj5 = { style: tmp.noticeBody, variant: "body-sm/normal", color: "text-default", children: null };
       const intl = tmp2(1113).intl;
       obj6 = { handleOnBlogHook: handleOpenBlog };
       obj5.children = intl.format(obj6[arg0.ageGroup], obj6);
-      items[1] = closure_8(tmp2(5929).Text, obj5);
+      items[1] = closure_8(tmp2(5919).Text, obj5);
       obj7 = {
         style: tmp.noticeDismiss,
         activeOpacity: 0.5,
@@ -108,7 +108,7 @@ function AgeGroupCallToAction(ageGroup) {
   }
 }
 const View = fn(17).View;
-const AGE_NOTICE_BLOG_URL = fn(6841).AGE_NOTICE_BLOG_URL;
+const AGE_NOTICE_BLOG_URL = fn(6831).AGE_NOTICE_BLOG_URL;
 const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

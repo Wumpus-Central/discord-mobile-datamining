@@ -59,7 +59,7 @@ function ChannelName(channel) {
   }
   const items1 = [
     tmp12,
-    closure_5(channel(5929).Text, {
+    closure_5(channel(5919).Text, {
       style: tmp.channelName,
       variant: "body-md/semibold",
       color: "mobile-text-heading-primary",

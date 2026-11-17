@@ -26,8 +26,8 @@ let obj2 = {
   channelType: "isArray",
   numMediaItems: "Array",
   hasMediaOptions: "channelId",
-  source: false,
-  incrementableActions: false,
+  source: 1895895544,
+  incrementableActions: 8,
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

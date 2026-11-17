@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import _modDef7533 from "../../../../../_runtime/metro/07533__.js";
@@ -313,7 +313,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     }
   }, items3);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp2(5570).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp2(5560).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = onChangeText;
   }

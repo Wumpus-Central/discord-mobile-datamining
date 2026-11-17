@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/PremiumPlanActionSheetHeader.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05883_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import _modDef9600 from "../../../../_runtime/metro/09600__.js";
 import _modDef9601 from "../../../../_runtime/metro/09601__.js";

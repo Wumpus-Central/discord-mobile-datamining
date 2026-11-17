@@ -113,7 +113,7 @@ function ForumPostMedia(obscureReason) {
           onPress() {
             const obj = ref(8190);
             const result = obj.showAgeVerificationGetStartedModal({
-              entryPoint: obscureReason(6833).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW,
+              entryPoint: obscureReason(6823).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW,
             });
           },
           children: tmp6Result,

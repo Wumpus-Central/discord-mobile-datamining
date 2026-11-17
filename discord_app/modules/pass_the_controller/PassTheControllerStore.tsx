@@ -59,7 +59,7 @@ function stopGuest(streamKey) {
 let closure_7 = fn(16109).isPassTheControllerBlocked;
 const Constants = fn(1072);
 ({ ApplicationStreamDeleteReasons: closure_8, RTCConnectionStates: closure_9, VoiceFlags: closure_10 } = Constants);
-const StreamTypes = fn(6803).StreamTypes;
+const StreamTypes = fn(6793).StreamTypes;
 let c12 = null;
 let c13 = null;
 let c14 = null;
@@ -208,7 +208,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 c15 = null;
                 let obj = { streamKey, inputHost: null };
                 const tmp59 = InputHostDefault;
-                let guildId = inputConnection1(6808).decodeStreamKey(streamKey).guildId;
+                let guildId = inputConnection1(6798).decodeStreamKey(streamKey).guildId;
                 if (guildId == null) {
                   guildId = null;
                 }
@@ -217,7 +217,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 obj.inputHost = tmp592;
                 _null2 = obj;
                 flag7 = true;
-                const obj7 = inputConnection1(6808);
+                const obj7 = inputConnection1(6798);
               }
               flag5 = flag7;
             }

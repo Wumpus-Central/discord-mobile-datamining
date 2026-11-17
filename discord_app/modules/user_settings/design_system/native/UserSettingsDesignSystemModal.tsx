@@ -25,7 +25,7 @@ function DemoModal() {
         const obj = { text: null, onPress: null };
         const intl = closure_1_0(1113).intl;
         obj.text = intl.string(closure_1_0(1113).t["5Wxrcd"]);
-        obj.onPress = closure_1_1(6848).pop;
+        obj.onPress = closure_1_1(6838).pop;
         return closure_1_7(closure_1_0(7427).HeaderActionButton, obj);
       },
       headerTitle() {
@@ -44,7 +44,7 @@ function DemoModal() {
             return closure_0.push(constants.WHO_DAT);
           },
           secondaryAction: "Maybe later",
-          onSecondaryAction: closure_1(6848).pop,
+          onSecondaryAction: closure_1(6838).pop,
           disclaimer: "I said come on fhqwhgads.",
         });
       },
@@ -119,7 +119,7 @@ function DemoModal() {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
         action: "Everybody come on fhqwhgads!",
-        onAction: closure_1_1(6848).pop,
+        onAction: closure_1_1(6838).pop,
         secondaryAction: "Push that fh-h-h-h-wqhgad",
         onSecondaryAction() {
           return closure_1_1(dependencyMap[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
@@ -141,7 +141,7 @@ function DemoStepModal() {
         const obj = { text: null, onPress: null };
         const intl = closure_1_0(1113).intl;
         obj.text = intl.string(closure_1_0(1113).t["5Wxrcd"]);
-        obj.onPress = closure_1_1(6848).pop;
+        obj.onPress = closure_1_1(6838).pop;
         return closure_1_7(closure_1_0(7427).HeaderActionButton, obj);
       },
       headerTitle() {
@@ -160,7 +160,7 @@ function DemoStepModal() {
             return closure_0.push(constants.WHO_DAT);
           },
           secondaryAction: "Maybe later",
-          onSecondaryAction: closure_1(6848).pop,
+          onSecondaryAction: closure_1(6838).pop,
           disclaimer: "I said come on fhqwhgads.",
         });
       },
@@ -235,7 +235,7 @@ function DemoStepModal() {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
         action: "Everybody come on fhqwhgads!",
-        onAction: closure_1_1(6848).pop,
+        onAction: closure_1_1(6838).pop,
         secondaryAction: "Push that fh-h-h-h-wqhgad",
         onSecondaryAction() {
           return closure_1_1(dependencyMap[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
@@ -266,7 +266,7 @@ function DemoGradientStepModal() {
         const obj = { text: null, onPress: null };
         const intl = closure_1_0(1113).intl;
         obj.text = intl.string(closure_1_0(1113).t["5Wxrcd"]);
-        obj.onPress = closure_1_1(6848).pop;
+        obj.onPress = closure_1_1(6838).pop;
         return closure_1_7(closure_1_0(7427).HeaderActionButton, obj);
       },
       headerTitle() {
@@ -285,7 +285,7 @@ function DemoGradientStepModal() {
             return closure_0.push(constants.WHO_DAT);
           },
           secondaryAction: "Maybe later",
-          onSecondaryAction: closure_1(6848).pop,
+          onSecondaryAction: closure_1(6838).pop,
           disclaimer: "I said come on fhqwhgads.",
         });
       },
@@ -360,7 +360,7 @@ function DemoGradientStepModal() {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
         action: "Everybody come on fhqwhgads!",
-        onAction: closure_1_1(6848).pop,
+        onAction: closure_1_1(6838).pop,
         secondaryAction: "Push that fh-h-h-h-wqhgad",
         onSecondaryAction() {
           return closure_1_1(dependencyMap[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
@@ -392,7 +392,7 @@ function DemoGradientModal() {
         const obj = { text: null, onPress: null };
         const intl = closure_1_0(1113).intl;
         obj.text = intl.string(closure_1_0(1113).t["5Wxrcd"]);
-        obj.onPress = closure_1_1(6848).pop;
+        obj.onPress = closure_1_1(6838).pop;
         return closure_1_7(closure_1_0(7427).HeaderActionButton, obj);
       },
       headerTitle() {
@@ -411,7 +411,7 @@ function DemoGradientModal() {
             return closure_0.push(constants.WHO_DAT);
           },
           secondaryAction: "Maybe later",
-          onSecondaryAction: closure_1(6848).pop,
+          onSecondaryAction: closure_1(6838).pop,
           disclaimer: "I said come on fhqwhgads.",
         });
       },
@@ -486,7 +486,7 @@ function DemoGradientModal() {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
         action: "Everybody come on fhqwhgads!",
-        onAction: closure_1_1(6848).pop,
+        onAction: closure_1_1(6838).pop,
         secondaryAction: "Push that fh-h-h-h-wqhgad",
         onSecondaryAction() {
           return closure_1_1(dependencyMap[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");

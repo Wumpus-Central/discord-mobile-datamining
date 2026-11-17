@@ -190,7 +190,7 @@ function DemoNavigator(arg0) {
     const obj10 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
     obj10.headerLeft = NavigatorHeader.getHeaderTextButton("Cancel", ModalActionCreatorsDefault.pop);
     obj10.headerRight = function headerRight() {
-      return closure_1_7(closure_1_0(7427).HeaderActionButton, { text: "Save", onPress: closure_1_1(6848).pop });
+      return closure_1_7(closure_1_0(7427).HeaderActionButton, { text: "Save", onPress: closure_1_1(6838).pop });
     };
     obj10.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(7493).NavigatorHeader, { title: constants.TEXT_BUTTONS });
@@ -341,7 +341,7 @@ export default function UserSettingsDesignSystemNavigator() {
   ];
   obj4.children = items1;
   items[1] = closure_8(value(7745).TableRadioGroup, obj4);
-  items[2] = closure_7(value(5936).Button, {
+  items[2] = closure_7(value(5926).Button, {
     onPress: function openNavigator() {
       let tmp2;
       if ("none" !== first) {
@@ -353,6 +353,6 @@ export default function UserSettingsDesignSystemNavigator() {
     text: "Show Navigator",
   });
   obj2.children = items;
-  obj.children = closure_8(value(6337).Stack, obj2);
+  obj.children = closure_8(value(6327).Stack, obj2);
   return closure_7(closure_5, obj);
 }

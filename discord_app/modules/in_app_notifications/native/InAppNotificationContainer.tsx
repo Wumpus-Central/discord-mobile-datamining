@@ -227,7 +227,7 @@ export default function InAppNotificationContainer(notification) {
       AnalyticsUtilsDefault.track(constants2.IN_APP_NOTIFICATION_SHOWN, obj2);
     }
   }, items3);
-  const Gesture = tmp2(5598).Gesture;
+  const Gesture = tmp2(5588).Gesture;
   const tmp2Result11 = require("initialize");
   const items4 = [
     closure_19,

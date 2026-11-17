@@ -48,7 +48,7 @@ class StageChannelRaiseHandAck {
             } else {
               if (null != id) {
                 if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                  const obj5 = { entryPoint: tmp3(6833).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                  const obj5 = { entryPoint: tmp3(6823).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
                   const result = v2(8190).showAgeVerificationGetStartedModal(obj5);
                   const obj4 = v2(8190);
                 } else {
@@ -56,10 +56,10 @@ class StageChannelRaiseHandAck {
                   dependencyMap = 1;
                   v2 = 2;
                   c4 = 1;
-                  const obj6 = { value: tmp3(6909).audienceAckRequestToSpeak(id, false), done: false };
+                  const obj6 = { value: tmp3(6899).audienceAckRequestToSpeak(id, false), done: false };
                   return obj6;
                 }
-                obj9 = tmp3(6908);
+                obj9 = tmp3(6898);
               }
               c4 = 3;
             }
@@ -74,8 +74,8 @@ class StageChannelRaiseHandAck {
             dependencyMap = 0;
             closure_128_3(false);
             if (null == key.getKey()) {
-              tmp29(6903).openStageChannel(closure_128_0);
-              const obj8 = tmp29(6903);
+              tmp29(6893).openStageChannel(closure_128_0);
+              const obj8 = tmp29(6893);
             }
           }
           dependencyMap = 0;

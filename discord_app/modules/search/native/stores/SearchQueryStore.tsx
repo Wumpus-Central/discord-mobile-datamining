@@ -171,8 +171,8 @@ const prototype = function SearchQueryStateManager(type) {
   } else {
     let channelName;
     if (null != channel) {
-      channelName = obj(5954).computeChannelName(channel, UserStore, RelationshipStore);
-      const obj2 = obj(5954);
+      channelName = obj(5944).computeChannelName(channel, UserStore, RelationshipStore);
+      const obj2 = obj(5944);
     }
     if (null == channelName) {
       let items1 = [];

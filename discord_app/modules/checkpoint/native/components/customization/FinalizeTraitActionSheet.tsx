@@ -34,10 +34,10 @@ export default function FinalizeTraitActionSheet(onSelectOption) {
     onSelectOption(arg0);
   };
   obj3.children = items.map((value) => {
-    const obj = { value, label: onSelectOption(6744).getCustomizationOptionName(value) };
+    const obj = { value, label: onSelectOption(6734).getCustomizationOptionName(value) };
     return jsx(
       onSelectOption(7747).TableRadioRow,
-      { value, label: onSelectOption(6744).getCustomizationOptionName(value) },
+      { value, label: onSelectOption(6734).getCustomizationOptionName(value) },
       value,
     );
   });

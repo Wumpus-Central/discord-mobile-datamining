@@ -107,8 +107,8 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(5492).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(5492);
+    isScreenLandscape = tmp5(5482).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(5482);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1380).isAndroid();

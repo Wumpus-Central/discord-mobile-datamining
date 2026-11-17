@@ -63,8 +63,8 @@ function GuildTemplatesJoinFooter(trigger) {
   const intl3 = tmp2(1113).intl;
   obj4.children = intl3.string(trigger(1113).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(5929).Text, obj4),
-    closure_14(trigger(5936).Button, {
+    closure_14(trigger(5919).Text, obj4),
+    closure_14(trigger(5926).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -115,7 +115,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5306);
 let obj2 = {
   flex: { flex: 1 },
-  contentContainer: { marginTop: fn(5892).NAV_BAR_HEIGHT },
+  contentContainer: { marginTop: fn(5882).NAV_BAR_HEIGHT },
   scrollContainer: null,
   sections: null,
   headerContainer: null,
@@ -125,7 +125,7 @@ let obj2 = {
   footerContainer: null,
   footerTitle: null,
 };
-let obj3 = { marginTop: fn(5892).NAV_BAR_HEIGHT };
+let obj3 = { marginTop: fn(5882).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };

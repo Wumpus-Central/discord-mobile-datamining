@@ -14,7 +14,7 @@ export default function openUserContextMenuCommands(analyticsLocations) {
   });
   const obj = analyticsLocations(8546);
   ActionSheetActionCreatorsDefault.hideAllActionSheets();
-  const obj3 = analyticsLocations(5492);
+  const obj3 = analyticsLocations(5482);
   const result1 = obj3.navigateToContextMenuCommands({
     channel: selectedChannel,
     commandType: analyticsLocations(2119).ApplicationCommandType.USER,

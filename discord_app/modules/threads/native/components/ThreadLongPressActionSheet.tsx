@@ -64,7 +64,7 @@ function ThreadLongPressActionSheetConnected(channel) {
   const tmp14 = onClose(9117)(channel);
   const DeveloperMode = channel(5131).DeveloperMode;
   let setting = DeveloperMode.useSetting();
-  const tmp15 = onClose(5954)(channel);
+  const tmp15 = onClose(5944)(channel);
   if (null != stateFromStores) {
     const obj11 = { guild: stateFromStores, size: tmp(7720).GuildIconSizes.LARGE };
     let tmp19 = closure_13(tmp13(7720), obj11);
@@ -123,7 +123,7 @@ function ThreadLongPressActionSheetConnected(channel) {
         }
         const obj17 = {
           label: string2Result,
-          IconComponent: tmp(6027).UserMinusIcon,
+          IconComponent: tmp(6017).UserMinusIcon,
           isDestructive: true,
           onPress() {
             ThreadActionCreatorsDefault.leaveThread(channel, "Context Menu");
@@ -166,7 +166,7 @@ function ThreadLongPressActionSheetConnected(channel) {
               }
               const obj19 = {
                 label: string5Result,
-                IconComponent: tmp(6042).ClockIcon,
+                IconComponent: tmp(6032).ClockIcon,
                 onPress() {
                   ThreadActionCreatorsDefault.unarchiveThread(channel, false);
                 },
@@ -232,7 +232,7 @@ function ThreadLongPressActionSheetConnected(channel) {
             const obj22 = { label: null, IconComponent: null, isDestructive: false, onPress: null };
             const intl10 = tmp(1113).intl;
             obj22.label = intl10.string(tmp(1113).t.WqhZss);
-            obj22.IconComponent = tmp(6029).LinkIcon;
+            obj22.IconComponent = tmp(6019).LinkIcon;
             obj22.onPress = function onPress() {
               const result = ChannelActionSheetUtils.copyGuildChannelOrThreadLink(channel.guild_id, channel.id);
             };

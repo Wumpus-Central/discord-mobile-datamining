@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/voice_messages/native/useVoic
 export default function useVoiceMessageTooltip() {
   const ref = noop.useRef(null);
   targetBottomInset = targetBottomInset(14665)().targetBottomInset;
-  let tmp3 = targetBottomInset(6836)(targetBottomInset);
+  let tmp3 = targetBottomInset(6826)(targetBottomInset);
   if (tmp3 == null) {
     tmp3 = targetBottomInset;
   }

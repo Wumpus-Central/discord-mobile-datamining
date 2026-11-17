@@ -8,7 +8,7 @@ import AutomodActionUtils from "AutomodActionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const getRuleCountByTriggerType = fn(20450).getRuleCountByTriggerType;
+const getRuleCountByTriggerType = fn(20453).getRuleCountByTriggerType;
 const Constants = fn(14166);
 ({
   AutomodTriggerType: closure_4,

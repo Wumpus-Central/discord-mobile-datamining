@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/components/StreamTile.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
@@ -47,7 +47,7 @@ class StreamTextOverlay {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(6075).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6065).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(5306);
@@ -150,10 +150,10 @@ let closure_15 = noop.memo(function StreamContent(participant) {
           const intl2 = tmp(1113).intl;
           obj5.title = intl2.string(tmp(1113).t["5q17w5"]);
           const intl3 = tmp(1113).intl;
-          const obj6 = { username: tmp4(6351).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
+          const obj6 = { username: tmp4(6341).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
           obj5.subtext = intl3.formatToPlainString(tmp(1113).t.meVVlb, obj6);
           tmp9 = closure_10(StreamTextOverlay, obj5);
-          const tmp4Result6 = tmp4(6351);
+          const tmp4Result6 = tmp4(6341);
         }
       }
       if (null != tmp5) {

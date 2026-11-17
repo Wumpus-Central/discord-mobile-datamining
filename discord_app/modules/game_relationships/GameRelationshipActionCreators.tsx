@@ -177,7 +177,7 @@ export default {
         AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
       })
       .catch((error) => {
-        const aPIError = new onSuccess(6757).APIError(error);
+        const aPIError = new onSuccess(6747).APIError(error);
         let anyErrorMessage = aPIError.getAnyErrorMessage();
         const obj = { title: null, body: null };
         const intl = onSuccess(1113).intl;

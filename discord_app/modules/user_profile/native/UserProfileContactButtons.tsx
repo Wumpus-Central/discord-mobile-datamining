@@ -57,7 +57,7 @@ function FriendRequestButton(user) {
   items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(5372).useName(user);
+  userDisplayName = tmp(5362).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -68,7 +68,7 @@ function FriendRequestButton(user) {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
           let UserPlusIcon = tmp3(15878).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(6023).UserPlusIcon;
+          UserPlusIcon = tmp3(6013).UserPlusIcon;
         }
         const intl = tmp3(1113).intl;
         const string = intl.string;

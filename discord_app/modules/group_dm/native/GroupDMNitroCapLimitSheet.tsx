@@ -93,11 +93,11 @@ export default function GroupDMNitroCapLimitSheet(location) {
   };
   const intl = tmp2(1113).intl;
   obj6.children = intl.formatToPlainString(_location(1113).t.IyBYPN, { number: number2 });
-  const items3 = [closure_11(_location(5929).Text, obj6), ,];
+  const items3 = [closure_11(_location(5919).Text, obj6), ,];
   const obj8 = { style: tmp.body, variant: "body-md/medium", color: "text-subtle", children: null };
   const intl2 = tmp2(1113).intl;
   obj8.children = intl2.formatToPlainString(_location(1113).t["Ae97n/"], { number });
-  items3[1] = closure_11(_location(5929).Text, obj8);
+  items3[1] = closure_11(_location(5919).Text, obj8);
   const obj10 = { style: tmp.buttons, children: null };
   const obj11 = {
     text: null,
@@ -129,15 +129,15 @@ export default function GroupDMNitroCapLimitSheet(location) {
   }
   const obj13 = { children: null };
   obj11.onPress = tmp16;
-  const items4 = [closure_11(_location(5936).Button, obj11)];
+  const items4 = [closure_11(_location(5926).Button, obj11)];
   const obj14 = { text: null, size: "lg", variant: "secondary", onPress: null, grow: true };
   const intl4 = tmp2(1113).intl;
   obj14.text = intl4.string(_location(1113).t.PUZmk4);
   obj14.onPress = callback;
-  items4[1] = closure_11(_location(5936).Button, obj14);
+  items4[1] = closure_11(_location(5926).Button, obj14);
   obj10.children = items4;
   items3[2] = closure_12(View, obj10);
   obj5.children = items3;
   obj13.children = closure_12(View, obj5);
-  return closure_11(_location(5566).BottomSheet, obj13);
+  return closure_11(_location(5556).BottomSheet, obj13);
 }

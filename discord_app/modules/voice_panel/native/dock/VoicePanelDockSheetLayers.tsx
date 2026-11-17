@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockSheetLayers.tsx
 import native from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
-import Portal from "../../../../../_runtime/05508_Portal.js";
+import Portal from "../../../../../_runtime/05498_Portal.js";
 import useStateFromSharedValueDefault from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";

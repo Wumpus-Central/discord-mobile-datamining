@@ -25,7 +25,7 @@ function useStageCTAProps(stateFromStores) {
   _require = stateFromStores;
   const context = noop.useContext(showControls(11984));
   showControls = context.showControls;
-  const tmp4 = showControls(19229)(context.channelId);
+  const tmp4 = showControls(19231)(context.channelId);
   const isStageUnifiedCall = require("StageChannelUnifiedCallExperiment").useIsStageUnifiedCall(
     stateFromStores,
     "VoicePanelFloatingCTA",
@@ -89,12 +89,12 @@ function useStageCTAProps(stateFromStores) {
     };
     items1[1] = closure_11(tmp5(7988).IconButton, obj8);
     obj6.children = items1;
-    obj4.trailing = closure_12(tmp5(6337).Stack, obj6);
+    obj4.trailing = closure_12(tmp5(6327).Stack, obj6);
     tmp14 = obj4;
   }
   closure_129_0 = stateFromStores;
   const tmp5Result = require("useStageBlockedUsersCount");
-  const tmp18 = showControls(19229)(noop.useContext(showControls(11984)).channelId);
+  const tmp18 = showControls(19231)(noop.useContext(showControls(11984)).channelId);
   const isStageUnifiedCall1 = require("StageChannelUnifiedCallExperiment").useIsStageUnifiedCall(
     stateFromStores,
     "VoicePanelFloatingCTA",
@@ -147,8 +147,8 @@ function useFloatingCTAProps(stateFromStores) {
   closure_129_0 = undefined;
   closure_129_1 = undefined;
   closure_129_2 = undefined;
-  const tmp5 = setShowFloatingCTA(5547)();
-  const tmp6 = setShowFloatingCTA(19229)(noop.useContext(setShowFloatingCTA(11984)).channelId);
+  const tmp5 = setShowFloatingCTA(5537)();
+  const tmp6 = setShowFloatingCTA(19231)(noop.useContext(setShowFloatingCTA(11984)).channelId);
   let id1;
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
@@ -241,7 +241,7 @@ function useFloatingCTAProps(stateFromStores) {
   const context = noop.useContext(tmp(11984));
   ({ channelId, isDockEnabled } = context);
   tmpResultResult = setShowFloatingCTA(7968)(guild_id, id2, nextRecurrenceIdInEvent);
-  const tmp27 = setShowFloatingCTA(19229)(channelId);
+  const tmp27 = setShowFloatingCTA(19231)(channelId);
   const items4 = [ChannelRTCStore];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items4, () => {
     let id;

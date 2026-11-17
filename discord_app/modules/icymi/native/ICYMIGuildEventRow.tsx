@@ -26,7 +26,7 @@ function ICYMIGuildEventRow(event) {
   }
   noop = toISOStringResult;
   items = [toISOStringResult, tmp5];
-  const tmp7 = guild(5954)(channel);
+  const tmp7 = guild(5944)(channel);
   const locationFromEvent = event(7975).getLocationFromEvent(event);
   let obj = event(7975);
   const eventLocationIconSource = event(8417).getEventLocationIconSource(event, channel, true);
@@ -119,7 +119,7 @@ function ICYMIGuildEventRow(event) {
   }
   obj5.channelId = id1;
   obj5.guildId = guild.id;
-  const tmp2Result3 = guild(19325);
+  const tmp2Result3 = guild(19327);
   obj5.timestamp = guild(11).extractTimestamp(event.id);
   obj5.onHeaderPress = callback1;
   obj5.onHeaderLongPress = callback1;
@@ -129,7 +129,7 @@ function ICYMIGuildEventRow(event) {
   if (tmp5) {
     str = "status-positive";
   }
-  obj7.children = closure_11(event(5929).Text, {
+  obj7.children = closure_11(event(5919).Text, {
     variant: "body-sm/semibold",
     color: str,
     children: noop.useMemo(() => {
@@ -149,7 +149,7 @@ function ICYMIGuildEventRow(event) {
   if (title) {
     title = tmp.title;
   }
-  items3[1] = closure_11(event(5929).Text, { style: title, variant: "body-lg/semibold", children: event.name });
+  items3[1] = closure_11(event(5919).Text, { style: title, variant: "body-lg/semibold", children: event.name });
   let tmp19Result = null != event.description;
   if (tmp19Result) {
     tmp19Result = event.description.length > 0;
@@ -158,7 +158,7 @@ function ICYMIGuildEventRow(event) {
     const obj9 = { variant: "body-md/normal", color: "text-subtle", lineClamp: 5, children: null };
     const obj10 = { guildId: guild.id };
     obj9.children = tmp8(8422).guildEventDetailsParser(event.description, true, obj10);
-    tmp19Result = closure_11(tmp8(5929).Text, obj9);
+    tmp19Result = closure_11(tmp8(5919).Text, obj9);
     const tmp8Result = tmp8(8422);
   }
   items3[2] = tmp19Result;
@@ -169,7 +169,7 @@ function ICYMIGuildEventRow(event) {
   const obj15 = { lineClamp: 1, variant: "body-xs/normal", color: "text-muted", children: null };
   const intl2 = tmp8(1113).intl;
   obj15.children = intl2.format(event(1113).t["+DLsD8"], { count: tmp2ResultResult });
-  items4[1] = closure_11(event(5929).Text, obj15);
+  items4[1] = closure_11(event(5919).Text, obj15);
   obj13.children = items4;
   const items5 = [closure_12(closure_5, obj13)];
   const obj16 = { style: tmp.locationContainer, children: null };
@@ -198,7 +198,7 @@ function ICYMIGuildEventRow(event) {
     }
     tmp27 = result;
   }
-  items6[1] = closure_11(event(5929).Text, {
+  items6[1] = closure_11(event(5919).Text, {
     lineClamp: 2,
     variant: "body-xs/normal",
     color: "text-muted",
@@ -219,7 +219,7 @@ let GuildScheduledEventStore = fn(7029);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(19284);
+const createICYMIStyles = fn(19286);
 let closure_13 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     container: {

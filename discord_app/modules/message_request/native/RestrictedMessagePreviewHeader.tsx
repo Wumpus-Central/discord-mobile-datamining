@@ -55,9 +55,9 @@ export default function RestrictedMessagePreviewHeader(channel) {
         const obj = channel(8546);
         channel(7231).transitionToGuild(arg0);
         const obj2 = channel(7231);
-        user(5552).hideActionSheet();
-        const obj3 = user(5552);
-        user(6848).popWithKey(closure_1_5);
+        user(5542).hideActionSheet();
+        const obj3 = user(5542);
+        user(6838).popWithKey(closure_1_5);
       },
     });
   }, items2);

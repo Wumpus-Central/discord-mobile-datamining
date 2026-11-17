@@ -74,7 +74,7 @@ export default function ChannelAccessInfo(guild) {
   if (tmp8) {
     first = existingMembers[0];
   }
-  const items2 = [closure_8(guild(5929).Text, { variant: "body-sm/medium", children: stringResult })];
+  const items2 = [closure_8(guild(5919).Text, { variant: "body-sm/medium", children: stringResult })];
   let obj2 = {
     accessibilityLabel: stringResult,
     accessibilityRole: "button",
@@ -94,11 +94,11 @@ export default function ChannelAccessInfo(guild) {
     const items3 = [closure_8(tmp2(1187).Avatar, obj5)];
     let obj6 = { children: null };
     let obj7 = { variant: "body-sm/semibold", children: first.tag };
-    const items4 = [closure_8(tmp2(5929).Text, obj7)];
+    const items4 = [closure_8(tmp2(5919).Text, obj7)];
     let obj8 = { variant: "body-xs/medium", children: null };
     let intl2 = tmp2(1113).intl;
     obj8.children = intl2.string(tmp2(1113).t.rt0ERW);
-    items4[1] = closure_8(tmp2(5929).Text, obj8);
+    items4[1] = closure_8(tmp2(5919).Text, obj8);
     obj6.children = items4;
     items3[1] = closure_9(View, obj6);
     obj4.children = items3;
@@ -140,7 +140,7 @@ export default function ChannelAccessInfo(guild) {
         const obj7 = { size: "sm", style: closure_2.sectionIcon };
         items = [React5(GroupIcon, obj7)];
         const obj8 = { style: closure_2.labelDetail, variant: "body-sm/medium", children: tmp5 };
-        items[1] = React5(tmp4(5929).Text, obj8);
+        items[1] = React5(tmp4(5919).Text, obj8);
         obj6.children = items;
         return React6(noop.Fragment, obj6);
       }

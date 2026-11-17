@@ -4,7 +4,7 @@ import useWindowDimensions from "../../../screen/useWindowDimensions.native.tsx"
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import EmbeddedActivityOrientationLockState from "../../../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import isOrientationLockSupportedDefault from "../../../device/native/isOrientationLockSupported.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
@@ -469,20 +469,20 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj6.isActivityFocused = first1;
       const obj7 = { channel: stateFromStores, layoutMode: tmp75 };
       obj6.children = closure_14(tmp4(12848), obj7, tmp3[0]);
-      const items27 = [closure_14(tmp4(20024), obj6)];
+      const items27 = [closure_14(tmp4(20026), obj6)];
       let tmp79Result = null;
       if (stateFromStores2) {
-        tmp79Result = closure_14(tmp4(20025), {});
+        tmp79Result = closure_14(tmp4(20027), {});
       }
       items27[1] = tmp79Result;
       obj5.children = items27;
       obj4.children = closure_15(tmp4(1655).View, obj5);
-      let tmp79Result2 = closure_14(tmp8(5598).GestureDetector, obj4);
+      let tmp79Result2 = closure_14(tmp8(5588).GestureDetector, obj4);
       let tmp76 = closure_14;
-      const tmp4Result2 = tmp4(20024);
+      const tmp4Result2 = tmp4(20026);
     } else if (null == activityShelfItemData) {
       const obj8 = { activity: stateFromStores1, application: first };
-      tmp79Result2 = closure_14(tmp4(20026), obj8);
+      tmp79Result2 = closure_14(tmp4(20028), obj8);
       tmp76 = closure_14;
     } else {
       tmp76 = closure_14;
@@ -495,8 +495,8 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
         itemDimensions: tmp2Result2[0],
         disableBadges: true,
       };
-      obj10.children = closure_14(tmp4(20030), obj11);
-      tmp79Result2 = closure_14(tmp8(5598).GestureDetector, obj10);
+      obj10.children = closure_14(tmp4(20032), obj11);
+      tmp79Result2 = closure_14(tmp8(5588).GestureDetector, obj10);
     }
     const obj12 = { value: tmp4Result(tmp4(7937).ACTIVITY_TILE).analyticsLocations, children: tmp79Result2 };
     return tmp76(tmp8(7918).AnalyticsLocationProvider, obj12);

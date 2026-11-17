@@ -116,7 +116,7 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   };
   const intl9 = tmp5(1113).intl;
   obj12.text = intl9.string(guildId(1113).t.nAt0rE);
-  items1[2] = closure_6(guildId(5936).Button, obj12);
+  items1[2] = closure_6(guildId(5926).Button, obj12);
   obj9.children = items1;
   obj7.children = closure_7(tmp9, obj9);
   return closure_6(guildId(7951).ActionSheet, obj7);

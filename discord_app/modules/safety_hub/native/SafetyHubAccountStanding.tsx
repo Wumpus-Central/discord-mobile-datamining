@@ -277,8 +277,8 @@ export default function SafetyHubAccountStanding() {
     },
   });
   const items4 = [
-    closure_9(accountStanding(5929).Text, obj8),
-    closure_9(accountStanding(5929).Text, {
+    closure_9(accountStanding(5919).Text, obj8),
+    closure_9(accountStanding(5919).Text, {
       variant: "body-sm/medium",
       color: "text-muted",
       style: { textAlign: "center" },

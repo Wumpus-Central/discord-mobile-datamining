@@ -166,7 +166,7 @@ function computePermissionsForMember(excludeGuildPermissions) {
       }
       let removeResult = found1;
       if (!mfaEnabled) {
-        removeResult = BigFlagUtils.remove(found1, expandedHeight);
+        removeResult = BigFlagUtils.remove(found1, guild_id);
         const tmp21Result4 = BigFlagUtils;
       }
       tmp39 = removeResult;
@@ -275,7 +275,7 @@ function computePermissions(excludeGuildPermissions) {
             }
             let removeResult = applyResult;
             if (!mfaEnabled) {
-              removeResult = BigFlagUtils.remove(applyResult, expandedHeight);
+              removeResult = BigFlagUtils.remove(applyResult, guild_id);
             }
             tmp21 = removeResult;
           }

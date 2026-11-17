@@ -56,7 +56,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
   if (ts == null) {
     ts = entry.ts;
   }
-  const items1 = [closure_7(tmp6(5929).Text, { variant: "body-xs/normal", color: "text-subtle", children: ts }), , ,];
+  const items1 = [closure_7(tmp6(5919).Text, { variant: "body-xs/normal", color: "text-subtle", children: ts }), , ,];
   const level = entry.level;
   let str2 = "text-feedback-critical";
   if ("error" !== level) {
@@ -66,7 +66,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
     }
     str2 = str3;
   }
-  items1[1] = closure_7(tmp6(5929).Text, {
+  items1[1] = closure_7(tmp6(5919).Text, {
     variant: "footnote/semibold",
     color: str2,
     style: tmp.badge,
@@ -77,7 +77,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
     tmp9Result = null;
     if (null != entry.source) {
       const obj4 = { variant: "footnote/semibold", color: "text-subtle", style: tmp.badge, children: entry.source };
-      tmp9Result = closure_7(tmp6(5929).Text, obj4);
+      tmp9Result = closure_7(tmp6(5919).Text, obj4);
     }
   }
   items1[2] = tmp9Result;
@@ -86,7 +86,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
     const obj5 = { variant: "footnote/semibold", color: "text-feedback-critical", style: tmp.badge, children: null };
     const intl = tmp6(1113).intl;
     obj5.children = intl.string(_modDef4131.TrC9c8);
-    tmp9Result4 = closure_7(tmp6(5929).Text, obj5);
+    tmp9Result4 = closure_7(tmp6(5919).Text, obj5);
   }
   items1[3] = tmp9Result4;
   obj2.children = items1;
@@ -95,7 +95,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
     let tmp9Result5 = null;
     if ("" !== memo.prefix) {
       const obj6 = { variant: "body-xs/normal", color: str, selectable: true, children: memo.prefix };
-      tmp9Result5 = closure_7(tmp6(5929).Text, obj6);
+      tmp9Result5 = closure_7(tmp6(5919).Text, obj6);
     }
     const items3 = [tmp9Result5, ,];
     const obj7 = {
@@ -126,14 +126,14 @@ let closure_11 = noop.memo(function LogRow(entry) {
     const obj11 = { count: memo.size };
     items5[2] = intl3.formatToPlainString(kUhyUv, obj11);
     obj10.children = items5;
-    items4[1] = closure_8(tmp6(5929).Text, obj10);
+    items4[1] = closure_8(tmp6(5919).Text, obj10);
     obj7.children = items4;
     items3[1] = closure_8(tmp6(7428).PressableOpacity, obj7);
     let tmp9Result6 = null;
     if (expanded) {
       const obj12 = { variant: "primary", children: null };
       const obj13 = { variant: "body-xs/normal", color: str, selectable: true, children: memo.pretty };
-      obj12.children = closure_7(tmp6(5929).Text, obj13);
+      obj12.children = closure_7(tmp6(5919).Text, obj13);
       tmp9Result6 = closure_7(tmp6(7445).Card, obj12);
     }
     const obj14 = { children: null };
@@ -142,7 +142,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
     let tmp9Result7 = closure_8(closure_9, obj14);
   } else {
     const obj15 = { variant: "body-xs/normal", color: str, selectable: true, children: entry.message };
-    tmp9Result7 = closure_7(tmp6(5929).Text, obj15);
+    tmp9Result7 = closure_7(tmp6(5919).Text, obj15);
   }
   items2[1] = tmp9Result7;
   obj.children = items2;

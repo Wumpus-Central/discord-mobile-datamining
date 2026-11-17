@@ -130,7 +130,7 @@ function WishlistSuggestionsGridContents(arg0) {
     const intl3 = tmp(1113).intl;
     obj7.text = intl3.string(tmp(1113).t.RSyoZu);
     obj7.onPress = callback;
-    obj6.children = closure_12(tmp(5936).Button, obj7);
+    obj6.children = closure_12(tmp(5926).Button, obj7);
     let tmp12Result = closure_12(View, obj6);
   } else {
     const obj8 = { newValue: null, children: null };
@@ -154,7 +154,7 @@ function WishlistSuggestionsGridContents(arg0) {
     };
     const intl4 = tmp(1113).intl;
     obj12.children = intl4.string(tmp(1113).t["+GB8Kt"]);
-    const items4 = [closure_12(tmp(5929).Text, obj12)];
+    const items4 = [closure_12(tmp(5919).Text, obj12)];
     const items5 = [tmp3.dismissButton];
     let hiddenDismissButton = !isDismissible;
     if (!isDismissible) {
@@ -203,7 +203,7 @@ function WishlistSuggestionsGridContents(arg0) {
     const intl2 = tmp(1113).intl;
     obj33.text = intl2.string(tmp(1113).t.RSyoZu);
     obj33.onPress = callback;
-    obj18.children = closure_12(tmp(5936).Button, obj33);
+    obj18.children = closure_12(tmp(5926).Button, obj33);
     items6[2] = closure_12(View, obj18);
     obj10.children = items6;
     obj8.children = closure_13(_modDef1655.View, obj10);

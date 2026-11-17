@@ -83,10 +83,10 @@ export default function GetStartedScreen(modalSessionId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = v3(6833).trackAgeVerificationModalClicked(
+              const result = v3(6823).trackAgeVerificationModalClicked(
                 c0,
-                v3(6833).AgeVerificationModalVersion.RETRY,
-                v3(6833).AgeVerificationModalCta.GET_STARTED,
+                v3(6823).AgeVerificationModalVersion.RETRY,
+                v3(6823).AgeVerificationModalCta.GET_STARTED,
               );
               v1 = 1;
               c0 = 1;

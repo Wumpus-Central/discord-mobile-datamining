@@ -1,10 +1,8 @@
 // discord_app/modules/hexagon_campaign/HexagonCampaignExperiment.tsx
 import HexagonCampaignUtils from "HexagonCampaignUtils.tsx";
-import QuestConstants from "../quests/QuestConstants.tsx";
 import ApexExperiment from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;
 const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "user",
   name: "2026-09-hexagon-campaign-client",

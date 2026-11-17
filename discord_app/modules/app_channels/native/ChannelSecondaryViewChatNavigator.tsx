@@ -47,7 +47,7 @@ export default function ChannelSecondaryViewChatNavigator(navigation) {
   const params = navigation.route.params;
   const tmp = closure_7();
   dependencyMap = tmp;
-  const tmp2 = params(5488)();
+  const tmp2 = params(5478)();
   const accessibilityNativeStackOptions = navigation(7490).useAccessibilityNativeStackOptions();
   const channelId = params.channelId;
   items = [channelId, tmp, navigation, accessibilityNativeStackOptions];
@@ -84,5 +84,5 @@ export default function ChannelSecondaryViewChatNavigator(navigation) {
     }),
   };
   obj2.children = channelId(closure_6.Navigator, obj3);
-  return channelId(navigation(5377).ThemeContextProvider, obj2);
+  return channelId(navigation(5367).ThemeContextProvider, obj2);
 }

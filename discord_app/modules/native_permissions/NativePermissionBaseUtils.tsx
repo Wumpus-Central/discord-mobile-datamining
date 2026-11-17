@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import NativePermissionStore from "NativePermissionStore.tsx";
 
 require = fn;
-const NativePermissionConstants = fn(6902);
+const NativePermissionConstants = fn(6892);
 ({
   NativePermissionTypes: hasOwnProperty,
   NativePermissionStates: closure_6,

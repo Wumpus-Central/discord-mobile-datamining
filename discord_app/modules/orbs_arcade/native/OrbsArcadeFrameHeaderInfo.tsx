@@ -17,7 +17,7 @@ let obj2 = {
 const obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 };
 obj2.namePill = {
   flexShrink: 1,
-  minHeight: fn(5942).SMALL_BUTTON_HEIGHT,
+  minHeight: fn(5932).SMALL_BUTTON_HEIGHT,
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_12,
   paddingVertical: nativeDefault.space.PX_4,
@@ -26,7 +26,7 @@ obj2.namePill = {
 };
 let obj4 = {
   flexShrink: 1,
-  minHeight: fn(5942).SMALL_BUTTON_HEIGHT,
+  minHeight: fn(5932).SMALL_BUTTON_HEIGHT,
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_12,
   paddingVertical: nativeDefault.space.PX_4,

@@ -75,8 +75,8 @@ export default function GameOrganizationInviteActionSheet(guildId) {
     noun: getGameOrganizationDisplayNounDefault({ displayNoun: stateFromStores }),
   });
   const items2 = [
-    closure_5(guildId(5929).Heading, obj8),
-    closure_5(guildId(5929).Text, {
+    closure_5(guildId(5919).Heading, obj8),
+    closure_5(guildId(5919).Text, {
       variant: "body-sm/medium",
       color: "text-muted",
       style: tmp.centeredText,
@@ -84,13 +84,13 @@ export default function GameOrganizationInviteActionSheet(guildId) {
     }),
   ];
   obj7.children = items2;
-  const items3 = [closure_6(guildId(6337).Stack, obj7)];
+  const items3 = [closure_6(guildId(6327).Stack, obj7)];
   const obj10 = { size: "md", round: true, onChange: search, placeholder: null };
   const intl5 = tmp6(1113).intl;
   obj10.placeholder = intl5.formatToPlainString(_modDef2565.cRK6SQ, { noun: tmp9 });
   items3[1] = closure_5(guildId(7825).SearchBar, obj10);
   obj6.children = items3;
-  obj5.header = closure_6(guildId(6337).Stack, obj6);
+  obj5.header = closure_6(guildId(6327).Stack, obj6);
   if (isLoading) {
     let tmp11Result = closure_5(Loading, {});
   } else if (hasNoFriends) {

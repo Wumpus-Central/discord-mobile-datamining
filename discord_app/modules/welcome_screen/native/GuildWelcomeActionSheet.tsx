@@ -191,7 +191,7 @@ obj2.placeholderEmojiWrapper = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: nativeDefault.radii.xs,
 };
-const expandedHeight = createStyles.createStyles(obj2);
+let closure_19 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_screen/native/GuildWelcomeActionSheet.tsx");
 
@@ -304,19 +304,19 @@ export default function GuildWelcomeActionSheet(guildId) {
         },
       };
       obj6.children = intl.format(tmp2(1113).t["0aydCN"], obj7);
-      items9[1] = closure_17(tmp2(5929).Text, obj6);
+      items9[1] = closure_17(tmp2(5919).Text, obj6);
       const obj8 = {
         style: tmp.guildDescription,
         variant: "body-sm/medium",
         color: "text-default",
         children: welcomeScreen.description,
       };
-      items9[2] = closure_17(tmp2(5929).Text, obj8);
+      items9[2] = closure_17(tmp2(5919).Text, obj8);
       const obj9 = { style: tmp.channelsTitle, variant: "body-sm/medium", color: "text-default", children: null };
       const intl2 = tmp2(1113).intl;
       const tmp17 = onHide(14982);
       obj9.children = intl2.string(tmp2(1113).t["haj5+i"]).toUpperCase();
-      items9[3] = closure_17(tmp2(5929).Text, obj9);
+      items9[3] = closure_17(tmp2(5919).Text, obj9);
       let welcome_channels = welcomeScreen.welcome_channels;
       items9[4] = welcome_channels.map((welcomeChannel, index) => {
         closure_0 = index;

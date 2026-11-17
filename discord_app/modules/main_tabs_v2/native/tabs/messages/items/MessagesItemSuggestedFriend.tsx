@@ -33,7 +33,7 @@ obj.pressable = {
   alignItems: "center",
   padding: nativeDefault.space.PX_8,
 };
-const obj4 = {
+let obj4 = {
   borderRadius: nativeDefault.radii.md,
   flexDirection: "row",
   alignItems: "center",
@@ -138,16 +138,13 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     setAddedPressed(true);
   }, items4);
   let obj3 = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  obj2 = height(suggestedFriend[11]);
-  const items5 = [
-    closure_9(height(suggestedFriend[18]).Avatar, {
-      style: tmp.avatar,
-      user: suggestedFriend.user,
-      guildId: "Array",
-      size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32,
-    }),
-    ,
-  ];
+  const obj4 = {
+    style: tmp.avatar,
+    user: suggestedFriend.user,
+    guildId: "Array",
+    size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32,
+  };
+  const items5 = [closure_9(height(suggestedFriend[18]).Avatar, obj4), ,];
   let obj5 = { style: tmp.textContainer, children: null };
   const items6 = [
     closure_9(height(suggestedFriend[19]).Text, {

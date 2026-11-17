@@ -69,7 +69,7 @@ function AdvancedInstantInviteScreen() {
     }
   }, items1);
   const tmp2Result = navigation(12);
-  const unmountEffect = navigation(5899).useUnmountEffect(() => {
+  const unmountEffect = navigation(5889).useUnmountEffect(() => {
     channel(8471).resetSettings();
   });
   const items2 = [channel];
@@ -135,7 +135,7 @@ function AdvancedInstantInviteScreen() {
     onChangeFlags: null,
     onChangeRoleIds: null,
   };
-  const tmp2Result2 = navigation(5899);
+  const tmp2Result2 = navigation(5889);
   obj5.maxUsesOptions = channel(8463).getMaxUsesOptions;
   ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
   obj5.onChangeMaxAge = callback2;
@@ -143,7 +143,7 @@ function AdvancedInstantInviteScreen() {
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(20790), {
+  obj4.children = jsx(channel(20793), {
     style: tmp.formContent,
     channel: first,
     guild,

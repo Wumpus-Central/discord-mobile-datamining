@@ -5,7 +5,7 @@ import useWindowDimensions from "../../../screen/useWindowDimensions.native.tsx"
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import EmbeddedActivityOrientationLockState from "../../../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
@@ -368,7 +368,7 @@ function User(participantId) {
     }
     let tmp5 = null != participant;
     if (tmp5) {
-      tmp5 = expandedHeight(participant);
+      tmp5 = closure_2_19(participant);
     }
     if (tmp5) {
       tmp5 = arg1 === VoicePanelModes.PANEL;
@@ -642,7 +642,7 @@ function Stream(participantId) {
       };
     }
   }, items);
-  let tmp5 = transitionState === participantId(5377).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
+  let tmp5 = transitionState === participantId(5367).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
   const context = obj2.useContext(mode(11984));
   ({ channelId: c2, layoutManager } = context);
   let obj = participantId(11995);
@@ -672,11 +672,11 @@ function Stream(participantId) {
   });
   video = stateFromStoresObject.streamId;
   const tmp2Result = participantId(563);
-  const surfaceDirectRendererExperiment = participantId(6197).useSurfaceDirectRendererExperiment(
+  const surfaceDirectRendererExperiment = participantId(6187).useSurfaceDirectRendererExperiment(
     stateFromStoresObject.userId,
     { location: "VoicePanelPIPContent.Stream" },
   );
-  const tmp2Result3 = participantId(6197);
+  const tmp2Result3 = participantId(6187);
   const items2 = [ApplicationStreamingStore];
   const stateFromStores = participantId(563).useStateFromStores(items2, () => {
     const activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(participantId);
@@ -746,7 +746,7 @@ function Stream(participantId) {
   }, items7);
   if (stateFromStores === constants.ENDED) {
     const obj3 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-    let tmp23 = closure_21(tmp2(20063).StreamEnded, obj3);
+    let tmp23 = closure_21(tmp2(20065).StreamEnded, obj3);
   } else {
     tmp23 = null;
     if (stateFromStores !== tmp17.FAILED) {
@@ -809,10 +809,10 @@ function areParticipantsEqual(arg0, arg1) {
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const VoicePanelModes = fn(11985).VoicePanelModes;
-const VoicePanelPIPModes = fn(19909).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19911).VoicePanelPIPModes;
 const Constants = fn(1072);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
-const CallConstants = fn(5983);
+const CallConstants = fn(5973);
 ({ ParticipantTypes: closure_18, isActivityParticipant: closure_19 } = CallConstants);
 const ActivityLayoutMode = fn(12706).ActivityLayoutMode;
 const jsxProd = fn(21);

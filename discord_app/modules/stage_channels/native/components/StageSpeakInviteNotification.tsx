@@ -38,7 +38,7 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
   const channel = notification.channel;
   guild = notification.guild;
   const tmp = closure_8();
-  let stringResult = guild(5954)(channel);
+  let stringResult = guild(5944)(channel);
   if (stringResult == null) {
     const intl = channel(1113).intl;
     stringResult = intl.string(channel(1113).t["/YzI63"]);
@@ -115,7 +115,7 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
   };
   items4[1] = ref(channel(7988).IconButton, obj8);
   obj6.children = items4;
-  obj3.rightAccessory = callback(channel(6337).Stack, obj6);
+  obj3.rightAccessory = callback(channel(6327).Stack, obj6);
   const obj9 = {
     variant: "heading-sm/medium",
     color: "text-subtle",
@@ -124,7 +124,7 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
   };
   const intl4 = channel(1113).intl;
   obj9.children = intl4.string(channel(1113).t.Ul1RJQ);
-  obj3.children = ref(channel(5929).Text, obj9);
+  obj3.children = ref(channel(5919).Text, obj9);
   obj3.onPress = function onPress() {
     StageChannelActionCreatorExtras.openStageChannel(channel);
     callback("notification_clicked");

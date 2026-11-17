@@ -65,7 +65,7 @@ function LoggedEvent(arg0) {
       color: "mobile-text-heading-primary",
       children: map(2169)(timestamp).calendar(),
     };
-    obj6.children = closure_8(CopyIcon(5929).Text, obj7);
+    obj6.children = closure_8(CopyIcon(5919).Text, obj7);
     let items1 = [closure_8(CommonProperty, obj6), ,];
     let tmp6Result = null != user;
     if (tmp6Result) {
@@ -89,15 +89,15 @@ function LoggedEvent(arg0) {
       const items2 = [map.monospace, { marginRight: 4 }];
       obj11.style = items2;
       obj11.children = fingerprint;
-      const items3 = [closure_8(CopyIcon(5929).Text, obj11)];
-      CopyIcon = CopyIcon(6033).CopyIcon;
+      const items3 = [closure_8(CopyIcon(5919).Text, obj11)];
+      CopyIcon = CopyIcon(6023).CopyIcon;
       tmp6Result2 = closure_8(CopyIcon, { size: "sm" });
       items3[1] = tmp6Result2;
       obj10.children = items3;
       let tmp6Result3 = closure_9(CopyIcon(7428).PressableOpacity, obj10);
     } else {
       const obj12 = { variant: "body-sm/medium", color: "text-muted", style: map.monospace, children: "null" };
-      tmp6Result3 = closure_8(CopyIcon(5929).Text, obj12);
+      tmp6Result3 = closure_8(CopyIcon(5919).Text, obj12);
     }
     const obj13 = { name: "Fingerprint", children: tmp6Result3 };
     items1[2] = closure_8(CommonProperty, obj13);
@@ -237,18 +237,18 @@ export default function DevToolsAnalyticsScreen() {
   items2[1] = closure_8(trimmed(7443).TableRow, {
     arrow: true,
     variant: "danger",
-    icon: closure_8(trimmed(6040).TrashIcon, { color: "text-feedback-critical" }),
+    icon: closure_8(trimmed(6030).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(18210).clearAnalyticsLog,
+    onPress: trimmed(18212).clearAnalyticsLog,
   });
   obj3.children = items2;
   const items3 = [closure_9(trimmed(7746).TableRowGroup, obj3), ,];
   const obj5 = {
     arrow: true,
     variant: "danger",
-    icon: closure_8(trimmed(6040).TrashIcon, { color: "text-feedback-critical" }),
+    icon: closure_8(trimmed(6030).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(18210).clearAnalyticsLog,
+    onPress: trimmed(18212).clearAnalyticsLog,
   };
   items3[1] = closure_8(View, {
     style: tmp.searchFieldContainer,
@@ -279,7 +279,7 @@ export default function DevToolsAnalyticsScreen() {
     children: tmp11Result,
   });
   obj9.children = items3;
-  obj8.ListHeaderComponent = closure_9(trimmed(6337).Stack, obj9);
+  obj8.ListHeaderComponent = closure_9(trimmed(6327).Stack, obj9);
   obj8.contentContainerStyle = tmp.contentContainer;
   obj8.extraData = stateFromStores;
   obj8.data = reversed;

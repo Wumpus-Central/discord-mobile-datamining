@@ -37,7 +37,7 @@ export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(5920).ReactionTypes.NORMAL;
+    NORMAL = threadId(5910).ReactionTypes.NORMAL;
   }
   items = [threadId];
   const items1 = [threadId];

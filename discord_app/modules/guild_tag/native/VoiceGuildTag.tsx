@@ -63,7 +63,7 @@ export default function VoiceGuildTagChiplet(userId) {
       obj5.size = GuildTagBadgeSize.SIZE_12;
       const items2 = [closure_5(tmp2(10654).GuildTagBadge, obj5)];
       const obj7 = { variant: "body-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
-      items2[1] = closure_5(tmp2(5929).Text, obj7);
+      items2[1] = closure_5(tmp2(5919).Text, obj7);
       obj4.children = items2;
       obj3.children = closure_6(View, obj4);
       return closure_5(View, obj3);

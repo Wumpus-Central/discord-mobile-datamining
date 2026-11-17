@@ -165,7 +165,7 @@ function MemberJoinDates(userId) {
       importantForAccessibility: "no-hide-descendants",
       children,
     };
-    const items6 = [closure_11(tmp4(5929).Text, obj11)];
+    const items6 = [closure_11(tmp4(5919).Text, obj11)];
     const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
     const obj13 = { guild: stateFromStores1, size: tmp4(7720).GuildIconSizes.XXSMALL };
     obj12.icon = closure_11(GuildIconDefault, obj13);

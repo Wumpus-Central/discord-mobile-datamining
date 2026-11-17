@@ -80,7 +80,7 @@ export default function GiftPurchaseButton(style) {
       obj7.title = intl.string(planId(1113).t.R0RpRX);
       const intl2 = planId(1113).intl;
       obj7.body = intl2.string(planId(1113).t.CKsXk3);
-      tmp3(6269).show(obj7);
+      tmp3(6259).show(obj7);
     }),
     items3,
   );

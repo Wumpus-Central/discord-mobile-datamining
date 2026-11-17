@@ -8,7 +8,7 @@ import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.ts
 import FramesStore from "../../frames/FramesStore.tsx";
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6761).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6751).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_8,

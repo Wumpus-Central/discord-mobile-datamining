@@ -22,7 +22,7 @@ function getOptionValue(arr, arg1) {
   }
   return value;
 }
-const BuiltInSectionId = fn(6345).BuiltInSectionId;
+const BuiltInSectionId = fn(6335).BuiltInSectionId;
 const Constants = fn(1072);
 ({
   Permissions: metroImportDefault,
@@ -36,7 +36,7 @@ const DiceRollConstants = fn(11415);
 let closure_11 = fn(5220).getDisableCommunicationDurationOptions;
 const MessageSendLocation = fn(5311).MessageSendLocation;
 let obj = {};
-let obj2 = { id: BuiltInSectionId.BUILT_IN, type: fn(5985).ApplicationCommandSectionType.BUILT_IN };
+let obj2 = { id: BuiltInSectionId.BUILT_IN, type: fn(5975).ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj2, "name", {
   get: () => {
     const intl = require("util").intl;
@@ -45,7 +45,7 @@ Object.defineProperty(obj2, "name", {
   set: undefined,
 });
 obj[BuiltInSectionId.BUILT_IN] = obj2;
-let obj3 = { id: BuiltInSectionId.FRECENCY, type: fn(5985).ApplicationCommandSectionType.BUILT_IN };
+let obj3 = { id: BuiltInSectionId.FRECENCY, type: fn(5975).ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj3, "name", {
   get: () => {
     const intl = require("util").intl;
@@ -60,7 +60,7 @@ let obj4 = {
   untranslatedName: "shrug",
   displayName: "shrug",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj4, "untranslatedDescription", {
@@ -114,7 +114,7 @@ let obj6 = {
   untranslatedName: "tableflip",
   displayName: "tableflip",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj6, "untranslatedDescription", {
@@ -168,7 +168,7 @@ let obj8 = {
   untranslatedName: "unflip",
   displayName: "unflip",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj8, "untranslatedDescription", {
@@ -222,7 +222,7 @@ let obj10 = {
   untranslatedName: "tts",
   displayName: "tts",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj10, "untranslatedDescription", {
@@ -288,7 +288,7 @@ const obj12 = {
   untranslatedName: "me",
   displayName: "me",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj12, "untranslatedDescription", {
@@ -342,7 +342,7 @@ const obj14 = {
   untranslatedName: "spoiler",
   displayName: "spoiler",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj14, "untranslatedDescription", {
@@ -397,7 +397,7 @@ const obj16 = {
   untranslatedName: "nick",
   displayName: "nick",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj16, "untranslatedDescription", {
@@ -475,7 +475,7 @@ const obj18 = {
   untranslatedName: "thread",
   displayName: "thread",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj18, "untranslatedDescription", {
@@ -600,7 +600,7 @@ const obj21 = {
   untranslatedName: "kick",
   displayName: "kick",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj21, "untranslatedDescription", {
@@ -780,7 +780,7 @@ const obj24 = {
   untranslatedName: "ban",
   displayName: "ban",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj24, "untranslatedDescription", {
@@ -1044,7 +1044,7 @@ const obj28 = {
   untranslatedName: "timeout",
   displayName: "timeout",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj28, "untranslatedDescription", {
@@ -1271,7 +1271,7 @@ const obj32 = {
   untranslatedName: "msg",
   displayName: "msg",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj32, "untranslatedDescription", {
@@ -1438,7 +1438,7 @@ const obj35 = {
   untranslatedName: "roll-dice",
   displayName: "roll-dice",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5985).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(5975).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj35, "untranslatedDescription", {

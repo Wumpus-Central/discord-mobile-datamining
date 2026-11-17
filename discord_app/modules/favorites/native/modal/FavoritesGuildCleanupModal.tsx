@@ -15,7 +15,7 @@ function closeCleanup() {
 }
 function CleanupScreen() {
   const tmp3 = closure_14(loading(1630)().bottom);
-  const tmp4 = loading(18859)(closeCleanup);
+  const tmp4 = loading(18861)(closeCleanup);
   _require = tmp4;
   loading = tmp4.loading;
   let obj = { style: tmp3.container, spacing: 0, children: null };
@@ -123,7 +123,7 @@ function CleanupScreen() {
     };
     const intl13 = tmp6(1113).intl;
     obj14.children = intl13.string(tmp(3679).toOYQw);
-    tmp7Result = closure_12(tmp6(5929).Text, obj14);
+    tmp7Result = closure_12(tmp6(5919).Text, obj14);
   }
   items1[3] = tmp7Result;
   obj3.children = items1;

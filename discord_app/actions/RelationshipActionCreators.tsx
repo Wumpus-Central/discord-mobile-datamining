@@ -99,7 +99,7 @@ function fireFriendRequestSurveyAction(arg0) {
 const Constants = fn(1072);
 ({ Endpoints: closure_8, AbortCodes: closure_9, RelationshipTypes: closure_10 } = Constants);
 const ClearFriendRequestFilters = fn(8138).ClearFriendRequestFilters;
-const SafetyToastType = fn(6910).SafetyToastType;
+const SafetyToastType = fn(6900).SafetyToastType;
 const RelationshipErrorUXConfig = {
   SHOW_ALWAYS: 0,
   [0]: "SHOW_ALWAYS",
@@ -412,7 +412,7 @@ let obj2 = {
         );
       })
       .catch(() => {
-        channelId(6915).showFailedToast();
+        channelId(6905).showFailedToast();
         const AccessibilityAnnouncer = userId(5313).AccessibilityAnnouncer;
         const intl = userId(1113).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
@@ -440,7 +440,7 @@ let obj2 = {
         );
       })
       .catch(() => {
-        channelId(6915).showFailedToast();
+        channelId(6905).showFailedToast();
         const AccessibilityAnnouncer = userId(5313).AccessibilityAnnouncer;
         const intl = userId(1113).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));

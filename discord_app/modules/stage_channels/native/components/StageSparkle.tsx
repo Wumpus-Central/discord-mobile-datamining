@@ -28,7 +28,7 @@ function StageSparkleInner(style) {
   obj2.children = tmp6Result;
   const items1 = [React4(View, obj2)];
   const obj5 = { style: tmp3.sparkles, source: tmp10(8446) };
-  items1[1] = React4(tmp10(6020), obj5);
+  items1[1] = React4(tmp10(6010), obj5);
   obj.children = items1;
   return hasOwnProperty(View, obj);
 }

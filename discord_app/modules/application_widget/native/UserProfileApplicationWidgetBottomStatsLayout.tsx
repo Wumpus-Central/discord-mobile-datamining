@@ -58,7 +58,7 @@ export default function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
         const obj2 = { field: iter.value, variant: "body-sm/medium", color: "text-default", skeletonWidthChars: 8 };
         items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj2)];
         if ("value" === iter.label.status) {
-          Text = Text(5929).Text;
+          Text = Text(5919).Text;
           const obj3 = { variant: "body-xs/normal", color: "text-muted", style, children: null };
           iter = iter.label.text;
           obj3.children = iter;

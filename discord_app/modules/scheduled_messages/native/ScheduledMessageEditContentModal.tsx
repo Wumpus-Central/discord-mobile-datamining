@@ -104,8 +104,8 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             return obj;
           } else {
             if (value) {
-              v1(6848).pop();
-              const arr = v1(6848);
+              v1(6838).pop();
+              const arr = v1(6838);
             }
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };

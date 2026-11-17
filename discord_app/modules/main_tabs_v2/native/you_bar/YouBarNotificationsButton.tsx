@@ -34,7 +34,7 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   let onLongPress;
   const tmp = closure_10();
   value = useNotificationsTabBadgeDefault().value;
-  items = [closure_11, onLongPress(5939).withSpring, value, closure_6, nativeDefault];
+  items = [closure_11, onLongPress(5929).withSpring, value, closure_6, nativeDefault];
   onLongPress = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -136,7 +136,7 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   const obj6 = { style: tmp.iconContainer, children: null };
   const tmp16Result = closure_8(onLongPress(10996).BellIcon, obj2);
   const items4 = [
-    closure_8(onLongPress(19167).YouBarButtonIcon, {
+    closure_8(onLongPress(19169).YouBarButtonIcon, {
       icon: closure_8(onLongPress(10996).BellIcon, obj2),
       hasBadge: stateFromStores > 0 && 0 === value,
       badgeStyle: tmp.overdueReminderDot,
@@ -162,5 +162,5 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   obj4.onLongPress = onLongPress;
   obj4.hitSlop = hitSlop;
   obj5.children = closure_8(onLongPress(7988).IconButton, obj4);
-  return closure_8(onLongPress(19167).YouBarButtonContainer, obj5);
+  return closure_8(onLongPress(19169).YouBarButtonContainer, obj5);
 });

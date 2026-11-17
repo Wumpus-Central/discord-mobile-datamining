@@ -261,7 +261,7 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[25])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(6270).openAlert(
+                    closure_1_0(6260).openAlert(
                       "staff-to-non-staff-forward",
                       closure_1_15(forwardOptions(10265), {
                         onConfirm() {

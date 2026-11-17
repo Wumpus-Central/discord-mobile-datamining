@@ -22,11 +22,11 @@ const Constants = fn(1072);
 const EmojiIntention = fn(1391).EmojiIntention;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(5920).ReactionTypes.NORMAL] = _modDef11879;
-obj[fn(5920).ReactionTypes.BURST] = _modDef11880;
+obj[fn(5910).ReactionTypes.NORMAL] = _modDef11879;
+obj[fn(5910).ReactionTypes.BURST] = _modDef11880;
 let obj2 = {};
-obj2[fn(5920).ReactionTypes.NORMAL] = fn(10409).ReactionIcon;
-obj2[fn(5920).ReactionTypes.BURST] = fn(9558).SuperReactionIcon;
+obj2[fn(5910).ReactionTypes.NORMAL] = fn(10409).ReactionIcon;
+obj2[fn(5910).ReactionTypes.BURST] = fn(9558).SuperReactionIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
 

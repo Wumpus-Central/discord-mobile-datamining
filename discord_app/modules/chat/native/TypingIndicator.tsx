@@ -267,7 +267,7 @@ function TypingIndicatorInner(channel) {
       ellipsizeMode: "tail",
       children: tmp6Result,
     };
-    items14[1] = closure_12(tmp(5929).Text, obj9);
+    items14[1] = closure_12(tmp(5919).Text, obj9);
     obj8.children = items14;
     tmp33Result = closure_14(closure_13, obj8);
   }

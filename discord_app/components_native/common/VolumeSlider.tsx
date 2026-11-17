@@ -11,7 +11,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(6075).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_4 = fn(6065).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const PlatformUtils = fn(1380);

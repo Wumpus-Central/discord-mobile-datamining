@@ -8,7 +8,7 @@ import SystemNotifPermissionLayoutDefault from "../SystemNotifPermissionLayout.t
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(18105).initializeAndroidNotificationSettingsStore;
+let closure_4 = fn(18107).initializeAndroidNotificationSettingsStore;
 const MobileUserSettings = fn(9202).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);

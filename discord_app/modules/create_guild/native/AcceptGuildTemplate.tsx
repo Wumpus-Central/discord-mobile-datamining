@@ -47,8 +47,8 @@ function GuildTemplateResolved(guildTemplate) {
   const intl = guildTemplate(1113).intl;
   obj2.children = intl.string(guildTemplate(1113).t.QzUORX);
   const items1 = [
-    closure_11(guildTemplate(5929).Text, obj2),
-    closure_11(guildTemplate(5929).Text, {
+    closure_11(guildTemplate(5919).Text, obj2),
+    closure_11(guildTemplate(5919).Text, {
       style: tmp.description,
       variant: "body-lg/medium",
       color: "text-default",
@@ -92,7 +92,7 @@ function GuildTemplateResolved(guildTemplate) {
   const obj6 = { style: tmp.hint, variant: "body-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp10(1113).intl;
   obj6.children = intl3.format(guildTemplate(1113).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
-  items1[4] = closure_11(guildTemplate(5929).Text, obj6);
+  items1[4] = closure_11(guildTemplate(5919).Text, obj6);
   const obj8 = { style: tmp.createButtonWrapper, children: null };
   const obj9 = { size: "md", text: null, onPress: null, loading: null, disabled: null, grow: true };
   const intl4 = tmp10(1113).intl;
@@ -100,7 +100,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj9.onPress = createServer;
   obj9.loading = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj9.disabled = guildTemplate.state === GuildTemplateStates.ACCEPTING;
-  obj8.children = closure_11(guildTemplate(5936).Button, obj9);
+  obj8.children = closure_11(guildTemplate(5926).Button, obj9);
   items1[5] = closure_11(closure_4, obj8);
   items1[6] = closure_11(FormDividerDefault, { style: tmp.divider, outer: true });
   const obj11 = {
@@ -111,11 +111,11 @@ function GuildTemplateResolved(guildTemplate) {
   };
   const intl5 = tmp10(1113).intl;
   obj11.children = intl5.string(guildTemplate(1113).t.OGiMXJ);
-  items1[7] = closure_11(guildTemplate(5929).Text, obj11);
+  items1[7] = closure_11(guildTemplate(5919).Text, obj11);
   const obj12 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl6 = tmp10(1113).intl;
   obj12.children = intl6.string(guildTemplate(1113).t.Ztwyoz);
-  items1[8] = closure_11(guildTemplate(5929).Text, obj12);
+  items1[8] = closure_11(guildTemplate(5919).Text, obj12);
   items1[9] = closure_11(Channels, { channels: guildTemplate.serializedSourceGuild.channels });
   const obj14 = { style: tmp.sectionTip, variant: "body-xs/medium", color: "interactive-text-default", children: null };
   const obj15 = { style: tmp.protip, children: null };
@@ -126,7 +126,7 @@ function GuildTemplateResolved(guildTemplate) {
   const intl8 = tmp10(1113).intl;
   items3[1] = intl8.string(guildTemplate(1113).t.de7DpI);
   obj14.children = items3;
-  items1[10] = closure_12(guildTemplate(5929).Text, obj14);
+  items1[10] = closure_12(guildTemplate(5919).Text, obj14);
   let tmp7Result = null;
   if (found.length > 0) {
     const obj16 = { children: null };
@@ -138,11 +138,11 @@ function GuildTemplateResolved(guildTemplate) {
     };
     const intl9 = tmp10(1113).intl;
     obj17.children = intl9.string(tmp10(1113).t.mQ0H1p);
-    const items4 = [closure_11(tmp10(5929).Text, obj17), ,];
+    const items4 = [closure_11(tmp10(5919).Text, obj17), ,];
     const obj18 = { variant: "body-xs/medium", color: "text-default", children: null };
     const intl10 = tmp10(1113).intl;
     obj18.children = intl10.string(tmp10(1113).t.jOPEYC);
-    items4[1] = closure_11(tmp10(5929).Text, obj18);
+    items4[1] = closure_11(tmp10(5919).Text, obj18);
     const obj19 = { roles: found };
     items4[2] = closure_11(Roles, obj19);
     obj16.children = items4;

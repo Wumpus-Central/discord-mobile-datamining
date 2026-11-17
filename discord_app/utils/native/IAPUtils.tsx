@@ -532,7 +532,7 @@ let closure_21 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5997).convertToAlpha2;
+const convertToAlpha2 = fn(5987).convertToAlpha2;
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
 const NAMESPACE_SNOWFLAKE_UUID = fn(1390).NAMESPACE_SNOWFLAKE_UUID;

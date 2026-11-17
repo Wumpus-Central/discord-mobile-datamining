@@ -15,7 +15,7 @@ import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 
 require = fn;
 let closure_6 = fn(5236).GUILD_SELECTABLE_CHANNELS_KEY;
-const calculateLocaleOptions = fn(19309).calculateLocaleOptions;
+const calculateLocaleOptions = fn(19311).calculateLocaleOptions;
 const Constants = fn(1072);
 ({
   ChannelTypes: closure_12,
@@ -207,7 +207,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       onClose(8404).updateGuild({ rulesChannelId });
       const obj = onClose(8404);
       const obj2 = { rulesChannelId };
-      onClose(5552).hideActionSheet();
+      onClose(5542).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -234,7 +234,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       onClose(8404).updateGuild({ publicUpdatesChannelId });
       const obj = onClose(8404);
       const obj2 = { publicUpdatesChannelId };
-      onClose(5552).hideActionSheet();
+      onClose(5542).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
@@ -257,7 +257,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       onClose(8404).updateGuild({ safetyAlertsChannelId });
       const obj = onClose(8404);
       const obj2 = { safetyAlertsChannelId };
-      onClose(5552).hideActionSheet();
+      onClose(5542).hideActionSheet();
     };
     let id;
     if (safetyAlertsChannel != null) {

@@ -44,13 +44,13 @@ export function ChatProvisionalAccountExplainerCard(iconSize) {
   const intl = iconSize(1113).intl;
   obj4.children = intl.string(iconSize(1113).t.Iyka0U);
   const items2 = [
-    closure_5(iconSize(5929).Text, obj4),
+    closure_5(iconSize(5919).Text, obj4),
     closure_5(iconSize(7623).CircleErrorIcon, { size: "xs", color: "text-default" }),
   ];
   obj3.children = items2;
   const items3 = [
     closure_6(View, obj3),
-    closure_5(iconSize(5929).Text, {
+    closure_5(iconSize(5919).Text, {
       variant: "body-sm/normal",
       color: "text-default",
       children: provisionalAccountExplanationText,
@@ -78,7 +78,7 @@ export function UserProfileProvisionalAccountExplainerCard(iconSize) {
   const intl = iconSize(1113).intl;
   obj2.title = intl.string(iconSize(1113).t.Iyka0U);
   obj2.titleIcon = closure_5(iconSize(7623).CircleErrorIcon, { size: "xs", color: "text-default" });
-  obj2.children = closure_5(iconSize(5929).Text, {
+  obj2.children = closure_5(iconSize(5919).Text, {
     variant: "body-md/normal",
     color: "text-default",
     children: provisionalAccountExplanationText,

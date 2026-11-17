@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
 import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
-import LinearGradientDefault from "../../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05883_LinearGradient.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -156,10 +156,10 @@ export default function BannerBase(children) {
   if (tmp16Result) {
     const obj8 = { style: tmp.imageContainer, children: null };
     const obj9 = { style: tmp.trinketsLottie, source: tmp4(13394), autoPlay: !stateFromStores };
-    const items7 = [closure_7(tmp7(5923), obj9), image];
+    const items7 = [closure_7(tmp7(5913), obj9), image];
     obj8.children = items7;
     tmp16Result = closure_8(View, obj8);
-    const tmp7Result = tmp7(5923);
+    const tmp7Result = tmp7(5913);
   }
   items6[1] = tmp16Result;
   const items8 = [tmp.bannerTextContainer];

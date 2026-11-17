@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef6030 from "../../../../../_runtime/metro/06030__.js";
+import _modDef6020 from "../../../../../_runtime/metro/06020__.js";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
 import getInviteURLDefault from "../../getInviteURL.tsx";
 import MessageActionCreatorsDefault from "../../../../actions/MessageActionCreators.tsx";
@@ -104,7 +104,7 @@ items[1] = {
   type: obj.COPY,
   icon: _modDef10926,
   isAvailable: Promise.resolve(true),
-  IconComponent: _modDef6030,
+  IconComponent: _modDef6020,
   getLabel() {
     const intl = util.intl;
     return intl.string(util.t.WqhZss);
@@ -167,11 +167,11 @@ obj5.onPress = function onPress(channel) {
   let obj = channel(8460);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(5552).hideActionSheet();
-    let obj3 = code(5552);
+    code(5542).hideActionSheet();
+    let obj3 = code(5542);
   }
   obj2 = channel(1380);
-  tmp(6815).sendSMS({ body: message }, (arg0, arg1, arg2) => {
+  tmp(6805).sendSMS({ body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = {
         inviteKey: code,
@@ -199,7 +199,7 @@ obj5.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(6815);
+  const tmpResult = tmp(6805);
 };
 items[3] = obj5;
 const obj6 = { type: obj.MAIL, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
@@ -229,11 +229,11 @@ obj6.onPress = function onPress(channel) {
   let obj = channel(8460);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(5552).hideActionSheet();
-    let obj3 = code(5552);
+    code(5542).hideActionSheet();
+    let obj3 = code(5542);
   }
   obj2 = channel(1380);
-  tmp(6815).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
+  tmp(6805).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = {
         inviteKey: code,
@@ -261,7 +261,7 @@ obj6.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(6815);
+  const tmpResult = tmp(6805);
 };
 items[4] = obj6;
 const obj7 = { type: obj.FB_MESSENGER, fullIcon: _modDef15917, isAvailable: null, getLabel: null, onPress: null };

@@ -145,8 +145,8 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           return obj6;
         } else {
           const intl = user(1113).intl;
-          const obj8 = tmp4(6015);
-          const name = tmp4(6351).getName(closure_129_1, null, closure_129_0);
+          const obj8 = tmp4(6005);
+          const name = tmp4(6341).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";

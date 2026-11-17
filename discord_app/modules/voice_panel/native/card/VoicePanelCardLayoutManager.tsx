@@ -29,7 +29,7 @@ const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 } = VoicePanelConstants);
 const VoicePanelCardConstants = fn(11988);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 let closure_15 = {
   id: "invalid",
   type: VoicePanelCardItemType.PARTICIPANT,

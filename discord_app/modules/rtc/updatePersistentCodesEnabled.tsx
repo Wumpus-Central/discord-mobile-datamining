@@ -217,9 +217,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj4 = {
                         value: closure_1_9(closure_0, () => {
-                          c1(6935).disconnect();
-                          const obj = c1(6935);
-                          const voiceChannel = c1(6935).selectVoiceChannel(dependencyMap);
+                          c1(6925).disconnect();
+                          const obj = c1(6925);
+                          const voiceChannel = c1(6925).selectVoiceChannel(dependencyMap);
                         }),
                         done: false,
                       };

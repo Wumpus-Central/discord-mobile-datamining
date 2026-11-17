@@ -280,7 +280,7 @@ export default function useGuildProfileEditForm() {
                     const obj17 = { perks: null, content: null, contentSurface: null };
                     items = [constants.DISPLAY_NAME_STYLE];
                     obj17.perks = items;
-                    obj17.content = stateFromStores(5341).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
+                    obj17.content = stateFromStores(6957).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
                     obj17.contentSurface = stateFromStores(17085).HexagonCampaignContentSurface.GUILD_PROFILE;
                     const result2 = stateFromStores(17085).trackHexagonCampaignPerkAction(obj17);
                     const obj6 = stateFromStores(17085);
@@ -294,7 +294,7 @@ export default function useGuildProfileEditForm() {
                     }
                   }
                   if (null != avatar) {
-                    const aPIError = new stateFromStores(6757).APIError(closure_131_5);
+                    const aPIError = new stateFromStores(6747).APIError(closure_131_5);
                     const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("avatar");
                     stateFromStores = firstFieldErrorMessage;
                     if (firstFieldErrorMessage == null) {
@@ -334,7 +334,7 @@ export default function useGuildProfileEditForm() {
                 ok1 = closure_131_9.ok;
               }
               if (!ok1) {
-                const aPIError1 = new stateFromStores(6757).APIError(closure_131_9);
+                const aPIError1 = new stateFromStores(6747).APIError(closure_131_9);
                 firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
                 if (null != firstFieldErrorMessage2) {
                   const result4 =

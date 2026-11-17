@@ -4,9 +4,9 @@ import _modDef4131 from "../intl/ConjureUntranslated.messages.js";
 
 require = fn;
 const obj = {};
-obj[fn(5977).EmbeddedSurfaceType.APP_CHANNEL] = _modDef4131.xI4N6Q;
-obj[fn(5977).EmbeddedSurfaceType.VOICE_CHANNEL] = _modDef4131.oWMDh6;
-obj[fn(5977).EmbeddedSurfaceType.MAIN] = _modDef4131["0ICBnS"];
+obj[fn(5967).EmbeddedSurfaceType.APP_CHANNEL] = _modDef4131.xI4N6Q;
+obj[fn(5967).EmbeddedSurfaceType.VOICE_CHANNEL] = _modDef4131.oWMDh6;
+obj[fn(5967).EmbeddedSurfaceType.MAIN] = _modDef4131["0ICBnS"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewMode.tsx");
 

@@ -85,7 +85,7 @@ function ExperimentOverrideActionSheet(override) {
   });
 }
 const Image = fn(17).Image;
-const ExperimentEmbedType = fn(5533).ExperimentEmbedType;
+const ExperimentEmbedType = fn(5523).ExperimentEmbedType;
 const InviteTypes = fn(8842).InviteTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);

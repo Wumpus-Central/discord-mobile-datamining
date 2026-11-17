@@ -5,19 +5,17 @@ import SharedCaptchaUtils from "../../modules/captcha/SharedCaptchaUtils.tsx";
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import siteKeyDefault from "../../../_runtime/20150_siteKey.js";
+import siteKeyDefault from "../../../_runtime/20152_siteKey.js";
+import NativeCaptchaManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeCaptchaManagerModule.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import ThemeStore from "../../modules/user_settings/ThemeStore.tsx";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Keyboard: closure_4, NativeModules, NativeEventEmitter } = get_ActivityIndicator);
+const Keyboard = fn(17).Keyboard;
 const Constants = fn(1072);
-({ CaptchaEvent: metroImportDefault, RECAPTCHA_SITE_KEY: closure_8, AnalyticEvents: closure_9 } = Constants);
+({ RECAPTCHA_SITE_KEY: metroImportDefault, AnalyticEvents: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const CaptchaManager = NativeModules.CaptchaManager;
-const nativeEventEmitter = new NativeEventEmitter(CaptchaManager);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/CaptchaUtils.tsx");
 
@@ -28,7 +26,7 @@ export default {
       RECAPTCHA = V8APIError.CaptchaTypes.RECAPTCHA;
     }
     const self = this;
-    React4.dismiss();
+    Keyboard.dismiss();
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type: "CAPTCHA" });
     if (RECAPTCHA === V8APIError.CaptchaTypes.HCAPTCHA) {
       if (null != arg1) {
@@ -39,7 +37,7 @@ export default {
     showHcaptchaResult = self.showRecaptcha();
   },
   closeCaptcha() {
-    CaptchaManager.closeCaptcha();
+    NativeCaptchaManagerModuleDefault.closeCaptcha();
   },
   showHcaptcha(arg0, rqdata) {
     closure_0 = arg0;
@@ -62,8 +60,8 @@ export default {
       obj5.tags = items;
       rqdata(paths[7]).increment(obj5);
       let obj4 = rqdata(paths[7]);
-      rqdata(paths[14]).pushLazy(
-        sitekey(paths[16])(paths[15], paths.paths),
+      rqdata(paths[15]).pushLazy(
+        sitekey(paths[17])(paths[16], paths.paths),
         {
           siteKey: sitekey,
           onMessage(nativeEvent) {
@@ -126,19 +124,23 @@ export default {
       closure_2 = v4Result;
       const HCAPTCHA = self(1339).CaptchaTypes.HCAPTCHA;
       let obj = self(1269);
-      AnalyticsUtilsDefault.track(constants2.CAPTCHA_EVENT, {
+      AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, {
         captcha_event_name: "initial-load",
         captcha_service: HCAPTCHA,
         sitekey,
         captcha_flow_key: v4Result,
       });
       let obj3 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
-      const obj5 = { name: self(6776).MetricEvents.CAPTCHA_EVENT, tags: null };
+      const obj5 = { name: self(6766).MetricEvents.CAPTCHA_EVENT, tags: null };
       items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
       obj5.tags = items;
       MonitoringAgentDefault.increment(obj5);
-      CaptchaManager.showCaptcha(sitekey, theme.theme, "https://cdn.discordapp.com/recaptcha/ios.html");
-      nativeEventEmitter.addListener(constants.SOLVED, (arg0) => {
+      NativeCaptchaManagerModuleDefault.showCaptcha(
+        sitekey,
+        theme.theme,
+        "https://cdn.discordapp.com/recaptcha/ios.html",
+      );
+      NativeCaptchaManagerModuleDefault.onSolved((arg0) => {
         self.closeCaptcha();
         const RECAPTCHA = V8APIError.CaptchaTypes.RECAPTCHA;
         AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, {
@@ -154,7 +156,7 @@ export default {
         MonitoringAgentDefault.increment(obj4);
         closure_0(arg0);
       });
-      nativeEventEmitter.addListener(constants.EXPIRED, () => {
+      NativeCaptchaManagerModuleDefault.onExpired(() => {
         self.closeCaptcha();
         const EXPIRED = SharedCaptchaUtils.CaptchaError.EXPIRED;
         const RECAPTCHA = V8APIError.CaptchaTypes.RECAPTCHA;

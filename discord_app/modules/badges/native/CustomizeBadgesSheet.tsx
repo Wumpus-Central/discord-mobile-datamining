@@ -9,7 +9,7 @@ import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/desi
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05588_LegacyBaseButton.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
@@ -133,7 +133,7 @@ const Constants = fn(1072);
   AnalyticsPages: closure_10,
   AnalyticsSections: closure_11,
 } = Constants);
-const constants3 = fn(5567).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+const constants3 = fn(5557).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1390).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -429,8 +429,8 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
       closure_23,
       sharedValue,
       sharedValue2,
-      tmp2(5548).withTiming,
-      tmp2(5551).timingStandard,
+      tmp2(5538).withTiming,
+      tmp2(5541).timingStandard,
       sharedValue3,
     ];
     _require = undefined;
@@ -490,8 +490,8 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
       tmp2(15844).moveBadgeInDisplayOrder,
       badge_id,
       tmp2(1708).scheduleOnRN,
-      tmp2(5554).triggerHapticFeedback,
-      tmp2(5554).HapticFeedbackTypes,
+      tmp2(5544).triggerHapticFeedback,
+      tmp2(5544).HapticFeedbackTypes,
     ];
     _require = undefined;
     importDefault = undefined;
@@ -1114,7 +1114,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     tmp2(7937).BADGES_REORDER_ACTION_SHEET,
   ).analyticsLocations;
   noop = analyticsLocations;
-  const context = noop.useContext(tmp2(5897));
+  const context = noop.useContext(tmp2(5887));
   c4 = context;
   const items2 = [context, analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -1417,7 +1417,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const obj7 = { variant: "body-sm/normal", style: tmp.upsellText, children: null };
       const intl3 = tmp5(1113).intl;
       obj7.children = intl3.string(tmp5(1113).t.JrOki0);
-      obj6.children = memo2(tmp5(5929).Text, obj7);
+      obj6.children = memo2(tmp5(5919).Text, obj7);
       tmp56 = memo2(tmp2(17114), obj6);
       const tmp2Result = tmp2(17114);
     }
@@ -1493,7 +1493,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const obj11 = { variant: "body-md/normal", color: "text-muted", style: tmp.messageText, children: null };
       let intl = tmp5(1113).intl;
       obj11.children = intl.string(tmp5(1113).t["rTU7/z"]);
-      obj10.children = tmp51(tmp5(5929).Text, obj11);
+      obj10.children = tmp51(tmp5(5919).Text, obj11);
       let obj12 = obj10;
     } else {
       obj12 = { style: tmp.message, children: tmp51(tmp5(7418).ActivityIndicator, { animating: true, size: "large" }) };

@@ -1,16 +1,16 @@
 // discord_app/modules/checkpoint/native/useCheckpointPreloader.tsx
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef5454 from "../../../../discord_assets/assets/mana/rive/native/CheckpointFriends.riv.js";
-import _modDef5458 from "../../../../discord_assets/assets/mana/rive/native/CheckpointKnickKnacks.riv.js";
-import _modDef5460 from "../../../../discord_assets/assets/mana/rive/native/CheckpointNumbers.riv.js";
-import _modDef6402 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-purple.png.js";
-import _modDef6405 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-cyan.png.js";
-import _modDef6406 from "../../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js";
-import _modDef6407 from "../../../../discord_assets/assets/checkpoint/2026/clyde_small_static.png.js";
-import _modDef6408 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-pink.png.js";
-import _modDef6411 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-green.png.js";
-import _modDef6414 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js";
-import _modDef6417 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-yellow.png.js";
+import _modDef5444 from "../../../../discord_assets/assets/mana/rive/native/CheckpointFriends.riv.js";
+import _modDef5448 from "../../../../discord_assets/assets/mana/rive/native/CheckpointKnickKnacks.riv.js";
+import _modDef5450 from "../../../../discord_assets/assets/mana/rive/native/CheckpointNumbers.riv.js";
+import _modDef6392 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-purple.png.js";
+import _modDef6395 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-cyan.png.js";
+import _modDef6396 from "../../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js";
+import _modDef6397 from "../../../../discord_assets/assets/checkpoint/2026/clyde_small_static.png.js";
+import _modDef6398 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-pink.png.js";
+import _modDef6401 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-green.png.js";
+import _modDef6404 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js";
+import _modDef6407 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-yellow.png.js";
 import _modDef14263 from "../../../../discord_assets/assets/checkpoint/2026/checkpoint-bgm.mp3.js";
 import _modDef14268 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
 import _modDef14481 from "../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
@@ -34,16 +34,16 @@ const require = globalThis.__r;
 require = fn;
 const CheckpointFetchStates = fn(14253).CheckpointFetchStates;
 let items = [
-  _modDef5454,
-  _modDef5458,
-  _modDef5460,
+  _modDef5444,
+  _modDef5448,
+  _modDef5450,
   _modDef14268,
-  _modDef6402,
-  _modDef6405,
-  _modDef6408,
-  _modDef6411,
-  _modDef6414,
-  _modDef6417,
+  _modDef6392,
+  _modDef6395,
+  _modDef6398,
+  _modDef6401,
+  _modDef6404,
+  _modDef6407,
   _modDef14263,
   _modDef14492,
   _modDef14489,
@@ -51,8 +51,8 @@ let items = [
   _modDef14518,
   ...fn(14292).CHECKPOINT_ROUTE_SOUNDS,
 ];
-const items1 = [_modDef6406, _modDef14509, _modDef14502, _modDef14481, _modDef14525];
-const items2 = [_modDef6407, _modDef14510, _modDef14503, _modDef14482, _modDef14526];
+const items1 = [_modDef6396, _modDef14509, _modDef14502, _modDef14481, _modDef14525];
+const items2 = [_modDef6397, _modDef14510, _modDef14503, _modDef14482, _modDef14526];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointPreloader.tsx");
 

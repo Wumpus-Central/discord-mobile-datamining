@@ -7,7 +7,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import KeyboardChatScrollView from "../../../../_runtime/01644_KeyboardChatScrollView.js";
 import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import useKeyboardType from "useKeyboardType.tsx";
-import Portal from "../../../../_runtime/05508_Portal.js";
+import Portal from "../../../../_runtime/05498_Portal.js";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 

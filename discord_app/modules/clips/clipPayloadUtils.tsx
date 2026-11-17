@@ -13,7 +13,7 @@ const ClipsConstants = fn(8845);
   CLIP_RUNTIME: closure_8,
 } = ClipsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SpeakingFlags = fn(6075).SpeakingFlags;
+const SpeakingFlags = fn(6065).SpeakingFlags;
 const ServerClipGameEventType = {
   UNKNOWN: 0,
   [0]: "UNKNOWN",

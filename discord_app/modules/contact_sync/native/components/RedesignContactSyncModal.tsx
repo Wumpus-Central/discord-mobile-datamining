@@ -657,7 +657,7 @@ const ContactSyncModalStore = fn(14994);
 const ContactSyncConstants = fn(14995);
 ({ ContactPermissions: closure_12, ContactSyncScenes: map1 } = ContactSyncConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const NativePermissionTypes = fn(6902).NativePermissionTypes;
+const NativePermissionTypes = fn(6892).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(5306);
@@ -666,7 +666,7 @@ let obj2 = {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
-    paddingTop: fn(5892).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(5882).NAV_BAR_HEIGHT + 32,
   },
   landingTrailing: { textAlign: "center" },
 };

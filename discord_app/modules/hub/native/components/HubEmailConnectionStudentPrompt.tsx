@@ -47,7 +47,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   const obj6 = { source: null };
   const tmp2 = invite(7901);
   obj6.source = invite(15090);
-  obj5.leading = closure_6(invite(6020), obj6);
+  obj5.leading = closure_6(invite(6010), obj6);
   obj5.trailing = invite(7901).Arrow;
   const intl2 = onClose(1113).intl;
   obj5.label = intl2.string(onClose(1113).t["a7a/D+"]);
@@ -59,11 +59,11 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   };
   items[1] = closure_6(tmp2, obj5);
   const obj7 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
-  const tmp3 = invite(6020);
+  const tmp3 = invite(6010);
   const obj8 = { source: null };
   const tmp4 = invite(7901);
   obj8.source = invite(15091);
-  obj7.leading = closure_6(invite(6020), obj8);
+  obj7.leading = closure_6(invite(6010), obj8);
   obj7.trailing = invite(7901).Arrow;
   const intl4 = onClose(1113).intl;
   obj7.label = intl4.string(onClose(1113).t.GLG9n4);

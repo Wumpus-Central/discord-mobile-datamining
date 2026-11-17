@@ -419,7 +419,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       let obj5 = { uri: mobileBgUrl };
       obj3.source = obj5;
       obj3.style = tmp6.imageBackground;
-      let tmp38 = closure_11(tmp4(6020), obj3);
+      let tmp38 = closure_11(tmp4(6010), obj3);
       let tmp39 = closure_11;
       let tmp40 = closure_11;
     }
@@ -515,7 +515,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const intl3 = tmp2(1113).intl;
       const obj21 = { itemName: product.name };
       obj20.children = intl3.format(tmp2(1113).t.YNaxMp, obj21);
-      const items16 = [tmp40(tmp2(5929).Text, obj20)];
+      const items16 = [tmp40(tmp2(5919).Text, obj20)];
       const obj22 = { variant: "body-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
       let result = tmp2(8497).isPremiumCollectiblesProduct(product);
       const intl4 = tmp2(1113).intl;
@@ -530,7 +530,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       }
       const obj25 = { children: null };
       obj22.children = formatResult;
-      items16[1] = tmp40(tmp2(5929).Text, obj22);
+      items16[1] = tmp40(tmp2(5919).Text, obj22);
       obj25.children = items16;
       renderMessagesResult = closure_12(closure_13, obj25);
       const tmp2Result24 = tmp2(8497);
@@ -558,7 +558,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const intl = tmp2(1113).intl;
       obj29.text = intl.string(tmp2(1113).t["2p2aYz"]);
     }
-    obj27.children = tmp40(tmp2(5936).Button, obj29);
+    obj27.children = tmp40(tmp2(5926).Button, obj29);
     obj26.children = tmp40(closure_7, obj27);
     items12[2] = tmp40(closure_7, obj26);
     rect.children = items12;

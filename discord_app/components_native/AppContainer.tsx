@@ -12,7 +12,7 @@ import ManaContext from "../../discord_common/js/packages/design/components/Mana
 import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import getInitialNavigationStateDefault from "../modules/main_tabs_v2/native/getInitialNavigationState.tsx";
-import Portal from "../../_runtime/05508_Portal.js";
+import Portal from "../../_runtime/05498_Portal.js";
 import useThemeDefault from "../hooks/useTheme.tsx";
 import BackPressTracking from "../modules/routing/native/BackPressTracking.android.tsx";
 import ModalDispatchQueueDefault from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
@@ -201,8 +201,8 @@ const module_1655 = fn(1655);
 let obj3 = { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
 let result = module_1655.configureReanimatedLogger({ level: fn(1655).ReanimatedLogLevel.error, strict: false });
 try {
-  fn(6276).enableFreeze();
-  let obj6 = fn(6276);
+  fn(6266).enableFreeze();
+  let obj6 = fn(6266);
   let obj8 = { useTrackNavigatorScreenImpression: fn(17039).useTrackNavigatorScreenImpression };
   fn(7585).setDesignConfig(obj8);
   let c22 = false;
@@ -246,7 +246,7 @@ try {
       const obj = appEntryKey(1380);
     }, []);
     let obj = appEntryKey(17041);
-    const riveAppStatePlaybackExperiment = appEntryKey(18641).useRiveAppStatePlaybackExperiment("AppContainer");
+    const riveAppStatePlaybackExperiment = appEntryKey(18643).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {

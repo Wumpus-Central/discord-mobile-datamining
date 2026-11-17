@@ -45,8 +45,8 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
   });
   reportFalsePositive = explicitMediaActions.reportFalsePositive;
   if (stateFromStores.attachments.length <= 0) {
-    messageId(5552).hideActionSheet();
-    const obj4 = messageId(5552);
+    messageId(5542).hideActionSheet();
+    const obj4 = messageId(5542);
   }
   const items1 = [reportFalsePositive];
   const callback = noop.useCallback(() => {

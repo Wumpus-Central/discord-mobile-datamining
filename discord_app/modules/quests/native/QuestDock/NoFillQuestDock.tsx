@@ -25,7 +25,7 @@ export default function NoFillQuestDock(noFillDecision) {
       accessibilityElementsHidden: "no-hide-descendants",
       importantForAccessibility: "none",
       pointerEvents: null,
-      style: "mejeriprodukt",
+      style: "18.30",
     };
     items = [tmp.placeholder];
     const obj3 = { bottom: youBarTotalHeight - 1 };
@@ -37,7 +37,7 @@ export default function NoFillQuestDock(noFillDecision) {
         accessibilityElementsHidden="no-hide-descendants"
         importantForAccessibility="none"
         pointerEvents={null}
-        style="mejeriprodukt"
+        style="18.30"
       />
     );
   } else {

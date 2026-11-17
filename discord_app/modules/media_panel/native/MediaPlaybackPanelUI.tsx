@@ -5,7 +5,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05588_LegacyBaseButton.js";
 import LayerScope from "../../../design/components/Layers/native/LayerScope.native.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import cheapWorkletShallowEqual from "../../reanimated/native/cheapWorkletShallowEqual.tsx";

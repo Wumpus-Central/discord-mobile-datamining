@@ -58,7 +58,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
   const shopButtonRef = navigateToShop.shopButtonRef;
   items = [CollectiblesMarketingsStore];
   const stateFromStores = navigateToShop(563).useStateFromStores(items, () =>
-    marketingBySurface.getMarketingBySurface(navigateToShop(5987).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON),
+    marketingBySurface.getMarketingBySurface(navigateToShop(5977).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON),
   );
   let tmp4 = null != stateFromStores;
   if (tmp4) {

@@ -38,7 +38,7 @@ function AppInThisServer(onAppSelected) {
   }
   items = [
     tmp6,
-    closure_5(onAppSelected(5929).Text, {
+    closure_5(onAppSelected(5919).Text, {
       variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,

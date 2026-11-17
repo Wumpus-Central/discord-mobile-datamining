@@ -109,7 +109,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = closure_15();
   const obj = { style: tmp.container, children: null };
-  items = [closure_13(trackAnalyticsEvent(18373).SafetyChatSpotIllustration, {}), ,];
+  items = [closure_13(trackAnalyticsEvent(18375).SafetyChatSpotIllustration, {}), ,];
   const obj2 = { style: tmp.warningText, children: null };
   const obj3 = {
     variant: "heading-xl/semibold",
@@ -119,11 +119,11 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   };
   const intl = trackAnalyticsEvent(1113).intl;
   obj3.children = intl.string(trackAnalyticsEvent(1113).t.NUMAsF);
-  const items1 = [closure_13(trackAnalyticsEvent(5929).Text, obj3)];
+  const items1 = [closure_13(trackAnalyticsEvent(5919).Text, obj3)];
   const obj4 = { variant: "body-md/medium", style: tmp.takeoverDescription, children: null };
   const intl2 = trackAnalyticsEvent(1113).intl;
   obj4.children = intl2.string(trackAnalyticsEvent(1113).t.uicS5l);
-  items1[1] = closure_13(trackAnalyticsEvent(5929).Text, obj4);
+  items1[1] = closure_13(trackAnalyticsEvent(5919).Text, obj4);
   obj2.children = items1;
   items[1] = closure_14(closure_7, obj2);
   const obj5 = { style: tmp.ctaContainer, children: null };
@@ -134,7 +134,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     timestampProducer.openURL(React6);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_SMS);
   };
-  const items2 = [closure_13(trackAnalyticsEvent(5936).Button, obj6)];
+  const items2 = [closure_13(trackAnalyticsEvent(5926).Button, obj6)];
   const obj7 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1113).intl;
   obj7.text = intl4.string(trackAnalyticsEvent(1113).t.ogLlvy);
@@ -142,7 +142,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     timestampProducer.openURL(refs);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_WEB);
   };
-  items2[1] = closure_13(trackAnalyticsEvent(5936).Button, obj7);
+  items2[1] = closure_13(trackAnalyticsEvent(5926).Button, obj7);
   obj5.children = items2;
   items[2] = closure_14(closure_7, obj5);
   obj.children = items;

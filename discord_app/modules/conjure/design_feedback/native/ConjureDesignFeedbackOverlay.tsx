@@ -90,8 +90,8 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(5552).hideActionSheet(projectId(13362).CONJURE_DESIGN_REMARK_SHEET_KEY);
-        const obj = size(5552);
+        size(5542).hideActionSheet(projectId(13362).CONJURE_DESIGN_REMARK_SHEET_KEY);
+        const obj = size(5542);
       }
     };
   }, []);
@@ -229,7 +229,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     items6[1] = null;
     const obj5 = { style: tmp.hint, accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "body-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
-    obj5.children = tmp24(tmp16(5929).Text, obj6);
+    obj5.children = tmp24(tmp16(5919).Text, obj6);
     items6[2] = tmp24(tmp27, obj5);
     obj2.children = items6;
     obj.children = closure_9(tmp27, obj2);

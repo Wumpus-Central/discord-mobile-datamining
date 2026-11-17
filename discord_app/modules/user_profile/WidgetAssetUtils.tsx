@@ -1,9 +1,7 @@
 // discord_app/modules/user_profile/WidgetAssetUtils.tsx
-import Constants from "../../Constants.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const DEFAULT_CDN_HOST = Constants.DEFAULT_CDN_HOST;
 const result = size.fileFinishedImporting("modules/user_profile/WidgetAssetUtils.tsx");
 
 export function getWidgetAssetURL(arg0, fileId, arg2) {
@@ -15,16 +13,20 @@ export function getWidgetAssetURL(arg0, fileId, arg2) {
   if (flag === undefined) {
     flag = false;
   }
-  if (CDN_HOST == null) {
-    CDN_HOST = DEFAULT_CDN_HOST;
+  if (null != CDN_HOST) {
+    const _HermesInternal = HermesInternal;
+    let combined = "https://" + CDN_HOST;
+  } else {
+    const _location = location;
+    combined = location.protocol + tmp;
   }
-  let str = "webp";
+  let str2 = "webp";
   if (!AvatarUtils.SUPPORTS_WEBP) {
-    let str2 = "png";
+    let str3 = "png";
     if (flag) {
-      str2 = "gif";
+      str3 = "gif";
     }
-    str = str2;
+    str2 = str3;
   }
-  return "https://" + CDN_HOST + "/widget-assets/" + arg0 + "/" + fileId + "?format=" + str + "&animated=" + flag;
+  return "" + combined + "/widget-assets/" + arg0 + "/" + fileId + "?format=" + str2 + "&animated=" + flag;
 }

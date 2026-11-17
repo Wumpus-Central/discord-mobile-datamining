@@ -75,7 +75,7 @@ export default function StageChannelUpsell(arg0) {
     const obj8 = {
       suggestionsHook(children, arg1) {
         return closure_1_9(
-          guildId(5929).Text,
+          guildId(5919).Text,
           { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children },
           arg1,
         );

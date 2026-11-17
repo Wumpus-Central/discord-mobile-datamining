@@ -82,7 +82,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
         metroImportDefault.dismiss();
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(20581, dependencyMap.paths),
+          asyncRequireImpl(20584, dependencyMap.paths),
           "role-permission-templates-" + guild.id + "-" + role.id,
           { permissionsEdited, onPermissionsChanged, guildId: guild.id },
         );
@@ -91,11 +91,11 @@ export default function GuildSettingsRoleEditPermission(guild) {
     };
     obj5.onTemplateOpen = obj6;
     obj4.children = intl.format(guild(1113).t.ZhSOBy, obj5);
-    tmp18Result = closure_14(guild(5929).Text, obj4);
+    tmp18Result = closure_14(guild(5919).Text, obj4);
   }
   canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
   const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
-  const guildPermissionSpec = role(19699).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(19701).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -108,7 +108,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(20578), { role }), , ,];
+  const children = [closure_14(role(20581), { role }), , ,];
   const obj7 = {
     children: closure_14(guild(7825).SearchBar, {
       size: "md",

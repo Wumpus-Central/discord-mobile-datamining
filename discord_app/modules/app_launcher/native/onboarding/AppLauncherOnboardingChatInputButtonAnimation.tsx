@@ -71,8 +71,8 @@ let items = [
   {
     code: "(function EnteringAnimation_AppLauncherOnboardingChatInputButtonAnimationTsx1(){let[withTiming,timingStandard]=this.__closure;const initialValues={opacity:0};const animations={opacity:withTiming(1,timingStandard)};return{initialValues:initialValues,animations:animations};})",
   },
-  fn(5548).withTiming,
-  fn(5551).timingStandard,
+  fn(5538).withTiming,
+  fn(5541).timingStandard,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -93,8 +93,8 @@ let items2 = [
   {
     code: "(function ExitingAnimation_AppLauncherOnboardingChatInputButtonAnimationTsx2(){let[withTiming,timingStandard]=this.__closure;const initialValues={opacity:1};const animations={opacity:withTiming(0,timingStandard)};return{initialValues:initialValues,animations:animations};})",
   },
-  fn(5548).withTiming,
-  fn(5551).timingStandard,
+  fn(5538).withTiming,
+  fn(5541).timingStandard,
 ];
 let closure_130_0;
 let closure_130_1;

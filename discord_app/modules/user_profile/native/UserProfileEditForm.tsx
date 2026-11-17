@@ -836,7 +836,7 @@ function UserProfileEditFormContent(currentUser) {
     items9[2] = tmp25;
     obj16.children = items9;
     obj15.children = tmp51(tmp52, obj16);
-    return tmp50(tmp4(5377).ThemeContextProvider, obj15);
+    return tmp50(tmp4(5367).ThemeContextProvider, obj15);
   } else if (enabled) {
     tmp = UserProfilePremiumTryItOutUpsellDefault;
     obj = {
@@ -868,7 +868,7 @@ let obj = {
   imageUri: _modDef17066,
   staticImageUri: _modDef17066,
   description: "",
-  originalAsset: "__d",
+  originalAsset: "alignItems",
 };
 let closure_23 = {
   code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})",

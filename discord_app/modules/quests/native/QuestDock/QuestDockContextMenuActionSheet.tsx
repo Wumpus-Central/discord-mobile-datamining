@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockContextMenuActionSheet.tsx
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
@@ -111,7 +111,7 @@ function QuestDockPreviewTools(quest) {
   items[5] = closure_6(quest(7953).ActionSheetRow, obj18);
   const obj21 = { icon: null, label: null, onPress: null };
   const obj19 = { IconComponent: quest(7635).EyeIcon };
-  obj21.icon = closure_6(quest(7953).ActionSheetRow.Icon, { IconComponent: quest(6033).CopyIcon });
+  obj21.icon = closure_6(quest(7953).ActionSheetRow.Icon, { IconComponent: quest(6023).CopyIcon });
   const obj23 = { text: null };
   const intl8 = quest(1113).intl;
   obj23.text = intl8.string(quest(1113).t.oisrFi);
@@ -127,7 +127,7 @@ function QuestDockPreviewTools(quest) {
 function QuestDockShareRow(quest) {
   quest = quest.quest;
   let obj = {
-    icon: closure_6(quest(7953).ActionSheetRow.Icon, { IconComponent: quest(6033).CopyIcon }),
+    icon: closure_6(quest(7953).ActionSheetRow.Icon, { IconComponent: quest(6023).CopyIcon }),
     label: null,
     onPress: null,
   };
@@ -180,7 +180,7 @@ function QuestDockDisclosureRow(creative) {
   };
   return closure_6(creative(7953).ActionSheetRow, obj);
 }
-const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6954).QuestsExperimentLocations;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -339,29 +339,29 @@ export default function QuestDockContextMenuActionSheet(creative) {
           } else {
             trackInternalClick(tmp2(8834).QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT);
             const type = creative.type;
-            if (tmp2(5345).AdCreativeType.QUEST === type) {
+            if (tmp2(6961).AdCreativeType.QUEST === type) {
               const obj7 = tmp2(10133);
               const dismissQuestContentResult = tmp2(10133).dismissQuestContent(
                 creative.quest.id,
-                tmp2(5341).QuestContent.QUEST_BAR_MOBILE,
+                tmp2(6957).QuestContent.QUEST_BAR_MOBILE,
               );
-              v2(5552).hideActionSheet();
+              v2(5542).hideActionSheet();
               v2 = 1;
               dependencyMap = 1;
               const obj9 = { value: dismissQuestContentResult, done: false };
               return obj9;
             } else {
-              if (tmp2(5345).AdCreativeType.BOUNTY !== type) {
-                if (tmp2(5345).AdCreativeType.PLAYABLE !== type) {
+              if (tmp2(6961).AdCreativeType.BOUNTY !== type) {
+                if (tmp2(6961).AdCreativeType.PLAYABLE !== type) {
                   dependencyMap = 3;
                 }
               }
               const obj4 = tmp2(15256);
               const dismissAdContentResult = tmp2(15256).dismissAdContent(
                 closure_1,
-                tmp2(5341).QuestContent.QUEST_BAR_MOBILE,
+                tmp2(6957).QuestContent.QUEST_BAR_MOBILE,
               );
-              v2(5552).hideActionSheet();
+              v2(5542).hideActionSheet();
               v2 = 2;
               dependencyMap = 1;
               const obj10 = { value: dismissAdContentResult, done: false };

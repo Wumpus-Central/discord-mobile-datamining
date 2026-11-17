@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = "#2ECC71";
-let result = (fn(5942).SMALL_BUTTON_HEIGHT - 4) / 2;
+let result = (fn(5932).SMALL_BUTTON_HEIGHT - 4) / 2;
 const strokeDasharray = 2 * Math.PI * result;
 const Easing = fn(1655).Easing;
 let closure_10 = Easing.bezier(0.15, 0.21, 0.58, 1);
@@ -36,8 +36,8 @@ let size = {
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
   borderRadius: nativeDefault.radii.round,
-  width: fn(5942).SMALL_BUTTON_HEIGHT,
-  height: fn(5942).SMALL_BUTTON_HEIGHT,
+  width: fn(5932).SMALL_BUTTON_HEIGHT,
+  height: fn(5932).SMALL_BUTTON_HEIGHT,
 };
 obj.progress = size;
 let obj3 = { position: "absolute", transform: null };

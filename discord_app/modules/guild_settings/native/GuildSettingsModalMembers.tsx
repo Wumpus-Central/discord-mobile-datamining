@@ -58,10 +58,10 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     let formatToPlainStringResult;
     if (found.length > 0) {
       const user = UserStore.getUser(guildMember.userId);
-      let str = guildMember(6351).getNickname(guild.id, undefined, user);
+      let str = guildMember(6341).getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(5372).getGlobalName(user);
-        const tmp9Result = tmp9(5372);
+        str = tmp9(5362).getGlobalName(user);
+        const tmp9Result = tmp9(5362);
       }
       if (str == null) {
         let username;
@@ -78,7 +78,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
       const intl = tmp2(1113).intl;
       const obj3 = { memberName: str, roleNames: joined };
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1113).t["6eGpWx"], obj3);
-      const obj2 = guildMember(6351);
+      const obj2 = guildMember(6341);
       tmp9 = guildMember;
     }
     const obj4 = {

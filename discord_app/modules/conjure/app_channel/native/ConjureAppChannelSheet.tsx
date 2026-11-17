@@ -376,10 +376,10 @@ export default noop.memo(function ConjureAppChannelSheet(channelId) {
     const obj5 = { spacing: stateFromStores(575).space.PX_24, children: null };
     const obj6 = { channel: stateFromStores };
     obj5.children = closure_10(ConjureAppChannelSheetContent, obj6);
-    obj4.children = closure_10(tmp2(6337).Stack, obj5);
+    obj4.children = closure_10(tmp2(6327).Stack, obj5);
     obj3.children = closure_10(tmp2(7415).SafeAreaPaddingView, obj4);
-    obj2.children = closure_10(tmp2(5570).BottomSheetScrollView, obj3);
-    tmp6 = closure_10(tmp2(5566).BottomSheet, obj2);
+    obj2.children = closure_10(tmp2(5560).BottomSheetScrollView, obj3);
+    tmp6 = closure_10(tmp2(5556).BottomSheet, obj2);
   }
   return tmp6;
 });

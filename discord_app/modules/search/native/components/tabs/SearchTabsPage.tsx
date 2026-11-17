@@ -36,8 +36,8 @@ function SearchTabsPage(selectMediaTab) {
     return ChannelStore.getChannel(channelId);
   });
   const obj = searchContext(504);
-  const isChannelSpoilerGated = searchContext(6858).useIsChannelSpoilerGated(stateFromStores);
-  searchContext(6838);
+  const isChannelSpoilerGated = searchContext(6848).useIsChannelSpoilerGated(stateFromStores);
+  searchContext(6828);
   if (tmp2) {
     if (tab !== SearchTabs.MEMBERS) {
       if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -73,7 +73,7 @@ function SearchTabsPage(selectMediaTab) {
       return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
     } else if (SearchTabs.THREADS === tab) {
       const obj12 = { searchContext };
-      return jsx(searchContext(19550).SearchTabsThreadScreen, { searchContext });
+      return jsx(searchContext(19552).SearchTabsThreadScreen, { searchContext });
     } else if (SearchTabs.MESSAGES === tab) {
       const obj26 = { tab, searchContext, isFocused };
       return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });
@@ -86,7 +86,7 @@ function SearchTabsPage(selectMediaTab) {
   } else {
     return null;
   }
-  const obj2 = searchContext(6858);
+  const obj2 = searchContext(6848);
 }
 const View = fn(17).View;
 const SearchTabs = fn(9066).SearchTabs;

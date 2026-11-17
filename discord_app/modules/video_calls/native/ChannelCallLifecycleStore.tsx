@@ -14,22 +14,22 @@ let size = {
   x: "Array",
   y: "s",
   width: "channelId",
-  height: "type",
+  height: "e",
   screenOrientation: fn(10041).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: 858992913,
-  isInitialized: 858993459,
-  isVisible: 2138128424,
+  hasUserInteractedSinceOrientationChange: 422417,
+  isInitialized: 8060928,
+  isVisible: 1359020032,
 };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
   y: "s",
   width: "channelId",
-  height: "type",
+  height: "e",
   screenOrientation: fn(10041).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: 858992913,
-  isInitialized: 858993459,
-  isVisible: 2138128424,
+  hasUserInteractedSinceOrientationChange: 422417,
+  isInitialized: 8060928,
+  isVisible: 1359020032,
 };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 let c10 = true;

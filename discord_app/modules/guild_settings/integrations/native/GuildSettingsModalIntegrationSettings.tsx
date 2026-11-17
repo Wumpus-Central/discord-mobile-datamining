@@ -7,7 +7,7 @@ import TableRowGroup from "../../../../design/components/TableRow/native/TableRo
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
-import _modDef20544 from "../../../../../_runtime/metro/20544__.js";
+import _modDef20547 from "../../../../../_runtime/metro/20547__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 import GuildSettingsStore from "../../GuildSettingsStore.tsx";
@@ -33,7 +33,7 @@ function ForceSyncIcon(isSyncing) {
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t["+Josox"]);
     obj.onPress = tmp;
-    const obj2 = { source: _modDef20544 };
+    const obj2 = { source: _modDef20547 };
     obj.children = timestampProducer(TableRow.TableRow.Icon, obj2);
     tmp2Result = timestampProducer(Pressables.PressableOpacity, obj);
   }
@@ -122,7 +122,7 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     let intl = integration(1113).intl;
     obj.label = intl.string(integration(1113).t.eBtNBa);
     const obj2 = { style: iter.value, variant: "body-md/medium", color: "text-muted", children: tmp.name };
-    obj.trailing = closure_6(integration(5929).Text, obj2);
+    obj.trailing = closure_6(integration(5919).Text, obj2);
     const tmp2 = closure_6(integration(7443).TableRow, obj);
   }
   if ("youtube" === integration.type) {
@@ -151,7 +151,7 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
   value = self(7087).get(integration.type);
   if (null == value) {
     const _Object = Object;
-    const values = Object.values(tmp12(20543).IntegrationExpireGracePeriodTypes);
+    const values = Object.values(tmp12(20546).IntegrationExpireGracePeriodTypes);
     const found = values.filter(function isInteger(item) {
       return Number.isInteger(item);
     });
@@ -204,11 +204,11 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
       hasIcons: false,
       children: null,
     };
-    const obj17 = { value: tmp15(20545).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
+    const obj17 = { value: tmp15(20548).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
     const intl6 = tmp15(1113).intl;
     obj17.label = intl6.string(tmp15(1113).t["6kpw4i"]);
     const items3 = [closure_6(tmp15(7747).TableRadioRow, obj17)];
-    const obj18 = { value: tmp15(20545).IntegrationExpireBehaviorTypes.KICK, label: null };
+    const obj18 = { value: tmp15(20548).IntegrationExpireBehaviorTypes.KICK, label: null };
     const intl7 = tmp15(1113).intl;
     obj18.label = intl7.string(tmp15(1113).t.fQUQIJ);
     items3[1] = closure_6(tmp15(7747).TableRadioRow, obj18);
@@ -223,12 +223,12 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     items1[3] = closure_6(tmp15(7746).TableRowGroup, obj19);
     items1[4] = tmp13;
     obj6.children = items1;
-    obj5.children = closure_7(tmp15(6337).Stack, obj6);
-    const items4 = [closure_6(tmp15(8106).Form, obj5), closure_6(tmp15(5912).NavScrim, {})];
+    obj5.children = closure_7(tmp15(6327).Stack, obj6);
+    const items4 = [closure_6(tmp15(8106).Form, obj5), closure_6(tmp15(5902).NavScrim, {})];
     obj13.children = items4;
     return closure_7(closure_8, obj13);
   } else {
-    const tmp16Result = tmp16(6020);
+    const tmp16Result = tmp16(6010);
     const tmp15Result = tmp15(1414);
     const tmp15Result2 = tmp15(5313);
     const icon = { source: null, style: null };
@@ -239,7 +239,7 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
   }
   const obj3 = self(7087);
 };
-GuildSettingsModalIntegrationSettings.contextType = fn(5377).ThemeContext;
+GuildSettingsModalIntegrationSettings.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_settings/integrations/native/GuildSettingsModalIntegrationSettings.tsx",

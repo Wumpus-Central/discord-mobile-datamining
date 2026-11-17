@@ -136,8 +136,8 @@ function handleLongPressCommandMention(arg0, arg1) {
 }
 const AppLauncherNativeConstants = fn(1501);
 ({ AppLauncherRouteName: hasOwnProperty, useAppLauncherNavigation: closure_6 } = AppLauncherNativeConstants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(6345).SUB_COMMAND_KEY_SEPARATOR;
-const COMMAND_SENTINEL = fn(6346).COMMAND_SENTINEL;
+const SUB_COMMAND_KEY_SEPARATOR = fn(6335).SUB_COMMAND_KEY_SEPARATOR;
+const COMMAND_SENTINEL = fn(6336).COMMAND_SENTINEL;
 const jsxs = fn(21).jsxs;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/native/MarkupReactCommandRule.tsx");
@@ -208,7 +208,7 @@ export default function MarkupReactCommandRule(node) {
   };
   items = ["/", node(9355).smartOutput(node, output, state)];
   obj.children = items;
-  return jsxs(node(5929).Text, {
+  return jsxs(node(5919).Text, {
     style,
     variant: "body-md/semibold",
     onPress() {

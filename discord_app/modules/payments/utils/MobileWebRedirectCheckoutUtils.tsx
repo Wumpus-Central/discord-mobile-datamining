@@ -1,7 +1,7 @@
 // discord_app/modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
-import _mod5355 from "../../../../_runtime/metro/05355__.js";
+import _mod5345 from "../../../../_runtime/metro/05345__.js";
 import PaymentConstants from "../PaymentConstants.tsx";
 import keysSorter from "../../../../_runtime/06966_keysSorter.js";
 import Constants from "../../../Constants.tsx";
@@ -29,7 +29,7 @@ export function getCustomCheckoutFlowForAnalytics() {
     : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
 }
 export function useGetCustomCheckoutFlow() {
-  const _location = _mod5355.useLocation();
+  const _location = _mod5345.useLocation();
   ({ pathname, search } = _location);
   const parsed = keysSorter.parse(search);
   ({ deep_link_type, flow_type } = parsed);

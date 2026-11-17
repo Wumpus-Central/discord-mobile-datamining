@@ -6,7 +6,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;
-const SoundboardStyleConstants = fn(19211);
+const SoundboardStyleConstants = fn(19213);
 ({ SOUNDS_PER_ROW: closure_6, SOUND_ROW_PADDING: metroImportDefault } = SoundboardStyleConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
@@ -53,8 +53,8 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
               return obj5;
             } else if (c0) {
               const FrecencyUserSettingsActionCreators = shouldFetch(5136).FrecencyUserSettingsActionCreators;
-              shouldFetch(5436).ignoreErrors(FrecencyUserSettingsActionCreators.loadIfNecessary());
-              const obj2 = shouldFetch(5436);
+              shouldFetch(5426).ignoreErrors(FrecencyUserSettingsActionCreators.loadIfNecessary());
+              const obj2 = shouldFetch(5426);
               c1 = 1;
               c0 = 1;
               const obj6 = { value: shouldFetch(7226).maybeFetchSoundboardSounds(), done: false };

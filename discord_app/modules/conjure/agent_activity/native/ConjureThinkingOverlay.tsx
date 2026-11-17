@@ -116,7 +116,7 @@ export default function ConjureThinkingOverlay(projectId) {
   const obj8 = { variant: "body-sm/semibold", color: "text-strong", children: null };
   const intl = tmp2(1113).intl;
   obj8.children = intl.string(_modDef4131.XXYIeI);
-  items2[1] = closure_7(projectId(5929).Text, obj8);
+  items2[1] = closure_7(projectId(5919).Text, obj8);
   obj6.children = items2;
   const items3 = [closure_8(closure_5, obj6)];
   if ("" !== text) {
@@ -126,7 +126,7 @@ export default function ConjureThinkingOverlay(projectId) {
     const obj10 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl2 = tmp2(1113).intl;
     obj10.children = intl2.string(_modDef4131.LfoD6c);
-    tmp6Result = closure_7(tmp2(5929).Text, obj10);
+    tmp6Result = closure_7(tmp2(5919).Text, obj10);
   }
   const obj7 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
   items3[1] = tmp6Result;

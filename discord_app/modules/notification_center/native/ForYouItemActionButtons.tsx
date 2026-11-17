@@ -484,7 +484,7 @@ export function useItemActionButtonPropsV2(
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
       closure_1(16285)({
-        payload: closure_1(6048)("https://discord.com/channels/@me/" + channelId).payload,
+        payload: closure_1(6038)("https://discord.com/channels/@me/" + channelId).payload,
         safe: true,
         navigationReplace: false,
       });

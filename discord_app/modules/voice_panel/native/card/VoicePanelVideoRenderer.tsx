@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelVideoRenderer.tsx
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
@@ -19,7 +19,7 @@ const VoicePanelConstants = fn(11985);
 let VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(19909).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19911).VoicePanelPIPModes;
 const SCALE_PHYSICS = fn(11986).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

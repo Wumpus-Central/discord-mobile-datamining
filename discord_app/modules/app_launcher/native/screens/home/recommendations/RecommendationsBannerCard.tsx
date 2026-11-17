@@ -151,7 +151,7 @@ export default function RecommendationsBannerCard(application) {
         const obj14 = { variant: "footnote/medium", color: "mobile-text-heading-primary", children: null };
         const intl = tmp4(1113).intl;
         obj14.children = intl.string(tmp4(1113).t["/eVltv"]);
-        obj13.children = closure_6(tmp4(5929).Text, obj14);
+        obj13.children = closure_6(tmp4(5919).Text, obj14);
         showsPromoted = closure_6(View, obj13);
       }
       items3[1] = showsPromoted;
@@ -177,9 +177,9 @@ export default function RecommendationsBannerCard(application) {
       lineClamp: 1,
       children: application.name,
     };
-    const items6 = [closure_6(tmp4(5929).Text, obj18)];
+    const items6 = [closure_6(tmp4(5919).Text, obj18)];
     const obj19 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 1, children: application.description };
-    items6[1] = closure_6(tmp4(5929).Text, obj19);
+    items6[1] = closure_6(tmp4(5919).Text, obj19);
     obj17.children = items6;
     items5[1] = closure_7(View, obj17);
     items5[2] = closure_6(tmp4(7456).TableRowArrow, {});

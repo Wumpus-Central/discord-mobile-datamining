@@ -65,13 +65,13 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   const intl3 = tmp2(1113).intl;
   obj5.text = intl3.string(guildId(1113).t.h3aGmv);
   obj5.onPress = callback;
-  const items4 = [closure_5(guildId(5936).Button, obj5)];
+  const items4 = [closure_5(guildId(5926).Button, obj5)];
   const obj6 = { text: null, variant: "destructive", onPress: null };
   const intl4 = tmp2(1113).intl;
   obj6.text = intl4.string(guildId(1113).t.OQFlFD);
   obj6.onPress = callback1;
-  items4[1] = closure_5(guildId(5936).Button, obj6);
+  items4[1] = closure_5(guildId(5926).Button, obj6);
   obj4.children = items4;
   obj3.buttons = closure_7(closure_6, obj4);
-  return closure_5(onClose(6928), obj3);
+  return closure_5(onClose(6918), obj3);
 }

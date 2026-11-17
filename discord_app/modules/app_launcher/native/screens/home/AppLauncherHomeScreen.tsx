@@ -57,13 +57,13 @@ function AppRowLabel(renderedName) {
       lineClamp: 1,
       children: renderedName,
     };
-    items = [expandedHeight(Text_Text.Text, obj3)];
+    items = [closure_1_19(Text_Text.Text, obj3)];
     const obj4 = { style: tmp.promotedLabel, children: null };
     const obj5 = { variant: "footnote/semibold", color: "text-muted", children: null };
     const intl = util.intl;
     obj5.children = intl.string(util.t["/eVltv"]);
-    obj4.children = expandedHeight(Text_Text.Text, obj5);
-    items[1] = expandedHeight(timestampProducer, obj4);
+    obj4.children = closure_1_19(Text_Text.Text, obj5);
+    items[1] = closure_1_19(timestampProducer, obj4);
     obj2.children = items;
     let tmp5 = dependencyMap(timestampProducer, obj2);
   } else {
@@ -73,7 +73,7 @@ function AppRowLabel(renderedName) {
       lineClamp: 1,
       children: renderedName,
     };
-    tmp5 = expandedHeight(Text_Text.Text, obj);
+    tmp5 = closure_1_19(Text_Text.Text, obj);
   }
   return tmp5;
 }
@@ -135,7 +135,7 @@ class BaseAppRow {
         };
         const result = MessagePreviewMarkup.renderMeasuredMessagePreviewMarkup(obj2);
         ({ mentions: obj5.mentions, content: obj5.children } = result);
-        tmp4 = expandedHeight(MessagePreviewParagraph.MessagePreviewParagraph, {
+        tmp4 = closure_2_19(MessagePreviewParagraph.MessagePreviewParagraph, {
           variant: "body-xs/medium",
           color: "text-subtle",
           lineClamp: 1,
@@ -178,7 +178,7 @@ function AppRow(isLastRow) {
   if (flag === undefined) {
     flag = false;
   }
-  return expandedHeight(BaseAppRow, {
+  return closure_1_19(BaseAppRow, {
     application: section.application,
     iconSource: AppLauncherNativeUtils.getAppLauncherIconSource(section.application),
     onPress: isLastRow.onPress,
@@ -224,7 +224,7 @@ function ActivityRow(section) {
       };
       const result = MessagePreviewMarkup.renderMeasuredMessagePreviewMarkup(obj2);
       ({ mentions: obj4.mentions, content: obj4.children } = result);
-      tmp3 = expandedHeight(MessagePreviewParagraph.MessagePreviewParagraph, {
+      tmp3 = closure_2_19(MessagePreviewParagraph.MessagePreviewParagraph, {
         variant: "body-xs/medium",
         color: "text-subtle",
         lineClamp: 1,
@@ -274,7 +274,7 @@ function ActivityItemTuple(arg0) {
   items = [containerWidth];
   let size = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "disabled", height: "isArray" };
+      return { width: "Array", height: "Path" };
     } else {
       const tmp5 = roundToNearestPixelDefault(tmp / 2 - DEFAULT_CONTENT_PADDING - 6);
       const size = { width: tmp5, height: roundToNearestPixelDefault(tmp5 / c22) };
@@ -462,7 +462,7 @@ function RecommendationItemTuple(isLastTuple) {
   const items1 = [containerWidth, num];
   styles = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "disabled", height: "isArray" };
+      return { width: "Array", height: "Path" };
     } else {
       const tmp6 = roundToNearestPixelDefault((tmp - 2 * DEFAULT_CONTENT_PADDING - 12 * (2 - 1)) / 2);
       const size = { width: tmp6, height: roundToNearestPixelDefault(tmp6 / c22) };
@@ -475,7 +475,7 @@ function RecommendationItemTuple(isLastTuple) {
     children: items.map((item, index) => {
       const obj = {
         style: null,
-        children: expandedHeight(RecommendationItem, {
+        children: closure_2_19(RecommendationItem, {
           context,
           sectionName,
           onPress,
@@ -487,7 +487,7 @@ function RecommendationItemTuple(isLastTuple) {
       };
       items = [closure_5.activityItemTupleShelfItemContainer, { width: styles.width }];
       obj.style = items;
-      return expandedHeight(timestampProducer, obj, "" + item.application.id + "-" + index);
+      return closure_2_19(timestampProducer, obj, "" + item.application.id + "-" + index);
     }),
   });
 }
@@ -522,7 +522,7 @@ function RecommendationItem(onPress) {
     first = tmp5[0];
   }
   if (first) {
-    let tmp13 = expandedHeight(BrokenImageDefault, {});
+    let tmp13 = closure_1_19(BrokenImageDefault, {});
   } else {
     tmp13 = null;
     if (!tmp12) {
@@ -536,7 +536,7 @@ function RecommendationItem(onPress) {
       };
       const obj7 = { uri: tmp8Result.url };
       obj6.source = obj7;
-      tmp13 = expandedHeight(FastImageDefault, obj6);
+      tmp13 = closure_1_19(FastImageDefault, obj6);
     }
   }
   const obj8 = { style: tmp.activityItemContainer, onPress: callback, children: null };
@@ -556,7 +556,7 @@ function RecommendationItem(onPress) {
     const obj10 = { labelType: null };
     const tmp7Result = ActivityShelfBadgeDefault;
     obj10.labelType = AppLauncherUtils.getShelfBadgeTypeIfActive(application);
-    isActivityAppResult = expandedHeight(tmp7Result, obj10);
+    isActivityAppResult = closure_1_19(tmp7Result, obj10);
     const tmp2Result = AppLauncherUtils;
   }
   items2[1] = isActivityAppResult;
@@ -564,13 +564,13 @@ function RecommendationItem(onPress) {
   const items3 = [dependencyMap(timestampProducer, obj9)];
   const obj11 = {
     style: tmp.activityDetailsContainer,
-    children: expandedHeight(Text_Text.Text, {
+    children: closure_1_19(Text_Text.Text, {
       variant: "heading-xs/semibold",
       color: "mobile-text-heading-primary",
       children: application.name,
     }),
   };
-  items3[1] = expandedHeight(timestampProducer, obj11);
+  items3[1] = closure_1_19(timestampProducer, obj11);
   obj8.children = items3;
   return dependencyMap(native.PressableScale, obj8);
 }
@@ -582,7 +582,7 @@ function Divider() {
     { marginLeft: -DEFAULT_CONTENT_PADDING - rect.left, marginRight: -DEFAULT_CONTENT_PADDING - rect.right },
   ];
   obj.style = items;
-  return expandedHeight(timestampProducer, obj);
+  return closure_1_19(timestampProducer, obj);
 }
 function RecommendationSectionHeader(arg0) {
   ({ index, children } = arg0);
@@ -592,7 +592,7 @@ function RecommendationSectionHeader(arg0) {
     obj = { marginTop: 24 };
   }
   style[1] = obj;
-  return expandedHeight(Text_Text.Text, {
+  return closure_1_19(Text_Text.Text, {
     accessibilityRole: "header",
     variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",

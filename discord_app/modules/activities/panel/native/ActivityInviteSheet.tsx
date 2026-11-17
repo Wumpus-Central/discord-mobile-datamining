@@ -218,7 +218,7 @@ export default function ActivityInviteSheet(activity) {
         onInviteSent: callback2,
         onPressAvatar: callback1,
       };
-      tmp17Result2 = closure_12(tmp2(19937), obj10);
+      tmp17Result2 = closure_12(tmp2(19939), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;
@@ -226,6 +226,6 @@ export default function ActivityInviteSheet(activity) {
     tmp19Result = closure_14(closure_13, obj11);
   }
   obj3.children = tmp19Result;
-  obj2.children = closure_12(activity(5566).BottomSheet, obj3);
+  obj2.children = closure_12(activity(5556).BottomSheet, obj3);
   return closure_12(activity(7918).AnalyticsLocationProvider, obj2);
 }

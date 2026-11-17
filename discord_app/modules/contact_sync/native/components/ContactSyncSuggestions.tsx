@@ -66,7 +66,7 @@ let obj2 = {
   container: {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
-    paddingTop: fn(5892).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(5882).NAV_BAR_HEIGHT + 32,
     justifyContent: "center",
   },
   header: null,
@@ -81,7 +81,7 @@ let obj2 = {
 let obj3 = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
-  paddingTop: fn(5892).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5882).NAV_BAR_HEIGHT + 32,
   justifyContent: "center",
 };
 obj2.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
@@ -128,8 +128,8 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     acc[suggested_user.suggested_user.id] = true;
     return acc;
   }, {});
-  const token = friendSuggestions(5902).useToken(onSubmit(575).colors.BACKGROUND_BASE_LOW);
-  let obj = friendSuggestions(5902);
+  const token = friendSuggestions(5892).useToken(onSubmit(575).colors.BACKGROUND_BASE_LOW);
+  let obj = friendSuggestions(5892);
   items = [friendSuggestions(5303).hexOpacityToRgba(token, 0)];
   let obj2 = friendSuggestions(5303);
   items[1] = friendSuggestions(5303).hexOpacityToRgba(token, 100);
@@ -137,7 +137,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   first = tmp4[0];
   noop = tmp4[1];
   let obj3 = friendSuggestions(5303);
-  const fontScale = friendSuggestions(5944).useFontScale();
+  const fontScale = friendSuggestions(5934).useFontScale();
   const sum = onSubmit(575).space.PX_16 + onSubmit(575).space.PX_32 + 40;
   let items1 = [first];
   const sum1 = sum + Math.max(18 * Math.min(fontScale, 2) - 18, 0);
@@ -147,7 +147,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     obj[arg0] = !first[arg0];
     closure_4(obj);
   }, items1);
-  let obj4 = friendSuggestions(5944);
+  let obj4 = friendSuggestions(5934);
   let keys = onSubmit(11).keys(first);
   let items2 = [friendSuggestions, first];
   let obj5 = onSubmit(11);
@@ -229,7 +229,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj9.start = friendSuggestions(1092).VerticalGradient.START;
   obj9.end = friendSuggestions(1092).VerticalGradient.END;
   obj9.colors = items;
-  items5[1] = closure_8(onSubmit(5893), obj9);
+  items5[1] = closure_8(onSubmit(5883), obj9);
   const obj10 = { style: tmp.redesignButton, children: null };
   const obj11 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   let intl = friendSuggestions(1113).intl;
@@ -247,7 +247,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     });
   };
   obj11.disabled = !someResult;
-  obj10.children = closure_8(friendSuggestions(5936).Button, obj11);
+  obj10.children = closure_8(friendSuggestions(5926).Button, obj11);
   items5[2] = closure_8(onSelect, obj10);
   obj6.children = items5;
   return closure_10(onSelect, obj6);

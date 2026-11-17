@@ -378,8 +378,8 @@ export function useHandlePremiumPurchase() {
       const result1 = premiumSubscription(premiumDiscountOffer[24]).captureBillingException(closure_132_26);
       (function showPurchaseErrorModal(message) {
         let billingError = message;
-        if (!(message instanceof premiumSubscription(6757).BillingError)) {
-          billingError = new premiumSubscription(6757).BillingError(message);
+        if (!(message instanceof premiumSubscription(6747).BillingError)) {
+          billingError = new premiumSubscription(6747).BillingError(message);
         }
         if (tmpResult.isSpendingLimitError(billingError)) {
           const result = premiumSubscription(9615).showSpendingLimitReachedAlert();
@@ -402,8 +402,8 @@ export function useHandlePremiumPurchase() {
           const intl2 = premiumSubscription(1113).intl;
           obj.title = intl2.string(premiumSubscription(1113).t["U+H+kd"]);
           obj.body = message;
-          price1(6268).show(obj);
-          const obj2 = price1(6268);
+          price1(6258).show(obj);
+          const obj2 = price1(6258);
         }
         tmpResult = premiumSubscription(9615);
       })(closure_132_26);

@@ -210,7 +210,7 @@ export default function GuildBoostingMarketingFaq() {
         str = "interactive-text-active";
       }
       items1 = [
-        closure_1_7(closure_0(5929).Text, {
+        closure_1_7(closure_0(5919).Text, {
           color: str,
           style: closure_0.question,
           variant: "body-md/normal",
@@ -235,7 +235,7 @@ export default function GuildBoostingMarketingFaq() {
           variant: "body-sm/normal",
           children: getQuestion.getAnswer(),
         };
-        tmp = closure_1_7(tmp5(5929).Text, obj5);
+        tmp = closure_1_7(tmp5(5919).Text, obj5);
       }
       items3[1] = tmp;
       obj.children = items3;

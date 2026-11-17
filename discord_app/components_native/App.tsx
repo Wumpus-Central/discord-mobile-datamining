@@ -99,8 +99,8 @@ export default function App() {
     return () => {
       closure_1_1(16896).terminate();
       const obj = closure_1_1(16896);
-      closure_1_1(6330).terminate();
-      const obj2 = closure_1_1(6330);
+      closure_1_1(6320).terminate();
+      const obj2 = closure_1_1(6320);
       closure_1_1(9685).terminate();
       const obj3 = closure_1_1(9685);
       closure_1_1(17005).terminate();
@@ -123,8 +123,8 @@ export default function App() {
       const obj12 = closure_1_1(17028);
       closure_1_1(17031).terminate();
       const obj13 = closure_1_1(17031);
-      closure_1_1(6819).terminate();
-      const obj14 = closure_1_1(6819);
+      closure_1_1(6809).terminate();
+      const obj14 = closure_1_1(6809);
       closure_1_1(16906).terminate();
     };
   }, []);

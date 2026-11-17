@@ -101,7 +101,7 @@ export default function MemberVerificationAlertRejected(guildId) {
               if (stateFromStores2 != null) {
                 isPending = stateFromStores2.isPending;
               }
-              const obj4 = v1(6932);
+              const obj4 = v1(6922);
               if (isPending) {
                 v1 = 2;
                 dependencyMap = 1;
@@ -197,7 +197,7 @@ export default function MemberVerificationAlertRejected(guildId) {
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            const obj4 = v1(6932);
+            const obj4 = v1(6922);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;

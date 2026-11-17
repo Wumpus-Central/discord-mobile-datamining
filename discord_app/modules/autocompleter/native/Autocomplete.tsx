@@ -134,8 +134,8 @@ export default {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(5372).getName(user);
-      const obj3 = guildId(5372);
+      nick = guildId(5362).getName(user);
+      const obj3 = guildId(5362);
     }
     obj2.label = closure_9(AutocompleteLabel, { text: nick });
     const obj = user(504);

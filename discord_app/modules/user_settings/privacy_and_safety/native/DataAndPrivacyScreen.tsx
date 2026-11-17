@@ -18,13 +18,13 @@ export default function DataAndPrivacySettings() {
   stackNavigation = stackNavigation(1502).useStackNavigation();
   closure_129_0 = stackNavigation;
   let obj = stackNavigation(1502);
-  const pinotDataPrivacySections = stackNavigation(18551).usePinotDataPrivacySections();
+  const pinotDataPrivacySections = stackNavigation(18553).usePinotDataPrivacySections();
   let obj3 = { settings: null, subLabel: null };
   items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
   obj3.settings = items;
   let intl = stackNavigation(1113).intl;
   let obj4 = { helpdeskArticle: null };
-  let obj2 = stackNavigation(18551);
+  let obj2 = stackNavigation(18553);
   obj4.helpdeskArticle = items1(2188).getArticleURL(constants.DATA_PRIVACY_CONTROLS);
   obj3.subLabel = intl.format(stackNavigation(1113).t["igTSG/"], obj4);
   items1 = [obj3, , ,];

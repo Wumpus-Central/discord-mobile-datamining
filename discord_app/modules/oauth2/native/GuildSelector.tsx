@@ -54,7 +54,7 @@ export default function GuildSelector(disabled) {
   let obj2 = { variant: "body-sm/medium", color: "text-default", children: null };
   let intl = selectedGuildId(1113).intl;
   obj2.children = intl.string(selectedGuildId(1113).t["1DXFFd"]);
-  const items1 = [closure_7(selectedGuildId(5929).Text, obj2), , ,];
+  const items1 = [closure_7(selectedGuildId(5919).Text, obj2), , ,];
   let tmp6Result = null;
   if (null != error) {
     tmp6Result = null;

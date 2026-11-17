@@ -67,7 +67,7 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
           size: "xs",
           color: c1(575).colors.STATUS_POSITIVE,
         });
-        items[1] = closure_2_5(items(5929).Text, {
+        items[1] = closure_2_5(items(5919).Text, {
           style: items.permissionText,
           variant: "body-sm/normal",
           color: "text-default",

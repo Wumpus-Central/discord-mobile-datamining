@@ -332,7 +332,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     let tmp59Result = null;
     if (!isStemTargetGranted) {
       const obj7 = { style: StyleSheet.absoluteFill, start, end, colors: memo1 };
-      tmp59Result = closure_8(tmp4(5893), obj7);
+      tmp59Result = closure_8(tmp4(5883), obj7);
     }
     obj6.children = tmp59Result;
     tmp59Result2 = closure_8(tmp4(1655).View, obj6);
@@ -392,9 +392,9 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     if (null != grantAtMs) {
       const obj16 = { pointerEvents: "none", style: tmp.confetti, children: null };
       const obj17 = { ref, source: tmp2(17664), autoPlay: false, loop: false };
-      obj16.children = closure_8(tmp4(5923), obj17);
+      obj16.children = closure_8(tmp4(5913), obj17);
       tmp66Result8 = closure_8(View, obj16);
-      const tmp4Result = tmp4(5923);
+      const tmp4Result = tmp4(5913);
     }
   }
   items19[6] = tmp66Result8;

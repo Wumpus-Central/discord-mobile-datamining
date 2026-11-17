@@ -3,15 +3,15 @@ import apply from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef6043 from "../../../../../_runtime/metro/06043__.js";
+import _modDef6033 from "../../../../../_runtime/metro/06033__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import _modDef9194 from "../../../../../_runtime/metro/09194__.js";
 import _modDef12481 from "../../../../../_runtime/metro/12481__.js";
 import _modDef12486 from "../../../../../_runtime/metro/12486__.js";
 import _modDef15138 from "../../../../../_runtime/metro/15138__.js";
 import _modDef16066 from "../../../../../_runtime/metro/16066__.js";
-import _modDef18431 from "../../../../../_runtime/metro/18431__.js";
-import _modDef18432 from "../../../../../_runtime/metro/18432__.js";
+import _modDef18433 from "../../../../../_runtime/metro/18433__.js";
+import _modDef18434 from "../../../../../_runtime/metro/18434__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,8 +50,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant: "InterfaceOrientation",
-            action: "NIO",
+            variant: "dola\u015Fma",
+            action: "erkek",
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -74,8 +74,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant: "InterfaceOrientation",
-          action: "NIO",
+          variant: "dola\u015Fma",
+          action: "erkek",
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -114,9 +114,9 @@ let items = [
   _modDef16066,
   _modDef9194,
   _modDef12486,
-  _modDef6043,
-  _modDef18431,
-  _modDef18432,
+  _modDef6033,
+  _modDef18433,
+  _modDef18434,
   _modDef12481,
 ];
 let closure_8 = [

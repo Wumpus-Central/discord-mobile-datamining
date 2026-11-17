@@ -5,9 +5,9 @@ import native from "../../../../design/void/native.tsx";
 import SegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import ICYMIUtils from "../../ICYMIUtils.tsx";
 import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import _modDef19292 from "../../../../../_runtime/metro/19292__.js";
-import _modDef19293 from "../../../../../_runtime/metro/19293__.js";
 import _modDef19294 from "../../../../../_runtime/metro/19294__.js";
+import _modDef19295 from "../../../../../_runtime/metro/19295__.js";
+import _modDef19296 from "../../../../../_runtime/metro/19296__.js";
 import NativeICYMIActionCreatorsDefault from "../NativeICYMIActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ function ContentSettingsControl(initialValue) {
   const obj = { label: null, id: "-1", icon: null, page: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.rdt65I);
-  const obj2 = { source: _modDef19292, style: null };
+  const obj2 = { source: _modDef19294, style: null };
   items = [tmp.icon];
   let iconSelected = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.LESS) {
@@ -36,7 +36,7 @@ function ContentSettingsControl(initialValue) {
   const obj3 = { label: null, id: "0", icon: null, page: null };
   const intl2 = util.intl;
   obj3.label = intl2.string(util.t.SnrG00);
-  const obj4 = { source: _modDef19293, style: null };
+  const obj4 = { source: _modDef19295, style: null };
   const items2 = [tmp.icon];
   let iconSelected1 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.DEFAULT) {
@@ -49,7 +49,7 @@ function ContentSettingsControl(initialValue) {
   const obj5 = { label: null, id: "1", icon: null, page: null };
   const intl3 = util.intl;
   obj5.label = intl3.string(util.t.Rxe3jF);
-  const obj6 = { source: _modDef19294, style: null };
+  const obj6 = { source: _modDef19296, style: null };
   const items3 = [tmp.icon];
   let iconSelected2 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.MORE) {
@@ -159,11 +159,11 @@ export function GuildScoreSettings(guild) {
   let obj3 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = id(1113).intl;
   obj3.children = intl.string(id(1113).t.Clq6km);
-  const items3 = [closure_8(id(5929).Text, obj3), , , ,];
+  const items3 = [closure_8(id(5919).Text, obj3), , , ,];
   const obj4 = { variant: "body-xs/normal", color: "text-default", children: null };
   const intl2 = id(1113).intl;
   obj4.children = intl2.format(id(1113).t["0DhU2P"], { guildName: guild.name });
-  items3[1] = closure_8(id(5929).Text, obj4);
+  items3[1] = closure_8(id(5919).Text, obj4);
   let tmp11Result = null;
   if (!tmp5) {
     const obj6 = { style: tmp8.customScoreWrapper, children: null };
@@ -186,7 +186,7 @@ export function GuildScoreSettings(guild) {
   const obj11 = { variant: "body-xs/normal", color: "text-muted", style: tmp8.warningText, children: null };
   const intl4 = tmp(1113).intl;
   obj11.children = intl4.string(id(1113).t.vRVs07);
-  items3[4] = closure_8(id(5929).Text, obj11);
+  items3[4] = closure_8(id(5919).Text, obj11);
   obj8.children = items3;
   return closure_9(View, obj8);
 }

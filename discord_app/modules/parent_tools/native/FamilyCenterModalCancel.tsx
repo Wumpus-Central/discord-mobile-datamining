@@ -10,11 +10,11 @@ function FamilyCenterModalCancelScreen(otherUser) {
   let cancelLinkRequest;
   const tmp = closure_7();
   const callback = noop.useCallback(() => {
-    cancelLinkRequest(6848).pop();
+    cancelLinkRequest(6838).pop();
   }, []);
   const callback1 = noop.useCallback(() => {
     const intl = otherUser(1113).intl;
-    otherUser(6014).presentFailedToast(intl.string(otherUser(1113).t.R0RpRX));
+    otherUser(6004).presentFailedToast(intl.string(otherUser(1113).t.R0RpRX));
   }, []);
   const tmp2 = cancelLinkRequest(9617)();
   const familyCenterActions = otherUser(14224).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
@@ -35,7 +35,7 @@ function FamilyCenterModalCancelScreen(otherUser) {
   const obj6 = { style: tmp.headerText, variant: "body-lg/semibold", children: null };
   let intl = otherUser(1113).intl;
   obj6.children = intl.string(cancelLinkRequest(2701).HynllX);
-  items1[1] = closure_5(otherUser(5929).Text, obj6);
+  items1[1] = closure_5(otherUser(5919).Text, obj6);
   items1[2] = closure_5(cancelLinkRequest(17422), { user: otherUser });
   obj4.children = items1;
   obj3.children = closure_6(View, obj4);
@@ -52,14 +52,14 @@ function FamilyCenterModalCancelScreen(otherUser) {
   const intl2 = otherUser(1113).intl;
   obj9.text = intl2.string(cancelLinkRequest(2701).mK40bk);
   obj9.onPress = callback2;
-  const items3 = [closure_5(otherUser(5936).Button, obj9)];
+  const items3 = [closure_5(otherUser(5926).Button, obj9)];
   const obj10 = { variant: "tertiary", text: null, onPress: null };
   const intl3 = otherUser(1113).intl;
   obj10.text = intl3.string(cancelLinkRequest(2701).czincX);
-  obj10.onPress = cancelLinkRequest(6848).pop;
-  items3[1] = closure_5(otherUser(5936).Button, obj10);
+  obj10.onPress = cancelLinkRequest(6838).pop;
+  items3[1] = closure_5(otherUser(5926).Button, obj10);
   obj8.children = items3;
-  obj7.children = closure_6(otherUser(6951).ButtonGroup, obj8);
+  obj7.children = closure_6(otherUser(6941).ButtonGroup, obj8);
   items2[1] = closure_5(otherUser(14079).ModalFooter, obj7);
   obj2.children = items2;
   return closure_6(otherUser(8208).ModalScreen, obj2);

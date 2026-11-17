@@ -1,5 +1,5 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetHeroImage.tsx
-import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05883_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import _modDef7533 from "../../../../_runtime/metro/07533__.js";
 import noop from "../../../../_runtime/metro/00019__.js";

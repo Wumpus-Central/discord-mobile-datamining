@@ -278,7 +278,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj7.onPress = callback;
     let tmp15Result = null;
     if (null != memo) {
-      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "Path" };
+      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "Array" };
       tmp15Result = tmp15(tmp2(tmp3[21]).Avatar, obj8);
     }
     const items3 = [tmp15Result, ,];
@@ -397,7 +397,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
   }, items3);
   let tmp3 = _slicedToArray(noop.useState(0), 2);
-  roleColor = eligibilityStatesGroups(5902).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
+  roleColor = eligibilityStatesGroups(5892).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
   let obj3 = { children: null };
   const keys = Object.keys(memo1);
   const sorted = keys.sort((arg0, arg1) => {
@@ -483,7 +483,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       const obj4 = { variant: "body-sm/semibold", color: "text-brand", children: null };
       const intl2 = tmp15(1113).intl;
       obj4.children = intl2.string(tmp15(1113).t["5911Lb"]);
-      tmp22Result = closure_1_29(tmp15(5929).Text, obj4);
+      tmp22Result = closure_1_29(tmp15(5919).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
       const obj5 = { source: _modDef12482, style: closure_5.connectionsChecksGroupCaret };
@@ -493,7 +493,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       const obj6 = { variant: "body-md/medium", color: "text-muted", children: null };
       const intl = tmp15(1113).intl;
       obj6.children = intl.string(tmp15(1113).t.cEts68);
-      tmp22Result = closure_1_29(tmp15(5929).Text, obj6);
+      tmp22Result = closure_1_29(tmp15(5919).Text, obj6);
       tmp24 = closure_1_29;
     }
     let type1;
@@ -538,7 +538,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         type = value.type;
       }
       if (type == null) {
-        type = expandedHeight;
+        type = closure_3_19;
       }
       let tmp2 = application;
       if (application == null) {
@@ -568,7 +568,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         const obj11 = { variant: "body-xs/normal", color: "text-overlay-light", children: null };
         const intl4 = tmp15(1113).intl;
         obj11.children = intl4.string(tmp15(1113).t.UB3hKo);
-        obj10.children = tmp24(tmp15(5929).Text, obj11);
+        obj10.children = tmp24(tmp15(5919).Text, obj11);
         tmp24Result5 = tmp24(c8, obj10);
       }
     }
@@ -581,7 +581,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     items1[1] = tmp24Result6;
     let tmp24Result7 = null;
     if (null != tmp11) {
-      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1187).AvatarSizes.XSMALL, guildId: "Path" };
+      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1187).AvatarSizes.XSMALL, guildId: "Array" };
       tmp24Result7 = tmp24(tmp15(1187).Avatar, obj13);
     }
     items1[2] = tmp24Result7;
@@ -599,7 +599,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       name = name1;
     }
     const items2 = [
-      tmp24(eligibilityStatesGroups(5929).Text, {
+      tmp24(eligibilityStatesGroups(5919).Text, {
         variant: "body-md/medium",
         color: "mobile-text-heading-primary",
         children: name,
@@ -1260,7 +1260,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                   prop = closure_1.role_connections_verification_url;
                 }
                 const resolved = Promise.resolve({ default: closure_1_40 });
-                const obj = closure_1(5552);
+                const obj = closure_1(5542);
                 const obj2 = { default: closure_1_40 };
                 const obj4 = {
                   role,

@@ -238,7 +238,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
   items = [
-    closure_18(webhookType(5929).Text, { variant: "body-sm/medium", color: "text-muted", children: helpText }),
+    closure_18(webhookType(5919).Text, { variant: "body-sm/medium", color: "text-muted", children: helpText }),
     ,
   ];
   let tmp4Result = webhookType === constants3.INCOMING;
@@ -248,7 +248,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(19712).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(19714).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1113).intl;
       dkHRkE = webhookType(1113).t.dkHRkE;
@@ -298,9 +298,9 @@ prototype["render"] = function render() {
   };
   items = [collapsedCategories(Form.Form, obj2), collapsedCategories(NavScrim.NavScrim, {})];
   obj.children = items;
-  return dependencyMap(expandedHeight, obj);
+  return dependencyMap(closure_1_19, obj);
 };
-WebhooksOverview.contextType = fn(5377).ThemeContext;
+WebhooksOverview.contextType = fn(5367).ThemeContext;
 let closure_26 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting(

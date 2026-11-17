@@ -37,7 +37,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
   c9 = undefined;
   let onReady;
   const tmp2 = onReady();
-  const surfaceDirectRendererExperiment = resizeMode(6197).useSurfaceDirectRendererExperiment(userId, {
+  const surfaceDirectRendererExperiment = resizeMode(6187).useSurfaceDirectRendererExperiment(userId, {
     location: "VideoRenderer",
   });
   let tmp6 = first1(noop.useState(0), 2);
@@ -52,7 +52,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
   const tmp13 = first1(noop.useState(0), 2);
   const first3 = tmp13[0];
   closure_8 = tmp15;
-  let obj = resizeMode(6197);
+  let obj = resizeMode(6187);
   [tmp17, c9] = first1(noop.useState(true), 2);
   width(12796)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
   onReady = width(12798)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;

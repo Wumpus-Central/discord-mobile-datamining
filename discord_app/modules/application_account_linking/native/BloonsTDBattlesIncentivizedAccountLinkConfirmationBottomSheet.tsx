@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default function BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet() {
-  const bloonsTDBattlesUpsellExperiment = analyticsLocations(19840).bloonsTDBattlesUpsellExperiment;
+  const bloonsTDBattlesUpsellExperiment = analyticsLocations(19842).bloonsTDBattlesUpsellExperiment;
   analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.ACTION_SHEET).analyticsLocations;
   let obj = { title: null, description: null, actions: null };
   const intl = analyticsLocations(1113).intl;
@@ -39,6 +39,6 @@ export default function BloonsTDBattlesIncentivizedAccountLinkConfirmationBottom
       screen: constants.FEATURED_PAGE,
     });
   };
-  obj.actions = jsx(analyticsLocations(5936).Button, { text: null, variant: "primary", size: "lg", onPress: null });
+  obj.actions = jsx(analyticsLocations(5926).Button, { text: null, variant: "primary", size: "lg", onPress: null });
   return jsx(IncentivizedAccountLinkConfirmationPromoSheetDefault, { title: null, description: null, actions: null });
 }

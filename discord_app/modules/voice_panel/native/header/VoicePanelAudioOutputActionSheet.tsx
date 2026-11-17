@@ -26,7 +26,7 @@ function VoicePanelAudioPhoneOutputSection() {
   closure_1 = noop.useCallback((arg0) => {
     availableDevices(10593).setAudioOutputDevice(arg0);
     const obj = availableDevices(10593);
-    closure_1(5552).hideActionSheet(closure_1_9);
+    closure_1(5542).hideActionSheet(closure_1_9);
   }, []);
   let tmp5 = null;
   if (availableDevices.length > 0) {
@@ -128,7 +128,7 @@ function VoicePanelAudioConsoleSection(channel) {
     }
   }, items3);
   let obj2 = channel(563);
-  const tmp8 = !channel(5348).useIsDismissibleContentDismissed_UNSAFE(
+  const tmp8 = !channel(5338).useIsDismissibleContentDismissed_UNSAFE(
     channel(5139).DismissibleContent.DONUT_MOBILE_NUX,
   );
   awaitingRemoteSessionInfo = tmp8;

@@ -2,7 +2,7 @@
 import _modDef3319 from "CheckpointTesting.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-let closure_2 = fn(19656).getCheckpointMitigationMock;
+let closure_2 = fn(19658).getCheckpointMitigationMock;
 const items = [
   {
     id: "open",
@@ -88,7 +88,7 @@ obj2.action = function action() {
   return applyArgumentsResult;
 };
 items[1] = obj2;
-fn(18321).CheckpointMocks.FAKE_DATA;
+fn(18323).CheckpointMocks.FAKE_DATA;
 items[2] = {
   id: "open-fake-data",
   label: _modDef3319.kPBZ5M,
@@ -99,7 +99,7 @@ items[2] = {
     return UNAVAILABLE(14258).openCheckpoint("qa_menu", {});
   },
 };
-fn(18321).CheckpointMocks.GLOBAL_STATS;
+fn(18323).CheckpointMocks.GLOBAL_STATS;
 items[3] = {
   id: "open-global-stats",
   label: _modDef3319.UwiUbM,
@@ -110,7 +110,7 @@ items[3] = {
     return UNAVAILABLE(14258).openCheckpoint("qa_menu", {});
   },
 };
-fn(18321).CheckpointMocks.ZERO_STATS;
+fn(18323).CheckpointMocks.ZERO_STATS;
 items[4] = {
   id: "open-zero-stats",
   label: _modDef3319.BYW9oX,
@@ -122,7 +122,7 @@ items[4] = {
   },
 };
 const items1 = [...items];
-const UNAVAILABLE = fn(18321).CheckpointMocks.UNAVAILABLE;
+const UNAVAILABLE = fn(18323).CheckpointMocks.UNAVAILABLE;
 let obj = {
   id: "open",
   label: _modDef3319.yLZjcu,

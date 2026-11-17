@@ -41,8 +41,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         const join_url = body.body.join_url;
         const secret = body.body.secret;
         if (null != join_url) {
-          applicationId(6012).openURL(join_url, constants.SAFARI);
-          const obj3 = applicationId(6012);
+          applicationId(6002).openURL(join_url, constants.SAFARI);
+          const obj3 = applicationId(6002);
           const obj2 = {
             type: "ACTIVITY_JOIN",
             applicationId,
@@ -67,8 +67,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         } else {
           const _HermesInternal = HermesInternal;
           const combined = "" + closure_1_4.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-          applicationId(6012).openURL(combined, constants.SAFARI);
-          const obj6 = applicationId(6012);
+          applicationId(6002).openURL(combined, constants.SAFARI);
+          const obj6 = applicationId(6002);
           const obj8 = {
             type: "ACTIVITY_JOIN",
             applicationId,

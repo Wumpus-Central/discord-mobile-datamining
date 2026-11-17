@@ -149,5 +149,5 @@ export default function GuildActionSheetTabItems(guild) {
   items2[3] = canAccessSettings;
   items2[4] = closure_12(canAccessSettings(16424), { guild });
   obj4.children = items2;
-  return closure_13(guild(6951).ButtonGroup, obj4);
+  return closure_13(guild(6941).ButtonGroup, obj4);
 }

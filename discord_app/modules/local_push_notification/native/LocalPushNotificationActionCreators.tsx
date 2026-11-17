@@ -38,13 +38,13 @@ export function receiveLocalNotification(getData) {
         data(2121)(14037, dependencyMap.paths).then((result) => result.default(projectId.channelId));
         const promise2 = data(2121)(14037, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
-        data(2121)(6063, dependencyMap.paths).then((transitionToMessage) => {
+        data(2121)(6053, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = projectId);
           return transitionToMessage.transitionToMessage(channelId, messageId, {
-            jumpType: data(5543).JumpType.INSTANT,
+            jumpType: data(5533).JumpType.INSTANT,
           });
         });
-        const promise = data(2121)(6063, dependencyMap.paths);
+        const promise = data(2121)(6053, dependencyMap.paths);
       } else if (constants.CONJURE === type) {
         projectId = tmp4.projectId;
         data(2121)(10536, dependencyMap.paths).then((openConjureHomeScreenWhenReady) =>

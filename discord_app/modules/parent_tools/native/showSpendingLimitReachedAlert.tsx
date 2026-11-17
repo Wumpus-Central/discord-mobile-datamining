@@ -35,7 +35,7 @@ export function showSpendingLimitReachedAlert() {
     obj4.onConfirm = function onConfirm() {
       return openLinkedUsersChannelDefault(activeLinkUserIds, LayerActionCreators.popLayer, () => {
         const intl = activeLinkUserIds(1113).intl;
-        return activeLinkUserIds(6014).presentFailedToast(
+        return activeLinkUserIds(6004).presentFailedToast(
           intl.formatToPlainString(_modDef2701.D1BwNC, { count: length.length }),
         );
       });

@@ -6,7 +6,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef6039 from "../../../../_runtime/metro/06039__.js";
+import _modDef6029 from "../../../../_runtime/metro/06029__.js";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -148,7 +148,7 @@ let obj11 = {
   },
 };
 items[2] = {
-  icon: _modDef6039,
+  icon: _modDef6029,
   text() {
     const intl = util.intl;
     return intl.string(util.t["4ycGE0"]);
@@ -163,7 +163,7 @@ items[2] = {
   },
 };
 let obj12 = {
-  icon: _modDef6039,
+  icon: _modDef6029,
   text() {
     const intl = util.intl;
     return intl.string(util.t["4ycGE0"]);
@@ -256,9 +256,9 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       children: null,
     };
     const intl = tmp7(1113).intl;
-    const obj13 = { username: tmp4(6351).getName(stateFromStores1, channelId, stateFromStores) };
+    const obj13 = { username: tmp4(6341).getName(stateFromStores1, channelId, stateFromStores) };
     obj12.children = intl.format(tmp7(1113).t["WrQD/Y"], obj13);
-    items7[1] = closure_13(tmp7(5929).Text, obj12);
+    items7[1] = closure_13(tmp7(5919).Text, obj12);
     const obj14 = {
       style: tmp.subTitle,
       variant: "heading-sm/medium",
@@ -268,7 +268,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     };
     const intl2 = tmp7(1113).intl;
     obj14.children = intl2.string(tmp7(1113).t.JKL1u1);
-    items7[2] = closure_13(tmp7(5929).Text, obj14);
+    items7[2] = closure_13(tmp7(5919).Text, obj14);
     obj6.children = items7;
     const items8 = [closure_14(c5, obj6), , ,];
     const obj15 = { style: tmp.tableContainer, children: closure_13(IgnoredInformationTable, {}) };
@@ -293,7 +293,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     const obj20 = { variant: "body-xs/medium", color: "text-feedback-critical", children: null };
     const intl5 = tmp7(1113).intl;
     obj20.children = intl5.string(tmp7(1113).t.NTnf1T);
-    obj18.subLabel = closure_13(tmp7(5929).Text, obj20);
+    obj18.subLabel = closure_13(tmp7(5919).Text, obj20);
     const intl6 = tmp7(1113).intl;
     obj18.accessibilityLabel = intl6.string(tmp7(1113).t["fZ+p9C"]);
     obj18.onPress = function onPress() {
@@ -350,7 +350,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     };
     obj22.disabled = tmp3;
     obj22.loading = tmp3;
-    const items9 = [closure_13(tmp7(5936).Button, obj22)];
+    const items9 = [closure_13(tmp7(5926).Button, obj22)];
     const obj23 = {
       onPress: handleClose,
       style: null,
@@ -371,14 +371,14 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       },
     };
     obj23.children = intl8.format(tmp7(1113).t.iX9qtL, obj25);
-    items9[1] = closure_13(tmp7(5929).Text, obj23);
+    items9[1] = closure_13(tmp7(5919).Text, obj23);
     obj21.children = items9;
     items8[3] = closure_14(c5, obj21);
     obj8.children = items8;
-    obj4.children = closure_14(tmp7(5570).BottomSheetScrollView, obj8);
-    obj3.children = closure_13(tmp7(5566).BottomSheet, obj4);
+    obj4.children = closure_14(tmp7(5560).BottomSheetScrollView, obj8);
+    obj3.children = closure_13(tmp7(5556).BottomSheet, obj4);
     tmp12Result = closure_13(tmp7(7918).AnalyticsLocationProvider, obj3);
-    const tmp4Result = tmp4(6351);
+    const tmp4Result = tmp4(6341);
   }
   return tmp12Result;
 });

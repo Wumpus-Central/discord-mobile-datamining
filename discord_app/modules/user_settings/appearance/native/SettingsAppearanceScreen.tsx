@@ -10,7 +10,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FontScaleStore = fn(17884);
+const FontScaleStore = fn(17886);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: metroImportDefault, useFontScaleStore: closure_8 } = FontScaleStore);
 const MobileUserSettings = fn(9202).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
@@ -19,10 +19,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 
 export default noop.memo(function SettingsAppearanceScreen() {
-  nativeStackNavigation(5899)(() => {
+  nativeStackNavigation(5889)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(17885).fetchUserCustomThemes();
-      const obj = closure_0(17885);
+      const userCustomThemes = closure_0(17887).fetchUserCustomThemes();
+      const obj = closure_0(17887);
     }
   });
   items = [ThemeStore, ClientThemesBackgroundStore];
@@ -61,7 +61,7 @@ export default noop.memo(function SettingsAppearanceScreen() {
       const obj2 = { headerRight: null };
       const intl = util.intl;
       obj2.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () =>
-        nativeStackNavigation(6062).setCustomFontScale(
+        nativeStackNavigation(6052).setCustomFontScale(
           closure_1_0.fontScale,
           closure_1_0.isClassicChatFontScaleEnabled,
         ),

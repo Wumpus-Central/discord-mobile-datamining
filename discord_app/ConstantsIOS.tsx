@@ -33,7 +33,6 @@ export const AuthStates = {
 export const KeyboardThemes = { DEFAULT: "default", DARK: "dark", LIGHT: "light" };
 export const DiscoverabilityScenes = { LANDING: "LANDING", NAME: "NAME" };
 export const WebBrowserType = { SAFARI: 0, [0]: "SAFARI", IN_APP: 1, [1]: "IN_APP", CHROME: 2, [2]: "CHROME" };
-export const CaptchaEvent = { SOLVED: "solved", EXPIRED: "expired" };
 export const VerificationModalScenes = {
   OVERVIEW: "OVERVIEW",
   RESEND_EMAIL: "RESEND_EMAIL",

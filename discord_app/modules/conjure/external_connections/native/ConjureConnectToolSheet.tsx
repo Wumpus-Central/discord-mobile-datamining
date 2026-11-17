@@ -80,16 +80,16 @@ export default function ConjureConnectToolSheet(projectId) {
   const obj5 = { variant: "body-sm/normal", color: "text-muted", children: null };
   let intl2 = connection(1113).intl;
   obj5.children = intl2.string(mint(4131).WltAg2);
-  const items2 = [closure_5(connection(5929).Text, obj5), ,];
+  const items2 = [closure_5(connection(5919).Text, obj5), ,];
   if (null != connection) {
     const obj6 = { style: tmp.section, children: null };
     const obj7 = { variant: "body-xs/semibold", color: "text-muted", children: null };
     const intl4 = tmp2(1113).intl;
     obj7.children = intl4.string(tmp8(4131).UCwV3L);
-    const items3 = [closure_5(tmp2(5929).Text, obj7), , ,];
+    const items3 = [closure_5(tmp2(5919).Text, obj7), , ,];
     const obj8 = { variant: "primary", children: null };
     const obj9 = { variant: "body-sm/normal", color: "text-default", selectable: true, children: connection.url };
-    obj8.children = closure_5(tmp2(5929).Text, obj9);
+    obj8.children = closure_5(tmp2(5919).Text, obj9);
     items3[1] = closure_5(tmp2(7445).Card, obj8);
     const obj10 = { style: tmp.actions, children: null };
     const obj11 = { style: tmp.action, children: null };
@@ -97,7 +97,7 @@ export default function ConjureConnectToolSheet(projectId) {
     const intl5 = tmp2(1113).intl;
     obj12.text = intl5.string(tmp2(1113).t.OpuAlK);
     obj12.onPress = callback;
-    obj11.children = closure_5(tmp2(5936).Button, obj12);
+    obj11.children = closure_5(tmp2(5926).Button, obj12);
     const items4 = [closure_5(View, obj11)];
     const obj13 = { style: tmp.action, children: null };
     const obj14 = { variant: "secondary", size: "md", text: null, loading: null, onPress: null };
@@ -105,7 +105,7 @@ export default function ConjureConnectToolSheet(projectId) {
     obj14.text = intl6.string(tmp8(4131).FBKOBq);
     obj14.loading = loading;
     obj14.onPress = callback1;
-    obj13.children = closure_5(tmp2(5936).Button, obj14);
+    obj13.children = closure_5(tmp2(5926).Button, obj14);
     items4[1] = closure_5(View, obj13);
     obj10.children = items4;
     items3[2] = closure_6(View, obj10);
@@ -113,7 +113,7 @@ export default function ConjureConnectToolSheet(projectId) {
     const intl7 = tmp2(1113).intl;
     const obj16 = { time: tmp2(13267).formatMcpConnectionExpiry(connection) };
     obj15.children = intl7.format(tmp8(4131).EQ8k1i, obj16);
-    items3[3] = closure_5(tmp2(5929).Text, obj15);
+    items3[3] = closure_5(tmp2(5919).Text, obj15);
     obj6.children = items3;
     let tmp7Result = closure_6(View, obj6);
     const tmp2Result = tmp2(13267);
@@ -123,7 +123,7 @@ export default function ConjureConnectToolSheet(projectId) {
       const obj17 = { variant: "body-sm/normal", color: "text-muted", children: null };
       let intl3 = tmp2(1113).intl;
       obj17.children = intl3.string(tmp8(4131).Q6xQTM);
-      tmp7Result = closure_5(tmp2(5929).Text, obj17);
+      tmp7Result = closure_5(tmp2(5919).Text, obj17);
     }
   }
   items2[1] = tmp7Result;
@@ -134,7 +134,7 @@ export default function ConjureConnectToolSheet(projectId) {
     const obj20 = { variant: "body-xs/normal", color: "text-feedback-critical", children: null };
     const intl8 = tmp2(1113).intl;
     obj20.children = intl8.string(tmp8(4131).IAF2eN);
-    obj19.children = closure_5(tmp2(5929).Text, obj20);
+    obj19.children = closure_5(tmp2(5919).Text, obj20);
     const items5 = [closure_5(View, obj19)];
     const obj21 = { variant: "secondary", size: "sm", text: null, loading: null, onPress: null };
     const intl9 = tmp2(1113).intl;
@@ -143,7 +143,7 @@ export default function ConjureConnectToolSheet(projectId) {
     obj21.onPress = function onPress() {
       mint(false);
     };
-    items5[1] = closure_5(tmp2(5936).Button, obj21);
+    items5[1] = closure_5(tmp2(5926).Button, obj21);
     obj18.children = items5;
     tmp9Result2 = closure_6(View, obj18);
   }

@@ -26,7 +26,7 @@ export default function openVideoQuestModal(questId) {
   }
   const v4Result = v1All.v4();
   importAll = v4Result;
-  const obj3 = sourceQuestContent(6848);
+  const obj3 = sourceQuestContent(6838);
   const obj4 = {
     questId,
     questContentPosition,

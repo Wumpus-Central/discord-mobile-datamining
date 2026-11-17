@@ -5,7 +5,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../_runtime/metro/01708__.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05588_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import ExternalPipDefault from "../../external_pip/ExternalPip.android.tsx";
 import ReleaseChannelUtils from "../../../utils/ReleaseChannelUtils.native.tsx";
@@ -36,16 +36,16 @@ const module_1655 = _mod1655;
 
 const calculateVoicePanelHeaderSpecsDefault = tmp2(11991);
 const closeVoicePanelsDefault = tmp2(12744);
-const useControlsLockDefault = tmp2(19978);
-const useControlsHoverGestureDefault = tmp2(19984);
-const VoicePanelHeaderDefault = tmp2(19985);
-const VoicePanelCardViewDefault = tmp2(20007);
-const VoicePanelPreJoinContentDefault = tmp2(20041);
-const VoicePanelVoiceChannelAppDefault = tmp2(20045);
-const VoicePanelSystemUIManagerDefault = tmp2(20048);
-const VoicePanelAccessibilityViewDefault = tmp2(20049);
-const VoicePanelDismissableContentDefault = tmp2(20050);
-const VoicePanelControlsDefault = tmp2(20069);
+const useControlsLockDefault = tmp2(19980);
+const useControlsHoverGestureDefault = tmp2(19986);
+const VoicePanelHeaderDefault = tmp2(19987);
+const VoicePanelCardViewDefault = tmp2(20009);
+const VoicePanelPreJoinContentDefault = tmp2(20043);
+const VoicePanelVoiceChannelAppDefault = tmp2(20047);
+const VoicePanelSystemUIManagerDefault = tmp2(20050);
+const VoicePanelAccessibilityViewDefault = tmp2(20051);
+const VoicePanelDismissableContentDefault = tmp2(20052);
+const VoicePanelControlsDefault = tmp2(20071);
 require = fn;
 function NOOP() {}
 function log() {
@@ -815,7 +815,7 @@ function AnimatedWrapper(arg0) {
     tmp114[0] = items21;
     const items22 = [collapsedCategories(module_1655.View, tmp114), children];
     obj7.children = items22;
-    obj6.children = expandedHeight(module_1655.View, obj7);
+    obj6.children = closure_1_19(module_1655.View, obj7);
     tmp112Result = collapsedCategories(module_1655.View, obj6);
   }
   obj4.children = tmp112Result;
@@ -836,7 +836,7 @@ const VoicePanelConstants = fn(11985);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 ({ LAYOUT_PHYSICS, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_14, DEFAULT_BORDER_RADIUS_PIP } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
-const isActivityParticipant = fn(5983).isActivityParticipant;
+const isActivityParticipant = fn(5973).isActivityParticipant;
 const POP_RESISTANCE = fn(11986).POP_RESISTANCE;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
@@ -848,7 +848,7 @@ let items = [
   {
     code: "(function scrollViewLayoutTransition_VoicePanelUITsx1(values){let[withSpring,LAYOUT_PHYSICS,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS]=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})",
   },
-  fn(5939).withSpring,
+  fn(5929).withSpring,
   LAYOUT_PHYSICS,
   obj,
 ];
@@ -2660,12 +2660,12 @@ export default noop.memo(function VoicePanelUI() {
     let tmp105Result = tmp107;
     if (isDockEnabled) {
       const obj23 = { children: tmp107 };
-      tmp105Result = closure_18(tmp13(19980).VoicePanelContentWithDock, obj23);
+      tmp105Result = closure_18(tmp13(19982).VoicePanelContentWithDock, obj23);
     }
     obj22.children = tmp105Result;
     items37[1] = closure_18(AnimatedWrapper, obj22);
     const obj24 = { children: null };
-    items37[2] = closure_18(tmp2(isDockEnabled ? 20052 : 20061), {});
+    items37[2] = closure_18(tmp2(isDockEnabled ? 20054 : 20063), {});
     tmp2 = VoicePanelControlsDefault;
     const obj25 = { gestureState: sharedValue4 };
     tmp105Result3 = closure_18(tmp2, obj25);
@@ -2673,10 +2673,10 @@ export default noop.memo(function VoicePanelUI() {
     obj21.children = items37;
     obj21 = closure_19(VoicePanelAccessibilityViewDefault, obj21);
     obj20.children = obj21;
-    obj20 = closure_18(tmp13(5598).GestureDetector, obj20);
+    obj20 = closure_18(tmp13(5588).GestureDetector, obj20);
     items36[2] = obj20;
     obj24.children = items36;
-    obj18.children = closure_19(tmp13(5916).LayerScope, obj24);
+    obj18.children = closure_19(tmp13(5906).LayerScope, obj24);
     closure_18(tmp13(7918).AnalyticsLocationProvider, obj18);
     const tmp2Result2 = VoicePanelAccessibilityViewDefault;
   }

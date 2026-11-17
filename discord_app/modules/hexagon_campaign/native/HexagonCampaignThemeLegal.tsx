@@ -75,15 +75,15 @@ export default function HexagonCampaignThemeLegal(animatedStyles) {
       return timestampProducer(Text_Text.Text, obj, arg1);
     },
   });
-  const tmp3Result = closure_6(animatedStyles(5929).Text, obj);
+  const tmp3Result = closure_6(animatedStyles(5919).Text, obj);
   let tmp9 = tmp3Result;
   if (flag) {
     const obj3 = { style: tmp.legalWithLogo, children: null };
     const obj4 = { source: tmp7(17639), style: tmp.logo, resizeMode: "contain", accessible: false };
-    const items1 = [closure_6(tmp7(6020), obj4), tmp3Result];
+    const items1 = [closure_6(tmp7(6010), obj4), tmp3Result];
     obj3.children = items1;
     tmp9 = closure_7(View, obj3);
-    const tmp7Result = tmp7(6020);
+    const tmp7Result = tmp7(6010);
   }
   return tmp9;
 }

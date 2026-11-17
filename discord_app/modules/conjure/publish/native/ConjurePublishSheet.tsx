@@ -143,9 +143,9 @@ function PublishSheetBody(entryPoint) {
   const tmp = closure_13();
   const tmp4 = entryPoint(13178)(project, publish);
   dependencyMap = tmp4;
-  entryPoint(6332)(() => true, tmp4.saving);
+  entryPoint(6322)(() => true, tmp4.saving);
   closure_3 = noop.useRef(false);
-  const context = noop.useContext(entryPoint(5897));
+  const context = noop.useContext(entryPoint(5887));
   let transitionState;
   if (context != null) {
     transitionState = context.transitionState;
@@ -211,8 +211,8 @@ function PublishSheetBody(entryPoint) {
       onError(text) {
         if (null != text) {
           obj2 = { text, variant: "critical" };
-          entryPoint(6015).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
-          obj = entryPoint(6015);
+          entryPoint(6005).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
+          obj = entryPoint(6005);
         }
       },
     };
@@ -246,11 +246,11 @@ function PublishSheetBody(entryPoint) {
   } else {
     const obj10 = { style: tmp.nameGroup, children: null };
     const obj12 = { variant: "heading-lg/semibold", color: "text-strong", lineClamp: 1, children: tmp4.displayName };
-    const items4 = [tmp15(tmp12(5929).Text, obj12)];
+    const items4 = [tmp15(tmp12(5919).Text, obj12)];
     let tmp15Result6 = null;
     if ("" !== tmp4.description) {
       const obj13 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 2, children: tmp4.description };
-      tmp15Result6 = tmp15(tmp12(5929).Text, obj13);
+      tmp15Result6 = tmp15(tmp12(5919).Text, obj13);
     }
     items4[1] = tmp15Result6;
     obj10.children = items4;
@@ -309,11 +309,11 @@ function PublishSheetBody(entryPoint) {
       name = intl8.string(tmp2(4131)["37xgkF"]);
     }
     const obj23 = { variant: "body-sm/medium", color: "text-strong", lineClamp: 1, children: name };
-    const items7 = [tmp15(tmp12(5929).Text, obj23)];
+    const items7 = [tmp15(tmp12(5919).Text, obj23)];
     let tmp15Result9 = null;
     if (null != sharing.caption) {
       const obj24 = { variant: "body-xs/normal", color: "text-subtle", children: sharing.caption };
-      tmp15Result9 = tmp15(tmp12(5929).Text, obj24);
+      tmp15Result9 = tmp15(tmp12(5919).Text, obj24);
     }
     const obj25 = { children: null };
     items7[1] = tmp15Result9;
@@ -329,7 +329,7 @@ function PublishSheetBody(entryPoint) {
   let tmp15Result10 = null;
   if (null != tmp4.note) {
     const obj27 = { variant: "body-sm/normal", color: "text-subtle", children: tmp4.note };
-    tmp15Result10 = tmp15(tmp12(5929).Text, obj27);
+    tmp15Result10 = tmp15(tmp12(5919).Text, obj27);
   }
   const items8 = [tmp15Result10];
   const obj28 = { style: tmp.actions, children: null };
@@ -338,7 +338,7 @@ function PublishSheetBody(entryPoint) {
   obj55.text = intl9.string(tmp12(1113).t["ETE/oC"]);
   obj55.disabled = tmp4.saving;
   obj55.onPress = hidePublishSheet;
-  const items9 = [closure_7(tmp12(5936).Button, obj55)];
+  const items9 = [closure_7(tmp12(5926).Button, obj55)];
   const obj56 = {
     variant: "primary",
     size: "md",
@@ -364,7 +364,7 @@ function PublishSheetBody(entryPoint) {
     }
     return applyArgumentsResult;
   };
-  items9[1] = closure_7(tmp12(5936).Button, obj56);
+  items9[1] = closure_7(tmp12(5926).Button, obj56);
   obj28.children = items9;
   items8[1] = closure_9(closure_5, obj28);
   obj26.children = items8;

@@ -21,9 +21,9 @@ export default function resolveUserProfileCodedLink(arg0, arg1) {
     const tmpResult = tmp(15583);
   } else {
     isUserProfileEmbedRenderingMobileEnabled =
-      tmp(20306).getIsUserProfileEmbedRenderingEnabled(MessageCodedLinkManager);
+      tmp(20309).getIsUserProfileEmbedRenderingEnabled(MessageCodedLinkManager);
     tmp6 = tmp;
-    const tmpResult2 = tmp(20306);
+    const tmpResult2 = tmp(20309);
   }
   if (isUserProfileEmbedRenderingMobileEnabled) {
     let tmp10;
@@ -36,7 +36,7 @@ export default function resolveUserProfileCodedLink(arg0, arg1) {
       tmp10 = guild_id;
     }
     guild_id = tmp10;
-    const result = tmp6(20298).queueMessageLinkFetch(
+    const result = tmp6(20301).queueMessageLinkFetch(
       asyncGeneratorStep(async () => {
         c2 = 1;
         await v2(c2[5])(closure_0, undefined, { guildId: guild_id, withMutualGuilds: true, withMutualFriends: true });
@@ -53,6 +53,6 @@ export default function resolveUserProfileCodedLink(arg0, arg1) {
         return value;
       }),
     );
-    const tmp6Result = tmp6(20298);
+    const tmp6Result = tmp6(20301);
   }
 }

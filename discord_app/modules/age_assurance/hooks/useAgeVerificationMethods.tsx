@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AgeVerificationStore from "../AgeVerificationStore.tsx";
 
 require = fn;
-const AgeVerificationConstants = fn(6832);
+const AgeVerificationConstants = fn(6822);
 ({ VERIFICATION_METHOD_TITLE_MAP: metroImportDefault, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
@@ -110,11 +110,11 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      const obj5 = id(6833);
+                      const obj5 = id(6823);
                       const result = obj5.trackAgeVerificationModalClicked(
                         id,
-                        id(6833).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                        id(6833).AgeVerificationModalCta.METHOD_SELECT,
+                        id(6823).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                        id(6823).AgeVerificationModalCta.METHOD_SELECT,
                         id,
                       );
                       v1 = 1;

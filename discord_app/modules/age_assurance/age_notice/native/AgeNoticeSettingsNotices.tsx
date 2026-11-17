@@ -92,8 +92,8 @@ class MessageRequestsUnconfirmedNotice {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(6841).AGE_NOTICE_SETTINGS_LOCATION;
-const Constants = fn(6910);
+let closure_6 = fn(6831).AGE_NOTICE_SETTINGS_LOCATION;
+const Constants = fn(6900);
 ({ SafetySettingsNoticeAction: metroImportDefault, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);

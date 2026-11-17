@@ -125,7 +125,7 @@ let closure_16 = async function _handleToggleVideo(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const NativePermissionTypes = fn(6902).NativePermissionTypes;
+const NativePermissionTypes = fn(6892).NativePermissionTypes;
 let apply = apply_mod;
 let closure_17 = apply.debounce((arg0) => {
   const AudioRoutePicker = NativeModules.AudioRoutePicker;
@@ -269,8 +269,8 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid() ? (() => {
   const stateFromStoresObject = isEnabled(504).useStateFromStoresObject(items, () => {
     isVideoMode = isEnabled(10839).isVideoMode(ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore);
     currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(6092).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(6092).RouteTypes.BLUETOOTH;
+    isEnabled = currentRouteType === isEnabled(6082).RouteTypes.SPEAKER;
+    const isBluetoothRoute = currentRouteType === isEnabled(6082).RouteTypes.BLUETOOTH;
     if (!isEnabled) {
       isEnabled = isBluetoothRoute;
     }

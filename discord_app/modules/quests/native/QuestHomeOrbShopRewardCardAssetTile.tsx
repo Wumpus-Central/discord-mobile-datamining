@@ -95,7 +95,7 @@ function ProductPreviewInner(cardHeight) {
     const obj4 = { uri: cardHeight(10422) };
     obj3.source = obj4;
     obj3.style = tmp.externalProductImage;
-    return closure_7(cardHeight(6020), obj3);
+    return closure_7(cardHeight(6010), obj3);
   } else {
     const ALL = cardWidth(1075).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {

@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetProgressCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import FirstPartyQuestTaskTypes from "../../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import FirstPartyQuestTaskTypes from "../../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import hooks_QuestHooks from "../../hooks/QuestHooks.tsx";
 import AssetUtils from "../../lib/AssetUtils.tsx";
@@ -140,7 +140,7 @@ export function QuestBottomSheetProgressCardPlayStreamTask(quest) {
         const intl = util.intl;
         const obj = {
           rewardHook() {
-            return defaultRewardName(questTaskDetails(5929).Text, {
+            return defaultRewardName(questTaskDetails(5919).Text, {
               variant: "body-sm/semibold",
               color: "text-strong",
               children,
@@ -158,7 +158,7 @@ export function QuestBottomSheetProgressCardPlayStreamTask(quest) {
       const obj2 = {
         minutesLeft: rounded,
         minutesHook(children) {
-          return children(questTaskDetails(5929).Text, { variant: "body-sm/semibold", color: "text-strong", children });
+          return children(questTaskDetails(5919).Text, { variant: "body-sm/semibold", color: "text-strong", children });
         },
       };
       return intl7.format(util.t.aFaRso, obj2);
@@ -202,7 +202,7 @@ export function QuestBottomSheetProgressCardPlayStreamTask(quest) {
   let tmp18Result = null != memo;
   if (tmp18Result) {
     let obj6 = { style: tmp.instructionsText, variant: "body-sm/semibold", color: "text-subtle", children: memo };
-    tmp18Result = tmp18(tmp2(5929).Text, obj6);
+    tmp18Result = tmp18(tmp2(5919).Text, obj6);
   }
   items2[1] = tmp18Result;
   obj4.children = items2;
@@ -213,7 +213,7 @@ export function QuestBottomSheetProgressCardPlayStreamTask(quest) {
     let intl = tmp2(1113).intl;
     const obj9 = { gameName: quest.config.messages.gameTitle };
     obj8.children = intl.format(tmp2(1113).t.lIFg6I, obj9);
-    obj7.children = tmp18(tmp2(5929).Text, obj8);
+    obj7.children = tmp18(tmp2(5919).Text, obj8);
     isQuestProgressing = tmp18(tmp17, obj7);
   }
   items3[1] = isQuestProgressing;

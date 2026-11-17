@@ -7,7 +7,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const RowType = fn(6912).RowType;
+const RowType = fn(6902).RowType;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 } };
@@ -31,20 +31,20 @@ export default function AddModeratorsActionSheet(channel) {
         row = row.row;
         if (row.rowType === constants.ROLE) {
           closure_1 = closure_1 + 1;
-          let moderatorOverwrite = channel(6938).createModeratorOverwrite(
+          let moderatorOverwrite = channel(6928).createModeratorOverwrite(
             row.id,
             channel(2119).PermissionOverwriteType.ROLE,
             closure_0,
           );
-          const obj2 = channel(6938);
+          const obj2 = channel(6928);
         } else {
           closure_0 = closure_0 + 1;
-          moderatorOverwrite = channel(6938).createModeratorOverwrite(
+          moderatorOverwrite = channel(6928).createModeratorOverwrite(
             row.id,
             channel(2119).PermissionOverwriteType.MEMBER,
             closure_0,
           );
-          const obj = channel(6938);
+          const obj = channel(6928);
         }
         return moderatorOverwrite;
       });
@@ -84,7 +84,7 @@ export default function AddModeratorsActionSheet(channel) {
     }
     return GuildStore.getGuild(guildId);
   });
-  let str = pendingAdditions(5954)(channel, true);
+  let str = pendingAdditions(5944)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -128,7 +128,7 @@ export default function AddModeratorsActionSheet(channel) {
         setPendingAdditions: tmp2[1],
       });
       obj4.children = <View style={tmp.container}>{null}</View>;
-      return jsx(tmp4(5566).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
+      return jsx(tmp4(5556).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
     }
     obj7 = { size: "sm", disabled: tmp11, text: null, onPress: null };
     const intl = tmp4(1113).intl;

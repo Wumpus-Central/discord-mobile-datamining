@@ -33,10 +33,10 @@ const NO_PARTICIPANTS = fn(7016).NO_PARTICIPANTS;
 let closure_12 = fn(9064).setIsChannelDetailsSearchActive;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AnalyticsSections: closure_14, ChannelTypes: closure_15, ME: closure_16 } = Constants);
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 const CHANGELOG_URL = fn(5208).CHANGELOG_URL;
 let closure_19 = fn(9065).SearchEntrypointAnalyticsLocations;
-const Features = fn(6075).Features;
+const Features = fn(6065).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const tmp4 = fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.XSMALL];
@@ -467,8 +467,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
               user: user.user,
               guildId: "r",
               size: native.AvatarSizes.XSMALL,
-              cutout:
-                "(function SegmentedControlNativeTsx4(){let[clampedActiveIndex,defaultActiveIndex,indicatorWidth]=this.__closure;return(clampedActiveIndex.get()-defaultActiveIndex.get())*indicatorWidth.get();})",
+              cutout: "absolute",
             };
             if (index !== diff) {
               const tmp7 = obj;
@@ -483,7 +482,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
           const obj15 = { variant: "footnote/semibold", color: "button-outline-primary-text", children: null };
           const items17 = ["+", totalParticipantCount - 5];
           obj15.children = items17;
-          obj14.children = closure_22(tmp2(5929).Text, obj15);
+          obj14.children = closure_22(tmp2(5919).Text, obj15);
           tmp36Result = tmp36(tmp29, obj14);
         }
         items16[2] = tmp36Result;

@@ -135,7 +135,7 @@ function PollDurationSelectionRow(selectedDuration) {
       onChange,
     });
   };
-  obj.trailing = closure_9(selectedDuration(5929).Text, {
+  obj.trailing = closure_9(selectedDuration(5919).Text, {
     variant: "body-md/normal",
     color: "text-muted",
     children: tmp,
@@ -225,7 +225,7 @@ export default function PollCreation(channel) {
     AccessibilityAnnouncer.announce(intl.string(util.t["+G3oRq"]));
   }
   let obj = { type: channel(1264).ImpressionTypes.VIEW, name: channel(1264).ImpressionNames.POLL_EDITOR_VIEWED };
-  onCancel(6338)(obj);
+  onCancel(6328)(obj);
   items = [onCancel];
   const effect = answers.useEffect(
     () => () => {
@@ -238,7 +238,7 @@ export default function PollCreation(channel) {
     items,
   );
   const tmp7 = c12();
-  const insets = onCancel(5913)({ includeKeyboardHeight: true }).insets;
+  const insets = onCancel(5903)({ includeKeyboardHeight: true }).insets;
   dependencyMap = answers.useRef(false);
   const callback = answers.useCallback((arg0) => {
     closure_2.current = true;
@@ -274,7 +274,7 @@ export default function PollCreation(channel) {
   ({ createPollError, submitting, shouldFocusOnInvalidField } = tmp10);
   const setShouldFocusOnInvalidField = tmp10.setShouldFocusOnInvalidField;
   ({ handleQuestionChange, handleSubmitPoll, duration, setDuration } = tmp10);
-  const tmp3 = onCancel(6338);
+  const tmp3 = onCancel(6328);
   closure_18 = channel(13547).useTrackPollCreationEvents(answers, allowMultiSelect).trackPollCreationCancelled;
   let obj2 = channel(13547);
   channel(7499).useNavigatorBackPressHandler(() => {
@@ -346,7 +346,7 @@ export default function PollCreation(channel) {
   };
   const intl2 = channel(1113).intl;
   obj9.children = intl2.string(channel(1113).t.Flr51u);
-  items3[1] = c9(channel(5929).Text, obj9);
+  items3[1] = c9(channel(5919).Text, obj9);
   const obj10 = { accessibilityLabel: null, style: null, disabled: null, icon: null, onPress: null };
   const intl3 = channel(1113).intl;
   obj10.accessibilityLabel = intl3.string(channel(1113).t.rlf0tb);

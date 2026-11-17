@@ -7,7 +7,7 @@ import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtil
 import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05588_LegacyBaseButton.js";
 import useLaunchPadTypeDefault from "../../launchpad/native/useLaunchPadType.tsx";
 import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -18,7 +18,7 @@ import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(18736).computeMaxX;
+let computeMaxX = fn(18738).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const GestureConstants = fn(12010);
 ({
@@ -102,7 +102,7 @@ let obj = {
   guildsBarDrawerStyle: null,
   guildsBarPullX: null,
 };
-let Gesture = fn(5598).Gesture;
+let Gesture = fn(5588).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
 let ReanimatedHelperTypes = fn(7848);

@@ -22,11 +22,11 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
   onItemPressed = onItemPressed.onItemPressed;
   dependencyMap = undefined;
   const tmp = closure_10();
-  closure_1 = onItemPressed(5944).useFontScale();
-  let obj = onItemPressed(5944);
+  closure_1 = onItemPressed(5934).useFontScale();
+  let obj = onItemPressed(5934);
   [arr, c2] = noop.useState(closure_8);
   const tmp2 = _slicedToArray(noop.useState(closure_8), 2);
-  gesture = onItemPressed(5598).useNativeGesture({ disallowInterruption: true });
+  gesture = onItemPressed(5588).useNativeGesture({ disallowInterruption: true });
   const effect = noop.useEffect(() => {
     Promise.all(metroImportDefault.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
       items = [];
@@ -155,5 +155,5 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
       })}
     </closure_6>
   );
-  return jsx(onItemPressed(5598).GestureDetector, { gesture, children });
+  return jsx(onItemPressed(5588).GestureDetector, { gesture, children });
 });

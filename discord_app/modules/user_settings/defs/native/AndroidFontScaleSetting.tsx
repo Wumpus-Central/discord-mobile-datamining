@@ -8,7 +8,7 @@ require = fn;
 function formatFontScale(arg0) {
   return 100 * FontScales[Math.round(Math, arg0)] + "%";
 }
-const useFontScaleStore = fn(17884).useFontScaleStore;
+const useFontScaleStore = fn(17886).useFontScaleStore;
 const FontScales = fn(1082).FontScales;
 const jsx = fn(21).jsx;
 const SettingBuilders = fn(12406);

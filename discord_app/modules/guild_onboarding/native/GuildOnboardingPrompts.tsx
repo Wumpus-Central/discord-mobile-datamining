@@ -5,7 +5,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05883_LinearGradient.js";
 import LottieAnimationViewDefault from "../../../components_native/common/LottieAnimationView.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
@@ -41,11 +41,7 @@ function BackgroundImageGradient(uri) {
   const tmp = closure_22();
   const obj = { children: null };
   items = [
-    expandedHeight(FastImageDefault, {
-      source: { uri: uri.splashUrl },
-      style: tmp.backgroundImage,
-      resizeMode: "cover",
-    }),
+    closure_1_19(FastImageDefault, { source: { uri: uri.splashUrl }, style: tmp.backgroundImage, resizeMode: "cover" }),
   ];
   const obj3 = {
     style: tmp.backgroundColorGradient,
@@ -57,7 +53,7 @@ function BackgroundImageGradient(uri) {
   const tmp2 = LinearGradientDefault;
   const items1 = [ColorUtils.hexWithOpacity(color, 0.16), color];
   obj3.colors = items1;
-  items[1] = expandedHeight(tmp2, obj3);
+  items[1] = closure_1_19(tmp2, obj3);
   obj.children = items;
   return guild(dependencyMap, obj);
 }
@@ -76,7 +72,7 @@ let obj2 = {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5892).NAV_BAR_HEIGHT,
+    marginTop: fn(5882).NAV_BAR_HEIGHT,
     marginBottom: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -95,7 +91,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5892).NAV_BAR_HEIGHT,
+  marginTop: fn(5882).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -582,7 +578,7 @@ export default function GuildOnboardingPrompt(guildId) {
             const obj2 = {};
             let tmp = c0;
             const obj = step(1256);
-            const merged = Object.assign(c0(6067).collectGuildAnalyticsMetadata(_undefined));
+            const merged = Object.assign(c0(6057).collectGuildAnalyticsMetadata(_undefined));
             obj2.step = 0;
             obj2.skipped = true;
             obj2.back = false;
@@ -604,7 +600,7 @@ export default function GuildOnboardingPrompt(guildId) {
             } else {
               tmp5();
             }
-            const obj3 = c0(6067);
+            const obj3 = c0(6057);
           }),
         };
         navigation.setOptions(obj4);
@@ -614,7 +610,7 @@ export default function GuildOnboardingPrompt(guildId) {
       let headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
         const obj2 = {};
         const obj = step(1256);
-        const merged = Object.assign(c0(6067).collectGuildAnalyticsMetadata(_undefined));
+        const merged = Object.assign(c0(6057).collectGuildAnalyticsMetadata(_undefined));
         obj2.step = step;
         obj2.skipped = false;
         obj2.back = true;
@@ -622,10 +618,10 @@ export default function GuildOnboardingPrompt(guildId) {
         obj2.in_onboarding = true;
         obj2.is_final_step = false;
         obj.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
-        const obj3 = c0(6067);
+        const obj3 = c0(6057);
         const obj5 = {};
         const obj4 = step(1256);
-        const merged1 = Object.assign(c0(6067).collectGuildAnalyticsMetadata(_undefined));
+        const merged1 = Object.assign(c0(6057).collectGuildAnalyticsMetadata(_undefined));
         obj5.step = step - 1;
         obj5.required = dependencyMap[step - 1].required;
         obj4.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj5);
@@ -635,7 +631,7 @@ export default function GuildOnboardingPrompt(guildId) {
     headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
       const obj2 = {};
       const obj = step(1256);
-      const merged = Object.assign(c0(6067).collectGuildAnalyticsMetadata(_undefined));
+      const merged = Object.assign(c0(6057).collectGuildAnalyticsMetadata(_undefined));
       obj2.step = 0;
       obj2.skipped = false;
       obj2.back = true;

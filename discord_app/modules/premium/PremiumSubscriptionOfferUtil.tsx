@@ -21,7 +21,7 @@ function getDiscountInfo(active_discount_id) {
       if (collapsedCategories === active_discount_id) {
         const obj2 = { duration: 1, percentage: 10, discountId: active_discount_id };
         return obj2;
-      } else if (expandedHeight === active_discount_id) {
+      } else if (closure_1_19 === active_discount_id) {
         const obj3 = { duration: 1, percentage: 50, discountId: active_discount_id };
         return obj3;
       } else {
@@ -147,7 +147,7 @@ export function useActiveDiscountInfo() {
 export function useFetchChurnUserDiscountOffer(arg0) {
   let tmp2 = useDiscountOfferDefault(refs);
   const tmp3 = useDiscountOfferDefault(collapsedCategories);
-  const tmp4 = useDiscountOfferDefault(expandedHeight);
+  const tmp4 = useDiscountOfferDefault(closure_1_19);
   const tmp5 = useDiscountOfferDefault(closure_1_11);
   const tmp6 = useDiscountOfferDefault(dependencyMap);
   [tmp8, require] = noop.useState(false);

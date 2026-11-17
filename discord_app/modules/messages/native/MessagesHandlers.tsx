@@ -136,8 +136,8 @@ import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
 import UploadStore from "../../../stores/UploadStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
-const InviteCodeUtils = trackInviteEmbedActioned(6053);
-const CodedLink = trackInviteEmbedActioned(6055);
+const InviteCodeUtils = trackInviteEmbedActioned(6043);
+const CodedLink = trackInviteEmbedActioned(6045);
 const InstantInviteActionCreators = trackInviteEmbedActioned(7660);
 const InviteTypeUtils = trackInviteEmbedActioned(8841);
 const SocialLayerStorefrontNativeActionCreators = trackInviteEmbedActioned(11729);

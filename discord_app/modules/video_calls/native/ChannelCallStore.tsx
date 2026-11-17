@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 const ChannelCallConstants = fn(11004);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 const timeout = new fn(5150).Timeout();
 let obj = {
   focus: true,
@@ -29,22 +29,22 @@ let size = {
   x: "Array",
   y: "s",
   width: "channelId",
-  height: "type",
+  height: "e",
   screenOrientation: fn(10041).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: 858992913,
-  isInitialized: 858993459,
-  isVisible: 2138128424,
+  hasUserInteractedSinceOrientationChange: 422417,
+  isInitialized: 8060928,
+  isVisible: 1359020032,
 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
   y: "s",
   width: "channelId",
-  height: "type",
+  height: "e",
   screenOrientation: fn(10041).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: 858992913,
-  isInitialized: 858993459,
-  isVisible: 2138128424,
+  hasUserInteractedSinceOrientationChange: 422417,
+  isInitialized: 8060928,
+  isVisible: 1359020032,
 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;

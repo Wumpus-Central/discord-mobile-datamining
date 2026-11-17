@@ -69,7 +69,7 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const obj7 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-      settingType: tmp2(20441).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+      settingType: tmp2(20444).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
       label: null,
       subLabel: null,
       disabled: null,
@@ -83,7 +83,7 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const obj8 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-      settingType: tmp2(20441).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+      settingType: tmp2(20444).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
       label: null,
       disabled: null,
     };
@@ -94,7 +94,7 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const obj9 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS,
-      settingType: tmp2(20441).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
+      settingType: tmp2(20444).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
       label: null,
       subLabel: null,
       disabled: null,
@@ -107,8 +107,8 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     items4[2] = closure_8(GuildSpaceSystemMessageSwitch, obj9);
     obj6.children = items4;
     obj5.children = closure_9(tmp2(7746).TableRowGroup, obj6);
-    obj4.children = closure_8(tmp2(6337).Stack, obj5);
-    const items5 = [closure_8(tmp2(8106).Form, obj4), closure_8(tmp2(5912).NavScrim, {})];
+    obj4.children = closure_8(tmp2(6327).Stack, obj5);
+    const items5 = [closure_8(tmp2(8106).Form, obj4), closure_8(tmp2(5902).NavScrim, {})];
     obj3.children = items5;
     tmp6 = closure_9(closure_10, obj3);
   }

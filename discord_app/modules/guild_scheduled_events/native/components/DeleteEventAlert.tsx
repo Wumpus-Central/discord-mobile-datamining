@@ -76,7 +76,7 @@ export default function DeleteEventAlert(eventException) {
             const obj = { value, done: true };
             return obj;
           }
-          v1(5552).hideActionSheet();
+          v1(5542).hideActionSheet();
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

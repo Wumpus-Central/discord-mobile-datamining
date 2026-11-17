@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import HexagonCampaignUtils from "../../../hexagon_campaign/HexagonCampaignUtils.tsx";
-import QuestTypes from "../../../quests/QuestTypes.tsx";
 import MobileThemesUtils from "../../../client_themes/native/MobileThemesUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import QuestTypes from "../../../quests/QuestTypes.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
@@ -824,7 +824,7 @@ function ThemePicker(defaultIndex) {
           const obj = { theme: tmp4, children: null };
           const obj2 = { navigation };
           obj.children = obj4(dependencyMap(9058), obj2);
-          return obj4(closure_0(5377).ThemeContextProvider, obj);
+          return obj4(closure_0(5367).ThemeContextProvider, obj);
         } else {
           return null;
         }
@@ -837,7 +837,7 @@ function ThemePicker(defaultIndex) {
           stringResult = intl.string(closure_0(1113).t.XAS5Pi);
         }
         obj.children = stringResult;
-        return obj4(closure_0(5929).Text, obj);
+        return obj4(closure_0(5919).Text, obj);
       },
       headerTitleAlign: "center",
       headerRight: null,
@@ -896,7 +896,7 @@ function ThemePicker(defaultIndex) {
       hasOnyxNux,
       onThemeSelected: callback4,
     };
-    let tmp62 = obj4(tmp6(17892), obj5);
+    let tmp62 = obj4(tmp6(17894), obj5);
     let tmp63 = obj4;
   } else {
     let tmp58;
@@ -911,13 +911,13 @@ function ThemePicker(defaultIndex) {
     let obj7 = { theme: tmp58, children: null };
     let obj8 = { variant: "experimental_Large", state: segmentedControlState };
     obj7.children = obj4(tmp3(11251).SegmentedControl, obj8);
-    const items15 = [obj4(tmp3(5377).ThemeContextProvider, obj7)];
+    const items15 = [obj4(tmp3(5367).ThemeContextProvider, obj7)];
     const obj9 = { animated: true, variant: "body-xs/medium", style: null, children: null };
     const items16 = [obj4.headerSecondary, tmp.textCentered];
     obj9.style = items16;
     let intl = tmp3(1113).intl;
     obj9.children = intl.string(tmp3(1113).t.d5Gu9A);
-    items15[1] = obj4(tmp3(5929).Text, obj9);
+    items15[1] = obj4(tmp3(5919).Text, obj9);
     obj6.children = items15;
     tmp62 = first1(c6, obj6);
     tmp63 = obj4;
@@ -940,7 +940,7 @@ function ThemePicker(defaultIndex) {
     }
     _undefined(str);
   }, items17);
-  const memo3 = obj2.useMemo(tmp6(17898), []);
+  const memo3 = obj2.useMemo(tmp6(17900), []);
   const obj10 = {
     themes: mobileThemes,
     themeIndex,
@@ -955,8 +955,8 @@ function ThemePicker(defaultIndex) {
     result = isPreview;
   }
   if (result) {
-    result = tmp3(5544).isNitroGatedMobileTheme(mobileThemes[themeIndex]);
-    const tmp3Result16 = tmp3(5544);
+    result = tmp3(5534).isNitroGatedMobileTheme(mobileThemes[themeIndex]);
+    const tmp3Result16 = tmp3(5534);
   }
   obj10.isNitroLocked = result;
   const tmp63Result = tmp63(SettingsAppearanceChannelListDefault, obj10);
@@ -970,7 +970,7 @@ function ThemePicker(defaultIndex) {
   let tmp63Result2 = null;
   if ("nitro" === themeSelector) {
     const obj12 = { themes: mobileThemes, themeIndex, isDimmed: true };
-    tmp63Result2 = tmp63(tmp6(17919), obj12);
+    tmp63Result2 = tmp63(tmp6(17921), obj12);
   }
   const items19 = [tmp63Result2];
   const items20 = [tmp.container, ,];

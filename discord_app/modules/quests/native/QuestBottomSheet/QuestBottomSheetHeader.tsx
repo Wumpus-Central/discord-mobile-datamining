@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import QuestTypes from "../../QuestTypes.tsx";
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
+import QuestTypes from "../../QuestTypes.tsx";
 import QuestTaskUtils from "../../utils/QuestTaskUtils.tsx";
 import QuestBottomSheet from "QuestBottomSheet.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -169,7 +169,7 @@ export default function QuestBottomSheetHeader(arg0) {
     }
   }, items2);
   const tmp2Result15 = isScreenReaderEnabled(8829);
-  isScreenReaderEnabled = isScreenReaderEnabled(5568).useIsScreenReaderEnabled();
+  isScreenReaderEnabled = isScreenReaderEnabled(5558).useIsScreenReaderEnabled();
   ref = noop.useRef(null);
   const items3 = [isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
@@ -207,7 +207,7 @@ export default function QuestBottomSheetHeader(arg0) {
     items5[1] = titleWithActionSheet;
     obj4.style = items5;
     obj4.children = memo1;
-    tmp24Result = closure_7(tmp2(5929).Text, obj4);
+    tmp24Result = closure_7(tmp2(5919).Text, obj4);
   }
   const items6 = [tmp24Result];
   if (withActionSheet) {

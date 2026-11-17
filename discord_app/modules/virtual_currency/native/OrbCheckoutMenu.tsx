@@ -30,7 +30,7 @@ export default function OrbCheckoutMenu() {
   }, items);
   let obj = { children: null };
   const items1 = [
-    closure_5(value(5929).Text, { style: tmp.title, variant: "body-md/semibold", children: "Redeem SKU for Orbs" }),
+    closure_5(value(5919).Text, { style: tmp.title, variant: "body-md/semibold", children: "Redeem SKU for Orbs" }),
     closure_5(value(7619).TextInput, {
       containerStyle: tmp.textInput,
       label: "SKU ID",
@@ -40,12 +40,12 @@ export default function OrbCheckoutMenu() {
       },
       clearable: true,
     }),
-    closure_5(value(5929).Text, {
+    closure_5(value(5919).Text, {
       style: tmp.title,
       variant: "body-md/semibold",
       children: "Checkout will open with the orb price of the product, if it exists",
     }),
-    closure_5(value(5936).Button, {
+    closure_5(value(5926).Button, {
       text: "Open Orbs Checkout",
       variant: "primary",
       onPress: callback,

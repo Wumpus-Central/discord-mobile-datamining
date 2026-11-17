@@ -10,7 +10,7 @@ import openMediaModal from "../modules/media_viewer/native/components/openMediaM
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import common_VideoDefault from "common/Video.tsx";
 import _modDef11368 from "../../_runtime/metro/11368__.js";
-import _modDef18175 from "../../_runtime/metro/18175__.js";
+import _modDef18177 from "../../_runtime/metro/18177__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -194,7 +194,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return React5(View, obj);
 };
-ListItem.contextType = fn(5377).ThemeContext;
+ListItem.contextType = fn(5367).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -308,7 +308,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      items = [closure_7(_modDef18175, obj4)];
+      items = [closure_7(_modDef18177, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -380,7 +380,7 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return metroImportDefault(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(5377).ThemeContext;
+ChangeLog.contextType = fn(5367).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 

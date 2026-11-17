@@ -65,7 +65,7 @@ function ConjureRemoveFromServerAlert(target) {
             throw error;
           } else {
             const obj6 = { text: closure_128_0, variant: "success" };
-            tmp5(6015).open("CONJURE_APP_REMOVED", obj6);
+            tmp5(6005).open("CONJURE_APP_REMOVED", obj6);
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -109,7 +109,7 @@ function ConjureRemoveFromServerAlert(target) {
   let tmp5Result2 = null;
   if (null != error) {
     let obj6 = { variant: "body-sm/medium", color: "text-feedback-critical", children: error };
-    tmp5Result2 = closure_6(tmp6(5929).Text, obj6);
+    tmp5Result2 = closure_6(tmp6(5919).Text, obj6);
   }
   items[2] = tmp5Result2;
   obj.extraContent = closure_7(require("Stack/Stack").Stack, { spacing: 12, children: items });

@@ -90,9 +90,9 @@ let closure_11 = async function _importIntoProject(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1113).intl;
-            tmp3(6014).presentError(intl.string(v2(4131)["Q+l4Hv"]));
+            tmp3(6004).presentError(intl.string(v2(4131)["Q+l4Hv"]));
             c3 = 3;
-            tmp3(6014);
+            tmp3(6004);
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -134,7 +134,7 @@ function deleteConjureProject(project, removeTarget) {
     obj3.onConfirm = function onConfirm() {
       const result = ConjureActionCreators.deleteProjectInBackground(project.id, () => {
         const intl = project(1113).intl;
-        return project(6014).presentError(intl.string(closure_1_1(4131)["0XDHob"]));
+        return project(6004).presentError(intl.string(closure_1_1(4131)["0XDHob"]));
       });
     };
     require("AlertModal").showConfirmModal(obj3);
@@ -176,7 +176,7 @@ export function importConjureProject(project, arg1) {
     return applyArgumentsResult;
   })(project, arg1).catch(() => {
     const intl = project(1113).intl;
-    project(6014).presentError(intl.string(guildId(4131)["Q+l4Hv"]));
+    project(6004).presentError(intl.string(guildId(4131)["Q+l4Hv"]));
   });
 }
 export function copyConjureProjectLink(project, guild_id) {
@@ -273,7 +273,7 @@ export function conjureProjectActions(project) {
         return applyArgumentsResult;
       })(project, closure_1_4).catch(() => {
         const intl = project(1113).intl;
-        project(6014).presentError(intl.string(guildId(4131)["Q+l4Hv"]));
+        project(6004).presentError(intl.string(guildId(4131)["Q+l4Hv"]));
       });
     };
     items.push(obj4);

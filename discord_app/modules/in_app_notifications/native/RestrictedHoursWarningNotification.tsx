@@ -52,7 +52,7 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
       </View>
     ),
     header: memo,
-    children: jsx(notification(5929).Text, {
+    children: jsx(notification(5919).Text, {
       variant: "heading-sm/medium",
       color: "text-subtle",
       lineClamp,
@@ -68,7 +68,7 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
       </View>
     ),
     header: memo,
-    children: jsx(notification(5929).Text, {
+    children: jsx(notification(5919).Text, {
       variant: "heading-sm/medium",
       color: "text-subtle",
       lineClamp,

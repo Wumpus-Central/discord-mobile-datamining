@@ -50,7 +50,7 @@ export default noop.memo(function ConjureAppChannelMembersSheet(channelId) {
       disableThemedGradient: true,
       listStyleOverride: tmp.list,
     });
-    tmp7 = jsx(channelId(5566).BottomSheet, {
+    tmp7 = jsx(channelId(5556).BottomSheet, {
       startExpanded: true,
       scrollable: true,
       bodyStyles: tmp.body,

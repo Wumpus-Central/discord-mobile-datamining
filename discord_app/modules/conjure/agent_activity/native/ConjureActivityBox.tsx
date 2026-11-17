@@ -247,7 +247,7 @@ function TimelineRow(inGutter) {
       color: "text-subtle",
       children: node(13170).describeDuration(node.durationMs),
     };
-    tmp4Result = closure_6(node(5929).Text, obj3);
+    tmp4Result = closure_6(node(5919).Text, obj3);
     const tmp8Result = node(13170);
   }
   obj.trailing = tmp4Result;

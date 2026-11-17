@@ -152,7 +152,7 @@ function NameplateActionSheetPreview(arg0) {
   const obj4 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.1 }, end: { x: 0, y: 0.8 }, colors: null };
   const items2 = [tmp.nameplatePreviewGradient.color, "" + tmp.nameplatePreviewGradient.color + "00"];
   obj4.colors = items2;
-  items1[2] = closure_10(purchase(5893), obj4);
+  items1[2] = closure_10(purchase(5883), obj4);
   obj3.children = items1;
   const items3 = [
     closure_11(View, obj3),
@@ -164,10 +164,10 @@ function NameplateActionSheetPreview(arg0) {
     closure_10(tmp10(9507).NameplateDummyUserPreview, { width: 100 }),
   ];
   const obj6 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.2 }, end: { x: 0, y: 0.9 }, colors: null };
-  const tmp2Result = purchase(5893);
+  const tmp2Result = purchase(5883);
   const items5 = ["" + tmp.nameplatePreviewGradient.color + "00", tmp.nameplatePreviewGradient.color];
   obj6.colors = items5;
-  items4[2] = closure_10(purchase(5893), obj6);
+  items4[2] = closure_10(purchase(5883), obj6);
   obj5.children = items4;
   items3[2] = closure_11(View, obj5);
   obj.children = items3;
@@ -278,6 +278,6 @@ export default function EditNameplateActionSheet(arg0) {
   obj7.analyticsSource = tmp7(7937).EDIT_NAMEPLATE_SHEET;
   items1[1] = closure_10(first(9403), obj7);
   obj4.children = items1;
-  obj3.children = closure_11(guildId(5566).BottomSheet, obj4);
+  obj3.children = closure_11(guildId(5556).BottomSheet, obj4);
   return closure_10(guildId(7918).AnalyticsLocationProvider, obj3);
 }

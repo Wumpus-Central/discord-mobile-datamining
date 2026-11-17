@@ -198,7 +198,7 @@ function Duration(animationValue) {
   }
   obj4.color = str;
   obj4.children = memo;
-  items7[1] = closure_13(tmp8(5929).Text, obj4);
+  items7[1] = closure_13(tmp8(5919).Text, obj4);
   obj3.children = items7;
   return closure_14(tmp10(1655).View, obj3);
 }
@@ -339,7 +339,7 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
     if (!timeout) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        const obj = c0(5548);
+        const obj = c0(5538);
         const result = _undefined2.set(obj.withTiming(1, { easing: c0(1655).Easing.quad, duration: 200 }));
       }, 1000);
       return () => {

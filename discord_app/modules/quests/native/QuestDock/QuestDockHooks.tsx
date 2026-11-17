@@ -5,9 +5,9 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
-import QuestTypes from "../../QuestTypes.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
+import QuestTypes from "../../QuestTypes.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import ClientThemesOverrides from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
@@ -28,7 +28,7 @@ import QuestDockStore from "QuestDockStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: closure_6, QuestDockMode: metroImportDefault } = QuestConstants);
 const QuestDockConstants = fn(17698);
 ({

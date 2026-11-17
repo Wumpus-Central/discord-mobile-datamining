@@ -192,11 +192,11 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
   noop = noop.useCallback(() => {
     const obj = closure_0(17085);
     const result = obj.trackHexagonCampaignContentClicked({
-      content: closure_0(5341).QuestContent.AD_PERK_MODAL,
+      content: closure_0(6957).QuestContent.AD_PERK_MODAL,
       questContentCTA: closure_0(8834).QuestContentCTA.LEARN_MORE,
     });
     const obj2 = {
-      content: closure_0(5341).QuestContent.AD_PERK_MODAL,
+      content: closure_0(6957).QuestContent.AD_PERK_MODAL,
       questContentCTA: closure_0(8834).QuestContentCTA.LEARN_MORE,
     };
     const result1 = closure_0(17104).openHexagonCampaignLearnMore();

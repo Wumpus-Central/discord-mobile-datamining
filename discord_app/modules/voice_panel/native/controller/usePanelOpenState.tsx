@@ -100,9 +100,9 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
       if (first !== pathname.pathname) {
         closure_1_5(tmp);
         const obj2 = { path: null };
-        const RouteParam = c0(5367).RouteParam;
-        const obj = c0(5354);
-        const RouteParam2 = c0(5367).RouteParam;
+        const RouteParam = c0(5357).RouteParam;
+        const obj = c0(5344);
+        const RouteParam2 = c0(5357).RouteParam;
         obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
         const matchPathResult = obj.matchPath(pathname.pathname, obj2);
         const guildIdResult = RouteParam.guildId();

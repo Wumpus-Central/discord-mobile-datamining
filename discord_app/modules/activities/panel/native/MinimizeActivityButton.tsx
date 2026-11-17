@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles({ buttonParent: { flexShrink: 1 } });
@@ -34,7 +34,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
       obj3.accessibilityLabel = intl2.string(setMode(1113).t.brPQ5U);
       obj3.onPress = callback;
       obj3.text = activityName;
-      obj2.children = jsx(setMode(5936).Button, {
+      obj2.children = jsx(setMode(5926).Button, {
         icon: _modDef10561,
         accessibilityLabel: null,
         onPress: null,

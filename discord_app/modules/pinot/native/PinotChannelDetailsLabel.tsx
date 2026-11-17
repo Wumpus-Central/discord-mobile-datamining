@@ -58,7 +58,7 @@ export function PinotChannelDetailsLabel(channel) {
       children: null,
     };
     const obj3 = { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult };
-    obj2.children = jsx(tmp2(5929).Text, {
+    obj2.children = jsx(tmp2(5919).Text, {
       variant: "body-xs/medium",
       color: "none",
       style: tmp.text,

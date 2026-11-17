@@ -214,8 +214,8 @@ export default function AddFriendNicknameModal(arg0) {
     color: "mobile-text-heading-primary",
     children: stringResult,
   };
-  const tmp3Result3 = showUserProfile(6340);
-  obj8.placeholder = showUserProfile(5372).getName(stateFromStores1);
+  const tmp3Result3 = showUserProfile(6330);
+  obj8.placeholder = showUserProfile(5362).getName(stateFromStores1);
   obj8.defaultValue = stateFromStores;
   items3[2] = closure_9(TextField.TextField, obj8);
   obj5.children = items3;

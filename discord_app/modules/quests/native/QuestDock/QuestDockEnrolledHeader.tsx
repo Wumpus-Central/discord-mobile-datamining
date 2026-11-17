@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import QuestTypes from "../../QuestTypes.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
+import QuestTypes from "../../QuestTypes.tsx";
 import hooks_QuestHooks from "../../hooks/QuestHooks.tsx";
 import QuestCopyHooks from "../../hooks/QuestCopyHooks.tsx";
 import QuestDockCreativeContext from "QuestDockCreativeContext.tsx";

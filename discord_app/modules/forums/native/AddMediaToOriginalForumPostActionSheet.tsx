@@ -82,7 +82,7 @@ let closure_16 = async function _upload2(arg0) {
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(5552).hideActionSheet();
+              closure_1(5542).hideActionSheet();
               const obj4 = {
                 file: currentSize,
                 maxSize: effectiveUploadLimit,
@@ -91,19 +91,19 @@ let closure_16 = async function _upload2(arg0) {
                 analyticsLocations,
               };
               closure_1(11167)(obj4);
-              const obj3 = closure_1(5552);
+              const obj3 = closure_1(5542);
             }
             const obj2 = closure_0(8890);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(5552).hideActionSheet();
+            closure_1(5542).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
             closure_1(11153).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
             const obj = closure_1(11153);
-            closure_1(5552).hideActionSheet();
+            closure_1(5542).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));

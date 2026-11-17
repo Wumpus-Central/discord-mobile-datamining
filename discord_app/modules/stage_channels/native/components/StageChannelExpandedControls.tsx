@@ -50,7 +50,7 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
     num = 0;
   }
   const obj4 = channel(504);
-  const stageHasMedia = channel(6939).useStageHasMedia(channel.id);
+  const stageHasMedia = channel(6929).useStageHasMedia(channel.id);
   const items5 = [];
   items5.push(jsx(channel(13057).StreamVolumeItem, {}));
   if (tmp11) {
@@ -73,7 +73,7 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
   items5.push(jsx(channel(13057).DeafenButton, { channel }));
   const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
   tmp11 = num > 0 && tmp4;
-  const tmp5Result = channel(6939);
+  const tmp5Result = channel(6929);
   return (
     <View style={tmp.container}>
       {items5.map((children, index) => (

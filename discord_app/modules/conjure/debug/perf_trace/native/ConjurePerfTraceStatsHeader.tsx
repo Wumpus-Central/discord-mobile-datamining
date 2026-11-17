@@ -129,7 +129,7 @@ export default function ConjurePerfTraceStatsHeader(stats) {
   let tmp7Result = null;
   if (null != perfModelSummaryResult) {
     let obj5 = { variant: "body-sm/normal", color: "text-default", children: perfModelSummaryResult };
-    tmp7Result = closure_3(stats(5929).Text, obj5);
+    tmp7Result = closure_3(stats(5919).Text, obj5);
   }
   items[2] = tmp7Result;
   obj2.children = items;

@@ -67,7 +67,7 @@ QRCode.prototype["render"] = function render() {
   obj.children = React5(hasOwnProperty, obj2);
   return metroImportDefault(hasOwnProperty, obj);
 };
-QRCode.contextType = fn(5377).ThemeContext;
+QRCode.contextType = fn(5367).ThemeContext;
 QRCode.defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
 const PureComponent2 = noop.PureComponent;
 class QRCodeWithOverlay extends PureComponent2 {}
@@ -98,7 +98,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   obj.children = items;
   return React5(hasOwnProperty, obj);
 };
-QRCodeWithOverlay.contextType = fn(5377).ThemeContext;
+QRCodeWithOverlay.contextType = fn(5367).ThemeContext;
 QRCodeWithOverlay.defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/QRCode.tsx");

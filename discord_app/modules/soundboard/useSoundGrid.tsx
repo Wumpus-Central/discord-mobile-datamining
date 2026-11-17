@@ -23,7 +23,7 @@ function createSoundItems(arg0, fn) {
   }
   return arr.map((sound, index) => ({ type: categories(length[10]).SoundboardSoundItemType.SOUND, sound, index }));
 }
-const SoundboardConstants = fn(6371);
+const SoundboardConstants = fn(6361);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
 const PremiumTypes = fn(1390).PremiumTypes;
 const size = fn(2);

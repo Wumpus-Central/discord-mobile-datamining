@@ -26,5 +26,5 @@ export default function GameProfileReportButton(applicationId) {
   const intl = applicationId(1113).intl;
   obj.text = intl.string(applicationId(1113).t.qP2cXd);
   obj.onPress = callback;
-  return jsx(applicationId(5936).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+  return jsx(applicationId(5926).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 }

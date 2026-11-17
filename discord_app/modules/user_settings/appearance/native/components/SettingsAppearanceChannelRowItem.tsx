@@ -103,13 +103,13 @@ export default function ChannelRowItem(isUnread) {
   obj6 = { style: tmp2.channelItemContent, children: null };
   const obj7 = { style: tmp2.channelItemTop, children: null };
   const items3 = [
-    React4(tmp6(5929).Text, {
+    React4(tmp6(5919).Text, {
       animated: true,
       style: flag ? animatedStyles.textNormal : animatedStyles.textMuted,
       variant: "heading-sm/semibold",
       children: title,
     }),
-    React4(tmp6(5929).Text, {
+    React4(tmp6(5919).Text, {
       animated: true,
       style: animatedStyles.textMuted,
       variant: "body-xs/medium",
@@ -128,7 +128,7 @@ export default function ChannelRowItem(isUnread) {
     animatedStyles = { animated: true, style: null, variant: "heading-sm/medium", lineClamp: 1, children: null };
     animatedStyles.style = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
     animatedStyles.children = preview;
-    React4(tmp6(5929).Text, animatedStyles);
+    React4(tmp6(5919).Text, animatedStyles);
     const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
   }
   const obj8 = {

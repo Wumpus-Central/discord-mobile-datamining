@@ -204,7 +204,7 @@ function ActionBar(channel) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5936).Button, obj9);
+    obj8.children = closure_29(tmp2(5926).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);

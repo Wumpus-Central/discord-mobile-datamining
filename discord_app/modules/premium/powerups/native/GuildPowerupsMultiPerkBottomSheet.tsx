@@ -243,8 +243,8 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
     );
     items[2] = closure_4(View, obj13);
     obj2.children = items;
-    obj.children = closure_5(guildId(5570).BottomSheetScrollView, obj2);
-    tmp6Result2 = closure_4(guildId(5566).BottomSheet, obj);
+    obj.children = closure_5(guildId(5560).BottomSheetScrollView, obj2);
+    tmp6Result2 = closure_4(guildId(5556).BottomSheet, obj);
     const obj5 = { title: null, description: null };
   }
   return tmp6Result2;

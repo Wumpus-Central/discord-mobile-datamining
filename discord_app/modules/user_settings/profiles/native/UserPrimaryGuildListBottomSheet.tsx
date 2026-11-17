@@ -61,7 +61,7 @@ let closure_11 = noop.memo(function Item(item) {
     guildTagBadgeUrl = item(8409).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
     let obj = item(8409);
   }
-  const radioA11yNative = item(5378).useRadioA11yNative({ selected });
+  const radioA11yNative = item(5368).useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj3 = {
     start,

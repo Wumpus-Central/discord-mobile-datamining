@@ -214,8 +214,8 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
     arg0,
   );
 }
-const IOS_POINTER_STYLE = fn(5946).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(19060);
+const IOS_POINTER_STYLE = fn(5936).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(19062);
 ({
   GUILD_ITEM_HIT_SLOP: hasOwnProperty,
   GUILD_ITEM_INSET_LEFT: closure_6,
@@ -395,7 +395,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     GuildsBarAnimatedItemWrapperTsx4,
   );
-  const enableHome = noop.useContext(tmp2(18742).HomeDrawerStateContext).enableHome;
+  const enableHome = noop.useContext(tmp2(18744).HomeDrawerStateContext).enableHome;
   const obj3 = require("../../../../_runtime/metro/01655__.js");
   const drawerOpen = require("useDrawerState").useDrawerOpen(enableHome);
   const items2 = [isDragTarget, dragState, num, overState, zIndex, tmp];

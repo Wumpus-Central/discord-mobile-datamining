@@ -58,7 +58,7 @@ export default function ConjureFileMention(variant) {
     name = intl.string(tmp9(4131).ff9Q4C);
   }
   obj4.children = name;
-  items[1] = closure_7(context(5929).Text, obj4);
+  items[1] = closure_7(context(5919).Text, obj4);
   obj2.children = items;
   const tmp6Result = closure_8(closure_6, obj2);
   let tmp8Result = tmp6Result;

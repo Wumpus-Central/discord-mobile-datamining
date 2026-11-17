@@ -50,7 +50,7 @@ function Content() {
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
-    children: closure_5(visible(5936).Button, {
+    children: closure_5(visible(5926).Button, {
       ref,
       onPress() {
         dependencyMap(!first);

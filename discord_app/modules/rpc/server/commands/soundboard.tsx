@@ -6,7 +6,7 @@ import SoundboardStore from "../../../soundboard/SoundboardStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-let Constants = fn(6761);
+let Constants = fn(6751);
 ({ RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = Constants);
 Constants = fn(1083);
 ({ RPCCommands, RPCErrors: closure_6 } = Constants);

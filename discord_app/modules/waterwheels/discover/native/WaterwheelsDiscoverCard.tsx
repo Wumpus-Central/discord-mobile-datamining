@@ -25,11 +25,11 @@ function ServerIdentity(server) {
     flag = false;
   }
   const onAction = server.onAction;
-  const fontScale = server(5944).useFontScale();
+  const fontScale = server(5934).useFontScale();
   const tmp4 = closure_16();
   const guildId = server.guildId;
   closure_129_0 = guildId;
-  let obj = server(5944);
+  let obj = server(5934);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = server(504).useStateFromStores(
@@ -64,9 +64,9 @@ function ServerIdentity(server) {
     obj4.style = items2;
     const obj6 = { uri: server.iconUrl };
     obj4.source = obj6;
-    let tmp14Result4 = closure_10(onAction(6020), obj4);
+    let tmp14Result4 = closure_10(onAction(6010), obj4);
     let tmp14 = closure_10;
-    const tmp19 = onAction(6020);
+    const tmp19 = onAction(6010);
   } else {
     tmp14 = closure_10;
     const items3 = [tmp4.icon];
@@ -82,7 +82,7 @@ function ServerIdentity(server) {
   const items4 = [tmp14Result4];
   const obj8 = { style: tmp4.identityCopy, children: null };
   const obj9 = { style: tmp4.nameRow, children: null };
-  const tmpResult2 = server(5929);
+  const tmpResult2 = server(5919);
   if (flag) {
     const obj10 = {
       variant: "body-sm/semibold",
@@ -124,7 +124,7 @@ function ServerIdentity(server) {
   const obj17 = { variant: "body-xs/medium", color: "text-subtle", style: tmp4.metaText, children: null };
   const intl = tmp(1113).intl;
   obj17.children = intl.format(server(1113).t["LC+S+m"], { membersOnline: server.online });
-  items7[1] = tmp14(server(5929).Text, obj17);
+  items7[1] = tmp14(server(5919).Text, obj17);
   obj15.children = items7;
   const items8 = [closure_11(closure_7, obj15)];
   let tmp12Result = null;
@@ -139,7 +139,7 @@ function ServerIdentity(server) {
     const intl2 = tmp(1113).intl;
     const obj22 = { count: server.members };
     obj21.children = intl2.format(tmp(1113).t.zRl6XR, obj22);
-    items10[1] = tmp14(tmp(5929).Text, obj21);
+    items10[1] = tmp14(tmp(5919).Text, obj21);
     obj19.children = items10;
     tmp12Result = closure_11(closure_7, obj19);
   }

@@ -498,7 +498,7 @@ export function GuildEventShareAction(event) {
       ToastUtils.presentLinkCopied();
     }
   };
-  obj3.icon = importDefault(tmp3 ? 12290 : 6030);
+  obj3.icon = importDefault(tmp3 ? 12290 : 6020);
   return closure_21(event(7988).IconButton, obj3);
 }
 export function GuildEventModeratorAction(event) {
@@ -1007,7 +1007,7 @@ export function GuildEventSimpleLocation(event) {
     },
     items3,
   );
-  let tmp7 = stateFromStores(5954)(stateFromStores);
+  let tmp7 = stateFromStores(5944)(stateFromStores);
   const obj2 = channel_id(504);
   const tmp6 = stateFromStores;
   const locationFromEvent = channel_id(7975).getLocationFromEvent(event);
@@ -1055,7 +1055,7 @@ export function GuildEventSimpleLocation(event) {
     tmp7 = result;
   }
   obj6.children = tmp7;
-  items4[1] = closure_21(channel_id(5929).Text, obj6);
+  items4[1] = closure_21(channel_id(5919).Text, obj6);
   obj4.children = items4;
   return closure_22(closure_6, obj4);
 }
@@ -1075,7 +1075,7 @@ export function GuildEventCardSimpleGuildInfo(arg0) {
     const items3 = [closure_21(GuildIconDefault, obj3)];
     const obj4 = { style: tmp.guildInfo, children: null };
     const obj5 = { variant: "body-sm/semibold", style: textStyle, children: stateFromStores.name };
-    obj4.children = closure_21(tmp2(5929).Text, obj5);
+    obj4.children = closure_21(tmp2(5919).Text, obj5);
     items3[1] = closure_21(closure_6, obj4);
     obj2.children = items3;
     tmp5 = closure_22(closure_6, obj2);

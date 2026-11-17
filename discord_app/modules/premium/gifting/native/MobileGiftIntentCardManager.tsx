@@ -45,8 +45,8 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
             obj2.dm_affinity = dmProbability;
             obj2.channel_id = id;
             obj.properties = obj2;
-            tmp(6338).trackImpression(obj);
-            const tmpResult2 = tmp(6338);
+            tmp(6328).trackImpression(obj);
+            const tmpResult2 = tmp(6328);
           }
         } else {
           MessageStore.whenReady(id, () => {

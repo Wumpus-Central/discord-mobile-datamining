@@ -130,7 +130,7 @@ export default function CustomColorPickerActionSheet(arg0) {
   const intl2 = onSelect(1113).intl;
   obj9.text = intl2.string(onSelect(1113).t.XqMe3N);
   obj9.onPress = callback1;
-  obj7.trailing = sharedValue2(onSelect(5936).Button, obj9);
+  obj7.trailing = sharedValue2(onSelect(5926).Button, obj9);
   obj5.header = sharedValue2(onSelect(7913).BottomSheetTitleHeader, obj7);
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { accessibilityLabel: null, value: null, onChange: null, maxLength: 7 };
@@ -192,5 +192,5 @@ export default function CustomColorPickerActionSheet(arg0) {
   });
   obj10.children = items3;
   obj5.children = tmp13(tmp14, obj10);
-  return sharedValue2(onSelect(5566).BottomSheet, obj5);
+  return sharedValue2(onSelect(5556).BottomSheet, obj5);
 }

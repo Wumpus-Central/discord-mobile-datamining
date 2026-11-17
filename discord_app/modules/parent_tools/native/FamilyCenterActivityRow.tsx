@@ -82,13 +82,13 @@ const memoResult = noop.memo((action) => {
     };
     const tmp3Result = SnowflakeUtilsDefault;
     obj6.children = UserUtilsDefault.getName(stateFromStores);
-    const items2 = [closure_8(tmp6(5929).Text, obj6)];
+    const items2 = [closure_8(tmp6(5919).Text, obj6)];
     const obj7 = { variant: "body-xs/medium", color: "channels-default", children: null };
     const tmp3Result2 = UserUtilsDefault;
     const _Date = Date;
     const date = new Date(extractTimestampResult);
     obj7.children = tmp6(9619).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
-    items2[1] = closure_8(tmp6(5929).Text, obj7);
+    items2[1] = closure_8(tmp6(5919).Text, obj7);
     obj5.children = items2;
     items1[1] = closure_9(View, obj5);
     obj2.children = items1;
@@ -190,7 +190,7 @@ const memoResult1 = noop.memo((action) => {
       lineClamp: 1,
       children: stateFromStores.name,
     };
-    items2[1] = closure_8(tmp2(5929).Text, obj9);
+    items2[1] = closure_8(tmp2(5919).Text, obj9);
     obj7.children = items2;
     obj6.children = closure_9(View, obj7);
     const items3 = [closure_8(View, obj6)];
@@ -200,7 +200,7 @@ const memoResult1 = noop.memo((action) => {
       const intl = tmp2(1113).intl;
       const obj19 = { members: stateFromStores.approximateMemberCount };
       obj10.children = intl.format(_modDef2701["5JmNgg"], obj19);
-      tmp11Result2 = closure_8(tmp2(5929).Text, obj10);
+      tmp11Result2 = closure_8(tmp2(5919).Text, obj10);
     }
     items3[1] = tmp11Result2;
     obj5.children = items3;

@@ -28,7 +28,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5306);
 let obj2 = {
-  contentContainer: { flex: 1, marginTop: fn(5892).NAV_BAR_HEIGHT },
+  contentContainer: { flex: 1, marginTop: fn(5882).NAV_BAR_HEIGHT },
   scrollContainer: null,
   headerContainer: null,
   headerTitle: null,
@@ -36,7 +36,7 @@ let obj2 = {
   sections: null,
   skipDescription: null,
 };
-let obj3 = { flex: 1, marginTop: fn(5892).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, marginTop: fn(5882).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.headerContainer = { alignItems: "center", paddingVertical: 20, paddingHorizontal: 16 };
 obj2.headerTitle = { textAlign: "center", marginBottom: 8 };

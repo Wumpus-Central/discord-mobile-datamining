@@ -23,10 +23,10 @@ const result = size.fileFinishedImporting(
 
 export default function ChannelSetupScreen() {
   const ref = noop.useRef(null);
-  const token = guild(5902).useToken(callback(575).modules.mobile.TABLE_ROW_PADDING);
-  let obj2 = guild(5902);
-  const enableCommunitySharedStyles = guild(20616).useEnableCommunitySharedStyles();
-  let obj3 = guild(20616);
+  const token = guild(5892).useToken(callback(575).modules.mobile.TABLE_ROW_PADDING);
+  let obj2 = guild(5892);
+  const enableCommunitySharedStyles = guild(20619).useEnableCommunitySharedStyles();
+  let obj3 = guild(20619);
   items = [GuildSettingsStore];
   guild = guild(504).useStateFromStoresObject(items, () => props.getProps()).guild;
   const obj4 = guild(504);
@@ -45,9 +45,9 @@ export default function ChannelSetupScreen() {
     return obj2;
   });
   ({ rulesChannel, publicUpdatesChannel } = stateFromStoresObject);
-  const tmp8 = callback(5954)(rulesChannel, true);
+  const tmp8 = callback(5944)(rulesChannel, true);
   if (tmp8 != null) {
-    const tmp12 = tmp4(5954)(publicUpdatesChannel, true);
+    const tmp12 = tmp4(5944)(publicUpdatesChannel, true);
     if (tmp12 != null) {
       let id;
       if (guild != null) {
@@ -100,7 +100,7 @@ export default function ChannelSetupScreen() {
           callback(8404).updateGuild({ rulesChannelId });
           const obj = callback(8404);
           const obj2 = { rulesChannelId };
-          callback(5552).hideActionSheet();
+          callback(5542).hideActionSheet();
         };
         let rulesChannelId;
         if (guild != null) {
@@ -130,7 +130,7 @@ export default function ChannelSetupScreen() {
           callback(8404).updateGuild({ publicUpdatesChannelId });
           const obj = callback(8404);
           const obj2 = { publicUpdatesChannelId };
-          callback(5552).hideActionSheet();
+          callback(5542).hideActionSheet();
         };
         let prop;
         if (guild != null) {
@@ -145,7 +145,7 @@ export default function ChannelSetupScreen() {
       const obj6 = {
         headerRef: ref,
         disableNextStep: false,
-        currentStep: tmp2(20614).EnableCommunityModalSteps.STEP_2,
+        currentStep: tmp2(20617).EnableCommunityModalSteps.STEP_2,
         children: null,
       };
       const obj7 = { style: enableCommunitySharedStyles.content, children: null };
@@ -158,9 +158,9 @@ export default function ChannelSetupScreen() {
       };
       const intl4 = tmp2(1113).intl;
       obj8.children = intl4.formatToPlainString(tmp2(1113).t.tInpJj, { number: 2, total: 3 });
-      const items5 = [closure_13(tmp2(5929).Text, obj8), , ,];
-      const obj9 = { resizeMode: "contain", source: tmp4(20617)().channelSetup };
-      items5[1] = closure_13(tmp4(6020), obj9);
+      const items5 = [closure_13(tmp2(5919).Text, obj8), , ,];
+      const obj9 = { resizeMode: "contain", source: tmp4(20620)().channelSetup };
+      items5[1] = closure_13(tmp4(6010), obj9);
       const obj10 = {
         style: enableCommunitySharedStyles.header,
         variant: "heading-xl/semibold",
@@ -169,7 +169,7 @@ export default function ChannelSetupScreen() {
       };
       const intl5 = tmp2(1113).intl;
       obj10.children = intl5.string(tmp2(1113).t.YtXpEh);
-      items5[2] = closure_13(tmp2(5929).Heading, obj10);
+      items5[2] = closure_13(tmp2(5919).Heading, obj10);
       const obj11 = {
         style: enableCommunitySharedStyles.description,
         variant: "body-md/medium",
@@ -178,7 +178,7 @@ export default function ChannelSetupScreen() {
       };
       const intl6 = tmp2(1113).intl;
       obj11.children = intl6.string(tmp2(1113).t["J/fYR8"]);
-      items5[3] = closure_13(tmp2(5929).Text, obj11);
+      items5[3] = closure_13(tmp2(5919).Text, obj11);
       obj7.children = items5;
       const items6 = [closure_14(View, obj7)];
       const obj12 = { spacing: 24, style: null, children: null };
@@ -232,9 +232,9 @@ export default function ChannelSetupScreen() {
       obj18.children = closure_13(tmp2(7443).TableRow, obj20);
       items7[1] = closure_13(tmp2(7746).TableRowGroup, obj18);
       obj12.children = items7;
-      items6[1] = closure_14(tmp2(6337).Stack, obj12);
+      items6[1] = closure_14(tmp2(6327).Stack, obj12);
       obj6.children = items6;
-      return closure_14(tmp2(20614).EnableCommunityModalScreen, obj6);
+      return closure_14(tmp2(20617).EnableCommunityModalScreen, obj6);
     } else {
       let prop3;
       if (guild != null) {

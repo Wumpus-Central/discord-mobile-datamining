@@ -137,7 +137,7 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
     }
     sharedValue = tmp(1655).useSharedValue(num3);
     const tmpResult = tmp(1655);
-    const items4 = [closure_13, tmp(5939).withSpring, tmp(1655).clamp, sharedValue, bound, tmp(1655).interpolate, -100];
+    const items4 = [closure_13, tmp(5929).withSpring, tmp(1655).clamp, sharedValue, bound, tmp(1655).interpolate, -100];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -167,7 +167,7 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
     const tmp37 = useSafeAreaInsetsDefault();
     const tmp27 = bound;
     const tmpResult3 = tmp(1655);
-    const items6 = [closure_14, tmp(5939).withSpring, tmp(1655).interpolate, sharedValue, tmp37, tmp27];
+    const items6 = [closure_14, tmp(5929).withSpring, tmp(1655).interpolate, sharedValue, tmp37, tmp27];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;

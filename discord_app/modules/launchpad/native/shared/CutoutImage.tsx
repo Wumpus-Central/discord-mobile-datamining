@@ -4,7 +4,7 @@ import inlineStylesDefault from "../../../../../_runtime/08263_inlineStyles.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const FastImageDefault = tmp13(6020);
+const FastImageDefault = tmp13(6010);
 const getReactNativeSVGImageSourceDefault = tmp13(15748);
 require = fn;
 const jsxProd = fn(21);

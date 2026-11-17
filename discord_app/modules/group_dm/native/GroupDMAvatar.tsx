@@ -66,15 +66,7 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj9 = {
-      style: tmp.firstFace,
-      size: pileSizeOverride,
-      guildId: "r",
-      cutout:
-        "(function SegmentedControlNativeTsx3(){let[activeIndex,itemCount]=this.__closure;return Math.min(Math.max(activeIndex.get(),0),itemCount-1);})",
-      animate:
-        "(function SegmentedControlNativeTsx4(){let[clampedActiveIndex,defaultActiveIndex,indicatorWidth]=this.__closure;return(clampedActiveIndex.get()-defaultActiveIndex.get())*indicatorWidth.get();})",
-    };
+    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 0, animate: "absolute" };
     obj9.cutout = memo1;
     obj9.animate = animate;
     if (null == users) {
@@ -95,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "hr",
+      animate: "sentry-feedback-form-title",
     };
     obj12.animate = animate;
     if (null == users) {

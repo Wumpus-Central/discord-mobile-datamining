@@ -51,7 +51,7 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-const RegistrationUIStore = fn(18648);
+const RegistrationUIStore = fn(18650);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
@@ -120,7 +120,7 @@ export function RegisterPasswordInput(ref) {
   const tmp6 = isPasswordFocused(16493);
   const items1 = [PhoneStore];
   stateFromStores = onPasswordChange(504).useStateFromStores(items1, () => {
-    const FRANCE_AND_FRENCH_REGION = onPasswordChange(5999).CountryCodesSets.FRANCE_AND_FRENCH_REGION;
+    const FRANCE_AND_FRENCH_REGION = onPasswordChange(5989).CountryCodesSets.FRANCE_AND_FRENCH_REGION;
     let num = 8;
     if (FRANCE_AND_FRENCH_REGION.has(countryCode.getCountryCode().alpha2)) {
       num = 12;
@@ -162,7 +162,7 @@ export function RegisterPasswordInput(ref) {
     status: null,
   };
   const obj3 = onPasswordChange(504);
-  obj4.ref = onPasswordChange(5483).mergeRefs(ref.ref, ref);
+  obj4.ref = onPasswordChange(5473).mergeRefs(ref.ref, ref);
   obj4.onChange = callback;
   obj4.value = password;
   let intl = onPasswordChange(1113).intl;
@@ -198,7 +198,7 @@ export function RegisterPasswordInput(ref) {
       obj6.color = "text-muted";
       obj6.animated = true;
       obj6.children = memo;
-      tmp21Result = closure_11(tmp14(5929).Text, obj6);
+      tmp21Result = closure_11(tmp14(5919).Text, obj6);
     }
   }
   children[2] = tmp21Result;

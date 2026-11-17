@@ -82,20 +82,20 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
     }
     const items2 = [tmp8Result];
     const obj8 = { variant: "body-sm/medium", color: "text-muted", children: getOrFetchApplication.name };
-    items2[1] = closure_6(tmp2(5929).Text, obj8);
+    items2[1] = closure_6(tmp2(5919).Text, obj8);
     obj6.children = items2;
     tmp6Result = closure_7(View, obj6);
   }
   const items3 = [
     tmp6Result,
-    closure_6(getOrFetchApplication(5929).Text, { variant: "body-md/semibold", children: sku.name }),
+    closure_6(getOrFetchApplication(5919).Text, { variant: "body-md/semibold", children: sku.name }),
   ];
   obj5.children = items3;
   items1[1] = closure_7(View, obj5);
   let tmp8Result2 = null != userPrice;
   if (tmp8Result2) {
     const obj10 = { variant: "body-md/semibold", children: userPrice };
-    tmp8Result2 = closure_6(tmp2(5929).Text, obj10);
+    tmp8Result2 = closure_6(tmp2(5919).Text, obj10);
   }
   items1[2] = tmp8Result2;
   obj4.children = items1;

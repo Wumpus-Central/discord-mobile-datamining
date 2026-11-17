@@ -401,7 +401,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
       }),
     items13,
   );
-  const Gesture = tmp2(5598).Gesture;
+  const Gesture = tmp2(5588).Gesture;
   const tmp2Result8 = require("../../../../../_runtime/metro/01655__.js");
   const items16 = [closure_16, sharedValue, activeIndex];
   _require = undefined;
@@ -477,7 +477,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   });
   if ("experimental_Large" === str) {
     const obj10 = { gesture: onEndResult, children: tmp57 };
-    tmp56Result = tmp56(tmp2(5598).GestureDetector, obj10);
+    tmp56Result = tmp56(tmp2(5588).GestureDetector, obj10);
   }
   return tmp56Result;
 }

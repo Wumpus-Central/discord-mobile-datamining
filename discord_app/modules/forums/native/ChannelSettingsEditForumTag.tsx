@@ -156,7 +156,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
         } else {
           children = string(t.zeVg5d);
         }
-        return closure_10(channelId(5929).Text, {
+        return closure_10(channelId(5919).Text, {
           variant: "heading-md/semibold",
           color: "mobile-text-heading-primary",
           accessibilityRole: "header",
@@ -285,7 +285,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       const obj16 = { variant: "body-sm/medium", color: "text-muted", children: null };
       let intl2 = tmp3(1113).intl;
       obj16.children = intl2.string(tmp3(1113).t["3v8kZH"]);
-      obj15.children = tmp27(tmp3(5929).Text, obj16);
+      obj15.children = tmp27(tmp3(5919).Text, obj16);
       items6[1] = tmp27(tmp28, obj15);
       obj13.children = items6;
       const items7 = [tmp29(tmp28, obj13), ,];
@@ -341,7 +341,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       }
       items7[2] = tmp27Result3;
       obj6.children = items7;
-      obj5.children = tmp29(tmp3(6337).Stack, obj6);
+      obj5.children = tmp29(tmp3(6327).Stack, obj6);
       return tmp27(tmp28, obj5);
     }
     const obj21 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };

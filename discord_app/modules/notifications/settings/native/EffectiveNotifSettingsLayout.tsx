@@ -50,7 +50,7 @@ function EffectiveSettingsHeader() {
     obj3.action = obj4;
     obj3 = closure_7(loading(8159).InlineNotice, obj3);
     obj.children = obj3;
-    closure_7(loading(6337).Stack, obj);
+    closure_7(loading(6327).Stack, obj);
   }
   tmp = closure_10();
 }

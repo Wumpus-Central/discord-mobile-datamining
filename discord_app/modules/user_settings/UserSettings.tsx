@@ -1548,8 +1548,8 @@ const result4 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
 fn(5135);
 let items = [ListDensityMode.AUTO, ,];
 const obj87 = { comparator: discord_common_shallowEqualDefault };
-items[1] = fn(5994).ChannelListLayoutTypes.COZY;
-items[2] = fn(5994).ChannelListLayoutTypes.COMPACT;
+items[1] = fn(5984).ChannelListLayoutTypes.COZY;
+items[2] = fn(5984).ChannelListLayoutTypes.COMPACT;
 const set1 = new Set(items);
 UserSettingDefinitions = fn(5135);
 const defineProtoSettingResult76 = UserSettingDefinitions.defineProtoSetting(
@@ -1575,9 +1575,9 @@ const defineProtoSettingResult76 = UserSettingDefinitions.defineProtoSetting(
   },
 );
 const items1 = [
-  fn(5994).MessagePreviewTypes.ALL,
-  fn(5994).MessagePreviewTypes.UNREADS,
-  fn(5994).MessagePreviewTypes.NONE,
+  fn(5984).MessagePreviewTypes.ALL,
+  fn(5984).MessagePreviewTypes.UNREADS,
+  fn(5984).MessagePreviewTypes.NONE,
 ];
 const set2 = new Set(items1);
 UserSettingDefinitions = fn(5135);

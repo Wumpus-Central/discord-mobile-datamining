@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "age_gate_modal",
+      version: "asc",
     });
     merged.id = global;
     obj = closure_25;

@@ -6,7 +6,7 @@ import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySet
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SafetySettingsNoticeType = fn(6910).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(6900).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
@@ -20,7 +20,7 @@ export default function FamilyCenterSettingsParentalControlsNotice() {
   obj2.labelHook = function handleMessageParentClick() {
     openLinkedUsersChannelDefault(activeLinkUserIds, LayerActionCreators.popLayer, () => {
       const intl = activeLinkUserIds(1113).intl;
-      return activeLinkUserIds(6014).presentFailedToast(
+      return activeLinkUserIds(6004).presentFailedToast(
         intl.formatToPlainString(_modDef2701.D1BwNC, { count: length.length }),
       );
     });

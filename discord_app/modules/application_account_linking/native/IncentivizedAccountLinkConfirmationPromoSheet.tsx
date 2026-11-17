@@ -22,7 +22,7 @@ export default function IncentivizedAccountLinkConfirmationPromoSheet(arg0) {
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = { source: null, resizeMode: "contain", style: null, enableAnimation: null };
   const obj3 = { uri: null };
-  obj3.uri = importDefault(stateFromStores ? 18520 : 18521);
+  obj3.uri = importDefault(stateFromStores ? 18522 : 18523);
   obj2.source = obj3;
   obj2.style = tmp.illustration;
   obj2.enableAnimation = !stateFromStores;

@@ -30,7 +30,7 @@ function NoCover(imageWidth) {
   if (tmp10) {
     tmp10 = iconURL !== tmp9[0];
   }
-  const tmp11 = tmp4(19034)(game.id, iconURL1);
+  const tmp11 = tmp4(19036)(game.id, iconURL1);
   let tmp12 = !compact;
   if (!compact) {
     tmp12 = tmp10;
@@ -60,7 +60,7 @@ function NoCover(imageWidth) {
     const obj3 = { uri: iconURL };
     obj2.source = obj3;
     obj2.style = tmp6.texture;
-    tmp18 = React5(tmp4(6020), obj2);
+    tmp18 = React5(tmp4(6010), obj2);
   }
   const items1 = [tmp18, , ,];
   let tmp20 = tmp12;
@@ -75,7 +75,7 @@ function NoCover(imageWidth) {
     obj5.onError = function onError() {
       return closure_1(iconURL);
     };
-    obj4.children = React5(tmp4(6020), obj5);
+    obj4.children = React5(tmp4(6010), obj5);
     tmp20 = React5(timestampProducer, obj4);
   }
   items1[1] = tmp20;
@@ -91,7 +91,7 @@ function NoCover(imageWidth) {
     obj7.onError = function onError() {
       return closure_1(iconURL);
     };
-    tmp10 = React5(tmp4(6020), obj7);
+    tmp10 = React5(tmp4(6010), obj7);
   }
   items1[2] = tmp10;
   let tmp24Result = !compact;
@@ -114,9 +114,9 @@ function NoCover(imageWidth) {
       num = 2;
     }
     obj10.maxLines = num;
-    obj9.children = React5(tmp4(19035), obj10);
+    obj9.children = React5(tmp4(19037), obj10);
     tmp24Result = React5(timestampProducer, obj9);
-    const tmp4Result = tmp4(19035);
+    const tmp4Result = tmp4(19037);
   }
   items1[3] = tmp24Result;
   obj.children = items1;
@@ -124,12 +124,12 @@ function NoCover(imageWidth) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const TILE_ASPECT_RATIO = fn(19025).TILE_ASPECT_RATIO;
+const TILE_ASPECT_RATIO = fn(19027).TILE_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 const PX_8 = nativeDefault.space.PX_8;
-const TextVariantsFlat = fn(5930).TextVariantsFlat;
+const TextVariantsFlat = fn(5920).TextVariantsFlat;
 const found = TextVariantsFlat.find((name) => "body-xs/semibold" === name.name);
 let num;
 if (found != null) {
@@ -178,7 +178,7 @@ let obj4 = {
 obj2.icon = { borderRadius: nativeDefault.radii.xs };
 let obj6 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj6.opacity = fn(19034).COVER_TEXTURE_OPACITY;
+obj6.opacity = fn(19036).COVER_TEXTURE_OPACITY;
 obj2.texture = obj6;
 const rect = {
   position: "absolute",

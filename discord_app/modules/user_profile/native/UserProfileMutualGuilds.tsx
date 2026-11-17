@@ -41,7 +41,7 @@ export default function UserProfileMutualGuilds(user) {
                   closure_1_1({ action: "PRESS_MUTUAL_GUILD" });
                   user(7231).transitionToGuild(arg0);
                   const obj = user(7231);
-                  trackUserProfileAction(5552).hideAllActionSheets();
+                  trackUserProfileAction(5542).hideAllActionSheets();
                 },
               },
               "stack",
@@ -64,7 +64,7 @@ export default function UserProfileMutualGuilds(user) {
           color: "text-default",
           children: trackUserProfileAction(14933)(mutualGuilds.length),
         };
-        items[1] = closure_5(tmp2(5929).Text, obj5);
+        items[1] = closure_5(tmp2(5919).Text, obj5);
         obj3.children = items;
         obj2.children = closure_6(tmp2(7428).PressableOpacity, obj3);
         return closure_5(View, obj2);

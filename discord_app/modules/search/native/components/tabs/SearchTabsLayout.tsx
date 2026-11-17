@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsLayout.tsx
 import ComponentDispatchUtils from "../../../../../utils/ComponentDispatchUtils.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05588_LegacyBaseButton.js";
 import SearchPlatformUtilsDefault from "../../SearchPlatformUtils.tsx";
 import SmartSearchUtils from "../../../../intelligence_layer/search/SmartSearchUtils.tsx";
 import SearchUtils from "../../../SearchUtils.tsx";
@@ -30,23 +30,23 @@ function NoSearchResultsScreen(searchContext) {
   const memo = noop.useMemo(() => SmartSearchUtils.getSmartSearchQuery(searchContext, stateFromStores), items2);
   const obj = searchContext(504);
   const items3 = [searchContext];
-  const smartSearchStatus = searchContext(19457).useSmartSearchStatus(memo);
+  const smartSearchStatus = searchContext(19459).useSmartSearchStatus(memo);
   const effect = noop.useEffect(() => {
     const result = TrackingDefault.trackSearchEmptyResult({ searchContext });
   }, items3);
   if (null != memo) {
     if (tmpResult.isSmartSearchEmptyOrErrored(smartSearchStatus)) {
       const obj3 = { smartSearchQuery: memo };
-      let tmp8 = closure_12(stateFromStores(19458), obj3);
+      let tmp8 = closure_12(stateFromStores(19460), obj3);
     }
     return tmp8;
   }
   const obj4 = { text: null };
-  const obj2 = searchContext(19457);
+  const obj2 = searchContext(19459);
   const intl = tmp(1113).intl;
   obj4.text = intl.string(searchContext(1113).t.V6nAfF);
-  tmp8 = closure_12(stateFromStores(19463), obj4);
-  const tmp7 = stateFromStores(19463);
+  tmp8 = closure_12(stateFromStores(19465), obj4);
+  const tmp7 = stateFromStores(19465);
 }
 const View = fn(17).View;
 const SearchConstants = fn(9066);
@@ -339,19 +339,19 @@ export default function ConnectedSearchTabsLayout(width) {
   const items2 = [candidateTabs];
   const memo = noop.useMemo(() => new Set(candidateTabs), items2);
   const obj = searchContext(504);
-  const autoSearchGuildChannelTab = searchContext(19563).useAutoSearchGuildChannelTab(
+  const autoSearchGuildChannelTab = searchContext(19565).useAutoSearchGuildChannelTab(
     searchContext,
     !memo.has(constants.GUILD_CHANNELS),
   );
-  const obj3 = searchContext(19563);
-  const autoSearchMembersTab = searchContext(19564).useAutoSearchMembersTab(
+  const obj3 = searchContext(19565);
+  const autoSearchMembersTab = searchContext(19566).useAutoSearchMembersTab(
     searchContext,
     !memo.has(constants.MEMBERS),
   );
-  const obj4 = searchContext(19564);
-  const autoSearchPeopleTab = searchContext(19565).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
-  const obj5 = searchContext(19565);
-  const autoTrackSearchTabCountsViewedAnalytics = searchContext(19566).useAutoTrackSearchTabCountsViewedAnalytics({
+  const obj4 = searchContext(19566);
+  const autoSearchPeopleTab = searchContext(19567).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
+  const obj5 = searchContext(19567);
+  const autoTrackSearchTabCountsViewedAnalytics = searchContext(19568).useAutoTrackSearchTabCountsViewedAnalytics({
     searchContext,
     visibleTabCounts,
     visibleTabs,

@@ -423,7 +423,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
     const intl = tmp2(1113).intl;
     const items6 = ["\u00A0", intl.string(tmp2(1113).t["pFO/Ph"])];
     obj20.children = items6;
-    items5[1] = closure_13(tmp2(5929).Text, obj20);
+    items5[1] = closure_13(tmp2(5919).Text, obj20);
     obj19.children = items5;
     tmp36 = closure_13(closure_14, obj19);
   }
@@ -446,7 +446,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
     };
     const intl3 = tmp2(1113).intl;
     obj24.children = intl3.string(tmp2(1113).t.m2Hyj0);
-    items7[1] = closure_12(tmp2(5929).Text, obj24);
+    items7[1] = closure_12(tmp2(5919).Text, obj24);
     obj22.children = items7;
     let stringResult = closure_13(id, obj22);
   } else {
@@ -487,8 +487,8 @@ const memoResult = noop.memo(function DisconnectedUserRow(user) {
     items1,
   );
   const obj = id(504);
-  const name = id2(6351).getName(id2.guild_id, id2.id, id);
-  const obj2 = id2(6351);
+  const name = id2(6341).getName(id2.guild_id, id2.id, id);
+  const obj2 = id2(6341);
   const obj4 = {
     onPress() {
       return dependencyMap(id);

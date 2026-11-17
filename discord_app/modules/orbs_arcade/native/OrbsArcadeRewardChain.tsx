@@ -163,7 +163,7 @@ export default function OrbsArcadeRewardChain(game) {
   let tmp15Result = null;
   if (!isThemeLightResult) {
     let obj7 = { style: memo.absoluteFill, start, end, colors: memo1 };
-    tmp15Result = tmp15(tmp7(5893), obj7);
+    tmp15Result = tmp15(tmp7(5883), obj7);
   }
   const items6 = [
     tmp15Result,

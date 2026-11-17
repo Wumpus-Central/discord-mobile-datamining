@@ -33,7 +33,7 @@ function ScheduleRuleRow(rule) {
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj3.trailing = closure_5(rule(5929).Text, {
+  obj3.trailing = closure_5(rule(5919).Text, {
     variant: "body-sm/medium",
     color: "text-subtle",
     children: stringResult,

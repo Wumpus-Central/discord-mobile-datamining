@@ -6,7 +6,7 @@ import InputFieldContainer from "../../Input/native/InputFieldContainer.native.t
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = prop(1113);
-const Text_Text = prop(5929);
+const Text_Text = prop(5919);
 const NativeTextInput = prop(7642);
 const propsForNativeTextInput = prop(7645);
 const useCharacterLimitAnnouncement = prop(7861);

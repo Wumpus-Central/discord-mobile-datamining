@@ -5,7 +5,7 @@ import KeyboardUIStore from "../../keyboard/native/KeyboardUIStore.native.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
-import BottomSheetModal from "../../../../_runtime/05570_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05560_BottomSheetModal.js";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
 import useKeyboardActionSheetHeightDefault from "../../action_sheet/native/useKeyboardActionSheetHeight.tsx";
@@ -199,19 +199,19 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
           let current = trackWithMetadata(12578).AppLauncherBottomSheetExpandReason.KEYBOARD;
-        } else if (arg2 === trackWithMetadata(5570).ANIMATION_SOURCE.GESTURE) {
+        } else if (arg2 === trackWithMetadata(5560).ANIMATION_SOURCE.GESTURE) {
           current = trackWithMetadata(12578).AppLauncherBottomSheetExpandReason.GESTURE;
-        } else if (arg2 !== trackWithMetadata(5570).ANIMATION_SOURCE.USER) {
+        } else if (arg2 !== trackWithMetadata(5560).ANIMATION_SOURCE.USER) {
           current = trackWithMetadata(12578).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
-        trackWithMetadata = trackWithMetadata(6067).trackWithMetadata;
+        trackWithMetadata = trackWithMetadata(6057).trackWithMetadata;
         APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
         const obj = { reason: current };
         trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
         ref1.current = undefined;
-        const trackWithMetadataResult = trackWithMetadata(6067);
+        const trackWithMetadataResult = trackWithMetadata(6057);
       }
     }
   }, items8);

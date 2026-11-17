@@ -1,6 +1,6 @@
 // discord_app/design/components/Tabs/native/Tabs.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
 import 01655__ from "../../../../../_runtime/metro/01655__.js";
@@ -444,7 +444,7 @@ export function Tabs(state) {
   let tmp55Result = tmp53Result;
   if (null != memo1) {
     const obj8 = { gesture: memo1, children: tmp53Result };
-    tmp55Result = c6(tmp2(5598).GestureDetector, obj8);
+    tmp55Result = c6(tmp2(5588).GestureDetector, obj8);
   }
   return tmp55Result;
 }

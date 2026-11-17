@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemButton.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import _modDef9173 from "../../../../../_runtime/metro/09173__.js";
@@ -19,7 +19,7 @@ import _modDef15921 from "../../../../../_runtime/metro/15921__.js";
 import ImageButton from "../../../../design/components/Button/native/ImageButton.native.tsx";
 import ToggleButton from "../../../../design/components/Button/native/ToggleButton.native.tsx";
 import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState.tsx";
-import _modDef18409 from "../../../../../_runtime/metro/18409__.js";
+import _modDef18411 from "../../../../../_runtime/metro/18411__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -69,7 +69,7 @@ function ExampleButton(arg0) {
   obj.size = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = _modDef18409;
+    tmpResult = _modDef18411;
   }
   obj.icon = tmpResult;
   obj.iconPosition = iconPosition;

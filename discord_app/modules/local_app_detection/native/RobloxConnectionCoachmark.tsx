@@ -91,7 +91,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   }
   const tmp = closure_15();
   let obj2 = { startExpanded: true, contentStyles: tmp.content, header: null, onDismiss: null, children: null };
-  let obj = markAsDismissed(5377);
+  let obj = markAsDismissed(5367);
   obj2.header = closure_13(markAsDismissed(7913).BottomSheetTitleHeader, {
     title: null,
     leading: closure_13(markAsDismissed(7952).ActionSheetCloseButton, { onPress: handleCancel }),
@@ -113,18 +113,18 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   });
   items[2] = closure_13(UserIcon, {});
   obj5.children = items;
-  const items1 = [closure_14(markAsDismissed(6337).Stack, obj5), ,];
+  const items1 = [closure_14(markAsDismissed(6327).Stack, obj5), ,];
   const obj7 = { justify: "center", children: null };
   const obj8 = { variant: "heading-xl/semibold", style: tmp.text, children: null };
   const intl = markAsDismissed(1113).intl;
   obj8.children = intl.string(markAsDismissed(1113).t.t3asUZ);
-  const items2 = [closure_13(markAsDismissed(5929).Text, obj8)];
+  const items2 = [closure_13(markAsDismissed(5919).Text, obj8)];
   const obj9 = { variant: "body-md/medium", style: tmp.text, children: null };
   const intl2 = markAsDismissed(1113).intl;
   obj9.children = intl2.string(markAsDismissed(1113).t.no96NU);
-  items2[1] = closure_13(markAsDismissed(5929).Text, obj9);
+  items2[1] = closure_13(markAsDismissed(5919).Text, obj9);
   obj7.children = items2;
-  items1[1] = closure_14(markAsDismissed(6337).Stack, obj7);
+  items1[1] = closure_14(markAsDismissed(6327).Stack, obj7);
   const obj10 = { children: null };
   const obj11 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = markAsDismissed(1113).intl;
@@ -141,17 +141,17 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
     openUserSettings.openUserSettings({ screen: constants3.CONNECTIONS });
     const obj4 = { screen: constants3.CONNECTIONS };
   };
-  const items3 = [closure_13(markAsDismissed(5936).Button, obj11)];
+  const items3 = [closure_13(markAsDismissed(5926).Button, obj11)];
   const obj13 = { text: null, variant: "secondary", size: "lg", onPress: null };
   const intl4 = markAsDismissed(1113).intl;
   obj13.text = intl4.string(markAsDismissed(1113).t.DiGJy3);
   obj13.onPress = handleCancel;
-  items3[1] = closure_13(markAsDismissed(5936).Button, obj13);
+  items3[1] = closure_13(markAsDismissed(5926).Button, obj13);
   obj10.children = items3;
-  items1[2] = closure_14(markAsDismissed(6337).Stack, obj10);
+  items1[2] = closure_14(markAsDismissed(6327).Stack, obj10);
   obj4.children = items1;
-  obj2.children = closure_14(markAsDismissed(6337).Stack, obj4);
-  return closure_13(markAsDismissed(5566).BottomSheet, obj2);
+  obj2.children = closure_14(markAsDismissed(6327).Stack, obj4);
+  return closure_13(markAsDismissed(5556).BottomSheet, obj2);
 }
 export function useShouldShowRobloxConnectionCoachmark() {
   items = [LocalAppDetectionStore];

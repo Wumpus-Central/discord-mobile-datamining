@@ -127,7 +127,7 @@ const ChannelRecord = fn(5159);
   GUILD_WEBHOOK_CHANNEL_TYPES: closure_14,
 } = ChannelRecord);
 const isGuildNSFW = fn(5173).isGuildNSFW;
-let closure_25 = fn(19664).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(19666).ChannelSettingsAutoFocusElement;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_26,
@@ -465,7 +465,7 @@ class ChannelSettingsOverview extends PureComponent {
               const features = guild2.features;
               if (features.has(constants.COMMUNITY)) {
                 if (guild2.publicUpdatesChannelId === closure_128_1.id) {
-                  tmp65 = tmp5(6269);
+                  tmp65 = tmp5(6259);
                   const obj6 = { title: null, confirmText: null, children: null };
                   let intl5 = tmp2(1113).intl;
                   obj6.title = intl5.string(tmp2(1113).t["TY/V+H"]);
@@ -475,7 +475,7 @@ class ChannelSettingsOverview extends PureComponent {
                   const obj11 = { style: closure_128_0.alertText, variant: "body-md/medium", children: null };
                   const intl7 = tmp2(1113).intl;
                   obj11.children = intl7.string(tmp2(1113).t["1B1/NB"]);
-                  items = [closure_1_47(tmp2(5929).Text, obj11)];
+                  items = [closure_1_47(tmp2(5919).Text, obj11)];
                   const obj12 = { style: closure_128_0.alertText, variant: "body-md/medium", children: null };
                   const intl8 = tmp2(1113).intl;
                   const obj13 = {
@@ -486,13 +486,13 @@ class ChannelSettingsOverview extends PureComponent {
                     },
                   };
                   obj12.children = intl8.format(tmp2(1113).t.LAJbDm, obj13);
-                  items[1] = closure_1_47(tmp2(5929).Text, obj12);
+                  items[1] = closure_1_47(tmp2(5919).Text, obj12);
                   obj10.children = items;
                   obj6.children = closure_1_48(closure_1_49, obj10);
                   tmp65.show(obj6);
                   c3 = 3;
                 }
-                const obj7 = tmp2(5954);
+                const obj7 = tmp2(5944);
                 closure_128_4 = obj7.computeChannelName(closure_128_1, UserStore, RelationshipStore, true);
                 closure_128_5 = function showDeleteAlert() {
                   if (closure_0.props.isForumPost) {
@@ -565,7 +565,7 @@ class ChannelSettingsOverview extends PureComponent {
                 const obj17 = { style: closure_128_0.alertText, variant: "body-md/medium", children: null };
                 let intl3 = tmp2(1113).intl;
                 obj17.children = intl3.string(tmp2(1113).t.iWlB6h);
-                const items1 = [closure_1_47(tmp2(5929).Text, obj17)];
+                const items1 = [closure_1_47(tmp2(5919).Text, obj17)];
                 const obj18 = { style: closure_128_0.alertText, variant: "body-md/medium", children: null };
                 let intl4 = tmp2(1113).intl;
                 const obj19 = {
@@ -576,11 +576,11 @@ class ChannelSettingsOverview extends PureComponent {
                   },
                 };
                 obj18.children = intl4.format(tmp2(1113).t.ajiBwB, obj19);
-                items1[1] = closure_1_47(tmp2(5929).Text, obj18);
+                items1[1] = closure_1_47(tmp2(5919).Text, obj18);
                 obj16.children = items1;
                 obj15.children = closure_1_48(closure_1_49, obj16);
-                tmp5(6269).show(obj15);
-                let obj = tmp5(6269);
+                tmp5(6259).show(obj15);
+                let obj = tmp5(6259);
               }
             }
           }
@@ -616,7 +616,7 @@ class ChannelSettingsOverview extends PureComponent {
       return value;
     });
     tmp1.leaveDeletedChannel = function leaveDeletedChannel() {
-      const rootNavigationRef = closure_0(5493).getRootNavigationRef();
+      const rootNavigationRef = closure_0(5483).getRootNavigationRef();
       let isReadyResult;
       if (rootNavigationRef != null) {
         isReadyResult = rootNavigationRef.isReady();
@@ -941,7 +941,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(19670).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(19672).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1373,7 +1373,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
     const obj4 = { label: null, arrow: true, icon: null, onPress: null };
     const intl3 = channel(1113).intl;
     obj4.label = intl3.string(channel(1113).t.ngRFjZ);
-    obj4.icon = closure_47(channel(6029).LinkIcon, {});
+    obj4.icon = closure_47(channel(6019).LinkIcon, {});
     obj4.onPress = function onPress() {
       return self.pushScreen(constants2.INSTANT_INVITES);
     };
@@ -1405,7 +1405,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(7443).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(5165).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(19678).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(19680).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
@@ -1601,7 +1601,7 @@ prototype["renderDeleteButton"] = function renderDeleteButton() {
       items = [null];
       const obj3 = {
         variant: "danger",
-        icon: closure_47(tmp8(6040).TrashIcon, { color: "text-feedback-critical" }),
+        icon: closure_47(tmp8(6030).TrashIcon, { color: "text-feedback-critical" }),
         label: stringResult,
         onPress: this.handleDeleteChannel,
       };
@@ -1611,7 +1611,7 @@ prototype["renderDeleteButton"] = function renderDeleteButton() {
     } else {
       const obj = {
         variant: "danger",
-        icon: closure_47(tmp8(6027).UserMinusIcon, { color: "text-feedback-critical" }),
+        icon: closure_47(tmp8(6017).UserMinusIcon, { color: "text-feedback-critical" }),
         label: null,
         onPress: null,
       };
@@ -1706,14 +1706,14 @@ prototype["renderForumTags"] = function renderForumTags() {
       const obj9 = { variant: "body-sm/semibold", color: "text-brand", style: tmp.createTagButtonText, children: null };
       const intl4 = canManageChannels(1113).intl;
       obj9.children = intl4.string(canManageChannels(1113).t.F4is7L);
-      obj8.children = closure_47(canManageChannels(5929).Text, obj9);
+      obj8.children = closure_47(canManageChannels(5919).Text, obj9);
       tmp10Result3 = closure_47(canManageChannels(7428).PressableOpacity, obj8);
     }
     items1[1] = tmp10Result3;
     let tmp10Result4 = null != error && error.length > 0;
     if (tmp10Result4) {
       const obj10 = { variant: "body-sm/normal", color: "text-feedback-critical", children: error };
-      tmp10Result4 = closure_47(canManageChannels(5929).Text, obj10);
+      tmp10Result4 = closure_47(canManageChannels(5919).Text, obj10);
     }
     items1[2] = tmp10Result4;
     let tmp18 = !canManageChannels;
@@ -1729,7 +1729,7 @@ prototype["renderForumTags"] = function renderForumTags() {
     obj11.children = closure_47(canManageChannels(7954).TableSwitchRow, obj12);
     items1[3] = closure_47(canManageChannels(7746).TableRowGroup, obj11);
     obj.children = items1;
-    return closure_48(canManageChannels(6337).Stack, obj);
+    return closure_48(canManageChannels(6327).Stack, obj);
   } else {
     return null;
   }
@@ -1763,12 +1763,12 @@ prototype["renderCategory"] = function renderCategory() {
         let stringResult = intl.string(self(1113).t.GSfOoo);
         let tmp7 = self;
       } else {
-        stringResult = self(5954).computeChannelName(category, UserStore, RelationshipStore);
+        stringResult = self(5944).computeChannelName(category, UserStore, RelationshipStore);
         tmp7 = self;
-        const obj = self(5954);
+        const obj = self(5944);
       }
       const obj2 = {
-        icon: closure_47(tmp7(18871).FolderPlusIcon, {}),
+        icon: closure_47(tmp7(18873).FolderPlusIcon, {}),
         label: null,
         trailing: null,
         arrow: null,
@@ -1847,7 +1847,7 @@ prototype["render"] = function render() {
   const tmp = closure_52(this.context);
   return closure_1_47(View, { style: closure_52(this.context).screenContainer, children: renderThreadSettingsResult });
 };
-ChannelSettingsOverview.contextType = fn(5377).ThemeContext;
+ChannelSettingsOverview.contextType = fn(5367).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsOverview.tsx");
 

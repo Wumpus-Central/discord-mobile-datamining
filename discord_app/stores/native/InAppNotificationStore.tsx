@@ -423,8 +423,8 @@ const inAppNotificationStore = new InAppNotificationStore(DispatcherDefault, {
         dismiss_reason: "message_acked",
         in_app_notification_id: _null.inAppNotificationId,
       };
-      messageId(6067).trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj4);
-      const obj3 = messageId(6067);
+      messageId(6057).trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj4);
+      const obj3 = messageId(6057);
     }
     obj2.removeAll(function predicate(type) {
       let tmp = type.type === constants3.MESSAGE;
@@ -460,7 +460,7 @@ const inAppNotificationStore = new InAppNotificationStore(DispatcherDefault, {
       if (null != message.reactions) {
         if (null != emoji) {
           if (obj14.allowInAppNotifications()) {
-            let tryParseChannelPathResult = emoji(5956).tryParseChannelPath(tmp);
+            let tryParseChannelPathResult = emoji(5946).tryParseChannelPath(tmp);
             if (tryParseChannelPathResult == null) {
               tryParseChannelPathResult = { channelId: null, guildId: null };
             }
@@ -496,8 +496,8 @@ const inAppNotificationStore = new InAppNotificationStore(DispatcherDefault, {
                         const tmp19Result9 = emoji(11018);
                         const obj = { message, channel, reactor: user, includeSelectedChannel: result1 };
                         if (tmp19Result10.shouldNotifyForReaction(obj)) {
-                          const messageRecord = emoji(6374).createMessageRecord(message);
-                          const tmp19Result11 = emoji(6374);
+                          const messageRecord = emoji(6364).createMessageRecord(message);
+                          const tmp19Result11 = emoji(6364);
                           if (tmp19Result12.isMessageContentPreviewable(messageRecord)) {
                             const reactions = message.reactions;
                             const found = reactions.find((emoji) => {
@@ -774,7 +774,7 @@ const inAppNotificationStore = new InAppNotificationStore(DispatcherDefault, {
     if (tmp) {
       const result = channelId(11025).extractMetadataFromNotification(_null);
       ({ guildId, channelId: channelId2, messageId } = result);
-      obj2 = chatOpen(6067);
+      obj2 = chatOpen(6057);
       const obj3 = {
         type: _null.type,
         guild_id: guildId,

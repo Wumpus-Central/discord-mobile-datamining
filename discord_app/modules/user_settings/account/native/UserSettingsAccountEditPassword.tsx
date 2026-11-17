@@ -28,7 +28,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, LoginRequiredActions: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const state = { newPassword: "channelId", password: 923287820 };
+const state = { newPassword: "channelId", password: 2081378572 };
 const createStyles = fn(5306);
 let obj2 = {
   onePass: { width: 20, height: 20 },
@@ -267,7 +267,7 @@ prototype["render"] = function render() {
   obj13.children = application_id(React4, obj);
   return closure_1_11(hasOwnProperty, obj13);
 };
-EditPassword.contextType = fn(5377).ThemeContext;
+EditPassword.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
 

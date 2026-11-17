@@ -54,7 +54,7 @@ const BellSlashIcon = currentLocale(10994);
 require = fn;
 function AccountSectionHeading(children) {
   const tmp = closure_21();
-  return expandedHeight(Text_Text.Text, {
+  return closure_1_19(Text_Text.Text, {
     accessibilityRole: "header",
     variant: "body-sm/medium",
     color: "text-subtle",
@@ -127,7 +127,7 @@ function YouStatusRadioGroup() {
         }
       }
       obj.subLabel = formatToPlainStringResult;
-      return expandedHeight(TableRadioRow.TableRadioRow, obj, value.value);
+      return closure_2_19(TableRadioRow.TableRadioRow, obj, value.value);
     }),
   };
   const items1 = [
@@ -161,7 +161,7 @@ function YouStatusRadioGroup() {
           }
         }
         obj.subLabel = formatToPlainStringResult;
-        return expandedHeight(TableRadioRow.TableRadioRow, obj, value.value);
+        return closure_2_19(TableRadioRow.TableRadioRow, obj, value.value);
       }),
     }),
   ];
@@ -179,7 +179,7 @@ function ThemeRadioGroup() {
   const intl = util.intl;
   const stringResult = intl.string(util.t.Ksh3ik);
   let obj2 = { children: null };
-  const items1 = [expandedHeight(AccountSectionHeading, { children: stringResult })];
+  const items1 = [closure_1_19(AccountSectionHeading, { children: stringResult })];
   const obj3 = {
     accessibilityLabel: stringResult,
     onChange: callback,
@@ -187,22 +187,22 @@ function ThemeRadioGroup() {
     hasIcons: true,
     children: null,
   };
-  const obj4 = { icon: expandedHeight(ThemeLightIcon.ThemeLightIcon, {}), label: null, value: null };
+  const obj4 = { icon: closure_1_19(ThemeLightIcon.ThemeLightIcon, {}), label: null, value: null };
   obj4.label = ClientThemesUtils.getThemeName(constants3.LIGHT);
   obj4.value = constants3.LIGHT;
-  const items2 = [expandedHeight(TableRadioRow.TableRadioRow, obj4), , ,];
-  const obj6 = { icon: expandedHeight(ThemeGrayIcon.ThemeGrayIcon, {}), label: null, value: null };
+  const items2 = [closure_1_19(TableRadioRow.TableRadioRow, obj4), , ,];
+  const obj6 = { icon: closure_1_19(ThemeGrayIcon.ThemeGrayIcon, {}), label: null, value: null };
   obj6.label = ClientThemesUtils.getThemeName(constants3.ASH);
   obj6.value = constants3.ASH;
-  items2[1] = expandedHeight(TableRadioRow.TableRadioRow, obj6);
-  const obj8 = { icon: expandedHeight(ThemeDarkIcon.ThemeDarkIcon, {}), label: null, value: null };
+  items2[1] = closure_1_19(TableRadioRow.TableRadioRow, obj6);
+  const obj8 = { icon: closure_1_19(ThemeDarkIcon.ThemeDarkIcon, {}), label: null, value: null };
   obj8.label = ClientThemesUtils.getThemeName(constants3.DARK);
   obj8.value = constants3.DARK;
-  items2[2] = expandedHeight(TableRadioRow.TableRadioRow, obj8);
-  const obj10 = { icon: expandedHeight(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: null, value: null };
+  items2[2] = closure_1_19(TableRadioRow.TableRadioRow, obj8);
+  const obj10 = { icon: closure_1_19(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: null, value: null };
   obj10.label = ClientThemesUtils.getThemeName(constants3.ONYX);
   obj10.value = constants3.ONYX;
-  items2[3] = expandedHeight(TableRadioRow.TableRadioRow, obj10);
+  items2[3] = closure_1_19(TableRadioRow.TableRadioRow, obj10);
   obj3.children = items2;
   items1[1] = dependencyMap(TableRadioGroup.TableRadioGroup, obj3);
   obj2.children = items1;
@@ -213,9 +213,9 @@ function YouAccountRadioGroup() {
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(18654).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = stateFromStores(18656).useMultiAccountUsers().multiAccountUsers;
   closure_129_0 = multiAccountUsers;
-  let obj2 = stateFromStores(18654);
+  let obj2 = stateFromStores(18656);
   const items1 = [StreamerModeStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(
     items1,
@@ -240,7 +240,7 @@ function YouAccountRadioGroup() {
           str2 = "never";
         }
         const obj3 = {
-          label: multiAccountUsers(5372).getUserTag(obj, { mode: "username", identifiable: str2 }),
+          label: multiAccountUsers(5362).getUserTag(obj, { mode: "username", identifiable: str2 }),
           value: id.id,
           subLabel: combined,
           icon: null,
@@ -266,14 +266,14 @@ function YouAccountRadioGroup() {
     let obj5 = { style: tmp.manage, children: null };
     const obj6 = {
       onPress() {
-        return multiAccountUsers(19150)();
+        return multiAccountUsers(19152)();
       },
       children: null,
     };
     const obj7 = { variant: "body-sm/semibold", color: "text-brand", children: null };
     const intl2 = tmp2(1113).intl;
     obj7.children = intl2.string(tmp2(1113).t.HxrBOZ);
-    obj6.children = closure_19(tmp2(5929).Text, obj7);
+    obj6.children = closure_19(tmp2(5919).Text, obj7);
     obj5.children = closure_19(tmp2(7428).PressableOpacity, obj6);
     const items4 = [closure_19(View, obj5), ,];
     const obj8 = { children: stringResult };
@@ -318,16 +318,16 @@ function FocusModeSetting() {
     const intl2 = util.intl;
     obj2.accessibilityHint = intl2.string(util.t.wCxBOc);
     let obj3 = { style: tmp.leadingIcon };
-    obj2.icon = expandedHeight(BellSlashIcon.BellSlashIcon, obj3);
+    obj2.icon = closure_1_19(BellSlashIcon.BellSlashIcon, obj3);
     obj2.onValueChange = function onValueChange(arg0) {
       if (arg0) {
         const obj3 = {
           onSelect(quiet_mode_enabled, arg1) {
             closure_1_0(11021).setFocusMode(quiet_mode_enabled, arg1);
             const obj = closure_1_0(11021);
-            closure_1_1(5552).hideActionSheet();
-            const obj2 = closure_1_1(5552);
-            const result = closure_1_0(19145).showYouAccountActionSheet();
+            closure_1_1(5542).hideActionSheet();
+            const obj2 = closure_1_1(5542);
+            const result = closure_1_0(19147).showYouAccountActionSheet();
           },
         };
         require("ActionSheetActionCreators").openLazy(
@@ -349,9 +349,9 @@ function FocusModeSetting() {
       let stringResult = intl4.string(util.t.i0nsoY);
       const obj4 = { hasIcons: true, children: null };
       obj2.subLabel = stringResult;
-      obj2 = expandedHeight(TableSwitchRow.TableSwitchRow, obj2);
+      obj2 = closure_1_19(TableSwitchRow.TableSwitchRow, obj2);
       obj4.children = obj2;
-      expandedHeight(TableRowGroup.TableRowGroup, obj4);
+      closure_1_19(TableRowGroup.TableRowGroup, obj4);
     }
     const intl5 = util.intl;
     const obj5 = { endTime: null };
@@ -468,10 +468,10 @@ function CustomStatus() {
     obj7.textEmojiStyle = obj8;
     const size = { width, height: width };
     obj7.fastImageStyle = size;
-    let tmp21Result = expandedHeight(EmojiDefault, obj7);
+    let tmp21Result = closure_1_19(EmojiDefault, obj7);
   } else {
     const obj9 = { size: "md", style: tmp.leadingIcon };
-    tmp21Result = expandedHeight(ReactionIcon.ReactionIcon, obj9);
+    tmp21Result = closure_1_19(ReactionIcon.ReactionIcon, obj9);
   }
   items = [tmp21Result];
   const obj10 = { variant: token, color: token1, lineClamp: 2, style: tmp.customStatusText, children: null };
@@ -480,7 +480,7 @@ function CustomStatus() {
     gameMentionsAsPlainText = intl3.string(util.t["/UonHN"]);
   }
   obj10.children = gameMentionsAsPlainText;
-  items[1] = expandedHeight(Text_Text.Text, obj10);
+  items[1] = closure_1_19(Text_Text.Text, obj10);
   obj5.children = items;
   const items1 = [dependencyMap(Pressables.PressableOpacity, obj5)];
   let tmp21Result2 = null;
@@ -499,14 +499,14 @@ function CustomStatus() {
     obj11.accessibilityLabel = intl4.string(util.t.wfYTHe);
     obj11.style = tmp.customStatusRemoveButton;
     const obj12 = { style: tmp.trailingIcon, source: _modDef7863 };
-    obj11.children = expandedHeight(FastImageDefault, obj12);
-    tmp21Result2 = expandedHeight(Pressables.PressableOpacity, obj11);
+    obj11.children = closure_1_19(FastImageDefault, obj12);
+    tmp21Result2 = closure_1_19(Pressables.PressableOpacity, obj11);
     const tmp18Result = FastImageDefault;
   }
   const tmp2Result4 = useToken;
   items1[1] = tmp21Result2;
   obj4.children = items1;
-  return expandedHeight(TableRowGroup.TableRowGroup, { hasIcons: false, children: dependencyMap(Card.Card, obj4) });
+  return closure_1_19(TableRowGroup.TableRowGroup, { hasIcons: false, children: dependencyMap(Card.Card, obj4) });
 }
 const View = fn(17).View;
 const MultiAccountTokenStatus = fn(14829).MultiAccountTokenStatus;
@@ -603,16 +603,16 @@ export default noop.memo(function YouAccountActionSheet(statusOnly) {
   } else {
     stringResult = string(t["qP/i6k"]);
   }
-  obj3.header = expandedHeight(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult });
+  obj3.header = closure_1_19(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult });
   let tmp7Result = tmp5;
   if (tmp5) {
-    tmp7Result = expandedHeight(ThemeRadioGroup, {});
+    tmp7Result = closure_1_19(ThemeRadioGroup, {});
   }
   const items2 = [
     tmp7Result,
-    expandedHeight(YouStatusRadioGroup, {}),
-    expandedHeight(FocusModeSetting, {}),
-    expandedHeight(CustomStatus, {}),
+    closure_1_19(YouStatusRadioGroup, {}),
+    closure_1_19(FocusModeSetting, {}),
+    closure_1_19(CustomStatus, {}),
     ,
     ,
   ];
@@ -621,7 +621,7 @@ export default noop.memo(function YouAccountActionSheet(statusOnly) {
     tmp7Result3 = stateFromStores;
   }
   if (tmp7Result3) {
-    tmp7Result3 = expandedHeight(YouAccountRadioGroup, {});
+    tmp7Result3 = closure_1_19(YouAccountRadioGroup, {});
   }
   items2[4] = tmp7Result3;
   let tmp7Result4 = !flag;
@@ -629,7 +629,7 @@ export default noop.memo(function YouAccountActionSheet(statusOnly) {
     tmp7Result4 = stateFromStores1;
   }
   if (tmp7Result4) {
-    tmp7Result4 = expandedHeight(YouSwitchClientsRadioGroupDefault, {});
+    tmp7Result4 = closure_1_19(YouSwitchClientsRadioGroupDefault, {});
   }
   items2[5] = tmp7Result4;
   let tmp9Result = !flag;
@@ -639,13 +639,13 @@ export default noop.memo(function YouAccountActionSheet(statusOnly) {
   if (tmp9Result) {
     const obj4 = { children: null };
     const items3 = [
-      expandedHeight(AccountSectionHeading, { children: "Developer Tools" }),
-      expandedHeight(DevToolsContentDefault, { embedded: true }),
+      closure_1_19(AccountSectionHeading, { children: "Developer Tools" }),
+      closure_1_19(DevToolsContentDefault, { embedded: true }),
     ];
     obj4.children = items3;
     tmp9Result = dependencyMap(View, obj4);
   }
   items2[6] = tmp9Result;
   obj3.children = dependencyMap(Stack_Stack.Stack, { spacing: 24, children: items2 });
-  return expandedHeight(ActionSheet.ActionSheet, obj3);
+  return closure_1_19(ActionSheet.ActionSheet, obj3);
 });

@@ -29,13 +29,13 @@ function UnmuteOptions(channel) {
   const intl = channel(1113).intl;
   const obj5 = { name: null };
   const obj3 = { disableColor: true, source: navigation(11084) };
-  obj5.name = channel(5954).computeChannelName(channel, UserStore, RelationshipStore, true);
+  obj5.name = channel(5944).computeChannelName(channel, UserStore, RelationshipStore, true);
   obj4.children = intl.format(channel(1113).t["eC+9rj"], obj5);
-  obj2.label = closure_10(channel(5929).Text, obj4);
+  obj2.label = closure_10(channel(5919).Text, obj4);
   obj2.onPress = callback;
   const items1 = [closure_10(channel(7443).TableRow, obj2)];
   const obj7 = { muteConfig: channel.muteConfig, type: null };
-  const obj6 = channel(5954);
+  const obj6 = channel(5944);
   const tmp6 = navigation(11085);
   const MuteSettingType = channel(11085).MuteSettingType;
   obj7.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;

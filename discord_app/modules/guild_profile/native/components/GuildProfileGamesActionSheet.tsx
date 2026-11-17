@@ -75,8 +75,8 @@ export default function GuildProfileGamesActionSheet(profile) {
     )),
   });
   obj4.children = <View style={tmp.container}>{null}</View>;
-  obj3.children = jsx(id(5570).BottomSheetScrollView, { children: null });
-  return jsx(id(5566).BottomSheet, {
+  obj3.children = jsx(id(5560).BottomSheetScrollView, { children: null });
+  return jsx(id(5556).BottomSheet, {
     ref: obj2.useBottomSheetRef().bottomSheetRef,
     scrollable: true,
     onDismiss: callback,

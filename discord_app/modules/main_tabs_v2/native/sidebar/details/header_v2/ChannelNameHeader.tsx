@@ -120,7 +120,7 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "body-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(5929).Text, obj2);
+        tmp8 = closure_12(tmp(5919).Text, obj2);
       }
     }
     return tmp8;
@@ -128,8 +128,8 @@ function ChannelSubtitle(channel) {
     const intl = tmp(1113).intl;
     let stringResult = intl.string(_modDef4067["D+2/QP"]);
   } else {
-    stringResult = tmp(6356).channelTypeString(channel);
-    const tmpResult = tmp(6356);
+    stringResult = tmp(6346).channelTypeString(channel);
+    const tmpResult = tmp(6346);
   }
   let obj = channel(504);
 }

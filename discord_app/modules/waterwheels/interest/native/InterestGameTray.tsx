@@ -153,7 +153,7 @@ function TrayCover(game) {
   return sharedValue2(_modDef1655.View, obj3);
 }
 const View = fn(17).View;
-const InterestGamePickerConstants = fn(19025);
+const InterestGamePickerConstants = fn(19027);
 const SELECTED_BORDER_WIDTH = InterestGamePickerConstants.SELECTED_BORDER_WIDTH;
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);

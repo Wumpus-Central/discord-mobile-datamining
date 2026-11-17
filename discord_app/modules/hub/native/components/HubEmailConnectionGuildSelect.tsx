@@ -219,7 +219,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6757).APIError(closure_128_0);
+                  const aPIError = new id(6747).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);

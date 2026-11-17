@@ -3,7 +3,7 @@ import util from "../../../../intl/index.native.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const InputModes = fn(6075).InputModes;
+const InputModes = fn(6065).InputModes;
 const SettingBuilders = fn(12406);
 const pressable = SettingBuilders.createPressable({
   useTitle() {

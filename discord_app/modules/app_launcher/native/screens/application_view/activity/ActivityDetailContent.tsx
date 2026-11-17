@@ -134,7 +134,7 @@ function TryItOutButton(applicationId) {
   const intl = applicationId(1113).intl;
   obj.text = intl.string(applicationId(1113).t.AUM8hY);
   obj.onPress = callback;
-  return closure_11(applicationId(5936).Button, obj);
+  return closure_11(applicationId(5926).Button, obj);
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -339,7 +339,7 @@ export default function ActivityDetailContent(application) {
       let tmp39Result2 = null != reason;
       if (tmp39Result2) {
         const obj17 = { variant: "body-sm/normal", style: tmp.primaryEntryPointButtonDisabledCTA, children: reason };
-        tmp39Result2 = closure_11(tmp2(5929).Text, obj17);
+        tmp39Result2 = closure_11(tmp2(5919).Text, obj17);
       }
       items3[1] = tmp39Result2;
       obj16.children = items3;

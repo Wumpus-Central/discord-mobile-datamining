@@ -120,7 +120,7 @@ export default function RolePill(role) {
     const tmp18 = combined(7959);
   }
   items1[1] = tmp10Result2;
-  items1[2] = closure_6(role(5929).Text, {
+  items1[2] = closure_6(role(5919).Text, {
     variant: "body-xs/semibold",
     color: "interactive-text-active",
     children: name,

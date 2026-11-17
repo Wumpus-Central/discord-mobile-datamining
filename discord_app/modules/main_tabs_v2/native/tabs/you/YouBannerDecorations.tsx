@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import _modDef671 from "../../../../../../_runtime/metro/00671__.js";
 import utils_PlatformUtils from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import QuestTypes from "../../../../quests/QuestTypes.tsx";
 import DismissibleContentUnsafeUtils from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import QuestTypes from "../../../../quests/QuestTypes.tsx";
 import useTrialOffer from "../../../../premium/useTrialOffer.tsx";
 import QuestUtils from "../../../../quests/native/QuestUtils.native.tsx";
 import PromotionsHooks from "../../../../premium/promotions/PromotionsHooks.tsx";

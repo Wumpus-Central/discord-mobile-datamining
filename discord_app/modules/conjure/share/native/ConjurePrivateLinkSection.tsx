@@ -73,10 +73,10 @@ export default function ConjurePrivateLinkSection(project) {
         const intl = tmp3(1113).intl;
         obj7.text = intl.string(v2(4131)["5lL390"]);
         obj7.icon = tmp3(13308).RefreshIcon;
-        v2(6015).open("CONJURE_PRIVATE_LINK_RESET", obj7);
+        v2(6005).open("CONJURE_PRIVATE_LINK_RESET", obj7);
         closure_128_5(false);
         c3 = 3;
-        v2(6015);
+        v2(6005);
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
@@ -86,9 +86,9 @@ export default function ConjurePrivateLinkSection(project) {
         const intl2 = tmp3(1113).intl;
         obj9.text = intl2.string(v2(4131).w9w1Zh);
         obj9.icon = tmp3(13308).RefreshIcon;
-        v2(6015).open("CONJURE_PRIVATE_LINK_RESET", obj9);
+        v2(6005).open("CONJURE_PRIVATE_LINK_RESET", obj9);
         dependencyMap = 0;
-        v2(6015);
+        v2(6005);
       }
       return value;
     }),
@@ -153,11 +153,11 @@ export default function ConjurePrivateLinkSection(project) {
   obj.description = intl2.string(value(4131).wp7r6t);
   let obj2 = { icon: null, label: null, trailing: null, arrow: true, disabled: null, onPress: null };
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-  obj2.icon = callback1(project(7455).TableRowIcon, { IconComponent: project(6042).ClockIcon });
+  obj2.icon = callback1(project(7455).TableRowIcon, { IconComponent: project(6032).ClockIcon });
   let intl3 = project(1113).intl;
   obj2.label = intl3.string(value(4131).eMlOXz);
   let obj4 = { text: null };
-  let obj3 = { IconComponent: project(6042).ClockIcon };
+  let obj3 = { IconComponent: project(6032).ClockIcon };
   obj4.text = project(13336).conjureShareLinkMaxAgeLabel(value);
   obj2.trailing = callback1(project(7443).TableRow.TrailingText, obj4);
   obj2.disabled = tmp9;
@@ -175,7 +175,7 @@ export default function ConjurePrivateLinkSection(project) {
   if (null != first1) {
     const obj8 = { children: null };
     let obj9 = { icon: null, label: null, subLabel: null, subLabelLineClamp: 1, onPress: null };
-    const obj10 = { IconComponent: tmp2(6029).LinkIcon };
+    const obj10 = { IconComponent: tmp2(6019).LinkIcon };
     obj9.icon = tmp20(tmp2(7455).TableRowIcon, obj10);
     const intl5 = tmp2(1113).intl;
     obj9.label = intl5.string(tmp2(1113).t.WqhZss);
@@ -213,7 +213,7 @@ export default function ConjurePrivateLinkSection(project) {
     const obj16 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
     const intl8 = tmp2(1113).intl;
     obj16.children = intl8.string(tmp19(4131).KIrnzC);
-    obj15.children = tmp20(tmp2(5929).Text, obj16);
+    obj15.children = tmp20(tmp2(5919).Text, obj16);
     tmp20Result2 = tmp20(tmp18, obj15);
   }
   children[1] = tmp20Result2;

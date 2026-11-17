@@ -58,22 +58,22 @@ export default function GetStartedScreen(onComplete) {
     children: null,
   };
   let obj = modalSessionId(8256);
-  obj6.children = modalSessionId(6830).getAgeVerificationGetStartedTitle(entryPoint);
-  items[1] = closure_7(modalSessionId(5929).Text, obj6);
+  obj6.children = modalSessionId(6820).getAgeVerificationGetStartedTitle(entryPoint);
+  items[1] = closure_7(modalSessionId(5919).Text, obj6);
   const obj8 = { variant: "heading-sm/medium", color: "text-default", style: tmp.getStartedHeaderText, children: null };
-  const obj7 = modalSessionId(6830);
-  obj8.children = modalSessionId(6830).getAgeVerificationGetStartedSubtitle(entryPoint);
-  items[2] = closure_7(modalSessionId(5929).Text, obj8);
+  const obj7 = modalSessionId(6820);
+  obj8.children = modalSessionId(6820).getAgeVerificationGetStartedSubtitle(entryPoint);
+  items[2] = closure_7(modalSessionId(5919).Text, obj8);
   obj5.children = items;
   const items1 = [closure_8(closure_5, obj5), ,];
   const obj10 = { hasIcons: true, children: null };
-  const obj9 = modalSessionId(6830);
+  const obj9 = modalSessionId(6820);
   const ageVerificationGetStartedSteps = modalSessionId(8391).getAgeVerificationGetStartedSteps(modalSessionId);
   obj10.children = ageVerificationGetStartedSteps.map((children, index) => {
     const description = children.description;
     const obj = {
       index: index + 1,
-      tip: closure_1_7(modalSessionId(5929).Text, {
+      tip: closure_1_7(modalSessionId(5919).Text, {
         variant: "body-md/medium",
         color: "mobile-text-heading-primary",
         children: children.title,
@@ -83,7 +83,7 @@ export default function GetStartedScreen(onComplete) {
     let tmpResult = null;
     if (null != description) {
       const obj2 = { variant: "body-xs/medium", color: "text-subtle", children: description };
-      tmpResult = closure_1_7(modalSessionId(5929).Text, obj2);
+      tmpResult = closure_1_7(modalSessionId(5919).Text, obj2);
     }
     obj.description = tmpResult;
     return closure_1_7(initiateAgeVerification(8392), obj, index);
@@ -103,7 +103,7 @@ export default function GetStartedScreen(onComplete) {
       );
     },
   });
-  obj12.children = closure_7(modalSessionId(5929).Text, obj13);
+  obj12.children = closure_7(modalSessionId(5919).Text, obj13);
   items1[2] = closure_7(closure_5, obj12);
   obj4.children = items1;
   obj3.children = closure_8(closure_5, obj4);
@@ -148,10 +148,10 @@ export default function GetStartedScreen(onComplete) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const result = v3(6833).trackAgeVerificationModalClicked(
+            const result = v3(6823).trackAgeVerificationModalClicked(
               modalSessionId,
-              v3(6833).AgeVerificationModalVersion.PRIMARY,
-              v3(6833).AgeVerificationModalCta.GET_STARTED,
+              v3(6823).AgeVerificationModalVersion.PRIMARY,
+              v3(6823).AgeVerificationModalCta.GET_STARTED,
             );
             c1 = 1;
             v3 = 1;
@@ -191,7 +191,7 @@ export default function GetStartedScreen(onComplete) {
     color: initiateAgeVerification(575).colors.WHITE,
   });
   obj17.loading = initiateAgeVerification.loading;
-  obj16.children = closure_7(modalSessionId(5936).Button, obj17);
+  obj16.children = closure_7(modalSessionId(5926).Button, obj17);
   obj15.children = closure_7(closure_5, obj16);
   items2[1] = closure_7(closure_5, obj15);
   obj2.children = items2;

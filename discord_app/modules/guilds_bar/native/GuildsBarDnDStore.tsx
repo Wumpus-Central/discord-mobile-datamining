@@ -21,12 +21,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dragRegion: require("../../../../_runtime/metro/01655__.js").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "headers",
-    scrollPosition: true,
-    windowSize: true,
-    setStateShallow: true,
-    dropStart: true,
-    dropComplete: true,
+    listInsets: "regional_indicator_k",
+    scrollPosition: "onboardingPromptsSeen",
+    windowSize: "_doFastConnectIdentify",
+    setStateShallow: "\u{1F935}\u{1F3FD}",
+    dropStart: "lastDatabase",
+    dropComplete: "latest_onboarding_question_id",
   };
   let obj2 = require("../../../../_runtime/metro/01655__.js");
   obj.gestureState = require("../../../../_runtime/metro/01655__.js").makeMutable(obj);
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1263).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "channel_id" }));
+      dropSpecs(1263).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "alignItems" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;

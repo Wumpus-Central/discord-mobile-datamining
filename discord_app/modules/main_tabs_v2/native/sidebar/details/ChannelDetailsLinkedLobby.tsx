@@ -5,7 +5,7 @@ import useGetOrFetchApplications from "../../../../applications/useGetOrFetchApp
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const util = BPDKoA(1113);
-const Text_Text = BPDKoA(5929);
+const Text_Text = BPDKoA(5919);
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;

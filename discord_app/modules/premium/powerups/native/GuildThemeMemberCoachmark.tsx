@@ -9,7 +9,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
 require = fn;
-let closure_6 = fn(5524).GUILD_THEME_POWERUP_BOOST_PRICE;
+let closure_6 = fn(5514).GUILD_THEME_POWERUP_BOOST_PRICE;
 const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
@@ -50,7 +50,7 @@ export default function GuildThemeMemberCoachmark(guildId) {
   const obj2 = guildId(504);
   guildPowerupBannerImage = guildId(10718).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(18886);
+    guildPowerupBannerImage = markAsDismissed(18888);
   }
   const diff = onDismiss - markAsDismissed(9241)(guildId).available;
   c5 = diff;

@@ -20,8 +20,8 @@ const require = globalThis.__r;
 require = fn;
 const GuildRecord = fn(5173);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(19063).useItemDragState;
-const TRANSITION_PHYSICS = fn(19060).TRANSITION_PHYSICS;
+const useItemDragState = fn(19065).useItemDragState;
+const TRANSITION_PHYSICS = fn(19062).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
@@ -141,7 +141,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
                 const obj2 = c1(1256);
               }
             }
-            c1(19023)(_undefined);
+            c1(19025)(_undefined);
           }
         }
         const obj3 = { title: null, body: null };
@@ -149,7 +149,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
         obj3.title = intl.string(c0(1113).t.R0RpRX);
         const intl2 = c0(1113).intl;
         obj3.body = intl2.string(c0(1113).t.m9gRVN);
-        return c1(6268).show(obj3);
+        return c1(6258).show(obj3);
       },
     }),
     items4,
@@ -350,17 +350,17 @@ export default noop.memo(function GuildsBarGuild(guildId) {
   if (enableHome) {
     if (!flag2) {
       const obj10 = { guildId, onActiveHookChange: callback };
-      tmp28Result = closure_16(tmp4(19092), obj10);
+      tmp28Result = closure_16(tmp4(19094), obj10);
     }
   }
   obj8.expandedChildren = tmp28Result;
   if (isUnavailable) {
-    const obj11 = { source: tmp4(19114), style: tmp.guildIcon };
-    let tmp28Result2 = closure_16(tmp4(6020), obj11);
-    const tmp4Result3 = tmp4(6020);
+    const obj11 = { source: tmp4(19116), style: tmp.guildIcon };
+    let tmp28Result2 = closure_16(tmp4(6010), obj11);
+    const tmp4Result3 = tmp4(6010);
   } else if (null != tmp15) {
     const obj12 = { source: tmp15, style: tmp.guildIcon };
-    tmp28Result2 = closure_16(tmp4(6020), obj12);
+    tmp28Result2 = closure_16(tmp4(6010), obj12);
   } else {
     const obj13 = { value: guildName, selected, animate: selected, size: tmp2(7720).GuildIconSizes.LARGE };
     tmp28Result2 = closure_16(tmp4(7720), obj13);

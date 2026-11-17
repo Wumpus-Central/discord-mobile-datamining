@@ -77,7 +77,7 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
   }
   let VJlc0S = dependencyMap;
   const tmp = voiceStates(9061)();
-  const tmp2 = voiceStates(5547)();
+  const tmp2 = voiceStates(5537)();
   let joinButtonText = closure_11(tmp, channel(5313).isThemeLight(tmp2));
   const obj = channel(5313);
   const isConnectedToVoiceChannel = channel(11007).useIsConnectedToVoiceChannel(channel);
@@ -88,14 +88,14 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
     () => !PermissionStore.can(constants.CONNECT, channel),
   );
   const obj3 = channel(563);
-  const stageParticipantsCount = channel(6949).useStageParticipantsCount(
+  const stageParticipantsCount = channel(6939).useStageParticipantsCount(
     channel.id,
-    channel(6943).StageChannelParticipantNamedIndex.AUDIENCE,
+    channel(6933).StageChannelParticipantNamedIndex.AUDIENCE,
   );
   const isGuildStageVoiceResult = channel.isGuildStageVoice();
-  const obj4 = channel(6949);
-  const obj5 = channel(6939);
-  const tmp8 = channel(6939).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
+  const obj4 = channel(6939);
+  const obj5 = channel(6929);
+  const tmp8 = channel(6929).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
   const items1 = [VoiceStateStore];
   const stateFromStores1 = channel(563).useStateFromStores(items1, () => VoiceStateStore.hasVideo(channel.id));
   const sum = stageParticipantsCount + voiceStates.length;
@@ -161,7 +161,7 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
       connectedUserLimitFormatted = intl2.string(VJlc0S);
     }
     obj8.children = connectedUserLimitFormatted;
-    obj7.children = jsx(tmp3(5929).Text, {
+    obj7.children = jsx(tmp3(5919).Text, {
       style: null,
       color: "interactive-text-default",
       variant: "body-xs/semibold",

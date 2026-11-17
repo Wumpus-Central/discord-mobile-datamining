@@ -76,21 +76,21 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
           if (constants2.REORDER_GAMES === label.key) {
             if (obj.isGameWidget(widget)) {
               closure_3.current = false;
-              closure_1_1(5552).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-              let obj2 = closure_1_1(5552);
+              closure_1_1(5542).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              let obj2 = closure_1_1(5542);
               const obj4 = { widgetType: widget.type, returnFocusRef };
-              closure_1_1(5552).openLazy(
+              closure_1_1(5542).openLazy(
                 label(2121)(12102, dependencyMap.paths),
                 "UserProfileWidgetGamesReorderActionSheet",
                 obj4,
               );
-              const obj3 = closure_1_1(5552);
+              const obj3 = closure_1_1(5542);
             }
             obj = label(7354);
           } else if (tmp.REMOVE === key) {
             closure_3.current = false;
-            closure_1_1(5552).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-            const obj5 = closure_1_1(5552);
+            closure_1_1(5542).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+            const obj5 = closure_1_1(5542);
             const obj7 = {
               widgetName: header,
               onConfirm() {
@@ -107,7 +107,7 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
                 AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1113).t.zzsK7h));
               },
               onDismissWithoutRemoving() {
-                return profileEditAnalyticsOptions(6331).setAccessibilityFocus({ ref, delay: 100 });
+                return profileEditAnalyticsOptions(6321).setAccessibilityFocus({ ref, delay: 100 });
               },
             };
             label(12123).confirmRemoveWidget(obj7);
@@ -126,21 +126,21 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
             if (constants2.REORDER_GAMES === label.key) {
               if (obj.isGameWidget(widget)) {
                 closure_3.current = false;
-                closure_1_1(5552).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-                let obj2 = closure_1_1(5552);
+                closure_1_1(5542).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+                let obj2 = closure_1_1(5542);
                 const obj4 = { widgetType: widget.type, returnFocusRef };
-                closure_1_1(5552).openLazy(
+                closure_1_1(5542).openLazy(
                   label(2121)(12102, dependencyMap.paths),
                   "UserProfileWidgetGamesReorderActionSheet",
                   obj4,
                 );
-                const obj3 = closure_1_1(5552);
+                const obj3 = closure_1_1(5542);
               }
               obj = label(7354);
             } else if (tmp.REMOVE === key) {
               closure_3.current = false;
-              closure_1_1(5552).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-              const obj5 = closure_1_1(5552);
+              closure_1_1(5542).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              const obj5 = closure_1_1(5542);
               const obj7 = {
                 widgetName: header,
                 onConfirm() {
@@ -158,7 +158,7 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
                   AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1113).t.zzsK7h));
                 },
                 onDismissWithoutRemoving() {
-                  return profileEditAnalyticsOptions(6331).setAccessibilityFocus({ ref, delay: 100 });
+                  return profileEditAnalyticsOptions(6321).setAccessibilityFocus({ ref, delay: 100 });
                 },
               };
               label(12123).confirmRemoveWidget(obj7);

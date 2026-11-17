@@ -86,7 +86,7 @@ export function ConjureUserHeader(arg0) {
   ({ userId, at } = arg0);
   messageAuthorUser = messageAuthorUser(12446).useMessageAuthorUser(userId);
   let obj = messageAuthorUser(12446);
-  const name = messageAuthorUser(5372).useName(messageAuthorUser);
+  const name = messageAuthorUser(5362).useName(messageAuthorUser);
   [][0] = messageAuthorUser;
   let tmp4 = null;
   if (null != messageAuthorUser) {

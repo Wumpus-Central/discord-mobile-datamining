@@ -161,7 +161,7 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_15(id(5936).Button, {
+  return closure_15(id(5926).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
@@ -182,7 +182,7 @@ function TagFilter(channel) {
     );
   };
   obj.icon = closure_15(channel(9521).TagIcon, { size: "xxs" });
-  return closure_15(channel(5936).Button, obj);
+  return closure_15(channel(5926).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";

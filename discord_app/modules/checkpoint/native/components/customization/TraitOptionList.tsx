@@ -27,7 +27,7 @@ function SelectedWindow(size) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6377).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6367).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
@@ -80,7 +80,7 @@ export default function TraitOptionList(size) {
   let tmp2 = size;
   closure_7 = options(14488)(options(14518));
   const tmp4 = options(14488);
-  const isScreenReaderEnabled = size(5568).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = size(5558).useIsScreenReaderEnabled();
   noop.useRef(null);
   const ref = noop.useRef(false);
   closure_11 = noop.useRef(null);
@@ -88,8 +88,8 @@ export default function TraitOptionList(size) {
     options.findIndex((optionId) => optionId.optionId === dependencyMap),
     0,
   );
-  let obj2 = size(5568);
-  const tmp8 = options(5917)(bound);
+  let obj2 = size(5558);
+  const tmp8 = options(5907)(bound);
   [tmp10, c12] = disabled(noop.useState(options(1496)().width), 2);
   const width = size(14540).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + closure_11;
@@ -161,7 +161,7 @@ export default function TraitOptionList(size) {
   const obj4 = { style: tmp.radioGroup, accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
   const tmp14 = ref;
   const tmp9 = disabled(noop.useState(options(1496)().width), 2);
-  obj4.accessibilityLabel = tmp2(6744).getCustomizationOptionName(size.customizationOption);
+  obj4.accessibilityLabel = tmp2(6734).getCustomizationOptionName(size.customizationOption);
   obj4.children = options.map((traitOption, index) => {
     size = traitOption;
     closure_1 = index;
@@ -176,7 +176,7 @@ export default function TraitOptionList(size) {
       onPress: null,
     };
     const tmp2 = options(14540);
-    obj.accessibilityLabel = size(6744).getAssetAccessibilityLabel(traitOption, {
+    obj.accessibilityLabel = size(6734).getAssetAccessibilityLabel(traitOption, {
       skipRarity: skipDescription,
       skipDescription,
     });
@@ -197,9 +197,9 @@ export default function TraitOptionList(size) {
       closure_10.current = false;
       if (traitOption.optionId !== dependencyMap) {
         closure_2_5(traitOption.trait, traitOption.optionId);
-        const result = traitOption(5554).triggerHapticFeedback(traitOption(5554).HapticFeedbackTypes.IMPACT_LIGHT);
+        const result = traitOption(5544).triggerHapticFeedback(traitOption(5544).HapticFeedbackTypes.IMPACT_LIGHT);
         closure_7();
-        const obj = traitOption(5554);
+        const obj = traitOption(5544);
       }
       if (!isScreenReaderEnabled) {
         const current = ref.current;

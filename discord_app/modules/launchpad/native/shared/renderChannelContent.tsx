@@ -170,8 +170,8 @@ function ChannelContent(arg0) {
   return metroImportDefault(View, obj2);
 }
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(6060).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(6959).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(6050).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(6949).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5306);

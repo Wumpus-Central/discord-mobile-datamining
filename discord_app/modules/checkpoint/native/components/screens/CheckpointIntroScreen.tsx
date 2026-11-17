@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6377);
+const CheckpointConstants = fn(6367);
 ({
   CHECKPOINT_CONTROL_SIZE: metroImportDefault,
   CHECKPOINT_INTRODUCTION_FADE_IN_DURATION_MS: closure_8,

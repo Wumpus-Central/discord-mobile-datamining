@@ -239,7 +239,7 @@ export default function OneTimeLoginModal(token) {
     angleOverride: 0,
     mixAmount: null,
   };
-  let obj3 = { dark: token(5486).OverlayOpacity.LEVEL_1 };
+  let obj3 = { dark: token(5476).OverlayOpacity.LEVEL_1 };
   obj2.mixAmount = obj3;
   const items6 = [closure_12(ThemedGradientDefault, obj2)];
   let obj4 = { style: tmp.container, children: null };
@@ -253,7 +253,7 @@ export default function OneTimeLoginModal(token) {
   const obj8 = { variant: "body-lg/semibold", children: null };
   let intl = token(1113).intl;
   obj8.children = intl.string(token(1113).t.W9uNdG);
-  items8[1] = closure_12(token(5929).Text, obj8);
+  items8[1] = closure_12(token(5919).Text, obj8);
   obj7.children = items8;
   items7[1] = closure_13(callback1, obj7);
   obj5.children = items7;
@@ -262,7 +262,7 @@ export default function OneTimeLoginModal(token) {
   const obj10 = { variant: "body-sm/normal", children: null };
   let intl2 = token(1113).intl;
   obj10.children = intl2.string(token(1113).t["ZXe5/Y"]);
-  const items10 = [closure_12(token(5929).Text, obj10)];
+  const items10 = [closure_12(token(5919).Text, obj10)];
   const obj11 = { textColor: "text-default", text: null, variant: "body-sm/medium", onPress: null, textStyle: null };
   let intl3 = token(1113).intl;
   obj11.text = intl3.string(token(1113).t.FIEwfG);

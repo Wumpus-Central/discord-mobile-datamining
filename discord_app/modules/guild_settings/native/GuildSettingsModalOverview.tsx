@@ -156,12 +156,12 @@ class GuildSettingsModalOverview extends PureComponent {
         }
         GuildSettingsActionCreatorsDefault.updateGuild({ systemChannelId: id });
         if (((null != systemChannel) !== null) != id) {
-          const result = applyArgumentsResult(20441).trackServerHubToggleSetting(
+          const result = applyArgumentsResult(20444).trackServerHubToggleSetting(
             guild.id,
-            applyArgumentsResult(20441).ServerHubSettingType.ALL_SYSTEM_MESSAGES,
+            applyArgumentsResult(20444).ServerHubSettingType.ALL_SYSTEM_MESSAGES,
             tmp,
           );
-          const obj2 = applyArgumentsResult(20441);
+          const obj2 = applyArgumentsResult(20444);
         }
       };
       if (systemChannel == null) {
@@ -465,12 +465,12 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const tmpResult14 = tmp(1406);
   }
   const tmpResult = tmp(9221);
-  let result1 = tmp(20200).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  let result1 = tmp(20203).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1406).hasFlag(guild.systemChannelFlags, constants6.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult16 = tmp(1406);
   }
-  const tmpResult15 = tmp(20200);
+  const tmpResult15 = tmp(20203);
   let guildSpaceExperimentEnabled = tmp(7243).getGuildSpaceExperimentEnabled(guild.id, "GuildSettingsModalOverview");
   const obj2 = { title: null, description: null, hasIcons: false, children: null };
   const intl2 = tmp(1113).intl;
@@ -584,7 +584,7 @@ prototype["renderDefaultNotificationSettings"] = function renderDefaultNotificat
   obj2.label = intl3.string(util.t["n/bTaY"]);
   let stringResult;
   if (null != guildMemberCount) {
-    if (guildMemberCount >= expandedHeight) {
+    if (guildMemberCount >= closure_1_19) {
       const intl4 = util.intl;
       stringResult = intl4.string(util.t["L+P4t2"]);
     }
@@ -783,7 +783,7 @@ prototype["render"] = function render() {
   obj.children = items2;
   return guild(closure_1_22, obj);
 };
-GuildSettingsModalOverview.contextType = fn(5377).ThemeContext;
+GuildSettingsModalOverview.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalOverview.tsx");
 

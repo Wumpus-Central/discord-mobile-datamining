@@ -353,7 +353,7 @@ function WrappedChannelNavButtons(channelId) {
   ({ screenIndex, showCreateThread } = channelId);
   items = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  channelId(6838);
+  channelId(6828);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;

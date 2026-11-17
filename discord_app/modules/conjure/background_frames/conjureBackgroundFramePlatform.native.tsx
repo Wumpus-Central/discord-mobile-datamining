@@ -8,7 +8,7 @@ import conjureAppPictureInPictureFrames from "native/conjureAppPictureInPictureF
 import FramesStore from "../../frames/FramesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const FramesConstants = fn(7020);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
 const size = fn(2);

@@ -44,7 +44,7 @@ function NameplateInner(isFocused) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = closure_7(flag3, isPressed, flag, flag2, flag5);
   let obj = require("initialize");
-  const tmp6 = sharedValue(5547)();
+  const tmp6 = sharedValue(5537)();
   let num = 1;
   if (flag6) {
     num = 0;
@@ -108,12 +108,12 @@ function NameplateInner(isFocused) {
     const items5 = [,];
     ({ left: arr6[0], right: arr6[1] } = backgroundGradientColors);
     obj4.colors = items5;
-    tmp17Result = closure_5(tmp5(5893), obj4);
-    const tmp5Result = tmp5(5893);
+    tmp17Result = closure_5(tmp5(5883), obj4);
+    const tmp5Result = tmp5(5883);
   }
   const items6 = [
     tmp17Result,
-    closure_5(sharedValue(6020), {
+    closure_5(sharedValue(6010), {
       source: { uri: str },
       style: tmp4.img,
       accessibilityRole: "image",

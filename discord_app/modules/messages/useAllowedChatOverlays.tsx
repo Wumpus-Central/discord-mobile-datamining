@@ -7,7 +7,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
 const ChatOverlays = fn(12362).ChatOverlays;
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: null };
 let items = [, ,];

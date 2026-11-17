@@ -10,18 +10,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchRowViewability.tsx");
 
 export function useSmartSearchRowViewability() {
-  const currentNavigationRouteName = stateFromStores(5492).useCurrentNavigationRouteName();
+  const currentNavigationRouteName = stateFromStores(5482).useCurrentNavigationRouteName();
   const context = noop.useContext(stateFromStores(14850).SwipeForMemberListContext);
-  const obj = stateFromStores(5492);
+  const obj = stateFromStores(5482);
   const isFocused = stateFromStores(1503).useIsFocused();
   let isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
   const obj3 = stateFromStores(1503);
-  let tmp6 = null != stateFromStores(5492).coerceChannelRoute({ name: currentNavigationRouteName });
+  let tmp6 = null != stateFromStores(5482).coerceChannelRoute({ name: currentNavigationRouteName });
   if (!tmp6) {
     if (isChatLockedOpen) {
       const obj5 = { name: currentNavigationRouteName };
-      isChatLockedOpen = null != tmp(5492).coerceGuildsRoute(obj5);
-      const tmpResult = tmp(5492);
+      isChatLockedOpen = null != tmp(5482).coerceGuildsRoute(obj5);
+      const tmpResult = tmp(5482);
     }
     tmp6 = isChatLockedOpen;
   }
@@ -38,7 +38,7 @@ export function useSmartSearchRowViewability() {
       SearchSessionAnalyticsManagerDefault,
     );
   }, items);
-  const obj4 = stateFromStores(5492);
+  const obj4 = stateFromStores(5482);
   const items1 = [AppStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items1, () => {
     state = state.getState();

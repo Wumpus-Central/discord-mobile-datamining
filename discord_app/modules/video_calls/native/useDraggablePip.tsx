@@ -261,7 +261,7 @@ export function useDraggablePip(size1) {
     useDraggablePipTsx10,
     useDraggablePipTsx11,
   );
-  const Gesture = tmp2(5598).Gesture;
+  const Gesture = tmp2(5588).Gesture;
   const tmp2Result25 = require("../../../../_runtime/metro/01655__.js");
   const items22 = [-c5, c5];
   const PanResult = Gesture.Pan();
@@ -396,7 +396,7 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx13.__workletHash = 12738554963651;
   useDraggablePipTsx13.__initData = tmp62;
   const onUpdateResult = Gesture.Pan().activeOffsetX(items22).activeOffsetY(items23).onUpdate(useDraggablePipTsx12);
-  const Gesture2 = tmp2(5598).Gesture;
+  const Gesture2 = tmp2(5588).Gesture;
   const onEndResult = Gesture.Pan()
     .activeOffsetX(items22)
     .activeOffsetY(items23)
@@ -414,7 +414,7 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx14.__workletHash = 16181399743221;
   useDraggablePipTsx14.__initData = tmp76;
   const TapResult = Gesture2.Tap();
-  const Gesture3 = tmp2(5598).Gesture;
+  const Gesture3 = tmp2(5588).Gesture;
   const onStartResult = Gesture2.Tap().onStart(useDraggablePipTsx14);
   const RaceResult = Gesture3.Race(onEndResult, Gesture2.Tap().onStart(useDraggablePipTsx14));
   const items30 = [

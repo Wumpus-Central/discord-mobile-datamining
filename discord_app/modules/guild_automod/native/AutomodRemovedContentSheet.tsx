@@ -79,7 +79,7 @@ export default function AutomodRemovedContentSheet(action) {
     let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
   } else {
     const obj6 = { variant: "body-md/normal", color: "text-default", children: action.notice };
-    tmp4Result = jsx(tmp5(5929).Text, { variant: "body-md/normal", color: "text-default", children: action.notice });
+    tmp4Result = jsx(tmp5(5919).Text, { variant: "body-md/normal", color: "text-default", children: action.notice });
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;

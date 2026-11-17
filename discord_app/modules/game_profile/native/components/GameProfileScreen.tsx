@@ -457,7 +457,7 @@ export default function GameProfileScreen(gameId) {
           source,
           trackAction: callback1,
           onGuildInviteResolved: tmp13[1],
-          closeModal: tmp5(5552).hideAllActionSheets,
+          closeModal: tmp5(5542).hideAllActionSheets,
           scrollY: sharedValue,
           websiteButtons: memo,
           onStoreLinksMeasured: callback5,
@@ -474,7 +474,7 @@ export default function GameProfileScreen(gameId) {
           viewId,
           scrollY: sharedValue,
           trackAction: callback1,
-          closeModal: tmp5(5552).hideAllActionSheets,
+          closeModal: tmp5(5542).hideAllActionSheets,
         };
         tmp72Result4 = tmp72(tmp5(10497), obj8);
         const tmp5Result6 = tmp5(10497);
@@ -482,7 +482,7 @@ export default function GameProfileScreen(gameId) {
       items24[1] = tmp72Result4;
       obj6.children = items24;
       obj5.children = tmp65(tmp5(10313), obj6);
-      let tmp72Result5 = tmp72(tmp2(5570).BottomSheetScrollView, obj5);
+      let tmp72Result5 = tmp72(tmp2(5560).BottomSheetScrollView, obj5);
       const tmp5Result4 = tmp5(10313);
     }
     const items25 = [tmp72Result5, , ,];
@@ -502,7 +502,7 @@ export default function GameProfileScreen(gameId) {
     }
     items25[2] = tmp72Result6;
     const obj12 = { variant: "overlay", onPress: bottomSheetClose };
-    items25[3] = tmp72(tmp2(5901).ActionSheetHeaderBar, obj12);
+    items25[3] = tmp72(tmp2(5891).ActionSheetHeaderBar, obj12);
     obj4.children = items25;
     return tmp65(tmp66, obj4);
   }

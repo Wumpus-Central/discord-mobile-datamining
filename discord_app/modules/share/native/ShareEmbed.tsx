@@ -161,7 +161,7 @@ export default function ShareEmbed(embed) {
       let tmp9Result = null != memo;
       if (tmp9Result) {
         let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-        tmp9Result = closure_5(isLoadingEmbed(6020), obj2);
+        tmp9Result = closure_5(isLoadingEmbed(6010), obj2);
       }
       let obj3 = { children: null };
       const items6 = [tmp9Result];

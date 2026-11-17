@@ -242,16 +242,16 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
     return closure_17(TransitionWrapper, obj, arg0);
   }
 }
-const GuildsNodeType = fn(6956).GuildsNodeType;
-const GuildsBarDnDStore = fn(19063);
+const GuildsNodeType = fn(6946).GuildsNodeType;
+const GuildsBarDnDStore = fn(19065);
 ({ useItemDragState: closure_10, useFolderBGHeightOffset: closure_11 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(19068);
+let GuildsBarConstants = fn(19070);
 ({
   DEFAULT_FOLDER_COLOR: closure_12,
   isDefaultFolderColor: map1,
   normalizeFolderColor: closure_14,
 } = GuildsBarConstants);
-GuildsBarConstants = fn(19060);
+GuildsBarConstants = fn(19062);
 ({ TRANSITION_PHYSICS: closure_15, FOLDER_SPRING_PHYSICS: closure_16 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
@@ -623,10 +623,10 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
             const result = closure_1_5.set(set);
           }
         }
-        const result1 = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj4 = c0(5554);
-        const result2 = c1(6917).toggleGuildFolderExpand(_undefined);
-        const obj5 = c1(6917);
+        const result1 = c0(5544).triggerHapticFeedback(c0(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj4 = c0(5544);
+        const result2 = c1(6907).toggleGuildFolderExpand(_undefined);
+        const obj5 = c1(6907);
       },
     }),
     items7,
@@ -815,10 +815,10 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
   let tmp28Result2;
   if (!flag2) {
     const obj11 = { folderId: id, expanded };
-    tmp28Result2 = closure_17(tmp3(19083), obj11);
+    tmp28Result2 = closure_17(tmp3(19085), obj11);
   }
   obj9.expandedChildren = tmp28Result2;
-  obj9.children = closure_17(tmp(5377).TransitionGroup, {
+  obj9.children = closure_17(tmp(5367).TransitionGroup, {
     renderItem: renderGuildFolderContent,
     getItemKey,
     items: memo3,

@@ -1,6 +1,6 @@
 // discord_app/components_native/common/TabBar.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import LegacyBaseButton from "../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../_runtime/05588_LegacyBaseButton.js";
 import _mod7888 from "../../../discord_common/js/packages/flash-list/index.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";

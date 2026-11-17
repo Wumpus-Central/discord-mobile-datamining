@@ -182,8 +182,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
             closure_128_0 = undefined;
             let base64;
             let originalMd5;
-            tmp5(5552).hideActionSheet();
-            const obj4 = tmp5(5552);
+            tmp5(5542).hideActionSheet();
+            const obj4 = tmp5(5542);
             dependencyMap = 1;
             c3 = 1;
             const obj6 = { value: tmp5(8879).openImagePicker(closure_1_8), done: false };

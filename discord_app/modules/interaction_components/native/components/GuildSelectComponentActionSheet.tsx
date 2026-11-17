@@ -68,7 +68,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
       let reduced = flattenedGuildIds.reduce((arr, item) => {
         guild = guild.getGuild(item);
         if (null != guild) {
-          const obj = { type: closure_1_0(6384).SelectOptionType.GUILD, value: null, label: null, guild: null };
+          const obj = { type: closure_1_0(6374).SelectOptionType.GUILD, value: null, label: null, guild: null };
           ({ id: obj.value, name: obj.label } = guild);
           obj.guild = guild;
           arr = arr.push(obj);
@@ -83,7 +83,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
         .map((record) => {
           record = record.record;
           return {
-            type: closure_1_0(6384).SelectOptionType.GUILD,
+            type: closure_1_0(6374).SelectOptionType.GUILD,
             value: record.id,
             label: record.name,
             guild: record,

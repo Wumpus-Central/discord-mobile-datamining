@@ -1,8 +1,8 @@
 // discord_app/design/components/Sheet/native/BottomSheetBackdrop.native.tsx
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
-import BottomSheetModal from "../../../../../_runtime/05570_BottomSheetModal.js";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import BottomSheetModal from "../../../../../_runtime/05560_BottomSheetModal.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import Backdrop from "../../Backdrop/native/Backdrop.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

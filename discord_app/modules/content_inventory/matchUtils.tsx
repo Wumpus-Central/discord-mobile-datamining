@@ -130,10 +130,10 @@ export function findMatchingEntry(entries, activity) {
       }
       return tmp;
     });
-  } else if (activity.type === tmp(6069).ActivityTypes.LISTENING) {
+  } else if (activity.type === tmp(6059).ActivityTypes.LISTENING) {
     const found3 = found.filter(tmp(9478).isListenedSessionEntry);
     found2 = found3.find((item) => isMatchingListeningActivity(item, closure_0));
-  } else if (activity.type === tmp(6069).ActivityTypes.WATCHING) {
+  } else if (activity.type === tmp(6059).ActivityTypes.WATCHING) {
     const found4 = entries.filter(tmp(9478).isWatchedMediaEntry);
     found2 = found4.find((extra) => {
       const tmp3 = isCrunchyrollActivityDefault(activity);

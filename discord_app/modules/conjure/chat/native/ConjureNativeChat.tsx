@@ -4,7 +4,7 @@ import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import util from "../../../../intl/index.native.tsx";
 import _modDef4131 from "../../intl/ConjureUntranslated.messages.js";
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import conjureChatTurns from "../conjureChatTurns.tsx";
 import _modDef7533 from "../../../../../_runtime/metro/07533__.js";
@@ -1336,7 +1336,7 @@ export default function ConjureNativeChat(projectId) {
         AyiQEp = tmp5(4131).AyiQEp;
       }
       const obj30 = { variant: "body-sm/normal", color: "text-muted", children: intl4.string(AyiQEp) };
-      obj29.children = tmp125(tmp2(5929).Text, obj30);
+      obj29.children = tmp125(tmp2(5919).Text, obj30);
       tmp125(tmp124, obj29);
     }
     const tmp5Result = tmp5(13595);

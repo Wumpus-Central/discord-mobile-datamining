@@ -86,7 +86,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          args(6952).closeApplyBoostModal();
+          args(6942).closeApplyBoostModal();
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }

@@ -5,7 +5,7 @@ import util from "../../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../../screen/useWindowDimensions.native.tsx";
 import ColorUtils from "../../../../../../utils/ColorUtils.tsx";
 import useA11yRolesNative from "../../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import LinearGradientDefault from "../../../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../../_runtime/05883_LinearGradient.js";
 import useToken from "../../../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
@@ -38,12 +38,12 @@ function GiftingSKUCardItemPreview(arg0) {
     const obj6 = { uri: currentUser(9513) };
     obj5.source = obj6;
     obj5.style = tmp.sampleProfile;
-    const items1 = [closure_10(currentUser(6020), obj5)];
+    const items1 = [closure_10(currentUser(6010), obj5)];
     const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
     items1[1] = closure_10(currentUser(9493), obj7);
     obj4.children = items1;
     tmp8 = closure_11(closure_4, obj4);
-    const tmp19 = currentUser(6020);
+    const tmp19 = currentUser(6010);
   } else {
     tmp8 = null;
     if (isProfileFrameRecord(item)) {

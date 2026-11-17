@@ -9,7 +9,7 @@ import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17915);
+const HappeningNowConstants = fn(17917);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 const STATUS_CUTOUT_SMALL = HappeningNowConstants.STATUS_CUTOUT_SMALL;
 const StatusTypes = fn(1083).StatusTypes;
@@ -124,7 +124,7 @@ export function CustomStatusActivityCard(user) {
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   let obj = user(563);
   let obj2 = { userId: user.id, guildId };
-  let tmp10 = activity(6750)({ userId: user.id, guildId });
+  let tmp10 = activity(6740)({ userId: user.id, guildId });
   const displayNameStylesFont = user(10066).useDisplayNameStylesFont({ displayNameStyles: tmp10 });
   items1 = [activity.emoji];
   const effect = noop.useEffect(() => {
@@ -161,7 +161,7 @@ export function CustomStatusActivityCard(user) {
               if (null != c1.emoji) {
                 c2 = 1;
                 v3 = 1;
-                const obj5 = { value: user(18799).getEmojiSource(c1.emoji), done: false };
+                const obj5 = { value: user(18801).getEmojiSource(c1.emoji), done: false };
                 return obj5;
               } else {
                 v3 = 3;
@@ -180,7 +180,7 @@ export function CustomStatusActivityCard(user) {
               const obj8 = { emoji: c1.emoji, emojiSource: closure_128_0 };
               c2 = 2;
               v3 = 1;
-              const obj9 = { value: user(18800).getEmojiDominantColors(obj8), done: false };
+              const obj9 = { value: user(18802).getEmojiDominantColors(obj8), done: false };
               return obj9;
             }
           } else if (arg0 === 1) {
@@ -246,7 +246,7 @@ export function CustomStatusActivityCard(user) {
       let tmp15Result = null != source;
       if (tmp15Result) {
         let obj8 = { source, style: tmp.largeEmoji };
-        tmp15Result = closure_11(activity(6020), obj8);
+        tmp15Result = closure_11(activity(6010), obj8);
       }
       let tmp15Result3 = tmp15Result;
     } else {
@@ -290,7 +290,7 @@ export function CustomStatusActivityCard(user) {
     };
     const items6 = [closure_11(tmp6(1187).Avatar, obj11), ,];
     const obj12 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    items6[1] = closure_11(tmp6(17916).HappeningNowCardHeader, obj12);
+    items6[1] = closure_11(tmp6(17918).HappeningNowCardHeader, obj12);
     state = activity.state;
     let num2;
     if (state != null) {
@@ -309,7 +309,7 @@ export function CustomStatusActivityCard(user) {
         maxFontSizeMultiplier: 2,
         children: gameMentionsAsPlainText,
       };
-      tmp15Result4 = closure_11(tmp6(5929).Text, obj13);
+      tmp15Result4 = closure_11(tmp6(5919).Text, obj13);
     }
     const obj14 = { children: null };
     items6[2] = tmp15Result4;
@@ -333,7 +333,7 @@ export function CustomStatusActivityCard(user) {
     const items7 = [closure_11(tmp6(1187).Avatar, obj16)];
     const obj17 = { style: tmp.customStatusContextContainer, children: null };
     const obj18 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    const items8 = [closure_11(tmp6(17916).HappeningNowCardHeader, obj18)];
+    const items8 = [closure_11(tmp6(17918).HappeningNowCardHeader, obj18)];
     const obj19 = {
       ellipsizeMode: "tail",
       variant: "body-xs/medium",
@@ -342,7 +342,7 @@ export function CustomStatusActivityCard(user) {
       maxFontSizeMultiplier: 2,
       children: gameMentionsAsPlainText,
     };
-    items8[1] = closure_11(tmp6(5929).Text, obj19);
+    items8[1] = closure_11(tmp6(5919).Text, obj19);
     obj17.children = items8;
     items7[1] = closure_12(View, obj17);
     obj15.children = items7;
@@ -350,5 +350,5 @@ export function CustomStatusActivityCard(user) {
   }
   obj5.children = tmp18Result;
   obj4.children = closure_11(View, obj5);
-  return closure_11(activity(17916), obj4);
+  return closure_11(activity(17918), obj4);
 }

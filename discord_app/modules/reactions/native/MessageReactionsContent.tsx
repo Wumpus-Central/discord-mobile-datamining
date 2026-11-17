@@ -14,7 +14,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../_runtime/05570_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05560_BottomSheetModal.js";
 import BurstReactionAnimationPreviewDefault from "../../messages/native/burst_reactions/BurstReactionAnimationPreview.tsx";
 import MessageReactionsTypes from "../../messages/MessageReactionsTypes.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -194,7 +194,7 @@ function ReactionTab(arg0) {
   if (name == null) {
     name = emoji.name;
   }
-  return expandedHeight(React6, obj5, name);
+  return closure_1_19(React6, obj5, name);
 }
 function RemoveAllButton(channelId) {
   ({ reactions: c0, reactionSelectedIndex } = channelId);
@@ -331,7 +331,7 @@ function EmojiOptionsButton(channelId) {
   const obj3 = { variant: "body-xs/semibold", color: "text-subtle", children: null };
   const intl = channelId(1113).intl;
   obj3.children = intl.string(channelId(1113).t.pCaYID);
-  const items3 = [closure_18(channelId(5929).Text, obj3), ];
+  const items3 = [closure_18(channelId(5919).Text, obj3), ];
   const obj = channelId(504);
   items3[1] = closure_18(channelId(7963).ChevronSmallRightIcon, { color: messageId(575).colors.ICON_SUBTLE, size: "xs" });
   obj2.children = items3;
@@ -357,9 +357,9 @@ function ReactionTabs(setReactionSelectedIndex) {
   setReactionSelectedIndex = setReactionSelectedIndex.setReactionSelectedIndex;
   const emoji = reactions[reactionSelectedIndex].emoji;
   const obj2 = { style: tmp.reactionTab, children: null };
-  const isTidaMediaTakedownRegion = reactionSelectedIndex(5995).useIsTidaMediaTakedownRegion();
+  const isTidaMediaTakedownRegion = reactionSelectedIndex(5985).useIsTidaMediaTakedownRegion();
   const obj4 = { tabs: null, tabStyle: null, tabStyleActive: null, tabStyleSelected: null, tabIndexSelected: null, onSelect: null };
-  const obj = reactionSelectedIndex(5995);
+  const obj = reactionSelectedIndex(5985);
   obj4.tabs = reactions.map((reaction, index) => {
     let str = "normal-";
     if (reaction.burst_count > 0) {
@@ -382,7 +382,7 @@ function ReactionTabs(setReactionSelectedIndex) {
   const obj7 = { style: tmp.emojiTextIdentifier, variant: "body-sm/medium", color: "text-default", children: null };
   const tmp6 = setReactionSelectedIndex(11873);
   obj7.children = reactionSelectedIndex(5250).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
-  const items1 = [closure_18(reactionSelectedIndex(5929).Text, obj7), ];
+  const items1 = [closure_18(reactionSelectedIndex(5919).Text, obj7), ];
   if (isTidaMediaTakedownRegion) {
     const obj8 = {};
     const merged = Object.assign(setReactionSelectedIndex);
@@ -409,7 +409,7 @@ const Constants = fn(1072);
 ({ DEFAULT_NUM_REACTION_USERS: closure_16, Permissions: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-let closure_20 = module_1655.createAnimatedComponent(fn(5929).Text);
+let closure_20 = module_1655.createAnimatedComponent(fn(5919).Text);
 const createStyles = fn(5306);
 let obj = { container: { flex: 1 }, containerEmpty: { padding: 32, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, listRow: null, tabContainer: null, tabContainerSelected: null, tab: null, tabSelected: null, tabActive: null, reactionTab: null, removeButtonContainer: null, emojiOptionsButton: null, removeAllButton: null, reactionCountText: null, reactionCountTextSelected: null, emoji: null, emojiText: null, emojiImage: null, emojiTextIdentifier: null, avatar: null, buttonRow: null, loadingSpinner: null };
 let obj3 = { padding: 32, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -515,15 +515,15 @@ export function MessageReactionsContent(channelId) {
   }), 2);
   const bound = Math.min(tmp3[0], reactions.length - 1);
   if (null != reactions[bound].me_vote) {
-    let NORMAL = channelId(5920).ReactionTypes.VOTE;
+    let NORMAL = channelId(5910).ReactionTypes.VOTE;
     let tmp8 = channelId;
     let tmp10 = channelId;
   } else if (tmp5.burst_count > 0) {
-    NORMAL = channelId(5920).ReactionTypes.BURST;
+    NORMAL = channelId(5910).ReactionTypes.BURST;
     tmp8 = channelId;
     tmp10 = channelId;
   } else {
-    NORMAL = channelId(5920).ReactionTypes.NORMAL;
+    NORMAL = channelId(5910).ReactionTypes.NORMAL;
     tmp8 = channelId;
     tmp10 = channelId;
   }
@@ -690,7 +690,7 @@ export function MessageReactionsContent(channelId) {
   const tmp10Result4 = tmp10(1380);
   let obj3 = { scrollable: true, backdropOpacity: tmp10(5264).BACKDROP_OPACITY, backdropChildren: null, header: null, children: null };
   let tmp27Result = null;
-  if (NORMAL === tmp8(5920).ReactionTypes.BURST) {
+  if (NORMAL === tmp8(5910).ReactionTypes.BURST) {
     let obj4 = { style: absoluteFill.absoluteFill, pointerEvents: "none", children: null };
     let obj5 = { emoji: tmp5.emoji, reactionType: NORMAL, messageId, channelId };
     obj4.children = closure_18(BurstReactionAnimationPreviewDefault, obj5);
@@ -715,5 +715,5 @@ export function MessageReactionsContent(channelId) {
     const tmp19Result2 = FastListDefault;
   }
   obj3.children = tmp27Result4;
-  return closure_18(tmp10(5566).BottomSheet, obj3);
+  return closure_18(tmp10(5556).BottomSheet, obj3);
 }

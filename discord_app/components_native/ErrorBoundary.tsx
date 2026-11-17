@@ -60,7 +60,7 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return closure_9(tmp2(5936).Button, obj2);
+    return closure_9(tmp2(5926).Button, obj2);
   }
   obj = require("initialize");
 }
@@ -179,7 +179,7 @@ prototype["render"] = function render() {
   }
   return children;
 };
-ErrorBoundary.contextType = fn(5377).ThemeContext;
+ErrorBoundary.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/ErrorBoundary.tsx");
 

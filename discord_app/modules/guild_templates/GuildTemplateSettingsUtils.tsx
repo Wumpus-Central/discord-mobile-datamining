@@ -47,7 +47,7 @@ export function useGuildTemplate(guildId) {
       if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const aPIError = new guildId(6757).APIError(closure_129_1);
+        const aPIError = new guildId(6747).APIError(closure_129_1);
         tmp3(aPIError);
         closure_1(closure_129_0);
         c6 = 3;

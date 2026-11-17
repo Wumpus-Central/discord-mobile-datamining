@@ -44,7 +44,7 @@ function GuildBoostingGuildListItem(guildId) {
     const items1 = [closure_7(GuildIconDefault, obj3), ,];
     const obj4 = { style: tmp.guildCardDescription, children: null };
     const obj5 = { variant: "body-md/semibold", children: stateFromStores.name };
-    const items2 = [closure_7(tmp5(5929).Text, obj5)];
+    const items2 = [closure_7(tmp5(5919).Text, obj5)];
     const obj6 = { style: tmp.subscriptionInfo, children: null };
     const obj7 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
     const tmp2Result3 = GuildIconDefault;
@@ -55,7 +55,7 @@ function GuildBoostingGuildListItem(guildId) {
     const intl = tmp5(1113).intl;
     const obj9 = { subscriberCount: tmp8 };
     obj8.children = intl.format(tmp5(1113).t.If4iTS, obj9);
-    items3[1] = closure_7(tmp5(5929).Text, obj8);
+    items3[1] = closure_7(tmp5(5919).Text, obj8);
     obj6.children = items3;
     items2[1] = closure_8(View, obj6);
     obj4.children = items2;

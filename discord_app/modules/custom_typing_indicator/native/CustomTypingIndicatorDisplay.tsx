@@ -5,8 +5,8 @@ import CustomTypingIndicatorUtils from "../CustomTypingIndicatorUtils.tsx";
 import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp3(5929);
-const Stack_Stack = tmp3(6337);
+const Text_Text = tmp3(5919);
+const Stack_Stack = tmp3(6327);
 const Pressables = tmp3(7428);
 require = fn;
 const jsxProd = fn(21);

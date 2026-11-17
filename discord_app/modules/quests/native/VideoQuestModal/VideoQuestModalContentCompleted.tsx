@@ -229,11 +229,11 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
           tmp5Result = tmp5(17723);
         }
         obj14.onPressDisabled = tmp5Result;
-        tmp28Result = closure_7(tmp2(5936).Button, obj14);
+        tmp28Result = closure_7(tmp2(5926).Button, obj14);
       }
       items9[1] = tmp28Result;
       obj13.children = items9;
-      obj12.children = closure_8(tmp2(6337).Stack, obj13);
+      obj12.children = closure_8(tmp2(6327).Stack, obj13);
       const items10 = [closure_7(tmp5(1655).View, obj12)];
       const obj15 = { style: null, children: null };
       const items11 = [,];
@@ -251,11 +251,11 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         color: "mobile-text-heading-primary",
         children: quest.config.messages.gameTitle,
       };
-      const items12 = [closure_7(tmp2(5929).Heading, obj18)];
+      const items12 = [closure_7(tmp2(5919).Heading, obj18)];
       const obj19 = { variant: "body-sm/medium", color: "text-subtle", children: quest.config.messages.gamePublisher };
-      items12[1] = closure_7(tmp2(5929).Text, obj19);
+      items12[1] = closure_7(tmp2(5919).Text, obj19);
       obj17.children = items12;
-      const items13 = [closure_8(tmp2(6337).Stack, obj17)];
+      const items13 = [closure_8(tmp2(6327).Stack, obj17)];
       const obj20 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
       const intl4 = tmp2(1113).intl;
       obj20.accessibilityLabel = intl4.string(tmp2(1113).t.YsCuyF);
@@ -264,7 +264,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
       obj20.children = closure_7(tmp2(11095).RetryIcon, obj21);
       items13[1] = closure_7(tmp2(7428).PressableOpacity, obj20);
       obj16.children = items13;
-      const items14 = [closure_8(tmp2(6337).Stack, obj16), ,];
+      const items14 = [closure_8(tmp2(6327).Stack, obj16), ,];
       let tmp28Result2 = null != memo;
       if (tmp28Result2) {
         const obj22 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
@@ -277,7 +277,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         const obj24 = { style: tmp.image, source: null, resizeMode: "cover" };
         const obj25 = { uri: memo.url };
         obj24.source = obj25;
-        obj22.children = closure_7(tmp5(6020), obj24);
+        obj22.children = closure_7(tmp5(6010), obj24);
         tmp28Result2 = closure_7(tmp2(7428).PressableOpacity, obj22);
       }
       items14[1] = tmp28Result2;
@@ -290,7 +290,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         },
         text: tmp2(10156).getExternalCtaLabel(quest),
       };
-      const items15 = [closure_7(tmp2(5936).Button, obj27)];
+      const items15 = [closure_7(tmp2(5926).Button, obj27)];
       if (isShareableQuestResult) {
         const obj28 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
         const intl6 = tmp2(1113).intl;
@@ -302,7 +302,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
       }
       items15[1] = isShareableQuestResult;
       obj26.children = items15;
-      items14[2] = closure_8(tmp2(6337).Stack, obj26);
+      items14[2] = closure_8(tmp2(6327).Stack, obj26);
       obj15.children = items14;
       items10[1] = closure_8(c6, obj15);
       obj11.children = items10;
@@ -344,7 +344,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
     stringResult = string(t.qyKLdg);
   }
   obj31.children = stringResult;
-  obj31 = closure_7(tmp2(5929).Heading, obj31);
+  obj31 = closure_7(tmp2(5919).Heading, obj31);
   items16[1] = obj31;
   obj30.children = items16;
   closure_8(c6, obj30);

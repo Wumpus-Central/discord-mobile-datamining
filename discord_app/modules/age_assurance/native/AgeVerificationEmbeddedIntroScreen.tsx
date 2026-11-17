@@ -39,17 +39,17 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
     children: null,
   };
   let obj = navigation(8205);
-  obj7.children = navigation(6830).getAgeVerificationGetStartedTitle(entryPoint);
-  const items2 = [closure_5(navigation(5929).Text, obj7)];
+  obj7.children = navigation(6820).getAgeVerificationGetStartedTitle(entryPoint);
+  const items2 = [closure_5(navigation(5919).Text, obj7)];
   const obj9 = { variant: "body-md/medium", color: "text-strong", style: tmp.header, children: null };
-  const obj8 = navigation(6830);
-  obj9.children = navigation(6830).getAgeVerificationGetStartedSubtitle(entryPoint, undefined, isSuspendedUser);
-  items2[1] = closure_5(navigation(5929).Text, obj9);
+  const obj8 = navigation(6820);
+  obj9.children = navigation(6820).getAgeVerificationGetStartedSubtitle(entryPoint, undefined, isSuspendedUser);
+  items2[1] = closure_5(navigation(5919).Text, obj9);
   obj6.children = items2;
-  items1[1] = closure_6(navigation(6337).Stack, obj6);
+  items1[1] = closure_6(navigation(6327).Stack, obj6);
   obj5.children = items1;
   const items3 = [
-    closure_6(navigation(6337).Stack, obj5),
+    closure_6(navigation(6327).Stack, obj5),
     closure_5(navigation(8399).AgeVerificationMethodsContainer, {
       ageVerificationMethods: useAgeVerificationMethodsDefault({
         onClose,
@@ -60,7 +60,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
     }),
   ];
   obj4.children = items3;
-  const items4 = [closure_6(navigation(6337).Stack, obj4)];
+  const items4 = [closure_6(navigation(6327).Stack, obj4)];
   const obj11 = { variant: "body-xs/medium", color: "text-muted", style: tmp.helpLink, children: null };
   const intl = navigation(1113).intl;
   obj11.children = intl.format(_modDef3321.lG69e1, {
@@ -69,7 +69,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
       obj.openUrl(HelpdeskUtilsDefault.getArticleURL(constants.AGE_VERIFICATION_LEARN_MORE));
     },
   });
-  items4[1] = closure_5(navigation(5929).Text, obj11);
+  items4[1] = closure_5(navigation(5919).Text, obj11);
   obj3.children = items4;
   obj2.children = closure_6(navigation(8210).ModalContent, obj3);
   return closure_5(navigation(8208).ModalScreen, obj2);

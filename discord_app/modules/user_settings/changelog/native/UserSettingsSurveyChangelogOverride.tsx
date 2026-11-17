@@ -33,7 +33,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       str = JSON.stringify(tmp2);
     }
     obj.subLabel = str;
-    obj.icon = closure_9(closure_0(6033).CopyIcon, {});
+    obj.icon = closure_9(closure_0(6023).CopyIcon, {});
     obj.onPress = function onPress() {
       let str = "null";
       if (null != closure_1_0) {
@@ -91,7 +91,7 @@ function SurveyOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = closure_9(first(5936).Button, obj2);
+  items[1] = closure_9(first(5926).Button, obj2);
   obj.children = items;
   return closure_10(first(7951).ActionSheet, obj);
 }
@@ -182,7 +182,7 @@ function ChangelogOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = closure_9(first(5936).Button, obj2);
+  items[1] = closure_9(first(5926).Button, obj2);
   obj.children = items;
   return closure_10(first(7951).ActionSheet, obj);
 }

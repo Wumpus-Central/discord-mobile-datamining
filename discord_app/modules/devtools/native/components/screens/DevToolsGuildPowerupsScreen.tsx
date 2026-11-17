@@ -173,7 +173,7 @@ function GuildDCSwitchRow(dc) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(18347);
+const DevToolsGuildPowerupsConstants = fn(18349);
 ({
   GUILD_DCS: closure_11,
   SERVER_TAG_GUILD_DCS: closure_12,
@@ -249,7 +249,7 @@ export default function DevToolsGuildPowerupsScreen() {
     const items4 = [,];
     ({ container: arr7[0], noGuildContainer: arr7[1] } = tmp);
     obj5.style = items4;
-    obj5.children = closure_17(tmp5(5929).Text, {
+    obj5.children = closure_17(tmp5(5919).Text, {
       variant: "heading-sm/semibold",
       color: "text-muted",
       children: "No guild selected",

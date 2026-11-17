@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05570_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05560_BottomSheetModal.js";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import VoicePanelSettingsOverviewDefault from "VoicePanelSettingsOverview.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

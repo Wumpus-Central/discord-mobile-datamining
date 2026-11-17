@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import QuestUtils from "../QuestUtils.native.tsx";
@@ -21,7 +21,7 @@ import n_mod from "../../../../../_runtime/metro/00671__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
@@ -491,13 +491,13 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
       accessibilityRole: "header",
       children: quest.config.messages.gameTitle,
     };
-    const items23 = [closure_11(tmp(5929).Text, obj23)];
+    const items23 = [closure_11(tmp(5919).Text, obj23)];
     const obj24 = {
       variant: "heading-xs/semibold",
       color: "text-subtle",
       children: quest.config.messages.gamePublisher,
     };
-    items23[1] = closure_11(tmp(5929).Text, obj24);
+    items23[1] = closure_11(tmp(5919).Text, obj24);
     obj22.children = items23;
     const items24 = [closure_12(tmp(7428).PressableOpacity, obj22)];
     const obj25 = { style: tmp3.questDetailsSecondary, children: null };
@@ -513,7 +513,7 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
     obj25.children = closure_11(tmp15(17756), obj26);
     items24[1] = closure_11(tmp39, obj25);
     obj21.children = items24;
-    const items25 = [closure_12(tmp(6337).Stack, obj21), ,];
+    const items25 = [closure_12(tmp(6327).Stack, obj21), ,];
     let tmp37Result = null != memo;
     if (tmp37Result) {
       const obj27 = { onPress: handleAdvertiserDetailsPress, children: null };
@@ -521,13 +521,13 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
       const obj29 = { uri: memo.url };
       obj28.source = obj29;
       obj28.style = tmp3.playerThumbnail;
-      obj27.children = closure_11(tmp15(6020), obj28);
+      obj27.children = closure_11(tmp15(6010), obj28);
       tmp37Result = closure_11(tmp(7428).PressableOpacity, obj27);
     }
     items25[1] = tmp37Result;
     const obj30 = { direction: "horizontal", spacing: tmp15(575).space.PX_16, children: null };
     const obj31 = { grow: true, variant: "expressive", onPress: handlePrimaryCtaPress, text: null };
-    const Button = tmp(5936).Button;
+    const Button = tmp(5926).Button;
     const tmpResult15 = tmp(10146);
     obj31.text = tmp(10156).getExternalCtaLabel(quest);
     const items26 = [, ,];
@@ -556,9 +556,9 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
     }
     items26[2] = tmp37Result3;
     obj30.children = items26;
-    items25[2] = closure_12(tmp(6337).Stack, obj30);
+    items25[2] = closure_12(tmp(6327).Stack, obj30);
     obj20.children = items25;
-    items22[2] = closure_12(tmp(6337).Stack, obj20);
+    items22[2] = closure_12(tmp(6327).Stack, obj20);
     obj10.children = items22;
     obj9.children = closure_12(tmp39, obj10);
     tmp37Result4 = closure_11(closure_7, obj9);

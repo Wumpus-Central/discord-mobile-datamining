@@ -10,8 +10,8 @@ import priv from "../../../../../_runtime/01456_priv.js";
 
 const util = tmp4(1113);
 const FlagUtils = tmp4(1406);
-const MediaTypes = tmp4(6383);
-const AgeVerificationUtils = tmp4(6830);
+const MediaTypes = tmp4(6373);
+const AgeVerificationUtils = tmp4(6820);
 const sanitizeMediaDimension = tmp4(9386);
 const ExplicitMediaUtils = tmp4(10229);
 require = fn;
@@ -594,7 +594,7 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(6377).CheckpointVersions;
+const CheckpointVersions = fn(6367).CheckpointVersions;
 let closure_7 = fn(8657).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;

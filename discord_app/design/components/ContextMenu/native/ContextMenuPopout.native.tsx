@@ -7,7 +7,7 @@ import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDime
 import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import Backdrop from "../../Backdrop/native/Backdrop.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
@@ -155,7 +155,7 @@ let items2 = [
   {
     code: "(function backdropEnteringAnimation_ContextMenuPopoutNativeTsx7(){let[withSpring,CONTEXT_MENU_SPRING]=this.__closure;return{initialValues:{opacity:0},animations:{opacity:withSpring(1,CONTEXT_MENU_SPRING)}};})",
   },
-  fn(5939).withSpring,
+  fn(5929).withSpring,
   fn(9150).CONTEXT_MENU_SPRING,
 ];
 let closure_130_0;
@@ -535,7 +535,7 @@ export function ContextMenuPopout(cleanUp) {
       accessibilityRole: "header",
       children: title,
     };
-    obj9.children = tmp57(tmp6(5929).Text, obj10);
+    obj9.children = tmp57(tmp6(5919).Text, obj10);
     const items18 = [tmp57(c5, obj9), tmp57(ContextMenuDivider, {})];
     obj8.children = items18;
     tmp55Result = tmp55(tmp56, obj8);

@@ -45,7 +45,7 @@ export default function SoundboardVolume() {
   const obj8 = { helpCenterArticle: null };
   obj8.helpCenterArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOUNDBOARD);
   obj7.children = intl4.format(analyticsLocations(1113).t.BPbGq7, obj8);
-  items[1] = closure_5(analyticsLocations(5929).Text, obj7);
+  items[1] = closure_5(analyticsLocations(5919).Text, obj7);
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
   obj2.children = closure_5(analyticsLocations(7443).TableRow, obj3);

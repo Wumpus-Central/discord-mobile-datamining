@@ -146,7 +146,7 @@ function AddAvatarScreen() {
   obj5.children = items2;
   const items3 = [closure_10(View, obj5), ,];
   const memoizedImageSourceResult = VideoBackground.memoizedImageSource(imageUri);
-  items3[1] = closure_9(selectedAvatar(20332), {
+  items3[1] = closure_9(selectedAvatar(20335), {
     avatarSource: VideoBackground.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -172,7 +172,7 @@ function AddAvatarScreen() {
   obj4.children = items3;
   const items4 = [
     closure_10(View, obj4),
-    closure_9(selectedAvatar(20323), { onAvatarSelect: tmp4[1], selectedAvatar }),
+    closure_9(selectedAvatar(20326), { onAvatarSelect: tmp4[1], selectedAvatar }),
   ];
   let obj11 = { style: tmp.buttonContainer, children: null };
   let obj12 = { text: null, grow: true, onPress: null, disabled: null };
@@ -229,7 +229,7 @@ let obj2 = {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
-    paddingTop: fn(5892).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(5882).NAV_BAR_HEIGHT + 32,
     alignItems: "center",
   },
   headerContainer: { display: "flex", alignItems: "center" },

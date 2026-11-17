@@ -75,13 +75,13 @@ function ModelSettingsPicker(projectId) {
   } else {
     stringResult = string(tmp8["/rJzr6"]);
   }
-  items3[1] = closure_8(projectId(5929).Text, {
+  items3[1] = closure_8(projectId(5919).Text, {
     variant: "body-xs/normal",
     color: "text-muted",
     children: stringResult,
   });
   obj2.children = items3;
-  return closure_9(projectId(6337).Stack, obj2);
+  return closure_9(projectId(6327).Stack, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
-import Suspender from "../../../../../_runtime/06299_Suspender.js";
+import Suspender from "../../../../../_runtime/06289_Suspender.js";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoicePanelChatViewDefault from "VoicePanelChatView.tsx";
@@ -212,7 +212,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   let tmp32 = null;
   if (tmp10Result2.isJankScreenReportingEnabled()) {
     const obj4 = { channelId, tab, wrapperSpecs, mode };
-    tmp32 = closure_9(tmp(20105), obj4);
+    tmp32 = closure_9(tmp(20107), obj4);
   }
   const items9 = [tmp32, , ,];
   let tmp36 = !tmp6;

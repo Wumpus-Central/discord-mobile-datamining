@@ -26,12 +26,12 @@ function ServerWidgetUpsellCard(cardStyle) {
     const intl3 = widget(1113).intl;
     const obj7 = { guildName: guild.name };
     obj6.children = intl3.formatToPlainString(onDismiss(4131)["uIb8U+"], obj7);
-    const items1 = [closure_5(widget(5929).Text, obj6), ,];
+    const items1 = [closure_5(widget(5919).Text, obj6), ,];
     const obj8 = { variant: "body-sm/normal", color: "text-default", children: null };
     const intl4 = widget(1113).intl;
     const obj9 = { applicationName: application.name };
     obj8.children = intl4.formatToPlainString(onDismiss(4131).ZZywee, obj9);
-    items1[1] = closure_5(widget(5929).Text, obj8);
+    items1[1] = closure_5(widget(5919).Text, obj8);
     let tmp10Result = null;
     if (null != creator) {
       const obj10 = { creator, guildId };
@@ -39,24 +39,24 @@ function ServerWidgetUpsellCard(cardStyle) {
     }
     items1[2] = tmp10Result;
     obj5.children = items1;
-    items[1] = closure_6(widget(6337).Stack, obj5);
+    items[1] = closure_6(widget(6327).Stack, obj5);
     obj3.children = items;
-    const items2 = [closure_6(widget(6337).Stack, obj3)];
+    const items2 = [closure_6(widget(6327).Stack, obj3)];
     const obj11 = { direction: "horizontal", spacing: onDismiss(575).space.PX_8, justify: "flex-end", children: null };
     const obj12 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl = widget(1113).intl;
     obj12.text = intl.string(widget(1113).t.WAI6xu);
     obj12.onPress = onDismiss;
-    const items3 = [closure_5(widget(5936).Button, obj12)];
+    const items3 = [closure_5(widget(5926).Button, obj12)];
     const obj13 = { variant: "primary", size: "sm", text: null, onPress: null };
     const intl2 = widget(1113).intl;
     obj13.text = intl2.string(onDismiss(4131).j6ztO0);
     obj13.onPress = function onPress() {
       return turnOnConjureServerWidgetDefault(widget.applicationId, onDismiss);
     };
-    items3[1] = closure_5(widget(5936).Button, obj13);
+    items3[1] = closure_5(widget(5926).Button, obj13);
     obj11.children = items3;
-    items2[1] = closure_6(widget(6337).Stack, obj11);
+    items2[1] = closure_6(widget(6327).Stack, obj11);
     obj2.children = items2;
     const obj14 = { style: tmp.container, children: null };
     const tmp11 = onDismiss(7720);

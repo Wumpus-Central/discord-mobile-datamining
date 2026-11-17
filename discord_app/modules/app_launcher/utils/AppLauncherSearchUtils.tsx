@@ -142,8 +142,8 @@ const ApplicationCommandIndexStore = fn(11406);
   useUserIndexState: closure_10,
 } = ApplicationCommandIndexStore);
 const FetchState = fn(13399).FetchState;
-const BuiltInSectionId = fn(6345).BuiltInSectionId;
-const COMMAND_SENTINEL = fn(6346).COMMAND_SENTINEL;
+const BuiltInSectionId = fn(6335).BuiltInSectionId;
+const COMMAND_SENTINEL = fn(6336).COMMAND_SENTINEL;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherSearchUtils.tsx");
 

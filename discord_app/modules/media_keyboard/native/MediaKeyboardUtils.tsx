@@ -232,7 +232,7 @@ const MediaKeyboardConstants = fn(1626);
 ({ MediaKeyboardTarget: closure_9, InAppCameraUsedViews: closure_10 } = MediaKeyboardConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, AnalyticsPages: closure_14, AnalyticsSections: closure_15, ChatInputComponentViewedTypes: closure_16, ComponentActions: closure_17, MAX_UPLOAD_COUNT: closure_18 } = Constants);
-const NativePermissionTypes = fn(6902).NativePermissionTypes;
+const NativePermissionTypes = fn(6892).NativePermissionTypes;
 let items = [{ code: "(function animatedIndexThreshold_MediaKeyboardUtilsTsx1(animatedSnapPoints,thresholdPercent){return animatedSnapPoints.get().length===1?thresholdPercent-1:thresholdPercent*(animatedSnapPoints.get().length-1);})" }];
 [tmp4] = items;
 function animatedIndexThreshold(get, arg1) {
@@ -760,7 +760,7 @@ function showSimpleMediaKeyboard(channel) {
                             const assets = didCancel.assets;
                             let someResult;
                             if (assets != null) {
-                              someResult = assets.some(/* F145751 */ function() { ... });
+                              someResult = assets.some(/* F145768 */ function() { ... });
                             }
                             tmp2 = someResult;
                           }
@@ -1136,7 +1136,7 @@ function showSimpleMediaKeyboard(channel) {
                             const assets = didCancel.assets;
                             let someResult;
                             if (assets != null) {
-                              someResult = assets.some(/* F145751 */ function() { ... });
+                              someResult = assets.some(/* F145768 */ function() { ... });
                             }
                             tmp2 = someResult;
                           }

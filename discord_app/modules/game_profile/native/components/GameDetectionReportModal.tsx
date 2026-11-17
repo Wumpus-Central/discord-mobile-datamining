@@ -132,7 +132,7 @@ function ReportContent(applicationId) {
         }, 100);
       },
       hasIcons: null,
-      children: "35520500000000",
+      children: "text-muted",
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[12]).intl;

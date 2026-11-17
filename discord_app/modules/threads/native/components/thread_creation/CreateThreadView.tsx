@@ -123,9 +123,9 @@ function CreateThreadViewInner(screenIndex) {
                 current(null);
                 c5 = 1;
                 if (null == parentMessageId.parentMessageId) {
-                  current(closure_0(19427).makeEmptyTitleError());
-                  const obj8 = closure_0(19427);
-                  closure_0(5501).dismissKeyboard();
+                  current(closure_0(19429).makeEmptyTitleError());
+                  const obj8 = closure_0(19429);
+                  closure_0(5491).dismissKeyboard();
                   tmp60.current = false;
                   c5 = 0;
                   c7 = 3;
@@ -147,10 +147,10 @@ function CreateThreadViewInner(screenIndex) {
                 code = body.code;
               }
               if (code === constants.AUTOMOD_TITLE_BLOCKED) {
-                current(closure_0(19427).makeAutomodViolationError(closure_130_0.body, closure_0));
-                const obj5 = closure_0(19427);
-                closure_0(5501).dismissKeyboard();
-                const obj6 = closure_0(5501);
+                current(closure_0(19429).makeAutomodViolationError(closure_130_0.body, closure_0));
+                const obj5 = closure_0(19429);
+                closure_0(5491).dismissKeyboard();
+                const obj6 = closure_0(5491);
               } else {
                 const body3 = closure_130_0.body;
                 let code1;
@@ -170,10 +170,10 @@ function CreateThreadViewInner(screenIndex) {
                   tmp23 = null != name;
                 }
                 if (tmp23) {
-                  current(closure_0(19427).makeApiNameRequiredError());
-                  const obj3 = closure_0(19427);
-                  closure_0(5501).dismissKeyboard();
-                  const obj4 = closure_0(5501);
+                  current(closure_0(19429).makeApiNameRequiredError());
+                  const obj3 = closure_0(19429);
+                  closure_0(5491).dismissKeyboard();
+                  const obj4 = closure_0(5491);
                 }
               }
             } else if (arg0 === 1) {
@@ -230,7 +230,7 @@ function CreateThreadViewInner(screenIndex) {
     tmp.container,
     {
       marginBottom:
-        parentChannel(5913)({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets.bottom -
+        parentChannel(5903)({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets.bottom -
         tmp16.bottom,
     },
   ];
@@ -247,7 +247,7 @@ function CreateThreadViewInner(screenIndex) {
       style: tmp.threadIconContainer,
       children: closure_13(require("ThreadIcon").ThreadIcon, { size: "lg" }),
     }),
-    closure_13(parentChannel(19426), {
+    closure_13(parentChannel(19428), {
       ref: ref1,
       chatInputRef: ref,
       threadSettingsDraft,
@@ -298,7 +298,7 @@ function CreateThreadViewInner(screenIndex) {
     const obj15 = { style: tmp.border };
     const items8 = [closure_13(closure_6, obj15)];
     const obj16 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
-    items8[1] = closure_13(tmp2(19428).ThreadCreationStarterMessage, obj16);
+    items8[1] = closure_13(tmp2(19430).ThreadCreationStarterMessage, obj16);
     obj14.children = items8;
     tmp21Result = closure_14(closure_6, obj14);
   }
@@ -313,7 +313,7 @@ function CreateThreadViewInner(screenIndex) {
     const obj19 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
     obj18.children = closure_13(tmp11(14595), obj19);
     obj17.children = closure_13(closure_6, obj18);
-    tmp22Result2 = closure_13(tmp2(5916).LayerScope, obj17);
+    tmp22Result2 = closure_13(tmp2(5906).LayerScope, obj17);
   }
   items5[2] = tmp22Result2;
   items5[3] = closure_13(parentChannel(14568), {

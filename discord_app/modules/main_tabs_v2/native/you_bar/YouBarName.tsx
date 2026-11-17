@@ -126,12 +126,12 @@ export default noop.memo(function YouName(username) {
     };
     let humanizeStatusResult = gameMentionsAsPlainText;
     if (gameMentionsAsPlainText == null) {
-      humanizeStatusResult = tmp2(5372).humanizeStatus(stateFromStores);
-      const tmp2Result2 = tmp2(5372);
+      humanizeStatusResult = tmp2(5362).humanizeStatus(stateFromStores);
+      const tmp2Result2 = tmp2(5362);
     }
     const obj9 = { children: null };
     obj8.children = humanizeStatusResult;
-    items3[1] = closure_11(tmp2(5929).Text, obj8);
+    items3[1] = closure_11(tmp2(5919).Text, obj8);
     obj9.children = items3;
     tmp9Result = closure_12(closure_13, obj9);
   }

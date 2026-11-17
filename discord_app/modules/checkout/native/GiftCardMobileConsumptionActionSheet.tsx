@@ -82,16 +82,16 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   const obj5 = { variant: "body-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1113).intl;
   obj5.children = intl.string(_modDef2399.V3DI1E);
-  items3[1] = closure_6(markAsDismissed(5929).Text, obj5);
+  items3[1] = closure_6(markAsDismissed(5919).Text, obj5);
   const obj6 = { size: "lg", variant: "secondary", grow: true, text: null, onPress: null };
   const intl2 = markAsDismissed(1113).intl;
   obj6.text = intl2.string(_modDef2399.YZePWx);
   obj6.onPress = function onPress() {
     return closure_3(ContentDismissActionType.USER_DISMISS);
   };
-  items3[2] = closure_6(markAsDismissed(5936).Button, obj6);
+  items3[2] = closure_6(markAsDismissed(5926).Button, obj6);
   obj3.children = items3;
-  obj2.children = closure_7(markAsDismissed(6337).Stack, obj3);
+  obj2.children = closure_7(markAsDismissed(6327).Stack, obj3);
   obj.children = closure_6(View, obj2);
-  return closure_6(markAsDismissed(5566).BottomSheet, obj);
+  return closure_6(markAsDismissed(5556).BottomSheet, obj);
 }

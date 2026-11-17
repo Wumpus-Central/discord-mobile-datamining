@@ -172,7 +172,7 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
       accessibilityRole: "alert",
       children: error,
     };
-    tmp10Result = tmp10(tmp11(5929).Text, obj11);
+    tmp10Result = tmp10(tmp11(5919).Text, obj11);
   }
   items3[1] = tmp10Result;
   items2[1] = error(first, { children: items3 });

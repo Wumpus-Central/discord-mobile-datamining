@@ -8,8 +8,8 @@ import GameServerStore from "../GameServerStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(5525).GAME_SERVER_POWERUP_SKU_ID;
-const GuildPowerupType = fn(5524).GuildPowerupType;
+let closure_5 = fn(5515).GAME_SERVER_POWERUP_SKU_ID;
+const GuildPowerupType = fn(5514).GuildPowerupType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
 

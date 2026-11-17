@@ -44,8 +44,8 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     headerLabel = intl.format(stateFromStores(1113).t.OhmvYt, {});
   }
   stateFromStores = undefined;
-  const token = stateFromStores(5902).useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
-  const obj = stateFromStores(5902);
+  const token = stateFromStores(5892).useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+  const obj = stateFromStores(5892);
   const tmp6 = closure_8();
   items = [MFAStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => MFAStore.getBackupCodes());
@@ -75,7 +75,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
   obj3.style = { paddingHorizontal: token, paddingTop: nativeDefault.space.PX_16 };
   const items2 = [
     headerLabel.map((children, index) =>
-      closure_1_6(stateFromStores(5929).Text, { variant: "body-sm/medium", children }, index),
+      closure_1_6(stateFromStores(5919).Text, { variant: "body-sm/medium", children }, index),
     ),
     ,
     ,
@@ -109,7 +109,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     const obj9 = { variant: "body-md/semibold", style: tmp6.generateCode, children: null };
     const intl4 = tmp3(1113).intl;
     obj9.children = intl4.string(tmp3(1113).t.RIThUu);
-    obj8.label = closure_6(tmp3(5929).Text, obj9);
+    obj8.label = closure_6(tmp3(5919).Text, obj9);
     obj8.onPress = function onPress() {
       const verificationKey = MFAStore.getVerificationKey();
       const result = MFAActionCreatorsDefault.confirmViewBackupCodes(verificationKey, true);
@@ -120,5 +120,5 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
   const obj4 = { paddingHorizontal: token, paddingTop: nativeDefault.space.PX_16 };
   items2[3] = tmp10Result4;
   obj3.children = items2;
-  return closure_6(ScrollView, { children: closure_7(stateFromStores(6337).Stack, obj3) });
+  return closure_6(ScrollView, { children: closure_7(stateFromStores(6327).Stack, obj3) });
 }

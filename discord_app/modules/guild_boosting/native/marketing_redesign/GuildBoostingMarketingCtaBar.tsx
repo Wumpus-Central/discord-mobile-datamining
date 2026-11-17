@@ -195,15 +195,15 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
     style: tmp.gradient,
     children: null,
   };
-  const tmp4Result = first(5893);
+  const tmp4Result = first(5883);
   const items5 = [closure_12(first(16001), { guild }), , ,];
   const obj9 = { style: tmp.headerContent, children: null };
   const obj10 = { style: tmp.heading, color: "text-overlay-light", variant: "display-sm", children: null };
   const intl = guild(1113).intl;
   obj10.children = intl.string(guild(1113).t["AF+Tyh"]);
-  const items6 = [closure_12(guild(5929).Heading, obj10), , , ,];
+  const items6 = [closure_12(guild(5919).Heading, obj10), , , ,];
   const obj11 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
-  const tmp4Result3 = first(5893);
+  const tmp4Result3 = first(5883);
   obj11.size = guild(7720).GuildIconSizes.LARGE;
   items6[1] = closure_12(first(7720), obj11);
   const obj12 = {
@@ -214,7 +214,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
     children: null,
   };
   const items7 = [
-    closure_12(guild(5929).Text, {
+    closure_12(guild(5919).Text, {
       style: tmp.guildName,
       color: "text-overlay-light",
       variant: "body-md/semibold",
@@ -251,7 +251,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   obj17.children = intl2.format(guild(1113).t["pob/cL"], {
     subscriptions: first(9241)(premiumGroupRole.guild.id).total,
   });
-  items9[1] = closure_12(guild(5929).Text, obj17);
+  items9[1] = closure_12(guild(5919).Text, obj17);
   obj15.children = items9;
   const items10 = [closure_13(first(1655).View, obj15)];
   const obj18 = { style: null, children: null };
@@ -263,7 +263,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   obj19.style = items12;
   const intl3 = guild(1113).intl;
   obj19.children = intl3.format(guild(1113).t.xXb78j, { numSubscriptions: memo });
-  obj18.children = closure_12(guild(5929).Text, obj19);
+  obj18.children = closure_12(guild(5919).Text, obj19);
   items10[1] = closure_12(first(1655).View, obj18);
   obj14.children = items10;
   items7[1] = closure_13(memo, obj14);
@@ -331,7 +331,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
     };
   }
   const obj27 = { children: null };
-  obj23.children = closure_12(guild(5936).Button, obj26);
+  obj23.children = closure_12(guild(5926).Button, obj26);
   items14[1] = closure_12(memo, obj23);
   obj27.children = items14;
   return closure_13(memo, obj27);

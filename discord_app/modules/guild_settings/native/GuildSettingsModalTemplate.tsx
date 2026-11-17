@@ -132,7 +132,7 @@ function TemplateForm(guildId) {
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(6274).showConfirmModal(obj2);
+        guildId(6264).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -208,7 +208,7 @@ function TemplateForm(guildId) {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_0 = closure_2;
-              const aPIError = new handleSave(6757).APIError(closure_128_0);
+              const aPIError = new handleSave(6747).APIError(closure_128_0);
               closure_1_7(aPIError);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -378,7 +378,7 @@ function CopyRow(children) {
       color: ICON_FEEDBACK_CRITICAL,
       secondaryColor: tmp10(575).colors.WHITE,
     }),
-    metroImportDefault(tmp4(5929).Text, { variant: "body-sm/normal", children: children.label }),
+    metroImportDefault(tmp4(5919).Text, { variant: "body-sm/normal", children: children.label }),
   ];
   obj.children = items;
   return React5(View, obj);
@@ -494,7 +494,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(20599)(guildTemplate.code);
+  const tmp3 = guildTemplate(20602)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

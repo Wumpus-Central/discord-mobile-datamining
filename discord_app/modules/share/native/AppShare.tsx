@@ -126,9 +126,9 @@ export default function AppShare(targetUserId) {
   } else {
     const items5 = [closure_9(tmp9(7588).SceneLoadingIndicator, {}), , ,];
     const obj5 = { appEntryKey: share };
-    items5[1] = closure_9(tmp9(19781).ActionSheetContainer, obj5);
+    items5[1] = closure_9(tmp9(19783).ActionSheetContainer, obj5);
     items5[2] = closure_9(AppToastContainerDefault, { appChrome: false });
-    items5[3] = closure_9(tmp9(6274).AlertModalContainer, {});
+    items5[3] = closure_9(tmp9(6264).AlertModalContainer, {});
     obj3.children = items5;
     return closure_10(tmp17, obj3);
   }

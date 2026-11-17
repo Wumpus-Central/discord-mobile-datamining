@@ -40,7 +40,7 @@ const prototype = function PushNotificationCacheManager() {
       } else {
         obj4 = {};
         const item = validUsers.forEach((id) => {
-          obj4[id.id] = applyArgumentsResult(5372).getUserTag(id, { identifiable: "always" });
+          obj4[id.id] = applyArgumentsResult(5362).getUserTag(id, { identifiable: "always" });
         });
         obj3 = obj4;
       }

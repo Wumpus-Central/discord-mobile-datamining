@@ -135,7 +135,7 @@ let obj2 = {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
     paddingBottom: 44,
-    paddingTop: fn(5892).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(5882).NAV_BAR_HEIGHT + 32,
   },
 };
 let closure_8 = createStyles.createStyles(obj2);

@@ -18,7 +18,7 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   ({ onGoBack: c2, ref: c3 } = stickerId(10904)());
   const tmp2 = stickerId(10904)();
   const isFocused = Link.useIsFocused();
-  stickerId(6332)(() => {
+  stickerId(6322)(() => {
     onFinish(true);
     return true;
   }, isFocused);

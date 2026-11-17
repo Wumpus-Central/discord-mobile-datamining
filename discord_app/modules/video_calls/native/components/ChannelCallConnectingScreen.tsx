@@ -4,7 +4,7 @@ import KeyboardManagerUtils from "../../../../utils/native/KeyboardManagerUtils.
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05570_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05560_BottomSheetModal.js";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";

@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersLegendList.tsx
-import BottomSheetModal from "../../../../../../_runtime/05570_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/05560_BottomSheetModal.js";
 import FastestListItemTypeDefault from "../../../../fastest_list/FastestListItemType.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";

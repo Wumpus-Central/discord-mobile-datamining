@@ -122,12 +122,12 @@ class LikelyAtoWarningBanner {
         const obj = { children: null };
         items = [
           closure_1_10(
-            channelId(5929).Text,
+            channelId(5919).Text,
             { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title },
             index,
           ),
           closure_1_10(
-            channelId(5929).Text,
+            channelId(5919).Text,
             { variant: "body-xs/medium", color: "text-subtle", children: children.description },
             index,
           ),

@@ -1,7 +1,7 @@
 // discord_app/modules/quests/lib/analytics/ContentImpressionTracker.tsx
-import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import MonitoringAgentDefault from "../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import QuestDataUtils from "../../utils/QuestDataUtils.tsx";
 import getQuestLogger from "../getQuestLogger.tsx";
 import AnalyticsActions from "AnalyticsActions.tsx";
@@ -152,7 +152,7 @@ class QuestContentImpression {
             const adContentIds = closure_129_0.entity.adContentIds;
             const item = adContentIds.forEach((item, index) => {
               adUser.trackViewedPlacement(item);
-              if (adUser.entity.adCreativeType === obj2(5345).AdCreativeType.QUEST) {
+              if (adUser.entity.adCreativeType === obj2(6961).AdCreativeType.QUEST) {
                 quest = quest.getQuest(tmp6);
                 let isQuestExpiredResult = null == quest;
                 if (!isQuestExpiredResult) {
@@ -161,7 +161,7 @@ class QuestContentImpression {
                 }
                 if (!isQuestExpiredResult) {
                   items = [tmp6];
-                  tmp4(10133).markAdContentSeen(tmp4(5345).AdCreativeType.QUEST, items);
+                  tmp4(10133).markAdContentSeen(tmp4(6961).AdCreativeType.QUEST, items);
                   const tmp4Result8 = tmp4(10133);
                 }
               }
@@ -194,7 +194,7 @@ class QuestContentImpression {
                 questContentRowIndex: obj5.questContentRowIndex,
                 trackGuildAndChannelMetadata: obj5.trackGuildAndChannelMetadata,
               } = adUser);
-              if (adUser.entity.adCreativeType === obj2(5345).AdCreativeType.QUEST) {
+              if (adUser.entity.adCreativeType === obj2(6961).AdCreativeType.QUEST) {
                 const obj3 = {};
                 const merged1 = Object.assign(obj2);
                 obj3.adCreativeType = adUser.entity.adCreativeType;
@@ -374,7 +374,7 @@ class QuestContentImpression {
           item,
           obj2(8804).getAdProvenanceMetadataSealed(closure_1_0.sourceQuestContent, item),
         );
-        if (closure_1_0.entity.adCreativeType === obj2(5345).AdCreativeType.QUEST) {
+        if (closure_1_0.entity.adCreativeType === obj2(6961).AdCreativeType.QUEST) {
           obj2 = {
             adCreativeType: closure_1_0.entity.adCreativeType,
             adCreativeId: closure_1_0.entity.adContentIds[index],

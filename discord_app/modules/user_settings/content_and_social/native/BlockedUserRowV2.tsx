@@ -61,7 +61,7 @@ function BlockedUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5936).Button, {
+  obj.trailing = jsx(userRecord(5926).Button, {
     size: "sm",
     variant: "secondary",
     text: null,

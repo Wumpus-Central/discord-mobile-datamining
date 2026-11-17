@@ -22,8 +22,8 @@ export function useHexagonCampaignFontPickerSection(DisplayNameStylesFontPickerS
     flag = false;
   }
   let visibleFontOrder;
-  visibleFontOrder = visibleFontOrder(17957).useVisibleFontOrder({ includeCampaignFonts: true });
-  const obj2 = visibleFontOrder(17957);
+  visibleFontOrder = visibleFontOrder(17959).useVisibleFontOrder({ includeCampaignFonts: true });
+  const obj2 = visibleFontOrder(17959);
   const hexagonCampaignPerkAvailability = visibleFontOrder(5336).useHexagonCampaignPerkAvailability(
     constants.DISPLAY_NAME_STYLE,
     DisplayNameStylesFontPickerSheet,
@@ -47,7 +47,7 @@ export function useHexagonCampaignFontPickerSection(DisplayNameStylesFontPickerS
     tmp7 = !isTryItOut;
   }
   const trackHexagonCampaignContentViewed = visibleFontOrder(17085).useTrackHexagonCampaignContentViewed(
-    tmp(5341).QuestContent.DISPLAY_NAME_STYLES_SETTINGS,
+    tmp(6957).QuestContent.DISPLAY_NAME_STYLES_SETTINGS,
     tmp(17085).HexagonCampaignContentSurface.FONT_PICKER,
     tmp7,
   );

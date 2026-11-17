@@ -373,13 +373,13 @@ class BaseActivityPanelFocusedView {
     return tmp48(tmp(tmp2[19]).ThemeContextProvider, obj1);
   }
 }
-const ActivityPanelConstants = fn(5959);
+const ActivityPanelConstants = fn(5949);
 ({
   ACTIVITY_LAYOUT_PHYSICS_GESTURE: metroImportDefault,
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8,
   ActivityPanelModes: closure_9,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(19778);
+const ActivityPanelNativeConstants = fn(19780);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_10,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11,
@@ -407,7 +407,7 @@ let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj4.backgroundColor = nativeDefault.colors.BLACK;
 obj.shade = obj4;
-const expandedHeight = createStyles.createStyles(obj);
+let closure_19 = createStyles.createStyles(obj);
 let closure_20 = {
   code: "(function transitionComplete_ActivityPanelFocusedViewTsx1(finished=false){let[transitionState,TransitionStates,scheduleOnRN,transitionCleanUp]=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){scheduleOnRN(transitionCleanUp);}})",
 };

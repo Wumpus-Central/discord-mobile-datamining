@@ -49,7 +49,7 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata != null) {
     tmp3 =
       interactionMetadata.authorizing_integration_owners[
-        message(undefined, 5953).ApplicationIntegrationType.USER_INSTALL
+        message(undefined, 5943).ApplicationIntegrationType.USER_INSTALL
       ];
   }
   dependencyMap = tmp3;
@@ -58,7 +58,7 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata2 != null) {
     tmp6 =
       interactionMetadata2.authorizing_integration_owners[
-        message(undefined, 5953).ApplicationIntegrationType.GUILD_INSTALL
+        message(undefined, 5943).ApplicationIntegrationType.GUILD_INSTALL
       ];
   }
   noop = tmp6;
@@ -142,5 +142,5 @@ export default function AppInteractionInfoActionSheet(message) {
   }
   items5[1] = tmp29Result;
   obj11.children = closure_8(message(7746).TableRowGroup, { hasIcons: true, children: items5 });
-  return closure_7(message(5566).BottomSheet, obj11);
+  return closure_7(message(5556).BottomSheet, obj11);
 }

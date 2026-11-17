@@ -43,13 +43,13 @@ export default function GuildThemeNuxActionSheet(guildId) {
   let stateFromStores;
   let callback1;
   const tmp = closure_14();
-  [tmp5, c2] = noop.useState(guildId(18878).getInitialGuildThemeNuxSelection);
-  const tmp4 = _slicedToArray(noop.useState(guildId(18878).getInitialGuildThemeNuxSelection), 2);
+  [tmp5, c2] = noop.useState(guildId(18880).getInitialGuildThemeNuxSelection);
+  const tmp4 = _slicedToArray(noop.useState(guildId(18880).getInitialGuildThemeNuxSelection), 2);
   [tmp7, c3] = noop.useState(null);
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   [tmp9, c4] = noop.useState(false);
   noop = noop.useRef(false);
-  const tmp10 = tmp5 === guildId(5543).GuildThemeSourcePreference.PERSONAL;
+  const tmp10 = tmp5 === guildId(5533).GuildThemeSourcePreference.PERSONAL;
   closure_6 = tmp10;
   const tmp8 = _slicedToArray(noop.useState(false), 2);
   items = [stateFromStores];
@@ -193,7 +193,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
   obj3.onDismiss = callback3;
   obj3.contentStyles = tmp.container;
   const items7 = [
-    closure_10(markAsDismissed(18879), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
+    closure_10(markAsDismissed(18881), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
     ,
     ,
     ,
@@ -209,22 +209,22 @@ export default function GuildThemeNuxActionSheet(guildId) {
   };
   const intl3 = tmp2(1113).intl;
   obj4.children = intl3.string(guildId(1113).t.Q9zFy9);
-  items7[1] = closure_10(guildId(5929).Text, obj4);
+  items7[1] = closure_10(guildId(5919).Text, obj4);
   let obj5 = { variant: "body-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl4 = tmp2(1113).intl;
   obj5.children = intl4.string(guildId(1113).t.XLpBLj);
-  items7[2] = closure_10(guildId(5929).Text, obj5);
+  items7[2] = closure_10(guildId(5919).Text, obj5);
   let obj6 = { style: tmp.options, children: null };
   let obj7 = { hasIcons: false, value: tmp5, onChange: callback, children: null };
   const obj8 = { label: null, value: null };
   const intl5 = tmp2(1113).intl;
   obj8.label = intl5.string(guildId(1113).t.aN3RNQ);
-  obj8.value = guildId(5543).GuildThemeSourcePreference.GUILD;
+  obj8.value = guildId(5533).GuildThemeSourcePreference.GUILD;
   const items8 = [closure_10(guildId(7747).TableRadioRow, obj8)];
   const obj9 = { label: null, value: null };
   const intl6 = tmp2(1113).intl;
   obj9.label = intl6.string(guildId(1113).t.js8y7t);
-  obj9.value = guildId(5543).GuildThemeSourcePreference.PERSONAL;
+  obj9.value = guildId(5533).GuildThemeSourcePreference.PERSONAL;
   items8[1] = closure_10(guildId(7747).TableRadioRow, obj9);
   obj7.children = items8;
   obj6.children = closure_11(guildId(7745).TableRadioGroup, obj7);
@@ -257,9 +257,9 @@ export default function GuildThemeNuxActionSheet(guildId) {
   obj15.loading = tmp9;
   obj15.disabled = tmp9;
   obj15.onPress = callback2;
-  obj14.children = closure_10(guildId(5936).Button, obj15);
+  obj14.children = closure_10(guildId(5926).Button, obj15);
   items7[6] = closure_10(closure_6, obj14);
   obj3.children = items7;
-  return closure_11(guildId(5566).BottomSheet, obj3);
+  return closure_11(guildId(5556).BottomSheet, obj3);
 }
 export const GUILD_THEME_NUX_ACTION_SHEET_KEY = "GuildThemeNuxActionSheet";

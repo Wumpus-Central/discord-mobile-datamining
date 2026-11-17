@@ -99,8 +99,8 @@ class NUFChannelsManager extends tmp2 {
       value = Storage.get(closure_1_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(5372).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(5372);
+        isNewUserResult = applyArgumentsResult(5362).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(5362);
       }
       return isNewUserResult;
     };

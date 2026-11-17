@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
 
 require = fn;
-let closure_6 = fn(6954).PremiumGuildSubscribeModalScenes;
+let closure_6 = fn(6944).PremiumGuildSubscribeModalScenes;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -38,7 +38,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
           headerShown: false,
           render(arg0) {
             const merged = Object.assign(arg0);
-            return closure_1_8(guildBoostSlots(6955), {});
+            return closure_1_8(guildBoostSlots(6945), {});
           },
         };
         obj5[constants.GUILD_SELECT] = obj6;
@@ -67,8 +67,8 @@ export default function PremiumGuildSubscribeModal(arg0) {
               });
               const obj = closure_1_0(7813);
               const obj2 = { destinationPane: constants.GUILD_BOOSTING };
-              closure_1_0(6952).closeApplyBoostModal();
-              const obj3 = closure_1_0(6952);
+              closure_1_0(6942).closeApplyBoostModal();
+              const obj3 = closure_1_0(6942);
               closure_1_0(8604).openUserSettings({ screen: constants.GUILD_BOOSTING });
             };
             return closure_1_8(guildId(7427).HeaderActionButton, obj2);

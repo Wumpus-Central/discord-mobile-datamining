@@ -158,7 +158,7 @@ export default function ConjureFloatingActivity(agents) {
     const obj12 = {
       variant: "default",
       size: "sm",
-      icon: tmp13(6930),
+      icon: tmp13(6920),
       pressed: tmp10,
       accessibilityLabel: null,
       onPress: null,

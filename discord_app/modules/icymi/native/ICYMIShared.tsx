@@ -163,7 +163,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(19284);
+const createICYMIStyles = fn(19286);
 let guild = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -801,12 +801,12 @@ export function ThreadAsComments(arg0) {
           parseInlineReplyResult = intl.string(parentMessage(1113).t["6kp9H2"]);
         }
         obj5.children = parseInlineReplyResult;
-        items4[1] = closure_18(parentMessage(5929).Text, obj5);
+        items4[1] = closure_18(parentMessage(5919).Text, obj5);
         const obj7 = { style: tmp.commentCount, children: null };
         const obj8 = { style: tmp.commentsIcon };
         const items5 = [closure_18(parentMessage(8069).ChatIcon, obj8), ,];
         const obj9 = { variant: "body-sm/semibold", color: "interactive-text-default", children: str };
-        items5[1] = closure_18(parentMessage(5929).Text, obj9);
+        items5[1] = closure_18(parentMessage(5919).Text, obj9);
         const obj10 = { style: tmp.chevron, size: "xxs" };
         items5[2] = closure_18(parentMessage(7963).ChevronSmallRightIcon, obj10);
         obj7.children = items5;
@@ -828,7 +828,7 @@ export function ThreadAsComments(arg0) {
     };
     const intl2 = parentMessage(1113).intl;
     obj12.children = intl2.string(parentMessage(1113).t.VMWjXW);
-    const items7 = [closure_18(parentMessage(5929).Text, obj12)];
+    const items7 = [closure_18(parentMessage(5919).Text, obj12)];
     const obj13 = { style: tmp.commentCount, children: null };
     const obj14 = { style: tmp.commentsIcon };
     const items8 = [closure_18(parentMessage(8069).ChatIcon, obj14)];

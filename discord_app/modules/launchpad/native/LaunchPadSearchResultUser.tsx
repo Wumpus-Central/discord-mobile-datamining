@@ -48,8 +48,8 @@ function UserResult(user) {
     obj2.recipientIds = items;
     ChannelActionCreatorsDefault.openPrivateChannel(obj2);
   }, items);
-  const fontScale = user(5944).useFontScale();
-  const obj = user(5944);
+  const fontScale = user(5934).useFontScale();
+  const obj = user(5934);
   const items1 = [LocaleStore];
   const stateFromStores = user(504).useStateFromStores(items1, () => locale.locale);
   let obj2 = user(504);
@@ -99,8 +99,8 @@ function UserResult(user) {
     isMobileOnline,
     isVROnline,
     status: null,
-    streaming: "96bbe12887647ea87c8a19504453b44d",
-    style: "zh-CN.messages.96bbe12887647ea87c8a19504453b44d.compiled.messages",
+    streaming: "42d8bf2d4f0cc753a27dff43164f3501",
+    style: "pl.messages.42d8bf2d4f0cc753a27dff43164f3501.compiled.messages",
     size: "jsona",
     animate: "ConjureAppPictureInPicture",
     typing: null,
@@ -152,7 +152,7 @@ function UserResult(user) {
         message: lastMessage,
         color: str,
         muted: flag,
-        layout: tmp6(5994).ChannelListLayoutTypes.COMPACT,
+        layout: tmp6(5984).ChannelListLayoutTypes.COMPACT,
       };
       tmp14Result = closure_12(tmp6(11045).ChannelRowPreview, obj9);
     }
@@ -186,7 +186,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(17938)(channel, { unread });
+  obj4.lastMessage = channel(17940)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;
@@ -194,7 +194,7 @@ function UserResultWithChannel(arg0) {
   return closure_12(UserResult, obj4);
 }
 const StatusTypes = fn(1072).StatusTypes;
-const UnreadSetting = fn(6959).UnreadSetting;
+const UnreadSetting = fn(6949).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(5306);

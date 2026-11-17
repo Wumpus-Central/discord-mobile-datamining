@@ -239,7 +239,7 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(20489).AuditLogChange;
+const AuditLogChange = fn(20492).AuditLogChange;
 const Constants = fn(1072);
 const AuditLogActions = Constants.AuditLogActions;
 const AuditLogChangeKeys = Constants.AuditLogChangeKeys;
@@ -268,7 +268,7 @@ const GuildScheduledEventsConstants = fn(5161);
   GuildScheduledEventPrivacyLevel: closure_35,
 } = GuildScheduledEventsConstants);
 let closure_36 = new LoggerDefault("AuditLogUtils");
-items = [fn(6079).TimeUnits.DAYS, fn(6079).TimeUnits.HOURS, fn(6079).TimeUnits.MINUTES, fn(6079).TimeUnits.SECONDS];
+items = [fn(6069).TimeUnits.DAYS, fn(6069).TimeUnits.HOURS, fn(6069).TimeUnits.MINUTES, fn(6069).TimeUnits.SECONDS];
 let closure_38 = {
   [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true },
   [AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
@@ -646,19 +646,19 @@ class ACTION_FILTER_ITEMS {
   }
 }
 let obj = {
-  [fn(6079).TimeUnits.SECONDS]: (seconds) => {
+  [fn(6069).TimeUnits.SECONDS]: (seconds) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.geSp4K, { seconds });
   },
-  [fn(6079).TimeUnits.MINUTES]: (minutes) => {
+  [fn(6069).TimeUnits.MINUTES]: (minutes) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.iXLF9W, { minutes });
   },
-  [fn(6079).TimeUnits.HOURS]: (hours) => {
+  [fn(6069).TimeUnits.HOURS]: (hours) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.xCjYxK, { hours });
   },
-  [fn(6079).TimeUnits.DAYS]: (days) => {
+  [fn(6069).TimeUnits.DAYS]: (days) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t["k2UNz+"], { days });
   },
@@ -2641,7 +2641,7 @@ export function transformLogs(arr, arg1) {
                             let tmp10 = null;
                             if (tmp9) {
                               tmp10 = ((channel) =>
-                                result3(5954).computeChannelName(channel, user, closure_1_12, true))(tmp7);
+                                result3(5944).computeChannelName(channel, user, closure_1_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2727,7 +2727,7 @@ export function transformLogs(arr, arg1) {
           const tmp205 = ((targetId16) => closure_1_10.getChannel(targetId16))(targetId16);
           let tmp208 = null;
           if (tmp207) {
-            tmp208 = ((channel) => result3(5954).computeChannelName(channel, user, closure_1_12, true))(tmp205);
+            tmp208 = ((channel) => result3(5944).computeChannelName(channel, user, closure_1_12, true))(tmp205);
           }
           let tmp209 = tmp208;
           if (null == tmp208) {
@@ -2775,8 +2775,8 @@ export function transformLogs(arr, arg1) {
             user = authStore.getUser(id);
           }
           if (tmp225) {
-            id = items(5372).getUserTag(user);
-            let obj4 = items(5372);
+            id = items(5362).getUserTag(user);
+            let obj4 = items(5362);
           }
           obj.subtarget = id;
           tmp225 = null != user && true;
@@ -3371,7 +3371,7 @@ export function transformLogs(arr, arg1) {
                                                 const mapped6 = newValue22.map(ChannelStore.getChannel);
                                                 const found2 = mapped6.filter((item) => null != item);
                                                 const mapped7 = found2.map((item) =>
-                                                  newValue(5954).computeChannelName(item, user, closure_1_12, true),
+                                                  newValue(5944).computeChannelName(item, user, closure_1_12, true),
                                                 );
                                                 if (null == mapped7) {
                                                   newValue5 = mapped7;
@@ -3388,7 +3388,7 @@ export function transformLogs(arr, arg1) {
                                                 const mapped8 = oldValue22.map(ChannelStore.getChannel);
                                                 const found3 = mapped8.filter((item) => null != item);
                                                 const mapped9 = found3.map((item) =>
-                                                  newValue(5954).computeChannelName(item, user, closure_1_12, true),
+                                                  newValue(5944).computeChannelName(item, user, closure_1_12, true),
                                                 );
                                                 if (null == mapped9) {
                                                   oldValue5 = mapped9;

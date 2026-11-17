@@ -162,7 +162,7 @@ function StageBlockedUsersActionSheetHeader(arg0) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(6906).STAGE_BLOCKED_USERS_SHEET_KEY;
+let closure_8 = fn(6896).STAGE_BLOCKED_USERS_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5306);
@@ -243,14 +243,14 @@ export default function StageBlockedUsersActionSheet(channel) {
     onAccept(channel);
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_8);
   };
-  items = [closure_9(channel(5936).Button, obj4)];
+  items = [closure_9(channel(5926).Button, obj4)];
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl2 = channel(1113).intl;
   obj5.text = intl2.string(channel(1113).t.CZGqeT);
   obj5.onPress = function handleDismiss() {
-    onAccept(5552).hideActionSheet(closure_1_8);
+    onAccept(5542).hideActionSheet(closure_1_8);
   };
-  items[1] = closure_9(channel(5936).Button, obj5);
+  items[1] = closure_9(channel(5926).Button, obj5);
   obj3.children = items;
   items1 = [];
   const obj2 = channel(12912);
@@ -285,5 +285,5 @@ export default function StageBlockedUsersActionSheet(channel) {
   };
   const items3 = [closure_9(onAccept(7847), obj7), closure_9(View, { style: { height: tmp2[0] } })];
   obj6.children = items3;
-  return closure_10(channel(5566).BottomSheet, obj6);
+  return closure_10(channel(5556).BottomSheet, obj6);
 }

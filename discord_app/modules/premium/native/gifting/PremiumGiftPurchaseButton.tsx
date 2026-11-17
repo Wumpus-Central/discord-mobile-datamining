@@ -153,7 +153,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
       const intl6 = tmp4(1113).intl;
       const obj8 = { paidURL: tmp(2188).getArticleURL(HelpdeskArticles.PAID_TERMS) };
       obj7.children = intl6.format(tmp4(1113).t.hYoGUM, obj8);
-      tmp30 = closure_9(tmp4(5929).Text, obj7);
+      tmp30 = closure_9(tmp4(5919).Text, obj7);
       const tmpResult3 = tmp(2188);
     }
     items3[1] = tmp30;
@@ -201,7 +201,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
       };
     }
     obj9.onPress = onPress;
-    items3[2] = closure_9(tmp4(5936).Button, obj9);
+    items3[2] = closure_9(tmp4(5926).Button, obj9);
     obj5.children = items3;
     return tmp18(tmp19, obj5);
   }

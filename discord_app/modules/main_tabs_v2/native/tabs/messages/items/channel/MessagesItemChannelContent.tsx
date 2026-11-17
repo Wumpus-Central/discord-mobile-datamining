@@ -55,7 +55,7 @@ function MessagesItemChannelContentIcon(selected) {
   return tmp2;
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6959).UnreadSetting;
+const UnreadSetting = fn(6949).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 let createStyles = fn(5306);
@@ -182,7 +182,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
   const tmpResult = channel(504);
-  const tmpResult3 = channel(18756);
+  const tmpResult3 = channel(18758);
   let id = stateFromStores;
   if (stateFromStores == null) {
     id = channel.id;
@@ -198,7 +198,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   const waveShouldShow = tmp17.waveShouldShow;
   let obj4 = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
   const obj2 = { timestamp: SnowflakeUtilsDefault.extractTimestamp(id) };
-  obj4.variant = channel(5902).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
+  obj4.variant = channel(5892).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
   const items1 = [,];
   ({ channelText: arr2[0], channelName: arr2[1] } = tmp9);
   obj4.style = items1;
@@ -220,7 +220,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   const obj9 = {};
   const merged = Object.assign(obj4);
   obj9.children = tmp16;
-  const items2 = [closure_6(channel(5929).Text, obj9), ,];
+  const items2 = [closure_6(channel(5919).Text, obj9), ,];
   let tmp20Result = null;
   if (tmp15) {
     const obj10 = { userId: channel.recipients[0], disabledTooltip: true };
@@ -267,7 +267,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
       ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
       obj17.style = items7;
       obj17.children = relativeTimestamp;
-      tmp20Result6 = closure_6(tmp(5929).Text, obj17);
+      tmp20Result6 = closure_6(tmp(5919).Text, obj17);
     }
     items6[1] = tmp20Result6;
     obj14.children = items6;
@@ -293,7 +293,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
         str7 = str6;
       }
       obj19.color = str7;
-      obj19.layout = tmp(5994).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+      obj19.layout = tmp(5984).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj19.muted = muted;
       let tmp20Result7 = closure_6(tmp(11045).ChannelRowPreview, obj19);
     } else if (channel.isDM()) {
@@ -311,7 +311,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
         const obj21 = { variant: "body-xs/medium", style: tmp9.channelText, lineClamp: 1, children: null };
         const intl = tmp(1113).intl;
         obj21.children = intl.string(tmp(1113).t.FL5T01);
-        tmp20Result7 = closure_6(tmp(5929).Text, obj21);
+        tmp20Result7 = closure_6(tmp(5919).Text, obj21);
       }
     }
     obj18.children = tmp20Result7;
@@ -345,5 +345,5 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
     }
     const obj24 = { backgroundColor: combined };
   }
-  const tmpResult4 = channel(5902);
+  const tmpResult4 = channel(5892);
 });

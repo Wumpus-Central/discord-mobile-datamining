@@ -67,7 +67,7 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { text: null, variant: "critical" };
                   const intl = closure_1_0(1113).intl;
                   obj2.text = intl.string(closure_1_0(1113).t.StC497);
-                  closure_1_1(6015).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
+                  closure_1_1(6005).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
                 return { value: "HermesInternal", done: null };

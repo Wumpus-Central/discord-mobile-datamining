@@ -797,9 +797,9 @@ export default function ConjureChatScene(guildId) {
         const intl2 = closure_0(1113).intl;
         obj8.text = intl2.string(projectId(4131).qqlUiW);
         obj8.icon = closure_0(13269).UndoIcon;
-        projectId(6015).open("CONJURE_VERSION_RESTORING", obj8);
+        projectId(6005).open("CONJURE_VERSION_RESTORING", obj8);
         c5 = 2;
-        projectId(6015);
+        projectId(6005);
         c6 = 4;
         c7 = 1;
         return { value: closure_0(13271).restoreSourceHistoryEntry(closure_1, closure_130_0.sha), done: false };
@@ -810,7 +810,7 @@ export default function ConjureChatScene(guildId) {
       throw closure_4;
     } else if (3 === tmp8) {
       const intl = closure_0(1113).intl;
-      closure_0(6014).presentError(intl.string(projectId(4131)["PSdo+w"]));
+      closure_0(6004).presentError(intl.string(projectId(4131)["PSdo+w"]));
       c5 = 0;
       ref.current = false;
       c7 = 3;
@@ -833,9 +833,9 @@ export default function ConjureChatScene(guildId) {
           obj16.title = closure_0(13273).versionTitle(closure_130_0.subject).short;
           obj13.text = intl3.formatToPlainString(projectId(4131).Z4n6LX, obj16);
           obj13.icon = closure_0(13269).UndoIcon;
-          projectId(6015).open("CONJURE_VERSION_RESTORED", obj13);
+          projectId(6005).open("CONJURE_VERSION_RESTORED", obj13);
           closure_0(13273);
-          projectId(6015);
+          projectId(6005);
         }
       } else if (arg0 === 1) {
         c7 = 3;
@@ -848,8 +848,8 @@ export default function ConjureChatScene(guildId) {
       } else {
         closure_130_2 = value;
         if (null != closure_130_2) {
-          closure_0(6014).presentError(closure_130_2);
-          closure_0(6014);
+          closure_0(6004).presentError(closure_130_2);
+          closure_0(6004);
         }
       }
       c5 = 0;
@@ -968,7 +968,7 @@ export default function ConjureChatScene(guildId) {
   const tmp4Result = useConjurePreviewMenuDefault;
   conjureRemoveTarget = require("conjureRemoveApp").useConjureRemoveTarget(projectId);
   const effect4 = obj2.useEffect(
-    () => () => projectId(5552).hideActionSheet(closure_1_0(13302).CONJURE_CHAT_MORE_SHEET_KEY),
+    () => () => projectId(5542).hideActionSheet(closure_1_0(13302).CONJURE_CHAT_MORE_SHEET_KEY),
     [],
   );
   const items40 = [
@@ -1230,11 +1230,11 @@ export default function ConjureChatScene(guildId) {
         const obj35 = { variant: "heading-lg/semibold", color: "text-default", children: null };
         const intl5 = tmp(1113).intl;
         obj35.children = intl5.string(tmp4(4131).G1WwgK);
-        const items51 = [tmp128(tmp(5929).Text, obj35), ,];
+        const items51 = [tmp128(tmp(5919).Text, obj35), ,];
         const obj36 = { variant: "body-md/normal", color: "text-muted", children: null };
         const intl6 = tmp(1113).intl;
         obj36.children = intl6.string(tmp4(4131).fINulo);
-        items51[1] = tmp128(tmp(5929).Text, obj36);
+        items51[1] = tmp128(tmp(5919).Text, obj36);
         const obj37 = { variant: "secondary", size: "sm", text: null, onPress: null };
         const intl7 = tmp(1113).intl;
         obj37.text = intl7.string(tmp4(4131)["WFJ/vb"]);
@@ -1247,7 +1247,7 @@ export default function ConjureChatScene(guildId) {
           }
           return missingConjureProjectNow;
         };
-        items51[2] = tmp128(tmp(5936).Button, obj37);
+        items51[2] = tmp128(tmp(5926).Button, obj37);
         obj34.children = items51;
         tmp128Result14 = tmp123(tmp151, obj34);
       }

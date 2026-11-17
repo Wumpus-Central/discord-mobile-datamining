@@ -59,7 +59,7 @@ export default function ConjureNativeCollapsibleSection(showHeader) {
   if (flag) {
     const obj2 = { style: tmp.header, children: null };
     const obj3 = { variant: "body-sm/medium", color: "text-subtle", children: title };
-    items = [React4(tmp4(5929).Text, obj3)];
+    items = [React4(tmp4(5919).Text, obj3)];
     const obj4 = { style: tmp.headerTrailing, children: null };
     const items1 = [meta];
     let tmp9Result = null;

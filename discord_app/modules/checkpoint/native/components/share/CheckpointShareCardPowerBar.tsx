@@ -7,7 +7,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_2026_POWER_BAR_UNITS = fn(6377).CHECKPOINT_2026_POWER_BAR_UNITS;
+const CHECKPOINT_2026_POWER_BAR_UNITS = fn(6367).CHECKPOINT_2026_POWER_BAR_UNITS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = ["M0 0H10L4.44 8H0V0Z"];
@@ -45,7 +45,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function CheckpointShareCardPowerBar(stats) {
   stats = stats.stats;
   const tmp = closure_9();
-  importDefault = stats(5902).useToken(nativeDefault.colors.BLACK);
+  importDefault = stats(5892).useToken(nativeDefault.colors.BLACK);
   let obj2 = { style: null, children: null };
   items = [
     tmp.powerBar,
@@ -54,13 +54,13 @@ export default function CheckpointShareCardPowerBar(stats) {
   obj2.style = items;
   const obj3 = { style: tmp.powerLevel, children: null };
   items1 = [
-    closure_5(stats(5929).Text, {
+    closure_5(stats(5919).Text, {
       variant: "mono-md/normal",
       style: tmp.powerText,
       allowFontScaling: false,
       children: "LVL",
     }),
-    closure_5(stats(5929).Text, {
+    closure_5(stats(5919).Text, {
       variant: "mono-md/bold",
       style: tmp.powerText,
       allowFontScaling: false,
@@ -69,7 +69,7 @@ export default function CheckpointShareCardPowerBar(stats) {
   ];
   obj3.children = items1;
   const items2 = [closure_6(View, obj3)];
-  let obj = stats(5902);
+  let obj = stats(5892);
   const obj4 = { variant: "mono-md/normal", style: tmp.powerText, allowFontScaling: false, children: "LVL" };
   const obj5 = { variant: "mono-md/bold", style: tmp.powerText, allowFontScaling: false, children: stats.powerLevel };
   items2[1] = closure_5(View, {

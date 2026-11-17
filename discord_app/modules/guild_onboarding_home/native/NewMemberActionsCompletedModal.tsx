@@ -80,7 +80,7 @@ export default function NewMemberActionsCompleted(arg0) {
   );
   const effect1 = noop.useEffect(() => {
     const timerId = setTimeout(
-      () => _undefined2(6848).popWithKey(_undefined(7081).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => _undefined2(6838).popWithKey(_undefined(7081).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);

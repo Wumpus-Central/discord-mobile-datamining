@@ -135,7 +135,7 @@ let closure_11 = async function _computeBoundPairwiseFingerprint(arg0) {
   }
 };
 let closure_7 = fn(10628).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-const Features = fn(6075).Features;
+const Features = fn(6065).Features;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesBoundPairwiseFingerprint.tsx");

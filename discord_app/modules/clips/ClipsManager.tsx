@@ -146,7 +146,7 @@ let closure_26 = async function _probeHardware() {
     videoEncoders: closure_131_6,
   };
 };
-const getSystemAnalyticsInfo = fn(6090).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(6080).getSystemAnalyticsInfo;
 const ClipsConstants = fn(8845);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15,
@@ -157,8 +157,8 @@ const ClipsConstants = fn(8845);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6803).StreamTypes;
-const Features = fn(6075).Features;
+const StreamTypes = fn(6793).StreamTypes;
+const Features = fn(6065).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

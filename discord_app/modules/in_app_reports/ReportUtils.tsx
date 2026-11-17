@@ -228,7 +228,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "Array", message_id: "alignItems", stage_instance_id: "to", guild_id: "kind", guild_scheduled_event_id: "r", user_id: "isArray", email_token: "r", application_id: "description", entrypoint: "a", widget_id: "isArray" };
+  let obj2 = { channel_id: "uri", message_id: "analyticsLocations", stage_instance_id: "Object", guild_id: "Icon", guild_scheduled_event_id: "Array", user_id: "isArray", email_token: "apply", application_id: "IconComponent", entrypoint: "Array", widget_id: "isArray" };
   obj.language = str;
   obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
   obj.elements = arr.reduce((acc, item) => {
@@ -367,7 +367,7 @@ function genSubmitData(version, name, arr, email_token) {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, Endpoints: metroImportDefault } = Constants);
-const SafetyToastType = fn(6910).SafetyToastType;
+const SafetyToastType = fn(6900).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/ReportUtils.tsx");
 
@@ -440,7 +440,7 @@ export function submitReport(language, name, arr) {
       }, {});
       let tmp14 = null;
       if (name.name === tmp4(12064).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "channel_id", message_id: "flex", guild_id: "analyticsLocations" };
+        let obj2 = { channel_id: "a", message_id: "isArray", guild_id: "isArray" };
         obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -501,7 +501,7 @@ export function submitReport(language, name, arr) {
       nextPromise = HTTP.post(request1);
     }
     resolved = nextPromise.then((result) => {
-      QualtricsActionCreatorsDefault.fireSurveyAction(obj4(6896).SurveyActionTypes.REPORT_SUBMITTED);
+      QualtricsActionCreatorsDefault.fireSurveyAction(obj4(6886).SurveyActionTypes.REPORT_SUBMITTED);
       return result;
     });
   }

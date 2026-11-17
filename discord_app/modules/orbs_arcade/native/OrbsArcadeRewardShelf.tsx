@@ -45,8 +45,8 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const intl = rewards(1113).intl;
   obj5.children = intl.string(rewards(1113).t.DCCcdz);
   const items3 = [
-    closure_9(rewards(5929).Text, obj5),
-    closure_9(rewards(5929).Text, {
+    closure_9(rewards(5919).Text, obj5),
+    closure_9(rewards(5919).Text, {
       variant: "heading-xs/semibold",
       color: "text-subtle",
       lineClamp: 2,
@@ -160,8 +160,8 @@ let obj2 = {
 };
 let size = {
   marginLeft: "auto",
-  width: fn(5942).SMALL_BUTTON_HEIGHT,
-  height: fn(5942).SMALL_BUTTON_HEIGHT,
+  width: fn(5932).SMALL_BUTTON_HEIGHT,
+  height: fn(5932).SMALL_BUTTON_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
 };

@@ -71,7 +71,7 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   const intl = markAsDismissed(1113).intl;
   obj6.children = intl.string(markAsDismissed(1113).t.ews2pj);
   const items1 = [
-    closure_5(markAsDismissed(5929).Text, obj6),
+    closure_5(markAsDismissed(5919).Text, obj6),
     closure_5(markAsDismissed(1187).Checkbox, { selected: true }),
   ];
   obj5.children = items1;
@@ -85,12 +85,12 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   };
   const intl2 = markAsDismissed(1113).intl;
   obj7.children = intl2.string(markAsDismissed(1113).t.WJisip);
-  items2[1] = closure_5(markAsDismissed(5929).Text, obj7);
+  items2[1] = closure_5(markAsDismissed(5919).Text, obj7);
   items2[2] = closure_5(markAsDismissed(1187).Spacer, { size: 12 });
   const obj8 = { variant: "body-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl3 = markAsDismissed(1113).intl;
   obj8.children = intl3.string(markAsDismissed(1113).t.X6ZH6d);
-  items2[3] = closure_5(markAsDismissed(5929).Text, obj8);
+  items2[3] = closure_5(markAsDismissed(5919).Text, obj8);
   items2[4] = closure_5(markAsDismissed(1187).Spacer, { size: 48 });
   const obj9 = { text: null, grow: true, onPress: null };
   const intl4 = markAsDismissed(1113).intl;
@@ -98,9 +98,9 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   obj9.onPress = function onPress() {
     return markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  items2[5] = closure_5(markAsDismissed(5936).Button, obj9);
+  items2[5] = closure_5(markAsDismissed(5926).Button, obj9);
   obj3.children = items2;
-  obj2.children = closure_6(markAsDismissed(5570).BottomSheetScrollView, obj3);
+  obj2.children = closure_6(markAsDismissed(5560).BottomSheetScrollView, obj3);
   obj.children = closure_5(View, obj2);
-  return closure_5(markAsDismissed(5566).BottomSheet, obj);
+  return closure_5(markAsDismissed(5556).BottomSheet, obj);
 }

@@ -66,9 +66,9 @@ export function ChannelContainer(children) {
     isPrivateResult = channel.isPrivate();
   }
   dependencyMap = isPrivateResult;
-  const tmp8 = channelId(6836)(isPrivateResult);
+  const tmp8 = channelId(6826)(isPrivateResult);
   noop = tmp8;
-  const tmp9 = channelId(6836)(channelId);
+  const tmp9 = channelId(6826)(channelId);
   closure_4 = tmp9;
   const items2 = [channelId, tmp9, isPrivateResult, tmp8];
   const effect = noop.useEffect(() => {

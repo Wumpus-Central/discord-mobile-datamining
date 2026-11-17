@@ -286,7 +286,7 @@ export default function GameProfileCommunities(game) {
   };
   const intl = game(1113).intl;
   obj3.children = intl.string(game(1113).t.r6bvTh);
-  const items1 = [closure_11(game(5929).Heading, obj3)];
+  const items1 = [closure_11(game(5919).Heading, obj3)];
   if (showLocaleFilter) {
     const obj4 = {
       size: "sm",

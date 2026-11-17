@@ -58,7 +58,7 @@ function FailedUserRow(user) {
       status: true,
       isMobileOnline: null,
       isVROnline: null,
-      size: 109.714,
+      size: 178.286,
       avatarDecoration: null,
       autoStatusCutout: null,
     };
@@ -77,7 +77,7 @@ function FailedUserRow(user) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(5929).Text, obj5);
+    items2[1] = closure_10(tmp2(5919).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -104,7 +104,7 @@ function FailedChannelRow(channel) {
       channel,
       size: channel(15174).GuildIconWithChannelTypeSizes.SMALL_32,
     }),
-    closure_10(channel(5929).Text, {
+    closure_10(channel(5919).Text, {
       style: tmp.label,
       variant: "body-md/medium",
       lineClamp: 1,

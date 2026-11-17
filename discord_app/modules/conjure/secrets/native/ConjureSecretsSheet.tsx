@@ -223,13 +223,13 @@ export default function ConjureSecretsSheet(projectId) {
   let obj6 = { variant: "body-xs/normal", color: "text-muted", children: null };
   let intl2 = tmp14(1113).intl;
   obj6.children = intl2.string(request(4131).jgDBJZ);
-  items1[1] = c8(projectId(5929).Text, obj6);
+  items1[1] = c8(projectId(5919).Text, obj6);
   let tmp13Result3 = null;
   if (request.fields.length > 1) {
     let obj7 = { variant: "body-xs/normal", color: "text-muted", children: null };
     const intl3 = tmp14(1113).intl;
     obj7.children = intl3.string(tmp16(4131)["La+pe4"]);
-    tmp13Result3 = tmp13(tmp14(5929).Text, obj7);
+    tmp13Result3 = tmp13(tmp14(5919).Text, obj7);
   }
   items1[2] = tmp13Result3;
   let copy_values = request.copy_values;
@@ -328,7 +328,7 @@ export default function ConjureSecretsSheet(projectId) {
     let obj8 = { variant: "body-xs/normal", color: "text-feedback-critical", children: null };
     const intl4 = tmp14(1113).intl;
     obj8.children = intl4.string(tmp16(4131).IrMuew);
-    tmp13Result4 = tmp13(tmp14(5929).Text, obj8);
+    tmp13Result4 = tmp13(tmp14(5919).Text, obj8);
   }
   items1[5] = tmp13Result4;
   let obj9 = { text: null, variant: "primary", loading: null, disabled: null, onPress: null };
@@ -337,7 +337,7 @@ export default function ConjureSecretsSheet(projectId) {
   obj9.loading = first1;
   obj9.disabled = found.length <= 0;
   obj9.onPress = callback;
-  items1[6] = c8(projectId(5936).Button, obj9);
+  items1[6] = c8(projectId(5926).Button, obj9);
   obj4.children = items1;
   obj.children = c9(first1, obj4);
   return c8(projectId(7951).ActionSheet, obj);

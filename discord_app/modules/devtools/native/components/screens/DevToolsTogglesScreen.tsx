@@ -82,7 +82,7 @@ function DevTogglesForCategory(title) {
   return tmp3;
 }
 const ScrollView = fn(17).ScrollView;
-const CATEGORY_LABELS = fn(5932).CATEGORY_LABELS;
+const CATEGORY_LABELS = fn(5922).CATEGORY_LABELS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5306);
@@ -140,9 +140,9 @@ export default function DevToolsTogglesScreen() {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(18358).clearAll();
-        const obj = first(18358);
-        first(18334).clearAll();
+        first(18360).clearAll();
+        const obj = first(18360);
+        first(18336).clearAll();
       },
       arrow: true,
     }),
@@ -155,9 +155,9 @@ export default function DevToolsTogglesScreen() {
     label: "Clear All",
     variant: "danger",
     onPress() {
-      first(18358).clearAll();
-      const obj = first(18358);
-      first(18334).clearAll();
+      first(18360).clearAll();
+      const obj = first(18360);
+      first(18336).clearAll();
     },
     arrow: true,
   };
@@ -180,7 +180,7 @@ export default function DevToolsTogglesScreen() {
             description: tmp3,
             value: tmp2,
             onValueChange(arg0) {
-              return first(18358).toggle(query, arg0);
+              return first(18360).toggle(query, arg0);
             },
           },
           tmp,
@@ -197,6 +197,6 @@ export default function DevToolsTogglesScreen() {
     return React6(DevTogglesForCategory, { category: parseInt(tmp), title: tmp2, query }, tmp);
   });
   obj9.children = items4;
-  obj3.children = closure_10(query(6337).Stack, obj9);
+  obj3.children = closure_10(query(6327).Stack, obj9);
   return closure_9(ScrollView, obj3);
 }

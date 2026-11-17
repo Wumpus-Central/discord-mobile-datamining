@@ -72,7 +72,7 @@ let closure_19 = async function _getGuildVoiceSnapshot() {
 };
 const ChannelRecord = fn(5159);
 ({ isVoiceChannel: hasOwnProperty, isTextChannel: closure_6 } = ChannelRecord);
-let Constants = fn(6761);
+let Constants = fn(6751);
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1072);
 ({
@@ -713,8 +713,8 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
         .then((result) => {
           [tmp, tmp2] = result;
           if (null == tmp2.guild_id) {
-            const privateChannel = channel_id(6935).selectPrivateChannel(tmp.id);
-            const obj3 = channel_id(6935);
+            const privateChannel = channel_id(6925).selectPrivateChannel(tmp.id);
+            const obj3 = channel_id(6925);
           } else if (PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
             socket(1099).replaceWith(closure_1_14.CHANNEL(tmp2.guild_id, tmp.id));
             const obj2 = socket(1099);
@@ -813,8 +813,8 @@ const obj18 = {
         .then((result) => {
           [tmp, tmp2] = result;
           if (null == tmp2.guild_id) {
-            const privateChannel = channel_id(6935).selectPrivateChannel(tmp.id);
-            const obj3 = channel_id(6935);
+            const privateChannel = channel_id(6925).selectPrivateChannel(tmp.id);
+            const obj3 = channel_id(6925);
           } else if (PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
             socket(1099).replaceWith(closure_1_14.CHANNEL(tmp2.guild_id, tmp.id));
             const obj2 = socket(1099);

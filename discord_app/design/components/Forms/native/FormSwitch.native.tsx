@@ -224,13 +224,13 @@ export function FormSwitch(onValueChange) {
     const obj7 = { source: null, size: null, style: null };
     if (tmp6) {
       obj7.source = tmp10(7735);
-      obj7.size = tmp10(5938).Sizes.SMALL_20;
+      obj7.size = tmp10(5928).Sizes.SMALL_20;
       const items7 = [tmp9.selectedIcon, iconAnimation];
       obj7.style = items7;
       let tmp38 = obj7;
     } else {
       obj7.source = tmp10(7956);
-      obj7.size = tmp10(5938).Sizes.SMALL;
+      obj7.size = tmp10(5928).Sizes.SMALL;
       const items8 = [tmp9.unselectedIcon, tmp35];
       obj7.style = items8;
       tmp38 = obj7;

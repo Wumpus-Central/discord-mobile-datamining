@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/components
 
 export default function SingleScreenshare(channel) {
   channel = channel.channel;
-  channel(5899)(() => {
+  channel(5889)(() => {
     closure_1_2();
   });
   const obj = {

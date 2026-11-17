@@ -3,11 +3,11 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import _modDef2333 from "../../messages/OrbWallet.messages.js";
-import QuestTypes from "../../../quests/QuestTypes.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import openURLDefault from "../../../../lib/openURL.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import QuestTypes from "../../../quests/QuestTypes.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -76,7 +76,7 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_6, NOOP: metroImportDefault } = Constants);
 const PremiumTypes = fn(1390).PremiumTypes;
-const RewardFilterTypes = fn(5338).RewardFilterTypes;
+const RewardFilterTypes = fn(6954).RewardFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(5306);
@@ -294,7 +294,7 @@ export function OrbWalletFooter() {
   obj5.text = intl.string(orbWalletAnalyticsPage(1113).t.JALI2K);
   obj5.icon = _modDef10563;
   obj5.onPress = callback;
-  obj4.children = closure_10(orbWalletAnalyticsPage(5936).Button, obj5);
+  obj4.children = closure_10(orbWalletAnalyticsPage(5926).Button, obj5);
   const items2 = [closure_10(closure_5, obj4)];
   const obj6 = { style: tmp.footerButton, children: null };
   const obj7 = { text: null, variant: "secondary", size: "md", icon: null, onPress: null };
@@ -302,7 +302,7 @@ export function OrbWalletFooter() {
   obj7.text = intl2.string(orbWalletAnalyticsPage(1113).t.pWG4ze);
   obj7.icon = _modDef10566;
   obj7.onPress = callback1;
-  obj6.children = closure_10(orbWalletAnalyticsPage(5936).Button, obj7);
+  obj6.children = closure_10(orbWalletAnalyticsPage(5926).Button, obj7);
   items2[1] = closure_10(closure_5, obj6);
   obj3.children = items2;
   const items3 = [closure_11(closure_5, obj3)];
@@ -316,8 +316,8 @@ export function OrbWalletFooter() {
     const intl3 = tmp2(1113).intl;
     const obj12 = { orbAmount: totalRedeemed };
     obj11.children = intl3.format(_modDef2333.B5tZXw, obj12);
-    items4[1] = closure_10(tmp2(5929).Text, obj11);
-    items4[2] = closure_10(tmp2(5929).Text, {
+    items4[1] = closure_10(tmp2(5919).Text, obj11);
+    items4[2] = closure_10(tmp2(5919).Text, {
       variant: "body-xs/normal",
       color: "text-subtle",
       accessible: false,
@@ -337,7 +337,7 @@ export function OrbWalletFooter() {
   const obj15 = { variant: "body-sm/normal", color: "text-link", children: null };
   const intl4 = tmp2(1113).intl;
   obj15.children = intl4.string(orbWalletAnalyticsPage(1113).t["5qZv9E"]);
-  obj14.children = closure_10(orbWalletAnalyticsPage(5929).Text, obj15);
+  obj14.children = closure_10(orbWalletAnalyticsPage(5919).Text, obj15);
   items5[1] = closure_10(closure_4, obj14);
   obj8.children = items5;
   items3[1] = closure_11(closure_5, obj8);

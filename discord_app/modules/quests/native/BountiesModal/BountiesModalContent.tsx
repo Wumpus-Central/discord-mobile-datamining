@@ -1,10 +1,10 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalContent.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
-import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
-import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
+import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
+import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import QuestDataUtils from "../../utils/QuestDataUtils.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
@@ -213,8 +213,8 @@ function BountiesModalContentInner(bounty) {
                   items.push({ time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 });
                   arr = Array.from({ length: 6 }, (arg0, arg1) => 6 - arg1);
                   const obj3 = { time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 };
-                  closure_1_0(5556).triggerPattern(items);
-                  const tmp7Result = closure_1_0(5556);
+                  closure_1_0(5546).triggerPattern(items);
+                  const tmp7Result = closure_1_0(5546);
                 })();
               }
             }
@@ -601,7 +601,7 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_17(height(sharedValue[42]).BountyVideoEndAppStoreProvider, obj2);
 }
 const View = fn(17).View;
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
 const BountiesModalConstants = fn(17546);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } =

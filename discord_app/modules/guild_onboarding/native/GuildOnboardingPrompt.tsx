@@ -248,7 +248,7 @@ function DropdownOption(option) {
   obj3.children = closure_13(EmojiDefault, obj4);
   const items1 = [
     closure_13(closure_5, obj3),
-    closure_13(tmp2(5929).Text, { variant: "body-md/semibold", children: option.title }),
+    closure_13(tmp2(5919).Text, { variant: "body-md/semibold", children: option.title }),
   ];
   obj2.children = items1;
   return closure_14(closure_5, obj2);
@@ -266,7 +266,7 @@ let obj2 = {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5892).NAV_BAR_HEIGHT,
+    marginTop: fn(5882).NAV_BAR_HEIGHT,
     marginBottom: 16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -293,7 +293,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5892).NAV_BAR_HEIGHT,
+  marginTop: fn(5882).NAV_BAR_HEIGHT,
   marginBottom: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };

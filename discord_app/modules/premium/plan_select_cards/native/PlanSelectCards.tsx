@@ -75,7 +75,7 @@ function PlanSelectCard(onLayout) {
   ({ applicationId: importDefault, onPaymentSuccess: dependencyMap, onPaymentDismiss: View } = onLayout);
   const tmp = closure_11();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  const theme = premiumType(5377).useThemeContext().theme;
+  const theme = premiumType(5367).useThemeContext().theme;
   premiumType(5328);
   if (premiumType === PremiumTypes.TIER_2) {
     const obj2 = { variant: "expressive", iconColor: nativeDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
@@ -109,9 +109,9 @@ function PlanSelectCard(onLayout) {
   const obj9 = { spacing: nativeDefault.space.PX_4, children: null };
   const intl = tmp4(1113).intl;
   const t = tmp4(1113).t;
-  const obj = premiumType(5377);
+  const obj = premiumType(5367);
   const items2 = [
-    closure_6(premiumType(5929).Heading, {
+    closure_6(premiumType(5919).Heading, {
       variant: "nitro-md",
       color: "text-strong",
       children: intl.string(premiumType === PremiumTypes.TIER_2 ? t.lG6a5x : t["t9uG/o"]),
@@ -119,7 +119,7 @@ function PlanSelectCard(onLayout) {
     closure_6(PlanSelectCardPrices, { premiumType }),
   ];
   obj9.children = items2;
-  items1[1] = closure_7(premiumType(6337).Stack, obj9);
+  items1[1] = closure_7(premiumType(6327).Stack, obj9);
   items1[2] = closure_6(View, { style: tmp.divider });
   items1[3] = closure_6(PlanSelectCardPerks, { premiumType });
   const obj12 = { style: tmp.cta, children: null };
@@ -142,7 +142,7 @@ function PlanSelectCard(onLayout) {
       });
     },
   };
-  obj12.children = closure_6(premiumType(5936).Button, obj13);
+  obj12.children = closure_6(premiumType(5926).Button, obj13);
   items1[4] = closure_6(View, obj12);
   obj5.children = items1;
   return closure_7(View, obj5);

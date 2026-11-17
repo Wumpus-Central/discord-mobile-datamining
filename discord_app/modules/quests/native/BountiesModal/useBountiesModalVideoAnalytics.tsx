@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesModalVideoAnalytics.tsx
-import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import MonitoringAgentDefault from "../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import VideoQuestUtils from "../../utils/VideoQuestUtils.tsx";
 import AdsVideoTypes from "../AdsVideoTypes.tsx";
@@ -125,7 +125,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
               closure_129_3 = undefined;
               let impressionId;
               closure_129_5 = undefined;
-              VIDEO_MODAL_MOBILE = closure_0(5343).QuestContent.VIDEO_MODAL_MOBILE;
+              VIDEO_MODAL_MOBILE = closure_0(6959).QuestContent.VIDEO_MODAL_MOBILE;
               ({ bountyId: closure_129_2, sourceQuestContent: closure_129_3 } = ref.current);
               c4 = 1;
               const current = ref.current;
@@ -153,7 +153,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
             closure_129_5 = value;
             const obj8 = {
               adContentId: closure_129_2,
-              adCreativeType: closure_0(5345).AdCreativeType.BOUNTY,
+              adCreativeType: closure_0(6961).AdCreativeType.BOUNTY,
               event: constants.QUEST_CONTENT_ENGAGED_VIEWED,
               properties: null,
               sourceQuestContent: null,

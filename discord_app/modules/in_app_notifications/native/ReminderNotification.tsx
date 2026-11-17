@@ -55,7 +55,7 @@ function NotificationBody(channel) {
         channel,
         message,
         color: "text-default",
-        layout: tmp(5994).ChannelListLayoutTypes.COZY,
+        layout: tmp(5984).ChannelListLayoutTypes.COZY,
         variant: messagePreviewTextVariant,
         muted: false,
         lineClamp: num,

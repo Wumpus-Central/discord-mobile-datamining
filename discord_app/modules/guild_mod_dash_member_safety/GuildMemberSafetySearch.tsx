@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import CommunicationDisabledUtils from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import AutomodPermissionUtils from "../guild_automod/AutomodPermissionUtils.tsx";
-import _modDef6161 from "../../../_runtime/metro/06161__.js";
+import _modDef6151 from "../../../_runtime/metro/06151__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -24,8 +24,8 @@ let obj = {
   selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedJoinSourceType: "alignItems",
-  selectedSourceInviteCode: "d",
-  selectedSort: "Error",
+  selectedSourceInviteCode: "fileFinishedImporting",
+  selectedSort: "unicodeVersion",
 };
 let closure_4 = Object.freeze(obj);
 const size = fn(2);
@@ -44,8 +44,8 @@ class GuildMemberSafetySearch {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "alignItems",
-      selectedSourceInviteCode: "d",
-      selectedSort: "Error",
+      selectedSourceInviteCode: "fileFinishedImporting",
+      selectedSort: "unicodeVersion",
     };
     set = new Set();
     obj.selectedRoleIds = set;
@@ -74,8 +74,8 @@ prototype["reset"] = function reset() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "alignItems",
-    selectedSourceInviteCode: "d",
-    selectedSort: "Error",
+    selectedSourceInviteCode: "fileFinishedImporting",
+    selectedSort: "unicodeVersion",
   };
   this._searchState = obj;
   this.hasDefaultQuery = true;
@@ -84,7 +84,7 @@ prototype["updateSearchState"] = function updateSearchState(arg0) {
   const merged = Object.assign(this._searchState);
   const merged1 = Object.assign(arg0);
   this._searchState = {};
-  this.hasDefaultQuery = _modDef6161(this._searchState, closure_4);
+  this.hasDefaultQuery = _modDef6151(this._searchState, closure_4);
   return true;
 };
 prototype["resetSearchState"] = function resetSearchState() {
@@ -102,8 +102,8 @@ prototype["resetSearchState"] = function resetSearchState() {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "alignItems",
-      selectedSourceInviteCode: "d",
-      selectedSort: "Error",
+      selectedSourceInviteCode: "fileFinishedImporting",
+      selectedSort: "unicodeVersion",
     };
     const _Set = Set;
     const set = new Set();
@@ -300,8 +300,8 @@ export function getDefaultSearchState() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "alignItems",
-    selectedSourceInviteCode: "d",
-    selectedSort: "Error",
+    selectedSourceInviteCode: "fileFinishedImporting",
+    selectedSort: "unicodeVersion",
   };
   return obj;
 }

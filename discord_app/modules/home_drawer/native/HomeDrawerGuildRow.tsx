@@ -91,7 +91,7 @@ function GuildRowWrapper(guild) {
         collapsedCategories(closure_2_16, { size: "xs", color: "icon-muted" }),
       ];
       obj.children = items;
-      return expandedHeight(View, obj);
+      return closure_2_19(View, obj);
     }
   }, items3);
   let obj2 = guild(onActiveHookChange[16]);
@@ -364,7 +364,7 @@ const View = fn(17).View;
 const isThread = fn(5159).isThread;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(6959).UnreadSetting;
+const UnreadSetting = fn(6949).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = {
@@ -388,7 +388,7 @@ export default function HomeDrawerGuildRow(guildId) {
   ({ disableSubtitle, onActiveHookChange } = guildId);
   items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(5498).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(5488).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

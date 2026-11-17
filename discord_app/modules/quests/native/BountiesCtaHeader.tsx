@@ -2,10 +2,10 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import QuestTypes from "../QuestTypes.tsx";
-import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import QuestTypes from "../QuestTypes.tsx";
+import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsActions from "../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
@@ -193,7 +193,7 @@ function BountiesCtaHeaderInner(bounties) {
     const obj11 = { variant: "body-lg/semibold", color: "text-strong", children: null };
     const intl2 = tmp3(1113).intl;
     obj11.children = intl2.string(tmp3(1113).t["4nwvXG"]);
-    const items7 = [closure_12(tmp3(5929).Heading, obj11), closure_12(BountiesCtaDescription, { embedded: true })];
+    const items7 = [closure_12(tmp3(5919).Heading, obj11), closure_12(BountiesCtaDescription, { embedded: true })];
     obj10.children = items7;
     items6[1] = closure_13(closure_7, obj10);
     obj8.children = items6;
@@ -245,7 +245,7 @@ function BountiesCtaHeaderInner(bounties) {
     const obj18 = { variant: "body-lg/semibold", color: "text-strong", children: null };
     const intl = tmp3(1113).intl;
     obj18.children = intl.string(tmp3(1113).t["4nwvXG"]);
-    const items11 = [closure_12(tmp3(5929).Heading, obj18), closure_12(BountiesCtaDescription, {})];
+    const items11 = [closure_12(tmp3(5919).Heading, obj18), closure_12(BountiesCtaDescription, {})];
     let tmp10Result6 = tmp10Result4;
     if (!tmp8Result2) {
       const obj19 = { variant: bountiesEntryPointButtonVariant, onPress: callback };
@@ -276,14 +276,14 @@ function BountiesCtaHeaderInner(bounties) {
 let closure_3 = ["bounties", "isEmptyOrCompleted"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({ BountyCarouselEmptyStateReason: closure_10, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_11 } = QuestConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_20 = nativeDefault.space.PX_20;
 const sum = 26 + nativeDefault.space.PX_8 + PX_16;
-const minHeight = 472 - (sum + fn(5942).MEDIUM_BUTTON_HEIGHT + PX_20 + 170);
+const minHeight = 472 - (sum + fn(5932).MEDIUM_BUTTON_HEIGHT + PX_20 + 170);
 const createStyles = fn(5306);
 let closure_18 = createStyles.createStyles(() => {
   const obj = {
@@ -473,11 +473,11 @@ export default noop.memo(function BountiesCtaHeader(bounties) {
     } else {
       const obj4 = {
         adContentId,
-        adCreativeType: tmp7(5345).AdCreativeType.BOUNTY,
-        questContent: tmp7(5341).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE,
+        adCreativeType: tmp7(6961).AdCreativeType.BOUNTY,
+        questContent: tmp7(6957).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE,
         questContentPosition: 0,
         overrideVisibility: tmp2.isInView,
-        sourceQuestContent: tmp7(5341).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE,
+        sourceQuestContent: tmp7(6957).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE,
         children() {
           const obj = {};
           const merged = Object.assign(closure_2);
@@ -489,7 +489,7 @@ export default noop.memo(function BountiesCtaHeader(bounties) {
       tmp9Result = closure_12(tmp7(15264).QuestContentImpressionTrackerNative, obj4);
     }
     obj2.children = tmp9Result;
-    return closure_12(containerRef(5377).ThemeContextProvider, obj2);
+    return closure_12(containerRef(5367).ThemeContextProvider, obj2);
   } else if (0 === bounties.length) {
     let COMPLETED = constants.EMPTY;
   } else {

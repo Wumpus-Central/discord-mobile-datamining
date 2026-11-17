@@ -80,11 +80,11 @@ const jsxProd = fn(21);
 let obj = {
   [USER_INTERACTION]: fn(8069).ChatIcon,
   [USER_CALLED]: fn(14228).PhoneIcon,
-  [USER_ADD]: fn(6018).FriendsIcon,
+  [USER_ADD]: fn(6008).FriendsIcon,
   [GUILD_ADD]: fn(16013).ServerGridIcon,
   [GUILD_INTERACTION]: fn(8071).ThreadIcon,
   [PURCHASES]: fn(8252).CreditCardIcon,
-  [TOTAL_VOICE_MINUTES]: fn(6042).ClockIcon,
+  [TOTAL_VOICE_MINUTES]: fn(6032).ClockIcon,
   [GIFTS]: fn(11817).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =

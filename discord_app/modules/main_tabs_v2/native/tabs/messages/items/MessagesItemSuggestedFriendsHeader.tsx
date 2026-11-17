@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const sum = fn(5929).TextStyleSheet["body-md/semibold"].lineHeight + nativeDefault.space.PX_24;
+const sum = fn(5919).TextStyleSheet["body-md/semibold"].lineHeight + nativeDefault.space.PX_24;
 const createStyles = fn(5306);
 let obj = {
   headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" },

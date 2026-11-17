@@ -67,8 +67,8 @@ function EmptyState(channel) {
   };
   const intl2 = tmp2(1113).intl;
   obj6.children = intl2.string(channel(1113).t["6HXiuE"]);
-  items1[1] = closure_10(channel(5929).Text, obj6);
-  items1[2] = closure_10(channel(5929).Text, {
+  items1[1] = closure_10(channel(5919).Text, obj6);
+  items1[2] = closure_10(channel(5919).Text, {
     style: tmp.emptyStateText,
     variant: "body-sm/medium",
     color: "text-default",

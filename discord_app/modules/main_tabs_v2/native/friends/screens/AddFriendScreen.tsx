@@ -94,11 +94,11 @@ export default function AddFriendScreen(navigation) {
   };
   let intl = navigation(1113).intl;
   obj4.children = intl.string(navigation(1113).t.GWMTSE);
-  const items2 = [closure_10(navigation(5929).Text, obj4), , ,];
+  const items2 = [closure_10(navigation(5919).Text, obj4), , ,];
   const obj5 = { style: tmp.subheaderText, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1113).intl;
   obj5.children = intl2.string(navigation(1113).t["Rn/sLl"]);
-  items2[1] = closure_10(navigation(5929).Text, obj5);
+  items2[1] = closure_10(navigation(5919).Text, obj5);
   items2[2] = closure_10(contactSyncAccount(16290), {
     style: tmp.input,
     autoFocusInput: false,
@@ -108,7 +108,7 @@ export default function AddFriendScreen(navigation) {
   const obj8 = { accessibilityRole: "header", variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = navigation(1113).intl;
   obj8.children = intl3.string(navigation(1113).t.dukg0Z);
-  const items3 = [closure_10(navigation(5929).Text, obj8)];
+  const items3 = [closure_10(navigation(5919).Text, obj8)];
   let tmp10Result = null;
   if (tmp5) {
     const obj9 = { style: tmp.rowContainer, location: "Add Friend Modal" };

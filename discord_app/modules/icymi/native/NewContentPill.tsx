@@ -224,7 +224,7 @@ export default function NewContentPill(onPress) {
     };
     const intl = tmp2(1113).intl;
     obj7.children = intl.string(tmp2(1113).t["4Nl0Rl"]);
-    items12[1] = first2(tmp2(5929).Text, obj7);
+    items12[1] = first2(tmp2(5919).Text, obj7);
     obj6.children = items12;
     obj5.children = closure_10(tmp2(7428).PressableOpacity, obj6);
     let tmp36Result2 = first2(tmp9(1655).View, obj5);

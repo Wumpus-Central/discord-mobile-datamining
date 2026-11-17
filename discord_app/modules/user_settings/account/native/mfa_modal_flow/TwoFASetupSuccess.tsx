@@ -127,7 +127,7 @@ export default function TwoFASetupSuccess() {
               c5 = 3;
               c6 = 1;
               const obj5 = {
-                value: setRegistering(6852).finishRegisterWebAuthnCredential(
+                value: setRegistering(6842).finishRegisterWebAuthnCredential(
                   intl.string(setRegistering(1113).t["8H5RmH"]),
                   closure_129_0,
                   closure_129_1,

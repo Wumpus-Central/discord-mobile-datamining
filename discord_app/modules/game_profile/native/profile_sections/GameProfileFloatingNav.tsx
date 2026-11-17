@@ -143,7 +143,7 @@ function FloatingNav(navigation) {
     items3[1] = obj4;
     const obj5 = { style: tmp3.wrap, pointerEvents: "box-none", onLayout: navigation.onLayout, children: null };
     const obj6 = { colors: memo, style: tmp3.scrim, pointerEvents: "none" };
-    const items4 = [closure_7(tmp(5893), obj6)];
+    const items4 = [closure_7(tmp(5883), obj6)];
     const obj7 = { style: tmp3.pill, accessibilityRole: "tablist", children: null };
     const obj8 = {
       style: tmp3.pillBlur,

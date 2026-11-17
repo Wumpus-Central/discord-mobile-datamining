@@ -143,7 +143,7 @@ function useMediaShareActions(source) {
             message: stateFromStores,
             source: "media-viewer",
             initialSelectedDestinations: "Array",
-            forwardOptions: "caractere",
+            forwardOptions: "pipe",
           };
           const obj4 = { onlyAttachmentIds: null };
           items = [attachmentId];
@@ -156,7 +156,7 @@ function useMediaShareActions(source) {
           message: stateFromStores,
           source: "media-viewer",
           initialSelectedDestinations: "Array",
-          forwardOptions: "caractere",
+          forwardOptions: "pipe",
         };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];

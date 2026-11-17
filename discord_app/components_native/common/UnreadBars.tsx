@@ -175,7 +175,7 @@ prototype["render"] = function render() {
   return React5(timestampProducer, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
-UnreadBar.contextType = fn(5377).ThemeContext;
+UnreadBar.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/UnreadBars.tsx");
 

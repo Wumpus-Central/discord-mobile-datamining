@@ -15,7 +15,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import MultiAccountStore from "../MultiAccountStore.tsx";
 import MultiAccountSwitchStore from "../MultiAccountSwitchStore.tsx";
 
-const CircleInformationIcon = CheckmarkSmallIcon(6037);
+const CircleInformationIcon = CheckmarkSmallIcon(6027);
 const CheckmarkSmallIcon2 = CheckmarkSmallIcon(7897);
 require = fn;
 function RailButton(arg0) {
@@ -38,9 +38,9 @@ function AccountButton(user) {
   const selected = user.selected;
   ({ disabled, onSelect: importAll } = user);
   dependencyMap = closure_22();
-  const radioA11yNative = user(5378).useRadioA11yNative({ selected, disabled });
+  const radioA11yNative = user(5368).useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  let obj = user(5378);
+  let obj = user(5368);
   closure_4 = tmp5;
   let obj2 = {
     accessibilityRole,
@@ -56,7 +56,7 @@ function AccountButton(user) {
   if (user.hidePersonalInformation) {
     str = "never";
   }
-  obj2.accessibilityLabel = selected(5372).getUserTag(tmp4, { mode: "username", identifiable: str });
+  obj2.accessibilityLabel = selected(5362).getUserTag(tmp4, { mode: "username", identifiable: str });
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
     const intl2 = tmp(1113).intl;
     let stringResult = intl2.string(tmp(1113).t.tYX2ps);
@@ -92,7 +92,7 @@ function AccountButton(user) {
         const obj3 = { children: null };
         items1[2] = null;
         obj3.children = items1;
-        return expandedHeight(collapsedCategories, obj3);
+        return closure_2_19(collapsedCategories, obj3);
       }
     }
     const items2 = [closure_3.indicator];
@@ -255,7 +255,7 @@ function AccountSwitcherRailContent() {
             }),
           ];
           obj.children = items1;
-          return expandedHeight(RailButton, obj);
+          return closure_2_19(RailButton, obj);
         },
       };
       items7[1] = closure_17(tmp4(tmp2[29]).ContextMenu, obj13);

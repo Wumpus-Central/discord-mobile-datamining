@@ -12,7 +12,7 @@ import VoicePanelStore from "../voice_panel/VoicePanelStore.tsx";
 
 const useChatLayoutDefault = useChatLayout;
 
-const NavigationRouteUtils = params(5492);
+const NavigationRouteUtils = params(5482);
 require = fn;
 function getFocusedChannelId() {
   let params = require;

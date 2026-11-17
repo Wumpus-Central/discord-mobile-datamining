@@ -83,11 +83,11 @@ export default noop.memo(function SmartSearchTip(children) {
   };
   const intl = citations(1113).intl;
   obj4.children = intl.string(guildId(4354).ydAwWi);
-  const items1 = [closure_5(citations(5929).Text, obj4)];
+  const items1 = [closure_5(citations(5919).Text, obj4)];
   const obj5 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
   const intl2 = citations(1113).intl;
   obj5.children = intl2.string(guildId(4354).QIdSmb);
-  items1[1] = closure_5(citations(5929).Text, obj5);
+  items1[1] = closure_5(citations(5919).Text, obj5);
   obj3.children = items1;
   const items2 = [closure_6(View, obj3)];
   let tmp4Result = memo.length > 0;
@@ -109,7 +109,7 @@ export default noop.memo(function SmartSearchTip(children) {
   obj2.children = items2;
   const items3 = [
     closure_6(View, obj2),
-    closure_5(citations(5929).Text, {
+    closure_5(citations(5919).Text, {
       variant: "body-md/normal",
       color: "text-default",
       children: children.answerText,

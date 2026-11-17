@@ -13,7 +13,7 @@ import FamilyCenterControlledSettingsStore from "../FamilyCenterControlledSettin
 const require = globalThis.__r;
 
 require = fn;
-const SafetyToastType = fn(6910).SafetyToastType;
+const SafetyToastType = fn(6900).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
 
@@ -188,8 +188,8 @@ export function useParentalControlledConsent(PERSONALIZATION) {
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            tmp3(6915).showFailedToast(constants.GENERIC_ERROR);
-            const obj2 = tmp3(6915);
+            tmp3(6905).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = tmp3(6905);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

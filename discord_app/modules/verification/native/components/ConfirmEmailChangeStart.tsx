@@ -43,7 +43,7 @@ export default function ConfirmEmailChangeStart() {
     let obj6 = { style: tmp.image, source: null };
     const formatResult = intl.format(tmp2(1113).t.oMFSgi, obj3);
     obj6.source = navigation(7764);
-    const items1 = [closure_9(navigation(6020), obj6), , ,];
+    const items1 = [closure_9(navigation(6010), obj6), , ,];
     let obj7 = {
       style: tmp.title,
       accessibilityRole: "header",
@@ -53,7 +53,7 @@ export default function ConfirmEmailChangeStart() {
     };
     const intl2 = tmp2(1113).intl;
     obj7.children = intl2.string(tmp2(1113).t.dQ71Wa);
-    items1[1] = closure_9(tmp2(5929).Text, obj7);
+    items1[1] = closure_9(tmp2(5919).Text, obj7);
     items1[2] = formatResult.map((children, index) =>
       React6(Text_Text.Text, { style: body.body, variant: "body-sm/medium", color: "text-default", children }, index),
     );
@@ -63,7 +63,7 @@ export default function ConfirmEmailChangeStart() {
     obj9.text = intl3.string(tmp2(1113).t.rXV81H);
     obj9.onPress = tmp7;
     obj9.loading = tmp6[0];
-    obj8.children = closure_9(tmp2(5936).Button, obj9);
+    obj8.children = closure_9(tmp2(5926).Button, obj9);
     items1[3] = closure_9(closure_6, obj8);
     obj5.children = items1;
     obj4.children = closure_10(closure_6, obj5);

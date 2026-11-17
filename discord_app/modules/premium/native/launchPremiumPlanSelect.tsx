@@ -69,7 +69,7 @@ export function launchPremiumPlanSelect(isBoostPurchaseFlow) {
       onPaymentSuccess,
       onPaymentDismiss,
     };
-    const obj3 = flag2(6848);
+    const obj3 = flag2(6838);
     obj3.pushLazy(asyncRequireImpl(9580, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
     const tmp7 = asyncRequireImpl(9580, dependencyMap.paths);
   }

@@ -25,13 +25,13 @@ export default function JankChatPanelReporter(channelId) {
     openAt: 0,
     closedAt: maxWidth,
     resolveOpenName: callback,
-    resolveClosedName: channelId(18724).getPanelListScreenName,
+    resolveClosedName: channelId(18726).getPanelListScreenName,
   };
-  return jsx(showCreateThread(18727), {
+  return jsx(showCreateThread(18729), {
     position: translateX,
     openAt: 0,
     closedAt: maxWidth,
     resolveOpenName: callback,
-    resolveClosedName: channelId(18724).getPanelListScreenName,
+    resolveClosedName: channelId(18726).getPanelListScreenName,
   });
 }

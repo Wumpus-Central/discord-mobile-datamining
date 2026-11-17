@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileUpsellCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05883_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -56,7 +56,7 @@ export default function UserProfileUpsellCard(headerText) {
     const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
     const items3 = [closure_6(tmp3(9436).NitroWheelIcon, obj4)];
     const obj5 = { variant: "heading-xs/semibold", children: headerText };
-    items3[1] = closure_6(tmp3(5929).Text, obj5);
+    items3[1] = closure_6(tmp3(5919).Text, obj5);
     obj3.children = items3;
     tmp6Result = closure_7(closure_3, obj3);
   }

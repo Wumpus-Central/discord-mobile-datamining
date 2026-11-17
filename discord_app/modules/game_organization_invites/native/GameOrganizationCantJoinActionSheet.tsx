@@ -70,7 +70,7 @@ export default function GameOrganizationCantJoinActionSheet(arg0) {
       obj7.text = intl3.string(tmp5(1113).t.cpT0Cq);
       obj7.onPress = hideSheet;
     }
-    obj3.actions = jsx(tmp5(5936).Button, obj7);
+    obj3.actions = jsx(tmp5(5926).Button, obj7);
     return jsx(tmp5(10713).PromoSheet, {
       header: jsx(tmp5(7913).BottomSheetTitleHeader, { title: null }),
       title: null,

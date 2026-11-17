@@ -215,7 +215,7 @@ export function AppLauncherCommandViewHeader(onPress) {
   }
   if (null != memo) {
     let obj2 = { style: tmp.appIcon, source: memo };
-    let tmp31 = closure_6(tmp24(6020), obj2);
+    let tmp31 = closure_6(tmp24(6010), obj2);
     let tmp32 = closure_6;
   } else {
     let obj3 = { style: null };

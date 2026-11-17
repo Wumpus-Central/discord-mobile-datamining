@@ -55,9 +55,9 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj5.text = intl4.string(value(1113).t.CumH4u);
   obj5.onPress = callback;
   obj5.disabled = !result;
-  items1[1] = closure_6(value(5936).Button, obj5);
+  items1[1] = closure_6(value(5926).Button, obj5);
   obj2.children = items1;
-  return closure_7(value(5566).BottomSheet, obj2);
+  return closure_7(value(5556).BottomSheet, obj2);
 }
 const maxLength = fn(5168).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);

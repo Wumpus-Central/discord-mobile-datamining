@@ -17,7 +17,7 @@ export default function LeaveStageButton(arg0) {
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const obj = channelId(504);
   const tmp = stateFromStores;
-  const voicePanelButtonStyles = channelId(20083).useVoicePanelButtonStyles(wrapperSpecs);
+  const voicePanelButtonStyles = channelId(20085).useVoicePanelButtonStyles(wrapperSpecs);
   let tmp6 = null;
   if (null != stateFromStores) {
     const element = {
@@ -34,7 +34,7 @@ export default function LeaveStageButton(arg0) {
     element.style = voicePanelButtonStyles.iconBg;
     const obj3 = { color: voicePanelButtonStyles.iconFill.color };
     element.children = jsx(tmp3(12946).GroupArrowDownIcon, { color: voicePanelButtonStyles.iconFill.color });
-    tmp6 = jsx(tmp(20084), {
+    tmp6 = jsx(tmp(20086), {
       onPress() {
         return StageChannelActionCreators.audienceAckRequestToSpeak(stateFromStores, true);
       },
@@ -43,7 +43,7 @@ export default function LeaveStageButton(arg0) {
       style: null,
       children: null,
     });
-    const tmpResult = tmp(20084);
+    const tmpResult = tmp(20086);
   }
   return tmp6;
 }

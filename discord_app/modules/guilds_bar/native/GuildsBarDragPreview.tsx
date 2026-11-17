@@ -185,8 +185,8 @@ function PreviewItem(overState) {
           parentId: "Path",
           name: "Array",
           color: "alignItems",
-          expanded: 16777713,
-          children: 30495809,
+          expanded: false,
+          children: false,
         };
         items = [tmp2];
         element.children = items;
@@ -398,22 +398,22 @@ function AnimatedItemPreview(cleanUp) {
     };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(19071), obj5);
+    let tmp22Result = tmp22(tmp4(19073), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
     if (isHomeDrawerEnabled) {
-      tmp25 = transitionState === tmp2(5377).TransitionStates.YEETED;
+      tmp25 = transitionState === tmp2(5367).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(19091), obj6);
-    const tmp4Result = tmp4(19091);
+    tmp22Result = tmp22(tmp4(19093), obj6);
+    const tmp4Result = tmp4(19093);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1655.View, obj4);
 }
-let GuildsNodeType = fn(6956).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(19060).GUILD_ITEM_INSET_LEFT;
+let GuildsNodeType = fn(6946).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(19062).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
 let createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({
@@ -505,12 +505,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "frame",
-            scrollPosition: null,
-            dragRegion: "Subscriptions",
+            gestureState: true,
+            scrollPosition: "meter",
+            dragRegion: null,
             windowSize: null,
-            dropComplete: "deploy",
-            listInsets: null,
+            dropComplete: 0,
+            listInsets: 100,
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;

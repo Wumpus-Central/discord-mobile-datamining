@@ -82,7 +82,7 @@ function SubscribeConfirmation(arg0) {
   obj7.children = closure_1_17(components_Button_Button.Button, obj8);
   items[5] = closure_1_17(timestampProducer, obj7);
   obj.children = items;
-  return collapsedCategories(expandedHeight, obj);
+  return collapsedCategories(closure_1_19, obj);
 }
 function TransferConfirmation(previousGuildSubscriptionSlots) {
   const prop = previousGuildSubscriptionSlots.previousGuildSubscriptionSlots;
@@ -109,7 +109,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   } else {
     const obj4 = { children: null };
     const obj5 = { style: tmp.transferImage, source: guildSubscriptionRemovalSource };
-    const items1 = [closure_17(onPremiumGuildSubscribe(6020), obj5), , , , ,];
+    const items1 = [closure_17(onPremiumGuildSubscribe(6010), obj5), , , , ,];
     const obj6 = {
       style: tmp.header,
       variant: "heading-lg/semibold",
@@ -118,24 +118,24 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     };
     const intl = tmp2(1113).intl;
     obj6.children = intl.string(tmp2(1113).t.h92jfS);
-    items1[1] = closure_17(tmp2(5929).Text, obj6);
+    items1[1] = closure_17(tmp2(5919).Text, obj6);
     const obj7 = { style: tmp.blurb, variant: "body-sm/medium", children: null };
     const intl2 = tmp2(1113).intl;
     const obj8 = { slotCount: prop.length, guildCount: 1 };
     obj7.children = intl2.format(tmp2(1113).t.SSA2lu, obj8);
-    items1[2] = closure_17(tmp2(5929).Text, obj7);
+    items1[2] = closure_17(tmp2(5919).Text, obj7);
     const obj9 = { style: tmp.transferPreviews, children: null };
     const obj10 = { style: tmp.previewHeader, variant: "body-sm/medium", color: "text-default", children: null };
     const intl3 = tmp2(1113).intl;
     obj10.children = intl3.format(tmp2(1113).t["5zQYEz"], { guildCount: 1 });
-    const items2 = [closure_17(tmp2(5929).Text, obj10), , ,];
+    const items2 = [closure_17(tmp2(5919).Text, obj10), , ,];
     const obj11 = { style: tmp.guildPreview, guild: stateFromStores };
     items2[1] = closure_17(onPremiumGuildSubscribe(16036), obj11);
     const obj12 = { style: tmp.previewHeader, variant: "body-sm/medium", color: "text-default", children: null };
     const intl4 = tmp2(1113).intl;
     const obj13 = { slotCount: prop.length };
     obj12.children = intl4.format(tmp2(1113).t.ct6oxD, obj13);
-    items2[2] = closure_17(tmp2(5929).Text, obj12);
+    items2[2] = closure_17(tmp2(5919).Text, obj12);
     const obj14 = { style: null, start: null, end: null, colors: null, children: null };
     const items3 = [,];
     ({ guildPreview: arr5[0], activeTransferGuildCardBorder: arr5[1] } = tmp);
@@ -145,7 +145,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj14.colors = Gradients.PREMIUM_GUILD;
     const obj15 = { guild };
     obj14.children = closure_17(onPremiumGuildSubscribe(16036), obj15);
-    items2[3] = closure_17(onPremiumGuildSubscribe(5893), obj14);
+    items2[3] = closure_17(onPremiumGuildSubscribe(5883), obj14);
     obj9.children = items2;
     items1[3] = closure_18(closure_6, obj9);
     const obj16 = { slots: prop };
@@ -159,11 +159,11 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
       return onPremiumGuildSubscribe(true);
     };
     obj18.loading = isModifyingSubscription;
-    obj17.children = closure_17(tmp2(5936).Button, obj18);
+    obj17.children = closure_17(tmp2(5926).Button, obj18);
     items1[5] = closure_17(closure_6, obj17);
     obj4.children = items1;
     tmp8 = closure_18(closure_19, obj4);
-    const tmp14 = onPremiumGuildSubscribe(5893);
+    const tmp14 = onPremiumGuildSubscribe(5883);
   }
   return tmp8;
 }

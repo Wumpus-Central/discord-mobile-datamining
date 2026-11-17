@@ -105,6 +105,6 @@ export default noop.memo(function GuildsBar(enableHome) {
   const items2 = [closure_4(FastListDefault, obj4), closure_4(GuildsBarDragPreviewDefault, {})];
   obj3.children = items2;
   obj2.children = closure_5(tmp12, obj3);
-  obj.children = closure_4(fastListRef(5598).GestureDetector, obj2);
+  obj.children = closure_4(fastListRef(5588).GestureDetector, obj2);
   return closure_4(tmp10, obj);
 });

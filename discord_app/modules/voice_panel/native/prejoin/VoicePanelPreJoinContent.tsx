@@ -209,8 +209,8 @@ function ActivityInfo(activity) {
                 return obj7;
               }
             } else {
-              const voiceChannel = _undefined2(6935).selectVoiceChannel(channelId);
-              const obj2 = _undefined2(6935);
+              const voiceChannel = _undefined2(6925).selectVoiceChannel(channelId);
+              const obj2 = _undefined2(6925);
             }
           } else {
             num3 = 1;
@@ -249,7 +249,7 @@ function ActivityInfo(activity) {
     const intl = tmp4(1113).intl;
     let obj7 = { n: arr2.length };
     obj6.children = intl.format(tmp4(1113).t["n/IJ6Y"], obj7);
-    const items6 = [closure_25(tmp4(5929).Text, obj6)];
+    const items6 = [closure_25(tmp4(5919).Text, obj6)];
     const obj8 = {
       activeOpacity: 0.7,
       onPress: callback,
@@ -260,7 +260,7 @@ function ActivityInfo(activity) {
     const obj9 = { style: tmp.previewImage, children: null };
     const tmp2Result = tmp2(7722);
     const obj10 = { imageBackground: tmp19, aspectRatio: 1.7777777777777777 };
-    obj9.children = closure_25(tmp2(20027), obj10);
+    obj9.children = closure_25(tmp2(20029), obj10);
     const items7 = [closure_25(tmp2(7722), obj9)];
     const obj11 = { style: tmp.joinButtonWrapper, children: null };
     const tmp2Result3 = tmp2(7722);
@@ -284,9 +284,9 @@ function ActivityInfo(activity) {
     }
     tmp27[0] = iconURL;
     obj14.source = tmp27;
-    obj12.icon = closure_25(tmp4(5936).Button.Icon, obj14);
+    obj12.icon = closure_25(tmp4(5926).Button.Icon, obj14);
     obj12.onPress = callback;
-    obj11.children = closure_25(tmp4(5936).Button, obj12);
+    obj11.children = closure_25(tmp4(5926).Button, obj12);
     items7[1] = closure_25(tmp2(7722), obj11);
     obj8.children = items7;
     items6[1] = closure_26(tmp4(7428).PressableOpacity, obj8);
@@ -567,7 +567,7 @@ const EDGE_GUTTER = fn(11988).EDGE_GUTTER;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
 const constants4 = fn(16238).VoiceChannelWarningSurfaces;
-const Features = fn(6075).Features;
+const Features = fn(6065).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
 const createStyles = fn(5306);
@@ -861,7 +861,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
   const context = noop.useContext(guildId(11984));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(19229)(channelId);
+  const tmp2 = guildId(19231)(channelId);
   dependencyMap = tmp2;
   items = [
     SortedVoiceStateStore,
@@ -911,7 +911,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(20044).areVoicePanelPreJoinContentPropsEqual,
+    channelId(20046).areVoicePanelPreJoinContentPropsEqual,
   );
-  return closure_25(channelId(5377).TransitionItem, { item: stateFromStores, renderItem });
+  return closure_25(channelId(5367).TransitionItem, { item: stateFromStores, renderItem });
 });

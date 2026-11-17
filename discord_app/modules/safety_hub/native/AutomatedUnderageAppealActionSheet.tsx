@@ -120,11 +120,11 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   const obj8 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onClose(1113).intl;
   obj8.children = intl.string(onClose(1113).t["9SDLnj"]);
-  const items5 = [closure_8(onClose(5929).Text, obj8)];
+  const items5 = [closure_8(onClose(5919).Text, obj8)];
   const obj9 = { variant: "heading-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1113).intl;
   obj9.children = intl2.string(onClose(1113).t["yvx//1"]);
-  items5[1] = closure_8(onClose(5929).Text, obj9);
+  items5[1] = closure_8(onClose(5919).Text, obj9);
   obj7.children = items5;
   const items6 = [closure_9(callback, obj7), , ,];
   const obj10 = { children: null };
@@ -169,15 +169,15 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   };
   const intl6 = onClose(1113).intl;
   obj16.text = intl6.string(onClose(1113).t["54b8V0"]);
-  const items7 = [closure_8(onClose(5936).Button, obj16)];
+  const items7 = [closure_8(onClose(5926).Button, obj16)];
   const obj17 = { variant: "heading-xs/medium", color: "text-subtle", style: tmp.learnMore, children: null };
   const intl7 = onClose(1113).intl;
   obj17.children = intl7.format(onClose(1113).t.ZbWsOF, { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK });
-  items7[1] = closure_8(onClose(5929).Text, obj17);
+  items7[1] = closure_8(onClose(5919).Text, obj17);
   obj15.children = items7;
   items6[3] = closure_9(callback, obj15);
   obj5.children = items6;
   obj4.children = closure_9(callback, obj5);
-  obj3.children = closure_8(onClose(5570).BottomSheetScrollView, obj4);
-  return closure_8(onClose(5566).BottomSheet, obj3);
+  obj3.children = closure_8(onClose(5560).BottomSheetScrollView, obj4);
+  return closure_8(onClose(5556).BottomSheet, obj3);
 }

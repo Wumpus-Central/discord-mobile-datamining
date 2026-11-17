@@ -304,7 +304,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     const items1 = [...items, AnalyticsLocationDefault.SLAYER_STOREFRONT_NATIVE_PDP];
     return items1;
   }, items4);
-  analyticsLocations(5899)(() => {
+  analyticsLocations(5889)(() => {
     const obj2 = {
       location_stack: memo1,
       type: SocialLayerStorefrontNativeActionCreators.SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY,
@@ -331,8 +331,8 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       sku_id: skuId,
       guild_id: true,
       application_id: true,
-      cta_type: 20,
-      location_stack: 20,
+      cta_type: "InteroperabilityIndex",
+      location_stack: null,
     };
     let applicationId;
     if (stateFromStores != null) {
@@ -668,7 +668,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       };
       const intl = tmp4(1113).intl;
       obj18.children = intl.string(tmp2(4031).gndWN7);
-      tmp65Result = closure_14(tmp4(5929).Text, obj18);
+      tmp65Result = closure_14(tmp4(5919).Text, obj18);
     }
     items13[1] = tmp65Result;
     const obj19 = { style: tmp.footerButtonRow, children: null };
@@ -680,7 +680,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     }
     obj21.disabled = tmp68;
     obj21.onPress = callback3;
-    obj20.children = closure_14(tmp4(5936).Button, obj21);
+    obj20.children = closure_14(tmp4(5926).Button, obj21);
     const items14 = [closure_14(memo1, obj20)];
     if (result1) {
       const obj22 = {
@@ -754,7 +754,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       name = getOrFetchApplication.name;
     }
     obj29.children = name;
-    items17[1] = closure_14(tmp4(5929).Heading, obj29);
+    items17[1] = closure_14(tmp4(5919).Heading, obj29);
     obj27.children = items17;
     items16[1] = closure_15(memo1, obj27);
     const obj30 = { style: tmp.scrollContainer, children: null };
@@ -763,7 +763,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const obj31 = { style: stateFromStores2.absoluteFill, colors: null, pointerEvents: "none" };
       const items18 = [closure_16, closure_17];
       obj31.colors = items18;
-      exclusive = closure_14(tmp2(5893), obj31);
+      exclusive = closure_14(tmp2(5883), obj31);
     }
     const items19 = [exclusive];
     if (isScreenLandscape) {
@@ -869,7 +869,7 @@ let obj = {
 };
 const alphaResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0);
 obj.header = {
-  height: fn(5892).NAV_BAR_HEIGHT,
+  height: fn(5882).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
@@ -879,7 +879,7 @@ obj.header = {
 };
 obj.headerTitle = { flexShrink: 1 };
 let obj2 = {
-  height: fn(5892).NAV_BAR_HEIGHT,
+  height: fn(5882).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
@@ -967,7 +967,7 @@ obj.hero = {
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "analyticsLocations" };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "assign" };
 let obj20 = {
   marginHorizontal: nativeDefault.space.PX_16,
   height: fn(11732).MOBILE_HERO_HEIGHT_PX,

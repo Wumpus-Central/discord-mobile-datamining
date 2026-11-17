@@ -5,7 +5,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import BountiesMobileQuestBarExperiment2 from "../../experiments/BountiesMobileQuestBarExperiment.tsx";
 import QuestDockHooks from "QuestDockHooks.tsx";
 import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible.tsx";
-import _modDef17813 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
+import _modDef17796 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -100,7 +100,7 @@ function QuestDock3DOrbsIllustration() {
   };
   const obj4 = { uri: null };
   obj2 = QuestDockHooks;
-  obj4.uri = _modDef17813;
+  obj4.uri = _modDef17796;
   obj3.source = obj4;
   obj3.style = tmp.fill;
   obj3.enableAnimation = !stateFromStores;
@@ -131,8 +131,14 @@ function QuestDockOrbHandsIllustration() {
     fit: "contain",
   });
 }
+class QuestDockBountyOrbIllustration {
+  constructor() {
+    obj = { style: closure_8().orbs, children: jsx(QuestDock3DOrbsIllustration, {}) };
+    return jsx(IllustrationFrame, obj);
+  }
+}
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6954).QuestsExperimentLocations;
 const QuestDockConstants = fn(17698);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT } = QuestDockConstants);
 const jsx = fn(21).jsx;
@@ -149,7 +155,7 @@ size.transform = items;
 obj.hands = size;
 const size1 = { width: 120, height: 70, marginBottom: QUEST_DOCK_COLLAPSED_HEIGHT - 70 };
 obj.orbs = size1;
-let closure_8 = createStyles.createStyles(obj);
+const React5 = createStyles.createStyles(obj);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyIllustration.tsx");
 
@@ -174,13 +180,9 @@ export default noop.memo(function QuestDockBountyIllustration() {
       </IllustrationFrame>
     );
   } else if (BountiesMobileQuestBarExperiment2.BountiesMobileQuestBarIllustration.ILLUSTRATION_1 === illustration) {
-    const obj4 = { style: tmp.orbs, children: <QuestDock3DOrbsIllustration /> };
-    return (
-      <IllustrationFrame style={tmp.orbs}>
-        <QuestDock3DOrbsIllustration />
-      </IllustrationFrame>
-    );
+    return <QuestDockBountyOrbIllustration />;
   }
   const obj = { location: QuestsExperimentLocations.QUESTS_BAR_MOBILE };
 });
 export const QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH = 95;
+export { QuestDockBountyOrbIllustration };

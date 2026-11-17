@@ -1476,7 +1476,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp14Result75 = tmp14(tmp5[55]);
     }
-    parseMessageMarkupResult = { content: "Promise", hasSpoilerEmbeds: "paddingVertical", hasBailedAst: true };
+    parseMessageMarkupResult = { content: "Promise", hasSpoilerEmbeds: "reset", hasBailedAst: null };
     const tmp14Result69 = tmp14(tmp5[45]);
   }
   const obj4 = message(tmp5[39]);

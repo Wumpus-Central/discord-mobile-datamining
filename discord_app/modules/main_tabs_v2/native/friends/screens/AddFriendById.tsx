@@ -377,7 +377,7 @@ export default function _default(arg0) {
   obj5.style = items6;
   let intl = sourcePage(1113).intl;
   obj5.children = intl.string(sourcePage(1113).t.Yi6Mpu);
-  const items7 = [closure_9(sourcePage(5929).Text, obj5), ,];
+  const items7 = [closure_9(sourcePage(5919).Text, obj5), ,];
   let obj6 = {
     returnKeyType: "done",
     submitBehavior: "submit",
@@ -414,14 +414,14 @@ export default function _default(arg0) {
     obj10.disabled = str.trim().length <= 0;
     obj10.onPress = handleSubmitEditing;
     obj10.loading = first1.status === constants2.LOADING;
-    items8[2] = closure_9(sourcePage(5936).Button, obj10);
+    items8[2] = closure_9(sourcePage(5926).Button, obj10);
     obj8.children = items8;
     return closure_10(closure_11, obj8);
   }
   const obj11 = { style: tmp.messageFooterText, variant: "body-xs/medium", color: "text-muted", children: null };
   let intl2 = sourcePage(1113).intl;
   obj11.children = intl2.string(sourcePage(1113).t.UtfQNw);
-  tmp16Result = closure_9(sourcePage(5929).Text, obj11);
+  tmp16Result = closure_9(sourcePage(5919).Text, obj11);
   let obj = { status: constants2.NONE };
   let obj3 = {
     textState,

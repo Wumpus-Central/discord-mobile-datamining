@@ -529,7 +529,7 @@ export function createActivityRichPresenceInviteEmbed(message, channel, forcedTh
                     obj12.label = intl10.string(tmp4(1113).t.KC26NR);
                     obj16 = obj12;
                   } else if (isAskToJoin) {
-                    const obj13 = { label: "Path", disabled: null, footerLabel: "x-sm" };
+                    const obj13 = { label: "Path", disabled: null, footerLabel: null };
                     const intl9 = tmp4(1113).intl;
                     const obj14 = { username: message.author.globalName, appName: name_override };
                     obj13.footerLabel = intl9.formatToPlainString(tmp4(1113).t.gYVkSW, obj14);
@@ -543,7 +543,7 @@ export function createActivityRichPresenceInviteEmbed(message, channel, forcedTh
                         obj16 = obj15;
                       }
                     }
-                    obj16 = { label: "Path", disabled: null, footerLabel: "x-sm" };
+                    obj16 = { label: "Path", disabled: null, footerLabel: null };
                     const intl7 = tmp4(1113).intl;
                     obj16.footerLabel = intl7.string(tmp4(1113).t.OAB5TK);
                   }
@@ -720,14 +720,14 @@ export function createActivityRichPresenceInviteEmbed(message, channel, forcedTh
             gradientColors: 0,
             iconSrc: null,
             isPlatformSupported: "Array",
-            isSpotifyParty: "channelId",
-            maxPartySize: "forEach",
-            partyMemberAvatarURIs: "mode",
-            partySizeText: null,
-            platformIconKeys: null,
-            coverImageUrl: 242.646,
-            detailsText: null,
-            title: null,
+            isSpotifyParty: "__d",
+            maxPartySize: "paddingHorizontal",
+            partyMemberAvatarURIs: "__initData",
+            partySizeText: "l30_rank",
+            platformIconKeys: "SCAN_QR_CODE",
+            coverImageUrl: "JS_DAY_TO_DAY_OF_WEEK",
+            detailsText: "onprocessinginstruction",
+            title: "l30_rank",
           };
           const intl = tmp4(1113).intl;
           obj20.headerText = intl.string(tmp4(1113).t.pkq6Vq);

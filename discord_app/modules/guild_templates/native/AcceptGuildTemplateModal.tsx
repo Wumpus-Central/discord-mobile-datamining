@@ -121,7 +121,7 @@ function ConnectedAcceptGuildTemplate(code) {
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
-let obj2 = { container: { flex: 1, marginTop: fn(5892).NAV_BAR_HEIGHT } };
+let obj2 = { container: { flex: 1, marginTop: fn(5882).NAV_BAR_HEIGHT } };
 let closure_10 = createStyles.createStyles(obj2);
 const ACCEPT_GUILD_TEMPLATE = "ACCEPT_GUILD_TEMPLATE";
 const size = fn(2);

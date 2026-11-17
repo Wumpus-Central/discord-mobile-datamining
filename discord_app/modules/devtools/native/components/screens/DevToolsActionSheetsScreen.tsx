@@ -106,7 +106,7 @@ let items = [
     description: "Shows safety warning for inappropriate conversations",
     show() {
       return ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(18371, dependencyMap.paths),
+        asyncRequireImpl(18373, dependencyMap.paths),
         {
           warningId: "test-warning-123",
           warningType: "inappropriate_conversation",
@@ -136,7 +136,7 @@ export default function DevToolsActionSheetsScreen() {
   }, items);
   const obj2 = { spacing: 16, children: null };
   const obj3 = { children: null };
-  const items1 = [closure_7(selectedType(5929).Text, { variant: "heading-lg/medium", children: "Action Sheets" })];
+  const items1 = [closure_7(selectedType(5919).Text, { variant: "heading-lg/medium", children: "Action Sheets" })];
   const obj4 = {
     description: "Tap an option to launch the action sheet immediately",
     hasIcons: false,
@@ -150,6 +150,6 @@ export default function DevToolsActionSheetsScreen() {
   items1[1] = closure_7(selectedType(7746).TableRowGroup, obj4);
   obj3.children = items1;
   obj2.children = closure_8(selectedType(7445).Card, obj3);
-  obj.children = closure_7(selectedType(6337).Stack, obj2);
+  obj.children = closure_7(selectedType(6327).Stack, obj2);
   return closure_7(closure_6, obj);
 }

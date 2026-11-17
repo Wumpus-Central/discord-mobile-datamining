@@ -592,7 +592,7 @@ export default function PremiumNitroHome(onClose) {
   const tmpResult21 = require("usePromotionMarketingSurface");
   obj12.source = navigation(15329);
   const items10 = [
-    closure_16(navigation(6020), obj12),
+    closure_16(navigation(6010), obj12),
     closure_16(NitroHomeHeader, { onClose: onClose.onClose, subscription: stateFromStores1 }),
     ,
     ,
@@ -618,7 +618,7 @@ export default function PremiumNitroHome(onClose) {
   obj14.children = items11;
   items10[3] = closure_17(sharedValue, obj14);
   const obj16 = { style: animatedStyle, onLayout: callback, children: null };
-  const tmp6Result3 = navigation(6020);
+  const tmp6Result3 = navigation(6010);
   const items12 = [
     closure_16(sharedValue, {
       style: tmp5.segmentedControlActual,
@@ -640,7 +640,7 @@ export default function PremiumNitroHome(onClose) {
     const obj19 = { height: tmp12, zIndex: 2 };
     items13[1] = obj19;
     obj18.style = items13;
-    tmp24Result5 = closure_16(tmp6(5893), obj18);
+    tmp24Result5 = closure_16(tmp6(5883), obj18);
   }
   items12[1] = tmp24Result5;
   const obj17 = {
@@ -676,8 +676,8 @@ export default function PremiumNitroHome(onClose) {
       tmp47 = closure_20;
     }
     obj22.tintColor = tmp47;
-    tmp24Result6 = closure_16(tmp6(5905), obj22);
-    const tmp6Result4 = tmp6(5905);
+    tmp24Result6 = closure_16(tmp6(5895), obj22);
+    const tmp6Result4 = tmp6(5895);
   }
   items12[2] = tmp24Result6;
   obj16.children = items12;

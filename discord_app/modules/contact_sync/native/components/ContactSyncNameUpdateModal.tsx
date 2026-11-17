@@ -29,10 +29,10 @@ function ContactSyncNameInputScreen() {
       const obj7 = { text: null, variant: "critical" };
       const intl = closure_0(1113).intl;
       obj7.text = intl.string(closure_0(1113).t.R0RpRX);
-      tmp3(6015).open("ERROR_GENERIC_TITLE", obj7);
+      tmp3(6005).open("ERROR_GENERIC_TITLE", obj7);
       closure_129_0(false);
       c4 = 3;
-      tmp3(6015);
+      tmp3(6005);
     } else if (arg0 === 1) {
       c4 = 3;
       throw value;
@@ -84,7 +84,7 @@ let obj2 = {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
-    paddingTop: fn(5892).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(5882).NAV_BAR_HEIGHT + 32,
   },
 };
 let closure_10 = createStyles.createStyles(obj2);

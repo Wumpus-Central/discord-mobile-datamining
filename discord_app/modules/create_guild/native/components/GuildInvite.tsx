@@ -88,7 +88,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5306);
 let obj2 = {
   container: {
-    marginTop: fn(5892).NAV_BAR_HEIGHT,
+    marginTop: fn(5882).NAV_BAR_HEIGHT,
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
     alignItems: "center",
@@ -107,7 +107,7 @@ let obj2 = {
   separator: null,
 };
 let obj3 = {
-  marginTop: fn(5892).NAV_BAR_HEIGHT,
+  marginTop: fn(5882).NAV_BAR_HEIGHT,
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   alignItems: "center",

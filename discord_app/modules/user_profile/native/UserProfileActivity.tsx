@@ -765,7 +765,7 @@ function VoiceCallActivityCard(arg0) {
   dependencyMap = undefined;
   ({ isInChannel, style } = arg0);
   const tmp = closure_24();
-  const tmp5 = stateFromStores(5954)(channel);
+  const tmp5 = stateFromStores(5944)(channel);
   const tmp4 = stateFromStores(15743)(channel);
   items = [GuildStore];
   stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
@@ -845,7 +845,7 @@ function VoiceCallActivityCard(arg0) {
       obj12.children = closure_21(tmp2(10863), obj13);
       const items4 = [closure_21(closure_7, obj12), tmp5];
       obj11.children = items4;
-      obj9.children = closure_22(channel(5929).Text, obj11);
+      obj9.children = closure_22(channel(5919).Text, obj11);
       let tmp13Result = closure_21(channel(7428).PressableOpacity, obj9);
     } else {
       const obj14 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
@@ -854,7 +854,7 @@ function VoiceCallActivityCard(arg0) {
       obj15.children = closure_21(tmp2(10863), obj16);
       const items5 = [closure_21(closure_7, obj15), tmp5];
       obj14.children = items5;
-      tmp13Result = closure_22(channel(5929).Text, obj14);
+      tmp13Result = closure_22(channel(5919).Text, obj14);
     }
     const items6 = [tmp13Result];
     let tmp18Result2 = null;
@@ -881,7 +881,7 @@ function VoiceCallActivityCard(arg0) {
       const intl6 = channel(1113).intl;
       const obj20 = { guildName: stateFromStores.name };
       obj19.children = intl6.format(channel(1113).t["hq/Qze"], obj20);
-      obj17.children = closure_21(channel(5929).Text, obj19);
+      obj17.children = closure_21(channel(5919).Text, obj19);
       tmp18Result2 = closure_21(channel(7428).PressableOpacity, obj17);
     }
     items6[1] = tmp18Result2;

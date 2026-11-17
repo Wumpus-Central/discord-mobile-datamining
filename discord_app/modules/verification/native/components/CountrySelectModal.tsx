@@ -20,7 +20,7 @@ export default function CountrySelectModal() {
     obj2.render = function render() {
       return closure_1_4(closure_1_1(dependencyMap[5]), {
         onClose() {
-          return closure_1_1(6848).pop();
+          return closure_1_1(6838).pop();
         },
         onCountrySelected(countryCode) {
           return closure_1_1(7820).setCountryCode(countryCode);

@@ -66,7 +66,7 @@ export function EmojiGrid(numberToShow) {
   const obj2 = doNotDisplayEmojiIds(11301);
   const tmp = doNotDisplayEmojiIds;
   const arr4 = obj(11313)(substr1, num2);
-  return jsx(tmp(6337).Stack, {
+  return jsx(tmp(6327).Stack, {
     spacing: 8,
     align: "center",
     style: obj.emojiGridContainer,

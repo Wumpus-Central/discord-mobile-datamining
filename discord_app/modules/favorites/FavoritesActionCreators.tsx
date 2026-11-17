@@ -810,8 +810,8 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                     const intl2 = closure_0(1113).intl;
                     const obj5 = { count: limit };
                     obj4.body = intl2.formatToPlainString(closure_0(1113).t.JaIyFi, obj5);
-                    closure_1(6268).show(obj4);
-                    const tmp4Result2 = closure_1(6268);
+                    closure_1(6258).show(obj4);
+                    const tmp4Result2 = closure_1(6258);
                   }
                   return false;
                 } else {
@@ -1125,8 +1125,8 @@ export function setFavoritesAutoAddJoinedThreads(autoAdd) {
               const intl2 = util.intl;
               const obj2 = { count: tmp14.limit };
               obj.body = intl2.formatToPlainString(util.t.JaIyFi, obj2);
-              tmp10(6268).show(obj);
-              const tmp10Result2 = tmp10(6268);
+              tmp10(6258).show(obj);
+              const tmp10Result2 = tmp10(6258);
             }
             str = tmp10(10947)(CATEGORY);
             obj5 = applyDefault;

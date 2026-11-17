@@ -27,7 +27,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-const TransportTypes = fn(6761).TransportTypes;
+const TransportTypes = fn(6751).TransportTypes;
 const Constants = fn(1072);
 ({
   ActivityActionTypes: closure_16,
@@ -40,7 +40,7 @@ const Constants = fn(1072);
 } = Constants);
 const FrameLayoutModes = fn(7020).FrameLayoutModes;
 const ActivityLayoutMode = fn(12706).ActivityLayoutMode;
-const MediaEngineContextTypes = fn(6075).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6065).MediaEngineContextTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
 class RPCServerManager {
@@ -660,7 +660,7 @@ prototype["loadServer"] = function loadServer() {
     let registerTransportResult = rpcServer.registerTransport(item10017);
     continue;
   }
-  const values = Object.values(expandedHeight);
+  const values = Object.values(closure_1_19);
   const iter = values[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

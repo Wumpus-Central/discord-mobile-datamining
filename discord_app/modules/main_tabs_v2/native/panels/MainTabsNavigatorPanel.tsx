@@ -85,11 +85,11 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(18716);
+        obj = obj(18718);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(5501).dismissKeyboard();
-        const objResult = obj(5501);
+        obj(5491).dismissKeyboard();
+        const objResult = obj(5491);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;

@@ -151,7 +151,7 @@ function trackPrivateCallButtonClicked(button_name, channel_id) {
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, ComponentActions: map1, NOOP: closure_14 } = Constants);
 const AgeGateSource = fn(1097).AgeGateSource;
-const NativePermissionTypes = fn(6902).NativePermissionTypes;
+const NativePermissionTypes = fn(6892).NativePermissionTypes;
 const jsx = fn(21).jsx;
 let c18 = "voice-channel";
 let closure_21 = {
@@ -270,11 +270,11 @@ export function handleJoinCall(channel) {
           JOIN_CALL = voiceChannel.JOIN_CALL;
         }
         obj2(JOIN_CALL, closure_128_0);
-        tmp2(5501).dismissKeyboard();
-        obj2 = v1(6935);
+        tmp2(5491).dismissKeyboard();
+        obj2 = v1(6925);
         voiceChannel = obj2.selectVoiceChannel(closure_128_0.id, closure_128_1);
         dependencyMap = 3;
-        const obj3 = tmp2(5501);
+        const obj3 = tmp2(5491);
       } catch (tmp21) {
         dependencyMap = tmp;
         throw tmp21;
@@ -348,7 +348,7 @@ export function handleStartCall(channel) {
           START_CALL = constants.START_CALL;
         }
         trackPrivateCallButtonClicked(START_CALL, closure_129_0);
-        tmp3(5501).dismissKeyboard();
+        tmp3(5491).dismissKeyboard();
         let isFriendResult = closure_129_0.type !== constants.DM;
         if (!isFriendResult) {
           isFriendResult = friend.isFriend(closure_129_0.getRecipientId());
@@ -373,7 +373,7 @@ export function handleStartCall(channel) {
           call(id, closure_129_1, tmp35, tmp32Result);
         }
         c3 = 3;
-        const obj2 = tmp3(5501);
+        const obj2 = tmp3(5491);
       } catch (tmp43) {
         c3 = tmp;
         throw tmp43;
@@ -455,7 +455,7 @@ export function handleRedesignGroupDMCall(id) {
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
-        tmp4(5501).dismissKeyboard();
+        tmp4(5491).dismissKeyboard();
         const tmp11 = v1(8136);
         const call = tmp11.call;
         id = closure_128_0.id;
@@ -465,7 +465,7 @@ export function handleRedesignGroupDMCall(id) {
           call(id, closure_128_1, true);
         }
         dependencyMap = 3;
-        const obj2 = tmp4(5501);
+        const obj2 = tmp4(5491);
       } catch (tmp18) {
         dependencyMap = tmp;
         throw tmp18;
@@ -530,9 +530,9 @@ export function handleRedesignJoinCall(id) {
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
-        tmp4(5501).dismissKeyboard();
-        const obj2 = tmp4(5501);
-        const voiceChannel = v1(6935).selectVoiceChannel(closure_128_0.id, closure_128_1);
+        tmp4(5491).dismissKeyboard();
+        const obj2 = tmp4(5491);
+        const voiceChannel = v1(6925).selectVoiceChannel(closure_128_0.id, closure_128_1);
         dependencyMap = 3;
         return { value: "HermesInternal", done: null };
       } catch (tmp17) {

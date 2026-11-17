@@ -89,7 +89,7 @@ export default function TermsFieldList(rules) {
   const intl = rules(1113).intl;
   obj2.children = intl.string(rules(1113).t.prJqwT);
   items = [
-    closure_5(rules(5929).Text, obj2),
+    closure_5(rules(5919).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {

@@ -52,12 +52,12 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
             function checkpointResponseFromServer(body) {
               let statsFromServerResult = null;
               if (null != body.stats) {
-                statsFromServerResult = closure_1_0(6747).statsFromServer(body.stats);
-                const obj = closure_1_0(6747);
+                statsFromServerResult = closure_1_0(6737).statsFromServer(body.stats);
+                const obj = closure_1_0(6737);
               }
               const obj4 = {
                 stats: statsFromServerResult,
-                globalStats: closure_1_0(6747).globalStatsFromServer(body.global_stats),
+                globalStats: closure_1_0(6737).globalStatsFromServer(body.global_stats),
                 character: null,
                 compactAssets: null,
                 availability: null,

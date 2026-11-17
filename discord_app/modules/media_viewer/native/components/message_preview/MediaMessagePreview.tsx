@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
-import LegacyBaseButton from "../../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05588_LegacyBaseButton.js";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";

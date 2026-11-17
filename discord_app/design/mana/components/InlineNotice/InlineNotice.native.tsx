@@ -14,7 +14,7 @@ function NoticeMessageList(children) {
   dependencyMap = tmp;
   obj = { style: tmp.stack, children: null };
   const items1 = [
-    closure_5(variant(5929).Text, { variant, color, children: children.intro }),
+    closure_5(variant(5919).Text, { variant, color, children: children.intro }),
     closure_5(View, {
       accessibilityRole: "list",
       style: tmp.stack,
@@ -75,14 +75,14 @@ let obj3 = {
   typeLabel: _modDef2202["7vL/d/"],
 };
 obj.info = {
-  Icon: fn(6037).CircleInformationIcon,
+  Icon: fn(6027).CircleInformationIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
   border: nativeDefault.colors.INLINENOTICE_BORDER_INFO,
   typeLabel: _modDef2202.BReS7U,
 };
 let obj4 = {
-  Icon: fn(6037).CircleInformationIcon,
+  Icon: fn(6027).CircleInformationIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
   border: nativeDefault.colors.INLINENOTICE_BORDER_INFO,
@@ -95,7 +95,7 @@ obj.success = {
   border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE,
   typeLabel: _modDef2202["1MXXPf"],
 };
-const TextVariantsFlat = fn(5930).TextVariantsFlat;
+const TextVariantsFlat = fn(5920).TextVariantsFlat;
 let found = TextVariantsFlat.find((name) => "body-sm/normal" === name.name);
 let lineHeight;
 if (found != null) {

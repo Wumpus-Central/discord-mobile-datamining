@@ -382,8 +382,8 @@ export default function NativeVideo(ref) {
       str2 = str4;
     }
     obj8.resizeMode = str2;
-    tmp25Result = tmp25(tmp26(6020), obj8);
-    const tmp26Result = tmp26(6020);
+    tmp25Result = tmp25(tmp26(6010), obj8);
+    const tmp26Result = tmp26(6010);
   }
   items2[1] = tmp25Result;
   obj5.children = items2;

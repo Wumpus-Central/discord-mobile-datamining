@@ -192,7 +192,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
           let obj3 = { id, name: id };
           obj2.emoji = obj3;
           obj2.userId = userId;
-          obj2.reactionType = channelId(5920).ReactionTypes.VOTE;
+          obj2.reactionType = channelId(5910).ReactionTypes.VOTE;
           dispatchResult = obj.dispatch(obj2);
           continue;
         }

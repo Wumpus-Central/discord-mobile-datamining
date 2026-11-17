@@ -680,7 +680,7 @@ prototype["render"] = function render() {
   obj4.border = str3;
   obj4.onPress = onHeaderClick;
   const obj5 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(20494), { action: log.action }), , ,];
+  const items2 = [closure_14(user(20497), { action: log.action }), , ,];
   const obj7 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -775,7 +775,7 @@ prototype["render"] = function render() {
   source = tmp9Result6.ensureAvatarSource(tmp9Result7.makeSource(tmp9(1417).getAutomodAvatarURL()));
   const tmp9Result8 = tmp9(1417);
 };
-AuditLog.contextType = fn(5377).ThemeContext;
+AuditLog.contextType = fn(5367).ThemeContext;
 let items3 = [ThemeStore];
 let obj7 = { color: nativeDefault.unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
 size = fn(2);

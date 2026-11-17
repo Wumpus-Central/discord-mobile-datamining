@@ -74,7 +74,7 @@ function GuildDirectoryEditDescription(entry) {
   };
   const intl = entry(1113).intl;
   obj4.children = intl.format(entry(1113).t.w9tsNk, { guildName: entry.name });
-  obj3.children = closure_7(entry(5929).Text, obj4);
+  obj3.children = closure_7(entry(5919).Text, obj4);
   items = [closure_7(closure_5, obj3)];
   let obj6 = {
     onSubmit(arg0, arg1) {
@@ -106,7 +106,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5306);
 let obj2 = {
-  safeArea: { marginTop: fn(5892).NAV_BAR_HEIGHT, flex: 1 },
+  safeArea: { marginTop: fn(5882).NAV_BAR_HEIGHT, flex: 1 },
   container: { flex: 1 },
   title: { marginBottom: 8, textAlign: "center" },
   header: { alignItems: "center", justifyContent: "center", padding: 16 },

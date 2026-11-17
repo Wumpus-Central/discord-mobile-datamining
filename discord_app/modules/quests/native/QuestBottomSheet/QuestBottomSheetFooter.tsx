@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
-import QuestTypes from "../../QuestTypes.tsx";
-import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import QuestTypes from "../../QuestTypes.tsx";
+import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import QuestUtils from "../QuestUtils.native.tsx";
 import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
@@ -341,7 +341,7 @@ function AnimatedFooter(arg0) {
   return closure_11(View, obj4);
 }
 const View = fn(17).View;
-let closure_9 = fn(5567).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_9 = fn(5557).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
@@ -462,12 +462,12 @@ export default function QuestBottomSheetFooter(quest) {
             tmp23 = obj10;
           }
           const merged2 = Object.assign(tmp23);
-          tmp40Result4 = closure_10(tmp2(5936).Button, obj15);
+          tmp40Result4 = closure_10(tmp2(5926).Button, obj15);
           const tmp2Result2 = tmp2(10128);
         } else {
           if (
             _slicedToArray(obj3.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] ===
-            tmp2(5341).TaskPlatformScreen.CONSOLE
+            tmp2(6957).TaskPlatformScreen.CONSOLE
           ) {
             if (!isQuestProgressing) {
               const obj16 = {

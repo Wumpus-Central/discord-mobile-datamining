@@ -136,7 +136,7 @@ export function ConjureAllowedHostsSetting(projectId) {
         obj2.onPress = function onPress() {
           return ConjureHostApproval.removeAllowedHost(projectId, closure_0);
         };
-        obj.trailing = closure_1_4(projectId(5936).Button, obj2);
+        obj.trailing = closure_1_4(projectId(5926).Button, obj2);
         return closure_1_4(projectId(7443).TableRow, obj, label);
       });
     }

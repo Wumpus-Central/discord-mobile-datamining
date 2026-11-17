@@ -165,7 +165,7 @@ export default function GameProfileNavigationHeader(game) {
       const obj8 = { uri: memo };
       obj7.source = obj8;
       obj7.style = tmp.icon;
-      tmp21Result = closure_6(tmp4(6020), obj7);
+      tmp21Result = closure_6(tmp4(6010), obj7);
     }
     const items7 = [tmp21Result, ,];
     const obj9 = { style: tmp.titleContainer, children: null };
@@ -175,7 +175,7 @@ export default function GameProfileNavigationHeader(game) {
       lineClamp: 1,
       children: name,
     };
-    const items8 = [closure_6(tmp2(5929).Heading, obj10)];
+    const items8 = [closure_6(tmp2(5919).Heading, obj10)];
     let l30Rank;
     if (game != null) {
       l30Rank = game.l30Rank;

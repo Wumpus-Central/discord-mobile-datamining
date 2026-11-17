@@ -384,8 +384,8 @@ let obj = {
   activeBrand: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
-obj.buttonWrapper = { maxHeight: fn(5942).SMALL_BUTTON_HEIGHT + fn(5942).SMALL_BUTTON_PADDING };
-let obj4 = { maxHeight: fn(5942).SMALL_BUTTON_HEIGHT + fn(5942).SMALL_BUTTON_PADDING };
+obj.buttonWrapper = { maxHeight: fn(5932).SMALL_BUTTON_HEIGHT + fn(5932).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(5932).SMALL_BUTTON_HEIGHT + fn(5932).SMALL_BUTTON_PADDING };
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
 let closure_11 = { code: "(function ChatInputActionsTsx1(){return{opacity:1};})" };

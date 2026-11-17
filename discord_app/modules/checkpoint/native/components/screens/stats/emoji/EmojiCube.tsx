@@ -55,7 +55,7 @@ let obj2 = {
     width: 200,
     height: 200,
     borderWidth: 2,
-    borderColor: fn(6377).CHECKPOINT_PRIMARY,
+    borderColor: fn(6367).CHECKPOINT_PRIMARY,
     overflow: "hidden",
   },
   customEmoji: { width: 196, height: 196 },

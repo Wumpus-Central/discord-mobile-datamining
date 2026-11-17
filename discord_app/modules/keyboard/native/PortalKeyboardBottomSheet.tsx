@@ -6,7 +6,7 @@ import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import BottomSheetModal from "../../../../_runtime/05570_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05560_BottomSheetModal.js";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import isChannelFocused from "../../panels/isChannelFocused.native.tsx";
 import native from "../../../design/components/experimental/native.tsx";

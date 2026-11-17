@@ -18,12 +18,12 @@ function ConjurePublishBlockedSheet(onConfirm) {
   };
   const obj4 = { style: tmp.content, children: null };
   items = [
-    closure_4(onConfirm(5929).Text, {
+    closure_4(onConfirm(5919).Text, {
       variant: "body-md/normal",
       color: "text-muted",
       children: conjurePublishBlockedCopy.body,
     }),
-    closure_4(onConfirm(5936).Button, {
+    closure_4(onConfirm(5926).Button, {
       variant: "primary",
       text: conjurePublishBlockedCopy.action,
       onPress() {
@@ -40,7 +40,7 @@ function ConjurePublishBlockedSheet(onConfirm) {
       ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishBlockedSheet);
     }
     const obj7 = { variant: "secondary", text: conjurePublishBlockedCopy.cancel, onPress: close };
-    tmp5Result = closure_4(tmp2(5936).Button, obj7);
+    tmp5Result = closure_4(tmp2(5926).Button, obj7);
   }
   items[2] = tmp5Result;
   obj4.children = items;

@@ -109,7 +109,7 @@ export default function CommandOptionView(option) {
         color: "text-subtle",
         children: option.displayName,
       };
-      hasItem1 = closure_5(tmp2(5929).Text, obj7);
+      hasItem1 = closure_5(tmp2(5919).Text, obj7);
     }
     const items2 = [hasItem1, , ,];
     const obj8 = {
@@ -140,7 +140,7 @@ export default function CommandOptionView(option) {
       color: "text-muted",
       children: option.displayDescription,
     };
-    items2[2] = closure_5(tmp2(5929).Text, obj9);
+    items2[2] = closure_5(tmp2(5919).Text, obj9);
     if (hasItem) {
       const obj10 = {
         collapsable: false,
@@ -155,7 +155,7 @@ export default function CommandOptionView(option) {
         color: "text-feedback-critical",
         children: optionValidationResults[option.name].error,
       };
-      items3[1] = closure_5(tmp2(5929).Text, obj11);
+      items3[1] = closure_5(tmp2(5919).Text, obj11);
       obj10.children = items3;
       hasItem = closure_6(_modDef1655.View, obj10);
     }

@@ -259,17 +259,17 @@ export default function MessageRequestList(goToMessageRequestPreview) {
   let data;
   const tmp = closure_9();
   const bottom = data(1630)().bottom;
-  data = data(19748)();
-  dependencyMap = goToMessageRequestPreview(19750).useListHasSingleMessageRequest();
-  let obj = goToMessageRequestPreview(19750);
+  data = data(19750)();
+  dependencyMap = goToMessageRequestPreview(19752).useListHasSingleMessageRequest();
+  let obj = goToMessageRequestPreview(19752);
   const tmp2 = data;
   const isRestricted = goToMessageRequestPreview(14871).useIsMessageRequestRestrictedViewer();
   if (0 === data.length) {
     const obj3 = { bodyText: null };
     const intl2 = tmp4(1113).intl;
     obj3.bodyText = intl2.string(tmp4(1113).t.SXrqTf);
-    let tmp9Result = closure_7(tmp2(19753), obj3);
-    const tmp2Result = tmp2(19753);
+    let tmp9Result = closure_7(tmp2(19755), obj3);
+    const tmp2Result = tmp2(19755);
   } else {
     items = [tmp.list];
     let num = 0;
@@ -320,7 +320,7 @@ export default function MessageRequestList(goToMessageRequestPreview) {
     const intl = tmp4(1113).intl;
     const obj9 = { pendingRequestNumber: data.length };
     obj8.children = intl.format(tmp4(1113).t.evH4Yb, obj9);
-    obj7.children = closure_7(tmp4(5929).Text, obj8);
+    obj7.children = closure_7(tmp4(5919).Text, obj8);
     obj4.ListHeaderComponent = closure_7(closure_5, obj7);
     tmp9Result = closure_7(tmp4(7888).FlashList, obj4);
     tmp4Result = tmp4(1380);

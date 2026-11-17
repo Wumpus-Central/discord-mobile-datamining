@@ -28,7 +28,7 @@ let obj = {
   gradient: null,
   image: null,
 };
-let prop = fn(5929).TextStyleSheet["body-md/semibold"];
+let prop = fn(5919).TextStyleSheet["body-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;

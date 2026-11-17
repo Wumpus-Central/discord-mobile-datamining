@@ -5,7 +5,7 @@ import utils_ColorUtils from "../../../../../discord_common/js/shared/utils/Colo
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import client_themes_ClientThemesUtils from "../../../client_themes/native/ClientThemesUtils.tsx";
 import useChatLayoutDefault from "../../../chat/native/useChatLayout.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useYouBarTotalHeight from "hooks/useYouBarTotalHeight.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBack
 require = fn;
 const View = fn(17).View;
 let closure_5 = fn(17701).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(19060).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(19062).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5306);

@@ -34,7 +34,7 @@ obj2.container = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(17965).SHEET_CONTENT_MAX_WIDTH };
+obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(17967).SHEET_CONTENT_MAX_WIDTH };
 let obj4 = {
   flex: 1,
   paddingTop: nativeDefault.space.PX_4,
@@ -100,8 +100,8 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
       {
         color,
         onSelect(arg0) {
-          const result = onSelectColor(5554).triggerHapticFeedback(
-            onSelectColor(5554).HapticFeedbackTypes.IMPACT_MEDIUM,
+          const result = onSelectColor(5544).triggerHapticFeedback(
+            onSelectColor(5544).HapticFeedbackTypes.IMPACT_MEDIUM,
           );
           closure_1_4(arg0);
         },
@@ -135,7 +135,7 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
   const intl3 = onSelectColor(1113).intl;
   obj6.text = intl3.string(onSelectColor(1113).t.XqMe3N);
   obj6.onPress = callback2;
-  obj5.trailing = closure_8(onSelectColor(5936).Button, obj6);
+  obj5.trailing = closure_8(onSelectColor(5926).Button, obj6);
   obj4.header = closure_8(DisplayNameStylesSheetHeaderDefault, obj5);
   const obj7 = { style: tmp.container, children: null };
   const obj8 = { style: tmp.contentContainer, children: null };
@@ -177,9 +177,9 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
   const intl4 = onSelectColor(1113).intl;
   obj10.text = intl4.string(onSelectColor(1113).t.yBZMsQ);
   obj10.onPress = onPress;
-  items6[1] = closure_8(onSelectColor(5936).Button, obj10);
+  items6[1] = closure_8(onSelectColor(5926).Button, obj10);
   obj8.children = items6;
   obj7.children = closure_9(closure_5, obj8);
   obj4.children = closure_8(closure_5, obj7);
-  return closure_8(onSelectColor(5566).BottomSheet, obj4);
+  return closure_8(onSelectColor(5556).BottomSheet, obj4);
 }

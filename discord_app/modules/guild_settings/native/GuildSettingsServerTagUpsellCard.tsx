@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Powerups from "../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
-import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05883_LinearGradient.js";
 import GuildPowerupsActionCreators from "../../premium/powerups/GuildPowerupsActionCreators.tsx";
 import useGetGuildPowerupBannerImageDefault from "../../premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx";
 import GuildPowerupsImageDefault from "../../premium/powerups/native/GuildPowerupsImage.tsx";
@@ -107,25 +107,25 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   const obj11 = { variant: "heading-xl/semibold", color: "text-strong", style: tmp.centerText, children: null };
   const intl = tmp2(1113).intl;
   obj11.children = intl.string(guildId(1113).t["2QmKZ2"]);
-  const items6 = [closure_7(guildId(5929).Text, obj11)];
+  const items6 = [closure_7(guildId(5919).Text, obj11)];
   const obj12 = { variant: "body-sm/medium", color: "text-subtle", style: null, children: null };
   const items7 = [,];
   ({ centerText: arr8[0], body: arr8[1] } = tmp);
   obj12.style = items7;
   const intl2 = tmp2(1113).intl;
   obj12.children = intl2.string(guildId(1113).t.Tg0fDm);
-  items6[1] = closure_7(guildId(5929).Text, obj12);
+  items6[1] = closure_7(guildId(5919).Text, obj12);
   obj10.children = items6;
-  items5[1] = closure_8(guildId(6337).Stack, obj10);
+  items5[1] = closure_8(guildId(6327).Stack, obj10);
   const obj13 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1113).intl;
   obj13.text = intl3.string(guildId(1113).t.kMRDWs);
-  obj13.icon = closure_7(guildId(18936).BoostTier2Icon, { color: "white" });
+  obj13.icon = closure_7(guildId(18938).BoostTier2Icon, { color: "white" });
   obj13.onPress = guildId.onUnlockPress;
-  items5[2] = closure_7(guildId(5936).Button, obj13);
+  items5[2] = closure_7(guildId(5926).Button, obj13);
   obj7.children = items5;
-  items4[3] = closure_8(guildId(6337).Stack, obj7);
+  items4[3] = closure_8(guildId(6327).Stack, obj7);
   obj3.children = items4;
   obj2.children = closure_8(closure_4, obj3);
-  return closure_7(guildId(5377).ThemeContextProvider, obj2);
+  return closure_7(guildId(5367).ThemeContextProvider, obj2);
 }

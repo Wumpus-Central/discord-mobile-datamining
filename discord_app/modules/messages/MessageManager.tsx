@@ -250,7 +250,7 @@ function handleConnectionOpen() {
     if (null != channel1) {
       const id2 = channel1.id;
       const obj7 = matchPathCompat;
-      const obj2 = { path: expandedHeight.CHANNEL(":guild", ":channel", ":message"), exact: true };
+      const obj2 = { path: closure_1_19.CHANNEL(":guild", ":channel", ":message"), exact: true };
       const matchPathResult = obj7.matchPath(router_utils.getHistory().location.pathname, obj2);
       let message;
       if (matchPathResult != null) {
@@ -296,7 +296,7 @@ function loadSelectedChannelIfNecessary() {
           const obj6 = { guildId: channel.getGuildId(), channelId: null, messageId: null };
           ({ id: obj3.channelId, id: id2 } = channel);
           obj4 = matchPathCompat;
-          const obj8 = { path: expandedHeight.CHANNEL(":guild", ":channel", ":message"), exact: true };
+          const obj8 = { path: closure_1_19.CHANNEL(":guild", ":channel", ":message"), exact: true };
           const matchPathResult = obj4.matchPath(router_utils.getHistory().location.pathname, obj8);
           let message;
           if (matchPathResult != null) {

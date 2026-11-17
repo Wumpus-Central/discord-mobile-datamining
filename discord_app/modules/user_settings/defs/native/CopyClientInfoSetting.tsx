@@ -180,7 +180,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6929).ClipboardListIcon,
+  IconComponent: fn(6919).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(
       Promise.resolve({ default: ClientClientInfoActionSheet }),

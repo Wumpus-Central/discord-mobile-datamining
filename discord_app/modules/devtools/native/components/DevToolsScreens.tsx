@@ -34,7 +34,7 @@ const jsx = fn(21).jsx;
 const obj = {
   analytics: {
     headerTitle: "Analytics",
-    Icon: fn(6929).ClipboardListIcon,
+    Icon: fn(6919).ClipboardListIcon,
     render() {
       return jsx(DevToolsAnalyticsScreen.default, {});
     },
@@ -68,7 +68,7 @@ const obj = {
 };
 const obj2 = {
   headerTitle: "Analytics",
-  Icon: fn(6929).ClipboardListIcon,
+  Icon: fn(6919).ClipboardListIcon,
   render() {
     return jsx(DevToolsAnalyticsScreen.default, {});
   },
@@ -165,14 +165,14 @@ const obj8 = {
 };
 obj.designSystems = {
   headerTitle: "Design Systems",
-  Icon: fn(17881).PaintPaletteIcon,
+  Icon: fn(17883).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   },
 };
 const obj9 = {
   headerTitle: "Design Systems",
-  Icon: fn(17881).PaintPaletteIcon,
+  Icon: fn(17883).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   },
@@ -221,14 +221,14 @@ const obj12 = {
 };
 obj.otatest = {
   headerTitle: "OTA Test",
-  Icon: fn(6035).DownloadIcon,
+  Icon: fn(6025).DownloadIcon,
   render() {
     return jsx(DevToolsOTATestScreen.default, {});
   },
 };
 const obj13 = {
   headerTitle: "OTA Test",
-  Icon: fn(6035).DownloadIcon,
+  Icon: fn(6025).DownloadIcon,
   render() {
     return jsx(DevToolsOTATestScreen.default, {});
   },
@@ -319,14 +319,14 @@ const obj19 = {
 };
 obj.toggles = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(17972).EyeDropperIcon,
+  Icon: fn(17974).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   },
 };
 const obj20 = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(17972).EyeDropperIcon,
+  Icon: fn(17974).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   },
@@ -389,28 +389,28 @@ const obj24 = {
 };
 obj.actionSheets = {
   headerTitle: "Action Sheets",
-  Icon: fn(18225).CompassIcon,
+  Icon: fn(18227).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   },
 };
 const obj25 = {
   headerTitle: "Action Sheets",
-  Icon: fn(18225).CompassIcon,
+  Icon: fn(18227).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   },
 };
 obj.accountLinking = {
   headerTitle: "Account Linking",
-  Icon: fn(6029).LinkIcon,
+  Icon: fn(6019).LinkIcon,
   render() {
     return jsx(DevToolsAccountLinkingScreen.default, {});
   },
 };
 const obj26 = {
   headerTitle: "Account Linking",
-  Icon: fn(6029).LinkIcon,
+  Icon: fn(6019).LinkIcon,
   render() {
     return jsx(DevToolsAccountLinkingScreen.default, {});
   },
@@ -446,7 +446,7 @@ const obj28 = {
 };
 obj29.displayNameEffectsBenchmark = {
   headerTitle: "Display Name Effects Benchmark",
-  Icon: fn(17881).PaintPaletteIcon,
+  Icon: fn(17883).PaintPaletteIcon,
   render() {
     return jsx(DevToolsDisplayNameEffectsBenchmarkScreen.default, {});
   },

@@ -117,7 +117,7 @@ function GuildBoostSlot(guildBoostSlot) {
       const obj6 = { variant: "body-md/medium", color: "control-brand-foreground", children: null };
       const intl2 = guildBoostSlot(1113).intl;
       obj6.children = intl2.string(guildBoostSlot(1113).t.jqqLb6);
-      obj5.children = closure_10(guildBoostSlot(5929).Text, obj6);
+      obj5.children = closure_10(guildBoostSlot(5919).Text, obj6);
       tmp6Result2 = closure_10(guildBoostSlot(7428).PressableOpacity, obj5);
     }
     obj3.action = tmp6Result2;
@@ -168,7 +168,7 @@ function UnusedGuildBoostSlots(unusedSlots) {
     const obj5 = { variant: "body-md/medium", color: "text-link", children: null };
     const intl2 = found(1113).intl;
     obj5.children = intl2.string(found(1113).t["7KyPor"]);
-    obj4.children = closure_10(found(5929).Text, obj5);
+    obj4.children = closure_10(found(5919).Text, obj5);
     obj2.action = closure_10(found(7428).PressableOpacity, obj4);
     obj2.isLast = 0 === found.length;
     tmp4 = closure_10(GuildBoostSlotsInventoryRow, obj2);
@@ -265,7 +265,7 @@ function BoostedGuild(arg0) {
   }
   items2[1] = prop;
   obj7.style = items2;
-  const items3 = [closure_10(guildBoostSlots(6020), obj7), ,];
+  const items3 = [closure_10(guildBoostSlots(6010), obj7), ,];
   let tmp11Result = null;
   if (null != guildBannerSource) {
     const obj8 = { style: tmp.subscriptionImageOverlay };
@@ -281,7 +281,7 @@ function BoostedGuild(arg0) {
   obj5.children = items4;
   const items5 = [closure_11(View, obj5)];
   const obj9 = { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length };
-  const tmp13 = guildBoostSlots(6020);
+  const tmp13 = guildBoostSlots(6010);
   items5[1] = closure_10(View, {
     children: guildBoostSlots.map((guildBoostSlot, index) =>
       refs(
@@ -413,7 +413,7 @@ export default function GuildBoostSlotsInventory() {
         const intl = tmp3(1113).intl;
         obj7.children = intl.string(tmp3(1113).t.gB9oQ7);
         const items3 = [
-          closure_10(tmp3(5929).Text, obj7),
+          closure_10(tmp3(5919).Text, obj7),
           found.map((guildId) => refs(BoostedGuild, { guildId, guildBoostSlots: valueResult[guildId] }, guildId)),
         ];
         obj6.children = items3;

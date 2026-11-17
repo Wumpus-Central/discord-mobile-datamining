@@ -243,7 +243,7 @@ export default function Header(application) {
     result = "flags" in application;
   }
   if (result) {
-    result = tmp(2151).supportsEmbeddedSurface(application, tmp(5977).EmbeddedSurfaceType.MAIN);
+    result = tmp(2151).supportsEmbeddedSurface(application, tmp(5967).EmbeddedSurfaceType.MAIN);
     const tmpResult15 = tmp(2151);
   }
   dependencyMap = result;
@@ -285,7 +285,7 @@ export default function Header(application) {
       const obj11 = {
         size: "sm",
         variant: "secondary-overlay",
-        icon: tmp5(6030),
+        icon: tmp5(6020),
         onPress() {
           AnalyticsUtilsDefault.track(AnalyticEvents.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
             application_id: _undefined.id,

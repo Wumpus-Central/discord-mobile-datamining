@@ -26,7 +26,7 @@ function DCDChatList() {
   const obj = navigationTTIContentPainted(14197);
   obj3.children = closure_5(navigationTTIContentPainted(14204).TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj2.children = closure_5(ChatListNativeComponentDefault, obj3);
-  return closure_5(navigationTTIContentPainted(5598).GestureDetector, obj2);
+  return closure_5(navigationTTIContentPainted(5588).GestureDetector, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);

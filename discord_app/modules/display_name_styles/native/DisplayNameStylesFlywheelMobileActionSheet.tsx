@@ -63,7 +63,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   let enabled2;
   const ref = enabled2.useRef(null);
   const enabled = enabled2.useContext(markAsDismissed(5320).AccessibilityPreferencesContext).reducedMotion.enabled;
-  const isThemeDarkResult = markAsDismissed(5313).isThemeDark(ref(5547)());
+  const isThemeDarkResult = markAsDismissed(5313).isThemeDark(ref(5537)());
   const tmp6 = closure_11();
   let obj2 = markAsDismissed(5313);
   items = [UserStore];
@@ -103,7 +103,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
         markAsDismissed(7587).runAfterInteractions(() => {
           markAsDismissed(8604).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
             closure_1_0(constants.TAKE_ACTION);
-            const result = closure_2_0(5348).UNSAFE_markDismissibleContentAsDismissed(
+            const result = closure_2_0(5338).UNSAFE_markDismissibleContentAsDismissed(
               closure_2_0(5139).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK,
               { dismissAction: constants.INDIRECT_ACTION },
             );
@@ -123,7 +123,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj6 = { ref, onDismiss: callback2, startExpanded: true, handleDisabled: true, children: null };
   const obj7 = { style: tmp6.content, children: null };
   const items4 = [
-    closure_9(markAsDismissed(5901).ActionSheetHeaderBar, {
+    closure_9(markAsDismissed(5891).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
@@ -139,17 +139,17 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp14Result = enabled;
   if (enabled) {
-    tmp14Result = closure_9(tmp2(19810).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp14Result = closure_9(tmp2(19812).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp14Result];
   let tmp14Result2 = !enabled;
   if (!enabled) {
     const obj10 = { source: null, style: null, resizeMode: "contain" };
-    const obj11 = { uri: tmp4(19814) };
+    const obj11 = { uri: tmp4(19816) };
     obj10.source = obj11;
     obj10.style = tmp6.image;
-    tmp14Result2 = closure_9(tmp4(6020), obj10);
-    const tmp4Result = tmp4(6020);
+    tmp14Result2 = closure_9(tmp4(6010), obj10);
+    const tmp4Result = tmp4(6010);
   }
   items5[1] = tmp14Result2;
   obj9.children = items5;
@@ -163,7 +163,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   obj12.color = str2;
   const intl2 = tmp2(1113).intl;
   obj12.children = intl2.string(ref(3125).Uzms61);
-  items4[2] = closure_9(markAsDismissed(5929).Text, obj12);
+  items4[2] = closure_9(markAsDismissed(5919).Text, obj12);
   const obj13 = { variant: "body-lg/medium", style: tmp6.subtitle, color: null, children: null };
   if (isThemeDarkResult) {
     str = "text-overlay-light";
@@ -171,22 +171,22 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj14 = { bottom: true, children: null };
   obj13.color = str;
   obj13.children = stringResult;
-  items4[3] = closure_9(markAsDismissed(5929).Text, obj13);
+  items4[3] = closure_9(markAsDismissed(5919).Text, obj13);
   const obj15 = { style: tmp6.actions, children: null };
   const obj16 = { text: null, variant: "primary", size: "lg", onPress: null };
   const intl3 = tmp2(1113).intl;
   obj16.text = intl3.string(markAsDismissed(1113).t["4P5I8V"]);
   obj16.onPress = callback;
-  const items6 = [closure_9(markAsDismissed(5936).Button, obj16)];
+  const items6 = [closure_9(markAsDismissed(5926).Button, obj16)];
   const obj17 = { text: null, variant: "secondary", size: "lg", onPress: null };
   const intl4 = tmp2(1113).intl;
   obj17.text = intl4.string(markAsDismissed(1113).t.TulDPl);
   obj17.onPress = callback1;
-  items6[1] = closure_9(markAsDismissed(5936).Button, obj17);
+  items6[1] = closure_9(markAsDismissed(5926).Button, obj17);
   obj15.children = items6;
   items4[4] = closure_10(View, obj15);
   obj7.children = items4;
   obj14.children = closure_10(View, obj7);
   obj6.children = closure_9(markAsDismissed(7415).SafeAreaPaddingView, obj14);
-  return closure_9(markAsDismissed(5566).BottomSheet, obj6);
+  return closure_9(markAsDismissed(5556).BottomSheet, obj6);
 }

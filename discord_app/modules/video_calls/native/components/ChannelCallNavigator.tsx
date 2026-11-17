@@ -177,13 +177,13 @@ function MainCallScreen(channel) {
     };
   }, items);
   let obj = isConnectedToVoiceChannel(11007);
-  const isChannelContentGated = isConnectedToVoiceChannel(6838).useIsChannelContentGated(channel);
+  const isChannelContentGated = isConnectedToVoiceChannel(6828).useIsChannelContentGated(channel);
   const effect1 = noop.useEffect(() => {
     function dismissOAuthModal() {
       if (c0) {
-        id(6848).popWithKey(closure_2_11);
+        id(6838).popWithKey(closure_2_11);
         c0 = false;
-        const obj = id(6848);
+        const obj = id(6838);
       }
     }
     function showOAuth2Modal() {
@@ -260,15 +260,15 @@ function MainCallScreen(channel) {
       const ComponentDispatch = isConnectedToVoiceChannel(1108).ComponentDispatch;
       ComponentDispatch.unsubscribe(ComponentActions.SHOW_OAUTH2_MODAL, showOAuth2Modal);
       if (c0) {
-        id(6848).popWithKey(closure_2_11);
+        id(6838).popWithKey(closure_2_11);
         c0 = false;
-        const obj = id(6848);
+        const obj = id(6838);
       }
     };
   }, []);
   isConnectedToVoiceChannel(12971);
   if (isChannelContentGated) {
-    let obj3 = { onReturnToSafety: id(6848).pop, guildId: null, channelId: null };
+    let obj3 = { onReturnToSafety: id(6838).pop, guildId: null, channelId: null };
     ({ guild_id: obj6.guildId, id: obj6.channelId } = channel);
     let tmp14Result2 = closure_12(id(11980), obj3);
     let tmp11 = closure_12;
@@ -291,15 +291,15 @@ function MainCallScreen(channel) {
     tmp14Result2 = closure_12(closure_6, obj5);
     tmp11 = closure_12;
   }
-  let obj2 = isConnectedToVoiceChannel(6838);
-  const tmp21 = id(5488)();
+  let obj2 = isConnectedToVoiceChannel(6828);
+  const tmp21 = id(5478)();
   const tmp22 = id(12917);
   const tmp2Result = isConnectedToVoiceChannel(1380);
   const tmp23 = isConnectedToVoiceChannel(1380).isAndroid() || !isConnectedToVoiceChannel;
   return tmp11(tmp22, {
     forceHide: isConnectedToVoiceChannel(1380).isAndroid() || !isConnectedToVoiceChannel,
     showWhenParticipantOnScreen: !isConnectedToVoiceChannel,
-    children: tmp11(isConnectedToVoiceChannel(5377).ThemeContextProvider, { gradient: tmp21, children: tmp14Result2 }),
+    children: tmp11(isConnectedToVoiceChannel(5367).ThemeContextProvider, { gradient: tmp21, children: tmp14Result2 }),
   });
 }
 get_ActivityIndicator = fn(17);

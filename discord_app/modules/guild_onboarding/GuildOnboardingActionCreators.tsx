@@ -132,7 +132,7 @@ function _updateOnboardingResponses(c0, arg1) {
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, AnalyticsPages: closure_11, Endpoints: closure_12 } = Constants);
 const GuildMemberFlags = fn(5224).GuildMemberFlags;
-const ReadStateTypes = fn(6959).ReadStateTypes;
+const ReadStateTypes = fn(6949).ReadStateTypes;
 let obj = {
   selectOption(guildId, id, id2, selected) {
     let dispatch = GuildOnboardingPromptsStore.getOnboardingPrompt(id);
@@ -235,7 +235,7 @@ obj.completeOnboarding = function completeOnboarding(c0, c2) {
   const tmp2Result13 = items1(7084);
   const obj4 = {};
   const obj8 = AnalyticsUtilsDefault;
-  const merged = Object.assign(items1(6067).collectGuildAnalyticsMetadata(c0));
+  const merged = Object.assign(items1(6057).collectGuildAnalyticsMetadata(c0));
   obj4.step = dependencyMap.length - 1;
   let num2 = 0;
   if (null != tmp) {
@@ -255,7 +255,7 @@ obj.completeOnboarding = function completeOnboarding(c0, c2) {
   ({ connected: obj9.application_connections_connected, notConnected: obj9.application_connections_not_connected } =
     applicationConnectionState);
   obj8.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj4);
-  const tmp2Result14 = items1(6067);
+  const tmp2Result14 = items1(6057);
   const tmp2Result15 = items1(7874);
   tmp2Result15.ackGuildFeature(
     c0,

@@ -150,7 +150,7 @@ const prototype = function AcceptInviteManager() {
             inviteInstanceId,
           };
           ModalActionCreatorsDefault.pushLazy(
-            asyncRequireImpl(20161, dependencyMap.paths),
+            asyncRequireImpl(20164, dependencyMap.paths),
             obj4,
             ACCEPT_INVITE_MODAL_KEY,
           );

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
 import ButtonConstants from "../../../../../design/components/Button/native/ButtonConstants.native.tsx";
-import _modDef6024 from "../../../../../../_runtime/metro/06024__.js";
+import _modDef6014 from "../../../../../../_runtime/metro/06014__.js";
 import useScaledTextLineHeight from "../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import HeaderDebugOverlayDefault from "../../../../devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import _modDef7827 from "../../../../../../_runtime/metro/07827__.js";
@@ -49,7 +49,7 @@ let obj4 = {
   justifyContent: "space-between",
 };
 obj.headerPanelButtons = {
-  height: fn(5942).SMALL_BUTTON_HEIGHT,
+  height: fn(5932).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -65,7 +65,7 @@ let closure_11 = {
   code: "(function MessagesHeaderTsx1(){let[withSpring,scrollPosition,Reanimated3DefaultSpringConfig]=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0,Reanimated3DefaultSpringConfig)};})",
 };
 let obj5 = {
-  height: fn(5942).SMALL_BUTTON_HEIGHT,
+  height: fn(5932).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -182,7 +182,7 @@ export default noop.memo(function MessagesHeader(height) {
     grow: true,
     shrink: true,
     size: "sm",
-    icon: _modDef6024,
+    icon: _modDef6014,
     onPress: callback1,
     maxFontSizeMultiplier: 1,
     text: null,

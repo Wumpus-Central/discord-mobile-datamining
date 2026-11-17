@@ -75,9 +75,9 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   };
   const intl3 = tmp2(1113).intl;
   obj6.text = intl3.string(event(1113).t.TyCVIq);
-  obj5.children = closure_7(event(5936).Button, obj6);
+  obj5.children = closure_7(event(5926).Button, obj6);
   items[1] = closure_7(closure_5, obj5);
   obj3.children = items;
   obj2.children = closure_8(event(7415).SafeAreaPaddingView, obj3);
-  return closure_7(event(5566).BottomSheet, obj2);
+  return closure_7(event(5556).BottomSheet, obj2);
 }

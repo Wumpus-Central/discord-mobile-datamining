@@ -98,13 +98,13 @@ export function useHomeDrawerPeekHint(enablePeekHint, sharedValue8) {
       closure_11.current = setTimeout(() => {
         ref3.current = null;
         ref4.current = false;
-        const result = _undefined.set(c0(5939).withSpring(0, c0(18742).HOME_DRAWER_FLING_PHYSICS));
+        const result = _undefined.set(c0(5929).withSpring(0, c0(18744).HOME_DRAWER_FLING_PHYSICS));
         const current = ref.current;
         if (current != null) {
           current(first1.AUTO_DISMISS);
         }
         closure_1_8(false);
-        const obj = c0(5939);
+        const obj = c0(5929);
       }, 2500);
       const obj2 = { duration: 1500, easing };
     }, items1);

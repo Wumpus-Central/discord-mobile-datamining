@@ -15,7 +15,7 @@ function CreateGameInvitePostContent(parentChannel) {
   dependencyMap = undefined;
   let noMicTag;
   const tmp = closure_11();
-  const insets = tags(5913)({ includeKeyboardHeight: true }).insets;
+  const insets = tags(5903)({ includeKeyboardHeight: true }).insets;
   let availableTags = parentChannel.availableTags;
   if (availableTags == null) {
     availableTags = [];
@@ -87,7 +87,7 @@ function CreateGameInvitePostContent(parentChannel) {
   const obj6 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = parentChannel(1113).intl;
   obj6.children = intl2.string(tags(4067).tOsHsu);
-  items4[1] = closure_8(parentChannel(5929).Text, obj6);
+  items4[1] = closure_8(parentChannel(5919).Text, obj6);
   obj4.children = items4;
   const items5 = [closure_9(View, obj4), ,];
   const obj7 = { style: tmp.body, children: null };
@@ -113,7 +113,7 @@ function CreateGameInvitePostContent(parentChannel) {
     obj9.subLabel = joined;
     const obj10 = { style: tmp.tagsTrailing, children: null };
     const obj11 = { variant: "body-md/medium", color: "text-muted", children: tags.length };
-    obj10.children = closure_8(tmp9(5929).Text, obj11);
+    obj10.children = closure_8(tmp9(5919).Text, obj11);
     obj9.trailing = closure_8(View, obj10);
     obj9.onPress = callback1;
     tmp15Result = closure_8(tmp9(7443).TableRow, obj9);
@@ -136,7 +136,7 @@ function CreateGameInvitePostContent(parentChannel) {
     const obj14 = { variant: "body-sm/medium", color: "text-feedback-critical", children: null };
     const intl8 = tmp9(1113).intl;
     obj14.children = intl8.string(tmp9(1113).t.xPfNQi);
-    tmp15Result3 = closure_8(tmp9(5929).Text, obj14);
+    tmp15Result3 = closure_8(tmp9(5919).Text, obj14);
   }
   items6[2] = tmp15Result3;
   obj7.children = items6;
@@ -167,10 +167,10 @@ function CreateGameInvitePostContent(parentChannel) {
   obj19.loading = submitting;
   obj19.disabled = !canSubmit;
   obj19.onPress = submit;
-  items9[1] = closure_8(parentChannel(5936).Button, obj19);
+  items9[1] = closure_8(parentChannel(5926).Button, obj19);
   obj15.children = items9;
   obj18.children = closure_9(View, obj15);
-  items5[2] = closure_8(parentChannel(5916).LayerScope, obj18);
+  items5[2] = closure_8(parentChannel(5906).LayerScope, obj18);
   obj3.children = items5;
   return closure_9(View, obj3);
 }

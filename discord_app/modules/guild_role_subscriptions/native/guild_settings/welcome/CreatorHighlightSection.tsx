@@ -46,12 +46,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(20704)(guild_id, 3, 60);
+  const tmp4 = guild_id(20707)(guild_id, 3, 60);
   dependencyMap = tmp4;
   const hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp2(20653), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp2(20656), {}) };
     return closure_5(View, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;
@@ -62,7 +62,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj4 = { style: tmp.guildIcon, source: null };
     const obj5 = { uri: guildAvatarUrl };
     obj4.source = obj5;
-    const items1 = [closure_5(tmp2(6020), obj4)];
+    const items1 = [closure_5(tmp2(6010), obj4)];
     const obj6 = { style: tmp.cardHeaderContainer, children: null };
     const obj7 = {
       variant: "heading-sm/semibold",
@@ -110,7 +110,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       const obj13 = { style: tmp.premiumEmojisTitle, variant: "body-sm/medium", color: "text-default", children: null };
       const intl3 = tmp10(1113).intl;
       obj13.children = intl3.string(tmp10(1113).t.wg53L8);
-      const items4 = [closure_5(tmp10(5929).Text, obj13)];
+      const items4 = [closure_5(tmp10(5919).Text, obj13)];
       const obj14 = { style: null, children: null };
       const items5 = [,];
       ({ horizontalContainer: arr6[0], emojiContainer: arr6[1] } = tmp);
@@ -129,7 +129,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
         const obj15 = { style: tmp.emojiListItem, variant: "body-sm/semibold", color: "text-default", children: null };
         const _HermesInternal = HermesInternal;
         obj15.children = "+" + notShownEmojiCount;
-        tmp9Result2 = closure_5(tmp10(5929).Text, obj15);
+        tmp9Result2 = closure_5(tmp10(5919).Text, obj15);
       }
       items6[1] = tmp9Result2;
       obj14.children = items6;

@@ -423,7 +423,7 @@ export function usePremiumPerkCard() {
   const obj22 = { uri: _modDef10007 };
   obj24.termsLink = HelpdeskUtilsDefault.getArticleURL(NITRO_2_POINT_0.NITRO_2_POINT_0);
   obj23.children = intl37.format(tmp(1113).t["9Wv+8h"], obj24);
-  obj21.bodyComponent = closure_9(tmp(5929).Text, obj23);
+  obj21.bodyComponent = closure_9(tmp(5919).Text, obj23);
   obj4.xboxGamePass = obj21;
   return obj4;
 }

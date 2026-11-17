@@ -60,7 +60,7 @@ export default function CommandListSortButton(sortOrder) {
   };
   const obj2 = { style: tmp.button, children: null };
   items = [
-    closure_6(sortOrder(5929).Text, { variant: "body-sm/medium", color: "text-default", children: stringResult }),
+    closure_6(sortOrder(5919).Text, { variant: "body-sm/medium", color: "text-default", children: stringResult }),
     closure_6(sortOrder(10560).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(575).colors.TEXT_DEFAULT }),
   ];
   obj2.children = items;

@@ -22,7 +22,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-let closure_12 = fn(19202).useDockUserPlayingSoundboardId;
+let closure_12 = fn(19204).useDockUserPlayingSoundboardId;
 const VoicePanelDockConstants = fn(12009);
 ({ DOCK_FADE_TIMING: map1, DOCK_TILE_RADIUS, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
@@ -225,11 +225,11 @@ export function DockChannelIcon(streaming) {
   let channelId;
   let guildId;
   const tmp = closure_18();
-  const tmp4Result = guildId(19204)(channelId(575).Shadow.SHADOW_MEDIUM);
+  const tmp4Result = guildId(19206)(channelId(575).Shadow.SHADOW_MEDIUM);
   const context = noop.useContext(guildId(11984));
   channelId = context.channelId;
   guildId = context.guildId;
-  const tmp4 = guildId(19204);
+  const tmp4 = guildId(19206);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
@@ -267,7 +267,7 @@ export function DockChannelIcon(streaming) {
     obj3.style = items4;
     const obj5 = { streaming, children: null };
     const obj6 = { guild: stateFromStores, size: null, style: null };
-    const tmp2Result = tmp2(19205);
+    const tmp2Result = tmp2(19207);
     obj6.size = tmp5(7720).GuildIconSizes.SMALL_32;
     obj6.style = tmp.guildIconAsset;
     obj5.children = closure_15(tmp2(7720), obj6);
@@ -285,9 +285,9 @@ export function DockChannelIcon(streaming) {
       const obj9 = { streaming, children: null };
       const obj10 = { user: stateFromStores1, guildId: "Array", size: tmp5(1187).AvatarSizes.REFRESH_MEDIUM_32 };
       obj9.children = closure_15(tmp5(1187).Avatar, obj10);
-      obj7.children = closure_15(tmp2(19205), obj9);
+      obj7.children = closure_15(tmp2(19207), obj9);
       tmp13 = closure_15(View, obj7);
-      const tmp2Result4 = tmp2(19205);
+      const tmp2Result4 = tmp2(19207);
     }
   }
   return tmp13;
@@ -328,7 +328,7 @@ export function DockChannelTitle() {
   const obj2 = channelId(504);
   const items4 = [
     closure_15(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }),
-    closure_15(channelId(5929).Text, {
+    closure_15(channelId(5919).Text, {
       variant: "body-md/medium",
       color: "text-default",
       lineClamp: 1,
@@ -535,7 +535,7 @@ export function DockFace(userId) {
   if (null != memo) {
     const obj7 = { style: tmp.avatar, children: null };
     const obj8 = { style: tmp.avatarImage, source: memo };
-    obj7.children = closure_15(tmp2(6020), obj8);
+    obj7.children = closure_15(tmp2(6010), obj8);
     tmp24 = closure_15(View, obj7);
   }
   items9[2] = tmp24;

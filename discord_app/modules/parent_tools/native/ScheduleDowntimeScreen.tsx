@@ -385,8 +385,8 @@ export default function ScheduleDowntimeScreen() {
             if (2 === tmp8) {
               c4 = 1;
               const intl = closure_0(1113).intl;
-              closure_0(6014).presentFailedToast(intl.string(tmp4(2701).Wu8BK2));
-              const obj2 = closure_0(6014);
+              closure_0(6004).presentFailedToast(intl.string(tmp4(2701).Wu8BK2));
+              const obj2 = closure_0(6004);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -508,8 +508,8 @@ export default function ScheduleDowntimeScreen() {
           if (2 === tmp8) {
             c4 = 1;
             const intl = closure_0(1113).intl;
-            closure_0(6014).presentFailedToast(intl.string(tmp4(2701).Wu8BK2));
-            const obj2 = closure_0(6014);
+            closure_0(6004).presentFailedToast(intl.string(tmp4(2701).Wu8BK2));
+            const obj2 = closure_0(6004);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -613,7 +613,7 @@ export default function ScheduleDowntimeScreen() {
     obj13.trailing = first1(tmp2(stringResult[23]).Text, obj14);
     obj13.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f135992 = (first1) => {
+      const f136007 = (first1) => {
         closure_1_12(first1);
         const result = (closure_0(rule[17]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };

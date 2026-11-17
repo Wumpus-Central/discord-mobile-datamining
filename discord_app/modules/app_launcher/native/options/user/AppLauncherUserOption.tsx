@@ -120,7 +120,7 @@ export default function AppLauncherUserOption(option) {
     tmp9Result2 = null;
     if (null != tmp6) {
       const obj6 = { variant: "body-md/medium", color: "text-default", children: tmp6 };
-      tmp9Result2 = tmp9(tmp2(5929).Text, obj6);
+      tmp9Result2 = tmp9(tmp2(5919).Text, obj6);
     }
   }
   obj2.selectedItemName = tmp9Result2;

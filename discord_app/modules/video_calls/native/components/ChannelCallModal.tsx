@@ -82,7 +82,7 @@ let closure_18 = noop.memo(function NavigatorContainer(arg0) {
         if (!obj3.isModalOpen(closure_1_31)) {
           closure_1_8();
         }
-        obj3 = channel(5492);
+        obj3 = channel(5482);
       };
     }
   }, items);
@@ -518,7 +518,7 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   if (null != stateFromStores) {
     const obj9 = { value: tmp12Result(tmp12(7937).CHANNEL_CALL).analyticsLocations, children: null };
     const obj10 = { gesture: null, children: null };
-    const Gesture = tmp(5598).Gesture;
+    const Gesture = tmp(5588).Gesture;
     obj10.gesture = Gesture.Exclusive(withRefResult, result1);
     const obj11 = { style: animatedStyle, children: null };
     const obj12 = { value: tmp62, children: null };
@@ -529,7 +529,7 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
     obj12.children = items23;
     obj11.children = closure_16(tmp(11009).VoiceChatNavigationContext.Provider, obj12);
     obj10.children = closure_15(tmp12(1655).View, obj11);
-    obj9.children = closure_15(tmp(5598).GestureDetector, obj10);
+    obj9.children = closure_15(tmp(5588).GestureDetector, obj10);
     tmp63 = closure_15(tmp(7918).AnalyticsLocationProvider, obj9);
   }
   return tmp63;

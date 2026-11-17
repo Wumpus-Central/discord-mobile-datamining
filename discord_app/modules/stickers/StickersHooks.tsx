@@ -275,7 +275,7 @@ export function useStickersGrid(collapsedStickersCategories) {
         const tmpResult = collapsedStickersCategories(num[14]);
         let canCreateExpressions = null != guild;
         const findIndexResult = visibleRowIndex.findIndex(
-          (type) => type.type === category(6793).StickerCategoryTypes.FAVORITE,
+          (type) => type.type === category(6783).StickerCategoryTypes.FAVORITE,
         );
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
@@ -363,7 +363,7 @@ export function useStickersGrid(collapsedStickersCategories) {
         }
         gridSectionIndex = gridSectionIndex + 1;
         findIndexResult1 = visibleRowIndex.findIndex(
-          (type) => type.type === category(6793).StickerCategoryTypes.RECENT,
+          (type) => type.type === category(6783).StickerCategoryTypes.RECENT,
         );
       }
       if (null == items) {
@@ -529,8 +529,8 @@ export function useStickerForRenderableSticker(renderableSticker, arg1) {
   const tmp5 = obj4(noop.useState(false), 2);
   let isGuildStickerResult = require("StickersUtils").isGuildSticker(renderableSticker);
   if (!isGuildStickerResult) {
-    isGuildStickerResult = tmp(6792).isStandardSticker(renderableSticker);
-    const tmpResult = tmp(6792);
+    isGuildStickerResult = tmp(6782).isStandardSticker(renderableSticker);
+    const tmpResult = tmp(6782);
   }
   obj4 = {
     hasFetched: tmp6,

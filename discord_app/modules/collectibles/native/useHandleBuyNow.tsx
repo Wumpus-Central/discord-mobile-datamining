@@ -52,8 +52,8 @@ function useHandleBuyNow(product) {
           return obj7;
         } else {
           closure_128_4(false);
-          v1(5552).hideAllActionSheets();
-          const obj = v1(5552);
+          v1(5542).hideAllActionSheets();
+          const obj = v1(5542);
           const obj8 = {
             product: closure_128_0,
             useCategoryImage: true,

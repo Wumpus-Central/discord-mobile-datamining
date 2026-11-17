@@ -163,7 +163,7 @@ export default function DisconnectCancelButton(props) {
   if (first === constants.ACTIVITY) {
     PhoneHangUpIcon = tmp8(12295).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(20054).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(20056).ScreenXIcon;
   } else {
     PhoneHangUpIcon = tmp8(9104).PhoneHangUpIcon;
   }

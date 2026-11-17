@@ -102,7 +102,7 @@ export function handleMessagesTapImage(tapImageData) {
           };
           let channelName;
           if (showContextName) {
-            const tmp25Result3 = tmp25(5954);
+            const tmp25Result3 = tmp25(5944);
             channelName = tmp25Result3.computeChannelName(messageChannel, UserStore, RelationshipStore, false);
           }
           obj3.contextName = channelName;
@@ -149,7 +149,7 @@ export function handleMessagesTapImage(tapImageData) {
                   tmp7,
                   components,
                   messageChannel.guild_id,
-                  embedId(6384).asComponentId(componentId),
+                  embedId(6374).asComponentId(componentId),
                   componentMediaIndex,
                 );
                 if (null != result2) {
@@ -159,7 +159,7 @@ export function handleMessagesTapImage(tapImageData) {
                   tmp25 = embedId;
                   const tmp10Result15 = embedId(8633);
                 }
-                const tmp10Result14 = embedId(6384);
+                const tmp10Result14 = embedId(6374);
               }
             }
           }

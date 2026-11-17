@@ -17,7 +17,7 @@ function StreamVolumeSlider(arg0) {
   let handleVolumeChange;
   ({ ownerId, onSubmit } = arg0);
   const tmp = closure_12();
-  const tmp2Result = useMuteAwareLocalVolumeDefault(ownerId, handleVolumeChange(6096).MediaEngineContextTypes.STREAM);
+  const tmp2Result = useMuteAwareLocalVolumeDefault(ownerId, handleVolumeChange(6086).MediaEngineContextTypes.STREAM);
   handleVolumeChange = tmp2Result.handleVolumeChange;
   items = [handleVolumeChange];
   const obj = { children: null };
@@ -25,7 +25,7 @@ function StreamVolumeSlider(arg0) {
   const obj2 = { style: tmp.slider, children: null };
   const obj3 = { value: null, maxValue: null, onChange: null, formatValue: null, accessibilityLabel: null };
   const tmp5 = NativeViewDefault;
-  obj3.value = handleVolumeChange(6233).amplitudeToPerceptual(tmp2Result.effectiveVolume);
+  obj3.value = handleVolumeChange(6223).amplitudeToPerceptual(tmp2Result.effectiveVolume);
   obj3.maxValue = maxValue;
   obj3.onChange = callback;
   obj3.formatValue = function formatValue(arg0) {
@@ -36,7 +36,7 @@ function StreamVolumeSlider(arg0) {
   obj2.children = closure_7(handleVolumeChange(15761).Slider, obj3);
   const items1 = [closure_7(tmp5, obj2), ];
   const obj5 = { icon: null, onPress: null, accessibilityLabel: null };
-  const obj4 = handleVolumeChange(6233);
+  const obj4 = handleVolumeChange(6223);
   obj5.icon = closure_7(handleVolumeChange(9485).CheckmarkLargeBoldIcon, { size: "sm" });
   obj5.onPress = onSubmit;
   const intl2 = handleVolumeChange(1113).intl;
@@ -45,7 +45,7 @@ function StreamVolumeSlider(arg0) {
   obj.children = items1;
   return closure_9(closure_8, obj);
 }
-const maxValue = fn(6075).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+const maxValue = fn(6065).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const VoicePanelDockPIPOverlayModes = { HIDDEN: "HIDDEN", CONTROLS: "CONTROLS", VOLUME: "VOLUME" };
@@ -59,13 +59,13 @@ obj4.padding = nativeDefault.space.PX_8;
 obj2.overlay = obj4;
 obj2.row = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
 let obj5 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
-obj2.bottomRow = { height: fn(5942).SMALL_BUTTON_HEIGHT };
+obj2.bottomRow = { height: fn(5932).SMALL_BUTTON_HEIGHT };
 obj2.rowEnd = { justifyContent: "flex-end" };
 obj2.slider = { flex: 1, flexDirection: "row", alignItems: "center" };
 let closure_12 = createStyles.createStyles(obj2);
 let closure_14 = { code: "(function VoicePanelDockPIPOverlayTsx1(finished){let[visible,scheduleOnRN,setContentMode]=this.__closure;if(finished===true&&!visible){scheduleOnRN(setContentMode,null);}})" };
 let closure_15 = { code: "(function VoicePanelDockPIPOverlayTsx2(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };
-let obj6 = { height: fn(5942).SMALL_BUTTON_HEIGHT };
+let obj6 = { height: fn(5932).SMALL_BUTTON_HEIGHT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockPIPOverlay.tsx");
 
@@ -190,7 +190,7 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
     if ("video" === kind) {
       let ScreenXIcon = tmp12(7549).XSmallIcon;
     } else {
-      ScreenXIcon = tmp12(20054).ScreenXIcon;
+      ScreenXIcon = tmp12(20056).ScreenXIcon;
     }
     const obj8 = { icon: closure_7(ScreenXIcon, { size: "sm" }), onPress: onStopWatching, accessibilityLabel: null };
     const intl = tmp12(1113).intl;
@@ -202,7 +202,7 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
       stringResult = string(t.q3O3J8);
     }
     obj8.accessibilityLabel = stringResult;
-    items6[1] = closure_7(tmp2(19944), obj8);
+    items6[1] = closure_7(tmp2(19946), obj8);
     obj5.children = items6;
     const items7 = [closure_9(tmp2Result, obj5), ];
     const items8 = [, , ];
@@ -221,7 +221,7 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
       }
     }
     const obj9 = { style: null, pointerEvents: "box-none", children: null };
-    const tmp2Result5 = tmp2(19944);
+    const tmp2Result5 = tmp2(19946);
   }
   const tmp12Result = require("initialize");
 });

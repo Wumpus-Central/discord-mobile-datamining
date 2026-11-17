@@ -49,7 +49,7 @@ const pressable = SettingBuilders.createPressable({
             } else {
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp4(6044).browserManagerClearWebsiteData(), done: false };
+              const obj5 = { value: tmp4(6034).browserManagerClearWebsiteData(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -63,7 +63,7 @@ const pressable = SettingBuilders.createPressable({
             const obj7 = { text: null };
             const intl = tmp4(1113).intl;
             obj7.text = intl.string(tmp4(1113).t["zaEQz+"]);
-            v1(6015).open("web-browser-data-cleared", obj7);
+            v1(6005).open("web-browser-data-cleared", obj7);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }

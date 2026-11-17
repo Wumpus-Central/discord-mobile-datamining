@@ -9,12 +9,12 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 const _modDef1655 = tmp(1655);
-const isVoiceEmbeddedActivityDefault = tmp(5980);
+const isVoiceEmbeddedActivityDefault = tmp(5970);
 const EmbeddedActivityViewDefault = tmp(12848);
 const FrameRenderTargetDefault = tmp(13355);
-const getActivityContainerPIPStylesSpecDefault = tmp(19929);
+const getActivityContainerPIPStylesSpecDefault = tmp(19931);
 const require = fn;
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const FramesConstants = fn(7020);
 ({
   asLaunched: closure_8,

@@ -54,7 +54,7 @@ function GuildEventsListHeader(arg0) {
 const View = fn(17).View;
 let closure_6 = fn(5161).ANALYTICS_GUILD_EVENTS_MODAL_NAME;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ReadStateTypes = fn(6959).ReadStateTypes;
+const ReadStateTypes = fn(6949).ReadStateTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
@@ -87,7 +87,7 @@ export default function GuildEventsListActionSheet(guild) {
       },
     });
   }, items1);
-  events(5899)(() => {
+  events(5889)(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, {
       type,
       guild_id: guild.id,
@@ -132,7 +132,7 @@ export default function GuildEventsListActionSheet(guild) {
     lastAckedId: null,
   });
   obj.children = <View style={tmp.container}>{null}</View>;
-  return jsx(guild(5566).BottomSheet, {
+  return jsx(guild(5556).BottomSheet, {
     showGradient: true,
     scrollable: events.length > 0,
     startExpanded: true,

@@ -225,17 +225,17 @@ export const ANIMATED_MIMETYPES = items;
 export { QuestAssetType };
 export { resolveAsset };
 export const OrbsValueTier = obj4;
-export function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRIPT, DARK, arg3, arg4) {
-  if (obj.HERO === VIDEO_PLAYER_TRANSCRIPT) {
+export function getQuestAsset(quest, GAME_TILE, DARK, arg3, arg4) {
+  if (obj.HERO === GAME_TILE) {
     const heroVideo2 = quest.config.assets.heroVideo;
     asset = quest.config.assets.hero;
     let flag = false;
     let flag2 = false;
-  } else if (tmp.HERO_IMAGE === VIDEO_PLAYER_TRANSCRIPT) {
+  } else if (tmp.HERO_IMAGE === GAME_TILE) {
     asset = quest.config.assets.hero;
     flag = false;
     flag2 = false;
-  } else if (tmp.HERO_VIDEO === VIDEO_PLAYER_TRANSCRIPT) {
+  } else if (tmp.HERO_VIDEO === GAME_TILE) {
     const heroVideo = quest.config.assets.heroVideo;
     flag = false;
     flag2 = false;
@@ -243,12 +243,12 @@ export function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRIPT, DARK, arg3, arg4) 
     if (null == heroVideo) {
       return null;
     }
-  } else if (tmp.QUEST_BAR_HERO === VIDEO_PLAYER_TRANSCRIPT) {
+  } else if (tmp.QUEST_BAR_HERO === GAME_TILE) {
     const questBarHeroVideo2 = quest.config.assets.questBarHeroVideo;
     asset = quest.config.assets.questBarHero;
     flag = false;
     flag2 = false;
-  } else if (tmp.QUEST_BAR_HERO_VIDEO === VIDEO_PLAYER_TRANSCRIPT) {
+  } else if (tmp.QUEST_BAR_HERO_VIDEO === GAME_TILE) {
     const questBarHeroVideo = quest.config.assets.questBarHeroVideo;
     flag = false;
     flag2 = false;
@@ -256,11 +256,11 @@ export function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRIPT, DARK, arg3, arg4) 
     if (null == questBarHeroVideo) {
       return null;
     }
-  } else if (tmp.QUEST_BAR_HERO_IMAGE === VIDEO_PLAYER_TRANSCRIPT) {
+  } else if (tmp.QUEST_BAR_HERO_IMAGE === GAME_TILE) {
     asset = quest.config.assets.questBarHero;
     flag = false;
     flag2 = false;
-  } else if (tmp.REWARD === VIDEO_PLAYER_TRANSCRIPT) {
+  } else if (tmp.REWARD === GAME_TILE) {
     const questPrimaryReward = QuestRewardUtils.getQuestPrimaryReward(quest);
     if (questPrimaryReward.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY) {
       let tmp29;
@@ -282,7 +282,7 @@ export function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRIPT, DARK, arg3, arg4) 
       flag = false;
       flag2 = false;
     }
-  } else if (tmp.REWARD_IMAGE === VIDEO_PLAYER_TRANSCRIPT) {
+  } else if (tmp.REWARD_IMAGE === GAME_TILE) {
     obj = QuestRewardUtils;
     const questPrimaryReward1 = obj.getQuestPrimaryReward(quest);
     if (questPrimaryReward1.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY) {
@@ -292,7 +292,7 @@ export function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRIPT, DARK, arg3, arg4) 
       flag = false;
       flag2 = false;
     }
-  } else if (tmp.GAME_TILE === VIDEO_PLAYER_TRANSCRIPT) {
+  } else if (tmp.GAME_TILE === GAME_TILE) {
     let tmp18;
     if (null != DARK) {
       if (DARK === constants.LIGHT) {
@@ -319,7 +319,7 @@ export function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRIPT, DARK, arg3, arg4) 
     asset = quest.config.assets.gameTile;
     flag = false;
     flag2 = true;
-  } else if (tmp.LOGO_TYPE === VIDEO_PLAYER_TRANSCRIPT) {
+  } else if (tmp.LOGO_TYPE === GAME_TILE) {
     let tmp15;
     if (null != DARK) {
       if (DARK === constants.LIGHT) {
@@ -346,7 +346,7 @@ export function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRIPT, DARK, arg3, arg4) 
     asset = quest.config.assets.logotype;
     flag = false;
     flag2 = true;
-  } else if (tmp.COSPONSOR_LOGO_TYPE === VIDEO_PLAYER_TRANSCRIPT) {
+  } else if (tmp.COSPONSOR_LOGO_TYPE === GAME_TILE) {
     if (null == quest.config.cosponsorMetadata) {
       return null;
     } else {
@@ -378,11 +378,11 @@ export function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRIPT, DARK, arg3, arg4) 
       flag2 = true;
     }
   } else {
-    if (tmp.VIDEO_PLAYER_VIDEO !== VIDEO_PLAYER_TRANSCRIPT) {
-      if (tmp.VIDEO_PLAYER_VIDEO_LOW_RES !== VIDEO_PLAYER_TRANSCRIPT) {
-        if (tmp.VIDEO_PLAYER_VIDEO_HLS !== VIDEO_PLAYER_TRANSCRIPT) {
-          if (tmp.VIDEO_PLAYER_THUMBNAIL !== VIDEO_PLAYER_TRANSCRIPT) {
-            if (tmp.VIDEO_PLAYER_CAPTION !== VIDEO_PLAYER_TRANSCRIPT) {
+    if (tmp.VIDEO_PLAYER_VIDEO !== GAME_TILE) {
+      if (tmp.VIDEO_PLAYER_VIDEO_LOW_RES !== GAME_TILE) {
+        if (tmp.VIDEO_PLAYER_VIDEO_HLS !== GAME_TILE) {
+          if (tmp.VIDEO_PLAYER_THUMBNAIL !== GAME_TILE) {
+            if (tmp.VIDEO_PLAYER_CAPTION !== GAME_TILE) {
               flag = false;
               flag2 = false;
             }

@@ -63,10 +63,10 @@ function HideMutedChannelsOption(guild) {
 function BrowseChannelsOption(guild) {
   guild = guild.guild;
   const tmp2 = useGuildOnboardingAvailableDefault(guild);
-  const result = guild(5348).useIsDismissibleContentDismissed_UNSAFE(
+  const result = guild(5338).useIsDismissibleContentDismissed_UNSAFE(
     guild(5139).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX,
   );
-  let obj = guild(5348);
+  let obj = guild(5338);
   items = [ReadStateStore];
   const stateFromStores = guild(504).useStateFromStores(items, () =>
     ReadStateStore.hasUnread(guild.id, ReadStateTypes.GUILD_ONBOARDING_QUESTION),
@@ -201,7 +201,7 @@ function ServerTagOption(guild) {
     const obj6 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1113).intl;
     obj6.children = intl.string(tmp2(1113).t["2QmKZ2"]);
-    items[1] = closure_22(tmp2(5929).Text, obj6);
+    items[1] = closure_22(tmp2(5919).Text, obj6);
     obj2.children = items;
     obj3.label = closure_23(View, obj2);
     obj3.onPress = tmp5;
@@ -272,7 +272,7 @@ const Constants = fn(1072);
 } = Constants);
 let closure_19 = fn(7866).CHANNELS_AND_ROLES_MODAL_KEY;
 const GuildTagBadgeSize = fn(8410).GuildTagBadgeSize;
-const ReadStateTypes = fn(6959).ReadStateTypes;
+const ReadStateTypes = fn(6949).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
 const createStyles = fn(5306);
@@ -599,7 +599,7 @@ export function GuildDeveloperOptionAction(guild) {
   guild = guild.guild;
   const DeveloperMode = guild(5131).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  guild(5995);
+  guild(5985);
   if (setting) {
     items = [];
     let obj = { label: null, onPress: null };

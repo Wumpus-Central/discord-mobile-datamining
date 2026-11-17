@@ -116,7 +116,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
     dependencyMap();
   });
   const tmp6Result4 = _slicedToArray(ref.useState(false), 2);
-  const unmountEffect = optionsTree(5899).useUnmountEffect(() => {
+  const unmountEffect = optionsTree(5889).useUnmountEffect(() => {
     if (c16) {
       const obj3 = { rating: first2, category: null, reason: null, dontShowAgain: null };
       value = undefined;
@@ -225,7 +225,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
     let tmp35 = null;
     if (null != ratingBody) {
       let obj4 = { style: tmp.ratingsBody, variant: "body-md/medium", color: "text-default", children: ratingBody };
-      tmp35 = closure_7(tmp20(5929).Text, obj4);
+      tmp35 = closure_7(tmp20(5919).Text, obj4);
     }
     const items2 = [tmp35, ,];
     const obj5 = { ratingOptions, selectedRating: first2, onChangeRating: callback };
@@ -276,7 +276,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
         obj11.onPress = function onPress() {
           return closure_11(null);
         };
-        items3[1] = closure_7(tmp20(5936).Button, obj11);
+        items3[1] = closure_7(tmp20(5926).Button, obj11);
         obj8.children = items3;
         tmp33Result = closure_9(first1, obj8);
         problemsHeader = categoriesHeader;
@@ -316,7 +316,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
         }
         return tmp3;
       };
-      items4[1] = closure_7(tmp20(5936).Button, obj15);
+      items4[1] = closure_7(tmp20(5926).Button, obj15);
       obj12.children = items4;
       tmp33Result = closure_9(first1, obj12);
     }
@@ -345,6 +345,6 @@ export default function FeedbackActionSheetV2(optionsTree) {
   const obj19 = { contentContainerStyle: null, children: tmp33Result };
   const items5 = [tmp.container, { paddingBottom: tmp.container.padding + bottom }];
   obj19.contentContainerStyle = items5;
-  obj16.children = closure_7(optionsTree(5570).BottomSheetScrollView, obj19);
-  return closure_7(optionsTree(5566).BottomSheet, obj16);
+  obj16.children = closure_7(optionsTree(5560).BottomSheetScrollView, obj19);
+  return closure_7(optionsTree(5556).BottomSheet, obj16);
 }

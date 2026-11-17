@@ -28,7 +28,7 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
       const obj2 = { text: null, variant: "critical" };
       const intl = channel(1113).intl;
       obj2.text = intl.string(channel(1113).t["EDYbS+"]);
-      navigation(6015).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
+      navigation(6005).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
     },
     onRejectSuccess: callback,
   });
@@ -67,7 +67,7 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
       const obj2 = { text: null, variant: "critical" };
       const intl = channel(1113).intl;
       obj2.text = intl.string(channel(1113).t["EDYbS+"]);
-      navigation(6015).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
+      navigation(6005).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
     },
     onRejectSuccess: callback,
   };

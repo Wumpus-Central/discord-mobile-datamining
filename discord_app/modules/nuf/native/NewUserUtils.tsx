@@ -238,7 +238,7 @@ const NotificationPermissionConstants = fn(14826);
 const Constants = fn(1072);
 ({ PlatformTypes: closure_9, Routes: closure_10 } = Constants);
 const ContactPermissions = fn(14995).ContactPermissions;
-let closure_12 = fn(6902).NotificationAuthorizationStatus;
+let closure_12 = fn(6892).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_16 = asyncGeneratorStep(async () => {

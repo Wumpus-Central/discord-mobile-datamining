@@ -53,7 +53,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
   const obj2 = { variant: "body-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
   const intl = guildId(1113).intl;
   obj2.children = intl.string(guildId(1113).t.wRnfnY);
-  const items1 = [closure_7(guildId(5929).Text, obj2), ,];
+  const items1 = [closure_7(guildId(5919).Text, obj2), ,];
   const tmp4 = useGuildTagBadgeCollectionDefault();
   items1[1] = closure_7(closure_5, {
     accessibilityRole: "radiogroup",
@@ -90,7 +90,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     const obj6 = { variant: "body-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };
     const intl3 = tmp7(1113).intl;
     obj6.children = intl3.string(tmp7(1113).t.U5p3GZ);
-    items2[1] = closure_7(tmp7(5929).Text, obj6);
+    items2[1] = closure_7(tmp7(5919).Text, obj6);
     const obj7 = { size: "md", color: nativeDefault.colors.ICON_SUBTLE };
     items2[2] = closure_7(tmp7(7963).ChevronSmallRightIcon, obj7);
     obj4.children = items2;
@@ -98,5 +98,5 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
   }
   items1[2] = tmp6Result;
   obj.children = items1;
-  return closure_8(guildId(6337).Stack, obj);
+  return closure_8(guildId(6327).Stack, obj);
 }

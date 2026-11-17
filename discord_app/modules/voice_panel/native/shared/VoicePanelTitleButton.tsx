@@ -18,7 +18,7 @@ import MicrophoneIcon from "../../../../design/components/Icon/native/redesign/g
 import VoicePanelSettingsActionCreators from "../header/VoicePanelSettingsActionCreators.tsx";
 import QuestActivityButtonDefault from "../../../frames/panel/native/QuestActivityButton.tsx";
 import VoicePanelHeaderUserState from "../header/VoicePanelHeaderUserState.tsx";
-import _modDef19992 from "../../../../../_runtime/metro/19992__.js";
+import _modDef19994 from "../../../../../_runtime/metro/19994__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import StageInstanceStore from "../../../stage_channels/StageInstanceStore.tsx";
@@ -89,7 +89,7 @@ function StreamButton(arg0) {
   const intl2 = util.intl;
   obj2.accessibilityLabel = intl2.formatToPlainString(util.t.I0mOAs, { username: name });
   obj2.text = name;
-  obj2.icon = _modDef19992;
+  obj2.icon = _modDef19994;
   obj2.onPress = onPress;
   return React6(native.HeaderButton, obj2);
 }
@@ -126,7 +126,7 @@ function ActivityButton(participant) {
     closure_9(QuestActivityButtonDefault, { applicationId: participant.applicationId }),
   ];
   obj2.children = items1;
-  return closure_10(participant(6337).Stack, obj2);
+  return closure_10(participant(6327).Stack, obj2);
 }
 function UserButton(participant) {
   participant = participant.participant;
@@ -268,7 +268,7 @@ function StageButton(channelId) {
   return closure_9(channelId(7997).HeaderButton, obj6);
 }
 const View = fn(17).View;
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5306);
@@ -300,7 +300,7 @@ export default noop.memo(function VoicePanelTitleButton() {
     }
     return id;
   });
-  const tmp3 = channelId(19988)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(19990)(derivedStateFromSharedValue, channelId, guildId);
   items = [guildId, channelId];
   const onPress = noop.useCallback(() => {
     const result = VoicePanelSettingsActionCreators.openVoicePanelSettingsActionSheet(guildId, channelId);

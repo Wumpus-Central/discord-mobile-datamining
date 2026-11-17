@@ -64,7 +64,7 @@ function IgnoredUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj.trailing = jsx(userRecord(5936).Button, {
+  obj.trailing = jsx(userRecord(5926).Button, {
     size: "sm",
     variant: "secondary",
     text: null,

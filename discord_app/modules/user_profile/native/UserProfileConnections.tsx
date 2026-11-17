@@ -445,8 +445,8 @@ export const ApplicationRoleConnection = memoResult;
 export function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(5377).useThemeContext().theme;
-  const obj = userId(5377);
+  const theme = userId(5367).useThemeContext().theme;
+  const obj = userId(5367);
   items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);

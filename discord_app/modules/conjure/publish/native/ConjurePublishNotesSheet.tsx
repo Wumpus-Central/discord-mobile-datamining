@@ -81,7 +81,7 @@ export default function ConjurePublishNotesSheet(guildId) {
     obj.showActionSheet(obj2);
   }, items1);
   const callback2 = pickChannel.useCallback(() => {
-    _undefined(5552).hideActionSheet(ConjurePublishNotesSheet);
+    _undefined(5542).hideActionSheet(ConjurePublishNotesSheet);
   }, []);
   const items2 = [trimmed, callback2, send];
   const callback3 = pickChannel.useCallback(
@@ -184,8 +184,8 @@ export default function ConjurePublishNotesSheet(guildId) {
     const intl6 = tmp13(1113).intl;
     if (null != selectedChannel) {
       const _HermesInternal = HermesInternal;
-      let combined = "#" + tmp13(5954).computeChannelName(selectedChannel, callback2, trimmed);
-      const tmp13Result = tmp13(5954);
+      let combined = "#" + tmp13(5944).computeChannelName(selectedChannel, callback2, trimmed);
+      const tmp13Result = tmp13(5944);
     } else {
       const intl7 = tmp13(1113).intl;
       combined = intl7.string(tmp5(4131)["7CvxMC"]);
@@ -198,7 +198,7 @@ export default function ConjurePublishNotesSheet(guildId) {
     const obj7 = { variant: "body-md/medium", color: "text-subtle", children: null };
     obj6.onPick = fn;
     obj7.children = intl6.format(tmp5(4131)["1lVhj/"], obj6);
-    items3[1] = closure_10(tmp13(5929).Text, obj7);
+    items3[1] = closure_10(tmp13(5919).Text, obj7);
     obj4.children = items3;
     tmp14Result = closure_11(tmp15, obj4);
   }
@@ -208,14 +208,14 @@ export default function ConjurePublishNotesSheet(guildId) {
   const intl8 = tmp13(1113).intl;
   obj9.text = intl8.string(guildId(1113).t["ETE/oC"]);
   obj9.onPress = callback2;
-  const items5 = [closure_10(guildId(5936).Button, obj9)];
+  const items5 = [closure_10(guildId(5926).Button, obj9)];
   const obj10 = { variant: "primary", grow: true, text: null, loading: null, disabled: null, onPress: null };
   const intl9 = tmp13(1113).intl;
   obj10.text = intl9.string(_modDef4131["69aIG4"]);
   obj10.loading = sending;
   obj10.disabled = "" === trimmed || trimmed.length > maxNotesLength || null == selectedChannel || sending;
   obj10.onPress = callback3;
-  items5[1] = closure_10(guildId(5936).Button, obj10);
+  items5[1] = closure_10(guildId(5926).Button, obj10);
   obj8.children = items5;
   items4[1] = closure_11(markEdited, obj8);
   obj3.children = items4;

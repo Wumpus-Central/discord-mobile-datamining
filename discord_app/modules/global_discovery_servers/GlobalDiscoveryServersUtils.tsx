@@ -216,9 +216,9 @@ export function fromDiscoverableGuildSearchResult(id) {
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "isArray",
-    discoverySplash: true,
-    emojis: "/assets/design/components/Icon/native/redesign/generated/images",
+    preferredLocale: "channelId",
+    discoverySplash: "description",
+    emojis: "y",
   };
   ({
     approximate_presence_count: obj.presenceCount,

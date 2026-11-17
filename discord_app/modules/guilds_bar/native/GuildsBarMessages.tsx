@@ -48,10 +48,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "red_car",
-    externalChildren: "automobile",
-    expandedChildren: 1441464323,
-    children: -2041511935,
+    label: "USER_PROFILE_SETTINGS_SET_GUILD",
+    externalChildren: null,
+    expandedChildren: false,
+    children: false,
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -68,9 +68,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "red_car",
-    externalChildren: "automobile",
-    expandedChildren: 1441464323,
-    children: -2041511935,
+    label: "USER_PROFILE_SETTINGS_SET_GUILD",
+    externalChildren: null,
+    expandedChildren: false,
+    children: false,
   });
 });

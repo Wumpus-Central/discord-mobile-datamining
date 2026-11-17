@@ -50,7 +50,7 @@ export default noop.memo(function MediaModalOverlayAltTextButton(description) {
       const obj2 = { variant: "body-xs/semibold", color: "text-overlay-light", children: null };
       const intl = tmp3(1113).intl;
       obj2.children = intl.string(tmp3(1113).t.Q5VqrN);
-      obj.children = jsx(tmp3(5929).Text, { variant: "body-xs/semibold", color: "text-overlay-light", children: null });
+      obj.children = jsx(tmp3(5919).Text, { variant: "body-xs/semibold", color: "text-overlay-light", children: null });
       tmp4 = jsx(tmp3(7428).PressableOpacity, {
         style: tmp2.container,
         onPress() {

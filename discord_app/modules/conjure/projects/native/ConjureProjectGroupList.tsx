@@ -307,7 +307,7 @@ let closure_15 = noop.memo(function ProjectRow(project) {
   }
   let tmp14Result = null;
   if (null != result1) {
-    const obj6 = { since: result1, getFormatter: tmp2(6387).getAbbreviatedFormatter, includeWeeks: true };
+    const obj6 = { since: result1, getFormatter: tmp2(6377).getAbbreviatedFormatter, includeWeeks: true };
     tmp14Result = getTimestampStringDefault(obj6);
   }
   let stringResult = null;
@@ -465,21 +465,21 @@ export default function ConjureProjectGroupList(query) {
           const obj3 = { variant: "body-sm/normal", color: "text-subtle", children: null };
           const intl4 = tmp5(1113).intl;
           obj3.children = intl4.string(_modDef4131.X37fkR);
-          obj2.children = closure_8(tmp5(5929).Text, obj3);
+          obj2.children = closure_8(tmp5(5919).Text, obj3);
           let tmp14Result1 = closure_8(View, obj2);
         } else if ("error" === stateFromStores) {
           const obj4 = { style: tmp.state, children: null };
           const obj5 = { variant: "body-sm/normal", color: "text-muted", children: null };
           const intl2 = tmp5(1113).intl;
           obj5.children = intl2.string(_modDef4131.DJAPMO);
-          const items1 = [closure_8(tmp5(5929).Text, obj5)];
+          const items1 = [closure_8(tmp5(5919).Text, obj5)];
           const obj6 = { variant: "secondary", size: "sm", text: null, onPress: null };
           const intl3 = tmp5(1113).intl;
           obj6.text = intl3.string(_modDef4131["WFJ/vb"]);
           obj6.onPress = function onPress() {
             return forceExpanded(dependencyMap[33]).listProjects();
           };
-          items1[1] = closure_8(tmp5(5936).Button, obj6);
+          items1[1] = closure_8(tmp5(5926).Button, obj6);
           obj4.children = items1;
           tmp14Result1 = closure_9(View, obj4);
         } else {
@@ -491,7 +491,7 @@ export default function ConjureProjectGroupList(query) {
             const obj9 = { variant: "body-sm/normal", color: "text-subtle", children: null };
             const intl = tmp5(1113).intl;
             obj9.children = intl.string(_modDef4131["9/5sLV"]);
-            obj8.children = closure_8(tmp5(5929).Text, obj9);
+            obj8.children = closure_8(tmp5(5919).Text, obj9);
           }
           tmp14Result1 = closure_8(View, obj8);
         }

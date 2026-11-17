@@ -9,7 +9,7 @@ import useApplicationWidgetLayoutRendererPropsDefault from "../../application_wi
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
-const FastImageDefault = tmp4(6020);
+const FastImageDefault = tmp4(6010);
 const UserProfileApplicationWidgetHeroImageDefault = tmp4(12259);
 require = fn;
 const View = fn(17).View;

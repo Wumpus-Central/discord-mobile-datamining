@@ -171,7 +171,7 @@ function CoverSection(section) {
     if (null != source) {
       if ("" !== section.title) {
         const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result4 = React6(tmp14(5893), obj9);
+        tmp24Result4 = React6(tmp14(5883), obj9);
       } else {
         tmp24Result4 = null;
       }

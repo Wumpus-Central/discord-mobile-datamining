@@ -8,7 +8,7 @@ import useColorThemeBackgroundDefault from "../../../client_themes/native/useCol
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
-import BottomSheetModalDefault from "../../../../../_runtime/05570_BottomSheetModal.js";
+import BottomSheetModalDefault from "../../../../../_runtime/05560_BottomSheetModal.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import useCustomKeyboardBottomSheetConfigDefault from "../../../action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";

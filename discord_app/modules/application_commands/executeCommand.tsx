@@ -859,7 +859,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       onFailure: obj4.onFailure,
     } = interactionLifecycleOptions);
     const obj7 = {
-      interactionType: onMessageSuccess(6381).InteractionTypes.APPLICATION_COMMAND,
+      interactionType: onMessageSuccess(6371).InteractionTypes.APPLICATION_COMMAND,
       applicationId,
       channelId: id,
     };

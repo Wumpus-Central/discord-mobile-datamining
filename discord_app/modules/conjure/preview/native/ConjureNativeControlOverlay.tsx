@@ -248,7 +248,7 @@ export default function ConjureNativeControlOverlay(arg0) {
         }
         obj9.accessibilityLabel = combined;
         obj9.children = stringResult;
-        items11[1] = closure_6(tmp2(5929).Text, obj9);
+        items11[1] = closure_6(tmp2(5919).Text, obj9);
         let tmp46Result3 = null;
         if (tmp8) {
           tmp46Result3 = null;
@@ -259,7 +259,7 @@ export default function ConjureNativeControlOverlay(arg0) {
             obj11.text = intl3.string(tmp25(4131).oU59sU);
             obj11.loading = stopping;
             obj11.onPress = stop;
-            obj10.children = closure_6(tmp2(5936).Button, obj11);
+            obj10.children = closure_6(tmp2(5926).Button, obj11);
             tmp46Result3 = closure_6(tmp34, obj10);
           }
         }

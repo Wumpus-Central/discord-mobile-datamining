@@ -15,7 +15,7 @@ function openPicker() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(19025);
+const InterestGamePickerConstants = fn(19027);
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, SELECTED_BORDER_WIDTH, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
 const jsxProd = fn(21);
@@ -113,7 +113,7 @@ export default function WaterwheelsDiscoverHeader() {
     obj6.text = intl3.string(_modDef2569.SCFT8N);
     obj6.icon = closure_7(tmp2(7438).GameControllerIcon, { size: "sm" });
     obj6.onPress = openPicker;
-    let tmp8Result = closure_7(tmp2(5936).Button, obj6);
+    let tmp8Result = closure_7(tmp2(5926).Button, obj6);
   } else {
     const obj7 = {
       style: tmp.picks,
@@ -165,7 +165,7 @@ export default function WaterwheelsDiscoverHeader() {
       const intl2 = tmp2(1113).intl;
       const obj12 = { count: diff };
       obj11.children = intl2.formatToPlainString(_modDef2569["OxfP+s"], obj12);
-      tmp8Result2 = closure_7(tmp2(5929).Text, obj11);
+      tmp8Result2 = closure_7(tmp2(5919).Text, obj11);
     }
     items4[1] = tmp8Result2;
     obj10.children = items4;

@@ -35,8 +35,8 @@ function AssetDescription(asset) {
     };
     let formatResult = intl.format(_modDef3317.E6AfCb, obj);
   } else {
-    formatResult = tmp2(6744).getPlaintextAssetDescription(asset);
-    const tmp2Result = tmp2(6744);
+    formatResult = tmp2(6734).getPlaintextAssetDescription(asset);
+    const tmp2Result = tmp2(6734);
   }
   return closure_4(require("Text/Text").Text, {
     variant: "body-md/medium",

@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const QuestDockMode = fn(5338).QuestDockMode;
+const QuestDockMode = fn(6954).QuestDockMode;
 const QuestDockConstants = fn(17698);
 ({ QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_6 } = QuestDockConstants);
 const jsxProd = fn(21);
@@ -32,7 +32,6 @@ let obj = {
   promotedLabel: null,
   smokeArt: null,
   smokeArtFade: null,
-  title: null,
 };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -49,7 +48,6 @@ obj.promotedLabel = { bottom: 0, justifyContent: "center", left: 0, position: "a
 obj.smokeArt = { position: "absolute", left: -QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, bottom: 0 };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.smokeArtFade = {};
-obj.title = { lineHeight: 16 };
 let closure_9 = createStyles.createStyles(obj);
 let closure_10 = {
   code: "(function QuestDockBountyHeaderTsx1(){let[withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED]=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?0:1,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};})",
@@ -212,24 +210,17 @@ export default noop.memo(function QuestDockBountyHeader() {
     str = "no-hide-descendants";
   }
   obj13.importantForAccessibility = str;
-  obj13.children = closure_7(width(bountyCreative[21]).Text, {
-    variant: "body-sm/medium",
-    color: "text-strong",
-    lineClamp: 2,
-    accessible: false,
-    style: tmp4.title,
-    children: productName,
-  });
+  obj13.children = closure_7(height(bountyCreative[21]), { accessible: false, children: productName });
   obj12.children = closure_7(c4, obj13);
   const items11 = [closure_7(height(bountyCreative[9]).View, obj12)];
-  const obj15 = { style: null, children: null };
+  const obj14 = { style: null, children: null };
   const items12 = [tmp4.promotedLabel, animatedStyle1];
-  obj15.style = items12;
+  obj14.style = items12;
   let str2 = "none";
   if (tmp21) {
     str2 = "auto";
   }
-  const obj16 = {
+  const obj15 = {
     pointerEvents: str2,
     accessibilityElementsHidden: !tmp21,
     importantForAccessibility: null,
@@ -239,15 +230,15 @@ export default noop.memo(function QuestDockBountyHeader() {
   if (tmp21) {
     str3 = "yes";
   }
-  obj16.importantForAccessibility = str3;
-  const obj17 = { onPress: callback, accessibilityRole: "button", children: null };
-  const obj18 = { variant: "body-sm/medium", color: "text-default", children: null };
-  const intl = tmp(tmp2[23]).intl;
-  obj18.children = intl.string(width(bountyCreative[23]).t.o6FLcF);
-  obj17.children = closure_7(width(bountyCreative[21]).Text, obj18);
-  obj16.children = closure_7(width(bountyCreative[22]).PressableOpacity, obj17);
-  obj15.children = closure_7(c4, obj16);
-  items11[1] = closure_7(height(bountyCreative[9]).View, obj15);
+  obj15.importantForAccessibility = str3;
+  const obj16 = { onPress: callback, accessibilityRole: "button", children: null };
+  const obj17 = { variant: "body-sm/medium", color: "text-default", children: null };
+  const intl = tmp(tmp2[24]).intl;
+  obj17.children = intl.string(width(bountyCreative[24]).t.o6FLcF);
+  obj16.children = closure_7(width(bountyCreative[23]).Text, obj17);
+  obj15.children = closure_7(width(bountyCreative[22]).PressableOpacity, obj16);
+  obj14.children = closure_7(c4, obj15);
+  items11[1] = closure_7(height(bountyCreative[9]).View, obj14);
   obj11.children = items11;
   items9[1] = closure_8(c4, obj11);
   obj8.children = items9;

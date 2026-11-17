@@ -408,7 +408,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              guildId(6848).pop();
+              guildId(6838).pop();
             },
           });
         };

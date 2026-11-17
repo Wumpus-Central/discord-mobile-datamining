@@ -154,9 +154,9 @@ export default function GameOrganizationCharacterList(characters) {
     const intl2 = tmp4(1113).intl;
     const obj5 = { noun };
     obj4.children = intl2.formatToPlainString(_modDef2565.ybJIQJ, obj5);
-    someResult = closure_5(tmp4(5929).Text, obj4);
+    someResult = closure_5(tmp4(5919).Text, obj4);
   }
   items1[2] = someResult;
   obj.children = items1;
-  return closure_6(characters(6337).Stack, obj);
+  return closure_6(characters(6327).Stack, obj);
 }

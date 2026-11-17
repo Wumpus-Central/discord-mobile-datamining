@@ -239,9 +239,9 @@ export default function AddFriendsScreen(navigation) {
     return applyDefault
       .unionBy(items1, items, (id) => id.id)
       .sort((arg0, arg1) => {
-        const name = source_page(5372).getName(arg0);
-        const obj = source_page(5372);
-        return name.localeCompare(source_page(5372).getName(arg1));
+        const name = source_page(5362).getName(arg0);
+        const obj = source_page(5362);
+        return name.localeCompare(source_page(5362).getName(arg1));
       });
   });
   let obj5 = navigation(analyticsLocations[27]);
@@ -280,9 +280,9 @@ export default function AddFriendsScreen(navigation) {
       return source_page(analyticsLocations[28])
         .unionBy(items1, items, (user) => user.user.id)
         .sort((user, user2) => {
-          const name = items1(5372).getName(user.user);
-          const obj = items1(5372);
-          return name.localeCompare(items1(5372).getName(user2.user));
+          const name = items1(5362).getName(user.user);
+          const obj = items1(5362);
+          return name.localeCompare(items1(5362).getName(user2.user));
         });
     },
     items4,

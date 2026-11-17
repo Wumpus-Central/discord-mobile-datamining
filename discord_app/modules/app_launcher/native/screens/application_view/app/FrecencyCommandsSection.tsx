@@ -51,7 +51,7 @@ export default function FrecencyCommandsSection(commands) {
     const obj3 = { variant: "body-md/medium", color: "text-default", children: null };
     const intl = context(1113).intl;
     obj3.children = intl.string(context(1113).t.acSE0h);
-    obj2.children = arr(context(5929).Heading, obj3);
+    obj2.children = arr(context(5919).Heading, obj3);
     const items1 = [
       arr(View, obj2),
       arr.map((command, index) =>

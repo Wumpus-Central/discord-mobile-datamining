@@ -392,7 +392,7 @@ export default function FriendRequestsScreen() {
     const obj15 = { variant: "body-sm/semibold", color: "text-brand", children: null };
     const intl3 = tmp4(1113).intl;
     obj15.children = intl3.string(tmp4(1113).t.O8k7O4);
-    obj14.children = tmp32(tmp4(5929).Text, obj15);
+    obj14.children = tmp32(tmp4(5919).Text, obj15);
     obj13.children = tmp32(tmp4(7428).PressableOpacity, obj14);
     tmp32Result = tmp32(tmp33, obj13);
   }

@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05570_BottomSheetModal.js";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import BottomSheetModal from "../../../../../_runtime/05560_BottomSheetModal.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import ActionSheetHeaderBar from "../../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
 import GuildProfileSheetBodyDefault from "GuildProfileSheetBody.tsx";
 import GuildProfileCreateTagUpsellDefault from "GuildProfileCreateTagUpsell.tsx";
@@ -34,12 +34,12 @@ export default function GuildProfileActionSheet(guildId) {
   colors = undefined;
   noop = colors();
   const tmp = useThemeDefault();
-  const backgroundColor = guildId(5902).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp);
-  let obj = guildId(5902);
+  const backgroundColor = guildId(5892).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp);
+  let obj = guildId(5892);
   const bottomSheetRef = guildId(8559).useBottomSheetRef();
   ({ bottomSheetRef: c5, bottomSheetClose } = bottomSheetRef);
   const obj2 = guildId(8559);
-  const token = guildId(5902).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  const token = guildId(5892).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   items = [token];
   colors = noop.useMemo(() => {
     const obj = _modDef671(token);

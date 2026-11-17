@@ -30,7 +30,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  if (guildId(5352).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+  if (guildId(5342).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
     let tmp8 = _modDef14888;
     const intl2 = tmp2(1113).intl;
     let stringResult = intl2.string(tmp2(1113).t.lk30cY);
@@ -45,7 +45,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
         return;
       }
     }
-  } else if (tmp2(5352).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+  } else if (tmp2(5342).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
     tmp8 = _modDef14889;
     class I {
       constructor() {

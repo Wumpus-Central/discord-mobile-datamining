@@ -114,7 +114,7 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   closure_11 = chatInputRef.useRef(channelId);
   chatInputRef.useRef(null);
   ref = chatInputRef.useRef(null);
-  channelId(5917)(() => new channelId(isActive[15])());
+  channelId(5907)(() => new channelId(isActive[15])());
   const tmp10 = channelId(11997)(channelId);
   isResourceChannel = tmp10;
   let obj3 = flag(11977);

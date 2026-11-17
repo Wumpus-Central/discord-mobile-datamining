@@ -211,13 +211,13 @@ class ConnectedUserAccount {
             href: tmp,
             trusted: account.type !== constants.DOMAIN,
             onConfirm() {
-              account(6067).trackWithMetadata(constants.CONNECTED_ACCOUNT_VIEWED, {
+              account(6057).trackWithMetadata(constants.CONNECTED_ACCOUNT_VIEWED, {
                 platform_type: type.type,
                 other_user_id,
               });
-              const obj = account(6067);
+              const obj = account(6057);
               const obj2 = { platform_type: type.type, other_user_id };
-              userId(6012).openURL(platformUserUrl);
+              userId(6002).openURL(platformUserUrl);
             },
           };
           MaskedLinkUtils.handleClick(obj2);
@@ -369,7 +369,7 @@ class ConnectedApplicationUserRoleAccount {
         const obj = { style: closure_1.connectedAccountPoweredByText, children: null };
         let tmp5 = null;
         if (null != applicationRoleConnection.application.bot) {
-          const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "Path" };
+          const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "Array" };
           const tmp12 = new UserRecord(applicationRoleConnection.application.bot);
           obj2.user = tmp12;
           obj2.size = native.AvatarSizes.SIZE_16;
@@ -507,8 +507,8 @@ export default function LegacyUserProfileConnections(user) {
   }, items3);
   closure_129_0 = undefined;
   const obj2 = user(504);
-  const theme = user(5377).useThemeContext().theme;
-  const tmpResult = user(5377);
+  const theme = user(5367).useThemeContext().theme;
+  const tmpResult = user(5367);
   const items4 = [LocaleStore];
   closure_129_2 = user(504).useStateFromStores(items4, () => LocaleStore.locale);
   const mapped = memo.map((applicationRoleConnection, index) => {
@@ -520,8 +520,8 @@ export default function LegacyUserProfileConnections(user) {
   const id = user.id;
   closure_130_1 = undefined;
   const tmpResult5 = user(504);
-  const theme2 = user(5377).useThemeContext().theme;
-  const tmpResult6 = user(5377);
+  const theme2 = user(5367).useThemeContext().theme;
+  const tmpResult6 = user(5367);
   const items5 = [LocaleStore];
   closure_130_3 = user(504).useStateFromStores(items5, () => LocaleStore.locale);
   const tmpResult7 = user(504);

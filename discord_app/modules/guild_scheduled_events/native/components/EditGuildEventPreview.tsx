@@ -23,7 +23,7 @@ function PreviewBody(event) {
     () => ChannelStore.getChannel(channel_id),
     items1,
   );
-  const tmp6 = channel_id(5954)(stateFromStores);
+  const tmp6 = channel_id(5944)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;

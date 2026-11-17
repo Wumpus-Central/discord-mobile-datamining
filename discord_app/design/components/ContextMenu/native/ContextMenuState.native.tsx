@@ -18,8 +18,8 @@ let items = [
   0,
   4,
   fn(1708).scheduleOnRN,
-  fn(5554).triggerHapticFeedback,
-  fn(5554).HapticFeedbackTypes,
+  fn(5544).triggerHapticFeedback,
+  fn(5544).HapticFeedbackTypes,
 ];
 let closure_129_0;
 let closure_129_1;

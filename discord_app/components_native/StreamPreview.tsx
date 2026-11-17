@@ -49,7 +49,7 @@ DefaultFallback.prototype["render"] = function render() {
   obj.children = hasOwnProperty(tmp6, obj2);
   return hasOwnProperty(React3, obj);
 };
-DefaultFallback.contextType = fn(5377).ThemeContext;
+DefaultFallback.contextType = fn(5367).ThemeContext;
 createStyles = fn(5306);
 const obj6 = { touchable: null, imageContainer: null, image: null };
 let size = {
@@ -135,7 +135,7 @@ StreamPreview.prototype["render"] = function render() {
   }
   tmp8 = renderFallbackResult1;
 };
-StreamPreview.contextType = fn(5377).ThemeContext;
+StreamPreview.contextType = fn(5367).ThemeContext;
 StreamPreview.defaultProps = {
   renderFallback: function defaultRenderFallback(arg0, theme) {
     const obj = { theme, caption: null };

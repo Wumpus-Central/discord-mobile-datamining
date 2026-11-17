@@ -93,15 +93,15 @@ function WaterfallRow(node) {
   let tmp13Result = null;
   if (node.descendants > 0) {
     const obj9 = { variant: "body-xs/normal", color: "text-muted", children: node.descendants };
-    tmp13Result = tmp13(tmp2(5929).Text, obj9);
+    tmp13Result = tmp13(tmp2(5919).Text, obj9);
   }
   items2[1] = tmp13Result;
   const obj10 = { style: null };
   const items3 = [tmp.swatch, perfCategoryColors[node.category]];
   obj10.style = items3;
   items2[2] = tmp13(closure_6, obj10);
-  items2[3] = tmp13(node(5929).Text, { variant: "body-xs/semibold", color: "text-strong", children: node.service });
-  items2[4] = tmp13(node(5929).Text, {
+  items2[3] = tmp13(node(5919).Text, { variant: "body-xs/semibold", color: "text-strong", children: node.service });
+  items2[4] = tmp13(node(5919).Text, {
     variant: "body-xs/normal",
     color: "text-default",
     style: tmp.operation,
@@ -114,7 +114,7 @@ function WaterfallRow(node) {
     const obj14 = { variant: "footnote/semibold", color: "text-default", children: null };
     const _HermesInternal = HermesInternal;
     obj14.children = "\u00D7" + node.count;
-    obj13.children = tmp13(tmp2(5929).Text, obj14);
+    obj13.children = tmp13(tmp2(5919).Text, obj14);
     tmp13Result4 = tmp13(closure_6, obj13);
   }
   items2[5] = tmp13Result4;
@@ -135,7 +135,7 @@ function WaterfallRow(node) {
   };
   const obj5 = { paddingLeft: node.depth * selected(575).space.PX_12 };
   obj16.children = node(14005).perfNodeDuration(node);
-  items2[7] = tmp13(node(5929).Text, obj16);
+  items2[7] = tmp13(node(5919).Text, obj16);
   obj4.children = items2;
   const items4 = [closure_9(closure_6, obj4), ,];
   const obj17 = { style: tmp.track, children: null };
@@ -179,8 +179,8 @@ function WaterfallRow(node) {
             }
             const obj = { style: detailLine, children: null };
             items = [
-              closure_2_8(node(5929).Text, { variant: "body-xs/semibold", color: "text-muted", children: label }),
-              closure_2_8(node(5929).Text, {
+              closure_2_8(node(5919).Text, { variant: "body-xs/semibold", color: "text-muted", children: label }),
+              closure_2_8(node(5919).Text, {
                 variant: "body-xs/normal",
                 color: "text-default",
                 style: tmp4.operation,
@@ -297,7 +297,7 @@ function Waterfall(trace) {
     const obj9 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const _HermesInternal = HermesInternal;
     obj9.children = "Started by " + trace.started_by.trace_name;
-    tmp8Result = closure_8(tmp4(5929).Text, obj9);
+    tmp8Result = closure_8(tmp4(5919).Text, obj9);
   }
   items1[2] = tmp8Result;
   let tmp8Result2 = null;
@@ -305,7 +305,7 @@ function Waterfall(trace) {
     const obj10 = { variant: "body-sm/normal", color: "text-feedback-warning", children: null };
     const _HermesInternal2 = HermesInternal;
     obj10.children = "" + tmp4(14005).formatSpanCount(trace.dropped) + " not recorded";
-    tmp8Result2 = closure_8(tmp4(5929).Text, obj10);
+    tmp8Result2 = closure_8(tmp4(5919).Text, obj10);
     const tmp4Result = tmp4(14005);
   }
   items1[3] = tmp8Result2;
@@ -378,7 +378,7 @@ function PerfTraceScreen(projectId) {
     items1,
   );
   if (null == stateFromStores) {
-    let tmp6 = closure_8(projectId(5929).Text, {
+    let tmp6 = closure_8(projectId(5919).Text, {
       variant: "body-sm/normal",
       color: "text-muted",
       children: "This trace is no longer available.",

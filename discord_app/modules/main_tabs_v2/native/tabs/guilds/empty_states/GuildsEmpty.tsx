@@ -138,7 +138,7 @@ let obj8 = {
 };
 obj.textWrapper = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
 let obj10 = {};
-const merged = Object.assign(fn(5929).TextStyleSheet["heading-sm/semibold"]);
+const merged = Object.assign(fn(5919).TextStyleSheet["heading-sm/semibold"]);
 obj10.fontSize = 18;
 obj10.marginBottom = 8;
 obj.headerText = obj10;
@@ -166,7 +166,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
   const obj2 = navigation(563);
   obj3.type = navigation(1264).ImpressionTypes.VIEW;
   obj3.name = navigation(1264).ImpressionNames.GUILDS_EMPTY_NUX;
-  selectedGuildId(6338)(obj3);
+  selectedGuildId(6328)(obj3);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
@@ -231,7 +231,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
       }
     }
   }, items1);
-  const tmp7 = selectedGuildId(6338);
+  const tmp7 = selectedGuildId(6328);
   const isScreenLandscape = navigation(8560).useIsScreenLandscape();
   navigation(17703);
   let tmp14Result = null;
@@ -250,7 +250,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
     };
     const intl = tmp2(1113).intl;
     obj7.children = intl.string(tmp2(1113).t["7hB4kg"]);
-    obj6.children = closure_13(tmp2(5929).Text, obj7);
+    obj6.children = closure_13(tmp2(5919).Text, obj7);
     obj5.children = closure_13(closure_5, obj6);
     const items3 = [closure_13(closure_5, obj5)];
     let tmp18;

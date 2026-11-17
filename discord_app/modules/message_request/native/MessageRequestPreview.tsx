@@ -124,7 +124,7 @@ export default noop.memo(function MessageRequestPreview(channel) {
         }
         stringResult = stringResult1;
         flag = false;
-        tmp2Result = tmp2(6792);
+        tmp2Result = tmp2(6782);
       } else {
         const intl = tmp2(1113).intl;
         stringResult = intl.string(tmp2(1113).t["0KfDxM"]);

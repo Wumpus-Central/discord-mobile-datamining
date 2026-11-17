@@ -254,13 +254,13 @@ export default function FormImagePicker(children) {
   const obj = { style: tmp2.imageSelectionRow, children: null };
   const obj2 = { style: tmp2.buttonColumn, children: null };
   items = [
-    closure_6(tmp6(5929).Text, {
+    closure_6(tmp6(5919).Text, {
       style: tmp2.imageDescription,
       variant: "body-sm/medium",
       color: "text-default",
       children: children.description,
     }),
-    closure_6(tmp6(5936).Button, {
+    closure_6(tmp6(5926).Button, {
       text: stringResult,
       variant: "secondary",
       onPress: function handleSelectImage() {

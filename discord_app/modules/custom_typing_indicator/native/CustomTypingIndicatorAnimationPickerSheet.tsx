@@ -118,7 +118,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       index,
     ),
   );
-  items1[1] = closure_6(onChange(6337).Stack, obj9);
+  items1[1] = closure_6(onChange(6327).Stack, obj9);
   obj5.children = items1;
   return closure_7(onChange(7951).ActionSheet, obj5);
 }

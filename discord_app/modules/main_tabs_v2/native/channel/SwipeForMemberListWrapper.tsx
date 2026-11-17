@@ -542,12 +542,12 @@ export default function _default(channelId) {
       position: translateX,
       openAt: 0,
       closedAt: maxWidth,
-      resolveOpenName: tmp12(18724).getBaseScreenName,
-      resolveClosedName: tmp12(18724).getBaseScreenName,
+      resolveOpenName: tmp12(18726).getBaseScreenName,
+      resolveClosedName: tmp12(18726).getBaseScreenName,
       onCoveringChange: callback2,
     };
-    tmp63 = navigation(tmp2(18727), obj4);
-    const tmp2Result = tmp2(18727);
+    tmp63 = navigation(tmp2(18729), obj4);
+    const tmp2Result = tmp2(18729);
   }
   const items30 = [tmp63];
   let obj5 = { gesture: memo2, children: null };

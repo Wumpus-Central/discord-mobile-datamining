@@ -30,8 +30,8 @@ const result = size.fileFinishedImporting(
   "design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx",
 );
 
-export const BlurTheme = fn(5906).BlurTheme;
-export const BlurStyle = fn(5906).BlurStyle;
+export const BlurTheme = fn(5896).BlurTheme;
+export const BlurStyle = fn(5896).BlurStyle;
 export function BackgroundBlurFill(arg0) {
   ({ blurTheme, blurStyle, tintColor, android_fallbackColor } = arg0);
   ({ style, blurAmount, android_blurTargetViewNativeId } = arg0);
@@ -53,8 +53,8 @@ export function BackgroundBlurFill(arg0) {
   if (tintColor == null) {
     tintColor = noop.useMemo(() => (VisualEffectView.isBlurThemeLight(blurTheme) ? closure_6 : closure_8), items1);
   }
-  obj = blurTheme(5377);
-  const tmpResult = blurTheme(5902);
+  obj = blurTheme(5367);
+  const tmpResult = blurTheme(5892);
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(
       nativeDefault.colors.BACKGROUND_SCRIM,
@@ -103,8 +103,8 @@ export function BackgroundBlurFillAnimated(arg0) {
   if (tintColor == null) {
     tintColor = noop.useMemo(() => (VisualEffectView.isBlurThemeLight(blurTheme) ? closure_6 : closure_8), items1);
   }
-  obj = blurTheme(5377);
-  const tmpResult = blurTheme(5902);
+  obj = blurTheme(5367);
+  const tmpResult = blurTheme(5892);
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(
       nativeDefault.colors.BACKGROUND_SCRIM,
@@ -123,7 +123,7 @@ export function BackgroundBlurFillAnimated(arg0) {
   const items2 = [StyleSheet.absoluteFill, style];
   obj3.style = items2;
   let tmp6 = null != animatedProps;
-  tmpResult2 = blurTheme(5906);
+  tmpResult2 = blurTheme(5896);
   if (tmp6) {
     const obj4 = { animatedProps };
     tmp6 = obj4;

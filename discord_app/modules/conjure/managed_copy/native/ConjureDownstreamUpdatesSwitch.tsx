@@ -40,7 +40,7 @@ export default function ConjureDownstreamUpdatesSwitch(projectId) {
       const obj11 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
       const intl3 = tmp2(1113).intl;
       obj11.children = intl3.string(tmp11(4131)["UU+oef"]);
-      obj6.children = closure_6(tmp2(5929).Text, obj11);
+      obj6.children = closure_6(tmp2(5919).Text, obj11);
       let tmp10Result = closure_6(View, obj6);
     } else {
       tmp10Result = null;

@@ -8,7 +8,7 @@ import VoicePanelStore from "../../voice_panel/VoicePanelStore.tsx";
 
 const require = fn;
 const MediaPlaybackPanelModes = fn(17020).MediaPlaybackPanelModes;
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const MorphablePanelModes = fn(11986).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let closure_12 = {

@@ -225,7 +225,7 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                 ({ interactionName, messageType } = obj);
                 const StringResult = String(items.length + 1);
                 const obj3 = { channelId: id.id, content: bot, author: bot2, type: null };
-                const obj2 = projectId(6374);
+                const obj2 = projectId(6364);
                 if (messageType == null) {
                   messageType = constants2.DEFAULT;
                 }
@@ -239,7 +239,7 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                   obj6 = {
                     id: StringResult,
                     name: interactionName,
-                    type: projectId(6381).InteractionTypes.APPLICATION_COMMAND,
+                    type: projectId(6371).InteractionTypes.APPLICATION_COMMAND,
                     user: projectId(8851).userRecordToServer(currentUser),
                   };
                   obj5.interaction = obj6;

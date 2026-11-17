@@ -13,7 +13,7 @@ const View = fn(17).View;
 const Constants = fn(7962);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_6, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: metroImportDefault } =
   Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5567).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5557).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const size = fn(2);
@@ -45,9 +45,9 @@ export default noop.memo(function BotUserProfileContent(user) {
   if (channel != null) {
     id = channel.id;
   }
-  const name = channel(6351).useName(guildId, id, user);
-  const obj3 = channel(6351);
-  closure_4 = channel(5372).useUserTag(user);
+  const name = channel(6341).useName(guildId, id, user);
+  const obj3 = channel(6341);
+  closure_4 = channel(5362).useUserTag(user);
   let application;
   if (displayProfile != null) {
     application = displayProfile.application;
@@ -55,7 +55,7 @@ export default noop.memo(function BotUserProfileContent(user) {
   channel(15672)(user, "BotUserProfileContent");
   let result = tmp(13465)(application);
   const tmp16 = channel;
-  const tmpResult = channel(5372);
+  const tmpResult = channel(5362);
   guild_id = undefined;
   const tmpResult7 = channel(13479);
   if (channel != null) {
@@ -218,7 +218,7 @@ export default noop.memo(function BotUserProfileContent(user) {
       const intl3 = tmp7(1113).intl;
       const obj21 = { name: null };
       const tmpResult9 = tmp(15702);
-      obj21.name = tmp(5372).getName(user);
+      obj21.name = tmp(5362).getName(user);
       obj19.accessibilityHint = intl3.formatToPlainString(tmp7(1113).t.zFfSFQ, obj21);
       obj19.onPress = function onPress() {
         trackUserProfileAction({ action: "SEND_MESSAGE" });
@@ -226,7 +226,7 @@ export default noop.memo(function BotUserProfileContent(user) {
         ModalActionCreatorsDefault.popAll();
         ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: user.id, navigationReplace });
       };
-      obj17.secondaryButton = closure_9(tmp7(5936).Button, obj19);
+      obj17.secondaryButton = closure_9(tmp7(5926).Button, obj19);
       items7[2] = closure_9(tmpResult9, obj17);
       obj14.children = items7;
       items6[1] = closure_10(closure_4, obj14);

@@ -88,12 +88,12 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   const obj6 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = onSave(1113).intl;
   obj6.children = intl2.string(onSave(1113).t.Cq44Rg);
-  items1[1] = closure_8(onSave(5929).Text, obj6);
+  items1[1] = closure_8(onSave(5919).Text, obj6);
   const obj7 = { onPress: callback, activeOpacity: 0.5, children: null };
   const obj8 = { variant: "body-md/medium", color: "text-brand", children: null };
   const intl3 = onSave(1113).intl;
   obj8.children = intl3.string(onSave(1113).t["R3BPH+"]);
-  obj7.children = closure_8(onSave(5929).Text, obj8);
+  obj7.children = closure_8(onSave(5919).Text, obj8);
   items1[2] = closure_8(closure_5, obj7);
   obj3.children = items1;
   const items2 = [closure_9(closure_6, obj3), closure_8(closure_6, { style: tmp.separator })];

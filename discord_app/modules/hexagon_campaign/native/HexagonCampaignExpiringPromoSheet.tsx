@@ -1,6 +1,6 @@
 // discord_app/modules/hexagon_campaign/native/HexagonCampaignExpiringPromoSheet.tsx
-import QuestTypes from "../../quests/QuestTypes.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import QuestTypes from "../../quests/QuestTypes.tsx";
 import AnalyticsTypes from "../../quests/lib/analytics/AnalyticsTypes.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";

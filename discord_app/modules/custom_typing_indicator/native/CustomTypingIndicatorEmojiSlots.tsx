@@ -148,28 +148,28 @@ const EmojiIntention = fn(1391).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
 let items = [
-  fn(17985).EmojiAngryFaceWithHornsIcon,
-  fn(17987).EmojiColdFaceIcon,
-  fn(17989).EmojiCowboyHatFaceIcon,
-  fn(17991).EmojiCryingFaceIcon,
-  fn(17993).EmojiDisguisedFaceIcon,
-  fn(17995).EmojiFaceVomitingIcon,
-  fn(17997).EmojiFaceWithMonocleIcon,
-  fn(17999).EmojiFaceWithSpiralEyesIcon,
-  fn(18001).EmojiMeltingFaceIcon,
-  fn(18003).EmojiMoneyMouthFaceIcon,
-  fn(18005).EmojiNerdFaceIcon,
-  fn(18007).EmojiPartyingFaceIcon,
-  fn(18009).EmojiSalutingFaceIcon,
-  fn(18011).EmojiSkullIcon,
-  fn(18013).EmojiSmilingFaceWithHornsIcon,
-  fn(18015).EmojiSmilingFaceWithSunglassesIcon,
-  fn(18017).EmojiSquintingFaceWithTongueIcon,
-  fn(18019).EmojiUpsideDownFaceIcon,
-  fn(18021).EmojiWoozyFaceIcon,
-  fn(18023).EmojiZanyFaceIcon,
-  fn(18025).EmojiRollingOnTheFloorLaughingIcon,
-  fn(18027).EmojiSmilingFaceWithHeartsIcon,
+  fn(17987).EmojiAngryFaceWithHornsIcon,
+  fn(17989).EmojiColdFaceIcon,
+  fn(17991).EmojiCowboyHatFaceIcon,
+  fn(17993).EmojiCryingFaceIcon,
+  fn(17995).EmojiDisguisedFaceIcon,
+  fn(17997).EmojiFaceVomitingIcon,
+  fn(17999).EmojiFaceWithMonocleIcon,
+  fn(18001).EmojiFaceWithSpiralEyesIcon,
+  fn(18003).EmojiMeltingFaceIcon,
+  fn(18005).EmojiMoneyMouthFaceIcon,
+  fn(18007).EmojiNerdFaceIcon,
+  fn(18009).EmojiPartyingFaceIcon,
+  fn(18011).EmojiSalutingFaceIcon,
+  fn(18013).EmojiSkullIcon,
+  fn(18015).EmojiSmilingFaceWithHornsIcon,
+  fn(18017).EmojiSmilingFaceWithSunglassesIcon,
+  fn(18019).EmojiSquintingFaceWithTongueIcon,
+  fn(18021).EmojiUpsideDownFaceIcon,
+  fn(18023).EmojiWoozyFaceIcon,
+  fn(18025).EmojiZanyFaceIcon,
+  fn(18027).EmojiRollingOnTheFloorLaughingIcon,
+  fn(18029).EmojiSmilingFaceWithHeartsIcon,
 ];
 const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles({
@@ -213,5 +213,5 @@ export default function CustomTypingIndicatorEmojiSlots(emojis) {
       />
     );
   });
-  return jsx(emojis(6337).Stack, { direction: "horizontal", spacing: 8, children: null });
+  return jsx(emojis(6327).Stack, { direction: "horizontal", spacing: 8, children: null });
 }

@@ -5,7 +5,7 @@ import CheckpointStore from "CheckpointStore.tsx";
 
 require = fn;
 const CheckpointFetchStates = fn(14253).CheckpointFetchStates;
-let closure_5 = fn(6377).CHECKPOINT_GLOBAL_GAME_CATEGORIES;
+let closure_5 = fn(6367).CHECKPOINT_GLOBAL_GAME_CATEGORIES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/useMaybeFetchCheckpointData.tsx");
 

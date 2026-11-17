@@ -8,7 +8,7 @@ import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import _modDef11214 from "../../../../../../_runtime/metro/11214__.js";
 import PaginationDefault from "../../../../../../_runtime/11689_Pagination.js";
 import HexagonCampaignThemeLegalDefault from "../../../../hexagon_campaign/native/HexagonCampaignThemeLegal.tsx";
-import _modDef17897 from "../../../../../../_runtime/metro/17897__.js";
+import _modDef17899 from "../../../../../../_runtime/metro/17899__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import SettingsAppearanceConstants from "../SettingsAppearanceConstants.tsx";
@@ -127,7 +127,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     }
     tmp18 = isThumbstickScrollDevice;
   }
-  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(5341).QuestContent.CLIENT_THEME_SETTINGS, tmp2(17085).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
+  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(6957).QuestContent.CLIENT_THEME_SETTINGS, tmp2(17085).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
   const tmp2Result = require("HexagonCampaignAnalytics");
   const hexagonCampaignPerkAvailability = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, "SettingsAppearanceThemeCarousel");
   const tmp20 = constants;
@@ -360,7 +360,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
         const obj21 = { theme: ThemeTypes.DARK, children: null };
         const obj22 = { perk: tmp20.CLIENT_THEME, variant: "expressive" };
         obj21.children = tmp40(tmp53(17108), obj22);
-        tmp40Result6 = tmp40(tmp2(5377).ThemeContextProvider, obj21);
+        tmp40Result6 = tmp40(tmp2(5367).ThemeContextProvider, obj21);
       }
       const obj23 = { children: null };
       obj20.children = tmp40Result6;
@@ -374,7 +374,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       obj23.children = items17;
       const obj25 = { style: tmp.container, children: null };
       const obj26 = { style: tmp.floatingNuxContainer, children: null };
-      tmp2Result12 = tmp2(5544);
+      tmp2Result12 = tmp2(5534);
       const obj27 = { style: null, children: null };
       const items19 = [tmp.floatingNux, animatedStyle1, , ];
       ({ bgSurfaceOverlay: arr21[2], borderFaint: arr21[3] } = animatedStyles);
@@ -382,7 +382,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       const obj28 = { style: null, source: null, size: null };
       const items20 = [tmp.arrowLeft, animatedStyles.iconInteractive];
       obj28.style = items20;
-      obj28.source = _modDef17897;
+      obj28.source = _modDef17899;
       obj28.size = tmp2(1187).IconSizes.REFRESH_SMALL_16;
       const items21 = [tmp40(rounded, obj28), ];
       const obj29 = { animated: true, style: null, variant: "body-sm/medium", maxFontSizeMultiplier: 1.5, children: null };
@@ -390,7 +390,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       obj29.style = items22;
       const intl3 = tmp2(1113).intl;
       obj29.children = intl3.string(tmp2(1113).t.y2b7CA);
-      items21[1] = tmp40(tmp2(5929).Text, obj29);
+      items21[1] = tmp40(tmp2(5919).Text, obj29);
       obj27.children = items21;
       obj26.children = tmp34(module_1655.View, obj27);
       const items23 = [tmp40(closure_5, obj26), tmp34(memo1, obj23)];

@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_4 = fn(19397).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_4 = fn(19399).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5306);
@@ -46,7 +46,7 @@ export default function ResourcesRow(guildId) {
             channelId.channelId,
           );
         },
-        children: closure_1_5(guildId(5929).Text, {
+        children: closure_1_5(guildId(5919).Text, {
           variant: "body-md/medium",
           color: "text-default",
           children: children.title,
@@ -60,7 +60,7 @@ export default function ResourcesRow(guildId) {
     const obj2 = {
       style: tmp.channelItem,
       onPress() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19399, dependencyMap.paths), closure_4, { guildId });
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19401, dependencyMap.paths), closure_4, { guildId });
       },
       children: null,
     };
@@ -68,7 +68,7 @@ export default function ResourcesRow(guildId) {
     const intl = guildId(1113).intl;
     const obj4 = { count: arr.length - 2 };
     obj3.children = intl.format(guildId(1113).t.F6iMs4, obj4);
-    obj2.children = closure_5(guildId(5929).Text, obj3);
+    obj2.children = closure_5(guildId(5919).Text, obj3);
     tmp6 = closure_5(guildId(7428).PressableOpacity, obj2);
   }
   items[1] = tmp6;

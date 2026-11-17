@@ -49,7 +49,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   }
   items1[1] = imgStyle;
   obj5.style = items1;
-  const items2 = [closure_6(valueProps(6020), obj5), , ,];
+  const items2 = [closure_6(valueProps(6010), obj5), , ,];
   const obj6 = {
     variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
@@ -73,7 +73,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
     children: body,
   });
   const obj7 = { variant: "body-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-  const tmp10 = valueProps(6020);
+  const tmp10 = valueProps(6010);
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
     children: valueProps.map((label, index) => {

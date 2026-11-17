@@ -107,7 +107,7 @@ let obj2 = {
   submittingIndicator: null,
 };
 let obj4 = {};
-let merged = Object.assign(fn(5929).TextStyleSheet["heading-md/semibold"]);
+let merged = Object.assign(fn(5919).TextStyleSheet["heading-md/semibold"]);
 obj4.color = nativeDefault.colors.TEXT_STRONG;
 obj2.headerTitle = obj4;
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };

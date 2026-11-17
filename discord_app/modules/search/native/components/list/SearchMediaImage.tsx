@@ -188,8 +188,8 @@ export function SearchAttachmentMediaImage(attachment) {
   }
   let hasFlagResult = attachment(1406).hasFlag(num, MessageAttachmentFlags.IS_SPOILER);
   if (!hasFlagResult) {
-    hasFlagResult = tmp2(6858).isChannelSpoilerGated(ChannelStore.getChannel(channelId));
-    const tmp2Result = tmp2(6858);
+    hasFlagResult = tmp2(6848).isChannelSpoilerGated(ChannelStore.getChannel(channelId));
+    const tmp2Result = tmp2(6848);
   }
   dependencyMap = hasFlagResult;
   items = [attachment, enabledHarmTypesBitmaskForChannelAndAuthorId, hasFlagResult];
@@ -219,8 +219,8 @@ export function SearchEmbedMediaImage(embed) {
   closure_3 = embed(11092).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
   const obj = embed(11092);
   const tmp2 = embed;
-  closure_4 = embed(6858).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
-  const obj2 = embed(6858);
+  closure_4 = embed(6848).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
+  const obj2 = embed(6848);
   items = [SearchMessageStore];
   let video = embed.thumbnail;
   const stateFromStores = embed(504).useStateFromStores(items, () => {

@@ -1131,7 +1131,7 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
       obj8.expiresDate = _modDef2169(subscription.metadata.grace_period_expires_date);
       return obj8;
     } else {
-      const tmp8 = null == subscription.paymentSourceId ? expandedHeight : closure_1_30;
+      const tmp8 = null == subscription.paymentSourceId ? closure_1_19 : closure_1_30;
       obj = { days: tmp8, expiresDate: _modDef2169(subscription.currentPeriodStart).add(tmp8, "days") };
       return obj;
     }

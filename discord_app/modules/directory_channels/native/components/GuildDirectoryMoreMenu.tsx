@@ -33,7 +33,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj2 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl2 = entry(1113).intl;
     obj2.label = intl2.string(entry(1113).t.KUxYWH);
-    obj2.IconComponent = entry(6040).TrashIcon;
+    obj2.IconComponent = entry(6030).TrashIcon;
     obj2.action = function handleRemove() {
       const obj2 = {
         title: null,

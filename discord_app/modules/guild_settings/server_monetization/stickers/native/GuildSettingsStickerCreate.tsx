@@ -248,17 +248,17 @@ export default function GuildSettingsStickerCreate(stickerId) {
                   c4 = 0;
                   closure_1_18.current = false;
                   closure_1_19(false);
-                  const result = closure_2_0(20527).showGuildSettingsStickerError();
+                  const result = closure_2_0(20530).showGuildSettingsStickerError();
                   c5 = 3;
-                  closure_2_0(20527);
+                  closure_2_0(20530);
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw value;
                 } else if (arg0 !== 2) {
                   v2();
-                  const result1 = closure_2_0(20527).showGuildSettingsStickerSuccess();
+                  const result1 = closure_2_0(20530).showGuildSettingsStickerSuccess();
                   c4 = 0;
-                  closure_2_0(20527);
+                  closure_2_0(20530);
                 }
                 return value;
               });
@@ -295,7 +295,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
                         value: commitSave(() => {
                           const obj2 = { name, tags: null, description: null };
                           const obj = stickerId(11358);
-                          obj2.tags = stickerId(6792).getStickerTagForEmoji(closure_2);
+                          obj2.tags = stickerId(6782).getStickerTagForEmoji(closure_2);
                           let str = closure_2_8;
                           if (closure_2_8 == null) {
                             str = "";
@@ -327,7 +327,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
                               originalMd5: null,
                             };
                             const obj = stickerId(11358);
-                            obj2.tags = stickerId(6792).getStickerTagForEmoji(closure_2);
+                            obj2.tags = stickerId(6782).getStickerTagForEmoji(closure_2);
                             let str = closure_2_8;
                             if (closure_2_8 == null) {
                               str = "";
@@ -492,21 +492,21 @@ export default function GuildSettingsStickerCreate(stickerId) {
     let obj6 = { variant: "heading-sm/semibold", style: tmp.title, children: null };
     const intl = stickerId(1113).intl;
     obj6.children = intl.string(stickerId(1113).t["9N2OWD"]);
-    const items2 = [onPressEmoji(stickerId(5929).Text, obj6), , ,];
+    const items2 = [onPressEmoji(stickerId(5919).Text, obj6), , ,];
     let obj7 = { variant: "body-sm/medium", color: "text-muted", style: tmp.description, children: null };
     const intl2 = stickerId(1113).intl;
-    const obj8 = { fileSize: stickerId(6762).formatKbSize(first2, { useKibibytes: true }) };
+    const obj8 = { fileSize: stickerId(6752).formatKbSize(first2, { useKibibytes: true }) };
     obj7.children = intl2.format(stickerId(1113).t.hxLviw, obj8);
-    items2[1] = onPressEmoji(stickerId(5929).Text, obj7);
+    items2[1] = onPressEmoji(stickerId(5919).Text, obj7);
     const obj10 = { variant: "body-sm/medium", color: "text-muted", style: tmp.help, children: null };
     const intl3 = stickerId(1113).intl;
     const obj11 = { articleUrl: null };
-    const obj9 = stickerId(6762);
+    const obj9 = stickerId(6752);
     const tmp29 = user;
     const tmp30 = onPressEmoji;
     obj11.articleUrl = HelpdeskUtilsDefault.getArticleURL(first1.STICKERS_UPLOAD);
     obj10.children = intl3.format(stickerId(1113).t.UBj0aX, obj11);
-    items2[2] = onPressEmoji(stickerId(5929).Text, obj10);
+    items2[2] = onPressEmoji(stickerId(5919).Text, obj10);
     const obj12 = { text: null, onPress: null, variant: null };
     const intl4 = stickerId(1113).intl;
     obj12.text = intl4.string(stickerId(1113).t.O1REe1);
@@ -517,7 +517,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
     }
     const obj13 = { children: null };
     obj12.variant = str;
-    items2[3] = tmp30(stickerId(5936).Button, obj12);
+    items2[3] = tmp30(stickerId(5926).Button, obj12);
     obj13.children = items2;
     tmp26Result = tmp26(tmp29, obj13);
     const tmp15Result = HelpdeskUtilsDefault;
@@ -527,7 +527,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
   const obj15 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.stickerPreviewLabel, children: null };
   const intl5 = stickerId(1113).intl;
   obj15.children = intl5.string(stickerId(1113).t.gjdiKE);
-  const items4 = [onPressEmoji(stickerId(5929).Text, obj15), , , , , ,];
+  const items4 = [onPressEmoji(stickerId(5919).Text, obj15), , , , , ,];
   const obj16 = {
     style: tmp.stickerPreview,
     disabled: null != tmp17Result,
@@ -549,14 +549,14 @@ export default function GuildSettingsStickerCreate(stickerId) {
     obj18.style = tmp.stickerPreviewImage;
     tmp35Result = tmp35(first, obj18);
   } else {
-    tmp35Result = tmp35(tmp34(20528).StickerPlusIcon, { size: "lg" });
+    tmp35Result = tmp35(tmp34(20531).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp35Result;
   items4[1] = onPressEmoji(stickerId(7428).PressableHighlight, obj16);
   const obj20 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.stickerPreviewLabel, children: null };
   const intl7 = tmp34(1113).intl;
   obj20.children = intl7.string(stickerId(1113).t["3BQmiC"]);
-  items4[2] = onPressEmoji(stickerId(5929).Text, obj20);
+  items4[2] = onPressEmoji(stickerId(5919).Text, obj20);
   const obj21 = {
     style: tmp.emojiPreview,
     onPress() {
@@ -596,7 +596,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
     const intl8 = tmp34(1113).intl;
     combined = intl8.string(tmp34(1113).t.QTK0TJ);
   }
-  items5[1] = onPressEmoji(stickerId(5929).Text, {
+  items5[1] = onPressEmoji(stickerId(5919).Text, {
     variant: "body-md/semibold",
     color: "input-placeholder-text-default",
     children: combined,
@@ -688,9 +688,9 @@ export default function GuildSettingsStickerCreate(stickerId) {
   }
   obj27.disabled = tmp51;
   obj27.loading = tmp23;
-  items4[6] = onPressEmoji(stickerId(5936).Button, obj27);
+  items4[6] = onPressEmoji(stickerId(5926).Button, obj27);
   obj14.children = items4;
-  items3[1] = closure_17(stickerId(6337).Stack, obj14);
+  items3[1] = closure_17(stickerId(6327).Stack, obj14);
   obj4.children = items3;
   return closure_17(closure_7, obj4);
 }

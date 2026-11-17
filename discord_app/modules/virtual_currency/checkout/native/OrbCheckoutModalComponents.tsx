@@ -145,7 +145,7 @@ export function OrbCheckoutOrderSummary(skuId) {
   };
   const intl = tmp2(1113).intl;
   obj3.children = intl.string(skuId(1113).t.hws7bC);
-  const items4 = [closure_10(skuId(5929).Text, obj3)];
+  const items4 = [closure_10(skuId(5919).Text, obj3)];
   const scenario = mobileCheckoutFlow.scenario;
   if ("collectibles" === scenario) {
     const obj4 = { product: mobileCheckoutFlow.product, useOrbPrice: true, orbPriceAmount: tmp4 };
@@ -198,7 +198,7 @@ export function OrbCheckoutLegalFinePrint() {
   skuId = skuId(15502).useOrbCheckoutModalContext().skuId;
   items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
-  return closure_10(skuId(5929).Text, {
+  return closure_10(skuId(5919).Text, {
     style: tmp.disclaimer,
     variant: "footnote/normal",
     color: "interactive-text-active",

@@ -2,10 +2,10 @@
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import QuestTypes from "../../quests/QuestTypes.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ButtonEllipsis from "../../../design/components/Button/native/ButtonEllipsis.native.tsx";
+import QuestTypes from "../../quests/QuestTypes.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
@@ -78,7 +78,7 @@ class OrbsOnboardingMenuDismissibleContent {
             fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
           });
         };
-        obj.trailing = closure_11(closure_1(18340), {});
+        obj.trailing = closure_11(closure_1(18342), {});
         return closure_11(closure_12, obj);
       } else {
         return null;
@@ -116,8 +116,8 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
         balance,
       });
       const obj2 = { type: "GO_TO_SHOP", source: isOrbWalletEntrypointEnabled(7937).YOU_SCREEN, balance };
-      isOrbWalletEntrypointEnabled(5552).hideActionSheet();
-      const obj3 = isOrbWalletEntrypointEnabled(5552);
+      isOrbWalletEntrypointEnabled(5542).hideActionSheet();
+      const obj3 = isOrbWalletEntrypointEnabled(5542);
       const obj5 = { analyticsLocations: null, analyticsSource: null, screen: null };
       items = [isOrbWalletEntrypointEnabled(7937).COLLECTIBLES_SHOP];
       obj5.analyticsLocations = items;
@@ -137,13 +137,13 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
         balance,
       });
       const obj2 = { type: "GO_TO_QUEST_HOME", source: isOrbWalletEntrypointEnabled(7937).YOU_SCREEN, balance };
-      isOrbWalletEntrypointEnabled(5552).hideActionSheet();
-      const obj3 = isOrbWalletEntrypointEnabled(5552);
+      isOrbWalletEntrypointEnabled(5542).hideActionSheet();
+      const obj3 = isOrbWalletEntrypointEnabled(5542);
       const obj4 = str(10128);
       obj4.openQuestHome({
         mergeExistingRoutes: true,
         filter: constants3.VIRTUAL_CURRENCY,
-        fromContent: str(5341).QuestContent.ORBS_BALANCE_MENU,
+        fromContent: str(6957).QuestContent.ORBS_BALANCE_MENU,
       });
     };
     obj3.secondaryButtonConfig = obj5;
@@ -156,7 +156,7 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
   if (isOrbWalletEntrypointEnabled) {
     let obj3 = { ref: orbWalletEntryRowRef.orbWalletEntryRowRef, collapsable: false, children: null };
     let obj4 = { balance: str, notificationType: tmp6, onPress: callback };
-    obj3.children = jsx(tmp(18341).OrbWalletEntryRow, { balance: str, notificationType: tmp6, onPress: callback });
+    obj3.children = jsx(tmp(18343).OrbWalletEntryRow, { balance: str, notificationType: tmp6, onPress: callback });
     let tmp7Result = (
       <View ref={orbWalletEntryRowRef.orbWalletEntryRowRef} collapsable={false}>
         {null}
@@ -187,7 +187,7 @@ const Constants = fn(1072);
 let closure_7 = fn(1074).CollectiblesMobileShopScreen;
 const DismissibleContentConstants = fn(5152);
 ({ ContentDismissActionType: closure_8, DismissibleContentGroupName: closure_9 } = DismissibleContentConstants);
-const RewardFilterTypes = fn(5338).RewardFilterTypes;
+const RewardFilterTypes = fn(6954).RewardFilterTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
@@ -250,8 +250,8 @@ export function useOpenOrbWalletFromYouScreen() {
           balance,
         });
         const obj2 = { type: "GO_TO_SHOP", source: isOrbWalletEntrypointEnabled(7937).YOU_SCREEN, balance };
-        isOrbWalletEntrypointEnabled(5552).hideActionSheet();
-        const obj3 = isOrbWalletEntrypointEnabled(5552);
+        isOrbWalletEntrypointEnabled(5542).hideActionSheet();
+        const obj3 = isOrbWalletEntrypointEnabled(5542);
         const obj5 = { analyticsLocations: null, analyticsSource: null, screen: null };
         items = [isOrbWalletEntrypointEnabled(7937).COLLECTIBLES_SHOP];
         obj5.analyticsLocations = items;
@@ -271,13 +271,13 @@ export function useOpenOrbWalletFromYouScreen() {
           balance,
         });
         const obj2 = { type: "GO_TO_QUEST_HOME", source: isOrbWalletEntrypointEnabled(7937).YOU_SCREEN, balance };
-        isOrbWalletEntrypointEnabled(5552).hideActionSheet();
-        const obj3 = isOrbWalletEntrypointEnabled(5552);
+        isOrbWalletEntrypointEnabled(5542).hideActionSheet();
+        const obj3 = isOrbWalletEntrypointEnabled(5542);
         const obj4 = str(10128);
         obj4.openQuestHome({
           mergeExistingRoutes: true,
           filter: constants3.VIRTUAL_CURRENCY,
-          fromContent: str(5341).QuestContent.ORBS_BALANCE_MENU,
+          fromContent: str(6957).QuestContent.ORBS_BALANCE_MENU,
         });
       };
       obj3.secondaryButtonConfig = obj5;

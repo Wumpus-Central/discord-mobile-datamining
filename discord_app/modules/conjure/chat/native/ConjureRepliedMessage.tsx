@@ -51,13 +51,13 @@ export default function ConjureRepliedMessage(replied) {
   const tmp = closure_8();
   const messageAuthorUser = replied(12446).useMessageAuthorUser(replied.userId);
   const obj = replied(12446);
-  let str = replied(5372).useName(messageAuthorUser);
+  let str = replied(5362).useName(messageAuthorUser);
   if (str == null) {
     str = "";
   }
   items = [replied.content];
   const memo = noop.useMemo(() => ConjureDesignFeedback.parseConjureDesignRemark(replied.content), items);
-  const obj2 = replied(5372);
+  const obj2 = replied(5362);
   let body;
   if (memo != null) {
     body = memo.body;
@@ -86,7 +86,7 @@ export default function ConjureRepliedMessage(replied) {
     tmp11Result = closure_6(closure_5, obj5);
   }
   items1[1] = tmp11Result;
-  items1[2] = closure_6(replied(5929).Text, {
+  items1[2] = closure_6(replied(5919).Text, {
     variant: "body-xs/semibold",
     color: "text-default",
     style: tmp.name,
@@ -116,7 +116,7 @@ export default function ConjureRepliedMessage(replied) {
   items2[1] = str3;
   items2[2] = conjureMentionNames;
   obj8.children = items2;
-  items1[3] = closure_7(replied(5929).Text, obj8);
+  items1[3] = closure_7(replied(5919).Text, obj8);
   obj3.children = items1;
   return closure_7(closure_4, obj3);
 }

@@ -185,8 +185,8 @@ export default {
     const tmp8 = closure_11(channel(1187).Icon, { source: channelIconWithGuild });
     const obj = { onPress: channel.onPress, children: null };
     items = [tmp8];
-    const channelName = channel(5954).computeChannelName(channel, UserStore, RelationshipStore);
-    items[1] = closure_11(channel(5929).Text, {
+    const channelName = channel(5944).computeChannelName(channel, UserStore, RelationshipStore);
+    items[1] = closure_11(channel(5919).Text, {
       style: tmp.channelName,
       variant: "body-sm/semibold",
       children: channelName,

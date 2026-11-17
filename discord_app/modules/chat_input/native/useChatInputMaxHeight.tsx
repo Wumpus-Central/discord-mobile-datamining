@@ -64,8 +64,8 @@ const items2 = [
     code: "(function getChatInputHeightAnimationTimingWorklet_useChatInputMaxHeightTsx2(contentSize,minHeight){let[getChatInputMaxHeightWorklet,withTiming,timingFastDuration,Easing]=this.__closure;const value=Math.min(Math.max(contentSize,minHeight),getChatInputMaxHeightWorklet());return withTiming(value,{duration:timingFastDuration,easing:Easing.linear});})",
   },
   getChatInputMaxHeightWorklet,
-  fn(5548).withTiming,
-  fn(5551).timingFastDuration,
+  fn(5538).withTiming,
+  fn(5541).timingFastDuration,
   fn(1655).Easing,
 ];
 let closure_130_0;
@@ -94,14 +94,14 @@ export default function useChatInputMaxHeight(arg0) {
       closure_1((arg0) => {
         let systemKeyboardHeight = closure_0(2023).getSystemKeyboardHeight();
         const obj = closure_0(2023);
-        const customKeyboardHeight = closure_0(5914).getCustomKeyboardHeight();
-        const obj2 = closure_0(5914);
-        const keyboardType = closure_0(5503).getKeyboardType();
+        const customKeyboardHeight = closure_0(5904).getCustomKeyboardHeight();
+        const obj2 = closure_0(5904);
+        const keyboardType = closure_0(5493).getKeyboardType();
         if (keyboardType !== closure_0(1628).KeyboardTypes.SYSTEM) {
           systemKeyboardHeight = customKeyboardHeight;
         }
         let tmp6 = arg0;
-        const obj3 = closure_0(5503);
+        const obj3 = closure_0(5493);
         const bound = Math.min(
           200,
           Math.max(

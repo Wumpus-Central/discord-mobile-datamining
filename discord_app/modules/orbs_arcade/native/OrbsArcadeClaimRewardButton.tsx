@@ -138,7 +138,7 @@ export default function OrbsArcadeClaimRewardButton(game) {
   obj3.text = intl.string(WK589K);
   obj3.loading = stateFromStores;
   obj3.onPress = callback;
-  return jsx(game(5936).Button, {
+  return jsx(game(5926).Button, {
     grow: true,
     size: game.size,
     variant: "primary",

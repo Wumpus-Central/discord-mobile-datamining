@@ -190,8 +190,8 @@ export default function ConjureProjectAboutSheet(arg0) {
             return obj5;
           } else {
             if (value) {
-              v1(5552).hideActionSheet(tmp4(13776).CONJURE_PROJECT_ABOUT_SHEET_KEY);
-              const obj = v1(5552);
+              v1(5542).hideActionSheet(tmp4(13776).CONJURE_PROJECT_ABOUT_SHEET_KEY);
+              const obj = v1(5542);
             }
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
@@ -244,7 +244,7 @@ export default function ConjureProjectAboutSheet(arg0) {
       const obj8 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
       const intl3 = tmp8(1113).intl;
       obj8.children = intl3.string(_modDef4131.hh2nuX);
-      tmp14Result4 = closure_6(tmp8(5929).Text, obj8);
+      tmp14Result4 = closure_6(tmp8(5919).Text, obj8);
     }
     items1[1] = tmp14Result4;
     const obj9 = { style: tmp5Result.identity, children: null };
@@ -252,13 +252,13 @@ export default function ConjureProjectAboutSheet(arg0) {
     const items2 = [closure_6(ConjureAppSheetIconDefault, obj10)];
     const obj11 = { style: tmp5Result.details, children: null };
     const obj12 = { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: application.name };
-    const items3 = [closure_6(tmp8(5929).Text, obj12)];
+    const items3 = [closure_6(tmp8(5919).Text, obj12)];
     let tmp14Result5 = null;
     if (null != application.description) {
       tmp14Result5 = null;
       if ("" !== str3.trim()) {
         const obj13 = { variant: "body-sm/normal", color: "text-default", children: application.description.trim() };
-        tmp14Result5 = closure_6(tmp8(5929).Text, obj13);
+        tmp14Result5 = closure_6(tmp8(5919).Text, obj13);
       }
       str3 = application.description;
     }
@@ -289,10 +289,10 @@ export default function ConjureProjectAboutSheet(arg0) {
     const obj18 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl4 = tmp8(1113).intl;
     obj18.children = intl4.string(_modDef4131["2DSRxV"]);
-    tmp14Result6 = closure_6(tmp8(5929).Text, obj18);
+    tmp14Result6 = closure_6(tmp8(5919).Text, obj18);
   }
   items4[2] = tmp14Result6;
   obj6.children = items4;
-  obj2.children = closure_7(run(5570).BottomSheetScrollView, obj6);
+  obj2.children = closure_7(run(5560).BottomSheetScrollView, obj6);
   return closure_6(run(7951).ActionSheet, obj2);
 }

@@ -93,7 +93,7 @@ function UserSummaryRow(arg0) {
         maxFontSizeMultiplier: 1,
         children: audienceCount,
       };
-      items3[1] = closure_13(max(5929).Text, obj6);
+      items3[1] = closure_13(max(5919).Text, obj6);
       obj3.children = items3;
       obj2.children = closure_14(View, obj3);
       tmp8Result = closure_13(View, obj2);
@@ -120,9 +120,9 @@ function JoinChannelButton(label) {
   }
   const tmp = closure_29();
   let isChannelContentGated;
-  const tmp2 = isChannelContentGated(5547)();
+  const tmp2 = isChannelContentGated(5537)();
   const tmp3 = isChannelContentGated(9061)();
-  isChannelContentGated = channel(6838).useIsChannelContentGated(channel);
+  isChannelContentGated = channel(6828).useIsChannelContentGated(channel);
   items = [channel, isChannelContentGated];
   const obj2 = { style: tmp.button, children: null };
   const callback = noop.useCallback(() => {
@@ -137,7 +137,7 @@ function JoinChannelButton(label) {
     }
   }, items);
   const obj3 = { onPress: callback, variant: null, size: "sm", disabled: null, text: null };
-  const obj = channel(6838);
+  const obj = channel(6828);
   let str = "tertiary";
   if (obj4.isThemeLight(tmp2)) {
     str = "tertiary";
@@ -148,7 +148,7 @@ function JoinChannelButton(label) {
   obj3.variant = str;
   obj3.disabled = disabled;
   obj3.text = label.label;
-  obj2.children = closure_13(channel(5936).Button, obj3);
+  obj2.children = closure_13(channel(5926).Button, obj3);
   return closure_13(View, obj2);
 }
 function GuildVoiceEventNotice(channel) {
@@ -232,21 +232,21 @@ function SeeDetailButton(guildEvent) {
   const obj2 = { onPress: callback, variant: "active", size: "sm", text: null };
   const intl = guildEvent(1113).intl;
   obj2.text = intl.string(guildEvent(1113).t.z4FcDs);
-  obj.children = closure_13(guildEvent(5936).Button, obj2);
+  obj.children = closure_13(guildEvent(5926).Button, obj2);
   return closure_13(View, obj);
 }
 function GuildLiveStageNotice(channel) {
   channel = channel.channel;
   const tmp2 = useChannelNameDefault(channel);
-  const stageParticipants = channel(6949).useStageParticipants(
+  const stageParticipants = channel(6939).useStageParticipants(
     channel.id,
-    channel(6943).StageChannelParticipantNamedIndex.SPEAKER,
+    channel(6933).StageChannelParticipantNamedIndex.SPEAKER,
   );
   const found = stageParticipants.filter(
     (type) => type.type === channel(dependencyMap[39]).StageChannelParticipantTypes.VOICE,
   );
   const mapped = found.map((user) => user.user);
-  const obj = channel(6949);
+  const obj = channel(6939);
   items = [StageChannelParticipantStore];
   const items1 = [channel.id];
   const stateFromStores = channel(504).useStateFromStores(
@@ -264,8 +264,8 @@ function GuildLiveStageNotice(channel) {
     PermissionStore.can(Permissions.CONNECT, channel),
   );
   const obj3 = channel(504);
-  const stageHasStream = channel(6939).useStageHasStream(channel.id);
-  const obj4 = channel(6939);
+  const stageHasStream = channel(6929).useStageHasStream(channel.id);
+  const obj4 = channel(6929);
   const guildActiveEvent = channel(8426).useGuildActiveEvent(channel.guild_id);
   const obj6 = {
     heading: null,
@@ -522,10 +522,10 @@ export default noop.memo(function GuildLiveChannelNotice(guild) {
   let activeEventOrStageInstanceChannel;
   const tmp = closure_29();
   const tmp2 = activeEventOrStageInstanceChannel;
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(18904).useActiveEventOrStageInstanceChannel(
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(18906).useActiveEventOrStageInstanceChannel(
     guild.id,
   );
-  let obj = activeEventOrStageInstanceChannel(18904);
+  let obj = activeEventOrStageInstanceChannel(18906);
   const guildActiveEvent = activeEventOrStageInstanceChannel(8426).useGuildActiveEvent(guild.id);
   let obj2 = activeEventOrStageInstanceChannel(8426);
   items = [StageInstanceStore];
@@ -543,7 +543,7 @@ export default noop.memo(function GuildLiveChannelNotice(guild) {
   );
   closure_129_0 = activeEventOrStageInstanceChannel;
   let obj3 = activeEventOrStageInstanceChannel(504);
-  const isChannelContentGated = activeEventOrStageInstanceChannel(6838).useIsChannelContentGated(
+  const isChannelContentGated = activeEventOrStageInstanceChannel(6828).useIsChannelContentGated(
     activeEventOrStageInstanceChannel,
   );
   closure_129_1 = isChannelContentGated;

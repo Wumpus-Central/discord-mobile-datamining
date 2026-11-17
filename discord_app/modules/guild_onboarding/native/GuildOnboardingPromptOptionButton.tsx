@@ -587,7 +587,7 @@ export default function PromptOptionButton(option) {
   let tmp77Result = null != option.description && option.description.length > 0;
   if (tmp77Result) {
     const obj12 = { variant: "body-xs/medium", color: "text-default", children: option.description };
-    tmp77Result = tmp77(tmp2(5929).Text, obj12);
+    tmp77Result = tmp77(tmp2(5919).Text, obj12);
   }
   items20[1] = tmp77Result;
   obj10.children = items20;
@@ -609,7 +609,7 @@ export default function PromptOptionButton(option) {
     let intl = tmp2(1113).intl;
     const obj15 = { memberCount: num };
     obj14.children = intl.format(tmp2(1113).t.EgKsZA, obj15);
-    obj13.children = tmp77(tmp2(5929).Text, obj14);
+    obj13.children = tmp77(tmp2(5919).Text, obj14);
     tmp77Result2 = tmp77(tmp14(1655).View, obj13);
   }
   items21[1] = tmp77Result2;

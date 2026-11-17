@@ -116,7 +116,7 @@ function ConnectedNotificationSettings(guildId) {
       navigation,
       shouldUseNewNotificationSystem,
     }),
-    closure_29(guildId(5912).NavScrim, {}),
+    closure_29(guildId(5902).NavScrim, {}),
   ];
   obj5.children = items4;
   return closure_30(closure_31, obj5);
@@ -138,7 +138,7 @@ const Constants = fn(1072);
   HelpdeskArticles: closure_25,
   EMPTY_STRING_SNOWFLAKE_ID: closure_26,
 } = Constants);
-const UnreadSetting = fn(6959).UnreadSetting;
+const UnreadSetting = fn(6949).UnreadSetting;
 let closure_28 = fn(1082).GuildNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
@@ -350,7 +350,7 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     style: closure_33(this.context).highlightsLearnMore,
     accessibilityRole: "link",
     onPress() {
-      const obj = self(6012);
+      const obj = self(6002);
       return obj.openURL(self(2188).getArticleURL(constants.HIGHLIGHTS));
     },
     children: null,
@@ -560,7 +560,7 @@ prototype["getOverriddenChannels"] = function getOverriddenChannels() {
   });
   return mapped.filter((item) => null != item);
 };
-NotificationSettings.contextType = fn(5377).ThemeContext;
+NotificationSettings.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_settings/native/NotificationSettingsModal.native.tsx");
 
@@ -585,7 +585,7 @@ export default function NotificationSettingsModal() {
     obj4.title = intl2.string(util.t.s7vIQT);
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.render = function render(guildId, navigation) {
-      return closure_1_29(closure_1_1(20787), { guildId: guildId.guildId, navigation });
+      return closure_1_29(closure_1_1(20790), { guildId: guildId.guildId, navigation });
     };
     obj[constants.ADD_OVERRIDE] = obj4;
     const obj6 = { headerLeft: null, title: null, render: null };

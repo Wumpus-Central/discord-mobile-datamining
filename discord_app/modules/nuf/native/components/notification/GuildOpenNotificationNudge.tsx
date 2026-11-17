@@ -69,7 +69,7 @@ export function useGuildOpenNudge() {
     return guildId;
   });
   let obj = stateFromStores(504);
-  let obj2 = stateFromStores3(18106);
+  let obj2 = stateFromStores3(18108);
   const canSeePushNotificationNudge = stateFromStores(14827).useCanSeePushNotificationNudge();
   let obj3 = stateFromStores(14827);
   const items1 = [UserGuildSettingsStore];
@@ -130,8 +130,8 @@ export function useGuildOpenNudge() {
     return tmp2;
   });
   if (tmp12) {
-    tmp12 = !tmp(5367).isPseudoGuildId(stateFromStores);
-    const tmpResult = tmp(5367);
+    tmp12 = !tmp(5357).isPseudoGuildId(stateFromStores);
+    const tmpResult = tmp(5357);
   }
   if (tmp12) {
     tmp12 = !obj2.useConfig({ location: "useGuildOpenNudge" }).inHoldout;
@@ -177,7 +177,7 @@ export function useGuildOpenNudge() {
         PermissionPromptType.GUILD_OPEN_BOTTOM_SHEET,
       );
       const obj3 = { guildId: stateFromStores, markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19355, dependencyMap.paths), c16, obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19357, dependencyMap.paths), c16, obj3);
     }
   }, items6);
   const tmpResult2 = stateFromStores(9560);

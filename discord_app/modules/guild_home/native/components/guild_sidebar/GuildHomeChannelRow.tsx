@@ -11,7 +11,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 let obj2 = {
   container: {
-    marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },

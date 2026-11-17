@@ -263,7 +263,7 @@ export function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
   let obj2 = {
-    icon: closure_9(activity(5936).Button.Icon, { source: _modDef12430 }),
+    icon: closure_9(activity(5926).Button.Icon, { source: _modDef12430 }),
     text: null,
     size: "sm",
     onPress: null,
@@ -292,7 +292,7 @@ export function SpotifyPlayButton(activity) {
       })
       .catch(() => {});
   };
-  obj.children = closure_9(activity(5936).Button, obj2);
+  obj.children = closure_9(activity(5926).Button, obj2);
   return closure_9(closure_5, obj);
 }
 export { SpotifyTrack };

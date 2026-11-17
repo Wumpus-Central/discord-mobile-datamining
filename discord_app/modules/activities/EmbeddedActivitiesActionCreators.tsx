@@ -287,7 +287,7 @@ let closure_24 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const result = closure_1_0(2151).supportsEmbeddedSurface(application, closure_1_0(5977).EmbeddedSurfaceType.MAIN);
+                const result = closure_1_0(2151).supportsEmbeddedSurface(application, closure_1_0(5967).EmbeddedSurfaceType.MAIN);
                 const obj = closure_1_0(2151);
                 const result1 = closure_1_0(7864).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
@@ -589,21 +589,21 @@ let closure_26 = async function _maybeSendPrimaryAppCommand(arg0) {
                               const obj3 = { status: error_status, body: null };
                               const obj4 = { message: error_message, code: error_code };
                               obj3.body = obj4;
-                              const tmp21 = new nonce(6758)(obj3);
+                              const tmp21 = new nonce(6748)(obj3);
                               closure_1_1(tmp21);
                             }
                           }
                         }
                         if (null != error_reason_code) {
-                          if (error_reason_code in nonce(6380).ReasonCodes) {
-                            const tmp14 = new nonce(6380)(error_reason_code);
+                          if (error_reason_code in nonce(6370).ReasonCodes) {
+                            const tmp14 = new nonce(6370)(error_reason_code);
                             closure_1_1(tmp14);
                           }
                         }
                         const obj = nonce(1256);
-                        const tmp3Result = nonce(6380);
-                        closure_1_1(new nonce(6380)(nonce(6380).ReasonCodes.UNKNOWN));
-                        const tmp3Result1 = new nonce(6380)(nonce(6380).ReasonCodes.UNKNOWN);
+                        const tmp3Result = nonce(6370);
+                        closure_1_1(new nonce(6370)(nonce(6370).ReasonCodes.UNKNOWN));
+                        const tmp3Result1 = new nonce(6370)(nonce(6370).ReasonCodes.UNKNOWN);
                       }
                     };
                   }

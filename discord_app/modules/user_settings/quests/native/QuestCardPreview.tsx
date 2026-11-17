@@ -14,8 +14,8 @@ export function QuestCardPreview(quest) {
   quest = quest.quest;
   return jsx(quest(15264).QuestContentImpressionTrackerNative, {
     questOrQuests: quest,
-    questContent: quest(5341).QuestContent.INTERNAL_PREVIEW_TOOL,
-    sourceQuestContent: quest(5341).QuestContent.INTERNAL_PREVIEW_TOOL,
+    questContent: quest(6957).QuestContent.INTERNAL_PREVIEW_TOOL,
+    sourceQuestContent: quest(6957).QuestContent.INTERNAL_PREVIEW_TOOL,
     trackGuildAndChannelMetadata: false,
     children() {
       const obj = { title: null, children: null };

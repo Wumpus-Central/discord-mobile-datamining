@@ -86,7 +86,7 @@ class OrbChallengesStore extends Store {
       nitroGatedOrbMultiplier: null,
       achievementUnreadState: null,
       lastFetchedPremiumType: "Path",
-      userOpenedWalletViaProfileDCF: "clientReleaseChannel",
+      userOpenedWalletViaProfileDCF: "userIp",
     };
     tmp21.challengesForOrbWalletCache = null;
     return tmp21;
@@ -132,7 +132,7 @@ prototype["handleReset"] = function handleReset() {
     nitroGatedOrbMultiplier: null,
     achievementUnreadState: null,
     lastFetchedPremiumType: "Path",
-    userOpenedWalletViaProfileDCF: "clientReleaseChannel",
+    userOpenedWalletViaProfileDCF: "userIp",
   };
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {

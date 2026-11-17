@@ -183,7 +183,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           stringResult = string(t["47gQYL"]);
         }
         closure_128_0 = stringResult;
-        closure_128_1 = tmp5(5954).computeChannelName(closure_129_0, UserStore, RelationshipStore);
+        closure_128_1 = tmp5(5944).computeChannelName(closure_129_0, UserStore, RelationshipStore);
         let intl2 = tmp5(1113).intl;
         let onCancel = intl2.format;
         let show = tmp5(1113).t;
@@ -196,8 +196,8 @@ function ChannelPermissionSettingsBasicView(channel) {
         }
         closure_128_2 = onCancelResult;
         closure_129_2(!closure_129_1);
-        const obj4 = tmp5(5954);
-        show = tmp2(6268).show;
+        const obj4 = tmp5(5944);
+        show = tmp2(6258).show;
         const obj9 = {
           title: closure_128_0,
           body: closure_128_2,
@@ -220,7 +220,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         obj9.onCancel = onCancel;
         show(obj9);
         dependencyMap = 3;
-        const tmp42 = tmp2(6268);
+        const tmp42 = tmp2(6258);
       } catch (tmp54) {
         dependencyMap = tmp;
         throw tmp54;
@@ -394,7 +394,7 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(6912).SettingMode;
+const SettingMode = fn(6902).SettingMode;
 const Constants = fn(1072);
 ({
   ChannelTypes: closure_18,

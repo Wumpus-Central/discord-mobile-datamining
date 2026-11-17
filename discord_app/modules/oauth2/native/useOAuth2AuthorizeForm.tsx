@@ -1049,7 +1049,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
       obj5.onPress = function onPress() {
         return callback5();
       };
-      obj3.footer = loading(tmp20(5936).Button, obj5);
+      obj3.footer = loading(tmp20(5926).Button, obj5);
       return obj3;
     } else {
       let str4 = "";
@@ -1149,7 +1149,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 }
                 let tmp98 = hasItem;
                 if (!hasItem) {
-                  const tmp99 = first6 === tmp20(5953).ApplicationIntegrationType.GUILD_INSTALL;
+                  const tmp99 = first6 === tmp20(5943).ApplicationIntegrationType.GUILD_INSTALL;
                   if (tmp99) {
                     let hasItem1 = requestedScopes.includes(tmp20(7307).OAuth2Scopes.BOT);
                     if (!hasItem1) {
@@ -1425,7 +1425,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 }
               }
             }
-            obj26.children = tmp130(tmp20(5936).Button, tmp133);
+            obj26.children = tmp130(tmp20(5926).Button, tmp133);
             tmp130(tmp137, obj26);
           }
         }

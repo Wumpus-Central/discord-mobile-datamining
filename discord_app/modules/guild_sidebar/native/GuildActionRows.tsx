@@ -10,12 +10,12 @@ import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 require = fn;
 const View = fn(17).View;
 let closure_7 = fn(7866).CHANNELS_AND_ROLES_MODAL_KEY;
-const ReadStateTypes = fn(6959).ReadStateTypes;
+const ReadStateTypes = fn(6949).ReadStateTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 let obj2 = {
   container: {
-    marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -32,10 +32,10 @@ export function GuildRolesAndChannelsRow(guild) {
   const tmp = closure_10();
   const tmp4 = id(7223)(guild);
   id = guild.id;
-  const result = guild(5348).useIsDismissibleContentDismissed_UNSAFE(
+  const result = guild(5338).useIsDismissibleContentDismissed_UNSAFE(
     guild(5139).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX,
   );
-  const obj = guild(5348);
+  const obj = guild(5338);
   const tmp2 = id;
   items = [ReadStateStore];
   const stateFromStores = guild(563).useStateFromStores(items, () =>

@@ -3,7 +3,7 @@ import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import isChannelFocused from "../../../panels/isChannelFocused.native.tsx";
 import useAccessibilityPressDefault from "../../../a11y/native/useAccessibilityPress.tsx";
 import useChatWidthDefault from "../../../chat/native/useChatWidth.tsx";
@@ -34,7 +34,7 @@ const VoiceMessageConstants = fn(14571);
 const Constants = fn(1072);
 ({ ComponentActions: closure_20, ComponentActionsKeyed: closure_21, MessageFlags: closure_22 } = Constants);
 const MessageSendLocation = fn(5311).MessageSendLocation;
-const NativePermissionTypes = fn(6902).NativePermissionTypes;
+const NativePermissionTypes = fn(6892).NativePermissionTypes;
 const jsx = fn(21).jsx;
 let closure_27 = { code: "(function VoiceMessageButtonTsx1(newValue){let[voiceMessageAnimationState,scheduleOnRN,triggerHapticGuarded]=this.__closure;if(voiceMessageAnimationState.get()[1]===newValue)return;const prevValue=voiceMessageAnimationState.get()[1];voiceMessageAnimationState.set([prevValue,newValue]);scheduleOnRN(triggerHapticGuarded);})" };
 let closure_28 = { code: "(function VoiceMessageButtonTsx2(e){let[isGestureActiveValue,scheduleOnRN,setIsUsingHoldGesture,voiceMessageAnimationState,VoiceMessageAnimationState,startRecording]=this.__closure;if(e.numberOfTouches>1)return;if(isGestureActiveValue.get())return;scheduleOnRN(setIsUsingHoldGesture,true);voiceMessageAnimationState.set([VoiceMessageAnimationState.SENDING,VoiceMessageAnimationState.SENDING]);scheduleOnRN(startRecording);})" };
@@ -87,7 +87,7 @@ export default noop.memo(function VoiceMessageButton(disabled) {
       closure_1_9.current = closure_129_1;
       let result = c0(14662).emitVoiceMessageRecorded(closure_129_1, data.durationSecs, startTimeMillis);
     }
-    if (data.durationSecs < expandedHeight / 1000) {
+    if (data.durationSecs < closure_2_19 / 1000) {
       const result1 = c0(14662).emitVoiceMessageRecorded(c0(14176).VoiceMessageRecordingResult.CANCELLED_DURATION, data.durationSecs, startTimeMillis);
       _undefined();
     }

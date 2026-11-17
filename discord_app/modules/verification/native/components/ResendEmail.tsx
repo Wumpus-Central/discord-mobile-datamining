@@ -72,7 +72,7 @@ export default function ResendEmail() {
   };
   let intl = navigation(1113).intl;
   obj6.children = intl.string(navigation(1113).t.fUtddV);
-  items4[1] = closure_9(navigation(5929).Text, obj6);
+  items4[1] = closure_9(navigation(5919).Text, obj6);
   const obj7 = { style: tmp.body, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1113).intl;
   if (tmp10) {
@@ -82,7 +82,7 @@ export default function ResendEmail() {
     formatResult = intl2.string(tmp2(1113).t.tSXg8O);
   }
   obj7.children = formatResult;
-  items4[2] = closure_9(navigation(5929).Text, obj7);
+  items4[2] = closure_9(navigation(5919).Text, obj7);
   const obj9 = { style: tmp.resend, children: null };
   const obj10 = { text: null, variant: "primary", onPress: null, grow: true };
   const intl3 = tmp2(1113).intl;
@@ -95,7 +95,7 @@ export default function ResendEmail() {
     obj3.text = intl.string(util.t["84yeoz"]);
     ToastActionCreatorsDefault.open("USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", obj3);
   };
-  obj9.children = closure_9(navigation(5936).Button, obj10);
+  obj9.children = closure_9(navigation(5926).Button, obj10);
   items4[3] = closure_9(View, obj9);
   if (!result) {
     const obj11 = { style: tmp.change, children: null };
@@ -103,7 +103,7 @@ export default function ResendEmail() {
     const intl4 = tmp2(1113).intl;
     obj12.text = intl4.string(tmp2(1113).t.Vm8akB);
     obj12.onPress = callback;
-    obj11.children = closure_9(tmp2(5936).Button, obj12);
+    obj11.children = closure_9(tmp2(5926).Button, obj12);
     tmp16Result = closure_9(View, obj11);
   }
   items4[4] = tmp16Result;

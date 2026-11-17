@@ -215,7 +215,7 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     };
     const intl2 = tmp11(1113).intl;
     obj4.children = intl2.string(tmp11(1113).t.HcoRu0);
-    items1[1] = closure_7(tmp11(5929).Text, obj4);
+    items1[1] = closure_7(tmp11(5919).Text, obj4);
     const obj5 = { style: tmp.actionButtons, children: null };
     const obj6 = { ref, type: tmp11(11905).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
     const items2 = [closure_7(ForLaterOpenActionButtonDefault, obj6), ,];

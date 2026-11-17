@@ -40,8 +40,8 @@ export default function CheckpointRecapCard(character) {
     bound = Math.min(Math.max(maxHeight / 268, 0.75), maxScale);
   }
   const tmp = closure_7();
-  const characterCardColorPalette = character(6401).getCharacterCardColorPalette(character);
-  const obj2 = character(6401);
+  const characterCardColorPalette = character(6391).getCharacterCardColorPalette(character);
+  const obj2 = character(6391);
   items = [character];
   const memo = noop.useMemo(() => {
     let checkpointCharacterAccessibilityLabel = null;
@@ -62,7 +62,7 @@ export default function CheckpointRecapCard(character) {
     children: null,
   };
   const obj5 = { style: tmp.year, children: null };
-  const obj3 = character(6401);
+  const obj3 = character(6391);
   obj5.children = jsx(CheckpointStatNumberDefault, {
     value: 2026,
     color: obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor,

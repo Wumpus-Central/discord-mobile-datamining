@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/native/UserProfilePrimaryInfo.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import QuestTypes from "../../quests/QuestTypes.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
+import QuestTypes from "../../quests/QuestTypes.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import GuildTagUtils from "../../guild_tag/GuildTagUtils.tsx";
 import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";

@@ -51,7 +51,7 @@ export default function AgeVerificationSpeakerActionSheet(onClose) {
   };
   const intl = onClose(1113).intl;
   obj4.children = intl.string(onClose(1113).t.zvubnM);
-  items = [closure_4(onClose(5929).Text, obj4)];
+  items = [closure_4(onClose(5919).Text, obj4)];
   const obj5 = { style: tmp.footer, children: null };
   const obj6 = {
     size: "lg",
@@ -70,11 +70,11 @@ export default function AgeVerificationSpeakerActionSheet(onClose) {
   };
   const intl2 = onClose(1113).intl;
   obj6.text = intl2.string(onClose(1113).t.KXVgjt);
-  const items1 = [closure_4(onClose(5936).Button, obj6)];
+  const items1 = [closure_4(onClose(5926).Button, obj6)];
   const obj7 = { size: "lg", onPress: handleDismiss, text: null, variant: "secondary" };
   const intl3 = onClose(1113).intl;
   obj7.text = intl3.string(onClose(1113).t.WAI6xu);
-  items1[1] = closure_4(onClose(5936).Button, obj7);
+  items1[1] = closure_4(onClose(5926).Button, obj7);
   obj5.children = items1;
   items[1] = closure_5(View, obj5);
   obj3.children = items;

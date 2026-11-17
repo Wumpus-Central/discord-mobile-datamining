@@ -7,7 +7,7 @@ const require = fn;
 const constants = fn(12811).VoiceChannelEffectAnimationType;
 const Constants = fn(1072);
 ({ Endpoints: metroImportDefault, NOOP_NULL: closure_8 } = Constants);
-const DEFAULT_SOUND_GUILD_ID = fn(6371).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6361).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsActionCreators.tsx");
 

@@ -166,8 +166,8 @@ function updateSelectedChannelListener(location, arg1) {
       }
       if (isGuildVoiceResult) {
         const obj24 = ModalActionCreatorsDefault;
-        obj24.popWithKey(tmp(6900).getVoiceChannelKey(channel.id));
-        const tmpResult = tmp(6900);
+        obj24.popWithKey(tmp(6890).getVoiceChannelKey(channel.id));
+        const tmpResult = tmp(6890);
       }
       guild = GuildActionCreatorsDefault.selectGuild(guildId);
       const obj6 = {
@@ -284,16 +284,16 @@ function updateSelectedChannelListener(location, arg1) {
   const obj = channel2(13115);
   const obj2 = { path: items, strict: false, exact: false };
   const obj4 = { match: matchPathResult, location };
-  const tmpResult8 = channel2(5492);
+  const tmpResult8 = channel2(5482);
   if (!tmpResult8.isModalOpen(tmpResult9.getVoiceChannelKey(channel2.id))) {
     const obj16 = ModalActionCreatorsDefault;
-    obj16.popAboveKey(tmp(6900).getVoiceChannelKey(channel2.id));
-    const tmpResult10 = tmp(6900);
+    obj16.popAboveKey(tmp(6890).getVoiceChannelKey(channel2.id));
+    const tmpResult10 = tmp(6890);
     DispatcherDefault.wait(() => {
       PrivateChannelCallUtils.openGuildVoiceModal(channel2);
     });
   }
-  tmpResult9 = channel2(6900);
+  tmpResult9 = channel2(6890);
   if (tmp28) {
     if (isGuildStageVoiceResult1) {
       setVoiceChatDrawerState(channel2.id, VoiceChatDrawerState.OPEN);
@@ -352,13 +352,13 @@ const ChannelTypes = Constants.ChannelTypes;
 const VoiceChatDrawerState = fn(11004).VoiceChatDrawerState;
 const logger = new LoggerDefault("RouteUtils");
 let c16 = false;
-const RouteParam = fn(5367).RouteParam;
+const RouteParam = fn(5357).RouteParam;
 const tmp3 = new LoggerDefault("RouteUtils");
-const RouteParam2 = fn(5367).RouteParam;
+const RouteParam2 = fn(5357).RouteParam;
 const CHANNELResult = Routes.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
-const RouteParam3 = fn(5367).RouteParam;
+const RouteParam3 = fn(5357).RouteParam;
 const guildIdResult = RouteParam.guildId();
-const RouteParam4 = fn(5367).RouteParam;
+const RouteParam4 = fn(5357).RouteParam;
 const items = [
   "" +
     CHANNELResult +

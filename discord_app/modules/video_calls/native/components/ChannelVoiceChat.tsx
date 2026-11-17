@@ -70,7 +70,7 @@ export default noop.memo(function ChannelVoice(channel) {
   const isConnectedToVoiceChannel = id(11007).useIsConnectedToVoiceChannel(channel.channel);
   const tmp7Result = id(11007);
   let str = "no-hide-descendants";
-  guild_id(5547)();
+  guild_id(5537)();
   if (tmp2) {
     str = "yes";
   }

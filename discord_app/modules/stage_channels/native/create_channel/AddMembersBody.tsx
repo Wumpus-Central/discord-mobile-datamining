@@ -48,7 +48,7 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(6912);
+const ChannelPermissionsConstants = fn(6902);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
@@ -184,12 +184,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(5570).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(5560).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(5570).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(5560).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -224,7 +224,7 @@ export default function AddMembersBody(pendingAdditions) {
   if (null != inputDesc) {
     const obj11 = { style: tmp3.inputDescContainer, children: null };
     const obj12 = { style: tmp3.inputDescText, variant: "body-xs/medium", color: "text-default", children: inputDesc };
-    obj11.children = closure_16(guild(5929).Text, obj12);
+    obj11.children = closure_16(guild(5919).Text, obj12);
     tmp27Result = closure_16(tmp28, obj11);
   }
   items5[1] = tmp27Result;
@@ -265,7 +265,7 @@ export default function AddMembersBody(pendingAdditions) {
   const tmp4Result = pendingAdditions(8177);
   obj19.contentContainerStyle = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
-    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5913)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5903)(obj).insets.bottom,
   };
   obj19.renderItem = function renderItem(item) {
     item = item.item;
@@ -368,6 +368,6 @@ export default function AddMembersBody(pendingAdditions) {
   tmp27Result2 = closure_16(BottomSheetSectionList, obj19);
   const obj20 = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
-    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5913)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5903)(obj).insets.bottom,
   };
 }

@@ -77,7 +77,7 @@ function ConjureMakePersonalAlert(project) {
   let tmp4Result = null;
   if (null != keptChannels) {
     let obj2 = { variant: "body-sm/normal", color: "text-muted", children: keptChannels };
-    tmp4Result = closure_4(tmp5(5929).Text, obj2);
+    tmp4Result = closure_4(tmp5(5919).Text, obj2);
   }
   items[1] = tmp4Result;
   let tmp4Result2 = null;
@@ -88,7 +88,7 @@ function ConjureMakePersonalAlert(project) {
       accessibilityRole: "alert",
       children: error,
     };
-    tmp4Result2 = closure_4(tmp5(5929).Text, obj3);
+    tmp4Result2 = closure_4(tmp5(5919).Text, obj3);
   }
   items[2] = tmp4Result2;
   obj.extraContent = closure_5(require("Stack/Stack").Stack, { spacing: 12, children: items });

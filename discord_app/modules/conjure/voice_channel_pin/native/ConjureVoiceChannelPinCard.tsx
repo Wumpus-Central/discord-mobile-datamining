@@ -33,15 +33,15 @@ function ConjureVoiceChannelPinForm(projectId) {
   let obj2 = { variant: "body-sm/normal", color: "text-default", children: null };
   let intl = tmp2(1113).intl;
   obj2.children = intl.string(selected(4131)["1vVBAw"]);
-  items = [closure_7(channels(5929).Text, obj2), , ,];
+  items = [closure_7(channels(5919).Text, obj2), , ,];
   if (channels.length > 0) {
     let obj3 = { hasIcons: null != channelIconWithGuild, children: null };
     if (null == selected) {
       const intl3 = tmp2(1113).intl;
       let stringResult = intl3.string(tmp11(4131)["9+dfPT"]);
     } else {
-      stringResult = tmp2(5954).computeChannelName(selected, UserStore, RelationshipStore);
-      const tmp2Result2 = tmp2(5954);
+      stringResult = tmp2(5944).computeChannelName(selected, UserStore, RelationshipStore);
+      const tmp2Result2 = tmp2(5944);
     }
     let obj4 = { label: stringResult, icon: null, arrow: true, disabled: null, onPress: null };
     let tmp10Result;
@@ -74,7 +74,7 @@ function ConjureVoiceChannelPinForm(projectId) {
     const obj6 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl2 = tmp2(1113).intl;
     obj6.children = intl2.string(tmp11(4131).JVUsIY);
-    tmp10Result4 = closure_7(tmp2(5929).Text, obj6);
+    tmp10Result4 = closure_7(tmp2(5919).Text, obj6);
   }
   items[1] = tmp10Result4;
   let tmp10Result5 = null;
@@ -82,7 +82,7 @@ function ConjureVoiceChannelPinForm(projectId) {
     const obj7 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
     const intl4 = tmp2(1113).intl;
     obj7.children = intl4.string(tmp11(4131).d7EeAm);
-    tmp10Result5 = closure_7(tmp2(5929).Text, obj7);
+    tmp10Result5 = closure_7(tmp2(5919).Text, obj7);
   }
   items[2] = tmp10Result5;
   const obj8 = { style: tmp.actions, children: null };
@@ -91,7 +91,7 @@ function ConjureVoiceChannelPinForm(projectId) {
   obj9.text = intl5.string(selected(4131).Iw0l8o);
   obj9.disabled = pinning;
   obj9.onPress = skip;
-  const items1 = [closure_7(channels(5936).Button, obj9)];
+  const items1 = [closure_7(channels(5926).Button, obj9)];
   let tmp10Result6 = null;
   if (channels.length > 0) {
     const obj10 = { variant: "primary", size: "sm", text: null, disabled: null, loading: null, onPress: null };
@@ -100,7 +100,7 @@ function ConjureVoiceChannelPinForm(projectId) {
     obj10.disabled = null == selected;
     obj10.loading = pinning;
     obj10.onPress = pin;
-    tmp10Result6 = closure_7(tmp2(5936).Button, obj10);
+    tmp10Result6 = closure_7(tmp2(5926).Button, obj10);
   }
   const obj11 = { children: null };
   items1[1] = tmp10Result6;

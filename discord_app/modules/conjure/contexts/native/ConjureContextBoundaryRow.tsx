@@ -73,7 +73,7 @@ export default function ConjureContextBoundaryRow(arg0) {
     const obj6 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
     const items1 = [closure_4(tmp2(12550).ChatPlusIcon, obj6)];
     const obj7 = { variant: "body-xs/semibold", color: "text-default", children: conjureContextSwitchRow.label };
-    items1[1] = closure_4(tmp2(5929).Text, obj7);
+    items1[1] = closure_4(tmp2(5919).Text, obj7);
     obj5.children = items1;
     items[1] = closure_5(View, obj5);
     const obj8 = { style: tmp.contextLine };
@@ -130,13 +130,13 @@ export default function ConjureContextBoundaryRow(arg0) {
         return onPressResult;
       };
       obj12.children = action.text;
-      const items4 = [" ", closure_4(tmp2(5929).Text, obj12)];
+      const items4 = [" ", closure_4(tmp2(5919).Text, obj12)];
       obj11.children = items4;
       tmp8Result = closure_5(closure_6, obj11);
     }
     items3[1] = tmp8Result;
     obj10.children = items3;
-    const items5 = [closure_5(tmp2(5929).Text, obj10)];
+    const items5 = [closure_5(tmp2(5919).Text, obj10)];
     let tmp10Result = null;
     if (null != conjureContextSwitchRow.note) {
       const obj14 = {
@@ -145,7 +145,7 @@ export default function ConjureContextBoundaryRow(arg0) {
         style: tmp.contextCentered,
         children: conjureContextSwitchRow.note,
       };
-      tmp10Result = closure_4(tmp2(5929).Text, obj14);
+      tmp10Result = closure_4(tmp2(5919).Text, obj14);
     }
     items5[1] = tmp10Result;
     obj9.children = items5;

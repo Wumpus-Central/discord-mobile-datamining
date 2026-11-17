@@ -88,7 +88,7 @@ export default function StreamVolumeMovedHint(streamKey) {
     const items4 = [tmp.pill, animatedStyle];
     obj3.style = items4;
     const obj4 = { variant: "body-md/semibold", color: "text-overlay-light", children: stringResult };
-    obj3.children = jsx(tmp2(5929).Text, {
+    obj3.children = jsx(tmp2(5919).Text, {
       variant: "body-md/semibold",
       color: "text-overlay-light",
       children: stringResult,

@@ -64,7 +64,7 @@ let Constants = fn(1072);
   ME: closure_21,
   RTCConnectionStates: closure_22,
 } = Constants);
-Constants = fn(6075);
+Constants = fn(6065);
 ({ Features: closure_23, MediaEngineContextTypes: closure_24 } = Constants);
 let obj = new LoggerDefault("SystemTelecomManager");
 obj.enableNativeLogger(true);
@@ -270,9 +270,9 @@ class SystemTelecomManager {
                     tmp56 = channelId;
                   }
                 } else {
-                  v0(6225).setVideoEnabled(closure_129_2);
+                  v0(6215).setVideoEnabled(closure_129_2);
                   closure_129_7();
-                  const obj2 = v0(6225);
+                  const obj2 = v0(6215);
                 }
                 c4 = 3;
               }
@@ -591,11 +591,11 @@ prototype["startCall"] = function startCall(arg0) {
                 if (obj11.isSystemTelecomEnabled()) {
                   const obj2 = tmp3(16893);
                   ({ uuid, handle } = obj6);
-                  const tmp42Result = tmp5(5954);
+                  const tmp42Result = tmp5(5944);
                   const startOutgoingCallResult = obj2.startOutgoingCall(
                     uuid,
                     handle,
-                    tmp5(5954).computeChannelName(obj6.channel, UserStore, RelationshipStore),
+                    tmp5(5944).computeChannelName(obj6.channel, UserStore, RelationshipStore),
                     obj6.video,
                   );
                   tmp3(16893).setCallMuted(obj6.uuid, obj6.muted);

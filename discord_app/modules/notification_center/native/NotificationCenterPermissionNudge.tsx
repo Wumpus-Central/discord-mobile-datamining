@@ -26,13 +26,13 @@ function NotificationCenterBannerImpl(onDismiss) {
   const obj5 = { variant: "body-md/semibold", color: "text-default", children: null };
   const intl = onDismiss(1113).intl;
   obj5.children = intl.string(onDismiss(1113).t.G6YBna);
-  const items1 = [closure_14(onDismiss(5929).Text, obj5), ,];
+  const items1 = [closure_14(onDismiss(5919).Text, obj5), ,];
   const obj6 = { variant: "body-md/medium", color: "text-muted", style: null, children: null };
   const obj3 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
   obj6.style = { marginTop: nativeDefault.space.PX_4 };
   const intl2 = onDismiss(1113).intl;
   obj6.children = intl2.string(onDismiss(1113).t["9CoPDE"]);
-  items1[1] = closure_14(onDismiss(5929).Text, obj6);
+  items1[1] = closure_14(onDismiss(5919).Text, obj6);
   const obj8 = { style: tmp.ctaButton, children: null };
   const obj9 = { variant: "primary", size: "md", text: null, onPress: null };
   const intl3 = onDismiss(1113).intl;
@@ -49,7 +49,7 @@ function NotificationCenterBannerImpl(onDismiss) {
       prompt_type: constants5.NOTIFICATION_CENTER_BANNER,
     });
   };
-  obj8.children = closure_14(onDismiss(5936).Button, obj9);
+  obj8.children = closure_14(onDismiss(5926).Button, obj9);
   items1[2] = closure_14(View, obj8);
   obj4.children = items1;
   items[1] = closure_15(View, obj4);

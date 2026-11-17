@@ -57,18 +57,18 @@ export default noop.memo(function VideoQuestModalReward(style) {
     const intl = tmp3(1113).intl;
     const obj7 = { questName: quest.config.messages.questName };
     obj6.children = intl.formatToPlainString(tmp3(1113).t.EAYZAr, obj7);
-    tmp = closure_4(tmp3(5929).Text, obj6);
+    tmp = closure_4(tmp3(5919).Text, obj6);
   }
   const items2 = [tmp];
   if (tmp9Result) {
     const obj8 = { variant: "heading-xs/medium", color: "text-subtle", children: null };
     const intl2 = tmp3(1113).intl;
     obj8.children = intl2.string(tmp3(1113).t["1Wvve2"]);
-    tmp9Result = closure_4(tmp3(5929).Text, obj8);
+    tmp9Result = closure_4(tmp3(5919).Text, obj8);
   }
   items2[1] = tmp9Result;
   obj5.children = items2;
-  items1[1] = closure_5(quest(6337).Stack, obj5);
+  items1[1] = closure_5(quest(6327).Stack, obj5);
   obj3.children = items1;
-  return closure_5(quest(6337).Stack, obj3);
+  return closure_5(quest(6327).Stack, obj3);
 });

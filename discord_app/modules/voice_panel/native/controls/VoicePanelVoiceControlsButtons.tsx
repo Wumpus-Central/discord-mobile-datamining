@@ -31,8 +31,8 @@ import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLo
 import _modDef16072 from "../../../../../_runtime/metro/16072__.js";
 import useCanInviteMembers from "../hooks/useCanInviteMembers.tsx";
 import useInviteMembersCallback from "../hooks/useInviteMembersCallback.tsx";
-import _modDef19199 from "../../../../../_runtime/metro/19199__.js";
-import _modDef19200 from "../../../../../_runtime/metro/19200__.js";
+import _modDef19201 from "../../../../../_runtime/metro/19201__.js";
+import _modDef19202 from "../../../../../_runtime/metro/19202__.js";
 import useSoundboardConfigDefault from "../hooks/useSoundboardConfig.tsx";
 import useHideSelfVideoDefault from "../../../calls/useHideSelfVideo.tsx";
 import ChannelCallUtils from "../../../video_calls/native/ChannelCallUtils.tsx";
@@ -222,8 +222,8 @@ function toggleDeaf() {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, PlatformTypes: closure_15 } = Constants);
-let closure_16 = fn(20111).SelfStreamAndVideoAlertType;
-const MediaEngineContextTypes = fn(6075).MediaEngineContextTypes;
+let closure_16 = fn(20113).SelfStreamAndVideoAlertType;
+const MediaEngineContextTypes = fn(6065).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const size = fn(2);
@@ -342,7 +342,7 @@ export function DeafenSwitch() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon,
-    source: _modDef19200,
+    source: _modDef19202,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
@@ -436,7 +436,7 @@ export function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f138730 = () => f138730(!VIDEO);
+          const f138747 = () => f138747(!VIDEO);
           const obj2 = {
             importer() {
               return VIDEO(paths[17])(paths[16], paths.paths).then((result) => {
@@ -521,7 +521,7 @@ export function VoiceSettingsButton(guildId) {
   }, items);
   const obj = {
     onPress: callback,
-    icon: closure_18(guildId(7455).TableRowIcon, { IconComponent: guildId(10569).SettingsIcon, source: _modDef19199 }),
+    icon: closure_18(guildId(7455).TableRowIcon, { IconComponent: guildId(10569).SettingsIcon, source: _modDef19201 }),
     label: null,
     subLabel: null,
     trailing: null,
@@ -564,8 +564,8 @@ export function StageButtons(channel) {
     PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel),
   );
   const obj2 = channel(504);
-  const isStageSpeakingDisabledForCurrentUser = channel(6908).useIsStageSpeakingDisabledForCurrentUser();
-  const obj3 = channel(6908);
+  const isStageSpeakingDisabledForCurrentUser = channel(6898).useIsStageSpeakingDisabledForCurrentUser();
+  const obj3 = channel(6898);
   if (tmp2) {
     const obj4 = { channel };
     let tmp8 = closure_18(ScreenshareButton, obj4);

@@ -4,11 +4,11 @@ import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
-import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
-import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
+import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
+import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import QuestDataUtils from "../../utils/QuestDataUtils.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
@@ -1126,8 +1126,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
       obj16.pointerEvents = str;
       const obj17 = {
         adContentId,
-        adCreativeType: tmp5(5345).AdCreativeType.BOUNTY,
-        questContent: tmp5(5343).QuestContent.BOUNTIES_END_INTERSTITIAL,
+        adCreativeType: tmp5(6961).AdCreativeType.BOUNTY,
+        questContent: tmp5(6959).QuestContent.BOUNTIES_END_INTERSTITIAL,
         overrideVisibility: first2,
         sourceQuestContent,
         children() {
@@ -1193,7 +1193,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
         const items71 = [memo13, animatedStyle4];
         obj21.style = items71;
         const obj22 = { colors: first1, style: absoluteFill.absoluteFill };
-        obj21.children = tmp179(tmp2(5893), obj22);
+        obj21.children = tmp179(tmp2(5883), obj22);
         tmp179Result5 = tmp179(tmp2(1655).View, obj21);
       }
     }
@@ -1229,7 +1229,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({ BOUNTY_ORB_AMOUNT: closure_8, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_9 } = QuestConstants);
 const BountiesModalConstants = fn(17546);
 ({

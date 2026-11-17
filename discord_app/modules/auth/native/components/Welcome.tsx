@@ -35,23 +35,23 @@ function InviteCard(invite) {
   } else {
     if (null != guild) {
       const obj3 = { guild };
-      let tmp14 = expandedHeight(GuildInviteIconDefault, obj3);
+      let tmp14 = closure_1_19(GuildInviteIconDefault, obj3);
       const intl2 = util.intl;
       let stringResult = intl2.string(util.t["3rE1P8"]);
       let name = guild.name;
       let tmp17 = require;
-      let tmp18 = expandedHeight;
+      let tmp18 = closure_1_19;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
       const obj = { user: null, guildId: "y" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
-      tmp14 = expandedHeight(native.Avatar, obj);
+      tmp14 = closure_1_19(native.Avatar, obj);
       const intl = util.intl;
       stringResult = intl.string(util.t.OsdY8B);
       name = UserUtilsDefault.getFormattedName(inviter);
       tmp17 = require;
-      tmp18 = expandedHeight;
+      tmp18 = closure_1_19;
     } else if (null == inviter) {
       return null;
     } else {
@@ -60,11 +60,11 @@ function InviteCard(invite) {
       obj4.user = tmp33;
       const intl3 = util.intl;
       stringResult = intl3.string(util.t["+ITYkQ"]);
-      const tmp35 = expandedHeight(native.Avatar, obj4);
+      const tmp35 = closure_1_19(native.Avatar, obj4);
       name = UserUtilsDefault.getFormattedName(inviter, true);
       tmp14 = tmp35;
       tmp17 = require;
-      tmp18 = expandedHeight;
+      tmp18 = closure_1_19;
     }
     const obj5 = { style: null, children: null };
     items = [tmp.container, invite.style];
@@ -72,9 +72,9 @@ function InviteCard(invite) {
     const items1 = [tmp14];
     const obj6 = { style: tmp.text, children: null };
     const obj7 = { variant: "body-sm/medium", color: "text-subtle", children: stringResult };
-    const items2 = [tmp18(tmp17(5929).Text, obj7)];
+    const items2 = [tmp18(tmp17(5919).Text, obj7)];
     const obj8 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: name };
-    items2[1] = tmp18(tmp17(5929).Text, obj8);
+    items2[1] = tmp18(tmp17(5919).Text, obj8);
     obj6.children = items2;
     items1[1] = dependencyMap(React4, obj6);
     obj5.children = items1;
@@ -88,14 +88,14 @@ function GuildTemplateCard(arg0) {
   items = [tmp.container, style];
   obj.style = items;
   const obj2 = { source: _modDef15572 };
-  const items1 = [expandedHeight(FastImageDefault, obj2)];
+  const items1 = [closure_1_19(FastImageDefault, obj2)];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "body-sm/medium", color: "text-subtle", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.QzUORX);
   const items2 = [
-    expandedHeight(Text_Text.Text, obj4),
-    expandedHeight(Text_Text.Text, {
+    closure_1_19(Text_Text.Text, obj4),
+    closure_1_19(Text_Text.Text, {
       variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: guildTemplate.name,
@@ -116,7 +116,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj = { style: tmp4.centerpieceContainer, children: null };
   const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  items = [expandedHeight(FastImageDefault, { style: tmp4.logo, source: _mod16297 }), ,];
+  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod16297 }), ,];
   const obj4 = {
     style: tmp4.header,
     lineClamp: null,
@@ -132,7 +132,7 @@ function Centerpiece(inlineButtons) {
   obj4.lineClamp = num;
   const intl = util.intl;
   obj4.children = intl.string(util.t["3S2xmm"]);
-  const items1 = [expandedHeight(Text_Text.Heading, obj4), , ,];
+  const items1 = [closure_1_19(Text_Text.Heading, obj4), , ,];
   const items2 = [tmp4.subHeader];
   if (null != invite) {
     let subHeaderWithInvite = tmp4.subHeaderWithInvite;
@@ -149,24 +149,24 @@ function Centerpiece(inlineButtons) {
   items2[1] = subHeaderWithInvite;
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.Gtcthl);
-  items1[1] = expandedHeight(Text_Text.Text, obj5);
+  items1[1] = closure_1_19(Text_Text.Text, obj5);
   let tmp10Result = null;
   if (null != invite) {
     const obj6 = { invite };
-    tmp10Result = expandedHeight(InviteCard, obj6);
+    tmp10Result = closure_1_19(InviteCard, obj6);
   }
   items1[2] = tmp10Result;
   let tmp10Result2 = null;
   if (tmp8) {
     const obj7 = { guildTemplate };
-    tmp10Result2 = expandedHeight(GuildTemplateCard, obj7);
+    tmp10Result2 = closure_1_19(GuildTemplateCard, obj7);
   }
   items1[3] = tmp10Result2;
   items[1] = dependencyMap(React4, { children: items1 });
   items[2] = inlineButtons.inlineButtons;
   obj2.children = items;
   obj.children = dependencyMap(hasOwnProperty, obj2);
-  return expandedHeight(React4, obj);
+  return closure_1_19(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);

@@ -1,6 +1,6 @@
 // discord_app/modules/react_asset/native/native_required_assets_icons.tsx
-import _modDef6030 from "../../../../_runtime/metro/06030__.js";
-import _modDef6036 from "../../../../_runtime/metro/06036__.js";
+import _modDef6020 from "../../../../_runtime/metro/06020__.js";
+import _modDef6026 from "../../../../_runtime/metro/06026__.js";
 import _modDef7421 from "../../../../_runtime/metro/07421__.js";
 import _modDef7433 from "../../../../_runtime/metro/07433__.js";
 import _modDef7437 from "../../../../_runtime/metro/07437__.js";
@@ -61,16 +61,16 @@ import _modDef16276 from "../../../../_runtime/metro/16276__.js";
 import _modDef16278 from "../../../../_runtime/metro/16278__.js";
 import _modDef17502 from "../../../../_runtime/metro/17502__.js";
 import _modDef17688 from "../../../../_runtime/metro/17688__.js";
-import _modDef17827 from "../../../../_runtime/metro/17827__.js";
-import _modDef18803 from "../../../../_runtime/metro/18803__.js";
-import _modDef19174 from "../../../../_runtime/metro/19174__.js";
+import _modDef17829 from "../../../../_runtime/metro/17829__.js";
+import _modDef18805 from "../../../../_runtime/metro/18805__.js";
 import _modDef19176 from "../../../../_runtime/metro/19176__.js";
-import _modDef20498 from "../../../../_runtime/metro/20498__.js";
-import _modDef20909 from "../../../../_runtime/metro/20909__.js";
-import _modDef20910 from "../../../../_runtime/metro/20910__.js";
-import _modDef20911 from "../../../../_runtime/metro/20911__.js";
+import _modDef19178 from "../../../../_runtime/metro/19178__.js";
+import _modDef20501 from "../../../../_runtime/metro/20501__.js";
 import _modDef20912 from "../../../../_runtime/metro/20912__.js";
 import _modDef20913 from "../../../../_runtime/metro/20913__.js";
+import _modDef20914 from "../../../../_runtime/metro/20914__.js";
+import _modDef20915 from "../../../../_runtime/metro/20915__.js";
+import _modDef20916 from "../../../../_runtime/metro/20916__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/react_asset/native/native_required_assets_icons.tsx");
@@ -91,27 +91,27 @@ export const NATIVE_REQUIRED_ASSETS_ICONS = {
   CheckmarkSmallIcon: _modDef7898,
   ChevronSmallDownIcon: _modDef10561,
   ChevronSmallRightIcon: _modDef7457,
-  CircleErrorIcon: _modDef20909,
-  CircleInformationIcon: _modDef20910,
+  CircleErrorIcon: _modDef20912,
+  CircleInformationIcon: _modDef20913,
   CircleQuestionIcon: _modDef17688,
   ClipsIcon: _modDef17502,
   ClockWarningIcon: _modDef14158,
-  ConnectionAverageIcon: _modDef20911,
-  ConnectionBadIcon: _modDef20912,
-  ConnectionFineIcon: _modDef19176,
-  ConnectionUnknownIcon: _modDef19174,
-  DownloadIcon: _modDef6036,
+  ConnectionAverageIcon: _modDef20914,
+  ConnectionBadIcon: _modDef20915,
+  ConnectionFineIcon: _modDef19178,
+  ConnectionUnknownIcon: _modDef19176,
+  DownloadIcon: _modDef6026,
   EyeIcon: _modDef7636,
   EyeSlashIcon: _modDef7634,
   GameControllerIcon: _modDef7439,
   GifIcon: _modDef9334,
   GroupIcon: _modDef7437,
   HandRequestSpeakIcon: _modDef11953,
-  HomeIcon: _modDef20498,
-  ImageBrokenIcon: _modDef20913,
+  HomeIcon: _modDef20501,
+  ImageBrokenIcon: _modDef20916,
   ImageIcon: _modDef8054,
   ImageWarningIcon: _modDef8055,
-  LinkIcon: _modDef6030,
+  LinkIcon: _modDef6020,
   LockIcon: _modDef8066,
   LockUnlockedIcon: _modDef11150,
   MaximizeIcon: _modDef13738,
@@ -134,12 +134,12 @@ export const NATIVE_REQUIRED_ASSETS_ICONS = {
   ScreenIcon: _modDef10468,
   SignPostIcon: _modDef16276,
   SlashBoxIcon: _modDef12577,
-  SpotifyNeutralIcon: _modDef18803,
+  SpotifyNeutralIcon: _modDef18805,
   StageIcon: _modDef8018,
   StickerIcon: _modDef10738,
   SuperReactionIcon: _modDef9559,
   ThreadIcon: _modDef8035,
-  TicketIcon: _modDef17827,
+  TicketIcon: _modDef17829,
   TopicsIcon: _modDef12624,
   UserCheckIcon: _modDef9326,
   VoiceNormalIcon: _modDef7433,

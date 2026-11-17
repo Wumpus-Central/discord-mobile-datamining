@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef4131 from "../../conjure/intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import BottomSheetModal from "../../../../_runtime/05570_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05560_BottomSheetModal.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ConjureMobileExperiment from "../../conjure/experiments/ConjureMobileExperiment.tsx";
 import useConjureServerWidgetOffersDefault from "../../conjure/server_widgets/useConjureServerWidgetOffers.tsx";

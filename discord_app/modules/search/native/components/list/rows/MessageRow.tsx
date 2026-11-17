@@ -50,7 +50,7 @@ function GuildChannelMessageRowHeader(channel) {
       size: channel(1187).Icon.Sizes.REFRESH_SMALL_16,
       style: tmp.channelIcon,
     }),
-    closure_11(channel(5929).Text, {
+    closure_11(channel(5919).Text, {
       lineClamp: 1,
       variant: "body-sm/semibold",
       color: "interactive-text-default",
@@ -103,12 +103,12 @@ function PrivateChannelMessageRowLabel(message) {
     }
     tmp = channel.isDM() || channel.isGroupDM();
   }, items1);
-  const searchMessageTimestamp = message(19500).useSearchMessageTimestamp(message, channel);
+  const searchMessageTimestamp = message(19502).useSearchMessageTimestamp(message, channel);
   const obj2 = { style: tmp.labelContainer, children: null };
   const obj3 = { style: tmp.authorRow, children: null };
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
   const items2 = [
-    closure_11(message(5929).Text, {
+    closure_11(message(5919).Text, {
       lineClamp: 1,
       variant: "body-md/semibold",
       color: "interactive-text-active",
@@ -131,7 +131,7 @@ function PrivateChannelMessageRowLabel(message) {
   obj3.children = items2;
   const items3 = [
     closure_12(closure_4, obj3),
-    closure_11(message(5929).Text, {
+    closure_11(message(5919).Text, {
       variant: "body-xs/medium",
       color: "interactive-text-active",
       lineClamp: 1,
@@ -150,7 +150,7 @@ function PrivateChannelMessageRowLabel(message) {
   let tmp9Result2 = null;
   if (message.isPoll()) {
     const obj8 = { style: tmp.pollBadge };
-    tmp9Result2 = closure_11(channel(19501), obj8);
+    tmp9Result2 = closure_11(channel(19503), obj8);
   }
   items3[3] = tmp9Result2;
   obj2.children = items3;
@@ -322,7 +322,7 @@ const memoResult = noop.memo(function HeaderlessMessageRow(message) {
   const stateFromStores2 = message(504).useStateFromStores(items2, () =>
     UserGuildSettingsStore.isChannelMuted(stateFromStores2, stateFromStores.channel_id),
   );
-  message(6858);
+  message(6848);
   let tmp10 = null;
   if (null != stateFromStores) {
     const obj2 = {};

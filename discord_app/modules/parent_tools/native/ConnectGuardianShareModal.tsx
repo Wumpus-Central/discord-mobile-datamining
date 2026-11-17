@@ -15,8 +15,8 @@ function ConnectGuardianShareScreen() {
   const syncMessages = getLinkCode(1113).useSyncMessages(getLinkCode(2701).messagesLoader);
   const callback = noop.useCallback(() => {
     const intl = getLinkCode(1113).intl;
-    getLinkCode(6014).presentFailedToast(intl.string(getLinkCode(1113).t.R0RpRX));
-    const obj = getLinkCode(6014);
+    getLinkCode(6004).presentFailedToast(intl.string(getLinkCode(1113).t.R0RpRX));
+    const obj = getLinkCode(6004);
     ModalActionCreatorsDefault.pop();
   }, []);
   let obj = getLinkCode(1113);
@@ -43,13 +43,13 @@ function ConnectGuardianShareScreen() {
   };
   let intl = getLinkCode(1113).intl;
   obj7.children = intl.string(_modDef2701.ITlV6p);
-  const items2 = [closure_6(getLinkCode(5929).Text, obj7)];
+  const items2 = [closure_6(getLinkCode(5919).Text, obj7)];
   const obj8 = { style: tmp.body, variant: "body-sm/medium", color: "text-muted", children: null };
   const intl2 = getLinkCode(1113).intl;
   obj8.children = intl2.format(_modDef2701.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
-  items2[1] = closure_6(getLinkCode(5929).Text, obj8);
+  items2[1] = closure_6(getLinkCode(5919).Text, obj8);
   obj6.children = items2;
-  const items3 = [closure_7(getLinkCode(6337).Stack, obj6)];
+  const items3 = [closure_7(getLinkCode(6327).Stack, obj6)];
   const obj9 = { spacing: nativeDefault.space.PX_24, style: tmp.cardSection, children: null };
   const obj10 = {
     style: tmp.qrLabel,
@@ -59,7 +59,7 @@ function ConnectGuardianShareScreen() {
   };
   const intl3 = getLinkCode(1113).intl;
   obj10.children = intl3.string(_modDef2701.pojgfk);
-  const items4 = [closure_6(getLinkCode(5929).Text, obj10)];
+  const items4 = [closure_6(getLinkCode(5919).Text, obj10)];
   if (null != stateFromStores) {
     if (null != stateFromStores1) {
       const obj11 = {
@@ -74,9 +74,9 @@ function ConnectGuardianShareScreen() {
     const obj13 = { children: null };
     items4[1] = tmp11Result;
     obj9.children = items4;
-    items3[1] = closure_7(getLinkCode(6337).Stack, obj9);
+    items3[1] = closure_7(getLinkCode(6327).Stack, obj9);
     obj5.children = items3;
-    obj13.children = closure_7(getLinkCode(6337).Stack, obj5);
+    obj13.children = closure_7(getLinkCode(6327).Stack, obj5);
     obj12.children = closure_6(getLinkCode(8210).ModalContent, obj13);
     return closure_6(getLinkCode(8208).ModalScreen, obj12);
   }

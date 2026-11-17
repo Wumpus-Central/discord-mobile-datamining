@@ -286,7 +286,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    let obj6 = { orderId: "a", planId: "Path", planSelection: "container", giftInfo: "animal" };
+    let obj6 = { orderId: "a", planId: "Path", planSelection: "container", giftInfo: -0.089 };
     let obj7 = { premiumType, planInterval: first1 };
     obj6.planSelection = obj7;
     closure_130_13 = obj.useRef(obj6);
@@ -1085,10 +1085,10 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
           obj7.title = intl.string(closure_0(1113).t.R0RpRX);
           const intl2 = closure_0(1113).intl;
           obj7.body = intl2.string(closure_0(1113).t.CKsXk3);
-          tmp3(6269).show(obj7);
+          tmp3(6259).show(obj7);
           closure_129_2();
           c4 = 3;
-          tmp3(6269);
+          tmp3(6259);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;

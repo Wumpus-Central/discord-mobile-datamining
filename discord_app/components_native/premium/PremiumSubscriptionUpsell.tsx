@@ -5,7 +5,7 @@ import ConstantsIOS from "../../ConstantsIOS.tsx";
 import util from "../../intl/index.native.tsx";
 import NumberUtils from "../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05883_LinearGradient.js";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../common/FastImage.tsx";

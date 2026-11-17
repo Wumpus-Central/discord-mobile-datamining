@@ -7,7 +7,7 @@ import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import shared from "../../../../design/shared.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
 import FastList from "../../../../lib/native/FastList.tsx";
 import ContextMenuState from "../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import roundToNearestPixelDefault from "../../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -274,8 +274,8 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(6956).GuildsNodeType;
-const GuildsBarConstants = fn(19060);
+const GuildsNodeType = fn(6946).GuildsNodeType;
+const GuildsBarConstants = fn(19062);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
@@ -285,7 +285,7 @@ module_1655 = fn(1655);
 obj.itemMeasurements = module_1655.makeMutable([]);
 module_1655 = fn(1655);
 obj.activeIndex = module_1655.makeMutable(-1);
-let closure_15 = debounce(fn(5554).triggerHapticFeedback, 16);
+let closure_15 = debounce(fn(5544).triggerHapticFeedback, 16);
 let closure_16 = debounce((intl) => {
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
@@ -644,7 +644,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "disabled", overSpecs: "isArray" });
+    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "Path" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};

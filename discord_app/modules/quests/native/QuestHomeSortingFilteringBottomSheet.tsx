@@ -43,7 +43,7 @@ function FilterFooter(inline) {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(5338).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(6954).QuestHomeSortMethods;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5306);

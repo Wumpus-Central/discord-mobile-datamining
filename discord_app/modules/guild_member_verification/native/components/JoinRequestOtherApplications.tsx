@@ -76,7 +76,7 @@ export default noop.memo(function JoinRequestOtherApplications(arg0) {
     let obj3 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t["hxa+G3"]);
-    items = [closure_6(tmp2(5929).Text, obj3)];
+    items = [closure_6(tmp2(5919).Text, obj3)];
     let obj4 = {
       style: tmp.container,
       children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

@@ -518,10 +518,10 @@ function ContextBarItem(arg0) {
   }, items2);
   const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     componentDidAppear() {
-      const result = backgroundColor.set(c0(5548).withTiming(60, obj));
+      const result = backgroundColor.set(c0(5538).withTiming(60, obj));
     },
     componentDidEnter() {
-      const result = backgroundColor.set(c0(5548).withTiming(60, obj));
+      const result = backgroundColor.set(c0(5538).withTiming(60, obj));
     },
     componentWillLeave(current) {
       ref1.current = current;
@@ -544,9 +544,9 @@ function ContextBarItem(arg0) {
       ChatInputContextBarTsx2.__workletHash = 5373252367218;
       ChatInputContextBarTsx2.__initData = tmp3;
       const result = backgroundColor.set(
-        c0(5548).withTiming(0, obj, "respect-motion-settings", ChatInputContextBarTsx2),
+        c0(5538).withTiming(0, obj, "respect-motion-settings", ChatInputContextBarTsx2),
       );
-      obj = c0(5548);
+      obj = c0(5538);
     },
   }));
   const obj4 = { style: null, children };

@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/hooks/useScrollHandlers.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import QuestTypes from "../../../quests/QuestTypes.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
+import QuestTypes from "../../../quests/QuestTypes.tsx";
 import IOSAnchoredChatScrollerExperiment from "../IOSAnchoredChatScrollerExperiment.tsx";
 import DimensionActionCreatorsDefault from "../../../../actions/DimensionActionCreators.tsx";
 import NativeChatUtilsDefault from "../../../chat/native/NativeChatUtils.tsx";

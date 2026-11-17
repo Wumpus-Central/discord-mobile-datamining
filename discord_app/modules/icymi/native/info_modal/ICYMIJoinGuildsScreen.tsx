@@ -198,14 +198,14 @@ function FeaturedServer(guild) {
   const items2 = [closure_12(CutoutGuildBanner, { guild })];
   const obj3 = { style: tmp.featuredServerInnerContainer, children: null };
   const items3 = [
-    closure_12(guild(5929).Text, {
+    closure_12(guild(5919).Text, {
       maxFontSizeMultiplier: 1,
       style: tmp.featuredServerTitle,
       variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: guild.name,
     }),
-    closure_12(guild(5929).Text, {
+    closure_12(guild(5919).Text, {
       maxFontSizeMultiplier: 1,
       lineClamp: 2,
       variant: "body-xs/normal",
@@ -242,7 +242,7 @@ function FeaturedServer(guild) {
         str = "active";
       }
       obj7.variant = str;
-      obj6.children = closure_12(guild(5936).Button, obj7);
+      obj6.children = closure_12(guild(5926).Button, obj7);
       items3[2] = closure_12(closure_6, obj6);
       obj3.children = items3;
       items2[1] = closure_13(closure_6, obj3);
@@ -280,7 +280,7 @@ get_ActivityIndicator = fn(17);
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createICYMIStyles = fn(19284);
+const createICYMIStyles = fn(19286);
 let closure_15 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: {
@@ -504,15 +504,15 @@ export default function ICYMIJoinGuildsScreen() {
               const obj12 = { text: null };
               const intl = stateFromStoresArray(1113).intl;
               obj12.text = intl.string(stateFromStoresArray(1113).t.CG4Hks);
-              tmp51(6015).open("ICYMIInfoModal", obj12);
-              const tmp51Result2 = tmp51(6015);
+              tmp51(6005).open("ICYMIInfoModal", obj12);
+              const tmp51Result2 = tmp51(6005);
               const dehydrated = v3(10217).fetchDehydrated();
               const obj7 = v3(10217);
               const guildChannelScores = v3(10217).getGuildChannelScores();
               const obj8 = v3(10217);
               const recommendedGuilds = v3(10217).getRecommendedGuilds();
               const obj9 = v3(10217);
-              v3(6848).popWithKey(stateFromStoresArray(19299).ICYMI_INFO_MODAL_KEY);
+              v3(6838).popWithKey(stateFromStoresArray(19301).ICYMI_INFO_MODAL_KEY);
               dependencyMap = 3;
               const obj13 = { value: undefined, done: true };
               return obj13;
@@ -543,7 +543,7 @@ export default function ICYMIJoinGuildsScreen() {
             const obj19 = v3(10217);
             const recommendedGuilds1 = v3(10217).getRecommendedGuilds();
             const obj20 = v3(10217);
-            v3(6848).popWithKey(stateFromStoresArray(19299).ICYMI_INFO_MODAL_KEY);
+            v3(6838).popWithKey(stateFromStoresArray(19301).ICYMI_INFO_MODAL_KEY);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }

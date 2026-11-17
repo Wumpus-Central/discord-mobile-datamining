@@ -79,8 +79,8 @@ function VCButton(balance) {
     str = "primary";
   }
   obj3 = balance(9518);
-  color = balance(5943).useButtonTextColorStyles(str);
-  const tmp2Result = balance(5943);
+  color = balance(5933).useButtonTextColorStyles(str);
+  const tmp2Result = balance(5933);
   navigation = balance(1502).useNavigation();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   items = [navigation, product, balance, analyticsLocations, stageCollectibleChangeForEditProfile];
@@ -94,7 +94,7 @@ function VCButton(balance) {
         onCheckoutSuccess(arg0) {
           const collectiblesPurchases = balance(8484).fetchCollectiblesPurchases();
           const obj = balance(8484);
-          product(6848).popWithKey(ORB_CHECKOUT_MODAL);
+          product(6838).popWithKey(ORB_CHECKOUT_MODAL);
           if (product.skuId === analyticsLocations.ORB_PROFILE_BADGE) {
             const obj3 = {
               modalKey,
@@ -103,8 +103,8 @@ function VCButton(balance) {
               },
               orbBalancePriorToPurchase,
             };
-            product(6848).pushLazy(balance(2121)(15509, dependencyMap.paths), obj3, modalKey);
-            const tmp4Result = product(6848);
+            product(6838).pushLazy(balance(2121)(15509, dependencyMap.paths), obj3, modalKey);
+            const tmp4Result = product(6838);
           } else {
             const ALL = balance(1075).FractionalPremiumSKUsSets.ALL;
             if (ALL.has(product.skuId)) {
@@ -116,7 +116,7 @@ function VCButton(balance) {
               };
               const first = arg0.entitlements[0];
               let flag;
-              const tmp4Result3 = product(5552);
+              const tmp4Result3 = product(5542);
               if (first != null) {
                 flag = first.consumed;
               }
@@ -126,11 +126,11 @@ function VCButton(balance) {
               obj4.consumed = flag;
               obj4.onPressExplorePerks = function onPressExplorePerks() {
                 navigation.navigate(constants.PREMIUM);
-                product(5552).hideActionSheet();
+                product(5542).hideActionSheet();
               };
               obj4.onPressViewCredits = function onPressViewCredits() {
                 navigation.navigate(constants.PREMIUM_MANAGE_PLAN);
-                product(5552).hideActionSheet();
+                product(5542).hideActionSheet();
               };
               tmp4Result3.openLazy(
                 balance(2121)(15510, dependencyMap.paths),
@@ -150,7 +150,7 @@ function VCButton(balance) {
               const tmp4Result4 = product(10020);
             }
           }
-          const obj2 = product(6848);
+          const obj2 = product(6838);
         },
       },
       ORB_CHECKOUT_MODAL,
@@ -204,7 +204,7 @@ function VCButton(balance) {
       variant: str,
       grow: true,
     };
-    obj7.children = closure_13(tmp2(5937).BaseTextButton, obj8);
+    obj7.children = closure_13(tmp2(5927).BaseTextButton, obj8);
     return closure_13(color, obj7);
   }
   const tmp2Result2 = balance(1502);

@@ -139,7 +139,7 @@ class PopoutChecks {
               style: closure_1.popoutCheckGroupPlatformIcon,
               user: tmp7,
               size: native.AvatarSizes.XSMALL,
-              guildId: "Path",
+              guildId: "Array",
             };
             tmp26 = closure_2_16(native.Avatar, obj6);
           }
@@ -243,7 +243,7 @@ obj2.popoutCheckGroupName = { flexDirection: "row", alignItems: "center" };
 obj2.popoutCheckGroupPlatformIcon = { marginRight: 8 };
 obj2.button = { marginBottom: 8 };
 obj2.botTag = { marginLeft: 4 };
-const expandedHeight = createStyles.createStyles(obj2);
+let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx");
 

@@ -34,7 +34,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(_modDef4133["pT+BVM"]);
   },
   parent: null,
-  IconComponent: fn(17979).ChatDotsIcon,
+  IconComponent: fn(17981).ChatDotsIcon,
   useTrailing() {
     const obj = CustomTypingIndicatorNewPresetsExperiment;
     const DismissibleContent = dismissible_content.DismissibleContent;
@@ -50,7 +50,7 @@ const route = SettingBuilders.createRoute({
     );
   },
   usePreNavigationAction() {
-    enabled = enabled(17978).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
+    enabled = enabled(17980).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
     const tmp = closure_6();
     closure_1 = tmp;
     const tmp2 = closure_7();

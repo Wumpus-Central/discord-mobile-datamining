@@ -12,8 +12,8 @@ function handlePress() {
   openCheckpoint.openCheckpoint("user_profile");
 }
 function CheckpointProfileEntrypointRow() {
-  checkpointQAMode = checkpointQAMode(6748).useCheckpointQAMode("CheckpointProfileEntrypoint");
-  const obj = checkpointQAMode(6748);
+  checkpointQAMode = checkpointQAMode(6738).useCheckpointQAMode("CheckpointProfileEntrypoint");
+  const obj = checkpointQAMode(6738);
   items = [CheckpointStore];
   const stateFromStores = checkpointQAMode(504).useStateFromStores(items, () => isFetching.isFetching);
   const obj3 = {
@@ -42,7 +42,7 @@ function CheckpointProfileEntrypointRow() {
   if ("off" !== checkpointQAMode) {
     fn = () => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(19655, dependencyMap.paths),
+        asyncRequireImpl(19657, dependencyMap.paths),
         "CheckpointTestingActionSheet",
         { mode: checkpointQAMode },
       );

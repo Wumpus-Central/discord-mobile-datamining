@@ -42,7 +42,7 @@ export default function TwoFASetupScan(totpSecret) {
   const intl2 = totpSecret(1113).intl;
   obj4.children = intl2.string(totpSecret(1113).t["UQR+Qy"]);
   items2[1] = closure_4(totpSecret(1187).LegacyText, obj4);
-  items2[2] = closure_4(totpSecret(5929).Text, {
+  items2[2] = closure_4(totpSecret(5919).Text, {
     variant: "body-md/semibold",
     style: { textAlign: "center" },
     children: totpSecret,

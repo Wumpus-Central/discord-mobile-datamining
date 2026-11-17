@@ -36,7 +36,7 @@ export default function EditGuildEventChannelSelection(guild) {
   closure_6 = guild(8028).useGetEventChannelsByType(guild.id, channelType);
   let obj = guild(8028);
   guild(8011).useChannelsUserCanStartStageIn(guild);
-  const tmp6 = channel(5954)(channel);
+  const tmp6 = channel(5944)(channel);
   let obj2 = guild(8011);
   items = [closure_5];
   closure_8 = guild(504).useStateFromStores(items, () => PermissionStore.can(constants2.MANAGE_CHANNELS, guild));
@@ -72,7 +72,7 @@ export default function EditGuildEventChannelSelection(guild) {
   const items3 = [tmp.container, guild.style];
   obj5.style = items3;
   const items4 = [
-    closure_11(guild(5929).Heading, {
+    closure_11(guild(5919).Heading, {
       style: tmp.channelTypeText,
       variant: "body-sm/semibold",
       color: "text-subtle",
@@ -135,8 +135,8 @@ export default function EditGuildEventChannelSelection(guild) {
         if (null != found) {
           closure_1_4(found);
         }
-        channel(5552).hideActionSheet();
-        const obj = channel(5552);
+        channel(5542).hideActionSheet();
+        const obj = channel(5542);
       },
       selectedItem: null,
       hasIcons: false,
@@ -156,7 +156,7 @@ export default function EditGuildEventChannelSelection(guild) {
     tmp11Result = closure_11(tmp3(1187).Icon, obj8);
   }
   obj7.icon = tmp11Result;
-  obj7.label = closure_11(guild(5929).Text, {
+  obj7.label = closure_11(guild(5919).Text, {
     variant: "body-md/medium",
     color: "interactive-text-active",
     children: tmp6,

@@ -140,13 +140,13 @@ let closure_20 = noop.memo(function CategoryRow(channel) {
   channel = channel.channel;
   const onChannelClick = channel.onChannelClick;
   const tmp = closure_17();
-  const tmp3 = onChannelClick(5954)(channel);
+  const tmp3 = onChannelClick(5944)(channel);
   items = [UserGuildSettingsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () =>
     UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id),
   );
   const obj = channel(504);
-  const checkboxA11yNative = channel(5378).useCheckboxA11yNative({ checked: stateFromStores });
+  const checkboxA11yNative = channel(5368).useCheckboxA11yNative({ checked: stateFromStores });
   const obj3 = {
     style: tmp.categoryContainer,
     onPress() {
@@ -179,7 +179,7 @@ let closure_20 = noop.memo(function CategoryRow(channel) {
     const obj8 = { variant: "body-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1113).intl;
     obj8.children = intl.string(tmp4(1113).t.mSQwnW);
-    items2[1] = closure_12(tmp4(5929).Text, obj8);
+    items2[1] = closure_12(tmp4(5919).Text, obj8);
     obj5.children = items2;
     tmp10Result = closure_13(View, obj5);
   }

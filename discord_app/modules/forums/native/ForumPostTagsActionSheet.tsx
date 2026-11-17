@@ -109,7 +109,7 @@ export default function ForumPostTagsActionSheet(thread) {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj5.children = toggleTag(thread(5936).Button, obj6);
+  obj5.children = toggleTag(thread(5926).Button, obj6);
   items[1] = toggleTag(closure_5, obj5);
   obj2.children = items;
   return closure_8(thread(7951).ActionSheet, obj2);

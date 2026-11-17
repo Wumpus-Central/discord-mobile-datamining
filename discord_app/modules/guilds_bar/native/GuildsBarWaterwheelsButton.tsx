@@ -62,8 +62,8 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
     overState: "y",
     config: memo,
     label: null,
-    expandedChildren: "guilds-bar-drag-preview",
-    children: null,
+    expandedChildren: "heading-lg/semibold",
+    children: 1,
   };
   const intl = util.intl;
   obj5.label = intl.string(_modDef2569.zFl2A4);

@@ -38,11 +38,11 @@ require = fn;
 let closure_4 = ["guild"];
 const View = fn(17).View;
 const isEveryoneRole = fn(5213).isEveryoneRole;
-const RoleColorsStyle = fn(20556).RoleColorsStyle;
-const constants = fn(20551).GuildSettingsRoleEditSections;
+const RoleColorsStyle = fn(20559).RoleColorsStyle;
+const constants = fn(20554).GuildSettingsRoleEditSections;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(20558).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(20561).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 const createStyles = fn(5306);
@@ -194,10 +194,10 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          applyArgumentsResult(20570).commitSectionChanges(id, effectiveSection);
+          applyArgumentsResult(20573).commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
-          const obj = applyArgumentsResult(20570);
+          const obj = applyArgumentsResult(20573);
           const obj3 = { text: null, variant: "success" };
           const intl = applyArgumentsResult(1113).intl;
           obj3.text = intl.string(applyArgumentsResult(1113).t.ulZn1j);
@@ -232,17 +232,17 @@ class GuildSettingsRoleEdit extends PureComponent {
                 result.then(success, failure);
                 const obj5 = closure_3_0(12492);
               } else if (typeof success === "function") {
-                closure_3_0(20570).commitSectionChanges(closure_1_5, effectiveSection);
+                closure_3_0(20573).commitSectionChanges(closure_1_5, effectiveSection);
                 navigation.pop();
                 const obj2 = { submitting: false, formErrors: {} };
                 closure_0.setState(obj2);
-                const obj = closure_3_0(20570);
+                const obj = closure_3_0(20573);
                 obj4 = { text: null, variant: "success" };
                 const intl = closure_3_0(1113).intl;
                 obj4.text = intl.string(closure_3_0(1113).t.ulZn1j);
-                closure_3_1(6015).open("ROLE_EDIT_SAVED", obj4);
+                closure_3_1(6005).open("ROLE_EDIT_SAVED", obj4);
                 closure_1_0(true);
-                const obj3 = closure_3_1(6015);
+                const obj3 = closure_3_1(6005);
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -261,9 +261,9 @@ class GuildSettingsRoleEdit extends PureComponent {
                 const obj2 = { text: null, variant: "critical" };
                 const intl = closure_3_0(1113).intl;
                 obj2.text = intl.string(closure_3_0(1113).t.fEptJP);
-                closure_3_1(6015).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
+                closure_3_1(6005).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
                 closure_1_0(false);
-                const obj3 = closure_3_1(6015);
+                const obj3 = closure_3_1(6005);
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -338,7 +338,7 @@ class GuildSettingsRoleEdit extends PureComponent {
               const obj = { value, done: true };
               return obj;
             }
-            v1(6917).deleteRole(closure_128_1.id, closure_128_2.id);
+            v1(6907).deleteRole(closure_128_1.id, closure_128_2.id);
             closure_128_3.pop();
             c2 = 3;
             return { value: "HermesInternal", done: null };
@@ -396,16 +396,16 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(20570).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(20570);
+              const result = applyArgumentsResult(20573).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(20573);
             } else {
-              const result1 = applyArgumentsResult(20570).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(20570);
+              const result1 = applyArgumentsResult(20573).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(20573);
             }
             closure_0(true);
           };
           obj2.confirmColor = closure_1_0(1187).ButtonColors.BRAND;
-          closure_1_1(6268).show(obj2);
+          closure_1_1(6258).show(obj2);
         });
       } else {
         navigation.pop();
@@ -616,7 +616,7 @@ prototype["render"] = function render() {
   obj6.children = tmp22Result;
   return closure_1_22(View, obj6);
 };
-GuildSettingsRoleEdit.contextType = fn(5377).ThemeContext;
+GuildSettingsRoleEdit.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEdit.tsx");
 

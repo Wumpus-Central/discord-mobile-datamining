@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemDragHandle.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";

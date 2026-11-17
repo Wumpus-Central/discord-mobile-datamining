@@ -127,7 +127,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
   let obj4 = { color: "text-subtle", variant: "body-sm/normal", children: null };
   const intl = _location(1113).intl;
   obj4.children = intl.string(_location(1113).t["1EUr/W"]);
-  const items3 = [closure_11(_location(5929).Text, obj4), ,];
+  const items3 = [closure_11(_location(5919).Text, obj4), ,];
   const obj5 = {
     style: tmp5.doubleTapEmojiContainer,
     fastImageStyle: tmp5.doubleTapCustomEmoji,
@@ -146,7 +146,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
   const obj7 = { color: "text-brand", variant: "body-sm/normal", children: null };
   const intl2 = tmp(1113).intl;
   obj7.children = intl2.string(_location(1113).t.bt75uw);
-  obj6.children = closure_11(_location(5929).Text, obj7);
+  obj6.children = closure_11(_location(5919).Text, obj7);
   items3[2] = closure_11(_location(7428).PressableOpacity, obj6);
   obj3.children = items3;
   return closure_12(View, obj3);

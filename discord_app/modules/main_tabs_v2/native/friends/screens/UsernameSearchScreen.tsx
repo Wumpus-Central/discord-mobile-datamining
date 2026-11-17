@@ -46,7 +46,7 @@ export default function UsernameSearchScreen(navigation) {
   const effect = noop.useEffect(() => {
     ref(1256).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL });
   }, []);
-  const insets = ref(5913)().insets;
+  const insets = ref(5903)().insets;
   ref = noop.useRef(null);
   items = [navigation];
   const effect1 = noop.useEffect(
@@ -54,8 +54,8 @@ export default function UsernameSearchScreen(navigation) {
       navigation.addListener("transitionEnd", (data) => {
         let closing = data.data.closing;
         if (!closing) {
-          closing = navigation(5568).getIsScreenReaderEnabled();
-          const obj = navigation(5568);
+          closing = navigation(5558).getIsScreenReaderEnabled();
+          const obj = navigation(5558);
         }
         if (!closing) {
           const current = ref.current;

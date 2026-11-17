@@ -23,7 +23,7 @@ let size = {
   overflow: "hidden",
 };
 obj.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(6961).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
+const size1 = { height: 16, width: 16, opacity: fn(6951).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
 obj.badgeImage = size1;
 let closure_4 = createStyles.createStyles(obj);
 size = fn(2);

@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPr
 
 export default function PasswordlessUpsellPromoSheet() {
   let obj = {
-    source: require("../../../../_runtime/metro/18317__.js"),
+    source: require("../../../../_runtime/metro/18319__.js"),
     style: { height: 190, width: 220, resizeMode: "contain" },
   };
   _require = noop.useRef(false);

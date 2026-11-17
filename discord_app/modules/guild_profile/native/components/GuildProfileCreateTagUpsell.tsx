@@ -37,7 +37,7 @@ export default function GuildProfileCreateTagUpsell(guildId) {
     const obj3 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t.J0YWRq);
-    obj2.children = jsx(tmp2(5929).Text, { variant: "body-md/medium", color: "text-muted", children: null });
+    obj2.children = jsx(tmp2(5919).Text, { variant: "body-md/medium", color: "text-muted", children: null });
     tmp5 = (
       <Pressable
         style={tmp.upsell}
