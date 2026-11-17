@@ -571,7 +571,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(5150).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(5154).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -652,9 +652,9 @@ export function isStateInCooldown(shownFatigableCandidate) {
 }
 export function addCandidateContent(content) {
   closure_0 = content;
-  closure_1 = closure_0(5143).bypassesFatigue(content.content);
+  closure_1 = closure_0(5147).bypassesFatigue(content.content);
   dependencyMap = null;
-  let obj = closure_0(5143);
+  let obj = closure_0(5147);
   closure_0(1263).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};

@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/checkpoint/2026/character/rive/tex_base_13_liquid.webp.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/4a87c2dea61d07d6e560866b618d1a16741e1377cd50545e8aca5a5250657d40.webp";
-export const metadata = { fileBytes: 104838 };
+export default "https://cdn.discordapp.com/assets/content/de6b6adb1348e91b928d53193179d797838ac425c1bea23e592208c60bec2584.webp";
+export const metadata = { fileBytes: 299808 };

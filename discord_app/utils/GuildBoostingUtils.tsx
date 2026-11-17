@@ -5,7 +5,7 @@ import GlobalUtils from "GlobalUtils.tsx";
 import _modDef2169 from "../../_runtime/metro/02169__.js";
 import PremiumUtilsAll from "PremiumUtils.tsx";
 import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
-import _modDef3513 from "../modules/premium/premium_group/PremiumGroup.messages.js";
+import _modDef3515 from "../modules/premium/premium_group/PremiumGroup.messages.js";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import actions_BoostingActionCreators from "../actions/BoostingActionCreators.tsx";
@@ -490,7 +490,7 @@ export function generateBlockGuildSubscriptionPurchasesNode(fractionalState) {
   if (isPremiumGroupMemberResult) {
     const intl7 = util.intl;
     const obj = { premiumGroupProductName: closure_27() };
-    return intl7.formatToPlainString(_modDef3513["5xN/C1"], obj);
+    return intl7.formatToPlainString(_modDef3515["5xN/C1"], obj);
   } else {
     const _Object = Object;
     const values2 = Object.values(GuildBoostSlotStore.boostSlots);
@@ -756,7 +756,7 @@ export function getNextPremiumTierForSubscriberCount(arg0) {
 }
 export const TierMarkerPositions = obj3;
 export function getGuildBoostingProgressBarFillFactor(c0) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(9245).getGuildPowerupBoostLevelProgress(_require.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(9254).getGuildPowerupBoostLevelProgress(_require.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

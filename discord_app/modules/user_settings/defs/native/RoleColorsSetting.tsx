@@ -30,13 +30,13 @@ function useRoleColorSettingOptions() {
     return items;
   }, []);
 }
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSOPWm);
   },
-  parent: fn(9202).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(9213).MobileUserSettings.ACCESSIBILITY,
   useValue: useRoleColorSettingValue,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: useRoleColorSettingOptions,

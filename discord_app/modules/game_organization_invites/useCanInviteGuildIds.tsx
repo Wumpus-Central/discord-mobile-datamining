@@ -1,4 +1,5 @@
 // discord_app/modules/game_organization_invites/useCanInviteGuildIds.tsx
+import noop from "../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -9,21 +10,23 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/useCanInviteGuildIds.tsx");
 
 export default function useCanInviteGuildIds(location) {
-  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(12531).useLinkedGameOrgInvitesEnabled(location);
-  const obj = linkedGameOrgInvitesEnabled(12531);
+  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(stateFromStoresArray[5]).useLinkedGameOrgInvitesEnabled(
+    location,
+  );
+  const obj = linkedGameOrgInvitesEnabled(stateFromStoresArray[5]);
   items = [GuildStore, GuildMemberStore, GuildRoleStore, PermissionStore];
   const items1 = [linkedGameOrgInvitesEnabled];
-  return linkedGameOrgInvitesEnabled(504).useStateFromStoresArray(
+  stateFromStoresArray = linkedGameOrgInvitesEnabled(stateFromStoresArray[6]).useStateFromStoresArray(
     items,
     () => {
       if (linkedGameOrgInvitesEnabled) {
         const guildsArray = GuildStore.getGuildsArray();
         const found = guildsArray.filter((item) =>
-          linkedGameOrgInvitesEnabled(closure_1_1[6]).canInviteToLinkedGameOrganization(
+          linkedGameOrgInvitesEnabled(stateFromStoresArray[7]).canInviteToLinkedGameOrganization(
             item,
-            closure_1_5,
-            closure_1_2,
+            closure_1_6,
             closure_1_3,
+            closure_1_4,
           ),
         );
         const mapped = found.map((id) => id.id);
@@ -35,4 +38,6 @@ export default function useCanInviteGuildIds(location) {
     },
     items1,
   );
+  const items2 = [stateFromStoresArray.join(",")];
+  return noop.useMemo(() => stateFromStoresArray, items2);
 }

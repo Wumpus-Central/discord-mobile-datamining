@@ -659,8 +659,7 @@ export function getLogoSize(arg0) {
   return 3.8 * arg0;
 }
 export function getDaysRemaining(date) {
-  let timestamp = arg1;
-  if (arg1 === undefined) {
+  if (timestamp === undefined) {
     const _Date = Date;
     timestamp = Date.now();
   }

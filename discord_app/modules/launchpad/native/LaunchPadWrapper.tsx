@@ -15,12 +15,12 @@ get_ActivityIndicator = fn(17);
   TouchableOpacity: metroImportDefault,
   StyleSheet: closure_8,
 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(12402).LaunchPadTypes;
+const LaunchPadTypes = fn(12608).LaunchPadTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { modalWrapper: null, a11yDismiss: null };
 let size = { height: "100%", width: "100%", paddingTop: nativeDefault.space.PX_8 };
 obj2.modalWrapper = size;
@@ -151,17 +151,19 @@ export default function LaunchPadWrapper(launchPadType) {
     accessibilityViewIsModal: tmp7,
     children: null,
   };
-  let str3 = "no";
-  if (tmp7) {
-    str3 = "yes";
-  }
   const obj8 = {
-    importantForAccessibility: str3,
+    accessibilityElementsHidden: !tmp7,
+    importantForAccessibility: null,
     accessibilityRole: "button",
     accessibilityLabel: null,
     onPress: null,
     style: null,
   };
+  let str3 = "no";
+  if (tmp7) {
+    str3 = "yes";
+  }
+  obj8.importantForAccessibility = str3;
   const intl = tmp2(tmp3[21]).intl;
   obj8.accessibilityLabel = intl.string(launchPadType(isModalOpen[21]).t.WAI6xu);
   obj8.onPress = onPress;

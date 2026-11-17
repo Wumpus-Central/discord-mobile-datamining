@@ -1,24 +1,32 @@
 // discord_app/design/components/TextField/native/TextAreaField.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import native from "../../../utils/native.tsx";
-import useTextField from "useTextField.native.tsx";
 import InputFieldContainer from "../../Input/native/InputFieldContainer.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = prop(1113);
-const Text_Text = prop(5919);
-const NativeTextInput = prop(7642);
-const propsForNativeTextInput = prop(7645);
-const useCharacterLimitAnnouncement = prop(7861);
+const native = prop(5475);
+const useToken = prop(5896);
+const Text_Text = prop(5923);
+const useScaledTextLineHeight = prop(6057);
+const useTextField = prop(7637);
+const NativeTextInput = prop(7652);
+const propsForNativeTextInput = prop(7655);
+const useCharacterLimitAnnouncement = prop(7871);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5306);
-let obj2 = { area: { height: 128, textAlignVertical: "top" }, maxLengthIndicator: null };
-const rect = { position: "absolute", bottom: nativeDefault.space.PX_4, right: nativeDefault.space.PX_16 };
-obj2.maxLengthIndicator = rect;
-let closure_5 = createStyles.createStyles(obj2);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(5310);
+let closure_6 = createStyles.createStyles(() => {
+  let num = arg0;
+  if (arg0 === undefined) {
+    num = 128;
+  }
+  const obj = { area: { height: num, textAlignVertical: "top" }, maxLengthIndicator: null };
+  const rect = { position: "absolute", bottom: nativeDefault.space.PX_4, right: nativeDefault.space.PX_16 };
+  obj.maxLengthIndicator = rect;
+  return obj;
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TextField/native/TextAreaField.native.tsx");
 
@@ -28,44 +36,53 @@ export function TextAreaField(ref) {
   let prop = require;
   let obj = dependencyMap;
   const inputStyles = InputFieldContainer.useInputStyles({ size: "lg", round: false, disabled: merged.disabled });
-  const tmp4 = closure_5();
-  const maxLength = merged.maxLength;
+  let num = inputStyles.padding.paddingVertical;
+  if (num == null) {
+    num = 0;
+  }
   const obj3 = { size: "lg", round: false, disabled: merged.disabled };
+  const token = useToken.useToken(nativeDefault.modules.mobile.INPUT_FIELD_TEXT_STYLE_LG);
+  const propResult = useToken;
+  const tmp5 = closure_6(Math.max(128, 5 * useScaledTextLineHeight.useScaledTextLineHeight(token) + 2 * num));
+  const maxLength = merged.maxLength;
+  const propResult1 = useScaledTextLineHeight;
   const textField = useTextField.useTextField(merged, ref.ref);
   ({ state, inputProps, innerRef } = textField);
+  const propResult2 = useTextField;
   const focus = native.useFocus();
   let diff;
   ({ focusProps, isFocused } = focus);
   if (null != maxLength) {
     diff = maxLength - state.value.length;
   }
+  const propResult3 = native;
   const nodeText = native.getNodeText(merged.label);
-  const propResult = native;
-  const obj6 = { currentLength: state.value.length, maxLength, message: null };
+  const propResult4 = native;
+  const obj4 = { currentLength: state.value.length, maxLength, message: null };
   const intl = util.intl;
-  obj6.message = intl.string(util.t.c2Jqed);
-  const characterLimitAnnouncement = useCharacterLimitAnnouncement.useCharacterLimitAnnouncement(obj6);
-  const obj7 = {};
+  obj4.message = intl.string(util.t.c2Jqed);
+  const characterLimitAnnouncement = useCharacterLimitAnnouncement.useCharacterLimitAnnouncement(obj4);
+  const obj5 = {};
   const merged1 = Object.assign(merged);
-  obj7.isFocused = isFocused;
-  const obj8 = {};
-  const propResult1 = useCharacterLimitAnnouncement;
-  const propResult2 = propsForNativeTextInput;
-  const merged2 = Object.assign(propResult2.propsForNativeTextInput(native.mergeProps(inputProps, focusProps)));
-  obj8.ref = innerRef;
+  obj5.isFocused = isFocused;
+  const obj6 = {};
+  const propResult5 = useCharacterLimitAnnouncement;
+  const propResult6 = propsForNativeTextInput;
+  const merged2 = Object.assign(propResult6.propsForNativeTextInput(native.mergeProps(inputProps, focusProps)));
+  obj6.ref = innerRef;
   items = [, ,];
   ({ padding: arr[0], text: arr[1] } = inputStyles);
-  items[2] = tmp4.area;
-  obj8.style = items;
-  obj8.placeholderTextColor = inputStyles.placeholderText.color;
-  obj8.multiline = true;
-  const items1 = [React3(NativeTextInput.NativeTextInput, obj8)];
+  items[2] = tmp5.area;
+  obj6.style = items;
+  obj6.placeholderTextColor = inputStyles.placeholderText.color;
+  obj6.multiline = true;
+  const items1 = [React4(NativeTextInput.NativeTextInput, obj6)];
   if (null == diff) {
     items1[1] = null;
-    obj7.children = items1;
-    return React4(InputFieldContainer.InputFieldContainer, obj7);
+    obj5.children = items1;
+    return hasOwnProperty(InputFieldContainer.InputFieldContainer, obj5);
   } else {
-    const obj9 = { style: tmp4.maxLengthIndicator, children: null };
+    const obj7 = { style: tmp5.maxLengthIndicator, children: null };
     let str3 = "text-muted";
     let str = "text-muted";
     if (null != maxLength) {
@@ -81,7 +98,7 @@ export function TextAreaField(ref) {
         str = str2;
       }
     }
-    let obj10 = { variant: "body-xs/semibold", color: str, accessibilityLabel: null, children: null };
+    let obj8 = { variant: "body-xs/semibold", color: str, accessibilityLabel: null, children: null };
     if (null != nodeText) {
       const intl3 = util.intl;
       prop = util.t["8Q+k1s"];
@@ -89,14 +106,14 @@ export function TextAreaField(ref) {
       let formatToPlainStringResult = intl3.formatToPlainString(prop, obj);
     } else {
       const intl2 = util.intl;
-      const obj11 = { remainingCharacters: diff };
-      formatToPlainStringResult = intl2.formatToPlainString(util.t.fR1cof, obj11);
+      const obj9 = { remainingCharacters: diff };
+      formatToPlainStringResult = intl2.formatToPlainString(util.t.fR1cof, obj9);
     }
-    obj10.accessibilityLabel = formatToPlainStringResult;
-    obj10.children = diff;
-    obj10 = React3(Text_Text.Text, obj10);
-    obj9.children = obj10;
-    React3(View, obj9);
+    obj8.accessibilityLabel = formatToPlainStringResult;
+    obj8.children = diff;
+    obj8 = React4(Text_Text.Text, obj8);
+    obj7.children = obj8;
+    React4(View, obj7);
   }
-  const propResult3 = native;
+  const propResult7 = native;
 }

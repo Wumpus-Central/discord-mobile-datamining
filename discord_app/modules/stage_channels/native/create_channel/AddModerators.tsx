@@ -7,10 +7,10 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const RowType = fn(6902).RowType;
+const RowType = fn(6910).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   moderatorDescriptionContainer: { margin: 16 },
@@ -43,17 +43,17 @@ export default function AddModerators(guildId) {
     const mapped = found.map((row) => {
       row = row.row;
       if (row.rowType === constants.ROLE) {
-        let moderatorOverwrite = guildId(6928).createModeratorOverwrite(
+        let moderatorOverwrite = guildId(6936).createModeratorOverwrite(
           row.id,
           guildId(2119).PermissionOverwriteType.ROLE,
         );
-        const obj2 = guildId(6928);
+        const obj2 = guildId(6936);
       } else {
-        moderatorOverwrite = guildId(6928).createModeratorOverwrite(
+        moderatorOverwrite = guildId(6936).createModeratorOverwrite(
           row.id,
           guildId(2119).PermissionOverwriteType.MEMBER,
         );
-        const obj = guildId(6928);
+        const obj = guildId(6936);
       }
       return moderatorOverwrite;
     });

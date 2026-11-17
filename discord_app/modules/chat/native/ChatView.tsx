@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
-import LazyLoadedThreadManagerDefault from "../../threads/LazyLoadedThreadManager.tsx";
 import SummaryActionCreators from "../../summaries/SummaryActionCreators.tsx";
+import LazyLoadedThreadManagerDefault from "../../threads/LazyLoadedThreadManager.tsx";
 import ChatViewWrapperDefault from "ChatViewWrapper.tsx";
 import ChatViewStickyHeaderDefault from "ChatViewStickyHeader.tsx";
 import MessagesDefault from "../../messages/native/Messages.tsx";
@@ -21,11 +21,11 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 
 require = fn;
-const createChannelRecord = fn(5159).createChannelRecord;
+const createChannelRecord = fn(5163).createChannelRecord;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   empty: {
     flex: 1,
@@ -110,14 +110,14 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   if (stateFromStores == null) {
     stateFromStores = null;
   }
-  const channelContentGate = flag(11977).useChannelContentGate(guildId, stateFromStores);
+  const channelContentGate = flag(12420).useChannelContentGate(guildId, stateFromStores);
   closure_11 = chatInputRef.useRef(channelId);
   chatInputRef.useRef(null);
   ref = chatInputRef.useRef(null);
-  channelId(5907)(() => new channelId(isActive[15])());
-  const tmp10 = channelId(11997)(channelId);
+  channelId(5911)(() => new channelId(isActive[15])());
+  const tmp10 = channelId(12439)(channelId);
   isResourceChannel = tmp10;
-  let obj3 = flag(11977);
+  let obj3 = flag(12420);
   const items3 = [MessageStore];
   const items4 = [channelId, tmp10];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(
@@ -187,17 +187,17 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   let obj4 = { profile: null, children: null };
   const tmp16 = channel;
   const tmp3Result = flag(504);
-  obj4.profile = flag(12447).Profiles.ChatView;
+  obj4.profile = flag(12653).Profiles.ChatView;
   let setInterstitial = stateFromStores;
-  const items10 = [stateFromStores(channelId(14971), { channelId, guildId }), ,];
+  const items10 = [stateFromStores(channelId(14183), { channelId, guildId }), ,];
   let setInterstitialResult = null;
   if (!flag2) {
-    setInterstitialResult = setInterstitial(tmp9(10271), { absolute: true });
+    setInterstitialResult = setInterstitial(tmp9(10279), { absolute: true });
   }
   items10[1] = setInterstitialResult;
   if (null != channelContentGate) {
-    let result = tmp3(11977).renderChannelContentGate(channelContentGate);
-    const tmp3Result2 = tmp3(11977);
+    let result = tmp3(12420).renderChannelContentGate(channelContentGate);
+    const tmp3Result2 = tmp3(12420);
     tmp9(9).setInterstitial(channelContentGate.kind);
     const tmp9Result = tmp9(9);
   } else {
@@ -298,12 +298,12 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
       setInterstitial("EmptyState");
     } else if (channel.isDirectory()) {
       let obj6 = { channel, guildId };
-      setInterstitialResult2 = setInterstitial(tmp9(14985), obj6);
+      setInterstitialResult2 = setInterstitial(tmp9(14197), obj6);
       tmp9(9).setInterstitial("GuildDirectory");
       const tmp9Result3 = tmp9(9);
     } else if (channel.isForumLikeChannel()) {
       let obj7 = { channel };
-      setInterstitialResult2 = setInterstitial(tmp9(15125), obj7);
+      setInterstitialResult2 = setInterstitial(tmp9(14339), obj7);
       tmp9(9).setInterstitial("ForumChannel");
       const tmp9Result4 = tmp9(9);
     } else {
@@ -312,5 +312,5 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   }
   items10[2] = result;
   obj4.children = items10;
-  return tmp16(channelId(12447), obj4);
+  return tmp16(channelId(12653), obj4);
 });

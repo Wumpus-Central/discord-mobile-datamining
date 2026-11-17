@@ -6,7 +6,6 @@ import CheckpointCardFrame from "../card/CheckpointCardFrame.tsx";
 import CheckpointShareCardYear from "CheckpointShareCardYear.tsx";
 import CheckpointShareCardContext from "CheckpointShareCardContext.tsx";
 import CheckpointShareCardStatsDefault from "CheckpointShareCardStats.tsx";
-import CheckpointShareCardPowerBarDefault from "CheckpointShareCardPowerBar.tsx";
 import CheckpointShareCardFooterDefault from "CheckpointShareCardFooter.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -16,16 +15,16 @@ const CheckpointShareCardYearDefault = CheckpointShareCardYear;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 let c7 = 200;
-const result = fn(14279).CHECKPOINT_CARD_HEIGHT * 0.6944444444444444;
+const result = fn(13145).CHECKPOINT_CARD_HEIGHT * 0.6944444444444444;
 const characterLayout = { size: 224, top: 16, left: -12 };
 const rect = { size: 224, top: nativeDefault.space.PX_16, left: -4 };
 let layout = { iconSize: 16, textVariant: "body-sm/medium" };
 let obj2 = {};
 const merged = Object.assign(layout);
-obj2.reactionsIcon = fn(14281).EmojiSlightlySmilingFaceIcon;
-const createStyles = fn(5306);
+obj2.reactionsIcon = fn(13147).EmojiSlightlySmilingFaceIcon;
+const createStyles = fn(5310);
 const obj3 = {
   card: { overflow: "hidden" },
   portraitCard: null,
@@ -35,10 +34,10 @@ const obj3 = {
   characterAndStatsStats: null,
   statRow: null,
 };
-let size = { width: 200, height: fn(14279).CHECKPOINT_CARD_HEIGHT };
+let size = { width: 200, height: fn(13145).CHECKPOINT_CARD_HEIGHT };
 obj3.portraitCard = size;
 obj3.characterAndStatsCard = { width: 300, height: result };
-let size1 = { width: 432, height: fn(14279).CHECKPOINT_CARD_HEIGHT, transform: null, transformOrigin: "top left" };
+let size1 = { width: 432, height: fn(13145).CHECKPOINT_CARD_HEIGHT, transform: null, transformOrigin: "top left" };
 let items = [{ scale: 0.6944444444444444 }];
 size1.transform = items;
 obj3.characterAndStatsCanvas = size1;
@@ -91,24 +90,19 @@ export default function CheckpointShareCard(arg0) {
     obj4.path = CheckpointShareCardYear.YEAR_PATH;
     obj2.children = React4(CheckpointShareCardYearDefault, obj4);
     items = [React4(tmp22, obj2), ,];
-    let tmp18Result = null != stats;
-    if (tmp18Result) {
-      const obj5 = { children: null };
-      const obj6 = { stats, layout: obj2, style: null, rowStyle: null };
-      ({ characterAndStatsStats: obj12.style, statRow: obj12.rowStyle } = tmp);
-      const items1 = [React4(CheckpointShareCardStatsDefault, obj6)];
-      const obj7 = { stats };
-      items1[1] = React4(CheckpointShareCardPowerBarDefault, obj7);
-      obj5.children = items1;
-      tmp18Result = timestampProducer(hasOwnProperty, obj5);
+    let tmp20Result = null != stats;
+    if (tmp20Result) {
+      const obj5 = { stats, layout: obj2, style: null, rowStyle: null };
+      ({ characterAndStatsStats: obj11.style, statRow: obj11.rowStyle } = tmp);
+      tmp20Result = React4(CheckpointShareCardStatsDefault, obj5);
     }
-    items[1] = tmp18Result;
+    items[1] = tmp20Result;
     items[2] = React4(CheckpointShareCardFooterDefault, { isCharacterAndStats: true });
     layout.children = items;
-    let tmp18Result2 = timestampProducer(View, layout);
+    let tmp29Result = hasOwnProperty(View, layout);
   } else if (CheckpointCardTypes.CheckpointCardTypes.CHARACTER_ONLY === cardType) {
-    const obj8 = { children: null };
-    const obj9 = {
+    const obj6 = { children: null };
+    const obj7 = {
       character: tmp4,
       cardColorPalette: characterCardColorPalette,
       canvasWidth: v200,
@@ -116,54 +110,54 @@ export default function CheckpointShareCard(arg0) {
       characterLayout,
       children: null,
     };
-    const obj10 = { path: null, x: null };
+    const obj8 = { path: null, x: null };
     const tmp14 = CheckpointCardFrameDefault;
-    obj10.path = CheckpointShareCardYear.YEAR_PATH;
-    obj10.x = v200 - CheckpointShareCardYear.YEAR_WIDTH;
-    obj9.children = React4(CheckpointShareCardYearDefault, obj10);
-    const items2 = [React4(tmp14, obj9), React4(CheckpointShareCardFooterDefault, { isCharacterAndStats: false })];
-    obj8.children = items2;
-    tmp18Result2 = timestampProducer(hasOwnProperty, obj8);
+    obj8.path = CheckpointShareCardYear.YEAR_PATH;
+    obj8.x = v200 - CheckpointShareCardYear.YEAR_WIDTH;
+    obj7.children = React4(CheckpointShareCardYearDefault, obj8);
+    const items1 = [React4(tmp14, obj7), React4(CheckpointShareCardFooterDefault, { isCharacterAndStats: false })];
+    obj6.children = items1;
+    tmp29Result = hasOwnProperty(timestampProducer, obj6);
   } else if (CheckpointCardTypes.CheckpointCardTypes.STATS_ONLY === cardType) {
-    const obj11 = {
+    const obj9 = {
       character: null,
       cardColorPalette: characterCardColorPalette,
       canvasWidth: v200,
       clydeSize: 24,
       children: null,
     };
-    const obj13 = { path: null, x: null };
-    const tmp34 = CheckpointCardFrameDefault;
-    obj13.path = CheckpointShareCardYear.SHORT_YEAR_PATH;
-    obj13.x = v200 - CheckpointShareCardYear.YEAR_WIDTH;
-    obj11.children = React4(CheckpointShareCardYearDefault, obj13);
-    const items3 = [React4(tmp34, obj11), ,];
-    let tmp32Result = null != stats;
-    if (tmp32Result) {
-      const obj14 = { stats, layout, style: null, rowStyle: null };
+    const obj10 = { path: null, x: null };
+    const tmp33 = CheckpointCardFrameDefault;
+    obj10.path = CheckpointShareCardYear.SHORT_YEAR_PATH;
+    obj10.x = v200 - CheckpointShareCardYear.YEAR_WIDTH;
+    obj9.children = React4(CheckpointShareCardYearDefault, obj10);
+    const items2 = [React4(tmp33, obj9), ,];
+    let tmp31Result = null != stats;
+    if (tmp31Result) {
+      const obj12 = { stats, layout, style: null, rowStyle: null };
       ({ portraitStats: obj3.style, statRow: obj3.rowStyle } = tmp);
-      tmp32Result = React4(CheckpointShareCardStatsDefault, obj14);
+      tmp31Result = React4(CheckpointShareCardStatsDefault, obj12);
     }
-    const obj15 = { children: null };
-    items3[1] = tmp32Result;
-    items3[2] = React4(CheckpointShareCardFooterDefault, { isCharacterAndStats: false });
-    obj15.children = items3;
-    tmp18Result2 = timestampProducer(hasOwnProperty, obj15);
+    const obj13 = { children: null };
+    items2[1] = tmp31Result;
+    items2[2] = React4(CheckpointShareCardFooterDefault, { isCharacterAndStats: false });
+    obj13.children = items2;
+    tmp29Result = hasOwnProperty(timestampProducer, obj13);
   }
-  const obj16 = { value: cardColors, children: null };
-  const items4 = [tmp.card];
-  const obj17 = {
+  const obj14 = { value: cardColors, children: null };
+  const items3 = [tmp.card];
+  const obj15 = {
     style: null,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
     children: null,
   };
-  items4[1] =
+  items3[1] =
     cardType === CheckpointCardTypes.CheckpointCardTypes.DEFAULT ? tmp.characterAndStatsCard : tmp.portraitCard;
-  obj17.style = items4;
-  obj17.children = tmp18Result2;
-  obj16.children = React4(View, obj17);
-  return React4(CheckpointShareCardContext.CheckpointShareCardColorsContext.Provider, obj16);
+  obj15.style = items3;
+  obj15.children = tmp29Result;
+  obj14.children = React4(View, obj15);
+  return React4(CheckpointShareCardContext.CheckpointShareCardColorsContext.Provider, obj14);
 }
 export function getCheckpointShareCardSize(item) {
   if (CheckpointCardTypes.CheckpointCardTypes.DEFAULT === item) {

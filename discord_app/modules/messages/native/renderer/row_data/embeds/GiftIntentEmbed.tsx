@@ -2,17 +2,17 @@
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
-import _modDef6012 from "../../../../../../../_runtime/metro/06012__.js";
+import _modDef6016 from "../../../../../../../_runtime/metro/06016__.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import PremiumGiftingUtils from "../../../../../premium/PremiumGiftingUtils.tsx";
-import _modDef9333 from "../../../../../../../_runtime/metro/09333__.js";
-import _modDef9334 from "../../../../../../../_runtime/metro/09334__.js";
+import _modDef9342 from "../../../../../../../_runtime/metro/09342__.js";
+import _modDef9343 from "../../../../../../../_runtime/metro/09343__.js";
 import PremiumGiftingIntentStore from "../../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const GiftIntentType = fn(1390).GiftIntentType;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_6 = createStyles.createNativeStyleProperties({
   headerTextColor: nativeDefault.colors.TEXT_STRONG,
   subHeaderTextColor: nativeDefault.colors.TEXT_SUBTLE,
@@ -90,11 +90,11 @@ export function createGiftIntentEmbed(message, theme) {
           borderColor: obj4.borderColor,
         } = closure_6(theme));
         const tmp6 = closure_6(theme);
-        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef6012);
+        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef6016);
         const intl3 = util.intl;
         obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9333);
-        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9334);
+        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9342);
+        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9343);
         const intl4 = util.intl;
         obj9.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj9;

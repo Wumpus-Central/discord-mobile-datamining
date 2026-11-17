@@ -26,16 +26,16 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9064);
+const ChannelDetailsStore = fn(9075);
 ({ getIsChannelDetailsSearchActive: metroImportDefault, setIsChannelDetailsSearchActive: closure_8 } =
   ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9052).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9063).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   memberListPreview: null,
   content: null,
@@ -363,12 +363,12 @@ export default function _default(channelId) {
   gesture3 = undefined;
   disallowGesture2 = undefined;
   disallowGesture3 = undefined;
-  const context = obj.useContext(tmp2(12011));
+  const context = obj.useContext(tmp2(12448));
   const gesture2 = context.gesture;
   importDefault = gesture2;
   const disallowGesture = context.disallowGesture;
   dependencyMap = disallowGesture;
-  let context1 = obj.useContext(tmp12(12011).MainTabsChannelScreenStackContext);
+  let context1 = obj.useContext(tmp12(12448).MainTabsChannelScreenStackContext);
   if (context1 == null) {
     context1 = {};
   }
@@ -542,12 +542,12 @@ export default function _default(channelId) {
       position: translateX,
       openAt: 0,
       closedAt: maxWidth,
-      resolveOpenName: tmp12(18726).getBaseScreenName,
-      resolveClosedName: tmp12(18726).getBaseScreenName,
+      resolveOpenName: tmp12(18767).getBaseScreenName,
+      resolveClosedName: tmp12(18767).getBaseScreenName,
       onCoveringChange: callback2,
     };
-    tmp63 = navigation(tmp2(18729), obj4);
-    const tmp2Result = tmp2(18729);
+    tmp63 = navigation(tmp2(18770), obj4);
+    const tmp2Result = tmp2(18770);
   }
   const items30 = [tmp63];
   let obj5 = { gesture: memo2, children: null };
@@ -616,11 +616,23 @@ export default function _default(channelId) {
       onChannelDeleted: callback4,
     }),
   });
-  items34[2] = navigation(VoicePanelDockScrimDefault, {});
-  const obj10 = { style: null, children: navigation(panelGestureContext, { style: tmp.memberListPreview }) };
+  const obj10 = { background: null, ignoreTheme: true };
+  let obj9 = {
+    children: navigation(ChannelDetailsDefault, {
+      isShowing: derivedStateFromSharedValue,
+      channelId: tmp5[0],
+      isSearchLocked: false,
+      onBackPress: callback5,
+      componentWidth: tmp8,
+      onChannelDeleted: callback4,
+    }),
+  };
+  obj10.background = nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND;
+  items34[2] = navigation(VoicePanelDockScrimDefault, obj10);
+  const obj11 = { style: null, children: navigation(panelGestureContext, { style: tmp.memberListPreview }) };
   const items35 = [disallowGesture3.absoluteFill, animatedStyle];
-  obj10.style = items35;
-  items34[3] = navigation(_modDef1655.View, obj10);
+  obj11.style = items35;
+  items34[3] = navigation(_modDef1655.View, obj11);
   obj8.children = items34;
   items32[1] = closure_14(_modDef1655.View, obj8);
   obj6.children = items32;

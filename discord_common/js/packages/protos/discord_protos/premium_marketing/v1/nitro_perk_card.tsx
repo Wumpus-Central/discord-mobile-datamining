@@ -25,7 +25,7 @@ class NitroPerkCard$Type extends MessageType {
         return require("localized_string").LocalizedString;
       },
     };
-    items = [, , , , , , , ,];
+    items = [, , , , , , , , ,];
     items[0] = obj;
     items[1] = { no: 2, name: "header", kind: "scalar", T: 9 };
     items[2] = {
@@ -83,13 +83,14 @@ class NitroPerkCard$Type extends MessageType {
         return items;
       },
     };
+    items[9] = { no: 10, name: "position", kind: "scalar", T: 13 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.NitroPerkCard", items, T);
     return tmp1;
   }
 }
 const prototype = NitroPerkCard$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { header: "", description: "", placements: [] };
+  const obj = { header: "", description: "", placements: [], position: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -98,92 +99,15 @@ prototype["create"] = function create(partialSettings) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    do {
-      let tmp4 = _slicedToArray(pos.tag(), 2);
-      [tmp5, tmp6] = tmp4;
-      if (1 === tmp5) {
-        let LocalizedString2 = localized_string.LocalizedString;
-        obj.headerLocalized = LocalizedString2.internalBinaryRead(
-          pos,
-          pos.uint32(),
-          readUnknownField,
-          obj.headerLocalized,
-        );
-      } else if (2 === tmp5) {
-        obj.header = pos.string();
-      } else if (3 === tmp5) {
-        let LocalizedString = localized_string.LocalizedString;
-        obj.descriptionLocalized = LocalizedString.internalBinaryRead(
-          pos,
-          pos.uint32(),
-          readUnknownField,
-          obj.descriptionLocalized,
-        );
-      } else if (4 === tmp5) {
-        obj.description = pos.string();
-      } else if (5 === tmp5) {
-        let CTAButton = cta_button.CTAButton;
-        obj.button = CTAButton.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.button);
-      } else if (6 === tmp5) {
-        let ThemeAwareAsset3 = theme_aware_asset.ThemeAwareAsset;
-        obj.background = ThemeAwareAsset3.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.background);
-      } else if (7 === tmp5) {
-        let ThemeAwareAsset2 = theme_aware_asset.ThemeAwareAsset;
-        obj.foreground = ThemeAwareAsset2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.foreground);
-      } else if (8 === tmp5) {
-        let ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-        obj.thirdPartyLogo = ThemeAwareAsset.internalBinaryRead(
-          pos,
-          pos.uint32(),
-          readUnknownField,
-          obj.thirdPartyLogo,
-        );
-      } else if (9 === tmp5) {
-        if (tmp6 === _mod1197.WireType.LengthDelimited) {
-          let sum1 = pos.int32() + pos.pos;
-          if (pos.pos < sum1) {
-            do {
-              let placements = obj.placements;
-              let arr = placements.push(pos.int32());
-              pos = pos.pos;
-            } while (pos < sum1);
-          }
-        } else {
-          let placements1 = obj.placements;
-          let arr2 = placements1.push(pos.int32());
-        }
-      } else {
-        let onRead = readUnknownField.readUnknownField;
-        if ("throw" === onRead) {
-          let tmp15 = globalThis;
-          let _globalThis = globalThis;
-          let _HermesInternal = HermesInternal;
-          let str = ") for ";
-          let str2 = " (wire type ";
-          let str3 = "Unknown field ";
-          let tmp18 = new.target;
-          let tmp19 = new.target;
-          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          throw error;
-        } else {
-          let skipResult = pos.skip(tmp6);
-          if (false !== onRead) {
-            if (true === onRead) {
-              onRead = _mod1197.UnknownFieldHandler.onRead;
-            }
-            let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
-          }
-        }
-      }
-    } while (pos.pos < sum);
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = pos.tag();
+    const tmp3 = _slicedToArray(pos.tag(), 2);
   }
   return obj;
 };
@@ -293,6 +217,10 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(headerLocalized,
     const joined6 = tag.join();
     const tagResult8 = tag.tag(9, _mod1197.WireType.LengthDelimited);
   }
+  if (0 !== headerLocalized.position) {
+    tag.tag(10, _mod1197.WireType.Varint).uint32(headerLocalized.position);
+    const tagResult9 = tag.tag(10, _mod1197.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -347,6 +275,7 @@ let items = [
     },
   },
   ,
+  ,
 ];
 const obj3 = { no: 8, name: "third_party_logo", kind: "message", T: null };
 class T {
@@ -370,6 +299,7 @@ items[8] = {
     return items;
   },
 };
+items[9] = { no: 10, name: "position", kind: "scalar", T: 13 };
 const prototype1 = new prototype(
   "discord_protos.premium_marketing.v1.NitroPerkCard",
   items,

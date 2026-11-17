@@ -9,8 +9,8 @@ import WarningIcon from "../../../design/components/Icon/native/redesign/generat
 import SafetyHubUtils from "../SafetyHubUtils.tsx";
 import SafetyHubModels from "../SafetyHubModels.tsx";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import ChevronSmallDownIcon2 from "../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import useSafetyHubClassifications from "../hooks/useSafetyHubClassifications.tsx";
+import ChevronSmallDownIcon2 from "../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import ChevronSmallUpIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallUpIcon.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -165,7 +165,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14180, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13054, dependencyMap.paths), {
         classificationId: id,
         source: React5.StandingTab,
       });
@@ -330,12 +330,12 @@ class SafetyHubViolationsContainer {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8206);
+const SafetyHubConstants = fn(8217);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: closure_9 } = SafetyHubConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   connectedContainer: {
     display: "flex",

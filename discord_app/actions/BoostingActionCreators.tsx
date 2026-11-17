@@ -96,9 +96,9 @@ let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
         const obj10 = { value: closure_130_2, done: true };
         return obj10;
       }
-    } catch (tmp14) {
+    } catch (tmp21) {
       c5 = tmp;
-      throw tmp14;
+      throw tmp21;
     }
   }
 };

@@ -54,11 +54,11 @@ function GameOrganizationJoinOutcomeScreen(arg0) {
   }
   return tmp9Result;
 }
-let closure_3 = fn(12369).GAME_ORGANIZATION_JOIN_OUTCOME_MODAL_KEY;
+let closure_3 = fn(12573).GAME_ORGANIZATION_JOIN_OUTCOME_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const constants = { OUTCOME: "OUTCOME" };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_7 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -70,7 +70,7 @@ export default function GameOrganizationJoinOutcomeModal(code) {
   const result = code.result;
   importDefault = result;
   items = [code, result];
-  const navigatorScreens = code(7490).useNavigatorScreens(() => {
+  const navigatorScreens = code(7500).useNavigatorScreens(() => {
     const obj = {};
     const obj2 = {
       headerLeft: NavigatorHeader.getHeaderCloseButton(closeGameOrganizationJoinOutcomeModal),
@@ -84,7 +84,7 @@ export default function GameOrganizationJoinOutcomeModal(code) {
     obj[constants.OUTCOME] = obj2;
     return obj;
   }, items);
-  return closure_4(code(12523).Modal, {
+  return closure_4(code(12718).Modal, {
     screens: navigatorScreens,
     initialRouteName: constants.OUTCOME,
     gradientColor: "purple",

@@ -10,19 +10,19 @@ import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const UnreadSetting = fn(6949).UnreadSetting;
+const UnreadSetting = fn(6957).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   container: {
-    marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(6056).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_8 = createStyles.createStyles(obj);
 let obj3 = {
-  marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(6056).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };

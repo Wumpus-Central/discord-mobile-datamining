@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelRaiseHandButton.tsx
 import util from "../../../../../intl/index.native.tsx";
-import HandRequestSpeakIcon2 from "../../../../../design/components/Icon/native/redesign/generated/HandRequestSpeakIcon.tsx";
-import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
 import useRaiseHandControlDefault from "../../../../stage_channels/native/useRaiseHandControl.tsx";
 import HandRequestDenyIcon from "../../../../../design/components/Icon/native/redesign/generated/HandRequestDenyIcon.tsx";
+import HandRequestSpeakIcon2 from "../../../../../design/components/Icon/native/redesign/generated/HandRequestSpeakIcon.tsx";
+import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
 import VoicePanelStyles from "VoicePanelStyles.tsx";
 import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";

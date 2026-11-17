@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/checkpoint/2026/character/rive/tex_shoes_06_westernboots.webp.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/67f4d6b777aca5cb3c0806056a449e1946183c2ef76b607e3e2b1bd2bc1aab0c.webp";
-export const metadata = { fileBytes: 8898 };
+export default "https://cdn.discordapp.com/assets/content/6176ba60d88bb2a1beceb69c86be3f58c3c00545f2ee0d42bd7de7fc91956a20.webp";
+export const metadata = { fileBytes: 25716 };

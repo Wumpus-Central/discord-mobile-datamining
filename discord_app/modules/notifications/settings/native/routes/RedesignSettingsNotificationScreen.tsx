@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3029 from "../../../NotificationSettings.messages.js";
+import _modDef3031 from "../../../NotificationSettings.messages.js";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
 import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilders.tsx";
@@ -8,8 +8,8 @@ import SystemNotifPermissionLayoutDefault from "../SystemNotifPermissionLayout.t
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(18107).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(9202).MobileUserSettings;
+let closure_4 = fn(18148).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(9213).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -23,7 +23,7 @@ export default noop.memo(function RedesignSettingsNotificationsScreen() {
     items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection(), ,];
     const obj4 = { label: null, settings: null };
     const intl = util.intl;
-    obj4.label = intl.string(_modDef3029.nvBHcD);
+    obj4.label = intl.string(_modDef3031.nvBHcD);
     const items1 = [, , , , , , ,];
     ({
       REDESIGN_SYSTEM_NOTIFICATIONS: arr2[0],

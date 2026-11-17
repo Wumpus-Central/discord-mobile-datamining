@@ -28,21 +28,63 @@ function CharacterSubLabel(text) {
   }
   return tmp6;
 }
-const View = fn(17).View;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
-  card: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 },
+  card: {
+    padding: 0,
+    borderTopStartRadius: nativeDefault.radii.lg,
+    borderTopEndRadius: nativeDefault.radii.lg,
+    borderBottomStartRadius: nativeDefault.radii.lg,
+    borderBottomEndRadius: nativeDefault.radii.lg,
+    overflow: "hidden",
+  },
+  cardContent: null,
+  selectedCardContent: null,
+  selectedCardTint: null,
+  cardBorder: null,
   selectedCard: null,
   labels: null,
   cards: null,
   title: null,
 };
-let obj3 = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 };
-obj.selectedCard = { borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+let obj3 = {
+  padding: 0,
+  borderTopStartRadius: nativeDefault.radii.lg,
+  borderTopEndRadius: nativeDefault.radii.lg,
+  borderBottomStartRadius: nativeDefault.radii.lg,
+  borderBottomEndRadius: nativeDefault.radii.lg,
+  overflow: "hidden",
+};
+obj.cardContent = {
+  paddingVertical: nativeDefault.space.PX_12,
+  paddingHorizontal: nativeDefault.space.PX_12,
+  borderRadius: nativeDefault.radii.lg,
+};
+let obj4 = {
+  paddingVertical: nativeDefault.space.PX_12,
+  paddingHorizontal: nativeDefault.space.PX_12,
+  borderRadius: nativeDefault.radii.lg,
+};
+obj.selectedCardContent = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj6 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj6.borderRadius = nativeDefault.radii.lg;
+obj6.backgroundColor = nativeDefault.colors.TOGGLEBUTTON_BACKGROUND_SELECTED;
+obj.selectedCardTint = obj6;
+let obj7 = {};
+const merged1 = Object.assign(StyleSheet.absoluteFillObject);
+obj7.borderRadius = nativeDefault.radii.lg;
+obj7.borderWidth = 1;
+obj7.borderColor = nativeDefault.colors.BORDER_SUBTLE;
+obj.cardBorder = obj7;
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.selectedCard = { borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.labels = { flex: 1 };
-let obj4 = { borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+let obj8 = { borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.cards = { gap: nativeDefault.space.PX_12 };
 obj.title = { alignSelf: "center" };
 let closure_7 = createStyles.createStyles(obj);
@@ -70,20 +112,13 @@ let closure_9 = noop.memo(function CharacterCard(character) {
       return importDefault(character.id);
     },
     disabled: !eligible,
-    style: null,
-    accessibilityRole: null,
-    accessibilityState: null,
+    border: "none",
+    style: tmp.card,
+    accessibilityRole,
+    accessibilityState,
     accessibilityLabel: null,
     children: null,
   };
-  items = [tmp.card];
-  if (selected) {
-    selected = tmp.selectedCard;
-  }
-  items[1] = selected;
-  obj4.style = items;
-  obj4.accessibilityRole = accessibilityRole;
-  obj4.accessibilityState = accessibilityState;
   if (null != formatToPlainStringResult) {
     const _HermesInternal = HermesInternal;
     let name = "" + character.name + ", " + formatToPlainStringResult;
@@ -91,27 +126,52 @@ let closure_9 = noop.memo(function CharacterCard(character) {
     name = character.name;
   }
   obj4.accessibilityLabel = name;
-  const obj5 = { direction: "horizontal", spacing: nativeDefault.space.PX_16, align: "center", children: null };
-  const obj6 = { iconUrl: character.iconUrl, size: 48, borderRadius: null };
-  obj6.borderRadius = nativeDefault.radii.md;
-  const items1 = [hasOwnProperty(GameOrganizationIconDefault, obj6)];
-  const obj7 = { spacing: nativeDefault.space.PX_4, style: tmp.labels, children: null };
-  const obj8 = { variant: token, color: null, children: null };
+  const obj5 = {
+    direction: "horizontal",
+    spacing: nativeDefault.space.PX_16,
+    align: "center",
+    style: null,
+    children: null,
+  };
+  items = [tmp.cardContent];
+  let selectedCardContent = selected;
+  if (selected) {
+    selectedCardContent = tmp.selectedCardContent;
+  }
+  items[1] = selectedCardContent;
+  obj5.style = items;
+  let tmp10Result = selected;
+  if (selected) {
+    const obj6 = { pointerEvents: "none", style: tmp.selectedCardTint };
+    tmp10Result = hasOwnProperty(React4, obj6);
+  }
+  const items1 = [tmp10Result, , ,];
+  const obj7 = { iconUrl: character.iconUrl, size: 48, borderRadius: null };
+  obj7.borderRadius = nativeDefault.radii.md;
+  items1[1] = hasOwnProperty(GameOrganizationIconDefault, obj7);
+  const obj8 = { spacing: nativeDefault.space.PX_4, style: tmp.labels, children: null };
+  const obj9 = { variant: token, color: null, children: null };
   let str3 = "text-default";
   if (!eligible) {
     str3 = "text-muted";
   }
-  obj8.color = str3;
-  obj8.children = character.name;
-  const items2 = [hasOwnProperty(Text_Text.Text, obj8)];
-  let tmp10Result = null != formatToPlainStringResult;
-  if (tmp10Result) {
-    const obj9 = { text: formatToPlainStringResult, eligible: character.eligible };
-    tmp10Result = hasOwnProperty(CharacterSubLabel, obj9);
+  obj9.color = str3;
+  obj9.children = character.name;
+  const items2 = [hasOwnProperty(Text_Text.Text, obj9)];
+  let tmp10Result2 = null != formatToPlainStringResult;
+  if (tmp10Result2) {
+    const obj10 = { text: formatToPlainStringResult, eligible: character.eligible };
+    tmp10Result2 = hasOwnProperty(CharacterSubLabel, obj10);
   }
-  items2[1] = tmp10Result;
-  obj7.children = items2;
-  items1[1] = timestampProducer(Stack_Stack.Stack, obj7);
+  items2[1] = tmp10Result2;
+  obj8.children = items2;
+  items1[2] = timestampProducer(Stack_Stack.Stack, obj8);
+  const items3 = [tmp.cardBorder];
+  if (selected) {
+    selected = tmp.selectedCard;
+  }
+  items3[1] = selected;
+  items1[3] = hasOwnProperty(React4, { pointerEvents: "none", style: items3 });
   obj5.children = items1;
   obj4.children = timestampProducer(Stack_Stack.Stack, obj5);
   return hasOwnProperty(Card.Card, obj4);
@@ -136,8 +196,8 @@ export default function GameOrganizationCharacterList(characters) {
   const intl = characters(1113).intl;
   obj2.title = intl.formatToPlainString(_modDef2565["Xm+emB"], { noun });
   const items1 = [
-    closure_5(characters(7746).TableRowGroupTitle, obj2),
-    closure_5(View, {
+    closure_5(characters(7756).TableRowGroupTitle, obj2),
+    closure_5(closure_4, {
       accessibilityRole: "radiogroup",
       style: tmp.cards,
       children: memo.map((character) =>
@@ -154,9 +214,9 @@ export default function GameOrganizationCharacterList(characters) {
     const intl2 = tmp4(1113).intl;
     const obj5 = { noun };
     obj4.children = intl2.formatToPlainString(_modDef2565.ybJIQJ, obj5);
-    someResult = closure_5(tmp4(5919).Text, obj4);
+    someResult = closure_5(tmp4(5923).Text, obj4);
   }
   items1[2] = someResult;
   obj.children = items1;
-  return closure_6(characters(6327).Stack, obj);
+  return closure_6(characters(6335).Stack, obj);
 }

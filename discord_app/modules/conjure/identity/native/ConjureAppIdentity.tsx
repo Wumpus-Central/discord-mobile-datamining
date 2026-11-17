@@ -1,12 +1,18 @@
 // discord_app/modules/conjure/identity/native/ConjureAppIdentity.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4131 from "../../intl/ConjureUntranslated.messages.js";
+import util from "../../../../intl/index.native.tsx";
+import _modDef4133 from "../../intl/ConjureUntranslated.messages.js";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import ImagePickerDefault from "../../../image/native/ImagePicker.tsx";
+import UploadIcon from "../../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
+import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
+import ImagePlusIcon from "../../../../design/components/Icon/native/redesign/generated/ImagePlusIcon.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = fn;
+require = fn;
 let closure_12 = async function _pickConjureAppIcon() {
   if (c4 === 2) {
     c4 = 3;
@@ -133,22 +139,23 @@ let closure_12 = async function _pickConjureAppIcon() {
 };
 class ConjureAppIconTile {
   constructor(arg0) {
-    ({ iconURL, size, radius } = global);
-    if (radius === undefined) {
-      radius = 16;
+    iconURL = global.iconURL;
+    size = global.size;
+    num = global.radius;
+    if (num === undefined) {
+      num = 16;
     }
-    ({ disabled, onChange } = global);
+    c2 = num;
+    disabled = global.disabled;
+    onChange = global.onChange;
     onError = global.onError;
+    onConjure = global.onConjure;
+    closure_7 = undefined;
     tmp = closure_11();
-    tmp2 = null == iconURL;
     items = [, ];
     items[0] = onChange;
     items[1] = onError;
-    obj = { style: tmp.tileFrame, children: null };
-    tmp6 = jsx;
-    tmp7 = onChange;
-    tmp8 = closure_2;
-    callback = closure_5.useCallback(closure_4(async () => {
+    callback = onError.useCallback(onChange(function*() {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -212,10 +219,10 @@ class ConjureAppIconTile {
             if (null == closure_128_0) {
               c4 = 3;
             } else {
-              let tmp14 = closure_129_1;
+              let tmp14 = closure_129_5;
               if (!("error" in closure_128_0)) {
                 tmp14(null);
-                closure_129_0(closure_128_0.icon);
+                closure_129_4(closure_128_0.icon);
               }
             }
             tmp14(closure_128_0.error);
@@ -231,70 +238,118 @@ class ConjureAppIconTile {
         }
       }
     }), items);
+    closure_7 = callback;
+    items1 = [, ];
+    items1[0] = onConjure;
+    items1[1] = callback;
+    memo = onError.useMemo(() => {
+      let tmp2 = null;
+      if (null != onConjure) {
+        const obj = { label: null, IconComponent: null, action: null };
+        const intl = util.intl;
+        obj.label = intl.string(util.t["MsUY/S"]);
+        obj.IconComponent = UploadIcon.UploadIcon;
+        obj.action = action;
+        items = [obj, ];
+        const obj2 = { label: null, IconComponent: null, action: null };
+        const intl2 = util.intl;
+        obj2.label = intl2.string(_modDef4133["oAG/BY"]);
+        obj2.IconComponent = MagicWandIcon.MagicWandIcon;
+        obj2.action = tmp;
+        items[1] = obj2;
+        tmp2 = items;
+      }
+      return tmp2;
+    }, items1);
+    obj = { style: tmp.tileFrame, children: null };
     tmp4 = jsxs;
-    tmp5 = View;
-    str = "subtle";
-    if (tmp2) {
-      str = "strong";
-    }
-    obj1 = { variant: "secondary", border: str, radius, style: null, accessibilityLabel: null, disabled: null, onPress: null, children: null };
-    items1 = [, , ];
-    items1[0] = tmp.tile;
-    items1[1] = { width: size, height: size };
-    tileEmpty = tmp2;
-    if (tmp2) {
-      tileEmpty = tmp.tileEmpty;
-    }
-    items1[2] = tileEmpty;
-    obj1.style = items1;
-    intl = tmp7(tmp8[10]).intl;
-    t = tmp7(tmp8[10]).t;
-    obj1.accessibilityLabel = intl.string(tmp2 ? t["MsUY/S"] : t.VATxfe);
-    obj1.disabled = disabled;
-    obj1.onPress = callback;
-    if (tmp2) {
-      obj7 = { size: "md", color: null };
-      tmp11 = onError;
-      obj7.color = onError(tmp8[5]).colors.ICON_MUTED;
-      tmp6Result = tmp6(tmp7(tmp8[15]).ImagePlusIcon, obj7);
-      tmp9 = onError;
+    tmp5 = onConjure;
+    if (null == memo) {
+      tmp10 = closure_7;
+      tmp11 = IconTileCard;
+      obj1 = { iconURL: null, size: null, radius: null, disabled: null, onPress: null };
+      obj1.iconURL = iconURL;
+      obj1.size = size;
+      obj1.radius = num;
+      obj1.disabled = disabled;
+      obj1.onPress = callback;
+      tmp9 = closure_7(IconTileCard, obj1);
+      tmp6 = closure_7;
     } else {
-      tmp9 = onError;
-      obj8 = { source: null, style: null, resizeMode: "cover" };
-      obj9 = { uri: null };
-      obj9.uri = iconURL;
-      obj8.source = obj9;
-      obj8.style = tmp.tileImage;
-      tmp6Result = tmp6(onError(tmp8[16]), obj8);
+      tmp6 = closure_7;
+      tmp7 = iconURL;
+      tmp8 = c2;
+      obj5 = { items: null, align: "below", children: null };
+      obj5.items = memo;
+      obj5.children = function children(ref) {
+        const obj = { ref: ref.ref, accessibilityActions: ref.accessibilityActions, onAccessibilityAction: ref.onAccessibilityAction, children: metroImportDefault(IconTileCard, { iconURL, size, radius: num, disabled, onPress: ref.onPress }) };
+        return metroImportDefault(View, obj);
+      };
+      tmp9 = closure_7(iconURL(c2[16]).ContextMenu, obj5);
     }
-    obj1.children = tmp6Result;
     items2 = [, ];
-    items2[0] = tmp6(onChange(closure_2[14]).Card, obj1);
-    tmp6Result1 = null;
-    if (!tmp2) {
-      tmp6Result1 = null;
+    items2[0] = tmp9;
+    tmp6Result = null;
+    if (null != iconURL) {
+      tmp6Result = null;
       if (!disabled) {
-        obj10 = { style: null };
-        obj10.style = tmp.editIcon;
-        tmp6Result1 = tmp6(tmp9(tmp8[17]), obj10);
+        tmp13 = size;
+        tmp14 = c2;
+        obj6 = { style: null };
+        obj6.style = tmp.editIcon;
+        tmp6Result = tmp6(size(c2[17]), obj6);
       }
     }
-    items2[1] = tmp6Result1;
+    items2[1] = tmp6Result;
     obj.children = items2;
     return tmp4(tmp5, obj);
   }
+}
+function IconTileCard(arg0) {
+  ({ iconURL, size } = arg0);
+  ({ radius, disabled, onPress } = arg0);
+  const tmp = closure_11();
+  let str = "subtle";
+  if (null == iconURL) {
+    str = "strong";
+  }
+  const obj = { variant: "secondary", border: str, radius, style: null, accessibilityLabel: null, disabled: null, onPress: null, children: null };
+  items = [tmp.tile, { width: size, height: size }, ];
+  let tileEmpty = tmp2;
+  if (null == iconURL) {
+    tileEmpty = tmp.tileEmpty;
+  }
+  items[2] = tileEmpty;
+  obj.style = items;
+  const intl = util.intl;
+  const t = util.t;
+  obj.accessibilityLabel = intl.string(null == iconURL ? t["MsUY/S"] : t.VATxfe);
+  obj.disabled = disabled;
+  obj.onPress = onPress;
+  if (null == iconURL) {
+    const obj2 = { size: "md", color: nativeDefault.colors.ICON_MUTED };
+    let tmp3Result = metroImportDefault(ImagePlusIcon.ImagePlusIcon, obj2);
+  } else {
+    const obj3 = { source: null, style: null, resizeMode: "cover" };
+    const obj4 = { uri: iconURL };
+    obj3.source = obj4;
+    obj3.style = tmp.tileImage;
+    tmp3Result = metroImportDefault(FastImageDefault, obj3);
+  }
+  obj.children = tmp3Result;
+  return metroImportDefault(Card.Card, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { nameRow: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16 }, tileFrame: { alignSelf: "flex-start" }, tile: { padding: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" }, tileEmpty: { borderStyle: "dashed" }, tileImage: { width: "100%", height: "100%" }, editIcon: null, nameField: null };
 const rect = { position: "absolute", top: -nativeDefault.space.PX_4, right: -nativeDefault.space.PX_4, pointerEvents: "none" };
 obj2.editIcon = rect;
 obj2.nameField = { flex: 1 };
 let closure_11 = createStyles.createStyles(obj2);
-const size = fn(2);
+let size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/identity/native/ConjureAppIdentity.tsx");
 
 export { ConjureAppIconTile };
@@ -323,13 +378,13 @@ export function ConjureAppIdentitySection(nameError) {
   const obj3 = { style: tmp.nameField, onLayout: callback, children: null };
   const obj4 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
   const intl = nameError(1113).intl;
-  obj4.label = intl.string(_modDef4131.GWBCF9);
+  obj4.label = intl.string(_modDef4133.GWBCF9);
   obj4.value = name;
   obj4.onChange = onNameChange;
-  obj4.maxLength = nameError(7018).MAX_PROJECT_NAME_LENGTH;
+  obj4.maxLength = nameError(7026).MAX_PROJECT_NAME_LENGTH;
   obj4.disabled = flag;
   obj4.errorMessage = nameError;
-  obj3.children = closure_7(nameError(7619).TextInput, obj4);
+  obj3.children = closure_7(nameError(7629).TextInput, obj4);
   items1[1] = closure_7(View, obj3);
   obj2.children = items1;
   const items2 = [closure_8(View, obj2), ];
@@ -337,23 +392,23 @@ export function ConjureAppIdentitySection(nameError) {
   if (null != first) {
     const obj5 = { accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "body-xs/normal", color: "text-feedback-critical", children: first };
-    obj5.children = closure_7(tmp8(5919).Text, obj6);
+    obj5.children = closure_7(tmp8(5923).Text, obj6);
     tmp12Result = closure_7(View, obj5);
   }
   const obj7 = { children: null };
   items2[1] = tmp12Result;
   obj.children = items2;
-  const items3 = [closure_8(nameError(6327).Stack, obj), ];
+  const items3 = [closure_8(nameError(6335).Stack, obj), ];
   const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = tmp8(1113).intl;
-  obj8.label = intl2.string(_modDef4131.ynaGa1);
+  obj8.label = intl2.string(_modDef4133.ynaGa1);
   const intl3 = tmp8(1113).intl;
-  obj8.placeholder = intl3.string(_modDef4131["I+3UTL"]);
+  obj8.placeholder = intl3.string(_modDef4133["I+3UTL"]);
   obj8.value = description;
   obj8.onChange = onDescriptionChange;
-  obj8.maxLength = nameError(7018).MAX_APP_DESCRIPTION_LENGTH;
+  obj8.maxLength = nameError(7026).MAX_APP_DESCRIPTION_LENGTH;
   obj8.disabled = flag;
-  items3[1] = closure_7(nameError(7859).TextArea, obj8);
+  items3[1] = closure_7(nameError(7869).TextArea, obj8);
   obj7.children = items3;
   return closure_8(closure_9, obj7);
 }

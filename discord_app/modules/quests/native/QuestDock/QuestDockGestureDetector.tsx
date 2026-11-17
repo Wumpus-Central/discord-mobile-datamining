@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockGestureDetector.tsx
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05592_LegacyBaseButton.js";
 import useSafeAreaInsetsSharedValueDefault from "../../../safe_area/useSafeAreaInsetsSharedValue.native.tsx";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext.tsx";
@@ -676,8 +676,8 @@ function useQuestDockSwipeGesture() {
   );
   return memo;
 }
-const QuestDockMode = fn(6954).QuestDockMode;
-const QuestDockConstants = fn(17698);
+const QuestDockMode = fn(6962).QuestDockMode;
+const QuestDockConstants = fn(17736);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
   QUEST_DOCK_CLOSED_HEIGHT: closure_6,

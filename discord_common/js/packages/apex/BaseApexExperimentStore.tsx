@@ -38,6 +38,15 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
+function getHash(arg0) {
+  let tmp2 = dependencyMap4[arg0];
+  if (null == tmp2) {
+    const v3Result = MurmurHashV3Default.v3(arg0);
+    tmp[arg0] = v3Result;
+    tmp2 = v3Result;
+  }
+  return tmp2;
+}
 const WebAnalyticsEvents = fn(1083).WebAnalyticsEvents;
 const logger = new fn(4).Logger("ApexExperimentStore");
 let tmp3 = typeof window === "undefined";
@@ -58,7 +67,7 @@ let closure_10 = {};
 let clientOverrides = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
-const set = new Set();
+let set = new Set();
 const set1 = new Set();
 const apexTrackedExposures = "apexTrackedExposures";
 let c18 = 604800000;
@@ -72,6 +81,10 @@ class BaseApexExperimentStore extends PersistedStore {
       return Promise.resolve();
     };
     applyArgumentsResult.surface = "unset";
+    applyArgumentsResult.nextFetchRequestId = 0;
+    map = new Map();
+    applyArgumentsResult.fetchOwners = map;
+    applyArgumentsResult.gatewayGenerations = { user: {}, guild: {}, installation: {} };
     return applyArgumentsResult;
   }
 }
@@ -79,6 +92,48 @@ const prototype = BaseApexExperimentStore.prototype;
 prototype["onAssignmentsIngested"] = function onAssignmentsIngested() {};
 prototype["resolveConfigAssignment"] = function resolveConfigAssignment() {};
 prototype["onConfigApplied"] = function onConfigApplied() {};
+prototype["createFetchRequest"] = function createFetchRequest() {
+  obj = { id: null, gatewayGenerations: null };
+  const sum = this.nextFetchRequestId + 1;
+  this.nextFetchRequestId = sum;
+  obj.id = sum;
+  const obj2 = { user: null, guild: null, installation: null };
+  const merged = Object.assign(this.gatewayGenerations.user);
+  obj2.user = {};
+  const merged1 = Object.assign(this.gatewayGenerations.guild);
+  obj2.guild = {};
+  const merged2 = Object.assign(this.gatewayGenerations.installation);
+  obj2.installation = {};
+  obj.gatewayGenerations = obj2;
+  return obj;
+};
+prototype["setGatewayExperimentAssignments"] = function setGatewayExperimentAssignments(apexExperiments, arg1, id) {
+  const self = this;
+  const iter = items[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp3 = nextResult;
+    let tmp6 = ApexTypes.UnitTypeToKind[nextResult];
+    obj = undefined;
+    if (apexExperiments != null) {
+      obj = apexExperiments.assignments[tmp3];
+    }
+    if (obj == null) {
+      obj = {};
+    }
+    let keys = Object.keys(obj);
+    for (const item10031 of keys) {
+      let num = self.gatewayGenerations[tmp6][item10031];
+      if (num == null) {
+        num = 0;
+      }
+      self.gatewayGenerations[tmp6][item10031] = num + 1;
+      continue;
+    }
+    continue;
+  }
+  return self.setExperimentAssignments(apexExperiments, arg1, id);
+};
 prototype["loadStoredState"] = function loadStoredState(version, buildOverrideExperiments) {
   if (null != version) {
     if (3 === version.version) {
@@ -122,42 +177,61 @@ prototype["getState"] = function getState() {
   obj = { version: 3, evaluatedExperiments: obj, clientOverrides };
   return obj;
 };
-prototype["setExperimentAssignments"] = function setExperimentAssignments(apexExperiments, arg1) {
+prototype["setExperimentAssignments"] = function setExperimentAssignments(apexExperiments, arg1, id, arg3) {
+  let flag = arg3;
+  if (arg3 === undefined) {
+    flag = true;
+  }
   if (null == apexExperiments) {
     if (null == arg1) {
       return false;
     }
   }
+  let tmp = null != id;
+  if (tmp) {
+    let tmp2;
+    if (apexExperiments != null) {
+      const tmp5 = apexExperiments.assignments[ApexTypes.UnitType.User];
+      if (tmp5 != null) {
+        tmp2 = tmp5[id];
+      }
+    }
+    tmp = null != tmp2;
+  }
   const self = this;
-  const result = this.clearSessionOverrides();
+  if (tmp) {
+    const result = self.clearSessionOverrides();
+  }
   if (null != apexExperiments) {
     const iter = items[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp7 = ApexTypes.UnitTypeToKind[nextResult];
-      let tmp8 = apexExperiments.assignments[nextResult];
-      let tmp9 = tmp8;
-      if (null != tmp8) {
-        if (null != tmp7) {
-          let tmp50 = obj[tmp7];
-          for (const key10032 in tmp9) {
-            let addResult = set1.add(key10032);
-            ({ evaluation_id, assignments } = tmp9[key10032]);
+      let tmp12 = ApexTypes.UnitTypeToKind[nextResult];
+      let tmp13 = apexExperiments.assignments[nextResult];
+      let tmp14 = tmp13;
+      if (null != tmp13) {
+        if (null != tmp12) {
+          let tmp60 = obj[tmp12];
+          for (const key10046 in tmp14) {
+            if (flag) {
+              let addResult = set1.add(key10046);
+            }
+            ({ evaluation_id, assignments } = tmp14[key10046]);
             obj = { evaluationId: evaluation_id, assignments: {} };
-            tmp50[key10032] = obj;
-            for (const item10043 of assignments) {
-              let tmp16 = _slicedToArray(item10043, 6);
-              [tmp17, tmp18, tmp19] = tmp16;
-              let num = tmp19;
-              let tmp20 = tmp16[3];
-              let tmp21 = tmp16[4];
-              let tmp22 = tmp16[5];
-              if (tmp19 == null) {
+            tmp60[key10046] = obj;
+            for (const item10065 of assignments) {
+              let tmp26 = _slicedToArray(item10065, 6);
+              [tmp27, tmp28, tmp29] = tmp26;
+              let num = tmp29;
+              let tmp30 = tmp26[3];
+              let tmp31 = tmp26[4];
+              let tmp32 = tmp26[5];
+              if (tmp29 == null) {
                 num = 0;
               }
               let obj2 = {
-                hashedName: tmp17,
-                variantId: tmp18,
+                hashedName: tmp27,
+                variantId: tmp28,
                 trackedVariantId: null,
                 isOverride: null,
                 isAppLaunch: null,
@@ -166,14 +240,14 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
                 useAsEligibility: null,
                 config: null,
               };
-              obj2.trackedVariantId = tmp21;
+              obj2.trackedVariantId = tmp31;
               obj2.isOverride = num & ApexTypes.ExperimentFlags.IsOverride;
               obj2.isAppLaunch = num & ApexTypes.ExperimentFlags.IsAppLaunch;
-              obj2.revision = tmp20;
+              obj2.revision = tmp30;
               obj2.exposureTrackingEnabled = num & ApexTypes.ExperimentFlags.ExposureTrackingEnabled;
               obj2.useAsEligibility = num & ApexTypes.ExperimentFlags.UseAsEligibility;
-              obj2.config = tmp22;
-              tmp10.assignments[tmp17] = obj2;
+              obj2.config = tmp32;
+              tmp20.assignments[tmp27] = obj2;
               continue;
             }
           }
@@ -186,14 +260,14 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
     const iter2 = items[Symbol.iterator]();
     const nextResult1 = iter2.next();
     while (iter2 !== undefined) {
-      let tmp37 = ApexTypes.UnitTypeToKind[nextResult1];
+      let tmp47 = ApexTypes.UnitTypeToKind[nextResult1];
       let obj3 = apexExperiments.assignments[nextResult1];
       if (obj3 == null) {
         obj3 = {};
       }
       let keys = Object.keys(obj3);
-      for (const item10112 of keys) {
-        let result1 = self.onAssignmentsIngested(tmp37, item10112, obj[tmp37][item10112]);
+      for (const item10134 of keys) {
+        let result1 = self.onAssignmentsIngested(tmp47, item10134, obj[tmp47][item10134]);
         continue;
       }
       continue;
@@ -325,6 +399,20 @@ prototype["getExperimentSessionOverride"] = function getExperimentSessionOverrid
 };
 prototype["handleLogout"] = function handleLogout(arg0) {
   const self = this;
+  items = [ApexTypes.INSTALLATION_UNIT_ID, ...Object.keys(obj.installation)];
+  set = new Set(items);
+  const items1 = [set, set1];
+  for (const item10031 of items1) {
+    for (const item10037 of item10031) {
+      if (!set.has(item10037)) {
+        let deleteResult = item10031.delete(item10037);
+        let fetchOwners = self.fetchOwners;
+        let deleteResult1 = fetchOwners.delete(item10037);
+      }
+      continue;
+    }
+    continue;
+  }
   if (!arg0) {
     const result = self.clearUserServerAssignments();
     const result1 = self.clearSessionOverrides();
@@ -361,9 +449,9 @@ prototype["getServerAssignment"] = function getServerAssignment(kind, id, name) 
   }
   return null != obj[kind][id] ? obj[kind][id].assignments[tmp2] : undefined;
 };
-prototype["getEvaluation"] = function getEvaluation(arg0, arg1) {
+prototype["getEvaluation"] = function getEvaluation(user, arg1) {
   let evaluationId;
-  if (obj[arg0][arg1] != null) {
+  if (obj[user][arg1] != null) {
     evaluationId = tmp.evaluationId;
   }
   return evaluationId;
@@ -497,53 +585,43 @@ prototype["trackExperimentExposure"] = function trackExperimentExposure(
     );
   }
 };
-prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPointExposures(location) {
-  closure_0 = location;
+prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPointExposures(exposure_location, arg1) {
   const self = this;
-  function _loop(evaluationId) {
-    const combined = "" + evaluationId + "|" + evaluationId;
-    let tmp3 = dependencyMap2[combined];
+  const evaluation = this.getEvaluation("user", arg1);
+  if (null != evaluation) {
+    const _HermesInternal = HermesInternal;
+    self.withExposureTracking(getHash("" + evaluation + "|" + exposure_location), () =>
+      self.track(
+        WebAnalyticsEvents.EXPERIMENT_USER_EVALUATION_EXPOSED,
+        { evaluation_id: evaluation, exposure_location, unit_type: "user" },
+        { flush: true },
+      ),
+    );
+  }
+  function _loop(evaluationId, unitId) {
+    const evaluation_id = evaluationId;
+    exposure_location = unitId;
+    const combined = "" + evaluationId + "|" + exposure_location;
+    let tmp3 = dependencyMap4[combined];
     if (null == tmp3) {
-      const v3Result = self(1251).v3(combined);
+      const v3Result = exposure_location(self[6]).v3(combined);
       tmp2[combined] = v3Result;
       tmp3 = v3Result;
-      obj = self(1251);
+      obj = exposure_location(self[6]);
     }
     self.withExposureTracking(tmp3, () =>
       self.track(
-        WebAnalyticsEvents.EXPERIMENT_USER_EVALUATION_EXPOSED,
-        { evaluation_id: evaluationId, exposure_location: evaluationId, unit_type: "user" },
-        { flush: true },
-      ),
-    );
-  }
-  const result = this.evaluationsWithUnitIds("user");
-  const iter = result[Symbol.iterator]();
-  while (iter !== undefined) {
-    let _loopResult = _loop(iter.next().evaluationId);
-    continue;
-  }
-  function _loop2(evaluationId, unitId) {
-    _self = unitId;
-    const combined = "" + evaluationId + "|" + evaluationId;
-    let tmp3 = dependencyMap2[combined];
-    if (null == tmp3) {
-      const v3Result = self(1251).v3(combined);
-      tmp2[combined] = v3Result;
-      tmp3 = v3Result;
-      obj = self(1251);
-    }
-    _self.withExposureTracking(tmp3, () =>
-      self.track(
         WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED,
-        { evaluation_id: evaluationId, exposure_location: evaluationId, unit_type: "installation", installation_id },
+        { evaluation_id, exposure_location: unitId, unit_type: "installation", installation_id: unitId },
         { flush: true },
       ),
     );
   }
-  const result1 = self.evaluationsWithUnitIds("installation");
-  for (const item10023 of result1) {
-    let _loop2Result = _loop2(item10023.evaluationId, item10023.unitId);
+  const result = self.evaluationsWithUnitIds("installation");
+  const iter = result[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let _loopResult = _loop(nextResult.evaluationId, nextResult.unitId);
     continue;
   }
 };
@@ -560,14 +638,14 @@ prototype["trackExposureSuppression"] = function trackExposureSuppression(experi
   if (null != closure_10[experiment]) {
     const self = this;
     if ("user" === tmp.kind) {
-      obj = { experiment, unit_type: tmp.kind, suppression_source };
-      self.track(WebAnalyticsEvents.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, obj, { flush: true });
+      const obj2 = { experiment, unit_type: tmp.kind, suppression_source };
+      self.track(WebAnalyticsEvents.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, obj2, { flush: true });
     } else if ("installation" === tmp.kind) {
       const _Object = Object;
       const first = Object.keys(obj.installation)[0];
       if (null != first) {
-        const obj2 = { experiment, unit_type: tmp.kind, suppression_source, installation_id: first };
-        self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED, obj2, { flush: true });
+        obj = { experiment, unit_type: tmp.kind, suppression_source, installation_id: first };
+        self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED, obj, { flush: true });
       }
     } else if ("guild" === tmp.kind) {
       const _Object2 = Object;
@@ -654,6 +732,9 @@ prototype["clearForTests"] = function clearForTests() {
   const result1 = this.clearAllTrackedExposures();
   set.clear();
   set1.clear();
+  const fetchOwners = this.fetchOwners;
+  fetchOwners.clear();
+  this.gatewayGenerations = { user: {}, guild: {}, installation: {} };
 };
 prototype["clearAllServerAssignments"] = function clearAllServerAssignments() {};
 prototype["clearUserServerAssignments"] = function clearUserServerAssignments() {
@@ -679,15 +760,78 @@ prototype["getHash"] = function getHash(arg0) {
   }
   return tmp2;
 };
-prototype["handleFetchStart"] = function handleFetchStart(arg0) {
+prototype["handleFetchStart"] = function handleFetchStart(arg0, id) {
+  const self = this;
   set.add(arg0);
+  if (null != id) {
+    const fetchOwners2 = self.fetchOwners;
+    const result = fetchOwners2.set(arg0, id.id);
+  } else {
+    const fetchOwners = self.fetchOwners;
+    fetchOwners.delete(arg0);
+  }
 };
-prototype["handleFetchSuccess"] = function handleFetchSuccess(arg0, apexExperiments) {
-  set.delete(arg0);
-  set1.add(arg0);
-  const result = this.setExperimentAssignments(apexExperiments);
+prototype["handleFetchSuccess"] = function handleFetchSuccess(arg0, apexExperiments, id) {
+  closure_1 = id;
+  const self = this;
+  if (null != id) {
+    const fetchOwners = self.fetchOwners;
+    if (fetchOwners.get(arg0) !== id.id) {
+      return false;
+    }
+  }
+  self.handleFetchFailure(arg0, id);
+  if (null != id) {
+    if (null != apexExperiments) {
+      const assignments = {};
+      function _loop2() {
+        apexExperiments = apexExperiments(self[5]).UnitTypeToKind[closure_4];
+        if (null == apexExperiments.assignments[closure_4]) {
+          return 1;
+        } else {
+          const _Object = Object;
+          const _Object2 = Object;
+          const entries = Object.entries(tmp2);
+          obj[tmp] = Object.fromEntries(
+            entries.filter((item) => {
+              [tmp] = item;
+              let num = gatewayGenerations.gatewayGenerations[closure_0][tmp];
+              if (num == null) {
+                num = 0;
+              }
+              let num2 = self.gatewayGenerations[closure_0][tmp];
+              if (num2 == null) {
+                num2 = 0;
+              }
+              return num === num2;
+            }),
+          );
+        }
+      }
+      const iter = items[Symbol.iterator]();
+      while (iter !== undefined) {
+        closure_4 = iter.next();
+        let _loop2Result = _loop2();
+        continue;
+      }
+      const obj2 = {};
+      const merged = Object.assign(apexExperiments);
+      obj2.assignments = assignments;
+      const result = self.setExperimentAssignments(obj2, undefined, undefined, false);
+    }
+  }
+  const result1 = self.setExperimentAssignments(apexExperiments);
 };
-prototype["handleFetchFailure"] = function handleFetchFailure(arg0) {
+prototype["handleFetchFailure"] = function handleFetchFailure(arg0, id) {
+  const self = this;
+  if (null != id) {
+    const fetchOwners = self.fetchOwners;
+    if (fetchOwners.get(arg0) !== id.id) {
+      return false;
+    }
+  }
+  const fetchOwners2 = self.fetchOwners;
+  fetchOwners2.delete(arg0);
   set.delete(arg0);
   set1.add(arg0);
 };

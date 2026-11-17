@@ -8,13 +8,13 @@ import ActivityPrivacyUpsellUtils from "../../../activity_privacy/ActivityPrivac
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(9202).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9213).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions() {
     return noop.useMemo(() => {
       const obj = {
@@ -65,7 +65,7 @@ const radio = SettingBuilders.createRadio({
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(18605, dependencyMap.paths),
+        asyncRequireImpl(18646, dependencyMap.paths),
         "ActivityPrivacyUpsellActionSheet",
         obj2,
       );

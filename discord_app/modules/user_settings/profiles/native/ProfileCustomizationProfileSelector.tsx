@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-let closure_4 = fn(17202).PROFILE_SELECTOR_ACTION_SHEET_KEY;
+let closure_4 = fn(17239).PROFILE_SELECTOR_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   container: {
     paddingTop: nativeDefault.space.PX_4,
@@ -46,16 +46,16 @@ export default function ProfileCustomizationProfileSelector(guild) {
     onPress: null,
   };
   if (null != guild) {
-    const obj3 = { guild, size: tmp3(7720).GuildIconSizes.XSMALL };
-    let tmpResult = jsx(GuildIconDefault, { guild, size: tmp3(7720).GuildIconSizes.XSMALL });
+    const obj3 = { guild, size: tmp3(7730).GuildIconSizes.XSMALL };
+    let tmpResult = jsx(GuildIconDefault, { guild, size: tmp3(7730).GuildIconSizes.XSMALL });
     let tmp8 = importDefault;
   } else {
     const obj4 = { size: "md", color: nativeDefault.colors.ICON_DEFAULT };
-    tmpResult = jsx(tmp3(11739).ClydeIcon, { size: "md", color: nativeDefault.colors.ICON_DEFAULT });
+    tmpResult = jsx(tmp3(10224).ClydeIcon, { size: "md", color: nativeDefault.colors.ICON_DEFAULT });
     tmp8 = importDefault;
   }
   obj2.icon = tmpResult;
-  obj2.trailing = jsx(guild(10560).ChevronSmallDownIcon, { size: "sm", color: tmp8(575).colors.ICON_SUBTLE });
+  obj2.trailing = jsx(guild(13418).ChevronSmallDownIcon, { size: "sm", color: tmp8(575).colors.ICON_SUBTLE });
   const intl2 = tmp3(1113).intl;
   let name1;
   if (guild != null) {
@@ -86,7 +86,7 @@ export default function ProfileCustomizationProfileSelector(guild) {
       });
     });
   };
-  obj6.children = jsx(guild(7443).TableRow, {
+  obj6.children = jsx(guild(7453).TableRow, {
     label: name,
     labelLineClamp: 1,
     icon: null,
@@ -95,6 +95,6 @@ export default function ProfileCustomizationProfileSelector(guild) {
     accessibilityHint: null,
     onPress: null,
   });
-  obj.children = jsx(guild(7746).TableRowGroup, { hasIcons: true, children: null });
+  obj.children = jsx(guild(7756).TableRowGroup, { hasIcons: true, children: null });
   return <View style={closure_6().container}>{null}</View>;
 }

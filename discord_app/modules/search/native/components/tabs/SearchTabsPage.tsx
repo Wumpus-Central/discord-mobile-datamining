@@ -36,8 +36,8 @@ function SearchTabsPage(selectMediaTab) {
     return ChannelStore.getChannel(channelId);
   });
   const obj = searchContext(504);
-  const isChannelSpoilerGated = searchContext(6848).useIsChannelSpoilerGated(stateFromStores);
-  searchContext(6828);
+  const isChannelSpoilerGated = searchContext(6843).useIsChannelSpoilerGated(stateFromStores);
+  searchContext(6823);
   if (tmp2) {
     if (tab !== SearchTabs.MEMBERS) {
       if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -73,7 +73,7 @@ function SearchTabsPage(selectMediaTab) {
       return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
     } else if (SearchTabs.THREADS === tab) {
       const obj12 = { searchContext };
-      return jsx(searchContext(19552).SearchTabsThreadScreen, { searchContext });
+      return jsx(searchContext(19597).SearchTabsThreadScreen, { searchContext });
     } else if (SearchTabs.MESSAGES === tab) {
       const obj26 = { tab, searchContext, isFocused };
       return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });
@@ -86,13 +86,13 @@ function SearchTabsPage(selectMediaTab) {
   } else {
     return null;
   }
-  const obj2 = searchContext(6848);
+  const obj2 = searchContext(6843);
 }
 const View = fn(17).View;
-const SearchTabs = fn(9066).SearchTabs;
+const SearchTabs = fn(9077).SearchTabs;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 let context = noop.createContext(undefined);
 const size = fn(2);

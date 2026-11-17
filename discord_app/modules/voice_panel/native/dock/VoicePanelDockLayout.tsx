@@ -7,7 +7,7 @@ import VoicePanelStore from "../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const getVoicePanelDockHeight = fn(12009).getVoicePanelDockHeight;
+const getVoicePanelDockHeight = fn(12446).getVoicePanelDockHeight;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockLayout.tsx");
 

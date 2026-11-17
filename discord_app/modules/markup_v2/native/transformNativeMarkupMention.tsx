@@ -26,20 +26,12 @@ export function transformNativeMention(value, allowGameMentions) {
     return MarkupRules.hydrateUserMention(obj5, allowGameMentions);
   } else if ("everyone" === type) {
     return MarkupRules.hydrateUserMention(
-      {
-        fullMatch: "@everyone",
-        id: "alignItems",
-        everyoneOrHere: 1758358114839606400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-      },
+      { fullMatch: "@everyone", id: "alignItems", everyoneOrHere: "handshake_light_skin_tone_medium_light_skin_tone" },
       allowGameMentions,
     );
   } else if ("here" === type) {
     return MarkupRules.hydrateUserMention(
-      {
-        fullMatch: "@here",
-        id: "alignItems",
-        everyoneOrHere: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017538905119719508,
-      },
+      { fullMatch: "@here", id: "alignItems", everyoneOrHere: "<string:1716584450>" },
       allowGameMentions,
     );
   } else if ("role" === type) {

@@ -9,13 +9,15 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BountyStore from "../BountyStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { container: { marginBottom: nativeDefault.space.PX_48 } };
   return obj;
@@ -28,25 +30,27 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  const questHomeBounties = first(10131).useQuestHomeBounties().questHomeBounties;
+  let questHomeBounties;
+  questHomeBounties = questHomeBounties(10576).useQuestHomeBounties().questHomeBounties;
   const tmp3 = closure_11();
-  first = undefined;
-  importDefault = undefined;
-  dependencyMap = undefined;
+  closure_129_0 = undefined;
+  closure_129_1 = undefined;
+  closure_129_2 = undefined;
   if (questHomeBounties.length > 0) {
-    items = [tmp(5139).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET];
+    items = [tmp(5143).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET];
     let items1 = items;
   } else {
     items1 = [];
   }
-  const obj = first(10131);
-  const tmp4 = _slicedToArray(first(9560).useSelectedDismissibleContent(items1), 2);
-  first = tmp4[0];
-  importDefault = tmp6;
-  dependencyMap = noop.useRef(false);
+  const obj = questHomeBounties(10576);
+  const tmp4 = _slicedToArray(questHomeBounties(9572).useSelectedDismissibleContent(items1), 2);
+  const first = tmp4[0];
+  closure_129_0 = first;
+  closure_129_1 = tmp6;
+  closure_129_2 = noop.useRef(false);
   const items2 = [first];
   const effect = noop.useEffect(() => {
-    let current = first !== dismissible_content.DismissibleContent.BOUNTIES_NUX_PROMO_SHEET;
+    let current = questHomeBounties !== dismissible_content.DismissibleContent.BOUNTIES_NUX_PROMO_SHEET;
     if (!current) {
       current = ref.current;
     }
@@ -58,22 +62,27 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   const items3 = [first, tmp4[1]];
   const effect1 = noop.useEffect(() => {
     function handleHide(key) {
-      if (key.key === first(closure_2[10]).PROMO_SHEET_KEY) {
+      if (key.key === questHomeBounties(ref[10]).PROMO_SHEET_KEY) {
         closure_1_1(constants.USER_DISMISS);
       }
     }
-    if (handleHide === first(ref[8]).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET) {
-      const subscription = closure_1(ref[11]).subscribe("HIDE_ACTION_SHEET", handleHide);
+    if (handleHide === questHomeBounties(ref[8]).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET) {
+      const subscription = require("Dispatcher").subscribe("HIDE_ACTION_SHEET", handleHide);
       return () => {
         DispatcherDefault.unsubscribe("HIDE_ACTION_SHEET", handleHide);
       };
     }
   }, items3);
-  const tmpResult = first(9560);
+  const tmpResult = questHomeBounties(9572);
   const items4 = [BountyStore];
+  const items5 = [questHomeBounties];
   ({ placement, buttonVariant, clickable } = shopCarouselConfig.shopCarouselConfig);
   let tmp10 = undefined !== clickable;
-  const stateFromStores = first(504).useStateFromStores(items4, () => BountyStore.areAllBountiesCompleted());
+  const stateFromStores = questHomeBounties(504).useStateFromStores(
+    items4,
+    () => questHomeBounties.length > 0 && questHomeBounties.every((id) => bountyCompleted.isBountyCompleted(id.id)),
+    items5,
+  );
   if (tmp10) {
     tmp10 = clickable;
   }
@@ -82,9 +91,9 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
       let tmp11 = "none" !== placement && obtainableOrbRewards > 0;
       if (tmp11) {
         tmp11 =
-          orbShopProducts.length >= tmp(17609).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          orbShopProducts.length >= tmp(17647).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         const tmp12 =
-          orbShopProducts.length >= tmp(17609).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          orbShopProducts.length >= tmp(17647).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
       }
       if (!tmp11) {
         const obj2 = { style: tmp3.container, children: null };
@@ -104,13 +113,13 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
           tmp24 = null;
         }
         obj3.replaceHeaderMediaWith = tmp24;
-        const items5 = [closure_8(BountiesCtaHeaderDefault, obj3)];
+        const items6 = [closure_8(BountiesCtaHeaderDefault, obj3)];
         let tmp25 = null;
         if ("outside" === placement) {
           tmp25 = null;
         }
-        items5[1] = tmp25;
-        obj2.children = items5;
+        items6[1] = tmp25;
+        obj2.children = items6;
         return closure_9(View, obj2);
       } else {
         const obj4 = {
@@ -125,7 +134,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
         if ("outside" === placement) {
           let PX_20 = PX_16;
         } else {
-          PX_20 = tmp15(575).space.PX_20;
+          PX_20 = nativeDefault.space.PX_20;
         }
         obj4.listEdgeSpacing = PX_20;
         obj4.orbShopProducts = orbShopProducts;
@@ -133,11 +142,10 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
         obj4.showOrbShopPlaceholderCarousel = showOrbShopPlaceholderCarousel;
         obj4.clickable = tmp10;
         closure_8(QuestHomeOrbShopCarouselDefault, obj4);
-        tmp15 = importDefault;
       }
     }
   }
-  const tmpResult2 = first(504);
+  const tmpResult2 = questHomeBounties(504);
   return closure_8(View, {
     style: tmp3.container,
     children: closure_8(BountiesCtaHeaderDefault, {

@@ -59,12 +59,12 @@ let closure_6 = async function _sendShareMessage(arg0) {
               originalUri: uri.uri,
               mimeType: uri.mimeType,
               filename: uri.name,
-              platform: closure_0(8850).UploadPlatform.REACT_NATIVE,
+              platform: closure_0(8861).UploadPlatform.REACT_NATIVE,
               width: uri.width,
               height: uri.height,
               preTranscodeSourceSize: uri.originalSize,
             };
-            const cloudUpload = new closure_0(8873).CloudUpload(size, guildId.id);
+            const cloudUpload = new closure_0(8884).CloudUpload(size, guildId.id);
             return cloudUpload;
           });
           c1 = closure_130_2;
@@ -87,10 +87,10 @@ let closure_6 = async function _sendShareMessage(arg0) {
               const obj = { uploadError: { file, guildId: guildId.getGuildId(), code, reason } };
               closure_1_6.reject(obj);
               const obj2 = { file, guildId: guildId.getGuildId(), code, reason };
-              guildId(11153).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
-              const obj3 = guildId(11153);
+              guildId(11131).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+              const obj3 = guildId(11131);
               const obj4 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
-              guildId(9004).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+              guildId(9015).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
             },
           };
           c4 = 2;
@@ -117,8 +117,8 @@ let closure_6 = async function _sendShareMessage(arg0) {
     }
   }
 };
-const DraftType = fn(8725).DraftType;
-const MessageSendLocation = fn(5311).MessageSendLocation;
+const DraftType = fn(8736).DraftType;
+const MessageSendLocation = fn(5315).MessageSendLocation;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 

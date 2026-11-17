@@ -94,13 +94,13 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const DraftType = fn(8725).DraftType;
-const PollsConstants = fn(9011);
+const DraftType = fn(8736).DraftType;
+const PollsConstants = fn(9022);
 ({ MAX_POLL_ANSWER_LENGTH: closure_10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
 const EmojiIntention = fn(1391).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   defaultContainer: { flexDirection: "row", alignItems: "center" },
   inputContainer: { flex: 1 },
@@ -180,7 +180,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13555, dependencyMap.paths), closure_2_11, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13708, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,
@@ -207,15 +207,15 @@ export default function PollAnswerInput(answer) {
     onBlur: null,
     blurOnSubmit: false,
     style: null,
-    selectionColor: "channelId",
-    textContentType: "port",
-    accessibilityLabel: "getFiles",
-    accessibilityHint: true,
-    maxLength: true,
-    returnKeyType: null,
-    required: "ADD",
-    autoCorrect: null,
-    "aria-invalid": null,
+    selectionColor: "channel_id",
+    textContentType: "TOPICAL_NAV_TOPICS_UNIT_CLICKED",
+    accessibilityLabel: "next",
+    accessibilityHint: "System",
+    maxLength: "DEFAULT_INITIAL_NUM_TO_RENDER",
+    returnKeyType: "asset",
+    required: "isArrayBuffer",
+    autoCorrect: "hand_with_index_and_middle_finger_crossed",
+    "aria-invalid": "SUNDAY",
   };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);

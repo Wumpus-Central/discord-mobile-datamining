@@ -216,7 +216,7 @@ export default {
                   event_id: timestamp.event_id,
                   timestamp: result,
                   level: formatted,
-                  tags: "pond\u011Bl\u00ED",
+                  tags: null,
                 };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";

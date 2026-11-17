@@ -180,7 +180,7 @@ function useAgeVerificationRunner(onComplete) {
   };
 }
 const AbortCodes = fn(1072).AbortCodes;
-const SafetyToastType = fn(6900).SafetyToastType;
+const SafetyToastType = fn(6908).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/hooks/useInitiateAgeVerification.tsx");
 

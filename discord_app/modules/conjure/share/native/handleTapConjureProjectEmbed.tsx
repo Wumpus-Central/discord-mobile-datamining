@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/share/native/handleTapConjureProjectEmbed.tsx
-import conjureSharedProjectCoverTargetDefault from "../conjureSharedProjectCoverTarget.tsx";
 import openFrameDefault from "../../../frames/openFrame.tsx";
+import conjureSharedProjectCoverTargetDefault from "../conjureSharedProjectCoverTarget.tsx";
 import launchConjureSharedProjectDefault from "../launchConjureSharedProject.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
@@ -162,7 +162,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
     }
   }
 };
-const canRemixProject = fn(7017).canRemixProject;
+const canRemixProject = fn(7025).canRemixProject;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/handleTapConjureProjectEmbed.tsx");
 

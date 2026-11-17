@@ -29,7 +29,7 @@ export function showRemovedMessageToast(arg0, channel_id) {
 }
 export function openRemovedContentModal(action) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(20180, dependencyMap.paths),
+    asyncRequireImpl(20228, dependencyMap.paths),
     "AutomodRemovedContentSheet",
     { action },
   );

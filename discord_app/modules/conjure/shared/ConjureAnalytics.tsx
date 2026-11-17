@@ -159,17 +159,17 @@ function ratingPromptFields(projectId) {
   obj3.is_new_project = tmp10;
   return obj3;
 }
-const isProjectOwner = fn(7017).isProjectOwner;
+const isProjectOwner = fn(7025).isProjectOwner;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let closure_8 = {
-  [fn(7018).ConjureSupportedSurface.APP_CHANNEL]: "app_channel",
-  [fn(7018).ConjureSupportedSurface.VOICE_CHANNEL]: "voice_channel",
-  [fn(7018).ConjureSupportedSurface.PROFILE_WIDGET]: "profile_widget",
-  [fn(7018).ConjureSupportedSurface.AUTOMOD]: "automod",
-  [fn(7018).ConjureSupportedSurface.BOT]: "bot",
-  [fn(7018).ConjureSupportedSurface.APPLICATION_COMMANDS]: "application_commands",
-  [fn(7018).ConjureSupportedSurface.OVERLAY]: "overlay",
-  [fn(7018).ConjureSupportedSurface.ACTIVITY]: "activity",
+  [fn(7026).ConjureSupportedSurface.APP_CHANNEL]: "app_channel",
+  [fn(7026).ConjureSupportedSurface.VOICE_CHANNEL]: "voice_channel",
+  [fn(7026).ConjureSupportedSurface.PROFILE_WIDGET]: "profile_widget",
+  [fn(7026).ConjureSupportedSurface.AUTOMOD]: "automod",
+  [fn(7026).ConjureSupportedSurface.BOT]: "bot",
+  [fn(7026).ConjureSupportedSurface.APPLICATION_COMMANDS]: "application_commands",
+  [fn(7026).ConjureSupportedSurface.OVERLAY]: "overlay",
+  [fn(7026).ConjureSupportedSurface.ACTIVITY]: "activity",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");

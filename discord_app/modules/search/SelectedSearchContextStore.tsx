@@ -1,11 +1,11 @@
 // discord_app/modules/search/SelectedSearchContextStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef6151 from "../../../_runtime/metro/06151__.js";
+import _modDef6158 from "../../../_runtime/metro/06158__.js";
 
 function handleSearchContextUpdate(searchContext) {
   searchContext = searchContext.searchContext;
-  if (_modDef6151(c2, searchContext)) {
+  if (_modDef6158(c2, searchContext)) {
     return false;
   } else {
     c2 = searchContext;

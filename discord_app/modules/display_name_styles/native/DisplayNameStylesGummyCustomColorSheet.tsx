@@ -12,7 +12,7 @@ const DisplayNameStylesConstants = fn(1397);
   DisplayNameStylesConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   body: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -50,7 +50,7 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const sharedValue = obj.useSharedValue(obj2.wrapHue(onSelect(1090).int2hslRaw(onSelect.initialColor).h));
   items = [sharedValue, onSelect];
   const callback = noop.useCallback(() => {
-    const result = onSelect(5544).triggerHapticFeedback(onSelect(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+    const result = onSelect(5548).triggerHapticFeedback(onSelect(5548).HapticFeedbackTypes.IMPACT_LIGHT);
   }, []);
   const callback1 = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -66,19 +66,19 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const intl2 = onSelect(1113).intl;
   obj6.text = intl2.string(onSelect(1113).t.XqMe3N);
   obj6.onPress = callback1;
-  obj5.trailing = closure_7(onSelect(5926).Button, obj6);
-  obj4.header = closure_7(sharedValue(17963), obj5);
+  obj5.trailing = closure_7(onSelect(5930).Button, obj6);
+  obj4.header = closure_7(sharedValue(18004), obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
-  const tmp5 = sharedValue(17963);
+  const tmp5 = sharedValue(18004);
   obj8.children = closure_7(View, {
     style: tmp.preview,
-    children: closure_7(sharedValue(17971), { hue: sharedValue }),
+    children: closure_7(sharedValue(18012), { hue: sharedValue }),
   });
   const items1 = [closure_7(View, obj8)];
   const obj10 = {
     style: tmp.huePickerInset,
-    children: closure_7(sharedValue(17077), {
+    children: closure_7(sharedValue(17112), {
       hue: sharedValue,
       onPanFinalize: callback,
       saturation,
@@ -89,5 +89,5 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);
-  return closure_7(onSelect(5556).BottomSheet, obj4);
+  return closure_7(onSelect(5560).BottomSheet, obj4);
 }

@@ -94,10 +94,10 @@ class YouBarButtonIcon {
         position: "absolute",
         left: size2 - badgeSize + num3,
         top: size2 - badgeSize + num4,
-        right: "channel_id",
-        bottom: "hash",
-        padding: "keys",
-        minWidth: "items",
+        right: "alignItems",
+        bottom: "done",
+        padding: "getCurrentUser",
+        minWidth: "Array",
       };
       return rect;
     }, items1);
@@ -136,11 +136,11 @@ class YouBarButtonContainer {
   }
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17701);
+const YouBarConstants = fn(17739);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: closure_6 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   buttonContainer: {
     position: "relative",

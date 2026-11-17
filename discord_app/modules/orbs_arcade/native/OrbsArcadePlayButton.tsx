@@ -11,14 +11,14 @@ import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 require = fn;
 function OrbsArcadePaidPlayLabel(count) {
   const size = count.size;
-  const tmp = closure_8();
+  const tmp = closure_9();
   closure_1 = tmp;
   const intl = size(1113).intl;
   const formatResult = intl.format(size(1113).t.oSWYca, {
     count: count.orbCost,
     orbIconHook() {
       return jsx(
-        size(9442).OrbsIcon,
+        size(9452).OrbsIcon,
         { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT },
         "orbs-icon",
       );
@@ -60,9 +60,10 @@ function OrbsArcadePaidPlayLabel(count) {
   );
 }
 const View = fn(17).View;
+const QuestHomeSection = fn(10574).QuestHomeSection;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
-let closure_8 = createStyles.createStyles({
+const createStyles = fn(5310);
+let closure_9 = createStyles.createStyles({
   paidPlayLabel: { flexDirection: "row", alignItems: "center" },
   paidPlayText: { flexShrink: 1 },
 });
@@ -107,7 +108,7 @@ export default function OrbsArcadePlayButton(game) {
       surface,
     );
     ActionSheetActionCreatorsDefault.hideActionSheet();
-    QuestHomeNavigationStore.setState({ scrollToQuestsSection: true });
+    QuestHomeNavigationStore.setState({ scrollToSection: QuestHomeSection.QUESTS });
   }, items4);
   const callback1 = analyticsLocations.useCallback(() => {
     const result = OrbsArcadeAnalytics.trackOrbsArcadeCtaClicked(

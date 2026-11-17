@@ -27,7 +27,7 @@ export function CheckpointStepFocusProvider(arg0) {
         return tmp;
       });
   }, []);
-  isScreenReaderEnabled = first(5558).useIsScreenReaderEnabled();
+  isScreenReaderEnabled = first(5562).useIsScreenReaderEnabled();
   items = [route, first, isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
     if (isScreenReaderEnabled) {

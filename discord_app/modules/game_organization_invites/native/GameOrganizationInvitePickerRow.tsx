@@ -7,7 +7,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import _modDef7928 from "../../../../_runtime/metro/07928__.js";
+import _modDef7938 from "../../../../_runtime/metro/07938__.js";
 import getGameOrganizationInviteSendStateKey from "../getGameOrganizationInviteSendStateKey.tsx";
 import InviteButtonDefault from "../../instant_invite/native/components/InviteButton.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -15,11 +15,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
 require = fn;
-let closure_4 = fn(12565).useInstantInviteSendStates;
-const InviteSendStates = fn(8842).InviteSendStates;
+let closure_4 = fn(12760).useInstantInviteSendStates;
+const InviteSendStates = fn(8853).InviteSendStates;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { icon: null };
 let size = {
   width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
@@ -56,7 +56,7 @@ export default noop.memo(function GameOrganizationInvitePickerRow(organization) 
     const obj2 = { uri: organization.iconUrl };
     let tmp2Result = obj2;
   } else {
-    tmp2Result = _modDef7928;
+    tmp2Result = _modDef7938;
   }
   const obj3 = {
     icon: timestampProducer(FastImageDefault, { source: tmp2Result, style: tmp.icon }),

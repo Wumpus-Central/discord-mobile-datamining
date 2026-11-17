@@ -6,7 +6,7 @@ import NicknameUtilsDefault from "NicknameUtils.tsx";
 import MessageRecordUtils from "../modules/messages/MessageRecordUtils.tsx";
 import useMessageAuthor from "../modules/messages/useMessageAuthor.tsx";
 import GuildSpaceSystemMessageUtils from "../modules/guild_space/GuildSpaceSystemMessageUtils.tsx";
-import MarkupParser from "../../discord_common/js/packages/markup/MarkupParser.tsx";
+import markup_MarkupParser from "../../discord_common/js/packages/markup/MarkupParser.tsx";
 import AutomodNotificationEmbedTypeKeys from "../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
 import GuildRoleSubscriptionSystemMessageUtils from "../modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx";
 import GuildProductSystemMessageUtils from "../modules/guild_products/GuildProductSystemMessageUtils.tsx";
@@ -67,7 +67,7 @@ export default {
         if (null != null) {
           const intl20 = util.intl;
           const obj3 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
-          const obj67 = MarkupParser;
+          const obj67 = markup_MarkupParser;
           obj3.otherUsername = NicknameUtilsDefault.getName(null, channel_id, null);
           obj3.otherUsernameOnClick = usernameOnClick;
           return obj67.astToString(intl20.formatToParts(util.t["7/Xl0S"], obj3));
@@ -79,7 +79,7 @@ export default {
             if (author2.id !== null.id) {
               const intl19 = util.intl;
               const obj5 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
-              const obj64 = MarkupParser;
+              const obj64 = markup_MarkupParser;
               obj5.otherUsername = NicknameUtilsDefault.getName(null, channel_id, null);
               obj5.otherUsernameOnClick = usernameOnClick;
               let astToStringResult = obj64.astToString(intl19.formatToParts(util.t.QtZ0RD, obj5));
@@ -89,7 +89,7 @@ export default {
           }
           const intl18 = util.intl;
           const obj6 = { username: name, usernameOnClick };
-          astToStringResult = MarkupParser.astToString(intl18.formatToParts(util.t["Qn5+Lf"], obj6));
+          astToStringResult = markup_MarkupParser.astToString(intl18.formatToParts(util.t["Qn5+Lf"], obj6));
         }
       } else if (constants.CALL === type) {
         const call = mentions.call;
@@ -99,24 +99,24 @@ export default {
           if (-1 === participants.indexOf(AuthenticationStore.getId())) {
             const intl17 = util.intl;
             const obj8 = { username: name, usernameOnClick };
-            astToStringResult1 = MarkupParser.astToString(intl17.formatToParts(util.t.DbgSA0, obj8));
+            astToStringResult1 = markup_MarkupParser.astToString(intl17.formatToParts(util.t.DbgSA0, obj8));
           }
         }
         return astToStringResult1;
       } else if (constants.CHANNEL_NAME_CHANGE === type) {
         const intl16 = util.intl;
-        const obj58 = MarkupParser;
+        const obj58 = markup_MarkupParser;
         const t = util.t;
         const obj9 = { username: name, usernameOnClick, channelName: mentions.content };
         return obj58.astToString(intl16.formatToParts(isForumPost.isForumPost() ? t["qa0e/n"] : t.XCPMEG, obj9));
       } else if (constants.CHANNEL_ICON_CHANGE === type) {
         const intl15 = util.intl;
         const obj10 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl15.formatToParts(util.t.wypJZ0, obj10));
+        return markup_MarkupParser.astToString(intl15.formatToParts(util.t.wypJZ0, obj10));
       } else if (constants.CHANNEL_PINNED_MESSAGE === type) {
         const intl14 = util.intl;
         const obj11 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl14.formatToParts(util.t["/M60j0"], obj11));
+        return markup_MarkupParser.astToString(intl14.formatToParts(util.t["/M60j0"], obj11));
       } else if (constants.USER_JOIN === type) {
         const author = mentions.author;
         let bot;
@@ -132,21 +132,23 @@ export default {
           if (null == name1) {
             const intl13 = util.intl;
             const obj12 = { appName: name, appNameOnClick: usernameOnClick };
-            let astToStringResult2 = MarkupParser.astToString(intl13.formatToParts(util.t.EAkHd2, obj12));
+            let astToStringResult2 = markup_MarkupParser.astToString(intl13.formatToParts(util.t.EAkHd2, obj12));
           } else {
             const intl12 = util.intl;
             const obj13 = { username: name1, usernameOnClick, appName: name, appNameOnClick: usernameOnClick };
-            astToStringResult2 = MarkupParser.astToString(intl12.formatToParts(util.t["x6G/Rr"], obj13));
+            astToStringResult2 = markup_MarkupParser.astToString(intl12.formatToParts(util.t["x6G/Rr"], obj13));
           }
         } else {
           const intl11 = util.intl;
           const obj14 = { username: name, usernameOnClick };
-          return MarkupParser.astToString(intl11.formatToParts(getSystemMessageUserJoinMobile(mentions.id), obj14));
+          return markup_MarkupParser.astToString(
+            intl11.formatToParts(getSystemMessageUserJoinMobile(mentions.id), obj14),
+          );
         }
       } else if (constants.GUILD_BOOST === type) {
         const intl10 = util.intl;
         const obj15 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl10.formatToParts(util.t.ihxM9x, obj15));
+        return markup_MarkupParser.astToString(intl10.formatToParts(util.t.ihxM9x, obj15));
       } else {
         if (constants.GUILD_BOOST_TIER_1 !== type) {
           if (constants.GUILD_BOOST_TIER_2 !== type) {
@@ -164,7 +166,7 @@ export default {
               } else if (constants.ROLE_SUBSCRIPTION_PURCHASE === type) {
                 let astToStringResult3 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  const obj35 = MarkupParser;
+                  const obj35 = markup_MarkupParser;
                   const obj19 = {
                     username: name,
                     guildId: isForumPost.guild_id,
@@ -190,7 +192,7 @@ export default {
                   }
                   astToStringResult4 = null;
                   if (null != product_name) {
-                    const obj32 = MarkupParser;
+                    const obj32 = markup_MarkupParser;
                     const obj24 = {
                       username: name,
                       productName: mentions.purchase_notification.guild_product_purchase.product_name,
@@ -207,7 +209,7 @@ export default {
                 } else {
                   const obj27 = useMessageAuthor;
                   const messageAuthor = obj27.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions));
-                  const obj29 = MarkupParser;
+                  const obj29 = markup_MarkupParser;
                   const obj31 = { application: mentions.application, username: messageAuthor.nick };
                   return obj29.astToString(
                     ApplicationSubscriptionSystemMessageUtils.getApplicationSubscriptionSystemMessageASTContent(obj31),
@@ -216,7 +218,7 @@ export default {
               } else if (constants.PRIVATE_CHANNEL_INTEGRATION_ADDED === type) {
                 let astToStringResult5 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  const obj22 = MarkupParser;
+                  const obj22 = markup_MarkupParser;
                   const obj34 = { application: mentions.application, username: null };
                   const obj23 = PrivateChannelIntegrationSystemMessageUtils;
                   const obj25 = useMessageAuthor;
@@ -229,7 +231,7 @@ export default {
               } else if (constants.PRIVATE_CHANNEL_INTEGRATION_REMOVED === type) {
                 let astToStringResult6 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  const obj17 = MarkupParser;
+                  const obj17 = markup_MarkupParser;
                   const obj37 = { application: mentions.application, username: null };
                   const obj18 = PrivateChannelIntegrationSystemMessageUtils;
                   const obj20 = useMessageAuthor;
@@ -280,20 +282,22 @@ export default {
                       ) {
                         const intl5 = util.intl;
                         const obj38 = { guildName: guild.name };
-                        astToStringResult7 = MarkupParser.astToString(intl5.formatToParts(util.t.wt3ZUM, obj38));
-                        const tmp35Result = MarkupParser;
+                        astToStringResult7 = markup_MarkupParser.astToString(intl5.formatToParts(util.t.wt3ZUM, obj38));
+                        const tmp35Result = markup_MarkupParser;
                       } else if (
                         AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value
                       ) {
                         const intl4 = util.intl;
                         const obj40 = { guildName: guild.name };
-                        astToStringResult7 = MarkupParser.astToString(intl4.formatToParts(util.t.AkqI0g, obj40));
-                        const tmp35Result3 = MarkupParser;
+                        astToStringResult7 = markup_MarkupParser.astToString(intl4.formatToParts(util.t.AkqI0g, obj40));
+                        const tmp35Result3 = markup_MarkupParser;
                       } else {
                         const intl3 = util.intl;
                         const obj42 = { guildName: guild.name };
-                        astToStringResult7 = MarkupParser.astToString(intl3.formatToParts(util.t["a+lJKl"], obj42));
-                        const tmp35Result4 = MarkupParser;
+                        astToStringResult7 = markup_MarkupParser.astToString(
+                          intl3.formatToParts(util.t["a+lJKl"], obj42),
+                        );
+                        const tmp35Result4 = markup_MarkupParser;
                       }
                     }
                   }
@@ -318,7 +322,7 @@ export default {
                       str = date.toLocaleString(util.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
                     }
                     obj44.time = str;
-                    astToStringResult8 = MarkupParser.astToString(intl2.formatToParts(util.t.iOuWPk, obj44));
+                    astToStringResult8 = markup_MarkupParser.astToString(intl2.formatToParts(util.t.iOuWPk, obj44));
                   }
                   tmp18 = astToStringResult8;
                 }
@@ -332,7 +336,7 @@ export default {
                   if (null != guild2) {
                     const intl = util.intl;
                     const obj46 = { username: name, guildName: guild2.name };
-                    astToStringResult9 = MarkupParser.astToString(intl.formatToParts(util.t.axmbpm, obj46));
+                    astToStringResult9 = markup_MarkupParser.astToString(intl.formatToParts(util.t.axmbpm, obj46));
                   }
                   tmp12 = astToStringResult9;
                 }
@@ -350,13 +354,13 @@ export default {
           if (null != GuildStore.getGuild(channel3.getGuildId())) {
             const intl8 = util.intl;
             const obj48 = { username: name, usernameOnClick };
-            let astToStringResult10 = MarkupParser.astToString(intl8.formatToParts(util.t.ihxM9x, obj48));
+            let astToStringResult10 = markup_MarkupParser.astToString(intl8.formatToParts(util.t.ihxM9x, obj48));
           }
           return astToStringResult10;
         }
         const intl9 = util.intl;
         const obj49 = { username: name, usernameOnClick };
-        astToStringResult10 = MarkupParser.astToString(intl9.formatToParts(util.t.ihxM9x, obj49));
+        astToStringResult10 = markup_MarkupParser.astToString(intl9.formatToParts(util.t.ihxM9x, obj49));
       }
     } else if (typeof first === "object") {
       first = UserStore.getUser(first.id);
@@ -410,11 +414,11 @@ export default {
     if (null == actorNick) {
       const intl2 = util.intl;
       const obj2 = { appName: authorNick, appNameOnClick };
-      let astToStringResult = MarkupParser.astToString(intl2.formatToParts(util.t.EAkHd2, obj2));
+      let astToStringResult = markup_MarkupParser.astToString(intl2.formatToParts(util.t.EAkHd2, obj2));
     } else {
       const intl = util.intl;
       const obj4 = { username: actorNick, usernameOnClick: appNameOnClick, appName: authorNick, appNameOnClick };
-      astToStringResult = MarkupParser.astToString(intl.formatToParts(util.t["x6G/Rr"], obj4));
+      astToStringResult = markup_MarkupParser.astToString(intl.formatToParts(util.t["x6G/Rr"], obj4));
     }
     return astToStringResult;
   },

@@ -8,6 +8,7 @@ const zustandStore = ZustandStore.createZustandStore(() => ({
   subsection: constants.USER_PROFILE,
   scrollPosition: null,
   pendingCustomizeBadgesSheet: false,
+  editingTab: "main",
 }));
 const result = size.fileFinishedImporting("modules/profile_customization/ProfileCustomizationNavigationStore.tsx");
 

@@ -10,9 +10,9 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const rect = { size: 240, top: nativeDefault.space.PX_16, left: -20 };
-const CheckpointStatNumber = fn(14479);
+const CheckpointStatNumber = fn(13344);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { year: null };
 const rect1 = { position: "absolute", left: 178 - checkpointStatNumberWidth / 2, top: 22.5, transform: null };
 let items = [{ rotate: "90deg" }];
@@ -40,8 +40,8 @@ export default function CheckpointRecapCard(character) {
     bound = Math.min(Math.max(maxHeight / 268, 0.75), maxScale);
   }
   const tmp = closure_7();
-  const characterCardColorPalette = character(6391).getCharacterCardColorPalette(character);
-  const obj2 = character(6391);
+  const characterCardColorPalette = character(6399).getCharacterCardColorPalette(character);
+  const obj2 = character(6399);
   items = [character];
   const memo = noop.useMemo(() => {
     let checkpointCharacterAccessibilityLabel = null;
@@ -62,7 +62,7 @@ export default function CheckpointRecapCard(character) {
     children: null,
   };
   const obj5 = { style: tmp.year, children: null };
-  const obj3 = character(6391);
+  const obj3 = character(6399);
   obj5.children = jsx(CheckpointStatNumberDefault, {
     value: 2026,
     color: obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor,
@@ -95,3 +95,5 @@ export default function CheckpointRecapCard(character) {
   }
   return <View {...obj7} />;
 }
+export const CARD_WIDTH = 200;
+export const CARD_HEIGHT = 268;

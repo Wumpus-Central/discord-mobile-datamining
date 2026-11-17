@@ -5,7 +5,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-fn(7071).AutocompleterResultTypes;
+fn(7079).AutocompleterResultTypes;
 const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");

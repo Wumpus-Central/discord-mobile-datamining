@@ -5,7 +5,7 @@ import SharedCaptchaUtils from "../../modules/captcha/SharedCaptchaUtils.tsx";
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import siteKeyDefault from "../../../_runtime/20152_siteKey.js";
+import siteKeyDefault from "../../../_runtime/20200_siteKey.js";
 import NativeCaptchaManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeCaptchaManagerModule.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
@@ -131,7 +131,7 @@ export default {
         captcha_flow_key: v4Result,
       });
       let obj3 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
-      const obj5 = { name: self(6766).MetricEvents.CAPTCHA_EVENT, tags: null };
+      const obj5 = { name: self(6774).MetricEvents.CAPTCHA_EVENT, tags: null };
       items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
       obj5.tags = items;
       MonitoringAgentDefault.increment(obj5);

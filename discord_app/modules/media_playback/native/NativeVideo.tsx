@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 0;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { container: { overflow: "hidden" }, content: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.content = {};
@@ -127,7 +127,7 @@ export default function NativeVideo(ref) {
           num = 100;
         }
         if (null != ref.current) {
-          const Commands = merged(9735).Commands;
+          const Commands = merged(9748).Commands;
           Commands.seek(tmp.current, arg0, num);
         }
       },
@@ -149,7 +149,7 @@ export default function NativeVideo(ref) {
           tmp3 = null != ref.current;
         }
         if (tmp3) {
-          const Commands = merged(9735).Commands;
+          const Commands = merged(9748).Commands;
           Commands.reset(ref.current);
         }
         dependencyMap((arg0) => {
@@ -367,7 +367,7 @@ export default function NativeVideo(ref) {
       }
     }
   };
-  const items2 = [ref(ref(9735), obj6)];
+  const items2 = [ref(ref(9748), obj6)];
   let tmp25Result = null != obj2.poster && tmp20 !== id;
   if (tmp25Result) {
     let obj8 = { accessible: false, style: tmp2.content, source: null, resizeMode: null };
@@ -382,8 +382,8 @@ export default function NativeVideo(ref) {
       str2 = str4;
     }
     obj8.resizeMode = str2;
-    tmp25Result = tmp25(tmp26(6010), obj8);
-    const tmp26Result = tmp26(6010);
+    tmp25Result = tmp25(tmp26(6014), obj8);
+    const tmp26Result = tmp26(6014);
   }
   items2[1] = tmp25Result;
   obj5.children = items2;

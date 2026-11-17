@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let StreamVolumeMovedStore = fn(15763);
+let StreamVolumeMovedStore = fn(15797);
 ({
   clearScrollToStreamVolume: closure_6,
   hideStreamVolumeCoachmark: metroImportDefault,

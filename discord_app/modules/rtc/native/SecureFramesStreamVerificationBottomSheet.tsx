@@ -1,6 +1,6 @@
 // discord_app/modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx
-import showShareActionSheet from "../../action_sheet/native/showShareActionSheet.tsx";
 import SecureFramesTracking from "../SecureFramesTracking.tsx";
+import showShareActionSheet from "../../action_sheet/native/showShareActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
@@ -36,8 +36,8 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   obj2.subtitle = intl2.string(channelId(1113).t.qODBkW);
   const intl3 = channelId(1113).intl;
   const obj3 = { helpArticle: null };
-  const tmp3 = streamKey(10643);
-  obj3.helpArticle = channelId(10627).getSecureFramesHelpdeskArticle();
+  const tmp3 = streamKey(10352);
+  obj3.helpArticle = channelId(10327).getSecureFramesHelpdeskArticle();
   obj2.footer = intl3.format(channelId(1113).t["H3+ktv"], obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;

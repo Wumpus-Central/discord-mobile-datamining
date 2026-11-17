@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/premium/gifting/native/openGi
 
 export default function openGiftingBadgeInfoActionSheet() {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(11677, dependencyMap.paths),
+    asyncRequireImpl(10102, dependencyMap.paths),
     "GiftingBadgeInfoActionSheet",
   );
 }

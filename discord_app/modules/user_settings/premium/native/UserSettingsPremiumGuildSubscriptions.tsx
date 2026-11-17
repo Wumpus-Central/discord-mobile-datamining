@@ -30,11 +30,11 @@ const Constants = fn(1072);
 const FractionalPremiumStates = fn(1390).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(6951).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(6959).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -152,7 +152,7 @@ prototype["render"] = function render() {
   obj3.children = items;
   return colors(hasOwnProperty, obj3);
 };
-UserSettingsPremiumGuildSubscriptions.contextType = fn(5367).ThemeContext;
+UserSettingsPremiumGuildSubscriptions.contextType = fn(5371).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
@@ -176,12 +176,12 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     flag = true;
   }
   let obj = require("useSubscriptionPlansLoaded");
-  ({ fractionalState: c2, endsAt } = flag(8529)({ forceFetch: true }));
-  const tmp3 = flag(8529)({ forceFetch: true });
+  ({ fractionalState: c2, endsAt } = flag(8540)({ forceFetch: true }));
+  const tmp3 = flag(8540)({ forceFetch: true });
   isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
   const tmpResult = require("ReverseTrialUtils");
-  fpDurationText = flag(15328)(endsAt, tmp(15328).CountDownMessageTypes.LONG_TIME_LEFT);
-  const tmp4 = flag(15328);
+  fpDurationText = flag(15362)(endsAt, tmp(15362).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(15362);
   items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {

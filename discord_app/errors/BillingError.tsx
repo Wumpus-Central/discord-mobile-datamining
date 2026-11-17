@@ -93,6 +93,8 @@ const ErrorCodes = {
   [100153]: "BILLING_APPLE_STORE_COUNTRY_MISMATCH",
   BILLING_CLAIM_IN_GAME_BEFORE_REPURCHASE: 100155,
   [100155]: "BILLING_CLAIM_IN_GAME_BEFORE_REPURCHASE",
+  BILLING_PURCHASE_BLOCKED_BY_RESTRICTION: 100166,
+  [100166]: "BILLING_PURCHASE_BLOCKED_BY_RESTRICTION",
   BILLING_WALLET_BALANCE_CHANGED: 100167,
   [100167]: "BILLING_WALLET_BALANCE_CHANGED",
   VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE: 590001,
@@ -159,7 +161,12 @@ class BillingError extends tmp4 {
     tmp1 = new tmp(global, fn, tmp6, tmp5, tmp4, tmp3, tmp2, new.target);
     tmp1.paymentId = null;
     tmp8 = closure_2;
-    if (tmp1.code === closure_2.NEGATIVE_INVOICE_AMOUNT) {
+    if (tmp1.code === closure_2.BILLING_PURCHASE_BLOCKED_BY_RESTRICTION) {
+      tmp42 = closure_0;
+      tmp43 = closure_1;
+      intl17 = closure_0(closure_1[2]).intl;
+      tmp1.message = intl17.string(closure_0(closure_1[2]).t.ngZimk);
+    } else if (tmp1.code === tmp8.NEGATIVE_INVOICE_AMOUNT) {
       tmp40 = closure_0;
       tmp41 = closure_1;
       intl16 = closure_0(closure_1[2]).intl;
@@ -247,21 +254,21 @@ class BillingError extends tmp4 {
         }
       }
     }
-    for (const key10213 in tmp1.fields) {
-      tmp46 = key10213;
-      tmp47 = closure_3;
-      tmp43 = closure_3[key10213];
-      if (tmp43) {
+    for (const key10225 in tmp1.fields) {
+      tmp48 = key10225;
+      tmp49 = closure_3;
+      tmp45 = closure_3[key10225];
+      if (tmp45) {
       } else {
-        tmp42 = closure_4;
-        tmp43 = closure_4[key10213];
+        tmp44 = closure_4;
+        tmp45 = closure_4[key10225];
       }
-      if (null == tmp43) {
+      if (null == tmp45) {
         continue;
       } else {
         fields = tmp1.fields;
         delete tmp3[tmp6];
-        tmp1.fields[tmp43] = tmp1.fields[key10213];
+        tmp1.fields[tmp45] = tmp1.fields[key10225];
         continue;
       }
       continue;
@@ -270,15 +277,15 @@ class BillingError extends tmp4 {
     if (typeof global !== "string") {
       body = global.body;
     }
-    tmp45 = null != body;
-    if (tmp45) {
+    tmp47 = null != body;
+    if (tmp47) {
       str = "payment_id";
-      tmp45 = "payment_id" in body;
+      tmp47 = "payment_id" in body;
     }
-    if (tmp45) {
-      tmp45 = typeof body.payment_id === "string";
+    if (tmp47) {
+      tmp47 = typeof body.payment_id === "string";
     }
-    if (tmp45) {
+    if (tmp47) {
       tmp1.paymentId = body.payment_id;
     }
     return tmp1;

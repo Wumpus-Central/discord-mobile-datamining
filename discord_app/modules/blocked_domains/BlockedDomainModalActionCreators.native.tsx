@@ -7,6 +7,6 @@ const result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomain
 
 export default {
   show(url) {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15950, dependencyMap.paths), "blocked-domain", { url });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15988, dependencyMap.paths), "blocked-domain", { url });
   },
 };

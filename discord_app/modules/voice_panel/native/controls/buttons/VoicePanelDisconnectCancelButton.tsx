@@ -5,9 +5,9 @@ import StreamActionCreators from "../../../../../actions/StreamActionCreators.ts
 import StageChannelActionCreatorExtras from "../../../../stage_channels/StageChannelActionCreatorExtras.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../../actions/SelectedChannelActionCreators.tsx";
 import ChannelRTCParticipants from "../../../../calls/ChannelRTCParticipants.tsx";
-import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
 import leaveEmbeddedActivity from "../../../../activities/leaveEmbeddedActivity.tsx";
 import shouldShowEndStageModalDefault from "../../../../stage_channels/shouldShowEndStageModal.tsx";
+import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
 import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -19,10 +19,10 @@ import VoicePanelStore from "../../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11985).VoicePanelModes;
+const VoicePanelModes = fn(12428).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT },
   icon: null,
@@ -161,11 +161,11 @@ export default function DisconnectCancelButton(props) {
     }
   }, items4);
   if (first === constants.ACTIVITY) {
-    PhoneHangUpIcon = tmp8(12295).DoorExitIcon;
+    PhoneHangUpIcon = tmp8(11046).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(20056).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(20143).ScreenXIcon;
   } else {
-    PhoneHangUpIcon = tmp8(9104).PhoneHangUpIcon;
+    PhoneHangUpIcon = tmp8(9115).PhoneHangUpIcon;
   }
   const element = {
     onPress: callback1,

@@ -4,8 +4,8 @@ import UnicodeEmojisDefault from "../../../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../../../utils/EmojiUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles.tsx";
 import EmojiActionCreators from "../../../../actions/EmojiActionCreators.tsx";
+import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
 
@@ -32,7 +32,7 @@ function Emoji(surrogate) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   emojiSurrogate: { lineHeight: 48, fontSize: 40, margin: 8 },
   ctaContainer: { paddingTop: nativeDefault.space.PX_4 },

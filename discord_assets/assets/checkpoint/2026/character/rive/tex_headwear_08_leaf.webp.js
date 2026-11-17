@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/checkpoint/2026/character/rive/tex_headwear_08_leaf.webp.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/ab8aa59e898f3a281f81a8d6703355c32debba8a5879719121141baa3dc8aca9.webp";
-export const metadata = { fileBytes: 15276 };
+export default "https://cdn.discordapp.com/assets/content/0126e4fc4942fd87a5d7324105a6a1aa21a343a78388539d088ec73ad7364e45.webp";
+export const metadata = { fileBytes: 44786 };

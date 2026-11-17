@@ -173,21 +173,21 @@ function ClientClientInfoActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6919).ClipboardListIcon,
+  IconComponent: fn(6927).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(
       Promise.resolve({ default: ClientClientInfoActionSheet }),
       "ClientClientInfoActionSheet",
     );
   },
-  usePredicate: fn(5131).DeveloperMode.useSetting,
+  usePredicate: fn(5135).DeveloperMode.useSetting,
   withArrow: true,
 });
 const size = fn(2);

@@ -2,8 +2,8 @@
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import useGetOrFetchApplications from "../../../../../applications/useGetOrFetchApplications.tsx";
-import useDefaultAppLauncherWidth from "../../../hooks/useDefaultAppLauncherWidth.tsx";
 import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
+import useDefaultAppLauncherWidth from "../../../hooks/useDefaultAppLauncherWidth.tsx";
 import getPreviewVideoAssetUrlDefault from "../../../../../activities/utils/getPreviewVideoAssetUrl.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../../a11y/AccessibilityStore.tsx";
@@ -11,7 +11,7 @@ import AccessibilityStore from "../../../../../a11y/AccessibilityStore.tsx";
 require = fn;
 const DEFAULT_CONTENT_PADDING = fn(1501).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_6 = createStyles.createStyles({ mediaBackground: { backgroundColor: "black" } });
 let size = fn(2);
 const result = size.fileFinishedImporting(

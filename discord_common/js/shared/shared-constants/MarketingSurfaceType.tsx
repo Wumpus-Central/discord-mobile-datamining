@@ -68,6 +68,8 @@ const obj = {
   [36]: "ANNOUNCEMENT_MODAL_VIDEO_LED",
   ANNOUNCEMENT_MODAL_PANEL: 37,
   [37]: "ANNOUNCEMENT_MODAL_PANEL",
+  NITRO_HOME_SECTION_HEADER: 38,
+  [38]: "NITRO_HOME_SECTION_HEADER",
 };
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx");
 
@@ -106,6 +108,7 @@ export const MarketingSurfaceTypeByKind = {
   gameExitPanel: obj.GAME_EXIT_PANEL,
   announcementModalVideoLed: obj.ANNOUNCEMENT_MODAL_VIDEO_LED,
   announcementModalPanel: obj.ANNOUNCEMENT_MODAL_PANEL,
+  nitroHomeSectionHeader: obj.NITRO_HOME_SECTION_HEADER,
 };
 export const MarketingSurfaceKindByType = {
   [obj.ANNOUNCEMENT_MODAL_VARIANT_1]: "announcementModalVariant1",
@@ -141,4 +144,5 @@ export const MarketingSurfaceKindByType = {
   [obj.GAME_EXIT_PANEL]: "gameExitPanel",
   [obj.ANNOUNCEMENT_MODAL_VIDEO_LED]: "announcementModalVideoLed",
   [obj.ANNOUNCEMENT_MODAL_PANEL]: "announcementModalPanel",
+  [obj.NITRO_HOME_SECTION_HEADER]: "nitroHomeSectionHeader",
 };

@@ -598,7 +598,7 @@ function UnconnectedYouScreen(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(19148);
+const YouConstants = fn(19193);
 ({
   YOU_ACTION_SHEET_TOP_INSET: closure_12,
   YOU_AVATAR_SIZE: map1,
@@ -607,14 +607,14 @@ const YouConstants = fn(19148);
 } = YouConstants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 let closure_17 = fn(1074).CollectiblesMobileShopScreen;
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
-const Constants = fn(7962);
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const Constants = fn(7972);
 ({ BANNER_ASPECT_RATIO: closure_19, UserProfileThemeTypes: closure_20 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 let module_1655 = module_1655_mod;
 const VisualEffectViewThemed = module_1655.createAnimatedComponent(VisualEffectViewThemedDefault);
-let createStyles = fn(5306);
+let createStyles = fn(5310);
 let closure_24 = createStyles.createStyles(() => {
   let xl;
   if (obj.isIOS()) {
@@ -659,7 +659,7 @@ let closure_24 = createStyles.createStyles(() => {
   obj3.content = { flex: 1, flexGrow: 1 };
   return obj3;
 });
-createStyles = fn(5306);
+createStyles = fn(5310);
 let closure_25 = createStyles.createStyles(() => {
   const obj = {
     backButton: {
@@ -737,9 +737,8 @@ export default function YouScreen(initialTab) {
     obj2.screen = constants2.FEATURED_PAGE;
     const result = stateFromStores(memo[71]).openCollectiblesShopMobile(obj2);
   }, []);
-  const callback3 = noop.useCallback((autoFocusElement) => {
-    const obj2 = { screen: constants.PROFILE_CUSTOMIZATION, params: { autoFocusElement } };
-    stateFromStores(memo[70]).openUserSettings(obj2);
+  const callback3 = noop.useCallback((params) => {
+    stateFromStores(memo[70]).openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION, params });
   }, []);
   const callback4 = noop.useCallback(() => {
     const obj2 = { analyticsLocations: null };

@@ -13,7 +13,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(12024);
+const Constants = fn(12460);
 ({
   MODAL_LOCATION_CONTEXT_MOBILE: closure_10,
   NOFILTR_URL: closure_11,
@@ -22,7 +22,7 @@ const Constants = fn(12024);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   container: { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 },
   helplineGroup: null,
@@ -108,18 +108,18 @@ export default function TakeActionButtons(senderId) {
               v1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: tmp4(12063).submitReportForInappropriateConversationSafetyAlert(
+                value: tmp4(10794).submitReportForInappropriateConversationSafetyAlert(
                   lastChannelMessage,
                   () => {
                     dependencyMap(true);
                     const obj2 = { text: null, variant: "success" };
                     const intl = closure_0(1113).intl;
                     obj2.text = intl.string(closure_0(1113).t.gn2c6X);
-                    c1(6005).open(closure_2_13, obj2);
+                    c1(6009).open(closure_2_13, obj2);
                   },
                   () => {
                     const intl = closure_1_0(1113).intl;
-                    closure_1_0(6004).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
+                    closure_1_0(6008).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
                   },
                 ),
                 done: false,
@@ -133,9 +133,9 @@ export default function TakeActionButtons(senderId) {
             throw value;
           } else if (arg0 !== 2) {
             closure_128_5(false);
-            const result = v1(6905).showReportSuccessToast(closure_128_0, closure_128_1);
-            closure_128_3(tmp4(12038).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-            const obj = v1(6905);
+            const result = v1(6913).showReportSuccessToast(closure_128_0, closure_128_1);
+            closure_128_3(tmp4(12474).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+            const obj = v1(6913);
           }
           dependencyMap = 3;
           const obj6 = { value, done: true };

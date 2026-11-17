@@ -1,8 +1,8 @@
 // discord_app/modules/guild_space/editorUtils.tsx
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import V6OrEarlierAPIError from "../../errors/index.tsx";
-import guildSpaceWidgetLayout from "guildSpaceWidgetLayout.tsx";
 import GuildSpaceTypes from "GuildSpaceTypes.tsx";
+import guildSpaceWidgetLayout from "guildSpaceWidgetLayout.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -35,9 +35,9 @@ function createDraftWidget(type, name, locked) {
 }
 let c3 = "draft:";
 let closure_4 = 0;
-let items = [fn(20447).GuildSpaceWidgetType.LEADERBOARD, fn(20447).GuildSpaceWidgetType.WHITEBOARD];
+let items = [fn(7251).GuildSpaceWidgetType.LEADERBOARD, fn(7251).GuildSpaceWidgetType.WHITEBOARD];
 const items1 = [items];
-const items2 = [fn(20447).GuildSpaceWidgetType.POPULAR_GAMES];
+const items2 = [fn(7251).GuildSpaceWidgetType.POPULAR_GAMES];
 items1[1] = items2;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_space/editorUtils.tsx");

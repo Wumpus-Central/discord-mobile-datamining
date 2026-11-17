@@ -4,12 +4,21 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 
 function reset() {
   c1 = null;
+  c2 = false;
 }
 let categories = {};
 let c1 = null;
+let c2 = false;
 const Store = initializeDefault.Store;
 class EmailSettingsStore extends Store {}
-EmailSettingsStore.prototype["getEmailSettings"] = function getEmailSettings() {
+const prototype = EmailSettingsStore.prototype;
+Object.defineProperty(prototype, "isFetching", {
+  get: function isFetching() {
+    return c2;
+  },
+  set: undefined,
+});
+prototype["getEmailSettings"] = function getEmailSettings() {
   categories = { categories, initialized };
   return categories;
 };
@@ -17,8 +26,15 @@ EmailSettingsStore.displayName = "EmailSettingsStore";
 categories = {
   CONNECTION_OPEN: reset,
   LOGOUT: reset,
+  EMAIL_SETTINGS_FETCH_START() {
+    c2 = true;
+  },
   EMAIL_SETTINGS_FETCH_SUCCESS: function handleFetchSuccess(settings) {
     ({ categories: obj, initialized: c1 } = settings.settings);
+    c2 = false;
+  },
+  EMAIL_SETTINGS_FETCH_FAILURE() {
+    c2 = false;
   },
   EMAIL_SETTINGS_UPDATE_SUCCESS: function handleUpdateSuccess(settings) {},
   EMAIL_SETTINGS_UPDATE: function handleUpdate(updates) {

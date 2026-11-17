@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
-import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import EmbeddedActivityViewDefault from "../../native/EmbeddedActivityView.tsx";
+import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import ActivityPanelStateContextDefault from "ActivityPanelStateContext.tsx";
 import useMorphablePanelGestureDefault from "../../../panels/morphable/native/useMorphablePanelGesture.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -373,7 +373,7 @@ class BaseActivityPanelPIPView {
   }
 }
 const View = fn(17).View;
-const ActivityPanelConstants = fn(5949);
+const ActivityPanelConstants = fn(5953);
 const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({
   ActivityPanelModes: closure_10,
@@ -381,15 +381,15 @@ const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_12,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: map1,
 } = ActivityPanelConstants);
-let closure_14 = fn(19780).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_14 = fn(19825).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 let ThemeTypes = fn(1072).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11986).PIP_WINDOW_OFFSET;
-const ActivityLayoutMode = fn(12706).ActivityLayoutMode;
+const PIP_WINDOW_OFFSET = fn(12429).PIP_WINDOW_OFFSET;
+const ActivityLayoutMode = fn(11452).ActivityLayoutMode;
 let jsx = fn(21).jsx;
 let closure_19 = { duration: 300 };
 const native = fn(1187);
 const boxShadowStyle = native.generateBoxShadowStyle(fn(1187).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { wrapper: null, mask: null };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);

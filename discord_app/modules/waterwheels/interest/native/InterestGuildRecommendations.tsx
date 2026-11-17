@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
-import _modDef2569 from "../../WaterwheelsUntranslated.messages.js";
+import _modDef2569 from "../../Waterwheels.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
@@ -104,9 +104,9 @@ const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const NavigatorHeader = fn(7493);
+const NavigatorHeader = fn(7503);
 const headerBackButton = NavigatorHeader.getHeaderBackButton();
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_13 = createStyles.createStyles(() => {
   let PX_64 = arg0;
   if (arg0 === undefined) {
@@ -276,10 +276,10 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
     onJoinResult: View,
   } = guild);
   const tmp = closure_13();
-  const token = guild(5892).useToken(nativeDefault.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
-  let obj = guild(5892);
-  const token1 = guild(5892).useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const obj2 = guild(5892);
+  const token = guild(5896).useToken(nativeDefault.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
+  let obj = guild(5896);
+  const token1 = guild(5896).useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const obj2 = guild(5896);
   const obj5 = {
     onLayout(arg0) {
       return dependencyMap(importDefault + 1, arg0);
@@ -324,14 +324,14 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   obj9.style = items;
   const obj11 = { icon: guildIconURL, value: guild.name, size: null, selected: false, style: null };
   const tmp11 = ClipViewDefault;
-  obj11.size = guild(7720).GuildIconSizes.NORMAL;
+  obj11.size = guild(7730).GuildIconSizes.NORMAL;
   obj11.style = tmp.guildIconImage;
   obj9.children = closure_9(GuildIconDefault, obj11);
   const items1 = [closure_9(tmp11, obj9)];
   const obj12 = { style: tmp.details, spacing: nativeDefault.space.PX_0, children: null };
   const obj13 = { style: tmp.name, children: null };
   const items2 = [
-    closure_9(guild(5919).Text, {
+    closure_9(guild(5923).Text, {
       style: tmp.nameText,
       variant: "body-md/semibold",
       color: "text-strong",
@@ -354,13 +354,13 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
     const _Set = Set;
     const set = new Set(guild.features);
     obj16.features = set;
-    obj15.guild = tmp2(5169).constructFromPartialGuildRecord(obj16);
+    obj15.guild = tmp2(5173).constructFromPartialGuildRecord(obj16);
     obj15.style = tmp.badge;
     hasItem = closure_9(tmp4Result, obj15);
-    const tmp2Result = tmp2(5169);
+    const tmp2Result = tmp2(5173);
   }
   items2[1] = hasItem;
-  items2[2] = closure_9(guild(7963).ChevronSmallRightIcon, { size: "xxs", accessible: false });
+  items2[2] = closure_9(guild(7973).ChevronSmallRightIcon, { size: "xxs", accessible: false });
   obj13.children = items2;
   const items3 = [closure_10(View, obj13)];
   const obj18 = { style: tmp.online, children: null };
@@ -368,11 +368,11 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   const obj20 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl2 = tmp2(1113).intl;
   obj20.children = intl2.format(guild(1113).t["LC+S+m"], { membersOnline: guild.approximate_presence_count });
-  items4[1] = closure_9(guild(5919).Text, obj20);
+  items4[1] = closure_9(guild(5923).Text, obj20);
   obj18.children = items4;
   items3[1] = closure_10(View, obj18);
   obj12.children = items3;
-  items1[1] = closure_10(guild(6327).Stack, obj12);
+  items1[1] = closure_10(guild(6335).Stack, obj12);
   obj8.children = items1;
   const items5 = [closure_10(View, obj8), closure_9(View, { style: tmp.joinSpace })];
   obj7.children = items5;
@@ -383,11 +383,11 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   }
   if (tmp10Result) {
     const obj23 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 2, children: guild.description };
-    tmp10Result = closure_9(tmp2(5919).Text, obj23);
+    tmp10Result = closure_9(tmp2(5923).Text, obj23);
   }
   items6[1] = tmp10Result;
   obj6.children = items6;
-  const items7 = [closure_10(guild(7428).PressableHighlight, obj6)];
+  const items7 = [closure_10(guild(7438).PressableHighlight, obj6)];
   const obj24 = {
     style: tmp.joinTarget,
     children: closure_9(InterestGuildJoinButtonDefault, {
@@ -527,7 +527,7 @@ export default function InterestGuildRecommendations(analyticsContext) {
   const items6 = [ref(View, obj6), ,];
   const obj8 = { title: null, scrollY: null };
   const intl2 = tmp8(gameIds[10]).intl;
-  obj8.title = intl2.string(require("../../WaterwheelsUntranslated.messages.js")["mdhU/Q"]);
+  obj8.title = intl2.string(require("../../Waterwheels.messages.js")["mdhU/Q"]);
   obj8.scrollY = scrollY;
   items6[1] = ref(analyticsContext(gameIds[27]).InterestCompactTitle, obj8);
   const obj9 = {
@@ -585,7 +585,7 @@ export default function InterestGuildRecommendations(analyticsContext) {
   const obj13 = { style: tmp6.intro, children: null };
   const obj14 = { variant: "heading-xl/semibold", color: "text-strong", children: null };
   const intl4 = tmp8(gameIds[10]).intl;
-  obj14.children = intl4.string(require("../../WaterwheelsUntranslated.messages.js").TQdfcH);
+  obj14.children = intl4.string(require("../../Waterwheels.messages.js").TQdfcH);
   const items8 = [ref(analyticsContext(gameIds[9]).Heading, obj14)];
   const obj15 = {
     variant: "body-sm/normal",
@@ -596,7 +596,7 @@ export default function InterestGuildRecommendations(analyticsContext) {
     children: null,
   };
   const intl5 = tmp8(gameIds[10]).intl;
-  obj15.children = intl5.string(require("../../WaterwheelsUntranslated.messages.js")["G++b7J"]);
+  obj15.children = intl5.string(require("../../Waterwheels.messages.js")["G++b7J"]);
   items8[1] = ref(analyticsContext(gameIds[9]).Text, obj15);
   obj13.children = items8;
   const items9 = [ref2(View, obj13), , , ,];
@@ -636,11 +636,11 @@ export default function InterestGuildRecommendations(analyticsContext) {
     const obj19 = { style: tmp6.empty, children: null };
     const obj20 = { variant: "body-lg/normal", color: "text-muted", style: tmp6.centered, children: null };
     const intl6 = tmp8(gameIds[10]).intl;
-    obj20.children = intl6.string(require("../../WaterwheelsUntranslated.messages.js").A3YsGV);
+    obj20.children = intl6.string(require("../../Waterwheels.messages.js").A3YsGV);
     const items10 = [tmp20(tmp8(gameIds[9]).Text, obj20)];
     const obj21 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl7 = tmp8(gameIds[10]).intl;
-    obj21.text = intl7.string(require("../../WaterwheelsUntranslated.messages.js").uGhymA);
+    obj21.text = intl7.string(tmp8(gameIds[10]).t["5911Lb"]);
     obj21.onPress = function handleRetry() {
       const obj2 = {};
       const merged = Object.assign(analyticsContext);

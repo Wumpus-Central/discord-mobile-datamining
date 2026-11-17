@@ -6,9 +6,9 @@ import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import UserProfileAvatarDefault from "UserProfileAvatar.tsx";
 import getRandomCustomStatusPromptDefault from "../../custom_status/utils/getRandomCustomStatusPrompt.tsx";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import BadgeManagementExperiment from "../../badges/BadgeManagementExperiment.tsx";
 import Tracking from "../../main_tabs_v2/native/tabs/you/tracking/Tracking.tsx";
 import CustomTypingIndicatorExperiment from "../../custom_typing_indicator/CustomTypingIndicatorExperiment.tsx";
+import BadgeManagementExperiment from "../../badges/BadgeManagementExperiment.tsx";
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
 import useCanOpenBadgeDirectoryFromProfile from "../../badges/native/useCanOpenBadgeDirectoryFromProfile.tsx";
 import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard.tsx";
@@ -87,92 +87,101 @@ function YouScreenActivityTabContainer(user) {
 }
 function EditSection(navigateToProfileCustomization) {
   navigateToProfileCustomization = navigateToProfileCustomization.navigateToProfileCustomization;
+  const initialEditingTab = navigateToProfileCustomization.initialEditingTab;
   ({ isProfileLoaded, visibleContent, markAsDismissed } = navigateToProfileCustomization);
-  let trackUserProfileAction;
   noop = undefined;
-  const tmp3 = markAsDismissed(trackUserProfileAction[15])();
-  const token = navigateToProfileCustomization(trackUserProfileAction[18]).useToken(
-    markAsDismissed(trackUserProfileAction[19]).colors.WHITE,
+  const tmp3 = initialEditingTab(markAsDismissed[15])();
+  const token = navigateToProfileCustomization(markAsDismissed[18]).useToken(
+    initialEditingTab(markAsDismissed[19]).colors.WHITE,
   );
-  let obj = navigateToProfileCustomization(trackUserProfileAction[18]);
-  trackUserProfileAction = navigateToProfileCustomization(trackUserProfileAction[20]).useUserProfileAnalyticsContext()
+  let obj = navigateToProfileCustomization(markAsDismissed[18]);
+  const trackUserProfileAction = navigateToProfileCustomization(markAsDismissed[20]).useUserProfileAnalyticsContext()
     .trackUserProfileAction;
   const ref = noop.useRef(null);
   const tmp7 =
     visibleContent ===
-    navigateToProfileCustomization(trackUserProfileAction[21]).DismissibleContent
+    navigateToProfileCustomization(markAsDismissed[21]).DismissibleContent
       .DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK;
-  closure_3 = tmp7;
+  noop = tmp7;
   const tmp8 =
     visibleContent ===
-    navigateToProfileCustomization(trackUserProfileAction[21]).DismissibleContent.BADGE_CUSTOMIZATION_COACHMARK;
-  noop = tmp8;
+    navigateToProfileCustomization(markAsDismissed[21]).DismissibleContent.BADGE_CUSTOMIZATION_COACHMARK;
+  closure_5 = tmp8;
   const tmp9 =
     visibleContent ===
-    navigateToProfileCustomization(trackUserProfileAction[21]).DismissibleContent
+    navigateToProfileCustomization(markAsDismissed[21]).DismissibleContent
       .CUSTOM_TYPING_INDICATOR_MOBILE_PROFILE_COACHMARK;
-  closure_5 = tmp9;
-  items = [navigateToProfileCustomization, trackUserProfileAction, tmp7, tmp8, tmp9, markAsDismissed];
+  closure_6 = tmp9;
+  items = [
+    navigateToProfileCustomization,
+    initialEditingTab,
+    trackUserProfileAction,
+    tmp7,
+    tmp8,
+    tmp9,
+    markAsDismissed,
+  ];
   const items1 = [navigateToProfileCustomization];
   const callback = noop.useCallback(() => {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
     const result = Tracking.trackYouTabEditProfilePress();
-    navigateToProfileCustomization();
-    let tmp4 = closure_3;
-    if (!closure_3) {
-      tmp4 = closure_4;
+    navigateToProfileCustomization({ initialTab: initialEditingTab });
+    let tmp4 = closure_4;
+    if (!closure_4) {
+      tmp4 = closure_5;
     }
     if (!tmp4) {
-      tmp4 = closure_5;
+      tmp4 = closure_6;
     }
     if (tmp4) {
       markAsDismissed(ContentDismissActionType.TAKE_ACTION);
     }
+    const obj2 = { initialTab: initialEditingTab };
   }, items);
   const callback1 = noop.useCallback(() => {
-    navigateToProfileCustomization(constants.BADGES);
+    navigateToProfileCustomization({ autoFocusElement: constants.BADGES });
   }, items1);
   const obj3 = { style: tmp3.primaryButtons, secondaryButton: null };
-  const obj2 = navigateToProfileCustomization(trackUserProfileAction[20]);
+  let obj2 = navigateToProfileCustomization(markAsDismissed[20]);
   const obj4 = { ref, variant: "primary", icon: null, text: null, onPress: null, accessibilityValue: null, grow: true };
   if (isProfileLoaded) {
     const obj5 = { size: "sm", color: token };
-    let tmp14Result = closure_13(tmp4(tmp2[24]).PencilIcon, obj5);
+    let tmp14Result = closure_13(tmp4(markAsDismissed[24]).PencilIcon, obj5);
   } else {
     const obj6 = { size: "small", color: token, accessible: false };
-    tmp14Result = closure_13(tmp4(tmp2[25]).ActivityIndicator, obj6);
+    tmp14Result = closure_13(tmp4(markAsDismissed[25]).ActivityIndicator, obj6);
   }
   obj4.icon = tmp14Result;
-  const intl = tmp4(tmp2[26]).intl;
-  obj4.text = intl.string(navigateToProfileCustomization(trackUserProfileAction[26]).t.AAjhgi);
+  const intl = tmp4(markAsDismissed[26]).intl;
+  obj4.text = intl.string(navigateToProfileCustomization(markAsDismissed[26]).t.AAjhgi);
   obj4.onPress = callback;
   let tmp17;
   if (!isProfileLoaded) {
     const obj7 = { text: null };
-    const intl2 = tmp4(tmp2[26]).intl;
-    obj7.text = intl2.string(tmp4(tmp2[26]).t.ZTNur7);
+    const intl2 = tmp4(markAsDismissed[26]).intl;
+    obj7.text = intl2.string(tmp4(markAsDismissed[26]).t.ZTNur7);
     tmp17 = obj7;
   }
   const obj8 = { children: null };
   obj4.accessibilityValue = tmp17;
-  obj3.secondaryButton = closure_13(navigateToProfileCustomization(trackUserProfileAction[23]).Button, obj4);
+  obj3.secondaryButton = closure_13(navigateToProfileCustomization(markAsDismissed[23]).Button, obj4);
   const items2 = [
-    closure_13(markAsDismissed(trackUserProfileAction[22]), obj3),
-    closure_13(markAsDismissed(trackUserProfileAction[27]), { targetRef: ref, visible: tmp7, markAsDismissed }),
-    closure_13(markAsDismissed(trackUserProfileAction[28]), {
+    closure_13(initialEditingTab(markAsDismissed[22]), obj3),
+    closure_13(initialEditingTab(markAsDismissed[27]), { targetRef: ref, visible: tmp7, markAsDismissed }),
+    closure_13(initialEditingTab(markAsDismissed[28]), {
       targetRef: ref,
       visible: tmp8,
       markAsDismissed,
       onTryItOut: callback1,
     }),
-    closure_13(markAsDismissed(trackUserProfileAction[29]), { targetRef: ref, visible: tmp9, markAsDismissed }),
+    closure_13(initialEditingTab(markAsDismissed[29]), { targetRef: ref, visible: tmp9, markAsDismissed }),
   ];
   obj8.children = items2;
   return closure_15(closure_14, obj8);
 }
 function YouScreenPrimaryInfoSection(arg0) {
   ({ isProfileLoaded, primaryInfoProps } = arg0);
-  ({ orbWalletEntryRowRef, isMainTabActive, navigateToProfileCustomization } = arg0);
+  ({ orbWalletEntryRowRef, isMainTabActive, navigateToProfileCustomization, initialEditingTab } = arg0);
   const id = primaryInfoProps.user.id;
   const tmp3 = UserProfileSharedStylesDefault();
   const isBadgeManagementEnabled = BadgeManagementExperiment.useIsBadgeManagementEnabled({
@@ -307,6 +316,7 @@ function YouScreenPrimaryInfoSection(arg0) {
   items2[2] = tmp34Result;
   items2[3] = state(EditSection, {
     navigateToProfileCustomization,
+    initialEditingTab,
     isProfileLoaded,
     visibleContent: tmp28,
     markAsDismissed: tmp29,
@@ -323,11 +333,11 @@ function YouScreenPrimaryInfoSection(arg0) {
   return colors(View, obj6);
 }
 const View = fn(17).View;
-const useIsContentShown = fn(5147).useIsContentShown;
-const UserProfileSections = fn(8479).UserProfileSections;
-let UserProfileThemeTypes = fn(7962).UserProfileThemeTypes;
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
-let closure_12 = fn(17065).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(5151).useIsContentShown;
+const UserProfileSections = fn(8490).UserProfileSections;
+let UserProfileThemeTypes = fn(7972).UserProfileThemeTypes;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
+let closure_12 = fn(17100).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const size = fn(2);
@@ -452,8 +462,14 @@ export default function YouScreenUserProfileContent(user) {
   setActiveProfileTabSection = profileSectionTabs.setActiveProfileTabSection;
   restoreActiveIndex = profileSectionTabs.restoreActiveIndex;
   isVisible = tmp28;
-  const items5 = [customStatusActivity, tmp17];
+  let str;
   ({ handleTabChange, activeProfileTabSectionIndex } = profileSectionTabs);
+  if (activeProfileTabSection === customStatusActivity.WIDGETS) {
+    if (isMobileWidgetEditingEnabled) {
+      str = "board";
+    }
+  }
+  const items5 = [customStatusActivity, tmp17];
   callback2 = obj6.useCallback(() => {
     let tmp2 = null;
     if (null == customStatusActivity) {
@@ -682,6 +698,7 @@ export default function YouScreenUserProfileContent(user) {
     orbWalletEntryRowRef: ref2,
     isMainTabActive: activeProfileTabSection === customStatusActivity.MAIN,
     navigateToProfileCustomization,
+    initialEditingTab: str,
     primaryInfoProps: null,
   };
   const obj21 = {
@@ -727,12 +744,12 @@ export default function YouScreenUserProfileContent(user) {
   const obj23 = { style: { flex: 1 }, ref, onLayout, children: null };
   const obj24 = { style: tmp3.profileTablist, children: null };
   const obj25 = { state: segmentedControlState, variant: null };
-  let str;
+  let str2;
   if (null != primaryColor) {
-    str = "overlay";
+    str2 = "overlay";
   }
   const obj26 = { zIndex: 1, children: null };
-  obj25.variant = str;
+  obj25.variant = str2;
   obj24.children = ref2(user(navigateToPremium[75]).Tabs, obj25);
   const items15 = [
     ref2(closure_5, obj24),

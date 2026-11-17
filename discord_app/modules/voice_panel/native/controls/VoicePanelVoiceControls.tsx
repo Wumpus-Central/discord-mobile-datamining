@@ -3,14 +3,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05592_LegacyBaseButton.js";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import StageChannelUnifiedCallExperiment from "../../../stage_channels/StageChannelUnifiedCallExperiment.tsx";
-import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
+import StageChannelUnifiedCallExperiment from "../../../stage_channels/StageChannelUnifiedCallExperiment.tsx";
 import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
 import UserSettingsVoiceProcessing from "../../../user_settings/voice/native/UserSettingsVoiceProcessing.tsx";
+import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import useSelectedActiveStreamDefault from "../../../video_calls/native/useSelectedActiveStream.tsx";
 import MobileGoLiveEntrypointExperiment from "../../../go_live/MobileGoLiveEntrypointExperiment.tsx";
 import useShowConnectedControlsDefault from "useShowConnectedControls.tsx";
@@ -27,10 +27,10 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11983).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12426).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 }, scrollViewScreenReader: null, blurRegion: null };
 let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollViewScreenReader = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };

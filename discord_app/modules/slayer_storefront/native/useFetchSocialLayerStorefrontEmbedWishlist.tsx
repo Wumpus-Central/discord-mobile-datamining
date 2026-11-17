@@ -14,12 +14,14 @@ require = fn;
 let closure_8 = {
   user: "a",
   profile: "Path",
-  wishlistId: "container",
-  wishlist: -0.089,
-  updatedAt: -0.706,
-  storedUpdatedAt: 0.089,
-  fetching: 0.706,
-  error: -0.133,
+  wishlistId: "content",
+  wishlist: "conjure.town",
+  updatedAt: "conjure.city",
+  storedUpdatedAt: "messageId",
+  fetching:
+    '(function CustomizeCommunityTsx1(){let[isNew,brandColor,withSequence,withTiming,Easing,withDelay]=this.__closure;const rawBorderColor=isNew?brandColor+"FF":brandColor+"00";const borderColor=withSequence(withTiming(rawBorderColor,{duration:1,easing:Easing.in(Easing.ease)}),withDelay(500,withTiming(brandColor+"00",{duration:300,easing:Easing.out(Easing.ease)})));return{borderColor:borderColor};})',
+  error:
+    '(function CustomizeCommunityTsx2(){let[isNew,brandColor,withSequence,withTiming,Easing,withDelay]=this.__closure;const rawBorderColor=isNew?brandColor+"FF":brandColor+"00";const borderColor=withSequence(withTiming(rawBorderColor,{duration:1,easing:Easing.in(Easing.ease)}),withDelay(500,withTiming(brandColor+"00",{duration:300,easing:Easing.out(Easing.ease)})));return{borderColor:borderColor};})',
 };
 const size = fn(2);
 const result = size.fileFinishedImporting(

@@ -28,10 +28,12 @@ export const FastListRenderSections = {
   [4]: "GUEST_GUILDS",
   UNREAD_PRIVATE_CHANNELS: 5,
   [5]: "UNREAD_PRIVATE_CHANNELS",
-  SEPARATOR: 6,
-  [6]: "SEPARATOR",
-  GUILDS: 7,
-  [7]: "GUILDS",
+  CHECKPOINT_INTRO: 6,
+  [6]: "CHECKPOINT_INTRO",
+  SEPARATOR: 7,
+  [7]: "SEPARATOR",
+  GUILDS: 8,
+  [8]: "GUILDS",
 };
 export const FOLDER_SPRING_PHYSICS = { mass: 0.5, damping: 30, stiffness: 300 };
 export const TRANSITION_PHYSICS = { mass: 0.5, damping: 15, stiffness: 120 };

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/native/conjureProjectActions.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4131 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4133 from "../../intl/ConjureUntranslated.messages.js";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import CopyIcon from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
@@ -86,13 +86,13 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1113).intl;
-          await tmp3(13311).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(4131).Owerd3));
+          await tmp3(14543).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(4133).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1113).intl;
-            tmp3(6004).presentError(intl.string(v2(4131)["Q+l4Hv"]));
+            tmp3(6008).presentError(intl.string(v2(4133)["Q+l4Hv"]));
             c3 = 3;
-            tmp3(6004);
+            tmp3(6008);
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -126,15 +126,15 @@ function deleteConjureProject(project, removeTarget) {
     const obj3 = { key: "ConjureProjectDelete", title: null, content: null, confirmText: null, onConfirm: null };
     let intl = require("util").intl;
     const obj4 = { name: project.name };
-    obj3.title = intl.formatToPlainString(_modDef4131.CJBhb2, obj4);
+    obj3.title = intl.formatToPlainString(_modDef4133.CJBhb2, obj4);
     const intl2 = require("util").intl;
-    obj3.content = intl2.string(_modDef4131["0OmrVn"]);
+    obj3.content = intl2.string(_modDef4133["0OmrVn"]);
     const intl3 = require("util").intl;
     obj3.confirmText = intl3.string(require("util").t.oyYWHE);
     obj3.onConfirm = function onConfirm() {
       const result = ConjureActionCreators.deleteProjectInBackground(project.id, () => {
         const intl = project(1113).intl;
-        return project(6004).presentError(intl.string(closure_1_1(4131)["0XDHob"]));
+        return project(6008).presentError(intl.string(closure_1_1(4133)["0XDHob"]));
       });
     };
     require("AlertModal").showConfirmModal(obj3);
@@ -144,15 +144,15 @@ function deleteConjureProject(project, removeTarget) {
     openConjureRemoveAppAlertDefault(obj);
   }
 }
-const ConjureConnectionStore = fn(7365);
+const ConjureConnectionStore = fn(7375);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
-const ConjureProjectStore = fn(7017);
+const ConjureProjectStore = fn(7025);
 ({
   canPublishProject: metroImportDefault,
   canRemixProject: closure_8,
   isProjectOwner: closure_9,
 } = ConjureProjectStore);
-const StaticChannelRoute = fn(5162).StaticChannelRoute;
+const StaticChannelRoute = fn(5166).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/conjureProjectActions.tsx");
 
@@ -162,7 +162,7 @@ export function exportConjureProject(project, fn) {
   }
   React4(project.id);
   const intl = util.intl;
-  hasOwnProperty(project.id, intl.string(_modDef4131.oU20rd));
+  hasOwnProperty(project.id, intl.string(_modDef4133.oU20rd));
 }
 export function importConjureProject(project, arg1) {
   (function importIntoProject() {
@@ -176,7 +176,7 @@ export function importConjureProject(project, arg1) {
     return applyArgumentsResult;
   })(project, arg1).catch(() => {
     const intl = project(1113).intl;
-    project(6004).presentError(intl.string(guildId(4131)["Q+l4Hv"]));
+    project(6008).presentError(intl.string(guildId(4133)["Q+l4Hv"]));
   });
 }
 export function copyConjureProjectLink(project, guild_id) {
@@ -188,7 +188,7 @@ export function copyConjureProjectId(project) {
   ClipboardUtils.copy(project.id);
   const obj3 = { text: null, icon: null };
   const intl = util.intl;
-  obj3.text = intl.string(_modDef4131.CmfaZG);
+  obj3.text = intl.string(_modDef4133.CmfaZG);
   obj3.icon = CopyIcon.CopyIcon;
   ToastActionCreatorsDefault.open("CONJURE_PROJECT_ID_COPIED", obj3);
 }
@@ -203,7 +203,7 @@ export function canUnpublishConjureUserApp(project) {
   return result;
 }
 export function openConjureAddToAnotherServerSheet(id, guildId) {
-  showConjureShareToServerSheetDefault({ projectId: id, guildId, publishOptions: null, addingToAnother: true });
+  showConjureShareToServerSheetDefault({ projectId: id, guildId });
 }
 export { deleteConjureProject };
 export function conjureProjectActions(project) {
@@ -253,7 +253,7 @@ export function conjureProjectActions(project) {
     }
     React4(project.id);
     const intl = util.intl;
-    hasOwnProperty(project.id, intl.string(_modDef4131.oU20rd));
+    hasOwnProperty(project.id, intl.string(_modDef4133.oU20rd));
   };
   items.push(obj3);
   if (tmp2) {
@@ -273,7 +273,7 @@ export function conjureProjectActions(project) {
         return applyArgumentsResult;
       })(project, closure_1_4).catch(() => {
         const intl = project(1113).intl;
-        project(6004).presentError(intl.string(guildId(4131)["Q+l4Hv"]));
+        project(6008).presentError(intl.string(guildId(4133)["Q+l4Hv"]));
       });
     };
     items.push(obj4);
@@ -296,7 +296,7 @@ export function conjureProjectActions(project) {
     ClipboardUtils.copy(project.id);
     const obj3 = { text: null, icon: null };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef4131.CmfaZG);
+    obj3.text = intl.string(_modDef4133.CmfaZG);
     obj3.icon = CopyIcon.CopyIcon;
     ToastActionCreatorsDefault.open("CONJURE_PROJECT_ID_COPIED", obj3);
   };
@@ -319,12 +319,7 @@ export function conjureProjectActions(project) {
     obj8.label = intl8.string(tmp8(tmp4[9]).RBPj0b);
     obj8.IconComponent = tmp3(tmp4[28]).ServerIcon;
     obj8.action = function action() {
-      showConjureShareToServerSheetDefault({
-        projectId: project.id,
-        guildId,
-        publishOptions: null,
-        addingToAnother: true,
-      });
+      showConjureShareToServerSheetDefault({ projectId: project.id, guildId });
     };
     items.push(obj8);
   }

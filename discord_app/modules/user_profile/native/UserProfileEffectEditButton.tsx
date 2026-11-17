@@ -6,11 +6,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const COLLECTIBLES_PREVIEW_SIZE = fn(7962).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7972).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1083).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { profileEffectPreviewContainer: null, sampleProfile: null, noneIcon: null };
 let size = {
   height: COLLECTIBLES_PREVIEW_SIZE,
@@ -20,7 +20,7 @@ let size = {
   overflow: "hidden",
 };
 obj2.profileEffectPreviewContainer = size;
-obj2.sampleProfile = { aspectRatio: fn(9490).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj2.sampleProfile = { aspectRatio: fn(9502).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj2.noneIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -66,7 +66,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   items = [userProfileEffect, guildId, user, isTryItOut];
   let name;
   const callback = userProfileEffect.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17122, dependencyMap.paths), "Profile Effect", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17158, dependencyMap.paths), "Profile Effect", {
       user,
       currentProfileEffect: userProfileEffect,
       guildId,

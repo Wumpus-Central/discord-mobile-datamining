@@ -8,12 +8,12 @@ import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/ge
 import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorStyleSheet from "../../../messages/native/renderer/RowGeneratorStyleSheet.tsx";
-import StickerIcon from "../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
+import RowGeneratorTypes from "../../../messages/native/renderer/RowGeneratorTypes.tsx";
+import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import VideoIcon from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
-import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import StickerIcon from "../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
 import MessagePreviewMarkup from "../../../message_previews/native/MessagePreviewMarkup.tsx";
-import RowGeneratorTypes from "../../../messages/native/renderer/RowGeneratorTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 

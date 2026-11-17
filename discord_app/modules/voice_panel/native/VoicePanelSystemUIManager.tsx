@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/VoicePanelSystemUIManager.tsx
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import VoicePanelStateContextDefault from "VoicePanelStateContext.tsx";
 import HomeIndicatorDefault from "HomeIndicator.tsx";
+import VoicePanelStateContextDefault from "VoicePanelStateContext.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
@@ -9,9 +9,9 @@ import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11985).VoicePanelModes;
-const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
-const ParticipantTypes = fn(5973).ParticipantTypes;
+const VoicePanelModes = fn(12428).VoicePanelModes;
+const VoicePanelControlsModes = fn(12426).VoicePanelControlsModes;
+const ParticipantTypes = fn(5977).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = {
@@ -179,7 +179,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   let tmp25 = null;
   if (tmp6[0]) {
     const obj2 = { hidden: !tmp5, barStyle: "light-content" };
-    tmp25 = closure_9(tmp(11827), obj2);
+    tmp25 = closure_9(tmp(11279), obj2);
   }
   const obj3 = { children: null };
   const items6 = [

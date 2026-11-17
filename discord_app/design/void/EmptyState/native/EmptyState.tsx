@@ -15,7 +15,7 @@ let closure_6 = {
   accessibilityElementsHidden: true,
   importantForAccessibility: "no-hide-descendants",
 };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   container: {
     flex: 1,

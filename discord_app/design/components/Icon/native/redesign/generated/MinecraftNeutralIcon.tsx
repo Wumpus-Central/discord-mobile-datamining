@@ -1,9 +1,9 @@
 // discord_app/design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod10305 from "../../../../../../../_runtime/metro/10305__.js";
-import _mod10306 from "../../../../../../../_runtime/metro/10306__.js";
-import _mod10307 from "../../../../../../../_runtime/metro/10307__.js";
+import _mod10415 from "../../../../../../../_runtime/metro/10415__.js";
+import _mod10416 from "../../../../../../../_runtime/metro/10416__.js";
+import _mod10417 from "../../../../../../../_runtime/metro/10417__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -32,15 +32,15 @@ export function MinecraftNeutralIcon(secondaryColor) {
   );
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  items = [React4(BaseIconImage.BaseIconImage, { source: _mod10305, color, style }), ,];
-  const obj3 = { source: _mod10306, color: str, style: null };
+  items = [React4(BaseIconImage.BaseIconImage, { source: _mod10415, color, style }), ,];
+  const obj3 = { source: _mod10416, color: str, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
   obj3.style = items2;
   const merged2 = Object.assign(merged);
   items[1] = React4(BaseIconImage.BaseIconImage, obj3);
-  const obj4 = { source: _mod10307, color: str2, style: null };
+  const obj4 = { source: _mod10417, color: str2, style: null };
   const items3 = [style];
   const items4 = [];
   items4[HermesBuiltin.arraySpread(items3.flat(), 0)] = { position: "absolute", top: 0 };

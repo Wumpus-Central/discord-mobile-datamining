@@ -1,6 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileEditFormTabs.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
 import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
@@ -12,38 +13,47 @@ import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPa
 import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
+import ProfileCustomizationNavigationStore from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
 function MainPage() {
-  const tmp = closure_9();
-  return timestampProducer(View, {
-    style: closure_9().page,
+  const tmp = closure_11();
+  return React5(timestampProducer, {
+    style: closure_11().page,
     children: noop.useContext(UserProfileEditFormMainPageContextDefault),
   });
 }
-const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7962).PROFILE_SIDE_PADDING;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const PROFILE_SIDE_PADDING = fn(7972).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
-({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5310);
 let obj = {
-  tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING },
+  tabbedContainer: { marginHorizontal: -PROFILE_SIDE_PADDING },
+  stickyTabs: { zIndex: 1, paddingTop: nativeDefault.space.PX_12 },
   page: null,
 };
-let obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING };
+let obj3 = { zIndex: 1, paddingTop: nativeDefault.space.PX_12 };
 obj.page = {
   paddingHorizontal: PROFILE_SIDE_PADDING,
   paddingTop: nativeDefault.space.PX_24,
   gap: nativeDefault.space.PX_16,
 };
-let closure_9 = createStyles.createStyles(obj);
-let closure_11 = {
-  code: "(function UserProfileEditFormTabsTsx1(){let[tabsState,BOARD_TAB_INDEX]=this.__closure;return tabsState.visiblePageRange.get()[1]>=BOARD_TAB_INDEX;})",
+let closure_11 = createStyles.createStyles(obj);
+let closure_13 = {
+  code: "(function UserProfileEditFormTabsTsx1(){let[stickyTranslateY]=this.__closure;return{transform:[{translateY:stickyTranslateY.get()}]};})",
 };
-let closure_12 = {
-  code: "(function UserProfileEditFormTabsTsx2(isOnScreen){let[isBoardTabOnScreen]=this.__closure;return isBoardTabOnScreen.set(isOnScreen);})",
+let closure_14 = {
+  code: "(function UserProfileEditFormTabsTsx2(){let[stickyTranslateY]=this.__closure;return{opacity:stickyTranslateY.get()>0?1:0};})",
+};
+let closure_15 = {
+  code: "(function UserProfileEditFormTabsTsx3(){let[tabsState,BOARD_TAB_INDEX]=this.__closure;return tabsState.visiblePageRange.get()[1]>=BOARD_TAB_INDEX;})",
+};
+let closure_16 = {
+  code: "(function UserProfileEditFormTabsTsx4(isOnScreen){let[isBoardTabOnScreen]=this.__closure;return isBoardTabOnScreen.set(isOnScreen);})",
 };
 let obj4 = {
   paddingHorizontal: PROFILE_SIDE_PADDING,
@@ -58,19 +68,76 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   _require = userId;
   const containerBackground = userId.containerBackground;
   importDefault = containerBackground;
-  first = undefined;
-  closure_5 = undefined;
-  let arr;
+  const stickyTranslateY = userId.stickyTranslateY;
+  let card;
+  let first;
+  absoluteFill = undefined;
+  let arr5;
   closure_7 = undefined;
-  ({ initialTab, hasCustomProfileTheme, scrollPosition, scrollViewRef, isBoardTabOnScreen } = userId);
-  const tmp = closure_9();
+  ({ initialTab, hasCustomProfileTheme, scrollPosition, scrollViewRef, isBoardTabOnScreen, onStickyTabsLayout } =
+    userId);
+  const tmp = closure_11();
   dependencyMap = tmp;
-  const tmp4 = UserProfileSharedStylesDefault();
-  _slicedToArray = tmp4;
-  const tmp5 = useMeasuredLayoutDefault();
-  const width = tmp5.width;
+  const themeContext = require("native").useThemeContext();
+  ({ primaryColor, secondaryColor, theme } = themeContext);
+  let obj = require("native");
+  const gradientFallbackBackground = require("useUserProfileColors").useUserProfileColors({
+    theme,
+    primaryColor,
+    secondaryColor,
+  }).gradientFallbackBackground;
+  require("useUserProfileGradientColors");
+  let tmp8 = gradientFallbackBackground;
+  if (null != primaryColor) {
+    tmp8 = gradientFallbackBackground;
+    if (null != secondaryColor) {
+      tmp8 = tmp7;
+    }
+  }
+  let obj2 = require("useUserProfileColors");
+  const tmp6 = card;
+  let items1 = [closure_13, stickyTranslateY];
+  _require = undefined;
+  [tmp9, tmp10] = items1;
+  class UserProfileEditFormTabsTsx1 {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { translateY: closure_0.get() };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  let items2 = [tmp10];
+  UserProfileEditFormTabsTsx1.__closure = items2;
+  UserProfileEditFormTabsTsx1.__workletHash = 9996648724256;
+  UserProfileEditFormTabsTsx1.__initData = tmp9;
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(UserProfileEditFormTabsTsx1);
+  let tmp2Result = require("../../../../_runtime/metro/01655__.js");
+  const items3 = [closure_14, stickyTranslateY];
+  _require = undefined;
+  [tmp12, tmp13] = items3;
+  class UserProfileEditFormTabsTsx2 {
+    constructor() {
+      opacity = 0;
+      if (closure_0.get() > 0) {
+        opacity = 1;
+      }
+      return { opacity };
+    }
+  }
+  const items4 = [tmp13];
+  UserProfileEditFormTabsTsx2.__closure = items4;
+  UserProfileEditFormTabsTsx2.__workletHash = 5290718826457;
+  UserProfileEditFormTabsTsx2.__initData = tmp12;
+  const animatedStyle1 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(UserProfileEditFormTabsTsx2);
+  const tmp16 = UserProfileSharedStylesDefault();
+  card = tmp16;
+  const tmp17 = useMeasuredLayoutDefault();
+  const width = tmp17.width;
   let num = 0;
-  ({ ref, onLayout } = tmp5);
+  ({ ref, onLayout } = tmp17);
   if (undefined !== width) {
     num = width;
   }
@@ -78,22 +145,30 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   if ("board" === initialTab) {
     num2 = 1;
   }
-  [first, closure_5] = first.useState(num2);
-  arr = tmp2(12121)(userId);
-  closure_7 = tmp8;
-  let items1 = [arr];
-  const memo = first.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);
+  const tmp6Result = tmp6(first.useState(num2), 2);
+  first = tmp6Result[0];
+  absoluteFill = tmp6Result[1];
+  arr5 = tmp15(10856)(userId);
+  closure_7 = tmp20;
+  const items5 = [arr5];
+  const memo = first.useMemo(() => arr5.filter(UserProfileGameWidgetTypes.isGameWidget), items5);
+  const tmp2Result6 = require("../../../../_runtime/metro/01655__.js");
   const fetchSuggestedGames = require("SuggestedGameHooks").useFetchSuggestedGames(true, memo);
-  let items2 = [userId, first, arr.length > 0, containerBackground, tmp.page, tmp4.card];
+  const items6 = [userId, first, arr5.length > 0, containerBackground, tmp.page, tmp16.card];
   const callback = first.useCallback((arg0) => {
     ChatInputUtils.dismissKeyboard();
     closure_5(arg0);
+    let str = "main";
+    if (1 === arg0) {
+      str = "board";
+    }
+    ProfileCustomizationNavigationStore.setState({ editingTab: str });
   }, []);
   const memo1 = first.useMemo(() => {
     const obj = { id: "main", label: null, page: null };
     const intl = util.intl;
     obj.label = intl.string(util.t.LXw470);
-    obj.page = timestampProducer(MainPage, {});
+    obj.page = React5(MainPage, {});
     items = [obj];
     const obj2 = { id: "board", label: null, page: null };
     const intl2 = util.intl;
@@ -101,76 +176,84 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     const obj3 = { style: page.page, children: null };
     if (closure_7) {
       const obj4 = { children: null };
-      const items1 = [timestampProducer(UserProfileWidgetEditingHeaderDefault, {})];
+      const items1 = [React5(UserProfileWidgetEditingHeaderDefault, {})];
       const obj5 = { userId, isVisible: 1 === first, isEditing: true, cardStyle: null };
       const items2 = [card.card];
       const obj6 = { backgroundColor };
       items2[1] = obj6;
       obj5.cardStyle = items2;
-      items1[1] = timestampProducer(UserProfileWidgetsBoardDefault, obj5);
+      items1[1] = React5(UserProfileWidgetsBoardDefault, obj5);
       obj4.children = items1;
-      let tmp2Result = React5(metroImportDefault, obj4);
+      let tmp2Result = refs(React6, obj4);
     } else {
-      tmp2Result = timestampProducer(UserProfileWidgetsEmptyStateDefault, {});
+      tmp2Result = React5(UserProfileWidgetsEmptyStateDefault, {});
     }
     obj3.children = tmp2Result;
-    obj2.page = timestampProducer(View, obj3);
+    obj2.page = React5(timestampProducer, obj3);
     items[1] = obj2;
     return items;
-  }, items2);
-  let obj = require("SuggestedGameHooks");
-  const tmp10 = _require;
+  }, items6);
+  const tmp2Result7 = require("SuggestedGameHooks");
   const measuredTabItems = require("UserProfileTabPages").useMeasuredTabItems(memo1);
   ({ items, pageHeights } = measuredTabItems);
-  let obj2 = require("UserProfileTabPages");
+  const tmp2Result8 = require("UserProfileTabPages");
   const segmentedControlState = require("SegmentedControlState").useSegmentedControlState({
     pageWidth: num,
     defaultIndex: num2,
     items,
     onPageChange: callback,
   });
-  let obj3 = require("SegmentedControlState");
-  const items3 = [closure_11, segmentedControlState, 1];
+  const tmp2Result9 = require("SegmentedControlState");
+  const items7 = [closure_15, segmentedControlState, 1];
   _require = undefined;
   importDefault = undefined;
-  [tmp16, tmp17, tmp18] = items3;
-  class UserProfileEditFormTabsTsx1 {
+  [tmp27, tmp28, tmp29] = items7;
+  class UserProfileEditFormTabsTsx3 {
     constructor() {
       visiblePageRange = closure_0.visiblePageRange;
       return visiblePageRange.get()[1] >= closure_1;
     }
   }
-  const items4 = [tmp17, tmp18];
-  UserProfileEditFormTabsTsx1.__closure = items4;
-  UserProfileEditFormTabsTsx1.__workletHash = 15064395793601;
-  UserProfileEditFormTabsTsx1.__initData = tmp16;
-  const items5 = [closure_12, isBoardTabOnScreen];
+  const items8 = [tmp28, tmp29];
+  UserProfileEditFormTabsTsx3.__closure = items8;
+  UserProfileEditFormTabsTsx3.__workletHash = 9814947251011;
+  UserProfileEditFormTabsTsx3.__initData = tmp27;
+  const items9 = [closure_16, isBoardTabOnScreen];
   _require = undefined;
-  [tmp19, tmp20] = items5;
-  class UserProfileEditFormTabsTsx2 {
+  [tmp30, tmp31] = items9;
+  class UserProfileEditFormTabsTsx4 {
     constructor(arg0) {
       return closure_0.set(userId);
     }
   }
-  const items6 = [tmp20];
-  UserProfileEditFormTabsTsx2.__closure = items6;
-  UserProfileEditFormTabsTsx2.__workletHash = 6535287831650;
-  UserProfileEditFormTabsTsx2.__initData = tmp19;
+  const items10 = [tmp31];
+  UserProfileEditFormTabsTsx4.__closure = items10;
+  UserProfileEditFormTabsTsx4.__workletHash = 2474607394788;
+  UserProfileEditFormTabsTsx4.__initData = tmp30;
   const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
-    UserProfileEditFormTabsTsx1,
-    UserProfileEditFormTabsTsx2,
+    UserProfileEditFormTabsTsx3,
+    UserProfileEditFormTabsTsx4,
   );
-  let obj5 = { style: tmp.tabbedContainer, ref, onLayout, children: null };
+  let obj3 = { style: tmp.tabbedContainer, ref, onLayout, children: null };
+  let obj4 = { style: null, onLayout: onStickyTabsLayout, children: null };
+  const items11 = [tmp.stickyTabs, animatedStyle];
+  obj4.style = items11;
+  let obj5 = { pointerEvents: "none", style: null };
+  const items12 = [absoluteFill.absoluteFill, { backgroundColor: tmp8 }, animatedStyle1];
+  obj5.style = items12;
+  const items13 = [closure_8(_modDef1655.View, obj5)];
   let obj6 = { state: segmentedControlState, variant: null };
   let str;
   if (hasCustomProfileTheme) {
     str = "overlay";
   }
   obj6.variant = str;
-  const items7 = [
-    arr(tmp10(13262).Tabs, obj6),
-    arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
+  items13[1] = closure_8(require("Tabs/Tabs").Tabs, obj6);
+  obj4.children = items13;
+  const items14 = [
+    closure_10(_modDef1655.View, obj4),
+    closure_8(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
   ];
-  obj5.children = items7;
-  return closure_8(closure_5, obj5);
+  obj3.children = items14;
+  return closure_10(arr5, obj3);
 });

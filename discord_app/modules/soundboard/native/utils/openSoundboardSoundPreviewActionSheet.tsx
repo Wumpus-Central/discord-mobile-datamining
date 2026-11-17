@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/soundboard/native/utils/openS
 
 export default function openSoundboardSoundPreviewActionSheet(channel, sound, analyticsSource) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(19225, dependencyMap.paths),
+    asyncRequireImpl(19270, dependencyMap.paths),
     "SoundboardSoundPreviewActionSheet",
     { channel, sound, analyticsSource },
     "stack",

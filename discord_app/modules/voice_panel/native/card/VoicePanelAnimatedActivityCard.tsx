@@ -4,12 +4,12 @@ import useWindowDimensions from "../../../screen/useWindowDimensions.native.tsx"
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import EmbeddedActivityOrientationLockState from "../../../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05588_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05592_LegacyBaseButton.js";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import isOrientationLockSupportedDefault from "../../../device/native/isOrientationLockSupported.tsx";
-import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import fetchShelf from "../../../activities/fetchShelf.tsx";
 import useCurrentEmbeddedApplicationDefault from "../../../activities/utils/useCurrentEmbeddedApplication.tsx";
+import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import useAnimatedKeyboardHeightDefault from "../../../keyboard/native/useAnimatedKeyboardHeight.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -68,7 +68,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
     const shelf = fetchShelf.fetchShelf({ guildId });
   }, items2);
   const items3 = [applicationId];
-  const first = tmp2(tmp4(7259)(items3), 1)[0];
+  const first = tmp2(tmp4(7269)(items3), 1)[0];
   c8 = first;
   const tmp8Result = require("useActivityShelfItemData");
   const items4 = [c5];
@@ -194,12 +194,12 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   let embeddedActivityParticipantId = null;
   if (null != stateFromStores1) {
     ({ applicationId: obj9.applicationId, compositeInstanceId: obj9.instanceId } = stateFromStores1);
-    embeddedActivityParticipantId = tmp8(7025).getEmbeddedActivityParticipantId({
+    embeddedActivityParticipantId = tmp8(7033).getEmbeddedActivityParticipantId({
       applicationId: null,
       instanceId: null,
     });
     const obj3 = { applicationId: null, instanceId: null };
-    const tmp8Result14 = tmp8(7025);
+    const tmp8Result14 = tmp8(7033);
   }
   const tmp28 = gridOrientationLockState;
   const tmp8Result13 = require("../../../../../_runtime/metro/01655__.js");
@@ -468,21 +468,21 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj6.activityName = name;
       obj6.isActivityFocused = first1;
       const obj7 = { channel: stateFromStores, layoutMode: tmp75 };
-      obj6.children = closure_14(tmp4(12848), obj7, tmp3[0]);
-      const items27 = [closure_14(tmp4(20026), obj6)];
+      obj6.children = closure_14(tmp4(11461), obj7, tmp3[0]);
+      const items27 = [closure_14(tmp4(20072), obj6)];
       let tmp79Result = null;
       if (stateFromStores2) {
-        tmp79Result = closure_14(tmp4(20027), {});
+        tmp79Result = closure_14(tmp4(20073), {});
       }
       items27[1] = tmp79Result;
       obj5.children = items27;
       obj4.children = closure_15(tmp4(1655).View, obj5);
-      let tmp79Result2 = closure_14(tmp8(5588).GestureDetector, obj4);
+      let tmp79Result2 = closure_14(tmp8(5592).GestureDetector, obj4);
       let tmp76 = closure_14;
-      const tmp4Result2 = tmp4(20026);
+      const tmp4Result2 = tmp4(20072);
     } else if (null == activityShelfItemData) {
       const obj8 = { activity: stateFromStores1, application: first };
-      tmp79Result2 = closure_14(tmp4(20028), obj8);
+      tmp79Result2 = closure_14(tmp4(20074), obj8);
       tmp76 = closure_14;
     } else {
       tmp76 = closure_14;
@@ -495,23 +495,23 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
         itemDimensions: tmp2Result2[0],
         disableBadges: true,
       };
-      obj10.children = closure_14(tmp4(20032), obj11);
-      tmp79Result2 = closure_14(tmp8(5588).GestureDetector, obj10);
+      obj10.children = closure_14(tmp4(20078), obj11);
+      tmp79Result2 = closure_14(tmp8(5592).GestureDetector, obj10);
     }
-    const obj12 = { value: tmp4Result(tmp4(7937).ACTIVITY_TILE).analyticsLocations, children: tmp79Result2 };
-    return tmp76(tmp8(7918).AnalyticsLocationProvider, obj12);
+    const obj12 = { value: tmp4Result(tmp4(7947).ACTIVITY_TILE).analyticsLocations, children: tmp79Result2 };
+    return tmp76(tmp8(7928).AnalyticsLocationProvider, obj12);
   }
   const tmp8Result18 = require("initialize");
 }
-const VoicePanelConstants = fn(11985);
+const VoicePanelConstants = fn(12428);
 ({ IS_IOS: closure_8, VoicePanelModes: closure_9 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(12426).VoicePanelControlsModes;
 const ThemeTypes = fn(1072).ThemeTypes;
 let closure_12 = fn(2145).ACTIVITY_LOCKED_ASPECT_RATIO;
-const ActivityLayoutMode = fn(12706).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11452).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { activityContainerBackground: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_16 = createStyles.createStyles(obj);
 let closure_17 = {

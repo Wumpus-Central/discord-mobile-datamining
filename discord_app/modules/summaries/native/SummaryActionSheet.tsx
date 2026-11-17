@@ -22,7 +22,7 @@ const Constants = fn(1072);
 ({ AnalyticsSections: closure_8, MessageFlags: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   summaryContainer: { padding: 16, margin: 16, marginBottom: 24, justifyContent: "center", alignItems: "center" },
   summaryContent: { textAlign: "center" },
@@ -94,8 +94,8 @@ export default function SummaryActionSheet(summary) {
         guild_id1 = channel.guild_id;
       }
       const obj2 = { guildId: guild_id1 };
-      tmpResult.openLazy(asyncRequireImpl(12595, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
-      const tmp7 = asyncRequireImpl(12595, dependencyMap.paths);
+      tmpResult.openLazy(asyncRequireImpl(11230, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+      const tmp7 = asyncRequireImpl(11230, dependencyMap.paths);
     }
   }, items);
   const items2 = [summary, channel, message];
@@ -221,7 +221,7 @@ export function openSummaryDividerActionSheet(channelId, summaryId) {
     const _HermesInternal = HermesInternal;
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { summary: findSummaryResult };
-    obj.openLazy(asyncRequireImpl(12622, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
-    const tmp5 = asyncRequireImpl(12622, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(12781, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
+    const tmp5 = asyncRequireImpl(12781, dependencyMap.paths);
   }
 }

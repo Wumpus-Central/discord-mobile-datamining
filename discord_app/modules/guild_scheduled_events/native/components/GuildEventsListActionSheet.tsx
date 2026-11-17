@@ -42,21 +42,21 @@ function GuildEventsListHeader(arg0) {
         );
       }
     };
-    tmp3Result = jsx(guild(8020).ActionSheetHeaderPressableText, {
+    tmp3Result = jsx(guild(8031).ActionSheetHeaderPressableText, {
       accessibilityLabel: null,
       label: null,
       onPress: null,
     });
   }
   obj2.trailing = tmp3Result;
-  return jsx(guild(7913).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
+  return jsx(guild(7923).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
 }
 const View = fn(17).View;
-let closure_6 = fn(5161).ANALYTICS_GUILD_EVENTS_MODAL_NAME;
+let closure_6 = fn(5165).ANALYTICS_GUILD_EVENTS_MODAL_NAME;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ReadStateTypes = fn(6949).ReadStateTypes;
+const ReadStateTypes = fn(6957).ReadStateTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -66,16 +66,16 @@ let result = size.fileFinishedImporting(
 export default function GuildEventsListActionSheet(guild) {
   guild = guild.guild;
   let events;
-  events = events(8426)(guild.id);
+  events = events(8437)(guild.id);
   items = [events, guild.id];
   const tmp = closure_10();
   const effect = noop.useEffect(() => {
-    const item = arr.forEach((id) => arr(7969).getGuildEventUserCounts(id.id, id.id, []));
+    const item = arr.forEach((id) => arr(7980).getGuildEventUserCounts(id.id, id.id, []));
     const guildEventsForCurrentUser = GuildScheduledEventManagerDefault.getGuildEventsForCurrentUser(guild.id);
   }, items);
   const items1 = [guild];
   const callback = noop.useCallback(() => {
-    const result = guild(7989).closeGuildEventListActionSheet();
+    const result = guild(8000).closeGuildEventListActionSheet();
   }, []);
   const callback1 = noop.useCallback((eventId, recurrenceId) => {
     let result = GuildScheduledEventModalActionCreators.openGuildEventDetails({
@@ -83,11 +83,11 @@ export default function GuildEventsListActionSheet(guild) {
       event: eventId,
       recurrenceId,
       onClose() {
-        const result = guild(7989).openGuildEventListActionSheet(closure_1_0);
+        const result = guild(8000).openGuildEventListActionSheet(closure_1_0);
       },
     });
   }, items1);
-  events(5889)(() => {
+  events(5893)(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, {
       type,
       guild_id: guild.id,
@@ -122,8 +122,8 @@ export default function GuildEventsListActionSheet(guild) {
   };
   const obj2 = { eventCount: events.length, guild };
   const ref = noop.useRef(ReadStateStore.ackMessageId(guild.id, ReadStateTypes.GUILD_EVENT));
-  obj4.lastAckedId = events(7416)(ref);
-  obj3.children = jsx(events(8429), {
+  obj4.lastAckedId = events(7426)(ref);
+  obj3.children = jsx(events(8440), {
     inActionSheet: true,
     events,
     onPressEvent: callback1,
@@ -132,7 +132,7 @@ export default function GuildEventsListActionSheet(guild) {
     lastAckedId: null,
   });
   obj.children = <View style={tmp.container}>{null}</View>;
-  return jsx(guild(5556).BottomSheet, {
+  return jsx(guild(5560).BottomSheet, {
     showGradient: true,
     scrollable: events.length > 0,
     startExpanded: true,

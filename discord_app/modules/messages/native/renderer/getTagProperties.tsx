@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import MessageConstants from "../../MessageConstants.tsx";
 import PublicGuildsUtils from "../../../public_guilds/PublicGuildsUtils.tsx";
 import isCrosspostDefault from "../../isCrosspost.tsx";
-import _modDef9278 from "../../../../../_runtime/metro/09278__.js";
+import _modDef9287 from "../../../../../_runtime/metro/09287__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -33,7 +33,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef9278).uri;
+            uri = Image.resolveAssetSource(_modDef9287).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);

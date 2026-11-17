@@ -3,42 +3,30 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
+import UserProfileCardTitleDefault from "UserProfileCardTitle.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7962);
-({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: closure_4 } = Constants);
+const Constants = fn(7972);
+({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5306);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
+const createStyles = fn(5310);
 let obj2 = {
   title: {
     marginBottom: nativeDefault.space.PX_12,
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "space-between",
     gap: nativeDefault.space.PX_4,
   },
-  titleContent: null,
-  text: null,
-  row: null,
-  rowLabel: null,
-  rowLabelText: null,
-  rowSublabel: null,
+  row: { flexDirection: "column", paddingVertical: 20 },
+  rowLabel: { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP },
+  rowLabelText: { flex: 1, lineHeight: CARD_ROWS_ICON_SIZE },
+  rowSublabel: { marginHorizontal: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP },
 };
-let obj3 = {
-  marginBottom: nativeDefault.space.PX_12,
-  flexDirection: "row",
-  alignItems: "center",
-  gap: nativeDefault.space.PX_4,
-};
-obj2.titleContent = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj2.text = { flexShrink: 1 };
-obj2.row = { flexDirection: "column", paddingVertical: 20 };
-obj2.rowLabel = { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP };
-obj2.rowLabelText = { flex: 1, lineHeight: CARD_ROWS_ICON_SIZE };
-obj2.rowSublabel = { marginHorizontal: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP };
-let closure_8 = createStyles.createStyles(obj2);
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
 
@@ -57,38 +45,25 @@ export default function UserProfileCard(arg0) {
       style: 0,
     }),
   );
-  const tmp2 = closure_8();
   const obj = { style };
   const merged1 = Object.assign(merged);
-  let tmp3Result2 = null != title || null != trailingAction;
-  if (tmp3Result2) {
+  let tmp3Result = null != title || null != trailingAction;
+  if (tmp3Result) {
     const obj2 = { style: null, children: null };
     items = [tmp2.title, titleStyle];
     obj2.style = items;
-    let tmp3Result = null != title;
-    if (tmp3Result) {
-      const obj3 = { style: tmp2.titleContent, children: null };
-      const items1 = [titleLeadingIcon, ,];
-      const obj4 = {
-        style: tmp2.text,
-        accessibilityRole: "header",
-        variant: "body-sm/medium",
-        color: "text-strong",
-        lineClamp: 1,
-        children: title,
-      };
-      items1[1] = hasOwnProperty(Text_Text.Text, obj4);
-      items1[2] = titleIcon;
-      obj3.children = items1;
-      tmp3Result = timestampProducer(View, obj3);
+    let tmp7 = null != title;
+    if (tmp7) {
+      const obj3 = { title, leadingIcon: titleLeadingIcon, trailingIcon: titleIcon };
+      tmp7 = timestampProducer(UserProfileCardTitleDefault, obj3);
     }
-    const items2 = [tmp3Result, trailingAction];
-    obj2.children = items2;
-    tmp3Result2 = timestampProducer(View, obj2);
+    const items1 = [tmp7, trailingAction];
+    obj2.children = items1;
+    tmp3Result = metroImportDefault(View, obj2);
   }
-  const items3 = [tmp3Result2, children];
-  obj.children = items3;
-  return timestampProducer(View, obj);
+  const items2 = [tmp3Result, children];
+  obj.children = items2;
+  return metroImportDefault(View, obj);
 }
 export function UserProfileFormRow(arg0) {
   ({ label, sublabel, hint, isDestructive, labelColor, arrow } = arg0);
@@ -96,7 +71,7 @@ export function UserProfileFormRow(arg0) {
   if (tmp6Result3 === undefined) {
     tmp6Result3 = false;
   }
-  const tmp = closure_8();
+  const tmp = closure_9();
   let str;
   if (isDestructive) {
     str = "text-feedback-critical";
@@ -114,11 +89,11 @@ export function UserProfileFormRow(arg0) {
     children: null,
   };
   const obj2 = { style: tmp.rowLabel, children: null };
-  items = [hasOwnProperty(icon, { size, color: str }), , ,];
+  items = [timestampProducer(icon, { size, color: str }), , ,];
   if (labelColor == null) {
     labelColor = str2;
   }
-  items[1] = hasOwnProperty(Text_Text.Text, {
+  items[1] = timestampProducer(Text_Text.Text, {
     variant: "body-md/semibold",
     color: labelColor,
     style: tmp.rowLabelText,
@@ -127,27 +102,27 @@ export function UserProfileFormRow(arg0) {
   let tmp6Result = null != hint;
   if (tmp6Result) {
     const obj5 = { size, color: str };
-    tmp6Result = hasOwnProperty(hint, obj5);
+    tmp6Result = timestampProducer(hint, obj5);
   }
   items[2] = tmp6Result;
   if (tmp6Result3) {
-    tmp6Result3 = hasOwnProperty(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
+    tmp6Result3 = timestampProducer(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
   }
   items[3] = tmp6Result3;
   obj2.children = items;
-  const items1 = [timestampProducer(View, obj2)];
+  const items1 = [metroImportDefault(View, obj2)];
   let tmp6Result4 = null != sublabel;
   if (tmp6Result4) {
     const obj6 = { style: tmp.rowSublabel, children: sublabel };
-    tmp6Result4 = hasOwnProperty(View, obj6);
+    tmp6Result4 = timestampProducer(View, obj6);
   }
   items1[1] = tmp6Result4;
   obj.children = items1;
-  return timestampProducer(Pressables.PressableOpacity, obj);
+  return metroImportDefault(Pressables.PressableOpacity, obj);
 }
 export function UserProfileCardRows(children) {
   const obj = { children: null };
   const Children = noop.Children;
-  obj.children = Children.map(children.children, (children, arg1) => closure_1_5(React.Fragment, { children }, arg1));
-  return hasOwnProperty(metroImportDefault, obj);
+  obj.children = Children.map(children.children, (children, arg1) => closure_1_6(React.Fragment, { children }, arg1));
+  return timestampProducer(React5, obj);
 }

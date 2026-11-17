@@ -130,7 +130,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15744, dependencyMap.paths),
+      asyncRequireImpl(15778, dependencyMap.paths),
       "UserProfileActivityVoiceChannelUsers",
       {
         users,

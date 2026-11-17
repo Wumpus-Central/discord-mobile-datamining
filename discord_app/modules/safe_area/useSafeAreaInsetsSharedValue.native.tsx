@@ -1,8 +1,8 @@
 // discord_app/modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx
 import AppEntryKeyContext from "../window/native/AppEntryKeyContext.tsx";
 import AppEntryKey from "../window/native/AppEntryKey.tsx";
-import updateSharedValueIfChangedDefault from "../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets.native.tsx";
+import updateSharedValueIfChangedDefault from "../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import module_1655_mod from "../../../_runtime/metro/01655__.js";
 import useSafeAreaInsets_mod from "useSafeAreaInsets.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";

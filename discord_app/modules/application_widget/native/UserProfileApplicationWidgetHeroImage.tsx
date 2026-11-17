@@ -1,7 +1,7 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetHeroImage.tsx
-import LinearGradientDefault from "../../../../_runtime/05883_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05887_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef7533 from "../../../../_runtime/metro/07533__.js";
+import _modDef7543 from "../../../../_runtime/metro/07543__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
@@ -9,7 +9,7 @@ const HorizontalGradient = fn(1072).HorizontalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const colors = ["transparent", "black"];
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_7 = createStyles.createStyles({
   mask: { flex: 1, flexDirection: "row" },
   gradient: { width: 130 },
@@ -75,7 +75,7 @@ export default function UserProfileApplicationWidgetHeroImage(arg0) {
   const items1 = [tmp.image];
   const obj3 = { start: HorizontalGradient.START, end: HorizontalGradient.END, colors, style: tmp.gradient };
   const obj4 = { style: tmp.remainder };
-  const tmp10 = _modDef7533;
+  const tmp10 = _modDef7543;
   if (str == null) {
     str = "100%";
   }

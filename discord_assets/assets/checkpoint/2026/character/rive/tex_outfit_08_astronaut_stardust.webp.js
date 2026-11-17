@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_08_astronaut_stardust.webp.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/5a09ce15b42a0ae2f9e0b54a341c89acc7d1ded744b656c5c8bab3c0ed1af923.webp";
-export const metadata = { fileBytes: 35382 };
+export default "https://cdn.discordapp.com/assets/content/252f5346b07056f111e37a4386407783b5891ffc622d7c387196a1825714bad7.webp";
+export const metadata = { fileBytes: 90580 };

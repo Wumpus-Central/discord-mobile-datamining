@@ -5,8 +5,8 @@ import Stack_Stack from "../../../../design/components/Stack/native/Stack.native
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableCheckboxRow from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import serializeAppStartLogsDefault from "../../../debug/serializeAppStartLogs.tsx";
 import ShareIcon from "../../../../design/components/Icon/native/redesign/generated/ShareIcon.tsx";
+import serializeAppStartLogsDefault from "../../../debug/serializeAppStartLogs.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -24,7 +24,7 @@ function Code(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   code: { fontFamily: fn(1072).Fonts.CODE_BOLD },
@@ -96,7 +96,7 @@ export default function UserSettingsStartupTimings() {
               closure_128_1 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(5489).getAppFirstVisibleTimestamp(), done: false };
+              const obj5 = { value: tmp5(5493).getAppFirstVisibleTimestamp(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -108,9 +108,9 @@ export default function UserSettingsStartupTimings() {
             return obj6;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(11108)(closure_128_0);
+            closure_128_1 = tmp5(11855)(closure_128_0);
             const obj7 = { message: closure_128_1 };
-            tmp2(10230).showShareActionSheet(obj7, "Startup Timing");
+            tmp2(10338).showShareActionSheet(obj7, "Startup Timing");
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -278,6 +278,6 @@ export default function UserSettingsStartupTimings() {
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(7888).FlashList, obj5);
+  obj4.children = closure_8(tmp10(7898).FlashList, obj5);
   return closure_8(checked, obj4);
 }

@@ -6,8 +6,8 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import AttachmentPreview from "../../../media/native/AttachmentPreview.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../../actions/UploadAttachmentActionCreators.tsx";
+import AttachmentPreview from "../../../media/native/AttachmentPreview.tsx";
 import MediaKeyboardUtils from "../../../media_keyboard/native/MediaKeyboardUtils.tsx";
 import FileUpIcon from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -99,11 +99,11 @@ function File(upload) {
   return React6(TableRow.TableRow, obj);
 }
 const View = fn(17).View;
-const DraftType = fn(8725).DraftType;
+const DraftType = fn(8736).DraftType;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/actions/FileUploadActionComponent.tsx");
@@ -313,7 +313,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(11636).hideMediaKeyboardActionSheet();
+        return InteractionModal(12299).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveUploadLimit,
       onSelectFiles(arg0) {
@@ -346,7 +346,7 @@ export default function FileUploadActionComponent(maxValues) {
           const result = InteractionModal(customId[29]).hideMediaKeyboardActionSheet();
           if (item.isIncluded) {
             const found = currentUploads.find((item) =>
-              InteractionModal(8877).doesImageMatchUpload(item.node.image, item),
+              InteractionModal(8888).doesImageMatchUpload(item.node.image, item),
             );
             if (null != found) {
               callback1(found.id);
@@ -367,9 +367,9 @@ export default function FileUploadActionComponent(maxValues) {
           obj.handleViewAllDialog(obj2);
         },
         onManageLimited() {
-          obj = InteractionModal(11635);
+          obj = InteractionModal(12298);
           const result = obj.handleLimitedPickerDialog({
-            onDismissKeyboard: InteractionModal(11636).hideMediaKeyboardActionSheet,
+            onDismissKeyboard: InteractionModal(12299).hideMediaKeyboardActionSheet,
             onRestoreKeyboard,
           });
         },

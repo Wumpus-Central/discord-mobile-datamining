@@ -10,9 +10,9 @@ import transitionToChannel from "../../../../routing/transitionToChannel.tsx";
 import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import openMediaModal from "../../../../media_viewer/native/components/openMediaModal.tsx";
 import Tracking from "../../../tracking/Tracking.tsx";
-import showLongPressForumPostActionSheetDefault from "../../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import messages_MessagesUtils from "../../../../messages/native/MessagesUtils.tsx";
 import reactions_ReactionUtils from "../../../../reactions/native/ReactionUtils.tsx";
+import showLongPressForumPostActionSheetDefault from "../../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../../../action_sheet/native/ActionSheetStore.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -37,7 +37,7 @@ export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(5910).ReactionTypes.NORMAL;
+    NORMAL = threadId(5914).ReactionTypes.NORMAL;
   }
   items = [threadId];
   const items1 = [threadId];
@@ -65,16 +65,16 @@ export default function useNativeForumPostHandlers(threadId) {
           tmp = endsWithResult;
         }
         if (tmp) {
-          let isAttachmentPathUrlResult = src.type === threadId(9111).ForumPostMediaTypes.ATTACHMENT;
+          let isAttachmentPathUrlResult = src.type === threadId(9122).ForumPostMediaTypes.ATTACHMENT;
           if (isAttachmentPathUrlResult) {
-            isAttachmentPathUrlResult = callback1(9100).isAttachmentPathUrl(str);
-            const obj5 = callback1(9100);
+            isAttachmentPathUrlResult = callback1(9111).isAttachmentPathUrl(str);
+            const obj5 = callback1(9111);
           }
           if (!isAttachmentPathUrlResult) {
-            let result = src.type === threadId(9111).ForumPostMediaTypes.EMBED;
+            let result = src.type === threadId(9122).ForumPostMediaTypes.EMBED;
             if (result) {
-              result = callback1(9100).isExternalProxiedAttachmentUrl(str);
-              const obj6 = callback1(9100);
+              result = callback1(9111).isExternalProxiedAttachmentUrl(str);
+              const obj6 = callback1(9111);
             }
             isAttachmentPathUrlResult = result;
           }

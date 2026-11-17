@@ -13,13 +13,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(17698).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+let closure_6 = fn(17736).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
 const VideoQuestModalSteps = { WATCH_VIDEO: 0, [0]: "WATCH_VIDEO", POST_WATCH_VIDEO: 1, [1]: "POST_WATCH_VIDEO" };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   root: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM },
   pillarboxed: { alignSelf: "center" },
@@ -90,7 +90,7 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
     }, items);
     const tmp15 = closure_12();
     const pillarboxed = tmp15;
-    const tmp17 = useStateFromSharedValueDefault(obj2.useContext(tmp(17699).QuestDockGestureContext).windowDimensions);
+    const tmp17 = useStateFromSharedValueDefault(obj2.useContext(tmp(17737).QuestDockGestureContext).windowDimensions);
     ({ width, height } = tmp17);
     let bound = null;
     if (tmp17.landscape) {
@@ -137,7 +137,7 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
     }
     sharedValue = tmp(1655).useSharedValue(num3);
     const tmpResult = tmp(1655);
-    const items4 = [closure_13, tmp(5929).withSpring, tmp(1655).clamp, sharedValue, bound, tmp(1655).interpolate, -100];
+    const items4 = [closure_13, tmp(5933).withSpring, tmp(1655).clamp, sharedValue, bound, tmp(1655).interpolate, -100];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -167,7 +167,7 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
     const tmp37 = useSafeAreaInsetsDefault();
     const tmp27 = bound;
     const tmpResult3 = tmp(1655);
-    const items6 = [closure_14, tmp(5929).withSpring, tmp(1655).interpolate, sharedValue, tmp37, tmp27];
+    const items6 = [closure_14, tmp(5933).withSpring, tmp(1655).interpolate, sharedValue, tmp37, tmp27];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -248,19 +248,19 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
         setIsFullscreen,
         sourceQuestContent,
       };
-      tmp48Result = tmp48(tmp16(17736), obj14);
-      const tmp16Result = tmp16(17736);
+      tmp48Result = tmp48(tmp16(17776), obj14);
+      const tmp16Result = tmp16(17776);
     }
     const items16 = [tmp48Result];
     let tmp48Result2 = first === tmp24.POST_WATCH_VIDEO;
     if (tmp48Result2) {
       const obj15 = { onClose, onRestartVideo: callback1, sourceQuestContent };
-      tmp48Result2 = tmp48(tmp16(17763), obj15);
+      tmp48Result2 = tmp48(tmp16(17803), obj15);
     }
     items16[1] = tmp48Result2;
     obj13.children = items16;
     obj11.children = pillarboxed(c5, obj13);
-    items14[1] = setIsFullscreen(tmp(7415).SafeAreaPaddingView, obj11);
+    items14[1] = setIsFullscreen(tmp(7425).SafeAreaPaddingView, obj11);
     obj4.children = items14;
     obj3.children = pillarboxed(_modDef1655.View, obj4);
     return setIsFullscreen(c5, obj3);

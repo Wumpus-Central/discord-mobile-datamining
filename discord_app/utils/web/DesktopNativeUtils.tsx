@@ -479,14 +479,16 @@ obj2.openWaylandPortalShortcutSettings = function openWaylandPortalShortcutSetti
     }
   }
 };
-obj2.setObservedGamesCallback = function setObservedGamesCallback(mapped, normalizeCallback, arg2, arg3) {
-  closure_0 = arg2;
+obj2.setObservedGamesCallback = function setObservedGamesCallback(arr, arg1, arg2) {
+  closure_0 = arg1;
   try {
     const self = this;
     closure_13 = {};
     c1 = 0;
     const discordUtils = this.getDiscordUtils();
-    mapped = mapped.map((id) => {
+    closure_2 = closure_13;
+    let tmp6 = null != arg2;
+    const mapped = arr.map((id) => {
       const sum = c1 + 1;
       c1 = sum;
       if (null != id.id) {
@@ -498,23 +500,18 @@ obj2.setObservedGamesCallback = function setObservedGamesCallback(mapped, normal
       obj.id = sum;
       return obj;
     });
-    closure_2 = closure_13;
-    let tmp6 = null != arg3;
     if (tmp6) {
       tmp6 = null != discordUtils.setProcessObserverUserId;
     }
     if (tmp6) {
-      const result = discordUtils.setProcessObserverUserId(arg3);
+      const result = discordUtils.setProcessObserverUserId(arg2);
     }
-    normalizeCallback = function normalizeCallback(arr) {
+    const result1 = discordUtils.setObservedGamesCallback2(mapped, function normalizeCallback(arr) {
       return closure_0(arr.map((item) => normalizeRunningGame(item, closure_1_2)));
-    };
-    if (normalizeCallback) {
-      if (null != discordUtils.setObservedGamesCallback2) {
-        const result1 = discordUtils.setObservedGamesCallback2(mapped, normalizeCallback);
-      }
+    });
+    if (discordUtils.setGameDetectionCallback != null) {
+      const result2 = setGameDetectionCallback(() => {});
     }
-    const result2 = discordUtils.setObservedGamesCallback(mapped, normalizeCallback);
   } catch (err) {}
 };
 obj2.setProcessObserverCollectExecutableFingerprint = function setProcessObserverCollectExecutableFingerprint(arg0) {
@@ -556,19 +553,6 @@ obj2.getExecutableFingerprintForProcess = function getExecutableFingerprintForPr
       fn(null);
     }
   });
-};
-obj2.setGameDetectionCallback = function setGameDetectionCallback(arg0) {
-  closure_0 = arg0;
-  const discordUtils = this.getDiscordUtils();
-  if (discordUtils.setGameDetectionCallback != null) {
-    const result = setGameDetectionCallback((arr, arr2) => {
-      const mapped = arr.map((item) => closure_1_29(item));
-      return closure_0(
-        mapped,
-        arr2.map((item) => closure_1_29(item)),
-      );
-    });
-  }
 };
 obj2.setGameDetectionErrorCallback = function setGameDetectionErrorCallback(arg0) {
   const discordUtils = this.getDiscordUtils();
@@ -961,7 +945,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(7703).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(7713).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -998,7 +982,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj11 = closure_0(7703);
+            const obj11 = closure_0(7713);
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -1195,7 +1179,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_21, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(7703).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(7713).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -1203,7 +1187,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(7703);
+                const obj9 = unknown(7713);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;

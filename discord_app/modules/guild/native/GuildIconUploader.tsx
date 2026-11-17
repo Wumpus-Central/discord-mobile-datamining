@@ -5,10 +5,10 @@ import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef14052 from "../../../../_runtime/metro/14052__.js";
-import _modDef14053 from "../../../../_runtime/metro/14053__.js";
-import _modDef14054 from "../../../../_runtime/metro/14054__.js";
-import _modDef14055 from "../../../../_runtime/metro/14055__.js";
+import _modDef12875 from "../../../../_runtime/metro/12875__.js";
+import _modDef12876 from "../../../../_runtime/metro/12876__.js";
+import _modDef12877 from "../../../../_runtime/metro/12877__.js";
+import _modDef12878 from "../../../../_runtime/metro/12878__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   container: { width: 82, height: 82, marginTop: 4 },
   guildPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -90,9 +90,9 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef14052;
+      let tmp10Result = _modDef12875;
     } else {
-      tmp10Result = _modDef14053;
+      tmp10Result = _modDef12876;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj)];
@@ -123,13 +123,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef14054;
+    obj5.source = _modDef12877;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef14055 };
+    const obj7 = { source: _modDef12878 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);
@@ -154,7 +154,7 @@ prototype["render"] = function render() {
   obj.children = timestampProducer(View, obj2);
   return hasOwnProperty(Pressables.PressableOpacity, obj);
 };
-GuildIconUploader.contextType = fn(5367).ThemeContext;
+GuildIconUploader.contextType = fn(5371).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 

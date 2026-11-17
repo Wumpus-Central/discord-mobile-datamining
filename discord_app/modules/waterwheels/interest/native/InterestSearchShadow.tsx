@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
-import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05887_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import InterestScrollHeader from "InterestScrollHeader.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { backing: null, shadow: null, bar: null, barAndroid: null, fill: null };
 const rect = {
   position: "absolute",

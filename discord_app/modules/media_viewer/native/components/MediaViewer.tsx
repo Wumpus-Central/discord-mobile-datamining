@@ -5,10 +5,10 @@ import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLoc
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useVideoControls from "../useVideoControls.tsx";
 import MediaViewerDimensionsContext from "../MediaViewerDimensionsContext.tsx";
-import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
-import HomeIndicatorDefault from "../../../voice_panel/native/HomeIndicator.tsx";
 import MediaViewerItem from "MediaViewerItem.tsx";
 import useMediaViewerClosePositionDefault from "../useMediaViewerClosePosition.tsx";
+import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
+import HomeIndicatorDefault from "../../../voice_panel/native/HomeIndicator.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -370,7 +370,7 @@ function MediaViewer(arg0) {
       windowHeight: height,
       zoomed,
     };
-    tmp63Result = tmp63(tmp(15238), obj15);
+    tmp63Result = tmp63(tmp(11281), obj15);
   }
   obj14.children = tmp63Result;
   items15[2] = callback(_modDef1655.View, obj14);

@@ -55,9 +55,6 @@ prototype["getCompletedBountyCount"] = function getCompletedBountyCount(c7) {
 prototype["isClaimingBountyReward"] = function isClaimingBountyReward(bountyId) {
   return set.has(bountyId);
 };
-prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
-  return closure_3.every((id) => set.has(id.id));
-};
 prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(
   questPlacementFromQuestContent,
   bountyId,

@@ -26,11 +26,14 @@ const ButtonAction = {
   [8]: "OPEN_GUILD_BOOST_CHECKOUT",
   OPEN_SHOP: 9,
   [9]: "OPEN_SHOP",
+  OPEN_GIFT_MODAL: 10,
+  [10]: "OPEN_GIFT_MODAL",
 };
+const obj2 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", PLAN_SELECTION: 1, [1]: "PLAN_SELECTION", TIER_2: 2, [2]: "TIER_2" };
 const MessageType = fn(1197).MessageType;
 class CTAButton$Type extends MessageType {
   constructor() {
-    items = [, , , , ,];
+    items = [, , , , , ,];
     items[0] = { no: 1, name: "copy", kind: "scalar", T: 9 };
     items[1] = {
       no: 2,
@@ -50,20 +53,29 @@ class CTAButton$Type extends MessageType {
         return require("localized_string").LocalizedString;
       },
     };
-    obj = { no: 5, name: "navigable_storefront_application_id", kind: "message", T: null };
+    items[4] = {
+      no: 5,
+      name: "navigable_storefront_application_id",
+      kind: "message",
+      T() {
+        return require("wrappers").UInt64Value;
+      },
+    };
+    obj = { no: 6, name: "shop_collection_id", kind: "message", T: null };
     class T {
       constructor() {
         return closure_1_0(closure_1_1[3]).UInt64Value;
       }
     }
     obj.T = T;
-    items[4] = obj;
-    items[5] = {
-      no: 6,
-      name: "shop_collection_id",
-      kind: "message",
+    items[5] = obj;
+    items[6] = {
+      no: 7,
+      name: "gift_modal_destination",
+      kind: "enum",
       T() {
-        return require("wrappers").UInt64Value;
+        items = ["discord_protos.premium_marketing.v1.GiftModalDestination", obj2, "GIFT_MODAL_DESTINATION_"];
+        return items;
       },
     };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.CTAButton", items, T);
@@ -72,7 +84,7 @@ class CTAButton$Type extends MessageType {
 }
 const prototype = CTAButton$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { copy: "", buttonAction: 0, deeplinkSection: "" };
+  const obj = { copy: "", buttonAction: 0, deeplinkSection: "", giftModalDestination: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -117,6 +129,8 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           readUnknownField,
           obj.shopCollectionId,
         );
+      } else if (7 === tmp5) {
+        obj.giftModalDestination = pos.int32();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -199,6 +213,10 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(copy, tag, write
       writeUnknownFields,
     );
   }
+  if (0 !== copy.giftModalDestination) {
+    tag.tag(7, _mod1197.WireType.Varint).int32(copy.giftModalDestination);
+    const tagResult6 = tag.tag(7, _mod1197.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -229,22 +247,31 @@ let items = [
       return require("localized_string").LocalizedString;
     },
   },
+  {
+    no: 5,
+    name: "navigable_storefront_application_id",
+    kind: "message",
+    T() {
+      return require("wrappers").UInt64Value;
+    },
+  },
   ,
 ];
-const obj2 = { no: 5, name: "navigable_storefront_application_id", kind: "message", T: null };
+const obj3 = { no: 6, name: "shop_collection_id", kind: "message", T: null };
 class T {
   constructor() {
     return closure_1_0(closure_1_1[3]).UInt64Value;
   }
 }
-obj2.T = T;
-items[4] = obj2;
-items[5] = {
-  no: 6,
-  name: "shop_collection_id",
-  kind: "message",
+obj3.T = T;
+items[5] = obj3;
+items[6] = {
+  no: 7,
+  name: "gift_modal_destination",
+  kind: "enum",
   T() {
-    return require("wrappers").UInt64Value;
+    items = ["discord_protos.premium_marketing.v1.GiftModalDestination", obj2, "GIFT_MODAL_DESTINATION_"];
+    return items;
   },
 };
 const prototype1 = new prototype(
@@ -257,6 +284,10 @@ const prototype1 = new prototype(
   items,
   fn,
   dependencyMap,
+  ButtonAction,
+  obj2,
+  new.target,
+  exports,
 );
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -264,4 +295,5 @@ let result = size.fileFinishedImporting(
 );
 
 export { ButtonAction };
+export const GiftModalDestination = obj2;
 export const CTAButton = prototype1;

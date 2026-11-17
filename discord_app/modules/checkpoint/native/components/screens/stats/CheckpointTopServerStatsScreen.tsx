@@ -3,8 +3,7 @@ import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3317 from "../../../../Checkpoint2026.messages.js";
-import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
+import _modDef3319 from "../../../../Checkpoint2026.messages.js";
 import CheckpointStatsUtils from "../../../../CheckpointStatsUtils.tsx";
 import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
 import ServerIcon from "../../../../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
@@ -16,6 +15,7 @@ import CheckpointNumberUtils from "../../../CheckpointNumberUtils.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
 import CheckpointGuildStatsDefault from "../../CheckpointGuildStats.tsx";
 import CheckpointRankTagDefault from "../../CheckpointRankTag.tsx";
+import CheckpointTruncatedTextDefault from "../../CheckpointTruncatedText.tsx";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
 import CheckpointConstants from "../../../../CheckpointConstants.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
@@ -138,13 +138,13 @@ export default function CheckpointTopServerStatsScreen() {
   if (null != checkpointTopPercent) {
     const intl2 = util.intl;
     const obj2 = { numDays: rounded, percent: checkpointTopPercent };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3317.BRQODX, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3319.BRQODX, obj2);
   }
   const obj3 = { centered: tmp4, children: null };
   const obj4 = { style: tmp4 ? tmp.wideContainer : tmp.container, children: null };
   const obj5 = { style: tmp4 ? tmp.wideSpotlightContainer : tmp.spotlightContainer, children: null };
   let tmp13Result = null != stateFromStores;
-  const stringResult = intl.string(_modDef3317["M+a+t1"]);
+  const stringResult = intl.string(_modDef3319["M+a+t1"]);
   if (tmp13Result) {
     const obj6 = { style: tmp.spotlight, children: null };
     const items1 = [timestampProducer(CheckpointRankTagDefault, { rank: 1 })];
@@ -153,13 +153,12 @@ export default function CheckpointTopServerStatsScreen() {
     const items2 = [timestampProducer(GuildIconDefault, obj8)];
     const obj9 = { style: tmp.guildDetails, children: null };
     const obj10 = {
+      text: stateFromStores.guild.name,
+      guildId: stateFromStores.guild.id,
       variant: "heading-lg/medium",
       style: tmp.guildName,
-      lineClamp: 1,
-      ellipsizeMode: "tail",
-      children: stateFromStores.guild.name,
     };
-    const items3 = [timestampProducer(Text_Text.Text, obj10)];
+    const items3 = [timestampProducer(CheckpointTruncatedTextDefault, obj10)];
     let num2 = stateFromStores.numVoiceMinutes;
     const tmp2Result5 = GuildIconDefault;
     if (num2 == null) {
@@ -209,11 +208,11 @@ export default function CheckpointTopServerStatsScreen() {
         return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
       },
     };
-    let formatResult = intl4.format(_modDef3317.sIDTV1, obj18);
+    let formatResult = intl4.format(_modDef3319.sIDTV1, obj18);
   } else {
     const intl3 = util.intl;
     const obj19 = { numDays: rounded };
-    formatResult = intl3.format(_modDef3317.nLCUQ4, obj19);
+    formatResult = intl3.format(_modDef3319.nLCUQ4, obj19);
   }
   obj17.children = formatResult;
   items6[2] = timestampProducer(CheckpointTextDefault, obj17);

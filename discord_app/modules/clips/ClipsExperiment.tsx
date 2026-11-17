@@ -9,7 +9,7 @@ import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
 const PremiumTypes = fn(1390).PremiumTypes;
-const Features = fn(6065).Features;
+const Features = fn(6072).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
@@ -95,12 +95,30 @@ export function useIsClipsAvailable() {
     }) && isDesktopResult
   );
 }
+export function isClipsPlatformRequirementIgnored() {
+  let isDeveloper = DeveloperExperimentStore.isDeveloper;
+  if (isDeveloper) {
+    isDeveloper = DevSettingsStore.get("clips_ignore_platform_requirement");
+  }
+  return isDeveloper;
+}
 export function isUserPremiumTypeForClipsEarlyAccess(currentUser) {
   let premiumType;
   if (currentUser != null) {
     premiumType = currentUser.premiumType;
   }
   return PremiumUtilsDefault.isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
+}
+export function useIsUserPremiumTypeForClipsEarlyAccess() {
+  items = [UserStore];
+  return initialize.useStateFromStores(items, () => {
+    currentUser = currentUser.getCurrentUser();
+    let premiumType;
+    if (currentUser != null) {
+      premiumType = currentUser.premiumType;
+    }
+    return PremiumUtilsDefault.isPremiumAtLeast(premiumType, TIER_2.TIER_2);
+  });
 }
 export function isScreenshotKeybindEnabled() {
   return false;

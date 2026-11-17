@@ -24,10 +24,10 @@ export function fetchPowerupCatalogForGuild(guildId, arg1) {
   if (true === arg1) {
     const MOCK_LEVELS = require("GuildPowerupMocks").MOCK_LEVELS;
     const combined = MOCK_LEVELS.concat(require("GuildPowerupMocks").MOCK_PERKS);
-    const obj = {};
-    obj[constants.LEVEL] = require("GuildPowerupMocks").MOCK_LEVELS;
-    obj[constants.PERK] = require("GuildPowerupMocks").MOCK_PERKS;
-    const obj2 = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId, allPowerups: null, powerupCatalog: null };
+    const obj2 = {};
+    obj2[constants.LEVEL] = require("GuildPowerupMocks").MOCK_LEVELS;
+    obj2[constants.PERK] = require("GuildPowerupMocks").MOCK_PERKS;
+    const obj3 = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId, allPowerups: null, powerupCatalog: null };
     let sorted = combined.sort((skuId, skuId2) => {
       let num = -1;
       if (skuId.skuId >= skuId2.skuId) {
@@ -35,12 +35,12 @@ export function fetchPowerupCatalogForGuild(guildId, arg1) {
       }
       return num;
     });
-    obj2.allPowerups = sorted.reduce((acc, skuId) => {
+    obj3.allPowerups = sorted.reduce((acc, skuId) => {
       acc[skuId.skuId] = skuId;
       return acc;
     }, {});
-    obj2.powerupCatalog = obj;
-    DispatcherDefault.dispatch(obj2);
+    obj3.powerupCatalog = obj2;
+    DispatcherDefault.dispatch(obj3);
   } else {
     const request = {
       url: Endpoints.STORE_PUBLISHED_LISTINGS_SKUS,
@@ -48,11 +48,11 @@ export function fetchPowerupCatalogForGuild(guildId, arg1) {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj4 = { application_id, guild_id: guildId };
-    request.query = obj4;
-    const obj5 = require("StoreUtils");
+    const obj5 = { application_id, guild_id: guildId };
+    request.query = obj5;
+    const obj = require("StoreUtils");
     request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
-    const result = obj5.httpGetWithCountryCodeQuery(request);
+    const result = obj.httpGetWithCountryCodeQuery(request);
     return result.then((body) => {
       guildId = body;
       body = body.body;

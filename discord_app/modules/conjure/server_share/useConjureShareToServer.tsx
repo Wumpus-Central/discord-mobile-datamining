@@ -64,7 +64,7 @@ function refreshUntilBotJoins(arg0, arg1) {
                           closure_0 = closure_1_0;
                           closure_1 = tmp7 - 1;
                           let _setTimeout = setTimeout;
-                          let timerId = setTimeout(/* F106684 */ function() { ... }, 1500);
+                          let timerId = setTimeout(/* F109840 */ function() { ... }, 1500);
                         }
                         let obj = closure_2_0(closure_2_2[15]);
                       }
@@ -156,7 +156,7 @@ function isPublishable(id) {
   }
   return canPublishResult;
 }
-let isProjectOwner = fn(7017).isProjectOwner;
+let isProjectOwner = fn(7025).isProjectOwner;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/server_share/useConjureShareToServer.tsx");
@@ -433,10 +433,10 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
   }), items7);
   const items8 = [guild, arg0, arg2];
   const publish = obj4.useCallback(stateFromStores(function*() {
-    if (v3 === 2) {
-      v3 = 3;
+    if (c5 === 2) {
+      c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp5 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -447,47 +447,71 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
       }
     } else {
       try {
-        v3 = 2;
-        if (0 === c1) {
+        c5 = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            v3 = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            v3 = 3;
+            c5 = 3;
             const obj4 = { value, done: true };
             return obj4;
-          } else if (null != closure_1) {
-            if (null != guild) {
-              c2 = 1;
-              const obj5 = { platform: tmp18.platform, guildId: tmp7.id };
-              c1 = 2;
-              v3 = 1;
-              const obj6 = { value: v3(c2[16]).runConjurePublishAction(closure_0, "share", obj5), done: false };
-              return obj6;
+          } else {
+            closure_1 = tmp21;
+            closure_129_0 = undefined;
+            flag = closure_0;
+            if (closure_0 === undefined) {
+              flag = false;
             }
+            closure_129_0 = flag;
+            c4 = 1;
+            c5 = 1;
+            return { value: "Path", done: true };
           }
         } else {
-          if (1 === tmp6) {
-            c2 = 0;
-          } else if (arg0 === 1) {
-            v3 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            c2 = 0;
+          if (1 === tmp7) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            } else if (null != closure_130_1) {
+              if (null != closure_130_8) {
+                c3 = 1;
+                const obj2 = closure_0(tmp3[16]);
+                const obj6 = { platform: closure_130_1.platform, guildId: closure_130_8.id };
+                c4 = 3;
+                c5 = 1;
+                const obj7 = { value: obj2.runConjurePublishAction(closure_130_0, "share", obj6, closure_129_0), done: false };
+                return obj7;
+              }
+            }
+          } else {
+            if (2 === tmp7) {
+              c3 = 0;
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              c3 = 0;
+            }
+            c3 = 0;
+            c5 = 3;
+            const obj = { value, done: true };
+            return obj;
           }
-          c2 = 0;
-          v3 = 3;
-          const obj = { value, done: true };
-          return obj;
+          c5 = 3;
         }
-        v3 = 3;
-      } catch (tmp11) {
-        if (tmp3 === c2) {
-          v3 = tmp2;
-          throw tmp11;
+      } catch (tmp20) {
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp20;
         } else {
-          c1 = tmp;
+          c4 = tmp;
         }
+        tmp21 = c3;
       }
     }
   }), items8);

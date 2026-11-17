@@ -23,6 +23,13 @@ let closure_2 = ApexExperiment.createApexExperiment({
   defaultConfig: { mode: "off" },
   variations: { 0: { mode: "off" }, 1: { mode: "all" }, 2: { mode: "reset_only" } },
 });
+let ApexExperiment = ApexExperiment_mod;
+let closure_3 = ApexExperiment.createApexExperiment({
+  name: "2026-11-checkpoint-intro",
+  kind: "user",
+  defaultConfig: { enabled: false },
+  variations: { 0: { enabled: false }, 1: { enabled: true } },
+});
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointExperiments.tsx");
 
 export function useIsCheckpointEnabled(CheckpointProfileEntrypoint) {
@@ -39,4 +46,7 @@ export function getIsCheckpointCardEnabled(transformCheckpointCardToRowGenerated
 }
 export function useCheckpointQAMode(CheckpointProfileEntrypoint) {
   return closure_2.useConfig({ location: CheckpointProfileEntrypoint }).mode;
+}
+export function useIsCheckpointIntroEnabled(location) {
+  return closure_3.useConfig({ location }).enabled;
 }

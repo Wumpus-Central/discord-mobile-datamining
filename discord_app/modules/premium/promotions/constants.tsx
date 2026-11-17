@@ -27,6 +27,7 @@ export const PromotionTypes = {
 export const RECURRING_PARTNERS = {
   steelseries: { id: "steelseries", label: "SteelSeries" },
   logitech: { id: "logitech", label: "Logitech" },
+  voicemod: { id: "voicemod", label: "Voicemod" },
 };
 export const STEELSERIES_PARTNER_ID = "steelseries";
 export const LOGITECH_PARTNER_ID = "logitech";
@@ -36,6 +37,7 @@ export const RUST_PARTNER_ID = "rust";
 export const BLOONS_PARTNER_ID = "bloons";
 export const BEST_BUY_PARTNER_ID = "best_buy";
 export const CALL_OF_DUTY_PARTNER_ID = "call_of_duty";
+export const VOICEMOD_PARTNER_ID = "voicemod";
 export const DEDICATED_SURFACE_PARTNER_IDS = new Set(items);
 export const RECURRING_3P_PARTNER_ORDER = items1;
 export const FALLBACK_PROMOTION_PRIORITY = 101;

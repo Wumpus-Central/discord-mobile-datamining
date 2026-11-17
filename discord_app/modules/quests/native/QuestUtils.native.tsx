@@ -26,7 +26,7 @@ import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15259, dependencyMap.paths), timestampProducer, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15078, dependencyMap.paths), timestampProducer, {
     questId,
     questContent,
     questContentPosition,
@@ -38,7 +38,7 @@ function viewReward(quest) {
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15259, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15078, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };
@@ -271,7 +271,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
     }
   }
 };
-const QuestConstants = fn(6954);
+const QuestConstants = fn(6962);
 ({
   QuestsExperimentLocations: hasOwnProperty,
   QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_6,
@@ -285,7 +285,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export function openRewardDetailsBottomSheet(questId) {
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10130, dependencyMap.paths), metroImportDefault, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10575, dependencyMap.paths), metroImportDefault, {
     questId: questId.questId,
   });
 }
@@ -302,6 +302,10 @@ export function handleRewardClaimThenView() {
 }
 export function openQuestHome(scrollToQuestId) {
   scrollToQuestId = scrollToQuestId.scrollToQuestId;
+  let scrollToSection = scrollToQuestId.scrollToSection;
+  if (scrollToSection === undefined) {
+    scrollToSection = null;
+  }
   let flag = scrollToQuestId.mergeExistingRoutes;
   if (flag === undefined) {
     flag = false;
@@ -320,19 +324,20 @@ export function openQuestHome(scrollToQuestId) {
   }
   if (obj.getIsEligibleForQuests()) {
     let obj2 = { questId: scrollToQuestId, fromContent };
-    const result = scrollToQuestId(tmp4[20]).setQuestHomeUtmContext(obj2);
-    flag(tmp4[21])();
+    const result = scrollToQuestId(tmp5[20]).setQuestHomeUtmContext(obj2);
+    scrollToSection(tmp5[21])();
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {
       const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
-          const obj2 = { sort, filter, scrollToQuestId: null };
+          const obj2 = { sort, filter, scrollToQuestId: null, scrollToSection: null };
           let str = scrollToQuestId;
           if (scrollToQuestId == null) {
             str = "";
           }
           obj2.scrollToQuestId = str;
+          obj2.scrollToSection = scrollToSection;
           QuestHomeNavigationStore.setState(obj2);
           const obj3 = { screen: UserSettingsSections.QUESTS };
           if (flag) {
@@ -345,7 +350,7 @@ export function openQuestHome(scrollToQuestId) {
         }
       }
     }, 1);
-    const tmp3Result = scrollToQuestId(tmp4[20]);
+    const tmp4Result = scrollToQuestId(tmp5[20]);
   }
 }
 export function isHeroVideoSupported(mimetype) {

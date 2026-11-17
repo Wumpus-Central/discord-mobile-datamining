@@ -34,13 +34,14 @@ import collection_page_marketing_block from "collection_page_marketing_block.tsx
 import game_exit_panel from "game_exit_panel.tsx";
 import announcement_modal_video_led from "announcement_modal_video_led.tsx";
 import announcement_modal_panel from "announcement_modal_panel.tsx";
+import nitro_home_section_header from "nitro_home_section_header.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
 const MessageType = fn(1197).MessageType;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 };
     items[1] = {
       no: 2,
@@ -330,25 +331,34 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
         return require("game_exit_panel").GameExitPanel;
       },
     };
-    obj = { no: 36, name: "announcement_modal_video_led", kind: "message", oneof: "properties", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[34]).AnnouncementModalVideoLed;
-      }
-    }
-    obj.T = T;
-    items[33] = obj;
-    items[34] = {
-      no: 37,
-      name: "announcement_modal_panel",
+    items[33] = {
+      no: 36,
+      name: "announcement_modal_video_led",
       kind: "message",
       oneof: "properties",
       T() {
-        return require("announcement_modal_panel").AnnouncementModalPanel;
+        return require("announcement_modal_video_led").AnnouncementModalVideoLed;
       },
     };
-    items[35] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
-    items[36] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
+    obj = { no: 37, name: "announcement_modal_panel", kind: "message", oneof: "properties", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[35]).AnnouncementModalPanel;
+      }
+    }
+    obj.T = T;
+    items[34] = obj;
+    items[35] = {
+      no: 38,
+      name: "nitro_home_section_header",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("nitro_home_section_header").NitroHomeSectionHeader;
+      },
+    };
+    items[36] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
+    items[37] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", items, T);
     return tmp1;
   }
@@ -858,13 +868,27 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag,
       writeUnknownFields,
     );
   }
+  if ("nitroHomeSectionHeader" === properties.properties.oneofKind) {
+    const NitroHomeSectionHeader = nitro_home_section_header.NitroHomeSectionHeader;
+    const tagResult35 = tag.tag(38, _mod1197.WireType.LengthDelimited);
+    const joined34 = NitroHomeSectionHeader.internalBinaryWrite(
+      properties.properties.nitroHomeSectionHeader,
+      tag.tag(38, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult34 = NitroHomeSectionHeader.internalBinaryWrite(
+      properties.properties.nitroHomeSectionHeader,
+      tag.tag(38, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
   if ("" !== properties.contentIdentifier) {
     tag.tag(3, _mod1197.WireType.LengthDelimited).string(properties.contentIdentifier);
-    const tagResult35 = tag.tag(3, _mod1197.WireType.LengthDelimited);
+    const tagResult36 = tag.tag(3, _mod1197.WireType.LengthDelimited);
   }
   if (false !== properties.isDefaultBase) {
     tag.tag(18, _mod1197.WireType.Varint).bool(properties.isDefaultBase);
-    const tagResult36 = tag.tag(18, _mod1197.WireType.Varint);
+    const tagResult37 = tag.tag(18, _mod1197.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

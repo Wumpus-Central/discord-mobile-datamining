@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   contentContainer: { flex: 1 },
@@ -44,7 +44,7 @@ let result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeMo
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = closure_8();
-  const tmp4 = sharedValue(7400)(arg0);
+  const tmp4 = sharedValue(7410)(arg0);
   _require = tmp4;
   sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
   let obj = require("../../../../_runtime/metro/01655__.js");
@@ -101,10 +101,10 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj7 = { color: tmp2(575).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp13Result = closure_5(tmp5(14493).ArrowSmallLeftIcon, obj7);
+    let tmp13Result = closure_5(tmp5(13358).ArrowSmallLeftIcon, obj7);
   } else {
     const obj8 = { color: tmp2(575).colors.INTERACTIVE_TEXT_DEFAULT };
-    tmp13Result = closure_5(tmp5(7549).XSmallIcon, obj8);
+    tmp13Result = closure_5(tmp5(7559).XSmallIcon, obj8);
   }
   obj6.children = tmp13Result;
   const items4 = [closure_5(require("Pressables").PressableOpacity, obj6), ,];
@@ -126,7 +126,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj13.onScroll = callback;
   obj13.centerContent = true;
-  obj12.children = closure_5(sharedValue(15971), obj13);
+  obj12.children = closure_5(sharedValue(16008), obj13);
   items6[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
   obj3.children = items6;
   return closure_6(View, obj3);

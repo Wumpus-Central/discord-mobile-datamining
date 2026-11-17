@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/useConjurePublishButton.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4131 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4133 from "../intl/ConjureUntranslated.messages.js";
 import useConjurePublishActionDefault from "useConjurePublishAction.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ function publishButtonText(upToDate, arg1) {
     return arg1;
   } else if (null == upToDate) {
     const intl2 = util.intl;
-    let label = intl2.string(_modDef4131["120EFN"]);
+    let label = intl2.string(_modDef4133["120EFN"]);
   } else {
     let tmp = null != upToDate && upToDate.upToDate;
     if (tmp) {
@@ -23,7 +23,7 @@ function publishButtonText(upToDate, arg1) {
     if (tmp) {
       if (!upToDate.publishing) {
         const intl = util.intl;
-        label = intl.string(_modDef4131.kAfbEN);
+        label = intl.string(_modDef4133.kAfbEN);
       }
     }
     label = upToDate.label;
@@ -87,6 +87,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, arg3) {
     text: null,
     label: null,
     indicator: null,
+    pendingChanges: null,
   };
   let tmp12 = null != tmp7 && tmp7.upToDate;
   if (tmp12) {
@@ -122,5 +123,19 @@ export default function useConjurePublishButton(arg0, guildId, busy, arg3) {
     tmp13 = str3;
   }
   obj2.indicator = tmp13;
+  let tmp16 = null != tmp7;
+  if (tmp16) {
+    let isUpdate = tmp7.isUpdate;
+    if (!isUpdate) {
+      const status = tmp7.status;
+      let publishState;
+      if (status != null) {
+        publishState = status.publishState;
+      }
+      isUpdate = "not_live" === publishState;
+    }
+    tmp16 = isUpdate;
+  }
+  obj2.pendingChanges = tmp16;
   return obj2;
 }

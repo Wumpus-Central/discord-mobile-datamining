@@ -28,17 +28,17 @@ function GameProfileWebsiteLink(action) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(10213).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(10396).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(9479).PlatformType.DESKTOP] = fn(10467).ScreenIcon;
-obj.mobile = fn(7786).MobilePhoneIcon;
-obj[fn(9479).PlatformType.XBOX] = fn(10308).XboxNeutralIcon;
-obj[fn(9479).PlatformType.PLAYSTATION] = fn(10469).PlaystationNeutralIcon;
-obj[fn(9479).PlatformType.NINTENDO] = fn(10471).NintendoSwitchNeutralIcon;
-obj[fn(9479).PlatformType.ROBLOX] = fn(10298).RobloxNeutralIcon;
-const createStyles = fn(5306);
+obj[fn(9489).PlatformType.DESKTOP] = fn(10522).ScreenIcon;
+obj.mobile = fn(7796).MobilePhoneIcon;
+obj[fn(9489).PlatformType.XBOX] = fn(10418).XboxNeutralIcon;
+obj[fn(9489).PlatformType.PLAYSTATION] = fn(10524).PlaystationNeutralIcon;
+obj[fn(9489).PlatformType.NINTENDO] = fn(10526).NintendoSwitchNeutralIcon;
+obj[fn(9489).PlatformType.ROBLOX] = fn(10408).RobloxNeutralIcon;
+const createStyles = fn(5310);
 let obj3 = {
   container: { gap: nativeDefault.space.PX_8 },
   headerText: null,
@@ -161,7 +161,7 @@ export default function GameProfileDetails(game) {
             }
             if (length.length <= 0) {
               const mapped3 = gameProfileLinks.map((item) =>
-                trackAction(10475)(item, trackAction(575).colors.ICON_SUBTLE),
+                trackAction(10530)(item, trackAction(575).colors.ICON_SUBTLE),
               );
               const found = mapped3.filter((item) => null != item);
               if (found.length > 0) {
@@ -207,7 +207,7 @@ export default function GameProfileDetails(game) {
                   obj = {
                     size: "md",
                     color: trackAction(575).colors.ICON_SUBTLE,
-                    accessibilityLabel: game(10474).getGameProfilePlatformText(item),
+                    accessibilityLabel: game(10529).getGameProfilePlatformText(item),
                   };
                   return closure_1_8(closure_1_10[item], obj, item);
                 }),

@@ -4,8 +4,8 @@ import _modDef2070 from "../../../_runtime/metro/02070__.js";
 import MarkupReactRulesDefault from "MarkupReactRules.native.tsx";
 import MarkupRulesDefault from "MarkupRules.tsx";
 import combineMarkupRules_mod from "combineMarkupRules.tsx";
-import MarkupParser_mod from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
-import MarkupUtils from "MarkupUtils.tsx";
+import MarkupParser from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
+import MarkupUtils_mod from "MarkupUtils.tsx";
 import apply from "../../../_runtime/00012_apply.js";
 
 let combineMarkupRules = combineMarkupRules_mod;
@@ -13,16 +13,16 @@ const items = [
   MarkupRulesDefault.PROFILE_BIO_RULES,
   MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }),
 ];
-const MarkupReactRules = fn(6048);
+const MarkupReactRules = fn(6059);
 items[2] = MarkupReactRules.createFetchingGameMentionRule();
 const importDefaultResultResult = combineMarkupRules(items);
 let c2 = importDefaultResultResult;
 let closure_3 = new privDefault({ max: 2000 });
 let closure_4 = { allowGameMentions: true };
-let MarkupParser = MarkupParser_mod;
 let closure_5 = MarkupParser.reactParserFor(importDefaultResultResult);
+let MarkupUtils = MarkupUtils_mod;
 let closure_6 = MarkupUtils.astParserFor(importDefaultResultResult);
-let MarkupParser = MarkupParser_mod;
+let MarkupUtils = MarkupUtils_mod;
 let combineMarkupRules = combineMarkupRules_mod;
 const items1 = [
   apply.omit(importDefaultResultResult, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
@@ -86,4 +86,4 @@ export function parseBioReactWithCachedAST(description, guildId) {
     return obj3.reactFor(_modDef2070.ruleOutput(importDefaultResultResult, "react"))(value);
   }
 }
-export const parseBioReactWithoutScrolling = MarkupParser.reactParserFor(combineMarkupRules(items1));
+export const parseBioReactWithoutScrolling = MarkupUtils.reactParserFor(combineMarkupRules(items1));

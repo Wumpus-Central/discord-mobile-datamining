@@ -13,7 +13,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = "body-md/semibold";
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   row: { flexDirection: "row", gap: 4, alignItems: "center" },
   everyone: {
@@ -28,7 +28,7 @@ let obj = {
   gradient: null,
   image: null,
 };
-let prop = fn(5919).TextStyleSheet["body-md/semibold"];
+let prop = fn(5923).TextStyleSheet["body-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;
@@ -164,7 +164,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                     c1 = 1;
                     c2 = 1;
                     const obj6 = {
-                      value: tmp2(12492).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                      value: tmp2(12691).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                       done: false,
                     };
                     return obj6;
@@ -305,7 +305,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
     if (null != prop) {
       const obj23 = {
         size: tmp5(onMoveUp[25]).Icon.Sizes.REFRESH_SMALL_16,
-        source: require("../../../../../_runtime/metro/11265__.js"),
+        source: require("../../../../../_runtime/metro/11968__.js"),
         "aria-label": null,
         style: null,
       };

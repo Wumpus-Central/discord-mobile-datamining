@@ -17,7 +17,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const FamilyCenterConstants = fn(8741);
+const FamilyCenterConstants = fn(8752);
 ({
   FamilyCenterSubPages: closure_6,
   UserLinkStatus: metroImportDefault,
@@ -25,12 +25,12 @@ const FamilyCenterConstants = fn(8741);
 } = FamilyCenterConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, UserSettingsSections: closure_10 } = Constants);
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const modal = "modal";
-let closure_15 = fn(5139).DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
-const createStyles = fn(5306);
+let closure_15 = fn(5143).DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
+const createStyles = fn(5310);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, illustration: null, title: null, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.illustration = { alignItems: "center", paddingTop: nativeDefault.space.PX_12 };
@@ -107,7 +107,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       );
       const tmp2Result3 = ModalDispatchQueueDefault;
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20370, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20418, dependencyMap.paths));
       const tmp2Result4 = ModalActionCreatorsDefault;
     }
   }, items2);

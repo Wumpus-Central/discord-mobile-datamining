@@ -21,12 +21,12 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "description",
+  guildId: "ip",
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "channelId",
-  source: 1895895544,
+  hasMediaOptions: "channel_id",
+  source: 1895895543,
   incrementableActions: 8,
 };
 const values = Object.values(obj);

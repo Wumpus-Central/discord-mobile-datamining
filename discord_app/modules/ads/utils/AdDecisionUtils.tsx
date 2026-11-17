@@ -47,24 +47,24 @@ export function getDeliveredBounty(creative) {
   }
   return bounty;
 }
-export function getDeliveredPlayable(creative) {
+export function getDeliveredPlayable(creative2) {
   let type;
-  if (creative != null) {
-    type = creative.type;
+  if (creative2 != null) {
+    type = creative2.type;
   }
   let playable = null;
   if (type === AdCreativeType.AdCreativeType.PLAYABLE) {
-    playable = creative.playable;
+    playable = creative2.playable;
   }
   return playable;
 }
-export function isAdDecisionValid(stateFromStores) {
+export function isAdDecisionValid(fetchedAt) {
   let timestamp = arg1;
   if (arg1 === undefined) {
     const _Date = Date;
     timestamp = Date.now();
   }
-  return null != stateFromStores && stateFromStores.fetchedAt + stateFromStores.ttlMillis >= timestamp;
+  return null != fetchedAt && fetchedAt.fetchedAt + fetchedAt.ttlMillis >= timestamp;
 }
 export function resolveResponseTtl(responseTtlSeconds) {
   if (null == responseTtlSeconds) {

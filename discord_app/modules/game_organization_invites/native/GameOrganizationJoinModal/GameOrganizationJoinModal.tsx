@@ -3,7 +3,7 @@ import NavigatorHeader from "../../../../design/components/Navigator/native/Navi
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const GameOrganizationJoinModalConstants = fn(14074);
+const GameOrganizationJoinModalConstants = fn(12898);
 const GameOrganizationJoinScenes = GameOrganizationJoinModalConstants.GameOrganizationJoinScenes;
 let closure_3 = GameOrganizationJoinModalConstants.closeGameOrganizationJoinModal;
 const jsx = fn(21).jsx;
@@ -17,12 +17,12 @@ const result = size.fileFinishedImporting(
 export default function GameOrganizationJoinModal(code) {
   code = code.code;
   items = [code];
-  const navigatorScreens = code(7490).useNavigatorScreens(() => {
+  const navigatorScreens = code(7500).useNavigatorScreens(() => {
     let obj = {};
     const obj2 = {
       headerLeft: NavigatorHeader.getHeaderCloseButton(closure_3),
       render() {
-        return jsx(code(14075).ViewStep, { code });
+        return jsx(code(12899).ViewStep, { code });
       },
     };
     obj[GameOrganizationJoinScenes.VIEW] = obj2;
@@ -35,7 +35,7 @@ export default function GameOrganizationJoinModal(code) {
         character = character.character;
       }
       obj.character = character;
-      return jsx(code(14080).AcceptStep, { code, character: null });
+      return jsx(code(12904).AcceptStep, { code, character: null });
     };
     obj[GameOrganizationJoinScenes.ACCEPT] = obj4;
     return obj;
@@ -49,7 +49,7 @@ export default function GameOrganizationJoinModal(code) {
   };
   const intl = code(1113).intl;
   obj2.headerBackTitle = intl.string(code(1113).t["13/7kX"]);
-  return jsx(code(14098).StepModal, {
+  return jsx(code(12934).StepModal, {
     screens: navigatorScreens,
     initialRouteName: GameOrganizationJoinScenes.VIEW,
     steps: items,

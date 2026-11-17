@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default function openGameOrganizationJoinOutcomeActionSheet(code, result) {
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14094, dependencyMap.paths), closure_3, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12918, dependencyMap.paths), closure_3, {
     code,
     result,
   });

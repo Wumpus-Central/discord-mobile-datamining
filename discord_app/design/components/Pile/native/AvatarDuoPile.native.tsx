@@ -1,7 +1,7 @@
 // discord_app/design/components/Pile/native/AvatarDuoPile.native.tsx
 import ClipView from "../../Icon/native/ClipView.tsx";
-import ListUtils from "../../../../utils/ListUtils.tsx";
 import Pile from "Pile.native.tsx";
+import ListUtils from "../../../../utils/ListUtils.tsx";
 import CutoutableAvatarImage from "../../../void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

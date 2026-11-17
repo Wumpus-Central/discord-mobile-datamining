@@ -19,6 +19,6 @@ export default function GuildPowerupsBoostToUnlockCoachmark(powerup) {
     }),
     items,
   );
-  markAsDismissed(18890)(targetRef, guildId, memo);
+  markAsDismissed(18931)(targetRef, guildId, memo);
   return null;
 }

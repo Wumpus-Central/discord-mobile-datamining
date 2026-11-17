@@ -112,7 +112,7 @@ let closure_6 = async function _fetchDetectableGames() {
     }
   }
 };
-let closure_5 = fn(12709).detectableGamesPayloadCdnUrl;
+let closure_5 = fn(12858).detectableGamesPayloadCdnUrl;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/fetchDetectableGames.tsx");
 

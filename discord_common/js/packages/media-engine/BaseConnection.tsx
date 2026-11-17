@@ -2,13 +2,13 @@
 import VideoQualityManager from "VideoQualityManager.tsx";
 import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer.tsx";
 import discord_common_BaseConnectionEvent from "BaseConnectionEvent.tsx";
-import _modDef6104 from "../../../../_runtime/metro/06104__.js";
-import flatRestDefault from "../../../../_runtime/06133_flatRest.js";
+import _modDef6111 from "../../../../_runtime/metro/06111__.js";
+import flatRestDefault from "../../../../_runtime/06140_flatRest.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import TypedEventEmitter from "../../shared/utils/TypedEventEmitter.tsx";
 
 require = fn;
-const Constants = fn(6065);
+const Constants = fn(6072);
 ({
   ConnectionStates: closure_4,
   DEFAULT_VOICE_BITRATE: hasOwnProperty,
@@ -39,6 +39,7 @@ class BaseConnection extends tmp3 {
     tmp4.videoSupported = false;
     tmp4.useElectronVideo = false;
     tmp4.spatialAudioEnabled = false;
+    tmp4.spatialAudioActive = false;
     tmp4.voiceBitrate = DEFAULT_VOICE_BITRATE;
     tmp4.remoteSinkWantsMaxFramerate = VIDEO_QUALITY_FRAMERATE;
     set = new Set();
@@ -133,7 +134,7 @@ prototype["setRemoteAudioHistory"] = function setRemoteAudioHistory(arg0) {};
 prototype["setQualityDecoupling"] = function setQualityDecoupling(arg0) {};
 prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(arg0) {};
 prototype["getStreamParameters"] = function getStreamParameters() {
-  return _modDef6104(this.videoStreamParameters);
+  return _modDef6111(this.videoStreamParameters);
 };
 prototype["setExperimentFlag"] = function setExperimentFlag(arg0, arg1) {
   const experimentFlags = this.experimentFlags;
@@ -158,7 +159,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(React6) {
   }
   const result = self.applyQualityConstraints({}, self.videoStreamParameters[num].ssrc);
   ({ quality, constraints } = result);
-  const tmp2 = _modDef6104(self.videoStreamParameters);
+  const tmp2 = _modDef6111(self.videoStreamParameters);
   if (null != quality) {
     ({ bitrateMax: tmp2[num].maxBitrate, bitrateMin: tmp2[num].minBitrate, bitrateTarget } = quality);
     if (bitrateTarget == null) {
@@ -212,7 +213,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(React6) {
       tmp6 = tmp11;
     } while (num2 < self.videoStreamParameters.length);
   }
-  tmp5.streamParameters = _modDef6104(self.videoStreamParameters);
+  tmp5.streamParameters = _modDef6111(self.videoStreamParameters);
   const prop = self.videoStreamParameters;
   items = [
     ...prop.map((maxPixelCount) => {
@@ -390,6 +391,17 @@ prototype["setSpatialAudioEnabled"] = function setSpatialAudioEnabled(arg0) {
   }
   self.spatialAudioEnabled = tmp;
 };
+prototype["getSpatialAudioActive"] = function getSpatialAudioActive() {
+  return this.spatialAudioActive;
+};
+prototype["setSpatialAudioActive"] = function setSpatialAudioActive(arg0) {
+  const self = this;
+  let tmp = arg0;
+  if (arg0) {
+    tmp = self.context === constants3.DEFAULT;
+  }
+  self.spatialAudioActive = tmp;
+};
 prototype["setCalcMaxBitrateFunc"] = function setCalcMaxBitrateFunc(calcMaxBitrateFunc) {
   this.calcMaxBitrateFunc = calcMaxBitrateFunc;
 };
@@ -401,4 +413,4 @@ let size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
 
 export default BaseConnection;
-export const BaseConnectionEvent = fn(6103).BaseConnectionEvent;
+export const BaseConnectionEvent = fn(6110).BaseConnectionEvent;

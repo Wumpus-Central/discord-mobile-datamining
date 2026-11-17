@@ -6,20 +6,20 @@ import ProfileCustomizationNavigationStore from "../../../profile_customization/
 const require = globalThis.__r;
 
 const require = fn;
-const findNodeHandle = fn(17).findNodeHandle;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx",
 );
 
-export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
-  _require = arg0;
-  dependencyMap = arg1;
-  noop = noop.useRef({});
+export default function useScrollToUserProfileEditFormSection(animatedRef, field, tabsBarHeight) {
+  _require = animatedRef;
+  dependencyMap = field;
+  noop = tabsBarHeight;
   noop.useRef(false);
-  items = [stateFromStores];
-  stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores.useReducedMotion);
-  const items1 = [arg0, stateFromStores];
+  const ref = noop.useRef({});
+  items = [ref];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ref.useReducedMotion);
+  const items1 = [animatedRef, stateFromStores, tabsBarHeight];
   const callback = noop.useCallback((arg0) => {
     let current = ref2.current;
     if (!current) {
@@ -29,15 +29,26 @@ export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
       ref2.current = true;
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        closure_3.current = false;
-        const tmp = findNodeHandle(ref.current);
-        if (null != tmp) {
+        closure_4.current = false;
+        let current = ref.current;
+        let innerViewRef;
+        if (current != null) {
+          innerViewRef = current.getInnerViewRef();
+        }
+        if (null != innerViewRef) {
           if (obj != null) {
-            obj.measureLayout(tmp, (x, y) => {
+            obj.measureLayout(innerViewRef, (arg0, arg1) => {
+              let num;
+              if (closure_1_2 != null) {
+                num = closure_1_2.get();
+              }
+              if (num == null) {
+                num = 0;
+              }
               const current = ref.current;
               if (current != null) {
-                const point = { x, y, animated: !closure_1_4 };
-                current.scrollTo(point);
+                const obj2 = { y: tmp, animated: !closure_1_5 };
+                current.scrollTo(obj2);
               }
             });
           }
@@ -51,7 +62,7 @@ export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
       callback(tmp);
     }
   });
-  const items2 = [arg1, callback];
+  const items2 = [field, callback];
   return noop.useCallback((arg0, arg1) => {
     if (null != arg1) {
       ref.current[arg0] = arg1;

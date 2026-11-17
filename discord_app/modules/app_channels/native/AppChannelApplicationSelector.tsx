@@ -51,7 +51,7 @@ export default function AppChannelApplicationSelector(guildId) {
     handlePress = function handlePress() {
       const obj = ActionSheetActionCreatorsDefault;
       obj.openLazy(
-        asyncRequireImpl(8152, dependencyMap.paths),
+        asyncRequireImpl(8163, dependencyMap.paths),
         AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY,
         { guildId, channelId, selectedApplicationId, onChange },
       );

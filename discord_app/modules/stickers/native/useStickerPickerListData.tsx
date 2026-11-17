@@ -5,8 +5,8 @@ import age_gate_AgeGateUtils from "../../age_gate/native/AgeGateUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let useStickerPickerStore = fn(11360).useStickerPickerStore;
-const StickerPickerConstants = fn(11244);
+let useStickerPickerStore = fn(12049).useStickerPickerStore;
+const StickerPickerConstants = fn(11949);
 ({
   MIN_MARGIN: hasOwnProperty,
   ROW_HEIGHT: closure_6,
@@ -15,7 +15,7 @@ const StickerPickerConstants = fn(11244);
 } = StickerPickerConstants);
 const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
 let closure_9 = LABEL_HEIGHT + 2 * fn(1228).PADDING_VERTICAL;
-let closure_10 = fn(11270).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(11270).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+let closure_10 = fn(11973).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(11973).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
 
@@ -39,14 +39,13 @@ export default function useStickerPickerListData(containerWidth) {
         flag = false;
       }
       if (true === arg2) {
-        const obj = { type: null, stickersByRow: null };
-        obj.type = obj.NSFW;
-        obj.stickersByRow = [];
-        items3.push(obj);
+        const obj2 = { type: obj.NSFW, stickersByRow: [] };
+        items3.push(obj2);
         num2.push(1);
       } else {
         const found = nitroLocked.filter((format_type) => items1.includes(format_type.format_type));
-        const chunkResult = applyDefault.chunk(found, mapped2);
+        obj = applyDefault;
+        const chunkResult = obj.chunk(found, mapped2);
         const obj3 = { type: obj.STICKERS, stickersByRow: chunkResult };
         items3.push(obj3);
         num2.push(chunkResult.length);

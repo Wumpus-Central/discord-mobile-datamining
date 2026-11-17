@@ -54,8 +54,8 @@ function syncEmojis(id, emojis, setPartition) {
     }
   }
 }
-const TypeTag = fn(5171).TypeTag;
-const LibdiscoreStore = fn(5178).LibdiscoreStore;
+const TypeTag = fn(5175).TypeTag;
+const LibdiscoreStore = fn(5182).LibdiscoreStore;
 class RawGuildEmojiStore extends LibdiscoreStore {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -72,7 +72,7 @@ prototype["getGuildEmojis"] = function getGuildEmojis(guildId) {
   return database.getNullablePartition(guildId);
 };
 RawGuildEmojiStore.displayName = "RawGuildEmojiStore";
-const LibdiscoreBatchStoreRefactorExperiment = fn(5181).LibdiscoreBatchStoreRefactorExperiment;
+const LibdiscoreBatchStoreRefactorExperiment = fn(5185).LibdiscoreBatchStoreRefactorExperiment;
 const rawGuildEmojiStore = new RawGuildEmojiStore(
   {
     LOGOUT(arg0, clear) {

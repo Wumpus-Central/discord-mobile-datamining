@@ -1,12 +1,14 @@
 // discord_app/modules/guild_space/gaming_leaderboard/useActiveLeaderboardWinnerData.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
+import canUseGuildSpace from "../canUseGuildSpace.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
 
-const require = fn;
-let closure_3 = 14 * DurationsDefault.Millis.DAY;
-let closure_4 = 8 * DurationsDefault.Millis.DAY;
+require = fn;
+let closure_4 = 14 * DurationsDefault.Millis.DAY;
+let closure_5 = 8 * DurationsDefault.Millis.DAY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/useActiveLeaderboardWinnerData.tsx");
 
@@ -81,15 +83,15 @@ export function getActiveLeaderboardWinnerData(prop) {
   }
   return tmp3;
 }
-export function getActiveLeaderboardLeaderData(prop1) {
+export function getActiveLeaderboardLeaderData(prop) {
   let timestamp = arg1;
   if (arg1 === undefined) {
     const _Date = Date;
     timestamp = Date.now();
   }
   let tmp3 = null;
-  if (null != prop1) {
-    const currentLeaderWeek = prop1.currentLeaderWeek;
+  if (null != prop) {
+    const currentLeaderWeek = prop.currentLeaderWeek;
     let flag = false;
     if (null != currentLeaderWeek) {
       const _Date2 = Date;
@@ -104,7 +106,7 @@ export function getActiveLeaderboardLeaderData(prop1) {
     }
     tmp3 = null;
     if (flag) {
-      tmp3 = prop1;
+      tmp3 = prop;
     }
   }
   return tmp3;
@@ -155,7 +157,7 @@ export function useActiveLeaderboardLeaderData(guildId, userId) {
 export function useHasActiveLeaderboardBadge(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  items = [GuildMemberStore];
+  items = [GuildMemberStore, GuildStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(
     items,
@@ -163,58 +165,66 @@ export function useHasActiveLeaderboardBadge(arg0, arg1) {
       if (null == closure_0) {
         return false;
       } else {
-        const member = GuildMemberStore.getMember(tmp, closure_1);
-        let prop;
-        if (member != null) {
-          prop = member.gamingLeaderboardData;
-        }
-        const _Date = Date;
-        let tmp5 = null;
-        if (null != prop) {
-          const winningWeek = prop.winningWeek;
-          let flag = false;
-          if (null != winningWeek) {
-            const _Date2 = Date;
-            const parsed = Date.parse(winningWeek);
-            const _isNaN = isNaN;
-            const isNaNResult = isNaN(parsed);
-            let tmp9 = !isNaNResult;
-            if (!isNaNResult) {
-              tmp9 = tmp4 - parsed <= tmp6;
+        guild = GuildStore.getGuild(closure_0);
+        if (null != guild) {
+          const obj = canUseGuildSpace;
+          if (obj.isGuildSpaceVisible(guild, obj2.isGuildSpaceAdmin(guild))) {
+            const member = GuildMemberStore.getMember(closure_0, closure_1);
+            let prop;
+            if (member != null) {
+              prop = member.gamingLeaderboardData;
             }
-            flag = tmp9;
-          }
-          tmp5 = null;
-          if (flag) {
-            tmp5 = prop;
-          }
-        }
-        let tmp10 = null != tmp5;
-        if (!tmp10) {
-          const _Date3 = Date;
-          let tmp12 = null;
-          if (null != prop) {
-            const currentLeaderWeek = prop.currentLeaderWeek;
-            let flag2 = false;
-            if (null != currentLeaderWeek) {
-              const _Date4 = Date;
-              const parsed1 = Date.parse(currentLeaderWeek);
-              const _isNaN2 = isNaN;
-              const isNaNResult1 = isNaN(parsed1);
-              let tmp16 = !isNaNResult1;
-              if (!isNaNResult1) {
-                tmp16 = tmp11 - parsed1 <= tmp13;
+            const _Date = Date;
+            let tmp8 = null;
+            if (null != prop) {
+              const winningWeek = prop.winningWeek;
+              let flag = false;
+              if (null != winningWeek) {
+                const _Date2 = Date;
+                const parsed = Date.parse(winningWeek);
+                const _isNaN = isNaN;
+                const isNaNResult = isNaN(parsed);
+                let tmp12 = !isNaNResult;
+                if (!isNaNResult) {
+                  tmp12 = tmp7 - parsed <= tmp9;
+                }
+                flag = tmp12;
               }
-              flag2 = tmp16;
+              tmp8 = null;
+              if (flag) {
+                tmp8 = prop;
+              }
             }
-            tmp12 = null;
-            if (flag2) {
-              tmp12 = prop;
+            let tmp13 = null != tmp8;
+            if (!tmp13) {
+              const _Date3 = Date;
+              let tmp15 = null;
+              if (null != prop) {
+                const currentLeaderWeek = prop.currentLeaderWeek;
+                let flag2 = false;
+                if (null != currentLeaderWeek) {
+                  const _Date4 = Date;
+                  const parsed1 = Date.parse(currentLeaderWeek);
+                  const _isNaN2 = isNaN;
+                  const isNaNResult1 = isNaN(parsed1);
+                  let tmp19 = !isNaNResult1;
+                  if (!isNaNResult1) {
+                    tmp19 = tmp14 - parsed1 <= tmp16;
+                  }
+                  flag2 = tmp19;
+                }
+                tmp15 = null;
+                if (flag2) {
+                  tmp15 = prop;
+                }
+              }
+              tmp13 = null != tmp15;
             }
+            return tmp13;
           }
-          tmp10 = null != tmp12;
+          obj2 = canUseGuildSpace;
         }
-        return tmp10;
+        return false;
       }
     },
     items1,

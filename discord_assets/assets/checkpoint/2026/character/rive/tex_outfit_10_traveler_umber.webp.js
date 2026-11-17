@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_10_traveler_umber.webp.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/bcecdc6f144b54dd85e5bd8178cb72efdd2d010743d562b126c08611344c894e.webp";
-export const metadata = { fileBytes: 27558 };
+export default "https://cdn.discordapp.com/assets/content/c77f5b341cc51464d2078950802b3b458317ec72cb61070a7f28f447eb5147fb.webp";
+export const metadata = { fileBytes: 69944 };

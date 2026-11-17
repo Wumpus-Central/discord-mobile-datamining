@@ -8,8 +8,8 @@ import DiceRollStore from "DiceRollStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const INITIAL_STATE = fn(14569).INITIAL_STATE;
-const DiceRollConstants = fn(11415);
+const INITIAL_STATE = fn(13443).INITIAL_STATE;
+const DiceRollConstants = fn(11125);
 ({
   AFTER_ROLL_DELAY_MS: metroImportDefault,
   ALLOWED_DICE_SIDES_SET: closure_8,
@@ -18,7 +18,7 @@ const DiceRollConstants = fn(11415);
   MAX_DICE_COUNT: closure_11,
   ROLL_DURATION_MS: closure_12,
 } = DiceRollConstants);
-const MessageSendLocation = fn(5311).MessageSendLocation;
+const MessageSendLocation = fn(5315).MessageSendLocation;
 class DiceRollLifecycleManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

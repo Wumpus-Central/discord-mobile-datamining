@@ -13,6 +13,10 @@ export default {
   getState() {
     return AppStateStore.getState();
   },
+  useState() {
+    items = [AppStateStore];
+    return initialize.useStateFromStores(items, () => state.getState());
+  },
   useCanUIRequestGatewaySocket() {
     items = [AppStateStore];
     return initialize.useStateFromStores(items, () => "active" === state.getState());

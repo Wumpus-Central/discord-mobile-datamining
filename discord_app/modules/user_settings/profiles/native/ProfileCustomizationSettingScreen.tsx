@@ -30,16 +30,18 @@ const View = fn(17).View;
 const ProfileCustomizationSubsection = fn(1082).ProfileCustomizationSubsection;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
+const RootNavigatorScreen = fn(10043).RootNavigatorScreen;
+const UserProfileSections = fn(8490).UserProfileSections;
 const jsxProd = fn(21);
-({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5306);
+({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
+const createStyles = fn(5310);
 let obj = {
   container: { height: "100%" },
   controls: { paddingTop: 4 },
   page: { flex: 1 },
   profileSelector: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
-let closure_20 = createStyles.createStyles(obj);
+let closure_22 = createStyles.createStyles(obj);
 let items = [
   {
     renderLabel() {
@@ -49,7 +51,7 @@ let items = [
     id: "edit-user-profile",
     renderPage(arg0) {
       ({ autoFocusElement, initialTab } = arg0);
-      return closure_1_17(UserSettingsEditUserProfileDefault, { autoFocusElement, initialTab });
+      return closure_1_19(UserSettingsEditUserProfileDefault, { autoFocusElement, initialTab });
     },
     subSection: ProfileCustomizationSubsection.USER_PROFILE,
   },
@@ -60,7 +62,7 @@ let items = [
     },
     id: "edit-user-profiles-guilds",
     renderPage() {
-      return closure_1_17(UserSettingsEditGuildProfileDefault, {});
+      return closure_1_19(UserSettingsEditGuildProfileDefault, {});
     },
     subSection: ProfileCustomizationSubsection.GUILD,
   },
@@ -74,7 +76,7 @@ let obj4 = {
   id: "edit-user-profile",
   renderPage(arg0) {
     ({ autoFocusElement, initialTab } = arg0);
-    return closure_1_17(UserSettingsEditUserProfileDefault, { autoFocusElement, initialTab });
+    return closure_1_19(UserSettingsEditUserProfileDefault, { autoFocusElement, initialTab });
   },
   subSection: ProfileCustomizationSubsection.USER_PROFILE,
 };
@@ -84,23 +86,23 @@ let result = size.fileFinishedImporting("modules/user_settings/profiles/native/P
 export default noop.memo(function ProfileCustomizationSettingScreen() {
   let tmp = token;
   let obj = first;
-  token(first[19])();
-  const tmp3 = closure_20();
+  token(first[23])();
+  const tmp3 = closure_22();
   const isMobileWidgetEditingEnabled = require("MobileWidgetEditingExperiment").useIsMobileWidgetEditingEnabled(
     "ProfileCustomizationSettingScreen",
   );
   _require = isMobileWidgetEditingEnabled;
   let obj2 = require("MobileWidgetEditingExperiment");
-  token = require("useToken").useToken(token(first[13]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  token = require("useToken").useToken(token(first[15]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let obj3 = require("useToken");
-  const tmp7 = token(first[23])();
+  const tmp7 = token(first[27])();
   const width = tmp7.width;
   let num = 0;
   ({ ref, onLayout } = tmp7);
   if (undefined !== width) {
     num = width;
   }
-  const tmp8 = handleSubmit(noop.useState(false), 2);
+  let tmp8 = handleSubmit(noop.useState(false), 2);
   first = tmp8[0];
   closure_3 = tmp8[1];
   let obj4 = require("native");
@@ -128,7 +130,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
   const tmp4Result6 = require("useSettingNavigationRoute");
   const obj6 = { items: mapped, pageWidth: num, defaultIndex: null, onPageChange: null, onPageChangeStart: null };
   let num2 = 0;
-  if (field === id.GUILD) {
+  if (field === callback1.GUILD) {
     num2 = 1;
   }
   obj6.defaultIndex = num2;
@@ -149,11 +151,11 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
     });
   };
   const segmentedControlState = require("SegmentedControlState").useSegmentedControlState(obj6);
-  const tmp20 = tmp(obj[28])();
+  const tmp20 = tmp(obj[32])();
   handleSubmit = tmp20.handleSubmit;
   const tmp21 = field(tmp20, closure_3);
   noop = tmp21;
-  const tmp22 = tmp(obj[29])();
+  const tmp22 = tmp(obj[33])();
   ({ guild, handleSubmit: handleSubmit2 } = tmp22);
   const tmp4Result7 = require("SegmentedControlState");
   const tmp23 = field(tmp22, closure_4);
@@ -183,22 +185,67 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
     }
     return tmp2;
   }, items1);
-  const items2 = [field];
+  const items2 = [onSave];
+  callback1 = obj5.useCallback(
+    nativeStackNavigation(function* () {
+      closure_0 = tmp2;
+      closure_128_0 = (function hasPendingBoardChangesOnBoardTab() {
+        state = state.getState();
+        let hasUnsavedChangesResult = state.subsection === constants.USER_PROFILE;
+        if (hasUnsavedChangesResult) {
+          hasUnsavedChangesResult = "board" === tmp2;
+        }
+        if (hasUnsavedChangesResult) {
+          hasUnsavedChangesResult = closure_1_12.hasUnsavedChanges();
+        }
+        return hasUnsavedChangesResult;
+      })();
+      yield callback();
+      closure_128_1 = value;
+      let tmp8 = true === closure_128_1;
+      if (tmp8) {
+        tmp8 = closure_128_0;
+      }
+      if (tmp8) {
+        (function selectYouScreenBoardTab() {
+          const rootNavigationRef = closure_1_0(dependencyMap[21]).getRootNavigationRef();
+          if (null != rootNavigationRef) {
+            if (rootNavigationRef.isReady()) {
+              const routes = rootNavigationRef.getRootState().routes;
+              const found = routes.find((name) => name.name === constants.YOU);
+              if (null != found) {
+                const obj2 = {};
+                const CommonActions = closure_1_0(dependencyMap[22]).CommonActions;
+                const obj3 = { initialTab: constants2.WIDGETS };
+                const merged = Object.assign(CommonActions.setParams(obj3));
+                obj2.source = found.key;
+                rootNavigationRef.dispatch(obj2);
+              }
+            }
+          }
+          const obj = closure_1_0(dependencyMap[21]);
+        })();
+      }
+      return closure_128_1;
+    }),
+    items2,
+  );
+  const items3 = [field];
   const effect = obj5.useEffect(() => {
     AppAnalyticsUtilsDefault.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, {
       settings_type: "user",
       subsection: field,
       destination_pane: constants2.SETTINGS_CUSTOMIZE_PROFILE,
     });
-  }, items2);
+  }, items3);
   const tmp4Result8 = require("initialize");
-  const items3 = [onSave];
-  const items4 = [hasUnsavedChanges, onSave];
+  const items4 = [onSave];
+  const items5 = [hasUnsavedChanges, onSave];
   const stateFromStores = require("initialize").useStateFromStores(
-    items3,
+    items4,
     () => callback.getFlattenedGuildIds().length > 0,
   );
-  const callback1 = obj5.useCallback(
+  const callback2 = obj5.useCallback(
     (onContinue) =>
       maybeShowUnsavedChangesAlertDefault({
         location: "ProfileCustomizationSettingScreen",
@@ -207,44 +254,47 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
         onContinue,
         onSave,
       }),
-    items4,
+    items5,
   );
-  const callback2 = obj5.useCallback(() => {
+  const callback3 = obj5.useCallback(() => {
     closure_1_4(true);
     ProfileCustomizationNavigationStore.setState({ subsection: ProfileCustomizationSubsection.USER_PROFILE });
   }, []);
-  id = undefined;
-  const callback3 = obj5.useCallback((id) => {
+  let id;
+  const callback4 = obj5.useCallback((id) => {
     closure_1_4(true);
     GuildIdentityActionCreators.setCurrentGuild(id.id);
-    ProfileCustomizationNavigationStore.setState({ subsection: ProfileCustomizationSubsection.GUILD });
+    ProfileCustomizationNavigationStore.setState({
+      subsection: ProfileCustomizationSubsection.GUILD,
+      editingTab: "main",
+    });
   }, []);
   if (guild != null) {
     id = guild.id;
   }
-  const items5 = [id];
+  const items6 = [id];
   const effect1 = obj5.useEffect(() => {
     if (null != id) {
       const guildIdentitySettings = GuildIdentityActionCreators.initGuildIdentitySettings(tmp);
     }
-  }, items5);
+  }, items6);
   const effect2 = obj5.useEffect(
     () => () => {
-      const result = closure_1_0(7800).resetAndCloseUserProfileForm();
+      const result = closure_1_0(7810).resetAndCloseUserProfileForm();
       hasUnsavedChanges.resetState();
-      const obj = closure_1_0(7800);
-      token(12093).clearPendingWidgets();
+      const obj = closure_1_0(7810);
+      token(10825).clearPendingWidgets();
     },
     [],
   );
-  const items6 = [
+  const items7 = [
     token,
     nativeStackNavigation,
     isMobileWidgetEditingEnabled,
     hasUnsavedChanges,
     hasInvalidWidgetChanges,
     tmp21.isSubmitting || tmp23.isSubmitting,
-    onSave,
+    callback1,
   ];
   const layoutEffect = obj5.useLayoutEffect(() => {
     let obj = { contentStyle: { backgroundColor: token }, headerShadowVisible: false };
@@ -253,7 +303,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
       let intl = util.intl;
       obj3.title = intl.string(util.t.s5vZlQ);
       obj3.headerLeft = function headerLeft() {
-        return closure_2_17(token(first[33]), { navigation, hideBadge: true });
+        return closure_2_19(token(first[37]), { navigation, hideBadge: true });
       };
       let obj4 = obj3;
     } else {
@@ -261,11 +311,11 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
     }
     const merged = Object.assign(obj4);
     obj.headerRight = closure_12
-      ? () => closure_1_17(closure_1_0(first[34]).HeaderSubmittingIndicator, {})
+      ? () => closure_1_19(closure_1_0(first[38]).HeaderSubmittingIndicator, {})
       : () => {
           let obj = { text: null, disabled: null, onPress: null };
-          const intl = closure_0(first[14]).intl;
-          obj.text = intl.string(closure_0(first[14]).t["R3BPH+"]);
+          const intl = closure_0(first[16]).intl;
+          obj.text = intl.string(closure_0(first[16]).t["R3BPH+"]);
           let tmp2 = !hasUnsavedChanges;
           if (hasUnsavedChanges) {
             tmp2 = hasInvalidWidgetChanges;
@@ -299,7 +349,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
                     closure_0 = tmp4;
                     c1 = 1;
                     c2 = 1;
-                    const obj4 = { value: onSave(), done: false };
+                    const obj4 = { value: callback1(), done: false };
                     return obj4;
                   }
                 } else if (arg0 === 1) {
@@ -322,11 +372,11 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
               }
             }
           });
-          return closure_2_17(closure_0(first[35]).HeaderActionButton, obj);
+          return closure_2_19(closure_0(first[39]).HeaderActionButton, obj);
         };
     nativeStackNavigation.setOptions(obj);
     let obj2 = { backgroundColor: token };
-  }, items6);
+  }, items7);
   const tmp4Result9 = require("initialize");
   if (hasUnsavedChanges) {
     let isWaitingForHexagonCampaignEnrollment = !tmp25;
@@ -348,69 +398,69 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
         onContinue() {
           return nativeStackNavigation.dispatch(action);
         },
-        onSave,
+        onSave: callback1,
       };
-      token(first[27])(obj);
+      token(first[31])(obj);
     }
   });
-  const items7 = [first, nativeStackNavigation];
+  const items8 = [first, nativeStackNavigation];
   const effect3 = obj5.useEffect(() => {
     if (first) {
       nativeStackNavigation.goBack();
     }
-  }, items7);
-  let tmp40Result = null;
+  }, items8);
+  let tmp41Result = null;
   if (stateFromStores) {
     const obj7 = { theme: obj4.useThemeContext().theme, children: null };
     const obj8 = { style: tmp3.profileSelector, children: null };
-    let tmp43 = null;
-    if (tmp36) {
-      tmp43 = guild;
+    let tmp44 = null;
+    if (tmp37) {
+      tmp44 = guild;
     }
     const obj9 = { children: null };
-    const obj10 = { guild: tmp43, onBeforeOpen: callback1, onSelectMainProfile: callback2, onSelectGuild: callback3 };
-    obj8.children = closure_17(tmp(obj[38]), obj10);
-    obj9.children = closure_17(handleSubmit2, obj8);
-    obj7.children = closure_17(tmp4(obj[37]).DisableCustomTheme, obj9);
-    tmp40Result = closure_17(tmp4(obj[22]).ThemeContextProvider, obj7);
-    const tmpResult = tmp(obj[38]);
+    const obj10 = { guild: tmp44, onBeforeOpen: callback2, onSelectMainProfile: callback3, onSelectGuild: callback4 };
+    obj8.children = closure_19(tmp(obj[41]), obj10);
+    obj9.children = closure_19(handleSubmit2, obj8);
+    obj7.children = closure_19(tmp4(obj[40]).DisableCustomTheme, obj9);
+    tmp41Result = closure_19(tmp4(obj[26]).ThemeContextProvider, obj7);
+    const tmpResult = tmp(obj[41]);
   }
   const obj11 = { style: tmp3.container, ref, onLayout, children: null };
   const obj12 = { style: null, children: null };
   if (isMobileWidgetEditingEnabled) {
     obj12.style = tmp3.page;
-    if (tmp36) {
-      tmp = tmp(obj[16]);
-      obj = { header: tmp40Result, showGuildSelector: false };
-      let tmp44Result = closure_17(tmp, obj);
+    if (tmp37) {
+      tmp = tmp(obj[18]);
+      obj = { header: tmp41Result, showGuildSelector: false };
+      let tmp45Result = closure_19(tmp, obj);
     } else {
-      const obj13 = { header: tmp40Result, autoFocusElement: null, initialTab: null };
-      let tmp49;
-      if (!tmp11) {
-        tmp49 = autoFocusElement;
-      }
-      obj13.autoFocusElement = tmp49;
+      const obj13 = { header: tmp41Result, autoFocusElement: null, initialTab: null };
       let tmp50;
       if (!tmp11) {
-        tmp50 = initialTab;
+        tmp50 = autoFocusElement;
       }
-      obj13.initialTab = tmp50;
-      tmp44Result = closure_17(tmp(obj[15]), obj13);
-      const tmpResult2 = tmp(obj[15]);
+      obj13.autoFocusElement = tmp50;
+      let tmp51;
+      if (!tmp11) {
+        tmp51 = initialTab;
+      }
+      obj13.initialTab = tmp51;
+      tmp45Result = closure_19(tmp(obj[17]), obj13);
+      const tmpResult2 = tmp(obj[17]);
     }
-    obj12.children = tmp44Result;
-    closure_17(handleSubmit2, obj12);
+    obj12.children = tmp45Result;
+    closure_19(handleSubmit2, obj12);
   } else {
     const obj14 = { children: null };
     obj12.style = tmp3.controls;
     const obj15 = { state: segmentedControlState };
-    obj12.children = closure_17(tmp4(obj[39]).Tabs, obj15);
-    const items8 = [closure_17(handleSubmit2, obj12)];
+    obj12.children = closure_19(tmp4(obj[42]).Tabs, obj15);
+    const items9 = [closure_19(handleSubmit2, obj12)];
     const obj16 = { state: segmentedControlState };
-    items8[1] = closure_17(tmp4(obj[40]).SegmentedControlPages, obj16);
-    obj14.children = items8;
-    obj11.children = closure_19(closure_18, obj14);
-    return closure_17(handleSubmit2, obj11);
+    items9[1] = closure_19(tmp4(obj[43]).SegmentedControlPages, obj16);
+    obj14.children = items9;
+    obj11.children = closure_21(closure_20, obj14);
+    return closure_19(handleSubmit2, obj11);
   }
   const tmp4Result10 = require("Link");
 });

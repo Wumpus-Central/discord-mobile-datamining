@@ -9,7 +9,7 @@ require = fn;
 function cacheBustParam() {
   return "x=" + Math.floor(new Date().getMinutes() / 5);
 }
-const ChangelogPlatforms = fn(5208).ChangelogPlatforms;
+const ChangelogPlatforms = fn(5212).ChangelogPlatforms;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ChangeLogActionCreators.tsx");
 

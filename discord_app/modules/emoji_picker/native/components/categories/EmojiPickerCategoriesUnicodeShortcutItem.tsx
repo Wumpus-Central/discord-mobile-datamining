@@ -3,8 +3,8 @@ import util from "../../../../../intl/index.native.tsx";
 import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
-import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon.tsx";
 import cheapWorkletShallowEqual from "../../../../reanimated/native/cheapWorkletShallowEqual.tsx";
+import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ EXPRESSION_FOOTER_HEIGHT: closure_6, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
 let size = {
   justifyContent: "center",

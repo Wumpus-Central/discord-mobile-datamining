@@ -68,14 +68,14 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = closure_29();
   let SMALL = dependencyMap;
-  const notifCenterV2MessagePreviewParser = message_channel_id(6331).getNotifCenterV2MessagePreviewParser(
+  const notifCenterV2MessagePreviewParser = message_channel_id(6339).getNotifCenterV2MessagePreviewParser(
     closure_27(),
     closure_28,
     roleStyle,
   );
   const intl = item(1113).intl;
   const stringResult = intl.string(item(1113).t.BOi07B);
-  const obj = message_channel_id(6331);
+  const obj = message_channel_id(6339);
   let message = item.message;
   let num;
   if (message != null) {
@@ -127,11 +127,11 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(9282)(first);
+    const tmp15 = guild_id(9291)(first);
     let result = stringResult;
     if (null != tmp15) {
-      result = tmp2(8861).formatPollResultNotificationCenterText(tmp15);
-      const tmp2Result = tmp2(8861);
+      result = tmp2(8872).formatPollResultNotificationCenterText(tmp15);
+      const tmp2Result = tmp2(8872);
     }
   } else if (stickers.length > 0) {
     const intl6 = tmp2(1113).intl;
@@ -245,17 +245,17 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(8646).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
+  const items5 = [item(8657).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj5.children = items5;
-    items3[1] = closure_22(tmp2(5919).Text, obj5);
+    items3[1] = closure_22(tmp2(5923).Text, obj5);
     obj3.children = items3;
     return closure_22(closure_7, obj3);
   } else {
     const obj7 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11857);
+      let tmp29 = guild_id(12338);
       const obj8 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1187).IconSizes.SMALL;
       obj8.size = SMALL;
@@ -266,12 +266,12 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(13072);
+        tmp29 = guild_id(11730);
       }
     }
-    tmp29 = guild_id(11392);
+    tmp29 = guild_id(12081);
   }
-  const tmp2Result10 = item(8646);
+  const tmp2Result10 = item(8657);
 }
 function ApplicationName(applicationId) {
   applicationId = applicationId.applicationId;
@@ -325,36 +325,36 @@ const Constants = fn(1072);
   MessageTypes: closure_18,
   EMPTY_STRING_SNOWFLAKE_ID: closure_19,
 } = Constants);
-const NotificationTypes = fn(6837).NotificationTypes;
+const NotificationTypes = fn(6832).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
-let createStyles = fn(5306);
+let createStyles = fn(5310);
 let obj = { strong: null };
 let obj3 = {};
-const merged = Object.assign(fn(5919).TextStyleSheet["body-md/medium"]);
+const merged = Object.assign(fn(5923).TextStyleSheet["body-md/medium"]);
 obj3.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj3;
 let closure_24 = createStyles.createStyles(obj);
-createStyles = fn(5306);
+createStyles = fn(5310);
 let obj4 = { strong: null };
 let obj6 = {};
-const merged1 = Object.assign(fn(5919).TextStyleSheet["body-md/medium"]);
+const merged1 = Object.assign(fn(5923).TextStyleSheet["body-md/medium"]);
 obj6.color = nativeDefault.colors.TEXT_MUTED;
 obj4.strong = obj6;
 let closure_25 = createStyles.createStyles(obj4);
-createStyles = fn(5306);
+createStyles = fn(5310);
 let obj7 = {
   mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND },
 };
 let closure_26 = createStyles.createStyles(obj7);
-createStyles = fn(5306);
+createStyles = fn(5310);
 let obj10 = { mention: null };
 let obj9 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
 obj10.mention = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
 let closure_27 = createStyles.createStyles(obj10);
 let closure_28 = { channelMentionText: "heading-sm/medium" };
-createStyles = fn(5306);
+createStyles = fn(5310);
 let obj13 = {
   container: { flex: 1 },
   row: null,
@@ -612,15 +612,15 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(19246).deleteNotificationCenterItem(tmp3);
+        yield tmp3(19291).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };
           const intl = tmp3(1113).intl;
           obj7.text = intl.string(tmp3(1113).t.WDxhvB);
-          rowIndex(6005).open("REMOVE_NOTIFICATION_ERROR", obj7);
+          rowIndex(6009).open("REMOVE_NOTIFICATION_ERROR", obj7);
           c4 = 3;
-          rowIndex(6005);
+          rowIndex(6009);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -862,6 +862,7 @@ export const ForYouItems = noop.memo(function ForYouItemsWrapped(loadMore) {
     flag = false;
   }
   let onPressLoad;
+  let chatDockHeight;
   const tmp = closure_29();
   closure_9 = tmp;
   const NotificationCenterAckedBeforeId = loadMore(onSoftAckItem[54]).NotificationCenterAckedBeforeId;
@@ -969,17 +970,22 @@ export const ForYouItems = noop.memo(function ForYouItemsWrapped(loadMore) {
   if (undefined !== height) {
     num = height;
   }
-  let obj3 = { style: tmp.container, ref, onLayout, children: null };
-  let tmp17 = !nestedInLaunchPad;
+  let obj2 = loadMore(onSoftAckItem[25]);
+  let obj3 = suggestedFriendAdded;
+  chatDockHeight = loadMore(onSoftAckItem[68]).useChatDockHeight();
+  const items7 = [chatDockHeight];
+  let obj4 = { style: tmp.container, ref, onLayout, children: null };
+  let tmp19 = !nestedInLaunchPad;
+  const memo = obj3.useMemo(() => ({ paddingBottom: chatDockHeight }), items7);
   if (!nestedInLaunchPad) {
-    let obj4 = { scrollRef: ref1 };
-    tmp17 = closure_21(ScrollToTopRef, obj4);
+    let obj5 = { scrollRef: ref1 };
+    tmp19 = closure_21(ScrollToTopRef, obj5);
   }
-  const items7 = [tmp17];
-  let obj5 = {
+  const items8 = [tmp19];
+  let obj6 = {
     ref: ref1,
     data: items,
-    ListEmptyComponent: closure_21(loadMore(onSoftAckItem[69]).ForYouEmptyState, { height: num }),
+    ListEmptyComponent: closure_21(loadMore(onSoftAckItem[70]).ForYouEmptyState, { height: num }),
     onScroll,
     refreshControl: closure_21(flag, {
       onRefresh: callback2,
@@ -993,8 +999,9 @@ export const ForYouItems = noop.memo(function ForYouItemsWrapped(loadMore) {
     onEndReachedThreshold: 0.8,
     ListFooterComponent: closure_21(ForYouFooter, { loading: loadingMore }),
     viewabilityConfig,
+    contentContainerStyle: memo,
   };
-  items7[1] = closure_21(loadMore(onSoftAckItem[68]).FlashList, obj5);
-  obj3.children = items7;
-  return closure_22(onAddSuggestionAnimationFinish, obj3);
+  items8[1] = closure_21(loadMore(onSoftAckItem[69]).FlashList, obj6);
+  obj4.children = items8;
+  return closure_22(onAddSuggestionAnimationFinish, obj4);
 });

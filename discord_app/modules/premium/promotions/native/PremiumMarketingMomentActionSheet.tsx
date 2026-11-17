@@ -9,10 +9,10 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AnalyticsPages = fn(1072).AnalyticsPages;
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   container: {
     display: "flex",
@@ -76,7 +76,7 @@ export default function PremiumMarketingMomentActionSheet(markAsDismissed) {
   if (button != null) {
     buttonAction = button.buttonAction;
   }
-  const items2 = [buttonAction, , , ,];
+  const items2 = [buttonAction, , , , ,];
   let button2 = bottomSheetData.button;
   value = undefined;
   if (button2 != null) {
@@ -93,8 +93,14 @@ export default function PremiumMarketingMomentActionSheet(markAsDismissed) {
     }
   }
   items2[2] = value2;
-  items2[3] = callback;
-  items2[4] = analyticsLocations;
+  let button4 = bottomSheetData.button;
+  let giftModalDestination;
+  if (button4 != null) {
+    giftModalDestination = button4.giftModalDestination;
+  }
+  items2[3] = giftModalDestination;
+  items2[4] = callback;
+  items2[5] = analyticsLocations;
   const items3 = [callback];
   const callback1 = analyticsLocations.useCallback(() => {
     callback(ContentDismissActionType.PRIMARY);
@@ -107,6 +113,7 @@ export default function PremiumMarketingMomentActionSheet(markAsDismissed) {
       buttonAction,
       applicationId: null,
       shopCollectionId: null,
+      giftModalDestination: null,
       analyticsLocations: null,
       analyticsPage: null,
     };
@@ -126,6 +133,12 @@ export default function PremiumMarketingMomentActionSheet(markAsDismissed) {
       }
     }
     obj2.shopCollectionId = value2;
+    const button4 = bottomSheetData.button;
+    let giftModalDestination;
+    if (button4 != null) {
+      giftModalDestination = button4.giftModalDestination;
+    }
+    obj2.giftModalDestination = giftModalDestination;
     obj2.analyticsLocations = analyticsLocations;
     obj2.analyticsPage = AnalyticsPages.PREMIUM_MARKETING_MOMENT_ACTION_SHEET;
     PremiumMarketingButtonActions.getButtonActionHandler(obj2)();
@@ -154,17 +167,17 @@ export default function PremiumMarketingMomentActionSheet(markAsDismissed) {
     size.src = { videoURI: null, uri: null };
     size.style = tmp.video;
     size.paused = stateFromStores;
-    let tmp14Result = closure_8(tmp5(promotionId[16]), size);
+    let tmp15Result = closure_8(tmp5(promotionId[16]), size);
     const obj7 = { videoURI: null, uri: null };
   } else {
     const obj8 = { source: null, style: null, resizeMode: "contain" };
     const obj9 = { uri: bottomSheetData.assetUrl };
     obj8.source = obj9;
     obj8.style = tmp.image;
-    tmp14Result = closure_8(tmp5(promotionId[17]), obj8);
+    tmp15Result = closure_8(tmp5(promotionId[17]), obj8);
   }
   const items4 = [
-    tmp14Result,
+    tmp15Result,
     closure_8(markAsDismissed(promotionId[18]).Text, {
       style: tmp.header,
       color: "mobile-text-heading-primary",
@@ -175,8 +188,8 @@ export default function PremiumMarketingMomentActionSheet(markAsDismissed) {
   ];
   const obj12 = { style: tmp.body, color: "text-default", variant: "body-sm/normal", children: null };
   const items5 = [copy.body, " "];
-  let tmp14Result2 = null != helpArticleLink;
-  if (tmp14Result2) {
+  let tmp15Result2 = null != helpArticleLink;
+  if (tmp15Result2) {
     const obj13 = {
       color: "text-link",
       variant: "body-sm/normal",
@@ -186,9 +199,9 @@ export default function PremiumMarketingMomentActionSheet(markAsDismissed) {
       },
       children: helpArticleLink.linkText,
     };
-    tmp14Result2 = closure_8(tmp2(promotionId[18]).Text, obj13);
+    tmp15Result2 = closure_8(tmp2(promotionId[18]).Text, obj13);
   }
-  items5[2] = tmp14Result2;
+  items5[2] = tmp15Result2;
   obj12.children = items5;
   items4[2] = closure_9(markAsDismissed(promotionId[18]).Text, obj12);
   const obj14 = { style: tmp.buttonContainer, children: null };

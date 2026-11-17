@@ -3,10 +3,10 @@ import ActivityTypes from "../../../../discord_common/js/shared/shared-constants
 import GameControllerIcon2 from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
+import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import ActivityStatusIconDefault from "ActivityStatusIcon.tsx";
 import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
 import ActivityStatusTextDefault from "ActivityStatusText.tsx";
-import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import getActivityStatusTextDefault from "../getActivityStatusText.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 

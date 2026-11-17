@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/linked_apps/native/ConjureLinkedAppsTab.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4131 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4133 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AlertModal from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import ConjureLinkedAppBuildSheetDefault from "ConjureLinkedAppBuildSheet.tsx";
@@ -40,7 +40,7 @@ function SettingRow(onBuildChange) {
   };
   return closure_4(require("TableRow").TableRow, obj);
 }
-const canPublishProject = fn(7017).canPublishProject;
+const canPublishProject = fn(7025).canPublishProject;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ConjureLinkedAppSheet = "ConjureLinkedAppSheet";
@@ -62,9 +62,9 @@ export default function ConjureLinkedAppsTab(linkedApps) {
     let obj3 = { variant: "body-xs/semibold", color: "text-muted", accessibilityRole: "header", children: null };
     let intl = tmp2(1113).intl;
     let obj4 = { name: linkedApps.name };
-    obj3.children = intl.formatToPlainString(tmp4(4131).uLPdNT, obj4);
+    obj3.children = intl.formatToPlainString(tmp4(4133).uLPdNT, obj4);
     items = [
-      c4(tmp2(5919).Text, obj3),
+      c4(tmp2(5923).Text, obj3),
       callers.map((project_id) => {
         project_id = project_id.project_id;
         const name = tmp;
@@ -135,11 +135,11 @@ export default function ConjureLinkedAppsTab(linkedApps) {
             onConfirm: null,
           };
           const intl = util.intl;
-          obj2.title = intl.formatToPlainString(_modDef4131.zSfIvv, { name });
+          obj2.title = intl.formatToPlainString(_modDef4133.zSfIvv, { name });
           const intl2 = util.intl;
-          obj2.content = intl2.formatToPlainString(_modDef4131["7TX+mR"], { name });
+          obj2.content = intl2.formatToPlainString(_modDef4133["7TX+mR"], { name });
           const intl3 = util.intl;
-          obj2.confirmText = intl3.string(_modDef4131.vDZEGQ);
+          obj2.confirmText = intl3.string(_modDef4133.vDZEGQ);
           obj2.onConfirm = function onConfirm() {
             return _undefined2(closure_0);
           };
@@ -163,7 +163,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
       }),
     ];
     obj2.children = items;
-    tmpResult = tmp(tmp2(6327).Stack, obj2);
+    tmpResult = tmp(tmp2(6335).Stack, obj2);
   }
   let items1 = [tmpResult, ,];
   let tmpResult2 = null;
@@ -172,9 +172,9 @@ export default function ConjureLinkedAppsTab(linkedApps) {
     let obj6 = { variant: "body-xs/semibold", color: "text-muted", accessibilityRole: "header", children: null };
     let intl2 = tmp2(1113).intl;
     let obj7 = { name: linkedApps.name };
-    obj6.children = intl2.formatToPlainString(tmp4(4131).L3Bf1s, obj7);
+    obj6.children = intl2.formatToPlainString(tmp4(4133).L3Bf1s, obj7);
     const items2 = [
-      c4(tmp2(5919).Text, obj6),
+      c4(tmp2(5923).Text, obj6),
       targets.map((project_id) => {
         project_id = project_id.project_id;
         const linkedAppTargetSidesResult = linkedApps(_undefined[12]).linkedAppTargetSides(project_id, project_id);
@@ -239,14 +239,14 @@ export default function ConjureLinkedAppsTab(linkedApps) {
       }),
     ];
     obj5.children = items2;
-    tmpResult2 = tmp(tmp2(6327).Stack, obj5);
+    tmpResult2 = tmp(tmp2(6335).Stack, obj5);
   }
   items1[1] = tmpResult2;
   if (!failed) {
     if (!linkedApps.saved) {
       items1[2] = null;
       obj.children = items1;
-      return tmp(linkedApps(6327).Stack, obj);
+      return tmp(linkedApps(6335).Stack, obj);
     }
   }
   let str = "text-muted";
@@ -271,7 +271,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
   }
   obj8.accessibilityLiveRegion = str3;
   let intl3 = tmp2(1113).intl;
-  const tmp4Result = onOpenSettings(4131);
+  const tmp4Result = onOpenSettings(4133);
   obj8.children = intl3.string(failed ? tmp4Result.dIEOrl : tmp4Result["/d6saK"]);
-  c4(linkedApps(5919).Text, obj8);
+  c4(linkedApps(5923).Text, obj8);
 }

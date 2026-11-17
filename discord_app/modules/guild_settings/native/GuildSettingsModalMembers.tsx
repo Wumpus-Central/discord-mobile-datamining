@@ -25,8 +25,8 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let items = [fn(10247).AutocompleterResultTypes.USER];
-const createStyles = fn(5306);
+let items = [fn(10680).AutocompleterResultTypes.USER];
+const createStyles = fn(5310);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
   searchFieldContainer: null,
@@ -58,10 +58,10 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     let formatToPlainStringResult;
     if (found.length > 0) {
       const user = UserStore.getUser(guildMember.userId);
-      let str = guildMember(6341).getNickname(guild.id, undefined, user);
+      let str = guildMember(6349).getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(5362).getGlobalName(user);
-        const tmp9Result = tmp9(5362);
+        str = tmp9(5366).getGlobalName(user);
+        const tmp9Result = tmp9(5366);
       }
       if (str == null) {
         let username;
@@ -78,7 +78,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
       const intl = tmp2(1113).intl;
       const obj3 = { memberName: str, roleNames: joined };
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1113).t["6eGpWx"], obj3);
-      const obj2 = guildMember(6341);
+      const obj2 = guildMember(6349);
       tmp9 = guildMember;
     }
     const obj4 = {
@@ -104,7 +104,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(10929), obj4);
+    return closure_15(guildMember(15158), obj4);
   }
   const obj = guild(1502);
 });
@@ -306,12 +306,12 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { source: closure_1_1(8437), accessibilityLabel: null, ref: null };
+            const obj = { source: closure_1_1(8448), accessibilityLabel: null, ref: null };
             const intl = closure_1_0(1113).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1113).t.ogxXGq);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_15(closure_1_0(7427).HeaderActionButton, obj);
+            return closure_1_15(closure_1_0(7437).HeaderActionButton, obj);
           },
         });
       },

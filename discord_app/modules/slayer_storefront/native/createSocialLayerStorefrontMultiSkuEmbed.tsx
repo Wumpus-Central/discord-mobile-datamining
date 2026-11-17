@@ -8,8 +8,8 @@ import SocialLayerStorefrontStore from "../SocialLayerStorefrontStore.tsx";
 
 require = fn;
 const ThemeTypes = fn(1072).ThemeTypes;
-const InviteTypes = fn(8842).InviteTypes;
-const CodedLinkExtendedType = fn(11891).CodedLinkExtendedType;
+const InviteTypes = fn(8853).InviteTypes;
+const CodedLinkExtendedType = fn(11091).CodedLinkExtendedType;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/createSocialLayerStorefrontMultiSkuEmbed.tsx",
@@ -19,9 +19,9 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
   let application;
   ({ skuIds, guildOrApplication } = arg0);
   const isEligibleForSocialLayerStorefrontMobileEmbed = application(
-    12435,
+    12641,
   ).getIsEligibleForSocialLayerStorefrontMobileEmbed({ location: "create_coded_link_embeds", autoTrackExposure: true });
-  let obj = application(12435);
+  let obj = application(12641);
   if (isEligibleForSocialLayerStorefrontMobileEmbed) {
     if (
       obj2.getIsEligibleForSocialLayerStorefrontMobileMultiSkuEmbed({
@@ -40,7 +40,7 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
         application = ApplicationStore.getApplication(storefront.applicationId);
         if (null != application) {
           if (isSocialLayerApplicationDefault(application)) {
-            const result = tmp(12434).normalizeStorefrontSkuIds(skuIds);
+            const result = tmp(12640).normalizeStorefrontSkuIds(skuIds);
             const flatMapResult = result.flatMap((skuId) => {
               value = SKUStore.get(skuId);
               if (null != value) {
@@ -64,19 +64,19 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
               }
               const obj3 = {};
               let merged = Object.assign(getEmbedThemeColorsDefault(ThemeTypes.DARK).baseColors);
-              obj3.backgroundColor = tmp(15578).getSocialLayerStorefrontEmbedColors(ThemeTypes.DARK).backgroundColor;
+              obj3.backgroundColor = tmp(15612).getSocialLayerStorefrontEmbedColors(ThemeTypes.DARK).backgroundColor;
               obj3.extendedType = CodedLinkExtendedType.SOCIAL_LAYER_STOREFRONT_MULTI_SKU_EMBED;
               obj3.type = InviteTypes.GUILD;
               obj3.headerText = storefront.title;
               let assetURL;
               if (null != lightThemeLogoAssetId) {
-                assetURL = tmp(6756).getAssetURL(application.id, lightThemeLogoAssetId, 128);
-                const tmpResult5 = tmp(6756);
+                assetURL = tmp(6764).getAssetURL(application.id, lightThemeLogoAssetId, 128);
+                const tmpResult5 = tmp(6764);
               }
               obj3.headerLogoUrl = assetURL;
-              const tmpResult4 = tmp(15578);
+              const tmpResult4 = tmp(15612);
               const socialLayerStorefrontBackgroundImageURL =
-                tmp(7244).getSocialLayerStorefrontBackgroundImageURL(storefront);
+                tmp(7253).getSocialLayerStorefrontBackgroundImageURL(storefront);
               obj3.headerBackgroundImageUrl = socialLayerStorefrontBackgroundImageURL;
               const _HermesInternal = HermesInternal;
               obj3.headerAccessibilityLabel = "" + application.name + " " + storefront.title;
@@ -85,7 +85,7 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
               obj3.embedCanBeTapped = true;
               return obj3;
             }
-            const tmpResult = tmp(12434);
+            const tmpResult = tmp(12640);
           }
         }
         return null;

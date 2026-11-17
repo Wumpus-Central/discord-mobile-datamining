@@ -5,6 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const obj = { User: 1, [1]: "User", Installation: 2, [2]: "Installation", Guild: 3, [3]: "Guild" };
 const result = size.fileFinishedImporting("../discord_common/js/packages/apex/ApexTypes.tsx");
 
+export const INSTALLATION_UNIT_ID = "__installation__";
 export const UnitType = obj;
 export const UnitTypeToKind = { [obj.User]: "user", [obj.Installation]: "installation", [obj.Guild]: "guild" };
 export const ExperimentFlags = {

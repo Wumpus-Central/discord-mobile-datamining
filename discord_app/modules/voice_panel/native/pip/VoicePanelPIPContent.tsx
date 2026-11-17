@@ -5,12 +5,12 @@ import useWindowDimensions from "../../../screen/useWindowDimensions.native.tsx"
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import EmbeddedActivityOrientationLockState from "../../../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05883_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05887_LinearGradient.js";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
+import VideoRendererNativeComponentDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/VideoRendererNativeComponent.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoicePanelCardLayoutManager from "../card/VoicePanelCardLayoutManager.tsx";
-import VideoRendererNativeComponentDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/VideoRendererNativeComponent.tsx";
 import useUserTileBackgroundDefault from "../card/useUserTileBackground.tsx";
 import VideoActionCreators from "../../../media/VideoActionCreators.tsx";
 import VoicePanelPIPUtils from "VoicePanelPIPUtils.tsx";
@@ -53,17 +53,19 @@ function markContentReady() {
 function InnerStroke(style) {
   style = style.style;
   let height;
+  noop = undefined;
   const size = style(height[25]).usePIPState();
   const width = size.width;
   height = size.height;
+  const isDockEnabled = noop.useContext(width(height[20])).isDockEnabled;
   const tmp = closure_23();
-  const innerStroke = tmp;
+  noop = tmp;
   const obj2 = { style: null };
-  items = [width, height, tmp.innerStroke, style];
+  items = [width, height, isDockEnabled, tmp.innerStroke, style];
   let obj = style(height[25]);
   obj2.style = noop.useMemo(() => {
     items = [innerStroke.innerStroke, ,];
-    const obj = { borderRadius: VoicePanelPIPUtils.getVoicePanelPIPBorderRadius(width, height) + 1 };
+    const obj = { borderRadius: VoicePanelPIPUtils.getVoicePanelPIPBorderRadius(width, height, isDockEnabled) + 1 };
     items[1] = obj;
     items[2] = style;
     return items;
@@ -530,7 +532,7 @@ function User(participantId) {
     let tmp46Result = null;
     if (null != user1) {
       const obj8 = {
-        source: tmp3(9516).getCachedSourceFromURI(user1.getAvatarURL(guildId, 80, false)),
+        source: tmp3(9528).getCachedSourceFromURI(user1.getAvatarURL(guildId, 80, false)),
         size: null,
         avatarDecoration: null,
       };
@@ -542,10 +544,10 @@ function User(participantId) {
       }
       obj8.avatarDecoration = userAvatarDecoration;
       tmp46Result = closure_21(tmp3(1187).Avatar, obj8);
-      const tmp3Result12 = tmp3(9516);
+      const tmp3Result12 = tmp3(9528);
     }
     obj7.children = tmp46Result;
-    items18[1] = closure_21(tmp6(7722), obj7);
+    items18[1] = closure_21(tmp6(7732), obj7);
     const obj9 = { style: tmp.userOpacity };
     items18[2] = closure_21(InnerStroke, obj9);
     let tmp46Result2 = null;
@@ -553,16 +555,16 @@ function User(participantId) {
       tmp46Result2 = null;
       if (consumedRequestToRespondToSeriousThermalState) {
         const obj10 = { style: tmp.thermalAlertIconContainer, children: null };
-        const obj11 = { style: tmp.thermalAlertIcon, source: tmp6(12834), color: tmp.thermalAlertIcon.color };
+        const obj11 = { style: tmp.thermalAlertIcon, source: tmp6(11444), color: tmp.thermalAlertIcon.color };
         obj10.children = closure_21(tmp3(1187).Icon, obj11);
-        tmp46Result2 = closure_21(tmp6(7722), obj10);
-        const tmp6Result6 = tmp6(7722);
+        tmp46Result2 = closure_21(tmp6(7732), obj10);
+        const tmp6Result6 = tmp6(7732);
       }
     }
     items18[3] = tmp46Result2;
     obj3.children = items18;
     tmp53 = obj3;
-    const tmp6Result5 = tmp6(7722);
+    const tmp6Result5 = tmp6(7732);
   }
   return closure_22(NativeViewDefault, tmp53);
 }
@@ -609,7 +611,7 @@ function Stream(participantId) {
   let callback2;
   ({ layoutTransition, onStreamReady } = participantId);
   let tmp = closure_23();
-  const mode = participantId(11995).usePIPState().mode;
+  const mode = participantId(12437).usePIPState().mode;
   closure_129_0 = transitionState;
   closure_129_1 = transitionCleanUp;
   items = [transitionState, transitionCleanUp];
@@ -642,10 +644,10 @@ function Stream(participantId) {
       };
     }
   }, items);
-  let tmp5 = transitionState === participantId(5367).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
-  const context = obj2.useContext(mode(11984));
+  let tmp5 = transitionState === participantId(5371).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
+  const context = obj2.useContext(mode(12427));
   ({ channelId: c2, layoutManager } = context);
-  let obj = participantId(11995);
+  let obj = participantId(12437);
   const items1 = [callback2];
   const stateFromStoresObject = participantId(563).useStateFromStoresObject(items1, () => {
     const participant = ChannelRTCStore.getParticipant(c2, participantId);
@@ -672,11 +674,11 @@ function Stream(participantId) {
   });
   video = stateFromStoresObject.streamId;
   const tmp2Result = participantId(563);
-  const surfaceDirectRendererExperiment = participantId(6187).useSurfaceDirectRendererExperiment(
+  const surfaceDirectRendererExperiment = participantId(6195).useSurfaceDirectRendererExperiment(
     stateFromStoresObject.userId,
     { location: "VoicePanelPIPContent.Stream" },
   );
-  const tmp2Result3 = participantId(6187);
+  const tmp2Result3 = participantId(6195);
   const items2 = [ApplicationStreamingStore];
   const stateFromStores = participantId(563).useStateFromStores(items2, () => {
     const activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(participantId);
@@ -746,9 +748,9 @@ function Stream(participantId) {
   }, items7);
   if (stateFromStores === constants.ENDED) {
     const obj3 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-    let tmp23 = closure_21(tmp2(20065).StreamEnded, obj3);
+    let tmp24 = closure_21(tmp2(20112).StreamEnded, obj3);
   } else {
-    tmp23 = null;
+    tmp24 = null;
     if (stateFromStores !== tmp17.FAILED) {
       if (tmp15) {
         const obj4 = { style: tmp5, participantId, children: null };
@@ -768,14 +770,14 @@ function Stream(participantId) {
         obj5.onReady = onStreamReady;
         participantId = closure_21(VideoStream, obj5);
         obj4.children = participantId;
-        let tmp24Result = closure_21(AnimatedVideoWrapper, obj4);
+        let tmp18Result = closure_21(AnimatedVideoWrapper, obj4);
       } else {
         const obj6 = { participantId, layoutTransition };
-        tmp24Result = closure_21(User, obj6);
+        tmp18Result = closure_21(User, obj6);
       }
     }
   }
-  return tmp23;
+  return tmp24;
 }
 function getFocusedKey(id) {
   return id.id;
@@ -808,16 +810,16 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelModes = fn(11985).VoicePanelModes;
-const VoicePanelPIPModes = fn(19911).VoicePanelPIPModes;
+const VoicePanelModes = fn(12428).VoicePanelModes;
+const VoicePanelPIPModes = fn(19956).VoicePanelPIPModes;
 const Constants = fn(1072);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
-const CallConstants = fn(5973);
+const CallConstants = fn(5977);
 ({ ParticipantTypes: closure_18, isActivityParticipant: closure_19 } = CallConstants);
-const ActivityLayoutMode = fn(12706).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11452).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   contentWrapper: {
     position: "absolute",
@@ -905,7 +907,7 @@ let closure_39 = noop.memo(function EmptyPIP(transitionState) {
     }
   }, items);
   const tmp = closure_23();
-  return closure_21(transitionCleanUp(7722), { style: closure_23().emptyPip });
+  return closure_21(transitionCleanUp(7732), { style: closure_23().emptyPip });
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPContent.tsx");
@@ -914,16 +916,18 @@ export default noop.memo(function VoicePanelPIPContent(layoutTransition) {
   layoutTransition = layoutTransition.layoutTransition;
   const onStreamReady = layoutTransition.onStreamReady;
   let channelId;
-  let width;
-  channelId = width.useContext(onStreamReady(channelId[20])).channelId;
+  let id;
+  const context = id.useContext(onStreamReady(channelId[20]));
+  channelId = context.channelId;
+  const isDockEnabled = context.isDockEnabled;
   const size = layoutTransition(channelId[25]).usePIPState();
-  const id = size.id;
-  width = size.width;
+  id = size.id;
+  const width = size.width;
   const height = size.height;
-  let tmp = closure_23();
+  const tmp2 = closure_23();
   const id1 = AuthenticationStore.getId();
   let obj = layoutTransition(channelId[25]);
-  items = [ChannelRTCStore];
+  items = [id1];
   let items1 = [id, channelId, id1];
   const stateFromStores = layoutTransition(channelId[28]).useStateFromStores(
     items,
@@ -951,16 +955,16 @@ export default noop.memo(function VoicePanelPIPContent(layoutTransition) {
     items1,
     areParticipantsEqual,
   );
-  const items2 = [width, height, tmp.contentWrapper];
+  const items2 = [width, height, isDockEnabled, tmp2.contentWrapper];
   const items3 = [layoutTransition, onStreamReady];
-  const memo = width.useMemo(() => {
+  const memo = id.useMemo(() => {
     items = [contentWrapper.contentWrapper];
-    const obj = { borderRadius: VoicePanelPIPUtils.getVoicePanelPIPBorderRadius(width, height) };
+    const obj = { borderRadius: VoicePanelPIPUtils.getVoicePanelPIPBorderRadius(width, height, isDockEnabled) };
     items[1] = obj;
     const items1 = [items];
     return items1;
   }, items2);
-  const callback = width.useCallback((arg0, id, transitionState, transitionCleanUp) => {
+  const callback = id.useCallback((arg0, id, transitionState, transitionCleanUp) => {
     if ("--voice-panel-pip-empty" === id.id) {
       const obj2 = { transitionState, transitionCleanUp };
       return guild(closure_39, obj2, arg0);
@@ -988,12 +992,12 @@ export default noop.memo(function VoicePanelPIPContent(layoutTransition) {
   }, items3);
   let obj3 = { style: memo, pointerEvents: "none", nativeID: null, children: null };
   let obj2 = layoutTransition(channelId[28]);
-  const tmp6 = onStreamReady(channelId[26]);
+  const tmp7 = onStreamReady(channelId[26]);
   obj3.nativeID = layoutTransition(channelId[43]).getExternalPipTileNativeId("pip", stateFromStores[0].id);
   obj3.children = closure_21(layoutTransition(channelId[24]).TransitionGroup, {
     items: stateFromStores,
     renderItem: callback,
     getItemKey: getFocusedKey,
   });
-  return closure_21(tmp6, obj3);
+  return closure_21(tmp7, obj3);
 });

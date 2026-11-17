@@ -306,8 +306,8 @@ export function bulkOptInChannels(id, arr, arg2) {
     if (ImpersonateStore.isFullServerPreview(id)) {
       const result = require("ImpersonateActionCreators").updateImpersonatedChannels(id, arr, []);
       if (flag) {
-        const result1 = tmp22(7691).updateImpersonatedData(id, { optInEnabled: true });
-        const tmp22Result = tmp22(7691);
+        const result1 = tmp22(7701).updateImpersonatedData(id, { optInEnabled: true });
+        const tmp22Result = tmp22(7701);
       }
       const obj12 = require("ImpersonateActionCreators");
       tmp22 = _require;
@@ -327,12 +327,12 @@ export function bulkOptInChannels(id, arr, arg2) {
           true,
         );
         const obj4 = { flags: setFlagResult, channel_overrides };
-        const result2 = channel_overrides(7883).updateGuildAndChannelNotificationSettings(
+        const result2 = channel_overrides(7893).updateGuildAndChannelNotificationSettings(
           id,
           obj4,
           require("NotificationSettingsUtils").NotificationLabels.OptedIn,
         );
-        const obj7 = channel_overrides(7883);
+        const obj7 = channel_overrides(7893);
         const obj8 = {};
         const obj9 = channel_overrides(1256);
         const merged = Object.assign(require("AppAnalyticsUtils").collectGuildAnalyticsMetadata(id));
@@ -341,12 +341,12 @@ export function bulkOptInChannels(id, arr, arg2) {
         obj9.track(AnalyticEvents.CHANNEL_LIST_UPDATED, obj8);
         const obj11 = require("AppAnalyticsUtils");
       } else {
-        const result3 = channel_overrides(7883).updateChannelOverrideSettingsBulk(
+        const result3 = channel_overrides(7893).updateChannelOverrideSettingsBulk(
           id,
           channel_overrides,
           require("NotificationSettingsUtils").NotificationLabels.OptedIn,
         );
-        const obj2 = channel_overrides(7883);
+        const obj2 = channel_overrides(7893);
         const obj10 = {};
         const obj3 = channel_overrides(1256);
         const merged1 = Object.assign(require("AppAnalyticsUtils").collectGuildAnalyticsMetadata(id));
@@ -372,12 +372,12 @@ export function bulkOptOutChannels(id, arr, location) {
         obj.flags = FlagUtils.setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
         obj[item] = obj;
       });
-      const result1 = obj(7883).updateChannelOverrideSettingsBulk(
+      const result1 = obj(7893).updateChannelOverrideSettingsBulk(
         id,
         obj,
         require("NotificationSettingsUtils").NotificationLabels.OptedOut,
       );
-      const obj2 = obj(7883);
+      const obj2 = obj(7893);
       const obj4 = {};
       const obj3 = obj(1256);
       const merged = Object.assign(require("AppAnalyticsUtils").collectGuildAnalyticsMetadata(id));
@@ -474,9 +474,9 @@ export function setMessagesFavorite(id, setting) {
   obj2.label = NotificationLabel.favorited(setting);
   const result = obj.updateChannelOverrideSettings(obj2);
 }
-export function enableGuildNotice(id) {
+export function enableGuildNotice(guildId) {
   const result = UserSettingsProtoActionCreators.updateUserGuildSettings(
-    id,
+    guildId,
     (guildOnboardingProgress) => {
       const hasFlagResult = require("FlagUtils").hasFlag(
         guildOnboardingProgress.guildOnboardingProgress,
@@ -496,9 +496,9 @@ export function enableGuildNotice(id) {
     UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
 }
-export function dismissGuildNotice(id) {
+export function dismissGuildNotice(guildId) {
   const result = UserSettingsProtoActionCreators.updateUserGuildSettings(
-    id,
+    guildId,
     (guildOnboardingProgress) => {
       let hasFlagResult = require("FlagUtils").hasFlag(
         guildOnboardingProgress.guildOnboardingProgress,
@@ -531,13 +531,13 @@ export function dismissGuildNotice(id) {
     UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
 }
-export function clearGuildNotice(id) {
-  items = [...UserGuildSettingsStore.getOptedInChannels(id)];
-  _require = id;
+export function clearGuildNotice(guildId) {
+  items = [...UserGuildSettingsStore.getOptedInChannels(guildId)];
+  _require = guildId;
   let obj;
-  if (null != id) {
-    if (ImpersonateStore.isFullServerPreview(id)) {
-      const result = require("ImpersonateActionCreators").updateImpersonatedChannels(id, [], items);
+  if (null != guildId) {
+    if (ImpersonateStore.isFullServerPreview(guildId)) {
+      const result = require("ImpersonateActionCreators").updateImpersonatedChannels(guildId, [], items);
       const obj6 = require("ImpersonateActionCreators");
     } else {
       obj = {};
@@ -547,15 +547,15 @@ export function clearGuildNotice(id) {
         obj.flags = FlagUtils.setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
         obj[item] = obj;
       });
-      const result1 = obj(7883).updateChannelOverrideSettingsBulk(
-        id,
+      const result1 = obj(7893).updateChannelOverrideSettingsBulk(
+        guildId,
         obj,
         require("NotificationSettingsUtils").NotificationLabels.OptedOut,
       );
-      const obj2 = obj(7883);
+      const obj2 = obj(7893);
       const obj4 = {};
       const obj3 = obj(1256);
-      const merged = Object.assign(require("AppAnalyticsUtils").collectGuildAnalyticsMetadata(id));
+      const merged = Object.assign(require("AppAnalyticsUtils").collectGuildAnalyticsMetadata(guildId));
       obj4.action_type = "remove_many";
       obj4.location = undefined;
       obj3.track(AnalyticEvents.CHANNEL_LIST_UPDATED, obj4);
@@ -563,17 +563,17 @@ export function clearGuildNotice(id) {
     }
   }
   const result2 = require("UserSettingsProtoActionCreators").updateUserGuildSettings(
-    id,
+    guildId,
     (guildOnboardingProgress) => {
-      guildOnboardingProgress.guildOnboardingProgress = id(1406).setFlag(
+      guildOnboardingProgress.guildOnboardingProgress = guildId(1406).setFlag(
         guildOnboardingProgress.guildOnboardingProgress,
-        id(1196).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+        guildId(1196).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
         false,
       );
-      obj = id(1406);
-      guildOnboardingProgress.guildOnboardingProgress = id(1406).setFlag(
+      obj = guildId(1406);
+      guildOnboardingProgress.guildOnboardingProgress = guildId(1406).setFlag(
         guildOnboardingProgress.guildOnboardingProgress,
-        id(1196).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+        guildId(1196).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
         false,
       );
       return true;

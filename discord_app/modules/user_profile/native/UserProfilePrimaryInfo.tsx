@@ -11,11 +11,11 @@ import openUserSettings from "../../user_settings/core/native/openUserSettings.t
 import useBadges from "../hooks/useBadges.tsx";
 import ClipView from "../../../design/components/Icon/native/ClipView.tsx";
 import UsernameWithEffectsDefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
-import BadgeUtils from "../../badges/BadgeUtils.tsx";
+import GuildTagDefault from "../../guild_tag/native/GuildTag.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
-import GuildTagDefault from "../../guild_tag/native/GuildTag.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
+import BadgeUtils from "../../badges/BadgeUtils.tsx";
 import trackBadgeDirectoryActionDefault from "../../badges/trackBadgeDirectoryAction.tsx";
 import openBadgeDirectoryScreen from "../../badges/native/openBadgeDirectoryScreen.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -459,7 +459,7 @@ function UnreadDotCutoutLayer(showDot) {
   const items1 = [tmp.cutoutLayerFill, showDot.style];
   obj2.style = items1;
   obj.children = closure_15(closure_6, obj2);
-  return closure_15(first(9503), obj);
+  return closure_15(first(9515), obj);
 }
 class ProfileBadgeRows {
   constructor(arg0) {
@@ -928,17 +928,17 @@ function GuildTag(primaryGuildOverride) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
-const getBadgeName = fn(8479).getBadgeName;
-const Constants = fn(7962);
+const getBadgeName = fn(8490).getBadgeName;
+const Constants = fn(7972);
 ({ DIVIDER_DOT: closure_10, PROFILE_SIDE_PADDING: closure_11, UserProfileThemeTypes } = Constants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const GuildTagBadgeSize = fn(8410).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8549).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8421).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8560).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 let closure_19 = PX_6 + 4;
-let createStyles = fn(5306);
+let createStyles = fn(5310);
 let obj2 = {
   container: { flexDirection: "column" },
   displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
@@ -1034,7 +1034,7 @@ let dependencyMap2 = {
     guildTagHorizontalPadding: 6,
   },
 };
-createStyles = fn(5306);
+createStyles = fn(5310);
 dependencyMap2 = createStyles.createStyles((arg0) => {
   let sum = arg0;
   if (obj.isIOS()) {

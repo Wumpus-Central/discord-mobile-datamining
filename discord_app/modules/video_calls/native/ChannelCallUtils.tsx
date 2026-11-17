@@ -7,11 +7,11 @@ import ChannelRTCActionCreatorsDefault from "../../../actions/ChannelRTCActionCr
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import StreamKeyUtils from "../../go_live/utils/StreamKeyUtils.tsx";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
+import _modDef11685 from "../../../../_runtime/metro/11685__.js";
 import openGroupDMAddMembersDefault from "../../group_dm/native/openGroupDMAddMembers.tsx";
-import _modDef13044 from "../../../../_runtime/metro/13044__.js";
-import _modDef16072 from "../../../../_runtime/metro/16072__.js";
-import _modDef20117 from "../../../../_runtime/metro/20117__.js";
-import _modDef20118 from "../../../../_runtime/metro/20118__.js";
+import _modDef16109 from "../../../../_runtime/metro/16109__.js";
+import _modDef20165 from "../../../../_runtime/metro/20165__.js";
+import _modDef20166 from "../../../../_runtime/metro/20166__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
@@ -33,7 +33,7 @@ export function voiceSettings() {
   let obj = { label: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.dsXapM);
-  obj.icon = _modDef20117;
+  obj.icon = _modDef20165;
   obj.onPress = function onPress() {
     require("openUserSettings").openUserSettings({ screen: constants.VOICE });
     const obj = require("openUserSettings");
@@ -59,7 +59,7 @@ export function openHideSelfStreamAndVideoConfirmDialog(arg0, arg1) {
   importDefault = arg1;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(20114, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(20162, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -89,7 +89,7 @@ export function reportStreamIssue(stream) {
   let obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.KHGhHf);
-  obj.icon = _modDef20118;
+  obj.icon = _modDef20166;
   obj.onPress = function onPress() {
     const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(stream);
     let videoStats = StreamRTCConnectionStore.getVideoStats(encodeStreamKeyResult);
@@ -104,11 +104,11 @@ export function reportStreamIssue(stream) {
       max_viewers: StreamRTCConnectionStore.getMaxViewers(encodeStreamKeyResult),
     };
     const obj5 = ActionSheetActionCreatorsDefault;
-    obj5.openLazy(asyncRequireImpl(20119, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
+    obj5.openLazy(asyncRequireImpl(20167, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
       stream,
       analyticsData: obj3,
     });
-    const tmp6 = asyncRequireImpl(20119, dependencyMap.paths);
+    const tmp6 = asyncRequireImpl(20167, dependencyMap.paths);
   };
   return obj;
 }
@@ -146,7 +146,7 @@ export function invite(dependencyMap, stream, targetApplicationId) {
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.VINpSK);
-  obj.icon = _modDef13044;
+  obj.icon = _modDef11685;
   obj.onPress = onPress;
   return obj;
 }
@@ -155,7 +155,7 @@ export function rtcDebugPanel(arg0) {
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.X8bCMe);
-  obj.icon = _modDef16072;
+  obj.icon = _modDef16109;
   obj.onPress = function onPress() {
     closure_0();
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -166,7 +166,7 @@ export function shareActivityLogs() {
   let obj = { label: null, icon: null, onPress: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
-  obj.icon = _modDef16072;
+  obj.icon = _modDef16109;
   obj.onPress = function onPress() {
     items = [closure_1_7];
     const json = require("LogAggregator").stringify(items);

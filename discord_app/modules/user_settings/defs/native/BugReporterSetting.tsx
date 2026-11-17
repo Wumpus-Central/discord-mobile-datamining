@@ -9,18 +9,18 @@ require = fn;
 function useBugReporterExperimentSettingPredicate() {
   return BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(13322).BugIcon,
+  IconComponent: fn(14554).BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11100, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11848, dependencyMap.paths));
     }
   },
   withArrow: true,

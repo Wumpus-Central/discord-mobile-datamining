@@ -5,11 +5,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const constants = fn(12369).GameOrganizationCharacterMode;
-let closure_6 = fn(14074).GameOrganizationJoinScenes;
+const constants = fn(12573).GameOrganizationCharacterMode;
+let closure_6 = fn(12898).GameOrganizationJoinScenes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_9 = createStyles.createStyles({ text: { textAlign: "center" }, inlineStack: { width: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -48,86 +48,93 @@ export function ViewStep(code) {
   if (null == tmp5) {
     return null;
   } else {
-    ({ organization, application } = tmp5);
+    ({ displayNoun, organization, application } = tmp5);
     ({ memberCount, maxMembers } = organization);
-    const obj2 = { displayNoun: tmp5.displayNoun, lowercase: true };
+    const obj2 = { displayNoun, lowercase: true };
     const tmp14 = tmp4(tmp3[9])(obj2);
     const obj3 = { spacing: tmp4(tmp3[13]).space.PX_48, children: null };
-    const obj4 = { spacing: tmp4(tmp3[13]).space.PX_8, children: null };
-    const obj5 = { spacing: tmp4(tmp3[13]).space.PX_16, align: "center", children: null };
-    const obj6 = { iconUrl: organization.iconUrl, size: 64 };
-    items = [closure_7(tmp4(tmp3[14]), obj6)];
-    const obj7 = { variant: "heading-xl/semibold", style: tmp.text, children: null };
-    const intl3 = tmp2(tmp3[16]).intl;
-    const obj8 = { noun: tmp14, orgName: organization.name, gameName: application.name };
-    obj7.children = intl3.formatToPlainString(tmp4(tmp3[17]).gptW7Y, obj8);
-    items[1] = closure_7(tmp2(tmp3[15]).Text, obj7);
-    obj5.children = items;
-    const items1 = [closure_8(tmp2(tmp3[12]).Stack, obj5)];
-    const obj9 = {
-      direction: "horizontal",
-      align: "center",
-      justify: "center",
-      spacing: tmp4(tmp3[13]).space.PX_16,
-      children: null,
-    };
-    const obj10 = {
+    const obj4 = { spacing: tmp4(tmp3[13]).space.PX_16, align: "center", children: null };
+    const obj5 = { iconUrl: organization.iconUrl, size: 64 };
+    items = [closure_7(tmp4(tmp3[14]), obj5)];
+    const obj6 = { spacing: tmp4(tmp3[13]).space.PX_8, align: "center", children: null };
+    const obj7 = {
       spacing: tmp4(tmp3[13]).space.PX_4,
       direction: "horizontal",
       align: "center",
       style: tmp.inlineStack,
       children: null,
     };
-    const obj11 = { iconUrl: application.iconUrl, size: 16, borderRadius: tmp4(tmp3[13]).radii.xs };
-    const items2 = [closure_7(tmp4(tmp3[14]), obj11)];
-    const obj12 = { variant: "heading-sm/medium", children: application.name };
-    items2[1] = closure_7(tmp2(tmp3[15]).Text, obj12);
-    obj10.children = items2;
-    const items3 = [closure_8(tmp2(tmp3[12]).Stack, obj10)];
+    const obj8 = { iconUrl: application.iconUrl, size: 16, borderRadius: tmp4(tmp3[13]).radii.xs };
+    const items1 = [closure_7(tmp4(tmp3[14]), obj8)];
+    const obj9 = { variant: "body-md/medium", color: "text-subtle", children: null };
+    const intl3 = tmp2(tmp3[16]).intl;
+    const obj10 = { noun: null };
+    const obj11 = { displayNoun };
+    obj10.noun = tmp4(tmp3[9])(obj11);
+    obj9.children = intl3.formatToPlainString(tmp4(tmp3[17])["jKi+kc"], obj10);
+    items1[1] = closure_7(tmp2(tmp3[15]).Text, obj9);
+    obj7.children = items1;
+    const items2 = [closure_8(tmp2(tmp3[12]).Stack, obj7), ,];
+    const obj12 = { variant: "heading-xl/semibold", color: "text-subtle", style: tmp.text, children: null };
+    const intl4 = tmp2(tmp3[16]).intl;
+    const obj13 = {
+      noun: tmp14,
+      orgName: organization.name,
+      gameName: application.name,
+      orgNameHook(children, arg1) {
+        return closure_1_7(
+          navigation(first[15]).Text,
+          { variant: "heading-xl/semibold", color: "text-strong", children },
+          arg1,
+        );
+      },
+    };
+    obj12.children = intl4.format(tmp4(tmp3[17]).gptW7Y, obj13);
+    items2[1] = closure_7(tmp2(tmp3[15]).Heading, obj12);
     let tmp15Result = null != memberCount && null != maxMembers;
     if (tmp15Result) {
-      const obj13 = {
+      const obj14 = {
         spacing: tmp4(tmp3[13]).space.PX_4,
         direction: "horizontal",
         align: "center",
         style: tmp.inlineStack,
         children: null,
       };
-      const obj14 = { size: "xs", color: tmp4(tmp3[13]).colors.ICON_MUTED };
-      const items4 = [closure_7(tmp2(tmp3[18]).GroupIcon, obj14)];
-      const obj15 = { variant: "heading-sm/medium", children: null };
+      const obj15 = { size: "xs", color: tmp4(tmp3[13]).colors.ICON_MUTED };
+      const items3 = [closure_7(tmp2(tmp3[18]).GroupIcon, obj15)];
+      const obj16 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
       const intl = tmp2(tmp3[16]).intl;
-      const obj16 = { count: memberCount, max: maxMembers };
-      obj15.children = intl.formatToPlainString(tmp4(tmp3[17]).VuENGl, obj16);
-      items4[1] = closure_7(tmp2(tmp3[15]).Text, obj15);
-      obj13.children = items4;
-      tmp15Result = closure_8(tmp2(tmp3[12]).Stack, obj13);
+      const obj17 = { count: memberCount, max: maxMembers };
+      obj16.children = intl.formatToPlainString(tmp4(tmp3[17]).VuENGl, obj17);
+      items3[1] = closure_7(tmp2(tmp3[15]).Text, obj16);
+      obj14.children = items3;
+      tmp15Result = closure_8(tmp2(tmp3[12]).Stack, obj14);
     }
-    items3[1] = tmp15Result;
-    obj9.children = items3;
-    items1[1] = closure_8(tmp2(tmp3[12]).Stack, obj9);
-    obj4.children = items1;
-    const items5 = [closure_8(tmp2(tmp3[12]).Stack, obj4)];
+    items2[2] = tmp15Result;
+    obj6.children = items2;
+    items[1] = closure_8(tmp2(tmp3[12]).Stack, obj6);
+    obj4.children = items;
+    const items4 = [closure_8(tmp2(tmp3[12]).Stack, obj4)];
     let tmp16Result = tmp7;
     if (tmp7) {
-      const obj17 = { characters: data, selectedCharacterId, onSelect: tmp9[1], noun: tmp14 };
-      tmp16Result = closure_7(tmp4(tmp3[19]), obj17);
+      const obj18 = { characters: data, selectedCharacterId, onSelect: tmp9[1], noun: tmp14 };
+      tmp16Result = closure_7(tmp4(tmp3[19]), obj18);
     }
-    const obj18 = { children: null };
-    items5[1] = tmp16Result;
-    obj3.children = items5;
-    obj18.children = closure_8(tmp2(tmp3[12]).Stack, obj3);
-    const items6 = [closure_7(tmp2(tmp3[11]).ModalContent, obj18)];
-    const obj19 = { text: null, size: "lg", disabled: null, onPress: null };
+    const obj19 = { children: null };
+    items4[1] = tmp16Result;
+    obj3.children = items4;
+    obj19.children = closure_8(tmp2(tmp3[12]).Stack, obj3);
+    const items5 = [closure_7(tmp2(tmp3[11]).ModalContent, obj19)];
+    const obj20 = { text: null, size: "lg", disabled: null, onPress: null };
     const intl2 = tmp2(tmp3[16]).intl;
-    obj19.text = intl2.string(tmp2(tmp3[16]).t["3PatSz"]);
+    obj20.text = intl2.string(tmp2(tmp3[16]).t["3PatSz"]);
     if (tmp7) {
       tmp7 = null == found;
     }
-    const obj20 = { children: null };
     const obj21 = { children: null };
-    obj19.disabled = tmp7;
-    obj19.onPress = function onPress() {
+    const obj22 = { children: null };
+    obj20.disabled = tmp7;
+    obj20.onPress = function onPress() {
       let tmp2;
       if (closure_1) {
         if (null != found) {
@@ -137,10 +144,10 @@ export function ViewStep(code) {
       }
       return navigation.navigate(constants.ACCEPT, tmp2);
     };
-    obj21.children = closure_7(tmp2(tmp3[21]).Button, obj19);
-    items6[1] = closure_7(tmp2(tmp3[20]).ModalFooter, obj21);
-    obj20.children = items6;
-    return closure_8(tmp2(tmp3[10]).ModalScreen, obj20);
+    obj22.children = closure_7(tmp2(tmp3[21]).Button, obj20);
+    items5[1] = closure_7(tmp2(tmp3[20]).ModalFooter, obj22);
+    obj21.children = items5;
+    return closure_8(tmp2(tmp3[10]).ModalScreen, obj21);
   }
   const tmp2Result = require("useGameOrganizationCharacterEligibilityFetch");
 }

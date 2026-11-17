@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/glow/native/ConjureDither.android.tsx
 import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
-import inlineStyles from "../../../../../_runtime/08263_inlineStyles.js";
-import _mod13594 from "../../../../../_runtime/metro/13594__.js";
+import inlineStyles from "../../../../../_runtime/08274_inlineStyles.js";
+import _mod14645 from "../../../../../_runtime/metro/14645__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -31,9 +31,9 @@ function BandPicture(width) {
     const size = {
       x: item.x,
       y: item.y,
-      width: _mod13594.CELL,
-      height: _mod13594.CELL,
-      rx: _mod13594.CORNER,
+      width: _mod14645.CELL,
+      height: _mod14645.CELL,
+      rx: _mod14645.CORNER,
       fill,
       fillOpacity,
     };
@@ -55,10 +55,10 @@ function BandPicture(width) {
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod13594;
+    const obj3 = _mod14645;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod13594.blobReach(peak, radius, closure_5 + _mod13594.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod13594.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod14645.blobReach(peak, radius, closure_5 + _mod14645.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod14645.blobReach(peak.peak, peak.radius, bound));
     items = [
       timestampProducer(inlineStyles.Stop, obj2),
       timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 }),
@@ -84,7 +84,7 @@ function BandPicture(width) {
   const items2 = [tmp9Result];
   const BLOBS1 = tmp(tmp2[3]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod13594.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod14645.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {
@@ -225,7 +225,7 @@ export default function ConjureDither(width) {
   let tmp18 = null;
   if (width > 0) {
     const obj3 = { style: absoluteFill.absoluteFill, pointerEvents: "none", children: null };
-    const LEVELS = tmp(13594).LEVELS;
+    const LEVELS = tmp(14645).LEVELS;
     obj3.children = LEVELS.map((item, index) =>
       items.map((item, state) => {
         items = [React4.absoluteFill];

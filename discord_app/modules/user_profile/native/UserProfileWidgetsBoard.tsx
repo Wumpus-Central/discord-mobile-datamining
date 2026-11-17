@@ -20,7 +20,7 @@ function AddGameButton(ref) {
     ref,
     size: "sm",
     variant: "secondary",
-    icon: closure_8(ref(10449).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }),
+    icon: closure_8(ref(10198).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }),
     accessibilityLabel: null,
     disabled: null,
     onPress: null,
@@ -31,7 +31,7 @@ function AddGameButton(ref) {
   obj.onPress = function onPress() {
     return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });
   };
-  return closure_8(ref(7988).IconButton, obj);
+  return closure_8(ref(7999).IconButton, obj);
 }
 function WidgetRenderer(arg0) {
   ({ userId, widget, cardStyle, isEditing } = arg0);
@@ -48,12 +48,12 @@ function WidgetRenderer(arg0) {
   return tmp3Result;
 }
 const View = fn(17).View;
-const UserProfileSections = fn(8479).UserProfileSections;
-const UserProfileWidgetConstants = fn(7355);
+const UserProfileSections = fn(8490).UserProfileSections;
+const UserProfileWidgetConstants = fn(7365);
 ({ widgetSupportsComment: closure_6, widgetSupportsTags: metroImportDefault } = UserProfileWidgetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   board: { gap: nativeDefault.space.PX_16 },
   emptyState: null,
@@ -66,7 +66,7 @@ let obj4 = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
 obj.singleGameEmptyState = {
   flexDirection: "row",
   alignItems: "center",
-  gap: fn(12104).GAME_COVER_DETAILS_GAP,
+  gap: fn(10838).GAME_COVER_DETAILS_GAP,
   paddingVertical: nativeDefault.space.PX_8,
 };
 obj.singleGameEmptyStateText = { flex: 1 };
@@ -94,21 +94,20 @@ const memoResult = noop.memo(function WidgetSection(userId) {
   items = [widget];
   ({ ref, onLayout, width, columns } = tmp3);
   const memo = flag.useMemo(() => WidgetUtils.getUniqueWidgetGames(widget), items);
-  let Text = userId;
-  const widgetMaxGamesResult = userId(disableInteraction[14]).widgetMaxGames(widget.type);
+  const tmp5 = 1 === userId(disableInteraction[14]).widgetMaxGames(widget.type);
   closure_6 = tmp5;
   let tmp6 = flag;
   if (flag) {
     tmp6 = tmp5;
   }
   let obj2 = userId(disableInteraction[14]);
-  const shouldShowSuggestedGames = Text(disableInteraction[15]).useShouldShowSuggestedGames(widget);
+  const shouldShowSuggestedGames = userId(disableInteraction[15]).useShouldShowSuggestedGames(widget);
   handleDismissSuggestions = shouldShowSuggestedGames.handleDismissSuggestions;
   type = obj.useRef(null);
-  const TextResult = Text(disableInteraction[15]);
+  const tmp4Result = userId(disableInteraction[15]);
   ref = obj.useRef(new Map());
   ref2 = obj.useRef(null);
-  const items1 = [1 === widgetMaxGamesResult];
+  const items1 = [tmp5];
   registerCoverRef = obj.useCallback((arg0, current) => {
     if (null != current) {
       const current2 = ref.current;
@@ -189,9 +188,9 @@ const memoResult = noop.memo(function WidgetSection(userId) {
   if (flag) {
     let tmp16 = !tmp6;
     if (!tmp6) {
-      let obj3 = { ref: type, widgetType: widget.type, disabled: Text(tmp2[14]).isGameLimitReached(widget) };
+      let obj3 = { ref: type, widgetType: widget.type, disabled: tmp4(tmp2[14]).isGameLimitReached(widget) };
       tmp16 = type(registerCoverRef, obj3, "add-game");
-      const TextResult1 = Text(tmp2[14]);
+      const tmp4Result2 = tmp4(tmp2[14]);
     }
     const items4 = [tmp16];
     const obj4 = { widget };
@@ -199,51 +198,37 @@ const memoResult = noop.memo(function WidgetSection(userId) {
     const tmp15 = items4;
   }
   if (0 === memo.length) {
-    const intl = Text(tmp2[11]).intl;
-    if (tmp5) {
-      let stringResult = intl.string(Text(tmp2[11]).t["3FdPBT"]);
-    } else {
-      const obj5 = { maxGames: widgetMaxGamesResult };
-      stringResult = intl.formatToPlainString(Text(tmp2[11]).t.W8K2GH, obj5);
-    }
     if (tmp6) {
       if (isMeasured) {
-        const obj6 = { style: singleGameEmptyStateText.singleGameEmptyState, children: null };
-        const obj7 = { ref: type, widgetType: null, coverWidth: null };
+        const obj5 = { style: singleGameEmptyStateText.singleGameEmptyState, children: null };
+        const obj6 = { ref: type, widgetType: widget.type, coverWidth };
+        const items5 = [type(tmp(tmp2[18]), obj6)];
+        coverWidth = tmp(tmp2[19]);
+        const obj7 = { widgetType: null, style: null };
         type = widget.type;
         obj7.widgetType = type;
-        obj7.coverWidth = coverWidth;
-        const items5 = [type(tmp(tmp2[18]), obj7)];
-        Text = Text(tmp2[19]).Text;
-        const obj8 = { variant: "body-sm/medium", color: "text-muted", style: null, children: null };
         singleGameEmptyStateText = singleGameEmptyStateText.singleGameEmptyStateText;
-        obj8.style = singleGameEmptyStateText;
-        obj8.children = stringResult;
-        items5[1] = type(Text, obj8);
-        obj6.children = items5;
-        const tmp27 = ref(coverWidth, obj6);
+        obj7.style = singleGameEmptyStateText;
+        items5[1] = type(coverWidth, obj7);
+        obj5.children = items5;
+        const tmp26 = ref(coverWidth, obj5);
       }
     } else {
-      const obj9 = {
-        variant: "body-sm/medium",
-        color: "text-muted",
-        style: singleGameEmptyStateText.emptyState,
-        children: stringResult,
-      };
-      const tmp26 = type(Text(tmp2[19]).Text, obj9);
+      const obj8 = { widgetType: widget.type, style: singleGameEmptyStateText.emptyState };
+      const tmp25 = type(tmp(tmp2[19]), obj8);
     }
   } else {
     const type2 = widget.type;
-    if (Text(tmp2[20]).WidgetType.FAVORITE_GAMES !== type2) {
-      if (Text(tmp2[20]).WidgetType.CURRENT_GAMES !== type2) {
-        if (Text(tmp2[20]).WidgetType.WANT_TO_PLAY_GAMES !== type2) {
-          if (Text(tmp2[20]).WidgetType.PLAYED_GAMES !== type2) {
+    if (tmp4(tmp2[20]).WidgetType.FAVORITE_GAMES !== type2) {
+      if (tmp4(tmp2[20]).WidgetType.CURRENT_GAMES !== type2) {
+        if (tmp4(tmp2[20]).WidgetType.WANT_TO_PLAY_GAMES !== type2) {
+          if (tmp4(tmp2[20]).WidgetType.PLAYED_GAMES !== type2) {
             return null;
           }
         }
         let tmp20 = isMeasured;
         if (isMeasured) {
-          const obj10 = {
+          const obj9 = {
             games: memo,
             columns,
             renderCover(game) {
@@ -266,10 +251,10 @@ const memoResult = noop.memo(function WidgetSection(userId) {
               return React5(UserProfileWidgetGameCoverDefault, obj, game.gameId);
             },
           };
-          tmp20 = type(tmp(tmp2[23]), obj10);
+          tmp20 = type(tmp(tmp2[23]), obj9);
         }
       }
-      const obj11 = {
+      const obj10 = {
         userId,
         widget,
         style: userId.cardStyle,
@@ -277,8 +262,8 @@ const memoResult = noop.memo(function WidgetSection(userId) {
         actionButtons: tmp15,
         children: null,
       };
-      const obj12 = { ref, onLayout, children: tmp20 };
-      const items6 = [type(coverWidth, obj12)];
+      const obj11 = { ref, onLayout, children: tmp20 };
+      const items6 = [type(coverWidth, obj11)];
       if (flag) {
         flag = !disableInteraction;
       }
@@ -289,22 +274,22 @@ const memoResult = noop.memo(function WidgetSection(userId) {
         flag = isMeasured;
       }
       if (flag) {
-        const obj13 = {
+        const obj12 = {
           widgetType: widget.type,
           addedGames: memo,
           containerWidth: width,
           onDismiss: callback,
           onFillWidget: callback1,
         };
-        flag = type(tmp(tmp2[26]), obj13);
+        flag = type(tmp(tmp2[26]), obj12);
       }
       items6[1] = flag;
-      obj11.children = items6;
-      return ref(tmp(tmp2[25]), obj11);
+      obj10.children = items6;
+      return ref(tmp(tmp2[25]), obj10);
     }
     let tmp22 = isMeasured;
     if (isMeasured) {
-      const obj14 = {
+      const obj13 = {
         games: memo,
         renderRow(game) {
           const obj = {
@@ -328,7 +313,7 @@ const memoResult = noop.memo(function WidgetSection(userId) {
           return React5(UserProfileGameDetailsRowDefault, obj, game.gameId);
         },
       };
-      tmp22 = type(tmp(tmp2[21]), obj14);
+      tmp22 = type(tmp(tmp2[21]), obj13);
     }
     tmp20 = tmp22;
   }

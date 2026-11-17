@@ -6,8 +6,8 @@ import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import useAppChannelApplication from "../../../app_channels/useAppChannelApplication.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import openConjureHomeScreenDefault from "../../home/native/openConjureHomeScreen.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
+import openConjureHomeScreenDefault from "../../home/native/openConjureHomeScreen.tsx";
 import ConjureRemixSheet from "../../remix/native/ConjureRemixSheet.tsx";
 import openConjureAppChannelSheet from "openConjureAppChannelSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -346,7 +346,7 @@ const Constants = fn(1072);
 ({ ChannelSettingsSections: metroImportDefault, InstantInviteSources: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   content: { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 },
   centered: { textAlign: "center" },
@@ -376,10 +376,10 @@ export default noop.memo(function ConjureAppChannelSheet(channelId) {
     const obj5 = { spacing: stateFromStores(575).space.PX_24, children: null };
     const obj6 = { channel: stateFromStores };
     obj5.children = closure_10(ConjureAppChannelSheetContent, obj6);
-    obj4.children = closure_10(tmp2(6327).Stack, obj5);
-    obj3.children = closure_10(tmp2(7415).SafeAreaPaddingView, obj4);
-    obj2.children = closure_10(tmp2(5560).BottomSheetScrollView, obj3);
-    tmp6 = closure_10(tmp2(5556).BottomSheet, obj2);
+    obj4.children = closure_10(tmp2(6335).Stack, obj5);
+    obj3.children = closure_10(tmp2(7425).SafeAreaPaddingView, obj4);
+    obj2.children = closure_10(tmp2(5564).BottomSheetScrollView, obj3);
+    tmp6 = closure_10(tmp2(5560).BottomSheet, obj2);
   }
   return tmp6;
 });

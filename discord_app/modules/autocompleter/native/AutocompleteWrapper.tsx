@@ -9,8 +9,8 @@ import utils_AutocompleteUtilsDefault from "../../../utils/native/AutocompleteUt
 import RunAfterInteractionsUtils from "../../../utils/native/RunAfterInteractionsUtils.tsx";
 import TimestampUtils from "../../markup/TimestampUtils.tsx";
 import GameSearchSession from "../../games/autocomplete/GameSearchSession.tsx";
-import GameSearchFilterGroup from "../../../../discord_common/js/shared/shared-constants/GameSearchFilterGroup.tsx";
 import GameSearchSurfaces from "../../games/autocomplete/GameSearchSurfaces.tsx";
+import GameSearchFilterGroup from "../../../../discord_common/js/shared/shared-constants/GameSearchFilterGroup.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import autocompleter_AutocompleteUtils from "AutocompleteUtils.tsx";
 import AutocompleteOptions from "AutocompleteOptions.tsx";
@@ -77,10 +77,10 @@ const Constants = fn(1072);
   AnalyticEvents: map1,
   UpsellTypes: closure_14,
 } = Constants);
-const BOOLEAN_CHOICES = fn(6335).BOOLEAN_CHOICES;
-const ApplicationCommandsConstants = fn(11234);
+const BOOLEAN_CHOICES = fn(6343).BOOLEAN_CHOICES;
+const ApplicationCommandsConstants = fn(11939);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_16, AUTOCOMPLETE_ROW_HEIGHT: closure_17 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(6336);
+const ChannelAutocompleteConstants = fn(6344);
 ({
   MENTION_SENTINEL: closure_18,
   CHANNEL_SENTINEL: closure_19,
@@ -89,7 +89,7 @@ const ChannelAutocompleteConstants = fn(6336);
   GAME_MENTION_INPUT_PREFIX: closure_22,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_23,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(11396).AutocompleteTypes;
+const AutocompleteTypes = fn(12085).AutocompleteTypes;
 const EmojiInteractionPoint = fn(1391).EmojiInteractionPoint;
 const jsxProd = fn(21);
 ({ jsx: closure_26, Fragment: closure_27, jsxs: closure_28 } = jsxProd);
@@ -97,8 +97,8 @@ let c29 = "body-sm/semibold";
 const hairlineWidth = StyleSheet.hairlineWidth;
 let c31 = 200;
 let closure_32 = { allowSpaces: true, maxQueryLength: 64 };
-let obj = { allowSpaces: true, maxQueryLength: fn(9379).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
-const createStyles = fn(5306);
+let obj = { allowSpaces: true, maxQueryLength: fn(9388).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
+const createStyles = fn(5310);
 let closure_34 = createStyles.createStyles(
   (borderRadius, borderWidth, borderTopWidth, marginHorizontal, marginBottom) => {
     obj = {
@@ -958,9 +958,9 @@ class ACWrapper {
       () =>
         autocompleteType === AutocompleteTypes.GAME_MENTIONS
           ? () => {
-              const gameSearchSession = analyticsLocations(10255).getGameSearchSession(
-                analyticsLocations(10496).GameSearchSurface.CHAT_MENTION,
-                analyticsLocations(10256).GameSearchFilterGroup.DEFAULT,
+              const gameSearchSession = analyticsLocations(10548).getGameSearchSession(
+                analyticsLocations(10549).GameSearchSurface.CHAT_MENTION,
+                analyticsLocations(10550).GameSearchFilterGroup.DEFAULT,
               );
               return gameSearchSession.end();
             }

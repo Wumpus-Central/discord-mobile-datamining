@@ -233,7 +233,7 @@ function selectChannelTab(id, keyboard_cycle) {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, Routes: metroImportDefault } = Constants);
-const StaticChannelRoute = fn(5162).StaticChannelRoute;
+const StaticChannelRoute = fn(5166).StaticChannelRoute;
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tabs/ChannelTabsActionCreators.tsx");

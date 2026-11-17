@@ -20,7 +20,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1072);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6793).StreamTypes;
+const StreamTypes = fn(6801).StreamTypes;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -317,7 +317,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
       appContext = appContext.appContext;
       const streamKey = appContext.streamKey;
-      closure_11[streamKey] = { appContext, analyticsLocations: "y" };
+      closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
       const item = applyDefault.forEach(closure_18, (analyticsContext) => {
         analyticsContext = analyticsContext.analyticsContext;
         analyticsContext.setActionContext(appContext);

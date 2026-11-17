@@ -4,6 +4,7 @@ import useSafeAreaInsetsDefault from "../modules/safe_area/useSafeAreaInsets.nat
 import _modDef1655 from "../../_runtime/metro/01655__.js";
 import useChatLayoutDefault from "../modules/chat/native/useChatLayout.tsx";
 import HomeDrawerExperiment from "../modules/home_drawer/native/HomeDrawerExperiment.tsx";
+import LayerScope from "../design/components/Layers/native/LayerScope.native.tsx";
 import useRefValueDefault from "../hooks/useRefValue.tsx";
 import StartupProfiler from "../modules/app_startup/StartupProfiler.tsx";
 import useAppFrameDefault from "../modules/main_tabs_v2/native/useAppFrame.tsx";
@@ -101,8 +102,8 @@ function LeftPanelContent(panelStyles) {
     tmp16Result2 = closure_1_11(_modDef1655.View, obj7);
   }
   items6[1] = tmp16Result2;
-  obj5.children = items6;
-  return application_id(hasOwnProperty, obj5);
+  obj5.children = application_id(LayerScope.LayerScope, { children: items6 });
+  return closure_1_11(hasOwnProperty, obj5);
 }
 function resolveHomeDrawerName() {
   return HOME_DRAWER_SCREEN;
@@ -144,10 +145,10 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ DM_WIDTH: closure_8, ME: closure_9 } = Constants);
-const HOME_DRAWER_SCREEN = fn(18727).HOME_DRAWER_SCREEN;
+const HOME_DRAWER_SCREEN = fn(18768).HOME_DRAWER_SCREEN;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_14 = createStyles.createStyles(() => {
   let flag = arg0;
   if (arg0 === undefined) {

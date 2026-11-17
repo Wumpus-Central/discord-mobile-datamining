@@ -25,7 +25,7 @@ function updateObserving() {
     _null = null;
   }
 }
-const isLaunched = fn(7020).isLaunched;
+const isLaunched = fn(7028).isLaunched;
 let c4 = null;
 class DeviceSilentModeManager extends tmp2 {
   constructor() {

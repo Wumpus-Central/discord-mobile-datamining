@@ -239,7 +239,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(8845);
+const ClipsConstants = fn(8856);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6,
   ClipSaveTypes: metroImportDefault,
@@ -254,7 +254,7 @@ const ClipsConstants = fn(8845);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ MessageAttachmentFlags: closure_14, MessageReferenceTypes: closure_15, VoiceFlags: closure_16 } = Constants);
-const StreamSettingsConstants = fn(6161);
+const StreamSettingsConstants = fn(6168);
 const ApplicationStreamFPS = StreamSettingsConstants.ApplicationStreamFPS;
 let c18 = "default";
 let c19 = "Discord Clips";
@@ -296,7 +296,7 @@ obj = {
   clipsSettings: obj,
   hardwareClassification: null,
   hardwareClassificationVersion: 0,
-  clipsDefaultSettingsState: fn(16498).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
+  clipsDefaultSettingsState: fn(16534).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
   hasAutoEnabledClipsForHardware: false,
   newClipIds: [],
   hasClips: false,
@@ -831,7 +831,7 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
   },
   CLIPS_DELETE_CLIP: function handleClipsDelete(id) {
     for (const item10011 of tmp5) {
-      let removeCandidateResult = item10011.removeCandidate(arg0.id);
+      let removeClipResult = item10011.removeClip(arg0.id);
       continue;
     }
     delete tmp3[tmp2];

@@ -4,13 +4,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05883_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05887_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../common/FastImage.tsx";
 import common_AlertDefault from "../../common/Alert.tsx";
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../common/SequencedLottieAnimationView.tsx";
-import _mod16051 from "../../../../_runtime/metro/16051__.js";
+import _mod16088 from "../../../../_runtime/metro/16088__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -27,10 +27,10 @@ class PremiumPaymentGuildAnimation {
   }
 }
 const View = fn(17).View;
-const Gradients = fn(9435).Gradients;
+const Gradients = fn(9445).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" },
   animation: { width: "auto", height: 112, alignSelf: "center" },
@@ -87,8 +87,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj2.confirmText = intl.string(util.t.YKxJCI);
   obj2.onConfirm = function onConfirm() {
-    closure_1(6259).close();
-    const obj = closure_1(6259);
+    closure_1(6267).close();
+    const obj = closure_1(6267);
     BoostingActionCreators.closeApplyBoostModal();
   };
   const items1 = [
@@ -125,9 +125,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = FastImageDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(16052);
+    let tmp8Result = tmp8(16089);
   } else {
-    tmp8Result = tmp8(16053);
+    tmp8Result = tmp8(16090);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_8(tmp15, obj6);

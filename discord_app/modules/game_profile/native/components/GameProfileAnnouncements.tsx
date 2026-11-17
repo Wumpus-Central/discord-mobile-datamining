@@ -6,13 +6,13 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import CustomMarkupAll from "../../../markup/CustomMarkup.native.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
+import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import GameProfileActionCreatorsDefault from "../../GameProfileActionCreators.native.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import GameProfileSkeleton from "GameProfileSkeleton.tsx";
 import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow.tsx";
 import AnnouncementMessageUtils from "../../AnnouncementMessageUtils.tsx";
 import ImageWithPlaceholder from "../../../../components_native/common/ImageWithPlaceholder.tsx";
-import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import navigateToGameAnnouncementDefault from "../../navigateToGameAnnouncement.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -324,7 +324,7 @@ function PollAnnouncementCard(message) {
     };
     const obj3 = { style: tmp.cardBody, children: null };
     const obj4 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: poll.question.text };
-    items = [closure_8(message(5919).Text, obj4), ,];
+    items = [closure_8(message(5923).Text, obj4), ,];
     const obj5 = { style: tmp.pollAnswers, children: null };
     const items1 = [
       substr.map((poll_media) => {
@@ -348,7 +348,7 @@ function PollAnnouncementCard(message) {
       const intl = tmp13(1113).intl;
       const obj6 = { count: diff };
       obj.children = intl.format(tmp13(1113).t["mv/nIa"], obj6);
-      tmp9Result = closure_8(tmp13(5919).Text, obj);
+      tmp9Result = closure_8(tmp13(5923).Text, obj);
     }
     items1[1] = tmp9Result;
     obj5.children = items1;
@@ -360,9 +360,9 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj9.createdAt = date;
-    obj9.expiryLabel = message(10404).getPollExpiryLabel(poll);
+    obj9.expiryLabel = message(10503).getPollExpiryLabel(poll);
     obj8.children = intl2.format(message(1113).t.t0FTsH, obj9);
-    obj7.children = closure_8(message(5919).Text, obj8);
+    obj7.children = closure_8(message(5923).Text, obj8);
     items[2] = closure_8(closure_5, obj7);
     obj3.children = items;
     obj2.children = closure_9(closure_5, obj3);
@@ -371,12 +371,12 @@ function PollAnnouncementCard(message) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(10316).MAX_VISIBLE_ANNOUNCEMENTS;
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(10426).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PlatformUtils = fn(1380);
 let closure_11 = null;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   smallCardsScroller: { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" },
   skeletonCardsScroller: null,

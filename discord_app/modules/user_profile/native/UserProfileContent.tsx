@@ -71,7 +71,7 @@ function CustomStatusBubble(guildId) {
   let tmp7 = null;
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15465, dependencyMap.paths),
+      asyncRequireImpl(15499, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -154,7 +154,7 @@ function RemoveGameFriendIconButton(user) {
   items = [channelId, guildId, user];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15782, dependencyMap.paths),
+      asyncRequireImpl(15816, dependencyMap.paths),
       "UserProfileGameFriendActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -322,17 +322,17 @@ class PrimaryInfo {
     return tmp15(tmp16, { children: items3 });
   }
 }
-function EditSection(guildId) {
-  guildId = guildId.guildId;
+function EditSection(initialTab) {
+  const guildId = initialTab.guildId;
   let trackUserProfileAction;
   const tmp = trackUserProfileAction;
-  const tmp3 = trackUserProfileAction(8607)();
-  trackUserProfileAction = guildId(8545).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = guildId(8545);
+  const tmp3 = trackUserProfileAction(8618)();
+  trackUserProfileAction = guildId(8556).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = guildId(8556);
   items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  dependencyMap = trackUserProfileAction(10034)();
-  closure_3 = trackUserProfileAction(10034)({ guild: stateFromStores });
+  dependencyMap = trackUserProfileAction(10047)({ initialTab: initialTab.initialEditingTab });
+  closure_3 = trackUserProfileAction(10047)({ guild: stateFromStores });
   const obj3 = {
     style: tmp3.primaryButtons,
     maxWidth: ACTION_SHEET_MAX_WIDTH,
@@ -341,8 +341,8 @@ function EditSection(guildId) {
   };
   const obj2 = guildId(504);
   const obj4 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-  const tmp7 = trackUserProfileAction(15702);
-  obj4.icon = closure_19(guildId(10901).PencilIcon, { size: "sm", color: trackUserProfileAction(575).colors.WHITE });
+  const tmp7 = trackUserProfileAction(15736);
+  obj4.icon = closure_19(guildId(11920).PencilIcon, { size: "sm", color: trackUserProfileAction(575).colors.WHITE });
   if (null != stateFromStores) {
     const intl2 = tmp4(1113).intl;
     let stringResult = intl2.string(tmp4(1113).t.HmFaFB);
@@ -357,12 +357,12 @@ function EditSection(guildId) {
     closeVoicePanelsDefault();
     closure_2();
   };
-  obj3.primaryButton = closure_19(guildId(5926).Button, obj4);
+  obj3.primaryButton = closure_19(guildId(5930).Button, obj4);
   let tmp6Result;
   if (null != stateFromStores) {
     const obj6 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj7 = { size: "sm", color: tmp(575).colors.WHITE };
-    obj6.icon = closure_19(tmp4(10901).PencilIcon, obj7);
+    obj6.icon = closure_19(tmp4(11920).PencilIcon, obj7);
     const intl3 = tmp4(1113).intl;
     obj6.text = intl3.string(tmp4(1113).t["PKQB/H"]);
     obj6.onPress = function handleEditGuildProfile() {
@@ -371,7 +371,7 @@ function EditSection(guildId) {
       closeVoicePanelsDefault();
       closure_3();
     };
-    tmp6Result = closure_19(tmp4(5926).Button, obj6);
+    tmp6Result = closure_19(tmp4(5930).Button, obj6);
   }
   obj3.secondaryButton = tmp6Result;
   return closure_19(tmp7, obj3);
@@ -395,12 +395,12 @@ function UserProfileActivityTabContainer(arg0) {
   return closure_1_19(View, obj);
 }
 const View = fn(17).View;
-const UserProfileSections = fn(8479).UserProfileSections;
-const Constants = fn(7962);
+const UserProfileSections = fn(8490).UserProfileSections;
+const Constants = fn(7972);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_14, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_15 } = Constants);
 const RelationshipTypes = fn(1072).RelationshipTypes;
-const ACTION_SHEET_MAX_WIDTH = fn(5557).ACTION_SHEET_MAX_WIDTH;
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ACTION_SHEET_MAX_WIDTH = fn(5561).ACTION_SHEET_MAX_WIDTH;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
 const size = fn(2);
@@ -673,8 +673,8 @@ export default noop.memo(function UserProfileContent(user) {
   restoreActiveIndex = profileSectionTabs.restoreActiveIndex;
   isVisible = tmp50;
   isVisible2 = tmp51;
-  const items15 = [navigateToPremium];
   ({ handleTabChange, activeProfileTabSectionIndex } = profileSectionTabs);
+  const items15 = [navigateToPremium];
   callback1 = obj10.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     if (navigateToPremium != null) {
@@ -1165,7 +1165,7 @@ export default noop.memo(function UserProfileContent(user) {
         items30[4] = tmp66(tmp(tmp2[96]), obj28);
         let tmp66Result7 = user.id === stateFromStores.id && !isPreviewingChanges;
         if (tmp66Result7) {
-          const obj29 = { guildId };
+          const obj29 = { guildId, initialEditingTab: str };
           tmp66Result7 = tmp66(hasNewWishlistItems, obj29);
         }
         items30[5] = tmp66Result7;
@@ -1226,12 +1226,12 @@ export default noop.memo(function UserProfileContent(user) {
       }
       const items32 = [shouldLogExposure, ,];
       const obj35 = { state: segmentedControlState, variant: null };
-      let str;
+      let str2;
       if (tmp29) {
-        str = "overlay";
+        str2 = "overlay";
       }
       const obj36 = { children: null };
-      obj35.variant = str;
+      obj35.variant = str2;
       items32[1] = isBadgeManagementEnabled(tmp6(tmp2[99]).Tabs, obj35);
       const obj37 = { ref: ref2, style: null, collapsable: false, pointerEvents: "box-none" };
       const rect = { position: "absolute", left: null, top: 0, right: 0, bottom: 0 };

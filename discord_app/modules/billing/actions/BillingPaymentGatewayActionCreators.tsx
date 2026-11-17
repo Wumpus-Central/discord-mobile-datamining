@@ -4,7 +4,7 @@ import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import BillingSharedActionCreators from "BillingSharedActionCreators.tsx";
-import _mod6769 from "../../../../_runtime/metro/06769__.js";
+import _mod6777 from "../../../../_runtime/metro/06777__.js";
 import StripeActionCreators from "StripeActionCreators.tsx";
 import StripeUtilsAll from "../../../utils/StripeUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -63,7 +63,7 @@ let closure_13 = async function _createCardToken(arg0, arg1) {
             let error;
             if (null != closure_0) {
               if (null != element) {
-                element = element.getElement(_mod6769.CardNumberElement);
+                element = element.getElement(_mod6777.CardNumberElement);
                 if (null == element) {
                   throw BillingSharedActionCreators.dispatchConfirmationError(
                     "Unable to load card elements from Stripe",
@@ -582,7 +582,7 @@ let closure_25 = async function _confirmPaymentElementSource() {
                       if (closure_136_11 == null) {
                         setupIntent = undefined;
                       }
-                      const obj8 = { setupIntent, error: "y" };
+                      const obj8 = { setupIntent, error: "Array" };
                       closure_136_10 = obj8;
                       if (
                         (function shouldRecreateSetupIntentForPaymentElement(error) {
@@ -613,7 +613,7 @@ let closure_25 = async function _confirmPaymentElementSource() {
                       setupIntent2 = closure_137_16(closure_136_10.setupIntent, closure_136_10.error, (code) => {
                         const intl = dependencyMap(1113).intl;
                         const stringResult = intl.string(dependencyMap(1113).t.khEaRI);
-                        return dependencyMap(6758).dispatchConfirmationError(code, {
+                        return dependencyMap(6766).dispatchConfirmationError(code, {
                           captureException: true,
                           defaultErrorMessage: stringResult,
                           captureExceptionOptions: { tags: { source: "payment_elements" } },

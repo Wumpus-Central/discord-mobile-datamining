@@ -26,18 +26,14 @@ export default function ConjureSharingModeSheet(onChange) {
   let obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(onChange(4131).ujIxRm);
+  obj2.title = intl.string(onChange(4133).jDBYrs);
   obj.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
   obj.children = jsx(TableRadioGroup.TableRadioGroup, {
     value,
     onChange: callback,
     hasIcons: false,
     children: options.map((value) =>
-      jsx(
-        value(dependencyMap[8]).TableRadioRow,
-        { value: value.value, label: value.label, subLabel: value.description },
-        value.value,
-      ),
+      jsx(value(dependencyMap[8]).TableRadioRow, { value: value.value, label: value.label }, value.value),
     ),
   });
   return jsx(ActionSheet.ActionSheet, { header: null, children: null });

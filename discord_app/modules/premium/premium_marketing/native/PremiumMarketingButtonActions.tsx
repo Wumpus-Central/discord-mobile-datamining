@@ -7,6 +7,7 @@ import openPremiumPlanSelectionActionSheetDefault from "../../native/openPremium
 import cta_button from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx";
 import navigateToSocialLayerStorefrontDefault from "../../../slayer_storefront/navigateToSocialLayerStorefront.tsx";
 import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen.tsx";
+import utils_openGiftModal from "../../native/utils/openGiftModal.tsx";
 import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 
 const require = globalThis.__r;
@@ -23,7 +24,7 @@ const Constants = fn(1072);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx");
 
-export function getButtonActionHandler(arg0) {
+export function getButtonActionHandler(giftModalDestination) {
   ({
     buttonAction,
     applicationId: require,
@@ -32,7 +33,8 @@ export function getButtonActionHandler(arg0) {
     analyticsPage: PromotionsStore,
     onPaymentSuccess: PremiumTypes,
     onPaymentDismiss: closure_5,
-  } = arg0);
+  } = giftModalDestination);
+  constants = undefined;
   if (cta_button.ButtonAction.OPEN_SOCIAL_LAYER_STOREFRONT === buttonAction) {
     return () => {
       if (null != require) {
@@ -73,6 +75,22 @@ export function getButtonActionHandler(arg0) {
               onPaymentDismiss,
             };
             return openPremiumPlanSelectionActionSheetDefault(obj);
+          };
+        } else if (cta_button.ButtonAction.OPEN_GIFT_MODAL === buttonAction) {
+          constants = giftModalDestination.giftModalDestination === cta_button.GiftModalDestination.TIER_2;
+          return () => {
+            TIER_2 = undefined;
+            if (closure_6) {
+              TIER_2 = PremiumTypes.TIER_2;
+            }
+            const obj2 = { premiumType: TIER_2, analyticsLocation: null, analyticsLocations };
+            const obj3 = {
+              section: constants.FOOTER,
+              object: constants2.BUTTON_CTA,
+              objectType: closure_6 ? metroImportDefault.TIER_2 : metroImportDefault.BUY,
+            };
+            obj2.analyticsLocation = obj3;
+            return utils_openGiftModal.openGiftModal(obj2);
           };
         } else if (cta_button.ButtonAction.OPEN_SHOP === buttonAction) {
           return () => {

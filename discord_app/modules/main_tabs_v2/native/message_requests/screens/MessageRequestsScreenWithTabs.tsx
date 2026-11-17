@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import SegmentedControlState from "../../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import useMeasuredLayoutDefault from "../../../../screen/native/useMeasuredLayout.tsx";
-import SegmentedControl from "../../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
 import TTIFirstContentfulPaint from "../../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
+import SegmentedControl from "../../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
 import SegmentedControlPages from "../../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx";
 import MessageRequestListDefault from "../../../../message_request/native/MessageRequestList.tsx";
 import SpamMessageListDefault from "../../../../message_request/native/spam/SpamMessageList.tsx";
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   messageRequestContent: { flex: 1 },

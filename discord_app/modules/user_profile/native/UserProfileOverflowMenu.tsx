@@ -24,10 +24,10 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(7962).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7972).UserProfileThemeTypes;
 const Constants = fn(1072);
 ({ AVATAR_MAX_SIZE: closure_11, ChannelTypesSets: closure_12, RelationshipTypes: map1 } = Constants);
-const ParticipantTypes = fn(5973).ParticipantTypes;
+const ParticipantTypes = fn(5977).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const size = fn(2);
@@ -323,7 +323,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
           trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15690, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15724, dependencyMap.paths), {
             userId: id,
             showUserProfile: callback1,
           });

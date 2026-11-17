@@ -90,11 +90,11 @@ function TraitTab(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6367);
+const CheckpointConstants = fn(6375);
 ({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   scroll: { flexGrow: 0 },
   scrollContent: { paddingHorizontal: nativeDefault.space.PX_16 },
@@ -234,7 +234,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
         } else {
           const obj = { selectedOption: activeCustomizationOption, onSelectOption };
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(14545, dependencyMap.paths),
+            asyncRequireImpl(13416, dependencyMap.paths),
             "CheckpointFinalizeTraitPicker",
             obj,
           );

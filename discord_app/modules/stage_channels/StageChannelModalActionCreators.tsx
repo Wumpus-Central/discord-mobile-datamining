@@ -202,15 +202,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(6893).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(6901).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(6893);
+    const obj2 = flag2(6901);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(6893).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(6893);
+      flag2(6901).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(6901);
     }
   }
 }

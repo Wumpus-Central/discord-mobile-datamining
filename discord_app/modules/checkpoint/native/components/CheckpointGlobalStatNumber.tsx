@@ -24,7 +24,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 1.3392857142857142;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", columnGap: nativeDefault.space.PX_8 },
   croppedContainer: null,

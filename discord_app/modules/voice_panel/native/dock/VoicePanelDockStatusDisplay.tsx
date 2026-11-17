@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockStatusDisplay.tsx
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
-import _modDef3253 from "VoicePanelDock.messages.js";
+import _modDef3255 from "VoicePanelDock.messages.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -22,13 +22,13 @@ function StatusText(status) {
     if ("speaker" !== kind) {
       if ("joined" === kind) {
         const intl3 = require("util").intl;
-        stringResult = intl3.string(_modDef3253.f9Cdb5);
+        stringResult = intl3.string(_modDef3255.f9Cdb5);
       } else if ("left" === kind) {
         const intl2 = require("util").intl;
-        stringResult = intl2.string(_modDef3253.aZoM2c);
+        stringResult = intl2.string(_modDef3255.aZoM2c);
       } else if ("streaming" === kind) {
         const intl = require("util").intl;
-        stringResult = intl.string(_modDef3253.syN59i);
+        stringResult = intl.string(_modDef3255.syN59i);
       }
     }
   }
@@ -51,13 +51,13 @@ function StatusText(status) {
     if ("speaker" !== kind2) {
       if ("joined" === kind2) {
         const intl6 = require("util").intl;
-        stringResult1 = intl6.string(_modDef3253.f9Cdb5);
+        stringResult1 = intl6.string(_modDef3255.f9Cdb5);
       } else if ("left" === kind2) {
         const intl5 = require("util").intl;
-        stringResult1 = intl5.string(_modDef3253.aZoM2c);
+        stringResult1 = intl5.string(_modDef3255.aZoM2c);
       } else if ("streaming" === kind2) {
         const intl4 = require("util").intl;
-        stringResult1 = intl4.string(_modDef3253.syN59i);
+        stringResult1 = intl4.string(_modDef3255.syN59i);
       }
     }
   }
@@ -154,9 +154,9 @@ function StatusText(status) {
   const obj4 = { onLayout: callback, children: null };
   if (null != status.userId) {
     const obj5 = { userId: status.userId, dimmed: "left" === status.kind };
-    let tmp53Result = closure_8(tmp26(19205).DockUserTitle, obj5);
+    let tmp53Result = closure_8(tmp26(19250).DockUserTitle, obj5);
   } else {
-    tmp53Result = closure_8(tmp26(19205).DockChannelTitle, {});
+    tmp53Result = closure_8(tmp26(19250).DockChannelTitle, {});
   }
   obj4.children = tmp53Result;
   const items7 = [closure_8(c5, obj4)];
@@ -171,7 +171,7 @@ function StatusText(status) {
       str4 = "text-muted";
     }
     const obj7 = { variant: "body-xs/medium", color: str4, lineClamp: 1, children: stringResult1 };
-    obj6.children = closure_8(tmp26(5919).Text, obj7);
+    obj6.children = closure_8(tmp26(5923).Text, obj7);
     tmp53Result2 = closure_8(_modDef1655.View, obj6);
   }
   items7[1] = tmp53Result2;
@@ -505,10 +505,10 @@ function StatusLayer(exit) {
   obj3.style = items5;
   if (null != status.userId) {
     let obj4 = { userId: status.userId, dimmed: "left" === status.kind, entered: tmp12[0] };
-    let tmp32Result = tmp32(tmp2(19205).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(19250).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(19205).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(19250).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
   const items6 = [sharedValue2(_modDef1655.View, obj3)];
@@ -528,16 +528,16 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(19204);
+const VoicePanelDockStatusStore = fn(19249);
 ({ useDockHasStreamers: closure_6, useDockSubject: metroImportDefault } = VoicePanelDockStatusStore);
-const VoicePanelDockConstants = fn(12009);
+const VoicePanelDockConstants = fn(12446);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const spring = { mass: 0.6, stiffness: 560, damping: 24 };
-fn(5919).TextStyleSheet["body-md/medium"].lineHeight;
-const lineHeight = fn(5919).TextStyleSheet["body-xs/medium"].lineHeight;
-const createStyles = fn(5306);
+fn(5923).TextStyleSheet["body-md/medium"].lineHeight;
+const lineHeight = fn(5923).TextStyleSheet["body-xs/medium"].lineHeight;
+const createStyles = fn(5310);
 let obj = {
   display: { flexGrow: 1, flexShrink: 1, height: DOCK_TILE_SIZE },
   layer: null,

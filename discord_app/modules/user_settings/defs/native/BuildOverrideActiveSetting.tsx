@@ -19,14 +19,14 @@ function handleBuildOverrideActivePress() {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const obj2 = {
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef2302.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(13308).RefreshIcon,
+  IconComponent: fn(14540).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {
@@ -96,7 +96,7 @@ export default SettingBuilders.createStatic({
     return intl.string(_modDef2302.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(13308).RefreshIcon,
+  IconComponent: fn(14540).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {

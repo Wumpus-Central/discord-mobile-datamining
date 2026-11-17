@@ -20,7 +20,7 @@ function handleAddFriends() {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   container: { alignItems: "center", padding: nativeDefault.space.PX_48 },
   centeredText: { textAlign: "center" },

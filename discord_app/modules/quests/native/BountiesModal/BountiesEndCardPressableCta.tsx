@@ -9,10 +9,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const END_CARD_IMAGE_SIZE = fn(17589).END_CARD_IMAGE_SIZE;
+const END_CARD_IMAGE_SIZE = fn(17627).END_CARD_IMAGE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { image: null, info: null, ctaContainer: null };
   const size = {
@@ -41,10 +41,10 @@ export default function BountiesEndCardPressableCta(bounty) {
   const tmp = closure_9();
   getQuestImpressionId = bounty(getQuestImpressionId[6]).useGetQuestImpressionId();
   let obj = bounty(getQuestImpressionId[6]);
-  const bountyCtaInfo = bounty(getQuestImpressionId[7]).getBountyCtaInfo(bounty);
+  const advertiserCtaInfo = bounty(getQuestImpressionId[7]).getAdvertiserCtaInfo(bounty);
   let scaledImageUrl;
-  if (null != bountyCtaInfo.iconImageUri) {
-    const size = { assetUrl: bountyCtaInfo.iconImageUri, width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE };
+  if (null != advertiserCtaInfo.iconImageUri) {
+    const size = { assetUrl: advertiserCtaInfo.iconImageUri, width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE };
     scaledImageUrl = tmp2(tmp3[8]).getScaledImageUrl(size);
     const tmp2Result = tmp2(tmp3[8]);
   }
@@ -70,7 +70,7 @@ export default function BountiesEndCardPressableCta(bounty) {
     disabled: flag,
     hitSlop: 16,
     accessibilityRole: "button",
-    accessibilityLabel: bountyCtaInfo.label,
+    accessibilityLabel: advertiserCtaInfo.label,
     style: tmp.ctaContainer,
     children: null,
   };
@@ -82,7 +82,7 @@ export default function BountiesEndCardPressableCta(bounty) {
     children: closure_7(bounty(getQuestImpressionId[14]).Text, {
       variant: "body-md/semibold",
       color: "text-strong",
-      children: bountyCtaInfo.label,
+      children: advertiserCtaInfo.label,
     }),
   };
   items1[1] = closure_7(closure_5, obj5);

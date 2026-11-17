@@ -3,8 +3,8 @@ import apply from "../../../../../_runtime/00012_apply.js";
 import MessageRecord from "../../../../records/MessageRecord.tsx";
 
 require = fn;
-let closure_3 = fn(9066).EMBED_TYPES_WITHOUT_DESCRIPTION;
-fn(19522).CachedSearchResultParser;
+let closure_3 = fn(9077).EMBED_TYPES_WITHOUT_DESCRIPTION;
+fn(19567).CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);
   _require = tmp4;
@@ -19,9 +19,9 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     } else {
       const str4 = content.replace(/(\r\n|\n|\r)/gm, " ");
       const _Set = Set;
-      set = new Set(set(19523).analyze(tokenizedQueryContent));
+      set = new Set(set(19568).analyze(tokenizedQueryContent));
       const parts = str4.split(/(\W+)/g);
-      const found = parts.find((item) => set(19523).shouldHighlight(item, set));
+      const found = parts.find((item) => set(19568).shouldHighlight(item, set));
       if (null == found) {
         return null;
       } else {
@@ -41,7 +41,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           return "" + str2 + str4.substring(bound);
         }
       }
-      const obj = set(19523);
+      const obj = set(19568);
     }
   };
   tmp4.getSearchResults = function getSearchResults(content) {

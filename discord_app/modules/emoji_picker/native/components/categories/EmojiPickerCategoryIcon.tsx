@@ -3,19 +3,19 @@ import ClockIcon from "../../../../../design/components/Icon/native/redesign/gen
 import GameControllerIcon from "../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import HeartIcon from "../../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
-import StarIcon from "../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
-import TrophyIcon from "../../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import TrophyIcon from "../../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
+import StarIcon from "../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import FlagIcon from "../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import LightbulbIcon from "../../../../../design/components/Icon/native/redesign/generated/LightbulbIcon.tsx";
 import NatureIcon from "../../../../../design/components/Icon/native/redesign/generated/NatureIcon.tsx";
 import FoodIcon from "../../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx";
 import BicycleIcon from "../../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
 import ObjectIcon from "../../../../../design/components/Icon/native/redesign/generated/ObjectIcon.tsx";
-import FlagIcon from "../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategories = fn(6972).EmojiCategories;
+const EmojiCategories = fn(6980).EmojiCategories;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

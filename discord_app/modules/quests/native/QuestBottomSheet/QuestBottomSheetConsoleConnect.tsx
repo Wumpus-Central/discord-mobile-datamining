@@ -10,11 +10,11 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
+import XboxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/XboxNeutralIcon.tsx";
+import PlaystationNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/PlaystationNeutralIcon.tsx";
 import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
 import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
-import XboxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/XboxNeutralIcon.tsx";
-import PlaystationNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/PlaystationNeutralIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -85,7 +85,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   platformButtonsContainer: {
     display: "flex",
@@ -103,17 +103,17 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17725, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17765, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       initialStep,
       sourceQuestContent,
     });
   }
-  const xboxAndPlaystationAccounts = quest(10131).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(10131);
-  closure_4 = quest(10168).useGetQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(10576).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(10576);
+  closure_4 = quest(10613).useGetQuestImpressionId();
   items = [quest, xboxAndPlaystationAccounts];
-  let obj2 = quest(10168);
+  let obj2 = quest(10613);
   return closure_6(NonInlineConsoleConnection, {
     consoles: xboxAndPlaystationAccounts.useMemo(
       () =>

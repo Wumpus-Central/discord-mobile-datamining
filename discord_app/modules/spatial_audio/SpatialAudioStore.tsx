@@ -2,6 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
 import SpatialAudioForVoiceExperimentDefault from "../voice_panel/SpatialAudioForVoiceExperiment.tsx";
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
@@ -14,7 +15,7 @@ function applyActiveOptions(arg0) {
   if (arg0 === undefined) {
     flag = false;
   }
-  let isSpatial2;
+  let isSpatial3;
   obj = SpatialAudioForVoiceExperimentDefault;
   const config = obj.getConfig({ location: "SpatialAudioStore" });
   ({ enabled, positioningModel } = config);
@@ -48,19 +49,33 @@ function applyActiveOptions(arg0) {
     }
     tmpResult2 = apply;
   }
-  isSpatial2 = mergeResult.isSpatial;
+  const isSpatial2 = mergeResult.isSpatial;
+  isSpatial3 = isSpatial2;
   const mediaEngine1 = MediaEngineStore.getMediaEngine();
   mediaEngine1.setAudioMixerOptions(mergeResult);
   if (!isSpatial2) {
     global = SpatialAudioStatus.UNKNOWN;
   }
   mediaEngine1.eachConnection(
-    (setSpatialAudioEnabled) => setSpatialAudioEnabled.setSpatialAudioEnabled(isSpatial2),
+    (setSpatialAudioEnabled) => setSpatialAudioEnabled.setSpatialAudioEnabled(isSpatial3),
     constants2.DEFAULT,
   );
   const rTCConnection = RTCConnectionStore.getRTCConnection();
   if (rTCConnection != null) {
     const result = rTCConnection.setSpatialAudioEnabled(isSpatial2);
+  }
+  isSpatial3 = mergeResult.isSpatial;
+  if (isSpatial3) {
+    isSpatial3 = global === SpatialAudioStatus.ACTIVE;
+  }
+  const mediaEngine2 = MediaEngineStore.getMediaEngine();
+  mediaEngine2.eachConnection(
+    (setSpatialAudioActive) => setSpatialAudioActive.setSpatialAudioActive(isSpatial),
+    constants2.DEFAULT,
+  );
+  const rTCConnection1 = RTCConnectionStore.getRTCConnection();
+  if (rTCConnection1 != null) {
+    const result1 = rTCConnection1.setSpatialAudioActive(isSpatial3);
   }
   return true;
 }
@@ -81,15 +96,16 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const SpatialAudioConstants = fn(6217);
+const SpatialAudioConstants = fn(6225);
 const DEFAULT_SPATIAL_AUDIO_OPTIONS = SpatialAudioConstants.DEFAULT_SPATIAL_AUDIO_OPTIONS;
 let closure_7 = SpatialAudioConstants.MIN_POSITIONING_SPATIAL_AUDIO_VERSION;
-const Constants = fn(6065);
+const Constants = fn(6072);
 ({ Features: closure_8, MediaEngineContextTypes: closure_9, SpatialAudioStatus } = Constants);
 let obj = {};
 let isSpatial = {};
 apply.cloneDeep(DEFAULT_SPATIAL_AUDIO_OPTIONS);
 let global = SpatialAudioStatus.UNKNOWN;
+const set = new Set();
 let defaultOn = false;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class SpatialAudioStore extends DeviceSettingsStore {}
@@ -104,17 +120,61 @@ prototype["initialize"] = function initialize(enabled) {
   self.waitFor(ApexExperimentStore, MediaEngineStore, RTCConnectionStore);
   items = [ApexExperimentStore];
   self.syncWith(items, handleExperimentChange);
-  const mediaEngine = MediaEngineStore.getMediaEngine();
-  mediaEngine.on(self(6086).MediaEngineEvent.Connection, (setSpatialAudioEnabled) =>
-    setSpatialAudioEnabled.setSpatialAudioEnabled(isSpatial.isSpatial),
-  );
-  mediaEngine.on(self(6086).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
+  let mediaEngine = MediaEngineStore.getMediaEngine();
+  mediaEngine.on(self(6093).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => {
+    const result = setSpatialAudioEnabled.setSpatialAudioEnabled(closure_1_13.isSpatial);
+    isSpatial = closure_1_13.isSpatial;
+    if (isSpatial) {
+      isSpatial = global === constants.ACTIVE;
+    }
+    const result1 = setSpatialAudioEnabled.setSpatialAudioActive(isSpatial);
+  });
+  mediaEngine.on(self(6093).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
     let flag = arg0 !== global;
     if (flag) {
       global = arg0;
+      isSpatial = mergeResult.isSpatial;
+      if (isSpatial) {
+        isSpatial = global === SpatialAudioStatus.ACTIVE;
+      }
+      const mediaEngine = MediaEngineStore.getMediaEngine();
+      mediaEngine.eachConnection(
+        (setSpatialAudioActive) => setSpatialAudioActive.setSpatialAudioActive(isSpatial),
+        constants2.DEFAULT,
+      );
+      const rTCConnection = RTCConnectionStore.getRTCConnection();
       flag = true;
+      if (rTCConnection != null) {
+        const result = rTCConnection.setSpatialAudioActive(isSpatial);
+        flag = true;
+      }
     }
-    if (flag) {
+    let flag2 = flag;
+    if (flag2) {
+      if (arg0 === SpatialAudioStatus.INIT_FAILED) {
+        flag2 = true;
+        if (!set.has(arg0)) {
+          set.add(arg0);
+          const _HermesInternal = HermesInternal;
+          obj = { tags: null, fingerprint: null, extra: null };
+          const obj2 = { spatialAudioStatus: SpatialAudioStatus[arg0] };
+          obj.tags = obj2;
+          items = ["spatial-audio-failed", SpatialAudioStatus[arg0]];
+          obj.fingerprint = items;
+          const obj5 = { spatialAudioVersion: null, positioningModel: null };
+          const combined = "Spatial audio failed: " + tmp12;
+          const mediaEngine1 = MediaEngineStore.getMediaEngine();
+          obj5.spatialAudioVersion = mediaEngine1.getSpatialAudioVersion();
+          obj5.positioningModel = mergeResult.positioning.model;
+          obj.extra = obj5;
+          SentryUtilsDefault.captureMessage(combined, obj);
+          flag2 = true;
+        }
+      } else {
+        flag2 = true;
+      }
+    }
+    if (flag2) {
       self.emitChange();
     }
   });
@@ -199,12 +259,31 @@ obj = {
     applyActiveOptions();
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
-    if (null == channelId.channelId) {
-      if (global !== SpatialAudioStatus.UNKNOWN) {
-        global = SpatialAudioStatus.UNKNOWN;
+    let tmp = null == channelId.channelId;
+    if (tmp) {
+      const UNKNOWN = SpatialAudioStatus.UNKNOWN;
+      let flag = UNKNOWN !== global;
+      if (flag) {
+        global = UNKNOWN;
+        isSpatial = mergeResult.isSpatial;
+        if (isSpatial) {
+          isSpatial = global === tmp2.ACTIVE;
+        }
+        const mediaEngine = MediaEngineStore.getMediaEngine();
+        mediaEngine.eachConnection(
+          (setSpatialAudioActive) => setSpatialAudioActive.setSpatialAudioActive(isSpatial),
+          constants2.DEFAULT,
+        );
+        const rTCConnection = RTCConnectionStore.getRTCConnection();
+        flag = true;
+        if (rTCConnection != null) {
+          const result = rTCConnection.setSpatialAudioActive(isSpatial);
+          flag = true;
+        }
       }
+      tmp = flag;
     }
-    return false;
+    return tmp;
   },
   LOGOUT: function handleLogout() {
     closure_12 = {};

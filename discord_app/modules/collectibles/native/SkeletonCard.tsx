@@ -9,7 +9,7 @@ const _modDef1655 = _mod1655;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_5 = createStyles.createStyles((width, height) => {
   const obj = { skeletonCard: null };
   const size = {

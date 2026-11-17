@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
-import ConjureProjectIconDefault from "../../projects/native/ConjureProjectIcon.tsx";
 import conjureLinkedAppData from "../conjureLinkedAppData.tsx";
+import ConjureProjectIconDefault from "../../projects/native/ConjureProjectIcon.tsx";
 import ConjureLinkedAppConnectorDefault from "ConjureLinkedAppConnector.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -39,7 +39,7 @@ function AppName(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   app: null,

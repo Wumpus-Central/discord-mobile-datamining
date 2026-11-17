@@ -14,11 +14,12 @@ import useUserProfileColors from "../hooks/native/useUserProfileColors.tsx";
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
 import useFetchCollectiblesCategoriesAndPurchasesDefault from "../../collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx";
+import UserProfileEditFormKeyboardAvoidingContextDefault from "UserProfileEditFormKeyboardAvoidingContext.tsx";
 import useSafeAreaAvoidingInputsDefault from "../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef17066 from "../../../../_runtime/metro/17066__.js";
+import _modDef17101 from "../../../../_runtime/metro/17101__.js";
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles.tsx";
@@ -41,40 +42,31 @@ import UserProfileEditFormTabsDefault from "UserProfileEditFormTabs.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import ProfileCustomizationNavigationStore from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
+import 01655__ from "../../../../_runtime/metro/01655__.js";
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
-const useMeasuredLayoutDefault = tmp(7994);
-const useProfileThemeDefault = tmp(8590);
-const useUserProfileBannerHeightDefault = tmp(8593);
-const UserProfileFixedBackgroundDefault = tmp(8600);
-const useBadgesDefault = tmp(8608);
-const UserProfileCustomStatusBubbleDefault = tmp(9531);
-const useTryItOutUpsellScrollTrackingDefault = tmp(17089);
-const useScrollToUserProfileEditFormSectionDefault = tmp(17090);
-const EditUserProfileAvatarDefault = tmp(17175);
-const UserProfilePremiumTryItOutUpsellDefault = tmp(17185);
+const useMeasuredLayoutDefault = tmp(8005);
+const useProfileThemeDefault = tmp(8601);
+const useUserProfileBannerHeightDefault = tmp(8604);
+const UserProfileFixedBackgroundDefault = tmp(8611);
+const useBadgesDefault = tmp(8619);
+const UserProfileCustomStatusBubbleDefault = tmp(9543);
+const useTryItOutUpsellScrollTrackingDefault = tmp(17124);
+const useStickyEditFormHeadersDefault = tmp(17125);
+const useScrollToUserProfileEditFormSectionDefault = tmp(17126);
+const EditUserProfileAvatarDefault = tmp(17211);
+const UserProfilePremiumTryItOutUpsellDefault = tmp(17222);
 require = fn;
 function EditUserProfileBanner(arg0) {
-  ({
-    user,
-    displayProfile,
-    pendingBanner,
-    tryItOutBanner,
-    isTryItOut,
-    pendingAvatarSrc,
-    pendingAccentColor,
-    pendingThemeColors,
-    disabled,
-  } = arg0);
+  ({ user, displayProfile, pendingBanner, tryItOutBanner, isTryItOut, pendingAvatarSrc, pendingAccentColor, pendingThemeColors, disabled } = arg0);
   if (isTryItOut) {
     if (tryItOutBanner == null) {
-      tryItOutBanner = obj;
+      tryItOutBanner = obj4;
     }
     pendingBanner = tryItOutBanner;
   }
-  obj = PremiumUtilsDefault;
-  const canUseCollectiblesResult = obj.canUseCollectibles(user);
+  const canUseCollectiblesResult = PremiumUtilsDefault.canUseCollectibles(user);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.EDIT_BANNER).analyticsLocations;
   const obj2 = { user, analyticsLocations, isTryItOut, showRemoveBanner: null };
   const tmp6 = useOpenChangeBannerActionSheetDefault;
@@ -83,20 +75,8 @@ function EditUserProfileBanner(arg0) {
     banner = displayProfile.banner;
   }
   obj2.showRemoveBanner = ProfileCustomizationUtils.showRemoveBanner(pendingBanner, banner);
-  const obj4 = { value: analyticsLocations, children: null };
-  const obj5 = {
-    user,
-    displayProfile,
-    pendingBanner,
-    pendingAvatarSrc,
-    pendingThemeColors,
-    pendingAccentColor,
-    bannerSafeArea: null,
-    showProfilePreviewButton: null,
-    onPressEdit: null,
-    editButtonAccessibilityLabel: null,
-    editDisabled: null,
-  };
+  obj4 = { value: analyticsLocations, children: null };
+  const obj5 = { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerSafeArea: null, showProfilePreviewButton: null, onPressEdit: null, editButtonAccessibilityLabel: null, editDisabled: null };
   let banner1;
   const tmp6Result = tmp6(obj2);
   if (displayProfile != null) {
@@ -108,27 +88,21 @@ function EditUserProfileBanner(arg0) {
   const intl = util.intl;
   obj5.editButtonAccessibilityLabel = intl.string(util.t.VqsHy0);
   obj5.editDisabled = disabled;
-  obj4.children = colors(UserProfileEditBannerButtonDefault, obj5);
-  return colors(useAnalyticsLocations.AnalyticsLocationProvider, obj4);
+  obj4.children = gesture(UserProfileEditBannerButtonDefault, obj5);
+  return gesture(useAnalyticsLocations.AnalyticsLocationProvider, obj4);
 }
 function ProfileThemeContainerColors(arg0) {
   ({ profileTheme, children } = arg0);
   const userProfileColors = useUserProfileColors.useUserProfileColors(profileTheme);
-  const obj2 = {
-    children: children({
-      containerBackground: userProfileColors.containerBackground,
-      containerBorderColor: userProfileColors.containerBorderColor,
-    }),
-  };
-  return colors(closure_1_16, obj2);
+  const obj2 = { children: children({ containerBackground: userProfileColors.containerBackground, containerBorderColor: userProfileColors.containerBorderColor }) };
+  return gesture(colors, obj2);
 }
 function MainUserProfileEditForm(arg0) {
   const obj2 = {};
-  const isMobileWidgetEditingEnabled =
-    MobileWidgetEditingExperiment.useIsMobileWidgetEditingEnabled("UserProfileEditForm");
+  const isMobileWidgetEditingEnabled = MobileWidgetEditingExperiment.useIsMobileWidgetEditingEnabled("UserProfileEditForm");
   const merged = Object.assign(arg0);
   obj2.isWidgetEditingEnabled = isMobileWidgetEditingEnabled;
-  return colors(UserProfileEditFormContent, obj2);
+  return gesture(UserProfileEditFormContent, obj2);
 }
 function UserProfileEditFormContent(currentUser) {
   currentUser = currentUser.currentUser;
@@ -144,159 +118,137 @@ function UserProfileEditFormContent(currentUser) {
     flag = false;
   }
   isSubmitting = undefined;
-  c15 = undefined;
-  c16 = undefined;
-  c17 = undefined;
   c18 = undefined;
-  pendingThemeColors = undefined;
+  c19 = undefined;
   c20 = undefined;
   c21 = undefined;
-  tryItOutThemeColors = undefined;
+  pendingThemeColors = undefined;
   c23 = undefined;
   c24 = undefined;
-  c25 = undefined;
+  tryItOutThemeColors = undefined;
   c26 = undefined;
+  c27 = undefined;
+  c28 = undefined;
+  c29 = undefined;
   pendingLegacyUsernameDisabled = undefined;
-  c30 = undefined;
-  c31 = undefined;
+  c33 = undefined;
+  c34 = undefined;
   let displayProfile;
-  closure_33 = undefined;
+  closure_36 = undefined;
   let pendingAvatarSrc;
-  closure_35 = undefined;
+  closure_38 = undefined;
   let isBadgeManagementEnabled;
   let stateFromStores;
   let stateFromStoresArray;
   let badges;
   let catalogBadges;
-  c41 = undefined;
-  c42 = undefined;
-  closure_43 = undefined;
-  closure_44 = undefined;
+  c44 = undefined;
+  c45 = undefined;
+  closure_46 = undefined;
+  closure_47 = undefined;
   let legacyUsername;
   let str2;
   let str3;
   let str4;
   let hasCustomProfileTheme;
-  closure_50 = undefined;
+  closure_53 = undefined;
+  flag = undefined;
+  c55 = undefined;
+  measureTabsY = undefined;
+  c57 = undefined;
+  c58 = undefined;
   let errorMessage;
   let first3;
   let first4;
-  c54 = undefined;
-  closure_55 = undefined;
+  c62 = undefined;
+  closure_63 = undefined;
   let tmp = importDefault;
-  obj = dependencyMap;
+  let obj = dependencyMap;
   let tmp2 = UserProfileSharedStylesDefault();
   const tmp3 = UserProfileEditFormSharedStylesDefault();
   const formContainer = tmp3;
-  maxLength = require("BioMaxLengthExperiment").useBioMaxLength({ location: "user_profile_edit_form" });
+  ProfileCustomizationNavigationStore = require("BioMaxLengthExperiment").useBioMaxLength({ location: "user_profile_edit_form" });
   let obj2 = require("BioMaxLengthExperiment");
-  const ref1 = isTryItOut.useRef(null);
+  const tmp6 = c19();
+  const tabsAnchor = tmp6;
   const tmp5 = useKeyboardIsOpenDefault();
+  const animatedRef = require("../../../../_runtime/metro/01655__.js").useAnimatedRef();
+  let obj3 = require("../../../../_runtime/metro/01655__.js");
   const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
-  let obj4 = require("../../../../_runtime/metro/01655__.js");
+  obj4 = require("../../../../_runtime/metro/01655__.js");
   const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const ref1 = isTryItOut.useRef(null);
   const ref2 = isTryItOut.useRef(null);
   const ref3 = isTryItOut.useRef(null);
-  const ref4 = isTryItOut.useRef(null);
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   const PX_16 = nativeDefault.space.PX_16;
-  let obj6 = { insets, inputs: null, scrollViewRef: null };
-  items = [
-    { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } },
-    { ref: ref3, offset: { type: "toRef", ref: ref4, extraOffset: PX_16 } },
-  ];
-  let obj9 = { ref: ref4, offset: null };
-  let obj10 = { type: "toValue", value: null };
+  const ref4 = isTryItOut.useRef(null);
+  let obj7 = { insets, inputs: null, scrollViewRef: null };
+  items = [{ ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } }, { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } }, , ];
+  let obj10 = { ref: ref3, offset: null };
+  let obj11 = { type: "toValue", value: null };
   let obj5 = require("../../../../_runtime/metro/01655__.js");
-  let obj7 = { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } };
-  let obj8 = { ref: ref3, offset: { type: "toRef", ref: ref4, extraOffset: PX_16 } };
-  obj10.value = nativeDefault.space.PX_64;
-  obj9.offset = obj10;
-  items[2] = obj9;
-  obj6.inputs = items;
-  obj6.scrollViewRef = ref1;
-  const onFocus = useSafeAreaAvoidingInputsDefault(obj6).onFocus;
-  const tmp13 = useUserProfileEditFormDefault();
-  ({ errors, isSubmitting } = tmp13);
-  ({
-    pendingAvatarDecoration: c15,
-    pendingProfileEffect: c16,
-    pendingProfileFrame: c17,
-    pendingNameplate: c18,
-    pendingThemeColors,
-  } = tmp13);
-  ({ tryItOutAvatarDecoration: c20, tryItOutProfileEffect: c21, tryItOutThemeColors } = tmp13);
-  ({
-    tryItOutDisplayNameStyles: c23,
-    pendingGlobalName: c24,
-    pendingPronouns: c25,
-    pendingBio: c26,
-    pendingLegacyUsernameDisabled,
-  } = tmp13);
-  const pendingBadgeDisplayOrder = tmp13.pendingBadgeDisplayOrder;
-  const pendingBadgeHiddenBadges = tmp13.pendingBadgeHiddenBadges;
-  ({
-    pendingPrimaryGuildId: c30,
-    pendingDisplayNameStyles: c31,
-    pendingAvatar,
-    pendingBanner,
-    pendingAccentColor,
-    tryItOutBanner,
-  } = tmp13);
+  let obj8 = { ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } };
+  let obj9 = { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } };
+  obj11.value = nativeDefault.space.PX_64;
+  obj10.offset = obj11;
+  items[2] = obj10;
+  let obj12 = { ref: ref4, offset: null };
+  const tmp14 = useSafeAreaAvoidingInputsDefault;
+  obj12.offset = { type: "toValue", value: nativeDefault.space.PX_80 };
+  items[3] = obj12;
+  obj7.inputs = items;
+  obj7.scrollViewRef = animatedRef;
+  const onFocus = tmp14(obj7).onFocus;
+  let items1 = [onFocus];
+  value = isTryItOut.useMemo(() => ({ focusedInputRef: ref4, onInputFocus: onFocus }), items1);
+  const tmp15 = useUserProfileEditFormDefault();
+  ({ errors, isSubmitting } = tmp15);
+  ({ pendingAvatarDecoration: c18, pendingProfileEffect: c19, pendingProfileFrame: c20, pendingNameplate: c21, pendingThemeColors } = tmp15);
+  ({ tryItOutAvatarDecoration: c23, tryItOutProfileEffect: c24, tryItOutThemeColors } = tmp15);
+  ({ tryItOutDisplayNameStyles: c26, pendingGlobalName: c27, pendingPronouns: c28, pendingBio: c29, pendingLegacyUsernameDisabled } = tmp15);
+  const pendingBadgeDisplayOrder = tmp15.pendingBadgeDisplayOrder;
+  const pendingBadgeHiddenBadges = tmp15.pendingBadgeHiddenBadges;
+  ({ pendingPrimaryGuildId: c33, pendingDisplayNameStyles: c34, pendingAvatar, pendingBanner, pendingAccentColor, tryItOutBanner } = tmp15);
   useFetchCollectiblesCategoriesAndPurchasesDefault();
-  const guildAutomodProfileQuarantineErrors =
-    require("AutomodQuarantineUtils").useGuildAutomodProfileQuarantineErrors();
+  let obj13 = { type: "toValue", value: nativeDefault.space.PX_80 };
+  const guildAutomodProfileQuarantineErrors = require("AutomodQuarantineUtils").useGuildAutomodProfileQuarantineErrors();
   let str = currentUser.id;
-  let obj11 = require("AutomodQuarantineUtils");
+  let obj14 = require("AutomodQuarantineUtils");
   if (str == null) {
     str = "";
   }
-  const tmp16Result = useDisplayProfileDefault(str);
-  displayProfile = tmp16Result;
+  const tmp18Result = useDisplayProfileDefault(str);
+  displayProfile = tmp18Result;
   const customStatusActivity = require("userSettingToActivity").useCustomStatusActivity();
   const tmp4Result = require("userSettingToActivity");
-  closure_33 =
-    "profile" ===
-    require("CustomTypingIndicatorExperiment").useCustomTypingIndicatorConfig("UserProfileEditForm").entryPoint;
+  closure_36 = "profile" === require("CustomTypingIndicatorExperiment").useCustomTypingIndicatorConfig("UserProfileEditForm").entryPoint;
   const tmp4Result10 = require("CustomTypingIndicatorExperiment");
   pendingAvatarSrc = require("RecentAvatarUtils").getPendingAvatarSrc({ userId: currentUser.id, image: pendingAvatar });
-  let tmp19 = useBadgesDefault(tmp16Result, pendingLegacyUsernameDisabled);
-  closure_35 = tmp19;
-  let obj12 = { userId: currentUser.id, image: pendingAvatar };
+  const tmp21 = useBadgesDefault(tmp18Result, pendingLegacyUsernameDisabled);
+  closure_38 = tmp21;
+  let obj15 = { userId: currentUser.id, image: pendingAvatar };
   const tmp4Result11 = require("RecentAvatarUtils");
-  isBadgeManagementEnabled = require("BadgeManagementExperiment").useIsBadgeManagementEnabled({
-    location: "UserProfileEditForm",
-  });
+  isBadgeManagementEnabled = require("BadgeManagementExperiment").useIsBadgeManagementEnabled({ location: "UserProfileEditForm" });
   const tmp4Result12 = require("BadgeManagementExperiment");
-  let items1 = [maxLength];
-  stateFromStores = require("initialize").useStateFromStores(items1, () =>
-    BadgeDirectoryStore.hasCatalogFor(_undefined.id),
-  );
+  let items2 = [formContainer];
+  stateFromStores = require("initialize").useStateFromStores(items2, () => BadgeDirectoryStore.hasCatalogFor(_undefined.id));
   const tmp4Result13 = require("initialize");
-  let items2 = [maxLength];
-  stateFromStoresArray = require("initialize").useStateFromStoresArray(items2, () =>
-    BadgeDirectoryStore.getBadges(_undefined.id),
-  );
-  let items3 = [currentUser.id, isBadgeManagementEnabled];
-  const effect = obj3.useEffect(() => {
+  let items3 = [formContainer];
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items3, () => BadgeDirectoryStore.getBadges(_undefined.id));
+  const items4 = [currentUser.id, isBadgeManagementEnabled];
+  const effect = obj6.useEffect(() => {
     if (isBadgeManagementEnabled) {
       if (!tmp2) {
         const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(_undefined.id);
       }
       tmp2 = BadgeDirectoryStore.hasCatalogFor(_undefined.id) && !BadgeDirectoryStore.isCatalogStaleFor(_undefined.id);
     }
-  }, items3);
-  const items4 = [tmp19, stateFromStoresArray, pendingBadgeDisplayOrder, pendingBadgeHiddenBadges];
-  badges = obj3.useMemo(
-    () =>
-      PendingBadgeSettings.getPendingProfileBadges(closure_35, stateFromStoresArray, {
-        pendingBadgeDisplayOrder,
-        pendingBadgeHiddenBadges,
-      }),
-    items4,
-  );
-  const items5 = [stateFromStores, stateFromStoresArray, pendingBadgeDisplayOrder, pendingBadgeHiddenBadges];
-  catalogBadges = obj3.useMemo(() => {
+  }, items4);
+  const items5 = [tmp21, stateFromStoresArray, pendingBadgeDisplayOrder, pendingBadgeHiddenBadges];
+  badges = obj6.useMemo(() => PendingBadgeSettings.getPendingProfileBadges(closure_38, stateFromStoresArray, { pendingBadgeDisplayOrder, pendingBadgeHiddenBadges }), items5);
+  const items6 = [stateFromStores, stateFromStoresArray, pendingBadgeDisplayOrder, pendingBadgeHiddenBadges];
+  catalogBadges = obj6.useMemo(() => {
     let found = null;
     if (stateFromStores) {
       const obj2 = { pendingBadgeDisplayOrder, pendingBadgeHiddenBadges };
@@ -304,97 +256,92 @@ function UserProfileEditFormContent(currentUser) {
       found = result.filter((owned) => owned.owned && !owned.hidden);
     }
     return found;
-  }, items5);
+  }, items6);
   let someResult = !stateFromStores;
   if (stateFromStores) {
     someResult = stateFromStoresArray.some((owned) => owned.owned);
   }
-  c41 = someResult;
+  c44 = someResult;
   const tmp4Result14 = require("initialize");
   let result = PremiumUtilsDefault.canUsePremiumProfileCustomization(currentUser);
-  c42 = result;
+  c45 = result;
   let tmpResult = PremiumUtilsDefault;
-  closure_43 = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(
-    ref3.DISPLAY_NAME_STYLE,
-    "UserProfileEditForm",
-  );
-  let tmp25 = !result;
+  closure_46 = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(sharedValue1.DISPLAY_NAME_STYLE, "UserProfileEditForm");
+  let tmp27 = !result;
   if (!result) {
-    tmp25 = !tmp5;
+    tmp27 = !tmp5;
   }
   const tmp4Result15 = require("HexagonCampaignPerkAvailability");
-  const enabled = require("UserProfilePremiumTryItOutMobileRefreshExperiment").useTryItOutMobileRefreshConfig(
-    "UserProfileEditForm",
-  ).enabled;
-  let tmp26 = enabled;
+  const enabled = require("UserProfilePremiumTryItOutMobileRefreshExperiment").useTryItOutMobileRefreshConfig("UserProfileEditForm").enabled;
+  let tmp28 = enabled;
   if (enabled) {
-    tmp26 = !result;
+    tmp28 = !result;
   }
-  if (tmp26) {
-    tmp26 = !isTryItOut;
+  if (tmp28) {
+    tmp28 = !isTryItOut;
   }
-  closure_44 = tmp26;
+  closure_47 = tmp28;
   legacyUsername = undefined;
-  if (tmp16Result != null) {
-    legacyUsername = tmp16Result.getLegacyUsername();
+  if (tmp18Result != null) {
+    legacyUsername = tmp18Result.getLegacyUsername();
   }
   str2 = currentUser.globalName;
   if (str2 == null) {
     str2 = "";
   }
   str3 = undefined;
-  if (tmp16Result != null) {
-    str3 = tmp16Result.pronouns;
+  if (tmp18Result != null) {
+    str3 = tmp18Result.pronouns;
   }
   if (str3 == null) {
     str3 = "";
   }
   str4 = undefined;
-  if (tmp16Result != null) {
-    str4 = tmp16Result.bio;
+  if (tmp18Result != null) {
+    str4 = tmp18Result.bio;
   }
   if (str4 == null) {
     str4 = "";
   }
-  let obj13 = { user: currentUser, displayProfile: tmp16Result, pendingThemeColors: null, isPreview: null };
-  let tmp29 = pendingThemeColors;
+  let obj16 = { user: currentUser, displayProfile: tmp18Result, pendingThemeColors: null, isPreview: null };
+  let tmp31 = pendingThemeColors;
   const tmp4Result16 = require("UserProfilePremiumTryItOutMobileRefreshExperiment");
   if (isTryItOut) {
-    tmp29 = tryItOutThemeColors;
+    tmp31 = tryItOutThemeColors;
   }
-  obj13.pendingThemeColors = tmp29;
-  obj13.isPreview = isTryItOut;
-  const tmpResult1Result = useProfileThemeDefault(obj13);
+  obj16.pendingThemeColors = tmp31;
+  obj16.isPreview = isTryItOut;
+  const tmpResult1Result = useProfileThemeDefault(obj16);
   const primaryColor = tmpResult1Result.primaryColor;
-  hasCustomProfileTheme = tmp31;
-  let obj14 = { backgroundColor: null };
+  hasCustomProfileTheme = tmp33;
+  let obj17 = { backgroundColor: null };
   ({ theme, secondaryColor } = tmpResult1Result);
-  const tmpResult2 = useProfileThemeDefault;
-  obj14.backgroundColor = require("useUserProfileColors").useUserProfileColors(tmpResult1Result).avatarBackground;
-  const tmp32 = useMeasuredLayoutDefault();
-  const height = tmp32.height;
+  const tmpResult4 = useProfileThemeDefault;
+  obj17.backgroundColor = require("useUserProfileColors").useUserProfileColors(tmpResult1Result).avatarBackground;
+  const tmp34 = useMeasuredLayoutDefault();
+  const height = tmp34.height;
   let num = 0;
-  ({ ref, onLayout, width } = tmp32);
+  ({ ref, onLayout, width } = tmp34);
   if (undefined !== height) {
     num = height;
   }
   let num2 = 0;
   const tmp4Result17 = require("useUserProfileColors");
-  if (tmp25) {
+  if (tmp27) {
     num2 = 0;
-    if (!tmp26) {
-      num2 = sharedValue;
+    if (!tmp28) {
+      num2 = tabsAnchor;
     }
   }
   const sum = insets.bottom + num2;
   const sum1 = sum + nativeDefault.space.PX_16;
-  const tmp36 = useTryItOutUpsellScrollTrackingDefault(sharedValue, sum1);
-  closure_50 = tmp36;
-  const tmp33 = useUserProfileBannerHeightDefault(width);
-  const items6 = [c23, tmp36.isScrolledAboveTryItOutSection, sharedValue1];
+  const tmp38 = useTryItOutUpsellScrollTrackingDefault(sharedValue, sum1);
+  closure_53 = tmp38;
+  const tmp35 = useUserProfileBannerHeightDefault(width);
+  const items7 = [c24, tmp38.isScrolledAboveTryItOutSection, sharedValue1];
   _require = undefined;
   importDefault = undefined;
-  [tmp37, tmp38, tmp39] = items6;
+  [tmp39, tmp40, tmp41] = items7;
   class UserProfileEditFormTsx1 {
     constructor() {
       value = closure_0.get();
@@ -405,21 +352,34 @@ function UserProfileEditFormContent(currentUser) {
       return value;
     }
   }
-  const items7 = [tmp38, tmp39];
-  UserProfileEditFormTsx1.__closure = items7;
+  const items8 = [tmp40, tmp41];
+  UserProfileEditFormTsx1.__closure = items8;
   UserProfileEditFormTsx1.__workletHash = 15732737689317;
-  UserProfileEditFormTsx1.__initData = tmp37;
-  const items8 = [sharedValue, tmp36];
+  UserProfileEditFormTsx1.__initData = tmp39;
+  let tmp43 = tmp28;
   const derivedValue = require("../../../../_runtime/metro/01655__.js").useDerivedValue(UserProfileEditFormTsx1);
-  let tmp42 = tmp26;
-  const callback = obj3.useCallback((nativeEvent) => {
-    const result = sharedValue.set(nativeEvent.nativeEvent.contentOffset.y);
-    closure_50.onScroll(nativeEvent.nativeEvent);
-  }, items8);
-  if (!tmp26) {
-    tmp42 = flag;
+  if (tmp28) {
+    tmp43 = flag;
   }
+  flag = tmp43;
+  const tmp4Result18 = require("../../../../_runtime/metro/01655__.js");
+  if (tmp28) {
+    const onScroll = tmp38.onScroll;
+  }
+  const tmpResult2Result = useStickyEditFormHeadersDefault(sharedValue, animatedRef, onScroll);
+  ({ tabsAnchorRef: c55, measureTabsY } = tmpResult2Result);
+  ({ tabsTranslateY: c57, handleTabsBarLayout: c58 } = tmpResult2Result);
+  const items9 = [tmp43, tmp38, flag, measureTabsY];
+  ({ headerStyle, handleHeaderLayout, tabsBarHeight, scrollHandler } = tmpResult2Result);
   errorMessage = undefined;
+  const callback = obj6.useCallback((arg0, arg1) => {
+    if (flag) {
+      closure_53.onContentSizeChange(arg0, arg1);
+    }
+    if (flag) {
+      measureTabsY();
+    }
+  }, items9);
   if (errors != null) {
     const username = errors.username;
     if (username != null) {
@@ -462,150 +422,95 @@ function UserProfileEditFormContent(currentUser) {
       stringResult = intl.string(tmp4(1113).t["84MExs"]);
     }
   }
-  c54 = stringResult;
-  const field = ref1.useField("scrollPosition");
-  closure_55 = useScrollToUserProfileEditFormSectionDefault(ref1, field);
-  if (tmp26) {
-    tmp26 = flag;
+  c62 = stringResult;
+  const field = ProfileCustomizationNavigationStore.useField("scrollPosition");
+  let tmp56;
+  const tmpResult5 = useStickyEditFormHeadersDefault;
+  if (flag) {
+    tmp56 = tabsBarHeight;
   }
-  let obj15 = { theme, primaryColor, secondaryColor, children: null };
-  let obj16 = { ref, style: tmp3.container, onLayout, children: null };
-  const items9 = [c15(UserProfileFixedBackgroundDefault, { gradientHeight: num, bannerHeight: tmp33 }), ,];
-  let obj17 = {
-    ref: ref1,
-    onScroll: null,
-    onContentSizeChange: null,
-    onLayout: null,
-    scrollEventThrottle: null,
-    stickyHeaderIndices: null,
-    stickyHeaderHiddenOnScroll: null,
-    keyboardShouldPersistTaps: null,
-    children: null,
-  };
-  let tmp54;
-  if (tmp42) {
-    tmp54 = callback;
+  closure_63 = useScrollToUserProfileEditFormSectionDefault(animatedRef, field, tmp56);
+  let obj18 = { theme, primaryColor, secondaryColor, children: null };
+  let obj19 = { ref, style: tmp3.container, onLayout, children: null };
+  const items10 = [ref4(UserProfileFixedBackgroundDefault, { gradientHeight: num, bannerHeight: tmp35 }), , ];
+  let obj20 = { ref: animatedRef, onScroll: scrollHandler, onContentSizeChange: null, onLayout: null, scrollEventThrottle: 16, stickyHeaderIndices: null, stickyHeaderHiddenOnScroll: null, keyboardShouldPersistTaps: null, children: null };
+  if (tmp43) {
+    const tmp61 = callback;
   }
-  obj17.onScroll = tmp54;
-  let onContentSizeChange;
-  if (tmp26) {
-    onContentSizeChange = tmp36.onContentSizeChange;
-  }
-  obj17.onContentSizeChange = onContentSizeChange;
+  obj20.onContentSizeChange = tmp61;
   let onScrollViewLayout;
-  if (tmp26) {
-    onScrollViewLayout = tmp36.onScrollViewLayout;
+  if (tmp43) {
+    onScrollViewLayout = tmp38.onScrollViewLayout;
   }
-  obj17.onLayout = onScrollViewLayout;
-  let num3;
-  if (tmp42) {
-    num3 = 16;
+  obj20.onLayout = onScrollViewLayout;
+  let tmp63;
+  if (null != header && !flag) {
+    tmp63 = isSubmitting;
   }
-  obj17.scrollEventThrottle = num3;
-  let tmp57;
-  if (null != header) {
-    tmp57 = c18;
-  }
-  obj17.stickyHeaderIndices = tmp57;
-  obj17.stickyHeaderHiddenOnScroll = null != header;
+  obj20.stickyHeaderIndices = tmp63;
+  obj20.stickyHeaderHiddenOnScroll = null != header && !flag;
   let str5;
   if (null != header) {
     str5 = "handled";
   }
-  obj17.keyboardShouldPersistTaps = str5;
-  const items10 = [
-    c15(formContainer, { style: tmp3.bounceOffset }),
-    header,
-    c15(c20, {
-      user: currentUser,
-      displayProfile: tmp16Result,
-      pendingAvatarSrc,
-      pendingBanner,
-      pendingAccentColor,
-      pendingThemeColors,
-      tryItOutBanner,
-      isTryItOut,
-      disabled: isSubmitting,
-    }),
-  ];
-  let obj19 = { children: null };
-  let obj20 = {
-    style: null,
-    children: c15(EditUserProfileAvatarDefault, {
-      user: currentUser,
-      disabled: isSubmitting,
-      disableStatus: null != isTryItOut,
-      statusStyle: obj14,
-      isTryItOut,
-      autoStartEditFlow: autoFocusElement === isSubmitting.AVATAR,
-    }),
-  };
-  const items11 = [, , ,];
-  ({ avatarBackground: arr12[0], avatarPosition: arr12[1] } = tmp2);
-  items11[2] = tmp3.avatarContainer;
-  items11[3] = obj14;
-  obj20.style = items11;
-  const items12 = [c15(formContainer, obj20)];
-  let obj22 = { style: null, children: null };
-  const items13 = [, ,];
-  ({ profileContentWrapper: arr14[0], profileContent: arr14[1] } = tmp2);
-  items13[2] = { paddingTop: 0, paddingBottom: sum1 };
-  obj22.style = items13;
-  const items14 = [
-    c15(UserProfileCustomStatusBubbleDefault, {
-      customStatusActivity,
-      hasCustomProfileTheme: null != primaryColor,
-      style: tmp2.customStatusBubble,
-      emojiOnlyStyle: tmp2.emojiOnlyCustomStatusBubble,
-      editEnabled: true,
-    }),
-    c15(c21, {
+  obj20.keyboardShouldPersistTaps = str5;
+  const items11 = [ref4(flag, { style: tmp3.bounceOffset }), , , ];
+  let tmp57Result = header;
+  if (null != header) {
+    tmp57Result = header;
+    if (flag) {
+      let obj22 = { style: null, onLayout: null, children: null };
+      const items12 = [tmp6.stickyHeader, headerStyle];
+      obj22.style = items12;
+      obj22.onLayout = handleHeaderLayout;
+      obj22.children = header;
+      tmp57Result = tmp57(module_1655.View, obj22);
+    }
+  }
+  items11[1] = tmp57Result;
+  items11[2] = ref4(c21, { user: currentUser, displayProfile: tmp18Result, pendingAvatarSrc, pendingBanner, pendingAccentColor, pendingThemeColors, tryItOutBanner, isTryItOut, disabled: isSubmitting });
+  let obj23 = { children: null };
+  let obj24 = { style: null, children: ref4(EditUserProfileAvatarDefault, { user: currentUser, disabled: isSubmitting, disableStatus: null != isTryItOut, statusStyle: obj17, isTryItOut, autoStartEditFlow: autoFocusElement === ref3.AVATAR }) };
+  const items13 = [, , , ];
+  ({ avatarBackground: arr14[0], avatarPosition: arr14[1] } = tmp2);
+  items13[2] = tmp3.avatarContainer;
+  items13[3] = obj17;
+  obj24.style = items13;
+  const items14 = [ref4(flag, obj24), ];
+  let obj26 = { style: null, children: null };
+  const items15 = [, , ];
+  ({ profileContentWrapper: arr16[0], profileContent: arr16[1] } = tmp2);
+  items15[2] = { paddingTop: 0, paddingBottom: sum1 };
+  obj26.style = items15;
+  const items16 = [
+    ref4(UserProfileCustomStatusBubbleDefault, { customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: tmp2.customStatusBubble, emojiOnlyStyle: tmp2.emojiOnlyCustomStatusBubble, editEnabled: true }),
+    ref4(pendingThemeColors, {
       profileTheme: tmpResult1Result,
       children(borderColor) {
         const containerBackground = borderColor.containerBackground;
         const containerBackground2 = borderColor.containerBackground;
-        items = [formContainer.formContainer, ,];
-        obj = flag;
+        items = [formContainer.formContainer, , ];
+        let obj = flag;
         if (flag) {
           obj = { marginTop: 0 };
         }
         const obj2 = { style: null, children: null };
         items[1] = obj;
-        items[2] = {
-          backgroundColor: containerBackground2,
-          borderColor: borderColor.containerBorderColor,
-          borderWidth: 1,
-          borderRadius: nativeDefault.radii.md,
-        };
+        items[2] = { backgroundColor: containerBackground2, borderColor: borderColor.containerBorderColor, borderWidth: 1, borderRadius: nativeDefault.radii.md };
         obj2.style = items;
         let tmp9 = null;
         if (null != children) {
           tmp9 = null;
           if ("" !== children) {
-            const obj4 = { style: formContainer.errorContainer, children: null };
+            obj4 = { style: formContainer.errorContainer, children: null };
             const obj5 = { variant: "body-sm/semibold", color: "text-feedback-critical", children };
-            obj4.children = colors(Text_Text.Text, obj5);
-            tmp9 = colors(hasOwnProperty, obj4);
+            obj4.children = gesture(Text_Text.Text, obj5);
+            tmp9 = gesture(React4, obj4);
           }
         }
-        const items1 = [tmp9, , , , , , , , , , , , ,];
-        const obj6 = {
-          inputRef: ref2,
-          label: null,
-          errorMessage: null,
-          value: null,
-          onFocus: null,
-          onChange: null,
-          placeholder: null,
-          maxLength: null,
-          disabled: null,
-        };
-        const obj3 = {
-          backgroundColor: containerBackground2,
-          borderColor: borderColor.containerBorderColor,
-          borderWidth: 1,
-          borderRadius: nativeDefault.radii.md,
-        };
+        const items1 = [tmp9, , , , , , , , , , , , , ];
+        const obj6 = { inputRef: ref1, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, disabled: null };
+        const obj3 = { backgroundColor: containerBackground2, borderColor: borderColor.containerBorderColor, borderWidth: 1, borderRadius: nativeDefault.radii.md };
         const intl = util.intl;
         obj6.label = intl.string(util.t["9AjdkD"]);
         obj6.errorMessage = errorMessage;
@@ -616,120 +521,87 @@ function UserProfileEditFormContent(currentUser) {
         obj6.value = tmp16;
         obj6.onFocus = onFocus;
         obj6.onChange = function onChange(globalName) {
-          return _undefined(9398).setPendingChanges({ globalName });
+          return _undefined(9407).setPendingChanges({ globalName });
         };
         obj6.placeholder = _undefined.toString();
         obj6.maxLength = maxLength;
         obj6.disabled = isSubmitting;
-        items1[1] = colors(UserProfileEditFormTextFieldDefault, obj6);
-        let tmp19 = c42;
-        if (!c42) {
+        items1[1] = gesture(UserProfileEditFormTextFieldDefault, obj6);
+        let tmp19 = c45;
+        if (!c45) {
           if (!isTryItOut) {
             let tmp12Result = null;
-            if (closure_43 !== constants.HIDDEN) {
+            if (closure_46 !== constants.HIDDEN) {
               const obj7 = { user: _undefined, availability: tmp21, disabled: isSubmitting };
-              tmp12Result = colors(UserProfileHexagonCampaignDisplayNameStyleEditButtonDefault, obj7);
+              tmp12Result = gesture(UserProfileHexagonCampaignDisplayNameStyleEditButtonDefault, obj7);
             }
             let tmp24 = isTryItOut;
             let tmp25 = isTryItOut;
           }
           items1[2] = tmp12Result;
-          const obj8 = {
-            inputRef: ref3,
-            label: null,
-            errorMessage: null,
-            value: null,
-            onFocus: null,
-            onChange: null,
-            maxLength: null,
-            spellCheck: false,
-            autoCorrect: false,
-            disabled: null,
-          };
+          const obj8 = { inputRef: ref2, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, maxLength: null, spellCheck: false, autoCorrect: false, disabled: null };
           const intl2 = util.intl;
           obj8.label = intl2.string(util.t["+T3RI/"]);
           obj8.errorMessage = first3;
-          let tmp29 = c25;
-          let tmp30 = c25;
-          if (c25 == null) {
+          let tmp29 = c28;
+          let tmp30 = c28;
+          if (c28 == null) {
             tmp30 = str3;
           }
           obj8.value = tmp30;
           obj8.onFocus = onFocus;
           obj8.onChange = function onChange(pronouns) {
-            return _undefined(9398).setPendingChanges({ pronouns });
+            return _undefined(9407).setPendingChanges({ pronouns });
           };
           obj8.maxLength = maxLength2;
           obj8.disabled = isSubmitting;
-          items1[3] = colors(UserProfileEditFormTextFieldDefault, obj8);
+          items1[3] = gesture(UserProfileEditFormTextFieldDefault, obj8);
           let tmp12Result6 = !tmp25;
           if (!tmp25) {
-            const obj9 = { badges, catalogBadges, ownsAnyBadge, autoOpen: c1 === isSubmitting.BADGES };
-            tmp12Result6 = colors(UserProfileBadgesEditButtonDefault, obj9);
+            const obj9 = { badges, catalogBadges, ownsAnyBadge, autoOpen: c1 === constants.BADGES };
+            tmp12Result6 = gesture(UserProfileBadgesEditButtonDefault, obj9);
           }
           items1[4] = tmp12Result6;
-          const obj10 = {
-            inputRef: ref4,
-            label: null,
-            errorMessage: null,
-            value: null,
-            onFocus: null,
-            onChange: null,
-            autoFocus: null,
-            maxLength: null,
-            numberOfLines: 5,
-            disabled: null,
-          };
+          const obj10 = { inputRef: ref3, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, autoFocus: null, maxLength: null, numberOfLines: 5, disabled: null };
           const tmp6Result5 = UserProfileEditFormTextFieldDefault;
           const intl3 = util.intl;
           obj10.label = intl3.string(util.t.ZzAR2Y);
           obj10.errorMessage = first4;
-          let tmp41 = c26;
-          if (c26 == null) {
+          let tmp41 = c29;
+          if (c29 == null) {
             tmp41 = str4;
           }
           obj10.value = tmp41;
           obj10.onFocus = onFocus;
           obj10.onChange = function onChange(bio) {
-            return _undefined(9398).setPendingChanges({ bio });
+            return _undefined(9407).setPendingChanges({ bio });
           };
-          obj10.autoFocus = c1 === isSubmitting.BIO;
+          obj10.autoFocus = c1 === constants.BIO;
           obj10.maxLength = maxLength;
           obj10.disabled = isSubmitting;
-          items1[5] = colors(UserProfileEditFormTextFieldDefault, obj10);
-          const obj11 = {
-            user: _undefined,
-            onProfileThemeColorsChanged: null,
-            pendingAvatarSrc: null,
-            pendingThemeColors: null,
-            isTryItOut: null,
-          };
+          items1[5] = gesture(UserProfileEditFormTextFieldDefault, obj10);
+          const obj11 = { user: _undefined, onProfileThemeColorsChanged: null, pendingAvatarSrc: null, pendingThemeColors: null, isTryItOut: null };
           const tmp6Result6 = UserProfileEditFormTextFieldDefault;
           if (tmp25) {
             let fn = UserProfileActionCreators.setTryItOutThemeColors;
           } else {
-            fn = (themeColors) => _undefined(9398).setPendingChanges({ themeColors });
+            fn = (themeColors) => _undefined(9407).setPendingChanges({ themeColors });
           }
           obj11.onProfileThemeColorsChanged = fn;
           obj11.pendingAvatarSrc = pendingAvatarSrc;
           obj11.pendingThemeColors = tmp25 ? tryItOutThemeColors : pendingThemeColors;
           obj11.isTryItOut = tmp25;
-          items1[6] = colors(UserProfileEditThemeDefault, obj11);
-          const obj12 = { user: _undefined, pendingAvatarDecoration: tmp25 ? c20 : c15, isTryItOut: tmp25 };
-          items1[7] = colors(UserProfileAvatarDecorationEditButtonDefault, obj12);
-          const obj13 = {
-            user: _undefined,
-            pendingProfileEffect: tmp25 ? c21 : c16,
-            displayProfile,
-            isTryItOut: tmp25,
-          };
-          items1[8] = colors(UserProfileEffectEditButtonDefault, obj13);
+          items1[6] = gesture(UserProfileEditThemeDefault, obj11);
+          const obj12 = { user: _undefined, pendingAvatarDecoration: tmp25 ? c23 : c18, isTryItOut: tmp25 };
+          items1[7] = gesture(UserProfileAvatarDecorationEditButtonDefault, obj12);
+          const obj13 = { user: _undefined, pendingProfileEffect: tmp25 ? c24 : c19, displayProfile, isTryItOut: tmp25 };
+          items1[8] = gesture(UserProfileEffectEditButtonDefault, obj13);
           const obj14 = { user: _undefined, pendingProfileFrame, displayProfile };
-          items1[9] = colors(UserProfileFrameEditButtonDefault, obj14);
+          items1[9] = gesture(UserProfileFrameEditButtonDefault, obj14);
           const obj15 = { user: _undefined, pendingNameplate };
-          items1[10] = colors(UserProfileNameplateEditButtonDefault, obj15);
-          let tmp12Result7 = closure_33;
-          if (closure_33) {
+          items1[10] = gesture(UserProfileNameplateEditButtonDefault, obj15);
+          let tmp12Result7 = closure_36;
+          if (closure_36) {
             if (!tmp19) {
               tmp19 = tmp25;
             }
@@ -737,58 +609,48 @@ function UserProfileEditFormContent(currentUser) {
           }
           if (tmp12Result7) {
             const obj16 = { isTryItOut: tmp25 };
-            tmp12Result7 = colors(UserProfileTypingIndicatorEditButtonDefault, obj16);
+            tmp12Result7 = gesture(UserProfileTypingIndicatorEditButtonDefault, obj16);
           }
           items1[11] = tmp12Result7;
           const obj17 = {
             ref(arg0) {
-              return closure_1_55(onFocus.GUILD_TAG, arg0);
-            },
-            children: null,
+                return closure_1_63(ref2.GUILD_TAG, arg0);
+              },
+            children: null
           };
           const obj18 = { user: _undefined, disabled: isSubmitting, tagStyle: null, pendingPrimaryGuildId: null };
           const obj19 = { backgroundColor: containerBackground2 };
           obj18.tagStyle = obj19;
           obj18.pendingPrimaryGuildId = pendingPrimaryGuildId;
-          obj17.children = colors(UserProfilePrimaryGuildEditButtonDefault, obj18);
-          items1[12] = colors(hasOwnProperty, obj17);
+          obj17.children = gesture(UserProfilePrimaryGuildEditButtonDefault, obj18);
+          items1[12] = gesture(React4, obj17);
           let tmp12Result8 = null != legacyUsername;
           if (tmp12Result8) {
             tmp12Result8 = !isBadgeManagementEnabled;
           }
           if (tmp12Result8) {
             const obj20 = { legacyUsername, pendingLegacyUsernameDisabled };
-            tmp12Result8 = colors(UserProfileLegacyUsernameSwitchDefault, obj20);
+            tmp12Result8 = gesture(UserProfileLegacyUsernameSwitchDefault, obj20);
           }
           items1[13] = tmp12Result8;
           obj2.children = items1;
-          const items2 = [closure_2_17(hasOwnProperty, obj2)];
-          let tmp12Result9 = closure_44;
-          if (closure_44) {
+          const items2 = [closure_2_16(React4, obj2), ];
+          let tmp12Result9 = closure_47;
+          if (closure_47) {
             const obj21 = {
               currentUser: _undefined,
-              onLayout: closure_50.onTryItOutSectionLayout,
+              onLayout: closure_53.onTryItOutSectionLayout,
               onPreviewPremium() {
-                return _undefined(17171).openPremiumTryItOutModal();
-              },
+                    return _undefined(17207).openPremiumTryItOutModal();
+                  }
             };
-            tmp12Result9 = colors(UserProfilePremiumTryItOutSectionDefault, obj21);
+            tmp12Result9 = gesture(UserProfilePremiumTryItOutSectionDefault, obj21);
           }
           const obj22 = { children: null };
           items2[1] = tmp12Result9;
           obj22.children = items2;
-          const tmpResult = closure_2_17(closure_2_16, obj22);
-          const obj23 = {
-            user: _undefined,
-            displayName,
-            badges,
-            catalogBadges,
-            pronouns: null,
-            badgeContainerBackground: null,
-            displayNameAccessibilityRole: "header",
-            canOpenBadgeDirectory: null,
-            pendingDisplayNameStyles: null,
-          };
+          const tmpResult = closure_2_16(colors, obj22);
+          const obj23 = { user: _undefined, displayName, badges, catalogBadges, pronouns: null, badgeContainerBackground: null, displayNameAccessibilityRole: "header", canOpenBadgeDirectory: null, pendingDisplayNameStyles: null };
           const tmp6Result7 = UserProfileEditThemeDefault;
           if (tmp29 == null) {
             tmp29 = str3;
@@ -796,83 +658,75 @@ function UserProfileEditFormContent(currentUser) {
           obj23.pronouns = tmp29;
           obj23.badgeContainerBackground = containerBackground;
           obj23.canOpenBadgeDirectory = !tmp24;
-          obj23.pendingDisplayNameStyles = tmp24 ? c23 : c31;
-          const items3 = [colors(UserProfilePrimaryInfoDefault, obj23)];
+          obj23.pendingDisplayNameStyles = tmp24 ? c26 : c34;
+          const items3 = [gesture(UserProfilePrimaryInfoDefault, obj23), ];
           let tmp12Result10 = tmpResult;
           if (flag) {
             const obj24 = { value: tmpResult, children: null };
-            const obj25 = {
-              userId: _undefined.id,
-              initialTab,
-              containerBackground,
-              hasCustomProfileTheme,
-              scrollPosition: sharedValue,
-              scrollViewRef: ref1,
-              isBoardTabOnScreen: sharedValue1,
-            };
-            obj24.children = colors(UserProfileEditFormTabsDefault, obj25);
-            tmp12Result10 = colors(UserProfileEditFormMainPageContextDefault.Provider, obj24);
+            const obj25 = { value, children: null };
+            const obj26 = { ref, style: tabsAnchor.tabsAnchor, onLayout: measureTabsY, children: null };
+            const obj27 = { userId: _undefined.id, initialTab, containerBackground, hasCustomProfileTheme, scrollPosition: sharedValue, scrollViewRef: animatedRef, isBoardTabOnScreen: sharedValue1, stickyTranslateY, onStickyTabsLayout };
+            obj26.children = gesture(UserProfileEditFormTabsDefault, obj27);
+            obj25.children = gesture(React4, obj26);
+            obj24.children = gesture(UserProfileEditFormKeyboardAvoidingContextDefault.Provider, obj25);
+            tmp12Result10 = gesture(UserProfileEditFormMainPageContextDefault.Provider, obj24);
           }
-          const obj26 = { children: null };
+          const obj28 = { children: null };
           items3[1] = tmp12Result10;
-          obj26.children = items3;
-          return closure_2_17(closure_2_16, obj26);
+          obj28.children = items3;
+          return closure_2_16(colors, obj28);
         }
-        tmp12Result = colors(UserProfileDisplayNameStylesEditButtonDefault, { user: _undefined, isTryItOut });
+        tmp12Result = gesture(UserProfileDisplayNameStylesEditButtonDefault, { user: _undefined, isTryItOut });
         tmp24 = isTryItOut;
         tmp25 = isTryItOut;
-        const obj27 = { user: _undefined, isTryItOut };
+        const obj29 = { user: _undefined, isTryItOut };
         const tmp6Result = UserProfileEditFormTextFieldDefault;
-      },
-    }),
+      }
+    })
   ];
-  obj22.children = items14;
-  items12[1] = c17(formContainer, obj22);
-  obj19.children = items12;
-  items10[3] = c17(formContainer, obj19);
-  obj17.children = items10;
-  items9[1] = c17(flag, obj17);
-  if (!tmp25) {
-    items9[2] = tmp25;
-    obj16.children = items9;
-    obj15.children = tmp51(tmp52, obj16);
-    return tmp50(tmp4(5367).ThemeContextProvider, obj15);
+  obj26.children = items16;
+  items14[1] = value(flag, obj26);
+  obj23.children = items14;
+  items11[3] = value(flag, obj23);
+  obj20.children = items11;
+  items10[1] = value(c18, obj20);
+  if (!tmp27) {
+    items10[2] = tmp27;
+    obj19.children = items10;
+    obj18.children = tmp58(tmp59, obj19);
+    return tmp57(tmp4(5371).ThemeContextProvider, obj18);
   } else if (enabled) {
     tmp = UserProfilePremiumTryItOutUpsellDefault;
     obj = {
       isVisible: derivedValue,
       onPreviewPremium() {
-        return _undefined(initialTab[64]).openPremiumTryItOutModal();
-      },
+          return _undefined(initialTab[66]).openPremiumTryItOutModal();
+        }
     };
-    let tmp50Result = tmp50(tmp, obj);
+    let tmp57Result2 = tmp57(tmp, obj);
   } else {
-    let obj25 = { isTryItOut };
-    tmp50Result = tmp50(tmp4(17186).UserProfilePremiumUpsellCard, obj25);
+    let obj29 = { isTryItOut };
+    tmp57Result2 = tmp57(tmp4(17223).UserProfilePremiumUpsellCard, obj29);
   }
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7962).FLOATING_UPSELL_HEIGHT;
+({ View: closure_4, ScrollView } = get_ActivityIndicator);
+const FLOATING_UPSELL_HEIGHT = fn(7972).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1072);
-({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: closure_10 } = Constants);
-const HexagonCampaignConstants = fn(5331);
-({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
-let closure_13 = fn(1082).ProfileCustomizationScrollPositions;
-let closure_14 = fn(17065).UserProfileEditAutoFocusElement;
+({ DISPLAY_NAME_MAX_LENGTH: closure_8, PRONOUNS_MAX_LENGTH: closure_9 } = Constants);
+const HexagonCampaignConstants = fn(5335);
+({ HexagonCampaignPerk: closure_10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
+let closure_12 = fn(1082).ProfileCustomizationScrollPositions;
+let closure_13 = fn(17100).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
-({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-let closure_18 = [1];
-let obj = {
-  assetOrigin: fn(7808).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef17066,
-  staticImageUri: _modDef17066,
-  description: "",
-  originalAsset: "alignItems",
-};
-let closure_23 = {
-  code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})",
-};
+({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
+let closure_17 = [1];
+let closure_18 = module_1655.createAnimatedComponent(ScrollView);
+const createStyles = fn(5310);
+let obj = { stickyHeader: { zIndex: 2 }, tabsAnchor: { marginTop: nativeDefault.space.PX_12 } };
+let closure_19 = createStyles.createStyles(obj);
+let obj4 = { assetOrigin: fn(7818).AssetOriginTypes.NEW_ASSET, imageUri: _modDef17101, staticImageUri: _modDef17101, description: "", originalAsset: "alignItems" };
+let closure_24 = { code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
 
@@ -886,11 +740,11 @@ export default function UserProfileEditForm(isTryItOut) {
     const obj2 = {};
     const merged1 = Object.assign(merged);
     obj2.isTryItOut = true;
-    let tmp2Result = colors(UserProfileEditFormContent, obj2);
+    let tmp2Result = gesture(UserProfileEditFormContent, obj2);
   } else {
-    obj = {};
+    const obj = {};
     const merged2 = Object.assign(merged);
-    tmp2Result = colors(MainUserProfileEditForm, obj);
+    tmp2Result = gesture(MainUserProfileEditForm, obj);
   }
   return tmp2Result;
-}
+};

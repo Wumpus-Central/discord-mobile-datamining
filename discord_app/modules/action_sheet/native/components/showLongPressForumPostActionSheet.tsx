@@ -13,7 +13,7 @@ export default function showLongPressForumPostActionSheet(thread, parentChannel)
     hideActionSheet = ActionSheetActionCreatorsDefault.hideActionSheet;
   }
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(11148, dependencyMap.paths),
+    asyncRequireImpl(11895, dependencyMap.paths),
     "ForumPostLongPressActionSheet",
     { thread, parentChannel, onClose: hideActionSheet },
   );

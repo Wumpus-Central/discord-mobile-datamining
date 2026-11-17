@@ -13,13 +13,13 @@ function onImageDescriptionSettingValueChange(viewImageDescriptions) {
     dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode,
   });
 }
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w8j+yW"]);
   },
-  parent: fn(9202).MobileUserSettings.CHAT,
+  parent: fn(9213).MobileUserSettings.CHAT,
   useValue: function useImageDescriptionSettingValue() {
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
     return ViewImageDescriptions.useSetting();

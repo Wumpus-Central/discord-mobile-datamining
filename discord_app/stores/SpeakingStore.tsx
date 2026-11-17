@@ -41,7 +41,7 @@ function handleConnectionOpen(user) {
   c14 = null;
 }
 const Permissions = fn(1072).Permissions;
-const Constants = fn(6065);
+const Constants = fn(6072);
 ({ SpeakingFlags: closure_9, MediaEngineContextTypes: closure_10 } = Constants);
 let map = new Map();
 let id = null;

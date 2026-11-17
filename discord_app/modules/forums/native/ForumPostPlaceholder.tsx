@@ -12,7 +12,7 @@ const _modDef1655 = _mod1655;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { postPlaceholder: { height: 2 * nativeDefault.space.PX_64, marginBottom: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = {

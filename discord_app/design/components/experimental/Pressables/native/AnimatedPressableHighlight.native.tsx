@@ -8,7 +8,7 @@ import 01655__ from "../../../../../../_runtime/metro/01655__.js";
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_6 = module_1655.createAnimatedComponent(fn(7428).PressableHighlight);
+let closure_6 = module_1655.createAnimatedComponent(fn(7438).PressableHighlight);
 const PlatformUtils = fn(1380);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");

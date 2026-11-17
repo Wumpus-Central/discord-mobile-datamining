@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import getChannelA11yLabelDefault from "../../../channel/getChannelA11yLabel.tsx";
-import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
 import useEmbeddedAppsForChannelDefault from "../../../activities/useEmbeddedAppsForChannel.tsx";
+import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import CollapsedVoiceChannelStore from "../../../../stores/CollapsedVoiceChannelStore.tsx";
@@ -36,8 +36,8 @@ let closure_17 = async function _handleVoiceChannelPress(arg0) {
   })();
 };
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(6064).NO_VOICE_STATES;
-const RedesignChannelListConstants = fn(6050);
+const NO_VOICE_STATES = fn(6071).NO_VOICE_STATES;
+const RedesignChannelListConstants = fn(6056);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);

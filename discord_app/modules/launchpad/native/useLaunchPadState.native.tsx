@@ -7,7 +7,7 @@ import LaunchPadPullTabCache2 from "LaunchPadPullTabCache.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LaunchPadConstants = fn(12402);
+const LaunchPadConstants = fn(12608);
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: closure_4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: hasOwnProperty } =
   LaunchPadConstants);
 let closure_6 = {
@@ -23,7 +23,7 @@ let closure_6 = {
   startShown: false,
 };
 let obj = { position: null, scale: 1, offset: 0, minimized: false };
-const LaunchPadPullTabCache = fn(19862);
+const LaunchPadPullTabCache = fn(19909);
 obj.position = LaunchPadPullTabCache.getLaunchPadPullTabPositionCached();
 let closure_8 = {
   code: "(function setLaunchPadShown_useLaunchPadStateNativeTsx1(shown){let[launchPadShown]=this.__closure;launchPadShown.set(shown);})",
@@ -32,7 +32,7 @@ let closure_9 = {
   code: "(function setLaunchPadPosition_useLaunchPadStateNativeTsx2(value){let[launchPadSharedState]=this.__closure;launchPadSharedState.set(Math.max(Math.min(value,1),0));})",
 };
 let closure_10 = {
-  code: "(function setLaunchPadPullTabBoundedPosition_useLaunchPadStateNativeTsx3(positionY){let[getWindowDimensionsWorklet,launchPadPullTabState,LAUNCH_PAD_PULL_TAB_MAX_POSITION,getSafeAreaInsetsWorklet,LAUNCH_PAD_PULL_TAB_SCALE_OFFSET,updateSharedValueIfChanged,scheduleOnRN,persistLaunchPadPullTabPosition]=this.__closure;const positionYMax=getWindowDimensionsWorklet().height-launchPadPullTabState.get().offset-LAUNCH_PAD_PULL_TAB_MAX_POSITION;const positionYMin=getSafeAreaInsetsWorklet().top+LAUNCH_PAD_PULL_TAB_SCALE_OFFSET;const position=Math.max(Math.min(positionY,positionYMax),positionYMin);updateSharedValueIfChanged(launchPadPullTabState,{position:position});scheduleOnRN(persistLaunchPadPullTabPosition,position);})",
+  code: "(function setLaunchPadPullTabBoundedPosition_useLaunchPadStateNativeTsx3(positionY){let[getWindowDimensionsWorklet,launchPadPullTabState,LAUNCH_PAD_PULL_TAB_MAX_POSITION,getSafeAreaInsetsWorklet,LAUNCH_PAD_PULL_TAB_SCALE_OFFSET,updateSharedValueIfChanged,scheduleOnRN,persistLaunchPadPullTabPosition]=this.__closure;const positionYMax=getWindowDimensionsWorklet({ignoreKeyboard:true}).height-launchPadPullTabState.get().offset-LAUNCH_PAD_PULL_TAB_MAX_POSITION;const positionYMin=getSafeAreaInsetsWorklet().top+LAUNCH_PAD_PULL_TAB_SCALE_OFFSET;const position=Math.max(Math.min(positionY,positionYMax),positionYMin);updateSharedValueIfChanged(launchPadPullTabState,{position:position});scheduleOnRN(persistLaunchPadPullTabPosition,position);})",
 };
 let closure_11 = {
   code: "(function setLaunchPadPullTabTranslation_useLaunchPadStateNativeTsx4(translationY){let[gestureState,setLaunchPadPullTabBoundedPosition]=this.__closure;const positionY=gestureState.get().initialPullTabPosition+translationY;setLaunchPadPullTabBoundedPosition(positionY);})",
@@ -105,7 +105,7 @@ export default function useLaunchPadState() {
       c7 = undefined;
       [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16] = items4;
       function setLaunchPadPullTabBoundedPosition(arg0) {
-        const diff = _undefined().height - _undefined2.get().offset - c2;
+        const diff = _undefined({ ignoreKeyboard: true }).height - _undefined2.get().offset - c2;
         const sum = _undefined3().top + c4;
         const bound = Math.max(Math.min(arg0, diff), sum);
         _undefined4(_undefined2, { position: bound });
@@ -113,7 +113,7 @@ export default function useLaunchPadState() {
       }
       const items5 = [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16];
       setLaunchPadPullTabBoundedPosition.__closure = items5;
-      setLaunchPadPullTabBoundedPosition.__workletHash = 14223632177086;
+      setLaunchPadPullTabBoundedPosition.__workletHash = 13803366335425;
       setLaunchPadPullTabBoundedPosition.__initData = tmp8;
       const items6 = [scale, sharedValue, setLaunchPadPullTabBoundedPosition];
       [tmp17, tmp18, tmp19] = items6;

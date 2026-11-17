@@ -15,34 +15,34 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "text",
+    borderTopLeftRadius: "count",
     borderTopRightRadius: "alignItems",
-    borderBottomLeftRadius: "set",
-    borderBottomRightRadius: "map",
-    divider: "Array",
+    borderBottomLeftRadius: "uri",
+    borderBottomRightRadius: "HTTP",
+    divider: "r",
     dividerColor: "isArray",
     dividerPaddingLeft: "Array",
     dividerPaddingRight: "alignItems",
-    placeholderShape: "surrogates",
-    placeholderShapeColor: "constructor",
+    placeholderShape: "jsxs",
+    placeholderShapeColor: "st",
     placeholderShapeCount: "Array",
     placeholderShapeGap: "isArray",
     placeholderShapePaddingHorizontal: "alignItems",
-    placeholderShapePaddingVertical: "Map",
-    placeholderFeedBackgroundColor: "setTimeout",
-    placeholderFeedColor: "r",
+    placeholderShapePaddingVertical: "View",
+    placeholderFeedBackgroundColor: "Promise",
+    placeholderFeedColor: "a",
     placeholderFeedLabelPadding: "isArray",
-    placeholderFeedLabelPaddingInnerRatio: "channelId",
-    placeholderFeedLabelSize: "alignItems",
-    placeholderFeedLabelSecondarySize: "default",
-    placeholderFeedPadding: "Path",
-    placeholderFeedShape: "a",
-    placeholderFeedShapeSize: "isArray",
+    placeholderFeedLabelPaddingInnerRatio: "Array",
+    placeholderFeedLabelSize: "channel_id",
+    placeholderFeedLabelSecondarySize: "options",
+    placeholderFeedPadding: "Text",
+    placeholderFeedShape: "alignItems",
+    placeholderFeedShapeSize: "props",
     placeholderType: NONE,
-    width: "Basic",
-    height: 170876827626422630000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-    verticalAlignment: 0.0000000000000000000000000000000000000000000000000000009380140331662141,
-    horizontalAlignment: 1681686304698668500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    width: false,
+    height: false,
+    verticalAlignment: false,
+    horizontalAlignment: false,
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7837).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7847).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

@@ -115,6 +115,7 @@ const items = [
   dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
   dismissible_content.DismissibleContent.HEXAGON_CAMPAIGN_PERKS_EXPIRED_PROMO_SHEET,
   dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_AUTO_CLIPS_RECAP,
+  dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_NITRO_TAB_CUE,
   dismissible_content.DismissibleContent.VOICE_PANEL_STREAM_VOLUME_MOVED_NOTICE,
 ];
 const set = new Set(items);

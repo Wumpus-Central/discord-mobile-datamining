@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9105 from "../../../../../_runtime/metro/09105__.js";
-import _modDef10727 from "../../../../../_runtime/metro/10727__.js";
-import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
+import _modDef9116 from "../../../../../_runtime/metro/09116__.js";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
+import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
+import _modDef14042 from "../../../../../_runtime/metro/14042__.js";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
 import useSoundboardConfig from "../hooks/useSoundboardConfig.tsx";
 import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton.tsx";
@@ -89,9 +89,9 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1113).intl;
   obj.accessibilityLabel = intl.string(channelId(1113).t["6vrfgt"]);
-  obj.icon = _modDef9105;
+  obj.icon = _modDef9116;
   obj.onPress = callback;
-  return closure_9(channelId(7988).IconButton, obj);
+  return closure_9(channelId(7999).IconButton, obj);
 }
 function DockSoundboardButton(arg0) {
   ({ onPress, disabled, disabledAccessibilityHint } = arg0);
@@ -106,7 +106,7 @@ function DockSoundboardButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef10727;
+  obj.icon = _modDef14042;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;
@@ -116,9 +116,9 @@ const View = fn(17).View;
 const InputModes = fn(1072).InputModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
-  actions: { flexDirection: "row", alignItems: "center", gap: fn(12009).DOCK_GAP },
+  actions: { flexDirection: "row", alignItems: "center", gap: fn(12446).DOCK_GAP },
   buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS },
 };
 let closure_11 = createStyles.createStyles(obj);

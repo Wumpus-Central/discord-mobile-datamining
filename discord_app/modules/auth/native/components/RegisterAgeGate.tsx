@@ -11,14 +11,14 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(18650);
+const RegistrationUIStore = fn(18691);
 ({ updateRegistrationOptions: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(18651);
+const RegistrationConstants = fn(18692);
 ({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: closure_10 } = RegistrationConstants);
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   inputGroup: { marginTop: 24, marginBottom: 24 },
   flexGrow: { flexGrow: 1 },

@@ -6,8 +6,9 @@ const zustandStore = ZustandStore.createZustandStore(() => ({
   sort: null,
   filter: null,
   scrollToQuestId: null,
-  scrollToQuestsSection: false,
+  scrollToSection: null,
 }));
 const result = size.fileFinishedImporting("modules/quests/QuestHomeNavigationStore.tsx");
 
 export default zustandStore;
+export const QuestHomeSection = { ORBS_ARCADE: "orbs_arcade", QUESTS: "quests" };

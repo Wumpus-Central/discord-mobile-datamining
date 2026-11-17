@@ -251,8 +251,8 @@ function isCurrentSyncStatus(version) {
   }
   return false;
 }
-let closure_7 = fn(5159).createChannelRecordFromServer;
-const ChannelLoader = fn(5155).ChannelLoader;
+let closure_7 = fn(5163).createChannelRecordFromServer;
+const ChannelLoader = fn(5159).ChannelLoader;
 let closure_16 = new LoggerDefault("GuildBasicChannels");
 const re17 = /^\d+$/;
 class GuildBasicChannels {
@@ -312,9 +312,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    items = [tmp3(5184).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(5184).basicChannels(closure_0);
-    items[1] = tmp3(5184).syncedBasicChannels(closure_0).getKvEntries();
+    items = [tmp3(5188).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(5188).basicChannels(closure_0);
+    items[1] = tmp3(5188).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);

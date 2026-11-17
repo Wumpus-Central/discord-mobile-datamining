@@ -8,10 +8,10 @@ import GameControllerIcon from "../../../design/components/Icon/native/redesign/
 import AppsIcon2 from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import utils from "../../content_inventory/utils.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
-import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
-import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import HourglassIcon from "../../../design/components/Icon/native/redesign/generated/HourglassIcon.tsx";
+import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import TopicsIcon from "../../../design/components/Icon/native/redesign/generated/TopicsIcon.tsx";
+import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
 import shouldShowActivityTimeBarDefault from "../utils/shouldShowActivityTimeBar.tsx";
 import Badges from "../../icymi/native/content_inventory/Badges.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_6 = createStyles.createStyles({
   container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 },
   bold: { fontWeight: "bold" },

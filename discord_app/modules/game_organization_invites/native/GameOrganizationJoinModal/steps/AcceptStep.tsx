@@ -4,11 +4,11 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_6 = fn(12369).GameOrganizationInviteAcceptStatus;
-const onPress = fn(14074).closeGameOrganizationJoinModal;
+let closure_6 = fn(12573).GameOrganizationInviteAcceptStatus;
+const onPress = fn(12898).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_10 = createStyles.createStyles({ text: { textAlign: "center" }, buttonGroup: { paddingVertical: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -159,12 +159,13 @@ export function AcceptStep(code) {
   if (null == tmp4) {
     return null;
   } else {
-    let str = tmp4.displayNoun;
+    const displayNoun = tmp4.displayNoun;
     let obj2 = { spacing: tmp2(tmp3[18]).space.PX_48, children: null };
     let obj3 = { spacing: tmp2(tmp3[18]).space.PX_24, children: null };
     let obj4 = { variant: "heading-lg/semibold", style: tmp.text, children: null };
     const intl4 = tmp5(tmp3[14]).intl;
-    if (str == null) {
+    let str = displayNoun;
+    if (displayNoun == null) {
       str = "other";
     }
     let obj5 = { children: null };
@@ -180,20 +181,24 @@ export function AcceptStep(code) {
     let obj10 = { variant: "heading-lg/semibold", children: null };
     let intl = tmp5(tmp3[14]).intl;
     obj10.children = intl.string(tmp2(tmp3[20]).yFqGy8);
-    const items3 = [closure_8(tmp5(tmp3[19]).Text, obj10), closure_8(tmp2(tmp3[22]), {})];
+    const items3 = [closure_8(tmp5(tmp3[19]).Text, obj10)];
+    const obj11 = { noun: null };
+    const obj12 = { displayNoun, lowercase: true };
+    obj11.noun = tmp2(tmp3[23])(obj12);
+    items3[1] = closure_8(tmp2(tmp3[22]), obj11);
     obj9.children = items3;
     items2[1] = closure_9(tmp5(tmp3[17]).Stack, obj9);
     obj2.children = items2;
     obj6.children = closure_9(tmp5(tmp3[17]).Stack, obj2);
     const items4 = [closure_8(tmp5(tmp3[16]).ModalContent, obj6)];
-    const obj11 = { children: null };
-    const obj12 = { style: tmp.buttonGroup, children: null };
-    const obj13 = { text: null, size: "lg", loading: null, disabled: null, onPress: null };
+    const obj13 = { children: null };
+    const obj14 = { style: tmp.buttonGroup, children: null };
+    const obj15 = { text: null, size: "lg", loading: null, disabled: null, onPress: null };
     const intl2 = tmp5(tmp3[14]).intl;
-    obj13.text = intl2.string(tmp2(tmp3[20]).BaZ6nt);
-    obj13.loading = disabled;
-    obj13.disabled = disabled;
-    obj13.onPress = function handleAcceptInvite() {
+    obj15.text = intl2.string(tmp2(tmp3[20]).BaZ6nt);
+    obj15.loading = disabled;
+    obj15.disabled = disabled;
+    obj15.onPress = function handleAcceptInvite() {
       const self = this;
       const apply = closure_5.apply;
       if (typeof apply === "unknown") {
@@ -203,16 +208,16 @@ export function AcceptStep(code) {
       }
       return applyArgumentsResult;
     };
-    const items5 = [closure_8(tmp5(tmp3[25]).Button, obj13)];
-    const obj14 = { text: null, size: "lg", variant: "secondary", onPress: null, disabled: null };
+    const items5 = [closure_8(tmp5(tmp3[26]).Button, obj15)];
+    const obj16 = { text: null, size: "lg", variant: "secondary", onPress: null, disabled: null };
     const intl3 = tmp5(tmp3[14]).intl;
-    obj14.text = intl3.string(tmp5(tmp3[14]).t["ETE/oC"]);
-    obj14.onPress = onPress;
-    obj14.disabled = disabled;
-    items5[1] = closure_8(tmp5(tmp3[25]).Button, obj14);
-    obj12.children = items5;
-    obj11.children = closure_9(tmp5(tmp3[24]).ButtonGroup, obj12);
-    items4[1] = closure_8(tmp5(tmp3[23]).ModalFooter, obj11);
+    obj16.text = intl3.string(tmp5(tmp3[14]).t["ETE/oC"]);
+    obj16.onPress = onPress;
+    obj16.disabled = disabled;
+    items5[1] = closure_8(tmp5(tmp3[26]).Button, obj16);
+    obj14.children = items5;
+    obj13.children = closure_9(tmp5(tmp3[25]).ButtonGroup, obj14);
+    items4[1] = closure_8(tmp5(tmp3[24]).ModalFooter, obj13);
     obj5.children = items4;
     return closure_9(tmp5(tmp3[15]).ModalScreen, obj5);
   }

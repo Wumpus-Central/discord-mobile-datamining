@@ -1,5 +1,4 @@
 // discord_app/modules/checkpoint/native/components/Checkpoint2026ForwardPreview.tsx
-import getDevicePixelRatioDefault from "../../../../utils/getDevicePixelRatio.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import checkpoint_CheckpointMessageComponentUtils from "../../CheckpointMessageComponentUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { preview: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, layer: null };
 let obj3 = { transform: null };
 let items = [{ translateY: -2 }];
@@ -32,11 +31,7 @@ export default function Checkpoint2026ForwardPreview(checkpointData) {
   items = [character];
   const memo = noop.useMemo(() => {
     if (null != character) {
-      const _Math = Math;
-      let characterLayerUrls = checkpoint_CheckpointMessageComponentUtils.getCharacterLayerUrls(
-        tmp,
-        Math.round(56 * getDevicePixelRatioDefault()),
-      );
+      let characterLayerUrls = checkpoint_CheckpointMessageComponentUtils.getCharacterLayerUrls(tmp, 56);
     } else {
       characterLayerUrls = [];
     }
@@ -59,7 +54,7 @@ export default function Checkpoint2026ForwardPreview(checkpointData) {
       });
     } else {
       const obj5 = { color: character(575).colors.BLACK };
-      mapped = jsx(tmp2(15190).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
+      mapped = jsx(tmp2(10734).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
     }
     obj3.children = mapped;
     <closure_5 style={null}>{null}</closure_5>;

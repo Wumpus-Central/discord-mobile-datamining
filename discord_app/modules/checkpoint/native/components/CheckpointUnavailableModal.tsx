@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef3317 from "../../Checkpoint2026.messages.js";
+import _modDef3319 from "../../Checkpoint2026.messages.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
@@ -64,7 +64,7 @@ export default function CheckpointUnavailableModal() {
   const obj6 = { isStepHeading: true, variant: "heading-lg/medium", children: null };
   const tmp6 = CheckpointUnavailableScreenDefault;
   const intl2 = util.intl;
-  obj6.children = intl2.string(_modDef3317.IaTl5H);
+  obj6.children = intl2.string(_modDef3319.IaTl5H);
   obj5.children = timestampProducer(CheckpointTextDefault, obj6);
   items[1] = timestampProducer(tmp6, obj5);
   items[2] = timestampProducer(CheckpointHeaderDefault, {});

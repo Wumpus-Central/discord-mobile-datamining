@@ -45,19 +45,19 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8545).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8556).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7918)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7928)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8545);
+  let obj = user(8556);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(15783).useGameFriendsForUser(user.id);
-  const tmp3Result = user(15783);
+  const gameFriendsForUser = user(15817).useGameFriendsForUser(user.id);
+  const tmp3Result = user(15817);
   items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(5362).useName(user);
+  userDisplayName = tmp(5366).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -66,9 +66,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(15878).UserClockIcon;
+          let UserPlusIcon = tmp3(15916).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(6013).UserPlusIcon;
+          UserPlusIcon = tmp3(6017).UserPlusIcon;
         }
         const intl = tmp3(1113).intl;
         const string = intl.string;
@@ -119,7 +119,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   threeButtonLayout: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
   flexGrow: { flex: 1 },

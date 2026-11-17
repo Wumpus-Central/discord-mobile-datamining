@@ -11,10 +11,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const createChannelRecord = fn(5159).createChannelRecord;
+const createChannelRecord = fn(5163).createChannelRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   selectorGroup: { flexDirection: "column", gap: 8 },
   select: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs },
@@ -56,7 +56,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       const channels = first.channels;
       obj2.items = channels.map((id) => {
         const obj = {
-          label: selectedGuildId(5944).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
+          label: selectedGuildId(5948).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
           value: id.id,
         };
         return obj;
@@ -66,8 +66,8 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         selectedChannelId(onChannelChange[10]).hideActionSheet(WebhookGuildChannelSelector);
       };
       obj2.selectedItem = selectedChannelId;
-      obj.openLazy(asyncRequireImpl(8009, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
-      const tmp7 = asyncRequireImpl(8009, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(8020, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
+      const tmp7 = asyncRequireImpl(8020, dependencyMap.paths);
     }
   }, items);
   const effect = noop.useEffect(() => {

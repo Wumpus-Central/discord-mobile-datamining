@@ -7,13 +7,13 @@ import ApplicationCommandTypes from "../../../../../application_commands/Applica
 import AppAnalyticsUtils from "../../../../../app_analytics/AppAnalyticsUtils.tsx";
 import TableRow from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ApplicationCommandUtils from "../../../../../application_commands/ApplicationCommandUtils.tsx";
-import ShopIcon from "../../../../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
-import AppLauncherContext from "../../../AppLauncherContext.tsx";
 import AppLauncherUtils from "../../../../utils/AppLauncherUtils.tsx";
+import AppLauncherContext from "../../../AppLauncherContext.tsx";
 import AppLauncherNativeUtils from "../../../AppLauncherNativeUtils.tsx";
 import usePlaceholderSize from "../../../hooks/usePlaceholderSize.tsx";
 import CommandRowButtonDefault from "../../../base_components/CommandRowButton.tsx";
 import BillIcon from "../../../../../../design/components/Icon/native/redesign/generated/BillIcon.tsx";
+import ShopIcon from "../../../../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -204,18 +204,18 @@ class CommandRow {
   }
 }
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(11406);
+const ApplicationCommandIndexStore = fn(11114);
 ({ useContextIndexState: metroImportDefault, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1501);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_12 = fn(6335).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(6343).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
-  headerSpacer: { height: fn(13461).EXPANDED_HEADER_HEIGHT - fn(13461).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(13616).EXPANDED_HEADER_HEIGHT - fn(13616).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -233,7 +233,7 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(13461).EXPANDED_HEADER_HEIGHT - fn(13461).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(13616).EXPANDED_HEADER_HEIGHT - fn(13616).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {

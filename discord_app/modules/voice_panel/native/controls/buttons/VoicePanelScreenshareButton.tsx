@@ -11,11 +11,11 @@ const require = fn;
 const jsx = fn(21).jsx;
 const MetaQuestUtils = fn(1627);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(10731).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(14045).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(19192).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(19237).MobilePhoneShareIcon;
 }
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_7 = createStyles.createStyles({
   iconContainer: {
     position: "absolute",
@@ -34,8 +34,8 @@ export default function ScreenshareButton(arg0) {
   ({ props, wrapperSpecs } = arg0);
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp3 = closure_7();
-  const voicePanelButtonStyles = channelId(20085).useVoicePanelButtonStyles(wrapperSpecs);
-  const obj = channelId(20085);
+  const voicePanelButtonStyles = channelId(20132).useVoicePanelButtonStyles(wrapperSpecs);
+  const obj = channelId(20132);
   items = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   _modDef38(null != stateFromStores, "null channel in VoicePanelScreenshareButton");
@@ -58,7 +58,7 @@ export default function ScreenshareButton(arg0) {
     color = voicePanelButtonStyles.iconFillSelected.color;
   }
   if (videoBlocked) {
-    let MobilePhoneDenyIcon = tmp4(20099).MobilePhoneDenyIcon;
+    let MobilePhoneDenyIcon = tmp4(20147).MobilePhoneDenyIcon;
   } else {
     MobilePhoneDenyIcon = MobilePhoneShareIcon;
   }

@@ -24,6 +24,16 @@ class InputHost {
     merged.mouseButtonHandler = _handleMouseButton.bind(merged);
     _handleMouseMove = merged._handleMouseMove;
     merged.mouseMoveHandler = _handleMouseMove.bind(merged);
+    _handleMouseWheel = merged._handleMouseWheel;
+    merged.mouseWheelHandler = _handleMouseWheel.bind(merged);
+    _handleGamepadPlug = merged._handleGamepadPlug;
+    merged.gamepadPlugHandler = _handleGamepadPlug.bind(merged);
+    _handleGamepadButton = merged._handleGamepadButton;
+    merged.gamepadButtonHandler = _handleGamepadButton.bind(merged);
+    _handleGamepadStick = merged._handleGamepadStick;
+    merged.gamepadStickHandler = _handleGamepadStick.bind(merged);
+    _handleGamepadTrigger = merged._handleGamepadTrigger;
+    merged.gamepadTriggerHandler = _handleGamepadTrigger.bind(merged);
     _handleGrab = merged._handleGrab;
     merged.grabHandler = _handleGrab.bind(merged);
     _handleDrop = merged._handleDrop;
@@ -33,8 +43,13 @@ class InputHost {
     onResult = global.on(closure_0(closure_2[2]).InputEvent.Key, merged.keyHandler);
     onResult1 = global.on(closure_0(closure_2[2]).InputEvent.MouseButton, merged.mouseButtonHandler);
     onResult2 = global.on(closure_0(closure_2[2]).InputEvent.MouseMove, merged.mouseMoveHandler);
-    onResult3 = global.on(closure_0(closure_2[2]).InputEvent.Grab, merged.grabHandler);
-    onResult4 = global.on(closure_0(closure_2[2]).InputEvent.Drop, merged.dropHandler);
+    onResult3 = global.on(closure_0(closure_2[2]).InputEvent.MouseWheel, merged.mouseWheelHandler);
+    onResult4 = global.on(closure_0(closure_2[2]).InputEvent.ControllerPlug, merged.gamepadPlugHandler);
+    onResult5 = global.on(closure_0(closure_2[2]).InputEvent.ControllerButton, merged.gamepadButtonHandler);
+    onResult6 = global.on(closure_0(closure_2[2]).InputEvent.ControllerStick, merged.gamepadStickHandler);
+    onResult7 = global.on(closure_0(closure_2[2]).InputEvent.ControllerTrigger, merged.gamepadTriggerHandler);
+    onResult8 = global.on(closure_0(closure_2[2]).InputEvent.Grab, merged.grabHandler);
+    onResult9 = global.on(closure_0(closure_2[2]).InputEvent.Drop, merged.dropHandler);
     setHostingResult = global.setHosting(true);
     return merged;
   }
@@ -114,6 +129,7 @@ prototype["_handleGrab"] = function _handleGrab(holderUserId, holderSessionId) {
     if (null != self.guildId) {
       const obj2 = { guildId: self.guildId, location: "_handleGrab" };
       if (obj.getConfig(obj2).allowWrestling) {
+        self._handleGamepadPlug(self.holderSessionId, false);
         const connection3 = self.connection;
         connection3.sendDrop(self.holderSessionId);
       }
@@ -134,6 +150,7 @@ prototype["_handleDrop"] = function _handleDrop(arg0) {
   const logger = this.logger;
   logger.log("Received drop for session " + arg0);
   if (arg0 === this.holderSessionId) {
+    self._handleGamepadPlug(self.holderSessionId, false);
     self.holderSessionId = null;
     self.holderUserId = null;
     self.onDrop();
@@ -144,6 +161,7 @@ prototype["takeBackController"] = function takeBackController() {
   if (null != this.holderSessionId) {
     const connection = self.connection;
     connection.sendDrop(self.holderSessionId);
+    self._handleGamepadPlug(self.holderSessionId, false);
     self.holderSessionId = null;
     self.holderUserId = null;
     self.onDrop();
@@ -188,6 +206,74 @@ prototype["_handleMouseMove"] = function _handleMouseMove(arg0, x, y) {
     hook.sendCommand(JSON.stringify(point));
   }
 };
+prototype["_handleMouseWheel"] = function _handleMouseWheel(arg0, delta) {
+  const self = this;
+  let tmp = null != this.hook;
+  if (tmp) {
+    tmp = arg0 === self.holderSessionId;
+  }
+  if (tmp) {
+    const hook = self.hook;
+    const _JSON = JSON;
+    const obj = { message: "inject_mousewheel_event", delta };
+    hook.sendCommand(JSON.stringify(obj));
+  }
+};
+prototype["_handleGamepadPlug"] = function _handleGamepadPlug(holderSessionId, arg1) {
+  const self = this;
+  let tmp = null != this.hook;
+  if (tmp) {
+    tmp = holderSessionId === self.holderSessionId;
+  }
+  if (tmp) {
+    const hook = self.hook;
+    let str = "release_gamepad";
+    if (arg1) {
+      str = "inject_gamepad";
+    }
+    const obj = { message: str, index: 0 };
+    hook.sendCommand(JSON.stringify(obj));
+  }
+};
+prototype["_handleGamepadButton"] = function _handleGamepadButton(arg0, button, down) {
+  const self = this;
+  let tmp = null != this.hook;
+  if (tmp) {
+    tmp = arg0 === self.holderSessionId;
+  }
+  if (tmp) {
+    const hook = self.hook;
+    const _JSON = JSON;
+    const obj = { message: "inject_gamepad_button", index: 0, button, down };
+    hook.sendCommand(JSON.stringify(obj));
+  }
+};
+prototype["_handleGamepadStick"] = function _handleGamepadStick(arg0, isLeft, x, y) {
+  const self = this;
+  let tmp = null != this.hook;
+  if (tmp) {
+    tmp = arg0 === self.holderSessionId;
+  }
+  if (tmp) {
+    const hook = self.hook;
+    const _JSON = JSON;
+    const point = { message: "inject_gamepad_stick", index: 0, x, y, isLeft };
+    hook.sendCommand(JSON.stringify(point));
+  }
+};
+prototype["_handleGamepadTrigger"] = function _handleGamepadTrigger(arg0, isLeft, arg2) {
+  const self = this;
+  let tmp = null != this.hook;
+  if (tmp) {
+    tmp = arg0 === self.holderSessionId;
+  }
+  if (tmp) {
+    const hook = self.hook;
+    const _JSON = JSON;
+    const obj = { message: "inject_gamepad_trigger", index: 0, val: arg2, isLeft };
+    hook.sendCommand(JSON.stringify(obj));
+  }
+};
 prototype["shutdown"] = function shutdown() {
   const self = this;
   if (null != this.holderSessionId) {
@@ -203,9 +289,19 @@ prototype["shutdown"] = function shutdown() {
   const connection5 = self.connection;
   connection5.off(InputEvent.InputEvent.MouseMove, self.mouseMoveHandler);
   const connection6 = self.connection;
-  connection6.off(InputEvent.InputEvent.Grab, self.grabHandler);
+  connection6.off(InputEvent.InputEvent.MouseWheel, self.mouseWheelHandler);
   const connection7 = self.connection;
-  connection7.off(InputEvent.InputEvent.Drop, self.dropHandler);
+  connection7.off(InputEvent.InputEvent.ControllerPlug, self.gamepadPlugHandler);
+  const connection8 = self.connection;
+  connection8.off(InputEvent.InputEvent.ControllerButton, self.gamepadButtonHandler);
+  const connection9 = self.connection;
+  connection9.off(InputEvent.InputEvent.ControllerStick, self.gamepadStickHandler);
+  const connection10 = self.connection;
+  connection10.off(InputEvent.InputEvent.ControllerTrigger, self.gamepadTriggerHandler);
+  const connection11 = self.connection;
+  connection11.off(InputEvent.InputEvent.Grab, self.grabHandler);
+  const connection12 = self.connection;
+  connection12.off(InputEvent.InputEvent.Drop, self.dropHandler);
   if (null != self.hook) {
     const hook = self.hook;
     const _JSON = JSON;

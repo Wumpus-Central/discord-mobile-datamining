@@ -10,10 +10,10 @@ const _modDef1655 = _mod1655;
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7962).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7972).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let closure_5 = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_6 = createStyles.createStyles((bottom) => {
   const obj = {
     container: { position: "absolute", bottom, start: 0, end: 0 },

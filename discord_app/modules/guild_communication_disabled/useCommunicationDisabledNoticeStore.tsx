@@ -1,11 +1,11 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
 import _mod1258 from "../../../_runtime/metro/01258__.js";
-import _mod5221 from "../../../_runtime/metro/05221__.js";
+import _mod5225 from "../../../_runtime/metro/05225__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
 const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY =
-  fn(5220).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+  fn(5224).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 const module_561 = fn(561);
 let state = module_561.createStore((arg0, arg1) => {
   _require = arg0;
@@ -67,7 +67,7 @@ export function useCommunicationDisabledNoticeStore(arg0) {
         ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
         return items;
       },
-      _mod5221.shallow,
+      _mod5225.shallow,
     ),
     2,
   );

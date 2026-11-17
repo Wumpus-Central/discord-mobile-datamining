@@ -7,6 +7,7 @@ import AdCreativeType from "../../../discord_common/js/shared/shared-constants/A
 import FirstPartyQuestTaskTypes from "../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import DismissibleQuestContentFlags from "../../../discord_common/js/shared/shared-constants/DismissibleQuestContentFlags.tsx";
 import HTTPUtils_mod from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import GlobalUtils_mod from "../../utils/GlobalUtils.tsx";
 import apply from "../../../_runtime/00012_apply.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -18,33 +19,39 @@ const items = [
 const result = DurationsDefault.Millis.MINUTE * Quests.Quests.ConsecutiveHeartbeatPeriodMinutes;
 let HTTPUtils = HTTPUtils_mod;
 HTTPUtils = HTTPUtils.getAPIBaseURL();
-let tmp4 = -1 !== HTTPUtils.indexOf("localhost");
-if (!tmp4) {
-  tmp4 = -1 !== HTTPUtils.indexOf("127.0.0.1");
+let GlobalUtils = GlobalUtils_mod;
+GlobalUtils = GlobalUtils.isDiscordBackendDevelopment();
+if (!GlobalUtils) {
+  GlobalUtils = -1 !== HTTPUtils.indexOf("localhost");
 }
-let str2 = "https://cdn.discordapp.com/";
-if (tmp4) {
+if (!GlobalUtils) {
+  GlobalUtils = -1 !== HTTPUtils.indexOf("127.0.0.1");
+}
+let str3 = "https://cdn.discordapp.com/";
+if (GlobalUtils) {
   let _HermesInternal = HermesInternal;
-  str2 = "" + HTTPUtils + "/_cdn_storage/";
+  str3 = "" + HTTPUtils + "/_cdn_storage/";
 }
 function getQuestCdnUrlBase(arg0) {
-  ({ apiBaseUrl, pageHost, isDevelopmentBuild } = arg0);
-  let tmp = -1 !== apiBaseUrl.indexOf("localhost");
-  if (!tmp) {
-    tmp = -1 !== apiBaseUrl.indexOf("127.0.0.1");
+  ({ apiBaseUrl, pageHost, isDevelopmentBuild, isLocalBackend } = arg0);
+  if (!isLocalBackend) {
+    isLocalBackend = -1 !== apiBaseUrl.indexOf("localhost");
+  }
+  if (!isLocalBackend) {
+    isLocalBackend = -1 !== apiBaseUrl.indexOf("127.0.0.1");
   }
   if (isDevelopmentBuild) {
     isDevelopmentBuild = pageHost.endsWith(".devtun.to");
   }
-  if (tmp) {
+  if (isLocalBackend) {
     const _HermesInternal = HermesInternal;
-    let str3 = "" + apiBaseUrl + "/_cdn_storage/";
+    let str4 = "" + apiBaseUrl + "/_cdn_storage/";
   } else {
-    str3 = "https://cdn.discordapp.com/";
+    str4 = "https://cdn.discordapp.com/";
   }
-  return str3;
+  return str4;
 }
-const text = `${str2}quests/`;
+const text = `${str3}quests/`;
 const items1 = [
   QuestTypes.AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA,
   QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA,
@@ -106,7 +113,7 @@ const sorted = entries.sort((arg0, arg1) => {
   }
   return num;
 });
-const result1 = size.fileFinishedImporting("modules/quests/QuestConstants.tsx");
+const result2 = size.fileFinishedImporting("modules/quests/QuestConstants.tsx");
 
 export const QuestsExperimentLocations = {
   ACTIVITY_PANEL: "quests_bar_activity_panel",
@@ -179,7 +186,7 @@ export const QUEST_SPLIT_MODAL_PANEL_WIDTH = 454;
 export const QUEST_HERO_ASSET_ASPECT_RATIO = 3.5675675675675675;
 export const DEFAULT_PORTRAIT_ASPECT_RATIO = 0.5625;
 export { getQuestCdnUrlBase };
-export const CDN_URL_BASE = str2;
+export const CDN_URL_BASE = str3;
 export const QUESTS_CDN_URL_BASE = text;
 export const QuestDockMode = {
   COLLAPSED: "collapsed",

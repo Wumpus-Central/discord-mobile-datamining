@@ -14,10 +14,10 @@ import NativeViewDefault from "../../core/native/NativeView.tsx";
 import TableRadioRow from "../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
-import _modDef11296 from "../../../../_runtime/metro/11296__.js";
 import getStreamSettingsForPreset from "../utils/getStreamSettingsForPreset.tsx";
 import SpeedometerIcon from "../../../design/components/Icon/native/redesign/generated/SpeedometerIcon.tsx";
 import ImageSparkleIcon from "../../../design/components/Icon/native/redesign/generated/ImageSparkleIcon.tsx";
+import _modDef11625 from "../../../../_runtime/metro/11625__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingSettingsStore from "../../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -30,12 +30,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 const getStreamSettingsForPresetDefault = getStreamSettingsForPreset;
 
 require = fn;
-let ApplicationStreamPresets = fn(6161).ApplicationStreamPresets;
+let ApplicationStreamPresets = fn(6168).ApplicationStreamPresets;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(6065).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6072).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   wrapper: { gap: nativeDefault.space.PX_24 },
   header: { textAlign: "center" },
@@ -233,7 +233,7 @@ export default noop.memo(function MobileGoLiveActionSheet() {
         obj10.children = intl5.string(_modDef2501.nMcXo1);
         items = [gesture(Text_Text.Text, obj10)];
         const tmp8Result = NativeViewDefault;
-        items[1] = gesture(BaseIconImage.BaseIconImage, { source: _modDef11296, size: "xs" });
+        items[1] = gesture(BaseIconImage.BaseIconImage, { source: _modDef11625, size: "xs" });
         obj9.children = items;
         obj8.label = colors(tmp8Result, obj9);
         if (null != maxSettingsForPreset2) {
@@ -337,5 +337,5 @@ export function showMobileGoLiveActionSheet(location_stack) {
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(12982, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(11615, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 }

@@ -11,16 +11,16 @@ import QuestTypes from "../../quests/QuestTypes.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
 import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
+import openMediaModalOverlayAltTextSheetDefault from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
+import MessageDataSnowflakeUtils from "snowflake/MessageDataSnowflakeUtils.tsx";
 import messages_MessagesUtils from "MessagesUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
 import ChatChangesetUpdateTracker from "../../chat/native/ChatChangesetUpdateTracker.tsx";
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers.tsx";
-import useSocialLayerStorefrontEmbedData from "../../slayer_storefront/native/useSocialLayerStorefrontEmbedData.tsx";
-import openMediaModalOverlayAltTextSheetDefault from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
-import MessagesHandlers from "MessagesHandlers.tsx";
-import MessageDataSnowflakeUtils from "snowflake/MessageDataSnowflakeUtils.tsx";
 import NavigationSpanTrackerDefault from "../../tti_analytics/native/navigation/NavigationSpanTracker.tsx";
+import useSocialLayerStorefrontEmbedData from "../../slayer_storefront/native/useSocialLayerStorefrontEmbedData.tsx";
+import MessagesHandlers from "MessagesHandlers.tsx";
 import NavigationTTIDefinition from "../../tti_analytics/native/navigation/NavigationTTIDefinition.tsx";
 import MessagesUtilsDefault from "../../../utils/native/MessagesUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(11865).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(5218).getUserCommunicationDisabledVersion;
-const Changeset = fn(9160).Changeset;
+let closure_6 = fn(11060).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(5222).getUserCommunicationDisabledVersion;
+const Changeset = fn(9171).Changeset;
 const Constants = fn(1072);
 ({
   ActivityActionTypes: closure_11,

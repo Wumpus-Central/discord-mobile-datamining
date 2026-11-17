@@ -6,8 +6,8 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
 import TextIcon2 from "../../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import ForumIcon from "../../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
-import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
 import GuildIconWithChannelType from "../../../../guild/native/GuildIconWithChannelType.tsx";
+import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -17,11 +17,11 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10244).UserRowModes;
-const ReadStateTypes = fn(6949).ReadStateTypes;
+const UserRowModes = fn(10266).UserRowModes;
+const ReadStateTypes = fn(6957).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = {
   guildIcon: { flexShrink: 0, flexGrow: 0 },
   subLabel: { display: "flex", flexDirection: "row", alignItems: "center" },

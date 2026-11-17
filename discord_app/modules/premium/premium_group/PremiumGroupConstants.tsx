@@ -1,19 +1,13 @@
 // discord_app/modules/premium/premium_group/PremiumGroupConstants.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3513 from "PremiumGroup.messages.js";
+import _modDef3515 from "PremiumGroup.messages.js";
 import Constants from "../../../Constants.tsx";
 import HelpdeskUtils from "../../../utils/HelpdeskUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ SubscriptionStatusTypes, HelpdeskArticles } = Constants);
-const items = [, , , ,];
-({
-  CANCELED: arr[0],
-  PAUSED: arr[1],
-  PAST_DUE: arr[2],
-  ACCOUNT_HOLD: arr[3],
-  BILLING_RETRY: arr[4],
-} = SubscriptionStatusTypes);
+const items = [, , ,];
+({ PAUSED: arr[0], PAST_DUE: arr[1], ACCOUNT_HOLD: arr[2], BILLING_RETRY: arr[3] } = SubscriptionStatusTypes);
 const articleURL = HelpdeskUtils.getArticleURL(HelpdeskArticles.PREMIUM_GROUP_ABOUT);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupConstants.tsx");
 
@@ -25,7 +19,7 @@ export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export function getPremiumGroupProductName() {
   const intl = util.intl;
-  return intl.string(_modDef3513.aFBQ3d);
+  return intl.string(_modDef3515.aFBQ3d);
 }
 export function getPremiumGroupCountryName() {
   const intl = util.intl;

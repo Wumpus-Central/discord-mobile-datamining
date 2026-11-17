@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
-import _modDef2701 from "../FamilyCenter.messages.js";
+import _modDef2703 from "../FamilyCenter.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import InlineNotice from "../../../design/mana/components/InlineNotice/InlineNotice.native.tsx";
 import FamilyCenterRestrictedHoursUtils from "../FamilyCenterRestrictedHoursUtils.tsx";
@@ -20,7 +20,7 @@ function OverlappingSchedulesWarning(conflictingEntries) {
   if (0 !== conflictingEntries.length) {
     const obj = { type: "warning", message: null, messageList: null, role: "status" };
     const intl = util.intl;
-    obj.message = intl.string(_modDef2701["26A0Df"]);
+    obj.message = intl.string(_modDef2703["26A0Df"]);
     obj.messageList = conflictingEntries.map((dayLabel) => "" + dayLabel.dayLabel + "  " + dayLabel.timeRange);
     tmp = closure_1_11(InlineNotice.InlineNotice, obj);
   }
@@ -31,7 +31,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = {
   container: { flex: 1 },
   scrollContent: {
@@ -373,7 +373,7 @@ export default function ScheduleDowntimeScreen() {
                   dependencyMap = 3;
                   c5 = 1;
                   const obj6 = {
-                    value: closure_0(17470).deleteRestrictedScheduleRule(teenId, rule.ruleId),
+                    value: closure_0(17507).deleteRestrictedScheduleRule(teenId, rule.ruleId),
                     done: false,
                   };
                   return obj6;
@@ -385,8 +385,8 @@ export default function ScheduleDowntimeScreen() {
             if (2 === tmp8) {
               c4 = 1;
               const intl = closure_0(1113).intl;
-              closure_0(6004).presentFailedToast(intl.string(tmp4(2701).Wu8BK2));
-              const obj2 = closure_0(6004);
+              closure_0(6008).presentFailedToast(intl.string(tmp4(2703).Wu8BK2));
+              const obj2 = closure_0(6008);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -498,7 +498,7 @@ export default function ScheduleDowntimeScreen() {
                 c4 = 2;
                 dependencyMap = 3;
                 c5 = 1;
-                const obj6 = { value: closure_0(17470).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
+                const obj6 = { value: closure_0(17507).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
                 return obj6;
               }
             }
@@ -508,8 +508,8 @@ export default function ScheduleDowntimeScreen() {
           if (2 === tmp8) {
             c4 = 1;
             const intl = closure_0(1113).intl;
-            closure_0(6004).presentFailedToast(intl.string(tmp4(2701).Wu8BK2));
-            const obj2 = closure_0(6004);
+            closure_0(6008).presentFailedToast(intl.string(tmp4(2703).Wu8BK2));
+            const obj2 = closure_0(6008);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -613,16 +613,16 @@ export default function ScheduleDowntimeScreen() {
     obj13.trailing = first1(tmp2(stringResult[23]).Text, obj14);
     obj13.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f136007 = (first1) => {
+      const f136324 = (first1) => {
         closure_1_12(first1);
         const result = (closure_0(rule[17]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };
         closure_1_14(time);
       };
-      const stringResult = intl.string(_modDef2701["8bLRt0"]);
+      const stringResult = intl.string(_modDef2703["8bLRt0"]);
       const obj2 = { title: stringResult, mode: "time", startDate: null, onSubmit: null };
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(8019, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(8030, dependencyMap.paths);
       obj2.startDate = new Date(2025, 0, 1, first1.hours, first1.minutes, 0, 0);
       obj2.onSubmit = function onSubmit(hours) {
         const time = { hours: hours.hours(), minutes: hours.minutes() };
@@ -642,10 +642,10 @@ export default function ScheduleDowntimeScreen() {
     obj15.onPress = function handleEndTimePress() {
       const intl = util.intl;
       closure_0 = closure_14;
-      const stringResult = intl.string(_modDef2701["+JkWJV"]);
+      const stringResult = intl.string(_modDef2703["+JkWJV"]);
       const obj2 = { title: stringResult, mode: "time", startDate: null, onSubmit: null };
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(8019, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(8030, dependencyMap.paths);
       obj2.startDate = new Date(2025, 0, 1, first2.hours, first2.minutes, 0, 0);
       obj2.onSubmit = function onSubmit(hours) {
         const time = { hours: hours.hours(), minutes: hours.minutes() };

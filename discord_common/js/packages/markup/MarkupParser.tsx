@@ -1,5 +1,5 @@
 // discord_common/js/packages/markup/MarkupParser.tsx
-import markup_MarkupParser from "native/MarkupParser.tsx";
+import MarkupParser from "native/MarkupParser.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -14,5 +14,5 @@ for (const key10030 in require("MarkupParserTypes")) {
   continue;
 }
 
-export const reactParserFor = markup_MarkupParser.default.reactParserFor;
-export const astParserFor = markup_MarkupParser.default.astParserFor;
+export const reactParserFor = MarkupParser.default.reactParserFor;
+export const astParserFor = MarkupParser.default.astParserFor;

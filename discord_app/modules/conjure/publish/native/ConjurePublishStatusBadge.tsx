@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import ConjureHeaderIconButton from "../../shared/native/ConjureHeaderIconButton.tsx";
 import ProgressCircleDefault from "../../../premium/native/components/ProgressCircle.tsx";
+import ConjureHeaderIconButton from "../../shared/native/ConjureHeaderIconButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const _modDef1655 = _mod1655;
@@ -58,12 +58,12 @@ function ConjurePublishSpinner() {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { dot: null, spinner: null };
 let size = {
-  width: fn(13328).CONJURE_HEADER_BADGE_SIZE,
-  height: fn(13328).CONJURE_HEADER_BADGE_SIZE,
-  borderRadius: fn(13328).CONJURE_HEADER_BADGE_SIZE / 2,
+  width: fn(14560).CONJURE_HEADER_BADGE_SIZE,
+  height: fn(14560).CONJURE_HEADER_BADGE_SIZE,
+  borderRadius: fn(14560).CONJURE_HEADER_BADGE_SIZE / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
 obj2.dot = size;

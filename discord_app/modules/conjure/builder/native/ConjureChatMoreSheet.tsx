@@ -13,7 +13,7 @@ function MoreRow(row) {
     const obj2 = { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null };
     ({ label: obj3.label, subLabel: obj3.subLabel } = row);
     const obj4 = { IconComponent: row.IconComponent };
-    obj2.icon = jsx(row(7455).TableRowIcon, { IconComponent: row.IconComponent });
+    obj2.icon = jsx(row(7465).TableRowIcon, { IconComponent: row.IconComponent });
     ({ value: obj3.value, disabled: obj3.disabled } = row);
     obj2.onValueChange = function onValueChange(arg0) {
       let tmp = arg0;
@@ -25,7 +25,7 @@ function MoreRow(row) {
       }
       row.onValueChange(arg0);
     };
-    return jsx(row(7954).TableSwitchRow, {
+    return jsx(row(7964).TableSwitchRow, {
       label: null,
       subLabel: null,
       icon: null,
@@ -40,15 +40,15 @@ function MoreRow(row) {
     }
     let obj = { label: row.label, variant: str, icon: null, onPress: null };
     const obj7 = { IconComponent: row.IconComponent, variant: str };
-    obj.icon = jsx(row(7455).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
+    obj.icon = jsx(row(7465).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
     obj.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet(ConjureChatMoreSheet);
       row.onPress();
     };
-    return jsx(row(7443).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
+    return jsx(row(7453).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
   }
 }
-const conjureDesignFeedbackStore = fn(13303);
+const conjureDesignFeedbackStore = fn(14530);
 ({
   enterConjureDesignFeedback: closure_6,
   exitConjureDesignFeedback: metroImportDefault,

@@ -78,7 +78,7 @@ export function useActivityShelfData(guildId) {
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = stateFromStores(5974);
+      const tmp = stateFromStores(5978);
       return supported_platforms.includes(tmp(guildId(1380).getOS()));
     });
     const found1 = found.filter((activity) => {

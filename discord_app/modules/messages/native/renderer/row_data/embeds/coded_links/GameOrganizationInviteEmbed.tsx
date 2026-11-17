@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../../../../discord_common/js/packages/to
 import util from "../../../../../../../intl/index.native.tsx";
 import _modDef2565 from "../../../../../../game_organization_invites/GameOrganizationInvitesUntranslated.messages.js";
 import ColorUtils from "../../../../../../../utils/ColorUtils.tsx";
-import _modDef7437 from "../../../../../../../../_runtime/metro/07437__.js";
-import _modDef7856 from "../../../../../../../../_runtime/metro/07856__.js";
+import _modDef7447 from "../../../../../../../../_runtime/metro/07447__.js";
+import _modDef7866 from "../../../../../../../../_runtime/metro/07866__.js";
 import renderer_EmbedUtils from "../../../EmbedUtils.tsx";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
@@ -16,9 +16,9 @@ import GameOrganizationInviteStore from "../../../../../../game_organization_inv
 import GuildStore from "../../../../../../../stores/GuildStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(11891).CodedLinkExtendedType;
-const constants = fn(12369).GameOrganizationInviteStates;
-const InviteTypes = fn(8842).InviteTypes;
+const CodedLinkExtendedType = fn(11091).CodedLinkExtendedType;
+const constants = fn(12573).GameOrganizationInviteStates;
+const InviteTypes = fn(8853).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx",
@@ -61,7 +61,7 @@ export function createGameOrganizationInviteEmbed(code, theme, id1) {
         internal3.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL),
       );
       obj4.showInvalidIcon = true;
-      obj4.invalidIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7856);
+      obj4.invalidIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7866);
       obj4.embedCanBeTapped = false;
       obj4.canBeAccepted = false;
       return obj4;
@@ -102,7 +102,7 @@ export function createGameOrganizationInviteEmbed(code, theme, id1) {
       }
       obj13.memberCountText = formatToPlainStringResult;
       const tmpResultResult = tmpResult(obj8);
-      obj13.memberCountIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7437);
+      obj13.memberCountIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7447);
       const description = organization.description;
       obj13.bodyText = description;
       const tmp29Result = renderer_EmbedUtils;

@@ -170,7 +170,7 @@ function _startExpirationChecker() {
   }
   _runExpirationCheck();
 }
-const QuestsExperimentLocations = fn(6954).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6962).QuestsExperimentLocations;
 new Map();
 let c33 = null;
 let c34 = null;
@@ -260,8 +260,8 @@ prototype["isFetchingRewardCode"] = function isFetchingRewardCode(id) {
 prototype["isDismissingContent"] = function isDismissingContent(adCreativeId) {
   return set.has(adCreativeId);
 };
-prototype["isAdContentDismissed"] = function isAdContentDismissed(arg0) {
-  return set.has(arg0);
+prototype["isAdContentDismissed"] = function isAdContentDismissed(id) {
+  return set.has(id);
 };
 prototype["getRewardCode"] = function getRewardCode(id) {
   return map2.get(id);
@@ -421,11 +421,11 @@ const questStore = new QuestStore(DispatcherDefault, {
       let tmp9 = nextResult;
       let result = map.set(nextResult.id, nextResult);
       let tmp13 = mapped;
-      let obj5 = mapped(8815);
+      let obj5 = mapped(8826);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(6957).QuestContent.QUEST_BAR)) {
-        let tmp13Result = tmp13(8816);
+      if (targetedContent.includes(mapped(6965).QuestContent.QUEST_BAR)) {
+        let tmp13Result = tmp13(8827);
         let obj4 = { location: QuestsExperimentLocations.QUESTS_STORE };
         let questLogger = tmp13Result.getQuestLogger(obj4);
         let _HermesInternal2 = HermesInternal;
@@ -447,7 +447,7 @@ const questStore = new QuestStore(DispatcherDefault, {
     for (const item10131 of values) {
       if (!map.has(item10131.id)) {
         let result3 = map.set(item10131.id, item10131);
-        let obj10 = mapped(8815);
+        let obj10 = mapped(8826);
         let result4 = map1.set(item10131.id, obj10.isQuestExpired(item10131));
       }
       continue;

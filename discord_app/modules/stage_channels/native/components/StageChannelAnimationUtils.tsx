@@ -2,8 +2,8 @@
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
 import StageChannelHeightHooks from "../../StageChannelHeightHooks.tsx";
+import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let obj = { duration: 250, easing: null };

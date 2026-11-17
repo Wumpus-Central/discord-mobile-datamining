@@ -3,6 +3,7 @@ import preloaded_user_settings from "../../../discord_common/js/packages/protos/
 import UserSettings from "../user_settings/UserSettings.tsx";
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import SettingsDefaultFeature from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import UserStore from "../../stores/UserStore.tsx";
 
@@ -24,53 +25,58 @@ function resolveGoreSettingWithDefaults(isFriend) {
   const currentUser = UserStore.getCurrentUser();
   let ExplicitContentRedaction = dependencyMap;
   if (obj.isSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
-    if (isDm === undefined) {
-      isDm = false;
-    }
-    if (flag === undefined) {
-      flag = false;
-    }
-    if (isDm) {
-      if (!flag) {
-        let BLUR2 = preloaded_user_settings.ExplicitContentRedaction.BLOCK;
-      }
-    }
-    ExplicitContentRedaction = preloaded_user_settings.ExplicitContentRedaction;
-    BLUR2 = ExplicitContentRedaction.BLUR;
-  } else {
-    let nsfwAllowed;
-    if (currentUser != null) {
-      nsfwAllowed = currentUser.nsfwAllowed;
-    }
-    if (false === nsfwAllowed) {
-      let flag5 = isDm;
+    if (!tmp4Result.isVerifiedAdult()) {
+      let flag2 = isDm;
       if (isDm === undefined) {
-        flag5 = false;
+        flag2 = false;
       }
-      if (!flag5) {
-        const ExplicitContentRedaction3 = preloaded_user_settings.ExplicitContentRedaction;
-        let BLUR = flag5 ? ExplicitContentRedaction3.BLOCK : ExplicitContentRedaction3.BLUR;
-      }
-      BLUR = preloaded_user_settings.ExplicitContentRedaction.BLUR;
-    } else {
-      let flag3 = isDm;
-      if (isDm === undefined) {
+      let flag3 = flag;
+      if (flag === undefined) {
         flag3 = false;
       }
-      let flag4 = flag;
-      if (flag === undefined) {
-        flag4 = false;
-      }
-      if (flag3) {
-        if (flag4) {
-          let SHOW = preloaded_user_settings.ExplicitContentRedaction.SHOW;
+      if (flag2) {
+        if (!flag3) {
+          let BLUR = preloaded_user_settings.ExplicitContentRedaction.BLOCK;
         }
-        return SHOW;
+        return BLUR;
       }
-      const ExplicitContentRedaction2 = preloaded_user_settings.ExplicitContentRedaction;
-      SHOW = flag3 ? ExplicitContentRedaction2.BLOCK : ExplicitContentRedaction2.SHOW;
+      BLUR = preloaded_user_settings.ExplicitContentRedaction.BLUR;
     }
+    tmp4Result = AgeVerificationUtils;
   }
+  let nsfwAllowed;
+  if (currentUser != null) {
+    nsfwAllowed = currentUser.nsfwAllowed;
+  }
+  if (false !== nsfwAllowed) {
+    let flag4 = isDm;
+    if (isDm === undefined) {
+      flag4 = false;
+    }
+    let flag5 = flag;
+    if (flag === undefined) {
+      flag5 = false;
+    }
+    if (flag4) {
+      if (flag5) {
+        let SHOW = preloaded_user_settings.ExplicitContentRedaction.SHOW;
+      }
+    }
+    const ExplicitContentRedaction2 = preloaded_user_settings.ExplicitContentRedaction;
+    SHOW = flag4 ? ExplicitContentRedaction2.BLOCK : ExplicitContentRedaction2.SHOW;
+  }
+  if (isDm === undefined) {
+    isDm = false;
+  }
+  if (flag === undefined) {
+    flag = false;
+  }
+  if (!isDm) {
+    const ExplicitContentRedaction3 = preloaded_user_settings.ExplicitContentRedaction;
+    let BLUR2 = isDm ? ExplicitContentRedaction3.BLOCK : ExplicitContentRedaction3.BLUR;
+  }
+  ExplicitContentRedaction = preloaded_user_settings.ExplicitContentRedaction;
+  BLUR2 = ExplicitContentRedaction.BLUR;
   obj = RegionalFeatureConfigUtils;
 }
 const HelpdeskArticles = fn(1072).HelpdeskArticles;

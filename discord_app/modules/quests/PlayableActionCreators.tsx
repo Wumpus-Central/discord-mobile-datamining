@@ -1,4 +1,5 @@
 // discord_app/modules/quests/PlayableActionCreators.tsx
+import DispatcherDefault from "../../Dispatcher.tsx";
 import SessionHeartbeatScheduler from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -139,4 +140,7 @@ export function claimPlayableReward() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
+}
+export function recordPlayableLaunch(questDockPlayable) {
+  DispatcherDefault.dispatch({ type: "PLAYABLE_LAUNCH", playable: questDockPlayable });
 }

@@ -1,6 +1,6 @@
 // discord_app/modules/markup/native/reactParserFor.tsx
+import MarkupParserDefault from "../../../../discord_common/js/packages/markup/native/MarkupParser.tsx";
 import Spoiler from "Spoiler.tsx";
-import markup_MarkupParserDefault from "../../../../discord_common/js/packages/markup/native/MarkupParser.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/markup/native/reactParserFor.
 export default function reactParserFor() {
   items = [...arguments];
   const items1 = [...items];
-  closure_0 = markup_MarkupParserDefault.reactParserFor.apply(items1);
+  closure_0 = MarkupParserDefault.reactParserFor.apply(items1);
   return function parseWithSpoilers() {
     items = [...arguments];
     const tmp = closure_0(...items);

@@ -9,7 +9,7 @@ import SentGiftsStore from "../SentGiftsStore.tsx";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { applicationIcon: null, nestedCard: null };
 let size = {
   position: "absolute",
@@ -43,10 +43,13 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
   }
   const wishlistOwnerId = sku.wishlistOwnerId;
   const size = sku.size;
-  const merged = Object.assign(sku, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0, size: 0 }));
+  const shopUnpublishCountdown = sku.shopUnpublishCountdown;
+  const merged = Object.assign(
+    sku,
+    Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0, size: 0, shopUnpublishCountdown: 0 }),
+  );
   let stateFromStores1;
-  let memo;
-  items = [memo];
+  items = [stateFromStores1];
   const items1 = [sku.id, wishlistOwnerId];
   const applicationId = sku.applicationId;
   const stateFromStores = sku(size[6]).useStateFromStores(
@@ -63,7 +66,7 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
   const obj = sku(size[6]);
   const tmp2 = sku;
   const tmp3 = size;
-  const items2 = [stateFromStores1];
+  const items2 = [applicationId];
   const items3 = [applicationId];
   stateFromStores1 = sku(size[6]).useStateFromStores(
     items2,
@@ -77,7 +80,7 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
     items3,
   );
   const items4 = [stateFromStores1];
-  memo = applicationId.useMemo(() => {
+  const memo = shopUnpublishCountdown.useMemo(() => {
     let iconSource;
     if (stateFromStores1 != null) {
       iconSource = stateFromStores1.getIconSource(24);
@@ -86,23 +89,32 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
   }, items4);
   const tmp7 = closure_9();
   const nestedCard = tmp7;
-  const items5 = [sku, size, memo, ,];
-  ({ applicationIcon: arr6[3], nestedCard: arr6[4] } = tmp7);
-  const callback = applicationId.useCallback(() => {
+  const items5 = [sku, size, shopUnpublishCountdown, memo, ,];
+  ({ applicationIcon: arr6[4], nestedCard: arr6[5] } = tmp7);
+  const callback = shopUnpublishCountdown.useCallback(() => {
     const children = [
       timestampProducer(SlayerStorefrontItemCardDefault, { sku, size, containerStyle: nestedCard.nestedCard }),
     ];
-    let tmp3Result = null != memo;
+    let tmp3Result = null == shopUnpublishCountdown;
     if (tmp3Result) {
-      const obj2 = { source: tmp7, style: nestedCard.applicationIcon };
+      tmp3Result = null != memo;
+    }
+    if (tmp3Result) {
+      const obj2 = { source: memo, style: nestedCard.applicationIcon };
       tmp3Result = timestampProducer(FastImageDefault, obj2);
     }
     children[1] = tmp3Result;
     return React5(metroImportDefault, { children });
   }, items5);
-  const obj3 = { accessibilityLabel: sku.name, renderPreview: callback, source: sku.source, size };
+  const obj3 = {
+    accessibilityLabel: sku.name,
+    renderPreview: callback,
+    source: sku.source,
+    size,
+    shopUnpublishCountdown,
+  };
   let obj2 = sku(size[6]);
-  const tmp9 = nestedCard;
+  const tmp9 = memo;
   const merged1 = Object.assign(merged);
   if (!flag) {
     if (!stateFromStores) {

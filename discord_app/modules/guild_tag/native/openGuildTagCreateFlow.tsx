@@ -11,7 +11,7 @@ export default function openGuildTagCreateFlow(guilds, analyticsLocation) {
   if (1 !== guilds.length) {
     const obj3 = { guilds, analyticsLocation };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(10801, dependencyMap.paths),
+      asyncRequireImpl(15117, dependencyMap.paths),
       "GuildTagCreateGuildListBottomSheet",
       obj3,
     );
