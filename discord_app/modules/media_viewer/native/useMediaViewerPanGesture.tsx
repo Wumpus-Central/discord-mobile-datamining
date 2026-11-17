@@ -2,8 +2,8 @@
 
 // Module 15230 (useMediaViewerPanGesture)
 import _mod1708 from "module_1708" /* 1708 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8629 */;
 import useVideoControls from "useVideoControls" /* 8630 */;
 import noop from "module_19" /* 19 */;

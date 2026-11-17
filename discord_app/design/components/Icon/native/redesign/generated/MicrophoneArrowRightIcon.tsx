@@ -2,7 +2,7 @@
 
 // Module 12948 (MicrophoneArrowRightIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod12949 from "module_12949" /* 12949 */;
 import noop from "module_19" /* 19 */;
 

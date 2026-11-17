@@ -1,11 +1,11 @@
-// === Module 17936: AndroidClassicChatFontScaleSetting ===
+// === Module 17938: AndroidClassicChatFontScaleSetting ===
 
-// Module 17936 (AndroidClassicChatFontScaleSetting)
+// Module 17938 (AndroidClassicChatFontScaleSetting)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import _mod5221 from "module_5221" /* 5221 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;
-import FontScaleStore from "FontScaleStore" /* 17884 */;
+import FontScaleStore from "FontScaleStore" /* 17886 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 

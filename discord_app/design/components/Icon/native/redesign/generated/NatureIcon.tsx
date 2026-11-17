@@ -2,7 +2,7 @@
 
 // Module 11320 (NatureIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11321 from "module_11321" /* 11321 */;
 import noop from "module_19" /* 19 */;
 

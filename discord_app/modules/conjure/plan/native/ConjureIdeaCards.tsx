@@ -3,8 +3,8 @@
 // Module 13755 (ConjureIdeaCards)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import Card from "Card" /* 7445 */;
 import noop from "module_19" /* 19 */;
 

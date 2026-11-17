@@ -1,7 +1,7 @@
 // === Module 12740: IgnoreThermalStateAlert ===
 
 // Module 12740 (IgnoreThermalStateAlert)
-import common_AlertDefault from "common/Alert" /* 6340 */;
+import common_AlertDefault from "common/Alert" /* 6330 */;
 import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 12741 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,11 +32,11 @@ export function IgnoreThermalStateAlert(onConfirm) {
   const obj2 = { style: tmp2.header, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = onConfirm(1113).intl;
   obj2.children = intl3.string(onConfirm(1113).t.v5X4fZ);
-  items = [closure_3(onConfirm(5929).Text, obj2), ];
+  items = [closure_3(onConfirm(5919).Text, obj2), ];
   const obj3 = { style: tmp2.text, variant: "body-md/medium", children: null };
   const intl4 = onConfirm(1113).intl;
   obj3.children = intl4.string(onConfirm(1113).t.VOgTjy);
-  items[1] = closure_3(onConfirm(5929).Text, obj3);
+  items[1] = closure_3(onConfirm(5919).Text, obj3);
   obj.children = items;
   return closure_4(common_AlertDefault, obj);
 }

@@ -2,7 +2,7 @@
 
 // Module 9144 (ThumbsDownIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9145 from "module_9145" /* 9145 */;
 import noop from "module_19" /* 19 */;
 

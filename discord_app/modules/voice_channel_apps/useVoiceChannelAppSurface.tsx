@@ -1,9 +1,9 @@
-// === Module 20003: useVoiceChannelAppSurface ===
+// === Module 20005: useVoiceChannelAppSurface ===
 
-// Module 20003 (useVoiceChannelAppSurface)
+// Module 20005 (useVoiceChannelAppSurface)
 import voiceChannelAppSession from "voiceChannelAppSession" /* 14041 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 19440 */;
-import useVoiceChannelApp from "useVoiceChannelApp" /* 19673 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 19442 */;
+import useVoiceChannelApp from "useVoiceChannelApp" /* 19675 */;
 import FramesStore from "FramesStore" /* 7019 */;
 import VoiceChannelAppStore from "VoiceChannelAppStore" /* 16990 */;
 

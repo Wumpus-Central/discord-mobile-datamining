@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 5256 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import EmojiDefault from "Emoji" /* 7894 */;
 import noop from "module_19" /* 19 */;
 

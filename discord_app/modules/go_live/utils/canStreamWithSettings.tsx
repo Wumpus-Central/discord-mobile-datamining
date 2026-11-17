@@ -3,7 +3,7 @@
 // Module 12984 (canStreamWithSettings)
 import GoLiveAutoQualityExperiment from "GoLiveAutoQualityExperiment" /* 12985 */;
 import canUseStreamSettingDefault from "canUseStreamSetting" /* 12986 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 6171 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 6161 */;
 import size from "module_2" /* 2 */;
 
 ({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: closure_4 } = StreamSettingsConstants);

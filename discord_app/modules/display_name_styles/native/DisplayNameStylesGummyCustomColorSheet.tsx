@@ -1,10 +1,10 @@
-// === Module 17968: DisplayNameStylesGummyCustomColorSheet ===
+// === Module 17970: DisplayNameStylesGummyCustomColorSheet ===
 
-// Module 17968 (DisplayNameStylesGummyCustomColorSheet)
+// Module 17970 (DisplayNameStylesGummyCustomColorSheet)
 import nativeDefault from "native" /* 575 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1396 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const sharedValue = obj.useSharedValue(obj2.wrapHue(onSelect(1090).int2hslRaw(onSelect.initialColor).h));
   items = [sharedValue, onSelect];
   const callback = noop.useCallback(() => {
-    const result = onSelect(5554).triggerHapticFeedback(onSelect(5554).HapticFeedbackTypes.IMPACT_LIGHT);
+    const result = onSelect(5544).triggerHapticFeedback(onSelect(5544).HapticFeedbackTypes.IMPACT_LIGHT);
   }, []);
   const callback1 = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -48,16 +48,16 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const intl2 = onSelect(1113).intl;
   obj6.text = intl2.string(onSelect(1113).t.XqMe3N);
   obj6.onPress = callback1;
-  obj5.trailing = closure_7(onSelect(5936).Button, obj6);
-  obj4.header = closure_7(sharedValue(17961), obj5);
+  obj5.trailing = closure_7(onSelect(5926).Button, obj6);
+  obj4.header = closure_7(sharedValue(17963), obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
-  const tmp5 = sharedValue(17961);
-  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(17969), { hue: sharedValue }) });
+  const tmp5 = sharedValue(17963);
+  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(17971), { hue: sharedValue }) });
   const items1 = [closure_7(View, obj8), ];
   const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(17077), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);
-  return closure_7(onSelect(5566).BottomSheet, obj4);
+  return closure_7(onSelect(5556).BottomSheet, obj4);
 };

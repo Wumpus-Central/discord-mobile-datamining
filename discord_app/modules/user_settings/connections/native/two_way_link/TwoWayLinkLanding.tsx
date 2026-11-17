@@ -3,9 +3,9 @@
 // Module 7441 (TwoWayLinkLanding)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import TwoWayLinkStyles from "TwoWayLinkStyles" /* 7442 */;
 import TableRow from "TableRow" /* 7443 */;
@@ -46,7 +46,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   }
   items1[1] = imgStyle;
   obj5.style = items1;
-  const items2 = [closure_6(valueProps(6020), obj5), , , ];
+  const items2 = [closure_6(valueProps(6010), obj5), , , ];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: null };
   let tmp11 = headerConnect;
   if (stateFromStores) {
@@ -59,7 +59,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   items2[1] = closure_6(Text_Text.Text, obj6);
   items2[2] = closure_6(Text_Text.Text, { variant: "body-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body });
   const obj7 = { variant: "body-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-  const tmp10 = valueProps(6020);
+  const tmp10 = valueProps(6010);
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
     children: valueProps.map((label, index) => {

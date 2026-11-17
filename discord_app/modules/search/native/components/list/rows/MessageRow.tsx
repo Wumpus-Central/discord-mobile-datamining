@@ -1,30 +1,30 @@
-// === Module 19499: MessageRow ===
+// === Module 19501: MessageRow ===
 
-// Module 19499 (MessageRow)
+// Module 19501 (MessageRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5994 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 6749 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5984 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 6739 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9189 */;
 import BotTagDefault from "BotTag" /* 10870 */;
 import ChannelRowPreview from "ChannelRowPreview" /* 11045 */;
 import _modDef11084 from "module_11084" /* 11084 */;
 import _modDef11362 from "module_11362" /* 11362 */;
 import BellZIcon from "BellZIcon" /* 11928 */;
-import SearchListRow from "SearchListRow" /* 19462 */;
-import useSearchMessageTimestamp from "useSearchMessageTimestamp" /* 19500 */;
-import PollBadgeDefault from "PollBadge" /* 19501 */;
+import SearchListRow from "SearchListRow" /* 19464 */;
+import useSearchMessageTimestamp from "useSearchMessageTimestamp" /* 19502 */;
+import PollBadgeDefault from "PollBadge" /* 19503 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import FavoriteStore from "FavoriteStore" /* 5158 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 
 require = fn;
 function GuildChannelMessageRowHeader(channel) {
@@ -46,7 +46,7 @@ function GuildChannelMessageRowHeader(channel) {
   const obj2 = channel(8033);
   const obj3 = { isRulesChannel: stateFromStores === channel.id };
   const tmp7 = useChannelNameDefault(channel);
-  const items1 = [closure_11(channel(1187).Icon, { source: channelIcon, size: channel(1187).Icon.Sizes.REFRESH_SMALL_16, style: tmp.channelIcon }), closure_11(channel(5929).Text, { lineClamp: 1, variant: "body-sm/semibold", color: "interactive-text-default", children: tmp7 }), , , ];
+  const items1 = [closure_11(channel(1187).Icon, { source: channelIcon, size: channel(1187).Icon.Sizes.REFRESH_SMALL_16, style: tmp.channelIcon }), closure_11(channel(5919).Text, { lineClamp: 1, variant: "body-sm/semibold", color: "interactive-text-default", children: tmp7 }), , , ];
   if (muted) {
     const obj6 = { source: _modDef11084, size: tmp2(1187).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     muted = closure_11(tmp2(1187).Icon, obj6);
@@ -86,11 +86,11 @@ function PrivateChannelMessageRowLabel(message) {
     }
     tmp = channel.isDM() || channel.isGroupDM();
   }, items1);
-  const searchMessageTimestamp = message(19500).useSearchMessageTimestamp(message, channel);
+  const searchMessageTimestamp = message(19502).useSearchMessageTimestamp(message, channel);
   const obj2 = { style: tmp.labelContainer, children: null };
   const obj3 = { style: tmp.authorRow, children: null };
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
-  const items2 = [closure_11(message(5929).Text, { lineClamp: 1, variant: "body-md/semibold", color: "interactive-text-active", children: memo }), , ];
+  const items2 = [closure_11(message(5919).Text, { lineClamp: 1, variant: "body-md/semibold", color: "interactive-text-active", children: memo }), , ];
   if (muted) {
     const obj4 = { source: channel(11084), size: tmp4(1187).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     muted = closure_11(tmp4(1187).Icon, obj4);
@@ -104,7 +104,7 @@ function PrivateChannelMessageRowLabel(message) {
   }
   items2[2] = isSystemDMResult;
   obj3.children = items2;
-  const items3 = [closure_12(closure_4, obj3), closure_11(message(5929).Text, { variant: "body-xs/medium", color: "interactive-text-active", lineClamp: 1, style: tmp.timestamp, accessibilityLabel: timestampAccessibilityLabel, children: timestamp }), , ];
+  const items3 = [closure_12(closure_4, obj3), closure_11(message(5919).Text, { variant: "body-xs/medium", color: "interactive-text-active", lineClamp: 1, style: tmp.timestamp, accessibilityLabel: timestampAccessibilityLabel, children: timestamp }), , ];
   let tmp9Result = null;
   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
     const obj7 = { size: "xs", style: tmp.suppressNotificationsIcon };
@@ -114,7 +114,7 @@ function PrivateChannelMessageRowLabel(message) {
   let tmp9Result2 = null;
   if (message.isPoll()) {
     const obj8 = { style: tmp.pollBadge };
-    tmp9Result2 = closure_11(channel(19501), obj8);
+    tmp9Result2 = closure_11(channel(19503), obj8);
   }
   items3[3] = tmp9Result2;
   obj2.children = items3;
@@ -232,7 +232,7 @@ const memoResult = noop.memo(function HeaderlessMessageRow(message) {
   const tmp2Result = message(504);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores2 = message(504).useStateFromStores(items2, () => UserGuildSettingsStore.isChannelMuted(stateFromStores2, stateFromStores.channel_id));
-  message(6858);
+  message(6848);
   let tmp10 = null;
   if (null != stateFromStores) {
     const obj2 = {};

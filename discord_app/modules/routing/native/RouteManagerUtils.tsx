@@ -4,20 +4,20 @@
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
-import RouteUtils from "RouteUtils" /* 5367 */;
-import Client from "Client" /* 5543 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6900 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6935 */;
+import RouteUtils from "RouteUtils" /* 5357 */;
+import Client from "Client" /* 5533 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6890 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6925 */;
 import hasSecondaryViewChatDefault from "hasSecondaryViewChat" /* 7051 */;
 import MemoryRouter from "MemoryRouter" /* 13115 */;
 import DefaultRouteActionCreators from "DefaultRouteActionCreators" /* 13120 */;
 import RouteManagerDefault from "RouteManager" /* 13121 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 5353 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5343 */;
 import GuildChannelStore from "GuildChannelStore" /* 5236 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 
@@ -147,8 +147,8 @@ function updateSelectedChannelListener(location, arg1) {
       }
       if (isGuildVoiceResult) {
         const obj24 = ModalActionCreatorsDefault;
-        obj24.popWithKey(tmp(6900).getVoiceChannelKey(channel.id));
-        const tmpResult = tmp(6900);
+        obj24.popWithKey(tmp(6890).getVoiceChannelKey(channel.id));
+        const tmpResult = tmp(6890);
       }
       guild = GuildActionCreatorsDefault.selectGuild(guildId);
       const obj6 = { guildId, channelId, messageId, jumpType, skipMessageFetch: tmp5, opensChannel: null, isAppStartupNavigation: null };
@@ -225,16 +225,16 @@ function updateSelectedChannelListener(location, arg1) {
   const obj = channel2(13115);
   const obj2 = { path: items, strict: false, exact: false };
   const obj4 = { match: matchPathResult, location };
-  const tmpResult8 = channel2(5492);
+  const tmpResult8 = channel2(5482);
   if (!tmpResult8.isModalOpen(tmpResult9.getVoiceChannelKey(channel2.id))) {
     const obj16 = ModalActionCreatorsDefault;
-    obj16.popAboveKey(tmp(6900).getVoiceChannelKey(channel2.id));
-    const tmpResult10 = tmp(6900);
+    obj16.popAboveKey(tmp(6890).getVoiceChannelKey(channel2.id));
+    const tmpResult10 = tmp(6890);
     DispatcherDefault.wait(() => {
       PrivateChannelCallUtils.openGuildVoiceModal(channel2);
     });
   }
-  tmpResult9 = channel2(6900);
+  tmpResult9 = channel2(6890);
   if (tmp28) {
     if (isGuildStageVoiceResult1) {
       setVoiceChatDrawerState(channel2.id, VoiceChatDrawerState.OPEN);
@@ -287,13 +287,13 @@ const ChannelTypes = Constants.ChannelTypes;
 const VoiceChatDrawerState = fn(11004).VoiceChatDrawerState;
 const logger = new LoggerDefault("RouteUtils");
 let c16 = false;
-const RouteParam = fn(5367).RouteParam;
+const RouteParam = fn(5357).RouteParam;
 const tmp3 = new LoggerDefault("RouteUtils");
-const RouteParam2 = fn(5367).RouteParam;
+const RouteParam2 = fn(5357).RouteParam;
 const CHANNELResult = Routes.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
-const RouteParam3 = fn(5367).RouteParam;
+const RouteParam3 = fn(5357).RouteParam;
 const guildIdResult = RouteParam.guildId();
-const RouteParam4 = fn(5367).RouteParam;
+const RouteParam4 = fn(5357).RouteParam;
 const items = ["" + CHANNELResult + Routes.VOICE_CHAT_CHANNEL_PARTIAL(RouteParam3.guildId({ name: "voiceGuildId" }), RouteParam4.channelId({ name: "voiceChannelId" }), ":voiceMessageId?"), CHANNELResult];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/routing/native/RouteManagerUtils.tsx");

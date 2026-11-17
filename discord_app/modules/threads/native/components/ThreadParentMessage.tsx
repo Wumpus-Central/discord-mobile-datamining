@@ -1,6 +1,6 @@
-// === Module 19428: ThreadParentMessage ===
+// === Module 19430: ThreadParentMessage ===
 
-// Module 19428 (ThreadParentMessage)
+// Module 19430 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
 import router_utils from "router_utils" /* 1099 */;
 import Pressables from "Pressables" /* 7428 */;
@@ -8,7 +8,7 @@ import RowGeneratorDefault from "RowGenerator" /* 9159 */;
 import ChatItemDefault from "ChatItem" /* 11065 */;
 import noop from "module_19" /* 19 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 8744 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 require = fn;
 const ReferencedMessageState = fn(8744).ReferencedMessageState;

@@ -1,7 +1,7 @@
 // === Module 10673: GuildProfileCreateTagUpsell ===
 
 // Module 10673 (GuildProfileCreateTagUpsell)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 10678 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ export default function GuildProfileCreateTagUpsell(guildId) {
     const obj3 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t.J0YWRq);
-    obj2.children = jsx(tmp2(5929).Text, { variant: "body-md/medium", color: "text-muted", children: null });
+    obj2.children = jsx(tmp2(5919).Text, { variant: "body-md/medium", color: "text-muted", children: null });
     tmp5 = <Pressable style={tmp.upsell} role="button" onPress={function handlePress() {
       ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + guildId);
       openGuildTagCreateFlowDefault(creatableGuilds, AnalyticsLocationDefault.GUILD_PROFILE);

@@ -1,6 +1,6 @@
-// === Module 18827: useFavoritesGuildCategoryFullNotice ===
+// === Module 18829: useFavoritesGuildCategoryFullNotice ===
 
-// Module 18827 (useFavoritesGuildCategoryFullNotice)
+// Module 18829 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import _modDef3679 from "module_3679" /* 3679 */;

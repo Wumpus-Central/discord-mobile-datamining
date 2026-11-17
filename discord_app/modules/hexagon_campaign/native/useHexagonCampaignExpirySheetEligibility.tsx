@@ -1,12 +1,12 @@
-// === Module 19853: useHexagonCampaignExpirySheetEligibility ===
+// === Module 19855: useHexagonCampaignExpirySheetEligibility ===
 
-// Module 19853 (useHexagonCampaignExpirySheetEligibility)
+// Module 19855 (useHexagonCampaignExpirySheetEligibility)
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5334 */;
 import restoreHexagonCampaignPerks from "restoreHexagonCampaignPerks" /* 17635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5330 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserStore from "UserStore" /* 1388 */;
 import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 16845 */;

@@ -2,7 +2,7 @@
 
 // Module 17721 (useQuestForPlacement)
 import DurationsDefault from "Durations" /* 1089 */;
-import AdCreativeType from "AdCreativeType" /* 5345 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import noop from "module_19" /* 19 */;
 import AdDeliveryStore from "AdDeliveryStore" /* 8805 */;
 import QuestStore from "QuestStore" /* 8808 */;

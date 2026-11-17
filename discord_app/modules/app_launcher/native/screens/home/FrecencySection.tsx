@@ -5,8 +5,8 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
 import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10560 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 12579 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 12698 */;
@@ -125,7 +125,7 @@ function FrecentApp(app) {
     let tmp3 = null != appLauncherIconSource;
     if (tmp3) {
       const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-      tmp3 = closure_11(onAppSelected(6020), obj2);
+      tmp3 = closure_11(onAppSelected(6010), obj2);
     }
     items = [tmp3, ];
     const obj3 = { submitting, style: tmp.submittingOverlay };

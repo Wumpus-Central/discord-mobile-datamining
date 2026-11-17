@@ -4,7 +4,7 @@
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
 import Constants from "Constants" /* 8842 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9170 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;

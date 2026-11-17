@@ -1,18 +1,18 @@
-// === Module 19410: GuildSettingsModalMembers ===
+// === Module 19412: GuildSettingsModalMembers ===
 
-// Module 19410 (GuildSettingsModalMembers)
+// Module 19412 (GuildSettingsModalMembers)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7282 */;
 import sortByMatchScore from "sortByMatchScore" /* 10247 */;
 import RolePillDefault from "RolePill" /* 10935 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildRoleStore from "GuildRoleStore" /* 5212 */;
 import GuildStore from "GuildStore" /* 5177 */;
@@ -56,10 +56,10 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     let formatToPlainStringResult;
     if (found.length > 0) {
       const user = UserStore.getUser(guildMember.userId);
-      let str = guildMember(6351).getNickname(guild.id, undefined, user);
+      let str = guildMember(6341).getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(5372).getGlobalName(user);
-        const tmp9Result = tmp9(5372);
+        str = tmp9(5362).getGlobalName(user);
+        const tmp9Result = tmp9(5362);
       }
       if (str == null) {
         let username;
@@ -76,7 +76,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
       const intl = tmp2(1113).intl;
       const obj3 = { memberName: str, roleNames: joined };
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1113).t["6eGpWx"], obj3);
-      const obj2 = guildMember(6351);
+      const obj2 = guildMember(6341);
       tmp9 = guildMember;
     }
     const obj4 = { userId: guildMember.userId, guildId: guild.id, accessibilityLabel: formatToPlainStringResult, subLabel: null, disabled: null, onPress: null, arrow: true, start: null, end: null };

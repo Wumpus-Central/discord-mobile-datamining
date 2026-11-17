@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5953 */;
-import UserPlusIcon from "UserPlusIcon" /* 6023 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5943 */;
+import UserPlusIcon from "UserPlusIcon" /* 6013 */;
 import ServerIcon from "ServerIcon" /* 10939 */;
 import noop from "module_19" /* 19 */;
 

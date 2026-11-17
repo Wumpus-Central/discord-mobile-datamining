@@ -1,11 +1,11 @@
 // === Module 14469: CheckpointCharacterRiveTraits ===
 
 // Module 14469 (CheckpointCharacterRiveTraits)
-import CheckpointCharacterBase from "CheckpointCharacterBase" /* 6424 */;
-import CheckpointCharacterOutfit from "CheckpointCharacterOutfit" /* 6484 */;
-import CheckpointCharacterHat from "CheckpointCharacterHat" /* 6656 */;
-import CheckpointCharacterWearable from "CheckpointCharacterWearable" /* 6685 */;
-import CheckpointCharacterAura from "CheckpointCharacterAura" /* 6714 */;
+import CheckpointCharacterBase from "CheckpointCharacterBase" /* 6414 */;
+import CheckpointCharacterOutfit from "CheckpointCharacterOutfit" /* 6474 */;
+import CheckpointCharacterHat from "CheckpointCharacterHat" /* 6646 */;
+import CheckpointCharacterWearable from "CheckpointCharacterWearable" /* 6675 */;
+import CheckpointCharacterAura from "CheckpointCharacterAura" /* 6704 */;
 import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 14303 */;
 import size from "module_2" /* 2 */;
 

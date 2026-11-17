@@ -1,6 +1,6 @@
-// === Module 19137: YouBar ===
+// === Module 19139: YouBar ===
 
-// Module 19137 (YouBar)
+// Module 19139 (YouBar)
 import apply from "apply" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -8,24 +8,24 @@ import GlobalUtils from "GlobalUtils" /* 1255 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
-import native from "native" /* 5377 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import native from "native" /* 5367 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import transitionToGuild from "transitionToGuild" /* 7231 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
 import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 10514 */;
 import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 12011 */;
 import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 12582 */;
-import YouBarBackgroundDefault from "YouBarBackground" /* 19159 */;
-import YouBarUserDefault from "YouBarUser" /* 19161 */;
-import YouBarNotificationsButtonDefault from "YouBarNotificationsButton" /* 19170 */;
-import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 19171 */;
-import ConnectionBannerDefault from "ConnectionBanner" /* 19172 */;
+import YouBarBackgroundDefault from "YouBarBackground" /* 19161 */;
+import YouBarUserDefault from "YouBarUser" /* 19163 */;
+import YouBarNotificationsButtonDefault from "YouBarNotificationsButton" /* 19172 */;
+import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 19173 */;
+import ConnectionBannerDefault from "ConnectionBanner" /* 19174 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5330 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -396,7 +396,7 @@ let closure_26 = noop.memo(function YouBar() {
   let tmp52Result = tmp34;
   if (null != nameplate) {
     const obj6 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp48 };
-    tmp52Result = closure_18(tmp27(19160), obj6);
+    tmp52Result = closure_18(tmp27(19162), obj6);
   }
   items12[1] = tmp52Result;
   const obj7 = { gesture: memo3, children: null };
@@ -420,12 +420,12 @@ let closure_26 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj11 = { hasNameplate: tmp34, canUnpin: tmp28.canPin };
-    let tmp52Result3 = closure_18(tmp27(19166), obj11);
+    let tmp52Result3 = closure_18(tmp27(19168), obj11);
   } else {
     tmp52Result3 = null;
     if (tmp26) {
       const obj12 = { hasNameplate: tmp34 };
-      tmp52Result3 = closure_18(tmp27(19168), obj12);
+      tmp52Result3 = closure_18(tmp27(19170), obj12);
     }
   }
   const items13 = [tmp52Result3, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];
@@ -454,5 +454,5 @@ export default noop.memo(function YouBarThemed() {
   const obj2 = { gradient: stateFromStores, children: null };
   const items1 = [collapsedCategories(YouBarFloatingShadeDefault, {}), collapsedCategories(closure_26, {}), collapsedCategories(ConnectionBannerDefault, {})];
   obj2.children = items1;
-  return expandedHeight(native.ThemeContextProvider, obj2);
+  return closure_1_19(native.ThemeContextProvider, obj2);
 });

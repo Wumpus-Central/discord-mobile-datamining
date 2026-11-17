@@ -1,9 +1,9 @@
-// === Module 20727: RoleTierEditStore ===
+// === Module 20730: RoleTierEditStore ===
 
-// Module 20727 (RoleTierEditStore)
+// Module 20730 (RoleTierEditStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import _mod5221 from "module_5221" /* 5221 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17831 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17833 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,7 +18,7 @@ function usePriceTiers(guildId) {
   const tiers = tmp[0];
   closure_2 = tmp3;
   dependencyMap = tmp[2];
-  tiers(5899)(() => {
+  tiers(5889)(() => {
     let tmp2 = null == first;
     if (tmp2) {
       tmp2 = closure_2 !== obj.LOADING;

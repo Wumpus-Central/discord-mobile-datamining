@@ -1,26 +1,26 @@
-// === Module 20061: VoicePanelPIP ===
+// === Module 20063: VoicePanelPIP ===
 
-// Module 20061 (VoicePanelPIP)
+// Module 20063 (VoicePanelPIP)
 import util from "util" /* 1113 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
-import native from "native" /* 5377 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import ExternalPipDefault from "ExternalPip" /* 6181 */;
+import native from "native" /* 5367 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import ExternalPipDefault from "ExternalPip" /* 6171 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11989 */;
 import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11993 */;
 import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 11995 */;
 import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 12741 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 12743 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19908 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19971 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19979 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19910 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19973 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19981 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 import FramesStore from "FramesStore" /* 7019 */;
-import VoicePanelStore from "VoicePanelStore" /* 6901 */;
+import VoicePanelStore from "VoicePanelStore" /* 6891 */;
 
 require = fn;
 class VoicePanelPIPTiles {
@@ -462,7 +462,7 @@ class VoicePanelPIPTiles {
         constructor(arg0) {
           closure_0 = arg0;
           allTouches = arg0.allTouches;
-          found = allTouches.filter(/* F146794 */ function() { ... });
+          found = allTouches.filter(/* F146811 */ function() { ... });
           if (0 !== found.length) {
             tmp4 = closure_2;
             tmp5 = closure_2(found);
@@ -1082,9 +1082,9 @@ let StyleSheet = get_ActivityIndicator.StyleSheet;
 const VoicePanelConstants = fn(11985);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: closure_10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
-const VoicePanelPIPConstants = fn(19909);
+const VoicePanelPIPConstants = fn(19911);
 ({ PIP_FIRST_FRAME_DELAY_MS: closure_12, VoicePanelPIPModes: map1 } = VoicePanelPIPConstants);
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const isLaunched = fn(7020).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);

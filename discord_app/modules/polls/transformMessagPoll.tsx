@@ -1,6 +1,6 @@
-// === Module 6789: transformMessagPoll ===
+// === Module 6779: transformMessagPoll ===
 
-// Module 6789 (transformMessagPoll)
+// Module 6779 (transformMessagPoll)
 import _modDef2169 from "module_2169" /* 2169 */;
 import size from "module_2" /* 2 */;
 

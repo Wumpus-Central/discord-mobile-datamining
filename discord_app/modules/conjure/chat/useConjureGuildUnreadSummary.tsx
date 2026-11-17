@@ -1,13 +1,13 @@
-// === Module 18934: useConjureGuildUnreadSummary ===
+// === Module 18936: useConjureGuildUnreadSummary ===
 
-// Module 18934 (useConjureGuildUnreadSummary)
+// Module 18936 (useConjureGuildUnreadSummary)
 import ConjureActionCreators from "ConjureActionCreators" /* 7329 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 require = fn;
-const ReadStateTypes = fn(6959).ReadStateTypes;
+const ReadStateTypes = fn(6949).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/useConjureGuildUnreadSummary.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 20870: UpdateAppScreen ===
+// === Module 20873: UpdateAppScreen ===
 
-// Module 20870 (UpdateAppScreen)
+// Module 20873 (UpdateAppScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2997 from "module_2997" /* 2997 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5306 */;

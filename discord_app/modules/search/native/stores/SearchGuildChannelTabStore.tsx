@@ -5,7 +5,7 @@ import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6962 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6952 */;
 import autocompleter_AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 7071 */;
 import GuildChannelStore from "GuildChannelStore" /* 5236 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;

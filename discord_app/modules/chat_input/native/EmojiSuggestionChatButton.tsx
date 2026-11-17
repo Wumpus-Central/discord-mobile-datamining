@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 14842 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

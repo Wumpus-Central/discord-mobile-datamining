@@ -1,11 +1,11 @@
-// === Module 20091: VoicePanelChatButton ===
+// === Module 20093: VoicePanelChatButton ===
 
-// Module 20091 (VoicePanelChatButton)
+// Module 20093 (VoicePanelChatButton)
 import nativeDefault from "native" /* 575 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import ChatIcon from "ChatIcon" /* 8069 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19187 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 20092 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19189 */;
+import CircleWithCutoutDefault from "CircleWithCutout" /* 20094 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

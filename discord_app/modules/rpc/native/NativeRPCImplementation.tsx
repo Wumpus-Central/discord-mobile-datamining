@@ -19,7 +19,7 @@ import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5330 */
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import StreamerModeStore from "StreamerModeStore" /* 5373 */;
+import StreamerModeStore from "StreamerModeStore" /* 5363 */;
 
 const merged = Object.assign(fn(16928).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);

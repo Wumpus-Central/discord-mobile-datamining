@@ -5,8 +5,8 @@ import applyDefault from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import UrlDefault from "Url" /* 1383 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5974 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5964 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import transformUserDefault from "transformUser" /* 7301 */;
 import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 7302 */;
 import RPCErrorDefault from "RPCError" /* 7303 */;
@@ -19,13 +19,13 @@ import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ApplicationRecord from "ApplicationRecord" /* 2143 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import MessageStore from "MessageStore" /* 6372 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import MessageStore from "MessageStore" /* 6362 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import URLUtils from "URLUtils" /* 1381 */;
 import "RegexUtils";
-import RegexUtils from "RegexUtils" /* 5958 */;
+import RegexUtils from "RegexUtils" /* 5948 */;
 
 require = fn;
 function validateOrigin(arg0) {
@@ -245,7 +245,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
   }
 };
 const GUILD_VOCAL_CHANNEL_TYPES = fn(5159).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6761);
+let Constants = fn(6751);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1072);
 ({ ActivityActionTypes: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, MAX_MESSAGES_PER_CHANNEL: closure_18, RPCCloseCodes: closure_19, RPCErrors: closure_20, RTCConnectionStates: closure_21 } = Constants);
@@ -417,7 +417,7 @@ export function transformChannel(channel, result, arg2) {
           const error = new Error("Invalid user id: " + userId);
           throw error;
         } else {
-          const obj = { nick: closure_1(6351).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+          const obj = { nick: closure_1(6341).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
           obj.user = closure_1(7301)(user);

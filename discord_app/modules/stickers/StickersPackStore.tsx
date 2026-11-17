@@ -2,7 +2,7 @@
 
 // Module 7012 (StickersPackStore)
 import DurationsDefault from "Durations" /* 1089 */;
-import StickersTypes from "StickersTypes" /* 6793 */;
+import StickersTypes from "StickersTypes" /* 6783 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

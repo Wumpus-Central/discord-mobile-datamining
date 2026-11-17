@@ -2,7 +2,7 @@
 
 // Module 7475 (useKeyboardAnimatedValue)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import timing_timing from "timing/timing" /* 5548 */;
+import timing_timing from "timing/timing" /* 5538 */;
 import useKeyboardDuration from "useKeyboardDuration" /* 7476 */;
 import noop from "module_19" /* 19 */;
 

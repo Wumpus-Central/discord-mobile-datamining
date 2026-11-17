@@ -1,6 +1,6 @@
-// === Module 20389: MessageRemindersNotificationManager ===
+// === Module 20392: MessageRemindersNotificationManager ===
 
-// Module 20389 (MessageRemindersNotificationManager)
+// Module 20392 (MessageRemindersNotificationManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SavedMessagesStore from "SavedMessagesStore" /* 11909 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;

@@ -2,9 +2,9 @@
 
 // Module 16085 (NUFTemplate)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

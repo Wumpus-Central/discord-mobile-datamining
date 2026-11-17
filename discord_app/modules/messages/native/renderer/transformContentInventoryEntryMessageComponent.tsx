@@ -7,7 +7,7 @@ import util from "util" /* 1113 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
 import Constants from "Constants" /* 2145 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7313 */;
 import _modDef7439 from "module_7439" /* 7439 */;
 import _modDef8038 from "module_8038" /* 8038 */;

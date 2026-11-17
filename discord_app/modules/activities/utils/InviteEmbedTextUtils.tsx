@@ -3,7 +3,7 @@
 // Module 15594 (InviteEmbedTextUtils)
 import util from "util" /* 1113 */;
 import _modDef3221 from "module_3221" /* 3221 */;
-import NicknameUtils from "NicknameUtils" /* 6351 */;
+import NicknameUtils from "NicknameUtils" /* 6341 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

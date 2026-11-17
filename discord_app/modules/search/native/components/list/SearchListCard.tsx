@@ -1,12 +1,12 @@
-// === Module 19497: SearchListCard ===
+// === Module 19499: SearchListCard ===
 
-// Module 19497 (SearchListCard)
+// Module 19499 (SearchListCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
 import Card from "Card" /* 7445 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
 import ForumIcon from "ForumIcon" /* 8086 */;

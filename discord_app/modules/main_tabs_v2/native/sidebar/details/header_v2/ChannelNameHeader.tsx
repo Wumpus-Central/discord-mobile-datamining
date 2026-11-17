@@ -1,12 +1,12 @@
-// === Module 19574: ChannelNameHeader ===
+// === Module 19576: ChannelNameHeader ===
 
-// Module 19574 (ChannelNameHeader)
+// Module 19576 (ChannelNameHeader)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _modDef4067 from "module_4067" /* 4067 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
-import ChannelUtils from "ChannelUtils" /* 6356 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
+import ChannelUtils from "ChannelUtils" /* 6346 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10891 */;
@@ -14,7 +14,7 @@ import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -105,7 +105,7 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "body-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(5929).Text, obj2);
+        tmp8 = closure_12(tmp(5919).Text, obj2);
       }
     }
     return tmp8;
@@ -113,8 +113,8 @@ function ChannelSubtitle(channel) {
     const intl = tmp(1113).intl;
     let stringResult = intl.string(_modDef4067["D+2/QP"]);
   } else {
-    stringResult = tmp(6356).channelTypeString(channel);
-    const tmpResult = tmp(6356);
+    stringResult = tmp(6346).channelTypeString(channel);
+    const tmpResult = tmp(6346);
   }
   let obj = channel(504);
 }

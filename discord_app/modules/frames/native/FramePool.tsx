@@ -1,6 +1,6 @@
-// === Module 19892: FramePool ===
+// === Module 19894: FramePool ===
 
-// Module 19892 (FramePool)
+// Module 19894 (FramePool)
 import initialize from "initialize" /* 504 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 12743 */;
@@ -54,7 +54,7 @@ function PooledFrame(frame) {
     syncExternalStore = obj4;
   }
   obj3.presentation = syncExternalStore;
-  return jsx(proxyTicket(19893), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(proxyTicket(19895), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 }
 const View = fn(17).View;
 const FramesConstants = fn(7020);

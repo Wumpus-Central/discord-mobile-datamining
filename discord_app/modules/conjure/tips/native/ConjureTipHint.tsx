@@ -3,7 +3,7 @@
 // Module 13608 (ConjureTipHint)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import XSmallIcon from "XSmallIcon" /* 7549 */;
 import IconButton from "IconButton" /* 7988 */;
 import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 13609 */;
@@ -17,7 +17,7 @@ let c6 = "body-sm/normal";
 const createStyles = fn(5306);
 let obj2 = { line: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 }, text: { flexShrink: 1 }, dismiss: null };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 };
-obj2.dismiss = { height: fn(5929).TextStyleSheet["body-sm/normal"].lineHeight, justifyContent: "center" };
+obj2.dismiss = { height: fn(5919).TextStyleSheet["body-sm/normal"].lineHeight, justifyContent: "center" };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/tips/native/ConjureTipHint.tsx");

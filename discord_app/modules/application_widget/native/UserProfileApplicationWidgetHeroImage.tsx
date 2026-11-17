@@ -1,8 +1,8 @@
 // === Module 12259: UserProfileApplicationWidgetHeroImage ===
 
 // Module 12259 (UserProfileApplicationWidgetHeroImage)
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef7533 from "module_7533" /* 7533 */;
 import noop from "module_19" /* 19 */;
 

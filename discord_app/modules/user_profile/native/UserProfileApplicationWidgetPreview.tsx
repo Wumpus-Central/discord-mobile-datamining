@@ -11,7 +11,7 @@ import useApplicationWidgetLayoutRendererPropsDefault from "useApplicationWidget
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const FastImageDefault = tmp4(6020);
+const FastImageDefault = tmp4(6010);
 const UserProfileApplicationWidgetHeroImageDefault = tmp4(12259);
 require = fn;
 const View = fn(17).View;

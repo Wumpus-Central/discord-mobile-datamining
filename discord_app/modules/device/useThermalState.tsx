@@ -2,7 +2,7 @@
 
 // Module 16919 (useThermalState)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 6264 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 6254 */;
 import ThermalStates from "ThermalStates" /* 16920 */;
 import size from "module_2" /* 2 */;
 

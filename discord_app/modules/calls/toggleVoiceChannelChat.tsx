@@ -1,9 +1,9 @@
 // === Module 16979: toggleVoiceChannelChat ===
 
 // Module 16979 (toggleVoiceChannelChat)
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 
 const size = fn(2);

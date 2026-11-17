@@ -2,7 +2,7 @@
 
 // Module 10647 (XLargeBoldIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10648 from "module_10648" /* 10648 */;
 import noop from "module_19" /* 19 */;
 

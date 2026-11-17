@@ -1,10 +1,10 @@
-// === Module 20875: AgeUpdateFooter ===
+// === Module 20878: AgeUpdateFooter ===
 
-// Module 20875 (AgeUpdateFooter)
+// Module 20878 (AgeUpdateFooter)
 import util from "util" /* 1113 */;
 import _modDef2997 from "module_2997" /* 2997 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6833 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6823 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8190 */;
 import noop from "module_19" /* 19 */;
 

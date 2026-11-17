@@ -4,7 +4,7 @@
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef9501 from "module_9501" /* 9501 */;
 import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9502 */;
 import noop from "module_19" /* 19 */;

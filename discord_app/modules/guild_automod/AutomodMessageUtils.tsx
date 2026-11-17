@@ -2,7 +2,7 @@
 
 // Module 8711 (AutomodMessageUtils)
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import AutomodMessageEmbedKeys from "AutomodMessageEmbedKeys" /* 8712 */;
 import AutomodQuarantineUserActionMessageEmbedKeys from "AutomodQuarantineUserActionMessageEmbedKeys" /* 8713 */;
 import AutomodBlockProfileUpdateMessageEmbedKeys from "AutomodBlockProfileUpdateMessageEmbedKeys" /* 8714 */;

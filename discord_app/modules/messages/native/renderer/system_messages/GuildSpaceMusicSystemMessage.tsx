@@ -3,7 +3,7 @@
 // Module 9341 (GuildSpaceMusicSystemMessage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
 import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 9178 */;
 import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 9179 */;
@@ -12,7 +12,7 @@ import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9190 */;
 import createCommonMessageDefault from "createCommonMessage" /* 9192 */;
 import _modDef9342 from "module_9342" /* 9342 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6944 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6934 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 19225: PremiumSoundboardFeatureUpsell ===
+// === Module 19227: PremiumSoundboardFeatureUpsell ===
 
-// Module 19225 (PremiumSoundboardFeatureUpsell)
+// Module 19227 (PremiumSoundboardFeatureUpsell)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;

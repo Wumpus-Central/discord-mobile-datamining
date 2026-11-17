@@ -3,7 +3,7 @@
 // Module 14676 (VoicePanelChatView)
 import util from "util" /* 1113 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10271 */;
 import _modDef10867 from "module_10867" /* 10867 */;

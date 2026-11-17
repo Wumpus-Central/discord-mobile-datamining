@@ -2,8 +2,8 @@
 
 // Module 14954 (ChatBeginningRowJoinApplication)
 import nativeDefault from "native" /* 575 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5352 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5342 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import UserStore from "UserStore" /* 1388 */;

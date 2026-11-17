@@ -1,6 +1,6 @@
-// === Module 18923: GuildRoleSubscriptionsChannelLongPressActionSheet ===
+// === Module 18925: GuildRoleSubscriptionsChannelLongPressActionSheet ===
 
-// Module 18923 (GuildRoleSubscriptionsChannelLongPressActionSheet)
+// Module 18925 (GuildRoleSubscriptionsChannelLongPressActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -9,7 +9,7 @@ import ActionSheet from "ActionSheet" /* 7951 */;
 import Form from "Form" /* 8106 */;
 import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10983 */;
 import _modDef15144 from "module_15144" /* 15144 */;
-import _modDef18820 from "module_18820" /* 18820 */;
+import _modDef18822 from "module_18822" /* 18822 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ];
   const obj5 = { leading: null, label: null, onPress: null };
   const obj4 = { disableColor: true, source: _modDef15144 };
-  obj5.leading = closure_5(native.Icon, { source: _modDef18820 });
+  obj5.leading = closure_5(native.Icon, { source: _modDef18822 });
   const obj7 = { text: null };
   const intl2 = util.intl;
   obj7.text = intl2.string(util.t.WqhZss);

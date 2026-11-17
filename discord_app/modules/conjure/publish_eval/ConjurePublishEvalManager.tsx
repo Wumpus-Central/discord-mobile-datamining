@@ -1,8 +1,8 @@
-// === Module 20204: ConjurePublishEvalManager ===
+// === Module 20207: ConjurePublishEvalManager ===
 
-// Module 20204 (ConjurePublishEvalManager)
+// Module 20207 (ConjurePublishEvalManager)
 import conjurePublishEval from "conjurePublishEval" /* 13164 */;
-import conjurePublishEvalPlatformDefault from "conjurePublishEvalPlatform" /* 20205 */;
+import conjurePublishEvalPlatformDefault from "conjurePublishEvalPlatform" /* 20208 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 require = fn;

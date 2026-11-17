@@ -1,9 +1,9 @@
-// === Module 19276: ForYouEmptyState ===
+// === Module 19278: ForYouEmptyState ===
 
-// Module 19276 (ForYouEmptyState)
+// Module 19278 (ForYouEmptyState)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import MailboxSpotIllustration from "MailboxSpotIllustration" /* 19277 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import MailboxSpotIllustration from "MailboxSpotIllustration" /* 19279 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

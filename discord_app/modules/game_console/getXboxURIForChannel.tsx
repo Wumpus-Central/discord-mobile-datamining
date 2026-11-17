@@ -3,7 +3,7 @@
 // Module 10835 (getXboxURIForChannel)
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;

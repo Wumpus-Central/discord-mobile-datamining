@@ -1,6 +1,6 @@
-// === Module 17923: SameAsDeviceThemeSetting ===
+// === Module 17925: SameAsDeviceThemeSetting ===
 
-// Module 17923 (SameAsDeviceThemeSetting)
+// Module 17925 (SameAsDeviceThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17631 */;

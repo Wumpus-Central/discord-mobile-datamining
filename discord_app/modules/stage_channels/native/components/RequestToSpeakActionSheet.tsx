@@ -2,11 +2,11 @@
 
 // Module 12945 (RequestToSpeakActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 6358 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6833 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6908 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 6909 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 6348 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6823 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6898 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 6899 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8190 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ function ManageSelfSpeakerRow(channel) {
   if (channel != null) {
     id = channel.id;
   }
-  const tmp8 = useAudienceRequestToSpeakStateDefault(stateFromStores, id) === channel(6358).RequestToSpeakStates.ON_STAGE;
+  const tmp8 = useAudienceRequestToSpeakStateDefault(stateFromStores, id) === channel(6348).RequestToSpeakStates.ON_STAGE;
   importDefault = tmp8;
   const intl = tmp(1113).intl;
   const string = intl.string;
@@ -62,7 +62,7 @@ function ManageSelfSpeakerRow(channel) {
   return closure_9(channel(7443).TableRow, obj2);
 }
 const View = fn(17).View;
-let closure_8 = fn(6906).REQUEST_TO_SPEAK_SHEET_KEY;
+let closure_8 = fn(6896).REQUEST_TO_SPEAK_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5306);
@@ -76,8 +76,8 @@ export default function RequestToSpeakActionSheet(channelId) {
   let first;
   let first1;
   noop = undefined;
-  const token = channelId(5902).useToken(first(575).modules.mobile.TABLE_ROW_PADDING);
-  const obj = channelId(5902);
+  const token = channelId(5892).useToken(first(575).modules.mobile.TABLE_ROW_PADDING);
+  const obj = channelId(5892);
   const tmp3 = first;
   items = [];
   const tmp5 = closure_11();
@@ -87,7 +87,7 @@ export default function RequestToSpeakActionSheet(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const stageParticipantsCount = channelId(6949).useStageParticipantsCount(channelId, channelId(6943).StageChannelParticipantNamedIndex.ALL_REQUESTED_TO_SPEAK);
+  const stageParticipantsCount = channelId(6939).useStageParticipantsCount(channelId, channelId(6933).StageChannelParticipantNamedIndex.ALL_REQUESTED_TO_SPEAK);
   const tmp10 = first1(noop.useState(0), 2);
   first = tmp10[0];
   dependencyMap = tmp10[1];
@@ -143,18 +143,18 @@ export default function RequestToSpeakActionSheet(channelId) {
     const _HermesInternal = HermesInternal;
     obj15.numHands = "" + stageParticipantsCount;
     obj14.children = intl.format(tmp(1113).t["5z7q5a"], obj15);
-    obj12.children = closure_9(tmp(5929).Text, obj14);
+    obj12.children = closure_9(tmp(5919).Text, obj14);
     items3[1] = closure_9(View, obj12);
     obj8.children = items3;
-    const items4 = [closure_10(tmp(6337).Stack, obj8), ];
+    const items4 = [closure_10(tmp(6327).Stack, obj8), ];
     const obj16 = { channel: stateFromStores, height: null };
     const _Math = Math;
     obj16.height = Math.max(first1 - first - 8, 0);
     items4[1] = closure_9(tmp3(12956), obj16);
     obj7.children = items4;
-    obj6.children = closure_10(tmp(6337).Stack, obj7);
-    obj5.children = closure_9(tmp(5570).BottomSheetScrollView, obj6);
-    obj4.children = closure_9(tmp(5566).BottomSheet, obj5);
+    obj6.children = closure_10(tmp(6327).Stack, obj7);
+    obj5.children = closure_9(tmp(5560).BottomSheetScrollView, obj6);
+    obj4.children = closure_9(tmp(5556).BottomSheet, obj5);
     tmp14 = closure_9(tmp(7918).AnalyticsLocationProvider, obj4);
     const tmp3Result = tmp3(12956);
   }

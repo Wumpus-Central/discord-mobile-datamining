@@ -4,7 +4,7 @@
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1113 */;
 import _modDef2701 from "module_2701" /* 2701 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

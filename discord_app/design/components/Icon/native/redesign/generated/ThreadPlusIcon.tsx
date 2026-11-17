@@ -2,7 +2,7 @@
 
 // Module 14645 (ThreadPlusIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod14646 from "module_14646" /* 14646 */;
 import noop from "module_19" /* 19 */;
 

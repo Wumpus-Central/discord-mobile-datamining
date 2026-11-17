@@ -2,7 +2,7 @@
 
 // Module 17195 (EditGuildIdentityAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 11170 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;

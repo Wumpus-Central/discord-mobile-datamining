@@ -2,7 +2,7 @@
 
 // Module 7826 (MagnifyingGlassIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod7827 from "module_7827" /* 7827 */;
 import noop from "module_19" /* 19 */;
 

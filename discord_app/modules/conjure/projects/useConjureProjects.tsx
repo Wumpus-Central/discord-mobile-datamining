@@ -8,7 +8,7 @@ import UserProfileStore from "UserProfileStore" /* 7352 */;
 import GuildChannelStore from "GuildChannelStore" /* 5236 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import ConjureChatStore from "ConjureChatStore" /* 7321 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 

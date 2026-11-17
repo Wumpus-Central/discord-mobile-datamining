@@ -1,6 +1,6 @@
-// === Module 19470: MessagePreviewActionCreators ===
+// === Module 19472: MessagePreviewActionCreators ===
 
-// Module 19470 (MessagePreviewActionCreators)
+// Module 19472 (MessagePreviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;

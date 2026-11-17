@@ -4,11 +4,11 @@
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
 import FavoritesUtils from "FavoritesUtils" /* 5180 */;
-import matchPathCompat from "matchPathCompat" /* 5354 */;
-import RouteUtils from "RouteUtils" /* 5367 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import matchPathCompat from "matchPathCompat" /* 5344 */;
+import RouteUtils from "RouteUtils" /* 5357 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import ChannelTabsStore from "ChannelTabsStore" /* 10275 */;

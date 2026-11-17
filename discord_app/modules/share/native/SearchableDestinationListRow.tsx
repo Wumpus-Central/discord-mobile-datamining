@@ -1,6 +1,6 @@
-// === Module 18920: SearchableDestinationListRow ===
+// === Module 18922: SearchableDestinationListRow ===
 
-// Module 18920 (SearchableDestinationListRow)
+// Module 18922 (SearchableDestinationListRow)
 import formatResults from "formatResults" /* 10245 */;
 import sortByMatchScore from "sortByMatchScore" /* 10247 */;
 import noop from "module_19" /* 19 */;

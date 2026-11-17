@@ -19,7 +19,7 @@ export default function useEaseInEaseOutLayoutAnimations() {
   const items1 = [stateFromStores];
   return noop.useMemo(() => {
     if (obj.isAndroid()) {
-      return { entering: "channel_id", exiting: "flex", layout: "analyticsLocations" };
+      return { entering: "a", exiting: "isArray", layout: "isArray" };
     } else {
       const ReduceMotion = _mod1655.ReduceMotion;
       const tmp4 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
@@ -52,7 +52,7 @@ export function useTriggeredLayoutTransition() {
   if (tmp3) {
     layout = noop.useMemo(() => {
       if (obj.isAndroid()) {
-        return { entering: "channel_id", exiting: "flex", layout: "analyticsLocations" };
+        return { entering: "a", exiting: "isArray", layout: "isArray" };
       } else {
         const ReduceMotion = _mod1655.ReduceMotion;
         const tmp4 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;

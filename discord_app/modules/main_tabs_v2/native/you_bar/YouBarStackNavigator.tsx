@@ -1,10 +1,10 @@
-// === Module 18731: YouBarStackNavigator ===
+// === Module 18733: YouBarStackNavigator ===
 
-// Module 18731 (YouBarStackNavigator)
-import notifications_Notifications from "notifications/Notifications" /* 19233 */;
+// Module 18733 (YouBarStackNavigator)
+import notifications_Notifications from "notifications/Notifications" /* 19235 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 require = fn;
 function getGuildsComponent() {

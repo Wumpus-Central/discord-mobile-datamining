@@ -2,7 +2,7 @@
 
 // Module 10646 (useIsSecureFramesUIEnabled)
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 
 const require = fn;
 let closure_4 = fn(10628).END_TO_END_ENCRYPTION_DISABLED;

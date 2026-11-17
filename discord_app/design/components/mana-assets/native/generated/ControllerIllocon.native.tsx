@@ -1,7 +1,7 @@
 // === Module 15033: ControllerIllocon ===
 
 // Module 15033 (ControllerIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef15034 from "module_15034" /* 15034 */;
 import _modDef15035 from "module_15035" /* 15035 */;

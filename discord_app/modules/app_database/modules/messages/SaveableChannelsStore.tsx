@@ -8,7 +8,7 @@ import isReadableChannel from "isReadableChannel" /* 8687 */;
 import isLimitedChannel from "isLimitedChannel" /* 8688 */;
 import withFallbacks from "withFallbacks" /* 8689 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import FileSystemStore from "FileSystemStore" /* 8682 */;

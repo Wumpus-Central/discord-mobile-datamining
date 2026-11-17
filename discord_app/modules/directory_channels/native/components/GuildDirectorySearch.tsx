@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 14697 */;
 import _modDef14703 from "module_14703" /* 14703 */;
 import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 14705 */;
@@ -60,8 +60,8 @@ function EmptyState(channel) {
   const obj6 = { style: tmp.emptyStateTitle, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1113).intl;
   obj6.children = intl2.string(channel(1113).t["6HXiuE"]);
-  items1[1] = closure_10(channel(5929).Text, obj6);
-  items1[2] = closure_10(channel(5929).Text, { style: tmp.emptyStateText, variant: "body-sm/medium", color: "text-default", children: formatResult });
+  items1[1] = closure_10(channel(5919).Text, obj6);
+  items1[2] = closure_10(channel(5919).Text, { style: tmp.emptyStateText, variant: "body-sm/medium", color: "text-default", children: formatResult });
   obj4.children = items1;
   return closure_11(View, obj4);
 }

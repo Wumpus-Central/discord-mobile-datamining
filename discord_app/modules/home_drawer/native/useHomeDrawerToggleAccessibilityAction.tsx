@@ -1,6 +1,6 @@
-// === Module 19074: useHomeDrawerToggleAccessibilityAction ===
+// === Module 19076: useHomeDrawerToggleAccessibilityAction ===
 
-// Module 19074 (useHomeDrawerToggleAccessibilityAction)
+// Module 19076 (useHomeDrawerToggleAccessibilityAction)
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,7 +27,7 @@ export default function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
         name,
         label: stringResult,
         action() {
-            closure_0(5492).setHomeDrawerState(!dependencyMap);
+            closure_0(5482).setHomeDrawerState(!dependencyMap);
             const intl = closure_0(1113).intl;
             const string = intl.string;
             const t = closure_0(1113).t;
@@ -38,7 +38,7 @@ export default function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
             }
             const AccessibilityAnnouncer = closure_0(5315).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(stringResult);
-            const obj = closure_0(5492);
+            const obj = closure_0(5482);
           }
       };
       return obj;

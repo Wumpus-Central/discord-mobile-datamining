@@ -1,7 +1,7 @@
 // === Module 14583: CustomTypingIndicatorDynamicAsset ===
 
 // Module 14583 (CustomTypingIndicatorDynamicAsset)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

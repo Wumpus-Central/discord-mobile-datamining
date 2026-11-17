@@ -1,17 +1,17 @@
-// === Module 18795: HappeningNowCardActivity ===
+// === Module 18797: HappeningNowCardActivity ===
 
-// Module 18795 (HappeningNowCardActivity)
+// Module 18797 (HappeningNowCardActivity)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 13101 */;
-import useLiveStageData from "useLiveStageData" /* 18793 */;
-import _modDef18796 from "module_18796" /* 18796 */;
-import _modDef18797 from "module_18797" /* 18797 */;
-import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 18804 */;
+import useLiveStageData from "useLiveStageData" /* 18795 */;
+import _modDef18798 from "module_18798" /* 18798 */;
+import _modDef18799 from "module_18799" /* 18799 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 18806 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 5160 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -142,7 +142,7 @@ function IconOrPreview(arg0) {
         if (activity != null) {
           type = activity.type;
         }
-        if (type === tmp28(6069).ActivityTypes.LISTENING) {
+        if (type === tmp28(6059).ActivityTypes.LISTENING) {
           const intl3 = tmp28(1113).intl;
           stringResult = intl3.string(tmp28(1113).t.kUEnxN);
         } else if (tmp2(15714)(activity)) {
@@ -153,7 +153,7 @@ function IconOrPreview(arg0) {
           if (activity != null) {
             type1 = activity.type;
           }
-          if (type1 !== tmp28(6069).ActivityTypes.CUSTOM_STATUS) {
+          if (type1 !== tmp28(6059).ActivityTypes.CUSTOM_STATUS) {
             const intl = tmp28(1113).intl;
             stringResult = intl.string(tmp28(1113).t["2TbM/G"]);
           }
@@ -162,7 +162,7 @@ function IconOrPreview(arg0) {
       const obj10 = { style: memo, accessibilityLabel: stringResult, children: null };
       const obj11 = { style: tmp35, children: null };
       const obj12 = { style: tmp.cardImageAsset, source: memoizedImageSourceResult };
-      obj11.children = closure_10(tmp2(6020), obj12);
+      obj11.children = closure_10(tmp2(6010), obj12);
       obj10.children = closure_10(closure_4, obj11);
       return closure_10(closure_4, obj10);
     }
@@ -177,7 +177,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       let tmp2Result4 = items[userId % items.length];
     } else {
-      tmp2Result4 = tmp2(18806);
+      tmp2Result4 = tmp2(18808);
     }
   }
 }
@@ -199,13 +199,13 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(17915);
+const HappeningNowConstants = fn(17917);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: metroImportDefault, STATUS_CUTOUT_SMALL: closure_8, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef18796, _modDef18797];
+let items = [_modDef18798, _modDef18799];
 const createStyles = fn(5306);
 let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 }, cardAvatar: { marginBottom: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" }, cardImageStream: { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" }, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };

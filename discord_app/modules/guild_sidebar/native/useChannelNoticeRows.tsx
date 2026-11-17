@@ -1,8 +1,8 @@
-// === Module 18984: useChannelNoticeRows ===
+// === Module 18986: useChannelNoticeRows ===
 
-// Module 18984 (useChannelNoticeRows)
+// Module 18986 (useChannelNoticeRows)
 import dismissible_content from "dismissible_content" /* 5139 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5348 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5338 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildProgressStore from "GuildProgressStore" /* 14906 */;

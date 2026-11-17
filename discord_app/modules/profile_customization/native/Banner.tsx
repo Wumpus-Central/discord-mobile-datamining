@@ -2,7 +2,7 @@
 
 // Module 8620 (Banner)
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

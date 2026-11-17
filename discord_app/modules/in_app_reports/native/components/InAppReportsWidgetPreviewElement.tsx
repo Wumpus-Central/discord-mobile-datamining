@@ -3,7 +3,7 @@
 // Module 12084 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7354 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7358 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8607 */;

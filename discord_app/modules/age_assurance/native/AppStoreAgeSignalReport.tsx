@@ -2,7 +2,7 @@
 
 // Module 8387 (AppStoreAgeSignalReport)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5995 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5985 */;
 import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8240 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -170,8 +170,8 @@ function startAgeSignalReport(isColdLaunch, connection) {
   if (tmp) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp2(5995).shouldCollectAppStoreSignal();
-      const tmp2Result = tmp2(5995);
+      result = tmp2(5985).shouldCollectAppStoreSignal();
+      const tmp2Result = tmp2(5985);
     }
     tmp = result;
     const obj = require("AppStoreAgeSignalSupport");

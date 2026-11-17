@@ -1,12 +1,12 @@
-// === Module 20751: ChannelSelectorActionSheet ===
+// === Module 20754: ChannelSelectorActionSheet ===
 
-// Module 20751 (ChannelSelectorActionSheet)
+// Module 20754 (ChannelSelectorActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import useCreateChannelSubmit from "useCreateChannelSubmit" /* 8125 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8143 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -23,9 +23,9 @@ function ChannelRow(channel) {
   channel = channel.channel;
   const onChannelSelected = channel.onChannelSelected;
   ({ selected, guild, start, end } = channel);
-  let str = onChannelSelected(5954)(channel);
+  let str = onChannelSelected(5944)(channel);
   items = [onChannelSelected, channel];
-  const channelIconComponentOrDefault = channel(17861).getChannelIconComponentOrDefault(channel, guild);
+  const channelIconComponentOrDefault = channel(17863).getChannelIconComponentOrDefault(channel, guild);
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onChannelSelected(channel);
@@ -151,7 +151,7 @@ export default function ChannelSelectorActionSheet(guildId) {
   const obj10 = { style: tmp.emptyState, variant: "body-md/normal", color: "text-muted", children: null };
   const intl4 = tmp6(1113).intl;
   obj10.children = intl4.string(guildId(1113).t.V6nAfF);
-  obj5.ListEmptyComponent = closure_13(guildId(5929).Text, obj10);
+  obj5.ListEmptyComponent = closure_13(guildId(5919).Text, obj10);
   obj3.children = closure_13(guildId(7888).BottomSheetFlashList, obj5);
-  return closure_13(guildId(5566).BottomSheet, obj3);
+  return closure_13(guildId(5556).BottomSheet, obj3);
 };

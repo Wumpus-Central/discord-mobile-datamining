@@ -1,10 +1,10 @@
-// === Module 20442: editorUtils ===
+// === Module 20445: editorUtils ===
 
-// Module 20442 (editorUtils)
+// Module 20445 (editorUtils)
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6757 */;
-import guildSpaceWidgetLayout from "guildSpaceWidgetLayout" /* 20443 */;
-import GuildSpaceTypes from "GuildSpaceTypes" /* 20444 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6747 */;
+import guildSpaceWidgetLayout from "guildSpaceWidgetLayout" /* 20446 */;
+import GuildSpaceTypes from "GuildSpaceTypes" /* 20447 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -31,9 +31,9 @@ function createDraftWidget(type, name, locked) {
 }
 let c3 = "draft:";
 let closure_4 = 0;
-let items = [fn(20444).GuildSpaceWidgetType.LEADERBOARD, fn(20444).GuildSpaceWidgetType.WHITEBOARD];
+let items = [fn(20447).GuildSpaceWidgetType.LEADERBOARD, fn(20447).GuildSpaceWidgetType.WHITEBOARD];
 const items1 = [items, ];
-const items2 = [fn(20444).GuildSpaceWidgetType.POPULAR_GAMES];
+const items2 = [fn(20447).GuildSpaceWidgetType.POPULAR_GAMES];
 items1[1] = items2;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_space/editorUtils.tsx");

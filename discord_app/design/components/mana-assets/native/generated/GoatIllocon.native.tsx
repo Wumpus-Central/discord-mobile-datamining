@@ -1,7 +1,7 @@
 // === Module 13660: GoatIllocon ===
 
 // Module 13660 (GoatIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef13661 from "module_13661" /* 13661 */;
 import _modDef13662 from "module_13662" /* 13662 */;

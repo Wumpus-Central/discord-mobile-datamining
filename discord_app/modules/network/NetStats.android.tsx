@@ -4,10 +4,10 @@
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import configure from "configure" /* 1482 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5499 */;
-import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 6258 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5489 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 6248 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 8664 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import NetworkUtils_mod from "utils/NetworkUtils" /* 1481 */;

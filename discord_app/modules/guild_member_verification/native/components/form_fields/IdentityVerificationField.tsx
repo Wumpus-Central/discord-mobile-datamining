@@ -3,9 +3,9 @@
 // Module 7737 (IdentityVerificationField)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5352 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5342 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7738 */;
 import MobilePhoneIcon from "MobilePhoneIcon" /* 7786 */;
 import EnvelopeIcon2 from "EnvelopeIcon" /* 7855 */;

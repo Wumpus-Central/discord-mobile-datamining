@@ -1,11 +1,11 @@
-// === Module 19568: SearchAutocompleteStore ===
+// === Module 19570: SearchAutocompleteStore ===
 
-// Module 19568 (SearchAutocompleteStore)
+// Module 19570 (SearchAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import _modDef6161 from "module_6161" /* 6161 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6962 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import _modDef6151 from "module_6151" /* 6151 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6952 */;
 import GuildUtilsDefault from "GuildUtils" /* 7075 */;
 import UserSearchManagerDefault from "UserSearchManager" /* 10250 */;
 import SearchUtils from "SearchUtils" /* 14747 */;
@@ -15,7 +15,7 @@ import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import StreamerModeStore from "StreamerModeStore" /* 5373 */;
+import StreamerModeStore from "StreamerModeStore" /* 5363 */;
 import UserStore from "UserStore" /* 1388 */;
 import SelectedSearchContextStore from "SelectedSearchContextStore" /* 14750 */;
 
@@ -253,7 +253,7 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(DispatcherDefault, {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!_modDef6161(c14, searchContext)) {
+    if (!_modDef6151(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -261,7 +261,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
   },
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function handleSearchAutocompleteQueryUpdate(arg0) {
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!_modDef6161(c14, searchContext)) {
+    if (!_modDef6151(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }

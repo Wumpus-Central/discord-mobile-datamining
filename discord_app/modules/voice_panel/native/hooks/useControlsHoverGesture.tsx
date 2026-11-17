@@ -1,8 +1,8 @@
-// === Module 19984: useControlsHoverGesture ===
+// === Module 19986: useControlsHoverGesture ===
 
-// Module 19984 (useControlsHoverGesture)
+// Module 19986 (useControlsHoverGesture)
 import _mod1708 from "module_1708" /* 1708 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

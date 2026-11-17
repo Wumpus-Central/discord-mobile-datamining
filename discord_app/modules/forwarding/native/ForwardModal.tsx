@@ -3,11 +3,11 @@
 // Module 10242 (ForwardModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
-import LinkIcon from "LinkIcon" /* 6029 */;
-import ChannelUtils from "ChannelUtils" /* 6356 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
+import LinkIcon from "LinkIcon" /* 6019 */;
+import ChannelUtils from "ChannelUtils" /* 6346 */;
 import HeaderActionButton from "HeaderActionButton" /* 7427 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import ForwardModalUtils from "ForwardModalUtils" /* 10239 */;
@@ -21,7 +21,7 @@ import ChannelConversationsStore from "ChannelConversationsStore" /* 8745 */;
 import ConversationPreviewStore from "ConversationPreviewStore" /* 8748 */;
 import ICYMIStore from "ICYMIStore" /* 10205 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import MessagePreviewStore from "MessagePreviewStore" /* 10228 */;
 
 const require = globalThis.__r;
@@ -235,7 +235,7 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[25])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(6270).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(10265), {
+                    closure_1_0(6260).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(10265), {
                       onConfirm() {
                         return closure_0(true);
                       },

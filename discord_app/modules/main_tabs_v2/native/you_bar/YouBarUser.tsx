@@ -1,8 +1,8 @@
-// === Module 19161: YouBarUser ===
+// === Module 19163: YouBarUser ===
 
-// Module 19161 (YouBarUser)
+// Module 19163 (YouBarUser)
 import nativeDefault from "native" /* 575 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
@@ -54,24 +54,24 @@ export default noop.memo(function YouBarUser(isCondensed) {
   YouBarUserTsx1.__initData = tmp8;
   const animatedStyle = tmp2(1655).useAnimatedStyle(YouBarUserTsx1);
   const tmp2Result = tmp2(1655);
-  const name = sharedValue(5372).useName(stateFromStores);
+  const name = sharedValue(5362).useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
       const obj5 = { isLargeAvatar: tmp5, onPress: isCondensed.onAvatarPress };
-      const items4 = [closure_9(tmp11(19163), obj5), ];
+      const items4 = [closure_9(tmp11(19165), obj5), ];
       const obj6 = { style: null, children: null };
       const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj6.style = items5;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp11(19164), obj7);
+      obj6.children = closure_9(tmp11(19166), obj7);
       items4[1] = closure_9(tmp11(1655).View, obj6);
       obj3.children = items4;
     }
     return tmp13(View, obj3);
   }
   const obj8 = { style: tmp.youButton, children: null };
-  const items6 = [closure_9(sharedValue(19162), { isLarge: !isCondensed }), ];
+  const items6 = [closure_9(sharedValue(19164), { isLarge: !isCondensed }), ];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items7 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj9.style = items7;
@@ -79,5 +79,5 @@ export default noop.memo(function YouBarUser(isCondensed) {
   obj8.children = items6;
   obj3 = obj8;
   const obj10 = { style: tmp.placeholder };
-  const obj4 = sharedValue(5372);
+  const obj4 = sharedValue(5362);
 });

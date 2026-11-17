@@ -2,7 +2,7 @@
 
 // Module 13005 (UserSettingsVoiceInputOptions)
 import util from "util" /* 1113 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6225 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6215 */;
 import showSimpleActionSheet from "showSimpleActionSheet" /* 7948 */;
 import VoiceSensitivityDefault from "VoiceSensitivity" /* 13006 */;
 import noop from "module_19" /* 19 */;
@@ -62,7 +62,7 @@ export default function UserSettingsVoiceInputOptions() {
     stringResult = intl3.string(tmp(1113).t.cHCEOJ);
   }
   obj4.children = stringResult;
-  obj3.trailing = closure_6(inputMode(5929).Text, obj4);
+  obj3.trailing = closure_6(inputMode(5919).Text, obj4);
   obj3.onPress = handleInputModePress;
   const items1 = [closure_6(inputMode(7443).TableRow, obj3), ];
   let tmp4Result = null;

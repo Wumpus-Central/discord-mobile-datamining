@@ -1,8 +1,8 @@
-// === Module 18977: ChannelListLegendList ===
+// === Module 18979: ChannelListLegendList ===
 
-// Module 18977 (ChannelListLegendList)
+// Module 18979 (ChannelListLegendList)
 import FastList from "FastList" /* 7847 */;
-import useChannelListFlatDataDefault from "useChannelListFlatData" /* 18978 */;
+import useChannelListFlatDataDefault from "useChannelListFlatData" /* 18980 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

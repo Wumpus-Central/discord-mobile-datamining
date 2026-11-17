@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 575 */;
 import ChannelHeader from "ChannelHeader" /* 15638 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;
 

@@ -1,10 +1,10 @@
-// === Module 17862: PremiumRestoreSubscriptionSetting ===
+// === Module 17864: PremiumRestoreSubscriptionSetting ===
 
-// Module 17862 (PremiumRestoreSubscriptionSetting)
+// Module 17864 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
 import BillingActionCreatorsDefault from "BillingActionCreators" /* 9587 */;
 import UserStore from "UserStore" /* 1388 */;
 

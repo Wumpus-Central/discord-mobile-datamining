@@ -1,10 +1,10 @@
-// === Module 20002: VoiceChannelAppHeaderButtons ===
+// === Module 20004: VoiceChannelAppHeaderButtons ===
 
-// Module 20002 (VoiceChannelAppHeaderButtons)
+// Module 20004 (VoiceChannelAppHeaderButtons)
 import _modDef4229 from "module_4229" /* 4229 */;
 import _modDef12296 from "module_12296" /* 12296 */;
 import VoiceChannelAppActionCreators from "VoiceChannelAppActionCreators" /* 15151 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19944 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19946 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,15 +16,15 @@ const result = size.fileFinishedImporting("modules/voice_channel_apps/native/Voi
 export default function VoiceChannelAppHeaderButtons(arg0) {
   ({ channel, inCall } = arg0);
   let id;
-  const voiceChannelAppAvailable = id(20003).useVoiceChannelAppAvailable(channel, inCall);
-  const obj = id(20003);
-  const voiceChannelAppOpen = id(20003).useVoiceChannelAppOpen(channel, inCall);
-  const obj2 = id(20003);
-  const voiceChannelAppVisible = id(20003).useVoiceChannelAppVisible(channel);
+  const voiceChannelAppAvailable = id(20005).useVoiceChannelAppAvailable(channel, inCall);
+  const obj = id(20005);
+  const voiceChannelAppOpen = id(20005).useVoiceChannelAppOpen(channel, inCall);
+  const obj2 = id(20005);
+  const voiceChannelAppVisible = id(20005).useVoiceChannelAppVisible(channel);
   id = channel.id;
   let tmp7Result = null;
   if (voiceChannelAppAvailable) {
-    const obj4 = { icon: importDefault(voiceChannelAppVisible ? 18431 : 8038), accessibilityLabel: null, onPress: null };
+    const obj4 = { icon: importDefault(voiceChannelAppVisible ? 18433 : 8038), accessibilityLabel: null, onPress: null };
     const intl = tmp(1113).intl;
     if (voiceChannelAppVisible) {
       let ZtYyOx = tmp(1113).t["3jrUBj"];

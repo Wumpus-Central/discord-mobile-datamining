@@ -1,6 +1,6 @@
-// === Module 18544: updatePersistentCodesEnabled ===
+// === Module 18546: updatePersistentCodesEnabled ===
 
-// Module 18544 (updatePersistentCodesEnabled)
+// Module 18546 (updatePersistentCodesEnabled)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import SecureFramesUtils from "SecureFramesUtils" /* 10627 */;
@@ -8,7 +8,7 @@ import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 1063
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 require = fn;
 function savePersistentCodesEnabled() {
@@ -216,9 +216,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj4 = {
                         value: closure_1_9(closure_0, () => {
-                                  c1(6935).disconnect();
-                                  const obj = c1(6935);
-                                  const voiceChannel = c1(6935).selectVoiceChannel(dependencyMap);
+                                  c1(6925).disconnect();
+                                  const obj = c1(6925);
+                                  const voiceChannel = c1(6925).selectVoiceChannel(dependencyMap);
                                 }),
                         done: false
                       };

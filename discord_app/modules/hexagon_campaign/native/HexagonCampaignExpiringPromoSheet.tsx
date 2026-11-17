@@ -1,8 +1,8 @@
-// === Module 19845: HexagonCampaignExpiringPromoSheet ===
+// === Module 19847: HexagonCampaignExpiringPromoSheet ===
 
-// Module 19845 (HexagonCampaignExpiringPromoSheet)
-import QuestTypes from "QuestTypes" /* 5341 */;
-import Text_Text from "Text/Text" /* 5929 */;
+// Module 19847 (HexagonCampaignExpiringPromoSheet)
+import Text_Text from "Text/Text" /* 5919 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9579 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10954 */;

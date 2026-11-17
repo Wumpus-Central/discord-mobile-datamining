@@ -2,7 +2,7 @@
 
 // Module 11395 (AutocompleteOptions)
 import util from "util" /* 1113 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6962 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6952 */;
 import StickersActionCreators from "StickersActionCreators" /* 11358 */;
 import executeCommandDefault from "executeCommand" /* 11397 */;
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 9006 */;
@@ -17,13 +17,13 @@ import apply from "apply" /* 12 */;
 require = fn;
 const Constants = fn(1072);
 ({ AutoCompleteResultTypes: closure_10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
-const ChannelAutocompleteConstants = fn(6346);
+const ChannelAutocompleteConstants = fn(6336);
 ({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = ChannelAutocompleteConstants);
 const AutocompleteTypes = fn(11396).AutocompleteTypes;
 const EmojiConstants = fn(1391);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
-const executeCommand = apply.debounce(executeCommandDefault, fn(6345).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
+const executeCommand = apply.debounce(executeCommandDefault, fn(6335).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/native/AutocompleteOptions.tsx");
 

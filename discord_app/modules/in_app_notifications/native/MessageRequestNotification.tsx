@@ -23,7 +23,7 @@ export default function MessageRequestInAppNotification(notification) {
   const callback = noop.useCallback(() => {
     numMutualGuilds(11027).clearNotification();
     const obj = numMutualGuilds(11027);
-    const rootNavigationRef = author(5493).getRootNavigationRef();
+    const rootNavigationRef = author(5483).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }

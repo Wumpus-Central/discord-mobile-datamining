@@ -1,15 +1,15 @@
-// === Module 20825: AVErrorManager ===
+// === Module 20828: AVErrorManager ===
 
-// Module 20825 (AVErrorManager)
+// Module 20828 (AVErrorManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AVError from "AVError" /* 6257 */;
-import ErrorDefinitions from "ErrorDefinitions" /* 20826 */;
-import AVErrorAnalytics from "AVErrorAnalytics" /* 20846 */;
+import AVError from "AVError" /* 6247 */;
+import ErrorDefinitions from "ErrorDefinitions" /* 20829 */;
+import AVErrorAnalytics from "AVErrorAnalytics" /* 20849 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import AVErrorStore from "AVErrorStore" /* 12789 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 

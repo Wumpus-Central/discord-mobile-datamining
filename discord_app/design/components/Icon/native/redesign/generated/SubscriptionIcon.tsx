@@ -2,7 +2,7 @@
 
 // Module 17517 (SubscriptionIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod17518 from "module_17518" /* 17518 */;
 import noop from "module_19" /* 19 */;
 

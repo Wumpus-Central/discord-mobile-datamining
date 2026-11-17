@@ -3,7 +3,7 @@
 // Module 10052 (BalanceCounter)
 import _modDef1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop_mod from "module_19" /* 19 */;
 

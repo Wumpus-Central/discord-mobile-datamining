@@ -40,7 +40,7 @@ export default function GuildDirectoryEmpty(guild) {
   const obj4 = { paddingBottom: channel(1630)().bottom + 16 };
   obj5.source = channel(15119);
   obj5.style = tmp.header;
-  const items2 = [closure_6(channel(6020), obj5), , , , ];
+  const items2 = [closure_6(channel(6010), obj5), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", children: null };
   const intl = guild(1113).intl;
   obj6.children = intl.format(guild(1113).t.vyvrpC, { guildName: guild.name });
@@ -48,7 +48,7 @@ export default function GuildDirectoryEmpty(guild) {
   const obj8 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = guild(1113).intl;
   obj8.children = intl2.string(guild(1113).t.WypE0i);
-  items2[2] = closure_6(guild(5929).Text, obj8);
+  items2[2] = closure_6(guild(5919).Text, obj8);
   let tmp8Result = null;
   if (canCreateOrAddGuildInDirectory) {
     const obj9 = {

@@ -5,16 +5,16 @@ import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 6095 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 6085 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 13080 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import RTCDebugStore from "RTCDebugStore" /* 6094 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6802 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import RTCDebugStore from "RTCDebugStore" /* 6084 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6792 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -96,9 +96,9 @@ function RTCDebugGeneral() {
   }
   const obj5 = { title: "general", children: null };
   const obj6 = { obj: null };
-  const tmp4 = channelId(5954)(stateFromStores1);
+  const tmp4 = channelId(5944)(stateFromStores1);
   obj4.name = name;
-  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5954)(stateFromStores1) } };
+  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5944)(stateFromStores1) } };
   obj5.children = closure_14(ObjectKV, obj6);
   return closure_14(Section, obj5);
 }
@@ -139,7 +139,7 @@ function RTCDebugContext(context) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(6075).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6065).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {

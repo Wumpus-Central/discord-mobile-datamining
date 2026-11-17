@@ -5,8 +5,8 @@ import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5376 */;
-import UserSettingsActionCreators from "UserSettingsActionCreators" /* 6242 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5366 */;
+import UserSettingsActionCreators from "UserSettingsActionCreators" /* 6232 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9590 */;
 import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 14556 */;
@@ -44,7 +44,7 @@ function PrimaryActionButton(onPressApply) {
     const intl = tmp2(1113).intl;
     obj4.text = intl.string(tmp2(1113).t["1Qm822"]);
     obj4.onPress = onPressApply.onPressApply;
-    tmp6 = closure_12(tmp2(5936).Button, obj4);
+    tmp6 = closure_12(tmp2(5926).Button, obj4);
   }
   return tmp6;
 }

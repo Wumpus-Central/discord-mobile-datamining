@@ -2,7 +2,7 @@
 
 // Module 10971 (FavoritesGuildAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 const require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;

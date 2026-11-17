@@ -3,7 +3,7 @@
 // Module 7059 (isOptInEnabled)
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;

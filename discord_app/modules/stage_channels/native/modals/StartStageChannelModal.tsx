@@ -7,8 +7,8 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2020 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import Pressables from "Pressables" /* 7428 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
 import _modDef7863 from "module_7863" /* 7863 */;
@@ -99,7 +99,7 @@ class NotificationToggle {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(6906);
+const StageChannelsConstants = fn(6896);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let constants = fn(5161).GuildScheduledEventPrivacyLevel;
@@ -179,10 +179,10 @@ export default function StartStageChannelModal(arg0) {
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(6909).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(6899).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(6909);
+                  obj5 = tmp66(6899);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
@@ -196,7 +196,7 @@ export default function StartStageChannelModal(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(6757).APIError(closure_128_1);
+            const aPIError = new closure_0(6747).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);

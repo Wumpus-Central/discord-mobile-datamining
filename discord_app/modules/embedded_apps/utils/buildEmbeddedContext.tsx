@@ -2,7 +2,7 @@
 
 // Module 12864 (buildEmbeddedContext)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
 import EmbeddedAppTypes from "EmbeddedAppTypes" /* 7021 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 import FramesStore from "FramesStore" /* 7019 */;

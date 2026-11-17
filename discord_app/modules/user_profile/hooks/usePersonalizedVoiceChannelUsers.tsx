@@ -2,9 +2,9 @@
 
 // Module 15743 (usePersonalizedVoiceChannelUsers)
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8553 */;
-import ConsentStore from "ConsentStore" /* 6846 */;
+import ConsentStore from "ConsentStore" /* 6836 */;
 import UserStore from "UserStore" /* 1388 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 
 const require = globalThis.__r;
 

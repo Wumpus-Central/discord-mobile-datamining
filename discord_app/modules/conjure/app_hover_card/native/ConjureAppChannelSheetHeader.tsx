@@ -2,8 +2,8 @@
 
 // Module 15173 (ConjureAppChannelSheetHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 13784 */;
 import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 13788 */;
 import noop from "module_19" /* 19 */;

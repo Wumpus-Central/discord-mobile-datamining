@@ -6,8 +6,8 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5244 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import common_AlertDefault from "common/Alert" /* 6340 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import common_AlertDefault from "common/Alert" /* 6330 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
 import _modDef14174 from "module_14174" /* 14174 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -139,7 +139,7 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
       return AutomodPermissionUtils.getAutomodReason(automodQuarantinedGuildMemberFlags);
     }
   }, items4);
-  stateFromStores(5899)(() => {
+  stateFromStores(5889)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type: QUARANTINE_USER_ALERT_KEY, guild_id: guildId, other_user_id: stateFromStores });
   });
   if (stateFromStores2 !== GuildMemberFlags.AUTOMOD_QUARANTINED_BIO) {

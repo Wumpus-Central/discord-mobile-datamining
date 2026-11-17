@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5313 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import Pressables from "Pressables" /* 7428 */;
 import _modDef14052 from "module_14052" /* 14052 */;
 import _modDef14053 from "module_14053" /* 14053 */;
@@ -115,7 +115,7 @@ prototype["render"] = function render() {
   obj.children = timestampProducer(View, obj2);
   return hasOwnProperty(Pressables.PressableOpacity, obj);
 };
-GuildIconUploader.contextType = fn(5377).ThemeContext;
+GuildIconUploader.contextType = fn(5367).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 

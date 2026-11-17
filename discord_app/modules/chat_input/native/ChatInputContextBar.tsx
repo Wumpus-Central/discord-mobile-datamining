@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import _modDef7648 from "module_7648" /* 7648 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 9004 */;
@@ -409,10 +409,10 @@ function ContextBarItem(arg0) {
   }, items2);
   const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     componentDidAppear() {
-      const result = backgroundColor.set(c0(5548).withTiming(60, obj));
+      const result = backgroundColor.set(c0(5538).withTiming(60, obj));
     },
     componentDidEnter() {
-      const result = backgroundColor.set(c0(5548).withTiming(60, obj));
+      const result = backgroundColor.set(c0(5538).withTiming(60, obj));
     },
     componentWillLeave(current) {
       ref1.current = current;
@@ -434,8 +434,8 @@ function ContextBarItem(arg0) {
       ChatInputContextBarTsx2.__closure = items1;
       ChatInputContextBarTsx2.__workletHash = 5373252367218;
       ChatInputContextBarTsx2.__initData = tmp3;
-      const result = backgroundColor.set(c0(5548).withTiming(0, obj, "respect-motion-settings", ChatInputContextBarTsx2));
-      obj = c0(5548);
+      const result = backgroundColor.set(c0(5538).withTiming(0, obj, "respect-motion-settings", ChatInputContextBarTsx2));
+      obj = c0(5538);
     }
   }));
   const obj4 = { style: null, children };

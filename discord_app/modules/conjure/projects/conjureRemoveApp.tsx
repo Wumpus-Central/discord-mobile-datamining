@@ -3,8 +3,8 @@
 // Module 13206 (conjureRemoveApp)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 7018 */;
 import ConjurePublishTypes from "ConjurePublishTypes" /* 7384 */;
 import noop from "module_19" /* 19 */;

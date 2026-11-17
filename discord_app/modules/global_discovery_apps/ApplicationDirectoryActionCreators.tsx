@@ -7,7 +7,7 @@ import HTTPUtils from "HTTPUtils" /* 1285 */;
 import ApplicationCollectionSurface from "ApplicationCollectionSurface" /* 13408 */;
 import ApplicationCollectionActiveState from "ApplicationCollectionActiveState" /* 13409 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5932 */;
+import DevSettingsStore from "DevSettingsStore" /* 5922 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1362 */;
 import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7056 */;

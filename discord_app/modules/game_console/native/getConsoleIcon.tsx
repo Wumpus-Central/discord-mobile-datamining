@@ -2,7 +2,7 @@
 
 // Module 10837 (getConsoleIcon)
 import Constants from "Constants" /* 1072 */;
-import CallConstants from "CallConstants" /* 5983 */;
+import CallConstants from "CallConstants" /* 5973 */;
 import _modDef7480 from "module_7480" /* 7480 */;
 import _modDef10838 from "module_10838" /* 10838 */;
 import size from "module_2" /* 2 */;

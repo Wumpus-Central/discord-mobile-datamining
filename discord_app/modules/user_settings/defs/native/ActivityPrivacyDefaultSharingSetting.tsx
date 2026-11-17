@@ -1,11 +1,11 @@
-// === Module 18602: ActivityPrivacyDefaultSharingSetting ===
+// === Module 18604: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 18602 (ActivityPrivacyDefaultSharingSetting)
+// Module 18604 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 17381 */;
 import noop from "module_19" /* 19 */;
 
@@ -55,7 +55,7 @@ const radio = SettingBuilders.createRadio({
       const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18603, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18605, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
     }
   }
 });

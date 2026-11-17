@@ -1,28 +1,28 @@
-// === Module 19071: GuildsBarGuildFolder ===
+// === Module 19073: GuildsBarGuildFolder ===
 
-// Module 19071 (GuildsBarGuildFolder)
+// Module 19073 (GuildsBarGuildFolder)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
-import native from "native" /* 5377 */;
-import useToken from "useToken" /* 5902 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import native from "native" /* 5367 */;
+import useToken from "useToken" /* 5892 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import _modDef8036 from "module_8036" /* 8036 */;
 import ListUtils from "ListUtils" /* 13787 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 19065 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 19072 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 19075 */;
-import isGuildsBarGuildLabelEqualDefault from "isGuildsBarGuildLabelEqual" /* 19082 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 19067 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 19074 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 19077 */;
+import isGuildsBarGuildLabelEqualDefault from "isGuildsBarGuildLabelEqual" /* 19084 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7060 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -228,12 +228,12 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
     return closure_17(TransitionWrapper, obj, arg0);
   }
 }
-const GuildsNodeType = fn(6956).GuildsNodeType;
-const GuildsBarDnDStore = fn(19063);
+const GuildsNodeType = fn(6946).GuildsNodeType;
+const GuildsBarDnDStore = fn(19065);
 ({ useItemDragState: closure_10, useFolderBGHeightOffset: closure_11 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(19068);
+let GuildsBarConstants = fn(19070);
 ({ DEFAULT_FOLDER_COLOR: closure_12, isDefaultFolderColor: map1, normalizeFolderColor: closure_14 } = GuildsBarConstants);
-GuildsBarConstants = fn(19060);
+GuildsBarConstants = fn(19062);
 ({ TRANSITION_PHYSICS: closure_15, FOLDER_SPRING_PHYSICS: closure_16 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
@@ -536,10 +536,10 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
           const result = closure_1_5.set(set);
         }
       }
-      const result1 = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj4 = c0(5554);
-      const result2 = c1(6917).toggleGuildFolderExpand(_undefined);
-      const obj5 = c1(6917);
+      const result1 = c0(5544).triggerHapticFeedback(c0(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+      const obj4 = c0(5544);
+      const result2 = c1(6907).toggleGuildFolderExpand(_undefined);
+      const obj5 = c1(6907);
     }
   }), items7);
   const items9 = [expanded, tmp4.guildPreviewWrapper, folderPreviewStyle];
@@ -695,10 +695,10 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
   let tmp28Result2;
   if (!flag2) {
     const obj11 = { folderId: id, expanded };
-    tmp28Result2 = closure_17(tmp3(19083), obj11);
+    tmp28Result2 = closure_17(tmp3(19085), obj11);
   }
   obj9.expandedChildren = tmp28Result2;
-  obj9.children = closure_17(tmp(5377).TransitionGroup, { renderItem: renderGuildFolderContent, getItemKey, items: memo3, wrapChildren: callback });
+  obj9.children = closure_17(tmp(5367).TransitionGroup, { renderItem: renderGuildFolderContent, getItemKey, items: memo3, wrapChildren: callback });
   return closure_17(GuildsBarAnimatedItemWrapperDefault, obj9);
 });
 export const GuildsBarGuildFolderBG = memoResult;

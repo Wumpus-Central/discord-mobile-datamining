@@ -1,10 +1,10 @@
-// === Module 20839: AVErrorScreenshareOSError ===
+// === Module 20842: AVErrorScreenshareOSError ===
 
-// Module 20839 (AVErrorScreenshareOSError)
+// Module 20842 (AVErrorScreenshareOSError)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import AVError from "AVError" /* 6257 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6808 */;
-import AVErrorContext from "AVErrorContext" /* 20828 */;
+import AVError from "AVError" /* 6247 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
+import AVErrorContext from "AVErrorContext" /* 20831 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = BigInt(-3821);

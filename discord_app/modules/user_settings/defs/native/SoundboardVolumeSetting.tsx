@@ -1,6 +1,6 @@
-// === Module 17872: SoundboardVolumeSetting ===
+// === Module 17874: SoundboardVolumeSetting ===
 
-// Module 17872 (SoundboardVolumeSetting)
+// Module 17874 (SoundboardVolumeSetting)
 import util from "util" /* 1113 */;
 import SoundboardActionCreators from "SoundboardActionCreators" /* 7226 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;

@@ -5,8 +5,8 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import TextField from "TextField" /* 7626 */;
 import FriendsUtils from "FriendsUtils" /* 8141 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -311,7 +311,7 @@ export default function _default(arg0) {
   obj5.style = items6;
   let intl = sourcePage(1113).intl;
   obj5.children = intl.string(sourcePage(1113).t.Yi6Mpu);
-  const items7 = [closure_9(sourcePage(5929).Text, obj5), , ];
+  const items7 = [closure_9(sourcePage(5919).Text, obj5), , ];
   let obj6 = { returnKeyType: "done", submitBehavior: "submit", value: first2, maxLength: 120, onSubmitEditing: handleSubmitEditing, onChange: callback1, status: null };
   let str2;
   if (first1.field === constants3.MESSAGE) {
@@ -340,14 +340,14 @@ export default function _default(arg0) {
     obj10.disabled = str.trim().length <= 0;
     obj10.onPress = handleSubmitEditing;
     obj10.loading = first1.status === constants2.LOADING;
-    items8[2] = closure_9(sourcePage(5936).Button, obj10);
+    items8[2] = closure_9(sourcePage(5926).Button, obj10);
     obj8.children = items8;
     return closure_10(closure_11, obj8);
   }
   const obj11 = { style: tmp.messageFooterText, variant: "body-xs/medium", color: "text-muted", children: null };
   let intl2 = sourcePage(1113).intl;
   obj11.children = intl2.string(sourcePage(1113).t.UtfQNw);
-  tmp16Result = closure_9(sourcePage(5929).Text, obj11);
+  tmp16Result = closure_9(sourcePage(5919).Text, obj11);
   let obj = { status: constants2.NONE };
   let obj3 = {
     textState,

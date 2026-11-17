@@ -6,7 +6,7 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import useDisplayProfileDefault from "useDisplayProfile" /* 8482 */;
 import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 17170 */;
 import useDesaturatedUserColorValueDefault from "useDesaturatedUserColorValue" /* 17179 */;

@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,7 +49,7 @@ export default function GuildSelector(disabled) {
   let obj2 = { variant: "body-sm/medium", color: "text-default", children: null };
   let intl = selectedGuildId(1113).intl;
   obj2.children = intl.string(selectedGuildId(1113).t["1DXFFd"]);
-  const items1 = [closure_7(selectedGuildId(5929).Text, obj2), , , ];
+  const items1 = [closure_7(selectedGuildId(5919).Text, obj2), , , ];
   let tmp6Result = null;
   if (null != error) {
     tmp6Result = null;

@@ -1,9 +1,9 @@
-// === Module 19803: GiftingPromotionCoachmark ===
+// === Module 19805: GiftingPromotionCoachmark ===
 
-// Module 19803 (GiftingPromotionCoachmark)
+// Module 19805 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import usePreviousDefault from "usePrevious" /* 6836 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import usePreviousDefault from "usePrevious" /* 6826 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 11661 */;
@@ -100,7 +100,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       obj5.source = obj6;
       obj5.style = tmp.imageShared;
       obj5.enableAnimation = !stateFromStores;
-      tmp19Result = closure_11(tmp11(6020), obj5);
+      tmp19Result = closure_11(tmp11(6010), obj5);
     }
     const items4 = [tmp19Result, , , ];
     if (enabled) {
@@ -113,9 +113,9 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     items4[1] = enabled;
     const obj8 = { style: tmp.textContainer, children: null };
     const obj9 = { style: tmp.text, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: coachmarkComponent.header };
-    const items5 = [closure_11(markAsDismissed(5929).Heading, obj9), ];
+    const items5 = [closure_11(markAsDismissed(5919).Heading, obj9), ];
     const obj10 = { style: tmp.text, variant: "body-md/normal", color: "text-default", children: coachmarkComponent.body };
-    items5[1] = closure_11(markAsDismissed(5929).Text, obj10);
+    items5[1] = closure_11(markAsDismissed(5919).Text, obj10);
     obj8.children = items5;
     items4[2] = closure_12(closure_4, obj8);
     const obj11 = { grow: true, icon: null, text: null, onPress: null };
@@ -124,10 +124,10 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     const intl = markAsDismissed(1113).intl;
     obj11.text = intl.string(markAsDismissed(1113).t.Ve9Ge6);
     obj11.onPress = tmp17;
-    items4[3] = closure_11(markAsDismissed(5936).Button, obj11);
+    items4[3] = closure_11(markAsDismissed(5926).Button, obj11);
     obj4.children = items4;
     obj3.children = closure_12(closure_4, obj4);
-    tmp19Result2 = closure_11(markAsDismissed(5566).BottomSheet, obj3);
+    tmp19Result2 = closure_11(markAsDismissed(5556).BottomSheet, obj3);
   }
   return tmp19Result2;
 };

@@ -3,7 +3,7 @@
 // Module 13789 (conjureCreatorByline)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import UserUtils from "UserUtils" /* 5372 */;
+import UserUtils from "UserUtils" /* 5362 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/app_hover_card/conjureCreatorByline.tsx");

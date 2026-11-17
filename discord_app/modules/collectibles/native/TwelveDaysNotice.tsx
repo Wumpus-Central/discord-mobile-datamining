@@ -1,11 +1,11 @@
-// === Module 18530: TwelveDaysNotice ===
+// === Module 18532: TwelveDaysNotice ===
 
-// Module 18530 (TwelveDaysNotice)
+// Module 18532 (TwelveDaysNotice)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import useTrackImpression from "useTrackImpression" /* 6338 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import useTrackImpression from "useTrackImpression" /* 6328 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const colors = ["rgba(14, 56, 100, 0.7)", "rgba(6, 138, 185, 0.7)"];
-const TextVariantsFlat = fn(5930).TextVariantsFlat;
+const TextVariantsFlat = fn(5920).TextVariantsFlat;
 const found = TextVariantsFlat.find((name) => "body-sm/normal" === name.name);
 let lineHeight;
 if (found != null) {

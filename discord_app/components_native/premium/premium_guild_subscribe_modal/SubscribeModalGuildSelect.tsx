@@ -1,25 +1,25 @@
-// === Module 6955: SubscribeModalGuildSelect ===
+// === Module 6945: SubscribeModalGuildSelect ===
 
-// Module 6955 (SubscribeModalGuildSelect)
+// Module 6945 (SubscribeModalGuildSelect)
 import nativeDefault from "native" /* 575 */;
-import BoostingActionCreatorsAll from "BoostingActionCreators" /* 6952 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6962 */;
+import BoostingActionCreatorsAll from "BoostingActionCreators" /* 6942 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6952 */;
 import SearchBarNavDefault from "SearchBarNav" /* 14739 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_9 = fn(6954).PremiumGuildSubscribeModalScenes;
+let closure_9 = fn(6944).PremiumGuildSubscribeModalScenes;
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5306);
 let obj2 = { safeArea: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexGrow: 1, flexShrink: 1 }, guildList: { padding: 16 }, guildOption: { flexDirection: "row", alignItems: "center", paddingVertical: 10 }, guildName: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexGrow: 1, flexShrink: 1 };
-obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6961).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6951).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/SubscribeModalGuildSelect.tsx");

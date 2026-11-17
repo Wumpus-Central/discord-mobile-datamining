@@ -1,7 +1,7 @@
 // === Module 14213: AppealIngestionRequestSent ===
 
 // Module 14213 (AppealIngestionRequestSent)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 14208 */;
 import _modDef14214 from "module_14214" /* 14214 */;
 import noop from "module_19" /* 19 */;

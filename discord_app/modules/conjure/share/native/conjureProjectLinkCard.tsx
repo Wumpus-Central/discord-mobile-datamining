@@ -1,7 +1,7 @@
 // === Module 12441: conjureProjectLinkCard ===
 
 // Module 12441 (conjureProjectLinkCard)
-import UserUtils from "UserUtils" /* 5372 */;
+import UserUtils from "UserUtils" /* 5362 */;
 import ConjureMobileExperiment from "ConjureMobileExperiment" /* 10516 */;
 import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 12442 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;

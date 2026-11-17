@@ -1,14 +1,14 @@
-// === Module 20788: InviteSettingsModal ===
+// === Module 20791: InviteSettingsModal ===
 
-// Module 20788 (InviteSettingsModal)
+// Module 20791 (InviteSettingsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
 import Navigator from "Navigator" /* 7490 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 8471 */;
-import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 20789 */;
+import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 20792 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
@@ -71,7 +71,7 @@ function AdvancedInstantInviteScreen() {
     }
   }, items1);
   const tmp2Result = navigation(12);
-  const unmountEffect = navigation(5899).useUnmountEffect(() => {
+  const unmountEffect = navigation(5889).useUnmountEffect(() => {
     channel(8471).resetSettings();
   });
   const items2 = [channel];
@@ -122,7 +122,7 @@ function AdvancedInstantInviteScreen() {
   }, []);
   let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
   let obj5 = { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null };
-  const tmp2Result2 = navigation(5899);
+  const tmp2Result2 = navigation(5889);
   obj5.maxUsesOptions = channel(8463).getMaxUsesOptions;
   ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
   obj5.onChangeMaxAge = callback2;
@@ -130,7 +130,7 @@ function AdvancedInstantInviteScreen() {
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(20790), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
+  obj4.children = jsx(channel(20793), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
   return jsx(navigation(8106).Form, { contentContainerStyle: tmp.formContainer, children: null });
 }
 const Constants = fn(1072);

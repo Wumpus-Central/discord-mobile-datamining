@@ -57,7 +57,7 @@ let obj = {
             const HTTP = tmp3(1285).HTTP;
             const obj6 = { url: closure_1_7.PIN(closure_128_0, closure_129_1), rejectWithError: true };
             HTTP.put(obj6).catch((error) => {
-              const aPIError = new _private(6757).APIError(error);
+              const aPIError = new _private(6747).APIError(error);
               const code = aPIError.code;
               const intl = _private(1113).intl;
               const intl2 = _private(1113).intl;
@@ -119,8 +119,8 @@ let obj = {
               const obj2 = { title: stringResult3, body: stringResult1, confirmText: null };
               const intl17 = _private(1113).intl;
               obj2.confirmText = intl17.string(_private(1113).t.BddRzS);
-              channelName(6268).show(obj2);
-              const obj4 = channelName(6268);
+              channelName(6258).show(obj2);
+              const obj4 = channelName(6258);
             });
             c3 = 3;
             return { value: "HermesInternal", done: null };
@@ -187,7 +187,7 @@ let obj = {
               obj2.cancelText = intl4.string(closure_0(1113).t["ETE/oC"]);
               unpinMessage = unpinMessage.unpinMessage;
               obj2.onConfirm = unpinMessage.bind(unpinMessage, closure_1_0, closure_1_1);
-              return closure_1(6268).show(obj2);
+              return closure_1(6258).show(obj2);
             });
             c3 = 3;
             return { value: "HermesInternal", done: null };

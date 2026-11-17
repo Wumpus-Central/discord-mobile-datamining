@@ -2,7 +2,7 @@
 
 // Module 13654 (ConjureActivityBox)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import WarningIcon from "WarningIcon" /* 8160 */;
 import ConjureNativeStatusLineDefault from "ConjureNativeStatusLine" /* 13610 */;
 import ConjureSubagentMark from "ConjureSubagentMark" /* 13655 */;
@@ -205,7 +205,7 @@ function TimelineRow(inGutter) {
   let tmp4Result = null;
   if (null != node.durationMs) {
     let obj3 = { variant: "body-xs/normal", color: "text-subtle", children: node(13170).describeDuration(node.durationMs) };
-    tmp4Result = closure_6(node(5929).Text, obj3);
+    tmp4Result = closure_6(node(5919).Text, obj3);
     const tmp8Result = node(13170);
   }
   obj.trailing = tmp4Result;

@@ -2,7 +2,7 @@
 
 // Module 7449 (DragIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod7450 from "module_7450" /* 7450 */;
 import noop from "module_19" /* 19 */;
 

@@ -4,8 +4,8 @@
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import shared from "shared" /* 5313 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef15132 from "module_15132" /* 15132 */;
 import _modDef15133 from "module_15133" /* 15133 */;
 import noop from "module_19" /* 19 */;

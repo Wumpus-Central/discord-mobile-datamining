@@ -1,6 +1,6 @@
-// === Module 19443: ChannelDetails ===
+// === Module 19445: ChannelDetails ===
 
-// Module 19443 (ChannelDetails)
+// Module 19445 (ChannelDetails)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
@@ -17,12 +17,12 @@ import ChannelStore from "ChannelStore" /* 5155 */;
 const require = globalThis.__r;
 
 const _modDef1655 = tmp7(1655);
-const ChannelDetailsSearchBarDefault = tmp7(19445);
-const SearchScreenLayoutDefault = tmp7(19455);
-const ChannelDetailsNavigationBarDefault = tmp7(19572);
-const ChannelNameHeaderDefault = tmp7(19574);
-const ChannelDetailsLinkedLobbyDefault = tmp7(19576);
-const ChannelDetailsTopicDefault = tmp7(19577);
+const ChannelDetailsSearchBarDefault = tmp7(19447);
+const SearchScreenLayoutDefault = tmp7(19457);
+const ChannelDetailsNavigationBarDefault = tmp7(19574);
+const ChannelNameHeaderDefault = tmp7(19576);
+const ChannelDetailsLinkedLobbyDefault = tmp7(19578);
+const ChannelDetailsTopicDefault = tmp7(19579);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
@@ -100,10 +100,10 @@ export default noop.memo(function ChannelDetails(channelId) {
   let obj2 = require("initialize");
   const channelDetailsSearchContext = obj(14696).useChannelDetailsSearchContext(channelId, guild_id);
   const objResult = obj(14696);
-  const searchSuggestionsGesture = obj(19444).useSearchSuggestionsGesture(channelDetailsSearchContext);
+  const searchSuggestionsGesture = obj(19446).useSearchSuggestionsGesture(channelDetailsSearchContext);
   let tmp7 = importDefault;
   ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
-  const objResult6 = obj(19444);
+  const objResult6 = obj(19446);
   const tmp9 = nativeStackNavigation(channelId);
   closure_6 = tmp9;
   const tmp10 = ref(channelId);
@@ -113,7 +113,7 @@ export default noop.memo(function ChannelDetails(channelId) {
   nativeStackNavigation = obj(1502).useNativeStackNavigation();
   context = noop.useContext(obj(14850).SwipeForMemberListContext);
   const objResult7 = obj(1502);
-  const isScreenReaderEnabled = obj(5568).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = obj(5558).useIsScreenReaderEnabled();
   let isAndroidResult = useIsWindowLargeDefault();
   top = useSafeAreaInsetsDefault().top;
   const items2 = [top, context];
@@ -150,7 +150,7 @@ export default noop.memo(function ChannelDetails(channelId) {
       }
     }
   }, items3);
-  const objResult8 = obj(5568);
+  const objResult8 = obj(5558);
   sharedValue = obj(1655).useSharedValue(undefined);
   const items4 = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
@@ -168,7 +168,7 @@ export default noop.memo(function ChannelDetails(channelId) {
     }
   }, items4);
   const objResult9 = obj(1655);
-  const items5 = [closure_15, sharedValue, tmp9, obj(5548).withTiming, obj(5551).timingFast, obj(5939).withSpring, context];
+  const items5 = [closure_15, sharedValue, tmp9, obj(5538).withTiming, obj(5541).timingFast, obj(5929).withSpring, context];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -299,7 +299,7 @@ export default noop.memo(function ChannelDetails(channelId) {
       const obj14 = { channel: stateFromStores };
       const items14 = [tmp33(ChannelNameHeaderDefault, obj14), , , ];
       const obj15 = { channel: stateFromStores };
-      items14[1] = tmp33(obj(19575).PinotChannelDetailsLabel, obj15);
+      items14[1] = tmp33(obj(19577).PinotChannelDetailsLabel, obj15);
       const obj16 = { channel: stateFromStores, containerStyle: tmp.linkedLobby };
       items14[2] = tmp33(ChannelDetailsLinkedLobbyDefault, obj16);
       let tmp33Result5 = null;
@@ -318,14 +318,14 @@ export default noop.memo(function ChannelDetails(channelId) {
       const obj20 = { searchContext: channelDetailsSearchContext, width: componentWidth };
       obj19.children = tmp33(SearchScreenLayoutDefault, obj20);
       obj18.children = tmp33(tmp35, obj19);
-      items15[1] = tmp33(obj(6299).Freeze, obj18);
+      items15[1] = tmp33(obj(6289).Freeze, obj18);
       obj7.children = items15;
       tmp37 = obj7;
     }
     obj6.children = sharedValue(c4, tmp37);
-    obj6 = tmp33(obj(5598).GestureDetector, obj6);
+    obj6 = tmp33(obj(5588).GestureDetector, obj6);
     obj5.children = obj6;
-    obj5 = tmp33(obj(19444).SearchSuggestionsProvider, obj5);
+    obj5 = tmp33(obj(19446).SearchSuggestionsProvider, obj5);
     obj3.children = obj5;
     top(obj(7918).AnalyticsLocationProvider, obj3);
   }

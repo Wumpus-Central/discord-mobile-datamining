@@ -2,21 +2,21 @@
 
 // Module 16093 (VoiceMemberUser)
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6900 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6890 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 8136 */;
 import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8468 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 6369 */;
+import SoundboardStore from "SoundboardStore" /* 6359 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import CallStore from "CallStore" /* 7023 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 
 require = fn;
 function StreamingUserRow(user) {
@@ -341,7 +341,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
     const intl = tmp2(1113).intl;
     const items6 = ["\u00A0", intl.string(tmp2(1113).t["pFO/Ph"])];
     obj20.children = items6;
-    items5[1] = closure_13(tmp2(5929).Text, obj20);
+    items5[1] = closure_13(tmp2(5919).Text, obj20);
     obj19.children = items5;
     tmp36 = closure_13(closure_14, obj19);
   }
@@ -359,7 +359,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
     const obj24 = { variant: "body-xs/medium", color: "text-default", style: tmp4.autoDisabledVideoLabel, children: null };
     const intl3 = tmp2(1113).intl;
     obj24.children = intl3.string(tmp2(1113).t.m2Hyj0);
-    items7[1] = closure_12(tmp2(5929).Text, obj24);
+    items7[1] = closure_12(tmp2(5919).Text, obj24);
     obj22.children = items7;
     let stringResult = closure_13(id, obj22);
   } else {
@@ -390,8 +390,8 @@ const memoResult = noop.memo(function DisconnectedUserRow(user) {
     return hasItem;
   }, items1);
   const obj = id(504);
-  const name = id2(6351).getName(id2.guild_id, id2.id, id);
-  const obj2 = id2(6351);
+  const name = id2(6341).getName(id2.guild_id, id2.id, id);
+  const obj2 = id2(6341);
   const obj4 = {
     onPress() {
       return dependencyMap(id);

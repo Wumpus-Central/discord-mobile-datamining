@@ -1,9 +1,9 @@
-// === Module 18348: DevToolsGuildTagBadgesModal ===
+// === Module 18350: DevToolsGuildTagBadgesModal ===
 
-// Module 18348 (DevToolsGuildTagBadgesModal)
+// Module 18350 (DevToolsGuildTagBadgesModal)
 import HeaderShared from "HeaderShared" /* 9051 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10908 */;
-import DevToolsGuildTagBadgesScreenDefault from "DevToolsGuildTagBadgesScreen" /* 18349 */;
+import DevToolsGuildTagBadgesScreenDefault from "DevToolsGuildTagBadgesScreen" /* 18351 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

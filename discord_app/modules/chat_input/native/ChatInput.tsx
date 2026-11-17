@@ -658,17 +658,17 @@ class ChatInput {
       };
       obj.handlePressAction = function handlePressAction(arg0, arg1, current2) {
         if (constants.PHOTOS === arg1) {
-          const result = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-          const obj21 = c0(5554);
+          const result = c0(5544).triggerHapticFeedback(c0(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+          const obj21 = c0(5544);
           const obj4 = { type: constants3.ADD_BUTTON, channel_id: closure_1_20.props.current.channel.id, guild_id: closure_1_20.props.current.channel.guild_id };
           screenIndex(1256).track(constants2.CHAT_INPUT_COMPONENT_VIEWED, obj4);
           const obj22 = screenIndex(1256);
-          const keyboardType = c0(5503).getKeyboardType();
+          const keyboardType = c0(5493).getKeyboardType();
           if (keyboardType === c0(1628).KeyboardTypes.APP_LAUNCHER) {
             const obj5 = { type: c0(1628).KeyboardTypes.APP_LAUNCHER };
             memo2.handleToggleKeyboard(obj5);
           } else {
-            const keyboardType1 = c0(5503).getKeyboardType();
+            const keyboardType1 = c0(5493).getKeyboardType();
             if (keyboardType1 === c0(1628).KeyboardTypes.MEDIA) {
               const current = closure_1_20.chatInputActions.current;
               if (current != null) {
@@ -679,16 +679,16 @@ class ChatInput {
             const obj11 = { target: constants7.CHAT };
             obj8.context = obj11;
             memo2.handleToggleKeyboard(obj8);
-            const tmp42Result = c0(5503);
+            const tmp42Result = c0(5493);
           }
-          const obj24 = c0(5503);
+          const obj24 = c0(5493);
         } else {
           let tmp35 = current2;
           if (constants.APPS === arg1) {
-            const result1 = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj12 = c0(5554);
-            c0(6067).trackWithMetadata(constants2.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED);
-            const obj13 = c0(6067);
+            const result1 = c0(5544).triggerHapticFeedback(c0(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj12 = c0(5544);
+            c0(6057).trackWithMetadata(constants2.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED);
+            const obj13 = c0(6057);
             const obj15 = { type: constants3.APPS_BUTTON, channel_id: closure_1_20.props.current.channel.id, guild_id: closure_1_20.props.current.channel.guild_id };
             screenIndex(1256).track(constants2.CHAT_INPUT_COMPONENT_VIEWED, obj15);
             const obj14 = screenIndex(1256);
@@ -711,13 +711,13 @@ class ChatInput {
             memo2.handleToggleKeyboard(obj18);
             const tmp23Result = c0(13534);
           } else if (constants.ALL_PHOTOS === arg1) {
-            const result4 = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj9 = c0(5554);
+            const result4 = c0(5544).triggerHapticFeedback(c0(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj9 = c0(5544);
             const obj20 = {
               channel: closure_1_20.props.current.channel,
               uploadLimit,
               onDismissKeyboard() {
-                    return closure_1_0(5501).dismissKeyboard();
+                    return closure_1_0(5491).dismissKeyboard();
                   },
               onRestoreKeyboard() {
                     return closure_1_21.handleToggleKeyboard({ type: closure_0(1628).KeyboardTypes.SYSTEM });
@@ -730,13 +730,13 @@ class ChatInput {
             c0(11635).handleViewAllDialog(obj20);
             const obj10 = c0(11635);
           } else if (constants.CAMERA === arg1) {
-            const result5 = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj6 = c0(5554);
+            const result5 = c0(5544).triggerHapticFeedback(c0(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj6 = c0(5544);
             const obj23 = {
               channel: closure_1_20.props.current.channel,
               previewType: constants6.CAMERA_BUTTON,
               onDismissKeyboard() {
-                    return closure_1_0(5501).dismissKeyboard();
+                    return closure_1_0(5491).dismissKeyboard();
                   },
               onRestoreKeyboard() {
                     return closure_1_21.handleToggleKeyboard({ type: closure_0(1628).KeyboardTypes.SYSTEM });
@@ -750,31 +750,31 @@ class ChatInput {
           } else if (constants.NITRO_GIFT === arg1) {
             const result6 = screenIndex(2019).markPotentialBadState();
             const obj = screenIndex(2019);
-            const result7 = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj2 = c0(5554);
+            const result7 = c0(5544).triggerHapticFeedback(c0(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj2 = c0(5544);
             if (obj3.isAndroid()) {
-              c0(5501).dismissKeyboard();
-              const tmp5Result = c0(5501);
+              c0(5491).dismissKeyboard();
+              const tmp5Result = c0(5491);
             }
             obj3 = c0(1380);
             c0(11635).handleSelectGift(closure_1_20.props.current.analyticsLocations, closure_1_20.chatInput, tmp35);
             const tmp5Result2 = c0(11635);
           } else if (constants.THREAD === arg1) {
-            const result8 = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj28 = c0(5554);
+            const result8 = c0(5544).triggerHapticFeedback(c0(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj28 = c0(5544);
             c0(11635).handleSelectThread(closure_1_20.props.current.channel, closure_1_20.chatInput);
             const obj29 = c0(11635);
           }
         }
       };
       obj.handlePollsPress = function handlePollsPress() {
-        const result = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = c0(5554);
+        const result = c0(5544).triggerHapticFeedback(c0(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = c0(5544);
         screenIndex(1256).track(constants2.CHAT_INPUT_COMPONENT_VIEWED, { type: constants3.POLLS, channel_id: closure_1_20.props.current.channel.id, guild_id: closure_1_20.props.current.channel.guild_id });
         const obj2 = screenIndex(1256);
         const obj3 = { type: constants3.POLLS, channel_id: closure_1_20.props.current.channel.id, guild_id: closure_1_20.props.current.channel.guild_id };
-        c0(5501).dismissKeyboard();
-        const obj4 = c0(5501);
+        c0(5491).dismissKeyboard();
+        const obj4 = c0(5491);
         c0(13537).openCreatePollModal({
           channel: closure_1_20.props.current.channel,
           onCancel() {
@@ -783,8 +783,8 @@ class ChatInput {
         });
       };
       obj.handleAttachPress = function handleAttachPress() {
-        const result = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = c0(5554);
+        const result = c0(5544).triggerHapticFeedback(c0(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = c0(5544);
         c0(11635).handleAttachFile({
           channel: closure_1_20.props.current.channel,
           uploadLimit,
@@ -808,8 +808,8 @@ class ChatInput {
         }
         let type = arg0;
         if (arg0 == null) {
-          type = c0(5503).getKeyboardContextForType(c0(1628).KeyboardTypes.EXPRESSION).type;
-          const tmpResult = c0(5503);
+          type = c0(5493).getKeyboardContextForType(c0(1628).KeyboardTypes.EXPRESSION).type;
+          const tmpResult = c0(5493);
         }
         const obj2 = { type: c0(1628).KeyboardTypes.EXPRESSION, context: null };
         const obj3 = { type, suggestedEmojis: null };
@@ -946,7 +946,7 @@ class ChatInput {
             const current = closure_1_20.chatInput.current;
             current.openCustomKeyboard(type);
           }
-          tmp4Result = c0(5503);
+          tmp4Result = c0(5493);
         }
         const current2 = closure_1_20.chatInput.current;
         current2.openSystemKeyboard();

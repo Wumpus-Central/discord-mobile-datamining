@@ -1,20 +1,20 @@
-// === Module 20584: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 20587: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 20584 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 20587 (GuildSettingsRoleEditConnectionConfiguration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import shared from "shared" /* 5313 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import PlatformsDefault from "Platforms" /* 7087 */;
 import Pressables from "Pressables" /* 7428 */;
 import TableRow from "TableRow" /* 7443 */;
 import XSmallIcon from "XSmallIcon" /* 7549 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 12480 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 20585 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 20588 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -175,7 +175,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(20585).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(20588).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -183,9 +183,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(20585);
-  const tmpResult = metadataField(20585);
-  str1 = metadataField(20585).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(20588);
+  const tmpResult = metadataField(20588);
+  str1 = metadataField(20588).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -261,7 +261,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       obj5.children = onInputValueChange(metadataField(1187).TextInput, obj6, metadataField);
       let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer"), ];
       const obj7 = { variant: "body-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(5929).Text, obj7);
+      items1[1] = onInputValueChange(metadataField(5919).Text, obj7);
       obj4.children = items1;
       tmp21Result = closure_13(tmp22, obj4);
     }
@@ -299,7 +299,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
     };
     return onInputValueChange(metadataField(7954).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(20585).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(20588).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);

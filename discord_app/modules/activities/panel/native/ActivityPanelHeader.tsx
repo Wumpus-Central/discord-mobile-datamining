@@ -1,18 +1,18 @@
-// === Module 19933: ActivityPanelHeader ===
+// === Module 19935: ActivityPanelHeader ===
 
-// Module 19933 (ActivityPanelHeader)
+// Module 19935 (ActivityPanelHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import native from "native" /* 5377 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import native from "native" /* 5367 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7259 */;
-import LeaveActivityButtonDefault from "LeaveActivityButton" /* 19780 */;
-import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19930 */;
-import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 19934 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 19935 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19939 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19940 */;
+import LeaveActivityButtonDefault from "LeaveActivityButton" /* 19782 */;
+import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19932 */;
+import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 19936 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 19937 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19941 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19942 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
@@ -136,7 +136,7 @@ class BaseActivityPanelContent {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(5959);
+const ActivityPanelConstants = fn(5949);
 ({ ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9, ActivityPanelModes: closure_10 } = ActivityPanelConstants);
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
@@ -227,7 +227,7 @@ export default noop.memo(function ActivityPanelHeader() {
   let wrapperDimensions;
   const tmp2 = closure_14();
   const headerContainer = tmp2;
-  const context = noop.useContext(wrapperDimensions(19925));
+  const context = noop.useContext(wrapperDimensions(19927));
   wrapperDimensions = context.wrapperDimensions;
   items = [tmp2.headerContainer, wrapperDimensions.isWindowLandscape];
   ({ setMode, wrapperOffset, pipState } = context);

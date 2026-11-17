@@ -1,6 +1,6 @@
-// === Module 17956: useDisplayNameStylesHandleApply ===
+// === Module 17958: useDisplayNameStylesHandleApply ===
 
-// Module 17956 (useDisplayNameStylesHandleApply)
+// Module 17958 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -181,7 +181,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                             const obj15 = { perks: null, content: null, contentSurface: null };
                             items = [constants2.DISPLAY_NAME_STYLE];
                             obj15.perks = items;
-                            obj15.content = displayNameStyles(5341).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
+                            obj15.content = displayNameStyles(6957).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
                             obj15.contentSurface = displayNameStyles(17085).HexagonCampaignContentSurface.USER_PROFILE;
                             const result2 = displayNameStyles(17085).trackHexagonCampaignPerkAction(obj15);
                             const obj = displayNameStyles(17085);

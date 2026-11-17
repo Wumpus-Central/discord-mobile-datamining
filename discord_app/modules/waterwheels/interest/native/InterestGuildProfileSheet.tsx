@@ -1,17 +1,17 @@
-// === Module 19014: InterestGuildProfileSheet ===
+// === Module 19016: InterestGuildProfileSheet ===
 
-// Module 19014 (InterestGuildProfileSheet)
+// Module 19016 (InterestGuildProfileSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
-import BottomSheetModal from "BottomSheetModal" /* 5570 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5901 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5556 */;
+import BottomSheetModal from "BottomSheetModal" /* 5560 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5891 */;
 import GuildProfileSheetBodyDefault from "GuildProfileSheetBody" /* 10656 */;
-import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 19017 */;
+import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 19019 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,10 +47,10 @@ export default function InterestGuildProfileSheet(guildId) {
   let onLayout2;
   colors = undefined;
   const tmp3 = useThemeDefault();
-  const backgroundColor = guildId(5902).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp3);
-  let obj = guildId(5902);
-  const token = guildId(5902).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
-  let obj2 = guildId(5902);
+  const backgroundColor = guildId(5892).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp3);
+  let obj = guildId(5892);
+  const token = guildId(5892).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  let obj2 = guildId(5892);
   const bottomSheetRef1 = guildId(8559).useBottomSheetRef();
   const bottomSheetRef = bottomSheetRef1.bottomSheetRef;
   const bottomSheetClose = bottomSheetRef1.bottomSheetClose;
@@ -66,7 +66,7 @@ export default function InterestGuildProfileSheet(guildId) {
   }
   obj6.footerHeight = sum;
   obj6.safeAreaBottom = bottom;
-  interestGuildProfileSheetLayout = guildId(19015).getInterestGuildProfileSheetLayout(obj6);
+  interestGuildProfileSheetLayout = guildId(19017).getInterestGuildProfileSheetLayout(obj6);
   closure_12 = c9(bottom, interestGuildProfileSheetLayout.reservedBottom);
   onLayout = noop.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.height);

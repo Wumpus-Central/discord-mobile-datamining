@@ -49,7 +49,7 @@ export default function MessageGameIconActionSheet(applicationId) {
     const items1 = [closure_6(tmp2(1187).Icon, obj4), ];
     const obj7 = { style: tmp.gameDescriptionWrapper, children: null };
     const obj8 = { style: tmp.timestamp, variant: "body-xs/medium", color: "text-muted", children: applicationId.messageTimestamp };
-    const items2 = [closure_6(tmp2(5929).Text, obj8), ];
+    const items2 = [closure_6(tmp2(5919).Text, obj8), ];
     const obj9 = { variant: "body-sm/medium", children: null };
     const intl = tmp2(1113).intl;
     const obj10 = { applicationName: stateFromStores.name };
@@ -58,13 +58,13 @@ export default function MessageGameIconActionSheet(applicationId) {
     const obj11 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
     items3[2] = intl2.format(tmp2(1113).t.BPDKoA, obj11);
     obj9.children = items3;
-    items2[1] = closure_7(tmp2(5929).Text, obj9);
+    items2[1] = closure_7(tmp2(5919).Text, obj9);
     obj7.children = items2;
     items1[1] = closure_7(View, obj7);
     obj3.children = items1;
     obj2.children = closure_7(View, obj3);
     obj5.children = closure_6(View, obj2);
-    tmp5Result = closure_6(tmp2(5566).BottomSheet, obj5);
+    tmp5Result = closure_6(tmp2(5556).BottomSheet, obj5);
   }
   return tmp5Result;
 };

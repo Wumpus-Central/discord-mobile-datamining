@@ -1,7 +1,7 @@
 // === Module 15058: ChairIllocon ===
 
 // Module 15058 (ChairIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef15059 from "module_15059" /* 15059 */;
 import _modDef15060 from "module_15060" /* 15060 */;

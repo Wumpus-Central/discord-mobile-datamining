@@ -1,7 +1,7 @@
 // === Module 13047: VoicePanelRiveMicButton ===
 
 // Module 13047 (VoicePanelRiveMicButton)
-import MicrophoneRive from "MicrophoneRive" /* 5465 */;
+import MicrophoneRive from "MicrophoneRive" /* 5455 */;
 import IconSize from "IconSize" /* 7638 */;
 import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 10604 */;
 import MicrophoneIcon2 from "MicrophoneIcon" /* 13048 */;

@@ -2,7 +2,7 @@
 
 // Module 11149 (LockUnlockedIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11150 from "module_11150" /* 11150 */;
 import noop from "module_19" /* 19 */;
 

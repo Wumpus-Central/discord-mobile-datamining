@@ -1,23 +1,23 @@
-// === Module 19206: VoicePanelDockControls ===
+// === Module 19208: VoicePanelDockControls ===
 
-// Module 19206 (VoicePanelDockControls)
+// Module 19208 (VoicePanelDockControls)
 import native from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6935 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6925 */;
 import IconButton from "IconButton" /* 7988 */;
 import _modDef9105 from "module_9105" /* 9105 */;
 import _modDef10727 from "module_10727" /* 10727 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
 import VoiceActionUtils from "VoiceActionUtils" /* 13046 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19204 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 19207 */;
-import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton" /* 19227 */;
-import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim" /* 19230 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19206 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 19209 */;
+import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton" /* 19229 */;
+import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim" /* 19232 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import VoicePanelStore from "VoicePanelStore" /* 6901 */;
+import VoicePanelStore from "VoicePanelStore" /* 6891 */;
 
 const nativeDefault = native;
 const useSoundboardConfigDefault = useSoundboardConfig;

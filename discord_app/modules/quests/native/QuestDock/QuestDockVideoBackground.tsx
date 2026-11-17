@@ -1,18 +1,18 @@
-// === Module 17803: QuestDockVideoBackground ===
+// === Module 17808: QuestDockVideoBackground ===
 
-// Module 17803 (QuestDockVideoBackground)
+// Module 17808 (QuestDockVideoBackground)
 import _modDef671 from "module_671" /* 671 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2025 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11253 */;
 import QuestDockUtils from "QuestDockUtils" /* 17697 */;
 import QuestDockGestureContext from "QuestDockGestureContext" /* 17699 */;
 import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17783 */;
-import useIsQuestDockModeActiveOrExitingDefault from "useIsQuestDockModeActiveOrExiting" /* 17804 */;
+import useIsQuestDockModeActiveOrExitingDefault from "useIsQuestDockModeActiveOrExiting" /* 17809 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
@@ -53,7 +53,7 @@ function QuestDockBackgroundMediaFade(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-let QuestDockMode = fn(5338).QuestDockMode;
+let QuestDockMode = fn(6954).QuestDockMode;
 const QuestDockConstants = fn(17698);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_10 } = QuestDockConstants);
 const VerticalGradient = fn(1072).VerticalGradient;
@@ -295,7 +295,7 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
       obj7.style = items11;
       const obj8 = { uri: imageUrl };
       obj7.source = obj8;
-      obj6.children = closure_12(tmp7(6020), obj7);
+      obj6.children = closure_12(tmp7(6010), obj7);
       tmp48 = closure_12(tmp7(1655).View, obj6);
     } else {
       tmp48 = null;

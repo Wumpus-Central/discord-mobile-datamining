@@ -1,12 +1,12 @@
-// === Module 17940: MessagePreviewManager ===
+// === Module 17942: MessagePreviewManager ===
 
-// Module 17940 (MessagePreviewManager)
+// Module 17942 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 17941 */;
+import RemoteFetchData from "RemoteFetchData" /* 17943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 16220 */;

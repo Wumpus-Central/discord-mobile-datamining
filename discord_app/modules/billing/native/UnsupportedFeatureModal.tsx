@@ -1,7 +1,7 @@
 // === Module 11746: UnsupportedFeatureModal ===
 
 // Module 11746 (UnsupportedFeatureModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -27,7 +27,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
       const obj2 = { variant: "body-lg/normal", color: "text-default", children: null };
       const intl = onDismiss(1113).intl;
       obj2.children = intl.string(onDismiss(1113).t.I22zuX);
-      obj.children = jsx(onDismiss(5929).Text, { variant: "body-lg/normal", color: "text-default", children: null });
+      obj.children = jsx(onDismiss(5919).Text, { variant: "body-lg/normal", color: "text-default", children: null });
       return <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }}>{null}</View>;
     }
   };

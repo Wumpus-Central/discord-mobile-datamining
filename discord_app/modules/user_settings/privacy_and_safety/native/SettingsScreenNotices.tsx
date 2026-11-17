@@ -2,9 +2,9 @@
 
 // Module 17342 (SettingsScreenNotices)
 import nativeDefault from "native" /* 575 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5995 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6830 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6835 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5985 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6820 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6825 */;
 import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 17343 */;
 import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 17352 */;
 import noop from "module_19" /* 19 */;

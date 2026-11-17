@@ -1,7 +1,7 @@
 // === Module 11732: carouselMediaItems ===
 
 // Module 11732 (carouselMediaItems)
-import StoreUtils from "StoreUtils" /* 6766 */;
+import StoreUtils from "StoreUtils" /* 6756 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7244 */;
 import size from "module_2" /* 2 */;
 

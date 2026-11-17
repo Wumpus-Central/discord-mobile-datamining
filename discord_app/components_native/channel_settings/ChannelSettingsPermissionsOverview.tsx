@@ -1,6 +1,6 @@
-// === Module 19688: ChannelSettingsPermissionsOverview ===
+// === Module 19690: ChannelSettingsPermissionsOverview ===
 
-// Module 19688 (ChannelSettingsPermissionsOverview)
+// Module 19690 (ChannelSettingsPermissionsOverview)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -10,8 +10,8 @@ import TableRow from "TableRow" /* 7443 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10929 */;
 import RoleLabel from "RoleLabel" /* 11241 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17933 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 19689 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17935 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 19691 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -32,10 +32,10 @@ function ChannelPermissionSyncModule(channel) {
     obj2.title = intl.string(channel(1113).t.YWMtRe);
     const intl2 = channel(1113).intl;
     let obj3 = { channelName: null, categoryName: null };
-    let obj = category(6268);
-    obj3.channelName = channel(5954).computeChannelName(closure_0, UserStore, RelationshipStore, true);
-    let obj4 = channel(5954);
-    obj3.categoryName = channel(5954).computeChannelName(category, UserStore, RelationshipStore);
+    let obj = category(6258);
+    obj3.channelName = channel(5944).computeChannelName(closure_0, UserStore, RelationshipStore, true);
+    let obj4 = channel(5944);
+    obj3.categoryName = channel(5944).computeChannelName(category, UserStore, RelationshipStore);
     obj2.body = intl2.format(channel(1113).t["iKW+jY"], obj3);
     const intl3 = channel(1113).intl;
     obj2.confirmText = intl3.string(channel(1113).t.eW8Gy4);
@@ -114,7 +114,7 @@ function ChannelPermissionSyncModule(channel) {
     obj.show(obj2);
   }, items);
   const tmp = closure_18();
-  const channelName = channel(5954).computeChannelName(category, UserStore, RelationshipStore);
+  const channelName = channel(5944).computeChannelName(category, UserStore, RelationshipStore);
   let obj2 = { style: tmp.tableRowGroupContainer, children: null };
   let intl = channel(1113).intl;
   const formatToPlainString = intl.formatToPlainString;

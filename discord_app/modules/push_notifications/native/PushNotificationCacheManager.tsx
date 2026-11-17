@@ -1,6 +1,6 @@
-// === Module 20380: PushNotificationCacheManager ===
+// === Module 20383: PushNotificationCacheManager ===
 
-// Module 20380 (PushNotificationCacheManager)
+// Module 20383 (PushNotificationCacheManager)
 import PushNotificationDefault from "PushNotification" /* 12920 */;
 import MultiAccountStore from "MultiAccountStore" /* 14829 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -42,7 +42,7 @@ const prototype = function PushNotificationCacheManager() {
       } else {
         obj4 = {};
         const item = validUsers.forEach((id) => {
-          obj4[id.id] = applyArgumentsResult(5372).getUserTag(id, { identifiable: "always" });
+          obj4[id.id] = applyArgumentsResult(5362).getUserTag(id, { identifiable: "always" });
         });
         obj3 = obj4;
       }

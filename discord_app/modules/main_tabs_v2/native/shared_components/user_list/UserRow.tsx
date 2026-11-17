@@ -7,10 +7,10 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import utils_StringUtils from "utils/StringUtils" /* 2154 */;
-import UserUtils from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
+import UserUtils from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7738 */;
 import ChatIcon from "ChatIcon" /* 8069 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
@@ -29,7 +29,7 @@ import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import FriendSuggestionStore from "FriendSuggestionStore" /* 8767 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 
 const UserUtilsDefault = UserUtils;
@@ -241,11 +241,11 @@ export default noop.memo(function UserRow(type) {
             location: isMobileOnline,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(6014).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(6014);
+                const result = type(6004).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(6004);
               } else {
-                const result1 = type(6014).presentFriendRequestAcceptedToast();
-                obj = type(6014);
+                const result1 = type(6004).presentFriendRequestAcceptedToast();
+                obj = type(6004);
               }
             }
           });
@@ -410,11 +410,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
             if (null != closure_0) {
-              const result = type(6014).presentGameFriendRequestAcceptedToast();
-              const obj2 = type(6014);
+              const result = type(6004).presentGameFriendRequestAcceptedToast();
+              const obj2 = type(6004);
             } else {
-              const result1 = type(6014).presentFriendRequestAcceptedToast();
-              obj = type(6014);
+              const result1 = type(6004).presentFriendRequestAcceptedToast();
+              obj = type(6004);
             }
           }
       };

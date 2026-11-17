@@ -1,15 +1,15 @@
-// === Module 20929: TTITestAction ===
+// === Module 20932: TTITestAction ===
 
-// Module 20929 (TTITestAction)
+// Module 20932 (TTITestAction)
 import LoggerDefault from "Logger" /* 3 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1374 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5499 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 20293 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5489 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 20296 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ExperimentStore from "ExperimentStore" /* 5532 */;
+import ExperimentStore from "ExperimentStore" /* 5522 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 5353 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5343 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
@@ -192,7 +192,7 @@ let closure_20 = async function _captureNavigationTTI(arg0) {
   }
 };
 function resetNavigationToDMs() {
-  return closure_0(5492).navigateToRootTab({ screen: "guilds", guildId, resetRoot: true, forceNavigate: true, drawerOpen: false });
+  return closure_0(5482).navigateToRootTab({ screen: "guilds", guildId, resetRoot: true, forceNavigate: true, drawerOpen: false });
 }
 let closure_22 = async function _navigateToDMs() {
   await new Promise((arg0) => closure_1_6(arg0));
@@ -866,13 +866,13 @@ let closure_27 = async function _apiLogin(arg0) {
         items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
           obj = password(572);
-          const f146830 = () => {
+          const f146847 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f146830(arg0);
+            return f146847(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -882,7 +882,7 @@ let closure_27 = async function _apiLogin(arg0) {
           continue;
         }
         closure_1_28(password(572), "LOGIN_SUCCESS", (token) => closure_0(token.token));
-        password(6844).login({ login, password });
+        password(6834).login({ login, password });
       });
       c6 = 1;
       c7 = 1;
@@ -900,11 +900,11 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f146830(arg0);
+    return f146847(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(20132).applicationReady;
+const applicationReady = fn(20134).applicationReady;
 fn(7661).addPostConnectionCallback;
 const Constants = fn(1072);
 ({ ME: closure_11, Routes: closure_12 } = Constants);

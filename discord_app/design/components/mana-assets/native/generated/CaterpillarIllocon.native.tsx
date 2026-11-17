@@ -1,7 +1,7 @@
 // === Module 13676: CaterpillarIllocon ===
 
 // Module 13676 (CaterpillarIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef13677 from "module_13677" /* 13677 */;
 import _modDef13678 from "module_13678" /* 13678 */;

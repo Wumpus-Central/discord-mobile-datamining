@@ -1,13 +1,13 @@
-// === Module 20515: HeaderRow ===
+// === Module 20518: HeaderRow ===
 
-// Module 20515 (HeaderRow)
+// Module 20518 (HeaderRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 20509 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 20512 */;
 
 require = fn;
 function HeaderRow(guild) {
@@ -209,23 +209,23 @@ function HeaderRow(guild) {
     const intl5 = tmp7(1113).intl;
     obj8.text = intl5.string(tmp7(1113).t["DU0dy/"]);
     obj8.disabled = uploadDisabled;
-    canCreateExpressions = closure_13(tmp7(5936).Button, obj8);
+    canCreateExpressions = closure_13(tmp7(5926).Button, obj8);
   }
   const items1 = [canCreateExpressions, , ];
   let tmp13Result = null != tmp5;
   if (tmp13Result) {
     let obj9 = { style: tmp.errorText, variant: "body-sm/medium", color: "text-feedback-critical", children: tmp5 };
-    tmp13Result = closure_13(tmp7(5929).Text, obj9);
+    tmp13Result = closure_13(tmp7(5919).Text, obj9);
   }
   const obj10 = { children: null };
   items1[1] = tmp13Result;
   let obj11 = { style: tmp.uploadInstructionsContainer, children: null };
-  const items2 = [closure_13(guild(5929).Text, { variant: "body-sm/medium", color: "text-muted", children: description }), , ];
+  const items2 = [closure_13(guild(5919).Text, { variant: "body-sm/medium", color: "text-muted", children: description }), , ];
   const obj12 = { variant: "body-xs/semibold", color: "text-muted", style: tmp.uploadInstructionsHeading, children: null };
   const intl6 = tmp7(1113).intl;
   const stringResult2 = intl4.string(guild(1113).t["8Vr5Qd"]);
   obj12.children = intl6.string(guild(1113).t.jrXfyw).toUpperCase();
-  items2[1] = closure_13(guild(5929).Text, obj12);
+  items2[1] = closure_13(guild(5919).Text, obj12);
   const str = intl6.string(guild(1113).t.jrXfyw);
   items2[2] = closure_13(c6, {
     style: tmp.uploadInstructionsList,

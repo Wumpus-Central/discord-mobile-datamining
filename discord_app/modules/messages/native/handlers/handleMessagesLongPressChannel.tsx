@@ -1,7 +1,7 @@
 // === Module 12503: handleMessagesLongPressChannel ===
 
 // Module 12503 (handleMessagesLongPressChannel)
-import ChannelUtils from "ChannelUtils" /* 6356 */;
+import ChannelUtils from "ChannelUtils" /* 6346 */;
 import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 12504 */;
 import size from "module_2" /* 2 */;
 

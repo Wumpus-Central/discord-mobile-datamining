@@ -2,7 +2,7 @@
 
 // Module 12848 (EmbeddedActivityView)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12747 */;
 import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 12849 */;
 import activityWebViewController from "activityWebViewController" /* 12852 */;

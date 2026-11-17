@@ -1,9 +1,9 @@
-// === Module 18367: CollectiblesTool ===
+// === Module 18369: CollectiblesTool ===
 
-// Module 18367 (CollectiblesTool)
+// Module 18369 (CollectiblesTool)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import BaseTextButton from "BaseTextButton" /* 5937 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import BaseTextButton from "BaseTextButton" /* 5927 */;
 import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 10020 */;
 import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 10416 */;
 import actions_GiftCodeActionCreators from "actions/GiftCodeActionCreators" /* 12381 */;

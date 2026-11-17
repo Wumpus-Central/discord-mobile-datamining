@@ -4,9 +4,9 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import TwoFASetupModal from "TwoFASetupModal" /* 17282 */;
 import _mod17293 from "module_17293" /* 17293 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -82,7 +82,7 @@ export default function TwoFASetupSuccess() {
               const intl = setRegistering(1113).intl;
               c5 = 3;
               c6 = 1;
-              const obj5 = { value: setRegistering(6852).finishRegisterWebAuthnCredential(intl.string(setRegistering(1113).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
+              const obj5 = { value: setRegistering(6842).finishRegisterWebAuthnCredential(intl.string(setRegistering(1113).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
               return obj5;
             }
           } else {

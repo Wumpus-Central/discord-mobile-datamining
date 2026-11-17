@@ -62,7 +62,7 @@ class OrbChallengesStore extends Store {
     };
     tmp21 = new tmp2(closure_1(closure_2[3]), obj, new.target, tmp2, tmp, new.target);
     closure_0 = tmp21;
-    tmp21.state = { challenges: [], isFetchingChallenges: false, hasFetchedChallenges: false, fetchChallengesError: null, isClaimingChallengeMap: {}, claimChallengeErrorMap: {}, orbRewardMultiplier: null, nitroGatedOrbMultiplier: null, achievementUnreadState: null, lastFetchedPremiumType: "Path", userOpenedWalletViaProfileDCF: "clientReleaseChannel" };
+    tmp21.state = { challenges: [], isFetchingChallenges: false, hasFetchedChallenges: false, fetchChallengesError: null, isClaimingChallengeMap: {}, claimChallengeErrorMap: {}, orbRewardMultiplier: null, nitroGatedOrbMultiplier: null, achievementUnreadState: null, lastFetchedPremiumType: "Path", userOpenedWalletViaProfileDCF: "userIp" };
     tmp21.challengesForOrbWalletCache = null;
     return tmp21;
   }
@@ -96,7 +96,7 @@ prototype["handleCurrentUserPremiumTypeChange"] = function handleCurrentUserPrem
   }
 };
 prototype["handleReset"] = function handleReset() {
-  this.state = { challenges: [], isFetchingChallenges: false, hasFetchedChallenges: false, fetchChallengesError: null, isClaimingChallengeMap: {}, claimChallengeErrorMap: {}, orbRewardMultiplier: null, nitroGatedOrbMultiplier: null, achievementUnreadState: null, lastFetchedPremiumType: "Path", userOpenedWalletViaProfileDCF: "clientReleaseChannel" };
+  this.state = { challenges: [], isFetchingChallenges: false, hasFetchedChallenges: false, fetchChallengesError: null, isClaimingChallengeMap: {}, claimChallengeErrorMap: {}, orbRewardMultiplier: null, nitroGatedOrbMultiplier: null, achievementUnreadState: null, lastFetchedPremiumType: "Path", userOpenedWalletViaProfileDCF: "userIp" };
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   const hasFetchedChallenges = this.state.hasFetchedChallenges;

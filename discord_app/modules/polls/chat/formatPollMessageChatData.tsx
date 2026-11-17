@@ -7,14 +7,14 @@ import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5225 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5244 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 5256 */;
-import _mod6788 from "module_6788" /* 6788 */;
+import _mod6778 from "module_6778" /* 6778 */;
 import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 10406 */;
 import PollLayoutTypes from "PollLayoutTypes" /* 12659 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import EmojiStore from "EmojiStore" /* 6969 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -282,7 +282,7 @@ export default function formatPollMessageChatData(poll, arg1) {
             tmp6 = flag;
           }
           let tmp7 = isExpired;
-          const match = _mod6788.match({ didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults });
+          const match = _mod6778.match({ didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults });
           obj = { didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults };
           const withResult = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected");
           const withResult1 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected");
@@ -323,7 +323,7 @@ export default function formatPollMessageChatData(poll, arg1) {
             obj2.shouldAnimateTransition = tmp20;
             const _Math = Math;
             obj2.votesPercentage = Math.round(100 * num2);
-            const match1 = _mod6788.match(layout_type);
+            const match1 = _mod6778.match(layout_type);
             obj2.votes = match1.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")").otherwise(() => {
               const intl = flag(layout_type[17]).intl;
               return intl.formatToPlainString(flag(layout_type[17]).t.XRkuof, { count: num });

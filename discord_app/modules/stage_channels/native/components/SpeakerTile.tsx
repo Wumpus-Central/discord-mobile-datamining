@@ -9,7 +9,7 @@ import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 
 require = fn;
 const View = fn(17).View;
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let obj = { FULL: 212, [212]: "FULL", HALF: 112, [112]: "HALF", THIRD: 112, [112]: "THIRD" };

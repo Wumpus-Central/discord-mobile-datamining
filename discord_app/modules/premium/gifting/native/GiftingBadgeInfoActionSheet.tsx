@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef2797 from "module_2797" /* 2797 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11678 */;
 import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11680 */;
 import noop from "module_19" /* 19 */;

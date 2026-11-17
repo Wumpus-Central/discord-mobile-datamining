@@ -6,7 +6,7 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import SetUtils from "SetUtils" /* 5172 */;
 import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7039 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 
 require = fn;

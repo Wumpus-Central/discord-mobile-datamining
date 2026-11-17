@@ -3,7 +3,7 @@
 // Module 9153 (ConversationListScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9124 */;
 import ConversationListItemDefault from "ConversationListItem" /* 9154 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -23,7 +23,7 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const ConversationConstants = fn(5957);
+const ConversationConstants = fn(5947);
 ({ MAX_CONVERSATIONS_PER_CHANNEL: closure_9, MOBILE_FETCH_LIMIT: closure_10, MOBILE_PREVIEW_MESSAGE_COUNT: closure_11 } = ConversationConstants);
 const jsx = fn(21).jsx;
 const viewabilityConfig = { waitForInteraction: false, itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };

@@ -1,7 +1,7 @@
 // === Module 8152: AppChannelApplicationActionSheet ===
 
 // Module 8152 (AppChannelApplicationActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8151 */;
 import getAppChannelApplicationUnsupportedTextDefault from "getAppChannelApplicationUnsupportedText" /* 8153 */;
 import noop from "module_19" /* 19 */;

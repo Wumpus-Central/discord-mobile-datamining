@@ -1,9 +1,9 @@
-// === Module 19946: FramePanelContainer ===
+// === Module 19948: FramePanelContainer ===
 
-// Module 19946 (FramePanelContainer)
+// Module 19948 (FramePanelContainer)
 import WakeLockDefault from "WakeLock" /* 12894 */;
-import FramePanelControllerDefault from "FramePanelController" /* 19947 */;
-import FramePanelUIDefault from "FramePanelUI" /* 19949 */;
+import FramePanelControllerDefault from "FramePanelController" /* 19949 */;
+import FramePanelUIDefault from "FramePanelUI" /* 19951 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 7019 */;
 

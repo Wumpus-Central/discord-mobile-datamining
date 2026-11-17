@@ -6,7 +6,7 @@ import CheckpointPressableDefault from "CheckpointPressable" /* 14491 */;
 import noop from "module_19" /* 19 */;
 
 const Pressable = fn(17).Pressable;
-const CheckpointConstants = fn(6377);
+const CheckpointConstants = fn(6367);
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_BUTTON_DISABLED_BORDER_MOBILE, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);

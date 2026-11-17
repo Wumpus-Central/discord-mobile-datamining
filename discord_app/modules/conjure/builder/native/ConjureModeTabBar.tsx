@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import useStateFromSharedValue from "useStateFromSharedValue" /* 11253 */;
 import noop from "module_19" /* 19 */;
 

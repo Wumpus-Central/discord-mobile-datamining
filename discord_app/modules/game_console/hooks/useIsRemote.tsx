@@ -2,7 +2,7 @@
 
 // Module 12737 (useIsRemote)
 import initialize from "initialize" /* 504 */;
-import GameConsoleStore from "GameConsoleStore" /* 6072 */;
+import GameConsoleStore from "GameConsoleStore" /* 6062 */;
 
 require = fn;
 const size = fn(2);

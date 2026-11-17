@@ -2,14 +2,14 @@
 
 // Module 17787 (QuestDockContentCollapsed)
 import _mod1655 from "module_1655" /* 1655 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import QuestDockGestureContext from "QuestDockGestureContext" /* 17699 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
 
 require = fn;
-const QuestDockMode = fn(5338).QuestDockMode;
+const QuestDockMode = fn(6954).QuestDockMode;
 let closure_5 = fn(17698).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);

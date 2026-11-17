@@ -6,10 +6,10 @@ import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
-import AdCreativeType from "AdCreativeType" /* 5345 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import QuestUtils from "QuestUtils" /* 10128 */;
 import captureAdUserAction from "captureAdUserAction" /* 10135 */;
@@ -281,7 +281,7 @@ function AnimatedFooter(arg0) {
   return closure_11(View, obj4);
 }
 const View = fn(17).View;
-let closure_9 = fn(5567).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_9 = fn(5557).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
@@ -378,10 +378,10 @@ export default function QuestBottomSheetFooter(quest) {
             tmp23 = obj10;
           }
           const merged2 = Object.assign(tmp23);
-          tmp40Result4 = closure_10(tmp2(5936).Button, obj15);
+          tmp40Result4 = closure_10(tmp2(5926).Button, obj15);
           const tmp2Result2 = tmp2(10128);
         } else {
-          if (_slicedToArray(obj3.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] === tmp2(5341).TaskPlatformScreen.CONSOLE) {
+          if (_slicedToArray(obj3.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] === tmp2(6957).TaskPlatformScreen.CONSOLE) {
             if (!isQuestProgressing) {
               const obj16 = { questId: quest.id, loading: isDefibrilating, disabled: isDefibrilating, onPress: onDefib, sourceQuestContent };
               let tmp17 = null;

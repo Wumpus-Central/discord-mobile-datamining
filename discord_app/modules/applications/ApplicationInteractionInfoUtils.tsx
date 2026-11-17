@@ -2,7 +2,7 @@
 
 // Module 12589 (ApplicationInteractionInfoUtils)
 import Server from "Server" /* 2119 */;
-import InteractionTypes from "InteractionTypes" /* 6381 */;
+import InteractionTypes from "InteractionTypes" /* 6371 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");

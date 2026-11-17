@@ -4,7 +4,7 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Server from "Server" /* 2119 */;
-import InteractionTypes from "InteractionTypes" /* 6381 */;
+import InteractionTypes from "InteractionTypes" /* 6371 */;
 import InteractionActionCreators from "InteractionActionCreators" /* 11402 */;
 import SkemaUtils from "SkemaUtils" /* 11404 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -350,4 +350,4 @@ export function canRetryInteractionData(interactionData) {
   }
   return true;
 }
-export const interactionCallbackErrorReason = fn(6379).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(6369).interactionCallbackErrorReason;

@@ -1,7 +1,7 @@
 // === Module 8646: renderMessageMarkup ===
 
 // Module 8646 (renderMessageMarkup)
-import MarkupUtilsDefault from "MarkupUtils" /* 6057 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 6047 */;
 import MarkupPostProcessors from "MarkupPostProcessors" /* 8647 */;
 import size from "module_2" /* 2 */;
 

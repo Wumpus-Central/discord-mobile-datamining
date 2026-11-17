@@ -2,7 +2,7 @@
 
 // Module 13726 (ConjurePlanCommandText)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ class ConjurePlanCommandMention {
     return tmp2(closure_0(closure_1[5]).Text, obj);
   }
 }
-const COMMAND_SENTINEL = fn(6346).COMMAND_SENTINEL;
+const COMMAND_SENTINEL = fn(6336).COMMAND_SENTINEL;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 const obj2 = { mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND } };
@@ -119,7 +119,7 @@ export function ConjurePlanCommandMarkup(markup) {
                           size = closure_1;
                           const result = markup(size[6]).splitConjurePlanCommandText(mapped, size);
                           if (null != result) {
-                            mapped = result.map(/* F108154 */ function() { ... });
+                            mapped = result.map(/* F108167 */ function() { ... });
                           }
                           let cloneElementResult = mapped;
                           let obj = markup(size[6]);
@@ -129,7 +129,7 @@ export function ConjurePlanCommandMarkup(markup) {
                             cloneElementResult = mapped;
                             if (null != mapped.props.children) {
                               ({ Children, cloneElement } = conjurePlanCommandPattern);
-                              cloneElementResult = cloneElement(mapped, undefined, Children.map(mapped.props.children, /* F108155 */ function() { ... }));
+                              cloneElementResult = cloneElement(mapped, undefined, Children.map(mapped.props.children, /* F108168 */ function() { ... }));
                             }
                           }
                         }

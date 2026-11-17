@@ -6,9 +6,9 @@ import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7813 */;
 import FrecencyStore from "FrecencyStore" /* 7069 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 
 require = fn;
 function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {

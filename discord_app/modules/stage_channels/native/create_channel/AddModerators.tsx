@@ -9,7 +9,7 @@ import GuildStore from "GuildStore" /* 5177 */;
 
 require = fn;
 const View = fn(17).View;
-const RowType = fn(6912).RowType;
+const RowType = fn(6902).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5306);
@@ -41,11 +41,11 @@ export default function AddModerators(guildId) {
     const mapped = found.map((row) => {
       row = row.row;
       if (row.rowType === constants.ROLE) {
-        let moderatorOverwrite = guildId(6938).createModeratorOverwrite(row.id, guildId(2119).PermissionOverwriteType.ROLE);
-        const obj2 = guildId(6938);
+        let moderatorOverwrite = guildId(6928).createModeratorOverwrite(row.id, guildId(2119).PermissionOverwriteType.ROLE);
+        const obj2 = guildId(6928);
       } else {
-        moderatorOverwrite = guildId(6938).createModeratorOverwrite(row.id, guildId(2119).PermissionOverwriteType.MEMBER);
-        const obj = guildId(6938);
+        moderatorOverwrite = guildId(6928).createModeratorOverwrite(row.id, guildId(2119).PermissionOverwriteType.MEMBER);
+        const obj = guildId(6928);
       }
       return moderatorOverwrite;
     });

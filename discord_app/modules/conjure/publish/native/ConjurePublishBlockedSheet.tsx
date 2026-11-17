@@ -2,7 +2,7 @@
 
 // Module 13146 (ConjurePublishBlockedSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5542 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -17,8 +17,8 @@ function ConjurePublishBlockedSheet(onConfirm) {
   const obj2 = { header: closure_4(onConfirm(7913).BottomSheetTitleHeader, { title: conjurePublishBlockedCopy.title }), children: null };
   const obj4 = { style: tmp.content, children: null };
   items = [
-    closure_4(onConfirm(5929).Text, { variant: "body-md/normal", color: "text-muted", children: conjurePublishBlockedCopy.body }),
-    closure_4(onConfirm(5936).Button, {
+    closure_4(onConfirm(5919).Text, { variant: "body-md/normal", color: "text-muted", children: conjurePublishBlockedCopy.body }),
+    closure_4(onConfirm(5926).Button, {
       variant: "primary",
       text: conjurePublishBlockedCopy.action,
       onPress() {
@@ -36,7 +36,7 @@ function ConjurePublishBlockedSheet(onConfirm) {
       ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishBlockedSheet);
     }
     const obj7 = { variant: "secondary", text: conjurePublishBlockedCopy.cancel, onPress: close };
-    tmp5Result = closure_4(tmp2(5936).Button, obj7);
+    tmp5Result = closure_4(tmp2(5926).Button, obj7);
   }
   items[2] = tmp5Result;
   obj4.children = items;

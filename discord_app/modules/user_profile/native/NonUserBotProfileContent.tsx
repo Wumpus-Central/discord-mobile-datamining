@@ -1,9 +1,9 @@
 // === Module 8606: NonUserBotProfileContent ===
 
 // Module 8606 (NonUserBotProfileContent)
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import useProfileThemeDefault from "useProfileTheme" /* 8590 */;
 import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8593 */;
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(7962);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5567).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5557).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const size = fn(2);

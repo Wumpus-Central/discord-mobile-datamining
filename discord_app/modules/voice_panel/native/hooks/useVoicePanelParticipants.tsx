@@ -1,15 +1,15 @@
-// === Module 19968: useVoicePanelParticipants ===
+// === Module 19970: useVoicePanelParticipants ===
 
-// Module 19968 (useVoicePanelParticipants)
+// Module 19970 (useVoicePanelParticipants)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6942 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6932 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 
 const require = globalThis.__r;
 

@@ -3,8 +3,8 @@
 // Module 10760 (GuildPowerupsBoostInfo)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5524 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5514 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import BoostGemIcon from "BoostGemIcon" /* 9981 */;
 import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 10761 */;
 import jsxProd from "jsxProd" /* 21 */;

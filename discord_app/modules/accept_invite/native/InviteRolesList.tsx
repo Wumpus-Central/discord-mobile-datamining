@@ -40,11 +40,11 @@ export default function InviteRolesList(invite) {
       const obj2 = { variant: "body-sm/semibold", color: "text-default", children: null };
       const intl = guild(1113).intl;
       obj2.children = intl.string(guild(1113).t.stcSfI);
-      const items1 = [closure_5(guild(5929).Text, obj2), ];
+      const items1 = [closure_5(guild(5919).Text, obj2), ];
       const obj3 = { style: tmp.rolesRow, children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)) };
       items1[1] = closure_5(View, obj3);
       obj.children = items1;
-      tmp2 = closure_6(guild(6337).Stack, obj);
+      tmp2 = closure_6(guild(6327).Stack, obj);
     }
   }
   return tmp2;

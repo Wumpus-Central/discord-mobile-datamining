@@ -2,8 +2,8 @@
 
 // Module 12129 (UserProfileConfirmThreadRemove)
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import AlertModal from "AlertModal" /* 6274 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

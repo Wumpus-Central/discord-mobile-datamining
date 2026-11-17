@@ -6,7 +6,7 @@ import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6377).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6367).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles({ rive: { width: 143, height: 32 } });
@@ -28,7 +28,7 @@ export default function CheckpointKnickKnacks(style) {
     const items2 = [tmp4.rive, style.style];
     obj3.style = items2;
     const obj4 = { artboard: "Entry", dataBinding: memo };
-    obj3.children = jsx(tmp(5383).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
+    obj3.children = jsx(tmp(5373).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
     tmp6 = <View style={null}>{null}</View>;
   }
   return tmp6;

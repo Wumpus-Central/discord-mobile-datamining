@@ -1,7 +1,7 @@
 // === Module 10168: ContentImpressionTrackerHooks ===
 
 // Module 10168 (ContentImpressionTrackerHooks)
-import AdCreativeType from "AdCreativeType" /* 5345 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import QuestImpressionContext from "QuestImpressionContext" /* 10169 */;
 import noop from "module_19" /* 19 */;

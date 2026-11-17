@@ -3,7 +3,7 @@
 // Module 13784 (ConjureAppSheetIcon)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 10546 */;
 import noop from "module_19" /* 19 */;
 

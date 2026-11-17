@@ -1,15 +1,15 @@
 // === Module 17693: QuestHooks ===
 
 // Module 17693 (QuestHooks)
-import QuestTypes from "QuestTypes" /* 5341 */;
-import AdCreativeType from "AdCreativeType" /* 5345 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7055 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 8831 */;
 import AssetUtils from "AssetUtils" /* 10146 */;
 import useQuestForPlacement from "useQuestForPlacement" /* 17721 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5553 */;
+import ActionSheetStore from "ActionSheetStore" /* 5543 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import BountyStore from "BountyStore" /* 8807 */;
 import QuestStore from "QuestStore" /* 8808 */;
@@ -31,7 +31,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus1;
   if (isDismissedResult) {
-    isDismissedResult = tmp(8804).isDismissed(questDockQuest.userStatus, tmp(5341).QuestContent.QUEST_BAR_MOBILE);
+    isDismissedResult = tmp(8804).isDismissed(questDockQuest.userStatus, tmp(6957).QuestContent.QUEST_BAR_MOBILE);
     const tmpResult = tmp(8804);
   }
   let claimedAt;
@@ -80,7 +80,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }, items6);
   if (require("AdCreativeType").AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(5345).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(6961).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -91,7 +91,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(5345).AdCreativeType.PLAYABLE === type) {
+  } else if (tmp(6961).AdCreativeType.PLAYABLE === type) {
     let tmp19 = isEligibleForQuests;
     if (isEligibleForQuests) {
       tmp19 = !stateFromStores1;
@@ -103,7 +103,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       tmp19 = !tmp4;
     }
     return tmp19;
-  } else if (tmp(5345).AdCreativeType.QUEST === type) {
+  } else if (tmp(6961).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp17 = null != questDockQuest && !tmp4;
@@ -115,9 +115,9 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   const tmpResult12 = require("initialize");
 }
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_10, QuestVariants: closure_11 } = QuestConstants);
-const CAPTCHA_MODAL_KEY = fn(6777).CAPTCHA_MODAL_KEY;
+const CAPTCHA_MODAL_KEY = fn(6767).CAPTCHA_MODAL_KEY;
 const ThemeTypes = fn(1083).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestHooks.native.tsx");

@@ -3,7 +3,7 @@
 // Module 15660 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import MessageParserDefault from "MessageParser" /* 8786 */;
 import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9030 */;
@@ -86,8 +86,8 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
           return obj;
         } else {
           if (value) {
-            v1(6848).pop();
-            const arr = v1(6848);
+            v1(6838).pop();
+            const arr = v1(6838);
           }
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };

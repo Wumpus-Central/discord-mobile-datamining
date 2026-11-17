@@ -1,15 +1,15 @@
-// === Module 19083: HomeDrawerFolderRow ===
+// === Module 19085: HomeDrawerFolderRow ===
 
-// Module 19083 (HomeDrawerFolderRow)
+// Module 19085 (HomeDrawerFolderRow)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import BellSlashIcon2 from "BellSlashIcon" /* 10994 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7060 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 require = fn;
 function Wrapper(folder) {
@@ -221,7 +221,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(5498).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(5488).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

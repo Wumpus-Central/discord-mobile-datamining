@@ -3,7 +3,7 @@
 // Module 8866 (Tracking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
 import TrackingUtils from "TrackingUtils" /* 8869 */;
 import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8997 */;
 import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 8998 */;

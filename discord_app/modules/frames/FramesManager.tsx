@@ -46,9 +46,9 @@ const prototype = function FramesManager() {
       if (!("unavailable" in guild)) {
         const allFrames = FramesStore.getAllFrames();
         for (const item10014 of allFrames) {
-          let tmp8 = item10014.surface.type !== applyArgumentsResult(5977).EmbeddedSurfaceType.MAIN;
+          let tmp8 = item10014.surface.type !== applyArgumentsResult(5967).EmbeddedSurfaceType.MAIN;
           if (tmp8) {
-            tmp8 = item10014.surface.type !== applyArgumentsResult(5977).EmbeddedSurfaceType.OVERLAY;
+            tmp8 = item10014.surface.type !== applyArgumentsResult(5967).EmbeddedSurfaceType.OVERLAY;
           }
           if (tmp8) {
             tmp8 = item10014.surface.guildId === guild.id;
@@ -66,7 +66,7 @@ const prototype = function FramesManager() {
         if (!isPrivate(item10008.type)) {
           let framesForChannel = FramesStore.getFramesForChannel(item10008.id);
           for (const item10022 of framesForChannel) {
-            let tmp12 = item10022.surface.type !== applyArgumentsResult(5977).EmbeddedSurfaceType.MAIN;
+            let tmp12 = item10022.surface.type !== applyArgumentsResult(5967).EmbeddedSurfaceType.MAIN;
             if (tmp12) {
               tmp12 = item10022.applicationId !== item10008.application_id;
             }
@@ -85,7 +85,7 @@ const prototype = function FramesManager() {
     currentVoiceChannelId = currentVoiceChannelId.currentVoiceChannelId;
     if (null != currentVoiceChannelId) {
       if (currentVoiceChannelId !== currentVoiceChannelId.channelId) {
-        const obj2 = { type: applyArgumentsResult(5977).EmbeddedSurfaceType.VOICE_CHANNEL, channelId: currentVoiceChannelId };
+        const obj2 = { type: applyArgumentsResult(5967).EmbeddedSurfaceType.VOICE_CHANNEL, channelId: currentVoiceChannelId };
         const framesForSurface = FramesStore.getFramesForSurface(obj2);
         for (const item10005 of framesForSurface) {
           let obj = applyArgumentsResult(7349);

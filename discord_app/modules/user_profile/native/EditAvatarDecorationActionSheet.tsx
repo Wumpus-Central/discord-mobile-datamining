@@ -208,7 +208,7 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   obj9.analyticsSource = selectedAvatarDecoration(7937).EDIT_AVATAR_DECORATION_SHEET;
   items1[1] = closure_10(selectedAvatarDecoration(9403), obj9);
   obj6.children = items1;
-  obj5.children = closure_11(setPendingAvatarDecoration(5566).BottomSheet, obj6);
+  obj5.children = closure_11(setPendingAvatarDecoration(5556).BottomSheet, obj6);
   obj10.children = closure_10(setPendingAvatarDecoration(7918).AnalyticsLocationProvider, obj5);
-  return closure_10(setPendingAvatarDecoration(5377).ThemeContextProvider, obj10);
+  return closure_10(setPendingAvatarDecoration(5367).ThemeContextProvider, obj10);
 };

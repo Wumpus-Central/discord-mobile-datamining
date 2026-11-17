@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5985 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
 import TableRow from "TableRow" /* 7443 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8724 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 12579 */;

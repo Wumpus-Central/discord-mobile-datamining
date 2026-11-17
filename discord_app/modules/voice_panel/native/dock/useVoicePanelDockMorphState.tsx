@@ -1,9 +1,9 @@
-// === Module 19964: useVoicePanelDockMorphState ===
+// === Module 19966: useVoicePanelDockMorphState ===
 
-// Module 19964 (useVoicePanelDockMorphState)
-import spring_spring from "spring/spring" /* 5939 */;
+// Module 19966 (useVoicePanelDockMorphState)
+import spring_spring from "spring/spring" /* 5929 */;
 import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 12017 */;
-import useIsDockCoveredByActivityDefault from "useIsDockCoveredByActivity" /* 19965 */;
+import useIsDockCoveredByActivityDefault from "useIsDockCoveredByActivity" /* 19967 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

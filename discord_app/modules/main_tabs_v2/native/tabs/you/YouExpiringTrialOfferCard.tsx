@@ -1,13 +1,13 @@
-// === Module 19652: YouExpiringTrialOfferCard ===
+// === Module 19654: YouExpiringTrialOfferCard ===
 
-// Module 19652 (YouExpiringTrialOfferCard)
+// Module 19654 (YouExpiringTrialOfferCard)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
 import useCountdownDefault from "useCountdown" /* 9440 */;
-import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 19653 */;
+import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 19655 */;
 import noop from "module_19" /* 19 */;
 import NoticeStore from "NoticeStore" /* 16224 */;
 
@@ -49,7 +49,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const time = useCountdownDefault(num, closure_15);
-  shouldShowExpiringTrialOfferCard = navigateToPremium(19651).useShouldShowExpiringTrialOfferCard();
+  shouldShowExpiringTrialOfferCard = navigateToPremium(19653).useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
     let tmp = shouldShowExpiringTrialOfferCard;
@@ -108,7 +108,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         }
         const obj9 = { children: null };
         const obj10 = { variant: "heading-xs/medium", color: "text-default", children: formatResult };
-        obj4.children = closure_12(tmp4(5929).Text, obj10);
+        obj4.children = closure_12(tmp4(5919).Text, obj10);
         const items2 = [closure_12(tmp16, obj4), , ];
         const obj11 = { style: tmp3.closeButton, accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
         const intl4 = tmp4(1113).intl;
@@ -164,5 +164,5 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   } else {
     return null;
   }
-  const tmp4Result = navigateToPremium(19651);
+  const tmp4Result = navigateToPremium(19653);
 };

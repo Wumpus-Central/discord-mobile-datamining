@@ -1,12 +1,12 @@
-// === Module 20559: GuildSettingsRoleTemplate ===
+// === Module 20562: GuildSettingsRoleTemplate ===
 
-// Module 20559 (GuildSettingsRoleTemplate)
+// Module 20562 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7771 */;
 import PaginationDefault from "Pagination" /* 11689 */;
 import _modDef12481 from "module_12481" /* 12481 */;
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: closure_6 } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(20555);
+const GuildSettingsRoleConstants = fn(20558);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: closure_10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);

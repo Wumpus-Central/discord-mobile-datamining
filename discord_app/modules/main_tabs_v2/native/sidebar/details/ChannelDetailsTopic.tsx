@@ -1,10 +1,10 @@
-// === Module 19577: ChannelDetailsTopic ===
+// === Module 19579: ChannelDetailsTopic ===
 
-// Module 19577 (ChannelDetailsTopic)
+// Module 19579 (ChannelDetailsTopic)
 import _modDef1655 from "module_1655" /* 1655 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 6057 */;
-import ChannelUtils from "ChannelUtils" /* 6356 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 6047 */;
+import ChannelUtils from "ChannelUtils" /* 6346 */;
 import MentionPillOffset from "MentionPillOffset" /* 11059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -200,7 +200,7 @@ function GuildChannelDetailsTopic(channel) {
     const obj16 = { children: null };
     const obj17 = { children: null };
     obj14.children = memo1;
-    obj17.children = closure_11(tmp2(5929).Text, obj14);
+    obj17.children = closure_11(tmp2(5919).Text, obj14);
     obj13.children = closure_11(tmp43, obj17);
     obj12.children = closure_11(PressableOpacity, obj13);
     const items16 = [closure_11(tmp45, obj12), ];
@@ -210,7 +210,7 @@ function GuildChannelDetailsTopic(channel) {
     const obj19 = { style: tmp.gradient, start: null, end: null, colors: null };
     ({ START: obj23.start, END: obj23.end } = VerticalGradient);
     obj19.colors = channelTopicGradientBackground;
-    obj18.children = closure_11(tmp44(5893), obj19);
+    obj18.children = closure_11(tmp44(5883), obj19);
     items16[1] = closure_11(tmp44(1655).View, obj18);
     obj11.children = items16;
     items13[2] = closure_12(_modDef1655.View, obj11);
@@ -254,7 +254,7 @@ function PrivateChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5929).Text, obj2);
+    tmp4 = closure_11(channel(5919).Text, obj2);
   }
   return tmp4;
 }
@@ -268,7 +268,7 @@ function GroupDMChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5929).Text, obj2);
+    tmp4 = closure_11(channel(5919).Text, obj2);
   }
   return tmp4;
 }

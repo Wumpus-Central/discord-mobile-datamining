@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5913 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5903 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7643 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7918 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
@@ -656,7 +656,7 @@ function UserProfileEditFormContent(currentUser) {
     items9[2] = tmp25;
     obj16.children = items9;
     obj15.children = tmp51(tmp52, obj16);
-    return tmp50(tmp4(5377).ThemeContextProvider, obj15);
+    return tmp50(tmp4(5367).ThemeContextProvider, obj15);
   } else if (enabled) {
     tmp = UserProfilePremiumTryItOutUpsellDefault;
     obj = {
@@ -683,7 +683,7 @@ let closure_14 = fn(17065).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = [1];
-let obj = { assetOrigin: fn(7808).AssetOriginTypes.NEW_ASSET, imageUri: _modDef17066, staticImageUri: _modDef17066, description: "", originalAsset: "__d" };
+let obj = { assetOrigin: fn(7808).AssetOriginTypes.NEW_ASSET, imageUri: _modDef17066, staticImageUri: _modDef17066, description: "", originalAsset: "alignItems" };
 let closure_23 = { code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");

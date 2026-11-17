@@ -7,10 +7,10 @@ import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 5236 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import LayerStore from "LayerStore" /* 14904 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 
 const require = globalThis.__r;

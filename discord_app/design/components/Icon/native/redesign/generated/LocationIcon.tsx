@@ -2,7 +2,7 @@
 
 // Module 8014 (LocationIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8015 from "module_8015" /* 8015 */;
 import noop from "module_19" /* 19 */;
 

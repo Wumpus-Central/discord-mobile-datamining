@@ -3,11 +3,11 @@
 // Module 16943 (getEmbeddedActivityPopoutWindowKey)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 6863 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 6853 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 
 require = fn;
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const PopoutWindowKeys = fn(1072).PopoutWindowKeys;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getEmbeddedActivityPopoutWindowKey.tsx");

@@ -1,6 +1,6 @@
-// === Module 19894: frames/getDefaultOrientationLockState ===
+// === Module 19896: frames/getDefaultOrientationLockState ===
 
-// Module 19894 (frames/getDefaultOrientationLockState)
+// Module 19896 (frames/getDefaultOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import getDefaultOrientationLockState from "getDefaultOrientationLockState" /* 12846 */;
 import size from "module_2" /* 2 */;

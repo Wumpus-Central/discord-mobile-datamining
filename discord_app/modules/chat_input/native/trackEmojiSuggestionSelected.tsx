@@ -2,7 +2,7 @@
 
 // Module 11266 (trackEmojiSuggestionSelected)
 import Constants from "Constants" /* 1072 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

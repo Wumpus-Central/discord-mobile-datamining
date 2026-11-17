@@ -3,7 +3,7 @@
 // Module 17183 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7354 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7994 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8607 */;

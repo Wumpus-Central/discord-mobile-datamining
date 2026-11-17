@@ -4,7 +4,7 @@
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import Server from "Server" /* 2119 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
-import getPlatformDefault from "getPlatform" /* 5984 */;
+import getPlatformDefault from "getPlatform" /* 5974 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7057 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7259 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;

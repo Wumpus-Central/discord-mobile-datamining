@@ -5,7 +5,7 @@ import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 8497 */;
 import useProductPurchaseState from "useProductPurchaseState" /* 9518 */;
 import useProductDescription from "useProductDescription" /* 15490 */;

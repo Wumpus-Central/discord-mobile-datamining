@@ -2,7 +2,7 @@
 
 // Module 9565 (markScopedDismissibleContentAsDismissed)
 import DismissibleContentUtils from "DismissibleContentUtils" /* 5140 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5348 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5338 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/dismissible_content/markScopedDismissibleContentAsDismissed.tsx");

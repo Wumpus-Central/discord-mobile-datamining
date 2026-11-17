@@ -4,9 +4,9 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useFontScale from "useFontScale" /* 5944 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useFontScale from "useFontScale" /* 5934 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import noop from "module_19" /* 19 */;
 
 const UserProfileApplicationWidgetSkeletons = TextSkeleton(12256);

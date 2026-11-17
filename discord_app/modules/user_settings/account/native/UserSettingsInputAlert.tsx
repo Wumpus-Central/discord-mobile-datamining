@@ -2,9 +2,9 @@
 
 // Module 17299 (UserSettingsInputAlert)
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
-import common_AlertDefault from "common/Alert" /* 6340 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
+import common_AlertDefault from "common/Alert" /* 6330 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7474 */;
 import TextInput from "TextInput" /* 7619 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const hasOwnProperty = { input: "", error: "__d" };
+const hasOwnProperty = { input: "", error: "alignItems" };
 const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {

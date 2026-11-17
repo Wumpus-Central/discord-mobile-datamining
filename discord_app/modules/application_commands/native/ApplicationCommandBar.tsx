@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import usePreviousDefault from "usePrevious" /* 6836 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import usePreviousDefault from "usePrevious" /* 6826 */;
 import Pressables from "Pressables" /* 7428 */;
 import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14640 */;
 import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 14820 */;
@@ -106,8 +106,8 @@ obj2.applicationDescriptionContainer = { flexShrink: 1 };
 let obj3 = { flexDirection: "column", backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" };
 obj2.applicationDescriptionDivider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
 let obj4 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
-obj2.applicationCommandOption = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6961).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
-let obj5 = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6961).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
+obj2.applicationCommandOption = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6951).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
+let obj5 = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6951).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
 obj2.applicationCommandOptionText = { color: nativeDefault.colors.TEXT_DEFAULT };
 let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.activeCommandOption = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -122,7 +122,7 @@ obj2.descriptionEllipsis = { marginLeft: 10, backgroundColor: nativeDefault.colo
 const obj10 = { marginLeft: 10, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj2.descriptionEllipsisDots = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj11 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.completeCommandOption = { backgroundColor: fn(6961).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+obj2.completeCommandOption = { backgroundColor: fn(6951).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
 let closure_11 = createStyles.createStyles(obj2);
 function ApplicationCommandOptionDescription(option) {
   option = option.option;
@@ -306,9 +306,9 @@ export default function _default(command) {
   let tmp22 = null != memo;
   if (tmp22) {
     const obj4 = { style: tmp.applicationIcon, source: memo };
-    tmp22 = ref(section(6020), obj4);
+    tmp22 = ref(section(6010), obj4);
   }
-  const items5 = [tmp22, ref(command(5929).Text, { style: tmp.applicationName, lineClamp: 1, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
+  const items5 = [tmp22, ref(command(5919).Text, { style: tmp.applicationName, lineClamp: 1, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
   let options = command.options;
   let mapped;
   if (options != null) {
@@ -350,7 +350,7 @@ export default function _default(command) {
     const obj7 = { style: tmp.applicationOptionalOptionsIndicator, lineClamp: 1, variant: "body-sm/medium", color: "text-muted", children: null };
     const intl = tmp12(1113).intl;
     obj7.children = intl.string(tmp12(1113).t.U19GM3);
-    items7[1] = tmp25(tmp12(5929).Text, obj7);
+    items7[1] = tmp25(tmp12(5919).Text, obj7);
     const options1 = command.options;
     let mapped1;
     if (options1 != null) {

@@ -1,9 +1,9 @@
-// === Module 18426: UserSettingsDesignSystemSegmentedControl ===
+// === Module 18428: UserSettingsDesignSystemSegmentedControl ===
 
-// Module 18426 (UserSettingsDesignSystemSegmentedControl)
+// Module 18428 (UserSettingsDesignSystemSegmentedControl)
 import nativeDefault from "native" /* 575 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7994 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -64,7 +64,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
   let items1 = [closure_8(first(11251).SegmentedControl, { state: segmentedControlState }), closure_8(first(14944).SegmentedControlPages, { state: segmentedControlState }), ];
   const obj5 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [
-    closure_8(first(5936).Button, {
+    closure_8(first(5926).Button, {
       text: "Add Tab",
       variant: "active",
       size: "sm",
@@ -76,7 +76,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
         AccessibilityAnnouncer.announce("Tab added, " + sum + " tabs", "polite");
       }
     }),
-    closure_8(first(5936).Button, {
+    closure_8(first(5926).Button, {
       text: "Remove Tab",
       variant: "destructive",
       size: "sm",
@@ -90,9 +90,9 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     })
   ];
   obj5.children = items2;
-  items1[2] = closure_7(first(6337).Stack, obj5);
+  items1[2] = closure_7(first(6327).Stack, obj5);
   obj4.children = items1;
-  obj3.children = closure_7(first(6337).Stack, obj4);
+  obj3.children = closure_7(first(6327).Stack, obj4);
   obj2.children = closure_8(closure_5, obj3);
   return closure_8(closure_6, obj2);
 };

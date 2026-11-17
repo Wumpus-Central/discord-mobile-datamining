@@ -3,7 +3,7 @@
 // Module 13233 (ConjureGameSettingRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5542 */;
 import ConjureGamePickerSheetDefault from "ConjureGamePickerSheet" /* 13236 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,7 +48,7 @@ export default function ConjureGameSettingRow(def) {
   });
   let joined = mapped.join(", ");
   let obj2 = { style: tmp.container, children: null };
-  const items1 = [items(def(5929).Text, { variant: "body-sm/normal", color: "text-default", children: hint }), , ];
+  const items1 = [items(def(5919).Text, { variant: "body-sm/normal", color: "text-default", children: hint }), , ];
   const obj3 = { label: def.label, subLabel: null, arrow: true, disabled: null, onPress: null };
   if ("" === joined) {
     const intl2 = tmp2(1113).intl;
@@ -96,7 +96,7 @@ export default function ConjureGameSettingRow(def) {
     const obj6 = { variant: "body-xs/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: null };
     const intl4 = tmp2(1113).intl;
     obj6.children = intl4.string(_modDef4131["/++Pf+"]);
-    tmp10Result = tmp10(tmp2(5929).Text, obj6);
+    tmp10Result = tmp10(tmp2(5919).Text, obj6);
   }
   items1[2] = tmp10Result;
   obj2.children = items1;

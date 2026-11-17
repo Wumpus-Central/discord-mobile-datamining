@@ -2,8 +2,8 @@
 
 // Module 17588 (BountiesEndCardPressableCta)
 import nativeDefault from "native" /* 575 */;
-import QuestContent from "QuestContent" /* 5343 */;
-import AdCreativeType from "AdCreativeType" /* 5345 */;
+import QuestContent from "QuestContent" /* 6959 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 10170 */;
 import noop from "module_19" /* 19 */;

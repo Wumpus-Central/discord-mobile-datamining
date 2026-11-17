@@ -3,7 +3,7 @@
 // Module 11802 (UnifiedGiftModalSuccessScreen)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
 import noop from "module_19" /* 19 */;
 

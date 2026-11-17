@@ -5,7 +5,7 @@ import PresenceSubscriptionsActionCreators from "PresenceSubscriptionsActionCrea
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import PresenceSubscriptionsStore from "PresenceSubscriptionsStore" /* 12409 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 
 const require = globalThis.__r;
 

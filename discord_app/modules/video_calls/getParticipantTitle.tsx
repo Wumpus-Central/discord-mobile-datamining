@@ -2,8 +2,8 @@
 
 // Module 13088 (getParticipantTitle)
 import util from "util" /* 1113 */;
-import CallConstants from "CallConstants" /* 5983 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import CallConstants from "CallConstants" /* 5973 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import useIsGuestOrLurker from "useIsGuestOrLurker" /* 13089 */;
 import size from "module_2" /* 2 */;
 

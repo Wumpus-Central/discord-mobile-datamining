@@ -1,8 +1,8 @@
-// === Module 6749: useMessageAuthor ===
+// === Module 6739: useMessageAuthor ===
 
-// Module 6749 (useMessageAuthor)
+// Module 6739 (useMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildRoleStore from "GuildRoleStore" /* 5212 */;

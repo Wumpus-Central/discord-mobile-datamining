@@ -1,8 +1,8 @@
 // === Module 11843: navigateToThreadCreation ===
 
 // Module 11843 (navigateToThreadCreation)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8864 */;
 import size from "module_2" /* 2 */;
 

@@ -3,7 +3,7 @@
 // Module 14513 (CheckpointGuildStats)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import CheckpointConstants from "CheckpointConstants" /* 6377 */;
+import CheckpointConstants from "CheckpointConstants" /* 6367 */;
 import ChatIcon from "ChatIcon" /* 8069 */;
 import MicrophoneIcon from "MicrophoneIcon" /* 13048 */;
 import CheckpointTextDefault from "CheckpointText" /* 14271 */;

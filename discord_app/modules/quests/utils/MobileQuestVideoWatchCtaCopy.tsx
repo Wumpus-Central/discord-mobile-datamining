@@ -2,7 +2,7 @@
 
 // Module 15250 (MobileQuestVideoWatchCtaCopy)
 import util from "util" /* 1113 */;
-import QuestConstants from "QuestConstants" /* 5338 */;
+import QuestConstants from "QuestConstants" /* 6954 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 8831 */;
 import VQRemainingTimeTruncationExperimentDefault from "VQRemainingTimeTruncationExperiment" /* 15251 */;
 import size from "module_2" /* 2 */;

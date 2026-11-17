@@ -2,8 +2,8 @@
 
 // Module 14536 (useTraitPickerSelection)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6421 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6744 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6411 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6734 */;
 import Tracking from "Tracking" /* 14251 */;
 import useTraitPickerOptions from "useTraitPickerOptions" /* 14537 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 6764: ClientOutdatedAcceptGiftError ===
+// === Module 6754: ClientOutdatedAcceptGiftError ===
 
-// Module 6764 (ClientOutdatedAcceptGiftError)
+// Module 6754 (ClientOutdatedAcceptGiftError)
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

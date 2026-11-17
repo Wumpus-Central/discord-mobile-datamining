@@ -1,15 +1,15 @@
-// === Module 18935: GuildPowerupsChannelRow ===
+// === Module 18937: GuildPowerupsChannelRow ===
 
-// Module 18935 (GuildPowerupsChannelRow)
+// Module 18937 (GuildPowerupsChannelRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import LayerContext from "LayerContext" /* 5918 */;
+import LayerContext from "LayerContext" /* 5908 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 10679 */;
 import GuildPowerupsNotification from "GuildPowerupsNotification" /* 10695 */;
-import SidebarCoachmarkOverlay from "SidebarCoachmarkOverlay" /* 18730 */;
-import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 18888 */;
+import SidebarCoachmarkOverlay from "SidebarCoachmarkOverlay" /* 18732 */;
+import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 18890 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,7 +50,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5306);
-let obj2 = { container: { marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let obj2 = { container: { marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsChannelRow.tsx");
@@ -112,7 +112,7 @@ export default function GuildPowerupsChannelRow(guildId) {
   obj5.mode = DEFAULT;
   obj4.name = closure_5(tmp14(14789).BaseChannelName, obj5);
   const tmp3Result = dismissNewBadgeIfShown(14789);
-  obj4.icon = closure_5(tmp14(14789).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(18936).BoostTier2Icon });
+  obj4.icon = closure_5(tmp14(14789).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(18938).BoostTier2Icon });
   if (tmp6Result.showNewBadgeOnRow) {
     let tmp16Result = closure_5(tmp14(14688).NewBadge, {});
   } else {
@@ -128,5 +128,5 @@ export default function GuildPowerupsChannelRow(guildId) {
   items1[1] = closure_5(tmp3Result, obj4);
   obj2.children = items1;
   obj8.children = closure_6(View, obj2);
-  return closure_5(tmp14(5916).LayerScope, obj8);
+  return closure_5(tmp14(5906).LayerScope, obj8);
 };

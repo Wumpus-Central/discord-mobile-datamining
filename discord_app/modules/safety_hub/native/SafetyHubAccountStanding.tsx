@@ -3,7 +3,7 @@
 // Module 17271 (SafetyHubAccountStanding)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
 import CircleXIcon from "CircleXIcon" /* 7629 */;
 import _modDef7648 from "module_7648" /* 7648 */;
@@ -181,7 +181,7 @@ export default function SafetyHubAccountStanding() {
       return React6(Text_Text.Text, { style, variant: "heading-lg/semibold", children }, arg1);
     }
   });
-  const items4 = [closure_9(accountStanding(5929).Text, obj8), closure_9(accountStanding(5929).Text, { variant: "body-sm/medium", color: "text-muted", style: { textAlign: "center" }, children: description })];
+  const items4 = [closure_9(accountStanding(5919).Text, obj8), closure_9(accountStanding(5919).Text, { variant: "body-sm/medium", color: "text-muted", style: { textAlign: "center" }, children: description })];
   obj7.children = items4;
   const items5 = [closure_10(style, obj7), ];
   const obj10 = { style: null, children: null };

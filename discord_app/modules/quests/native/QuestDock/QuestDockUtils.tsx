@@ -3,7 +3,7 @@
 // Module 17697 (QuestDockUtils)
 import _mod17 from "module_17" /* 17 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import QuestDockConstants from "QuestDockConstants" /* 17698 */;
 import size from "module_2" /* 2 */;
 

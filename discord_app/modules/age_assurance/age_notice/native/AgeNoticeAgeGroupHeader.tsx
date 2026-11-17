@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3353 from "module_3353" /* 3353 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8190 */;
 import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10812 */;
 import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 17252 */;
@@ -29,13 +29,13 @@ function AccountStatusNotice(arg0) {
     tmp8 = null;
     if (null != tmp5[0]) {
       const obj3 = { style: tmp.notice, children: null };
-      const obj4 = { style: tmp.noticeIcon, children: closure_8(tmp2(6037).CircleInformationIcon, { size: "xs", color: "text-link" }) };
+      const obj4 = { style: tmp.noticeIcon, children: closure_8(tmp2(6027).CircleInformationIcon, { size: "xs", color: "text-link" }) };
       items = [closure_8(View, obj4), , ];
       const obj5 = { style: tmp.noticeBody, variant: "body-sm/normal", color: "text-default", children: null };
       const intl = tmp2(1113).intl;
       obj6 = { handleOnBlogHook: handleOpenBlog };
       obj5.children = intl.format(obj6[arg0.ageGroup], obj6);
-      items[1] = closure_8(tmp2(5929).Text, obj5);
+      items[1] = closure_8(tmp2(5919).Text, obj5);
       obj7 = { style: tmp.noticeDismiss, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 12, onPress: null, children: null };
       const intl2 = tmp2(1113).intl;
       obj7.accessibilityLabel = intl2.string(tmp2(1113).t.WAI6xu);
@@ -89,7 +89,7 @@ function AgeGroupCallToAction(ageGroup) {
   }
 }
 const View = fn(17).View;
-const AGE_NOTICE_BLOG_URL = fn(6841).AGE_NOTICE_BLOG_URL;
+const AGE_NOTICE_BLOG_URL = fn(6831).AGE_NOTICE_BLOG_URL;
 const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

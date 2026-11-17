@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const PerkIcons = fn(1390).PerkIcons;
-const GUILD_FEATURE_TO_PERK = fn(5524).GUILD_FEATURE_TO_PERK;
+const GUILD_FEATURE_TO_PERK = fn(5514).GUILD_FEATURE_TO_PERK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
 

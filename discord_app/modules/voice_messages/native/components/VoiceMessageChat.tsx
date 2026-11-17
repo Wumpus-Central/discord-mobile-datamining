@@ -3,9 +3,9 @@
 // Module 14970 (VoiceMessageChat)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import spring_spring from "spring/spring" /* 5939 */;
-import springPresets from "springPresets" /* 5940 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import spring_spring from "spring/spring" /* 5929 */;
+import springPresets from "springPresets" /* 5930 */;
 import utils_TimeUtils from "utils/TimeUtils" /* 8897 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -195,7 +195,7 @@ function Duration(animationValue) {
   }
   obj4.color = str;
   obj4.children = memo;
-  items7[1] = closure_13(tmp8(5929).Text, obj4);
+  items7[1] = closure_13(tmp8(5919).Text, obj4);
   obj3.children = items7;
   return closure_14(tmp10(1655).View, obj3);
 }
@@ -254,7 +254,7 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
     if (!timeout) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        const obj = c0(5548);
+        const obj = c0(5538);
         const result = _undefined2.set(obj.withTiming(1, { easing: c0(1655).Easing.quad, duration: 200 }));
       }, 1000);
       return () => {

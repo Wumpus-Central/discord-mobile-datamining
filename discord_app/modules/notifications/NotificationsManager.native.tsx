@@ -1,17 +1,17 @@
-// === Module 20358: NotificationsManager ===
+// === Module 20361: NotificationsManager ===
 
-// Module 20358 (NotificationsManager)
+// Module 20361 (NotificationsManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8199 */;
 import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14828 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5240 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14825 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
@@ -89,7 +89,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(20359, dependencyMap.paths), gesture, obj3);
+    obj2.openLazy(asyncRequireImpl(20362, dependencyMap.paths), gesture, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -167,7 +167,7 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
 const PermissionPromptType = fn(14825).PermissionPromptType;
 const Constants = fn(1072);
 ({ RelationshipTypes: closure_10, GuildFeatures: closure_11, AnalyticEvents: closure_12 } = Constants);
-let closure_13 = fn(6902).NotificationAuthorizationStatus;
+let closure_13 = fn(6892).NotificationAuthorizationStatus;
 const NotificationPermissionConstants = fn(14826);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_14, EventActionLocation: closure_15 } = NotificationPermissionConstants);
 const items = [, ];

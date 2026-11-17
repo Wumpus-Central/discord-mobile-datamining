@@ -3,7 +3,7 @@
 // Module 13554 (useRenderPollAnswerImage)
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import EmojiTypes from "EmojiTypes" /* 5255 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import EmojiDefault from "Emoji" /* 7894 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

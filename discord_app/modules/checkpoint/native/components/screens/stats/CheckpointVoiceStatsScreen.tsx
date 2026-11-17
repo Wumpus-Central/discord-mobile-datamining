@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _modDef3317 from "module_3317" /* 3317 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6747 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6737 */;
 import CheckpointScreenDefault from "CheckpointScreen" /* 14270 */;
 import CheckpointTextDefault from "CheckpointText" /* 14271 */;
 import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 14273 */;
@@ -20,7 +20,7 @@ import CheckpointStore from "CheckpointStore" /* 14253 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6377).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6367).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5306);
@@ -88,7 +88,7 @@ export default function CheckpointVoiceStatsScreen() {
   if (stateFromStores != null) {
     prop = stateFromStores.totalVoiceMinutesPercentile;
   }
-  const checkpointTopPercent = stateFromStores1(6747).getCheckpointTopPercent(prop);
+  const checkpointTopPercent = stateFromStores1(6737).getCheckpointTopPercent(prop);
   const intl = tmp4(1113).intl;
   const string = intl.string;
   const tmp2Result = _modDef3317;
@@ -106,7 +106,7 @@ export default function CheckpointVoiceStatsScreen() {
     }
   }
   const obj4 = { animatedUri: null, staticUri: null, style: null };
-  const tmp4Result = stateFromStores1(6747);
+  const tmp4Result = stateFromStores1(6737);
   obj4.animatedUri = _modDef14502;
   obj4.staticUri = _modDef14503;
   const items3 = [tmp.image, ];

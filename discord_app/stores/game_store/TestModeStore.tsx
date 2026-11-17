@@ -1,6 +1,6 @@
-// === Module 5975: TestModeStore ===
+// === Module 5965: TestModeStore ===
 
-// Module 5975 (TestModeStore)
+// Module 5965 (TestModeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import UserSettings from "UserSettings" /* 5131 */;

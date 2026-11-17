@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 import ForumActivePostStore from "ForumActivePostStore" /* 9108 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 require = fn;
 function getIsPrivate(threadSettingsDraft, privateThreadMode) {

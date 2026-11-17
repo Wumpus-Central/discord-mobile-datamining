@@ -4,18 +4,18 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 6096 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6086 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import SpeakingStore from "SpeakingStore" /* 6941 */;
+import SpeakingStore from "SpeakingStore" /* 6931 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
 
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
-const NativePermissionTypes = fn(6902).NativePermissionTypes;
+const NativePermissionTypes = fn(6892).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(5306);
@@ -134,7 +134,7 @@ export default function VoiceSensitivity(auto) {
             }
             if (tmp5) {
               mediaEngine = mediaEngine.getMediaEngine();
-              mediaEngine.on(auto(6096).MediaEngineEvent.VoiceActivity, callback);
+              mediaEngine.on(auto(6086).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
             return { value: "HermesInternal", done: null };

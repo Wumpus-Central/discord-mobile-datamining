@@ -1,10 +1,10 @@
-// === Module 20606: GuildSettingsModalCommunity ===
+// === Module 20609: GuildSettingsModalCommunity ===
 
-// Module 20606 (GuildSettingsModalCommunity)
+// Module 20609 (GuildSettingsModalCommunity)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import HeaderActionButton from "HeaderActionButton" /* 7427 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8404 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ import GuildSettingsStore from "GuildSettingsStore" /* 8405 */;
 
 require = fn;
 let closure_6 = fn(5236).GUILD_SELECTABLE_CHANNELS_KEY;
-const calculateLocaleOptions = fn(19309).calculateLocaleOptions;
+const calculateLocaleOptions = fn(19311).calculateLocaleOptions;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, GuildSettingsSections: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);
@@ -189,7 +189,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       onClose(8404).updateGuild({ rulesChannelId });
       const obj = onClose(8404);
       const obj2 = { rulesChannelId };
-      onClose(5552).hideActionSheet();
+      onClose(5542).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -216,7 +216,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       onClose(8404).updateGuild({ publicUpdatesChannelId });
       const obj = onClose(8404);
       const obj2 = { publicUpdatesChannelId };
-      onClose(5552).hideActionSheet();
+      onClose(5542).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
@@ -239,7 +239,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       onClose(8404).updateGuild({ safetyAlertsChannelId });
       const obj = onClose(8404);
       const obj2 = { safetyAlertsChannelId };
-      onClose(5552).hideActionSheet();
+      onClose(5542).hideActionSheet();
     };
     let id;
     if (safetyAlertsChannel != null) {

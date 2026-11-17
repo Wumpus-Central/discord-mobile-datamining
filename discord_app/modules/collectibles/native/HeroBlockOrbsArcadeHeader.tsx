@@ -1,17 +1,17 @@
-// === Module 18495: HeroBlockOrbsArcadeHeader ===
+// === Module 18497: HeroBlockOrbsArcadeHeader ===
 
-// Module 18495 (HeroBlockOrbsArcadeHeader)
+// Module 18497 (HeroBlockOrbsArcadeHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import shared from "shared" /* 5313 */;
-import QuestContent from "QuestContent" /* 5343 */;
-import native from "native" /* 5377 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import native from "native" /* 5367 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import QuestContent from "QuestContent" /* 6959 */;
 import inlineStyles from "inlineStyles" /* 8263 */;
 import QuestUtils from "QuestUtils" /* 10128 */;
-import _modDef18496 from "module_18496" /* 18496 */;
+import _modDef18498 from "module_18498" /* 18498 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
@@ -219,7 +219,7 @@ function HeroBlockOrbsArcadeHeaderContent(bleedsOntoPage) {
   const obj22 = { source: null, style: null, accessible: false };
   const obj23 = { uri: null };
   const tmp2Result2 = require("useFontScale");
-  obj23.uri = require("module_18497");
+  obj23.uri = require("module_18499");
   obj22.source = obj23;
   obj22.style = tmp.image;
   tmp25Result = closure_9(require("FastImage"), obj22);
@@ -234,7 +234,7 @@ const jsxProd = fn(21);
 let c12 = 289;
 const PX_16 = nativeDefault.space.PX_16;
 const AssetUtils = fn(10146);
-const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef18496);
+const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef18498);
 const PX_48 = nativeDefault.space.PX_48;
 const ellipse = { cx: 85.5, cy: 267.5, rx: 329, ry: 217, rotation: 63 };
 const ellipse2 = { cx: 67, cy: 231, rx: 185, ry: 155 };

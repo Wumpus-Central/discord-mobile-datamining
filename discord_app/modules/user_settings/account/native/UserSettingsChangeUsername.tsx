@@ -3,7 +3,7 @@
 // Module 17230 (UserSettingsChangeUsername)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,16 +12,16 @@ import UserStore from "UserStore" /* 1388 */;
 require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(6788).match(showHint.usernameStatus);
+  const match = showHint(6778).match(showHint.usernameStatus);
   let obj = { type: showHint(17231).NameValidationState.ERROR, message: null };
-  const P = showHint(6788).P;
+  const P = showHint(6778).P;
   obj.message = P.select();
-  const str = showHint(6788);
+  const str = showHint(6778);
   const obj2 = { type: showHint(17231).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(6788).P;
+  const P2 = showHint(6778).P;
   obj2.message = P2.select();
-  const withResult = match.with(obj, (children) => closure_1_11(showHint(5929).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children }));
-  return match.with(obj, (children) => closure_1_11(showHint(5929).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(5929).Text, { variant: "body-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
+  const withResult = match.with(obj, (children) => closure_1_11(showHint(5919).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children }));
+  return match.with(obj, (children) => closure_1_11(showHint(5919).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(5919).Text, { variant: "body-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
     let tmp = null;
     if (showHint) {
       const obj = { variant: "body-xs/medium", color: "text-default", children: null };

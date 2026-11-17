@@ -2,8 +2,8 @@
 
 // Module 12955 (useStageSummary)
 import util from "util" /* 1113 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6943 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6949 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6933 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6939 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stage_channels/useStageSummary.tsx");

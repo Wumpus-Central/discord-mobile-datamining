@@ -2,7 +2,7 @@
 
 // Module 12072 (InAppReportsOptionRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import noop from "module_19" /* 19 */;
 

@@ -4,15 +4,15 @@
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import native from "native" /* 5377 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import native from "native" /* 5367 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
 import useTypingTextDefault from "useTypingText" /* 14578 */;
 import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14579 */;
 import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 14580 */;
 import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 14581 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5932 */;
+import DevSettingsStore from "DevSettingsStore" /* 5922 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6970 */;
 import TypingStore from "TypingStore" /* 14575 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -236,7 +236,7 @@ function TypingIndicatorInner(channel) {
     const obj8 = { children: null };
     const items14 = [tmp32Result3, ];
     const obj9 = { style: tmp16.text, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "body-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: tmp6Result };
-    items14[1] = closure_12(tmp(5929).Text, obj9);
+    items14[1] = closure_12(tmp(5919).Text, obj9);
     obj8.children = items14;
     tmp33Result = closure_14(closure_13, obj8);
   }

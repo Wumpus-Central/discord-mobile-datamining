@@ -4,8 +4,8 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import TextField from "TextField" /* 7626 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -184,8 +184,8 @@ export default function AddFriendNicknameModal(arg0) {
   const intl6 = util.intl;
   obj8.accessibilityLabel = intl6.string(util.t.pqG6GS);
   let obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: stringResult };
-  const tmp3Result3 = showUserProfile(6340);
-  obj8.placeholder = showUserProfile(5372).getName(stateFromStores1);
+  const tmp3Result3 = showUserProfile(6330);
+  obj8.placeholder = showUserProfile(5362).getName(stateFromStores1);
   obj8.defaultValue = stateFromStores;
   items3[2] = closure_9(TextField.TextField, obj8);
   obj5.children = items3;

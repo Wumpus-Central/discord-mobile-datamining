@@ -1,6 +1,6 @@
-// === Module 17864: UntouchableAlert ===
+// === Module 17866: UntouchableAlert ===
 
-// Module 17864 (UntouchableAlert)
+// Module 17866 (UntouchableAlert)
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7418 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,7 +41,7 @@ prototype["render"] = function render() {
   }
   return tmp2;
 };
-UntouchableAlert.contextType = fn(5377).ThemeContext;
+UntouchableAlert.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
 

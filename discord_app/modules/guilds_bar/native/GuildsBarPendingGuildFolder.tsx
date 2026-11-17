@@ -1,11 +1,11 @@
-// === Module 19085: GuildsBarPendingGuildFolder ===
+// === Module 19087: GuildsBarPendingGuildFolder ===
 
-// Module 19085 (GuildsBarPendingGuildFolder)
+// Module 19087 (GuildsBarPendingGuildFolder)
 import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 10804 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 19065 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 19072 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 19067 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 19074 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
@@ -16,9 +16,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(19072);
+  let obj = id(19074);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(19072).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
+  const guildsBarAnimatedWrapperStyles = id(19074).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
   items = [SelectedGuildStore];
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => {
@@ -50,12 +50,12 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   const sharedValue = id(1655).useSharedValue("" + id);
   const memo1 = noop.useMemo(() => ({
     onPress() {
-      const result = id(5554).triggerHapticFeedback(id(5554).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj = id(5554);
-      const result1 = closure_1(6917).toggleGuildFolderExpand(closure_1_0);
+      const result = id(5544).triggerHapticFeedback(id(5544).HapticFeedbackTypes.IMPACT_LIGHT);
+      const obj = id(5544);
+      const result1 = closure_1(6907).toggleGuildFolderExpand(closure_1_0);
     }
   }), items2);
-  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "inlineCode", config: null, externalChildren: 251, children: 5 };
+  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "bindUserMenu", config: null, externalChildren: null, children: true };
   const obj3 = id(1655);
   obj4.id = "" + id;
   obj4.accessibilityActions = accessibilityActions;
@@ -69,9 +69,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(19071).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(19073).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
   obj4.children = jsx(id(12277).HourglassIcon, {});
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "inlineCode", config: null, externalChildren: 251, children: 5 });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "bindUserMenu", config: null, externalChildren: null, children: true });
 });

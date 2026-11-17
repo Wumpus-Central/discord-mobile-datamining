@@ -6,10 +6,10 @@ import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 5163 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 6909 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 6899 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import TableRow from "TableRow" /* 7443 */;
 import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12123 */;
 import GuildMemberUtils from "GuildMemberUtils" /* 14135 */;
@@ -17,13 +17,13 @@ import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationAc
 import showKickConfirmModalDefault from "showKickConfirmModal" /* 14159 */;
 import showBanConfirmModalDefault from "showBanConfirmModal" /* 14161 */;
 import noop from "module_19" /* 19 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6942 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6932 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildChannelStore from "GuildChannelStore" /* 5236 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 require = fn;
 function ModeratorActionRow(isDestructive) {
@@ -347,7 +347,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              guildId(6848).pop();
+              guildId(6838).pop();
             }
           });
         };

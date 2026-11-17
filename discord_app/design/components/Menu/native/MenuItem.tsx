@@ -1,7 +1,7 @@
 // === Module 16443: MenuItem ===
 
 // Module 16443 (MenuItem)
-import IconDefault from "Icon" /* 5938 */;
+import IconDefault from "Icon" /* 5928 */;
 import FormRowDefault from "FormRow" /* 7901 */;
 import FormLabelDefault from "FormLabel" /* 7903 */;
 import Menu from "Menu" /* 16437 */;

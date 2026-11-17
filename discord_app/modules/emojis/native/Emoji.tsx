@@ -5,7 +5,7 @@ import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 5256 */;
 import shared from "shared" /* 5313 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef7895 from "module_7895" /* 7895 */;
 import _modDef7896 from "module_7896" /* 7896 */;
 import noop from "module_19" /* 19 */;

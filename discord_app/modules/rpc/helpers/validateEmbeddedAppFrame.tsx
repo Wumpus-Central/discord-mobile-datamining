@@ -2,7 +2,7 @@
 
 // Module 16915 (validateEmbeddedAppFrame)
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2151 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
 import getSocketFrameDefault from "getSocketFrame" /* 7296 */;
 import isPostMessageSocketDefault from "isPostMessageSocket" /* 7297 */;
 import RPCErrorDefault from "RPCError" /* 7303 */;

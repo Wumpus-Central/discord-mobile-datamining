@@ -6,7 +6,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1345 from "module_1345" /* 1345 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import LibraryApplicationUtils from "LibraryApplicationUtils" /* 8531 */;
 import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10860 */;
 import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 15989 */;
@@ -18,8 +18,8 @@ import DetectableGameStore from "DetectableGameStore" /* 2159 */;
 import IdleStore from "IdleStore" /* 7041 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2163 */;
 import LocalActivityStore from "LocalActivityStore" /* 7317 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
-import SessionsStore from "SessionsStore" /* 6073 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
+import SessionsStore from "SessionsStore" /* 6063 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
@@ -158,7 +158,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(6068).sortActivity;
+const sortActivity = fn(6058).sortActivity;
 const Constants = fn(1072);
 const StatusTypes = Constants.StatusTypes;
 const AppStates = Constants.AppStates;

@@ -4,7 +4,7 @@
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1187 */;
 import ForumLayout from "ForumLayout" /* 5165 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import ForumHooks from "ForumHooks" /* 9107 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9189 */;
 import useChatWidthDefault from "useChatWidth" /* 12421 */;

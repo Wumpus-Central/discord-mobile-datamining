@@ -1,9 +1,9 @@
-// === Module 19889: ParentalConsentWarningBanner ===
+// === Module 19891: ParentalConsentWarningBanner ===
 
-// Module 19889 (ParentalConsentWarningBanner)
+// Module 19891 (ParentalConsentWarningBanner)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import tinycolorDefault from "tinycolor" /* 8495 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8742 */;

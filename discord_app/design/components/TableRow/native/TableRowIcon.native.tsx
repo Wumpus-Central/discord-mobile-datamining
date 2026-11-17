@@ -2,7 +2,7 @@
 
 // Module 7455 (TableRowIcon)
 import nativeDefault from "native" /* 575 */;
-import Icon from "Icon" /* 5938 */;
+import Icon from "Icon" /* 5928 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

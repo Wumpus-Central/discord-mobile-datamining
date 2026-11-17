@@ -2,7 +2,7 @@
 
 // Module 10974 (LazyLoadedThreadManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 
@@ -57,9 +57,9 @@ function loadThread(channelId) {
       } else {
         const _location = location;
         let obj2 = { path: null, exact: true };
-        const RouteParam = tmp13(5367).RouteParam;
-        const tmp13Result = tmp13(5354);
-        const RouteParam2 = tmp13(5367).RouteParam;
+        const RouteParam = tmp13(5357).RouteParam;
+        const tmp13Result = tmp13(5344);
+        const RouteParam2 = tmp13(5357).RouteParam;
         obj2.path = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj2);
         const HTTP = tmp13(1285).HTTP;

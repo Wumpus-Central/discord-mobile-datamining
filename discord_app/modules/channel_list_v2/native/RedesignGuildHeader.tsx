@@ -1,28 +1,28 @@
-// === Module 18851: RedesignGuildHeader ===
+// === Module 18853: RedesignGuildHeader ===
 
-// Module 18851 (RedesignGuildHeader)
+// Module 18853 (RedesignGuildHeader)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import FavoritesUtils from "FavoritesUtils" /* 5180 */;
 import shared from "shared" /* 5313 */;
-import useToken from "useToken" /* 5902 */;
-import spring_spring from "spring/spring" /* 5939 */;
-import springPresets from "springPresets" /* 5940 */;
-import ButtonConstants from "ButtonConstants" /* 5942 */;
-import useFontScale from "useFontScale" /* 5944 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6061 */;
+import useToken from "useToken" /* 5892 */;
+import spring_spring from "spring/spring" /* 5929 */;
+import springPresets from "springPresets" /* 5930 */;
+import ButtonConstants from "ButtonConstants" /* 5932 */;
+import useFontScale from "useFontScale" /* 5934 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6051 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9061 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10271 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10576 */;
 import openGuildActionSheetDefault from "openGuildActionSheet" /* 16345 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 18824 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 18852 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 18853 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 18826 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 18854 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 18855 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
-import ActionSheetStore from "ActionSheetStore" /* 5553 */;
+import ActionSheetStore from "ActionSheetStore" /* 5543 */;
 
 const _modDef1655 = _mod1655;
 
@@ -198,7 +198,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.onPressIn = callback;
     obj6.onPressOut = callback1;
     const obj7 = { style: tmp22, source: animatableSourceWithFallback };
-    const items9 = [closure_13(tmp(6020), obj7), ];
+    const items9 = [closure_13(tmp(6010), obj7), ];
     const obj8 = { style: null };
     const items10 = [tmp3.bannerOverlay, animatedStyle1];
     obj8.style = items10;
@@ -206,7 +206,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.children = items9;
     const items11 = [closure_14(closure_6, obj6), ];
     if (tmp28Result) {
-      tmp28Result = closure_13(tmp(18894), {});
+      tmp28Result = closure_13(tmp(18896), {});
     }
     items11[1] = tmp28Result;
     obj5.children = items11;
@@ -216,7 +216,7 @@ function ReanimatedGuildBanner(guild) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(6060);
+const RedesignChannelListConstants = fn(6050);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_9, BANNER_MAX_HEIGHT_PERCENTAGE: closure_10, SEARCH_BAR_MARGIN_BOTTOM: closure_11 } = RedesignChannelListConstants);
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);

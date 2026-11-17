@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import ConjureTodoState from "ConjureTodoState" /* 13573 */;
 import ConjureTodoAgents from "ConjureTodoAgents" /* 13589 */;
 import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 13610 */;
@@ -41,7 +41,7 @@ function TodoAgents(agents) {
       obj3.accessibilityLabel = intl.formatToPlainString(items(4131).SPGdDc, obj4);
       const _HermesInternal = HermesInternal;
       obj3.children = "+" + overflow;
-      tmp9 = closure_6(tmp2(5929).Text, obj3);
+      tmp9 = closure_6(tmp2(5919).Text, obj3);
     }
     items1[1] = tmp9;
     obj2.children = items1;
@@ -235,7 +235,7 @@ export default function ConjureTodoList(announceProgress) {
       let obj4 = { style: tmp.row, children: null };
       let items2 = [closure_6(TodoMarker, { status: "pending" }), ];
       const obj5 = { variant: "body-sm/normal", color: "text-muted", style: tmp.text, children: provisional };
-      items2[1] = closure_6(agents(5929).Text, obj5);
+      items2[1] = closure_6(agents(5919).Text, obj5);
       obj4.children = items2;
       tmp11Result = closure_7(closure_5, obj4);
     }

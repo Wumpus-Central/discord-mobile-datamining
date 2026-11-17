@@ -3,10 +3,10 @@
 // Module 13449 (useFetchDeveloperActivityShelfItems)
 import fetchDeveloperApplications from "fetchDeveloperApplications" /* 12750 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5976 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5966 */;
 
 require = fn;
-const DevShelfFetchState = fn(5976).DevShelfFetchState;
+const DevShelfFetchState = fn(5966).DevShelfFetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 

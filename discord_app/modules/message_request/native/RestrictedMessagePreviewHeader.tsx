@@ -1,10 +1,10 @@
-// === Module 19763: RestrictedMessagePreviewHeader ===
+// === Module 19765: RestrictedMessagePreviewHeader ===
 
-// Module 19763 (RestrictedMessagePreviewHeader)
+// Module 19765 (RestrictedMessagePreviewHeader)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import noop from "module_19" /* 19 */;
@@ -50,9 +50,9 @@ export default function RestrictedMessagePreviewHeader(channel) {
         const obj = channel(8546);
         channel(7231).transitionToGuild(arg0);
         const obj2 = channel(7231);
-        user(5552).hideActionSheet();
-        const obj3 = user(5552);
-        user(6848).popWithKey(closure_1_5);
+        user(5542).hideActionSheet();
+        const obj3 = user(5542);
+        user(6838).popWithKey(closure_1_5);
       }
     });
   }, items2);

@@ -1,20 +1,20 @@
-// === Module 18642: MainNavigator ===
+// === Module 18644: MainNavigator ===
 
-// Module 18642 (MainNavigator)
+// Module 18644 (MainNavigator)
 import PlatformUtils2 from "PlatformUtils" /* 1380 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1500 */;
 import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10908 */;
 import StartupProfiler from "StartupProfiler" /* 12447 */;
 import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 12917 */;
 import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 16492 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 18644 */;
-import AutoAnalytics from "AutoAnalytics" /* 19583 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 19636 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 19858 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 19889 */;
-import AppComponents from "AppComponents" /* 19891 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 18646 */;
+import AutoAnalytics from "AutoAnalytics" /* 19585 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 19638 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 19860 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 19891 */;
+import AppComponents from "AppComponents" /* 19893 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -83,7 +83,7 @@ function getOrbsArcadeGameComponent() {
   return require("OrbsArcadeGameScreen").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(18643).StackNavigationAnimationSettings;
+let closure_7 = fn(18645).StackNavigationAnimationSettings;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -122,14 +122,14 @@ function getChannelScreen() {
             type = action.type;
           }
         }
-        obj = animation(5501);
+        obj = animation(5491);
         if ("GO_BACK" === type) {
           let SWIPE = constants2.BACK_BUTTON;
         } else {
           SWIPE = constants2.SWIPE;
         }
-        closure_1_1(6067).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-        const obj4 = closure_1_1(6067);
+        closure_1_1(6057).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+        const obj4 = closure_1_1(6057);
       }
     },
     options(arg0) {
@@ -238,14 +238,14 @@ export default noop.memo(function StackNavigator() {
                     type = action.type;
                   }
                 }
-                obj = animation(5501);
+                obj = animation(5491);
                 if ("GO_BACK" === type) {
                   let SWIPE = constants2.BACK_BUTTON;
                 } else {
                   SWIPE = constants2.SWIPE;
                 }
-                closure_1_1(6067).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-                const obj4 = closure_1_1(6067);
+                closure_1_1(6057).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+                const obj4 = closure_1_1(6057);
               }
             },
             options(arg0) {
@@ -449,14 +449,14 @@ export default noop.memo(function StackNavigator() {
                   type = action.type;
                 }
               }
-              obj = animation(5501);
+              obj = animation(5491);
               if ("GO_BACK" === type) {
                 let SWIPE = constants2.BACK_BUTTON;
               } else {
                 SWIPE = constants2.SWIPE;
               }
-              closure_1_1(6067).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-              const obj4 = closure_1_1(6067);
+              closure_1_1(6057).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+              const obj4 = closure_1_1(6057);
             }
           },
           options(arg0) {

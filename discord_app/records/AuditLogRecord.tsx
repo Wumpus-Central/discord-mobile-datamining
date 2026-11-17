@@ -1,6 +1,6 @@
-// === Module 20489: AuditLogRecord ===
+// === Module 20492: AuditLogRecord ===
 
-// Module 20489 (AuditLogRecord)
+// Module 20492 (AuditLogRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import _modDef2169 from "module_2169" /* 2169 */;

@@ -46,7 +46,7 @@ export function launchPremiumPlanSelect(isBoostPurchaseFlow) {
     navigation.push(PREMIUM_PLAN_SELECT, obj);
   } else {
     const obj4 = { initialRoute: PREMIUM_PLAN_SELECT, analyticsLocation, analyticsLocations, predicate: wrappedPredicate, showCurrentPlan, isBoostPurchaseFlow: flag, planId, applicationId, guildId, onBack: tmp, onPaymentSuccess, onPaymentDismiss };
-    const obj3 = flag2(6848);
+    const obj3 = flag2(6838);
     obj3.pushLazy(asyncRequireImpl(9580, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
     const tmp7 = asyncRequireImpl(9580, dependencyMap.paths);
   }

@@ -1,7 +1,7 @@
 // === Module 10999: showThreadBrowserModal ===
 
 // Module 10999 (showThreadBrowserModal)
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
 import ThreadUtils from "ThreadUtils" /* 9008 */;
 import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10897 */;
 import size from "module_2" /* 2 */;

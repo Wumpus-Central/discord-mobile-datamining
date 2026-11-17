@@ -137,7 +137,7 @@ function ProfileEffectSectionPreview(arg0) {
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
-  items1[1] = closure_9(purchase(5893), obj2);
+  items1[1] = closure_9(purchase(5883), obj2);
   obj.children = items1;
   return closure_10(closure_5, obj);
 }
@@ -241,6 +241,6 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   obj6.analyticsSource = isTryItOut(7937).EDIT_PROFILE_EFFECT_SHEET;
   items3[1] = closure_9(isTryItOut(9403), obj6);
   obj3.children = items3;
-  obj2.children = closure_10(guildId(5566).BottomSheet, obj3);
+  obj2.children = closure_10(guildId(5556).BottomSheet, obj3);
   return closure_9(guildId(7918).AnalyticsLocationProvider, obj2);
 };

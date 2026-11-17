@@ -1,25 +1,25 @@
-// === Module 19233: notifications/Notifications ===
+// === Module 19235: notifications/Notifications ===
 
-// Module 19233 (notifications/Notifications)
+// Module 19235 (notifications/Notifications)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import native from "native" /* 5377 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5488 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
-import LayerScope from "LayerScope" /* 5916 */;
+import native from "native" /* 5367 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5478 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
+import LayerScope from "LayerScope" /* 5906 */;
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 7499 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7771 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7918 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10271 */;
 import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 14204 */;
-import useAppFrameDefault from "useAppFrame" /* 18713 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 18733 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 19234 */;
-import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 19235 */;
-import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 19236 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 19240 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 19241 */;
+import useAppFrameDefault from "useAppFrame" /* 18715 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 18735 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 19236 */;
+import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 19237 */;
+import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 19238 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 19242 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 19243 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -183,7 +183,7 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const obj4 = { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp11(1113).intl;
     obj4.children = intl2.string(tmp11(1113).t.HcoRu0);
-    items1[1] = closure_7(tmp11(5929).Text, obj4);
+    items1[1] = closure_7(tmp11(5919).Text, obj4);
     const obj5 = { style: tmp.actionButtons, children: null };
     const obj6 = { ref, type: tmp11(11905).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
     const items2 = [closure_7(ForLaterOpenActionButtonDefault, obj6), , ];

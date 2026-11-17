@@ -3,8 +3,8 @@
 // Module 14932 (UserProfileStackedActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5556 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7497 */;
 import Form from "Form" /* 8106 */;
@@ -102,5 +102,5 @@ export function UserProfileStackedActionSheetSectionList(renderItem) {
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return React4(Form.FormDivider, { style: divider.divider });
   };
-  return closure_4(renderItem(5570).BottomSheetSectionList, obj);
+  return closure_4(renderItem(5560).BottomSheetSectionList, obj);
 }

@@ -8,8 +8,8 @@ import UserStore from "UserStore" /* 1388 */;
 
 const util = ShopIcon(1113);
 const native = ShopIcon(1187);
-const Text_Text = ShopIcon(5929);
-const components_Button_Button = ShopIcon(5936);
+const Text_Text = ShopIcon(5919);
+const components_Button_Button = ShopIcon(5926);
 const Pressables = ShopIcon(7428);
 const XSmallIcon = ShopIcon(7549);
 const NitroWheelIcon = ShopIcon(9436);

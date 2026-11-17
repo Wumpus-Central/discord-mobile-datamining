@@ -31,7 +31,7 @@ export default function PollCreationInputError(message) {
   }, items);
   const obj = { style: tmp.container, children: null };
   const size = { width: 16, height: 16, style: tmp.icon };
-  const items1 = [closure_4(message(1187).WarningCircle, size), closure_4(message(5929).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children: message })];
+  const items1 = [closure_4(message(1187).WarningCircle, size), closure_4(message(5919).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children: message })];
   obj.children = items1;
   return closure_5(View, obj);
 };

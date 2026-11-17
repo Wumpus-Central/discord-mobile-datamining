@@ -1,9 +1,9 @@
-// === Module 20729: FormImagePicker ===
+// === Module 20732: FormImagePicker ===
 
-// Module 20729 (FormImagePicker)
+// Module 20732 (FormImagePicker)
 import nativeDefault from "native" /* 575 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 8451 */;
 import utils_UploadUtilsDefault from "utils/UploadUtils" /* 8879 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -222,8 +222,8 @@ export default function FormImagePicker(children) {
   const obj = { style: tmp2.imageSelectionRow, children: null };
   const obj2 = { style: tmp2.buttonColumn, children: null };
   items = [
-    closure_6(tmp6(5929).Text, { style: tmp2.imageDescription, variant: "body-sm/medium", color: "text-default", children: children.description }),
-    closure_6(tmp6(5936).Button, {
+    closure_6(tmp6(5919).Text, { style: tmp2.imageDescription, variant: "body-sm/medium", color: "text-default", children: children.description }),
+    closure_6(tmp6(5926).Button, {
       text: stringResult,
       variant: "secondary",
       onPress: function handleSelectImage() {

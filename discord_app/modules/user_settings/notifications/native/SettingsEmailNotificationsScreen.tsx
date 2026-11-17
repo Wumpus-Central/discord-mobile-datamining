@@ -1,9 +1,9 @@
-// === Module 18118: SettingsEmailNotificationsScreen ===
+// === Module 18120: SettingsEmailNotificationsScreen ===
 
-// Module 18118 (SettingsEmailNotificationsScreen)
+// Module 18120 (SettingsEmailNotificationsScreen)
 import util from "util" /* 1113 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
-import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 18119 */;
+import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 18121 */;
 import noop from "module_19" /* 19 */;
 import EmailSettingsStore from "EmailSettingsStore" /* 16241 */;
 
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/user_settings/notifications/n
 export default noop.memo(function SettingsEmailNotificationsScreen() {
   isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(16902).useIsDeclarativeSettingsUIAvailable("SettingsEmailNotificationsScreen");
   obj = isDeclarativeSettingsUIAvailable(16902);
-  enabled = enabled(18122).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
+  enabled = enabled(18124).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
   items = [isDeclarativeSettingsUIAvailable, enabled];
   const node = noop.useMemo(() => {
     const tmp = isDeclarativeSettingsUIAvailable ? obj2 : obj;
@@ -50,6 +50,6 @@ export default noop.memo(function SettingsEmailNotificationsScreen() {
     obj3.sections = items;
     return obj.createList(obj3);
   }, items);
-  enabled(5899)(initializeEmailSettings);
+  enabled(5889)(initializeEmailSettings);
   return jsx(enabled(17213), { node });
 });

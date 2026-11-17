@@ -2,7 +2,7 @@
 
 // Module 7434 (ScreenStreamIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod7435 from "module_7435" /* 7435 */;
 import noop from "module_19" /* 19 */;
 

@@ -4,7 +4,7 @@
 import applyDefault from "apply" /* 12 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
 import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 14921 */;
 

@@ -1,8 +1,8 @@
 // === Module 12286: InAppReportsIgnoreUserElement ===
 
 // Module 12286 (InAppReportsIgnoreUserElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8137 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

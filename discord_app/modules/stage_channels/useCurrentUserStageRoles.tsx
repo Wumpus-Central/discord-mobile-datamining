@@ -2,7 +2,7 @@
 
 // Module 12908 (useCurrentUserStageRoles)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6942 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6932 */;
 
 const require = globalThis.__r;
 

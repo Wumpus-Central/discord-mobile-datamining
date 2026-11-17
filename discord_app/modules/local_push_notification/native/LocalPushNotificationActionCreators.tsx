@@ -1,11 +1,11 @@
-// === Module 20902: LocalPushNotificationActionCreators ===
+// === Module 20905: LocalPushNotificationActionCreators ===
 
-// Module 20902 (LocalPushNotificationActionCreators)
+// Module 20905 (LocalPushNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import Constants2 from "Constants" /* 7397 */;
 import size from "module_2" /* 2 */;
 
@@ -38,11 +38,11 @@ export function receiveLocalNotification(getData) {
         data(2121)(14037, dependencyMap.paths).then((result) => result.default(projectId.channelId));
         const promise2 = data(2121)(14037, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
-        data(2121)(6063, dependencyMap.paths).then((transitionToMessage) => {
+        data(2121)(6053, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = projectId);
-          return transitionToMessage.transitionToMessage(channelId, messageId, { jumpType: data(5543).JumpType.INSTANT });
+          return transitionToMessage.transitionToMessage(channelId, messageId, { jumpType: data(5533).JumpType.INSTANT });
         });
-        const promise = data(2121)(6063, dependencyMap.paths);
+        const promise = data(2121)(6053, dependencyMap.paths);
       } else if (constants.CONJURE === type) {
         projectId = tmp4.projectId;
         data(2121)(10536, dependencyMap.paths).then((openConjureHomeScreenWhenReady) => openConjureHomeScreenWhenReady.openConjureHomeScreenWhenReady(projectId));

@@ -2,8 +2,8 @@
 
 // Module 15479 (BioText)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import LinkingDefault from "Linking" /* 6012 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import BioMarkupUtils from "BioMarkupUtils" /* 13481 */;
 import noop from "module_19" /* 19 */;
 

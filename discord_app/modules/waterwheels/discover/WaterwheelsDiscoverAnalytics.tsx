@@ -1,6 +1,6 @@
-// === Module 19013: WaterwheelsDiscoverAnalytics ===
+// === Module 19015: WaterwheelsDiscoverAnalytics ===
 
-// Module 19013 (WaterwheelsDiscoverAnalytics)
+// Module 19015 (WaterwheelsDiscoverAnalytics)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10225 */;

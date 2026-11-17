@@ -5,11 +5,11 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef3417 from "module_3417" /* 3417 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import LinkingDefault from "Linking" /* 6012 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6771 */;
-import MetricEvents from "MetricEvents" /* 6776 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import LinkingDefault from "Linking" /* 6002 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6761 */;
+import MetricEvents from "MetricEvents" /* 6766 */;
 import TableRow from "TableRow" /* 7443 */;
 import SafetyHubModels from "SafetyHubModels" /* 8207 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 8451 */;
@@ -69,7 +69,7 @@ function ClassificationHeader(classificationTypeText) {
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(5929).Text, { variant: "body-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
+  obj.children = closure_13(classificationTypeText(5919).Text, { variant: "body-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
   return closure_13(closure_4, obj);
 }
 function SectionHeader(arg0) {
@@ -206,7 +206,7 @@ function ClassificationPolicyCard(classificationDescription) {
   const obj6 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = policyExplainerLink(1113).intl;
   obj6.children = intl.format(policyExplainerLink(1113).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
-  obj5.children = closure_13(policyExplainerLink(5929).Text, obj6);
+  obj5.children = closure_13(policyExplainerLink(5919).Text, obj6);
   items[1] = closure_13(closure_4, obj5);
   obj2.children = items;
   obj.children = closure_14(tmp2, obj2);

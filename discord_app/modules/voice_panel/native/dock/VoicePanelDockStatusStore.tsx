@@ -1,6 +1,6 @@
-// === Module 19202: VoicePanelDockStatusStore ===
+// === Module 19204: VoicePanelDockStatusStore ===
 
-// Module 19202 (VoicePanelDockStatusStore)
+// Module 19204 (VoicePanelDockStatusStore)
 import _mod5221 from "module_5221" /* 5221 */;
 import UserStore from "UserStore" /* 1388 */;
 

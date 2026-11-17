@@ -2,7 +2,7 @@
 
 // Module 11825 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9515 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;

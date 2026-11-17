@@ -1,7 +1,7 @@
 // === Module 14756: SearchPlatformConstants ===
 
 // Module 14756 (SearchPlatformConstants)
-import LinkingWhitelist from "LinkingWhitelist" /* 6013 */;
+import LinkingWhitelist from "LinkingWhitelist" /* 6003 */;
 import FacebookNeutralIcon from "FacebookNeutralIcon" /* 9361 */;
 import InstagramNeutralIcon from "InstagramNeutralIcon" /* 9363 */;
 import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 10476 */;

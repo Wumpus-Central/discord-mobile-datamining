@@ -1,6 +1,6 @@
-// === Module 18403: useDesignSystemsSettingPredicate ===
+// === Module 18405: useDesignSystemsSettingPredicate ===
 
-// Module 18403 (useDesignSystemsSettingPredicate)
+// Module 18405 (useDesignSystemsSettingPredicate)
 import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 17372 */;
 import size from "module_2" /* 2 */;
 

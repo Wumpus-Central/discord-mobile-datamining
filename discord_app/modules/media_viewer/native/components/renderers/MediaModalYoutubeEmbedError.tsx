@@ -2,7 +2,7 @@
 
 // Module 15217 (MediaModalYoutubeEmbedError)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 6012 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -25,14 +25,14 @@ export default noop.memo(function MediaModalYoutubeEmbedError(videoId) {
   const obj2 = { style: tmp.text, variant: "body-md/semibold", color: "text-overlay-light", children: null };
   const intl = videoId(1113).intl;
   obj2.children = intl.string(videoId(1113).t.u7vKPs);
-  items = [closure_4(videoId(5929).Text, obj2), ];
+  items = [closure_4(videoId(5919).Text, obj2), ];
   const obj3 = { text: null, variant: "secondary", size: "md", shrink: true, grow: false, onPress: null };
   const intl2 = videoId(1113).intl;
   obj3.text = intl2.string(videoId(1113).t.LLpxJ5);
   obj3.onPress = function onPress() {
     LinkingDefault.openURL("https://youtube.com/watch?v=" + videoId);
   };
-  items[1] = closure_4(videoId(5936).Button, obj3);
+  items[1] = closure_4(videoId(5926).Button, obj3);
   obj.children = items;
   return closure_5(View, obj);
 });

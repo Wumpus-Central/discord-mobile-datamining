@@ -5,12 +5,12 @@ import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import v1 from "v1" /* 1269 */;
 import utils_StringUtils from "utils/StringUtils" /* 2154 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
-import useMessageAuthor from "useMessageAuthor" /* 6749 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
+import useMessageAuthor from "useMessageAuthor" /* 6739 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7241 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MessageReactionsStore from "MessageReactionsStore" /* 8862 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 
@@ -19,7 +19,7 @@ const require = globalThis.__r;
 require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(5920).ReactionTypes.VOTE);
+  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(5910).ReactionTypes.VOTE);
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {

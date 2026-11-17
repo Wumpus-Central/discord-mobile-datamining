@@ -1,6 +1,6 @@
-// === Module 20819: BasicGuildActionCreators ===
+// === Module 20822: BasicGuildActionCreators ===
 
-// Module 20819 (BasicGuildActionCreators)
+// Module 20822 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

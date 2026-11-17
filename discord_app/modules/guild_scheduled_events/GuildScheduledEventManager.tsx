@@ -3,7 +3,7 @@
 // Module 7969 (GuildScheduledEventManager)
 import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7970 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7029 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 

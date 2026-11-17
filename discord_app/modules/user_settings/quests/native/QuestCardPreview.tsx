@@ -4,7 +4,7 @@
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import QuestCard from "QuestCard" /* 17692 */;
 import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 17777 */;
 import size from "module_2" /* 2 */;
@@ -16,8 +16,8 @@ export function QuestCardPreview(quest) {
   quest = quest.quest;
   return jsx(quest(15264).QuestContentImpressionTrackerNative, {
     questOrQuests: quest,
-    questContent: quest(5341).QuestContent.INTERNAL_PREVIEW_TOOL,
-    sourceQuestContent: quest(5341).QuestContent.INTERNAL_PREVIEW_TOOL,
+    questContent: quest(6957).QuestContent.INTERNAL_PREVIEW_TOOL,
+    sourceQuestContent: quest(6957).QuestContent.INTERNAL_PREVIEW_TOOL,
     trackGuildAndChannelMetadata: false,
     children() {
       const obj = { title: null, children: null };

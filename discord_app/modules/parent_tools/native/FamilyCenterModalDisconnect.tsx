@@ -4,9 +4,9 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2701 from "module_2701" /* 2701 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import _modDef7430 from "module_7430" /* 7430 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair" /* 17455 */;
@@ -89,8 +89,8 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   const obj11 = { style: tmp.title, variant: "body-lg/semibold", children: null };
   const intl11 = otherUser(1113).intl;
   obj11.children = intl11.format(_modDef2701.o0JXuK, { username: name });
-  items3[1] = closure_6(otherUser(5929).Text, obj11);
-  items3[2] = closure_6(otherUser(5929).Text, { style: tmp.subtitle, variant: "body-sm/semibold", color: "text-default", children: ageSpecificText });
+  items3[1] = closure_6(otherUser(5919).Text, obj11);
+  items3[2] = closure_6(otherUser(5919).Text, { style: tmp.subtitle, variant: "body-sm/semibold", color: "text-default", children: ageSpecificText });
   obj9.children = items3;
   const items4 = [closure_7(View, obj9), , , ];
   let tmp28Result = requiresParentalConsent;
@@ -100,11 +100,11 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   }
   const obj14 = { children: null };
   items4[1] = tmp28Result;
-  items4[2] = closure_6(otherUser(5929).Text, { style: tmp.body, variant: "body-md/normal", color: "text-default", children: ageSpecificText2 });
+  items4[2] = closure_6(otherUser(5919).Text, { style: tmp.body, variant: "body-md/normal", color: "text-default", children: ageSpecificText2 });
   const obj16 = { spacing: nativeDefault.space.PX_12, children: null };
   const items5 = [closure_6(otherUser(15966).Checkbox, { label: ageSpecificText3, checked: tmp9, onToggle: callback3 }), closure_6(otherUser(15966).Checkbox, { label: ageSpecificText4, checked: tmp11, onToggle: callback4 })];
   obj16.children = items5;
-  items4[3] = closure_7(otherUser(6337).Stack, obj16);
+  items4[3] = closure_7(otherUser(6327).Stack, obj16);
   obj14.children = items4;
   const items6 = [closure_7(otherUser(8210).ModalContent, obj14), ];
   let tmp31 = !tmp9;
@@ -121,14 +121,14 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   const intl12 = tmp6(1113).intl;
   obj20.text = intl12.string(_modDef2701["c5L+sl"]);
   obj20.onPress = callback2;
-  const items7 = [closure_6(otherUser(5936).Button, obj20), ];
+  const items7 = [closure_6(otherUser(5926).Button, obj20), ];
   const obj21 = { variant: "tertiary", text: null, onPress: null };
   const intl13 = tmp6(1113).intl;
   obj21.text = intl13.string(otherUser(1113).t["3ilveh"]);
   obj21.onPress = ModalActionCreatorsDefault.pop;
-  items7[1] = closure_6(otherUser(5936).Button, obj21);
+  items7[1] = closure_6(otherUser(5926).Button, obj21);
   obj19.children = items7;
-  obj18.children = closure_7(otherUser(6951).ButtonGroup, obj19);
+  obj18.children = closure_7(otherUser(6941).ButtonGroup, obj19);
   items6[1] = closure_6(otherUser(14079).ModalFooter, obj18);
   obj17.children = items6;
   return closure_7(otherUser(8208).ModalScreen, obj17);

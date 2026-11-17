@@ -1,8 +1,8 @@
-// === Module 19936: ActivityInviteSheet ===
+// === Module 19938: ActivityInviteSheet ===
 
-// Module 19936 (ActivityInviteSheet)
+// Module 19938 (ActivityInviteSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import InviteTargetTypes from "InviteTargetTypes" /* 7665 */;
 import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8474 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
@@ -174,7 +174,7 @@ export default function ActivityInviteSheet(activity) {
       let tmp17Result2 = closure_12(tmp11(1187).EmptyState, obj9);
     } else {
       const obj10 = { data: stateFromStores, error: tmp6, getSendState: callback, onInviteSent: callback2, onPressAvatar: callback1 };
-      tmp17Result2 = closure_12(tmp2(19937), obj10);
+      tmp17Result2 = closure_12(tmp2(19939), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;
@@ -182,6 +182,6 @@ export default function ActivityInviteSheet(activity) {
     tmp19Result = closure_14(closure_13, obj11);
   }
   obj3.children = tmp19Result;
-  obj2.children = closure_12(activity(5566).BottomSheet, obj3);
+  obj2.children = closure_12(activity(5556).BottomSheet, obj3);
   return closure_12(activity(7918).AnalyticsLocationProvider, obj2);
 };

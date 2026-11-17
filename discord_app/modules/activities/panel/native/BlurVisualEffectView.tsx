@@ -1,9 +1,9 @@
-// === Module 19934: BlurVisualEffectView ===
+// === Module 19936: BlurVisualEffectView ===
 
-// Module 19934 (BlurVisualEffectView)
+// Module 19936 (BlurVisualEffectView)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5902 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
+import useToken from "useToken" /* 5892 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5896 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

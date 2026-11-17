@@ -1,18 +1,18 @@
-// === Module 19597: NewMessageScreen ===
+// === Module 19599: NewMessageScreen ===
 
-// Module 19597 (NewMessageScreen)
+// Module 19599 (NewMessageScreen)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import useMountEffectDefault from "useMountEffect" /* 5899 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5913 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import UserPlusIcon from "UserPlusIcon" /* 6023 */;
-import _modDef6024 from "module_6024" /* 6024 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import useMountEffectDefault from "useMountEffect" /* 5889 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5903 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import UserPlusIcon from "UserPlusIcon" /* 6013 */;
+import _modDef6014 from "module_6014" /* 6014 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7241 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
@@ -25,9 +25,9 @@ import ChatViewDefault from "ChatView" /* 11976 */;
 import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 12542 */;
 import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 12544 */;
 import NewMessageUserListDefault from "NewMessageUserList" /* 14770 */;
-import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 19536 */;
-import useOnMessageSendDefault from "useOnMessageSend" /* 19598 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19599 */;
+import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 19538 */;
+import useOnMessageSendDefault from "useOnMessageSend" /* 19600 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19601 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -255,7 +255,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, ChannelTypes: closure_14, ME: closure_15, Routes: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = module_1655.createAnimatedComponent(fn(5929).Text);
+let closure_19 = module_1655.createAnimatedComponent(fn(5919).Text);
 const createStyles = fn(5306);
 let obj = { container: { flex: 1 }, background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, header: null, emptyContainer: null, emptyKeyboardView: null, addFriendsButtonContainer: null };
 const PlatformUtils = fn(1380);
@@ -463,7 +463,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = source_page(572);
-          obj2.channel = { id: navigation(7241).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "channel_id" };
+          obj2.channel = { id: navigation(7241).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "alignItems" };
           obj.dispatch(obj2);
         };
       }
@@ -654,7 +654,7 @@ export default function NewMessageScreen(navigation) {
         };
         items.push(obj);
       }
-      const obj2 = { icon: _modDef6024, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
+      const obj2 = { icon: _modDef6014, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t["9nbDJx"]);
       obj2.onPress = function onPress() {
@@ -666,7 +666,7 @@ export default function NewMessageScreen(navigation) {
   }, items11);
   const items13 = [navigation, tmp, insets.bottom];
   const memo1 = obj.useMemo(() => {
-    const obj = { icon: _modDef6024, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
+    const obj = { icon: _modDef6014, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
     const intl = util.intl;
     obj.label = intl.string(util.t["9nbDJx"]);
     obj.onPress = function onPress() {

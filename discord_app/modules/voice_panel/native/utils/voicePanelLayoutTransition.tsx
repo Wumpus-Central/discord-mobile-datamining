@@ -1,7 +1,7 @@
-// === Module 19983: voicePanelLayoutTransition ===
+// === Module 19985: voicePanelLayoutTransition ===
 
-// Module 19983 (voicePanelLayoutTransition)
-import spring_spring from "spring/spring" /* 5939 */;
+// Module 19985 (voicePanelLayoutTransition)
+import spring_spring from "spring/spring" /* 5929 */;
 import VoicePanelConstants from "VoicePanelConstants" /* 11985 */;
 import size from "module_2" /* 2 */;
 

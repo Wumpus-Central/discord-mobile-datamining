@@ -6,7 +6,7 @@ import _modDef671 from "module_671" /* 671 */;
 import native from "native" /* 1187 */;
 import PlatformUtils2 from "PlatformUtils" /* 1380 */;
 import shared from "shared" /* 5313 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import Pressables from "Pressables" /* 7428 */;
 import _modDef7896 from "module_7896" /* 7896 */;
 import LockIcon from "LockIcon" /* 8092 */;

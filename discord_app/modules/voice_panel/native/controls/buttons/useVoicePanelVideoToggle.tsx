@@ -1,13 +1,13 @@
-// === Module 19185: useVoicePanelVideoToggle ===
+// === Module 19187: useVoicePanelVideoToggle ===
 
-// Module 19185 (useVoicePanelVideoToggle)
+// Module 19187 (useVoicePanelVideoToggle)
 import util from "util" /* 1113 */;
-import useAlertStore from "useAlertStore" /* 6270 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6827 */;
+import useAlertStore from "useAlertStore" /* 6260 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6817 */;
 import CallsUtils from "CallsUtils" /* 10583 */;
 import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 12739 */;
 import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 15637 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 19186 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 19188 */;
 import noop from "module_19" /* 19 */;
 import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 12719 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
@@ -20,7 +20,7 @@ const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 const VoicePanelNoVideoPermissionsAlertDefault = VoicePanelNoVideoPermissionsAlert;
 
 require = fn;
-const Features = fn(6075).Features;
+const Features = fn(6065).Features;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/useVoicePanelVideoToggle.tsx");

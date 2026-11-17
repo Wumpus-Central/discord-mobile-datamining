@@ -5,7 +5,7 @@ import byteLengthDefault from "byteLength" /* 206 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 
 const require = fn;
 function memoizedPairwiseFingerprint(id, secureFramesRosterMapEntry1, arg2, secureFramesRosterMapEntry) {
@@ -123,7 +123,7 @@ let closure_11 = async function _computeBoundPairwiseFingerprint(arg0) {
   }
 };
 let closure_7 = fn(10628).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-const Features = fn(6075).Features;
+const Features = fn(6065).Features;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesBoundPairwiseFingerprint.tsx");

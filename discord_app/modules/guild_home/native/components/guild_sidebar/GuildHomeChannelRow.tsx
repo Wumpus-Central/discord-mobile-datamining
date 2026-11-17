@@ -1,6 +1,6 @@
-// === Module 18924: GuildHomeChannelRow ===
+// === Module 18926: GuildHomeChannelRow ===
 
-// Module 18924 (GuildHomeChannelRow)
+// Module 18926 (GuildHomeChannelRow)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import BaseChannelItemDefault from "BaseChannelItem" /* 14789 */;
@@ -11,7 +11,7 @@ const Routes = fn(1072).Routes;
 const StaticChannelRoute = fn(5162).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
-let obj2 = { container: { marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let obj2 = { container: { marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx");

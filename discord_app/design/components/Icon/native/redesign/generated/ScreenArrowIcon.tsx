@@ -2,7 +2,7 @@
 
 // Module 10731 (ScreenArrowIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10732 from "module_10732" /* 10732 */;
 import noop from "module_19" /* 19 */;
 

@@ -6,7 +6,7 @@ import _modDef2733 from "module_2733" /* 2733 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PowerupActiveStatusType = fn(5524).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(5514).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
 

@@ -2,7 +2,7 @@
 
 // Module 13501 (AppLauncherCommandOptionActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -60,5 +60,5 @@ export function AppLauncherCommandOptionActionSheet(startExpanded) {
   items = [tmp2.contentContainer, contentContainerStyles];
   obj9.style = items;
   obj.children = <View style={null}>{children}</View>;
-  return jsx(merged(5566).BottomSheet, {}, option.name);
+  return jsx(merged(5556).BottomSheet, {}, option.name);
 }

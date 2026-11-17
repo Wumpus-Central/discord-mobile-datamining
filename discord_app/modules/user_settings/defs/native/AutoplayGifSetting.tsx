@@ -1,6 +1,6 @@
-// === Module 18041: AutoplayGifSetting ===
+// === Module 18043: AutoplayGifSetting ===
 
-// Module 18041 (AutoplayGifSetting)
+// Module 18043 (AutoplayGifSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;

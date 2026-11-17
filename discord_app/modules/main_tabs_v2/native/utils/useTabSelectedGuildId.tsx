@@ -2,8 +2,8 @@
 
 // Module 17189 (useTabSelectedGuildId)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 
 require = fn;
 const size = fn(2);

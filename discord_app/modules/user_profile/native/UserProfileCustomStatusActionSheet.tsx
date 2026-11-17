@@ -2,7 +2,7 @@
 
 // Module 15465 (UserProfileCustomStatusActionSheet)
 import nativeDefault from "native" /* 575 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import HeaderAvatarDefault from "HeaderAvatar" /* 8623 */;
 import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 9531 */;
 import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 14932 */;

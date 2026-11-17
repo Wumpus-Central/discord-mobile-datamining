@@ -2,7 +2,7 @@
 
 // Module 13382 (ApplicationsImage)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 13383 */;
 import noop from "module_19" /* 19 */;
 

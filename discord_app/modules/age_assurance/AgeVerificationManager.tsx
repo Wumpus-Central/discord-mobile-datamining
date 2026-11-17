@@ -1,16 +1,16 @@
-// === Module 20172: AgeVerificationManager ===
+// === Module 20175: AgeVerificationManager ===
 
-// Module 20172 (AgeVerificationManager)
+// Module 20175 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1094 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 6795 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6830 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 6785 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6820 */;
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8403 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
 import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 14220 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 7036 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import UserStore from "UserStore" /* 1388 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
@@ -88,7 +88,7 @@ const prototype = function AgeVerificationManager() {
     }
     try {
       if (isAdultStatusResult) {
-        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6795).clear(channelId.channelId));
+        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6785).clear(channelId.channelId));
         const channelId = SelectedChannelStore.getChannelId();
         if (null != channelId) {
           handleLoadChannelMessages(tmp17);

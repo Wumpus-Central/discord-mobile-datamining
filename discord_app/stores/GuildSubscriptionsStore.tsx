@@ -6,19 +6,19 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import FavoritesUtils from "FavoritesUtils" /* 5180 */;
 import GuildSubscriptionsDefault from "GuildSubscriptions" /* 15990 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5532 */;
+import ExperimentStore from "ExperimentStore" /* 5522 */;
 import LurkingStore from "LurkingStore" /* 5239 */;
 import SpotifyStore from "SpotifyStore" /* 7290 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 7036 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6957 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6947 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 require = fn;
 function handleConnectionOpenOrResumed(type) {

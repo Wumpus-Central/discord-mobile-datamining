@@ -1,6 +1,6 @@
-// === Module 18130: UserSettingsCommunityNotifications ===
+// === Module 18132: UserSettingsCommunityNotifications ===
 
-// Module 18130 (UserSettingsCommunityNotifications)
+// Module 18132 (UserSettingsCommunityNotifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -57,7 +57,7 @@ export default function UserSettingsCommunityNotifications() {
           return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
         })
     };
-    obj3.children = closure_4(tmp2(6337).Stack, obj4);
+    obj3.children = closure_4(tmp2(6327).Stack, obj4);
     tmp5 = closure_4(tmp2(8106).Form, obj3);
   }
   return tmp5;

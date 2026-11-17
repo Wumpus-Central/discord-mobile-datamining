@@ -3,9 +3,9 @@
 // Module 7400 (useOAuth2AuthorizeForm)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5953 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6332 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5943 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6322 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7055 */;
 import Authorize from "Authorize" /* 7402 */;
 import scopes2 from "scopes" /* 7403 */;
@@ -1051,7 +1051,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
       obj5.onPress = function onPress() {
         return callback5();
       };
-      obj3.footer = loading(tmp20(5936).Button, obj5);
+      obj3.footer = loading(tmp20(5926).Button, obj5);
       return obj3;
     } else {
       let str4 = "";
@@ -1151,7 +1151,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 }
                 let tmp98 = hasItem;
                 if (!hasItem) {
-                  const tmp99 = first6 === tmp20(5953).ApplicationIntegrationType.GUILD_INSTALL;
+                  const tmp99 = first6 === tmp20(5943).ApplicationIntegrationType.GUILD_INSTALL;
                   if (tmp99) {
                     let hasItem1 = requestedScopes.includes(tmp20(7307).OAuth2Scopes.BOT);
                     if (!hasItem1) {
@@ -1427,7 +1427,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 }
               }
             }
-            obj26.children = tmp130(tmp20(5936).Button, tmp133);
+            obj26.children = tmp130(tmp20(5926).Button, tmp133);
             tmp130(tmp137, obj26);
           }
         }

@@ -1,6 +1,6 @@
-// === Module 5960: ContentClassificationEmbeddedActivityFilterExperiment ===
+// === Module 5950: ContentClassificationEmbeddedActivityFilterExperiment ===
 
-// Module 5960 (ContentClassificationEmbeddedActivityFilterExperiment)
+// Module 5950 (ContentClassificationEmbeddedActivityFilterExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

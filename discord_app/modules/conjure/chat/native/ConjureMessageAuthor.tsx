@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import Pressables from "Pressables" /* 7428 */;
 import ConjureMessageTime from "ConjureMessageTime" /* 13623 */;
 import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 13624 */;
@@ -72,7 +72,7 @@ export function ConjureUserHeader(arg0) {
   ({ userId, at } = arg0);
   messageAuthorUser = messageAuthorUser(12446).useMessageAuthorUser(userId);
   let obj = messageAuthorUser(12446);
-  const name = messageAuthorUser(5372).useName(messageAuthorUser);
+  const name = messageAuthorUser(5362).useName(messageAuthorUser);
   [][0] = messageAuthorUser;
   let tmp4 = null;
   if (null != messageAuthorUser) {

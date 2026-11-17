@@ -4,7 +4,7 @@
 import util from "util" /* 1113 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2020 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import StageChannelUpsellDefault from "StageChannelUpsell" /* 8102 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
@@ -33,7 +33,7 @@ export default function EditGuildEventChannelSelection(guild) {
   closure_6 = guild(8028).useGetEventChannelsByType(guild.id, channelType);
   let obj = guild(8028);
   guild(8011).useChannelsUserCanStartStageIn(guild);
-  const tmp6 = channel(5954)(channel);
+  const tmp6 = channel(5944)(channel);
   let obj2 = guild(8011);
   items = [closure_5];
   closure_8 = guild(504).useStateFromStores(items, () => PermissionStore.can(constants2.MANAGE_CHANNELS, guild));
@@ -64,7 +64,7 @@ export default function EditGuildEventChannelSelection(guild) {
   const obj5 = { style: null, children: null };
   const items3 = [tmp.container, guild.style];
   obj5.style = items3;
-  const items4 = [closure_11(guild(5929).Heading, { style: tmp.channelTypeText, variant: "body-sm/semibold", color: "text-subtle", children: stringResult }), ];
+  const items4 = [closure_11(guild(5919).Heading, { style: tmp.channelTypeText, variant: "body-sm/semibold", color: "text-subtle", children: stringResult }), ];
   const obj7 = { start: true, end: true, accessibilityLabel: stringResult, accessibilityHint: null, accessibilityValue: null, accessibilityRole: "button", onPress: null, icon: null, label: null, trailing: null, arrow: false };
   const intl2 = tmp3(1113).intl;
   obj7.accessibilityHint = intl2.string(guild(1113).t.AaXbMD);
@@ -109,8 +109,8 @@ export default function EditGuildEventChannelSelection(guild) {
         if (null != found) {
           closure_1_4(found);
         }
-        channel(5552).hideActionSheet();
-        const obj = channel(5552);
+        channel(5542).hideActionSheet();
+        const obj = channel(5542);
       },
       selectedItem: null,
       hasIcons: false
@@ -130,7 +130,7 @@ export default function EditGuildEventChannelSelection(guild) {
     tmp11Result = closure_11(tmp3(1187).Icon, obj8);
   }
   obj7.icon = tmp11Result;
-  obj7.label = closure_11(guild(5929).Text, { variant: "body-md/medium", color: "interactive-text-active", children: tmp6 });
+  obj7.label = closure_11(guild(5919).Text, { variant: "body-md/medium", color: "interactive-text-active", children: tmp6 });
   let obj4 = guild(504);
   const obj6 = { style: tmp.channelTypeText, variant: "body-sm/semibold", color: "text-subtle", children: stringResult };
   obj7.trailing = closure_11(guild(1187).Icon, { source: channel(8010) });

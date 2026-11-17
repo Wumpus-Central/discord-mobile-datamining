@@ -191,7 +191,7 @@ export function createConjureRemix(project, arg1, shareTicket) {
                             const obj3 = v0(dependencyMap[9]);
                             dependencyMap = 3;
                             c3 = 1;
-                            const obj13 = { value: v0(dependencyMap[9]).deleteProject(closure_128_0.id).catch(/* F147033 */ function() { ... }), done: false };
+                            const obj13 = { value: v0(dependencyMap[9]).deleteProject(closure_128_0.id).catch(/* F147050 */ function() { ... }), done: false };
                             return obj13;
                           }
                         } else if (arg0 === 1) {

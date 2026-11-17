@@ -1,10 +1,10 @@
-// === Module 19943: QuestProgressBottomSheet ===
+// === Module 19945: QuestProgressBottomSheet ===
 
-// Module 19943 (QuestProgressBottomSheet)
+// Module 19945 (QuestProgressBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import _modDef7421 from "module_7421" /* 7421 */;
 import IconButton from "IconButton" /* 7988 */;
 import QuestUtils from "QuestUtils" /* 10128 */;
@@ -50,7 +50,7 @@ function QuestProgressBottomSheet(quest) {
   const tmpResult4 = quest(15261);
   const userStatus = quest.userStatus;
   let completedAt;
-  const questsInstructionsToWinReward = tmpResult4.useQuestsInstructionsToWinReward({ quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: quest(5341).QuestContent.RUNNING_ACTIVITY });
+  const questsInstructionsToWinReward = tmpResult4.useQuestsInstructionsToWinReward({ quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: quest(6957).QuestContent.RUNNING_ACTIVITY });
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
@@ -63,11 +63,11 @@ function QuestProgressBottomSheet(quest) {
     }
     tmp14 = null == claimedAt;
   }
-  let obj5 = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: quest(5341).QuestContent.RUNNING_ACTIVITY };
+  let obj5 = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: quest(6957).QuestContent.RUNNING_ACTIVITY };
   const isQuestAccessSuspended = quest(10131).useIsQuestAccessSuspended();
   const tmpResult5 = quest(10131);
   const tmpResult6 = quest(17728);
-  const questRewardClaimHandler = tmpResult6.useQuestRewardClaimHandler({ quest, questContent: quest(5341).QuestContent.RUNNING_ACTIVITY, sourceQuestContent: quest(5341).QuestContent.RUNNING_ACTIVITY });
+  const questRewardClaimHandler = tmpResult6.useQuestRewardClaimHandler({ quest, questContent: quest(6957).QuestContent.RUNNING_ACTIVITY, sourceQuestContent: quest(6957).QuestContent.RUNNING_ACTIVITY });
   ({ isClaiming, claim } = questRewardClaimHandler);
   items = [claim];
   const items1 = [quest.id];
@@ -156,21 +156,21 @@ function QuestProgressBottomSheet(quest) {
     const obj9 = { uri: url };
     obj8.source = obj9;
     obj8.style = tmp4.heroImg;
-    tmp24 = closure_11(tmp6(6020), obj8);
+    tmp24 = closure_11(tmp6(6010), obj8);
   }
   const items3 = [tmp24, , , ];
   const obj10 = { style: tmp4.heroGradient, start: null, end: null, colors: null };
-  const obj6 = { quest, questContent: quest(5341).QuestContent.RUNNING_ACTIVITY, sourceQuestContent: quest(5341).QuestContent.RUNNING_ACTIVITY };
+  const obj6 = { quest, questContent: quest(6957).QuestContent.RUNNING_ACTIVITY, sourceQuestContent: quest(6957).QuestContent.RUNNING_ACTIVITY };
   obj10.start = quest(1092).VerticalGradient.START;
   obj10.end = quest(1092).VerticalGradient.END;
   const items4 = ["rgba(0, 0, 0, 0)", closure_14().gradientEnd];
   obj10.colors = items4;
-  items3[1] = closure_11(claim(5893), obj10);
+  items3[1] = closure_11(claim(5883), obj10);
   const obj11 = { style: tmp4.gameTileContainer, children: null };
   const size = { quest, height: null, width: null };
   let num = 80;
   let num2 = 80;
-  const tmp6Result = claim(5893);
+  const tmp6Result = claim(5883);
   if (isScreenLandscape) {
     num2 = 56;
   }
@@ -188,7 +188,7 @@ function QuestProgressBottomSheet(quest) {
   const items5 = [closure_11(quest(7988).IconButton, obj13), ];
   const obj14 = { quest, showShareLink: true, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: null, children: null };
   const tmp6Result4 = claim(15257);
-  obj14.sourceQuestContent = quest(5341).QuestContent.RUNNING_ACTIVITY;
+  obj14.sourceQuestContent = quest(6957).QuestContent.RUNNING_ACTIVITY;
   obj14.children = contextMenuButton;
   items5[1] = closure_11(claim(17756), obj14);
   obj12.children = items5;
@@ -201,7 +201,7 @@ function QuestProgressBottomSheet(quest) {
   if (isScreenLandscape) {
     str = "heading-sm/semibold";
   }
-  const items7 = [closure_11(quest(5929).Text, { variant: str, color: "mobile-text-heading-primary", children: formatToPlainStringResult }), ];
+  const items7 = [closure_11(quest(5919).Text, { variant: str, color: "mobile-text-heading-primary", children: formatToPlainStringResult }), ];
   const obj17 = { style: tmp4.questDescription, variant: null, color: "text-muted", children: null };
   let str2 = "body-md/normal";
   if (isScreenLandscape) {
@@ -209,9 +209,9 @@ function QuestProgressBottomSheet(quest) {
   }
   obj17.variant = str2;
   obj17.children = questsInstructionsToWinReward;
-  items7[1] = closure_11(quest(5929).Text, obj17);
+  items7[1] = closure_11(quest(5919).Text, obj17);
   obj16.children = items7;
-  const items8 = [closure_12(quest(6337).Stack, obj16), ];
+  const items8 = [closure_12(quest(6327).Stack, obj16), ];
   const obj18 = { direction: "vertical", spacing: claim(575).space.PX_12, style: tmp4.buttonsContainer, children: null };
   const intl3 = tmp(1113).intl;
   const t = tmp(1113).t;
@@ -237,23 +237,23 @@ function QuestProgressBottomSheet(quest) {
   }
   const obj20 = { handleDisabled: true, startExpanded: true, children: null };
   obj19.onPressDisabled = tmp6Result6;
-  const items9 = [closure_11(quest(5936).Button, obj19), ];
+  const items9 = [closure_11(quest(5926).Button, obj19), ];
   const obj21 = { size: "lg", text: null, onPress: null, variant: "secondary", grow: true };
   const intl4 = tmp(1113).intl;
   obj21.text = intl4.string(quest(1113).t.cpT0Cq);
   obj21.onPress = callback3;
-  items9[1] = closure_11(quest(5936).Button, obj21);
+  items9[1] = closure_11(quest(5926).Button, obj21);
   obj18.children = items9;
-  items8[1] = closure_12(quest(6337).Stack, obj18);
+  items8[1] = closure_12(quest(6327).Stack, obj18);
   obj15.children = items8;
   items6[1] = closure_12(closure_5, obj15);
   obj20.children = items6;
-  return closure_12(quest(5566).BottomSheet, obj20);
+  return closure_12(quest(5556).BottomSheet, obj20);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const QuestsExperimentLocations = fn(6954).QuestsExperimentLocations;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let createStyles = fn(5306);
@@ -315,8 +315,8 @@ export default function QuestProgressBottomSheetConnected(questId) {
     const obj2 = {
       overrideVisibility: true,
       questOrQuests: stateFromStores,
-      questContent: tmp(5341).QuestContent.RUNNING_ACTIVITY,
-      sourceQuestContent: tmp(5341).QuestContent.RUNNING_ACTIVITY,
+      questContent: tmp(6957).QuestContent.RUNNING_ACTIVITY,
+      sourceQuestContent: tmp(6957).QuestContent.RUNNING_ACTIVITY,
       children() {
           return closure_2_11(QuestProgressBottomSheet, { quest: stateFromStores });
         }

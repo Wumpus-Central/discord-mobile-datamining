@@ -1,6 +1,6 @@
-// === Module 19647: useIsNitroBadgeAutoUnhidden ===
+// === Module 19649: useIsNitroBadgeAutoUnhidden ===
 
-// Module 19647 (useIsNitroBadgeAutoUnhidden)
+// Module 19649 (useIsNitroBadgeAutoUnhidden)
 import initialize from "initialize" /* 504 */;
 import BadgeId from "BadgeId" /* 8480 */;
 import UserStore from "UserStore" /* 1388 */;

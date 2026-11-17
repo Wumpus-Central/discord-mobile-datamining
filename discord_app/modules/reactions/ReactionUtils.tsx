@@ -5,7 +5,7 @@ import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5920 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5910 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

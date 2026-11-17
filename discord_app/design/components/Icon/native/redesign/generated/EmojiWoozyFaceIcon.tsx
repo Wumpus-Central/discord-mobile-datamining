@@ -1,9 +1,9 @@
-// === Module 18021: EmojiWoozyFaceIcon ===
+// === Module 18023: EmojiWoozyFaceIcon ===
 
-// Module 18021 (EmojiWoozyFaceIcon)
+// Module 18023 (EmojiWoozyFaceIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
-import _mod18022 from "module_18022" /* 18022 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
+import _mod18024 from "module_18024" /* 18024 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiWoozyFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18022, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18024, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

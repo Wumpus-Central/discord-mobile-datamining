@@ -9,11 +9,11 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import _modDef2565 from "module_2565" /* 2565 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5136 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
-import useAlertStore from "useAlertStore" /* 6270 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
+import useAlertStore from "useAlertStore" /* 6260 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7223 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 7467 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7813 */;
@@ -45,7 +45,7 @@ import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7060 */;
 import GuildRoleStore from "GuildRoleStore" /* 5212 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -65,8 +65,8 @@ function HideMutedChannelsOption(guild) {
 function BrowseChannelsOption(guild) {
   guild = guild.guild;
   const tmp2 = useGuildOnboardingAvailableDefault(guild);
-  const result = guild(5348).useIsDismissibleContentDismissed_UNSAFE(guild(5139).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
-  let obj = guild(5348);
+  const result = guild(5338).useIsDismissibleContentDismissed_UNSAFE(guild(5139).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
+  let obj = guild(5338);
   items = [ReadStateStore];
   const stateFromStores = guild(504).useStateFromStores(items, () => ReadStateStore.hasUnread(guild.id, ReadStateTypes.GUILD_ONBOARDING_QUESTION));
   const obj2 = guild(504);
@@ -177,7 +177,7 @@ function ServerTagOption(guild) {
     const obj6 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1113).intl;
     obj6.children = intl.string(tmp2(1113).t["2QmKZ2"]);
-    items[1] = closure_22(tmp2(5929).Text, obj6);
+    items[1] = closure_22(tmp2(5919).Text, obj6);
     obj2.children = items;
     obj3.label = closure_23(View, obj2);
     obj3.onPress = tmp5;
@@ -242,7 +242,7 @@ const Constants = fn(1072);
 ({ ChannelTypes: closure_15, GuildFeatures: closure_16, AnalyticsSections: closure_17, AVATAR_MAX_SIZE: closure_18, Fonts } = Constants);
 let closure_19 = fn(7866).CHANNELS_AND_ROLES_MODAL_KEY;
 const GuildTagBadgeSize = fn(8410).GuildTagBadgeSize;
-const ReadStateTypes = fn(6959).ReadStateTypes;
+const ReadStateTypes = fn(6949).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
 const createStyles = fn(5306);
@@ -532,7 +532,7 @@ export function GuildDeveloperOptionAction(guild) {
   guild = guild.guild;
   const DeveloperMode = guild(5131).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  guild(5995);
+  guild(5985);
   if (setting) {
     items = [];
     let obj = { label: null, onPress: null };

@@ -14,7 +14,7 @@ import ForumChannelTypes from "ForumChannelTypes" /* 11162 */;
 import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8867 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

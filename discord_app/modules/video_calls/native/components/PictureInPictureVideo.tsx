@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import transitionToActivityDefault from "transitionToActivity" /* 12712 */;
 import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 12722 */;
 import usePipDimensionsDefault from "usePipDimensions" /* 12725 */;
@@ -16,7 +16,7 @@ import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SpeakingStore from "SpeakingStore" /* 6941 */;
+import SpeakingStore from "SpeakingStore" /* 6931 */;
 import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 12719 */;
 
 require = fn;
@@ -29,7 +29,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const ChannelCallStore = fn(11003);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(5306);

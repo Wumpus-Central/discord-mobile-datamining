@@ -1,6 +1,6 @@
-// === Module 17981: CustomTypingIndicatorEditScreen ===
+// === Module 17983: CustomTypingIndicatorEditScreen ===
 
-// Module 17981 (CustomTypingIndicatorEditScreen)
+// Module 17983 (CustomTypingIndicatorEditScreen)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import user from "user" /* 1401 */;
@@ -9,7 +9,7 @@ import Link from "Link" /* 1503 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5136 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7918 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9579 */;
 import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14579 */;
@@ -108,7 +108,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const callback2 = noop.useCallback(() => {
     const obj2 = { initialValue: first2, presets: null, onChange: null, highlightedPresets: null, onDismiss: null };
     const obj = ActionSheetActionCreatorsDefault;
-    const tmp3 = asyncRequireImpl(17982, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(17984, dependencyMap.paths);
     obj2.presets = CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionPresets(enabled);
     obj2.onChange = onChange;
     let prop;
@@ -124,7 +124,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
     obj.openLazy(tmp3, "CustomTypingIndicatorTypingSuggestionPickerSheet", obj2);
   }, items5);
   const callback3 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17983, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17985, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
   }, items6);
   noop.useRef(null);
   const items7 = [analyticsLocations, enabled];

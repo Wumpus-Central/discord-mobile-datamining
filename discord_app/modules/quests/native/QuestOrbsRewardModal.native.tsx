@@ -5,8 +5,8 @@ import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2025 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import XSmallIcon from "XSmallIcon" /* 7549 */;
 import OrbsIcon from "OrbsIcon" /* 9442 */;
 import _modDef15267 from "module_15267" /* 15267 */;
@@ -130,7 +130,7 @@ function AnimatedOrbContainer(isAppActive) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, StyleSheet: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: closure_12, RewardFilterTypes: map1 } = QuestConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -303,7 +303,7 @@ export default function QuestOrbsRewardModal(quest) {
     }
     const obj18 = { count: num2 };
     obj17.children = intl.format(tmp5(1113).t.FIilK5, obj18);
-    const items9 = [closure_14(tmp5(5929).Heading, obj17), ];
+    const items9 = [closure_14(tmp5(5919).Heading, obj17), ];
     let obj19 = { variant: "body-md/normal", color: "text-overlay-light", style: tmp.title, children: null };
     if (num == null) {
       num = 0;
@@ -332,14 +332,14 @@ export default function QuestOrbsRewardModal(quest) {
       formatResult = intl2.format(tmp5(1113).t.rKHvlX, obj21);
     }
     obj19.children = formatResult;
-    obj19 = closure_14(tmp5(5929).Text, obj19);
+    obj19 = closure_14(tmp5(5919).Text, obj19);
     items9[1] = obj19;
     obj16.children = items9;
     items8[1] = closure_16(closure_8, obj16);
     obj13.children = items8;
     items7[1] = closure_16(closure_8, obj13);
     const obj22 = { style: tmp.buttonsContainer, children: null };
-    items8 = tmp5(5936).Button;
+    items8 = tmp5(5926).Button;
     const obj23 = { onPress: string, variant: "primary-overlay", size: "lg", text: null };
     obj16 = tmp5(1113).intl;
     string = obj16.string;

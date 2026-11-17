@@ -2,8 +2,8 @@
 
 // Module 15897 (components_native/QRCode)
 import nativeDefault from "native" /* 575 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5896 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8611 */;
 import QRCodeDefault from "QRCode" /* 15898 */;
 import _mod15912 from "module_15912" /* 15912 */;
@@ -47,7 +47,7 @@ QRCode.prototype["render"] = function render() {
   obj.children = React5(hasOwnProperty, obj2);
   return metroImportDefault(hasOwnProperty, obj);
 };
-QRCode.contextType = fn(5377).ThemeContext;
+QRCode.contextType = fn(5367).ThemeContext;
 QRCode.defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
 const PureComponent2 = noop.PureComponent;
 class QRCodeWithOverlay extends PureComponent2 {
@@ -79,7 +79,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   obj.children = items;
   return React5(hasOwnProperty, obj);
 };
-QRCodeWithOverlay.contextType = fn(5377).ThemeContext;
+QRCodeWithOverlay.contextType = fn(5367).ThemeContext;
 QRCodeWithOverlay.defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/QRCode.tsx");

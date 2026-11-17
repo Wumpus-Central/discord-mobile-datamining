@@ -1,36 +1,36 @@
-// === Module 19985: VoicePanelHeader ===
+// === Module 19987: VoicePanelHeader ===
 
-// Module 19985 (VoicePanelHeader)
+// Module 19987 (VoicePanelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5905 */;
-import spring_spring from "spring/spring" /* 5939 */;
-import springPresets from "springPresets" /* 5940 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5895 */;
+import spring_spring from "spring/spring" /* 5929 */;
+import springPresets from "springPresets" /* 5930 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import _modDef10561 from "module_10561" /* 10561 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11991 */;
 import StageMusicActionCreators from "StageMusicActionCreators" /* 12942 */;
 import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 13075 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19229 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19944 */;
-import MobileGoLiveEntrypointExperimentDefault from "MobileGoLiveEntrypointExperiment" /* 19986 */;
-import useVoicePanelNavArrowPressedDefault from "useVoicePanelNavArrowPressed" /* 19987 */;
-import useStableParticipant from "useStableParticipant" /* 19988 */;
-import VoicePanelTitleButtonDefault from "VoicePanelTitleButton" /* 19991 */;
-import VoicePanelHeaderSpeakerDefault from "VoicePanelHeaderSpeaker" /* 19993 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19231 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19946 */;
+import MobileGoLiveEntrypointExperimentDefault from "MobileGoLiveEntrypointExperiment" /* 19988 */;
+import useVoicePanelNavArrowPressedDefault from "useVoicePanelNavArrowPressed" /* 19989 */;
+import useStableParticipant from "useStableParticipant" /* 19990 */;
+import VoicePanelTitleButtonDefault from "VoicePanelTitleButton" /* 19993 */;
+import VoicePanelHeaderSpeakerDefault from "VoicePanelHeaderSpeaker" /* 19995 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import ExperimentStore from "ExperimentStore" /* 5532 */;
+import ExperimentStore from "ExperimentStore" /* 5522 */;
 import StageMusicStore from "StageMusicStore" /* 12935 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
-import SpeakingStore from "SpeakingStore" /* 6941 */;
+import SpeakingStore from "SpeakingStore" /* 6931 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -74,8 +74,8 @@ function MusicMuteButton(channelId) {
           return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
         }
     };
-    closure_24(tmp(19944), obj4);
-    const tmpResult = tmp(19944);
+    closure_24(tmp(19946), obj4);
+    const tmpResult = tmp(19946);
   }
   return tmp10;
 }
@@ -87,7 +87,7 @@ const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 const EDGE_GUTTER = fn(11988).EDGE_GUTTER;
 const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
 const DOCK_PULL_SNAP_DISTANCE = fn(12009).DOCK_PULL_SNAP_DISTANCE;
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_24, jsxs: closure_25 } = jsxProd);
@@ -684,7 +684,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
     flag = false;
   }
   if (channelType !== require("ChannelTypes").ChannelTypes.GUILD_STAGE_VOICE) {
-    flag = obj4.useConfig({ location: "VoicePanelHeader" }).treatment === tmp5(19986).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
+    flag = obj4.useConfig({ location: "VoicePanelHeader" }).treatment === tmp5(19988).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
   }
   const tmp5Result21 = require("module_1655");
   let canInviteMembers = require("useCanInviteMembers").useCanInviteMembers(channelId);
@@ -830,8 +830,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
     tmp107Result = null;
     if (!isDockEnabled) {
       const obj10 = { baseColor: tmp2(575).colors.BLACK, minHeight: 0 };
-      tmp107Result = closure_24(tmp2(19359), obj10);
-      const tmp2Result7 = tmp2(19359);
+      tmp107Result = closure_24(tmp2(19361), obj10);
+      const tmp2Result7 = tmp2(19361);
     }
   }
   items28[1] = tmp107Result;
@@ -839,7 +839,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   let tmp107Result7 = null;
   if (tmp13 === ParticipantTypes.USER) {
     const obj12 = { isHeaderHidden: derivedValue2 };
-    tmp107Result7 = closure_24(tmp2(19989), obj12);
+    tmp107Result7 = closure_24(tmp2(19991), obj12);
   }
   const items29 = [tmp107Result7, ];
   const obj13 = { style: null, animatedProps, children: null };
@@ -882,7 +882,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   let tmp107Result10 = null;
   if (null != stateFromStores) {
     const obj20 = { channel: stateFromStores, inCall: tmp107Result12 };
-    tmp107Result10 = closure_24(tmp2(20002), obj20);
+    tmp107Result10 = closure_24(tmp2(20004), obj20);
   }
   items34[3] = tmp107Result10;
   if (canInviteMembers) {
@@ -891,15 +891,15 @@ export default noop.memo(function VoicePanelHeader(layout) {
     const obj22 = { channelName: stateFromStores1 };
     obj21.accessibilityLabel = intl3.formatToPlainString(tmp5(1113).t["dHHb/2"], obj22);
     obj21.onPress = inviteMembersCallback;
-    canInviteMembers = closure_24(tmp2(19944), obj21);
-    const tmp2Result11 = tmp2(19944);
+    canInviteMembers = closure_24(tmp2(19946), obj21);
+    const tmp2Result11 = tmp2(19946);
   }
   items34[4] = canInviteMembers;
   let tmp107Result11 = null;
   if (null != stateFromStores2) {
-    const obj23 = { icon: tmp2(20004), onPress: callback1, accessibilityLabel: stateFromStores2 };
-    tmp107Result11 = closure_24(tmp2(19944), obj23);
-    const tmp2Result12 = tmp2(19944);
+    const obj23 = { icon: tmp2(20006), onPress: callback1, accessibilityLabel: stateFromStores2 };
+    tmp107Result11 = closure_24(tmp2(19946), obj23);
+    const tmp2Result12 = tmp2(19946);
   }
   items34[5] = tmp107Result11;
   if (tmp107Result12) {
@@ -907,7 +907,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   }
   if (tmp107Result12) {
     const obj24 = { channelId };
-    tmp107Result12 = closure_24(tmp2(20005), obj24);
+    tmp107Result12 = closure_24(tmp2(20007), obj24);
   }
   items34[6] = tmp107Result12;
   obj18.children = items34;

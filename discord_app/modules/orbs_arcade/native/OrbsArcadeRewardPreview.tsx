@@ -3,7 +3,7 @@
 // Module 17663 (OrbsArcadeRewardPreview)
 import nativeDefault from "native" /* 575 */;
 import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2108 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9500 */;
 import _modDef9501 from "module_9501" /* 9501 */;
 import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 10424 */;

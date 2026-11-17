@@ -1,6 +1,6 @@
-// === Module 20050: VoicePanelDismissableContent ===
+// === Module 20052: VoicePanelDismissableContent ===
 
-// Module 20050 (VoicePanelDismissableContent)
+// Module 20052 (VoicePanelDismissableContent)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10568 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
@@ -12,10 +12,10 @@ const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(20051, dependencyMap.paths);
+  return asyncRequireImpl(20053, dependencyMap.paths);
 }
 const VoicePanelModes = fn(11985).VoicePanelModes;
-const isActivityParticipant = fn(5983).isActivityParticipant;
+const isActivityParticipant = fn(5973).isActivityParticipant;
 const jsx = fn(21).jsx;
 let closure_10 = { code: "(function VoicePanelDismissableContentTsx1(){let[mode,VoicePanelModes,focused]=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;})" };
 let closure_11 = { code: "(function VoicePanelDismissableContentTsx2(manualId,previousManualId){let[scheduleOnRN,handleFocusChange]=this.__closure;if(manualId!==previousManualId){scheduleOnRN(handleFocusChange,manualId);}})" };

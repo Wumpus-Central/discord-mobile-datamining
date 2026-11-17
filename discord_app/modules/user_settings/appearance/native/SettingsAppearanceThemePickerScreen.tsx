@@ -1,14 +1,14 @@
-// === Module 17887: SettingsAppearanceThemePickerScreen ===
+// === Module 17889: SettingsAppearanceThemePickerScreen ===
 
-// Module 17887 (SettingsAppearanceThemePickerScreen)
+// Module 17889 (SettingsAppearanceThemePickerScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5334 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5544 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5534 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7418 */;
 import Pressables from "Pressables" /* 7428 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
@@ -21,9 +21,9 @@ import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 17085 */;
 import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17630 */;
 import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17631 */;
 import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17632 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 17888 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17890 */;
-import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 17910 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 17890 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17892 */;
+import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 17912 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -682,7 +682,7 @@ function ThemePicker(defaultIndex) {
           const obj = { theme: tmp4, children: null };
           const obj2 = { navigation };
           obj.children = obj4(dependencyMap(9058), obj2);
-          return obj4(closure_0(5377).ThemeContextProvider, obj);
+          return obj4(closure_0(5367).ThemeContextProvider, obj);
         } else {
           return null;
         }
@@ -695,7 +695,7 @@ function ThemePicker(defaultIndex) {
           stringResult = intl.string(closure_0(1113).t.XAS5Pi);
         }
         obj.children = stringResult;
-        return obj4(closure_0(5929).Text, obj);
+        return obj4(closure_0(5919).Text, obj);
       },
       headerTitleAlign: "center",
       headerRight: null
@@ -744,7 +744,7 @@ function ThemePicker(defaultIndex) {
   }
   if ("nitro" === themeSelector) {
     const obj5 = { themes: mobileThemes, currentThemeIndex: themeIndex, isPreview, isSynced, defaultIndex, deviceWidth: rounded, animatedStyles: obj4, hasOnyxNux, onThemeSelected: callback4 };
-    let tmp62 = obj4(tmp6(17892), obj5);
+    let tmp62 = obj4(tmp6(17894), obj5);
     let tmp63 = obj4;
   } else {
     let tmp58;
@@ -759,13 +759,13 @@ function ThemePicker(defaultIndex) {
     let obj7 = { theme: tmp58, children: null };
     let obj8 = { variant: "experimental_Large", state: segmentedControlState };
     obj7.children = obj4(tmp3(11251).SegmentedControl, obj8);
-    const items15 = [obj4(tmp3(5377).ThemeContextProvider, obj7), ];
+    const items15 = [obj4(tmp3(5367).ThemeContextProvider, obj7), ];
     const obj9 = { animated: true, variant: "body-xs/medium", style: null, children: null };
     const items16 = [obj4.headerSecondary, tmp.textCentered];
     obj9.style = items16;
     let intl = tmp3(1113).intl;
     obj9.children = intl.string(tmp3(1113).t.d5Gu9A);
-    items15[1] = obj4(tmp3(5929).Text, obj9);
+    items15[1] = obj4(tmp3(5919).Text, obj9);
     obj6.children = items15;
     tmp62 = first1(c6, obj6);
     tmp63 = obj4;
@@ -788,7 +788,7 @@ function ThemePicker(defaultIndex) {
     }
     _undefined(str);
   }, items17);
-  const memo3 = obj2.useMemo(tmp6(17898), []);
+  const memo3 = obj2.useMemo(tmp6(17900), []);
   const obj10 = { themes: mobileThemes, themeIndex, animatedStyles: obj4, data: memo3, useGradientBackground: "nitro" === themeSelector, isNitroLocked: null };
   let result = tmp14;
   const tmp3Result15 = require("useNavigatorBackPressHandler");
@@ -796,8 +796,8 @@ function ThemePicker(defaultIndex) {
     result = isPreview;
   }
   if (result) {
-    result = tmp3(5544).isNitroGatedMobileTheme(mobileThemes[themeIndex]);
-    const tmp3Result16 = tmp3(5544);
+    result = tmp3(5534).isNitroGatedMobileTheme(mobileThemes[themeIndex]);
+    const tmp3Result16 = tmp3(5534);
   }
   obj10.isNitroLocked = result;
   const tmp63Result = tmp63(SettingsAppearanceChannelListDefault, obj10);
@@ -811,7 +811,7 @@ function ThemePicker(defaultIndex) {
   let tmp63Result2 = null;
   if ("nitro" === themeSelector) {
     const obj12 = { themes: mobileThemes, themeIndex, isDimmed: true };
-    tmp63Result2 = tmp63(tmp6(17919), obj12);
+    tmp63Result2 = tmp63(tmp6(17921), obj12);
   }
   const items19 = [tmp63Result2, ];
   const items20 = [tmp.container, , ];

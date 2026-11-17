@@ -96,8 +96,8 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
     return flag;
   });
   const tmpResult = stateFromStores(504);
-  const result = stateFromStores(5348).useIsDismissibleContentDismissed_UNSAFE(tmp(5139).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
-  const tmpResult3 = stateFromStores(5348);
+  const result = stateFromStores(5338).useIsDismissibleContentDismissed_UNSAFE(tmp(5139).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const tmpResult3 = stateFromStores(5338);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => badgeById.getBadgeById(stateFromStores(dependencyMap[10]).BadgeId.GIFTING));
   if (enabled2) {

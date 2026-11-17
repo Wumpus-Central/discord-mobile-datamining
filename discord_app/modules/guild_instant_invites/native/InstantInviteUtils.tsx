@@ -1,7 +1,7 @@
 // === Module 10931: guild_instant_invites/InstantInviteUtils ===
 
 // Module 10931 (guild_instant_invites/InstantInviteUtils)
-import ToastUtils from "ToastUtils" /* 6014 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8460 */;
 import getInviteURLDefault from "getInviteURL" /* 8475 */;

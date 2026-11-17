@@ -1,6 +1,6 @@
-// === Module 19856: updateVisualRefresh ===
+// === Module 19858: updateVisualRefresh ===
 
-// Module 19856 (updateVisualRefresh)
+// Module 19858 (updateVisualRefresh)
 import NativeThemeModuleDefault from "NativeThemeModule" /* 16891 */;
 import size from "module_2" /* 2 */;
 

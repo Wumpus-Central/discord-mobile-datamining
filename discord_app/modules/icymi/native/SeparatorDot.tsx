@@ -1,6 +1,6 @@
-// === Module 19342: SeparatorDot ===
+// === Module 19344: SeparatorDot ===
 
-// Module 19342 (SeparatorDot)
+// Module 19344 (SeparatorDot)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

@@ -17,7 +17,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6377);
+const CheckpointConstants = fn(6367);
 ({ CHECKPOINT_CONTROL_SIZE: metroImportDefault, CHECKPOINT_INTRODUCTION_FADE_IN_DURATION_MS: closure_8, CHECKPOINT_INTRODUCTION_REVEAL_DURATION_MS: closure_9, CHECKPOINT_NAV_HEIGHT: closure_10 } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

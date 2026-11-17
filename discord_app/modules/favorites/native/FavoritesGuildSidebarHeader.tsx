@@ -1,11 +1,11 @@
-// === Module 19057: FavoritesGuildSidebarHeader ===
+// === Module 19059: FavoritesGuildSidebarHeader ===
 
-// Module 19057 (FavoritesGuildSidebarHeader)
+// Module 19059 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3679 from "module_3679" /* 3679 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 7432 */;
 import ChatIcon from "ChatIcon" /* 8069 */;
 import TextIcon from "TextIcon" /* 8078 */;
@@ -58,7 +58,7 @@ function PlaceholderRows() {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(18919).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(18921).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5306);

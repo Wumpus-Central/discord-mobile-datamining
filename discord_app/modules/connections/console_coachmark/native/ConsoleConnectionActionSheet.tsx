@@ -1,8 +1,8 @@
-// === Module 19629: ConsoleConnectionActionSheet ===
+// === Module 19631: ConsoleConnectionActionSheet ===
 
-// Module 19629 (ConsoleConnectionActionSheet)
+// Module 19631 (ConsoleConnectionActionSheet)
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import PlatformsDefault from "Platforms" /* 7087 */;
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 7424 */;
 import TableRow from "TableRow" /* 7443 */;
@@ -26,7 +26,7 @@ function connectXbox() {
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(19630).CONSOLE_CONNECTION_COACHMARK_ANALYTICS_LOCATION];
+let items = [fn(19632).CONSOLE_CONNECTION_COACHMARK_ANALYTICS_LOCATION];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/console_coachmark/native/ConsoleConnectionActionSheet.tsx");
 

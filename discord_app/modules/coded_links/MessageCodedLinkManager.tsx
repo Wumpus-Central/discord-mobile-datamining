@@ -1,13 +1,13 @@
-// === Module 20297: MessageCodedLinkManager ===
+// === Module 20300: MessageCodedLinkManager ===
 
-// Module 20297 (MessageCodedLinkManager)
-import findCodedLinksDefault from "findCodedLinks" /* 6051 */;
-import resolveUserProfileCodedLinkDefault from "resolveUserProfileCodedLink" /* 20305 */;
-import resolveStorefrontCodedLinkDefault from "resolveStorefrontCodedLink" /* 20308 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 20309 */;
+// Module 20300 (MessageCodedLinkManager)
+import findCodedLinksDefault from "findCodedLinks" /* 6041 */;
+import resolveUserProfileCodedLinkDefault from "resolveUserProfileCodedLink" /* 20308 */;
+import resolveStorefrontCodedLinkDefault from "resolveStorefrontCodedLink" /* 20311 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 20312 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 8461 */;
-import InviteStore from "InviteStore" /* 6052 */;
+import InviteStore from "InviteStore" /* 6042 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 const require = fn;
@@ -169,7 +169,7 @@ function resolveMessageCodedLinks(content) {
                                                         const obj3 = { value, done: true };
                                                         return obj3;
                                                       } else {
-                                                        const useGameOrganizationInviteFetch = tmp4(20307).useGameOrganizationInviteFetch;
+                                                        const useGameOrganizationInviteFetch = tmp4(20310).useGameOrganizationInviteFetch;
                                                         items = [code];
                                                         v1 = 1;
                                                         dependencyMap = 1;
@@ -387,7 +387,7 @@ function resolveMessageCodedLinks(content) {
                                                             const obj3 = { value, done: true };
                                                             return obj3;
                                                           } else {
-                                                            const useGameOrganizationInviteFetch = tmp4(20307).useGameOrganizationInviteFetch;
+                                                            const useGameOrganizationInviteFetch = tmp4(20310).useGameOrganizationInviteFetch;
                                                             items = [code];
                                                             v1 = 1;
                                                             dependencyMap = 1;

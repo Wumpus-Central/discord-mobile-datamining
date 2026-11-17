@@ -1,17 +1,17 @@
-// === Module 18885: GuildThemeMemberCoachmark ===
+// === Module 18887: GuildThemeMemberCoachmark ===
 
-// Module 18885 (GuildThemeMemberCoachmark)
+// Module 18887 (GuildThemeMemberCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2733 from "module_2733" /* 2733 */;
-import Powerups from "Powerups" /* 5527 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 6952 */;
+import Powerups from "Powerups" /* 5517 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 6942 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5523 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5513 */;
 
 require = fn;
-let closure_6 = fn(5524).GUILD_THEME_POWERUP_BOOST_PRICE;
+let closure_6 = fn(5514).GUILD_THEME_POWERUP_BOOST_PRICE;
 const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
@@ -48,7 +48,7 @@ export default function GuildThemeMemberCoachmark(guildId) {
   const obj2 = guildId(504);
   guildPowerupBannerImage = guildId(10718).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(18886);
+    guildPowerupBannerImage = markAsDismissed(18888);
   }
   const diff = onDismiss - markAsDismissed(9241)(guildId).available;
   c5 = diff;

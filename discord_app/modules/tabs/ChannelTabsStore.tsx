@@ -8,9 +8,9 @@ import TabsExperimentDefault from "TabsExperiment" /* 10276 */;
 import ChannelTabRoutes from "ChannelTabRoutes" /* 10278 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 5353 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5343 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

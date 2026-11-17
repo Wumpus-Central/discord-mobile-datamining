@@ -1,12 +1,12 @@
-// === Module 20382: RelationshipUtils ===
+// === Module 20385: RelationshipUtils ===
 
-// Module 20382 (RelationshipUtils)
+// Module 20385 (RelationshipUtils)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
-import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 18137 */;
-import FriendsActionCreatorsDefault from "FriendsActionCreators" /* 20383 */;
+import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 18139 */;
+import FriendsActionCreatorsDefault from "FriendsActionCreators" /* 20386 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

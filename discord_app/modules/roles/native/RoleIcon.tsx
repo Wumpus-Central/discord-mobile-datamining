@@ -1,8 +1,8 @@
 // === Module 7959: RoleIcon ===
 
 // Module 7959 (RoleIcon)
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export default function RoleIcon(arg0) {
     size = 20;
   }
   const size1 = { height: size, width: size };
-  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "channelId", textAlign: 994646469932053700000000000000000000000000000000000000000000000000000000000000000000000, width: size, marginBottom: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010747711006347429 };
+  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "channelId", textAlign: true, width: size, marginBottom: true };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };
     const obj3 = { uri: src };

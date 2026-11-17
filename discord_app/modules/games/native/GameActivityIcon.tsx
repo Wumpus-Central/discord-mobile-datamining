@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import shared from "shared" /* 5313 */;
-import native from "native" /* 5377 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import native from "native" /* 5367 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import UnknownGameIcon from "UnknownGameIcon" /* 8375 */;
 import noop from "module_19" /* 19 */;
 

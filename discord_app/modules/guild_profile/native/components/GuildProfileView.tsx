@@ -6,11 +6,11 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
 import themes from "themes" /* 5328 */;
-import native from "native" /* 5377 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import useToken from "useToken" /* 5902 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import native from "native" /* 5367 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import useToken from "useToken" /* 5892 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 10659 */;
 import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 10660 */;
 import GuildProfileHeaderDefault from "GuildProfileHeader" /* 10661 */;
@@ -106,7 +106,7 @@ export default function GuildProfileView(disableNameNavigation) {
   }
   if (tmp7Result) {
     const obj4 = { variant: "body-md/medium", color: "text-subtle", children: guildProfile.description };
-    tmp7Result = closure_7(guildProfile(5929).Text, obj4);
+    tmp7Result = closure_7(guildProfile(5919).Text, obj4);
   }
   const items2 = [tmp7Result, closure_7(GuildProfileGamesDefault, { profile: guildProfile }), closure_7(GuildProfileTraitsDefault, { profile: guildProfile })];
   obj3.children = items2;

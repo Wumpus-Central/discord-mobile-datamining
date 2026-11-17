@@ -3,8 +3,8 @@
 // Module 15411 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import transitionToGuild from "transitionToGuild" /* 7231 */;
 import GuildIconDefault from "GuildIcon" /* 7720 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7809 */;
@@ -14,7 +14,7 @@ import _modDef11381 from "module_11381" /* 11381 */;
 import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 15380 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 
 require = fn;
 function GuildBoostingGuildListItem(guildId) {
@@ -46,7 +46,7 @@ function GuildBoostingGuildListItem(guildId) {
     const items1 = [closure_7(GuildIconDefault, obj3), , ];
     const obj4 = { style: tmp.guildCardDescription, children: null };
     const obj5 = { variant: "body-md/semibold", children: stateFromStores.name };
-    const items2 = [closure_7(tmp5(5929).Text, obj5), ];
+    const items2 = [closure_7(tmp5(5919).Text, obj5), ];
     const obj6 = { style: tmp.subscriptionInfo, children: null };
     const obj7 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
     const tmp2Result3 = GuildIconDefault;
@@ -57,7 +57,7 @@ function GuildBoostingGuildListItem(guildId) {
     const intl = tmp5(1113).intl;
     const obj9 = { subscriberCount: tmp8 };
     obj8.children = intl.format(tmp5(1113).t.If4iTS, obj9);
-    items3[1] = closure_7(tmp5(5929).Text, obj8);
+    items3[1] = closure_7(tmp5(5919).Text, obj8);
     obj6.children = items3;
     items2[1] = closure_8(View, obj6);
     obj4.children = items2;

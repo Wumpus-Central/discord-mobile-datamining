@@ -1,23 +1,23 @@
-// === Module 20797: clips/ClipsManager ===
+// === Module 20800: clips/ClipsManager ===
 
-// Module 20797 (clips/ClipsManager)
+// Module 20800 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 6096 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6808 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6086 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
 import ClipsExperiment from "ClipsExperiment" /* 15812 */;
 import isClipsEnabled from "isClipsEnabled" /* 16108 */;
-import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20799 */;
-import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20800 */;
+import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20802 */;
+import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20803 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6802 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6792 */;
 import UserStore from "UserStore" /* 1388 */;
 import ClipsStore from "ClipsStore" /* 2139 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
@@ -144,13 +144,13 @@ let closure_26 = async function _probeHardware() {
   closure_131_6 = closure_2;
   return { classification: closure_132_0(closure_132_3[15]).classifyClipsHardware(closure_131_6, closure_131_4), gpuModels: closure_131_5, videoEncoders: closure_131_6 };
 };
-const getSystemAnalyticsInfo = fn(6090).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(6080).getSystemAnalyticsInfo;
 const ClipsConstants = fn(8845);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15, CLIPS_DEFAULT_SETTINGS_VERSION: closure_16, ClipsHardwareClassification: closure_17, ClipsLogger: closure_18, CLIP_RUNTIME: closure_19 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6803).StreamTypes;
-const Features = fn(6075).Features;
+const StreamTypes = fn(6793).StreamTypes;
+const Features = fn(6065).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

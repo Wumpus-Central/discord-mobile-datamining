@@ -2,7 +2,7 @@
 
 // Module 9102 (PhoneCallIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9103 from "module_9103" /* 9103 */;
 import noop from "module_19" /* 19 */;
 

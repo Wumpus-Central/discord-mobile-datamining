@@ -2,7 +2,7 @@
 
 // Module 12417 (useApexExperiments)
 import apex_ApexTypes from "apex/ApexTypes" /* 1455 */;
-import ExperimentManager from "ExperimentManager" /* 5537 */;
+import ExperimentManager from "ExperimentManager" /* 5527 */;
 import experiment from "experiment" /* 8652 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;

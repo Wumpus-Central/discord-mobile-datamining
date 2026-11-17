@@ -5,7 +5,7 @@ import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
 import shared from "shared" /* 5313 */;
-import timing_timing from "timing/timing" /* 5548 */;
+import timing_timing from "timing/timing" /* 5538 */;
 import BadgeUtils from "BadgeUtils" /* 10113 */;
 import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 15272 */;
 import useTimeoutDefault from "useTimeout" /* 15282 */;
@@ -543,7 +543,7 @@ export default function BadgeUnlockAnimation(badge) {
     items14[1] = pulseHidden;
     obj7.style = items14;
     let obj8 = { ref, artboard: "Mobile", dataBinding: memo };
-    obj7.children = stateFromStores(tmp2(5439).BadgeUnlockPulseRive, obj8);
+    obj7.children = stateFromStores(tmp2(5429).BadgeUnlockPulseRive, obj8);
     tmp55Result = tmp55(View, obj7);
   }
   const items15 = [tmp55Result, ];

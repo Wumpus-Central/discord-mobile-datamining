@@ -2,7 +2,7 @@
 
 // Module 10121 (ExperimentalRareIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10122 from "module_10122" /* 10122 */;
 import noop from "module_19" /* 19 */;
 

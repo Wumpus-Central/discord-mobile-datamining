@@ -1,12 +1,12 @@
-// === Module 18933: ConjureChannelRow ===
+// === Module 18935: ConjureChannelRow ===
 
-// Module 18933 (ConjureChannelRow)
+// Module 18935 (ConjureChannelRow)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import _modDef4131 from "module_4131" /* 4131 */;
 import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 14000 */;
 import BaseChannelItemDefault from "BaseChannelItem" /* 14789 */;
-import useConjureGuildUnreadSummaryDefault from "useConjureGuildUnreadSummary" /* 18934 */;
+import useConjureGuildUnreadSummaryDefault from "useConjureGuildUnreadSummary" /* 18936 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,8 +15,8 @@ const Routes = fn(1072).Routes;
 const StaticChannelRoute = fn(5162).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
-let obj2 = { container: { marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md }, badge: null };
-const obj3 = { marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md };
+let obj2 = { container: { marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md }, badge: null };
+const obj3 = { marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md };
 obj2.badge = { paddingStart: nativeDefault.space.PX_4 };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

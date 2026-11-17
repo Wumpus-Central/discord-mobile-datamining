@@ -1,7 +1,7 @@
 // === Module 7340: conjurePreviewFrameSurfaces ===
 
 // Module 7340 (conjurePreviewFrameSurfaces)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 7018 */;
 import size from "module_2" /* 2 */;
 

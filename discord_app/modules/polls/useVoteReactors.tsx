@@ -1,7 +1,7 @@
 // === Module 12662: useVoteReactors ===
 
 // Module 12662 (useVoteReactors)
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5920 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5910 */;
 import MessageReactionsStore from "MessageReactionsStore" /* 8862 */;
 
 require = fn;

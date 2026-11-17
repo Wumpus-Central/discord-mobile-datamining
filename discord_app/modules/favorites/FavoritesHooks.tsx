@@ -7,7 +7,7 @@ import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 2110 */;
 import FavoritesUtils from "FavoritesUtils" /* 5180 */;
 import FavoritesLimits from "FavoritesLimits" /* 10946 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import UserStore from "UserStore" /* 1388 */;
 import FavoriteStore from "FavoriteStore" /* 5158 */;
 

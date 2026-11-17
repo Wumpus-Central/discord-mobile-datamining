@@ -1,11 +1,11 @@
-// === Module 19001: WaterwheelsDiscoverPanel ===
+// === Module 19003: WaterwheelsDiscoverPanel ===
 
-// Module 19001 (WaterwheelsDiscoverPanel)
+// Module 19003 (WaterwheelsDiscoverPanel)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10225 */;
-import WaterwheelsDiscoverCardDefault from "WaterwheelsDiscoverCard" /* 19019 */;
-import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 19022 */;
+import WaterwheelsDiscoverCardDefault from "WaterwheelsDiscoverCard" /* 19021 */;
+import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 19024 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -50,11 +50,11 @@ function WaterwheelsDiscoverFeed(enabled) {
   let obj = require("useYouBarTotalHeight");
   let waterwheelsActions = require("useWaterwheelsActions").useWaterwheelsActions(callback);
   let obj2 = require("useWaterwheelsActions");
-  ({ snapshot, entries, status, retry } = extraData(19005)(enabled));
-  const tmp11 = extraData(19011)(snapshot.loadId, entries);
+  ({ snapshot, entries, status, retry } = extraData(19007)(enabled));
+  const tmp11 = extraData(19013)(snapshot.loadId, entries);
   trackAction = tmp11.trackAction;
   ({ visible, viewabilityConfigCallbackPairs } = tmp11);
-  let tmp10 = extraData(19005)(enabled);
+  let tmp10 = extraData(19007)(enabled);
   const waterwheelsDiscoverInitialRequest = require("useWaterwheelsDiscoverFeed").useWaterwheelsDiscoverInitialRequest(enabled, visible, snapshot);
   _require = waterwheelsActions(function*(arg0, arg1, arg2) {
     if (c8 === 2) {
@@ -167,7 +167,7 @@ function WaterwheelsDiscoverFeed(enabled) {
       const obj3 = { key: text, content: null };
       const obj5 = { guildId: null, guildName: null, footerAction: null };
       ({ guildId: obj4.guildId, name: obj4.guildName } = guildId);
-      const obj2 = closure_0(5552);
+      const obj2 = closure_0(5542);
       const obj8 = {
         server: guildId,
         variant: "primary",
@@ -179,10 +179,10 @@ function WaterwheelsDiscoverFeed(enabled) {
             callback1(closure_0, type, arg1);
           }
       };
-      obj5.footerAction = closure_1_10(closure_0(19019).ServerActionButton, obj8);
-      obj3.content = closure_1_10(first(19014), obj5);
+      obj5.footerAction = closure_1_10(closure_0(19021).ServerActionButton, obj8);
+      obj3.content = closure_1_10(first(19016), obj5);
       obj2.showActionSheet(obj3);
-      const tmp10 = first(19014);
+      const tmp10 = first(19016);
     } catch (err) {
     }
   }, items1);
@@ -198,7 +198,7 @@ function WaterwheelsDiscoverFeed(enabled) {
     const items4 = [tmp.feed, memo.contentContainer];
     obj4.style = items4;
     let obj5 = { status, onRetry: retry, retryAfterAt: snapshot.retryAfterAt };
-    obj4.children = closure_10(tmp9(19021), obj5);
+    obj4.children = closure_10(tmp9(19023), obj5);
     let obj6 = obj4;
   } else {
     obj6 = { style: tmp.feed, children: null };
@@ -206,7 +206,7 @@ function WaterwheelsDiscoverFeed(enabled) {
     let tmp17Result;
     if ("error" === snapshot.status) {
       const obj13 = { onRetry: retry, retryAfterAt: snapshot.retryAfterAt };
-      tmp17Result = closure_10(tmp2(19021).WaterwheelsDiscoverRefreshError, obj13);
+      tmp17Result = closure_10(tmp2(19023).WaterwheelsDiscoverRefreshError, obj13);
     }
     obj7.ListHeaderComponent = tmp17Result;
     ({ contentContainer: obj8.contentContainerStyle, scrollIndicator: obj8.scrollIndicatorInsets } = memo);
@@ -265,12 +265,12 @@ export default function WaterwheelsDiscoverPanel(style) {
   const tmp7 = gateReady;
   if (waterwheelsDiscoverEnabled) {
     const obj4 = { style: tmp.content, children: null };
-    const items2 = [closure_10(tmp7(19024), {}), ];
+    const items2 = [closure_10(tmp7(19026), {}), ];
     const obj5 = { enabled: waterwheelsDiscoverEnabled };
     items2[1] = closure_10(WaterwheelsDiscoverFeed, obj5, stateFromStoresObject.userId);
     obj4.children = items2;
     tmp9 = closure_11(View, obj4);
   }
   obj3.children = tmp9;
-  return closure_10(gateReady(18770), obj3);
+  return closure_10(gateReady(18772), obj3);
 };

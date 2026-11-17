@@ -1,9 +1,9 @@
-// === Module 18840: VoiceChannelUserLimit ===
+// === Module 18842: VoiceChannelUserLimit ===
 
-// Module 18840 (VoiceChannelUserLimit)
+// Module 18842 (VoiceChannelUserLimit)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import _modDef16098 from "module_16098" /* 16098 */;
 import noop from "module_19" /* 19 */;
 

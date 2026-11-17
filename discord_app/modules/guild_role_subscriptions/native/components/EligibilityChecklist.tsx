@@ -1,6 +1,6 @@
-// === Module 20664: EligibilityChecklist ===
+// === Module 20667: EligibilityChecklist ===
 
-// Module 20664 (EligibilityChecklist)
+// Module 20667 (EligibilityChecklist)
 import nativeDefault from "native" /* 575 */;
 import CircleXIcon from "CircleXIcon" /* 7629 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7930 */;
@@ -28,12 +28,12 @@ function EligibilityChecklistRow(item) {
   const items1 = [tmp.rowTextColumn, ];
   const obj4 = { style: items1, children: null };
   items1[1] = item.checked && tmp.eligibleRow;
-  const items2 = [tmp13(tmp10(5929).Text, { style: tmp.rowLabel, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: item.checked ? item.checkedLabel : item.uncheckedLabel }), tmp13(tmp10(5929).Text, { variant: "body-sm/normal", color: "interactive-text-default", children: item.description }), ];
+  const items2 = [tmp13(tmp10(5919).Text, { style: tmp.rowLabel, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: item.checked ? item.checkedLabel : item.uncheckedLabel }), tmp13(tmp10(5919).Text, { variant: "body-sm/normal", color: "interactive-text-default", children: item.description }), ];
   let tmp13Result = null != item.actionHandler && null != item.actionLabel;
   if (tmp13Result) {
     const obj7 = { style: tmp.actionButtonWrapper, children: null };
     ({ actionLabel: obj8.text, actionHandler: obj8.onPress } = item);
-    obj7.children = tmp13(tmp10(5936).Button, { text: null, onPress: null, grow: true });
+    obj7.children = tmp13(tmp10(5926).Button, { text: null, onPress: null, grow: true });
     tmp13Result = tmp13(View, obj7);
     const obj9 = { text: null, onPress: null, grow: true };
   }
@@ -48,7 +48,7 @@ function EligibilityChecklistRow(item) {
     let tmp13Result2 = tmp13(View, obj17);
   } else {
     obj17.style = tmp.divider;
-    tmp13Result2 = tmp13(tmp12(17836), obj17);
+    tmp13Result2 = tmp13(tmp12(17838), obj17);
   }
   children[1] = tmp13Result2;
   return hasOwnProperty(timestampProducer, { children });

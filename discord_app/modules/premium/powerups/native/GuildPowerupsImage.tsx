@@ -2,7 +2,7 @@
 
 // Module 10721 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 require = fn;

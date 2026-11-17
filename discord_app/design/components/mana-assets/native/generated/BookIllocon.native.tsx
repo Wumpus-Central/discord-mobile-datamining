@@ -1,7 +1,7 @@
 // === Module 15045: BookIllocon ===
 
 // Module 15045 (BookIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef15046 from "module_15046" /* 15046 */;
 import _modDef15047 from "module_15047" /* 15047 */;

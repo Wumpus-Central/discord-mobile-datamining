@@ -4,7 +4,7 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5985 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
 import useCanShowAppLauncherOnboarding from "useCanShowAppLauncherOnboarding" /* 13375 */;
 import UserStore from "UserStore" /* 1388 */;
 

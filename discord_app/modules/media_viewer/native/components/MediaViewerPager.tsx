@@ -2,7 +2,7 @@
 
 // Module 15238 (MediaViewerPager)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import useMediaViewerSources from "useMediaViewerSources" /* 8628 */;
 import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter" /* 15234 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -3,9 +3,9 @@
 // Module 14542 (RarityBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6378 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6744 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6368 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6734 */;
 import inlineStyles from "inlineStyles" /* 8263 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9436 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -15,7 +15,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6377);
+const CheckpointConstants = fn(6367);
 ({ CHECKPOINT_RARITY_TO_COLOR: closure_6, CHECKPOINT_RARITY_TO_LABEL_MESSAGE: metroImportDefault } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import useAvatarColorDefault from "useAvatarColor" /* 8538 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 12698 */;
@@ -194,7 +194,7 @@ export default function Header(application) {
     result = "flags" in application;
   }
   if (result) {
-    result = tmp(2151).supportsEmbeddedSurface(application, tmp(5977).EmbeddedSurfaceType.MAIN);
+    result = tmp(2151).supportsEmbeddedSurface(application, tmp(5967).EmbeddedSurfaceType.MAIN);
     const tmpResult15 = tmp(2151);
   }
   dependencyMap = result;
@@ -228,7 +228,7 @@ export default function Header(application) {
       const obj11 = {
         size: "sm",
         variant: "secondary-overlay",
-        icon: tmp5(6030),
+        icon: tmp5(6020),
         onPress() {
               AnalyticsUtilsDefault.track(AnalyticEvents.APP_LAUNCHER_APPLICATION_LINK_COPIED, { application_id: _undefined.id, source });
               const obj2 = { application_id: _undefined.id, source };

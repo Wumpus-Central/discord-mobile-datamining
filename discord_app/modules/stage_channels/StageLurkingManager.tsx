@@ -3,7 +3,7 @@
 // Module 7680 (StageLurkingManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 
 let require = fn;

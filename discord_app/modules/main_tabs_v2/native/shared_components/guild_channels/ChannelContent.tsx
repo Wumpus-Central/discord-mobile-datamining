@@ -1,13 +1,13 @@
-// === Module 19485: ChannelContent ===
+// === Module 19487: ChannelContent ===
 
-// Module 19485 (ChannelContent)
-import Text_Text from "Text/Text" /* 5929 */;
+// Module 19487 (ChannelContent)
+import Text_Text from "Text/Text" /* 5919 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 7219 */;
 import LockIcon from "LockIcon" /* 8092 */;
 import WarningIcon from "WarningIcon" /* 8160 */;
 import ChannelListLayout from "ChannelListLayout" /* 11050 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18838 */;
-import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 19486 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18840 */;
+import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 19488 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -138,7 +138,7 @@ function ChannelContentComponent(arg0) {
   return timestampProducer(View, obj2);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6959).UnreadSetting;
+const UnreadSetting = fn(6949).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5306);
@@ -148,7 +148,7 @@ if (PlatformUtils.isIOS()) {
   num = 2;
 }
 let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
-let obj4 = { opacity: fn(6060).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj4 = { opacity: fn(6050).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 PlatformUtils = fn(1380);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {

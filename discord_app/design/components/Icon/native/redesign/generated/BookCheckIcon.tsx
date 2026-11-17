@@ -2,7 +2,7 @@
 
 // Module 8073 (BookCheckIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8060 from "module_8060" /* 8060 */;
 import noop from "module_19" /* 19 */;
 

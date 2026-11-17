@@ -1,9 +1,9 @@
-// === Module 18165: ChannelListLayoutSetting ===
+// === Module 18167: ChannelListLayoutSetting ===
 
-// Module 18165 (ChannelListLayoutSetting)
+// Module 18167 (ChannelListLayoutSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5994 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5984 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;

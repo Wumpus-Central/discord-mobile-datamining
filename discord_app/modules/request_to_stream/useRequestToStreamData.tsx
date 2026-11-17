@@ -4,7 +4,7 @@
 import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 12410 */;
 import RequestToStreamActionCreators from "RequestToStreamActionCreators" /* 15738 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;

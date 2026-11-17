@@ -1,9 +1,9 @@
-// === Module 19528: SmartSearchExpandButton ===
+// === Module 19530: SmartSearchExpandButton ===
 
-// Module 19528 (SmartSearchExpandButton)
+// Module 19530 (SmartSearchExpandButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef4354 from "module_4354" /* 4354 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ let result = size.fileFinishedImporting("modules/intelligence_layer/search/nativ
 
 export default noop.memo(function SmartSearchExpandButton(arg0) {
   ({ isCollapsed, onPress } = arg0);
-  const tmp3 = closure_10(onPress(19527).useSearchHostSurfaceColor());
+  const tmp3 = closure_10(onPress(19529).useSearchHostSurfaceColor());
   if (isCollapsed) {
     let ChevronSmallUpIcon = onPress(10560).ChevronSmallDownIcon;
   } else {
@@ -52,7 +52,7 @@ export default noop.memo(function SmartSearchExpandButton(arg0) {
   obj3.accessibilityLabel = intl.string(FKLBbW);
   obj3.onPress = callback;
   const items1 = [closure_7(closure_6, { style: tmp3.surface, pointerEvents: "none" }), ];
-  const obj = onPress(19527);
+  const obj = onPress(19529);
   const obj4 = { style: tmp3.surface, pointerEvents: "none" };
   items1[1] = closure_7(ChevronSmallUpIcon, { size: "sm", color: tmp11(575).colors.INTERACTIVE_ICON_DEFAULT });
   obj3.children = items1;

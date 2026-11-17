@@ -1,10 +1,10 @@
-// === Module 18674: useUsernameRegistrationStep ===
+// === Module 18676: useUsernameRegistrationStep ===
 
-// Module 18674 (useUsernameRegistrationStep)
+// Module 18676 (useUsernameRegistrationStep)
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1503 */;
 import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 17231 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18647 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18649 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UniqueUsernamesStore from "UniqueUsernamesStore" /* 17234 */;
@@ -12,8 +12,8 @@ import UniqueUsernamesStore from "UniqueUsernamesStore" /* 17234 */;
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(18648).useRegistrationUIStore;
-const RegistrationConstants = fn(18649);
+const useRegistrationUIStore = fn(18650).useRegistrationUIStore;
+const RegistrationConstants = fn(18651);
 ({ authStateToRegisterTransitionStep: metroImportDefault, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");

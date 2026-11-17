@@ -2,7 +2,7 @@
 
 // Module 16944 (internalDeepLinks)
 import URLUtilsDefault from "URLUtils" /* 1381 */;
-import openURL from "openURL" /* 6008 */;
+import openURL from "openURL" /* 5998 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

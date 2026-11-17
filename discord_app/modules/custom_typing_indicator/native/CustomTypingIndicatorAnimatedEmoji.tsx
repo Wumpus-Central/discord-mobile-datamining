@@ -3,7 +3,7 @@
 // Module 14593 (CustomTypingIndicatorAnimatedEmoji)
 import user from "user" /* 1401 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5548 */;
+import timing_timing from "timing/timing" /* 5538 */;
 import EmojiDefault from "Emoji" /* 7894 */;
 import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 14594 */;
 import _slicedToArray from "module_32" /* 32 */;

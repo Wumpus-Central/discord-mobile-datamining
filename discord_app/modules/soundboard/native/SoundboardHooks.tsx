@@ -1,14 +1,14 @@
-// === Module 19218: SoundboardHooks ===
+// === Module 19220: SoundboardHooks ===
 
-// Module 19218 (SoundboardHooks)
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
+// Module 19220 (SoundboardHooks)
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5556 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
-const SoundboardStyleConstants = fn(19211);
+const SoundboardStyleConstants = fn(19213);
 ({ SOUNDS_PER_ROW: closure_6, SOUND_ROW_PADDING: metroImportDefault } = SoundboardStyleConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
@@ -51,8 +51,8 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
               return obj5;
             } else if (c0) {
               const FrecencyUserSettingsActionCreators = shouldFetch(5136).FrecencyUserSettingsActionCreators;
-              shouldFetch(5436).ignoreErrors(FrecencyUserSettingsActionCreators.loadIfNecessary());
-              const obj2 = shouldFetch(5436);
+              shouldFetch(5426).ignoreErrors(FrecencyUserSettingsActionCreators.loadIfNecessary());
+              const obj2 = shouldFetch(5426);
               c1 = 1;
               c0 = 1;
               const obj6 = { value: shouldFetch(7226).maybeFetchSoundboardSounds(), done: false };

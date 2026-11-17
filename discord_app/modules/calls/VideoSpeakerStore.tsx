@@ -3,11 +3,11 @@
 // Module 12724 (VideoSpeakerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6808 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import SpeakingStore from "SpeakingStore" /* 6941 */;
+import SpeakingStore from "SpeakingStore" /* 6931 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 import apply from "apply" /* 12 */;
 
@@ -136,7 +136,7 @@ function handleChannelRTCUpdate() {
   closure_11();
   return false;
 }
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 let closure_11 = apply.throttle(updateSpeaker, 300, { trailing: true });
 const Store = initializeDefault.Store;
 class VideoSpeakerStoreClass extends Store {

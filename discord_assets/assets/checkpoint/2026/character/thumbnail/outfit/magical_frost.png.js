@@ -1,6 +1,6 @@
-// === Module 6622: ? ===
+// === Module 6612: ? ===
 
-// Module 6622
+// Module 6612
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/magical_frost.png.js");

@@ -3,8 +3,8 @@
 // Module 16948 (ActivityShareLinkModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
-import LinkIcon from "LinkIcon" /* 6029 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
+import LinkIcon from "LinkIcon" /* 6019 */;
 import HeaderActionButton from "HeaderActionButton" /* 7427 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import formatResults from "formatResults" /* 10245 */;
@@ -200,9 +200,9 @@ export default function ActivityShareLinkModal(applicationId) {
           const intl = tmp2(1113).intl;
           const obj8 = { applicationName: closure_129_15.name };
           obj7.text = intl.formatToPlainString(tmp2(1113).t.jQULqL, obj8);
-          tmp3(6015).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
+          tmp3(6005).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
           closure_129_5(true, closure_129_8);
-          let obj6 = tmp3(6015);
+          let obj6 = tmp3(6005);
           const result = tmp2(16947).closeActivityShareLinkModal();
           const obj9 = tmp2(16947);
         }

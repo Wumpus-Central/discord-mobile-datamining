@@ -7,12 +7,12 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import ThreadConstants from "ThreadConstants" /* 1112 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6364 */;
 import ChannelRecord from "ChannelRecord" /* 5159 */;
 import MessageRecord from "MessageRecord" /* 5249 */;
 import UserRecord from "UserRecord" /* 1407 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import size from "module_2" /* 2 */;
 
 function updateState(type, fn) {

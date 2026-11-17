@@ -2,7 +2,7 @@
 
 // Module 16100 (useSelectedActiveStream)
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 
 const require = globalThis.__r;
 

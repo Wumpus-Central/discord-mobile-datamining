@@ -8,10 +8,10 @@ import KeyboardUIStore from "KeyboardUIStore" /* 1500 */;
 import KeyboardTypes from "KeyboardTypes" /* 1628 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 5503 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5913 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 5493 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5903 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 8147 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import MessageParser from "MessageParser" /* 8786 */;
@@ -185,7 +185,7 @@ function ActionBar(channel) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5936).Button, obj9);
+    obj8.children = closure_29(tmp2(5926).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);

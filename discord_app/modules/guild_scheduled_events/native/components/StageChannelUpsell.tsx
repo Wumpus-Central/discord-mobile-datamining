@@ -5,11 +5,11 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import Pressables from "Pressables" /* 7428 */;
 import _modDef7430 from "module_7430" /* 7430 */;
 import _modDef8104 from "module_8104" /* 8104 */;
@@ -57,7 +57,7 @@ export default function StageChannelUpsell(arg0) {
     const intl3 = util.intl;
     const obj8 = {
       suggestionsHook(children, arg1) {
-          return closure_1_9(guildId(5929).Text, { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
+          return closure_1_9(guildId(5919).Text, { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
         }
     };
     obj7.children = intl3.format(util.t.Vh7rP7, obj8);

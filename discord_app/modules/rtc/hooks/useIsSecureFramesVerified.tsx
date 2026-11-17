@@ -1,9 +1,9 @@
 // === Module 10608: useIsSecureFramesVerified ===
 
 // Module 10608 (useIsSecureFramesVerified)
-import StreamKeyUtils from "StreamKeyUtils" /* 6808 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import SecureFramesVerifiedStore from "SecureFramesVerifiedStore" /* 10609 */;
 import TransientKeyStore from "TransientKeyStore" /* 10610 */;
 import VerifiedKeyStore from "VerifiedKeyStore" /* 10611 */;

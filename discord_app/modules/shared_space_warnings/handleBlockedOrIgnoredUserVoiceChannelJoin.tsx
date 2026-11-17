@@ -3,7 +3,7 @@
 // Module 16235 (handleBlockedOrIgnoredUserVoiceChannelJoin)
 import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 16237 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 
 require = fn;
 let closure_4 = fn(16236).userBlockedWarningInCooldown;

@@ -1,6 +1,6 @@
-// === Module 20356: ConnectGuardianModal ===
+// === Module 20359: ConnectGuardianModal ===
 
-// Module 20356 (ConnectGuardianModal)
+// Module 20359 (ConnectGuardianModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/nuf/native/components/Connect
 export default function ConnectGuardianModal(route) {
   const onComplete = route.route.params.onComplete;
   const tmp = closure_9();
-  const connectGuardianGate = onComplete(20357).useConnectGuardianGate();
+  const connectGuardianGate = onComplete(20360).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   items = [connectGuardianGate.state, onComplete];
   const effect = noop.useEffect(() => {
@@ -64,18 +64,18 @@ export default function ConnectGuardianModal(route) {
     const obj5 = { style: tmp.title, variant: "heading-xl/semibold", color: "text-default", children: null };
     const intl = tmp4(1113).intl;
     obj5.children = intl.string(tmp2(2701).ITlV6p);
-    const items2 = [closure_7(tmp4(5929).Text, obj5), ];
+    const items2 = [closure_7(tmp4(5919).Text, obj5), ];
     const obj6 = { style: tmp.description, variant: "body-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp4(1113).intl;
     obj6.children = intl2.format(tmp2(2701).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
-    items2[1] = closure_7(tmp4(5929).Text, obj6);
+    items2[1] = closure_7(tmp4(5919).Text, obj6);
     obj4.children = items2;
     const items3 = [closure_8(View, obj4), , , ];
     const obj7 = { style: tmp.cardSection, children: null };
     const obj8 = { style: tmp.scanPrompt, variant: "body-md/semibold", color: "text-default", children: null };
     const intl3 = tmp4(1113).intl;
     obj8.children = intl3.string(tmp2(2701).Mi60fm);
-    const items4 = [closure_7(tmp4(5929).Text, obj8), ];
+    const items4 = [closure_7(tmp4(5919).Text, obj8), ];
     ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
     items4[1] = closure_7(tmp4(17411).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
     obj7.children = items4;
@@ -97,7 +97,7 @@ export default function ConnectGuardianModal(route) {
       }
       return tmpResult;
     };
-    obj12.children = closure_7(tmp4(5936).Button, obj25);
+    obj12.children = closure_7(tmp4(5926).Button, obj25);
     items3[3] = closure_7(View, obj12);
     obj3.children = items3;
     tmp9 = closure_8(View, obj3);

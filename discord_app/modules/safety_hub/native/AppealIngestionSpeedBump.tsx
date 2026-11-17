@@ -104,7 +104,7 @@ export default function AppealIngestionSpeedBump(arg0) {
     const obj9 = { variant: "body-xs/normal", children: null };
     const intl6 = tmp2(1113).intl;
     obj9.children = intl6.format(tmp2(1113).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(5929).Text, obj9);
+    isDsaEligible = closure_8(tmp2(5919).Text, obj9);
   }
   const obj10 = { children: null };
   items2[5] = isDsaEligible;

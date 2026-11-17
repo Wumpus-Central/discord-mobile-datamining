@@ -3,7 +3,7 @@
 // Module 16076 (VoiceActionSheetManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 
 let require = fn;
@@ -16,9 +16,9 @@ class VoiceActionSheetManager extends tmp2 {
       const channel = applyArgumentsResult.channel;
       if (null != channel) {
         DispatcherDefault.wait(() => {
-          const result = applyArgumentsResult(6900).dismissVoiceChannelScreens(channel);
-          const obj = applyArgumentsResult(6900);
-          applyArgumentsResult(6900).openChannelCallModal(channel);
+          const result = applyArgumentsResult(6890).dismissVoiceChannelScreens(channel);
+          const obj = applyArgumentsResult(6890);
+          applyArgumentsResult(6890).openChannelCallModal(channel);
         });
         applyArgumentsResult.terminate();
       }

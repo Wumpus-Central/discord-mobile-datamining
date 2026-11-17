@@ -2,7 +2,7 @@
 
 // Module 14883 (ChatWarningIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9258 from "module_9258" /* 9258 */;
 import noop from "module_19" /* 19 */;
 

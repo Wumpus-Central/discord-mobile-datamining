@@ -3,8 +3,8 @@
 // Module 14938 (UserProfileMutualsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import TableRow from "TableRow" /* 7443 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7994 */;
@@ -14,7 +14,7 @@ import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet"
 import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 14933 */;
 import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 14939 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 
 require = fn;
 function MutualFriendRow(mutualFriend) {

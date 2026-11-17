@@ -2,7 +2,7 @@
 
 // Module 7822 (CountrySelectModal)
 import util from "util" /* 1113 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import Navigator from "Navigator" /* 7490 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ export default function CountrySelectModal() {
     obj2.render = function render() {
       return closure_1_4(closure_1_1(dependencyMap[5]), {
         onClose() {
-          return closure_1_1(6848).pop();
+          return closure_1_1(6838).pop();
         },
         onCountrySelected(countryCode) {
           return closure_1_1(7820).setCountryCode(countryCode);

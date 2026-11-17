@@ -1,6 +1,6 @@
-// === Module 20110: VoicePanelVoiceControlsButtons ===
+// === Module 20112: VoicePanelVoiceControlsButtons ===
 
-// Module 20110 (VoicePanelVoiceControlsButtons)
+// Module 20112 (VoicePanelVoiceControlsButtons)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
@@ -8,11 +8,11 @@ import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 5163 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6225 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 6903 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6215 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 6893 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowIcon from "TableRowIcon" /* 7455 */;
 import TableRowArrow from "TableRowArrow" /* 7456 */;
@@ -31,24 +31,24 @@ import VolumeSliderDefault from "VolumeSlider" /* 13017 */;
 import _modDef13044 from "module_13044" /* 13044 */;
 import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 13060 */;
 import _modDef16072 from "module_16072" /* 16072 */;
-import useCanInviteMembers from "useCanInviteMembers" /* 19182 */;
-import useInviteMembersCallback from "useInviteMembersCallback" /* 19183 */;
-import _modDef19199 from "module_19199" /* 19199 */;
-import _modDef19200 from "module_19200" /* 19200 */;
-import useSoundboardConfigDefault from "useSoundboardConfig" /* 19207 */;
-import useHideSelfVideoDefault from "useHideSelfVideo" /* 20113 */;
-import ChannelCallUtils from "ChannelCallUtils" /* 20114 */;
+import useCanInviteMembers from "useCanInviteMembers" /* 19184 */;
+import useInviteMembersCallback from "useInviteMembersCallback" /* 19185 */;
+import _modDef19201 from "module_19201" /* 19201 */;
+import _modDef19202 from "module_19202" /* 19202 */;
+import useSoundboardConfigDefault from "useSoundboardConfig" /* 19209 */;
+import useHideSelfVideoDefault from "useHideSelfVideo" /* 20115 */;
+import ChannelCallUtils from "ChannelCallUtils" /* 20116 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 12719 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const require = globalThis.__r;
 
@@ -216,8 +216,8 @@ function toggleDeaf() {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, PlatformTypes: closure_15 } = Constants);
-let closure_16 = fn(20111).SelfStreamAndVideoAlertType;
-const MediaEngineContextTypes = fn(6075).MediaEngineContextTypes;
+let closure_16 = fn(20113).SelfStreamAndVideoAlertType;
+const MediaEngineContextTypes = fn(6065).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const size = fn(2);
@@ -318,7 +318,7 @@ export function DeafenSwitch() {
   items = [MediaEngineStore];
   const stateFromStores = initialize.useStateFromStores(items, () => selfDeaf.isSelfDeaf());
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef19200 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef19202 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
   obj2.value = stateFromStores;
@@ -403,7 +403,7 @@ export function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f138730 = () => f138730(!VIDEO);
+          const f138747 = () => f138747(!VIDEO);
           const obj2 = {
             importer() {
                   return VIDEO(paths[17])(paths[16], paths.paths).then((result) => {
@@ -480,7 +480,7 @@ export function VoiceSettingsButton(guildId) {
   const callback = noop.useCallback(() => {
     const result = ChannelCallConnectingScreen.showVoiceSettingsActionSheet(guildId);
   }, items);
-  const obj = { onPress: callback, icon: closure_18(guildId(7455).TableRowIcon, { IconComponent: guildId(10569).SettingsIcon, source: _modDef19199 }), label: null, subLabel: null, trailing: null };
+  const obj = { onPress: callback, icon: closure_18(guildId(7455).TableRowIcon, { IconComponent: guildId(10569).SettingsIcon, source: _modDef19201 }), label: null, subLabel: null, trailing: null };
   const intl = guildId(1113).intl;
   obj.label = intl.string(guildId(1113).t.dsXapM);
   const intl2 = guildId(1113).intl;
@@ -519,8 +519,8 @@ export function StageButtons(channel) {
   items = [PermissionStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel));
   const obj2 = channel(504);
-  const isStageSpeakingDisabledForCurrentUser = channel(6908).useIsStageSpeakingDisabledForCurrentUser();
-  const obj3 = channel(6908);
+  const isStageSpeakingDisabledForCurrentUser = channel(6898).useIsStageSpeakingDisabledForCurrentUser();
+  const obj3 = channel(6898);
   if (tmp2) {
     const obj4 = { channel };
     let tmp8 = closure_18(ScreenshareButton, obj4);

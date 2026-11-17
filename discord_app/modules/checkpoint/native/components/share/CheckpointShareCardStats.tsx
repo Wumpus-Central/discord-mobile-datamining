@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2024 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import GameControllerIcon from "GameControllerIcon" /* 7438 */;
 import ChatIcon from "ChatIcon" /* 8069 */;
 import UnknownGameIcon from "UnknownGameIcon" /* 8375 */;

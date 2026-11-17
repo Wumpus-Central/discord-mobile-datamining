@@ -1,23 +1,23 @@
-// === Module 20143: CaptchaModal ===
+// === Module 20145: CaptchaModal ===
 
-// Module 20143 (CaptchaModal)
+// Module 20145 (CaptchaModal)
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1503 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6769 */;
-import RegistrationUtils from "RegistrationUtils" /* 18657 */;
-import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 20145 */;
-import CaptchaUtilsDefault from "CaptchaUtils" /* 20149 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5556 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6759 */;
+import RegistrationUtils from "RegistrationUtils" /* 18659 */;
+import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 20147 */;
+import CaptchaUtilsDefault from "CaptchaUtils" /* 20151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(18648).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(18649);
+let closure_6 = fn(18650).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(18651);
 ({ RegisterTransitionSteps: metroImportDefault, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -56,7 +56,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  closure_9 = onReject(20144)({ onReject, analyticsType: memo });
+  closure_9 = onReject(20146)({ onReject, analyticsType: memo });
   const effect = noop.useEffect(() => {
     closure_1_4.dismiss();
   }, []);

@@ -5,7 +5,7 @@ import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 5211 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

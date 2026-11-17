@@ -3,8 +3,8 @@
 // Module 14208 (AppealIngestionExternalLink)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import LinkingDefault from "Linking" /* 6012 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import Pressables from "Pressables" /* 7428 */;
 import _mod12074 from "module_12074" /* 12074 */;
 import noop from "module_19" /* 19 */;

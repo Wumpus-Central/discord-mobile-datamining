@@ -2,7 +2,7 @@
 
 // Module 8101 (AppsIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8038 from "module_8038" /* 8038 */;
 import noop from "module_19" /* 19 */;
 

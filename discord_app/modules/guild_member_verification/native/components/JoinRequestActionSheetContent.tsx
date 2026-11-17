@@ -1,17 +1,17 @@
-// === Module 19420: JoinRequestActionSheetContent ===
+// === Module 19422: JoinRequestActionSheetContent ===
 
-// Module 19420 (JoinRequestActionSheetContent)
+// Module 19422 (JoinRequestActionSheetContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import DateUtils from "DateUtils" /* 5128 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5352 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5342 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import CircleXIcon from "CircleXIcon" /* 7629 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7930 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import HourglassIcon from "HourglassIcon" /* 12277 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 19418 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 19420 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 
@@ -43,14 +43,14 @@ function OpenInterviewButton(arg0) {
     obj4.text = label;
     obj4.onPress = handleOpenInterview;
     obj4.disabled = submitting;
-    let tmp6Result = closure_8(tmp(5936).Button, obj4);
+    let tmp6Result = closure_8(tmp(5926).Button, obj4);
   } else {
     tmp6Result = null;
   }
   return tmp6Result;
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5567).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5557).ACTION_SHEET_MAX_WIDTH;
 const paddingTop = fn(7962).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
@@ -284,7 +284,7 @@ let closure_15 = noop.memo(function JoinRequestActionSheetApplicationActions(joi
     tmp6Result = closure_8(tmp2(7988).IconButton, obj6);
   }
   children[2] = tmp6Result;
-  return closure_9(joinRequest(6951).ButtonGroup, { direction: "horizontal", align: "flex-start", justify: "space-evenly", children });
+  return closure_9(joinRequest(6941).ButtonGroup, { direction: "horizontal", align: "flex-start", justify: "space-evenly", children });
 });
 let closure_16 = noop.memo(function VerificationFormResponse(arg0) {
   ({ field, isLastField } = arg0);
@@ -408,7 +408,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   }, items);
   const obj = { style: { paddingBottom: memo(1630)().bottom }, children: null };
   const items1 = [closure_8(closure_12, { joinRequest, user, displayProfile: displayProfile.displayProfile }), , , , ];
-  if (joinRequest.applicationStatus === joinRequest(5352).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+  if (joinRequest.applicationStatus === joinRequest(5342).GuildJoinRequestApplicationStatuses.SUBMITTED) {
     let tmp8Result = null != joinRequest.interviewChannelId;
     if (tmp8Result) {
       const obj2 = { joinRequest };
@@ -433,7 +433,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   obj6.children = mapped;
   items1[2] = closure_8(View, obj6);
   items1[3] = closure_8(closure_17, { joinRequest, user });
-  items1[4] = closure_8(memo(19421), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
+  items1[4] = closure_8(memo(19423), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
   obj.children = items1;
   return closure_9(View, obj);
 });

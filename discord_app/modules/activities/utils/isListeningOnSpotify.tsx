@@ -2,7 +2,7 @@
 
 // Module 10860 (isListeningOnSpotify)
 import Constants from "Constants" /* 1072 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import PlatformsDefault from "Platforms" /* 7087 */;
 import SpotifyConstants from "SpotifyConstants" /* 7291 */;
 import size from "module_2" /* 2 */;

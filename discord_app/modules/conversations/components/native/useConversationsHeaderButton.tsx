@@ -11,7 +11,7 @@ import ChannelConversationsStore from "ChannelConversationsStore" /* 8745 */;
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(5957);
+const ConversationConstants = fn(5947);
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty, MOBILE_FETCH_LIMIT: closure_6, MOBILE_PREVIEW_MESSAGE_COUNT: metroImportDefault } = ConversationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");

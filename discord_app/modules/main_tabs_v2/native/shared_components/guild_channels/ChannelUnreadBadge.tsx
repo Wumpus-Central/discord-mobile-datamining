@@ -1,7 +1,7 @@
-// === Module 18753: ChannelUnreadBadge ===
+// === Module 18755: ChannelUnreadBadge ===
 
-// Module 18753 (ChannelUnreadBadge)
-import useFontScale from "useFontScale" /* 5944 */;
+// Module 18755 (ChannelUnreadBadge)
+import useFontScale from "useFontScale" /* 5934 */;
 import shared_components_Badge from "shared_components/Badge" /* 9057 */;
 import ChannelListLayout from "ChannelListLayout" /* 11050 */;
 import noop from "module_19" /* 19 */;
@@ -10,8 +10,8 @@ const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(6060).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(6959).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(6050).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(6949).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" }, unreadBadgePanel: { marginLeft: -16 } });

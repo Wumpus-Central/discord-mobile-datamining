@@ -4,7 +4,7 @@
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6943 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6933 */;
 import UserSummaryItemDefault from "UserSummaryItem" /* 12491 */;
 import SpeakerTile from "SpeakerTile" /* 13086 */;
 import StageSectionHeaderDefault from "StageSectionHeader" /* 13093 */;
@@ -16,7 +16,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const StageChannelListStore = fn(13085);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: closure_6 } = StageChannelListStore);
-const MAX_AUDIENCE_ROW_LIMIT = fn(6906).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(6896).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let cutout = { direction: fn(1187).CutoutDirection.RIGHT, radius: 13, inset: -6 };

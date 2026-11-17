@@ -3,7 +3,7 @@
 // Module 12752 (IntlLink)
 import nativeDefault from "native" /* 575 */;
 import _modDef2070 from "module_2070" /* 2070 */;
-import LinkingDefault from "Linking" /* 6012 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

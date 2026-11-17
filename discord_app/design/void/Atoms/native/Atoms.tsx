@@ -2,7 +2,7 @@
 
 // Module 16626 (Atoms)
 import _mod17 from "module_17" /* 17 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8121 */;
 import size from "module_2" /* 2 */;
 

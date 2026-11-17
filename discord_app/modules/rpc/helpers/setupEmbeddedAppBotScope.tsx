@@ -1,7 +1,7 @@
 // === Module 12867: setupEmbeddedAppBotScope ===
 
 // Module 12867 (setupEmbeddedAppBotScope)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 7307 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 

@@ -3,7 +3,7 @@
 // Module 17353 (SensitiveContentFiltersNotices)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import LinkingDefault from "Linking" /* 6012 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8190 */;
 import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 17211 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const SafetySettingsNoticeType = fn(6910).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(6900).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");

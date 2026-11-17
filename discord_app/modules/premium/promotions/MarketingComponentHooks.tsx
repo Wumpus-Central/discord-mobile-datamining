@@ -3,7 +3,7 @@
 // Module 11684 (MarketingComponentHooks)
 import initialize from "initialize" /* 504 */;
 import themes from "themes" /* 5328 */;
-import useThemeDefault from "useTheme" /* 5547 */;
+import useThemeDefault from "useTheme" /* 5537 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 require = fn;

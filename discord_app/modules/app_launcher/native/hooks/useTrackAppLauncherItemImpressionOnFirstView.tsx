@@ -2,7 +2,7 @@
 
 // Module 13432 (useTrackAppLauncherItemImpressionOnFirstView)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import useTrackImpression from "useTrackImpression" /* 6338 */;
+import useTrackImpression from "useTrackImpression" /* 6328 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

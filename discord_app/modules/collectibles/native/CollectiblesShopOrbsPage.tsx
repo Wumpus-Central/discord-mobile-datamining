@@ -1,9 +1,9 @@
-// === Module 18529: CollectiblesShopOrbsPage ===
+// === Module 18531: CollectiblesShopOrbsPage ===
 
-// Module 18529 (CollectiblesShopOrbsPage)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+// Module 18531 (CollectiblesShopOrbsPage)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 9407 */;
-import ShopBlockItemDefault from "ShopBlockItem" /* 18490 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 18492 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8485 */;
 

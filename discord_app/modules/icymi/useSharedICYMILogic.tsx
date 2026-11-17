@@ -1,11 +1,11 @@
-// === Module 19317: useSharedICYMILogic ===
+// === Module 19319: useSharedICYMILogic ===
 
-// Module 19317 (useSharedICYMILogic)
+// Module 19319 (useSharedICYMILogic)
 import ICYMITypes from "ICYMITypes" /* 10210 */;
 import ICYMIUtils from "ICYMIUtils" /* 10216 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10217 */;
 import ICYMIAnalytics2 from "ICYMIAnalytics" /* 16851 */;
-import ICYMIStoreUtils from "ICYMIStoreUtils" /* 19315 */;
+import ICYMIStoreUtils from "ICYMIStoreUtils" /* 19317 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ICYMIStore from "ICYMIStore" /* 10205 */;
@@ -13,7 +13,7 @@ import ICYMIStore from "ICYMIStore" /* 10205 */;
 const require = globalThis.__r;
 
 require = fn;
-const SCROLL_EVENT_THROTTLE_MS = fn(19283).SCROLL_EVENT_THROTTLE_MS;
+const SCROLL_EVENT_THROTTLE_MS = fn(19285).SCROLL_EVENT_THROTTLE_MS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
 
@@ -155,7 +155,7 @@ export function useSharedICYMILogic(notificationItem) {
         return items;
       }), stateFromStores);
       const found = viewableItems.filter((item) => {
-        const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(19316).NON_ELIGIBLE_SCROLL_ITEMS;
+        const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(19318).NON_ELIGIBLE_SCROLL_ITEMS;
         return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
       });
       const result1 = ICYMIActionCreatorsDefault.triggerItemsLongImpression(found.map((item) => {
@@ -184,7 +184,7 @@ export function useSharedICYMILogic(notificationItem) {
   const callback2 = allUnreadItemsHydrated.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     const found = viewableItems.filter((item) => {
-      const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(19316).NON_ELIGIBLE_SCROLL_ITEMS;
+      const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(19318).NON_ELIGIBLE_SCROLL_ITEMS;
       return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
     });
     closure_1(unreadItems[11]).startItemsDwell(found.map((item) => {

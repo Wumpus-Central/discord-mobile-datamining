@@ -1,6 +1,6 @@
-// === Module 19720: ChannelSettingsChangeRTCRegion ===
+// === Module 19722: ChannelSettingsChangeRTCRegion ===
 
-// Module 19720 (ChannelSettingsChangeRTCRegion)
+// Module 19722 (ChannelSettingsChangeRTCRegion)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -11,7 +11,7 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RegionStore from "RegionStore" /* 19663 */;
+import RegionStore from "RegionStore" /* 19665 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -104,7 +104,7 @@ prototype["render"] = function render() {
   const tmp = closure_8(this.context);
   return jsx(Form.Form, { style: closure_8(this.context).form, children: this.renderRegions() });
 };
-ChannelSettingsChangeRTCRegion.contextType = fn(5377).ThemeContext;
+ChannelSettingsChangeRTCRegion.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
 

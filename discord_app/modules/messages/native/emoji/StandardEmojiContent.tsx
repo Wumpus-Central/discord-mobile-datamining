@@ -4,12 +4,12 @@
 import nativeDefault from "native" /* 575 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 5256 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 11301 */;
 import EmojiActionCreators from "EmojiActionCreators" /* 11305 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 require = fn;
 function Emoji(surrogate) {

@@ -4,8 +4,8 @@
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11951 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import VoicePanelStore from "VoicePanelStore" /* 6901 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import VoicePanelStore from "VoicePanelStore" /* 6891 */;
 
 require = fn;
 const size = fn(2);

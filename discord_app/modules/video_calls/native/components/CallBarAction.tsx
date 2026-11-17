@@ -2,8 +2,8 @@
 
 // Module 12729 (CallBarAction)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import Pressables from "Pressables" /* 7428 */;
 import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 12731 */;
 import noop from "module_19" /* 19 */;

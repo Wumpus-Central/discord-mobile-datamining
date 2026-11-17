@@ -2,7 +2,7 @@
 
 // Module 16221 (PreviewData)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6364 */;
 import MessageRecord from "MessageRecord" /* 5249 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
 

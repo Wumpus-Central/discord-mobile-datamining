@@ -1,7 +1,7 @@
 // === Module 11860: ForumPostTagsActionSheet ===
 
 // Module 11860 (ForumPostTagsActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 9112 */;
 import AvailableForumTagDefault from "AvailableForumTag" /* 11861 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -108,7 +108,7 @@ export default function ForumPostTagsActionSheet(thread) {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj5.children = toggleTag(thread(5936).Button, obj6);
+  obj5.children = toggleTag(thread(5926).Button, obj6);
   items[1] = toggleTag(closure_5, obj5);
   obj2.children = items;
   return closure_8(thread(7951).ActionSheet, obj2);

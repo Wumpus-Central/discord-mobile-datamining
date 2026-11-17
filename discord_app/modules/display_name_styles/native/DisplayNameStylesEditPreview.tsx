@@ -7,7 +7,7 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import _modDef3125 from "module_3125" /* 3125 */;
 import DateUtils from "DateUtils" /* 5128 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useAvatarDecoration from "useAvatarDecoration" /* 7027 */;
 import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8613 */;
 import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 9396 */;

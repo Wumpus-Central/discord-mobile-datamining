@@ -1,6 +1,6 @@
-// === Module 18592: ParentalControlsFriendRequestsMutualGuildsSetting ===
+// === Module 18594: ParentalControlsFriendRequestsMutualGuildsSetting ===
 
-// Module 18592 (ParentalControlsFriendRequestsMutualGuildsSetting)
+// Module 18594 (ParentalControlsFriendRequestsMutualGuildsSetting)
 import util from "util" /* 1113 */;
 import FlagUtilsAll from "FlagUtils" /* 1406 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7813 */;

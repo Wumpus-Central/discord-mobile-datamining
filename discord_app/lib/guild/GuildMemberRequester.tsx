@@ -1,6 +1,6 @@
-// === Module 6945: GuildMemberRequester ===
+// === Module 6935: GuildMemberRequester ===
 
-// Module 6945 (GuildMemberRequester)
+// Module 6935 (GuildMemberRequester)
 import applyDefault from "apply" /* 12 */;
 import Timers from "Timers" /* 5150 */;
 import size from "module_2" /* 2 */;

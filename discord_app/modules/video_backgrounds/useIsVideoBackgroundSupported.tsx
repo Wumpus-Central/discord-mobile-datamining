@@ -2,7 +2,7 @@
 
 // Module 13004 (useIsVideoBackgroundSupported)
 import initialize from "initialize" /* 504 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 6250 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 6240 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 
 require = fn;

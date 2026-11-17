@@ -1,6 +1,6 @@
-// === Module 19457: useSmartSearchStatus ===
+// === Module 19459: useSmartSearchStatus ===
 
-// Module 19457 (useSmartSearchStatus)
+// Module 19459 (useSmartSearchStatus)
 import SmartSearchUtils from "SmartSearchUtils" /* 14743 */;
 import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 14744 */;
 import SmartSearchTypes from "SmartSearchTypes" /* 14745 */;

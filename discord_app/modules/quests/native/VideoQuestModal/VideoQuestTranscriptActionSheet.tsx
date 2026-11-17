@@ -84,7 +84,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   }
   const items2 = [tmp7Result, memo.length > 0 && memo.map((children, index) => closure_1_7(quest(dependencyMap[14]).Text, { variant: "heading-sm/medium", color: "text-muted", children }, index))];
   obj4.children = items2;
-  obj3.children = closure_8(quest(6337).Stack, obj4);
-  obj.children = closure_7(quest(5570).BottomSheetScrollView, obj3);
+  obj3.children = closure_8(quest(6327).Stack, obj4);
+  obj.children = closure_7(quest(5560).BottomSheetScrollView, obj3);
   return closure_7(quest(7951).ActionSheet, obj);
 };

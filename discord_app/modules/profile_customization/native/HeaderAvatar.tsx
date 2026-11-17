@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 
 const require = fn;
 const View = fn(17).View;

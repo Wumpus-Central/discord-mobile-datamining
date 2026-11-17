@@ -1,7 +1,7 @@
 // === Module 10259: createAutocompleterResultForChannelId ===
 
 // Module 10259 (createAutocompleterResultForChannelId)
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;

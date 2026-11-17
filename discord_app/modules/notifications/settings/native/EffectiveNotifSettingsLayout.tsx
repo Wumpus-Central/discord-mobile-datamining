@@ -1,10 +1,10 @@
-// === Module 18624: EffectiveNotifSettingsLayout ===
+// === Module 18626: EffectiveNotifSettingsLayout ===
 
-// Module 18624 (EffectiveNotifSettingsLayout)
+// Module 18626 (EffectiveNotifSettingsLayout)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef3029 from "module_3029" /* 3029 */;
-import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 18625 */;
+import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 18627 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -52,7 +52,7 @@ function EffectiveSettingsHeader() {
     obj3.action = obj4;
     obj3 = closure_7(loading(8159).InlineNotice, obj3);
     obj.children = obj3;
-    closure_7(loading(6337).Stack, obj);
+    closure_7(loading(6327).Stack, obj);
   }
   tmp = closure_10();
 }

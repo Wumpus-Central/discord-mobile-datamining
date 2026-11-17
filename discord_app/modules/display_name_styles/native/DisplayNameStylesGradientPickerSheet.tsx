@@ -1,10 +1,10 @@
-// === Module 17974: DisplayNameStylesGradientPickerSheet ===
+// === Module 17976: DisplayNameStylesGradientPickerSheet ===
 
-// Module 17974 (DisplayNameStylesGradientPickerSheet)
+// Module 17976 (DisplayNameStylesGradientPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
-const SHEET_CONTENT_MAX_WIDTH = fn(17965).SHEET_CONTENT_MAX_WIDTH;
+const SHEET_CONTENT_MAX_WIDTH = fn(17967).SHEET_CONTENT_MAX_WIDTH;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

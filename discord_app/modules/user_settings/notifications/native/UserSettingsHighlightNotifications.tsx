@@ -1,13 +1,13 @@
-// === Module 18132: UserSettingsHighlightNotifications ===
+// === Module 18134: UserSettingsHighlightNotifications ===
 
-// Module 18132 (UserSettingsHighlightNotifications)
+// Module 18134 (UserSettingsHighlightNotifications)
 import GuildIconDefault from "GuildIcon" /* 7720 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7878 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7883 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 
 require = fn;
 function Row(guildId) {

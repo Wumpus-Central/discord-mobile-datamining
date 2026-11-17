@@ -3,8 +3,8 @@
 // Module 17333 (RestrictedUserRowLabel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -2,8 +2,8 @@
 
 // Module 13120 (DefaultRouteActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import matchPathCompat from "matchPathCompat" /* 5354 */;
-import RouteUtils from "RouteUtils" /* 5367 */;
+import matchPathCompat from "matchPathCompat" /* 5344 */;
+import RouteUtils from "RouteUtils" /* 5357 */;
 import LurkingStore from "LurkingStore" /* 5239 */;
 
 require = fn;

@@ -3,7 +3,7 @@
 // Module 9433 (CollectiblesBadges)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import LockIcon from "LockIcon" /* 8092 */;
 import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9434 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9436 */;

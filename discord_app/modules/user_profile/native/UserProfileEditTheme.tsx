@@ -3,8 +3,8 @@
 // Module 17116 (UserProfileEditTheme)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import _modDef6161 from "module_6161" /* 6161 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import _modDef6151 from "module_6151" /* 6151 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -57,7 +57,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       tmp4 = onChangeColors;
     }
     onProfileThemeColorsChanged(tmp4);
-    tmp = _modDef6161;
+    tmp = _modDef6151;
   }, items);
   require("useOpenThemeColorPickerActionSheet")({ primaryColor, secondaryColor, avatarColors, onChangeColors });
   let tmp15Result = null;

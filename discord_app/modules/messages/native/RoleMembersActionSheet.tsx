@@ -4,7 +4,7 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7893 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
@@ -81,7 +81,7 @@ export default function RoleMembersActionSheet(guildId) {
     obj5.channelId = channelId;
     obj5.roleId = roleId;
     obj4.children = closure_8(tmp9(12525), obj5);
-    tmp16Result = closure_8(tmp3(5566).BottomSheet, obj4);
+    tmp16Result = closure_8(tmp3(5556).BottomSheet, obj4);
     let tmp9Result = tmp9(12525);
   }
   return tmp16Result;

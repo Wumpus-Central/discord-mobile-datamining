@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import _modDef3285 from "module_3285" /* 3285 */;
 import _modDef3317 from "module_3317" /* 3317 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
 import CheckpointScreenDefault from "CheckpointScreen" /* 14270 */;
 import CheckpointTextDefault from "CheckpointText" /* 14271 */;
@@ -44,7 +44,7 @@ function GuildCard(guild) {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-const CheckpointConstants = fn(6377);
+const CheckpointConstants = fn(6367);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);

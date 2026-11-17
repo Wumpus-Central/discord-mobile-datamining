@@ -2,7 +2,7 @@
 
 // Module 16084 (NUFVoiceChannelsTemplate)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2020 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6935 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6925 */;
 import NUFChannelsManagerDefault from "NUFChannelsManager" /* 16077 */;
 import NUFTemplateDefault from "NUFTemplate" /* 16085 */;
 import _modDef16086 from "module_16086" /* 16086 */;

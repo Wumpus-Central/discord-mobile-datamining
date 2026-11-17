@@ -3,9 +3,9 @@
 // Module 7049 (NavigationHistoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
-import useChatLayout from "useChatLayout" /* 5495 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
+import useChatLayout from "useChatLayout" /* 5485 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 
 require = fn;

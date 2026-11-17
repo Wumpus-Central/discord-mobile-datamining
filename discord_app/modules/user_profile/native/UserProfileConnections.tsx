@@ -6,10 +6,10 @@ import util from "util" /* 1113 */;
 import native2 from "native" /* 1187 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import shared from "shared" /* 5313 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import TableRow from "TableRow" /* 7443 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7653 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
@@ -21,7 +21,7 @@ import _modDef12500 from "module_12500" /* 12500 */;
 import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 15855 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
-import StreamerModeStore from "StreamerModeStore" /* 5373 */;
+import StreamerModeStore from "StreamerModeStore" /* 5363 */;
 
 require = fn;
 function VerifiedIcon(arg0) {
@@ -393,8 +393,8 @@ export const ApplicationRoleConnection = memoResult;
 export function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(5377).useThemeContext().theme;
-  const obj = userId(5377);
+  const theme = userId(5367).useThemeContext().theme;
+  const obj = userId(5367);
   items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);

@@ -1,6 +1,6 @@
-// === Module 18473: useShopOrientationLock ===
+// === Module 18475: useShopOrientationLock ===
 
-// Module 18473 (useShopOrientationLock)
+// Module 18475 (useShopOrientationLock)
 import applyOrientationLock from "applyOrientationLock" /* 15270 */;
 import noop from "module_19" /* 19 */;
 

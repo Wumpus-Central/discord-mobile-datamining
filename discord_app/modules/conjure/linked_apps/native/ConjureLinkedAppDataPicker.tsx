@@ -31,14 +31,14 @@ export default function ConjureLinkedAppDataPicker(arg0) {
   let tmp9Result = null;
   if (null != link.purpose) {
     const obj3 = { variant: "body-sm/normal", color: "text-default", lineClamp: 1, children: link.purpose };
-    tmp9Result = closure_6(disabled(5929).Text, obj3);
+    tmp9Result = closure_6(disabled(5919).Text, obj3);
   }
   items[1] = tmp9Result;
   let tmp5Result = null;
   if (null != sentence) {
     const obj4 = { style: tmp.sentence, children: null };
     const obj5 = { variant: "body-sm/normal", color: "text-subtle", children: sentence };
-    const items1 = [closure_6(disabled(5929).Text, obj5), ];
+    const items1 = [closure_6(disabled(5919).Text, obj5), ];
     let tmp9Result3 = null;
     if (tmp4) {
       tmp9Result3 = null;
@@ -50,7 +50,7 @@ export default function ConjureLinkedAppDataPicker(arg0) {
         obj6.onPress = function onPress() {
           return _undefined(true);
         };
-        tmp9Result3 = closure_6(disabled(5936).Button, obj6);
+        tmp9Result3 = closure_6(disabled(5926).Button, obj6);
       }
     }
     items1[1] = tmp9Result3;
@@ -72,5 +72,5 @@ export default function ConjureLinkedAppDataPicker(arg0) {
   }
   items[3] = tmp9Result4;
   obj.children = items;
-  return closure_7(disabled(6337).Stack, obj);
+  return closure_7(disabled(6327).Stack, obj);
 };

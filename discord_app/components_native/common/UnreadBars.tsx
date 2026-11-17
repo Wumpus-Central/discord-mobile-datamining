@@ -1,16 +1,16 @@
-// === Module 19129: UnreadBars ===
+// === Module 19131: UnreadBars ===
 
-// Module 19129 (UnreadBars)
+// Module 19131 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
 import TransitionGroup from "TransitionGroup" /* 14839 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
-import TextStyles from "TextStyles" /* 6826 */;
+import TextStyles from "TextStyles" /* 6816 */;
 
 const require = globalThis.__r;
 
@@ -157,7 +157,7 @@ prototype["render"] = function render() {
   return React5(timestampProducer, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
-UnreadBar.contextType = fn(5377).ThemeContext;
+UnreadBar.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/UnreadBars.tsx");
 

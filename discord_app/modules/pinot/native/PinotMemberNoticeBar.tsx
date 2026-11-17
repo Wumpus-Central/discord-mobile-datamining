@@ -3,8 +3,8 @@
 // Module 12349 (PinotMemberNoticeBar)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import LinkingDefault from "Linking" /* 6012 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import PinotAnalytics from "PinotAnalytics" /* 12344 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,7 +48,7 @@ export function PinotMemberNoticeBar(channel) {
       return timestampProducer(Text_Text.Text, { variant: "body-sm/normal", color: "text-default", style: link.link, accessibilityRole: "link", onPress: handleLearnMore, children }, arg1);
     }
   });
-  const items1 = [closure_6(channel(5929).Text, obj3), ];
+  const items1 = [closure_6(channel(5919).Text, obj3), ];
   const obj5 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
   const intl2 = channel(1113).intl;
   obj5.accessibilityLabel = intl2.string(channel(1113).t.WAI6xu);

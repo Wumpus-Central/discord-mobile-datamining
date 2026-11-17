@@ -1,6 +1,6 @@
-// === Module 19676: VoiceChannelAppIcon ===
+// === Module 19678: VoiceChannelAppIcon ===
 
-// Module 19676 (VoiceChannelAppIcon)
+// Module 19678 (VoiceChannelAppIcon)
 import nativeDefault from "native" /* 575 */;
 import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8151 */;
 import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 10546 */;

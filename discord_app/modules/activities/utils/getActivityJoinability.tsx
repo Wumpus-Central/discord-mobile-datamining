@@ -2,7 +2,7 @@
 
 // Module 15751 (getActivityJoinability)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
 import hasFlagDefault from "hasFlag" /* 8470 */;
 import getPartySize from "getPartySize" /* 12689 */;
 import isPartyFull from "isPartyFull" /* 12691 */;

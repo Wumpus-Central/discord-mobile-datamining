@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5896 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 8451 */;
 import useMediaViewerSources from "useMediaViewerSources" /* 8628 */;

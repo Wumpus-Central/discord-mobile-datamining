@@ -1,8 +1,8 @@
-// === Module 18928: HubSidebar ===
+// === Module 18930: HubSidebar ===
 
-// Module 18928 (HubSidebar)
+// Module 18930 (HubSidebar)
 import nativeDefault from "native" /* 575 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8460 */;
 import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 14705 */;
 import BaseChannelItem from "BaseChannelItem" /* 14789 */;
@@ -41,7 +41,7 @@ const InstantInviteSources = fn(1072).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5306);
-let obj2 = { container: { marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, row: { flex: 1 } };
+let obj2 = { container: { marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, row: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/native/components/HubSidebar.tsx");
@@ -64,7 +64,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(18929);
+  guild(18931);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -73,8 +73,8 @@ export default function HubSidebar(guild) {
     }
     const obj4 = { style: row, children: null };
     const obj5 = { guild };
-    const items4 = [closure_7(stateFromStores(18930), obj5), , , ];
-    const obj6 = { active: stateFromStores1, IconComponent: tmp(18225).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
+    const items4 = [closure_7(stateFromStores(18932), obj5), , , ];
+    const obj6 = { active: stateFromStores1, IconComponent: tmp(18227).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
     const intl = tmp(1113).intl;
     obj6.label = intl.string(tmp(1113).t.K50GHd);
     obj6.handleItemClick = function handleItemClick() {
@@ -89,7 +89,7 @@ export default function HubSidebar(guild) {
       return GuildDirectoryAddModalActionCreatorsDefault.open({ directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: stateFromStores.id });
     };
     items4[2] = closure_7(HubItem, obj7);
-    const obj8 = { IconComponent: tmp(6023).UserPlusIcon, label: null, handleItemClick: null };
+    const obj8 = { IconComponent: tmp(6013).UserPlusIcon, label: null, handleItemClick: null };
     const intl3 = tmp(1113).intl;
     obj8.label = intl3.string(tmp(1113).t.MJQOuJ);
     obj8.handleItemClick = function handleItemClick() {

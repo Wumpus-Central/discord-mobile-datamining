@@ -1,9 +1,9 @@
-// === Module 19684: EasyChannelPermissionSettings ===
+// === Module 19686: EasyChannelPermissionSettings ===
 
-// Module 19684 (EasyChannelPermissionSettings)
+// Module 19686 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
 import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8131 */;
 import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8132 */;
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8172 */;
@@ -11,7 +11,7 @@ import channel_permissions_ChannelPermissionsUtils from "channel_permissions/Cha
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 19685 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 19687 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildRoleStore from "GuildRoleStore" /* 5212 */;
@@ -176,7 +176,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           stringResult = string(t["47gQYL"]);
         }
         closure_128_0 = stringResult;
-        closure_128_1 = tmp5(5954).computeChannelName(closure_129_0, UserStore, RelationshipStore);
+        closure_128_1 = tmp5(5944).computeChannelName(closure_129_0, UserStore, RelationshipStore);
         let intl2 = tmp5(1113).intl;
         let onCancel = intl2.format;
         let show = tmp5(1113).t;
@@ -189,8 +189,8 @@ function ChannelPermissionSettingsBasicView(channel) {
         }
         closure_128_2 = onCancelResult;
         closure_129_2(!closure_129_1);
-        const obj4 = tmp5(5954);
-        show = tmp2(6268).show;
+        const obj4 = tmp5(5944);
+        show = tmp2(6258).show;
         const obj9 = { title: closure_128_0, body: closure_128_2, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, onCancel: null, isDismissable: false };
         const intl3 = tmp5(1113).intl;
         obj9.cancelText = intl3.string(tmp5(1113).t["ETE/oC"]);
@@ -204,7 +204,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         obj9.onCancel = onCancel;
         show(obj9);
         dependencyMap = 3;
-        const tmp42 = tmp2(6268);
+        const tmp42 = tmp2(6258);
       } catch (tmp54) {
         dependencyMap = tmp;
         throw tmp54;
@@ -357,7 +357,7 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(6912).SettingMode;
+const SettingMode = fn(6902).SettingMode;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_18, Permissions: closure_19, AnalyticEvents: closure_20, ChannelSettingsSections: closure_21, SettingsPaneTypes: closure_22 } = Constants);
 const jsxProd = fn(21);

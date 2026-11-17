@@ -4,7 +4,7 @@
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9170 */;
 import _slicedToArray from "module_32" /* 32 */;

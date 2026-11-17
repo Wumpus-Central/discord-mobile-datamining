@@ -1,9 +1,9 @@
-// === Module 19162: YouBarAvatarDefault ===
+// === Module 19164: YouBarAvatarDefault ===
 
-// Module 19162 (YouBarAvatarDefault)
+// Module 19164 (YouBarAvatarDefault)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useToken from "useToken" /* 5902 */;
+import useToken from "useToken" /* 5892 */;
 import ClipView from "ClipView" /* 9503 */;
 import ReactionIcon from "ReactionIcon" /* 10409 */;
 import noop from "module_19" /* 19 */;

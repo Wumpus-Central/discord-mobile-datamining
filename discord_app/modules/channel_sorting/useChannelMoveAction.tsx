@@ -7,8 +7,8 @@ import GuildCategoryStore from "GuildCategoryStore" /* 7875 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 import UserStore from "UserStore" /* 1388 */;
 import getChannelListRecord from "getChannelListRecord" /* 15162 */;
 

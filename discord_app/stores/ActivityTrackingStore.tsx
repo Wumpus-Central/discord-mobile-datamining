@@ -5,14 +5,14 @@ import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 6811 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 6801 */;
 import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 12410 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DetectableGameStore from "DetectableGameStore" /* 2159 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2163 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 
 require = fn;

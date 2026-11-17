@@ -1,7 +1,7 @@
 // === Module 9620: openLinkedUsersChannel ===
 
 // Module 9620 (openLinkedUsersChannel)
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

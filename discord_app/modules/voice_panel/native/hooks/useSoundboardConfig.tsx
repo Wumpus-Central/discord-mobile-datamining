@@ -1,8 +1,8 @@
-// === Module 19207: useSoundboardConfig ===
+// === Module 19209: useSoundboardConfig ===
 
-// Module 19207 (useSoundboardConfig)
+// Module 19209 (useSoundboardConfig)
 import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 13028 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19208 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19210 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;

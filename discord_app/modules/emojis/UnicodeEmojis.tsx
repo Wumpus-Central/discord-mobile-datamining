@@ -3,7 +3,7 @@
 // Module 5252 (UnicodeEmojis)
 import applyDefault from "apply" /* 12 */;
 import EmojiTypes from "EmojiTypes" /* 5255 */;
-import _mod5951 from "module_5951" /* 5951 */;
+import _mod5941 from "module_5941" /* 5941 */;
 import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 5253 */;
 
 const require = globalThis.__r;
@@ -468,7 +468,7 @@ export default {
     hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = _mod5951[key10009];
+      str = _mod5941[key10009];
     }
     let combined = str;
     if (flag) {

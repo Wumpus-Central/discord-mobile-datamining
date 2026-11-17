@@ -3,7 +3,7 @@
 // Module 14993 (ContactSyncModalActionCreators)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 7820 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8460 */;
 import ContactSyncUtils from "ContactSyncUtils" /* 14997 */;
@@ -557,14 +557,14 @@ function closeContactSyncModal(skip) {
       let obj = flag2(14999);
     }
     if (tmp2) {
-      let updateAnimation = back(6848).updateAnimation;
+      let updateAnimation = back(6838).updateAnimation;
       let ModalAnimation = flag2(1092).ModalAnimation;
       if (back) {
         updateAnimation(closure_20, ModalAnimation.SLIDE_IN_OUT_REVERSE);
       } else {
         updateAnimation(closure_20, ModalAnimation.SLIDE_IN_OUT);
       }
-      const tmp8 = back(6848);
+      const tmp8 = back(6838);
     }
     const _setTimeout = setTimeout;
     const timerId1 = setTimeout(() => {
@@ -595,7 +595,7 @@ const ContactSyncConstants = fn(14995);
 ({ ContactPermissions: closure_18, ContactSyncScenes: closure_19, CONTACT_SYNC_MODAL_KEY: closure_20 } = ContactSyncConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_21, PlatformTypes: closure_22 } = Constants);
-const NativePermissionConstants = fn(6902);
+const NativePermissionConstants = fn(6892);
 ({ NativePermissionStates: closure_23, NativePermissionTypes: closure_24 } = NativePermissionConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncModalActionCreators.tsx");

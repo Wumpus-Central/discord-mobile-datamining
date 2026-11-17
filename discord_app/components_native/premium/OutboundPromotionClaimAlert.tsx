@@ -2,7 +2,7 @@
 
 // Module 15435 (OutboundPromotionClaimAlert)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 6012 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import PromotionUtils from "PromotionUtils" /* 10012 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,6 +1,6 @@
-// === Module 18327: PremiumTrialOfferActionSheet ===
+// === Module 18329: PremiumTrialOfferActionSheet ===
 
-// Module 18327 (PremiumTrialOfferActionSheet)
+// Module 18329 (PremiumTrialOfferActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9579 */;
 import UserTrialActionCreatorsDefault from "UserTrialActionCreators" /* 9932 */;

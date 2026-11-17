@@ -3,7 +3,7 @@
 // Module 15568 (EmbeddedActivityInviteEmbed)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7313 */;
 import InviteTargetTypes from "InviteTargetTypes" /* 7665 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
@@ -15,7 +15,7 @@ import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7314 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import InviteStore from "InviteStore" /* 6052 */;
+import InviteStore from "InviteStore" /* 6042 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;
 

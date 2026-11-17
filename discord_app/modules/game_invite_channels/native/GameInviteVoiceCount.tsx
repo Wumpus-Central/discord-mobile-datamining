@@ -3,7 +3,7 @@
 // Module 14636 (GameInviteVoiceCount)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -26,7 +26,7 @@ export default function GameInviteVoiceCount(channel) {
     const obj3 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
     const items2 = [closure_5(tmp2(7432).VoiceNormalIcon, obj3), ];
     const obj4 = { variant: "body-sm/medium", color: "text-feedback-positive", children: stateFromStores };
-    items2[1] = closure_5(tmp2(5929).Text, obj4);
+    items2[1] = closure_5(tmp2(5919).Text, obj4);
     obj2.children = items2;
     tmp5 = closure_6(View, obj2);
   }

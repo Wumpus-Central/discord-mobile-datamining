@@ -6,7 +6,7 @@ import FlagUtils from "FlagUtils" /* 1406 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7472 */;
 import ActivityFlagUtils from "ActivityFlagUtils" /* 12695 */;
 import ConnectedAppsStore from "ConnectedAppsStore" /* 7222 */;
-import SessionsStore from "SessionsStore" /* 6073 */;
+import SessionsStore from "SessionsStore" /* 6063 */;
 
 require = fn;
 const ActivityFlags = fn(1072).ActivityFlags;

@@ -3,9 +3,9 @@
 // Module 12085 (UserProfilePersonalWidgetCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import native from "native" /* 5377 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import native from "native" /* 5367 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import GifTagDefault from "GifTag" /* 8621 */;
 import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 12086 */;
 import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 12087 */;
@@ -151,7 +151,7 @@ function CoverSection(section) {
     if (null != source) {
       if ("" !== section.title) {
         const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result4 = React6(tmp14(5893), obj9);
+        tmp24Result4 = React6(tmp14(5883), obj9);
       } else {
         tmp24Result4 = null;
       }

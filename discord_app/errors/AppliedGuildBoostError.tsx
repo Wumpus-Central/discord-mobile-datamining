@@ -1,6 +1,6 @@
-// === Module 6763: AppliedGuildBoostError ===
+// === Module 6753: AppliedGuildBoostError ===
 
-// Module 6763 (AppliedGuildBoostError)
+// Module 6753 (AppliedGuildBoostError)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import DateUtils from "DateUtils" /* 5128 */;

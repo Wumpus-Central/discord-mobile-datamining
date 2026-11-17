@@ -1,6 +1,6 @@
-// === Module 5921: BurstReactionAnimation ===
+// === Module 5911: BurstReactionAnimation ===
 
-// Module 5921 (BurstReactionAnimation)
+// Module 5911 (BurstReactionAnimation)
 import initialize from "initialize" /* 504 */;
 import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 5264 */;
 import noop from "module_19" /* 19 */;
@@ -42,6 +42,6 @@ export default function BurstReactionAnimation(arg0) {
     const merged1 = Object.assign(merged);
     const merged2 = Object.assign(obj3);
     obj4.source = burstReactionAnimationSource;
-    return jsx(importDefault(withFadeOut ? 5922 : 5923), { style: tmp2.content, loop: false, speed: null });
+    return jsx(importDefault(withFadeOut ? 5912 : 5913), { style: tmp2.content, loop: false, speed: null });
   }
 };

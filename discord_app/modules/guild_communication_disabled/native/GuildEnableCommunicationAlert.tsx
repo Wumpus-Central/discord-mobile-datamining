@@ -66,7 +66,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           const obj7 = { text: null, variant: "success" };
           const intl = tmp4(1113).intl;
           obj7.text = intl.string(tmp4(1113).t["/Mmbfv"]);
-          v1(6015).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
+          v1(6005).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -79,7 +79,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
   const tmp2 = closure_12();
   dependencyMap = tmp2;
   closure_3 = _slicedToArray(userId(9204)(userId, guildId), 1)[0];
-  userId(5899)(() => {
+  userId(5889)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type, guild_id: guildId, other_user_id: userId });
   });
   let obj = {};
@@ -111,8 +111,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
   let obj3 = { style: tmp2.description, variant: "body-sm/medium", children: null };
   const intl4 = tmp9(1113).intl;
   const user = UserStore.getUser(userId);
-  const tmp7 = userId(6340);
-  let str = userId(6351).getName(guildId, null, user);
+  const tmp7 = userId(6330);
+  let str = userId(6341).getName(guildId, null, user);
   if (str == null) {
     str = "";
   }
@@ -127,14 +127,14 @@ export default function GuildEnableCommunicationAlert(guildId) {
       return refs(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
     }
   });
-  items = [closure_10(guildId(5929).Text, obj3), ];
+  items = [closure_10(guildId(5919).Text, obj3), ];
   let obj5 = { style: null, variant: "body-sm/medium", children: null };
   const items1 = [, ];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
   obj5.style = items1;
   const intl5 = tmp9(1113).intl;
   obj5.children = intl5.format(guildId(1113).t.KtENkK, { link });
-  items[1] = closure_10(guildId(5929).Text, obj5);
+  items[1] = closure_10(guildId(5919).Text, obj5);
   obj2.children = items;
   obj.children = closure_11(View, obj2);
   return closure_10(tmp7, obj);

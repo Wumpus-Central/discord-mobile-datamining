@@ -2,7 +2,7 @@
 
 // Module 10505 (LanguageIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10506 from "module_10506" /* 10506 */;
 import noop from "module_19" /* 19 */;
 

@@ -10,7 +10,7 @@ import DraftCommand from "DraftCommand" /* 8726 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6957 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6947 */;
 
 require = fn;
 function handleChanged(type) {

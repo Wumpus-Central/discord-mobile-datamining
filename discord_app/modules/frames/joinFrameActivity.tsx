@@ -6,7 +6,7 @@ import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 require = fn;
 let closure_12 = async function _joinFrameActivity(arg0) {

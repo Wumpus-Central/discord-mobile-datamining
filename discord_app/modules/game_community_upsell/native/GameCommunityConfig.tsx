@@ -1,6 +1,6 @@
-// === Module 18253: GameCommunityConfig ===
+// === Module 18255: GameCommunityConfig ===
 
-// Module 18253 (GameCommunityConfig)
+// Module 18255 (GameCommunityConfig)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 16217 */;
 import size from "module_2" /* 2 */;

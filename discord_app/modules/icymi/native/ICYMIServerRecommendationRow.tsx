@@ -1,17 +1,17 @@
-// === Module 19347: ICYMIServerRecommendationRow ===
+// === Module 19349: ICYMIServerRecommendationRow ===
 
-// Module 19347 (ICYMIServerRecommendationRow)
+// Module 19349 (ICYMIServerRecommendationRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import GuildIconDefault from "GuildIcon" /* 7720 */;
 import FastestListDefault from "FastestList" /* 7830 */;
 import ClipViewDefault from "ClipView" /* 9503 */;
-import ICYMIShared from "ICYMIShared" /* 19323 */;
+import ICYMIShared from "ICYMIShared" /* 19325 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -192,14 +192,14 @@ function FeaturedServer(guild) {
             const merged = Object.assign(closure_128_0);
             dependencyMap = 2;
             c3 = 1;
-            const obj15 = { value: closure_1(6917).transitionToGuildSync(closure_129_0.id, obj14), done: false };
+            const obj15 = { value: closure_1(6907).transitionToGuildSync(closure_129_0.id, obj14), done: false };
             return obj15;
           } else {
             closure_129_1(false);
             const obj16 = { text: null };
             const intl = tmp2(1113).intl;
             obj16.text = intl.string(tmp2(1113).t.CG4Hks);
-            closure_1(6015).open("RecommeendedServersRow", obj16);
+            closure_1(6005).open("RecommeendedServersRow", obj16);
             c3 = 3;
             const obj19 = { value: undefined, done: true };
             return obj19;
@@ -227,7 +227,7 @@ function FeaturedServer(guild) {
   let obj2 = { style: tmp.featuredServerContainer, children: null };
   const items2 = [closure_14(CutoutGuildBanner, { guild }), , ];
   let obj3 = { style: tmp.featuredServerInnerContainer, children: null };
-  const items3 = [closure_14(guild(5929).Text, { maxFontSizeMultiplier: 1, lineClamp: 1, style: tmp.featuredServerTitle, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: guild.name }), closure_14(guild(5929).Text, { maxFontSizeMultiplier: 1, lineClamp: 3, variant: "body-xs/normal", color: "text-default", children: guild.description })];
+  const items3 = [closure_14(guild(5919).Text, { maxFontSizeMultiplier: 1, lineClamp: 1, style: tmp.featuredServerTitle, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: guild.name }), closure_14(guild(5919).Text, { maxFontSizeMultiplier: 1, lineClamp: 3, variant: "body-xs/normal", color: "text-default", children: guild.description })];
   obj3.children = items3;
   items2[1] = closure_15(View, obj3);
   let obj6 = { style: tmp.buttonContainer, children: null };
@@ -242,7 +242,7 @@ function FeaturedServer(guild) {
   }
   obj7.text = stringResult;
   obj7.onPress = callback;
-  obj6.children = closure_14(guild(5936).Button, obj7);
+  obj6.children = closure_14(guild(5926).Button, obj7);
   items2[2] = closure_14(View, obj6);
   obj2.children = items2;
   return closure_15(View, obj2);
@@ -267,7 +267,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjects: closure_10, AnalyticsPages: closure_11, AnalyticsSections: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createICYMIStyles = fn(19284);
+const createICYMIStyles = fn(19286);
 let closure_17 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginVertical: nativeDefault.space.PX_24 }, title: null, subtitle: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, featuredServerContainer: null };
   const obj2 = { marginVertical: nativeDefault.space.PX_24 };

@@ -1,7 +1,7 @@
 // === Module 8588: FramePreviewOverrideFrame ===
 
 // Module 8588 (FramePreviewOverrideFrame)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import noop from "module_19" /* 19 */;
 
 function OverrideProfileFrameLayer(layer) {

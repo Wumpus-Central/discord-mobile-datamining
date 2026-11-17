@@ -5,7 +5,7 @@ import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import AppIconTypes from "AppIconTypes" /* 5332 */;
-import useMountEffectDefault from "useMountEffect" /* 5899 */;
+import useMountEffectDefault from "useMountEffect" /* 5889 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
 import NativeAppIconModuleDefault from "NativeAppIconModule" /* 15315 */;
 import _slicedToArray from "module_32" /* 32 */;

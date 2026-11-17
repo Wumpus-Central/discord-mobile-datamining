@@ -8,9 +8,9 @@ import useNavigation from "useNavigation" /* 1502 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 5140 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5348 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5338 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import Pressables from "Pressables" /* 7428 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7497 */;
 import ReferralProgramUtils from "ReferralProgramUtils" /* 9306 */;
@@ -428,7 +428,7 @@ export default function PremiumNitroHome(onClose) {
   const obj12 = { style: tmp5.background, source: null };
   const tmpResult21 = require("usePromotionMarketingSurface");
   obj12.source = navigation(15329);
-  const items10 = [closure_16(navigation(6020), obj12), closure_16(NitroHomeHeader, { onClose: onClose.onClose, subscription: stateFromStores1 }), , , ];
+  const items10 = [closure_16(navigation(6010), obj12), closure_16(NitroHomeHeader, { onClose: onClose.onClose, subscription: stateFromStores1 }), , , ];
   let tmp24Result = tmp19.fractionalState !== FractionalPremiumStates.NONE && !isInReverseTrial;
   if (tmp24Result) {
     const obj13 = { countdownText: tmp6ResultResult };
@@ -445,7 +445,7 @@ export default function PremiumNitroHome(onClose) {
   obj14.children = items11;
   items10[3] = closure_17(sharedValue, obj14);
   const obj16 = { style: animatedStyle, onLayout: callback, children: null };
-  const tmp6Result3 = navigation(6020);
+  const tmp6Result3 = navigation(6010);
   const items12 = [closure_16(sharedValue, { style: tmp5.segmentedControlActual, ref, onLayout, children: closure_16(require("SegmentedControl").SegmentedControl, { state: segmentedControlState, variant: "experimental_Small" }) }), , ];
   let tmp24Result5 = !isThemeDarkResult;
   if (!isThemeDarkResult) {
@@ -456,7 +456,7 @@ export default function PremiumNitroHome(onClose) {
     const obj19 = { height: tmp12, zIndex: 2 };
     items13[1] = obj19;
     obj18.style = items13;
-    tmp24Result5 = closure_16(tmp6(5893), obj18);
+    tmp24Result5 = closure_16(tmp6(5883), obj18);
   }
   items12[1] = tmp24Result5;
   const obj17 = { style: tmp5.segmentedControlActual, ref, onLayout, children: closure_16(require("SegmentedControl").SegmentedControl, { state: segmentedControlState, variant: "experimental_Small" }) };
@@ -484,8 +484,8 @@ export default function PremiumNitroHome(onClose) {
       tmp47 = closure_20;
     }
     obj22.tintColor = tmp47;
-    tmp24Result6 = closure_16(tmp6(5905), obj22);
-    const tmp6Result4 = tmp6(5905);
+    tmp24Result6 = closure_16(tmp6(5895), obj22);
+    const tmp6Result4 = tmp6(5895);
   }
   items12[2] = tmp24Result6;
   obj16.children = items12;

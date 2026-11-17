@@ -2,7 +2,7 @@
 
 // Module 11855 (PencilSparkleIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11856 from "module_11856" /* 11856 */;
 import noop from "module_19" /* 19 */;
 

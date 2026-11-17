@@ -3,8 +3,8 @@
 // Module 12456 (useScrollHandlers)
 import LoggerDefault from "Logger" /* 3 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5568 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5558 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 8779 */;
 import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10280 */;
 import NativeChatUtilsDefault from "NativeChatUtils" /* 11882 */;

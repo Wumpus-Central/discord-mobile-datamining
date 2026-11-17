@@ -2,10 +2,10 @@
 
 // Module 15651 (ConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import useAppChannelApplication from "useAppChannelApplication" /* 7261 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8460 */;
 import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10536 */;
@@ -346,10 +346,10 @@ export default noop.memo(function ConjureAppChannelSheet(channelId) {
     const obj5 = { spacing: stateFromStores(575).space.PX_24, children: null };
     const obj6 = { channel: stateFromStores };
     obj5.children = closure_10(ConjureAppChannelSheetContent, obj6);
-    obj4.children = closure_10(tmp2(6337).Stack, obj5);
+    obj4.children = closure_10(tmp2(6327).Stack, obj5);
     obj3.children = closure_10(tmp2(7415).SafeAreaPaddingView, obj4);
-    obj2.children = closure_10(tmp2(5570).BottomSheetScrollView, obj3);
-    tmp6 = closure_10(tmp2(5566).BottomSheet, obj2);
+    obj2.children = closure_10(tmp2(5560).BottomSheetScrollView, obj3);
+    tmp6 = closure_10(tmp2(5556).BottomSheet, obj2);
   }
   return tmp6;
 });

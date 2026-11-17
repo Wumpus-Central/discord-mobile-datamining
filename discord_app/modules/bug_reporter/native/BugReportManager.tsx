@@ -169,7 +169,7 @@ function showNotification(uri) {
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
 const InAppNotificationTypes = fn(1072).InAppNotificationTypes;
-const NativePermissionStatus = fn(6902).NativePermissionStatus;
+const NativePermissionStatus = fn(6892).NativePermissionStatus;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.ScreenshotHelper);
 class BugReportManager extends tmp4 {
 }

@@ -1,9 +1,9 @@
-// === Module 19422: useOtherGuildJoinRequestsForUser ===
+// === Module 19424: useOtherGuildJoinRequestsForUser ===
 
-// Module 19422 (useOtherGuildJoinRequestsForUser)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6932 */;
+// Module 19424 (useOtherGuildJoinRequestsForUser)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6922 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6933 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6923 */;
 
 const require = fn;
 const size = fn(2);

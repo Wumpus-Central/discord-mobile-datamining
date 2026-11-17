@@ -2,7 +2,7 @@
 
 // Module 11048 (AttachmentIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11049 from "module_11049" /* 11049 */;
 import noop from "module_19" /* 19 */;
 

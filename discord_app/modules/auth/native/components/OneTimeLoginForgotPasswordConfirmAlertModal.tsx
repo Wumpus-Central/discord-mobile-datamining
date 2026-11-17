@@ -2,7 +2,7 @@
 
 // Module 7773 (OneTimeLoginForgotPasswordConfirmAlertModal)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 6274 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

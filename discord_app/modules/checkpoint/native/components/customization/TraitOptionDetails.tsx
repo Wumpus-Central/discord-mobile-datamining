@@ -3,7 +3,7 @@
 // Module 14541 (TraitOptionDetails)
 import nativeDefault from "native" /* 575 */;
 import _modDef3317 from "module_3317" /* 3317 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import RarityBadgeDefault from "RarityBadge" /* 14542 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,8 +33,8 @@ function AssetDescription(asset) {
     };
     let formatResult = intl.format(_modDef3317.E6AfCb, obj);
   } else {
-    formatResult = tmp2(6744).getPlaintextAssetDescription(asset);
-    const tmp2Result = tmp2(6744);
+    formatResult = tmp2(6734).getPlaintextAssetDescription(asset);
+    const tmp2Result = tmp2(6734);
   }
   return closure_4(require("Text/Text").Text, { variant: "body-md/medium", color: "text-subtle", style: tmp.description, accessibilityElementsHidden: null == formatResult, children: formatResult });
 }

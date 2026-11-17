@@ -1,8 +1,8 @@
-// === Module 20161: AcceptInviteModal ===
+// === Module 20164: AcceptInviteModal ===
 
-// Module 20161 (AcceptInviteModal)
+// Module 20164 (AcceptInviteModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 6053 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 6043 */;
 import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 15075 */;
 import noop from "module_19" /* 19 */;
 

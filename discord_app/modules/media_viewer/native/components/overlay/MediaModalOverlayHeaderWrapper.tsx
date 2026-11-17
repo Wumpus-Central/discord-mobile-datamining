@@ -2,7 +2,7 @@
 
 // Module 10237 (MediaModalOverlayHeaderWrapper)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import NavigatorConstants from "NavigatorConstants" /* 5892 */;
+import NavigatorConstants from "NavigatorConstants" /* 5882 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

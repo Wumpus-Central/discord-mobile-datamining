@@ -1,10 +1,10 @@
-// === Module 19736: ContextMenuCommandItem ===
+// === Module 19738: ContextMenuCommandItem ===
 
-// Module 19736 (ContextMenuCommandItem)
+// Module 19738 (ContextMenuCommandItem)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import TableRow from "TableRow" /* 7443 */;
 import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14640 */;
 import noop from "module_19" /* 19 */;
@@ -49,10 +49,10 @@ export default function ContextMenuCommandItem(item) {
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {
     const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-    tmp8Result = jsx(section(6020), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+    tmp8Result = jsx(section(6010), { style: tmp.commandIcon, source: applicationCommandsIconSource });
   }
   obj2.icon = tmp8Result;
-  obj2.trailing = jsx(tmp5(6031).SendMessageIcon, {});
+  obj2.trailing = jsx(tmp5(6021).SendMessageIcon, {});
   obj2.start = start;
   obj2.end = end;
   return jsx(item(7443).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });

@@ -1,6 +1,6 @@
-// === Module 20194: ChannelResyncManager ===
+// === Module 20197: ChannelResyncManager ===
 
-// Module 20194 (ChannelResyncManager)
+// Module 20197 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -10,9 +10,9 @@ import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 1
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6957 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6947 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 require = fn;

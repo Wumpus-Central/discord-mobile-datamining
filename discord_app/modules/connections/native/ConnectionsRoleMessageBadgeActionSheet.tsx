@@ -8,11 +8,11 @@ import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import shared from "shared" /* 5313 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import PlatformsDefault from "Platforms" /* 7087 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 7467 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7738 */;
@@ -137,7 +137,7 @@ class PopoutChecks {
               const items1 = [null, , , ];
               let tmp26 = null;
               if (null != tmp7) {
-                const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Path" };
+                const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Array" };
                 tmp26 = closure_2_16(native.Avatar, obj6);
               }
               items1[1] = tmp26;
@@ -200,7 +200,7 @@ obj2.popoutCheckGroupName = { flexDirection: "row", alignItems: "center" };
 obj2.popoutCheckGroupPlatformIcon = { marginRight: 8 };
 obj2.button = { marginBottom: 8 };
 obj2.botTag = { marginLeft: 4 };
-const expandedHeight = createStyles.createStyles(obj2);
+let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx");
 

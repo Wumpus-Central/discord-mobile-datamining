@@ -67,7 +67,7 @@ export default function TransferOwnershipModal(guild) {
         const obj = toUser(14145);
         toUser(8404).close();
         const obj2 = toUser(8404);
-        const result = closure_0(6014).showTransferOwnershipSuccess();
+        const result = closure_0(6004).showTransferOwnershipSuccess();
       };
       obj.onResend = closure_1_3(function*() {
         if (c0 === 2) {

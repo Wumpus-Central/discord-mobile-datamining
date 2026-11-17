@@ -2,7 +2,7 @@
 
 // Module 14632 (GameInvitesChannelUtils)
 import _modDef38 from "module_38" /* 38 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 7068 */;
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 8147 */;
 import hasFlagDefault from "hasFlag" /* 8470 */;

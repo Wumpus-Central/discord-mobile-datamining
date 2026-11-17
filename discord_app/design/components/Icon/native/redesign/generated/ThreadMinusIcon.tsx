@@ -2,7 +2,7 @@
 
 // Module 15770 (ThreadMinusIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod15771 from "module_15771" /* 15771 */;
 import noop from "module_19" /* 19 */;
 

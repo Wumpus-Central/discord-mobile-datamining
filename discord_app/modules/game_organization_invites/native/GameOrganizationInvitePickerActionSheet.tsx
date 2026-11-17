@@ -2,9 +2,9 @@
 
 // Module 12563 (GameOrganizationInvitePickerActionSheet)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import _modDef7928 from "module_7928" /* 7928 */;
 import GameOrganizationInvitePickerRowDefault from "GameOrganizationInvitePickerRow" /* 12564 */;
@@ -67,7 +67,7 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
       obj2.style = items;
       const intl2 = userId(1113).intl;
       obj2.children = intl2.string(userId(1113).t.fEptJP);
-      let tmp13 = closure_5(userId(5929).Text, obj2);
+      let tmp13 = closure_5(userId(5919).Text, obj2);
     } else {
       const obj3 = { style: tmp.status };
       tmp13 = closure_5(ActivityIndicator, obj3);
@@ -80,12 +80,12 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
       obj4.style = items1;
       const intl = userId(1113).intl;
       obj4.children = intl.string(tmp2(2565).v7A3HG);
-      let tmp8 = closure_5(userId(5929).Text, obj4);
+      let tmp8 = closure_5(userId(5919).Text, obj4);
       let tmp6 = closure_5;
     } else {
       tmp6 = closure_5;
       const obj = { spacing: tmp2(575).space.PX_24, style: tmp.sections, children: groups.map((group) => hasOwnProperty(GameSection, { group, userId, onInvite }, group.application.id)) };
-      tmp8 = closure_5(userId(6337).Stack, obj);
+      tmp8 = closure_5(userId(6327).Stack, obj);
     }
     const obj5 = { scrollable: true, dismissAccessibilityLabel: null, header: null, children: null };
     const intl3 = userId(1113).intl;
@@ -94,18 +94,18 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
     const obj7 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centeredText, children: null };
     const intl4 = userId(1113).intl;
     obj7.children = intl4.string(tmp2(2565)["v5/qxX"]);
-    const items2 = [tmp6(userId(5929).Heading, obj7), ];
+    const items2 = [tmp6(userId(5919).Heading, obj7), ];
     const obj8 = { variant: "body-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
     const intl5 = userId(1113).intl;
-    let str = tmp2(5372).getName(tmp5);
+    let str = tmp2(5362).getName(tmp5);
     if (str == null) {
       str = "";
     }
     const obj9 = { username: str, days };
     obj8.children = intl5.formatToPlainString(tmp2(2565).txHfjn, obj9);
-    items2[1] = tmp6(userId(5929).Text, obj8);
+    items2[1] = tmp6(userId(5919).Text, obj8);
     obj6.children = items2;
-    obj5.header = closure_6(userId(6337).Stack, obj6);
+    obj5.header = closure_6(userId(6327).Stack, obj6);
     obj5.children = tmp8;
     return tmp6(userId(7951).ActionSheet, obj5);
   }

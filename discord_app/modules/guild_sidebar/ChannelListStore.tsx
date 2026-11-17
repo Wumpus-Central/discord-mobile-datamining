@@ -20,7 +20,7 @@ import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8730 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 
 require = fn;
 function handleReset() {

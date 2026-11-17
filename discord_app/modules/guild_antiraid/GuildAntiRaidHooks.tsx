@@ -9,7 +9,7 @@ import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 110
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import UserStore from "UserStore" /* 1388 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 11013 */;
 

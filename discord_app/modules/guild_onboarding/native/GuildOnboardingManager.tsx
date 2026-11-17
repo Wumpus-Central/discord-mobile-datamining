@@ -1,10 +1,10 @@
-// === Module 20255: GuildOnboardingManager ===
+// === Module 20258: GuildOnboardingManager ===
 
-// Module 20255 (GuildOnboardingManager)
+// Module 20258 (GuildOnboardingManager)
 import doGuildOnboardingDefault from "doGuildOnboarding" /* 7865 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 let require = fn;

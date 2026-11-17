@@ -1,15 +1,15 @@
-// === Module 18714: MainTabsNavigatorPanel ===
+// === Module 18716: MainTabsNavigatorPanel ===
 
-// Module 18714 (MainTabsNavigatorPanel)
+// Module 18716 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18715 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 18716 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 18721 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18717 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 18718 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 18723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -85,11 +85,11 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(18716);
+        obj = obj(18718);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(5501).dismissKeyboard();
-        const objResult = obj(5501);
+        obj(5491).dismissKeyboard();
+        const objResult = obj(5491);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;

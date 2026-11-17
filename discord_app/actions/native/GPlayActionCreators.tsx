@@ -152,7 +152,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
       } else if (2 === tmp4) {
         c20 = 0;
         closure_3.return();
-        throw expandedHeight;
+        throw closure_1_19;
       } else if (3 === tmp4) {
         if (arg0 === 1) {
           c22 = 3;
@@ -299,15 +299,15 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
       } else if (4 === tmp4) {
         c20 = 0;
         closure_5.return();
-        throw expandedHeight;
+        throw closure_1_19;
       } else if (5 === tmp4) {
         c20 = 2;
         closure_9.return();
-        throw expandedHeight;
+        throw closure_1_19;
       } else {
         c20 = 0;
         purchaseToken.return();
-        throw expandedHeight;
+        throw closure_1_19;
       }
     }
   }

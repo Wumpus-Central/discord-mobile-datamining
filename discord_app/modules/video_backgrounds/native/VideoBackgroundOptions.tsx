@@ -2,14 +2,14 @@
 
 // Module 13040 (VideoBackgroundOptions)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 6243 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 6233 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const BLUR_BACKGROUND_OPTION = fn(6237).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(6227).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
 const createStyles = fn(5306);

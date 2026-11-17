@@ -3,8 +3,8 @@
 // Module 11040 (InAppNotificationContainer)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import useMountEffectDefault from "useMountEffect" /* 5899 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import useMountEffectDefault from "useMountEffect" /* 5889 */;
 import InAppNotificationUtils from "InAppNotificationUtils" /* 11025 */;
 import MessageNotificationDefault from "MessageNotification" /* 11042 */;
 import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 11094 */;
@@ -175,7 +175,7 @@ export default function InAppNotificationContainer(notification) {
       AnalyticsUtilsDefault.track(constants2.IN_APP_NOTIFICATION_SHOWN, obj2);
     }
   }, items3);
-  const Gesture = tmp2(5598).Gesture;
+  const Gesture = tmp2(5588).Gesture;
   const tmp2Result11 = require("initialize");
   const items4 = [closure_19, sharedValue2, sharedValue, sharedValue1, require("module_1708").scheduleOnRN, tmp12[1]];
   _require = undefined;

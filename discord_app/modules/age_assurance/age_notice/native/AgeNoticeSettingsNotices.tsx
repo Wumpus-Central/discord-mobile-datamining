@@ -3,10 +3,10 @@
 // Module 17345 (AgeNoticeSettingsNotices)
 import nativeDefault from "native" /* 575 */;
 import _modDef3353 from "module_3353" /* 3353 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5995 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6830 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6833 */;
-import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6842 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5985 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6820 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6823 */;
+import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6832 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8190 */;
 import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10812 */;
 import useUserIsTeen from "useUserIsTeen" /* 12029 */;
@@ -78,8 +78,8 @@ class MessageRequestsUnconfirmedNotice {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(6841).AGE_NOTICE_SETTINGS_LOCATION;
-const Constants = fn(6910);
+let closure_6 = fn(6831).AGE_NOTICE_SETTINGS_LOCATION;
+const Constants = fn(6900);
 ({ SafetySettingsNoticeAction: metroImportDefault, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);

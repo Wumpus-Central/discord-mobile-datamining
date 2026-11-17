@@ -1,9 +1,9 @@
-// === Module 19051: useFavoritesPruneInactiveThreads ===
+// === Module 19053: useFavoritesPruneInactiveThreads ===
 
-// Module 19051 (useFavoritesPruneInactiveThreads)
+// Module 19053 (useFavoritesPruneInactiveThreads)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import FavoriteStore from "FavoriteStore" /* 5158 */;
 
 const require = fn;

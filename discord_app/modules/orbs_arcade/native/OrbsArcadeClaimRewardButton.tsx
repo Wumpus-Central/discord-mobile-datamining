@@ -2,7 +2,7 @@
 
 // Module 17668 (OrbsArcadeClaimRewardButton)
 import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
 import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17654 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -125,5 +125,5 @@ export default function OrbsArcadeClaimRewardButton(game) {
   obj3.text = intl.string(WK589K);
   obj3.loading = stateFromStores;
   obj3.onPress = callback;
-  return jsx(game(5936).Button, { grow: true, size: game.size, variant: "primary", text: null, loading: null, onPress: null });
+  return jsx(game(5926).Button, { grow: true, size: game.size, variant: "primary", text: null, loading: null, onPress: null });
 };

@@ -2,7 +2,7 @@
 
 // Module 12847 (handlePressJoinActivity)
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
 import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 12779 */;
 import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 12844 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -11,7 +11,7 @@ import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 
 require = fn;

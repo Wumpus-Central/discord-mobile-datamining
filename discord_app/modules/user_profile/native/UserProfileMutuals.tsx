@@ -2,7 +2,7 @@
 
 // Module 15870 (UserProfileMutuals)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -68,7 +68,7 @@ export default function UserProfileMutuals(user) {
                   _undefined2({ action: "PRESS_MUTUAL_GUILD" });
                   user(7231).transitionToGuild(arg0);
                   const obj = user(7231);
-                  guildId(5552).hideAllActionSheets();
+                  guildId(5542).hideAllActionSheets();
                 }
               }, "stack");
             },
@@ -77,7 +77,7 @@ export default function UserProfileMutuals(user) {
       const obj4 = { size: tmp2(1187).AvatarSizes.SIZE_16, totalCount: mapped.length, names: mapped.map((username) => username.username), children: mapped.map((user) => closure_1_6(user(_undefined[16]).Avatar, { user, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "Array" }, user.id)) };
       items = [closure_6(tmp2(15745).AvatarPile, obj4), ];
       const obj5 = { variant, color, children: tmp5(14939)(mutualFriends.length) };
-      items[1] = closure_6(tmp2(5929).Text, obj5);
+      items[1] = closure_6(tmp2(5919).Text, obj5);
       obj3.children = items;
       tmp9Result = closure_7(tmp2(7428).PressableOpacity, obj3);
     }
@@ -88,7 +88,7 @@ export default function UserProfileMutuals(user) {
     }
     if (tmp15) {
       const obj6 = { variant, color, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: DIVIDER_DOT };
-      tmp15 = closure_6(tmp2(5929).Text, obj6);
+      tmp15 = closure_6(tmp2(5919).Text, obj6);
     }
     items1[1] = tmp15;
     let tmp9Result2 = null;
@@ -116,7 +116,7 @@ export default function UserProfileMutuals(user) {
                   _undefined2({ action: "PRESS_MUTUAL_GUILD" });
                   user(7231).transitionToGuild(arg0);
                   const obj = user(7231);
-                  guildId(5552).hideAllActionSheets();
+                  guildId(5542).hideAllActionSheets();
                 }
               }, "stack");
             },
@@ -137,7 +137,7 @@ export default function UserProfileMutuals(user) {
       }
       const items2 = [tmp21, ];
       const obj9 = { variant, color, children: tmp5(14933)(mutualGuilds.length) };
-      items2[1] = closure_6(tmp2(5929).Text, obj9);
+      items2[1] = closure_6(tmp2(5919).Text, obj9);
       obj7.children = items2;
       tmp9Result2 = closure_7(tmp2(7428).PressableOpacity, obj7);
     }

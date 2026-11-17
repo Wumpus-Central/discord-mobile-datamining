@@ -1,14 +1,14 @@
-// === Module 19553: ThreadBrowserRowSubtext ===
+// === Module 19555: ThreadBrowserRowSubtext ===
 
-// Module 19553 (ThreadBrowserRowSubtext)
+// Module 19555 (ThreadBrowserRowSubtext)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 6350 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 6749 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 6340 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 6739 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import renderMessageMarkupDefault from "renderMessageMarkup" /* 8646 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9189 */;
 import noop from "module_19" /* 19 */;
@@ -75,7 +75,7 @@ function MessageContent(arg0) {
       return React6(native.LegacyText, { children: renderMessageMarkupDefault(message, { formatInline: true, allowGameMentions: true }).content }, arg1);
     }
   });
-  obj7.children = closure_9(message(5929).Text, obj8);
+  obj7.children = closure_9(message(5919).Text, obj8);
   return closure_9(SubstringRow, obj7);
 }
 function SubstringRow(arg0) {

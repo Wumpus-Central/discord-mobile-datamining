@@ -4,8 +4,8 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ReactionUtils from "ReactionUtils" /* 5250 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6757 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6364 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6747 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;

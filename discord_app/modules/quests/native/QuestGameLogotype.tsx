@@ -3,7 +3,7 @@
 // Module 17755 (QuestGameLogotype)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: closure_6 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const obj = {};
-const merged = Object.assign(fn(5940).springSlow);
+const merged = Object.assign(fn(5930).springSlow);
 obj.overshootClamping = true;
 const createStyles = fn(5306);
 const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };

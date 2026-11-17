@@ -18,7 +18,7 @@ import noop from "module_19" /* 19 */;
 import GameServerStore from "GameServerStore" /* 9242 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import GuildPowerupsNotificationStore from "GuildPowerupsNotificationStore" /* 10692 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5523 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5513 */;
 
 const require = globalThis.__r;
 
@@ -485,7 +485,7 @@ function useGuildPowerupsChannelListPopout(guildId, stateFromStores1) {
     }
   }, items3);
 }
-const GuildPowerupsConstants = fn(5524);
+const GuildPowerupsConstants = fn(5514);
 ({ BOOSTING_TIER_TO_LEVEL_SKU_ID: closure_9, BOOSTING_TIER_TO_LEVEL_UNLOCKED_DC: closure_10, GUILD_POWERUP_MIGRATION_USER_ID: closure_11, GUILD_POWERUP_NEW_PERK_GROUPS: closure_12, GuildPowerupNewPerkMarketingVersion: map1, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: closure_14, POWERUPS_INCLUDED_IN_LEVEL: closure_15 } = GuildPowerupsConstants);
 const Constants = fn(1072);
 ({ BoostedGuildTiers: closure_16, GuildFeatures: closure_17 } = Constants);

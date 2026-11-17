@@ -2,7 +2,7 @@
 
 // Module 17429 (FamilyCenterActivitySection)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9617 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 9619 */;
 import useFamilyCenterActivities from "useFamilyCenterActivities" /* 17424 */;
@@ -81,7 +81,7 @@ export default function FamilyCenterActivitySection(displayType) {
   const actionTotalsForDisplayType = displayType(17424).useActionTotalsForDisplayType(displayType);
   const callback = noop.useCallback(() => {
     const intl = displayType(1113).intl;
-    displayType(6014).presentFailedToast(intl.string(loadMore(2701).Wu8BK2));
+    displayType(6004).presentFailedToast(intl.string(loadMore(2701).Wu8BK2));
   }, []);
   const obj2 = displayType(17424);
   const familyCenterActions = displayType(14224).useFamilyCenterActions({ onError: callback });
@@ -117,7 +117,7 @@ export default function FamilyCenterActivitySection(displayType) {
       } else {
         const obj10 = { style: loadMoreButton.loadMore, accessibilityLabel: formatToPlainStringResult, accessibilityRole: "button", onPress: tmp8, children: null };
         const obj11 = { style: loadMoreButton.loadMoreButton, variant: "body-xs/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
-        obj10.children = closure_9(tmp(5929).Text, obj11);
+        obj10.children = closure_9(tmp(5919).Text, obj11);
         tmp18Result = closure_9(tmp(7428).PressableOpacity, obj10);
       }
       obj7.children = tmp18Result;

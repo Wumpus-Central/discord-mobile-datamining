@@ -2,7 +2,7 @@
 
 // Module 12602 (FeedbackModalSadDesaturated)
 import shared from "shared" /* 5313 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _mod8183 from "module_8183" /* 8183 */;
 import noop from "module_19" /* 19 */;
 

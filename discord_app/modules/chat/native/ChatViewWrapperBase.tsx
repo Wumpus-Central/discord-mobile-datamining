@@ -1,7 +1,7 @@
 // === Module 12022: ChatViewWrapperBase ===
 
 // Module 12022 (ChatViewWrapperBase)
-import LayerScope from "LayerScope" /* 5916 */;
+import LayerScope from "LayerScope" /* 5906 */;
 import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 12020 */;
 import StickyWrapper from "StickyWrapper" /* 12021 */;
 import noop from "module_19" /* 19 */;

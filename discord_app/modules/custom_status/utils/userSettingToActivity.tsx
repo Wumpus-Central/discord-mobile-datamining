@@ -3,7 +3,7 @@
 // Module 9529 (userSettingToActivity)
 import _mod19 from "module_19" /* 19 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import EmojiStore from "EmojiStore" /* 6969 */;
 import EmojiPackStore from "EmojiPackStore" /* 5257 */;
 import size from "module_2" /* 2 */;

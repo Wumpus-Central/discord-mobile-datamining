@@ -2,7 +2,7 @@
 
 // Module 11956 (useCanSpeakInChannel)
 import initialize from "initialize" /* 504 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6358 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6348 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;

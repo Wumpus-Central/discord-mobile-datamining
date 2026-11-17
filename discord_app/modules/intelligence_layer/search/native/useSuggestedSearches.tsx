@@ -1,6 +1,6 @@
-// === Module 19460: useSuggestedSearches ===
+// === Module 19462: useSuggestedSearches ===
 
-// Module 19460 (useSuggestedSearches)
+// Module 19462 (useSuggestedSearches)
 import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14762 */;
 import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14764 */;
 import noop from "module_19" /* 19 */;

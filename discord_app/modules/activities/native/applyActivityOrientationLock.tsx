@@ -1,6 +1,6 @@
-// === Module 19922: applyActivityOrientationLock ===
+// === Module 19924: applyActivityOrientationLock ===
 
-// Module 19922 (applyActivityOrientationLock)
+// Module 19924 (applyActivityOrientationLock)
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2146 */;
 import applyOrientationLock from "applyOrientationLock" /* 15270 */;
 import size from "module_2" /* 2 */;

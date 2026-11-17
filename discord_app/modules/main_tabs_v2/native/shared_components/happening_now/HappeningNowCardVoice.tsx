@@ -1,16 +1,16 @@
-// === Module 18808: HappeningNowCardVoice ===
+// === Module 18810: HappeningNowCardVoice ===
 
-// Module 18808 (HappeningNowCardVoice)
+// Module 18810 (HappeningNowCardVoice)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import noop from "module_19" /* 19 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8553 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(17915).HappeningNowCardTrackingType;
+let closure_8 = fn(17917).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

@@ -2,7 +2,7 @@
 
 // Module 8100 (AppsLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8067 from "module_8067" /* 8067 */;
 import noop from "module_19" /* 19 */;
 

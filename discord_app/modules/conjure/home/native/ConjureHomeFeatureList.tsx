@@ -5,8 +5,8 @@ import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7930 */;
 import ShieldIcon from "ShieldIcon" /* 11224 */;
 import RobotIcon from "RobotIcon" /* 12682 */;
@@ -206,7 +206,7 @@ let closure_14 = {
     items3[1] = { left: nativeDefault.space.PX_6 };
     obj5.style = items3;
     const obj6 = { left: nativeDefault.space.PX_6 };
-    const items4 = [closure_5(styles(10324).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }), closure_5(styles(5929).Text, { variant: "footnote/semibold", color: "text-overlay-light", children: 128 })];
+    const items4 = [closure_5(styles(10324).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }), closure_5(styles(5919).Text, { variant: "footnote/semibold", color: "text-overlay-light", children: 128 })];
     obj5.children = items4;
     items1[4] = closure_6(closure_4, obj5);
     const obj8 = { style: null, children: null };
@@ -259,7 +259,7 @@ let closure_14 = {
   "profile-widgets": function ProfileWidgetsVisual(styles) {
     styles = styles.styles;
     let token;
-    token = styles(5902).useToken(token(575).colors.BACKGROUND_BRAND);
+    token = styles(5892).useToken(token(575).colors.BACKGROUND_BRAND);
     items = [token];
     const obj2 = { style: null, children: null };
     items1 = [, ];
@@ -269,7 +269,7 @@ let closure_14 = {
       items = [token, nativeDefault.unsafe_rawColors.ILLO_PINK_40];
       return items;
     }, items);
-    items2 = [closure_5(token(5893), { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } }), ];
+    items2 = [closure_5(token(5883), { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } }), ];
     const obj4 = { style: styles.profileBody, children: null };
     const obj5 = { style: null };
     items3 = [, ];
@@ -286,7 +286,7 @@ let closure_14 = {
       return timestampProducer(React4, obj, item);
     });
     const items6 = [closure_5(closure_4, obj8), ];
-    let obj = styles(5902);
+    let obj = styles(5892);
     const obj3 = { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } };
     const obj6 = { style: styles.lineName };
     items6[1] = closure_5(closure_4, {
@@ -335,7 +335,7 @@ let closure_14 = {
     const obj3 = { style: styles.sceneScrim };
     const obj4 = { style: styles.crosshair };
     const tmp = LinearGradientDefault;
-    items3 = [closure_5(styles(6042).ClockIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }), closure_5(Line, { style: styles.overlayTimerValue })];
+    items3 = [closure_5(styles(6032).ClockIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }), closure_5(Line, { style: styles.overlayTimerValue })];
     obj6.children = items3;
     items[4] = closure_6(closure_4, obj6);
     obj.children = items;

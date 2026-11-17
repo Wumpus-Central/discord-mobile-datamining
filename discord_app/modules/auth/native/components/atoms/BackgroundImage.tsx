@@ -18,7 +18,7 @@ export default function BackgroundImage(backgroundImageSource) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = flag(5547)();
+  const tmp = flag(5537)();
   dependencyMap = tmp;
   items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };
@@ -41,6 +41,6 @@ export default function BackgroundImage(backgroundImageSource) {
     }
   }, items);
   const merged = Object.assign(memo);
-  obj.children = jsx(flag(6020), {});
+  obj.children = jsx(flag(6010), {});
   return <closure_4 style={absoluteFill.absoluteFill}>{null}</closure_4>;
 };

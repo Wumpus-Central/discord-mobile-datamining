@@ -43,23 +43,23 @@ export default function ClassificationDetailModal(classificationId) {
         return null;
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(function closeModal() {
-        return closure_1(6848).pop();
+        return closure_1(6838).pop();
       }),
       render() {
         return jsx(source(14181), {
           classificationId,
           source,
           onClose() {
-            closure_1(6848).pop();
+            closure_1(6838).pop();
             if (closure_1_1) {
               closure_0(14216).openAccountStanding();
               const obj = closure_0(14216);
             }
-            const arr = closure_1(6848);
+            const arr = closure_1(6838);
           },
           onError() {
-            closure_1_1(6848).pop();
-            const arr = closure_1_1(6848);
+            closure_1_1(6838).pop();
+            const arr = closure_1_1(6838);
             classificationId(14216).openAccountStanding();
           }
         });

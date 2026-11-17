@@ -6,9 +6,9 @@ import initialize from "initialize" /* 504 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import wrappers from "wrappers" /* 1227 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5994 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5995 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6003 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5984 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5985 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5993 */;
 import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 5132 */;
 
 require = fn;
@@ -1124,8 +1124,8 @@ const result4 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(UserSetti
 fn(5135);
 let items = [ListDensityMode.AUTO, , ];
 const obj87 = { comparator: discord_common_shallowEqualDefault };
-items[1] = fn(5994).ChannelListLayoutTypes.COZY;
-items[2] = fn(5994).ChannelListLayoutTypes.COMPACT;
+items[1] = fn(5984).ChannelListLayoutTypes.COZY;
+items[2] = fn(5984).ChannelListLayoutTypes.COMPACT;
 const set1 = new Set(items);
 UserSettingDefinitions = fn(5135);
 const defineProtoSettingResult76 = UserSettingDefinitions.defineProtoSetting("localization", "timezoneOffset", (value) => {
@@ -1145,7 +1145,7 @@ const defineProtoSettingResult76 = UserSettingDefinitions.defineProtoSetting("lo
   }
   return Int32Value.create({ value });
 });
-const items1 = [fn(5994).MessagePreviewTypes.ALL, fn(5994).MessagePreviewTypes.UNREADS, fn(5994).MessagePreviewTypes.NONE];
+const items1 = [fn(5984).MessagePreviewTypes.ALL, fn(5984).MessagePreviewTypes.UNREADS, fn(5984).MessagePreviewTypes.NONE];
 const set2 = new Set(items1);
 UserSettingDefinitions = fn(5135);
 const defineProtoSettingResult77 = UserSettingDefinitions.defineProtoSetting("appearance", "channelListLayout", (value) => {

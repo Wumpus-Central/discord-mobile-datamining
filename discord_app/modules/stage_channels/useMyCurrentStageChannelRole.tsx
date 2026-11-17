@@ -3,7 +3,7 @@
 // Module 13075 (useMyCurrentStageChannelRole)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6942 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6932 */;
 
 const require = globalThis.__r;
 

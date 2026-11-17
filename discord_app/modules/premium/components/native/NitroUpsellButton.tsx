@@ -3,7 +3,7 @@
 // Module 10074 (NitroUpsellButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9436 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;

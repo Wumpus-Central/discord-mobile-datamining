@@ -5,11 +5,11 @@ import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import useMountEffectDefault from "useMountEffect" /* 5899 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import useMountEffectDefault from "useMountEffect" /* 5889 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import RoleIconUtils from "RoleIconUtils" /* 7942 */;
 import RoleIconDefault from "RoleIcon" /* 7959 */;
 import _modDef11625 from "module_11625" /* 11625 */;
@@ -19,7 +19,7 @@ import GuildRoleStore from "GuildRoleStore" /* 5212 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;
-import TextStyles from "TextStyles" /* 6826 */;
+import TextStyles from "TextStyles" /* 6816 */;
 
 require = fn;
 function HorizontalAutocompleteOption(arg0) {
@@ -145,8 +145,8 @@ export default {
     const tmp8 = closure_11(channel(1187).Icon, { source: channelIconWithGuild });
     const obj = { onPress: channel.onPress, children: null };
     items = [tmp8, ];
-    const channelName = channel(5954).computeChannelName(channel, UserStore, RelationshipStore);
-    items[1] = closure_11(channel(5929).Text, { style: tmp.channelName, variant: "body-sm/semibold", children: channelName });
+    const channelName = channel(5944).computeChannelName(channel, UserStore, RelationshipStore);
+    items[1] = closure_11(channel(5919).Text, { style: tmp.channelName, variant: "body-sm/semibold", children: channelName });
     obj.children = items;
     return closure_12(HorizontalAutocompleteOption, obj);
   },

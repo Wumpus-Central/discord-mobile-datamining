@@ -1,12 +1,12 @@
-// === Module 20850: RequestToStreamManager ===
+// === Module 20853: RequestToStreamManager ===
 
-// Module 20850 (RequestToStreamManager)
+// Module 20853 (RequestToStreamManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import StreamActionCreatorsAll from "StreamActionCreators" /* 6862 */;
+import StreamActionCreatorsAll from "StreamActionCreators" /* 6852 */;
 import MobileRequestToStreamExperiment2 from "MobileRequestToStreamExperiment" /* 15734 */;
 import useStreamRequestActivities from "useStreamRequestActivities" /* 15736 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import RequestToStreamStore from "RequestToStreamStore" /* 15705 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 

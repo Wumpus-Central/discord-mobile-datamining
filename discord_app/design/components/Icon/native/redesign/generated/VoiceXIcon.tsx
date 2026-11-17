@@ -2,7 +2,7 @@
 
 // Module 13018 (VoiceXIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod13019 from "module_13019" /* 13019 */;
 import noop from "module_19" /* 19 */;
 

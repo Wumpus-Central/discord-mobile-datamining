@@ -1,12 +1,12 @@
-// === Module 18380: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 18382: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 18380 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 18382 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1399 */;
 import _modDef3125 from "module_3125" /* 3125 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10064 */;
 import types from "types" /* 10065 */;
 import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10068 */;

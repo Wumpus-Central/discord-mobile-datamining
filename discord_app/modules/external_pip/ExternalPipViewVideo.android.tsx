@@ -1,13 +1,13 @@
-// === Module 19904: ExternalPipViewVideo ===
+// === Module 19906: ExternalPipViewVideo ===
 
-// Module 19904 (ExternalPipViewVideo)
+// Module 19906 (ExternalPipViewVideo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 6037 */;
-import ExternalPipDefault from "ExternalPip" /* 6181 */;
-import VideoActionCreators from "VideoActionCreators" /* 19906 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 19907 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6027 */;
+import ExternalPipDefault from "ExternalPip" /* 6171 */;
+import VideoActionCreators from "VideoActionCreators" /* 19908 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 19909 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
@@ -53,8 +53,8 @@ function ExternalPipViewVideoUser(userId) {
     avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
   }
   obj2.avatarURI = avatarURL;
-  const tmp7 = channelId(19905);
-  ({ gradientStops, backgroundColor } = channelId(19905)(obj2));
+  const tmp7 = channelId(19907);
+  ({ gradientStops, backgroundColor } = channelId(19907)(obj2));
   const items2 = [tmp.user, backgroundColor];
   const obj5 = {
     style: noop.useMemo(() => {
@@ -66,7 +66,7 @@ function ExternalPipViewVideoUser(userId) {
   let tmp12 = null;
   if (null != gradientStops) {
     const obj6 = { colors: gradientStops, start, end, style: StyleSheet.absoluteFill, pointerEvents: "none" };
-    tmp12 = closure_11(tmp6(5893), obj6);
+    tmp12 = closure_11(tmp6(5883), obj6);
   }
   const items3 = [tmp12, ];
   let tmp17 = null;
@@ -83,7 +83,7 @@ function ExternalPipViewVideoStream(streamId) {
   first = 300;
   _slicedToArray = undefined;
   noop = undefined;
-  const surfaceDirectRendererExperiment = streamId(6197).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
+  const surfaceDirectRendererExperiment = streamId(6187).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
   [first, _slicedToArray] = noop.useState(undefined);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   noop = tmp4[1];
@@ -121,8 +121,8 @@ function ExternalPipViewVideoStream(streamId) {
     items[1] = { opacity: num };
     return items;
   }, items3);
-  let obj = streamId(6197);
-  const token = streamId(5902).useToken(first(575).colors.TEXT_FEEDBACK_INFO);
+  let obj = streamId(6187);
+  const token = streamId(5892).useToken(first(575).colors.TEXT_FEEDBACK_INFO);
   value = closure_8.get();
   _slicedToArray = value;
   const items4 = [streamId, value];

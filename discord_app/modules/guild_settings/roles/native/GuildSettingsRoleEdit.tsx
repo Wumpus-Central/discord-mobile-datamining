@@ -1,17 +1,17 @@
-// === Module 20569: GuildSettingsRoleEdit ===
+// === Module 20572: GuildSettingsRoleEdit ===
 
-// Module 20569 (GuildSettingsRoleEdit)
+// Module 20572 (GuildSettingsRoleEdit)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import HeaderActionButton from "HeaderActionButton" /* 7427 */;
 import TableRow from "TableRow" /* 7443 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
@@ -20,12 +20,12 @@ import Form from "Form" /* 8106 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8131 */;
 import InlineNotice from "InlineNotice" /* 8159 */;
 import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 12492 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 20560 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20570 */;
-import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 20571 */;
-import GuildSettingsRoleEditPermissionsDefault from "GuildSettingsRoleEditPermissions" /* 20580 */;
-import GuildSettingsRoleMembersDefault from "GuildSettingsRoleMembers" /* 20582 */;
-import GuildSettingsRoleEditConnectionsControlsDefault from "GuildSettingsRoleEditConnectionsControls" /* 20583 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 20563 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20573 */;
+import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 20574 */;
+import GuildSettingsRoleEditPermissionsDefault from "GuildSettingsRoleEditPermissions" /* 20583 */;
+import GuildSettingsRoleMembersDefault from "GuildSettingsRoleMembers" /* 20585 */;
+import GuildSettingsRoleEditConnectionsControlsDefault from "GuildSettingsRoleEditConnectionsControls" /* 20586 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -34,17 +34,17 @@ import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildRoleStore from "GuildRoleStore" /* 5212 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 8405 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20556 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20559 */;
 
 require = fn;
 let closure_4 = ["guild"];
 const View = fn(17).View;
 const isEveryoneRole = fn(5213).isEveryoneRole;
-const RoleColorsStyle = fn(20556).RoleColorsStyle;
-const constants = fn(20551).GuildSettingsRoleEditSections;
+const RoleColorsStyle = fn(20559).RoleColorsStyle;
+const constants = fn(20554).GuildSettingsRoleEditSections;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(20558).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(20561).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 const createStyles = fn(5306);
@@ -172,10 +172,10 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          applyArgumentsResult(20570).commitSectionChanges(id, effectiveSection);
+          applyArgumentsResult(20573).commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
-          const obj = applyArgumentsResult(20570);
+          const obj = applyArgumentsResult(20573);
           const obj3 = { text: null, variant: "success" };
           const intl = applyArgumentsResult(1113).intl;
           obj3.text = intl.string(applyArgumentsResult(1113).t.ulZn1j);
@@ -209,17 +209,17 @@ class GuildSettingsRoleEdit extends PureComponent {
               result.then(success, failure);
               const obj5 = closure_3_0(12492);
             } else if (typeof success === "function") {
-              closure_3_0(20570).commitSectionChanges(closure_1_5, effectiveSection);
+              closure_3_0(20573).commitSectionChanges(closure_1_5, effectiveSection);
               navigation.pop();
               const obj2 = { submitting: false, formErrors: {} };
               closure_0.setState(obj2);
-              const obj = closure_3_0(20570);
+              const obj = closure_3_0(20573);
               obj4 = { text: null, variant: "success" };
               const intl = closure_3_0(1113).intl;
               obj4.text = intl.string(closure_3_0(1113).t.ulZn1j);
-              closure_3_1(6015).open("ROLE_EDIT_SAVED", obj4);
+              closure_3_1(6005).open("ROLE_EDIT_SAVED", obj4);
               closure_1_0(true);
-              const obj3 = closure_3_1(6015);
+              const obj3 = closure_3_1(6005);
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -237,9 +237,9 @@ class GuildSettingsRoleEdit extends PureComponent {
               const obj2 = { text: null, variant: "critical" };
               const intl = closure_3_0(1113).intl;
               obj2.text = intl.string(closure_3_0(1113).t.fEptJP);
-              closure_3_1(6015).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
+              closure_3_1(6005).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
               closure_1_0(false);
-              const obj3 = closure_3_1(6015);
+              const obj3 = closure_3_1(6005);
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -305,7 +305,7 @@ class GuildSettingsRoleEdit extends PureComponent {
               const obj = { value, done: true };
               return obj;
             }
-            v1(6917).deleteRole(closure_128_1.id, closure_128_2.id);
+            v1(6907).deleteRole(closure_128_1.id, closure_128_2.id);
             closure_128_3.pop();
             c2 = 3;
             return { value: "HermesInternal", done: null };
@@ -353,16 +353,16 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(20570).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(20570);
+              const result = applyArgumentsResult(20573).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(20573);
             } else {
-              const result1 = applyArgumentsResult(20570).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(20570);
+              const result1 = applyArgumentsResult(20573).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(20573);
             }
             closure_0(true);
           };
           obj2.confirmColor = closure_1_0(1187).ButtonColors.BRAND;
-          closure_1_1(6268).show(obj2);
+          closure_1_1(6258).show(obj2);
         });
       } else {
         navigation.pop();
@@ -551,7 +551,7 @@ prototype["render"] = function render() {
   obj6.children = tmp22Result;
   return closure_1_22(View, obj6);
 };
-GuildSettingsRoleEdit.contextType = fn(5377).ThemeContext;
+GuildSettingsRoleEdit.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEdit.tsx");
 

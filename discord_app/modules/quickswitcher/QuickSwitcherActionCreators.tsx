@@ -3,9 +3,9 @@
 // Module 10274 (QuickSwitcherActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6935 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6925 */;
 import transitionToGuild from "transitionToGuild" /* 7231 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 7262 */;
 import ValidationUtilsDefault from "ValidationUtils" /* 7658 */;
@@ -26,7 +26,7 @@ import ChannelTabsStore from "ChannelTabsStore" /* 10275 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2163 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import QuickSwitcherStore from "QuickSwitcherStore" /* 10246 */;
 
 const require = globalThis.__r;
@@ -341,7 +341,7 @@ let closure_27 = async function _openInviteFromQuickSwitcher(arg0) {
     }
   }
 };
-const InAppNavigationType = fn(6963).InAppNavigationType;
+const InAppNavigationType = fn(6953).InAppNavigationType;
 const ChannelRecordBase = fn(5159).ChannelRecordBase;
 const Constants = fn(1072);
 ({ Layers, ME: map1, AppContext: closure_14, AnalyticEvents: closure_15, AnalyticsLocations: closure_16, AnalyticsPages: closure_17 } = Constants);

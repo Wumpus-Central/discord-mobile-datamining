@@ -6,7 +6,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 import GuildDirectoryStore from "GuildDirectoryStore" /* 14709 */;
 
 const require = globalThis.__r;

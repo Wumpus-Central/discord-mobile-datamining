@@ -2,7 +2,7 @@
 
 // Module 8252 (CreditCardIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8253 from "module_8253" /* 8253 */;
 import noop from "module_19" /* 19 */;
 

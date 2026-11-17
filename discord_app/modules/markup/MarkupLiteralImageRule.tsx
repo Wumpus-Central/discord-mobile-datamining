@@ -2,7 +2,7 @@
 
 // Module 12258 (MarkupLiteralImageRule)
 import _modDef2070 from "module_2070" /* 2070 */;
-import MarkupTypes from "MarkupTypes" /* 6342 */;
+import MarkupTypes from "MarkupTypes" /* 6332 */;
 
 require = fn;
 const obj = {};

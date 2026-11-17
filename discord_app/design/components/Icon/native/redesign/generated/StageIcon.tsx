@@ -2,7 +2,7 @@
 
 // Module 8017 (StageIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8018 from "module_8018" /* 8018 */;
 import noop from "module_19" /* 19 */;
 

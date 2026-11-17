@@ -2,7 +2,7 @@
 
 // Module 11151 (ForumComposerModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import Tracking from "Tracking" /* 8866 */;
 import size from "module_2" /* 2 */;
 

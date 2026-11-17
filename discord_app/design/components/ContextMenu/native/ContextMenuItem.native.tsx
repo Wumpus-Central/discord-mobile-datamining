@@ -3,7 +3,7 @@
 // Module 16477 (ContextMenuItem)
 import nativeDefault from "native" /* 575 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import IconDefault from "Icon" /* 5938 */;
+import IconDefault from "Icon" /* 5928 */;
 import ContextMenuState from "ContextMenuState" /* 9149 */;
 import ContextMenuConstants from "ContextMenuConstants" /* 9150 */;
 import noop from "module_19" /* 19 */;

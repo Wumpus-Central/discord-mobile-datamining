@@ -1,6 +1,6 @@
-// === Module 19726: SearchNavigatorPreviewHeader ===
+// === Module 19728: SearchNavigatorPreviewHeader ===
 
-// Module 19726 (SearchNavigatorPreviewHeader)
+// Module 19728 (SearchNavigatorPreviewHeader)
 import ChannelHeaderDefault from "ChannelHeader" /* 15638 */;
 import noop from "module_19" /* 19 */;
 

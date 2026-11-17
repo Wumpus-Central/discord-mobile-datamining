@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5556 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Search_SearchBar from "Search/SearchBar" /* 7825 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7913 */;
 import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8463 */;
@@ -58,7 +58,7 @@ function GuildList(recipientId) {
     if (tmp5) {
       num = 24;
     }
-    const obj3 = { paddingTop: num, paddingBottom: source(5913)().insets.bottom + source(575).space.PX_16 };
+    const obj3 = { paddingTop: num, paddingBottom: source(5903)().insets.bottom + source(575).space.PX_16 };
     obj2.contentContainerStyle = obj3;
     obj2.sections = items;
     obj2.renderSectionHeader = function renderSectionHeader(section) {

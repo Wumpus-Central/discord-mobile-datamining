@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useCountdownDefault from "useCountdown" /* 9440 */;
 import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 10424 */;
 import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17648 */;
@@ -37,7 +37,7 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const obj5 = { variant: "heading-xs/semibold", color: "text-default", children: null };
   const intl = rewards(1113).intl;
   obj5.children = intl.string(rewards(1113).t.DCCcdz);
-  const items3 = [closure_9(rewards(5929).Text, obj5), closure_9(rewards(5929).Text, { variant: "heading-xs/semibold", color: "text-subtle", lineClamp: 2, children: memo })];
+  const items3 = [closure_9(rewards(5919).Text, obj5), closure_9(rewards(5919).Text, { variant: "heading-xs/semibold", color: "text-subtle", lineClamp: 2, children: memo })];
   obj4.children = items3;
   items2[1] = closure_10(closure_6, obj4);
   obj2.children = items2;
@@ -115,7 +115,7 @@ let c12 = 50;
 let items = [nativeDefault.unsafe_rawColors.TRANSPARENT, "rgba(16, 142, 77, 0.5)"];
 let createStyles = fn(5306);
 let obj2 = { rewardShelf: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, overflow: "hidden", paddingHorizontal: nativeDefault.space.PX_10, paddingVertical: nativeDefault.space.PX_6, minHeight: 74, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, chevronIconWrapper: null, rewardShelfCopy: null, allRewardsClaimedShelf: null, rewardShelfGlowContainer: null, chestLogo: null, chestLogoMirrored: null };
-let size = { marginLeft: "auto", width: fn(5942).SMALL_BUTTON_HEIGHT, height: fn(5942).SMALL_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center" };
+let size = { marginLeft: "auto", width: fn(5932).SMALL_BUTTON_HEIGHT, height: fn(5932).SMALL_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center" };
 obj2.chevronIconWrapper = size;
 obj2.rewardShelfCopy = { flex: 1 };
 obj2.allRewardsClaimedShelf = { backgroundColor: "rgba(151, 151, 159, 0.08)" };

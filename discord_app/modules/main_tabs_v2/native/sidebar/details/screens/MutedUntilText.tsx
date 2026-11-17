@@ -2,7 +2,7 @@
 
 // Module 11085 (MutedUntilText)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,7 +43,7 @@ export default function MutedUntilText(arg0) {
         return jsx(Text_Text.Text, { variant: "body-sm/medium", color: "control-brand-foreground", children }, "muted");
       };
       obj2.children = intl5.format(N2NXMd, obj3);
-      return jsx(tmp15(5929).Text, { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: null });
+      return jsx(tmp15(5919).Text, { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: null });
     }
   }
   if (obj.SERVER === type) {
@@ -66,6 +66,6 @@ export default function MutedUntilText(arg0) {
     return null;
   }
   obj = { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: stringResult };
-  return jsx(tmp3(5929).Text, { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: stringResult });
+  return jsx(tmp3(5919).Text, { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: stringResult });
 };
 export { MuteSettingType };

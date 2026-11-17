@@ -1,12 +1,12 @@
-// === Module 20193: ChannelCallManager ===
+// === Module 20196: ChannelCallManager ===
 
-// Module 20193 (ChannelCallManager)
+// Module 20196 (ChannelCallManager)
 import SoundpackStore from "SoundpackStore" /* 11034 */;
 import CallStore from "CallStore" /* 7023 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 11014 */;
-import StreamerModeStore from "StreamerModeStore" /* 5373 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import StreamerModeStore from "StreamerModeStore" /* 5363 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 let require = fn;

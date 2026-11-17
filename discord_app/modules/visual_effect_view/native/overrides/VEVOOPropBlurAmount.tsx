@@ -1,6 +1,6 @@
-// === Module 18637: VEVOOPropBlurAmount ===
+// === Module 18639: VEVOOPropBlurAmount ===
 
-// Module 18637 (VEVOOPropBlurAmount)
+// Module 18639 (VEVOOPropBlurAmount)
 import FormSwitch from "FormSwitch" /* 7955 */;
 import Form from "Form" /* 8106 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const VEVOOStore = fn(5907);
+const VEVOOStore = fn(5897);
 ({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: closure_6 } = VEVOOStore);
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
@@ -69,7 +69,7 @@ export default noop.memo(function VEVOOPropBlurAmount() {
     }
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(18638), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange, accessibilityLabel: "Blur Amount" });
+  obj.subLabel = jsx(first(18640), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange, accessibilityLabel: "Blur Amount" });
   return jsx(Form.FormRow, {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,

@@ -2,9 +2,9 @@
 
 // Module 15877 (UserProfileContactButtons)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8137 */;
 import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12123 */;
@@ -52,7 +52,7 @@ function FriendRequestButton(user) {
   items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(5372).useName(user);
+  userDisplayName = tmp(5362).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -63,7 +63,7 @@ function FriendRequestButton(user) {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
           let UserPlusIcon = tmp3(15878).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(6023).UserPlusIcon;
+          UserPlusIcon = tmp3(6013).UserPlusIcon;
         }
         const intl = tmp3(1113).intl;
         const string = intl.string;

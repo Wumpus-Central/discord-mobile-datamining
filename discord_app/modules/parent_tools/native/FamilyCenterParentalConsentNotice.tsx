@@ -2,7 +2,7 @@
 
 // Module 17403 (FamilyCenterParentalConsentNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 17404 */;
 import noop from "module_19" /* 19 */;
 

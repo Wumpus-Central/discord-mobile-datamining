@@ -3,7 +3,7 @@
 // Module 11142 (AlertNotification)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

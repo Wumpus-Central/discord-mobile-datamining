@@ -1,6 +1,6 @@
-// === Module 19685: ChannelSettingsPermissionsStore ===
+// === Module 19687: ChannelSettingsPermissionsStore ===
 
-// Module 19685 (ChannelSettingsPermissionsStore)
+// Module 19687 (ChannelSettingsPermissionsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
@@ -98,7 +98,7 @@ function syncChannelUpdates(id) {
 }
 const Constants = fn(1072);
 ({ ChannelSettingsSections: closure_9, ChannelTypes: closure_10, FormStates } = Constants);
-const ADVANCED_MODE_ON_KEY = fn(6912).ADVANCED_MODE_ON_KEY;
+const ADVANCED_MODE_ON_KEY = fn(6902).ADVANCED_MODE_ON_KEY;
 const set = new Set();
 let CLOSED = FormStates.CLOSED;
 let c15 = false;

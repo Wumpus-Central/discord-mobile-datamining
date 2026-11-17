@@ -2,7 +2,7 @@
 
 // Module 10827 (GameConsoleAlert)
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 6072 */;
+import GameConsoleStore from "GameConsoleStore" /* 6062 */;
 
 const require = fn;
 const View = fn(17).View;

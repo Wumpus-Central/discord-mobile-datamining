@@ -5,9 +5,9 @@ import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef15345 from "module_15345" /* 15345 */;
 import _modDef15346 from "module_15346" /* 15346 */;
 import _modDef15347 from "module_15347" /* 15347 */;
@@ -52,7 +52,7 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   noop = undefined;
   const tmp = closure_14();
-  const isScreenReaderEnabled = onEndReached(5568).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = onEndReached(5558).useIsScreenReaderEnabled();
   const tmp5 = mapped(noop.useState(0), 2);
   const currentIndex = tmp5[0];
   dependencyMap = tmp7;
@@ -146,7 +146,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj2.children = items3;
     return closure_11(closure_6, obj2);
   }
-  let obj = onEndReached(5568);
+  let obj = onEndReached(5558);
   tmp19 = closure_10(closure_5, { style: tmp.carousel, contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 }, horizontal: true, showsHorizontalScrollIndicator: false, decelerationRate: "fast", snapToOffsets: mapped.map((item, index) => index * c4), scrollEventThrottle: 100, onScroll: callback, children: mapped });
   tmp17 = closure_10;
   const obj5 = { style: tmp.carousel, contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 }, horizontal: true, showsHorizontalScrollIndicator: false, decelerationRate: "fast", snapToOffsets: mapped.map((item, index) => index * c4), scrollEventThrottle: 100, onScroll: callback, children: mapped };
@@ -203,7 +203,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   const obj4 = { style: tmp.headerText, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = analyticsLocations(1113).intl;
   obj4.children = intl.string(analyticsLocations(1113).t.RGadQR);
-  const items2 = [closure_10(analyticsLocations(5929).Text, obj4), closure_10(PremiumFeaturesCarousel, { width, onEndReached: callback })];
+  const items2 = [closure_10(analyticsLocations(5919).Text, obj4), closure_10(PremiumFeaturesCarousel, { width, onEndReached: callback })];
   obj3.children = items2;
   return closure_11(closure_6, obj3);
 };

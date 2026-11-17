@@ -3,7 +3,7 @@
 // Module 17582 (BountiesScrollIndicatorOverlay)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
 import BountiesScrollIndicatorAnimationDefault from "BountiesScrollIndicatorAnimation" /* 17583 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ let StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const colors = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
-let closure_9 = 5000 + fn(5551).timingSlowDuration;
+let closure_9 = 5000 + fn(5541).timingSlowDuration;
 const createStyles = fn(5306);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };
@@ -73,7 +73,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
             if (closure_1_0) {
               num = closure_2_9;
             }
-            let timeout = setTimeout(/* F146063 */ function() { ... }, num);
+            let timeout = setTimeout(/* F146080 */ function() { ... }, num);
           }, num);
         }, num);
       }, closure_1_9);

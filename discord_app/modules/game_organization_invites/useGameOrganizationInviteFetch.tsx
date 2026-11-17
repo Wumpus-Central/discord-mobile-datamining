@@ -1,6 +1,6 @@
-// === Module 20307: useGameOrganizationInviteFetch ===
+// === Module 20310: useGameOrganizationInviteFetch ===
 
-// Module 20307 (useGameOrganizationInviteFetch)
+// Module 20310 (useGameOrganizationInviteFetch)
 import DurationsDefault from "Durations" /* 1089 */;
 import isRetryableFetchErrorDefault from "isRetryableFetchError" /* 12535 */;
 import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 12536 */;

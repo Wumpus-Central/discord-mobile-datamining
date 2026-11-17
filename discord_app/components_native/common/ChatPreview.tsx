@@ -6,9 +6,9 @@ import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2020 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6384 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6374 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import Pressables from "Pressables" /* 7428 */;
 import ReactionActionCreators from "ReactionActionCreators" /* 8863 */;
@@ -33,7 +33,7 @@ import ChatDefault from "Chat" /* 14196 */;
 import isNewMessageGroupDefault from "isNewMessageGroup" /* 14560 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
-import ActionSheetStore from "ActionSheetStore" /* 5553 */;
+import ActionSheetStore from "ActionSheetStore" /* 5543 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import UserStore from "UserStore" /* 1388 */;
 
@@ -222,7 +222,7 @@ class ChatPreviewBase extends PureComponent {
         const chatManager4 = applyArgumentsResult.chatManager;
         const jumpTargetId = tmp3.jumpTargetId;
         const previousRows = chatManager4.getPreviousRows();
-        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "Promise", shouldInitialScroll: "Array", animated: "scrollAdjust", scrollPosition: "scrollAdjustUserOffset", focusTargetId: "totalSize" };
+        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "Promise", shouldInitialScroll: "Array", animated: 0, scrollPosition: 1, focusTargetId: 3 };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
           if (applyArgumentsResult.didPositionInitialScroll) {
@@ -255,7 +255,7 @@ class ChatPreviewBase extends PureComponent {
         resolved.then(() => {
           const result = applyArgumentsResult(9121).setSelectedConversation(closure_1_0, roleStyle, { cacheType: "preview", shouldJump: false });
           const obj = applyArgumentsResult(9121);
-          applyArgumentsResult(6063).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          applyArgumentsResult(6053).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -286,14 +286,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(6063).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(6063);
+            applyArgumentsResult(6053).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(6053);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "age_gate_modal",
-        selectedChannelId: "LOGIN_RESET",
-        tapLinkData: null
+        messageChannel: "asc",
+        selectedChannelId: "asc",
+        tapLinkData: "https://support.discord.com/hc/articles/14155060633623"
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -520,7 +520,7 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = state(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(5377).ThemeContext;
+ChatPreviewBase.contextType = fn(5367).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -539,10 +539,10 @@ export function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(6858).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6858);
-  const isChannelContentGated = channelId(6838).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(6838);
+  const isChannelSpoilerGated = channelId(6848).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6848);
+  const isChannelContentGated = channelId(6828).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(6828);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

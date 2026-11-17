@@ -4,9 +4,9 @@
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
-import StickersUtils from "StickersUtils" /* 6792 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
+import StickersUtils from "StickersUtils" /* 6782 */;
 import StickerSendability from "StickerSendability" /* 7225 */;
 import LockIcon from "LockIcon" /* 8092 */;
 import noop from "module_19" /* 19 */;
@@ -110,7 +110,7 @@ export default function StickerPickerListRow(stickers) {
           let arr2 = items.push(obj2);
         } else {
           let obj3 = { stickerId: "", stickerName: "", stickerType: null, stickerUrl: "", stickerAnimated: false, stickerDisabled: true, stickerOpaque: false, stickerLocked: false };
-          obj3.stickerType = stickers(6793).StickerFormat.PNG;
+          obj3.stickerType = stickers(6783).StickerFormat.PNG;
           let arr3 = items.push(obj3);
         }
         num4 = num4 + 1;
@@ -164,7 +164,7 @@ export default function StickerPickerListRow(stickers) {
               id = currentUser.id;
             }
             let isSendableStickerResult = isSectionNitroLocked;
-            const obj5 = stickers(6792);
+            const obj5 = stickers(6782);
             if (!isSectionNitroLocked) {
               isSendableStickerResult = null == closure_6;
             }
@@ -182,16 +182,16 @@ export default function StickerPickerListRow(stickers) {
             obj2.style = items;
             obj2.disabled = null == dependencyMap;
             obj2.onPress = function onPress() {
-              const result = closure_0(5554).triggerHapticFeedback(isSectionNitroLocked(5555).IMPACT_LIGHT);
+              const result = closure_0(5544).triggerHapticFeedback(isSectionNitroLocked(5545).IMPACT_LIGHT);
               if (dependencyMap != null) {
                 dependencyMap(closure_0);
               }
-              const obj = closure_0(5554);
+              const obj = closure_0(5544);
             };
             obj2.onLongPress = function onLongPress() {
               return handleOnLongPressSticker(closure_0);
             };
-            const obj3 = { sticker: tmp2, size, animated: stickers(6792).shouldAnimateSticker(closure_8, tmp2.id === id), opaque: isSendableStickerResult };
+            const obj3 = { sticker: tmp2, size, animated: stickers(6782).shouldAnimateSticker(closure_8, tmp2.id === id), opaque: isSendableStickerResult };
             const items1 = [closure_8(isSectionNitroLocked(11093), obj3, c11), ];
             let tmp16 = null;
             if (!isSendableStickerResult) {
@@ -200,7 +200,7 @@ export default function StickerPickerListRow(stickers) {
             items1[1] = tmp16;
             obj2.children = items1;
             items.push(handleOnLongPressSticker(stickers(7428).PressableOpacity, obj2, tmp2.id));
-            const shouldAnimateStickerResult = stickers(6792).shouldAnimateSticker(closure_8, tmp2.id === id);
+            const shouldAnimateStickerResult = stickers(6782).shouldAnimateSticker(closure_8, tmp2.id === id);
             const tmp10 = null == dependencyMap;
           }
         })();

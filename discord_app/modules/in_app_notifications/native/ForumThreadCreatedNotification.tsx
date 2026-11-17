@@ -2,8 +2,8 @@
 
 // Module 11097 (ForumThreadCreatedNotification)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

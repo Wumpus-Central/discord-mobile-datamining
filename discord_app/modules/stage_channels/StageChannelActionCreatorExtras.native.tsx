@@ -1,16 +1,16 @@
-// === Module 6903: StageChannelActionCreatorExtras ===
+// === Module 6893: StageChannelActionCreatorExtras ===
 
-// Module 6903 (StageChannelActionCreatorExtras)
+// Module 6893 (StageChannelActionCreatorExtras)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6900 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6890 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11951 */;
 import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 12912 */;
-import VoicePanelStore from "VoicePanelStore" /* 6901 */;
+import VoicePanelStore from "VoicePanelStore" /* 6891 */;
 
 require = fn;
 function openStageChannel(channel) {
@@ -34,15 +34,15 @@ function openStageChannel(channel) {
     isStageUnifiedCallResult = StageChannelUnifiedCallExperiment.isStageUnifiedCall(channel, "openStageChannel");
   }
 }
-const setIsOnStartStageScreen = fn(6904).setIsOnStartStageScreen;
-const StageChannelsConstants = fn(6906);
+const setIsOnStartStageScreen = fn(6894).setIsOnStartStageScreen;
+const StageChannelsConstants = fn(6896);
 ({ START_STAGE_CHANNEL_EVENT_SHEET_KEY: hasOwnProperty, STAGE_BLOCKED_USERS_SHEET_KEY: closure_6, STAGE_SETTINGS_SHEET_KEY: metroImportDefault, EXPLICIT_END_STAGE_SHEET_KEY: closure_8 } = StageChannelsConstants);
 const ComponentActions = fn(1072).ComponentActions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreatorExtras.native.tsx");
 
 export function openStageChannelSettings(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6907, dependencyMap.paths), hasOwnProperty, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6897, dependencyMap.paths), hasOwnProperty, { channel });
 }
 export function openEndGuildEventConfirmationModal() {
 

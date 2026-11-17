@@ -1,6 +1,6 @@
-// === Module 19558: smartSearchViewabilityConfig ===
+// === Module 19560: smartSearchViewabilityConfig ===
 
-// Module 19558 (smartSearchViewabilityConfig)
+// Module 19560 (smartSearchViewabilityConfig)
 import SearchConstants from "SearchConstants" /* 9066 */;
 import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14762 */;
 import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14764 */;

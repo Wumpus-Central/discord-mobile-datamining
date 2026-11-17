@@ -1,7 +1,7 @@
 // === Module 17124: EditProfileEffectSection ===
 
 // Module 17124 (EditProfileEffectSection)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import useProfileEffectDefault from "useProfileEffect" /* 8589 */;
 import ProfileEffectDefault from "ProfileEffect" /* 9493 */;

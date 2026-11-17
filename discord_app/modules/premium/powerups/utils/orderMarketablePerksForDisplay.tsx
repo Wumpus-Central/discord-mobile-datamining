@@ -1,11 +1,11 @@
 // === Module 16003: orderMarketablePerksForDisplay ===
 
 // Module 16003 (orderMarketablePerksForDisplay)
-import Powerups from "Powerups" /* 5527 */;
+import Powerups from "Powerups" /* 5517 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-let closure_3 = fn(5525).GAME_SERVER_POWERUP_SKU_ID;
+let closure_3 = fn(5515).GAME_SERVER_POWERUP_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx");
 

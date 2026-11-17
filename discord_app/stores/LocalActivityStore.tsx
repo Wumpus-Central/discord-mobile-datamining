@@ -6,7 +6,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1345 from "module_1345" /* 1345 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7472 */;
 import ActivityFlagUtils from "ActivityFlagUtils" /* 12695 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -17,12 +17,12 @@ import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 7318 */;
 import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 7319 */;
 import SpotifyStore from "SpotifyStore" /* 7290 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import DetectableGameStore from "DetectableGameStore" /* 2159 */;
 import ExternalStreamingStore from "ExternalStreamingStore" /* 15986 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SessionsStore from "SessionsStore" /* 6073 */;
+import SessionsStore from "SessionsStore" /* 6063 */;
 
 require = fn;
 function updateActivities() {

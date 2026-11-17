@@ -4,7 +4,7 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import AnalyticsActions from "AnalyticsActions" /* 8825 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9420 */;
@@ -94,7 +94,7 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   return closure_9(cardWidth(listEdgeSpacing[14]).FlashList, obj);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(5338).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6954).BOUNTY_ORB_AMOUNT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_20 = nativeDefault.space.PX_20;

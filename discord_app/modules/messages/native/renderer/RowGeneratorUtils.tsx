@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1495 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6364 */;
 import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7285 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

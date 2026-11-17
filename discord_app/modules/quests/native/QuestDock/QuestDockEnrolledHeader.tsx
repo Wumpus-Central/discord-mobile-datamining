@@ -1,10 +1,10 @@
-// === Module 17791: QuestDockEnrolledHeader ===
+// === Module 17792: QuestDockEnrolledHeader ===
 
-// Module 17791 (QuestDockEnrolledHeader)
+// Module 17792 (QuestDockEnrolledHeader)
 import nativeDefault from "native" /* 575 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6061 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6051 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 10131 */;
 import QuestCopyHooks from "QuestCopyHooks" /* 15261 */;
 import QuestDockCreativeContext from "QuestDockCreativeContext" /* 17727 */;

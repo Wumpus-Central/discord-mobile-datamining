@@ -1,7 +1,7 @@
-// === Module 20513: EmojiOverflowActionSheet ===
+// === Module 20516: EmojiOverflowActionSheet ===
 
-// Module 20513 (EmojiOverflowActionSheet)
-import FastImageDefault from "FastImage" /* 6020 */;
+// Module 20516 (EmojiOverflowActionSheet)
+import FastImageDefault from "FastImage" /* 6010 */;
 import EmojiActionCreators from "EmojiActionCreators" /* 11305 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -29,14 +29,14 @@ export default function EmojiOverflowActionSheet(emoji) {
   items = [closure_6(tmp6, obj2), ];
   const obj4 = onSelectRolesForEmoji(1414);
   const obj5 = { id: emoji.id, animated: emoji.animated, size: 48 };
-  items[1] = closure_6(emoji(5929).Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: ":" + emoji.name + ":" });
+  items[1] = closure_6(emoji(5919).Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: ":" + emoji.name + ":" });
   obj.children = items;
   const items1 = [closure_7(View, obj), ];
-  const obj7 = { icon: closure_6(emoji(6040).TrashIcon, { color: "text-feedback-critical" }), label: null, onPress: null };
+  const obj7 = { icon: closure_6(emoji(6030).TrashIcon, { color: "text-feedback-critical" }), label: null, onPress: null };
   const obj8 = { variant: "body-md/semibold", color: "text-feedback-critical", children: null };
   let intl = emoji(1113).intl;
   obj8.children = intl.string(emoji(1113).t.oyYWHE);
-  obj7.label = closure_6(emoji(5929).Text, obj8);
+  obj7.label = closure_6(emoji(5919).Text, obj8);
   obj7.onPress = function onPress() {
     EmojiActionCreators.deleteEmoji(importDefault, emoji.id);
     onClose();
@@ -46,7 +46,7 @@ export default function EmojiOverflowActionSheet(emoji) {
   const obj10 = { variant: "body-md/semibold", children: null };
   const intl2 = emoji(1113).intl;
   obj10.children = intl2.string(emoji(1113).t.bt75uw);
-  obj9.label = closure_6(emoji(5929).Text, obj10);
+  obj9.label = closure_6(emoji(5919).Text, obj10);
   obj9.onPress = function onPress() {
     dependencyMap();
     onClose();
@@ -58,7 +58,7 @@ export default function EmojiOverflowActionSheet(emoji) {
     const obj12 = { variant: "body-md/semibold", children: null };
     const intl3 = tmp3(1113).intl;
     obj12.children = intl3.string(tmp3(1113).t["+riKdA"]);
-    obj11.label = closure_6(tmp3(5929).Text, obj12);
+    obj11.label = closure_6(tmp3(5919).Text, obj12);
     obj11.onPress = onClose(function*() {
       closure_2 = tmp3;
       yield onSelectRolesForEmoji(emoji);
@@ -108,7 +108,7 @@ export default function EmojiOverflowActionSheet(emoji) {
   const obj16 = { variant: "body-md/semibold", children: null };
   const intl4 = tmp3(1113).intl;
   obj16.children = intl4.string(emoji(1113).t["ETE/oC"]);
-  obj15.label = closure_6(emoji(5929).Text, obj16);
+  obj15.label = closure_6(emoji(5919).Text, obj16);
   obj15.onPress = onClose;
   items2[3] = closure_6(emoji(7443).TableRow, obj15);
   obj14.children = items2;

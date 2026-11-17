@@ -3,7 +3,7 @@
 // Module 11909 (SavedMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6364 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 11905 */;
 import UserStore from "UserStore" /* 1388 */;
 

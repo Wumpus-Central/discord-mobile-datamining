@@ -3,8 +3,8 @@
 // Module 10828 (trackVoiceCallTransfer)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import SessionsStore from "SessionsStore" /* 6073 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import SessionsStore from "SessionsStore" /* 6063 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

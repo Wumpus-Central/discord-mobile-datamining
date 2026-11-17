@@ -2,7 +2,7 @@
 
 // Module 7399 (OAuth2AuthorizeModal)
 import nativeDefault from "native" /* 575 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

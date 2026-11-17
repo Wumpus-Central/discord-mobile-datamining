@@ -2,8 +2,8 @@
 
 // Module 9556 (BurstReactionToggle)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 

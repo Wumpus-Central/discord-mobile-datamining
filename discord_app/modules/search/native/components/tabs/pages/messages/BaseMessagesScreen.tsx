@@ -1,10 +1,10 @@
-// === Module 19542: BaseMessagesScreen ===
+// === Module 19544: BaseMessagesScreen ===
 
-// Module 19542 (BaseMessagesScreen)
+// Module 19544 (BaseMessagesScreen)
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14740 */;
 import SearchUtils from "SearchUtils" /* 14747 */;
 import TrackingDefault from "Tracking" /* 14761 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 19544 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 19546 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 7037 */;
 import SearchQueryStore from "SearchQueryStore" /* 14754 */;

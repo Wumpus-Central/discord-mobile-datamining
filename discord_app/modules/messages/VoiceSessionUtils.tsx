@@ -1,7 +1,7 @@
 // === Module 9322: VoiceSessionUtils ===
 
 // Module 9322 (VoiceSessionUtils)
-import useMessageAuthor from "useMessageAuthor" /* 6749 */;
+import useMessageAuthor from "useMessageAuthor" /* 6739 */;
 import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 9209 */;
 import maybeSortByProbability from "maybeSortByProbability" /* 9323 */;
 import noop from "module_19" /* 19 */;

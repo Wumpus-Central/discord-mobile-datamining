@@ -4,9 +4,9 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import LinkIcon from "LinkIcon" /* 6029 */;
-import ClockIcon from "ClockIcon" /* 6042 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import LinkIcon from "LinkIcon" /* 6019 */;
+import ClockIcon from "ClockIcon" /* 6032 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 7307 */;
 import scopes from "scopes" /* 7403 */;
 import disclosures from "disclosures" /* 7405 */;

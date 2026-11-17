@@ -3,8 +3,8 @@
 // Module 15622 (useAppChannelOverflowMenuItems)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 6037 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6027 */;
 import ShieldIcon from "ShieldIcon" /* 11224 */;
 import FlagIcon from "FlagIcon" /* 11328 */;
 import DoorExitIcon from "DoorExitIcon" /* 12295 */;

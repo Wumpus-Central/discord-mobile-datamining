@@ -1,6 +1,6 @@
-// === Module 6739: ? ===
+// === Module 6729: ? ===
 
-// Module 6739
+// Module 6729
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/aura/shimmer.png.js");

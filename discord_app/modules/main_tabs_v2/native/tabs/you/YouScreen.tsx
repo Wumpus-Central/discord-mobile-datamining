@@ -1,12 +1,12 @@
-// === Module 19624: YouScreen ===
+// === Module 19626: YouScreen ===
 
-// Module 19624 (YouScreen)
+// Module 19626 (YouScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1360 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
 import Pressables from "Pressables" /* 7428 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8483 */;
 import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8611 */;
@@ -506,7 +506,7 @@ function UnconnectedYouScreen(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(19146);
+const YouConstants = fn(19148);
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YouConstants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 let closure_17 = fn(1074).CollectiblesMobileShopScreen;

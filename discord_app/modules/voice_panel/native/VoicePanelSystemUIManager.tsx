@@ -1,6 +1,6 @@
-// === Module 20048: VoicePanelSystemUIManager ===
+// === Module 20050: VoicePanelSystemUIManager ===
 
-// Module 20048 (VoicePanelSystemUIManager)
+// Module 20050 (VoicePanelSystemUIManager)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
 import HomeIndicatorDefault from "HomeIndicator" /* 12717 */;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 const VoicePanelModes = fn(11985).VoicePanelModes;
 const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = { code: "(function VoicePanelSystemUIManagerTsx1(){let[focused,mode,controlsSpecs,windowDimensions]=this.__closure;var _focused$get;return{focusedId:(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,mode:mode.get(),controlsMode:controlsSpecs.get().mode,landscape:windowDimensions.get().landscape};})" };

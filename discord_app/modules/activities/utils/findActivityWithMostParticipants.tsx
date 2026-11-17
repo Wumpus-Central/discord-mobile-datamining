@@ -1,6 +1,6 @@
-// === Module 18785: findActivityWithMostParticipants ===
+// === Module 18787: findActivityWithMostParticipants ===
 
-// Module 18785 (findActivityWithMostParticipants)
+// Module 18787 (findActivityWithMostParticipants)
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 
 const size = fn(2);

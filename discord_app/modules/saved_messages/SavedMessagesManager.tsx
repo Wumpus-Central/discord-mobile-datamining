@@ -1,6 +1,6 @@
-// === Module 20387: SavedMessagesManager ===
+// === Module 20390: SavedMessagesManager ===
 
-// Module 20387 (SavedMessagesManager)
+// Module 20390 (SavedMessagesManager)
 import SavedMessagesActions from "SavedMessagesActions" /* 11912 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;

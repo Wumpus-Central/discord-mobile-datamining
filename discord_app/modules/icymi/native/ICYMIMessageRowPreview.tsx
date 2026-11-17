@@ -1,10 +1,10 @@
-// === Module 19328: ICYMIMessageRowPreview ===
+// === Module 19330: ICYMIMessageRowPreview ===
 
-// Module 19328 (ICYMIMessageRowPreview)
+// Module 19330 (ICYMIMessageRowPreview)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import createStyles from "createStyles" /* 5306 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5994 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5984 */;
 import RowGeneratorDefault from "RowGenerator" /* 9159 */;
 import RowGeneratorTypes from "RowGeneratorTypes" /* 11069 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
   if (str === undefined) {
     str = "none";
   }
-  const tmp = messageOptions(5547)();
+  const tmp = messageOptions(5537)();
   let obj = createStyles;
   dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: messageOptions(575).colors.TEXT_DEFAULT })(tmp);
   const RenderEmbeds = UserSettings.RenderEmbeds;
@@ -161,7 +161,7 @@ export const MessageRowPreview = noop.memo(function MessageRowPreview(message) {
     obj.pointerEvents = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(5952)(message);
+  const tmp3 = merged(5942)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   const obj2 = {};

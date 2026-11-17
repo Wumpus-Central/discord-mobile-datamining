@@ -3,7 +3,7 @@
 // Module 9141 (ConversationNavigatorMoreMenu)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import LinkIcon from "LinkIcon" /* 6029 */;
+import LinkIcon from "LinkIcon" /* 6019 */;
 import MoreHorizontalIcon from "MoreHorizontalIcon" /* 7420 */;
 import IconButton from "IconButton" /* 7988 */;
 import ThumbsUpIcon from "ThumbsUpIcon" /* 9142 */;

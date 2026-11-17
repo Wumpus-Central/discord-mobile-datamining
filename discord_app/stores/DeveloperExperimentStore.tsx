@@ -8,7 +8,7 @@ import GuildStore from "GuildStore" /* 5177 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-const ExperimentBuckets = fn(5533).ExperimentBuckets;
+const ExperimentBuckets = fn(5523).ExperimentBuckets;
 const Environments = fn(1405).Environments;
 let tmp2 = "production" === Environments.DEVELOPMENT;
 if (!tmp2) {

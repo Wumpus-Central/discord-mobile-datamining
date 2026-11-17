@@ -1,13 +1,13 @@
-// === Module 19421: JoinRequestOtherApplications ===
+// === Module 19423: JoinRequestOtherApplications ===
 
-// Module 19421 (JoinRequestOtherApplications)
+// Module 19423 (JoinRequestOtherApplications)
 import nativeDefault from "native" /* 575 */;
 import DateUtils from "DateUtils" /* 5128 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5352 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5342 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import CircleXIcon from "CircleXIcon" /* 7629 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7930 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 19418 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 19420 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -49,7 +49,7 @@ export default noop.memo(function JoinRequestOtherApplications(arg0) {
     let obj3 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t["hxa+G3"]);
-    items = [closure_6(tmp2(5929).Text, obj3), ];
+    items = [closure_6(tmp2(5919).Text, obj3), ];
     let obj4 = {
       style: tmp.container,
       children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

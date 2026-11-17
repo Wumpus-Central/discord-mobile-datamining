@@ -1,11 +1,11 @@
-// === Module 19449: SearchFilterSuggestions ===
+// === Module 19451: SearchFilterSuggestions ===
 
-// Module 19449 (SearchFilterSuggestions)
+// Module 19451 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import native from "native" /* 5377 */;
+import native from "native" /* 5367 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14740 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 19450 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 19452 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

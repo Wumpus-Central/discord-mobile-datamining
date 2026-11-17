@@ -2,7 +2,7 @@
 
 // Module 9201 (DoubleTapNitroAlert)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 6274 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
 import noop from "module_19" /* 19 */;

@@ -3,7 +3,7 @@
 // Module 13148 (ConjureSafetyHoldSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5542 */;
 import useConjureSafetyRecheckDefault from "useConjureSafetyRecheck" /* 13149 */;
 import conjurePublishConnection from "conjurePublishConnection" /* 13150 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ function ConjureSafetyHoldSheet(projectId) {
   }
   const obj3 = { header: closure_4(projectId(7913).BottomSheetTitleHeader, { title: conjureSafetyHoldCopy.title }), children: null };
   const obj5 = { style: tmp.content, children: null };
-  items = [closure_4(projectId(5929).Text, { variant: "body-md/normal", color: "text-muted", children: conjureSafetyHoldCopy.body }), , , ];
+  items = [closure_4(projectId(5919).Text, { variant: "body-md/normal", color: "text-muted", children: conjureSafetyHoldCopy.body }), , , ];
   let tmp9Result = null;
   if (null != conjureSafetyRecheckNotice) {
     const obj7 = { variant: "body-md/medium", color: closure_7[conjureSafetyRecheckNotice.type], accessibilityRole: null, accessibilityLiveRegion: "polite", children: null };
@@ -34,7 +34,7 @@ function ConjureSafetyHoldSheet(projectId) {
     }
     obj7.accessibilityRole = str2;
     obj7.children = conjureSafetyRecheckNotice.message;
-    tmp9Result = closure_4(tmp5(5929).Text, obj7);
+    tmp9Result = closure_4(tmp5(5919).Text, obj7);
   }
   items[1] = tmp9Result;
   let tmp9Result2 = null;
@@ -50,7 +50,7 @@ function ConjureSafetyHoldSheet(projectId) {
     obj8.onPress = function onPress() {
       return conjurePublishConnection.requestConjureSafetyRecheck(projectId);
     };
-    tmp9Result2 = closure_4(tmp5(5936).Button, obj8);
+    tmp9Result2 = closure_4(tmp5(5926).Button, obj8);
   }
   items[2] = tmp9Result2;
   let str4 = "secondary";
@@ -63,7 +63,7 @@ function ConjureSafetyHoldSheet(projectId) {
   obj9.onPress = function close() {
     ActionSheetActionCreatorsDefault.hideActionSheet(ConjureSafetyHoldSheet);
   };
-  items[3] = closure_4(projectId(5936).Button, obj9);
+  items[3] = closure_4(projectId(5926).Button, obj9);
   obj5.children = items;
   obj3.children = closure_5(View, obj5);
   return closure_4(projectId(7951).ActionSheet, obj3);

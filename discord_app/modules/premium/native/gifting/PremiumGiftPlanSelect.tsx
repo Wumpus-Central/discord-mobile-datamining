@@ -401,7 +401,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     ({ headerImageContainer: arr20[0], headerImage: arr20[1] } = tmp13);
     obj26.style = items19;
     obj26.source = tmp4(11829);
-    items17[2] = c12(tmp4(6020), obj26);
+    items17[2] = c12(tmp4(6010), obj26);
     const obj27 = { style: null };
     const items20 = [, ];
     ({ headerImageContainer: arr21[0], headerOverlay: arr21[1] } = tmp13);
@@ -410,12 +410,12 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     const obj28 = { style: tmp13.headerBackground, start: null, end: null, colors: null };
     ({ START: obj19.start, END: obj19.end } = callback);
     obj28.colors = memo2;
-    items17[4] = c12(tmp4(5893), obj28);
+    items17[4] = c12(tmp4(5883), obj28);
     const obj29 = { contentContainerStyle: null, children: null };
     const obj30 = { paddingBottom: bottom };
     obj29.contentContainerStyle = obj30;
     const obj31 = { style: null, children: null };
-    const obj32 = { paddingTop: top + tmp(5892).NAV_BAR_HEIGHT };
+    const obj32 = { paddingTop: top + tmp(5882).NAV_BAR_HEIGHT };
     obj31.style = obj32;
     if (null == recipientUser) {
       const items21 = [tmp63, , , , ];
@@ -438,11 +438,11 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         formatToPlainStringResult = intl2.string(tmp(1113).t.dqQgZv);
       }
       obj33.children = formatToPlainStringResult;
-      items21[1] = tmp57(tmp(5929).Text, obj33);
+      items21[1] = tmp57(tmp(5919).Text, obj33);
       const obj35 = { style: tmp13.description, variant: "heading-xs/medium", color: "text-overlay-light", children: null };
       const intl4 = tmp(1113).intl;
       obj35.children = intl4.string(tmp(1113).t["30qzrd"]);
-      items21[2] = tmp57(tmp(5929).Text, obj35);
+      items21[2] = tmp57(tmp(5919).Text, obj35);
       let tmp57Result = tmp75Result;
       if (tmp75Result) {
         const obj36 = { style: tmp13.badgeBanner, onPress: callback1, accessibilityRole: "button", children: null };
@@ -517,7 +517,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       obj43.user = recipientUser;
       tmp57(tmp(1187).Avatar, obj43);
     }
-    const tmp4Result6 = tmp4(6020);
+    const tmp4Result6 = tmp4(6010);
     tmp58 = currentIndex;
     tmp59 = c7;
   }

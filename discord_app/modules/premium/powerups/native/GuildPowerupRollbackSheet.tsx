@@ -2,7 +2,7 @@
 
 // Module 10712 (GuildPowerupRollbackSheet)
 import jsxProd from "jsxProd" /* 21 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import PromoSheet from "PromoSheet" /* 10713 */;
 import size from "module_2" /* 2 */;
 

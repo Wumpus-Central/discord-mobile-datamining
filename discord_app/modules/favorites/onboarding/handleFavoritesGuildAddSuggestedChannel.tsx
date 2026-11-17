@@ -1,6 +1,6 @@
-// === Module 18921: handleFavoritesGuildAddSuggestedChannel ===
+// === Module 18923: handleFavoritesGuildAddSuggestedChannel ===
 
-// Module 18921 (handleFavoritesGuildAddSuggestedChannel)
+// Module 18923 (handleFavoritesGuildAddSuggestedChannel)
 import formatResults from "formatResults" /* 10245 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

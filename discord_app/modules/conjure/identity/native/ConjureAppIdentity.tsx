@@ -339,13 +339,13 @@ export function ConjureAppIdentitySection(nameError) {
   if (null != first) {
     const obj5 = { accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "body-xs/normal", color: "text-feedback-critical", children: first };
-    obj5.children = closure_7(tmp8(5929).Text, obj6);
+    obj5.children = closure_7(tmp8(5919).Text, obj6);
     tmp12Result = closure_7(View, obj5);
   }
   const obj7 = { children: null };
   items2[1] = tmp12Result;
   obj.children = items2;
-  const items3 = [closure_8(nameError(6337).Stack, obj), ];
+  const items3 = [closure_8(nameError(6327).Stack, obj), ];
   const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = tmp8(1113).intl;
   obj8.label = intl2.string(_modDef4131.ynaGa1);

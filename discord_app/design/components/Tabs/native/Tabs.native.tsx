@@ -2,7 +2,7 @@
 
 // Module 13262 (Tabs/Tabs)
 import nativeDefault from "native" /* 575 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import module_1655 from "module_1655" /* 1655 */;
@@ -446,7 +446,7 @@ export function Tabs(state) {
   let tmp55Result = tmp53Result;
   if (null != memo1) {
     const obj8 = { gesture: memo1, children: tmp53Result };
-    tmp55Result = c6(tmp2(5598).GestureDetector, obj8);
+    tmp55Result = c6(tmp2(5588).GestureDetector, obj8);
   }
   return tmp55Result;
 }

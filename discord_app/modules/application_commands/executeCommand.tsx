@@ -1,7 +1,7 @@
 // === Module 11397: executeCommand ===
 
 // Module 11397 (executeCommand)
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5985 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
 import UserActionCreatorsAll from "UserActionCreators" /* 7350 */;
 import UploadUtils from "UploadUtils" /* 8846 */;
 import FileUtils from "FileUtils" /* 8875 */;
@@ -734,7 +734,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     message.source = tmp4;
     const obj5 = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: null };
     ({ messageId: obj4.messageId, onCreate: obj4.onCreate, onSuccess: obj4.onSuccess, onFailure: obj4.onFailure } = interactionLifecycleOptions);
-    const obj7 = { interactionType: onMessageSuccess(6381).InteractionTypes.APPLICATION_COMMAND, applicationId, channelId: id };
+    const obj7 = { interactionType: onMessageSuccess(6371).InteractionTypes.APPLICATION_COMMAND, applicationId, channelId: id };
     obj5.data = obj7;
     InteractionActionCreatorsAll.addQueued(message.nonce, obj5);
     if (null != attachments) {

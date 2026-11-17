@@ -3,7 +3,7 @@
 // Module 17696 (QuestDockStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import QuestConstants from "QuestConstants" /* 5338 */;
+import QuestConstants from "QuestConstants" /* 6954 */;
 import QuestDockUtils from "QuestDockUtils" /* 17697 */;
 import size from "module_2" /* 2 */;
 

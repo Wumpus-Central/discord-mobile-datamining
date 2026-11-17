@@ -3,8 +3,8 @@
 // Module 12905 (StageChannelCallNavigator)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import spring_spring from "spring/spring" /* 5939 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import spring_spring from "spring/spring" /* 5929 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import MessageManagerDefault from "MessageManager" /* 9069 */;
 import participantHasVideoDefault from "participantHasVideo" /* 11990 */;
 import ModeratorOverlayState from "ModeratorOverlayState" /* 12906 */;

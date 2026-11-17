@@ -2,9 +2,9 @@
 
 // Module 11901 (AnimatedCounter)
 import _modDef38 from "module_38" /* 38 */;
-import native from "native" /* 5377 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import springPresets from "springPresets" /* 5940 */;
+import native from "native" /* 5367 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import springPresets from "springPresets" /* 5930 */;
 import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11902 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

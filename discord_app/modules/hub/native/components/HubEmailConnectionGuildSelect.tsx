@@ -6,8 +6,8 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import GuildIconDefault from "GuildIcon" /* 7720 */;
 import Form from "Form" /* 8106 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -179,7 +179,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6757).APIError(closure_128_0);
+                  const aPIError = new id(6747).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);

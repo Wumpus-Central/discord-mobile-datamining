@@ -86,7 +86,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
                             const SavedMessageSortTypes = displayToast(11905).SavedMessageSortTypes;
                             return displayToast(11904).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
                           };
-                          closure_1(6268).show(obj3);
+                          closure_1(6258).show(obj3);
                           return null;
                         } else {
                           let message;
@@ -101,7 +101,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
                             message = intl.string(closure_0(1113).t.R0RpRX);
                           }
                           const obj = { text: message, variant: "critical" };
-                          closure_1(6015).open("SAVED_MESSAGE_CREATE_ERROR", obj);
+                          closure_1(6005).open("SAVED_MESSAGE_CREATE_ERROR", obj);
                           return null;
                         }
                       }),

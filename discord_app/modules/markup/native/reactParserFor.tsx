@@ -1,7 +1,7 @@
 // === Module 16280: reactParserFor ===
 
 // Module 16280 (reactParserFor)
-import Spoiler from "Spoiler" /* 6059 */;
+import Spoiler from "Spoiler" /* 6049 */;
 import markup_MarkupParserDefault from "markup/MarkupParser" /* 9217 */;
 import noop from "module_19" /* 19 */;
 

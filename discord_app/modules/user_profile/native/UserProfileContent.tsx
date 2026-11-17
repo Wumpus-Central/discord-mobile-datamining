@@ -3,8 +3,8 @@
 // Module 15779 (UserProfileContent)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import UserProfileRolesCardDefault from "UserProfileRolesCard" /* 7940 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8137 */;
@@ -291,7 +291,7 @@ function EditSection(guildId) {
     closeVoicePanelsDefault();
     closure_2();
   };
-  obj3.primaryButton = closure_19(guildId(5936).Button, obj4);
+  obj3.primaryButton = closure_19(guildId(5926).Button, obj4);
   let tmp6Result;
   if (null != stateFromStores) {
     const obj6 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
@@ -305,7 +305,7 @@ function EditSection(guildId) {
       closeVoicePanelsDefault();
       closure_3();
     };
-    tmp6Result = closure_19(tmp4(5936).Button, obj6);
+    tmp6Result = closure_19(tmp4(5926).Button, obj6);
   }
   obj3.secondaryButton = tmp6Result;
   return closure_19(tmp7, obj3);
@@ -313,24 +313,24 @@ function EditSection(guildId) {
 function UserProfileWidgetsBoardContainer(arg0) {
   ({ userId, isVisible, isCurrentUser, containerBackground } = arg0);
   const cardStyle = [UserProfileSharedStylesDefault().card, { backgroundColor: containerBackground }];
-  return expandedHeight(UserProfileWidgetsBoardTabDefault, { userId, isVisible, cardStyle, isCurrentUser });
+  return closure_1_19(UserProfileWidgetsBoardTabDefault, { userId, isVisible, cardStyle, isCurrentUser });
 }
 function UserProfileActivityTabContainer(arg0) {
   ({ user, currentUser, guildId, channelId, containerBackground } = arg0);
   const tmp = UserProfileSharedStylesDefault();
   items = [tmp.card, { backgroundColor: containerBackground }];
-  const obj = { style: null, children: expandedHeight(UserProfileActivityTabDefault, { user, currentUser, guildId, channelId, cardStyle: items }) };
+  const obj = { style: null, children: closure_1_19(UserProfileActivityTabDefault, { user, currentUser, guildId, channelId, cardStyle: items }) };
   const items1 = [, ];
   ({ cards: arr2[0], profileContent: arr2[1] } = tmp);
   obj.style = items1;
-  return expandedHeight(View, obj);
+  return closure_1_19(View, obj);
 }
 const View = fn(17).View;
 const UserProfileSections = fn(8479).UserProfileSections;
 const Constants = fn(7962);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_14, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_15 } = Constants);
 const RelationshipTypes = fn(1072).RelationshipTypes;
-const ACTION_SHEET_MAX_WIDTH = fn(5567).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5557).ACTION_SHEET_MAX_WIDTH;
 const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
@@ -597,13 +597,13 @@ export default noop.memo(function UserProfileContent(user) {
         }
         if (_private) {
           const obj = { username: name, containerBackground };
-          _private = expandedHeight(UserProfilePrivateInfoBannerDefault, obj);
+          _private = closure_2_19(UserProfilePrivateInfoBannerDefault, obj);
         }
         const items2 = [_private, , , , , , , , , , ];
         let isProvisional = user.isProvisional;
         if (isProvisional) {
           const obj4 = { style: items, userId: user.id, iconSize: 16 };
-          isProvisional = expandedHeight(ProvisionalAccountExplainer.UserProfileProvisionalAccountExplainerCard, obj4);
+          isProvisional = closure_2_19(ProvisionalAccountExplainer.UserProfileProvisionalAccountExplainerCard, obj4);
         }
         items2[1] = isProvisional;
         let tmp10 = user.id === stateFromStores.id;
@@ -612,15 +612,15 @@ export default noop.memo(function UserProfileContent(user) {
         }
         if (tmp10) {
           const obj5 = { navigateToPremium: callback1, navigateToShop: callback2, hasCustomProfileTheme };
-          tmp10 = expandedHeight(UserProfileDismissibleUpsellsDefault, obj5);
+          tmp10 = closure_2_19(UserProfileDismissibleUpsellsDefault, obj5);
         }
         items2[2] = tmp10;
         const obj6 = { user, currentUser: stateFromStores, guildId, style: items };
-        items2[3] = expandedHeight(UserProfileActivityDefault, obj6);
+        items2[3] = closure_2_19(UserProfileActivityDefault, obj6);
         let tmp18Result = userProfileGameFriendApplicationIds.length > 0;
         if (tmp18Result) {
           const obj7 = { userId: user.id, applicationIds: tmp22 };
-          tmp18Result = expandedHeight(UserProfileGameFriendsCardDefault, obj7);
+          tmp18Result = closure_2_19(UserProfileGameFriendsCardDefault, obj7);
         }
         items2[4] = tmp18Result;
         obj9 = { userId: user.id, displayProfile, pendingBio: null };
@@ -629,11 +629,11 @@ export default noop.memo(function UserProfileContent(user) {
           tmp26 = pendingBio;
         }
         obj9.pendingBio = tmp26;
-        items2[5] = expandedHeight(UserProfileAboutMeCardDefault, obj9);
+        items2[5] = closure_2_19(UserProfileAboutMeCardDefault, obj9);
         let tmp18Result4 = null != guildId;
         if (tmp18Result4) {
           const obj10 = { userId: user.id, guildId };
-          tmp18Result4 = expandedHeight(UserProfileRolesCardDefault, obj10);
+          tmp18Result4 = closure_2_19(UserProfileRolesCardDefault, obj10);
         }
         items2[6] = tmp18Result4;
         let guild_id;
@@ -645,17 +645,17 @@ export default noop.memo(function UserProfileContent(user) {
           const obj11 = { user, currentUser: stateFromStores, guildId: null, channelId: null, showUserProfile: null };
           ({ guild_id: obj8.guildId, id: obj8.channelId } = channel);
           obj11.showUserProfile = showUserProfileActionSheet;
-          tmp18Result5 = expandedHeight(UserProfileModeratorActionsDefault, obj11);
+          tmp18Result5 = closure_2_19(UserProfileModeratorActionsDefault, obj11);
         }
         items2[7] = tmp18Result5;
         const obj12 = { userId: user.id };
-        items2[8] = expandedHeight(UserProfileConnections.UserProfileAccountConnectionsCard, obj12);
+        items2[8] = closure_2_19(UserProfileConnections.UserProfileAccountConnectionsCard, obj12);
         const obj13 = { userId: user.id };
-        items2[9] = expandedHeight(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, obj13);
+        items2[9] = closure_2_19(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, obj13);
         let tmp18Result6 = !isPreviewingChanges;
         if (!isPreviewingChanges) {
           const obj25 = { userId: user.id, onBack: showUserProfileActionSheet };
-          tmp18Result6 = expandedHeight(UserProfileNoteDefault, obj25);
+          tmp18Result6 = closure_2_19(UserProfileNoteDefault, obj25);
         }
         items2[10] = tmp18Result6;
         obj3.children = items2;
@@ -668,12 +668,12 @@ export default noop.memo(function UserProfileContent(user) {
   callback4 = obj10.useCallback(() => {
     const obj = { style: closure_8.profileContent, children: null };
     if (null == stateFromStores1) {
-      let tmp10 = expandedHeight(UserProfileWishlistGrid.WishlistEmptyState, {});
-      let tmp9 = expandedHeight;
+      let tmp10 = closure_2_19(UserProfileWishlistGrid.WishlistEmptyState, {});
+      let tmp9 = closure_2_19;
     } else {
       const obj2 = { wishlistId: stateFromStores1, maxWidth: ACTION_SHEET_MAX_WIDTH, isVisible };
-      tmp9 = expandedHeight;
-      tmp10 = expandedHeight(UserProfileWishlistGridDefault, obj2);
+      tmp9 = closure_2_19;
+      tmp10 = closure_2_19(UserProfileWishlistGridDefault, obj2);
     }
     items = [tmp10, ];
     let tmp9Result = closure_11;
@@ -705,7 +705,7 @@ export default noop.memo(function UserProfileContent(user) {
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.laViwx);
       const obj3 = { userId: user.id, isVisible: isVisible2, isCurrentUser, containerBackground };
-      obj2.page = expandedHeight(UserProfileWidgetsBoardContainer, obj3);
+      obj2.page = closure_2_19(UserProfileWidgetsBoardContainer, obj3);
       items.push(obj2);
     }
     if (closure_26) {
@@ -719,7 +719,7 @@ export default noop.memo(function UserProfileContent(user) {
       }
       obj5.channelId = id;
       obj5.containerBackground = containerBackground;
-      obj4.page = expandedHeight(UserProfileActivityTabContainer, obj5);
+      obj4.page = closure_2_19(UserProfileActivityTabContainer, obj5);
       items.push(obj4);
     }
     if (closure_24) {
@@ -959,7 +959,7 @@ export default noop.memo(function UserProfileContent(user) {
           obj.guildId = guildId;
           obj.style = obj9;
           obj.showUserProfile = showUserProfileActionSheet;
-          return expandedHeight(UserProfileIncomingFriendRequestDefault, obj, applicationId.applicationId);
+          return closure_2_19(UserProfileIncomingFriendRequestDefault, obj, applicationId.applicationId);
         });
         const obj28 = { user, style: obj9 };
         items30[4] = tmp66(tmp(tmp2[96]), obj28);

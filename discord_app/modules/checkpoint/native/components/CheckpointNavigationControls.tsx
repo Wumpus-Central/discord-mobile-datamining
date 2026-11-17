@@ -6,8 +6,8 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef3317 from "module_3317" /* 3317 */;
-import useToken from "useToken" /* 5902 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 6401 */;
+import useToken from "useToken" /* 5892 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 6391 */;
 import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 10920 */;
 import RetryIcon from "RetryIcon" /* 11095 */;
 import ShareIcon from "ShareIcon" /* 12289 */;
@@ -74,7 +74,7 @@ function HomeControls(onStart) {
         variant: "body-sm/medium",
         style: link.link,
         onPress() {
-          const obj = closure_1_1(6012);
+          const obj = closure_1_1(6002);
           return obj.openURL(closure_1_1(2188).getArticleURL(constants.CHECKPOINT));
         },
         accessibilityRole: "link",
@@ -199,8 +199,8 @@ function FinalizeCharacterSaveButton(blockedTrait) {
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            const characterFromTraits = tmp4(6421).getCharacterFromTraits(CheckpointStore.selectedCharacterTraits);
-            const obj3 = tmp4(6421);
+            const characterFromTraits = tmp4(6411).getCharacterFromTraits(CheckpointStore.selectedCharacterTraits);
+            const obj3 = tmp4(6411);
             c1 = 1;
             dependencyMap = 1;
             const obj6 = { value: tmp4(14260).completeCheckpoint(characterFromTraits), done: false };
@@ -218,8 +218,8 @@ function FinalizeCharacterSaveButton(blockedTrait) {
             closure_128_0();
           } else {
             const intl = tmp4(1113).intl;
-            tmp4(6014).presentError(intl.string(tmp4(1113).t.fEptJP));
-            const obj = tmp4(6014);
+            tmp4(6004).presentError(intl.string(tmp4(1113).t.fEptJP));
+            const obj = tmp4(6004);
           }
           dependencyMap = 3;
         }
@@ -325,18 +325,18 @@ function RouteControls(arg0) {
   ({ isLastRoute, onSave, onReplay, onShare } = arg0);
   const tmp = closure_14();
   const tmp4 = checkpointRouteBlockedTrait(14298)();
-  checkpointRouteBlockedTrait = onNext(6744).getCheckpointRouteBlockedTrait(activeRoute, tmp4);
+  checkpointRouteBlockedTrait = onNext(6734).getCheckpointRouteBlockedTrait(activeRoute, tmp4);
   if (null != checkpointRouteBlockedTrait) {
-    const nitroLockedMessage = onNext(6744).getNitroLockedMessage(checkpointRouteBlockedTrait);
-    const tmp5Result = onNext(6744);
+    const nitroLockedMessage = onNext(6734).getNitroLockedMessage(checkpointRouteBlockedTrait);
+    const tmp5Result = onNext(6734);
   }
-  const obj = onNext(6744);
+  const obj = onNext(6734);
   items = [CheckpointStore];
   const stateFromStores = onNext(504).useStateFromStores(items, () => isSaving.isSaving);
-  if (onNext(6745).CheckpointRoute.HOME === activeRoute) {
+  if (onNext(6735).CheckpointRoute.HOME === activeRoute) {
     const obj2 = { onStart: onNext };
     return closure_9(HomeControls, obj2);
-  } else if (onNext(6745).CheckpointRoute.FINALIZE_CHARACTER === activeRoute) {
+  } else if (onNext(6735).CheckpointRoute.FINALIZE_CHARACTER === activeRoute) {
     const obj3 = { children: null };
     const obj4 = { onPress: onBack, disabled: stateFromStores, hitSlop: tmp2(575).space.PX_4, style: tmp.noBorderBackButton };
     const items1 = [closure_9(BackButton, obj4), ];
@@ -344,7 +344,7 @@ function RouteControls(arg0) {
     items1[1] = closure_9(FinalizeCharacterSaveButton, obj5);
     obj3.children = items1;
     return closure_10(closure_11, obj3);
-  } else if (onNext(6745).CheckpointRoute.SUMMARY === activeRoute) {
+  } else if (onNext(6735).CheckpointRoute.SUMMARY === activeRoute) {
     const obj6 = { onBack, onReplay, onShare };
     return closure_9(SummaryControls, obj6);
   } else {
@@ -376,7 +376,7 @@ function RouteControls(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CheckpointConstants = fn(6377);
+const CheckpointConstants = fn(6367);
 ({ CHECKPOINT_CONTROL_ICON_SIZE, CHECKPOINT_PRIMARY } = CheckpointConstants);
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_WIDE_HOME_START_GAP } = CheckpointConstants);
 const HelpdeskArticles = fn(1072).HelpdeskArticles;

@@ -2,7 +2,7 @@
 
 // Module 10815 (ShieldLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10816 from "module_10816" /* 10816 */;
 import noop from "module_19" /* 19 */;
 

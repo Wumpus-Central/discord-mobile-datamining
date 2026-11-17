@@ -1,8 +1,8 @@
-// === Module 5370: NewUserDismissibleContentRegistry ===
+// === Module 5360: NewUserDismissibleContentRegistry ===
 
-// Module 5370 (NewUserDismissibleContentRegistry)
+// Module 5360 (NewUserDismissibleContentRegistry)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment" /* 5371 */;
+import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment" /* 5361 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 5142 */;
 

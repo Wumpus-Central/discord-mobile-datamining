@@ -1,24 +1,24 @@
-// === Module 19981: useVoicePanelDockStatus ===
+// === Module 19983: useVoicePanelDockStatus ===
 
-// Module 19981 (useVoicePanelDockStatus)
+// Module 19983 (useVoicePanelDockStatus)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import SoundboardStore from "SoundboardStore" /* 6369 */;
+import SoundboardStore from "SoundboardStore" /* 6359 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import SpeakingStore from "SpeakingStore" /* 6941 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import SpeakingStore from "SpeakingStore" /* 6931 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const require = fn;
-const VoicePanelDockStatusStore = fn(19202);
+const VoicePanelDockStatusStore = fn(19204);
 ({ releaseDockStatus: closure_12, initDockStatus: map1, setDockActiveSpeakers: closure_14, setDockHasStreamers: closure_15, showVoiceMoment: closure_16 } = VoicePanelDockStatusStore);
-const ParticipantTypes = fn(5983).ParticipantTypes;
-let result = fn(6371).MAX_SOUND_LENGTH_SECONDS * DurationsDefault.Millis.SECOND;
+const ParticipantTypes = fn(5973).ParticipantTypes;
+let result = fn(6361).MAX_SOUND_LENGTH_SECONDS * DurationsDefault.Millis.SECOND;
 let closure_18 = result + 3 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 let result1 = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockStatus.tsx");

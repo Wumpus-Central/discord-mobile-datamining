@@ -1,8 +1,8 @@
-// === Module 19844: HexagonCampaignExpiredPromoSheet ===
+// === Module 19846: HexagonCampaignExpiredPromoSheet ===
 
-// Module 19844 (HexagonCampaignExpiredPromoSheet)
+// Module 19846 (HexagonCampaignExpiredPromoSheet)
 import _modDef4516 from "module_4516" /* 4516 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -186,8 +186,8 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
   }, items2);
   noop = noop.useCallback(() => {
     const obj = closure_0(17085);
-    const result = obj.trackHexagonCampaignContentClicked({ content: closure_0(5341).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8834).QuestContentCTA.LEARN_MORE });
-    const obj2 = { content: closure_0(5341).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8834).QuestContentCTA.LEARN_MORE };
+    const result = obj.trackHexagonCampaignContentClicked({ content: closure_0(6957).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8834).QuestContentCTA.LEARN_MORE });
+    const obj2 = { content: closure_0(6957).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8834).QuestContentCTA.LEARN_MORE };
     const result1 = closure_0(17104).openHexagonCampaignLearnMore();
   }, []);
   let obj3 = { illustration: jsx(require("BundleAbstractUI").BundleAbstractUI, { accessible: false }), title: null, description: null, onDismiss: null, actions: null };

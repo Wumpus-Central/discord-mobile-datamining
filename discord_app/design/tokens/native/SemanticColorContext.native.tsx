@@ -1,11 +1,11 @@
-// === Module 5480: SemanticColorContext ===
+// === Module 5470: SemanticColorContext ===
 
-// Module 5480 (SemanticColorContext)
+// Module 5470 (SemanticColorContext)
 import _modDef671 from "module_671" /* 671 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import native from "native" /* 5481 */;
-import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 5485 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5486 */;
+import native from "native" /* 5471 */;
+import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 5475 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5476 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");

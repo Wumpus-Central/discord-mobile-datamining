@@ -2,8 +2,8 @@
 
 // Module 11233 (autocompleter/AutocompleteUtils)
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import FormDividerDefault from "FormDivider" /* 8110 */;
 import TimestampUtils from "TimestampUtils" /* 9374 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ const Constants = fn(1072);
 ({ AutoCompleteResultTypes: metroImportDefault, WHITESPACE_RE: closure_8 } = Constants);
 const ApplicationCommandsConstants = fn(11234);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: closure_10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(6346);
+const ChannelAutocompleteConstants = fn(6336);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;

@@ -1,13 +1,13 @@
-// === Module 19226: SoundboardSoundPickerCategories ===
+// === Module 19228: SoundboardSoundPickerCategories ===
 
-// Module 19226 (SoundboardSoundPickerCategories)
+// Module 19228 (SoundboardSoundPickerCategories)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import ClockIcon from "ClockIcon" /* 6042 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import ClockIcon from "ClockIcon" /* 6032 */;
 import SoundboardTypes from "SoundboardTypes" /* 7227 */;
 import Pressables from "Pressables" /* 7428 */;
 import GuildIconDefault from "GuildIcon" /* 7720 */;
@@ -15,7 +15,7 @@ import LockIcon from "LockIcon" /* 8092 */;
 import TrophyIcon from "TrophyIcon" /* 10324 */;
 import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 11260 */;
 import _modDef11362 from "module_11362" /* 11362 */;
-import _modDef19224 from "module_19224" /* 19224 */;
+import _modDef19226 from "module_19226" /* 19226 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
@@ -50,13 +50,13 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef19224;
+    tmp6 = _modDef19226;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef19224;
+    tmp6 = _modDef19226;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -117,7 +117,7 @@ function SoundboardCategoryScrollView(ref) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const setSearchQuery = fn(19210).setSearchQuery;
+const setSearchQuery = fn(19212).setSearchQuery;
 const Constants = fn(1072);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 ({ NODE_SIZE, NODE_MARGIN } = Constants);

@@ -2,7 +2,7 @@
 
 // Module 15520 (useRecommendedCollectiblesSections)
 import _mod19 from "module_19" /* 19 */;
-import useInitialValueDefault from "useInitialValue" /* 5917 */;
+import useInitialValueDefault from "useInitialValue" /* 5907 */;
 import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 15521 */;
 import size from "module_2" /* 2 */;
 

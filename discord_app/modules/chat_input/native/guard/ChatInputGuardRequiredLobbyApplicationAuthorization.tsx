@@ -2,8 +2,8 @@
 
 // Module 14891 (ChatInputGuardRequiredLobbyApplicationAuthorization)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 6012 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import LinkingDefault from "Linking" /* 6002 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import ChatInputGuardDefault from "ChatInputGuard" /* 14878 */;
 import noop from "module_19" /* 19 */;
 

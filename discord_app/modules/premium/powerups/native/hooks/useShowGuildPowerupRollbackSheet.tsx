@@ -54,7 +54,7 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
       if (null != modalConfig.primaryButtonText) {
         fn = () => {
           dependencyMap(constants.TAKE_ACTION);
-          first(5552).hideActionSheet(modalConfig(10711).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
+          first(5542).hideActionSheet(modalConfig(10711).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
         };
       }
       obj.onCtaPress = fn;

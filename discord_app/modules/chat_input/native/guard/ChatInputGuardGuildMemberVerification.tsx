@@ -2,9 +2,9 @@
 
 // Module 14886 (ChatInputGuardGuildMemberVerification)
 import util from "util" /* 1113 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5923 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6924 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5913 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6914 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7684 */;
 import ChatInputGuardDefault from "ChatInputGuard" /* 14878 */;
 import _modDef14888 from "module_14888" /* 14888 */;
@@ -29,7 +29,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  if (guildId(5352).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+  if (guildId(5342).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
     let tmp8 = _modDef14888;
     const intl2 = tmp2(1113).intl;
     let stringResult = intl2.string(tmp2(1113).t.lk30cY);
@@ -44,7 +44,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
         return;
       }
     }
-  } else if (tmp2(5352).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+  } else if (tmp2(5342).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
     tmp8 = _modDef14889;
     class I {
       constructor() {

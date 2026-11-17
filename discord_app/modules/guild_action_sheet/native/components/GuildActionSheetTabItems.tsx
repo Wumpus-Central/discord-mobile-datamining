@@ -1,9 +1,9 @@
 // === Module 16421: GuildActionSheetTabItems ===
 
 // Module 16421 (GuildActionSheetTabItems)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
-import BoostingActionCreatorsAll from "BoostingActionCreators" /* 6952 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
+import BoostingActionCreatorsAll from "BoostingActionCreators" /* 6942 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7883 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8404 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8460 */;
@@ -111,5 +111,5 @@ export default function GuildActionSheetTabItems(guild) {
   items2[3] = canAccessSettings;
   items2[4] = closure_12(canAccessSettings(16424), { guild });
   obj4.children = items2;
-  return closure_13(guild(6951).ButtonGroup, obj4);
+  return closure_13(guild(6941).ButtonGroup, obj4);
 };

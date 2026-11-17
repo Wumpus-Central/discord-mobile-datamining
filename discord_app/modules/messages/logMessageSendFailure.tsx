@@ -2,7 +2,7 @@
 
 // Module 9028 (logMessageSendFailure)
 import Constants from "Constants" /* 1072 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

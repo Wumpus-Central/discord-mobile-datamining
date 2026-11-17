@@ -2,12 +2,12 @@
 
 // Module 12778 (getEmbeddedActivityLaunchability)
 import util from "util" /* 1113 */;
-import AgeGateUtils from "AgeGateUtils" /* 6838 */;
+import AgeGateUtils from "AgeGateUtils" /* 6828 */;
 import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 12734 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const require = globalThis.__r;
 

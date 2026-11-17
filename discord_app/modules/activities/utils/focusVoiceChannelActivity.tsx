@@ -1,7 +1,7 @@
 // === Module 14042: focusVoiceChannelActivity ===
 
 // Module 14042 (focusVoiceChannelActivity)
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 
 const ChannelLayouts = fn(1072).ChannelLayouts;

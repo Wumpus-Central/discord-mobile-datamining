@@ -1,7 +1,7 @@
 // === Module 13664: FrogIllocon ===
 
 // Module 13664 (FrogIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef13665 from "module_13665" /* 13665 */;
 import _modDef13666 from "module_13666" /* 13666 */;

@@ -1,11 +1,11 @@
-// === Module 20015: useTapGestures ===
+// === Module 20017: useTapGestures ===
 
-// Module 20015 (useTapGestures)
+// Module 20017 (useTapGestures)
 import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

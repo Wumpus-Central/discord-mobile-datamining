@@ -2,7 +2,7 @@
 
 // Module 10560 (ChevronSmallDownIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10561 from "module_10561" /* 10561 */;
 import noop from "module_19" /* 19 */;
 

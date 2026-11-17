@@ -1,20 +1,20 @@
-// === Module 19600: NewGroupDMScreen ===
+// === Module 19602: NewGroupDMScreen ===
 
-// Module 19600 (NewGroupDMScreen)
+// Module 19602 (NewGroupDMScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import HeaderShared from "HeaderShared" /* 9051 */;
 import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 12545 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19599 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19601 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 16257 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -196,7 +196,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                           closure_128_3 = value;
                           v3 = 3;
                           dependencyMap = 1;
-                          const obj10 = { value: id(6900).monkeyPatchCall(), done: false };
+                          const obj10 = { value: id(6890).monkeyPatchCall(), done: false };
                           return obj10;
                         }
                       } catch (tmp26) {

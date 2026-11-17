@@ -1,6 +1,6 @@
-// === Module 19638: YouScreenUserProfileContent ===
+// === Module 19640: YouScreenUserProfileContent ===
 
-// Module 19638 (YouScreenUserProfileContent)
+// Module 19640 (YouScreenUserProfileContent)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
@@ -26,15 +26,15 @@ import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells"
 import UserProfileConnections from "UserProfileConnections" /* 15851 */;
 import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 15856 */;
 import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 15862 */;
-import BalanceWidgetMenu from "BalanceWidgetMenu" /* 18339 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 19145 */;
-import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 19646 */;
-import useIsNitroBadgeAutoUnhiddenDefault from "useIsNitroBadgeAutoUnhidden" /* 19647 */;
-import NitroBadgeUnhiddenCoachmarkDefault from "NitroBadgeUnhiddenCoachmark" /* 19648 */;
-import OrbWalletProfileIntroductionCoachmarkDefault from "OrbWalletProfileIntroductionCoachmark" /* 19649 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 19652 */;
-import CheckpointProfileEntrypointDefault from "CheckpointProfileEntrypoint" /* 19654 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 19659 */;
+import BalanceWidgetMenu from "BalanceWidgetMenu" /* 18341 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 19147 */;
+import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 19648 */;
+import useIsNitroBadgeAutoUnhiddenDefault from "useIsNitroBadgeAutoUnhidden" /* 19649 */;
+import NitroBadgeUnhiddenCoachmarkDefault from "NitroBadgeUnhiddenCoachmark" /* 19650 */;
+import OrbWalletProfileIntroductionCoachmarkDefault from "OrbWalletProfileIntroductionCoachmark" /* 19651 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 19654 */;
+import CheckpointProfileEntrypointDefault from "CheckpointProfileEntrypoint" /* 19656 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 19661 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;

@@ -1,21 +1,21 @@
-// === Module 19251: ForYouItemActionButtons ===
+// === Module 19253: ForYouItemActionButtons ===
 
-// Module 19251 (ForYouItemActionButtons)
+// Module 19253 (ForYouItemActionButtons)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
-import parseURLDefault from "parseURL" /* 6048 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
+import parseURLDefault from "parseURL" /* 6038 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7033 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8137 */;
 import PeopleUtilsDefault from "PeopleUtils" /* 10840 */;
 import handleSupportedURLDefault from "handleSupportedURL" /* 16285 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18763 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18765 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
@@ -445,7 +445,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(16285)({ payload: closure_1(6048)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
+      closure_1(16285)({ payload: closure_1(6038)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
       if (null != channelId) {

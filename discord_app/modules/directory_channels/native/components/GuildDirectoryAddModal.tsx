@@ -2,7 +2,7 @@
 
 // Module 14706 (GuildDirectoryAddModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import useInitialValueDefault from "useInitialValue" /* 5917 */;
+import useInitialValueDefault from "useInitialValue" /* 5907 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 14705 */;
@@ -14,7 +14,7 @@ require = fn;
 const GuildDirectoryCreate = fn(14707).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
-let obj2 = { safeArea: { marginTop: fn(5892).NAV_BAR_HEIGHT, flex: 1 } };
+let obj2 = { safeArea: { marginTop: fn(5882).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddModal.tsx");

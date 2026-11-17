@@ -3,7 +3,7 @@
 // Module 10761 (getGuildPowerupsBoostInfoText)
 import util from "util" /* 1113 */;
 import _modDef2733 from "module_2733" /* 2733 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5524 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5514 */;
 import size from "module_2" /* 2 */;
 
 const BoostInfoType = GuildPowerupsConstants.BoostInfoType;

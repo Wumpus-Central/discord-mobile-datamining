@@ -4,10 +4,10 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2565 from "module_2565" /* 2565 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5378 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5368 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import Card from "Card" /* 7445 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
 import GameOrganizationIconDefault from "GameOrganizationIcon" /* 14076 */;
@@ -135,9 +135,9 @@ export default function GameOrganizationCharacterList(characters) {
     const intl2 = tmp4(1113).intl;
     const obj5 = { noun };
     obj4.children = intl2.formatToPlainString(_modDef2565.ybJIQJ, obj5);
-    someResult = closure_5(tmp4(5929).Text, obj4);
+    someResult = closure_5(tmp4(5919).Text, obj4);
   }
   items1[2] = someResult;
   obj.children = items1;
-  return closure_6(characters(6337).Stack, obj);
+  return closure_6(characters(6327).Stack, obj);
 };

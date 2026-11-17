@@ -13,7 +13,7 @@ import _modDef2765 from "module_2765" /* 2765 */;
 import _modDef3513 from "module_3513" /* 3513 */;
 import BillingUtils from "BillingUtils" /* 5118 */;
 import DateUtils from "DateUtils" /* 5128 */;
-import openURLDefault from "openURL" /* 6008 */;
+import openURLDefault from "openURL" /* 5998 */;
 import PriceUtils from "PriceUtils" /* 7253 */;
 import CheckoutError from "CheckoutError" /* 12386 */;
 import useFPDurationLeft from "useFPDurationLeft" /* 15328 */;
@@ -1114,7 +1114,7 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
       obj8.expiresDate = _modDef2169(subscription.metadata.grace_period_expires_date);
       return obj8;
     } else {
-      const tmp8 = null == subscription.paymentSourceId ? expandedHeight : closure_1_30;
+      const tmp8 = null == subscription.paymentSourceId ? closure_1_19 : closure_1_30;
       obj = { days: tmp8, expiresDate: _modDef2169(subscription.currentPeriodStart).add(tmp8, "days") };
       return obj;
     }

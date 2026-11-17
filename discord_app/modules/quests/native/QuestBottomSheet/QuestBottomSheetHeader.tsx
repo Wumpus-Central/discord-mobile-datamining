@@ -3,8 +3,8 @@
 // Module 17726 (QuestBottomSheetHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6331 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6321 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 8831 */;
 import QuestBottomSheet from "QuestBottomSheet" /* 17725 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -135,7 +135,7 @@ export default function QuestBottomSheetHeader(arg0) {
     }
   }, items2);
   const tmp2Result15 = isScreenReaderEnabled(8829);
-  isScreenReaderEnabled = isScreenReaderEnabled(5568).useIsScreenReaderEnabled();
+  isScreenReaderEnabled = isScreenReaderEnabled(5558).useIsScreenReaderEnabled();
   ref = noop.useRef(null);
   const items3 = [isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
@@ -166,7 +166,7 @@ export default function QuestBottomSheetHeader(arg0) {
     items5[1] = titleWithActionSheet;
     obj4.style = items5;
     obj4.children = memo1;
-    tmp24Result = closure_7(tmp2(5929).Text, obj4);
+    tmp24Result = closure_7(tmp2(5919).Text, obj4);
   }
   const items6 = [tmp24Result, ];
   if (withActionSheet) {

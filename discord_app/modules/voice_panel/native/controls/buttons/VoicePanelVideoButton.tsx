@@ -1,7 +1,7 @@
-// === Module 20094: VoicePanelVideoButton ===
+// === Module 20096: VoicePanelVideoButton ===
 
-// Module 20094 (VoicePanelVideoButton)
-import CameraRive from "CameraRive" /* 5447 */;
+// Module 20096 (VoicePanelVideoButton)
+import CameraRive from "CameraRive" /* 5437 */;
 import VideoIcon from "VideoIcon" /* 11046 */;
 import VideoSlashIcon2 from "VideoSlashIcon" /* 15767 */;
 import noop from "module_19" /* 19 */;
@@ -34,8 +34,8 @@ export default function VideoButton(arg0) {
   let isVideoEnabled;
   let color;
   ({ props, wrapperSpecs } = arg0);
-  const voicePanelButtonStyles = isVideoEnabled(20083).useVoicePanelButtonStyles(wrapperSpecs);
-  const tmp5 = color(19185)(noop.useContext(color(11984)).channelId, "VoicePanelVideoButton");
+  const voicePanelButtonStyles = isVideoEnabled(20085).useVoicePanelButtonStyles(wrapperSpecs);
+  const tmp5 = color(19187)(noop.useContext(color(11984)).channelId, "VoicePanelVideoButton");
   isVideoEnabled = tmp5.isVideoEnabled;
   ({ videoSupported, videoBlocked } = tmp5);
   if (videoSupported) {
@@ -70,8 +70,8 @@ export default function VideoButton(arg0) {
       memo = jsx(tmp3(15654).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
     }
     element.children = memo;
-    return jsx(tmp(20084), { onPress: tmp6, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });
+    return jsx(tmp(20086), { onPress: tmp6, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });
   }
-  const obj2 = isVideoEnabled(20083);
+  const obj2 = isVideoEnabled(20085);
   tmp = color;
 };

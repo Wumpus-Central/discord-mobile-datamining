@@ -7,8 +7,8 @@ import native from "native" /* 1187 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import Patterns from "Patterns" /* 5556 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import Patterns from "Patterns" /* 5546 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import FormRowDefault from "FormRow" /* 7901 */;
 import Form from "Form" /* 8106 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -221,7 +221,7 @@ export default function PopoutMenu(onClose) {
     const obj3 = { gesture: tmp33, children: null };
     const obj4 = { ref: ref1, children: trigger };
     obj3.children = c6(c5, obj4);
-    const items8 = [c6(tmp21(5598).GestureDetector, obj3), ];
+    const items8 = [c6(tmp21(5588).GestureDetector, obj3), ];
     let tmp35Result = null;
     if (first1) {
       const obj5 = { ref: ref2, style: null, onLayout: null, children: null };

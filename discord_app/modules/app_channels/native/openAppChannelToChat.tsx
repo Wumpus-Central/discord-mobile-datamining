@@ -1,7 +1,7 @@
 // === Module 15147: openAppChannelToChat ===
 
 // Module 15147 (openAppChannelToChat)
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import openChannelSecondaryViewChatDefault from "openChannelSecondaryViewChat" /* 9068 */;
 import size from "module_2" /* 2 */;
 

@@ -1,17 +1,17 @@
-// === Module 6801: PassTheControllerStore ===
+// === Module 6791: PassTheControllerStore ===
 
-// Module 6801 (PassTheControllerStore)
+// Module 6791 (PassTheControllerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 6096 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6808 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6086 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
 import InputHostDefault from "InputHost" /* 16113 */;
 import InputGuestDefault from "InputGuest" /* 16116 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6802 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6792 */;
 
 require = fn;
 function handleControllerGrab(arg0) {
@@ -61,7 +61,7 @@ function stopGuest(streamKey) {
 let closure_7 = fn(16109).isPassTheControllerBlocked;
 const Constants = fn(1072);
 ({ ApplicationStreamDeleteReasons: closure_8, RTCConnectionStates: closure_9, VoiceFlags: closure_10 } = Constants);
-const StreamTypes = fn(6803).StreamTypes;
+const StreamTypes = fn(6793).StreamTypes;
 let c12 = null;
 let c13 = null;
 let c14 = null;
@@ -196,7 +196,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 c15 = null;
                 let obj = { streamKey, inputHost: null };
                 const tmp59 = InputHostDefault;
-                let guildId = inputConnection1(6808).decodeStreamKey(streamKey).guildId;
+                let guildId = inputConnection1(6798).decodeStreamKey(streamKey).guildId;
                 if (guildId == null) {
                   guildId = null;
                 }
@@ -205,7 +205,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 obj.inputHost = tmp592;
                 _null2 = obj;
                 flag7 = true;
-                const obj7 = inputConnection1(6808);
+                const obj7 = inputConnection1(6798);
               }
               flag5 = flag7;
             }

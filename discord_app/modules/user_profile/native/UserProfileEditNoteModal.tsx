@@ -1,7 +1,7 @@
 // === Module 15776: UserProfileEditNoteModal ===
 
 // Module 15776 (UserProfileEditNoteModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import UserProfileEditNote from "UserProfileEditNote" /* 15777 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -46,7 +46,7 @@ export default function UserProfileEditNoteModal(arg0) {
     const obj = { variant: "heading-md/semibold", accessibilityRole: "header", children: null };
     const intl = navigation(1113).intl;
     obj.children = intl.string(navigation(1113).t.sHHsOM);
-    return jsx(navigation(5929).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
+    return jsx(navigation(5919).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
   };
   tmpResult = navigation(1360);
   obj6.headerLeft = navigation(7493).getHeaderCloseButton(handleClose);

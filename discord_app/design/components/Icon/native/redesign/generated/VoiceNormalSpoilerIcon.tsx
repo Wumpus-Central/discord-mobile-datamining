@@ -2,7 +2,7 @@
 
 // Module 8096 (VoiceNormalSpoilerIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8044 from "module_8044" /* 8044 */;
 import noop from "module_19" /* 19 */;
 

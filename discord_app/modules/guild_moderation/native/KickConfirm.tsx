@@ -2,7 +2,7 @@
 
 // Module 14151 (KickConfirm)
 import nativeDefault from "native" /* 575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;

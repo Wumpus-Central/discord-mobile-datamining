@@ -3,7 +3,7 @@
 // Module 14211 (AppealIngestionConfirmSubmission)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8205 */;
 import useSafetyHubClassifications from "useSafetyHubClassifications" /* 14182 */;
 import AppealIngestionModal from "AppealIngestionModal" /* 14188 */;
@@ -85,10 +85,10 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
               closure_1_1(572).dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput });
               const obj = closure_1_1(572);
               const obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
-              closure_1_1(5552).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              closure_1_1(5542).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             },
             onClose() {
-              return closure_1_1(5552).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              return closure_1_1(5542).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             }
           });
         },

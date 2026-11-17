@@ -1,7 +1,7 @@
-// === Module 19006: useWaterwheelsCardEligibility ===
+// === Module 19008: useWaterwheelsCardEligibility ===
 
-// Module 19006 (useWaterwheelsCardEligibility)
-import WaterwheelsCard from "WaterwheelsCard" /* 19007 */;
+// Module 19008 (useWaterwheelsCardEligibility)
+import WaterwheelsCard from "WaterwheelsCard" /* 19009 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7085 */;
 import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14825 */;

@@ -5,7 +5,7 @@ import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import fuzzysearchDefault from "fuzzysearch" /* 7073 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7874 */;
 import ChannelListState from "ChannelListState" /* 8731 */;
@@ -28,7 +28,7 @@ const Constants = fn(1072);
 const ChannelConstants = fn(5162);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
 const ChannelListGuildActionRow = fn(8737).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6959).ReadStateTypes;
+const ReadStateTypes = fn(6949).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 

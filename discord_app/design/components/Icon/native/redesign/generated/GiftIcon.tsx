@@ -2,7 +2,7 @@
 
 // Module 11817 (GiftIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9333 from "module_9333" /* 9333 */;
 import noop from "module_19" /* 19 */;
 

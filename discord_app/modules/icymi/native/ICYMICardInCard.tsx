@@ -1,15 +1,15 @@
-// === Module 19325: ICYMICardInCard ===
+// === Module 19327: ICYMICardInCard ===
 
-// Module 19325 (ICYMICardInCard)
+// Module 19327 (ICYMICardInCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
 import TextIcon2 from "TextIcon" /* 8078 */;
 import ClipView from "ClipView" /* 9503 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 19324 */;
-import getIconForChannel from "getIconForChannel" /* 19326 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 19326 */;
+import getIconForChannel from "getIconForChannel" /* 19328 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
@@ -41,7 +41,7 @@ const View = fn(17).View;
 const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createICYMIStyles = fn(19284);
+const createICYMIStyles = fn(19286);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginTop: marginHorizontal.margin }, content: { flex: 1, overflow: "hidden" }, channelNameAndAccessory: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin }, channelNameAndAccessoryLarge: null, header: null, headerInfo: null, title: null, titleLeft: null, subTitleContainer: null, subtitle: null, genContentSubtitle: null, genContentSubtitleChannel: null, subtitleTrailing: null, separator: null, normalContent: null, authorAvatar: null };
   const obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };

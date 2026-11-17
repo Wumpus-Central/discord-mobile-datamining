@@ -1,6 +1,6 @@
-// === Module 19957: useTransitionToConnectedActivityInVoice ===
+// === Module 19959: useTransitionToConnectedActivityInVoice ===
 
-// Module 19957 (useTransitionToConnectedActivityInVoice)
+// Module 19959 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -78,7 +78,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                 } else {
                   embeddedActivityLocationChannelId = handler(5227).getEmbeddedActivityLocationChannelId(_location2);
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(5980)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(5970)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;

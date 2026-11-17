@@ -1,10 +1,10 @@
-// === Module 18147: ServerTrendingNotificationSetting ===
+// === Module 18149: ServerTrendingNotificationSetting ===
 
-// Module 18147 (ServerTrendingNotificationSetting)
+// Module 18149 (ServerTrendingNotificationSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;
-import ServerTrendingNotificationUtils from "ServerTrendingNotificationUtils" /* 18148 */;
+import ServerTrendingNotificationUtils from "ServerTrendingNotificationUtils" /* 18150 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 

@@ -2,7 +2,7 @@
 
 // Module 11670 (GiftingPromotionUtils)
 import dismissible_content from "dismissible_content" /* 5139 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5348 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5338 */;
 import MarketingSurfaceType from "MarketingSurfaceType" /* 9627 */;
 import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11672 */;
 import _slicedToArray from "module_32" /* 32 */;

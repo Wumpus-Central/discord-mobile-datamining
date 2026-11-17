@@ -1,6 +1,6 @@
-// === Module 6800: GatewayConnectionStore ===
+// === Module 6790: GatewayConnectionStore ===
 
-// Module 6800 (GatewayConnectionStore)
+// Module 6790 (GatewayConnectionStore)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -12,17 +12,17 @@ import ConnectionStateDefault from "ConnectionState" /* 16131 */;
 import PauseGatewaySocketAll from "PauseGatewaySocket" /* 16152 */;
 import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 16160 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PassTheControllerStore from "PassTheControllerStore" /* 6801 */;
+import PassTheControllerStore from "PassTheControllerStore" /* 6791 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import CallStore from "CallStore" /* 7023 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import RTCRegionStore from "RTCRegionStore" /* 6170 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import RTCRegionStore from "RTCRegionStore" /* 6160 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6802 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6792 */;
 
 require = fn;
 let closure_26 = async function _handleConnectionOpen(arg0) {
@@ -516,7 +516,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(6808).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(6798).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {

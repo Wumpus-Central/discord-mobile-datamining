@@ -6,9 +6,9 @@ import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import HeaderActionButton from "HeaderActionButton" /* 7427 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import TableRadioRow from "TableRadioRow" /* 7747 */;
@@ -449,14 +449,14 @@ class BugCreateScreen {
                                 const intl2 = closure_2_0(1113).intl;
                                 obj5.text = intl2.string(closure_2_0(1113).t.jB8yOL);
                                 obj5.duration = duration;
-                                closure_2_1(6015).open("BUG_REPORT_BUG_SUBMITTED", obj5);
-                                const obj6 = closure_2_1(6015);
+                                closure_2_1(6005).open("BUG_REPORT_BUG_SUBMITTED", obj5);
+                                const obj6 = closure_2_1(6005);
                               } else {
                                 const obj7 = { text: null, variant: "critical" };
                                 const intl = closure_2_0(1113).intl;
                                 obj7.text = intl.string(closure_2_0(1113).t["4t1o0u"]);
-                                closure_2_1(6015).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
-                                const obj4 = closure_2_1(6015);
+                                closure_2_1(6005).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                                const obj4 = closure_2_1(6005);
                               }
                               c6 = 3;
                             }
@@ -524,10 +524,10 @@ class BugCreateScreen {
                     let intl2 = handleSubmit(1113).intl;
                     obj5.text = intl2.string(handleSubmit(1113).t.Uuqbcm);
                     obj5.duration = duration;
-                    screenshot(6015).open("BUG_REPORT_SUBMITTING_BUG", obj5);
+                    screenshot(6005).open("BUG_REPORT_SUBMITTING_BUG", obj5);
                     closure_1_16(true);
                     first8();
-                    let obj9 = screenshot(6015);
+                    let obj9 = screenshot(6005);
                   }
                   priority = 3;
                 } else {
@@ -536,7 +536,7 @@ class BugCreateScreen {
                     let obj7 = { text: null, variant: "critical" };
                     let intl = handleSubmit(1113).intl;
                     obj7.text = intl.string(handleSubmit(1113).t["4t1o0u"]);
-                    screenshot(6015).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                    screenshot(6005).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
                     callback(false);
                     priority = 3;
                     const obj8 = { value: undefined, done: true };

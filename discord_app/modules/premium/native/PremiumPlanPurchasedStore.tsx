@@ -4,7 +4,7 @@
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9590 */;
-import ActionSheetStore from "ActionSheetStore" /* 5553 */;
+import ActionSheetStore from "ActionSheetStore" /* 5543 */;
 
 const require = globalThis.__r;
 
@@ -84,6 +84,6 @@ export function reset() {
         str = "dismissed";
       }
     }
-    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "alignItems", onPaymentDismiss: "rejectWithError" });
+    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "r", onPaymentDismiss: "alignItems" });
   });
 }

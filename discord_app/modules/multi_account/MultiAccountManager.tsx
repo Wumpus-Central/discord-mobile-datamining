@@ -1,8 +1,8 @@
-// === Module 20314: MultiAccountManager ===
+// === Module 20317: MultiAccountManager ===
 
-// Module 20314 (MultiAccountManager)
+// Module 20317 (MultiAccountManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import GatewaySocket from "GatewaySocket" /* 16119 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import UserStore from "UserStore" /* 1388 */;

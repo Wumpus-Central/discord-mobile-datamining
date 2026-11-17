@@ -1,7 +1,7 @@
 // === Module 15149: closeFrame ===
 
 // Module 15149 (closeFrame)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
 import leaveFrame from "leaveFrame" /* 7349 */;
 import closeFramePopoutDefault from "closeFramePopout" /* 15150 */;
 import VoiceChannelAppActionCreators from "VoiceChannelAppActionCreators" /* 15151 */;

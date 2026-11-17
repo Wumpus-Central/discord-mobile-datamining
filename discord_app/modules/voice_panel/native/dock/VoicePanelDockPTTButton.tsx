@@ -1,11 +1,11 @@
-// === Module 19227: VoicePanelDockPTTButton ===
+// === Module 19229: VoicePanelDockPTTButton ===
 
-// Module 19227 (VoicePanelDockPTTButton)
+// Module 19229 (VoicePanelDockPTTButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11975 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
@@ -120,13 +120,13 @@ export default noop.memo(function VoicePanelDockPTTButton(measureGlowOffset) {
       let withTiming = require;
       let obj2 = dependencyMap;
       if (useReducedMotion.get()) {
-        withTiming = withTiming(5548).withTiming;
+        withTiming = withTiming(5538).withTiming;
         obj2 = { duration: 150 };
         let withTimingResult3 = withTiming(0, obj2);
-        const withTimingResult2 = withTiming(5548);
+        const withTimingResult2 = withTiming(5538);
       } else {
-        withTimingResult3 = withTiming(5939).withSpring(0, closure_10);
-        const withTimingResult4 = withTiming(5939);
+        withTimingResult3 = withTiming(5929).withSpring(0, closure_10);
+        const withTimingResult4 = withTiming(5929);
       }
       const result2 = sharedValue4.set(withTimingResult3);
     }

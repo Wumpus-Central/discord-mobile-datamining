@@ -1,11 +1,11 @@
 // === Module 17739: useVideoQuestPlayerAnalytics ===
 
 // Module 17739 (useVideoQuestPlayerAnalytics)
-import QuestTypes from "QuestTypes" /* 5341 */;
-import QuestContent from "QuestContent" /* 5343 */;
-import AdCreativeType from "AdCreativeType" /* 5345 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6771 */;
-import MetricEvents from "MetricEvents" /* 6776 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6761 */;
+import MetricEvents from "MetricEvents" /* 6766 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
+import QuestContent from "QuestContent" /* 6959 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 8811 */;
 import AnalyticsActions from "AnalyticsActions" /* 8825 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
@@ -15,7 +15,7 @@ import AdsVideoTypes from "AdsVideoTypes" /* 17554 */;
 import AdsVideoUtils from "AdsVideoUtils" /* 17565 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import NetworkStore from "NetworkStore" /* 6210 */;
+import NetworkStore from "NetworkStore" /* 6200 */;
 
 require = fn;
 const AppState = fn(17).AppState;
@@ -78,7 +78,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               closure_131_1 = undefined;
               closure_131_2 = undefined;
               closure_131_3 = undefined;
-              const VIDEO_MODAL_MOBILE = closure_0(5343).QuestContent.VIDEO_MODAL_MOBILE;
+              const VIDEO_MODAL_MOBILE = closure_0(6959).QuestContent.VIDEO_MODAL_MOBILE;
               closure_131_1 = VIDEO_MODAL_MOBILE;
               c6 = 1;
               closure_131_2 = getQuestImpressionId();

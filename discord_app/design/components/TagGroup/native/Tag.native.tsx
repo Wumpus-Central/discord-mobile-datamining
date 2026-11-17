@@ -2,7 +2,7 @@
 
 // Module 13280 (Tag)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import TagGroupTypes from "TagGroupTypes" /* 13278 */;
 import TagGraphic from "TagGraphic" /* 13281 */;
 import noop from "module_19" /* 19 */;

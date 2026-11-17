@@ -1,23 +1,23 @@
-// === Module 19062: useGuildsBarGesture ===
+// === Module 19064: useGuildsBarGesture ===
 
-// Module 19062 (useGuildsBarGesture)
+// Module 19064 (useGuildsBarGesture)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import _mod1708 from "module_1708" /* 1708 */;
 import shared from "shared" /* 5313 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5568 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5558 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import FastList from "FastList" /* 7847 */;
 import ContextMenuState from "ContextMenuState" /* 9149 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 19063 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 19065 */;
 import debounce from "debounce" /* 551 */;
 
 const require = globalThis.__r;
@@ -276,8 +276,8 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(6956).GuildsNodeType;
-const GuildsBarConstants = fn(19060);
+const GuildsNodeType = fn(6946).GuildsNodeType;
+const GuildsBarConstants = fn(19062);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
@@ -287,7 +287,7 @@ module_1655 = fn(1655);
 obj.itemMeasurements = module_1655.makeMutable([]);
 module_1655 = fn(1655);
 obj.activeIndex = module_1655.makeMutable(-1);
-let closure_15 = debounce(fn(5554).triggerHapticFeedback, 16);
+let closure_15 = debounce(fn(5544).triggerHapticFeedback, 16);
 let closure_16 = debounce((intl) => {
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
@@ -592,7 +592,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "disabled", overSpecs: "isArray" });
+    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "Path" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};

@@ -1,6 +1,6 @@
-// === Module 18594: ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting ===
+// === Module 18596: ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting ===
 
-// Module 18594 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
+// Module 18596 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
 import util from "util" /* 1113 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8853 */;
 import useParentalControlSettings from "useParentalControlSettings" /* 17346 */;

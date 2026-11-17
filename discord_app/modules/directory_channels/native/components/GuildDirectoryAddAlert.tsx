@@ -3,8 +3,8 @@
 // Module 14719 (GuildDirectoryAddAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import common_AlertDefault from "common/Alert" /* 6340 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import common_AlertDefault from "common/Alert" /* 6330 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
 import noop from "module_19" /* 19 */;
 

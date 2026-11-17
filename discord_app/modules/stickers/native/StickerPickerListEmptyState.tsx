@@ -25,7 +25,7 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
   const tmp = closure_7();
   const modalDismissGuardRefreshControl = insetTop(11287).useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = insetTop(5570).BottomSheetScrollView;
+    let BottomSheetScrollView = insetTop(5560).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }

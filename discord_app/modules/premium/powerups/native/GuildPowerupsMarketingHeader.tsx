@@ -4,13 +4,13 @@
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _modDef2733 from "module_2733" /* 2733 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 10676 */;
 import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 10688 */;
 import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 16002 */;
 import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 16003 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5523 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5513 */;
 
 require = fn;
 function PerkText(children) {
@@ -78,7 +78,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       }
       const obj7 = { perks: str2 };
       obj2.children = intl.format(_modDef2733["7lwpzR"], obj7);
-      obj.children = jsx(guild(5929).Text, { style: tmp.text, variant: "body-sm/semibold", children: null });
+      obj.children = jsx(guild(5919).Text, { style: tmp.text, variant: "body-sm/semibold", children: null });
       return <View style={tmp.container}>{null}</View>;
     }
   }

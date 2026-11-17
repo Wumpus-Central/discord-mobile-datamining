@@ -2,7 +2,7 @@
 
 // Module 8076 (TextLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8056 from "module_8056" /* 8056 */;
 import noop from "module_19" /* 19 */;
 

@@ -5,9 +5,9 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
 import themes from "themes" /* 5328 */;
-import useTheme from "useTheme" /* 5547 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import useTheme from "useTheme" /* 5537 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9436 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 10131 */;
@@ -99,7 +99,7 @@ export function QuestOrbMultiplierPerkPill(questId) {
     obj16.style = items3;
     if (!tmp13) {
       const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-      tmp21Result = tmp21(orbMultiplierEligibility(5893), obj18);
+      tmp21Result = tmp21(orbMultiplierEligibility(5883), obj18);
     }
     const items4 = [tmp21Result, ];
     const obj19 = { style: tmp.fullGradientContent, children: closure_8(closure_7, obj13) };

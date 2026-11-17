@@ -7,10 +7,10 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import v1 from "v1" /* 1269 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6225 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6935 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6215 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6925 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 8136 */;
@@ -19,16 +19,16 @@ import SystemTelecomPlatform from "SystemTelecomPlatform" /* 16894 */;
 import SystemTelecomUtils from "SystemTelecomUtils" /* 16895 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 import NativeSystemTelecomModule from "NativeSystemTelecomModule" /* 16893 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 
@@ -60,7 +60,7 @@ const AppState = fn(17).AppState;
 const isMultiUserDM = fn(5159).isMultiUserDM;
 let Constants = fn(1072);
 ({ AnalyticEvents: closure_18, ChannelTypes: closure_19, AppStates: closure_20, ME: closure_21, RTCConnectionStates: closure_22 } = Constants);
-Constants = fn(6075);
+Constants = fn(6065);
 ({ Features: closure_23, MediaEngineContextTypes: closure_24 } = Constants);
 let obj = new LoggerDefault("SystemTelecomManager");
 obj.enableNativeLogger(true);
@@ -258,9 +258,9 @@ class SystemTelecomManager {
                     tmp56 = channelId;
                   }
                 } else {
-                  v0(6225).setVideoEnabled(closure_129_2);
+                  v0(6215).setVideoEnabled(closure_129_2);
                   closure_129_7();
-                  const obj2 = v0(6225);
+                  const obj2 = v0(6215);
                 }
                 c4 = 3;
               }
@@ -568,8 +568,8 @@ prototype["startCall"] = function startCall(arg0) {
                 if (obj11.isSystemTelecomEnabled()) {
                   const obj2 = tmp3(16893);
                   ({ uuid, handle } = obj6);
-                  const tmp42Result = tmp5(5954);
-                  const startOutgoingCallResult = obj2.startOutgoingCall(uuid, handle, tmp5(5954).computeChannelName(obj6.channel, UserStore, RelationshipStore), obj6.video);
+                  const tmp42Result = tmp5(5944);
+                  const startOutgoingCallResult = obj2.startOutgoingCall(uuid, handle, tmp5(5944).computeChannelName(obj6.channel, UserStore, RelationshipStore), obj6.video);
                   tmp3(16893).setCallMuted(obj6.uuid, obj6.muted);
                   dependencyMap = 1;
                   c4 = 2;

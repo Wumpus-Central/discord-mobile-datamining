@@ -8,8 +8,8 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import NetStats from "NetStats" /* 8663 */;
 import getDeviceMetadataDefault from "getDeviceMetadata" /* 8781 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
-import NetworkStore from "NetworkStore" /* 6210 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
+import NetworkStore from "NetworkStore" /* 6200 */;
 
 require = fn;
 function trackRoundtrip(channelId) {

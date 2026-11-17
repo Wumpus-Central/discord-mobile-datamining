@@ -1,7 +1,7 @@
 // === Module 16488: SplitTextInput ===
 
 // Module 16488 (SplitTextInput)
-import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 5379 */;
+import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 5369 */;
 import Input from "Input" /* 7620 */;
 import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7621 */;
 import SplitTextField from "SplitTextField" /* 16489 */;

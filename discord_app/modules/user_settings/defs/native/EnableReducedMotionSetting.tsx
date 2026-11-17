@@ -1,6 +1,6 @@
-// === Module 18039: EnableReducedMotionSetting ===
+// === Module 18041: EnableReducedMotionSetting ===
 
-// Module 18039 (EnableReducedMotionSetting)
+// Module 18041 (EnableReducedMotionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16889 */;

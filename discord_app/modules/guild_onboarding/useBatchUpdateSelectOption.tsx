@@ -7,7 +7,7 @@ import GlobalUtils from "GlobalUtils" /* 1255 */;
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7872 */;
 import OptInOnboardingUtils from "OptInOnboardingUtils" /* 12472 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7869 */;
 
 const require = globalThis.__r;

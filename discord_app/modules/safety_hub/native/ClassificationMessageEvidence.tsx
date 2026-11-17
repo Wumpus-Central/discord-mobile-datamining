@@ -99,7 +99,7 @@ export default function ClassificationEvidence(arg0) {
           obj5.filename = filename;
           tmp4 = obj5;
         }
-        tmp2Result = ref(6361);
+        tmp2Result = ref(6351);
       }
       return tmp4;
     });
@@ -193,7 +193,7 @@ export default function ClassificationEvidence(arg0) {
     const items8 = [closure_18(closure_8, {}), ];
     let obj5 = { style: attachments.dummyVideoAttachments, children: null };
     attachments = first2.attachments;
-    first2 = attachments.filter((filename) => ref(6361).isVideoFile(filename.filename));
+    first2 = attachments.filter((filename) => ref(6351).isVideoFile(filename.filename));
     obj5.children = first2.map((uri, index) => {
       closure_0 = uri;
       return closure_1_18(first(9731), {
@@ -224,7 +224,7 @@ export default function ClassificationEvidence(arg0) {
     const tmp13Result = tmp13(11065);
     const obj8 = { id: first2.id, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };
     const _Date = Date;
-    const tmpResult2 = tmp(6374);
+    const tmpResult2 = tmp(6364);
     const date = new Date(tmp13(11).extractTimestamp(first2.id));
     obj8.timestamp = date.toUTCString();
     obj8.type = MessageTypes.DEFAULT;

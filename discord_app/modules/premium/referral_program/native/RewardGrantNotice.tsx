@@ -3,7 +3,7 @@
 // Module 15312 (RewardGrantNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7897 */;
 import BalanceWidgetPill from "BalanceWidgetPill" /* 10043 */;
 import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 15293 */;

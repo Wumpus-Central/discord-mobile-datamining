@@ -1,7 +1,7 @@
-// === Module 18485: useOpenDeepLinkedProduct ===
+// === Module 18487: useOpenDeepLinkedProduct ===
 
-// Module 18485 (useOpenDeepLinkedProduct)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+// Module 18487 (useOpenDeepLinkedProduct)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8496 */;
 import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 9407 */;
 import noop from "module_19" /* 19 */;

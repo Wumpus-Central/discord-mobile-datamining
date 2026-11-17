@@ -2,7 +2,7 @@
 
 // Module 13371 (useActivityShelfItems)
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5976 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5966 */;
 
 const require = fn;
 const size = fn(2);

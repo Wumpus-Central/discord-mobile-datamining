@@ -1,6 +1,6 @@
-// === Module 19659: UserProfileYourFriendsCard ===
+// === Module 19661: UserProfileYourFriendsCard ===
 
-// Module 19659 (UserProfileYourFriendsCard)
+// Module 19661 (UserProfileYourFriendsCard)
 import applyDefault from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import _slicedToArray from "module_32" /* 32 */;

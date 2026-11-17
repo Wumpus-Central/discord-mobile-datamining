@@ -2,7 +2,7 @@
 
 // Module 8163 (GlobeEarthIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8164 from "module_8164" /* 8164 */;
 import noop from "module_19" /* 19 */;
 

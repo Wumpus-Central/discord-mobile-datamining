@@ -1,13 +1,13 @@
-// === Module 20852: NativeIntentsManager ===
+// === Module 20855: NativeIntentsManager ===
 
-// Module 20852 (NativeIntentsManager)
+// Module 20855 (NativeIntentsManager)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import getChannelIcon from "getChannelIcon" /* 15561 */;
-import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 20853 */;
-import IntentsBindingsDefault from "IntentsBindings" /* 20854 */;
+import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 20856 */;
+import IntentsBindingsDefault from "IntentsBindings" /* 20857 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;

@@ -1,9 +1,9 @@
-// === Module 18088: SaveCameraUploadsToDeviceSetting ===
+// === Module 18090: SaveCameraUploadsToDeviceSetting ===
 
-// Module 18088 (SaveCameraUploadsToDeviceSetting)
+// Module 18090 (SaveCameraUploadsToDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6242 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6232 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;

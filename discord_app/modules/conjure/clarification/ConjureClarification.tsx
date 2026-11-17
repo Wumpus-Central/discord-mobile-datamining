@@ -3,7 +3,7 @@
 // Module 13571 (ConjureClarification)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;

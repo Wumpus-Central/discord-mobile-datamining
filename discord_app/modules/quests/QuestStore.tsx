@@ -5,7 +5,7 @@ import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5346 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6962 */;
 import AdDecisionUtils from "AdDecisionUtils" /* 8806 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 8813 */;
 import QuestUserStatusUtils from "QuestUserStatusUtils" /* 8814 */;
@@ -172,7 +172,7 @@ function _startExpirationChecker() {
   }
   _runExpirationCheck();
 }
-const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6954).QuestsExperimentLocations;
 new Map();
 let c33 = null;
 let c34 = null;
@@ -424,7 +424,7 @@ const questStore = new QuestStore(DispatcherDefault, {
       let obj5 = mapped(8815);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(5341).QuestContent.QUEST_BAR)) {
+      if (targetedContent.includes(mapped(6957).QuestContent.QUEST_BAR)) {
         let tmp13Result = tmp13(8816);
         let obj4 = { location: QuestsExperimentLocations.QUESTS_STORE };
         let questLogger = tmp13Result.getQuestLogger(obj4);

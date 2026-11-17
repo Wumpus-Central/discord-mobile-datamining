@@ -1,7 +1,7 @@
 // === Module 10684: GameServerMocks ===
 
 // Module 10684 (GameServerMocks)
-import GameServerProviderType from "GameServerProviderType" /* 5526 */;
+import GameServerProviderType from "GameServerProviderType" /* 5516 */;
 import GameServerStatus from "GameServerStatus" /* 10685 */;
 import size from "module_2" /* 2 */;
 

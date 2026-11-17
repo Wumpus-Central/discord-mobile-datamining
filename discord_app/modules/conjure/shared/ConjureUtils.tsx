@@ -8,7 +8,7 @@ import ApplicationStore from "ApplicationStore" /* 2165 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 5236 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 require = fn;
 function conjureChannelAppId(channel) {

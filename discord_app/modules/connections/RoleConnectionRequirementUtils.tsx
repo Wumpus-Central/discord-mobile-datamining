@@ -1,6 +1,6 @@
-// === Module 20585: RoleConnectionRequirementUtils ===
+// === Module 20588: RoleConnectionRequirementUtils ===
 
-// Module 20585 (RoleConnectionRequirementUtils)
+// Module 20588 (RoleConnectionRequirementUtils)
 import Constants from "Constants" /* 7423 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 20217: TopEmojisDataManager ===
+// === Module 20220: TopEmojisDataManager ===
 
-// Module 20217 (TopEmojisDataManager)
+// Module 20220 (TopEmojisDataManager)
 import TopEmojisUtils from "TopEmojisUtils" /* 9549 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 require = fn;

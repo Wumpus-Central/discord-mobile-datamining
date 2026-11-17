@@ -1,9 +1,9 @@
-// === Module 6250: isVideoBackgroundSupported ===
+// === Module 6240: isVideoBackgroundSupported ===
 
-// Module 6250 (isVideoBackgroundSupported)
+// Module 6240 (isVideoBackgroundSupported)
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 
-const Features = fn(6075).Features;
+const Features = fn(6065).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 

@@ -10,7 +10,7 @@ import _modDef17496 from "module_17496" /* 17496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
-import TextStyles from "TextStyles" /* 6826 */;
+import TextStyles from "TextStyles" /* 6816 */;
 
 const _modDef7430 = tmp10(7430);
 require = fn;
@@ -79,14 +79,14 @@ function UserSettingsSessions() {
     }
     items1[2] = tmp21Result2;
     obj4.children = items1;
-    tmp20Result2 = closure_11(otherSessions(6337).Stack, obj4);
+    tmp20Result2 = closure_11(otherSessions(6327).Stack, obj4);
   }
   const obj9 = { style: tmp.container, children: null };
   const obj10 = { bottom: true, children: null };
   const obj11 = { variant: "body-sm/medium", style: tmp.description, children: null };
   const intl4 = otherSessions(1113).intl;
   obj11.children = intl4.string(otherSessions(1113).t.zZp618);
-  const items3 = [closure_10(otherSessions(5929).Text, obj11), tmp20Result2];
+  const items3 = [closure_10(otherSessions(5919).Text, obj11), tmp20Result2];
   obj10.children = items3;
   obj9.children = closure_11(otherSessions(7415).SafeAreaPaddingView, obj10);
   return closure_10(closure_7, obj9);
@@ -165,14 +165,14 @@ function SessionInfo(session) {
       const obj6 = { style: tmp.sessionInfo, accessible: true, children: null };
       const obj7 = { style: tmp.sessionInfoRow, children: null };
       const obj8 = { variant: "body-md/semibold", children: found[0] };
-      const items1 = [closure_10(tmp9(5929).Text, obj8), ];
+      const items1 = [closure_10(tmp9(5919).Text, obj8), ];
       let tmp22Result = found.length > 1;
       if (tmp22Result) {
         const obj9 = { children: null };
         const obj10 = { variant: "body-md/semibold", accessibilityLabel: ",", style: tmp.sessionInfoRowSpacing, children: "\u00B7" };
-        const items2 = [closure_10(tmp9(5929).Text, obj10), ];
+        const items2 = [closure_10(tmp9(5919).Text, obj10), ];
         const obj11 = { variant: "body-md/semibold", children: found[1] };
-        items2[1] = closure_10(tmp9(5929).Text, obj11);
+        items2[1] = closure_10(tmp9(5919).Text, obj11);
         obj9.children = items2;
         tmp22Result = closure_11(closure_12, obj9);
       }
@@ -187,7 +187,7 @@ function SessionInfo(session) {
       if (tmp20Result3) {
         const obj14 = { style: tmp.sessionInfoRow, children: null };
         const obj15 = { variant: "body-xs/medium", color: "text-subtle", style: tmp.detailsText, children: _location };
-        obj14.children = closure_10(tmp9(5929).Text, obj15);
+        obj14.children = closure_10(tmp9(5919).Text, obj15);
         tmp20Result3 = closure_10(closure_6, obj14);
       }
       const items3 = [tmp20Result3, ];
@@ -195,7 +195,7 @@ function SessionInfo(session) {
       if (tmp20Result4) {
         const obj16 = { style: tmp.sessionInfoRow, children: null };
         const obj17 = { variant: "body-xs/medium", color: "text-subtle", style: tmp.detailsText, children: formatDateResult };
-        obj16.children = closure_10(tmp9(5929).Text, obj17);
+        obj16.children = closure_10(tmp9(5919).Text, obj17);
         tmp20Result4 = closure_10(closure_6, obj16);
       }
       const obj18 = { accessible: true, children: null };

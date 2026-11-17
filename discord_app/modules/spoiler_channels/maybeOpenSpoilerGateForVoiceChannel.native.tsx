@@ -1,8 +1,8 @@
 // === Module 15936: maybeOpenSpoilerGateForVoiceChannel ===
 
 // Module 15936 (maybeOpenSpoilerGateForVoiceChannel)
-import useAlertStore from "useAlertStore" /* 6270 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6858 */;
+import useAlertStore from "useAlertStore" /* 6260 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6848 */;
 import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 15937 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 

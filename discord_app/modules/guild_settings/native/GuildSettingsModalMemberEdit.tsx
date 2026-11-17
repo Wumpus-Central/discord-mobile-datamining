@@ -7,10 +7,10 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5225 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import HeaderActionButton from "HeaderActionButton" /* 7427 */;
 import TableRow2 from "TableRow" /* 7443 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
@@ -475,7 +475,7 @@ prototype["render"] = function render() {
       items2[5] = canBan;
       items2[6] = tmp17Result3;
       obj7.children = items2;
-      obj6.children = expandedHeight(Stack_Stack.Stack, obj7);
+      obj6.children = closure_1_19(Stack_Stack.Stack, obj7);
       return collapsedCategories(Form.Form, obj6);
     } else {
       const result = CommunicationDisabledUtils.isMemberCommunicationDisabled(member);
@@ -507,7 +507,7 @@ prototype["render"] = function render() {
     }
   }
 };
-GuildSettingsModalMemberEdit.contextType = fn(5377).ThemeContext;
+GuildSettingsModalMemberEdit.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx");
 
@@ -515,7 +515,7 @@ export default function MemberModalEdit(onClose) {
   onClose = onClose.onClose;
   const onRemove = onClose.onRemove;
   ({ guildId, userId } = onClose);
-  const tmp = onRemove(5917)(guildId);
+  const tmp = onRemove(5907)(guildId);
   closure_2 = tmp;
   items = [onClose, onRemove, tmp];
   const memo = noop.useMemo(() => {

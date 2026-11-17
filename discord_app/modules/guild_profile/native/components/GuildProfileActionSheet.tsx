@@ -3,11 +3,11 @@
 // Module 10655 (GuildProfileActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
-import BottomSheetModal from "BottomSheetModal" /* 5570 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5901 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5556 */;
+import BottomSheetModal from "BottomSheetModal" /* 5560 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5891 */;
 import GuildProfileSheetBodyDefault from "GuildProfileSheetBody" /* 10656 */;
 import GuildProfileCreateTagUpsellDefault from "GuildProfileCreateTagUpsell" /* 10673 */;
 import GuildProfileCTADefault from "GuildProfileCTA" /* 10802 */;
@@ -32,12 +32,12 @@ export default function GuildProfileActionSheet(guildId) {
   colors = undefined;
   noop = colors();
   const tmp = useThemeDefault();
-  const backgroundColor = guildId(5902).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp);
-  let obj = guildId(5902);
+  const backgroundColor = guildId(5892).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp);
+  let obj = guildId(5892);
   const bottomSheetRef = guildId(8559).useBottomSheetRef();
   ({ bottomSheetRef: c5, bottomSheetClose } = bottomSheetRef);
   const obj2 = guildId(8559);
-  const token = guildId(5902).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  const token = guildId(5892).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   items = [token];
   colors = noop.useMemo(() => {
     const obj = _modDef671(token);

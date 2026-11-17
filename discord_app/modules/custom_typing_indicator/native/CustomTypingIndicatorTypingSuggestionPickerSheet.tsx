@@ -1,6 +1,6 @@
-// === Module 17982: CustomTypingIndicatorTypingSuggestionPickerSheet ===
+// === Module 17984: CustomTypingIndicatorTypingSuggestionPickerSheet ===
 
-// Module 17982 (CustomTypingIndicatorTypingSuggestionPickerSheet)
+// Module 17984 (CustomTypingIndicatorTypingSuggestionPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4133 from "module_4133" /* 4133 */;

@@ -2,7 +2,7 @@
 
 // Module 17579 (FullscreenEnterIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod17580 from "module_17580" /* 17580 */;
 import noop from "module_19" /* 19 */;
 

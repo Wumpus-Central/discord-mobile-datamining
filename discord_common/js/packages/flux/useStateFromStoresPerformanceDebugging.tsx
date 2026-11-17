@@ -1,6 +1,6 @@
-// === Module 18294: useStateFromStoresPerformanceDebugging ===
+// === Module 18296: useStateFromStoresPerformanceDebugging ===
 
-// Module 18294 (useStateFromStoresPerformanceDebugging)
+// Module 18296 (useStateFromStoresPerformanceDebugging)
 import Storage2 from "Storage" /* 510 */;
 import _slicedToArray from "module_32" /* 32 */;
 

@@ -3,7 +3,7 @@
 // Module 15750 (getActivityChannelId)
 import ChannelRecord from "ChannelRecord" /* 5159 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import size from "module_2" /* 2 */;
 
 const isTextChannel = ChannelRecord.isTextChannel;

@@ -26,10 +26,10 @@ export default function useAppLauncherOnboardingContent(channelId) {
     const DismissibleContent = tmp(5139).DismissibleContent;
     if ((function useHasUsedActivities(channel) {
       channel = channel.channel;
-      let result = channelId(5348).useIsDismissibleContentDismissed_UNSAFE(channelId(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
-      const obj = channelId(5348);
-      const result1 = channelId(5348).useIsDismissibleContentDismissed_UNSAFE(channelId(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
-      const obj2 = channelId(5348);
+      let result = channelId(5338).useIsDismissibleContentDismissed_UNSAFE(channelId(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
+      const obj = channelId(5338);
+      const result1 = channelId(5338).useIsDismissibleContentDismissed_UNSAFE(channelId(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
+      const obj2 = channelId(5338);
       items = [ApplicationFrecencyStore];
       const stateFromStores = channelId(504).useStateFromStores(items, () => applicationFrecencyWithoutLoadingLatest.getApplicationFrecencyWithoutLoadingLatest());
       let guild_id;

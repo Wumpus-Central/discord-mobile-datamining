@@ -1,9 +1,9 @@
-// === Module 19230: VoicePanelDockButtonRim ===
+// === Module 19232: VoicePanelDockButtonRim ===
 
-// Module 19230 (VoicePanelDockButtonRim)
+// Module 19232 (VoicePanelDockButtonRim)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import useToken from "useToken" /* 5902 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import useToken from "useToken" /* 5892 */;
 import inlineStyles from "inlineStyles" /* 8263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

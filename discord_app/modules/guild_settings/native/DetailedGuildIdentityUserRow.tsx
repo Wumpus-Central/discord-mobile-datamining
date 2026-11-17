@@ -4,8 +4,8 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import TableRow from "TableRow" /* 7443 */;
 import Form from "Form" /* 8106 */;
 import DiscordTagDefault from "DiscordTag" /* 10930 */;
@@ -36,7 +36,7 @@ const memoResult = noop.memo(function DetailedGuildIdentityUser(height) {
     const obj3 = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Path" };
+      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Array" };
       tmp8Result = hasOwnProperty(native.Avatar, obj4);
     }
     const items1 = [tmp8Result, ];

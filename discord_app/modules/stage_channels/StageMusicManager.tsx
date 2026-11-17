@@ -1,12 +1,12 @@
 // === Module 12937: StageMusicManager ===
 
 // Module 12937 (StageMusicManager)
-import StageChannelParticipants from "StageChannelParticipants" /* 6943 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6933 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6940 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6930 */;
 import StageInstanceStore from "StageInstanceStore" /* 5160 */;
 import StageMusicStore from "StageMusicStore" /* 12935 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;

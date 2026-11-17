@@ -7,10 +7,10 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import spring_spring from "spring/spring" /* 5939 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 6903 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 6909 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import spring_spring from "spring/spring" /* 5929 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 6893 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 6899 */;
 import Pressables from "Pressables" /* 7428 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7678 */;
 import Form from "Form" /* 8106 */;
@@ -114,7 +114,7 @@ class StartStagePrompt {
   }
 }
 const View = fn(17).View;
-let closure_10 = fn(6906).REQUEST_TO_SPEAK_SHEET_KEY;
+let closure_10 = fn(6896).REQUEST_TO_SPEAK_SHEET_KEY;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -213,7 +213,7 @@ export function RequestToSpeakListButton(channel) {
     ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12945, dependencyMap.paths), closure_10, { channelId: channel.id, analyticsLocations });
   }
   analyticsLocations = analyticsLocations(7918)().analyticsLocations;
-  const stageParticipantsCount = channel(6949).useStageParticipantsCount(channel.id, channel(6943).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
+  const stageParticipantsCount = channel(6939).useStageParticipantsCount(channel.id, channel(6933).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
   if (stageParticipantsCount > 0) {
     const obj2 = { accessibilityLabel: null, source: null, imageStyle: null, IconComponent: null, onPress: null, notifications: null, isSmallSize: null };
     const intl = tmp3(1113).intl;

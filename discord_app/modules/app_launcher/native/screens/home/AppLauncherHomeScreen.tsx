@@ -8,12 +8,12 @@ import GlobalUtils from "GlobalUtils" /* 1255 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5348 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5985 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5994 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5338 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5984 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7771 */;
 import native from "native" /* 7997 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10576 */;
@@ -41,7 +41,7 @@ import ApplicationCollectionFlags from "ApplicationCollectionFlags" /* 13457 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
-import DevSettingsStore from "DevSettingsStore" /* 5932 */;
+import DevSettingsStore from "DevSettingsStore" /* 5922 */;
 import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 13404 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 13376 */;
@@ -53,18 +53,18 @@ function AppRowLabel(renderedName) {
   if (renderedName.showsPromoted) {
     const obj2 = { style: tmp.appRowLabelWithPromotedContainer, children: null };
     const obj3 = { style: tmp.appRowLabelWithPromotedTextContainer, variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: renderedName };
-    items = [expandedHeight(Text_Text.Text, obj3), ];
+    items = [closure_1_19(Text_Text.Text, obj3), ];
     const obj4 = { style: tmp.promotedLabel, children: null };
     const obj5 = { variant: "footnote/semibold", color: "text-muted", children: null };
     const intl = util.intl;
     obj5.children = intl.string(util.t["/eVltv"]);
-    obj4.children = expandedHeight(Text_Text.Text, obj5);
-    items[1] = expandedHeight(timestampProducer, obj4);
+    obj4.children = closure_1_19(Text_Text.Text, obj5);
+    items[1] = closure_1_19(timestampProducer, obj4);
     obj2.children = items;
     let tmp5 = dependencyMap(timestampProducer, obj2);
   } else {
     const obj = { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: renderedName };
-    tmp5 = expandedHeight(Text_Text.Text, obj);
+    tmp5 = closure_1_19(Text_Text.Text, obj);
   }
   return tmp5;
 }
@@ -121,7 +121,7 @@ class BaseAppRow {
         const obj2 = { content: sectionDescription, muted: false, layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT, color: "text-muted" };
         const result = MessagePreviewMarkup.renderMeasuredMessagePreviewMarkup(obj2);
         ({ mentions: obj5.mentions, content: obj5.children } = result);
-        tmp4 = expandedHeight(MessagePreviewParagraph.MessagePreviewParagraph, { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, includeFontPadding: true, mentions: null, children: null });
+        tmp4 = closure_2_19(MessagePreviewParagraph.MessagePreviewParagraph, { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, includeFontPadding: true, mentions: null, children: null });
         const obj3 = { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, includeFontPadding: true, mentions: null, children: null };
         const tmpResult2 = MessagePreviewMarkup;
       }
@@ -140,7 +140,7 @@ function AppRow(isLastRow) {
   if (flag === undefined) {
     flag = false;
   }
-  return expandedHeight(BaseAppRow, { application: section.application, iconSource: AppLauncherNativeUtils.getAppLauncherIconSource(section.application), onPress: isLastRow.onPress, isFirstRow, isLastRow: flag });
+  return closure_1_19(BaseAppRow, { application: section.application, iconSource: AppLauncherNativeUtils.getAppLauncherIconSource(section.application), onPress: isLastRow.onPress, isFirstRow, isLastRow: flag });
 }
 function ActivityRow(section) {
   section = section.section;
@@ -175,7 +175,7 @@ function ActivityRow(section) {
       const obj2 = { content: description, muted: false, layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT, color: "text-muted" };
       const result = MessagePreviewMarkup.renderMeasuredMessagePreviewMarkup(obj2);
       ({ mentions: obj4.mentions, content: obj4.children } = result);
-      tmp3 = expandedHeight(MessagePreviewParagraph.MessagePreviewParagraph, { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, includeFontPadding: true, mentions: null, children: null });
+      tmp3 = closure_2_19(MessagePreviewParagraph.MessagePreviewParagraph, { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, includeFontPadding: true, mentions: null, children: null });
       const obj3 = { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, includeFontPadding: true, mentions: null, children: null };
       const tmpResult = MessagePreviewMarkup;
     }
@@ -193,7 +193,7 @@ function ActivityItemTuple(arg0) {
   items = [containerWidth];
   let size = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "disabled", height: "isArray" };
+      return { width: "Array", height: "Path" };
     } else {
       const tmp5 = roundToNearestPixelDefault(tmp / 2 - DEFAULT_CONTENT_PADDING - 6);
       const size = { width: tmp5, height: roundToNearestPixelDefault(tmp5 / c22) };
@@ -328,7 +328,7 @@ function RecommendationItemTuple(isLastTuple) {
   const items1 = [containerWidth, num];
   styles = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "disabled", height: "isArray" };
+      return { width: "Array", height: "Path" };
     } else {
       const tmp6 = roundToNearestPixelDefault((tmp - 2 * DEFAULT_CONTENT_PADDING - 12 * (2 - 1)) / 2);
       const size = { width: tmp6, height: roundToNearestPixelDefault(tmp6 / c22) };
@@ -339,10 +339,10 @@ function RecommendationItemTuple(isLastTuple) {
   return closure_19(num, {
     style: items2,
     children: items.map((item, index) => {
-      const obj = { style: null, children: expandedHeight(RecommendationItem, { context, sectionName, onPress, item, entrypoint, imageWidth: styles.width, imageHeight: styles.height }) };
+      const obj = { style: null, children: closure_2_19(RecommendationItem, { context, sectionName, onPress, item, entrypoint, imageWidth: styles.width, imageHeight: styles.height }) };
       items = [closure_5.activityItemTupleShelfItemContainer, { width: styles.width }];
       obj.style = items;
-      return expandedHeight(timestampProducer, obj, "" + item.application.id + "-" + index);
+      return closure_2_19(timestampProducer, obj, "" + item.application.id + "-" + index);
     })
   });
 }
@@ -377,7 +377,7 @@ function RecommendationItem(onPress) {
     first = tmp5[0];
   }
   if (first) {
-    let tmp13 = expandedHeight(BrokenImageDefault, {});
+    let tmp13 = closure_1_19(BrokenImageDefault, {});
   } else {
     tmp13 = null;
     if (!tmp12) {
@@ -391,7 +391,7 @@ function RecommendationItem(onPress) {
       };
       const obj7 = { uri: tmp8Result.url };
       obj6.source = obj7;
-      tmp13 = expandedHeight(FastImageDefault, obj6);
+      tmp13 = closure_1_19(FastImageDefault, obj6);
     }
   }
   const obj8 = { style: tmp.activityItemContainer, onPress: callback, children: null };
@@ -411,14 +411,14 @@ function RecommendationItem(onPress) {
     const obj10 = { labelType: null };
     const tmp7Result = ActivityShelfBadgeDefault;
     obj10.labelType = AppLauncherUtils.getShelfBadgeTypeIfActive(application);
-    isActivityAppResult = expandedHeight(tmp7Result, obj10);
+    isActivityAppResult = closure_1_19(tmp7Result, obj10);
     const tmp2Result = AppLauncherUtils;
   }
   items2[1] = isActivityAppResult;
   obj9.children = items2;
   const items3 = [dependencyMap(timestampProducer, obj9), ];
-  const obj11 = { style: tmp.activityDetailsContainer, children: expandedHeight(Text_Text.Text, { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", children: application.name }) };
-  items3[1] = expandedHeight(timestampProducer, obj11);
+  const obj11 = { style: tmp.activityDetailsContainer, children: closure_1_19(Text_Text.Text, { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", children: application.name }) };
+  items3[1] = closure_1_19(timestampProducer, obj11);
   obj8.children = items3;
   return dependencyMap(native.PressableScale, obj8);
 }
@@ -427,7 +427,7 @@ function Divider() {
   const obj = { style: null };
   items = [closure_25().divider, { marginLeft: -DEFAULT_CONTENT_PADDING - rect.left, marginRight: -DEFAULT_CONTENT_PADDING - rect.right }];
   obj.style = items;
-  return expandedHeight(timestampProducer, obj);
+  return closure_1_19(timestampProducer, obj);
 }
 function RecommendationSectionHeader(arg0) {
   ({ index, children } = arg0);
@@ -437,7 +437,7 @@ function RecommendationSectionHeader(arg0) {
     obj = { marginTop: 24 };
   }
   style[1] = obj;
-  return expandedHeight(Text_Text.Text, { accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style, children });
+  return closure_1_19(Text_Text.Text, { accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style, children });
 }
 function getRecommendationItemsWithViewAll(found1, in_this_server, stringResult) {
   _require = in_this_server;

@@ -2,7 +2,7 @@
 
 // Module 8146 (sanitizeChannelName)
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 6364 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 6354 */;
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 8147 */;
 import size from "module_2" /* 2 */;
 

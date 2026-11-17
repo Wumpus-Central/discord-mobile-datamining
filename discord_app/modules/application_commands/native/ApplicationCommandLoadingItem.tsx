@@ -2,7 +2,7 @@
 
 // Module 14815 (ApplicationCommandLoadingItem)
 import nativeDefault from "native" /* 575 */;
-import useFontScale from "useFontScale" /* 5944 */;
+import useFontScale from "useFontScale" /* 5934 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

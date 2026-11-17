@@ -1,11 +1,11 @@
-// === Module 19160: YouBarNameplate ===
+// === Module 19162: YouBarNameplate ===
 
-// Module 19160 (YouBarNameplate)
+// Module 19162 (YouBarNameplate)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import useToken from "useToken" /* 5902 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import useToken from "useToken" /* 5892 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import NameplateDefault from "Nameplate" /* 9508 */;
 import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 17785 */;
 import noop from "module_19" /* 19 */;

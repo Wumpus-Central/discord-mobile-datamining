@@ -3,17 +3,17 @@
 // Module 11866 (reactions/ReactionUtils)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import ReactionUtils from "ReactionUtils" /* 5250 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
 import ReactionActionCreators from "ReactionActionCreators" /* 8863 */;
 import _modDef11879 from "module_11879" /* 11879 */;
 import _modDef11880 from "module_11880" /* 11880 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import MessageStore from "MessageStore" /* 6362 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -24,11 +24,11 @@ const Constants = fn(1072);
 const EmojiIntention = fn(1391).EmojiIntention;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(5920).ReactionTypes.NORMAL] = _modDef11879;
-obj[fn(5920).ReactionTypes.BURST] = _modDef11880;
+obj[fn(5910).ReactionTypes.NORMAL] = _modDef11879;
+obj[fn(5910).ReactionTypes.BURST] = _modDef11880;
 let obj2 = {};
-obj2[fn(5920).ReactionTypes.NORMAL] = fn(10409).ReactionIcon;
-obj2[fn(5920).ReactionTypes.BURST] = fn(9558).SuperReactionIcon;
+obj2[fn(5910).ReactionTypes.NORMAL] = fn(10409).ReactionIcon;
+obj2[fn(5910).ReactionTypes.BURST] = fn(9558).SuperReactionIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
 

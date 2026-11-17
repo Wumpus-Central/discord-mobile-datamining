@@ -1,7 +1,7 @@
 // === Module 12755: tryLaunchAsFrame ===
 
 // Module 12755 (tryLaunchAsFrame)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
 import getFrameSurfaces from "getFrameSurfaces" /* 12697 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 12743 */;
 import openFrameInAppChannelDefault from "openFrameInAppChannel" /* 12756 */;

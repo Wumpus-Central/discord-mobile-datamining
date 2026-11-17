@@ -2,8 +2,8 @@
 
 // Module 16595 (GradientBorder)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import _mod6788 from "module_6788" /* 6788 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import _mod6778 from "module_6778" /* 6778 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

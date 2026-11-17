@@ -2,7 +2,7 @@
 
 // Module 11318 (LightbulbIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11319 from "module_11319" /* 11319 */;
 import noop from "module_19" /* 19 */;
 

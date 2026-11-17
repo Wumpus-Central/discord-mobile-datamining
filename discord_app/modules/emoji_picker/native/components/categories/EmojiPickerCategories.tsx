@@ -3,8 +3,8 @@
 // Module 11315 (EmojiPickerCategories)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
 import FastestListDefault from "FastestList" /* 7830 */;
 import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 11316 */;
 import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 11330 */;

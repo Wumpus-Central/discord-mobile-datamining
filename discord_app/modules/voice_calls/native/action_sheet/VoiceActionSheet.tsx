@@ -1,8 +1,8 @@
 // === Module 16075: VoiceActionSheet ===
 
 // Module 16075 (VoiceActionSheet)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5896 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 16076 */;
@@ -11,7 +11,7 @@ import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 16087 */;
 import VoiceEmptyStateDefault from "VoiceEmptyState" /* 16088 */;
 import VoiceMemberListDefault from "VoiceMemberList" /* 16091 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

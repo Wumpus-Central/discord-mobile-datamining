@@ -18,9 +18,9 @@ import RunningGameStore from "RunningGameStore" /* 2140 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7085 */;
 import IdleStore from "IdleStore" /* 7041 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
-import SpeakingStore from "SpeakingStore" /* 6941 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
+import SpeakingStore from "SpeakingStore" /* 6931 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import Platforms from "Platforms" /* 7087 */;
 
 require = fn;

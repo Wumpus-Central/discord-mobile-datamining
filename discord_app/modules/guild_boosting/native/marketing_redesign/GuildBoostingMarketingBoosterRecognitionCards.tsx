@@ -3,7 +3,7 @@
 // Module 16022 (GuildBoostingMarketingBoosterRecognitionCards)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import ShieldUserIcon from "ShieldUserIcon" /* 8173 */;
 import HeartIcon from "HeartIcon" /* 9458 */;
 import BoostGemIcon from "BoostGemIcon" /* 9981 */;

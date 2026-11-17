@@ -2,7 +2,7 @@
 
 // Module 12342 (ExperimentalWebIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod12343 from "module_12343" /* 12343 */;
 import noop from "module_19" /* 19 */;
 

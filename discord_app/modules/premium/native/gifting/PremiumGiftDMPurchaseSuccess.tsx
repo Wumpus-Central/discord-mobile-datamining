@@ -3,7 +3,7 @@
 // Module 11840 (PremiumGiftDMPurchaseSuccess)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import PremiumGiftModal from "PremiumGiftModal" /* 11662 */;
 import NativeGiftContext from "NativeGiftContext" /* 11664 */;
 import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 11751 */;

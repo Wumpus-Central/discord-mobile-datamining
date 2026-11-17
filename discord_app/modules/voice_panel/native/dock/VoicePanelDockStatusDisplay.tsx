@@ -1,10 +1,10 @@
-// === Module 19201: VoicePanelDockStatusDisplay ===
+// === Module 19203: VoicePanelDockStatusDisplay ===
 
-// Module 19201 (VoicePanelDockStatusDisplay)
+// Module 19203 (VoicePanelDockStatusDisplay)
 import _mod1655 from "module_1655" /* 1655 */;
 import _modDef3253 from "module_3253" /* 3253 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -143,9 +143,9 @@ function StatusText(status) {
   const obj4 = { onLayout: callback, children: null };
   if (null != status.userId) {
     const obj5 = { userId: status.userId, dimmed: "left" === status.kind };
-    let tmp53Result = closure_8(tmp26(19203).DockUserTitle, obj5);
+    let tmp53Result = closure_8(tmp26(19205).DockUserTitle, obj5);
   } else {
-    tmp53Result = closure_8(tmp26(19203).DockChannelTitle, {});
+    tmp53Result = closure_8(tmp26(19205).DockChannelTitle, {});
   }
   obj4.children = tmp53Result;
   const items7 = [closure_8(c5, obj4), ];
@@ -160,7 +160,7 @@ function StatusText(status) {
       str4 = "text-muted";
     }
     const obj7 = { variant: "body-xs/medium", color: str4, lineClamp: 1, children: stringResult1 };
-    obj6.children = closure_8(tmp26(5929).Text, obj7);
+    obj6.children = closure_8(tmp26(5919).Text, obj7);
     tmp53Result2 = closure_8(_modDef1655.View, obj6);
   }
   items7[1] = tmp53Result2;
@@ -450,10 +450,10 @@ function StatusLayer(exit) {
   obj3.style = items5;
   if (null != status.userId) {
     let obj4 = { userId: status.userId, dimmed: "left" === status.kind, entered: tmp12[0] };
-    let tmp32Result = tmp32(tmp2(19203).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(19205).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(19203).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(19205).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
   const items6 = [sharedValue2(_modDef1655.View, obj3), ];
@@ -473,15 +473,15 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(19202);
+const VoicePanelDockStatusStore = fn(19204);
 ({ useDockHasStreamers: closure_6, useDockSubject: metroImportDefault } = VoicePanelDockStatusStore);
 const VoicePanelDockConstants = fn(12009);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const spring = { mass: 0.6, stiffness: 560, damping: 24 };
-fn(5929).TextStyleSheet["body-md/medium"].lineHeight;
-const lineHeight = fn(5929).TextStyleSheet["body-xs/medium"].lineHeight;
+fn(5919).TextStyleSheet["body-md/medium"].lineHeight;
+const lineHeight = fn(5919).TextStyleSheet["body-xs/medium"].lineHeight;
 const createStyles = fn(5306);
 let obj = { display: { flexGrow: 1, flexShrink: 1, height: DOCK_TILE_SIZE }, layer: null, tile: null, textSlot: null, subtext: null };
 let obj3 = {};

@@ -1,10 +1,10 @@
-// === Module 18581: AllowGameFriendDMsSetting ===
+// === Module 18583: AllowGameFriendDMsSetting ===
 
-// Module 18581 (AllowGameFriendDMsSetting)
+// Module 18583 (AllowGameFriendDMsSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;
-import useIsAllowGameFriendDMsSettingVisible from "useIsAllowGameFriendDMsSettingVisible" /* 18582 */;
+import useIsAllowGameFriendDMsSettingVisible from "useIsAllowGameFriendDMsSettingVisible" /* 18584 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 

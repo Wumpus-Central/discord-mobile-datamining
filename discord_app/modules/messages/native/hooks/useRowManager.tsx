@@ -1,7 +1,7 @@
 // === Module 14558: useRowManager ===
 
 // Module 14558 (useRowManager)
-import Client from "Client" /* 5543 */;
+import Client from "Client" /* 5533 */;
 import NativeChatUtilsDefault from "NativeChatUtils" /* 11882 */;
 import createChannelStreamDefault from "createChannelStream" /* 14559 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 18038: SyncProfileColorsSetting ===
+// === Module 18040: SyncProfileColorsSetting ===
 
-// Module 18038 (SyncProfileColorsSetting)
+// Module 18040 (SyncProfileColorsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;

@@ -133,7 +133,7 @@ export default function GuildEventRecurrence(recurrenceId) {
       const obj7 = { variant: "body-sm/semibold", color: "text-feedback-critical", children: null };
       const intl2 = tmp2(1113).intl;
       obj7.children = intl2.string(tmp2(1113).t.fyBVRm);
-      tmp21Result = closure_8(tmp2(5929).Text, obj7);
+      tmp21Result = closure_8(tmp2(5919).Text, obj7);
     }
     const items6 = [tmp21Result, ];
     const obj8 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };

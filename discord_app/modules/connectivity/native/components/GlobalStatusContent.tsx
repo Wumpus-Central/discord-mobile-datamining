@@ -3,7 +3,7 @@
 // Module 12918 (GlobalStatusContent)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useThemeDefault from "useTheme" /* 5547 */;
+import useThemeDefault from "useTheme" /* 5537 */;
 import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 10818 */;
 import StatusBarDefault from "StatusBar" /* 11827 */;
 import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11949 */;
@@ -13,8 +13,8 @@ import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 12919 
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import SessionsStore from "SessionsStore" /* 6073 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import SessionsStore from "SessionsStore" /* 6063 */;
 
 const require = globalThis.__r;
 
@@ -105,8 +105,8 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(5492).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(5492);
+    isScreenLandscape = tmp5(5482).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(5482);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1380).isAndroid();

@@ -7,8 +7,8 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 function handleUpdateVADPermission() {
   const channelId = RTCConnectionStore.getChannelId();

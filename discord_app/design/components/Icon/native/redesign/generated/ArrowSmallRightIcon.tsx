@@ -2,7 +2,7 @@
 
 // Module 10920 (ArrowSmallRightIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10921 from "module_10921" /* 10921 */;
 import noop from "module_19" /* 19 */;
 

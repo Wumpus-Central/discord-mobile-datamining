@@ -1,6 +1,6 @@
-// === Module 18377: DevToolsAccountLinkingScreen ===
+// === Module 18379: DevToolsAccountLinkingScreen ===
 
-// Module 18377 (DevToolsAccountLinkingScreen)
+// Module 18379 (DevToolsAccountLinkingScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7259 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7221 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -171,7 +171,7 @@ export default function DevToolsAccountLinkingScreen() {
     }
     const obj14 = { label: "Connection Entrypoint URL", trailing: null };
     obj13.children = str7;
-    obj14.trailing = closure_11(tmp8(5929).Text, obj13);
+    obj14.trailing = closure_11(tmp8(5919).Text, obj13);
     const items8 = [closure_11(tmp8(7443).TableRow, obj14), , ];
     let str8 = "text-muted";
     if (hasAlreadyLinked) {
@@ -185,7 +185,7 @@ export default function DevToolsAccountLinkingScreen() {
     const obj16 = { title: "Authorization", hasIcons: false, children: null };
     const obj17 = { label: "Already Linked", trailing: null };
     obj15.children = str9;
-    obj17.trailing = closure_11(tmp8(5929).Text, obj15);
+    obj17.trailing = closure_11(tmp8(5919).Text, obj15);
     items8[1] = closure_11(tmp8(7443).TableRow, obj17);
     const obj18 = { style: tmp.buttonRow, children: null };
     const obj19 = {
@@ -196,9 +196,9 @@ export default function DevToolsAccountLinkingScreen() {
       variant: "primary",
       text: "Start Authorization"
     };
-    const items9 = [closure_11(tmp8(5936).Button, obj19), ];
+    const items9 = [closure_11(tmp8(5926).Button, obj19), ];
     const obj20 = { disabled: !tmp15, onPress: callback, variant: "critical-primary", text: "Deauthorize" };
-    items9[1] = closure_11(tmp8(5936).Button, obj20);
+    items9[1] = closure_11(tmp8(5926).Button, obj20);
     obj18.children = items9;
     items8[2] = closure_12(closure_6, obj18);
     obj16.children = items8;
@@ -218,7 +218,7 @@ export default function DevToolsAccountLinkingScreen() {
         const obj24 = { uri: connectionApp.applicationAccountLinkBenefitConfig.reward_image };
         obj23.source = obj24;
         obj23.style = tmp.rewardImage;
-        obj21.children = closure_11(tmp2(6020), obj23);
+        obj21.children = closure_11(tmp2(6010), obj23);
         tmp18Result = closure_11(closure_6, obj21);
       }
       const items10 = [tmp18Result, ];

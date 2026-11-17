@@ -2,7 +2,7 @@
 
 // Module 16409 (GameOrganizationInviteRow)
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
 import TableRow from "TableRow" /* 7443 */;
 import DiscordTagDefault from "DiscordTag" /* 10930 */;
 import InviteButtonDefault from "InviteButton" /* 12567 */;

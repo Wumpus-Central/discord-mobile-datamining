@@ -1,13 +1,13 @@
-// === Module 19050: FavoritesGuildChannelList ===
+// === Module 19052: FavoritesGuildChannelList ===
 
-// Module 19050 (FavoritesGuildChannelList)
+// Module 19052 (FavoritesGuildChannelList)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import ChannelListState from "ChannelListState" /* 8731 */;
 import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 10974 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7029 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 7014 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5240 */;
@@ -18,7 +18,7 @@ import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 import FavoriteStore from "FavoriteStore" /* 5158 */;
 
 const require = globalThis.__r;

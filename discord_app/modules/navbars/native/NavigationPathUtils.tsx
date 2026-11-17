@@ -2,7 +2,7 @@
 
 // Module 15140 (NavigationPathUtils)
 import Constants from "Constants" /* 1072 */;
-import _mod5360 from "module_5360" /* 5360 */;
+import _mod5350 from "module_5350" /* 5350 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -16,7 +16,7 @@ export function getSelectedSpecialNavigationPath(pathname) {
   }
 }
 export function useSelectedSpecialNavigationPath() {
-  const obj = _mod5360;
+  const obj = _mod5350;
   let FRIENDS;
   if (obj.useLocation().pathname === Routes.FRIENDS) {
     FRIENDS = obj.FRIENDS;

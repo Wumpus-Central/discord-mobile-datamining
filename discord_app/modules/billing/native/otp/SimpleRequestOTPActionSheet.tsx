@@ -1,6 +1,6 @@
-// === Module 18337: SimpleRequestOTPActionSheet ===
+// === Module 18339: SimpleRequestOTPActionSheet ===
 
-// Module 18337 (SimpleRequestOTPActionSheet)
+// Module 18339 (SimpleRequestOTPActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8484 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 8497 */;
@@ -299,13 +299,13 @@ function GiftPurchaseSKUView(selectedSkuId) {
     }
   }
   items6[14] = str;
-  const items7 = [closure_11(selectedSkuId(5929).Text, { variant: "body-md/medium", color: "text-overlay-light", children: items6 }), , ];
+  const items7 = [closure_11(selectedSkuId(5919).Text, { variant: "body-md/medium", color: "text-overlay-light", children: items6 }), , ];
   let str4 = "Send Gift";
   if (isFetching) {
     str4 = "Loading...";
   }
   let obj9 = {
-    children: closure_12(selectedSkuId(5936).Button, {
+    children: closure_12(selectedSkuId(5926).Button, {
       variant: "primary",
       text: str4,
       onPress: function submitGiftPurchase() {
@@ -326,11 +326,11 @@ function GiftPurchaseSKUView(selectedSkuId) {
   const obj12 = { variant: "body-md/medium", color: "text-overlay-light", children: null };
   const items8 = ["Select style: ", giftStyle];
   obj12.children = items8;
-  const items9 = [closure_11(selectedSkuId(5929).Text, obj12), closure_12(first(11750), {})];
+  const items9 = [closure_11(selectedSkuId(5919).Text, obj12), closure_12(first(11750), {})];
   obj11.children = items9;
   items7[2] = closure_11(selectedSkuId(7445).Card, obj11);
   obj8.children = items7;
-  return closure_11(selectedSkuId(6337).Stack, obj8);
+  return closure_11(selectedSkuId(6327).Stack, obj8);
 }
 function SimpleRequestOTPActionSheet(giftMessage) {
   ({ selectedSkuId, requestType, giftRecipientId } = giftMessage);
@@ -357,7 +357,7 @@ function SimpleRequestOTPActionSheet(giftMessage) {
         let tmp8 = closure_12;
       }
       const obj4 = { children: tmp6Result };
-      return tmp8(tmp(5566).BottomSheet, obj4);
+      return tmp8(tmp(5556).BottomSheet, obj4);
     }
   }
   tmp8 = closure_12;

@@ -1,10 +1,10 @@
-// === Module 20794: VoicePanelManager ===
+// === Module 20797: VoicePanelManager ===
 
-// Module 20794 (VoicePanelManager)
+// Module 20797 (VoicePanelManager)
 import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11951 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import VoicePanelStore from "VoicePanelStore" /* 6901 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import VoicePanelStore from "VoicePanelStore" /* 6891 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 require = fn;

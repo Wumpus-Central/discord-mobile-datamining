@@ -2,7 +2,7 @@
 
 // Module 7549 (XSmallIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod7550 from "module_7550" /* 7550 */;
 import noop from "module_19" /* 19 */;
 

@@ -2,7 +2,7 @@
 
 // Module 17110 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import BadgeUtils from "BadgeUtils" /* 10113 */;
 import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 15276 */;
 import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 17111 */;

@@ -1,7 +1,7 @@
 // === Module 16195: ConnectionOpenTriggerPoint ===
 
 // Module 16195 (ConnectionOpenTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 5533 */;
+import ExperimentConstants from "ExperimentConstants" /* 5523 */;
 import Helpers from "Helpers" /* 9715 */;
 import ContentInventoryExperiments from "ContentInventoryExperiments" /* 16196 */;
 import size from "module_2" /* 2 */;

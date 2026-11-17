@@ -3,10 +3,10 @@
 // Module 10111 (BadgeDetailsSheet)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 6037 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6027 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8552 */;
 import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10110 */;
 import BadgeUtils from "BadgeUtils" /* 10113 */;
@@ -596,7 +596,7 @@ function BadgeDetailsPage(badgeId) {
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-let closure_12 = fn(5567).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_12 = fn(5557).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const createStyles = fn(5306);

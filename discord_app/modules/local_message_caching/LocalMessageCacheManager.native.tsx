@@ -15,7 +15,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import MessageRecord from "MessageRecord" /* 5249 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 
 require = fn;
@@ -985,7 +985,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6795);
+                let obj9 = values(6785);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

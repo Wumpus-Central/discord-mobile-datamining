@@ -3,7 +3,7 @@
 // Module 14694 (GuildSearchAndInvite)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useAlertStore from "useAlertStore" /* 6270 */;
+import useAlertStore from "useAlertStore" /* 6260 */;
 import useStableCallbackDefault from "useStableCallback" /* 7790 */;
 import IconButton from "IconButton" /* 7988 */;
 import _modDef8458 from "module_8458" /* 8458 */;
@@ -107,7 +107,7 @@ function GuildSearchAndInvite(guildId) {
   return closure_13(onEventsPress, tmp14);
 }
 const View = fn(17).View;
-const SEARCH_BAR_MARGIN_BOTTOM = fn(6060).SEARCH_BAR_MARGIN_BOTTOM;
+const SEARCH_BAR_MARGIN_BOTTOM = fn(6050).SEARCH_BAR_MARGIN_BOTTOM;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);

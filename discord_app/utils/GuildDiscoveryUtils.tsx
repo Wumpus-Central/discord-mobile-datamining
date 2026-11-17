@@ -6,7 +6,7 @@ import HTTPUtils from "HTTPUtils" /* 1285 */;
 import _modDef1490 from "module_1490" /* 1490 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LurkingStore from "LurkingStore" /* 5239 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import GuildStore from "GuildStore" /* 5177 */;
 
 require = fn;

@@ -7,7 +7,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2141 */;
 import GuildMembershipStore from "GuildMembershipStore" /* 5157 */;
-import InviteStore from "InviteStore" /* 6052 */;
+import InviteStore from "InviteStore" /* 6042 */;
 
 const require = globalThis.__r;
 

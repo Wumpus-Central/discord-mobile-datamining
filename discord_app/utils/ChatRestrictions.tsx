@@ -51,7 +51,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "alignItems"
+    animation: "channelId"
   },
   {
     check(arg0) {

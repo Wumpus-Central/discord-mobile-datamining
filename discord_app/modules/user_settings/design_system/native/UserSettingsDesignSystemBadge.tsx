@@ -1,10 +1,10 @@
-// === Module 18455: UserSettingsDesignSystemBadge ===
+// === Module 18457: UserSettingsDesignSystemBadge ===
 
-// Module 18455 (UserSettingsDesignSystemBadge)
+// Module 18457 (UserSettingsDesignSystemBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import Card from "Card" /* 7445 */;
 import Badge from "Badge" /* 7459 */;
 import TextInput from "TextInput" /* 7619 */;

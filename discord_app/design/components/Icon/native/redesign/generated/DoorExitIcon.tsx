@@ -2,7 +2,7 @@
 
 // Module 12295 (DoorExitIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod12296 from "module_12296" /* 12296 */;
 import noop from "module_19" /* 19 */;
 

@@ -5,8 +5,8 @@ import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
-import useToken from "useToken" /* 5902 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import useToken from "useToken" /* 5892 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8496 */;
 import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9500 */;
 import _modDef9501 from "module_9501" /* 9501 */;
@@ -72,7 +72,7 @@ function ProductPreviewInner(cardHeight) {
     const obj4 = { uri: cardHeight(10422) };
     obj3.source = obj4;
     obj3.style = tmp.externalProductImage;
-    return closure_7(cardHeight(6020), obj3);
+    return closure_7(cardHeight(6010), obj3);
   } else {
     const ALL = cardWidth(1075).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {

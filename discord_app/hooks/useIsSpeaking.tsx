@@ -1,10 +1,10 @@
 // === Module 7026: useIsSpeaking ===
 
 // Module 7026 (useIsSpeaking)
-import SoundboardStore from "SoundboardStore" /* 6369 */;
+import SoundboardStore from "SoundboardStore" /* 6359 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SpeakingStore from "SpeakingStore" /* 6941 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import SpeakingStore from "SpeakingStore" /* 6931 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const require = globalThis.__r;
 

@@ -5,7 +5,7 @@ import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7918 */;

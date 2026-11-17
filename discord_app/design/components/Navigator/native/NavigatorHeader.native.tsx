@@ -3,9 +3,9 @@
 // Module 7493 (NavigatorHeader)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import NavigatorConstants from "NavigatorConstants" /* 5892 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useFontScale from "useFontScale" /* 5944 */;
+import NavigatorConstants from "NavigatorConstants" /* 5882 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useFontScale from "useFontScale" /* 5934 */;
 import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7494 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7497 */;
 import _mod7500 from "module_7500" /* 7500 */;
@@ -100,7 +100,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5306);
 let obj2 = { fauxHeaderWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" }, headerTitle: null, headerBackTitleStyle: null, navigatorHeaderTitleContainer: null, navigatorHeaderContainer: null, navigatorHeaderSubtitle: null, headerButtonIcon: null, submittingIndicator: null };
 let obj4 = {};
-let merged = Object.assign(fn(5929).TextStyleSheet["heading-md/semibold"]);
+let merged = Object.assign(fn(5919).TextStyleSheet["heading-md/semibold"]);
 obj4.color = nativeDefault.colors.TEXT_STRONG;
 obj2.headerTitle = obj4;
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };

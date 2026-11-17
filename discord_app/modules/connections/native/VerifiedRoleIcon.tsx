@@ -2,7 +2,7 @@
 
 // Module 7957 (VerifiedRoleIcon)
 import nativeDefault from "native" /* 575 */;
-import LinkIcon from "LinkIcon" /* 6029 */;
+import LinkIcon from "LinkIcon" /* 6019 */;
 import useRoleIconProps from "useRoleIconProps" /* 7941 */;
 import getHigherContrastColor from "getHigherContrastColor" /* 7958 */;
 import RoleIconDefault from "RoleIcon" /* 7959 */;

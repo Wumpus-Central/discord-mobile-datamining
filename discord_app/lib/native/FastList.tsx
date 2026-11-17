@@ -5,7 +5,7 @@ import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import BottomSheetModal from "BottomSheetModal" /* 5570 */;
+import BottomSheetModal from "BottomSheetModal" /* 5560 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7849 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

@@ -4,7 +4,7 @@
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import native2 from "native" /* 5377 */;
+import native2 from "native" /* 5367 */;
 import Pressables from "Pressables" /* 7428 */;
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12958 */;
 import noop from "module_19" /* 19 */;
@@ -36,9 +36,9 @@ let obj2 = { headerButton: null, disabledOpacity: null, chatIconContainer: null,
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, alignSelf: "center", padding: 6, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 obj2.headerButton = size;
 obj2.disabledOpacity = { opacity: 0.6 };
-obj2.chatIconContainer = { marginRight: 12, height: fn(5892).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+obj2.chatIconContainer = { marginRight: 12, height: fn(5882).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
-const obj3 = { marginRight: 12, height: fn(5892).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+const obj3 = { marginRight: 12, height: fn(5882).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);

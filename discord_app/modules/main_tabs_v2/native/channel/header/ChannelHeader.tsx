@@ -3,8 +3,8 @@
 // Module 15638 (ChannelHeader)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
 import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 12404 */;
 import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 15639 */;
 import HomeChannelHeaderDefault from "HomeChannelHeader" /* 15640 */;
@@ -38,7 +38,7 @@ export default function ChannelHeader(channelId) {
   items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(563);
-  const isChannelContentGated = channelId(6838).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(6828).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;

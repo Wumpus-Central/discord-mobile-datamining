@@ -3,7 +3,7 @@
 // Module 9177 (GuildSpaceSystemMessageUtils)
 import util from "util" /* 1113 */;
 import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5226 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 9178 */;
 import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 9179 */;
 import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 9180 */;

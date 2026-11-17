@@ -1,15 +1,15 @@
-// === Module 20366: ParentalConsentWarningModal ===
+// === Module 20369: ParentalConsentWarningModal ===
 
-// Module 20366 (ParentalConsentWarningModal)
+// Module 20369 (ParentalConsentWarningModal)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 5140 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6850 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
+import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6840 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8742 */;
 import noop from "module_19" /* 19 */;
@@ -98,7 +98,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       ModalDispatchQueueDefault.enqueue(() => daysRemaining(callback[10]).openUserSettings({ screen: constants3.FAMILY_CENTER }));
       const tmp2Result3 = ModalDispatchQueueDefault;
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20367, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20370, dependencyMap.paths));
       const tmp2Result4 = ModalActionCreatorsDefault;
     }
   }, items2);

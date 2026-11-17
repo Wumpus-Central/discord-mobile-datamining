@@ -1,9 +1,9 @@
-// === Module 18402: DesignSystemsSetting ===
+// === Module 18404: DesignSystemsSetting ===
 
-// Module 18402 (DesignSystemsSetting)
+// Module 18404 (DesignSystemsSetting)
 import Constants from "Constants" /* 1072 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 17881 */;
-import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 18403 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 17883 */;
+import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 18405 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 

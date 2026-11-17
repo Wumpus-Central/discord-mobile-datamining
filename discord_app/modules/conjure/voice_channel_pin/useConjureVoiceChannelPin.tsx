@@ -1,7 +1,7 @@
 // === Module 13639: useConjureVoiceChannelPin ===
 
 // Module 13639 (useConjureVoiceChannelPin)
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 13157 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

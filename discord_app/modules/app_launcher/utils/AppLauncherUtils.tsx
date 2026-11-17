@@ -6,8 +6,8 @@ import PlatformUtils from "PlatformUtils" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import Server from "Server" /* 2119 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2151 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
-import getPlatformDefault from "getPlatform" /* 5984 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
+import getPlatformDefault from "getPlatform" /* 5974 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7057 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8724 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 12579 */;
@@ -67,7 +67,7 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1072).ApplicationFlags;
-const BuiltInSectionId = fn(6345).BuiltInSectionId;
+const BuiltInSectionId = fn(6335).BuiltInSectionId;
 const MessageSendLocation = fn(5311).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");

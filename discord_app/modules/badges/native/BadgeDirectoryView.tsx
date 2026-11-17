@@ -2,7 +2,7 @@
 
 // Module 15275 (BadgeDirectoryView)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8552 */;
 import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10110 */;
 import BadgeUtils from "BadgeUtils" /* 10113 */;
@@ -229,15 +229,15 @@ export default function BadgeDirectoryView(arg0) {
         const obj6 = { variant: "body-md/semibold", children: null };
         const intl3 = targetUsername(1113).intl;
         obj6.children = intl3.string(targetUsername(1113).t.iufib1);
-        const items14 = [closure_10(targetUsername(5929).Text, obj6), , ];
+        const items14 = [closure_10(targetUsername(5919).Text, obj6), , ];
         const obj7 = { variant: "body-md/normal", color: "text-subtle", children: null };
         const intl4 = targetUsername(1113).intl;
         obj7.children = intl4.string(targetUsername(1113).t.eAn6z2);
-        items14[1] = closure_10(targetUsername(5929).Text, obj7);
+        items14[1] = closure_10(targetUsername(5919).Text, obj7);
         const obj9 = { variant: "secondary", size: "sm", onPress: callback, text: null };
         const intl5 = targetUsername(1113).intl;
         obj9.text = intl5.string(targetUsername(1113).t["7NqTJn"]);
-        items14[2] = closure_10(targetUsername(5936).Button, obj9);
+        items14[2] = closure_10(targetUsername(5926).Button, obj9);
         obj5.children = items14;
         return closure_11(isBadgeUnreadStateEnabled, obj5);
       }
@@ -279,7 +279,7 @@ export default function BadgeDirectoryView(arg0) {
       string = intl9.string;
       stringResult1 = string(targetUsername(1113).t.msyp90);
       obj16.text = stringResult1;
-      items = closure_10(targetUsername(5936).Button, obj16);
+      items = closure_10(targetUsername(5926).Button, obj16);
       obj15.children = items;
       isBadgeManagementEnabled = closure_10(tmp30, obj15);
     } else {
@@ -291,7 +291,7 @@ export default function BadgeDirectoryView(arg0) {
         const obj18 = { variant: "secondary", onPress: callback1, text: null };
         const intl8 = targetUsername(1113).intl;
         obj18.text = intl8.string(targetUsername(1113).t["6CLLyH"]);
-        obj17.children = closure_10(targetUsername(5936).Button, obj18);
+        obj17.children = closure_10(targetUsername(5926).Button, obj18);
         isBadgeManagementEnabled = closure_10(tmp30, obj17);
       }
     }

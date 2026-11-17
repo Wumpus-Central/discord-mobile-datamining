@@ -1,9 +1,9 @@
-// === Module 18225: CompassIcon ===
+// === Module 18227: CompassIcon ===
 
-// Module 18225 (CompassIcon)
+// Module 18227 (CompassIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
-import _mod18226 from "module_18226" /* 18226 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
+import _mod18228 from "module_18228" /* 18228 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function CompassIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18226, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18228, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

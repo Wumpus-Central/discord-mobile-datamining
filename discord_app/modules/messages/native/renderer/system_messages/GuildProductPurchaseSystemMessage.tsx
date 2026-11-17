@@ -4,7 +4,7 @@
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
-import useMessageAuthor from "useMessageAuthor" /* 6749 */;
+import useMessageAuthor from "useMessageAuthor" /* 6739 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9188 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9190 */;
 import createCommonMessageDefault from "createCommonMessage" /* 9192 */;

@@ -1,11 +1,11 @@
-// === Module 18843: VoiceUserItem ===
+// === Module 18845: VoiceUserItem ===
 
-// Module 18843 (VoiceUserItem)
+// Module 18845 (VoiceUserItem)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6061 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6051 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

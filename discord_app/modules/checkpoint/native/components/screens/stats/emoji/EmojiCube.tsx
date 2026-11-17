@@ -41,7 +41,7 @@ const importDefaultResultResult = _slicedToArray(createFaceTransforms(items, ite
 const importDefaultResultResult1 = _slicedToArray(createFaceTransforms(items1, items2, items4), 2);
 [tmp10, tmp11] = createFaceTransforms(items, items2, items1);
 const createStyles = fn(5306);
-let obj2 = { container: { position: "relative", width: 200, height: 200 }, face: { position: "absolute", top: 0, left: 0, width: 200, height: 200 }, emoji: { position: "absolute", top: 0, left: 0, width: 200, height: 200, borderWidth: 2, borderColor: fn(6377).CHECKPOINT_PRIMARY, overflow: "hidden" }, customEmoji: { width: 196, height: 196 }, textEmoji: null, topFace: null, leftFace: null, rightFace: null, topEmoji: null, leftEmoji: null, rightEmoji: null };
+let obj2 = { container: { position: "relative", width: 200, height: 200 }, face: { position: "absolute", top: 0, left: 0, width: 200, height: 200 }, emoji: { position: "absolute", top: 0, left: 0, width: 200, height: 200, borderWidth: 2, borderColor: fn(6367).CHECKPOINT_PRIMARY, overflow: "hidden" }, customEmoji: { width: 196, height: 196 }, textEmoji: null, topFace: null, leftFace: null, rightFace: null, topEmoji: null, leftEmoji: null, rightEmoji: null };
 let PlatformUtils = fn(1360);
 let num = 196;
 if (PlatformUtils.isIOS()) {

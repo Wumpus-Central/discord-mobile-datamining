@@ -1,7 +1,7 @@
-// === Module 20027: ActivityShelfItemBackground ===
+// === Module 20029: ActivityShelfItemBackground ===
 
-// Module 20027 (ActivityShelfItemBackground)
-import FastImageDefault from "FastImage" /* 6020 */;
+// Module 20029 (ActivityShelfItemBackground)
+import FastImageDefault from "FastImage" /* 6010 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import BrokenImageDefault from "BrokenImage" /* 13416 */;
 import _slicedToArray from "module_32" /* 32 */;

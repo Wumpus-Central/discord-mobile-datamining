@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9579 */;
 import _modDef11380 from "module_11380" /* 11380 */;
@@ -143,7 +143,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj.style = items;
   let obj2 = { style: tmp.closeContainer, children: null };
   let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(6340);
+  const tmp3Result = analyticsLocations(6330);
   obj3.children = closure_13(native.Icon, { source: analyticsLocations(7430) });
   obj2.children = closure_13(Pressables.PressableOpacity, obj3);
   const items1 = [closure_13(closure_4, obj2), ];
@@ -158,7 +158,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj4 = { source: analyticsLocations(7430) };
   obj6.source = analyticsLocations(11383);
   obj6.style = tmp.imageHeader;
-  const items2 = [closure_13(analyticsLocations(6020), obj6), , ];
+  const items2 = [closure_13(analyticsLocations(6010), obj6), , ];
   const obj7 = { style: tmp.description, variant: "body-md/medium", children: null };
   const intl3 = util.intl;
   if (priceString == null) {
@@ -167,7 +167,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj8 = { children: null };
   obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_13(Text_Text.Text, obj7);
-  const tmp3Result2 = analyticsLocations(6020);
+  const tmp3Result2 = analyticsLocations(6010);
   items2[2] = closure_13(closure_4, { style: tmp.perks, children: items.map((perk, index) => closure_1_13(PerkRow, { perk, isLastPerk: index === length.length - 1 }, index)) });
   obj5.children = items2;
   obj8.children = closure_14(closure_4, obj5);

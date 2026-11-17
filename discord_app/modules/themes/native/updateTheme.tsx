@@ -1,6 +1,6 @@
-// === Module 19857: updateTheme ===
+// === Module 19859: updateTheme ===
 
-// Module 19857 (updateTheme)
+// Module 19859 (updateTheme)
 import NativeThemeModuleDefault from "NativeThemeModule" /* 16891 */;
 import size from "module_2" /* 2 */;
 

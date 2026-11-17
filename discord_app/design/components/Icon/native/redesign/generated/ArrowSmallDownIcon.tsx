@@ -2,7 +2,7 @@
 
 // Module 14033 (ArrowSmallDownIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod14034 from "module_14034" /* 14034 */;
 import noop from "module_19" /* 19 */;
 

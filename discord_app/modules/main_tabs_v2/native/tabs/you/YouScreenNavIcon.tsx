@@ -3,8 +3,8 @@
 // Module 10525 (YouScreenNavIcon)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import mergeProps from "mergeProps" /* 5483 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import mergeProps from "mergeProps" /* 5473 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import native from "native" /* 7997 */;
 import ClipViewDefault from "ClipView" /* 9503 */;
 import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 10527 */;

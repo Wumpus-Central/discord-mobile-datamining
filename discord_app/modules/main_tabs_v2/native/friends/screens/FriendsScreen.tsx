@@ -1,16 +1,16 @@
-// === Module 19591: FriendsScreen ===
+// === Module 19593: FriendsScreen ===
 
-// Module 19591 (FriendsScreen)
+// Module 19593 (FriendsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2020 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import SendMessageIcon from "SendMessageIcon" /* 6031 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import SendMessageIcon from "SendMessageIcon" /* 6021 */;
 import TableRow from "TableRow" /* 7443 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import NoResultsDefault from "NoResults" /* 11788 */;
 import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 17717 */;
-import _modDef19272 from "module_19272" /* 19272 */;
+import _modDef19274 from "module_19274" /* 19274 */;
 import noop from "module_19" /* 19 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 8765 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
@@ -80,7 +80,7 @@ export default function FriendsScreen() {
     }
     items = [];
     if (tmp2) {
-      const obj = { icon: _modDef19272, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef19274, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -123,7 +123,7 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef19272 };
+      const obj8 = { source: _modDef19274 };
       obj7.icon = metroImportDefault(TableRow.TableRow.Icon, obj8);
       obj7.trailing = metroImportDefault(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

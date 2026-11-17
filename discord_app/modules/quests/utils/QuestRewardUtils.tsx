@@ -3,7 +3,7 @@
 // Module 10151 (QuestRewardUtils)
 import util from "util" /* 1113 */;
 import _mod4731 from "module_4731" /* 4731 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import QuestDataUtils from "QuestDataUtils" /* 8804 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 8813 */;
 import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 10152 */;

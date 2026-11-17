@@ -7,7 +7,7 @@ import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5240 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = fn;

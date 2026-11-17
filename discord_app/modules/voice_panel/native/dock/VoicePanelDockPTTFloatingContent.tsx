@@ -1,13 +1,13 @@
-// === Module 19231: VoicePanelDockPTTFloatingContent ===
+// === Module 19233: VoicePanelDockPTTFloatingContent ===
 
-// Module 19231 (VoicePanelDockPTTFloatingContent)
+// Module 19233 (VoicePanelDockPTTFloatingContent)
 import native from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import shared from "shared" /* 5313 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5896 */;
 import MicrophoneIcon from "MicrophoneIcon" /* 13048 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19204 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19206 */;
 import noop from "module_19" /* 19 */;
 
 const nativeDefault = native;

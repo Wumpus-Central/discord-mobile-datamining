@@ -12,7 +12,7 @@ import noop from "module_19" /* 19 */;
 import OrderRecord from "OrderRecord" /* 9593 */;
 
 require = fn;
-const OrderStatus = fn(6050).OrderStatus;
+const OrderStatus = fn(6040).OrderStatus;
 [exports.NativeCheckoutStoreContext, closure_7] = ContextUtilsDefault();
 let context = noop.createContext("unset_context");
 const size = fn(2);

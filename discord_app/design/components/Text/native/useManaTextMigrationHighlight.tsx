@@ -1,10 +1,10 @@
-// === Module 5931: useManaTextMigrationHighlight ===
+// === Module 5921: useManaTextMigrationHighlight ===
 
-// Module 5931 (useManaTextMigrationHighlight)
+// Module 5921 (useManaTextMigrationHighlight)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import DevSettingsStore from "DevSettingsStore" /* 5932 */;
+import DevSettingsStore from "DevSettingsStore" /* 5922 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import createStyles from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;

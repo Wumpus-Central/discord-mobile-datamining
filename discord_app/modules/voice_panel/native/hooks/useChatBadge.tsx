@@ -1,6 +1,6 @@
-// === Module 20006: useChatBadge ===
+// === Module 20008: useChatBadge ===
 
-// Module 20006 (useChatBadge)
+// Module 20008 (useChatBadge)
 import ReadStateStore from "ReadStateStore" /* 7015 */;
 
 const require = globalThis.__r;

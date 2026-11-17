@@ -1,8 +1,8 @@
-// === Module 17913: SettingsAppearanceActivityCardsItem ===
+// === Module 17915: SettingsAppearanceActivityCardsItem ===
 
-// Module 17913 (SettingsAppearanceActivityCardsItem)
+// Module 17915 (SettingsAppearanceActivityCardsItem)
 import nativeDefault from "native" /* 575 */;
-import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 17914 */;
+import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 17916 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

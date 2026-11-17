@@ -2,7 +2,7 @@
 
 // Module 15781 (UserCheckIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9326 from "module_9326" /* 9326 */;
 import noop from "module_19" /* 19 */;
 

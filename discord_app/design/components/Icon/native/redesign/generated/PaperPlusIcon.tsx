@@ -2,7 +2,7 @@
 
 // Module 10976 (PaperPlusIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10977 from "module_10977" /* 10977 */;
 import noop from "module_19" /* 19 */;
 

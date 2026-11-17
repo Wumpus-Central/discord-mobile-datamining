@@ -90,7 +90,7 @@ TouchableHitBox.prototype["render"] = function render() {
   obj6.children = tmp8Result;
   return jsx(Pressables.PressableOpacity, { accessibilityRole, accessibilityLabel, accessibilityState, onPress, onLongPress, activeOpacity, style: null, disabled: null, children: null });
 };
-TouchableHitBox.contextType = fn(5377).ThemeContext;
+TouchableHitBox.contextType = fn(5367).ThemeContext;
 TouchableHitBox.defaultProps = {
   onPress() {
 

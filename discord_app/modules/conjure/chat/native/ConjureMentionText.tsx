@@ -1,7 +1,7 @@
 // === Module 13631: ConjureMentionText ===
 
 // Module 13631 (ConjureMentionText)
-import UserUtils from "UserUtils" /* 5372 */;
+import UserUtils from "UserUtils" /* 5362 */;
 import ConjureFileMentionDefault from "ConjureFileMention" /* 13225 */;
 import conjureMentions from "conjureMentions" /* 13621 */;
 import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 13628 */;

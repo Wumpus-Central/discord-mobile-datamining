@@ -1,7 +1,7 @@
 // === Module 16624: NitroWheel ===
 
 // Module 16624 (NitroWheel)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef11214 from "module_11214" /* 11214 */;
 import noop from "module_19" /* 19 */;
 

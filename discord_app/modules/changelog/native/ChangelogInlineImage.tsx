@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import GifTagDefault from "GifTag" /* 8621 */;
 import ChangelogImageUtils from "ChangelogImageUtils" /* 9354 */;
 import _slicedToArray from "module_32" /* 32 */;

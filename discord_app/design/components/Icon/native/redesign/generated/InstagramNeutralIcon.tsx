@@ -2,7 +2,7 @@
 
 // Module 9363 (InstagramNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9364 from "module_9364" /* 9364 */;
 import noop from "module_19" /* 19 */;
 

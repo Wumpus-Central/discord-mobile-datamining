@@ -1,10 +1,10 @@
-// === Module 18218: DevToolsLocalMessageCache ===
+// === Module 18220: DevToolsLocalMessageCache ===
 
-// Module 18218 (DevToolsLocalMessageCache)
+// Module 18220 (DevToolsLocalMessageCache)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import MessageCacheStatsDefault from "MessageCacheStats" /* 8691 */;

@@ -4,8 +4,8 @@
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import StickersUtils from "StickersUtils" /* 6792 */;
-import StickersTypes from "StickersTypes" /* 6793 */;
+import StickersUtils from "StickersUtils" /* 6782 */;
+import StickersTypes from "StickersTypes" /* 6783 */;
 import useManageResourcePermissions from "useManageResourcePermissions" /* 8030 */;
 import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10575 */;
 import StickersActionCreators from "StickersActionCreators" /* 11358 */;
@@ -13,8 +13,8 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 import UserStore from "UserStore" /* 1388 */;
 import StickersPersistedStore from "StickersPersistedStore" /* 7009 */;
 import StickersStore from "StickersStore" /* 7010 */;
@@ -249,7 +249,7 @@ export function useStickersGrid(collapsedStickersCategories) {
         const guildId = flag.getGuildId();
         const tmpResult = collapsedStickersCategories(num[14]);
         let canCreateExpressions = null != guild;
-        const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(6793).StickerCategoryTypes.FAVORITE);
+        const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(6783).StickerCategoryTypes.FAVORITE);
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
         }
@@ -317,7 +317,7 @@ export function useStickersGrid(collapsedStickersCategories) {
           rowIndex = rowIndex + 1;
         }
         gridSectionIndex = gridSectionIndex + 1;
-        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(6793).StickerCategoryTypes.RECENT);
+        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(6783).StickerCategoryTypes.RECENT);
       }
       if (null == items) {
         const iter = stickersCategories[Symbol.iterator]();
@@ -470,8 +470,8 @@ export function useStickerForRenderableSticker(renderableSticker, arg1) {
   const tmp5 = obj4(noop.useState(false), 2);
   let isGuildStickerResult = require("StickersUtils").isGuildSticker(renderableSticker);
   if (!isGuildStickerResult) {
-    isGuildStickerResult = tmp(6792).isStandardSticker(renderableSticker);
-    const tmpResult = tmp(6792);
+    isGuildStickerResult = tmp(6782).isStandardSticker(renderableSticker);
+    const tmpResult = tmp(6782);
   }
   obj4 = { hasFetched: tmp6, isReturnable: isGuildStickerResult, renderableSticker, shouldFetch: tmp4[0], stickersStoreDefinition: stateFromStores };
   noop = obj2.useRef(obj4);

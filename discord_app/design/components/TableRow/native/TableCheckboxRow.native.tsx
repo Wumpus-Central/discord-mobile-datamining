@@ -2,7 +2,7 @@
 
 // Module 7733 (TableCheckboxRow)
 import _mod1655 from "module_1655" /* 1655 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5378 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5368 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowBadge from "TableRowBadge" /* 7461 */;
 import FormCheckbox from "FormCheckbox" /* 7734 */;

@@ -1,7 +1,7 @@
 // === Module 12704: startAuthorizationNoHook ===
 
 // Module 12704 (startAuthorizationNoHook)
-import LinkingDefault from "Linking" /* 6012 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import useAuthorizationApp from "useAuthorizationApp" /* 7921 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

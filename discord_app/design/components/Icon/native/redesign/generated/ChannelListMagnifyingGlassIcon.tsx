@@ -2,7 +2,7 @@
 
 // Module 16277 (ChannelListMagnifyingGlassIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod16278 from "module_16278" /* 16278 */;
 import noop from "module_19" /* 19 */;
 

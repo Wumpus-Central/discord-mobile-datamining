@@ -1,6 +1,6 @@
-// === Module 18171: UploadIntlDataSetting ===
+// === Module 18173: UploadIntlDataSetting ===
 
-// Module 18171 (UploadIntlDataSetting)
+// Module 18173 (UploadIntlDataSetting)
 import AssetJsonUtils from "AssetJsonUtils" /* 1117 */;
 import _mod1151 from "module_1151" /* 1151 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;

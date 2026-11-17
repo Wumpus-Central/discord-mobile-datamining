@@ -3,8 +3,8 @@
 // Module 13436 (CommandRowButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import SendMessageIcon from "SendMessageIcon" /* 6031 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import SendMessageIcon from "SendMessageIcon" /* 6021 */;
 import TableRowArrow from "TableRowArrow" /* 7456 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

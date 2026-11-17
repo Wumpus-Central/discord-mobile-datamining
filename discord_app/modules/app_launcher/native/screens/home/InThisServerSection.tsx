@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 12579 */;
 import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 13419 */;
@@ -38,7 +38,7 @@ function AppInThisServer(onAppSelected) {
     const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
     tmp6 = closure_5(application(13388), obj3);
   }
-  items = [tmp6, closure_5(onAppSelected(5929).Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
+  items = [tmp6, closure_5(onAppSelected(5919).Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
   obj2.children = items;
   return closure_6(onAppSelected(7997).PressableScale, obj2, application.id);
 }

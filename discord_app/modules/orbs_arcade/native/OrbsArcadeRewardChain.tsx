@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17648 */;
 import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17654 */;
 import OrbsArcadeRewardChainCell from "OrbsArcadeRewardChainCell" /* 17661 */;
@@ -125,7 +125,7 @@ export default function OrbsArcadeRewardChain(game) {
   let tmp15Result = null;
   if (!isThemeLightResult) {
     let obj7 = { style: memo.absoluteFill, start, end, colors: memo1 };
-    tmp15Result = tmp15(tmp7(5893), obj7);
+    tmp15Result = tmp15(tmp7(5883), obj7);
   }
   const items6 = [
     tmp15Result,

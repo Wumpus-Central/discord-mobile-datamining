@@ -3,8 +3,8 @@
 // Module 7699 (DesktopNativeUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
 import Storage3 from "Storage" /* 510 */;
-import Client from "Client" /* 5543 */;
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 6076 */;
+import Client from "Client" /* 5533 */;
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 6066 */;
 import DomainMigrationUtils from "DomainMigrationUtils" /* 7700 */;
 import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 7701 */;
 import IPCEvents from "IPCEvents" /* 7702 */;

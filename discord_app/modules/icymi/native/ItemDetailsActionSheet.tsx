@@ -1,10 +1,10 @@
-// === Module 19290: ItemDetailsActionSheet ===
+// === Module 19292: ItemDetailsActionSheet ===
 
-// Module 19290 (ItemDetailsActionSheet)
+// Module 19292 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
 import TableRow from "TableRow" /* 7443 */;
 import useDesignToggleDefault from "useDesignToggle" /* 7495 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
@@ -12,7 +12,7 @@ import TableRowGroup from "TableRowGroup" /* 7746 */;
 import ActionSheet from "ActionSheet" /* 7951 */;
 import ICYMIUtils from "ICYMIUtils" /* 10216 */;
 import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11898 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 19291 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 19293 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;

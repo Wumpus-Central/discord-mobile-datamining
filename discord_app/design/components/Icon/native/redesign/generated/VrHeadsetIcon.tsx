@@ -2,7 +2,7 @@
 
 // Module 17497 (VrHeadsetIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod17498 from "module_17498" /* 17498 */;
 import noop from "module_19" /* 19 */;
 

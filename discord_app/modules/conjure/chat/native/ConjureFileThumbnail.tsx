@@ -2,7 +2,7 @@
 
 // Module 13229 (ConjureFileThumbnail)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import FileIcon from "FileIcon" /* 11073 */;
 import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 13185 */;
 import useConjureAttachmentImage from "useConjureAttachmentImage" /* 13230 */;

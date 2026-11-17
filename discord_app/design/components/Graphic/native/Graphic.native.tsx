@@ -1,8 +1,8 @@
 // === Module 9570: Graphic ===
 
 // Module 9570 (Graphic)
-import GraphicTypes from "GraphicTypes" /* 5479 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import GraphicTypes from "GraphicTypes" /* 5469 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

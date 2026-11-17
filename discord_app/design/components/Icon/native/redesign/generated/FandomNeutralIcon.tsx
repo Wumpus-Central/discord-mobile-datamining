@@ -2,7 +2,7 @@
 
 // Module 10486 (FandomNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10487 from "module_10487" /* 10487 */;
 import noop from "module_19" /* 19 */;
 

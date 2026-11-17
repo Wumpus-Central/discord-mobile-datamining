@@ -10,7 +10,7 @@ import markScopedDismissibleContentAsDismissed from "markScopedDismissibleConten
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 5142 */;
 import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 5147 */;
 

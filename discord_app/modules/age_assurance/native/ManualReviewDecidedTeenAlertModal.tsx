@@ -4,12 +4,12 @@
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import _modDef3417 from "module_3417" /* 3417 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import AlertModal from "AlertModal" /* 6274 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6832).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6822).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");

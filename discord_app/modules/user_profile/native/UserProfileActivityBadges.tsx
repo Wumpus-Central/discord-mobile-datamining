@@ -2,8 +2,8 @@
 
 // Module 15717 (UserProfileActivityBadges)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import conjurePresenceActivity from "conjurePresenceActivity" /* 7328 */;
 import GroupIcon from "GroupIcon" /* 7436 */;
 import GameControllerIcon from "GameControllerIcon" /* 7438 */;

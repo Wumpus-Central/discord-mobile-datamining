@@ -5,8 +5,8 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import SentryInitUtils from "SentryInitUtils" /* 1243 */;
 import Link from "Link" /* 1503 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import BackPressTracking from "BackPressTracking" /* 6335 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import BackPressTracking from "BackPressTracking" /* 6325 */;
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7491 */;
 import NavigatorBackgroundContext from "NavigatorBackgroundContext" /* 7492 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
@@ -262,7 +262,7 @@ function WrappedNavigationStack(arg0) {
     }
     return tmp2;
   }), 1)[0];
-  const tmp5 = navigationContainerRef(5547)();
+  const tmp5 = navigationContainerRef(5537)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
   const obj4 = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
   if (null != navigationTheme) {

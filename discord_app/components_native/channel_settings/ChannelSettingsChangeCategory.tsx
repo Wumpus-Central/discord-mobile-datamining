@@ -1,14 +1,14 @@
-// === Module 19719: ChannelSettingsChangeCategory ===
+// === Module 19721: ChannelSettingsChangeCategory ===
 
-// Module 19719 (ChannelSettingsChangeCategory)
+// Module 19721 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import Form from "Form" /* 8106 */;
@@ -275,7 +275,7 @@ prototype["render"] = function render() {
   obj.children = gesture(Stack_Stack.Stack, obj2);
   return state(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = fn(5377).ThemeContext;
+ChannelSettingsChangeCategory.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
 

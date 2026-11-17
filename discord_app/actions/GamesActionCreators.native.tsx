@@ -2,7 +2,7 @@
 
 // Module 12705 (GamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LinkingDefault from "Linking" /* 6012 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import getOrFetchApplicationDefault from "getOrFetchApplication" /* 12707 */;
 import fetchDetectableGamesDefault from "fetchDetectableGames" /* 12708 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -43,8 +43,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         const join_url = body.body.join_url;
         const secret = body.body.secret;
         if (null != join_url) {
-          applicationId(6012).openURL(join_url, constants.SAFARI);
-          const obj3 = applicationId(6012);
+          applicationId(6002).openURL(join_url, constants.SAFARI);
+          const obj3 = applicationId(6002);
           const obj2 = { type: "ACTIVITY_JOIN", applicationId, parentApplicationId, secret, intent: constants2.PLAY, embedded: null };
           let flag3 = closure_1_0.embedded;
           if (flag3 == null) {
@@ -62,8 +62,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         } else {
           const _HermesInternal = HermesInternal;
           const combined = "" + closure_1_4.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-          applicationId(6012).openURL(combined, constants.SAFARI);
-          const obj6 = applicationId(6012);
+          applicationId(6002).openURL(combined, constants.SAFARI);
+          const obj6 = applicationId(6002);
           const obj8 = { type: "ACTIVITY_JOIN", applicationId, parentApplicationId, secret, intent: constants2.PLAY, embedded: null };
           let flag = closure_1_0.embedded;
           if (flag == null) {

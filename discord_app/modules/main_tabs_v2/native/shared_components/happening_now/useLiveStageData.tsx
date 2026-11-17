@@ -1,10 +1,10 @@
-// === Module 18793: useLiveStageData ===
+// === Module 18795: useLiveStageData ===
 
-// Module 18793 (useLiveStageData)
+// Module 18795 (useLiveStageData)
 import applyDefault from "apply" /* 12 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6943 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6933 */;
 import noop from "module_19" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6940 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6930 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 
 const require = globalThis.__r;

@@ -3,8 +3,8 @@
 // Module 12787 (StreamTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 12785 */;
 import useVideoStreamErrorDefault from "useVideoStreamError" /* 12788 */;
@@ -12,7 +12,7 @@ import VideoRenderer from "VideoRenderer" /* 12795 */;
 import StreamQualityLiveIndicatorDefault from "StreamQualityLiveIndicator" /* 12805 */;
 import _modDef12807 from "module_12807" /* 12807 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -44,7 +44,7 @@ class StreamTextOverlay {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(6075).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6065).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(5306);
@@ -97,10 +97,10 @@ let closure_15 = noop.memo(function StreamContent(participant) {
           const intl2 = tmp(1113).intl;
           obj5.title = intl2.string(tmp(1113).t["5q17w5"]);
           const intl3 = tmp(1113).intl;
-          const obj6 = { username: tmp4(6351).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
+          const obj6 = { username: tmp4(6341).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
           obj5.subtext = intl3.formatToPlainString(tmp(1113).t.meVVlb, obj6);
           tmp9 = closure_10(StreamTextOverlay, obj5);
-          const tmp4Result6 = tmp4(6351);
+          const tmp4Result6 = tmp4(6341);
         }
       }
       if (null != tmp5) {

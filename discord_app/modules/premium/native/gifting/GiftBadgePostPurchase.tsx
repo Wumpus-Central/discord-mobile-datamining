@@ -7,9 +7,9 @@ import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef2797 from "module_2797" /* 2797 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5348 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5338 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import BadgeId from "BadgeId" /* 8480 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8552 */;
 import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11818 */;
@@ -27,7 +27,7 @@ function PostPurchaseFooter(onSendGift) {
   const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = noop.useCallback(() => {
     ModalActionCreatorsDefault.pop();
-    const rootNavigationRef = onSendGift(5493).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(5483).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
@@ -38,12 +38,12 @@ function PostPurchaseFooter(onSendGift) {
   const intl = onSendGift(1113).intl;
   obj2.text = intl.string(_modDef2797.g86YiI);
   obj2.onPress = callback;
-  const items1 = [closure_10(onSendGift(5936).Button, obj2), ];
+  const items1 = [closure_10(onSendGift(5926).Button, obj2), ];
   const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1113).intl;
   obj4.text = intl2.string(_modDef2797["sa/cfM"]);
   obj4.onPress = callback1;
-  items1[1] = closure_10(onSendGift(5936).Button, obj4);
+  items1[1] = closure_10(onSendGift(5926).Button, obj4);
   obj.children = items1;
   return closure_11(View, obj);
 }
@@ -90,7 +90,7 @@ function LevelUpScreen(newTier) {
     isBadgeUnreadStateEnabled = obj3.useIsBadgeUnreadStateEnabled({ location: "GiftBadgePostPurchase", hasUnread: stateFromStores });
   }
   const effect = noop.useEffect(() => {
-    const result = newTier(5554).triggerHapticFeedback(isBadgeUnreadStateEnabled(5555).IMPACT_HEAVY);
+    const result = newTier(5544).triggerHapticFeedback(isBadgeUnreadStateEnabled(5545).IMPACT_HEAVY);
   }, []);
   const items2 = [isBadgeUnreadStateEnabled];
   const effect1 = noop.useEffect(() => {
@@ -118,7 +118,7 @@ function LevelUpScreen(newTier) {
     str = "";
   }
   obj11.children = intl.format(isBadgeUnreadStateEnabled(2797).k8MmO8, { tierName: str });
-  const items5 = [closure_10(newTier(5929).Text, obj11), ];
+  const items5 = [closure_10(newTier(5919).Text, obj11), ];
   let tmp12Result2 = null != nextTier && null != giftsToNextTier;
   if (tmp12Result2) {
     tmp12Result2 = giftsToNextTier > 0;
@@ -133,7 +133,7 @@ function LevelUpScreen(newTier) {
     }
     obj13.nextTierName = str2;
     obj12.children = intl2.format(tmp(2797)["6QVlxw"], obj13);
-    tmp12Result2 = closure_10(tmp4(5929).Text, obj12);
+    tmp12Result2 = closure_10(tmp4(5919).Text, obj12);
   }
   items5[1] = tmp12Result2;
   obj10.children = items5;

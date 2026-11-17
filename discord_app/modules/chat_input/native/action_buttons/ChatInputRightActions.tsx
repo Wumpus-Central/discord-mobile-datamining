@@ -3,7 +3,7 @@
 // Module 14847 (ChatInputRightActions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import native from "native" /* 5377 */;
+import native from "native" /* 5367 */;
 import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 13803 */;
 import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 13805 */;
 import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 14652 */;
@@ -99,7 +99,7 @@ function LeftSlot(state) {
   obj2.style = items;
   const tmp = useChatInputFloatingBounceDefault({ visible: state !== native.TransitionStates.YEETED, initiallyVisible: state !== native.TransitionStates.ENTERED, enterDelayMs, onExitComplete: cleanup });
   const merged = Object.assign(ChatInputActionButtonTransitionItem.interactivityProps(isInteractive));
-  obj2.children = metroImportDefault(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "Path", shouldShowThread: 3377 });
+  obj2.children = metroImportDefault(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "Path", shouldShowThread: "Maldives" });
   return metroImportDefault(_modDef1655.View, obj2);
 }
 const View = fn(17).View;

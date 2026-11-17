@@ -3,8 +3,8 @@
 // Module 10818 (useVoiceStateForRemoteSession)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
-import GameConsoleStore from "GameConsoleStore" /* 6072 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import GameConsoleStore from "GameConsoleStore" /* 6062 */;
 
 require = fn;
 const size = fn(2);

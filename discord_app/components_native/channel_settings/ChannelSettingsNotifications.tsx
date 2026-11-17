@@ -3,10 +3,10 @@
 // Module 11079 (ChannelSettingsNotifications)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7878 */;
@@ -16,9 +16,9 @@ import Form from "Form" /* 8106 */;
 import MutedUntilText from "MutedUntilText" /* 11085 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const MutedUntilTextDefault = MutedUntilText;
@@ -28,7 +28,7 @@ const ChannelRecord = fn(5159);
 ({ isGuildTextChannelType: closure_4, CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING: hasOwnProperty } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, UserNotificationSettings: closure_12, ChannelTypes: map1, SettingsPaneTypes: closure_14, MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_15 } = Constants);
-const UnreadSetting = fn(6959).UnreadSetting;
+const UnreadSetting = fn(6949).UnreadSetting;
 let closure_17 = fn(1082).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
@@ -170,7 +170,7 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     const obj6 = { children: null };
     items[1] = null;
     obj6.children = items;
-    return closure_1_20(expandedHeight, obj6);
+    return closure_1_20(closure_1_19, obj6);
   } else {
     const obj7 = { muteConfig: props.muteConfig, type: null };
     if (channel.type === constants3.GUILD_CATEGORY) {
@@ -400,7 +400,7 @@ prototype["render"] = function render() {
   }
   return tmp9Result2;
 };
-ChannelSettingsNotifications.contextType = fn(5377).ThemeContext;
+ChannelSettingsNotifications.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsNotifications.tsx");
 

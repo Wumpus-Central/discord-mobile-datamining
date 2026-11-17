@@ -4,10 +4,10 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import useFontScale from "useFontScale" /* 5944 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import useFontScale from "useFontScale" /* 5934 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
 import _modDef9991 from "module_9991" /* 9991 */;
@@ -337,7 +337,7 @@ export function usePremiumPerkCard() {
   const obj22 = { uri: _modDef10007 };
   obj24.termsLink = HelpdeskUtilsDefault.getArticleURL(NITRO_2_POINT_0.NITRO_2_POINT_0);
   obj23.children = intl37.format(tmp(1113).t["9Wv+8h"], obj24);
-  obj21.bodyComponent = closure_9(tmp(5929).Text, obj23);
+  obj21.bodyComponent = closure_9(tmp(5919).Text, obj23);
   obj4.xboxGamePass = obj21;
   return obj4;
 }

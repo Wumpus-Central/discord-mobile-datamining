@@ -1,10 +1,10 @@
-// === Module 19468: useOnPressSearchItem ===
+// === Module 19470: useOnPressSearchItem ===
 
-// Module 19468 (useOnPressSearchItem)
+// Module 19470 (useOnPressSearchItem)
 import util from "util" /* 1113 */;
 import URLUtilsDefault from "URLUtils" /* 1381 */;
-import LinkingDefault from "Linking" /* 6012 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
+import LinkingDefault from "Linking" /* 6002 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7653 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import SearchPlatformUtils from "SearchPlatformUtils" /* 14740 */;
@@ -95,7 +95,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
 };
 const SearchConstants = fn(9066);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: closure_10 } = SearchConstants);
-const SearchNavigatorScreens = fn(19469).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(19471).SearchNavigatorScreens;
 const SearchFilterAddLocations = fn(9065).SearchFilterAddLocations;
 const Constants = fn(1072);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);

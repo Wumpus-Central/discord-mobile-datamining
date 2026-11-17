@@ -1,7 +1,7 @@
 // === Module 8516: FeaturedBlockRecord ===
 
 // Module 8516 (FeaturedBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 5991 */;
+import ShopBlockType from "ShopBlockType" /* 5981 */;
 import FeaturedCategorySubblockRecord from "FeaturedCategorySubblockRecord" /* 8517 */;
 import FeaturedSubblockType from "FeaturedSubblockType" /* 8518 */;
 import size from "module_2" /* 2 */;

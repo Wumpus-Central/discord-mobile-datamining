@@ -1,6 +1,6 @@
-// === Module 18112: SystemNotificationsSetting ===
+// === Module 18114: SystemNotificationsSetting ===
 
-// Module 18112 (SystemNotificationsSetting)
+// Module 18114 (SystemNotificationsSetting)
 import util from "util" /* 1113 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8199 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -79,7 +79,7 @@ let closure_8 = async function _handleEnableSystemNotification() {
   }
 };
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_5 = fn(6902).NotificationAuthorizationStatus;
+let closure_5 = fn(6892).NotificationAuthorizationStatus;
 const NotificationPermissionConstants = fn(14826);
 ({ EventActionType: closure_6, EventActionLocation: metroImportDefault } = NotificationPermissionConstants);
 let SettingBuilders = fn(12406);
@@ -104,7 +104,7 @@ const pressable = SettingBuilders.createPressable({
 SettingBuilders = fn(12406);
 let obj4 = {};
 const merged = Object.assign(pressable);
-obj4.parent = fn(18111).MobileNotifSettings.NOTIFICATIONS_REDESIGN;
+obj4.parent = fn(18113).MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 const pressable1 = SettingBuilders.createPressable(obj4);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");

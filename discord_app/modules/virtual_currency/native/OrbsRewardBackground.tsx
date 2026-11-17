@@ -1,7 +1,7 @@
 // === Module 9728: OrbsRewardBackground ===
 
 // Module 9728 (OrbsRewardBackground)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef9729 from "module_9729" /* 9729 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

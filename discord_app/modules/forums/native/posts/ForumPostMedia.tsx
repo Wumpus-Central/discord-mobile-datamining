@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1495 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5896 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import SpoilerIconDefault from "SpoilerIcon" /* 14619 */;
 import MessageAttachmentUtils from "MessageAttachmentUtils" /* 14621 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -109,7 +109,7 @@ function ForumPostMedia(obscureReason) {
           activeOpacity: 0,
           onPress() {
                   const obj = ref(8190);
-                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(6833).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
+                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(6823).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
                 },
           children: tmp6Result
         };

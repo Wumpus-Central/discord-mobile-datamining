@@ -3,7 +3,7 @@
 // Module 14627 (ForumPostMessageCount)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import ChatIcon from "ChatIcon" /* 8069 */;
 import ForumHooks from "ForumHooks" /* 9107 */;
 import AnimatedCounterDefault from "AnimatedCounter" /* 11901 */;

@@ -2,7 +2,7 @@
 
 // Module 8122 (useLegacyTextMigrationHighlight)
 import nativeDefault from "native" /* 575 */;
-import DevSettingsStore from "DevSettingsStore" /* 5932 */;
+import DevSettingsStore from "DevSettingsStore" /* 5922 */;
 
 const require = fn;
 const createStyles = fn(5306);

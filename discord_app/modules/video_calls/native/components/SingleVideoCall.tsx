@@ -1,7 +1,7 @@
 // === Module 13069: SingleVideoCall ===
 
 // Module 13069 (SingleVideoCall)
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import noop from "module_19" /* 19 */;
 

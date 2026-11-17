@@ -1,11 +1,11 @@
-// === Module 19970: useControllerPIPState ===
+// === Module 19972: useControllerPIPState ===
 
-// Module 19970 (useControllerPIPState)
+// Module 19972 (useControllerPIPState)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
 import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 7864 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19229 */;
-import useSelfHasVideoDefault from "useSelfHasVideo" /* 19972 */;
-import calculatePIPStateDefault from "calculatePIPState" /* 19973 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19231 */;
+import useSelfHasVideoDefault from "useSelfHasVideo" /* 19974 */;
+import calculatePIPStateDefault from "calculatePIPState" /* 19975 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
@@ -15,14 +15,14 @@ import PIPSpeakerStore from "PIPSpeakerStore" /* 16245 */;
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19974);
+const useExternalPipSelectedTileDefault = tmp6(19976);
 require = fn;
 const VoicePanelModes = fn(11985).VoicePanelModes;
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const asLaunched = fn(7020).asLaunched;
 let closure_12 = { code: "(function useControllerPIPStateTsx1(){let[scale,pipAvoidanceSpecs,windowDimensions,safeArea]=this.__closure;return{scale:scale.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),windowDimensions:windowDimensions.get(),safeArea:safeArea.get()};})" };
 let closure_13 = { code: "(function useControllerPIPStateTsx2(current){let[clampPIPScale,pipState,scale]=this.__closure;const newScale=clampPIPScale({scale:current.scale,width:pipState.width,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,windowDimensions:current.windowDimensions,safeArea:current.safeArea,pipAvoidanceSpecs:current.pipAvoidanceSpecs});if(current.scale!==newScale){scale.set(newScale);}})" };
-let size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
 
 export function useControllerPIPState(channelId) {
@@ -37,8 +37,7 @@ export function useControllerPIPState(channelId) {
   ({ windowDimensions, pipAvoidanceSpecs, safeArea } = channelId);
   let obj = require("module_1655");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
-  const size = { id: "disabled", mode: "isArray", width: false, height: null, containerHeight: "yes", showSecondaryPIP: null, scale: sharedValue };
-  const ref = noop.useRef(size);
+  const ref = noop.useRef({ id: "disabled", mode: "isArray", width: false, height: null, containerHeight: "\u{1F9D6}\u{1F3FE}", showSecondaryPIP: true, scale: sharedValue });
   const obj2 = require("VoicePanelPIPScaleCache");
   items = [PIPSpeakerStore];
   closure_129_0 = channelId;
@@ -46,7 +45,7 @@ export function useControllerPIPState(channelId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => PIPSpeakerStore.getSpeakerId(c0));
   const tmp7 = useIsConnectedToVoiceChannelDefault(channelId);
   closure_129_2 = tmp7;
-  const obj5 = require("initialize");
+  const obj4 = require("initialize");
   const items1 = [EmbeddedActivitiesStore, FramesStore, ChannelStore];
   const items2 = [channelId, tmp7, mode];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
@@ -93,12 +92,12 @@ export function useControllerPIPState(channelId) {
     }
   }, items2);
   const tmp9 = useSelfHasVideoDefault(channelId);
-  const obj6 = require("initialize");
+  const obj5 = require("initialize");
   [tmp11, c3] = noop.useState(() => _undefined2.getTargetDimensions(c1));
   let tmp10 = _slicedToArray(noop.useState(() => _undefined2.getTargetDimensions(c1)), 2);
   const pIPMode = require("VoicePanelPIPUtils").getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp9 });
-  const obj4 = { connected, mode, focusedId, participantTargetDimensions: tmp11, selfHasVideo: tmp9, showSecondaryPIP: stateFromStores1 };
-  const obj7 = require("VoicePanelPIPUtils");
+  const obj6 = require("VoicePanelPIPUtils");
+  const obj7 = { connected, mode, focusedId, participantTargetDimensions: tmp11, selfHasVideo: tmp9, showSecondaryPIP: stateFromStores1 };
   ({ participant, dimensions } = calculatePIPStateDefault(channelId, layoutManager, focusedId, stateFromStores, { connected, mode, focusedId, participantTargetDimensions: tmp11, selfHasVideo: tmp9, showSecondaryPIP: stateFromStores1 }));
   let obj8 = {};
   const merged = Object.assign(ref.current);

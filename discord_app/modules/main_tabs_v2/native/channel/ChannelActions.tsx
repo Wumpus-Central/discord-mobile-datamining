@@ -4,9 +4,9 @@
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6900 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6890 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 7432 */;
 import openChannelSecondaryViewChatDefault from "openChannelSecondaryViewChat" /* 9068 */;
 import PhoneCallIcon from "PhoneCallIcon" /* 9102 */;
@@ -23,7 +23,7 @@ import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 15633 */;
 import noop from "module_19" /* 19 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 7035 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 require = fn;
 function JoinCallIcon() {
@@ -332,7 +332,7 @@ function WrappedChannelNavButtons(channelId) {
   ({ screenIndex, showCreateThread } = channelId);
   items = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  channelId(6838);
+  channelId(6828);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;

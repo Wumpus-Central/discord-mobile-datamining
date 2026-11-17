@@ -1,9 +1,9 @@
-// === Module 18440: UserSettingsDesignSystemCoachmark ===
+// === Module 18442: UserSettingsDesignSystemCoachmark ===
 
-// Module 18440 (UserSettingsDesignSystemCoachmark)
-import LayerScope from "LayerScope" /* 5916 */;
+// Module 18442 (UserSettingsDesignSystemCoachmark)
+import LayerScope from "LayerScope" /* 5906 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
-import _modDef18441 from "module_18441" /* 18441 */;
+import _modDef18443 from "module_18443" /* 18443 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -53,7 +53,7 @@ function Content() {
       buttonVariant: null,
       gradientColor: null
     };
-    const obj2 = { type: "image", src: { uri: _modDef18441 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef18443 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;

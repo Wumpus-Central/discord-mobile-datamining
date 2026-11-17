@@ -2,7 +2,7 @@
 
 // Module 15231 (MediaViewerItem)
 import PlatformUtils2 from "PlatformUtils" /* 1380 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import useMediaViewerSources from "useMediaViewerSources" /* 8628 */;
 import useEntranceAnimation from "useEntranceAnimation" /* 15233 */;
 import _slicedToArray from "module_32" /* 32 */;

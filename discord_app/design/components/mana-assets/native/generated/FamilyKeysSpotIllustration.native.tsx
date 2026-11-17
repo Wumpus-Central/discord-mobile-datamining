@@ -1,19 +1,19 @@
-// === Module 20368: FamilyKeysSpotIllustration ===
+// === Module 20371: FamilyKeysSpotIllustration ===
 
-// Module 20368 (FamilyKeysSpotIllustration)
+// Module 20371 (FamilyKeysSpotIllustration)
 import assetHelpers from "assetHelpers" /* 7755 */;
-import _modDef20369 from "module_20369" /* 20369 */;
-import _modDef20370 from "module_20370" /* 20370 */;
-import _modDef20371 from "module_20371" /* 20371 */;
+import _modDef20372 from "module_20372" /* 20372 */;
+import _modDef20373 from "module_20373" /* 20373 */;
+import _modDef20374 from "module_20374" /* 20374 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef20369 }, 3: null };
-let obj2 = { uri: _modDef20369 };
-obj[2] = { uri: _modDef20370 };
-const obj3 = { uri: _modDef20370 };
-obj[3] = { uri: _modDef20371 };
+let obj = { 1: null, 2: { uri: _modDef20372 }, 3: null };
+let obj2 = { uri: _modDef20372 };
+obj[2] = { uri: _modDef20373 };
+const obj3 = { uri: _modDef20373 };
+obj[3] = { uri: _modDef20374 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FamilyKeysSpotIllustration.native.tsx");
 

@@ -3,8 +3,8 @@
 // Module 10841 (GameRelationshipActionCreators)
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5313 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6757 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6747 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -170,7 +170,7 @@ export default {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
     }).catch((error) => {
-      const aPIError = new onSuccess(6757).APIError(error);
+      const aPIError = new onSuccess(6747).APIError(error);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1113).intl;

@@ -1,6 +1,6 @@
-// === Module 19167: YouBarButton ===
+// === Module 19169: YouBarButton ===
 
-// Module 19167 (YouBarButton)
+// Module 19169 (YouBarButton)
 import nativeDefault from "native" /* 575 */;
 import IconButton from "IconButton" /* 7988 */;
 import ClipView from "ClipView" /* 9503 */;
@@ -85,7 +85,7 @@ class YouBarButtonIcon {
     items2[0] = memo;
     items2[1] = hasBadge;
     memo1 = obj2.useMemo(() => {
-      const rect = { position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "HermesInternal", bottom: "channel_id", padding: "hash", minWidth: "padding" };
+      const rect = { position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "channel_id", bottom: "hash", padding: "keys", minWidth: "items" };
       return rect;
     }, items1);
     obj6 = { style: { position: "relative", height: tmp, width: tmp }, children: null };

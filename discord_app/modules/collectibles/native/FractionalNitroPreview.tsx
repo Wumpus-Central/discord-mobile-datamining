@@ -2,9 +2,9 @@
 
 // Module 15485 (FractionalNitroPreview)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7897 */;
 import _modDef15486 from "module_15486" /* 15486 */;
 import NitroIconDefault from "NitroIcon" /* 15487 */;

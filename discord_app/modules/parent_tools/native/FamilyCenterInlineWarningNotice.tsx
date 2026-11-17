@@ -2,7 +2,7 @@
 
 // Module 17404 (FamilyCenterInlineWarningNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import WarningIcon from "WarningIcon" /* 8160 */;
 import noop from "module_19" /* 19 */;
 

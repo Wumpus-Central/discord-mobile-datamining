@@ -1,11 +1,11 @@
-// === Module 17801: QuestDockInsetHeaderBody ===
+// === Module 17806: QuestDockInsetHeaderBody ===
 
-// Module 17801 (QuestDockInsetHeaderBody)
+// Module 17806 (QuestDockInsetHeaderBody)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import QuestRewardTileDefault from "QuestRewardTile" /* 15257 */;
 import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 15258 */;
 import QuestDockHooks from "QuestDockHooks" /* 17695 */;

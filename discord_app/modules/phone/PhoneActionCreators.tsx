@@ -94,7 +94,7 @@ export default {
       const request = { url: constants.VERIFY_PHONE, headers: obj4, body: { phone, code }, oldFormErrors: true, trackedActionData: { event: phone(1264).NetworkActionNames.USER_VERIFY_PHONE }, rejectWithError: null };
       { event: phone(1264).NetworkActionNames.USER_VERIFY_PHONE };
       request.rejectWithError = phone(1285).rejectWithMigratedError();
-      yield code(6851).post(request);
+      yield code(6841).post(request);
       closure_128_0 = value;
       if (closure_129_2) {
         code(572).dispatch({ type: "MODAL_POP", key });

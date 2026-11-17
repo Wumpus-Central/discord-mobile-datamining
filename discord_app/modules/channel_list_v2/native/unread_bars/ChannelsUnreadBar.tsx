@@ -1,8 +1,8 @@
-// === Module 18899: ChannelsUnreadBar ===
+// === Module 18901: ChannelsUnreadBar ===
 
-// Module 18899 (ChannelsUnreadBar)
+// Module 18901 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9061 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ import module_1655 from "module_1655" /* 1655 */;
 const require = globalThis.__r;
 
 const require = fn;
-const RedesignChannelListConstants = fn(6060);
+const RedesignChannelListConstants = fn(6050);
 ({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: closure_6 } = RedesignChannelListConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);

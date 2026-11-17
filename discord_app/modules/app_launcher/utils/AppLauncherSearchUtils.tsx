@@ -2,7 +2,7 @@
 
 // Module 13398 (AppLauncherSearchUtils)
 import Server from "Server" /* 2119 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5953 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5943 */;
 import CommandPermissionContext from "CommandPermissionContext" /* 11411 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 12698 */;
 import SearchAppsRequestSource from "SearchAppsRequestSource" /* 13400 */;
@@ -136,8 +136,8 @@ function sortCommandsAlpha(displayName, displayName2) {
 const ApplicationCommandIndexStore = fn(11406);
 ({ appLauncherOnlyCompareNames: metroImportDefault, getSection: closure_8, useContextIndexState: closure_9, useUserIndexState: closure_10 } = ApplicationCommandIndexStore);
 const FetchState = fn(13399).FetchState;
-const BuiltInSectionId = fn(6345).BuiltInSectionId;
-const COMMAND_SENTINEL = fn(6346).COMMAND_SENTINEL;
+const BuiltInSectionId = fn(6335).BuiltInSectionId;
+const COMMAND_SENTINEL = fn(6336).COMMAND_SENTINEL;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherSearchUtils.tsx");
 

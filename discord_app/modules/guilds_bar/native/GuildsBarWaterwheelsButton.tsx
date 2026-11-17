@@ -1,21 +1,21 @@
-// === Module 19125: GuildsBarWaterwheelsButton ===
+// === Module 19127: GuildsBarWaterwheelsButton ===
 
-// Module 19125 (GuildsBarWaterwheelsButton)
+// Module 19127 (GuildsBarWaterwheelsButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2569 from "module_2569" /* 2569 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import CompassIcon from "CompassIcon" /* 18225 */;
-import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 19022 */;
-import openWaterwheelsInterestPickerDefault from "openWaterwheelsInterestPicker" /* 19026 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 19072 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 19084 */;
-import GuildsBarSeparatorDefault from "GuildsBarSeparator" /* 19118 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import CompassIcon from "CompassIcon" /* 18227 */;
+import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 19024 */;
+import openWaterwheelsInterestPickerDefault from "openWaterwheelsInterestPicker" /* 19028 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 19074 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 19086 */;
+import GuildsBarSeparatorDefault from "GuildsBarSeparator" /* 19120 */;
 import noop from "module_19" /* 19 */;
 import InterestPickerSessionStore from "InterestPickerSessionStore" /* 10218 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -56,7 +56,7 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
   const obj4 = { style: tmp.stretch, children: null };
   const memo = noop.useMemo(() => ({ onPress }), []);
   const items1 = [React5(GuildsBarSeparatorDefault, {}), ];
-  const obj5 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: null, expandedChildren: "guilds-bar-drag-preview", children: null };
+  const obj5 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: null, expandedChildren: "heading-lg/semibold", children: 1 };
   const intl = util.intl;
   obj5.label = intl.string(_modDef2569.zFl2A4);
   obj5.expandedChildren = React5(GuildsBarWaterwheelsExpandedChildren, {});

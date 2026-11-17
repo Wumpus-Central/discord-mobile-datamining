@@ -3,7 +3,7 @@
 // Module 13614 (ConjureIdeasIntroTip)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import LightbulbIcon from "LightbulbIcon" /* 11318 */;
 import ConjureTipCallout from "ConjureTipCallout" /* 13616 */;
 import noop from "module_19" /* 19 */;

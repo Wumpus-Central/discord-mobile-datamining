@@ -1,9 +1,9 @@
-// === Module 20025: ActivitiesDebugOverlay ===
+// === Module 20027: ActivitiesDebugOverlay ===
 
-// Module 20025 (ActivitiesDebugOverlay)
+// Module 20027 (ActivitiesDebugOverlay)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useThermalStateDefault from "useThermalState" /* 16919 */;
 import ThermalStates from "ThermalStates" /* 16920 */;
 import noop from "module_19" /* 19 */;

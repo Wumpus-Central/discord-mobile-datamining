@@ -1,19 +1,19 @@
-// === Module 18655: AccountSwitcherListItem ===
+// === Module 18657: AccountSwitcherListItem ===
 
-// Module 18655 (AccountSwitcherListItem)
+// Module 18657 (AccountSwitcherListItem)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5378 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 6037 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5368 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6027 */;
 import Pressables from "Pressables" /* 7428 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7930 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1407 */;
-import StreamerModeStore from "StreamerModeStore" /* 5373 */;
+import StreamerModeStore from "StreamerModeStore" /* 5363 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

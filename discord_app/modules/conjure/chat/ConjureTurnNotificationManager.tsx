@@ -1,6 +1,6 @@
-// === Module 20206: ConjureTurnNotificationManager ===
+// === Module 20209: ConjureTurnNotificationManager ===
 
-// Module 20206 (ConjureTurnNotificationManager)
+// Module 20209 (ConjureTurnNotificationManager)
 import UserSettings from "UserSettings" /* 5131 */;
 import ConjureUtils from "ConjureUtils" /* 7260 */;
 import conjureProjectMute from "conjureProjectMute" /* 7332 */;
@@ -11,7 +11,7 @@ import FamilyCenterStore from "FamilyCenterStore" /* 8740 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 11014 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
 import ConjurePagesStore from "ConjurePagesStore" /* 7327 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;

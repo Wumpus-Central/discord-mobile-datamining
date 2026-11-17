@@ -1,6 +1,6 @@
-// === Module 6077: RTCConnection ===
+// === Module 6067: RTCConnection ===
 
-// Module 6077 (RTCConnection)
+// Module 6067 (RTCConnection)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import BackoffDefault from "Backoff" /* 559 */;
@@ -17,54 +17,54 @@ import NetworkUtilsDefault from "NetworkUtils" /* 1480 */;
 import RTCControlSocket from "RTCControlSocket" /* 2132 */;
 import DiscordNativeDefault from "DiscordNative" /* 5116 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5312 */;
-import TimeUtils from "TimeUtils" /* 6079 */;
-import flatRestDefault from "flatRest" /* 6143 */;
-import DaveJoinTimerDefault from "DaveJoinTimer" /* 6174 */;
-import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager" /* 6177 */;
-import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 6180 */;
-import GoLiveQualityManagerDefault from "GoLiveQualityManager" /* 6186 */;
-import setShouldRecordNextConnectionDefault from "setShouldRecordNextConnection" /* 6187 */;
-import RTCConnectionEvent from "RTCConnectionEvent" /* 6189 */;
-import DesktopGeneralPerfExperiment from "DesktopGeneralPerfExperiment" /* 6190 */;
-import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 6191 */;
-import VoiceQualityScoringExperiment2 from "VoiceQualityScoringExperiment" /* 6192 */;
-import BrowserTransceiverPaddingRemovalExperiment2 from "BrowserTransceiverPaddingRemovalExperiment" /* 6193 */;
-import WebScreenShareAudioExperiment2 from "WebScreenShareAudioExperiment" /* 6194 */;
-import WebStreamingOptimizationsExperiment2 from "WebStreamingOptimizationsExperiment" /* 6195 */;
-import VideoStabilizationExperimentDefault from "VideoStabilizationExperiment" /* 6196 */;
-import SurfaceDirectRendererExperiment from "SurfaceDirectRendererExperiment" /* 6197 */;
-import LinuxGpuDecodeExperiment from "LinuxGpuDecodeExperiment" /* 6198 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 6199 */;
-import VoiceQuality from "VoiceQuality" /* 6202 */;
-import SystemResourcesDefault from "SystemResources" /* 6211 */;
-import SystemResponsivenessDefault from "SystemResponsiveness" /* 6215 */;
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 6219 */;
-import ServerLadderExperiment2 from "ServerLadderExperiment" /* 6221 */;
-import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 6222 */;
-import NativeMuteManagerDefault from "NativeMuteManager" /* 6224 */;
-import VoiceDurationDefault from "VoiceDuration" /* 6256 */;
-import AVError from "AVError" /* 6257 */;
-import VideoQuality from "VideoQuality" /* 6259 */;
-import VideoHealthManager from "VideoHealthManager" /* 6261 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 6264 */;
-import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 6266 */;
-import DaveMessageValidator from "DaveMessageValidator" /* 6267 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import TimeUtils from "TimeUtils" /* 6069 */;
+import flatRestDefault from "flatRest" /* 6133 */;
+import DaveJoinTimerDefault from "DaveJoinTimer" /* 6164 */;
+import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager" /* 6167 */;
+import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 6170 */;
+import GoLiveQualityManagerDefault from "GoLiveQualityManager" /* 6176 */;
+import setShouldRecordNextConnectionDefault from "setShouldRecordNextConnection" /* 6177 */;
+import RTCConnectionEvent from "RTCConnectionEvent" /* 6179 */;
+import DesktopGeneralPerfExperiment from "DesktopGeneralPerfExperiment" /* 6180 */;
+import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 6181 */;
+import VoiceQualityScoringExperiment2 from "VoiceQualityScoringExperiment" /* 6182 */;
+import BrowserTransceiverPaddingRemovalExperiment2 from "BrowserTransceiverPaddingRemovalExperiment" /* 6183 */;
+import WebScreenShareAudioExperiment2 from "WebScreenShareAudioExperiment" /* 6184 */;
+import WebStreamingOptimizationsExperiment2 from "WebStreamingOptimizationsExperiment" /* 6185 */;
+import VideoStabilizationExperimentDefault from "VideoStabilizationExperiment" /* 6186 */;
+import SurfaceDirectRendererExperiment from "SurfaceDirectRendererExperiment" /* 6187 */;
+import LinuxGpuDecodeExperiment from "LinuxGpuDecodeExperiment" /* 6188 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 6189 */;
+import VoiceQuality from "VoiceQuality" /* 6192 */;
+import SystemResourcesDefault from "SystemResources" /* 6201 */;
+import SystemResponsivenessDefault from "SystemResponsiveness" /* 6205 */;
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 6209 */;
+import ServerLadderExperiment2 from "ServerLadderExperiment" /* 6211 */;
+import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 6212 */;
+import NativeMuteManagerDefault from "NativeMuteManager" /* 6214 */;
+import VoiceDurationDefault from "VoiceDuration" /* 6246 */;
+import AVError from "AVError" /* 6247 */;
+import VideoQuality from "VideoQuality" /* 6249 */;
+import VideoHealthManager from "VideoHealthManager" /* 6251 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 6254 */;
+import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 6256 */;
+import DaveMessageValidator from "DaveMessageValidator" /* 6257 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
 import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 16271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DeviceFrecencyStore from "DeviceFrecencyStore" /* 6078 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 6088 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 6089 */;
-import AudioRouteStore from "AudioRouteStore" /* 6091 */;
+import DeviceFrecencyStore from "DeviceFrecencyStore" /* 6068 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 6078 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 6079 */;
+import AudioRouteStore from "AudioRouteStore" /* 6081 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import RTCDebugStore from "RTCDebugStore" /* 6094 */;
-import RTCRegionStore from "RTCRegionStore" /* 6170 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import RTCDebugStore from "RTCDebugStore" /* 6084 */;
+import RTCRegionStore from "RTCRegionStore" /* 6160 */;
 import UserStore from "UserStore" /* 1388 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 6099 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 6089 */;
 
 const RTCControlSocketDefault = RTCControlSocket;
 const VoiceQualityDefault = VoiceQuality;
@@ -110,13 +110,13 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(6090).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(6080).getSystemAnalyticsInfo;
 let Constants = fn(1072);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18, RTCConnectionStates: closure_19, RTCConnectionQuality: closure_20, BoostedGuildTiers: closure_21 } = Constants);
-const StreamSettingsConstants = fn(6171);
+const StreamSettingsConstants = fn(6161);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(6172).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(6075);
+let closure_24 = fn(6162).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(6065);
 ({ ExperimentFlags: closure_25, Features: closure_26, MediaEngineContextTypes: closure_27, ConnectionStates: closure_28, Codecs: closure_29, MediaTypes: closure_30, SpeakingFlags: closure_31, DISABLED_DEVICE_ID: closure_32, VideoEncoderLatencyProfile: items } = Constants);
 let str = "ws:";
 if (obj.test("https:")) {
@@ -3798,7 +3798,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(6079).now();
+  const commitReceivedTime = _connection(6069).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3832,7 +3832,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(6079).now();
+  const welcomeReceivedTime = _connection(6069).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

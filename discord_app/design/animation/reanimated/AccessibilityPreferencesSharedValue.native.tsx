@@ -1,6 +1,6 @@
-// === Module 5550: reanimated/AccessibilityPreferencesSharedValue ===
+// === Module 5540: reanimated/AccessibilityPreferencesSharedValue ===
 
-// Module 5550 (reanimated/AccessibilityPreferencesSharedValue)
+// Module 5540 (reanimated/AccessibilityPreferencesSharedValue)
 import module_1655 from "module_1655" /* 1655 */;
 import size from "module_2" /* 2 */;
 

@@ -3,8 +3,8 @@
 // Module 17483 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 6037 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6027 */;
 import applications from "applications" /* 7406 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7809 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7813 */;

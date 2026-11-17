@@ -2,7 +2,7 @@
 
 // Module 17712 (UnsendIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod17713 from "module_17713" /* 17713 */;
 import noop from "module_19" /* 19 */;
 

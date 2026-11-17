@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6384 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6374 */;
 import RoleIconUtils from "RoleIconUtils" /* 7942 */;
 import RoleIconDefault from "RoleIcon" /* 7959 */;
 import ShieldUserIcon from "ShieldUserIcon" /* 8173 */;
@@ -13,7 +13,7 @@ import UserIcon from "UserIcon" /* 10553 */;
 import DiscordTagDefault from "DiscordTag" /* 10930 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 5212 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

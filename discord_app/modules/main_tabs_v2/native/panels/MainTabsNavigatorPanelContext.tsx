@@ -4,7 +4,7 @@
 import noop from "module_19" /* 19 */;
 
 const obj = { gesture: null, disallowGesture: null, edgeSwipeOnly: null, translateX: null, isInMainTabs: false };
-const Gesture = fn(5598).Gesture;
+const Gesture = fn(5588).Gesture;
 obj.gesture = Gesture.Pan();
 let ReanimatedHelperTypes = fn(7848);
 obj.disallowGesture = ReanimatedHelperTypes.createFakeSharedValue(false);

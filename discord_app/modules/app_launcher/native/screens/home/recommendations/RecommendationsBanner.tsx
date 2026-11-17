@@ -2,7 +2,7 @@
 
 // Module 13423 (RecommendationsBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import useDisplayProfileDefault from "useDisplayProfile" /* 8482 */;
 import useAvatarColorDefault from "useAvatarColor" /* 8538 */;
 import UserProfileBannerDefault from "UserProfileBanner" /* 8612 */;

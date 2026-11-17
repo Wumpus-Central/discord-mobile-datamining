@@ -2,7 +2,7 @@
 
 // Module 13174 (ActivitiesIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod13175 from "module_13175" /* 13175 */;
 import noop from "module_19" /* 19 */;
 

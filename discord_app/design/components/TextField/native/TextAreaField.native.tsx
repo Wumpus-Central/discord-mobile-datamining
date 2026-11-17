@@ -2,13 +2,13 @@
 
 // Module 7860 (TextAreaField)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5481 */;
+import native from "native" /* 5471 */;
 import useTextField from "useTextField" /* 7627 */;
 import InputFieldContainer from "InputFieldContainer" /* 7639 */;
 import noop from "module_19" /* 19 */;
 
 const util = prop(1113);
-const Text_Text = prop(5929);
+const Text_Text = prop(5919);
 const NativeTextInput = prop(7642);
 const propsForNativeTextInput = prop(7645);
 const useCharacterLimitAnnouncement = prop(7861);

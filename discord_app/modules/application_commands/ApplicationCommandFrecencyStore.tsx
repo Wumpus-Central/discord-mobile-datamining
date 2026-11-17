@@ -4,7 +4,7 @@
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 6087 */;
+import FrecencyDefault from "Frecency" /* 6077 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 function handleUserSettingsProtoStoreChange() {
@@ -25,7 +25,7 @@ function handleUserSettingsProtoStoreChange() {
     return obj;
   }), global.pendingUsages);
 }
-const ApplicationCommandConstants = fn(6345);
+const ApplicationCommandConstants = fn(6335);
 ({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: closure_4 } = ApplicationCommandConstants);
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let global = { pendingUsages: [] };

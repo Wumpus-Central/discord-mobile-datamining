@@ -966,13 +966,13 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
                   set.add(closure_0);
                   c10 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f142714 = requestConsent;
+                  f142731 = requestConsent;
                   if (requestConsent == null) {
-                    f142714 = (arg0) => closure_2_19(arg0, closure_1_4);
+                    f142731 = (arg0) => closure_2_19(arg0, closure_1_4);
                   }
                   c11 = 3;
                   c12 = 1;
-                  const obj5 = { value: f142714(closure_0), done: false };
+                  const obj5 = { value: f142731(closure_0), done: false };
                   return obj5;
                 }
               }

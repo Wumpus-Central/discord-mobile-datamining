@@ -1,6 +1,6 @@
-// === Module 18031: YouBarNameplateAccessibilitySetting ===
+// === Module 18033: YouBarNameplateAccessibilitySetting ===
 
-// Module 18031 (YouBarNameplateAccessibilitySetting)
+// Module 18033 (YouBarNameplateAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16889 */;

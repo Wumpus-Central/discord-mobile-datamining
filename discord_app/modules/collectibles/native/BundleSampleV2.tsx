@@ -6,7 +6,7 @@ import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import utils from "utils" /* 2111 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9491 */;
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9500 */;
 import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9507 */;

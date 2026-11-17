@@ -2,7 +2,7 @@
 
 // Module 8002 (PressableScale)
 import _mod1655 from "module_1655" /* 1655 */;
-import ButtonHooks from "ButtonHooks" /* 5943 */;
+import ButtonHooks from "ButtonHooks" /* 5933 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 18607: NotifyFriendsOnCustomStatusUpdateUtils ===
+// === Module 18609: NotifyFriendsOnCustomStatusUpdateUtils ===
 
-// Module 18607 (NotifyFriendsOnCustomStatusUpdateUtils)
+// Module 18609 (NotifyFriendsOnCustomStatusUpdateUtils)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import UserSettings from "UserSettings" /* 5131 */;

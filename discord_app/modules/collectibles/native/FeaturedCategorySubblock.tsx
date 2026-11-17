@@ -1,15 +1,15 @@
-// === Module 18517: FeaturedCategorySubblock ===
+// === Module 18519: FeaturedCategorySubblock ===
 
-// Module 18517 (FeaturedCategorySubblock)
+// Module 18519 (FeaturedCategorySubblock)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8484 */;
-import VisibilitySensorDefault from "VisibilitySensor" /* 18512 */;
+import VisibilitySensorDefault from "VisibilitySensor" /* 18514 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8485 */;
 
-const FastImageDefault = tmp12(6020);
+const FastImageDefault = tmp12(6010);
 require = fn;
 let closure_4 = fn(1074).CollectiblesMobileShopScreen;
 const Constants = fn(1072);
@@ -47,8 +47,8 @@ export default function _default(subblock) {
     const _Date = Date;
     date = new Date(unpublishedAt);
   }
-  let obj6 = { onChange: subblock(18499).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
-  let obj5 = subblock(18499);
+  let obj6 = { onChange: subblock(18501).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
+  let obj5 = subblock(18501);
   const obj7 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.8, androidRippleConfig: null, hitSlop: 8, onPress: null, style: null, children: null };
   const intl = tmp2(1113).intl;
   obj7.accessibilityLabel = intl.formatToPlainString(subblock(1113).t.FNtLb3, { category: subblock.name });

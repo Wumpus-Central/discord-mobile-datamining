@@ -2,10 +2,10 @@
 
 // Module 15744 (UserProfileActivityVoiceChannelUsers)
 import util from "util" /* 1113 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 14932 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 
 const UserProfileStackedActionSheetDefault = UserProfileStackedActionSheet;
 

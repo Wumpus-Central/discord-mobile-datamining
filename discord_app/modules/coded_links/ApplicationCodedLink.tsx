@@ -2,7 +2,7 @@
 
 // Module 8795 (ApplicationCodedLink)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import CodedLink from "CodedLink" /* 6055 */;
+import CodedLink from "CodedLink" /* 6045 */;
 import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 8796 */;
 import activityBookmarkUtils from "activityBookmarkUtils" /* 8797 */;
 import size from "module_2" /* 2 */;

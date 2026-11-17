@@ -1,7 +1,7 @@
 // === Module 12052: LikelyAtoMoreTipsModalActionItems ===
 
 // Module 12052 (LikelyAtoMoreTipsModalActionItems)
-import UserUtilsDefault from "UserUtils" /* 5372 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 

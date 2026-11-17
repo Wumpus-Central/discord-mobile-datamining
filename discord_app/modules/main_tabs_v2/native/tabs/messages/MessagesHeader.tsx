@@ -1,15 +1,15 @@
-// === Module 18747: MessagesHeader ===
+// === Module 18749: MessagesHeader ===
 
-// Module 18747 (MessagesHeader)
+// Module 18749 (MessagesHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import ButtonConstants from "ButtonConstants" /* 5942 */;
-import _modDef6024 from "module_6024" /* 6024 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6061 */;
+import ButtonConstants from "ButtonConstants" /* 5932 */;
+import _modDef6014 from "module_6014" /* 6014 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6051 */;
 import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7494 */;
 import _modDef7827 from "module_7827" /* 7827 */;
 import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13523 */;
-import MessageRequestsButtonDefault from "MessageRequestsButton" /* 18748 */;
+import MessageRequestsButtonDefault from "MessageRequestsButton" /* 18750 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -27,7 +27,7 @@ let obj = { headerPanel: { position: "relative", padding: PX_16, paddingBottom: 
 let obj3 = { position: "relative", padding: PX_16, paddingBottom: nativeDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM };
 obj.headerPanelTitle = { paddingBottom: PX_8, flexDirection: "row", gap: nativeDefault.space.PX_8, justifyContent: "space-between" };
 let obj4 = { paddingBottom: PX_8, flexDirection: "row", gap: nativeDefault.space.PX_8, justifyContent: "space-between" };
-obj.headerPanelButtons = { height: fn(5942).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+obj.headerPanelButtons = { height: fn(5932).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 let obj6 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj6.backgroundColor = nativeDefault.colors.BORDER_SUBTLE;
@@ -36,7 +36,7 @@ obj6.height = 1;
 obj.headerBorder = obj6;
 let closure_10 = createStyles.createStyles(obj);
 let closure_11 = { code: "(function MessagesHeaderTsx1(){let[withSpring,scrollPosition,Reanimated3DefaultSpringConfig]=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0,Reanimated3DefaultSpringConfig)};})" };
-let obj5 = { height: fn(5942).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+let obj5 = { height: fn(5932).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx");
 
@@ -129,7 +129,7 @@ export default noop.memo(function MessagesHeader(height) {
   const intl3 = tmp3(1113).intl;
   obj8.accessibilityLabel = intl3.string(require("util").t["5h0QOP"]);
   const items4 = [closure_6(require("IconButton").IconButton, obj8), closure_6(MessageRequestsButtonDefault, { noMargin: true, onPress: callback, alternateVariant: true }), , ];
-  const obj9 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: _modDef6024, onPress: callback1, maxFontSizeMultiplier: 1, text: null };
+  const obj9 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: _modDef6014, onPress: callback1, maxFontSizeMultiplier: 1, text: null };
   const intl4 = tmp3(1113).intl;
   obj9.text = intl4.string(require("util").t.zIJnA6);
   items4[2] = closure_6(require("components/Button/Button").Button, obj9);

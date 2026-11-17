@@ -2,7 +2,7 @@
 
 // Module 10302 (RiotGamesNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10303 from "module_10303" /* 10303 */;
 import noop from "module_19" /* 19 */;
 

@@ -2,7 +2,7 @@
 
 // Module 14252 (CheckpointSessionAnalyticsManager)
 import v1 from "v1" /* 1269 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6745 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6735 */;
 import CheckpointStore from "CheckpointStore" /* 14253 */;
 
 require = fn;

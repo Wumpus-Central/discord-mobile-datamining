@@ -2,7 +2,7 @@
 
 // Module 10996 (BellIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9173 from "module_9173" /* 9173 */;
 import noop from "module_19" /* 19 */;
 

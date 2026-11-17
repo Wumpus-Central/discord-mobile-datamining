@@ -1,7 +1,7 @@
 // === Module 8513: HeroBlockRecord ===
 
 // Module 8513 (HeroBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 5991 */;
+import ShopBlockType from "ShopBlockType" /* 5981 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 8497 */;
 import ShopBlockRecordFactory from "ShopBlockRecordFactory" /* 8514 */;
 import size from "module_2" /* 2 */;

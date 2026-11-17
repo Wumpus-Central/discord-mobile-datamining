@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useFontScale from "useFontScale" /* 5944 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useFontScale from "useFontScale" /* 5934 */;
 import Pressables from "Pressables" /* 7428 */;
 import shared_components_Badge from "shared_components/Badge" /* 9057 */;
 import noop from "module_19" /* 19 */;

@@ -3,7 +3,7 @@
 // Module 8395 (AgeVerificationRetryScreen)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6833 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6823 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8190 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -69,7 +69,7 @@ export default function GetStartedScreen(modalSessionId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = v3(6833).trackAgeVerificationModalClicked(c0, v3(6833).AgeVerificationModalVersion.RETRY, v3(6833).AgeVerificationModalCta.GET_STARTED);
+              const result = v3(6823).trackAgeVerificationModalClicked(c0, v3(6823).AgeVerificationModalVersion.RETRY, v3(6823).AgeVerificationModalCta.GET_STARTED);
               v1 = 1;
               c0 = 1;
               const obj4 = { value: v1(), done: false };

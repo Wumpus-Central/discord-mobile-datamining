@@ -38,7 +38,7 @@ export default function PremiumFeaturesWumpus(premiumType) {
     }
   }, items);
   ({ wumpusImageSource, cloudsImageSource } = memo);
-  const items1 = [closure_4(premiumType(6020), { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }), ];
+  const items1 = [closure_4(premiumType(6010), { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }), ];
   const items2 = [tmp.wumpus, ];
   let wumpusLeft = premiumType === PremiumTypes.TIER_0;
   if (wumpusLeft) {
@@ -46,7 +46,7 @@ export default function PremiumFeaturesWumpus(premiumType) {
   }
   let obj2 = { children: null };
   items2[1] = wumpusLeft;
-  items1[1] = closure_4(premiumType(6020), { style: items2, resizeMode: "contain", source: wumpusImageSource });
+  items1[1] = closure_4(premiumType(6010), { style: items2, resizeMode: "contain", source: wumpusImageSource });
   obj2.children = items1;
   return closure_6(closure_5, obj2);
 };

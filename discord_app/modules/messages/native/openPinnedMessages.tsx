@@ -1,7 +1,7 @@
 // === Module 12587: openPinnedMessages ===
 
 // Module 12587 (openPinnedMessages)
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
 import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10897 */;
 import size from "module_2" /* 2 */;
 

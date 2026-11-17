@@ -2,7 +2,7 @@
 
 // Module 17303 (PasskeyInitStep)
 import nativeDefault from "native" /* 575 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6852 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6842 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ function CredentialList(navigation) {
     let obj3 = { variant: "body-md/normal", style: tmp3.upsellText, children: null };
     let intl2 = tmp(1113).intl;
     obj3.children = intl2.string(tmp(1113).t.FSNwFW);
-    items1[1] = closure_9(tmp(5929).Text, obj3);
+    items1[1] = closure_9(tmp(5919).Text, obj3);
     obj2.children = items1;
     return closure_10(View, obj2);
   } else {

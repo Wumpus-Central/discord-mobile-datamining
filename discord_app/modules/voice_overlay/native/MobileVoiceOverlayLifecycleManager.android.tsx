@@ -2,9 +2,9 @@
 
 // Module 17005 (MobileVoiceOverlayLifecycleManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6962 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6952 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 8857 */;
 import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 13030 */;
 import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 17012 */;
@@ -12,11 +12,11 @@ import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
-import SpeakingStore from "SpeakingStore" /* 6941 */;
+import SpeakingStore from "SpeakingStore" /* 6931 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 13000 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 

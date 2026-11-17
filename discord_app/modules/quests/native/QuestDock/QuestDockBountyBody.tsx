@@ -1,9 +1,9 @@
-// === Module 17814: QuestDockBountyBody ===
+// === Module 17816: QuestDockBountyBody ===
 
-// Module 17814 (QuestDockBountyBody)
+// Module 17816 (QuestDockBountyBody)
 import util from "util" /* 1113 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
-import AdCreativeType from "AdCreativeType" /* 5345 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 8831 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import captureAdUserAction from "captureAdUserAction" /* 10135 */;
@@ -15,7 +15,7 @@ import BountiesModalTypes from "BountiesModalTypes" /* 17544 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(5338).QuestDockMode;
+const QuestDockMode = fn(6954).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");

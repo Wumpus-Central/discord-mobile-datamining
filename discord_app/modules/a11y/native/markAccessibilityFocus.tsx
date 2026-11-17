@@ -1,7 +1,7 @@
-// === Module 6273: markAccessibilityFocus ===
+// === Module 6263: markAccessibilityFocus ===
 
-// Module 6273 (markAccessibilityFocus)
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 6272 */;
+// Module 6263 (markAccessibilityFocus)
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 6262 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/a11y/native/markAccessibilityFocus.tsx");

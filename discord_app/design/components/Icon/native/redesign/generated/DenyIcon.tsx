@@ -2,7 +2,7 @@
 
 // Module 9157 (DenyIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8557 from "module_8557" /* 8557 */;
 import noop from "module_19" /* 19 */;
 

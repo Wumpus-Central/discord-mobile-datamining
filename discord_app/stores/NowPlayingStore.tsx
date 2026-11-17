@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 16252 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8553 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = fn;

@@ -2,7 +2,7 @@
 
 // Module 16090 (JoinVoiceChannelButton)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2020 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6935 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6925 */;
 import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 12971 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
@@ -44,6 +44,6 @@ export default function JoinVoiceChannelButton(channel) {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   }, items1);
-  obj2.children = jsx(channel(5936).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj2.children = jsx(channel(5926).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={null}>{null}</View>;
 };

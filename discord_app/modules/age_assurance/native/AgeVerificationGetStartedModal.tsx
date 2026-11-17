@@ -2,7 +2,7 @@
 
 // Module 8389 (AgeVerificationGetStartedModal)
 import nativeDefault from "native" /* 575 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6833 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6823 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import noop from "module_19" /* 19 */;
 

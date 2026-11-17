@@ -3,11 +3,11 @@
 // Module 10609 (SecureFramesVerifiedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 6096 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6086 */;
 import SecureFramesUtils from "SecureFramesUtils" /* 10627 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6802 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6792 */;
 import TransientKeyStore from "TransientKeyStore" /* 10610 */;
 import VerifiedKeyStore from "VerifiedKeyStore" /* 10611 */;
 

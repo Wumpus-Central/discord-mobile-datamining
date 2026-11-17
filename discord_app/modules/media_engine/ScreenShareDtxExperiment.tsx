@@ -1,6 +1,6 @@
-// === Module 6218: ScreenShareDtxExperiment ===
+// === Module 6208: ScreenShareDtxExperiment ===
 
-// Module 6218 (ScreenShareDtxExperiment)
+// Module 6208 (ScreenShareDtxExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

@@ -3,7 +3,7 @@
 // Module 9491 (ProfileEffectSampleV2)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 9490 */;
 import _modDef9492 from "module_9492" /* 9492 */;
 import ProfileEffectDefault from "ProfileEffect" /* 9493 */;

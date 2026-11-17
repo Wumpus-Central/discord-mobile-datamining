@@ -1,12 +1,12 @@
-// === Module 20109: VoicePanelVoiceControls ===
+// === Module 20111: VoicePanelVoiceControls ===
 
-// Module 20109 (VoicePanelVoiceControls)
+// Module 20111 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11951 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
@@ -14,10 +14,10 @@ import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" 
 import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 13002 */;
 import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 13031 */;
 import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 16100 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19986 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 20104 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 20110 */;
-import StreamVolumeMovedNoticeDefault from "StreamVolumeMovedNotice" /* 20120 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19988 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 20106 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 20112 */;
+import StreamVolumeMovedNoticeDefault from "StreamVolumeMovedNotice" /* 20122 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import module_1655 from "module_1655" /* 1655 */;

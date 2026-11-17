@@ -1,10 +1,10 @@
-// === Module 20332: TouchableUploadAvatar ===
+// === Module 20335: TouchableUploadAvatar ===
 
-// Module 20332 (TouchableUploadAvatar)
+// Module 20335 (TouchableUploadAvatar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import Pressables from "Pressables" /* 7428 */;
 import _modDef15138 from "module_15138" /* 15138 */;
 import _modDef16297 from "module_16297" /* 16297 */;

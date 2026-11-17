@@ -7,7 +7,7 @@ import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 
 const require = fn;
 const View = fn(17).View;
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 let obj = { container: { flex: 1, marginHorizontal: 4, marginVertical: 4 }, media: { flex: 1, borderRadius: nativeDefault.radii.sm } };

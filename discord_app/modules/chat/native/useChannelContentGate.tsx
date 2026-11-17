@@ -1,8 +1,8 @@
 // === Module 11977: useChannelContentGate ===
 
 // Module 11977 (useChannelContentGate)
-import AgeGateUtils from "AgeGateUtils" /* 6838 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6858 */;
+import AgeGateUtils from "AgeGateUtils" /* 6828 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6848 */;
 import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 11259 */;
 import NsfwGateChatDefault from "NsfwGateChat" /* 11978 */;
 import GuildNSFWDefault from "GuildNSFW" /* 11980 */;

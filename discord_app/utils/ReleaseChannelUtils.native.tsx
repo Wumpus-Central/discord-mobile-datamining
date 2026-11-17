@@ -1,6 +1,6 @@
-// === Module 6772: ReleaseChannelUtils ===
+// === Module 6762: ReleaseChannelUtils ===
 
-// Module 6772 (ReleaseChannelUtils)
+// Module 6762 (ReleaseChannelUtils)
 import ClientInfoUtils from "ClientInfoUtils" /* 1379 */;
 
 const ReleaseChannel = ClientInfoUtils.getConstants().ReleaseChannel;

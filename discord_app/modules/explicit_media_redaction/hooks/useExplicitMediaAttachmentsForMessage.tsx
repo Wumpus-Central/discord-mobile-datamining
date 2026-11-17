@@ -3,7 +3,7 @@
 // Module 12650 (useExplicitMediaAttachmentsForMessage)
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8634 */;
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8640 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 const require = globalThis.__r;
 

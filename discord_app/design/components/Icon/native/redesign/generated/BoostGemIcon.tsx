@@ -2,7 +2,7 @@
 
 // Module 9981 (BoostGemIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9982 from "module_9982" /* 9982 */;
 import noop from "module_19" /* 19 */;
 

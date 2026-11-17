@@ -2,18 +2,18 @@
 
 // Module 15759 (UserProfileVoiceSettings)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6225 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6233 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6215 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6223 */;
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 10631 */;
 import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12123 */;
 import completeStreamVolumeMovedTutorialDefault from "completeStreamVolumeMovedTutorial" /* 15764 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 6369 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import SoundboardStore from "SoundboardStore" /* 6359 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 
 require = fn;
 function UserVoiceSettings(user) {
@@ -302,7 +302,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, VideoToggleState: closure_10 } = Constants);
 const Permissions = fn(1083).Permissions;
-const maxValue = fn(6075).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+const maxValue = fn(6065).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(5306);

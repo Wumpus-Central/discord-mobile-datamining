@@ -6,7 +6,7 @@ import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 5164 */;
-import useMessageAuthor from "useMessageAuthor" /* 6749 */;
+import useMessageAuthor from "useMessageAuthor" /* 6739 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7874 */;
 import renderMessageMarkupDefault from "renderMessageMarkup" /* 8646 */;
 import ForumUtils from "ForumUtils" /* 8995 */;
@@ -18,7 +18,7 @@ import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 7014 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 7035 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 8871 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6944 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6934 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
@@ -418,7 +418,7 @@ export function useForumPostMessageAuthor(message, thread) {
   items = [UserStore];
   const stateFromStores = id(504).useStateFromStores(items, () => UserStore.getUser(id));
   const obj = id(504);
-  const nullableMessageAuthor = id(6749).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(6739).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = noop.useEffect(() => {
     let tmp2 = null != id;

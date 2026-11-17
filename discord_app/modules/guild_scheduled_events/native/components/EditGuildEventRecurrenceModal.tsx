@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2020 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import EditGuildEventUtils from "EditGuildEventUtils" /* 7971 */;
 import useEventExceptionDefault from "useEventException" /* 7979 */;
 import LazyAPIPromiseDefault from "LazyAPIPromise" /* 7982 */;
@@ -143,7 +143,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     return applyArgumentsResult;
   };
   obj3.disabled = null != first;
-  const action = closure_8(guildEvent(5936).Button, obj3);
+  const action = closure_8(guildEvent(5926).Button, obj3);
   let obj5 = {
     style: null,
     children: closure_8(guildEvent(7490).Navigator, {

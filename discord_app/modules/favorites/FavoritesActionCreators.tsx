@@ -10,8 +10,8 @@ import wrappers from "wrappers" /* 1227 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5136 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
 import FavoritesUtils from "FavoritesUtils" /* 5180 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5992 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5982 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
 import FavoritesHooks from "FavoritesHooks" /* 10945 */;
 import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10947 */;
 import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10971 */;
@@ -21,7 +21,7 @@ import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import FavoriteStore from "FavoriteStore" /* 5158 */;
 
 const require = globalThis.__r;
@@ -765,8 +765,8 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                               const intl2 = closure_0(1113).intl;
                               const obj5 = { count: limit };
                               obj4.body = intl2.formatToPlainString(closure_0(1113).t.JaIyFi, obj5);
-                              closure_1(6268).show(obj4);
-                              const tmp4Result2 = closure_1(6268);
+                              closure_1(6258).show(obj4);
+                              const tmp4Result2 = closure_1(6258);
                             }
                             return false;
                           } else {
@@ -1065,8 +1065,8 @@ export function setFavoritesAutoAddJoinedThreads(autoAdd) {
               const intl2 = util.intl;
               const obj2 = { count: tmp14.limit };
               obj.body = intl2.formatToPlainString(util.t.JaIyFi, obj2);
-              tmp10(6268).show(obj);
-              const tmp10Result2 = tmp10(6268);
+              tmp10(6258).show(obj);
+              const tmp10Result2 = tmp10(6258);
             }
             str = tmp10(10947)(CATEGORY);
             obj5 = applyDefault;

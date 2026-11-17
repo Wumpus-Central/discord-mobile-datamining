@@ -337,7 +337,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
     obj.variant = variant;
     return _undefined6(state(_undefined3[8]).SegmentedControlItem, obj, id);
   }), items13);
-  const Gesture = tmp2(5598).Gesture;
+  const Gesture = tmp2(5588).Gesture;
   const tmp2Result8 = require("module_1655");
   const items16 = [closure_16, sharedValue, activeIndex];
   _require = undefined;
@@ -397,7 +397,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   let tmp56Result = tmp56(tmp58, { horizontal: true, accessibilityRole: str4, alwaysBounceHorizontal: false, contentContainerStyle: tmp4.scrollContentContainer, keyboardShouldPersistTaps: keyboardShouldPersistTaps.keyboardShouldPersistTaps, children: tmp57 });
   if ("experimental_Large" === str) {
     const obj10 = { gesture: onEndResult, children: tmp57 };
-    tmp56Result = tmp56(tmp2(5598).GestureDetector, obj10);
+    tmp56Result = tmp56(tmp2(5588).GestureDetector, obj10);
   }
   return tmp56Result;
 }

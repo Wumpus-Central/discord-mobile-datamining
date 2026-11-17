@@ -1,13 +1,13 @@
-// === Module 19119: GuildsBarPendingGuild ===
+// === Module 19121: GuildsBarPendingGuild ===
 
-// Module 19119 (GuildsBarPendingGuild)
+// Module 19121 (GuildsBarPendingGuild)
 import nativeDefault from "native" /* 575 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 19064 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 19066 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5350 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5340 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 
 require = fn;
 const GuildRecord = fn(5173);

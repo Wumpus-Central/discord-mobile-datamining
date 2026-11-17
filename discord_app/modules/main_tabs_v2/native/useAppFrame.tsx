@@ -1,11 +1,11 @@
-// === Module 18713: useAppFrame ===
+// === Module 18715: useAppFrame ===
 
-// Module 18713 (useAppFrame)
+// Module 18715 (useAppFrame)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import DeviceUtils from "DeviceUtils" /* 5263 */;
-import useChatLayoutDefault from "useChatLayout" /* 5495 */;
+import useChatLayoutDefault from "useChatLayout" /* 5485 */;
 import createStyles from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;
 

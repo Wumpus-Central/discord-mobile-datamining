@@ -59,7 +59,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
         tmp13 = closure_9(GuildIconDefault, obj4);
       }
     }
-    presentFriendRequestAcceptedToast = tmp6(6014).presentFriendRequestAcceptedToast;
+    presentFriendRequestAcceptedToast = tmp6(6004).presentFriendRequestAcceptedToast;
     const items1 = [presentFriendRequestAcceptedToast];
     const effect = noop.useEffect(() => {
       function handleRelationshipAdd(relationship) {
@@ -98,7 +98,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
     let tmp19Result2 = null != tmp12;
     if (tmp19Result2) {
       const obj13 = { variant: "body-md/normal", children: tmp12.visible };
-      tmp19Result2 = closure_9(tmp6(5929).Text, obj13);
+      tmp19Result2 = closure_9(tmp6(5919).Text, obj13);
     }
     items3[1] = tmp19Result2;
     obj7.children = items3;

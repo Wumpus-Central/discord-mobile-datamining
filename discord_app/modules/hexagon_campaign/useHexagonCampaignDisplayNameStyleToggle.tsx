@@ -2,7 +2,7 @@
 
 // Module 17107 (useHexagonCampaignDisplayNameStyleToggle)
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5334 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6750 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6740 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 9398 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

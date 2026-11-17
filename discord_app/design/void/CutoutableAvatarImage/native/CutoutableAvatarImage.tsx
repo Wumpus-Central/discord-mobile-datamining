@@ -6,8 +6,8 @@ import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 
 import v1 from "v1" /* 1269 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import spring_spring from "spring/spring" /* 5939 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import spring_spring from "spring/spring" /* 5929 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import ClipView from "ClipView" /* 9503 */;
 import getChannelIcon from "getChannelIcon" /* 15561 */;
 import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 15748 */;

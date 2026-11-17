@@ -1,6 +1,6 @@
-// === Module 20250: FrecencyUserSettingsManager ===
+// === Module 20253: FrecencyUserSettingsManager ===
 
-// Module 20250 (FrecencyUserSettingsManager)
+// Module 20253 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
@@ -9,7 +9,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 11408 */;
 import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 11407 */;
 import EmojiStore from "EmojiStore" /* 6969 */;
-import SoundboardStore from "SoundboardStore" /* 6369 */;
+import SoundboardStore from "SoundboardStore" /* 6359 */;
 import StickersPersistedStore from "StickersPersistedStore" /* 7009 */;
 import FrecencyStore from "FrecencyStore" /* 7069 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;

@@ -1,6 +1,6 @@
-// === Module 19461: SuggestedSearchRow ===
+// === Module 19463: SuggestedSearchRow ===
 
-// Module 19461 (SuggestedSearchRow)
+// Module 19463 (SuggestedSearchRow)
 import nativeDefault from "native" /* 575 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14740 */;
 import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14762 */;

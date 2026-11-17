@@ -1,6 +1,6 @@
-// === Module 20416: VoiceChannelSettingsManager ===
+// === Module 20419: VoiceChannelSettingsManager ===
 
-// Module 20416 (VoiceChannelSettingsManager)
+// Module 20419 (VoiceChannelSettingsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import BitRateStore from "BitRateStore" /* 16504 */;

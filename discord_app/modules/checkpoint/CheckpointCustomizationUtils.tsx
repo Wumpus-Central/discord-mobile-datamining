@@ -1,15 +1,15 @@
-// === Module 6744: CheckpointCustomizationUtils ===
+// === Module 6734: CheckpointCustomizationUtils ===
 
-// Module 6744 (CheckpointCustomizationUtils)
+// Module 6734 (CheckpointCustomizationUtils)
 import util from "util" /* 1113 */;
 import _modDef3317 from "module_3317" /* 3317 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6378 */;
-import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6420 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6421 */;
-import CheckpointTrait from "CheckpointTrait" /* 6422 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6423 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6745 */;
-import CheckpointConstants from "CheckpointConstants" /* 6377 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6368 */;
+import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6410 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6411 */;
+import CheckpointTrait from "CheckpointTrait" /* 6412 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6413 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6735 */;
+import CheckpointConstants from "CheckpointConstants" /* 6367 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -186,14 +186,14 @@ export function getCheckpointRouteBlockedTrait(activeRoute, arr) {
     return arr[0];
   } else {
     if (tmpResult.isCheckpointCustomizationRoute(activeRoute)) {
-      const tmpResult2 = tmp(6745);
+      const tmpResult2 = tmp(6735);
       const tmp4 = obj4[tmpResult2.getCheckpointRoutePresentation(tmpResult2, activeRoute).characterStage];
       _require = tmp4;
       if (null != tmp4) {
         return arr.find((item) => item === obj3[closure_0]);
       }
     }
-    tmpResult = tmp(6745);
+    tmpResult = tmp(6735);
   }
 }
 export function getChamferedRectPoints(width, height, arg2) {

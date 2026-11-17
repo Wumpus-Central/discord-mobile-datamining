@@ -1,6 +1,6 @@
-// === Module 19535: ThreadMemberListHooks ===
+// === Module 19537: ThreadMemberListHooks ===
 
-// Module 19535 (ThreadMemberListHooks)
+// Module 19537 (ThreadMemberListHooks)
 import util from "util" /* 1113 */;
 import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 12526 */;
 import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 12527 */;

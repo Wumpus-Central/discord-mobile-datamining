@@ -1,6 +1,6 @@
-// === Module 17952: RoleColorsSetting ===
+// === Module 17954: RoleColorsSetting ===
 
-// Module 17952 (RoleColorsSetting)
+// Module 17954 (RoleColorsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16889 */;

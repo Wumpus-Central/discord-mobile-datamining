@@ -1,7 +1,7 @@
 // === Module 16343: ShareScreenFooter ===
 
 // Module 16343 (ShareScreenFooter)
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import useShareChatInputActions from "useShareChatInputActions" /* 15180 */;
 import ShareFooterLayoutDefault from "ShareFooterLayout" /* 15181 */;
 import ShareChatInputDefault from "ShareChatInput" /* 15192 */;

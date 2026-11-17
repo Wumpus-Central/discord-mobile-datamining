@@ -2,7 +2,7 @@
 
 // Module 11387 (useStickerPickerListData)
 import applyDefault from "apply" /* 12 */;
-import StickersTypes from "StickersTypes" /* 6793 */;
+import StickersTypes from "StickersTypes" /* 6783 */;
 import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 11259 */;
 import noop from "module_19" /* 19 */;
 

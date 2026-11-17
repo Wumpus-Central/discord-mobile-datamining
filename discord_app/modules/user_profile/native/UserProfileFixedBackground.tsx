@@ -1,8 +1,8 @@
 // === Module 8600: UserProfileFixedBackground ===
 
 // Module 8600 (UserProfileFixedBackground)
-import native from "native" /* 5377 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import native from "native" /* 5367 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
 import useUserProfileColors from "useUserProfileColors" /* 8601 */;
 import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8602 */;
 import _slicedToArray from "module_32" /* 32 */;

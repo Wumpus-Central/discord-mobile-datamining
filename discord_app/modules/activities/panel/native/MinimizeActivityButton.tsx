@@ -1,12 +1,12 @@
-// === Module 19939: MinimizeActivityButton ===
+// === Module 19941: MinimizeActivityButton ===
 
-// Module 19939 (MinimizeActivityButton)
+// Module 19941 (MinimizeActivityButton)
 import _modDef10561 from "module_10561" /* 10561 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles({ buttonParent: { flexShrink: 1 } });
@@ -27,7 +27,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
       obj3.accessibilityLabel = intl2.string(setMode(1113).t.brPQ5U);
       obj3.onPress = callback;
       obj3.text = activityName;
-      obj2.children = jsx(setMode(5936).Button, { icon: _modDef10561, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true });
+      obj2.children = jsx(setMode(5926).Button, { icon: _modDef10561, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true });
       let tmp3 = <View style={tmp2.buttonParent}>{null}</View>;
     }
     return tmp3;

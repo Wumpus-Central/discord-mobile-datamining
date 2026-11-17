@@ -3,7 +3,7 @@
 // Module 8484 (CollectiblesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 8497 */;
 import LayerActionCreators from "LayerActionCreators" /* 8526 */;
 import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 8527 */;
@@ -11,11 +11,11 @@ import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 8528 */;
 import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8534 */;
 import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 8535 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5932 */;
+import DevSettingsStore from "DevSettingsStore" /* 5922 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import UserStore from "UserStore" /* 1388 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8485 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5986 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5976 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8500 */;
 import CollectiblesProductRecord from "CollectiblesProductRecord" /* 8487 */;
 import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 8511 */;
@@ -883,7 +883,7 @@ let closure_16 = fn(8512).CollectiblesShopHomeRecord;
 const constants = fn(1074).CollectiblesMobileShopScreen;
 const Constants = fn(1072);
 ({ Endpoints: closure_18, Routes, UserSettingsSections: closure_19 } = Constants);
-const CollectiblesShopHomeStore = fn(5990);
+const CollectiblesShopHomeStore = fn(5980);
 const CollectiblesShopStore = fn(8525);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
@@ -892,7 +892,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(5493).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(5483).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

@@ -2,7 +2,7 @@
 
 // Module 7456 (TableRowArrow)
 import nativeDefault from "native" /* 575 */;
-import Icon from "Icon" /* 5938 */;
+import Icon from "Icon" /* 5928 */;
 import _modDef7457 from "module_7457" /* 7457 */;
 import noop from "module_19" /* 19 */;
 

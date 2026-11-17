@@ -8,7 +8,7 @@ import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9476 */
 import RunningGameStore from "RunningGameStore" /* 2140 */;
 import UserProfileStore from "UserProfileStore" /* 7352 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7246 */;
 
 const require = globalThis.__r;

@@ -1,13 +1,13 @@
-// === Module 19932: ActivityPanelFocusedView ===
+// === Module 19934: ActivityPanelFocusedView ===
 
-// Module 19932 (ActivityPanelFocusedView)
+// Module 19934 (ActivityPanelFocusedView)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 12848 */;
 import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13129 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19925 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19927 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
@@ -340,9 +340,9 @@ class BaseActivityPanelFocusedView {
     return tmp48(tmp(tmp2[19]).ThemeContextProvider, obj1);
   }
 }
-const ActivityPanelConstants = fn(5959);
+const ActivityPanelConstants = fn(5949);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: metroImportDefault, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8, ActivityPanelModes: closure_9 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(19778);
+const ActivityPanelNativeConstants = fn(19780);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_10, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: closure_12 } = ActivityPanelNativeConstants);
 let ThemeTypes = fn(1072).ThemeTypes;
 const IS_IOS = fn(11985).IS_IOS;
@@ -356,7 +356,7 @@ let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj4.backgroundColor = nativeDefault.colors.BLACK;
 obj.shade = obj4;
-const expandedHeight = createStyles.createStyles(obj);
+let closure_19 = createStyles.createStyles(obj);
 let closure_20 = { code: "(function transitionComplete_ActivityPanelFocusedViewTsx1(finished=false){let[transitionState,TransitionStates,scheduleOnRN,transitionCleanUp]=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){scheduleOnRN(transitionCleanUp);}})" };
 let closure_21 = { code: "(function ActivityPanelFocusedViewTsx2(){let[wrapperDimensions,lg,IS_IOS,animatedKeyboardHeight,windowDimensions,safeArea,shown,wrapperOffset,_worklet_7132668688042_init_data,transitionState,TransitionStates,scheduleOnRN,transitionCleanUp,reduceMotion,withTiming,REDUCED_MOTION_TIMING,withSpring,ACTIVITY_LAYOUT_PHYSICS_GESTURE,ACTIVITY_LAYOUT_PHYSICS_DEFAULT]=this.__closure;const topBorderRadius=!wrapperDimensions.isWindowLandscape?lg:0;const keyboardHeight=IS_IOS?animatedKeyboardHeight.get():0;const width=windowDimensions.width;const height=windowDimensions.height-keyboardHeight-(!wrapperDimensions.isWindowLandscape?safeArea.top:0);const y=shown.get()?wrapperOffset.get().y:windowDimensions.height;const transitionComplete=function transitionComplete_ActivityPanelFocusedViewTsx1Factory([_worklet_7132668688042_init_data,transitionState,TransitionStates,scheduleOnRN,transitionCleanUp]){const transitionComplete=function(finished=false){if(finished&&transitionState===TransitionStates.YEETED){scheduleOnRN(transitionCleanUp);}};transitionComplete.__closure=[transitionState,TransitionStates,scheduleOnRN,transitionCleanUp];transitionComplete.__workletHash=7132668688042;transitionComplete.__initData=_worklet_7132668688042_init_data;return transitionComplete;}([_worklet_7132668688042_init_data,transitionState,TransitionStates,scheduleOnRN,transitionCleanUp]);const targetOpacity=reduceMotion&&shown.get()?1-wrapperOffset.get().y/windowDimensions.height:0;return{opacity:reduceMotion?withTiming(targetOpacity,REDUCED_MOTION_TIMING,shown.get()&&wrapperOffset.get().gestureActive?'animate-never':'animate-always',transitionComplete):1,transform:[{translateY:!reduceMotion?withSpring(y,wrapperOffset.get().gestureActive&&transitionState!==TransitionStates.YEETED?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,'animate-always',transitionComplete):0}],top:!wrapperDimensions.isWindowLandscape?safeArea.top:0,width:width,height:height,borderTopStartRadius:topBorderRadius,borderTopEndRadius:topBorderRadius};})" };
 let closure_22 = { code: "(function ActivityPanelFocusedViewTsx3(){let[wrapperOffset,shown,windowDimensions,withSpring,ACTIVITY_LAYOUT_PHYSICS_DEFAULT]=this.__closure;const opacity=function(){if(!wrapperOffset.get().gestureActive){return shown.get()?1:0;}return 1-wrapperOffset.get().y/windowDimensions.height;}();return{opacity:withSpring(opacity,ACTIVITY_LAYOUT_PHYSICS_DEFAULT)};})" };

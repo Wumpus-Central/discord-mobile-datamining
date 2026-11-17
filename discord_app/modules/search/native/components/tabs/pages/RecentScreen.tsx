@@ -1,9 +1,9 @@
-// === Module 19466: RecentScreen ===
+// === Module 19468: RecentScreen ===
 
-// Module 19466 (RecentScreen)
+// Module 19468 (RecentScreen)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6833 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6823 */;
 import Pressables from "Pressables" /* 7428 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8190 */;
 import SearchPlatformUtils from "SearchPlatformUtils" /* 14740 */;
@@ -17,7 +17,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 7037 */;
 import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 14767 */;
-import SearchHistoryStore from "SearchHistoryStore" /* 19467 */;
+import SearchHistoryStore from "SearchHistoryStore" /* 19469 */;
 import SearchQueryStore from "SearchQueryStore" /* 14754 */;
 
 require = fn;
@@ -37,7 +37,7 @@ function ClearAllHistory(searchContext) {
   const obj2 = { variant: "body-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1113).intl;
   obj2.children = intl2.string(searchContext(1113).t.LFTAUp);
-  obj.children = jsx(searchContext(5929).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
+  obj.children = jsx(searchContext(5919).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
   return jsx(searchContext(7428).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);

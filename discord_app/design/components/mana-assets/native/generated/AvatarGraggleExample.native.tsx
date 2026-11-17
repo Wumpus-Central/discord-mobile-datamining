@@ -1,19 +1,19 @@
-// === Module 20687: AvatarGraggleExample ===
+// === Module 20690: AvatarGraggleExample ===
 
-// Module 20687 (AvatarGraggleExample)
+// Module 20690 (AvatarGraggleExample)
 import assetHelpers from "assetHelpers" /* 7755 */;
-import _modDef20688 from "module_20688" /* 20688 */;
-import _modDef20689 from "module_20689" /* 20689 */;
-import _modDef20690 from "module_20690" /* 20690 */;
+import _modDef20691 from "module_20691" /* 20691 */;
+import _modDef20692 from "module_20692" /* 20692 */;
+import _modDef20693 from "module_20693" /* 20693 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef20688 }, 3: null };
-let obj2 = { uri: _modDef20688 };
-obj[2] = { uri: _modDef20689 };
-const obj3 = { uri: _modDef20689 };
-obj[3] = { uri: _modDef20690 };
+let obj = { 1: null, 2: { uri: _modDef20691 }, 3: null };
+let obj2 = { uri: _modDef20691 };
+obj[2] = { uri: _modDef20692 };
+const obj3 = { uri: _modDef20692 };
+obj[3] = { uri: _modDef20693 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarGraggleExample.native.tsx");
 

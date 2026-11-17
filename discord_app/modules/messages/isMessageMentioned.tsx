@@ -1,6 +1,6 @@
-// === Module 6754: isMessageMentioned ===
+// === Module 6744: isMessageMentioned ===
 
-// Module 6754 (isMessageMentioned)
+// Module 6744 (isMessageMentioned)
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;

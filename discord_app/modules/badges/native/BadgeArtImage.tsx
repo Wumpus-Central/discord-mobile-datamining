@@ -2,8 +2,8 @@
 
 // Module 15277 (BadgeArtImage)
 import DurationsDefault from "Durations" /* 1089 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import TimeUtils from "TimeUtils" /* 6079 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import TimeUtils from "TimeUtils" /* 6069 */;
 import inlineStyles from "inlineStyles" /* 8263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -173,7 +173,7 @@ function SvgArt(url) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const promiseDeduper = new fn(5436).PromiseDeduper();
+const promiseDeduper = new fn(5426).PromiseDeduper();
 let closure_10 = 10 * DurationsDefault.Millis.SECOND;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeArtImage.tsx");

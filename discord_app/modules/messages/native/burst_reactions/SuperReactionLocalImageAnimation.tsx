@@ -2,7 +2,7 @@
 
 // Module 15460 (SuperReactionLocalImageAnimation)
 import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 5264 */;
-import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 5922 */;
+import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 5912 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

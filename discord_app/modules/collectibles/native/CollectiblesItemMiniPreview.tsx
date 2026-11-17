@@ -3,7 +3,7 @@
 // Module 9525 (CollectiblesItemMiniPreview)
 import nativeDefault from "native" /* 575 */;
 import utils from "utils" /* 2111 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import ProfileEffectDefault from "ProfileEffect" /* 9493 */;
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9500 */;
 import NameplateDefault from "Nameplate" /* 9508 */;

@@ -1,12 +1,12 @@
-// === Module 18894: ServerPreviewBannerControls ===
+// === Module 18896: ServerPreviewBannerControls ===
 
-// Module 18894 (ServerPreviewBannerControls)
+// Module 18896 (ServerPreviewBannerControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import transitionToGuild from "transitionToGuild" /* 7231 */;
 import _modDef7498 from "module_7498" /* 7498 */;
 import IconButton from "IconButton" /* 7988 */;
-import ServerPreviewPillDefault from "ServerPreviewPill" /* 18895 */;
+import ServerPreviewPillDefault from "ServerPreviewPill" /* 18897 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

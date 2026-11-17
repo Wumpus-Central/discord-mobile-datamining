@@ -5,10 +5,10 @@ import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
 import GuildIconDefault from "GuildIcon" /* 7720 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7874 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
@@ -159,7 +159,7 @@ export default function ForumPostLongPressActionSheet(thread) {
         const t = tmp(1113).t;
         if (stateFromStores1) {
           obj20.label = string(t["2LsZdT"]);
-          obj20.IconComponent = tmp(6027).UserMinusIcon;
+          obj20.IconComponent = tmp(6017).UserMinusIcon;
           obj20.onPress = function onPress() {
             return ThreadActionCreatorsDefault.leaveThread(thread, "Context Menu");
           };
@@ -179,7 +179,7 @@ export default function ForumPostLongPressActionSheet(thread) {
           const obj21 = { label: null, IconComponent: null, onPress: null };
           let intl5 = tmp(1113).intl;
           obj21.label = intl5.string(tmp(1113).t.cnRubV);
-          obj21.IconComponent = tmp(6042).ClockIcon;
+          obj21.IconComponent = tmp(6032).ClockIcon;
           obj21.onPress = function onPress() {
             ThreadActionCreatorsDefault.unarchiveThread(thread, false);
           };
@@ -271,7 +271,7 @@ export default function ForumPostLongPressActionSheet(thread) {
       const obj27 = { label: null, IconComponent: null, onPress: null };
       const intl10 = tmp(1113).intl;
       obj27.label = intl10.string(tmp(1113).t.WqhZss);
-      obj27.IconComponent = tmp(6029).LinkIcon;
+      obj27.IconComponent = tmp(6019).LinkIcon;
       obj27.onPress = function onPress() {
         const result = messages_MessagesUtils.handleCopyLinkForumPost(thread.guild_id, thread.id, { section: constants3.CONTEXT_MENU });
       };
@@ -385,7 +385,7 @@ export default function ForumPostLongPressActionSheet(thread) {
         }
         const obj34 = {
           label: string5Result,
-          IconComponent: tmp(6040).TrashIcon,
+          IconComponent: tmp(6030).TrashIcon,
           onPress() {
                   const intl = util.intl;
                   const stringResult = intl.string(util.t.nEOg1N);

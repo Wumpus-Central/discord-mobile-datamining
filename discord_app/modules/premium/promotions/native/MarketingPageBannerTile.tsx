@@ -2,9 +2,9 @@
 
 // Module 10015 (MarketingPageBannerTile)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 6012 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6338 */;
+import LinkingDefault from "Linking" /* 6002 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6328 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
 import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10074 */;
 import noop from "module_19" /* 19 */;
@@ -81,7 +81,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     obj6.style = tmp.image;
     tmp13Result = closure_4(FastImageDefault, obj6);
   }
-  const items2 = [tmp13Result, closure_4(helpArticleLinkProps(5929).Text, { color: "mobile-text-heading-primary", variant: "body-lg/semibold", children: bannerFields.header }), , ];
+  const items2 = [tmp13Result, closure_4(helpArticleLinkProps(5919).Text, { color: "mobile-text-heading-primary", variant: "body-lg/semibold", children: bannerFields.header }), , ];
   const obj9 = { color: "mobile-text-heading-primary", variant: "body-sm/medium", style: tmp.bodyText, children: null };
   const items3 = [formatStringWithCommonPremiumParams, " ", ];
   let tmp13Result3 = null != helpArticleLinkProps;
@@ -95,11 +95,11 @@ export default function MarketingPageBannerTile(bannerFields) {
         },
       children: helpArticleLinkProps.linkText
     };
-    tmp13Result3 = closure_4(tmp4(5929).Text, obj10);
+    tmp13Result3 = closure_4(tmp4(5919).Text, obj10);
   }
   items3[2] = tmp13Result3;
   obj9.children = items3;
-  items2[2] = closure_5(helpArticleLinkProps(5929).Text, obj9);
+  items2[2] = closure_5(helpArticleLinkProps(5919).Text, obj9);
   let tmp13Result4 = null != bannerFields.button;
   if (tmp13Result4) {
     const obj11 = { style: tmp.ctaButton, children: null };

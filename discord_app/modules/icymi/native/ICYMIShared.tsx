@@ -1,14 +1,14 @@
-// === Module 19323: ICYMIShared ===
+// === Module 19325: ICYMIShared ===
 
-// Module 19323 (ICYMIShared)
+// Module 19325 (ICYMIShared)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import Client from "Client" /* 5543 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 6057 */;
+import Client from "Client" /* 5533 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 6047 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 7262 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7874 */;
@@ -18,7 +18,7 @@ import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
 import ClipView from "ClipView" /* 9503 */;
 import ICYMIUtils from "ICYMIUtils" /* 10216 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10217 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 19324 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 19326 */;
 import noop from "module_19" /* 19 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 8871 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
@@ -150,7 +150,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjects: closure_10, AnalyticsObjectTypes: closure_11, AnalyticsPages: closure_12, DEFAULT_ROLE_COLOR_HEX: map1, MAX_MESSAGES_FOR_JUMP: closure_14, MessageFlags: closure_15, Permissions: closure_16, Routes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(19284);
+const createICYMIStyles = fn(19286);
 let guild = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -595,12 +595,12 @@ export function ThreadAsComments(arg0) {
           parseInlineReplyResult = intl.string(parentMessage(1113).t["6kp9H2"]);
         }
         obj5.children = parseInlineReplyResult;
-        items4[1] = closure_18(parentMessage(5929).Text, obj5);
+        items4[1] = closure_18(parentMessage(5919).Text, obj5);
         const obj7 = { style: tmp.commentCount, children: null };
         const obj8 = { style: tmp.commentsIcon };
         const items5 = [closure_18(parentMessage(8069).ChatIcon, obj8), , ];
         const obj9 = { variant: "body-sm/semibold", color: "interactive-text-default", children: str };
-        items5[1] = closure_18(parentMessage(5929).Text, obj9);
+        items5[1] = closure_18(parentMessage(5919).Text, obj9);
         const obj10 = { style: tmp.chevron, size: "xxs" };
         items5[2] = closure_18(parentMessage(7963).ChevronSmallRightIcon, obj10);
         obj7.children = items5;
@@ -616,7 +616,7 @@ export function ThreadAsComments(arg0) {
     const obj12 = { variant: "body-md/semibold", color: "text-muted", lineClamp: 1, style: tmp.recentCommentText, children: null };
     const intl2 = parentMessage(1113).intl;
     obj12.children = intl2.string(parentMessage(1113).t.VMWjXW);
-    const items7 = [closure_18(parentMessage(5929).Text, obj12), ];
+    const items7 = [closure_18(parentMessage(5919).Text, obj12), ];
     const obj13 = { style: tmp.commentCount, children: null };
     const obj14 = { style: tmp.commentsIcon };
     const items8 = [closure_18(parentMessage(8069).ChatIcon, obj14), ];

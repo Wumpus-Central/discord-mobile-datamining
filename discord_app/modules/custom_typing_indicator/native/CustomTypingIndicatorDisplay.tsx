@@ -7,8 +7,8 @@ import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14579 */;
 import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 14592 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = tmp3(5929);
-const Stack_Stack = tmp3(6337);
+const Text_Text = tmp3(5919);
+const Stack_Stack = tmp3(6327);
 const Pressables = tmp3(7428);
 require = fn;
 const jsxProd = fn(21);

@@ -1,13 +1,13 @@
-// === Module 18750: MessagesItemChannel ===
+// === Module 18752: MessagesItemChannel ===
 
-// Module 18750 (MessagesItemChannel)
+// Module 18752 (MessagesItemChannel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6061 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6051 */;
 import _mod7888 from "module_7888" /* 7888 */;
 import _mod15178 from "module_15178" /* 15178 */;
-import MessagesItemChannelBase from "MessagesItemChannelBase" /* 18751 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18760 */;
+import MessagesItemChannelBase from "MessagesItemChannelBase" /* 18753 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18762 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

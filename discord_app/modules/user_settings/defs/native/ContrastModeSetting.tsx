@@ -1,11 +1,11 @@
-// === Module 18035: ContrastModeSetting ===
+// === Module 18037: ContrastModeSetting ===
 
-// Module 18035 (ContrastModeSetting)
+// Module 18037 (ContrastModeSetting)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import CirclePlusIcon from "CirclePlusIcon" /* 13466 */;
 import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16889 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17933 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17935 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 

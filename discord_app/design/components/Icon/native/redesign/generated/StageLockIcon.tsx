@@ -2,7 +2,7 @@
 
 // Module 8093 (StageLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8045 from "module_8045" /* 8045 */;
 import noop from "module_19" /* 19 */;
 

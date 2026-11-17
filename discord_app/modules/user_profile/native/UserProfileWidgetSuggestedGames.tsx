@@ -3,7 +3,7 @@
 // Module 12145 (UserProfileWidgetSuggestedGames)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6331 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6321 */;
 import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 12110 */;
 import GameCoverImageDefault from "GameCoverImage" /* 12112 */;
 import noop from "module_19" /* 19 */;

@@ -3,7 +3,7 @@
 // Module 13179 (useConjureLiveParts)
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import GuildChannelStore from "GuildChannelStore" /* 5236 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 

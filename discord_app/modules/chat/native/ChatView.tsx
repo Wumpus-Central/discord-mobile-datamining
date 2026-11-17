@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
 import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 10974 */;
 import SummaryActionCreators from "SummaryActionCreators" /* 11999 */;
 import ChatViewWrapperDefault from "ChatViewWrapper" /* 12004 */;
@@ -18,9 +18,9 @@ import ChatPlaceholderDefault from "ChatPlaceholder" /* 14961 */;
 import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 14965 */;
 import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 14968 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 require = fn;
 const createChannelRecord = fn(5159).createChannelRecord;
@@ -88,7 +88,7 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   closure_11 = chatInputRef.useRef(channelId);
   chatInputRef.useRef(null);
   ref = chatInputRef.useRef(null);
-  channelId(5917)(() => new channelId(isActive[15])());
+  channelId(5907)(() => new channelId(isActive[15])());
   const tmp10 = channelId(11997)(channelId);
   isResourceChannel = tmp10;
   let obj3 = flag(11977);

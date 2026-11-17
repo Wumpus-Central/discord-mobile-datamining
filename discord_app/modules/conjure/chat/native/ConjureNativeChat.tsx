@@ -5,9 +5,9 @@ import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
 import conjureChatTurns from "conjureChatTurns" /* 7322 */;
 import _modDef7533 from "module_7533" /* 7533 */;
 import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7643 */;
@@ -1173,7 +1173,7 @@ export default function ConjureNativeChat(projectId) {
         AyiQEp = tmp5(4131).AyiQEp;
       }
       const obj30 = { variant: "body-sm/normal", color: "text-muted", children: intl4.string(AyiQEp) };
-      obj29.children = tmp125(tmp2(5929).Text, obj30);
+      obj29.children = tmp125(tmp2(5919).Text, obj30);
       tmp125(tmp124, obj29);
     }
     const tmp5Result = tmp5(13595);

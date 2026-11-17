@@ -1,15 +1,15 @@
-// === Module 18819: MessagesItemAddFriendsWidget ===
+// === Module 18821: MessagesItemAddFriendsWidget ===
 
-// Module 18819 (MessagesItemAddFriendsWidget)
+// Module 18821 (MessagesItemAddFriendsWidget)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7660 */;
 import IconActionButtonDefault from "IconActionButton" /* 15621 */;
 import _modDef16289 from "module_16289" /* 16289 */;
-import _modDef18820 from "module_18820" /* 18820 */;
+import _modDef18822 from "module_18822" /* 18822 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -265,7 +265,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [metroImportDefault(IconActionButtonDefault, obj5), ];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef18820;
+  obj6.source = _modDef18822;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

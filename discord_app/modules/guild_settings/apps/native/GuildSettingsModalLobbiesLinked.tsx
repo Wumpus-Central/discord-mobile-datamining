@@ -1,6 +1,6 @@
-// === Module 20547: GuildSettingsModalLobbiesLinked ===
+// === Module 20550: GuildSettingsModalLobbiesLinked ===
 
-// Module 20547 (GuildSettingsModalLobbiesLinked)
+// Module 20550 (GuildSettingsModalLobbiesLinked)
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -26,9 +26,9 @@ function SyncingToGamesItem(channels) {
       hasIcons: true,
       children: channels.map((id) => {
           const channel = id;
-          let obj = { label: channels(5954).computeChannelName(id, UserStore, RelationshipStore), icon: null, arrow: true, onPress: null };
+          let obj = { label: channels(5944).computeChannelName(id, UserStore, RelationshipStore), icon: null, arrow: true, onPress: null };
           const obj3 = { IconComponent: null };
-          const obj2 = channels(5954);
+          const obj2 = channels(5944);
           obj3.IconComponent = channels(8033).getChannelIconComponent(id);
           obj.icon = closure_1_6(channels(7443).TableRow.Icon, obj3);
           obj.onPress = function onPress() {

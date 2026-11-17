@@ -3,7 +3,7 @@
 // Module 17108 (HexagonCampaignDaysLeftBadge)
 import util from "util" /* 1113 */;
 import _modDef4516 from "module_4516" /* 4516 */;
-import ClockIcon from "ClockIcon" /* 6042 */;
+import ClockIcon from "ClockIcon" /* 6032 */;
 import Badge from "Badge" /* 7459 */;
 import useHexagonCampaignDaysLeft from "useHexagonCampaignDaysLeft" /* 17109 */;
 import noop from "module_19" /* 19 */;

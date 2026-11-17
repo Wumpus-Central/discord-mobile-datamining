@@ -1,21 +1,21 @@
-// === Module 19164: YouBarName ===
+// === Module 19166: YouBarName ===
 
-// Module 19164 (YouBarName)
+// Module 19166 (YouBarName)
 import nativeDefault from "native" /* 575 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10064 */;
 import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10560 */;
 import GuildTagDefault from "GuildTag" /* 10654 */;
 import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10847 */;
 import useUserVoiceActivity from "useUserVoiceActivity" /* 10848 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 19165 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 19167 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 require = fn;
 function Username(userId) {
@@ -80,12 +80,12 @@ export default noop.memo(function YouName(username) {
     const obj8 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };
     let humanizeStatusResult = gameMentionsAsPlainText;
     if (gameMentionsAsPlainText == null) {
-      humanizeStatusResult = tmp2(5372).humanizeStatus(stateFromStores);
-      const tmp2Result2 = tmp2(5372);
+      humanizeStatusResult = tmp2(5362).humanizeStatus(stateFromStores);
+      const tmp2Result2 = tmp2(5362);
     }
     const obj9 = { children: null };
     obj8.children = humanizeStatusResult;
-    items3[1] = closure_11(tmp2(5929).Text, obj8);
+    items3[1] = closure_11(tmp2(5919).Text, obj8);
     obj9.children = items3;
     tmp9Result = closure_12(closure_13, obj9);
   }

@@ -1,9 +1,9 @@
-// === Module 19997: useConsoleConnectedAccountForVoiceUpsell ===
+// === Module 19999: useConsoleConnectedAccountForVoiceUpsell ===
 
-// Module 19997 (useConsoleConnectedAccountForVoiceUpsell)
+// Module 19999 (useConsoleConnectedAccountForVoiceUpsell)
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7085 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
-import GameConsoleStore from "GameConsoleStore" /* 6072 */;
+import GameConsoleStore from "GameConsoleStore" /* 6062 */;
 
 const require = fn;
 const CONSOLE_VOICE_PLATFORMS = fn(7471).CONSOLE_VOICE_PLATFORMS;

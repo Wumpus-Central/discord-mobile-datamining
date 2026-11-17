@@ -1,6 +1,6 @@
-// === Module 6170: RTCRegionStore ===
+// === Module 6160: RTCRegionStore ===
 
-// Module 6170 (RTCRegionStore)
+// Module 6160 (RTCRegionStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

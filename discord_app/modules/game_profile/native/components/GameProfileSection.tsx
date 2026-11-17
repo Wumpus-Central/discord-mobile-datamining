@@ -3,8 +3,8 @@
 // Module 10383 (GameProfileSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7963 */;
 import GameProfileSkeleton from "GameProfileSkeleton" /* 10384 */;
 import noop from "module_19" /* 19 */;

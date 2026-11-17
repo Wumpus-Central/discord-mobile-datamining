@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import native from "native" /* 7997 */;
 import YouBannerDecorations from "YouBannerDecorations" /* 10509 */;
 import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 10527 */;
@@ -118,7 +118,7 @@ function FloatingNav(navigation) {
     items3[1] = obj4;
     const obj5 = { style: tmp3.wrap, pointerEvents: "box-none", onLayout: navigation.onLayout, children: null };
     const obj6 = { colors: memo, style: tmp3.scrim, pointerEvents: "none" };
-    const items4 = [closure_7(tmp(5893), obj6), ];
+    const items4 = [closure_7(tmp(5883), obj6), ];
     const obj7 = { style: tmp3.pill, accessibilityRole: "tablist", children: null };
     const obj8 = { style: tmp3.pillBlur, pointerEvents: "none", children: closure_7(tmp4(7997).BackgroundBlurFill, {}) };
     const items5 = [closure_7(closure_5, obj8), ];

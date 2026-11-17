@@ -2,7 +2,7 @@
 
 // Module 16430 (RowGroup)
 import nativeDefault from "native" /* 575 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import noop from "module_19" /* 19 */;
 

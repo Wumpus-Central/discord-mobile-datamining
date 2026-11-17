@@ -1,13 +1,13 @@
-// === Module 19989: VoicePanelHeaderUserState ===
+// === Module 19991: VoicePanelHeaderUserState ===
 
-// Module 19989 (VoicePanelHeaderUserState)
+// Module 19991 (VoicePanelHeaderUserState)
 import nativeDefault from "native" /* 575 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import native from "native" /* 7997 */;
 import VoiceStateIcons from "VoiceStateIcons" /* 10595 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
-import useStableParticipant from "useStableParticipant" /* 19988 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19990 */;
+import useStableParticipant from "useStableParticipant" /* 19990 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19992 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 import module_1655 from "module_1655" /* 1655 */;

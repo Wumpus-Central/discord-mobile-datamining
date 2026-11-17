@@ -2,9 +2,9 @@
 
 // Module 14507 (CheckpointEmphasis)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useFontScale from "useFontScale" /* 5944 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6061 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useFontScale from "useFontScale" /* 5934 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6051 */;
 import inlineStyles from "inlineStyles" /* 8263 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,11 +13,11 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6377).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6367).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PlatformUtils = fn(1360);
-const CheckpointCustomizationUtils = fn(6744);
+const CheckpointCustomizationUtils = fn(6734);
 const points = CheckpointCustomizationUtils.getChamferedRectPoints(75, 22, 5.5);
 const createStyles = fn(5306);
 let obj4 = { container: { paddingHorizontal: nativeDefault.space.PX_6 }, emphasis: { flexDirection: "row", alignItems: "center" }, text: null };

@@ -1,7 +1,7 @@
 // === Module 12059: InappropriateConversationWarningBanner ===
 
 // Module 12059 (InappropriateConversationWarningBanner)
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
 import SafetyWarningUtils from "SafetyWarningUtils" /* 12038 */;
 import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 12039 */;
 import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 12303 */;

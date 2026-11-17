@@ -2,7 +2,7 @@
 
 // Module 7963 (ChevronSmallRightIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod7457 from "module_7457" /* 7457 */;
 import noop from "module_19" /* 19 */;
 

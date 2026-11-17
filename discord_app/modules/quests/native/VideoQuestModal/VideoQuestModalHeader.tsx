@@ -61,7 +61,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   const obj5 = { variant: "heading-sm/semibold", color: "text-overlay-light", style: textShadow2, children: null };
   const intl = tmp3(1113).intl;
   obj5.children = intl.formatToPlainString(quest(1113).t.EQa7os, { questName: quest.config.messages.questName });
-  const items1 = [closure_5(quest(5929).Text, obj5), ];
+  const items1 = [closure_5(quest(5919).Text, obj5), ];
   const obj7 = { variant: "heading-xs/semibold", color: "text-overlay-light", accessibilityLabel: videoQuestProgressRemainingAccessibilityLabel, style: null, children: null };
   if (textShadow) {
     textShadow = tmp2.textShadow;
@@ -75,7 +75,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     }
   }
   obj7.children = gamePublisher;
-  items1[1] = closure_5(quest(5929).Text, obj7);
+  items1[1] = closure_5(quest(5919).Text, obj7);
   obj4.children = items1;
   const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(17753), { iconColor: closeButtonIconColor, onClose })];
   obj3.children = items2;

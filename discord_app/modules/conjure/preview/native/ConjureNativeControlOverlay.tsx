@@ -4,9 +4,9 @@
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import spring_spring from "spring/spring" /* 5939 */;
-import springPresets from "springPresets" /* 5940 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import spring_spring from "spring/spring" /* 5929 */;
+import springPresets from "springPresets" /* 5930 */;
 import useConjureControlBar from "useConjureControlBar" /* 13348 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
@@ -210,7 +210,7 @@ export default function ConjureNativeControlOverlay(arg0) {
         }
         obj9.accessibilityLabel = combined;
         obj9.children = stringResult;
-        items11[1] = closure_6(tmp2(5929).Text, obj9);
+        items11[1] = closure_6(tmp2(5919).Text, obj9);
         let tmp46Result3 = null;
         if (tmp8) {
           tmp46Result3 = null;
@@ -221,7 +221,7 @@ export default function ConjureNativeControlOverlay(arg0) {
             obj11.text = intl3.string(tmp25(4131).oU59sU);
             obj11.loading = stopping;
             obj11.onPress = stop;
-            obj10.children = closure_6(tmp2(5936).Button, obj11);
+            obj10.children = closure_6(tmp2(5926).Button, obj11);
             tmp46Result3 = closure_6(tmp34, obj10);
           }
         }

@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 14493 */;
 import ChatInputGuardDefault from "ChatInputGuard" /* 14878 */;
 import noop from "module_19" /* 19 */;

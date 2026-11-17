@@ -3,7 +3,7 @@
 // Module 13764 (ConjureNativeStatusStrip)
 import nativeDefault from "native" /* 575 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5542 */;
 import ConjureStatusLabels from "ConjureStatusLabels" /* 13591 */;
 import ConjureUsageSheet from "ConjureUsageSheet" /* 13770 */;
 import ConjureQueuedSheet from "ConjureQueuedSheet" /* 13771 */;
@@ -223,7 +223,7 @@ export default function ConjureNativeStatusStrip(projectId) {
           str3 = "text-feedback-critical";
         }
         const obj7 = { variant: "body-xs/medium", color: str3, children: connLabel };
-        tmp17Result4 = closure_8(tmp2(5929).Text, obj7);
+        tmp17Result4 = closure_8(tmp2(5919).Text, obj7);
       }
       items4[1] = tmp17Result4;
       let tmp17Result5 = null;
@@ -233,7 +233,7 @@ export default function ConjureNativeStatusStrip(projectId) {
         const intl3 = tmp2(1113).intl;
         const obj10 = { count: queuedCount };
         obj9.children = intl3.formatToPlainString(_modDef4131.REnNUn, obj10);
-        obj8.children = closure_8(tmp2(5929).Text, obj9);
+        obj8.children = closure_8(tmp2(5919).Text, obj9);
         tmp17Result5 = closure_8(tmp2(7428).PressableOpacity, obj8);
       }
       items4[2] = tmp17Result5;
@@ -241,9 +241,9 @@ export default function ConjureNativeStatusStrip(projectId) {
       if (null != runesUsedLabelsResult) {
         const obj11 = { accessibilityRole: "button", accessibilityLabel: runesUsedLabelsResult.aria, hitSlop: 8, style: tmp.chip, onPress: callback, children: null };
         const obj12 = { variant: "body-xs/medium", color: "text-muted", children: runesUsedLabelsResult.text };
-        const items5 = [closure_8(tmp2(5929).Text, obj12), ];
+        const items5 = [closure_8(tmp2(5919).Text, obj12), ];
         const obj13 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-        items5[1] = closure_8(tmp2(6037).CircleInformationIcon, obj13);
+        items5[1] = closure_8(tmp2(6027).CircleInformationIcon, obj13);
         obj11.children = items5;
         tmp15Result = closure_9(tmp2(7428).PressableOpacity, obj11);
       }

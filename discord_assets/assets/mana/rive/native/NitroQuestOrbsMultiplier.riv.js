@@ -1,6 +1,6 @@
-// === Module 5468: ? ===
+// === Module 5458: ? ===
 
-// Module 5468
+// Module 5458
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/NitroQuestOrbsMultiplier.riv.js");

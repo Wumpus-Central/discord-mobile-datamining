@@ -3,9 +3,9 @@
 // Module 10318 (GameProfileHeader)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import SKUUtils from "SKUUtils" /* 10319 */;
 import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 10320 */;
 import GameCoverArt from "GameCoverArt" /* 10321 */;

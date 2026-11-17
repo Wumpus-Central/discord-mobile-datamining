@@ -1,6 +1,6 @@
-// === Module 19198: VoicePanelChannelOptInNotice ===
+// === Module 19200: VoicePanelChannelOptInNotice ===
 
-// Module 19198 (VoicePanelChannelOptInNotice)
+// Module 19200 (VoicePanelChannelOptInNotice)
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7877 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// === Module 19288: ICYMICustomScoresOverviewScreen ===
+// === Module 19290: ICYMICustomScoresOverviewScreen ===
 
-// Module 19288 (ICYMICustomScoresOverviewScreen)
+// Module 19290 (ICYMICustomScoresOverviewScreen)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 import ICYMIStore from "ICYMIStore" /* 10205 */;
 
 const require = fn;

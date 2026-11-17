@@ -1,6 +1,6 @@
-// === Module 19525: SmartSearchFeedback ===
+// === Module 19527: SmartSearchFeedback ===
 
-// Module 19525 (SmartSearchFeedback)
+// Module 19527 (SmartSearchFeedback)
 import nativeDefault from "native" /* 575 */;
 import _modDef4354 from "module_4354" /* 4354 */;
 import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 14744 */;
@@ -41,7 +41,7 @@ export function SmartSearchFeedback(smartSearchQuery) {
       stringResult = string(_modDef4354.uij9Dy);
     }
     const obj4 = { variant: "body-sm/medium", color: "text-muted", children: stringResult };
-    const items3 = [closure_6(tmp2(5929).Text, obj4), ];
+    const items3 = [closure_6(tmp2(5919).Text, obj4), ];
     let tmp7Result = null === stateFromStores;
     if (tmp7Result) {
       const obj5 = { style: tmp.buttonContainer, children: null };

@@ -5,7 +5,7 @@ import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
 import DateUtils from "DateUtils" /* 5128 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 8497 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 9404 */;
 import noop from "module_19" /* 19 */;

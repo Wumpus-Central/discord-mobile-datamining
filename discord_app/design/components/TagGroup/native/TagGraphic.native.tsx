@@ -2,7 +2,7 @@
 
 // Module 13281 (TagGraphic)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import TagGroupTypes from "TagGroupTypes" /* 13278 */;
 import noop from "module_19" /* 19 */;
 

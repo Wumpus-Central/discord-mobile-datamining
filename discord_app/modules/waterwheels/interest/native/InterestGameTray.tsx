@@ -1,9 +1,9 @@
-// === Module 19043: InterestGameTray ===
+// === Module 19045: InterestGameTray ===
 
-// Module 19043 (InterestGameTray)
+// Module 19045 (InterestGameTray)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import InterestGameCoverDefault from "InterestGameCover" /* 19033 */;
+import InterestGameCoverDefault from "InterestGameCover" /* 19035 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -138,7 +138,7 @@ function TrayCover(game) {
   return sharedValue2(_modDef1655.View, obj3);
 }
 const View = fn(17).View;
-const InterestGamePickerConstants = fn(19025);
+const InterestGamePickerConstants = fn(19027);
 const SELECTED_BORDER_WIDTH = InterestGamePickerConstants.SELECTED_BORDER_WIDTH;
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);

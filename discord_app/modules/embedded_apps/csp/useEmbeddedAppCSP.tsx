@@ -1,7 +1,7 @@
 // === Module 12878: useEmbeddedAppCSP ===
 
 // Module 12878 (useEmbeddedAppCSP)
-import getURLForApplication from "getURLForApplication" /* 5974 */;
+import getURLForApplication from "getURLForApplication" /* 5964 */;
 import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 7344 */;
 import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 7345 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

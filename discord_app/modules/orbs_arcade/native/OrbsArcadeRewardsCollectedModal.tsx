@@ -4,8 +4,8 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7994 */;
 import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 8527 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
@@ -156,7 +156,7 @@ function NitroCreditRewardPrimaryAction(consumed) {
   consumed = consumed.consumed;
   const intl = consumed(1113).intl;
   const t = consumed(1113).t;
-  return closure_10(consumed(5936).Button, {
+  return closure_10(consumed(5926).Button, {
     size: "lg",
     text: intl.string(consumed ? t.ERKK6v : t["Jr6N+s"]),
     onPress() {
@@ -217,12 +217,12 @@ export default function OrbsArcadeRewardsCollectedModal(arg0) {
   closure_8 = undefined;
   const tmp = closure_13();
   importDefault = tmp;
-  const token = skuId(5902).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
-  let obj = skuId(5902);
-  const token1 = skuId(5902).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
-  let obj2 = skuId(5902);
-  const token2 = skuId(5902).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
-  let obj3 = skuId(5902);
+  const token = skuId(5892).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  let obj = skuId(5892);
+  const token1 = skuId(5892).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
+  let obj2 = skuId(5892);
+  const token2 = skuId(5892).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
+  let obj3 = skuId(5892);
   items = [bound];
   dependencyMap = skuId(504).useStateFromStores(items, () => bound.useReducedMotion);
   const ref1 = num.useRef(null);
@@ -252,7 +252,7 @@ export default function OrbsArcadeRewardsCollectedModal(arg0) {
     const obj7 = { style: tmp.backdrop, start: tmp2(1092).VerticalGradient.START, end: tmp2(1092).VerticalGradient.END, locations, colors: null };
     const items2 = [token, token1, token2];
     obj7.colors = items2;
-    const items3 = [closure_10(tmp4(5893), obj7), ];
+    const items3 = [closure_10(tmp4(5883), obj7), ];
     const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
     const obj8 = { style: tmp.header, children: null };
     const obj9 = { variant: "tertiary", icon: tmp4(10867), accessibilityLabel: null, onPress: null };
@@ -340,7 +340,7 @@ export default function OrbsArcadeRewardsCollectedModal(arg0) {
       const obj18 = { size: "lg", children: null };
       items6[1] = null;
       obj18.children = items6;
-      items5[1] = closure_11(tmp2(6951).ButtonGroup, obj18);
+      items5[1] = closure_11(tmp2(6941).ButtonGroup, obj18);
       obj12.children = items5;
       items4[2] = closure_11(tmp27, obj12);
       rect.children = items4;
@@ -364,10 +364,10 @@ export default function OrbsArcadeRewardsCollectedModal(arg0) {
           closure_6(bound + 1);
         }
       };
-      closure_10(tmp2(5936).Button, t);
+      closure_10(tmp2(5926).Button, t);
       const tmp22 = tmp24 ? t.i4jeWR : t.PDTjLN;
     }
-    const tmp4Result = tmp4(5893);
+    const tmp4Result = tmp4(5883);
   }
   const obj4 = skuId(504);
 };

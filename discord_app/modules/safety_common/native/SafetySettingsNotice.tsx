@@ -2,13 +2,13 @@
 
 // Module 17211 (SafetySettingsNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import SafetySettingsUtils from "SafetySettingsUtils" /* 17212 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(6910).SafetySettingsNoticeAction;
+let closure_4 = fn(6900).SafetySettingsNoticeAction;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5306);

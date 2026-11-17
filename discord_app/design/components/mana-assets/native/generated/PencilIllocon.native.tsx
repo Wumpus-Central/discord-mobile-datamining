@@ -1,7 +1,7 @@
 // === Module 15030: PencilIllocon ===
 
 // Module 15030 (PencilIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef14915 from "module_14915" /* 14915 */;
 import _modDef15031 from "module_15031" /* 15031 */;

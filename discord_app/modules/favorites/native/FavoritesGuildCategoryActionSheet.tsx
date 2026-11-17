@@ -1,9 +1,9 @@
-// === Module 18830: FavoritesGuildCategoryActionSheet ===
+// === Module 18832: FavoritesGuildCategoryActionSheet ===
 
-// Module 18830 (FavoritesGuildCategoryActionSheet)
-import ToastUtils from "ToastUtils" /* 6014 */;
+// Module 18832 (FavoritesGuildCategoryActionSheet)
+import ToastUtils from "ToastUtils" /* 6004 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
-import openFavoritesGuildCategorySettingsModalDefault from "openFavoritesGuildCategorySettingsModal" /* 18831 */;
+import openFavoritesGuildCategorySettingsModalDefault from "openFavoritesGuildCategorySettingsModal" /* 18833 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 5158 */;
 
@@ -15,7 +15,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   dependencyMap = tmp3;
   const DeveloperMode = category(5131).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj = { header: closure_5(category(7913).BottomSheetTitleHeader, { title: onClose(5954)(category, true) }), children: null };
+  let obj = { header: closure_5(category(7913).BottomSheetTitleHeader, { title: onClose(5944)(category, true) }), children: null };
   let tmp7Result = null;
   if (null != tmp3) {
     const obj2 = { hasIcons: true, children: null };
@@ -34,7 +34,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   const obj6 = { label: null, icon: null, onPress: null };
   const intl = tmp4(1113).intl;
   obj6.label = intl.string(category(1113).t.zdPFs9);
-  const tmp2 = onClose(5954)(category, true);
+  const tmp2 = onClose(5944)(category, true);
   obj6.icon = closure_5(category(7953).ActionSheetRow.Icon, { IconComponent: category(10569).SettingsIcon });
   obj6.onPress = function onPress() {
     openFavoritesGuildCategorySettingsModalDefault(category.id);

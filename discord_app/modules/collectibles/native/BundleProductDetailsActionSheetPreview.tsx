@@ -3,8 +3,8 @@
 // Module 9524 (BundleProductDetailsActionSheetPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 8497 */;
 import useShopProductItems from "useShopProductItems" /* 9402 */;
 import IndividualProductPreview from "IndividualProductPreview" /* 9526 */;

@@ -2,7 +2,7 @@
 
 // Module 13290 (ConjureNativeMarkdown)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import conjureMarkup from "conjureMarkup" /* 13223 */;
 import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 13291 */;
 import useConjureRevealedText from "useConjureRevealedText" /* 13292 */;

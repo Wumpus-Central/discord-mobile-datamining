@@ -3,7 +3,7 @@
 // Module 7992 (EditGuildEventModalNavbar)
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import HeaderActionButton from "HeaderActionButton" /* 7427 */;
 import _modDef7430 from "module_7430" /* 7430 */;

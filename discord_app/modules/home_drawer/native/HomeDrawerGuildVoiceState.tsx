@@ -1,20 +1,20 @@
-// === Module 19095: HomeDrawerGuildVoiceState ===
+// === Module 19097: HomeDrawerGuildVoiceState ===
 
-// Module 19095 (HomeDrawerGuildVoiceState)
+// Module 19097 (HomeDrawerGuildVoiceState)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 13101 */;
 import AvatarPile from "AvatarPile" /* 15745 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 5236 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 
 const require = globalThis.__r;
 

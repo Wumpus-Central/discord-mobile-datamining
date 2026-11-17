@@ -3,7 +3,7 @@
 // Module 13485 (CommandListSortButton)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function CommandListSortButton(sortOrder) {
     children: null
   };
   const obj2 = { style: tmp.button, children: null };
-  items = [closure_6(sortOrder(5929).Text, { variant: "body-sm/medium", color: "text-default", children: stringResult }), closure_6(sortOrder(10560).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(575).colors.TEXT_DEFAULT })];
+  items = [closure_6(sortOrder(5919).Text, { variant: "body-sm/medium", color: "text-default", children: stringResult }), closure_6(sortOrder(10560).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(575).colors.TEXT_DEFAULT })];
   obj2.children = items;
   obj.children = closure_7(View, obj2);
   return closure_6(sortOrder(7428).PressableOpacity, obj);

@@ -1,6 +1,6 @@
-// === Module 19010: WaterwheelsDiscoverFeedState ===
+// === Module 19012: WaterwheelsDiscoverFeedState ===
 
-// Module 19010 (WaterwheelsDiscoverFeedState)
+// Module 19012 (WaterwheelsDiscoverFeedState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/waterwheels/discover/WaterwheelsDiscoverFeedState.tsx");

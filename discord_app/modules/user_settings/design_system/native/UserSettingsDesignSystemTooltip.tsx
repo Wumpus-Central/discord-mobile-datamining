@@ -1,8 +1,8 @@
-// === Module 18438: UserSettingsDesignSystemTooltip ===
+// === Module 18440: UserSettingsDesignSystemTooltip ===
 
-// Module 18438 (UserSettingsDesignSystemTooltip)
-import LayerScope from "LayerScope" /* 5916 */;
-import Text_Text from "Text/Text" /* 5929 */;
+// Module 18440 (UserSettingsDesignSystemTooltip)
+import LayerScope from "LayerScope" /* 5906 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import DeviceOrientation from "DeviceOrientation" /* 10041 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -49,7 +49,7 @@ function Content() {
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
-    children: closure_5(visible(5936).Button, {
+    children: closure_5(visible(5926).Button, {
       ref,
       onPress() {
         dependencyMap(!first);

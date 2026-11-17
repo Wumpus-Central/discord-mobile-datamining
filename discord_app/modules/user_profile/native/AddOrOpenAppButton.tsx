@@ -1,8 +1,8 @@
 // === Module 15703: AddOrOpenAppButton ===
 
 // Module 15703 (AddOrOpenAppButton)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import ApplicationUtils from "ApplicationUtils" /* 12764 */;
 import getApplicationInstallURL from "getApplicationInstallURL" /* 13463 */;
@@ -54,7 +54,7 @@ function AddAppButton(application) {
     obj3.onAccessibilityAction = callback1;
     const obj4 = { size: "sm", color: guildId(575).colors.WHITE };
     obj3.icon = <PlusSmallIcon size="sm" color={guildId(575).colors.WHITE} />;
-    return jsx(tmp6(5936).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
+    return jsx(tmp6(5926).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
   }
   PlusSmallIcon = application(10449).PlusSmallIcon;
   tmp6 = application;
@@ -120,8 +120,8 @@ function OpenAppButton(profileApplication) {
               closure_129_1 = closure_0;
               closure_130_3(false);
               if (null != closure_129_0) {
-                tmp2(5552).hideAllActionSheets();
-                const obj5 = tmp2(5552);
+                tmp2(5542).hideAllActionSheets();
+                const obj5 = tmp2(5542);
                 const obj8 = { recipientIds: closure_130_1 };
                 c3 = 2;
                 c4 = 1;

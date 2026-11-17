@@ -1,11 +1,11 @@
-// === Module 17963: DisplayNameStylesEffectPickerSheet ===
+// === Module 17965: DisplayNameStylesEffectPickerSheet ===
 
-// Module 17963 (DisplayNameStylesEffectPickerSheet)
+// Module 17965 (DisplayNameStylesEffectPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3125 from "module_3125" /* 3125 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10064 */;
 import types from "types" /* 10065 */;
 import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10068 */;
@@ -74,7 +74,7 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   EFFECT_ORDER = undefined;
   const tmp = closure_10();
   let obj = userId(8559);
-  const displayNameStylesNewEffects = userId(17958).useDisplayNameStylesNewEffects(EFFECT_ORDER);
+  const displayNameStylesNewEffects = userId(17960).useDisplayNameStylesNewEffects(EFFECT_ORDER);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   [first, closure_5] = first.useState(selectedEffectId);
   closure_6 = tmp7;
@@ -92,8 +92,8 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     const intl2 = tmp2(1113).intl;
     obj5.text = intl2.string(tmp2(1113).t.XqMe3N);
     obj5.onPress = tmp8;
-    obj4.trailing = closure_8(tmp2(5936).Button, obj5);
-    obj3.header = closure_8(onSelectEffect(17961), obj4);
+    obj4.trailing = closure_8(tmp2(5926).Button, obj5);
+    obj3.header = closure_8(onSelectEffect(17963), obj4);
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.contentContainer, children: null };
     const obj8 = {
@@ -116,11 +116,11 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
           }, effectId);
         })
     };
-    obj7.children = closure_8(tmp2(6337).Stack, obj8);
+    obj7.children = closure_8(tmp2(6327).Stack, obj8);
     obj6.children = closure_8(closure_5, obj7);
     obj3.children = closure_8(closure_5, obj6);
-    tmp9 = closure_8(tmp2(5566).BottomSheet, obj3);
-    const tmp12 = onSelectEffect(17961);
+    tmp9 = closure_8(tmp2(5556).BottomSheet, obj3);
+    const tmp12 = onSelectEffect(17963);
   }
   return tmp9;
 };

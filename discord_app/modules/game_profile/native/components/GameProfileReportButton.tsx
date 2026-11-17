@@ -2,8 +2,8 @@
 
 // Module 10494 (GameProfileReportButton)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10286 */;
 import GameDetectionReportModal from "GameDetectionReportModal" /* 10495 */;
 import noop from "module_19" /* 19 */;
@@ -28,5 +28,5 @@ export default function GameProfileReportButton(applicationId) {
   const intl = applicationId(1113).intl;
   obj.text = intl.string(applicationId(1113).t.qP2cXd);
   obj.onPress = callback;
-  return jsx(applicationId(5936).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+  return jsx(applicationId(5926).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 };

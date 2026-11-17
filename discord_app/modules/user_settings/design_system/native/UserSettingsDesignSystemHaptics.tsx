@@ -1,18 +1,18 @@
-// === Module 18462: UserSettingsDesignSystemHaptics ===
+// === Module 18464: UserSettingsDesignSystemHaptics ===
 
-// Module 18462 (UserSettingsDesignSystemHaptics)
-import HapticUtils from "HapticUtils" /* 5554 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
-import Patterns from "Patterns" /* 5556 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+// Module 18464 (UserSettingsDesignSystemHaptics)
+import HapticUtils from "HapticUtils" /* 5544 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
+import Patterns from "Patterns" /* 5546 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import Card from "Card" /* 7445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function HapticButton(text) {
   const type = text.type;
-  return closure_3(type(5936).Button, {
+  return closure_3(type(5926).Button, {
     variant: "secondary",
     onPress() {
       return HapticUtils.triggerHapticFeedback(type);
@@ -153,7 +153,7 @@ export default function UserSettingsDesignSystemHaptics() {
     React3(Text_Text.Text, { variant: "body-md/medium", color: "text-subtle", children: "Built-in haptic sequences using triggerPattern(). Each preset uses a compact notation (o=soft, O=strong, .=short gap, -=medium gap, ==long gap)." }),
     items4.map((description) => {
       ({ label, pattern: closure_0 } = description);
-      return closure_3(closure_0(5936).Button, {
+      return closure_3(closure_0(5926).Button, {
         variant: "secondary",
         onPress() {
           return Patterns.triggerPattern(Patterns.Patterns[closure_1_0]);

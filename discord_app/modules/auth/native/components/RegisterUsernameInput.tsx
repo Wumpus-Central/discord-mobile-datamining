@@ -1,10 +1,10 @@
-// === Module 18675: RegisterUsernameInput ===
+// === Module 18677: RegisterUsernameInput ===
 
-// Module 18675 (RegisterUsernameInput)
+// Module 18677 (RegisterUsernameInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
 import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16493 */;
 import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 17231 */;
@@ -67,7 +67,7 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(18648);
+const RegistrationUIStore = fn(18650);
 ({ setRegistrationErrors: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);

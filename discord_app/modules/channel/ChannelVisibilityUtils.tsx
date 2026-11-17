@@ -3,7 +3,7 @@
 // Module 11020 (ChannelVisibilityUtils)
 import ChannelSectionStore from "ChannelSectionStore" /* 7036 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/ChannelVisibilityUtils.tsx");

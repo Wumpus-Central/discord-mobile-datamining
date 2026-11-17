@@ -6,9 +6,9 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2152 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import Pressables from "Pressables" /* 7428 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowTrailingText from "TableRowTrailingText" /* 7458 */;
@@ -84,8 +84,8 @@ export default {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(5372).getName(user);
-      const obj3 = guildId(5372);
+      nick = guildId(5362).getName(user);
+      const obj3 = guildId(5362);
     }
     obj2.label = closure_9(AutocompleteLabel, { text: nick });
     const obj = user(504);

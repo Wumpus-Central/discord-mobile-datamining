@@ -1,7 +1,7 @@
 // === Module 14623: ForumPostTimestamp ===
 
 // Module 14623 (ForumPostTimestamp)
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import ForumHooks from "ForumHooks" /* 9107 */;
 import noop from "module_19" /* 19 */;
 

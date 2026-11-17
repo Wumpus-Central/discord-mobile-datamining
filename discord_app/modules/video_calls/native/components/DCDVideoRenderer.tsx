@@ -2,7 +2,7 @@
 
 // Module 12803 (DCDVideoRenderer)
 import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 12804 */;
-import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 5909 */;
+import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 5899 */;
 
 const obj = { componentName: "DCDVideoRenderer", componentFoundInstance: null };
 obj.componentFoundInstance = VideoRendererNativeComponentDefault;

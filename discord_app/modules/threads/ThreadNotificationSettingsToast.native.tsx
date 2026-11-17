@@ -1,7 +1,7 @@
 // === Module 9009: ThreadNotificationSettingsToast ===
 
 // Module 9009 (ThreadNotificationSettingsToast)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/threads/ThreadNotificationSettingsToast.native.tsx");

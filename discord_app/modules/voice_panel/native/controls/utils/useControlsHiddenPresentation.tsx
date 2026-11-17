@@ -1,10 +1,10 @@
-// === Module 20077: useControlsHiddenPresentation ===
+// === Module 20079: useControlsHiddenPresentation ===
 
-// Module 20077 (useControlsHiddenPresentation)
+// Module 20079 (useControlsHiddenPresentation)
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import native from "native" /* 5377 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import native from "native" /* 5367 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import VoicePanelConstants from "VoicePanelConstants" /* 11985 */;
 import size from "module_2" /* 2 */;
 

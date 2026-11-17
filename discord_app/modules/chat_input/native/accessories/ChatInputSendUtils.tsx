@@ -4,7 +4,7 @@
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import MessageParserDefault from "MessageParser" /* 8786 */;
 import FileUtils from "FileUtils" /* 8875 */;
@@ -323,7 +323,7 @@ export function chatInputHandleSendText(text) {
         while (iter !== undefined) {
           let checkResult = iter.next().check(text, channel, null != channel.getGuildId());
           if (false !== checkResult) {
-            let obj2 = params(6268);
+            let obj2 = params(6258);
             let obj3 = { title: null, body: null, confirmText: null, onConfirm: null, cancelText: null };
             let intl = util.intl;
             obj3.title = intl.string(util.t.mY3Y38);
@@ -331,7 +331,7 @@ export function chatInputHandleSendText(text) {
             let intl2 = util.intl;
             obj3.confirmText = intl2.string(util.t.KJnHq3);
             obj3.onConfirm = function onConfirm() {
-              const obj = { text, parsedMessage, tts: "alignItems", source: true, params };
+              const obj = { text, parsedMessage, tts: "alignItems", source: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000013586891474478143, params };
               chatInputSendMessage(obj);
             };
             let intl3 = util.intl;
@@ -347,18 +347,18 @@ export function chatInputHandleSendText(text) {
               threadId: channel.id,
               attachments: uploads,
               sendMessage() {
-                          const obj = { text, parsedMessage, tts: "alignItems", source: 16777858, params };
+                          const obj = { text, parsedMessage, tts: "alignItems", source: true, params };
                           chatInputSendMessage(obj);
                         }
             };
-            params(5552).openLazy(tmp19(2121)(14607, tmp20.paths), "add-media-to-original-forum-post", obj5);
-            const obj6 = params(5552);
+            params(5542).openLazy(tmp19(2121)(14607, tmp20.paths), "add-media-to-original-forum-post", obj5);
+            const obj6 = params(5542);
           }
           obj4 = ForumPostMediaUtils;
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        const obj7 = { text, parsedMessage: tmp2, tts: "alignItems", source: "Array", params };
+        const obj7 = { text, parsedMessage: tmp2, tts: "alignItems", source: null, params };
         chatInputSendMessage(obj7);
       }
     }

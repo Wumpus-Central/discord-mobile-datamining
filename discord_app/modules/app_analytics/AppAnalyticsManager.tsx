@@ -1,18 +1,18 @@
-// === Module 20173: AppAnalyticsManager ===
+// === Module 20176: AppAnalyticsManager ===
 
-// Module 20173 (AppAnalyticsManager)
+// Module 20176 (AppAnalyticsManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import Timers from "Timers" /* 5150 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 6812 */;
-import getGamePlatformDefault from "getGamePlatform" /* 19589 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 6802 */;
+import getGamePlatformDefault from "getGamePlatform" /* 19591 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
-import SpeakingStore from "SpeakingStore" /* 6941 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import SpeakingStore from "SpeakingStore" /* 6931 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 require = fn;

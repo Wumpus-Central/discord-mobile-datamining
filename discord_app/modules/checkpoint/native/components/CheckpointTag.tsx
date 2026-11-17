@@ -2,8 +2,8 @@
 
 // Module 14515 (CheckpointTag)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6744 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6734 */;
 import inlineStyles from "inlineStyles" /* 8263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6377).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6367).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5306);

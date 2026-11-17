@@ -1,6 +1,6 @@
-// === Module 19096: useHomeDrawerGuildTyping ===
+// === Module 19098: useHomeDrawerGuildTyping ===
 
-// Module 19096 (useHomeDrawerGuildTyping)
+// Module 19098 (useHomeDrawerGuildTyping)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5240 */;

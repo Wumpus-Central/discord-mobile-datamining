@@ -2,7 +2,7 @@
 
 // Module 14031 (ArrowSmallUpIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod14032 from "module_14032" /* 14032 */;
 import noop from "module_19" /* 19 */;
 

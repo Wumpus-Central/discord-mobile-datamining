@@ -3,7 +3,7 @@
 // Module 12910 (StageViewWithPrompts)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import FocusedControls from "FocusedControls" /* 12913 */;
 import MicrophoneSpotIllustration from "MicrophoneSpotIllustration" /* 12928 */;
 import noop from "module_19" /* 19 */;

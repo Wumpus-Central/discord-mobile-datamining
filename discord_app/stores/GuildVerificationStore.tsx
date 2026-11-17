@@ -1,6 +1,6 @@
-// === Module 6937: GuildVerificationStore ===
+// === Module 6927: GuildVerificationStore ===
 
-// Module 6937 (GuildVerificationStore)
+// Module 6927 (GuildVerificationStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

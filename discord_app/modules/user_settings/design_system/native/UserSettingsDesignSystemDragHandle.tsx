@@ -1,10 +1,10 @@
-// === Module 18464: UserSettingsDesignSystemDragHandle ===
+// === Module 18466: UserSettingsDesignSystemDragHandle ===
 
-// Module 18464 (UserSettingsDesignSystemDragHandle)
+// Module 18466 (UserSettingsDesignSystemDragHandle)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import TableRow from "TableRow" /* 7443 */;
 import Card from "Card" /* 7445 */;
 import DragHandle from "DragHandle" /* 7447 */;

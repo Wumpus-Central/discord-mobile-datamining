@@ -2,7 +2,7 @@
 
 // Module 10840 (PeopleUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8137 */;
 import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10841 */;
 import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 10842 */;

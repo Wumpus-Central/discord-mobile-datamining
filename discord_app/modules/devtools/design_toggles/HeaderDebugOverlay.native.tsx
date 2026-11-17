@@ -2,7 +2,7 @@
 
 // Module 7494 (HeaderDebugOverlay)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useDesignToggleDefault from "useDesignToggle" /* 7495 */;
 import noop from "module_19" /* 19 */;
 

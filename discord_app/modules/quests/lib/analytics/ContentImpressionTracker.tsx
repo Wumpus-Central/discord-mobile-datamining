@@ -1,9 +1,9 @@
 // === Module 15265: ContentImpressionTracker ===
 
 // Module 15265 (ContentImpressionTracker)
-import AdCreativeType from "AdCreativeType" /* 5345 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6771 */;
-import MetricEvents from "MetricEvents" /* 6776 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6761 */;
+import MetricEvents from "MetricEvents" /* 6766 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import QuestDataUtils from "QuestDataUtils" /* 8804 */;
 import getQuestLogger from "getQuestLogger" /* 8816 */;
 import AnalyticsActions from "AnalyticsActions" /* 8825 */;
@@ -131,7 +131,7 @@ class QuestContentImpression {
             const adContentIds = closure_129_0.entity.adContentIds;
             const item = adContentIds.forEach((item, index) => {
               adUser.trackViewedPlacement(item);
-              if (adUser.entity.adCreativeType === obj2(5345).AdCreativeType.QUEST) {
+              if (adUser.entity.adCreativeType === obj2(6961).AdCreativeType.QUEST) {
                 quest = quest.getQuest(tmp6);
                 let isQuestExpiredResult = null == quest;
                 if (!isQuestExpiredResult) {
@@ -140,7 +140,7 @@ class QuestContentImpression {
                 }
                 if (!isQuestExpiredResult) {
                   items = [tmp6];
-                  tmp4(10133).markAdContentSeen(tmp4(5345).AdCreativeType.QUEST, items);
+                  tmp4(10133).markAdContentSeen(tmp4(6961).AdCreativeType.QUEST, items);
                   const tmp4Result8 = tmp4(10133);
                 }
               }
@@ -161,7 +161,7 @@ class QuestContentImpression {
               obj2.shouldExtendSession = shouldExtendSessionResult;
               obj2.adUser = adUser;
               ({ questContentPosition: obj5.questContentPosition, questContentRowIndex: obj5.questContentRowIndex, trackGuildAndChannelMetadata: obj5.trackGuildAndChannelMetadata } = adUser);
-              if (adUser.entity.adCreativeType === obj2(5345).AdCreativeType.QUEST) {
+              if (adUser.entity.adCreativeType === obj2(6961).AdCreativeType.QUEST) {
                 const obj3 = {};
                 const merged1 = Object.assign(obj2);
                 obj3.adCreativeType = adUser.entity.adCreativeType;
@@ -300,7 +300,7 @@ class QuestContentImpression {
       const adContentIds = obj2.entity.adContentIds;
       const item = adContentIds.forEach((item, index) => {
         const result = closure_1_0.maybeRegisterIosAttributionImpression(item, obj2(8804).getAdProvenanceMetadataSealed(closure_1_0.sourceQuestContent, item));
-        if (closure_1_0.entity.adCreativeType === obj2(5345).AdCreativeType.QUEST) {
+        if (closure_1_0.entity.adCreativeType === obj2(6961).AdCreativeType.QUEST) {
           obj2 = { adCreativeType: closure_1_0.entity.adCreativeType, adCreativeId: closure_1_0.entity.adContentIds[index] };
           let obj3 = obj2;
         } else {

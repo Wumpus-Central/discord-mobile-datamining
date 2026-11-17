@@ -1,6 +1,6 @@
-// === Module 18588: ParentalControlsDirectMessages ===
+// === Module 18590: ParentalControlsDirectMessages ===
 
-// Module 18588 (ParentalControlsDirectMessages)
+// Module 18590 (ParentalControlsDirectMessages)
 import util from "util" /* 1113 */;
 import useParentalControlSettings from "useParentalControlSettings" /* 17346 */;
 import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 17347 */;

@@ -2,8 +2,8 @@
 
 // Module 14287 (CheckpointShareCardFooter)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import inlineStyles from "inlineStyles" /* 8263 */;
 import CheckpointShareCardContext from "CheckpointShareCardContext" /* 14284 */;
 import ArrowLargeRightIcon from "ArrowLargeRightIcon" /* 14288 */;

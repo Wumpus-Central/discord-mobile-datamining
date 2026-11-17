@@ -4,20 +4,20 @@
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import TimeUtils from "TimeUtils" /* 6079 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
-import isMessageMentioned from "isMessageMentioned" /* 6754 */;
-import AgeGateUtils from "AgeGateUtils" /* 6838 */;
+import TimeUtils from "TimeUtils" /* 6069 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6364 */;
+import isMessageMentioned from "isMessageMentioned" /* 6744 */;
+import AgeGateUtils from "AgeGateUtils" /* 6828 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7062 */;
 import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7063 */;
 import MessageRecord from "MessageRecord" /* 5249 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const isMessageMentionedDefault = isMessageMentioned;

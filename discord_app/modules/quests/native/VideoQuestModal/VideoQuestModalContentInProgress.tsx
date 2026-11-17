@@ -4,9 +4,9 @@
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
-import AdCreativeType from "AdCreativeType" /* 5345 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import Pressables from "Pressables" /* 7428 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import QuestUtils from "QuestUtils" /* 10128 */;
@@ -23,7 +23,7 @@ import n_mod from "module_671" /* 671 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
@@ -348,9 +348,9 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
     const obj21 = { direction: "horizontal", justify: "space-between", spacing: tmp15(575).space.PX_8, children: null };
     const obj22 = { style: tmp3.questDetailsPrimary, onPress: handleAdvertiserDetailsPress, children: null };
     const obj23 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: quest.config.messages.gameTitle };
-    const items23 = [closure_11(tmp(5929).Text, obj23), ];
+    const items23 = [closure_11(tmp(5919).Text, obj23), ];
     const obj24 = { variant: "heading-xs/semibold", color: "text-subtle", children: quest.config.messages.gamePublisher };
-    items23[1] = closure_11(tmp(5929).Text, obj24);
+    items23[1] = closure_11(tmp(5919).Text, obj24);
     obj22.children = items23;
     const items24 = [closure_12(tmp(7428).PressableOpacity, obj22), ];
     const obj25 = { style: tmp3.questDetailsSecondary, children: null };
@@ -366,7 +366,7 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
     obj25.children = closure_11(tmp15(17756), obj26);
     items24[1] = closure_11(tmp39, obj25);
     obj21.children = items24;
-    const items25 = [closure_12(tmp(6337).Stack, obj21), , ];
+    const items25 = [closure_12(tmp(6327).Stack, obj21), , ];
     let tmp37Result = null != memo;
     if (tmp37Result) {
       const obj27 = { onPress: handleAdvertiserDetailsPress, children: null };
@@ -374,13 +374,13 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
       const obj29 = { uri: memo.url };
       obj28.source = obj29;
       obj28.style = tmp3.playerThumbnail;
-      obj27.children = closure_11(tmp15(6020), obj28);
+      obj27.children = closure_11(tmp15(6010), obj28);
       tmp37Result = closure_11(tmp(7428).PressableOpacity, obj27);
     }
     items25[1] = tmp37Result;
     const obj30 = { direction: "horizontal", spacing: tmp15(575).space.PX_16, children: null };
     const obj31 = { grow: true, variant: "expressive", onPress: handlePrimaryCtaPress, text: null };
-    const Button = tmp(5936).Button;
+    const Button = tmp(5926).Button;
     const tmpResult15 = tmp(10146);
     obj31.text = tmp(10156).getExternalCtaLabel(quest);
     const items26 = [, , ];
@@ -409,9 +409,9 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
     }
     items26[2] = tmp37Result3;
     obj30.children = items26;
-    items25[2] = closure_12(tmp(6337).Stack, obj30);
+    items25[2] = closure_12(tmp(6327).Stack, obj30);
     obj20.children = items25;
-    items22[2] = closure_12(tmp(6337).Stack, obj20);
+    items22[2] = closure_12(tmp(6327).Stack, obj20);
     obj10.children = items22;
     obj9.children = closure_12(tmp39, obj10);
     tmp37Result4 = closure_11(closure_7, obj9);

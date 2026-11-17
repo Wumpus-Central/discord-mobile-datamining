@@ -2,7 +2,7 @@
 
 // Module 12104 (UserProfileGameWidgetConstants)
 import nativeDefault from "native" /* 575 */;
-import FriendsIcon from "FriendsIcon" /* 6018 */;
+import FriendsIcon from "FriendsIcon" /* 6008 */;
 import ThumbsUpIcon from "ThumbsUpIcon" /* 9142 */;
 import ThumbsDownIcon from "ThumbsDownIcon" /* 9144 */;
 import RibbonIcon from "RibbonIcon" /* 12106 */;

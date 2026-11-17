@@ -1,8 +1,8 @@
-// === Module 20568: GuildSettingsRoleItem ===
+// === Module 20571: GuildSettingsRoleItem ===
 
-// Module 20568 (GuildSettingsRoleItem)
+// Module 20571 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 let c9 = "body-md/semibold";
 const createStyles = fn(5306);
 let obj = { row: { flexDirection: "row", gap: 4, alignItems: "center" }, everyone: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, padding: 8 }, label: null, sparkleIcon: null, container: null, gradient: null, image: null };
-let prop = fn(5929).TextStyleSheet["body-md/semibold"];
+let prop = fn(5919).TextStyleSheet["body-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;

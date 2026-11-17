@@ -2,8 +2,8 @@
 
 // Module 12262 (UserProfileApplicationWidgetBottomProgressLayout)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12149 */;
 import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 12255 */;
 import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12256 */;

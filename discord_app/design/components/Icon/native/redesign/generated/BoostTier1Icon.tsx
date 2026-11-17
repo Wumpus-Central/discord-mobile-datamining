@@ -2,7 +2,7 @@
 
 // Module 10793 (BoostTier1Icon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10794 from "module_10794" /* 10794 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// === Module 18174: ChangeLogModal ===
+// === Module 18176: ChangeLogModal ===
 
-// Module 18174 (ChangeLogModal)
+// Module 18176 (ChangeLogModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import Navigator from "Navigator" /* 7490 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 8451 */;
@@ -12,7 +12,7 @@ import openMediaModal from "openMediaModal" /* 8627 */;
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 9349 */;
 import common_VideoDefault from "common/Video" /* 9730 */;
 import _modDef11368 from "module_11368" /* 11368 */;
-import _modDef18175 from "module_18175" /* 18175 */;
+import _modDef18177 from "module_18177" /* 18177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -172,7 +172,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return React5(View, obj);
 };
-ListItem.contextType = fn(5377).ThemeContext;
+ListItem.contextType = fn(5367).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -274,7 +274,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      items = [closure_7(_modDef18175, obj4), ];
+      items = [closure_7(_modDef18177, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -322,7 +322,7 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return metroImportDefault(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(5377).ThemeContext;
+ChangeLog.contextType = fn(5367).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 

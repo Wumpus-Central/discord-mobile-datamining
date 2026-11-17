@@ -1,7 +1,7 @@
 // === Module 11317: EmojiPickerCategoryIcon ===
 
 // Module 11317 (EmojiPickerCategoryIcon)
-import ClockIcon from "ClockIcon" /* 6042 */;
+import ClockIcon from "ClockIcon" /* 6032 */;
 import GameControllerIcon from "GameControllerIcon" /* 7438 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9436 */;
 import HeartIcon from "HeartIcon" /* 9458 */;

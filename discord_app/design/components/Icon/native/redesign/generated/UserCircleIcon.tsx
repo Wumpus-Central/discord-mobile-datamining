@@ -2,7 +2,7 @@
 
 // Module 10898 (UserCircleIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10899 from "module_10899" /* 10899 */;
 import noop from "module_19" /* 19 */;
 

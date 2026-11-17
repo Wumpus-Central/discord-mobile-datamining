@@ -3,7 +3,7 @@
 // Module 10928 (InstantInviteCreator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import DetailedGuildIdentityUserRow from "DetailedGuildIdentityUserRow" /* 10929 */;
 import noop from "module_19" /* 19 */;
 

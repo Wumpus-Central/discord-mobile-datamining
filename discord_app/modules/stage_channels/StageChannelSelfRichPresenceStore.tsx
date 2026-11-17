@@ -5,18 +5,18 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1345 from "module_1345" /* 1345 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import ActivityTypes2 from "ActivityTypes" /* 6069 */;
-import StageMediaHooks from "StageMediaHooks" /* 6939 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6943 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import ActivityTypes2 from "ActivityTypes" /* 6059 */;
+import StageMediaHooks from "StageMediaHooks" /* 6929 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6933 */;
 import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10861 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import UserStore from "UserStore" /* 1388 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6940 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6930 */;
 import StageInstanceStore from "StageInstanceStore" /* 5160 */;
 
 require = fn;
@@ -118,7 +118,7 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(6906).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(6896).STAGE_APPLICATION_ID;
 const Constants = fn(1072);
 ({ GuildFeatures: map1, Permissions: closure_14, RTCConnectionStates: closure_15 } = Constants);
 let obj = null;

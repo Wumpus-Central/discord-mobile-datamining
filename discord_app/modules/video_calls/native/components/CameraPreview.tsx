@@ -4,9 +4,9 @@
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import NavigatorConstants from "NavigatorConstants" /* 5892 */;
-import usePreviousDefault from "usePrevious" /* 6836 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import NavigatorConstants from "NavigatorConstants" /* 5882 */;
+import usePreviousDefault from "usePrevious" /* 6826 */;
 import useIsActivityFocusedDefault from "useIsActivityFocused" /* 12716 */;
 import usePipPositionDefault from "usePipPosition" /* 12720 */;
 import PictureInPicture from "PictureInPicture" /* 12721 */;
@@ -17,7 +17,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 12719 */;
 
@@ -158,7 +158,7 @@ function CameraPreview(arg0) {
     const obj9 = { gesture: tmp34, children: null };
     const obj10 = { style: closure_5.absoluteFill };
     obj9.children = closure_21(closure_6, obj10);
-    tmp37 = closure_21(tmp(5598).GestureDetector, obj9);
+    tmp37 = closure_21(tmp(5588).GestureDetector, obj9);
   }
   const items9 = [tmp37, ];
   const obj11 = { style: closure_5.absoluteFill, pointerEvents: "box-none", children: null };
@@ -202,7 +202,7 @@ const useChannelCallStore = fn(11003).useChannelCallStore;
 const ChannelCallConstants = fn(11004);
 ({ VoiceChatDrawerState: closure_14, VOICE_CALL_OVERLAY_HORIZONTAL_MARGIN: closure_15, VOICE_CALL_OVERLAY_VERTICAL_MARGIN: closure_16, VoiceCallOverlayType: closure_17 } = ChannelCallConstants);
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const CallConstants = fn(5983);
+const CallConstants = fn(5973);
 ({ ParticipantTypes: closure_19, isStreamParticipant: closure_20 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);

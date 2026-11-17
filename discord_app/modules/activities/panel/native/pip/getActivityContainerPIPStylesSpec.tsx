@@ -1,8 +1,8 @@
-// === Module 19929: getActivityContainerPIPStylesSpec ===
+// === Module 19931: getActivityContainerPIPStylesSpec ===
 
-// Module 19929 (getActivityContainerPIPStylesSpec)
+// Module 19931 (getActivityContainerPIPStylesSpec)
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2146 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5959 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5949 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10576 */;
 import size from "module_2" /* 2 */;
 

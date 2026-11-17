@@ -1,6 +1,6 @@
-// === Module 18590: ParentalControlsFriendRequestsEveryoneSetting ===
+// === Module 18592: ParentalControlsFriendRequestsEveryoneSetting ===
 
-// Module 18590 (ParentalControlsFriendRequestsEveryoneSetting)
+// Module 18592 (ParentalControlsFriendRequestsEveryoneSetting)
 import util from "util" /* 1113 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7813 */;
 import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 17347 */;

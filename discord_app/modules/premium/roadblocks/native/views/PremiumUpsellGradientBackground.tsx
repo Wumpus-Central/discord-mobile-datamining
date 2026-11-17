@@ -2,7 +2,7 @@
 
 // Module 11271 (PremiumUpsellGradientBackground)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

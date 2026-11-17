@@ -1,22 +1,22 @@
-// === Module 18355: UserSettingsSurveyChangelogOverride ===
+// === Module 18357: UserSettingsSurveyChangelogOverride ===
 
-// Module 18355 (UserSettingsSurveyChangelogOverride)
+// Module 18357 (UserSettingsSurveyChangelogOverride)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
-import usePreviousDefault from "usePrevious" /* 6836 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
+import usePreviousDefault from "usePrevious" /* 6826 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7913 */;
 import ActionSheet from "ActionSheet" /* 7951 */;
 import ActionSheetRow from "ActionSheetRow" /* 7953 */;
 import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 9351 */;
-import SurveyActionCreatorsAll from "SurveyActionCreators" /* 18356 */;
+import SurveyActionCreatorsAll from "SurveyActionCreators" /* 18358 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChangelogStore from "ChangelogStore" /* 8135 */;
-import SurveyStore from "SurveyStore" /* 6890 */;
+import SurveyStore from "SurveyStore" /* 6880 */;
 
 require = fn;
 function SurveyOverrideInfoActionSheet(survey) {
@@ -32,7 +32,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       str = JSON.stringify(tmp2);
     }
     obj.subLabel = str;
-    obj.icon = closure_9(closure_0(6033).CopyIcon, {});
+    obj.icon = closure_9(closure_0(6023).CopyIcon, {});
     obj.onPress = function onPress() {
       let str = "null";
       if (null != closure_1_0) {
@@ -79,7 +79,7 @@ function SurveyOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = closure_9(first(5936).Button, obj2);
+  items[1] = closure_9(first(5926).Button, obj2);
   obj.children = items;
   return closure_10(first(7951).ActionSheet, obj);
 }
@@ -147,7 +147,7 @@ function ChangelogOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = closure_9(first(5936).Button, obj2);
+  items[1] = closure_9(first(5926).Button, obj2);
   obj.children = items;
   return closure_10(first(7951).ActionSheet, obj);
 }

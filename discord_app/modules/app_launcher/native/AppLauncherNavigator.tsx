@@ -2,7 +2,7 @@
 
 // Module 13413 (AppLauncherNavigator)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

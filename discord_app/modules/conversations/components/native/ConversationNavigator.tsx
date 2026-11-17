@@ -2,7 +2,7 @@
 
 // Module 9127 (ConversationNavigator)
 import nativeDefault from "native" /* 575 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
 import ConversationsActionCreators from "ConversationsActionCreators" /* 9121 */;
 import useSelectedConversationDefault from "useSelectedConversation" /* 9138 */;
 import _slicedToArray from "module_32" /* 32 */;

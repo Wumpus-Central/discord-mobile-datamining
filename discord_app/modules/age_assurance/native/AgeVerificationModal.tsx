@@ -2,7 +2,7 @@
 
 // Module 8229 (AgeVerificationModal)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 6012 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

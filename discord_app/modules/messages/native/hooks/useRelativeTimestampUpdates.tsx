@@ -2,7 +2,7 @@
 
 // Module 12458 (useRelativeTimestampUpdates)
 import DurationsDefault from "Durations" /* 1089 */;
-import MarkupTypes from "MarkupTypes" /* 6342 */;
+import MarkupTypes from "MarkupTypes" /* 6332 */;
 import TimestampUtils from "TimestampUtils" /* 9374 */;
 import useFormattedTimestamp from "useFormattedTimestamp" /* 11063 */;
 import noop from "module_19" /* 19 */;

@@ -1,7 +1,7 @@
-// === Module 20040: GameTagChiplet ===
+// === Module 20042: GameTagChiplet ===
 
-// Module 20040 (GameTagChiplet)
-import FastImageDefault from "FastImage" /* 6020 */;
+// Module 20042 (GameTagChiplet)
+import FastImageDefault from "FastImage" /* 6010 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10286 */;
 import GuildTag from "GuildTag" /* 10654 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 10664 */;

@@ -1,11 +1,11 @@
-// === Module 19178: VoicePanelDockGlow ===
+// === Module 19180: VoicePanelDockGlow ===
 
-// Module 19178 (VoicePanelDockGlow)
+// Module 19180 (VoicePanelDockGlow)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
 import inlineStyles from "inlineStyles" /* 8263 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11253 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;

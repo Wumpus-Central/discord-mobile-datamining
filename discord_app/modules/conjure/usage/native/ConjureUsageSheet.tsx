@@ -3,7 +3,7 @@
 // Module 13770 (ConjureUsageSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import ConjureUsageTypes from "ConjureUsageTypes" /* 7368 */;
 import noop from "module_19" /* 19 */;
 import ConjureChatStore from "ConjureChatStore" /* 7321 */;
@@ -57,7 +57,7 @@ export default function ConjureUsageSheet(projectId) {
     const tmp2Result10 = tmp2(7368);
     obj7.runes = tmp2(7368).runesFromUsd(stateFromStores.cost_usd).toLocaleString();
     obj6.children = intl2.formatToPlainString(_modDef4131.gMuw5d, obj7);
-    const items2 = [closure_5(tmp2(5929).Text, obj6), , ];
+    const items2 = [closure_5(tmp2(5919).Text, obj6), , ];
     const obj8 = { direction: "vertical", spacing: nativeDefault.space.PX_4, children: null };
     const obj9 = { label: null, usage: null };
     const intl3 = tmp2(1113).intl;
@@ -88,24 +88,24 @@ export default function ConjureUsageSheet(projectId) {
     obj13.usage = tmp2(7368).usageOrEmpty(stateFromStores.image);
     items3[4] = closure_5(RoleRow, obj13);
     obj8.children = items3;
-    items2[1] = closure_6(tmp2(6337).Stack, obj8);
+    items2[1] = closure_6(tmp2(6327).Stack, obj8);
     const obj14 = { style: tmp.row, children: null };
     const obj15 = { style: tmp.label, children: null };
     const obj16 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl8 = tmp2(1113).intl;
     obj16.children = intl8.string(_modDef4131["8OUg09"]);
-    obj15.children = closure_5(tmp2(5929).Text, obj16);
+    obj15.children = closure_5(tmp2(5919).Text, obj16);
     const items4 = [closure_5(View, obj15), ];
     const obj17 = { variant: "body-sm/medium", color: "text-default", children: null };
     const _Math = Math;
     const tmp2Result13 = tmp2(7368);
     const _HermesInternal = HermesInternal;
     obj17.children = "" + Math.round(100 * tmp2(7368).cacheHitRate(sumTokenUsageResult1)) + "%";
-    items4[1] = closure_5(tmp2(5929).Text, obj17);
+    items4[1] = closure_5(tmp2(5919).Text, obj17);
     obj14.children = items4;
     items2[2] = closure_6(View, obj14);
     obj5.children = items2;
-    obj4.children = closure_6(tmp2(6337).Stack, obj5);
+    obj4.children = closure_6(tmp2(6327).Stack, obj5);
     obj2.children = closure_5(View, obj4);
     return closure_5(tmp2(7951).ActionSheet, obj2);
   }

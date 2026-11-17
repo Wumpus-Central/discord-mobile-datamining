@@ -1,11 +1,11 @@
-// === Module 19372: NavigationTTIRegionDebugOverlay ===
+// === Module 19374: NavigationTTIRegionDebugOverlay ===
 
-// Module 19372 (NavigationTTIRegionDebugOverlay)
+// Module 19374 (NavigationTTIRegionDebugOverlay)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 14199 */;
 import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 14201 */;
-import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 19370 */;
+import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 19372 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -70,9 +70,9 @@ function NavigationTTIMilestoneReadout(surface) {
   const obj4 = { variant: "body-xs/semibold", color: "none", children: null };
   const items1 = ["FP ", str5];
   obj4.children = items1;
-  const items2 = [closure_7(surface(5929).Text, obj4), " \u00B7 FCP ", str4];
+  const items2 = [closure_7(surface(5919).Text, obj4), " \u00B7 FCP ", str4];
   obj3.children = items2;
-  obj2.children = closure_7(surface(5929).Text, obj3);
+  obj2.children = closure_7(surface(5919).Text, obj3);
   return closure_8(closure_6, obj2);
 }
 function NavigationTTIDebugFreezeControl(arg0) {
@@ -487,7 +487,7 @@ export function NavigationTTIRegionDebugOverlay(name) {
     }
     obj6.lineClamp = num2;
     obj6.children = combined1;
-    obj4.children = closure_8(tmp2(5929).Text, obj6);
+    obj4.children = closure_8(tmp2(5919).Text, obj6);
     const items3 = [closure_8(closure_5, obj4), ];
     let tmp41Result = null;
     if (0 === hierarchyDepth) {

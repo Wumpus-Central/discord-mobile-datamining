@@ -2,7 +2,7 @@
 
 // Module 8097 (HubIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8041 from "module_8041" /* 8041 */;
 import noop from "module_19" /* 19 */;
 

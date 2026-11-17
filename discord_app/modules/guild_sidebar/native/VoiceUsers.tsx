@@ -1,10 +1,10 @@
-// === Module 18841: VoiceUsers ===
+// === Module 18843: VoiceUsers ===
 
-// Module 18841 (VoiceUsers)
+// Module 18843 (VoiceUsers)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6061 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6051 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9061 */;
 import HeadphonesIcon from "HeadphonesIcon" /* 10729 */;
 import ChannelListLayout from "ChannelListLayout" /* 11050 */;
@@ -87,7 +87,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(18842), obj7, user.id);
+  obj4.children = closure_6(tmp(18844), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);

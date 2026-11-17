@@ -1,12 +1,12 @@
-// === Module 20101: VoicePanelStageAudienceButton ===
+// === Module 20103: VoicePanelStageAudienceButton ===
 
-// Module 20101 (VoicePanelStageAudienceButton)
+// Module 20103 (VoicePanelStageAudienceButton)
 import _modDef4261 from "module_4261" /* 4261 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 20084 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 20092 */;
-import openStageAudienceSheetDefault from "openStageAudienceSheet" /* 20102 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 20086 */;
+import CircleWithCutoutDefault from "CircleWithCutout" /* 20094 */;
+import openStageAudienceSheetDefault from "openStageAudienceSheet" /* 20104 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -25,13 +25,13 @@ export default function StageAudienceButton(props) {
   props = props.props;
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp3 = closure_8();
-  const voicePanelButtonStyles = channelId(20083).useVoicePanelButtonStyles(props.wrapperSpecs);
-  const obj = channelId(20083);
-  const canModerateRequestToSpeak = channelId(6938).useCanModerateRequestToSpeak(channelId);
-  const obj2 = channelId(6938);
+  const voicePanelButtonStyles = channelId(20085).useVoicePanelButtonStyles(props.wrapperSpecs);
+  const obj = channelId(20085);
+  const canModerateRequestToSpeak = channelId(6928).useCanModerateRequestToSpeak(channelId);
+  const obj2 = channelId(6928);
   let num = 0;
   if (canModerateRequestToSpeak) {
-    num = obj3.useStageParticipantsCount(channelId, channelId(6943).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
+    num = obj3.useStageParticipantsCount(channelId, channelId(6933).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
   }
   const element = {
     onPress() {
@@ -41,7 +41,7 @@ export default function StageAudienceButton(props) {
     accessibilityLabel: null,
     children: null
   };
-  obj3 = channelId(6949);
+  obj3 = channelId(6939);
   const intl = tmp4(1113).intl;
   if (num > 0) {
     const obj4 = { count: num };

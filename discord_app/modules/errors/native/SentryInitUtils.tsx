@@ -12,8 +12,8 @@ import ClientInfoUtilsAll from "ClientInfoUtils" /* 1379 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import DeviceUtils from "DeviceUtils" /* 5263 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6772 */;
-import MetricEvents from "MetricEvents" /* 6776 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6762 */;
+import MetricEvents from "MetricEvents" /* 6766 */;
 import AppCrashedReasons2 from "AppCrashedReasons" /* 16584 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 16585 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -553,8 +553,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(6771).increment(obj6, true);
-  const tmp26Result = tmp26(6771);
+  tmp26(6761).increment(obj6, true);
+  const tmp26Result = tmp26(6761);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1072);
@@ -634,7 +634,7 @@ export function initSentry() {
           if (tmp15Result14.isAndroid()) {
             str2 = "android";
           }
-          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35520500000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@355.5.0-2+355205", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35620000000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@356.0.0-2+356200", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
@@ -665,7 +665,7 @@ export function initSentry() {
           };
           tmp15Result13.init(obj3);
           const tmp15Result16 = _mod674;
-          _mod674.setTag("buildNumber", "35520500000000");
+          _mod674.setTag("buildNumber", "35620000000000");
           const tmp15Result17 = _mod674;
           _mod674.setTag("appVersion", constants.Version);
           const tmp15Result18 = _mod674;

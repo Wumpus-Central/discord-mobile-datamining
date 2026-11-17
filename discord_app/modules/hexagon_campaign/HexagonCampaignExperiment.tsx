@@ -2,11 +2,9 @@
 
 // Module 5337 (HexagonCampaignExperiment)
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5334 */;
-import QuestConstants from "QuestConstants" /* 5338 */;
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
-const QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-hexagon-campaign-client", defaultConfig: { enabled: false, questHomeRedirect: false }, variations: { 0: { enabled: false, questHomeRedirect: false }, 1: { enabled: true, questHomeRedirect: true }, 2: { enabled: true, questHomeRedirect: false } } });
 let result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampaignExperiment.tsx");
 

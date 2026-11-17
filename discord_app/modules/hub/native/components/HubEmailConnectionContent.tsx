@@ -6,8 +6,8 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useNavigation from "useNavigation" /* 1502 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5320 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import HubEmailConnectionModal from "HubEmailConnectionModal" /* 15088 */;
 import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 15095 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -261,10 +261,10 @@ export default function HubEmailConnectionContent(arg0) {
     onClick: handleLearnMore
   };
   const tmp7 = value(noop.useState(null), 2);
-  items1[1] = { paddingBottom: invite(5913)().insets.bottom + invite(575).space.PX_16 };
+  items1[1] = { paddingBottom: invite(5903)().insets.bottom + invite(575).space.PX_16 };
   obj6.contentContainerStyle = items1;
   let obj8 = { style: tmp3.container, children: null };
-  let obj7 = { paddingBottom: invite(5913)().insets.bottom + invite(575).space.PX_16 };
+  let obj7 = { paddingBottom: invite(5903)().insets.bottom + invite(575).space.PX_16 };
   const tmp17 = ref;
   const items2 = [closure_12(c6, { style: tmp3.header, children: closure_12(InkQuillSpotIllustration.InkQuillSpotIllustration, { scale: 0.75 }) }), closure_12(Text_Text.Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp3.title, accessibilityRole: "header", children: formatToPlainStringResult }), , ];
   let obj11 = { style: tmp3.description, children: null };

@@ -1,6 +1,6 @@
-// === Module 18098: SwipeRightToLeftScreen ===
+// === Module 18100: SwipeRightToLeftScreen ===
 
-// Module 18098 (SwipeRightToLeftScreen)
+// Module 18100 (SwipeRightToLeftScreen)
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import SettingLayoutDefault from "SettingLayout" /* 17213 */;
 import noop from "module_19" /* 19 */;

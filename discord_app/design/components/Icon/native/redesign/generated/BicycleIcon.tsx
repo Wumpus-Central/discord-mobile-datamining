@@ -2,7 +2,7 @@
 
 // Module 11324 (BicycleIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11325 from "module_11325" /* 11325 */;
 import noop from "module_19" /* 19 */;
 

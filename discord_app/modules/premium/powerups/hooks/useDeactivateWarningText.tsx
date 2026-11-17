@@ -3,9 +3,9 @@
 // Module 10749 (useDeactivateWarningText)
 import util from "util" /* 1113 */;
 import _modDef2733 from "module_2733" /* 2733 */;
-import Powerups from "Powerups" /* 5527 */;
+import Powerups from "Powerups" /* 5517 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import GuildRoleStore from "GuildRoleStore" /* 5212 */;
 import GuildStore from "GuildStore" /* 5177 */;
 

@@ -1,7 +1,7 @@
 // === Module 17761: useVideoQuestClickCtaAndMaybeCloseModal ===
 
 // Module 17761 (useVideoQuestClickCtaAndMaybeCloseModal)
-import parseURLDefault from "parseURL" /* 6048 */;
+import parseURLDefault from "parseURL" /* 6038 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 10156 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 10170 */;

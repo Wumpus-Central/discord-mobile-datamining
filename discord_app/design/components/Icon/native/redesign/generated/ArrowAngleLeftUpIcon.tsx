@@ -2,7 +2,7 @@
 
 // Module 12672 (ArrowAngleLeftUpIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod12673 from "module_12673" /* 12673 */;
 import noop from "module_19" /* 19 */;
 

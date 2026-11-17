@@ -1,9 +1,9 @@
-// === Module 18084: ImageDescriptionsSetting ===
+// === Module 18086: ImageDescriptionsSetting ===
 
-// Module 18084 (ImageDescriptionsSetting)
+// Module 18086 (ImageDescriptionsSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import UserSettingsText from "UserSettingsText" /* 18085 */;
+import UserSettingsText from "UserSettingsText" /* 18087 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;

@@ -3,7 +3,7 @@
 // Module 16123 (GatewaySocketOpCodes)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2131 */;
-import RTCRegionStore from "RTCRegionStore" /* 6170 */;
+import RTCRegionStore from "RTCRegionStore" /* 6160 */;
 
 require = fn;
 const EventEmitter = fn(568).EventEmitter;

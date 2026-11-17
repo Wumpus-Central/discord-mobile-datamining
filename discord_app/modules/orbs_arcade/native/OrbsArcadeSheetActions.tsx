@@ -1,7 +1,7 @@
 // === Module 17667: OrbsArcadeSheetActions ===
 
 // Module 17667 (OrbsArcadeSheetActions)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17654 */;
 import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 17658 */;
 import OrbsArcadeClaimRewardButtonDefault from "OrbsArcadeClaimRewardButton" /* 17668 */;
@@ -74,7 +74,7 @@ export default function OrbsArcadeSheetActions(game) {
       let tmp19 = null;
       if (null != tmp7) {
         ({ text: obj6.text, onPress: obj6.onPress } = tmp7);
-        tmp19 = closure_4(tmp10(5936).Button, { grow: true, size: "lg", variant: "secondary", text: null, onPress: null });
+        tmp19 = closure_4(tmp10(5926).Button, { grow: true, size: "lg", variant: "secondary", text: null, onPress: null });
         const obj5 = { grow: true, size: "lg", variant: "secondary", text: null, onPress: null };
       }
       items3[1] = tmp19;

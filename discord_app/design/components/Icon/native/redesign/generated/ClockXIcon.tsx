@@ -2,7 +2,7 @@
 
 // Module 12674 (ClockXIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod12675 from "module_12675" /* 12675 */;
 import noop from "module_19" /* 19 */;
 

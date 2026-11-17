@@ -1,8 +1,8 @@
 // === Module 13643: ConjurePublishNoticeLine ===
 
 // Module 13643 (ConjurePublishNoticeLine)
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import transitionToGuild from "transitionToGuild" /* 7231 */;
 import useConjurePublishedAppNameDefault from "useConjurePublishedAppName" /* 13637 */;
 import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 13644 */;

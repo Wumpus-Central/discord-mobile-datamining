@@ -3,7 +3,7 @@
 // Module 9685 (GPlayManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6767 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6757 */;
 import GPlayActionCreators from "GPlayActionCreators" /* 9686 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -746,7 +746,7 @@ let Constants = fn(9303);
 ({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = Constants);
 Constants = fn(1072);
 ({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = Constants);
-const OrderStatus = fn(6050).OrderStatus;
+const OrderStatus = fn(6040).OrderStatus;
 const SubscriptionPlanInfo = fn(1390).SubscriptionPlanInfo;
 const jsx = fn(21).jsx;
 let closure_22 = new LoggerDefault("GPlayManager.android");

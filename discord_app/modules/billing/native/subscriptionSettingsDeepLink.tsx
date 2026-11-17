@@ -91,7 +91,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       if (closure_129_0) {
         if (closure_129_1) {
           (function showSubscriptionPicker() {
-            closure_0 = closure_0(5552).default;
+            closure_0 = closure_0(5542).default;
             const obj = { key, hasIcons: false, header: null, options: null };
             const obj2 = { title: null, onClose: null };
             const intl = closure_0(1113).intl;

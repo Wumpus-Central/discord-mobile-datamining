@@ -2,7 +2,7 @@
 
 // Module 11328 (FlagIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11329 from "module_11329" /* 11329 */;
 import noop from "module_19" /* 19 */;
 

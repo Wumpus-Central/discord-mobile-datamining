@@ -1,8 +1,8 @@
-// === Module 19456: SearchTabsLayout ===
+// === Module 19458: SearchTabsLayout ===
 
-// Module 19456 (SearchTabsLayout)
+// Module 19458 (SearchTabsLayout)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14740 */;
 import SmartSearchUtils from "SmartSearchUtils" /* 14743 */;
 import SearchUtils from "SearchUtils" /* 14747 */;
@@ -12,7 +12,7 @@ import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 
 import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14765 */;
 import SearchActionCreatorsDefault from "SearchActionCreators" /* 14772 */;
 import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 14773 */;
-import SearchTabsPageDefault from "SearchTabsPage" /* 19465 */;
+import SearchTabsPageDefault from "SearchTabsPage" /* 19467 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 7037 */;
 import SearchQueryStore from "SearchQueryStore" /* 14754 */;
@@ -28,23 +28,23 @@ function NoSearchResultsScreen(searchContext) {
   const memo = noop.useMemo(() => SmartSearchUtils.getSmartSearchQuery(searchContext, stateFromStores), items2);
   const obj = searchContext(504);
   const items3 = [searchContext];
-  const smartSearchStatus = searchContext(19457).useSmartSearchStatus(memo);
+  const smartSearchStatus = searchContext(19459).useSmartSearchStatus(memo);
   const effect = noop.useEffect(() => {
     const result = TrackingDefault.trackSearchEmptyResult({ searchContext });
   }, items3);
   if (null != memo) {
     if (tmpResult.isSmartSearchEmptyOrErrored(smartSearchStatus)) {
       const obj3 = { smartSearchQuery: memo };
-      let tmp8 = closure_12(stateFromStores(19458), obj3);
+      let tmp8 = closure_12(stateFromStores(19460), obj3);
     }
     return tmp8;
   }
   const obj4 = { text: null };
-  const obj2 = searchContext(19457);
+  const obj2 = searchContext(19459);
   const intl = tmp(1113).intl;
   obj4.text = intl.string(searchContext(1113).t.V6nAfF);
-  tmp8 = closure_12(stateFromStores(19463), obj4);
-  const tmp7 = stateFromStores(19463);
+  tmp8 = closure_12(stateFromStores(19465), obj4);
+  const tmp7 = stateFromStores(19465);
 }
 const View = fn(17).View;
 const SearchConstants = fn(9066);
@@ -296,12 +296,12 @@ export default function ConnectedSearchTabsLayout(width) {
   const items2 = [candidateTabs];
   const memo = noop.useMemo(() => new Set(candidateTabs), items2);
   const obj = searchContext(504);
-  const autoSearchGuildChannelTab = searchContext(19563).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
-  const obj3 = searchContext(19563);
-  const autoSearchMembersTab = searchContext(19564).useAutoSearchMembersTab(searchContext, !memo.has(constants.MEMBERS));
-  const obj4 = searchContext(19564);
-  const autoSearchPeopleTab = searchContext(19565).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
-  const obj5 = searchContext(19565);
-  const autoTrackSearchTabCountsViewedAnalytics = searchContext(19566).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
+  const autoSearchGuildChannelTab = searchContext(19565).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
+  const obj3 = searchContext(19565);
+  const autoSearchMembersTab = searchContext(19566).useAutoSearchMembersTab(searchContext, !memo.has(constants.MEMBERS));
+  const obj4 = searchContext(19566);
+  const autoSearchPeopleTab = searchContext(19567).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
+  const obj5 = searchContext(19567);
+  const autoTrackSearchTabCountsViewedAnalytics = searchContext(19568).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
   return closure_12(closure_21, { searchContext, visibleTabs, visibleTabCounts, width: width.width });
 };

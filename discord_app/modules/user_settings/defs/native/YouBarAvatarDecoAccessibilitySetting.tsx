@@ -1,6 +1,6 @@
-// === Module 18032: YouBarAvatarDecoAccessibilitySetting ===
+// === Module 18034: YouBarAvatarDecoAccessibilitySetting ===
 
-// Module 18032 (YouBarAvatarDecoAccessibilitySetting)
+// Module 18034 (YouBarAvatarDecoAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16889 */;

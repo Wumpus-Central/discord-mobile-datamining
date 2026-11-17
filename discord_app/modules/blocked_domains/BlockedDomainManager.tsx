@@ -1,6 +1,7 @@
-// === Module 20185: BlockedDomainManager ===
+// === Module 20188: BlockedDomainManager ===
 
-// Module 20185 (BlockedDomainManager)
+// Module 20188 (BlockedDomainManager)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
 import js_shim_shim from "js_shim/shim" /* 1366 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
@@ -8,14 +9,17 @@ require = fn;
 class BlockedDomainManager extends tmp2 {
 }
 BlockedDomainManager.prototype["_initialize"] = function _initialize() {
-  if (obj.isLibdiscoreInitialized()) {
-    const _window = window;
-    const _HermesInternal = HermesInternal;
-    const combined = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/bad-hash-delta";
-    const result = js_shim_shim.startFetchingBlockedDomains(combined);
-    const tmpResult = js_shim_shim;
+  if (!obj.isDiscordBackendDevelopment()) {
+    if (tmpResult.isLibdiscoreInitialized()) {
+      const _window = window;
+      const _HermesInternal = HermesInternal;
+      const combined = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/bad-hash-delta";
+      const result = js_shim_shim.startFetchingBlockedDomains(combined);
+      const tmpResult2 = js_shim_shim;
+    }
+    tmpResult = js_shim_shim;
   }
-  obj = js_shim_shim;
+  obj = GlobalUtils;
 };
 const blockedDomainManager = new BlockedDomainManager();
 const size = fn(2);

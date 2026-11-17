@@ -7,7 +7,7 @@ import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 9
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 10769 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6944 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6934 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;
 

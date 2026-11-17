@@ -34,7 +34,7 @@ export default noop.memo(function ActiveSpeakerTooltip(channel) {
     const speakingParticipants = ChannelRTCStore.getSpeakingParticipants(channel.id);
     items = [speakingParticipants.map((user) => user.user), ChannelRTCStore.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(6950).isVersionEqual), 1)[0];
+  }, items1, channel(6940).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -50,7 +50,7 @@ export default noop.memo(function ActiveSpeakerTooltip(channel) {
       const intl = tmp2(1113).intl;
       const obj8 = { count: first.length };
       obj7.children = intl.format(tmp2(1113).t["+dia6l"], obj8);
-      obj6.children = closure_8(tmp2(5929).Text, obj7);
+      obj6.children = closure_8(tmp2(5919).Text, obj7);
       items2[1] = closure_8(View, obj6);
       obj3.children = items2;
       obj2.children = closure_9(View, obj3);

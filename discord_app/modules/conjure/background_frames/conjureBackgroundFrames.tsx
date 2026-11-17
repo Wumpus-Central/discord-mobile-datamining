@@ -1,7 +1,7 @@
 // === Module 16988: conjureBackgroundFrames ===
 
 // Module 16988 (conjureBackgroundFrames)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 7022 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 7339 */;
 import leaveFrame from "leaveFrame" /* 7349 */;

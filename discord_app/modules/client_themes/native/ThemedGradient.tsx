@@ -9,12 +9,12 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
 import utils_ColorDefault from "utils/Color" /* 5304 */;
 import shared from "shared" /* 5313 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5486 */;
-import GuildThemePresets from "GuildThemePresets" /* 5489 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5491 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5546 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5476 */;
+import GuildThemePresets from "GuildThemePresets" /* 5479 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5481 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5536 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5330 */;
 
@@ -349,8 +349,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5893), obj);
-    const tmp2Result = reduced(5893);
+    tmp10Result = closure_6(reduced(5883), obj);
+    const tmp2Result = reduced(5883);
   }
   return tmp10Result;
 }

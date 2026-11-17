@@ -1,12 +1,12 @@
-// === Module 18628: RedesignSettingsCategoryFriendsActivityScreen ===
+// === Module 18630: RedesignSettingsCategoryFriendsActivityScreen ===
 
-// Module 18628 (RedesignSettingsCategoryFriendsActivityScreen)
+// Module 18630 (RedesignSettingsCategoryFriendsActivityScreen)
 import util from "util" /* 1113 */;
-import useMountEffectDefault from "useMountEffect" /* 5899 */;
+import useMountEffectDefault from "useMountEffect" /* 5889 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
-import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 18109 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18618 */;
-import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 18619 */;
+import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 18111 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18620 */;
+import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 18621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 20574: RoleIconUploadUtils ===
+// === Module 20577: RoleIconUploadUtils ===
 
-// Module 20574 (RoleIconUploadUtils)
+// Module 20577 (RoleIconUploadUtils)
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

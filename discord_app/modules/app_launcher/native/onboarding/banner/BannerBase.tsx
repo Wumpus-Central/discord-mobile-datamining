@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
@@ -121,10 +121,10 @@ export default function BannerBase(children) {
   if (tmp16Result) {
     const obj8 = { style: tmp.imageContainer, children: null };
     const obj9 = { style: tmp.trinketsLottie, source: tmp4(13394), autoPlay: !stateFromStores };
-    const items7 = [closure_7(tmp7(5923), obj9), image];
+    const items7 = [closure_7(tmp7(5913), obj9), image];
     obj8.children = items7;
     tmp16Result = closure_8(View, obj8);
-    const tmp7Result = tmp7(5923);
+    const tmp7Result = tmp7(5913);
   }
   items6[1] = tmp16Result;
   const items8 = [tmp.bannerTextContainer, ];

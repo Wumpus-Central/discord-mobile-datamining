@@ -3,8 +3,8 @@
 // Module 8209 (ExpressiveGradient)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import useToken from "useToken" /* 5902 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import useToken from "useToken" /* 5892 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

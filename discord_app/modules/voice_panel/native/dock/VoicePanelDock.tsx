@@ -1,23 +1,23 @@
-// === Module 19180: VoicePanelDock ===
+// === Module 19182: VoicePanelDock ===
 
-// Module 19180 (VoicePanelDock)
+// Module 19182 (VoicePanelDock)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import ExternalPipDefault from "ExternalPip" /* 6181 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import ExternalPipDefault from "ExternalPip" /* 6171 */;
 import ContextMenu from "ContextMenu" /* 9148 */;
 import ContextMenuConstants from "ContextMenuConstants" /* 9150 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11989 */;
 import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 12017 */;
-import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 19179 */;
-import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 19181 */;
-import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 19201 */;
-import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19206 */;
+import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 19181 */;
+import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 19183 */;
+import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 19203 */;
+import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19208 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 

@@ -173,7 +173,7 @@ export default function GuildBoostingMarketingFaq() {
       if (tmp) {
         str = "interactive-text-active";
       }
-      items1 = [closure_1_7(closure_0(5929).Text, { color: str, style: closure_0.question, variant: "body-md/normal", children: getQuestion.getQuestion() }), ];
+      items1 = [closure_1_7(closure_0(5919).Text, { color: str, style: closure_0.question, variant: "body-md/normal", children: getQuestion.getQuestion() }), ];
       const obj4 = { source: _modDef16032, style: null };
       const items2 = [closure_0.questionIcon, ];
       let questionIconExpanded = tmp;
@@ -187,7 +187,7 @@ export default function GuildBoostingMarketingFaq() {
       const items3 = [closure_1_8(closure_0(7428).PressableOpacity, obj2), ];
       if (tmp) {
         const obj5 = { style: tmp4.answer, color: "interactive-text-active", variant: "body-sm/normal", children: getQuestion.getAnswer() };
-        tmp = closure_1_7(tmp5(5929).Text, obj5);
+        tmp = closure_1_7(tmp5(5919).Text, obj5);
       }
       items3[1] = tmp;
       obj.children = items3;

@@ -1,7 +1,7 @@
-// === Module 20016: useCameraEncodeError ===
+// === Module 20018: useCameraEncodeError ===
 
-// Module 20016 (useCameraEncodeError)
-import AVError from "AVError" /* 6257 */;
+// Module 20018 (useCameraEncodeError)
+import AVError from "AVError" /* 6247 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AVErrorStore from "AVErrorStore" /* 12789 */;
 

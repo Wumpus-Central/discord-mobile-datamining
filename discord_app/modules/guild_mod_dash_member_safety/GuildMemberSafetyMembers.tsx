@@ -2,7 +2,7 @@
 
 // Module 8699 (GuildMemberSafetyMembers)
 import SecondaryIndexMap from "SecondaryIndexMap" /* 5233 */;
-import _modDef6161 from "module_6161" /* 6161 */;
+import _modDef6151 from "module_6151" /* 6151 */;
 import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 8700 */;
 import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 8701 */;
 import SortUtils from "SortUtils" /* 8703 */;
@@ -173,7 +173,7 @@ prototype["updateMember"] = function updateMember(userId, arg1) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
         let tmp15 = obj2[tmp6];
-        if (_modDef6161(tmp15, obj[tmp6])) {
+        if (_modDef6151(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;

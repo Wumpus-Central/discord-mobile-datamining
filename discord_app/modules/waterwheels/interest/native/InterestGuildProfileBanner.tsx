@@ -1,10 +1,10 @@
-// === Module 19016: InterestGuildProfileBanner ===
+// === Module 19018: InterestGuildProfileBanner ===
 
-// Module 19016 (InterestGuildProfileBanner)
+// Module 19018 (InterestGuildProfileBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import VideoBackground from "VideoBackground" /* 8614 */;
 import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 10659 */;
 import noop from "module_19" /* 19 */;

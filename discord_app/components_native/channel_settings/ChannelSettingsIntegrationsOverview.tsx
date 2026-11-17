@@ -1,17 +1,17 @@
-// === Module 19704: ChannelSettingsIntegrationsOverview ===
+// === Module 19706: ChannelSettingsIntegrationsOverview ===
 
-// Module 19704 (ChannelSettingsIntegrationsOverview)
+// Module 19706 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1502 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import Form from "Form" /* 8106 */;
 import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8151 */;
-import WebhookIcon from "WebhookIcon" /* 19570 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 19705 */;
+import WebhookIcon from "WebhookIcon" /* 19572 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 19707 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 

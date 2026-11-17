@@ -1,7 +1,7 @@
 // === Module 14037: openChannelCallModalForChannelId ===
 
 // Module 14037 (openChannelCallModalForChannelId)
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6900 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6890 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7678 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 

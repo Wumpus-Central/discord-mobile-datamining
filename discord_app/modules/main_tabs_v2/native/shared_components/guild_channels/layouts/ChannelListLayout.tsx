@@ -2,7 +2,7 @@
 
 // Module 11050 (ChannelListLayout)
 import UserSettings from "UserSettings" /* 5131 */;
-import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 5994 */;
+import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 5984 */;
 import CozyDrawer from "CozyDrawer" /* 11051 */;
 import Compact from "Compact" /* 11053 */;
 import Cozy from "Cozy" /* 11054 */;

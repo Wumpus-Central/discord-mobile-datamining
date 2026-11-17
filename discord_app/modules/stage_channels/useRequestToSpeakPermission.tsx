@@ -1,7 +1,7 @@
 // === Module 12952: useRequestToSpeakPermission ===
 
 // Module 12952 (useRequestToSpeakPermission)
-import StageChannelActionCreators from "StageChannelActionCreators" /* 6909 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 6899 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

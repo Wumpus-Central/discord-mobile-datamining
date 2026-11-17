@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1388 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = { user: "a", profile: "Path", wishlistId: "container", wishlist: "animal", updatedAt: "chipmunk", storedUpdatedAt: "squirrel", fetching: "animal", error: "hedgehog" };
+let closure_8 = { user: "a", profile: "Path", wishlistId: "container", wishlist: -0.089, updatedAt: -0.706, storedUpdatedAt: 0.089, fetching: 0.706, error: -0.133 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/useFetchSocialLayerStorefrontEmbedWishlist.tsx");
 

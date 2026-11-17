@@ -1,9 +1,9 @@
-// === Module 20743: FormTrialIntervalPicker ===
+// === Module 20746: FormTrialIntervalPicker ===
 
-// Module 20743 (FormTrialIntervalPicker)
+// Module 20746 (FormTrialIntervalPicker)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -26,8 +26,8 @@ export default function FormTrialIntervalPicker(interval) {
     const intl3 = tmp2(1113).intl;
     let stringResult = intl3.string(tmp2(1113).t.WZG1BU);
   } else {
-    stringResult = tmp2(17848).formatPlanIntervalDuration(interval);
-    const tmp2Result = tmp2(17848);
+    stringResult = tmp2(17850).formatPlanIntervalDuration(interval);
+    const tmp2Result = tmp2(17850);
   }
   obj.trailing = jsx(interval(7443).TableRow.TrailingText, { text: stringResult });
   obj.onPress = function handleSelectTrialInterval() {

@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import native2 from "native" /* 5377 */;
+import native2 from "native" /* 5367 */;
 import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 12847 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

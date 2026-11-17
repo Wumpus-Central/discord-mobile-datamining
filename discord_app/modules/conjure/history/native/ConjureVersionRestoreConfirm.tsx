@@ -3,8 +3,8 @@
 // Module 13282 (ConjureVersionRestoreConfirm)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import useAlertStore from "useAlertStore" /* 6270 */;
-import AlertModal from "AlertModal" /* 6274 */;
+import useAlertStore from "useAlertStore" /* 6260 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 7733 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import _slicedToArray from "module_32" /* 32 */;

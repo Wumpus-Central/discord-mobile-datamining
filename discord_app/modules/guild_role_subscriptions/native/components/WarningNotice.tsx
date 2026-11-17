@@ -1,9 +1,9 @@
-// === Module 20656: WarningNotice ===
+// === Module 20659: WarningNotice ===
 
-// Module 20656 (WarningNotice)
+// Module 20659 (WarningNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
 import noop from "module_19" /* 19 */;
 

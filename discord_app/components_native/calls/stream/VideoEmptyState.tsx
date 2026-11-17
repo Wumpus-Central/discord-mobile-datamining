@@ -2,9 +2,9 @@
 
 // Module 12790 (VideoEmptyState)
 import nativeDefault from "native" /* 575 */;
-import useMountEffectDefault from "useMountEffect" /* 5899 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6808 */;
-import StreamActionCreators from "StreamActionCreators" /* 6862 */;
+import useMountEffectDefault from "useMountEffect" /* 5889 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
+import StreamActionCreators from "StreamActionCreators" /* 6852 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 
@@ -52,13 +52,13 @@ export default function VideoEmptyState(style) {
     tmp8Result = null;
   }
   if (null != avError) {
-    let errorCode = stream(6257).getErrorInfo(avError).errorCode;
-    const obj6 = stream(6257);
+    let errorCode = stream(6247).getErrorInfo(avError).errorCode;
+    const obj6 = stream(6247);
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      errorCode = stream(6257).getErrorInfo(stream(6257).AVError.STREAM_FAILED_TO_START).errorCode;
-      const obj5 = stream(6257);
+      errorCode = stream(6247).getErrorInfo(stream(6247).AVError.STREAM_FAILED_TO_START).errorCode;
+      const obj5 = stream(6247);
     }
   }
   const items1 = [ChannelStore];
@@ -85,7 +85,7 @@ export default function VideoEmptyState(style) {
     const intl3 = stream(1113).intl;
     const obj10 = { errorCode };
     obj9.children = intl3.formatToPlainString(stream(1113).t.ejOT95, obj10);
-    tmp29 = closure_5(stream(5929).Text, obj9);
+    tmp29 = closure_5(stream(5919).Text, obj9);
   }
   items4[1] = tmp29;
   let tmp31 = !removeCloseButton;
@@ -98,7 +98,7 @@ export default function VideoEmptyState(style) {
       const obj = StreamActionCreators;
       obj.stopStream(StreamKeyUtils.encodeStreamKey(stream));
     };
-    obj11.children = closure_5(stream(5936).Button, obj12);
+    obj11.children = closure_5(stream(5926).Button, obj12);
     tmp31 = closure_5(View, obj11);
   }
   items4[2] = tmp31;

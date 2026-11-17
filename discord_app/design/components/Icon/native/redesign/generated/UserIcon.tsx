@@ -2,7 +2,7 @@
 
 // Module 10553 (UserIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10554 from "module_10554" /* 10554 */;
 import noop from "module_19" /* 19 */;
 

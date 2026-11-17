@@ -3,7 +3,7 @@
 // Module 8112 (FormInput)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import native2 from "native" /* 5377 */;
+import native2 from "native" /* 5367 */;
 import noop from "module_19" /* 19 */;
 
 const native = TextArea(1187);

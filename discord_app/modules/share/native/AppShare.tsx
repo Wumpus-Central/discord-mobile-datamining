@@ -1,17 +1,17 @@
-// === Module 20926: AppShare ===
+// === Module 20929: AppShare ===
 
-// Module 20926 (AppShare)
+// Module 20929 (AppShare)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import useMountEffectDefault from "useMountEffect" /* 5899 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6844 */;
+import useMountEffectDefault from "useMountEffect" /* 5889 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6834 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8199 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8678 */;
 import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 10231 */;
 import ShareScreenDefault from "ShareScreen" /* 16337 */;
 import AccessibilityManagerDefault from "AccessibilityManager" /* 16886 */;
-import AppToastContainerDefault from "AppToastContainer" /* 19854 */;
+import AppToastContainerDefault from "AppToastContainer" /* 19856 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -120,9 +120,9 @@ export default function AppShare(targetUserId) {
   } else {
     const items5 = [closure_9(tmp9(7588).SceneLoadingIndicator, {}), , , ];
     const obj5 = { appEntryKey: share };
-    items5[1] = closure_9(tmp9(19781).ActionSheetContainer, obj5);
+    items5[1] = closure_9(tmp9(19783).ActionSheetContainer, obj5);
     items5[2] = closure_9(AppToastContainerDefault, { appChrome: false });
-    items5[3] = closure_9(tmp9(6274).AlertModalContainer, {});
+    items5[3] = closure_9(tmp9(6264).AlertModalContainer, {});
     obj3.children = items5;
     return closure_10(tmp17, obj3);
   }

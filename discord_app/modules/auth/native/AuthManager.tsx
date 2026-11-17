@@ -1,12 +1,12 @@
-// === Module 18702: AuthManager ===
+// === Module 18704: AuthManager ===
 
-// Module 18702 (AuthManager)
+// Module 18704 (AuthManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import transitionToGuild from "transitionToGuild" /* 7231 */;
 import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 8860 */;
 import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14828 */;
-import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18709 */;
+import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18711 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
 const PermissionStateType = fn(14825).PermissionStateType;
 const ME = fn(1072).ME;
-let closure_8 = fn(6902).NotificationAuthorizationStatus;
+let closure_8 = fn(6892).NotificationAuthorizationStatus;
 const NewUserTypes = fn(15023).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
@@ -79,8 +79,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(18703).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(18703);
+          const result = applyArgumentsResult(18705).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(18705);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;

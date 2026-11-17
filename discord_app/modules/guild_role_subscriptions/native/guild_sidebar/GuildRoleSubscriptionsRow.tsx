@@ -1,10 +1,10 @@
-// === Module 18922: GuildRoleSubscriptionsRow ===
+// === Module 18924: GuildRoleSubscriptionsRow ===
 
-// Module 18922 (GuildRoleSubscriptionsRow)
+// Module 18924 (GuildRoleSubscriptionsRow)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import BaseChannelItemDefault from "BaseChannelItem" /* 14789 */;
 import _modDef15144 from "module_15144" /* 15144 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ const Routes = fn(1072).Routes;
 const StaticChannelRoute = fn(5162).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
-let obj2 = { container: { marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let obj2 = { container: { marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsRow.tsx");
@@ -29,7 +29,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   }, items);
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18923, dependencyMap.paths), c1, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18925, dependencyMap.paths), c1, {
       guildId: id,
       onClose() {
         c1(dependencyMap[8]).hideActionSheet(closure_1_1);

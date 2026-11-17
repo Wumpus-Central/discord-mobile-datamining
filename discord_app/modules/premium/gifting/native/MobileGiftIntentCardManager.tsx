@@ -1,15 +1,15 @@
-// === Module 20375: MobileGiftIntentCardManager ===
+// === Module 20378: MobileGiftIntentCardManager ===
 
-// Module 20375 (MobileGiftIntentCardManager)
+// Module 20378 (MobileGiftIntentCardManager)
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import Timers from "Timers" /* 5150 */;
 import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 11783 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8553 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 9329 */;
-import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 20376 */;
+import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 20379 */;
 
 require = fn;
 const PremiumConstants = fn(1390);
@@ -42,8 +42,8 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
             obj2.dm_affinity = dmProbability;
             obj2.channel_id = id;
             obj.properties = obj2;
-            tmp(6338).trackImpression(obj);
-            const tmpResult2 = tmp(6338);
+            tmp(6328).trackImpression(obj);
+            const tmpResult2 = tmp(6328);
           }
         } else {
           MessageStore.whenReady(id, () => {

@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5226 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
 import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 9180 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9188 */;

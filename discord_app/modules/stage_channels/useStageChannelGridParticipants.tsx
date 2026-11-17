@@ -2,12 +2,12 @@
 
 // Module 12953 (useStageChannelGridParticipants)
 import apply from "apply" /* 12 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6943 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6949 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6933 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6939 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6940 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6930 */;
 
 const require = globalThis.__r;
 
@@ -232,7 +232,7 @@ export function useThrottledStageAudience(id) {
   const stateFromStores = stageParticipantsCount(504).useStateFromStores(items, () => {
     items = [stageParticipantsCount, StageChannelParticipantStore.getParticipantsVersion(stageParticipantsCount)];
     return items;
-  }, items1, stageParticipantsCount(6950).isVersionEqual);
+  }, items1, stageParticipantsCount(6940).isVersionEqual);
   const items2 = [stateFromStores];
   const memo = noop.useMemo(() => {
     items = [...StageChannelParticipantStore.getMutableParticipants(closure_1[0], StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE)];
@@ -241,7 +241,7 @@ export function useThrottledStageAudience(id) {
   const obj = stageParticipantsCount(504);
   stageParticipantsCount = undefined;
   const obj2 = stageParticipantsCount(12954);
-  stageParticipantsCount = stageParticipantsCount(6949).useStageParticipantsCount(id, stageParticipantsCount(6943).StageChannelParticipantNamedIndex.AUDIENCE);
+  stageParticipantsCount = stageParticipantsCount(6939).useStageParticipantsCount(id, stageParticipantsCount(6933).StageChannelParticipantNamedIndex.AUDIENCE);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp4[1];
   const items3 = [stageParticipantsCount];

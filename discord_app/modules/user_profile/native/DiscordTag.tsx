@@ -2,7 +2,7 @@
 
 // Module 10930 (DiscordTag)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import BotTagDefault from "BotTag" /* 10870 */;
 import noop from "module_19" /* 19 */;
 

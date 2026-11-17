@@ -1,7 +1,7 @@
 // === Module 14479: CheckpointStatNumber ===
 
 // Module 14479 (CheckpointStatNumber)
-import CheckpointNumbersRive from "CheckpointNumbersRive" /* 5459 */;
+import CheckpointNumbersRive from "CheckpointNumbersRive" /* 5449 */;
 import CheckpointTextDefault from "CheckpointText" /* 14271 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ function getTextPixels(value) {
   return Math.max(num - 1, 0);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6377).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6367).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 let c7 = 0.08675000000000001;
 let c8 = 28.7;

@@ -1,17 +1,17 @@
-// === Module 19817: CollectiblesMobileAnnouncementActionSheet ===
+// === Module 19819: CollectiblesMobileAnnouncementActionSheet ===
 
-// Module 19817 (CollectiblesMobileAnnouncementActionSheet)
+// Module 19819 (CollectiblesMobileAnnouncementActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import BottomSheetModal from "BottomSheetModal" /* 5570 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import BottomSheetModal from "BottomSheetModal" /* 5560 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8484 */;
-import _modDef19818 from "module_19818" /* 19818 */;
-import _modDef19819 from "module_19819" /* 19819 */;
+import _modDef19820 from "module_19820" /* 19820 */;
+import _modDef19821 from "module_19821" /* 19821 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -55,7 +55,7 @@ function CatEarsBackdrop() {
   obj4.style = items3;
   const obj5 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   const obj6 = { uri: null };
-  obj6.uri = _modDef19818;
+  obj6.uri = _modDef19820;
   obj5.source = obj6;
   obj5.style = tmp.mascotImage;
   obj4.children = React5(FastImageDefault, obj5);
@@ -73,7 +73,7 @@ function FeatureRow(arg0) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 let closure_5 = fn(1074).CollectiblesMobileShopScreen;
-const ACTION_SHEET_MAX_WIDTH = fn(5567).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5557).ACTION_SHEET_MAX_WIDTH;
 const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -130,14 +130,14 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   let obj = { onDismiss: callback1, backdropChildren: memo, children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-  const obj4 = { uri: _modDef19819 };
+  const obj4 = { uri: _modDef19821 };
   obj3.source = obj4;
   obj3.style = tmp.framePreviewImage;
   const items3 = [closure_8(FastImageDefault, obj3), , , ];
   const obj5 = { variant: "heading-xl/semibold", color: "text-strong", accessibilityRole: "header", style: tmp.headerText, children: null };
   const intl = markAsDismissed(1113).intl;
   obj5.children = intl.string(markAsDismissed(1113).t.vRCvqo);
-  items3[1] = closure_8(markAsDismissed(5929).Text, obj5);
+  items3[1] = closure_8(markAsDismissed(5919).Text, obj5);
   const obj6 = { style: tmp.featureRows, children: null };
   const obj7 = { icon: closure_8(markAsDismissed(15049).PaintIllocon, { size: 32 }), text: null };
   const intl2 = markAsDismissed(1113).intl;
@@ -147,7 +147,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const intl3 = markAsDismissed(1113).intl;
   obj8.text = intl3.string(markAsDismissed(1113).t.MkVbBY);
   items4[1] = closure_8(FeatureRow, obj8);
-  const obj9 = { icon: closure_8(markAsDismissed(19820).ShopIllocon, { size: 32 }), text: null };
+  const obj9 = { icon: closure_8(markAsDismissed(19822).ShopIllocon, { size: 32 }), text: null };
   const intl4 = markAsDismissed(1113).intl;
   obj9.text = intl4.string(markAsDismissed(1113).t["/4bQuG"]);
   items4[2] = closure_8(FeatureRow, obj9);
@@ -157,8 +157,8 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const intl5 = markAsDismissed(1113).intl;
   obj10.text = intl5.string(markAsDismissed(1113).t.S9hXPI);
   obj10.onPress = callback;
-  items3[3] = closure_8(markAsDismissed(5936).Button, obj10);
+  items3[3] = closure_8(markAsDismissed(5926).Button, obj10);
   obj2.children = items3;
   obj.children = closure_9(closure_4, obj2);
-  return closure_8(markAsDismissed(5566).BottomSheet, obj);
+  return closure_8(markAsDismissed(5556).BottomSheet, obj);
 };

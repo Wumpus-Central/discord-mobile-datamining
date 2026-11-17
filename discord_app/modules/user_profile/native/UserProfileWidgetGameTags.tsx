@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import XSmallIcon from "XSmallIcon" /* 7549 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8546 */;
 import WidgetUtils from "WidgetUtils" /* 12090 */;

@@ -3,8 +3,8 @@
 // Module 11835 (PremiumGiftDuration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5378 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5368 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import TableRow from "TableRow" /* 7443 */;
 import RowButton2 from "RowButton" /* 8108 */;
 import NativeGiftContext from "NativeGiftContext" /* 11664 */;
@@ -105,7 +105,7 @@ export default function PremiumGiftDuration() {
   const obj3 = { style: tmp.durationTitle, variant: "body-sm/semibold", children: null };
   const intl = planInterval(1113).intl;
   obj3.children = intl.string(planInterval(1113).t["8XT6Nf"]);
-  items = [closure_6(planInterval(5929).Text, obj3), ];
+  items = [closure_6(planInterval(5919).Text, obj3), ];
   items[1] = items.map((planInterval, index) => timestampProducer(PremiumGiftDurationButton, { selected: planInterval === planInterval, planInterval }, index));
   obj2.children = items;
   return closure_7(View, obj2);

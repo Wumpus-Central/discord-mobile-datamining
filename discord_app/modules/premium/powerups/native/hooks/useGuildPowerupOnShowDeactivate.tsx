@@ -2,7 +2,7 @@
 
 // Module 10746 (useGuildPowerupOnShowDeactivate)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import useAlertStore from "useAlertStore" /* 6270 */;
+import useAlertStore from "useAlertStore" /* 6260 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -4,9 +4,9 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import DateUtils from "DateUtils" /* 5128 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import CustomMarkupAll from "CustomMarkup" /* 6341 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import CustomMarkupAll from "CustomMarkup" /* 6331 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7771 */;
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10281 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10286 */;
@@ -291,7 +291,7 @@ function PollAnnouncementCard(message) {
     };
     const obj3 = { style: tmp.cardBody, children: null };
     const obj4 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: poll.question.text };
-    items = [closure_8(message(5929).Text, obj4), , ];
+    items = [closure_8(message(5919).Text, obj4), , ];
     const obj5 = { style: tmp.pollAnswers, children: null };
     const items1 = [
       substr.map((poll_media) => {
@@ -311,7 +311,7 @@ function PollAnnouncementCard(message) {
       const intl = tmp13(1113).intl;
       const obj6 = { count: diff };
       obj.children = intl.format(tmp13(1113).t["mv/nIa"], obj6);
-      tmp9Result = closure_8(tmp13(5929).Text, obj);
+      tmp9Result = closure_8(tmp13(5919).Text, obj);
     }
     items1[1] = tmp9Result;
     obj5.children = items1;
@@ -325,7 +325,7 @@ function PollAnnouncementCard(message) {
     obj9.createdAt = date;
     obj9.expiryLabel = message(10404).getPollExpiryLabel(poll);
     obj8.children = intl2.format(message(1113).t.t0FTsH, obj9);
-    obj7.children = closure_8(message(5929).Text, obj8);
+    obj7.children = closure_8(message(5919).Text, obj8);
     items[2] = closure_8(closure_5, obj7);
     obj3.children = items;
     obj2.children = closure_9(closure_5, obj3);

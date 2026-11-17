@@ -1,7 +1,7 @@
-// === Module 20614: EnableCommunitySharedNavigation ===
+// === Module 20617: EnableCommunitySharedNavigation ===
 
-// Module 20614 (EnableCommunitySharedNavigation)
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 20612 */;
+// Module 20617 (EnableCommunitySharedNavigation)
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 20615 */;
 import noop from "module_19" /* 19 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 8405 */;
 

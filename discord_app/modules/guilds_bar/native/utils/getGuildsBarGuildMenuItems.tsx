@@ -1,6 +1,6 @@
-// === Module 19064: getGuildsBarGuildMenuItems ===
+// === Module 19066: getGuildsBarGuildMenuItems ===
 
-// Module 19064 (getGuildsBarGuildMenuItems)
+// Module 19066 (getGuildsBarGuildMenuItems)
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7883 */;
 import openGuildActionSheetDefault from "openGuildActionSheet" /* 16345 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

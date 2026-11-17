@@ -2,11 +2,11 @@
 
 // Module 16272 (VoiceStateAnalytics)
 import apply from "apply" /* 12 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 
 require = fn;
-const SpeakingFlags = fn(6075).SpeakingFlags;
+const SpeakingFlags = fn(6065).SpeakingFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {

@@ -2,7 +2,7 @@
 
 // Module 17165 (useOpenChangeAvatarActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8541 */;
 import noop from "module_19" /* 19 */;
 

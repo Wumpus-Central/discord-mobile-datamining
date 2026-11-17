@@ -2,7 +2,7 @@
 
 // Module 8095 (VoiceWarningIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8043 from "module_8043" /* 8043 */;
 import noop from "module_19" /* 19 */;
 

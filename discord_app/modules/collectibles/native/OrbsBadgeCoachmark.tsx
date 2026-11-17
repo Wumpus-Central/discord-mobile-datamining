@@ -2,7 +2,7 @@
 
 // Module 15470 (OrbsBadgeCoachmark)
 import util from "util" /* 1113 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import useCoachmark from "useCoachmark" /* 9567 */;
 import _modDef15471 from "module_15471" /* 15471 */;
 import noop from "module_19" /* 19 */;

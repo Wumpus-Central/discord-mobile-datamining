@@ -2,7 +2,7 @@
 
 // Module 10826 (game_console/GameConsoleAlertUtils)
 import util from "util" /* 1113 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 7422 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
@@ -38,7 +38,7 @@ export default {
             const intl = util.intl;
             obj2.body = intl.string(util.t.bL21zs);
             obj2.onConfirm = function onConfirm() {
-              const result = closure_0(5348).UNSAFE_markDismissibleContentAsDismissed(closure_0(5139).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT);
+              const result = closure_0(5338).UNSAFE_markDismissibleContentAsDismissed(closure_0(5139).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT);
               closure_0();
             };
             actions_AlertActionCreatorsDefault.show(obj2);

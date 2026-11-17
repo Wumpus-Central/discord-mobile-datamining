@@ -5,12 +5,12 @@ import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import common_AlertDefault from "common/Alert" /* 6340 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 6952 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import common_AlertDefault from "common/Alert" /* 6330 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 6942 */;
 import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 16050 */;
 import _mod16051 from "module_16051" /* 16051 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -72,8 +72,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj2.confirmText = intl.string(util.t.YKxJCI);
   obj2.onConfirm = function onConfirm() {
-    closure_1(6269).close();
-    const obj = closure_1(6269);
+    closure_1(6259).close();
+    const obj = closure_1(6259);
     BoostingActionCreators.closeApplyBoostModal();
   };
   const items1 = [

@@ -1,7 +1,7 @@
 // === Module 13222: ConjureNativeLinkedText ===
 
 // Module 13222 (ConjureNativeLinkedText)
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import conjureMarkup from "conjureMarkup" /* 13223 */;
 import conjureLinkifyBareDomains from "conjureLinkifyBareDomains" /* 13232 */;
 import noop from "module_19" /* 19 */;

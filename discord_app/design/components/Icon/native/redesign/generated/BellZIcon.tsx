@@ -2,7 +2,7 @@
 
 // Module 11928 (BellZIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11929 from "module_11929" /* 11929 */;
 import noop from "module_19" /* 19 */;
 

@@ -2,7 +2,7 @@
 
 // Module 8688 (isLimitedChannel)
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 
 const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);

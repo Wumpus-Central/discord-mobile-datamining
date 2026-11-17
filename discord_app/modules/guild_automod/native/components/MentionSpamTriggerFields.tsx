@@ -1,7 +1,7 @@
-// === Module 20470: MentionSpamTriggerFields ===
+// === Module 20473: MentionSpamTriggerFields ===
 
-// Module 20470 (MentionSpamTriggerFields)
-import AutomodRuleUtils from "AutomodRuleUtils" /* 20453 */;
+// Module 20473 (MentionSpamTriggerFields)
+import AutomodRuleUtils from "AutomodRuleUtils" /* 20456 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,10 +22,10 @@ export default function MentionSpamTriggerFields(rule) {
   noop = undefined;
   ({ mentionTotalLimit, mentionRaidProtectionEnabled } = rule.triggerMetadata);
   const tmp = closure_9();
-  let hasMentionRaidLimitAccess = rule(19702).useHasMentionRaidLimitAccess(rule.guildId);
+  let hasMentionRaidLimitAccess = rule(19704).useHasMentionRaidLimitAccess(rule.guildId);
   const intl = rule(1113).intl;
   const stringResult = intl.string(rule(1113).t["s/26oQ"]);
-  let obj = rule(19702);
+  let obj = rule(19704);
   [tmp7, c3] = noop.useState(true);
   let obj2 = { title: null, hasIcons: false, helperText: null, children: null };
   const intl2 = rule(1113).intl;
@@ -36,7 +36,7 @@ export default function MentionSpamTriggerFields(rule) {
     const intl3 = tmp2(1113).intl;
     const obj4 = { minimum, maximum };
     obj3.children = intl3.formatToPlainString(tmp2(1113).t["8Y5zsp"], obj4);
-    tmp9 = closure_7(tmp2(5929).Text, obj3);
+    tmp9 = closure_7(tmp2(5919).Text, obj3);
   }
   obj2.helperText = tmp9;
   const obj5 = { label: stringResult, subLabel: null, trailing: null };

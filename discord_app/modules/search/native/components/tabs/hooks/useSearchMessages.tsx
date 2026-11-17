@@ -1,6 +1,6 @@
-// === Module 19540: useSearchMessages ===
+// === Module 19542: useSearchMessages ===
 
-// Module 19540 (useSearchMessages)
+// Module 19542 (useSearchMessages)
 import SearchUtils from "SearchUtils" /* 14747 */;
 import SearchMessageStore from "SearchMessageStore" /* 7037 */;
 import SearchQueryStore from "SearchQueryStore" /* 14754 */;

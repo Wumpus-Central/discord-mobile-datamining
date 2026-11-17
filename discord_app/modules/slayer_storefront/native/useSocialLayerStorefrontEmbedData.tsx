@@ -2,7 +2,7 @@
 
 // Module 12431 (useSocialLayerStorefrontEmbedData)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import CodedLink from "CodedLink" /* 6055 */;
+import CodedLink from "CodedLink" /* 6045 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

@@ -1,20 +1,20 @@
 // === Module 7048: isChannelFocused ===
 
 // Module 7048 (isChannelFocused)
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
-import getInitialNavigationStateDefault from "getInitialNavigationState" /* 5494 */;
-import useChatLayout from "useChatLayout" /* 5495 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
+import getInitialNavigationStateDefault from "getInitialNavigationState" /* 5484 */;
+import useChatLayout from "useChatLayout" /* 5485 */;
 import getChannelDetailsFromRouteDefault from "getChannelDetailsFromRoute" /* 7050 */;
 import hasSecondaryViewChatDefault from "hasSecondaryViewChat" /* 7051 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 import NavigationHistoryStore from "NavigationHistoryStore" /* 7049 */;
-import VoicePanelStore from "VoicePanelStore" /* 6901 */;
+import VoicePanelStore from "VoicePanelStore" /* 6891 */;
 
 const useChatLayoutDefault = useChatLayout;
 
-const NavigationRouteUtils = params(5492);
+const NavigationRouteUtils = params(5482);
 require = fn;
 function getFocusedChannelId() {
   let params = require;

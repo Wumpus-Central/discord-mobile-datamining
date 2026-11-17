@@ -1,7 +1,7 @@
 // === Module 13692: BeeIllocon ===
 
 // Module 13692 (BeeIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef13693 from "module_13693" /* 13693 */;
 import _modDef13694 from "module_13694" /* 13694 */;

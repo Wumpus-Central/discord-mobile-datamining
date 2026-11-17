@@ -1,7 +1,7 @@
 // === Module 8823: Reward ===
 
 // Module 8823 (Reward)
-import QuestTypes from "QuestTypes" /* 5341 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 8813 */;
 import size from "module_2" /* 2 */;
 

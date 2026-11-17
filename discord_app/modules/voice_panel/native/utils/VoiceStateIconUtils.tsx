@@ -4,7 +4,7 @@
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import useLocalSelfMuteDeaf from "useLocalSelfMuteDeaf" /* 10597 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const require = globalThis.__r;
 

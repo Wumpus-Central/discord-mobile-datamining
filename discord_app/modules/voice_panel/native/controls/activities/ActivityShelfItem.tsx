@@ -1,14 +1,14 @@
-// === Module 20030: ActivityShelfItem ===
+// === Module 20032: ActivityShelfItem ===
 
-// Module 20030 (ActivityShelfItem)
+// Module 20032 (ActivityShelfItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2024 */;
-import native2 from "native" /* 5377 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5985 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import native2 from "native" /* 5367 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import Pressables from "Pressables" /* 7428 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import TestModeUtils from "TestModeUtils" /* 9931 */;
@@ -18,10 +18,10 @@ import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 13417 */;
 import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 13474 */;
 import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 13482 */;
 import _modDef15143 from "module_15143" /* 15143 */;
-import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 20027 */;
-import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 20028 */;
-import useActivityUsersDefault from "useActivityUsers" /* 20029 */;
-import _modDef20031 from "module_20031" /* 20031 */;
+import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 20029 */;
+import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 20030 */;
+import useActivityUsersDefault from "useActivityUsers" /* 20031 */;
+import _modDef20033 from "module_20033" /* 20033 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -162,7 +162,7 @@ export default function ActivityShelfItem(arg0) {
     tmp15Result3 = null;
     if (isTestModeForApplication) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
-      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef20031, color: tmp.developerIconColor.color };
+      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef20033, color: tmp.developerIconColor.color };
       obj9.children = timestampProducer(native.Icon, obj10);
       tmp15Result3 = timestampProducer(NativeViewDefault, obj9);
       const tmp3Result4 = NativeViewDefault;

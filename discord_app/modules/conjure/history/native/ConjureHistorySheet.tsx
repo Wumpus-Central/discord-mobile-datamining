@@ -5,10 +5,10 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7418 */;
 import _modDef7421 from "module_7421" /* 7421 */;
 import TableRow from "TableRow" /* 7443 */;
@@ -72,7 +72,7 @@ function HistoryDayGroups(renderItem) {
     obj.children = items.map(renderItem);
     return metroImportDefault(TableRowGroup.TableRowGroup, obj, label.key);
   });
-  return closure_7(renderItem(6337).Stack, obj);
+  return closure_7(renderItem(6327).Stack, obj);
 }
 function VersionsPanel(onRetry) {
   ({ versions, previewBackups: require, restoreDisabled: importDefault, showsPublishState: dependencyMap, onRestore: asyncGeneratorStep } = onRetry);
@@ -553,8 +553,8 @@ export default function ConjureHistorySheet(projectId) {
               const obj8 = { text: null };
               const intl2 = tmp2(1113).intl;
               obj8.text = intl2.string(tmp5(4131).yHchfE);
-              tmp5(6015).open("CONJURE_HISTORY_REWIND_DONE", obj8);
-              const obj2 = tmp5(6015);
+              tmp5(6005).open("CONJURE_HISTORY_REWIND_DONE", obj8);
+              const obj2 = tmp5(6005);
             } else {
               const intl = tmp2(1113).intl;
               if ("unconfirmed" === closure_128_0.code) {
@@ -564,8 +564,8 @@ export default function ConjureHistorySheet(projectId) {
               } else {
                 uyjFNZ = tmp5(4131).uyjFNZ;
               }
-              tmp2(6014).presentError(intl.string(uyjFNZ));
-              const obj = tmp2(6014);
+              tmp2(6004).presentError(intl.string(uyjFNZ));
+              const obj = tmp2(6004);
             }
             v3 = 3;
           }
@@ -622,7 +622,7 @@ export default function ConjureHistorySheet(projectId) {
         [obj2.minimumDate, obj2.maximumDate] = items;
         obj3.onSubmit = (arg0) => {
           const bound = Math.min(closure_1_1, Math.max(closure_1_0, arg0.valueOf()));
-          closure_1_8(bound, bound, /* F142760 */ function() { ... });
+          closure_1_8(bound, bound, /* F142777 */ function() { ... });
         };
         obj.openLazy(closure_0(paths[27])(paths[26], paths.paths), "ConjureHistoryRewindTime", obj3, "stack");
       }, 0);
@@ -669,7 +669,7 @@ export default function ConjureHistorySheet(projectId) {
     let intl2 = tmp8(1113).intl;
     const obj10 = { days: tmp8(13285).RESTORE_WINDOW_DAYS };
     obj9.children = intl2.formatToPlainString(tmp(4131).ptsHZu, obj10);
-    const items6 = [tmp15(tmp8(5929).Text, obj9), databases.map((database) => metroImportDefault(DatabaseSection, { database, sharedDatabase, versionTitles, busy: conjureDatabaseBusy, onRestoreBackup, onRewindToTime, onSaveBackup }, database.environment))];
+    const items6 = [tmp15(tmp8(5919).Text, obj9), databases.map((database) => metroImportDefault(DatabaseSection, { database, sharedDatabase, versionTitles, busy: conjureDatabaseBusy, onRestoreBackup, onRewindToTime, onSaveBackup }, database.environment))];
     obj8.children = items6;
     tmp16Result = callback1(onRestoreBackup, obj8);
   }

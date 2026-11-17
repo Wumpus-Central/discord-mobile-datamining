@@ -2,7 +2,7 @@
 
 // Module 11914 (ForLaterMessageCard)
 import nativeDefault from "native" /* 575 */;
-import _modDef6041 from "module_6041" /* 6041 */;
+import _modDef6031 from "module_6031" /* 6031 */;
 import SavedMessageHelpers from "SavedMessageHelpers" /* 11915 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -141,8 +141,8 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     const obj6 = { value, done: true };
                     return obj6;
                   } else {
-                    v1(6848).pop();
-                    const arr = v1(6848);
+                    v1(6838).pop();
+                    const arr = v1(6838);
                     const obj8 = { channel_id: tmp4.saveData.channelId, message_id: tmp4.saveData.messageId, message_author_id: null, type: null, due_duration: null };
                     const message = tmp4.message;
                     let id;

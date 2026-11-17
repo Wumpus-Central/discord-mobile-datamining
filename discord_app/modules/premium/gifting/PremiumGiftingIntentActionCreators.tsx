@@ -7,7 +7,7 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8553 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 const require = globalThis.__r;
 

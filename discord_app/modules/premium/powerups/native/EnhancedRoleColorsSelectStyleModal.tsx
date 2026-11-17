@@ -1,24 +1,24 @@
-// === Module 20576: EnhancedRoleColorsSelectStyleModal ===
+// === Module 20579: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 20576 (EnhancedRoleColorsSelectStyleModal)
+// Module 20579 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
 import _modDef2733 from "module_2733" /* 2733 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5215 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6350 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5556 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6340 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7913 */;
 import RowGeneratorDefault from "RowGenerator" /* 9159 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9189 */;
 import _modDef11943 from "module_11943" /* 11943 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 20555 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20556 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 20558 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 20577 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 20558 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20559 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 20561 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 20580 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5306 */;

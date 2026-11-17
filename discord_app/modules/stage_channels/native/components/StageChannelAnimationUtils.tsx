@@ -3,7 +3,7 @@
 // Module 13082 (StageChannelAnimationUtils)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5548 */;
+import timing_timing from "timing/timing" /* 5538 */;
 import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11949 */;
 import StageChannelHeightHooks from "StageChannelHeightHooks" /* 12911 */;
 import size from "module_2" /* 2 */;

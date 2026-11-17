@@ -4,11 +4,11 @@
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2020 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import QuestContent from "QuestContent" /* 5343 */;
-import AdPlacement from "AdPlacement" /* 5344 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 6952 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 6942 */;
+import QuestContent from "QuestContent" /* 6959 */;
+import AdPlacement from "AdPlacement" /* 6960 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8404 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8460 */;
@@ -35,7 +35,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7029 */;
 import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 9984 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 require = fn;
 let closure_4 = ["code", "state"];
@@ -44,11 +44,11 @@ let closure_9 = fn(9589).handleMobileWebCheckoutStatus;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, LinkingTypes: closure_14, Routes: closure_15, UserSettingsSections: closure_16, PlatformTypes: closure_17, ME: closure_18 } = Constants);
 const StaticChannelRoute = fn(5162).StaticChannelRoute;
-const StreamTypes = fn(6803).StreamTypes;
-const NativePermissionTypes = fn(6902).NativePermissionTypes;
+const StreamTypes = fn(6793).StreamTypes;
+const NativePermissionTypes = fn(6892).NativePermissionTypes;
 let closure_22 = fn(12765).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_23 = fn(8741).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_24 = fn(6050).MobileWebRedirectCheckoutDeepLinkActions;
+let closure_24 = fn(6040).MobileWebRedirectCheckoutDeepLinkActions;
 const SHARE_SCREEN_MODAL_KEY = fn(16286).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(9202).MobileUserSettings;
 const size = fn(2);
@@ -202,7 +202,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj25 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: null };
+      const obj25 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj30 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj25.navigationSettings = obj30;
       rootNavigationRef1(inviteCode[31])(obj25);
@@ -239,7 +239,7 @@ export default function handleSupportedURL(payload) {
               closure_128_0 = undefined;
               closure_128_1 = undefined;
               closure_128_2 = undefined;
-              tmp2(6848).popAll();
+              tmp2(6838).popAll();
               const tmp42 = tmp3(11729);
               const openSocialLayerStorefrontUnsupportedOnMobileAlert = tmp42.openSocialLayerStorefrontUnsupportedOnMobileAlert;
               closure_128_0 = openSocialLayerStorefrontUnsupportedOnMobileAlert;
@@ -255,7 +255,7 @@ export default function handleSupportedURL(payload) {
                 const result = openSocialLayerStorefrontUnsupportedOnMobileAlert();
                 dependencyMap = 3;
               }
-              const obj7 = tmp2(6848);
+              const obj7 = tmp2(6838);
             }
           } else if (arg0 === 1) {
             dependencyMap = 3;
@@ -683,8 +683,8 @@ export default function handleSupportedURL(payload) {
                       if (null != tmp19) {
                         obj7.openid_params = tmp19;
                       }
-                      closure_1(6848).popAll();
-                      const obj5 = closure_1(6848);
+                      closure_1(6838).popAll();
+                      const obj5 = closure_1(6838);
                       tmp10 = tmp50;
                       const obj10 = { screen: constants.CONNECTIONS };
                       dependencyMap(8604).openUserSettings(obj10);
@@ -709,8 +709,8 @@ export default function handleSupportedURL(payload) {
                   }
                   closure_133_1 = closure_1(1381).toURLSafe(redirect);
                   if (null != closure_133_1) {
-                    closure_1(6012).openURL(closure_133_1.toString());
-                    const obj13 = closure_1(6012);
+                    closure_1(6002).openURL(closure_133_1.toString());
+                    const obj13 = closure_1(6002);
                   }
                   const obj12 = closure_1(1381);
                 }

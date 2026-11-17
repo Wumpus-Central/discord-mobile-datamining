@@ -2,8 +2,8 @@
 
 // Module 8143 (CreateChannelModalActionCreators)
 import ChannelRecord from "ChannelRecord" /* 5159 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import size from "module_2" /* 2 */;
 

@@ -6,7 +6,7 @@ import noop from "module_19" /* 19 */;
 import QuestDockStore from "QuestDockStore" /* 17696 */;
 
 const require = fn;
-const QuestDockMode = fn(5338).QuestDockMode;
+const QuestDockMode = fn(6954).QuestDockMode;
 const height = fn(17698).QUEST_DOCK_COLLAPSED_HEIGHT;
 const jsx = fn(21).jsx;
 const obj = { questDockWrapperSpecs: null, windowDimensions: null, activeQuestDockMode: null, minExpandedContentHeight: null };

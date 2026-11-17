@@ -1,7 +1,7 @@
 // === Module 8514: ShopBlockRecordFactory ===
 
 // Module 8514 (ShopBlockRecordFactory)
-import ShopBlockType from "ShopBlockType" /* 5991 */;
+import ShopBlockType from "ShopBlockType" /* 5981 */;
 import CountdownTimerBlockRecord2 from "CountdownTimerBlockRecord" /* 8515 */;
 import FeaturedBlockRecord2 from "FeaturedBlockRecord" /* 8516 */;
 import FeedBlockRecord2 from "FeedBlockRecord" /* 8519 */;

@@ -3,7 +3,7 @@
 // Module 12868 (NativeRPCHelpers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const TransportTypes = fn(6761).TransportTypes;
+const TransportTypes = fn(6751).TransportTypes;
 const RPCCloseCodes = fn(1072).RPCCloseCodes;
 let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
   closure_0 = arg0;

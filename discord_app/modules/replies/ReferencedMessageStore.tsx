@@ -4,13 +4,13 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1456 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6364 */;
 import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 8749 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelConversationsStore from "ChannelConversationsStore" /* 8745 */;
 import ConversationPreviewStore from "ConversationPreviewStore" /* 8748 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 require = fn;
 function processMessage(message) {

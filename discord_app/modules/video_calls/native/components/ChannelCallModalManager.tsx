@@ -1,9 +1,9 @@
 // === Module 12902: ChannelCallModalManager ===
 
 // Module 12902 (ChannelCallModalManager)
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6900 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6890 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 
 require = fn;

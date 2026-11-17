@@ -1,10 +1,10 @@
-// === Module 19252: getNotificationCenterItemBody ===
+// === Module 19254: getNotificationCenterItemBody ===
 
-// Module 19252 (getNotificationCenterItemBody)
+// Module 19254 (getNotificationCenterItemBody)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
 import StringUtils from "StringUtils" /* 2153 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7033 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7029 */;
 import GuildStore from "GuildStore" /* 5177 */;

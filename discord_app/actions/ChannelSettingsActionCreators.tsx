@@ -3,7 +3,7 @@
 // Module 10919 (ChannelSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelSettingsStore from "ChannelSettingsStore" /* 10915 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

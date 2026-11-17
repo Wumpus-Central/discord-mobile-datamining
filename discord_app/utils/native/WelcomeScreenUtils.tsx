@@ -2,7 +2,7 @@
 
 // Module 14976 (WelcomeScreenUtils)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import WelcomeScreenActionCreators from "WelcomeScreenActionCreators" /* 14979 */;
 import noop from "module_19" /* 19 */;
 import WelcomeScreenStore from "WelcomeScreenStore" /* 14977 */;
@@ -20,9 +20,9 @@ const result = size.fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx")
 export function useShowWelcomeModal(guildId, channelId) {
   _require = guildId;
   importDefault = channelId;
-  welcomeModalChannelId = require("module_5360").useLocation().welcomeModalChannelId;
+  welcomeModalChannelId = require("module_5350").useLocation().welcomeModalChannelId;
   noop = require("useWelcomeScreenEnabled")(channelId, guildId);
-  let obj = require("module_5360");
+  let obj = require("module_5350");
   items = [GuildStore, shouldFetchGuildId, GuildChannelStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     if (closure_3) {

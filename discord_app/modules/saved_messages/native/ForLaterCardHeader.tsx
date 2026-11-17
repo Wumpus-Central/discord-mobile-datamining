@@ -3,7 +3,7 @@
 // Module 11932 (ForLaterCardHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
 import GuildIconDefault from "GuildIcon" /* 7720 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7963 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10891 */;
@@ -59,7 +59,7 @@ function ChannelName(channel) {
     const obj5 = { style: tmp.channelTypeIcon, size: "xxs" };
     tmp12 = closure_5(channelIconComponentWithGuild, obj5);
   }
-  const items1 = [tmp12, closure_5(channel(5929).Text, { style: tmp.channelName, variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
+  const items1 = [tmp12, closure_5(channel(5919).Text, { style: tmp.channelName, variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
   obj4.children = items1;
   return closure_6(View, obj4);
 }

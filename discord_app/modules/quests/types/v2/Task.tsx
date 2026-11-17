@@ -1,7 +1,7 @@
 // === Module 8819: Task ===
 
 // Module 8819 (Task)
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5346 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6962 */;
 import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 8820 */;
 import v2_Video from "v2/Video" /* 8821 */;
 import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 8822 */;

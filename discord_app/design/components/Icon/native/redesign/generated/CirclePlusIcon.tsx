@@ -2,7 +2,7 @@
 
 // Module 13466 (CirclePlusIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod13467 from "module_13467" /* 13467 */;
 import _mod13468 from "module_13468" /* 13468 */;
 import noop from "module_19" /* 19 */;

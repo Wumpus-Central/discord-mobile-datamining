@@ -4,7 +4,7 @@
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 10693 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5523 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5513 */;
 
 const require = globalThis.__r;
 

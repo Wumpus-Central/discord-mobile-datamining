@@ -67,8 +67,8 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj3.children = jsx(tmp4(6020), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, accessibilityLabel: null, height: null, width: null, style: null });
-    const tmp4Result = tmp4(6020);
+    obj3.children = jsx(tmp4(6010), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, accessibilityLabel: null, height: null, width: null, style: null });
+    const tmp4Result = tmp4(6010);
   }
   return <closure_5 {...obj3} />;
 }

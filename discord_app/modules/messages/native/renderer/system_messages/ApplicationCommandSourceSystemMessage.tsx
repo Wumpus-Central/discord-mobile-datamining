@@ -3,7 +3,7 @@
 // Module 9249 (ApplicationCommandSourceSystemMessage)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6346 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6336 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9188 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9190 */;
 import createCommonMessageDefault from "createCommonMessage" /* 9192 */;

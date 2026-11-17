@@ -1,6 +1,6 @@
-// === Module 18554: SponsoredContentPreferencesScreen ===
+// === Module 18556: SponsoredContentPreferencesScreen ===
 
-// Module 18554 (SponsoredContentPreferencesScreen)
+// Module 18556 (SponsoredContentPreferencesScreen)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import SettingLayoutDefault from "SettingLayout" /* 17213 */;

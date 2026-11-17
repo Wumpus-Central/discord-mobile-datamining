@@ -1,6 +1,6 @@
-// === Module 6087: Frecency ===
+// === Module 6077: Frecency ===
 
-// Module 6087 (Frecency)
+// Module 6077 (Frecency)
 import applyDefault from "apply" /* 12 */;
 import _modDef2169 from "module_2169" /* 2169 */;
 import size from "module_2" /* 2 */;

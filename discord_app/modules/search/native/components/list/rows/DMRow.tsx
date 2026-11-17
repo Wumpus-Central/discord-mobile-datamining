@@ -1,10 +1,10 @@
-// === Module 19477: DMRow ===
+// === Module 19479: DMRow ===
 
-// Module 19477 (DMRow)
+// Module 19479 (DMRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import UserUtils from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import UserUtils from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import _modDef8175 from "module_8175" /* 8175 */;
 import ActivityStatusDefault from "ActivityStatus" /* 10845 */;
 import BotTagDefault from "BotTag" /* 10870 */;
@@ -13,7 +13,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 
 const UserUtilsDefault = UserUtils;

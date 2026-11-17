@@ -5,8 +5,8 @@ import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import FingerprintUtils from "FingerprintUtils" /* 1254 */;
-import ExperimentManager from "ExperimentManager" /* 5537 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
+import ExperimentManager from "ExperimentManager" /* 5527 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5556 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7913 */;
@@ -15,7 +15,7 @@ import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8651 */;
 import useExperimentAssignments from "useExperimentAssignments" /* 14107 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ExperimentStore from "ExperimentStore" /* 5532 */;
+import ExperimentStore from "ExperimentStore" /* 5522 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 5177 */;
 
@@ -194,7 +194,7 @@ class ExperimentDetails {
     obj9 = { paddingHorizontal: null };
     callback = closure_4.useCallback(() => {
       ClipboardUtils.copy(uRLForExperiment, () => {
-        uRLForExperiment(6015).open("experiment-link-copied", { text: "Copied experiment link", variant: "success" });
+        uRLForExperiment(6005).open("experiment-link-copied", { text: "Copied experiment link", variant: "success" });
         if (onCopyLink != null) {
           onCopyLink();
         }
@@ -249,7 +249,7 @@ function ExperimentActionSheet(arg0) {
   return closure_1_11(Sheet_BottomSheet.BottomSheet, obj);
 }
 const View = fn(17).View;
-const ExperimentConstants = fn(5533);
+const ExperimentConstants = fn(5523);
 ({ ExperimentBuckets: closure_9, ExperimentTypes: closure_10 } = ExperimentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

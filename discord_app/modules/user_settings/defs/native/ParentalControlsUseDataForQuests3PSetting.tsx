@@ -1,6 +1,6 @@
-// === Module 18600: ParentalControlsUseDataForQuests3PSetting ===
+// === Module 18602: ParentalControlsUseDataForQuests3PSetting ===
 
-// Module 18600 (ParentalControlsUseDataForQuests3PSetting)
+// Module 18602 (ParentalControlsUseDataForQuests3PSetting)
 import util from "util" /* 1113 */;
 import useSelectedTeen from "useSelectedTeen" /* 9618 */;
 import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 17347 */;

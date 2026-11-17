@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import RegexUtilsDefault from "RegexUtils" /* 5958 */;
+import RegexUtilsDefault from "RegexUtils" /* 5948 */;
 import GuildUtilsDefault from "GuildUtils" /* 7075 */;
 import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8131 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -354,7 +354,7 @@ class AddMembersBody {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(6912);
+const ChannelPermissionsConstants = fn(6902);
 ({ RowType: closure_14, MEMBER_REQUEST_COUNT: closure_15 } = ChannelPermissionsConstants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
@@ -393,12 +393,12 @@ export default function AddMembersActionSheet(channel) {
       if (tmp) {
         if (row.rowType === constants.ROLE) {
           closure_2 = closure_2 + 1;
-          closure_1_0.push(channel(6356).permissionOverwriteForRole(row.id, closure_0.type));
-          const obj = channel(6356);
+          closure_1_0.push(channel(6346).permissionOverwriteForRole(row.id, closure_0.type));
+          const obj = channel(6346);
         } else if (row.rowType === tmp2.MEMBER) {
           closure_1 = closure_1 + 1;
-          closure_1_0.push(channel(6356).permissionOverwriteForUser(row.id, closure_0.type));
-          const obj2 = channel(6356);
+          closure_1_0.push(channel(6346).permissionOverwriteForUser(row.id, closure_0.type));
+          const obj2 = channel(6346);
         }
       }
     });
@@ -410,11 +410,11 @@ export default function AddMembersActionSheet(channel) {
       c5 = 3;
       throw value;
     } else if (arg0 !== 2) {
-      const result = channel(6014).memberOrRoleAddedToast(closure_128_2, closure_128_1);
-      channel(6014);
-      tmp3(5552).hideActionSheet();
+      const result = channel(6004).memberOrRoleAddedToast(closure_128_2, closure_128_1);
+      channel(6004);
+      tmp3(5542).hideActionSheet();
       dependencyMap = 0;
-      tmp3(5552);
+      tmp3(5542);
     }
     return value;
   };
@@ -429,7 +429,7 @@ export default function AddMembersActionSheet(channel) {
     }
     return GuildStore.getGuild(guildId);
   });
-  let str = pendingAdditions(5954)(channel, true);
+  let str = pendingAdditions(5944)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -459,7 +459,7 @@ export default function AddMembersActionSheet(channel) {
       const obj6 = { channel, guild: stateFromStores, permission: channel.accessPermissions, pendingAdditions, setPendingAdditions: tmp2[1], inActionSheet: true };
       obj5.children = closure_17(AddMembersBody, obj6);
       obj4.children = closure_17(closure_8, obj5);
-      return closure_17(tmp4(5566).BottomSheet, obj4);
+      return closure_17(tmp4(5556).BottomSheet, obj4);
     }
     obj7 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1113).intl;

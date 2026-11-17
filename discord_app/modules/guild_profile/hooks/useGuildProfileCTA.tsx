@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import InviteStore from "InviteStore" /* 6052 */;
+import InviteStore from "InviteStore" /* 6042 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;

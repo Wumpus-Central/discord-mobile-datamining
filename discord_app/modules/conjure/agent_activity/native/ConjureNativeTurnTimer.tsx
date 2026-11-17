@@ -1,7 +1,7 @@
 // === Module 13772: ConjureNativeTurnTimer ===
 
 // Module 13772 (ConjureNativeTurnTimer)
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import ConjureDuration from "ConjureDuration" /* 13170 */;
 import useConjureElapsedMs from "useConjureElapsedMs" /* 13773 */;
 import noop from "module_19" /* 19 */;

@@ -5,7 +5,7 @@ import initialize from "initialize" /* 504 */;
 import shims from "shims" /* 574 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import shared from "shared" /* 5313 */;
-import useThemeDefault from "useTheme" /* 5547 */;
+import useThemeDefault from "useTheme" /* 5537 */;
 import useAvatarColor from "useAvatarColor" /* 8538 */;
 import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8592 */;
 import _slicedToArray from "module_32" /* 32 */;

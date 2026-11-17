@@ -8,7 +8,7 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef16089 from "module_16089" /* 16089 */;
 import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 16090 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6826 */;
+import TextStyles_mod from "TextStyles" /* 6816 */;
 
 require = fn;
 const View = fn(17).View;

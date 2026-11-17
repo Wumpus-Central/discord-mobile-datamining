@@ -2,8 +2,8 @@
 
 // Module 14278 (CheckpointShareCard)
 import nativeDefault from "native" /* 575 */;
-import CheckpointCardTypes from "CheckpointCardTypes" /* 6400 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 6401 */;
+import CheckpointCardTypes from "CheckpointCardTypes" /* 6390 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 6391 */;
 import CheckpointCardFrame from "CheckpointCardFrame" /* 14279 */;
 import CheckpointShareCardYear from "CheckpointShareCardYear" /* 14283 */;
 import CheckpointShareCardContext from "CheckpointShareCardContext" /* 14284 */;

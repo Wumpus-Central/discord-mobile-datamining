@@ -3,7 +3,7 @@
 // Module 17114 (UserProfileUpsellCard)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -44,7 +44,7 @@ export default function UserProfileUpsellCard(headerText) {
     const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
     const items3 = [closure_6(tmp3(9436).NitroWheelIcon, obj4), ];
     const obj5 = { variant: "heading-xs/semibold", children: headerText };
-    items3[1] = closure_6(tmp3(5929).Text, obj5);
+    items3[1] = closure_6(tmp3(5919).Text, obj5);
     obj3.children = items3;
     tmp6Result = closure_7(closure_3, obj3);
   }

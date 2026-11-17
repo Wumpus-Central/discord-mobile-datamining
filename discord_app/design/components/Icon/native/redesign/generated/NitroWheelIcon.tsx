@@ -2,7 +2,7 @@
 
 // Module 9436 (NitroWheelIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9291 from "module_9291" /* 9291 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,7 +1,7 @@
 // === Module 13094: StageGridRow ===
 
 // Module 13094 (StageGridRow)
-import StageChannelParticipants from "StageChannelParticipants" /* 6943 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6933 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 8560 */;
 import SpeakerTileDefault from "SpeakerTile" /* 13086 */;
 import StageTileTypes from "StageTileTypes" /* 13087 */;

@@ -1,11 +1,11 @@
-// === Module 19745: MessageRequestPreview ===
+// === Module 19747: MessageRequestPreview ===
 
-// Module 19745 (MessageRequestPreview)
+// Module 19747 (MessageRequestPreview)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
-import TextStyles_mod from "TextStyles" /* 6826 */;
+import TextStyles_mod from "TextStyles" /* 6816 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -122,7 +122,7 @@ export default noop.memo(function MessageRequestPreview(channel) {
         }
         stringResult = stringResult1;
         flag = false;
-        tmp2Result = tmp2(6792);
+        tmp2Result = tmp2(6782);
       } else {
         const intl = tmp2(1113).intl;
         stringResult = intl.string(tmp2(1113).t["0KfDxM"]);

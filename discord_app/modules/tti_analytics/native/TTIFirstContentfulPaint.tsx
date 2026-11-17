@@ -2,7 +2,7 @@
 
 // Module 14204 (TTIFirstContentfulPaint)
 import TTITrackerDefault from "TTITracker" /* 9 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
 import PostTTIScheduler from "PostTTIScheduler" /* 8772 */;
 import noop from "module_19" /* 19 */;
 

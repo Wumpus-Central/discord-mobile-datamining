@@ -2,7 +2,7 @@
 
 // Module 14855 (VoicePanelDockSlotStore)
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 
 const require = globalThis.__r;
 

@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2701 from "module_2701" /* 2701 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9617 */;
 import Modal from "Modal" /* 12523 */;
 import noop from "module_19" /* 19 */;
@@ -62,7 +62,7 @@ function FamilyCenterModalDataTooltipScreen() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(8069).ChatIcon, [USER_CALLED]: fn(14228).PhoneIcon, [USER_ADD]: fn(6018).FriendsIcon, [GUILD_ADD]: fn(16013).ServerGridIcon, [GUILD_INTERACTION]: fn(8071).ThreadIcon, [PURCHASES]: fn(8252).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(6042).ClockIcon, [GIFTS]: fn(11817).GiftIcon };
+let obj = { [USER_INTERACTION]: fn(8069).ChatIcon, [USER_CALLED]: fn(14228).PhoneIcon, [USER_ADD]: fn(6008).FriendsIcon, [GUILD_ADD]: fn(16013).ServerGridIcon, [GUILD_INTERACTION]: fn(8071).ThreadIcon, [PURCHASES]: fn(8252).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(6032).ClockIcon, [GIFTS]: fn(11817).GiftIcon };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(8741).TeenActionDisplayType);
 let createStyles = fn(5306);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };

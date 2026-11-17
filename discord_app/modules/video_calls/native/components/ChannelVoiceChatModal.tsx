@@ -1,11 +1,11 @@
 // === Module 11001: ChannelVoiceChatModal ===
 
 // Module 11001 (ChannelVoiceChatModal)
-import native from "native" /* 5377 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5488 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5518 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import native from "native" /* 5367 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5478 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5508 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10907 */;
 import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 11002 */;
 import noop from "module_19" /* 19 */;

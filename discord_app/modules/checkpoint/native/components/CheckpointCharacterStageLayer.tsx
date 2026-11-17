@@ -1,7 +1,7 @@
 // === Module 14299: CheckpointCharacterStageLayer ===
 
 // Module 14299 (CheckpointCharacterStageLayer)
-import usePrevious from "usePrevious" /* 6836 */;
+import usePrevious from "usePrevious" /* 6826 */;
 import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 14300 */;
 import CheckpointCharacterStageDefault from "CheckpointCharacterStage" /* 14301 */;
 import _slicedToArray from "module_32" /* 32 */;

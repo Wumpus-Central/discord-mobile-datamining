@@ -2,7 +2,7 @@
 
 // Module 15398 (BoostTier3Icon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod15399 from "module_15399" /* 15399 */;
 import noop from "module_19" /* 19 */;
 

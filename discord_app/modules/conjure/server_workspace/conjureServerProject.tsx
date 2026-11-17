@@ -4,7 +4,7 @@
 import ConjureActivity from "ConjureActivity" /* 7237 */;
 import conjurePageRoutes from "conjurePageRoutes" /* 7238 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 require = fn;

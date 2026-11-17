@@ -1,6 +1,6 @@
-// === Module 18478: useShopAllCatalogPages ===
+// === Module 18480: useShopAllCatalogPages ===
 
-// Module 18478 (useShopAllCatalogPages)
+// Module 18480 (useShopAllCatalogPages)
 import initializeDefault from "initialize" /* 504 */;
 import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 10459 */;
 import _slicedToArray from "module_32" /* 32 */;

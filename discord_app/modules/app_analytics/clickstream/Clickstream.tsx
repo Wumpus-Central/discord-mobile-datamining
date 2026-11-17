@@ -7,7 +7,7 @@ import ClickstreamExperiment from "ClickstreamExperiment" /* 8670 */;
 import ClickstreamEvents from "ClickstreamEvents" /* 8671 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 
 require = fn;
 function isClickstreamEnabled() {

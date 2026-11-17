@@ -2,8 +2,8 @@
 
 // Module 11384 (StickerPickerEmptyState)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
 import StickerDefault from "Sticker" /* 11093 */;
 import StickersHooks from "StickersHooks" /* 11357 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -106,7 +106,7 @@ export default function _default() {
   };
   obj9.source = analyticsLocations(11214);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(6020), obj9);
+  obj8.icon = closure_11(analyticsLocations(6010), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {

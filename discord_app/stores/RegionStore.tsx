@@ -1,6 +1,6 @@
-// === Module 19663: RegionStore ===
+// === Module 19665: RegionStore ===
 
-// Module 19663 (RegionStore)
+// Module 19665 (RegionStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

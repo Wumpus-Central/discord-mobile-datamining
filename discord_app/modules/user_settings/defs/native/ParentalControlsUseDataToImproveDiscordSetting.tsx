@@ -1,6 +1,6 @@
-// === Module 18597: ParentalControlsUseDataToImproveDiscordSetting ===
+// === Module 18599: ParentalControlsUseDataToImproveDiscordSetting ===
 
-// Module 18597 (ParentalControlsUseDataToImproveDiscordSetting)
+// Module 18599 (ParentalControlsUseDataToImproveDiscordSetting)
 import util from "util" /* 1113 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8742 */;
 import useParentalControlSettings from "useParentalControlSettings" /* 17346 */;

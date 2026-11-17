@@ -5,7 +5,7 @@ import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import EmojiDefault from "Emoji" /* 7894 */;
 import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 11628 */;
 import noop from "module_19" /* 19 */;

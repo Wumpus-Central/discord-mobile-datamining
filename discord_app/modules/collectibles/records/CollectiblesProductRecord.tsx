@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "channelId", items: "ansigt", categorySkuId: "godnat", categoryWillUnpublishAt: "sengetid", isCategoryReward: "sove", prices: "sovende ansigt", previewAssets: "s\u00F8vn", googleSkuIds: "s\u00F8vnig", eligibleOffers: "tr\u00E6t", variants: "zzz", bundledProducts: "\u3044\u3073\u304D", isFirstParty: "\u304A\u3084\u3059\u307F" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "channel_id", items: -179238664, categorySkuId: 1376133549, categoryWillUnpublishAt: 150479141, isCategoryReward: 1393, prices: 1733427456, previewAssets: 1359542319, googleSkuIds: 1375836376, eligibleOffers: 150498618, variants: 1098562897, bundledProducts: 141116, isFirstParty: 1119136593 };
               let str;
               if (first != null) {
                 str = first.optionValue;

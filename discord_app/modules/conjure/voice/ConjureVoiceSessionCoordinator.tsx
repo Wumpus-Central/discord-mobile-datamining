@@ -3,21 +3,21 @@
 // Module 16913 (ConjureVoiceSessionCoordinator)
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6225 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 6228 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6215 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 6218 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 7022 */;
 import RPCErrorDefault from "RPCError" /* 7303 */;
 import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16915 */;
 import FramesStore from "FramesStore" /* 7019 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 let obj2 = fn;
 const RPCErrors = fn(1072).RPCErrors;
-const Constants = fn(6075);
+const Constants = fn(6065);
 ({ Features: closure_10, MediaEngineContextTypes: closure_11 } = Constants);
 let closure_12 = { x: 0, y: 0, z: -1 };
 let closure_13 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };

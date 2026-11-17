@@ -2,7 +2,7 @@
 
 // Module 10123 (ExperimentalEpicIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10124 from "module_10124" /* 10124 */;
 import noop from "module_19" /* 19 */;
 

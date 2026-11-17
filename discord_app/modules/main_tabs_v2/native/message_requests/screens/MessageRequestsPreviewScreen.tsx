@@ -1,9 +1,9 @@
-// === Module 19761: MessageRequestsPreviewScreen ===
+// === Module 19763: MessageRequestsPreviewScreen ===
 
-// Module 19761 (MessageRequestsPreviewScreen)
+// Module 19763 (MessageRequestsPreviewScreen)
 import MessageManagerDefault from "MessageManager" /* 9069 */;
 import ChatViewDefault from "ChatView" /* 11976 */;
-import RestrictedMessageRequestPreviewDefault from "RestrictedMessageRequestPreview" /* 19762 */;
+import RestrictedMessageRequestPreviewDefault from "RestrictedMessageRequestPreview" /* 19764 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
 

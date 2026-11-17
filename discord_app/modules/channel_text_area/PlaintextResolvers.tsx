@@ -4,7 +4,7 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 5256 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import getGuildOrPackEmojiByNameDefault from "getGuildOrPackEmojiByName" /* 8789 */;
 import SlateUtils from "SlateUtils" /* 8791 */;
 import _slicedToArray from "module_32" /* 32 */;

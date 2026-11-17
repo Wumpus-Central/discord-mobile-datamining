@@ -1,13 +1,13 @@
-// === Module 19576: ChannelDetailsLinkedLobby ===
+// === Module 19578: ChannelDetailsLinkedLobby ===
 
-// Module 19576 (ChannelDetailsLinkedLobby)
+// Module 19578 (ChannelDetailsLinkedLobby)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7259 */;
 import noop from "module_19" /* 19 */;
 
 const util = BPDKoA(1113);
-const Text_Text = BPDKoA(5929);
+const Text_Text = BPDKoA(5919);
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;

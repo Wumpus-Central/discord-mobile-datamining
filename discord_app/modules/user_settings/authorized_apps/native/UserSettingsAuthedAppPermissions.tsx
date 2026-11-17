@@ -1,7 +1,7 @@
 // === Module 17489: UserSettingsAuthedAppPermissions ===
 
 // Module 17489 (UserSettingsAuthedAppPermissions)
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import disclosures from "disclosures" /* 7405 */;
 import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 17483 */;
 import noop from "module_19" /* 19 */;
@@ -50,7 +50,7 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
         const obj = { style: items.permissionContainer, children: null };
         items = [, ];
         items[0] = closure_2_5(items(7930).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(575).colors.STATUS_POSITIVE });
-        items[1] = closure_2_5(items(5929).Text, { style: items.permissionText, variant: "body-sm/normal", color: "text-default", children });
+        items[1] = closure_2_5(items(5919).Text, { style: items.permissionText, variant: "body-sm/normal", color: "text-default", children });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });

@@ -3,13 +3,13 @@
 // Module 15538 (VoiceChannelBadge)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
-import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6829 */;
-import AgeGateUtils from "AgeGateUtils" /* 6838 */;
+import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6819 */;
+import AgeGateUtils from "AgeGateUtils" /* 6828 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
 import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 15539 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;

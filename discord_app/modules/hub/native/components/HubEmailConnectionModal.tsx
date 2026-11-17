@@ -3,7 +3,7 @@
 // Module 15088 (HubEmailConnectionModal)
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1502 */;
-import useInitialValueDefault from "useInitialValue" /* 5917 */;
+import useInitialValueDefault from "useInitialValue" /* 5907 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import Navigator from "Navigator" /* 7490 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
@@ -15,7 +15,7 @@ require = fn;
 const HubEmailConnectionSteps = fn(15080).HubEmailConnectionSteps;
 let jsx = fn(21).jsx;
 const createStyles = fn(5306);
-let obj2 = { safeArea: { marginTop: fn(5892).NAV_BAR_HEIGHT, flex: 1 } };
+let obj2 = { safeArea: { marginTop: fn(5882).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModal.tsx");

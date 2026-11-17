@@ -1,7 +1,7 @@
 // === Module 11881: computeScrollData ===
 
 // Module 11881 (computeScrollData)
-import Client from "Client" /* 5543 */;
+import Client from "Client" /* 5533 */;
 import NativeChatUtils from "NativeChatUtils" /* 11882 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 

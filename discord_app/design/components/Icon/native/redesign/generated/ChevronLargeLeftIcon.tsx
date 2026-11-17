@@ -2,7 +2,7 @@
 
 // Module 10772 (ChevronLargeLeftIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10773 from "module_10773" /* 10773 */;
 import noop from "module_19" /* 19 */;
 

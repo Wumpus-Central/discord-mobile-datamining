@@ -8,7 +8,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 
 const require = globalThis.__r;
 
@@ -105,7 +105,7 @@ export default noop.memo((look) => {
     }
     ref.current = tmp;
   }, items4);
-  const Gesture = tmp2(5598).Gesture;
+  const Gesture = tmp2(5588).Gesture;
   const tmp2Result = require("VoiceChatModalContext");
   const items5 = [closure_12, require("module_1708").scheduleOnRN, tmp9[1], tmp6[1], prop];
   _require = undefined;
@@ -191,7 +191,7 @@ export default noop.memo((look) => {
         obj6.children = <style style={buttonBlurPressed} textStyle={string.textStyle} text={null} onTouchStart={null} onTouchEnd={null} darkenOnPress />;
         onEndResult = <View style={items11}>{null}</View>;
         obj4.children = onEndResult;
-        jsx(tmp2(5598).GestureDetector, { gesture: onEndResult, children: null });
+        jsx(tmp2(5588).GestureDetector, { gesture: onEndResult, children: null });
       }
     }
   }

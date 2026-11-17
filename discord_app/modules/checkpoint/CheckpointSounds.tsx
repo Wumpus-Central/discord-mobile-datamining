@@ -1,7 +1,7 @@
 // === Module 14292: CheckpointSounds ===
 
 // Module 14292 (CheckpointSounds)
-import CheckpointNavigation from "CheckpointNavigation" /* 6745 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6735 */;
 import _modDef14293 from "module_14293" /* 14293 */;
 import _modDef14294 from "module_14294" /* 14294 */;
 import _modDef14295 from "module_14295" /* 14295 */;

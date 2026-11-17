@@ -4,8 +4,8 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
 import ChatIcon2 from "ChatIcon" /* 8069 */;
 import ThreadIcon2 from "ThreadIcon" /* 8071 */;

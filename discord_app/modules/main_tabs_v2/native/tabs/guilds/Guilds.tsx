@@ -1,15 +1,15 @@
-// === Module 18732: guilds/Guilds ===
+// === Module 18734: guilds/Guilds ===
 
-// Module 18732 (guilds/Guilds)
+// Module 18734 (guilds/Guilds)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5498 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5488 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 
 require = fn;
 const YouBarNavigatorScreens = fn(10030).YouBarNavigatorScreens;
@@ -21,11 +21,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx");
 
 export default noop.memo(function GuildsOnly() {
-  const trackTabPerformance = enabled(18733).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
-  let obj = enabled(18733);
-  const tmp5 = isChatBesideChannelList(5488)();
+  const trackTabPerformance = enabled(18735).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
+  let obj = enabled(18735);
+  const tmp5 = isChatBesideChannelList(5478)();
   const isEligibleForQuests = enabled(10132).getIsEligibleForQuests();
-  const GuildsRenderExperiment = enabled(18734).GuildsRenderExperiment;
+  const GuildsRenderExperiment = enabled(18736).GuildsRenderExperiment;
   enabled = GuildsRenderExperiment.useConfig({ location: "GuildsOnly" }).enabled;
   isChatBesideChannelList = undefined;
   dependencyMap = undefined;
@@ -83,7 +83,7 @@ export default noop.memo(function GuildsOnly() {
       let ComponentDispatch = enabled(1108).ComponentDispatch;
       const subscription1 = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
       let obj = isChatBesideChannelList(572);
-      let rootNavigationRef = enabled(5493).getRootNavigationRef();
+      let rootNavigationRef = enabled(5483).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
       }
@@ -101,21 +101,21 @@ export default noop.memo(function GuildsOnly() {
     }
   }, items);
   if (!isChatBesideChannelList) {
-    isChatBesideChannelList = isChatBesideChannelList(5495)().isChatBesideChannelList;
+    isChatBesideChannelList = isChatBesideChannelList(5485)().isChatBesideChannelList;
   }
   if (!enabled) {
     const obj3 = { gradient: tmp5, children: null };
-    const items1 = [closure_8(tmp4(18735), {}), closure_8(tmp4(19137), {}), closure_8(tmp4(19177), { placement: "channel-list" }), , ];
+    const items1 = [closure_8(tmp4(18737), {}), closure_8(tmp4(19139), {}), closure_8(tmp4(19179), { placement: "channel-list" }), , ];
     let tmp10Result = isEligibleForQuests;
     if (isEligibleForQuests) {
       tmp10Result = closure_8(tmp4(17784), {});
     }
     const obj4 = { children: null };
     items1[3] = tmp10Result;
-    items1[4] = closure_8(tmp(18717).BackgroundChatHost, {});
+    items1[4] = closure_8(tmp(18719).BackgroundChatHost, {});
     obj4.children = items1;
     obj3.children = closure_9(tmp(17702).QuestDockExternalCoordinationContextProvider, obj4);
-    let tmp10Result2 = closure_8(tmp(5377).ThemeContextProvider, obj3);
+    let tmp10Result2 = closure_8(tmp(5367).ThemeContextProvider, obj3);
   } else {
     tmp10Result2 = null;
   }

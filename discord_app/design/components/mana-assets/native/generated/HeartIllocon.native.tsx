@@ -1,7 +1,7 @@
 // === Module 15037: HeartIllocon ===
 
 // Module 15037 (HeartIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef15038 from "module_15038" /* 15038 */;
 import _modDef15039 from "module_15039" /* 15039 */;

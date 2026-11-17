@@ -31,7 +31,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     const intl = subscription(1113).intl;
     const obj5 = { endDate: subscription.currentPeriodEnd, planDescription: subscription(2174).getDisplayName(subscription.planId) };
     obj4.children = intl.format(subscription(1113).t["7I21Iz"], obj5);
-    items[1] = closure_6(subscription(5929).Text, obj4);
+    items[1] = closure_6(subscription(5919).Text, obj4);
     obj2.children = items;
     const items1 = [closure_7(closure_4, obj2), ];
     const obj7 = { size: "sm", text: null, onPress: null };
@@ -40,7 +40,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     obj7.onPress = function onPress() {
       return React3.openURL(PremiumUtils.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
     };
-    items1[1] = closure_6(subscription(5936).Button, obj7);
+    items1[1] = closure_6(subscription(5926).Button, obj7);
     obj.children = items1;
     tmp2 = closure_7(closure_4, obj);
     const obj6 = subscription(2174);

@@ -1,7 +1,7 @@
 // === Module 12462: handleMessagesTapImage ===
 
 // Module 12462 (handleMessagesTapImage)
-import LinkingDefault from "Linking" /* 6012 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8633 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 8744 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
@@ -89,7 +89,7 @@ export function handleMessagesTapImage(tapImageData) {
           const obj3 = { disableDownload: tmp47, initialSources: found2, initialIndex: importDefault, originViewOrOriginLayout: tapImageData.layout, analyticsSource: "Channel", channelId: messageChannel.id, contextName: null, contextIcon: null };
           let channelName;
           if (showContextName) {
-            const tmp25Result3 = tmp25(5954);
+            const tmp25Result3 = tmp25(5944);
             channelName = tmp25Result3.computeChannelName(messageChannel, UserStore, RelationshipStore, false);
           }
           obj3.contextName = channelName;
@@ -132,7 +132,7 @@ export function handleMessagesTapImage(tapImageData) {
             if (null != components) {
               if (0 !== components.length) {
                 const tmp10Result13 = embedId(8633);
-                const result2 = tmp10Result13.extractMediaSourcesFromComponent(tmp7, components, messageChannel.guild_id, embedId(6384).asComponentId(componentId), componentMediaIndex);
+                const result2 = tmp10Result13.extractMediaSourcesFromComponent(tmp7, components, messageChannel.guild_id, embedId(6374).asComponentId(componentId), componentMediaIndex);
                 if (null != result2) {
                   ({ sources, initialIndex: closure_1 } = result2);
                   embedId(8633).setMediaSourcePortal(sources[importDefault], portal);
@@ -140,7 +140,7 @@ export function handleMessagesTapImage(tapImageData) {
                   tmp25 = embedId;
                   const tmp10Result15 = embedId(8633);
                 }
-                const tmp10Result14 = embedId(6384);
+                const tmp10Result14 = embedId(6374);
               }
             }
           }

@@ -2,8 +2,8 @@
 
 // Module 17636 (AppIcon)
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

@@ -5,7 +5,7 @@ import initialize from "initialize" /* 504 */;
 import NumberUtils from "NumberUtils" /* 2027 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 8831 */;
 import QuestType from "QuestType" /* 8833 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 10131 */;
@@ -431,7 +431,7 @@ function useQuestsInstructionsToWinReward(arg0) {
   obj7.needsToConnect = false === inGameQuestConnectState;
   return _getQuestsInstructionsToWinReward(obj7);
 }
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({ QuestsExperimentLocations: closure_8, ORBS_INTRO_QUEST_ID: closure_9, QuestVariants: closure_10 } = QuestConstants);
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const PremiumTypes = fn(1390).PremiumTypes;

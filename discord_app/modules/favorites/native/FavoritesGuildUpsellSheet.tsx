@@ -24,7 +24,7 @@ export default function FavoritesGuildUpsellSheet(limit) {
   }
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault().analyticsLocations;
   importDefault = noop.useCallback(() => {
-    closure_1(5552).hideActionSheet(analyticsLocations(10947).FAVORITES_UPSELL_SHEET_KEY);
+    closure_1(5542).hideActionSheet(analyticsLocations(10947).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   let obj = { title: null, description: null, illustration: null, actions: null };
   const intl = analyticsLocations(1113).intl;
@@ -41,7 +41,7 @@ export default function FavoritesGuildUpsellSheet(limit) {
     const obj = { analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
     openPremiumModalDefault(obj);
   };
-  items = [closure_6(analyticsLocations(5936).Button, obj4), ];
+  items = [closure_6(analyticsLocations(5926).Button, obj4), ];
   const obj5 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl4 = analyticsLocations(1113).intl;
   obj5.text = intl4.string(_modDef3679.PprSsy);
@@ -50,8 +50,8 @@ export default function FavoritesGuildUpsellSheet(limit) {
     const result = FavoritesGuildAnalytics.setNextFavoritesGuildViewSource("upsell_modal");
     router_utils.transitionToGuild(FAVORITES);
   };
-  items[1] = closure_6(analyticsLocations(5936).Button, obj5);
+  items[1] = closure_6(analyticsLocations(5926).Button, obj5);
   obj3.children = items;
-  obj.actions = closure_7(analyticsLocations(6951).ButtonGroup, obj3);
+  obj.actions = closure_7(analyticsLocations(6941).ButtonGroup, obj3);
   return closure_6(analyticsLocations(10713).PromoSheet, obj);
 };

@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import utils from "utils" /* 2111 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8561 */;
 import NitroWheelIcon2 from "NitroWheelIcon" /* 9436 */;
 import NameplateUtils from "NameplateUtils" /* 9509 */;

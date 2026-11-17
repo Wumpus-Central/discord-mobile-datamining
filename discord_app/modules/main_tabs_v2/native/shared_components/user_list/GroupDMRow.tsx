@@ -2,8 +2,8 @@
 
 // Module 10890 (GroupDMRow)
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 7733 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10891 */;

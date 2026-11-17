@@ -2,7 +2,7 @@
 
 // Module 10586 (useChannelVideoLimit)
 import GuildStore from "GuildStore" /* 5177 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 
 const require = globalThis.__r;
 

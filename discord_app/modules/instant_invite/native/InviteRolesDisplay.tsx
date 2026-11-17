@@ -30,7 +30,7 @@ export default function InviteRolesDisplay(roleIds) {
     const obj3 = { variant: "body-xs/semibold", color: "text-muted", style: tmp.label, children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t.stcSfI);
-    const items2 = [closure_5(tmp2(5929).Text, obj3), ];
+    const items2 = [closure_5(tmp2(5919).Text, obj3), ];
     const obj4 = { style: tmp.rolesRow, children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)) };
     items2[1] = closure_5(View, obj4);
     obj2.children = items2;

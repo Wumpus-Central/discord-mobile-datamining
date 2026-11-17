@@ -9,7 +9,7 @@ import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7877 */
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 5236 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 
 require = fn;
 function optIntoAllChannelsForExistingMember(id, arg1) {

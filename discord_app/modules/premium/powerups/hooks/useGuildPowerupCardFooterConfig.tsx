@@ -8,7 +8,7 @@ import GuildStore from "GuildStore" /* 5177 */;
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5524);
+const GuildPowerupsConstants = fn(5514);
 ({ GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP, GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4, PowerupActiveStatusType: hasOwnProperty } = GuildPowerupsConstants);
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);

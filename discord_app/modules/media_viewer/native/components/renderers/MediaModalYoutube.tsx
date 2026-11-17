@@ -26,9 +26,9 @@ export default noop.memo(function MediaModalYoutube(visible) {
   [playerState, dependencyMap] = noop.useState(visible(10202).PlayerState.UNREADY);
   const tmp5 = _slicedToArray(noop.useState(undefined), 2);
   _slicedToArray = tmp5[1];
-  let tmp7 = playerState(6836)(playerState);
+  let tmp7 = playerState(6826)(playerState);
   noop = tmp7;
-  const tmp8 = playerState(6836)(visible);
+  const tmp8 = playerState(6826)(visible);
   closure_5 = tmp8;
   const ref = noop.useRef(null);
   const effect = noop.useEffect(() => {

@@ -1,17 +1,17 @@
-// === Module 18535: CollectiblesShopViewAllCategoryItems ===
+// === Module 18537: CollectiblesShopViewAllCategoryItems ===
 
-// Module 18535 (CollectiblesShopViewAllCategoryItems)
+// Module 18537 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import spring_spring from "spring/spring" /* 5939 */;
-import springPresets from "springPresets" /* 5940 */;
+import spring_spring from "spring/spring" /* 5929 */;
+import springPresets from "springPresets" /* 5930 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8534 */;
 import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10433 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5932 */;
+import DevSettingsStore from "DevSettingsStore" /* 5922 */;
 import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9451 */;
 import IAPStore from "IAPStore" /* 9302 */;
 
@@ -216,7 +216,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "y" };
+  const obj7 = { logoUrl, buttonColor: "Array", categoryName: -1 };
   let name;
   if (category != null) {
     name = category.name;

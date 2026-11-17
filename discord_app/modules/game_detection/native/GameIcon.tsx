@@ -2,7 +2,7 @@
 
 // Module 7924 (GameIcon)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef7925 from "module_7925" /* 7925 */;
 import _modDef7926 from "module_7926" /* 7926 */;
 import _modDef7927 from "module_7927" /* 7927 */;

@@ -1,9 +1,9 @@
-// === Module 20601: GuildSettingsModalBans ===
+// === Module 20604: GuildSettingsModalBans ===
 
-// Module 20601 (GuildSettingsModalBans)
+// Module 20604 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import fuzzysearchDefault from "fuzzysearch" /* 7073 */;
 import showSimpleActionSheet from "showSimpleActionSheet" /* 7948 */;
 import _slicedToArray from "module_32" /* 32 */;

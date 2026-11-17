@@ -1,7 +1,7 @@
 // === Module 10855: PresenceActivityStatus ===
 
 // Module 10855 (PresenceActivityStatus)
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import GameControllerIcon2 from "GameControllerIcon" /* 7438 */;
 import AppsIcon from "AppsIcon" /* 8101 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8469 */;

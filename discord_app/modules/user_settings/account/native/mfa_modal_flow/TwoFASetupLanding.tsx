@@ -2,8 +2,8 @@
 
 // Module 17285 (TwoFASetupLanding)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import TwoFASetupModal from "TwoFASetupModal" /* 17282 */;
 import TwoFASetupStyles from "TwoFASetupStyles" /* 17286 */;

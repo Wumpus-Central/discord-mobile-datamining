@@ -1,13 +1,13 @@
-// === Module 20730: GuildRoleSubscriptionTierEditStep ===
+// === Module 20733: GuildRoleSubscriptionTierEditStep ===
 
-// Module 20730 (GuildRoleSubscriptionTierEditStep)
+// Module 20733 (GuildRoleSubscriptionTierEditStep)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1502 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
-import FormSeparatorDefault from "FormSeparator" /* 17836 */;
+import FormSeparatorDefault from "FormSeparator" /* 17838 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function Footer(arg0) {
   const tmp = closure_8();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = timestampProducer(tmp5(5936).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
+  obj.children = timestampProducer(tmp5(5926).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
   return timestampProducer(React4, obj);
 }
 get_ActivityIndicator = fn(17);

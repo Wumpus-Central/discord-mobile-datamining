@@ -1,15 +1,15 @@
-// === Module 19788: Alerts ===
+// === Module 19790: Alerts ===
 
-// Module 19788 (Alerts)
+// Module 19790 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import native from "native" /* 5377 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
-import OverlayViewDefault from "OverlayView" /* 6275 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6332 */;
+import native from "native" /* 5367 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
+import OverlayViewDefault from "OverlayView" /* 6265 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6322 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7474 */;
-import ModalRegistryDefault from "ModalRegistry" /* 19789 */;
+import ModalRegistryDefault from "ModalRegistry" /* 19791 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import PermissionSpeakStore from "PermissionSpeakStore" /* 16255 */;
@@ -261,7 +261,7 @@ let closure_18 = { code: "(function AlertsTsx3(){let[useReducedMotion,visible,wi
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_11(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "channel_id", renderKey: "flex", props: "analyticsLocations" });
+let closure_23 = Object.freeze({ renderAlert: "a", renderKey: "isArray", props: "isArray" });
 const tmp6 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -293,7 +293,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "channel_id", renderKey: "flex", props: "analyticsLocations" };
+        return { renderAlert: "a", renderKey: "isArray", props: "isArray" };
       }
     }
   });

@@ -21,20 +21,20 @@ import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 require = fn;
-const TransportTypes = fn(6761).TransportTypes;
+const TransportTypes = fn(6751).TransportTypes;
 const Constants = fn(1072);
 ({ ActivityActionTypes: closure_16, RelationshipTypes: closure_17, AnalyticEvents: closure_18, RPCCommands: closure_19, RPCEvents: closure_20, RPCCloseCodes: closure_21, ChannelTypes: closure_22 } = Constants);
 const FrameLayoutModes = fn(7020).FrameLayoutModes;
 const ActivityLayoutMode = fn(12706).ActivityLayoutMode;
-const MediaEngineContextTypes = fn(6075).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6065).MediaEngineContextTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
 class RPCServerManager {
@@ -563,7 +563,7 @@ prototype["loadServer"] = function loadServer() {
     let registerTransportResult = rpcServer.registerTransport(item10017);
     continue;
   }
-  const values = Object.values(expandedHeight);
+  const values = Object.values(closure_1_19);
   const iter = values[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

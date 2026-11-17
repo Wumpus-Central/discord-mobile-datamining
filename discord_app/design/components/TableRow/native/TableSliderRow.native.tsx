@@ -1,7 +1,7 @@
 // === Module 15760: TableSliderRow ===
 
 // Module 15760 (TableSliderRow)
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import TableRowGroupContext from "TableRowGroupContext" /* 7444 */;
 import Card from "Card" /* 7445 */;
 import Slider from "Slider" /* 15761 */;

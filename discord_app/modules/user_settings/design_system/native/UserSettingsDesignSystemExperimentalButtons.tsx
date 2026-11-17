@@ -1,14 +1,14 @@
-// === Module 18418: UserSettingsDesignSystemExperimentalButtons ===
+// === Module 18420: UserSettingsDesignSystemExperimentalButtons ===
 
-// Module 18418 (UserSettingsDesignSystemExperimentalButtons)
+// Module 18420 (UserSettingsDesignSystemExperimentalButtons)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5377 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import _modDef6034 from "module_6034" /* 6034 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import native from "native" /* 5367 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import _modDef6024 from "module_6024" /* 6024 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import _modDef7457 from "module_7457" /* 7457 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import _modDef7827 from "module_7827" /* 7827 */;
@@ -87,7 +87,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     },
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef6034,
+    icon: _modDef6024,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   });
@@ -127,7 +127,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     },
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef6034,
+    icon: _modDef6024,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   };

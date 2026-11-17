@@ -2,9 +2,9 @@
 
 // Module 11093 (Sticker)
 import util from "util" /* 1113 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import StickersUtils from "StickersUtils" /* 6792 */;
-import StickersTypes from "StickersTypes" /* 6793 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import StickersUtils from "StickersUtils" /* 6782 */;
+import StickersTypes from "StickersTypes" /* 6783 */;
 import _modDef7895 from "module_7895" /* 7895 */;
 import _modDef7896 from "module_7896" /* 7896 */;
 import NativeLottieView from "NativeLottieView" /* 9228 */;

@@ -3,8 +3,8 @@
 // Module 15259 (QuestRewardCodeClaimBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 10151 */;
 import noop from "module_19" /* 19 */;
@@ -98,8 +98,8 @@ function QuestRewardCodeClaimBottomSheet(quest) {
         const obj2 = { text: null, icon: null };
         const intl = quest(1113).intl;
         obj2.text = intl.string(quest(1113).t.MSaeTe);
-        obj2.icon = quest(6033).CopyIcon;
-        rewardCode(6015).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+        obj2.icon = quest(6023).CopyIcon;
+        rewardCode(6005).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
       });
     }
   }, items4);
@@ -195,7 +195,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(5338).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(6954).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5306);

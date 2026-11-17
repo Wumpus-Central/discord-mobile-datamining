@@ -2,8 +2,8 @@
 
 // Module 13490 (ApplicationCommandValidationUtils)
 import util from "util" /* 1113 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5985 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6345 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6335 */;
 import ApplicationCommandOptionUtils from "ApplicationCommandOptionUtils" /* 11398 */;
 import ApplicationCommandValidatorsDefault from "ApplicationCommandValidators" /* 13491 */;
 import size from "module_2" /* 2 */;

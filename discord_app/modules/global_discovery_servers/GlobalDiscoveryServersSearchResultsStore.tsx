@@ -3,7 +3,7 @@
 // Module 16210 (GlobalDiscoveryServersSearchResultsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6757 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6747 */;
 import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 8406 */;
 import size from "module_2" /* 2 */;
 

@@ -2,7 +2,7 @@
 
 // Module 12356 (ArrowLargeUpIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod12357 from "module_12357" /* 12357 */;
 import noop from "module_19" /* 19 */;
 

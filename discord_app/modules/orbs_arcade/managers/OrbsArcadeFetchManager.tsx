@@ -1,6 +1,6 @@
-// === Module 20808: OrbsArcadeFetchManager ===
+// === Module 20811: OrbsArcadeFetchManager ===
 
-// Module 20808 (OrbsArcadeFetchManager)
+// Module 20811 (OrbsArcadeFetchManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17653 */;
 import OrbsArcadeStore from "OrbsArcadeStore" /* 17647 */;

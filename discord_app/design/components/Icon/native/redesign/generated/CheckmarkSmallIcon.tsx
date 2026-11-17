@@ -2,7 +2,7 @@
 
 // Module 7897 (CheckmarkSmallIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod7898 from "module_7898" /* 7898 */;
 import noop from "module_19" /* 19 */;
 

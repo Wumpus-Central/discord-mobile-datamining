@@ -1,7 +1,7 @@
 // === Module 9499: ProfileEffectLayer ===
 
 // Module 9499 (ProfileEffectLayer)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import ProfileEffectUtils from "ProfileEffectUtils" /* 9496 */;
 import noop from "module_19" /* 19 */;
 

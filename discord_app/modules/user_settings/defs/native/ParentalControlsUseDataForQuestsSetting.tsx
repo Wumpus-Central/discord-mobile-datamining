@@ -1,6 +1,6 @@
-// === Module 18599: ParentalControlsUseDataForQuestsSetting ===
+// === Module 18601: ParentalControlsUseDataForQuestsSetting ===
 
-// Module 18599 (ParentalControlsUseDataForQuestsSetting)
+// Module 18601 (ParentalControlsUseDataForQuestsSetting)
 import util from "util" /* 1113 */;
 import _modDef2701 from "module_2701" /* 2701 */;
 import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 17347 */;

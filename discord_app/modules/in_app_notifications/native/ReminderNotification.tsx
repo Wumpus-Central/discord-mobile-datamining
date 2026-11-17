@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ClockIcon from "ClockIcon" /* 6042 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ClockIcon from "ClockIcon" /* 6032 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import MessagePreviewTextDefault from "MessagePreviewText" /* 11043 */;
 import MessageNotificationHeaderDefault from "MessageNotificationHeader" /* 11089 */;
 import MediaPreviewRightAccessory from "MediaPreviewRightAccessory" /* 11091 */;
@@ -53,7 +53,7 @@ function NotificationBody(channel) {
   const items2 = [tmp10, ];
   if (!hasPreviewableMedia) {
     if (null == message.poll) {
-      const obj5 = { channel, message, color: "text-default", layout: tmp(5994).ChannelListLayoutTypes.COZY, variant: messagePreviewTextVariant, muted: false, lineClamp: num };
+      const obj5 = { channel, message, color: "text-default", layout: tmp(5984).ChannelListLayoutTypes.COZY, variant: messagePreviewTextVariant, muted: false, lineClamp: num };
       let tmp14 = closure_10(tmp(11045).ChannelRowPreview, obj5);
     }
     const obj6 = { children: null };

@@ -45,7 +45,7 @@ export default function EmptyState(showsGenericMessage) {
     stringResult = string(t.LSNOYf);
   }
   obj4.children = stringResult;
-  obj3.children = jsx(flag(5929).Text, { style: tmp.text, variant: "body-sm/medium", color: "text-default", children: null });
+  obj3.children = jsx(flag(5919).Text, { style: tmp.text, variant: "body-sm/medium", color: "text-default", children: null });
   obj2.children = <View style={tmp.textContainer}>{null}</View>;
   return <View style={tmp.container}>{null}</View>;
 };

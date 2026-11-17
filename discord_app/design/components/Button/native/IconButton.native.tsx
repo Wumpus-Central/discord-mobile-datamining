@@ -2,8 +2,8 @@
 
 // Module 7988 (IconButton)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Button_BaseButton from "Button/BaseButton" /* 5945 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Button_BaseButton from "Button/BaseButton" /* 5935 */;
 import BaseIconButton from "BaseIconButton" /* 7448 */;
 import noop from "module_19" /* 19 */;
 

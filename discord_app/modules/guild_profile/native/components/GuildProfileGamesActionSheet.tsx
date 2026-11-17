@@ -2,7 +2,7 @@
 
 // Module 10670 (GuildProfileGamesActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import TableRow from "TableRow" /* 7443 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10286 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 10664 */;
@@ -51,6 +51,6 @@ export default function GuildProfileGamesActionSheet(profile) {
   const str1 = intl.format(id(1113).t.vuAVo7, { serverName: profile.name }).toString();
   obj5.children = jsx(id(7746).TableRowGroup, { title: intl.format(id(1113).t.vuAVo7, { serverName: profile.name }).toString(), hasIcons: true, children: allGuildProfileGames.map((game) => <GuildProfileGameRow key={game.id} game={game} activityLevel={gameActivity[game.id]} />) });
   obj4.children = <View style={tmp.container}>{null}</View>;
-  obj3.children = jsx(id(5570).BottomSheetScrollView, { children: null });
-  return jsx(id(5566).BottomSheet, { ref: obj2.useBottomSheetRef().bottomSheetRef, scrollable: true, onDismiss: callback, startHeight: 300, children: null });
+  obj3.children = jsx(id(5560).BottomSheetScrollView, { children: null });
+  return jsx(id(5556).BottomSheet, { ref: obj2.useBottomSheetRef().bottomSheetRef, scrollable: true, onDismiss: callback, startHeight: 300, children: null });
 };

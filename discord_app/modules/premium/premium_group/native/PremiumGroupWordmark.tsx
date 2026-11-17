@@ -2,7 +2,7 @@
 
 // Module 10962 (PremiumGroupWordmark)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5902 */;
+import useToken from "useToken" /* 5892 */;
 import inlineStyles from "inlineStyles" /* 8263 */;
 import noop from "module_19" /* 19 */;
 

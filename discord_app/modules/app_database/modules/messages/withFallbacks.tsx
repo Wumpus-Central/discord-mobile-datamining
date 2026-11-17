@@ -6,7 +6,7 @@ import isReadableChannel from "isReadableChannel" /* 8687 */;
 import isLimitedChannel from "isLimitedChannel" /* 8688 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 
 require = fn;
 function isSaveableChannel(item10025) {

@@ -2,7 +2,7 @@
 
 // Module 10443 (OrderSigningErrors)
 import BillingErrorDefault from "BillingError" /* 5126 */;
-import PaymentConstants from "PaymentConstants" /* 6050 */;
+import PaymentConstants from "PaymentConstants" /* 6040 */;
 import size from "module_2" /* 2 */;
 
 const OrderClientErrorCode = PaymentConstants.OrderClientErrorCode;

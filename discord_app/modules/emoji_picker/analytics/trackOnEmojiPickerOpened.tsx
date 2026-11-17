@@ -2,7 +2,7 @@
 
 // Module 11249 (trackOnEmojiPickerOpened)
 import EmojiUtilsDefault from "EmojiUtils" /* 5256 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
 import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9551 */;
 import useEmojiHotrail from "useEmojiHotrail" /* 9552 */;
 import noop from "module_19" /* 19 */;

@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5542 */;
 import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11964 */;
 import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 13214 */;
 import conjureSettingValues from "conjureSettingValues" /* 13216 */;
@@ -47,13 +47,13 @@ function ConjureChannelSettingRow(guildId) {
       let tmp5Result;
       if (null != hint) {
         let obj3 = { variant: "body-xs/medium", color: "text-subtle", children: tmp(13222).conjureLinkedNodes(hint, "body-xs/medium") };
-        tmp5Result = closure_12(tmp(5929).Text, obj3);
+        tmp5Result = closure_12(tmp(5919).Text, obj3);
         const tmpResult3 = tmp(13222);
       }
       obj2.subLabel = tmp5Result;
       obj2.disabled = disabled;
       if (null != found) {
-        const tmpResult4 = tmp(5954);
+        const tmpResult4 = tmp(5944);
         let channelName = tmpResult4.computeChannelName(found, UserStore, RelationshipStore, true);
       } else {
         let intl = tmp(1113).intl;
@@ -131,7 +131,7 @@ function ConjurePickerSettingRow(guildId) {
       let tmp9Result;
       if (null != hint) {
         const obj5 = { variant: "body-xs/medium", color: "text-subtle", children: tmp4(13222).conjureLinkedNodes(hint, "body-xs/medium") };
-        tmp9Result = closure_12(tmp4(5929).Text, obj5);
+        tmp9Result = closure_12(tmp4(5919).Text, obj5);
         const tmp4Result2 = tmp4(13222);
       }
       const obj6 = { hasIcons: false, children: null };

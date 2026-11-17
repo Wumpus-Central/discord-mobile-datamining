@@ -1,6 +1,6 @@
-// === Module 18406: DesignSystemsButtonSetting ===
+// === Module 18408: DesignSystemsButtonSetting ===
 
-// Module 18406 (DesignSystemsButtonSetting)
+// Module 18408 (DesignSystemsButtonSetting)
 import Constants from "Constants" /* 1072 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;

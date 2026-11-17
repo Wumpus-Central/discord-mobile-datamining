@@ -36,7 +36,7 @@ export default noop.memo(function ConjureAppChannelMembersSheet(channelId) {
     const obj2 = { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null };
     const obj3 = { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list };
     obj2.children = jsx(guild_id(12525), { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list });
-    tmp7 = jsx(channelId(5566).BottomSheet, { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null });
+    tmp7 = jsx(channelId(5556).BottomSheet, { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null });
   }
   return tmp7;
 });

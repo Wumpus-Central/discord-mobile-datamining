@@ -2,7 +2,7 @@
 
 // Module 12365 (XSmallBoldIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod7956 from "module_7956" /* 7956 */;
 import noop from "module_19" /* 19 */;
 

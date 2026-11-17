@@ -3,7 +3,7 @@
 // Module 8807 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AdCreativeType from "AdCreativeType" /* 5345 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 
 require = fn;
 function resetStateForDeliveredBounties(items) {

@@ -2,7 +2,7 @@
 
 // Module 15878 (UserClockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod15879 from "module_15879" /* 15879 */;
 import noop from "module_19" /* 19 */;
 

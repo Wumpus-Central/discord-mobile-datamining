@@ -1,13 +1,13 @@
-// === Module 19866: LaunchPad ===
+// === Module 19868: LaunchPad ===
 
-// Module 19866 (LaunchPad)
+// Module 19868 (LaunchPad)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import AutocompleterDefault from "Autocompleter" /* 10248 */;
 import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 10259 */;
@@ -16,7 +16,7 @@ import hideLaunchPadDefault from "hideLaunchPad" /* 15146 */;
 import DevToolsNavigator from "DevToolsNavigator" /* 17057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5553 */;
+import ActionSheetStore from "ActionSheetStore" /* 5543 */;
 import ChannelListStore from "ChannelListStore" /* 8729 */;
 import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 7049 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 7014 */;
@@ -27,9 +27,9 @@ import GuildReadStateStore from "GuildReadStateStore" /* 7060 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 16256 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const require = globalThis.__r;
 
@@ -751,14 +751,14 @@ export default noop.memo(function LaunchPad(arg0) {
   let tmp59Result = 0 === str.trim().length && first3 === constants3.SEARCH;
   if (tmp59Result) {
     const obj9 = { selectedGuildId: first1, setSelectedGuild: tmp22, unreadPrivateChannelIds: stateFromStores, unreadGuilds: stateFromStoresArray, guildHistory: memo, visible };
-    tmp59Result = closure_27(tmp43(19867), obj9);
+    tmp59Result = closure_27(tmp43(19869), obj9);
   }
   items20[1] = tmp59Result;
   const obj10 = { style: tmp.launchPadContent, children: null };
   if (first3 === constants3.SEARCH) {
     if (tmp56) {
       const obj11 = { results, query: str };
-      let tmp59Result2 = closure_27(tmp16(19874).SearchResults, obj11);
+      let tmp59Result2 = closure_27(tmp16(19876).SearchResults, obj11);
     }
     obj10.children = tmp59Result2;
     items20[2] = closure_27(View, obj10);
@@ -785,13 +785,13 @@ export default noop.memo(function LaunchPad(arg0) {
     obj12.history = channelHistory;
     obj12.expandedHistory = tmp3;
     obj12.toggleExpandedHistory = callback;
-    tmp59Result2 = closure_27(tmp16(19874).InitialResults, obj12);
+    tmp59Result2 = closure_27(tmp16(19876).InitialResults, obj12);
   } else if (first3 === constants3.DEV_TOOLS) {
-    tmp59Result2 = closure_27(tmp43(18398), {});
+    tmp59Result2 = closure_27(tmp43(18400), {});
   } else if (first3 === constants3.MEMBERS) {
-    tmp59Result2 = closure_27(tmp43(19887), {});
+    tmp59Result2 = closure_27(tmp43(19889), {});
   } else {
-    tmp59Result2 = closure_27(tmp43(19888), {});
+    tmp59Result2 = closure_27(tmp43(19890), {});
   }
   tmp56 = str.trim().length > 0;
 });

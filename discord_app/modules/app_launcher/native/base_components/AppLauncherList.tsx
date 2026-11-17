@@ -3,7 +3,7 @@
 // Module 13502 (AppLauncherList)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import mergeProps from "mergeProps" /* 5483 */;
+import mergeProps from "mergeProps" /* 5473 */;
 import Search_SearchBar from "Search/SearchBar" /* 7825 */;
 import _modDef13503 from "module_13503" /* 13503 */;
 import noop from "module_19" /* 19 */;

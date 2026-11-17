@@ -4,9 +4,9 @@
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -108,9 +108,9 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(6351).getName(guildId, channelId, user);
+  name = name(6341).getName(guildId, channelId, user);
   const intl = user(1113).intl;
-  let obj = name(6351);
+  let obj = name(6341);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1113).t.sjSitP, { name }),
@@ -133,7 +133,7 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   const intl2 = user(1113).intl;
   obj4.text = intl2.string(user(1113).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5936).Button, obj4);
+  obj3.children = closure_7(user(5926).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

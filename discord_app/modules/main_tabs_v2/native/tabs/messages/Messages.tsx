@@ -1,19 +1,19 @@
-// === Module 18741: messages/Messages ===
+// === Module 18743: messages/Messages ===
 
-// Module 18741 (messages/Messages)
+// Module 18743 (messages/Messages)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import nativeDefault from "native" /* 575 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8678 */;
-import useMessagesSpecsDefault from "useMessagesSpecs" /* 18746 */;
-import MessagesHeaderDefault from "MessagesHeader" /* 18747 */;
-import useMessagesDataDefault from "useMessagesData" /* 18764 */;
-import useMessagesScrollToTopDefault from "useMessagesScrollToTop" /* 18767 */;
-import useMessagesReconnectToCallsEffectDefault from "useMessagesReconnectToCallsEffect" /* 18768 */;
-import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 18770 */;
+import useMessagesSpecsDefault from "useMessagesSpecs" /* 18748 */;
+import MessagesHeaderDefault from "MessagesHeader" /* 18749 */;
+import useMessagesDataDefault from "useMessagesData" /* 18766 */;
+import useMessagesScrollToTopDefault from "useMessagesScrollToTop" /* 18769 */;
+import useMessagesReconnectToCallsEffectDefault from "useMessagesReconnectToCallsEffect" /* 18770 */;
+import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 18772 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ export default noop.memo(function Messages(style) {
   useMessagesScrollToTopDefault({ listRef: ref, listRefHappeningNow: ref1 });
   useMessagesReconnectToCallsEffectDefault();
   obj6 = require("PlatformUtils");
-  const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(tmp4(18769).DmGdmListRenderTriggerPoint);
+  const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(tmp4(18771).DmGdmListRenderTriggerPoint);
   const layoutEffect = noop.useLayoutEffect(() => {
     TTIAnalyticsUtils.trackAppUIViewed();
     const reduced = _undefined.reduce((acc, item) => acc + item, 0);
@@ -97,12 +97,12 @@ export default noop.memo(function Messages(style) {
   const obj10 = { backgroundColor: nativeDefault.colors.PANEL_BG, children: null };
   const items2 = [closure_5(MessagesHeaderDefault, { height: headerSize, scrollPosition: sharedValue }), , ];
   if (tmp10.showFullscreenEmptyState) {
-    let tmp24Result = closure_5(tmp(18772), {});
+    let tmp24Result = closure_5(tmp(18774), {});
   } else {
     if ("legend" === list) {
-      let tmp27 = 18777;
+      let tmp27 = 18779;
     } else {
-      tmp27 = "flash" === list ? 18821 : 18822;
+      tmp27 = "flash" === list ? 18823 : 18824;
     }
     const obj11 = { ref };
     const merged = Object.assign(obj7);

@@ -2,8 +2,8 @@
 
 // Module 12392 (GiftBoxAnimation)
 import initialize from "initialize" /* 504 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5923 */;
-import _mod6788 from "module_6788" /* 6788 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5913 */;
+import _mod6778 from "module_6778" /* 6778 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
@@ -22,7 +22,7 @@ export default function GiftBoxAnimation(giftStyle) {
   if (null == giftStyle) {
     return null;
   } else {
-    const match = _mod6788.match(giftStyle);
+    const match = _mod6778.match(giftStyle);
     const withResult = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_12393"));
     const withResult1 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_12393")).with(PremiumGiftStyles.BOX, () => require("module_12394"));
     const withResult2 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_12393")).with(PremiumGiftStyles.BOX, () => require("module_12394")).with(PremiumGiftStyles.CUP, () => require("module_12395"));

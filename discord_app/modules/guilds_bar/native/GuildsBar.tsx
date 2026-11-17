@@ -1,13 +1,13 @@
-// === Module 19061: GuildsBar ===
+// === Module 19063: GuildsBar ===
 
-// Module 19061 (GuildsBar)
+// Module 19063 (GuildsBar)
 import NativeViewDefault from "NativeView" /* 7722 */;
 import FastListDefault from "FastList" /* 7847 */;
 import StartupProfilerDefault from "StartupProfiler" /* 12447 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 18897 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 19062 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 19070 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 19134 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 18899 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 19064 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 19072 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 19136 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -107,6 +107,6 @@ export default noop.memo(function GuildsBar(enableHome) {
   const items2 = [closure_4(FastListDefault, obj4), closure_4(GuildsBarDragPreviewDefault, {})];
   obj3.children = items2;
   obj2.children = closure_5(tmp12, obj3);
-  obj.children = closure_4(fastListRef(5598).GestureDetector, obj2);
+  obj.children = closure_4(fastListRef(5588).GestureDetector, obj2);
   return closure_4(tmp10, obj);
 });

@@ -5,7 +5,7 @@ import FlagUtils from "FlagUtils" /* 1406 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5225 */;
 import canAddNewReactionsDefault from "canAddNewReactions" /* 9199 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6937 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6927 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import UserStore from "UserStore" /* 1388 */;
 

@@ -6,8 +6,8 @@ import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8484 */;
@@ -152,7 +152,7 @@ export function ReferralProgramPerkCard() {
       stringResult = intl2.string(tmp2(1113).t.USo4s7);
     }
     obj11.children = stringResult;
-    const items5 = [closure_11(tmp2(5929).Text, obj11), , ];
+    const items5 = [closure_11(tmp2(5919).Text, obj11), , ];
     let str = "body-md/medium";
     if (isEligibleForIncentive) {
       str = "body-sm/medium";
@@ -216,7 +216,7 @@ export function ReferralProgramPerkCard() {
       const intl5 = tmp2(1113).intl;
       const obj24 = { helpdeskArticle: articleURL };
       obj13.children = intl5.format(tmp2(1113).t["zWhX/Q"], obj24);
-      items5[1] = closure_11(tmp2(5929).Text, obj13);
+      items5[1] = closure_11(tmp2(5919).Text, obj13);
       if (isEligibleForIncentive) {
         const obj25 = { nRewardsGranted: obj5.numRewardGranted, referralRewardType: tmp11 };
         isEligibleForIncentive = closure_11(RewardGrantNoticeDefault, obj25);
@@ -246,7 +246,7 @@ export function ReferralProgramPerkCard() {
         callback = callback1;
       }
       obj27.onPress = callback;
-      obj26.children = closure_11(tmp2(5936).Button, obj27);
+      obj26.children = closure_11(tmp2(5926).Button, obj27);
       items4[4] = closure_11(View, obj26);
       obj6.children = items4;
       return closure_12(View, obj6);

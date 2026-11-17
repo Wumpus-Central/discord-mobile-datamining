@@ -2,8 +2,8 @@
 
 // Module 17583 (BountiesScrollIndicatorAnimation)
 import nativeDefault from "native" /* 575 */;
-import BountiesScrollIndicatorRive from "BountiesScrollIndicatorRive" /* 5445 */;
-import useToken from "useToken" /* 5902 */;
+import BountiesScrollIndicatorRive from "BountiesScrollIndicatorRive" /* 5435 */;
+import useToken from "useToken" /* 5892 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

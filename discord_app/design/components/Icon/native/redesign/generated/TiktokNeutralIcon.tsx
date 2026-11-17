@@ -2,7 +2,7 @@
 
 // Module 14757 (TiktokNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod14758 from "module_14758" /* 14758 */;
 import noop from "module_19" /* 19 */;
 

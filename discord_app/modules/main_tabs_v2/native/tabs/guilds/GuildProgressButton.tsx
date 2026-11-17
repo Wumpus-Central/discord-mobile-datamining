@@ -1,8 +1,8 @@
-// === Module 18914: GuildProgressButton ===
+// === Module 18916: GuildProgressButton ===
 
-// Module 18914 (GuildProgressButton)
+// Module 18916 (GuildProgressButton)
 import nativeDefault from "native" /* 575 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6061 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6051 */;
 import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13523 */;
 import GuildProgressUtils from "GuildProgressUtils" /* 14905 */;
 import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14908 */;
@@ -33,7 +33,7 @@ export default function GuildProgressButton(guild) {
   }, items1);
   let obj2 = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
   let obj = guild(14905);
-  obj2.icon = jsx(guild(8108).RowButton.Icon, { source: completed(18915) });
+  obj2.icon = jsx(guild(8108).RowButton.Icon, { source: completed(18917) });
   const intl = guild(1113).intl;
   obj2.label = intl.string(guild(1113).t.o3HK3d);
   obj2.subLabel = subtitle;

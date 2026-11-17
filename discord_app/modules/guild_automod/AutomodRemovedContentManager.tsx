@@ -1,8 +1,8 @@
-// === Module 20175: AutomodRemovedContentManager ===
+// === Module 20178: AutomodRemovedContentManager ===
 
-// Module 20175 (AutomodRemovedContentManager)
-import AutomodRemovedContentActionCreators from "AutomodRemovedContentActionCreators" /* 20176 */;
-import MessageStore from "MessageStore" /* 6372 */;
+// Module 20178 (AutomodRemovedContentManager)
+import AutomodRemovedContentActionCreators from "AutomodRemovedContentActionCreators" /* 20179 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 

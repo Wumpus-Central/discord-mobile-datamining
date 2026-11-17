@@ -2,7 +2,7 @@
 
 // Module 10125 (ExperimentalMythicIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10126 from "module_10126" /* 10126 */;
 import noop from "module_19" /* 19 */;
 

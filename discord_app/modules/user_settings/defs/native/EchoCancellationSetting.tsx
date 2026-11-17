@@ -1,6 +1,6 @@
-// === Module 17876: EchoCancellationSetting ===
+// === Module 17878: EchoCancellationSetting ===
 
-// Module 17876 (EchoCancellationSetting)
+// Module 17878 (EchoCancellationSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;

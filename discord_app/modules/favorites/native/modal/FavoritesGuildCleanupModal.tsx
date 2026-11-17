@@ -1,10 +1,10 @@
-// === Module 18858: FavoritesGuildCleanupModal ===
+// === Module 18860: FavoritesGuildCleanupModal ===
 
-// Module 18858 (FavoritesGuildCleanupModal)
+// Module 18860 (FavoritesGuildCleanupModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3679 from "module_3679" /* 3679 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import TableRadioRow from "TableRadioRow" /* 7747 */;
 import Modal from "Modal" /* 12523 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ function closeCleanup() {
 }
 function CleanupScreen() {
   const tmp3 = closure_14(loading(1630)().bottom);
-  const tmp4 = loading(18859)(closeCleanup);
+  const tmp4 = loading(18861)(closeCleanup);
   _require = tmp4;
   loading = tmp4.loading;
   let obj = { style: tmp3.container, spacing: 0, children: null };
@@ -116,7 +116,7 @@ function CleanupScreen() {
     const obj14 = { variant: "body-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: null };
     const intl13 = tmp6(1113).intl;
     obj14.children = intl13.string(tmp(3679).toOYQw);
-    tmp7Result = closure_12(tmp6(5929).Text, obj14);
+    tmp7Result = closure_12(tmp6(5919).Text, obj14);
   }
   items1[3] = tmp7Result;
   obj3.children = items1;

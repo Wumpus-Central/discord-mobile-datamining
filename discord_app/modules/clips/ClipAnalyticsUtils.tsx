@@ -2,13 +2,13 @@
 
 // Module 8844 (ClipAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import _modDef6161 from "module_6161" /* 6161 */;
-import VideoQualityStats from "VideoQualityStats" /* 6260 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6808 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6253 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6802 */;
+import _modDef6151 from "module_6151" /* 6151 */;
+import VideoQualityStats from "VideoQualityStats" /* 6250 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6243 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6792 */;
 import ClipsStore from "ClipsStore" /* 2139 */;
 
 require = fn;
@@ -274,7 +274,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!_modDef6161(isFavorite, tmp)) {
+    if (!_modDef6151(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -282,7 +282,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!_modDef6161(name, tmp5)) {
+    if (!_modDef6151(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -302,7 +302,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp11;
   if (null != start1) {
-    if (!_modDef6161(start1, start)) {
+    if (!_modDef6151(start1, start)) {
       tmp11 = start1;
     }
   }
@@ -318,7 +318,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp15;
   if (null != end1) {
-    if (!_modDef6161(end1, end)) {
+    if (!_modDef6151(end1, end)) {
       tmp15 = end1;
     }
   }
@@ -334,7 +334,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp19;
   if (null != applicationAudio1) {
-    if (!_modDef6161(applicationAudio1, applicationAudio)) {
+    if (!_modDef6151(applicationAudio1, applicationAudio)) {
       tmp19 = applicationAudio1;
     }
   }
@@ -350,7 +350,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp23;
   if (null != voiceAudio1) {
-    if (!_modDef6161(voiceAudio1, voiceAudio)) {
+    if (!_modDef6151(voiceAudio1, voiceAudio)) {
       tmp23 = voiceAudio1;
     }
   }
@@ -366,7 +366,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp27;
   if (null != soundboardAudio1) {
-    if (!_modDef6161(soundboardAudio1, soundboardAudio)) {
+    if (!_modDef6151(soundboardAudio1, soundboardAudio)) {
       tmp27 = soundboardAudio1;
     }
   }
@@ -388,7 +388,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp31;
   if (null != preset1) {
-    if (!_modDef6161(preset1, preset)) {
+    if (!_modDef6151(preset1, preset)) {
       tmp31 = preset1;
     }
   }

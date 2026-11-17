@@ -1,6 +1,6 @@
-// === Module 20927: executeHeadlessTask ===
+// === Module 20930: executeHeadlessTask ===
 
-// Module 20927 (executeHeadlessTask)
+// Module 20930 (executeHeadlessTask)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import fast_connect from "fast_connect" /* 15 */;
@@ -367,7 +367,7 @@ let closure_10 = async function _executeHeadlessTask() {
   })();
 };
 const AppState = fn(17).AppState;
-const NativeAppStartup = fn(20132);
+const NativeAppStartup = fn(20134);
 ({ initHeadlessTask: metroImportDefault, applicationReady: closure_8 } = NativeAppStartup);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

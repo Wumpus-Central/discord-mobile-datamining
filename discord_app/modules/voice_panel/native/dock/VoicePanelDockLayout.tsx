@@ -3,8 +3,8 @@
 // Module 12008 (VoicePanelDockLayout)
 import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 12011 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
-import VoicePanelStore from "VoicePanelStore" /* 6901 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import VoicePanelStore from "VoicePanelStore" /* 6891 */;
 
 const require = globalThis.__r;
 

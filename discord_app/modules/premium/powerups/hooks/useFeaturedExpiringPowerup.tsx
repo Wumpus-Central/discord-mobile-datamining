@@ -4,7 +4,7 @@
 import CollectiblesUtils from "CollectiblesUtils" /* 8497 */;
 import noop from "module_19" /* 19 */;
 import GameServerStore from "GameServerStore" /* 9242 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5523 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5513 */;
 
 const require = globalThis.__r;
 

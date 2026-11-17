@@ -3,7 +3,7 @@
 // Module 11311 (ExpressionGuildDetails)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import GuildIconDefault from "GuildIcon" /* 7720 */;
 import guild_GuildUtils from "guild/GuildUtils" /* 11310 */;
 import noop from "module_19" /* 19 */;

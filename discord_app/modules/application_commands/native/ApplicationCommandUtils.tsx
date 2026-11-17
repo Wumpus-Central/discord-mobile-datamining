@@ -3,8 +3,8 @@
 // Module 14640 (application_commands/ApplicationCommandUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import _modDef2109 from "module_2109" /* 2109 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5985 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6345 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6335 */;
 import DraftStore from "DraftStore" /* 8725 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 11153 */;
 import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 11633 */;

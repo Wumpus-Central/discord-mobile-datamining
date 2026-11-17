@@ -1,8 +1,8 @@
-// === Module 18209: ShowDevWidgetSetting ===
+// === Module 18211: ShowDevWidgetSetting ===
 
-// Module 18209 (ShowDevWidgetSetting)
+// Module 18211 (ShowDevWidgetSetting)
 import initialize from "initialize" /* 504 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 18210 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 18212 */;
 import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8826 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const toggle = SettingBuilders.createToggle({
     return "Show Dev Tools Widget";
   },
   parent: null,
-  IconComponent: fn(18211).StaffBadgeIcon,
+  IconComponent: fn(18213).StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
     const result = DevToolsActionCreators.updateDevToolsSettings({ showDevWidget });
   },

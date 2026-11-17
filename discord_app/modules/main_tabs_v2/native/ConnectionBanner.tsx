@@ -1,19 +1,19 @@
-// === Module 19172: ConnectionBanner ===
+// === Module 19174: ConnectionBanner ===
 
-// Module 19172 (ConnectionBanner)
+// Module 19174 (ConnectionBanner)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import _modDef7533 from "module_7533" /* 7533 */;
-import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 19173 */;
-import ConnectionFineIcon from "ConnectionFineIcon" /* 19175 */;
+import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 19175 */;
+import ConnectionFineIcon from "ConnectionFineIcon" /* 19177 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 16190 */;
@@ -67,7 +67,7 @@ function ConnectionBannerContent(state) {
 function BackOnlineGlow(opacity) {
   let token;
   const tmp = closure_21();
-  token = token(5902).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
+  token = token(5892).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
   items = [token];
   const memo = noop.useMemo(() => {
     const obj = _modDef671(token);
@@ -84,7 +84,7 @@ function BackOnlineGlow(opacity) {
   const items1 = [tmp.glow, { opacity: opacity.progress }];
   obj2.style = items1;
   const obj3 = { style: tmp.glow, maskElement: null, children: null };
-  let obj = token(5902);
+  let obj = token(5892);
   obj3.maskElement = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors, locations, start, end });
   obj3.children = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: memo, locations: locations2, start: start2, end: end2 });
   obj2.children = closure_12(_modDef7533, obj3);

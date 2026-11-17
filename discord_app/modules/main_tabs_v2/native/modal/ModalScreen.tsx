@@ -1,10 +1,10 @@
-// === Module 19738: modal/ModalScreen ===
+// === Module 19740: modal/ModalScreen ===
 
-// Module 19738 (modal/ModalScreen)
+// Module 19740 (modal/ModalScreen)
 import nativeDefault from "native" /* 575 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6338 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6328 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7771 */;
-import useAppFrameDefault from "useAppFrame" /* 18713 */;
+import useAppFrameDefault from "useAppFrame" /* 18715 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,8 +36,8 @@ export default function Modal(route) {
     isIpadOSResult = "modal" === params.presentation;
   }
   if (!isIpadOSResult) {
-    isIpadOSResult = modal(19739).shouldExcludeSafeAreaForModalKey(modal.key);
-    const obj2 = modal(19739);
+    isIpadOSResult = modal(19741).shouldExcludeSafeAreaForModalKey(modal.key);
+    const obj2 = modal(19741);
   }
   ({ insets, styles } = useAppFrameDefault({ enabled: !isIpadOSResult }));
   const tmp7 = closure_11(insets.left, insets.right);
@@ -49,7 +49,7 @@ export default function Modal(route) {
   const obj3 = { enabled: !isIpadOSResult };
   const tmp6 = useAppFrameDefault({ enabled: !isIpadOSResult });
   const callback = noop.useCallback(() => {
-    closure_1(6848).pop();
+    closure_1(6838).pop();
   }, []);
   const obj4 = { type: null, name: null, properties: null };
   const tmp9 = _objectWithoutProperties(props, closure_3);
@@ -89,7 +89,7 @@ export default function Modal(route) {
   items[1] = containerWithPadding;
   items[2] = styles.container;
   if (modal.closable) {
-    let pop = tmp(6848).pop;
+    let pop = tmp(6838).pop;
   } else {
     pop = NOOP;
   }

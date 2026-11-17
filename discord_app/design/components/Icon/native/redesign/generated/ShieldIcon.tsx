@@ -2,7 +2,7 @@
 
 // Module 11224 (ShieldIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11225 from "module_11225" /* 11225 */;
 import noop from "module_19" /* 19 */;
 

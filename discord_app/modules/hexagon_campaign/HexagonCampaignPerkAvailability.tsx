@@ -23,6 +23,18 @@ export function useHexagonCampaignPerkAvailability(DISPLAY_NAME_STYLE, HexagonCa
   });
   return HexagonCampaignUtils.getHexagonCampaignPerkAvailability({ perk: DISPLAY_NAME_STYLE, premiumType: stateFromStores, isCampaignEnabled: isHexagonCampaignEnabled });
 }
+export function useHexagonCampaignPerkAvailabilityIgnoringExperiment(perk) {
+  items = [UserStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => {
+    currentUser = currentUser.getCurrentUser();
+    let premiumType;
+    if (currentUser != null) {
+      premiumType = currentUser.premiumType;
+    }
+    return premiumType;
+  });
+  return HexagonCampaignUtils.getHexagonCampaignPerkAvailability({ perk, premiumType: stateFromStores, isCampaignEnabled: true });
+}
 export function getHexagonCampaignPerkAvailabilityForCurrentUser(CLIENT_THEME, MobileThemesUtils) {
   const obj2 = { perk: CLIENT_THEME, premiumType: null, isCampaignEnabled: null };
   const currentUser = UserStore.getCurrentUser();

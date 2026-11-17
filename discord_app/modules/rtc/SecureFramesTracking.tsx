@@ -2,7 +2,7 @@
 
 // Module 10630 (SecureFramesTracking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8546 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 

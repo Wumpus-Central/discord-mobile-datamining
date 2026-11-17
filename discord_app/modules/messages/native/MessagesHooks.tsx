@@ -12,9 +12,9 @@ import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 12414 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11890 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6957 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6947 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 
 const require = globalThis.__r;
 

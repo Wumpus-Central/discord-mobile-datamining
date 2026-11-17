@@ -2,7 +2,7 @@
 
 // Module 12063 (ReportModals)
 import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
 import MenuTypes from "MenuTypes" /* 12064 */;
 import showReportModal from "showReportModal" /* 12065 */;
 import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 12067 */;
@@ -208,7 +208,7 @@ export function showUnauthenticatedReportModalForTida(emailToken, onClose) {
 export function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "disabled", channel_id: "isArray" });
+  const merged = Object.assign({ message_id: "Array", channel_id: "Path" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;

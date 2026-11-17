@@ -5,7 +5,7 @@ import formatResultsDefault from "formatResults" /* 10245 */;
 import QuickSwitcherActionCreators from "QuickSwitcherActionCreators" /* 10274 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import FrecencyStore from "FrecencyStore" /* 7069 */;
 

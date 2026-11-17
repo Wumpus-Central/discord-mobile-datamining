@@ -3,8 +3,8 @@
 // Module 10048 (LottieIcon)
 import nativeDefault from "native" /* 575 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5320 */;
-import useToken from "useToken" /* 5902 */;
-import _modDef5924 from "module_5924" /* 5924 */;
+import useToken from "useToken" /* 5892 */;
+import _modDef5914 from "module_5914" /* 5914 */;
 import IconSize from "IconSize" /* 7638 */;
 import noop from "module_19" /* 19 */;
 
@@ -126,6 +126,6 @@ export function LottieIcon(color) {
   obj3.onAnimationLoaded = callback1;
   const items4 = [size1, { opacity: num }];
   obj3.style = items4;
-  obj2.children = jsx(_modDef5924, { ref: ref1, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null });
+  obj2.children = jsx(_modDef5914, { ref: ref1, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null });
   return <View style={size1}>{null}</View>;
 }

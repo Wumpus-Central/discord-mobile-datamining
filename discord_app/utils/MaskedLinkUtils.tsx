@@ -1,13 +1,13 @@
 // === Module 7653: MaskedLinkUtils ===
 
 // Module 7653 (MaskedLinkUtils)
-import openURLDefault from "openURL" /* 6008 */;
+import openURLDefault from "openURL" /* 5998 */;
 import LinkAnalyticsUtilsDefault from "LinkAnalyticsUtils" /* 7657 */;
 import BlockedDomainStore from "BlockedDomainStore" /* 7654 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import MaskedLinkStore from "MaskedLinkStore" /* 7655 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 
@@ -68,9 +68,9 @@ export function handleClick(href, preventDefault, arg2) {
     const obj3 = { url: href.href };
     obj2.body = intl2.format(require("util").t["9rqRwl"], obj3);
     obj2.contextKey = contextKey;
-    tmp3(6268).show(obj2);
+    tmp3(6258).show(obj2);
     onCancel();
-    const tmp3Result = tmp3(6268);
+    const tmp3Result = tmp3(6258);
   } else {
     dependencyMap = sanitizeUrlResult;
     try {
@@ -260,12 +260,12 @@ export function handleClick(href, preventDefault, arg2) {
             tmp3(15954).show(obj8);
             const tmp3Result12 = tmp3(15954);
           } else {
-            const punycodeLinkResult = tmp53(6347).punycodeLink(tmp8);
+            const punycodeLinkResult = tmp53(6337).punycodeLink(tmp8);
             let displayTarget = tmp8;
             if (null != punycodeLinkResult) {
               displayTarget = punycodeLinkResult.displayTarget;
             }
-            const tmp53Result = tmp53(6347);
+            const tmp53Result = tmp53(6337);
             const obj9 = { url: displayTarget, trustUrl: tmp53(15956).trustDomain, onConfirm: handleConfirm, onCancel, isProtocol: false, contextKey };
             tmp3(15954).show(obj9);
             const tmp3Result13 = tmp3(15954);

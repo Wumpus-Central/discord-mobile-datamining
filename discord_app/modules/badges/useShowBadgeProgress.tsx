@@ -3,7 +3,7 @@
 // Module 10115 (useShowBadgeProgress)
 import initialize from "initialize" /* 504 */;
 import BadgeUtils from "BadgeUtils" /* 10113 */;
-import ConsentStore from "ConsentStore" /* 6846 */;
+import ConsentStore from "ConsentStore" /* 6836 */;
 
 require = fn;
 const Consents = fn(1072).Consents;

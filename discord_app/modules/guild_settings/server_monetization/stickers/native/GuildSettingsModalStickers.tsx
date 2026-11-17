@@ -1,13 +1,13 @@
-// === Module 20520: GuildSettingsModalStickers ===
+// === Module 20523: GuildSettingsModalStickers ===
 
-// Module 20520 (GuildSettingsModalStickers)
+// Module 20523 (GuildSettingsModalStickers)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import LockIcon from "LockIcon" /* 8092 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 9235 */;
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 20524 */;
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 20527 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
@@ -31,7 +31,7 @@ let items = [obj, , , ];
 let obj2 = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
 let intl2 = fn(1113).intl;
 obj2.title = intl2.string(fn(1113).t.nzXtaS);
-obj2.IconComponent = fn(20521).BoostGemOutlineIcon;
+obj2.IconComponent = fn(20524).BoostGemOutlineIcon;
 items[1] = obj2;
 let obj3 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null };
 let intl3 = fn(1113).intl;
@@ -182,17 +182,17 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
               obj3.children = closure_1_12(closure_1_1(11093), obj4);
               obj2.icon = closure_1_12(closure_1_4, obj3);
               const obj5 = { variant: "heading-xs/semibold", color: "text-strong", style: closure_1.label, children: tmp2.name };
-              items = [closure_1_12(guildId(5929).Text, obj5), ];
+              items = [closure_1_12(guildId(5919).Text, obj5), ];
               let tmp16Result = null;
               if (null != user) {
                 const obj = { style: closure_1.userRow, children: null };
                 const obj6 = { user, size: tmp10(1187).AvatarSizes.XSMALL_20, guildId };
                 const items1 = [closure_1_12(tmp10(1187).Avatar, obj6), ];
-                const obj7 = { variant: "body-sm/medium", color: "text-subtle", children: closure_1_1(6351).getName(guildId, undefined, user) };
-                items1[1] = closure_1_12(tmp10(5929).Text, obj7);
+                const obj7 = { variant: "body-sm/medium", color: "text-subtle", children: closure_1_1(6341).getName(guildId, undefined, user) };
+                items1[1] = closure_1_12(tmp10(5919).Text, obj7);
                 obj.children = items1;
                 tmp16Result = closure_1_13(closure_1_4, obj);
-                const tmp14Result = closure_1_1(6351);
+                const tmp14Result = closure_1_1(6341);
               }
               const obj8 = { children: null };
               items[1] = tmp16Result;

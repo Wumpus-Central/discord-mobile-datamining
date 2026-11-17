@@ -1,8 +1,8 @@
-// === Module 20177: AutomodRemovedContentSheet ===
+// === Module 20180: AutomodRemovedContentSheet ===
 
-// Module 20177 (AutomodRemovedContentSheet)
+// Module 20180 (AutomodRemovedContentSheet)
 import nativeDefault from "native" /* 575 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6364 */;
 import RowGeneratorDefault from "RowGenerator" /* 9159 */;
 import ChatItemDefault from "ChatItem" /* 11065 */;
 import noop from "module_19" /* 19 */;
@@ -74,7 +74,7 @@ export default function AutomodRemovedContentSheet(action) {
     let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
   } else {
     const obj6 = { variant: "body-md/normal", color: "text-default", children: action.notice };
-    tmp4Result = jsx(tmp5(5929).Text, { variant: "body-md/normal", color: "text-default", children: action.notice });
+    tmp4Result = jsx(tmp5(5919).Text, { variant: "body-md/normal", color: "text-default", children: action.notice });
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;

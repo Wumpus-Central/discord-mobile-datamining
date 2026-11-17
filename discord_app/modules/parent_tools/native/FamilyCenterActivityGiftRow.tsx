@@ -2,8 +2,8 @@
 
 // Module 17435 (FamilyCenterActivityGiftRow)
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 9404 */;
 import useSelectedTeenUser from "useSelectedTeenUser" /* 17423 */;
 import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 17432 */;

@@ -2,7 +2,7 @@
 
 // Module 16287 (AddFriendModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

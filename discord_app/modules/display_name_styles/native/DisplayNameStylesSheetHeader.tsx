@@ -1,8 +1,8 @@
-// === Module 17961: DisplayNameStylesSheetHeader ===
+// === Module 17963: DisplayNameStylesSheetHeader ===
 
-// Module 17961 (DisplayNameStylesSheetHeader)
+// Module 17963 (DisplayNameStylesSheetHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

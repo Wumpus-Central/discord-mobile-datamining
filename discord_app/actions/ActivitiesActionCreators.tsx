@@ -2,8 +2,8 @@
 
 // Module 12410 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

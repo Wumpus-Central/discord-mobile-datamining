@@ -3,7 +3,7 @@
 // Module 9189 (enhanced_role_colors/EnhancedRoleColorUtils)
 import _modDef671 from "module_671" /* 671 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6350 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6340 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;

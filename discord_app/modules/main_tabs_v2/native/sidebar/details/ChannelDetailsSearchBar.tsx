@@ -1,6 +1,6 @@
-// === Module 19445: ChannelDetailsSearchBar ===
+// === Module 19447: ChannelDetailsSearchBar ===
 
-// Module 19445 (ChannelDetailsSearchBar)
+// Module 19447 (ChannelDetailsSearchBar)
 import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14765 */;
 import noop from "module_19" /* 19 */;
 import SearchQueryStore from "SearchQueryStore" /* 14754 */;

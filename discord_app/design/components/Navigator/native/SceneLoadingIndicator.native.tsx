@@ -1,7 +1,7 @@
 // === Module 7588: SceneLoadingIndicator ===
 
 // Module 7588 (SceneLoadingIndicator)
-import NavScrim from "NavScrim" /* 5912 */;
+import NavScrim from "NavScrim" /* 5902 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7418 */;
 import noop from "module_19" /* 19 */;
 

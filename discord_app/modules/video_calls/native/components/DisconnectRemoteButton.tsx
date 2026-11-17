@@ -5,7 +5,7 @@ import CallsUtils from "CallsUtils" /* 10583 */;
 import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10821 */;
 import CallBarActionAll from "CallBarAction" /* 12729 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 6072 */;
+import GameConsoleStore from "GameConsoleStore" /* 6062 */;
 
 require = fn;
 const jsx = fn(21).jsx;

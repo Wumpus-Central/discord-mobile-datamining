@@ -4,13 +4,13 @@
 import Storage3 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import UserUtils from "UserUtils" /* 5372 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import UserUtils from "UserUtils" /* 5362 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import UserStore from "UserStore" /* 1388 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
@@ -98,8 +98,8 @@ class NUFChannelsManager extends tmp2 {
       value = Storage.get(closure_1_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(5372).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(5372);
+        isNewUserResult = applyArgumentsResult(5362).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(5362);
       }
       return isNewUserResult;
     };

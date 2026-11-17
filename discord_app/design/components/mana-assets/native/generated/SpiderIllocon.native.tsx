@@ -1,7 +1,7 @@
 // === Module 13688: SpiderIllocon ===
 
 // Module 13688 (SpiderIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef13689 from "module_13689" /* 13689 */;
 import _modDef13690 from "module_13690" /* 13690 */;

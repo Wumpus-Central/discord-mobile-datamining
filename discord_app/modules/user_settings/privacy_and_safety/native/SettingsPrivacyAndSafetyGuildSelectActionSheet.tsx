@@ -1,14 +1,14 @@
-// === Module 18564: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
+// === Module 18566: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
 
-// Module 18564 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
+// Module 18566 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(18563);
+const UserSettingsSafetySelectedGuildStore = fn(18565);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: metroImportDefault, setSelectedGuildId: closure_8, useUserSafetySettingsSelectedGuildStore: closure_9 } = UserSettingsSafetySelectedGuildStore);
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
@@ -51,7 +51,7 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
         let reduced = flattenedGuildIds.reduce((arr, item) => {
           guild = guild.getGuild(item);
           if (null != guild) {
-            const obj = { type: first(6384).SelectOptionType.GUILD, value: null, label: null, guild: null };
+            const obj = { type: first(6374).SelectOptionType.GUILD, value: null, label: null, guild: null };
             ({ id: obj.value, name: obj.label } = guild);
             obj.guild = guild;
             arr = arr.push(obj);
@@ -63,7 +63,7 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
         const obj5 = { query };
         reduced = obj4.queryGuilds(obj5).map((record) => {
           record = record.record;
-          return { type: first(6384).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+          return { type: first(6374).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
         });
         const queryGuildsResult = obj4.queryGuilds(obj5);
       }

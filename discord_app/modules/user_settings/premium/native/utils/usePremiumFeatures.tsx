@@ -5,7 +5,7 @@ import util from "util" /* 1113 */;
 import user from "user" /* 1401 */;
 import PremiumUtils from "PremiumUtils" /* 2174 */;
 import _modDef3513 from "module_3513" /* 3513 */;
-import FriendsIcon from "FriendsIcon" /* 6018 */;
+import FriendsIcon from "FriendsIcon" /* 6008 */;
 import ScreenStreamIcon from "ScreenStreamIcon" /* 7434 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9436 */;
 import SuperReactionIcon from "SuperReactionIcon" /* 9558 */;

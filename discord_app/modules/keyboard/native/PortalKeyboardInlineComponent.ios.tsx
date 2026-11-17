@@ -14,13 +14,13 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
   messagesRef = messagesRef.messagesRef;
   noop = undefined;
   const id = noop.useId();
-  const tmp2 = id(5503)();
+  const tmp2 = id(5493)();
   dependencyMap = tmp2;
   let tmp4 = id(7643)({ includeCustomKeyboard: false });
   noop = tmp4;
   let tmp3 = id(2023)();
-  const keyboardContextForType = messagesRef(5503).useKeyboardContextForType(messagesRef(1628).KeyboardTypes.SYSTEM);
-  id(5899)(() => () => {
+  const keyboardContextForType = messagesRef(5493).useKeyboardContextForType(messagesRef(1628).KeyboardTypes.SYSTEM);
+  id(5889)(() => () => {
     const PortalKeyboardUIStore = messagesRef(dependencyMap[8]).PortalKeyboardUIStore;
     field = PortalKeyboardUIStore.getField("keyboard");
     let tmp4 = null != field;
@@ -34,9 +34,9 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
       const tmpResult2 = messagesRef(dependencyMap[8]);
     }
   });
-  let PortalKeyboardUIStore = messagesRef(5504).PortalKeyboardUIStore;
+  let PortalKeyboardUIStore = messagesRef(5494).PortalKeyboardUIStore;
   let field = PortalKeyboardUIStore.useField("keyboard");
-  const PortalKeyboardUIStore2 = messagesRef(5504).PortalKeyboardUIStore;
+  const PortalKeyboardUIStore2 = messagesRef(5494).PortalKeyboardUIStore;
   const field1 = PortalKeyboardUIStore2.useField("state");
   noop.useRef(false);
   items = [messagesRef.channelId, id, field, field1, tmp2, messagesRef, keyboardContextForType, tmp3, tmp4];
@@ -45,7 +45,7 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
     if (null != field) {
       if (null == field.handlerId) {
         if (null != field) {
-          if (field1 === messagesRef(5507).PortalKeyboardState.REQUEST_OPEN) {
+          if (field1 === messagesRef(5497).PortalKeyboardState.REQUEST_OPEN) {
             const current4 = messagesRef.current;
             let chatRef;
             if (current4 != null) {
@@ -54,9 +54,9 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
             if (null != chatRef) {
               const tmp38 = field(chatRef.current);
               if (null != tmp38) {
-                const result = messagesRef(5504).handlePortalKeyboardOpen(id);
+                const result = messagesRef(5494).handlePortalKeyboardOpen(id);
                 ref.current = true;
-                const obj2 = messagesRef(5504);
+                const obj2 = messagesRef(5494);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                 const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(12015).getKeyboardActionSheetHeight().minimum, 0.25, 7);
                 const obj3 = messagesRef(12015);
@@ -66,13 +66,13 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
         }
         if (dependencyMap === messagesRef(1628).KeyboardTypes.SYSTEM) {
           if (keyboardContextForType.keyboardWillOpen) {
-            if (field1 !== messagesRef(5507).PortalKeyboardState.REQUEST_CLOSE) {
+            if (field1 !== messagesRef(5497).PortalKeyboardState.REQUEST_CLOSE) {
               const _setTimeout = setTimeout;
-              messagesRef = setTimeout(messagesRef(5504).closePortalKeyboardRequest, 250);
+              messagesRef = setTimeout(messagesRef(5494).closePortalKeyboardRequest, 250);
               return () => clearTimeout(closure_0);
             }
           }
-          messagesRef(5504).closePortalKeyboard();
+          messagesRef(5494).closePortalKeyboard();
           const current3 = messagesRef.current;
           let chatRef1;
           if (current3 != null) {
@@ -86,7 +86,7 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
               const result2 = DCDChatManager.customKeyboardWillHide(tmp21, 0.25, 7);
             }
           }
-          const obj = messagesRef(5504);
+          const obj = messagesRef(5494);
         }
       }
     } else {

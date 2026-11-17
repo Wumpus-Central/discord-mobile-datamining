@@ -4,7 +4,7 @@
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 17162 */;
 import noop from "module_19" /* 19 */;
 

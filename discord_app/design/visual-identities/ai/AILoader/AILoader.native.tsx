@@ -2,7 +2,7 @@
 
 // Module 13349 (AILoader)
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5548 */;
+import timing_timing from "timing/timing" /* 5538 */;
 import AIGlyphText from "AIGlyphText" /* 13351 */;
 import noop from "module_19" /* 19 */;
 
@@ -96,7 +96,7 @@ export const AILoader = noop.memo(function AILoader(size) {
   }
   const accessibilityLabel = size.accessibilityLabel;
   let num2;
-  const reducedMotion = num2.useContext(num(5377).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(5367).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
   num2 = 0;
   if (!reducedMotion.enabled) {

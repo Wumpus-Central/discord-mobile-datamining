@@ -1,8 +1,8 @@
-// === Module 18966: GenericUpsellActionSheet ===
+// === Module 18968: GenericUpsellActionSheet ===
 
-// Module 18966 (GenericUpsellActionSheet)
+// Module 18968 (GenericUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -35,12 +35,12 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
     children: null
   };
   const obj3 = { children: null };
-  items = [closure_5(FastImageDefault, { source: imageSource, style: tmp.image }), closure_5(markAsDismissed(5901).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
+  items = [closure_5(FastImageDefault, { source: imageSource, style: tmp.image }), closure_5(markAsDismissed(5891).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
   obj3.children = items;
   obj2.header = closure_6(View, obj3);
   const obj5 = { style: tmp.content, children: null };
-  const items1 = [closure_5(markAsDismissed(5929).Text, { accessibilityRole: "header", variant: "heading-xl/medium", color: "mobile-text-heading-primary", children: header }), closure_5(markAsDismissed(1187).Spacer, { size: 12 }), closure_5(markAsDismissed(5929).Text, { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: body }), closure_5(markAsDismissed(5936).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta })];
+  const items1 = [closure_5(markAsDismissed(5919).Text, { accessibilityRole: "header", variant: "heading-xl/medium", color: "mobile-text-heading-primary", children: header }), closure_5(markAsDismissed(1187).Spacer, { size: 12 }), closure_5(markAsDismissed(5919).Text, { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: body }), closure_5(markAsDismissed(5926).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta })];
   obj5.children = items1;
   obj2.children = closure_6(View, obj5);
-  return closure_5(markAsDismissed(5566).BottomSheet, obj2);
+  return closure_5(markAsDismissed(5556).BottomSheet, obj2);
 };

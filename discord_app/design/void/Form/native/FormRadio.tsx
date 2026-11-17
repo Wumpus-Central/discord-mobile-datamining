@@ -1,7 +1,7 @@
 // === Module 7907: Form/FormRadio ===
 
 // Module 7907 (Form/FormRadio)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

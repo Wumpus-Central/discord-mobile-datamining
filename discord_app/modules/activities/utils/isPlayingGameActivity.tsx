@@ -2,7 +2,7 @@
 
 // Module 10651 (isPlayingGameActivity)
 import Constants from "Constants" /* 2145 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8469 */;
 import size from "module_2" /* 2 */;
 

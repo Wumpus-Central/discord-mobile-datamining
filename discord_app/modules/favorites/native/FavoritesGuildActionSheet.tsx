@@ -1,12 +1,12 @@
-// === Module 18855: FavoritesGuildActionSheet ===
+// === Module 18857: FavoritesGuildActionSheet ===
 
-// Module 18855 (FavoritesGuildActionSheet)
+// Module 18857 (FavoritesGuildActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import _modDef3679 from "module_3679" /* 3679 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
-import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 18856 */;
-import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 18857 */;
-import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 18860 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
+import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 18858 */;
+import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 18859 */;
+import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 18862 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 5158 */;
 
@@ -37,7 +37,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   obj5.icon = closure_4(onClose(7953).ActionSheetRow.Icon, { IconComponent: onClose(8071).ThreadIcon });
   obj5.onPress = function onPress() {
     onClose();
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18858, dependencyMap.paths), undefined, "FavoritesGuildCleanupModal");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18860, dependencyMap.paths), undefined, "FavoritesGuildCleanupModal");
   };
   obj4.children = closure_4(onClose(7953).ActionSheetRow, obj5);
   const items1 = [closure_4(onClose(7953).ActionSheetRow.Group, obj4), , ];
@@ -69,7 +69,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   if (tmp3.isAvailable) {
     const obj13 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
     ({ label: obj12.label, subLabel: obj12.subLabel } = tmp3);
-    const obj25 = { IconComponent: tmp4(6040).TrashIcon };
+    const obj25 = { IconComponent: tmp4(6030).TrashIcon };
     obj13.icon = closure_4(tmp4(7953).ActionSheetRow.Icon, obj25);
     obj13.onPress = function onPress() {
       onClose();

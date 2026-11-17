@@ -2,7 +2,7 @@
 
 // Module 9251 (NewThreadSystemMessage)
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9188 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9190 */;
 import createCommonMessageDefault from "createCommonMessage" /* 9192 */;

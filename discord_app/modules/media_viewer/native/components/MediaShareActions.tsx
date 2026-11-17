@@ -3,13 +3,13 @@
 // Module 10204 (MediaShareActions)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import useChatLayout from "useChatLayout" /* 5495 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
-import LinkIcon from "LinkIcon" /* 6029 */;
-import DownloadIcon from "DownloadIcon" /* 6035 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6361 */;
+import useChatLayout from "useChatLayout" /* 5485 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
+import LinkIcon from "LinkIcon" /* 6019 */;
+import DownloadIcon from "DownloadIcon" /* 6025 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6351 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7653 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import ActionSheet from "ActionSheet" /* 7951 */;
@@ -26,7 +26,7 @@ import WindowLaunchIcon from "WindowLaunchIcon" /* 15195 */;
 import noop from "module_19" /* 19 */;
 import ICYMIStore from "ICYMIStore" /* 10205 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import MessagePreviewStore from "MessagePreviewStore" /* 10228 */;
 
 require = fn;
@@ -124,7 +124,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = source.attachmentId;
         if (null != attachmentId) {
-          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "caractere" };
+          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "pipe" };
           const obj4 = { onlyAttachmentIds: null };
           items = [attachmentId];
           obj4.onlyAttachmentIds = items;
@@ -132,7 +132,7 @@ function useMediaShareActions(source) {
           ForwardModalUtils.openForwardModal(obj3);
         }
       } else {
-        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "caractere" };
+        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "pipe" };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
         obj7.onlyEmbedIndices = items1;

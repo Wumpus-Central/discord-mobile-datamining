@@ -1,6 +1,6 @@
-// === Module 18131: HighlightNotificationsSetting ===
+// === Module 18133: HighlightNotificationsSetting ===
 
-// Module 18131 (HighlightNotificationsSetting)
+// Module 18133 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import GuildStore from "GuildStore" /* 5177 */;
@@ -32,7 +32,7 @@ const route = SettingBuilders.createRoute({
 SettingBuilders = fn(12406);
 const obj4 = {};
 const merged = Object.assign(route);
-obj4.parent = fn(18111).MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS;
+obj4.parent = fn(18113).MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS;
 const route1 = SettingBuilders.createRoute(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");

@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8121 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6826 */;
+import TextStyles from "TextStyles" /* 6816 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);

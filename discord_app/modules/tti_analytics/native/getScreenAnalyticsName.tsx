@@ -1,8 +1,8 @@
-// === Module 18726: getScreenAnalyticsName ===
+// === Module 18728: getScreenAnalyticsName ===
 
-// Module 18726 (getScreenAnalyticsName)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+// Module 18728 (getScreenAnalyticsName)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 
 require = fn;

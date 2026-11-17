@@ -1,6 +1,6 @@
-// === Module 20189: ChangelogManager ===
+// === Module 20192: ChangelogManager ===
 
-// Module 20189 (ChangelogManager)
+// Module 20192 (ChangelogManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
@@ -49,22 +49,30 @@ const prototype = function ChangelogManager() {
             closure_128_4 = undefined;
             closure_128_5 = undefined;
             c3 = 1;
-            c4 = 2;
-            locale = 1;
-            const obj12 = { value: tmp3(tmp86[5]).fetchChangelogConfig(), done: false };
-            return obj12;
+            if (obj27.isDiscordBackendDevelopment()) {
+              c3 = 0;
+              tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+              locale = 3;
+              return { value: "HermesInternal", done: null };
+            } else {
+              c4 = 2;
+              locale = 1;
+              const obj12 = { value: tmp3(tmp89[6]).fetchChangelogConfig(), done: false };
+              return obj12;
+            }
+            obj27 = applyArgumentsResult(tmp89[5]);
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
-          throw tmp86;
+          tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+          throw tmp89;
         } else if (2 === tmp7) {
           if (arg0 === 1) {
             locale = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
-            tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+            tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
             locale = 3;
             const obj17 = { value, done: true };
             return obj17;
@@ -89,18 +97,18 @@ const prototype = function ChangelogManager() {
                 continue;
               }
               return first;
-            })(body, applyArgumentsResult(tmp86[6]).getClientVersionForChangelog());
-            const obj23 = applyArgumentsResult(tmp86[6]);
+            })(body, applyArgumentsResult(tmp89[7]).getClientVersionForChangelog());
+            const obj24 = applyArgumentsResult(tmp89[7]);
             const obj20 = { type: "CHANGE_LOG_SET_CONFIG", config: closure_128_0.body, latestChangelogId: closure_128_2 };
-            tmp3(tmp86[7]).dispatch(obj20);
+            tmp3(tmp89[8]).dispatch(obj20);
             if (null == closure_128_2) {
               c3 = 0;
-              tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+              tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
               locale = 3;
               return { value: "HermesInternal", done: null };
             } else if (true !== body[closure_128_2].show_on_startup) {
               c3 = 0;
-              tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+              tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
               locale = 3;
               return { value: "HermesInternal", done: null };
             } else {
@@ -109,33 +117,33 @@ const prototype = function ChangelogManager() {
               if (null != closure_128_3) {
                 if (obj10.compare(closure_128_2, closure_128_3) <= 0) {
                   c3 = 0;
-                  tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+                  tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
                   locale = 3;
                   return { value: "HermesInternal", done: null };
                 }
-                obj10 = tmp3(tmp86[8]);
+                obj10 = tmp3(tmp89[9]);
               }
               c4 = 3;
               locale = 1;
-              const obj21 = { value: tmp3(tmp86[5]).fetchChangelog(closure_128_2, locale.locale), done: false };
-              return obj21;
+              const obj22 = { value: tmp3(tmp89[6]).fetchChangelog(closure_128_2, locale.locale), done: false };
+              return obj22;
             }
-            const obj24 = tmp3(tmp86[7]);
+            const obj25 = tmp3(tmp89[8]);
           }
         } else if (arg0 === 1) {
           locale = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 0;
-          tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+          tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
           locale = 3;
-          const obj22 = { value, done: true };
-          return obj22;
+          const obj23 = { value, done: true };
+          return obj23;
         } else {
           closure_128_5 = value;
           if (null == closure_128_5) {
             c3 = 0;
-            tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+            tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
             locale = 3;
             return { value: "HermesInternal", done: null };
           } else {
@@ -143,7 +151,7 @@ const prototype = function ChangelogManager() {
               if (null != ChangelogStore.lastSeenChangelogDate()) {
                 if (ChangelogStore.isLocked()) {
                   c3 = 0;
-                  tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+                  tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
                   locale = 3;
                   return { value: "HermesInternal", done: null };
                 } else {
@@ -152,29 +160,29 @@ const prototype = function ChangelogManager() {
                   const _Date2 = Date;
                   const date1 = new Date(closure_128_4);
                   if (date > date1) {
-                    applyArgumentsResult(tmp86[9]).openChangelog();
-                    const obj = applyArgumentsResult(tmp86[9]);
+                    applyArgumentsResult(tmp89[10]).openChangelog();
+                    const obj = applyArgumentsResult(tmp89[10]);
                   }
                   c3 = 0;
-                  tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+                  tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
                   locale = 3;
                   return { value: "HermesInternal", done: null };
                 }
               }
             }
-            tmp3(tmp86[5]).markChangelogAsSeen(closure_128_2, closure_128_5.date);
+            tmp3(tmp89[6]).markChangelogAsSeen(closure_128_2, closure_128_5.date);
             c3 = 0;
-            const obj4 = tmp3(tmp86[5]);
-            tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+            const obj4 = tmp3(tmp89[6]);
+            tmp3(tmp89[8]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
             locale = 3;
-            const obj25 = { value: undefined, done: true };
-            return obj25;
+            const obj26 = { value: undefined, done: true };
+            return obj26;
           }
         }
-      } catch (tmp86) {
+      } catch (tmp89) {
         if (tmp4 === c3) {
           locale = tmp2;
-          throw tmp86;
+          throw tmp89;
         } else {
           c4 = tmp;
         }

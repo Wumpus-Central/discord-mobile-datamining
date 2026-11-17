@@ -1,6 +1,6 @@
-// === Module 19115: GuildsBarDirectMessage ===
+// === Module 19117: GuildsBarDirectMessage ===
 
-// Module 19115 (GuildsBarDirectMessage)
+// Module 19117 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8418 */;

@@ -2,7 +2,7 @@
 
 // Module 10851 (TvIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10852 from "module_10852" /* 10852 */;
 import noop from "module_19" /* 19 */;
 

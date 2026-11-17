@@ -1,6 +1,6 @@
-// === Module 18889: useGuildPowerupsBoostAction ===
+// === Module 18891: useGuildPowerupsBoostAction ===
 
-// Module 18889 (useGuildPowerupsBoostAction)
+// Module 18891 (useGuildPowerupsBoostAction)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
 import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 10744 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9236 */;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5524);
+const GuildPowerupsConstants = fn(5514);
 ({ BoostPurchaseIntent: closure_6, GuildPowerupType: metroImportDefault } = GuildPowerupsConstants);
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_8, AnalyticsObjectTypes: closure_9 } = Constants);
@@ -86,7 +86,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
         closure_128_0 = PERK;
         availableGuildBoostSlots = tmp3(9235).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
         if (availableGuildBoostSlots.length >= closure_129_2) {
-          tmp15 = tmp3(6952);
+          tmp15 = tmp3(6942);
           const obj9 = { guildBoostSlots: availableGuildBoostSlots.slice(0, closure_129_2), guildId: closure_129_0, intent: closure_128_0 };
           tmp15.openTransferModal(obj9);
         } else if (!closure_129_4) {

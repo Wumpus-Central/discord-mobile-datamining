@@ -8,7 +8,7 @@ import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import FlagUtilsAll from "FlagUtils" /* 1406 */;
 import ChannelRecord from "ChannelRecord" /* 5159 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
 import UserSearchWorkerManager from "UserSearchWorkerManager" /* 10251 */;
 import UserRecord from "UserRecord" /* 1407 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

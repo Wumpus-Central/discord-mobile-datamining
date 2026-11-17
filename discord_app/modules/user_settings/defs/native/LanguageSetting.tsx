@@ -1,6 +1,6 @@
-// === Module 18044: LanguageSetting ===
+// === Module 18046: LanguageSetting ===
 
-// Module 18044 (LanguageSetting)
+// Module 18046 (LanguageSetting)
 import util from "util" /* 1113 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 

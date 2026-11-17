@@ -1,11 +1,11 @@
-// === Module 19717: IconLabelBlock ===
+// === Module 19719: IconLabelBlock ===
 
-// Module 19717 (IconLabelBlock)
+// Module 19719 (IconLabelBlock)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import shared from "shared" /* 5313 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import IconUploaderDefault from "IconUploader" /* 10911 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -93,7 +93,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return metroImportDefault(View, obj);
 };
-IconLabelBlock.contextType = fn(5377).ThemeContext;
+IconLabelBlock.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

@@ -2,7 +2,7 @@
 
 // Module 12321 (EducationIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod12320 from "module_12320" /* 12320 */;
 import noop from "module_19" /* 19 */;
 

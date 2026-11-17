@@ -1,7 +1,7 @@
 // === Module 13668: BunnyIllocon ===
 
 // Module 13668 (BunnyIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef13669 from "module_13669" /* 13669 */;
 import _modDef13670 from "module_13670" /* 13670 */;

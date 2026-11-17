@@ -1,8 +1,8 @@
 // === Module 11998: isSelectedFromHomeChannel ===
 
 // Module 11998 (isSelectedFromHomeChannel)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 7036 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 

@@ -2,8 +2,8 @@
 
 // Module 15758 (useUserProfileVoiceActivity)
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8469 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const require = fn;
 const size = fn(2);

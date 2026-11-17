@@ -2,7 +2,7 @@
 
 // Module 10296 (EpicGamesNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10297 from "module_10297" /* 10297 */;
 import noop from "module_19" /* 19 */;
 

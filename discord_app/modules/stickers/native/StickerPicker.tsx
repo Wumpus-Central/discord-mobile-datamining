@@ -5,8 +5,8 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
-import StickersUtils from "StickersUtils" /* 6792 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
+import StickersUtils from "StickersUtils" /* 6782 */;
 import StickerSendability from "StickerSendability" /* 7225 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 11170 */;
 import StickersSearchUtils from "StickersSearchUtils" /* 11364 */;
@@ -143,7 +143,7 @@ export default noop.memo(function StickerPicker(channel) {
   }, items4);
   const tmp12 = onPressSticker(11250)({ hasCategories: true });
   const items5 = [channel];
-  const isTidaMediaTakedownRegion = channel(5995).useIsTidaMediaTakedownRegion();
+  const isTidaMediaTakedownRegion = channel(5985).useIsTidaMediaTakedownRegion();
   const callback3 = noop.useCallback((renderableSticker) => {
     const result = showStickerDetailActionSheet.showStickerDetailActionSheet({ renderableSticker, channel });
   }, items5);
@@ -192,5 +192,5 @@ export default noop.memo(function StickerPicker(channel) {
     obj5.children = closure_16(closure_5, obj6);
     return closure_15(channel(7918).AnalyticsLocationProvider, obj5);
   }
-  let obj4 = channel(5995);
+  let obj4 = channel(5985);
 });

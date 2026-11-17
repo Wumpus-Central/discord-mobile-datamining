@@ -3,9 +3,9 @@
 // Module 13757 (ConjurePublishScheduleProposalCard)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 13211 */;
 import useConjurePublishScheduleProposalDefault from "useConjurePublishScheduleProposal" /* 13758 */;
 import noop from "module_19" /* 19 */;

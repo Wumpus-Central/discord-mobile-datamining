@@ -1,12 +1,12 @@
-// === Module 19842: BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 19844: BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 19842 (BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet)
+// Module 19844 (BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet)
 import _modDef3579 from "module_3579" /* 3579 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8484 */;
-import IncentivizedAccountLinkConfirmationPromoSheetDefault from "IncentivizedAccountLinkConfirmationPromoSheet" /* 19835 */;
+import IncentivizedAccountLinkConfirmationPromoSheetDefault from "IncentivizedAccountLinkConfirmationPromoSheet" /* 19837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_account_linking/native/BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet.tsx");
 
 export default function BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet() {
-  const bloonsTDBattlesUpsellExperiment = analyticsLocations(19840).bloonsTDBattlesUpsellExperiment;
+  const bloonsTDBattlesUpsellExperiment = analyticsLocations(19842).bloonsTDBattlesUpsellExperiment;
   analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.ACTION_SHEET).analyticsLocations;
   let obj = { title: null, description: null, actions: null };
   const intl = analyticsLocations(1113).intl;
@@ -31,6 +31,6 @@ export default function BloonsTDBattlesIncentivizedAccountLinkConfirmationBottom
     const obj2 = CollectiblesActionCreators;
     const result = obj2.openCollectiblesShopMobile({ analyticsLocations, analyticsSource: AnalyticsLocationDefault.ACTION_SHEET, screen: constants.FEATURED_PAGE });
   };
-  obj.actions = jsx(analyticsLocations(5936).Button, { text: null, variant: "primary", size: "lg", onPress: null });
+  obj.actions = jsx(analyticsLocations(5926).Button, { text: null, variant: "primary", size: "lg", onPress: null });
   return jsx(IncentivizedAccountLinkConfirmationPromoSheetDefault, { title: null, description: null, actions: null });
 };

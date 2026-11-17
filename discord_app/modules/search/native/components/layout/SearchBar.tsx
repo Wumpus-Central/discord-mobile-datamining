@@ -1,9 +1,9 @@
-// === Module 19447: layout/SearchBar ===
+// === Module 19449: layout/SearchBar ===
 
-// Module 19447 (layout/SearchBar)
+// Module 19449 (layout/SearchBar)
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import SearchPlatformUtils from "SearchPlatformUtils" /* 14740 */;
 import TrackingDefault from "Tracking" /* 14761 */;
 import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14765 */;

@@ -2,7 +2,7 @@
 
 // Module 11653 (CameraIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11654 from "module_11654" /* 11654 */;
 import noop from "module_19" /* 19 */;
 

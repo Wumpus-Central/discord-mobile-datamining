@@ -3,7 +3,7 @@
 // Module 11634 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 8879 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 11153 */;
 import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11635 */;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const DraftType = fn(8725).DraftType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(5567).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5557).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5306);

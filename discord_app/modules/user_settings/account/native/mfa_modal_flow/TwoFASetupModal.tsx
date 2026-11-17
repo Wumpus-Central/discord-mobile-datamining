@@ -3,7 +3,7 @@
 // Module 17282 (TwoFASetupModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useInitialValueDefault from "useInitialValue" /* 5917 */;
+import useInitialValueDefault from "useInitialValue" /* 5907 */;
 import Navigator from "Navigator" /* 7490 */;
 import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 17281 */;
 import TwoFASetupScanDefault from "TwoFASetupScan" /* 17288 */;
@@ -103,7 +103,7 @@ export function TwoFASetupModalScreen(children) {
       stringResult = intl.string(tmp2(1113).t.XiOHRX);
     }
     obj5.text = stringResult;
-    obj5 = closure_6(tmp2(5936).Button, obj5);
+    obj5 = closure_6(tmp2(5926).Button, obj5);
     obj4.children = obj5;
     closure_6(tmp2(7415).SafeAreaPaddingView, obj4);
   }

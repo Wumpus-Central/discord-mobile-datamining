@@ -8,7 +8,7 @@ import GlobalUtils from "GlobalUtils" /* 1255 */;
 import FavoritesUtils from "FavoritesUtils" /* 5180 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6957 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6947 */;
 import GuildChannelStore from "GuildChannelStore" /* 5236 */;
 
 require = fn;

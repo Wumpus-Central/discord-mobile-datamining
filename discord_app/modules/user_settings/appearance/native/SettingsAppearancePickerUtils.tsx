@@ -1,13 +1,13 @@
-// === Module 17920: SettingsAppearancePickerUtils ===
+// === Module 17922: SettingsAppearancePickerUtils ===
 
-// Module 17920 (SettingsAppearancePickerUtils)
+// Module 17922 (SettingsAppearancePickerUtils)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
 import utils_ColorDefault from "utils/Color" /* 5304 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5544 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5534 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -207,7 +207,7 @@ export function convertThemesToAnimatedThemes(c1) {
 }
 export function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(5902).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(5892).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

@@ -1,7 +1,7 @@
 // === Module 7461: TableRowBadge ===
 
 // Module 7461 (TableRowBadge)
-import native from "native" /* 5481 */;
+import native from "native" /* 5471 */;
 import Badge from "Badge" /* 7459 */;
 import size from "module_2" /* 2 */;
 

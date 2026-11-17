@@ -4,7 +4,7 @@
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef2733 from "module_2733" /* 2733 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 10748 */;
 import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 10749 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -45,7 +45,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   let tmp7Result = null != error;
   if (tmp7Result) {
     const obj7 = { style: tmp.warningText, variant: "body-xs/semibold", color: "text-feedback-critical", children: error };
-    tmp7Result = closure_4(tmp5(5929).Text, obj7);
+    tmp7Result = closure_4(tmp5(5919).Text, obj7);
   }
   const obj8 = { children: null };
   items = [tmp7Result, , ];

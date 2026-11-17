@@ -1,9 +1,9 @@
-// === Module 19835: IncentivizedAccountLinkConfirmationPromoSheet ===
+// === Module 19837: IncentivizedAccountLinkConfirmationPromoSheet ===
 
-// Module 19835 (IncentivizedAccountLinkConfirmationPromoSheet)
+// Module 19837 (IncentivizedAccountLinkConfirmationPromoSheet)
 import initialize from "initialize" /* 504 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import PromoSheet from "PromoSheet" /* 10713 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
@@ -22,7 +22,7 @@ export default function IncentivizedAccountLinkConfirmationPromoSheet(arg0) {
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = { source: null, resizeMode: "contain", style: null, enableAnimation: null };
   const obj3 = { uri: null };
-  obj3.uri = importDefault(stateFromStores ? 18520 : 18521);
+  obj3.uri = importDefault(stateFromStores ? 18522 : 18523);
   obj2.source = obj3;
   obj2.style = tmp.illustration;
   obj2.enableAnimation = !stateFromStores;

@@ -1,7 +1,7 @@
 // === Module 7935: useStartProviderConnection ===
 
 // Module 7935 (useStartProviderConnection)
-import LinkingDefault from "Linking" /* 6012 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

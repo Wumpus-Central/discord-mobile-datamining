@@ -1,6 +1,6 @@
-// === Module 6184: WindowVisibilityUtils ===
+// === Module 6174: WindowVisibilityUtils ===
 
-// Module 6184 (WindowVisibilityUtils)
+// Module 6174 (WindowVisibilityUtils)
 import AppStateStore from "AppStateStore" /* 2120 */;
 
 const AppStates = fn(1072).AppStates;

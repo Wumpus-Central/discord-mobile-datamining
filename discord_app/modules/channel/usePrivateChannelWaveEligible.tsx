@@ -1,7 +1,7 @@
-// === Module 18758: usePrivateChannelWaveEligible ===
+// === Module 18760: usePrivateChannelWaveEligible ===
 
-// Module 18758 (usePrivateChannelWaveEligible)
-import MessageStore from "MessageStore" /* 6372 */;
+// Module 18760 (usePrivateChannelWaveEligible)
+import MessageStore from "MessageStore" /* 6362 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 
 const require = globalThis.__r;

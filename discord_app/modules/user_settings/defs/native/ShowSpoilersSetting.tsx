@@ -1,6 +1,6 @@
-// === Module 18093: ShowSpoilersSetting ===
+// === Module 18095: ShowSpoilersSetting ===
 
-// Module 18093 (ShowSpoilersSetting)
+// Module 18095 (ShowSpoilersSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import noop from "module_19" /* 19 */;

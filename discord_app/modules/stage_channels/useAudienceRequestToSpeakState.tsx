@@ -1,7 +1,7 @@
-// === Module 6358: useAudienceRequestToSpeakState ===
+// === Module 6348: useAudienceRequestToSpeakState ===
 
-// Module 6358 (useAudienceRequestToSpeakState)
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+// Module 6348 (useAudienceRequestToSpeakState)
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const require = globalThis.__r;
 

@@ -1,6 +1,6 @@
-// === Module 18097: SwipeRightToLeftSetting ===
+// === Module 18099: SwipeRightToLeftSetting ===
 
-// Module 18097 (SwipeRightToLeftSetting)
+// Module 18099 (SwipeRightToLeftSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;

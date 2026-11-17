@@ -3,7 +3,7 @@
 // Module 17093 (useHexagonCampaignNewFontBadge)
 import initialize from "initialize" /* 504 */;
 import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 5336 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import HexagonActionCreators from "HexagonActionCreators" /* 17084 */;
 import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 17085 */;
 import noop from "module_19" /* 19 */;

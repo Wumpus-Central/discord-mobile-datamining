@@ -2,7 +2,7 @@
 
 // Module 12413 (ChannelInfoActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import ChannelStatusStore from "ChannelStatusStore" /* 8732 */;
 
 const size = fn(2);

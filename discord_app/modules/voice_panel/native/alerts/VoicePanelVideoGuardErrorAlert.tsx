@@ -2,8 +2,8 @@
 
 // Module 15637 (VoicePanelVideoGuardErrorAlert)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import AlertModal from "AlertModal" /* 6274 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import VideoGuardExperiment from "VideoGuardExperiment" /* 15634 */;
 import noop from "module_19" /* 19 */;
 

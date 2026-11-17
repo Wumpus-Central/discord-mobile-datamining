@@ -1,12 +1,12 @@
-// === Module 20022: VoicePanelAnimatedActivityCard ===
+// === Module 20024: VoicePanelAnimatedActivityCard ===
 
-// Module 20022 (VoicePanelAnimatedActivityCard)
+// Module 20024 (VoicePanelAnimatedActivityCard)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensions from "useWindowDimensions" /* 1496 */;
 import _mod1708 from "module_1708" /* 1708 */;
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2146 */;
-import native from "native" /* 5377 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import native from "native" /* 5367 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
 import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 11008 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
@@ -414,27 +414,27 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj6.isActivityFocused = first1;
       const obj7 = { channel: stateFromStores, layoutMode: tmp75 };
       obj6.children = closure_14(tmp4(12848), obj7, tmp3[0]);
-      const items27 = [closure_14(tmp4(20024), obj6), ];
+      const items27 = [closure_14(tmp4(20026), obj6), ];
       let tmp79Result = null;
       if (stateFromStores2) {
-        tmp79Result = closure_14(tmp4(20025), {});
+        tmp79Result = closure_14(tmp4(20027), {});
       }
       items27[1] = tmp79Result;
       obj5.children = items27;
       obj4.children = closure_15(tmp4(1655).View, obj5);
-      let tmp79Result2 = closure_14(tmp8(5598).GestureDetector, obj4);
+      let tmp79Result2 = closure_14(tmp8(5588).GestureDetector, obj4);
       let tmp76 = closure_14;
-      const tmp4Result2 = tmp4(20024);
+      const tmp4Result2 = tmp4(20026);
     } else if (null == activityShelfItemData) {
       const obj8 = { activity: stateFromStores1, application: first };
-      tmp79Result2 = closure_14(tmp4(20026), obj8);
+      tmp79Result2 = closure_14(tmp4(20028), obj8);
       tmp76 = closure_14;
     } else {
       tmp76 = closure_14;
       const obj10 = { gesture: memo1, children: null };
       const obj11 = { context: memo, guildId: stateFromStores.guild_id, activityItem: activityShelfItemData, locationObject: analyticsContext.location, itemDimensions: tmp2Result2[0], disableBadges: true };
-      obj10.children = closure_14(tmp4(20030), obj11);
-      tmp79Result2 = closure_14(tmp8(5598).GestureDetector, obj10);
+      obj10.children = closure_14(tmp4(20032), obj11);
+      tmp79Result2 = closure_14(tmp8(5588).GestureDetector, obj10);
     }
     const obj12 = { value: tmp4Result(tmp4(7937).ACTIVITY_TILE).analyticsLocations, children: tmp79Result2 };
     return tmp76(tmp8(7918).AnalyticsLocationProvider, obj12);

@@ -2,7 +2,7 @@
 
 // Module 12678 (StampXIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod12679 from "module_12679" /* 12679 */;
 import noop from "module_19" /* 19 */;
 

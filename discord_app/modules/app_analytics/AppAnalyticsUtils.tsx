@@ -1,6 +1,6 @@
-// === Module 6067: AppAnalyticsUtils ===
+// === Module 6057: AppAnalyticsUtils ===
 
-// Module 6067 (AppAnalyticsUtils)
+// Module 6057 (AppAnalyticsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import ChannelRecord from "ChannelRecord" /* 5159 */;
 import ChannelConstants from "ChannelConstants" /* 5162 */;
@@ -8,18 +8,18 @@ import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 5236 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildRoleStore from "GuildRoleStore" /* 5212 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

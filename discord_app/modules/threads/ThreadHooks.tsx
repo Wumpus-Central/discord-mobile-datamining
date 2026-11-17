@@ -10,7 +10,7 @@ import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 12527 */;
 import useIsRemoteDefault from "useIsRemote" /* 12737 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import createExperiment from "createExperiment" /* 5531 */;
+import createExperiment from "createExperiment" /* 5521 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
@@ -566,8 +566,8 @@ export function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("shouldAgeVerifyForAgeGate").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(6838).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(6838);
+    shouldAgeVerifyForAgeGate = tmp3(6828).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(6828);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

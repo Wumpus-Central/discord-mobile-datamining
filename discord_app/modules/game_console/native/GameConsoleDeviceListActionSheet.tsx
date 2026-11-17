@@ -3,9 +3,9 @@
 // Module 10830 (GameConsoleDeviceListActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10821 */;
 import _modDef10831 from "module_10831" /* 10831 */;
@@ -13,7 +13,7 @@ import _modDef10832 from "module_10832" /* 10832 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 6072 */;
+import GameConsoleStore from "GameConsoleStore" /* 6062 */;
 
 const require = globalThis.__r;
 
@@ -124,7 +124,7 @@ export default function GameConsoleListActionSheet(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          v1(5552).hideActionSheet();
+          v1(5542).hideActionSheet();
           const ComponentDispatch = tmp4(1108).ComponentDispatch;
           ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
           dependencyMap = 3;

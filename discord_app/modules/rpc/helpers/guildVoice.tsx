@@ -8,7 +8,7 @@ import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 
 require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6761).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6751).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1072);
 ({ ChannelTypes: metroImportDefault, Permissions: closure_8, RPCErrors: closure_9 } = Constants);
 const size = fn(2);

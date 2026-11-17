@@ -1,24 +1,24 @@
-// === Module 6909: StageChannelActionCreators ===
+// === Module 6899: StageChannelActionCreators ===
 
-// Module 6909 (StageChannelActionCreators)
+// Module 6899 (StageChannelActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import Server from "Server" /* 2119 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6358 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6915 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6348 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6905 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7678 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import StageInstanceActionCreators from "StageInstanceActionCreators" /* 8441 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const HTTPUtils = obj(1285);
-const AppAnalyticsUtils = obj(6067);
-const useStageSpeakingForCurrentUser = obj(6908);
-const StageChannelUtils = obj(6911);
+const AppAnalyticsUtils = obj(6057);
+const useStageSpeakingForCurrentUser = obj(6898);
+const StageChannelUtils = obj(6901);
 require = fn;
 function audienceAckRequestToSpeak(channel, suppress) {
   let flag = arg2;
@@ -240,7 +240,7 @@ let closure_14 = async function _endStage(arg0) {
 };
 const Constants = fn(1072);
 ({ AbortCodes: metroImportDefault, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
-const SafetyToastType = fn(6910).SafetyToastType;
+const SafetyToastType = fn(6900).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 

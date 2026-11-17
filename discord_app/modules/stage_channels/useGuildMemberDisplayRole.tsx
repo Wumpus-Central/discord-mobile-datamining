@@ -1,6 +1,6 @@
-// === Module 6947: useGuildMemberDisplayRole ===
+// === Module 6937: useGuildMemberDisplayRole ===
 
-// Module 6947 (useGuildMemberDisplayRole)
+// Module 6937 (useGuildMemberDisplayRole)
 import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;

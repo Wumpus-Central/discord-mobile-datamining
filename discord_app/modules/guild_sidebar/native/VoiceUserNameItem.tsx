@@ -1,12 +1,12 @@
-// === Module 18844: VoiceUserNameItem ===
+// === Module 18846: VoiceUserNameItem ===
 
-// Module 18844 (VoiceUserNameItem)
+// Module 18846 (VoiceUserNameItem)
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6750 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6740 */;
 import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 10066 */;
-import VoiceGuildTagDefault from "VoiceGuildTag" /* 18845 */;
+import VoiceGuildTagDefault from "VoiceGuildTag" /* 18847 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -3,7 +3,7 @@
 // Module 10784 (useMultiPerkStatusValues)
 import util from "util" /* 1113 */;
 import _modDef2733 from "module_2733" /* 2733 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5524 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5514 */;
 import usePowerupActiveStatus from "usePowerupActiveStatus" /* 10700 */;
 import size from "module_2" /* 2 */;
 

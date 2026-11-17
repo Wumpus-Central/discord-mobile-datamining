@@ -1,11 +1,11 @@
-// === Module 18449: UserSettingsDesignSystemNavigator ===
+// === Module 18451: UserSettingsDesignSystemNavigator ===
 
-// Module 18449 (UserSettingsDesignSystemNavigator)
+// Module 18451 (UserSettingsDesignSystemNavigator)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
-import ButtonGroup from "ButtonGroup" /* 6951 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
+import ButtonGroup from "ButtonGroup" /* 6941 */;
 import TableRow from "TableRow" /* 7443 */;
 import Navigator from "Navigator" /* 7490 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
@@ -144,7 +144,7 @@ function DemoNavigator(arg0) {
     const obj10 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
     obj10.headerLeft = NavigatorHeader.getHeaderTextButton("Cancel", ModalActionCreatorsDefault.pop);
     obj10.headerRight = function headerRight() {
-      return closure_1_7(closure_1_0(7427).HeaderActionButton, { text: "Save", onPress: closure_1_1(6848).pop });
+      return closure_1_7(closure_1_0(7427).HeaderActionButton, { text: "Save", onPress: closure_1_1(6838).pop });
     };
     obj10.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(7493).NavigatorHeader, { title: constants.TEXT_BUTTONS });
@@ -244,7 +244,7 @@ export default function UserSettingsDesignSystemNavigator() {
   items1 = [closure_7(value(7747).TableRadioRow, { label: "Center", value: "center" }), closure_7(value(7747).TableRadioRow, { label: "Left", value: "left" })];
   obj4.children = items1;
   items[1] = closure_8(value(7745).TableRadioGroup, obj4);
-  items[2] = closure_7(value(5936).Button, {
+  items[2] = closure_7(value(5926).Button, {
     onPress: function openNavigator() {
       let tmp2;
       if ("none" !== first) {
@@ -256,6 +256,6 @@ export default function UserSettingsDesignSystemNavigator() {
     text: "Show Navigator"
   });
   obj2.children = items;
-  obj.children = closure_8(value(6337).Stack, obj2);
+  obj.children = closure_8(value(6327).Stack, obj2);
   return closure_7(closure_5, obj);
 };

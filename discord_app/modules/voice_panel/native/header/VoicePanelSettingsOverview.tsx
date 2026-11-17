@@ -1,16 +1,16 @@
-// === Module 19194: VoicePanelSettingsOverview ===
+// === Module 19196: VoicePanelSettingsOverview ===
 
-// Module 19194 (VoicePanelSettingsOverview)
+// Module 19196 (VoicePanelSettingsOverview)
 import LogAggregator from "LogAggregator" /* 7 */;
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowIcon from "TableRowIcon" /* 7455 */;
 import TableRowArrow from "TableRowArrow" /* 7456 */;
@@ -26,9 +26,9 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11951 */;
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 12998 */;
 import _modDef16072 from "module_16072" /* 16072 */;
-import WrenchIcon from "WrenchIcon" /* 18194 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19192 */;
-import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 19195 */;
+import WrenchIcon from "WrenchIcon" /* 18196 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19194 */;
+import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 19197 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
@@ -38,7 +38,7 @@ import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import UserStore from "UserStore" /* 1388 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 
 require = fn;
 class VoicePanelSettingsOverviewHeader {
@@ -156,7 +156,7 @@ function ActivityDebugToggle() {
 }
 const Constants = fn(1072);
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
-const isStreamParticipant = fn(5983).isStreamParticipant;
+const isStreamParticipant = fn(5973).isStreamParticipant;
 let closure_17 = fn(10628).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
@@ -250,7 +250,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19196, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19198, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

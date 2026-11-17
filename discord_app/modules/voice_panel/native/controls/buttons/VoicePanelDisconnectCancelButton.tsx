@@ -1,22 +1,22 @@
-// === Module 20093: VoicePanelDisconnectCancelButton ===
+// === Module 20095: VoicePanelDisconnectCancelButton ===
 
-// Module 20093 (VoicePanelDisconnectCancelButton)
+// Module 20095 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 575 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
-import StreamActionCreators from "StreamActionCreators" /* 6862 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 6903 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6935 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
+import StreamActionCreators from "StreamActionCreators" /* 6852 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 6893 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6925 */;
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 7025 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
 import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12747 */;
 import shouldShowEndStageModalDefault from "shouldShowEndStageModal" /* 12944 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 20084 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 20086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import VoicePanelStore from "VoicePanelStore" /* 6901 */;
+import VoicePanelStore from "VoicePanelStore" /* 6891 */;
 
 const require = globalThis.__r;
 
@@ -153,7 +153,7 @@ export default function DisconnectCancelButton(props) {
   if (first === constants.ACTIVITY) {
     PhoneHangUpIcon = tmp8(12295).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(20054).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(20056).ScreenXIcon;
   } else {
     PhoneHangUpIcon = tmp8(9104).PhoneHangUpIcon;
   }

@@ -49,13 +49,13 @@ export default function AppInteractionInfoActionSheet(message) {
     return metroImportDefault(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
   }, items);
   if (interactionMetadata != null) {
-    tmp3 = interactionMetadata.authorizing_integration_owners[message(undefined, 5953).ApplicationIntegrationType.USER_INSTALL];
+    tmp3 = interactionMetadata.authorizing_integration_owners[message(undefined, 5943).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp3;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp6;
   if (interactionMetadata2 != null) {
-    tmp6 = interactionMetadata2.authorizing_integration_owners[message(undefined, 5953).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp6 = interactionMetadata2.authorizing_integration_owners[message(undefined, 5943).ApplicationIntegrationType.GUILD_INSTALL];
   }
   noop = tmp6;
   const interactionMetadata3 = message.interactionMetadata;
@@ -138,5 +138,5 @@ export default function AppInteractionInfoActionSheet(message) {
   }
   items5[1] = tmp29Result;
   obj11.children = closure_8(message(7746).TableRowGroup, { hasIcons: true, children: items5 });
-  return closure_7(message(5566).BottomSheet, obj11);
+  return closure_7(message(5556).BottomSheet, obj11);
 };

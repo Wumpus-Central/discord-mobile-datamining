@@ -1,13 +1,13 @@
-// === Module 19435: ConjureChannelChatToasts ===
+// === Module 19437: ConjureChannelChatToasts ===
 
-// Module 19435 (ConjureChannelChatToasts)
+// Module 19437 (ConjureChannelChatToasts)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtils from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import UserUtils from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Card from "Card" /* 7445 */;
-import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 19436 */;
+import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 19438 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

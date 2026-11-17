@@ -2,7 +2,7 @@
 
 // Module 13322 (BugIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod13323 from "module_13323" /* 13323 */;
 import noop from "module_19" /* 19 */;
 

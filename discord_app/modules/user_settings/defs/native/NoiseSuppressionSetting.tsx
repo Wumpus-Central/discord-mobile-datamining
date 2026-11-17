@@ -1,6 +1,6 @@
-// === Module 17875: NoiseSuppressionSetting ===
+// === Module 17877: NoiseSuppressionSetting ===
 
-// Module 17875 (NoiseSuppressionSetting)
+// Module 17877 (NoiseSuppressionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 13032 */;

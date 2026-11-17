@@ -1,7 +1,7 @@
 // === Module 12909: useStageChannelConnectAction ===
 
 // Module 12909 (useStageChannelConnectAction)
-import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 6905 */;
+import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 6895 */;
 import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 12908 */;
 import size from "module_2" /* 2 */;
 

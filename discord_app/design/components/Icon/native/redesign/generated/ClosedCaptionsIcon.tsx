@@ -2,7 +2,7 @@
 
 // Module 17570 (ClosedCaptionsIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod17571 from "module_17571" /* 17571 */;
 import noop from "module_19" /* 19 */;
 

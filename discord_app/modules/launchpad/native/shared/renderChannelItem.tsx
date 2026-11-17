@@ -1,16 +1,16 @@
-// === Module 19487: renderChannelItem ===
+// === Module 19489: renderChannelItem ===
 
-// Module 19487 (renderChannelItem)
+// Module 19489 (renderChannelItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import NotificationCenterUtils from "NotificationCenterUtils" /* 7034 */;
 import GuildIconDefault from "GuildIcon" /* 7720 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8418 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10891 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 19488 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 19489 */;
-import renderChannelContentDefault from "renderChannelContent" /* 19491 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 19490 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 19491 */;
+import renderChannelContentDefault from "renderChannelContent" /* 19493 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
@@ -31,7 +31,7 @@ function LaunchpadChannelIcon(channel) {
   return closure_10(closure_9, obj2);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6959).UnreadSetting;
+const UnreadSetting = fn(6949).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5306);

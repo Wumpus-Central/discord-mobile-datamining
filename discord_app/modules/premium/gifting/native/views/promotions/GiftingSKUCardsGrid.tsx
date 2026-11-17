@@ -6,10 +6,10 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5378 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5368 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9485 */;
 import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11832 */;
@@ -40,12 +40,12 @@ function GiftingSKUCardItemPreview(arg0) {
     const obj6 = { uri: currentUser(9513) };
     obj5.source = obj6;
     obj5.style = tmp.sampleProfile;
-    const items1 = [closure_10(currentUser(6020), obj5), ];
+    const items1 = [closure_10(currentUser(6010), obj5), ];
     const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
     items1[1] = closure_10(currentUser(9493), obj7);
     obj4.children = items1;
     tmp8 = closure_11(closure_4, obj4);
-    const tmp19 = currentUser(6020);
+    const tmp19 = currentUser(6010);
   } else {
     tmp8 = null;
     if (isProfileFrameRecord(item)) {

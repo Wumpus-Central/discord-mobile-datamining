@@ -4,12 +4,12 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6364 */;
 import AutomodMessageUtils from "AutomodMessageUtils" /* 8711 */;
 import MessageQueue from "MessageQueue" /* 9016 */;
 import AutomodErrorUtils from "AutomodErrorUtils" /* 9166 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 require = fn;
 function handleMessageSendFailedAutomod(messageData) {

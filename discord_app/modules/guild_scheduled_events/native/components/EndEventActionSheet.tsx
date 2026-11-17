@@ -2,7 +2,7 @@
 
 // Module 15933 (EndEventActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7970 */;
 import CallsUtils from "CallsUtils" /* 10583 */;
 import noop from "module_19" /* 19 */;
@@ -38,13 +38,13 @@ export default function EndEventActionSheet(channel) {
     const obj5 = { style: tmp.subtitle, variant: "body-md/medium", color: "text-default", children: null };
     const intl2 = tmp2(1113).intl;
     obj5.children = intl2.string(tmp2(1113).t["0I0B8f"]);
-    items[1] = closure_5(tmp2(5929).Text, obj5);
+    items[1] = closure_5(tmp2(5919).Text, obj5);
     const obj6 = { style: tmp.cancelButtonContainer, children: null };
     const obj7 = { text: null, grow: true, onPress: null };
     const intl3 = tmp2(1113).intl;
     obj7.text = intl3.string(tmp2(1113).t.P60OAX);
     obj7.onPress = handleClose;
-    obj6.children = closure_5(tmp2(5936).Button, obj7);
+    obj6.children = closure_5(tmp2(5926).Button, obj7);
     items[2] = closure_5(View, obj6);
     const obj8 = { style: tmp.confirmButtonContainer, children: null };
     const obj9 = { text: null, variant: "destructive", grow: true, onPress: null };
@@ -57,7 +57,7 @@ export default function EndEventActionSheet(channel) {
         CallsUtils.handleDisconnect(channel);
       }
     };
-    obj8.children = closure_5(tmp2(5936).Button, obj9);
+    obj8.children = closure_5(tmp2(5926).Button, obj9);
     items[3] = closure_5(View, obj8);
     obj3.children = items;
     obj2.children = closure_6(View, obj3);

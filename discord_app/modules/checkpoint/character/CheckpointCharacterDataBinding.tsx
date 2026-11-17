@@ -1,7 +1,7 @@
 // === Module 14468: CheckpointCharacterDataBinding ===
 
 // Module 14468 (CheckpointCharacterDataBinding)
-import CheckpointNavigation from "CheckpointNavigation" /* 6745 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6735 */;
 import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 14302 */;
 import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits" /* 14469 */;
 import size from "module_2" /* 2 */;
@@ -27,7 +27,7 @@ export function getCheckpointCharacterOutfitImageProperty(outfitID) {
 export function getCheckpointCharacterDataBinding(arg0) {
   ({ stage, layout, textureScale } = arg0);
   ({ isHidden, traits } = arg0);
-  obj = textureScale(6421);
+  obj = textureScale(6411);
   const characterFromTraits = obj.getCharacterFromTraits(traits);
   ({ base, shoes, outfit, face, hat, wearable, aura } = characterFromTraits);
   const tmp4 = textureScale(14469).CHECKPOINT_OUTFIT_OPTION_TO_RIVE_OUTFIT[outfit];
@@ -49,8 +49,8 @@ export function getCheckpointCharacterDataBinding(arg0) {
   });
   const obj3 = { device: layout, chapterID: null, faceID: null, shoesID: null, headwearID: null, wearableID: null, outfitID: null, auraImage: null, baseColorImage: null };
   if (isHidden) {
-    if (stage === textureScale(6745).CheckpointCharacterStage.FACE) {
-      let tmp6 = dependencyMap2[textureScale(undefined, 6745).CheckpointCharacterStage.IDLE];
+    if (stage === textureScale(6735).CheckpointCharacterStage.FACE) {
+      let tmp6 = dependencyMap2[textureScale(undefined, 6735).CheckpointCharacterStage.IDLE];
     }
     obj3.chapterID = tmp6;
     obj3.faceID = face;
@@ -69,7 +69,7 @@ export function getCheckpointCharacterDataBinding(arg0) {
     const tmpResult = textureScale(14302);
     obj3.baseColorImage = textureScale(14302).getCheckpointCharacterTextureUrl(textureScale(14469).CHECKPOINT_BASE_OPTION_TO_BASE_RIVE_TEXTURE[base].name, textureScale);
     if ("MobilePortrait" === layout) {
-      if (stage === textureScale(6745).CheckpointCharacterStage.INTRODUCTION) {
+      if (stage === textureScale(6735).CheckpointCharacterStage.INTRODUCTION) {
         let tmp10 = obj2;
       }
       const merged = Object.assign(tmp10);

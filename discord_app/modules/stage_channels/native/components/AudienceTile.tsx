@@ -3,7 +3,7 @@
 // Module 13108 (AudienceTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6358 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6348 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7678 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;

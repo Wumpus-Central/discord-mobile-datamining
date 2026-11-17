@@ -1,11 +1,11 @@
-// === Module 18525: useCollectiblesShopHeader ===
+// === Module 18527: useCollectiblesShopHeader ===
 
-// Module 18525 (useCollectiblesShopHeader)
+// Module 18527 (useCollectiblesShopHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 7897 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
@@ -186,7 +186,7 @@ const View = fn(17).View;
 const constants = fn(1074).CollectiblesMobileShopScreen;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, AnalyticsPages: closure_8 } = Constants);
-const RewardFilterTypes = fn(5338).RewardFilterTypes;
+const RewardFilterTypes = fn(6954).RewardFilterTypes;
 const UserProfileSections = fn(8479).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

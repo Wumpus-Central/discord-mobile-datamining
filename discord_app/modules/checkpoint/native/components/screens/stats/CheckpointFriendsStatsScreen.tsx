@@ -6,7 +6,7 @@ import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _modDef3285 from "module_3285" /* 3285 */;
 import _modDef3317 from "module_3317" /* 3317 */;
-import FriendsIcon from "FriendsIcon" /* 6018 */;
+import FriendsIcon from "FriendsIcon" /* 6008 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import ChatIcon from "ChatIcon" /* 8069 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 11661 */;
@@ -27,8 +27,9 @@ import CheckpointStore from "CheckpointStore" /* 14253 */;
 const require = globalThis.__r;
 
 require = fn;
-function FriendsHeader(children) {
-  const title = children.title;
+function FriendsHeader(title) {
+  title = title.title;
+  ({ titleAccessibilityLabel, description } = title);
   const tmp = closure_19();
   obj = { style: tmp.header, children: null };
   const obj2 = { style: tmp.heading, children: null };
@@ -42,12 +43,12 @@ function FriendsHeader(children) {
   items[1] = state(tmp2, obj5);
   obj3.children = items;
   const items1 = [gesture(metroImportDefault, obj3), ];
-  const obj6 = { children: null };
+  const obj6 = { accessibilityLabel: titleAccessibilityLabel, children: null };
   const stringResult = intl.string(_modDef3285.ZQakPR);
   obj6.children = title.toLocaleUpperCase();
   items1[1] = state(CheckpointDisplayTextDefault, obj6);
   obj2.children = items1;
-  const items2 = [gesture(metroImportDefault, obj2), state(CheckpointTextDefault, { variant: "heading-lg/medium", children: children.description })];
+  const items2 = [gesture(metroImportDefault, obj2), state(CheckpointTextDefault, { variant: "heading-lg/medium", children: description })];
   obj.children = items2;
   return gesture(metroImportDefault, obj);
 }
@@ -320,7 +321,7 @@ function SidekickMessageInput(user) {
     const obj15 = { disabled: !tmp32 };
     obj14.accessibilityState = obj15;
     const obj16 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj14.children = closure_13(tmp9(6031).SendMessageIcon, obj16);
+    obj14.children = closure_13(tmp9(6021).SendMessageIcon, obj16);
     items7[1] = closure_13(sharedValue, obj14);
     obj11.children = items7;
     items6[1] = closure_14(closure_7, obj11);
@@ -332,13 +333,13 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const CheckpointConstants = fn(6377);
+const CheckpointConstants = fn(6367);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-let obj = { duration: fn(5551).timingStandardDuration, easing: null };
+let obj = { duration: fn(5541).timingStandardDuration, easing: null };
 const Easing = fn(1655).Easing;
 obj.easing = Easing.bezier(0.2, 0, 0, 1);
 let closure_17 = { "Avatar01/Stroke": "#000000", "Avatar01/Fill": CHECKPOINT_PRIMARY, "Avatar02/Stroke": "#000000", "Avatar02/Fill": CHECKPOINT_PRIMARY, "Avatar03/Stroke": "#000000", "Avatar03/Fill": CHECKPOINT_PRIMARY, "Avatar04/Stroke": "#000000", "Avatar04/Fill": CHECKPOINT_PRIMARY, "Avatar05/Stroke": "#000000", "Avatar05/Fill": CHECKPOINT_PRIMARY, ConnectorColor: CHECKPOINT_PRIMARY };
@@ -390,6 +391,8 @@ export default function CheckpointFriendsStatsScreen(arg0) {
   let width;
   let height;
   const tmp = closure_19();
+  let intl = _require;
+  let tmp2 = height;
   items = [CheckpointStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     const stats = CheckpointStore.stats;
@@ -404,7 +407,7 @@ export default function CheckpointFriendsStatsScreen(arg0) {
   }
   obj = require("initialize");
   const items1 = [CheckpointStore];
-  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+  let user = intl(tmp2[15]).useStateFromStores(items1, () => {
     const stats = CheckpointStore.stats;
     let sidekick;
     if (stats != null) {
@@ -412,23 +415,23 @@ export default function CheckpointFriendsStatsScreen(arg0) {
     }
     return sidekick;
   });
-  const tmp2Result = require("initialize");
+  const intlResult = intl(tmp2[15]);
   const items2 = [UserStore];
-  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => currentUser.getCurrentUser());
-  const tmp2Result9 = require("initialize");
+  const stateFromStores1 = intl(tmp2[15]).useStateFromStores(items2, () => currentUser.getCurrentUser());
+  const intlResult1 = intl(tmp2[15]);
   const items3 = [AccessibilityStore];
-  const stateFromStores3 = require("initialize").useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
-  const tmp2Result10 = require("initialize");
-  const friendsAnimationState = require("useFriendsAnimationState").useFriendsAnimationState(route, stateFromStores3);
-  const tmp2Result11 = require("useFriendsAnimationState");
-  const sidekickLeave = require("useSidekickLeave").useSidekickLeave(route, stateFromStores3, onNextStep, onPreviousStep);
-  const tmp10 = friendsAnimationState === require("useFriendsAnimationState").FriendsAnimationState.BEST || friendsAnimationState === require("useFriendsAnimationState").FriendsAnimationState.LEAVE;
-  _require = tmp10;
-  const tmp2Result12 = require("useSidekickLeave");
-  const size = require("CheckpointScreen").useCheckpointScreenFrame();
+  const stateFromStores2 = intl(tmp2[15]).useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
+  const intlResult2 = intl(tmp2[15]);
+  const friendsAnimationState = intl(tmp2[16]).useFriendsAnimationState(route, stateFromStores2);
+  const intlResult3 = intl(tmp2[16]);
+  const sidekickLeave = intl(tmp2[17]).useSidekickLeave(route, stateFromStores2, onNextStep, onPreviousStep);
+  const tmp8 = friendsAnimationState === intl(tmp2[16]).FriendsAnimationState.BEST || friendsAnimationState === intl(tmp2[16]).FriendsAnimationState.LEAVE;
+  _require = tmp8;
+  const intlResult4 = intl(tmp2[17]);
+  const size = intl(tmp2[18]).useCheckpointScreenFrame();
   width = size.width;
   height = size.height;
-  const items4 = [tmp10, height, width];
+  const items4 = [tmp8, height, width];
   const memo = noop.useMemo(() => {
     let num = 0;
     const result = -height / 2;
@@ -437,87 +440,87 @@ export default function CheckpointFriendsStatsScreen(arg0) {
     }
     return { top: result - num, height: width + height };
   }, items4);
-  const tmp2Result13 = require("CheckpointScreen");
-  [tmp13, tmp14] = stateFromStores;
-  const tmp12 = _slicedToArray(stateFromStores, 2);
-  let str = require("UserUtils").useName(tmp13);
+  const intlResult5 = intl(tmp2[18]);
+  [tmp11, tmp12] = stateFromStores;
+  const tmp10 = _slicedToArray(stateFromStores, 2);
+  let str = intl(tmp2[19]).useName(tmp11);
   if (str == null) {
     str = "";
   }
-  const tmp2Result14 = require("UserUtils");
-  const toLocaleUpperCaseResult = str.toLocaleUpperCase();
-  let str2 = require("UserUtils").useName(tmp14);
+  const intlResult6 = intl(tmp2[19]);
+  let str2 = intl(tmp2[19]).useName(tmp12);
   if (str2 == null) {
     str2 = "";
   }
-  const tmp2Result15 = require("UserUtils");
+  const intlResult7 = intl(tmp2[19]);
+  const toLocaleUpperCaseResult = str.toLocaleUpperCase();
   const toLocaleUpperCaseResult1 = str2.toLocaleUpperCase();
-  let user;
-  if (stateFromStores1 != null) {
-    user = stateFromStores1.user;
+  let user1;
+  if (user != null) {
+    user1 = user.user;
   }
-  let str3 = require("UserUtils").useName(user);
+  let str3 = intl(tmp2[19]).useName(user1);
   if (str3 == null) {
     str3 = "";
   }
-  let tmp23Result = route === tmp2(tmp3[20]).CheckpointRoute.SIDEKICK || route === tmp2(tmp3[20]).CheckpointRoute.SIDEKICK_LEAVE;
+  let tmp17 = route === intl(tmp2[20]).CheckpointRoute.SIDEKICK || route === intl(tmp2[20]).CheckpointRoute.SIDEKICK_LEAVE;
   if (stateFromStores.length < 2) {
     let str5 = "twoFriends";
-    if (stateFromStores3) {
+    if (stateFromStores2) {
       str5 = "twoFriends-reducedMotion";
     }
     let str4 = str5;
   } else {
     str4 = "threeFriends";
-    if (stateFromStores3) {
+    if (stateFromStores2) {
       str4 = "threeFriends-reducedMotion";
     }
   }
   const obj2 = { style: tmp.container, children: null };
-  obj3 = { style: null, pointerEvents: "none", children: null };
+  obj3 = { style: null, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const items5 = [tmp.animation, memo];
   obj3.style = items5;
-  const tmp2Result16 = require("UserUtils");
+  const intlResult8 = intl(tmp2[19]);
   const obj4 = { referencedAssets: obj3, defaultViewModelInstance: str4, dataBinding: null };
   const obj5 = {};
   const merged = Object.assign(closure_17);
   obj5.AnimationState = friendsAnimationState;
-  let user1;
-  if (stateFromStores1 != null) {
-    user1 = stateFromStores1.user;
+  let user2;
+  if (user != null) {
+    user2 = user.user;
   }
   let userAvatarURL;
-  if (null != user1) {
-    const tmp21Result = tmp21(tmp3[14]);
-    userAvatarURL = tmp21Result.getUserAvatarURL(user1, false, 64, "png");
+  if (null != user2) {
+    const tmp19Result = tmp19(tmp2[14]);
+    userAvatarURL = tmp19Result.getUserAvatarURL(user2, false, 64, "png");
   }
   obj5["Avatar01/img"] = userAvatarURL;
   let userAvatarURL1;
-  if (null != tmp14) {
-    const tmp21Result6 = tmp21(tmp3[14]);
-    userAvatarURL1 = tmp21Result6.getUserAvatarURL(tmp14, false, 64, "png");
+  if (null != tmp12) {
+    const tmp19Result6 = tmp19(tmp2[14]);
+    userAvatarURL1 = tmp19Result6.getUserAvatarURL(tmp12, false, 64, "png");
   }
   obj5["Avatar02/img"] = userAvatarURL1;
   let userAvatarURL2;
-  if (null != tmp13) {
-    const tmp21Result7 = tmp21(tmp3[14]);
-    userAvatarURL2 = tmp21Result7.getUserAvatarURL(tmp13, false, 64, "png");
+  if (null != tmp11) {
+    const tmp19Result7 = tmp19(tmp2[14]);
+    userAvatarURL2 = tmp19Result7.getUserAvatarURL(tmp11, false, 64, "png");
   }
   obj5["Avatar03/img"] = userAvatarURL2;
-  let user2;
-  if (stateFromStores1 != null) {
-    user2 = stateFromStores1.user;
+  let user3;
+  if (user != null) {
+    user3 = user.user;
   }
   let userAvatarURL3;
-  if (null != user2) {
-    const tmp21Result8 = tmp21(tmp3[14]);
-    userAvatarURL3 = tmp21Result8.getUserAvatarURL(user2, false, 64, "png");
+  if (null != user3) {
+    const tmp19Result8 = tmp19(tmp2[14]);
+    userAvatarURL3 = tmp19Result8.getUserAvatarURL(user3, false, 64, "png");
   }
   obj5["Avatar04/img"] = userAvatarURL3;
   let userAvatarURL4;
-  if (null != stateFromStores2) {
-    const tmp21Result9 = tmp21(tmp3[14]);
-    userAvatarURL4 = tmp21Result9.getUserAvatarURL(stateFromStores2, false, 64, "png");
+  if (null != stateFromStores1) {
+    const tmp19Result9 = tmp19(tmp2[14]);
+    userAvatarURL4 = tmp19Result9.getUserAvatarURL(stateFromStores1, false, 64, "png");
   }
   obj5["Avatar05/img"] = userAvatarURL4;
   obj5["Avatar01/Username"] = str3.toLocaleUpperCase();
@@ -526,52 +529,88 @@ export default function CheckpointFriendsStatsScreen(arg0) {
   obj5["Avatar04/Username"] = str3.toLocaleUpperCase();
   obj5.twoFriends = stateFromStores.length < 2;
   obj4.dataBinding = obj5;
-  obj3.children = closure_13(require("CheckpointFriendsRive").CheckpointFriendsRive, obj4);
+  obj3.children = closure_13(intl(tmp2[21]).CheckpointFriendsRive, obj4);
   const items6 = [closure_13(closure_7, obj3), , , ];
-  let tmp20Result = route === tmp2(tmp3[20]).CheckpointRoute.SQUAD_TRANSITION;
-  if (tmp20Result) {
+  let tmp18Result = route === intl(tmp2[20]).CheckpointRoute.SQUAD_TRANSITION;
+  if (tmp18Result) {
     const obj6 = { style: tmp.transition, children: null };
     const obj7 = { isStepHeading: true, variant: "heading-lg/medium", children: null };
-    const intl = tmp2(tmp3[23]).intl;
-    obj7.children = intl.string(tmp21(tmp3[24])["6RSp5q"]);
-    obj6.children = closure_13(tmp21(tmp3[22]), obj7);
-    tmp20Result = closure_13(closure_7, obj6);
-    const tmp21Result10 = tmp21(tmp3[22]);
+    const intl2 = intl(tmp2[23]).intl;
+    obj7.children = intl2.string(tmp19(tmp2[24])["6RSp5q"]);
+    obj6.children = closure_13(tmp19(tmp2[22]), obj7);
+    tmp18Result = closure_13(closure_7, obj6);
+    const tmp19Result10 = tmp19(tmp2[22]);
   }
-  items6[1] = tmp20Result;
-  let tmp20Result2 = route === tmp2(tmp3[20]).CheckpointRoute.SQUAD;
-  if (tmp20Result2) {
-    const obj8 = { title: null, description: null };
-    const intl2 = tmp2(tmp3[23]).intl;
-    obj8.title = intl2.string(tmp21(tmp3[25]).OzY5Ns);
-    const intl3 = tmp2(tmp3[23]).intl;
-    obj8.description = intl3.string(tmp21(tmp3[24]).EqdLDd);
-    tmp20Result2 = closure_13(FriendsHeader, obj8);
+  items6[1] = tmp18Result;
+  const tmp43 = route === intl(tmp2[20]).CheckpointRoute.SQUAD;
+  if (!tmp43) {
+    items6[2] = tmp43;
+    if (tmp17) {
+      tmp17 = null != user;
+    }
+    if (!tmp17) {
+      const obj8 = { children: null };
+      items6[3] = tmp17;
+      obj2.children = items6;
+      obj8.children = closure_14(closure_7, obj2);
+      return closure_13(tmp20, obj8);
+    } else {
+      const obj9 = { style: tmp.sidekick, children: null };
+      let obj10 = { style: tmp.sidekickDetails, children: null };
+      let tmp18Result3 = FriendsHeader;
+      let obj11 = { title: null, titleAccessibilityLabel: null, description: null };
+      const intl6 = intl(tmp2[23]).intl;
+      obj11.title = intl6.string(tmp19(tmp2[25])["+uwOHt"]);
+      if ("" === str3.trim()) {
+        const intl8 = intl(tmp2[23]).intl;
+        let stringResult = intl8.string(tmp19(tmp2[25])["+uwOHt"]);
+      } else {
+        const intl7 = intl(tmp2[23]).intl;
+        const obj12 = { name: str3 };
+        stringResult = intl7.formatToPlainString(tmp19(tmp2[24]).xRtlbW, obj12);
+      }
+      obj11.titleAccessibilityLabel = stringResult;
+      intl = intl(tmp2[23]).intl;
+      obj11.description = intl.string(tmp19(tmp2[24])["/ctmGw"]);
+      const items7 = [closure_13(tmp18Result3, obj11), ];
+      tmp2 = SidekickStats;
+      const obj13 = { sidekick: user };
+      tmp18Result3 = closure_13(SidekickStats, obj13);
+      items7[1] = tmp18Result3;
+      obj10.children = items7;
+      obj10 = [, ];
+      obj10[0] = closure_14(closure_7, obj10);
+      obj11 = SidekickMessageInput;
+      const obj14 = { user: null, username: null };
+      user = user.user;
+      obj14.user = user;
+      obj14.username = str3;
+      obj10[1] = closure_13(SidekickMessageInput, obj14);
+      obj9.children = obj10;
+      closure_14(closure_7, obj9);
+      const tmp21Result = closure_14(closure_7, obj10);
+    }
+  } else {
+    const obj15 = { title: null, titleAccessibilityLabel: null, description: null };
+    const intl3 = intl(tmp2[23]).intl;
+    obj15.title = intl3.string(tmp19(tmp2[25]).OzY5Ns);
+    const items8 = [str3, str, str2];
+    const found = items8.filter((item) => "" !== item.trim());
+    if (0 === found.length) {
+      const intl4 = intl(tmp2[23]).intl;
+      let stringResult1 = intl4.string(tmp19(tmp2[25]).OzY5Ns);
+    } else {
+      const intl9 = intl(tmp2[23]).intl;
+      const obj16 = { names: null };
+      const _Intl = Intl;
+      const listFormat = new Intl.ListFormat(intl(tmp2[23]).intl.currentLocale, { type: "conjunction" });
+      obj16.names = listFormat.format(found);
+      stringResult1 = intl9.formatToPlainString(tmp19(tmp2[24]).XB99KC, obj16);
+    }
+    obj15.titleAccessibilityLabel = stringResult1;
+    const intl5 = intl(tmp2[23]).intl;
+    obj15.description = intl5.string(tmp19(tmp2[24]).EqdLDd);
+    closure_13(FriendsHeader, obj15);
   }
-  items6[2] = tmp20Result2;
-  if (tmp23Result) {
-    tmp23Result = null != stateFromStores1;
-  }
-  if (tmp23Result) {
-    const obj9 = { style: tmp.sidekick, children: null };
-    const obj10 = { style: tmp.sidekickDetails, children: null };
-    const obj11 = { title: null, description: null };
-    const intl4 = tmp2(tmp3[23]).intl;
-    obj11.title = intl4.string(tmp21(tmp3[25])["+uwOHt"]);
-    const intl5 = tmp2(tmp3[23]).intl;
-    obj11.description = intl5.string(tmp21(tmp3[24])["/ctmGw"]);
-    const items7 = [closure_13(FriendsHeader, obj11), ];
-    const obj12 = { sidekick: stateFromStores1 };
-    items7[1] = closure_13(SidekickStats, obj12);
-    obj10.children = items7;
-    const items8 = [closure_14(closure_7, obj10), ];
-    const obj13 = { user: stateFromStores1.user, username: str3 };
-    items8[1] = closure_13(SidekickMessageInput, obj13);
-    obj9.children = items8;
-    tmp23Result = closure_14(closure_7, obj9);
-  }
-  const tmp22 = width(height[18]);
-  items6[3] = tmp23Result;
-  obj2.children = items6;
-  return closure_13(tmp22, { children: closure_14(closure_7, obj2) });
+  tmp20 = width(tmp2[18]);
 };

@@ -1,6 +1,6 @@
-// === Module 17953: OfficialMessageStyleSetting ===
+// === Module 17955: OfficialMessageStyleSetting ===
 
-// Module 17953 (OfficialMessageStyleSetting)
+// Module 17955 (OfficialMessageStyleSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16889 */;

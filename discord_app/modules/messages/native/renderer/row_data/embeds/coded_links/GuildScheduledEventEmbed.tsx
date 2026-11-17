@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 7969 */;
 import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7970 */;
 import ScheduleUtils from "ScheduleUtils" /* 7972 */;
@@ -27,7 +27,7 @@ import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;
-import MarkupUtils from "MarkupUtils" /* 6057 */;
+import MarkupUtils from "MarkupUtils" /* 6047 */;
 
 require = fn;
 function createGuildScheduledEventEmbed(type) {

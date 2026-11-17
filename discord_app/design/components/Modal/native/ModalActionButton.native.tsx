@@ -1,7 +1,7 @@
 // === Module 15159: ModalActionButton ===
 
 // Module 15159 (ModalActionButton)
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

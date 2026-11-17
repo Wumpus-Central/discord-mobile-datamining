@@ -4,7 +4,7 @@
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8484 */;
 import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10026 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5532 */;
+import ExperimentStore from "ExperimentStore" /* 5522 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8500 */;
 
 require = fn;

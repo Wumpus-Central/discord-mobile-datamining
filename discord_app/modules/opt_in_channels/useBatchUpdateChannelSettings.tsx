@@ -5,7 +5,7 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7877 */;
 import noop from "module_19" /* 19 */;
 import CategoryCollapseStore from "CategoryCollapseStore" /* 7881 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 
 const require = globalThis.__r;
 

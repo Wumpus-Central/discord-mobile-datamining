@@ -5,12 +5,12 @@ import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" 
 import useUserVoiceActivity from "useUserVoiceActivity" /* 10848 */;
 import isGameActivityDefault from "isGameActivity" /* 10854 */;
 import getActivityStatusTextDefault from "getActivityStatusText" /* 10857 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const util = v0wJXSh(1113);
 const VoiceActivityStatus = v0wJXSh(10862);

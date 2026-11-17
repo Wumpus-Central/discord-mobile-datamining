@@ -5,11 +5,11 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import SoundboardTypes from "SoundboardTypes" /* 7227 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(6371).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6361).DEFAULT_SOUND_GUILD_ID;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const PremiumConstants = fn(1390);
 ({ AnalyticsPremiumFeatureNames: closure_9, AnalyticsPremiumFeatureTiers: closure_10 } = PremiumConstants);

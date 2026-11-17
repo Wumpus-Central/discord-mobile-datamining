@@ -2,7 +2,7 @@
 
 // Module 12969 (HandRequestDenyIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod12970 from "module_12970" /* 12970 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 19440: useChannelAppFrameTeardown ===
+// === Module 19442: useChannelAppFrameTeardown ===
 
-// Module 19440 (useChannelAppFrameTeardown)
+// Module 19442 (useChannelAppFrameTeardown)
 import leaveFrame from "leaveFrame" /* 7349 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

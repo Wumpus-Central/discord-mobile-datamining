@@ -1,7 +1,7 @@
 // === Module 13672: CatIllocon ===
 
 // Module 13672 (CatIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef13673 from "module_13673" /* 13673 */;
 import _modDef13674 from "module_13674" /* 13674 */;

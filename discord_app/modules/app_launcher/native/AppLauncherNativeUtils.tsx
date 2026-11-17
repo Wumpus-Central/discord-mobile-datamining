@@ -4,9 +4,9 @@
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import _modDef2109 from "module_2109" /* 2109 */;
 import Server from "Server" /* 2119 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5985 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8724 */;
 import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 9005 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 12698 */;
@@ -21,7 +21,7 @@ require = fn;
 const AppLauncherNativeConstants = fn(1501);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: metroImportDefault, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const BuiltInSectionId = fn(6345).BuiltInSectionId;
+const BuiltInSectionId = fn(6335).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 

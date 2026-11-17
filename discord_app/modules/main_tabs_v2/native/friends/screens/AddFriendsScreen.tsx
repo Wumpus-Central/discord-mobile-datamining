@@ -1,6 +1,6 @@
-// === Module 19602: AddFriendsScreen ===
+// === Module 19604: AddFriendsScreen ===
 
-// Module 19602 (AddFriendsScreen)
+// Module 19604 (AddFriendsScreen)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -8,8 +8,8 @@ import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14993 */;
 import ContactSyncUtils from "ContactSyncUtils" /* 14997 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 19605 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 19607 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 19607 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 19609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -186,9 +186,9 @@ export default function AddFriendsScreen(navigation) {
       }
     });
     return applyDefault.unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = source_page(5372).getName(arg0);
-      const obj = source_page(5372);
-      return name.localeCompare(source_page(5372).getName(arg1));
+      const name = source_page(5362).getName(arg0);
+      const obj = source_page(5362);
+      return name.localeCompare(source_page(5362).getName(arg1));
     });
   });
   let obj5 = navigation(analyticsLocations[27]);
@@ -223,9 +223,9 @@ export default function AddFriendsScreen(navigation) {
     });
     let obj = source_page(analyticsLocations[28]);
     return source_page(analyticsLocations[28]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(5372).getName(user.user);
-      const obj = items1(5372);
-      return name.localeCompare(items1(5372).getName(user2.user));
+      const name = items1(5362).getName(user.user);
+      const obj = items1(5362);
+      return name.localeCompare(items1(5362).getName(user2.user));
     });
   }, items4, closure_24);
   let obj6 = navigation(analyticsLocations[27]);

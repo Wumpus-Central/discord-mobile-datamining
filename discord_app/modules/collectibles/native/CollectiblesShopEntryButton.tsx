@@ -5,7 +5,7 @@ import YouScreenNavIconDefault from "YouScreenNavIcon" /* 10525 */;
 import MobileShopButtonCoachmarkDefault from "MobileShopButtonCoachmark" /* 10567 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5986 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5976 */;
 
 const require = fn;
 function CoachmarkVariant(shopButtonRef) {
@@ -42,7 +42,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
   navigateToShop = navigateToShop.navigateToShop;
   const shopButtonRef = navigateToShop.shopButtonRef;
   items = [CollectiblesMarketingsStore];
-  const stateFromStores = navigateToShop(563).useStateFromStores(items, () => marketingBySurface.getMarketingBySurface(navigateToShop(5987).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON));
+  const stateFromStores = navigateToShop(563).useStateFromStores(items, () => marketingBySurface.getMarketingBySurface(navigateToShop(5977).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON));
   let tmp4 = null != stateFromStores;
   if (tmp4) {
     tmp4 = "dismissibleContent" in stateFromStores;

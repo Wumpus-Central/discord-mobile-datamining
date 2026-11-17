@@ -3,8 +3,8 @@
 // Module 15209 (MediaModalOverlayFooterAction)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5896 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
 import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 15202 */;
 import noop from "module_19" /* 19 */;

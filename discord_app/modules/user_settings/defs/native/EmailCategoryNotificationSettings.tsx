@@ -1,8 +1,8 @@
-// === Module 18123: EmailCategoryNotificationSettings ===
+// === Module 18125: EmailCategoryNotificationSettings ===
 
-// Module 18123 (EmailCategoryNotificationSettings)
+// Module 18125 (EmailCategoryNotificationSettings)
 import initialize from "initialize" /* 504 */;
-import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 18119 */;
+import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 18121 */;
 import EmailSettingsStore from "EmailSettingsStore" /* 16241 */;
 
 require = fn;
@@ -128,7 +128,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
               parent: EMAIL_NOTIFICATIONS,
               variant: "danger",
               useIsDisabled: useMarketingEmailsDisabled,
-              onPress: tmp29(18119).updateMarketingEmailSettings
+              onPress: tmp29(18121).updateMarketingEmailSettings
             };
             obj.unsubscribeFromAllMarketing = tmp29(12406).createPressable(obj13);
             return obj;
@@ -143,7 +143,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
   }
 }
 const MobileUserSettings = fn(9202).MobileUserSettings;
-const EmailSettingsConstants = fn(18120);
+const EmailSettingsConstants = fn(18122);
 ({ EmailCategories: c3, EmailCategoriesList: closure_4, MarketingEmailCategories: hasOwnProperty } = EmailSettingsConstants);
 const emailSettings = createEmailSettings(MobileUserSettings.EMAIL_NOTIFICATIONS);
 const emailSettings1 = createEmailSettings(MobileUserSettings.REDESIGN_EMAIL_NOTIFICATIONS);

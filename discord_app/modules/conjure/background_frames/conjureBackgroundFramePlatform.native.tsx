@@ -1,8 +1,8 @@
 // === Module 16991: conjureBackgroundFramePlatform ===
 
 // Module 16991 (conjureBackgroundFramePlatform)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 12743 */;
 import FramePoolManagerDefault from "FramePoolManager" /* 13357 */;
 import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 16992 */;
@@ -10,7 +10,7 @@ import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" 
 import FramesStore from "FramesStore" /* 7019 */;
 
 require = fn;
-const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const ActivityPanelModes = fn(5949).ActivityPanelModes;
 const FramesConstants = fn(7020);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
 const size = fn(2);

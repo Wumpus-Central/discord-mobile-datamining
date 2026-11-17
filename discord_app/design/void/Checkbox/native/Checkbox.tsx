@@ -1,7 +1,7 @@
 // === Module 16590: Checkbox/Checkbox ===
 
 // Module 16590 (Checkbox/Checkbox)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef16591 from "module_16591" /* 16591 */;
 import _modDef16592 from "module_16592" /* 16592 */;
 import noop from "module_19" /* 19 */;

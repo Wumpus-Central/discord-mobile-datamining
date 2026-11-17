@@ -1,26 +1,26 @@
-// === Module 20583: GuildSettingsRoleEditConnectionsControls ===
+// === Module 20586: GuildSettingsRoleEditConnectionsControls ===
 
-// Module 20583 (GuildSettingsRoleEditConnectionsControls)
+// Module 20586 (GuildSettingsRoleEditConnectionsControls)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import Pressables from "Pressables" /* 7428 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 7467 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
 import TableRadioGroup from "TableRadioGroup" /* 7745 */;
 import TableRadioRow from "TableRadioRow" /* 7747 */;
 import CirclePlusIcon from "CirclePlusIcon" /* 13466 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20570 */;
-import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 20584 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20573 */;
+import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 20587 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7892 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20556 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20559 */;
 
 require = fn;
 function HeaderSection(arg0) {
@@ -215,7 +215,7 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(20586, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(20589, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
@@ -361,7 +361,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   const obj9 = {
     handleConnectionTapped(connectionType, applicationId) {
       items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "padding", value: null };
+      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "ref", value: 1090584580 };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
         if (0 === items.length) {

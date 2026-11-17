@@ -1,12 +1,12 @@
-// === Module 19660: ChannelDetailsNavigator ===
+// === Module 19662: ChannelDetailsNavigator ===
 
-// Module 19660 (ChannelDetailsNavigator)
+// Module 19662 (ChannelDetailsNavigator)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HeaderShared from "HeaderShared" /* 9051 */;
 import navigateToThreadCreation from "navigateToThreadCreation" /* 11843 */;
 import _modDef15138 from "module_15138" /* 15138 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 19661 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 19663 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 
@@ -40,7 +40,7 @@ function CreateThreadHeaderButton(channel) {
 const View = fn(17).View;
 const constants = fn(10897).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SearchNavigatorScreens = fn(19469).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(19471).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = Object.freeze({});

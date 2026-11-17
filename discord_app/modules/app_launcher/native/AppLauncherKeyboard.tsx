@@ -6,10 +6,10 @@ import PlatformUtils from "PlatformUtils" /* 1380 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1500 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import native from "native" /* 5377 */;
-import BottomSheetModal from "BottomSheetModal" /* 5570 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6331 */;
+import native from "native" /* 5367 */;
+import BottomSheetModal from "BottomSheetModal" /* 5560 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6321 */;
 import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 12015 */;
 import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 13369 */;
 import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 13378 */;
@@ -161,19 +161,19 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
           let current = trackWithMetadata(12578).AppLauncherBottomSheetExpandReason.KEYBOARD;
-        } else if (arg2 === trackWithMetadata(5570).ANIMATION_SOURCE.GESTURE) {
+        } else if (arg2 === trackWithMetadata(5560).ANIMATION_SOURCE.GESTURE) {
           current = trackWithMetadata(12578).AppLauncherBottomSheetExpandReason.GESTURE;
-        } else if (arg2 !== trackWithMetadata(5570).ANIMATION_SOURCE.USER) {
+        } else if (arg2 !== trackWithMetadata(5560).ANIMATION_SOURCE.USER) {
           current = trackWithMetadata(12578).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
-        trackWithMetadata = trackWithMetadata(6067).trackWithMetadata;
+        trackWithMetadata = trackWithMetadata(6057).trackWithMetadata;
         APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
         const obj = { reason: current };
         trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
         ref1.current = undefined;
-        const trackWithMetadataResult = trackWithMetadata(6067);
+        const trackWithMetadataResult = trackWithMetadata(6057);
       }
     }
   }, items8);

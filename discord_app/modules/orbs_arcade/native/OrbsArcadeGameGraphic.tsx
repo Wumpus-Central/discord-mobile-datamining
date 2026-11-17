@@ -2,7 +2,7 @@
 
 // Module 17677 (OrbsArcadeGameGraphic)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import AssetUtils from "AssetUtils" /* 10146 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

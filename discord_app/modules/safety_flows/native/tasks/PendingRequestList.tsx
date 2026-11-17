@@ -1,6 +1,6 @@
-// === Module 20876: PendingRequestList ===
+// === Module 20879: PendingRequestList ===
 
-// Module 20876 (PendingRequestList)
+// Module 20879 (PendingRequestList)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import _modDef2701 from "module_2701" /* 2701 */;

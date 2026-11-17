@@ -8,7 +8,7 @@ import NotificationPermissionUtil from "NotificationPermissionUtil" /* 14827 */;
 import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14828 */;
 import _slicedToArray from "module_32" /* 32 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5240 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 
 const PostReactionPermissionNudgeExperimentDefault = tmp4(14836);
 require = fn;

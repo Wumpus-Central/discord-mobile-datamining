@@ -2,8 +2,8 @@
 
 // Module 11094 (MessageFailedToSendNotification)
 import nativeDefault from "native" /* 575 */;
-import Client from "Client" /* 5543 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import Client from "Client" /* 5533 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

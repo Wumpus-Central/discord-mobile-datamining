@@ -1,8 +1,8 @@
 // === Module 13483: FrecencyCommandsSection ===
 
 // Module 13483 (FrecencyCommandsSection)
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5985 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 12579 */;
 import AppDetailContent from "AppDetailContent" /* 13460 */;
 import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 13484 */;
@@ -38,7 +38,7 @@ export default function FrecencyCommandsSection(commands) {
     const obj3 = { variant: "body-md/medium", color: "text-default", children: null };
     const intl = context(1113).intl;
     obj3.children = intl.string(context(1113).t.acSE0h);
-    obj2.children = arr(context(5929).Heading, obj3);
+    obj2.children = arr(context(5919).Heading, obj3);
     const items1 = [arr(View, obj2), arr.map((command, index) => timestampProducer(AppDetailContent.CommandRow, { command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === arr.length - 1, context, onExecuteCommand, installOnDemand, section, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id))];
     obj.children = items1;
     tmp4 = closure_7(View, obj);

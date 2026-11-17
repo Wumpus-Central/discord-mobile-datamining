@@ -11,15 +11,15 @@ import BlockedUserUtils from "BlockedUserUtils" /* 16214 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7029 */;
 import StageInstanceStore from "StageInstanceStore" /* 5160 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 require = fn;
 function markAllStale() {
@@ -33,7 +33,7 @@ function markAllStale() {
 }
 function markGuildStale(guildId) {
   if (null != guildId) {
-    if (guildId !== expandedHeight) {
+    if (guildId !== closure_1_19) {
       let selectedVoiceGuildId;
       if (_null != null) {
         selectedVoiceGuildId = _null.selectedVoiceGuildId;
@@ -245,7 +245,7 @@ function computeGuildMediaState(id) {
           const basicChannel = ChannelStore.getBasicChannel(item);
           let tmp2 = null != basicChannel;
           if (tmp2) {
-            tmp2 = closure_1(6828)(basicChannel, PermissionStore);
+            tmp2 = closure_1(6818)(basicChannel, PermissionStore);
           }
           return tmp2;
         });
@@ -399,7 +399,7 @@ const guildMediaStateStore = new GuildMediaStateStore(DispatcherDefault, {
       let flag = false;
       if (null != guildId) {
         flag = false;
-        if (guildId !== expandedHeight) {
+        if (guildId !== closure_1_19) {
           let selectedVoiceGuildId;
           if (_null != null) {
             selectedVoiceGuildId = _null.selectedVoiceGuildId;

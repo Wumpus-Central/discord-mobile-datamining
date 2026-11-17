@@ -2,9 +2,9 @@
 
 // Module 17566 (BountyVideo)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import timingPresets from "timingPresets" /* 5551 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import timingPresets from "timingPresets" /* 5541 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
 import AssetUtils from "AssetUtils" /* 10146 */;
 import BountiesModalProgress from "BountiesModalProgress" /* 17567 */;
 import pickBountyVideoRendition from "pickBountyVideoRendition" /* 17568 */;
@@ -420,7 +420,7 @@ export function BountyVideo(handleVideoProgress) {
     const obj10 = { style: tmp36.absoluteFillObject, source: null, resizeMode: "cover" };
     const obj11 = { uri: memo1 };
     obj10.source = obj11;
-    const items17 = [tmp60(tmp11(6020), obj10), ];
+    const items17 = [tmp60(tmp11(6010), obj10), ];
     let tmp60Result3 = !first;
     if (!first) {
       const obj12 = { animating: true, size: "small", color: token };

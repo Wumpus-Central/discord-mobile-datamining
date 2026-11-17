@@ -1,6 +1,6 @@
-// === Module 17822: NoFillQuestDock ===
+// === Module 17824: NoFillQuestDock ===
 
-// Module 17822 (NoFillQuestDock)
+// Module 17824 (NoFillQuestDock)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,12 +20,12 @@ export default function NoFillQuestDock(noFillDecision) {
   _require = tmp;
   youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
   if (null == noFillDecision.adContentId) {
-    const obj2 = { ref: "HermesInternal", accessibilityElementsHidden: "no-hide-descendants", importantForAccessibility: "none", pointerEvents: null, style: "mejeriprodukt" };
+    const obj2 = { ref: "HermesInternal", accessibilityElementsHidden: "no-hide-descendants", importantForAccessibility: "none", pointerEvents: null, style: "18.30" };
     items = [tmp.placeholder, ];
     const obj3 = { bottom: youBarTotalHeight - 1 };
     items[1] = obj3;
     obj2.style = items;
-    let tmp7 = <View ref="HermesInternal" accessibilityElementsHidden="no-hide-descendants" importantForAccessibility="none" pointerEvents={null} style="mejeriprodukt" />;
+    let tmp7 = <View ref="HermesInternal" accessibilityElementsHidden="no-hide-descendants" importantForAccessibility="none" pointerEvents={null} style="18.30" />;
   } else {
     const obj4 = {
       adContentId: noFillDecision.adContentId,

@@ -8,12 +8,12 @@ import DurationsDefault from "Durations" /* 1089 */;
 import _modDef2169 from "module_2169" /* 2169 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 5184 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 5256 */;
-import RegexUtilsDefault from "RegexUtils" /* 5958 */;
+import RegexUtilsDefault from "RegexUtils" /* 5948 */;
 import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6974 */;
 import EmojiTermsDefault from "EmojiTerms" /* 6975 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ExperimentStore from "ExperimentStore" /* 5532 */;
+import ExperimentStore from "ExperimentStore" /* 5522 */;
 import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5261 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -21,14 +21,14 @@ import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildMembershipStore from "GuildMembershipStore" /* 5157 */;
 import GuildRoleStore from "GuildRoleStore" /* 5212 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 import UserStore from "UserStore" /* 1388 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6970 */;
 import EmojiPackStore from "EmojiPackStore" /* 5257 */;
 import TopEmojiStore from "TopEmojiStore" /* 6971 */;
 import UnicodeEmojis from "UnicodeEmojis" /* 5252 */;
 import SnowflakeUtils from "SnowflakeUtils" /* 11 */;
-import Frecency_mod from "Frecency" /* 6087 */;
+import Frecency_mod from "Frecency" /* 6077 */;
 
 const require = globalThis.__r;
 
@@ -1156,7 +1156,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(5958).escape(formatted);
+  const escapeResult = formatted(5948).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;

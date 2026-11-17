@@ -3,7 +3,7 @@
 // Module 14794 (DiceRollBar)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5548 */;
+import timing_timing from "timing/timing" /* 5538 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
@@ -143,7 +143,7 @@ export default function DiceRollBar(channelId) {
     const obj7 = { style: tmp23, children: closure_7(tmp3(9437).DiceIcon, { size: "md" }) };
     const items8 = [closure_7(_modDef1655.View, obj7), ];
     const obj8 = { variant: "body-sm/normal", color: "text-default", children: barText };
-    items8[1] = closure_7(tmp3(5929).Text, obj8);
+    items8[1] = closure_7(tmp3(5919).Text, obj8);
     obj6.children = items8;
     obj5.children = closure_8(c4, obj6);
     return closure_7(_modDef1655.View, obj5);

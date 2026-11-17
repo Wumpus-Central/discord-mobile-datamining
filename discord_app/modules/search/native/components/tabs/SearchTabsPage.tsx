@@ -1,19 +1,19 @@
-// === Module 19465: SearchTabsPage ===
+// === Module 19467: SearchTabsPage ===
 
-// Module 19465 (SearchTabsPage)
+// Module 19467 (SearchTabsPage)
 import _modDef38 from "module_38" /* 38 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11253 */;
 import GuildNSFWDefault from "GuildNSFW" /* 11980 */;
 import ChannelSpoilerDefault from "ChannelSpoiler" /* 11982 */;
-import RecentScreenDefault from "RecentScreen" /* 19466 */;
-import PeopleScreenDefault from "PeopleScreen" /* 19530 */;
-import MembersScreenDefault from "MembersScreen" /* 19532 */;
-import ChannelsScreenDefault from "ChannelsScreen" /* 19538 */;
-import MediaScreenDefault from "MediaScreen" /* 19539 */;
-import FilesScreenDefault from "FilesScreen" /* 19547 */;
-import LinksScreenDefault from "LinksScreen" /* 19549 */;
-import MessagesScreenDefault from "MessagesScreen" /* 19556 */;
-import messages_PinsScreenDefault from "messages/PinsScreen" /* 19559 */;
+import RecentScreenDefault from "RecentScreen" /* 19468 */;
+import PeopleScreenDefault from "PeopleScreen" /* 19532 */;
+import MembersScreenDefault from "MembersScreen" /* 19534 */;
+import ChannelsScreenDefault from "ChannelsScreen" /* 19540 */;
+import MediaScreenDefault from "MediaScreen" /* 19541 */;
+import FilesScreenDefault from "FilesScreen" /* 19549 */;
+import LinksScreenDefault from "LinksScreen" /* 19551 */;
+import MessagesScreenDefault from "MessagesScreen" /* 19558 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 19561 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
@@ -38,8 +38,8 @@ function SearchTabsPage(selectMediaTab) {
     return ChannelStore.getChannel(channelId);
   });
   const obj = searchContext(504);
-  const isChannelSpoilerGated = searchContext(6858).useIsChannelSpoilerGated(stateFromStores);
-  searchContext(6838);
+  const isChannelSpoilerGated = searchContext(6848).useIsChannelSpoilerGated(stateFromStores);
+  searchContext(6828);
   if (tmp2) {
     if (tab !== SearchTabs.MEMBERS) {
       if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -75,7 +75,7 @@ function SearchTabsPage(selectMediaTab) {
       return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
     } else if (SearchTabs.THREADS === tab) {
       const obj12 = { searchContext };
-      return jsx(searchContext(19550).SearchTabsThreadScreen, { searchContext });
+      return jsx(searchContext(19552).SearchTabsThreadScreen, { searchContext });
     } else if (SearchTabs.MESSAGES === tab) {
       const obj26 = { tab, searchContext, isFocused };
       return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });
@@ -88,7 +88,7 @@ function SearchTabsPage(selectMediaTab) {
   } else {
     return null;
   }
-  const obj2 = searchContext(6858);
+  const obj2 = searchContext(6848);
 }
 const View = fn(17).View;
 const SearchTabs = fn(9066).SearchTabs;

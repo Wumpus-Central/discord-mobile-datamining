@@ -1,6 +1,6 @@
-// === Module 18533: CollectiblesShopViewAllCategoryItemsSetting ===
+// === Module 18535: CollectiblesShopViewAllCategoryItemsSetting ===
 
-// Module 18533 (CollectiblesShopViewAllCategoryItemsSetting)
+// Module 18535 (CollectiblesShopViewAllCategoryItemsSetting)
 import Constants from "Constants" /* 1072 */;
 import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 17372 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;

@@ -3,15 +3,15 @@
 // Module 14523 (CheckpointGameCard)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import CheckpointTextDefault from "CheckpointText" /* 14271 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2141 */;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6377);
+const CheckpointConstants = fn(6367);
 ({ CHECKPOINT_DARK_CYAN, CHECKPOINT_PRIMARY, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);

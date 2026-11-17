@@ -3,7 +3,7 @@
 // Module 14607 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import Tracking from "Tracking" /* 8866 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 8879 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -11,7 +11,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 require = fn;
 let closure_16 = async function _upload2(arg0) {
@@ -78,22 +78,22 @@ let closure_16 = async function _upload2(arg0) {
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(5552).hideActionSheet();
+              closure_1(5542).hideActionSheet();
               const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
               closure_1(11167)(obj4);
-              const obj3 = closure_1(5552);
+              const obj3 = closure_1(5542);
             }
             const obj2 = closure_0(8890);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(5552).hideActionSheet();
+            closure_1(5542).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
             closure_1(11153).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
             const obj = closure_1(11153);
-            closure_1(5552).hideActionSheet();
+            closure_1(5542).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));

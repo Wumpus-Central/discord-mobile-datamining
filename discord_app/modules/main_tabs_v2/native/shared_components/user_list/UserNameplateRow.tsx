@@ -2,7 +2,7 @@
 
 // Module 10889 (UserNameplateRow)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5902 */;
+import useToken from "useToken" /* 5892 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowGroupContext from "TableRowGroupContext" /* 7444 */;
 import Card from "Card" /* 7445 */;

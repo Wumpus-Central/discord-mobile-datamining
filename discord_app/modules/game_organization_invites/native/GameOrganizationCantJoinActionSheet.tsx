@@ -2,7 +2,7 @@
 
 // Module 14071 (GameOrganizationCantJoinActionSheet)
 import _modDef2565 from "module_2565" /* 2565 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import transitionToGuild from "transitionToGuild" /* 7231 */;
 import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12539 */;
 import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 14072 */;
@@ -64,7 +64,7 @@ export default function GameOrganizationCantJoinActionSheet(arg0) {
       obj7.text = intl3.string(tmp5(1113).t.cpT0Cq);
       obj7.onPress = hideSheet;
     }
-    obj3.actions = jsx(tmp5(5936).Button, obj7);
+    obj3.actions = jsx(tmp5(5926).Button, obj7);
     return jsx(tmp5(10713).PromoSheet, { header: jsx(tmp5(7913).BottomSheetTitleHeader, { title: null }), title: null, description: null, actions: null });
   }
   let obj = guildId(504);

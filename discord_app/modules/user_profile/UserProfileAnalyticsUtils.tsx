@@ -3,16 +3,16 @@
 // Module 8546 (UserProfileAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
-import ActivityTypes from "ActivityTypes" /* 6069 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
+import ActivityTypes from "ActivityTypes" /* 6059 */;
 import useDisplayProfile from "useDisplayProfile" /* 8482 */;
 import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8555 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8547 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7221 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8553 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;
 import UserProfileStore from "UserProfileStore" /* 7352 */;

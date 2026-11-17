@@ -2,7 +2,7 @@
 
 // Module 14923 (UserSettingsAuthedAppDeleteWarningModal)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 6274 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import InfoBox from "InfoBox" /* 10833 */;
 import isSocialLayerApplication from "isSocialLayerApplication" /* 14924 */;
 import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 14925 */;

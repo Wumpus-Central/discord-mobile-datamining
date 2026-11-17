@@ -4,7 +4,7 @@
 import _slicedToArray from "module_32" /* 32 */;
 import LurkingStore from "LurkingStore" /* 5239 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6937 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6927 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 
 const require = globalThis.__r;

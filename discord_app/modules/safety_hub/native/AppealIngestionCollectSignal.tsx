@@ -4,8 +4,8 @@
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5378 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5368 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import Form from "Form" /* 8106 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8205 */;
 import noop from "module_19" /* 19 */;
@@ -57,10 +57,10 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
             formRow(572).dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput });
             const obj = formRow(572);
             const obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
-            formRow(5552).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+            formRow(5542).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
           },
         onClose() {
-            return formRow(5552).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+            return formRow(5542).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
           }
       };
       ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14210, dependencyMap.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj3);
@@ -85,7 +85,7 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   const obj7 = { variant: "body-sm/normal", children: null };
   const intl3 = isDsaEligible(1113).intl;
   obj7.children = intl3.format(isDsaEligible(1113).t["8k9GCW"], {});
-  obj6.children = closure_6(isDsaEligible(5929).Text, obj7);
+  obj6.children = closure_6(isDsaEligible(5919).Text, obj7);
   items1[1] = closure_6(handleAppealSignalSelect, obj6);
   obj4.children = items1;
   obj3.children = closure_7(isDsaEligible(8106).Form, obj4);

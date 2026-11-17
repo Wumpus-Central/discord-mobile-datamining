@@ -1,9 +1,9 @@
-// === Module 18078: ChatSetting ===
+// === Module 18080: ChatSetting ===
 
-// Module 18078 (ChatSetting)
+// Module 18080 (ChatSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import ImageTextIcon from "ImageTextIcon" /* 18079 */;
+import ImageTextIcon from "ImageTextIcon" /* 18081 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 

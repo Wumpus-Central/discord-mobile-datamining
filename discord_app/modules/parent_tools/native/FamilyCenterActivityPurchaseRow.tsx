@@ -2,7 +2,7 @@
 
 // Module 17431 (FamilyCenterActivityPurchaseRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import PriceUtils from "PriceUtils" /* 7253 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 9404 */;
 import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 17432 */;

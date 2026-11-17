@@ -31,12 +31,12 @@ export default noop.memo(function GIFPickerSearchSuggestions(onClickSuggestion) 
     const obj3 = { style: tmp.footerSuggestionsTitle, variant: "body-md/medium", color: "text-default", children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t["3JGJo2"]);
-    const items1 = [closure_5(tmp2(5929).Text, obj3), ];
+    const items1 = [closure_5(tmp2(5919).Text, obj3), ];
     const obj4 = {
       style: tmp.suggestionsContainer,
       children: stateFromStoresArray.map((text) => {
           closure_0 = text;
-          return closure_1_5(onClickSuggestion(5936).Button, {
+          return closure_1_5(onClickSuggestion(5926).Button, {
             size: "sm",
             variant: "secondary",
             hitSlop: nativeDefault.space.PX_8,

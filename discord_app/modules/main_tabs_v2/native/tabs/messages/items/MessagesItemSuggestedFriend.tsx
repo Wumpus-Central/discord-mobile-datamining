@@ -1,16 +1,16 @@
-// === Module 18761: MessagesItemSuggestedFriend ===
+// === Module 18763: MessagesItemSuggestedFriend ===
 
-// Module 18761 (MessagesItemSuggestedFriend)
+// Module 18763 (MessagesItemSuggestedFriend)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6061 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6051 */;
 import _mod7888 from "module_7888" /* 7888 */;
 import _mod15178 from "module_15178" /* 15178 */;
-import FriendSuggestionUtils from "FriendSuggestionUtils" /* 18762 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18763 */;
+import FriendSuggestionUtils from "FriendSuggestionUtils" /* 18764 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18765 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
@@ -25,7 +25,7 @@ const createStyles = fn(5306);
 let obj = { container: { paddingHorizontal: nativeDefault.space.PX_8 }, pressable: null, textContainer: null, avatar: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_8 };
 obj.pressable = { borderRadius: nativeDefault.radii.md, flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8 };
-const obj4 = { borderRadius: nativeDefault.radii.md, flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8 };
+let obj4 = { borderRadius: nativeDefault.radii.md, flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8 };
 obj.textContainer = { marginRight: nativeDefault.space.PX_8, flexDirection: "column", alignSelf: "center", overflow: "hidden", flexGrow: 1, flexShrink: 1 };
 let obj5 = { marginRight: nativeDefault.space.PX_8, flexDirection: "column", alignSelf: "center", overflow: "hidden", flexGrow: 1, flexShrink: 1 };
 obj.avatar = { marginRight: nativeDefault.space.PX_8 };
@@ -95,8 +95,8 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     setAddedPressed(true);
   }, items4);
   let obj3 = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  obj2 = height(suggestedFriend[11]);
-  const items5 = [closure_9(height(suggestedFriend[18]).Avatar, { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32 }), , ];
+  const obj4 = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32 };
+  const items5 = [closure_9(height(suggestedFriend[18]).Avatar, obj4), , ];
   let obj5 = { style: tmp.textContainer, children: null };
   const items6 = [closure_9(height(suggestedFriend[19]).Text, { lineClamp: 1, variant: "heading-sm/semibold", maxFontSizeMultiplier: 2, color: "text-default", children: memo1.suggestionName }), ];
   if (addedPressed) {

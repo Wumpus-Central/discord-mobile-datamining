@@ -3,7 +3,7 @@
 // Module 14841 (EmojiSuggestionBarLarge)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import native from "native" /* 5377 */;
+import native from "native" /* 5367 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7994 */;
 import EmojiPickerListRow from "EmojiPickerListRow" /* 11274 */;
 import openEmojiActionSheet2 from "openEmojiActionSheet" /* 11298 */;

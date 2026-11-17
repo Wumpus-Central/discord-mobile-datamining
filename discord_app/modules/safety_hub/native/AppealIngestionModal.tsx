@@ -3,7 +3,7 @@
 // Module 14188 (AppealIngestionModal)
 import nativeDefault from "native" /* 575 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 14187 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -54,7 +54,7 @@ export default function AppealIngestionModal(classificationId) {
   let obj = require("useSafetyHubClassifications");
   let obj2 = {
     initialRouteName: constants.SPEED_BUMP,
-    screens: flag(5917)(() => {
+    screens: flag(5907)(() => {
       const isDsaEligible = c0;
       const isCoppa = flag;
       const isDeveloperClassification = flag2;
@@ -62,7 +62,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj2 = {
         headerLeft: NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close),
         headerTitle() {
-          return closure_1_12(isDsaEligible(5929).Text, { variant: "body-md/normal", children: "alignItems" });
+          return closure_1_12(isDsaEligible(5919).Text, { variant: "body-md/normal", children: "alignItems" });
         },
         render() {
           return closure_2_12(flag(14189), { isDsaEligible, isCoppa, isDeveloperClassification });
@@ -74,7 +74,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj4 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj4.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5929).Text, { variant: "body-md/normal", children: "alignItems" });
+        return closure_1_12(isDsaEligible(5919).Text, { variant: "body-md/normal", children: "alignItems" });
       };
       obj4.render = function render() {
         return closure_2_12(flag(14209), { isDsaEligible });
@@ -85,7 +85,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj6 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj6.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj6.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5929).Text, { variant: "body-md/normal", children: "alignItems" });
+        return closure_1_12(isDsaEligible(5919).Text, { variant: "body-md/normal", children: "alignItems" });
       };
       obj6.render = function render() {
         return closure_2_12(flag(14211), { isDsaEligible });
@@ -96,7 +96,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj8 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj8.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj8.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5929).Text, { variant: "body-md/normal", children: "alignItems" });
+        return closure_1_12(isDsaEligible(5919).Text, { variant: "body-md/normal", children: "alignItems" });
       };
       obj8.render = function render() {
         return closure_1_12(isCoppa(14213), {});
@@ -107,7 +107,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj10 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj10.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj10.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5929).Text, { variant: "body-md/normal", children: "alignItems" });
+        return closure_1_12(isDsaEligible(5919).Text, { variant: "body-md/normal", children: "alignItems" });
       };
       obj10.render = function render() {
         return closure_1_12(isCoppa(14215), {});

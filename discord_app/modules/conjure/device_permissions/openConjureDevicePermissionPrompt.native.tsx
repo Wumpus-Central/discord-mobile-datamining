@@ -3,7 +3,7 @@
 // Module 13154 (openConjureDevicePermissionPrompt)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import AlertModal from "AlertModal" /* 6274 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import conjureDevicePermissions from "conjureDevicePermissions" /* 13153 */;
 import size from "module_2" /* 2 */;
 

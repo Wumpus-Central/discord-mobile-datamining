@@ -61,8 +61,8 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
               obj3.headerText = storefront.title;
               let assetURL;
               if (null != lightThemeLogoAssetId) {
-                assetURL = tmp(6766).getAssetURL(application.id, lightThemeLogoAssetId, 128);
-                const tmpResult5 = tmp(6766);
+                assetURL = tmp(6756).getAssetURL(application.id, lightThemeLogoAssetId, 128);
+                const tmpResult5 = tmp(6756);
               }
               obj3.headerLogoUrl = assetURL;
               const tmpResult4 = tmp(15578);

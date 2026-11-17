@@ -6,12 +6,12 @@ import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5568 */;
-import useToken from "useToken" /* 5902 */;
-import _modDef6041 from "module_6041" /* 6041 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6331 */;
-import LegacyTokens from "LegacyTokens" /* 6961 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5558 */;
+import useToken from "useToken" /* 5892 */;
+import _modDef6031 from "module_6031" /* 6031 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6321 */;
+import LegacyTokens from "LegacyTokens" /* 6951 */;
 import useRefValueDefault from "useRefValue" /* 7416 */;
 import inlineStyles from "inlineStyles" /* 8263 */;
 import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13800 */;
@@ -322,7 +322,7 @@ const jsxProd = fn(21);
 let module_1655 = module_1655_mod;
 let closure_16 = module_1655.createAnimatedComponent(fn(1187).Icon);
 let module_1655 = module_1655_mod;
-let closure_17 = module_1655.createAnimatedComponent(fn(5929).Text);
+let closure_17 = module_1655.createAnimatedComponent(fn(5919).Text);
 let closure_18 = apply.memoize(() => module_1655.createAnimatedComponent(inlineStyles.Ellipse));
 const createStyles = fn(5306);
 let closure_19 = createStyles.createStyles(() => {
@@ -593,7 +593,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   const obj6 = { style: tmp5.voiceChatContainer, children: null };
   const obj7 = { isRecording: tmp7, initialAnimation: sharedValue, leftAccessory: null, rightAccessory: null };
   const tmpResult10 = require("WakeLock");
-  const obj8 = { icon: _modDef6041, variant: null, size: "sm", maxFontSizeMultiplier: 2, accessibilityLabel: null, onPressIn: null, onPress: null };
+  const obj8 = { icon: _modDef6031, variant: null, size: "sm", maxFontSizeMultiplier: 2, accessibilityLabel: null, onPressIn: null, onPress: null };
   let str = "tertiary";
   if (tmp15 === VoiceMessageAnimationState.CANCELLING) {
     str = "destructive";
@@ -618,7 +618,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   obj9.active = tmp37;
   ({ floatingSendButton: obj15.style, floatingSendButtonActive: obj15.activeStyle, floatingSendButtonIconActive: obj15.activeIconStyle } = tmp5);
   if (tmp7) {
-    SendMessageIcon = tmp(6031).SendMessageIcon;
+    SendMessageIcon = tmp(6021).SendMessageIcon;
   }
   const obj10 = { children: null };
   obj9.IconComponent = SendMessageIcon;

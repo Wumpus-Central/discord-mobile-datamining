@@ -1,12 +1,12 @@
-// === Module 20448: GuildSettingsModalModeration ===
+// === Module 20451: GuildSettingsModalModeration ===
 
-// Module 20448 (GuildSettingsModalModeration)
+// Module 20451 (GuildSettingsModalModeration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import NavScrim from "NavScrim" /* 5912 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import NavScrim from "NavScrim" /* 5902 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import HeaderActionButton from "HeaderActionButton" /* 7427 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import TableRadioRow from "TableRadioRow" /* 7747 */;
@@ -201,7 +201,7 @@ prototype["handleVerificationLevelChange"] = function handleVerificationLevelCha
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
   GuildSettingsActionCreatorsDefault.updateGuild({ explicitContentFilter });
 };
-GuildSettingsModalModeration.contextType = fn(5377).ThemeContext;
+GuildSettingsModalModeration.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx");
 

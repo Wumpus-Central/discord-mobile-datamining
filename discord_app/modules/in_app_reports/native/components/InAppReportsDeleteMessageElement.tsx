@@ -1,11 +1,11 @@
 // === Module 12293: InAppReportsDeleteMessageElement ===
 
 // Module 12293 (InAppReportsDeleteMessageElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 const require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -43,6 +43,6 @@ export default function DeleteMessageElement(message) {
   obj2.description = intl3.string(message(1113).t.dK8S0w);
   obj2.disabled = tmp[0];
   obj2.onPress = callback;
-  obj2.icon = jsx(message(6040).TrashIcon, { color: "text-feedback-critical" });
+  obj2.icon = jsx(message(6030).TrashIcon, { color: "text-feedback-critical" });
   return jsx(reportId(12287), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
 };

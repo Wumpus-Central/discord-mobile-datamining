@@ -5,9 +5,9 @@ import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import _modDef6030 from "module_6030" /* 6030 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import _modDef6020 from "module_6020" /* 6020 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
 import getInviteURLDefault from "getInviteURL" /* 8475 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
 import _modDef10926 from "module_10926" /* 10926 */;
@@ -29,7 +29,7 @@ import InstantInviteConstants from "InstantInviteConstants" /* 8467 */;
 import Constants from "Constants" /* 1072 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1380 */;
-import DCDSendUtils_mod from "DCDSendUtils" /* 6815 */;
+import DCDSendUtils_mod from "DCDSendUtils" /* 6805 */;
 import InstantInviteUtils_mod from "instant_invite/InstantInviteUtils" /* 8460 */;
 import size from "module_2" /* 2 */;
 
@@ -84,7 +84,7 @@ items[1] = {
   type: obj.COPY,
   icon: _modDef10926,
   isAvailable: Promise.resolve(true),
-  IconComponent: _modDef6030,
+  IconComponent: _modDef6020,
   getLabel() {
     const intl = util.intl;
     return intl.string(util.t.WqhZss);
@@ -140,11 +140,11 @@ obj5.onPress = function onPress(channel) {
   let obj = channel(8460);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(5552).hideActionSheet();
-    let obj3 = code(5552);
+    code(5542).hideActionSheet();
+    let obj3 = code(5542);
   }
   obj2 = channel(1380);
-  tmp(6815).sendSMS({ body: message }, (arg0, arg1, arg2) => {
+  tmp(6805).sendSMS({ body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = { inviteKey: code, channelId: null, messageId: null, location: "SMS Option", overrideProperties: null };
       let id;
@@ -166,7 +166,7 @@ obj5.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(6815);
+  const tmpResult = tmp(6805);
 };
 items[3] = obj5;
 const obj6 = { type: obj.MAIL, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
@@ -196,11 +196,11 @@ obj6.onPress = function onPress(channel) {
   let obj = channel(8460);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(5552).hideActionSheet();
-    let obj3 = code(5552);
+    code(5542).hideActionSheet();
+    let obj3 = code(5542);
   }
   obj2 = channel(1380);
-  tmp(6815).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
+  tmp(6805).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = { inviteKey: code, channelId: null, messageId: null, location: "Email Option", overrideProperties: null };
       let id;
@@ -222,7 +222,7 @@ obj6.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(6815);
+  const tmpResult = tmp(6805);
 };
 items[4] = obj6;
 const obj7 = { type: obj.FB_MESSENGER, fullIcon: _modDef15917, isAvailable: null, getLabel: null, onPress: null };

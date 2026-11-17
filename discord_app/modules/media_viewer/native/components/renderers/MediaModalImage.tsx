@@ -2,7 +2,7 @@
 
 // Module 15228 (MediaModalImage)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import useMediaLoadingDefault from "useMediaLoading" /* 15225 */;
 import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 15226 */;
 import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 15227 */;

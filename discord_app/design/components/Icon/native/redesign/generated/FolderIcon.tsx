@@ -2,7 +2,7 @@
 
 // Module 8072 (FolderIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8036 from "module_8036" /* 8036 */;
 import noop from "module_19" /* 19 */;
 

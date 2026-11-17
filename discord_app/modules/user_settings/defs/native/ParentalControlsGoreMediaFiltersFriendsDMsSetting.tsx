@@ -1,6 +1,6 @@
-// === Module 18595: ParentalControlsGoreMediaFiltersFriendsDMsSetting ===
+// === Module 18597: ParentalControlsGoreMediaFiltersFriendsDMsSetting ===
 
-// Module 18595 (ParentalControlsGoreMediaFiltersFriendsDMsSetting)
+// Module 18597 (ParentalControlsGoreMediaFiltersFriendsDMsSetting)
 import util from "util" /* 1113 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8853 */;
 import useParentalControlSettings from "useParentalControlSettings" /* 17346 */;

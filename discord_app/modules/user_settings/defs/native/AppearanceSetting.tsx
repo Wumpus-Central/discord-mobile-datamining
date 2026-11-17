@@ -1,11 +1,11 @@
-// === Module 17880: AppearanceSetting ===
+// === Module 17882: AppearanceSetting ===
 
-// Module 17880 (AppearanceSetting)
+// Module 17882 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
 import _modDef2933 from "module_2933" /* 2933 */;
-import useThemeDefault from "useTheme" /* 5547 */;
+import useThemeDefault from "useTheme" /* 5537 */;
 import useActiveTheme from "useActiveTheme" /* 9062 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5330 */;
 
@@ -46,7 +46,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(17881).PaintPaletteIcon,
+  IconComponent: fn(17883).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
   screen: {
     route: fn(1072).UserSettingsSections.APPEARANCE,

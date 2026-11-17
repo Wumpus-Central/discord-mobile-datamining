@@ -1,6 +1,6 @@
-// === Module 18425: DesignSystemSegmentedControlSetting ===
+// === Module 18427: DesignSystemSegmentedControlSetting ===
 
-// Module 18425 (DesignSystemSegmentedControlSetting)
+// Module 18427 (DesignSystemSegmentedControlSetting)
 import Constants from "Constants" /* 1072 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;

@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 5256 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import EmojiDefault from "Emoji" /* 7894 */;
 import noop from "module_19" /* 19 */;
 
@@ -64,7 +64,7 @@ export function EmojiGrid(numberToShow) {
   const obj2 = doNotDisplayEmojiIds(11301);
   const tmp = doNotDisplayEmojiIds;
   const arr4 = obj(11313)(substr1, num2);
-  return jsx(tmp(6337).Stack, {
+  return jsx(tmp(6327).Stack, {
     spacing: 8,
     align: "center",
     style: obj.emojiGridContainer,

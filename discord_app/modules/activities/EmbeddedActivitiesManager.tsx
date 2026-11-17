@@ -7,10 +7,10 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import v1 from "v1" /* 1269 */;
 import StringUtils from "StringUtils" /* 2153 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
-import getURLForApplication from "getURLForApplication" /* 5974 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5980 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 6264 */;
+import getURLForApplication from "getURLForApplication" /* 5964 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5970 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 6254 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import CommandPermissionContext from "CommandPermissionContext" /* 11411 */;
 import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 12742 */;
@@ -24,7 +24,7 @@ import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import UserStore from "UserStore" /* 1388 */;
 import ActivityShelfStore from "ActivityShelfStore" /* 16932 */;
@@ -782,13 +782,13 @@ class EmbeddedActivitiesManager extends tmp3 {
     applyArgumentsResult.handleInteractionQueue = function handleInteractionQueue(arg0) {
       ({ nonce, data } = arg0);
       if (null == applyArgumentsResult(16931).awaitingAnalyticsContext[data.applicationId]) {
-        if (data.interactionType === applyArgumentsResult(6381).InteractionTypes.APPLICATION_COMMAND) {
+        if (data.interactionType === applyArgumentsResult(6371).InteractionTypes.APPLICATION_COMMAND) {
           items = [AnalyticsLocationDefault.INTERACTION_APPLICATION_COMMAND];
           let tmp3 = items;
-        } else if (data.interactionType === applyArgumentsResult(6381).InteractionTypes.MESSAGE_COMPONENT) {
+        } else if (data.interactionType === applyArgumentsResult(6371).InteractionTypes.MESSAGE_COMPONENT) {
           const items1 = [AnalyticsLocationDefault.INTERACTION_MESSAGE_COMPONENT];
           tmp3 = items1;
-        } else if (data.interactionType === applyArgumentsResult(6381).InteractionTypes.MODAL_SUBMIT) {
+        } else if (data.interactionType === applyArgumentsResult(6371).InteractionTypes.MODAL_SUBMIT) {
           const items2 = [AnalyticsLocationDefault.INTERACTION_MODAL_SUBMIT];
           tmp3 = items2;
         }

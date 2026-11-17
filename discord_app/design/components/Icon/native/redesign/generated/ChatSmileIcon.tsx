@@ -2,7 +2,7 @@
 
 // Module 15959 (ChatSmileIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod15960 from "module_15960" /* 15960 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// === Module 20790: AdvancedInstantInvite ===
+// === Module 20793: AdvancedInstantInvite ===
 
-// Module 20790 (AdvancedInstantInvite)
+// Module 20793 (AdvancedInstantInvite)
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 7677 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
@@ -67,7 +67,7 @@ export default function AdvancedInstantInvite(maxAge) {
     if (tmp) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { assignableRoles, selectedRoleIds: roleIds, onSave: onChangeRoleIds };
-      obj.openLazy(asyncRequireImpl(20793, dependencyMap.paths), "SelectInviteRolesActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(20796, dependencyMap.paths), "SelectInviteRolesActionSheet", obj2, "stack");
     }
   }, items);
   const items2 = [maxUses, maxUsesOptions, onChangeMaxUses];

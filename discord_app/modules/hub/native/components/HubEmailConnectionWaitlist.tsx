@@ -35,7 +35,7 @@ export default function HubEmailConnectionWaitlist(school) {
   let obj = onClose(1502);
   obj3.source = navigation(15100);
   obj3.style = tmp.header;
-  const items1 = [closure_5(navigation(6020), obj3), , , ];
+  const items1 = [closure_5(navigation(6010), obj3), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1113).intl;
   obj4.children = intl.string(onClose(1113).t.OaloU5);
@@ -43,13 +43,13 @@ export default function HubEmailConnectionWaitlist(school) {
   const obj5 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1113).intl;
   obj5.children = intl2.format(onClose(1113).t.Rs7MXJ, { school: school.school });
-  items1[2] = closure_5(onClose(5929).Text, obj5);
+  items1[2] = closure_5(onClose(5919).Text, obj5);
   const obj6 = { style: tmp.redesignButton, children: null };
   const obj7 = { size: "lg", text: null, onPress: null };
   const intl3 = onClose(1113).intl;
   obj7.text = intl3.string(onClose(1113).t.i4jeWR);
   obj7.onPress = onClose;
-  obj6.children = closure_5(onClose(5936).Button, obj7);
+  obj6.children = closure_5(onClose(5926).Button, obj7);
   items1[3] = closure_5(View, obj6);
   obj2.children = items1;
   return closure_6(View, obj2);

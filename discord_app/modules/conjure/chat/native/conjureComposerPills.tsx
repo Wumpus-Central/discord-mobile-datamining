@@ -3,7 +3,7 @@
 // Module 13792 (conjureComposerPills)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import UserUtils from "UserUtils" /* 5372 */;
+import UserUtils from "UserUtils" /* 5362 */;
 import _modDef11074 from "module_11074" /* 11074 */;
 import ChatInputParser from "ChatInputParser" /* 13793 */;
 import _slicedToArray from "module_32" /* 32 */;

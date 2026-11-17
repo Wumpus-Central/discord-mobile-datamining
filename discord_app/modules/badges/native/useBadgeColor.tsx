@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 const NEUTRAL_35 = nativeDefault.unsafe_rawColors.NEUTRAL_35;
 let closure_7 = new privDefault({ max: 50 });
-const promiseDeduper = new fn(5436).PromiseDeduper();
+const promiseDeduper = new fn(5426).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/native/useBadgeColor.tsx");
 

@@ -50,9 +50,9 @@ export default function ApplicationSectionHeader(section) {
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-    tmp9 = closure_5(guildId(6020), obj4);
+    tmp9 = closure_5(guildId(6010), obj4);
   }
-  const items1 = [tmp9, closure_5(section(5929).Text, { variant: "body-sm/medium", color: "interactive-text-default", children: name })];
+  const items1 = [tmp9, closure_5(section(5919).Text, { variant: "body-sm/medium", color: "interactive-text-default", children: name })];
   obj3.children = items1;
   return closure_6(View, obj3);
 };

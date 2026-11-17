@@ -1,7 +1,7 @@
 // === Module 17037: DiscordGestureHandlerRootView ===
 
 // Module 17037 (DiscordGestureHandlerRootView)
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import DiscordGestureHandlerRootViewNativeComponentDefault from "DiscordGestureHandlerRootViewNativeComponent" /* 17038 */;
 import noop from "module_19" /* 19 */;
 

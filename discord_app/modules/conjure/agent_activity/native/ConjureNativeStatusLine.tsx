@@ -2,7 +2,7 @@
 
 // Module 13610 (ConjureNativeStatusLine)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import MagicWandIcon from "MagicWandIcon" /* 10528 */;
 import noop from "module_19" /* 19 */;
 

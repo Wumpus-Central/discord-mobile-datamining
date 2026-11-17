@@ -2,8 +2,8 @@
 
 // Module 14550 (ContentClassificationVisibility)
 import initialize from "initialize" /* 504 */;
-import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5963 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5965 */;
+import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5953 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5955 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

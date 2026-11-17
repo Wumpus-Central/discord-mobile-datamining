@@ -3,8 +3,8 @@
 // Module 15929 (EventDetailInfoSheet)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import useGuildScheduledEventUserCountDefault from "useGuildScheduledEventUserCount" /* 7968 */;
 import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 7969 */;
 import StageChannelAgeVerificationNoticeDefault from "StageChannelAgeVerificationNotice" /* 8432 */;
@@ -13,9 +13,9 @@ import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import UserStore from "UserStore" /* 1388 */;
-import TextStyles_mod from "TextStyles" /* 6826 */;
+import TextStyles_mod from "TextStyles" /* 6816 */;
 
 require = fn;
 const View = fn(17).View;
@@ -102,7 +102,7 @@ export default function EventDetailInfoSheet(guildEvent) {
   const obj13 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = guildEvent(1113).intl;
   obj13.children = intl.format(guildEvent(1113).t["+DLsD8"], { count: tmp8 });
-  items9[1] = closure_12(guildEvent(5929).Text, obj13);
+  items9[1] = closure_12(guildEvent(5919).Text, obj13);
   obj11.children = items9;
   items8[4] = closure_13(creator, obj11);
   let tmp11Result = null != creator && stateFromStores1;
@@ -153,7 +153,7 @@ export default function EventDetailInfoSheet(guildEvent) {
         }
     };
     obj16.children = intl2.format(tmp2(1113).t["66DLFs"], obj17);
-    items10[1] = closure_12(tmp2(5929).Text, obj16);
+    items10[1] = closure_12(tmp2(5919).Text, obj16);
     obj14.children = items10;
     tmp11Result = closure_13(tmp12, obj14);
   }
@@ -197,7 +197,7 @@ export default function EventDetailInfoSheet(guildEvent) {
   items12[1] = tmp13Result;
   items12[2] = closure_12(guildEvent(7984).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
   obj20.children = items12;
-  items8[8] = closure_13(guildEvent(6951).ButtonGroup, obj20);
+  items8[8] = closure_13(guildEvent(6941).ButtonGroup, obj20);
   let tmp13Result2 = null != result;
   if (tmp13Result2) {
     const obj23 = {

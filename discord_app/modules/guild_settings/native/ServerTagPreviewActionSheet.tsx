@@ -2,7 +2,7 @@
 
 // Module 16351 (ServerTagPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8158 */;
 import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 16352 */;
 import noop from "module_19" /* 19 */;
@@ -40,14 +40,14 @@ export default function ServerTagPreviewActionSheet(guildId) {
     const obj4 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1113).intl;
     obj4.children = intl.string(tmp2(1113).t.tmGHjc);
-    const items1 = [closure_6(tmp2(5929).Text, obj4), ];
+    const items1 = [closure_6(tmp2(5919).Text, obj4), ];
     const obj6 = { variant: "secondary", text: null, onPress: null };
     const intl2 = tmp2(1113).intl;
     obj6.text = intl2.string(tmp2(1113).t["5911Lb"]);
     obj6.onPress = function onPress() {
       return GuildProfileActionCreators.getGuildProfile(guildId, true);
     };
-    items1[1] = closure_6(tmp2(5936).Button, obj6);
+    items1[1] = closure_6(tmp2(5926).Button, obj6);
     obj3.children = items1;
     tmp7 = closure_7(View, obj3);
     tmp8 = closure_6;

@@ -3,8 +3,8 @@
 // Module 10811 (NsfwServerInviteWarningVariant)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6830 */;
-import getAgeNoticeWarningDescriptions from "getAgeNoticeWarningDescriptions" /* 6840 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6820 */;
+import getAgeNoticeWarningDescriptions from "getAgeNoticeWarningDescriptions" /* 6830 */;
 import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10812 */;
 import size from "module_2" /* 2 */;
 

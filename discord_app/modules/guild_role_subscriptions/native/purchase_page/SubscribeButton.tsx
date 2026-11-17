@@ -1,11 +1,11 @@
-// === Module 19387: SubscribeButton ===
+// === Module 19389: SubscribeButton ===
 
-// Module 19387 (SubscribeButton)
+// Module 19389 (SubscribeButton)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,22 +20,22 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(17844);
+  let obj = changeToListingId(17846);
   const obj3 = { children: null };
   const obj2 = activeListingId(2169)(activeSubscription.currentPeriodEnd);
   const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1113).intl;
   const formatResult = activeListingId(2169)(activeSubscription.currentPeriodEnd).format("MMMM Do");
   obj4.children = intl.format(activeSubscription(1113).t.lA7ztO, { activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0], billingEndDate: activeListingId(2169)(activeSubscription.currentPeriodEnd).format("MMMM Do"), emphasisHook });
-  items = [closure_12(activeSubscription(5929).Text, obj4), closure_12(activeSubscription(1187).Spacer, { size: 16 }), ];
+  items = [closure_12(activeSubscription(5919).Text, obj4), closure_12(activeSubscription(1187).Spacer, { size: 16 }), ];
   const obj6 = { text: null, onPress: null };
   const intl2 = activeSubscription(1113).intl;
   obj6.text = intl2.string(activeSubscription(1113).t.SACegK);
   obj6.onPress = function handleSwitchTiers() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(19388, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
+    obj.openLazy(asyncRequireImpl(19390, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
   };
-  items[2] = closure_12(activeSubscription(19381).ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(19383).ArrowButton, obj6);
   obj3.children = items;
   return closure_13(View, obj3);
 }

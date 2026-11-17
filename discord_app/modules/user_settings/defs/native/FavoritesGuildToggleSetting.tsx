@@ -1,11 +1,11 @@
-// === Module 17945: FavoritesGuildToggleSetting ===
+// === Module 17947: FavoritesGuildToggleSetting ===
 
-// Module 17945 (FavoritesGuildToggleSetting)
+// Module 17947 (FavoritesGuildToggleSetting)
 import util from "util" /* 1113 */;
 import _modDef3679 from "module_3679" /* 3679 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;
 import FavoritesActionCreators from "FavoritesActionCreators" /* 10944 */;
-import useIsFavoritesGuildVisibleDefault from "useIsFavoritesGuildVisible" /* 17946 */;
+import useIsFavoritesGuildVisibleDefault from "useIsFavoritesGuildVisible" /* 17948 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 

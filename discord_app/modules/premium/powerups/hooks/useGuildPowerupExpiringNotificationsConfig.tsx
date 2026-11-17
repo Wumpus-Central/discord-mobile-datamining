@@ -4,7 +4,7 @@
 import util from "util" /* 1113 */;
 import _modDef2733 from "module_2733" /* 2733 */;
 import _modDef3189 from "module_3189" /* 3189 */;
-import Powerups from "Powerups" /* 5527 */;
+import Powerups from "Powerups" /* 5517 */;
 import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 10765 */;
 import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 10766 */;
 import size from "module_2" /* 2 */;

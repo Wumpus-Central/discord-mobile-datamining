@@ -1,6 +1,6 @@
-// === Module 20280: CheckboxActionComponent ===
+// === Module 20283: CheckboxActionComponent ===
 
-// Module 20280 (CheckboxActionComponent)
+// Module 20283 (CheckboxActionComponent)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 2119 */;
 import ComponentStateContext from "ComponentStateContext" /* 8658 */;

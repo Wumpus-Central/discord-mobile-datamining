@@ -5,13 +5,13 @@ import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import UserStore from "UserStore" /* 1388 */;
 import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 13376 */;
 import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 13377 */;
 
 const require = fn;
-const BuiltInSectionId = fn(6345).BuiltInSectionId;
+const BuiltInSectionId = fn(6335).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;
 let closure_12 = 14 * DurationsDefault.Millis.DAY;
@@ -95,12 +95,12 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     const applicationId = recentApplicationCommandMetadata.applicationId;
   }
   const tmp2Result13 = channelId(504);
-  result = channelId(5348).useIsDismissibleContentDismissed_UNSAFE(tmp2(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
-  const tmp2Result14 = channelId(5348);
-  let result1 = channelId(5348).useIsDismissibleContentDismissed_UNSAFE(tmp2(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
-  const tmp2Result15 = channelId(5348);
+  result = channelId(5338).useIsDismissibleContentDismissed_UNSAFE(tmp2(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
+  const tmp2Result14 = channelId(5338);
+  let result1 = channelId(5338).useIsDismissibleContentDismissed_UNSAFE(tmp2(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
+  const tmp2Result15 = channelId(5338);
   let tmp30 = null != stateFromStores4;
-  const result2 = channelId(5348).useIsDismissibleContentDismissed_UNSAFE(tmp2(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
+  const result2 = channelId(5338).useIsDismissibleContentDismissed_UNSAFE(tmp2(5139).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
   if (tmp30) {
     tmp30 = stateFromStores4.channelId === channelId;
   }

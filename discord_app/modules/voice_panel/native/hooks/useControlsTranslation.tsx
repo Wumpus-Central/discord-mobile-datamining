@@ -1,8 +1,8 @@
-// === Module 20079: useControlsTranslation ===
+// === Module 20081: useControlsTranslation ===
 
-// Module 20079 (useControlsTranslation)
+// Module 20081 (useControlsTranslation)
 import _mod1655 from "module_1655" /* 1655 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
 import noop from "module_19" /* 19 */;
 

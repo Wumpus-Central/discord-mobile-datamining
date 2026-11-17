@@ -1,8 +1,8 @@
 // === Module 12581: navigateToLastChannel ===
 
 // Module 12581 (navigateToLastChannel)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 12582 */;
 import size from "module_2" /* 2 */;
 

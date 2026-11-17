@@ -3,12 +3,12 @@
 // Module 17387 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
-import common_AlertDefault from "common/Alert" /* 6340 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
+import common_AlertDefault from "common/Alert" /* 6330 */;
 import useParentalControlSettings from "useParentalControlSettings" /* 17346 */;
 import ConsentActionCreators from "ConsentActionCreators" /* 17385 */;
 import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 17386 */;
-import ConsentStore from "ConsentStore" /* 6846 */;
+import ConsentStore from "ConsentStore" /* 6836 */;
 
 require = fn;
 const Consents = fn(1072).Consents;

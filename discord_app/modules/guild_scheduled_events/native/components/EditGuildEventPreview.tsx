@@ -3,8 +3,8 @@
 // Module 8416 (EditGuildEventPreview)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
 import EditGuildEventUtils from "EditGuildEventUtils" /* 7971 */;
 import ScheduleUtils from "ScheduleUtils" /* 7972 */;
 import guildEventDetailsParser from "guildEventDetailsParser" /* 8422 */;
@@ -21,7 +21,7 @@ function PreviewBody(event) {
   items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
-  const tmp6 = channel_id(5954)(stateFromStores);
+  const tmp6 = channel_id(5944)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;

@@ -1,17 +1,17 @@
-// === Module 20440: GuildSettingsModalOverview ===
+// === Module 20443: GuildSettingsModalOverview ===
 
-// Module 20440 (GuildSettingsModalOverview)
+// Module 20443 (GuildSettingsModalOverview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import NavScrim from "NavScrim" /* 5912 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
-import common_AlertDefault from "common/Alert" /* 6340 */;
+import NavScrim from "NavScrim" /* 5902 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
+import common_AlertDefault from "common/Alert" /* 6330 */;
 import HeaderActionButton from "HeaderActionButton" /* 7427 */;
 import TableRow from "TableRow" /* 7443 */;
 import TextInput from "TextInput" /* 7619 */;
@@ -25,10 +25,10 @@ import Form from "Form" /* 8106 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8404 */;
 import openChannelPickerDefault from "openChannelPicker" /* 11963 */;
 import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 12002 */;
-import AssetChooserDefault from "AssetChooser" /* 20445 */;
+import AssetChooserDefault from "AssetChooser" /* 20448 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -138,8 +138,8 @@ class GuildSettingsModalOverview extends PureComponent {
         }
         GuildSettingsActionCreatorsDefault.updateGuild({ systemChannelId: id });
         if (null != systemChannel !== null != id) {
-          const result = applyArgumentsResult(20441).trackServerHubToggleSetting(guild.id, applyArgumentsResult(20441).ServerHubSettingType.ALL_SYSTEM_MESSAGES, tmp);
-          const obj2 = applyArgumentsResult(20441);
+          const result = applyArgumentsResult(20444).trackServerHubToggleSetting(guild.id, applyArgumentsResult(20444).ServerHubSettingType.ALL_SYSTEM_MESSAGES, tmp);
+          const obj2 = applyArgumentsResult(20444);
         }
       };
       if (systemChannel == null) {
@@ -372,12 +372,12 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const tmpResult14 = tmp(1406);
   }
   const tmpResult = tmp(9221);
-  let result1 = tmp(20200).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  let result1 = tmp(20203).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1406).hasFlag(guild.systemChannelFlags, constants6.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult16 = tmp(1406);
   }
-  const tmpResult15 = tmp(20200);
+  const tmpResult15 = tmp(20203);
   let guildSpaceExperimentEnabled = tmp(7243).getGuildSpaceExperimentEnabled(guild.id, "GuildSettingsModalOverview");
   const obj2 = { title: null, description: null, hasIcons: false, children: null };
   const intl2 = tmp(1113).intl;
@@ -485,7 +485,7 @@ prototype["renderDefaultNotificationSettings"] = function renderDefaultNotificat
   obj2.label = intl3.string(util.t["n/bTaY"]);
   let stringResult;
   if (null != guildMemberCount) {
-    if (guildMemberCount >= expandedHeight) {
+    if (guildMemberCount >= closure_1_19) {
       const intl4 = util.intl;
       stringResult = intl4.string(util.t["L+P4t2"]);
     }
@@ -651,7 +651,7 @@ prototype["render"] = function render() {
   obj.children = items2;
   return guild(closure_1_22, obj);
 };
-GuildSettingsModalOverview.contextType = fn(5377).ThemeContext;
+GuildSettingsModalOverview.contextType = fn(5367).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalOverview.tsx");
 

@@ -1,12 +1,12 @@
-// === Module 19163: YouBarAvatar ===
+// === Module 19165: YouBarAvatar ===
 
-// Module 19163 (YouBarAvatar)
+// Module 19165 (YouBarAvatar)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import native2 from "native" /* 5377 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import native2 from "native" /* 5367 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import ClipView from "ClipView" /* 9503 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -108,7 +108,7 @@ function YouBarAvatarLarge(transitionState) {
       const sum = result + native.STATUS_PADDING;
       const diff = dependencyMap - sum - statusSizeOverride / 4 * 2;
       const obj = { nativeCutouts: null };
-      const point = { shape: ClipView.CutoutShape.Circle, x: diff + expandedHeight, y: diff + expandedHeight, size: 2 * sum };
+      const point = { shape: ClipView.CutoutShape.Circle, x: diff + closure_2_19, y: diff + closure_2_19, size: 2 * sum };
       items = [point];
       obj.nativeCutouts = items;
       return obj;
@@ -207,7 +207,7 @@ function YouBarAvatarLarge(transitionState) {
     obj6.style = size2;
     obj5.children = closure_22(c6, obj6);
     const items8 = [closure_22(tmp35(9503), obj5), , , ];
-    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "GREEN_NEW_55" };
+    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "PLUM_23" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }
@@ -562,10 +562,10 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
         },
       renderItem: callback2
     };
-    obj6.children = closure_22(tmp(5377).TransitionGroup, obj7);
+    obj6.children = closure_22(tmp(5367).TransitionGroup, obj7);
     obj5.children = closure_22(_modDef1655.View, obj6);
     obj4.children = closure_22(closure_7, obj5);
-    tmp16 = closure_22(tmp(5598).GestureDetector, obj4);
+    tmp16 = closure_22(tmp(5588).GestureDetector, obj4);
   }
   return tmp16;
 });

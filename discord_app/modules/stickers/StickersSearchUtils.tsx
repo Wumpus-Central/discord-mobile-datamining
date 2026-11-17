@@ -1,7 +1,7 @@
 // === Module 11364: StickersSearchUtils ===
 
 // Module 11364 (StickersSearchUtils)
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6962 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6952 */;
 import StickerSendability from "StickerSendability" /* 7225 */;
 import size from "module_2" /* 2 */;
 

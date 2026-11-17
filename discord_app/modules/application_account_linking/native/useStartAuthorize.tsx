@@ -81,7 +81,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
                 c4 = 1;
                 c5 = 2;
                 c6 = 1;
-                const obj5 = { value: parentId(6012).openURL(closure_0.connectionEntrypointUrl), done: false };
+                const obj5 = { value: parentId(6002).openURL(closure_0.connectionEntrypointUrl), done: false };
                 return obj5;
               }
             }

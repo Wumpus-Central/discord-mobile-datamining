@@ -2,7 +2,7 @@
 
 // Module 8423 (EditGuildScheduledEventResetWarningAlert)
 import util from "util" /* 1113 */;
-import common_AlertDefault from "common/Alert" /* 6340 */;
+import common_AlertDefault from "common/Alert" /* 6330 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

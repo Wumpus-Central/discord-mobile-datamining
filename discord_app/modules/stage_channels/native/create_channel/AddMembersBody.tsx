@@ -5,8 +5,8 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import RegexUtilsDefault from "RegexUtils" /* 5958 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import RegexUtilsDefault from "RegexUtils" /* 5948 */;
 import GuildUtilsDefault from "GuildUtils" /* 7075 */;
 import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8131 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -50,7 +50,7 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(6912);
+const ChannelPermissionsConstants = fn(6902);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
@@ -155,12 +155,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(5570).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(5560).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(5570).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(5560).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -195,7 +195,7 @@ export default function AddMembersBody(pendingAdditions) {
   if (null != inputDesc) {
     const obj11 = { style: tmp3.inputDescContainer, children: null };
     const obj12 = { style: tmp3.inputDescText, variant: "body-xs/medium", color: "text-default", children: inputDesc };
-    obj11.children = closure_16(guild(5929).Text, obj12);
+    obj11.children = closure_16(guild(5919).Text, obj12);
     tmp27Result = closure_16(tmp28, obj11);
   }
   items5[1] = tmp27Result;
@@ -228,7 +228,7 @@ export default function AddMembersBody(pendingAdditions) {
   }
   const obj19 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
   const tmp4Result = pendingAdditions(8177);
-  obj19.contentContainerStyle = { paddingHorizontal: pendingAdditions(575).space.PX_16, paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5913)(obj).insets.bottom };
+  obj19.contentContainerStyle = { paddingHorizontal: pendingAdditions(575).space.PX_16, paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5903)(obj).insets.bottom };
   obj19.renderItem = function renderItem(item) {
     item = item.item;
     ({ index, section } = item);
@@ -308,5 +308,5 @@ export default function AddMembersBody(pendingAdditions) {
   };
   obj19.sections = items3;
   tmp27Result2 = closure_16(BottomSheetSectionList, obj19);
-  const obj20 = { paddingHorizontal: pendingAdditions(575).space.PX_16, paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5913)(obj).insets.bottom };
+  const obj20 = { paddingHorizontal: pendingAdditions(575).space.PX_16, paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5903)(obj).insets.bottom };
 };

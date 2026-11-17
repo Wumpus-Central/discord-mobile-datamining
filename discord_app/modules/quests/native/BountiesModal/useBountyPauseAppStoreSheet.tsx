@@ -2,7 +2,7 @@
 
 // Module 17559 (useBountyPauseAppStoreSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import AdCreativeType from "AdCreativeType" /* 5345 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import AnalyticsActions from "AnalyticsActions" /* 8825 */;
 import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 10141 */;
 import trackAppStoreOverlaySurfaceClicked from "trackAppStoreOverlaySurfaceClicked" /* 15244 */;
@@ -11,7 +11,7 @@ import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /*
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6954).QuestsExperimentLocations;
 const ComponentActions = fn(1072).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");

@@ -85,8 +85,8 @@ export default function FavoritesGuildAddChannelModal(parentId) {
             const obj4 = parentId(15154);
           } else {
             const intl = parentId(1113).intl;
-            parentId(6014).presentError(intl.string(parentId(1113).t.R0RpRX));
-            const obj = parentId(6014);
+            parentId(6004).presentError(intl.string(parentId(1113).t.R0RpRX));
+            const obj = parentId(6004);
           }
           c4 = 3;
         }

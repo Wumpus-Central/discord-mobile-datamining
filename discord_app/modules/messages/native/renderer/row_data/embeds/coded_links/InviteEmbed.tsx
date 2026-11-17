@@ -10,7 +10,7 @@ import FriendInvite from "FriendInvite" /* 15562 */;
 import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 15563 */;
 import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 15568 */;
 import GuildProfileInvite from "GuildProfileInvite" /* 15570 */;
-import InviteStore from "InviteStore" /* 6052 */;
+import InviteStore from "InviteStore" /* 6042 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

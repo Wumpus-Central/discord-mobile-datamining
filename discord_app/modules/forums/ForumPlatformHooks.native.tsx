@@ -1,8 +1,8 @@
 // === Module 15130: ForumPlatformHooks ===
 
 // Module 15130 (ForumPlatformHooks)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
-import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
+import RootNavigationRef from "RootNavigationRef" /* 5483 */;
 import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 9114 */;
 import noop from "module_19" /* 19 */;
 

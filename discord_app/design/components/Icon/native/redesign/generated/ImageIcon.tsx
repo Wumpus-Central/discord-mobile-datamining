@@ -2,7 +2,7 @@
 
 // Module 8085 (ImageIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8054 from "module_8054" /* 8054 */;
 import noop from "module_19" /* 19 */;
 

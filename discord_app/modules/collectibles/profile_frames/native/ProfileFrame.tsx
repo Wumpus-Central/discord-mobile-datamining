@@ -1,8 +1,8 @@
 // === Module 8583: ProfileFrame ===
 
 // Module 8583 (ProfileFrame)
-import timing_timing from "timing/timing" /* 5548 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8588 */;
 import noop from "module_19" /* 19 */;
 

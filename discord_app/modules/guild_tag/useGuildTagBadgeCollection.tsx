@@ -1,9 +1,9 @@
-// === Module 20537: useGuildTagBadgeCollection ===
+// === Module 20540: useGuildTagBadgeCollection ===
 
-// Module 20537 (useGuildTagBadgeCollection)
+// Module 20540 (useGuildTagBadgeCollection)
 import _mod19 from "module_19" /* 19 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 8405 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5523 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5513 */;
 import GuildTagConstants from "GuildTagConstants" /* 8410 */;
 import size from "module_2" /* 2 */;
 

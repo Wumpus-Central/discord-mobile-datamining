@@ -1,10 +1,10 @@
-// === Module 6953: PremiumGuildSubscribeModal ===
+// === Module 6943: PremiumGuildSubscribeModal ===
 
-// Module 6953 (PremiumGuildSubscribeModal)
+// Module 6943 (PremiumGuildSubscribeModal)
 import util from "util" /* 1113 */;
-import useInitialValueDefault from "useInitialValue" /* 5917 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6332 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 6952 */;
+import useInitialValueDefault from "useInitialValue" /* 5907 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6322 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 6942 */;
 import Navigator from "Navigator" /* 7490 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -12,7 +12,7 @@ import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
-let closure_6 = fn(6954).PremiumGuildSubscribeModalScenes;
+let closure_6 = fn(6944).PremiumGuildSubscribeModalScenes;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -38,7 +38,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
           headerShown: false,
           render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(6955), {});
+                return closure_1_8(guildBoostSlots(6945), {});
               }
         };
         obj5[constants.GUILD_SELECT] = obj6;
@@ -59,8 +59,8 @@ export default function PremiumGuildSubscribeModal(arg0) {
                   const result = closure_1_0(7813).trackUserSettingsPaneViewed({ destinationPane: constants.GUILD_BOOSTING });
                   const obj = closure_1_0(7813);
                   const obj2 = { destinationPane: constants.GUILD_BOOSTING };
-                  closure_1_0(6952).closeApplyBoostModal();
-                  const obj3 = closure_1_0(6952);
+                  closure_1_0(6942).closeApplyBoostModal();
+                  const obj3 = closure_1_0(6942);
                   closure_1_0(8604).openUserSettings({ screen: constants.GUILD_BOOSTING });
                 };
                 return closure_1_8(guildId(7427).HeaderActionButton, obj2);

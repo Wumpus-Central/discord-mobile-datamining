@@ -3,8 +3,8 @@
 // Module 12109 (UserProfileGameDetailsRow)
 import nativeDefault from "native" /* 575 */;
 import StringUtils from "StringUtils" /* 2153 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useFontScale from "useFontScale" /* 5944 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useFontScale from "useFontScale" /* 5934 */;
 import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 12110 */;
 import UserProfileWidgetGameCover from "UserProfileWidgetGameCover" /* 12111 */;
 import useWidgetGamePressDefault from "useWidgetGamePress" /* 12114 */;

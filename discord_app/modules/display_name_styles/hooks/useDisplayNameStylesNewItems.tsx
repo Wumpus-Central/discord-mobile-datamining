@@ -1,6 +1,6 @@
-// === Module 17958: useDisplayNameStylesNewItems ===
+// === Module 17960: useDisplayNameStylesNewItems ===
 
-// Module 17958 (useDisplayNameStylesNewItems)
+// Module 17960 (useDisplayNameStylesNewItems)
 import noop from "module_19" /* 19 */;
 import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 17094 */;
 

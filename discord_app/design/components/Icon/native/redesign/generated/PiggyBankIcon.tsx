@@ -2,7 +2,7 @@
 
 // Module 14230 (PiggyBankIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod14231 from "module_14231" /* 14231 */;
 import noop from "module_19" /* 19 */;
 

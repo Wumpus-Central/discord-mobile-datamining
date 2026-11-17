@@ -3,7 +3,7 @@
 // Module 11400 (ApplicationCommandChoiceUtils)
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 9006 */;
 
-const ApplicationCommandConstants = fn(6345);
+const ApplicationCommandConstants = fn(6335);
 ({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: c2 } = ApplicationCommandConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandChoiceUtils.tsx");

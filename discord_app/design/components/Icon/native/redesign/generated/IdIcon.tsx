@@ -2,7 +2,7 @@
 
 // Module 11629 (IdIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod11630 from "module_11630" /* 11630 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,8 +1,8 @@
-// === Module 6020: FastImage ===
+// === Module 6010: FastImage ===
 
-// Module 6020 (FastImage)
+// Module 6010 (FastImage)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 6021 */;
+import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 6011 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 18346: DevToolsGuildPowerupsScreen ===
+// === Module 18348: DevToolsGuildPowerupsScreen ===
 
-// Module 18346 (DevToolsGuildPowerupsScreen)
+// Module 18348 (DevToolsGuildPowerupsScreen)
 import nativeDefault from "native" /* 575 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
@@ -9,13 +9,13 @@ import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /*
 import dismissible_content from "dismissible_content" /* 5139 */;
 import TableSwitchRow from "TableSwitchRow" /* 7954 */;
 import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 10694 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 18248 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 18250 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 10769 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 
 require = fn;
 function setWarningBoosts() {
@@ -164,7 +164,7 @@ function GuildDCSwitchRow(dc) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(18347);
+const DevToolsGuildPowerupsConstants = fn(18349);
 ({ GUILD_DCS: closure_11, SERVER_TAG_GUILD_DCS: closure_12, USER_DCS: map1, getGuildDCString: closure_14, getUserDCString: closure_15 } = DevToolsGuildPowerupsConstants);
 const Endpoints = fn(1072).Endpoints;
 const jsxProd = fn(21);
@@ -230,7 +230,7 @@ export default function DevToolsGuildPowerupsScreen() {
     const items4 = [, ];
     ({ container: arr7[0], noGuildContainer: arr7[1] } = tmp);
     obj5.style = items4;
-    obj5.children = closure_17(tmp5(5929).Text, { variant: "heading-sm/semibold", color: "text-muted", children: "No guild selected" });
+    obj5.children = closure_17(tmp5(5919).Text, { variant: "heading-sm/semibold", color: "text-muted", children: "No guild selected" });
     let tmp15Result = closure_17(closure_6, obj5);
   } else {
     const obj6 = { style: tmp.container, contentContainerStyle: null, children: null };

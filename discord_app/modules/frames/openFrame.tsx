@@ -2,7 +2,7 @@
 
 // Module 12757 (openFrame)
 import router_utils from "router_utils" /* 1099 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 12743 */;
 import FramesStore from "FramesStore" /* 7019 */;
 

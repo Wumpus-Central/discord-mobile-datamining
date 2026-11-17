@@ -6,9 +6,9 @@ import ContentInventoryTypes from "ContentInventoryTypes" /* 9478 */;
 import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 15834 */;
 import noop from "module_19" /* 19 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9476 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import UserProfileStore from "UserProfileStore" /* 7352 */;
 
 require = fn;

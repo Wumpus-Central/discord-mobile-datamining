@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 8136 */;
@@ -12,7 +12,7 @@ import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8468 
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import VoiceStateIcons from "VoiceStateIcons" /* 10595 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 
 require = fn;
 function VoiceBadges(arg0) {

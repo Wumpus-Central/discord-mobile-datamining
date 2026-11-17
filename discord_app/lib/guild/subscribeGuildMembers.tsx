@@ -3,7 +3,7 @@
 // Module 14150 (subscribeGuildMembers)
 import applyDefault from "apply" /* 12 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6944 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6934 */;
 
 const require = fn;
 let c5 = false;

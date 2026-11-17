@@ -3,12 +3,12 @@
 // Module 11145 (useNativeForumPostHandlers)
 import _modDef38 from "module_38" /* 38 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5920 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5910 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
 import openMediaModal from "openMediaModal" /* 8627 */;
 import Tracking from "Tracking" /* 8866 */;
@@ -16,7 +16,7 @@ import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActi
 import messages_MessagesUtils from "messages/MessagesUtils" /* 11864 */;
 import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11866 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5553 */;
+import ActionSheetStore from "ActionSheetStore" /* 5543 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -34,7 +34,7 @@ export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(5920).ReactionTypes.NORMAL;
+    NORMAL = threadId(5910).ReactionTypes.NORMAL;
   }
   items = [threadId];
   const items1 = [threadId];

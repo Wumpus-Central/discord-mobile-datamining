@@ -1,11 +1,11 @@
-// === Module 18576: GuildSettingActivityStatus ===
+// === Module 18578: GuildSettingActivityStatus ===
 
-// Module 18576 (GuildSettingActivityStatus)
+// Module 18578 (GuildSettingActivityStatus)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7813 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;
-import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 18563 */;
+import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 18565 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 

@@ -2,8 +2,8 @@
 
 // Module 16008 (GuildBoostingMarketingProgressBarMarker)
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import _modDef16009 from "module_16009" /* 16009 */;
 import _modDef16010 from "module_16010" /* 16010 */;
 import _modDef16011 from "module_16011" /* 16011 */;
@@ -96,8 +96,8 @@ function ProgressBarMarkerInnerContent(arg0) {
     const obj5 = { tintColor: isTierUnlocked ? unsafe_rawColors.WHITE : unsafe_rawColors.PREMIUM_PERK_PINK };
     items5[1] = obj5;
     obj4.style = items5;
-    tmp22Result = closure_6(tmp2(6020), obj4);
-    const tmp2Result = tmp2(6020);
+    tmp22Result = closure_6(tmp2(6010), obj4);
+    const tmp2Result = tmp2(6010);
   }
   let obj = require("module_1655");
 }
@@ -218,14 +218,14 @@ export default function ProgressBarMarker(arg0) {
     }
     if (tmp25Result) {
       const obj7 = { source: tmp2(12481), style: tmp.progressBarMarkerUnlockedIcon };
-      tmp25Result = closure_6(tmp2(6020), obj7);
-      const tmp2Result = tmp2(6020);
+      tmp25Result = closure_6(tmp2(6010), obj7);
+      const tmp2Result = tmp2(6010);
     }
     const items7 = [tmp25Result, ];
     const obj8 = { variant: "body-xs/medium", children: null };
     const tmp5Result = tmp5(1655);
     obj8.children = tmp5(9235).getTierName(tier, { useLevels: false });
-    items7[1] = closure_6(tmp5(5929).Text, obj8);
+    items7[1] = closure_6(tmp5(5919).Text, obj8);
     obj6.children = items7;
     items5[2] = closure_7(View, obj6);
     obj2.children = items5;

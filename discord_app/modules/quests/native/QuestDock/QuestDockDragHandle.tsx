@@ -3,8 +3,8 @@
 // Module 17789 (QuestDockDragHandle)
 import util from "util" /* 1113 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5901 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5891 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import QuestDockUtils from "QuestDockUtils" /* 17697 */;
 import QuestDockGestureContext from "QuestDockGestureContext" /* 17699 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ const _modDef1655 = _mod1655;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const QuestDockMode = fn(5338).QuestDockMode;
+const QuestDockMode = fn(6954).QuestDockMode;
 let closure_6 = fn(17698).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);

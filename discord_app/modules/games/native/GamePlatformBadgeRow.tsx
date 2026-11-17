@@ -22,7 +22,7 @@ export default noop.memo(function GamePlatformBadgeRow(platforms) {
   items = [platforms];
   const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
   const tmp = closure_6();
-  return jsx(platforms(6337).Stack, {
+  return jsx(platforms(6327).Stack, {
     direction: "horizontal",
     align: "center",
     spacing: nativeDefault.space.PX_4,

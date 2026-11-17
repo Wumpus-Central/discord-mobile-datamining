@@ -3,7 +3,7 @@
 // Module 13765 (AIShimmer)
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import AIGlyphText from "AIGlyphText" /* 13351 */;
 import AIShimmerTypes from "AIShimmerTypes" /* 13766 */;
 import waveTransition2 from "waveTransition" /* 13767 */;

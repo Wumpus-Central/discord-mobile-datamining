@@ -2,7 +2,7 @@
 
 // Module 12965 (useLocalStorageState)
 import Storage3 from "Storage" /* 510 */;
-import useMountEffectDefault from "useMountEffect" /* 5899 */;
+import useMountEffectDefault from "useMountEffect" /* 5889 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

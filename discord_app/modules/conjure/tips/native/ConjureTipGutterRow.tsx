@@ -2,7 +2,7 @@
 
 // Module 13609 (ConjureTipGutterRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 13610 */;
 import noop from "module_19" /* 19 */;
 

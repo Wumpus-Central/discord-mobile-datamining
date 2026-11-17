@@ -1,7 +1,7 @@
 // === Module 15062: WorldIllocon ===
 
 // Module 15062 (WorldIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef15063 from "module_15063" /* 15063 */;
 import _modDef15064 from "module_15064" /* 15064 */;

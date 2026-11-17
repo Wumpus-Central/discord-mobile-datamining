@@ -2,7 +2,7 @@
 
 // Module 10294 (SteamNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10295 from "module_10295" /* 10295 */;
 import noop from "module_19" /* 19 */;
 

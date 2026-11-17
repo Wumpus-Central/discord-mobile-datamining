@@ -2,7 +2,7 @@
 
 // Module 10804 (usePendingFolderGuildIds)
 import initialize from "initialize" /* 504 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5350 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5340 */;
 import GuildStore from "GuildStore" /* 5177 */;
 
 require = fn;

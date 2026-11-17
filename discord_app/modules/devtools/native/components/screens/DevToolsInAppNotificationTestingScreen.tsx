@@ -1,12 +1,12 @@
-// === Module 18379: DevToolsInAppNotificationTestingScreen ===
+// === Module 18381: DevToolsInAppNotificationTestingScreen ===
 
-// Module 18379 (DevToolsInAppNotificationTestingScreen)
+// Module 18381 (DevToolsInAppNotificationTestingScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
-import StickersTypes from "StickersTypes" /* 6793 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
+import StickersTypes from "StickersTypes" /* 6783 */;
 import TableRowGroup from "TableRowGroup" /* 7746 */;
 import InAppNotificationUtils from "InAppNotificationUtils" /* 11025 */;
 import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11027 */;

@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_settings/UserSettingDefi
 
 export function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, arg4) {
   let getSetting = textAndImages;
-  let f90240 = activityRestrictedGuildIds;
+  let f90252 = activityRestrictedGuildIds;
   closure_3 = explicitContentToProto;
   let obj = arg4;
   if (arg4 === undefined) {
@@ -32,15 +32,15 @@ export function defineProtoSetting(textAndImages, activityRestrictedGuildIds, ex
   getSetting = function getSetting() {
     let tmp3;
     if (UserSettingsProtoStore.settings[getSetting] != null) {
-      tmp3 = tmp2[f90240];
+      tmp3 = tmp2[f90252];
     }
     return explicitContentFromProto(tmp3);
   };
-  f90240 = (favorites) => {
+  f90252 = (favorites) => {
     closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[3]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(closure_0, async (arg0) => {
-      arg0[f90240] = closure_3(closure_0, arg0[f90240]);
+      arg0[f90252] = closure_3(closure_0, arg0[f90252]);
     }, INFREQUENT_USER_ACTION);
   };
   return {
@@ -50,7 +50,7 @@ export function defineProtoSetting(textAndImages, activityRestrictedGuildIds, ex
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f90247(tmp2);
+      return f90259(tmp2);
     },
     useSetting() {
       items = [UserSettingsProtoStore];
@@ -111,7 +111,7 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, an
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f90247(tmp2);
+      return f90259(tmp2);
     }
   };
 }
@@ -125,9 +125,9 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
     }
     return setting;
   }
-  const f90247 = (arg0) => {
+  const f90259 = (arg0) => {
     const obj2 = { type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: null };
-    items = [f90247];
+    items = [f90259];
     obj2.settings = items;
     DispatcherDefault.dispatch(obj2);
     return getSetting.updateSetting(arg0);
@@ -147,7 +147,7 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f90247(tmp2);
+      return f90259(tmp2);
     }
   };
 }

@@ -2,7 +2,7 @@
 
 // Module 7629 (CircleXIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod7630 from "module_7630" /* 7630 */;
 import _mod7631 from "module_7631" /* 7631 */;
 import noop from "module_19" /* 19 */;

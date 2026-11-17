@@ -1,11 +1,11 @@
-// === Module 20262: HolidayEventsConfig ===
+// === Module 20265: HolidayEventsConfig ===
 
-// Module 20262 (HolidayEventsConfig)
+// Module 20265 (HolidayEventsConfig)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
 import Constants from "Constants" /* 11035 */;
-import _modDef20263 from "module_20263" /* 20263 */;
-import _modDef20264 from "module_20264" /* 20264 */;
+import _modDef20266 from "module_20266" /* 20266 */;
+import _modDef20267 from "module_20267" /* 20267 */;
 import size from "module_2" /* 2 */;
 
 const obj = {
@@ -21,7 +21,7 @@ const obj = {
   isDesktopOnly: true,
   soundpack: Constants.Soundpacks.HALLOWEEN,
   soundpackLabel: util.t["+LasFV"],
-  appSpinnerSources: { webmDark: _modDef20263, webmLight: _modDef20264 },
+  appSpinnerSources: { webmDark: _modDef20266, webmLight: _modDef20267 },
   getLoadingTips() {
     const intl = util.intl;
     items = [intl.string(util.t.ydMZ2o), , , , , , , , , , , , ];

@@ -3,11 +3,11 @@
 // Module 7955 (FormSwitch)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
-import IconDefault from "Icon" /* 5938 */;
-import spring_spring from "spring/spring" /* 5939 */;
-import springPresets from "springPresets" /* 5940 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
+import IconDefault from "Icon" /* 5928 */;
+import spring_spring from "spring/spring" /* 5929 */;
+import springPresets from "springPresets" /* 5930 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -226,13 +226,13 @@ export function FormSwitch(onValueChange) {
     const obj7 = { source: null, size: null, style: null };
     if (tmp6) {
       obj7.source = tmp10(7735);
-      obj7.size = tmp10(5938).Sizes.SMALL_20;
+      obj7.size = tmp10(5928).Sizes.SMALL_20;
       const items7 = [tmp9.selectedIcon, iconAnimation];
       obj7.style = items7;
       let tmp38 = obj7;
     } else {
       obj7.source = tmp10(7956);
-      obj7.size = tmp10(5938).Sizes.SMALL;
+      obj7.size = tmp10(5928).Sizes.SMALL;
       const items8 = [tmp9.unselectedIcon, tmp35];
       obj7.style = items8;
       tmp38 = obj7;

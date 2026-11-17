@@ -1,6 +1,6 @@
-// === Module 18030: DisplayNameStylesAccessibilitySetting ===
+// === Module 18032: DisplayNameStylesAccessibilitySetting ===
 
-// Module 18030 (DisplayNameStylesAccessibilitySetting)
+// Module 18032 (DisplayNameStylesAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import _modDef3125 from "module_3125" /* 3125 */;

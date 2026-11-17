@@ -3,7 +3,7 @@
 // Module 16107 (ProvisionalAccountNoCallAllowed)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import AlertModal from "AlertModal" /* 6274 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
 import noop from "module_19" /* 19 */;
 

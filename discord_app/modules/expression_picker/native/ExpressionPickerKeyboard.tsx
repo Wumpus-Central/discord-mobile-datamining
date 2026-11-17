@@ -4,7 +4,7 @@
 import KeyboardTypes from "KeyboardTypes" /* 1628 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2020 */;
-import native from "native" /* 5377 */;
+import native from "native" /* 5367 */;
 import ExpressionPickerDefault from "ExpressionPicker" /* 11247 */;
 import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 12015 */;
 import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 13410 */;

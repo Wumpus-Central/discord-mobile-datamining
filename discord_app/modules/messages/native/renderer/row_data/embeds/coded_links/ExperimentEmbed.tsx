@@ -69,7 +69,7 @@ function ExperimentOverrideActionSheet(override) {
   return jsx(id(memo[19]).BottomSheet, { header: jsx(id(memo[20]).BottomSheetTitleHeader, { title: experiment.title, subtitle: id }), children: jsx(id(memo[21]).ExperimentDetails, { experiment, override: override.override, id, options: memo1, onCopyLink: callback }) });
 }
 const Image = fn(17).Image;
-const ExperimentEmbedType = fn(5533).ExperimentEmbedType;
+const ExperimentEmbedType = fn(5523).ExperimentEmbedType;
 const InviteTypes = fn(8842).InviteTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);

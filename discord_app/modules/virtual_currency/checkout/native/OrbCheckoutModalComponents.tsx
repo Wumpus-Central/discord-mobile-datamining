@@ -4,10 +4,10 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5313 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7256 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
 import OrbsIcon from "OrbsIcon" /* 9442 */;
@@ -100,7 +100,7 @@ export function OrbCheckoutOrderSummary(skuId) {
   const obj3 = { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", style: tmp.sectionTitle, children: null };
   const intl = tmp2(1113).intl;
   obj3.children = intl.string(skuId(1113).t.hws7bC);
-  const items4 = [closure_10(skuId(5929).Text, obj3), ];
+  const items4 = [closure_10(skuId(5919).Text, obj3), ];
   const scenario = mobileCheckoutFlow.scenario;
   if ("collectibles" === scenario) {
     const obj4 = { product: mobileCheckoutFlow.product, useOrbPrice: true, orbPriceAmount: tmp4 };
@@ -148,7 +148,7 @@ export function OrbCheckoutLegalFinePrint() {
   skuId = skuId(15502).useOrbCheckoutModalContext().skuId;
   items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
-  return closure_10(skuId(5929).Text, { style: tmp.disclaimer, variant: "footnote/normal", color: "interactive-text-active", children: memo });
+  return closure_10(skuId(5919).Text, { style: tmp.disclaimer, variant: "footnote/normal", color: "interactive-text-active", children: memo });
 }
 export function OrbCheckoutPurchaseButton(onPress) {
   const tmp2 = useThemeDefault();

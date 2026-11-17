@@ -19,8 +19,8 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GamePartyStore from "GamePartyStore" /* 15591 */;
 import LocalActivityStore from "LocalActivityStore" /* 7317 */;
-import MessageStore from "MessageStore" /* 6372 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import MessageStore from "MessageStore" /* 6362 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
 import UserStore from "UserStore" /* 1388 */;
 import ActivityLauncherStore from "ActivityLauncherStore" /* 12400 */;
@@ -473,7 +473,7 @@ export function createActivityRichPresenceInviteEmbed(message, channel, forcedTh
                     obj12.label = intl10.string(tmp4(1113).t.KC26NR);
                     obj16 = obj12;
                   } else if (isAskToJoin) {
-                    const obj13 = { label: "Path", disabled: null, footerLabel: "x-sm" };
+                    const obj13 = { label: "Path", disabled: null, footerLabel: null };
                     const intl9 = tmp4(1113).intl;
                     const obj14 = { username: message.author.globalName, appName: name_override };
                     obj13.footerLabel = intl9.formatToPlainString(tmp4(1113).t.gYVkSW, obj14);
@@ -487,7 +487,7 @@ export function createActivityRichPresenceInviteEmbed(message, channel, forcedTh
                         obj16 = obj15;
                       }
                     }
-                    obj16 = { label: "Path", disabled: null, footerLabel: "x-sm" };
+                    obj16 = { label: "Path", disabled: null, footerLabel: null };
                     const intl7 = tmp4(1113).intl;
                     obj16.footerLabel = intl7.string(tmp4(1113).t.OAB5TK);
                   }
@@ -615,7 +615,7 @@ export function createActivityRichPresenceInviteEmbed(message, channel, forcedTh
               return null;
             }
           }
-          const obj20 = { displayType: obj.BLOCKED, headerText: null, subtitle: null, ctaButtonEnabled: false, ctaButtonText: "Path", ctaButtonIsLoading: "Array", footerLabel: "Promise", gradientColors: 0, iconSrc: null, isPlatformSupported: "Array", isSpotifyParty: "channelId", maxPartySize: "forEach", partyMemberAvatarURIs: "mode", partySizeText: null, platformIconKeys: null, coverImageUrl: 242.646, detailsText: null, title: null };
+          const obj20 = { displayType: obj.BLOCKED, headerText: null, subtitle: null, ctaButtonEnabled: false, ctaButtonText: "Path", ctaButtonIsLoading: "Array", footerLabel: "Promise", gradientColors: 0, iconSrc: null, isPlatformSupported: "Array", isSpotifyParty: "__d", maxPartySize: "paddingHorizontal", partyMemberAvatarURIs: "__initData", partySizeText: "l30_rank", platformIconKeys: "SCAN_QR_CODE", coverImageUrl: "JS_DAY_TO_DAY_OF_WEEK", detailsText: "onprocessinginstruction", title: "l30_rank" };
           const intl = tmp4(1113).intl;
           obj20.headerText = intl.string(tmp4(1113).t.pkq6Vq);
           if (contentClassificationVisibility === tmp4(14550).ContentClassificationVisibility.BLOCK_UNDERAGE) {

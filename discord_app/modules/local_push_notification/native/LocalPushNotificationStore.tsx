@@ -7,7 +7,7 @@ import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
 import PushNotificationDefault from "PushNotification" /* 12920 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6937 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6927 */;
 
 require = fn;
 const Constants = fn(7397);

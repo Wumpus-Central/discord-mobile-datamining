@@ -4,7 +4,7 @@
 import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 10818 */;
 import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11949 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 
 const useMyCurrentStageChannelDefault = tmp4(12916);
 const require = fn;
@@ -42,15 +42,15 @@ export function useGlobalStatusIndicatorState() {
   }, items2);
   const obj3 = stateFromStores(504);
   let num = stateFromStores(12911).useGetStageRTCPanelHeight(stateFromStores);
-  stateFromStores(5492);
+  stateFromStores(5482);
   let tmp12 = null != tmp5;
   if (tmp12) {
     let channelId = tmp5.channelId;
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
-    tmp12 = tmp(6900).getVoiceChannelKey(channelId) !== tmp11;
-    const tmpResult = tmp(6900);
+    tmp12 = tmp(6890).getVoiceChannelKey(channelId) !== tmp11;
+    const tmpResult = tmp(6890);
   }
   const obj4 = stateFromStores(12911);
   let isVoicePanelShowing = stateFromStores(11950).useIsVoicePanelShowing();

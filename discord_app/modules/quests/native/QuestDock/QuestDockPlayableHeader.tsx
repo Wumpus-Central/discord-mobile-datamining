@@ -1,8 +1,8 @@
-// === Module 17817: QuestDockPlayableHeader ===
+// === Module 17819: QuestDockPlayableHeader ===
 
-// Module 17817 (QuestDockPlayableHeader)
+// Module 17819 (QuestDockPlayableHeader)
 import nativeDefault from "native" /* 575 */;
-import QuestTypes from "QuestTypes" /* 5341 */;
+import QuestTypes from "QuestTypes" /* 6957 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17714 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const QuestDockMode = fn(5338).QuestDockMode;
+const QuestDockMode = fn(6954).QuestDockMode;
 const QuestDockConstants = fn(17698);
 ({ QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_6 } = QuestDockConstants);
 const jsxProd = fn(21);

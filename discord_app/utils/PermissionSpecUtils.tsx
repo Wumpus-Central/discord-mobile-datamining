@@ -1,18 +1,18 @@
-// === Module 19699: PermissionSpecUtils ===
+// === Module 19701: PermissionSpecUtils ===
 
-// Module 19699 (PermissionSpecUtils)
+// Module 19701 (PermissionSpecUtils)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import ChannelRecord from "ChannelRecord" /* 5159 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 6912 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 6902 */;
 import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7266 */;
 import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7286 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8404 */;
 import Tracking from "Tracking" /* 8866 */;
 import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 14244 */;
-import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 19700 */;
-import HangoutWindowExperiment from "HangoutWindowExperiment" /* 19701 */;
-import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 19703 */;
+import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 19702 */;
+import HangoutWindowExperiment from "HangoutWindowExperiment" /* 19703 */;
+import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 19705 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -66,9 +66,9 @@ export default {
       enabled = set.has(stateFromStores.type);
     }
     let obj2 = { guildId: guild_id, location: "3ad37d_1" };
-    const tmp4Result = tmp4(6939);
-    const isStageVideoEnabledResult = tmp4(6939).isStageVideoEnabled(guild_id);
-    let result = tmp4(19702).canCurrentUserManageMessageFilters(guild_id);
+    const tmp4Result = tmp4(6929);
+    const isStageVideoEnabledResult = tmp4(6929).isStageVideoEnabled(guild_id);
+    let result = tmp4(19704).canCurrentUserManageMessageFilters(guild_id);
     const isMediaChannelResult = stateFromStores.isMediaChannel();
     importDefault = isMediaChannelResult;
     set = new Set();
@@ -102,13 +102,13 @@ export default {
       items[4] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl27.string(tmp4(1113).t["rrh/W6"]));
       if (tmp.showStageChannelPermissions) {
         const intl28 = tmp4(1113).intl;
-        const items1 = [obj33(19703).generateChannelStageSection(tmp3, intl28.string(tmp4(1113).t.yniauk))];
+        const items1 = [obj33(19705).generateChannelStageSection(tmp3, intl28.string(tmp4(1113).t.yniauk))];
         let items2 = items1;
-        const obj33Result = obj33(19703);
+        const obj33Result = obj33(19705);
       } else {
         items2 = [];
       }
-      obj33 = obj33(19703);
+      obj33 = obj33(19705);
       const intl29 = tmp4(1113).intl;
       channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1113).t.b8lplT));
       items[HermesBuiltin.arraySpread(items2, 5)] = channelEventsSection;
@@ -251,7 +251,7 @@ export default {
       }
       return mapped;
     }
-    const tmp4Result2 = tmp4(19702);
+    const tmp4Result2 = tmp4(19704);
   },
   generateGuildPermissionSpec(features) {
     set = new Set();

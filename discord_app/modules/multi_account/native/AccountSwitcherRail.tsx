@@ -1,23 +1,23 @@
-// === Module 19582: AccountSwitcherRail ===
+// === Module 19584: AccountSwitcherRail ===
 
-// Module 19582 (AccountSwitcherRail)
+// Module 19584 (AccountSwitcherRail)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import SettingsIcon from "SettingsIcon" /* 10569 */;
 import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 14833 */;
-import openManageAccountsModalDefault from "openManageAccountsModal" /* 19150 */;
+import openManageAccountsModalDefault from "openManageAccountsModal" /* 19152 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1407 */;
-import StreamerModeStore from "StreamerModeStore" /* 5373 */;
+import StreamerModeStore from "StreamerModeStore" /* 5363 */;
 import UserStore from "UserStore" /* 1388 */;
 import MultiAccountStore from "MultiAccountStore" /* 14829 */;
 import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 16118 */;
 
-const CircleInformationIcon = CheckmarkSmallIcon(6037);
+const CircleInformationIcon = CheckmarkSmallIcon(6027);
 const CheckmarkSmallIcon2 = CheckmarkSmallIcon(7897);
 require = fn;
 function RailButton(arg0) {
@@ -40,9 +40,9 @@ function AccountButton(user) {
   const selected = user.selected;
   ({ disabled, onSelect: importAll } = user);
   dependencyMap = closure_22();
-  const radioA11yNative = user(5378).useRadioA11yNative({ selected, disabled });
+  const radioA11yNative = user(5368).useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  let obj = user(5378);
+  let obj = user(5368);
   closure_4 = tmp5;
   let obj2 = { accessibilityRole, accessibilityState, accessibilityLabel: null, accessibilityHint: null, disabled: null, onPress: null, children: null };
   const tmp4 = new UserRecord(user);
@@ -50,7 +50,7 @@ function AccountButton(user) {
   if (user.hidePersonalInformation) {
     str = "never";
   }
-  obj2.accessibilityLabel = selected(5372).getUserTag(tmp4, { mode: "username", identifiable: str });
+  obj2.accessibilityLabel = selected(5362).getUserTag(tmp4, { mode: "username", identifiable: str });
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
     const intl2 = tmp(1113).intl;
     let stringResult = intl2.string(tmp(1113).t.tYX2ps);
@@ -86,7 +86,7 @@ function AccountButton(user) {
         const obj3 = { children: null };
         items1[2] = null;
         obj3.children = items1;
-        return expandedHeight(collapsedCategories, obj3);
+        return closure_2_19(collapsedCategories, obj3);
       }
     }
     const items2 = [closure_3.indicator, ];
@@ -219,7 +219,7 @@ function AccountSwitcherRailContent() {
               obj2.style = items;
               const items1 = [closure_2_17(timestampProducer, obj2), closure_2_17(SettingsIcon.SettingsIcon, { size: "custom", style: manageIcon.manageIcon, color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, accessible: false })];
               obj.children = items1;
-              return expandedHeight(RailButton, obj);
+              return closure_2_19(RailButton, obj);
             }
       };
       items7[1] = closure_17(tmp4(tmp2[29]).ContextMenu, obj13);

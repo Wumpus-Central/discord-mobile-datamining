@@ -1,9 +1,9 @@
-// === Module 17983: CustomTypingIndicatorAnimationPickerSheet ===
+// === Module 17985: CustomTypingIndicatorAnimationPickerSheet ===
 
-// Module 17983 (CustomTypingIndicatorAnimationPickerSheet)
+// Module 17985 (CustomTypingIndicatorAnimationPickerSheet)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import Card from "Card" /* 7445 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -90,7 +90,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       }
     }, label.label))
   }, index));
-  items1[1] = closure_6(onChange(6337).Stack, obj9);
+  items1[1] = closure_6(onChange(6327).Stack, obj9);
   obj5.children = items1;
   return closure_7(onChange(7951).ActionSheet, obj5);
 };

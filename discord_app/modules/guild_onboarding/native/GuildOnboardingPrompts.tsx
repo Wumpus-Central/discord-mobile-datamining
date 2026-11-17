@@ -7,10 +7,10 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5923 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5913 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
 import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7084 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7872 */;
@@ -42,13 +42,13 @@ function BackgroundImageGradient(uri) {
   const color = uri.color;
   const tmp = closure_22();
   const obj = { children: null };
-  items = [expandedHeight(FastImageDefault, { source: { uri: uri.splashUrl }, style: tmp.backgroundImage, resizeMode: "cover" }), ];
+  items = [closure_1_19(FastImageDefault, { source: { uri: uri.splashUrl }, style: tmp.backgroundImage, resizeMode: "cover" }), ];
   const obj3 = { style: tmp.backgroundColorGradient, start: ConstantsIOS.VerticalGradient.START, end: ConstantsIOS.VerticalGradient.END, colors: null };
   const obj2 = { source: { uri: uri.splashUrl }, style: tmp.backgroundImage, resizeMode: "cover" };
   const tmp2 = LinearGradientDefault;
   const items1 = [ColorUtils.hexWithOpacity(color, 0.16), color];
   obj3.colors = items1;
-  items[1] = expandedHeight(tmp2, obj3);
+  items[1] = closure_1_19(tmp2, obj3);
   obj.children = items;
   return guild(dependencyMap, obj);
 }
@@ -61,8 +61,8 @@ const Constants = fn(1072);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
 const createStyles = fn(5306);
-let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5892).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
-let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5892).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5882).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5882).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.subtitle = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };
 obj2.onboardingTitle = { textAlign: "center" };
 let obj4 = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };
@@ -458,7 +458,7 @@ export default function GuildOnboardingPrompt(guildId) {
                 const obj2 = {};
                 let tmp = c0;
                 const obj = step(1256);
-                const merged = Object.assign(c0(6067).collectGuildAnalyticsMetadata(_undefined));
+                const merged = Object.assign(c0(6057).collectGuildAnalyticsMetadata(_undefined));
                 obj2.step = 0;
                 obj2.skipped = true;
                 obj2.back = false;
@@ -480,7 +480,7 @@ export default function GuildOnboardingPrompt(guildId) {
                 } else {
                   tmp5();
                 }
-                const obj3 = c0(6067);
+                const obj3 = c0(6057);
               })
         };
         navigation.setOptions(obj4);
@@ -490,7 +490,7 @@ export default function GuildOnboardingPrompt(guildId) {
       let headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
         const obj2 = {};
         const obj = step(1256);
-        const merged = Object.assign(c0(6067).collectGuildAnalyticsMetadata(_undefined));
+        const merged = Object.assign(c0(6057).collectGuildAnalyticsMetadata(_undefined));
         obj2.step = step;
         obj2.skipped = false;
         obj2.back = true;
@@ -498,10 +498,10 @@ export default function GuildOnboardingPrompt(guildId) {
         obj2.in_onboarding = true;
         obj2.is_final_step = false;
         obj.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
-        const obj3 = c0(6067);
+        const obj3 = c0(6057);
         const obj5 = {};
         const obj4 = step(1256);
-        const merged1 = Object.assign(c0(6067).collectGuildAnalyticsMetadata(_undefined));
+        const merged1 = Object.assign(c0(6057).collectGuildAnalyticsMetadata(_undefined));
         obj5.step = step - 1;
         obj5.required = dependencyMap[step - 1].required;
         obj4.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj5);
@@ -511,7 +511,7 @@ export default function GuildOnboardingPrompt(guildId) {
     headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
       const obj2 = {};
       const obj = step(1256);
-      const merged = Object.assign(c0(6067).collectGuildAnalyticsMetadata(_undefined));
+      const merged = Object.assign(c0(6057).collectGuildAnalyticsMetadata(_undefined));
       obj2.step = 0;
       obj2.skipped = false;
       obj2.back = true;

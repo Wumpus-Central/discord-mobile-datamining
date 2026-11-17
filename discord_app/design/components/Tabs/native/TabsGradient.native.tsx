@@ -2,8 +2,8 @@
 
 // Module 15124 (TabsGradient)
 import _mod1655 from "module_1655" /* 1655 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import noop from "module_19" /* 19 */;
 
 const module_1655 = _mod1655;

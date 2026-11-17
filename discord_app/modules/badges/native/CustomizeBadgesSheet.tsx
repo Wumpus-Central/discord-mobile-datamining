@@ -8,13 +8,13 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import timingPresets from "timingPresets" /* 5551 */;
-import HapticUtils from "HapticUtils" /* 5554 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 6037 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import timingPresets from "timingPresets" /* 5541 */;
+import HapticUtils from "HapticUtils" /* 5544 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6027 */;
 import Card from "Card" /* 7445 */;
 import EyeSlashIcon2 from "EyeSlashIcon" /* 7633 */;
 import EyeIcon from "EyeIcon" /* 7635 */;
@@ -123,7 +123,7 @@ get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsObjects: closure_9, AnalyticsPages: closure_10, AnalyticsSections: closure_11 } = Constants);
-const constants3 = fn(5567).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+const constants3 = fn(5557).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1390).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -336,7 +336,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     CustomizeBadgesSheetTsx2.__closure = items1;
     CustomizeBadgesSheetTsx2.__workletHash = 10350129315381;
     CustomizeBadgesSheetTsx2.__initData = tmp15;
-    let items2 = [closure_23, sharedValue, sharedValue2, tmp2(5548).withTiming, tmp2(5551).timingStandard, sharedValue3];
+    let items2 = [closure_23, sharedValue, sharedValue2, tmp2(5538).withTiming, tmp2(5541).timingStandard, sharedValue3];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -381,7 +381,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     CustomizeBadgesSheetTsx3.__workletHash = 7747025592280;
     CustomizeBadgesSheetTsx3.__initData = tmp23;
     const animatedReaction = tmp2(1655).useAnimatedReaction(CustomizeBadgesSheetTsx2, CustomizeBadgesSheetTsx3);
-    let items4 = [items15, orderShared, tileSize, tmp2(17113).BADGE_GRID_GAP, tmp2(1655).clamp, sharedValue2, tmp2(17113).BADGE_GRID_COLUMNS, sharedValue3, slotOffset, tmp2(15844).moveBadgeInDisplayOrder, badge_id, tmp2(1708).scheduleOnRN, tmp2(5554).triggerHapticFeedback, tmp2(5554).HapticFeedbackTypes];
+    let items4 = [items15, orderShared, tileSize, tmp2(17113).BADGE_GRID_GAP, tmp2(1655).clamp, sharedValue2, tmp2(17113).BADGE_GRID_COLUMNS, sharedValue3, slotOffset, tmp2(15844).moveBadgeInDisplayOrder, badge_id, tmp2(1708).scheduleOnRN, tmp2(5544).triggerHapticFeedback, tmp2(5544).HapticFeedbackTypes];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -841,7 +841,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   }
   analyticsLocations = useAnalyticsLocationsDefault(analyticsLocations1, tmp2(7937).BADGES_REORDER_ACTION_SHEET).analyticsLocations;
   noop = analyticsLocations;
-  const context = noop.useContext(tmp2(5897));
+  const context = noop.useContext(tmp2(5887));
   c4 = context;
   const items2 = [context, analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -1084,7 +1084,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const obj7 = { variant: "body-sm/normal", style: tmp.upsellText, children: null };
       const intl3 = tmp5(1113).intl;
       obj7.children = intl3.string(tmp5(1113).t.JrOki0);
-      obj6.children = memo2(tmp5(5929).Text, obj7);
+      obj6.children = memo2(tmp5(5919).Text, obj7);
       tmp56 = memo2(tmp2(17114), obj6);
       const tmp2Result = tmp2(17114);
     }
@@ -1118,7 +1118,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const obj11 = { variant: "body-md/normal", color: "text-muted", style: tmp.messageText, children: null };
       let intl = tmp5(1113).intl;
       obj11.children = intl.string(tmp5(1113).t["rTU7/z"]);
-      obj10.children = tmp51(tmp5(5929).Text, obj11);
+      obj10.children = tmp51(tmp5(5919).Text, obj11);
       let obj12 = obj10;
     } else {
       obj12 = { style: tmp.message, children: tmp51(tmp5(7418).ActivityIndicator, { animating: true, size: "large" }) };

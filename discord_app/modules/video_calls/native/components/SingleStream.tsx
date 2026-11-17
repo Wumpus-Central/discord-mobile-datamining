@@ -1,7 +1,7 @@
 // === Module 13068: SingleStream ===
 
 // Module 13068 (SingleStream)
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import StreamTileDefault from "StreamTile" /* 12787 */;
 import noop from "module_19" /* 19 */;
 

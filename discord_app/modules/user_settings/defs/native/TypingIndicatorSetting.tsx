@@ -1,13 +1,13 @@
-// === Module 17977: TypingIndicatorSetting ===
+// === Module 17979: TypingIndicatorSetting ===
 
-// Module 17977 (TypingIndicatorSetting)
+// Module 17979 (TypingIndicatorSetting)
 import util from "util" /* 1113 */;
 import _modDef4133 from "module_4133" /* 4133 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5136 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
 import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 14577 */;
 import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 17248 */;
-import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 17978 */;
+import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 17980 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,14 +28,14 @@ const route = SettingBuilders.createRoute({
     return intl.string(_modDef4133["pT+BVM"]);
   },
   parent: null,
-  IconComponent: fn(17979).ChatDotsIcon,
+  IconComponent: fn(17981).ChatDotsIcon,
   useTrailing() {
     const obj = CustomTypingIndicatorNewPresetsExperiment;
     const DismissibleContent = dismissible_content.DismissibleContent;
     return <tmp2 dismissibleContent={obj.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled ? DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE : DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE} newPremiumStyle />;
   },
   usePreNavigationAction() {
-    enabled = enabled(17978).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
+    enabled = enabled(17980).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
     const tmp = closure_6();
     closure_1 = tmp;
     const tmp2 = closure_7();

@@ -4,7 +4,7 @@
 import UserSettings from "UserSettings" /* 5131 */;
 import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import StreamerModeStore from "StreamerModeStore" /* 5373 */;
+import StreamerModeStore from "StreamerModeStore" /* 5363 */;
 
 require = fn;
 function getDiscordCustomTheme() {

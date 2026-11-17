@@ -2,7 +2,7 @@
 
 // Module 15206 (MoreVerticalIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod15207 from "module_15207" /* 15207 */;
 import noop from "module_19" /* 19 */;
 

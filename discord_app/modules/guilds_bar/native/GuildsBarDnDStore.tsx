@@ -1,10 +1,10 @@
-// === Module 19063: GuildsBarDnDStore ===
+// === Module 19065: GuildsBarDnDStore ===
 
-// Module 19063 (GuildsBarDnDStore)
+// Module 19065 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import _mod5221 from "module_5221" /* 5221 */;
-import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import SortedGuildStore from "SortedGuildStore" /* 6946 */;
 import identity from "module_1258" /* 1258 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "description", dropSpecs: "isArray", dragRegion: require("module_1655").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "headers", scrollPosition: true, windowSize: true, setStateShallow: true, dropStart: true, dropComplete: true };
+  let obj = { dragSpecs: "Boolean", overSpecs: "description", dropSpecs: "isArray", dragRegion: require("module_1655").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "regional_indicator_k", scrollPosition: "onboardingPromptsSeen", windowSize: "_doFastConnectIdentify", setStateShallow: "\u{1F935}\u{1F3FD}", dropStart: "lastDatabase", dropComplete: "latest_onboarding_question_id" };
   let obj2 = require("module_1655");
   obj.gestureState = require("module_1655").makeMutable(obj);
   let obj3 = require("module_1655");
@@ -55,7 +55,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1263).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "channel_id" }));
+      dropSpecs(1263).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "alignItems" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;

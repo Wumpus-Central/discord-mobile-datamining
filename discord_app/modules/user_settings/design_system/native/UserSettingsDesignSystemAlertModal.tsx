@@ -1,9 +1,9 @@
-// === Module 18422: UserSettingsDesignSystemAlertModal ===
+// === Module 18424: UserSettingsDesignSystemAlertModal ===
 
-// Module 18422 (UserSettingsDesignSystemAlertModal)
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import useAlertStore from "useAlertStore" /* 6270 */;
-import AlertModal from "AlertModal" /* 6274 */;
+// Module 18424 (UserSettingsDesignSystemAlertModal)
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import useAlertStore from "useAlertStore" /* 6260 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

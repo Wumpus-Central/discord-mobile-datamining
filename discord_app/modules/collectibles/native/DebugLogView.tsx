@@ -1,10 +1,10 @@
-// === Module 18532: DebugLogView ===
+// === Module 18534: DebugLogView ===
 
-// Module 18532 (DebugLogView)
+// Module 18534 (DebugLogView)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5932 */;
+import DevSettingsStore from "DevSettingsStore" /* 5922 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -46,7 +46,7 @@ export default function DebugLogView() {
       obj4.style = obj5;
       const items2 = ["Debug Log (", arr.length, " entries)"];
       obj4.children = items2;
-      const items3 = [closure_9(tmp2(5929).Text, obj4), ];
+      const items3 = [closure_9(tmp2(5919).Text, obj4), ];
       const obj6 = {
         onPress: function handleClear() {
               closure_1();
@@ -55,7 +55,7 @@ export default function DebugLogView() {
         children: null
       };
       const obj7 = { variant: "body-xs/semibold", style: tmp.clearButtonText, children: "Clear" };
-      obj6.children = closure_10(tmp2(5929).Text, obj7);
+      obj6.children = closure_10(tmp2(5919).Text, obj7);
       items3[1] = closure_10(closure_5, obj6);
       obj3.children = items3;
       const items4 = [closure_9(stateFromStores, obj3), ];

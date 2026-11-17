@@ -2,7 +2,7 @@
 
 // Module 10728 (GifIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9334 from "module_9334" /* 9334 */;
 import noop from "module_19" /* 19 */;
 

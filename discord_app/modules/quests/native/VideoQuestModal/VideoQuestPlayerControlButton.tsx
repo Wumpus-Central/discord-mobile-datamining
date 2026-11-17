@@ -2,7 +2,7 @@
 
 // Module 17576 (VideoQuestPlayerControlButton)
 import nativeDefault from "native" /* 575 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5896 */;
 import Pressables from "Pressables" /* 7428 */;
 import noop from "module_19" /* 19 */;
 import n from "module_671" /* 671 */;

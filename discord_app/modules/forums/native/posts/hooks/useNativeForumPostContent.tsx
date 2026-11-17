@@ -3,7 +3,7 @@
 // Module 14634 (useNativeForumPostContent)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import StickersUtils from "StickersUtils" /* 6792 */;
+import StickersUtils from "StickersUtils" /* 6782 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7062 */;
 import createStyles from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;

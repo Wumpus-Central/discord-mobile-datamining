@@ -1,9 +1,9 @@
-// === Module 19529: SuggestedSearchSkeleton ===
+// === Module 19531: SuggestedSearchSkeleton ===
 
-// Module 19529 (SuggestedSearchSkeleton)
+// Module 19531 (SuggestedSearchSkeleton)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5548 */;
+import timing_timing from "timing/timing" /* 5538 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

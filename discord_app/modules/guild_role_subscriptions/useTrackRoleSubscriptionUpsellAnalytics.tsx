@@ -1,8 +1,8 @@
-// === Module 19376: useTrackRoleSubscriptionUpsellAnalytics ===
+// === Module 19378: useTrackRoleSubscriptionUpsellAnalytics ===
 
-// Module 19376 (useTrackRoleSubscriptionUpsellAnalytics)
+// Module 19378 (useTrackRoleSubscriptionUpsellAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6057 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5231 */;
 

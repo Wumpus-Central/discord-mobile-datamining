@@ -45,17 +45,17 @@ export function PromoSheet(arg0) {
     }
   }
   const items1 = [tmp4Result, , ];
-  const items2 = [closure_7(gradientColor(5929).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
+  const items2 = [closure_7(gradientColor(5919).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
   let tmp4Result2 = null;
   if (null != description) {
     const obj5 = { variant: "heading-md/medium", color: "text-subtle", style: tmp2.description, children: description };
-    tmp4Result2 = closure_7(gradientColor(5929).Text, obj5);
+    tmp4Result2 = closure_7(gradientColor(5919).Text, obj5);
   }
   const obj6 = { spacing: 24, children: null };
   items2[1] = tmp4Result2;
-  items1[1] = closure_8(gradientColor(6337).Stack, { children: items2 });
+  items1[1] = closure_8(gradientColor(6327).Stack, { children: items2 });
   items1[2] = actions;
   obj6.children = items1;
-  obj.children = closure_8(gradientColor(6337).Stack, obj6);
-  return closure_7(gradientColor(5566).BottomSheet, obj);
+  obj.children = closure_8(gradientColor(6327).Stack, obj6);
+  return closure_7(gradientColor(5556).BottomSheet, obj);
 }

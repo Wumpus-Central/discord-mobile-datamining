@@ -1,12 +1,12 @@
-// === Module 19762: RestrictedMessageRequestPreview ===
+// === Module 19764: RestrictedMessageRequestPreview ===
 
-// Module 19762 (RestrictedMessageRequestPreview)
+// Module 19764 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 575 */;
 import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 14929 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -125,9 +125,9 @@ export default function RestrictedMessageRequestPreview(channelId) {
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items9 = [closure_10(tmp2(19763), obj6), , ];
+      const items9 = [closure_10(tmp2(19765), obj6), , ];
       const obj7 = { channelId };
-      items9[1] = closure_10(tmp2(19765), obj7);
+      items9[1] = closure_10(tmp2(19767), obj7);
       let tmp19Result = null;
       if (isEmpty) {
         const obj8 = { style: tmp.emptyChat };

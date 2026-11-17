@@ -1,7 +1,7 @@
 // === Module 15049: PaintIllocon ===
 
 // Module 15049 (PaintIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef15050 from "module_15050" /* 15050 */;
 import _modDef15051 from "module_15051" /* 15051 */;

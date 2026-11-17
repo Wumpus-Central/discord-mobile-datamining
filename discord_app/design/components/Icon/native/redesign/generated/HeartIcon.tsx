@@ -2,7 +2,7 @@
 
 // Module 9458 (HeartIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod9459 from "module_9459" /* 9459 */;
 import noop from "module_19" /* 19 */;
 

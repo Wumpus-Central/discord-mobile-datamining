@@ -18,13 +18,13 @@ const result = size.fileFinishedImporting("modules/pinot/native/PinotMemberNotic
 export function PinotMemberNoticeHeaderArrow(channelId) {
   channelId = channelId.channelId;
   const tmp = closure_8();
-  const token = channelId(5902).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
-  const obj = channelId(5902);
-  const token1 = channelId(5902).useToken(nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO);
-  const obj2 = channelId(5902);
-  const token2 = channelId(5902).useToken(nativeDefault.colors.BORDER_SUBTLE);
+  const token = channelId(5892).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
+  const obj = channelId(5892);
+  const token1 = channelId(5892).useToken(nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO);
+  const obj2 = channelId(5892);
+  const token2 = channelId(5892).useToken(nativeDefault.colors.BORDER_SUBTLE);
   const ref = noop.useRef(null);
-  const obj3 = channelId(5902);
+  const obj3 = channelId(5892);
   items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);

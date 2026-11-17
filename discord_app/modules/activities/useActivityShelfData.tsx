@@ -2,10 +2,10 @@
 
 // Module 13372 (useActivityShelfData)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
-import TestModeStore from "TestModeStore" /* 5975 */;
+import TestModeStore from "TestModeStore" /* 5965 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 
 const require = globalThis.__r;
@@ -78,7 +78,7 @@ export function useActivityShelfData(guildId) {
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = stateFromStores(5984);
+      const tmp = stateFromStores(5974);
       return supported_platforms.includes(tmp(guildId(1380).getOS()));
     });
     const found1 = found.filter((activity) => {

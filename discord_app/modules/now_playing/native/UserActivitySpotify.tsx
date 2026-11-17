@@ -4,7 +4,7 @@
 import native from "native" /* 1187 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1379 */;
-import LinkingDefault from "Linking" /* 6012 */;
+import LinkingDefault from "Linking" /* 6002 */;
 import _modDef12430 from "module_12430" /* 12430 */;
 import noop from "module_19" /* 19 */;
 
@@ -242,7 +242,7 @@ export function openAlbum(activity, id) {
 export function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
-  let obj2 = { icon: closure_9(activity(5936).Button.Icon, { source: _modDef12430 }), text: null, size: "sm", onPress: null, grow: true };
+  let obj2 = { icon: closure_9(activity(5926).Button.Icon, { source: _modDef12430 }), text: null, size: "sm", onPress: null, grow: true };
   const intl = activity(1113).intl;
   obj2.text = intl.formatToPlainString(activity(1113).t.LEgD7t, { platform: activity.name });
   obj2.onPress = function handlePress() {
@@ -265,7 +265,7 @@ export function SpotifyPlayButton(activity) {
 
     });
   };
-  obj.children = closure_9(activity(5936).Button, obj2);
+  obj.children = closure_9(activity(5926).Button, obj2);
   return closure_9(closure_5, obj);
 }
 export { SpotifyTrack };

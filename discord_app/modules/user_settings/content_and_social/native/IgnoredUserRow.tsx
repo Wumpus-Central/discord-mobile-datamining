@@ -57,7 +57,7 @@ function IgnoredUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj.trailing = jsx(userRecord(5936).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
+  obj.trailing = jsx(userRecord(5926).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
   return jsx(userRecord(7443).TableRow, { accessible: false, icon: jsx(userRecord(1187).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
 }
 const jsx = fn(21).jsx;

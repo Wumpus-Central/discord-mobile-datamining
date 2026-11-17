@@ -6,7 +6,7 @@ import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16914 */
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const Constants = fn(6761);
+const Constants = fn(6751);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 const RPCCommands = fn(1072).RPCCommands;
 let obj = { [RPC_SCOPE_CONFIG.ANY]: items };

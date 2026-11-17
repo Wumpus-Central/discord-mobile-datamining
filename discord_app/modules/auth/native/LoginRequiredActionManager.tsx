@@ -1,7 +1,7 @@
-// === Module 20296: LoginRequiredActionManager ===
+// === Module 20299: LoginRequiredActionManager ===
 
-// Module 20296 (LoginRequiredActionManager)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6844 */;
+// Module 20299 (LoginRequiredActionManager)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6834 */;
 import UserStore from "UserStore" /* 1388 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 5148 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;

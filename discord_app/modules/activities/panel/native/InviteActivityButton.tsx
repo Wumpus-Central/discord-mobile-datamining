@@ -1,8 +1,8 @@
-// === Module 19935: InviteActivityButton ===
+// === Module 19937: InviteActivityButton ===
 
-// Module 19935 (InviteActivityButton)
+// Module 19937 (InviteActivityButton)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12696 */;
 import noop from "module_19" /* 19 */;
 import LocalActivityStore from "LocalActivityStore" /* 7317 */;
@@ -23,7 +23,7 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     const obj2 = {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(19936, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(19938, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
       icon: stateFromStores(10982),
       text: null,
@@ -37,10 +37,10 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     obj2.text = intl.string(tmp(1113).t["OzOM/q"]);
     const intl2 = tmp(1113).intl;
     obj2.accessibilityLabel = intl2.string(tmp(1113).t["OzOM/q"]);
-    tmp4 = jsx(tmp(5936).Button, {
+    tmp4 = jsx(tmp(5926).Button, {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(19936, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(19938, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
       icon: stateFromStores(10982),
       text: null,

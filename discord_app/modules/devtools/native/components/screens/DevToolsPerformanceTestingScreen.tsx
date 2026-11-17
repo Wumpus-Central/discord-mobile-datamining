@@ -1,6 +1,6 @@
-// === Module 18378: DevToolsPerformanceTestingScreen ===
+// === Module 18380: DevToolsPerformanceTestingScreen ===
 
-// Module 18378 (DevToolsPerformanceTestingScreen)
+// Module 18380 (DevToolsPerformanceTestingScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import DevToolsNavigator from "DevToolsNavigator" /* 17057 */;

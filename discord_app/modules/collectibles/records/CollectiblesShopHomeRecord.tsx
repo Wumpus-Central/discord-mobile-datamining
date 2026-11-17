@@ -1,7 +1,7 @@
 // === Module 8512: CollectiblesShopHomeRecord ===
 
 // Module 8512 (CollectiblesShopHomeRecord)
-import ShopBlockType from "ShopBlockType" /* 5991 */;
+import ShopBlockType from "ShopBlockType" /* 5981 */;
 import ShopBlockRecordFactory from "ShopBlockRecordFactory" /* 8514 */;
 import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 8486 */;
 

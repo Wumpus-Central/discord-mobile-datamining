@@ -2,8 +2,8 @@
 
 // Module 12944 (shouldShowEndStageModal)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6940 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6942 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6930 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6932 */;
 import StageInstanceStore from "StageInstanceStore" /* 5160 */;
 
 const require = globalThis.__r;

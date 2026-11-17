@@ -1,8 +1,8 @@
-// === Module 18188: AppVersionSetting ===
+// === Module 18190: AppVersionSetting ===
 
-// Module 18188 (AppVersionSetting)
+// Module 18190 (AppVersionSetting)
 import util from "util" /* 1113 */;
-import CopyClientInfoSetting from "CopyClientInfoSetting" /* 18189 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 18191 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1379 */;
 
 require = fn;

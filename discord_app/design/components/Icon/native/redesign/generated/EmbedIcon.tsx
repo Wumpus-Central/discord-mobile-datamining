@@ -2,7 +2,7 @@
 
 // Module 15968 (EmbedIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod15969 from "module_15969" /* 15969 */;
 import noop from "module_19" /* 19 */;
 

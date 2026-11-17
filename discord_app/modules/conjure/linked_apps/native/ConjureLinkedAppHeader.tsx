@@ -2,7 +2,7 @@
 
 // Module 13252 (ConjureLinkedAppHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import AppsIcon from "AppsIcon" /* 8101 */;
 import ConjureProjectIconDefault from "ConjureProjectIcon" /* 10543 */;
 import conjureLinkedAppData from "conjureLinkedAppData" /* 13251 */;

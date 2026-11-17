@@ -2,7 +2,7 @@
 
 // Module 12260 (UserProfileApplicationWidgetTopContainedLayout)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12149 */;
 import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 12255 */;
 import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12256 */;

@@ -1,10 +1,10 @@
-// === Module 18099: WebBrowserSetting ===
+// === Module 18101: WebBrowserSetting ===
 
-// Module 18099 (WebBrowserSetting)
+// Module 18101 (WebBrowserSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import GlobeEarthIcon from "GlobeEarthIcon" /* 8163 */;
-import SelectWebBrowserSetting from "SelectWebBrowserSetting" /* 18100 */;
+import SelectWebBrowserSetting from "SelectWebBrowserSetting" /* 18102 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 

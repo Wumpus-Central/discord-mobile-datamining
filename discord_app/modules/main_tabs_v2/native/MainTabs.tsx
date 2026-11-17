@@ -1,15 +1,15 @@
-// === Module 18712: MainTabs ===
+// === Module 18714: MainTabs ===
 
-// Module 18712 (MainTabs)
+// Module 18714 (MainTabs)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5377 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5488 */;
-import useToken from "useToken" /* 5902 */;
+import native from "native" /* 5367 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5478 */;
+import useToken from "useToken" /* 5892 */;
 import useActiveTheme from "useActiveTheme" /* 9062 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10271 */;
-import useAppFrameDefault from "useAppFrame" /* 18713 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 18714 */;
-import AccountSwitcherRailDefault from "AccountSwitcherRail" /* 19582 */;
+import useAppFrameDefault from "useAppFrame" /* 18715 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 18716 */;
+import AccountSwitcherRailDefault from "AccountSwitcherRail" /* 19584 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

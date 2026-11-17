@@ -8,7 +8,7 @@ import sortByMatchScore from "sortByMatchScore" /* 10247 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import LocalActivityStore from "LocalActivityStore" /* 7317 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
 import UserStore from "UserStore" /* 1388 */;
 import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7240 */;

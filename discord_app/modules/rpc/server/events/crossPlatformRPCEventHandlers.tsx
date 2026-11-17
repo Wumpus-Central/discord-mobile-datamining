@@ -4,7 +4,7 @@
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import AgeGateUtils from "AgeGateUtils" /* 6838 */;
+import AgeGateUtils from "AgeGateUtils" /* 6828 */;
 import getSocketFrameDefault from "getSocketFrame" /* 7296 */;
 import transformUserDefault from "transformUser" /* 7301 */;
 import RPCErrorDefault from "RPCError" /* 7303 */;
@@ -17,15 +17,15 @@ import guildVoice from "guildVoice" /* 16918 */;
 import transformApplicationDefault from "transformApplication" /* 16999 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 require = fn;
 function messageEventsValidation(string) {
@@ -80,7 +80,7 @@ function voiceSessionEvent(socket) {
   const result = ConjureVoiceSessionCoordinatorDefault.validateEventSubscription(socket.socket, socket.args.session_id);
 }
 const getGuildIconURL = fn(5173).getGuildIconURL;
-let Constants = fn(6761);
+let Constants = fn(6751);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
 ({ ApplicationFlags: closure_16, ChannelTypes: closure_17, RPCErrors: closure_18, RPCEvents } = Constants);

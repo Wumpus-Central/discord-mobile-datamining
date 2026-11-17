@@ -1,17 +1,17 @@
-// === Module 20045: VoicePanelVoiceChannelApp ===
+// === Module 20047: VoicePanelVoiceChannelApp ===
 
-// Module 20045 (VoicePanelVoiceChannelApp)
+// Module 20047 (VoicePanelVoiceChannelApp)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 2023 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19229 */;
-import useControlsLockDefault from "useControlsLock" /* 19978 */;
-import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 20003 */;
-import VoiceChannelAppSurfaceDefault from "VoiceChannelAppSurface" /* 20047 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19231 */;
+import useControlsLockDefault from "useControlsLock" /* 19980 */;
+import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 20005 */;
+import VoiceChannelAppSurfaceDefault from "VoiceChannelAppSurface" /* 20049 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import VoicePanelStore from "VoicePanelStore" /* 6901 */;
+import VoicePanelStore from "VoicePanelStore" /* 6891 */;
 
 require = fn;
 function VoiceChannelAppLayer(applicationId) {

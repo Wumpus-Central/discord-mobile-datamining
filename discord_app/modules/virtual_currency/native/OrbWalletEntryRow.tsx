@@ -1,10 +1,10 @@
-// === Module 18341: OrbWalletEntryRow ===
+// === Module 18343: OrbWalletEntryRow ===
 
-// Module 18341 (OrbWalletEntryRow)
+// Module 18343 (OrbWalletEntryRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2333 from "module_2333" /* 2333 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Card from "Card" /* 7445 */;
 import Badge from "Badge" /* 7459 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7963 */;

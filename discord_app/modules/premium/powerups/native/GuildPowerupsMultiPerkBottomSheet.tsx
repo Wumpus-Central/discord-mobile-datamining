@@ -9,9 +9,9 @@ import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef2733 from "module_2733" /* 2733 */;
 import themes from "themes" /* 5328 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 10676 */;
 import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 10696 */;
 import usePowerupActiveStatus from "usePowerupActiveStatus" /* 10700 */;
@@ -206,8 +206,8 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
     obj13.children = powerups.map((powerup) => React4(GuildPowerupsMultiPerkCard, { guildId, powerup, forceStaticImage: forceStaticImages.forceStaticImages }, powerup.skuId));
     items[2] = closure_4(View, obj13);
     obj2.children = items;
-    obj.children = closure_5(guildId(5570).BottomSheetScrollView, obj2);
-    tmp6Result2 = closure_4(guildId(5566).BottomSheet, obj);
+    obj.children = closure_5(guildId(5560).BottomSheetScrollView, obj2);
+    tmp6Result2 = closure_4(guildId(5556).BottomSheet, obj);
     const obj5 = { title: null, description: null };
   }
   return tmp6Result2;

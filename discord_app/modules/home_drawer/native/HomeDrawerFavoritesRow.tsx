@@ -1,9 +1,9 @@
-// === Module 19090: HomeDrawerFavoritesRow ===
+// === Module 19092: HomeDrawerFavoritesRow ===
 
-// Module 19090 (HomeDrawerFavoritesRow)
+// Module 19092 (HomeDrawerFavoritesRow)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 19084 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 19086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

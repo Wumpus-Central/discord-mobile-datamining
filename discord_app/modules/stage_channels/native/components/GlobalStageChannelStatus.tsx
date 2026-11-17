@@ -3,9 +3,9 @@
 // Module 12919 (GlobalStageChannelStatus)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useMountEffectDefault from "useMountEffect" /* 5899 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 6909 */;
+import useMountEffectDefault from "useMountEffect" /* 5889 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 6899 */;
 import StatusBarDefault from "StatusBar" /* 11827 */;
 import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11949 */;
 import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11956 */;
@@ -13,7 +13,7 @@ import PushNotificationDefault from "PushNotification" /* 12920 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5553 */;
+import ActionSheetStore from "ActionSheetStore" /* 5543 */;
 import StageInstanceStore from "StageInstanceStore" /* 5160 */;
 
 require = fn;
@@ -50,7 +50,7 @@ class StageChannelRaiseHandAck {
             } else {
               if (null != id) {
                 if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                  const obj5 = { entryPoint: tmp3(6833).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                  const obj5 = { entryPoint: tmp3(6823).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
                   const result = v2(8190).showAgeVerificationGetStartedModal(obj5);
                   const obj4 = v2(8190);
                 } else {
@@ -58,10 +58,10 @@ class StageChannelRaiseHandAck {
                   dependencyMap = 1;
                   v2 = 2;
                   c4 = 1;
-                  const obj6 = { value: tmp3(6909).audienceAckRequestToSpeak(id, false), done: false };
+                  const obj6 = { value: tmp3(6899).audienceAckRequestToSpeak(id, false), done: false };
                   return obj6;
                 }
-                obj9 = tmp3(6908);
+                obj9 = tmp3(6898);
               }
               c4 = 3;
             }
@@ -76,8 +76,8 @@ class StageChannelRaiseHandAck {
             dependencyMap = 0;
             closure_128_3(false);
             if (null == key.getKey()) {
-              tmp29(6903).openStageChannel(closure_128_0);
-              const obj8 = tmp29(6903);
+              tmp29(6893).openStageChannel(closure_128_0);
+              const obj8 = tmp29(6893);
             }
           }
           dependencyMap = 0;

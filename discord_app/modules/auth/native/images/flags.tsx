@@ -1,8 +1,6 @@
-// === Module 18046: flags ===
+// === Module 18048: flags ===
 
-// Module 18046 (flags)
-import _mod18047 from "module_18047" /* 18047 */;
-import _mod18048 from "module_18048" /* 18048 */;
+// Module 18048 (flags)
 import _mod18049 from "module_18049" /* 18049 */;
 import _mod18050 from "module_18050" /* 18050 */;
 import _mod18051 from "module_18051" /* 18051 */;
@@ -32,8 +30,10 @@ import _mod18074 from "module_18074" /* 18074 */;
 import _mod18075 from "module_18075" /* 18075 */;
 import _mod18076 from "module_18076" /* 18076 */;
 import _mod18077 from "module_18077" /* 18077 */;
+import _mod18078 from "module_18078" /* 18078 */;
+import _mod18079 from "module_18079" /* 18079 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
-export const flags = { bg: _mod18047, cs: _mod18048, da: _mod18049, de: _mod18050, el: _mod18051, "en-GB": _mod18052, "en-US": _mod18053, "es-ES": _mod18054, "es-419": _mod18055, fi: _mod18056, fr: _mod18057, hi: _mod18058, hr: _mod18059, hu: _mod18060, it: _mod18061, ja: _mod18062, ko: _mod18063, lt: _mod18064, nl: _mod18065, no: _mod18066, pl: _mod18067, "pt-BR": _mod18068, ro: _mod18069, ru: _mod18070, "sv-SE": _mod18071, th: _mod18072, tr: _mod18073, uk: _mod18074, vi: _mod18075, "zh-CN": _mod18076, "zh-TW": _mod18077 };
+export const flags = { bg: _mod18049, cs: _mod18050, da: _mod18051, de: _mod18052, el: _mod18053, "en-GB": _mod18054, "en-US": _mod18055, "es-ES": _mod18056, "es-419": _mod18057, fi: _mod18058, fr: _mod18059, hi: _mod18060, hr: _mod18061, hu: _mod18062, it: _mod18063, ja: _mod18064, ko: _mod18065, lt: _mod18066, nl: _mod18067, no: _mod18068, pl: _mod18069, "pt-BR": _mod18070, ro: _mod18071, ru: _mod18072, "sv-SE": _mod18073, th: _mod18074, tr: _mod18075, uk: _mod18076, vi: _mod18077, "zh-CN": _mod18078, "zh-TW": _mod18079 };

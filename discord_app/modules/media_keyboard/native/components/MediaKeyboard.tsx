@@ -3,7 +3,7 @@
 // Module 13532 (MediaKeyboard)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
 import ThreadIcon from "ThreadIcon" /* 8071 */;
 import ImageIcon from "ImageIcon" /* 8085 */;
 import AppsIcon from "AppsIcon" /* 8101 */;

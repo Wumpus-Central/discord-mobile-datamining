@@ -1,6 +1,6 @@
-// === Module 20801: MidjourneyOnboardingManager ===
+// === Module 20804: MidjourneyOnboardingManager ===
 
-// Module 20801 (MidjourneyOnboardingManager)
+// Module 20804 (MidjourneyOnboardingManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 

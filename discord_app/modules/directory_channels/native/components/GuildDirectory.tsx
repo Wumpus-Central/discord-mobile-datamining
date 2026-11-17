@@ -5,9 +5,9 @@ import TTITrackerDefault from "TTITracker" /* 9 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import Pressables from "Pressables" /* 7428 */;
 import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7826 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8678 */;
@@ -89,16 +89,16 @@ function GuildDirectoryHeader(guild) {
   items1[2] = collapsedCategories(components_Button_Button.Button, obj6);
   items1[3] = collapsedCategories(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "hub_directory" });
   obj3.children = items1;
-  items[1] = expandedHeight(hasOwnProperty, obj3);
+  items[1] = closure_1_19(hasOwnProperty, obj3);
   obj.children = items;
-  const children = [expandedHeight(hasOwnProperty, obj), ];
+  const children = [closure_1_19(hasOwnProperty, obj), ];
   let tmp5Result = null;
   if (hasItem) {
     const obj7 = { guild, onDirectoryPage: true };
     tmp5Result = collapsedCategories(HubProgressHeaderDefault, obj7);
   }
   children[1] = tmp5Result;
-  return expandedHeight(dependencyMap, { children });
+  return closure_1_19(dependencyMap, { children });
 }
 function GuildDirectoryFooter(hideFooter) {
   ({ guild: require, channel } = hideFooter);
@@ -254,9 +254,9 @@ export default function GuildDirectory(channel) {
   ref = obj2.useRef(null);
   ref2 = obj2.useRef(0);
   const tmp2Result = channel(504);
-  _location = channel(5360).useLocation();
-  const tmp2Result3 = channel(5360);
-  history = channel(5360).useHistory();
+  _location = channel(5350).useLocation();
+  const tmp2Result3 = channel(5350);
+  history = channel(5350).useHistory();
   const items5 = [_location, history];
   const effect2 = obj2.useEffect(() => {
     state = _location.state;
@@ -372,5 +372,5 @@ export default function GuildDirectory(channel) {
     obj11.children = items11;
     obj6 = obj11;
   }
-  const tmp2Result4 = channel(5360);
+  const tmp2Result4 = channel(5350);
 };

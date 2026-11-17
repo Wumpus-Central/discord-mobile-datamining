@@ -1,9 +1,9 @@
-// === Module 5911: VisualEffectViewAndroid ===
+// === Module 5901: VisualEffectViewAndroid ===
 
-// Module 5911 (VisualEffectViewAndroid)
-import VisualEffectViewNativeComponentDefault from "VisualEffectViewNativeComponent" /* 5910 */;
+// Module 5901 (VisualEffectViewAndroid)
+import VisualEffectViewNativeComponentDefault from "VisualEffectViewNativeComponent" /* 5900 */;
 import DeviceUtils from "DeviceUtils" /* 5263 */;
-import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 5909 */;
+import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 5899 */;
 import size from "module_2" /* 2 */;
 
 const obj = { componentName: "DCDVisualEffectView", componentFoundInstance: null };

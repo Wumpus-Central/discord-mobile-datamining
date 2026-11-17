@@ -5,7 +5,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import UserStore from "UserStore" /* 1388 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5350 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5340 */;
 
 const require = fn;
 const jsxProd = fn(21);
@@ -90,7 +90,7 @@ export default function MemberVerificationAlertRejected(guildId) {
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            const obj4 = v1(6932);
+            const obj4 = v1(6922);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;
@@ -184,7 +184,7 @@ export default function MemberVerificationAlertRejected(guildId) {
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            const obj4 = v1(6932);
+            const obj4 = v1(6922);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;

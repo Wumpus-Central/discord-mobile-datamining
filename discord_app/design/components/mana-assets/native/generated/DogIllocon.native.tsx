@@ -1,7 +1,7 @@
 // === Module 13684: DogIllocon ===
 
 // Module 13684 (DogIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef13685 from "module_13685" /* 13685 */;
 import _modDef13686 from "module_13686" /* 13686 */;

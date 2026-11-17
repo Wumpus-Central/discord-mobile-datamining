@@ -1,11 +1,11 @@
-// === Module 18149: UpcomingServerEventNotificationSetting ===
+// === Module 18151: UpcomingServerEventNotificationSetting ===
 
-// Module 18149 (UpcomingServerEventNotificationSetting)
+// Module 18151 (UpcomingServerEventNotificationSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;
-import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 18150 */;
-import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 18151 */;
+import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 18152 */;
+import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 18153 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 

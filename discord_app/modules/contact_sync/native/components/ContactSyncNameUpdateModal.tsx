@@ -2,7 +2,7 @@
 
 // Module 17375 (ContactSyncNameUpdateModal)
 import nativeDefault from "native" /* 575 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import Navigator from "Navigator" /* 7490 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -31,10 +31,10 @@ function ContactSyncNameInputScreen() {
       const obj7 = { text: null, variant: "critical" };
       const intl = closure_0(1113).intl;
       obj7.text = intl.string(closure_0(1113).t.R0RpRX);
-      tmp3(6015).open("ERROR_GENERIC_TITLE", obj7);
+      tmp3(6005).open("ERROR_GENERIC_TITLE", obj7);
       closure_129_0(false);
       c4 = 3;
-      tmp3(6015);
+      tmp3(6005);
     } else if (arg0 === 1) {
       c4 = 3;
       throw value;
@@ -81,7 +81,7 @@ const View = fn(17).View;
 const ContactSyncScenes = fn(14995).ContactSyncScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5892).NAV_BAR_HEIGHT + 32 } };
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5882).NAV_BAR_HEIGHT + 32 } };
 let closure_10 = createStyles.createStyles(obj2);
 const obj4 = {};
 const obj5 = {

@@ -1,8 +1,8 @@
-// === Module 5377: native ===
+// === Module 5367: native ===
 
-// Module 5377 (native)
-import ManaContext from "ManaContext" /* 5433 */;
-import GraphicTypes from "GraphicTypes" /* 5479 */;
+// Module 5367 (native)
+import ManaContext from "ManaContext" /* 5423 */;
+import GraphicTypes from "GraphicTypes" /* 5469 */;
 import size from "module_2" /* 2 */;
 import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 5321 */;
 
@@ -61,8 +61,8 @@ for (const key10067 in require("ThemeContextFlags")) {
   arg5[key10067] = require("ThemeContextFlags")[key10067];
   continue;
 }
-for (const key10071 in require("module_5383")) {
-  arg5[key10071] = require("module_5383")[key10071];
+for (const key10071 in require("module_5373")) {
+  arg5[key10071] = require("module_5373")[key10071];
   continue;
 }
 for (const key10075 in require("shared/Colors")) {

@@ -1,9 +1,9 @@
-// === Module 18372: TakeActionScreen ===
+// === Module 18374: TakeActionScreen ===
 
-// Module 18372 (TakeActionScreen)
+// Module 18374 (TakeActionScreen)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 6012 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6915 */;
+import LinkingDefault from "Linking" /* 6002 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6905 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8137 */;
 import SafetyWarningUtils from "SafetyWarningUtils" /* 12038 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -99,10 +99,10 @@ export default function TakeActionButtons(senderId) {
                         const obj2 = { text: null, variant: "success" };
                         const intl = closure_0(1113).intl;
                         obj2.text = intl.string(closure_0(1113).t.gn2c6X);
-                        c1(6015).open(closure_2_13, obj2);
+                        c1(6005).open(closure_2_13, obj2);
                       }, () => {
                         const intl = closure_1_0(1113).intl;
-                        closure_1_0(6014).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
+                        closure_1_0(6004).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
                       }),
               done: false
             };
@@ -115,9 +115,9 @@ export default function TakeActionButtons(senderId) {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_5(false);
-          const result = v1(6915).showReportSuccessToast(closure_128_0, closure_128_1);
+          const result = v1(6905).showReportSuccessToast(closure_128_0, closure_128_1);
           closure_128_3(tmp4(12038).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-          const obj = v1(6915);
+          const obj = v1(6905);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

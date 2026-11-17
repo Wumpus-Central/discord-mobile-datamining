@@ -1,6 +1,6 @@
-// === Module 19651: useShouldShowExpiringTrialOfferCard ===
+// === Module 19653: useShouldShowExpiringTrialOfferCard ===
 
-// Module 19651 (useShouldShowExpiringTrialOfferCard)
+// Module 19653 (useShouldShowExpiringTrialOfferCard)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9310 */;

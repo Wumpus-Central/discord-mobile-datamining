@@ -1,6 +1,6 @@
-// === Module 18604: FriendRequestsNotesSetting ===
+// === Module 18606: FriendRequestsNotesSetting ===
 
-// Module 18604 (FriendRequestsNotesSetting)
+// Module 18606 (FriendRequestsNotesSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;

@@ -1,7 +1,7 @@
 // === Module 15327: useMaybeFetchTieredTenureBadgeData ===
 
 // Module 15327 (useMaybeFetchTieredTenureBadgeData)
-import useMountEffectDefault from "useMountEffect" /* 5899 */;
+import useMountEffectDefault from "useMountEffect" /* 5889 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8483 */;
 import UserStore from "UserStore" /* 1388 */;
 

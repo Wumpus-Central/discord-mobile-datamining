@@ -1,8 +1,8 @@
 // === Module 10377: HTMLParserLinkUtils ===
 
 // Module 10377 (HTMLParserLinkUtils)
-import MarkupLinkRule2 from "MarkupLinkRule" /* 6347 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6348 */;
+import MarkupLinkRule2 from "MarkupLinkRule" /* 6337 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6338 */;
 import HTMLParserRunUtils from "HTMLParserRunUtils" /* 10376 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import t from "module_2070" /* 2070 */;

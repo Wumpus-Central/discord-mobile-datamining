@@ -2,7 +2,7 @@
 
 // Module 10480 (RedditNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10481 from "module_10481" /* 10481 */;
 import noop from "module_19" /* 19 */;
 

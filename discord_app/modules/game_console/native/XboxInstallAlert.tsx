@@ -3,8 +3,8 @@
 // Module 10836 (XboxInstallAlert)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import LinkingDefault from "Linking" /* 6012 */;
-import common_AlertDefault from "common/Alert" /* 6340 */;
+import LinkingDefault from "Linking" /* 6002 */;
+import common_AlertDefault from "common/Alert" /* 6330 */;
 import _modDef7482 from "module_7482" /* 7482 */;
 import noop from "module_19" /* 19 */;
 

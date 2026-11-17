@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
 import ReportModals from "ReportModals" /* 12063 */;
 import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 14704 */;
 import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 14711 */;
@@ -35,7 +35,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj2 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl2 = entry(1113).intl;
     obj2.label = intl2.string(entry(1113).t.KUxYWH);
-    obj2.IconComponent = entry(6040).TrashIcon;
+    obj2.IconComponent = entry(6030).TrashIcon;
     obj2.action = function handleRemove() {
       const obj2 = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
       const intl = util.intl;

@@ -3,10 +3,10 @@
 // Module 11623 (verifyGuildMembers)
 import BackoffDefault from "Backoff" /* 559 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
 import createMessage from "createMessage" /* 8851 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -278,7 +278,7 @@ function clearRetryBackoffs() {
   }
   map5.clear();
 }
-let closure_5 = fn(6800).MAX_GUILD_MEMBER_REQUEST_SIZE;
+let closure_5 = fn(6790).MAX_GUILD_MEMBER_REQUEST_SIZE;
 const GuildMemberFlags = fn(5224).GuildMemberFlags;
 let c10 = 300000;
 let map = new Map();

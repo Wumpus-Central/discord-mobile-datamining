@@ -1,22 +1,22 @@
-// === Module 18826: RedesignCategory ===
+// === Module 18828: RedesignCategory ===
 
-// Module 18826 (RedesignCategory)
+// Module 18828 (RedesignCategory)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
 import CircleXIcon from "CircleXIcon" /* 7629 */;
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7877 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7949 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10894 */;
 import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 12475 */;
 import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 15153 */;
-import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 18827 */;
-import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 18828 */;
+import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 18829 */;
+import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 18830 */;
 import noop from "module_19" /* 19 */;
 import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 8734 */;
 import CategoryCollapseStore from "CategoryCollapseStore" /* 7881 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 
 require = fn;
 function renderCategoryItem(muted) {
@@ -48,7 +48,7 @@ function renderCategoryItem(muted) {
       str = "text-muted";
     }
     const obj2 = { experimental_useNativeText: true, variant: "body-sm/semibold", color: str, lineClamp: 1, style: styles.categoryText, children: name };
-    tmp34Result = closure_12(trailingAction(5929).Text, obj2);
+    tmp34Result = closure_12(trailingAction(5919).Text, obj2);
   }
   let tmp3 = null;
   if (null != icon) {
@@ -142,7 +142,7 @@ function renderCategoryItem(muted) {
   const obj = { paddingLeft: 16, marginTop: num, marginBottom };
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(6060);
+const RedesignChannelListConstants = fn(6050);
 ({ CATEGORY_MARGIN_BOTTOM: closure_8, CATEGORY_MARGIN_TOP: closure_9, CATEGORY_NAME_LINE_HEIGHT: closure_10, CATEGORY_VERTICAL_PADDING: closure_11 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
@@ -234,7 +234,7 @@ export function CategoryChannel(channel) {
   if (null != tmp10) {
     obj4 = { variant: "body-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
     ({ tooltip: obj3.accessibilityLabel, label: obj3.children } = tmp10);
-    tmp13 = closure_12(tmp2(5929).Text, obj4);
+    tmp13 = closure_12(tmp2(5919).Text, obj4);
   }
   obj2.note = tmp13;
   obj2.trailingAction = useFavoritesGuildCategoryAddActionDefault(channel);

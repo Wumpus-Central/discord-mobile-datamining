@@ -9,7 +9,7 @@ import InstantInviteUtils from "InstantInviteUtils" /* 8463 */;
 import QuickSwitcherStore from "QuickSwitcherStore" /* 10246 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8553 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6944 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6934 */;
 import GuildMemberStore from "GuildMemberStore" /* 5218 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;

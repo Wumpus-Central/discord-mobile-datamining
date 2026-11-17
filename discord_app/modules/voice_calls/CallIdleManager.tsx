@@ -1,15 +1,15 @@
-// === Module 20186: CallIdleManager ===
+// === Module 20189: CallIdleManager ===
 
-// Module 20186 (CallIdleManager)
+// Module 20189 (CallIdleManager)
 import util from "util" /* 1113 */;
 import Timers from "Timers" /* 5150 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6935 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6925 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
-import CampInDmExperiment from "CampInDmExperiment" /* 20187 */;
+import CampInDmExperiment from "CampInDmExperiment" /* 20190 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6064 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 require = fn;

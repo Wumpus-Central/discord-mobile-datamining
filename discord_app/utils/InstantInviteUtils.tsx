@@ -2,7 +2,7 @@
 
 // Module 8463 (InstantInviteUtils)
 import util from "util" /* 1113 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6962 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6952 */;
 import InviteTargetTypes from "InviteTargetTypes" /* 7665 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 import ChannelStore from "ChannelStore" /* 5155 */;

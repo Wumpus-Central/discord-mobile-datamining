@@ -2,7 +2,7 @@
 
 // Module 15604 (transformStickers)
 import util from "util" /* 1113 */;
-import StickersUtils from "StickersUtils" /* 6792 */;
+import StickersUtils from "StickersUtils" /* 6782 */;
 import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 9175 */;
 import NativeLottieView from "NativeLottieView" /* 9228 */;
 import size from "module_2" /* 2 */;

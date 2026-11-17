@@ -3,8 +3,8 @@
 // Module 15958 (ApplicationEducation)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FriendsIcon from "FriendsIcon" /* 6018 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FriendsIcon from "FriendsIcon" /* 6008 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 7307 */;
 import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 7408 */;
 import GameControllerIcon from "GameControllerIcon" /* 7438 */;

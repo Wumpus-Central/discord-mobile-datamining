@@ -1,9 +1,9 @@
-// === Module 18925: GuildActionRows ===
+// === Module 18927: GuildActionRows ===
 
-// Module 18925 (GuildActionRows)
+// Module 18927 (GuildActionRows)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import ChannelListState from "ChannelListState" /* 8731 */;
 import noop from "module_19" /* 19 */;
 import NewChannelsStore from "NewChannelsStore" /* 8735 */;
@@ -12,10 +12,10 @@ import ReadStateStore from "ReadStateStore" /* 7015 */;
 require = fn;
 const View = fn(17).View;
 let closure_7 = fn(7866).CHANNELS_AND_ROLES_MODAL_KEY;
-const ReadStateTypes = fn(6959).ReadStateTypes;
+const ReadStateTypes = fn(6949).ReadStateTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5306);
-let obj2 = { container: { marginVertical: fn(6060).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, channelInfoContainer: { paddingStart: 4 } };
+let obj2 = { container: { marginVertical: fn(6050).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, channelInfoContainer: { paddingStart: 4 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildActionRows.tsx");
@@ -27,8 +27,8 @@ export function GuildRolesAndChannelsRow(guild) {
   const tmp = closure_10();
   const tmp4 = id(7223)(guild);
   id = guild.id;
-  const result = guild(5348).useIsDismissibleContentDismissed_UNSAFE(guild(5139).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
-  const obj = guild(5348);
+  const result = guild(5338).useIsDismissibleContentDismissed_UNSAFE(guild(5139).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
+  const obj = guild(5338);
   const tmp2 = id;
   items = [ReadStateStore];
   const stateFromStores = guild(563).useStateFromStores(items, () => ReadStateStore.hasUnread(guild.id, ReadStateTypes.GUILD_ONBOARDING_QUESTION));

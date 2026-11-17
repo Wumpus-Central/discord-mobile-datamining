@@ -1,25 +1,23 @@
-// === Module 20149: CaptchaUtils ===
+// === Module 20151: CaptchaUtils ===
 
-// Module 20149 (CaptchaUtils)
+// Module 20151 (CaptchaUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import V8APIError from "V8APIError" /* 1339 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6769 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6771 */;
-import MetricEvents from "MetricEvents" /* 6776 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
-import siteKeyDefault from "siteKey" /* 20150 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6759 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6761 */;
+import MetricEvents from "MetricEvents" /* 6766 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
+import siteKeyDefault from "siteKey" /* 20152 */;
+import NativeCaptchaManagerModuleDefault from "NativeCaptchaManagerModule" /* 20153 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Keyboard: closure_4, NativeModules, NativeEventEmitter } = get_ActivityIndicator);
+const Keyboard = fn(17).Keyboard;
 const Constants = fn(1072);
-({ CaptchaEvent: metroImportDefault, RECAPTCHA_SITE_KEY: closure_8, AnalyticEvents: closure_9 } = Constants);
+({ RECAPTCHA_SITE_KEY: metroImportDefault, AnalyticEvents: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const CaptchaManager = NativeModules.CaptchaManager;
-const nativeEventEmitter = new NativeEventEmitter(CaptchaManager);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/CaptchaUtils.tsx");
 
@@ -30,7 +28,7 @@ export default {
       RECAPTCHA = V8APIError.CaptchaTypes.RECAPTCHA;
     }
     const self = this;
-    React4.dismiss();
+    Keyboard.dismiss();
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type: "CAPTCHA" });
     if (RECAPTCHA === V8APIError.CaptchaTypes.HCAPTCHA) {
       if (null != arg1) {
@@ -41,7 +39,7 @@ export default {
     showHcaptchaResult = self.showRecaptcha();
   },
   closeCaptcha() {
-    CaptchaManager.closeCaptcha();
+    NativeCaptchaManagerModuleDefault.closeCaptcha();
   },
   showHcaptcha(arg0, rqdata) {
     closure_0 = arg0;
@@ -59,7 +57,7 @@ export default {
       obj5.tags = items;
       rqdata(paths[7]).increment(obj5);
       let obj4 = rqdata(paths[7]);
-      rqdata(paths[14]).pushLazy(sitekey(paths[16])(paths[15], paths.paths), {
+      rqdata(paths[15]).pushLazy(sitekey(paths[17])(paths[16], paths.paths), {
         siteKey: sitekey,
         onMessage(nativeEvent) {
           let data1;
@@ -114,14 +112,14 @@ export default {
       closure_2 = v4Result;
       const HCAPTCHA = self(1339).CaptchaTypes.HCAPTCHA;
       let obj = self(1269);
-      AnalyticsUtilsDefault.track(constants2.CAPTCHA_EVENT, { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result });
+      AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result });
       let obj3 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
-      const obj5 = { name: self(6776).MetricEvents.CAPTCHA_EVENT, tags: null };
+      const obj5 = { name: self(6766).MetricEvents.CAPTCHA_EVENT, tags: null };
       items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
       obj5.tags = items;
       MonitoringAgentDefault.increment(obj5);
-      CaptchaManager.showCaptcha(sitekey, theme.theme, "https://cdn.discordapp.com/recaptcha/ios.html");
-      nativeEventEmitter.addListener(constants.SOLVED, (arg0) => {
+      NativeCaptchaManagerModuleDefault.showCaptcha(sitekey, theme.theme, "https://cdn.discordapp.com/recaptcha/ios.html");
+      NativeCaptchaManagerModuleDefault.onSolved((arg0) => {
         self.closeCaptcha();
         const RECAPTCHA = V8APIError.CaptchaTypes.RECAPTCHA;
         AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, { captcha_event_name: "verify", captcha_service: RECAPTCHA, sitekey, captcha_flow_key: v4Result });
@@ -132,7 +130,7 @@ export default {
         MonitoringAgentDefault.increment(obj4);
         closure_0(arg0);
       });
-      nativeEventEmitter.addListener(constants.EXPIRED, () => {
+      NativeCaptchaManagerModuleDefault.onExpired(() => {
         self.closeCaptcha();
         const EXPIRED = SharedCaptchaUtils.CaptchaError.EXPIRED;
         const RECAPTCHA = V8APIError.CaptchaTypes.RECAPTCHA;

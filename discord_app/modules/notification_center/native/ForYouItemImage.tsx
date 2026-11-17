@@ -1,6 +1,6 @@
-// === Module 19253: ForYouItemImage ===
+// === Module 19255: ForYouItemImage ===
 
-// Module 19253 (ForYouItemImage)
+// Module 19255 (ForYouItemImage)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import Pressables from "Pressables" /* 7428 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1388 */;
 require = fn;
 const View = fn(17).View;
 const getGuildAcronym = fn(5173).getGuildAcronym;
-const Constants = fn(19254);
+const Constants = fn(19256);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
 let createStyles = fn(5306);

@@ -4,7 +4,7 @@
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import _modDef3417 from "module_3417" /* 3417 */;
-import AlertModal from "AlertModal" /* 6274 */;
+import AlertModal from "AlertModal" /* 6264 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

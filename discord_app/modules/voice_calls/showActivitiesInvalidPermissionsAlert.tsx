@@ -2,7 +2,7 @@
 
 // Module 12779 (showActivitiesInvalidPermissionsAlert)
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");

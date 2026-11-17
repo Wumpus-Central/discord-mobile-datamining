@@ -2,7 +2,7 @@
 
 // Module 13353 (SparklesIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod13354 from "module_13354" /* 13354 */;
 import noop from "module_19" /* 19 */;
 

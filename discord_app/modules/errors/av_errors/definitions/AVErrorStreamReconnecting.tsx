@@ -1,10 +1,10 @@
-// === Module 20838: AVErrorStreamReconnecting ===
+// === Module 20841: AVErrorStreamReconnecting ===
 
-// Module 20838 (AVErrorStreamReconnecting)
+// Module 20841 (AVErrorStreamReconnecting)
 import Constants from "Constants" /* 1072 */;
-import AVError from "AVError" /* 6257 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6808 */;
-import AVErrorContext from "AVErrorContext" /* 20828 */;
+import AVError from "AVError" /* 6247 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
+import AVErrorContext from "AVErrorContext" /* 20831 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationStreamStates = Constants.ApplicationStreamStates;

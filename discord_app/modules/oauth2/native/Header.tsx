@@ -6,7 +6,7 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import BotTagDefault from "BotTag" /* 10870 */;
 import noop from "module_19" /* 19 */;
 

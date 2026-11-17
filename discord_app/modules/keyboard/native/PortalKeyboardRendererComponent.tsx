@@ -1,7 +1,7 @@
 // === Module 13366: PortalKeyboardRendererComponent ===
 
 // Module 13366 (PortalKeyboardRendererComponent)
-import useBackPressHandler from "useBackPressHandler" /* 6332 */;
+import useBackPressHandler from "useBackPressHandler" /* 6322 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7241 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
@@ -19,7 +19,7 @@ export default noop.memo(function PortalKeyboardRendererComponent(item) {
   ({ state, cleanUp } = item);
   let channel;
   let memo;
-  const tmp3 = state === channelId(5377).TransitionStates.YEETED;
+  const tmp3 = state === channelId(5367).TransitionStates.YEETED;
   dependencyMap = tmp3;
   items = [chatInputRef, tmp3];
   const layoutEffect = channel.useLayoutEffect(() => {

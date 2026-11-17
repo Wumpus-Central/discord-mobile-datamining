@@ -2,9 +2,9 @@
 
 // Module 15366 (Footer)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
 import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 15367 */;
 import _modDef15368 from "module_15368" /* 15368 */;

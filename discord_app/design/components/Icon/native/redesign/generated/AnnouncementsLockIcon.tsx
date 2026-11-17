@@ -2,7 +2,7 @@
 
 // Module 8090 (AnnouncementsLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8065 from "module_8065" /* 8065 */;
 import noop from "module_19" /* 19 */;
 

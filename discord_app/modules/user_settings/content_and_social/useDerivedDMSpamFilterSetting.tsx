@@ -4,8 +4,8 @@
 import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import UserSettings from "UserSettings" /* 5131 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5995 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6003 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5985 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5993 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

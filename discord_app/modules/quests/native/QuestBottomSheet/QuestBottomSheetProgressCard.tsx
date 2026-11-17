@@ -3,9 +3,9 @@
 // Module 17764 (QuestBottomSheetProgressCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5346 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6962 */;
 import Card from "Card" /* 7445 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 10131 */;
 import AssetUtils from "AssetUtils" /* 10146 */;
@@ -89,7 +89,7 @@ export function QuestBottomSheetProgressCardPlayStreamTask(quest) {
         const intl = util.intl;
         const obj = {
           rewardHook() {
-                return defaultRewardName(questTaskDetails(5929).Text, { variant: "body-sm/semibold", color: "text-strong", children });
+                return defaultRewardName(questTaskDetails(5919).Text, { variant: "body-sm/semibold", color: "text-strong", children });
               },
           date: questFormattedDate
         };
@@ -103,7 +103,7 @@ export function QuestBottomSheetProgressCardPlayStreamTask(quest) {
       const obj2 = {
         minutesLeft: rounded,
         minutesHook(children) {
-            return children(questTaskDetails(5929).Text, { variant: "body-sm/semibold", color: "text-strong", children });
+            return children(questTaskDetails(5919).Text, { variant: "body-sm/semibold", color: "text-strong", children });
           }
       };
       return intl7.format(util.t.aFaRso, obj2);
@@ -147,7 +147,7 @@ export function QuestBottomSheetProgressCardPlayStreamTask(quest) {
   let tmp18Result = null != memo;
   if (tmp18Result) {
     let obj6 = { style: tmp.instructionsText, variant: "body-sm/semibold", color: "text-subtle", children: memo };
-    tmp18Result = tmp18(tmp2(5929).Text, obj6);
+    tmp18Result = tmp18(tmp2(5919).Text, obj6);
   }
   items2[1] = tmp18Result;
   obj4.children = items2;
@@ -158,7 +158,7 @@ export function QuestBottomSheetProgressCardPlayStreamTask(quest) {
     let intl = tmp2(1113).intl;
     const obj9 = { gameName: quest.config.messages.gameTitle };
     obj8.children = intl.format(tmp2(1113).t.lIFg6I, obj9);
-    obj7.children = tmp18(tmp2(5929).Text, obj8);
+    obj7.children = tmp18(tmp2(5919).Text, obj8);
     isQuestProgressing = tmp18(tmp17, obj7);
   }
   items3[1] = isQuestProgressing;

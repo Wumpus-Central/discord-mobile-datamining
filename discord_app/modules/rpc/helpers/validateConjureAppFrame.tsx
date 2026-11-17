@@ -1,8 +1,8 @@
 // === Module 16914: validateConjureAppFrame ===
 
 // Module 16914 (validateConjureAppFrame)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5953 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5943 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
 import isConjureApplicationDefault from "isConjureApplication" /* 7028 */;
 import RPCErrorDefault from "RPCError" /* 7303 */;
 import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16915 */;

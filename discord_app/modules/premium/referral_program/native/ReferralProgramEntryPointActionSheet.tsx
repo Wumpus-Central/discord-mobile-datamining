@@ -1,10 +1,10 @@
-// === Module 19837: ReferralProgramEntryPointActionSheet ===
+// === Module 19839: ReferralProgramEntryPointActionSheet ===
 
-// Module 19837 (ReferralProgramEntryPointActionSheet)
+// Module 19839 (ReferralProgramEntryPointActionSheet)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef9304 from "module_9304" /* 9304 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,19 +48,19 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const obj5 = { style: tmp.header, color: "mobile-text-heading-primary", variant: "heading-lg/semibold", children: null };
   const intl = markAsDismissed(1113).intl;
   obj5.children = intl.string(markAsDismissed(1113).t.u1CFbS);
-  items2[1] = closure_6(markAsDismissed(5929).Text, obj5);
+  items2[1] = closure_6(markAsDismissed(5919).Text, obj5);
   const obj6 = { style: tmp.body, color: "text-default", variant: "body-sm/normal", children: null };
   const intl2 = markAsDismissed(1113).intl;
   obj6.children = intl2.string(markAsDismissed(1113).t.k2ibMz);
-  items2[2] = closure_6(markAsDismissed(5929).Text, obj6);
+  items2[2] = closure_6(markAsDismissed(5919).Text, obj6);
   const obj7 = { style: tmp.buttonContainer, children: null };
   const obj8 = { text: null, size: "lg", onPress: null, variant: "primary" };
   const intl3 = markAsDismissed(1113).intl;
   obj8.text = intl3.string(markAsDismissed(1113).t.TI8qgg);
   obj8.onPress = callback;
-  obj7.children = closure_6(markAsDismissed(5936).Button, obj8);
+  obj7.children = closure_6(markAsDismissed(5926).Button, obj8);
   items2[3] = closure_6(View, obj7);
   obj2.children = items2;
   obj.children = closure_7(View, obj2);
-  return closure_6(markAsDismissed(5566).BottomSheet, obj);
+  return closure_6(markAsDismissed(5556).BottomSheet, obj);
 };

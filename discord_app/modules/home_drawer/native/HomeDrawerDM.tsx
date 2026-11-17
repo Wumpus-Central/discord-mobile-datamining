@@ -1,17 +1,17 @@
-// === Module 19116: HomeDrawerDM ===
+// === Module 19118: HomeDrawerDM ===
 
-// Module 19116 (HomeDrawerDM)
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5498 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5994 */;
+// Module 19118 (HomeDrawerDM)
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5488 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5984 */;
 import BellSlashIcon2 from "BellSlashIcon" /* 10994 */;
 import ChannelRowPreview from "ChannelRowPreview" /* 11045 */;
 import BellZIcon from "BellZIcon" /* 11928 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 17938 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 17940 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -37,9 +37,9 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   let obj2 = channel(504);
-  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(19117).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(19119).useBaseChannelUnreadBadgeState(channel, false).unread });
   closure_4 = tmp3;
-  const obj3 = channel(19117);
+  const obj3 = channel(19119);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () => UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
@@ -95,7 +95,7 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   }, items5);
-  return closure_10(channel(19084).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(19086).HomeDrawerSharedItem, { title, subtitle });
 }
 const View = fn(17).View;
 const isMultiUserDM = fn(5159).isMultiUserDM;

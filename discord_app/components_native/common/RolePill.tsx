@@ -2,7 +2,7 @@
 
 // Module 10935 (RolePill)
 import nativeDefault from "native" /* 575 */;
-import ToastUtils from "ToastUtils" /* 6014 */;
+import ToastUtils from "ToastUtils" /* 6004 */;
 import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import noop from "module_19" /* 19 */;
 
@@ -96,7 +96,7 @@ export default function RolePill(role) {
     const tmp18 = combined(7959);
   }
   items1[1] = tmp10Result2;
-  items1[2] = closure_6(role(5929).Text, { variant: "body-xs/semibold", color: "interactive-text-active", children: name });
+  items1[2] = closure_6(role(5919).Text, { variant: "body-xs/semibold", color: "interactive-text-active", children: name });
   obj4.children = items1;
   obj3.children = closure_7(View, obj4);
   return closure_6(role(7428).PressableHighlight, obj3);

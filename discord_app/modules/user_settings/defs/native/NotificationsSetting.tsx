@@ -1,6 +1,6 @@
-// === Module 18103: NotificationsSetting ===
+// === Module 18105: NotificationsSetting ===
 
-// Module 18103 (NotificationsSetting)
+// Module 18105 (NotificationsSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import BellIcon from "BellIcon" /* 10996 */;

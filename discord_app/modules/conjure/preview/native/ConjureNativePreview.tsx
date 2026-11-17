@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 7339 */;
 import leaveFrame from "leaveFrame" /* 7349 */;
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7357 */;
@@ -392,7 +392,7 @@ function PreviewBot(projectId) {
     const intl3 = tmp7(1113).intl;
     obj4.text = intl3.string(tmp7(1113).t["5911Lb"]);
     obj4.onPress = callback;
-    obj3.children = closure_22(tmp7(5936).Button, obj4);
+    obj3.children = closure_22(tmp7(5926).Button, obj4);
     let tmp28Result = closure_22(StatusCard, obj3);
   } else if (null == stateFromStores) {
     const obj5 = { style: tmp.centered, children: closure_22(closure_5, {}) };

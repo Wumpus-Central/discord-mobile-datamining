@@ -6,7 +6,7 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 10693 */;
 import GameServerStore from "GameServerStore" /* 9242 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5523 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5513 */;
 
 require = fn;
 let closure_5 = {};

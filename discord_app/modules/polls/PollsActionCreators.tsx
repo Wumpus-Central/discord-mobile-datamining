@@ -1,18 +1,18 @@
 // === Module 12653: PollsActionCreators ===
 
 // Module 12653 (PollsActionCreators)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
-import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6922 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
+import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6912 */;
 import PollInteractionUtilsAll from "PollInteractionUtils" /* 12654 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LurkingStore from "LurkingStore" /* 5239 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 8744 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6937 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6927 */;
+import MessageStore from "MessageStore" /* 6362 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8872 */;
 
 require = fn;
@@ -172,7 +172,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
           let obj3 = { id, name: id };
           obj2.emoji = obj3;
           obj2.userId = userId;
-          obj2.reactionType = channelId(5920).ReactionTypes.VOTE;
+          obj2.reactionType = channelId(5910).ReactionTypes.VOTE;
           dispatchResult = obj.dispatch(obj2);
           continue;
         }

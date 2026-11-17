@@ -2,7 +2,7 @@
 
 // Module 10602 (MicrophoneDenyIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10603 from "module_10603" /* 10603 */;
 import noop from "module_19" /* 19 */;
 

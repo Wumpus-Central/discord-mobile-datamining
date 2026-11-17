@@ -1,9 +1,9 @@
-// === Module 19106: GuildsBarActivityIndicator ===
+// === Module 19108: GuildsBarActivityIndicator ===
 
-// Module 19106 (GuildsBarActivityIndicator)
+// Module 19108 (GuildsBarActivityIndicator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useToken from "useToken" /* 5902 */;
+import useToken from "useToken" /* 5892 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 7432 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import _modDef8016 from "module_8016" /* 8016 */;
@@ -14,10 +14,10 @@ import CalendarIcon from "CalendarIcon" /* 8457 */;
 import ScreenIcon from "ScreenIcon" /* 10467 */;
 import VideoIcon from "VideoIcon" /* 11046 */;
 import _modDef12933 from "module_12933" /* 12933 */;
-import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 19105 */;
-import _modDef19107 from "module_19107" /* 19107 */;
-import _modDef19108 from "module_19108" /* 19108 */;
+import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 19107 */;
 import _modDef19109 from "module_19109" /* 19109 */;
+import _modDef19110 from "module_19110" /* 19110 */;
+import _modDef19111 from "module_19111" /* 19111 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,13 +29,13 @@ function getMediaIcon(activeEvent) {
     const obj3 = { icon: StageIcon.StageIcon, source: _modDef8016 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef19107 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef19109 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef19108 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef19110 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef19109 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef19111 };
     tmp6 = obj6;
   } else {
     tmp6 = null;

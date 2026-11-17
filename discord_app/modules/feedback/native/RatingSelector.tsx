@@ -1,7 +1,7 @@
 // === Module 12600: RatingSelector ===
 
 // Module 12600 (RatingSelector)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef12601 from "module_12601" /* 12601 */;
 import _modDef12606 from "module_12606" /* 12606 */;
 import _modDef12611 from "module_12611" /* 12611 */;

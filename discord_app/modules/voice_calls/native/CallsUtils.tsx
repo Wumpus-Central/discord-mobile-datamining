@@ -4,11 +4,11 @@
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2020 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6225 */;
-import AVError from "AVError" /* 6257 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6900 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6935 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6215 */;
+import AVError from "AVError" /* 6247 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6890 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6925 */;
 import _modDef10587 from "module_10587" /* 10587 */;
 import _modDef10588 from "module_10588" /* 10588 */;
 import _modDef10589 from "module_10589" /* 10589 */;
@@ -16,12 +16,12 @@ import useIsVideoModeDefault from "useIsVideoMode" /* 10839 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
-import AudioRouteStore from "AudioRouteStore" /* 6091 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import AudioRouteStore from "AudioRouteStore" /* 6081 */;
 import AudioManagerStore from "AudioManagerStore" /* 10584 */;
 import apply_mod from "apply" /* 12 */;
 
@@ -127,7 +127,7 @@ let closure_16 = async function _handleToggleVideo(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const NativePermissionTypes = fn(6902).NativePermissionTypes;
+const NativePermissionTypes = fn(6892).NativePermissionTypes;
 let apply = apply_mod;
 let closure_17 = apply.debounce((arg0) => {
   const AudioRoutePicker = NativeModules.AudioRoutePicker;
@@ -271,8 +271,8 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid() ? (() => {
   const stateFromStoresObject = isEnabled(504).useStateFromStoresObject(items, () => {
     isVideoMode = isEnabled(10839).isVideoMode(ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore);
     currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(6092).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(6092).RouteTypes.BLUETOOTH;
+    isEnabled = currentRouteType === isEnabled(6082).RouteTypes.SPEAKER;
+    const isBluetoothRoute = currentRouteType === isEnabled(6082).RouteTypes.BLUETOOTH;
     if (!isEnabled) {
       isEnabled = isBluetoothRoute;
     }

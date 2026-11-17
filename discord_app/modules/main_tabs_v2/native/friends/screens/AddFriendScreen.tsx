@@ -1,6 +1,6 @@
-// === Module 19601: AddFriendScreen ===
+// === Module 19603: AddFriendScreen ===
 
-// Module 19601 (AddFriendScreen)
+// Module 19603 (AddFriendScreen)
 import nativeDefault from "native" /* 575 */;
 import ContactSyncUtils from "ContactSyncUtils" /* 14997 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -73,17 +73,17 @@ export default function AddFriendScreen(navigation) {
   let obj4 = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1113).intl;
   obj4.children = intl.string(navigation(1113).t.GWMTSE);
-  const items2 = [closure_10(navigation(5929).Text, obj4), , , ];
+  const items2 = [closure_10(navigation(5919).Text, obj4), , , ];
   const obj5 = { style: tmp.subheaderText, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1113).intl;
   obj5.children = intl2.string(navigation(1113).t["Rn/sLl"]);
-  items2[1] = closure_10(navigation(5929).Text, obj5);
+  items2[1] = closure_10(navigation(5919).Text, obj5);
   items2[2] = closure_10(contactSyncAccount(16290), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
   const obj7 = { style: tmp.otherOptionsContainer, children: null };
   const obj8 = { accessibilityRole: "header", variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = navigation(1113).intl;
   obj8.children = intl3.string(navigation(1113).t.dukg0Z);
-  const items3 = [closure_10(navigation(5929).Text, obj8), ];
+  const items3 = [closure_10(navigation(5919).Text, obj8), ];
   let tmp10Result = null;
   if (tmp5) {
     const obj9 = { style: tmp.rowContainer, location: "Add Friend Modal" };

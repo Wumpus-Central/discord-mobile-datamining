@@ -1,7 +1,7 @@
 // === Module 16078: NUFChannelsActionSheet ===
 
 // Module 16078 (NUFChannelsActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import NUFTemplateV2Default from "NUFTemplateV2" /* 16079 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,7 +40,7 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
   obj2.CTALabel = intl3.string(markAsDismissed(1113).t.BddRzS);
   obj2.onCTAPress = callback;
   obj.children = jsx(NUFTemplateV2Default, { illustration: jsx(markAsDismissed(16080).ServerChannelsAbstractUI, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
-  return jsx(markAsDismissed(5566).BottomSheet, {
+  return jsx(markAsDismissed(5556).BottomSheet, {
     onDismiss() {
       let tmpResult;
       if (markAsDismissed != null) {

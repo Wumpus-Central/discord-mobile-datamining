@@ -2,7 +2,7 @@
 
 // Module 12473 (ChannelBrowser)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import MarkupInlineChannelMentionRules from "MarkupInlineChannelMentionRules" /* 11061 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,8 +10,8 @@ import NewChannelsStore from "NewChannelsStore" /* 8735 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7875 */;
 import GuildChannelStore from "GuildChannelStore" /* 5236 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
-import MarkupUtils from "MarkupUtils" /* 6057 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
+import MarkupUtils from "MarkupUtils" /* 6047 */;
 
 const require = globalThis.__r;
 
@@ -79,11 +79,11 @@ let closure_20 = noop.memo(function CategoryRow(channel) {
   channel = channel.channel;
   const onChannelClick = channel.onChannelClick;
   const tmp = closure_17();
-  const tmp3 = onChannelClick(5954)(channel);
+  const tmp3 = onChannelClick(5944)(channel);
   items = [UserGuildSettingsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id));
   const obj = channel(504);
-  const checkboxA11yNative = channel(5378).useCheckboxA11yNative({ checked: stateFromStores });
+  const checkboxA11yNative = channel(5368).useCheckboxA11yNative({ checked: stateFromStores });
   const obj3 = {
     style: tmp.categoryContainer,
     onPress() {
@@ -114,7 +114,7 @@ let closure_20 = noop.memo(function CategoryRow(channel) {
     const obj8 = { variant: "body-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1113).intl;
     obj8.children = intl.string(tmp4(1113).t.mSQwnW);
-    items2[1] = closure_12(tmp4(5929).Text, obj8);
+    items2[1] = closure_12(tmp4(5919).Text, obj8);
     obj5.children = items2;
     tmp10Result = closure_13(View, obj5);
   }

@@ -3,9 +3,9 @@
 // Module 13287 (ConjurePublishHistoryPanel)
 import util from "util" /* 1113 */;
 import _modDef4131 from "module_4131" /* 4131 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import useConjurePublishHistory from "useConjurePublishHistory" /* 13288 */;
 import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 13290 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -104,31 +104,31 @@ export default function ConjurePublishHistoryPanel(projectId) {
     const obj2 = { variant: "body-sm/normal", children: null };
     const intl4 = tmp(1113).intl;
     obj2.children = intl4.string(iter(4131)["d/Wf8N"]);
-    let tmp5 = closure_6(tmp(5929).Text, obj2);
+    let tmp5 = closure_6(tmp(5919).Text, obj2);
   } else if ("failed" === state.status) {
     const obj3 = { spacing: 12, children: null };
     const obj4 = { variant: "body-sm/normal", children: null };
     const intl2 = tmp(1113).intl;
     obj4.children = intl2.string(iter(4131).TzCJWI);
-    items = [closure_6(tmp(5929).Text, obj4), ];
+    items = [closure_6(tmp(5919).Text, obj4), ];
     const obj5 = { variant: "secondary", text: null, onPress: null };
     const intl3 = tmp(1113).intl;
     obj5.text = intl3.string(iter(4131).HOuQ9H);
     obj5.onPress = iter.retry;
-    items[1] = closure_6(tmp(5936).Button, obj5);
+    items[1] = closure_6(tmp(5926).Button, obj5);
     obj3.children = items;
-    tmp5 = closure_7(tmp(6337).Stack, obj3);
+    tmp5 = closure_7(tmp(6327).Stack, obj3);
   } else if (0 === state.data.entries.length) {
     const obj6 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl = tmp(1113).intl;
     obj6.children = intl.string(iter(4131)["19L92G"]);
-    tmp5 = closure_6(tmp(5929).Text, obj6);
+    tmp5 = closure_6(tmp(5919).Text, obj6);
   } else {
     const obj7 = { spacing: 24, children: null };
     const obj8 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl5 = tmp(1113).intl;
     obj8.children = intl5.string(iter(4131).Kzt1rI);
-    const items1 = [closure_6(tmp(5929).Text, obj8), , ];
+    const items1 = [closure_6(tmp(5919).Text, obj8), , ];
     const entries = state.data.entries;
     items1[1] = entries.map((entry) => timestampProducer(closure_9, { projectId, entry, notesCache: iter.notesCache }, entry.id));
     const obj9 = { direction: "horizontal", spacing: 8, align: "center", justify: "space-between", children: null };
@@ -137,22 +137,22 @@ export default function ConjurePublishHistoryPanel(projectId) {
     obj10.text = intl6.string(iter(4131)["4un98A"]);
     obj10.disabled = !iter.hasPrevious;
     obj10.onPress = iter.previous;
-    const items2 = [closure_6(tmp(5936).Button, obj10), , ];
+    const items2 = [closure_6(tmp(5926).Button, obj10), , ];
     const obj11 = { variant: "body-sm/normal", children: null };
     const intl7 = tmp(1113).intl;
     const obj12 = { page: iter.page };
     obj11.children = intl7.formatToPlainString(iter(4131)["54samz"], obj12);
-    items2[1] = closure_6(tmp(5929).Text, obj11);
+    items2[1] = closure_6(tmp(5919).Text, obj11);
     const obj13 = { variant: "secondary", size: "sm", shrink: true, text: null, disabled: null, onPress: null };
     const intl8 = tmp(1113).intl;
     obj13.text = intl8.string(iter(4131).HqheLL);
     obj13.disabled = !iter.hasNext;
     obj13.onPress = iter.next;
-    items2[2] = closure_6(tmp(5936).Button, obj13);
+    items2[2] = closure_6(tmp(5926).Button, obj13);
     obj9.children = items2;
-    items1[2] = closure_7(tmp(6337).Stack, obj9);
+    items1[2] = closure_7(tmp(6327).Stack, obj9);
     obj7.children = items1;
-    tmp5 = closure_7(tmp(6337).Stack, obj7);
+    tmp5 = closure_7(tmp(6327).Stack, obj7);
   }
   return tmp5;
 };

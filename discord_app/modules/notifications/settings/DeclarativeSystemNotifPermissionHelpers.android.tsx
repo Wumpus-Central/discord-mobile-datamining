@@ -1,6 +1,6 @@
-// === Module 18621: DeclarativeSystemNotifPermissionHelpers ===
+// === Module 18623: DeclarativeSystemNotifPermissionHelpers ===
 
-// Module 18621 (DeclarativeSystemNotifPermissionHelpers)
+// Module 18623 (DeclarativeSystemNotifPermissionHelpers)
 import _mod17 from "module_17" /* 17 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1379 */;
 import DeviceUtils from "DeviceUtils" /* 5263 */;

@@ -1,10 +1,10 @@
-// === Module 20020: VoicePanelNoStageSpeakersCard ===
+// === Module 20022: VoicePanelNoStageSpeakersCard ===
 
-// Module 20020 (VoicePanelNoStageSpeakersCard)
+// Module 20022 (VoicePanelNoStageSpeakersCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4261 from "module_4261" /* 4261 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import NativeViewDefault from "NativeView" /* 7722 */;
 import noop from "module_19" /* 19 */;
 

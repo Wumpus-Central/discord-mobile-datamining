@@ -3,11 +3,11 @@
 // Module 14750 (SelectedSearchContextStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef6161 from "module_6161" /* 6161 */;
+import _modDef6151 from "module_6151" /* 6151 */;
 
 function handleSearchContextUpdate(searchContext) {
   searchContext = searchContext.searchContext;
-  if (_modDef6161(c2, searchContext)) {
+  if (_modDef6151(c2, searchContext)) {
     return false;
   } else {
     c2 = searchContext;

@@ -3,8 +3,8 @@
 // Module 9328 (GiftIntentEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import _modDef6022 from "module_6022" /* 6022 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import _modDef6012 from "module_6012" /* 6012 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
 import PremiumGiftingUtils from "PremiumGiftingUtils" /* 9332 */;
 import _modDef9333 from "module_9333" /* 9333 */;
@@ -65,7 +65,7 @@ export function createGiftIntentEmbed(message, theme) {
         obj9.giftIntentType = giftIntentType;
         ({ headerTextColor: obj4.headerTextColor, subHeaderTextColor: obj4.subHeaderTextColor, backgroundColor: obj4.backgroundColor, borderColor: obj4.borderColor } = closure_6(theme));
         const tmp6 = closure_6(theme);
-        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef6022);
+        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef6012);
         const intl3 = util.intl;
         obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
         obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9333);

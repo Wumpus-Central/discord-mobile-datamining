@@ -1,6 +1,6 @@
-// === Module 17947: AccessibilitySetting ===
+// === Module 17949: AccessibilitySetting ===
 
-// Module 17947 (AccessibilitySetting)
+// Module 17949 (AccessibilitySetting)
 import util from "util" /* 1113 */;
 import Badge from "Badge" /* 7459 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9560 */;
@@ -18,7 +18,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(17948).AccessibilityIcon,
+  IconComponent: fn(17950).AccessibilityIcon,
   useTrailing() {
     [tmp4, r10012] = useSelectedDismissibleContent.useSelectedDismissibleContent(items);
     let tmp5 = null;

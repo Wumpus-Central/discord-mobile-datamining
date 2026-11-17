@@ -3,7 +3,7 @@
 // Module 12958 (ChannelCallNavigatorIcon)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5896 */;
 import Pressables from "Pressables" /* 7428 */;
 import noop from "module_19" /* 19 */;
 

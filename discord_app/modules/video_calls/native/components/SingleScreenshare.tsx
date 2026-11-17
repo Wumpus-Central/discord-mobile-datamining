@@ -2,7 +2,7 @@
 
 // Module 13066 (SingleScreenshare)
 import nativeDefault from "native" /* 575 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6056 */;
 import noop from "module_19" /* 19 */;
 
 const ChannelCallStore = fn(11003);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/components
 
 export default function SingleScreenshare(channel) {
   channel = channel.channel;
-  channel(5899)(() => {
+  channel(5889)(() => {
     closure_1_2();
   });
   const obj = {

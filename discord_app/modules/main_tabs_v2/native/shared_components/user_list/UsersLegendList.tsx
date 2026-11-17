@@ -1,7 +1,7 @@
 // === Module 15176: UsersLegendList ===
 
 // Module 15176 (UsersLegendList)
-import BottomSheetModal from "BottomSheetModal" /* 5570 */;
+import BottomSheetModal from "BottomSheetModal" /* 5560 */;
 import FastestListItemTypeDefault from "FastestListItemType" /* 7839 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

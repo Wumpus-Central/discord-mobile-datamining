@@ -2,7 +2,7 @@
 
 // Module 14079 (ModalFooter)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5913 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5903 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

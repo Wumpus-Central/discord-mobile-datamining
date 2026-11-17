@@ -315,7 +315,7 @@ export default function UserProfilePreview(compact) {
     obj8.children = items4;
     obj7.children = closure_10(tmp29, obj8);
     obj6.children = closure_9(tmp29, obj7);
-    return closure_9(guildId(5377).ThemeContextProvider, obj6);
+    return closure_9(guildId(5367).ThemeContextProvider, obj6);
   } else {
     const obj22 = { skuId: str.skuId, style: tmp8.profileEffect };
     if (null != profileEffectRestartKey) {

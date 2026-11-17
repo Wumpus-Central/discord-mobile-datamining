@@ -9,9 +9,9 @@ import native from "native" /* 1187 */;
 import useNavigation from "useNavigation" /* 1502 */;
 import Server from "Server" /* 2119 */;
 import _modDef2701 from "module_2701" /* 2701 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7418 */;
 import _modDef7430 from "module_7430" /* 7430 */;
 import NavigatorHeader2 from "NavigatorHeader" /* 7493 */;
@@ -454,7 +454,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(6836)(stateFromStores);
+  const tmp7 = stateFromStores(6826)(stateFromStores);
   dependencyMap = tmp7;
   const items1 = [stateFromStores, tmp7, navigation];
   const effect = noop.useEffect(() => {
@@ -474,7 +474,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   }, items1);
   const callback = noop.useCallback(() => {
     const obj = stateFromStores(8190);
-    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: navigation(6833).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION });
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: navigation(6823).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION });
   }, []);
   const obj3 = { style: tmp.content, children: null };
   const obj2 = navigation(563);
@@ -497,11 +497,11 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   }
   const obj6 = { children: null };
   obj5.children = intl.formatToPlainString(stateFromStores(2701).pQQMJ7, { username: str });
-  items2[1] = closure_11(navigation(5929).Text, obj5);
+  items2[1] = closure_11(navigation(5919).Text, obj5);
   const obj7 = { variant: "body-sm/medium", color: "text-muted", style: tmp.description, children: null };
   const intl2 = tmp2(1113).intl;
   obj7.children = intl2.format(stateFromStores(2701)["0o3yg8"], { link: "https://support.discord.com/hc/articles/14155060633623" });
-  items2[2] = closure_11(navigation(5929).Text, obj7);
+  items2[2] = closure_11(navigation(5919).Text, obj7);
   obj3.children = items2;
   const items3 = [closure_12(View, obj3), ];
   const obj8 = { children: null };
@@ -510,16 +510,16 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   const intl3 = tmp2(1113).intl;
   obj10.text = intl3.string(stateFromStores(2701)["3oUE4o"]);
   obj10.onPress = callback;
-  const items4 = [closure_11(navigation(5936).Button, obj10), ];
+  const items4 = [closure_11(navigation(5926).Button, obj10), ];
   const obj11 = { variant: "tertiary", text: null, onPress: null };
   const intl4 = tmp2(1113).intl;
   obj11.text = intl4.string(navigation(1113).t.oEAioF);
   obj11.onPress = function onPress() {
-    return stateFromStores(6848).pop();
+    return stateFromStores(6838).pop();
   };
-  items4[1] = closure_11(navigation(5936).Button, obj11);
+  items4[1] = closure_11(navigation(5926).Button, obj11);
   obj9.children = items4;
-  obj8.children = closure_12(navigation(6951).ButtonGroup, obj9);
+  obj8.children = closure_12(navigation(6941).ButtonGroup, obj9);
   items3[1] = closure_11(navigation(14079).ModalFooter, obj8);
   obj6.children = items3;
   return closure_12(navigation(8208).ModalScreen, obj6);
@@ -589,7 +589,7 @@ function FamilyCenterPrereqMustBeAdultScreen() {
     }
     return prop;
   });
-  const tmp3 = stateFromStores(6836)(stateFromStores);
+  const tmp3 = stateFromStores(6826)(stateFromStores);
   dependencyMap = tmp3;
   const items1 = [stateFromStores, tmp3, navigation];
   const effect = noop.useEffect(() => {
@@ -610,7 +610,7 @@ function FamilyCenterPrereqMustBeAdultScreen() {
   const obj3 = { title: null, description: null, primaryButton: null };
   const callback = noop.useCallback(() => {
     const obj = stateFromStores(8190);
-    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: navigation(6833).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION });
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: navigation(6823).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION });
   }, []);
   const intl = navigation(1113).intl;
   obj3.title = intl.string(stateFromStores(2701).BQFHXW);
@@ -619,7 +619,7 @@ function FamilyCenterPrereqMustBeAdultScreen() {
   const obj5 = { text: null, onPress: null };
   const intl3 = navigation(1113).intl;
   obj5.text = intl3.string(navigation(1113).t["NX+WJN"]);
-  obj5.onPress = stateFromStores(6848).pop;
+  obj5.onPress = stateFromStores(6838).pop;
   obj3.primaryButton = obj5;
   return closure_11(FamilyCenterPrereqScreen, obj3);
 }

@@ -1,10 +1,10 @@
-// === Module 18100: SelectWebBrowserSetting ===
+// === Module 18102: SelectWebBrowserSetting ===
 
-// Module 18100 (SelectWebBrowserSetting)
+// Module 18102 (SelectWebBrowserSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import BrowserManager from "BrowserManager" /* 6044 */;
+import BrowserManager from "BrowserManager" /* 6034 */;
 import SettingsConstants from "SettingsConstants" /* 9202 */;
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;

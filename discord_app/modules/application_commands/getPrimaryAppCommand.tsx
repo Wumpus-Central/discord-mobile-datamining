@@ -2,7 +2,7 @@
 
 // Module 12762 (getPrimaryAppCommand)
 import Server from "Server" /* 2119 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5953 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5943 */;
 import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 11410 */;
 import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 11412 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -2,7 +2,7 @@
 
 // Module 11078 (InAppNotificationSettingsModal)
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import NavigatorHeader from "NavigatorHeader" /* 7493 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7878 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7883 */;
@@ -11,7 +11,7 @@ import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -144,7 +144,7 @@ export default noop.memo(function InAppNotificationSettingsModal(channelId) {
         obj.title = intl.string(channelId(1113).t.h850Ss);
         let channelName = null;
         if (null != closure_0) {
-          const tmp3Result = channelId(5954);
+          const tmp3Result = channelId(5944);
           channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;

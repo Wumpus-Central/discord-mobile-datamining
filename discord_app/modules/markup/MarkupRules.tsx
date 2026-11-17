@@ -1,18 +1,18 @@
-// === Module 6344: MarkupRules ===
+// === Module 6334: MarkupRules ===
 
-// Module 6344 (MarkupRules)
+// Module 6334 (MarkupRules)
 import util from "util" /* 1113 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5215 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import MarkupLinkRule from "MarkupLinkRule" /* 6347 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6350 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
-import StaticRouteRendering from "StaticRouteRendering" /* 6352 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 6353 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 6354 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 6366 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 6368 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import MarkupLinkRule from "MarkupLinkRule" /* 6337 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6340 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
+import StaticRouteRendering from "StaticRouteRendering" /* 6342 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 6343 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 6344 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 6356 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 6358 */;
 import MarkupRulesUtils from "MarkupRulesUtils" /* 9355 */;
 import MarkupListRuleDefault from "MarkupListRule" /* 9357 */;
 import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 9358 */;
@@ -26,7 +26,7 @@ import GuildRoleStore from "GuildRoleStore" /* 5212 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import UserStore from "UserStore" /* 1388 */;
 import t_mod from "module_2070" /* 2070 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 6343 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 6333 */;
 import "apply";
 import apply_mod from "apply" /* 12 */;
 
@@ -218,8 +218,8 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
 }
 const Constants = fn(1072);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: closure_10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(6345).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(6346).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(6335).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(6336).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;

@@ -3,7 +3,7 @@
 // Module 12354 (ForumPostActionBar)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
-import Client from "Client" /* 5543 */;
+import Client from "Client" /* 5533 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
 import messages_MessagesUtils from "messages/MessagesUtils" /* 11864 */;
 import noop from "module_19" /* 19 */;
@@ -78,7 +78,7 @@ export default function ForumPostActionBar(channel) {
         const result = messages_MessagesUtils.handleCopyLinkForumPost(guildId, channel.id, obj2);
       }
     };
-    obj10.children = closure_8(tmp2(6029).LinkIcon, { size: "xs" });
+    obj10.children = closure_8(tmp2(6019).LinkIcon, { size: "xs" });
     items6[1] = closure_8(tmp2(7428).PressableOpacity, obj10);
     const obj11 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl5 = tmp2(1113).intl;
@@ -113,7 +113,7 @@ export default function ForumPostActionBar(channel) {
       obj12.onPress = items8;
       intl = closure_8;
       items8 = [closure_8(tmp2(7738).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
-      Text = tmp2(5929).Text;
+      Text = tmp2(5919).Text;
       const obj13 = { style: tmp.buttonText, variant: "body-sm/semibold", color: "text-brand", children: null };
       const intl3 = tmp2(1113).intl;
       obj13.children = intl3.string(tmp2(1113).t["OtF+lC"]);
@@ -129,7 +129,7 @@ export default function ForumPostActionBar(channel) {
       const obj14 = { style: tmp.buttonText, variant: "body-sm/semibold", color: "interactive-text-default", children: null };
       const intl2 = tmp2(1113).intl;
       obj14.children = intl2.string(tmp2(1113).t["0rQinA"]);
-      items9[1] = closure_8(tmp2(5929).Text, obj14);
+      items9[1] = closure_8(tmp2(5919).Text, obj14);
       obj12.children = items9;
       tmp13 = obj12;
     }

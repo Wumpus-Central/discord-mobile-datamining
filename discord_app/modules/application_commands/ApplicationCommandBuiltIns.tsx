@@ -2,7 +2,7 @@
 
 // Module 11414 (ApplicationCommandBuiltIns)
 import UserSettings from "UserSettings" /* 5131 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5985 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
 import DiceRollActionCreators from "DiceRollActionCreators" /* 7263 */;
 import ThreadHooks from "ThreadHooks" /* 7287 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
@@ -24,7 +24,7 @@ function getOptionValue(arr, arg1) {
   }
   return value;
 }
-const BuiltInSectionId = fn(6345).BuiltInSectionId;
+const BuiltInSectionId = fn(6335).BuiltInSectionId;
 const Constants = fn(1072);
 ({ Permissions: metroImportDefault, MARKDOWN_SPOILER_WRAPPER: closure_8, ME: closure_9, DISPLAY_NAME_MAX_LENGTH, MAX_CHANNEL_NAME_LENGTH } = Constants);
 const DiceRollConstants = fn(11415);
@@ -32,7 +32,7 @@ const DiceRollConstants = fn(11415);
 let closure_11 = fn(5220).getDisableCommunicationDurationOptions;
 const MessageSendLocation = fn(5311).MessageSendLocation;
 let obj = {};
-let obj2 = { id: BuiltInSectionId.BUILT_IN, type: fn(5985).ApplicationCommandSectionType.BUILT_IN };
+let obj2 = { id: BuiltInSectionId.BUILT_IN, type: fn(5975).ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj2, "name", {
   get: () => {
     const intl = require("util").intl;
@@ -41,7 +41,7 @@ Object.defineProperty(obj2, "name", {
   set: undefined
 });
 obj[BuiltInSectionId.BUILT_IN] = obj2;
-let obj3 = { id: BuiltInSectionId.FRECENCY, type: fn(5985).ApplicationCommandSectionType.BUILT_IN };
+let obj3 = { id: BuiltInSectionId.FRECENCY, type: fn(5975).ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj3, "name", {
   get: () => {
     const intl = require("util").intl;
@@ -51,7 +51,7 @@ Object.defineProperty(obj3, "name", {
 });
 obj[BuiltInSectionId.FRECENCY] = obj3;
 let items = [...fn(11416).default];
-let obj4 = { id: "-1", untranslatedName: "shrug", displayName: "shrug", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj4 = { id: "-1", untranslatedName: "shrug", displayName: "shrug", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj4, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -98,7 +98,7 @@ obj4.execute = function execute(arr) {
 };
 items[tmp5] = obj4;
 const sum = tmp5 + 1;
-let obj6 = { id: "-2", untranslatedName: "tableflip", displayName: "tableflip", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj6 = { id: "-2", untranslatedName: "tableflip", displayName: "tableflip", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj6, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -145,7 +145,7 @@ obj6.execute = function execute(arr) {
 };
 items[sum] = obj6;
 const sum1 = sum + 1;
-let obj8 = { id: "-3", untranslatedName: "unflip", displayName: "unflip", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj8 = { id: "-3", untranslatedName: "unflip", displayName: "unflip", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj8, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -192,7 +192,7 @@ obj8.execute = function execute(arr) {
 };
 items[sum1] = obj8;
 const sum2 = sum1 + 1;
-let obj10 = { id: "-4", untranslatedName: "tts", displayName: "tts", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj10 = { id: "-4", untranslatedName: "tts", displayName: "tts", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj10, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -251,7 +251,7 @@ obj10.execute = function execute(arr) {
 };
 items[sum2] = obj10;
 const sum3 = sum2 + 1;
-const obj12 = { id: "-5", untranslatedName: "me", displayName: "me", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+const obj12 = { id: "-5", untranslatedName: "me", displayName: "me", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj12, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -298,7 +298,7 @@ obj12.execute = function execute(arr) {
 };
 items[sum3] = obj12;
 const sum4 = sum3 + 1;
-const obj14 = { id: "-6", untranslatedName: "spoiler", displayName: "spoiler", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+const obj14 = { id: "-6", untranslatedName: "spoiler", displayName: "spoiler", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj14, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -346,7 +346,7 @@ obj14.execute = function execute(arr) {
 };
 items[sum4] = obj14;
 const sum5 = sum4 + 1;
-const obj16 = { id: "-7", untranslatedName: "nick", displayName: "nick", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj16 = { id: "-7", untranslatedName: "nick", displayName: "nick", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj16, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -413,7 +413,7 @@ obj16.execute = function execute(arr, arg1) {
 };
 items[sum5] = obj16;
 const sum6 = sum5 + 1;
-const obj18 = { id: "-10", untranslatedName: "thread", displayName: "thread", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj18 = { id: "-10", untranslatedName: "thread", displayName: "thread", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj18, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -517,7 +517,7 @@ obj18.execute = function execute() {
 };
 items[sum6] = obj18;
 const sum7 = sum6 + 1;
-const obj21 = { id: "-11", untranslatedName: "kick", displayName: "kick", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj21 = { id: "-11", untranslatedName: "kick", displayName: "kick", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj21, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -690,7 +690,7 @@ obj21.execute = function execute(arr, guild) {
 };
 items[sum7] = obj21;
 const sum8 = sum7 + 1;
-const obj24 = { id: "-12", untranslatedName: "ban", displayName: "ban", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj24 = { id: "-12", untranslatedName: "ban", displayName: "ban", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj24, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -943,7 +943,7 @@ obj24.execute = function execute(arr, guild) {
 };
 items[sum8] = obj24;
 const sum9 = sum8 + 1;
-const obj28 = { id: "-13", untranslatedName: "timeout", displayName: "timeout", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj28 = { id: "-13", untranslatedName: "timeout", displayName: "timeout", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj28, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -1156,7 +1156,7 @@ obj28.execute = function execute(arr, guild) {
 };
 items[sum9] = obj28;
 const sum10 = sum9 + 1;
-const obj32 = { id: "-14", untranslatedName: "msg", displayName: "msg", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj32 = { id: "-14", untranslatedName: "msg", displayName: "msg", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj32, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -1313,7 +1313,7 @@ obj32.execute = function execute(arr, channel) {
   }
 };
 items[sum10] = obj32;
-const obj35 = { id: "-18", untranslatedName: "roll-dice", displayName: "roll-dice", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5985).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj35 = { id: "-18", untranslatedName: "roll-dice", displayName: "roll-dice", type: fn(2119).ApplicationCommandType.CHAT, inputType: fn(5975).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj35, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;

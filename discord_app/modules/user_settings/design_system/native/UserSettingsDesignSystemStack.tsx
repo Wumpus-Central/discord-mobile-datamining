@@ -1,9 +1,9 @@
-// === Module 18443: UserSettingsDesignSystemStack ===
+// === Module 18445: UserSettingsDesignSystemStack ===
 
-// Module 18443 (UserSettingsDesignSystemStack)
+// Module 18445 (UserSettingsDesignSystemStack)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import Card from "Card" /* 7445 */;
 import noop from "module_19" /* 19 */;
 

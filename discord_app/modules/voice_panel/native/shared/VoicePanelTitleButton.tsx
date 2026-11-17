@@ -1,14 +1,14 @@
-// === Module 19991: VoicePanelTitleButton ===
+// === Module 19993: VoicePanelTitleButton ===
 
-// Module 19991 (VoicePanelTitleButton)
+// Module 19993 (VoicePanelTitleButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import BaseTextButton from "BaseTextButton" /* 5937 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6943 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6949 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import BaseTextButton from "BaseTextButton" /* 5927 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6933 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6939 */;
 import GroupIcon from "GroupIcon" /* 7436 */;
 import _modDef7906 from "module_7906" /* 7906 */;
 import native from "native" /* 7997 */;
@@ -17,10 +17,10 @@ import _modDef8038 from "module_8038" /* 8038 */;
 import ShieldLockIcon from "ShieldLockIcon" /* 10815 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
 import MicrophoneIcon from "MicrophoneIcon" /* 13048 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19192 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19940 */;
-import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 19989 */;
-import _modDef19992 from "module_19992" /* 19992 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19194 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19942 */;
+import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 19991 */;
+import _modDef19994 from "module_19994" /* 19994 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import StageInstanceStore from "StageInstanceStore" /* 5160 */;
@@ -71,7 +71,7 @@ function StreamButton(arg0) {
   const intl2 = util.intl;
   obj2.accessibilityLabel = intl2.formatToPlainString(util.t.I0mOAs, { username: name });
   obj2.text = name;
-  obj2.icon = _modDef19992;
+  obj2.icon = _modDef19994;
   obj2.onPress = onPress;
   return React6(native.HeaderButton, obj2);
 }
@@ -95,7 +95,7 @@ function ActivityButton(participant) {
   obj3.onPress = participant.onPress;
   const items1 = [closure_9(participant(7997).HeaderButton, obj3), closure_9(QuestActivityButtonDefault, { applicationId: participant.applicationId })];
   obj2.children = items1;
-  return closure_10(participant(6337).Stack, obj2);
+  return closure_10(participant(6327).Stack, obj2);
 }
 function UserButton(participant) {
   participant = participant.participant;
@@ -177,7 +177,7 @@ function StageButton(channelId) {
   return closure_9(channelId(7997).HeaderButton, obj6);
 }
 const View = fn(17).View;
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5306);
@@ -203,7 +203,7 @@ export default noop.memo(function VoicePanelTitleButton() {
     }
     return id;
   });
-  const tmp3 = channelId(19988)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(19990)(derivedStateFromSharedValue, channelId, guildId);
   items = [guildId, channelId];
   const onPress = noop.useCallback(() => {
     const result = VoicePanelSettingsActionCreators.openVoicePanelSettingsActionSheet(guildId, channelId);

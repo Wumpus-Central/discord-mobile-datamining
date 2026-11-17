@@ -6,9 +6,9 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
 import shared from "shared" /* 5313 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import Pressables from "Pressables" /* 7428 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 9235 */;
 import ServerBoostStreamQualityMarketingExperiment from "ServerBoostStreamQualityMarketingExperiment" /* 16015 */;
@@ -464,7 +464,7 @@ let obj11 = {
 };
 items[10] = {
   isIncluded: false,
-  IconComponent: fn(6029).LinkIcon,
+  IconComponent: fn(6019).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -475,7 +475,7 @@ let items1 = [obj, , ];
 let obj13 = { tier: BoostedGuildTiers.TIER_2, features: null };
 let obj12 = {
   isIncluded: false,
-  IconComponent: fn(6029).LinkIcon,
+  IconComponent: fn(6019).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -677,7 +677,7 @@ const obj23 = {
 };
 items2[10] = {
   isIncluded: false,
-  IconComponent: fn(6029).LinkIcon,
+  IconComponent: fn(6019).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -688,7 +688,7 @@ items1[1] = obj13;
 const obj25 = { tier: BoostedGuildTiers.TIER_3, features: null };
 const obj24 = {
   isIncluded: false,
-  IconComponent: fn(6029).LinkIcon,
+  IconComponent: fn(6019).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -891,7 +891,7 @@ const obj35 = {
 items3[10] = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(6029).LinkIcon,
+  IconComponent: fn(6019).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -905,7 +905,7 @@ const obj37 = { cardWrapper: { marginRight: 10, width: 290 }, card: null, cardCo
 const obj36 = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(6029).LinkIcon,
+  IconComponent: fn(6019).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -935,7 +935,7 @@ const rect = { borderRadius: nativeDefault.radii.sm, paddingHorizontal: 8, paddi
 obj37.cardTierBadge = rect;
 obj37.cardTierBadgeCopy = { textTransform: "uppercase" };
 const obj41 = { flex: 1, marginTop: fn(16007).PROGRESS_BAR_SPACING };
-obj37.sparkleStar = { position: "absolute", tintColor: fn(6961).DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
+obj37.sparkleStar = { position: "absolute", tintColor: fn(6951).DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
 obj37.sparkleStarPointed = { height: 15, width: 18 };
 obj37.sparkleStarElongated = { height: 45, width: 23 };
 obj37.sparkleStarPointed1 = { top: -7, right: 35 };

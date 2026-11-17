@@ -1,6 +1,6 @@
-// === Module 17859: useEmojiByIdOrName ===
+// === Module 17861: useEmojiByIdOrName ===
 
-// Module 17859 (useEmojiByIdOrName)
+// Module 17861 (useEmojiByIdOrName)
 import EmojiStore from "EmojiStore" /* 6969 */;
 
 const require = fn;

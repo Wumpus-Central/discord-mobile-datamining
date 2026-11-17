@@ -1,6 +1,6 @@
-// === Module 19530: PeopleScreen ===
+// === Module 19532: PeopleScreen ===
 
-// Module 19530 (PeopleScreen)
+// Module 19532 (PeopleScreen)
 import TrackingDefault from "Tracking" /* 14761 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

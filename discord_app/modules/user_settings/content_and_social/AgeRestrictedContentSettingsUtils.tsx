@@ -2,9 +2,9 @@
 
 // Module 10808 (AgeRestrictedContentSettingsUtils)
 import UserSettings from "UserSettings" /* 5131 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5995 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6830 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6835 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5985 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6820 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6825 */;
 import useNSFWAllowed from "useNSFWAllowed" /* 10809 */;
 import UserStore from "UserStore" /* 1388 */;
 

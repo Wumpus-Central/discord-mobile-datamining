@@ -6,7 +6,7 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import UserSettings from "UserSettings" /* 5131 */;
 import MessageParserDefault from "MessageParser" /* 8786 */;
 import SlateUtils from "SlateUtils" /* 8791 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 require = fn;
 const dependencyMap = {};

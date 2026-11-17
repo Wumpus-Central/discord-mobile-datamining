@@ -1,6 +1,6 @@
-// === Module 20207: CustomStatusManager ===
+// === Module 20210: CustomStatusManager ===
 
-// Module 20207 (CustomStatusManager)
+// Module 20210 (CustomStatusManager)
 import setUserStatusDefault from "setUserStatus" /* 11022 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;

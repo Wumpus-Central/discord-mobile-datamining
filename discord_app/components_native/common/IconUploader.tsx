@@ -3,7 +3,7 @@
 // Module 10911 (IconUploader)
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import Pressables from "Pressables" /* 7428 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
 import _modDef10912 from "module_10912" /* 10912 */;

@@ -3,7 +3,7 @@
 // Module 16341 (ShareAttachments)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 8879 */;
 import AttachmentPreviewDefault from "AttachmentPreview" /* 11124 */;
 import noop from "module_19" /* 19 */;

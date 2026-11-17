@@ -3,7 +3,7 @@
 // Module 15472 (TieredTenureBadgeCoachmark)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 5139 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 10085 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -2,7 +2,7 @@
 
 // Module 10667 (FireIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10668 from "module_10668" /* 10668 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 19969: usePIPAvoidanceSpecs ===
+// === Module 19971: usePIPAvoidanceSpecs ===
 
-// Module 19969 (usePIPAvoidanceSpecs)
+// Module 19971 (usePIPAvoidanceSpecs)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import useToken from "useToken" /* 5902 */;
+import useToken from "useToken" /* 5892 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 11333 */;
 import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11983 */;
 import VoicePanelConstants from "VoicePanelConstants" /* 11985 */;
@@ -11,9 +11,9 @@ import MorphablePanelConstants from "MorphablePanelConstants" /* 11986 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11989 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11991 */;
 import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13129 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 19783 */;
-import useScreenNameSharedValueDefault from "useScreenNameSharedValue" /* 19912 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19913 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 19785 */;
+import useScreenNameSharedValueDefault from "useScreenNameSharedValue" /* 19914 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19915 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;

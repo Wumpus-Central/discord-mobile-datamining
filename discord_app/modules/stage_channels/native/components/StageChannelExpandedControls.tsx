@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11956 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 5177 */;
 
@@ -48,7 +48,7 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
     num = 0;
   }
   const obj4 = channel(504);
-  const stageHasMedia = channel(6939).useStageHasMedia(channel.id);
+  const stageHasMedia = channel(6929).useStageHasMedia(channel.id);
   const items5 = [];
   items5.push(jsx(channel(13057).StreamVolumeItem, {}));
   if (tmp11) {
@@ -71,6 +71,6 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
   items5.push(jsx(channel(13057).DeafenButton, { channel }));
   const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
   tmp11 = num > 0 && tmp4;
-  const tmp5Result = channel(6939);
+  const tmp5Result = channel(6929);
   return <View style={tmp.container}>{items5.map((children, index) => <View key={index}>{children}</View>)}</View>;
 });

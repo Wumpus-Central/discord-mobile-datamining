@@ -2,7 +2,7 @@
 
 // Module 10985 (InboxIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod10986 from "module_10986" /* 10986 */;
 import noop from "module_19" /* 19 */;
 

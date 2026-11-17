@@ -4,8 +4,8 @@
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1113 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import GuildUtilsDefault from "GuildUtils" /* 7075 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import sortByMatchScore from "sortByMatchScore" /* 10247 */;

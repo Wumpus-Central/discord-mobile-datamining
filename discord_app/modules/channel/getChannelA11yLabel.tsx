@@ -2,8 +2,8 @@
 
 // Module 8418 (getChannelA11yLabel)
 import util from "util" /* 1113 */;
-import UserUtils from "UserUtils" /* 5372 */;
-import useChannelName from "useChannelName" /* 5954 */;
+import UserUtils from "UserUtils" /* 5362 */;
+import useChannelName from "useChannelName" /* 5944 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 7219 */;
 import utils from "utils" /* 8419 */;
 import RelationshipStore from "RelationshipStore" /* 5248 */;

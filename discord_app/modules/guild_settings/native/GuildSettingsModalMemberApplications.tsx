@@ -1,14 +1,14 @@
-// === Module 19417: GuildSettingsModalMemberApplications ===
+// === Module 19419: GuildSettingsModalMemberApplications ===
 
-// Module 19417 (GuildSettingsModalMemberApplications)
+// Module 19419 (GuildSettingsModalMemberApplications)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5352 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 19418 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5342 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 19420 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6933 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6923 */;
 
 const require = globalThis.__r;
 

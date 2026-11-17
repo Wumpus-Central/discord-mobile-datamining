@@ -2,7 +2,7 @@
 
 // Module 7451 (AnimatedPressableHighlight)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5902 */;
+import useToken from "useToken" /* 5892 */;
 import useIOSPressEffects from "useIOSPressEffects" /* 7452 */;
 import noop from "module_19" /* 19 */;
 import module_1655 from "module_1655" /* 1655 */;

@@ -2,7 +2,7 @@
 
 // Module 13041 (BlurBackgroundIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod13042 from "module_13042" /* 13042 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,7 +1,7 @@
 // === Module 13656: SnailIllocon ===
 
 // Module 13656 (SnailIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef13657 from "module_13657" /* 13657 */;
 import _modDef13658 from "module_13658" /* 13658 */;

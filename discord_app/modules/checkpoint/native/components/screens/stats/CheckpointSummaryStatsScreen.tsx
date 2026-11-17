@@ -8,10 +8,10 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import _modDef3285 from "module_3285" /* 3285 */;
 import _modDef3317 from "module_3317" /* 3317 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 6401 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6747 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 6391 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6737 */;
 import GuildIcon from "GuildIcon" /* 7720 */;
 import EmojiDefault from "Emoji" /* 7894 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7994 */;
@@ -357,7 +357,7 @@ function ItemStat(children) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const CheckpointConstants = fn(6377);
+const CheckpointConstants = fn(6367);
 ({ CHECKPOINT_PRIMARY: metroImportDefault, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

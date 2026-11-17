@@ -6,9 +6,9 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import ChatInputUtils from "ChatInputUtils" /* 5501 */;
-import useToken from "useToken" /* 5902 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import ChatInputUtils from "ChatInputUtils" /* 5491 */;
+import useToken from "useToken" /* 5892 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7653 */;
 import GuildIconDefault from "GuildIcon" /* 7720 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7961 */;
@@ -150,7 +150,7 @@ function MemberJoinDates(userId) {
   if (tmp13Result) {
     const obj10 = { children: null };
     const obj11 = { variant: textVariant, color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
-    const items6 = [closure_11(tmp4(5929).Text, obj11), ];
+    const items6 = [closure_11(tmp4(5919).Text, obj11), ];
     const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
     const obj13 = { guild: stateFromStores1, size: tmp4(7720).GuildIconSizes.XXSMALL };
     obj12.icon = closure_11(GuildIconDefault, obj13);

@@ -1,23 +1,23 @@
-// === Module 19572: ChannelDetailsNavigationBar ===
+// === Module 19574: ChannelDetailsNavigationBar ===
 
-// Module 19572 (ChannelDetailsNavigationBar)
+// Module 19574 (ChannelDetailsNavigationBar)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import native from "native" /* 5377 */;
-import timing_timing from "timing/timing" /* 5548 */;
+import native from "native" /* 5367 */;
+import timing_timing from "timing/timing" /* 5538 */;
 import _modDef7827 from "module_7827" /* 7827 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10894 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10919 */;
 import ChannelDetailsUtils from "ChannelDetailsUtils" /* 12561 */;
 import useSearchContext from "useSearchContext" /* 14696 */;
 import TrackingDefault from "Tracking" /* 14761 */;
-import ChannelDetailsSearchBarDefault from "ChannelDetailsSearchBar" /* 19445 */;
+import ChannelDetailsSearchBarDefault from "ChannelDetailsSearchBar" /* 19447 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 5239 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5240 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 
 const _modDef1655 = _mod1655;
 
@@ -43,10 +43,10 @@ function MuteButton(channelId) {
     navigation.navigate("sidebar", { screen: constants2.MUTE, channelId, source: "channel-details-navigation-bar" });
   }, items1);
   const obj2 = channelId(1502);
-  const token = channelId(5902).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  const obj3 = channelId(5902);
+  const token = channelId(5892).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const obj3 = channelId(5892);
   const tmp5 = navigation;
-  const token1 = channelId(5902).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token1 = channelId(5892).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   const obj5 = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null };
   const intl = channelId(1113).intl;
   obj5.accessibilityLabel = intl.string(channelId(1113).t.w4m945);
@@ -75,11 +75,11 @@ function SearchButton(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   let obj = channelId(504);
-  const shouldHideChannelContent = channelId(6838).useShouldHideChannelContent(stateFromStores);
-  let obj2 = channelId(6838);
-  const token = channelId(5902).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  const obj3 = channelId(5902);
-  const token1 = channelId(5902).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const shouldHideChannelContent = channelId(6828).useShouldHideChannelContent(stateFromStores);
+  let obj2 = channelId(6828);
+  const token = channelId(5892).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const obj3 = channelId(5892);
+  const token1 = channelId(5892).useToken(nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   const obj5 = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null, disabled: null };
   const intl = channelId(1113).intl;
   obj5.accessibilityLabel = intl.string(channelId(1113).t["5h0QOP"]);
@@ -107,9 +107,9 @@ function SettingsButton(channel) {
     }
   }, items);
   const obj = channel(1502);
-  const token = channel(5902).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  let obj2 = channel(5902);
-  const token1 = channel(5902).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token = channel(5892).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  let obj2 = channel(5892);
+  const token1 = channel(5892).useToken(navigation(575).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   let obj4 = { accessibilityLabel: null, onPress: null, accessibilityRole: "button", variant: null, size: null, icon: null };
   const intl = channel(1113).intl;
   obj4.accessibilityLabel = intl.string(channel(1113).t["3D5yo/"]);

@@ -1,19 +1,19 @@
-// === Module 18994: MiniaturesSpotIllustration ===
+// === Module 18996: MiniaturesSpotIllustration ===
 
-// Module 18994 (MiniaturesSpotIllustration)
+// Module 18996 (MiniaturesSpotIllustration)
 import assetHelpers from "assetHelpers" /* 7755 */;
-import _modDef18995 from "module_18995" /* 18995 */;
-import _modDef18996 from "module_18996" /* 18996 */;
 import _modDef18997 from "module_18997" /* 18997 */;
+import _modDef18998 from "module_18998" /* 18998 */;
+import _modDef18999 from "module_18999" /* 18999 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18995 }, 3: null };
-let obj2 = { uri: _modDef18995 };
-obj[2] = { uri: _modDef18996 };
-const obj3 = { uri: _modDef18996 };
-obj[3] = { uri: _modDef18997 };
+let obj = { 1: null, 2: { uri: _modDef18997 }, 3: null };
+let obj2 = { uri: _modDef18997 };
+obj[2] = { uri: _modDef18998 };
+const obj3 = { uri: _modDef18998 };
+obj[3] = { uri: _modDef18999 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MiniaturesSpotIllustration.native.tsx");
 

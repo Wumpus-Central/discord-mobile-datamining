@@ -10,7 +10,7 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 import FramesStore from "FramesStore" /* 7019 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6761).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6751).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9, RPCCloseCodes: closure_10, RPCErrors: closure_11, RPCCommands: closure_12 } = Constants);
 const asLaunched = fn(7020).asLaunched;

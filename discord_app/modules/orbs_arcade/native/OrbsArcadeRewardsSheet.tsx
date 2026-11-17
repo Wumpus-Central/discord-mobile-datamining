@@ -67,7 +67,7 @@ export default function OrbsArcadeRewardsSheet(gameId) {
     obj8 = closure_4(tmp10, obj8);
     items4[1] = obj8;
     obj9.children = items4;
-    OrbsArcadeSheetSecondaryAction = closure_5(tmp(6337).Stack, obj9);
+    OrbsArcadeSheetSecondaryAction = closure_5(tmp(6327).Stack, obj9);
     obj6.children = OrbsArcadeSheetSecondaryAction;
     closure_4(tmp(7951).ActionSheet, obj6);
     const tmpResult2 = tmp(17654);

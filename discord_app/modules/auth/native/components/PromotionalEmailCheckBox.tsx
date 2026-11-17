@@ -1,6 +1,6 @@
-// === Module 18688: PromotionalEmailCheckBox ===
+// === Module 18690: PromotionalEmailCheckBox ===
 
-// Module 18688 (PromotionalEmailCheckBox)
+// Module 18690 (PromotionalEmailCheckBox)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
-const PromoEmailConsentStore = fn(6845);
+const PromoEmailConsentStore = fn(6835);
 ({ usePromoEmailConsentStore: closure_4, setPromoEmailConsentChecked: hasOwnProperty } = PromoEmailConsentStore);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -42,7 +42,7 @@ export default function PromotionalEmailCheckBox(style) {
     const obj5 = { checked: tmp3 };
     items = [closure_6(tmp4(7734).FormCheckbox, obj5), ];
     const obj6 = { variant: "body-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: promoEmailOptInLabel };
-    items[1] = closure_6(tmp4(5929).Text, obj6);
+    items[1] = closure_6(tmp4(5919).Text, obj6);
     obj4.children = items;
     obj3.children = closure_7(closure_3, obj4);
     tmp8 = closure_6(closure_2, obj3);

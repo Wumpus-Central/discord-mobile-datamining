@@ -2,7 +2,7 @@
 
 // Module 15832 (UserProfileActivityTab)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 15837 */;
 import noop from "module_19" /* 19 */;
 

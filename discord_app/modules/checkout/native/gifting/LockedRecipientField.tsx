@@ -3,8 +3,8 @@
 // Module 11777 (LockedRecipientField)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,10 +23,9 @@ export default function LockedRecipientField(user) {
   user = user.user;
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  items = [React4(native.Avatar, { style: tmp.avatar, user, guildId: "Array", size: native.AvatarSizes.NORMAL }), ];
-  const obj3 = { variant: "body-md/semibold", children: null };
   const obj2 = { style: tmp.avatar, user, guildId: "Array", size: native.AvatarSizes.NORMAL };
-  obj3.children = UserUtilsDefault.getName(user);
+  items = [React4(native.Avatar, obj2), ];
+  const obj3 = { variant: "body-md/semibold", children: UserUtilsDefault.getName(user) };
   items[1] = React4(Text_Text.Text, obj3);
   obj.children = items;
   return hasOwnProperty(View, obj);

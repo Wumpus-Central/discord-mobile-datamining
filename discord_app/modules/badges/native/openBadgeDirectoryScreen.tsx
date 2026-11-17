@@ -3,7 +3,7 @@
 // Module 15273 (openBadgeDirectoryScreen)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import useIsWindowLarge from "useIsWindowLarge" /* 7771 */;
 import size from "module_2" /* 2 */;
 

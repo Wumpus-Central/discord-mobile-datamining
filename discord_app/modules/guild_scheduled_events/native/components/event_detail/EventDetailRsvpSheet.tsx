@@ -3,17 +3,17 @@
 // Module 15930 (EventDetailRsvpSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import BottomSheetModal from "BottomSheetModal" /* 5570 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import BottomSheetModal from "BottomSheetModal" /* 5560 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import Form from "Form" /* 8106 */;
 import StageSparkleDefault from "StageSparkle" /* 8444 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import _modDef15931 from "module_15931" /* 15931 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 6068 */;
+import PresenceStore from "PresenceStore" /* 6058 */;
 import UserStore from "UserStore" /* 1388 */;
-import TextStyles from "TextStyles" /* 6826 */;
+import TextStyles from "TextStyles" /* 6816 */;
 
 require = fn;
 function EmptyDisplay(arg0) {
@@ -104,8 +104,8 @@ const memoResult = noop.memo(function UserRow(eventUser) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = tmp2(5372).getName(eventUser.user);
-    const tmp2Result2 = tmp2(5372);
+    nick = tmp2(5362).getName(eventUser.user);
+    const tmp2Result2 = tmp2(5362);
   }
   obj6.nick = nick;
   ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);

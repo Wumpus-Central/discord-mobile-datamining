@@ -1,15 +1,15 @@
-// === Module 20179: AudioSessionModeManager ===
+// === Module 20182: AudioSessionModeManager ===
 
-// Module 20179 (AudioSessionModeManager)
-import VoicePermissionManager from "VoicePermissionManager" /* 20180 */;
+// Module 20182 (AudioSessionModeManager)
+import VoicePermissionManager from "VoicePermissionManager" /* 20183 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6942 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6932 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 

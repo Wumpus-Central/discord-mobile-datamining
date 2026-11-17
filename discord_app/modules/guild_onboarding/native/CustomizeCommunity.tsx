@@ -5,10 +5,10 @@ import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import useThemeDefault from "useTheme" /* 5547 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import useThemeDefault from "useTheme" /* 5537 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7084 */;
 import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7868 */;
 import EmojiDefault from "Emoji" /* 7894 */;
@@ -20,9 +20,9 @@ import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 6969 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7869 */;
-import TextStyles from "TextStyles" /* 6826 */;
+import TextStyles from "TextStyles" /* 6816 */;
 
 require = fn;
 function EmptyCustomizeCommunity(setTab) {
@@ -52,7 +52,7 @@ function EmptyCustomizeCommunity(setTab) {
       }
     }
   });
-  items1[2] = closure_15(setTab(5929).Text, obj6);
+  items1[2] = closure_15(setTab(5919).Text, obj6);
   obj3.children = items1;
   return closure_16(closure_4, obj3);
 }
@@ -141,11 +141,11 @@ function ConnectionsPrompt(guildId) {
     const obj3 = { style: tmp.connectionsTitle, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t.eDVMrA);
-    const items1 = [closure_15(tmp2(5929).Text, obj3), , ];
+    const items1 = [closure_15(tmp2(5919).Text, obj3), , ];
     const obj4 = { variant: "body-xs/medium", color: "text-muted", children: null };
     const intl2 = tmp2(1113).intl;
     obj4.children = intl2.string(tmp2(1113).t.BozOXu);
-    items1[1] = closure_15(tmp2(5929).Text, obj4);
+    items1[1] = closure_15(tmp2(5919).Text, obj4);
     const obj5 = {
       style: tmp.connectionsContainer,
       children: stateFromStores.map((connection, index) => {
@@ -220,7 +220,7 @@ function DropdownOption(option) {
     obj3.children = closure_15(EmojiDefault, obj5);
     tmp10Result = closure_15(closure_4, obj3);
   }
-  const items1 = [tmp10Result, closure_15(option(5929).Text, { variant: "body-md/semibold", children: option.title })];
+  const items1 = [tmp10Result, closure_15(option(5919).Text, { variant: "body-md/semibold", children: option.title })];
   obj2.children = items1;
   return closure_16(closure_4, obj2);
 }
@@ -321,7 +321,7 @@ function DropdownPrompt(guildId) {
     const obj8 = { style: tmp.emptyDropdownText, variant: "body-sm/normal", color: "text-muted", children: null };
     const intl2 = tmp2(1113).intl;
     obj8.children = intl2.string(tmp2(1113).t.GmSvdA);
-    tmp17Result = closure_15(tmp2(5929).Text, obj8);
+    tmp17Result = closure_15(tmp2(5919).Text, obj8);
   }
   const items6 = [tmp17Result, found.map((option) => closure_1_15(DropdownOption, { option }, option.id)), ];
   const obj9 = { style: tmp.dropdownIconContainer, children: null };
@@ -435,7 +435,7 @@ get_ActivityIndicator = fn(17);
 const GuildOnboardingPromptsConstants = fn(7218);
 ({ GuildOnboardingTab: closure_11, OnboardingPromptType: closure_12 } = GuildOnboardingPromptsConstants);
 const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
-const ReadStateTypes = fn(6959).ReadStateTypes;
+const ReadStateTypes = fn(6949).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const createStyles = fn(5306);
@@ -549,7 +549,7 @@ export default function CustomizeCommunity(guildId) {
       const intl = tmp4(1113).intl;
       const obj10 = { count: newOnboardingPrompts.length + newAnswersCount };
       obj9.children = intl.format(tmp4(1113).t.iB5Gqe, obj10);
-      const items5 = [closure_15(tmp4(5929).Text, obj9), newOnboardingPrompts.map(callback), onboardingPromptsWithNewAnswers.map(callback), ];
+      const items5 = [closure_15(tmp4(5919).Text, obj9), newOnboardingPrompts.map(callback), onboardingPromptsWithNewAnswers.map(callback), ];
       const obj11 = { style: tmp.sectionSeparator };
       items5[3] = closure_15(closure_4, obj11);
       obj8.children = items5;
@@ -562,11 +562,11 @@ export default function CustomizeCommunity(guildId) {
       const obj13 = { style: tmp.sheetTitle, variant: "body-md/medium", color: "mobile-text-heading-primary", children: null };
       const intl2 = tmp4(1113).intl;
       obj13.children = intl2.string(tmp4(1113).t.BGkaer);
-      const items7 = [closure_15(tmp4(5929).Text, obj13), , ];
+      const items7 = [closure_15(tmp4(5919).Text, obj13), , ];
       const obj14 = { variant: "body-xs/medium", color: "text-muted", children: null };
       const intl3 = tmp4(1113).intl;
       obj14.children = intl3.string(tmp4(1113).t.r6Vm8T);
-      items7[1] = closure_15(tmp4(5929).Text, obj14);
+      items7[1] = closure_15(tmp4(5919).Text, obj14);
       items7[2] = onboardingPrompts.map(callback);
       obj12.children = items7;
       tmp24Result3 = closure_16(closure_17, obj12);

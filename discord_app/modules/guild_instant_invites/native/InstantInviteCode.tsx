@@ -3,10 +3,10 @@
 // Module 10927 (InstantInviteCode)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelName from "useChannelName" /* 5954 */;
-import ClockIcon from "ClockIcon" /* 6042 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelName from "useChannelName" /* 5944 */;
+import ClockIcon from "ClockIcon" /* 6032 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
 import TextIcon2 from "TextIcon" /* 8078 */;
 import CountDownDefault from "CountDown" /* 10913 */;
@@ -75,12 +75,12 @@ export default function InstantInviteCode(invite) {
   const obj = { style: closure_10().flex, children: null };
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
   const obj2 = { children: null };
-  const items1 = [closure_8(invite(5929).Text, { variant: "body-lg/semibold", tabularNumbers: true, children: invite.code }), ];
+  const items1 = [closure_8(invite(5919).Text, { variant: "body-lg/semibold", tabularNumbers: true, children: invite.code }), ];
   const obj3 = { variant: "body-lg/semibold", tabularNumbers: true, children: invite.code };
   const tmp = closure_10();
   items1[1] = closure_8(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj2.children = items1;
-  obj.children = closure_9(invite(6337).Stack, obj2);
+  obj.children = closure_9(invite(6327).Stack, obj2);
   return closure_8(View, obj);
 };
 export { InstantInviteDetails };

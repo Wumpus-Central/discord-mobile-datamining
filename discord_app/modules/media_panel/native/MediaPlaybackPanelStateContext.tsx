@@ -1,6 +1,6 @@
-// === Module 20124: MediaPlaybackPanelStateContext ===
+// === Module 20126: MediaPlaybackPanelStateContext ===
 
-// Module 20124 (MediaPlaybackPanelStateContext)
+// Module 20126 (MediaPlaybackPanelStateContext)
 import noop from "module_19" /* 19 */;
 
 const obj = { mode: null, setMode: null, morphablePanelMode: null, wrapperDimensions: null, useReducedMotion: null, pipState: null, pipAvoidanceSpecs: null, dismissToPipGestureRef: null, dismissPanel: null, scrollPosition: null, canShowPIP: null, lockScrolling: null, wrapperOffset: null };

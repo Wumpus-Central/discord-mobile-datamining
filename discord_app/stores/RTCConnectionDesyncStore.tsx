@@ -4,14 +4,14 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import CachedEntriesMapDefault from "CachedEntriesMap" /* 2160 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 6096 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6086 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6341 */;
 import useAvatarDecoration from "useAvatarDecoration" /* 7027 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 5982 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 5972 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 require = fn;
 function retryFailedUsers() {
@@ -49,10 +49,10 @@ function retryFailedUsers() {
     return c2;
   }
 }
-const makeSortedVoiceState = fn(6074).makeSortedVoiceState;
+const makeSortedVoiceState = fn(6064).makeSortedVoiceState;
 const Constants = fn(1072);
 ({ ME: closure_9, RTCConnectionStates: closure_10 } = Constants);
-const ParticipantTypes = fn(5983).ParticipantTypes;
+const ParticipantTypes = fn(5973).ParticipantTypes;
 new CachedEntriesMapDefault();
 const tmp3 = new CachedEntriesMapDefault();
 const set = new Set();

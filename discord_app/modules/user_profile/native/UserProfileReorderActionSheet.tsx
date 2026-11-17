@@ -30,8 +30,8 @@ export default function UserProfileReorderActionSheet(returnFocusRef) {
   const obj3 = { variant: "body-sm/medium", color: "text-subtle", children: null };
   const intl = returnFocusRef(1113).intl;
   obj3.children = intl.string(returnFocusRef(1113).t["S7X7/T"]);
-  const items2 = [closure_5(returnFocusRef(5929).Text, obj3), closure_5(View, { accessibilityRole: "list", style: tmp.list, children })];
+  const items2 = [closure_5(returnFocusRef(5919).Text, obj3), closure_5(View, { accessibilityRole: "list", style: tmp.list, children })];
   obj2.children = items2;
-  obj.children = closure_6(returnFocusRef(5570).BottomSheetScrollView, obj2);
+  obj.children = closure_6(returnFocusRef(5560).BottomSheetScrollView, obj2);
   return closure_5(returnFocusRef(7951).ActionSheet, obj);
 };

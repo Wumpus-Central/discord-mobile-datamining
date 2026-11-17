@@ -3,7 +3,7 @@
 // Module 7679 (LurkerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
 import LurkingStore from "LurkingStore" /* 5239 */;
 
 const require = fn;

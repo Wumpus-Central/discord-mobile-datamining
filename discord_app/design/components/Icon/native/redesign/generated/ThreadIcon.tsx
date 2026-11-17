@@ -2,7 +2,7 @@
 
 // Module 8071 (ThreadIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod8035 from "module_8035" /* 8035 */;
 import noop from "module_19" /* 19 */;
 

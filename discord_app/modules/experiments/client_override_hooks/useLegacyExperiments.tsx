@@ -1,9 +1,9 @@
 // === Module 12416: useLegacyExperiments ===
 
 // Module 12416 (useLegacyExperiments)
-import ExperimentManager from "ExperimentManager" /* 5537 */;
+import ExperimentManager from "ExperimentManager" /* 5527 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5532 */;
+import ExperimentStore from "ExperimentStore" /* 5522 */;
 
 require = fn;
 function parseRegisteredExperiments(stateFromStoresObject) {
@@ -63,7 +63,7 @@ function getLegacyOverridesInfo(stateFromStoresObject1) {
   return obj;
 }
 const useMemo = fn(19).useMemo;
-const ExperimentConstants = fn(5533);
+const ExperimentConstants = fn(5523);
 ({ ExperimentBuckets: closure_6, ExperimentTypes: metroImportDefault } = ExperimentConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useLegacyExperiments.tsx");

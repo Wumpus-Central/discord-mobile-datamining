@@ -5,9 +5,9 @@ import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import useInitialValueDefault from "useInitialValue" /* 5917 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import useInitialValueDefault from "useInitialValue" /* 5907 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import _modDef7533 from "module_7533" /* 7533 */;
 import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7644 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -285,7 +285,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     }
   }, items3);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp2(5570).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp2(5560).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = onChangeText;
   }

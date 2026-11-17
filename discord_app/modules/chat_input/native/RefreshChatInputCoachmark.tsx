@@ -2,7 +2,7 @@
 
 // Module 14597 (RefreshChatInputCoachmark)
 import util from "util" /* 1113 */;
-import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 5469 */;
+import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 5459 */;
 import useCoachmark from "useCoachmark" /* 9567 */;
 import _modDef14598 from "module_14598" /* 14598 */;
 import _slicedToArray from "module_32" /* 32 */;

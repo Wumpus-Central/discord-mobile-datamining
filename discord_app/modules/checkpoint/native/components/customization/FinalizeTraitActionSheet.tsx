@@ -3,8 +3,8 @@
 // Module 14545 (FinalizeTraitActionSheet)
 import jsxProd from "jsxProd" /* 21 */;
 import _modDef3317 from "module_3317" /* 3317 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6744 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6734 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -27,8 +27,8 @@ export default function FinalizeTraitActionSheet(onSelectOption) {
     onSelectOption(arg0);
   };
   obj3.children = items.map((value) => {
-    const obj = { value, label: onSelectOption(6744).getCustomizationOptionName(value) };
-    return jsx(onSelectOption(7747).TableRadioRow, { value, label: onSelectOption(6744).getCustomizationOptionName(value) }, value);
+    const obj = { value, label: onSelectOption(6734).getCustomizationOptionName(value) };
+    return jsx(onSelectOption(7747).TableRadioRow, { value, label: onSelectOption(6734).getCustomizationOptionName(value) }, value);
   });
   obj.children = jsx(onSelectOption(7745).TableRadioGroup, { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null });
   return jsx(onSelectOption(7951).ActionSheet, { startExpanded: true, header: null, children: null });

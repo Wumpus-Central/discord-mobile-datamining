@@ -1,7 +1,7 @@
-// === Module 6951: ButtonGroup ===
+// === Module 6941: ButtonGroup ===
 
-// Module 6951 (ButtonGroup)
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+// Module 6941 (ButtonGroup)
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

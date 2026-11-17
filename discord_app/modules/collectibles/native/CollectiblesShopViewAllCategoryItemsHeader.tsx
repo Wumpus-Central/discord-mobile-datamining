@@ -1,9 +1,9 @@
-// === Module 18537: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 18539: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 18537 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 18539 (CollectiblesShopViewAllCategoryItemsHeader)
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1502 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import HeaderShared from "HeaderShared" /* 9051 */;
 import _modDef9055 from "module_9055" /* 9055 */;
 import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 15326 */;

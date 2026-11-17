@@ -4,10 +4,10 @@
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import LinkingDefault from "Linking" /* 6012 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6915 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import LinkingDefault from "Linking" /* 6002 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6905 */;
 import MuteSettingsUtils from "MuteSettingsUtils" /* 11082 */;
 import SafetyWarningUtils from "SafetyWarningUtils" /* 12038 */;
 import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 12039 */;
@@ -76,7 +76,7 @@ class LikelyAtoWarningBanner {
       const tmp = asyncRequireImpl(12043, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
-        items = [closure_1_10(channelId(5929).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title }, index), closure_1_10(channelId(5929).Text, { variant: "body-xs/medium", color: "text-subtle", children: children.description }, index)];
+        items = [closure_1_10(channelId(5919).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title }, index), closure_1_10(channelId(5919).Text, { variant: "body-xs/medium", color: "text-subtle", children: children.description }, index)];
         obj.children = items;
         return closure_1_12(closure_1_11, obj);
       });

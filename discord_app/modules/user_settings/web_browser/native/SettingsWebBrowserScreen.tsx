@@ -1,6 +1,6 @@
-// === Module 18101: SettingsWebBrowserScreen ===
+// === Module 18103: SettingsWebBrowserScreen ===
 
-// Module 18101 (SettingsWebBrowserScreen)
+// Module 18103 (SettingsWebBrowserScreen)
 import SettingBuilders from "SettingBuilders" /* 12406 */;
 import SettingLayoutDefault from "SettingLayout" /* 17213 */;
 import noop from "module_19" /* 19 */;

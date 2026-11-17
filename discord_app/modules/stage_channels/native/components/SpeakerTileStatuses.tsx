@@ -7,8 +7,8 @@ import _modDef7634 from "module_7634" /* 7634 */;
 import _modDef13092 from "module_13092" /* 13092 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6942 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6932 */;
 
 require = fn;
 const View = fn(17).View;

@@ -1,6 +1,6 @@
-// === Module 20884: LocalMessageCacheStatsManager ===
+// === Module 20887: LocalMessageCacheStatsManager ===
 
-// Module 20884 (LocalMessageCacheStatsManager)
+// Module 20887 (LocalMessageCacheStatsManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import MessageCacheStatsDefault from "MessageCacheStats" /* 8691 */;
 import Constants from "Constants" /* 1072 */;

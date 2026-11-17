@@ -7,7 +7,7 @@ import dismissible_content from "dismissible_content" /* 5139 */;
 import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 10698 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5523 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5513 */;
 
 const require = globalThis.__r;
 

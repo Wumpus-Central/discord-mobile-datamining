@@ -1,9 +1,9 @@
-// === Module 19575: PinotChannelDetailsLabel ===
+// === Module 19577: PinotChannelDetailsLabel ===
 
-// Module 19575 (PinotChannelDetailsLabel)
+// Module 19577 (PinotChannelDetailsLabel)
 import nativeDefault from "native" /* 575 */;
 import _modDef3385 from "module_3385" /* 3385 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -37,7 +37,7 @@ export function PinotChannelDetailsLabel(channel) {
       children: null
     };
     const obj3 = { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult };
-    obj2.children = jsx(tmp2(5929).Text, { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult });
+    obj2.children = jsx(tmp2(5919).Text, { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult });
     return jsx(tmp2(7428).PressableOpacity, {
       onPress: function handlePress() {
           ToastActionCreatorsDefault.open("PINOT_CHANNEL_DETAILS_LABEL", { text: stringResult1 });

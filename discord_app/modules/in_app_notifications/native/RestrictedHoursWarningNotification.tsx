@@ -2,7 +2,7 @@
 
 // Module 11944 (RestrictedHoursWarningNotification)
 import nativeDefault from "native" /* 575 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
 import openUserSettings from "openUserSettings" /* 8604 */;
 import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11027 */;
 import noop from "module_19" /* 19 */;
@@ -37,6 +37,6 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
     openUserSettings.openUserSettings({ screen: constants2.FAMILY_CENTER });
     const obj4 = { screen: constants2.FAMILY_CENTER };
   }, items1);
-  let obj3 = { icon: <View style={closure_9().iconContainer}>{jsx(notification(11945).ThemeDarkIcon, { size: "sm", color: type(575).colors.WHITE })}</View>, header: memo, children: jsx(notification(5929).Text, { variant: "heading-sm/medium", color: "text-subtle", lineClamp, children: notification.subtitle }), onPress: callback, notification };
-  return jsx(notification(11087).NotificationPressable, { icon: <View style={closure_9().iconContainer}>{jsx(notification(11945).ThemeDarkIcon, { size: "sm", color: type(575).colors.WHITE })}</View>, header: memo, children: jsx(notification(5929).Text, { variant: "heading-sm/medium", color: "text-subtle", lineClamp, children: notification.subtitle }), onPress: callback, notification });
+  let obj3 = { icon: <View style={closure_9().iconContainer}>{jsx(notification(11945).ThemeDarkIcon, { size: "sm", color: type(575).colors.WHITE })}</View>, header: memo, children: jsx(notification(5919).Text, { variant: "heading-sm/medium", color: "text-subtle", lineClamp, children: notification.subtitle }), onPress: callback, notification };
+  return jsx(notification(11087).NotificationPressable, { icon: <View style={closure_9().iconContainer}>{jsx(notification(11945).ThemeDarkIcon, { size: "sm", color: type(575).colors.WHITE })}</View>, header: memo, children: jsx(notification(5919).Text, { variant: "heading-sm/medium", color: "text-subtle", lineClamp, children: notification.subtitle }), onPress: callback, notification });
 });

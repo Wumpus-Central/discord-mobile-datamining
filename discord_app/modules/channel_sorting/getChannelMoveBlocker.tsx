@@ -5,7 +5,7 @@ import FavoritesUtils from "FavoritesUtils" /* 5180 */;
 import isOptInEnabled from "isOptInEnabled" /* 7059 */;
 import canManageChannelList from "canManageChannelList" /* 15164 */;
 import GuildStore from "GuildStore" /* 5177 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 
 const canManageChannelListDefault = canManageChannelList;
 

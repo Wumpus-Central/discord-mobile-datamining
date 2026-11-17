@@ -22,8 +22,8 @@ import GuildStore from "GuildStore" /* 5177 */;
 import PermissionStore from "PermissionStore" /* 5238 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 

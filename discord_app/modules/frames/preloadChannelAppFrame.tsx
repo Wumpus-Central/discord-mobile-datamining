@@ -1,9 +1,9 @@
-// === Module 18943: preloadChannelAppFrame ===
+// === Module 18945: preloadChannelAppFrame ===
 
-// Module 18943 (preloadChannelAppFrame)
-import getURLForApplicationDefault from "getURLForApplication" /* 5974 */;
-import AgeGateUtils from "AgeGateUtils" /* 6838 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6858 */;
+// Module 18945 (preloadChannelAppFrame)
+import getURLForApplicationDefault from "getURLForApplication" /* 5964 */;
+import AgeGateUtils from "AgeGateUtils" /* 6828 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6848 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 7022 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 7055 */;
 import createProxyTicket from "createProxyTicket" /* 7341 */;

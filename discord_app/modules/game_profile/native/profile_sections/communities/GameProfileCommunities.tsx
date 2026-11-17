@@ -4,7 +4,7 @@
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5542 */;
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10281 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10286 */;
 import GameProfileNavTypes from "GameProfileNavTypes" /* 10311 */;
@@ -215,7 +215,7 @@ export default function GameProfileCommunities(game) {
   const obj3 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.heading, children: null };
   const intl = game(1113).intl;
   obj3.children = intl.string(game(1113).t.r6bvTh);
-  const items1 = [closure_11(game(5929).Heading, obj3), ];
+  const items1 = [closure_11(game(5919).Heading, obj3), ];
   if (showLocaleFilter) {
     const obj4 = { size: "sm", variant: "secondary", icon: closure_11(tmp12(10505).LanguageIcon, { size: "sm" }), accessibilityLabel: null, onPress: null };
     const intl2 = tmp12(1113).intl;

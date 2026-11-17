@@ -1,14 +1,14 @@
-// === Module 18420: UserSettingsDesignSystemTableRow ===
+// === Module 18422: UserSettingsDesignSystemTableRow ===
 
-// Module 18420 (UserSettingsDesignSystemTableRow)
+// Module 18422 (UserSettingsDesignSystemTableRow)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1187 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import Stack_Stack from "Stack/Stack" /* 6337 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import Stack_Stack from "Stack/Stack" /* 6327 */;
 import TableRow from "TableRow" /* 7443 */;
 import TableRowIcon from "TableRowIcon" /* 7455 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 7733 */;
@@ -24,7 +24,7 @@ import _modDef16614 from "module_16614" /* 16614 */;
 import _modDef16615 from "module_16615" /* 16615 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;

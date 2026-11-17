@@ -1,6 +1,6 @@
-// === Module 18622: DeclarativeSystemNotifPermissionAnalytics ===
+// === Module 18624: DeclarativeSystemNotifPermissionAnalytics ===
 
-// Module 18622 (DeclarativeSystemNotifPermissionAnalytics)
+// Module 18624 (DeclarativeSystemNotifPermissionAnalytics)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16898 */;

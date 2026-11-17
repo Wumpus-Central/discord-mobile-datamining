@@ -3,8 +3,8 @@
 // Module 11237 (ForumComposerHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import useChannelNameDefault from "useChannelName" /* 5954 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import useChannelNameDefault from "useChannelName" /* 5944 */;
 import Pressables from "Pressables" /* 7428 */;
 import XSmallIcon from "XSmallIcon" /* 7549 */;
 import BookCheckIcon from "BookCheckIcon" /* 8073 */;

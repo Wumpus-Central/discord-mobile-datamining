@@ -3,7 +3,7 @@
 // Module 14793 (SelectDoubleTapEmojiRow)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5920 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5910 */;
 import EmojiDefault from "Emoji" /* 7894 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9543 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5567).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5557).ACTION_SHEET_MAX_WIDTH;
 const EmojiConstants = fn(1391);
 ({ EMOJI_URL_BASE_SIZE: metroImportDefault, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);

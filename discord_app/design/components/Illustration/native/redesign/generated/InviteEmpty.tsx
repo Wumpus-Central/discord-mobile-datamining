@@ -1,8 +1,8 @@
-// === Module 20595: InviteEmpty ===
+// === Module 20598: InviteEmpty ===
 
-// Module 20595 (InviteEmpty)
+// Module 20598 (InviteEmpty)
 import shared from "shared" /* 5313 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _mod8183 from "module_8183" /* 8183 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ export function getInviteEmptySource(theme) {
       return require("module_10938");
     },
     darker() {
-      return require("module_20596");
+      return require("module_20599");
     },
     light() {
       return require("module_10937");
@@ -33,7 +33,7 @@ export function useInviteEmptySource() {
       return require("module_10938");
     },
     darker() {
-      return require("module_20596");
+      return require("module_20599");
     },
     light() {
       return require("module_10937");
@@ -47,7 +47,7 @@ export function InviteEmpty(arg0) {
       return require("module_10938");
     },
     darker() {
-      return require("module_20596");
+      return require("module_20599");
     },
     light() {
       return require("module_10937");
@@ -59,7 +59,7 @@ export function InviteEmpty(arg0) {
       return require("module_10938");
     },
     darker() {
-      return require("module_20596");
+      return require("module_20599");
     },
     light() {
       return require("module_10937");

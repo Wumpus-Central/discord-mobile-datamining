@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2020 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 13511 */;
 import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 13514 */;
 import UsernameTextDefault from "UsernameText" /* 13518 */;
@@ -99,7 +99,7 @@ export default function AppLauncherUserOption(option) {
     tmp9Result2 = null;
     if (null != tmp6) {
       const obj6 = { variant: "body-md/medium", color: "text-default", children: tmp6 };
-      tmp9Result2 = tmp9(tmp2(5929).Text, obj6);
+      tmp9Result2 = tmp9(tmp2(5919).Text, obj6);
     }
   }
   obj2.selectedItemName = tmp9Result2;

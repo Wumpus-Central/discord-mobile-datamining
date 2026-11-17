@@ -1,24 +1,24 @@
-// === Module 18718: useMainTabsPanelsGesture ===
+// === Module 18720: useMainTabsPanelsGesture ===
 
-// Module 18718 (useMainTabsPanelsGesture)
+// Module 18720 (useMainTabsPanelsGesture)
 import PlatformUtils2 from "PlatformUtils" /* 1380 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import timingPresets from "timingPresets" /* 5551 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import timingPresets from "timingPresets" /* 5541 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import useLaunchPadTypeDefault from "useLaunchPadType" /* 12403 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const LaunchPadGestureRefContextDefault = tmp(18720);
+const LaunchPadGestureRefContextDefault = tmp(18722);
 require = fn;
 const LaunchPadTypes = fn(12402).LaunchPadTypes;
 let PlatformUtils = fn(1380);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(18719);
+const PanelsConfig = fn(18721);
 let closure_6 = PlatformUtils ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
 let closure_7 = { code: "(function useMainTabsPanelsGestureTsx1(width){let[isDragging,translateX,IS_ANDROID,withTiming,timingInstant,isFoldChange,timingStandard]=this.__closure;if(isDragging.get())return;if(translateX.get()===0)return;if(IS_ANDROID){translateX.set(withTiming(width,timingInstant,'animate-always'));}else{translateX.set(isFoldChange?withTiming(width,timingStandard,'respect-motion-settings'):width);}})" };
 let closure_8 = { code: "(function handleAnimationFinish_useMainTabsPanelsGestureTsx2(finished){let[onVisibilityChange,scheduleOnRN,show]=this.__closure;if(!finished)return;if(onVisibilityChange!=null){scheduleOnRN(onVisibilityChange,show);}})" };

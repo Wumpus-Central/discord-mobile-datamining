@@ -2,8 +2,8 @@
 
 // Module 17383 (BaseUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
 import GuildIconDefault from "GuildIcon" /* 7720 */;
 import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 17381 */;
 import noop from "module_19" /* 19 */;
@@ -141,17 +141,17 @@ export default function BaseUpsellActionSheet(toastContent) {
   }, []);
   let obj = { startExpanded: true, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items1 = [closure_7(toastContent(5929).Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "text-strong", children: title }), closure_7(toastContent(5929).Text, { style: tmp.description, variant: "body-md/medium", color: "text-default", children: subtitle }), closure_7(GuildCard, { guildIds: affectedGuildIds, direction, onPress: onCardPress }), ];
+  const items1 = [closure_7(toastContent(5919).Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "text-strong", children: title }), closure_7(toastContent(5919).Text, { style: tmp.description, variant: "body-md/medium", color: "text-default", children: subtitle }), closure_7(GuildCard, { guildIds: affectedGuildIds, direction, onPress: onCardPress }), ];
   const obj5 = { style: tmp.buttonsContainer, children: null };
-  const items2 = [closure_7(toastContent(5936).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
+  const items2 = [closure_7(toastContent(5926).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
   const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = toastContent(1113).intl;
   obj6.text = intl.string(toastContent(1113).t.X1rGEm);
   obj6.onPress = callback1;
-  items2[1] = closure_7(toastContent(5936).Button, obj6);
+  items2[1] = closure_7(toastContent(5926).Button, obj6);
   obj5.children = items2;
   items1[3] = closure_8(closure_5, obj5);
   obj2.children = items1;
   obj.children = closure_8(closure_5, obj2);
-  return closure_7(toastContent(5566).BottomSheet, obj);
+  return closure_7(toastContent(5556).BottomSheet, obj);
 };

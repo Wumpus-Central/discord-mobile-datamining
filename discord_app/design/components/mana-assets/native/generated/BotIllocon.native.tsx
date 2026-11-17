@@ -1,7 +1,7 @@
 // === Module 13696: BotIllocon ===
 
 // Module 13696 (BotIllocon)
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import assetHelpers from "assetHelpers" /* 7755 */;
 import _modDef13697 from "module_13697" /* 13697 */;
 import _modDef13698 from "module_13698" /* 13698 */;

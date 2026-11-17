@@ -3,7 +3,7 @@
 // Module 8116 (FormText)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import LegacyTokens from "LegacyTokens" /* 6961 */;
+import LegacyTokens from "LegacyTokens" /* 6951 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

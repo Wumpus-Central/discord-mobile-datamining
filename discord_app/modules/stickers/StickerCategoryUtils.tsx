@@ -1,7 +1,7 @@
 // === Module 11361: StickerCategoryUtils ===
 
 // Module 11361 (StickerCategoryUtils)
-import StickersTypes from "StickersTypes" /* 6793 */;
+import StickersTypes from "StickersTypes" /* 6783 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

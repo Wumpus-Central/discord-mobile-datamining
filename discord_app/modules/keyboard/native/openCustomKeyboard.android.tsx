@@ -2,7 +2,7 @@
 
 // Module 14638 (openCustomKeyboard)
 import KeyboardUIStore from "KeyboardUIStore" /* 1500 */;
-import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 5504 */;
+import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 5494 */;
 import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7587 */;
 import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 13797 */;
 import size from "module_2" /* 2 */;

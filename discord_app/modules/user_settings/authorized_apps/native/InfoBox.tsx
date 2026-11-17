@@ -2,8 +2,8 @@
 
 // Module 10833 (InfoBox)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 6037 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6027 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
 import noop from "module_19" /* 19 */;
 

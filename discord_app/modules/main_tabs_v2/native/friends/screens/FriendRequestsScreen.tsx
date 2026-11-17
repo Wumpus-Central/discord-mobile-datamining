@@ -1,12 +1,12 @@
-// === Module 19617: FriendRequestsScreen ===
+// === Module 19619: FriendRequestsScreen ===
 
-// Module 19617 (FriendRequestsScreen)
+// Module 19619 (FriendRequestsScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
-import useAlertStore from "useAlertStore" /* 6270 */;
+import useAlertStore from "useAlertStore" /* 6260 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 19244 */;
-import getPendingRelationshipIds from "getPendingRelationshipIds" /* 19619 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 19246 */;
+import getPendingRelationshipIds from "getPendingRelationshipIds" /* 19621 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7032 */;
@@ -296,7 +296,7 @@ export default function FriendRequestsScreen() {
     const obj15 = { variant: "body-sm/semibold", color: "text-brand", children: null };
     const intl3 = tmp4(1113).intl;
     obj15.children = intl3.string(tmp4(1113).t.O8k7O4);
-    obj14.children = tmp32(tmp4(5929).Text, obj15);
+    obj14.children = tmp32(tmp4(5919).Text, obj15);
     obj13.children = tmp32(tmp4(7428).PressableOpacity, obj14);
     tmp32Result = tmp32(tmp33, obj13);
   }

@@ -1,6 +1,6 @@
-// === Module 18156: SettingsItemAppIcon ===
+// === Module 18158: SettingsItemAppIcon ===
 
-// Module 18156 (SettingsItemAppIcon)
+// Module 18158 (SettingsItemAppIcon)
 import nativeDefault from "native" /* 575 */;
 import AppIconTypes from "AppIconTypes" /* 5332 */;
 import ClydeIcon from "ClydeIcon" /* 11739 */;

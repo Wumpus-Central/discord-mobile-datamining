@@ -6,7 +6,7 @@ import CallBarActionAll from "CallBarAction" /* 12729 */;
 import useMuteStatesDefault from "useMuteStates" /* 13022 */;
 import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 13047 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 6072 */;
+import GameConsoleStore from "GameConsoleStore" /* 6062 */;
 
 require = fn;
 const jsx = fn(21).jsx;

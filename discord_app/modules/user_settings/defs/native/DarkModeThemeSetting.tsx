@@ -1,9 +1,9 @@
-// === Module 17927: DarkModeThemeSetting ===
+// === Module 17929: DarkModeThemeSetting ===
 
-// Module 17927 (DarkModeThemeSetting)
+// Module 17929 (DarkModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 17925 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 17927 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;

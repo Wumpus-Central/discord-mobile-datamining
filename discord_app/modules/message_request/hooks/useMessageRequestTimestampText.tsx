@@ -1,6 +1,6 @@
-// === Module 19744: useMessageRequestTimestampText ===
+// === Module 19746: useMessageRequestTimestampText ===
 
-// Module 19744 (useMessageRequestTimestampText)
+// Module 19746 (useMessageRequestTimestampText)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef2169 from "module_2169" /* 2169 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;

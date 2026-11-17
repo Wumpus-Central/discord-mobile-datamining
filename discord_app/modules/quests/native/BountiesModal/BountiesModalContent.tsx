@@ -3,10 +3,10 @@
 // Module 17598 (BountiesModalContent)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import QuestContent from "QuestContent" /* 5343 */;
-import AdCreativeType from "AdCreativeType" /* 5345 */;
-import timing_timing from "timing/timing" /* 5548 */;
-import timingPresets from "timingPresets" /* 5551 */;
+import timing_timing from "timing/timing" /* 5538 */;
+import timingPresets from "timingPresets" /* 5541 */;
+import QuestContent from "QuestContent" /* 6959 */;
+import AdCreativeType from "AdCreativeType" /* 6961 */;
 import QuestDataUtils from "QuestDataUtils" /* 8804 */;
 import AnalyticsActions from "AnalyticsActions" /* 8825 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
@@ -198,8 +198,8 @@ function BountiesModalContentInner(bounty) {
                 items.push({ time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 });
                 arr = Array.from({ length: 6 }, (arg0, arg1) => 6 - arg1);
                 const obj3 = { time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 };
-                closure_1_0(5556).triggerPattern(items);
-                const tmp7Result = closure_1_0(5556);
+                closure_1_0(5546).triggerPattern(items);
+                const tmp7Result = closure_1_0(5546);
               })();
             }
           }
@@ -412,7 +412,7 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_17(height(sharedValue[42]).BountyVideoEndAppStoreProvider, obj2);
 }
 const View = fn(17).View;
-const QuestConstants = fn(5338);
+const QuestConstants = fn(6954);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
 const BountiesModalConstants = fn(17546);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);

@@ -1,6 +1,6 @@
-// === Module 19166: ConjureYouBarButton ===
+// === Module 19168: ConjureYouBarButton ===
 
-// Module 19166 (ConjureYouBarButton)
+// Module 19168 (ConjureYouBarButton)
 import nativeDefault from "native" /* 575 */;
 import Link from "Link" /* 1503 */;
 import useConjureWandStatusDefault from "useConjureWandStatus" /* 10519 */;
@@ -8,7 +8,7 @@ import MagicWandIcon from "MagicWandIcon" /* 10528 */;
 import ConjureWorkingWandDefault from "ConjureWorkingWand" /* 10530 */;
 import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 10532 */;
 import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 10538 */;
-import YouBarButtonDefault from "YouBarButton" /* 19167 */;
+import YouBarButtonDefault from "YouBarButton" /* 19169 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

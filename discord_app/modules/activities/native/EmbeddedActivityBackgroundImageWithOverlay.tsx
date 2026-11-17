@@ -2,7 +2,7 @@
 
 // Module 12897 (EmbeddedActivityBackgroundImageWithOverlay)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12898 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

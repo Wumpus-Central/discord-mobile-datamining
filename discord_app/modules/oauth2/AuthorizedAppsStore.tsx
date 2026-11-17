@@ -7,7 +7,7 @@ import GlobalUtils from "GlobalUtils" /* 1255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import ConnectedAppsStore from "ConnectedAppsStore" /* 7222 */;
-import MessageStore from "MessageStore" /* 6372 */;
+import MessageStore from "MessageStore" /* 6362 */;
 
 require = fn;
 function recomputeFromAppTokens() {

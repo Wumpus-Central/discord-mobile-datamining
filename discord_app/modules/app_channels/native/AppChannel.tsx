@@ -1,13 +1,13 @@
-// === Module 19429: AppChannel ===
+// === Module 19431: AppChannel ===
 
-// Module 19429 (AppChannel)
+// Module 19431 (AppChannel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
-import FastImageDefault from "FastImage" /* 6020 */;
-import transitionToChannel from "transitionToChannel" /* 6063 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
+import FastImageDefault from "FastImage" /* 6010 */;
+import transitionToChannel from "transitionToChannel" /* 6053 */;
 import conjureDMAppChannel from "conjureDMAppChannel" /* 7052 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 7055 */;
 import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7394 */;
@@ -15,8 +15,8 @@ import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9068 
 import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 10546 */;
 import useChannelContentGate from "useChannelContentGate" /* 11977 */;
 import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 13345 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 19438 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 19440 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 19440 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 19442 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -171,7 +171,7 @@ function AppChannel(arg0) {
   return tmp4Result;
 }
 const View = fn(17).View;
-let closure_5 = fn(19430).useConjureFrameUpdateAvailable;
+let closure_5 = fn(19432).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5306);

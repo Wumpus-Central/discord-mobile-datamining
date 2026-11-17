@@ -1,9 +1,9 @@
-// === Module 18631: RedesignSettingsReactionsChoiceScreen ===
+// === Module 18633: RedesignSettingsReactionsChoiceScreen ===
 
-// Module 18631 (RedesignSettingsReactionsChoiceScreen)
+// Module 18633 (RedesignSettingsReactionsChoiceScreen)
 import SettingBuilders from "SettingBuilders" /* 12406 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18618 */;
-import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 18624 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18620 */;
+import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 18626 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

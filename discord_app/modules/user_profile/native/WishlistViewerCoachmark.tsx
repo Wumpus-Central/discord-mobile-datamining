@@ -2,7 +2,7 @@
 
 // Module 15881 (WishlistViewerCoachmark)
 import util from "util" /* 1113 */;
-import FastImageDefault from "FastImage" /* 6020 */;
+import FastImageDefault from "FastImage" /* 6010 */;
 import _modDef15882 from "module_15882" /* 15882 */;
 import noop from "module_19" /* 19 */;
 

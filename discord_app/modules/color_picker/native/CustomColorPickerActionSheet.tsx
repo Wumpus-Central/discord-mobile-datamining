@@ -6,7 +6,7 @@ import _modDef671 from "module_671" /* 671 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import _mod1708 from "module_1708" /* 1708 */;
 import ColorUtils from "ColorUtils" /* 5303 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
 import ColorPickerUtils from "ColorPickerUtils" /* 17074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -124,7 +124,7 @@ export default function CustomColorPickerActionSheet(arg0) {
   const intl2 = onSelect(1113).intl;
   obj9.text = intl2.string(onSelect(1113).t.XqMe3N);
   obj9.onPress = callback1;
-  obj7.trailing = sharedValue2(onSelect(5936).Button, obj9);
+  obj7.trailing = sharedValue2(onSelect(5926).Button, obj9);
   obj5.header = sharedValue2(onSelect(7913).BottomSheetTitleHeader, obj7);
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { accessibilityLabel: null, value: null, onChange: null, maxLength: 7 };
@@ -182,5 +182,5 @@ export default function CustomColorPickerActionSheet(arg0) {
   });
   obj10.children = items3;
   obj5.children = tmp13(tmp14, obj10);
-  return sharedValue2(onSelect(5566).BottomSheet, obj5);
+  return sharedValue2(onSelect(5556).BottomSheet, obj5);
 };

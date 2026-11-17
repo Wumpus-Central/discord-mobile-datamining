@@ -2,7 +2,7 @@
 
 // Module 10054 (BalanceWidgetPillButton)
 import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5936 */;
+import components_Button_Button from "components/Button/Button" /* 5926 */;
 import _modDef9443 from "module_9443" /* 9443 */;
 import IndicatorDot from "IndicatorDot" /* 9487 */;
 import noop from "module_19" /* 19 */;

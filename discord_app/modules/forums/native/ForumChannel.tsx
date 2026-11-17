@@ -5,10 +5,10 @@ import TTITrackerDefault from "TTITracker" /* 9 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 6037 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6027 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7684 */;
 import Tracking from "Tracking" /* 8866 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 9004 */;
@@ -25,8 +25,8 @@ import LurkingStore from "LurkingStore" /* 5239 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 7035 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import DraftStore from "DraftStore" /* 8725 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6937 */;
-import TextStyles_mod from "TextStyles" /* 6826 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6927 */;
+import TextStyles_mod from "TextStyles" /* 6816 */;
 
 const require = globalThis.__r;
 
@@ -148,7 +148,7 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_15(id(5936).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_15(id(12100).ArrowsUpDownIcon, { size: "xxs" }) });
+  return closure_15(id(5926).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_15(id(12100).ArrowsUpDownIcon, { size: "xxs" }) });
 }
 function TagFilter(channel) {
   channel = channel.channel;
@@ -159,7 +159,7 @@ function TagFilter(channel) {
     ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15129, dependencyMap.paths), "ForumTagFilterActionSheet", { channel });
   };
   obj.icon = closure_15(channel(9521).TagIcon, { size: "xxs" });
-  return closure_15(channel(5936).Button, obj);
+  return closure_15(channel(5926).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";

@@ -1,9 +1,9 @@
 // === Module 15946: ProtocolUtils ===
 
 // Module 15946 (ProtocolUtils)
-import _modDef6179 from "module_6179" /* 6179 */;
+import _modDef6169 from "module_6169" /* 6169 */;
 
-const os = _modDef6179.os;
+const os = _modDef6169.os;
 let family;
 if (os != null) {
   family = os.family;
@@ -15,7 +15,7 @@ function launchMobile(href, arg1) {
 }
 let tmp3 = launchMobile;
 if ("Android" !== family) {
-  const os2 = _modDef6179.os;
+  const os2 = _modDef6169.os;
   let family1;
   if (os2 != null) {
     family1 = os2.family;
@@ -66,7 +66,7 @@ if ("Android" !== family) {
         return process.nextTick(() => closure_0(true));
       }
     }
-    if ("Gecko" !== _modDef6179.layout) {
+    if ("Gecko" !== _modDef6169.layout) {
       function launchChrome(href, arg1) {
         closure_0 = arg1;
         function handleBlur() {
@@ -81,8 +81,8 @@ if ("Android" !== family) {
         }, 1000);
       }
       let launchSteam = launchChrome;
-      if (null != _modDef6179.ua) {
-        const ua = _modDef6179.ua;
+      if (null != _modDef6169.ua) {
+        const ua = _modDef6169.ua;
         launchSteam = launchChrome;
         if (-1 !== ua.indexOf("Valve Steam GameOverlay")) {
           launchSteam = function launchSteam(arg0, fn) {

@@ -1,21 +1,21 @@
-// === Module 20502: AuditLog ===
+// === Module 20505: AuditLog ===
 
-// Module 20502 (AuditLog)
+// Module 20505 (AuditLog)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
-import UserUtilsDefault from "UserUtils" /* 5372 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import UserUtilsDefault from "UserUtils" /* 5362 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import PlatformsDefault from "Platforms" /* 7087 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7259 */;
 import EmojiDefault from "Emoji" /* 7894 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import AppliedForumTag from "AppliedForumTag" /* 11627 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 20490 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 20493 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserRecord from "UserRecord" /* 1407 */;
@@ -574,7 +574,7 @@ prototype["render"] = function render() {
   obj4.border = str3;
   obj4.onPress = onHeaderClick;
   const obj5 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(20494), { action: log.action }), , , ];
+  const items2 = [closure_14(user(20497), { action: log.action }), , , ];
   const obj7 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1113).intl;
   obj7.accessibilityLabel = intl.string(tmp10(1113).t.iXAna6);
@@ -656,7 +656,7 @@ prototype["render"] = function render() {
   source = tmp9Result6.ensureAvatarSource(tmp9Result7.makeSource(tmp9(1417).getAutomodAvatarURL()));
   const tmp9Result8 = tmp9(1417);
 };
-AuditLog.contextType = fn(5377).ThemeContext;
+AuditLog.contextType = fn(5367).ThemeContext;
 let items3 = [ThemeStore];
 let obj7 = { color: nativeDefault.unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
 size = fn(2);

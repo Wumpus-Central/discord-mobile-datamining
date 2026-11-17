@@ -2,7 +2,7 @@
 
 // Module 12940 (MusicSlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6019 */;
+import BaseIconImage from "BaseIconImage" /* 6009 */;
 import _mod12941 from "module_12941" /* 12941 */;
 import noop from "module_19" /* 19 */;
 

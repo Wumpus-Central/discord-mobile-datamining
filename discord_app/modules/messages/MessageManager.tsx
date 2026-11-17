@@ -7,10 +7,10 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
-import matchPathCompat from "matchPathCompat" /* 5354 */;
-import Client from "Client" /* 5543 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 6795 */;
+import matchPathCompat from "matchPathCompat" /* 5344 */;
+import Client from "Client" /* 5533 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 6785 */;
 import SidebarActionTypes from "SidebarActionTypes" /* 7038 */;
 import isChangelogChannelDefault from "isChangelogChannel" /* 7067 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
@@ -19,13 +19,13 @@ import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9100 */;
 import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 9101 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 7036 */;
 import ChannelStore from "ChannelStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5177 */;
 import ReadStateStore from "ReadStateStore" /* 7015 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 require = fn;
@@ -216,7 +216,7 @@ function handleConnectionOpen() {
     if (null != channel1) {
       const id2 = channel1.id;
       const obj7 = matchPathCompat;
-      const obj2 = { path: expandedHeight.CHANNEL(":guild", ":channel", ":message"), exact: true };
+      const obj2 = { path: closure_1_19.CHANNEL(":guild", ":channel", ":message"), exact: true };
       const matchPathResult = obj7.matchPath(router_utils.getHistory().location.pathname, obj2);
       let message;
       if (matchPathResult != null) {
@@ -253,7 +253,7 @@ function loadSelectedChannelIfNecessary() {
           const obj6 = { guildId: channel.getGuildId(), channelId: null, messageId: null };
           ({ id: obj3.channelId, id: id2 } = channel);
           obj4 = matchPathCompat;
-          const obj8 = { path: expandedHeight.CHANNEL(":guild", ":channel", ":message"), exact: true };
+          const obj8 = { path: closure_1_19.CHANNEL(":guild", ":channel", ":message"), exact: true };
           const matchPathResult = obj4.matchPath(router_utils.getHistory().location.pathname, obj8);
           let message;
           if (matchPathResult != null) {

@@ -2,7 +2,7 @@
 
 // Module 11247 (ExpressionPicker)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
 import TopEmojisUtils from "TopEmojisUtils" /* 9549 */;
 import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 11249 */;
 import noop from "module_19" /* 19 */;

@@ -2,7 +2,7 @@
 
 // Module 10582 (getPrivateChannelCall)
 import CallsUtils from "CallsUtils" /* 10583 */;
-import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import VoiceStateStore from "VoiceStateStore" /* 5971 */;
 
 const require = globalThis.__r;
 

@@ -1,7 +1,7 @@
 // === Module 12887: getNativeShellOriginForEmbeddedApp ===
 
 // Module 12887 (getNativeShellOriginForEmbeddedApp)
-import getURLForApplication from "getURLForApplication" /* 5974 */;
+import getURLForApplication from "getURLForApplication" /* 5964 */;
 import nativeShellOrigin2 from "nativeShellOrigin" /* 12888 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 19159: YouBarBackground ===
+// === Module 19161: YouBarBackground ===
 
-// Module 19159 (YouBarBackground)
+// Module 19161 (YouBarBackground)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import LinearGradientDefault from "LinearGradient" /* 5893 */;
-import useToken from "useToken" /* 5902 */;
-import spring_spring from "spring/spring" /* 5939 */;
+import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import useToken from "useToken" /* 5892 */;
+import spring_spring from "spring/spring" /* 5929 */;
 import _modDef7533 from "module_7533" /* 7533 */;
 import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 17785 */;
 import noop from "module_19" /* 19 */;

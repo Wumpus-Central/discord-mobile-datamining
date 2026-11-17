@@ -3,7 +3,7 @@
 // Module 17100 (HexagonCampaignDisplayNameStylePromo)
 import nativeDefault from "native" /* 575 */;
 import _modDef4516 from "module_4516" /* 4516 */;
-import Text_Text from "Text/Text" /* 5929 */;
+import Text_Text from "Text/Text" /* 5919 */;
 import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 17102 */;
 import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 17104 */;
 import noop from "module_19" /* 19 */;

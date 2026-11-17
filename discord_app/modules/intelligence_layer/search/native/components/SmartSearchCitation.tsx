@@ -1,7 +1,7 @@
-// === Module 19518: SmartSearchCitation ===
+// === Module 19520: SmartSearchCitation ===
 
-// Module 19518 (SmartSearchCitation)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 19519 */;
+// Module 19520 (SmartSearchCitation)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 19521 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
