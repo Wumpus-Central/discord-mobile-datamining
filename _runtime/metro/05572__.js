@@ -1,7 +1,10 @@
 // === Module 5572: ? ===
 
 // Module 5572
-import BottomSheetDefault from "BottomSheet" /* 5573 */;
+import _mod19 from "module_19" /* 19 */;
 
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export default BottomSheetDefault;
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

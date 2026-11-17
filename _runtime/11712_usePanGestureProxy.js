@@ -2,7 +2,7 @@
 
 // Module 11712 (usePanGestureProxy)
 import _mod19 from "module_19" /* 19 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 
 const useMemo = _mod19.useMemo;
 let closure_3 = { code: "(function pnpm_usePanGestureProxyTs1(e){let[userDefinedConflictGestures]=this.__closure;if(userDefinedConflictGestures.onBegin)userDefinedConflictGestures.onBegin(e);})" };
@@ -25,7 +25,7 @@ export (onConfigurePanGesture) => {
     const Gesture = LegacyBaseButton.Gesture;
     const withTestIdResult = Gesture.Pan().withTestId("rnrc-gesture-handler");
     c0 = withTestIdResult;
-    const obj = { onBegin: "Array", onStart: "channelId", onUpdate: "Promise", onEnd: "", onFinalize: "ip" };
+    const obj = { onBegin: "push", onStart: "channelId", onUpdate: "HermesInternal", onEnd: "space", onFinalize: "alignItems" };
     c1 = obj;
     withTestIdResult.onBegin = (onBegin) => {
       c1.onBegin = onBegin;

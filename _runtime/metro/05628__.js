@@ -1,8 +1,15 @@
 // === Module 5628: ? ===
 
 // Module 5628
-import _mod17 from "module_17" /* 17 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const NativeModules = get_ActivityIndicator.NativeModules;
+let PlatformConstants;
+if (NativeModules != null) {
+  PlatformConstants = NativeModules.PlatformConstants;
+}
+if (PlatformConstants == null) {
+  PlatformConstants = get_ActivityIndicator.Platform.constants;
+}
 
-export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");
+export default PlatformConstants;

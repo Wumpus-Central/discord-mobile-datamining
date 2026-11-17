@@ -121,9 +121,9 @@ function SceneView(arg0) {
   dependencyMap = tmp18;
   const tmp16 = _slicedToArray(noop.useState(frameSize1), 2);
   const callback = obj3.useCallback(num6(9131).debounce(tmp18, 100), []);
-  let tmp21 = "usesNewAndroidHeaderHeightImplementation" in tmp8(6276).compatibilityFlags;
+  let tmp21 = "usesNewAndroidHeaderHeightImplementation" in tmp8(6266).compatibilityFlags;
   if (tmp21) {
-    tmp21 = true === tmp8(6276).compatibilityFlags.usesNewAndroidHeaderHeightImplementation;
+    tmp21 = true === tmp8(6266).compatibilityFlags.usesNewAndroidHeaderHeightImplementation;
   }
   _slicedToArray = 0;
   let num8 = 0;
@@ -379,7 +379,7 @@ function SceneView(arg0) {
   obj13.children = items5;
   obj12.children = closure_11(num6(7500).HeaderHeightContext.Provider, obj13);
   obj10.children = closure_10(num6(9134).AnimatedHeaderHeightContext.Provider, obj12);
-  obj9.children = closure_10(num6(6276).ScreenStackItem, obj10);
+  obj9.children = closure_10(num6(6266).ScreenStackItem, obj10);
   return closure_10(num6(1503).NavigationProvider, obj9);
 }
 const styles = StyleSheet.create({ container: { flex: 1 }, header: { zIndex: 1 }, absolute: { position: "absolute", top: 0, start: 0, end: 0 }, translucent: { position: "absolute", top: 0, start: 0, end: 0, zIndex: 1, elevation: 1 }, background: { overflow: "hidden" } });

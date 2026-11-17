@@ -184,7 +184,7 @@ export default function getPluralRules(PluralRules, arg1, arg2, arg3) {
               tmp132 = typeError;
               throw typeError;
             } else {
-              result = obj2.set(self, { writable: true, value: "Array" });
+              result = obj2.set(self, { writable: true, value: "a" });
               obj3 = closure_2_6;
               if (closure_2_6.has(self)) {
                 tmp123 = globalThis;
@@ -196,7 +196,7 @@ export default function getPluralRules(PluralRules, arg1, arg2, arg3) {
                 tmp127 = typeError1;
                 throw typeError1;
               } else {
-                result1 = obj3.set(self, { writable: true, value: "Array" });
+                result1 = obj3.set(self, { writable: true, value: "a" });
                 obj4 = closure_2_7;
                 if (closure_2_7.has(self)) {
                   tmp118 = globalThis;
@@ -208,7 +208,7 @@ export default function getPluralRules(PluralRules, arg1, arg2, arg3) {
                   tmp122 = typeError2;
                   throw typeError2;
                 } else {
-                  result2 = obj4.set(self, { writable: true, value: "Array" });
+                  result2 = obj4.set(self, { writable: true, value: "a" });
                   obj5 = closure_2_8;
                   if (closure_2_8.has(self)) {
                     tmp113 = globalThis;
@@ -220,7 +220,7 @@ export default function getPluralRules(PluralRules, arg1, arg2, arg3) {
                     tmp117 = typeError3;
                     throw typeError3;
                   } else {
-                    result3 = obj5.set(self, { writable: true, value: "Array" });
+                    result3 = obj5.set(self, { writable: true, value: "a" });
                     obj6 = closure_2_9;
                     if (closure_2_9.has(self)) {
                       tmp108 = globalThis;
@@ -232,16 +232,16 @@ export default function getPluralRules(PluralRules, arg1, arg2, arg3) {
                       tmp112 = typeError4;
                       throw typeError4;
                     } else {
-                      result4 = obj6.set(self, { writable: true, value: "Array" });
+                      result4 = obj6.set(self, { writable: true, value: "a" });
                       tmp13 = c2;
                       arr = c2([]);
                       str2 = "";
                       num2 = 0;
                       if (0 >= arr.length) {
-                        tmp19 = f114024;
+                        tmp19 = f114038;
                         tmp20 = new.target;
                         tmp21 = new.target;
-                        obj7 = new f114024();
+                        obj7 = new f114038();
                         tmp22 = obj7;
                         str4 = obj7.resolvedOptions().locale;
                         tmp23 = _defineProperties;
@@ -421,12 +421,12 @@ export default function getPluralRules(PluralRules, arg1, arg2, arg3) {
                                         throw typeError8;
                                       }
                                       obj12 = closure_2_9;
-                                      tmp92 = f114024;
+                                      tmp92 = f114038;
                                       tmp93 = new.target;
                                       str20 = "en";
                                       tmp94 = new.target;
                                       tmp95 = obj;
-                                      tmp96 = new f114024("en", obj);
+                                      tmp96 = new f114038("en", obj);
                                       if (closure_2_9.has(self)) {
                                         tmp101 = tmp96;
                                         value4 = obj12.get(self);

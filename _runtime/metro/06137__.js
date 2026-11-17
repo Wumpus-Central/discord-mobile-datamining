@@ -1,22 +1,17 @@
 // === Module 6137: ? ===
 
 // Module 6137
-import _mod523 from "module_523" /* 523 */;
+import identity from "identity" /* 549 */;
+import _mod668 from "module_668" /* 668 */;
+import constant from "constant" /* 6138 */;
 
-let prototype;
-if (_mod523) {
-  prototype = _mod523.prototype;
-}
-let valueOf;
-if (prototype) {
-  valueOf = prototype.valueOf;
+if (_mod668) {
+  let fn = (arg0, arg1) => {
+    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
+    return _mod668(arg0, "toString", obj);
+  };
+} else {
+  fn = identity;
 }
 
-export default function cloneSymbol(arg0) {
-  if (valueOf) {
-    const call = valueOf.call;
-    Object(typeof call === "unknown" ? valueOf() : call(arg0));
-  } else {
-    return {};
-  }
-};
+export default fn;

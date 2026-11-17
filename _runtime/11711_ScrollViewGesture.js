@@ -2,7 +2,7 @@
 
 // Module 11711 (ScrollViewGesture)
 import _mod1655 from "module_1655" /* 1655 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
 import DATA_LENGTH from "DATA_LENGTH" /* 11693 */;
 import _mod11699 from "module_11699" /* 11699 */;
 import dealWithAnimation from "dealWithAnimation" /* 11709 */;

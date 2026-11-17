@@ -1,16 +1,11 @@
 // === Module 5715: ? ===
 
 // Module 5715
-import ComposedGestureName from "ComposedGestureName" /* 5660 */;
-import _mod5714 from "module_5714" /* 5714 */;
+import _mod17 from "module_17" /* 17 */;
+import module_65 from "module_65" /* 65 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { pointerEvents: true, moduleId: true, unstable_forceActive: true } };
 
-export function useExclusiveGestures() {
-  items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
-  const applyResult = _mod5714.useComposedGesture.apply(items1);
-  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
-  return applyResult;
-}
+export default module_65.get("RNGestureHandlerRootView", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

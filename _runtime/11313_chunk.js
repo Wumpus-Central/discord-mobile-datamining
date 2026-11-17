@@ -1,7 +1,7 @@
 // === Module 11313: chunk ===
 
 // Module 11313 (chunk)
-import _mod6084 from "module_6084" /* 6084 */;
+import _mod6074 from "module_6074" /* 6074 */;
 import _mod7671 from "module_7671" /* 7671 */;
 import baseSlice from "baseSlice" /* 11314 */;
 
@@ -15,7 +15,7 @@ export default function chunk(arg0, arg1, arg2) {
   }
   let num = 1;
   if (!tmp) {
-    num = max(_mod6084(arg1), 0);
+    num = max(_mod6074(arg1), 0);
   }
   let num3 = 0;
   if (null != arg0) {

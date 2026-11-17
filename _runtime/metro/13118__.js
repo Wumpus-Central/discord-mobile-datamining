@@ -8,7 +8,7 @@ import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
-import emptyFunction from "module_5357" /* 5357 */;
+import emptyFunction from "module_5347" /* 5347 */;
 
 let Link = fn;
 function _isNativeReflectConstruct() {
@@ -76,7 +76,7 @@ const entry = {
     const props = this.props;
     ({ component: dependencyMap, to, replace } = props);
     Link = _objectWithoutProperties(props, self);
-    return jsx(Link(5360).__HistoryContext.Consumer, {
+    return jsx(Link(5350).__HistoryContext.Consumer, {
       children(arg0) {
         closure_0 = arg0;
         const obj = {};

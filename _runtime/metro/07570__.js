@@ -6,7 +6,7 @@ import noop from "module_19" /* 19 */;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 try {
-  let closure_0 = fn(6276);
+  let closure_0 = fn(6266);
   exports.MaybeScreenContainer = (enabled) => {
     const merged = Object.assign(enabled, Object.assign({ enabled: 0 }));
     if (null != closure_0) {

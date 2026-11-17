@@ -3,8 +3,8 @@
 // Module 9758
 import colorPropType from "colorPropType" /* 9742 */;
 import _mod9749 from "module_9749" /* 9749 */;
-import emptyFunction_mod from "module_5357" /* 5357 */;
-import "module_5357";
+import emptyFunction_mod from "module_5347" /* 5347 */;
+import "module_5347";
 
 const obj = {};
 const module_9749 = Object.assign(_mod9749);

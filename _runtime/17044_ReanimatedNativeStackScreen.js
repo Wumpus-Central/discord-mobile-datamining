@@ -14,7 +14,7 @@ require = fn;
 let closure_3 = ["children"];
 const Platform = fn(17).Platform;
 const jsx = fn(21).jsx;
-let closure_7 = module_1655.createAnimatedComponent(fn(6293).InnerScreen);
+let closure_7 = module_1655.createAnimatedComponent(fn(6283).InnerScreen);
 let closure_8 = { code: "(function pnpm_ReanimatedNativeStackScreenTsx1(event){let[progress,closing,goingForward]=this.__closure;progress.value=event.progress;closing.value=event.closing;goingForward.value=event.goingForward;})" };
 let closure_9 = { code: "(function pnpm_ReanimatedNativeStackScreenTsx2(event){let[cachedHeaderHeight,headerHeight]=this.__closure;if(event.headerHeight!==cachedHeaderHeight.current){headerHeight.value=event.headerHeight;cachedHeaderHeight.current=event.headerHeight;}})" };
 const forwardRefResult = noop.forwardRef((children, ref) => {

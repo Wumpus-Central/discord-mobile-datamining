@@ -1,50 +1,33 @@
 // === Module 6282: ? ===
 
 // Module 6282
-import get_synchronousScreenUpdatesEnabled from "get synchronousScreenUpdatesEnabled" /* 6283 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-require = arg1;
-const dependencyMap = arg6;
+({ Platform, UIManager: closure_0 } = get_ActivityIndicator);
 
-export const RNSLog = {
-  log(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
-    }
-  },
-  warn(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
-    }
-  },
-  error(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
-    }
-  },
-  info(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
-    }
+export const isNativePlatformSupported = true;
+export function enableScreens() {
+  flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
   }
-};
+  if (flag) {
+    flag = !viewManagerConfig.getViewManagerConfig("RNSScreen");
+  }
+  if (flag) {
+    const _console = console;
+    console.error("Screen native module hasn't been linked. Please check the react-native-screens README for more details");
+  }
+}
+export function enableFreeze() {
+  flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+}
+export function screensEnabled() {
+  return flag;
+}
+export function freezeEnabled() {
+  return flag;
+}

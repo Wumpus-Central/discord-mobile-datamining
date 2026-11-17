@@ -1,39 +1,15 @@
 // === Module 6284: ? ===
 
 // Module 6284
-import _mod6282 from "module_6282" /* 6282 */;
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
+import _mod26 from "module_26" /* 26 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-const require = globalThis.__r;
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreen", directEventTypes: { topAppear: { registrationName: "onAppear" }, topDisappear: { registrationName: "onDisappear" }, topDismissed: { registrationName: "onDismissed" }, topNativeDismissCancelled: { registrationName: "onNativeDismissCancelled" }, topWillAppear: { registrationName: "onWillAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topHeaderHeightChange: { registrationName: "onHeaderHeightChange" }, topTransitionProgress: { registrationName: "onTransitionProgress" }, topGestureCancel: { registrationName: "onGestureCancel" }, topHeaderBackButtonClicked: { registrationName: "onHeaderBackButtonClicked" }, topSheetDetentChanged: { registrationName: "onSheetDetentChanged" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onAppear: true, onDisappear: true, onDismissed: true, onNativeDismissCancelled: true, onWillAppear: true, onWillDisappear: true, onHeaderHeightChange: true, onTransitionProgress: true, onGestureCancel: true, onHeaderBackButtonClicked: true, onSheetDetentChanged: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { screenId: true, sheetAllowedDetents: true, sheetLargestUndimmedDetent: true, sheetGrabberVisible: true, sheetCornerRadius: true, sheetExpandsWhenScrolledToEdge: true, sheetInitialDetent: true, sheetElevation: true, sheetShouldOverflowTopInset: true, sheetDefaultResizeAnimationEnabled: true, customAnimationOnSwipe: true, fullScreenSwipeEnabled: true, fullScreenSwipeShadowEnabled: true, homeIndicatorHidden: true, preventNativeDismiss: true, gestureEnabled: true, statusBarColor: _mod26.colorAttribute, statusBarHidden: true, screenOrientation: true, statusBarAnimation: true, statusBarStyle: true, statusBarTranslucent: true, gestureResponseDistance: true, stackPresentation: true, stackAnimation: true, transitionDuration: true, replaceAnimation: true, swipeDirection: true, hideKeyboardOnSwipe: true, activityState: true, navigationBarColor: _mod26.colorAttribute, navigationBarTranslucent: true, navigationBarHidden: true, nativeBackButtonDismissalEnabled: true, bottomScrollEdgeEffect: true, leftScrollEdgeEffect: true, rightScrollEdgeEffect: true, topScrollEdgeEffect: true, synchronousShadowStateUpdatesEnabled: true, androidResetScreenShadowStateOnOrientationChangeEnabled: true, iosOrientationInheritanceFixEnabled: true };
 
-require = fn;
-const findNodeHandle = fn(17).findNodeHandle;
-
-export function useRenderDebugInfo(arg0) {
-  _require = arg0;
-  const ref = ref1.useRef(null);
-  ref1 = ref1.useRef(-1);
-  closure_3 = ref1.useEffectEvent((arg0) => {
-    const RNSLog = _mod6282.RNSLog;
-    RNSLog.log("" + closure_0 + " [" + ref1.current + "] " + arg0);
-  });
-  const effect = ref1.useEffect(() => {
-    if (null != ref.current) {
-      let num = findNodeHandle(tmp.current);
-      if (num == null) {
-        num = -1;
-      }
-      ref1.current = num;
-      if (-1 === ref1.current) {
-        closure_3("failed to find node handle");
-      }
-    }
-    closure_3("mounted");
-    return () => {
-      closure_1_3("unmounted");
-    };
-  }, []);
-  let RNSLog = require("module_6282").RNSLog;
-  RNSLog.log("" + arg0 + " [" + ref1.current + "] " + "rendered");
-  return ref;
-}
+export default module_65.get("RNSScreen", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

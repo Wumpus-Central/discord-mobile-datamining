@@ -1,8 +1,8 @@
 // === Module 13119: NativeRouter ===
 
 // Module 13119 (NativeRouter)
-import _modDef5357 from "module_5357" /* 5357 */;
-import _mod5360 from "module_5360" /* 5360 */;
+import _modDef5347 from "module_5347" /* 5347 */;
+import _mod5350 from "module_5350" /* 5350 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,6 +35,6 @@ NativeRouter.defaultProps = {
     Alert.alert("Confirm", captureScreenshotError, items);
   }
 };
-NativeRouter.propTypes = { initialEntries: _modDef5357.array, initialIndex: _modDef5357.number, getUserConfirmation: _modDef5357.func, keyLength: _modDef5357.number, children: _modDef5357.node };
+NativeRouter.propTypes = { initialEntries: _modDef5347.array, initialIndex: _modDef5347.number, getUserConfirmation: _modDef5347.func, keyLength: _modDef5347.number, children: _modDef5347.node };
 
 export default NativeRouter;

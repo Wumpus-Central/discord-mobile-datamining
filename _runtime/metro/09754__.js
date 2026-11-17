@@ -5,7 +5,7 @@ import colorPropType from "colorPropType" /* 9742 */;
 import _mod9750 from "module_9750" /* 9750 */;
 import merged12 from "merged1" /* 9751 */;
 import merged22 from "merged2" /* 9752 */;
-import emptyFunction_mod from "module_5357" /* 5357 */;
+import emptyFunction_mod from "module_5347" /* 5347 */;
 
 const obj = {};
 const size = Object.assign(_mod9750);

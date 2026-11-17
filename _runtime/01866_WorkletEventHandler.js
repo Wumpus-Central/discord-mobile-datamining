@@ -12,8 +12,8 @@ let closure_5 = _classPrivateFieldKey("registrations");
 class WorkletEventHandler {
   constructor(arg0, arg1) {
     tmp = c2(this, WorkletEventHandler);
-    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "Array" });
-    definePropertyResult1 = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "Array" });
+    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "a" });
     this.worklet = global;
     this.eventNames = arg1;
     tmp4 = closure_3(this, closure_4);

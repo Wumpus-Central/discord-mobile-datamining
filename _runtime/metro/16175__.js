@@ -8580,7 +8580,7 @@ export { custom };
 export const late = { object: _module2Result14.lazycreate };
 export const ZodFirstPartyTypeKind = obj6;
 export (name) => {
-  let f113222 = name;
+  let f113236 = name;
   let obj = arg1;
   if (arg1 === undefined) {
     let obj2 = { message: null };
@@ -8588,7 +8588,7 @@ export (name) => {
     obj2.message = "Input not instance of " + name.name;
     obj = obj2;
   }
-  f113222 = (arg0) => arg0 instanceof f113222;
+  f113236 = (arg0) => arg0 instanceof f113236;
   if (obj === undefined) {
     obj = {};
   }

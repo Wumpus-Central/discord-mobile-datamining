@@ -1,8 +1,8 @@
 // === Module 9752: merged2 ===
 
 // Module 9752 (merged2)
-import "module_5357";
-import emptyFunction_mod from "module_5357" /* 5357 */;
+import "module_5347";
+import emptyFunction_mod from "module_5347" /* 5347 */;
 
 const obj = { transform: null, transformMatrix: null, decomposedMatrix: null, scaleX: null, scaleY: null, rotation: null, translateX: null, translateY: null };
 let emptyFunction = emptyFunction_mod;

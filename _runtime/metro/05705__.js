@@ -1,11 +1,16 @@
 // === Module 5705: ? ===
 
 // Module 5705
-import noop from "module_19" /* 19 */;
+import ComposedGestureName from "ComposedGestureName" /* 5650 */;
+import _mod5704 from "module_5704" /* 5704 */;
 
-const jsx = fn(21).jsx;
+require = arg1;
+const dependencyMap = arg6;
 
-export default function _default(simultaneousWith) {
-  const merged = Object.assign(simultaneousWith);
-  return jsx(importDefault(null != simultaneousWith.simultaneousWith || null != simultaneousWith.requireToFail || null != simultaneousWith.block ? 5706 : 5717), {});
-};
+export function useExclusiveGestures() {
+  items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
+  const applyResult = _mod5704.useComposedGesture.apply(items1);
+  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
+  return applyResult;
+}

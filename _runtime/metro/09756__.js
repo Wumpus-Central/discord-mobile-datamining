@@ -4,8 +4,8 @@
 import colorPropType from "colorPropType" /* 9742 */;
 import _mod9746 from "module_9746" /* 9746 */;
 import _mod9757 from "module_9757" /* 9757 */;
-import emptyFunction_mod from "module_5357" /* 5357 */;
-import "module_5357";
+import emptyFunction_mod from "module_5347" /* 5347 */;
+import "module_5347";
 
 const items = ["phoneNumber", "link", "address", "calendarEvent", "none", "all"];
 const obj = {};

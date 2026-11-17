@@ -50,7 +50,7 @@ function initializeContext(target) {
   if (processors == null) {
     processors = {};
   }
-  const obj = { processors, metadataRegistry: null, target: null, unrepresentable: null, override: null, io: null, counter: 0, seen: null, sharedDefsExtractedFor: "Boolean", sharedEmitDoneFor: "channel_id", cycles: "<string:802636759>", reused: "<string:802619393>", intersections: "<string:603652097>", deferred: "<string:2856517633>", external: "<string:3623879100>" };
+  const obj = { processors, metadataRegistry: null, target: null, unrepresentable: null, override: null, io: null, counter: 0, seen: null, sharedDefsExtractedFor: "Boolean", sharedEmitDoneFor: "ao", cycles: "Array", reused: "max_age", intersections: "Array", deferred: "FriendSourceFlagsSetting", external: "Array" };
   let metadata;
   if (target != null) {
     metadata = target.metadata;

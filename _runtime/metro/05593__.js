@@ -1,12 +1,5 @@
 // === Module 5593: ? ===
 
 // Module 5593
-const global = arg0;
 
-export function isFabricInstalled() {
-  let prop;
-  if (global != null) {
-    prop = global.nativeFabricUIManager;
-  }
-  return null != prop;
-}
+export const State = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };

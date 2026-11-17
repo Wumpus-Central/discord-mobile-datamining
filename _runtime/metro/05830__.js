@@ -1,15 +1,13 @@
 // === Module 5830: ? ===
 
 // Module 5830
-import noop from "module_19" /* 19 */;
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
-
-export const RecyclerViewContextProvider = context.Provider;
-export function useRecyclerViewContext() {
-  return useContext(context);
-}
-export function useFlashListContext() {
-  return useContext(context);
-}
+export default function _assertThisInitialized(arg0) {
+  if (undefined === arg0) {
+    const _ReferenceError = ReferenceError;
+    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw referenceError;
+  } else {
+    return arg0;
+  }
+};
