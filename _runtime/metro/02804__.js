@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/gifting",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2dpZnRpbmc=",
   scales: [1],
-  hash: "9828da678219fed549e6986d671ca2e3",
-  name: "DiscordAnniversary.compiled.messages",
+  hash: "dc9d7419158f569fd7d653eff5957b50",
+  name: "lt.messages.dc9d7419158f569fd7d653eff5957b50.compiled.messages",
   type: "jsona",
 });

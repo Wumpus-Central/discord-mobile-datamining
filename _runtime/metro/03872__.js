@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/bf_deals",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHk=",
   scales: [1],
-  hash: "01142f822f04c2fbec42c4652436868a",
-  name: "BfDeals.compiled.messages",
+  hash: "caaa151f7bb8bfd8b4f91ae1a16dee9c",
+  name: "hi.messages.caaa151f7bb8bfd8b4f91ae1a16dee9c.compiled.messages",
   type: "jsona",
 });

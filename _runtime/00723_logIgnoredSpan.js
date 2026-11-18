@@ -1,5 +1,5 @@
 // _runtime/00723_logIgnoredSpan.js
-import _mod687 from "metro/00687__.js";
+import __SENTRY_DEBUG__ from "metro/00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "00688_consoleSandbox.js";
 import _mod696 from "metro/00696__.js";
 
@@ -57,7 +57,7 @@ export function shouldIgnoreSpan(timestamp, ignoreSpans) {
               }
               if (tmp17) {
                 if (tmp23) {
-                  if (_mod687.DEBUG_BUILD) {
+                  if (__SENTRY_DEBUG__.DEBUG_BUILD) {
                     let tmp29 = logIgnoredSpan(timestamp);
                   }
                   iter.return();
@@ -71,7 +71,7 @@ export function shouldIgnoreSpan(timestamp, ignoreSpans) {
         }
         let obj3 = _mod696;
         if (obj3.isMatchingPattern(timestamp.description, tmp8)) {
-          if (_mod687.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
             let tmp35 = logIgnoredSpan(timestamp);
           }
           iter.return();

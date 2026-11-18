@@ -1,7 +1,7 @@
 // _runtime/metro/00730__.js
 import spanToJSON from "../00683_spanToJSON.js";
 import unwrapScopeFromWeakRef from "../00684_unwrapScopeFromWeakRef.js";
-import _mod687 from "00687__.js";
+import __SENTRY_DEBUG__ from "00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "../00688_consoleSandbox.js";
 import _mod689 from "00689__.js";
 import generateSpanId from "../00693_generateSpanId.js";
@@ -108,7 +108,7 @@ function createChildOrRootSpan(arg0) {
   }
   obj = _mod719;
 }
-function _startRootSpan(name, getPropagationContext, parentSampled) {
+function _startRootSpan(name, scope, sampled) {
   const client = _mod712.getClient();
   let options;
   if (client != null) {
@@ -126,14 +126,17 @@ function _startRootSpan(name, getPropagationContext, parentSampled) {
   const merged = Object.assign(name.attributes);
   obj2.spanAttributes = {};
   obj2.spanName = str;
-  obj2.parentSampled = parentSampled;
+  obj2.parentSampled = sampled;
   if (client != null) {
     client.emit("beforeSampling", obj2, { decision: false });
   }
-  parentSampled = obj2.parentSampled;
+  let parentSampled = obj2.parentSampled;
+  if (parentSampled == null) {
+    parentSampled = sampled;
+  }
   const spanAttributes = obj2.spanAttributes;
-  const propagationContext = getPropagationContext.getPropagationContext();
-  if (getPropagationContext.getScopeData().sdkProcessingMetadata[__SENTRY_SUPPRESS_TRACING__]) {
+  const propagationContext = scope.getPropagationContext();
+  if (scope.getScopeData().sdkProcessingMetadata[__SENTRY_SUPPRESS_TRACING__]) {
     items = [false];
     let sampleSpanResult = items;
   } else {
@@ -169,7 +172,7 @@ function _startRootSpan(name, getPropagationContext, parentSampled) {
     tmp16 = client;
   }
   if (tmp16) {
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = consoleSandbox.debug;
       debug.log("[Tracing] Discarding root span because its trace was not chosen to be sampled.");
     }
@@ -206,7 +209,7 @@ export (arg0, arg1) => {
           const obj = { traceId: generateSpanId.generateTraceId(), sampleRand: null };
           obj.sampleRand = safeDateNow.safeMathRandom();
           const result = setPropagationContext.setPropagationContext(obj);
-          if (_mod687.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
             const debug = consoleSandbox.debug;
             const _HermesInternal = HermesInternal;
             debug.log("Starting a new trace with id " + setPropagationContext.getPropagationContext().traceId);
@@ -219,9 +222,9 @@ export (arg0, arg1) => {
           if (asyncContextStrategy.withActiveSpan) {
             let withActiveSpanResult = asyncContextStrategy.withActiveSpan(null, closure_0);
           } else {
-            withActiveSpanResult = _mod712.withScope((arg0) => {
-              closure_0(obj4[3])._setSpanForScope(arg0, closure_0);
-              return closure_1(arg0);
+            withActiveSpanResult = _mod712.withScope((currentScope) => {
+              closure_0(obj4[3])._setSpanForScope(currentScope, closure_0);
+              return closure_1(currentScope);
             });
             const tmpResult4 = _mod712;
           }
@@ -241,31 +244,31 @@ export (arg0, arg1) => {
   }
   let obj2 = require("00705__.js");
 }
-export function startInactiveSpan(experimental) {
-  _require = experimental;
+export function startInactiveSpan(mcpServerSpanConfig) {
+  _require = mcpServerSpanConfig;
   let mainCarrier = require("00689__.js").getMainCarrier();
   let obj = require("00689__.js");
   const tmp3 = _require;
   const tmp4 = obj4;
   let asyncContextStrategy = require("00705__.js").getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.startInactiveSpan) {
-    return asyncContextStrategy.startInactiveSpan(experimental);
+    return asyncContextStrategy.startInactiveSpan(mcpServerSpanConfig);
   } else {
-    const obj3 = { isStandalone: experimental.experimental || {}.standalone };
-    const merged = Object.assign(experimental);
+    const obj3 = { isStandalone: mcpServerSpanConfig.experimental || {}.standalone };
+    const merged = Object.assign(mcpServerSpanConfig);
     let tmp10 = obj3;
-    if (experimental.startTime) {
+    if (mcpServerSpanConfig.startTime) {
       obj4 = {};
       const merged1 = Object.assign(obj3);
-      obj4.startTimestamp = tmp3(tmp4[5]).spanTimeInputToSeconds(experimental.startTime);
+      obj4.startTimestamp = tmp3(tmp4[5]).spanTimeInputToSeconds(mcpServerSpanConfig.startTime);
       delete tmp[tmp2];
       tmp10 = obj4;
       const tmp3Result = tmp3(tmp4[5]);
     }
     obj4 = tmp10;
-    ({ forceTransaction: _slicedToArray, parentSpan } = experimental);
-    if (experimental.scope) {
-      let fn = (arg0) => _mod712.withScope(experimental.scope, arg0);
+    ({ forceTransaction: _slicedToArray, parentSpan } = mcpServerSpanConfig);
+    if (mcpServerSpanConfig.scope) {
+      let fn = (arg0) => _mod712.withScope(mcpServerSpanConfig.scope, arg0);
     } else {
       fn = undefined !== parentSpan ? ((arg0) => {
         closure_0 = parentSpan;
@@ -275,9 +278,9 @@ export function startInactiveSpan(experimental) {
         if (asyncContextStrategy.withActiveSpan) {
           let withActiveSpanResult = asyncContextStrategy.withActiveSpan(parentSpan, arg0);
         } else {
-          withActiveSpanResult = _mod712.withScope((arg0) => {
-            closure_0(obj4[3])._setSpanForScope(arg0, closure_0);
-            return closure_1(arg0);
+          withActiveSpanResult = _mod712.withScope((currentScope) => {
+            closure_0(obj4[3])._setSpanForScope(currentScope, closure_0);
+            return closure_1(currentScope);
           });
           const tmp2Result = _mod712;
         }
@@ -308,7 +311,7 @@ export function startInactiveSpan(experimental) {
           const tmpResult = _getSpanForScope;
         }
       }
-      if (experimental.onlyIfParent) {
+      if (mcpServerSpanConfig.onlyIfParent) {
         if (!tmp5) {
           let sentryNonRecordingSpan = new SentryNonRecordingSpan.SentryNonRecordingSpan();
         }
@@ -326,7 +329,7 @@ export function startNewTrace(runCallback) {
     const obj = { traceId: generateSpanId.generateTraceId(), sampleRand: null };
     obj.sampleRand = safeDateNow.safeMathRandom();
     const result = setPropagationContext.setPropagationContext(obj);
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = consoleSandbox.debug;
       const _HermesInternal = HermesInternal;
       debug.log("Starting a new trace with id " + setPropagationContext.getPropagationContext().traceId);
@@ -339,9 +342,9 @@ export function startNewTrace(runCallback) {
     if (asyncContextStrategy.withActiveSpan) {
       let withActiveSpanResult = asyncContextStrategy.withActiveSpan(null, closure_0);
     } else {
-      withActiveSpanResult = _mod712.withScope((arg0) => {
-        closure_0(obj4[3])._setSpanForScope(arg0, closure_0);
-        return closure_1(arg0);
+      withActiveSpanResult = _mod712.withScope((currentScope) => {
+        closure_0(obj4[3])._setSpanForScope(currentScope, closure_0);
+        return closure_1(currentScope);
       });
       const tmpResult4 = _mod712;
     }
@@ -386,9 +389,9 @@ export function startSpan(experimental, callback) {
         if (asyncContextStrategy.withActiveSpan) {
           let withActiveSpanResult = asyncContextStrategy.withActiveSpan(tmp, arg0);
         } else {
-          withActiveSpanResult = tmp2(712).withScope((arg0) => {
-            closure_0(obj4[3])._setSpanForScope(arg0, closure_0);
-            return closure_1(arg0);
+          withActiveSpanResult = tmp2(712).withScope((currentScope) => {
+            closure_0(obj4[3])._setSpanForScope(currentScope, closure_0);
+            return closure_1(currentScope);
           });
           const tmp2Result = tmp2(712);
         }
@@ -489,9 +492,9 @@ export function startSpanManual(experimental, arg1) {
         if (asyncContextStrategy.withActiveSpan) {
           let withActiveSpanResult = asyncContextStrategy.withActiveSpan(tmp, arg0);
         } else {
-          withActiveSpanResult = tmp2(712).withScope((arg0) => {
-            closure_0(obj4[3])._setSpanForScope(arg0, closure_0);
-            return closure_1(arg0);
+          withActiveSpanResult = tmp2(712).withScope((currentScope) => {
+            closure_0(obj4[3])._setSpanForScope(currentScope, closure_0);
+            return closure_1(currentScope);
           });
           const tmp2Result = tmp2(712);
         }
@@ -570,19 +573,19 @@ export function suppressTracing(arg0) {
   }
   return suppressTracingResult;
 }
-export function withActiveSpan(startInactiveSpanResult, arg1) {
-  _require = startInactiveSpanResult;
+export function withActiveSpan(_mountSpan, arg1) {
+  _require = _mountSpan;
   dependencyMap = arg1;
   const mainCarrier = require("00689__.js").getMainCarrier();
   const obj = require("00689__.js");
   const tmp = _require;
   const asyncContextStrategy = require("00705__.js").getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.withActiveSpan) {
-    let withActiveSpanResult = asyncContextStrategy.withActiveSpan(startInactiveSpanResult, arg1);
+    let withActiveSpanResult = asyncContextStrategy.withActiveSpan(_mountSpan, arg1);
   } else {
-    withActiveSpanResult = tmp(712).withScope((arg0) => {
-      closure_0(obj4[3])._setSpanForScope(arg0, closure_0);
-      return closure_1(arg0);
+    withActiveSpanResult = tmp(712).withScope((currentScope) => {
+      closure_0(obj4[3])._setSpanForScope(currentScope, closure_0);
+      return closure_1(currentScope);
     });
     const tmpResult = tmp(712);
   }

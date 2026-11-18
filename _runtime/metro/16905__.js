@@ -1,20 +1,13 @@
 // _runtime/metro/16905__.js
+import registerAsset from "01119__.js";
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      image(uri) {
-        const size = {
-          uri: uri.uri,
-          preview: uri.preview,
-          filename: uri.filename,
-          width: uri.width,
-          height: uri.height,
-          caption: uri.caption,
-        };
-        return closure_0.send("image", size);
-      },
-    },
-  };
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
+  scales: [1],
+  hash: "08d0c70a708cd25acecb7a8b0cb0eb23",
+  name: "hu",
+  type: "png",
+});

@@ -1,16 +1,13 @@
 // _runtime/metro/16555__.js
-let closure_0 = Object.freeze({ loose: true });
-let closure_1 = Object.freeze({});
+import registerAsset from "01119__.js";
 
-export default (arg0) => {
-  let tmp = arg0;
-  if (arg0) {
-    if (typeof tmp !== "object") {
-      tmp = closure_0;
-    }
-    let tmp2 = tmp;
-  } else {
-    tmp2 = closure_1;
-  }
-  return tmp2;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e2f2314b317d679f7a97eb76ebf6b124",
+  name: "UnsendIcon",
+  type: "png",
+});

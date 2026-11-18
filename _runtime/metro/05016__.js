@@ -1,44 +1,77 @@
 // _runtime/metro/05016__.js
-import module_4593_mod from "04593__.js";
-import _typeof_mod from "04589__.js";
-import requiredArgs_mod from "../04590_requiredArgs.js";
+import nanoid from "../01511_nanoid.js";
+import noop from "00019__.js";
 
-let module_4593 = module_4593_mod;
-if (!module_4593) {
-  const obj = { default: module_4593 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4593;
-}
-module_4593 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
+({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+const memoResult = noop.memo((name) => {
+  name = name.name;
+  const handleOnMount = name.handleOnMount;
+  const handleOnUnmount = name.handleOnUnmount;
+  const handleOnUpdate = name.handleOnUpdate;
+  const children = name.children;
+  const portal = name(handleOnMount[1]).usePortal(name.hostName);
+  const addPortal = portal.addPortal;
+  const removePortal = portal.removePortal;
+  items = [name];
+  closure_7 = children(() => {
+    let nanoidResult = name;
+    if (!name) {
+      nanoidResult = nanoid.nanoid();
+    }
+    return nanoidResult;
+  }, items);
+  const tmp2 = addPortal();
+  const tmp3 = addPortal();
+  closure_9 = tmp3;
+  const tmp4 = addPortal();
+  const items1 = [handleOnMount, addPortal];
+  tmp2.current = handleOnUnmount(() => {
+    if (handleOnMount) {
+      tmp(() => addPortal(closure_1_7, children));
+    } else {
+      addPortal(closure_7, children);
+    }
+  }, items1);
+  const items2 = [handleOnUnmount, removePortal];
+  tmp3.current = handleOnUnmount(() => {
+    if (handleOnUnmount) {
+      tmp(() => removePortal(closure_1_7));
+    } else {
+      removePortal(closure_7);
+    }
+  }, items2);
+  const items3 = [handleOnUpdate, addPortal, children];
+  tmp4.current = handleOnUnmount(() => {
+    if (handleOnUpdate) {
+      tmp(() => addPortal(closure_1_7, children));
+    } else {
+      addPortal(closure_7, children);
+    }
+  }, items3);
+  handleOnUpdate(() => {
+    let current = ref.current;
+    if (current != null) {
+      current();
+    }
+    return () => {
+      const current = ref.current;
+      if (current != null) {
+        current();
+      }
+      closure_1_8.current = undefined;
+      ref.current = undefined;
+      ref2.current = undefined;
+    };
+  }, []);
+  const items4 = [children];
+  handleOnUpdate(() => {
+    const current = ref2.current;
+    if (current != null) {
+      current();
+    }
+  }, items4);
+  return null;
+});
+memoResult.displayName = "Portal";
 
-export default function setYear(date, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(date);
-  if (isNaN(defaultResult1.getTime())) {
-    const _Date = Date;
-    date = new Date(NaN);
-    return date;
-  } else {
-    defaultResult1.setFullYear(defaultResult2);
-    return defaultResult1;
-  }
-  defaultResult2 = module_4593.default(arg1);
-};
-export default exports.default;
+export const Portal = memoResult;

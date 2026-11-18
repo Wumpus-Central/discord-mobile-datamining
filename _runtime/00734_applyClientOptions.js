@@ -60,8 +60,8 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let closure_3 = ["user", "level", "extra", "contexts", "tags", "fingerprint", "propagationContext"];
 
 export { applyClientOptions };
-export function applyDebugIds(exception, arg1) {
-  const filenameToDebugIdMap = _mod738.getFilenameToDebugIdMap(arg1);
+export function applyDebugIds(exception, stackParser) {
+  const filenameToDebugIdMap = _mod738.getFilenameToDebugIdMap(stackParser);
   exception = exception.exception;
   if (exception != null) {
     const values = exception.values;
@@ -137,14 +137,14 @@ export function parseEventHintOrCaptureContext(captureContext) {
     return tmp5;
   }
 }
-export function prepareEvent(normalizeDepth, event_id, event_id2, clone, emit, isolationScope) {
-  normalizeDepth = normalizeDepth.normalizeDepth;
+export function prepareEvent(options, event_id, event_id2, clone, self, isolationScope) {
+  const normalizeDepth = options.normalizeDepth;
   let num = 3;
   if (undefined !== normalizeDepth) {
     num = normalizeDepth;
   }
   _require = num;
-  const normalizeMaxBreadth = normalizeDepth.normalizeMaxBreadth;
+  const normalizeMaxBreadth = options.normalizeMaxBreadth;
   let num2 = 1000;
   if (undefined !== normalizeMaxBreadth) {
     num2 = normalizeMaxBreadth;
@@ -165,10 +165,10 @@ export function prepareEvent(normalizeDepth, event_id, event_id2, clone, emit, i
   obj.timestamp = timestamp;
   let integrations = event_id2.integrations;
   if (!integrations) {
-    const integrations1 = normalizeDepth.integrations;
+    const integrations1 = options.integrations;
     integrations = integrations1.map((name) => name.name);
   }
-  applyClientOptions(obj, normalizeDepth);
+  applyClientOptions(obj, options);
   if (integrations.length > 0) {
     obj.sdk = obj.sdk || {};
     let integrations2 = obj.sdk.integrations;
@@ -179,12 +179,12 @@ export function prepareEvent(normalizeDepth, event_id, event_id2, clone, emit, i
     HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(integrations2, 0));
     obj.sdk.integrations = items;
   }
-  if (emit) {
-    emit.emit("applyFrameMetadata", event_id);
+  if (self) {
+    self.emit("applyFrameMetadata", event_id);
   }
   if (undefined === event_id.type) {
     _require = undefined;
-    _require = require("metro/00738__.js").getFilenameToDebugIdMap(normalizeDepth.stackParser);
+    _require = require("metro/00738__.js").getFilenameToDebugIdMap(options.stackParser);
     let exception = obj.exception;
     if (exception != null) {
       let values = exception.values;
@@ -212,8 +212,8 @@ export function prepareEvent(normalizeDepth, event_id, event_id2, clone, emit, i
       const result = require("uuid4").addExceptionMechanism(obj, event_id2.mechanism);
       let obj6 = require("uuid4");
     }
-    if (emit) {
-      let eventProcessors = emit.getEventProcessors();
+    if (self) {
+      let eventProcessors = self.getEventProcessors();
     } else {
       eventProcessors = [];
     }

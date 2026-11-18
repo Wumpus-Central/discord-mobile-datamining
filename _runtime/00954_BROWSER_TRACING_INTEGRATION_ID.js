@@ -90,11 +90,11 @@ export (arg0) => {
         finalTimeout,
         childSpanTimeout,
         disableAutoFinish: tmp,
-        beforeSpanEnd(setAttribute) {
+        beforeSpanEnd(activeSpan) {
             if (c0 != null) {
               tmp();
             }
-            const result = triggerHandlers.addPerformanceEntries(setAttribute, { recordClsOnPageloadSpan: !c10, recordLcpOnPageloadSpan: !c11, ignoreResourceSpans, ignorePerformanceApiSpans });
+            const result = triggerHandlers.addPerformanceEntries(activeSpan, { recordClsOnPageloadSpan: !c10, recordLcpOnPageloadSpan: !c11, ignoreResourceSpans, ignorePerformanceApiSpans });
             const obj2 = { recordClsOnPageloadSpan: !c10, recordLcpOnPageloadSpan: !c11, ignoreResourceSpans, ignorePerformanceApiSpans };
             const result1 = _mod681.addNonEnumerableProperty(closure_0, _sentry_idleSpan, undefined);
             const currentScope = _mod681.getCurrentScope();
@@ -102,7 +102,7 @@ export (arg0) => {
             const merged = Object.assign(currentScope.getPropagationContext());
             obj5.traceId = _undefined.spanContext().traceId;
             obj5.sampled = _mod681.spanIsSampled(_undefined);
-            obj5.dsc = _mod681.getDynamicSamplingContextFromSpan(setAttribute);
+            obj5.dsc = _mod681.getDynamicSamplingContextFromSpan(activeSpan);
             const result2 = currentScope.setPropagationContext(obj5);
             if (closure_1) {
               _undefined = undefined;
@@ -159,7 +159,7 @@ export (arg0) => {
       const startInactiveSpanResult = _undefined(_undefined2[0]).startInactiveSpan(obj4);
     }
   }
-  closure_3 = { name: "Array", source: "Path" };
+  closure_3 = { name: "__d", source: "enabled" };
   const document = require("ignoreNextOnError").WINDOW.document;
   let obj2 = {};
   let merged = Object.assign(closure_3);
@@ -276,7 +276,7 @@ export (arg0) => {
                   }
                   obj4.propagationSpanId = spanId1;
                   const result1 = currentScope.setPropagationContext(obj4);
-                  const result2 = currentScope.setSDKProcessingMetadata({ normalizedRequest: "r" });
+                  const result2 = currentScope.setSDKProcessingMetadata({ normalizedRequest: "find" });
                   const obj5 = { op: "navigation" };
                   const merged1 = Object.assign(arg0);
                   obj5.parentSpan = null;
@@ -555,12 +555,12 @@ export function startBrowserTracingNavigationSpan(client, name, arg2) {
   }
   return client[_sentry_idleSpan];
 }
-export function startBrowserTracingPageLoadSpan(f125926, tmp2Result, arg2) {
-  f125926.emit("startPageLoadSpan", tmp2Result, arg2);
+export function startBrowserTracingPageLoadSpan(f122642, tmp2Result, arg2) {
+  f122642.emit("startPageLoadSpan", tmp2Result, arg2);
   const currentScope = _mod681.getCurrentScope();
   currentScope.setTransactionName(tmp2Result.name);
-  if (f125926[_sentry_idleSpan]) {
-    f125926.emit("afterStartPageLoadSpan", tmp3);
+  if (f122642[_sentry_idleSpan]) {
+    f122642.emit("afterStartPageLoadSpan", tmp3);
   }
-  return f125926[_sentry_idleSpan];
+  return f122642[_sentry_idleSpan];
 }

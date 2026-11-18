@@ -1,54 +1,13 @@
 // _runtime/metro/19946__.js
-import noop from "00019__.js";
+import registerAsset from "01119__.js";
 
-function useMemoOne(fn, items) {
-  closure_0 = fn;
-  let inputs = items;
-  const ref1 = noop.useRef(noop.useState(() => ({ inputs, result: closure_0() }))[0]);
-  if (!ref.current) {
-    inputs = items;
-    if (items) {
-      inputs = ref1.current.inputs;
-    }
-    if (inputs) {
-      const inputs1 = ref1.current.inputs;
-      let flag = false;
-      if (items.length === inputs1.length) {
-        let num = 0;
-        flag = true;
-        if (0 < items.length) {
-          flag = false;
-          while (items[num] === inputs1[num]) {
-            let sum = num + 1;
-            num = sum;
-            flag = true;
-            if (sum >= items.length) {
-              break;
-            }
-          }
-        }
-      }
-      inputs = flag;
-    }
-    if (!Boolean(inputs)) {
-      let obj2 = { inputs: items, result: fn() };
-    }
-    items = [obj2];
-    const effect = noop.useEffect(() => {
-      ref.current = false;
-      ref1.current = obj2;
-    }, items);
-    return obj2.result;
-  }
-  obj2 = ref1.current;
-  ref = noop.useRef(true);
-}
-function useCallbackOne(arg0, items) {
-  closure_0 = arg0;
-  return useMemoOne(() => closure_0, items);
-}
-
-export const useCallback = useCallbackOne;
-export { useCallbackOne };
-export const useMemo = useMemoOne;
-export { useMemoOne };
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
+  scales: [2, 3],
+  hash: "0b8a6fa235bbde823695fe5cdeccf7e4",
+  name: "channel_setup_light",
+  type: "png",
+});

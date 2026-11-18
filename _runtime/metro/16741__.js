@@ -1,25 +1,13 @@
 // _runtime/metro/16741__.js
-import e from "../01159_e.js";
+import registerAsset from "01119__.js";
 
-e.__extends(function MissingLocaleDataError() {
-  const self = this;
-  let tmp2 = null !== Error;
-  if (!tmp2) {
-    if (!tmp2) {
-      tmp2 = self;
-    }
-    tmp2.type = "MISSING_LOCALE_DATA";
-    return tmp2;
-  } else {
-    const apply = Error.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-  }
-}, Error);
-
-export function isMissingLocaleDataError(type) {
-  return "MISSING_LOCALE_DATA" === type.type;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16.5,
+  scales: [2, 3],
+  hash: "5854380fa0e0fd8bc925e2e46e9e8246",
+  name: "ic_lock_short_16px",
+  type: "png",
+});

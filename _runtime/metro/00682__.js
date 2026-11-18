@@ -1,6 +1,6 @@
 // _runtime/metro/00682__.js
 import spanToJSON from "../00683_spanToJSON.js";
-import _mod687 from "00687__.js";
+import __SENTRY_DEBUG__ from "00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "../00688_consoleSandbox.js";
 import SPAN_STATUS_ERROR from "../00704_SPAN_STATUS_ERROR.js";
 import instrumentError from "../00713_instrumentError.js";
@@ -21,7 +21,7 @@ export function registerSpanErrorInstrumentation() {
         const tmpResult = spanToJSON;
       }
       if (rootSpan) {
-        if (_mod687.DEBUG_BUILD) {
+        if (__SENTRY_DEBUG__.DEBUG_BUILD) {
           const debug = consoleSandbox.debug;
           const _HermesInternal = HermesInternal;
           debug.log("[Tracing] Root span: " + "internal_error" + " -> Global error occurred");

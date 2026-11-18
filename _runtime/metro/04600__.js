@@ -1,21 +1,55 @@
 // _runtime/metro/04600__.js
-let closure_0 = ["ned\u011Bli", "pond\u011Bl\u00ED", "\u00FAter\u00FD", "st\u0159edu", "\u010Dtvrtek", "p\u00E1tek", "sobotu"];
-let closure_1 = {
-  lastWeek: "'posledn\u00ED' eeee 've' p",
-  yesterday: "'v\u010Dera v' p",
-  today: "'dnes v' p",
-  tomorrow: "'z\u00EDtra v' p",
-  nextWeek(arg0) {
-    return "'v " + closure_0[arg0.getUTCDay(arg0)] + " o' p";
-  },
-  other: "P"
-};
-
-export default function formatRelative(arg0, arg1) {
-  let tmpResult = tmp;
-  if (typeof closure_1[arg0] === "function") {
-    tmpResult = tmp(arg1);
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "zh-Hans" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = {
+      long: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" },
+      narrow: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" },
+      short: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" },
+    };
+    obj3.conjunction = obj4;
+    const obj5 = {
+      long: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+      narrow: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+      short: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+    };
+    obj3.disjunction = obj5;
+    const obj6 = {
+      long: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+      narrow: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+      short: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+    };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
-  return tmpResult;
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = {
+  data: {
+    conjunction: {
+      long: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" },
+      narrow: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" },
+      short: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" },
+    },
+    disjunction: {
+      long: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+      narrow: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+      short: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+    },
+    unit: {
+      long: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+      narrow: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+      short: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+    },
+  },
+  locale: "zh-Hans",
 };
-export default exports.default;
+prop.push(obj);

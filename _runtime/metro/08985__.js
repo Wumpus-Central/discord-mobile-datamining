@@ -1,21 +1,13 @@
 // _runtime/metro/08985__.js
+import registerAsset from "01119__.js";
 
-export default {
-  get(arg0) {
-    if (arg0) {
-      return arg0;
-    } else {
-      if (typeof globalThis.DOMParser !== "undefined") {
-        const dOMParser = new globalThis.DOMParser();
-        return dOMParser;
-      } else {
-        try {
-          const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
-          const obj = { onError: result.onErrorStopParsing };
-          const dOMParser1 = new result.DOMParser(obj);
-          return dOMParser1;
-        } catch (err) {}
-      }
-    }
-  },
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "45844ffe000e8da4174843bafa8614af",
+  name: "SuperReactionIcon",
+  type: "png",
+});

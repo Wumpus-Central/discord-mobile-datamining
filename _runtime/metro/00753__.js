@@ -6,15 +6,15 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function createClientReportEnvelope(discarded_events, dsn, arg2) {
+export function createClientReportEnvelope(_clearOutcomesResult, tunnel, arg2) {
   let result = arg2;
   items = [{ type: "client_report" }];
   if (!arg2) {
     result = dateTimestampInSeconds.dateTimestampInSeconds();
   }
-  items[1] = { timestamp: result, discarded_events };
-  if (dsn) {
-    const obj3 = { dsn };
+  items[1] = { timestamp: result, discarded_events: _clearOutcomesResult };
+  if (tunnel) {
+    const obj3 = { dsn: tunnel };
     let obj4 = obj3;
   } else {
     obj4 = {};

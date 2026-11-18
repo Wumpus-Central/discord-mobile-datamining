@@ -1,41 +1,155 @@
 // _runtime/metro/09762__.js
-import colorPropType from "../09755_colorPropType.js";
-import _mod9763 from "09763__.js";
-import merged12 from "../09764_merged1.js";
-import merged22 from "../09765_merged2.js";
-import emptyFunction_mod from "05351__.js";
 
-const obj = {};
-const size = Object.assign(_mod9763);
-const merged1 = Object.assign(merged12);
-const merged2 = Object.assign(merged22);
-let emptyFunction = emptyFunction_mod;
-obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
-obj.backgroundColor = colorPropType;
-obj.borderColor = colorPropType;
-obj.borderTopColor = colorPropType;
-obj.borderRightColor = colorPropType;
-obj.borderBottomColor = colorPropType;
-obj.borderLeftColor = colorPropType;
-obj.borderStartColor = colorPropType;
-obj.borderEndColor = colorPropType;
-obj.borderRadius = emptyFunction.number;
-obj.borderTopLeftRadius = emptyFunction.number;
-obj.borderTopRightRadius = emptyFunction.number;
-obj.borderTopStartRadius = emptyFunction.number;
-obj.borderTopEndRadius = emptyFunction.number;
-obj.borderBottomLeftRadius = emptyFunction.number;
-obj.borderBottomRightRadius = emptyFunction.number;
-obj.borderBottomStartRadius = emptyFunction.number;
-obj.borderBottomEndRadius = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.borderStyle = emptyFunction.oneOf(["solid", "dotted", "dashed"]);
-obj.borderWidth = emptyFunction.number;
-obj.borderTopWidth = emptyFunction.number;
-obj.borderRightWidth = emptyFunction.number;
-obj.borderBottomWidth = emptyFunction.number;
-obj.borderLeftWidth = emptyFunction.number;
-obj.opacity = emptyFunction.number;
-obj.elevation = emptyFunction.number;
-
-export default obj;
+export function removeElement(prev) {
+  if (prev.prev) {
+    prev.prev.next = prev.next;
+  }
+  if (prev.next) {
+    prev.next.prev = prev.prev;
+  }
+  if (prev.parent) {
+    const children = prev.parent.children;
+    const lastIndexOfResult = children.lastIndexOf(prev);
+    if (lastIndexOfResult >= 0) {
+      children.splice(lastIndexOfResult, 1);
+    }
+  }
+  prev.next = null;
+  prev.prev = null;
+  prev.parent = null;
+}
+export function replaceElement(prev, next) {
+  prev = prev.prev;
+  next.prev = prev;
+  if (prev) {
+    prev.next = next;
+  }
+  next = prev.next;
+  next.next = next;
+  if (next) {
+    next.prev = next;
+  }
+  const parent = prev.parent;
+  next.parent = parent;
+  if (parent) {
+    const children = parent.children;
+    children[children.lastIndexOf(prev)] = next;
+    prev.parent = null;
+  }
+}
+export function appendChild(element, node) {
+  if (node.prev) {
+    node.prev.next = node.next;
+  }
+  if (node.next) {
+    node.next.prev = node.prev;
+  }
+  if (node.parent) {
+    const children = node.parent.children;
+    const lastIndexOfResult = children.lastIndexOf(node);
+    if (lastIndexOfResult >= 0) {
+      children.splice(lastIndexOfResult, 1);
+    }
+  }
+  node.next = null;
+  node.prev = null;
+  node.parent = null;
+  node.next = null;
+  node.parent = element;
+  const children1 = element.children;
+  if (children1.push(node) > 1) {
+    element.children[element.children.length - 2].next = node;
+    node.prev = element.children[element.children.length - 2];
+  } else {
+    node.prev = null;
+  }
+}
+export function append(prev, prev2) {
+  if (prev2.prev) {
+    prev2.prev.next = prev2.next;
+  }
+  if (prev2.next) {
+    prev2.next.prev = prev2.prev;
+  }
+  if (prev2.parent) {
+    const children = prev2.parent.children;
+    const lastIndexOfResult = children.lastIndexOf(prev2);
+    if (lastIndexOfResult >= 0) {
+      children.splice(lastIndexOfResult, 1);
+    }
+  }
+  prev2.next = null;
+  prev2.prev = null;
+  prev2.parent = null;
+  ({ parent, next } = prev);
+  prev2.next = next;
+  prev2.prev = prev;
+  prev.next = prev2;
+  prev2.parent = parent;
+  if (next) {
+    next.prev = prev2;
+    if (parent) {
+      const children1 = parent.children;
+      children1.splice(children1.lastIndexOf(next), 0, prev2);
+    }
+  } else if (parent) {
+    const children2 = parent.children;
+    children2.push(prev2);
+  }
+}
+export function prependChild(parent, prev) {
+  if (prev.prev) {
+    prev.prev.next = prev.next;
+  }
+  if (prev.next) {
+    prev.next.prev = prev.prev;
+  }
+  if (prev.parent) {
+    const children = prev.parent.children;
+    const lastIndexOfResult = children.lastIndexOf(prev);
+    if (lastIndexOfResult >= 0) {
+      children.splice(lastIndexOfResult, 1);
+    }
+  }
+  prev.next = null;
+  prev.prev = null;
+  prev.parent = parent;
+  prev.prev = null;
+  const children1 = parent.children;
+  if (1 !== children1.unshift(prev)) {
+    parent.children[1].prev = prev;
+    prev.next = parent.children[1];
+  } else {
+    prev.next = null;
+  }
+}
+export function prepend(parent, next) {
+  if (next.prev) {
+    next.prev.next = next.next;
+  }
+  if (next.next) {
+    next.next.prev = next.prev;
+  }
+  if (next.parent) {
+    const children = next.parent.children;
+    const lastIndexOfResult = children.lastIndexOf(next);
+    if (lastIndexOfResult >= 0) {
+      children.splice(lastIndexOfResult, 1);
+    }
+  }
+  next.next = null;
+  next.prev = null;
+  next.parent = null;
+  parent = parent.parent;
+  if (parent) {
+    const children1 = parent.children;
+    children1.splice(children1.indexOf(parent), 0, next);
+  }
+  if (parent.prev) {
+    parent.prev.next = next;
+  }
+  next.parent = parent;
+  next.prev = parent.prev;
+  next.next = parent;
+  parent.prev = next;
+}

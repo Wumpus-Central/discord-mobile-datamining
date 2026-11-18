@@ -1,8 +1,13 @@
 // _runtime/metro/16847__.js
-import _mod16825 from "16825__.js";
-import _mod16826 from "16826__.js";
+import registerAsset from "01119__.js";
 
-export default Object.keys ||
-  function keys(arg0) {
-    return _mod16826(arg0, _mod16825);
-  };
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d28a54af44f7516fe576101d4a6c7e22",
+  name: "EmojiMeltingFaceIcon",
+  type: "png",
+});

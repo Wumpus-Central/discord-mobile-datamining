@@ -1,62 +1,13 @@
 // _runtime/metro/09908__.js
-import _mod9810 from "09810__.js";
-import _mod9837 from "09837__.js";
-import _mod9838 from "09838__.js";
+import registerAsset from "01119__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const profiler = {
-  startProfiler() {
-    const client = _mod9837.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.start();
-        } else if (_mod9838.DEBUG_BUILD) {
-          const logger3 = _mod9810.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod9838.DEBUG_BUILD) {
-        const logger2 = _mod9810.logger;
-        logger2.warn("ProfilingIntegration is not available");
-      }
-    } else if (_mod9838.DEBUG_BUILD) {
-      const logger = _mod9810.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
-  stopProfiler() {
-    const client = _mod9837.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.stop();
-        } else if (_mod9838.DEBUG_BUILD) {
-          const logger3 = _mod9810.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod9838.DEBUG_BUILD) {
-        const logger2 = _mod9810.logger;
-        logger2.warn("ProfilingIntegration is not available");
-      }
-    } else if (_mod9838.DEBUG_BUILD) {
-      const logger = _mod9810.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "3246c14a68781de782d6622fffa7ce47",
+  name: "StarOutlineIcon",
+  type: "png",
+});

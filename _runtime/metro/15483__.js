@@ -1,13 +1,14 @@
 // _runtime/metro/15483__.js
-import registerAsset from "01119__.js";
+import prop_mod from "15484__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting",
-  width: 80,
-  height: 80,
-  scales: [1, 2, 3],
-  hash: "de169599558848e028f8e876d5e14f7e",
-  name: "img_premium_classic_icon_80px",
-  type: "png",
-});
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
+
+export default prop;

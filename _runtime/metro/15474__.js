@@ -1,13 +1,7 @@
 // _runtime/metro/15474__.js
-import registerAsset from "01119__.js";
+import _mod15472 from "15472__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/standard",
-  width: 144,
-  height: 150,
-  scales: [1],
-  hash: "e32285515cb51d557a374cd91c39dd3d",
-  name: "box_idle",
-  type: "png",
-});
+let closure_0 = _mod15472({}.toString);
+let closure_1 = _mod15472("".slice);
+
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "623eff85d27fd4ffd7a4c28c327682e8",
-  name: "SpeedometerIcon",
+  hash: "3446a422668528039c87de87a6054a15",
+  name: "KeyboardIcon",
   type: "png",
 });

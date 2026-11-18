@@ -57,8 +57,8 @@ function instrumentHistory() {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function addHistoryInstrumentationHandler(arg0) {
-  _mod681.addHandler("history", arg0);
+export function addHistoryInstrumentationHandler(errorCallback) {
+  _mod681.addHandler("history", errorCallback);
   _mod681.maybeInstrument("history", instrumentHistory);
 }
 export { instrumentHistory };

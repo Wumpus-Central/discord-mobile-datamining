@@ -1,533 +1,308 @@
 // _runtime/metro/05356__.js
-import _mod5357 from "05357__.js";
+import Cancellable from "../05357_Cancellable.js";
+import asyncGeneratorStep from "05339__.js";
+import _slicedToArray from "05296__.js";
 
-function parse(str, delimiter) {
-  str = delimiter;
-  if (delimiter) {
-    str = delimiter.delimiter;
+require = fn;
+function getFormattedString(js) {
+  js = js.js;
+  let averageFPS;
+  if (js != null) {
+    averageFPS = js.averageFPS;
   }
-  if (!str) {
-    str = "/";
+  const js2 = js.js;
+  let minFPS;
+  if (js2 != null) {
+    minFPS = js2.minFPS;
   }
-  items = [];
-  let match = regExp.exec(str);
-  let num = 0;
-  let num2 = 0;
-  let str2 = "";
-  let num3 = 0;
-  while (null != match) {
-    let tmp3 = match[1];
-    let index = match.index;
-    let text = `${str.slice(num, index)}`;
-    let sum = index + match[0].length;
-    if (tmp3) {
-      let str5 = `${str.slice(num, index)}${tmp3[1]}`;
-      let sum1 = num2;
-    } else {
-      let tmp8 = str[sum];
-      let str3 = match[2];
-      let tmp9 = match[3];
-      let str4 = match[4];
-      let tmp10 = match[6];
-      let tmp11 = match[7];
-      str5 = text;
-      if (`${str.slice(num, index)}`) {
-        let arr = items.push(`${str.slice(num, index)}`);
-        str5 = "";
-      }
-      let tmp13 = null != str3 && null != tmp8 && tmp8 !== str3;
-      let tmp14 = "+" === tmp10 || "*" === tmp10;
-      let tmp15 = "?" === tmp10 || "*" === tmp10;
-      let str6 = match[2] || str;
-      if (!str4) {
-        str4 = match[5];
-      }
-      sum1 = num2;
-      if (!tmp9) {
-        sum1 = num2 + 1;
-        tmp9 = num2;
-      }
-      let obj = {
-        name: tmp9,
-        prefix: null,
-        delimiter: null,
-        optional: null,
-        repeat: null,
-        partial: null,
-        asterisk: null,
-        pattern: null,
-      };
-      if (!str3) {
-        str3 = "";
-      }
-      obj.prefix = str3;
-      obj.delimiter = str6;
-      obj.optional = tmp15;
-      obj.repeat = tmp14;
-      obj.partial = tmp13;
-      obj.asterisk = tmp11;
-      if (str4) {
-        let str7 = str4.replace(/([=!:$\/()])/g, "\\$1");
-      } else {
-        str7 = ".*";
-        if (!tmp11) {
-          str7 = `${"[^" + str6.replace(/([.+*?=^!:${}()[\]|\/\\])/g, "\\$1")}]+?`;
-        }
-      }
-      obj.pattern = str7;
-      let arr4 = items.push(obj);
-    }
-    match = regExp.exec(str);
-    num2 = sum1;
-    num = sum;
-    str2 = str5;
-    num3 = sum;
+  const js3 = js.js;
+  let maxFPS;
+  if (js3 != null) {
+    maxFPS = js3.maxFPS;
   }
-  let sum2 = str2;
-  if (num3 < str.length) {
-    sum2 = str2 + str.substr(num3);
-  }
-  if (sum2) {
-    items.push(sum2);
-  }
-  return items;
-}
-function encodeURIComponentPretty(arg0) {
-  return encodeURI(arg0).replace(/[\/?#]/g, (str) => {
-    str = str.charCodeAt(0);
-    return "%" + str.toString(16).toUpperCase();
-  });
-}
-function tokensToRegExp(arg0, items, arg2) {
-  let combined;
-  let str3;
-  let obj = arg2;
-  if (!_mod5357(items)) {
-    let tmp = items;
-    if (!items) {
-      tmp = arg2;
-    }
-    items = [];
-    obj = tmp;
-  }
-  if (!obj) {
-    obj = {};
-  }
-  const strict = obj.strict;
-  let num = 0;
   let str = "";
-  let str2 = "";
-  if (0 < arg0.length) {
-    while (true) {
-      str3 = arg0[num];
-      if (typeof str3 === "string") {
-        let text = `${str3.replace(/([.+*?=^!:${}()[\]|\/\\])/g, "\\$1")}`;
-      } else {
-        let str11 = str3.prefix;
-        let concat = str11.replace(/([.+*?=^!:${}()[\]|\/\\])/g, "\\$1");
-        let text1 = `${"(?:" + str3.pattern})`;
-        let arr = items.push(str3);
-        combined = text1;
-        if (str3.repeat) {
-          let _HermesInternal = HermesInternal;
-          combined = `${"(?:" + str3.pattern})` + `(?:${concat}` + `${"(?:" + str3.pattern})` + ")*";
-        }
-        if (str3.optional) {
-          break;
-        } else {
-          let _HermesInternal2 = HermesInternal;
-          text = str + `${concat}(` + combined + ")";
-        }
-      }
-      num = num + 1;
-      str = text;
-      str2 = text;
-    }
-    if (str3.partial) {
-      const _HermesInternal4 = HermesInternal;
-      const text2 = `${concat}(`;
-      concat = HermesInternal.concat;
-      let combined1 = concat(combined, ")?");
-    } else {
-      const _HermesInternal3 = HermesInternal;
-      combined1 = `(?:${concat}` + "(" + combined + "))?";
-    }
+  const combined = "Results:\n\nJS FPS: Avg: " + averageFPS + " | Min: " + minFPS + " | Max: " + maxFPS + "\n\n";
+  if (js.suggestions.length > 0) {
+    const suggestions = js.suggestions;
+    const mapped = suggestions.map((item, index) => "" + index + 1 + ". " + item);
+    const _HermesInternal = HermesInternal;
+    str = "Suggestions:\n\n" + mapped.join("\n");
   }
-  const replaced = obj.delimiter || "/".replace(/([.+*?=^!:${}()[\]|\/\\])/g, "\\$1");
-  const tmp9 = str2.slice(-replaced.length) === replaced;
-  let text3 = str2;
-  if (!strict) {
-    let substr = str2;
-    if (tmp9) {
-      substr = str2.slice(0, -replaced.length);
-    }
-    text3 = `${tmp11 + "(?:" + arr2}(?=$))?`;
-  }
-  let str6 = "$";
-  if (false === obj.end) {
-    if (!strict) {
-      let str7 = `${"(?=" + arr2}|$)`;
-    } else {
-      str7 = "";
-    }
-    str6 = str7;
-  }
-  const combined2 = "^" + text3 + str6;
-  let str10 = "i";
-  if (obj.sensitive) {
-    str10 = "";
-  }
-  regExp = new RegExp(combined2, str10);
-  regExp.keys = items;
-  return regExp;
+  return combined + str;
 }
-function pathToRegexp(source, items, arg2) {
-  let length2;
-  let obj = arg2;
-  if (!_mod5357(items)) {
-    let tmp3 = items;
-    if (!items) {
-      tmp3 = arg2;
-    }
-    items = [];
-    obj = tmp3;
+function runScrollBenchmark(arg0, arg1, arg2) {
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
   }
-  if (!obj) {
+  return applyArgumentsResult;
+}
+let closure_10 = async function _runScrollBenchmark(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = ref;
+          closure_131_1 = closure_1;
+          closure_131_2 = closure_2;
+          let horizontal;
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          closure_131_6 = undefined;
+          if (ref.current) {
+            horizontal = ref.current.props.horizontal;
+            let current = ref.current;
+            if (current) {
+              const size = current.getWindowSize();
+              const size2 = current.getChildContainerDimensions();
+              const diff = size2.width - size.width;
+              closure_131_4 = diff;
+              const diff1 = size2.height - size.height;
+              closure_131_5 = diff1;
+              function scrollNow(arg0, arg1) {
+                const current = ref.current;
+                if (current != null) {
+                  let tmp = arg1;
+                  if (closure_1_3) {
+                    tmp = arg0;
+                  }
+                  const obj = { offset: tmp, animated: false };
+                  current.scrollToOffset(obj);
+                }
+              }
+              closure_131_6 = scrollNow;
+              const obj5 = Cancellable;
+              c5 = 1;
+              c6 = 1;
+              const obj6 = { value: obj5.autoScroll(scrollNow, 0, 0, diff, diff1, closure_2, closure_1), done: false };
+              return obj6;
+            }
+          }
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          const obj2 = closure_132_0(closure_132_1[3]);
+          c5 = 2;
+          c6 = 1;
+          const obj8 = {
+            value: obj2.autoScroll(closure_131_6, closure_131_4, closure_131_5, 0, 0, closure_131_2, closure_131_1),
+            done: false,
+          };
+          return obj8;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        let obj = { value, done: true };
+        return obj;
+      }
+      c6 = 3;
+      return { value: "HermesInternal", done: null };
+    } catch (tmp26) {
+      c6 = tmp;
+      throw tmp26;
+    }
+  }
+};
+const noop = fn(19);
+({ useEffect: closure_4, useState: hasOwnProperty, useCallback: closure_6, useRef: metroImportDefault } = noop);
+
+export function useBenchmark(arg0, arg1) {
+  closure_1 = arg1;
+  let obj = arg2;
+  if (arg2 === undefined) {
     obj = {};
   }
-  if (source instanceof RegExp) {
-    const match = source.source.match(/\((?!\?)/g);
-    if (match) {
-      let num3 = 0;
-      if (0 < match.length) {
-        do {
-          let obj2 = {
-            name: num3,
-            prefix: null,
-            delimiter: null,
-            optional: false,
-            repeat: false,
-            partial: false,
-            asterisk: false,
-            pattern: null,
-          };
-          let arr = items.push(obj2);
-          num3 = num3 + 1;
-          length2 = match.length;
-        } while (num3 < length2);
+  let isBenchmarkRunning;
+  closure_5 = undefined;
+  let startBenchmark;
+  let tmp = isBenchmarkRunning(closure_5(false), 2);
+  isBenchmarkRunning = tmp[0];
+  closure_4 = tmp[1];
+  closure_5 = closure_7(null);
+  items = [arg1, arg0, isBenchmarkRunning, ,];
+  ({ repeatCount: arr[3], speedMultiplier: arr[4] } = obj);
+  startBenchmark = startBenchmark(() => {
+    if (!isBenchmarkRunning) {
+      const cancellable = new ref(closure_1[3]).Cancellable();
+      ref = cancellable;
+      closure_5.current = cancellable;
+      closure_1 = [];
+      if (ref.current) {
+        const data = tmp8.current.props.data;
+        length = undefined;
+        if (data != null) {
+          length = data.length;
+        }
+        if (Number(length) <= 0) {
+          const _Error = Error;
+          const error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
+          throw error;
+        }
       }
+      closure_4(true);
+      ref = obj(function* () {
+        if (c3 === 2) {
+          c3 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c3 = 2;
+            if (0 === c2) {
+              if (arg0 === 1) {
+                c3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c3 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_128_0 = undefined;
+                closure_128_1 = undefined;
+                closure_128_2 = undefined;
+                closure_128_3 = undefined;
+                const jSFPSMonitor = new tmp2(tmp5[5]).JSFPSMonitor();
+                closure_128_0 = jSFPSMonitor;
+                jSFPSMonitor.startTracking();
+                closure_128_1 = 0;
+                let num8 = closure_2_2.repeatCount;
+                if (!num8) {
+                  num8 = 1;
+                }
+                if (tmp54 >= num8) {
+                  closure_128_2 = closure_128_0.stopAndGetData();
+                  if (closure_128_2.averageFPS < 35) {
+                    tmp5.push(
+                      "Your average JS FPS is low. This can indicate that your components are doing too much work. Try to optimize your components and reduce re-renders if any",
+                    );
+                  }
+                  (function computeSuggestions(current, arr) {
+                    current = current.current;
+                    if (current) {
+                      current = current.current.props.data.length < 200;
+                    }
+                    if (current) {
+                      arr = arr.push(
+                        "Data count is low. Try to increase it to a large number (e.g 200) using the 'useDataMultiplier' hook.",
+                      );
+                    }
+                  })(tmp2, tmp5);
+                  closure_128_3 = (function generateResult(js, suggestions, isCancelled) {
+                    return { js, suggestions, interrupted: isCancelled.isCancelled() };
+                  })(closure_128_2, tmp5, tmp2);
+                  if (!tmp2.isCancelled()) {
+                    closure_128_3.formattedString = getFormattedString(closure_128_3);
+                  }
+                  tmp5(closure_128_3);
+                  closure_2_4(false);
+                  c3 = 3;
+                  return { value: "HermesInternal", done: null };
+                }
+                tmp54 = closure_128_1;
+              }
+            } else if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              closure_128_1 = closure_128_1 + 1;
+              let num4 = closure_2_2.repeatCount;
+              if (!num4) {
+                num4 = 1;
+              }
+            }
+            let num11 = closure_2_2.speedMultiplier;
+            if (!num11) {
+              num11 = 1;
+            }
+            c2 = 1;
+            c3 = 1;
+            const obj4 = { value: runScrollBenchmark(tmp2, tmp2, num11), done: false };
+            return obj4;
+          } catch (tmp43) {
+            c3 = tmp;
+            throw tmp43;
+          }
+        }
+      });
+      (function runBenchmark() {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })();
+      tmp = ref;
+      tmp2 = closure_1;
     }
-    source.keys = items;
-    let tmp6 = source;
-  } else if (_mod5357(source)) {
-    const items1 = [];
-    let num = 0;
-    if (0 < source.length) {
-      do {
-        let arr3 = items1.push(pathToRegexp(source[num], items, obj).source);
-        num = num + 1;
-        length = source.length;
-      } while (num < length);
+  }, items);
+  closure_4(() => {
+    if (!obj.startManually) {
+      let num = tmp.startDelayInMs;
+      if (!num) {
+        num = 3000;
+      }
+      const timeout = setTimeout(() => {
+        startBenchmark();
+      }, num);
+      return () => {
+        clearTimeout(closure_0);
+        if (ref.current) {
+          const current = ref.current;
+          current.cancel();
+        }
+      };
     }
-    let str3 = "i";
-    const text = `(?:${arr2.join("|")}`;
-    if (obj.sensitive) {
-      str3 = "";
-    }
-    regExp = new RegExp(text + ")", str3);
-    regExp.keys = items;
-    tmp6 = regExp;
-  } else {
-    tmp6 = tokensToRegExp(parse(source, obj), items, obj);
-  }
-  return tmp6;
+  }, []);
+  return { startBenchmark, isBenchmarkRunning };
 }
-module.exports.parse = parse;
-module.exports.compile = function compile(arg0, arg1) {
-  let arr = parse(arg0, arg1);
-  const array = new Array(arr.length);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    if (typeof arr[num] === "object") {
-      let _RegExp = RegExp;
-      let tmp3 = new.target;
-      let tmp4 = new.target;
-      regExp = new RegExp("^(?:" + arr[num].pattern + ")$");
-      array[num] = regExp;
-    }
-  }
-  return (arg0, arg1) => {
-    let replaced;
-    let tmp3;
-    let obj = arg0;
-    if (!arg0) {
-      obj = {};
-    }
-    let obj2 = arg1;
-    if (!arg1) {
-      obj2 = {};
-    }
-    if (obj2.pretty) {
-      let _encodeURIComponent = encodeURIComponentPretty;
-    } else {
-      _encodeURIComponent = encodeURIComponent;
-    }
-    let str = "";
-    let num = 0;
-    let str2 = "";
-    if (0 < arr.length) {
-      while (true) {
-        tmp3 = arr[num];
-        if (typeof tmp3 !== "string") {
-          arr = obj[tmp3.name];
-          if (null == arr) {
-            if (tmp3.optional) {
-              let text = str;
-              if (tmp3.partial) {
-                text = `${tmp3.prefix}`;
-              }
-            } else {
-              let _TypeError5 = TypeError;
-              let str17 = 'Expected "';
-              let tmp32 = new.target;
-              let str18 = '" to be defined';
-              let tmp33 = new.target;
-              let typeError = new TypeError('Expected "' + tmp3.name + '" to be defined');
-              throw typeError;
-            }
-          } else if (_mod5357(arr)) {
-            if (tmp3.repeat) {
-              if (0 === arr.length) {
-                text = str;
-                if (!tmp3.optional) {
-                  let _TypeError4 = TypeError;
-                  let str15 = 'Expected "';
-                  let tmp28 = new.target;
-                  let str16 = '" to not be empty';
-                  let tmp29 = new.target;
-                  let typeError1 = new TypeError('Expected "' + tmp3.name + '" to not be empty');
-                  throw typeError1;
-                }
-              } else {
-                let num2 = 0;
-                let sum = str;
-                text = str;
-                if (0 < arr.length) {
-                  let _encodeURIComponentResult = _encodeURIComponent(arr[num2]);
-                  let obj4 = array[num];
-                  while (obj4.test(_encodeURIComponentResult)) {
-                    sum = sum + ((0 === num2 ? tmp3.prefix : tmp3.delimiter) + _encodeURIComponentResult);
-                    num2 = num2 + 1;
-                    text = sum;
-                    continue;
-                  }
-                  let _TypeError3 = TypeError;
-                  let str11 = 'Expected all "';
-                  let str12 = '" to match "';
-                  let _JSON2 = JSON;
-                  let text1 = `Expected all "${tmp3.name}" to match "${tmp3.pattern}`;
-                  let str13 = '", but received `';
-                  let tmp23 = new.target;
-                  let str14 = "`";
-                  let tmp24 = new.target;
-                  let typeError2 = new TypeError(
-                    text1 + '", but received `' + JSON.stringify(_encodeURIComponentResult) + "`",
-                  );
-                  throw typeError2;
-                }
-              }
-            } else {
-              let _TypeError2 = TypeError;
-              let str8 = 'Expected "';
-              let _JSON = JSON;
-              let text2 = `Expected "${tmp3.name}`;
-              let str9 = '" to not repeat, but received `';
-              let tmp14 = new.target;
-              let str10 = "`";
-              let tmp15 = new.target;
-              let typeError3 = new TypeError(
-                `Expected "${tmp3.name}` + '" to not repeat, but received `' + JSON.stringify(arr) + "`",
-              );
-              throw typeError3;
-            }
-          } else {
-            if (tmp3.asterisk) {
-              let _encodeURI = encodeURI;
-              let str3 = encodeURI(arr);
-              replaced = str3.replace(/[?#]/g, (str) => {
-                str = str.charCodeAt(0);
-                return "%" + str.toString(16).toUpperCase();
-              });
-            } else {
-              replaced = _encodeURIComponent(arr);
-            }
-            let obj3 = array[num];
-            if (!obj3.test(replaced)) {
-              break;
-            } else {
-              text = str + (tmp3.prefix + replaced);
-            }
-          }
-        } else {
-          text = str + tmp3;
-        }
-        num = num + 1;
-        str = text;
-        str2 = text;
-      }
-      const _TypeError = TypeError;
-      const typeError4 = new TypeError(
-        'Expected "' + tmp3.name + '" to match "' + tmp3.pattern + '", but received "' + replaced + '"',
-      );
-      throw typeError4;
-    }
-    return str2;
-  };
-};
-module.exports.tokensToFunction = function tokensToFunction(arg0) {
-  closure_0 = arg0;
-  const array = new Array(arg0.length);
-  for (let num = 0; num < arg0.length; num = num + 1) {
-    if (typeof arg0[num] === "object") {
-      let _RegExp = RegExp;
-      let tmp3 = new.target;
-      let tmp4 = new.target;
-      regExp = new RegExp("^(?:" + arg0[num].pattern + ")$");
-      array[num] = regExp;
-    }
-  }
-  return (arg0, arg1) => {
-    let replaced;
-    let tmp3;
-    let obj = arg0;
-    if (!arg0) {
-      obj = {};
-    }
-    let obj2 = arg1;
-    if (!arg1) {
-      obj2 = {};
-    }
-    if (obj2.pretty) {
-      let _encodeURIComponent = encodeURIComponentPretty;
-    } else {
-      _encodeURIComponent = encodeURIComponent;
-    }
-    let str = "";
-    let num = 0;
-    let str2 = "";
-    if (0 < arr.length) {
-      while (true) {
-        tmp3 = arr[num];
-        if (typeof tmp3 !== "string") {
-          arr = obj[tmp3.name];
-          if (null == arr) {
-            if (tmp3.optional) {
-              let text = str;
-              if (tmp3.partial) {
-                text = `${tmp3.prefix}`;
-              }
-            } else {
-              let _TypeError5 = TypeError;
-              let str17 = 'Expected "';
-              let tmp32 = new.target;
-              let str18 = '" to be defined';
-              let tmp33 = new.target;
-              let typeError = new TypeError('Expected "' + tmp3.name + '" to be defined');
-              throw typeError;
-            }
-          } else if (_mod5357(arr)) {
-            if (tmp3.repeat) {
-              if (0 === arr.length) {
-                text = str;
-                if (!tmp3.optional) {
-                  let _TypeError4 = TypeError;
-                  let str15 = 'Expected "';
-                  let tmp28 = new.target;
-                  let str16 = '" to not be empty';
-                  let tmp29 = new.target;
-                  let typeError1 = new TypeError('Expected "' + tmp3.name + '" to not be empty');
-                  throw typeError1;
-                }
-              } else {
-                let num2 = 0;
-                let sum = str;
-                text = str;
-                if (0 < arr.length) {
-                  let _encodeURIComponentResult = _encodeURIComponent(arr[num2]);
-                  let obj4 = array[num];
-                  while (obj4.test(_encodeURIComponentResult)) {
-                    sum = sum + ((0 === num2 ? tmp3.prefix : tmp3.delimiter) + _encodeURIComponentResult);
-                    num2 = num2 + 1;
-                    text = sum;
-                    continue;
-                  }
-                  let _TypeError3 = TypeError;
-                  let str11 = 'Expected all "';
-                  let str12 = '" to match "';
-                  let _JSON2 = JSON;
-                  let text1 = `Expected all "${tmp3.name}" to match "${tmp3.pattern}`;
-                  let str13 = '", but received `';
-                  let tmp23 = new.target;
-                  let str14 = "`";
-                  let tmp24 = new.target;
-                  let typeError2 = new TypeError(
-                    text1 + '", but received `' + JSON.stringify(_encodeURIComponentResult) + "`",
-                  );
-                  throw typeError2;
-                }
-              }
-            } else {
-              let _TypeError2 = TypeError;
-              let str8 = 'Expected "';
-              let _JSON = JSON;
-              let text2 = `Expected "${tmp3.name}`;
-              let str9 = '" to not repeat, but received `';
-              let tmp14 = new.target;
-              let str10 = "`";
-              let tmp15 = new.target;
-              let typeError3 = new TypeError(
-                `Expected "${tmp3.name}` + '" to not repeat, but received `' + JSON.stringify(arr) + "`",
-              );
-              throw typeError3;
-            }
-          } else {
-            if (tmp3.asterisk) {
-              let _encodeURI = encodeURI;
-              let str3 = encodeURI(arr);
-              replaced = str3.replace(/[?#]/g, (str) => {
-                str = str.charCodeAt(0);
-                return "%" + str.toString(16).toUpperCase();
-              });
-            } else {
-              replaced = _encodeURIComponent(arr);
-            }
-            let obj3 = array[num];
-            if (!obj3.test(replaced)) {
-              break;
-            } else {
-              text = str + (tmp3.prefix + replaced);
-            }
-          }
-        } else {
-          text = str + tmp3;
-        }
-        num = num + 1;
-        str = text;
-        str2 = text;
-      }
-      const _TypeError = TypeError;
-      const typeError4 = new TypeError(
-        'Expected "' + tmp3.name + '" to match "' + tmp3.pattern + '", but received "' + replaced + '"',
-      );
-      throw typeError4;
-    }
-    return str2;
-  };
-};
-module.exports.tokensToRegExp = tokensToRegExp;
-let items = [
-  "(\\\\.)",
-  "([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))",
-];
-let regExp = new RegExp(items.join("|"), "g");
-
-export default pathToRegexp;
+export { getFormattedString };

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "a31dcad33e17aebec69c2bc953578b8c",
-  name: "ChevronLargeLeftIcon",
+  hash: "17f7b21a5b26889a6dffe34b080f6103",
+  name: "TimerIcon",
   type: "png",
 });

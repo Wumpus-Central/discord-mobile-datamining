@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3RlbnVyZV9yZXdhcmQ=",
+  httpServerLocation: "/assets/modules/application_account_linking",
   scales: [1],
-  hash: "5fdf927017d376543c603b604c74ac53",
-  name: "no.messages.5fdf927017d376543c603b604c74ac53.compiled.messages",
+  hash: "7595bbb1809c04c3435228b4f78cc1b0",
+  name: "IncentivizedAccountLinking.compiled.messages",
   type: "jsona",
 });

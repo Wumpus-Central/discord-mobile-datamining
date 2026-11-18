@@ -1,13 +1,25 @@
 // _runtime/metro/15472__.js
-import registerAsset from "01119__.js";
+import module_15473_mod from "15473__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 141,
-  height: 96,
-  scales: [2, 3],
-  hash: "417f63594df34390f8816db66b0c9b6a",
-  name: "img_outbound_promotion_error",
-  type: "png",
-});
+const call = prototype.call;
+let module_15473 = module_15473_mod;
+if (module_15473) {
+  const bind = prototype.bind;
+  module_15473 = bind.bind(call, call);
+}
+if (!module_15473) {
+  module_15473 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
+
+export default module_15473;

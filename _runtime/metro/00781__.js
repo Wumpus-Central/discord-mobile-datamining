@@ -1,26 +1,26 @@
 // _runtime/metro/00781__.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function parseCookie(arr) {
+export function parseCookie(cookie) {
   const obj = {};
   let num = 0;
-  if (0 < arr.length) {
-    let index = arr.indexOf("=", num);
+  if (0 < cookie.length) {
+    let index = cookie.indexOf("=", num);
     while (-1 !== index) {
-      length = arr.indexOf(";", num);
+      length = cookie.indexOf(";", num);
       if (-1 === length) {
-        length = arr.length;
+        length = cookie.length;
       } else if (length < index) {
-        let sum = arr.lastIndexOf(";", index - 1) + 1;
+        let sum = cookie.lastIndexOf(";", index - 1) + 1;
         num = sum;
-        if (sum >= arr.length) {
+        if (sum >= cookie.length) {
           break;
         }
       }
-      let str = arr.slice(num, index);
+      let str = cookie.slice(num, index);
       let trimmed = str.trim();
       if (undefined === obj[trimmed]) {
-        let str2 = arr.slice(index + 1, length);
+        let str2 = cookie.slice(index + 1, length);
         let trimmed1 = str2.trim();
         index = trimmed1;
         if (34 === trimmed1.charCodeAt(0)) {

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "7beab7b17eaa9ff7ceed3e5b1af274c2",
-  name: "pt-BR",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "ca5ed05660659bd429f0c8e3c3fa0755",
+  name: "ic_trash_24px",
   type: "png",
 });

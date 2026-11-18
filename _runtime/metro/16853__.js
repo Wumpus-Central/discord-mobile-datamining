@@ -1,30 +1,13 @@
 // _runtime/metro/16853__.js
-import _mod17 from "00017__.js";
-import replaceByteInByteSequence from "../16854_replaceByteInByteSequence.js";
+import registerAsset from "01119__.js";
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
-}
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
-  }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
-  }
-};
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
-
-export const URL = replaceByteInByteSequence.URL;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "2c9d6b044e5ee68661cb6d6e33d3d458",
+  name: "EmojiPartyingFaceIcon",
+  type: "png",
+});

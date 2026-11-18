@@ -1,13 +1,16 @@
 // _runtime/metro/07096__.js
-import registerAsset from "01119__.js";
+import GestureHandlerRefContext from "../07069_GestureHandlerRefContext.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "d9ea4c0baebc914200caf39582084fac",
-  name: "img_account_sync_twitch_light_and_dark",
-  type: "png",
-});
+require = arg1;
+
+export function useGestureHandlerRef() {
+  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
+    throw error;
+  } else {
+    return context;
+  }
+}

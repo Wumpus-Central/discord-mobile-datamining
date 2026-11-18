@@ -1,7 +1,13 @@
 // _runtime/metro/16849__.js
-import _mod17 from "00017__.js";
-import setupURLPolyfill_mod from "../16850_setupURLPolyfill.js";
+import registerAsset from "01119__.js";
 
-const Platform = _mod17.Platform;
-let setupURLPolyfill = setupURLPolyfill_mod;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "152a215f261a7892afe1032dd66353df",
+  name: "EmojiMoneyMouthFaceIcon",
+  type: "png",
+});

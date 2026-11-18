@@ -1,11 +1,13 @@
 // _runtime/metro/16807__.js
-import _mod16808 from "16808__.js";
+import registerAsset from "01119__.js";
 
-export default (obj) => {
-  if (typeof obj === "object") {
-    let tmp2 = null !== obj;
-  } else {
-    tmp2 = _mod16808(obj);
-  }
-  return tmp2;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/hexagon_campaign/images",
+  width: 32,
+  height: 24,
+  scales: [2, 3, 4],
+  hash: "c20f5cd14c5f693d97dedff22cf6001d",
+  name: "hexagon_campaign_font_logo",
+  type: "png",
+});

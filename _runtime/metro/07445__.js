@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "80139ae0e2b501617462c705b80c97d5",
-  name: "ScreenStreamIcon",
+  hash: "dd2bf1474590dee83bbb5fea2b4f182c",
+  name: "CircleCheckIcon-primary",
   type: "png",
 });

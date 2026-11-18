@@ -1,13 +1,13 @@
 // _runtime/metro/16831__.js
-import _mod16832 from "16832__.js";
+import registerAsset from "01119__.js";
 
-export default (arg0) => {
-  let num = 0;
-  {
-    num = 0;
-    if (0 !== tmp) {
-      num = _mod16832(tmp);
-    }
-  }
-  return num;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "3feea67804381f17d046d28e82abf627",
+  name: "EmojiAngryFaceWithHornsIcon",
+  type: "png",
+});

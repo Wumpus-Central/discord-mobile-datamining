@@ -1,5 +1,5 @@
 // _runtime/00699_MAX_BAGGAGE_STRING_LENGTH.js
-import _mod687 from "metro/00687__.js";
+import __SENTRY_DEBUG__ from "metro/00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "00688_consoleSandbox.js";
 import _mod691 from "metro/00691__.js";
 
@@ -13,14 +13,14 @@ const re3 = tmp2;
 export const MAX_BAGGAGE_STRING_LENGTH = 8192;
 export const SENTRY_BAGGAGE_KEY_PREFIX = "sentry-";
 export const SENTRY_BAGGAGE_KEY_PREFIX_REGEX = tmp2;
-export function baggageHeaderToDynamicSamplingContext(arr) {
-  if (arr) {
-    if (!obj.isString(arr)) {
+export function baggageHeaderToDynamicSamplingContext(baggage) {
+  if (baggage) {
+    if (!obj.isString(baggage)) {
       const _Array = Array;
     }
     const _Array2 = Array;
-    if (Array.isArray(arr)) {
-      let reduced = arr.reduce((acc, item) => {
+    if (Array.isArray(baggage)) {
+      let reduced = baggage.reduce((acc, item) => {
         closure_0 = acc;
         const parts = item.split(",");
         const mapped = parts.map((arr) => {
@@ -58,7 +58,7 @@ export function baggageHeaderToDynamicSamplingContext(arr) {
         return acc;
       }, {});
     } else {
-      let parts = arr.split(",");
+      let parts = baggage.split(",");
       let mapped = parts.map((arr) => {
         const index = arr.indexOf("=");
         if (-1 === index) {
@@ -133,7 +133,7 @@ export function dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingConte
         }
         if (combined1.length > 8192) {
           combined1 = acc;
-          if (_mod687.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
             const debug = consoleSandbox.debug;
             const _HermesInternal2 = HermesInternal;
             debug.warn(
@@ -166,7 +166,7 @@ export function objectToBaggageHeader(arg0) {
       }
       if (combined1.length > 8192) {
         combined1 = acc;
-        if (_mod687.DEBUG_BUILD) {
+        if (__SENTRY_DEBUG__.DEBUG_BUILD) {
           const debug = consoleSandbox.debug;
           const _HermesInternal2 = HermesInternal;
           debug.warn(

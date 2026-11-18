@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/application_widget",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hcHBsaWNhdGlvbl93aWRnZXQ=",
   scales: [1],
-  hash: "062641250687eb2699a25dd8f44d77ae",
-  name: "ApplicationWidget.compiled.messages",
+  hash: "a20e92fcc9c5a61c45df560fb8f5f158",
+  name: "hi.messages.a20e92fcc9c5a61c45df560fb8f5f158.compiled.messages",
   type: "jsona",
 });

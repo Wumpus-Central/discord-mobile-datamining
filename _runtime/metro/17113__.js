@@ -3,11 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 8,
-  height: 13,
-  scales: [2, 3],
-  hash: "f22850e4ccd7b23bc996d7a6a44cbe21",
-  name: "ic_table_arrow_right",
-  type: "png",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
+  scales: [1],
+  hash: "1240638c60c6143203e89b55bf3dd564",
+  name: "fi.messages.1240638c60c6143203e89b55bf3dd564.compiled.messages",
+  type: "jsona",
 });

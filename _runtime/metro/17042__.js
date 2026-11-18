@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c9224fd30c3d577cc141b2b883b31e09",
-  name: "ic_call_status_red_24px",
+  hash: "45e29ff493e27168e5d63eb6f088968a",
+  name: "WrenchIcon",
   type: "png",
 });

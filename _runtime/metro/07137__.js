@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1],
-  hash: "b5850b914f9528f3de18a75020fab1b9",
-  name: "img_account_sync_facebook_white",
-  type: "svg",
+  scales: [2, 3],
+  hash: "80a1b67e775ddb8de80fde27e63a5302",
+  name: "CircleErrorIcon-secondary",
+  type: "png",
 });

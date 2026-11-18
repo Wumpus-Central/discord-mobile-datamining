@@ -1,13 +1,28 @@
 // _runtime/metro/15481__.js
-import registerAsset from "01119__.js";
+import _mod15465 from "15465__.js";
+import _mod15466 from "15466__.js";
+import _mod15482 from "15482__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/seasonal",
-  width: 144,
-  height: 150,
-  scales: [1],
-  hash: "9326b8f858addb08d8cfb2f4710ba77a",
-  name: "coffee_idle",
-  type: "png",
+let prop = _mod15465["__core-js_shared__"];
+if (!prop) {
+  prop = _mod15466("__core-js_shared__", {});
+}
+let versions = prop.versions;
+if (!versions) {
+  const items = [];
+  prop.versions = items;
+  versions = items;
+}
+let str2 = "global";
+if (_mod15482) {
+  str2 = "pure";
+}
+versions.push({
+  version: "3.41.0",
+  mode: str2,
+  copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)",
+  license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE",
+  source: "https://github.com/zloirock/core-js",
 });
+
+export default prop;

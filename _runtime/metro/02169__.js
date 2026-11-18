@@ -501,60 +501,60 @@ let fn = () => {
       return NaN;
     }
   }
-  function set$1(isValid, Date, module_4593) {
+  function set$1(isValid, Date, arg2) {
     if (isValid.isValid()) {
       const _isNaN = isNaN;
-      if (!isNaN(module_4593)) {
+      if (!isNaN(arg2)) {
         ({ _d, _isUTC } = isValid);
         if ("Milliseconds" === Date) {
           if (_isUTC) {
-            _d.setUTCMilliseconds(module_4593);
+            _d.setUTCMilliseconds(arg2);
           } else {
-            _d.setMilliseconds(module_4593);
+            _d.setMilliseconds(arg2);
           }
         } else if ("Seconds" === Date) {
           if (_isUTC) {
-            _d.setUTCSeconds(module_4593);
+            _d.setUTCSeconds(arg2);
           } else {
-            _d.setSeconds(module_4593);
+            _d.setSeconds(arg2);
           }
         } else if ("Minutes" === Date) {
           if (_isUTC) {
-            _d.setUTCMinutes(module_4593);
+            _d.setUTCMinutes(arg2);
           } else {
-            _d.setMinutes(module_4593);
+            _d.setMinutes(arg2);
           }
         } else if ("Hours" === Date) {
           if (_isUTC) {
-            _d.setUTCHours(module_4593);
+            _d.setUTCHours(arg2);
           } else {
-            _d.setHours(module_4593);
+            _d.setHours(arg2);
           }
         } else if ("Date" === Date) {
           if (_isUTC) {
-            _d.setUTCDate(module_4593);
+            _d.setUTCDate(arg2);
           } else {
-            _d.setDate(module_4593);
+            _d.setDate(arg2);
           }
         } else if ("FullYear" === Date) {
           const monthResult = isValid.month();
           const dateResult = isValid.date();
           if (29 === dateResult) {
             if (1 === monthResult) {
-              const result = module_4593 % 4;
+              const result = arg2 % 4;
               let tmp7 = result === 0;
               if (result === 0) {
-                tmp7 = module_4593 % 100 !== 0;
+                tmp7 = arg2 % 100 !== 0;
               }
               if (!tmp7) {
-                tmp7 = module_4593 % 400 === 0;
+                tmp7 = arg2 % 400 === 0;
               }
               let num7 = 28;
             }
             if (_isUTC) {
-              _d.setUTCFullYear(module_4593, monthResult, num7);
+              _d.setUTCFullYear(arg2, monthResult, num7);
             } else {
-              _d.setFullYear(module_4593, monthResult, num7);
+              _d.setFullYear(arg2, monthResult, num7);
             }
           }
           num7 = dateResult;
@@ -652,13 +652,13 @@ let fn = () => {
       return tmp9;
     }
   }
-  function setMonth(isValid, str) {
-    if (isValid.isValid()) {
-      let num = str;
-      if (typeof str === "string") {
-        if (obj2.test(str)) {
+  function setMonth(monthsParseResult, bound) {
+    if (monthsParseResult.isValid()) {
+      let num = bound;
+      if (typeof bound === "string") {
+        if (obj2.test(bound)) {
           let isFiniteResult = 0 !== tmp6;
-          if (0 !== +str) {
+          if (0 !== +bound) {
             const _isFinite = isFinite;
             isFiniteResult = isFinite(tmp6);
           }
@@ -673,27 +673,27 @@ let fn = () => {
             rounded = Math.floor(tmp6);
           }
         } else {
-          const monthsParseResult = isValid.localeData().monthsParse(str);
+          monthsParseResult = monthsParseResult.localeData().monthsParse(bound);
           if (typeof monthsParseResult === "number") {
             num = monthsParseResult;
             if (!tmp3) {
-              return isValid;
+              return monthsParseResult;
             }
           } else {
             const _Object = Object;
-            str = Object.prototype.toString;
+            let str = Object.prototype.toString;
             const call = str.call;
             str = "[object Number]";
             const tmp4 = typeof call === "unknown" ? str() : call(monthsParseResult);
           }
-          const localeDataResult = isValid.localeData();
+          const localeDataResult = monthsParseResult.localeData();
         }
         obj2 = /^\d+$/;
       }
-      const dateResult = isValid.date();
-      let bound = dateResult;
+      const dateResult = monthsParseResult.date();
+      bound = dateResult;
       if (dateResult >= 29) {
-        const yearResult = isValid.year();
+        const yearResult = monthsParseResult.year();
         const _isNaN2 = isNaN;
         let num5 = NaN;
         if (!isNaN(yearResult)) {
@@ -723,15 +723,15 @@ let fn = () => {
         }
         bound = Math.min(dateResult, num5);
       }
-      const _d = isValid._d;
-      if (isValid._isUTC) {
+      const _d = monthsParseResult._d;
+      if (monthsParseResult._isUTC) {
         _d.setUTCMonth(num, bound);
       } else {
         _d.setMonth(num, bound);
       }
-      return isValid;
+      return monthsParseResult;
     } else {
-      return isValid;
+      return monthsParseResult;
     }
   }
   function computeMonthsParse() {
@@ -3069,8 +3069,8 @@ let fn = () => {
         if (!hasOwnProperty2Result) {
           continue;
         } else {
-          tmp18 = f86824;
-          call = f86824.call;
+          tmp18 = f84401;
+          call = f84401.call;
           tmp19 = closure_82;
           if (typeof call === "unknown") {
             tmp18Result = tmp18(key10033);

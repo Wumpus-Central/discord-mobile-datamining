@@ -55,14 +55,14 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
         tmp2(964).startProfileForSpan(rootSpan);
         const tmp2Result15 = tmp2(964);
       }
-      getOptions.on("spanStart", (rootSpan) => {
-        let result = rootSpan === uIProfiler(681).getRootSpan(rootSpan);
+      getOptions.on("spanStart", (activeSpan) => {
+        let result = activeSpan === uIProfiler(681).getRootSpan(activeSpan);
         if (result) {
-          result = uIProfiler(963).shouldProfileSpanLegacy(rootSpan);
+          result = uIProfiler(963).shouldProfileSpanLegacy(activeSpan);
           const tmpResult = uIProfiler(963);
         }
         if (result) {
-          uIProfiler(964).startProfileForSpan(rootSpan);
+          uIProfiler(964).startProfileForSpan(activeSpan);
           const tmpResult2 = uIProfiler(964);
         }
         const obj = uIProfiler(681);

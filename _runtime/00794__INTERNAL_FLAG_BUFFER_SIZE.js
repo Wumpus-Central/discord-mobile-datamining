@@ -1,6 +1,6 @@
 // _runtime/00794__INTERNAL_FLAG_BUFFER_SIZE.js
 import spanToJSON from "00683_spanToJSON.js";
-import _mod687 from "metro/00687__.js";
+import __SENTRY_DEBUG__ from "metro/00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "00688_consoleSandbox.js";
 import _mod712 from "metro/00712__.js";
 
@@ -67,7 +67,7 @@ export function _INTERNAL_insertFlagToScope(flagKey, value) {
   closure_0 = flagKey;
   if (typeof value === "boolean") {
     if (values.length > num) {
-      if (_mod687.DEBUG_BUILD) {
+      if (__SENTRY_DEBUG__.DEBUG_BUILD) {
         const debug = consoleSandbox.debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + num);
@@ -89,7 +89,7 @@ export function _INTERNAL_insertToFlagBuffer(arr, flag, result, arg3) {
   closure_0 = flag;
   if (typeof result === "boolean") {
     if (arr.length > arg3) {
-      if (_mod687.DEBUG_BUILD) {
+      if (__SENTRY_DEBUG__.DEBUG_BUILD) {
         const debug = consoleSandbox.debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + arg3);

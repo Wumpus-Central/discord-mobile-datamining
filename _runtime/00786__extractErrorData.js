@@ -1,13 +1,13 @@
 // _runtime/00786__extractErrorData.js
 import _mod686 from "metro/00686__.js";
-import _mod687 from "metro/00687__.js";
+import __SENTRY_DEBUG__ from "metro/00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "00688_consoleSandbox.js";
 import _mod691 from "metro/00691__.js";
 import _mod696 from "metro/00696__.js";
 import normalize from "00729_normalize.js";
 import setupIntegration from "00751_setupIntegration.js";
 
-function _extractErrorData(cause, arg1, arg2) {
+function _extractErrorData(cause, arg1, maxValueLength) {
   try {
     items = ["name", "message", "stack", "line", "column", "fileName", "lineNumber", "columnNumber", "toJSON"];
     const obj = {};
@@ -28,10 +28,10 @@ function _extractErrorData(cause, arg1, arg2) {
             obj[tmp9] = tmp41;
           }
         }
-        if (arg2) {
+        if (maxValueLength) {
           let tmp44Result = _mod696;
           let _HermesInternal2 = HermesInternal;
-          let truncateResult = tmp44Result.truncate("" + tmp41, arg2);
+          let truncateResult = tmp44Result.truncate("" + tmp41, maxValueLength);
         } else {
           let _HermesInternal = HermesInternal;
           truncateResult = "" + tmp41;
@@ -46,7 +46,7 @@ function _extractErrorData(cause, arg1, arg2) {
             name = cause.cause.constructor.name;
           }
           const obj2 = {};
-          obj2[name] = _extractErrorData(cause.cause, false, arg2);
+          obj2[name] = _extractErrorData(cause.cause, false, maxValueLength);
           obj.cause = obj2;
         } else {
           obj.cause = cause.cause;
@@ -74,7 +74,7 @@ function _extractErrorData(cause, arg1, arg2) {
     }
     return obj;
   } catch (tmp32) {
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = consoleSandbox.debug;
       debug.error("Unable to extract extra data from the Error object:", tmp32);
     }

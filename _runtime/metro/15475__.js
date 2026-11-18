@@ -1,13 +1,11 @@
 // _runtime/metro/15475__.js
-import registerAsset from "01119__.js";
+import _mod15476 from "15476__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/standard",
-  width: 144,
-  height: 150,
-  scales: [1],
-  hash: "8d849400b440a33fbe389f999a0310ea",
-  name: "cake_idle",
-  type: "png",
-});
+export default (arg0) => {
+  if (_mod15476(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
+  } else {
+    return arg0;
+  }
+};

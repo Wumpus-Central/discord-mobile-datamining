@@ -1,13 +1,12 @@
 // _runtime/metro/15466__.js
-import registerAsset from "01119__.js";
+import _mod15465 from "15465__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 88,
-  height: 40,
-  scales: [2, 3],
-  hash: "bb1baaeee62e8a609680d1082f363744",
-  name: "img_gifting_empty",
-  type: "png",
-});
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod15465, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod15465[tmp2] = tmp;
+  }
+};

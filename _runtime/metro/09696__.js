@@ -1,13 +1,13 @@
 // _runtime/metro/09696__.js
-import _mod19 from "00019__.js";
+import registerAsset from "01119__.js";
 
-const useRef = _mod19.useRef;
-let closure_1 = {};
-
-export default function useLazyValue(fn) {
-  const tmp = useRef(closure_1);
-  if (tmp.current === closure_1) {
-    tmp.current = fn();
-  }
-  return tmp.current;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "eaee56f86ca7905c61b8b9a3d1c990d4",
+  name: "MinecraftNeutralIcon-primary",
+  type: "png",
+});

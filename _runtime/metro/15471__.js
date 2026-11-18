@@ -1,13 +1,19 @@
 // _runtime/metro/15471__.js
-import registerAsset from "01119__.js";
+import _mod15469 from "15469__.js";
+import _mod15472 from "15472__.js";
+import _mod15474 from "15474__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 250,
-  height: 125,
-  scales: [2, 3],
-  hash: "055ef15e97264c0633986165b3aae3ac",
-  name: "img_outbound_promotion_redemption",
-  type: "png",
-});
+let fn = Object;
+let closure_3 = _mod15472("".split);
+if (_mod15469(() => !Object("z").propertyIsEnumerable(0))) {
+  fn = (arg0) => {
+    if ("String" === _mod15474(arg0)) {
+      let tmp2 = closure_3(arg0, "");
+    } else {
+      tmp2 = Object(arg0);
+    }
+    return tmp2;
+  };
+}
+
+export default fn;

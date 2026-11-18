@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/custom_app_icons/CamoIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "4ff7b09e67486edcd0ad75a5131670be",
-  name: "CirclePlayIcon-primary",
+  hash: "4e81188cb8befe97a7c2fb2d0b3c1c42",
+  name: "CamoIcon",
   type: "png",
 });

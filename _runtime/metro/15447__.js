@@ -1,13 +1,29 @@
 // _runtime/metro/15447__.js
-import registerAsset from "01119__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 45.5,
-  height: 8.5,
-  scales: [2, 3],
-  hash: "8d16389f341b45c184ca21d1deb5fd2e",
-  name: "img_logo_discord",
-  type: "png",
-});
+const require = arg1;
+const dependencyMap = arg6;
+
+export function getSupportedCalendars(locale) {
+  _require = locale;
+  const calendars = require("15448__.js").calendars;
+  return calendars.filter((item) =>
+    (function isSupportedCalendar(item, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const concat = "".concat;
+        const combined = "".concat(str, "-u-ca-");
+        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
+        if ("gregory" === item) {
+          if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
+            return false;
+          }
+        }
+        return true;
+      } catch (err) {}
+    })(item, closure_0),
+  );
+}

@@ -1,19 +1,13 @@
 // _runtime/metro/07565__.js
-import LegacyBaseButton from "../05592_LegacyBaseButton.js";
-import GestureHandlerRefContext from "../07566_GestureHandlerRefContext.js";
-import noop from "00019__.js";
+import registerAsset from "01119__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-
-export function PanGestureHandler(arg0) {
-  const ref = noop.useRef(null);
-  const obj = { value: ref, children: null };
-  const obj2 = {};
-  const merged = Object.assign(arg0);
-  obj2.ref = ref;
-  obj.children = jsx(LegacyBaseButton.PanGestureHandler, {});
-  return jsx(GestureHandlerRefContext.GestureHandlerRefContext.Provider, { value: ref, children: null });
-}
-export const GestureHandlerRootView = fn(5592).GestureHandlerRootView;
-export const GestureState = fn(5592).State;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "97a83fa92aca73b91331f0f57ecb4c27",
+  name: "ForumIcon",
+  type: "png",
+});

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 128,
-  height: 128,
-  scales: [2, 3],
-  hash: "9ba5a3a00b166d9fbfaee0f42d9a0d05",
-  name: "app_dock_no_permissions_light",
+  httpServerLocation: "/assets/images/native",
+  width: 121,
+  height: 80,
+  scales: [1, 2, 3],
+  hash: "dc39c8debe144867da8663a97ac0ae70",
+  name: "link_expired_light",
   type: "png",
 });

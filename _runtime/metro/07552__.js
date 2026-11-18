@@ -1,13 +1,13 @@
 // _runtime/metro/07552__.js
+import registerAsset from "01119__.js";
 
-export function getLabel(label, arg1) {
-  if (undefined !== label.label) {
-    let title = label.label;
-  } else {
-    title = arg1;
-    if (undefined !== label.title) {
-      title = label.title;
-    }
-  }
-  return title;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "5e2fd14b31cdd1bad77d12d7b0ab7334",
+  name: "AppsIcon",
+  type: "png",
+});

@@ -38,21 +38,21 @@ function _wrapXHR(arg0) {
     const item = items.forEach((item) => {
       _self = item;
       if (tmp2) {
-        _self(dependencyMap[0]).fill(self, item, (arg0) => {
+        _self(dependencyMap[0]).fill(self, item, (__sentry_original__) => {
           const obj = { mechanism: null };
           const obj2 = { data: null, handled: false, type: null };
-          const obj3 = { handler: self(681).getFunctionName(arg0) };
+          const obj3 = { handler: self(681).getFunctionName(__sentry_original__) };
           obj2.data = obj3;
           obj2.type = "auto.browser.browserapierrors.xhr." + closure_0;
           obj.mechanism = obj2;
           const obj4 = self(681);
-          const originalFunction = self(681).getOriginalFunction(arg0);
+          const originalFunction = self(681).getOriginalFunction(__sentry_original__);
           if (originalFunction) {
             obj.mechanism.data.handler = self(681).getFunctionName(originalFunction);
             const tmpResult = self(681);
           }
           const obj5 = self(681);
-          return self(890).wrap(arg0, obj);
+          return self(890).wrap(__sentry_original__, obj);
         });
         let obj = _self(dependencyMap[0]);
       }

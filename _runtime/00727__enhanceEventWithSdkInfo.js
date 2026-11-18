@@ -65,8 +65,8 @@ function _enhanceEventWithSdkInfo(sdk, name) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export { _enhanceEventWithSdkInfo };
-export function createEventEnvelope(type, url, sdk, arg3) {
-  const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem.getSdkMetadataForEnvelopeHeader(sdk);
+export function createEventEnvelope(type, _dsn, _metadata, tunnel) {
+  const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem.getSdkMetadataForEnvelopeHeader(_metadata);
   let str = "event";
   if (type.type) {
     str = "event";
@@ -74,16 +74,16 @@ export function createEventEnvelope(type, url, sdk, arg3) {
       str = type.type;
     }
   }
-  sdk = undefined;
-  if (sdk != null) {
-    sdk = sdk.sdk;
+  let sdk;
+  if (_metadata != null) {
+    sdk = _metadata.sdk;
   }
   _enhanceEventWithSdkInfo(type, sdk);
   const eventEnvelopeHeaders = forEachEnvelopeItem.createEventEnvelopeHeaders(
     type,
     sdkMetadataForEnvelopeHeader,
-    arg3,
-    url,
+    tunnel,
+    _dsn,
   );
   delete tmp[tmp2];
   items = [{ type: str }, type];
@@ -91,8 +91,8 @@ export function createEventEnvelope(type, url, sdk, arg3) {
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(eventEnvelopeHeaders, items1);
 }
-export function createSessionEnvelope(toJSON, url, sdk, arg3) {
-  const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem.getSdkMetadataForEnvelopeHeader(sdk);
+export function createSessionEnvelope(toJSON, _dsn, _metadata, tunnel) {
+  const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem.getSdkMetadataForEnvelopeHeader(_metadata);
   const obj2 = { sent_at: null };
   obj2.sent_at = new Date().toISOString();
   let tmp4 = sdkMetadataForEnvelopeHeader;
@@ -101,9 +101,9 @@ export function createSessionEnvelope(toJSON, url, sdk, arg3) {
     tmp4 = obj3;
   }
   const merged = Object.assign(tmp4);
-  let tmp6 = arg3 && url;
+  let tmp6 = tunnel && _dsn;
   if (tmp6) {
-    const obj4 = { dsn: _mod701.dsnToString(url) };
+    const obj4 = { dsn: _mod701.dsnToString(_dsn) };
     tmp6 = obj4;
     const tmpResult = _mod701;
   }
@@ -118,15 +118,15 @@ export function createSessionEnvelope(toJSON, url, sdk, arg3) {
   const items2 = [items1];
   return forEachEnvelopeItem.createEnvelope(obj2, items2);
 }
-export function createSpanEnvelope(arr, getDsn) {
-  const dynamicSamplingContextFromSpan = beforeSendSpan(ignoreSpans[2]).getDynamicSamplingContextFromSpan(arr[0]);
+export function createSpanEnvelope(items, client) {
+  const dynamicSamplingContextFromSpan = beforeSendSpan(ignoreSpans[2]).getDynamicSamplingContextFromSpan(items[0]);
   let dsn;
-  if (getDsn != null) {
-    dsn = getDsn.getDsn();
+  if (client != null) {
+    dsn = client.getDsn();
   }
   let tunnel;
-  if (getDsn != null) {
-    tunnel = getDsn.getOptions().tunnel;
+  if (client != null) {
+    tunnel = client.getOptions().tunnel;
   }
   let obj = beforeSendSpan(ignoreSpans[2]);
   const obj2 = { sent_at: new Date().toISOString() };
@@ -146,8 +146,8 @@ export function createSpanEnvelope(arr, getDsn) {
   }
   const merged1 = Object.assign(tmp10);
   let options;
-  if (getDsn != null) {
-    options = getDsn.getOptions();
+  if (client != null) {
+    options = client.getOptions();
   }
   if (!options) {
     options = {};
@@ -158,22 +158,22 @@ export function createSpanEnvelope(arr, getDsn) {
   if (ignoreSpans != null) {
     length = ignoreSpans.length;
   }
-  let found = arr;
+  let found = items;
   if (length) {
-    found = arr.filter((item) => {
+    found = items.filter((item) => {
       const obj = logIgnoredSpan;
       return !obj.shouldIgnoreSpan(spanToJSON2.spanToJSON(item), ignoreSpans);
     });
   }
-  const diff = arr.length - found.length;
+  const diff = items.length - found.length;
   if (diff) {
-    if (getDsn != null) {
-      getDsn.recordDroppedEvent("before_send", "span", diff);
+    if (client != null) {
+      client.recordDroppedEvent("before_send", "span", diff);
     }
   }
   if (beforeSendSpan) {
-    const fn = (arg0) => {
-      const spanToJSONResult = spanToJSON2.spanToJSON(arg0);
+    const fn = (activeSpan) => {
+      const spanToJSONResult = spanToJSON2.spanToJSON(activeSpan);
       let tmp4 = beforeSendSpan(spanToJSONResult);
       if (!tmp4) {
         spanToJSON2.showSpanDropWarning();

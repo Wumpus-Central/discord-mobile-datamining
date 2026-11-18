@@ -1,5 +1,5 @@
 // _runtime/00064_sizesDiffer.js
-let closure_0 = { width: "Array", height: "Path" };
+let closure_0 = { width: "__d", height: "enabled" };
 
 export default function sizesDiffer(arg0, arg1) {
   let size = arg0;

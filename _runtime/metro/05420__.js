@@ -1,57 +1,10 @@
 // _runtime/metro/05420__.js
-import c from "../05402_c.js";
-import _mod5415 from "05415__.js";
-import _slicedToArray from "00032__.js";
+import _mod17 from "00017__.js";
+import _mod26 from "00026__.js";
+import 00065__ from "00065__.js";
 
-const RiveColor2 = tmp(5410);
-require = fn;
-fn(19).useCallback;
-const f35428 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNPlainText", validAttributes: { text: true, color: _mod26.colorAttribute, fontSize: true, fontFamily: true, fontWeight: true, fontStyle: true, fontVariant: true, fontVariationSettings: true, lineHeight: true, letterSpacing: true, hasLetterSpacing: true, textAlign: true, textAlignVertical: true, textDecorationLine: true, textTransform: true, numberOfLines: true, ellipsizeMode: true, allowFontScaling: true, maxFontSizeMultiplier: true, experiment: true, lineHeightClippingIos: true, includeFontPadding: true } };
 
-export function useRiveColor(FillColor, instance) {
-  const cResult = c.c(8);
-  const tmp4 = _slicedToArray(_mod5415.useRiveProperty(instance, FillColor, f35428), 3);
-  [tmp5, tmp6] = tmp4;
-  require = tmp6;
-  if (cResult[0] !== tmp5) {
-    let fromIntResult;
-    if (undefined !== tmp5) {
-      let RiveColor = RiveColor2.RiveColor;
-      fromIntResult = RiveColor.fromInt(tmp5);
-    }
-    cResult[0] = tmp5;
-    cResult[1] = fromIntResult;
-    let tmp8 = fromIntResult;
-  } else {
-    tmp8 = cResult[1];
-  }
-  if (cResult[2] !== tmp6) {
-    const fn = function p(str) {
-      let fromHexStringResult = str;
-      if (typeof str === "string") {
-        const RiveColor = RiveColor2.RiveColor;
-        fromHexStringResult = RiveColor.fromHexString(str);
-      }
-      tmp6(fromHexStringResult.toInt());
-    };
-    cResult[2] = tmp6;
-    cResult[3] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[3];
-  }
-  if (cResult[4] === tmp4[2]) {
-    if (cResult[5] === tmp10) {
-      if (cResult[6] === tmp8) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
-    }
-  }
-  const obj3 = { value: tmp8, setValue: tmp10, error: tmp4[2] };
-  cResult[4] = tmp4[2];
-  cResult[5] = tmp10;
-  cResult[6] = tmp8;
-  cResult[7] = obj3;
-  tmp11 = obj3;
-}
+export default module_65.get("RNPlainText", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

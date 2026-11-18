@@ -1,7 +1,4 @@
 // _runtime/metro/05614__.js
-let closure_0 = 1;
+import _mod547 from "00547__.js";
 
-export function getNextHandlerTag() {
-  closure_0 = tmp + 1;
-  return +closure_0;
-}
+export default _mod547(Object.getPrototypeOf, Object);

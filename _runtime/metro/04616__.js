@@ -1,24 +1,134 @@
 // _runtime/metro/04616__.js
-let closure_0 = { lessThanXSeconds: { one: "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC \u03AD\u03BD\u03B1 \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03BF", other: "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC {{count}} \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1" }, xSeconds: { one: "1 \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03BF", other: "{{count}} \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1" }, halfAMinute: "\u03BC\u03B9\u03C3\u03CC \u03BB\u03B5\u03C0\u03C4\u03CC", lessThanXMinutes: { one: "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC \u03AD\u03BD\u03B1 \u03BB\u03B5\u03C0\u03C4\u03CC", other: "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC {{count}} \u03BB\u03B5\u03C0\u03C4\u03AC" }, xMinutes: { one: "1 \u03BB\u03B5\u03C0\u03C4\u03CC", other: "{{count}} \u03BB\u03B5\u03C0\u03C4\u03AC" }, aboutXHours: { one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03CE\u03C1\u03B1", other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03CE\u03C1\u03B5\u03C2" }, xHours: { one: "1 \u03CE\u03C1\u03B1", other: "{{count}} \u03CE\u03C1\u03B5\u03C2" }, xDays: { one: "1 \u03B7\u03BC\u03AD\u03C1\u03B1", other: "{{count}} \u03B7\u03BC\u03AD\u03C1\u03B5\u03C2" }, aboutXWeeks: { one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B1", other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B5\u03C2" }, xWeeks: { one: "1 \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B1", other: "{{count}} \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B5\u03C2" }, aboutXMonths: { one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03BC\u03AE\u03BD\u03B1\u03C2", other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03BC\u03AE\u03BD\u03B5\u03C2" }, xMonths: { one: "1 \u03BC\u03AE\u03BD\u03B1\u03C2", other: "{{count}} \u03BC\u03AE\u03BD\u03B5\u03C2" }, aboutXYears: { one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03C7\u03C1\u03CC\u03BD\u03BF", other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1" }, xYears: { one: "1 \u03C7\u03C1\u03CC\u03BD\u03BF", other: "{{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1" }, overXYears: { one: "\u03C0\u03AC\u03BD\u03C9 \u03B1\u03C0\u03CC 1 \u03C7\u03C1\u03CC\u03BD\u03BF", other: "\u03C0\u03AC\u03BD\u03C9 \u03B1\u03C0\u03CC {{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1" }, almostXYears: { one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03C7\u03C1\u03CC\u03BD\u03BF", other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1" } };
+import _mod2169 from "02169__.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp6 = tmp;
-    if (null != addSuffix) {
-      tmp6 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} πριν`;
+const fn = function t(moment) {
+  const obj = {
+    eras: null,
+    eraYearOrdinalRegex: /(元|\d+)年/,
+    eraYearOrdinalParse(match, match) {
+      let num = 1;
+      if ("\u5143" !== match[1]) {
+        let tmp2 = match[1];
+        if (!tmp2) {
+          tmp2 = match;
         }
-        text = `σε ${tmp}`;
+        num = parseInt(tmp2, 10);
       }
-    }
-    return tmp6;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
-  }
+      return num;
+    },
+    months: "1\u6708_2\u6708_3\u6708_4\u6708_5\u6708_6\u6708_7\u6708_8\u6708_9\u6708_10\u6708_11\u6708_12\u6708".split(
+      "_",
+    ),
+    monthsShort:
+      "1\u6708_2\u6708_3\u6708_4\u6708_5\u6708_6\u6708_7\u6708_8\u6708_9\u6708_10\u6708_11\u6708_12\u6708".split("_"),
+    weekdays:
+      "\u65E5\u66DC\u65E5_\u6708\u66DC\u65E5_\u706B\u66DC\u65E5_\u6C34\u66DC\u65E5_\u6728\u66DC\u65E5_\u91D1\u66DC\u65E5_\u571F\u66DC\u65E5".split(
+        "_",
+      ),
+    weekdaysShort: "\u65E5_\u6708_\u706B_\u6C34_\u6728_\u91D1_\u571F".split("_"),
+    weekdaysMin: "\u65E5_\u6708_\u706B_\u6C34_\u6728_\u91D1_\u571F".split("_"),
+    longDateFormat: {
+      LT: "HH:mm",
+      LTS: "HH:mm:ss",
+      L: "YYYY/MM/DD",
+      LL: "YYYY\u5E74M\u6708D\u65E5",
+      LLL: "YYYY\u5E74M\u6708D\u65E5 HH:mm",
+      LLLL: "YYYY\u5E74M\u6708D\u65E5 dddd HH:mm",
+      l: "YYYY/MM/DD",
+      ll: "YYYY\u5E74M\u6708D\u65E5",
+      lll: "YYYY\u5E74M\u6708D\u65E5 HH:mm",
+      llll: "YYYY\u5E74M\u6708D\u65E5(ddd) HH:mm",
+    },
+    meridiemParse: /午前|午後/i,
+    isPM(arg0) {
+      return "\u5348\u5F8C" === arg0;
+    },
+    meridiem(arg0, arg1, arg2) {
+      let str = "\u5348\u5F8C";
+      if (arg0 < 12) {
+        str = "\u5348\u524D";
+      }
+      return str;
+    },
+    calendar: {
+      sameDay: "[\u4ECA\u65E5] LT",
+      nextDay: "[\u660E\u65E5] LT",
+      nextWeek(week) {
+        let str = "dddd LT";
+        if (weekResult !== this.week()) {
+          str = "[\u6765\u9031]dddd LT";
+        }
+        return str;
+      },
+      lastDay: "[\u6628\u65E5] LT",
+      lastWeek(week) {
+        let str = "dddd LT";
+        if (weekResult !== week.week()) {
+          str = "[\u5148\u9031]dddd LT";
+        }
+        return str;
+      },
+      sameElse: "L",
+    },
+    dayOfMonthOrdinalParse: /\d{1,2}日/,
+    ordinal(arg0, arg1) {
+      if ("y" === arg1) {
+        let str5 = "\u5143\u5E74";
+        if (1 !== arg0) {
+          str5 = `${arg0}年`;
+        }
+        return str5;
+      } else {
+        if ("d" !== arg1) {
+          if ("D" !== arg1) {
+            if ("DDD" !== arg1) {
+              return arg0;
+            }
+          }
+        }
+        return arg0 + "\u65E5";
+      }
+    },
+    relativeTime: {
+      future: "%s\u5F8C",
+      past: "%s\u524D",
+      s: "\u6570\u79D2",
+      ss: "%d\u79D2",
+      m: "1\u5206",
+      mm: "%d\u5206",
+      h: "1\u6642\u9593",
+      hh: "%d\u6642\u9593",
+      d: "1\u65E5",
+      dd: "%d\u65E5",
+      M: "1\u30F6\u6708",
+      MM: "%d\u30F6\u6708",
+      y: "1\u5E74",
+      yy: "%d\u5E74",
+    },
+  };
+  items = [
+    { since: "2019-05-01", offset: 1, name: "\u4EE4\u548C", narrow: "\u32FF", abbr: "R" },
+    { since: "1989-01-08", until: "2019-04-30", offset: 1, name: "\u5E73\u6210", narrow: "\u337B", abbr: "H" },
+    { since: "1926-12-25", until: "1989-01-07", offset: 1, name: "\u662D\u548C", narrow: "\u337C", abbr: "S" },
+    { since: "1912-07-30", until: "1926-12-24", offset: 1, name: "\u5927\u6B63", narrow: "\u337D", abbr: "T" },
+    { since: "1873-01-01", until: "1912-07-29", offset: 6, name: "\u660E\u6CBB", narrow: "\u337E", abbr: "M" },
+    { since: "0001-01-01", until: "1873-12-31", offset: 1, name: "\u897F\u66A6", narrow: "AD", abbr: "AD" },
+    { since: "0000-12-31", until: -Infinity, offset: 1, name: "\u7D00\u5143\u524D", narrow: "BC", abbr: "BC" },
+  ];
+  obj.eras = items;
+  ({ split, split: split2 } = "\u65E5_\u6708_\u706B_\u6C34_\u6728_\u91D1_\u571F");
+  return moment.defineLocale("ja", obj);
 };
-export default exports.default;
+if (typeof exports === "object") {
+  if (undefined !== module) {
+    if (typeof require === "function") {
+      fn(_mod2169);
+    }
+  }
+}
+if (typeof globalThis.define === "function") {
+  if (globalThis.define.amd) {
+    globalThis.define(["../moment"], fn);
+  }
+}
+fn(this.moment);

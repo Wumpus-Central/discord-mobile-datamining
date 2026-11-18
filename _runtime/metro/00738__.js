@@ -3,8 +3,8 @@ import _mod697 from "00697__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function getFilenameToDebugIdMap(arg0) {
-  _require = arg0;
+function getFilenameToDebugIdMap(stackParser) {
+  _require = stackParser;
   const _sentryDebugIds = require("00685__.js").GLOBAL_OBJ._sentryDebugIds;
   const _debugIds = require("00685__.js").GLOBAL_OBJ._debugIds;
   if (!_sentryDebugIds) {
@@ -61,7 +61,7 @@ function getFilenameToDebugIdMap(arg0) {
         }
       }
       if (tmp3) {
-        let arr = closure_0(tmp2);
+        let arr = stackParser(tmp2);
         let diff = arr.length - 1;
         let tmp15 = diff;
         if (0 <= diff) {
@@ -99,11 +99,11 @@ function getFilenameToDebugIdMap(arg0) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function getDebugImagesForResources(arg0, arg1) {
-  const tmp = getFilenameToDebugIdMap(arg0);
+export function getDebugImagesForResources(stackParser, resources) {
+  const tmp = getFilenameToDebugIdMap(stackParser);
   items = [];
   if (tmp) {
-    const iter = arg1[Symbol.iterator]();
+    const iter = resources[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp7 = nextResult;

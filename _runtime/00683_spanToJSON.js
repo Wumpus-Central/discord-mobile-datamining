@@ -14,18 +14,18 @@ import _mod712 from "metro/00712__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function spanToJSON(getSpanJSON) {
-  if (typeof getSpanJSON.getSpanJSON === "function") {
-    return getSpanJSON.getSpanJSON();
+function spanToJSON(activeSpan) {
+  if (typeof activeSpan.getSpanJSON === "function") {
+    return activeSpan.getSpanJSON();
   } else {
-    ({ spanId, traceId } = getSpanJSON.spanContext());
+    ({ spanId, traceId } = activeSpan.spanContext());
     if (tmp) {
-      ({ attributes, startTime, endTime, status, links } = getSpanJSON);
+      ({ attributes, startTime, endTime, status, links } = activeSpan);
       const obj2 = {
         span_id: spanId,
         trace_id: traceId,
         data: attributes,
-        description: getSpanJSON.name,
+        description: activeSpan.name,
         parent_span_id: null,
         start_timestamp: null,
         timestamp: null,
@@ -34,10 +34,10 @@ function spanToJSON(getSpanJSON) {
         origin: null,
         links: null,
       };
-      if ("parentSpanId" in getSpanJSON) {
-        let parentSpanId = getSpanJSON.parentSpanId;
-      } else if ("parentSpanContext" in getSpanJSON) {
-        const parentSpanContext = getSpanJSON.parentSpanContext;
+      if ("parentSpanId" in activeSpan) {
+        let parentSpanId = activeSpan.parentSpanId;
+      } else if ("parentSpanContext" in activeSpan) {
+        const parentSpanContext = activeSpan.parentSpanContext;
         let spanId1;
         if (parentSpanContext != null) {
           spanId1 = parentSpanContext.spanId;
@@ -128,13 +128,12 @@ function spanToJSON(getSpanJSON) {
       const obj = { span_id: spanId, trace_id: traceId, start_timestamp: 0, data: {} };
       return obj;
     }
-    const spanContextResult = getSpanJSON.spanContext();
-    tmp =
-      getSpanJSON.attributes && getSpanJSON.startTime && getSpanJSON.name && getSpanJSON.endTime && getSpanJSON.status;
+    const spanContextResult = activeSpan.spanContext();
+    tmp = activeSpan.attributes && activeSpan.startTime && activeSpan.name && activeSpan.endTime && activeSpan.status;
   }
 }
-function spanIsSampled(spanContext) {
-  return 1 === spanContext.spanContext().traceFlags;
+function spanIsSampled(parentSpan) {
+  return 1 === parentSpan.spanContext().traceFlags;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = false;
@@ -185,19 +184,19 @@ export function getActiveSpan() {
   }
   return activeSpan;
 }
-export function getRootSpan(_getSpanForScopeResult) {
-  return _getSpanForScopeResult[_sentryRootSpan] || _getSpanForScopeResult;
+export function getRootSpan(activeSpan) {
+  return activeSpan[_sentryRootSpan] || activeSpan;
 }
-export function getSpanDescendants(arg0) {
+export function getSpanDescendants(activeSpan) {
   const set = new Set();
-  function addSpanChildren(arg0) {
-    if (!set.has(arg0)) {
-      if (spanIsSampled(arg0)) {
-        set.add(arg0);
+  function addSpanChildren(activeSpan) {
+    if (!set.has(activeSpan)) {
+      if (spanIsSampled(activeSpan)) {
+        set.add(activeSpan);
         let tmp3 = _sentryChildSpans;
-        if (arg0[_sentryChildSpans]) {
+        if (activeSpan[_sentryChildSpans]) {
           const _Array = Array;
-          items = Array.from(arg0[tmp3]);
+          items = Array.from(activeSpan[tmp3]);
         } else {
           items = [];
         }
@@ -206,16 +205,16 @@ export function getSpanDescendants(arg0) {
       }
     }
   }
-  addSpanChildren(arg0);
+  addSpanChildren(activeSpan);
   return Array.from(set);
 }
-export function getStatusMessage(code) {
-  if (code) {
-    if (code.code !== SPAN_STATUS_ERROR.SPAN_STATUS_UNSET) {
+export function getStatusMessage(_status) {
+  if (_status) {
+    if (_status.code !== SPAN_STATUS_ERROR.SPAN_STATUS_UNSET) {
       let str = "ok";
-      if (code.code !== SPAN_STATUS_ERROR.SPAN_STATUS_OK) {
-        str = code.message || "internal_error";
-        const tmp3 = code.message || "internal_error";
+      if (_status.code !== SPAN_STATUS_ERROR.SPAN_STATUS_OK) {
+        str = _status.message || "internal_error";
+        const tmp3 = _status.message || "internal_error";
       }
       return str;
     }
@@ -237,21 +236,21 @@ export function showSpanDropWarning() {
   }
 }
 export { spanIsSampled };
-export function spanTimeInputToSeconds(getTime) {
-  if (typeof getTime === "number") {
-    let result = getTime;
-    if (getTime > 9999999999) {
-      result = getTime / 1000;
+export function spanTimeInputToSeconds(startTime) {
+  if (typeof startTime === "number") {
+    let result = startTime;
+    if (startTime > 9999999999) {
+      result = startTime / 1000;
     }
     let sum = result;
   } else {
     const _Array = Array;
-    if (Array.isArray(getTime)) {
-      sum = getTime[0] + getTime[1] / 1000000000;
+    if (Array.isArray(startTime)) {
+      sum = startTime[0] + startTime[1] / 1000000000;
     } else {
       const _Date = Date;
-      if (getTime instanceof Date) {
-        const time = getTime.getTime();
+      if (startTime instanceof Date) {
+        const time = startTime.getTime();
         let result1 = time;
         if (time > 9999999999) {
           result1 = time / 1000;
@@ -265,14 +264,14 @@ export function spanTimeInputToSeconds(getTime) {
   return sum;
 }
 export { spanToJSON };
-export function spanToTraceContext(spanContext) {
-  const spanContextResult = spanContext.spanContext();
+export function spanToTraceContext(activeSpan) {
+  const spanContextResult = activeSpan.spanContext();
   ({ spanId, isRemote } = spanContextResult);
   let parent_span_id = spanId;
   if (!isRemote) {
-    parent_span_id = spanToJSON(spanContext).parent_span_id;
+    parent_span_id = spanToJSON(activeSpan).parent_span_id;
   }
-  const scope = unwrapScopeFromWeakRef.getCapturedScopesOnSpan(spanContext).scope;
+  const scope = unwrapScopeFromWeakRef.getCapturedScopesOnSpan(activeSpan).scope;
   const obj2 = { parent_span_id, span_id: null, trace_id: null };
   if (isRemote) {
     let propagationSpanId;
@@ -289,19 +288,19 @@ export function spanToTraceContext(spanContext) {
   obj2.trace_id = spanContextResult.traceId;
   return obj2;
 }
-export function spanToTraceHeader(spanContext) {
-  ({ traceId, spanId } = spanContext.spanContext());
-  const spanContextResult = spanContext.spanContext();
-  return _mod698.generateSentryTraceHeader(traceId, spanId, 1 === spanContext.spanContext().traceFlags);
+export function spanToTraceHeader(span) {
+  ({ traceId, spanId } = span.spanContext());
+  const spanContextResult = span.spanContext();
+  return _mod698.generateSentryTraceHeader(traceId, spanId, 1 === span.spanContext().traceFlags);
 }
 export function spanToTraceparentHeader(span) {
   ({ traceId, spanId } = span.spanContext());
   const spanContextResult = span.spanContext();
   return _mod698.generateTraceparentHeader(traceId, spanId, 1 === span.spanContext().traceFlags);
 }
-export function spanToTransactionTraceContext(spanContext) {
-  ({ spanId, traceId } = spanContext.spanContext());
-  const tmp2 = spanToJSON(spanContext);
+export function spanToTransactionTraceContext(self) {
+  ({ spanId, traceId } = self.spanContext());
+  const tmp2 = spanToJSON(self);
   return {
     parent_span_id: tmp2.parent_span_id,
     span_id: spanId,

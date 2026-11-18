@@ -1,12 +1,13 @@
 // _runtime/metro/16833__.js
-import _mod16831 from "16831__.js";
+import registerAsset from "01119__.js";
 
-export default (arg0, arg1) => {
-  const tmp = _mod16831(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
-  }
-  return tmp3;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "fdba56ceeef89e2b55cea1d13fce45dd",
+  name: "EmojiColdFaceIcon",
+  type: "png",
+});

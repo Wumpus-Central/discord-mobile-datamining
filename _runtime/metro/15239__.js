@@ -1,13 +1,12 @@
 // _runtime/metro/15239__.js
-import registerAsset from "01119__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images",
-  width: 375,
-  height: 460,
-  scales: [1],
-  hash: "c8d53ba30e41e7296c825f2501df590c",
-  name: "premium_gift_plan_selection_header",
-  type: "png",
-});
+export default {
+  MAX_LENGTH: 256,
+  MAX_SAFE_COMPONENT_LENGTH: 16,
+  MAX_SAFE_BUILD_LENGTH: 250,
+  MAX_SAFE_INTEGER: Number.MAX_SAFE_INTEGER || 9007199254740991,
+  RELEASE_TYPES: ["major", "premajor", "minor", "preminor", "patch", "prepatch", "prerelease"],
+  SEMVER_SPEC_VERSION: "2.0.0",
+  FLAG_INCLUDE_PRERELEASE: 1,
+  FLAG_LOOSE: 2,
+};

@@ -3,11 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "abe3edaf4092c8b2f7e822b6a96655d7",
-  name: "InboxIcon",
-  type: "png",
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "6a5cd110534b64950591f570afc3306f",
+  name: "NitroGem1",
+  type: "lottie",
 });

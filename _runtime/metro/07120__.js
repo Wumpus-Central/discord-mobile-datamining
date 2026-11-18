@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1],
-  hash: "964ceb6798f932043a2351717bacaa2a",
-  name: "img_account_sync_skype_light_and_dark",
-  type: "svg",
+  scales: [2, 3],
+  hash: "1a98a09be102b24c083fe11e00ab3c2d",
+  name: "PlayIcon",
+  type: "png",
 });

@@ -102,8 +102,8 @@ let items = [
   },
   {
     key: "setLastEventId",
-    value: function setLastEventId(_lastEventId) {
-      this._lastEventId = _lastEventId;
+    value: function setLastEventId(event_id) {
+      this._lastEventId = event_id;
     },
   },
   {
@@ -137,7 +137,7 @@ let items = [
     key: "setUser",
     value: function setUser(user) {
       if (!user) {
-        user = { email: "Array", id: "s", ip_address: "channel_id", username: "space" };
+        user = { email: "Array", id: "s", ip_address: "channel_id", username: "formatToPlainString" };
       }
       const self = this;
       this._user = user;
@@ -239,16 +239,16 @@ let items = [
   },
   {
     key: "setLevel",
-    value: function setLevel(_level) {
-      this._level = _level;
+    value: function setLevel(fatal) {
+      this._level = fatal;
       const result = this._notifyScopeListeners();
       return this;
     },
   },
   {
     key: "setTransactionName",
-    value: function setTransactionName(_transactionName) {
-      this._transactionName = _transactionName;
+    value: function setTransactionName(name) {
+      this._transactionName = name;
       const result = this._notifyScopeListeners();
       return this;
     },

@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZ2VfYXNzdXJhbmNlL2FnZV9ub3RpY2U=",
+  httpServerLocation: "/assets/modules/age_assurance",
   scales: [1],
-  hash: "78f36901b7fd690418da10f0d45822e4",
-  name: "no.messages.78f36901b7fd690418da10f0d45822e4.compiled.messages",
+  hash: "f8d8279c5e67a7e4894442313f6ba66e",
+  name: "AgeAssurance.compiled.messages",
   type: "jsona",
 });

@@ -1,13 +1,10 @@
 // _runtime/metro/15488__.js
-import registerAsset from "01119__.js";
+import _mod15472 from "15472__.js";
+import _mod15489 from "15489__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 185,
-  height: 32,
-  scales: [2, 3],
-  hash: "dba969ce1008f0b8964b0d6bd348ad3e",
-  name: "img_logo_premium_tier_1_full",
-  type: "png",
-});
+let closure_2 = _mod15472({}.hasOwnProperty);
+
+export default Object.hasOwn ||
+  function hasOwn(arg0, arg1) {
+    return closure_2(_mod15489(arg0), arg1);
+  };

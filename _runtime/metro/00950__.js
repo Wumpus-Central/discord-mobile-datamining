@@ -3007,7 +3007,7 @@ function initInputObserver(sampling) {
               ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
               const _Object2 = window.Object;
               _Object2.defineProperty(closure_0, closure_1, obj);
-              return /* F83109 */ function() { ... };
+              return /* F80686 */ function() { ... };
             };
           };
         };
@@ -3189,7 +3189,7 @@ function initObservers(doc) {
       ({ mousemoveCb: drag, sampling, doc, mirror: fn3 } = doc);
       closure_2 = undefined;
       closure_3 = undefined;
-      let f83107;
+      let f80684;
       items = undefined;
       if (false === sampling.mousemove) {
         return () => {
@@ -3240,7 +3240,7 @@ function initObservers(doc) {
           closure_130_2 = {};
           closure_130_3 = null;
           closure_130_4 = 0;
-          f83107 = function() {
+          f80684 = function() {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
@@ -4538,7 +4538,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F125760 */ function() { ... };
+                            return /* F122476 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -4604,7 +4604,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F125760 */ function() { ... };
+                            return /* F122476 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -5441,7 +5441,7 @@ function addBreadcrumbEvent(triggerUserActivity, category) {
       }
       obj.timestamp = 1000 * num;
       const obj2 = { tag: "breadcrumb", payload: null };
-      const normalizer = f125802(map[8]);
+      const normalizer = f122518(map[8]);
       obj2.payload = normalizer.normalize(_null, 10, 1000);
       obj.data = obj2;
       obj.throttledAddEvent(obj);
@@ -5605,7 +5605,7 @@ function getLargestContentfulPaint(arg0) {
   ({ value, rating } = arg0);
   const result = ((_mod681.browserPerformanceTimeOrigin() || _mod681.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   const obj2 = { type: "web-vital", name: "largest-contentful-paint", start: result, end: result, data: null };
-  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "fileFinishedImporting" };
+  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "Array" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((item) => {
@@ -5663,7 +5663,7 @@ function getInteractionToNextPaint(arg0) {
   ({ value, rating } = arg0);
   const result = ((_mod681.browserPerformanceTimeOrigin() || _mod681.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   const obj2 = { type: "web-vital", name: "interaction-to-next-paint", start: result, end: result, data: null };
-  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "fileFinishedImporting" };
+  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "Array" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((item) => {
@@ -6171,7 +6171,7 @@ function mergeWarning(_meta, arg1) {
     _meta._meta = headers;
     return _meta;
   } else {
-    const obj2 = { headers, size: "Array", _meta: true };
+    const obj2 = { headers, size: "Array", _meta: "<string:551485441>" };
     const obj3 = { warnings: null };
     const items1 = [arg1];
     obj3.warnings = items1;
@@ -6266,23 +6266,23 @@ function buildNetworkRequestOrResponse(headers, size, body) {
     return obj;
   }
 }
-function urlMatches(str, networkDetailAllowUrls) {
+function urlMatches(name, endpoints) {
   const baseURI = _mod681.GLOBAL_OBJ.document.baseURI;
-  let substr = str;
-  if (!str.startsWith("http://")) {
-    substr = str;
-    if (!"https://".startsWith("https://")) {
-      substr = str;
-      if (!str.startsWith(_mod681.GLOBAL_OBJ.location.origin)) {
+  let substr = name;
+  if (!name.startsWith("http://")) {
+    substr = name;
+    if (!name.startsWith("https://")) {
+      substr = name;
+      if (!name.startsWith(_mod681.GLOBAL_OBJ.location.origin)) {
         const _URL = URL;
-        const uRL = new URL(str, baseURI);
+        const uRL = new URL(name, baseURI);
         const _URL2 = URL;
         const uRL1 = new URL(baseURI);
-        substr = str;
+        substr = name;
         if (uRL.origin === uRL1.origin) {
           const href = uRL.href;
           substr = href;
-          if (!str.endsWith("/")) {
+          if (!name.endsWith("/")) {
             substr = href;
             if (href.endsWith("/")) {
               substr = href.slice(0, -1);
@@ -6292,7 +6292,7 @@ function urlMatches(str, networkDetailAllowUrls) {
       }
     }
   }
-  return _mod681.stringMatchesSomePattern(substr, networkDetailAllowUrls);
+  return _mod681.stringMatchesSomePattern(substr, endpoints);
 }
 let closure_158 = async function _captureFetchBreadcrumbToReplay(arg0) {
   closure_4 = tmp3;
@@ -6610,7 +6610,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                         tmp23._meta = obj11;
                         let obj14 = tmp23;
                       } else {
-                        obj14 = { headers: obj11, size: "Array", _meta: true };
+                        obj14 = { headers: obj11, size: "Array", _meta: "<string:551485441>" };
                         const obj16 = { warnings: null };
                         const items1 = [tmp21];
                         obj16.warnings = items1;
@@ -7388,7 +7388,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                             tmp22._meta = obj9;
                             let obj10 = tmp22;
                           } else {
-                            obj10 = { headers: obj9, size: "Array", _meta: true };
+                            obj10 = { headers: obj9, size: "Array", _meta: "<string:551485441>" };
                             const obj11 = { warnings: null };
                             let items2 = [tmp17];
                             obj11.warnings = items2;
@@ -7406,7 +7406,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                           tmp18._meta = obj12;
                           let obj13 = tmp18;
                         } else {
-                          obj13 = { headers: obj12, size: "Array", _meta: true };
+                          obj13 = { headers: obj12, size: "Array", _meta: "<string:551485441>" };
                           const obj14 = { warnings: null };
                           let items4 = [tmp14];
                           obj14.warnings = items4;
@@ -8020,12 +8020,12 @@ let closure_171 = async function _sendReplayRequest(arg0) {
           closure_129_16 = value;
           if (closure_129_16) {
             delete tmp7[tmp3];
-            closure_129_18 = (function createReplayEnvelope(arg0, str, arg2, tunnel) {
+            closure_129_18 = (function createReplayEnvelope(sdkMetadata, str, _dsn, tunnel) {
               obj = closure_1_0(681);
               const obj2 = closure_1_0(681);
-              items = [{ type: "replay_event" }, arg0];
+              items = [{ type: "replay_event" }, sdkMetadata];
               const items1 = [items, ];
-              const eventEnvelopeHeaders = obj2.createEventEnvelopeHeaders(arg0, closure_1_0(681).getSdkMetadataForEnvelopeHeader(arg0), tunnel, arg2);
+              const eventEnvelopeHeaders = obj2.createEventEnvelopeHeaders(sdkMetadata, closure_1_0(681).getSdkMetadataForEnvelopeHeader(sdkMetadata), tunnel, _dsn);
               if (typeof str === "string") {
                 const _TextEncoder = TextEncoder;
                 const encoder = new TextEncoder();
@@ -9273,7 +9273,7 @@ let closure_82 = (() => {
                     addedSet2.delete(childNodes);
                     childNodes = childNodes.childNodes;
                     if (childNodes != null) {
-                      let item = childNodes.forEach(/* F83113 */ function() { ... });
+                      let item = childNodes.forEach(/* F80690 */ function() { ... });
                     }
                     const droppedSet = arr2.droppedSet;
                     droppedSet.add(childNodes);
@@ -9386,7 +9386,7 @@ let closure_82 = (() => {
                     movedSet2.delete(childNodes);
                     const childNodes1 = childNodes.childNodes;
                     if (childNodes1 != null) {
-                      const item1 = childNodes1.forEach(/* F83113 */ function() { ... });
+                      const item1 = childNodes1.forEach(/* F80690 */ function() { ... });
                     }
                   }
                   const mapRemoves = arr2.mapRemoves;

@@ -171,7 +171,7 @@ let items = [
   },
   {
     key: "captureCheckIn",
-    value: function captureCheckIn(checkInId, arg1, arg2) {
+    value: function captureCheckIn(checkInId, arg1, currentScope) {
       if ("checkInId" in checkInId) {
         if (checkInId.checkInId) {
           checkInId = checkInId.checkInId;
@@ -213,7 +213,7 @@ let items = [
             };
           }
           const obj4 = ServerRuntimeClient(745);
-          [tmp11, tmp12] = ServerRuntimeClient(745)._getTraceInfoFromScope(self, arg2);
+          [tmp11, tmp12] = ServerRuntimeClient(745)._getTraceInfoFromScope(self, currentScope);
           if (tmp12) {
             const obj9 = { trace: tmp12 };
             obj5.contexts = obj9;

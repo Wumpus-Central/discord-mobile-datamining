@@ -1,11 +1,13 @@
 // _runtime/metro/16841__.js
-import _mod16789 from "16789__.js";
-import _mod16798 from "16798__.js";
-import all from "16808__.js";
+import registerAsset from "01119__.js";
 
-let closure_0 = _mod16789(Function.toString);
-if (!all(_mod16798.inspectSource)) {
-  _mod16798.inspectSource = (arg0) => closure_0(arg0);
-}
-
-export default _mod16798.inspectSource;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "11800cac78ee381d38bd7d0b06eed7b0",
+  name: "EmojiFaceVomitingIcon",
+  type: "png",
+});

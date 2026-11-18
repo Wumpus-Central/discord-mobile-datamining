@@ -358,7 +358,7 @@ function enrichWithThreadInformation(samples) {
   }
   return tmp;
 }
-function applyDebugMetadata(arg0) {
+function applyDebugMetadata(resources) {
   const client = _mod681.getClient();
   let options;
   if (client != null) {
@@ -369,7 +369,7 @@ function applyDebugMetadata(arg0) {
     stackParser = options.stackParser;
   }
   if (stackParser) {
-    let debugImagesForResources = _mod681.getDebugImagesForResources(stackParser, arg0);
+    let debugImagesForResources = _mod681.getDebugImagesForResources(stackParser, resources);
     const tmpResult = _mod681;
   } else {
     debugImagesForResources = [];
@@ -633,9 +633,9 @@ export function createProfilingEvent(event_id, arg1, samples, type) {
   return tmp7;
 }
 export { enrichWithThreadInformation };
-export function findProfiledTransactionsFromEnvelope(arg0) {
+export function findProfiledTransactionsFromEnvelope(dependencyMap) {
   items = [];
-  _mod681.forEachEnvelopeItem(arg0, (arg0, arg1) => {
+  _mod681.forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
     if ("transaction" === arg1) {
       for (let num2 = 1; num2 < arg0.length; num2 = num2 + 1) {
         let tmp3 = arg0[num2];

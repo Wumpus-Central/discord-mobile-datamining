@@ -11,7 +11,7 @@ export function debug(message, attributes) {
     obj = {};
   }
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(
-    { level: "debug", message, attributes, severityNumber: "alignItems" },
+    { level: "debug", message, attributes, severityNumber: "analyticsLocations" },
     obj.scope,
   );
 }
@@ -41,7 +41,7 @@ export function info(message, attributes) {
     obj = {};
   }
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(
-    { level: "info", message, attributes, severityNumber: "alignItems" },
+    { level: "info", message, attributes, severityNumber: "analyticsLocations" },
     obj.scope,
   );
 }
@@ -51,7 +51,7 @@ export function trace(message, attributes) {
     obj = {};
   }
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(
-    { level: "trace", message, attributes, severityNumber: "alignItems" },
+    { level: "trace", message, attributes, severityNumber: "analyticsLocations" },
     obj.scope,
   );
 }

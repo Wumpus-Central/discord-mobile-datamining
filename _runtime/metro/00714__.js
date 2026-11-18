@@ -1,5 +1,5 @@
 // _runtime/metro/00714__.js
-import _mod687 from "00687__.js";
+import __SENTRY_DEBUG__ from "00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "../00688_consoleSandbox.js";
 import _mod697 from "00697__.js";
 
@@ -13,13 +13,13 @@ export function addHandler(console, errorCallback) {
   dependencyMap[console].push(errorCallback);
   const tmp2 = dependencyMap[console] || [];
 }
-export function maybeInstrument(console, fn) {
+export function maybeInstrument(console, instrumentConsole) {
   if (!closure_3[console]) {
     tmp2[console] = true;
     try {
-      fn();
+      instrumentConsole();
     } catch (tmp5) {
-      if (_mod687.DEBUG_BUILD) {
+      if (__SENTRY_DEBUG__.DEBUG_BUILD) {
         const debug = consoleSandbox.debug;
         const _HermesInternal = HermesInternal;
         debug.error("Error while instrumenting " + tmp, tmp5);
@@ -44,7 +44,7 @@ export function triggerHandlers(arg0, arg1) {
       try {
         tmp15(arg1);
       } catch (tmp18) {
-        if (_mod687.DEBUG_BUILD) {
+        if (__SENTRY_DEBUG__.DEBUG_BUILD) {
           const debug = consoleSandbox.debug;
           debug.error(tmp2 + tmp6 + tmp3 + _mod697.getFunctionName(tmp7) + tmp4, tmp18);
           const tmp19Result = _mod697;

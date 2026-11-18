@@ -1,7 +1,13 @@
 // _runtime/metro/19845__.js
-import _mod518 from "00518__.js";
-import _mod535 from "00535__.js";
+import registerAsset from "01119__.js";
 
-export default function isArrayLikeObject(arg0) {
-  return _mod535(arg0) && _mod518(arg0);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "c993344d8197e11d62f0d0a7ef753412",
+  name: "BoostGemOutlineIcon",
+  type: "png",
+});

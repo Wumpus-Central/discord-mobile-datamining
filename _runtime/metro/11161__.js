@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/Y2KIcon",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "0e26d39cd35df5b70db021fff662c44e",
-  name: "Y2KIcon",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 32,
+  scales: [1, 2, 3],
+  hash: "a706a0d368e318c310cbc99fe4471213",
+  name: "ic_file_small_image",
   type: "png",
 });

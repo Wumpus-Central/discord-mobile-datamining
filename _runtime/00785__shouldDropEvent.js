@@ -1,5 +1,5 @@
 // _runtime/00785__shouldDropEvent.js
-import _mod687 from "metro/00687__.js";
+import __SENTRY_DEBUG__ from "metro/00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "00688_consoleSandbox.js";
 import _mod697 from "metro/00697__.js";
 import setupIntegration from "00751_setupIntegration.js";
@@ -189,7 +189,7 @@ export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
     } else {
       try {
         if (_shouldDropEvent(type, closure_0)) {
-          if (_mod687.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
             const debug = consoleSandbox.debug;
             debug.warn("Event dropped due to being a duplicate of previously captured event.");
           }

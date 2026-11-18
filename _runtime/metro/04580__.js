@@ -1,11 +1,55 @@
 // _runtime/metro/04580__.js
-import registerAsset from "01119__.js";
-
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Nvbm5lY3RlZF9hcHBz",
-  scales: [1],
-  hash: "9f3e725a81738595b34c0491084c0bf1",
-  name: "vi.messages.9f3e725a81738595b34c0491084c0bf1.compiled.messages",
-  type: "jsona",
-});
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "es" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = {
+      long: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      short: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+    };
+    obj3.conjunction = obj4;
+    const obj5 = {
+      long: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+      short: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+    };
+    obj3.disjunction = obj5;
+    const obj6 = {
+      long: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+    };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
+  }
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = {
+  data: {
+    conjunction: {
+      long: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      short: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+    },
+    disjunction: {
+      long: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+      short: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+    },
+    unit: {
+      long: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+    },
+  },
+  locale: "es",
+};
+prop.push(obj);

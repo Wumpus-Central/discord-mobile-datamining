@@ -1,12 +1,55 @@
 // _runtime/metro/04587__.js
-import 02194__ from "02194__.js";
-
-if (!module_2194) {
-  const obj2 = { default: module_2194 };
-  let obj = obj2;
-} else {
-  obj = module_2194;
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "ko" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = {
+      long: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" },
+      short: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" },
+    };
+    obj3.conjunction = obj4;
+    const obj5 = {
+      long: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" },
+      short: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" },
+    };
+    obj3.disjunction = obj5;
+    const obj6 = {
+      long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+    };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
+  }
 }
-
-export default { date: obj.default({ formats: { full: "EEEE, dd MMMM yyyy", long: "dd MMMM yyyy", medium: "dd MMM yyyy", short: "dd/MM/yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { any: "{{date}} {{time}}" }, defaultWidth: "any" }) };
-export default exports.default;
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = {
+  data: {
+    conjunction: {
+      long: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" },
+      short: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" },
+    },
+    disjunction: {
+      long: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" },
+      short: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" },
+    },
+    unit: {
+      long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+    },
+  },
+  locale: "ko",
+};
+prop.push(obj);

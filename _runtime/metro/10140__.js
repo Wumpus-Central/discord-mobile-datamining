@@ -1,34 +1,13 @@
 // _runtime/metro/10140__.js
-import noop from "00019__.js";
+import registerAsset from "01119__.js";
 
-export function usePropsErrorBoundary(arg0) {
-  closure_0 = arg0;
-  items = [arg0];
-  const effect = noop.useEffect(() => {
-    const size = closure_0;
-    ({ defaultIndex, dataLength } = closure_0);
-    if (typeof defaultIndex === "number") {
-      if (dataLength > 0) {
-        const _Error3 = Error;
-        const error = new Error("DefaultIndex must be in the range of data length.");
-        throw error;
-      }
-    }
-    if (!size.mode) {
-      if (!size.vertical) {
-        if (!size.width) {
-          const _Error = Error;
-          const error1 = new Error("`width` must be specified for horizontal carousels.");
-          throw error1;
-        }
-      }
-      if (size.vertical) {
-        if (!size.height) {
-          const _Error2 = Error;
-          const error2 = new Error("`height` must be specified for vertical carousels.");
-          throw error2;
-        }
-      }
-    }
-  }, items);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "78e18d727d8c0a3ff78e647d73ffb0be",
+  name: "QuoteIcon",
+  type: "png",
+});

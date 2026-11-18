@@ -1,8 +1,8 @@
 // _runtime/00771_winterCGHeadersToDict.js
-function winterCGHeadersToDict(arr) {
+function winterCGHeadersToDict(headers) {
   const obj = {};
   try {
-    const item = arr.forEach((item, index) => {
+    const item = headers.forEach((item, index) => {
       if (typeof item === "string") {
         obj[index] = item;
       }
@@ -66,11 +66,11 @@ function addSpanAttribute(arg0, formatted, str, arr, flag) {
     arg0[combined] = str4;
   }
 }
-function extractQueryParamsFromUrl(arg0) {
-  if (arg0) {
+function extractQueryParamsFromUrl(url) {
+  if (url) {
     try {
       const _URL = URL;
-      const uRL = new URL(arg0, "http://s.io");
+      const uRL = new URL(url, "http://s.io");
       const search = uRL.search;
       const substr = search.slice(1);
       let tmp9;

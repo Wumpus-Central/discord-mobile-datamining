@@ -1,35 +1,11 @@
 // _runtime/metro/04959__.js
-import module_4770_mod from "04770__.js";
-import subDays_mod from "../04960_subDays.js";
-import requiredArgs_mod from "../04590_requiredArgs.js";
+import registerAsset from "01119__.js";
 
-let module_4770 = module_4770_mod;
-if (!module_4770) {
-  const obj = { default: module_4770 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4770;
-}
-module_4770 = tmp3;
-let subDays = subDays_mod;
-if (!subDays) {
-  const obj2 = { default: subDays };
-  let tmp5 = obj2;
-} else {
-  tmp5 = subDays;
-}
-subDays = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function isYesterday(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4770.default(arg0, subDays.default(Date.now(), 1));
-};
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/packages/design/components/Rive/native/generated/rives",
+  scales: [1],
+  hash: "bda08bd02a79cbb0d49bc354633efae6",
+  name: "CheckpointCharacter",
+  type: "riv",
+});

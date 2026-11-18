@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/global_discovery/games",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2F1dGhvcml6ZWRfYXBwcw==",
   scales: [1],
-  hash: "68963fcf5e499eb7101c7e4aaf9997a8",
-  name: "GlobalDiscoveryGames.compiled.messages",
+  hash: "0e8e97c946da7cfee20c7e0f645282ee",
+  name: "fi.messages.0e8e97c946da7cfee20c7e0f645282ee.compiled.messages",
   type: "jsona",
 });

@@ -1,15 +1,13 @@
 // _runtime/metro/16845__.js
-import _mod16797 from "16797__.js";
-import _mod16804 from "16804__.js";
+import registerAsset from "01119__.js";
 
-let closure_2 = _mod16797("keys");
-
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod16804(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
-  }
-  return tmp2;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "fbee7c9b6ebaa77bbc9a6cc9164a2ec7",
+  name: "EmojiFaceWithSpiralEyesIcon",
+  type: "png",
+});

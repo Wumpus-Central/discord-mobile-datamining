@@ -1,32 +1,13 @@
 // _runtime/metro/16894__.js
+import registerAsset from "01119__.js";
 
-export function getReactNativeDimensionsWithDimensions(width, value) {
-  try {
-    let obj = {};
-    let obj2 = {};
-    if (width) {
-      const obj5 = { screenWidth: null, screenHeight: null, screenScale: null, screenFontScale: null };
-      const _Math = Math;
-      obj5.screenWidth = Math.ceil(width.width);
-      const _Math2 = Math;
-      obj5.screenHeight = Math.ceil(width.height);
-      ({ scale: obj3.screenScale, fontScale: obj3.screenFontScale } = width);
-      obj = obj5;
-    }
-    if (value) {
-      const obj9 = { windowWidth: null, windowHeight: null, windowScale: null, windowFontScale: null };
-      const _Math3 = Math;
-      obj9.windowWidth = Math.ceil(value.width);
-      const _Math4 = Math;
-      obj9.windowHeight = Math.ceil(value.height);
-      ({ scale: obj4.windowScale, fontScale: obj4.windowFontScale } = value);
-      obj2 = obj9;
-    }
-    const obj10 = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(obj2);
-    return obj10;
-  } catch (err) {
-    return null;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
+  scales: [1],
+  hash: "3590df6f2ae2f7202dab15c0bd3aca9a",
+  name: "da",
+  type: "png",
+});

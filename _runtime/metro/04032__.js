@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/slayer_storefront/intl",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb252ZXJzYXRpb25z",
   scales: [1],
-  hash: "c5ace346e7366b8aac2c5727cfa7c3f3",
-  name: "BlackFridayGameExitPromo.compiled.messages",
+  hash: "a5a675e9606df3e628e12655523d9ab4",
+  name: "fi.messages.a5a675e9606df3e628e12655523d9ab4.compiled.messages",
   type: "jsona",
 });

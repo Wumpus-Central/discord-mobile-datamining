@@ -1,19 +1,13 @@
 // _runtime/metro/09694__.js
-import _mod19 from "00019__.js";
-import _modDef9695 from "09695__.js";
+import registerAsset from "01119__.js";
 
-const useRef = _mod19.useRef;
-let closure_3 = [];
-
-export default function useStableMemo(fn, items) {
-  const tmp = useRef();
-  const tmp2 = useRef(closure_3);
-  if (tmp2.current === closure_3) {
-    tmp.current = fn();
-    tmp2.current = items;
-  } else if (!_modDef9695(items, tmp2.current)) {
-    tmp.current = fn();
-    tmp2.current = items;
-  }
-  return tmp.current;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "119c03ecfe749b5d0f4e60c612bb714f",
+  name: "RiotGamesNeutralIcon",
+  type: "png",
+});

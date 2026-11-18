@@ -1,25 +1,25 @@
 // _runtime/metro/00691__.js
-function isInstanceOf(arg0, arg1) {
+function isInstanceOf(originalException, Error) {
   try {
-    return arg0 instanceof arg1;
+    return originalException instanceof Error;
   } catch (err) {
     return false;
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function isDOMError(arg0) {
+export function isDOMError(error) {
   const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMError" + "]";
+  return (typeof call === "unknown" ? toString() : call(error)) === "[object " + "DOMError" + "]";
 }
-export function isDOMException(arg0) {
+export function isDOMException(error) {
   const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMException" + "]";
+  return (typeof call === "unknown" ? toString() : call(error)) === "[object " + "DOMException" + "]";
 }
-export function isElement(arg0) {
+export function isElement(originalException) {
   let tmp = typeof globalThis.Element !== "undefined";
   if (typeof globalThis.Element !== "undefined") {
-    tmp = isInstanceOf(arg0, globalThis.Element);
+    tmp = isInstanceOf(originalException, globalThis.Element);
   }
   return tmp;
 }
@@ -42,25 +42,25 @@ export function isErrorEvent(name) {
   const call = toString.call;
   return (typeof call === "unknown" ? toString() : call(name)) === "[object " + "ErrorEvent" + "]";
 }
-export function isEvent(type) {
+export function isEvent(error) {
   let tmp = typeof Event !== "undefined";
   if (typeof Event !== "undefined") {
     const _Event = Event;
-    tmp = isInstanceOf(type, Event);
+    tmp = isInstanceOf(error, Event);
   }
   return tmp;
 }
 export { isInstanceOf };
-export function isParameterizedString(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
+export function isParameterizedString(combined1) {
+  let tmp = typeof combined1 === "object";
+  if (typeof combined1 === "object") {
+    tmp = null !== combined1;
   }
   if (tmp) {
-    tmp = "__sentry_template_string__" in obj;
+    tmp = "__sentry_template_string__" in combined1;
   }
   if (tmp) {
-    tmp = "__sentry_template_values__" in obj;
+    tmp = "__sentry_template_values__" in combined1;
   }
   return tmp;
 }
@@ -108,27 +108,27 @@ export function isString(className) {
   const call = toString.call;
   return (typeof call === "unknown" ? toString() : call(className)) === "[object " + "String" + "]";
 }
-export function isSyntheticEvent(arg0) {
+export function isSyntheticEvent(_events) {
   const call = toString.call;
-  let tmp3 = (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "Object" + "]";
+  let tmp3 = (typeof call === "unknown" ? toString() : call(_events)) === "[object " + "Object" + "]";
   if (tmp3) {
-    tmp3 = "nativeEvent" in arg0;
+    tmp3 = "nativeEvent" in _events;
   }
   if (tmp3) {
-    tmp3 = "preventDefault" in arg0;
+    tmp3 = "preventDefault" in _events;
   }
   if (tmp3) {
-    tmp3 = "stopPropagation" in arg0;
+    tmp3 = "stopPropagation" in _events;
   }
   return tmp3;
 }
-export function isThenable(tmpResult) {
+export function isThenable(promise) {
   let then;
-  if (tmpResult != null) {
-    then = tmpResult.then;
+  if (promise != null) {
+    then = promise.then;
   }
   if (then) {
-    then = typeof tmpResult.then === "function";
+    then = typeof promise.then === "function";
   }
   return Boolean(then);
 }

@@ -5,14 +5,14 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function isSentryRequestUrl(arr, getDsn) {
-  if (getDsn != null) {
-    const dsn = getDsn.getDsn();
+export function isSentryRequestUrl(name, client) {
+  if (client != null) {
+    const dsn = client.getDsn();
   }
-  if (getDsn != null) {
-    const tunnel = getDsn.getOptions().tunnel;
+  if (client != null) {
+    const tunnel = client.getOptions().tunnel;
   }
-  const result = _mod764.parseStringToURLObject(arr);
+  const result = _mod764.parseStringToURLObject(name);
   let flag = false;
   if (result) {
     flag = false;
@@ -34,9 +34,9 @@ export function isSentryRequestUrl(arr, getDsn) {
   if (!flag) {
     let flag2 = false;
     if (tunnel) {
-      let substr = arr;
-      if ("/" === arr[arr.length - 1]) {
-        substr = arr.slice(0, -1);
+      let substr = name;
+      if ("/" === name[name.length - 1]) {
+        substr = name.slice(0, -1);
       }
       let substr1 = tunnel;
       if ("/" === tunnel[tunnel.length - 1]) {

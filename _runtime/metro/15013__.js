@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/build_overrides/native/images",
+  width: 60,
+  height: 46,
   scales: [2, 3],
-  hash: "c633d33c98eaf36e731a0f2d3f8db716",
-  name: "ChatShieldIcon",
+  hash: "43446a28e1d529de720e6c778c814b1c",
+  name: "code-illustration-dark",
   type: "png",
 });

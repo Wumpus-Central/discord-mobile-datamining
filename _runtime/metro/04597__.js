@@ -1,42 +1,55 @@
 // _runtime/metro/04597__.js
-import 04598__ from "04598__.js";
-import 04599__ from "04599__.js";
-import 04600__ from "04600__.js";
-import date_mod from "04601__.js";
-import date_mod from "04602__.js";
-
-if (!module_4598) {
-  const obj = { default: module_4598 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4598;
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "tr" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = {
+      long: { end: "{0} ve {1}", middle: "{0}, {1}", pair: "{0} ve {1}", start: "{0}, {1}" },
+      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      short: { end: "{0} ve {1}", middle: "{0}, {1}", pair: "{0} ve {1}", start: "{0}, {1}" },
+    };
+    obj3.conjunction = obj4;
+    const obj5 = {
+      long: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" },
+      short: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" },
+    };
+    obj3.disjunction = obj5;
+    const obj6 = {
+      long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+    };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
+  }
 }
-if (!module_4599) {
-  const obj2 = { default: module_4599 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4599;
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
 }
-if (!module_4600) {
-  const obj3 = { default: module_4600 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4600;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "cs", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
-export default exports.default;
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = {
+  data: {
+    conjunction: {
+      long: { end: "{0} ve {1}", middle: "{0}, {1}", pair: "{0} ve {1}", start: "{0}, {1}" },
+      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      short: { end: "{0} ve {1}", middle: "{0}, {1}", pair: "{0} ve {1}", start: "{0}, {1}" },
+    },
+    disjunction: {
+      long: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" },
+      short: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" },
+    },
+    unit: {
+      long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+    },
+  },
+  locale: "tr",
+};
+prop.push(obj);

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/hub/native/images",
+  width: 119,
+  height: 83,
   scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CirclePlusIcon-secondary",
+  hash: "0b100afac52015c470ea1ec3ef8acf50",
+  name: "redesign_email_header",
   type: "png",
 });

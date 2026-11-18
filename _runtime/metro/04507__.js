@@ -3,10 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation:
-    "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==",
+  httpServerLocation: "/assets/modules/premium/promotions/third_party/voicemod",
   scales: [1],
-  hash: "f2f26f1be54267b218bb395aaa4aa2b6",
-  name: "pt-BR.messages.f2f26f1be54267b218bb395aaa4aa2b6.compiled.messages",
+  hash: "0847665ebb4c7a8ea57a089e5a9dcec8",
+  name: "Voicemod.compiled.messages",
   type: "jsona",
 });

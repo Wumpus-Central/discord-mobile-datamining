@@ -124,10 +124,10 @@ export function linkTraces(on, linkPreviousTrace) {
     tmp2 = getPreviousTraceFromSessionStorage();
   }
   closure_1 = tmp2;
-  on.on("spanStart", (spanContext2) => {
-    if (obj.getRootSpan(spanContext2) === spanContext2) {
+  on.on("spanStart", (activeSpan) => {
+    if (obj.getRootSpan(activeSpan) === activeSpan) {
       const currentScope = _mod681.getCurrentScope();
-      const tmp5 = addPreviousTraceSpanLink(closure_1, spanContext2, currentScope.getPropagationContext());
+      const tmp5 = addPreviousTraceSpanLink(closure_1, activeSpan, currentScope.getPropagationContext());
       closure_1 = tmp5;
       if (closure_0) {
         storePreviousTraceInSessionStorage(tmp5);

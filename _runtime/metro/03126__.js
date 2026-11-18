@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/native_surveys",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9uYXRpdmVfc3VydmV5cw==",
   scales: [1],
-  hash: "48c4eef5191a69527efe8e7b2fca2f37",
-  name: "NativeSurvey.compiled.messages",
+  hash: "337725db13b670fba167564ffd41d303",
+  name: "hi.messages.337725db13b670fba167564ffd41d303.compiled.messages",
   type: "jsona",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "07392a850e043822a5c8062588fbfbb4",
-  name: "WaveformIcon",
+  hash: "f2670bff50454573d21ee45dfe2257e4",
+  name: "ExperimentalWebIcon",
   type: "png",
 });

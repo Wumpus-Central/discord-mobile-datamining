@@ -1,13 +1,16 @@
 // _runtime/metro/15480__.js
-import registerAsset from "01119__.js";
+import _mod15481 from "15481__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/seasonal",
-  width: 144,
-  height: 150,
-  scales: [1],
-  hash: "fb690a4c8c2a3f037f38e87a73eb44db",
-  name: "chest_idle",
-  type: "png",
-});
+export default (arg0, arg1) => {
+  let tmp3 = _mod15481[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    _mod15481[arg0] = obj;
+    tmp3 = obj;
+    const tmpResult = _mod15481;
+  }
+  return tmp3;
+};

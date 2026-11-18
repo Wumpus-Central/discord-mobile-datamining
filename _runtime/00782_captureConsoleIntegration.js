@@ -42,13 +42,13 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
             obj2.extra = obj3;
             const tmpResult3 = severityLevelFromString;
             _mod712.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                const result = args(level[6]).addExceptionMechanism(arg0, {
+              addEventProcessor.addEventProcessor((tmpResult) => {
+                tmpResult.logger = "console";
+                const result = args(level[6]).addExceptionMechanism(tmpResult, {
                   handled,
                   type: "auto.core.capture_console",
                 });
-                return arg0;
+                return tmpResult;
               });
               if ("assert" !== level) {
                 const found = args.find((item) => item instanceof Error);

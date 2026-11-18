@@ -1,26 +1,28 @@
 // _runtime/metro/04932__.js
-import _typeof_mod from "04589__.js";
-import requiredArgs_mod from "../04590_requiredArgs.js";
+import c from "../04915_c.js";
+import _mod4928 from "04928__.js";
+import _slicedToArray from "00032__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
+require = arg1;
+function getEnumProperty(enumProperty, arg1) {
+  return enumProperty.enumProperty(arg1);
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function isMonday(arg0) {
-  requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDay();
-};
-export default exports.default;
+export function useRiveEnum(device, instance) {
+  const cResult = c.c(4);
+  [tmp3, tmp4, tmp5] = _mod4928.useRiveProperty(instance, device, getEnumProperty);
+  if (cResult[0] === tmp5) {
+    if (cResult[1] === tmp4) {
+      if (cResult[2] === tmp3) {
+        let tmp6 = cResult[3];
+      }
+      return tmp6;
+    }
+  }
+  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
+  cResult[0] = tmp5;
+  cResult[1] = tmp4;
+  cResult[2] = tmp3;
+  cResult[3] = obj3;
+  tmp6 = obj3;
+}

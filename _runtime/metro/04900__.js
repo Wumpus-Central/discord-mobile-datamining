@@ -1,262 +1,118 @@
 // _runtime/metro/04900__.js
-import _mod4895 from "04895__.js";
-import startOfUTCISOWeek_mod from "../04826_startOfUTCISOWeek.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _createClass from "00042__createClass.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import _wrapNativeSuper from "00158__wrapNativeSuper.js";
 
-let _createSuperInternal = require;
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-function _setPrototypeOf(ISOWeekYearParser, Parser) {
-  _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOWeekYearParser, Parser) {
-      ISOWeekYearParser.__proto__ = Parser;
-      return ISOWeekYearParser;
-    };
-  }
-  return _setPrototypeOf(ISOWeekYearParser, Parser);
-}
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
-}
-let startOfUTCISOWeek = startOfUTCISOWeek_mod;
-if (!startOfUTCISOWeek) {
-  let obj = { default: startOfUTCISOWeek };
-  let tmp3 = obj;
-} else {
-  tmp3 = startOfUTCISOWeek;
-}
-startOfUTCISOWeek = tmp3;
-const Parser = _mod4895.Parser;
-_createSuperInternal = undefined;
-class ISOWeekYearParser {
-  constructor() {
-    if (this instanceof closure_1) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 130,
-            enumerable: true,
-            configurable: true,
-            writable: true,
-          });
-        } else {
-          num3 = 130;
-          applyResult.priority = 130;
-        }
-        if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
-          throw referenceError1;
-        } else {
-          items1 = ["G", "y", "Y", "u", "Q", "q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
-            _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj.value = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
-          } else {
-            applyResult.incompatibleTokens = items1;
-          }
-          return applyResult;
-        }
-      }
-    } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-let dependencyMap = ISOWeekYearParser;
-if (typeof Parser !== "function") {
-  if (null !== Parser) {
-    let _TypeError = TypeError;
-    let typeError = new TypeError("Super expression must either be null or a function");
-    throw typeError;
-  }
-}
-let prototype = Parser;
-if (Parser) {
-  prototype = Parser.prototype;
-}
-ISOWeekYearParser.prototype = Object.create(prototype, {
-  constructor: { value: ISOWeekYearParser, writable: true, configurable: true },
-});
-if (Parser) {
-  _setPrototypeOf(ISOWeekYearParser, Parser);
-}
-let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = hasOwnProperty(_createSuperInternal);
-  if (closure_1) {
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
-const entry = {
-  key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("R" === arg1) {
-      let parseNDigitsSignedResult = _createSuperInternal(4897).parseNDigitsSigned(4, arg0);
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      parseNDigitsSignedResult = _createSuperInternal(4897).parseNDigitsSigned(arg1.length, arg0);
+      callResult = call(constructResult);
     }
-    return parseNDigitsSignedResult;
-  },
-};
-let items = [
-  entry,
-  {
-    key: "set",
-    value: function set(arg0, arg1, arg2) {
-      const date = new Date(0);
-      date.setUTCFullYear(arg2, 0, 4);
-      date.setUTCHours(0, 0, 0, 0);
-      return startOfUTCISOWeek.default(date);
-    },
-  },
-];
-if (0 < items.length) {
-  do {
-    let tmp7 = items[num];
-    let flag = tmp7.enumerable;
-    if (!flag) {
-      flag = false;
-    }
-    tmp7.enumerable = flag;
-    tmp7.configurable = true;
-    if ("value" in tmp7) {
-      tmp7.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp6, tmp7.key, tmp7);
-    num = num + 1;
-  } while (num < items.length);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+get_ActivityIndicator = fn(17);
+({ NativeModules: c3, Platform } = get_ActivityIndicator);
+class ModuleNotFoundError {
+  constructor(arg0) {
+    self = this;
+    tmp = ModuleNotFoundError;
+    tmp2 = closure_0(this, ModuleNotFoundError);
+    NativeUnimoduleProxy = closure_3.NativeUnimoduleProxy;
+    ExponentConstants = undefined;
+    if (NativeUnimoduleProxy != null) {
+      modulesConstants = NativeUnimoduleProxy.modulesConstants;
+      if (modulesConstants != null) {
+        ExponentConstants = modulesConstants.ExponentConstants;
+      }
+    }
+    str = "react-native";
+    if (null != ExponentConstants) {
+      str2 = "expo";
+      if ("expo" === ExponentConstants.appOwnership) {
+        str2 = "expo-go";
+      }
+      str = str2;
+    }
+    if ("expo-go" === str) {
+      items = [
+        "NitroModules are not supported in Expo Go! Use EAS (`expo prebuild`) or eject to a bare workflow instead.",
+      ];
+      tmp12 = c2;
+      obj3 = c2(tmp);
+      tmp13 = closure_1;
+      tmp14 = closure_4;
+      if (closure_4()) {
+        tmp16 = globalThis;
+        _Reflect2 = Reflect;
+        constructResult = Reflect.construct(obj3, items, tmp12(self).constructor);
+      } else {
+        constructResult = obj3.apply(self, items);
+      }
+      return tmp13(tmp13(self, constructResult));
+    } else {
+      items1 = [];
+      str7 =
+        "Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)";
+      arr1 = items1.push(
+        "Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)",
+      );
+      str8 =
+        'Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the "NativeNitroModules"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md';
+      arr4 = items1.push(
+        'Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the "NativeNitroModules"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md',
+      );
+      str9 = "Make sure you are using react-native 0.75.0 or higher.";
+      arr5 = items1.push("Make sure you are using react-native 0.75.0 or higher.");
+      str10 = "Make sure you rebuilt the app.";
+      arr6 = items1.push("Make sure you rebuilt the app.");
+      str11 = "expo";
+      if ("expo" === str) {
+        str3 = "Make sure you ran `expo prebuild`.";
+        arr7 = items1.push("Make sure you ran `expo prebuild`.");
+      }
+      tmp5 = global;
+      str4 = "Make sure gradle is synced.";
+      arr8 = items1.push("Make sure gradle is synced.");
+      str5 = "\n* ";
+      str6 = 'Failed to get NitroModules: The native "NitroModules" Turbo/Native-Module could not be found.\n* ';
+      items2 = [,];
+      items2[0] = `Failed to get NitroModules: The native "NitroModules" Turbo/Native-Module could not be found.
+* ${arr3.join("\n* ")}`;
+      obj = { cause: null };
+      obj.cause = global;
+      items2[1] = obj;
+      tmp7 = c2;
+      obj2 = c2(tmp);
+      tmp9 = closure_4;
+      tmp8 = closure_1;
+      if (closure_4()) {
+        tmp11 = globalThis;
+        _Reflect = Reflect;
+        constructResult1 = Reflect.construct(obj2, items2, tmp7(self).constructor);
+      } else {
+        constructResult1 = obj2.apply(self, items2);
+      }
+      return tmp8(self, constructResult1);
+    }
+  }
+}
+_classCallCheck = ModuleNotFoundError;
+_inherits(ModuleNotFoundError, _wrapNativeSuper(Error));
 
-export { ISOWeekYearParser };
+export const ModuleNotFoundError = _createClass(ModuleNotFoundError);

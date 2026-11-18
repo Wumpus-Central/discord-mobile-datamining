@@ -153,11 +153,11 @@ function streamHandler(clone) {
     return tmp;
   }
 }
-function parseFetchArgs(arg0) {
-  if (0 === arg0.length) {
+function parseFetchArgs(items) {
+  if (0 === items.length) {
     return { method: "GET", url: "" };
-  } else if (2 === arg0.length) {
-    [str4, tmp8] = arg0;
+  } else if (2 === items.length) {
+    [str4, tmp8] = items;
     let tmp9 = str4;
     if (typeof str4 !== "string") {
       let str5 = "";
@@ -194,7 +194,7 @@ function parseFetchArgs(arg0) {
     return request;
   } else {
     let tmp3 = str10;
-    if (typeof arg0[0] !== "string") {
+    if (typeof items[0] !== "string") {
       let str = "";
       if (!str10) {
         tmp3 = str;
@@ -266,7 +266,7 @@ export function addFetchEndInstrumentationHandler(errorCallback) {
           let obj2 = stack(dependencyMap[6]);
           stack = asyncGeneratorStep(async (response) => {
             c1 = 0;
-            return (/* F146734 */ function*() { ... })();
+            return (/* F143104 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;
@@ -357,7 +357,7 @@ export function addFetchInstrumentationHandler(errorCallback, arg1) {
           let obj2 = stack(dependencyMap[6]);
           stack = asyncGeneratorStep(async (response) => {
             c1 = 0;
-            return (/* F146734 */ function*() { ... })();
+            return (/* F143104 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;

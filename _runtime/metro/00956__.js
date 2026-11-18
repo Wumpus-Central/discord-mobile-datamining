@@ -86,14 +86,14 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
     afterAllSetup(on) {
       const nativeImplementation = triggerHandlers.getNativeImplementation("fetch");
       c2 = 0;
-      on.on("beforeEnvelope", (arg0) => {
+      on.on("beforeEnvelope", (items) => {
         if (c2 > 3) {
           let debug = closure_0(681).debug;
           debug.warn("[Spotlight] Disabled Sentry -> Spotlight integration due to too many failed requests:", c2);
         } else {
           const request = {
             method: "POST",
-            body: closure_0(681).serializeEnvelope(arg0),
+            body: closure_0(681).serializeEnvelope(items),
             headers: { "Content-Type": "application/x-sentry-envelope" },
             mode: "cors",
           };

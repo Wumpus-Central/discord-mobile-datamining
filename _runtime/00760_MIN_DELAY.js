@@ -7,12 +7,11 @@ let c4 = 5000;
 
 export const MIN_DELAY = 100;
 export const START_DELAY = 5000;
-export function makeOfflineTransport(arg0) {
-  closure_0 = arg0;
+export function makeOfflineTransport(makeFetchTransport) {
   function log() {
     items = [...arguments];
-    if (closure_0(log[1]).DEBUG_BUILD) {
-      const debug = closure_0(tmp2[2]).debug;
+    if (makeFetchTransport(log[1]).DEBUG_BUILD) {
+      const debug = makeFetchTransport(tmp2[2]).debug;
       log = debug.log;
       const items1 = ["[Offline]:"];
       HermesBuiltin.arraySpread(items, 1);
@@ -21,7 +20,7 @@ export function makeOfflineTransport(arg0) {
     tmp2 = log;
   }
   return (createStore) => {
-    closure_0 = createStore;
+    makeFetchTransport = createStore;
     function flushIn(arg0) {
       if (timerId) {
         const _clearTimeout = clearTimeout;
@@ -233,14 +232,14 @@ export function makeOfflineTransport(arg0) {
         c6 = 4;
         c7 = 1;
         return {
-          value: (function shouldQueue(arg0, arg1, arg2) {
-            const result = createStore(728).envelopeContainsItemType(arg0, ["client_report"]);
+          value: (function shouldQueue(dependencyMap, arg1, arg2) {
+            const result = createStore(728).envelopeContainsItemType(dependencyMap, ["client_report"]);
             let tmp2 = !result;
             if (!result) {
               shouldStore = shouldStore.shouldStore;
               let shouldStoreResult = !shouldStore;
               if (shouldStore) {
-                shouldStoreResult = obj2.shouldStore(arg0, arg1, arg2);
+                shouldStoreResult = obj2.shouldStore(dependencyMap, arg1, arg2);
               }
               tmp2 = shouldStoreResult;
               obj2 = shouldStore;
@@ -359,7 +358,7 @@ export function makeOfflineTransport(arg0) {
       closure_130_1 = flag;
       return "Path";
     };
-    closure_1 = closure_0(createStore);
+    closure_1 = makeFetchTransport(createStore);
     if (createStore.createStore) {
       closure_3 = createStore.createStore(createStore);
       closure_4 = closure_1_4;

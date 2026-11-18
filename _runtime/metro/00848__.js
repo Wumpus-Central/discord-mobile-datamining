@@ -1,12 +1,12 @@
 // _runtime/metro/00848__.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
+export function getBreadcrumbLogLevelFromHttpStatusCode(status_code) {
   let tmp;
-  if (undefined !== arg0) {
-    if (arg0 < 400) {
+  if (undefined !== status_code) {
+    if (status_code < 400) {
       let str2;
-      if (arg0 >= 500) {
+      if (status_code >= 500) {
         str2 = "error";
       }
       let str = str2;

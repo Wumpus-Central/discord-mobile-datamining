@@ -22,8 +22,8 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const _sentryScope = "_sentryScope";
 const _sentryIsolationScope = "_sentryIsolationScope";
 
-export function getCapturedScopesOnSpan(scope) {
-  return { scope: scope[_sentryScope], isolationScope: unwrapScopeFromWeakRef(scope[_sentryIsolationScope]) };
+export function getCapturedScopesOnSpan(self) {
+  return { scope: self[_sentryScope], isolationScope: unwrapScopeFromWeakRef(self[_sentryIsolationScope]) };
 }
 export function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
   if (sentrySpan) {

@@ -5,33 +5,33 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function filenameIsInApp(str) {
+export function filenameIsInApp(replaced) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   if (!flag) {
-    let tmp = str;
-    if (str) {
-      tmp = !str.startsWith("/");
+    let tmp = replaced;
+    if (replaced) {
+      tmp = !replaced.startsWith("/");
     }
     if (tmp) {
-      tmp = !str.match(/^[A-Z]:/);
+      tmp = !replaced.match(/^[A-Z]:/);
     }
     if (tmp) {
-      tmp = !str.startsWith(".");
+      tmp = !replaced.startsWith(".");
     }
     if (tmp) {
-      tmp = !str.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
+      tmp = !replaced.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
     }
     flag = tmp;
   }
   let tmp2 = !flag;
   if (!flag) {
-    tmp2 = undefined !== str;
+    tmp2 = undefined !== replaced;
   }
   if (tmp2) {
-    tmp2 = !str.includes("node_modules/");
+    tmp2 = !replaced.includes("node_modules/");
   }
   return tmp2;
 }

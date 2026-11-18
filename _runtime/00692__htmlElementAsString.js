@@ -84,8 +84,8 @@ function _htmlElementAsString(tagName, arr) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function getComponentName(arg0) {
-  let parentNode = arg0;
+export function getComponentName(target) {
+  let parentNode = target;
   let num = 0;
   if (_mod685.GLOBAL_OBJ.HTMLElement) {
     while (parentNode) {
@@ -117,14 +117,14 @@ export function getLocationHref() {
     return "";
   }
 }
-export function htmlTreeAsString(arg0) {
+export function htmlTreeAsString(target, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
-  if (arg0) {
+  if (target) {
     try {
-      let tmp = arg0;
+      let tmp = target;
       items = [];
       let num2 = 0;
       const _Array = Array;

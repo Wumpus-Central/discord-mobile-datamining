@@ -1,6 +1,6 @@
 // _runtime/00688_consoleSandbox.js
 import _mod685 from "metro/00685__.js";
-import _mod687 from "metro/00687__.js";
+import __SENTRY_DEBUG__ from "metro/00687___SENTRY_DEBUG__.js";
 import _mod689 from "metro/00689__.js";
 
 require = arg1;
@@ -36,7 +36,7 @@ function _maybeLog(arg0) {
   dependencyMap = [...arguments].slice();
   let str = _require;
   let fn = dependencyMap;
-  const DEBUG_BUILD = require("metro/00687__.js").DEBUG_BUILD;
+  const DEBUG_BUILD = require("__SENTRY_DEBUG__").DEBUG_BUILD;
   if (!DEBUG_BUILD) {
     if (DEBUG_BUILD) {
       consoleSandbox(() => {
@@ -64,7 +64,7 @@ export const CONSOLE_LEVELS = ["debug", "info", "warn", "error", "log", "assert"
 export { consoleSandbox };
 export const debug = {
   enable() {
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       let globalSingleton = _mod689.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
       const tmpResult = _mod689;
     } else {
@@ -73,7 +73,7 @@ export const debug = {
     globalSingleton.enabled = true;
   },
   disable() {
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       let globalSingleton = _mod689.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
       const tmpResult = _mod689;
     } else {
@@ -82,7 +82,7 @@ export const debug = {
     globalSingleton.enabled = false;
   },
   isEnabled() {
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       let globalSingleton = _mod689.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
       const tmpResult = _mod689;
     } else {

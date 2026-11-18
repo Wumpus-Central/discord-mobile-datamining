@@ -1,13 +1,9 @@
 // _runtime/metro/07737__.js
-import registerAsset from "01119__.js";
+import _modDef7738 from "07738__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0e971a927dbdc3183654a0324b5f2831",
-  name: "ic_partnered_guild_icon_black_24px",
-  type: "png",
-});
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export default function getWebViewProxy(iframeId) {
+  return new _modDef7738(iframeId);
+}

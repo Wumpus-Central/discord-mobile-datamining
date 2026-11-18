@@ -1,5 +1,5 @@
 // _runtime/00789_markAsInstrumented.js
-import _mod687 from "metro/00687__.js";
+import __SENTRY_DEBUG__ from "metro/00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "00688_consoleSandbox.js";
 import GEN_AI_CONVERSATION_ID_ATTRIBUTE from "00703_GEN_AI_CONVERSATION_ID_ATTRIBUTE.js";
 import _mod730 from "metro/00730__.js";
@@ -280,7 +280,7 @@ function instrumentSupabaseClient(supabaseClient) {
         }
       }
     })(supabaseClient);
-  } else if (_mod687.DEBUG_BUILD) {
+  } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
     const debug = consoleSandbox.debug;
     debug.warn("Supabase integration was not installed because no Supabase client was provided.");
   }
@@ -363,7 +363,7 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
               }
             }
           })(supabaseClient);
-        } else if (_mod687.DEBUG_BUILD) {
+        } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
           let debug = consoleSandbox.debug;
           debug.warn("Supabase integration was not installed because no Supabase client was provided.");
         }

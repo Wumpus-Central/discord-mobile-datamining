@@ -205,12 +205,12 @@ export function _callOnRequestSpanEnd(arg0, response, onRequestSpanEnd) {
     onRequestSpanEnd(arg0, obj);
   }
 }
-export function instrumentFetchRequest(fetchData, fn, fn2, setAttribute, onRequestSpanEnd) {
+export function instrumentFetchRequest(fetchData, shouldCreateSpanForRequest, shouldAttachHeadersWithTargets, setAttribute, onRequestSpanEnd) {
   if (fetchData.fetchData) {
     ({ method, url } = fetchData.fetchData);
     let hasSpansEnabledResult = _mod719.hasSpansEnabled();
     if (hasSpansEnabledResult) {
-      hasSpansEnabledResult = fn(url);
+      hasSpansEnabledResult = shouldCreateSpanForRequest(url);
     }
     if (fetchData.endTimestamp) {
       if (hasSpansEnabledResult) {
@@ -328,7 +328,7 @@ export function instrumentFetchRequest(fetchData, fn, fn2, setAttribute, onReque
     const sentryNonRecordingSpan = new SentryNonRecordingSpan.SentryNonRecordingSpan();
     fetchData.fetchData.__span = sentryNonRecordingSpan.spanContext().spanId;
     setAttribute[sentryNonRecordingSpan.spanContext().spanId] = sentryNonRecordingSpan;
-    if (fn2(fetchData.fetchData.url)) {
+    if (shouldAttachHeadersWithTargets(fetchData.fetchData.url)) {
       const first = fetchData.args[0];
       const tmp23 = fetchData.args[1] || {};
       const obj9 = {};

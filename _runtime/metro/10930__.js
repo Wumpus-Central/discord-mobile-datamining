@@ -1,306 +1,255 @@
 // _runtime/metro/10930__.js
-import _mod10906 from "10906__.js";
+import _mod32 from "00032__.js";
+import _objectWithoutProperties2 from "00109__objectWithoutProperties.js";
+import _mod10932 from "10932__.js";
+import _mod10934 from "10934__.js";
+import _mod10935 from "10935__.js";
+import 10931__ from "10931__.js";
+import noop from "00019__.js";
+import get_ActivityIndicator from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
+const _slicedToArray = module_10931(_mod32);
+const _objectWithoutProperties = module_10931(_objectWithoutProperties2);
+if (typeof WeakMap === "function") {
+  const _WeakMap = WeakMap;
+  const weakMap = new WeakMap();
+  const _WeakMap2 = WeakMap;
+  const weakMap1 = new WeakMap();
 }
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          for (const key10009 in arg0) {
-            let tmp9 = "default" !== key10009;
-            if (!tmp9) {
-              if (!tmp9) {
+if (!noop) {
+  const merged = Object.assign({ default: null });
+  merged[0] = noop;
+  let value = merged;
+  if (null !== noop) {
+    if (typeof noop === "object") {
+      if (!weakMap) {
+        value = merged;
+        const keys = Object.keys();
+        if (keys !== undefined) {
+          value = merged;
+          while (keys[tmp] !== undefined) {
+            let tmp20 = "default" !== tmp11;
+            if (!tmp20) {
+              if (!tmp20) {
                 continue;
               } else {
-                let tmp6 = self2(obj, arg0, key10009);
+                let _Object = Object;
+                let ownPropertyDescriptor = defineProperty;
+                if (defineProperty) {
+                  let _Object2 = Object;
+                  ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp11);
+                }
+                if (!ownPropertyDescriptor) {
+                  merged[tmp11] = noop[tmp11];
+                  continue;
+                } else {
+                  let definePropertyResult1 = defineProperty(merged, tmp11, ownPropertyDescriptor);
+                  continue;
+                }
                 continue;
               }
               continue;
             } else {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let hasOwnProperty = {}.hasOwnProperty;
               let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10009);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10009);
-              }
+              let tmp12 = typeof call === "unknown" ? hasOwnProperty(tmp11) : call(noop, tmp11);
             }
           }
         }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    exports.default = function default_1() {
-      if (typeof error === "function") {
-        const obj = { localeError: null };
-        const obj2 = {
-          string: {
-            unit: "\u06A9\u0627\u0631\u0627\u06A9\u062A\u0631",
-            verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F",
-          },
-          file: { unit: "\u0628\u0627\u06CC\u062A", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" },
-          array: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" },
-          set: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" },
-          map: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" },
-        };
-        closure_1 = {
-          regex: "\u0648\u0631\u0648\u062F\u06CC",
-          email: "\u0622\u062F\u0631\u0633 \u0627\u06CC\u0645\u06CC\u0644",
-          url: "URL",
-          emoji: "\u0627\u06CC\u0645\u0648\u062C\u06CC",
-          uuid: "UUID",
-          uuidv4: "UUIDv4",
-          uuidv6: "UUIDv6",
-          nanoid: "nanoid",
-          guid: "GUID",
-          cuid: "cuid",
-          cuid2: "cuid2",
-          ulid: "ULID",
-          xid: "XID",
-          ksuid: "KSUID",
-          datetime: "\u062A\u0627\u0631\u06CC\u062E \u0648 \u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648",
-          date: "\u062A\u0627\u0631\u06CC\u062E \u0627\u06CC\u0632\u0648",
-          time: "\u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648",
-          duration: "\u0645\u062F\u062A \u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648",
-          ipv4: "IPv4 \u0622\u062F\u0631\u0633",
-          ipv6: "IPv6 \u0622\u062F\u0631\u0633",
-          mac: "MAC \u0622\u062F\u0631\u0633",
-          cidrv4: "IPv4 \u062F\u0627\u0645\u0646\u0647",
-          cidrv6: "IPv6 \u062F\u0627\u0645\u0646\u0647",
-          base64: "base64-encoded \u0631\u0634\u062A\u0647",
-          base64url: "base64url-encoded \u0631\u0634\u062A\u0647",
-          json_string: "JSON \u0631\u0634\u062A\u0647",
-          e164: "E.164 \u0639\u062F\u062F",
-          credit_card:
-            "\u0634\u0645\u0627\u0631\u0647 \u06A9\u0627\u0631\u062A \u0627\u0639\u062A\u0628\u0627\u0631\u06CC",
-          currency_code: "\u06A9\u062F \u0627\u0631\u0632",
-          iban: "IBAN",
-          jwt: "JWT",
-          template_literal: "\u0648\u0631\u0648\u062F\u06CC",
-        };
-        closure_2 = { nan: "NaN", number: "\u0639\u062F\u062F", array: "\u0622\u0631\u0627\u06CC\u0647" };
-        obj.localeError = (code) => {
-          switch (code.code) {
-            case "invalid_type":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp48 = closure_2[parsedTypeResult];
-              if (tmp48 == null) {
-                tmp48 = parsedTypeResult;
-              }
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined =
-                  "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A instanceof " +
-                  code.expected +
-                  " \u0645\u06CC\u200C\u0628\u0648\u062F\u060C " +
-                  tmp48 +
-                  " \u062F\u0631\u06CC\u0627\u0641\u062A \u0634\u062F";
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined =
-                  "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A " +
-                  expected +
-                  " \u0645\u06CC\u200C\u0628\u0648\u062F\u060C " +
-                  tmp48 +
-                  " \u062F\u0631\u06CC\u0627\u0641\u062A \u0634\u062F";
-              }
-              return combined;
-            case "invalid_value":
-              if (1 === code.values.length) {
-                const _HermesInternal15 = HermesInternal;
-                let combined1 =
-                  "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A " +
-                  closure_2.stringifyPrimitive(code.values[0]) +
-                  " \u0645\u06CC\u200C\u0628\u0648\u062F";
-              } else {
-                const _HermesInternal14 = HermesInternal;
-                combined1 =
-                  "\u06AF\u0632\u06CC\u0646\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A \u06CC\u06A9\u06CC \u0627\u0632 " +
-                  closure_2.joinValues(code.values, "|") +
-                  " \u0645\u06CC\u200C\u0628\u0648\u062F";
-              }
-              return combined1;
-            case "too_big":
-              let str29 = "<";
-              if (code.inclusive) {
-                str29 = "<=";
-              }
-              let tmp27 = obj2[code.origin];
-              if (tmp27 == null) {
-                tmp27 = null;
-              }
-              let str30 = code.origin;
-              if (tmp27) {
-                if (str30 == null) {
-                  str30 = "\u0645\u0642\u062F\u0627\u0631";
-                }
-                const str1 = code.maximum.toString();
-                let str37 = tmp27.unit;
-                if (str37 == null) {
-                  str37 = "\u0639\u0646\u0635\u0631";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined2 =
-                  "\u062E\u06CC\u0644\u06CC \u0628\u0632\u0631\u06AF: " +
-                  str30 +
-                  " \u0628\u0627\u06CC\u062F " +
-                  str29 +
-                  str1 +
-                  " " +
-                  str37 +
-                  " \u0628\u0627\u0634\u062F";
-              } else {
-                let str31 = str30;
-                if (str30 == null) {
-                  str31 = "\u0645\u0642\u062F\u0627\u0631";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined2 =
-                  "\u062E\u06CC\u0644\u06CC \u0628\u0632\u0631\u06AF: " +
-                  str31 +
-                  " \u0628\u0627\u06CC\u062F " +
-                  str29 +
-                  code.maximum.toString() +
-                  " \u0628\u0627\u0634\u062F";
-              }
-              return combined2;
-            case "too_small":
-              let str21 = ">";
-              if (code.inclusive) {
-                str21 = ">=";
-              }
-              let tmp15 = obj2[code.origin];
-              if (tmp15 == null) {
-                tmp15 = null;
-              }
-              ({ origin, minimum } = code);
-              const str56 = minimum.toString();
-              if (tmp15) {
-                const _HermesInternal11 = HermesInternal;
-                let combined3 =
-                  "\u062E\u06CC\u0644\u06CC \u06A9\u0648\u0686\u06A9: " +
-                  origin +
-                  " \u0628\u0627\u06CC\u062F " +
-                  str21 +
-                  str56 +
-                  " " +
-                  tmp15.unit +
-                  " \u0628\u0627\u0634\u062F";
-              } else {
-                const _HermesInternal10 = HermesInternal;
-                combined3 =
-                  "\u062E\u06CC\u0644\u06CC \u06A9\u0648\u0686\u06A9: " +
-                  origin +
-                  " \u0628\u0627\u06CC\u062F " +
-                  str21 +
-                  str56 +
-                  " \u0628\u0627\u0634\u062F";
-              }
-              return combined3;
-            case "invalid_format":
-              if ("starts_with" === code.format) {
-                const _HermesInternal9 = HermesInternal;
-                let combined4 =
-                  '\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0628\u0627 "' +
-                  code.prefix +
-                  '" \u0634\u0631\u0648\u0639 \u0634\u0648\u062F';
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                combined4 =
-                  '\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0628\u0627 "' +
-                  code.suffix +
-                  '" \u062A\u0645\u0627\u0645 \u0634\u0648\u062F';
-              } else if ("includes" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                combined4 =
-                  '\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0634\u0627\u0645\u0644 "' +
-                  code.includes +
-                  '" \u0628\u0627\u0634\u062F';
-              } else if ("regex" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined4 =
-                  "\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0628\u0627 \u0627\u0644\u06AF\u0648\u06CC " +
-                  code.pattern +
-                  " \u0645\u0637\u0627\u0628\u0642\u062A \u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F";
-              } else {
-                let format = closure_1[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal5 = HermesInternal;
-                combined4 = "" + format + " \u0646\u0627\u0645\u0639\u062A\u0628\u0631";
-              }
-              return combined4;
-            case "not_multiple_of":
-              const _HermesInternal4 = HermesInternal;
-              return (
-                "\u0639\u062F\u062F \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0645\u0636\u0631\u0628 " +
-                code.divisor +
-                " \u0628\u0627\u0634\u062F"
-              );
-            case "unrecognized_keys":
-              let str3 = "";
-              if (code.keys.length > 1) {
-                str3 = "\u0647\u0627\u06CC";
-              }
-              const _HermesInternal3 = HermesInternal;
-              return (
-                "\u06A9\u0644\u06CC\u062F" +
-                str3 +
-                " \u0646\u0627\u0634\u0646\u0627\u0633: " +
-                closure_2.joinValues(code.keys, ", ")
-              );
-            case "invalid_key":
-              const _HermesInternal2 = HermesInternal;
-              return "\u06A9\u0644\u06CC\u062F \u0646\u0627\u0634\u0646\u0627\u0633 \u062F\u0631 " + code.origin;
-            case "invalid_union":
-              return "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631";
-            case "invalid_element":
-              const _HermesInternal = HermesInternal;
-              return (
-                "\u0645\u0642\u062F\u0627\u0631 \u0646\u0627\u0645\u0639\u062A\u0628\u0631 \u062F\u0631 " + code.origin
-              );
-            default:
-              return "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631";
-          }
-        };
-        return obj;
+      } else if (weakMap.has(noop)) {
+        value = weakMap.get(noop);
       } else {
-        throw new TypeError("Trying to call a non-function");
+        let result = weakMap.set(noop, merged);
       }
-    };
-    let closure_2 = fn(_mod10906);
-    function error() {}
-    module.exports = exports.default;
-  } else {
-    const _Object2 = Object;
+    } else {
+      value = merged;
+    }
   }
 } else {
-  let _Object = Object;
+  value = noop;
 }
+const __INTERNAL_VIEW_CONFIG = module_10931(_mod10932);
+let closure_8 = ["onValueChange", "onSlidingStart", "onSlidingComplete", "onAccessibilityAction", "value", "minimumValue", "maximumValue", "step", "inverted", "tapToSeek", "lowerLimit", "upperLimit"];
+
+export default value.default.forwardRef(function SliderComponent(onSlidingComplete, ref) {
+  ({ onValueChange: require, onSlidingStart } = onSlidingComplete);
+  onSlidingComplete = onSlidingComplete.onSlidingComplete;
+  const onAccessibilityAction = onSlidingComplete.onAccessibilityAction;
+  let SLIDER_DEFAULT_INITIAL_VALUE = onSlidingComplete.value;
+  if (undefined === SLIDER_DEFAULT_INITIAL_VALUE) {
+    SLIDER_DEFAULT_INITIAL_VALUE = _mod10934.constants.SLIDER_DEFAULT_INITIAL_VALUE;
+  }
+  const minimumValue = onSlidingComplete.minimumValue;
+  let num = 0;
+  if (undefined !== minimumValue) {
+    num = minimumValue;
+  }
+  const maximumValue = onSlidingComplete.maximumValue;
+  let num2 = 1;
+  if (undefined !== maximumValue) {
+    num2 = maximumValue;
+  }
+  const step = onSlidingComplete.step;
+  let num3 = 0;
+  if (undefined !== step) {
+    num3 = step;
+  }
+  const inverted = onSlidingComplete.inverted;
+  const tapToSeek = onSlidingComplete.tapToSeek;
+  let lowerLimit = onSlidingComplete.lowerLimit;
+  if (undefined === lowerLimit) {
+    const Platform = get_ActivityIndicator.Platform;
+    const obj = { web: num, default: _mod10934.constants.LIMIT_MIN_VALUE };
+    lowerLimit = Platform.select(obj);
+  }
+  let upperLimit = onSlidingComplete.upperLimit;
+  if (undefined === upperLimit) {
+    const Platform2 = get_ActivityIndicator.Platform;
+    const obj2 = { web: num2, default: _mod10934.constants.LIMIT_MAX_VALUE };
+    upperLimit = Platform2.select(obj2);
+  }
+  const defaultResult = _objectWithoutProperties.default(onSlidingComplete, closure_8);
+  let SLIDER_DEFAULT_INITIAL_VALUE2 = num;
+  if (null != SLIDER_DEFAULT_INITIAL_VALUE) {
+    SLIDER_DEFAULT_INITIAL_VALUE2 = SLIDER_DEFAULT_INITIAL_VALUE;
+  }
+  if (null == SLIDER_DEFAULT_INITIAL_VALUE2) {
+    SLIDER_DEFAULT_INITIAL_VALUE2 = _mod10934.constants.SLIDER_DEFAULT_INITIAL_VALUE;
+  }
+  [tmp15, jsxProd] = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  const defaultResult1 = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  const tmp4 = undefined !== tapToSeek && tapToSeek;
+  [tmp17, closure_8] = _slicedToArray.default(value.useState(0), 2);
+  let DEFAULT_STEP_RESOLUTION = num3;
+  if (!num3) {
+    DEFAULT_STEP_RESOLUTION = _mod10934.constants.DEFAULT_STEP_RESOLUTION;
+  }
+  let result = (num2 - num) / DEFAULT_STEP_RESOLUTION;
+  let tmp21 = num3;
+  if (!num3) {
+    tmp21 = result;
+  }
+  result = tmp21;
+  if (num3) {
+    DEFAULT_STEP_RESOLUTION = result;
+  }
+  const defaultResult2 = _slicedToArray.default(value.useState(0), 2);
+  const obj4 = { length: DEFAULT_STEP_RESOLUTION + 1 };
+  if ("ios" === get_ActivityIndicator.Platform.OS) {
+    let defaultSlider = _mod10935.styles.defaultSlideriOS;
+    let tmp24 = require;
+  } else {
+    tmp24 = require;
+    defaultSlider = _mod10935.styles.defaultSlider;
+  }
+  items = [defaultSlider, defaultResult.style];
+  if (typeof defaultResult.disabled === "boolean") {
+    let disabled = defaultResult.disabled;
+  } else {
+    const accessibilityState2 = defaultResult.accessibilityState;
+    let disabled1;
+    if (null != accessibilityState2) {
+      disabled1 = accessibilityState2.disabled;
+    }
+    disabled = true === disabled1;
+  }
+  if (typeof defaultResult.disabled === "boolean") {
+    const _Object = Object;
+    const obj5 = { disabled: defaultResult.disabled };
+    let accessibilityState = Object.assign({}, defaultResult.accessibilityState, obj5);
+  } else {
+    accessibilityState = defaultResult.accessibilityState;
+  }
+  let fn = null;
+  if (onSlidingStart) {
+    fn = (nativeEvent) => {
+      onSlidingStart(nativeEvent.nativeEvent.value);
+    };
+  }
+  let fn2 = null;
+  if (onSlidingComplete) {
+    fn2 = (nativeEvent) => {
+      onSlidingComplete(nativeEvent.nativeEvent.value);
+    };
+  }
+  let fn3 = null;
+  if (onAccessibilityAction) {
+    fn3 = (arg0) => {
+      onAccessibilityAction(arg0);
+    };
+  }
+  let tmp29;
+  if (!Number.isNaN(SLIDER_DEFAULT_INITIAL_VALUE)) {
+    if (SLIDER_DEFAULT_INITIAL_VALUE) {
+      tmp29 = SLIDER_DEFAULT_INITIAL_VALUE;
+    }
+  }
+  const items1 = [lowerLimit, upperLimit];
+  const effect = value.useEffect(() => {
+    if (lowerLimit >= upperLimit) {
+      const _console = console;
+      console.warn("Invalid configuration: lower limit is supposed to be smaller than upper limit");
+    }
+  }, items1);
+  const obj7 = {
+    onLayout(nativeEvent) {
+      closure_1_8(nativeEvent.nativeEvent.layout.width);
+    },
+    style: null,
+    children: null
+  };
+  const items2 = [items, { justifyContent: "center" }];
+  obj7.style = items2;
+  if (defaultResult.StepMarker) {
+    const obj9 = { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null };
+    ({ renderStepNumber: obj8.renderStepNumber, thumbImage: obj8.thumbImage, StepMarker: obj8.StepMarker } = defaultResult);
+    obj9.isLTR = tmp3;
+    let jsxResult = jsxProd.jsx(tmp24(10936).StepsIndicator, { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null });
+  } else {
+    jsxResult = null;
+  }
+  const items3 = [jsxResult, ];
+  const obj15 = { minimumValue: num, maximumValue: num2, step: num3, inverted: undefined !== inverted && inverted, tapToSeek: tmp4, value: tmp29, lowerLimit, upperLimit, accessibilityState, thumbImage: null, ref: null, style: null, onChange: null, onRNCSliderSlidingStart: null, onRNCSliderSlidingComplete: null, onRNCSliderValueChange: null, disabled: null, onStartShouldSetResponder: null, onResponderTerminationRequest: null, onRNCSliderAccessibilityAction: null, thumbTintColor: null };
+  if ("web" === get_ActivityIndicator.Platform.OS) {
+    let thumbImage = defaultResult.thumbImage;
+  } else if (!defaultResult.StepMarker) {
+    if (defaultResult.thumbImage) {
+      const Image = get_ActivityIndicator.Image;
+      thumbImage = Image.resolveAssetSource(defaultResult.thumbImage);
+    }
+  }
+  function onValueChangeEvent(nativeEvent) {
+    if (require) {
+      tmp(nativeEvent.nativeEvent.value);
+    }
+    jsxProd(nativeEvent.nativeEvent.value);
+  }
+  obj15.thumbImage = thumbImage;
+  obj15.ref = ref;
+  const items4 = [{ zIndex: 1, width: tmp17 }, defaultSlider, { alignContent: "center", alignItems: "center" }];
+  obj15.style = items4;
+  obj15.onChange = onValueChangeEvent;
+  obj15.onRNCSliderSlidingStart = fn;
+  obj15.onRNCSliderSlidingComplete = fn2;
+  obj15.onRNCSliderValueChange = onValueChangeEvent;
+  obj15.disabled = disabled;
+  obj15.onStartShouldSetResponder = function onStartShouldSetResponder() {
+    return true;
+  };
+  obj15.onResponderTerminationRequest = function onResponderTerminationRequest() {
+    return false;
+  };
+  obj15.onRNCSliderAccessibilityAction = fn3;
+  if (!defaultResult.thumbImage) {
+    let str = defaultResult.thumbTintColor;
+  } else {
+    str = "transparent";
+  }
+  obj15.thumbTintColor = str;
+  items3[1] = <__INTERNAL_VIEW_CONFIG.default {...Object.assign({}, defaultResult, obj15)} />;
+  obj7.children = items3;
+  return <get ActivityIndicator.View onLayout={function onLayout(nativeEvent) {
+    closure_1_8(nativeEvent.nativeEvent.layout.width);
+  }} style={null}>{null}</get ActivityIndicator.View>;
+});

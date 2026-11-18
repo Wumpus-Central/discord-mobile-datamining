@@ -1,5 +1,5 @@
 // _runtime/00801_validateMcpServerInstance.js
-import _mod687 from "metro/00687__.js";
+import __SENTRY_DEBUG__ from "metro/00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "00688_consoleSandbox.js";
 
 require = arg1;
@@ -89,7 +89,7 @@ export function validateMcpServerInstance(obj) {
   }
   if (!flag) {
     flag = false;
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = consoleSandbox.debug;
       debug.warn("Did not patch MCP server. Interface is incompatible.");
       flag = false;

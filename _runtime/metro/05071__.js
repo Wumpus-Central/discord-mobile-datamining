@@ -1,55 +1,78 @@
 // _runtime/metro/05071__.js
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "hu" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = {
-      long: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-    };
-    obj3.conjunction = obj4;
-    const obj5 = {
-      long: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" },
-      short: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" },
-    };
-    obj3.disjunction = obj5;
-    const obj6 = {
-      long: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-    };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import _mod5072 from "05072__.js";
+import noop from "00019__.js";
+
+const require = globalThis.__r;
+
+({ useCallback: c2, useRef: c3 } = noop);
+
+export () => {
+  const tmp = closure_3(null);
+  _require = tmp;
+  dependencyMap = closure_3(null);
+  const sharedValue = require("01655__.js").useSharedValue(require("value2").SCROLLABLE_TYPE.UNDETERMINED);
+  let obj = require("01655__.js");
+  const sharedValue1 = require("01655__.js").useSharedValue(0);
+  const obj2 = require("01655__.js");
+  const sharedValue2 = require("01655__.js").useSharedValue(require("value2").SCROLLABLE_STATE.UNDETERMINED);
+  const obj3 = require("01655__.js");
+  const sharedValue3 = require("01655__.js").useSharedValue(false);
+  const obj4 = require("01655__.js");
+  const tmp6 = closure_2((id) => {
+    const current = ref.current;
+    id = undefined;
+    if (current != null) {
+      id = current.id;
+    }
+    if (id == null) {
+      id = null;
+    }
+    if (id !== id.id) {
+      if (ref.current) {
+        closure_1.current = ref.current;
+      }
+      ref.current = id;
+    }
+  }, []);
+  return {
+    scrollableRef: tmp,
+    animatedScrollableType: sharedValue,
+    animatedScrollableContentOffsetY: sharedValue1,
+    animatedScrollableOverrideState: sharedValue2,
+    isScrollableRefreshable: sharedValue3,
+    setScrollableRef: closure_2((id) => {
+      const current = ref.current;
+      id = undefined;
+      if (current != null) {
+        id = current.id;
+      }
+      if (id == null) {
+        id = null;
+      }
+      if (id !== id.id) {
+        if (ref.current) {
+          closure_1.current = ref.current;
+        }
+        ref.current = id;
+      }
+    }, []),
+    removeScrollableRef: closure_2((current) => {
+      try {
+        const findNodeHandleResult = _mod5072.findNodeHandle(current.current);
+        current = ref.current;
+        let id;
+        if (current != null) {
+          id = current.id;
+        }
+        if (id == null) {
+          id = null;
+        }
+        if (findNodeHandleResult === id) {
+          ref.current = ref2.current;
+        }
+      } catch (err) {
+        return tmp;
+      }
+    }, [])
+  };
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
-}
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = {
-  data: {
-    conjunction: {
-      long: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-    },
-    disjunction: {
-      long: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" },
-      short: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" },
-    },
-    unit: {
-      long: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" },
-    },
-  },
-  locale: "hu",
-};
-prop.push(obj);

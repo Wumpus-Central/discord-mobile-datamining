@@ -1,16 +1,13 @@
 // _runtime/metro/07570__.js
+import registerAsset from "01119__.js";
 
-export function throttle(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return function () {
-    if (null == timeout) {
-      const self = this;
-      closure_0.apply(this, tmp);
-      const _setTimeout = setTimeout;
-      timeout = setTimeout(() => {
-        c2 = undefined;
-      }, closure_1);
-    }
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d71daeef64b152476fb485143e6c3f6e",
+  name: "TextLockIcon",
+  type: "png",
+});

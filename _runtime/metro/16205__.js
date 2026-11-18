@@ -1,53 +1,13 @@
 // _runtime/metro/16205__.js
-import defaultErrorMap from "../16206_defaultErrorMap.js";
-import _mod16208 from "16208__.js";
-import _mod16209 from "16209__.js";
-import DIRTY from "../16210_DIRTY.js";
-import _mod16211 from "16211__.js";
-import _mod16212 from "16212__.js";
+import registerAsset from "01119__.js";
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
-  }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
-        }
-      }
-    };
-  }
-  const _Object2 = Object;
-  fn(defaultErrorMap, exports);
-  fn(DIRTY, exports);
-  fn(_mod16211, exports);
-  fn(_mod16209, exports);
-  fn(_mod16212, exports);
-  fn(_mod16208, exports);
-} else {
-  let _Object = Object;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons/user_profile",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "50a11b05117d31e1ad224516819cbd87",
+  name: "ic_clock",
+  type: "png",
+});

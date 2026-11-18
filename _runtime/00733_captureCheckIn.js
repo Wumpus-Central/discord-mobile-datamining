@@ -1,6 +1,6 @@
 // _runtime/00733_captureCheckIn.js
 import _mod685 from "metro/00685__.js";
-import _mod687 from "metro/00687__.js";
+import __SENTRY_DEBUG__ from "metro/00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "00688_consoleSandbox.js";
 import uuid4 from "00694_uuid4.js";
 import dateTimestampInSeconds from "00702_dateTimestampInSeconds.js";
@@ -18,11 +18,11 @@ function captureCheckIn(arg0, arg1) {
   if (client) {
     if (client.captureCheckIn) {
       return client.captureCheckIn(arg0, arg1, currentScope);
-    } else if (_mod687.DEBUG_BUILD) {
+    } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug2 = consoleSandbox.debug;
       debug2.warn("Cannot capture check-in. Client does not support sending check-ins.");
     }
-  } else if (_mod687.DEBUG_BUILD) {
+  } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
     const debug = consoleSandbox.debug;
     debug.warn("Cannot capture check-in. No client defined.");
   }
@@ -56,7 +56,7 @@ let closure_4 = async function _flush(arg0) {
         if (client) {
           client.flush(closure_0);
         } else {
-          if (require("metro/00687__.js").DEBUG_BUILD) {
+          if (require("__SENTRY_DEBUG__").DEBUG_BUILD) {
             const debug = require("consoleSandbox").debug;
             debug.warn("Cannot flush events. No client defined.");
           }
@@ -99,7 +99,7 @@ let closure_5 = async function _close(arg0) {
         if (client) {
           client.close(closure_0);
         } else {
-          if (require("metro/00687__.js").DEBUG_BUILD) {
+          if (require("__SENTRY_DEBUG__").DEBUG_BUILD) {
             const debug = require("consoleSandbox").debug;
             debug.warn("Cannot flush events and disable SDK. No client defined.");
           }
@@ -340,11 +340,11 @@ export function withMonitor(monitorSlug, arg1, arg2) {
       if (client) {
         if (client.captureCheckIn) {
           client.captureCheckIn(obj, undefined, currentScope);
-        } else if (_mod687.DEBUG_BUILD) {
+        } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
           const debug2 = consoleSandbox.debug;
           debug2.warn("Cannot capture check-in. Client does not support sending check-ins.");
         }
-      } else if (_mod687.DEBUG_BUILD) {
+      } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
         const debug = consoleSandbox.debug;
         debug.warn("Cannot capture check-in. No client defined.");
       }

@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==",
+  httpServerLocation: "/assets/modules/waterwheels",
   scales: [1],
-  hash: "d838dbc00d76c029ebf5009369a90cee",
-  name: "lt.messages.d838dbc00d76c029ebf5009369a90cee.compiled.messages",
+  hash: "98b6cd0561ef00509ea5fc1c833b508b",
+  name: "Waterwheels.compiled.messages",
   type: "jsona",
 });

@@ -1,5 +1,5 @@
 // _runtime/00744__INTERNAL_captureSerializedLog.js
-import _mod687 from "metro/00687__.js";
+import __SENTRY_DEBUG__ from "metro/00687___SENTRY_DEBUG__.js";
 import consoleSandbox from "00688_consoleSandbox.js";
 import _mod689 from "metro/00689__.js";
 import _mod691 from "metro/00691__.js";
@@ -264,18 +264,18 @@ export function _INTERNAL_captureLog(attributes) {
         const tmp12Result16 = _mod747;
       } else {
         client.recordDroppedEvent("before_send", "log_item", 1);
-        if (_mod687.DEBUG_BUILD) {
+        if (__SENTRY_DEBUG__.DEBUG_BUILD) {
           const debug3 = consoleSandbox.debug;
           debug3.warn("beforeSendLog returned null, log will not be captured.");
         }
       }
       const tmp12Result12 = _getSpanForScope;
-    } else if (_mod687.DEBUG_BUILD) {
+    } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug2 = consoleSandbox.debug;
       debug2.warn("logging option not enabled, log will not be captured.");
     }
     tmp11 = undefined !== enableLogs && enableLogs;
-  } else if (_mod687.DEBUG_BUILD) {
+  } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
     const debug = consoleSandbox.debug;
     debug.warn("No client available to capture log.");
   }

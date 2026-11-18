@@ -1,16 +1,13 @@
 // _runtime/metro/17083__.js
-import _modDef17081 from "17081__.js";
-import noop from "00019__.js";
+import registerAsset from "01119__.js";
 
-export default function useReanimatedTransitionProgress() {
-  const context = noop.useContext(_modDef17081);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error(
-      "Couldn't find values for reanimated transition progress. Are you inside a screen in Native Stack?",
-    );
-    throw error;
-  } else {
-    return context;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "ca990f51cd6cd3877a91c6ff3ddaf3f5",
+  name: "InventoryIcon",
+  type: "png",
+});
