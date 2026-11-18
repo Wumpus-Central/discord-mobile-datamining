@@ -1,6 +1,6 @@
-// === Module 14637: conjureTranscriptScroll ===
+// === Module 18492: conjureTranscriptScroll ===
 
-// Module 14637 (conjureTranscriptScroll)
+// Module 18492 (conjureTranscriptScroll)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureTranscriptScroll.tsx");

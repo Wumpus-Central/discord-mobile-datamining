@@ -1,10 +1,10 @@
-// === Module 13121: CheckpointFlows ===
+// === Module 12419: CheckpointFlows ===
 
-// Module 13121 (CheckpointFlows)
-import CheckpointNavigation from "CheckpointNavigation" /* 6743 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6745 */;
-import CheckpointSharedDataFlow from "CheckpointSharedDataFlow" /* 13122 */;
-import CheckpointNoSharedDataFlow from "CheckpointNoSharedDataFlow" /* 13123 */;
+// Module 12419 (CheckpointFlows)
+import CheckpointNavigation from "CheckpointNavigation" /* 6246 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6247 */;
+import CheckpointSharedDataFlow from "CheckpointSharedDataFlow" /* 12420 */;
+import CheckpointNoSharedDataFlow from "CheckpointNoSharedDataFlow" /* 12421 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -20,9 +20,9 @@ function getAdjacentCheckpointRoute(arg0) {
     isCharacterCreatorEnabled = true;
   }
   if (flow === require("CheckpointNavigation").CheckpointFlow.SHARED_DATA) {
-    let prop = tmp2(13122).CHECKPOINT_SHARED_DATA_FLOW;
+    let prop = tmp2(12420).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp2(13123).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp2(12421).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   const found = prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
@@ -88,9 +88,13 @@ obj2[CheckpointNavigation.CheckpointRoute.SIDEKICK] = CheckpointStatsUtils.hasCh
 obj2[CheckpointNavigation.CheckpointRoute.SIDEKICK_LEAVE] = CheckpointStatsUtils.hasCheckpointSidekick;
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointFlows.tsx");
 
-export function getCheckpointFlow(flag) {
-  const CheckpointFlow = CheckpointNavigation.CheckpointFlow;
-  return flag ? CheckpointFlow.SHARED_DATA : CheckpointFlow.NO_SHARED_DATA;
+export function getCheckpointFlow(stateFromStores) {
+  if (null != stateFromStores) {
+    let NO_SHARED_DATA = CheckpointNavigation.CheckpointFlow.SHARED_DATA;
+  } else {
+    NO_SHARED_DATA = CheckpointNavigation.CheckpointFlow.NO_SHARED_DATA;
+  }
+  return NO_SHARED_DATA;
 }
 export function hasCheckpointSummaryRoute(isCharacterCreatorEnabled) {
   let flag = isCharacterCreatorEnabled.isCharacterCreatorEnabled;

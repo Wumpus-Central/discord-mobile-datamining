@@ -1,12 +1,12 @@
-// === Module 9462: CollectiblesTargetedOfferPromotionUtils ===
+// === Module 8877: CollectiblesTargetedOfferPromotionUtils ===
 
-// Module 9462 (CollectiblesTargetedOfferPromotionUtils)
+// Module 8877 (CollectiblesTargetedOfferPromotionUtils)
 import util from "util" /* 1113 */;
-import StorefrontTypes from "StorefrontTypes" /* 7260 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8507 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 8508 */;
-import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9426 */;
-import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 9463 */;
+import StorefrontTypes from "StorefrontTypes" /* 6764 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7998 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7999 */;
+import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 8839 */;
+import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 8873 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesTargetedOfferPromotionUtils.tsx");

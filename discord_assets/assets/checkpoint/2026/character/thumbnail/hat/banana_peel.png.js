@@ -1,6 +1,6 @@
-// === Module 6670: ? ===
+// === Module 6172: ? ===
 
-// Module 6670
+// Module 6172
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/hat/banana_peel.png.js");

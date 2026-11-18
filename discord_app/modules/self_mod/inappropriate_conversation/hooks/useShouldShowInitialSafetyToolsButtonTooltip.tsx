@@ -1,7 +1,7 @@
-// === Module 12506: useShouldShowInitialSafetyToolsButtonTooltip ===
+// === Module 11789: useShouldShowInitialSafetyToolsButtonTooltip ===
 
-// Module 12506 (useShouldShowInitialSafetyToolsButtonTooltip)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 12462 */;
+// Module 11789 (useShouldShowInitialSafetyToolsButtonTooltip)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11744 */;
 
 const require = globalThis.__r;
 

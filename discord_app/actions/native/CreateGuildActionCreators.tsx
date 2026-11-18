@@ -1,7 +1,7 @@
-// === Module 14322: CreateGuildActionCreators ===
+// === Module 13626: CreateGuildActionCreators ===
 
-// Module 14322 (CreateGuildActionCreators)
-import GuildChannelStore from "GuildChannelStore" /* 5240 */;
+// Module 13626 (CreateGuildActionCreators)
+import GuildChannelStore from "GuildChannelStore" /* 4753 */;
 
 const require = fn;
 const InstantInviteSources = fn(1072).InstantInviteSources;

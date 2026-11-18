@@ -1,13 +1,11 @@
-// === Module 5518: GuildPowerupsConstants ===
+// === Module 8244: GuildPowerupsConstants ===
 
-// Module 5518 (GuildPowerupsConstants)
+// Module 8244 (GuildPowerupsConstants)
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 5143 */;
-import GameServerConstants from "GameServerConstants" /* 5519 */;
-import Powerups from "Powerups" /* 5521 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5522 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 5523 */;
-import GameServerExperiment from "GameServerExperiment" /* 5536 */;
+import dismissible_content from "dismissible_content" /* 4656 */;
+import GameServerExperiment from "GameServerExperiment" /* 6799 */;
+import Powerups from "Powerups" /* 7912 */;
+import GameServerConstants from "GameServerConstants" /* 8245 */;
 import PremiumConstants from "PremiumConstants" /* 1390 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -45,13 +43,8 @@ const set2 = new Set(items10);
 const obj4 = { boostPrice: 5, includedInLevel: BoostedGuildTiers.TIER_3 };
 let obj5 = {
   boostPrice: 3,
-  isEnabled(guildId) {
-    let serverThemeUserEnabled = ServerThemeUserExperiment.getServerThemeUserEnabled("GuildPowerupsConstants");
-    if (serverThemeUserEnabled) {
-      serverThemeUserEnabled = ServerThemeExperiment.getServerThemeEnabled(guildId, "GuildPowerupsConstants");
-      const tmpResult = ServerThemeExperiment;
-    }
-    return serverThemeUserEnabled;
+  isEnabled() {
+    return false;
   }
 };
 let obj6 = {

@@ -1,16 +1,16 @@
-// === Module 14658: ConjureBotPermissionsTip ===
+// === Module 18512: ConjureBotPermissionsTip ===
 
-// Module 14658 (ConjureBotPermissionsTip)
-import _modDef4133 from "module_4133" /* 4133 */;
-import ConjureTipHintDefault from "ConjureTipHint" /* 14659 */;
+// Module 18512 (ConjureBotPermissionsTip)
+import _modDef4121 from "module_4121" /* 4121 */;
+import ConjureTipHintDefault from "ConjureTipHint" /* 18513 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 function BotPermissionsHint(projectId) {
   projectId = projectId.projectId;
-  dependencyMap = noop.useContext(projectId(14403).ConjurePublishActionContext);
-  let obj = { icon: projectId(10751).ShieldIcon, children: null };
+  dependencyMap = noop.useContext(projectId(18306).ConjurePublishActionContext);
+  let obj = { icon: projectId(10032).ShieldIcon, children: null };
   const intl = projectId(1113).intl;
   const obj2 = { onReview: null };
   importDefault = asyncGeneratorStep(async () => {
@@ -69,12 +69,12 @@ function BotPermissionsHint(projectId) {
     }
     return applyArgumentsResult;
   };
-  obj.children = intl.format(_modDef4133["0S9HY8"], obj2);
-  return jsx(ConjureTipHintDefault, { icon: projectId(10751).ShieldIcon, children: null });
+  obj.children = intl.format(_modDef4121["0S9HY8"], obj2);
+  return jsx(ConjureTipHintDefault, { icon: projectId(10032).ShieldIcon, children: null });
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(14663).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(18517).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj.render = function render(arg0, context) {
   return <BotPermissionsHint projectId={context.context.projectId} />;
 };

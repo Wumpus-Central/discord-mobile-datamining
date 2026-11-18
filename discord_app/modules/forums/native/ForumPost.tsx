@@ -1,12 +1,12 @@
-// === Module 13488: ForumPost ===
+// === Module 12795: ForumPost ===
 
-// Module 13488 (ForumPost)
-import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 13490 */;
-import ForumPostGridBodyDefault from "ForumPostGridBody" /* 13494 */;
-import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 13505 */;
+// Module 12795 (ForumPost)
+import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 12797 */;
+import ForumPostGridBodyDefault from "ForumPostGridBody" /* 12801 */;
+import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 12812 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import RelationshipStore from "RelationshipStore" /* 5252 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import RelationshipStore from "RelationshipStore" /* 4765 */;
 
 const require = fn;
 function ForumPostGrid(arg0) {
@@ -97,7 +97,7 @@ function ConnectedForumPost(arg0) {
   }
   const obj8 = require("initialize");
 }
-const useForumChannelStore = fn(13489).useForumChannelStore;
+const useForumChannelStore = fn(12796).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -127,14 +127,14 @@ export function ForumPostListDisabled(threadId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = threadId(504).useStateFromStores(items1, () => ChannelStore.getChannel(stateFromStores.parent_id));
   const obj2 = threadId(504);
-  const firstForumPostMessage = threadId(12351).useFirstForumPostMessage(stateFromStores);
+  const firstForumPostMessage = threadId(11633).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(9118);
+  threadId(8529);
   if (loaded) {
     const obj4 = { style, children: null };
     const obj5 = { thread: stateFromStores, parentChannel: stateFromStores1, firstMessage, messageContent: tmp10, media: localDeviceMedia, hasUnreads: true, isNew: false, firstMessageLoaded: loaded, isLocalDeviceMedia: true };
-    obj4.children = closure_6(tmp4(13509), obj5);
-    tmp5 = closure_6(tmp(13508).ForumPostDisabledContainer, obj4);
+    obj4.children = closure_6(tmp4(12816), obj5);
+    tmp5 = closure_6(tmp(12815).ForumPostDisabledContainer, obj4);
   }
   return tmp5;
 }

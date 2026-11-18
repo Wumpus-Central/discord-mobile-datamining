@@ -1,10 +1,10 @@
-// === Module 11699: transferToPlayStation ===
+// === Module 10981: transferToPlayStation ===
 
-// Module 11699 (transferToPlayStation)
+// Module 10981 (transferToPlayStation)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11700 */;
-import ConsoleCommands from "ConsoleCommands" /* 11704 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 10982 */;
+import ConsoleCommands from "ConsoleCommands" /* 10986 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

@@ -1,8 +1,8 @@
-// === Module 16484: ServerTabLottie ===
+// === Module 15160: ServerTabLottie ===
 
-// Module 16484 (ServerTabLottie)
-import LottieIcon from "LottieIcon" /* 10061 */;
-import _mod16485 from "module_16485" /* 16485 */;
+// Module 15160 (ServerTabLottie)
+import LottieIcon from "LottieIcon" /* 9341 */;
+import _mod15161 from "module_15161" /* 15161 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,5 +15,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 export function ServerTabLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod16485, animation: "all", ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod15161, animation: "all", ref: ref.ref, layers, markers: items });
 }

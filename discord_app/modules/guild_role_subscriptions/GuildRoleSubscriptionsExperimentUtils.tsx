@@ -1,7 +1,7 @@
-// === Module 16368: GuildRoleSubscriptionsExperimentUtils ===
+// === Module 15035: GuildRoleSubscriptionsExperimentUtils ===
 
-// Module 16368 (GuildRoleSubscriptionsExperimentUtils)
-import GuildStore from "GuildStore" /* 5181 */;
+// Module 15035 (GuildRoleSubscriptionsExperimentUtils)
+import GuildStore from "GuildStore" /* 4694 */;
 
 const require = globalThis.__r;
 

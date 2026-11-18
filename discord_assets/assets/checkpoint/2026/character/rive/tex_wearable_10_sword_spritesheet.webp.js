@@ -1,6 +1,6 @@
-// === Module 13325: ? ===
+// === Module 12628: ? ===
 
-// Module 13325
+// Module 12628
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_wearable_10_sword_spritesheet.webp.js");

@@ -1,6 +1,6 @@
-// === Module 16389: GuildTagActionCreators ===
+// === Module 15056: GuildTagActionCreators ===
 
-// Module 16389 (GuildTagActionCreators)
+// Module 15056 (GuildTagActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1388 */;

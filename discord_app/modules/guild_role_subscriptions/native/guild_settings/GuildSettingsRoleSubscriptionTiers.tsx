@@ -1,22 +1,22 @@
-// === Module 20782: GuildSettingsRoleSubscriptionTiers ===
+// === Module 20055: GuildSettingsRoleSubscriptionTiers ===
 
-// Module 20782 (GuildSettingsRoleSubscriptionTiers)
+// Module 20055 (GuildSettingsRoleSubscriptionTiers)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17887 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 20781 */;
-import GuildRoleSettingsActionCreatorsAll from "GuildRoleSettingsActionCreators" /* 20785 */;
-import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 20786 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16690 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 20054 */;
+import GuildRoleSettingsActionCreatorsAll from "GuildRoleSettingsActionCreators" /* 20058 */;
+import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 20059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8416 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5235 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 7906 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4748 */;
 
 require = fn;
 function DraftBadge() {
@@ -113,7 +113,7 @@ function EditListingButton(editStateId) {
     items2[1] = tierPriceWithoutBadge;
     obj7.style = items2;
     obj7.children = "";
-    items1[3] = closure_15(tmp2(5923).Text, obj7);
+    items1[3] = closure_15(tmp2(5414).Text, obj7);
     obj6.children = items1;
     obj5.subLabel = closure_16(closure_7, obj6);
     if (null != first1) {
@@ -122,25 +122,25 @@ function EditListingButton(editStateId) {
       obj8.source = obj9;
       let tmp11Result6 = closure_15(FastImageDefault, obj8);
     } else {
-      const obj10 = { IconComponent: tmp2(12343).TagsIcon };
-      tmp11Result6 = closure_15(tmp2(7453).TableRow.Icon, obj10);
+      const obj10 = { IconComponent: tmp2(11625).TagsIcon };
+      tmp11Result6 = closure_15(tmp2(6956).TableRow.Icon, obj10);
     }
     obj5.icon = tmp11Result6;
     obj5.onPress = editStateId.onPress;
     obj5.onLongPress = function onLongPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20783, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20056, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
     };
-    return closure_15(tmp2(7453).TableRow, obj5);
+    return closure_15(tmp2(6956).TableRow, obj5);
   } else if (null != first2) {
     const intl = tmp2(1113).intl;
-    const obj11 = { price: tmp2(7262).formatPrice(first, first2.currency), interval: null };
-    const tmp2Result = tmp2(7262);
-    obj11.interval = tmp2(17891).formatPlanInterval(first2);
+    const obj11 = { price: tmp2(6766).formatPrice(first, first2.currency), interval: null };
+    const tmp2Result = tmp2(6766);
+    obj11.interval = tmp2(16694).formatPlanInterval(first2);
     let formatToPlainStringResult = intl.formatToPlainString(tmp2(1113).t.CgmBaG, obj11);
-    const tmp2Result3 = tmp2(17891);
+    const tmp2Result3 = tmp2(16694);
   } else {
-    formatToPlainStringResult = tmp2(17891).formatMonthlyPriceLabel(first);
-    const tmp2Result4 = tmp2(17891);
+    formatToPlainStringResult = tmp2(16694).formatMonthlyPriceLabel(first);
+    const tmp2Result4 = tmp2(16694);
   }
 }
 function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
@@ -185,7 +185,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
         obj.title = intl.string(guildId(1113).t.pXbGYc);
         const intl2 = guildId(1113).intl;
         obj.subtitle = intl2.string(guildId(1113).t["KzCF/6"]);
-        return closure_1_15(guildId(7503).NavigatorHeader, obj);
+        return closure_1_15(guildId(7006).NavigatorHeader, obj);
       }
     });
   });
@@ -245,7 +245,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
             if (first != null) {
               id = first.id;
             }
-            guildEligibleForTierTemplates(20785).pushTierEditScene(navigation, {
+            guildEligibleForTierTemplates(20058).pushTierEditScene(navigation, {
               groupListingId: id,
               initialEditStateId,
               onBeforeDispatchNewListing(id) {
@@ -259,7 +259,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
                 });
               }
             });
-            let obj = guildEligibleForTierTemplates(20785);
+            let obj = guildEligibleForTierTemplates(20058);
             const obj2 = {
               groupListingId: id,
               initialEditStateId,
@@ -311,12 +311,12 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
-const MAX_SUBSCRIPTION_TIERS = fn(17867).MAX_SUBSCRIPTION_TIERS;
+const MAX_SUBSCRIPTION_TIERS = fn(16670).MAX_SUBSCRIPTION_TIERS;
 const Constants = fn(1072);
 ({ GuildSettingsSections: map1, GuildSettingsSubsections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { height: "100%" }, content: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, paddingTop: nativeDefault.space.PX_16 }, tierIcon: null, tierPrice: null, tierPriceWithoutBadge: null, draftBadge: null, draftBadgeLabel: null, archiveBadge: null, archiveBadgeLabel: null, unsavedBadge: null, unsavedBadgeLabel: null, detailsRow: null, spinner: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: 20, height: 40, width: 40 };
 obj2.tierIcon = size;

@@ -1,11 +1,11 @@
-// === Module 14462: ConjureFileThumbnail ===
+// === Module 18356: ConjureFileThumbnail ===
 
-// Module 14462 (ConjureFileThumbnail)
+// Module 18356 (ConjureFileThumbnail)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import FileIcon from "FileIcon" /* 11826 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 14433 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 14463 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import FileIcon from "FileIcon" /* 11108 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18334 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 18357 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

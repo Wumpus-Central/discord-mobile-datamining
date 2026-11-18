@@ -1,14 +1,14 @@
-// === Module 15870: UserProfileActivityEmptyStates ===
+// === Module 14508: UserProfileActivityEmptyStates ===
 
-// Module 15870 (UserProfileActivityEmptyStates)
+// Module 14508 (UserProfileActivityEmptyStates)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import components_Button_Button from "components/Button/Button" /* 5930 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8145 */;
-import openUserSettings from "openUserSettings" /* 8615 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import components_Button_Button from "components/Button/Button" /* 5421 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7648 */;
+import openUserSettings from "openUserSettings" /* 8106 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -94,7 +94,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   }
 ];
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 }, text: null, centeredText: null, buttons: null };
 let obj3 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
 obj.text = { gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -108,9 +108,9 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(6349).getName(guildId, channelId, user);
+  name = name(5851).getName(guildId, channelId, user);
   const intl = user(1113).intl;
-  let obj = name(6349);
+  let obj = name(5851);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1113).t.sjSitP, { name }),
@@ -133,7 +133,7 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   const intl2 = user(1113).intl;
   obj4.text = intl2.string(user(1113).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5930).Button, obj4);
+  obj3.children = closure_7(user(5421).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

@@ -1,10 +1,10 @@
-// === Module 19049: useWaterwheelsCardEligibility ===
+// === Module 17860: useWaterwheelsCardEligibility ===
 
-// Module 19049 (useWaterwheelsCardEligibility)
-import WaterwheelsCard from "WaterwheelsCard" /* 19050 */;
+// Module 17860 (useWaterwheelsCardEligibility)
+import WaterwheelsCard from "WaterwheelsCard" /* 17861 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7093 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13905 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6597 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13207 */;
 
 require = fn;
 const size = fn(2);

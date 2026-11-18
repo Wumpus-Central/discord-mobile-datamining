@@ -1,19 +1,19 @@
-// === Module 17353: SecurityKeySpotIllustration ===
+// === Module 16010: SecurityKeySpotIllustration ===
 
-// Module 17353 (SecurityKeySpotIllustration)
-import assetHelpers from "assetHelpers" /* 7765 */;
-import _modDef17354 from "module_17354" /* 17354 */;
-import _modDef17355 from "module_17355" /* 17355 */;
-import _modDef17356 from "module_17356" /* 17356 */;
+// Module 16010 (SecurityKeySpotIllustration)
+import assetHelpers from "assetHelpers" /* 7268 */;
+import _modDef16011 from "module_16011" /* 16011 */;
+import _modDef16012 from "module_16012" /* 16012 */;
+import _modDef16013 from "module_16013" /* 16013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17354 }, 3: null };
-let obj2 = { uri: _modDef17354 };
-obj[2] = { uri: _modDef17355 };
-const obj3 = { uri: _modDef17355 };
-obj[3] = { uri: _modDef17356 };
+let obj = { 1: null, 2: { uri: _modDef16011 }, 3: null };
+let obj2 = { uri: _modDef16011 };
+obj[2] = { uri: _modDef16012 };
+const obj3 = { uri: _modDef16012 };
+obj[3] = { uri: _modDef16013 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SecurityKeySpotIllustration.native.tsx");
 

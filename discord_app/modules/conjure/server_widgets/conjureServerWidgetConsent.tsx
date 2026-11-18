@@ -1,11 +1,11 @@
-// === Module 15850: conjureServerWidgetConsent ===
+// === Module 14483: conjureServerWidgetConsent ===
 
-// Module 15850 (conjureServerWidgetConsent)
+// Module 14483 (conjureServerWidgetConsent)
 import URLUtilsDefault from "URLUtils" /* 1381 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 10825 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 10118 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import WidgetStore from "WidgetStore" /* 10823 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
+import WidgetStore from "WidgetStore" /* 10106 */;
+import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14474 */;
 
 const require = globalThis.__r;
 
@@ -378,10 +378,10 @@ let result = size.fileFinishedImporting("modules/conjure/server_widgets/conjureS
 export function getConjureServerWidgetConsentRequest(clientId, arg1) {
   _require = clientId;
   closure_1 = arg1;
-  const result = ConjureProjectStore.findProjectByApplicationId(clientId);
+  const project = ConjureServerWidgetStore.getProject(clientId);
   let id;
-  if (result != null) {
-    id = result.id;
+  if (project != null) {
+    id = project.id;
   }
   let tmp3 = null;
   if (null != id) {

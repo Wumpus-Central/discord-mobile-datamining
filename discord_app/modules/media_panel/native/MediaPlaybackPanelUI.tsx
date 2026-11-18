@@ -1,36 +1,36 @@
-// === Module 20175: MediaPlaybackPanelUI ===
+// === Module 19446: MediaPlaybackPanelUI ===
 
-// Module 20175 (MediaPlaybackPanelUI)
+// Module 19446 (MediaPlaybackPanelUI)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5542 */;
-import timingPresets from "timingPresets" /* 5545 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
-import LayerScope from "LayerScope" /* 5910 */;
-import spring_spring from "spring/spring" /* 5933 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 11334 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 12432 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 19975 */;
-import useMorphablePanelGesture from "useMorphablePanelGesture" /* 19977 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 20174 */;
-import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 20176 */;
+import timing_timing from "timing/timing" /* 5033 */;
+import timingPresets from "timingPresets" /* 5036 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5083 */;
+import LayerScope from "LayerScope" /* 5401 */;
+import spring_spring from "spring/spring" /* 5424 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10616 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11714 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 19246 */;
+import useMorphablePanelGesture from "useMorphablePanelGesture" /* 19248 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 19445 */;
+import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 19447 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11518 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10800 */;
 
 const _modDef1655 = _mod1655;
 const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(17055);
+const MediaPlaybackPanelConstants = fn(15709);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: metroImportDefault, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(12429).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(12428).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(11711).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(11710).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const obj2 = { wrapperAnimationPresets: { opacity: 0 }, wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 }, mask: null, maskElevation: null, maskEmptyElevation: null, content: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, overflow: "hidden", borderWidth: 1, borderRadius: nativeDefault.radii.xl, borderColor: nativeDefault.colors.CHAT_BORDER };
 obj2.mask = rect;

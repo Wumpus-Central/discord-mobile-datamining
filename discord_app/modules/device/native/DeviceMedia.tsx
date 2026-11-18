@@ -1,9 +1,9 @@
-// === Module 12307: DeviceMedia ===
+// === Module 11589: DeviceMedia ===
 
-// Module 12307 (DeviceMedia)
+// Module 11589 (DeviceMedia)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 12308 */;
+import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 11590 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -92,7 +92,7 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
                   }
           };
-          lastAssetIndex(12308)(obj2);
+          lastAssetIndex(11590)(obj2);
         }
         obj = assets(1380);
       }

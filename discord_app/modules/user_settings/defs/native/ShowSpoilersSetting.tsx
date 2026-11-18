@@ -1,20 +1,20 @@
-// === Module 18136: ShowSpoilersSetting ===
+// === Module 16938: ShowSpoilersSetting ===
 
-// Module 18136 (ShowSpoilersSetting)
+// Module 16938 (ShowSpoilersSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 5135 */;
+import UserSettings from "UserSettings" /* 4648 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const SpoilerRenderSetting = fn(1072).SpoilerRenderSetting;
-const SettingBuilders = fn(12612);
+const SettingBuilders = fn(11897);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.QgwmVz);
   },
-  parent: fn(9213).MobileUserSettings.CHAT,
-  useValue: fn(5135).RenderSpoilers.useSetting,
+  parent: fn(8624).MobileUserSettings.CHAT,
+  useValue: fn(4648).RenderSpoilers.useSetting,
   onValueChange: function onShowSpoilersChange(arg0) {
     const RenderSpoilers = UserSettings.RenderSpoilers;
     RenderSpoilers.updateSetting(arg0);

@@ -1,6 +1,6 @@
-// === Module 11620: MobileGoLiveUpsellExperiment ===
+// === Module 10902: MobileGoLiveUpsellExperiment ===
 
-// Module 11620 (MobileGoLiveUpsellExperiment)
+// Module 10902 (MobileGoLiveUpsellExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

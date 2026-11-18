@@ -1,6 +1,6 @@
-// === Module 5992: Countries ===
+// === Module 5488: Countries ===
 
-// Module 5992 (Countries)
+// Module 5488 (Countries)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/Countries.tsx");

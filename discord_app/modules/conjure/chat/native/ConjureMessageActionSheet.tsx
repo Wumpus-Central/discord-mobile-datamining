@@ -1,12 +1,12 @@
-// === Module 14675: ConjureMessageActionSheet ===
+// === Module 18529: ConjureMessageActionSheet ===
 
-// Module 14675 (ConjureMessageActionSheet)
+// Module 18529 (ConjureMessageActionSheet)
 import util from "util" /* 1113 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5546 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6009 */;
-import CopyIcon from "CopyIcon" /* 6027 */;
-import ClipboardUtils from "ClipboardUtils" /* 7953 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8487 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5037 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
+import CopyIcon from "CopyIcon" /* 5523 */;
+import ClipboardUtils from "ClipboardUtils" /* 7456 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7978 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;

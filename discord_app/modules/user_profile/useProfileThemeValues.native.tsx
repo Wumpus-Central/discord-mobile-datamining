@@ -1,10 +1,10 @@
-// === Module 7949: useProfileThemeValues ===
+// === Module 7452: useProfileThemeValues ===
 
-// Module 7949 (useProfileThemeValues)
+// Module 7452 (useProfileThemeValues)
 import _mod19 from "module_19" /* 19 */;
 import shims from "shims" /* 574 */;
 import nativeDefault from "native" /* 575 */;
-import AccessibilityStore from "AccessibilityStore" /* 5311 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

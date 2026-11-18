@@ -1,14 +1,14 @@
-// === Module 11364: tryLaunchAsFrame ===
+// === Module 10646: tryLaunchAsFrame ===
 
-// Module 11364 (tryLaunchAsFrame)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5971 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11300 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11351 */;
-import openFrameInAppChannelDefault from "openFrameInAppChannel" /* 11365 */;
+// Module 10646 (tryLaunchAsFrame)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5467 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10582 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 10633 */;
+import openFrameInAppChannelDefault from "openFrameInAppChannel" /* 10647 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 require = fn;
-const MAIN_SURFACE = fn(7028).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6532).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

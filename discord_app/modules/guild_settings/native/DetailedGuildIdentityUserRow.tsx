@@ -1,14 +1,14 @@
-// === Module 15158: DetailedGuildIdentityUserRow ===
+// === Module 13784: DetailedGuildIdentityUserRow ===
 
-// Module 15158 (DetailedGuildIdentityUserRow)
+// Module 13784 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5366 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6349 */;
-import TableRow from "TableRow" /* 7453 */;
-import Form from "Form" /* 8117 */;
-import DiscordTagDefault from "DiscordTag" /* 11064 */;
+import UserUtilsDefault from "UserUtils" /* 4879 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5851 */;
+import TableRow from "TableRow" /* 6956 */;
+import Form from "Form" /* 7620 */;
+import DiscordTagDefault from "DiscordTag" /* 10346 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { mainIdentity: { flexDirection: "row", alignItems: "center" }, primaryAvatar: { marginRight: nativeDefault.space.PX_4 }, mainTag: null };
 let obj3 = { marginRight: nativeDefault.space.PX_4 };
 obj.mainTag = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontSize: 12 };
@@ -36,7 +36,7 @@ const memoResult = noop.memo(function DetailedGuildIdentityUser(height) {
     const obj3 = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "a" };
+      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Array" };
       tmp8Result = hasOwnProperty(native.Avatar, obj4);
     }
     const items1 = [tmp8Result, ];

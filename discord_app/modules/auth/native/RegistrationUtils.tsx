@@ -1,10 +1,10 @@
-// === Module 18700: RegistrationUtils ===
+// === Module 17513: RegistrationUtils ===
 
-// Module 18700 (RegistrationUtils)
+// Module 17513 (RegistrationUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 6046 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 8477 */;
+import InviteStore from "InviteStore" /* 5542 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 7968 */;
 
 const require = globalThis.__r;
 
@@ -81,9 +81,9 @@ function trackRegTransition(overrideRegistrationOptions) {
   obj2.to_step = toStep;
   AnalyticsUtilsDefault.track(AnalyticEvents.REGISTER_TRANSITION, obj2);
 }
-const RegistrationUIStore = fn(18691);
+const RegistrationUIStore = fn(17504);
 ({ clearRegistrationErrorMessage: closure_6, useRegistrationUIStore: metroImportDefault } = RegistrationUIStore);
-const RegistrationConstants = fn(18692);
+const RegistrationConstants = fn(17505);
 ({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -154,7 +154,7 @@ export function BackButtonWithTracking(arg0) {
       tmp();
     }
   };
-  return jsx(require("module_7510").HeaderBackButton, {});
+  return jsx(require("module_7013").HeaderBackButton, {});
 }
 export function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {

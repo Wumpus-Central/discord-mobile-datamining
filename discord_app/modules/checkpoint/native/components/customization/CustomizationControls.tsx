@@ -1,19 +1,22 @@
-// === Module 13405: CustomizationControls ===
+// === Module 12709: CustomizationControls ===
 
-// Module 13405 (CustomizationControls)
+// Module 12709 (CustomizationControls)
 import jsxProd from "jsxProd" /* 21 */;
-import TraitPickerControlsDefault from "TraitPickerControls" /* 13406 */;
+import FinalizeTraitPickerDefault from "FinalizeTraitPicker" /* 12710 */;
+import TraitPickerDefault from "TraitPicker" /* 12713 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/CustomizationControls.tsx");
 
-export default function CustomizationControls(arg0) {
-  ({ activeCustomizationOption, isFinalizeRoute } = arg0);
-  ({ isCurrentTraitBlocked, isSaving, isLandscape, onSelectFinalizeOption, onSelectTraitOption } = arg0);
-  let str = "finalize";
-  if (!isFinalizeRoute) {
-    str = activeCustomizationOption;
+export default function CustomizationControls(isFinalizeRoute) {
+  ({ activeCustomizationOption, isSaving, isLandscape, onSelectTraitOption } = isFinalizeRoute);
+  if (isFinalizeRoute.isFinalizeRoute) {
+    const obj2 = { customizationOption: activeCustomizationOption, isCurrentTraitBlocked: tmp, disabled: isSaving, isLandscape, onSelectOption: onSelectTraitOption, onSelectFinalizeOption: tmp2 };
+    let tmp3Result = jsx(FinalizeTraitPickerDefault, { customizationOption: activeCustomizationOption, isCurrentTraitBlocked: tmp, disabled: isSaving, isLandscape, onSelectOption: onSelectTraitOption, onSelectFinalizeOption: tmp2 });
+  } else {
+    const obj = { customizationOption: activeCustomizationOption, disabled: isSaving, isLandscape, onSelectOption: onSelectTraitOption };
+    tmp3Result = jsx(TraitPickerDefault, { customizationOption: activeCustomizationOption, disabled: isSaving, isLandscape, onSelectOption: onSelectTraitOption }, activeCustomizationOption);
   }
-  return jsx(TraitPickerControlsDefault, { activeCustomizationOption, isFinalizeRoute, isCurrentTraitBlocked, disabled, isLandscape, onSelectOption, onSelectFinalizeOption }, str);
+  return tmp3Result;
 };

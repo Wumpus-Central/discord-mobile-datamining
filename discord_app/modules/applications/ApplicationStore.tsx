@@ -282,16 +282,25 @@ const applicationStore = new ApplicationStore(DispatcherDefault, {
     return flag;
   },
   APPLICATIONS_FETCH_SUCCESS: function handleApplicationsFetchSuccess(arg0) {
-    const iter = arg0.applications[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp3 = nextResult;
-      if (true === tmp) {
-        let addResult = set.add(tmp3.id);
-      }
-      let tmp10 = addApplication(ApplicationRecord.createFromServer(tmp3));
+    ({ applications, unknownApplicationIds } = arg0);
+    if (unknownApplicationIds == null) {
+      unknownApplicationIds = [];
+    }
+    while (tmp2 !== undefined) {
+      let result = map5.set(tmp3, false);
       continue;
     }
+    const iter = applications[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp7 = nextResult;
+      if (true === tmp) {
+        let addResult = set.add(tmp7.id);
+      }
+      let tmp14 = addApplication(ApplicationRecord.createFromServer(tmp7));
+      continue;
+    }
+    tmp2 = unknownApplicationIds[Symbol.iterator]();
   },
   APPLICATIONS_FETCH_FAIL: function handleApplicationsFetchFail(arg0) {
     let flag = false;

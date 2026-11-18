@@ -1,9 +1,9 @@
-// === Module 10215: MobileWebHandoffLinking ===
+// === Module 9496: MobileWebHandoffLinking ===
 
-// Module 10215 (MobileWebHandoffLinking)
+// Module 9496 (MobileWebHandoffLinking)
 import FingerprintUtils from "FingerprintUtils" /* 1254 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 10218 */;
+import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 9499 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

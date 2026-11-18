@@ -1,15 +1,15 @@
-// === Module 12568: useAllowedChatOverlays ===
+// === Module 11851: useAllowedChatOverlays ===
 
-// Module 12568 (useAllowedChatOverlays)
+// Module 11851 (useAllowedChatOverlays)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5231 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5974 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5158 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4744 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5470 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
 
 require = fn;
-const ChatOverlays = fn(12566).ChatOverlays;
-const ActivityPanelModes = fn(5953).ActivityPanelModes;
+const ChatOverlays = fn(11849).ChatOverlays;
+const ActivityPanelModes = fn(5449).ActivityPanelModes;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: null };
 let items = [, , ];

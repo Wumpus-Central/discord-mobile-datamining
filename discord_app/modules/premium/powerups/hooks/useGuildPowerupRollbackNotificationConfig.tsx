@@ -1,11 +1,11 @@
-// === Module 14012: useGuildPowerupRollbackNotificationConfig ===
+// === Module 13316: useGuildPowerupRollbackNotificationConfig ===
 
-// Module 14012 (useGuildPowerupRollbackNotificationConfig)
+// Module 13316 (useGuildPowerupRollbackNotificationConfig)
 import util from "util" /* 1113 */;
-import _modDef2735 from "module_2735" /* 2735 */;
-import dismissible_content from "dismissible_content" /* 5143 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 14013 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5517 */;
+import _modDef2755 from "module_2755" /* 2755 */;
+import dismissible_content from "dismissible_content" /* 4656 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13317 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 8243 */;
 
 const require = globalThis.__r;
 
@@ -13,16 +13,16 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx");
 
-export default function useGuildPowerupRollbackNotificationConfig(guildId, useGuildPowerupNewPerkMarketingVersion) {
+export default function useGuildPowerupRollbackNotificationConfig(guildId, useMarketablePowerupPerks) {
   _require = guildId;
   items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   if (stateFromStores != null) {
-    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5521).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 7912).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const obj = require("initialize");
   let tmp5 = null;
-  if (tmpResult.useShouldShowGuildThemeRollback(guildId, useGuildPowerupNewPerkMarketingVersion)) {
+  if (tmpResult.useShouldShowGuildThemeRollback(guildId, useMarketablePowerupPerks)) {
     if (tmp4 != null) {
       const storeRemovalDate = tmp4.storeRemovalDate;
     }
@@ -31,14 +31,14 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, useGu
       tmp6 = null;
       if (null != storeRemovalDate) {
         const tmp8 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-        const obj2 = { dismissibleContent: tmp(5143).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
+        const obj2 = { dismissibleContent: tmp(4656).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
         const intl = tmp(1113).intl;
         const obj3 = { dateString: tmp8 };
-        obj2.title = intl.formatToPlainString(_modDef2735["6e2ry1"], obj3);
+        obj2.title = intl.formatToPlainString(_modDef2755["6e2ry1"], obj3);
         const intl2 = tmp(1113).intl;
         const obj4 = { startDate: tmp8, endDate: tmp8, perkName: null, boostCount: null };
         ({ title: obj5.perkName, cost: obj5.boostCount } = tmp4);
-        obj2.description = intl2.formatToPlainString(_modDef2735.jd8fki, obj4);
+        obj2.description = intl2.formatToPlainString(_modDef2755.jd8fki, obj4);
         tmp6 = obj2;
       }
     }
@@ -56,11 +56,11 @@ export function getGuildThemeRollbackNotificationConfig(storeRemovalDate) {
       const obj = { dismissibleContent: dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
       const intl = util.intl;
       const obj2 = { dateString: tmp3 };
-      obj.title = intl.formatToPlainString(_modDef2735["6e2ry1"], obj2);
+      obj.title = intl.formatToPlainString(_modDef2755["6e2ry1"], obj2);
       const intl2 = util.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = storeRemovalDate);
-      obj.description = intl2.formatToPlainString(_modDef2735.jd8fki, obj5);
+      obj.description = intl2.formatToPlainString(_modDef2755.jd8fki, obj5);
       return obj;
     }
   }

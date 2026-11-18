@@ -1,15 +1,15 @@
-// === Module 20845: MediaPostEmbedManager ===
+// === Module 20118: MediaPostEmbedManager ===
 
-// Module 20845 (MediaPostEmbedManager)
+// Module 20118 (MediaPostEmbedManager)
 import FlagUtils from "FlagUtils" /* 1406 */;
-import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 6357 */;
-import MediaChannelActionCreators from "MediaChannelActionCreators" /* 13051 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 20360 */;
-import GatedChannelStore from "GatedChannelStore" /* 5214 */;
+import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 5859 */;
+import MediaChannelActionCreators from "MediaChannelActionCreators" /* 12338 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19634 */;
+import GatedChannelStore from "GatedChannelStore" /* 4727 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5222 */;
-import MediaPostEmbedStore from "MediaPostEmbedStore" /* 12578 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7892 */;
+import GuildMemberStore from "GuildMemberStore" /* 4735 */;
+import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11861 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
 
 require = fn;
 function resolveMediaPostEmbeds(embeds) {
@@ -78,7 +78,7 @@ function resolveMediaPostEmbeds(embeds) {
     });
   }
 }
-const FetchState = fn(12578).FetchState;
+const FetchState = fn(11861).FetchState;
 const MessageFlags = fn(1072).MessageFlags;
 const set = new Set();
 class MediaPostEmbedManager extends tmp7 {

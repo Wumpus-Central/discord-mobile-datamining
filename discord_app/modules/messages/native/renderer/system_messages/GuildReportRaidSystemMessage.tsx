@@ -1,17 +1,17 @@
-// === Module 9288: GuildReportRaidSystemMessage ===
+// === Module 8699: GuildReportRaidSystemMessage ===
 
-// Module 9288 (GuildReportRaidSystemMessage)
+// Module 8699 (GuildReportRaidSystemMessage)
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 9192 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9199 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9201 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9203 */;
-import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 9282 */;
-import getTagPropertiesDefault from "getTagProperties" /* 9283 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import GuildStore from "GuildStore" /* 5181 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8603 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8610 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8612 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8614 */;
+import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8693 */;
+import getTagPropertiesDefault from "getTagProperties" /* 8694 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import GuildStore from "GuildStore" /* 4694 */;
 
 require = fn;
 const size = fn(2);

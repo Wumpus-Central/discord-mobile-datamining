@@ -1,15 +1,15 @@
-// === Module 17635: BountiesModalCloseButton ===
+// === Module 16437: BountiesModalCloseButton ===
 
-// Module 17635 (BountiesModalCloseButton)
+// Module 16437 (BountiesModalCloseButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 7438 */;
-import XSmallIcon from "XSmallIcon" /* 7559 */;
+import Pressables from "Pressables" /* 6941 */;
+import XSmallIcon from "XSmallIcon" /* 7062 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_4 = createStyles.createStyles(() => {
   const obj = { closeButton: null };
   const size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32 };

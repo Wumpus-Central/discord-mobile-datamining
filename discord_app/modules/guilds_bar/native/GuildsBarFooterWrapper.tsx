@@ -1,13 +1,13 @@
-// === Module 19169: GuildsBarFooterWrapper ===
+// === Module 17980: GuildsBarFooterWrapper ===
 
-// Module 19169 (GuildsBarFooterWrapper)
+// Module 17980 (GuildsBarFooterWrapper)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5896 */;
-import NativeViewDefault from "NativeView" /* 7732 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18785 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 19103 */;
-import createStyles from "createStyles" /* 5310 */;
+import useToken from "useToken" /* 5387 */;
+import NativeViewDefault from "NativeView" /* 7235 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17598 */;
+import GuildsBarConstants from "GuildsBarConstants" /* 17914 */;
+import createStyles from "createStyles" /* 4823 */;
 import size from "module_2" /* 2 */;
 
 const GUILD_ITEM_HIT_SLOP = GuildsBarConstants.GUILD_ITEM_HIT_SLOP;

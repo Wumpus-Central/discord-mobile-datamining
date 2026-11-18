@@ -1,9 +1,9 @@
-// === Module 16385: GameOrganizationStore ===
+// === Module 15052: GameOrganizationStore ===
 
-// Module 16385 (GameOrganizationStore)
+// Module 15052 (GameOrganizationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GameOrganizationModels from "GameOrganizationModels" /* 12574 */;
+import GameOrganizationModels from "GameOrganizationModels" /* 11857 */;
 
 require = fn;
 let closure_2 = {};

@@ -1,9 +1,9 @@
-// === Module 10500: DisplayedInviteActionCreators ===
+// === Module 9781: DisplayedInviteActionCreators ===
 
-// Module 10500 (DisplayedInviteActionCreators)
+// Module 9781 (DisplayedInviteActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7670 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 8477 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7173 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 7968 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");

@@ -1,16 +1,16 @@
-// === Module 10842: UserProfileWidgetDraggableCard ===
+// === Module 10130: UserProfileWidgetDraggableCard ===
 
-// Module 10842 (UserProfileWidgetDraggableCard)
+// Module 10130 (UserProfileWidgetDraggableCard)
 import nativeDefault from "native" /* 575 */;
-import Card from "Card" /* 7455 */;
-import UserProfileCardTitleDefault from "UserProfileCardTitle" /* 7974 */;
+import Card from "Card" /* 6958 */;
+import UserProfileCardTitleDefault from "UserProfileCardTitle" /* 7477 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { content: { gap: nativeDefault.space.PX_12 } };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = { gap: nativeDefault.space.PX_12 };
@@ -29,5 +29,5 @@ export default noop.memo(function UserProfileWidgetDraggableCard(title) {
   const tmp = closure_6();
   items = [tmp2Result, children];
   obj.children = items;
-  return React4(Card.Card, { radius: 12, children: hasOwnProperty(View, obj) });
+  return React4(Card.Card, { radius: 12, draggable: true, children: hasOwnProperty(View, obj) });
 });

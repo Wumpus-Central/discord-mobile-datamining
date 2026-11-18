@@ -1,10 +1,10 @@
-// === Module 14825: ConjureManagedCopyBanner ===
+// === Module 18672: ConjureManagedCopyBanner ===
 
-// Module 14825 (ConjureManagedCopyBanner)
+// Module 18672 (ConjureManagedCopyBanner)
 import util from "util" /* 1113 */;
-import _modDef4133 from "module_4133" /* 4133 */;
-import openConjureProjectAboutSheetDefault from "openConjureProjectAboutSheet" /* 12942 */;
-import useConjureManagedCopyDefault from "useConjureManagedCopy" /* 14413 */;
+import _modDef4121 from "module_4121" /* 4121 */;
+import openConjureProjectAboutSheetDefault from "openConjureProjectAboutSheet" /* 12230 */;
+import useConjureManagedCopyDefault from "useConjureManagedCopy" /* 18315 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,9 +27,9 @@ export default function ConjureManagedCopyBanner(projectId) {
   if (null != tmp3) {
     let obj = { type: "info", role: "none", message: null, action: null };
     let intl = sourceApplicationId(1113).intl;
-    obj.message = intl.string(_modDef4133.PTo2Qf);
+    obj.message = intl.string(_modDef4121.PTo2Qf);
     obj.action = tmp5;
-    tmp6 = jsx(sourceApplicationId(8170).InlineNotice, { type: "info", role: "none", message: null, action: null });
+    tmp6 = jsx(sourceApplicationId(7673).InlineNotice, { type: "info", role: "none", message: null, action: null });
   }
   return tmp6;
 };

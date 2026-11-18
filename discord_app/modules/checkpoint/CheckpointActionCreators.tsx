@@ -1,13 +1,13 @@
-// === Module 13126: CheckpointActionCreators ===
+// === Module 12424: CheckpointActionCreators ===
 
-// Module 13126 (CheckpointActionCreators)
+// Module 12424 (CheckpointActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8145 */;
-import Tracking from "Tracking" /* 13117 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7648 */;
+import Tracking from "Tracking" /* 12415 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import CheckpointStore from "CheckpointStore" /* 13119 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import CheckpointStore from "CheckpointStore" /* 12417 */;
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
@@ -54,13 +54,13 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
             function checkpointResponseFromServer(body) {
               let statsFromServerResult = null;
               if (null != body.stats) {
-                statsFromServerResult = closure_1_0(6745).statsFromServer(body.stats);
-                const obj = closure_1_0(6745);
+                statsFromServerResult = closure_1_0(6247).statsFromServer(body.stats);
+                const obj = closure_1_0(6247);
               }
-              const obj4 = { stats: statsFromServerResult, globalStats: closure_1_0(6745).globalStatsFromServer(body.global_stats), character: null, compactAssets: null, availability: null };
+              const obj4 = { stats: statsFromServerResult, globalStats: closure_1_0(6247).globalStatsFromServer(body.global_stats), character: null, compactAssets: null, availability: null };
               ({ character: obj2.character, compact_assets: obj2.compactAssets, availability } = body);
               if (availability == null) {
-                availability = closure_1_0(13120).CheckpointAvailability.FULL;
+                availability = closure_1_0(12418).CheckpointAvailability.FULL;
               }
               obj4.availability = availability;
               return obj4;
@@ -354,10 +354,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             value: Promise.allSettled(closure_133_2.map((item) => {
                       channel = channel.getChannel(item);
                       if (null != channel) {
-                        const obj = checkpointCardType(8671);
+                        const obj = checkpointCardType(8162);
                         const id = channel.id;
                         const obj3 = { location: "checkpoint", checkpointCardType };
-                        return obj.sendMessage(id, checkpointCardType(8797).parse(channel, closure_1_0), false, obj3);
+                        return obj.sendMessage(id, checkpointCardType(8294).parse(channel, closure_1_0), false, obj3);
                       }
                     })),
             done: false
@@ -397,7 +397,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(13119).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12417).CheckpointFetchStates;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");

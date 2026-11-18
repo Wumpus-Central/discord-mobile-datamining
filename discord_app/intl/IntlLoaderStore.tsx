@@ -2,15 +2,13 @@
 
 // Module 2190 (IntlLoaderStore)
 import util from "util" /* 1113 */;
-import _modDef2191 from "module_2191" /* 2191 */;
-import bg from "bg" /* 4584 */;
-import formatjs from "formatjs" /* 5059 */;
-import moment from "moment" /* 5090 */;
+import formatjs from "formatjs" /* 4572 */;
+import moment from "moment" /* 4603 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import module_2028 from "module_2028" /* 2028 */;
 
 require = fn;
-let closure_6 = async function _setAppLocale(arg0) {
+let closure_5 = async function _setAppLocale(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -46,8 +44,8 @@ let closure_6 = async function _setAppLocale(arg0) {
           intl.setLocale(closure_0);
           items.push();
           items.push(asyncGeneratorStep(async () => {
-            if (dependencyMap === 2) {
-              dependencyMap = 3;
+            if (c2 === 2) {
+              c2 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp3 === 3) {
               if (arg0 === 1) {
@@ -60,49 +58,49 @@ let closure_6 = async function _setAppLocale(arg0) {
               }
             } else {
               try {
-                dependencyMap = 2;
-                if (0 === c1) {
+                c2 = 2;
+                if (0 === dependencyMap) {
                   if (arg0 === 1) {
-                    dependencyMap = 3;
+                    c2 = 3;
                     throw value;
                   } else if (arg0 === 2) {
-                    dependencyMap = 3;
+                    c2 = 3;
                     const obj4 = { value, done: true };
                     return obj4;
                   } else {
                     closure_0 = tmp4;
-                    c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2201).preloadAllIntlMessageFiles(), done: false };
+                    c2 = 1;
+                    const obj6 = { value: closure_0(2191).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
                   if (arg0 === 1) {
-                    dependencyMap = 3;
+                    c2 = 3;
                     throw value;
                   } else if (arg0 === 2) {
-                    dependencyMap = 3;
+                    c2 = 3;
                     const obj7 = { value, done: true };
                     return obj7;
                   } else {
-                    c1 = 2;
-                    dependencyMap = 1;
+                    dependencyMap = 2;
+                    c2 = 1;
                     const obj8 = { value: closure_0(1152).loadAllMessagesInLocale(closure_128_0), done: false };
                     return obj8;
                   }
                 } else if (arg0 === 1) {
-                  dependencyMap = 3;
+                  c2 = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  dependencyMap = 3;
+                  c2 = 3;
                   const obj = { value, done: true };
                   return obj;
                 } else {
-                  dependencyMap = 3;
+                  c2 = 3;
                   return { value: "HermesInternal", done: null };
                 }
               } catch (tmp11) {
-                dependencyMap = tmp;
+                c2 = tmp;
                 throw tmp11;
               }
             }
@@ -111,7 +109,7 @@ let closure_6 = async function _setAppLocale(arg0) {
           items.push(locale.loadPromise);
           items.push((function loadDateFnsLocale() {
             const self = this;
-            const apply = closure_1_7.apply;
+            const apply = closure_1_6.apply;
             if (typeof apply === "unknown") {
               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
@@ -121,7 +119,7 @@ let closure_6 = async function _setAppLocale(arg0) {
           })(closure_0));
           items.push((function loadFormatJsLocale() {
             const self = this;
-            const apply = closure_1_8.apply;
+            const apply = closure_1_7.apply;
             if (typeof apply === "unknown") {
               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
@@ -131,7 +129,7 @@ let closure_6 = async function _setAppLocale(arg0) {
           })(closure_0));
           items.push((function setMomentLocale() {
             const self = this;
-            const apply = closure_1_9.apply;
+            const apply = closure_1_8.apply;
             if (typeof apply === "unknown") {
               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
@@ -140,7 +138,7 @@ let closure_6 = async function _setAppLocale(arg0) {
             return applyArgumentsResult;
           })(closure_0));
           items.push((function sentryLocale(locale) {
-            closure_1_0(closure_1_2[11]).default.setTags({ locale });
+            closure_1_0(loadingFailed[9]).default.setTags({ locale });
             return Promise.resolve();
           })(closure_0));
           c2 = 1;
@@ -166,9 +164,9 @@ let closure_6 = async function _setAppLocale(arg0) {
     }
   }
 };
-let closure_7 = async function _loadDateFnsLocale(arg0) {
-  if (c3 === 2) {
-    c3 = 3;
+let closure_6 = async function _loadDateFnsLocale() {
+  if (c0 === 2) {
+    c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp3 === 3) {
     if (arg0 === 1) {
@@ -181,49 +179,25 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
     }
   } else {
     try {
-      c3 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
-          c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_1 = tmp4;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          state = state.getState();
-          closure_129_0 = state;
-          const tmp20 = bg.dateFnsLocales[closure_0];
-          if (null != tmp20) {
-            c2 = 1;
-            c3 = 1;
-            const obj4 = { value: tmp20(), done: false };
-            return obj4;
-          } else {
-            state.setLocaleData(_modDef2191);
-            c3 = 3;
-          }
-        }
-      } else if (arg0 === 1) {
-        c3 = 3;
+      c0 = 2;
+      if (arg0 === 1) {
+        c0 = 3;
         throw value;
-      } else if (arg0 !== 2) {
-        closure_129_1 = value;
-        closure_129_0.setLocaleData(closure_129_1);
+      } else if (arg0 === 2) {
+        c0 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        c0 = 3;
+        return { value: "HermesInternal", done: null };
       }
-      c3 = 3;
-      const obj = { value, done: true };
-      return obj;
-    } catch (tmp11) {
-      c3 = tmp;
-      throw tmp11;
+    } catch (tmp4) {
+      c0 = tmp;
+      throw tmp4;
     }
   }
 };
-let closure_8 = async function _loadFormatJsLocale(arg0) {
+let closure_7 = async function _loadFormatJsLocale(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -272,7 +246,7 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
     }
   }
 };
-let closure_9 = async function _setMomentLocale(arg0) {
+let closure_8 = async function _setMomentLocale(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -332,7 +306,7 @@ let closure_9 = async function _setMomentLocale(arg0) {
         } while (length > 0);
       }
       closure_129_1.push("en-US");
-      closure_130_0(closure_130_2[10]).locale(closure_129_1);
+      closure_130_0(closure_130_1[8]).locale(closure_129_1);
       c4 = 3;
       return { value: "HermesInternal", done: null };
     } catch (tmp26) {
@@ -347,15 +321,15 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     isLoading: false,
-    inProgressLocale: "Boolean",
-    error: "channel_id",
-    localeData: _modDef2191,
+    inProgressLocale: "y",
+    error: "disabled",
+    localeData: "isArray",
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "ip", error: "Array" });
+        closure_0({ isLoading: false, inProgressLocale: "description", error: "isArray" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -385,7 +359,7 @@ export function subscribeToIntlLoadingSuccess(arg0) {
 }
 export function setAppLocale() {
   const self = this;
-  const apply = closure_6.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -394,9 +368,6 @@ export function setAppLocale() {
   return applyArgumentsResult;
 }
 export function useLocaleData() {
-  let tmp = withEqualityFn((localeData) => localeData.localeData);
-  if (tmp == null) {
-    tmp = _modDef2191;
-  }
+  const tmp = withEqualityFn((localeData) => localeData.localeData);
   return tmp;
 }

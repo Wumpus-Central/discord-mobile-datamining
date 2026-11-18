@@ -1,16 +1,16 @@
-// === Module 17620: BountiesScrollIndicatorAnimation ===
+// === Module 16422: BountiesScrollIndicatorAnimation ===
 
-// Module 17620 (BountiesScrollIndicatorAnimation)
+// Module 16422 (BountiesScrollIndicatorAnimation)
 import nativeDefault from "native" /* 575 */;
-import BountiesScrollIndicatorRive from "BountiesScrollIndicatorRive" /* 5439 */;
-import useToken from "useToken" /* 5896 */;
+import BountiesScrollIndicatorRive from "BountiesScrollIndicatorRive" /* 4952 */;
+import useToken from "useToken" /* 5387 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_7 = createStyles.createStyles(() => ({ container: { width: 80, height: 80 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx");

@@ -1,6 +1,6 @@
-// === Module 6482: CheckpointCharacterOutfit ===
+// === Module 5984: CheckpointCharacterOutfit ===
 
-// Module 6482 (CheckpointCharacterOutfit)
+// Module 5984 (CheckpointCharacterOutfit)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointCharacterOutfit.tsx");

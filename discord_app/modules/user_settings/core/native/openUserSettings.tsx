@@ -1,10 +1,10 @@
-// === Module 8615: openUserSettings ===
+// === Module 8106: openUserSettings ===
 
-// Module 8615 (openUserSettings)
+// Module 8106 (openUserSettings)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
-import RootNavigationRef from "RootNavigationRef" /* 5487 */;
-import UserSettingsAccountStore from "UserSettingsAccountStore" /* 8616 */;
+import RootNavigationRef from "RootNavigationRef" /* 5000 */;
+import UserSettingsAccountStore from "UserSettingsAccountStore" /* 8107 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;

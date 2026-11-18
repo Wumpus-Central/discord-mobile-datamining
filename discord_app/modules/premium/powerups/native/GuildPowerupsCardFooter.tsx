@@ -1,18 +1,18 @@
-// === Module 14037: GuildPowerupsCardFooter ===
+// === Module 13341: GuildPowerupsCardFooter ===
 
-// Module 14037 (GuildPowerupsCardFooter)
+// Module 13341 (GuildPowerupsCardFooter)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2735 from "module_2735" /* 2735 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7633 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7940 */;
-import BoostGemIcon from "BoostGemIcon" /* 9994 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 14013 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 14038 */;
+import _modDef2755 from "module_2755" /* 2755 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7136 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7443 */;
+import BoostGemIcon from "BoostGemIcon" /* 9274 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13317 */;
+import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 13342 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5310 */;
+import createStyles from "createStyles" /* 4823 */;
 import size from "module_2" /* 2 */;
 
 class GuildPowerupCardFooterActive {

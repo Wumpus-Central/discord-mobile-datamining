@@ -1,6 +1,6 @@
-// === Module 9414: ShopStandalonePdpMobileExperiment ===
+// === Module 8827: ShopStandalonePdpMobileExperiment ===
 
-// Module 9414 (ShopStandalonePdpMobileExperiment)
+// Module 8827 (ShopStandalonePdpMobileExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

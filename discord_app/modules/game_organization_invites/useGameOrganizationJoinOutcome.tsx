@@ -1,15 +1,15 @@
-// === Module 12907: useGameOrganizationJoinOutcome ===
+// === Module 12202: useGameOrganizationJoinOutcome ===
 
-// Module 12907 (useGameOrganizationJoinOutcome)
-import transitionToGuild from "transitionToGuild" /* 7239 */;
+// Module 12202 (useGameOrganizationJoinOutcome)
+import transitionToGuild from "transitionToGuild" /* 6743 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5181 */;
+import GuildStore from "GuildStore" /* 4694 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GameOrganizationInviteConstants = fn(12573);
+const GameOrganizationInviteConstants = fn(11856);
 ({ GameOrganizationInviteAcceptFailureReason: closure_6, GameOrganizationInviteAcceptStatus: metroImportDefault, GameOrganizationLinkedGuildJoinStatus: closure_8 } = GameOrganizationInviteConstants);
 const GameOrganizationJoinOutcomeCtaType = { GO_TO_SERVER: "GO_TO_SERVER", CLOSE: "CLOSE" };
 const obj2 = { SUCCESS: "SUCCESS", PENDING: "PENDING", ERROR: "ERROR" };

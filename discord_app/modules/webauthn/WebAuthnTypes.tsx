@@ -1,6 +1,6 @@
-// === Module 7786: WebAuthnTypes ===
+// === Module 7289: WebAuthnTypes ===
 
-// Module 7786 (WebAuthnTypes)
+// Module 7289 (WebAuthnTypes)
 import size from "module_2" /* 2 */;
 
 const prototype = function IgnorableWebAuthnError() {

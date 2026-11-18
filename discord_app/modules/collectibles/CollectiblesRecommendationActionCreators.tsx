@@ -1,6 +1,6 @@
-// === Module 17234: CollectiblesRecommendationActionCreators ===
+// === Module 15891: CollectiblesRecommendationActionCreators ===
 
-// Module 17234 (CollectiblesRecommendationActionCreators)
+// Module 15891 (CollectiblesRecommendationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

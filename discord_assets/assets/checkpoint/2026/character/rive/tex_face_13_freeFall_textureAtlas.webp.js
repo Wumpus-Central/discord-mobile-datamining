@@ -1,6 +1,6 @@
-// === Module 13213: ? ===
+// === Module 12516: ? ===
 
-// Module 13213
+// Module 12516
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_face_13_freeFall_textureAtlas.webp.js");

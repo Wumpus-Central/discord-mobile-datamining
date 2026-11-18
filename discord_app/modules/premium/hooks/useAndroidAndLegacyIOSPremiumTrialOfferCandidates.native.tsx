@@ -1,10 +1,10 @@
-// === Module 9320: useAndroidAndLegacyIOSPremiumTrialOfferCandidates ===
+// === Module 8731: useAndroidAndLegacyIOSPremiumTrialOfferCandidates ===
 
-// Module 9320 (useAndroidAndLegacyIOSPremiumTrialOfferCandidates)
+// Module 8731 (useAndroidAndLegacyIOSPremiumTrialOfferCandidates)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import ProductIds from "ProductIds" /* 8591 */;
-import useTrialOffer from "useTrialOffer" /* 9314 */;
-import IAPStore from "IAPStore" /* 9311 */;
+import ProductIds from "ProductIds" /* 8082 */;
+import useTrialOffer from "useTrialOffer" /* 8725 */;
+import IAPStore from "IAPStore" /* 8722 */;
 
 require = fn;
 const PremiumConstants = fn(1390);

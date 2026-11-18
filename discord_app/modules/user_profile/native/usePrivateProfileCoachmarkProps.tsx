@@ -1,9 +1,9 @@
-// === Module 19186: usePrivateProfileCoachmarkProps ===
+// === Module 17997: usePrivateProfileCoachmarkProps ===
 
-// Module 19186 (usePrivateProfileCoachmarkProps)
+// Module 17997 (usePrivateProfileCoachmarkProps)
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 5143 */;
-import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 19187 */;
+import dismissible_content from "dismissible_content" /* 4656 */;
+import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 17998 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ function PrivateProfileCoachmarkImage() {
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/usePrivateProfileCoachmarkProps.tsx");

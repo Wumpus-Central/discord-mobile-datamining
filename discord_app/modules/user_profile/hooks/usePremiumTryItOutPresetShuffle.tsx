@@ -1,15 +1,15 @@
-// === Module 17176: usePremiumTryItOutPresetShuffle ===
+// === Module 15832: usePremiumTryItOutPresetShuffle ===
 
-// Module 17176 (usePremiumTryItOutPresetShuffle)
+// Module 15832 (usePremiumTryItOutPresetShuffle)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import shared from "shared" /* 5317 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7818 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 9408 */;
-import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 17104 */;
-import TryItOutPresets from "TryItOutPresets" /* 17177 */;
+import shared from "shared" /* 4830 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7321 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8821 */;
+import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 15760 */;
+import TryItOutPresets from "TryItOutPresets" /* 15833 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8553 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8044 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePremiumTryItOutPresetShuffle.tsx");
 
 export default function usePremiumTryItOutPresetShuffle() {
-  const tmp = callback(5541)();
+  const tmp = callback(5032)();
   const isThemeLightResult = shared.isThemeLight(tmp);
   require = isThemeLightResult;
   items = [isThemeLightResult];
@@ -26,7 +26,7 @@ export default function usePremiumTryItOutPresetShuffle() {
     const obj2 = { banner: null, themeColors: null, displayNameStyles: null, lastPreset: null };
     const obj3 = UserProfileActionCreators;
     const obj5 = ProfilePendingImageUtils;
-    obj2.banner = obj5.createPendingImage({ assetOrigin: ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET, imageUri: tryItOutPresetConfig.getBannerSrc(false), staticImageUri: tryItOutPresetConfig.getBannerSrc(true), description: tryItOutPresetConfig.getBannerAltText(), originalAsset: "fileFinishedImporting" });
+    obj2.banner = obj5.createPendingImage({ assetOrigin: ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET, imageUri: tryItOutPresetConfig.getBannerSrc(false), staticImageUri: tryItOutPresetConfig.getBannerSrc(true), description: tryItOutPresetConfig.getBannerAltText(), originalAsset: "Array" });
     const themeColors = tryItOutPresetConfig.themeColors;
     obj2.themeColors = isThemeLightResult ? themeColors.light : themeColors.dark;
     obj2.displayNameStyles = tryItOutPresetConfig.displayNameStyles;

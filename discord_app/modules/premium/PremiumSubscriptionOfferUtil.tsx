@@ -1,15 +1,15 @@
-// === Module 9318: PremiumSubscriptionOfferUtil ===
+// === Module 8729: PremiumSubscriptionOfferUtil ===
 
-// Module 9318 (PremiumSubscriptionOfferUtil)
+// Module 8729 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
 import Server from "Server" /* 2119 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9319 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 9321 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9322 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 9323 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 9324 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 9326 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 8730 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8732 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8733 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8734 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8735 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 8737 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2179 */;
@@ -161,11 +161,11 @@ export function useFetchChurnUserDiscountOffer(arg0) {
     const obj3 = { churnUserDiscountOffer: tmp13, isFetchingChurnDiscountOffer: tmp10 };
     return obj3;
   } else {
-    let tmp15 = tmp10;
+    let tmp14 = tmp10;
     if (!tmp10) {
-      tmp15 = tmp8;
+      tmp14 = tmp8;
     }
-    if (!tmp15) {
+    if (!tmp14) {
       tmp11(true);
       const churnDiscountOffer = UserOfferActionCreators.fetchChurnDiscountOffer();
       churnDiscountOffer.then((result) => {

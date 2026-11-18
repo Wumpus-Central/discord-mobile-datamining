@@ -1,18 +1,18 @@
-// === Module 9573: useGetDismissibleContent ===
+// === Module 8987: useGetDismissibleContent ===
 
-// Module 9573 (useGetDismissibleContent)
+// Module 8987 (useGetDismissibleContent)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 5142 */;
-import dismissible_content from "dismissible_content" /* 5143 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 5144 */;
-import DismissibleContentAvailability from "DismissibleContentAvailability" /* 9576 */;
-import markScopedDismissibleContentAsDismissed from "markScopedDismissibleContentAsDismissed" /* 9577 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4655 */;
+import dismissible_content from "dismissible_content" /* 4656 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4657 */;
+import DismissibleContentAvailability from "DismissibleContentAvailability" /* 8990 */;
+import markScopedDismissibleContentAsDismissed from "markScopedDismissibleContentAsDismissed" /* 8991 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5343 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 5146 */;
-import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 5151 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4856 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4659 */;
+import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 4664 */;
 
 const require = globalThis.__r;
 
@@ -116,8 +116,8 @@ function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpr
     found2 = null;
   }
   if (null != found2) {
-    let dismissibleContentShowing = tmp(9575).getDismissibleContentShowing(found2);
-    const tmpResult = tmp(9575);
+    let dismissibleContentShowing = tmp(8989).getDismissibleContentShowing(found2);
+    const tmpResult = tmp(8989);
   } else {
     dismissibleContentShowing = closure_12;
   }
@@ -138,7 +138,7 @@ function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpr
     if (tmpResult7.isGuildScopedDismissibleContent(found2)) {
       guildId = found2.scope.guildId;
     }
-    tmpResult7 = tmp(9575);
+    tmpResult7 = tmp(8989);
   }
   let content;
   if (found2 != null) {
@@ -167,8 +167,8 @@ function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpr
   closure_130_7 = tmp13;
   let result = null != content;
   if (result) {
-    result = tmp(5144).isDismissibleContentBlockedByOverlay(content, first, tmp13);
-    const tmpResult9 = tmp(5144);
+    result = tmp(4657).isDismissibleContentBlockedByOverlay(content, first, tmp13);
+    const tmpResult9 = tmp(4657);
   }
   const tmpResult8 = require("OverlayTrackingUtils");
   const items5 = [DismissibleContentFrameworkStore];
@@ -240,7 +240,7 @@ function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpr
     }, items7)
   };
 }
-const removeCandidateContent = fn(5151).removeCandidateContent;
+const removeCandidateContent = fn(4664).removeCandidateContent;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let closure_12 = {};

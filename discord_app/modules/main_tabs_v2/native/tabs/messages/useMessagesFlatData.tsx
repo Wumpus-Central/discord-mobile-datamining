@@ -1,10 +1,10 @@
-// === Module 18821: useMessagesFlatData ===
+// === Module 17634: useMessagesFlatData ===
 
-// Module 18821 (useMessagesFlatData)
-import useMessagesData from "useMessagesData" /* 18807 */;
-import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 18822 */;
-import MessagesItemEmptyState from "MessagesItemEmptyState" /* 18859 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 18860 */;
+// Module 17634 (useMessagesFlatData)
+import useMessagesData from "useMessagesData" /* 17620 */;
+import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 17635 */;
+import MessagesItemEmptyState from "MessagesItemEmptyState" /* 17672 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 17673 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

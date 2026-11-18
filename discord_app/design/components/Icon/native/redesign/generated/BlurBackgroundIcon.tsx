@@ -1,9 +1,9 @@
-// === Module 11682: BlurBackgroundIcon ===
+// === Module 10964: BlurBackgroundIcon ===
 
-// Module 11682 (BlurBackgroundIcon)
+// Module 10964 (BlurBackgroundIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6013 */;
-import _mod11683 from "module_11683" /* 11683 */;
+import BaseIconImage from "BaseIconImage" /* 5509 */;
+import _mod10965 from "module_10965" /* 10965 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BlurBackgroundIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11683, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10965, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

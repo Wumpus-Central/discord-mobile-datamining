@@ -1,31 +1,31 @@
-// === Module 20938: QuestProgressManager ===
+// === Module 20211: QuestProgressManager ===
 
-// Module 20938 (QuestProgressManager)
+// Module 20211 (QuestProgressManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 6850 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 6851 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 6852 */;
-import QuestVariants from "QuestVariants" /* 6963 */;
-import QuestTypes from "QuestTypes" /* 6965 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6970 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 8826 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 8840 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8842 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8845 */;
-import QuestActionCreators from "QuestActionCreators" /* 10577 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 11296 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 6354 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 6355 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 6356 */;
+import QuestVariants from "QuestVariants" /* 6467 */;
+import QuestTypes from "QuestTypes" /* 6469 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6474 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 8323 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 8337 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8339 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8342 */;
+import QuestActionCreators from "QuestActionCreators" /* 9858 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 10578 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5158 */;
-import FramesStore from "FramesStore" /* 7027 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
+import FramesStore from "FramesStore" /* 6531 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6804 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6308 */;
 import DetectableGameStore from "DetectableGameStore" /* 2159 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6071 */;
-import QuestStore from "QuestStore" /* 8819 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 19988 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7892 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5567 */;
+import QuestStore from "QuestStore" /* 8316 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 19259 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
 
 require = fn;
 function isQuestProgressable(nextResult) {
@@ -69,12 +69,12 @@ function isQuestRobloxRelated(desktopApplicationIds, distributor) {
   }
   return tmp;
 }
-const QuestConstants = fn(6962);
+const QuestConstants = fn(6466);
 ({ DISCORD_APPLICATION_ID: closure_12, QuestsExperimentLocations } = QuestConstants);
-const isLaunched = fn(7028).isLaunched;
+const isLaunched = fn(6532).isLaunched;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 const SECOND = DurationsDefault.Millis.SECOND;
-const getQuestLogger = fn(8827);
+const getQuestLogger = fn(8324);
 const logger = getQuestLogger.getQuestLogger({ location: QuestsExperimentLocations.QUESTS_MANAGER });
 class QuestProgressManager extends tmp4 {
   constructor() {
@@ -94,7 +94,7 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = applyArgumentsResult(8842).getQuestTaskDetails(value, applyArgumentsResult(6970).FirstPartyQuestTaskTypesSets.DESKTOP);
+            const questTaskDetails = applyArgumentsResult(8339).getQuestTaskDetails(value, applyArgumentsResult(6474).FirstPartyQuestTaskTypesSets.DESKTOP);
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
             const bound = Math.max(0, diff * DurationsDefault.Millis.SECOND);
@@ -154,19 +154,19 @@ class QuestProgressManager extends tmp4 {
                 applyArgumentsResult.terminateHeartbeat(questId, closure_1);
               } else {
                 const _HermesInternal4 = HermesInternal;
-                const timerIdResult = timerId(6805);
+                const timerIdResult = timerId(6309);
                 logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + questId);
-                const encodeStreamKeyResult = timerId(6805).encodeStreamKey(currentUserActiveStream);
+                const encodeStreamKeyResult = timerId(6309).encodeStreamKey(currentUserActiveStream);
                 const obj2 = { questId, streamKey: encodeStreamKeyResult, applicationId, executablePath, executableFingerprint: prop };
-                timerId(10577).sendHeartbeat(obj2);
-                const timerIdResult1 = timerId(10577);
+                timerId(9858).sendHeartbeat(obj2);
+                const timerIdResult1 = timerId(9858);
               }
             } else {
               const _HermesInternal2 = HermesInternal;
               logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + questId);
               const obj3 = { questId, applicationId, executablePath, executableFingerprint: prop };
-              timerId(10577).sendHeartbeat(obj3);
-              const timerIdResult2 = timerId(10577);
+              timerId(9858).sendHeartbeat(obj3);
+              const timerIdResult2 = timerId(9858);
             }
             prop = applyArgumentsResult.calculateHeartbeatDurationMs(questId);
             const _window = window;
@@ -370,7 +370,7 @@ class QuestProgressManager extends tmp4 {
           let hasItem = null != id;
           if (hasItem) {
             const features = id.config.features;
-            hasItem = features.includes(applyArgumentsResult(6963).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+            hasItem = features.includes(applyArgumentsResult(6467).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
           }
           tmp = hasItem;
         }

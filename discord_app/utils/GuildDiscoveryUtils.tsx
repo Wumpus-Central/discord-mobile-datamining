@@ -1,13 +1,13 @@
-// === Module 7238: GuildDiscoveryUtils ===
+// === Module 6742: GuildDiscoveryUtils ===
 
-// Module 7238 (GuildDiscoveryUtils)
+// Module 6742 (GuildDiscoveryUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import _modDef1490 from "module_1490" /* 1490 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 5243 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5530 */;
-import GuildStore from "GuildStore" /* 5181 */;
+import LurkingStore from "LurkingStore" /* 4756 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5444 */;
+import GuildStore from "GuildStore" /* 4694 */;
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
@@ -310,21 +310,21 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
             const uRL = new URL(body.seo.canonical_url);
             const pathname = uRL.pathname;
             closure_129_1 = pathname.slice(9);
-            const obj = { guild: body.data.guild, slug: closure_129_1 };
+            const obj7 = { guild: body.data.guild, slug: closure_129_1 };
             c3 = 0;
             c4 = 3;
-            const obj7 = { value: obj, done: true };
-            return obj7;
+            const obj = { value: obj7, done: true };
+            return obj;
           }
         }
         c3 = 0;
         c4 = 3;
         return { value: null, done: true };
       }
-    } catch (tmp21) {
+    } catch (tmp13) {
       if (tmp3 === c3) {
         c4 = tmp2;
-        throw tmp21;
+        throw tmp13;
       } else {
         c2 = tmp;
       }

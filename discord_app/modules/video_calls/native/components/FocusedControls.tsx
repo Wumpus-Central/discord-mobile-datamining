@@ -1,13 +1,13 @@
-// === Module 11527: FocusedControls ===
+// === Module 10809: FocusedControls ===
 
-// Module 11527 (FocusedControls)
+// Module 10809 (FocusedControls)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5542 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7425 */;
-import inlineStyles from "inlineStyles" /* 8274 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11528 */;
+import timing_timing from "timing/timing" /* 5033 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6928 */;
+import inlineStyles from "inlineStyles" /* 7776 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10810 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -84,7 +84,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_9 = createStyles.createStyles({ backgroundGradient: { position: "absolute", left: 0, right: 0, top: 0, height: 130 }, headerContainer: { position: "relative", height: 54 } });
 let obj = { easing: fn(1187).STANDARD_EASING, duration: 250 };
 let closure_11 = { code: "(function FocusedControlsTsx1(){let[reveal,FOCUSED_CONTROLS_HEADER_HEIGHT]=this.__closure;return reveal?0:-FOCUSED_CONTROLS_HEADER_HEIGHT;})" };
@@ -114,7 +114,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   const globalStatusIndicatorHeightSharedValue = require("GlobalStatusIndicator").useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
   let obj2 = require("GlobalStatusIndicator");
   let reveal = noop.useContext(require("RevealProvider").RevealContext).reveal;
-  const tmp6 = analyticsLocations(11528)();
+  const tmp6 = analyticsLocations(10810)();
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   if (!reveal) {
     reveal = forceReveal;
@@ -179,8 +179,8 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   FocusedControlsTsx5.__initData = tmp15;
   const animatedStyle = require("module_1655").useAnimatedStyle(FocusedControlsTsx5);
   const tmpResult4 = require("module_1655");
-  analyticsLocations = analyticsLocations(7928)(tmp5(7947).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-  dependencyMap = tmp5(11454)();
+  analyticsLocations = analyticsLocations(7431)(tmp5(7450).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+  dependencyMap = tmp5(10736)();
   if (containerStyle == null) {
     containerStyle = absoluteFill.absoluteFill;
   }
@@ -225,7 +225,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
         reveal,
         children
       };
-      tmp27Result = closure_7(tmp5(11545), obj5);
+      tmp27Result = closure_7(tmp5(10827), obj5);
     }
   }
   items7[2] = tmp27Result;

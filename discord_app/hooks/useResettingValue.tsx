@@ -1,7 +1,7 @@
-// === Module 15470: useResettingValue ===
+// === Module 14098: useResettingValue ===
 
-// Module 15470 (useResettingValue)
-import useInitialValueDefault from "useInitialValue" /* 5911 */;
+// Module 14098 (useResettingValue)
+import useInitialValueDefault from "useInitialValue" /* 5402 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ export default function useResettingValue(arg0, arg1) {
   const tmp = _slicedToArray(closure_4(arg0), 2);
   dependencyMap = tmp[1];
   const tmp2 = useInitialValueDefault(() => {
-    const timeout = new closure_0(5154).Timeout();
+    const timeout = new closure_0(4667).Timeout();
     return timeout;
   });
   _slicedToArray = tmp2;

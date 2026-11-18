@@ -1,12 +1,12 @@
-// === Module 12860: joinFrameActivity ===
+// === Module 12154: joinFrameActivity ===
 
-// Module 12860 (joinFrameActivity)
-import UserActivityActionCreators from "UserActivityActionCreators" /* 7320 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8145 */;
+// Module 12154 (joinFrameActivity)
+import UserActivityActionCreators from "UserActivityActionCreators" /* 6825 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7648 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import VoiceStateStore from "VoiceStateStore" /* 5975 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import VoiceStateStore from "VoiceStateStore" /* 5471 */;
 
 require = fn;
 let closure_12 = async function _joinFrameActivity(arg0) {
@@ -507,10 +507,10 @@ let closure_14 = async function _getActivityChannelId() {
   }
   return channel_id1;
 };
-const makeFrameId = fn(7028).makeFrameId;
+const makeFrameId = fn(6532).makeFrameId;
 const Constants = fn(1072);
 ({ AbortCodes: closure_8, ChannelTypes: closure_9, RPCEvents: closure_10 } = Constants);
-const ActivityIntent = fn(11452).ActivityIntent;
+const ActivityIntent = fn(10734).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/joinFrameActivity.tsx");
 

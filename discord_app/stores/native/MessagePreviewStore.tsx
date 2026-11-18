@@ -1,10 +1,10 @@
-// === Module 10671: MessagePreviewStore ===
+// === Module 9952: MessagePreviewStore ===
 
-// Module 10671 (MessagePreviewStore)
+// Module 9952 (MessagePreviewStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6372 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5874 */;
 
 require = fn;
 let c3 = null;

@@ -1,6 +1,6 @@
-// === Module 10706: DimensionActionCreators ===
+// === Module 9987: DimensionActionCreators ===
 
-// Module 10706 (DimensionActionCreators)
+// Module 9987 (DimensionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

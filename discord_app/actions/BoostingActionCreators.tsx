@@ -1,11 +1,11 @@
-// === Module 9247: actions/BoostingActionCreators ===
+// === Module 8658: actions/BoostingActionCreators ===
 
-// Module 9247 (actions/BoostingActionCreators)
+// Module 8658 (actions/BoostingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 9248 */;
-import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 9249 */;
+import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 8659 */;
+import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 8660 */;
 import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 
 require = fn;
@@ -89,9 +89,9 @@ let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
         const obj10 = { value: closure_130_2, done: true };
         return obj10;
       }
-    } catch (tmp21) {
+    } catch (tmp14) {
       c5 = tmp;
-      throw tmp21;
+      throw tmp14;
     }
   }
 };

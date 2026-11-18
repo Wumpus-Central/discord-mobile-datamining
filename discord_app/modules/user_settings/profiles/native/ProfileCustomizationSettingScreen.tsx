@@ -1,23 +1,23 @@
-// === Module 17097: ProfileCustomizationSettingScreen ===
+// === Module 15753: ProfileCustomizationSettingScreen ===
 
-// Module 17097 (ProfileCustomizationSettingScreen)
+// Module 15753 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6064 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7810 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10050 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 10825 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 15496 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 17098 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 17224 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5560 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7313 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9330 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 10118 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 14124 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15754 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15881 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10048 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8553 */;
-import WidgetStore from "WidgetStore" /* 10823 */;
-import SortedGuildStore from "SortedGuildStore" /* 6954 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9328 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8044 */;
+import WidgetStore from "WidgetStore" /* 10106 */;
+import SortedGuildStore from "SortedGuildStore" /* 6458 */;
 
 const require = globalThis.__r;
 
@@ -32,11 +32,11 @@ const View = fn(17).View;
 const ProfileCustomizationSubsection = fn(1082).ProfileCustomizationSubsection;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
-const RootNavigatorScreen = fn(10043).RootNavigatorScreen;
-const UserProfileSections = fn(8490).UserProfileSections;
+const RootNavigatorScreen = fn(9323).RootNavigatorScreen;
+const UserProfileSections = fn(7981).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { container: { height: "100%" }, controls: { paddingTop: 4 }, page: { flex: 1 }, profileSelector: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_22 = createStyles.createStyles(obj);
 let items = [
@@ -245,10 +245,10 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
     }
   }, items6);
   const effect2 = obj5.useEffect(() => () => {
-    const result = closure_1_0(7810).resetAndCloseUserProfileForm();
+    const result = closure_1_0(7313).resetAndCloseUserProfileForm();
     hasUnsavedChanges.resetState();
-    const obj = closure_1_0(7810);
-    token(10825).clearPendingWidgets();
+    const obj = closure_1_0(7313);
+    token(10118).clearPendingWidgets();
   }, []);
   const items7 = [token, nativeStackNavigation, isMobileWidgetEditingEnabled, hasUnsavedChanges, hasInvalidWidgetChanges, tmp21.isSubmitting || tmp23.isSubmitting, callback1];
   const layoutEffect = obj5.useLayoutEffect(() => {

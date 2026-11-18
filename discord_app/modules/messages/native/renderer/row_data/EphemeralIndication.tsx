@@ -1,10 +1,10 @@
-// === Module 9344: EphemeralIndication ===
+// === Module 8755: EphemeralIndication ===
 
-// Module 9344 (EphemeralIndication)
+// Module 8755 (EphemeralIndication)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 9345 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 9176 */;
+import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 8756 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8587 */;
 
 require = fn;
 const Constants = fn(1072);

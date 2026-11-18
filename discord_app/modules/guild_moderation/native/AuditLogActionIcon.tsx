@@ -1,13 +1,13 @@
-// === Module 20544: AuditLogActionIcon ===
+// === Module 19817: AuditLogActionIcon ===
 
-// Module 20544 (AuditLogActionIcon)
+// Module 19817 (AuditLogActionIcon)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import ChatIcon from "ChatIcon" /* 8080 */;
-import RobotIcon2 from "RobotIcon" /* 12837 */;
-import _modDef20549 from "module_20549" /* 20549 */;
-import _modDef20550 from "module_20550" /* 20550 */;
-import _modDef20551 from "module_20551" /* 20551 */;
+import ChatIcon from "ChatIcon" /* 7583 */;
+import RobotIcon2 from "RobotIcon" /* 12131 */;
+import _modDef19822 from "module_19822" /* 19822 */;
+import _modDef19823 from "module_19823" /* 19823 */;
+import _modDef19824 from "module_19824" /* 19824 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,13 +16,13 @@ function AuditIcons(action) {
   const tmp = closure_10();
   const tmp2 = hasOwnProperty(action);
   if (constants.CREATE === tmp2) {
-    let tmp4 = _modDef20549;
+    let tmp4 = _modDef19822;
   } else if (constants.UPDATE === tmp2) {
-    tmp4 = _modDef20550;
+    tmp4 = _modDef19823;
   } else {
     tmp4 = null;
     if (constants.DELETE === tmp2) {
-      tmp4 = _modDef20551;
+      tmp4 = _modDef19824;
     }
   }
   if (action === constants2.MESSAGE_DELETE) {
@@ -51,20 +51,20 @@ function AuditIcons(action) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const AuditLogRecord = fn(20539);
+const AuditLogRecord = fn(19812);
 ({ getTargetType: closure_4, getActionType: hasOwnProperty } = AuditLogRecord);
 const Constants = fn(1072);
 ({ AuditLogTargetTypes, AuditLogActionTypes: closure_6, AuditLogActions: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const obj2 = { actionImageContainer: { height: 24, width: 24 }, actionImageOverlay: null, iconComponent: null, actionImage: null };
 let size = { borderRadius: nativeDefault.radii.round, width: 13, height: 13, bottom: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.actionImageOverlay = size;
 obj2.iconComponent = { width: 22, height: 22 };
 obj2.actionImage = { position: "absolute" };
 let closure_10 = createStyles.createStyles(obj2);
-let obj3 = { [ALL]: fn(20545).ListBulletsIcon, [CHANNEL]: fn(20482).ChannelListIcon, [CHANNEL_OVERWRITE]: fn(20482).ChannelListIcon, [EMOJI]: fn(10110).ReactionIcon, [GUILD]: fn(6031).CircleInformationIcon, [GUILD_PROFILE]: fn(6031).CircleInformationIcon, [INTEGRATION]: fn(19726).PuzzlePieceIcon, [INVITE]: fn(6023).LinkIcon, [ROLE]: fn(10828).FlagIcon, [USER]: fn(7446).GroupIcon, [WEBHOOK]: fn(19617).WebhookIcon, [STAGE_INSTANCE]: fn(8028).StageIcon, [GUILD_SCHEDULED_EVENT]: fn(8468).CalendarIcon, [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(8468).CalendarIcon, [THREAD]: fn(8082).ThreadIcon, [STICKER]: fn(11806).StickerIcon, [APPLICATION_COMMAND]: fn(12771).SlashBoxIcon, [AUTO_MODERATION_RULE]: fn(19617).WebhookIcon, [GUILD_SOUNDBOARD]: fn(14041).SoundboardIcon, [ONBOARDING_PROMPT]: fn(7446).GroupIcon, [GUILD_ONBOARDING]: fn(7446).GroupIcon, [HOME_SETTINGS]: fn(7446).GroupIcon, [GUILD_MEMBER_VERIFICATION]: fn(7446).GroupIcon, [VOICE_CHANNEL_STATUS]: fn(20482).ChannelListIcon, [GUILD_HOME]: fn(20547).HomeIcon, [UNKNOWN]: fn(10072).CircleQuestionIcon };
+let obj3 = { [ALL]: fn(19818).ListBulletsIcon, [CHANNEL]: fn(19755).ChannelListIcon, [CHANNEL_OVERWRITE]: fn(19755).ChannelListIcon, [EMOJI]: fn(9391).ReactionIcon, [GUILD]: fn(5527).CircleInformationIcon, [GUILD_PROFILE]: fn(5527).CircleInformationIcon, [INTEGRATION]: fn(18997).PuzzlePieceIcon, [INVITE]: fn(5519).LinkIcon, [ROLE]: fn(10168).FlagIcon, [USER]: fn(6949).GroupIcon, [WEBHOOK]: fn(18893).WebhookIcon, [STAGE_INSTANCE]: fn(7531).StageIcon, [GUILD_SCHEDULED_EVENT]: fn(7959).CalendarIcon, [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(7959).CalendarIcon, [THREAD]: fn(7585).ThreadIcon, [STICKER]: fn(11088).StickerIcon, [APPLICATION_COMMAND]: fn(12065).SlashBoxIcon, [AUTO_MODERATION_RULE]: fn(18893).WebhookIcon, [GUILD_SOUNDBOARD]: fn(13345).SoundboardIcon, [ONBOARDING_PROMPT]: fn(6949).GroupIcon, [GUILD_ONBOARDING]: fn(6949).GroupIcon, [HOME_SETTINGS]: fn(6949).GroupIcon, [GUILD_MEMBER_VERIFICATION]: fn(6949).GroupIcon, [VOICE_CHANNEL_STATUS]: fn(19755).ChannelListIcon, [GUILD_HOME]: fn(19820).HomeIcon, [UNKNOWN]: fn(9352).CircleQuestionIcon };
 ({ ALL, CHANNEL, CHANNEL_OVERWRITE, EMOJI, GUILD, GUILD_PROFILE, INTEGRATION, INVITE, ROLE, USER, WEBHOOK, STAGE_INSTANCE, GUILD_SCHEDULED_EVENT, GUILD_SCHEDULED_EVENT_EXCEPTION, THREAD, STICKER, APPLICATION_COMMAND, AUTO_MODERATION_RULE, GUILD_SOUNDBOARD, ONBOARDING_PROMPT, GUILD_ONBOARDING, HOME_SETTINGS, GUILD_MEMBER_VERIFICATION, VOICE_CHANNEL_STATUS, GUILD_HOME, UNKNOWN } = AuditLogTargetTypes);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_moderation/native/AuditLogActionIcon.tsx");

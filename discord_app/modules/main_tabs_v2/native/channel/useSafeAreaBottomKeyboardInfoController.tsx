@@ -1,6 +1,6 @@
-// === Module 12450: useSafeAreaBottomKeyboardInfoController ===
+// === Module 11732: useSafeAreaBottomKeyboardInfoController ===
 
-// Module 12450 (useSafeAreaBottomKeyboardInfoController)
+// Module 11732 (useSafeAreaBottomKeyboardInfoController)
 import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1642 */;
 import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 2019 */;
 import noop from "module_19" /* 19 */;

@@ -1,18 +1,19 @@
-// === Module 12588: useGiftCodeErrorMessage ===
+// === Module 11873: useGiftCodeErrorMessage ===
 
-// Module 12588 (useGiftCodeErrorMessage)
+// Module 11873 (useGiftCodeErrorMessage)
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8511 */;
-import GiftCodeStore from "GiftCodeStore" /* 12582 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8002 */;
+import GiftCodeStore from "GiftCodeStore" /* 11865 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
+let result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
 
 export default function useGiftCodeErrorMessage(arg0, id) {
   _require = arg0;
+  let ilcBeX = first;
   items = [GiftCodeStore];
   [first] = require("initialize").useStateFromStoresArray(items, () => {
     items = [GiftCodeStore.get(closure_0), GiftCodeStore.getError(closure_0)];
@@ -20,7 +21,7 @@ export default function useGiftCodeErrorMessage(arg0, id) {
   });
   const obj = require("initialize");
   const items1 = [CollectiblesPurchaseStore];
-  let userId;
+  let result = null != first;
   const stateFromStores = require("initialize").useStateFromStores(items1, () => {
     let skuId;
     if (first != null) {
@@ -28,6 +29,11 @@ export default function useGiftCodeErrorMessage(arg0, id) {
     }
     return CollectiblesPurchaseStore.getPurchase(skuId);
   });
+  if (result) {
+    result = tmp(ilcBeX[4]).needsGiftSubscriptionAgreement(first);
+    const tmpResult = tmp(ilcBeX[4]);
+  }
+  let userId;
   if (first != null) {
     userId = first.userId;
   }
@@ -36,26 +42,31 @@ export default function useGiftCodeErrorMessage(arg0, id) {
     id = id.id;
   }
   if (userId === id) {
-    const intl3 = tmp(tmp2[4]).intl;
-    let stringResult = intl3.string(tmp(tmp2[4]).t.JZxgJX);
-  } else {
-    let isClaimed;
-    if (first != null) {
-      isClaimed = first.isClaimed;
-    }
-    if (isClaimed) {
-      const intl2 = tmp(tmp2[4]).intl;
-      stringResult = intl2.string(tmp(tmp2[4]).t.ilcBeX);
-    } else if (null != stateFromStores) {
-      const intl = tmp(tmp2[4]).intl;
-      stringResult = intl.string(tmp(tmp2[4]).t.mdLtb5);
-    } else {
-      stringResult = null;
-      if (null != tmp5) {
-        stringResult = tmp(tmp2[5]).getGiftCodeRedeemError(tmp5);
-        const tmpResult = tmp(tmp2[5]);
+    if (!result) {
+      if (null != first) {
+        if (tmpResult3.isPendingGiftSubscriptionCode(first)) {
+          let JZxgJX = tmp(ilcBeX[5]).t.wa9h7F;
+        }
+        return tmp9(JZxgJX);
       }
+      JZxgJX = tmp(ilcBeX[5]).t.JZxgJX;
     }
   }
-  return stringResult;
+  let isClaimed;
+  if (first != null) {
+    isClaimed = first.isClaimed;
+  }
+  if (isClaimed) {
+    const intl2 = tmp(ilcBeX[5]).intl;
+    ilcBeX = tmp(ilcBeX[5]).t.ilcBeX;
+    intl2.string(ilcBeX);
+  } else if (null != stateFromStores) {
+    const intl = tmp(ilcBeX[5]).intl;
+    intl.string(tmp(ilcBeX[5]).t.mdLtb5);
+  } else if (null != tmp4) {
+    if (!result) {
+      tmp(ilcBeX[7]).getGiftCodeRedeemError(tmp4);
+      const tmpResult4 = tmp(ilcBeX[7]);
+    }
+  }
 };

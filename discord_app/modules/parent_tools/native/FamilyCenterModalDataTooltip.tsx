@@ -1,13 +1,13 @@
-// === Module 17458: FamilyCenterModalDataTooltip ===
+// === Module 16115: FamilyCenterModalDataTooltip ===
 
-// Module 17458 (FamilyCenterModalDataTooltip)
+// Module 16115 (FamilyCenterModalDataTooltip)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2703 from "module_2703" /* 2703 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6833 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9629 */;
-import Modal from "Modal" /* 12718 */;
+import _modDef2723 from "module_2723" /* 2723 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6337 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9043 */;
+import Modal from "Modal" /* 12003 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -31,9 +31,9 @@ function FamilyCenterModalDataTooltipScreen() {
   const intl = require("util").intl;
   obj = require("useAgeSpecificText");
   const intl2 = require("util").intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2703.n6LOrh), intl2.string(_modDef2703.JNLpDZ));
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2723.n6LOrh), intl2.string(_modDef2723.JNLpDZ));
   _require = useIsInAdultAgeGroupDefault();
-  const stringResult = intl.string(_modDef2703.n6LOrh);
+  const stringResult = intl.string(_modDef2723.n6LOrh);
   const sortedActivityTypeConfigs = require("FamilyCenterUtils").getSortedActivityTypeConfigs();
   const obj3 = { children: null };
   const obj4 = { children: null };
@@ -62,9 +62,9 @@ function FamilyCenterModalDataTooltipScreen() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(8080).ChatIcon, [USER_CALLED]: fn(13093).PhoneIcon, [USER_ADD]: fn(6012).FriendsIcon, [GUILD_ADD]: fn(16050).ServerGridIcon, [GUILD_INTERACTION]: fn(8082).ThreadIcon, [PURCHASES]: fn(8263).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(6036).ClockIcon, [GIFTS]: fn(13095).GiftIcon };
-({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(8752).TeenActionDisplayType);
-let createStyles = fn(5310);
+let obj = { [USER_INTERACTION]: fn(7583).ChatIcon, [USER_CALLED]: fn(12391).PhoneIcon, [USER_ADD]: fn(5508).FriendsIcon, [GUILD_ADD]: fn(14717).ServerGridIcon, [GUILD_INTERACTION]: fn(7585).ThreadIcon, [PURCHASES]: fn(7765).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5532).ClockIcon, [GIFTS]: fn(12393).GiftIcon };
+({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(8248).TeenActionDisplayType);
+let createStyles = fn(4823);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };
 let size = { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round, flexShrink: 0, marginRight: nativeDefault.space.PX_12 };
 obj3.iconContainer = size;
@@ -73,7 +73,7 @@ obj3.header = { marginBottom: nativeDefault.space.PX_4 };
 let obj5 = { marginBottom: nativeDefault.space.PX_4 };
 obj3.icon = { tintColor: nativeDefault.colors.TEXT_BRAND };
 let closure_8 = createStyles.createStyles(obj3);
-createStyles = fn(5310);
+createStyles = fn(4823);
 let obj7 = { container: null, groupHeader: null };
 const obj6 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj7.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };

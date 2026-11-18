@@ -1,16 +1,16 @@
-// === Module 7950: UserProfileRolesCard ===
+// === Module 7453: UserProfileRolesCard ===
 
-// Module 7950 (UserProfileRolesCard)
+// Module 7453 (UserProfileRolesCard)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import ToastUtils from "ToastUtils" /* 6008 */;
-import ClipboardUtils from "ClipboardUtils" /* 7953 */;
-import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7967 */;
-import RoleIconDefault from "RoleIcon" /* 7969 */;
-import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7970 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import ToastUtils from "ToastUtils" /* 5504 */;
+import ClipboardUtils from "ClipboardUtils" /* 7456 */;
+import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7470 */;
+import RoleIconDefault from "RoleIcon" /* 7472 */;
+import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7473 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5222 */;
-import GuildRoleStore from "GuildRoleStore" /* 5216 */;
+import GuildMemberStore from "GuildMemberStore" /* 4735 */;
+import GuildRoleStore from "GuildRoleStore" /* 4729 */;
 
 require = fn;
 function RoleDot(color) {
@@ -78,6 +78,7 @@ class RoleItem {
       if (null != roleIconProps) {
         const obj4 = {};
         const merged = Object.assign(roleIconProps);
+        obj4.layout = "pill";
         tmp8Result = tmp8(RoleIconDefault, obj4);
       }
       children[2] = tmp8Result;
@@ -150,7 +151,7 @@ const Constants = fn(1072);
 ({ DEFAULT_ROLE_COLOR_HEX: metroImportDefault, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm }, roleDot: null };
 let size = { borderRadius: nativeDefault.radii.round, height: 12, width: 12 };
 obj2.roleDot = size;
@@ -179,8 +180,8 @@ export default function UserProfileRolesCard(userId) {
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(RolesList, obj3);
-    tmp4 = closure_9(guildId(7971), obj2);
-    const tmp7 = guildId(7971);
+    tmp4 = closure_9(guildId(7474), obj2);
+    const tmp7 = guildId(7474);
   }
   return tmp4;
 };

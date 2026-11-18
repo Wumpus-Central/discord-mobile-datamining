@@ -1,9 +1,9 @@
-// === Module 20566: EmptyServerSettingsEmoji ===
+// === Module 19839: EmptyServerSettingsEmoji ===
 
-// Module 20566 (EmptyServerSettingsEmoji)
-import shared from "shared" /* 5317 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import _mod8194 from "module_8194" /* 8194 */;
+// Module 19839 (EmptyServerSettingsEmoji)
+import shared from "shared" /* 4830 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import _mod7697 from "module_7697" /* 7697 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,55 +14,55 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/EmptyServerSettingsEmoji.tsx");
 
 export function getEmptyServerSettingsEmojiSource(theme) {
-  return _mod8194.getIllustrationSource(theme, {
+  return _mod7697.getIllustrationSource(theme, {
     dark() {
-      return require("module_20567");
+      return require("module_19840");
     },
     darker() {
-      return require("module_20568");
+      return require("module_19841");
     },
     light() {
-      return require("module_20569");
+      return require("module_19842");
     }
   });
 }
 export function useEmptyServerSettingsEmojiSource() {
   const obj = shared;
-  return _mod8194.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod7697.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_20567");
+      return require("module_19840");
     },
     darker() {
-      return require("module_20568");
+      return require("module_19841");
     },
     light() {
-      return require("module_20569");
+      return require("module_19842");
     }
   });
 }
 export function EmptyServerSettingsEmoji(arg0) {
   const obj = shared;
-  const illustrationSource = _mod8194.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod7697.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_20567");
+      return require("module_19840");
     },
     darker() {
-      return require("module_20568");
+      return require("module_19841");
     },
     light() {
-      return require("module_20569");
+      return require("module_19842");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_20567");
+      return require("module_19840");
     },
     darker() {
-      return require("module_20568");
+      return require("module_19841");
     },
     light() {
-      return require("module_20569");
+      return require("module_19842");
     }
   };
   const merged = Object.assign(arg0);

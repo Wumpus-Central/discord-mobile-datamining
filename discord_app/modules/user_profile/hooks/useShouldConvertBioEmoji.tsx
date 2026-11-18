@@ -1,7 +1,7 @@
-// === Module 9409: useShouldConvertBioEmoji ===
+// === Module 8822: useShouldConvertBioEmoji ===
 
-// Module 9409 (useShouldConvertBioEmoji)
-import UserSettings from "UserSettings" /* 5135 */;
+// Module 8822 (useShouldConvertBioEmoji)
+import UserSettings from "UserSettings" /* 4648 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useShouldConvertBioEmoji.tsx");

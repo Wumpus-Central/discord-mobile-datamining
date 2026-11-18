@@ -1,24 +1,24 @@
-// === Module 18077: EnableSwitchIconsSetting ===
+// === Module 16879: EnableSwitchIconsSetting ===
 
-// Module 18077 (EnableSwitchIconsSetting)
+// Module 16879 (EnableSwitchIconsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AccessibilityStore from "AccessibilityStore" /* 5311 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
 
 require = fn;
 function useEnableSwitchIconsSettingValue() {
   items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
-const SettingBuilders = fn(12612);
+const SettingBuilders = fn(11897);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["S3z+pV"]);
   },
-  parent: fn(9213).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8624).MobileUserSettings.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
-  onValueChange: fn(16924).setSwitchIconsEnabled,
+  onValueChange: fn(15574).setSwitchIconsEnabled,
   hasIcon: true
 });
 const size = fn(2);

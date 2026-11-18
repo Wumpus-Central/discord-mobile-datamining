@@ -1,12 +1,12 @@
-// === Module 9283: getTagProperties ===
+// === Module 8694: getTagProperties ===
 
-// Module 9283 (getTagProperties)
+// Module 8694 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1113 */;
-import MessageConstants from "MessageConstants" /* 5315 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 9284 */;
-import isCrosspostDefault from "isCrosspost" /* 9285 */;
-import _modDef9287 from "module_9287" /* 9287 */;
+import MessageConstants from "MessageConstants" /* 4828 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8695 */;
+import isCrosspostDefault from "isCrosspost" /* 8696 */;
+import _modDef8698 from "module_8698" /* 8698 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef9287).uri;
+            uri = Image.resolveAssetSource(_modDef8698).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "__d", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: null, opTagBackgroundColor: null };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "__closure", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "PX_160", opTagBackgroundColor: "isArray" };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

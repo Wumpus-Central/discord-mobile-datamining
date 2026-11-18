@@ -1,10 +1,10 @@
-// === Module 11531: useVoiceStateForRemoteSession ===
+// === Module 10813: useVoiceStateForRemoteSession ===
 
-// Module 11531 (useVoiceStateForRemoteSession)
+// Module 10813 (useVoiceStateForRemoteSession)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 5975 */;
-import GameConsoleStore from "GameConsoleStore" /* 6069 */;
+import VoiceStateStore from "VoiceStateStore" /* 5471 */;
+import GameConsoleStore from "GameConsoleStore" /* 5565 */;
 
 require = fn;
 const size = fn(2);

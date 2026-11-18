@@ -1,13 +1,13 @@
-// === Module 19080: InterestTileEdge ===
+// === Module 17891: InterestTileEdge ===
 
-// Module 19080 (InterestTileEdge)
+// Module 17891 (InterestTileEdge)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
 
-const GRID_COVER_HAIRLINE_WIDTH = fn(19068).GRID_COVER_HAIRLINE_WIDTH;
+const GRID_COVER_HAIRLINE_WIDTH = fn(17879).GRID_COVER_HAIRLINE_WIDTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_4 = createStyles.createStyles((borderRadius) => {
   const obj = { edge: { position: "absolute", inset: 0, borderWidth: GRID_COVER_HAIRLINE_WIDTH, borderRadius, borderColor: nativeDefault.colors.BORDER_MUTED } };
   return obj;

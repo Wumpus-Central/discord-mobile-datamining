@@ -1,27 +1,27 @@
-// === Module 15213: CollectiblesShopGiftPurchaseSection ===
+// === Module 13841: CollectiblesShopGiftPurchaseSection ===
 
-// Module 15213 (CollectiblesShopGiftPurchaseSection)
+// Module 13841 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6267 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6833 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5769 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6337 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8558 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8049 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(9604).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(9018).useNativeCheckoutStore;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
 const PremiumConstants = fn(1390);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -44,11 +44,10 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   let awaitSync;
   closure_10 = undefined;
   const tmp3 = closure_15(giftOptions(giftingOrigin[11])().insets.bottom);
-  const GiftingBadgeExperiment = require("GiftingBadgeExperiment").GiftingBadgeExperiment;
   items = [closure_7];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
-    const obj = { nextTier: closure_7.getNextTier(product(giftingOrigin[14]).BadgeId.GIFTING), giftsToNextTier: closure_7.getRemainingToNextTier(product(giftingOrigin[14]).BadgeId.GIFTING), badgeProgress: null };
-    const singleRequirementProgress = closure_7.getSingleRequirementProgress(product(giftingOrigin[14]).BadgeId.GIFTING);
+    const obj = { nextTier: closure_7.getNextTier(product(giftingOrigin[13]).BadgeId.GIFTING), giftsToNextTier: closure_7.getRemainingToNextTier(product(giftingOrigin[13]).BadgeId.GIFTING), badgeProgress: null };
+    const singleRequirementProgress = closure_7.getSingleRequirementProgress(product(giftingOrigin[13]).BadgeId.GIFTING);
     let current;
     if (singleRequirementProgress != null) {
       current = singleRequirementProgress.current;
@@ -66,7 +65,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   const tmp9 = awaitSync((orderRecord) => orderRecord.orderRecord);
   const tmp10 = awaitSync((setCheckoutFailed) => setCheckoutFailed.setCheckoutFailed);
   closure_7 = tmp10;
-  awaitSync = giftOptions(giftingOrigin[16])(tmp9, giftOptions).awaitSync;
+  awaitSync = giftOptions(giftingOrigin[15])(tmp9, giftOptions).awaitSync;
   const items1 = [tmp8, tmp10];
   const onPurchaseError = noop.useCallback(() => {
     if (ref.current) {
@@ -76,7 +75,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     }
     _undefined(false);
   }, items1);
-  let obj2 = { product, analyticsLocations: giftOptions(giftingOrigin[15])().analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null, giftParams: null };
+  let obj2 = { product, analyticsLocations: giftOptions(giftingOrigin[14])().analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null, giftParams: null };
   let id;
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   if (tmp9 != null) {
@@ -99,7 +98,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     ModalActionCreatorsDefault.pop();
     actions_AlertActionCreatorsDefault.openLazy({
       importer() {
-        return product(giftingOrigin[23])(giftingOrigin[22], giftingOrigin.paths).then((result) => {
+        return product(giftingOrigin[22])(giftingOrigin[21], giftingOrigin.paths).then((result) => {
           closure_0 = result.default;
           return (arg0) => {
             let STANDARD_BOX = gift_style.gift_style;
@@ -115,7 +114,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     });
     const obj4 = {
       importer() {
-        return product(giftingOrigin[23])(giftingOrigin[22], giftingOrigin.paths).then((result) => {
+        return product(giftingOrigin[22])(giftingOrigin[21], giftingOrigin.paths).then((result) => {
           closure_0 = result.default;
           return (arg0) => {
             let STANDARD_BOX = gift_style.gift_style;
@@ -139,35 +138,32 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
 
   };
   obj2.giftParams = { isGift: true, options: giftOptions };
-  closure_10 = giftOptions(giftingOrigin[18])(obj2);
+  closure_10 = giftOptions(giftingOrigin[17])(obj2);
   let obj3 = { style: tmp3.container, children: null };
   let tmp17Result = null;
-  if (GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftPurchaseSection" }).enabled) {
-    tmp17Result = null;
-    if (null != nextTier) {
-      let obj4 = { giftsToNextTier: stateFromStoresObject.giftsToNextTier, nextTierName: null, nextTierIcon: null };
-      let str = nextTier.name;
-      if (str == null) {
-        str = "";
-      }
-      obj4.nextTierName = str;
-      const tmpResult = tmp(tmp2[25]);
-      obj4.nextTierIcon = tmp4(tmp2[26]).getGiftingBadgeTierIconUrl(nextTier);
-      tmp17Result = closure_13(tmpResult, obj4);
-      const tmp4Result = tmp4(tmp2[26]);
+  if (null != nextTier) {
+    let obj4 = { giftsToNextTier: stateFromStoresObject.giftsToNextTier, nextTierName: null, nextTierIcon: null };
+    let str = nextTier.name;
+    if (str == null) {
+      str = "";
     }
+    obj4.nextTierName = str;
+    const tmpResult = tmp(tmp2[24]);
+    obj4.nextTierIcon = tmp4(tmp2[25]).getGiftingBadgeTierIconUrl(nextTier);
+    tmp17Result = closure_13(tmpResult, obj4);
+    const tmp4Result = tmp4(tmp2[25]);
   }
   const items2 = [tmp17Result, , ];
   let obj5 = { variant: "body-xs/normal", style: tmp3.disclaimer, children: null };
-  const intl = tmp4(tmp2[28]).intl;
+  const intl = tmp4(tmp2[27]).intl;
   let obj6 = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
-  const intl2 = tmp4(tmp2[28]).intl;
+  const intl2 = tmp4(tmp2[27]).intl;
   obj6.buyButtonLabel = intl2.string(require("util").t.ouo4FK);
   ({ PAID_TERMS: obj7.paidServiceTermURL, PAID_TERMS_VIRTUAL_GOODS: obj7.virtualGoodsURL } = closure_10);
   obj5.children = intl.format(require("util").t.rsEdd2, obj6);
   items2[1] = closure_13(require("Text/Text").Text, obj5);
   const obj8 = { disabled: disabled.isPurchaseDisabled, loading: tmp7, variant: "active", text: null, onPress: null };
-  const intl3 = tmp4(tmp2[28]).intl;
+  const intl3 = tmp4(tmp2[27]).intl;
   obj8.text = intl3.string(require("util").t.ouo4FK);
   obj8.onPress = asyncGeneratorStep(async () => {
     if (c2 === 2) {

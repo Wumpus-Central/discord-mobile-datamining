@@ -1,24 +1,24 @@
-// === Module 18787: useHomeDrawerPeekHint ===
+// === Module 17600: useHomeDrawerPeekHint ===
 
-// Module 18787 (useHomeDrawerPeekHint)
-import timing_timing from "timing/timing" /* 5542 */;
-import spring_spring from "spring/spring" /* 5933 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18785 */;
+// Module 17600 (useHomeDrawerPeekHint)
+import timing_timing from "timing/timing" /* 5033 */;
+import spring_spring from "spring/spring" /* 5424 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5311 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 18779 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17592 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ME = fn(1072).ME;
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 let c8 = 2000;
 const Easing = fn(1655).Easing;
 let closure_9 = Easing.inOut(fn(1655).Easing.cubic);
 let closure_10 = [];
-let items = [fn(5143).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX];
+let items = [fn(4656).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX];
 let closure_12 = { code: "(function useHomeDrawerPeekHintTsx1(){let[gestureState,panelX,PEEK_HINT_DRAWER_DRAG_THRESHOLD]=this.__closure;return gestureState.get().active&&panelX.get()>PEEK_HINT_DRAWER_DRAG_THRESHOLD;})" };
 let closure_13 = { code: "(function useHomeDrawerPeekHintTsx2(isDragged,wasDragged){let[isPeekGranted,scheduleOnRN,handleDrawerDragged]=this.__closure;if(!isPeekGranted||wasDragged==null)return;if(isDragged&&!wasDragged){scheduleOnRN(handleDrawerDragged);}})" };
 const size = fn(2);
@@ -96,17 +96,17 @@ export function useHomeDrawerPeekHint(enablePeekHint, sharedValue8) {
       closure_11.current = setTimeout(() => {
         ref3.current = null;
         ref4.current = false;
-        const result = _undefined.set(c0(5933).withSpring(0, c0(18785).HOME_DRAWER_FLING_PHYSICS));
+        const result = _undefined.set(c0(5424).withSpring(0, c0(17598).HOME_DRAWER_FLING_PHYSICS));
         const current = ref.current;
         if (current != null) {
           current(first1.AUTO_DISMISS);
         }
         closure_1_8(false);
-        const obj = c0(5933);
+        const obj = c0(5424);
       }, 2500);
       const obj2 = { duration: 1500, easing };
     }, items1);
-    const tmp25 = tmp8Result2[0] === tmp3(5143).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX;
+    const tmp25 = tmp8Result2[0] === tmp3(4656).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX;
     closure_15 = tmp25;
     const items2 = [tmp25, callback, tmp8Result2[1]];
     const effect = obj6.useEffect(() => {

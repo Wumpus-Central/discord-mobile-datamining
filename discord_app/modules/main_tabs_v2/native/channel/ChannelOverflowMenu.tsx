@@ -1,11 +1,11 @@
-// === Module 15654: ChannelOverflowMenu ===
+// === Module 14282: ChannelOverflowMenu ===
 
-// Module 15654 (ChannelOverflowMenu)
+// Module 14282 (ChannelOverflowMenu)
 import util from "util" /* 1113 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 7430 */;
-import ContextMenu from "ContextMenu" /* 9159 */;
-import IconActionButtonDefault from "IconActionButton" /* 15655 */;
-import useAppChannelOverflowMenuItemsDefault from "useAppChannelOverflowMenuItems" /* 15656 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 6933 */;
+import ContextMenu from "ContextMenu" /* 8570 */;
+import IconActionButtonDefault from "IconActionButton" /* 14283 */;
+import useAppChannelOverflowMenuItemsDefault from "useAppChannelOverflowMenuItems" /* 14284 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

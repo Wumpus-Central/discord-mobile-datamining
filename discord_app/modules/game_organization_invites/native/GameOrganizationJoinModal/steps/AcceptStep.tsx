@@ -1,16 +1,16 @@
-// === Module 12904: AcceptStep ===
+// === Module 12199: AcceptStep ===
 
-// Module 12904 (AcceptStep)
+// Module 12199 (AcceptStep)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_6 = fn(12573).GameOrganizationInviteAcceptStatus;
-const onPress = fn(12898).closeGameOrganizationJoinModal;
+let closure_6 = fn(11856).GameOrganizationInviteAcceptStatus;
+const onPress = fn(12194).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_10 = createStyles.createStyles({ text: { textAlign: "center" }, buttonGroup: { paddingVertical: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/steps/AcceptStep.tsx");

@@ -1,13 +1,12 @@
-// === Module 8430: utils ===
+// === Module 7921: utils ===
 
-// Module 8430 (utils)
+// Module 7921 (utils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import _mod4735 from "module_4735" /* 4735 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8431 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8432 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 7922 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7923 */;
 import size from "module_2" /* 2 */;
 
 function calculateTimestampDurations(end, now) {
@@ -390,42 +389,17 @@ export function getResurrectedEntryLastPlayTime(entry) {
   }
   return date;
 }
-export function getFullResurrectedBadgeText(start) {
-  const obj2 = { start, end: null };
-  const obj = _mod4735;
-  obj2.end = new Date();
-  const intervalToDurationResult = obj.intervalToDuration(obj2);
-  const months = intervalToDurationResult.months;
-  let num = 0;
-  if (undefined !== months) {
-    num = months;
-  }
-  const weeks = intervalToDurationResult.weeks;
-  let num2 = 0;
-  if (undefined !== weeks) {
-    num2 = weeks;
-  }
-  const days = intervalToDurationResult.days;
-  let num3 = 0;
-  if (undefined !== days) {
-    num3 = days;
-  }
+export function getFullResurrectedBadgeText(arg0) {
+  const obj = _modDef2169();
+  const diffResult = obj.diff(arg0, "months");
   const intl = util.intl;
-  const obj3 = { months: num, weeks: null, days: null };
-  let num4 = 0;
-  if (num <= 0) {
-    num4 = num2;
+  const obj2 = { months: diffResult, weeks: 0, days: null };
+  let num = 0;
+  if (diffResult <= 0) {
+    num = obj.diff(arg0, "days");
   }
-  obj3.weeks = num4;
-  let num5 = 0;
-  if (num <= 0) {
-    num5 = 0;
-    if (num2 <= 0) {
-      num5 = num3;
-    }
-  }
-  obj3.days = num5;
-  return intl.formatToPlainString(util.t.NXBtjF, obj3);
+  obj2.days = num;
+  return intl.formatToPlainString(util.t.NXBtjF, obj2);
 }
 export function getEpisodeBadgeText(large_text) {
   if (null != large_text) {
@@ -434,8 +408,8 @@ export function getEpisodeBadgeText(large_text) {
       let formatToPlainStringResult = null;
       if (null != match) {
         const intl = util.intl;
-        const obj2 = { seasonNum: match[1], episodeNum: match[2] };
-        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj2);
+        const obj = { seasonNum: match[1], episodeNum: match[2] };
+        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj);
       }
       return formatToPlainStringResult;
     }

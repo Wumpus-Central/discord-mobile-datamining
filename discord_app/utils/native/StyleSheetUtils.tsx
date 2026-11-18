@@ -1,6 +1,6 @@
-// === Module 7439: StyleSheetUtils ===
+// === Module 6942: StyleSheetUtils ===
 
-// Module 7439 (StyleSheetUtils)
+// Module 6942 (StyleSheetUtils)
 import size from "module_2" /* 2 */;
 
 const obj = { getStyleProp: null };

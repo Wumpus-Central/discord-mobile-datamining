@@ -1,9 +1,9 @@
-// === Module 15299: ExperimentalRareIcon ===
+// === Module 13927: ExperimentalRareIcon ===
 
-// Module 15299 (ExperimentalRareIcon)
+// Module 13927 (ExperimentalRareIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6013 */;
-import _mod15300 from "module_15300" /* 15300 */;
+import BaseIconImage from "BaseIconImage" /* 5509 */;
+import _mod13928 from "module_13928" /* 13928 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ExperimentalRareIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15300, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13928, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

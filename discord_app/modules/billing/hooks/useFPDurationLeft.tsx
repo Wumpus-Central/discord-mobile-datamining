@@ -1,8 +1,8 @@
-// === Module 15362: useFPDurationLeft ===
+// === Module 13990: useFPDurationLeft ===
 
-// Module 15362 (useFPDurationLeft)
+// Module 13990 (useFPDurationLeft)
 import util from "util" /* 1113 */;
-import useCountdownDefault from "useCountdown" /* 9450 */;
+import useCountdownDefault from "useCountdown" /* 8863 */;
 import size from "module_2" /* 2 */;
 
 function roundFPCountdownUnits(arg0) {

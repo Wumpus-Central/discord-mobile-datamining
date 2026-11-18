@@ -1,6 +1,6 @@
-// === Module 6392: ? ===
+// === Module 5894: ? ===
 
-// Module 6392
+// Module 5894
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-duck.png.js");

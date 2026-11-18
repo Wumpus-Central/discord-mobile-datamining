@@ -1,8 +1,8 @@
-// === Module 20338: InstantInviteManager ===
+// === Module 19612: InstantInviteManager ===
 
-// Module 20338 (InstantInviteManager)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6009 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7892 */;
+// Module 19612 (InstantInviteManager)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
 
 let require = fn;
 const prototype = function InstantInviteManager() {

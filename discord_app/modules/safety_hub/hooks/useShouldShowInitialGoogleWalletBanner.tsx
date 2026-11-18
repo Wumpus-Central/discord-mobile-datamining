@@ -1,15 +1,15 @@
-// === Module 17305: useShouldShowInitialGoogleWalletBanner ===
+// === Module 15962: useShouldShowInitialGoogleWalletBanner ===
 
-// Module 17305 (useShouldShowInitialGoogleWalletBanner)
+// Module 15962 (useShouldShowInitialGoogleWalletBanner)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8242 */;
+import SafetyHubStore from "SafetyHubStore" /* 7746 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AgeCheckStatus = fn(8217).AgeCheckStatus;
+const AgeCheckStatus = fn(7720).AgeCheckStatus;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useShouldShowInitialGoogleWalletBanner.tsx");
 
@@ -68,7 +68,7 @@ export function useShouldShowInitialGoogleWalletBanner() {
                 c2 = 1;
                 c3 = 2;
                 c4 = 1;
-                const obj6 = { value: _true(8249).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
+                const obj6 = { value: _true(7751).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
                 return obj6;
               }
             } else {
@@ -116,7 +116,7 @@ export function useShouldShowInitialGoogleWalletBanner() {
               }
               c3 = 3;
               c4 = 1;
-              const obj8 = { value: _true(8252).checkGoogleWalletAvailable(), done: false };
+              const obj8 = { value: _true(7754).checkGoogleWalletAvailable(), done: false };
               return obj8;
             }
           } catch (tmp27) {

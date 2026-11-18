@@ -1,10 +1,10 @@
-// === Module 20189: trackHttpRequest ===
+// === Module 19460: trackHttpRequest ===
 
-// Module 20189 (trackHttpRequest)
+// Module 19460 (trackHttpRequest)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HttpRequestSampleExperiment from "HttpRequestSampleExperiment" /* 20190 */;
-import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 20191 */;
+import HttpRequestSampleExperiment from "HttpRequestSampleExperiment" /* 19461 */;
+import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 19462 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

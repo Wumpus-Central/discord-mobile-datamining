@@ -1,10 +1,10 @@
-// === Module 13932: ChatInputCharCounter ===
+// === Module 13234: ChatInputCharCounter ===
 
-// Module 13932 (ChatInputCharCounter)
+// Module 13234 (ChatInputCharCounter)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6009 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 11137 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10419 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -15,7 +15,7 @@ const Constants = fn(1072);
 const PremiumUpsellTypes = fn(1390).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 } };
 let closure_11 = createStyles.createStyles(obj);
 class ChatCounter {

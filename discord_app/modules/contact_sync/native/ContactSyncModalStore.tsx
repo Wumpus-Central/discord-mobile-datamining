@@ -1,13 +1,13 @@
-// === Module 14206: ContactSyncModalStore ===
+// === Module 13510: ContactSyncModalStore ===
 
-// Module 14206 (ContactSyncModalStore)
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7093 */;
+// Module 13510 (ContactSyncModalStore)
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6597 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContactPermissions = fn(14207).ContactPermissions;
+const ContactPermissions = fn(13511).ContactPermissions;
 const PlatformTypes = fn(1072).PlatformTypes;
 const ContactSyncModes = { NORMAL: 0, [0]: "NORMAL", ONBOARDING: 1, [1]: "ONBOARDING", ONBOARDING_INVITE: 2, [2]: "ONBOARDING_INVITE" };
 const module_560 = fn(560);

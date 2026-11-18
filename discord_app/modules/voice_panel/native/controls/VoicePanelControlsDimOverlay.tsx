@@ -1,16 +1,16 @@
-// === Module 20157: VoicePanelControlsDimOverlay ===
+// === Module 19428: VoicePanelControlsDimOverlay ===
 
-// Module 20157 (VoicePanelControlsDimOverlay)
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12427 */;
+// Module 19428 (VoicePanelControlsDimOverlay)
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11709 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(16472).BACKDROP_OPAQUE_MAX_OPACITY;
-const VoicePanelConstants = fn(12428);
+let closure_4 = fn(15139).BACKDROP_OPAQUE_MAX_OPACITY;
+const VoicePanelConstants = fn(11710);
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: hasOwnProperty, VoicePanelModes: closure_6 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12426).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11708).VoicePanelControlsModes;
 let jsx = fn(21).jsx;
 let closure_9 = { code: "(function VoicePanelControlsDimOverlayTsx1(){let[windowDimensions,getDrawerSpec,safeArea,controlsSpecs,VoicePanelControlsModes,mode,VoicePanelModes,interpolate,wrapperSpecs,BACKDROP_OPAQUE_MAX_OPACITY]=this.__closure;const{height:height}=windowDimensions.get();const{minHeight:minHeight,maxHeight:maxHeight}=getDrawerSpec(height,safeArea.get().top);if(controlsSpecs.get().mode!==VoicePanelControlsModes.DRAWER||mode.get()!==VoicePanelModes.PANEL){return 0;}return interpolate(wrapperSpecs.get().height,[minHeight,maxHeight],[0,BACKDROP_OPAQUE_MAX_OPACITY],'clamp');})" };
 let closure_10 = { code: "(function VoicePanelControlsDimOverlayTsx2(){let[overlayOpacity]=this.__closure;return overlayOpacity.get()>=0.35;})" };

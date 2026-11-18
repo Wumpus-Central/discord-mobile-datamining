@@ -1,13 +1,13 @@
-// === Module 19489: NavTTISurfaceProvider ===
+// === Module 18765: NavTTISurfaceProvider ===
 
-// Module 19489 (NavTTISurfaceProvider)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 11105 */;
-import useComponentRenderSpan from "useComponentRenderSpan" /* 19416 */;
-import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 19418 */;
-import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 19419 */;
+// Module 18765 (NavTTISurfaceProvider)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 10387 */;
+import useComponentRenderSpan from "useComponentRenderSpan" /* 18230 */;
+import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 18232 */;
+import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 18233 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5926 */;
+import DevSettingsStore from "DevSettingsStore" /* 5417 */;
 
 require = fn;
 function NavTTISurfaceView(onLayout) {

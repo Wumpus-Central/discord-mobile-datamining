@@ -1,7 +1,7 @@
-// === Module 10831: UserProfileWidgetEditOptionsButton ===
+// === Module 10124: UserProfileWidgetEditOptionsButton ===
 
-// Module 10831 (UserProfileWidgetEditOptionsButton)
-import openUserProfileWidgetEditOptionsActionSheetDefault from "openUserProfileWidgetEditOptionsActionSheet" /* 10832 */;
+// Module 10124 (UserProfileWidgetEditOptionsButton)
+import openUserProfileWidgetEditOptionsActionSheetDefault from "openUserProfileWidgetEditOptionsActionSheet" /* 10125 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,11 +12,11 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileWidgetEditOptionsButton(widget) {
   widget = widget.widget;
   const ref = noop.useRef(null);
-  const obj = { ref, size: "sm", variant: "secondary", icon: jsx(widget(7430).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }), accessibilityLabel: null, onPress: null };
+  const obj = { ref, size: "sm", variant: "secondary", icon: jsx(widget(6933).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }), accessibilityLabel: null, onPress: null };
   const intl = widget(1113).intl;
   obj.accessibilityLabel = intl.string(widget(1113).t.xpSHSk);
   obj.onPress = function onPress() {
     return openUserProfileWidgetEditOptionsActionSheetDefault({ widget, returnFocusRef: ref });
   };
-  return jsx(widget(7999).IconButton, { ref, size: "sm", variant: "secondary", icon: jsx(widget(7430).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }), accessibilityLabel: null, onPress: null });
+  return jsx(widget(7502).IconButton, { ref, size: "sm", variant: "secondary", icon: jsx(widget(6933).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }), accessibilityLabel: null, onPress: null });
 };

@@ -1,8 +1,8 @@
-// === Module 9575: DismissibleContentScope ===
+// === Module 8989: DismissibleContentScope ===
 
-// Module 9575 (DismissibleContentScope)
+// Module 8989 (DismissibleContentScope)
 import LoggerDefault from "Logger" /* 3 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 5150 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 4663 */;
 
 require = fn;
 function tagDismissibleContentKind(content) {

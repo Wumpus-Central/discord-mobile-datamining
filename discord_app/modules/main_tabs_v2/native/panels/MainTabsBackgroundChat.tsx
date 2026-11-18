@@ -1,10 +1,10 @@
-// === Module 18760: MainTabsBackgroundChat ===
+// === Module 17573: MainTabsBackgroundChat ===
 
-// Module 18760 (MainTabsBackgroundChat)
+// Module 17573 (MainTabsBackgroundChat)
 import Link from "Link" /* 1503 */;
-import useChatLayoutDefault from "useChatLayout" /* 5489 */;
-import Portal from "Portal" /* 5502 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18758 */;
+import useChatLayoutDefault from "useChatLayout" /* 5002 */;
+import Portal from "Portal" /* 5015 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17571 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,27 +1,27 @@
-// === Module 16962: NativeRPCImplementation ===
+// === Module 15612: NativeRPCImplementation ===
 
-// Module 16962 (NativeRPCImplementation)
-import NativeRPCServerDefault from "NativeRPCServer" /* 7308 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11473 */;
-import commands_activitiesDefault from "commands/activities" /* 17015 */;
-import audioSessionDefault from "audioSession" /* 17016 */;
-import authDefault from "auth" /* 17017 */;
-import screenCaptureDefault from "screenCapture" /* 17019 */;
-import setRunsInBackgroundDefault from "setRunsInBackground" /* 17020 */;
-import frameRelaunchDeepLinkDefault from "frameRelaunchDeepLink" /* 17021 */;
-import pictureInPictureInteractiveDefault from "pictureInPictureInteractive" /* 17022 */;
-import voiceSettingsDefault from "voiceSettings" /* 17030 */;
-import unsupportedDefault from "unsupported" /* 17031 */;
-import crossPlatformRPCEventHandlersDefault from "crossPlatformRPCEventHandlers" /* 17033 */;
-import getNativeDiscordCustomThemeDefault from "getNativeDiscordCustomTheme" /* 17036 */;
-import AccessibilityStore from "AccessibilityStore" /* 5311 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5334 */;
+// Module 15612 (NativeRPCImplementation)
+import NativeRPCServerDefault from "NativeRPCServer" /* 6813 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 10755 */;
+import commands_activitiesDefault from "commands/activities" /* 15665 */;
+import audioSessionDefault from "audioSession" /* 15666 */;
+import authDefault from "auth" /* 15667 */;
+import screenCaptureDefault from "screenCapture" /* 15669 */;
+import setRunsInBackgroundDefault from "setRunsInBackground" /* 15670 */;
+import frameRelaunchDeepLinkDefault from "frameRelaunchDeepLink" /* 15671 */;
+import pictureInPictureInteractiveDefault from "pictureInPictureInteractive" /* 15672 */;
+import voiceSettingsDefault from "voiceSettings" /* 15684 */;
+import unsupportedDefault from "unsupported" /* 15685 */;
+import crossPlatformRPCEventHandlersDefault from "crossPlatformRPCEventHandlers" /* 15687 */;
+import getNativeDiscordCustomThemeDefault from "getNativeDiscordCustomTheme" /* 15690 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4847 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import StreamerModeStore from "StreamerModeStore" /* 5367 */;
+import StreamerModeStore from "StreamerModeStore" /* 4880 */;
 
-const merged = Object.assign(fn(16963).crossPlatformCommands);
+const merged = Object.assign(fn(15613).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const audioSession = Object.assign(audioSessionDefault);
 const auth = Object.assign(authDefault);
@@ -32,10 +32,10 @@ const pictureInPictureInteractive = Object.assign(pictureInPictureInteractiveDef
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(17035);
+const discordEnvironmentEvents = fn(15689);
 const merged11 = Object.assign(discordEnvironmentEvents.createDiscordEnvironmentEvents(true, getNativeDiscordCustomThemeDefault));
-const merged12 = Object.assign(fn(17037).screenCaptureEvents);
-const merged13 = Object.assign(fn(17038).voiceSettingsEventHandlers);
+const merged12 = Object.assign(fn(15691).screenCaptureEvents);
+const merged13 = Object.assign(fn(15692).voiceSettingsEventHandlers);
 const obj4 = { server: NativeRPCServerDefault, commands: {}, events: {}, stores: null, transports: null, registerTransportsForEmbeddedPlatform: null };
 const items = [ThemeStore, AccessibilityStore, UserSettingsProtoStore, ClientThemesBackgroundStore, CustomThemeMobileStore, StreamerModeStore];
 obj4.stores = items;

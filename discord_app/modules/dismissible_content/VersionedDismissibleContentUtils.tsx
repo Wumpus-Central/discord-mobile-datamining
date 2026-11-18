@@ -1,14 +1,14 @@
-// === Module 5157: VersionedDismissibleContentUtils ===
+// === Module 4670: VersionedDismissibleContentUtils ===
 
-// Module 5157 (VersionedDismissibleContentUtils)
+// Module 4670 (VersionedDismissibleContentUtils)
 import Server from "Server" /* 2119 */;
-import dismissible_content from "dismissible_content" /* 5143 */;
-import TypeUtils from "TypeUtils" /* 5171 */;
-import CollectiblesMarketingSurface from "CollectiblesMarketingSurface" /* 5981 */;
-import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 5982 */;
-import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 5983 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5158 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5980 */;
+import dismissible_content from "dismissible_content" /* 4656 */;
+import TypeUtils from "TypeUtils" /* 4684 */;
+import CollectiblesMarketingSurface from "CollectiblesMarketingSurface" /* 5477 */;
+import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 5478 */;
+import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 5479 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5476 */;
 
 require = fn;
 const size = fn(2);

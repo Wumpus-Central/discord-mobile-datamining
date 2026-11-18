@@ -1,9 +1,9 @@
-// === Module 11323: useIsActivityFocused ===
+// === Module 10605: useIsActivityFocused ===
 
-// Module 11323 (useIsActivityFocused)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 7033 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 7024 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5158 */;
+// Module 10605 (useIsActivityFocused)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6537 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6528 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
 
 const require = globalThis.__r;
 

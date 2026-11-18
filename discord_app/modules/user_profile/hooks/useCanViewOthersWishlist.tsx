@@ -1,11 +1,11 @@
-// === Module 15874: useCanViewOthersWishlist ===
+// === Module 14512: useCanViewOthersWishlist ===
 
-// Module 15874 (useCanViewOthersWishlist)
-import useCanDMDefault from "useCanDM" /* 13401 */;
-import WishlistVisibility from "WishlistVisibility" /* 15875 */;
-import WishlistStore from "WishlistStore" /* 9475 */;
-import RelationshipStore from "RelationshipStore" /* 5252 */;
-import UserProfileStore from "UserProfileStore" /* 7362 */;
+// Module 14512 (useCanViewOthersWishlist)
+import useCanDMDefault from "useCanDM" /* 12702 */;
+import WishlistVisibility from "WishlistVisibility" /* 14513 */;
+import WishlistStore from "WishlistStore" /* 8889 */;
+import RelationshipStore from "RelationshipStore" /* 4765 */;
+import UserProfileStore from "UserProfileStore" /* 6867 */;
 
 const require = globalThis.__r;
 

@@ -1,13 +1,13 @@
-// === Module 10521: GameProfileDetails ===
+// === Module 9802: GameProfileDetails ===
 
-// Module 10521 (GameProfileDetails)
+// Module 9802 (GameProfileDetails)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Server from "Server" /* 2119 */;
-import DateUtilsAll from "DateUtils" /* 5132 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import LinkingDefault from "Linking" /* 6006 */;
-import SKUUtils from "SKUUtils" /* 10429 */;
+import DateUtilsAll from "DateUtils" /* 4645 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import LinkingDefault from "Linking" /* 5502 */;
+import SKUUtils from "SKUUtils" /* 9710 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,17 +30,17 @@ function GameProfileWebsiteLink(action) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(10396).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(9677).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(9489).PlatformType.DESKTOP] = fn(10522).ScreenIcon;
-obj.mobile = fn(7796).MobilePhoneIcon;
-obj[fn(9489).PlatformType.XBOX] = fn(10418).XboxNeutralIcon;
-obj[fn(9489).PlatformType.PLAYSTATION] = fn(10524).PlaystationNeutralIcon;
-obj[fn(9489).PlatformType.NINTENDO] = fn(10526).NintendoSwitchNeutralIcon;
-obj[fn(9489).PlatformType.ROBLOX] = fn(10408).RobloxNeutralIcon;
-const createStyles = fn(5310);
+obj[fn(8903).PlatformType.DESKTOP] = fn(9803).ScreenIcon;
+obj.mobile = fn(7299).MobilePhoneIcon;
+obj[fn(8903).PlatformType.XBOX] = fn(9699).XboxNeutralIcon;
+obj[fn(8903).PlatformType.PLAYSTATION] = fn(9805).PlaystationNeutralIcon;
+obj[fn(8903).PlatformType.NINTENDO] = fn(9807).NintendoSwitchNeutralIcon;
+obj[fn(8903).PlatformType.ROBLOX] = fn(9689).RobloxNeutralIcon;
+const createStyles = fn(4823);
 let obj3 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };
 obj3.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -131,7 +131,7 @@ export default function GameProfileDetails(game) {
               items.push(obj2);
             }
             if (length.length <= 0) {
-              const mapped3 = gameProfileLinks.map((item) => trackAction(10530)(item, trackAction(575).colors.ICON_SUBTLE));
+              const mapped3 = gameProfileLinks.map((item) => trackAction(9811)(item, trackAction(575).colors.ICON_SUBTLE));
               const found = mapped3.filter((item) => null != item);
               if (found.length > 0) {
                 const obj3 = { label: null, value: null };
@@ -169,7 +169,7 @@ export default function GameProfileDetails(game) {
               const obj8 = {
                 style: closure_2.platformsContainer,
                 children: length.map((item) => {
-                            obj = { size: "md", color: trackAction(575).colors.ICON_SUBTLE, accessibilityLabel: game(10529).getGameProfilePlatformText(item) };
+                            obj = { size: "md", color: trackAction(575).colors.ICON_SUBTLE, accessibilityLabel: game(9810).getGameProfilePlatformText(item) };
                             return closure_1_8(closure_1_10[item], obj, item);
                           })
               };

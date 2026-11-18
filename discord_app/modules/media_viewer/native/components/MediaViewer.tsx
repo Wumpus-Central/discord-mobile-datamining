@@ -1,16 +1,16 @@
-// === Module 11267: MediaViewer ===
+// === Module 10549: MediaViewer ===
 
-// Module 11267 (MediaViewer)
+// Module 10549 (MediaViewer)
 import _modDef1655 from "module_1655" /* 1655 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6330 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7928 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7947 */;
-import useVideoControls from "useVideoControls" /* 8641 */;
-import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 10640 */;
-import MediaViewerItem from "MediaViewerItem" /* 11269 */;
-import useMediaViewerClosePositionDefault from "useMediaViewerClosePosition" /* 11277 */;
-import StatusBarDefault from "StatusBar" /* 11279 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 11284 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5832 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7431 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7450 */;
+import useVideoControls from "useVideoControls" /* 8132 */;
+import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 9921 */;
+import MediaViewerItem from "MediaViewerItem" /* 10551 */;
+import useMediaViewerClosePositionDefault from "useMediaViewerClosePosition" /* 10559 */;
+import StatusBarDefault from "StatusBar" /* 10561 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 10566 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -297,7 +297,7 @@ function MediaViewer(arg0) {
   obj14.style = items17;
   if (isMediaViewerImprovementsEnabled) {
     const obj15 = { entranceAnimationDriver: sharedValue, onLongPress, onScrollWorklets, originLayout, pagerIndex, panGestureConfig: mediaViewerPanGestureConfig, renderMedia, sources, useItemVisible, windowWidth: width, windowHeight: height, zoomed };
-    tmp63Result = tmp63(tmp(11281), obj15);
+    tmp63Result = tmp63(tmp(10563), obj15);
   }
   obj14.children = tmp63Result;
   items15[2] = callback(_modDef1655.View, obj14);

@@ -1,10 +1,10 @@
-// === Module 17478: useScheduleTimeControlsRowProps ===
+// === Module 16135: useScheduleTimeControlsRowProps ===
 
-// Module 17478 (useScheduleTimeControlsRowProps)
+// Module 16135 (useScheduleTimeControlsRowProps)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1113 */;
-import _modDef2703 from "module_2703" /* 2703 */;
-import Text_Text from "Text/Text" /* 5923 */;
+import _modDef2723 from "module_2723" /* 2723 */;
+import Text_Text from "Text/Text" /* 5414 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -15,17 +15,17 @@ export default function useScheduleTimeControlsRowProps(arr) {
     const obj2 = { subLabel: null, trailing: "Array" };
     const obj3 = { variant: "body-xs/medium", color: "text-muted", children: null };
     const intl = util.intl;
-    obj3.children = intl.string(_modDef2703.fOBIZH);
+    obj3.children = intl.string(_modDef2723.fOBIZH);
     obj2.subLabel = jsx(Text_Text.Text, { variant: "body-xs/medium", color: "text-muted", children: null });
     return obj2;
   } else {
     const obj4 = { subLabel: null, trailing: null };
     const intl2 = util.intl;
     const obj5 = { count: arr.length };
-    obj4.subLabel = intl2.formatToPlainString(_modDef2703.XfwcpX, obj5);
+    obj4.subLabel = intl2.formatToPlainString(_modDef2723.XfwcpX, obj5);
     const intl3 = util.intl;
     const string = intl3.string;
-    const tmp11 = _modDef2703;
+    const tmp11 = _modDef2723;
     if (someResult) {
       let stringResult = string(tmp11["8vDHRq"]);
     } else {

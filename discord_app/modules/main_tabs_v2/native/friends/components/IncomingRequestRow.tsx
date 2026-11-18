@@ -1,12 +1,12 @@
-// === Module 19652: IncomingRequestRow ===
+// === Module 18928: IncomingRequestRow ===
 
-// Module 19652 (IncomingRequestRow)
+// Module 18928 (IncomingRequestRow)
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5366 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14162 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18806 */;
+import UserUtilsDefault from "UserUtils" /* 4879 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13466 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17619 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5311 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 require = fn;
@@ -116,7 +116,7 @@ function IncomingGameFriendRequestRow(arg0) {
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow user={user} applicationId={application.id} accessibilityLabel={null} acceptedRequestLabel={null} acceptedRequestAccessibilityLabel={null} acceptRequestAccessibilityLabel={null} ignoreRequestAccessibilityLabel={null} />;
 }
-const UserRowModes = fn(10266).UserRowModes;
+const UserRowModes = fn(9547).UserRowModes;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };

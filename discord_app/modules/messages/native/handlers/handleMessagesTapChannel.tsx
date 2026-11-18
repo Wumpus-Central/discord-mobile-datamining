@@ -1,11 +1,11 @@
-// === Module 12664: handleMessagesTapChannel ===
+// === Module 11949: handleMessagesTapChannel ===
 
-// Module 12664 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7238 */;
+// Module 11949 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 6742 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import PermissionStore from "PermissionStore" /* 5242 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import PermissionStore from "PermissionStore" /* 4755 */;
 
 const require = fn;
 function maybeStartLurking() {
@@ -271,8 +271,8 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
   ({ onBeforeNavigate: closure_129_2, dismissKeyboard: closure_129_3 } = closure_0);
   return "Path";
 };
-const isGuildVocalChannelType = fn(5163).isGuildVocalChannelType;
-const isGuildLurker = fn(5177).isGuildLurker;
+const isGuildVocalChannelType = fn(4676).isGuildVocalChannelType;
+const isGuildLurker = fn(4690).isGuildLurker;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_10, LinkingTypes: closure_11, Permissions: closure_12, Routes: map1 } = Constants);
 const size = fn(2);

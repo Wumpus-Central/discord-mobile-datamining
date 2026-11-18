@@ -1,7 +1,7 @@
-// === Module 14762: conjureOverlayPreview ===
+// === Module 18616: conjureOverlayPreview ===
 
-// Module 14762 (conjureOverlayPreview)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7026 */;
+// Module 18616 (conjureOverlayPreview)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6530 */;
 import size_mod from "module_2" /* 2 */;
 
 let size = { width: 320, height: 240 };

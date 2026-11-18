@@ -1,8 +1,8 @@
-// === Module 10880: useShouldShowSuggestedGames ===
+// === Module 10122: useShouldShowSuggestedGames ===
 
-// Module 10880 (useShouldShowSuggestedGames)
-import WidgetUtils from "WidgetUtils" /* 10822 */;
-import useHasSavedWidget from "useHasSavedWidget" /* 10881 */;
+// Module 10122 (useShouldShowSuggestedGames)
+import WidgetUtils from "WidgetUtils" /* 10116 */;
+import useHasSavedWidget from "useHasSavedWidget" /* 10123 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

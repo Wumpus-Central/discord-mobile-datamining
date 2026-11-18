@@ -1,8 +1,8 @@
-// === Module 15764: isOnMetaHorizon ===
+// === Module 14397: isOnMetaHorizon ===
 
-// Module 15764 (isOnMetaHorizon)
+// Module 14397 (isOnMetaHorizon)
 import Constants from "Constants" /* 2145 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7482 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 6985 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Constants.META_PRESENCE_APPLICATION_ID;

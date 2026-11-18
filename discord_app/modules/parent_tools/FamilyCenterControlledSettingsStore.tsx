@@ -1,6 +1,6 @@
-// === Module 8754: FamilyCenterControlledSettingsStore ===
+// === Module 8250: FamilyCenterControlledSettingsStore ===
 
-// Module 8754 (FamilyCenterControlledSettingsStore)
+// Module 8250 (FamilyCenterControlledSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;

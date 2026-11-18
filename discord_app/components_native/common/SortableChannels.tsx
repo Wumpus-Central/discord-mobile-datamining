@@ -1,6 +1,6 @@
-// === Module 18909: SortableChannels ===
+// === Module 17722: SortableChannels ===
 
-// Module 18909 (SortableChannels)
+// Module 17722 (SortableChannels)
 import noop from "module_19" /* 19 */;
 import apply from "apply" /* 12 */;
 

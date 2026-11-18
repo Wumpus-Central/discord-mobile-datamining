@@ -1,9 +1,9 @@
-// === Module 13671: UserCircleIcon ===
+// === Module 12978: UserCircleIcon ===
 
-// Module 13671 (UserCircleIcon)
+// Module 12978 (UserCircleIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6013 */;
-import _mod13672 from "module_13672" /* 13672 */;
+import BaseIconImage from "BaseIconImage" /* 5509 */;
+import _mod12979 from "module_12979" /* 12979 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function UserCircleIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13672, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12979, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

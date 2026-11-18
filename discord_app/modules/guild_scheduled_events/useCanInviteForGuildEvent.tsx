@@ -1,13 +1,13 @@
-// === Module 7996: useCanInviteForGuildEvent ===
+// === Module 7499: useCanInviteForGuildEvent ===
 
-// Module 7996 (useCanInviteForGuildEvent)
-import PermissionUtilsAll from "PermissionUtils" /* 5247 */;
-import canViewInviteModal from "canViewInviteModal" /* 7997 */;
-import StageInstanceStore from "StageInstanceStore" /* 5164 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import GuildChannelStore from "GuildChannelStore" /* 5240 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import PermissionStore from "PermissionStore" /* 5242 */;
+// Module 7499 (useCanInviteForGuildEvent)
+import PermissionUtilsAll from "PermissionUtils" /* 4760 */;
+import canViewInviteModal from "canViewInviteModal" /* 7500 */;
+import StageInstanceStore from "StageInstanceStore" /* 4677 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import GuildChannelStore from "GuildChannelStore" /* 4753 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import PermissionStore from "PermissionStore" /* 4755 */;
 
 const require = globalThis.__r;
 
@@ -67,8 +67,8 @@ function isGuildEventInvitable(guildEvent) {
     return canViewInviteModalResult;
   }
 }
-const isGuildEventEnded = fn(7037).isGuildEventEnded;
-const constants = fn(5165).GuildScheduledEventEntityTypes;
+const isGuildEventEnded = fn(6541).isGuildEventEnded;
+const constants = fn(4678).GuildScheduledEventEntityTypes;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx");

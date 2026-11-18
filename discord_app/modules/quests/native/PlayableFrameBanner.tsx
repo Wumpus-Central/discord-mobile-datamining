@@ -1,16 +1,16 @@
-// === Module 20001: PlayableFrameBanner ===
+// === Module 19272: PlayableFrameBanner ===
 
-// Module 20001 (PlayableFrameBanner)
-import QuestTypes from "QuestTypes" /* 6965 */;
-import AdCreativeType from "AdCreativeType" /* 6969 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8845 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10615 */;
+// Module 19272 (PlayableFrameBanner)
+import QuestTypes from "QuestTypes" /* 6469 */;
+import AdCreativeType from "AdCreativeType" /* 6473 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8342 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9896 */;
 import noop from "module_19" /* 19 */;
-import PlayableStore from "PlayableStore" /* 17732 */;
+import PlayableStore from "PlayableStore" /* 16534 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_6 = createStyles.createStyles((bottom) => {
   const obj = { banner: { bottom } };
   return obj;
@@ -38,12 +38,12 @@ export default function PlayableFrameBanner(frameId) {
   let tmp7 = null;
   if (null != stateFromStores) {
     let obj2 = { style: tmp3.banner, ctaInfo: null, onContainerPress: null, onButtonPress: null };
-    const tmpResult = tmp(17623);
-    obj2.ctaInfo = tmp4(17622).getAdvertiserCtaInfo(stateFromStores);
+    const tmpResult = tmp(16425);
+    obj2.ctaInfo = tmp4(16424).getAdvertiserCtaInfo(stateFromStores);
     obj2.onContainerPress = callback;
     obj2.onButtonPress = callback;
     tmp7 = <tmpResult style={tmp3.banner} ctaInfo={null} onContainerPress={null} onButtonPress={null} />;
-    const tmp4Result = tmp4(17622);
+    const tmp4Result = tmp4(16424);
   }
   return tmp7;
 };

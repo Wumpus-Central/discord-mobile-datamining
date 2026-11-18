@@ -1,9 +1,9 @@
-// === Module 18491: DesignSystemsNavigatorSetting ===
+// === Module 17302: DesignSystemsNavigatorSetting ===
 
-// Module 18491 (DesignSystemsNavigatorSetting)
+// Module 17302 (DesignSystemsNavigatorSetting)
 import Constants from "Constants" /* 1072 */;
-import SettingsConstants from "SettingsConstants" /* 9213 */;
-import SettingBuilders from "SettingBuilders" /* 12612 */;
+import SettingsConstants from "SettingsConstants" /* 8624 */;
+import SettingBuilders from "SettingBuilders" /* 11897 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

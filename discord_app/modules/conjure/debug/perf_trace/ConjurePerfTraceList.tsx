@@ -1,6 +1,6 @@
-// === Module 15047: ConjurePerfTraceList ===
+// === Module 18728: ConjurePerfTraceList ===
 
-// Module 15047 (ConjurePerfTraceList)
+// Module 18728 (ConjurePerfTraceList)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/ConjurePerfTraceList.tsx");

@@ -1,17 +1,17 @@
-// === Module 13151: CheckpointShareCardStats ===
+// === Module 12449: CheckpointShareCardStats ===
 
-// Module 13151 (CheckpointShareCardStats)
+// Module 12449 (CheckpointShareCardStats)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2024 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import GameControllerIcon from "GameControllerIcon" /* 7448 */;
-import ChatIcon from "ChatIcon" /* 8080 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8386 */;
-import ReactionIcon from "ReactionIcon" /* 10110 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11689 */;
-import ServerIcon from "ServerIcon" /* 13091 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import GameControllerIcon from "GameControllerIcon" /* 6951 */;
+import ChatIcon from "ChatIcon" /* 7583 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 7888 */;
+import ReactionIcon from "ReactionIcon" /* 9391 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 10971 */;
+import ServerIcon from "ServerIcon" /* 12389 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,14 +58,13 @@ function StatRow(stat) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { statRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4 }, statText: null, statImage: null, guildAcronym: null, unicodeEmoji: null };
 let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4 };
 obj2.statText = { flexShrink: 1, color: nativeDefault.colors.BLACK };
+obj2.statImage = { alignItems: "center", justifyContent: "center" };
 const obj4 = { flexShrink: 1, color: nativeDefault.colors.BLACK };
-obj2.statImage = { borderWidth: 1, borderColor: nativeDefault.colors.BLACK, alignItems: "center", justifyContent: "center" };
-let obj5 = { borderWidth: 1, borderColor: nativeDefault.colors.BLACK, alignItems: "center", justifyContent: "center" };
-obj2.guildAcronym = { backgroundColor: nativeDefault.unsafe_rawColors.OPACITY_BLACK_20 };
+obj2.guildAcronym = { borderWidth: 1, borderColor: nativeDefault.colors.BLACK, backgroundColor: nativeDefault.unsafe_rawColors.OPACITY_BLACK_20 };
 obj2.unicodeEmoji = { fontSize: 9, lineHeight: 11 };
 let closure_7 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -107,29 +106,29 @@ export default function CheckpointShareCardStats(arg0) {
   }
   if (null != guildIconURL) {
     const obj5 = { uri: guildIconURL, size: iconSize };
-    let tmp14 = hasOwnProperty(StatImage, obj5);
-    let tmp15 = hasOwnProperty;
+    let tmp13 = hasOwnProperty(StatImage, obj5);
+    let tmp14 = hasOwnProperty;
   } else {
     const obj6 = { style: null, children: null };
     items = [, , ];
-    ({ statImage: arr[0], guildAcronym: arr[1] } = tmp);
+    ({ statImage: arr3[0], guildAcronym: arr3[1] } = tmp);
     const size = { width: iconSize, height: iconSize };
     items[2] = size;
     obj6.style = items;
     const obj7 = { variant: "footnote/normal", color: "text-overlay-dark", allowFontScaling: false, children: stats.topGuildAcronymCharacter };
     obj6.children = hasOwnProperty(Text_Text.Text, obj7);
-    tmp14 = hasOwnProperty(View, obj6);
-    tmp15 = hasOwnProperty;
+    tmp13 = hasOwnProperty(View, obj6);
+    tmp14 = hasOwnProperty;
   }
   if (null == topEmoji) {
     const obj8 = { Icon: UnknownGameIcon.UnknownGameIcon, size: iconSize };
-    let tmp15Result = tmp15(StatIcon, obj8);
+    let tmp14Result = tmp14(StatIcon, obj8);
   } else if (null != topEmoji.emojiId) {
     const obj9 = { uri: null, size: null };
     const obj10 = { id: topEmoji.emojiId, animated: false, size: rounded };
     obj9.uri = AvatarUtilsDefault.getEmojiURL(obj10);
     obj9.size = iconSize;
-    tmp15Result = tmp15(StatImage, obj9);
+    tmp14Result = tmp14(StatImage, obj9);
     const tmp4Result4 = AvatarUtilsDefault;
   } else {
     const obj11 = { style: null, children: null };
@@ -138,44 +137,44 @@ export default function CheckpointShareCardStats(arg0) {
     items1[1] = size1;
     obj11.style = items1;
     const obj12 = { variant: "body-xs/semibold", style: tmp.unicodeEmoji, allowFontScaling: false, children: topEmoji.emojiName };
-    obj11.children = tmp15(Text_Text.Text, obj12);
-    tmp15Result = tmp15(View, obj11);
+    obj11.children = tmp14(Text_Text.Text, obj12);
+    tmp14Result = tmp14(View, obj11);
   }
   const obj13 = { layout, rowStyle };
   const obj14 = { style, children: null };
-  const obj15 = { icon: tmp15(StatIcon, { Icon: MicrophoneIcon.MicrophoneIcon, size: iconSize }), stat: stats.voice };
+  const obj15 = { icon: tmp14(StatIcon, { Icon: MicrophoneIcon.MicrophoneIcon, size: iconSize }), stat: stats.voice };
   const merged = Object.assign(obj13);
-  const items2 = [tmp15(StatRow, obj15), , , , , , , ];
+  const items2 = [tmp14(StatRow, obj15), , , , , , , ];
   const obj17 = { icon: null, stat: null };
   const obj16 = { Icon: MicrophoneIcon.MicrophoneIcon, size: iconSize };
-  obj17.icon = tmp15(StatIcon, { Icon: ChatIcon.ChatIcon, size: iconSize });
+  obj17.icon = tmp14(StatIcon, { Icon: ChatIcon.ChatIcon, size: iconSize });
   obj17.stat = stats.messages;
   const merged1 = Object.assign(obj13);
-  items2[1] = tmp15(StatRow, obj17);
+  items2[1] = tmp14(StatRow, obj17);
   const obj19 = { icon: null, stat: null };
   const obj18 = { Icon: ChatIcon.ChatIcon, size: iconSize };
-  obj19.icon = tmp15(StatIcon, { Icon: ServerIcon.ServerIcon, size: iconSize });
+  obj19.icon = tmp14(StatIcon, { Icon: ServerIcon.ServerIcon, size: iconSize });
   obj19.stat = stats.topGuildDaysInteracted;
   const merged2 = Object.assign(obj13);
-  items2[2] = tmp15(StatRow, obj19);
+  items2[2] = tmp14(StatRow, obj19);
   const merged3 = Object.assign(obj13);
-  items2[3] = tmp15(StatRow, { icon: tmp14, stat: stats.topGuildName });
+  items2[3] = tmp14(StatRow, { icon: tmp13, stat: stats.topGuildName });
   const obj20 = { Icon: ServerIcon.ServerIcon, size: iconSize };
-  const obj21 = { icon: tmp14, stat: stats.topGuildName };
+  const obj21 = { icon: tmp13, stat: stats.topGuildName };
   const merged4 = Object.assign(obj13);
-  items2[4] = tmp15(StatRow, { icon: tmp15(StatIcon, { Icon: reactionsIcon, size: iconSize }), stat: stats.reactions });
+  items2[4] = tmp14(StatRow, { icon: tmp14(StatIcon, { Icon: reactionsIcon, size: iconSize }), stat: stats.reactions });
   const merged5 = Object.assign(obj13);
-  items2[5] = tmp15(StatRow, { icon: tmp15Result, stat: stats.topEmojiName });
+  items2[5] = tmp14(StatRow, { icon: tmp14Result, stat: stats.topEmojiName });
   const obj24 = { icon: null, stat: null };
-  const obj22 = { icon: tmp15(StatIcon, { Icon: reactionsIcon, size: iconSize }), stat: stats.reactions };
-  const obj23 = { icon: tmp15Result, stat: stats.topEmojiName };
-  obj24.icon = tmp15(StatIcon, { Icon: GameControllerIcon.GameControllerIcon, size: iconSize });
+  const obj22 = { icon: tmp14(StatIcon, { Icon: reactionsIcon, size: iconSize }), stat: stats.reactions };
+  const obj23 = { icon: tmp14Result, stat: stats.topEmojiName };
+  obj24.icon = tmp14(StatIcon, { Icon: GameControllerIcon.GameControllerIcon, size: iconSize });
   obj24.stat = stats.daysPlayed;
   const merged6 = Object.assign(obj13);
-  items2[6] = tmp15(StatRow, obj24);
+  items2[6] = tmp14(StatRow, obj24);
   const obj25 = { Icon: GameControllerIcon.GameControllerIcon, size: iconSize };
   const merged7 = Object.assign(obj13);
-  items2[7] = tmp15(StatRow, { icon: tmp15(StatImage, { uri: applicationIconURL, size: iconSize }), stat: stats.topGameName });
+  items2[7] = tmp14(StatRow, { icon: tmp14(StatImage, { uri: applicationIconURL, size: iconSize }), stat: stats.topGameName });
   obj14.children = items2;
   return timestampProducer(View, obj14);
 };

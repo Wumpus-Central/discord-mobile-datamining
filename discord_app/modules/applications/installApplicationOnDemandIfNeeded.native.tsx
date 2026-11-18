@@ -1,6 +1,6 @@
-// === Module 11372: installApplicationOnDemandIfNeeded ===
+// === Module 10654: installApplicationOnDemandIfNeeded ===
 
-// Module 11372 (installApplicationOnDemandIfNeeded)
+// Module 10654 (installApplicationOnDemandIfNeeded)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 2143 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
@@ -104,9 +104,9 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
-          closure_1_0(5495).dismissKeyboard();
-          let obj = closure_1_0(5495);
-          closure_1_0(11373).openOAuth2Modal({
+          closure_1_0(5008).dismissKeyboard();
+          let obj = closure_1_0(5008);
+          closure_1_0(10655).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,

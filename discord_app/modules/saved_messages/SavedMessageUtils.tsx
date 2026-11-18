@@ -1,13 +1,13 @@
-// === Module 12372: SavedMessageUtils ===
+// === Module 11654: SavedMessageUtils ===
 
-// Module 12372 (SavedMessageUtils)
+// Module 11654 (SavedMessageUtils)
 import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8145 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7648 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
 
 const require = globalThis.__r;
 
@@ -122,7 +122,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const ChannelRecord = fn(5163);
+const ChannelRecord = fn(4676);
 ({ PrivateChannelRecord: hasOwnProperty, UnknownChannelRecord: closure_6 } = ChannelRecord);
 const Constants = fn(1072);
 ({ ChannelTypes: closure_9, Routes: closure_10 } = Constants);

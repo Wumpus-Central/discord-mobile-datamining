@@ -1,10 +1,10 @@
-// === Module 5174: PlainRecord ===
+// === Module 4687: PlainRecord ===
 
-// Module 5174 (PlainRecord)
+// Module 4687 (PlainRecord)
 import _modDef38 from "module_38" /* 38 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
-import SetUtils from "SetUtils" /* 5176 */;
-import PlainRecord from "js_shim/PlainRecord" /* 5175 */;
+import SetUtils from "SetUtils" /* 4689 */;
+import PlainRecord from "js_shim/PlainRecord" /* 4688 */;
 
 const discord_common_shallowEqualDefault = discord_common_shallowEqual;
 
@@ -66,7 +66,7 @@ function isPlainRecordDataEqual(arg0, arg1) {
     return true;
   }
 }
-const TypeTag = fn(5175).TypeTag;
+const TypeTag = fn(4688).TypeTag;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/PlainRecord.tsx");
 

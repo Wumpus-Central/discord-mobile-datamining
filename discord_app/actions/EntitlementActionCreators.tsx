@@ -1,6 +1,6 @@
-// === Module 8544: EntitlementActionCreators ===
+// === Module 8035: EntitlementActionCreators ===
 
-// Module 8544 (EntitlementActionCreators)
+// Module 8035 (EntitlementActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

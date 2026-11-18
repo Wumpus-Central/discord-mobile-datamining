@@ -1,10 +1,10 @@
-// === Module 7247: GuildOnboardingStore ===
+// === Module 6751: GuildOnboardingStore ===
 
-// Module 7247 (GuildOnboardingStore)
+// Module 6751 (GuildOnboardingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
-import FavoritesUtils from "FavoritesUtils" /* 5184 */;
+import FavoritesUtils from "FavoritesUtils" /* 4697 */;
 import size from "module_2" /* 2 */;
 
 const ME = Constants.ME;

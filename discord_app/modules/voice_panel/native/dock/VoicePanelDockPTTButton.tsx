@@ -1,19 +1,19 @@
-// === Module 19274: VoicePanelDockPTTButton ===
+// === Module 18088: VoicePanelDockPTTButton ===
 
-// Module 19274 (VoicePanelDockPTTButton)
+// Module 18088 (VoicePanelDockPTTButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5542 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
-import spring_spring from "spring/spring" /* 5933 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11550 */;
+import timing_timing from "timing/timing" /* 5033 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5083 */;
+import spring_spring from "spring/spring" /* 5424 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10832 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelDockConstants = fn(12446);
+const VoicePanelDockConstants = fn(11728);
 ({ DOCK_ROW_HEIGHT, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
@@ -39,7 +39,7 @@ getDockPTTIndicatorDrag.__closure = items1;
 getDockPTTIndicatorDrag.__workletHash = 14207531924828;
 getDockPTTIndicatorDrag.__initData = tmp5;
 const diff = result - 1;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { ring: { padding: diff, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.md }, buttonShadow: null };
 let obj3 = { padding: diff, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.md };
 obj.buttonShadow = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS };
@@ -120,13 +120,13 @@ export default noop.memo(function VoicePanelDockPTTButton(measureGlowOffset) {
       let withTiming = require;
       let obj2 = dependencyMap;
       if (useReducedMotion.get()) {
-        withTiming = withTiming(5542).withTiming;
+        withTiming = withTiming(5033).withTiming;
         obj2 = { duration: 150 };
         let withTimingResult3 = withTiming(0, obj2);
-        const withTimingResult2 = withTiming(5542);
+        const withTimingResult2 = withTiming(5033);
       } else {
-        withTimingResult3 = withTiming(5933).withSpring(0, closure_10);
-        const withTimingResult4 = withTiming(5933);
+        withTimingResult3 = withTiming(5424).withSpring(0, closure_10);
+        const withTimingResult4 = withTiming(5424);
       }
       const result2 = sharedValue4.set(withTimingResult3);
     }

@@ -1,17 +1,17 @@
-// === Module 11977: EmojiPickerListRow ===
+// === Module 11259: EmojiPickerListRow ===
 
-// Module 11977 (EmojiPickerListRow)
+// Module 11259 (EmojiPickerListRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import native from "native" /* 1187 */;
 import PlatformUtils2 from "PlatformUtils" /* 1380 */;
-import shared from "shared" /* 5317 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import Pressables from "Pressables" /* 7438 */;
-import _modDef7906 from "module_7906" /* 7906 */;
-import LockIcon from "LockIcon" /* 8103 */;
-import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 11978 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 11979 */;
+import shared from "shared" /* 4830 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import Pressables from "Pressables" /* 6941 */;
+import _modDef7409 from "module_7409" /* 7409 */;
+import LockIcon from "LockIcon" /* 7606 */;
+import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 11260 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 11261 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -92,12 +92,12 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9558);
+const EmojiPickerListConstants = fn(8972);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1228).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
 const PlatformUtils = fn(1380);
 let num = 28;

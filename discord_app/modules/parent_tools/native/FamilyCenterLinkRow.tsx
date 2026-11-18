@@ -1,24 +1,24 @@
-// === Module 17488: FamilyCenterLinkRow ===
+// === Module 16145: FamilyCenterLinkRow ===
 
-// Module 17488 (FamilyCenterLinkRow)
-import FamilyCenterLinkWrapperDefault from "FamilyCenterLinkWrapper" /* 17489 */;
-import FamilyCenterRequestorDetailsDefault from "FamilyCenterRequestorDetails" /* 17490 */;
+// Module 16145 (FamilyCenterLinkRow)
+import FamilyCenterLinkWrapperDefault from "FamilyCenterLinkWrapper" /* 16146 */;
+import FamilyCenterRequestorDetailsDefault from "FamilyCenterRequestorDetails" /* 16147 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-const UserLinkStatus = fn(8752).UserLinkStatus;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
-let closure_6 = createStyles.createStyles({ actionContainer: { flexDirection: "row", alignItems: "center", justifyContent: "flex-end", height: "100%" } });
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4823);
+let closure_5 = createStyles.createStyles({ actionContainer: { flexDirection: "row", alignItems: "center", justifyContent: "flex-end", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkRow.tsx");
 
-export default function FamilyCenterLinkRow(children) {
-  const otherUser = children.otherUser;
+export default function FamilyCenterLinkRow(otherUser) {
+  otherUser = otherUser.otherUser;
+  ({ status, actions } = otherUser);
   const obj = { userId: otherUser.id, children: null };
-  const tmp = closure_6();
-  items = [React4(FamilyCenterRequestorDetailsDefault, { otherUser, status: UserLinkStatus.PENDING }), React4(View, { style: tmp.actionContainer, children: children.actions })];
+  const tmp = closure_5();
+  items = [React3(FamilyCenterRequestorDetailsDefault, { otherUser, status }), React3(View, { style: tmp.actionContainer, children: actions })];
   obj.children = items;
-  return hasOwnProperty(FamilyCenterLinkWrapperDefault, obj);
+  return React4(FamilyCenterLinkWrapperDefault, obj);
 };

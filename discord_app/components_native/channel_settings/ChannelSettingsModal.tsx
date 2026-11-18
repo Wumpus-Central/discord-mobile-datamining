@@ -1,20 +1,20 @@
-// === Module 19708: ChannelSettingsModal ===
+// === Module 18979: ChannelSettingsModal ===
 
-// Module 19708 (ChannelSettingsModal)
+// Module 18979 (ChannelSettingsModal)
 import nativeDefault from "native" /* 575 */;
-import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 11832 */;
-import messages_PinsScreenDefault from "messages/PinsScreen" /* 19606 */;
-import ChannelSettingsOverviewDefault from "ChannelSettingsOverview" /* 19709 */;
-import MessagePreviewDefault from "MessagePreview" /* 19728 */;
-import EasyChannelPermissionSettingsDefault from "EasyChannelPermissionSettings" /* 19731 */;
-import ChannelSettingsPermissionsListDefault from "ChannelSettingsPermissionsList" /* 19738 */;
-import ChannelSettingsPermissionsOverridesDefault from "ChannelSettingsPermissionsOverrides" /* 19739 */;
-import ChannelSettingsIntegrationsOverviewDefault from "ChannelSettingsIntegrationsOverview" /* 19751 */;
-import IntegrationsSettingsWebhooksOverviewDefault from "IntegrationsSettingsWebhooksOverview" /* 19754 */;
-import ChannelSettingsChangeCategoryDefault from "ChannelSettingsChangeCategory" /* 19766 */;
-import ChannelSettingsChangeRTCRegionDefault from "ChannelSettingsChangeRTCRegion" /* 19767 */;
-import ChannelSettingsEditForumTagDefault from "ChannelSettingsEditForumTag" /* 19768 */;
-import ChannelSettingsChangeDefaultForumLayoutDefault from "ChannelSettingsChangeDefaultForumLayout" /* 19769 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 11114 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 18882 */;
+import ChannelSettingsOverviewDefault from "ChannelSettingsOverview" /* 18980 */;
+import MessagePreviewDefault from "MessagePreview" /* 18999 */;
+import EasyChannelPermissionSettingsDefault from "EasyChannelPermissionSettings" /* 19002 */;
+import ChannelSettingsPermissionsListDefault from "ChannelSettingsPermissionsList" /* 19009 */;
+import ChannelSettingsPermissionsOverridesDefault from "ChannelSettingsPermissionsOverrides" /* 19010 */;
+import ChannelSettingsIntegrationsOverviewDefault from "ChannelSettingsIntegrationsOverview" /* 19022 */;
+import IntegrationsSettingsWebhooksOverviewDefault from "IntegrationsSettingsWebhooksOverview" /* 19025 */;
+import ChannelSettingsChangeCategoryDefault from "ChannelSettingsChangeCategory" /* 19037 */;
+import ChannelSettingsChangeRTCRegionDefault from "ChannelSettingsChangeRTCRegion" /* 19038 */;
+import ChannelSettingsEditForumTagDefault from "ChannelSettingsEditForumTag" /* 19039 */;
+import ChannelSettingsChangeDefaultForumLayoutDefault from "ChannelSettingsChangeDefaultForumLayout" /* 19040 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -23,9 +23,9 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ ChannelSettingsSections: closure_4, SearchTypes: hasOwnProperty, WebhookTypes: closure_6 } = Constants);
-const SearchTabs = fn(9077).SearchTabs;
+const SearchTabs = fn(8488).SearchTabs;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, pinsScreen: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.pinsScreen = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

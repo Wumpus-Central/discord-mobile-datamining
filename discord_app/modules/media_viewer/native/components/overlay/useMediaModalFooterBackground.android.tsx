@@ -1,9 +1,9 @@
-// === Module 10786: useMediaModalFooterBackground ===
+// === Module 10067: useMediaModalFooterBackground ===
 
-// Module 10786 (useMediaModalFooterBackground)
+// Module 10067 (useMediaModalFooterBackground)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import useToken from "useToken" /* 5896 */;
+import useToken from "useToken" /* 5387 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

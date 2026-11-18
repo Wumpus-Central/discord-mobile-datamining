@@ -1,9 +1,9 @@
-// === Module 8111: AppsLockIcon ===
+// === Module 7614: AppsLockIcon ===
 
-// Module 8111 (AppsLockIcon)
+// Module 7614 (AppsLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6013 */;
-import _mod8078 from "module_8078" /* 8078 */;
+import BaseIconImage from "BaseIconImage" /* 5509 */;
+import _mod7581 from "module_7581" /* 7581 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function AppsLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8078, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7581, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

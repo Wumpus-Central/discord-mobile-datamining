@@ -1,6 +1,6 @@
-// === Module 15008: conjureArchiveInstallScope ===
+// === Module 18707: conjureArchiveInstallScope ===
 
-// Module 15008 (conjureArchiveInstallScope)
+// Module 18707 (conjureArchiveInstallScope)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

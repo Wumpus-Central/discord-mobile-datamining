@@ -1,13 +1,13 @@
-// === Module 20715: HowItWorksSection ===
+// === Module 19988: HowItWorksSection ===
 
-// Module 20715 (HowItWorksSection)
+// Module 19988 (HowItWorksSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import PerksTicketSpotIllustration from "PerksTicketSpotIllustration" /* 20716 */;
-import AnnouncementMegaphoneSpotIllustration from "AnnouncementMegaphoneSpotIllustration" /* 20720 */;
-import CoinsAndBagSpotIllustration from "CoinsAndBagSpotIllustration" /* 20724 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import PerksTicketSpotIllustration from "PerksTicketSpotIllustration" /* 19989 */;
+import AnnouncementMegaphoneSpotIllustration from "AnnouncementMegaphoneSpotIllustration" /* 19993 */;
+import CoinsAndBagSpotIllustration from "CoinsAndBagSpotIllustration" /* 19997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function HowItWorksCard(Illustration) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { flex: 1 }, horizontalContainer: { flex: 1, flexDirection: "row" }, card: { flex: 1, marginVertical: 6, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, cardNumber: null, howItWorksCardDescription: null, howItWorksCardIcon: null };
 let size = { width: 18, height: 18, position: "absolute", top: 9, start: 9, textAlign: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: 9, overflow: "hidden" };
 obj2.cardNumber = size;

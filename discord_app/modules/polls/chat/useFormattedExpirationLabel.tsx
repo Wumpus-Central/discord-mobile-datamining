@@ -1,6 +1,6 @@
-// === Module 10505: useFormattedExpirationLabel ===
+// === Module 9786: useFormattedExpirationLabel ===
 
-// Module 10505 (useFormattedExpirationLabel)
+// Module 9786 (useFormattedExpirationLabel)
 import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
 import size from "module_2" /* 2 */;

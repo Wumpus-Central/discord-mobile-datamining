@@ -1,15 +1,15 @@
-// === Module 10190: useOrderSigning ===
+// === Module 9471: useOrderSigning ===
 
-// Module 10190 (useOrderSigning)
-import BillingUtils from "BillingUtils" /* 5122 */;
-import BillingErrorDefault from "BillingError" /* 5130 */;
+// Module 9471 (useOrderSigning)
+import BillingUtils from "BillingUtils" /* 4635 */;
+import BillingErrorDefault from "BillingError" /* 4643 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: closure_6 } = noop);
-const OrderStatus = fn(6044).OrderStatus;
+const OrderStatus = fn(5540).OrderStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/hooks/useOrderSigning.tsx");
 
@@ -96,6 +96,7 @@ export function useOrderSigning(order) {
             ({ loadId: closure_129_0, purchaseToken: closure_129_1, gatewayCheckoutContext: closure_129_2, errorExtra: closure_129_3 } = obj4);
             closure_129_4 = undefined;
             let billing_facet;
+            closure_129_6 = undefined;
             let orderSigningError;
             c5 = 1;
             c6 = 1;
@@ -107,14 +108,14 @@ export function useOrderSigning(order) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else if (null == closure_130_0) {
-            const tmp87 = new errorSource(tmp4[4])("Order not created yet");
-            closure_130_5(tmp87);
-            c6 = 3;
-            const obj6 = { value: { type: "failed" }, done: true };
+            const obj6 = { value, done: true };
             return obj6;
+          } else if (null == closure_130_0) {
+            const tmp90 = new errorSource(tmp4[4])("Order not created yet");
+            closure_130_5(tmp90);
+            c6 = 3;
+            const obj7 = { value: { type: "failed" }, done: true };
+            return obj7;
           } else {
             closure_130_4(null);
             c4 = 1;
@@ -126,101 +127,105 @@ export function useOrderSigning(order) {
           }
         } else if (2 === tmp9) {
           c4 = 0;
-          closure_129_7 = closure_3;
-          if (closure_129_7 instanceof order(tmp4[6]).OrderSigningFailedWithConstraintsError) {
+          closure_129_8 = closure_3;
+          if (closure_129_8 instanceof order(tmp4[6]).OrderSigningFailedWithConstraintsError) {
             if (closure_130_2 != null) {
-              tmp72(closure_129_7.order);
+              tmp75(closure_129_8.order);
             }
-            closure_130_5(closure_129_7);
+            closure_130_5(closure_129_8);
           } else {
             const obj11 = {};
             const merged = Object.assign(closure_129_3);
             obj11.orderId = closure_130_0.id;
-            closure_130_6(closure_129_7, obj11);
+            closure_130_6(closure_129_8, obj11);
           }
           c6 = 3;
-        } else if (3 === tmp9) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj13 = { value, done: true };
-            return obj13;
-          } else {
-            closure_129_4 = value;
-            if (closure_129_4.status === constants.SIGNED) {
-              const obj14 = { type: "signed", order: closure_129_4 };
+        } else {
+          if (3 === tmp9) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
               c4 = 0;
               c6 = 3;
-              const obj15 = { value: obj14, done: true };
-              return obj15;
-            } else if (closure_129_4.status === constants.SIGNING_IN_PROGRESS) {
-              billing_facet = closure_129_4.billing_facet;
-              c4 = 2;
-              let prop = null;
-              if (null != billing_facet) {
-                prop = billing_facet.order_signing_deferral_context;
-              }
-              c5 = 5;
-              c6 = 1;
-              const obj16 = { value: order(tmp4[7]).performSigningDeferralAction(prop), done: false };
-              return obj16;
+              const obj13 = { value, done: true };
+              return obj13;
             } else {
-              orderSigningError = order(tmp4[9]).getOrderSigningError(closure_129_4);
-              if (null != orderSigningError) {
-                closure_130_5(orderSigningError);
+              closure_129_4 = value;
+              if (closure_129_4.status === constants.SIGNED) {
+                const obj14 = { type: "signed", order: closure_129_4 };
                 c4 = 0;
                 c6 = 3;
-                const obj17 = { value: { type: "failed" }, done: true };
-                return obj17;
-              } else if (null != closure_129_4.error) {
-                const _Error2 = Error;
-                const _HermesInternal2 = HermesInternal;
-                const error = new Error("Order signing failed with error: " + closure_129_4.error.code);
-                throw error;
+                const obj15 = { value: obj14, done: true };
+                return obj15;
+              } else if (closure_129_4.status === constants.SIGNING_IN_PROGRESS) {
+                billing_facet = closure_129_4.billing_facet;
+                let prop = null;
+                if (null != billing_facet) {
+                  prop = billing_facet.order_signing_deferral_context;
+                }
+                closure_129_6 = prop;
+                if (null != closure_129_6) {
+                  c4 = 2;
+                  c5 = 5;
+                  c6 = 1;
+                  const obj16 = { value: order(tmp4[7]).performSigningDeferralAction(closure_129_6), done: false };
+                  return obj16;
+                } else {
+                  { type: "pending", order: null }[1] = closure_129_4;
+                  c4 = 0;
+                  c6 = 3;
+                }
               } else {
-                const _Error = Error;
-                const _HermesInternal = HermesInternal;
-                const error1 = new Error("Unexpected order status: " + closure_129_4.status);
-                throw error1;
+                orderSigningError = order(tmp4[9]).getOrderSigningError(closure_129_4);
+                if (null != orderSigningError) {
+                  closure_130_5(orderSigningError);
+                  c4 = 0;
+                  c6 = 3;
+                  const obj17 = { value: { type: "failed" }, done: true };
+                  return obj17;
+                } else if (null != closure_129_4.error) {
+                  const _Error2 = Error;
+                  const _HermesInternal2 = HermesInternal;
+                  const error = new Error("Order signing failed with error: " + closure_129_4.error.code);
+                  throw error;
+                } else {
+                  const _Error = Error;
+                  const _HermesInternal = HermesInternal;
+                  const error1 = new Error("Unexpected order status: " + closure_129_4.status);
+                  throw error1;
+                }
+                const obj19 = order(tmp4[9]);
               }
-              const obj21 = order(tmp4[9]);
             }
+          } else if (4 === tmp9) {
+            c4 = 1;
+            const obj18 = {};
+            const merged1 = Object.assign(closure_129_3);
+            obj18.orderId = closure_130_0.id;
+            const intl = order(tmp4[8]).intl;
+            closure_130_6(closure_3, obj18, intl.string(order(tmp4[8]).t.khEaRI));
+            c4 = 0;
+            c6 = 3;
+            const obj21 = { value: { type: "failed" }, done: true };
+            return obj21;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            c4 = 1;
           }
-        } else if (4 === tmp9) {
-          c4 = 1;
-          const obj18 = {};
-          const merged1 = Object.assign(closure_129_3);
-          obj18.orderId = closure_130_0.id;
-          const intl = order(tmp4[8]).intl;
-          closure_130_6(closure_3, obj18, intl.string(order(tmp4[8]).t.khEaRI));
           c4 = 0;
           c6 = 3;
-          const obj19 = { value: { type: "failed" }, done: true };
-          return obj19;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj20 = { value, done: true };
-          return obj20;
-        } else {
-          const obj = { type: "pending", order: closure_129_4 };
-          c4 = 0;
-          c6 = 3;
-          const obj23 = { value: obj, done: true };
-          return obj23;
+          const obj = { value, done: true };
+          return obj;
         }
-      } catch (tmp90) {
-        closure_3 = tmp90;
+      } catch (tmp93) {
+        closure_3 = tmp93;
         if (tmp5 === c4) {
           c6 = tmp3;
-          throw tmp90;
-        } else if (tmp2 === tmp92) {
+          throw tmp93;
+        } else if (tmp2 === tmp95) {
           c5 = tmp;
         } else {
           c5 = tmp6;

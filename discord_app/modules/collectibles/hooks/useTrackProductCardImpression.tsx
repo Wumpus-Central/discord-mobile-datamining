@@ -1,10 +1,10 @@
-// === Module 18542: useTrackProductCardImpression ===
+// === Module 17355: useTrackProductCardImpression ===
 
-// Module 18542 (useTrackProductCardImpression)
+// Module 17355 (useTrackProductCardImpression)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 8508 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7999 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8496 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7987 */;
 
 const require = globalThis.__r;
 

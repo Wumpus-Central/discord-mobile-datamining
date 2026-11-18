@@ -1,10 +1,10 @@
-// === Module 19561: SmartSearchContent ===
+// === Module 18837: SmartSearchContent ===
 
-// Module 19561 (SmartSearchContent)
-import SmartSearchTypes from "SmartSearchTypes" /* 13823 */;
-import SuggestedSearchListDefault from "SuggestedSearchList" /* 19506 */;
-import SmartSearchSkeletonDefault from "SmartSearchSkeleton" /* 19562 */;
-import SmartSearchResults from "SmartSearchResults" /* 19563 */;
+// Module 18837 (SmartSearchContent)
+import SmartSearchTypes from "SmartSearchTypes" /* 13130 */;
+import SuggestedSearchListDefault from "SuggestedSearchList" /* 18782 */;
+import SmartSearchSkeletonDefault from "SmartSearchSkeleton" /* 18838 */;
+import SmartSearchResults from "SmartSearchResults" /* 18839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

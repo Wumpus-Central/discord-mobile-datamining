@@ -1,16 +1,16 @@
-// === Module 13668: AppLauncherBooleanOption ===
+// === Module 12975: AppLauncherBooleanOption ===
 
-// Module 13668 (AppLauncherBooleanOption)
+// Module 12975 (AppLauncherBooleanOption)
 import nativeDefault from "native" /* 575 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5372 */;
-import FormCheckbox from "FormCheckbox" /* 7744 */;
-import Form from "Form" /* 8117 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4885 */;
+import FormCheckbox from "FormCheckbox" /* 7247 */;
+import Form from "Form" /* 7620 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const obj2 = { container: { flexDirection: "row", width: "100%", backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center" }, checkboxWrapper: { flexShrink: 0 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 10032: showMarketingMomentRewardScreen ===
+// === Module 9312: showMarketingMomentRewardScreen ===
 
-// Module 10032 (showMarketingMomentRewardScreen)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8495 */;
+// Module 9312 (showMarketingMomentRewardScreen)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7986 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8496 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7987 */;
 
 require = fn;
 let closure_5 = async function _showMarketingMomentRewardScreen(arg0) {

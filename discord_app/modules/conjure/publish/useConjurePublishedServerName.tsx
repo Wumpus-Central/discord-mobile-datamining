@@ -1,8 +1,8 @@
-// === Module 14695: useConjurePublishedServerName ===
+// === Module 18549: useConjurePublishedServerName ===
 
-// Module 14695 (useConjurePublishedServerName)
-import GuildStore from "GuildStore" /* 5181 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
+// Module 18549 (useConjurePublishedServerName)
+import GuildStore from "GuildStore" /* 4694 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
 
 const require = globalThis.__r;
 

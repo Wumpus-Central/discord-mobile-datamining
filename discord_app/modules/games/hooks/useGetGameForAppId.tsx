@@ -1,10 +1,11 @@
-// === Module 10361: useGetGameForAppId ===
+// === Module 9642: useGetGameForAppId ===
 
-// Module 10361 (useGetGameForAppId)
+// Module 9642 (useGetGameForAppId)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7269 */;
-import useGame from "useGame" /* 9545 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6773 */;
+import useGame from "useGame" /* 8959 */;
 import noop from "module_19" /* 19 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
 import GameStore from "GameStore" /* 2141 */;
 
 const require = globalThis.__r;
@@ -33,10 +34,21 @@ export default function useGetGameForAppId(applicationId) {
   return obj2;
 };
 export function useGetGameResultsForAppIds(arg0) {
-  let tmp = memo(stateFromStoresArray[2])(arg0);
-  _require = tmp;
-  items = [tmp];
-  memo = stateFromStoresArray1.useMemo(() => closure_0.map((getCanonicalGameId) => {
+  _require = arg0;
+  let tmp = require("useGetOrFetchApplications")(arg0);
+  importDefault = tmp;
+  items = [stateFromStoresArray1];
+  const items1 = [arg0];
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => closure_0.map((item) => {
+    const isHydratedResult = hydrated.isHydrated(item);
+    let tmp2 = !isHydratedResult;
+    if (!isHydratedResult) {
+      tmp2 = !hydrated.didFetchingApplicationFail(item);
+    }
+    return tmp2;
+  }), items1);
+  const items2 = [tmp];
+  memo = memo.useMemo(() => closure_1.map((getCanonicalGameId) => {
     let canonicalGameId;
     if (getCanonicalGameId != null) {
       canonicalGameId = getCanonicalGameId.getCanonicalGameId();
@@ -45,49 +57,50 @@ export function useGetGameResultsForAppIds(arg0) {
       canonicalGameId = null;
     }
     return canonicalGameId;
-  }), items);
-  const items1 = [memo];
-  const memo1 = stateFromStoresArray1.useMemo(() => memo.filter(GlobalUtils.isNotNullish), items1);
-  const games = require("useGame").useGames(memo1);
-  let obj = require("useGame");
-  const items2 = [GameStore];
+  }), items2);
   const items3 = [memo];
-  stateFromStoresArray = require("initialize").useStateFromStoresArray(items2, () => memo.map((item) => {
+  const memo1 = memo.useMemo(() => memo.filter(GlobalUtils.isNotNullish), items3);
+  let obj = require("initialize");
+  const games = require("useGame").useGames(memo1);
+  const obj2 = require("useGame");
+  const items4 = [stateFromStoresArray2];
+  const items5 = [memo];
+  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items4, () => memo.map((item) => {
     game = game.getGame(item);
     if (game == null) {
       game = null;
     }
     return game;
-  }), items3);
-  const obj2 = require("initialize");
-  const items4 = [GameStore];
-  const items5 = [memo];
-  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items4, () => memo.map((item) => {
+  }), items5);
+  const obj3 = require("initialize");
+  const items6 = [stateFromStoresArray2];
+  const items7 = [memo];
+  stateFromStoresArray2 = require("initialize").useStateFromStoresArray(items6, () => memo.map((item) => {
     let tmp = null != item;
     if (tmp) {
-      tmp = null == closure_1_4.getGame(item);
+      tmp = null == stateFromStoresArray2.getGame(item);
     }
     if (tmp) {
-      tmp = !closure_1_4.hasNoData(item);
+      tmp = !stateFromStoresArray2.hasNoData(item);
     }
     if (tmp) {
-      tmp = !closure_1_4.didFetchingFail(item);
+      tmp = !stateFromStoresArray2.didFetchingFail(item);
     }
     return tmp;
-  }), items5);
-  const items6 = [tmp, memo, stateFromStoresArray, stateFromStoresArray1];
-  return stateFromStoresArray1.useMemo(() => closure_0.map((item, index) => {
-    const obj = { gameId: memo[index], gameRecord: stateFromStoresArray[index], isLoading: null };
-    let tmp = null == item;
+  }), items7);
+  const items8 = [memo, stateFromStoresArray1, stateFromStoresArray, stateFromStoresArray2];
+  return memo.useMemo(() => memo.map((gameId, index) => {
+    const obj = { gameId, gameRecord: stateFromStoresArray1[index], isLoading: null };
+    let tmp = stateFromStoresArray[index];
     if (!tmp) {
-      tmp = stateFromStoresArray1[index];
+      tmp = stateFromStoresArray2[index];
     }
     obj.isLoading = tmp;
     return obj;
-  }), items6);
+  }), items8);
 }
 export function useGetGamesForAppIds(stateFromStoresArray) {
-  const tmp = memo(7269)(stateFromStoresArray);
+  const tmp = memo(6773)(stateFromStoresArray);
   _require = tmp;
   items = [tmp];
   memo = noop.useMemo(() => {

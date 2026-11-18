@@ -1,17 +1,17 @@
-// === Module 6753: GiftCodeUtils ===
+// === Module 6255: GiftCodeUtils ===
 
-// Module 6753 (GiftCodeUtils)
+// Module 6255 (GiftCodeUtils)
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PremiumUtils from "PremiumUtils" /* 2174 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 6260 */;
-import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 6785 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 5756 */;
+import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 6288 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PremiumPaymentModalStore from "PremiumPaymentModalStore" /* 6754 */;
+import PremiumPaymentModalStore from "PremiumPaymentModalStore" /* 6256 */;
 import UserStore from "UserStore" /* 1388 */;
-import RegexUtils from "RegexUtils" /* 5952 */;
+import RegexUtils from "RegexUtils" /* 5448 */;
 
 const require = globalThis.__r;
 
@@ -126,46 +126,49 @@ let closure_18 = async function _resolveGiftCode(arg0) {
 };
 function getGiftCodeRedeemError(error, currentUser) {
   const code = error.code;
-  if (constants2.INVALID_GIFT_SELF_REDEMPTION === code) {
-    const intl11 = util.intl;
-    return intl11.string(util.t.wa9h7F);
-  } else if (constants2.INVALID_GIFT_REDEMPTION_EXHAUSTED === code) {
-    const intl10 = util.intl;
-    return intl10.string(util.t.Iw2TUW);
-  } else if (constants2.INVALID_GIFT_REDEMPTION_OWNED === code) {
-    const intl9 = util.intl;
-    return intl9.string(util.t.mdLtb5);
-  } else if (constants2.UNKNOWN_GIFT_CODE === code) {
-    const intl8 = util.intl;
-    return intl8.string(util.t.roztIr);
-  } else if (constants2.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE === code) {
-    const intl6 = util.intl;
-    const intl7 = util.intl;
-    const string = intl7.string;
-    const t = util.t;
-    if (isPremiumExactlyResult) {
-      let stringResult = string(t.lG6a5x);
-    } else {
-      stringResult = string(t.FSOz78);
+  if (constants2.INVALID_GIFT_SELF_REDEMPTION !== code) {
+    if (constants2.INVALID_GIFT_SUBSCRIPTION_SELF_REDEMPTION !== code) {
+      if (constants2.INVALID_GIFT_REDEMPTION_EXHAUSTED === code) {
+        const intl10 = util.intl;
+        return intl10.string(util.t.Iw2TUW);
+      } else if (constants2.INVALID_GIFT_REDEMPTION_OWNED === code) {
+        const intl9 = util.intl;
+        return intl9.string(util.t.mdLtb5);
+      } else if (constants2.UNKNOWN_GIFT_CODE === code) {
+        const intl8 = util.intl;
+        return intl8.string(util.t.roztIr);
+      } else if (constants2.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE === code) {
+        const intl6 = util.intl;
+        const intl7 = util.intl;
+        const string = intl7.string;
+        const t = util.t;
+        if (isPremiumExactlyResult) {
+          let stringResult = string(t.lG6a5x);
+        } else {
+          stringResult = string(t.FSOz78);
+        }
+        const obj2 = { planName: stringResult };
+        return intl6.formatToPlainString(util.t["4YTHKw"], obj2);
+      } else if (constants2.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED === code) {
+        const intl5 = util.intl;
+        return intl5.string(util.t["9i1J30"]);
+      } else if (constants2.INVALID_GIFT_REDEMPTION_INVOICE_OPEN === code) {
+        const intl4 = util.intl;
+        return intl4.string(util.t["U26WX+"]);
+      } else if (constants2.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED === code) {
+        const intl3 = util.intl;
+        return intl3.string(util.t.ypuSd8);
+      } else if (constants2.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE === code) {
+        const intl2 = util.intl;
+        return intl2.string(util.t.mXMmWE);
+      } else {
+        const intl = util.intl;
+        return intl.string(util.t["s9+XlB"]);
+      }
     }
-    const obj2 = { planName: stringResult };
-    return intl6.formatToPlainString(util.t["4YTHKw"], obj2);
-  } else if (constants2.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED === code) {
-    const intl5 = util.intl;
-    return intl5.string(util.t["9i1J30"]);
-  } else if (constants2.INVALID_GIFT_REDEMPTION_INVOICE_OPEN === code) {
-    const intl4 = util.intl;
-    return intl4.string(util.t["U26WX+"]);
-  } else if (constants2.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED === code) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.ypuSd8);
-  } else if (constants2.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE === code) {
-    const intl2 = util.intl;
-    return intl2.string(util.t.mXMmWE);
-  } else {
-    const intl = util.intl;
-    return intl.string(util.t["s9+XlB"]);
   }
+  const intl11 = util.intl;
+  return intl11.string(util.t.wa9h7F);
 }
 const Constants = fn(1072);
 ({ Endpoints: metroImportDefault, AnalyticEvents: closure_8, AbortCodes: closure_9, GiftCodeModalStates: closure_10, MessageEmbedTypes: closure_11, MessageTypes: closure_12 } = Constants);
@@ -436,9 +439,9 @@ export function getButtonText(arg0, giftStyle, isCustomGift) {
 }
 export function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   _require = getOrFetchSubscriptionPlan;
-  const match = require("module_6786").match(getOrFetchSubscriptionPlan);
+  const match = require("module_6289").match(getOrFetchSubscriptionPlan);
   const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = require("module_6786");
+  const str = require("module_6289");
   const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
     const intl = util.intl;
@@ -496,9 +499,9 @@ export function getSubscriptionGiftStartHeaderText(getOrFetchSubscriptionPlan, s
   } else {
     intervalCount = getOrFetchSubscriptionPlan.intervalCount;
     if (null != sender) {
-      const match = require("module_6786").match(getOrFetchSubscriptionPlan);
+      const match = require("module_6289").match(getOrFetchSubscriptionPlan);
       const obj2 = { interval: constants6.MONTH };
-      const str = require("module_6786");
+      const str = require("module_6289");
       const obj3 = { interval: constants6.YEAR };
       const withResult = match.with(obj2, () => {
         const intl = util.intl;
@@ -522,9 +525,9 @@ export function getSubscriptionGiftStartHeaderText(getOrFetchSubscriptionPlan, s
         return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
       });
     } else {
-      const match1 = require("module_6786").match(getOrFetchSubscriptionPlan);
+      const match1 = require("module_6289").match(getOrFetchSubscriptionPlan);
       const obj4 = { interval: constants6.MONTH };
-      const str2 = require("module_6786");
+      const str2 = require("module_6289");
       const obj5 = { interval: constants6.YEAR };
       const withResult2 = match1.with(obj4, () => {
         const intl = util.intl;
@@ -577,9 +580,9 @@ export function getBodyText(arg0) {
     return formatResult;
   } else if (constants3.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(6786).match(subscriptionPlan);
+      const match = subscriptionPlan(6289).match(subscriptionPlan);
       const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-      const str = subscriptionPlan(6786);
+      const str = subscriptionPlan(6289);
       const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
       const withResult = match.with(obj3, () => {
         const intl = util.intl;

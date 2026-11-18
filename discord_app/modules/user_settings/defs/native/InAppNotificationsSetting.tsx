@@ -1,16 +1,16 @@
-// === Module 18153: InAppNotificationsSetting ===
+// === Module 16955: InAppNotificationsSetting ===
 
-// Module 18153 (InAppNotificationsSetting)
+// Module 16955 (InAppNotificationsSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import _modDef3031 from "module_3031" /* 3031 */;
-import UserSettings from "UserSettings" /* 5135 */;
-import SettingsConstants from "SettingsConstants" /* 9213 */;
-import FocusModeUtils from "FocusModeUtils" /* 11787 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 16937 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 18154 */;
-import SettingBuilders_mod from "SettingBuilders" /* 12612 */;
+import _modDef3051 from "module_3051" /* 3051 */;
+import UserSettings from "UserSettings" /* 4648 */;
+import SettingsConstants from "SettingsConstants" /* 8624 */;
+import FocusModeUtils from "FocusModeUtils" /* 11069 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15587 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 16956 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11897 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -57,7 +57,7 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef3031.sH5mu9);
+  return intl.string(_modDef3051.sH5mu9);
 };
 obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
@@ -66,7 +66,7 @@ obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   if (focusModeEnabled) {
     let stringResult = string(util.t.cIRG0s);
   } else {
-    stringResult = string(_modDef3031["T/zMdV"]);
+    stringResult = string(_modDef3051["T/zMdV"]);
   }
   return stringResult;
 };

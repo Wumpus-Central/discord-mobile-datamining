@@ -1,11 +1,11 @@
-// === Module 8207: NativePermissionStore ===
+// === Module 7710: NativePermissionStore ===
 
-// Module 8207 (NativePermissionStore)
+// Module 7710 (NativePermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 6900 */;
+import NativePermissionConstants from "NativePermissionConstants" /* 6404 */;
 import size from "module_2" /* 2 */;
 
 const NativePermissionStates = NativePermissionConstants.NativePermissionStates;

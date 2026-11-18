@@ -1,16 +1,16 @@
-// === Module 20570: GuildSettingsModalStickers ===
+// === Module 19843: GuildSettingsModalStickers ===
 
-// Module 20570 (GuildSettingsModalStickers)
+// Module 19843 (GuildSettingsModalStickers)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import TableRow from "TableRow" /* 7453 */;
-import TableRowGroup from "TableRowGroup" /* 7756 */;
-import LockIcon from "LockIcon" /* 8103 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 9244 */;
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 20574 */;
+import TableRow from "TableRow" /* 6956 */;
+import TableRowGroup from "TableRowGroup" /* 7259 */;
+import LockIcon from "LockIcon" /* 7606 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8655 */;
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 19847 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import PermissionStore from "PermissionStore" /* 5242 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import PermissionStore from "PermissionStore" /* 4755 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -21,29 +21,29 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1072);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_8, BoostedGuildTiers } = Constants);
 const GuildFeatures = Constants.GuildFeatures;
-const MAX_STICKER_FILE_SIZE = fn(5138).MAX_STICKER_FILE_SIZE;
+const MAX_STICKER_FILE_SIZE = fn(4651).MAX_STICKER_FILE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "Array" };
+let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "r" };
 let intl = fn(1113).intl;
 obj.title = intl.string(fn(1113).t.tfVXhP);
 let items = [obj, , , ];
 let obj2 = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
 let intl2 = fn(1113).intl;
 obj2.title = intl2.string(fn(1113).t.nzXtaS);
-obj2.IconComponent = fn(20571).BoostGemOutlineIcon;
+obj2.IconComponent = fn(19844).BoostGemOutlineIcon;
 items[1] = obj2;
 let obj3 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null };
 let intl3 = fn(1113).intl;
 obj3.title = intl3.string(fn(1113).t["h33/uW"]);
-obj3.IconComponent = fn(9994).BoostGemIcon;
+obj3.IconComponent = fn(9274).BoostGemIcon;
 items[2] = obj3;
 let obj4 = { tier: BoostedGuildTiers.TIER_3, title: null, IconComponent: null };
 const intl4 = fn(1113).intl;
 obj4.title = intl4.string(fn(1113).t.BfF6ED);
-obj4.IconComponent = fn(15432).BoostTier3Icon;
+obj4.IconComponent = fn(14060).BoostTier3Icon;
 items[3] = obj4;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 }, label: null, divider: null, stickerSlot: null, userRow: null };
   const obj2 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 };
@@ -179,20 +179,20 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
               const obj2 = { icon: null, label: null, trailing: null, onPress: null };
               const obj3 = { style: closure_1.stickerSlot, children: null };
               const obj4 = { sticker: tmp2, size: closure_1_1(575).space.PX_48, animated: true };
-              obj3.children = closure_1_12(closure_1_1(11843), obj4);
+              obj3.children = closure_1_12(closure_1_1(11125), obj4);
               obj2.icon = closure_1_12(closure_1_4, obj3);
               const obj5 = { variant: "heading-xs/semibold", color: "text-strong", style: closure_1.label, children: tmp2.name };
-              items = [closure_1_12(guildId(5923).Text, obj5), ];
+              items = [closure_1_12(guildId(5414).Text, obj5), ];
               let tmp16Result = null;
               if (null != user) {
                 const obj = { style: closure_1.userRow, children: null };
                 const obj6 = { user, size: tmp10(1187).AvatarSizes.XSMALL_20, guildId };
                 const items1 = [closure_1_12(tmp10(1187).Avatar, obj6), ];
-                const obj7 = { variant: "body-sm/medium", color: "text-subtle", children: closure_1_1(6349).getName(guildId, undefined, user) };
-                items1[1] = closure_1_12(tmp10(5923).Text, obj7);
+                const obj7 = { variant: "body-sm/medium", color: "text-subtle", children: closure_1_1(5851).getName(guildId, undefined, user) };
+                items1[1] = closure_1_12(tmp10(5414).Text, obj7);
                 obj.children = items1;
                 tmp16Result = closure_1_13(closure_1_4, obj);
-                const tmp14Result = closure_1_1(6349);
+                const tmp14Result = closure_1_1(5851);
               }
               const obj8 = { children: null };
               items[1] = tmp16Result;
@@ -200,7 +200,7 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
               obj2.label = closure_1_13(closure_1_4, obj8);
               let tmp9Result;
               if (tmp8) {
-                tmp9Result = closure_1_12(tmp10(7466).TableRowArrow, {});
+                tmp9Result = closure_1_12(tmp10(6969).TableRowArrow, {});
               }
               obj2.trailing = tmp9Result;
               let fn;
@@ -210,7 +210,7 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
                 };
               }
               obj2.onPress = fn;
-              return closure_1_12(guildId(7453).TableRow, obj2, index);
+              return closure_1_12(guildId(6956).TableRow, obj2, index);
             }
           });
           obj7.children = items;

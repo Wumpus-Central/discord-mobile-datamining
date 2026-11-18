@@ -1,16 +1,16 @@
-// === Module 13521: useKeyboardStateSharedValue ===
+// === Module 12828: useKeyboardStateSharedValue ===
 
-// Module 13521 (useKeyboardStateSharedValue)
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 12432 */;
+// Module 12828 (useKeyboardStateSharedValue)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11714 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
 
 const module_1655 = fn(1655);
 const obj2 = { customKeyboardHeight: null, keyboardHeight: null, keyboardType: null };
-const useCustomKeyboardHeight = fn(5908);
+const useCustomKeyboardHeight = fn(5399);
 obj2.customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
 const useSystemKeyboardHeight = fn(2023);
 obj2.keyboardHeight = useSystemKeyboardHeight.getSystemKeyboardHeight();
-const useKeyboardType = fn(5497);
+const useKeyboardType = fn(5010);
 obj2.keyboardType = useKeyboardType.getKeyboardType();
 const mutable = module_1655.makeMutable(obj2);
 subscribeToKeyboardUIStore((arg0) => {

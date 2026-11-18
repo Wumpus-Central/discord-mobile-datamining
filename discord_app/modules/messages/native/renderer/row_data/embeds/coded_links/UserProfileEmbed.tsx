@@ -1,44 +1,104 @@
-// === Module 15616: UserProfileEmbed ===
+// === Module 14244: UserProfileEmbed ===
 
-// Module 15616 (UserProfileEmbed)
+// Module 14244 (UserProfileEmbed)
 import util from "util" /* 1113 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9181 */;
-import UserProfileStore from "UserProfileStore" /* 7362 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5851 */;
+import useDisplayProfile from "useDisplayProfile" /* 7984 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8157 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8592 */;
+import UserProfileEmbedRenderingMobileExperiment from "UserProfileEmbedRenderingMobileExperiment" /* 12182 */;
+import UserProfileStore from "UserProfileStore" /* 6867 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-const InviteTypes = fn(8853).InviteTypes;
+const InviteTypes = fn(8350).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/UserProfileEmbed.tsx");
 
 export function createUserProfileEmbed(code, guild_id, theme) {
-  let tmp3 = null;
   if (obj.getIsUserProfileEmbedRenderingMobileEnabled("UserProfileEmbed")) {
-    if (null != UserStore.getUser(code)) {
-      const tmp13 = getEmbedThemeColorsDefault(theme);
-      const obj4 = { headerText: null, resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
-      const intl = util.intl;
-      obj4.headerText = intl.string(util.t.ZTNur7).toUpperCase();
-      ({ resolvingGradientEnd: obj3.resolvingGradientEnd, resolvingGradientStart: obj3.resolvingGradientStart } = tmp13.colors);
-      obj4.type = InviteTypes.GUILD;
-      const merged = Object.assign(tmp13.baseColors);
-      let tmp10 = obj4;
-      const str = intl.string(util.t.ZTNur7);
-    } else {
+    guild_id = undefined;
+    if (guild_id != null) {
+      guild_id = guild_id.guild_id;
+    }
+    const user = UserStore.getUser(code);
+    if (null == user) {
       const isFetchingProfileResult = UserProfileStore.isFetchingProfile(code, guild_id);
+      let tmp17 = !isFetchingProfileResult;
       if (!isFetchingProfileResult) {
         const userProfile = UserProfileStore.getUserProfile(code);
-        let num;
+        let num2;
         if (userProfile != null) {
-          num = userProfile.fetchEndedAt;
+          num2 = userProfile.fetchEndedAt;
         }
-        if (num == null) {
-          num = 0;
+        if (num2 == null) {
+          num2 = 0;
         }
+        tmp17 = num2 > 0;
       }
-      tmp10 = null;
+      let tmp19 = null;
+      if (!tmp17) {
+        const tmp21 = getEmbedThemeColorsDefault(theme);
+        const obj2 = { headerText: null, resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
+        const intl4 = util.intl;
+        obj2.headerText = intl4.string(util.t.ZTNur7).toUpperCase();
+        ({ resolvingGradientEnd: obj9.resolvingGradientEnd, resolvingGradientStart: obj9.resolvingGradientStart } = tmp21.colors);
+        obj2.type = InviteTypes.GUILD;
+        const merged = Object.assign(tmp21.baseColors);
+        tmp19 = obj2;
+        const str4 = intl4.string(util.t.ZTNur7);
+      }
+      let obj4 = tmp19;
+    } else {
+      let id;
+      if (guild_id != null) {
+        id = guild_id.id;
+      }
+      ({ colors, baseColors } = getEmbedThemeColorsDefault(theme));
+      const tmp10 = getEmbedThemeColorsDefault(theme);
+      const displayProfile = useDisplayProfile.getDisplayProfile(user.id, guild_id);
+      let guildId = guild_id;
+      if (null != displayProfile) {
+        guildId = displayProfile.guildId;
+      }
+      let str;
+      if (displayProfile != null) {
+        str = displayProfile.pronouns;
+      }
+      if (str == null) {
+        str = "";
+      }
+      if ("" !== str) {
+        const intl = util.intl;
+        const obj3 = { username: user.username, pronouns: str };
+        let username = intl.formatToPlainString(util.t["lD2bO/"], obj3);
+      } else {
+        username = user.username;
+      }
+      obj4 = {};
+      const merged1 = Object.assign(baseColors);
+      obj4.thumbnailCornerRadius = 25;
+      const tmpResult = useDisplayProfile;
+      obj4.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(user.getAvatarSource(guildId));
+      const intl2 = util.intl;
+      const tmpResult2 = renderer_EmbedUtils;
+      obj4.headerText = intl2.string(util.t.JxM9jQ).toUpperCase();
+      const str3 = intl2.string(util.t.JxM9jQ);
+      obj4.titleText = NicknameUtilsDefault.getName(guildId, id, user);
+      obj4.titleColor = colors.titleColor;
+      obj4.subtitle = username;
+      obj4.subtitleColor = colors.subtitleColor;
+      const intl3 = util.intl;
+      obj4.acceptLabelText = intl3.string(util.t.iXAna6);
+      ({ acceptLabelGreenColor: obj5.acceptLabelColor, acceptLabelGreenBackgroundColor: obj5.acceptLabelBackgroundColor } = colors);
+      obj4.canBeAccepted = true;
+      obj4.embedCanBeTapped = true;
+      obj4.type = InviteTypes.GUILD;
+      const tmp9Result = NicknameUtilsDefault;
     }
-    tmp3 = tmp10;
+    return obj4;
+  } else {
+    return null;
   }
-  return tmp3;
+  obj = UserProfileEmbedRenderingMobileExperiment;
 }

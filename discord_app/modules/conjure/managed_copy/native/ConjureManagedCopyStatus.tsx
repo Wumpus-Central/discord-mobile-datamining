@@ -1,13 +1,13 @@
-// === Module 14430: ConjureManagedCopyStatus ===
+// === Module 18331: ConjureManagedCopyStatus ===
 
-// Module 14430 (ConjureManagedCopyStatus)
+// Module 18331 (ConjureManagedCopyStatus)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4133 from "module_4133" /* 4133 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import Stack_Stack from "Stack/Stack" /* 6335 */;
-import useConjureManagedCopy from "useConjureManagedCopy" /* 14413 */;
-import conjureManagedCopyStatusText from "conjureManagedCopyStatusText" /* 14431 */;
+import _modDef4121 from "module_4121" /* 4121 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import Stack_Stack from "Stack/Stack" /* 5837 */;
+import useConjureManagedCopy from "useConjureManagedCopy" /* 18315 */;
+import conjureManagedCopyStatusText from "conjureManagedCopyStatusText" /* 18332 */;
 import noop from "module_19" /* 19 */;
 
 const useConjureManagedCopyDefault = useConjureManagedCopy;
@@ -29,7 +29,7 @@ export default function ConjureManagedCopyStatus(projectId) {
     const obj2 = { spacing: nativeDefault.space.PX_4, children: null };
     const obj3 = { variant: "body-md/medium", color: "text-default", children: null };
     const intl = util.intl;
-    obj3.children = intl.string(_modDef4133["+QBNDE"]);
+    obj3.children = intl.string(_modDef4121["+QBNDE"]);
     items = [React3(Text_Text.Text, obj3), , ];
     const obj4 = { variant: "body-sm/normal", color: "text-subtle", children: conjureManagedCopyStatusText.conjureCopySourceLine(tmp3, updatesPaused) };
     items[1] = React3(Text_Text.Text, obj4);

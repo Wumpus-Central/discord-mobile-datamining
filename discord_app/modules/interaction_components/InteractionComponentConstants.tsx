@@ -1,6 +1,6 @@
-// === Module 8668: InteractionComponentConstants ===
+// === Module 8159: InteractionComponentConstants ===
 
-// Module 8668 (InteractionComponentConstants)
+// Module 8159 (InteractionComponentConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/interaction_components/InteractionComponentConstants.tsx");

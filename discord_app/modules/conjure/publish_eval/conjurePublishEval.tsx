@@ -1,19 +1,19 @@
-// === Module 14405: conjurePublishEval ===
+// === Module 18308: conjurePublishEval ===
 
-// Module 14405 (conjurePublishEval)
+// Module 18308 (conjurePublishEval)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import _modDef4133 from "module_4133" /* 4133 */;
-import ConjurePublishEvalTypes from "ConjurePublishEvalTypes" /* 14407 */;
+import _modDef4121 from "module_4121" /* 4121 */;
+import ConjurePublishEvalTypes from "ConjurePublishEvalTypes" /* 18310 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5181 */;
+import GuildStore from "GuildStore" /* 4694 */;
 import UserStore from "UserStore" /* 1388 */;
-import ConjureChatStore from "ConjureChatStore" /* 7331 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7387 */;
-import ConjurePublishEvalStore from "ConjurePublishEvalStore" /* 14406 */;
+import ConjureChatStore from "ConjureChatStore" /* 6836 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6890 */;
+import ConjurePublishEvalStore from "ConjurePublishEvalStore" /* 18309 */;
 
 const require = globalThis.__r;
 
@@ -103,7 +103,7 @@ let closure_13 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
   })();
 };
 let closure_11 = { quality: null, metExpectations: null, speed: null };
-let obj = { quality: _modDef4133["N94/JU"], metExpectations: _modDef4133["7mnit0"], speed: _modDef4133["J/xftE"] };
+let obj = { quality: _modDef4121["N94/JU"], metExpectations: _modDef4121["7mnit0"], speed: _modDef4121["J/xftE"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_eval/conjurePublishEval.tsx");
 
@@ -223,7 +223,7 @@ export function conjurePublishEvalScoreLabel(dimension, score) {
   obj = { score, dimension: null };
   const intl2 = util.intl;
   obj.dimension = intl2.string(obj[dimension]);
-  return intl.formatToPlainString(_modDef4133.fML8aJ, obj);
+  return intl.formatToPlainString(_modDef4121.fML8aJ, obj);
 }
 export function useConjurePublishEvalForm(pending) {
   _require = pending;
@@ -347,7 +347,7 @@ export function useConjurePublishEvalForm(pending) {
   let stringResult = null;
   if (tmp7[0]) {
     const intl = require("util").intl;
-    stringResult = intl.string(require("module_4133").Nu6mEB);
+    stringResult = intl.string(require("module_4121").Nu6mEB);
   }
   obj3.error = stringResult;
   obj3.submit = callback1;

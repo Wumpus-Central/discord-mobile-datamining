@@ -1,16 +1,16 @@
-// === Module 7461: AnimatedPressableHighlight ===
+// === Module 6964: AnimatedPressableHighlight ===
 
-// Module 7461 (AnimatedPressableHighlight)
+// Module 6964 (AnimatedPressableHighlight)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5896 */;
-import useIOSPressEffects from "useIOSPressEffects" /* 7462 */;
+import useToken from "useToken" /* 5387 */;
+import useIOSPressEffects from "useIOSPressEffects" /* 6965 */;
 import noop from "module_19" /* 19 */;
 import module_1655 from "module_1655" /* 1655 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_6 = module_1655.createAnimatedComponent(fn(7438).PressableHighlight);
+let closure_6 = module_1655.createAnimatedComponent(fn(6941).PressableHighlight);
 const PlatformUtils = fn(1380);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");

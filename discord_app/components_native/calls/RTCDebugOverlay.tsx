@@ -1,20 +1,20 @@
-// === Module 11739: RTCDebugOverlay ===
+// === Module 11021: RTCDebugOverlay ===
 
-// Module 11739 (RTCDebugOverlay)
+// Module 11021 (RTCDebugOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import components_Button_Button from "components/Button/Button" /* 5930 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 6092 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7425 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11740 */;
+import components_Button_Button from "components/Button/Button" /* 5421 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5588 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6928 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11022 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6068 */;
-import RTCDebugStore from "RTCDebugStore" /* 6091 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6800 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
+import RTCDebugStore from "RTCDebugStore" /* 5587 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6304 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -96,9 +96,9 @@ function RTCDebugGeneral() {
   }
   const obj5 = { title: "general", children: null };
   const obj6 = { obj: null };
-  const tmp4 = channelId(5948)(stateFromStores1);
+  const tmp4 = channelId(5439)(stateFromStores1);
   obj4.name = name;
-  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5948)(stateFromStores1) } };
+  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5439)(stateFromStores1) } };
   obj5.children = closure_14(ObjectKV, obj6);
   return closure_14(Section, obj5);
 }
@@ -139,17 +139,17 @@ function RTCDebugContext(context) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(6072).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5568).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {
 
 }
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(5307);
+const ColorUtils = fn(4820);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj3;
 obj.scroller = { flex: 1, margin: 8 };

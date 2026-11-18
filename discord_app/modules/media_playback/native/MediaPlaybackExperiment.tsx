@@ -1,7 +1,7 @@
-// === Module 9745: MediaPlaybackExperiment ===
+// === Module 9160: MediaPlaybackExperiment ===
 
-// Module 9745 (MediaPlaybackExperiment)
-import NativeMediaPlaybackModuleDefault from "NativeMediaPlaybackModule" /* 9746 */;
+// Module 9160 (MediaPlaybackExperiment)
+import NativeMediaPlaybackModuleDefault from "NativeMediaPlaybackModule" /* 9161 */;
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

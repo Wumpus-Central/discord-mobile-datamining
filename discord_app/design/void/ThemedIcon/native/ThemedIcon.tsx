@@ -1,8 +1,8 @@
-// === Module 16636: ThemedIcon ===
+// === Module 15319: ThemedIcon ===
 
-// Module 16636 (ThemedIcon)
-import useToken from "useToken" /* 5896 */;
-import IconDefault from "Icon" /* 5932 */;
+// Module 15319 (ThemedIcon)
+import useToken from "useToken" /* 5387 */;
+import IconDefault from "Icon" /* 5423 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

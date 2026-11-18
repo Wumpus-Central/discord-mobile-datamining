@@ -1,22 +1,22 @@
-// === Module 8864: ExplicitMediaRedactionUtils ===
+// === Module 8360: ExplicitMediaRedactionUtils ===
 
-// Module 8864 (ExplicitMediaRedactionUtils)
+// Module 8360 (ExplicitMediaRedactionUtils)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5989 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6769 */;
-import MetricEvents from "MetricEvents" /* 6774 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6815 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6820 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 8650 */;
-import SelfModUtils from "SelfModUtils" /* 8865 */;
-import DevSettingsStore from "DevSettingsStore" /* 5926 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 8646 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5485 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6272 */;
+import MetricEvents from "MetricEvents" /* 6277 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6319 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6324 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 8141 */;
+import SelfModUtils from "SelfModUtils" /* 8361 */;
+import DevSettingsStore from "DevSettingsStore" /* 5417 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 8137 */;
 
 require = fn;
-const ExplicitMediaRedactionConstants = fn(8648);
+const ExplicitMediaRedactionConstants = fn(8139);
 ({ EXPLICIT_MEDIA_MIN_HEIGHT: closure_6, EXPLICIT_MEDIA_MIN_WIDTH: metroImportDefault, MESSAGE_SCAN_TIMEOUT: closure_8 } = ExplicitMediaRedactionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

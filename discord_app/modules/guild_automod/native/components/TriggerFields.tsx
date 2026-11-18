@@ -1,13 +1,13 @@
-// === Module 20519: TriggerFields ===
+// === Module 19792: TriggerFields ===
 
-// Module 20519 (TriggerFields)
+// Module 19792 (TriggerFields)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 20503 */;
-import MentionSpamTriggerFieldsDefault from "MentionSpamTriggerFields" /* 20520 */;
-import DefaultKeywordListTriggerFieldsDefault from "DefaultKeywordListTriggerFields" /* 20521 */;
-import ApplicationTriggerFieldsDefault from "ApplicationTriggerFields" /* 20525 */;
-import KeywordFilterTriggerFieldsDefault from "KeywordFilterTriggerFields" /* 20529 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19776 */;
+import MentionSpamTriggerFieldsDefault from "MentionSpamTriggerFields" /* 19793 */;
+import DefaultKeywordListTriggerFieldsDefault from "DefaultKeywordListTriggerFields" /* 19794 */;
+import ApplicationTriggerFieldsDefault from "ApplicationTriggerFields" /* 19798 */;
+import KeywordFilterTriggerFieldsDefault from "KeywordFilterTriggerFields" /* 19802 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

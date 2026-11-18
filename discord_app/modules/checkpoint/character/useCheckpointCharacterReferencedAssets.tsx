@@ -1,14 +1,15 @@
-// === Module 13335: useCheckpointCharacterReferencedAssets ===
+// === Module 12639: useCheckpointCharacterReferencedAssets ===
 
-// Module 13335 (useCheckpointCharacterReferencedAssets)
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13167 */;
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13168 */;
+// Module 12639 (useCheckpointCharacterReferencedAssets)
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 12470 */;
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 12471 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let set = new Set([1]);
-const keys = Object.keys(fn(13168).CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET);
-let closure_4 = keys.map((name) => {
+const tex_wireframe_spritesheet = "tex_wireframe_spritesheet";
+let set = new Set([1, 9]);
+const keys = Object.keys(fn(12471).CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET);
+let closure_5 = keys.map((name) => {
   const obj = { name, role: CheckpointCharacterTextureUtils.getCheckpointCharacterTextureRole(name), swapKey: null };
   let combined = name;
   if (obj3.isIOS()) {
@@ -21,8 +22,10 @@ let closure_4 = keys.map((name) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/character/useCheckpointCharacterReferencedAssets.tsx");
 
-export function useCheckpointCharacterReferencedAssets(arg0) {
-  ({ visibleDataBinding, requestedDataBinding, textureScale } = arg0);
+export const WIREFRAME_TEXTURE = "tex_wireframe_spritesheet";
+export function useCheckpointCharacterReferencedAssets(preloadedTextureNames) {
+  ({ visibleDataBinding, requestedDataBinding, textureScale } = preloadedTextureNames);
+  preloadedTextureNames = preloadedTextureNames.preloadedTextureNames;
   let checkpointCharacterLoadedTextureNames;
   const faceID = visibleDataBinding.faceID;
   closure_129_0 = faceID;
@@ -50,28 +53,28 @@ export function useCheckpointCharacterReferencedAssets(arg0) {
   const device2 = requestedDataBinding.device;
   closure_130_5 = device2;
   const items1 = [faceID2, headwearID2, shoesID2, wearableID2, chapterID2, device2];
-  const memo = noop.useMemo(() => {
-    const obj = { faceID: textureScale, headwearID: checkpointCharacterLoadedTextureNames, shoesID, wearableID };
+  const memo = checkpointCharacterLoadedTextureNames.useMemo(() => {
+    const obj = { faceID: textureScale, headwearID: preloadedTextureNames, shoesID: checkpointCharacterLoadedTextureNames, wearableID };
     closure_1 = closure_1_4;
     closure_2 = closure_1_5;
     set = new Set();
-    const item = closure_4.forEach((item) => {
+    const item = closure_5.forEach((item) => {
       ({ name, role } = item);
       const type = role.type;
-      if (textureScale(checkpointCharacterLoadedTextureNames[3]).CheckpointCharacterTextureType.SLOT !== type) {
-        if (textureScale(checkpointCharacterLoadedTextureNames[3]).CheckpointCharacterTextureType.TRAIT === type) {
+      if (textureScale(preloadedTextureNames[3]).CheckpointCharacterTextureType.SLOT !== type) {
+        if (textureScale(preloadedTextureNames[3]).CheckpointCharacterTextureType.TRAIT === type) {
           if (obj[role.path] === role.riveId) {
             set.add(name);
           }
-        } else if (textureScale(checkpointCharacterLoadedTextureNames[3]).CheckpointCharacterTextureType.LAYOUT === type) {
+        } else if (textureScale(preloadedTextureNames[3]).CheckpointCharacterTextureType.LAYOUT === type) {
           const layouts = role.layouts;
           if (layouts.includes(closure_2)) {
             set.add(name);
           }
-        } else if (textureScale(checkpointCharacterLoadedTextureNames[3]).CheckpointCharacterTextureType.ALWAYS === type) {
-          let hasItem = "tex_wireframe_spritesheet" !== name;
+        } else if (textureScale(preloadedTextureNames[3]).CheckpointCharacterTextureType.ALWAYS === type) {
+          let hasItem = name !== wearableID;
           if (!hasItem) {
-            hasItem = wearableID.has(closure_1);
+            hasItem = set.has(closure_1);
           }
           if (hasItem) {
             set.add(name);
@@ -81,28 +84,28 @@ export function useCheckpointCharacterReferencedAssets(arg0) {
     });
     return set;
   }, items);
-  const memo1 = noop.useMemo(() => {
-    const obj = { faceID: textureScale, headwearID: checkpointCharacterLoadedTextureNames, shoesID, wearableID };
+  const memo1 = checkpointCharacterLoadedTextureNames.useMemo(() => {
+    const obj = { faceID: textureScale, headwearID: preloadedTextureNames, shoesID: checkpointCharacterLoadedTextureNames, wearableID };
     closure_1 = closure_1_4;
     closure_2 = closure_1_5;
     set = new Set();
-    const item = closure_4.forEach((item) => {
+    const item = closure_5.forEach((item) => {
       ({ name, role } = item);
       const type = role.type;
-      if (textureScale(checkpointCharacterLoadedTextureNames[3]).CheckpointCharacterTextureType.SLOT !== type) {
-        if (textureScale(checkpointCharacterLoadedTextureNames[3]).CheckpointCharacterTextureType.TRAIT === type) {
+      if (textureScale(preloadedTextureNames[3]).CheckpointCharacterTextureType.SLOT !== type) {
+        if (textureScale(preloadedTextureNames[3]).CheckpointCharacterTextureType.TRAIT === type) {
           if (obj[role.path] === role.riveId) {
             set.add(name);
           }
-        } else if (textureScale(checkpointCharacterLoadedTextureNames[3]).CheckpointCharacterTextureType.LAYOUT === type) {
+        } else if (textureScale(preloadedTextureNames[3]).CheckpointCharacterTextureType.LAYOUT === type) {
           const layouts = role.layouts;
           if (layouts.includes(closure_2)) {
             set.add(name);
           }
-        } else if (textureScale(checkpointCharacterLoadedTextureNames[3]).CheckpointCharacterTextureType.ALWAYS === type) {
-          let hasItem = "tex_wireframe_spritesheet" !== name;
+        } else if (textureScale(preloadedTextureNames[3]).CheckpointCharacterTextureType.ALWAYS === type) {
+          let hasItem = name !== wearableID;
           if (!hasItem) {
-            hasItem = wearableID.has(closure_1);
+            hasItem = set.has(closure_1);
           }
           if (hasItem) {
             set.add(name);
@@ -112,21 +115,24 @@ export function useCheckpointCharacterReferencedAssets(arg0) {
     });
     return set;
   }, items1);
-  checkpointCharacterLoadedTextureNames = textureScale(checkpointCharacterLoadedTextureNames[5]).useCheckpointCharacterLoadedTextureNames({ visibleTextureNames: memo, requestedTextureNames: memo1 });
-  const items2 = [checkpointCharacterLoadedTextureNames, textureScale];
-  return noop.useMemo(() => {
+  checkpointCharacterLoadedTextureNames = textureScale(preloadedTextureNames[5]).useCheckpointCharacterLoadedTextureNames({ visibleTextureNames: memo, requestedTextureNames: memo1 });
+  const items2 = [checkpointCharacterLoadedTextureNames, preloadedTextureNames, textureScale];
+  return checkpointCharacterLoadedTextureNames.useMemo(() => {
+    items = [...preloadedTextureNames];
+    set = new Set(items);
     closure_1 = textureScale;
-    const item = closure_4.forEach((name) => {
+    let obj = {};
+    const item = closure_5.forEach((name) => {
       name = name.name;
       if (set.has(name)) {
-        let url = textureScale(checkpointCharacterLoadedTextureNames[3]).getCheckpointCharacterTextureUrl(name, closure_1);
-        const tmpResult = textureScale(checkpointCharacterLoadedTextureNames[3]);
+        let url = textureScale(preloadedTextureNames[3]).getCheckpointCharacterTextureUrl(name, closure_1);
+        const tmpResult = textureScale(preloadedTextureNames[3]);
       } else {
-        url = textureScale(checkpointCharacterLoadedTextureNames[4]).CHECKPOINT_CHARACTER_BLANK_TEXTURE.url;
+        url = textureScale(preloadedTextureNames[4]).CHECKPOINT_CHARACTER_BLANK_TEXTURE.url;
       }
       obj = { source: { uri: url } };
       obj[name.swapKey] = obj;
     });
-    return {};
+    return obj;
   }, items2);
 }

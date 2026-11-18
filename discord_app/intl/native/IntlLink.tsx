@@ -1,14 +1,14 @@
-// === Module 11311: IntlLink ===
+// === Module 10593: IntlLink ===
 
-// Module 11311 (IntlLink)
+// Module 10593 (IntlLink)
 import nativeDefault from "native" /* 575 */;
 import _modDef2070 from "module_2070" /* 2070 */;
-import LinkingDefault from "Linking" /* 6006 */;
+import LinkingDefault from "Linking" /* 5502 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -46,6 +46,6 @@ export function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(5324).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1187).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(5324).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  const tmp3 = closure_5(noop.useContext(target(4837).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1187).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4837).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 }

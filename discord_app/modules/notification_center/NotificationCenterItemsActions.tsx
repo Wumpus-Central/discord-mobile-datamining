@@ -1,14 +1,14 @@
-// === Module 19291: NotificationCenterItemsActions ===
+// === Module 18105: NotificationCenterItemsActions ===
 
-// Module 19291 (NotificationCenterItemsActions)
+// Module 18105 (NotificationCenterItemsActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import UserSettings from "UserSettings" /* 5135 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6836 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7042 */;
+import UserSettings from "UserSettings" /* 4648 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6340 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6546 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7040 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6544 */;
 
 require = fn;
 let closure_6 = async function _fetchNotificationCenterItems(arg0) {

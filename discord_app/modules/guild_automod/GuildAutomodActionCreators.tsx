@@ -1,17 +1,17 @@
-// === Module 13044: GuildAutomodActionCreators ===
+// === Module 12331: GuildAutomodActionCreators ===
 
-// Module 13044 (GuildAutomodActionCreators)
+// Module 12331 (GuildAutomodActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6064 */;
-import AutomodFeedback from "AutomodFeedback" /* 8732 */;
-import DataUtils from "DataUtils" /* 13045 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5560 */;
+import AutomodFeedback from "AutomodFeedback" /* 8223 */;
+import DataUtils from "DataUtils" /* 12332 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleStore from "GuildRoleStore" /* 5216 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import PermissionStore from "PermissionStore" /* 5242 */;
+import GuildRoleStore from "GuildRoleStore" /* 4729 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import PermissionStore from "PermissionStore" /* 4755 */;
 
 const require = globalThis.__r;
 

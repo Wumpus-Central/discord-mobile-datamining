@@ -1,8 +1,8 @@
-// === Module 20396: InterestPickerFlow ===
+// === Module 19669: InterestPickerFlow ===
 
-// Module 20396 (InterestPickerFlow)
+// Module 19669 (InterestPickerFlow)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import InterestPickerCatalogs from "InterestPickerCatalogs" /* 19073 */;
+import InterestPickerCatalogs from "InterestPickerCatalogs" /* 17884 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

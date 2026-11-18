@@ -1,38 +1,88 @@
-// === Module 7969: RoleIcon ===
+// === Module 7472: RoleIcon ===
 
-// Module 7969 (RoleIcon)
-import Text_Text from "Text/Text" /* 5923 */;
-import FastImageDefault from "FastImage" /* 6014 */;
+// Module 7472 (RoleIcon)
+import PlatformUtils2 from "PlatformUtils" /* 1380 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import FastImageDefault from "FastImage" /* 5510 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
+const View = fn(17).View;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1380);
+let c6 = 1.25;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
+let result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
-export default function RoleIcon(arg0) {
-  ({ src, unicodeEmoji, size } = arg0);
+export default function RoleIcon(layout) {
+  ({ src, unicodeEmoji, size } = layout);
   if (size === undefined) {
     size = 20;
   }
-  const size1 = { height: size, width: size };
-  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "channel_id", textAlign: false, width: size, marginBottom: false };
-  if (null != src) {
-    const obj2 = { resizeMode: "contain", source: null, style: null };
-    const obj3 = { uri: src };
-    obj2.source = obj3;
-    obj2.style = size1;
-    let tmp = jsx(FastImageDefault, { resizeMode: "contain", source: null, style: null });
-  } else {
-    tmp = null;
-    if (null != unicodeEmoji) {
-      const obj4 = { allowFontScaling: false, color: "none", style: null, variant: "body-lg/normal", children: null };
-      items = [size1, obj];
-      obj4.style = items;
-      obj4.children = unicodeEmoji.surrogates;
-      tmp = jsx(Text_Text.Text, { allowFontScaling: false, color: "none", style: null, variant: "body-lg/normal", children: null });
-    }
+  let str = layout.layout;
+  if (str === undefined) {
+    str = "inline";
   }
-  return tmp;
+  let isIOSResult = PlatformUtils2.isIOS();
+  if (isIOSResult) {
+    isIOSResult = "pill" === str;
+  }
+  const size1 = { height: size, width: size };
+  let str3 = "System";
+  if (isIOSResult) {
+    str3 = "system-ui";
+  }
+  const obj2 = { fontFamily: str3, fontSize: null, lineHeight: "r" };
+  if (isIOSResult) {
+    let result = size / c6;
+  } else {
+    result = size * num;
+  }
+  obj2.fontSize = result;
+  if (isIOSResult) {
+    const obj3 = { height: size * c6, paddingTop: size / 6 };
+    let obj4 = obj3;
+  } else {
+    obj4 = {};
+  }
+  const merged = Object.assign(obj4);
+  obj2.textAlign = "center";
+  let result1 = size;
+  if (isIOSResult) {
+    result1 = size * c6;
+  }
+  obj2.width = result1;
+  let num2 = -2;
+  if (isIOSResult) {
+    num2 = 0;
+  }
+  obj2.marginBottom = num2;
+  if (null != src) {
+    const obj5 = { resizeMode: "contain", source: null, style: null };
+    const obj6 = { uri: src };
+    obj5.source = obj6;
+    obj5.style = size1;
+    return jsx(FastImageDefault, { resizeMode: "contain", source: null, style: null });
+  } else if (null != unicodeEmoji) {
+    let num3;
+    if (isIOSResult) {
+      num3 = 1;
+    }
+    const obj7 = { lineClamp: num3, allowFontScaling: false, color: "none", style: null, variant: "body-lg/normal", children: null };
+    items = [size1, obj2];
+    obj7.style = items;
+    obj7.children = unicodeEmoji.surrogates;
+    const tmp11Result = jsx(Text_Text.Text, { lineClamp: num3, allowFontScaling: false, color: "none", style: null, variant: "body-lg/normal", children: null });
+    let tmp11Result2 = tmp11Result;
+    if (isIOSResult) {
+      const obj8 = { style: null, children: null };
+      const items1 = [size1, { alignItems: "center", justifyContent: "center" }];
+      obj8.style = items1;
+      obj8.children = tmp11Result;
+      tmp11Result2 = <View style={null}>{null}</View>;
+    }
+    return tmp11Result2;
+  } else {
+    return null;
+  }
 };

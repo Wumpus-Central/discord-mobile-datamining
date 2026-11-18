@@ -1,11 +1,11 @@
-// === Module 19784: ContextMenuCommandAppScreen ===
+// === Module 19055: ContextMenuCommandAppScreen ===
 
-// Module 19784 (ContextMenuCommandAppScreen)
+// Module 19055 (ContextMenuCommandAppScreen)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const obj2 = { list: { marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

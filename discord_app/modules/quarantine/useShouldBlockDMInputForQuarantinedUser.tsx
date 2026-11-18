@@ -1,7 +1,7 @@
-// === Module 13946: useShouldBlockDMInputForQuarantinedUser ===
+// === Module 13248: useShouldBlockDMInputForQuarantinedUser ===
 
-// Module 13946 (useShouldBlockDMInputForQuarantinedUser)
-import MessageStore from "MessageStore" /* 6370 */;
+// Module 13248 (useShouldBlockDMInputForQuarantinedUser)
+import MessageStore from "MessageStore" /* 5872 */;
 
 const require = globalThis.__r;
 

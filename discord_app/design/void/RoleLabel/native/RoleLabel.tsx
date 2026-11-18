@@ -1,17 +1,17 @@
-// === Module 11946: RoleLabel ===
+// === Module 11228: RoleLabel ===
 
-// Module 11946 (RoleLabel)
+// Module 11228 (RoleLabel)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1187 */;
-import Form from "Form" /* 8117 */;
+import Form from "Form" /* 7620 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5311 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_6 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row" }, roleDot: { marginRight: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/RoleLabel/native/RoleLabel.tsx");

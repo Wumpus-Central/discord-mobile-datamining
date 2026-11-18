@@ -1,10 +1,10 @@
-// === Module 19094: useFavoritesPruneInactiveThreads ===
+// === Module 17905: useFavoritesPruneInactiveThreads ===
 
-// Module 19094 (useFavoritesPruneInactiveThreads)
+// Module 17905 (useFavoritesPruneInactiveThreads)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6798 */;
-import FavoriteStore from "FavoriteStore" /* 5162 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6302 */;
+import FavoriteStore from "FavoriteStore" /* 4675 */;
 
 const require = fn;
 const size = fn(2);

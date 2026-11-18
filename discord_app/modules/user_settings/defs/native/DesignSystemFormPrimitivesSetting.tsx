@@ -1,9 +1,9 @@
-// === Module 18502: DesignSystemFormPrimitivesSetting ===
+// === Module 17315: DesignSystemFormPrimitivesSetting ===
 
-// Module 18502 (DesignSystemFormPrimitivesSetting)
+// Module 17315 (DesignSystemFormPrimitivesSetting)
 import Constants from "Constants" /* 1072 */;
-import SettingsConstants from "SettingsConstants" /* 9213 */;
-import SettingBuilders from "SettingBuilders" /* 12612 */;
+import SettingsConstants from "SettingsConstants" /* 8624 */;
+import SettingBuilders from "SettingBuilders" /* 11897 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

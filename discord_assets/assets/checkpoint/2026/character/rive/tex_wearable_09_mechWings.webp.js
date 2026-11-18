@@ -1,6 +1,6 @@
-// === Module 13324: ? ===
+// === Module 12627: ? ===
 
-// Module 13324
+// Module 12627
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_wearable_09_mechWings.webp.js");

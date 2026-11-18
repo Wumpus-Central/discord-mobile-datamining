@@ -1,12 +1,12 @@
-// === Module 18176: FriendAnniversaryNotificationSetting ===
+// === Module 16978: FriendAnniversaryNotificationSetting ===
 
-// Module 18176 (FriendAnniversaryNotificationSetting)
+// Module 16978 (FriendAnniversaryNotificationSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 5135 */;
-import SettingsConstants from "SettingsConstants" /* 9213 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 18154 */;
-import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 18177 */;
-import SettingBuilders_mod from "SettingBuilders" /* 12612 */;
+import UserSettings from "UserSettings" /* 4648 */;
+import SettingsConstants from "SettingsConstants" /* 8624 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 16956 */;
+import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 16979 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11897 */;
 import size from "module_2" /* 2 */;
 
 let SettingBuilders = SettingBuilders_mod;

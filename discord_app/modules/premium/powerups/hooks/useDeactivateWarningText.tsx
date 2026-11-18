@@ -1,13 +1,13 @@
-// === Module 14056: useDeactivateWarningText ===
+// === Module 13360: useDeactivateWarningText ===
 
-// Module 14056 (useDeactivateWarningText)
+// Module 13360 (useDeactivateWarningText)
 import util from "util" /* 1113 */;
-import _modDef2735 from "module_2735" /* 2735 */;
-import Powerups from "Powerups" /* 5521 */;
+import _modDef2755 from "module_2755" /* 2755 */;
+import Powerups from "Powerups" /* 7912 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5530 */;
-import GuildRoleStore from "GuildRoleStore" /* 5216 */;
-import GuildStore from "GuildStore" /* 5181 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5444 */;
+import GuildRoleStore from "GuildRoleStore" /* 4729 */;
+import GuildStore from "GuildStore" /* 4694 */;
 
 const require = globalThis.__r;
 
@@ -68,17 +68,17 @@ export default function useDeactivateWarningText(arg0, skuId) {
       if (stateFromStores2 > 0) {
         const intl5 = util.intl;
         const obj2 = { perk: tmp.title, memberCount: tmp14 };
-        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2735["4jSvr1"], obj2);
+        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2755["4jSvr1"], obj2);
       } else {
         const intl4 = util.intl;
         const obj3 = { perk: tmp.title };
-        formatToPlainStringResult = intl4.formatToPlainString(_modDef2735.cavtEo, obj3);
+        formatToPlainStringResult = intl4.formatToPlainString(_modDef2755.cavtEo, obj3);
       }
     } else {
       if (Powerups.VANITY_URL_POWERUP_SKU_ID === skuId) {
         const intl3 = util.intl;
         const string = intl3.string;
-        const tmp11 = _modDef2735;
+        const tmp11 = _modDef2755;
         if (stateFromStores1) {
           let stringResult = string(tmp11.hN75yb);
           let tmp13 = importDefault;
@@ -100,14 +100,14 @@ export default function useDeactivateWarningText(arg0, skuId) {
                   num = 0;
                 }
                 obj.memberCount = num;
-                formatToPlainStringResult1 = intl.formatToPlainString(_modDef2735["4jSvr1"], obj);
+                formatToPlainStringResult1 = intl.formatToPlainString(_modDef2755["4jSvr1"], obj);
                 tmp7 = importDefault;
               }
             }
           }
         }
         const intl2 = util.intl;
-        formatToPlainStringResult1 = intl2.string(_modDef2735.Vf2ZcR);
+        formatToPlainStringResult1 = intl2.string(_modDef2755.Vf2ZcR);
         tmp7 = importDefault;
       }
       const obj4 = { text: formatToPlainStringResult1, critical: tmp.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID };
@@ -119,7 +119,7 @@ export default function useDeactivateWarningText(arg0, skuId) {
       if (tmp20) {
         const obj5 = { text: null, critical: true };
         const intl6 = util.intl;
-        obj5.text = intl6.string(tmp7(2735).M4XL5n);
+        obj5.text = intl6.string(tmp7(2755).M4XL5n);
         items.push(obj5);
       }
       return items;

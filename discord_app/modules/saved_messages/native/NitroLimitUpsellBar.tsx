@@ -1,17 +1,17 @@
-// === Module 15693: NitroLimitUpsellBar ===
+// === Module 14326: NitroLimitUpsellBar ===
 
-// Module 15693 (NitroLimitUpsellBar)
+// Module 14326 (NitroLimitUpsellBar)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import components_Button_Button from "components/Button/Button" /* 5930 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import WarningIcon from "WarningIcon" /* 8171 */;
-import _modDef11625 from "module_11625" /* 11625 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 11630 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import components_Button_Button from "components/Button/Button" /* 5421 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import WarningIcon from "WarningIcon" /* 7674 */;
+import _modDef10907 from "module_10907" /* 10907 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10912 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5310 */;
+import createStyles from "createStyles" /* 4823 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -30,7 +30,7 @@ export default function NitroLimitUpsellBar(isAtLimit) {
     let tmp4Result = React4(WarningIcon.WarningIcon, obj2);
     let tmp9 = React4;
   } else {
-    const obj3 = { source: _modDef11625, style: tmp.icon };
+    const obj3 = { source: _modDef10907, style: tmp.icon };
     tmp4Result = React4(FastImageDefault, obj3);
     tmp9 = React4;
   }

@@ -1,12 +1,12 @@
-// === Module 9998: PremiumReferralTrialPill ===
+// === Module 9278: PremiumReferralTrialPill ===
 
-// Module 9998 (PremiumReferralTrialPill)
+// Module 9278 (PremiumReferralTrialPill)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import createStyles from "createStyles" /* 5310 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import createStyles from "createStyles" /* 4823 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

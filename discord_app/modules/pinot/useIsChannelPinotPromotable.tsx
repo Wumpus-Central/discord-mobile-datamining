@@ -1,12 +1,12 @@
-// === Module 12529: useIsChannelPinotPromotable ===
+// === Module 11812: useIsChannelPinotPromotable ===
 
-// Module 12529 (useIsChannelPinotPromotable)
+// Module 11812 (useIsChannelPinotPromotable)
 import Constants from "Constants" /* 1072 */;
-import ChannelRecord from "ChannelRecord" /* 5163 */;
-import PinotEligibility from "PinotEligibility" /* 8178 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import GuildRoleStore from "GuildRoleStore" /* 5216 */;
-import GuildStore from "GuildStore" /* 5181 */;
+import ChannelRecord from "ChannelRecord" /* 4676 */;
+import PinotEligibility from "PinotEligibility" /* 7681 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import GuildRoleStore from "GuildRoleStore" /* 4729 */;
+import GuildStore from "GuildStore" /* 4694 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

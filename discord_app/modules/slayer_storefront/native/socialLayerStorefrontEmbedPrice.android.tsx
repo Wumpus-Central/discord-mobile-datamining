@@ -1,11 +1,11 @@
-// === Module 12639: socialLayerStorefrontEmbedPrice ===
+// === Module 11924: socialLayerStorefrontEmbedPrice ===
 
-// Module 12639 (socialLayerStorefrontEmbedPrice)
-import IAPStoreDefault from "IAPStore" /* 9311 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 9699 */;
+// Module 11924 (socialLayerStorefrontEmbedPrice)
+import IAPStoreDefault from "IAPStore" /* 8722 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9114 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SKUStore from "SKUStore" /* 7078 */;
+import SKUStore from "SKUStore" /* 6582 */;
 
 const require = globalThis.__r;
 

@@ -1,10 +1,10 @@
-// === Module 12718: Modal ===
+// === Module 12003: Modal ===
 
-// Module 12718 (Modal)
+// Module 12003 (Modal)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Navigator from "Navigator" /* 7500 */;
-import NavigatorBackgroundContext from "NavigatorBackgroundContext" /* 7502 */;
-import NavigatorHeader from "NavigatorHeader" /* 7503 */;
+import Navigator from "Navigator" /* 7003 */;
+import NavigatorBackgroundContext from "NavigatorBackgroundContext" /* 7005 */;
+import NavigatorHeader from "NavigatorHeader" /* 7006 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

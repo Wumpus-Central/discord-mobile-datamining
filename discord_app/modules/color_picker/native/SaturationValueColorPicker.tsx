@@ -1,12 +1,12 @@
-// === Module 17111: SaturationValueColorPicker ===
+// === Module 15767: SaturationValueColorPicker ===
 
-// Module 17111 (SaturationValueColorPicker)
+// Module 15767 (SaturationValueColorPicker)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
-import LinearGradientDefault from "LinearGradient" /* 5887 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 17109 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5083 */;
+import LinearGradientDefault from "LinearGradient" /* 5378 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 15765 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -75,7 +75,7 @@ function ColorBox(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { justifyContent: "center", alignItems: "center", position: "relative" }, selector: null, colorBox: null, colorBoxInner: null };
 let size = { top: 0, left: 0, position: "absolute", width: 24, height: 24, borderRadius: nativeDefault.radii.md, borderWidth: 2 };
 obj2.selector = size;

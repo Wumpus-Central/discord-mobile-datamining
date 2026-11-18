@@ -1,28 +1,28 @@
-// === Module 17380: FamilyCenterSettingsNotice ===
+// === Module 16037: FamilyCenterSettingsNotice ===
 
-// Module 17380 (FamilyCenterSettingsNotice)
-import _modDef2703 from "module_2703" /* 2703 */;
-import LayerActionCreators from "LayerActionCreators" /* 8537 */;
-import openLinkedUsersChannelDefault from "openLinkedUsersChannel" /* 9632 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 17248 */;
+// Module 16037 (FamilyCenterSettingsNotice)
+import _modDef2723 from "module_2723" /* 2723 */;
+import LayerActionCreators from "LayerActionCreators" /* 8028 */;
+import openLinkedUsersChannelDefault from "openLinkedUsersChannel" /* 9046 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15905 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SafetySettingsNoticeType = fn(6908).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(6412).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  activeLinkUserIds = activeLinkUserIds(9628).useActiveLinkUserIds();
+  activeLinkUserIds = activeLinkUserIds(9042).useActiveLinkUserIds();
   const obj2 = { label: null, noticeType: null, labelHook: null, count: null };
-  const obj = activeLinkUserIds(9628);
-  obj2.label = _modDef2703.i284fU;
+  const obj = activeLinkUserIds(9042);
+  obj2.label = _modDef2723.i284fU;
   obj2.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
   obj2.labelHook = function handleMessageParentClick() {
     openLinkedUsersChannelDefault(activeLinkUserIds, LayerActionCreators.popLayer, () => {
       const intl = activeLinkUserIds(1113).intl;
-      return activeLinkUserIds(6008).presentFailedToast(intl.formatToPlainString(_modDef2703.D1BwNC, { count: length.length }));
+      return activeLinkUserIds(5504).presentFailedToast(intl.formatToPlainString(_modDef2723.D1BwNC, { count: length.length }));
     });
   };
   obj2.count = activeLinkUserIds.length;

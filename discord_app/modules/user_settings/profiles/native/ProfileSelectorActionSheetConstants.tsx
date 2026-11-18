@@ -1,6 +1,6 @@
-// === Module 17239: ProfileSelectorActionSheetConstants ===
+// === Module 15896: ProfileSelectorActionSheetConstants ===
 
-// Module 17239 (ProfileSelectorActionSheetConstants)
+// Module 15896 (ProfileSelectorActionSheetConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/ProfileSelectorActionSheetConstants.tsx");

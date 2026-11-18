@@ -1,31 +1,29 @@
-// === Module 10089: NativeGiftContext ===
+// === Module 9371: NativeGiftContext ===
 
-// Module 10089 (NativeGiftContext)
+// Module 9371 (NativeGiftContext)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import BillingUtils from "BillingUtils" /* 5122 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6267 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7947 */;
-import BadgeId from "BadgeId" /* 8491 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8563 */;
-import ContextUtilsDefault from "ContextUtils" /* 9608 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9697 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10099 */;
+import BillingUtils from "BillingUtils" /* 4635 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5769 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7450 */;
+import ContextUtilsDefault from "ContextUtils" /* 9022 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9112 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 9380 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8558 */;
-import PromotionsStore from "PromotionsStore" /* 9635 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10090 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8049 */;
+import PromotionsStore from "PromotionsStore" /* 9049 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 9372 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-fn(9312).GPlayBillingResult;
+fn(8723).GPlayBillingResult;
 const PremiumConstants = fn(1390);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 const PaymentGateways = fn(1083).PaymentGateways;
@@ -75,7 +73,6 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
   let stateFromStoresArray;
   let fetchClaimableGiftingPromotionRewardSkuIds;
   closure_36 = undefined;
-  let enabled;
   let stateFromStores;
   let memo1;
   let callback;
@@ -172,18 +169,12 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
       tmp42 = fetchClaimableGiftingPromotionRewardSkuIds.length > 0;
     }
     closure_36 = tmp42;
-    const tmp10Result7 = tmp10(tmp11[25]);
-    const tmp43 = recipientUserId;
-    enabled = recipientUserId(tmp11[26]).useConfig({ location: "NativeGiftContext" }).enabled;
-    const items2 = [enabled];
     const effect = obj.useEffect(() => {
-      if (enabled) {
-        const badge = BadgeDirectoryActionCreators.fetchBadge(BadgeId.BadgeId.GIFTING);
-      }
-    }, items2);
-    let obj10 = recipientUserId(tmp11[26]);
-    const items3 = [closure_9];
-    stateFromStores = tmp10(tmp11[24]).useStateFromStores(items3, () => {
+      const badge = closure_0(onClose[26]).fetchBadge(closure_0(onClose[27]).BadgeId.GIFTING);
+    }, []);
+    const tmp10Result7 = tmp10(tmp11[25]);
+    const items2 = [closure_9];
+    stateFromStores = tmp10(tmp11[24]).useStateFromStores(items2, () => {
       let user;
       if (null != recipientUserId) {
         user = UserStore.getUser(tmp);
@@ -197,24 +188,24 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_129_4 = first4;
     closure_129_5 = first9;
     closure_129_6 = premiumType;
-    const items4 = [first2, recipientUserId, first3, , , , , ];
+    const items3 = [first2, recipientUserId, first3, , , , , ];
     let id;
     if (first5 != null) {
       id = first5.id;
     }
-    items4[3] = id;
+    items3[3] = id;
     let surrogates;
     if (first5 != null) {
       surrogates = first5.surrogates;
     }
-    items4[4] = surrogates;
+    items3[4] = surrogates;
     let soundId;
     if (first4 != null) {
       soundId = first4.soundId;
     }
-    items4[5] = soundId;
-    items4[6] = first9;
-    items4[7] = premiumType;
+    items3[5] = soundId;
+    items3[6] = first9;
+    items3[7] = premiumType;
     memo1 = obj.useMemo(() => {
       const obj = { gift_style, recipient_id: recipientUserId, custom_message: onClose, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null };
       let id;
@@ -239,8 +230,8 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         obj.reward_sku_ids = [];
         return obj;
       }
-    }, items4);
-    const items5 = [first8];
+    }, items3);
+    const items4 = [first8];
     const effect1 = obj.useEffect(() => {
       if (null != first8) {
         const obj2 = { title: null, body: null };
@@ -251,8 +242,8 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         actions_AlertActionCreatorsDefault.show(obj2);
         closure_21(null);
       }
-    }, items5);
-    const items6 = [first9, tmp42];
+    }, items4);
+    const items5 = [first9, tmp42];
     const effect2 = obj.useEffect(() => {
       if (closure_36) {
         const currentUser = UserStore.getCurrentUser();
@@ -263,7 +254,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         const obj2 = { user_id: id, reward_sku_id: first9 };
         AnalyticsUtilsDefault.track(AnalyticEvents.GIFT_PROMOTION_REWARD_SELECTED, obj2);
       }
-    }, items6);
+    }, items5);
     ({ order, revision, setRevision, setOrder: setOrder2 } = orderContext);
     closure_130_0 = order;
     closure_130_1 = revision;
@@ -278,15 +269,15 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    let obj6 = { orderId: "a", planId: "Path", planSelection: "content", giftInfo: "conjure.town" };
+    let obj6 = { orderId: "a", planId: "Path", planSelection: "container", giftInfo: "(function EmojiSuggestionChatButtonTsx3(){let[emojiAnimationProgress]=this.__closure;return{opacity:1-emojiAnimationProgress.get()};})" };
     let obj7 = { premiumType, planInterval: first1 };
     obj6.planSelection = obj7;
     closure_130_13 = obj.useRef(obj6);
     closure_130_14 = obj.useRef(false);
     closure_130_15 = obj.useRef(null);
     const tmp2Result20 = tmp2(obj.useState(0), 2);
-    closure_130_16 = tmp54;
-    const tmp55 = tmp43(tmp11[14])(tmp2Result20[1]);
+    closure_130_16 = tmp53;
+    const tmp55 = recipientUserId(tmp11[14])(tmp2Result20[1]);
     const waitForPause = tmp55.waitForPause;
     closure_130_17 = waitForPause;
     const flush = tmp55.flush;
@@ -297,7 +288,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_20 = resolveSyncs;
     const isAwaitingSync = tmp55.isAwaitingSync;
     closure_130_21 = isAwaitingSync;
-    const items7 = [order, revision, planIdForPremiumType, memo, memo1, first7, premiumType, first1, tmp5, tmp9, setRevision, setOrder2, tmp26, tmp2Result20[0], resolveSyncs, waitForPause, isAwaitingSync];
+    const items6 = [order, revision, planIdForPremiumType, memo, memo1, first7, premiumType, first1, tmp5, tmp9, setRevision, setOrder2, tmp26, tmp2Result20[0], resolveSyncs, waitForPause, isAwaitingSync];
     const effect3 = obj.useEffect(() => {
       let id;
       if (id != null) {
@@ -820,14 +811,14 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         }
       }
       first8(true);
-    }, items7);
-    const items8 = [memo1, flush, waitForSync];
+    }, items6);
+    const items7 = [memo1, flush, waitForSync];
     callback = obj.useCallback(() => {
       first7(first1);
       first6((arg0) => arg0 + 1);
       return closure_19();
-    }, items8);
-    const items9 = [planIdForPremiumType, recipientUserId, basePurchaseAnalytics];
+    }, items7);
+    const items8 = [planIdForPremiumType, recipientUserId, basePurchaseAnalytics];
     callback1 = obj.useCallback((arg0) => {
       closure_0 = arg0;
       function handleGiftCodeCreate(giftCode) {
@@ -854,7 +845,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         closure_19(false);
       }
       return handleGiftCodeCreate;
-    }, items9);
+    }, items8);
     setCurrentAnalyticsStep(function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -882,8 +873,8 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
             } else {
               closure_2 = tmp3;
               closure_1 = tmp7;
-              const subscription = recipientUserId(onClose[33]).subscribe("GIFT_CODE_CREATE", closure_0);
-              const obj11 = recipientUserId(onClose[33]);
+              const subscription = recipientUserId(onClose[32]).subscribe("GIFT_CODE_CREATE", closure_0);
+              const obj11 = recipientUserId(onClose[32]);
               if (!obj12.isAndroid()) {
                 if (null != orderContext.orderId) {
                   if (payment_gateway !== constants.APPLE_ADVANCED_COMMERCE) {
@@ -897,7 +888,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                   }
                 }
               }
-              obj12 = closure_0(onClose[34]);
+              obj12 = closure_0(onClose[33]);
             }
           } else {
             if (1 === tmp7) {
@@ -933,7 +924,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         }
       }
     });
-    const items10 = [skuId, orderContext.orderId, payment_gateway];
+    const items9 = [skuId, orderContext.orderId, payment_gateway];
     callback2 = obj.useCallback(function() {
       const self = this;
       const apply = closure_0.apply;
@@ -943,14 +934,14 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    }, items10);
-    const items11 = [setCurrentAnalyticsStep];
+    }, items9);
+    const items10 = [setCurrentAnalyticsStep];
     callback3 = obj.useCallback((arg0) => {
       DispatcherDefault.unsubscribe("GIFT_CODE_CREATE", arg0);
       setCurrentAnalyticsStep(PremiumAnalyticsUtils.PaymentFlowStep.PLAN_SELECT);
       closure_19(false);
-    }, items11);
-    const items12 = [setOrder, createOrReuseGiftOrder, planIdForPremiumType, recipientUserId, productIdForGift, onClose];
+    }, items10);
+    const items11 = [setOrder, createOrReuseGiftOrder, planIdForPremiumType, recipientUserId, productIdForGift, onClose];
     callback4 = obj.useCallback(setCurrentAnalyticsStep(function*() {
       closure_0 = setOrder;
       yield createOrReuseGiftOrder({ planId: planIdForPremiumType, recipientUserId, productId: productIdForGift });
@@ -961,10 +952,10 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         obj7.title = intl.string(closure_0(1113).t.R0RpRX);
         const intl2 = closure_0(1113).intl;
         obj7.body = intl2.string(closure_0(1113).t.CKsXk3);
-        tmp3(6267).show(obj7);
+        tmp3(5769).show(obj7);
         closure_129_2();
         c4 = 3;
-        tmp3(6267);
+        tmp3(5769);
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
@@ -973,7 +964,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         dependencyMap = 0;
       }
       return value;
-    }), items12);
+    }), items11);
     _require = setCurrentAnalyticsStep(function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
@@ -1005,8 +996,8 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
               closure_130_2 = undefined;
               closure_130_3 = undefined;
               let obj16 = first1;
-              if (null != first1.getNextTier(closure_0(onClose[28]).BadgeId.GIFTING)) {
-                const singleRequirementProgress = obj16.getSingleRequirementProgress(closure_0(onClose[28]).BadgeId.GIFTING);
+              if (null != first1.getNextTier(closure_0(onClose[27]).BadgeId.GIFTING)) {
+                const singleRequirementProgress = obj16.getSingleRequirementProgress(closure_0(onClose[27]).BadgeId.GIFTING);
                 obj16 = singleRequirementProgress == null;
                 let current;
                 if (!obj16) {
@@ -1037,9 +1028,9 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
               } else {
                 if (value) {
                   closure_130_3 = callback1(closure_130_0);
-                  enabled = closure_0(onClose[34]).isAndroid();
+                  let enabled = closure_0(onClose[33]).isAndroid();
                   if (enabled) {
-                    const AndroidNitroGiftOrdersExperiment = closure_0(onClose[36]).AndroidNitroGiftOrdersExperiment;
+                    const AndroidNitroGiftOrdersExperiment = closure_0(onClose[35]).AndroidNitroGiftOrdersExperiment;
                     enabled = AndroidNitroGiftOrdersExperiment.getConfig({ location: "NativeGiftContext" }).enabled;
                   }
                   if (enabled) {
@@ -1052,7 +1043,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                     const obj6 = { value: closure_0(onClose[15]).markOrderAsSigningInProgress(orderId), done: false };
                     return obj6;
                   }
-                  const obj7 = closure_0(onClose[34]);
+                  const obj7 = closure_0(onClose[33]);
                 } else {
                   closure_1_19(false);
                 }
@@ -1112,7 +1103,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                             closure_1 = closure_1_27;
                             c6 = 2;
                             c7 = 1;
-                            return { value: closure_2_0(9609).cancelOrderSigning(closure_2_1), done: false };
+                            return { value: closure_2_0(9023).cancelOrderSigning(closure_2_1), done: false };
                           }
                         }
                       }
@@ -1124,9 +1115,9 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                       closure_130_0 = closure_5;
                       const obj8 = { tags: { source: "NativeGiftContext_cancelOrderSigning" }, extra: null };
                       obj8.extra = { skuId, orderId: closure_131_1 };
-                      const result = closure_2_0(5122).captureBillingException(closure_130_0, obj8);
+                      const result = closure_2_0(4635).captureBillingException(closure_130_0, obj8);
                       logger.error("Failed to cancel order signing", { error: closure_130_0, skuId, orderId: closure_131_1 });
-                      closure_2_0(5122);
+                      closure_2_0(4635);
                     } else if (arg0 === 1) {
                       c7 = 3;
                       throw value;
@@ -1146,13 +1137,13 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                 }
                 return applyArgumentsResult;
               };
-              const subscription = recipientUserId(onClose[33]).subscribe("GPLAY_UPDATE_PURCHASE_STATE", closure_130_5);
-              const obj9 = recipientUserId(onClose[33]);
+              const subscription = recipientUserId(onClose[32]).subscribe("GPLAY_UPDATE_PURCHASE_STATE", closure_130_5);
+              const obj9 = recipientUserId(onClose[32]);
             }
-            tmp3(closure_0(onClose[35]).PaymentFlowStep.REVIEW);
+            tmp3(closure_0(onClose[34]).PaymentFlowStep.REVIEW);
             const obj15 = { productId, skuId, isGift: true, analyticsLoadId: closure_0.load_id, analyticsLocation: closure_0.location, analyticsLocations: closure_0.location_stack, allowPlanChange: false, giftInfoOptions, onPurchaseComplete: null, onPurchaseError: null, onOrderRevertedToDraft: null, onPurchaseIncomplete: null, orderId: null, orderPaymentGateway: null, requestReferenceId: null, analyticsData: null };
             closure_130_2 = setCurrentAnalyticsStep(function*() {
-              yield closure_1_42(closure_2_3);
+              yield closure_1_41(closure_2_3);
               return value;
             });
             obj15.onPurchaseComplete = function onPurchaseComplete() {
@@ -1188,7 +1179,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
             obj17.succeededOnlyFields = obj18;
             obj15.analyticsData = obj17;
             handlePremiumPurchase(obj15);
-            obj8 = closure_0(onClose[34]);
+            obj8 = closure_0(onClose[33]);
           }
         } catch (tmp100) {
           closure_4 = tmp100;
@@ -1201,10 +1192,10 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         }
       }
     });
-    const items13 = [callback, callback1, setCurrentAnalyticsStep, memo1, handlePremiumPurchase, productIdForGift, skuId, payment_gateway, basePurchaseAnalytics, callback2, callback3, callback4, , , , ];
-    ({ orderId: arr15[12], order: arr15[13] } = orderContext);
-    items13[14] = setOrder;
-    items13[15] = first3;
+    const items12 = [callback, callback1, setCurrentAnalyticsStep, memo1, handlePremiumPurchase, productIdForGift, skuId, payment_gateway, basePurchaseAnalytics, callback2, callback3, callback4, , , , ];
+    ({ orderId: arr14[12], order: arr14[13] } = orderContext);
+    items12[14] = setOrder;
+    items12[15] = first3;
     callback5 = obj.useCallback(function() {
       const self = this;
       const apply = closure_0.apply;
@@ -1214,8 +1205,8 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    }, items13);
-    const items14 = [orderContext, recipientUserId, stateFromStores, first2, premiumType, first1, productIdForGift, first3, first4, first5, first6, first7, first10, basePurchaseAnalytics, setCurrentAnalyticsStep, tmp5, tmp9, onClose, callback5, stateFromStoresArray, fetchClaimableGiftingPromotionRewardSkuIds, first9, tmp29];
+    }, items12);
+    const items13 = [orderContext, recipientUserId, stateFromStores, first2, premiumType, first1, productIdForGift, first3, first4, first5, first6, first7, first10, basePurchaseAnalytics, setCurrentAnalyticsStep, tmp5, tmp9, onClose, callback5, stateFromStoresArray, fetchClaimableGiftingPromotionRewardSkuIds, first9, tmp29];
     let obj8 = {
       value: obj.useMemo(() => {
           const obj = {};
@@ -1247,7 +1238,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
           obj.selectedGiftingPromotionReward = first9;
           obj.setSelectedGiftingPromotionReward = setSelectedGiftingPromotionReward;
           return obj;
-        }, items14),
+        }, items13),
       children
     };
     return first6(first7.Provider, obj8);

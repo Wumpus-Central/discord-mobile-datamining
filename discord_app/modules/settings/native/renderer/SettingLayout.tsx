@@ -1,12 +1,12 @@
-// === Module 17250: SettingLayout ===
+// === Module 15907: SettingLayout ===
 
-// Module 17250 (SettingLayout)
-import SettingListRenderer from "SettingListRenderer" /* 17251 */;
-import SettingSegmentedControlRendererDefault from "SettingSegmentedControlRenderer" /* 17265 */;
+// Module 15907 (SettingLayout)
+import SettingListRenderer from "SettingListRenderer" /* 15908 */;
+import SettingSegmentedControlRendererDefault from "SettingSegmentedControlRenderer" /* 15922 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const NodeType = fn(12613).NodeType;
+const NodeType = fn(11898).NodeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");

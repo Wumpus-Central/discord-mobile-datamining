@@ -1,22 +1,22 @@
-// === Module 15591: InviteEmbed ===
+// === Module 14219: InviteEmbed ===
 
-// Module 15591 (InviteEmbed)
-import InviteTypeUtils from "InviteTypeUtils" /* 8852 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 11088 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 11089 */;
-import invite_GuildInvite from "invite/GuildInvite" /* 15592 */;
-import GroupDMInvite from "GroupDMInvite" /* 15594 */;
-import FriendInvite from "FriendInvite" /* 15596 */;
-import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 15597 */;
-import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 15602 */;
-import GuildProfileInvite from "GuildProfileInvite" /* 15604 */;
-import InviteStore from "InviteStore" /* 6046 */;
+// Module 14219 (InviteEmbed)
+import InviteTypeUtils from "InviteTypeUtils" /* 8349 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10370 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10371 */;
+import invite_GuildInvite from "invite/GuildInvite" /* 14220 */;
+import GroupDMInvite from "GroupDMInvite" /* 14222 */;
+import FriendInvite from "FriendInvite" /* 14224 */;
+import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 14225 */;
+import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 14230 */;
+import GuildProfileInvite from "GuildProfileInvite" /* 14232 */;
+import InviteStore from "InviteStore" /* 5542 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ InviteStates: closure_4, AbortCodes: hasOwnProperty } = Constants);
-const InviteTypes = fn(8853).InviteTypes;
+const InviteTypes = fn(8350).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 11025: UserProfileApplicationWidgetIcon ===
+// === Module 10307: UserProfileApplicationWidgetIcon ===
 
-// Module 11025 (UserProfileApplicationWidgetIcon)
+// Module 10307 (UserProfileApplicationWidgetIcon)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import createStyles from "createStyles" /* 5310 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import createStyles from "createStyles" /* 4823 */;
 import size_mod from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

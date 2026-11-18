@@ -1,17 +1,14 @@
-// === Module 8859: clipPayloadUtils ===
+// === Module 8356: clipPayloadUtils ===
 
-// Module 8859 (clipPayloadUtils)
+// Module 8356 (clipPayloadUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
-const require = globalThis.__r;
-
-const require = fn;
-const ClipsConstants = fn(8856);
-({ CLIPS_MAX_PARTICIPANTS: closure_4, CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty, ClipSignalTypes: closure_6, GameEventType: metroImportDefault, CLIP_RUNTIME: closure_8 } = ClipsConstants);
+const ClipsConstants = fn(8353);
+({ CLIPS_MAX_PARTICIPANTS: c3, CLIPS_MAX_TIMELINE_EVENTS: closure_4, ClipSignalTypes: hasOwnProperty, GameEventType: closure_6, CLIP_RUNTIME: metroImportDefault } = ClipsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SpeakingFlags = fn(6072).SpeakingFlags;
+const SpeakingFlags = fn(5568).SpeakingFlags;
 const ServerClipGameEventType = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
-let obj2 = { UNKNOWN: 0, [0]: "UNKNOWN", LAUGHTER: 1, [1]: "LAUGHTER", SHOUTING: 2, [2]: "SHOUTING" };
+const obj2 = { UNKNOWN: 0, [0]: "UNKNOWN", LAUGHTER: 1, [1]: "LAUGHTER", SHOUTING: 2, [2]: "SHOUTING" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/clips/clipPayloadUtils.tsx");
 
@@ -36,12 +33,12 @@ export function getClipSyncTimestamp(clip) {
   }
 }
 export function getClipParticipantIds(users) {
-  return users.slice(0, React4);
+  return users.slice(0, React3);
 }
 export { ServerClipGameEventType };
 export const ServerClipEmotionType = obj2;
 export function getClipEventsTimeline(clip) {
-  _require = clip;
+  let editMetadata = clip;
   const timeline = clip.timeline;
   let num;
   if (timeline != null) {
@@ -57,16 +54,15 @@ export function getClipEventsTimeline(clip) {
       timestamp = decision.timestamp;
     }
     if (null != timestamp) {
-      let editMetadata = clip.editMetadata;
+      editMetadata = clip.editMetadata;
       if (editMetadata == null) {
         const obj = { start: 0, end: clip.length / 1000 };
         editMetadata = obj;
       }
       const diff = clip.decision.timestamp - clip.length;
       const sum = diff + 1000 * editMetadata.end;
-      const sum1 = diff + 1000 * editMetadata.start;
-      closure_1 = require("GameEventsOnPlayerExperiment").isGameEventsOnPlayerEnabled("getClipEventsTimeline");
       const timeline1 = clip.timeline;
+      const sum1 = diff + 1000 * editMetadata.start;
       const found = timeline1.filter((signal) => {
         editMetadata = editMetadata.editMetadata;
         let voiceAudio;
@@ -78,11 +74,7 @@ export function getClipEventsTimeline(clip) {
           tmp2 = signal.signal.type === constants.SPEAKING;
         }
         if (!tmp2) {
-          let tmp4 = closure_1;
-          if (closure_1) {
-            tmp4 = signal.signal.type === constants.GAME_EVENT;
-          }
-          tmp2 = tmp4;
+          tmp2 = signal.signal.type === constants.GAME_EVENT;
         }
         return tmp2;
       });
@@ -104,22 +96,21 @@ export function getClipEventsTimeline(clip) {
       const _Map = Map;
       const map = new Map();
       const items1 = [];
-      for (const item10067 of sorted) {
-        if (item10067.signal.type !== constants.SPEAKING) {
+      for (const item10060 of sorted) {
+        if (item10060.signal.type !== constants.SPEAKING) {
           continue;
         } else {
-          if (item10067.timestamp >= sum1) {
-            obj5.return();
+          if (item10060.timestamp >= sum1) {
+            obj4.return();
             break;
           } else {
-            let result = map.set(item10067.signal.userId, (item10067.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE);
+            let result = map.set(item10060.signal.userId, (item10060.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE);
           }
           break;
         }
-        tmp11[Symbol.iterator]().return();
+        tmp9[Symbol.iterator]().return();
         throw __exception;
       }
-      obj2 = require("GameEventsOnPlayerExperiment");
     }
   } else {
     const audioEvents1 = clip.audioEvents;

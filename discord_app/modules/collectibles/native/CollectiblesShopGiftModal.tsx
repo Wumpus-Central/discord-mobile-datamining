@@ -1,19 +1,17 @@
-// === Module 15208: CollectiblesShopGiftModal ===
+// === Module 13836: CollectiblesShopGiftModal ===
 
-// Module 15208 (CollectiblesShopGiftModal)
+// Module 13836 (CollectiblesShopGiftModal)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Navigator from "Navigator" /* 7500 */;
-import NavigatorHeader from "NavigatorHeader" /* 7503 */;
-import BadgeId from "BadgeId" /* 8491 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8495 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8563 */;
-import generated_NoResults from "generated/NoResults" /* 8607 */;
-import openGiftModal from "openGiftModal" /* 15207 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 15210 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 15213 */;
+import Navigator from "Navigator" /* 7003 */;
+import NavigatorHeader from "NavigatorHeader" /* 7006 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7986 */;
+import generated_NoResults from "generated/NoResults" /* 8098 */;
+import openGiftModal from "openGiftModal" /* 13835 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13838 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 13841 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8496 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7987 */;
 
 require = fn;
 function CollectiblesShopGiftModalContent(product) {
@@ -116,24 +114,19 @@ export default function CollectiblesShopGiftModal(skuId) {
   ({ analyticsLocations, onGiftModalDismiss } = skuId);
   let skuId1;
   ({ lockedRecipientUser, giftingOrigin } = skuId);
-  const GiftingBadgeExperiment = skuId(skuId1[21]).GiftingBadgeExperiment;
-  const enabled = GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftModal" }).enabled;
-  items = [enabled];
   const effect = noop.useEffect(() => {
-    if (enabled) {
-      const badge = BadgeDirectoryActionCreators.fetchBadge(BadgeId.BadgeId.GIFTING);
-    }
-  }, items);
-  const items1 = [CollectiblesCategoryStore];
-  const items2 = [skuId];
-  const stateFromStores = skuId(skuId1[24]).useStateFromStores(items1, () => CollectiblesCategoryStore.getProduct(skuId), items2);
-  let obj = skuId(skuId1[24]);
-  const items3 = [];
-  const obj2 = skuId(skuId1[25]);
+    const badge = skuId(8054).fetchBadge(skuId(7982).BadgeId.GIFTING);
+  }, []);
+  items = [CollectiblesCategoryStore];
+  const items1 = [skuId];
+  const stateFromStores = skuId(504).useStateFromStores(items, () => CollectiblesCategoryStore.getProduct(skuId), items1);
+  const obj = skuId(504);
+  const items2 = [];
+  const obj2 = skuId(9796);
   const obj3 = { needsCategory: false, seedCategoryStore: true, shouldFetchProduct: null == stateFromStores };
-  const tmp5 = enabled;
-  const tmp6 = enabled(skuId1[26]);
-  items3[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(skuId1[27]).COLLECTIBLES_MOBILE_GIFT_MODAL;
+  const tmp5 = skuId1;
+  const tmp6 = skuId1(7431);
+  items2[HermesBuiltin.arraySpread(analyticsLocations, 0)] = skuId1(7450).COLLECTIBLES_MOBILE_GIFT_MODAL;
   skuId1 = undefined;
   if (stateFromStores != null) {
     skuId1 = stateFromStores.skuId;
@@ -143,17 +136,17 @@ export default function CollectiblesShopGiftModal(skuId) {
     const obj4 = { isError: "error" === obj2.useCollectiblesShopProduct(skuId, obj3).state, onGiftModalDismiss };
     let tmp15Result = <CollectiblesShopGiftModalPlaceholder isError={"error" === obj2.useCollectiblesShopProduct(skuId, obj3).state} onGiftModalDismiss={onGiftModalDismiss} />;
   } else {
-    if (tmpResult.isCollectibleGiftingSupported()) {
-      const obj5 = { product: stateFromStores, analyticsLocations: tmp6(items3).analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin, validateRecipient: tmp9 };
-      tmp15Result = <CollectiblesShopGiftModalContent product={stateFromStores} analyticsLocations={tmp6(items3).analyticsLocations} lockedRecipientUser={lockedRecipientUser} onGiftModalDismiss={onGiftModalDismiss} giftingOrigin={giftingOrigin} validateRecipient={tmp9} />;
+    if (tmp2Result.isCollectibleGiftingSupported()) {
+      const obj5 = { product: stateFromStores, analyticsLocations: tmp6(items2).analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin, validateRecipient: tmp9 };
+      tmp15Result = <CollectiblesShopGiftModalContent product={stateFromStores} analyticsLocations={tmp6(items2).analyticsLocations} lockedRecipientUser={lockedRecipientUser} onGiftModalDismiss={onGiftModalDismiss} giftingOrigin={giftingOrigin} validateRecipient={tmp9} />;
     } else {
       const obj6 = { onDismiss: onGiftModalDismiss, title: null };
-      const intl = tmp(tmp2[17]).intl;
-      obj6.title = intl.string(tmp(tmp2[17]).t["JCFN/y"]);
-      tmp15Result = jsx(tmp5(tmp2[30]), { onDismiss: onGiftModalDismiss, title: null });
-      const tmp5Result = tmp5(tmp2[30]);
+      const intl = tmp2(1113).intl;
+      obj6.title = intl.string(tmp2(1113).t["JCFN/y"]);
+      tmp15Result = jsx(tmp5(9512), { onDismiss: onGiftModalDismiss, title: null });
+      const tmp5Result = tmp5(9512);
     }
-    tmpResult = tmp(tmp2[8]);
+    tmp2Result = tmp2(2186);
   }
   return tmp15Result;
 };

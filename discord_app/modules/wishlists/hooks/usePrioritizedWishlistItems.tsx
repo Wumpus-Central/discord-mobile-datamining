@@ -1,6 +1,6 @@
-// === Module 15894: usePrioritizedWishlistItems ===
+// === Module 14537: usePrioritizedWishlistItems ===
 
-// Module 15894 (usePrioritizedWishlistItems)
+// Module 14537 (usePrioritizedWishlistItems)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

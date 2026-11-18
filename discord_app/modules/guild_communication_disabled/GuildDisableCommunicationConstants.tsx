@@ -1,6 +1,6 @@
-// === Module 5224: GuildDisableCommunicationConstants ===
+// === Module 4737: GuildDisableCommunicationConstants ===
 
-// Module 5224 (GuildDisableCommunicationConstants)
+// Module 4737 (GuildDisableCommunicationConstants)
 import util from "util" /* 1113 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2188 */;
 

@@ -1,33 +1,33 @@
-// === Module 13402: CheckpointSummaryStatsScreen ===
+// === Module 12706: CheckpointSummaryStatsScreen ===
 
-// Module 13402 (CheckpointSummaryStatsScreen)
+// Module 12706 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import _modDef3287 from "module_3287" /* 3287 */;
-import _modDef3319 from "module_3319" /* 3319 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5256 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 6399 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6745 */;
-import GuildIcon from "GuildIcon" /* 7730 */;
-import EmojiDefault from "Emoji" /* 7904 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8005 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8386 */;
-import FlagIcon from "FlagIcon" /* 10828 */;
-import CheckpointScreen from "CheckpointScreen" /* 13136 */;
-import CheckpointTextDefault from "CheckpointText" /* 13137 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13344 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 13350 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 13373 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13379 */;
-import CheckpointRecapCard from "CheckpointRecapCard" /* 13403 */;
+import _modDef3307 from "module_3307" /* 3307 */;
+import _modDef3339 from "module_3339" /* 3339 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4769 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 5901 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6247 */;
+import GuildIcon from "GuildIcon" /* 7233 */;
+import EmojiDefault from "Emoji" /* 7407 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7508 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 7888 */;
+import FlagIcon from "FlagIcon" /* 10168 */;
+import CheckpointScreen from "CheckpointScreen" /* 12434 */;
+import CheckpointTextDefault from "CheckpointText" /* 12435 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12648 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12654 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12676 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12682 */;
+import CheckpointRecapCard from "CheckpointRecapCard" /* 12707 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5311 */;
-import CheckpointStore from "CheckpointStore" /* 13119 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import CheckpointStore from "CheckpointStore" /* 12417 */;
 
 const GuildIconDefault = GuildIcon;
 const CheckpointScreenDefault = CheckpointScreen;
@@ -72,7 +72,7 @@ function GlobalSummaryStats() {
   const items3 = [noDataDescriptionText, { color: obj2.getCardColors(obj3.getCharacterCardColorPalette(stateFromStores)).primaryBackgroundColor }];
   obj7.style = items3;
   const intl = util.intl;
-  obj7.children = intl.string(_modDef3319["GL+yOs"]);
+  obj7.children = intl.string(_modDef3339["GL+yOs"]);
   obj6.children = React5(CheckpointTextDefault, obj7);
   items2[1] = React5(View, obj6);
   obj5.children = items2;
@@ -166,11 +166,11 @@ function UserSummaryStats(stats) {
   let tmp27Result6 = React5(UnknownGameIcon.UnknownGameIcon, { size: "md", color: primaryBackgroundColor });
   const intl = util.intl;
   const tmp11 = useMeasuredLayoutDefault();
-  const stringResult = intl.string(_modDef3319.s4qVni);
+  const stringResult = intl.string(_modDef3339.s4qVni);
   const intl2 = util.intl;
-  const toLocaleUpperCaseResult = intl.string(_modDef3319.s4qVni).toLocaleUpperCase();
+  const toLocaleUpperCaseResult = intl.string(_modDef3339.s4qVni).toLocaleUpperCase();
   let icon;
-  const stringResult1 = intl2.string(_modDef3287.y4M1na);
+  const stringResult1 = intl2.string(_modDef3307.y4M1na);
   if (first != null) {
     icon = first.guild.icon;
   }
@@ -277,7 +277,7 @@ function UserSummaryStats(stats) {
   const obj19 = { style: items3, children: null };
   const obj20 = { style: wideLeftStat, label: null, statType: "voice", value: null, color: null };
   const intl3 = util.intl;
-  obj20.label = intl3.string(_modDef3319.MSrV9z);
+  obj20.label = intl3.string(_modDef3339.MSrV9z);
   let num6;
   if (voice != null) {
     num6 = voice.totalVoiceMinutes;
@@ -290,7 +290,7 @@ function UserSummaryStats(stats) {
   const items9 = [React5(NumberStat, obj20), ];
   const obj21 = { style: wideRightStat, label: null, statType: "messages", value: null, color: null };
   const intl4 = util.intl;
-  obj21.label = intl4.string(_modDef3319.hhh11L);
+  obj21.label = intl4.string(_modDef3339.hhh11L);
   let num7;
   if (messages != null) {
     num7 = messages.numMessagesSent;
@@ -306,7 +306,7 @@ function UserSummaryStats(stats) {
   const obj22 = { style: items3, children: null };
   const obj23 = { style: wideLeftStat, label: null, statType: "topServerDays", value: null, color: null };
   const intl5 = util.intl;
-  obj23.label = intl5.string(_modDef3319["f5S+pt"]);
+  obj23.label = intl5.string(_modDef3339["f5S+pt"]);
   let num8;
   if (first != null) {
     num8 = first.numDaysInteracted;
@@ -319,12 +319,12 @@ function UserSummaryStats(stats) {
   const items11 = [React5(NumberStat, obj23), ];
   const obj24 = { style: wideRightStat, singleLine: tmp4, label: null, name: null, color: null, icon: null };
   const intl6 = util.intl;
-  obj24.label = intl6.string(_modDef3287["8XPMJj"]);
+  obj24.label = intl6.string(_modDef3307["8XPMJj"]);
   if (null != first) {
     let name = first.guild.name;
   } else {
     const intl7 = util.intl;
-    name = intl7.string(_modDef3319.GultYJ);
+    name = intl7.string(_modDef3339.GultYJ);
   }
   obj24.name = name;
   obj24.color = primaryBackgroundColor;
@@ -335,7 +335,7 @@ function UserSummaryStats(stats) {
   const obj25 = { style: items3, children: null };
   const obj26 = { style: wideLeftStat, label: null, statType: "emoji", value: null, color: null };
   const intl8 = util.intl;
-  obj26.label = intl8.string(_modDef3319.xVSlv3);
+  obj26.label = intl8.string(_modDef3339.xVSlv3);
   let num9;
   if (emojis != null) {
     num9 = emojis.numEmojisSent;
@@ -348,7 +348,7 @@ function UserSummaryStats(stats) {
   const items12 = [React5(NumberStat, obj26), ];
   const obj27 = { style: wideRightStat, singleLine: tmp4, label: null, name: null, color: null, icon: null };
   const intl9 = util.intl;
-  obj27.label = intl9.string(_modDef3287["3sARW7"]);
+  obj27.label = intl9.string(_modDef3307["3sARW7"]);
   if (null == first1) {
     const intl10 = util.intl;
     let stringResult2 = intl10.string(util.t.PoWNfe);
@@ -379,7 +379,7 @@ function UserSummaryStats(stats) {
   const obj29 = { style: items3, children: null };
   const obj30 = { style: wideLeftStat, label: null, statType: "gameDays", value: null, color: null };
   const intl11 = util.intl;
-  obj30.label = intl11.string(_modDef3319.y2Y1DD);
+  obj30.label = intl11.string(_modDef3339.y2Y1DD);
   let num10;
   if (games != null) {
     num10 = games.totalDaysPlayed;
@@ -392,7 +392,7 @@ function UserSummaryStats(stats) {
   const items13 = [React5(NumberStat, obj30), ];
   const obj31 = { style: wideRightStat, singleLine: tmp4, label: null, name: null, color: null, icon: null };
   const intl12 = util.intl;
-  obj31.label = intl12.string(_modDef3287.RbT4Zq);
+  obj31.label = intl12.string(_modDef3307.RbT4Zq);
   if (null != game) {
     let name2 = game.name;
   } else {
@@ -461,7 +461,7 @@ function ItemStat(arg0) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const CheckpointConstants = fn(6375);
+const CheckpointConstants = fn(5877);
 ({ CHECKPOINT_PRIMARY: metroImportDefault, CHECKPOINT_CONTROL_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -471,7 +471,7 @@ const PX_32 = nativeDefault.space.PX_32;
 let sum = CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
 const PX_24 = nativeDefault.space.PX_24;
 let closure_14 = CHECKPOINT_NAV_HEIGHT + nativeDefault.space.PX_24;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { width: "100%", maxWidth: 400, alignSelf: "center", flexGrow: 1, alignItems: "center", gap: PX_16, paddingBottom: sum }, noDataContainer: { justifyContent: "center", gap: PX_32 }, noDataWideContainer: { flexDirection: "row", maxWidth: "100%" }, heading: { alignSelf: "stretch", gap: nativeDefault.space.PX_8 }, headingLabel: null, wideContainer: null, wideCardClearControls: null, wideHeading: null, wideStats: null, wideStatsExpanded: null, wideRow: null, wideLeftStat: null, wideRightStat: null, stats: null, noDataDescription: null, noDataDescriptionText: null, row: null, stat: null, statNumber: null, item: null, itemName: null, itemIcon: null, guildAcronym: null, emoji: null, textEmoji: null };
 let obj3 = { alignSelf: "stretch", gap: nativeDefault.space.PX_8 };
 obj2.headingLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };

@@ -1,6 +1,6 @@
-// === Module 13439: NavigationTTIDefinition ===
+// === Module 12746: NavigationTTIDefinition ===
 
-// Module 13439 (NavigationTTIDefinition)
+// Module 12746 (NavigationTTIDefinition)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import AnalyticsSchema from "AnalyticsSchema" /* 1349 */;
 import size from "module_2" /* 2 */;

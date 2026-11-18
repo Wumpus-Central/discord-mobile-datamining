@@ -1,6 +1,6 @@
-// === Module 8825: QuestUserStatusUtils ===
+// === Module 8322: QuestUserStatusUtils ===
 
-// Module 8825 (QuestUserStatusUtils)
+// Module 8322 (QuestUserStatusUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/utils/QuestUserStatusUtils.tsx");

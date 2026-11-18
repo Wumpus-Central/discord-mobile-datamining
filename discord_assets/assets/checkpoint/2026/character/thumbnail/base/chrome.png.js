@@ -1,6 +1,6 @@
-// === Module 6428: ? ===
+// === Module 5930: ? ===
 
-// Module 6428
+// Module 5930
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/base/chrome.png.js");

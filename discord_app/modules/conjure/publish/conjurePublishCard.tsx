@@ -1,7 +1,7 @@
-// === Module 14618: conjurePublishCard ===
+// === Module 18474: conjurePublishCard ===
 
-// Module 14618 (conjurePublishCard)
-import _modDef4133 from "module_4133" /* 4133 */;
+// Module 18474 (conjurePublishCard)
+import _modDef4121 from "module_4121" /* 4121 */;
 import size from "module_2" /* 2 */;
 
 const weakMap = new WeakMap();
@@ -60,7 +60,7 @@ export function publishNoticeMessage(notice, name, automod) {
   if (true === notice.commands_failed) {
   } else if (true === notice.channel_skipped) {
   } else {
-    const tmp4 = _modDef4133;
+    const tmp4 = _modDef4121;
     if (!notice.update) {
       if (automod) {
         let KORRGl = tmp4.KORRGl;

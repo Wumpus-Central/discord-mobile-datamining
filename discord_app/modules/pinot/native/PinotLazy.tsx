@@ -1,11 +1,11 @@
-// === Module 12527: PinotLazy ===
+// === Module 11810: PinotLazy ===
 
-// Module 12527 (PinotLazy)
-import useIsPinotChannelLabelVisible from "useIsPinotChannelLabelVisible" /* 12528 */;
-import usePinotMemberNotice from "usePinotMemberNotice" /* 12530 */;
-import PinotChannelLabel from "PinotChannelLabel" /* 12538 */;
-import PinotMemberNoticeBar from "PinotMemberNoticeBar" /* 12553 */;
-import PinotMemberNoticeHeaderArrow from "PinotMemberNoticeHeaderArrow" /* 12554 */;
+// Module 11810 (PinotLazy)
+import useIsPinotChannelLabelVisible from "useIsPinotChannelLabelVisible" /* 11811 */;
+import usePinotMemberNotice from "usePinotMemberNotice" /* 11813 */;
+import PinotChannelLabel from "PinotChannelLabel" /* 11821 */;
+import PinotMemberNoticeBar from "PinotMemberNoticeBar" /* 11836 */;
+import PinotMemberNoticeHeaderArrow from "PinotMemberNoticeHeaderArrow" /* 11837 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/pinot/native/PinotLazy.tsx");

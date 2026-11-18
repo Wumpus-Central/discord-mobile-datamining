@@ -1,10 +1,10 @@
-// === Module 18364: CheckpointMockData ===
+// === Module 14531: CheckpointMockData ===
 
-// Module 18364 (CheckpointMockData)
-import CheckpointAvailability from "CheckpointAvailability" /* 13120 */;
+// Module 14531 (CheckpointMockData)
+import CheckpointAvailability from "CheckpointAvailability" /* 12418 */;
 import size from "module_2" /* 2 */;
 
-const obj = { FAKE_DATA: { stats: { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } }, character: null }, GLOBAL_STATS: { stats: null, character: null, didPlayerShareDataWithDiscord: false }, ZERO_STATS: null, UNAVAILABLE: { availability: CheckpointAvailability.CheckpointAvailability.UNAVAILABLE }, NO_CHARACTER: null, COMPACT_ASSETS: null };
+const obj = { FAKE_DATA: { stats: { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } }, character: null }, GLOBAL_STATS: { stats: null, character: null }, ZERO_STATS: null, UNAVAILABLE: { availability: CheckpointAvailability.CheckpointAvailability.UNAVAILABLE }, NO_CHARACTER: null, COMPACT_ASSETS: null };
 const obj3 = { stats: { voice: { totalVoiceMinutes: 0, totalVoiceMinutesPercentile: 0 }, messages: { numMessagesSent: 0, numMessagesSentPercentile: 0 }, guilds: { guilds: [] }, emojis: { numEmojisSent: 0, numEmojisSentPercentile: 0, emojis: [] }, games: { totalGamesPlayed: 0, totalGamesPlayedPercentile: 0, games: [], totalDaysPlayed: 0, totalDaysPlayedPercentile: 0 }, sidekick: null, users: [], power: { powerLevel: 0, powerLevelPercentile: 0 } }, character: null };
 obj.ZERO_STATS = obj3;
 const obj2 = { stats: { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } }, character: null };

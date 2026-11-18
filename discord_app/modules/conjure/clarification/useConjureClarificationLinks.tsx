@@ -1,10 +1,10 @@
-// === Module 14784: useConjureClarificationLinks ===
+// === Module 18638: useConjureClarificationLinks ===
 
-// Module 14784 (useConjureClarificationLinks)
+// Module 18638 (useConjureClarificationLinks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
 
 const require = globalThis.__r;
 

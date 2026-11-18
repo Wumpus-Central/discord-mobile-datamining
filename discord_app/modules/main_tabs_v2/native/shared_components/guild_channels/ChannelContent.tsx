@@ -1,13 +1,13 @@
-// === Module 19532: ChannelContent ===
+// === Module 18808: ChannelContent ===
 
-// Module 19532 (ChannelContent)
-import Text_Text from "Text/Text" /* 5923 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7227 */;
-import LockIcon from "LockIcon" /* 8103 */;
-import WarningIcon from "WarningIcon" /* 8171 */;
-import ChannelListLayout from "ChannelListLayout" /* 11808 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18881 */;
-import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 19533 */;
+// Module 18808 (ChannelContent)
+import Text_Text from "Text/Text" /* 5414 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6731 */;
+import LockIcon from "LockIcon" /* 7606 */;
+import WarningIcon from "WarningIcon" /* 7674 */;
+import ChannelListLayout from "ChannelListLayout" /* 11090 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 17694 */;
+import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 18809 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -138,17 +138,17 @@ function ChannelContentComponent(arg0) {
   return timestampProducer(View, obj2);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6957).UnreadSetting;
+const UnreadSetting = fn(6461).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let PlatformUtils = fn(1380);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
 }
 let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
-let obj4 = { opacity: fn(6056).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj4 = { opacity: fn(5552).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 PlatformUtils = fn(1380);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {

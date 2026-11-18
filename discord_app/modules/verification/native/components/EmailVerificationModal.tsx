@@ -1,9 +1,9 @@
-// === Module 7751: EmailVerificationModal ===
+// === Module 7254: EmailVerificationModal ===
 
-// Module 7751 (EmailVerificationModal)
+// Module 7254 (EmailVerificationModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
-import NavigatorHeader from "NavigatorHeader" /* 7503 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7750 */;
+import NavigatorHeader from "NavigatorHeader" /* 7006 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -15,7 +15,7 @@ function closeModal() {
   resetChangeEmailStore();
   EmailVerificationModalActionCreatorsDefault.close();
 }
-const resetChangeEmailStore = fn(7752).resetChangeEmailStore;
+const resetChangeEmailStore = fn(7255).resetChangeEmailStore;
 const VerificationModalScenes = fn(1072).VerificationModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);

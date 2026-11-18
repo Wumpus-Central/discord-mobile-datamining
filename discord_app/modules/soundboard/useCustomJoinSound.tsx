@@ -1,12 +1,12 @@
-// === Module 11668: useCustomJoinSound ===
+// === Module 10950: useCustomJoinSound ===
 
-// Module 11668 (useCustomJoinSound)
+// Module 10950 (useCustomJoinSound)
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(6369).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
+let closure_3 = fn(5871).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
 const CustomSoundType = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");

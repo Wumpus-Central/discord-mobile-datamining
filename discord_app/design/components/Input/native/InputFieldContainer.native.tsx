@@ -1,12 +1,12 @@
-// === Module 7649: InputFieldContainer ===
+// === Module 7152: InputFieldContainer ===
 
-// Module 7649 (InputFieldContainer)
+// Module 7152 (InputFieldContainer)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import useToken from "useToken" /* 5896 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import spring_spring from "spring/spring" /* 5933 */;
-import InputTypes from "InputTypes" /* 7650 */;
+import useToken from "useToken" /* 5387 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import spring_spring from "spring/spring" /* 5424 */;
+import InputTypes from "InputTypes" /* 7153 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -57,7 +57,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(5310);
+let createStyles = fn(4823);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -144,7 +144,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.leadingDividerText = { flexGrow: 0 };
   return obj9;
 });
-createStyles = fn(5310);
+createStyles = fn(4823);
 let closure_10 = createStyles.createStyleProperties({ error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: nativeDefault.colors.INPUT_BORDER_ACTIVE });
 let closure_11 = { code: "(function InputFieldContainerNativeTsx1(){let[status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG]=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};})" };
 const size = fn(2);

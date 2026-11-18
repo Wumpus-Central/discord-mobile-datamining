@@ -1,12 +1,12 @@
-// === Module 12940: handleTapConjureProjectEmbed ===
+// === Module 12228: handleTapConjureProjectEmbed ===
 
-// Module 12940 (handleTapConjureProjectEmbed)
-import openFrameDefault from "openFrame" /* 11366 */;
-import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 12648 */;
-import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 12941 */;
+// Module 12228 (handleTapConjureProjectEmbed)
+import openFrameDefault from "openFrame" /* 10648 */;
+import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11933 */;
+import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 12229 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 12645 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11930 */;
 
 const require = fn;
 function runConjureSharedProjectCoverAction(applicationId, arg1, arg2) {
@@ -164,7 +164,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
     }
   }
 };
-const canRemixProject = fn(7025).canRemixProject;
+const canRemixProject = fn(6529).canRemixProject;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/handleTapConjureProjectEmbed.tsx");
 

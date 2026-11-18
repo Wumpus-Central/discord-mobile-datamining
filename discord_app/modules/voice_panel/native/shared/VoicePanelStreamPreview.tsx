@@ -1,11 +1,11 @@
-// === Module 15788: VoicePanelStreamPreview ===
+// === Module 14420: VoicePanelStreamPreview ===
 
-// Module 15788 (VoicePanelStreamPreview)
+// Module 14420 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 575 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6805 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11762 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6309 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11044 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6804 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6308 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import module_1655_mod from "module_1655" /* 1655 */;
 
@@ -19,9 +19,9 @@ const jsxProd = fn(21);
 let module_1655 = module_1655_mod;
 let closure_9 = module_1655.createAnimatedComponent(Pressable);
 let module_1655 = module_1655_mod;
-let closure_10 = module_1655.createAnimatedComponent(fn(5930).Button);
+let closure_10 = module_1655.createAnimatedComponent(fn(5421).Button);
 let closure_11 = { duration: 200 };
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
 let size = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.roundedCard = size;
@@ -107,7 +107,7 @@ export function VoicePanelStreamPreview(stream) {
     const obj6 = { uri: previewUrl };
     obj5.source = obj6;
     obj5.style = absoluteFill.absoluteFill;
-    obj4.children = closure_7(tmp2(6014), obj5);
+    obj4.children = closure_7(tmp2(5510), obj5);
     tmp18 = closure_7(tmp2(1655).View, obj4);
   }
   const items4 = [tmp18, ];
@@ -118,7 +118,7 @@ export function VoicePanelStreamPreview(stream) {
     const obj10 = { variant: "body-sm/semibold", color: "text-overlay-light", style: tmp.ownStreamText, children: null };
     const intl2 = tmp8(1113).intl;
     obj10.children = intl2.string(tmp8(1113).t["ro/HN8"]);
-    obj9.children = closure_7(tmp8(5923).Text, obj10);
+    obj9.children = closure_7(tmp8(5414).Text, obj10);
     let tmp21Result = closure_7(closure_4, obj9);
   } else {
     const obj11 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };

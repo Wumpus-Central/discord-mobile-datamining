@@ -1,15 +1,15 @@
-// === Module 11791: InAppNotificationUtils ===
+// === Module 11073: InAppNotificationUtils ===
 
-// Module 11791 (InAppNotificationUtils)
+// Module 11073 (InAppNotificationUtils)
 import apply from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import v1 from "v1" /* 1269 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5946 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6064 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5437 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5560 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(11792).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(11074).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, ChannelTypes: closure_6, InAppNotificationTypes: metroImportDefault, MessageEmbedTypes: closure_8, MessageFlags: closure_9 } = Constants);
 const size = fn(2);

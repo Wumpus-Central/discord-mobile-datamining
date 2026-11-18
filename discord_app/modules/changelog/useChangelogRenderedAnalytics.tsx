@@ -1,12 +1,12 @@
-// === Module 13949: useChangelogRenderedAnalytics ===
+// === Module 13251: useChangelogRenderedAnalytics ===
 
-// Module 13949 (useChangelogRenderedAnalytics)
+// Module 13251 (useChangelogRenderedAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 9360 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8771 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
-import ReadStateStore from "ReadStateStore" /* 7023 */;
-import ChangelogStore from "ChangelogStore" /* 8146 */;
+import ReadStateStore from "ReadStateStore" /* 6527 */;
+import ChangelogStore from "ChangelogStore" /* 7649 */;
 
 const require = globalThis.__r;
 

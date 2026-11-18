@@ -1,9 +1,9 @@
-// === Module 7986: EntityUtils ===
+// === Module 7489: EntityUtils ===
 
-// Module 7986 (EntityUtils)
-import ChannelStore from "ChannelStore" /* 5159 */;
+// Module 7489 (EntityUtils)
+import ChannelStore from "ChannelStore" /* 4672 */;
 
-const GuildScheduledEventsConstants = fn(5165);
+const GuildScheduledEventsConstants = fn(4678);
 ({ GuildScheduledEventEntityTypes: closure_1, EntityChannelTypes: c2 } = GuildScheduledEventsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");

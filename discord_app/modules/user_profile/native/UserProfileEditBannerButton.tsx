@@ -1,17 +1,17 @@
-// === Module 17115: UserProfileEditBannerButton ===
+// === Module 15771: UserProfileEditBannerButton ===
 
-// Module 17115 (UserProfileEditBannerButton)
+// Module 15771 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 575 */;
-import Pressables from "Pressables" /* 7438 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8005 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8487 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8557 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8604 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8623 */;
-import PencilIcon from "PencilIcon" /* 11920 */;
+import Pressables from "Pressables" /* 6941 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7508 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7978 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8048 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8095 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8114 */;
+import PencilIcon from "PencilIcon" /* 11202 */;
 import noop from "module_19" /* 19 */;
 
-const EditButtonDefault = tmp(17116);
+const EditButtonDefault = tmp(15772);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -46,10 +46,10 @@ function EditButton(disabled) {
   return timestampProducer(Pressables.PressableOpacity, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(8490).TrackUserProfileEditActions;
+let closure_5 = fn(7981).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { position: "relative" }, editButton: null, previewButton: null, refreshEditButtonContainer: null };
 let size = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round };
 obj2.editButton = size;

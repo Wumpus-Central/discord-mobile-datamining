@@ -1,14 +1,14 @@
-// === Module 15205: useSyncGiftOptionsToOrder ===
+// === Module 13833: useSyncGiftOptionsToOrder ===
 
-// Module 15205 (useSyncGiftOptionsToOrder)
+// Module 13833 (useSyncGiftOptionsToOrder)
 import LoggerDefault from "Logger" /* 3 */;
-import BillingUtils from "BillingUtils" /* 5122 */;
-import useGiftOptionsSyncDebounceDefault from "useGiftOptionsSyncDebounce" /* 10091 */;
+import BillingUtils from "BillingUtils" /* 4635 */;
+import useGiftOptionsSyncDebounceDefault from "useGiftOptionsSyncDebounce" /* 9373 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_5 = fn(9604).useNativeCheckoutStoreOrNull;
+let closure_5 = fn(9018).useNativeCheckoutStoreOrNull;
 let closure_6 = new LoggerDefault("useSyncGiftOptionsToOrder");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkout/native/useSyncGiftOptionsToOrder.tsx");

@@ -1,20 +1,20 @@
-// === Module 14707: SnailIllocon ===
+// === Module 18561: SnailIllocon ===
 
-// Module 14707 (SnailIllocon)
-import FastImageDefault from "FastImage" /* 6014 */;
-import assetHelpers from "assetHelpers" /* 7765 */;
-import _modDef14708 from "module_14708" /* 14708 */;
-import _modDef14709 from "module_14709" /* 14709 */;
-import _modDef14710 from "module_14710" /* 14710 */;
+// Module 18561 (SnailIllocon)
+import FastImageDefault from "FastImage" /* 5510 */;
+import assetHelpers from "assetHelpers" /* 7268 */;
+import _modDef18562 from "module_18562" /* 18562 */;
+import _modDef18563 from "module_18563" /* 18563 */;
+import _modDef18564 from "module_18564" /* 18564 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14708 }, 3: null };
-const obj2 = { uri: _modDef14708 };
-obj[2] = { uri: _modDef14709 };
-const obj3 = { uri: _modDef14709 };
-obj[3] = { uri: _modDef14710 };
+let obj = { 1: null, 2: { uri: _modDef18562 }, 3: null };
+const obj2 = { uri: _modDef18562 };
+obj[2] = { uri: _modDef18563 };
+const obj3 = { uri: _modDef18563 };
+obj[3] = { uri: _modDef18564 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SnailIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function SnailIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7765).getAssetSource(obj);
+  obj.source = num(7268).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

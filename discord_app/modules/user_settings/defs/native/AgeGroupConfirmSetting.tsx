@@ -1,9 +1,9 @@
-// === Module 17294: AgeGroupConfirmSetting ===
+// === Module 15951: AgeGroupConfirmSetting ===
 
-// Module 17294 (AgeGroupConfirmSetting)
-import SettingsConstants from "SettingsConstants" /* 9213 */;
-import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 17292 */;
-import SettingBuilders from "SettingBuilders" /* 12612 */;
+// Module 15951 (AgeGroupConfirmSetting)
+import SettingsConstants from "SettingsConstants" /* 8624 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 15949 */;
+import SettingBuilders from "SettingBuilders" /* 11897 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

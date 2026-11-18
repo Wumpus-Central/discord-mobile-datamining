@@ -1,8 +1,8 @@
-// === Module 14609: useMediaKeyboardConfig ===
+// === Module 18465: useMediaKeyboardConfig ===
 
-// Module 14609 (useMediaKeyboardConfig)
+// Module 18465 (useMediaKeyboardConfig)
 import Server from "Server" /* 2119 */;
-import useUploadDisabledDefault from "useUploadDisabled" /* 13717 */;
+import useUploadDisabledDefault from "useUploadDisabled" /* 13024 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,12 +16,12 @@ export default function useMediaKeyboardConfig(arg0) {
   ({ channel, context } = arg0);
   MediaKeyboardTarget = undefined;
   let mediaKeyboardDraftType;
-  const tmp4 = context(8872).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp4 = context(8368).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
   importDefault = tmp4;
   const tmp5 = useUploadDisabledDefault(channel);
   dependencyMap = tmp5;
-  let obj = context(8872);
-  let canStartThread = context(7297).useCanStartThread(channel);
+  let obj = context(8368);
+  let canStartThread = context(6802).useCanStartThread(channel);
   if (canStartThread) {
     const GUILD_THREADS_ONLY = mediaKeyboardDraftType.GUILD_THREADS_ONLY;
     canStartThread = !GUILD_THREADS_ONLY.has(channel.type);
@@ -32,11 +32,11 @@ export default function useMediaKeyboardConfig(arg0) {
   if (canStartThread) {
     canStartThread = !tmp;
   }
-  const tmp2Result = context(7297);
-  const tmp8 = context(7874).useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp2Result = context(6802);
+  const tmp8 = context(7377).useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
   MediaKeyboardTarget = tmp8;
-  const tmp2Result3 = context(7874);
-  mediaKeyboardDraftType = context(12298).getMediaKeyboardDraftType(context.target);
+  const tmp2Result3 = context(7377);
+  mediaKeyboardDraftType = context(11580).getMediaKeyboardDraftType(context.target);
   items = [context, tmp4, tmp5, mediaKeyboardDraftType, canStartThread, tmp8];
   return canStartThread.useMemo(() => {
     const target = context.target;

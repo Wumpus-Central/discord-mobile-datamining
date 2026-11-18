@@ -1,8 +1,8 @@
-// === Module 14670: conjureNativeChatLayout ===
+// === Module 18524: conjureNativeChatLayout ===
 
-// Module 14670 (conjureNativeChatLayout)
+// Module 18524 (conjureNativeChatLayout)
 import nativeDefault from "native" /* 575 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 14661 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 18515 */;
 import size from "module_2" /* 2 */;
 
 const diff = ConjureNativeStatusLine.MESSAGE_CONTENT_INSET - ConjureNativeStatusLine.MESSAGE_EDGE_INSET;

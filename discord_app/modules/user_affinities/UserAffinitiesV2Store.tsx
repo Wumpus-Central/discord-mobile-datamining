@@ -1,9 +1,9 @@
-// === Module 8564: UserAffinitiesV2Store ===
+// === Module 8055: UserAffinitiesV2Store ===
 
-// Module 8564 (UserAffinitiesV2Store)
+// Module 8055 (UserAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import RelationshipStore from "RelationshipStore" /* 5252 */;
+import RelationshipStore from "RelationshipStore" /* 4765 */;
 
 function recomputeAffinities() {
   const userAffinities = obj.userAffinities;
@@ -21,7 +21,7 @@ function recomputeAffinities() {
     const result = map.set(_null.otherUserId, _null);
   }
 }
-const USER_AFFINITY_TTL = fn(8565).USER_AFFINITY_TTL;
+const USER_AFFINITY_TTL = fn(8056).USER_AFFINITY_TTL;
 let map = new Map();
 let c3 = false;
 let c4 = null;

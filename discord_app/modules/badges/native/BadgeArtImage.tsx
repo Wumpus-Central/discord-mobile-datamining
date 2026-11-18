@@ -1,10 +1,10 @@
-// === Module 15311: BadgeArtImage ===
+// === Module 13939: BadgeArtImage ===
 
-// Module 15311 (BadgeArtImage)
+// Module 13939 (BadgeArtImage)
 import DurationsDefault from "Durations" /* 1089 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import TimeUtils from "TimeUtils" /* 6076 */;
-import inlineStyles from "inlineStyles" /* 8274 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import TimeUtils from "TimeUtils" /* 5572 */;
+import inlineStyles from "inlineStyles" /* 7776 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -71,7 +71,7 @@ function SvgArt(url) {
                 closure_1 = tmp2;
                 closure_129_0 = undefined;
                 closure_129_1 = undefined;
-                items = [closure_2_0(8274).fetchText(c0), closure_2_11()];
+                items = [closure_2_0(7776).fetchText(c0), closure_2_11()];
                 c3 = 1;
                 c4 = 1;
                 const obj4 = { value: Promise.race(items), done: false };
@@ -90,7 +90,7 @@ function SvgArt(url) {
               if (closure_129_0 == null) {
                 c0 = "";
               }
-              closure_129_1 = closure_2_0(8274).parse(c0);
+              closure_129_1 = closure_2_0(7776).parse(c0);
               if (null == closure_129_1) {
                 const _Error = Error;
                 const error = new Error("svg has no content");
@@ -100,7 +100,7 @@ function SvgArt(url) {
                 const obj = { value: closure_129_1, done: true };
                 return obj;
               }
-              const obj6 = closure_2_0(8274);
+              const obj6 = closure_2_0(7776);
             }
           } catch (tmp15) {
             c4 = tmp;
@@ -165,7 +165,7 @@ function SvgArt(url) {
       let obj2 = { ast: tmp2, override: null };
       const size = { width, height };
       obj2.override = size;
-      tmp9 = jsx(url(8274).SvgAst, { ast: tmp2, override: null });
+      tmp9 = jsx(url(7776).SvgAst, { ast: tmp2, override: null });
     }
     fallback = tmp9;
   }
@@ -173,7 +173,7 @@ function SvgArt(url) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const promiseDeduper = new fn(5430).PromiseDeduper();
+const promiseDeduper = new fn(4943).PromiseDeduper();
 let closure_10 = 10 * DurationsDefault.Millis.SECOND;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeArtImage.tsx");

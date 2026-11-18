@@ -1,7 +1,7 @@
-// === Module 18362: UserSettingsJSError ===
+// === Module 17168: UserSettingsJSError ===
 
-// Module 18362 (UserSettingsJSError)
-import Text_Text from "Text/Text" /* 5923 */;
+// Module 17168 (UserSettingsJSError)
+import Text_Text from "Text/Text" /* 5414 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

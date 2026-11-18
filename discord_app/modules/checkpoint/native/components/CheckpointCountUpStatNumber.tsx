@@ -1,9 +1,9 @@
-// === Module 13372: CheckpointCountUpStatNumber ===
+// === Module 12675: CheckpointCountUpStatNumber ===
 
-// Module 13372 (CheckpointCountUpStatNumber)
-import CheckpointStatNumber from "CheckpointStatNumber" /* 13344 */;
+// Module 12675 (CheckpointCountUpStatNumber)
+import CheckpointStatNumber from "CheckpointStatNumber" /* 12648 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5311 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
 
 require = fn;
 const noop = fn(19);
@@ -54,7 +54,7 @@ export default function CheckpointCountUpStatNumber(start) {
     }
   }, items1);
   const tmp4 = _slicedToArray(closure_6(num), 2);
-  const result = size(13373).formatCheckpointStatNumber(end);
+  const result = size(12676).formatCheckpointStatNumber(end);
   importDefault = result;
   const items2 = [result, size];
   const obj2 = {
@@ -65,8 +65,8 @@ export default function CheckpointCountUpStatNumber(start) {
     children: null
   };
   const obj3 = { value: null, size: null };
-  const tmpResult = size(13373);
-  obj3.value = size(13373).formatCheckpointStatNumber(end);
+  const tmpResult = size(12676);
+  obj3.value = size(12676).formatCheckpointStatNumber(end);
   obj3.size = size;
   obj2.children = <tmp8 value={null} size={null} />;
   return <View style={closure_5(() => {

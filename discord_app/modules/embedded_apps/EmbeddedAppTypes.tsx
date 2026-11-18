@@ -1,6 +1,6 @@
-// === Module 7029: EmbeddedAppTypes ===
+// === Module 6533: EmbeddedAppTypes ===
 
-// Module 7029 (EmbeddedAppTypes)
+// Module 6533 (EmbeddedAppTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/EmbeddedAppTypes.tsx");

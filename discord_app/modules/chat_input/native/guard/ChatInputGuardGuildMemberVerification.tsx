@@ -1,22 +1,22 @@
-// === Module 13967: ChatInputGuardGuildMemberVerification ===
+// === Module 13269: ChatInputGuardGuildMemberVerification ===
 
-// Module 13967 (ChatInputGuardGuildMemberVerification)
+// Module 13269 (ChatInputGuardGuildMemberVerification)
 import util from "util" /* 1113 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5917 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6064 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6922 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7694 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 13959 */;
-import _modDef13969 from "module_13969" /* 13969 */;
-import _modDef13970 from "module_13970" /* 13970 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5408 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5560 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6426 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7197 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 13261 */;
+import _modDef13271 from "module_13271" /* 13271 */;
+import _modDef13272 from "module_13272" /* 13272 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5311 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
 
 require = fn;
-const TextAreaCta = fn(13446).TextAreaCta;
+const TextAreaCta = fn(12753).TextAreaCta;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_7 = createStyles.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx");
@@ -24,13 +24,13 @@ let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInp
 export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_7();
-  const currentUserGuildJoinRequest = guildId(13968).useCurrentUserGuildJoinRequest(guildId);
+  const currentUserGuildJoinRequest = guildId(13270).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  if (guildId(5346).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = _modDef13969;
+  if (guildId(4859).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+    let tmp8 = _modDef13271;
     const intl2 = tmp2(1113).intl;
     let stringResult = intl2.string(tmp2(1113).t.lk30cY);
     class I {
@@ -44,8 +44,8 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
         return;
       }
     }
-  } else if (tmp2(5346).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = _modDef13970;
+  } else if (tmp2(4859).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+    tmp8 = _modDef13272;
     class I {
       constructor() {
         obj = closure_1(closure_2[10]);
@@ -60,7 +60,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       }
     }
     stringResult = tmp11(tmp2(1113).t["5iLvSx"]);
-    const tmp7 = jsx(tmp2(7559).XSmallIcon, {});
+    const tmp7 = jsx(tmp2(7062).XSmallIcon, {});
   } else {
     let intl = tmp2(1113).intl;
     stringResult = intl.string(tmp2(1113).t.rEBKvg);
@@ -75,7 +75,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       }
     }
   }
-  let obj = guildId(13968);
+  let obj = guildId(13270);
   items = [AccessibilityStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp2Result = guildId(504);

@@ -1,13 +1,13 @@
-// === Module 18424: FRAME_BUDGET_MS ===
+// === Module 17229: FRAME_BUDGET_MS ===
 
-// Module 18424 (FRAME_BUDGET_MS)
-import startFrameMonitor from "startFrameMonitor" /* 18426 */;
-import useMountTimerDefault from "useMountTimer" /* 18427 */;
-import useFrameMonitorDefault from "useFrameMonitor" /* 18428 */;
-import useBenchmarkResultsDefault from "useBenchmarkResults" /* 18429 */;
-import BenchmarkResultsListDefault from "BenchmarkResultsList" /* 18430 */;
-import ScrollBenchmarkDefault from "ScrollBenchmark" /* 18431 */;
-import MountMeasureDefault from "MountMeasure" /* 18432 */;
+// Module 17229 (FRAME_BUDGET_MS)
+import startFrameMonitor from "startFrameMonitor" /* 17231 */;
+import useMountTimerDefault from "useMountTimer" /* 17232 */;
+import useFrameMonitorDefault from "useFrameMonitor" /* 17233 */;
+import useBenchmarkResultsDefault from "useBenchmarkResults" /* 17234 */;
+import BenchmarkResultsListDefault from "BenchmarkResultsList" /* 17235 */;
+import ScrollBenchmarkDefault from "ScrollBenchmark" /* 17236 */;
+import MountMeasureDefault from "MountMeasure" /* 17237 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

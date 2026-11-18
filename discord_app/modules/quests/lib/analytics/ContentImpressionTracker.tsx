@@ -1,25 +1,25 @@
-// === Module 15084: ContentImpressionTracker ===
+// === Module 13685: ContentImpressionTracker ===
 
-// Module 15084 (ContentImpressionTracker)
-import MonitoringAgentDefault from "MonitoringAgent" /* 6769 */;
-import MetricEvents from "MetricEvents" /* 6774 */;
-import AdCreativeType from "AdCreativeType" /* 6969 */;
-import QuestDataUtils from "QuestDataUtils" /* 8815 */;
-import getQuestLogger from "getQuestLogger" /* 8827 */;
-import AnalyticsActions from "AnalyticsActions" /* 8836 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8845 */;
-import IosAttributionEligibility from "IosAttributionEligibility" /* 11286 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 11287 */;
-import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 11289 */;
-import IosAttributionMetrics from "IosAttributionMetrics" /* 11291 */;
+// Module 13685 (ContentImpressionTracker)
+import MonitoringAgentDefault from "MonitoringAgent" /* 6272 */;
+import MetricEvents from "MetricEvents" /* 6277 */;
+import AdCreativeType from "AdCreativeType" /* 6473 */;
+import QuestDataUtils from "QuestDataUtils" /* 8312 */;
+import getQuestLogger from "getQuestLogger" /* 8324 */;
+import AnalyticsActions from "AnalyticsActions" /* 8333 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8342 */;
+import IosAttributionEligibility from "IosAttributionEligibility" /* 10568 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 10569 */;
+import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 10571 */;
+import IosAttributionMetrics from "IosAttributionMetrics" /* 10573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 8819 */;
+import QuestStore from "QuestStore" /* 8316 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentImpressionTrackerConstants = fn(10581);
+const ContentImpressionTrackerConstants = fn(9862);
 ({ HEARTBEAT_SECONDS: closure_6, MIN_QUEST_VIEW_TIME_SECONDS: metroImportDefault, MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE: closure_8 } = ContentImpressionTrackerConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -113,10 +113,10 @@ class QuestContentImpression {
             } else {
               closure_1 = tmp5;
               closure_128_0 = undefined;
-              obj2 = tmp2(8846);
+              obj2 = tmp2(8343);
               dependencyMap = 1;
               c3 = 1;
-              let obj6 = { value: obj2.getAdUser(tmp2(8845).getQuestContentName(obj2.questContent)), done: false };
+              let obj6 = { value: obj2.getAdUser(tmp2(8342).getQuestContentName(obj2.questContent)), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -131,23 +131,23 @@ class QuestContentImpression {
             const adContentIds = closure_129_0.entity.adContentIds;
             const item = adContentIds.forEach((item, index) => {
               adUser.trackViewedPlacement(item);
-              if (adUser.entity.adCreativeType === obj2(6969).AdCreativeType.QUEST) {
+              if (adUser.entity.adCreativeType === obj2(6473).AdCreativeType.QUEST) {
                 quest = quest.getQuest(tmp6);
                 let isQuestExpiredResult = null == quest;
                 if (!isQuestExpiredResult) {
-                  isQuestExpiredResult = tmp4(8826).isQuestExpired(quest);
-                  const tmp4Result = tmp4(8826);
+                  isQuestExpiredResult = tmp4(8323).isQuestExpired(quest);
+                  const tmp4Result = tmp4(8323);
                 }
                 if (!isQuestExpiredResult) {
                   items = [tmp6];
-                  tmp4(10577).markAdContentSeen(tmp4(6969).AdCreativeType.QUEST, items);
-                  const tmp4Result8 = tmp4(10577);
+                  tmp4(9858).markAdContentSeen(tmp4(6473).AdCreativeType.QUEST, items);
+                  const tmp4Result8 = tmp4(9858);
                 }
               }
               const shouldExtendSessionResult = adUser.shouldExtendSession(item);
               const obj = { type: null };
-              const result = obj2(8815).isBillableQuestContent(adUser.questContent, adUser.entity.adCreativeType);
-              const AdUserActionType = tmp4(10582).AdUserActionType;
+              const result = obj2(8312).isBillableQuestContent(adUser.questContent, adUser.entity.adCreativeType);
+              const AdUserActionType = tmp4(9863).AdUserActionType;
               if (result) {
                 obj.type = AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION;
                 let tmp13 = obj;
@@ -161,21 +161,21 @@ class QuestContentImpression {
               obj2.shouldExtendSession = shouldExtendSessionResult;
               obj2.adUser = adUser;
               ({ questContentPosition: obj5.questContentPosition, questContentRowIndex: obj5.questContentRowIndex, trackGuildAndChannelMetadata: obj5.trackGuildAndChannelMetadata } = adUser);
-              if (adUser.entity.adCreativeType === obj2(6969).AdCreativeType.QUEST) {
+              if (adUser.entity.adCreativeType === obj2(6473).AdCreativeType.QUEST) {
                 const obj3 = {};
                 const merged1 = Object.assign(obj2);
                 obj3.adCreativeType = adUser.entity.adCreativeType;
                 obj3.adCreativeId = adUser.entity.adContentIds[index];
-                tmp4(10579).captureAdUserAction(obj3);
-                const tmp4Result10 = tmp4(10579);
+                tmp4(9860).captureAdUserAction(obj3);
+                const tmp4Result10 = tmp4(9860);
               } else if (null != adUser.entity.relatedQuestId) {
                 const obj4 = {};
                 const merged2 = Object.assign(obj2);
                 obj4.adCreativeType = adUser.entity.adCreativeType;
                 obj4.adCreativeId = adUser.entity.adContentIds[index];
                 obj4.relatedQuestId = adUser.entity.relatedQuestId;
-                tmp4(10579).captureAdUserAction(obj4);
-                const tmp4Result11 = tmp4(10579);
+                tmp4(9860).captureAdUserAction(obj4);
+                const tmp4Result11 = tmp4(9860);
               } else {
                 const obj6 = {};
                 const merged3 = Object.assign(obj2);
@@ -188,15 +188,15 @@ class QuestContentImpression {
                   obj8 = {};
                 }
                 const merged4 = Object.assign(obj8);
-                tmp4(10579).captureAdUserAction(obj6);
-                const tmp4Result12 = tmp4(10579);
+                tmp4(9860).captureAdUserAction(obj6);
+                const tmp4Result12 = tmp4(9860);
               }
-              const tmp4Result9 = obj2(8815);
-              const questLogger = obj2(8827).getQuestLogger();
-              const tmp4Result13 = obj2(8827);
-              questLogger.info("" + item + " ad content viewed for at least " + adUser.minViewTimeSeconds + "s at " + obj2(8845).getQuestContentName(adUser.questContent), { impressionId: adUser.id });
+              const tmp4Result9 = obj2(8312);
+              const questLogger = obj2(8324).getQuestLogger();
+              const tmp4Result13 = obj2(8324);
+              questLogger.info("" + item + " ad content viewed for at least " + adUser.minViewTimeSeconds + "s at " + obj2(8342).getQuestContentName(adUser.questContent), { impressionId: adUser.id });
               const obj9 = { impressionId: adUser.id };
-              const tmp4Result14 = obj2(8845);
+              const tmp4Result14 = obj2(8342);
             });
             if (closure_129_0.onImpressionCallback != null) {
               onImpressionCallback();
@@ -299,18 +299,18 @@ class QuestContentImpression {
       obj2.minViewTimeReachedTimeoutId = window.setTimeout(obj2.onMinViewTimeReached, 1000 * obj2.minViewTimeSeconds);
       const adContentIds = obj2.entity.adContentIds;
       const item = adContentIds.forEach((item, index) => {
-        const result = closure_1_0.maybeRegisterIosAttributionImpression(item, obj2(8815).getAdProvenanceMetadataSealed(closure_1_0.sourceQuestContent, item));
-        if (closure_1_0.entity.adCreativeType === obj2(6969).AdCreativeType.QUEST) {
+        const result = closure_1_0.maybeRegisterIosAttributionImpression(item, obj2(8312).getAdProvenanceMetadataSealed(closure_1_0.sourceQuestContent, item));
+        if (closure_1_0.entity.adCreativeType === obj2(6473).AdCreativeType.QUEST) {
           obj2 = { adCreativeType: closure_1_0.entity.adCreativeType, adCreativeId: closure_1_0.entity.adContentIds[index] };
           let obj3 = obj2;
         } else {
           obj3 = { adCreativeType: closure_1_0.entity.adCreativeType, adCreativeId: closure_1_0.entity.adContentIds[index], relatedQuestId: closure_1_0.entity.relatedQuestId, noFillDecision: closure_1_0.entity.noFillDecision };
         }
-        const obj = obj2(8815);
-        const tmpResult = obj2(10579);
+        const obj = obj2(8312);
+        const tmpResult = obj2(9860);
         const merged = Object.assign(obj3);
-        tmpResult.captureAdUserAction({ type: obj2(10582).AdUserActionType.END_CONTENT_LOAD, surfaceId: closure_1_0.questContent, sourceQuestContent: closure_1_0.sourceQuestContent, impressionId: closure_1_0.id, triggeredByStatusChange: closure_1_0.triggeredByStatusChange, trackGuildAndChannelMetadata: closure_1_0.trackGuildAndChannelMetadata, questContentPosition: closure_1_0.questContentPosition, questContentRowIndex: closure_1_0.questContentRowIndex });
-        const obj4 = { type: obj2(10582).AdUserActionType.END_CONTENT_LOAD, surfaceId: closure_1_0.questContent, sourceQuestContent: closure_1_0.sourceQuestContent, impressionId: closure_1_0.id, triggeredByStatusChange: closure_1_0.triggeredByStatusChange, trackGuildAndChannelMetadata: closure_1_0.trackGuildAndChannelMetadata, questContentPosition: closure_1_0.questContentPosition, questContentRowIndex: closure_1_0.questContentRowIndex };
+        tmpResult.captureAdUserAction({ type: obj2(9863).AdUserActionType.END_CONTENT_LOAD, surfaceId: closure_1_0.questContent, sourceQuestContent: closure_1_0.sourceQuestContent, impressionId: closure_1_0.id, triggeredByStatusChange: closure_1_0.triggeredByStatusChange, trackGuildAndChannelMetadata: closure_1_0.trackGuildAndChannelMetadata, questContentPosition: closure_1_0.questContentPosition, questContentRowIndex: closure_1_0.questContentRowIndex });
+        const obj4 = { type: obj2(9863).AdUserActionType.END_CONTENT_LOAD, surfaceId: closure_1_0.questContent, sourceQuestContent: closure_1_0.sourceQuestContent, impressionId: closure_1_0.id, triggeredByStatusChange: closure_1_0.triggeredByStatusChange, trackGuildAndChannelMetadata: closure_1_0.trackGuildAndChannelMetadata, questContentPosition: closure_1_0.questContentPosition, questContentRowIndex: closure_1_0.questContentRowIndex };
       });
       if (obj2.entity.adCreativeType !== AdCreativeType.AdCreativeType.NO_FILL) {
         obj2 = { name: MetricEvents.MetricEvents.QUEST_CONTENT_IMPRESSION, tags: null };

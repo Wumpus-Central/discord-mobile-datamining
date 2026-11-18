@@ -1,16 +1,16 @@
-// === Module 19322: ForYouLoadMore ===
+// === Module 18136: ForYouLoadMore ===
 
-// Module 19322 (ForYouLoadMore)
+// Module 18136 (ForYouLoadMore)
 import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5930 */;
+import components_Button_Button from "components/Button/Button" /* 5421 */;
 import noop from "module_19" /* 19 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7040 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6544 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c2, View: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", flexDirection: "row", justifyContent: "center", marginTop: 8, marginBottom: 24, marginHorizontal: 16, height: 42 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouLoadMore.tsx");

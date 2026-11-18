@@ -1,16 +1,16 @@
-// === Module 14660: ConjureTipGutterRow ===
+// === Module 18514: ConjureTipGutterRow ===
 
-// Module 14660 (ConjureTipGutterRow)
+// Module 18514 (ConjureTipGutterRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 14661 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 18515 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_6 = createStyles.createStyles((arg0, marginTop) => {
   const obj = { row: { flexDirection: "row", alignItems: "flex-start", paddingHorizontal: ConjureNativeStatusLine.MESSAGE_EDGE_INSET }, gutter: null, content: null };
   const size = { width: ConjureNativeStatusLine.MESSAGE_AVATAR_SIZE, marginRight: ConjureNativeStatusLine.MESSAGE_AVATAR_GAP, height: Text_Text.TextStyleSheet[arg0].lineHeight, marginTop, alignItems: "center", justifyContent: "center" };

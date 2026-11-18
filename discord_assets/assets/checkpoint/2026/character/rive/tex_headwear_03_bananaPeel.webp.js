@@ -1,6 +1,6 @@
-// === Module 13219: ? ===
+// === Module 12522: ? ===
 
-// Module 13219
+// Module 12522
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_headwear_03_bananaPeel.webp.js");

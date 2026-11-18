@@ -1,6 +1,6 @@
-// === Module 10703: ChannelTabPinScope ===
+// === Module 9984: ChannelTabPinScope ===
 
-// Module 10703 (ChannelTabPinScope)
+// Module 9984 (ChannelTabPinScope)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tabs/ChannelTabPinScope.tsx");

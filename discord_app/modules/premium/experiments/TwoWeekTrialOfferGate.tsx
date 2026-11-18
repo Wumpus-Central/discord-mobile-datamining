@@ -1,6 +1,6 @@
-// === Module 9325: TwoWeekTrialOfferGate ===
+// === Module 8736: TwoWeekTrialOfferGate ===
 
-// Module 9325 (TwoWeekTrialOfferGate)
+// Module 8736 (TwoWeekTrialOfferGate)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/experiments/TwoWeekTrialOfferGate.tsx");

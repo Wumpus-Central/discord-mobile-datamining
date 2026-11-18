@@ -1,19 +1,19 @@
-// === Module 18986: preloadChannelAppFrame ===
+// === Module 17797: preloadChannelAppFrame ===
 
-// Module 18986 (preloadChannelAppFrame)
-import getURLForApplicationDefault from "getURLForApplication" /* 5968 */;
-import AgeGateUtils from "AgeGateUtils" /* 6823 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6843 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 7030 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7063 */;
-import createProxyTicket from "createProxyTicket" /* 7351 */;
-import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 7352 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import PermissionStore from "PermissionStore" /* 5242 */;
-import FramesStore from "FramesStore" /* 7027 */;
+// Module 17797 (preloadChannelAppFrame)
+import getURLForApplicationDefault from "getURLForApplication" /* 5464 */;
+import AgeGateUtils from "AgeGateUtils" /* 6327 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6347 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6534 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6567 */;
+import createProxyTicket from "createProxyTicket" /* 6856 */;
+import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 6857 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import PermissionStore from "PermissionStore" /* 4755 */;
+import FramesStore from "FramesStore" /* 6531 */;
 
 require = fn;
-const FramesConstants = fn(7028);
+const FramesConstants = fn(6532);
 ({ getFrameSurfaceForChannel: closure_6, makeFrameId: metroImportDefault } = FramesConstants);
 const Constants = fn(1072);
 ({ ChannelTypes: closure_8, NOOP: closure_9, Permissions: closure_10 } = Constants);

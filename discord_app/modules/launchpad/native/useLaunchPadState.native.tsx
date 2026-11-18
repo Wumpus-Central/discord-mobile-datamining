@@ -1,19 +1,19 @@
-// === Module 19935: useLaunchPadState ===
+// === Module 19206: useLaunchPadState ===
 
-// Module 19935 (useLaunchPadState)
+// Module 19206 (useLaunchPadState)
 import _mod1708 from "module_1708" /* 1708 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 12432 */;
-import useSafeAreaInsetsSharedValue from "useSafeAreaInsetsSharedValue" /* 12449 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 13522 */;
-import LaunchPadPullTabCache2 from "LaunchPadPullTabCache" /* 19909 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11714 */;
+import useSafeAreaInsetsSharedValue from "useSafeAreaInsetsSharedValue" /* 11731 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12829 */;
+import LaunchPadPullTabCache2 from "LaunchPadPullTabCache" /* 19180 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LaunchPadConstants = fn(12608);
+const LaunchPadConstants = fn(11893);
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: closure_4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: hasOwnProperty } = LaunchPadConstants);
 let closure_6 = { active: false, initialLaunchPadPosition: 0, initialPullTabPosition: 0, initialTouchX: 0, initialTouchY: 0, positionOffsetX: 0, positionOffsetY: 0, startTime: -1, requiresPop: false, startShown: false };
 let obj = { position: null, scale: 1, offset: 0, minimized: false };
-const LaunchPadPullTabCache = fn(19909);
+const LaunchPadPullTabCache = fn(19180);
 obj.position = LaunchPadPullTabCache.getLaunchPadPullTabPositionCached();
 let closure_8 = { code: "(function setLaunchPadShown_useLaunchPadStateNativeTsx1(shown){let[launchPadShown]=this.__closure;launchPadShown.set(shown);})" };
 let closure_9 = { code: "(function setLaunchPadPosition_useLaunchPadStateNativeTsx2(value){let[launchPadSharedState]=this.__closure;launchPadSharedState.set(Math.max(Math.min(value,1),0));})" };

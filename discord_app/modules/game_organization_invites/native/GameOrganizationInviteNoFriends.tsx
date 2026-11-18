@@ -1,14 +1,14 @@
-// === Module 16443: GameOrganizationInviteNoFriends ===
+// === Module 15110: GameOrganizationInviteNoFriends ===
 
-// Module 16443 (GameOrganizationInviteNoFriends)
+// Module 15110 (GameOrganizationInviteNoFriends)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2565 from "module_2565" /* 2565 */;
-import RootNavigationRef from "RootNavigationRef" /* 5487 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import components_Button_Button from "components/Button/Button" /* 5930 */;
-import Stack_Stack from "Stack/Stack" /* 6335 */;
+import _modDef2555 from "module_2555" /* 2555 */;
+import RootNavigationRef from "RootNavigationRef" /* 5000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import components_Button_Button from "components/Button/Button" /* 5421 */;
+import Stack_Stack from "Stack/Stack" /* 5837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function handleAddFriends() {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { alignItems: "center", padding: nativeDefault.space.PX_48 }, centeredText: { textAlign: "center" } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -34,17 +34,17 @@ export default function GameOrganizationInviteNoFriends(noun) {
   const obj2 = { spacing: nativeDefault.space.PX_8, children: null };
   const obj3 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centeredText, children: null };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef2565["3qrm/9"]);
+  obj3.children = intl.string(_modDef2555["3qrm/9"]);
   items = [React3(Text_Text.Heading, obj3), ];
   const obj4 = { variant: "body-md/medium", color: "text-muted", style: tmp.centeredText, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.formatToPlainString(_modDef2565["NyR+6P"], { noun: noun.noun });
+  obj4.children = intl2.formatToPlainString(_modDef2555["NyR+6P"], { noun: noun.noun });
   items[1] = React3(Text_Text.Text, obj4);
   obj2.children = items;
   const items1 = [React4(Stack_Stack.Stack, obj2), ];
   const obj5 = { text: null, onPress: null };
   const intl3 = util.intl;
-  obj5.text = intl3.string(_modDef2565.kdLF2T);
+  obj5.text = intl3.string(_modDef2555.kdLF2T);
   obj5.onPress = handleAddFriends;
   items1[1] = React3(components_Button_Button.Button, obj5);
   obj.children = items1;

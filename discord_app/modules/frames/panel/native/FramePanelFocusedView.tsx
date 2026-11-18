@@ -1,20 +1,20 @@
-// === Module 19998: FramePanelFocusedView ===
+// === Module 19269: FramePanelFocusedView ===
 
-// Module 19998 (FramePanelFocusedView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11300 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 14595 */;
-import FrameStackLevel from "FrameStackLevel" /* 14599 */;
-import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 19481 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19979 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19995 */;
-import PlayableFrameBannerDefault from "PlayableFrameBanner" /* 20001 */;
+// Module 19269 (FramePanelFocusedView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10582 */;
+import FrameStackLevel from "FrameStackLevel" /* 15682 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 18457 */;
+import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 18757 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19250 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19266 */;
+import PlayableFrameBannerDefault from "PlayableFrameBanner" /* 19272 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 7027 */;
+import FramesStore from "FramesStore" /* 6531 */;
 
 require = fn;
-const FramesConstants = fn(7028);
+const FramesConstants = fn(6532);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
-const ActivityPanelModes = fn(5953).ActivityPanelModes;
+const ActivityPanelModes = fn(5449).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

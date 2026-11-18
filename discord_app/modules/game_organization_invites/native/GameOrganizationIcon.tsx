@@ -1,18 +1,19 @@
-// === Module 12900: GameOrganizationIcon ===
+// === Module 12047: GameOrganizationIcon ===
 
-// Module 12900 (GameOrganizationIcon)
+// Module 12047 (GameOrganizationIcon)
 import nativeDefault from "native" /* 575 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 2157 */;
-import FastImageDefault from "FastImage" /* 6014 */;
+import FastImageDefault from "FastImage" /* 5510 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
-let closure_7 = createStyles.createStyles((width, borderRadius) => {
-  const obj = { icon: null, placeholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL } };
+let obj = { guild: fn(12048).GuildFallbackAbstractUI, character: fn(12052).CharacterFallbackAbstractUI };
+const createStyles = fn(4823);
+let closure_8 = createStyles.createStyles((width, borderRadius) => {
+  obj = { icon: null };
   const size = { width, height: width, borderRadius, overflow: "hidden" };
   obj.icon = size;
   return obj;
@@ -22,42 +23,25 @@ const result = size.fileFinishedImporting("modules/game_organization_invites/nat
 
 export default function GameOrganizationIcon(iconUrl) {
   iconUrl = iconUrl.iconUrl;
-  let sm = iconUrl.borderRadius;
-  if (sm === undefined) {
-    sm = nativeDefault.radii.sm;
+  ({ size, borderRadius } = iconUrl);
+  if (borderRadius === undefined) {
+    borderRadius = nativeDefault.radii.sm;
   }
-  let num = iconUrl.size;
-  if (num === undefined) {
-    num = 48;
-  }
-  const fallback = iconUrl.fallback;
-  let icon = closure_7(num, sm);
-  const tmp3 = _slicedToArray(noop.useState(null), 2);
-  closure_1 = tmp3[1];
+  const tmp3 = closure_8(size, borderRadius);
+  const tmp4 = _slicedToArray(noop.useState(null), 2);
+  closure_1 = tmp4[1];
   [][0] = iconUrl;
   if (null != iconUrl) {
-    if (iconUrl !== tmp3[0]) {
-      const obj = { source: null, style: null, resizeMode: "cover", accessible: false, onError: null };
+    if (iconUrl !== tmp4[0]) {
+      obj = { source: null, style: null, resizeMode: "cover", accessible: false, onError: null };
       const obj2 = { uri: null };
-      const obj4 = { size: num };
+      const obj4 = { size };
       obj2.uri = ImageProxyUtils.getSizedImageAssetURL(iconUrl, obj4);
       obj.source = obj2;
-      obj.style = icon.icon;
-      obj.onError = tmp4;
-      return <tmp8 source={null} style={null} resizeMode="cover" accessible={false} onError={null} />;
+      obj.style = tmp3.icon;
+      obj.onError = tmp5;
+      return <tmp9 source={null} style={null} resizeMode="cover" accessible={false} onError={null} />;
     }
   }
-  if (null != fallback) {
-    const obj5 = { style: null, children: null };
-    icon = icon.icon;
-    obj5.style = icon;
-    obj5.children = fallback;
-    let obj6 = obj5;
-  } else {
-    obj6 = { style: null };
-    items = [, ];
-    ({ icon: arr[0], placeholder: arr[1] } = icon);
-    obj6.style = items;
-  }
-  <View {...obj6} />;
+  return <View style={tmp3.icon}>{jsx(obj[iconUrl.fallback], { width: size, height: size, accessible: false })}</View>;
 };

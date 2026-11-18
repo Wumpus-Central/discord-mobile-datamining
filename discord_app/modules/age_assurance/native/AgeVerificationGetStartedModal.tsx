@@ -1,14 +1,14 @@
-// === Module 8400: AgeVerificationGetStartedModal ===
+// === Module 12349: AgeVerificationGetStartedModal ===
 
-// Module 8400 (AgeVerificationGetStartedModal)
+// Module 12349 (AgeVerificationGetStartedModal)
 import nativeDefault from "native" /* 575 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6818 */;
-import NavigatorHeader from "NavigatorHeader" /* 7503 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6322 */;
+import NavigatorHeader from "NavigatorHeader" /* 7006 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
 let closure_5 = createStyles.createStyles(obj2);
 let obj4 = { INTRO: "INTRO", RETRY: "RETRY", EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO", GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION" };

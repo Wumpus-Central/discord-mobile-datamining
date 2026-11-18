@@ -1,10 +1,10 @@
-// === Module 18204: AdvancedSetting ===
+// === Module 17006: AdvancedSetting ===
 
-// Module 18204 (AdvancedSetting)
+// Module 17006 (AdvancedSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import SettingsIcon from "SettingsIcon" /* 11049 */;
-import SettingBuilders from "SettingBuilders" /* 12612 */;
+import SettingsIcon from "SettingsIcon" /* 10331 */;
+import SettingBuilders from "SettingBuilders" /* 11897 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

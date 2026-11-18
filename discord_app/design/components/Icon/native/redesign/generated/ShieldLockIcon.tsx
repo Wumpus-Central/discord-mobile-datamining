@@ -1,9 +1,9 @@
-// === Module 15120: ShieldLockIcon ===
+// === Module 13746: ShieldLockIcon ===
 
-// Module 15120 (ShieldLockIcon)
+// Module 13746 (ShieldLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6013 */;
-import _mod15121 from "module_15121" /* 15121 */;
+import BaseIconImage from "BaseIconImage" /* 5509 */;
+import _mod13747 from "module_13747" /* 13747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ShieldLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15121, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13747, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

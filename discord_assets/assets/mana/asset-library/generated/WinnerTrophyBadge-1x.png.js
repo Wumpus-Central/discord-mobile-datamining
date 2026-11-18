@@ -1,6 +1,6 @@
-// === Module 15139: ? ===
+// === Module 13765: ? ===
 
-// Module 15139
+// Module 13765
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-1x.png.js");

@@ -1,19 +1,19 @@
-// === Module 8269: AgeVerificationSpotIllustration ===
+// === Module 7771: AgeVerificationSpotIllustration ===
 
-// Module 8269 (AgeVerificationSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7765 */;
-import _modDef8270 from "module_8270" /* 8270 */;
-import _modDef8271 from "module_8271" /* 8271 */;
-import _modDef8272 from "module_8272" /* 8272 */;
+// Module 7771 (AgeVerificationSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7268 */;
+import _modDef7772 from "module_7772" /* 7772 */;
+import _modDef7773 from "module_7773" /* 7773 */;
+import _modDef7774 from "module_7774" /* 7774 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef8270 }, 3: null };
-let obj2 = { uri: _modDef8270 };
-obj[2] = { uri: _modDef8271 };
-const obj3 = { uri: _modDef8271 };
-obj[3] = { uri: _modDef8272 };
+let obj = { 1: null, 2: { uri: _modDef7772 }, 3: null };
+let obj2 = { uri: _modDef7772 };
+obj[2] = { uri: _modDef7773 };
+const obj3 = { uri: _modDef7773 };
+obj[3] = { uri: _modDef7774 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AgeVerificationSpotIllustration.native.tsx");
 

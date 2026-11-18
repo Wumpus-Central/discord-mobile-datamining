@@ -1,15 +1,15 @@
-// === Module 17287: SettingsAgeGroupScreen ===
+// === Module 15944: SettingsAgeGroupScreen ===
 
-// Module 17287 (SettingsAgeGroupScreen)
+// Module 15944 (SettingsAgeGroupScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import _modDef3323 from "module_3323" /* 3323 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8201 */;
-import SettingBuilders from "SettingBuilders" /* 12612 */;
-import SettingLayoutDefault from "SettingLayout" /* 17250 */;
-import AgeNoticeAgeGroupHeader2 from "AgeNoticeAgeGroupHeader" /* 17288 */;
+import _modDef3343 from "module_3343" /* 3343 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7704 */;
+import SettingBuilders from "SettingBuilders" /* 11897 */;
+import SettingLayoutDefault from "SettingLayout" /* 15907 */;
+import AgeNoticeAgeGroupHeader2 from "AgeNoticeAgeGroupHeader" /* 15945 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,34 +21,34 @@ function SettingsAgeGroupHeader() {
   }, []);
   const obj2 = { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3323.PY4MA0);
+  obj2.children = intl.string(_modDef3343.PY4MA0);
   items = [metroImportDefault(Text_Text.Text, obj2), ];
   const obj3 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3323["1DN29p"], { handleOnHelpUrlHook: callback });
+  obj3.children = intl2.format(_modDef3343["1DN29p"], { handleOnHelpUrlHook: callback });
   items[1] = metroImportDefault(Text_Text.Text, obj3);
   obj.children = items;
   return React5(View, obj);
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(9213).MobileUserSettings;
+const MobileUserSettings = fn(8624).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { headerContainer: { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(17246).useIsAgeNoticeSettingsEnabled();
+  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(15903).useIsAgeNoticeSettingsEnabled();
   items = [isAgeNoticeSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };
     const obj3 = { label: null, settings: null };
     const intl = util.intl;
-    obj3.label = intl.string(_modDef3323["5Mi5TE"]);
+    obj3.label = intl.string(_modDef3343["5Mi5TE"]);
     items = [, , ];
     ({ AGE_GROUP_CONFIRM: arr[0], AGE_GROUP_RESET: arr[1], AGE_GROUP_CONFIRM_ACCOUNT_STATUS: arr[2] } = MobileUserSettings);
     obj3.settings = items;

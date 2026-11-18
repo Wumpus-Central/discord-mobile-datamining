@@ -1,26 +1,26 @@
-// === Module 13748: DMMessageStickerGreeting ===
+// === Module 13055: DMMessageStickerGreeting ===
 
-// Module 13748 (DMMessageStickerGreeting)
+// Module 13055 (DMMessageStickerGreeting)
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 5366 */;
-import StickersActionCreators from "StickersActionCreators" /* 12047 */;
+import UserUtilsDefault from "UserUtils" /* 4879 */;
+import StickersActionCreators from "StickersActionCreators" /* 11329 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 7018 */;
-import MessageStore from "MessageStore" /* 6370 */;
+import StickersStore from "StickersStore" /* 6522 */;
+import MessageStore from "MessageStore" /* 5872 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
 const _modDef1655 = tmp5(1655);
-const LinearGradientDefault = tmp5(5887);
-const StickerDefault = tmp5(11843);
+const LinearGradientDefault = tmp5(5378);
+const StickerDefault = tmp5(11125);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_13 = createStyles.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
@@ -30,7 +30,7 @@ let closure_13 = createStyles.createStyles((arg0) => {
   return obj;
 });
 let c14 = "749054660769218631";
-const END = fn(5480).GradientPercentage.END;
+const END = fn(4993).GradientPercentage.END;
 let closure_16 = { code: "(function DMMessageStickerGreetingTsx1(){let[styles,isRendered,hasInputText,hasMessages,HEIGHT_COMPACT,HEIGHT_FULL,withDelay,withTiming,STANDARD_EASING]=this.__closure;const gradientOverlayOffset=styles.gradient.height;const hasHeight=isRendered&&!hasInputText;const heightExpanded=(hasMessages?HEIGHT_COMPACT:HEIGHT_FULL)-1;const targetHeight=hasHeight?heightExpanded+gradientOverlayOffset:0;const targetMargin=hasHeight?-gradientOverlayOffset:0;function generateAnimationConfig(value){return withDelay(300,withTiming(value,{easing:STANDARD_EASING,duration:250}));}return{justifyContent:'flex-end',overflow:'hidden',marginTop:generateAnimationConfig(targetMargin),height:generateAnimationConfig(targetHeight)};})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/DMMessageStickerGreeting.tsx");
@@ -60,8 +60,8 @@ export default function DMMessageStickerGreeting(channel) {
   }
   const intl2 = Text(1113).intl;
   const formatToPlainStringResult = intl2.formatToPlainString(Text(1113).t.m0zYbV, { username: name });
-  const showConvoStarterInDM = Text(13750).useShowConvoStarterInDM(channel);
-  const TextResult = Text(13750);
+  const showConvoStarterInDM = Text(13057).useShowConvoStarterInDM(channel);
+  const TextResult = Text(13057);
   const items2 = [c7];
   const items3 = [showConvoStarterInDM];
   const stateFromStores2 = Text(504).useStateFromStores(items2, () => {
@@ -120,8 +120,8 @@ export default function DMMessageStickerGreeting(channel) {
               if (closure_1_1 !== text) {
                 dependencyMap(text);
               }
-              closure_1(6009).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
-              const obj = closure_1(6009);
+              closure_1(5505).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
+              const obj = closure_1(5505);
               const obj2 = { text, variant: "critical" };
             }
             closure_128_0 = showErrorToast;
@@ -187,7 +187,7 @@ export default function DMMessageStickerGreeting(channel) {
     _undefined(true);
   }, items7);
   const TextResult1 = Text(504);
-  const items8 = [closure_16, toastContent, tmp16[0], channel.hasInputText, stateFromStores, 72, 180, Text(1655).withDelay, Text(5542).withTiming, Text(1187).STANDARD_EASING];
+  const items8 = [closure_16, toastContent, tmp16[0], channel.hasInputText, stateFromStores, 72, 180, Text(1655).withDelay, Text(5033).withTiming, Text(1187).STANDARD_EASING];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -237,16 +237,16 @@ export default function DMMessageStickerGreeting(channel) {
   DMMessageStickerGreetingTsx1.__initData = tmp19;
   const animatedStyle = Text(1655).useAnimatedStyle(DMMessageStickerGreetingTsx1);
   const TextResult2 = Text(1655);
-  let BACKGROUND_BASE_LOWER = Text(5480).useGradientValue(END);
-  const TextResult3 = Text(5480);
+  let BACKGROUND_BASE_LOWER = Text(4993).useGradientValue(END);
+  const TextResult3 = Text(4993);
   if (BACKGROUND_BASE_LOWER == null) {
     BACKGROUND_BASE_LOWER = nativeDefault.colors.BACKGROUND_BASE_LOWER;
   }
-  const token = Text(5896).useToken(BACKGROUND_BASE_LOWER);
-  const TextResult4 = Text(5896);
-  const items10 = [Text(5307).hexWithOpacity(token, 0), token];
-  const TextResult5 = Text(5307);
-  const shouldAnimateSticker = Text(12046).useShouldAnimateSticker(false);
+  const token = Text(5387).useToken(BACKGROUND_BASE_LOWER);
+  const TextResult4 = Text(5387);
+  const items10 = [Text(4820).hexWithOpacity(token, 0), token];
+  const TextResult5 = Text(4820);
+  const shouldAnimateSticker = Text(11328).useShouldAnimateSticker(false);
   if (!showConvoStarterInDM) {
     return null;
   } else {
@@ -266,7 +266,7 @@ export default function DMMessageStickerGreeting(channel) {
         tmp33Result = closure_10(tmp5, obj9);
       }
       callback = [tmp33Result, ];
-      Text = Text(5923).Text;
+      Text = Text(5414).Text;
       const obj10 = { style: null, variant: "body-md/semibold", children: null };
       toastContent = toastContent.toastContent;
       obj10.style = toastContent;
@@ -274,7 +274,7 @@ export default function DMMessageStickerGreeting(channel) {
       tmp = closure_10(Text, obj10);
       callback[1] = tmp;
       obj8.children = callback;
-      let tmp32Result = closure_11(Text(7438).PressableOpacity, obj8);
+      let tmp32Result = closure_11(Text(6941).PressableOpacity, obj8);
     } else {
       let tmp33Result2 = null;
       if (null != stateFromStores2) {
@@ -286,7 +286,7 @@ export default function DMMessageStickerGreeting(channel) {
       const obj13 = { children: null };
       const items12 = [tmp33Result2, ];
       const obj14 = { text: formatToPlainStringResult, onPress: callback, shrink: true };
-      items12[1] = closure_10(Text(5930).Button, obj14);
+      items12[1] = closure_10(Text(5421).Button, obj14);
       obj13.children = items12;
       tmp32Result = closure_11(closure_12, obj13);
     }
@@ -296,5 +296,5 @@ export default function DMMessageStickerGreeting(channel) {
     obj5.children = items11;
     closure_11(_modDef1655.View, obj5);
   }
-  const TextResult6 = Text(12046);
+  const TextResult6 = Text(11328);
 };

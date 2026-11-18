@@ -1,10 +1,10 @@
-// === Module 20434: FriendsActionCreators ===
+// === Module 19707: FriendsActionCreators ===
 
-// Module 20434 (FriendsActionCreators)
+// Module 19707 (FriendsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import router_utils from "router_utils" /* 1099 */;
-import trackFriendListClickedDefault from "trackFriendListClicked" /* 19643 */;
+import trackFriendListClickedDefault from "trackFriendListClicked" /* 18919 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;

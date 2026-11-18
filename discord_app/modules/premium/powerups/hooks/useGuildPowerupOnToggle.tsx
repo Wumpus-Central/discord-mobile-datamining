@@ -1,7 +1,7 @@
-// === Module 14049: useGuildPowerupOnToggle ===
+// === Module 13353: useGuildPowerupOnToggle ===
 
-// Module 14049 (useGuildPowerupOnToggle)
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14003 */;
+// Module 13353 (useGuildPowerupOnToggle)
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13305 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 16439: GameOrganizationActionCreators ===
+// === Module 15106: GameOrganizationActionCreators ===
 
-// Module 16439 (GameOrganizationActionCreators)
+// Module 15106 (GameOrganizationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

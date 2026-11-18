@@ -1,8 +1,8 @@
-// === Module 7308: NativeRPCServer ===
+// === Module 6813: NativeRPCServer ===
 
-// Module 7308 (NativeRPCServer)
-import root from "root" /* 7309 */;
-import RPCServerDefault from "RPCServer" /* 7310 */;
+// Module 6813 (NativeRPCServer)
+import root from "root" /* 6814 */;
+import RPCServerDefault from "RPCServer" /* 6815 */;
 
 require = fn;
 const size = fn(2);

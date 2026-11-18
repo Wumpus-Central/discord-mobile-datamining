@@ -1,15 +1,15 @@
-// === Module 11664: VoiceChannelEffectsActionCreators ===
+// === Module 10946: VoiceChannelEffectsActionCreators ===
 
-// Module 11664 (VoiceChannelEffectsActionCreators)
-import EmojiStore from "EmojiStore" /* 6977 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5213 */;
-import VoiceChannelEffectsPersistedStore from "VoiceChannelEffectsPersistedStore" /* 11665 */;
+// Module 10946 (VoiceChannelEffectsActionCreators)
+import EmojiStore from "EmojiStore" /* 6481 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4726 */;
+import VoiceChannelEffectsPersistedStore from "VoiceChannelEffectsPersistedStore" /* 10947 */;
 
 const require = fn;
-const constants = fn(11421).VoiceChannelEffectAnimationType;
+const constants = fn(10703).VoiceChannelEffectAnimationType;
 const Constants = fn(1072);
 ({ Endpoints: metroImportDefault, NOOP_NULL: closure_8 } = Constants);
-const DEFAULT_SOUND_GUILD_ID = fn(6369).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5871).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsActionCreators.tsx");
 
@@ -27,17 +27,17 @@ export function sendVoiceChannelCustomCallSoundEffect(id, sound, arg2) {
       abortController.abort();
     }
   }, 1000);
-  obj2.animation_id = abortController(11420).sampleAnimationId(BASIC, abortController(11420).CUSTOM_CALL_SOUND_ANIMATION_RANGE);
+  obj2.animation_id = abortController(10702).sampleAnimationId(BASIC, abortController(10702).CUSTOM_CALL_SOUND_ANIMATION_RANGE);
   const HTTP = tmp2(1285).HTTP;
   const request = { url: closure_7.CUSTOM_CALL_SOUNDS(id), body: obj2, signal: abortController.signal, onRequestProgress: throttleResult, rejectWithError: true };
-  const tmp2Result = abortController(11420);
+  const tmp2Result = abortController(10702);
   HTTP.post(request).then(closure_8, () => {
 
   });
   const postResult = HTTP.post(request);
-  items = [abortController(7947).CHANNEL_CALL];
-  abortController(11666)(items, arg2, sound, abortController(7235).AnalyticsSoundType.ENTRY);
-  const tmp7 = abortController(11666);
+  items = [abortController(7450).CHANNEL_CALL];
+  abortController(10948)(items, arg2, sound, abortController(6739).AnalyticsSoundType.ENTRY);
+  const tmp7 = abortController(10948);
 }
 export function sendVoiceChannelSoundboardEffect(id, emojiId, arg2, items, arg4) {
   let customEmojiById = null;
@@ -83,8 +83,8 @@ export function sendVoiceChannelSoundboardEffect(id, emojiId, arg2, items, arg4)
   if (items == null) {
     items = [];
   }
-  abortController(11666)(items, arg2, emojiId, abortController(7235).AnalyticsSoundType.DEFAULT, arg4);
-  const tmp9 = abortController(11666);
+  abortController(10948)(items, arg2, emojiId, abortController(6739).AnalyticsSoundType.DEFAULT, arg4);
+  const tmp9 = abortController(10948);
 }
 export function sendVoiceChannelSoundboardEcho(id, soundId, arg2, arg3) {
   items = arg3;
@@ -116,6 +116,6 @@ export function sendVoiceChannelSoundboardEcho(id, soundId, arg2, arg3) {
   if (arg3 == null) {
     items = [];
   }
-  abortController(11666)(items, arg2, soundId, tmp2(7235).AnalyticsSoundType.ECHO);
-  const tmp6 = abortController(11666);
+  abortController(10948)(items, arg2, soundId, tmp2(6739).AnalyticsSoundType.ECHO);
+  const tmp6 = abortController(10948);
 }

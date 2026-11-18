@@ -1,13 +1,13 @@
-// === Module 16441: useGameOrganizationInviteSuggestions ===
+// === Module 15108: useGameOrganizationInviteSuggestions ===
 
-// Module 16441 (useGameOrganizationInviteSuggestions)
-import InstantInviteUtils from "InstantInviteUtils" /* 8474 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 13809 */;
+// Module 15108 (useGameOrganizationInviteSuggestions)
+import InstantInviteUtils from "InstantInviteUtils" /* 7965 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 13116 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 13810 */;
-import RelationshipStore from "RelationshipStore" /* 5252 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 13117 */;
+import RelationshipStore from "RelationshipStore" /* 4765 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -80,7 +80,7 @@ export default function useGameOrganizationInviteSuggestions() {
               obj5.omitUserIds = set;
               c4 = 3;
               c5 = 1;
-              const obj6 = { value: closure_2_0(13809).loadInviteSuggestions(obj5), done: false };
+              const obj6 = { value: closure_2_0(13116).loadInviteSuggestions(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp8) {
@@ -117,8 +117,8 @@ export default function useGameOrganizationInviteSuggestions() {
             c3 = 0;
             tmp4(false);
             if ("" !== tmp31.current) {
-              const result = closure_2_0(13809).searchInviteSuggestions(tmp31.current);
-              const obj = closure_2_0(13809);
+              const result = closure_2_0(13116).searchInviteSuggestions(tmp31.current);
+              const obj = closure_2_0(13116);
             }
             c5 = 3;
             return { value: "HermesInternal", done: null };

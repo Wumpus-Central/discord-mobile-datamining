@@ -1,16 +1,16 @@
-// === Module 7457: DragHandle ===
+// === Module 6960: DragHandle ===
 
-// Module 7457 (DragHandle)
+// Module 6960 (DragHandle)
 import apply from "apply" /* 12 */;
 import util from "util" /* 1113 */;
-import BaseIconButton from "BaseIconButton" /* 7458 */;
-import DragIcon from "DragIcon" /* 7459 */;
+import BaseIconButton from "BaseIconButton" /* 6961 */;
+import DragIcon from "DragIcon" /* 6962 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let closure_3 = ["onPress", "onPressIn", "onPressOut", "onLongPress"];
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_4 = createStyles.createStyles({ stretchButton: { flexDirection: "row", alignItems: "stretch", alignSelf: "stretch" }, stretchPill: { height: "100%", alignSelf: "stretch" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/DragHandle/native/DragHandle.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 20201: NativeCaptchaManagerModule ===
+// === Module 19472: NativeCaptchaManagerModule ===
 
-// Module 20201 (NativeCaptchaManagerModule)
+// Module 19472 (NativeCaptchaManagerModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

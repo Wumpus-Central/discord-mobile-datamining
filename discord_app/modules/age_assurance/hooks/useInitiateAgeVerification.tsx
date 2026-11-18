@@ -1,8 +1,8 @@
-// === Module 8267: useInitiateAgeVerification ===
+// === Module 7769: useInitiateAgeVerification ===
 
-// Module 8267 (useInitiateAgeVerification)
+// Module 7769 (useInitiateAgeVerification)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8215 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7718 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -170,7 +170,7 @@ function useAgeVerificationRunner(onComplete) {
   };
 }
 const AbortCodes = fn(1072).AbortCodes;
-const SafetyToastType = fn(6908).SafetyToastType;
+const SafetyToastType = fn(6412).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/hooks/useInitiateAgeVerification.tsx");
 

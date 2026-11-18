@@ -1,14 +1,14 @@
-// === Module 12443: ChatViewWrapperAnimatedKeyboard ===
+// === Module 11725: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 12443 (ChatViewWrapperAnimatedKeyboard)
+// Module 11725 (ChatViewWrapperAnimatedKeyboard)
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5542 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5908 */;
-import LayerScope from "LayerScope" /* 5910 */;
-import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 12444 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 12454 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 12456 */;
-import StickyWrapper from "StickyWrapper" /* 12457 */;
+import timing_timing from "timing/timing" /* 5033 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5399 */;
+import LayerScope from "LayerScope" /* 5401 */;
+import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 11726 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11736 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 11738 */;
+import StickyWrapper from "StickyWrapper" /* 11739 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const Easing = fn(1655).Easing;
-let obj = { duration: fn(5545).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
+let obj = { duration: fn(5036).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
 let closure_8 = { code: "(function ChatViewWrapperAnimatedKeyboardTsx1(){let[animatedHeight]=this.__closure;return animatedHeight.get();})" };
 let closure_9 = { code: "(function ChatViewWrapperAnimatedKeyboardTsx2(height,heightPrev){let[animatedAdjustedMargin,animatedAdjustedMarginPending]=this.__closure;if(heightPrev==null){return;}if(height<heightPrev){animatedAdjustedMargin.set(height);animatedAdjustedMarginPending.set(-1);}else{animatedAdjustedMarginPending.set(height);}})" };
 let closure_10 = { code: "(function ChatViewWrapperAnimatedKeyboardTsx3(finished){let[animatedAdjustedMarginPending,animatedAdjustedMargin]=this.__closure;if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}})" };

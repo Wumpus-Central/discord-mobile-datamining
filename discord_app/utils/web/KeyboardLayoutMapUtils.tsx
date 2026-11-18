@@ -1,9 +1,9 @@
-// === Module 16605: KeyboardLayoutMapUtils ===
+// === Module 15288: KeyboardLayoutMapUtils ===
 
-// Module 16605 (KeyboardLayoutMapUtils)
+// Module 15288 (KeyboardLayoutMapUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
-import keyCodeDefault from "keyCode" /* 16604 */;
+import keyCodeDefault from "keyCode" /* 15287 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1362 */;
@@ -346,7 +346,7 @@ function getExactKeyboardEventMatchFromAny(key) {
   }
   return tmp4;
 }
-const KeyboardConstants = fn(8718);
+const KeyboardConstants = fn(8209);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
 const logger = new LoggerDefault("KeyboardLayoutMapUtils");
 const PlatformUtils = fn(1380);

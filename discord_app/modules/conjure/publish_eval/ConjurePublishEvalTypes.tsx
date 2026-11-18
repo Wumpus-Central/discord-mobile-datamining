@@ -1,6 +1,6 @@
-// === Module 14407: ConjurePublishEvalTypes ===
+// === Module 18310: ConjurePublishEvalTypes ===
 
-// Module 14407 (ConjurePublishEvalTypes)
+// Module 18310 (ConjurePublishEvalTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish_eval/ConjurePublishEvalTypes.tsx");

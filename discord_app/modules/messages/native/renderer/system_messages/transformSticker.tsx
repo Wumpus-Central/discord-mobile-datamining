@@ -1,8 +1,8 @@
-// === Module 9236: transformSticker ===
+// === Module 8647: transformSticker ===
 
-// Module 9236 (transformSticker)
+// Module 8647 (transformSticker)
 import util from "util" /* 1113 */;
-import StickersConstants from "StickersConstants" /* 5138 */;
+import StickersConstants from "StickersConstants" /* 4651 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -26,7 +26,7 @@ export function transformSticker(tmp2Result4) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp(9237).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp(8648).NativeLottieRenderMode;
   obj.renderMode = setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
   const obj2 = { isPreview: setting !== StickerAnimationSettings.ALWAYS_ANIMATE };
   const tmpResult = require("StickersUtils");

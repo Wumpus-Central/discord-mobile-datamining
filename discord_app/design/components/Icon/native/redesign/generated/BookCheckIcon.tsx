@@ -1,9 +1,9 @@
-// === Module 8084: BookCheckIcon ===
+// === Module 7587: BookCheckIcon ===
 
-// Module 8084 (BookCheckIcon)
+// Module 7587 (BookCheckIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6013 */;
-import _mod8071 from "module_8071" /* 8071 */;
+import BaseIconImage from "BaseIconImage" /* 5509 */;
+import _mod7574 from "module_7574" /* 7574 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BookCheckIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8071, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7574, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

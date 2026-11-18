@@ -1,11 +1,11 @@
-// === Module 8144: DefaultChannelThresholdUtils ===
+// === Module 7647: DefaultChannelThresholdUtils ===
 
-// Module 8144 (DefaultChannelThresholdUtils)
+// Module 7647 (DefaultChannelThresholdUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7878 */;
+import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7381 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7879 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7382 */;
 
 require = fn;
 let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0) {
@@ -329,7 +329,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
     }
   })();
 };
-let closure_7 = fn(7226).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+let closure_7 = fn(6730).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: closure_9 } = Constants);
 const size = fn(2);

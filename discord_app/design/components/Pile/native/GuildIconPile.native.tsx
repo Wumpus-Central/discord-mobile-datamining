@@ -1,11 +1,11 @@
-// === Module 14160: GuildIconPile ===
+// === Module 13464: GuildIconPile ===
 
-// Module 14160 (GuildIconPile)
-import GuildIcon from "GuildIcon" /* 7730 */;
-import ClipView from "ClipView" /* 9515 */;
-import Pile from "Pile" /* 10744 */;
-import PileOverflow from "PileOverflow" /* 10745 */;
-import ListUtils from "ListUtils" /* 12952 */;
+// Module 13464 (GuildIconPile)
+import GuildIcon from "GuildIcon" /* 7233 */;
+import ClipView from "ClipView" /* 8929 */;
+import Pile from "Pile" /* 10025 */;
+import PileOverflow from "PileOverflow" /* 10026 */;
+import ListUtils from "ListUtils" /* 12239 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

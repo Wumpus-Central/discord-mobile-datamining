@@ -1,17 +1,17 @@
-// === Module 13532: useCanShowAppLauncherOnboarding ===
+// === Module 12839: useCanShowAppLauncherOnboarding ===
 
-// Module 13532 (useCanShowAppLauncherOnboarding)
+// Module 12839 (useCanShowAppLauncherOnboarding)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5530 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5444 */;
 import UserStore from "UserStore" /* 1388 */;
-import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 13533 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 13534 */;
+import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12840 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12841 */;
 
 const require = fn;
-const BuiltInSectionId = fn(6343).BuiltInSectionId;
+const BuiltInSectionId = fn(5845).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;
 let closure_12 = 14 * DurationsDefault.Millis.DAY;
@@ -59,10 +59,10 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   }
   const items4 = [];
   if (!tmp16) {
-    items4.push(tmp2(5143).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
+    items4.push(tmp2(4656).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
   }
   const tmp2Result10 = channelId(504);
-  const tmp2Result11 = channelId(9572);
+  const tmp2Result11 = channelId(8986);
   const items5 = [AppLauncherOnboardingStore];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(items5, () => ({ recentMessageMetadata: AppLauncherOnboardingStore.getRecentMessageMetadata(), recentApplicationCommandMetadata: AppLauncherOnboardingStore.getRecentApplicationCommandMetadata() }));
   ({ recentMessageMetadata, recentApplicationCommandMetadata } = stateFromStoresObject);
@@ -95,12 +95,12 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     const applicationId = recentApplicationCommandMetadata.applicationId;
   }
   const tmp2Result13 = channelId(504);
-  result = channelId(5342).useIsDismissibleContentDismissed_UNSAFE(tmp2(5143).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
-  const tmp2Result14 = channelId(5342);
-  let result1 = channelId(5342).useIsDismissibleContentDismissed_UNSAFE(tmp2(5143).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
-  const tmp2Result15 = channelId(5342);
+  result = channelId(4855).useIsDismissibleContentDismissed_UNSAFE(tmp2(4656).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
+  const tmp2Result14 = channelId(4855);
+  let result1 = channelId(4855).useIsDismissibleContentDismissed_UNSAFE(tmp2(4656).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
+  const tmp2Result15 = channelId(4855);
   let tmp30 = null != stateFromStores4;
-  const result2 = channelId(5342).useIsDismissibleContentDismissed_UNSAFE(tmp2(5143).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
+  const result2 = channelId(4855).useIsDismissibleContentDismissed_UNSAFE(tmp2(4656).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
   if (tmp30) {
     tmp30 = stateFromStores4.channelId === channelId;
   }
@@ -142,7 +142,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
       obj2.canShowOnboarding = true;
       obj2.canShowAppsOrActivitiesBanner = true;
     }
-    if (_slicedToArray(tmp2Result11.useSelectedDismissibleContent(items4), 1)[0] === tmp2(5143).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING) {
+    if (_slicedToArray(tmp2Result11.useSelectedDismissibleContent(items4), 1)[0] === tmp2(4656).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING) {
       obj2.willShowGlobalSearchOnboarding = true;
       obj2.canShowOnboarding = true;
     }

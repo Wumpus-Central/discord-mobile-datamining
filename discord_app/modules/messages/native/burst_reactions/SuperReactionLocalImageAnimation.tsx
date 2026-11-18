@@ -1,8 +1,8 @@
-// === Module 15494: SuperReactionLocalImageAnimation ===
+// === Module 14122: SuperReactionLocalImageAnimation ===
 
-// Module 15494 (SuperReactionLocalImageAnimation)
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 5268 */;
-import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 5916 */;
+// Module 14122 (SuperReactionLocalImageAnimation)
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 4781 */;
+import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 5407 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

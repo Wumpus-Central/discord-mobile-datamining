@@ -1,14 +1,14 @@
-// === Module 7244: conjureServerProject ===
+// === Module 6748: conjureServerProject ===
 
-// Module 7244 (conjureServerProject)
-import ConjureActivity from "ConjureActivity" /* 7245 */;
-import conjurePageRoutes from "conjurePageRoutes" /* 7246 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5343 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
+// Module 6748 (conjureServerProject)
+import ConjureActivity from "ConjureActivity" /* 6749 */;
+import conjurePageRoutes from "conjurePageRoutes" /* 6750 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4856 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
 
 require = fn;
-const isProjectOwner = fn(7025).isProjectOwner;
+const isProjectOwner = fn(6529).isProjectOwner;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/server_workspace/conjureServerProject.tsx");
 

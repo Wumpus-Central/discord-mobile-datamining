@@ -1,6 +1,6 @@
-// === Module 17687: orbs_arcade_game_state ===
+// === Module 16489: orbs_arcade_game_state ===
 
-// Module 17687 (orbs_arcade_game_state)
+// Module 16489 (orbs_arcade_game_state)
 import _mod1197 from "module_1197" /* 1197 */;
 import timestamp from "timestamp" /* 1226 */;
 import wrappers from "wrappers" /* 1227 */;

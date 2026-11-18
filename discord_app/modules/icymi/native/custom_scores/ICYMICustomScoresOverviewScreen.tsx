@@ -1,16 +1,16 @@
-// === Module 19335: ICYMICustomScoresOverviewScreen ===
+// === Module 18149: ICYMICustomScoresOverviewScreen ===
 
-// Module 19335 (ICYMICustomScoresOverviewScreen)
+// Module 18149 (ICYMICustomScoresOverviewScreen)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import SortedGuildStore from "SortedGuildStore" /* 6954 */;
-import ICYMIStore from "ICYMIStore" /* 10650 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import SortedGuildStore from "SortedGuildStore" /* 6458 */;
+import ICYMIStore from "ICYMIStore" /* 9931 */;
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

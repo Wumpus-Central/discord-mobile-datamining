@@ -1,8 +1,8 @@
-// === Module 11410: MessageLoadingSpinner ===
+// === Module 10692: MessageLoadingSpinner ===
 
-// Module 11410 (MessageLoadingSpinner)
+// Module 10692 (MessageLoadingSpinner)
 import nativeDefault from "native" /* 575 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7428 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6931 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

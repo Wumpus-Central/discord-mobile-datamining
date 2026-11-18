@@ -1,6 +1,6 @@
-// === Module 18780: HomeDrawerAnimations ===
+// === Module 17593: HomeDrawerAnimations ===
 
-// Module 18780 (HomeDrawerAnimations)
+// Module 17593 (HomeDrawerAnimations)
 import _mod1655 from "module_1655" /* 1655 */;
 import size from "module_2" /* 2 */;
 

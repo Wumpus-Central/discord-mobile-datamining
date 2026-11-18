@@ -1,9 +1,9 @@
-// === Module 13353: useCheckpointSound ===
+// === Module 12464: useCheckpointSound ===
 
-// Module 13353 (useCheckpointSound)
-import SoundUtils from "SoundUtils" /* 11561 */;
+// Module 12464 (useCheckpointSound)
+import SoundUtils from "SoundUtils" /* 10843 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13119 */;
+import CheckpointStore from "CheckpointStore" /* 12417 */;
 
 const require = globalThis.__r;
 

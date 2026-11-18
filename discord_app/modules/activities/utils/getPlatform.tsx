@@ -1,6 +1,6 @@
-// === Module 5978: getPlatform ===
+// === Module 5474: getPlatform ===
 
-// Module 5978 (getPlatform)
+// Module 5474 (getPlatform)
 import EmbeddedActivitySupportedPlatforms from "EmbeddedActivitySupportedPlatforms" /* 2147 */;
 import size from "module_2" /* 2 */;
 

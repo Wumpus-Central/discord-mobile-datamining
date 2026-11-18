@@ -1,58 +1,53 @@
-// === Module 10872: UserProfileWidgetsBoard ===
+// === Module 10098: UserProfileWidgetsBoard ===
 
-// Module 10872 (UserProfileWidgetsBoard)
+// Module 10098 (UserProfileWidgetsBoard)
 import nativeDefault from "native" /* 575 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6329 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7367 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7368 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 10817 */;
-import WidgetUtils from "WidgetUtils" /* 10822 */;
-import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 10838 */;
-import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 10843 */;
-import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 10845 */;
-import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 10873 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 10892 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5831 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6872 */;
+import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 10099 */;
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 10104 */;
+import WidgetUtils from "WidgetUtils" /* 10116 */;
+import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 10131 */;
+import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 10133 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 10174 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function AddGameButton(ref) {
   ref = ref.ref;
   const widgetType = ref.widgetType;
-  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(ref(10198).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
+  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(ref(9479).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
   const intl = ref(1113).intl;
   obj.accessibilityLabel = intl.string(ref(1113).t.E3l3Zx);
   obj.disabled = ref.disabled;
   obj.onPress = function onPress() {
     return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });
   };
-  return closure_8(ref(7999).IconButton, obj);
+  return closure_8(ref(7502).IconButton, obj);
 }
 function WidgetRenderer(arg0) {
   ({ userId, widget, cardStyle, isEditing } = arg0);
   if (widget instanceof UserProfileApplicationWidgetTypes.ApplicationWidget) {
     const obj2 = { userId, widget, cardStyle, isEditing };
-    let tmp3Result = React5(UserProfileApplicationWidgetCardDefault, obj2);
-  } else if (widget instanceof UserProfilePersonalWidget.UserProfilePersonalWidget) {
-    const obj3 = { userId, widget, cardStyle, isEditing };
-    tmp3Result = React5(UserProfilePersonalWidgetCardDefault, obj3);
+    let tmp2Result = React5(UserProfileApplicationWidgetCardDefault, obj2);
   } else {
     const obj = { userId, widget, cardStyle, isEditing };
-    tmp3Result = React5(memoResult, obj);
+    tmp2Result = React5(memoResult, obj);
   }
-  return tmp3Result;
+  return tmp2Result;
 }
 const View = fn(17).View;
-const UserProfileSections = fn(8490).UserProfileSections;
-const UserProfileWidgetConstants = fn(7365);
+const UserProfileSections = fn(7981).UserProfileSections;
+const UserProfileWidgetConstants = fn(6870);
 ({ widgetSupportsComment: closure_6, widgetSupportsTags: metroImportDefault } = UserProfileWidgetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { board: { gap: nativeDefault.space.PX_16 }, emptyState: null, singleGameEmptyState: null, singleGameEmptyStateText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj.emptyState = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
 let obj4 = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
-obj.singleGameEmptyState = { flexDirection: "row", alignItems: "center", gap: fn(10838).GAME_COVER_DETAILS_GAP, paddingVertical: nativeDefault.space.PX_8 };
+obj.singleGameEmptyState = { flexDirection: "row", alignItems: "center", gap: fn(10099).GAME_COVER_DETAILS_GAP, paddingVertical: nativeDefault.space.PX_8 };
 obj.singleGameEmptyStateText = { flex: 1 };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function WidgetSection(userId) {
@@ -279,10 +274,10 @@ export default function UserProfileWidgetsBoard(userId) {
   }
   ({ cardStyle: importDefault, isEditing } = userId);
   const tmp = closure_10();
-  const displayableBoardWidgets = userId(isEditing[31]).useDisplayableBoardWidgets(userId, isEditing);
+  const displayableBoardWidgets = userId(isEditing[29]).useDisplayableBoardWidgets(userId, isEditing);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  let obj = userId(isEditing[31]);
+  let obj = userId(isEditing[29]);
   const trackUserProfileAction = userId(isEditing[8]).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);

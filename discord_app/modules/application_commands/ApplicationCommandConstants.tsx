@@ -1,6 +1,6 @@
-// === Module 6343: ApplicationCommandConstants ===
+// === Module 5845: ApplicationCommandConstants ===
 
-// Module 6343 (ApplicationCommandConstants)
+// Module 5845 (ApplicationCommandConstants)
 import util from "util" /* 1113 */;
 import Server from "Server" /* 2119 */;
 import size from "module_2" /* 2 */;

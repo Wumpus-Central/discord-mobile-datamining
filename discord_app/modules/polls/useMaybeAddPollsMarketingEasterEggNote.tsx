@@ -1,6 +1,6 @@
-// === Module 12002: useMaybeAddPollsMarketingEasterEggNote ===
+// === Module 11284: useMaybeAddPollsMarketingEasterEggNote ===
 
-// Module 12002 (useMaybeAddPollsMarketingEasterEggNote)
+// Module 11284 (useMaybeAddPollsMarketingEasterEggNote)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import LocaleStore from "LocaleStore" /* 2189 */;

@@ -1,15 +1,15 @@
-// === Module 11034: InAppReportsRemediationsElement ===
+// === Module 10316: InAppReportsRemediationsElement ===
 
-// Module 11034 (InAppReportsRemediationsElement)
+// Module 10316 (InAppReportsRemediationsElement)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import TableRowGroup from "TableRowGroup" /* 7756 */;
+import TableRowGroup from "TableRowGroup" /* 7259 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_32 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

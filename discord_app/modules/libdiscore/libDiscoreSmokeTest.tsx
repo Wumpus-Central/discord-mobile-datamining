@@ -1,10 +1,10 @@
-// === Module 20972: libDiscoreSmokeTest ===
+// === Module 20245: libDiscoreSmokeTest ===
 
-// Module 20972 (libDiscoreSmokeTest)
+// Module 20245 (libDiscoreSmokeTest)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import initLibdiscore from "initLibdiscore" /* 1370 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 5185 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 4698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

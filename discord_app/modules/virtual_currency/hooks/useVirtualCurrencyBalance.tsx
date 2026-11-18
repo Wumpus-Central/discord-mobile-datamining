@@ -1,8 +1,8 @@
-// === Module 15540: useVirtualCurrencyBalance ===
+// === Module 14168: useVirtualCurrencyBalance ===
 
-// Module 15540 (useVirtualCurrencyBalance)
+// Module 14168 (useVirtualCurrencyBalance)
 import initialize from "initialize" /* 504 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 10052 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9332 */;
 
 const require = globalThis.__r;
 

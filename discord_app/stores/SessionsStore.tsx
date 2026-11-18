@@ -1,6 +1,6 @@
-// === Module 6070: SessionsStore ===
+// === Module 5566: SessionsStore ===
 
-// Module 6070 (SessionsStore)
+// Module 5566 (SessionsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

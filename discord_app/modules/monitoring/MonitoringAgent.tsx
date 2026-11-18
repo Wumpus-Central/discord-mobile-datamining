@@ -1,14 +1,14 @@
-// === Module 6769: MonitoringAgent ===
+// === Module 6272: MonitoringAgent ===
 
-// Module 6769 (MonitoringAgent)
+// Module 6272 (MonitoringAgent)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6770 */;
-import ReleaseChannels from "ReleaseChannels" /* 6771 */;
-import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 6772 */;
-import MonitoringAgentUtils from "MonitoringAgentUtils" /* 6773 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6273 */;
+import ReleaseChannels from "ReleaseChannels" /* 6274 */;
+import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 6275 */;
+import MonitoringAgentUtils from "MonitoringAgentUtils" /* 6276 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
@@ -23,8 +23,8 @@ class MonitoringAgent {
       obj._flush();
     }, 120000);
     nativeEventEmitter = new closure_0(closure_1[4]).NativeEventEmitter(closure_0(closure_1[5]).default);
-    addListenerResult = nativeEventEmitter.addListener("logMetric", (arg0) => {
-      obj.increment(arg0, false);
+    addListenerResult = nativeEventEmitter.addListener("logMetric", (name) => {
+      obj.increment(name, false);
     });
     return obj1;
   }
@@ -70,7 +70,7 @@ prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUN
   }
   return obj;
 };
-prototype["increment"] = function increment(name) {
+prototype["increment"] = function increment(name, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -110,7 +110,7 @@ prototype["_flush"] = function _flush() {
     HermesBuiltin.arraySpread(self._metrics, 0);
     const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.METRICS_V2, body: null, retries: 1, rejectWithError: true };
-    const body = { metrics: items, client_info: { built_at: "1794896344513", build_number: "35620100000000" } };
+    const body = { metrics: items, client_info: { built_at: "1794982764797", build_number: "35620200000000" } };
     request.body = body;
     HTTP.post(request).catch(() => {
       if (self._metrics.length + items.length < 100) {
@@ -130,8 +130,8 @@ obj2._intervalId = setInterval(() => {
   obj._flush();
 }, 120000);
 let nativeEventEmitter = new _mod17.NativeEventEmitter(NativeMetricMonitorModule.default);
-nativeEventEmitter.addListener("logMetric", (arg0) => {
-  obj.increment(arg0, false);
+nativeEventEmitter.addListener("logMetric", (name) => {
+  obj.increment(name, false);
 });
 const result = size.fileFinishedImporting("modules/monitoring/MonitoringAgent.tsx");
 

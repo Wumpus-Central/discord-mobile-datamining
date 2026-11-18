@@ -1,6 +1,6 @@
-// === Module 15709: GuildInviteSendStateStore ===
+// === Module 14343: GuildInviteSendStateStore ===
 
-// Module 15709 (GuildInviteSendStateStore)
+// Module 14343 (GuildInviteSendStateStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

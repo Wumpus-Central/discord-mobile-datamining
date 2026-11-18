@@ -1,8 +1,8 @@
-// === Module 14368: KeybindRouterStore ===
+// === Module 13672: KeybindRouterStore ===
 
-// Module 14368 (KeybindRouterStore)
-import matchPathCompat from "matchPathCompat" /* 5348 */;
-import RouteUtils from "RouteUtils" /* 5361 */;
+// Module 13672 (KeybindRouterStore)
+import matchPathCompat from "matchPathCompat" /* 4861 */;
+import RouteUtils from "RouteUtils" /* 4874 */;
 import Constants from "Constants" /* 1072 */;
 import identity from "module_1258" /* 1258 */;
 import size from "module_2" /* 2 */;

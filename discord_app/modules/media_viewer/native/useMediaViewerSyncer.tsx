@@ -1,13 +1,13 @@
-// === Module 10638: useMediaViewerSyncer ===
+// === Module 9919: useMediaViewerSyncer ===
 
-// Module 10638 (useMediaViewerSyncer)
+// Module 9919 (useMediaViewerSyncer)
 import _mod1655 from "module_1655" /* 1655 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8644 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8135 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(10639);
+const Constants = fn(9920);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: closure_6, THUMBNAIL_MAX_WIDTH: metroImportDefault, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
 const PlatformUtils = fn(1380);
 let closure_10 = PlatformUtils.isAndroid();

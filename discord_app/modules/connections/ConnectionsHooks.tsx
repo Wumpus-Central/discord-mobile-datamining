@@ -1,12 +1,12 @@
-// === Module 8717: ConnectionsHooks ===
+// === Module 8208: ConnectionsHooks ===
 
-// Module 8717 (ConnectionsHooks)
+// Module 8208 (ConnectionsHooks)
 import applyDefault from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import PlatformsDefault from "Platforms" /* 7095 */;
+import PlatformsDefault from "Platforms" /* 6599 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7093 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6597 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1072);
 ({ ACTIVITY_PLATFORM_TYPES: metroImportDefault, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(8718).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(8209).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -134,7 +134,7 @@ export function useEmptyStatePlatforms() {
   closure_129_0 = false;
   items = [UserStore];
   closure_129_1 = fn(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const PlayStationVoiceExperiment = fn(8720).PlayStationVoiceExperiment;
+  const PlayStationVoiceExperiment = fn(8211).PlayStationVoiceExperiment;
   closure_129_2 = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   fn = (dependencyMap) => {
     if (dependencyMap.type === PlatformTypes.PLAYSTATION_STAGING) {

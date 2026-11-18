@@ -1,6 +1,6 @@
-// === Module 7845: useFastestListPropsEstimatedListSize ===
+// === Module 7348: useFastestListPropsEstimatedListSize ===
 
-// Module 7845 (useFastestListPropsEstimatedListSize)
+// Module 7348 (useFastestListPropsEstimatedListSize)
 import useWindowDimensions from "useWindowDimensions" /* 1496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

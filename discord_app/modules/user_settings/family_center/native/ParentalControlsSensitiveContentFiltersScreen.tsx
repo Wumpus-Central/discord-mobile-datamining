@@ -1,13 +1,13 @@
-// === Module 18630: ParentalControlsSensitiveContentFiltersScreen ===
+// === Module 17443: ParentalControlsSensitiveContentFiltersScreen ===
 
-// Module 18630 (ParentalControlsSensitiveContentFiltersScreen)
+// Module 17443 (ParentalControlsSensitiveContentFiltersScreen)
 import util from "util" /* 1113 */;
-import SettingBuilders from "SettingBuilders" /* 12612 */;
-import SettingLayoutDefault from "SettingLayout" /* 17250 */;
+import SettingBuilders from "SettingBuilders" /* 11897 */;
+import SettingLayoutDefault from "SettingLayout" /* 15907 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(9213).MobileUserSettings;
+const MobileUserSettings = fn(8624).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx");

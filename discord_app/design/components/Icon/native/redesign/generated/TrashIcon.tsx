@@ -1,9 +1,9 @@
-// === Module 6034: TrashIcon ===
+// === Module 5530: TrashIcon ===
 
-// Module 6034 (TrashIcon)
+// Module 5530 (TrashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6013 */;
-import _mod6035 from "module_6035" /* 6035 */;
+import BaseIconImage from "BaseIconImage" /* 5509 */;
+import _mod5531 from "module_5531" /* 5531 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TrashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod6035, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5531, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

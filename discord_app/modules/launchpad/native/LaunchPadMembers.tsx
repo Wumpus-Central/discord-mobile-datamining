@@ -1,20 +1,20 @@
-// === Module 19933: LaunchPadMembers ===
+// === Module 19204: LaunchPadMembers ===
 
-// Module 19933 (LaunchPadMembers)
+// Module 19204 (LaunchPadMembers)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import GuildChannelUserListDefault from "GuildChannelUserList" /* 12720 */;
-import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 13679 */;
-import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 19581 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import GuildChannelUserListDefault from "GuildChannelUserList" /* 12005 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12986 */;
+import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 18857 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5213 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4726 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_7 = createStyles.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
@@ -42,7 +42,7 @@ export default noop.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "channel_id", type: "TOPICAL_NAV_TOPICS_UNIT_CLICKED" };
+    return { channelId: "channelId", type: false };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };

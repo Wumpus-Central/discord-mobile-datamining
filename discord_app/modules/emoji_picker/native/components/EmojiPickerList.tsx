@@ -1,29 +1,29 @@
-// === Module 11959: EmojiPickerList ===
+// === Module 11241: EmojiPickerList ===
 
-// Module 11959 (EmojiPickerList)
+// Module 11241 (EmojiPickerList)
 import util from "util" /* 1113 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 5260 */;
-import ChatInputUtils from "ChatInputUtils" /* 5495 */;
-import HapticUtils from "HapticUtils" /* 5548 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5549 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6009 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7947 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 9559 */;
-import TopEmojisActionCreators from "TopEmojisActionCreators" /* 9562 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 11137 */;
-import RoleSubscriptionUpsellUtilsDefault from "RoleSubscriptionUpsellUtils" /* 11964 */;
-import trackEmojiSuggestionSelectedDefault from "trackEmojiSuggestionSelected" /* 11969 */;
-import useEmojiPickerData from "useEmojiPickerData" /* 11970 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 11973 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 11974 */;
-import EmojiPickerListComponents from "EmojiPickerListComponents" /* 11976 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 11977 */;
-import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 11981 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4773 */;
+import ChatInputUtils from "ChatInputUtils" /* 5008 */;
+import HapticUtils from "HapticUtils" /* 5039 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5040 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7450 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 8973 */;
+import TopEmojisActionCreators from "TopEmojisActionCreators" /* 8976 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10419 */;
+import RoleSubscriptionUpsellUtilsDefault from "RoleSubscriptionUpsellUtils" /* 11246 */;
+import trackEmojiSuggestionSelectedDefault from "trackEmojiSuggestionSelected" /* 11251 */;
+import useEmojiPickerData from "useEmojiPickerData" /* 11252 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 11255 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 11256 */;
+import EmojiPickerListComponents from "EmojiPickerListComponents" /* 11258 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 11259 */;
+import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 11263 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiCategoryTypes = fn(6980).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9558).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6484).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(8972).IMAGE_SIZE;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_6, AnalyticsPages: metroImportDefault, AnalyticsSections: closure_8, UpsellTypes: closure_9 } = Constants);
 const EmojiConstants = fn(1391);

@@ -1,16 +1,16 @@
-// === Module 7821: UserSettingsConfirmPassword ===
+// === Module 7324: UserSettingsConfirmPassword ===
 
-// Module 7821 (UserSettingsConfirmPassword)
+// Module 7324 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import components_Button_Button from "components/Button/Button" /* 5930 */;
-import TextInput from "TextInput" /* 7629 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7659 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7822 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7823 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7825 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import components_Button_Button from "components/Button/Button" /* 5421 */;
+import TextInput from "TextInput" /* 7132 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7162 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7325 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7326 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7328 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { paddingVertical: 12, paddingHorizontal: 16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: { marginTop: 24 }, button: { marginTop: 16 }, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.hint = { color: nativeDefault.unsafe_rawColors.RED_400 };

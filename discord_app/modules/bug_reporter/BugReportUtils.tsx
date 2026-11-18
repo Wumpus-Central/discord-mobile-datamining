@@ -1,12 +1,12 @@
-// === Module 11850: bug_reporter/BugReportUtils ===
+// === Module 11132: bug_reporter/BugReportUtils ===
 
-// Module 11850 (bug_reporter/BugReportUtils)
+// Module 11132 (bug_reporter/BugReportUtils)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6836 */;
-import DebugUploadManager from "DebugUploadManager" /* 11851 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6340 */;
+import DebugUploadManager from "DebugUploadManager" /* 11133 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 

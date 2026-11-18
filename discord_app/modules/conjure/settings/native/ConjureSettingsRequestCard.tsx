@@ -1,9 +1,9 @@
-// === Module 14691: ConjureSettingsRequestCard ===
+// === Module 18545: ConjureSettingsRequestCard ===
 
-// Module 14691 (ConjureSettingsRequestCard)
+// Module 18545 (ConjureSettingsRequestCard)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5546 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 14415 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5037 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 18317 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;
@@ -11,7 +11,7 @@ const ConjureSettingsSheetDefault = ConjureSettingsSheet;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

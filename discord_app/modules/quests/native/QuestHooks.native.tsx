@@ -1,19 +1,19 @@
-// === Module 17731: QuestHooks ===
+// === Module 16533: QuestHooks ===
 
-// Module 17731 (QuestHooks)
-import QuestTypes from "QuestTypes" /* 6965 */;
-import AdCreativeType from "AdCreativeType" /* 6969 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7063 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8842 */;
-import AssetUtils from "AssetUtils" /* 10590 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 17759 */;
+// Module 16533 (QuestHooks)
+import QuestTypes from "QuestTypes" /* 6469 */;
+import AdCreativeType from "AdCreativeType" /* 6473 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6567 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8339 */;
+import AssetUtils from "AssetUtils" /* 9871 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 16563 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5547 */;
+import ActionSheetStore from "ActionSheetStore" /* 5038 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import BountyStore from "BountyStore" /* 8818 */;
-import QuestStore from "QuestStore" /* 8819 */;
-import PlayableStore from "PlayableStore" /* 17732 */;
+import BountyStore from "BountyStore" /* 8315 */;
+import QuestStore from "QuestStore" /* 8316 */;
+import PlayableStore from "PlayableStore" /* 16534 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ require = fn;
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   _require = mobileQuestDock;
   const questDockQuest = require("AdCreativeUtils").getQuestDockQuest(mobileQuestDock);
-  const tmp4 = questDockAdCreativeId(7781)();
+  const tmp4 = questDockAdCreativeId(7284)();
   const obj = require("AdCreativeUtils");
   items = [QuestStore];
   let userStatus1;
@@ -31,8 +31,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus1;
   if (isDismissedResult) {
-    isDismissedResult = tmp(8815).isDismissed(questDockQuest.userStatus, tmp(6965).QuestContent.QUEST_BAR_MOBILE);
-    const tmpResult = tmp(8815);
+    isDismissedResult = tmp(8312).isDismissed(questDockQuest.userStatus, tmp(6469).QuestContent.QUEST_BAR_MOBILE);
+    const tmpResult = tmp(8312);
   }
   let claimedAt;
   if (questDockQuest != null) {
@@ -80,7 +80,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }, items6);
   if (require("AdCreativeType").AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(6969).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(6473).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -91,7 +91,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(6969).AdCreativeType.PLAYABLE === type) {
+  } else if (tmp(6473).AdCreativeType.PLAYABLE === type) {
     let tmp19 = isEligibleForQuests;
     if (isEligibleForQuests) {
       tmp19 = !stateFromStores1;
@@ -103,7 +103,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       tmp19 = !tmp4;
     }
     return tmp19;
-  } else if (tmp(6969).AdCreativeType.QUEST === type) {
+  } else if (tmp(6473).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp17 = null != questDockQuest && !tmp4;
@@ -115,9 +115,9 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   const tmpResult12 = require("initialize");
 }
-const QuestConstants = fn(6962);
+const QuestConstants = fn(6466);
 ({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_10, QuestVariants: closure_11 } = QuestConstants);
-const CAPTCHA_MODAL_KEY = fn(6775).CAPTCHA_MODAL_KEY;
+const CAPTCHA_MODAL_KEY = fn(6278).CAPTCHA_MODAL_KEY;
 const ThemeTypes = fn(1083).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestHooks.native.tsx");

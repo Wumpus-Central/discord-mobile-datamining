@@ -1,7 +1,7 @@
-// === Module 20271: Safe ===
+// === Module 19542: Safe ===
 
-// Module 20271 (Safe)
-import passThrough_mod from "passThrough" /* 20272 */;
+// Module 19542 (Safe)
+import passThrough_mod from "passThrough" /* 19543 */;
 import size from "module_2" /* 2 */;
 
 const obj = { asIterable: passThrough.asIterable, captureMessageData: passThrough.captureMessageData, Array: null, Map: null, Set: null, WeakMap: null, WeakSet: null, Function: null, Event: null, KeyboardEvent: null, NavigateEvent: null, NavigationDestination: null, URL: null, EventTarget: null, MessageEvent: null, PageTransitionEvent: null, MessageChannel: null, MessagePort: null, Document: null, DocumentFragment: null, HTMLTemplateElement: null, DOMParser: null, Node: null, HTMLElement: null, Element: null, Attr: null, NodeList: null, Worker: null, Blob: null, String: null, HTMLMediaElement: null, MediaStream: null, AudioNode: null, BaseAudioContext: null, OfflineAudioContext: null, GainNode: null, AudioParam: null, AnalyserNode: null, Window: null, Object: null, ObjectURL: null, Math: null, Reflect: null, Symbol: null, Crypto: null, Constructor: null };
@@ -80,13 +80,13 @@ obj.AnalyserNode = passThrough.protectPrototype("AnalyserNode", ["fftSize", "get
 let passThrough = passThrough_mod;
 obj.Window = passThrough.protectWindow(["clearInterval", "closed", "length", "location", "opener", "origin", "parent", "postMessage", "setInterval", "speechSynthesis", "top"]);
 let passThrough = passThrough_mod;
-obj.Object = passThrough.protectStatics("Object", ["defineProperty", "getOwnPropertyDescriptor", "getOwnPropertyNames", "getPrototypeOf", "keys", "setPrototypeOf"]);
+obj.Object = passThrough.protectStatics("Object", ["defineProperty", "getOwnPropertyDescriptor", "getOwnPropertyNames", "getPrototypeOf", "hasOwn", "keys", "setPrototypeOf"]);
 let passThrough = passThrough_mod;
 obj.ObjectURL = passThrough.protectStatics("URL", ["createObjectURL", "revokeObjectURL"]);
 let passThrough = passThrough_mod;
 obj.Math = passThrough.protectStatics("Math", ["abs"]);
 let passThrough = passThrough_mod;
-obj.Reflect = passThrough.protectStatics("Reflect", ["construct", "defineProperty", "deleteProperty", "get"]);
+obj.Reflect = passThrough.protectStatics("Reflect", ["apply", "construct", "defineProperty", "deleteProperty", "get"]);
 let passThrough = passThrough_mod;
 obj.Symbol = passThrough.protectStatics("Symbol", ["asyncIterator", "iterator", "toStringTag"]);
 let passThrough = passThrough_mod;

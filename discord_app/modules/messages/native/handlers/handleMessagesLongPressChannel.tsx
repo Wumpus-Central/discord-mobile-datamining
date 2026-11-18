@@ -1,8 +1,8 @@
-// === Module 12701: handleMessagesLongPressChannel ===
+// === Module 11986: handleMessagesLongPressChannel ===
 
-// Module 12701 (handleMessagesLongPressChannel)
-import ChannelUtils from "ChannelUtils" /* 6354 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11094 */;
+// Module 11986 (handleMessagesLongPressChannel)
+import ChannelUtils from "ChannelUtils" /* 5856 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10376 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");

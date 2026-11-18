@@ -1,13 +1,13 @@
-// === Module 18673: RedesignSettingsCategoryServersScreen ===
+// === Module 17486: RedesignSettingsCategoryServersScreen ===
 
-// Module 18673 (RedesignSettingsCategoryServersScreen)
-import SettingBuilders from "SettingBuilders" /* 12612 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18661 */;
-import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 18662 */;
+// Module 17486 (RedesignSettingsCategoryServersScreen)
+import SettingBuilders from "SettingBuilders" /* 11897 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17474 */;
+import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 17475 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(9213).MobileUserSettings;
+const MobileUserSettings = fn(8624).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsCategoryServersScreen.tsx");

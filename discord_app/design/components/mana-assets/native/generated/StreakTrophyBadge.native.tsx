@@ -1,19 +1,19 @@
-// === Module 15134: StreakTrophyBadge ===
+// === Module 13760: StreakTrophyBadge ===
 
-// Module 15134 (StreakTrophyBadge)
-import assetHelpers from "assetHelpers" /* 7765 */;
-import _modDef15135 from "module_15135" /* 15135 */;
-import _modDef15136 from "module_15136" /* 15136 */;
-import _modDef15137 from "module_15137" /* 15137 */;
+// Module 13760 (StreakTrophyBadge)
+import assetHelpers from "assetHelpers" /* 7268 */;
+import _modDef13761 from "module_13761" /* 13761 */;
+import _modDef13762 from "module_13762" /* 13762 */;
+import _modDef13763 from "module_13763" /* 13763 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15135 }, 3: null };
-let obj2 = { uri: _modDef15135 };
-obj[2] = { uri: _modDef15136 };
-const obj3 = { uri: _modDef15136 };
-obj[3] = { uri: _modDef15137 };
+let obj = { 1: null, 2: { uri: _modDef13761 }, 3: null };
+let obj2 = { uri: _modDef13761 };
+obj[2] = { uri: _modDef13762 };
+const obj3 = { uri: _modDef13762 };
+obj[3] = { uri: _modDef13763 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StreakTrophyBadge.native.tsx");
 

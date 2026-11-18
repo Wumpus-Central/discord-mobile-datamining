@@ -1,10 +1,10 @@
-// === Module 19613: useAutoTrackSearchTabCountsViewedAnalytics ===
+// === Module 18889: useAutoTrackSearchTabCountsViewedAnalytics ===
 
-// Module 19613 (useAutoTrackSearchTabCountsViewedAnalytics)
-import TrackingDefault from "Tracking" /* 13839 */;
+// Module 18889 (useAutoTrackSearchTabCountsViewedAnalytics)
+import TrackingDefault from "Tracking" /* 13146 */;
 import noop from "module_19" /* 19 */;
 
-const SearchTabs = fn(9077).SearchTabs;
+const SearchTabs = fn(8488).SearchTabs;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
 

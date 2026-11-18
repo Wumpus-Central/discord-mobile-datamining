@@ -1,6 +1,6 @@
-// === Module 5926: DevSettingsStore ===
+// === Module 5417: DevSettingsStore ===
 
-// Module 5926 (DevSettingsStore)
+// Module 5417 (DevSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

@@ -1,9 +1,9 @@
-// === Module 13998: OwnedGameServersStore ===
+// === Module 13300: OwnedGameServersStore ===
 
-// Module 13998 (OwnedGameServersStore)
+// Module 13300 (OwnedGameServersStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GameServerConstants from "GameServerConstants" /* 5519 */;
+import GameServerConstants from "GameServerConstants" /* 8245 */;
 import size from "module_2" /* 2 */;
 
 function handleGameServerUpsert(gameServer) {

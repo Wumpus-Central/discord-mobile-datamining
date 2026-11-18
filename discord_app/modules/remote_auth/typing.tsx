@@ -1,6 +1,6 @@
-// === Module 18736: typing ===
+// === Module 17549: typing ===
 
-// Module 18736 (typing)
+// Module 17549 (typing)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/remote_auth/typing.tsx");

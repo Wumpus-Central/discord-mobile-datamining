@@ -1,19 +1,19 @@
-// === Module 15249: PremiumGiftDMPurchaseSuccess ===
+// === Module 13877: PremiumGiftDMPurchaseSuccess ===
 
-// Module 15249 (PremiumGiftDMPurchaseSuccess)
+// Module 13877 (PremiumGiftDMPurchaseSuccess)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10087 */;
-import NativeGiftContext from "NativeGiftContext" /* 10089 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10236 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 9369 */;
+import NativeGiftContext from "NativeGiftContext" /* 9371 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 9517 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { title: { marginTop: nativeDefault.space.PX_24, textAlign: "center" }, description: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
 obj2.description = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
@@ -42,21 +42,18 @@ export function PremiumGiftDMSuccessActions() {
   const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
   let obj = onClose(navigation[5]);
   navigation = onClose(navigation[6]).useNavigation();
-  const GiftingBadgeExperiment = onClose(navigation[7]).GiftingBadgeExperiment;
-  const enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftDMSuccessActions" }).enabled;
-  items = [enabled, prePurchaseGiftingBadgeProgress, navigation, onClose];
-  const callback = enabled.useCallback(() => {
-    if (enabled) {
-      if (null != prePurchaseGiftingBadgeProgress) {
-        const obj = { currentProgress: tmp };
-        navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
-      }
+  items = [prePurchaseGiftingBadgeProgress, navigation, onClose];
+  const callback = noop.useCallback(() => {
+    if (null != prePurchaseGiftingBadgeProgress) {
+      const obj = { currentProgress: tmp };
+      navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
+    } else {
+      onClose();
     }
-    onClose();
   }, items);
   const obj3 = { text: null, variant: "primary", onPress: null };
-  const intl = onClose(navigation[10]).intl;
-  obj3.text = intl.string(prePurchaseGiftingBadgeProgress(navigation[11]).bGKjmg);
+  const intl = onClose(navigation[9]).intl;
+  obj3.text = intl.string(prePurchaseGiftingBadgeProgress(navigation[10]).bGKjmg);
   obj3.onPress = callback;
-  return closure_5(onClose(navigation[9]).Button, obj3);
+  return closure_5(onClose(navigation[8]).Button, obj3);
 }

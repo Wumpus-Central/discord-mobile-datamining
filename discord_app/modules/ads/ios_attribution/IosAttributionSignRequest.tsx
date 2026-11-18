@@ -1,6 +1,6 @@
-// === Module 11292: IosAttributionSignRequest ===
+// === Module 10574: IosAttributionSignRequest ===
 
-// Module 11292 (IosAttributionSignRequest)
+// Module 10574 (IosAttributionSignRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

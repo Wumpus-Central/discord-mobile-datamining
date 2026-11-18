@@ -1,9 +1,9 @@
-// === Module 8088: TextControllerIcon ===
+// === Module 7591: TextControllerIcon ===
 
-// Module 8088 (TextControllerIcon)
+// Module 7591 (TextControllerIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6013 */;
-import _mod8072 from "module_8072" /* 8072 */;
+import BaseIconImage from "BaseIconImage" /* 5509 */;
+import _mod7575 from "module_7575" /* 7575 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TextControllerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8072, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7575, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

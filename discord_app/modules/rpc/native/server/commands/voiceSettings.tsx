@@ -1,10 +1,10 @@
-// === Module 17030: voiceSettings ===
+// === Module 15684: voiceSettings ===
 
-// Module 17030 (voiceSettings)
+// Module 15684 (voiceSettings)
 import Constants from "Constants" /* 1072 */;
-import Constants2 from "Constants" /* 6759 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 7317 */;
-import NativeRPCHelpers from "NativeRPCHelpers" /* 11481 */;
+import Constants2 from "Constants" /* 6261 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 6822 */;
+import NativeRPCHelpers from "NativeRPCHelpers" /* 10763 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

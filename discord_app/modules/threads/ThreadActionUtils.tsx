@@ -1,6 +1,6 @@
-// === Module 5250: ThreadActionUtils ===
+// === Module 4763: ThreadActionUtils ===
 
-// Module 5250 (ThreadActionUtils)
+// Module 4763 (ThreadActionUtils)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 14644: ConjureDither ===
+// === Module 18498: ConjureDither ===
 
-// Module 14644 (ConjureDither)
+// Module 18498 (ConjureDither)
 import _modDef1655 from "module_1655" /* 1655 */;
-import inlineStyles from "inlineStyles" /* 8274 */;
-import _mod14645 from "module_14645" /* 14645 */;
+import inlineStyles from "inlineStyles" /* 7776 */;
+import _mod18499 from "module_18499" /* 18499 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ function BandPicture(width) {
   const size1 = { id: "cells-" + combined, patternUnits: "userSpaceOnUse", width: state(height[3]).TILE, height: state(height[3]).TILE, children: null };
   const tmp8 = width(height[4]);
   size1.children = state(height[3]).TILES[band].map((item) => {
-    const size = { x: item.x, y: item.y, width: _mod14645.CELL, height: _mod14645.CELL, rx: _mod14645.CORNER, fill, fillOpacity };
+    const size = { x: item.x, y: item.y, width: _mod18499.CELL, height: _mod18499.CELL, rx: _mod18499.CORNER, fill, fillOpacity };
     return timestampProducer(inlineStyles.Rect, size, "" + item.x + "-" + item.y);
   });
   items = [bound(state(height[4]).Pattern, size1), , , ];
@@ -40,10 +40,10 @@ function BandPicture(width) {
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod14645;
+    const obj3 = _mod18499;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod14645.blobReach(peak, radius, closure_5 + _mod14645.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod14645.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod18499.blobReach(peak, radius, closure_5 + _mod18499.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod18499.blobReach(peak.peak, peak.radius, bound));
     items = [timestampProducer(inlineStyles.Stop, obj2), timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 })];
     obj.children = items;
     return metroImportDefault(inlineStyles.RadialGradient, obj, index);
@@ -60,7 +60,7 @@ function BandPicture(width) {
   const items2 = [tmp9Result, ];
   const BLOBS1 = tmp(tmp2[3]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod14645.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod18499.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {
@@ -189,7 +189,7 @@ export default function ConjureDither(width) {
   let tmp18 = null;
   if (width > 0) {
     const obj3 = { style: absoluteFill.absoluteFill, pointerEvents: "none", children: null };
-    const LEVELS = tmp(14645).LEVELS;
+    const LEVELS = tmp(18499).LEVELS;
     obj3.children = LEVELS.map((item, index) => items.map((item, state) => {
       items = [React4.absoluteFill, ];
       const obj = { style: items, renderToHardwareTextureAndroid: true, children: null };

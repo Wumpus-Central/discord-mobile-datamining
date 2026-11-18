@@ -1,16 +1,16 @@
-// === Module 9482: WishlistActionCreators ===
+// === Module 8896: WishlistActionCreators ===
 
-// Module 9482 (WishlistActionCreators)
+// Module 8896 (WishlistActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1360 */;
-import StorefrontUtils from "StorefrontUtils" /* 7258 */;
+import StorefrontUtils from "StorefrontUtils" /* 6762 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserProfileStore from "UserProfileStore" /* 7362 */;
+import UserProfileStore from "UserProfileStore" /* 6867 */;
 import UserStore from "UserStore" /* 1388 */;
 import BillingInfoStore from "BillingInfoStore" /* 2175 */;
-import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7254 */;
-import WishlistRecord from "WishlistRecord" /* 9476 */;
+import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 6758 */;
+import WishlistRecord from "WishlistRecord" /* 8890 */;
 
 require = fn;
 function extraWishlistParams() {
@@ -44,7 +44,7 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(9476).getWishlistSkuIds;
+const getWishlistSkuIds = fn(8890).getWishlistSkuIds;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);

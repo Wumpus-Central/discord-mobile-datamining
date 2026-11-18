@@ -1,6 +1,6 @@
-// === Module 6539: ? ===
+// === Module 6041: ? ===
 
-// Module 6539
+// Module 6041
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/camper_glamp.png.js");

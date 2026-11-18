@@ -1,8 +1,8 @@
-// === Module 17692: OrbsArcadeRewardUtils ===
+// === Module 16494: OrbsArcadeRewardUtils ===
 
-// Module 17692 (OrbsArcadeRewardUtils)
+// Module 16494 (OrbsArcadeRewardUtils)
 import util from "util" /* 1113 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17686 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16488 */;
 import size from "module_2" /* 2 */;
 
 function getOrbsArcadeRewardStatus(reward, gameState, ownedRewardSkuIds) {

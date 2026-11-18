@@ -1,16 +1,16 @@
-// === Module 17712: launchOrbsArcadeGame ===
+// === Module 16514: launchOrbsArcadeGame ===
 
-// Module 17712 (launchOrbsArcadeGame)
+// Module 16514 (launchOrbsArcadeGame)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6009 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7063 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17691 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6567 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16493 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import FramesStore from "FramesStore" /* 7027 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17685 */;
+import FramesStore from "FramesStore" /* 6531 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16487 */;
 
 require = fn;
 function showLaunchError() {
@@ -384,7 +384,7 @@ let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1, arg2) {
   })();
 };
 const AbortCodes = fn(1072).AbortCodes;
-const FramesConstants = fn(7028);
+const FramesConstants = fn(6532);
 ({ getFrameLaunchParams: closure_8, MAIN_SURFACE: closure_9, makeFrameId: closure_10 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/launchOrbsArcadeGame.tsx");

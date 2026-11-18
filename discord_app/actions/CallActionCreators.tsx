@@ -1,15 +1,15 @@
-// === Module 8147: CallActionCreators ===
+// === Module 7650: CallActionCreators ===
 
-// Module 8147 (CallActionCreators)
+// Module 7650 (CallActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6266 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6933 */;
-import useCanRing from "useCanRing" /* 8153 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import RelationshipStore from "RelationshipStore" /* 5252 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5768 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6437 */;
+import useCanRing from "useCanRing" /* 7656 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import RelationshipStore from "RelationshipStore" /* 4765 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -95,6 +95,10 @@ export default {
     }
   },
   stopRinging(channelId, items) {
+    if (null == items) {
+      const obj2 = { type: "CALL_STOP_RINGING_SELF", channelId };
+      DispatcherDefault.dispatch(obj2);
+    }
     const HTTP = HTTPUtils.HTTP;
     const request = { url: timestampProducer.CALL_STOP_RINGING(channelId), body: { recipients: items }, oldFormErrors: true, rejectWithError: true };
     return HTTP.post(request);

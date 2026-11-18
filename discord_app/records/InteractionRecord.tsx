@@ -1,6 +1,6 @@
-// === Module 6373: InteractionRecord ===
+// === Module 5875: InteractionRecord ===
 
-// Module 6373 (InteractionRecord)
+// Module 5875 (InteractionRecord)
 import Record from "Record" /* 1408 */;
 import UserRecord from "UserRecord" /* 1407 */;
 

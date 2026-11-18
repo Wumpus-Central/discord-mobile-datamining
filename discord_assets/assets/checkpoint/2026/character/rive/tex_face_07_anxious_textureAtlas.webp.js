@@ -1,6 +1,6 @@
-// === Module 13210: ? ===
+// === Module 12513: ? ===
 
-// Module 13210
+// Module 12513
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_face_07_anxious_textureAtlas.webp.js");

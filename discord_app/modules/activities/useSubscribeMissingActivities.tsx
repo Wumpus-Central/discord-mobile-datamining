@@ -1,11 +1,11 @@
-// === Module 12614: useSubscribeMissingActivities ===
+// === Module 11899: useSubscribeMissingActivities ===
 
-// Module 12614 (useSubscribeMissingActivities)
-import PresenceSubscriptionsActionCreators from "PresenceSubscriptionsActionCreators" /* 12617 */;
+// Module 11899 (useSubscribeMissingActivities)
+import PresenceSubscriptionsActionCreators from "PresenceSubscriptionsActionCreators" /* 11902 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PresenceSubscriptionsStore from "PresenceSubscriptionsStore" /* 12615 */;
-import PresenceStore from "PresenceStore" /* 6065 */;
+import PresenceSubscriptionsStore from "PresenceSubscriptionsStore" /* 11900 */;
+import PresenceStore from "PresenceStore" /* 5561 */;
 
 const require = globalThis.__r;
 

@@ -1,35 +1,29 @@
-// === Module 10858: UserProfileWidgetGameCoverGridReorderActionSheet ===
+// === Module 10145: UserProfileWidgetGameCoverGridReorderActionSheet ===
 
-// Module 10858 (UserProfileWidgetGameCoverGridReorderActionSheet)
+// Module 10145 (UserProfileWidgetGameCoverGridReorderActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import DragIcon from "DragIcon" /* 7459 */;
-import WidgetUtils from "WidgetUtils" /* 10822 */;
-import useGameCoverLayoutDefault from "useGameCoverLayout" /* 10837 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 10844 */;
-import GameCoverImageDefault from "GameCoverImage" /* 10846 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 10856 */;
-import UserProfileReorderActionSheetDefault from "UserProfileReorderActionSheet" /* 10857 */;
+import DragHandle from "DragHandle" /* 6960 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 10112 */;
+import WidgetUtils from "WidgetUtils" /* 10116 */;
+import useGameCoverLayoutDefault from "useGameCoverLayout" /* 10121 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 10132 */;
+import GameCoverImageDefault from "GameCoverImage" /* 10134 */;
+import UserProfileReorderActionSheetDefault from "UserProfileReorderActionSheet" /* 10144 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-function PlaceholderDragHandle() {
-  const obj = { style: closure_9().placeholderDragHandle, children: metroImportDefault(DragIcon.DragIcon, { size: "xs", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT }) };
-  return metroImportDefault(hasOwnProperty, obj);
-}
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5310);
-let obj = { grid: { flexDirection: "row", flexWrap: "wrap", gap: fn(10838).GAME_COVER_GRID_GAP }, dragHandlePosition: null, placeholderDragHandle: null };
-let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: fn(10838).GAME_COVER_GRID_GAP };
-obj.dragHandlePosition = { position: "absolute", top: nativeDefault.space.PX_8, start: 0 };
-let size = { width: nativeDefault.space.PX_20, height: nativeDefault.space.PX_32, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderTopEndRadius: nativeDefault.radii.sm, borderBottomEndRadius: nativeDefault.radii.sm };
-obj.placeholderDragHandle = size;
+const createStyles = fn(4823);
+let obj = { grid: { flexDirection: "row", flexWrap: "wrap", gap: fn(10099).GAME_COVER_GRID_GAP }, dragHandle: null };
+let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: fn(10099).GAME_COVER_GRID_GAP };
+obj.dragHandle = { position: "absolute", top: nativeDefault.space.PX_8, start: 0 };
 let closure_9 = createStyles.createStyles(obj);
-let closure_11 = noop.memo(function ReorderableGameCover(arg0) {
+let closure_10 = noop.memo(function ReorderableGameCover(arg0) {
   ({ game, coverWidth } = arg0);
   const tmp4 = useGameNameAndCoverImageDefault(game.gameId);
   if (tmp4.isLoading) {
@@ -44,13 +38,11 @@ let closure_11 = noop.memo(function ReorderableGameCover(arg0) {
   const merged = Object.assign(tmp4);
   obj2.width = coverWidth;
   obj2.accessible = false;
-  items = [metroImportDefault(GameCoverImageDefault, obj2), ];
-  const tmp2Result = GameCoverImageDefault;
-  items[1] = metroImportDefault(hasOwnProperty, { style: tmp.dragHandlePosition, children: metroImportDefault(PlaceholderDragHandle, {}) });
+  items = [metroImportDefault(GameCoverImageDefault, obj2), metroImportDefault(DragHandle.DragHandle, { style: tmp.dragHandle, variant: "overlay", size: "sm", borderRadius: { topStart: 0, bottomStart: 0 } })];
   obj.children = items;
   return React5(React4, obj);
 });
-size = fn(2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetGameCoverGridReorderActionSheet.tsx");
 
 export default function UserProfileWidgetGameCoverGridReorderActionSheet(widgetType) {
@@ -87,7 +79,7 @@ export default function UserProfileWidgetGameCoverGridReorderActionSheet(widgetT
   obj2.returnFocusRef = widgetType.returnFocusRef;
   const obj3 = { ref, onLayout, accessibilityRole: "list", style: tmp.grid, children: null };
   if (isMeasured) {
-    isMeasured = memo.map((game) => metroImportDefault(closure_11, { game, coverWidth }, game.gameId));
+    isMeasured = memo.map((game) => metroImportDefault(closure_10, { game, coverWidth }, game.gameId));
   }
   obj3.children = isMeasured;
   obj2.children = closure_7(closure_5, obj3);

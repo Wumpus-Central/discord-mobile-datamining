@@ -1,6 +1,6 @@
-// === Module 9305: SubscriptionTrialRecord ===
+// === Module 8716: SubscriptionTrialRecord ===
 
-// Module 9305 (SubscriptionTrialRecord)
+// Module 8716 (SubscriptionTrialRecord)
 import Record from "Record" /* 1408 */;
 
 let SubscriptionTrialRecord;

@@ -1,24 +1,24 @@
-// === Module 15856: UserProfileApplicationWidgetPreview ===
+// === Module 14489: UserProfileApplicationWidgetPreview ===
 
-// Module 15856 (UserProfileApplicationWidgetPreview)
+// Module 14489 (UserProfileApplicationWidgetPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import ApplicationWidgetLayoutName from "ApplicationWidgetLayoutName" /* 10893 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 10895 */;
-import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 10997 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11002 */;
-import useApplicationWidgetLayoutRendererPropsDefault from "useApplicationWidgetLayoutRendererProps" /* 11010 */;
+import ApplicationWidgetLayoutName from "ApplicationWidgetLayoutName" /* 10175 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 10177 */;
+import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 10279 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 10284 */;
+import useApplicationWidgetLayoutRendererPropsDefault from "useApplicationWidgetLayoutRendererProps" /* 10292 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const FastImageDefault = tmp4(6014);
-const UserProfileApplicationWidgetHeroImageDefault = tmp4(11005);
+const FastImageDefault = tmp4(5510);
+const UserProfileApplicationWidgetHeroImageDefault = tmp4(10287);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const sum = nativeDefault.space.PX_128 + nativeDefault.space.PX_24;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { preview: { flexDirection: "row", gap: nativeDefault.space.PX_16, minHeight: sum }, contentColumn: { flex: 3 }, content: null, divider: null, stats: null, statRow: null, stat: null, image: null, containedImageContainer: null, heroImage: null, containedImage: null, containedImageSkeleton: null, imageSkeleton: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_16, minHeight: sum };
 obj2.content = { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, justifyContent: "center", minHeight: sum };

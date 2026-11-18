@@ -1,18 +1,18 @@
-// === Module 14562: ConjureFirstShareModal ===
+// === Module 18433: ConjureFirstShareModal ===
 
-// Module 14562 (ConjureFirstShareModal)
+// Module 18433 (ConjureFirstShareModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1502 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import components_Button_Button from "components/Button/Button" /* 5930 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6009 */;
-import Stack_Stack from "Stack/Stack" /* 6335 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6833 */;
-import ModalScreen from "ModalScreen" /* 8219 */;
-import ModalContent from "ModalContent" /* 8221 */;
-import ModalFooter from "ModalFooter" /* 12903 */;
-import useConjureSharingModeDefault from "useConjureSharingMode" /* 14425 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import components_Button_Button from "components/Button/Button" /* 5421 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
+import Stack_Stack from "Stack/Stack" /* 5837 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6337 */;
+import ModalScreen from "ModalScreen" /* 7722 */;
+import ModalContent from "ModalContent" /* 7724 */;
+import ModalFooter from "ModalFooter" /* 12198 */;
+import useConjureSharingModeDefault from "useConjureSharingMode" /* 18326 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,11 +27,11 @@ function FirstShareFlow(project) {
   project = project.project;
   const sharing = project.sharing;
   ({ guildId, publishOptions } = project);
-  const tmp = sharing(14563)(project);
+  const tmp = sharing(18434)(project);
   dependencyMap = tmp;
-  const tmp2 = sharing(14565)(project.id, guildId, publishOptions, true);
+  const tmp2 = sharing(18436)(project.id, guildId, publishOptions, true);
   const servers = tmp2;
-  obj = project(7500);
+  obj = project(7003);
   items = [project, tmp, sharing, tmp2];
   const navigatorScreens = obj.useNavigatorScreens(() => {
     obj = {};
@@ -55,7 +55,7 @@ function FirstShareFlow(project) {
   let obj3 = { screens: navigatorScreens, initialRouteName: obj.REVIEW, steps: items, headerBackTitle: null, gradientColor: "blue" };
   const intl = project(1113).intl;
   obj3.headerBackTitle = intl.string(project(1113).t["13/7kX"]);
-  obj2.children = closure_5(project(12934).StepModal, obj3);
+  obj2.children = closure_5(project(12222).StepModal, obj3);
   return closure_5(redux.Provider, obj2);
 }
 function StepHeading(arg0) {
@@ -233,9 +233,9 @@ function ReviewStep() {
     const obj5 = { spacing: review(575).space.PX_16, children: null };
     const obj6 = { title: null, description: null };
     let intl = util.intl;
-    obj6.title = intl.string(review(4133)["Vay+ld"]);
+    obj6.title = intl.string(review(4121)["Vay+ld"]);
     const intl2 = util.intl;
-    obj6.description = intl2.string(review(4133)["N2HM8/"]);
+    obj6.description = intl2.string(review(4121)["N2HM8/"]);
     items = [closure_5(StepHeading, obj6), ];
     const obj7 = {
       review,
@@ -250,7 +250,7 @@ function ReviewStep() {
           return applyArgumentsResult;
         }
     };
-    items[1] = closure_5(review(14567), obj7);
+    items[1] = closure_5(review(18438), obj7);
     obj5.children = items;
     obj4.children = closure_6(Stack_Stack.Stack, obj5);
     const items1 = [closure_5(ModalContent.ModalContent, obj4), ];
@@ -290,20 +290,20 @@ function AccessStep() {
     const obj3 = { spacing: servers(575).space.PX_16, children: null };
     const obj4 = { title: null, description: null };
     const intl = util.intl;
-    obj4.title = intl.string(servers(4133).IN5vt4);
+    obj4.title = intl.string(servers(4121).IN5vt4);
     const intl2 = util.intl;
-    obj4.description = intl2.string(servers(4133).mbybxl);
+    obj4.description = intl2.string(servers(4121).mbybxl);
     items = [closure_5(StepHeading, obj4), ];
     const obj5 = { project, sharing, servers, serversLabel: null };
     const intl3 = util.intl;
-    obj5.serversLabel = intl3.string(servers(4133).BPxXfh);
-    items[1] = closure_5(servers(14573), obj5);
+    obj5.serversLabel = intl3.string(servers(4121).BPxXfh);
+    items[1] = closure_5(servers(18441), obj5);
     obj3.children = items;
     obj2.children = closure_6(Stack_Stack.Stack, obj3);
     const items1 = [closure_5(ModalContent.ModalContent, obj2), ];
     const intl4 = util.intl;
     if (null != servers.picked) {
-      let i4jeWR = servers(4133)["+uQwxA"];
+      let i4jeWR = servers(4121)["+uQwxA"];
     } else {
       i4jeWR = util.t.i4jeWR;
     }

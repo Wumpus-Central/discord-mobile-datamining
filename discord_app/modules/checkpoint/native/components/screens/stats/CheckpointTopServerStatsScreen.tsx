@@ -1,27 +1,27 @@
-// === Module 13384: CheckpointTopServerStatsScreen ===
+// === Module 12687: CheckpointTopServerStatsScreen ===
 
-// Module 13384 (CheckpointTopServerStatsScreen)
+// Module 12687 (CheckpointTopServerStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3319 from "module_3319" /* 3319 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6745 */;
-import GuildIcon from "GuildIcon" /* 7730 */;
-import ServerIcon from "ServerIcon" /* 13091 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13136 */;
-import CheckpointTextDefault from "CheckpointText" /* 13137 */;
-import useIsCheckpointWide from "useIsCheckpointWide" /* 13350 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13372 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 13373 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13374 */;
-import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13380 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 13381 */;
-import CheckpointTruncatedTextDefault from "CheckpointTruncatedText" /* 13383 */;
-import CheckpointStore from "CheckpointStore" /* 13119 */;
-import CheckpointConstants from "CheckpointConstants" /* 6375 */;
+import _modDef3339 from "module_3339" /* 3339 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6247 */;
+import GuildIcon from "GuildIcon" /* 7233 */;
+import ServerIcon from "ServerIcon" /* 12389 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12434 */;
+import CheckpointTextDefault from "CheckpointText" /* 12435 */;
+import useIsCheckpointWide from "useIsCheckpointWide" /* 12654 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12675 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12676 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12677 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 12683 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 12684 */;
+import CheckpointTruncatedTextDefault from "CheckpointTruncatedText" /* 12686 */;
+import CheckpointStore from "CheckpointStore" /* 12417 */;
+import CheckpointConstants from "CheckpointConstants" /* 5877 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5310 */;
+import createStyles from "createStyles" /* 4823 */;
 import size_mod from "module_2" /* 2 */;
 
 const GuildIconDefault = GuildIcon;
@@ -89,13 +89,13 @@ export default function CheckpointTopServerStatsScreen() {
   if (null != checkpointTopPercent) {
     const intl2 = util.intl;
     const obj2 = { numDays: rounded, percent: checkpointTopPercent };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3319.BRQODX, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3339.BRQODX, obj2);
   }
   const obj3 = { centered: tmp4, children: null };
   const obj4 = { style: tmp4 ? tmp.wideContainer : tmp.container, children: null };
   const obj5 = { style: tmp4 ? tmp.wideSpotlightContainer : tmp.spotlightContainer, children: null };
   let tmp13Result = null != stateFromStores;
-  const stringResult = intl.string(_modDef3319["M+a+t1"]);
+  const stringResult = intl.string(_modDef3339["M+a+t1"]);
   if (tmp13Result) {
     const obj6 = { style: tmp.spotlight, children: null };
     const items1 = [timestampProducer(CheckpointRankTagDefault, { rank: 1 }), ];
@@ -154,11 +154,11 @@ export default function CheckpointTopServerStatsScreen() {
           return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    let formatResult = intl4.format(_modDef3319.sIDTV1, obj18);
+    let formatResult = intl4.format(_modDef3339.sIDTV1, obj18);
   } else {
     const intl3 = util.intl;
     const obj19 = { numDays: rounded };
-    formatResult = intl3.format(_modDef3319.nLCUQ4, obj19);
+    formatResult = intl3.format(_modDef3339.nLCUQ4, obj19);
   }
   obj17.children = formatResult;
   items6[2] = timestampProducer(CheckpointTextDefault, obj17);

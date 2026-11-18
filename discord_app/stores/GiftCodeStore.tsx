@@ -1,12 +1,12 @@
-// === Module 12582: GiftCodeStore ===
+// === Module 11865: GiftCodeStore ===
 
-// Module 12582 (GiftCodeStore)
+// Module 11865 (GiftCodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6753 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 12583 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10090 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6255 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11866 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 9372 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -23,7 +23,7 @@ function updateGiftCode(giftCode) {
   } else {
     const result2 = map.set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(5154).Timeout();
+      const timeout = new code(4667).Timeout();
       dependencyMap[code] = timeout;
       const value2 = map.get(code);
       if (null != value2) {
@@ -93,7 +93,7 @@ function updateGiftCode(giftCode) {
                                             closure_2_20.emitChange();
                                           } else if (null != closure_2_9[closure_1_0]) {
                                             let _Math = Math;
-                                            obj2.start(Math.min(closure_2_6, diff), /* F105511 */ function() { ... });
+                                            obj2.start(Math.min(closure_2_6, diff), /* F102223 */ function() { ... });
                                           }
                                           let obj3 = closure_2_1(closure_2_2[4])();
                                         }
@@ -313,6 +313,7 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
       items = [];
       items[HermesBuiltin.arraySpread(items, 0)] = giftCode.code;
     }
+    delete tmp2[tmp];
     updateGiftCode(giftCode);
   },
   GIFT_CODE_RESOLVE_FAILURE: function handleGiftCodeResolveFailure(code) {

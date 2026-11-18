@@ -1,9 +1,9 @@
-// === Module 14100: getBoostRowMessageText ===
+// === Module 13404: getBoostRowMessageText ===
 
-// Module 14100 (getBoostRowMessageText)
+// Module 13404 (getBoostRowMessageText)
 import util from "util" /* 1113 */;
-import _modDef2735 from "module_2735" /* 2735 */;
-import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 14095 */;
+import _modDef2755 from "module_2755" /* 2755 */;
+import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 13399 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");
@@ -12,7 +12,7 @@ export default function getBoostRowMessageText(phase) {
   phase = phase.phase;
   if ("gave" === phase) {
     const intl3 = util.intl;
-    return intl3.string(_modDef2735.plwH8d);
+    return intl3.string(_modDef2755.plwH8d);
   } else if ("expiring" === phase) {
     const intl2 = util.intl;
     let endsAt = phase.boost.endsAt;
@@ -21,9 +21,9 @@ export default function getBoostRowMessageText(phase) {
       endsAt = new Date(phase.sortKey + getBoostLifecyclePhase.BOOST_EXPIRING_DISPLAY_WINDOW_MS);
     }
     const obj = { date: endsAt };
-    return intl2.formatToPlainString(_modDef2735.vct4l8, obj);
+    return intl2.formatToPlainString(_modDef2755.vct4l8, obj);
   } else if ("expired" === phase) {
     const intl = util.intl;
-    return intl.string(_modDef2735.hSXjlI);
+    return intl.string(_modDef2755.hSXjlI);
   }
 };

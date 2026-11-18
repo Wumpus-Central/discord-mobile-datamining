@@ -1,26 +1,26 @@
-// === Module 17403: DirectMessageSpamFilterSetting ===
+// === Module 16060: DirectMessageSpamFilterSetting ===
 
-// Module 17403 (DirectMessageSpamFilterSetting)
+// Module 16060 (DirectMessageSpamFilterSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 5135 */;
-import ModerationUtils from "ModerationUtils" /* 17404 */;
+import UserSettings from "UserSettings" /* 4648 */;
+import ModerationUtils from "ModerationUtils" /* 16061 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(12612);
+const SettingBuilders = fn(11897);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.tiCXaH);
   },
-  parent: fn(9213).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8624).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: function useDmSpamFilterSettingOptions() {
     return noop.useMemo(() => {
       const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
       return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
     }, []);
   },
-  useValue: fn(17406).useDerivedDmSpamFilterSettingValue,
+  useValue: fn(16063).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

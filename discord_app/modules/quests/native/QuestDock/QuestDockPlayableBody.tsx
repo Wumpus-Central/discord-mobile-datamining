@@ -1,18 +1,18 @@
-// === Module 17860: QuestDockPlayableBody ===
+// === Module 16663: QuestDockPlayableBody ===
 
-// Module 17860 (QuestDockPlayableBody)
-import QuestTypes from "QuestTypes" /* 6965 */;
-import AdCreativeType from "AdCreativeType" /* 6969 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8845 */;
-import captureAdUserAction from "captureAdUserAction" /* 10579 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 10582 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10615 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12855 */;
-import PlayableActionCreators from "PlayableActionCreators" /* 17861 */;
+// Module 16663 (QuestDockPlayableBody)
+import QuestTypes from "QuestTypes" /* 6469 */;
+import AdCreativeType from "AdCreativeType" /* 6473 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8342 */;
+import captureAdUserAction from "captureAdUserAction" /* 9860 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9863 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9896 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 12149 */;
+import PlayableActionCreators from "PlayableActionCreators" /* 16664 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(6962).QuestDockMode;
+const QuestDockMode = fn(6466).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockPlayableBody.tsx");
@@ -56,10 +56,11 @@ export default noop.memo(function QuestDockPlayableBody() {
   const obj5 = { rewardTile: jsx(questDockPlayable(getQuestImpressionId[17]).QuestDockBodyRewardTile, { assetUrl: setRestingQuestDockMode(getQuestImpressionId[18]), isAnimatedAsset: true, paused: null, withAnimation: null }), contentBadge: jsx(setRestingQuestDockMode(getQuestImpressionId[19]), {}), title: questDockPlayable.productName, description: null, ctaText: null, onCtaPress: null, ctaButtonVariant: "primary", secondaryCta: null };
   obj4.withAnimation = isQuestDockExpanded;
   const intl = tmp3(tmp2[20]).intl;
-  obj5.description = intl.string(questDockPlayable(getQuestImpressionId[20]).t["1uzE2S"]);
+  obj5.description = intl.string(questDockPlayable(getQuestImpressionId[20]).t.vGP84Q);
   const intl2 = tmp3(tmp2[20]).intl;
-  obj5.ctaText = intl2.string(questDockPlayable(getQuestImpressionId[20]).t.U7cCLU);
+  obj5.ctaText = intl2.formatToPlainString(questDockPlayable(getQuestImpressionId[20]).t.dPT1o7, { seconds: questDockPlayable.rewardTimerSeconds });
   obj5.onCtaPress = callback;
+  const obj6 = { seconds: questDockPlayable.rewardTimerSeconds };
   const tmp10 = setRestingQuestDockMode(getQuestImpressionId[17]);
   obj5.secondaryCta = jsx(questDockPlayable(getQuestImpressionId[21]).IconButton, { variant: "secondary-overlay", size: "md", icon: setRestingQuestDockMode(getQuestImpressionId[22]), accessibilityLabel: questDockPlayable.cta.buttonLabel, onPress: callback1 });
   return <tmp10 rewardTile={jsx(questDockPlayable(getQuestImpressionId[17]).QuestDockBodyRewardTile, { assetUrl: setRestingQuestDockMode(getQuestImpressionId[18]), isAnimatedAsset: true, paused: null, withAnimation: null })} contentBadge={jsx(setRestingQuestDockMode(getQuestImpressionId[19]), {})} title={questDockPlayable.productName} description={null} ctaText={null} onCtaPress={null} ctaButtonVariant="primary" secondaryCta={null} />;

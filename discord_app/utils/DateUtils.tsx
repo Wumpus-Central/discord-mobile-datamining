@@ -1,14 +1,14 @@
-// === Module 5132: DateUtils ===
+// === Module 4645: DateUtils ===
 
-// Module 5132 (DateUtils)
+// Module 4645 (DateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import onTimezoneChangeDefault from "onTimezoneChange" /* 5133 */;
-import UserSettings from "UserSettings" /* 5135 */;
-import SystemDateFormatter from "SystemDateFormatter" /* 5998 */;
-import makeDateFormatterDefault from "makeDateFormatter" /* 6000 */;
+import onTimezoneChangeDefault from "onTimezoneChange" /* 4646 */;
+import UserSettings from "UserSettings" /* 4648 */;
+import SystemDateFormatter from "SystemDateFormatter" /* 5494 */;
+import makeDateFormatterDefault from "makeDateFormatter" /* 5496 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
@@ -49,36 +49,34 @@ function syncHourCycleToIntlConfig() {
     continue;
   }
 }
-function differenceInCalendarDays(d, d2) {
-  let tmp = typeof d === "string";
-  if (typeof d !== "string") {
-    tmp = typeof d === "number";
+function differenceInCalendarDays(date, date2) {
+  let tmp = typeof date === "string";
+  if (typeof date !== "string") {
+    tmp = typeof date === "number";
   }
   if (!tmp) {
     const _Date = Date;
-    tmp = d instanceof Date;
+    tmp = date instanceof Date;
   }
-  let date = d;
   if (!tmp) {
-    const obj = { d };
+    const obj = { d: date };
     logger.error("Invalid date given to startOfDay", obj);
     const _Date2 = Date;
     date = new Date();
   }
   const date1 = new Date(date);
   const time = date1.getTime();
-  let tmp10 = typeof d2 === "string";
+  let tmp10 = typeof date2 === "string";
   const result = Math.floor((time - 60000 * date1.getTimezoneOffset()) / c4) * c4;
-  if (typeof d2 !== "string") {
-    tmp10 = typeof d2 === "number";
+  if (typeof date2 !== "string") {
+    tmp10 = typeof date2 === "number";
   }
   if (!tmp10) {
     const _Date3 = Date;
-    tmp10 = d2 instanceof Date;
+    tmp10 = date2 instanceof Date;
   }
-  let date2 = d2;
   if (!tmp10) {
-    const obj2 = { d: d2 };
+    const obj2 = { d: date2 };
     logger.error("Invalid date given to startOfDay", obj2);
     const _Date4 = Date;
     date2 = new Date();
@@ -125,9 +123,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("utils/DateUtils.tsx");
 
 export { differenceInCalendarDays };
-export function differenceInDays(getTime, getTime2) {
-  const time = getTime.getTime();
-  return (time - getTime2.getTime()) / c4;
+export function differenceInDays(date, date1) {
+  const time = date.getTime();
+  return (time - date1.getTime()) / c4;
 }
 export function isSameHourMoment(toDate, toDate2) {
   const toDateResult = toDate.toDate();
@@ -139,11 +137,11 @@ export function isSameHourMoment(toDate, toDate2) {
   }
   return tmp;
 }
-export function isSameDay(getDate, getDate2) {
-  let tmp = Math.abs(+getDate - +getDate2) <= c4;
+export function isSameDay(timestamp, timestamp2) {
+  let tmp = Math.abs(+timestamp - +timestamp2) <= c4;
   if (tmp) {
-    tmp = getDate.getDate() === getDate2.getDate();
-    const date = getDate.getDate();
+    tmp = timestamp.getDate() === timestamp2.getDate();
+    const date = timestamp.getDate();
   }
   return tmp;
 }

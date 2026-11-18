@@ -1,9 +1,9 @@
-// === Module 11378: confirmActivityLaunchChecks ===
+// === Module 10660: confirmActivityLaunchChecks ===
 
-// Module 11378 (confirmActivityLaunchChecks)
+// Module 10660 (confirmActivityLaunchChecks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5158 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
 
 const require = fn;
 function getOrFetchApplicationForLaunch() {
@@ -171,20 +171,20 @@ let closure_9 = async function _confirmActivityChange(arg0) {
               if (value != null) {
                 _location = value.location;
               }
-              channel = channel.getChannel(closure_1_0(5231).getEmbeddedActivityLocationChannelId(_location));
+              channel = channel.getChannel(closure_1_0(4744).getEmbeddedActivityLocationChannelId(_location));
               if (null != value) {
                 if (null != channel) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(11382)(tmp, channel, () => {
+                  shouldClosePopout(10664)(tmp, channel, () => {
                     const result = closure_0(c2[10]).leaveEmbeddedActivity({ location: value.location, applicationId: closure_2_0.id, shouldClosePopout });
                     closure_0(true);
                   }, () => closure_0(false));
                 }
               }
               fn(true);
-              const obj2 = closure_1_0(5231);
+              const obj2 = closure_1_0(4744);
             });
             c2 = 2;
             c3 = 1;

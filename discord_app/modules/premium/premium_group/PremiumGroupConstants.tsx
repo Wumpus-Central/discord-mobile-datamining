@@ -2,7 +2,7 @@
 
 // Module 2187 (PremiumGroupConstants)
 import util from "util" /* 1113 */;
-import _modDef3515 from "module_3515" /* 3515 */;
+import _modDef3535 from "module_3535" /* 3535 */;
 import Constants from "Constants" /* 1072 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2188 */;
 import size from "module_2" /* 2 */;
@@ -21,7 +21,7 @@ export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export function getPremiumGroupProductName() {
   const intl = util.intl;
-  return intl.string(_modDef3515.aFBQ3d);
+  return intl.string(_modDef3535.aFBQ3d);
 }
 export function getPremiumGroupCountryName() {
   const intl = util.intl;

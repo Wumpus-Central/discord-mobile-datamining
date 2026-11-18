@@ -1,8 +1,8 @@
-// === Module 7020: StickersPackStore ===
+// === Module 6524: StickersPackStore ===
 
-// Module 7020 (StickersPackStore)
+// Module 6524 (StickersPackStore)
 import DurationsDefault from "Durations" /* 1089 */;
-import StickersTypes from "StickersTypes" /* 6791 */;
+import StickersTypes from "StickersTypes" /* 6294 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -37,8 +37,8 @@ function ingestStickerPack(item10017, packStickersDatabase, packsDatabase, premi
     return obj;
   })(item10017.stickers));
 }
-const TypeTag = fn(5175).TypeTag;
-const LibdiscoreStore = fn(5182).LibdiscoreStore;
+const TypeTag = fn(4688).TypeTag;
+const LibdiscoreStore = fn(4695).LibdiscoreStore;
 let c4 = false;
 let closure_5 = null;
 const HOUR = DurationsDefault.Millis.HOUR;

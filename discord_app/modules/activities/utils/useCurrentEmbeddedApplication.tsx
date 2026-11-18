@@ -1,8 +1,8 @@
-// === Module 11453: useCurrentEmbeddedApplication ===
+// === Module 10735: useCurrentEmbeddedApplication ===
 
-// Module 11453 (useCurrentEmbeddedApplication)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7269 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11454 */;
+// Module 10735 (useCurrentEmbeddedApplication)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6773 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10736 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);

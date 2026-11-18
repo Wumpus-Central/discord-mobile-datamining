@@ -1,27 +1,27 @@
-// === Module 11134: showUploadFileSizeError ===
+// === Module 10416: showUploadFileSizeError ===
 
-// Module 11134 (showUploadFileSizeError)
+// Module 10416 (showUploadFileSizeError)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6064 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6266 */;
-import FileSizeUtils from "FileSizeUtils" /* 6760 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7947 */;
-import UploadUtils from "UploadUtils" /* 8857 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8858 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8890 */;
-import logMessageSendFailure from "logMessageSendFailure" /* 9039 */;
-import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 11135 */;
-import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 11136 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 11137 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5560 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5768 */;
+import FileSizeUtils from "FileSizeUtils" /* 6262 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7450 */;
+import UploadUtils from "UploadUtils" /* 8354 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8355 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8386 */;
+import logMessageSendFailure from "logMessageSendFailure" /* 8450 */;
+import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 10417 */;
+import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 10418 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 10419 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
-const FileUploadErrorTypes = fn(5315).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4828).FileUploadErrorTypes;
 const PremiumConstants = fn(1390);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };

@@ -1,8 +1,8 @@
-// === Module 9374: parseNativeMarkup ===
+// === Module 8785: parseNativeMarkup ===
 
-// Module 9374 (parseNativeMarkup)
-import Syntax from "Syntax" /* 9375 */;
-import transformNativeMarkupNode from "transformNativeMarkupNode" /* 9379 */;
+// Module 8785 (parseNativeMarkup)
+import Syntax from "Syntax" /* 8786 */;
+import transformNativeMarkupNode from "transformNativeMarkupNode" /* 8790 */;
 import apply from "apply" /* 12 */;
 
 require = fn;

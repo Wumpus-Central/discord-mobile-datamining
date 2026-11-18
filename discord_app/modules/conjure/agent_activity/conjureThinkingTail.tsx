@@ -1,6 +1,6 @@
-// === Module 14810: conjureThinkingTail ===
+// === Module 18664: conjureThinkingTail ===
 
-// Module 14810 (conjureThinkingTail)
+// Module 18664 (conjureThinkingTail)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/conjureThinkingTail.tsx");

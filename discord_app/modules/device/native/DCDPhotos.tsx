@@ -1,6 +1,6 @@
-// === Module 12309: DCDPhotos ===
+// === Module 11591: DCDPhotos ===
 
-// Module 12309 (DCDPhotos)
+// Module 11591 (DCDPhotos)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

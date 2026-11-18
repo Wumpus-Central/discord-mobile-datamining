@@ -1,6 +1,6 @@
-// === Module 20332: openInteractionIframeModal ===
+// === Module 19606: openInteractionIframeModal ===
 
-// Module 20332 (openInteractionIframeModal)
+// Module 19606 (openInteractionIframeModal)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -38,7 +38,7 @@ let closure_5 = async function _openInteractionIframeModal(arg0) {
     }
   }
 };
-let closure_4 = fn(20333).INTERACTION_IFRAME_MODAL_KEY;
+let closure_4 = fn(19607).INTERACTION_IFRAME_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
 

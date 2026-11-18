@@ -1,6 +1,6 @@
-// === Module 8909: imageFilename ===
+// === Module 8405: imageFilename ===
 
-// Module 8909 (imageFilename)
+// Module 8405 (imageFilename)
 import size from "module_2" /* 2 */;
 
 const set = new Set(["image/heic", "image/heif", "image/heic-sequence", "image/heif-sequence"]);
@@ -11,13 +11,13 @@ const set3 = new Set([".jxr", ".wdp", ".hdp"]);
 const re5 = /\.(jxr|wdp|hdp)$/i;
 const result = size.fileFinishedImporting("lib/uploader/imageFilename.tsx");
 
-export function isHeicFile(type) {
-  if (set.has(type.type)) {
+export function isHeicFile(file) {
+  if (set.has(file.type)) {
     return true;
   } else {
     let str = "";
-    if (typeof type.name === "string") {
-      str = type.name;
+    if (typeof file.name === "string") {
+      str = file.name;
     }
     const lastIndexOfResult = str.lastIndexOf(".");
     let formatted = null;

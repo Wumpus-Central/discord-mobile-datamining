@@ -1,21 +1,21 @@
-// === Module 10769: MediaModalOverlayHeader ===
+// === Module 10050: MediaModalOverlayHeader ===
 
-// Module 10769 (MediaModalOverlayHeader)
+// Module 10050 (MediaModalOverlayHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5486 */;
-import timing_timing from "timing/timing" /* 5542 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import XSmallIcon from "XSmallIcon" /* 7559 */;
-import ContextMenu from "ContextMenu" /* 9159 */;
-import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 10345 */;
-import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 10346 */;
-import MediaShareActions from "MediaShareActions" /* 10649 */;
-import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 10766 */;
-import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 10770 */;
-import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF" /* 10771 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4999 */;
+import timing_timing from "timing/timing" /* 5033 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import XSmallIcon from "XSmallIcon" /* 7062 */;
+import ContextMenu from "ContextMenu" /* 8570 */;
+import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 9626 */;
+import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 9627 */;
+import MediaShareActions from "MediaShareActions" /* 9930 */;
+import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 10047 */;
+import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 10051 */;
+import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF" /* 10052 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -23,10 +23,10 @@ const _modDef1655 = _mod1655;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const SHARE_PREPARING_MODAL_KEY = fn(10341).SHARE_PREPARING_MODAL_KEY;
+const SHARE_PREPARING_MODAL_KEY = fn(9622).SHARE_PREPARING_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_8 = createStyles.createStyles({ navbarInner: { flex: 1, justifyContent: "space-between" }, navbarLeft: { flexShrink: 1, flexDirection: "row", marginRight: 8 }, navbarRight: { flexShrink: 0, justifyContent: "flex-end", flexDirection: "row", gap: 8 }, navbarName: { flexShrink: 1, alignItems: "center", height: 40, marginLeft: 8 }, navbarNameInner: { borderRadius: 20, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.7)", flex: 1, flexDirection: "row", paddingHorizontal: 18 }, navbarNameShrinkWrapper: { flexShrink: 1 }, contextIcon: { width: 18, height: 18, marginRight: 6 } });
 let closure_9 = { code: "(function MediaModalOverlayHeaderTsx1(){let[withTiming,isPreparing]=this.__closure;return{opacity:withTiming(isPreparing?0:1)};})" };
 const size = fn(2);
@@ -115,11 +115,11 @@ export function MediaModalOverlayHeader(arg0) {
               const obj = { accessibilityLabel: null, icon: null, ref: null };
               const intl = _undefined(1113).intl;
               obj.accessibilityLabel = intl.string(_undefined(1113).t.PdRCRg);
-              const tmp4 = _undefined2(10346);
+              const tmp4 = _undefined2(9627);
               if (obj2.isAndroid()) {
-                let tmp2Result = closure_1_6(_undefined(10778).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
+                let tmp2Result = closure_1_6(_undefined(10059).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
               } else {
-                tmp2Result = closure_1_6(_undefined(7430).MoreHorizontalIcon, { size: "md", color: "interactive-text-active" });
+                tmp2Result = closure_1_6(_undefined(6933).MoreHorizontalIcon, { size: "md", color: "interactive-text-active" });
               }
               obj.icon = tmp2Result;
               obj.ref = ref.ref;

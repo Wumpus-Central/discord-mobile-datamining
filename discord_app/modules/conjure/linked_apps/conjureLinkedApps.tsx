@@ -1,7 +1,7 @@
-// === Module 14472: conjureLinkedApps ===
+// === Module 18366: conjureLinkedApps ===
 
-// Module 14472 (conjureLinkedApps)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 14452 */;
+// Module 18366 (conjureLinkedApps)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 14667 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// === Module 12300: MediaKeyboardActionSheet ===
+// === Module 11582: MediaKeyboardActionSheet ===
 
-// Module 12300 (MediaKeyboardActionSheet)
+// Module 11582 (MediaKeyboardActionSheet)
 import util from "util" /* 1113 */;
-import ImageIcon from "ImageIcon" /* 8096 */;
-import AttachmentIcon from "AttachmentIcon" /* 10727 */;
-import PollsIcon from "PollsIcon" /* 12301 */;
-import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 12303 */;
-import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 12305 */;
+import ImageIcon from "ImageIcon" /* 7599 */;
+import AttachmentIcon from "AttachmentIcon" /* 10008 */;
+import PollsIcon from "PollsIcon" /* 11583 */;
+import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 11585 */;
+import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 11587 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

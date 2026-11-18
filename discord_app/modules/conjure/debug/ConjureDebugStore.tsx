@@ -1,10 +1,10 @@
-// === Module 7376: ConjureDebugStore ===
+// === Module 6879: ConjureDebugStore ===
 
-// Module 7376 (ConjureDebugStore)
+// Module 6879 (ConjureDebugStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjurePerfTraceBatches from "ConjurePerfTraceBatches" /* 7377 */;
-import ConjureUsageTypes from "ConjureUsageTypes" /* 7378 */;
+import ConjurePerfTraceBatches from "ConjurePerfTraceBatches" /* 6880 */;
+import ConjureUsageTypes from "ConjureUsageTypes" /* 6881 */;
 
 require = fn;
 let closure_2 = { pending: false, info: null, error: null, observedAt: null };

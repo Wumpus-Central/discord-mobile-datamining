@@ -1,10 +1,10 @@
-// === Module 18509: UserSettingsDesignSystemAILoader ===
+// === Module 17322: UserSettingsDesignSystemAILoader ===
 
-// Module 18509 (UserSettingsDesignSystemAILoader)
-import Text_Text from "Text/Text" /* 5923 */;
-import Stack_Stack from "Stack/Stack" /* 6335 */;
-import Card from "Card" /* 7455 */;
-import AILoader from "AILoader" /* 14589 */;
+// Module 17322 (UserSettingsDesignSystemAILoader)
+import Text_Text from "Text/Text" /* 5414 */;
+import Stack_Stack from "Stack/Stack" /* 5837 */;
+import Card from "Card" /* 6958 */;
+import AILoader from "AILoader" /* 15148 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_6 = createStyles.createStyles({ container: { padding: 16 }, row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" } });
 let closure_7 = [12, 16, 24];
 let items = [{ color: "text-default", label: "text-default" }, { color: "text-subtle", label: "text-subtle" }];

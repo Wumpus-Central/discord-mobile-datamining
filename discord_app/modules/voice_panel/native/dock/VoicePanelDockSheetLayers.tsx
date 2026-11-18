@@ -1,13 +1,13 @@
-// === Module 20030: VoicePanelDockSheetLayers ===
+// === Module 19301: VoicePanelDockSheetLayers ===
 
-// Module 20030 (VoicePanelDockSheetLayers)
+// Module 19301 (VoicePanelDockSheetLayers)
 import native from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import Portal from "Portal" /* 5502 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11276 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12427 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19251 */;
-import voicePanelLayoutTransitionDefault from "voicePanelLayoutTransition" /* 20031 */;
+import Portal from "Portal" /* 5015 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 10558 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11709 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 18064 */;
+import voicePanelLayoutTransitionDefault from "voicePanelLayoutTransition" /* 19302 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -15,11 +15,11 @@ const _modDef1655 = _mod1655;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockSlotStore = fn(13936);
+const VoicePanelDockSlotStore = fn(13238);
 ({ VoicePanelDockHiddenContext: hasOwnProperty, useShareVoicePanelDockState: closure_6 } = VoicePanelDockSlotStore);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { dockSheetLayers: null, dockSurfaceClip: null, dockSurfaceShadow: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

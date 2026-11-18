@@ -1,9 +1,9 @@
-// === Module 19235: MobilePhoneXIcon ===
+// === Module 18046: MobilePhoneXIcon ===
 
-// Module 19235 (MobilePhoneXIcon)
+// Module 18046 (MobilePhoneXIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6013 */;
-import _mod19236 from "module_19236" /* 19236 */;
+import BaseIconImage from "BaseIconImage" /* 5509 */;
+import _mod18047 from "module_18047" /* 18047 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MobilePhoneXIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19236, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18047, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

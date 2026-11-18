@@ -1,7 +1,7 @@
-// === Module 7311: transformUser ===
+// === Module 6816: transformUser ===
 
-// Module 7311 (transformUser)
-import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 7312 */;
+// Module 6816 (transformUser)
+import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 6817 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");

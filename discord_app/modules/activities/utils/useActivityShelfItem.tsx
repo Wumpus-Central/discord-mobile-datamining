@@ -1,21 +1,21 @@
-// === Module 13546: useActivityShelfItem ===
+// === Module 12853: useActivityShelfItem ===
 
-// Module 13546 (useActivityShelfItem)
+// Module 12853 (useActivityShelfItem)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import Server from "Server" /* 2119 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5231 */;
-import getPlatformDefault from "getPlatform" /* 5978 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7065 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7269 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7928 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11304 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11453 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11454 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11512 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 13547 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13548 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4744 */;
+import getPlatformDefault from "getPlatform" /* 5474 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6569 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6773 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7431 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10586 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10735 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10736 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10794 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12854 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12855 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5158 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
 
 require = fn;
 function useActivityAction(applicationId) {

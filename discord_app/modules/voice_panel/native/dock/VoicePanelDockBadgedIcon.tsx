@@ -1,9 +1,9 @@
-// === Module 19252: VoicePanelDockBadgedIcon ===
+// === Module 18065: VoicePanelDockBadgedIcon ===
 
-// Module 19252 (VoicePanelDockBadgedIcon)
+// Module 18065 (VoicePanelDockBadgedIcon)
 import _mod1708 from "module_1708" /* 1708 */;
-import native from "native" /* 5371 */;
-import timing_timing from "timing/timing" /* 5542 */;
+import native from "native" /* 4884 */;
+import timing_timing from "timing/timing" /* 5033 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -54,7 +54,7 @@ function StreamBadge(progress) {
   obj.children = tmp3Result;
   return closure_5(state(cleanUp[10]).View, obj);
 }
-const VoicePanelDockConstants = fn(12446);
+const VoicePanelDockConstants = fn(11728);
 ({ DOCK_FADE_TIMING: closure_4, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -64,9 +64,9 @@ const sum2 = fn(1187).BADGE_SIZE + 4;
 let closure_9 = sum2 / 2;
 let closure_10 = sum + fn(1187).BADGE_SIZE / 2;
 let closure_11 = sum1 + fn(1187).BADGE_SIZE / 2;
-const GuildsBarActivityIndicator = fn(19149);
+const GuildsBarActivityIndicator = fn(17960);
 const mediaIcon = GuildsBarActivityIndicator.getMediaIcon({ audio: false, video: false, screenshare: true, isCurrentUserConnected: true });
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj3 = { clip: null, badge: null, badgeIndicator: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj3.clip = {};

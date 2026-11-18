@@ -1,6 +1,6 @@
-// === Module 12641: SocialLayerStorefrontMobileEmbedExperiment ===
+// === Module 11926: SocialLayerStorefrontMobileEmbedExperiment ===
 
-// Module 12641 (SocialLayerStorefrontMobileEmbedExperiment)
+// Module 11926 (SocialLayerStorefrontMobileEmbedExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

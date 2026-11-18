@@ -1,14 +1,14 @@
-// === Module 6755: V6OrEarlierAPIError ===
+// === Module 6257: V6OrEarlierAPIError ===
 
-// Module 6755 (V6OrEarlierAPIError)
-import BillingErrorDefault from "BillingError" /* 5130 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 5131 */;
-import APIErrorDefault from "APIError" /* 6756 */;
-import StripeErrorDefault from "StripeError" /* 6757 */;
-import NativeDispatchErrorDefault from "NativeDispatchError" /* 6758 */;
-import AppliedGuildBoostErrorDefault from "AppliedGuildBoostError" /* 6761 */;
-import ClientOutdatedAcceptGiftErrorDefault from "ClientOutdatedAcceptGiftError" /* 6762 */;
-import UploadVoiceDebugLogsError from "UploadVoiceDebugLogsError" /* 6763 */;
+// Module 6257 (V6OrEarlierAPIError)
+import BillingErrorDefault from "BillingError" /* 4643 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4644 */;
+import APIErrorDefault from "APIError" /* 6258 */;
+import StripeErrorDefault from "StripeError" /* 6259 */;
+import NativeDispatchErrorDefault from "NativeDispatchError" /* 6260 */;
+import AppliedGuildBoostErrorDefault from "AppliedGuildBoostError" /* 6263 */;
+import ClientOutdatedAcceptGiftErrorDefault from "ClientOutdatedAcceptGiftError" /* 6264 */;
+import UploadVoiceDebugLogsError from "UploadVoiceDebugLogsError" /* 6265 */;
 import size from "module_2" /* 2 */;
 
 const UploadVoiceDebugLogsErrorDefault = UploadVoiceDebugLogsError;

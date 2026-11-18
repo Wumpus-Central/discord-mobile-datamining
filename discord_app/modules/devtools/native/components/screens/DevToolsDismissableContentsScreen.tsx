@@ -1,25 +1,25 @@
-// === Module 18290: DevToolsDismissableContentsScreen ===
+// === Module 17096: DevToolsDismissableContentsScreen ===
 
-// Module 18290 (DevToolsDismissableContentsScreen)
+// Module 17096 (DevToolsDismissableContentsScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5140 */;
-import dismissible_content from "dismissible_content" /* 5143 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5986 */;
-import TrashIcon from "TrashIcon" /* 6034 */;
-import fuzzysearchDefault from "fuzzysearch" /* 7081 */;
-import TableRow from "TableRow" /* 7453 */;
-import TableRowArrow from "TableRowArrow" /* 7466 */;
-import TableRowGroup from "TableRowGroup" /* 7756 */;
-import Search_SearchBar from "Search/SearchBar" /* 7835 */;
-import TableSwitchRow from "TableSwitchRow" /* 7964 */;
-import SearchEmpty from "SearchEmpty" /* 11985 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 18291 */;
-import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 18292 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4653 */;
+import dismissible_content from "dismissible_content" /* 4656 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5482 */;
+import TrashIcon from "TrashIcon" /* 5530 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6585 */;
+import TableRow from "TableRow" /* 6956 */;
+import TableRowArrow from "TableRowArrow" /* 6969 */;
+import TableRowGroup from "TableRowGroup" /* 7259 */;
+import Search_SearchBar from "Search/SearchBar" /* 7338 */;
+import TableSwitchRow from "TableSwitchRow" /* 7467 */;
+import SearchEmpty from "SearchEmpty" /* 11267 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17097 */;
+import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 17098 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 5146 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4659 */;
 
 require = fn;
 function DismissableContentsEmpty() {
@@ -32,7 +32,7 @@ function DismissableContentsEmpty() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null, headerSection: null, search: null, sectionHeader: null, emptyState: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.contentContainer = { padding: nativeDefault.space.PX_16 };
@@ -88,8 +88,8 @@ export default function DevToolsDismissableContentsScreen() {
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
   const tmp2 = useSafeAreaInsetsDefault();
-  let obj = ref(11596);
-  [dependencyMap, tmp5] = ref(11596).useLocalStorageState("devtools-dc-search", "");
+  let obj = ref(10878);
+  [dependencyMap, tmp5] = ref(10878).useLocalStorageState("devtools-dc-search", "");
   _slicedToArray = tmp5;
   initialSearchQuery = _slicedToArray(initialSearchQuery.useState(() => {
     let str = dependencyMap;
@@ -127,7 +127,7 @@ export default function DevToolsDismissableContentsScreen() {
     const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     return items;
   });
-  let tmp4 = _slicedToArray(ref(11596).useLocalStorageState("devtools-dc-search", ""), 2);
+  let tmp4 = _slicedToArray(ref(10878).useLocalStorageState("devtools-dc-search", ""), 2);
   items = [closure_6];
   const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({ dailyCapOverridden: closure_6.dailyCapOverridden, newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden }));
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
@@ -193,6 +193,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj4.renderItem = callback3;
   obj4.onScroll = callback2;
-  obj3.children = dailyCapOverridden(ref(7898).FlashList, obj4);
+  obj3.children = dailyCapOverridden(ref(7401).FlashList, obj4);
   return dailyCapOverridden(first1, obj3);
 };

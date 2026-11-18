@@ -1,12 +1,12 @@
-// === Module 9292: ChannelLinkedToLobbySystemMessage ===
+// === Module 8703: ChannelLinkedToLobbySystemMessage ===
 
-// Module 9292 (ChannelLinkedToLobbySystemMessage)
+// Module 8703 (ChannelLinkedToLobbySystemMessage)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 9192 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9199 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9201 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9203 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8603 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8610 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8612 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8614 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 require = fn;

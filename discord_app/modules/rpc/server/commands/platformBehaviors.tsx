@@ -1,8 +1,8 @@
-// === Module 17006: platformBehaviors ===
+// === Module 15656: platformBehaviors ===
 
-// Module 17006 (platformBehaviors)
+// Module 15656 (platformBehaviors)
 import Constants from "Constants" /* 1083 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 16957 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15607 */;
 import size from "module_2" /* 2 */;
 
 const RPCCommands = Constants.RPCCommands;

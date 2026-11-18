@@ -1,13 +1,13 @@
-// === Module 20022: useExternalPipSelectedTile ===
+// === Module 19293: useExternalPipSelectedTile ===
 
-// Module 20022 (useExternalPipSelectedTile)
+// Module 19293 (useExternalPipSelectedTile)
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 7024 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 16282 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6068 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6528 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 14949 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
 
 const require = fn;
-const VoicePanelPIPModes = fn(19956).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19227).VoicePanelPIPModes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipSelectedTile.android.tsx");
 

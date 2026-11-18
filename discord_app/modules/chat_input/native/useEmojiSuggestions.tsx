@@ -1,10 +1,10 @@
-// === Module 13923: useEmojiSuggestions ===
+// === Module 13225: useEmojiSuggestions ===
 
-// Module 13923 (useEmojiSuggestions)
-import EmojiTypes from "EmojiTypes" /* 5259 */;
+// Module 13225 (useEmojiSuggestions)
+import EmojiTypes from "EmojiTypes" /* 4772 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6977 */;
+import EmojiStore from "EmojiStore" /* 6481 */;
 
 require = fn;
 function trimSurroundingPunctuation(wordSpan) {
@@ -97,8 +97,8 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj3;
   }
 }
-const LoadState = fn(6977).LoadState;
-const EnglishEmojiSuggestionsConstants = fn(13924);
+const LoadState = fn(6481).LoadState;
+const EnglishEmojiSuggestionsConstants = fn(13226);
 ({ QUERY_DENYLIST: metroImportDefault, SHORT_QUERY_ALLOWLIST: closure_8 } = EnglishEmojiSuggestionsConstants);
 const EmojiIntention = fn(1391).EmojiIntention;
 const re10 = /(\S+)\s$/;

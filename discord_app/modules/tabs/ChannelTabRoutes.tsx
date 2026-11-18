@@ -1,20 +1,16 @@
-// === Module 10704: ChannelTabRoutes ===
+// === Module 9985: ChannelTabRoutes ===
 
-// Module 10704 (ChannelTabRoutes)
-import Constants from "Constants" /* 1072 */;
+// Module 9985 (ChannelTabRoutes)
+import _mod1100 from "module_1100" /* 1100 */;
 import util from "util" /* 1113 */;
-import _modDef4133 from "module_4133" /* 4133 */;
-import ChannelConstants from "ChannelConstants" /* 5166 */;
-import matchPathCompat from "matchPathCompat" /* 5348 */;
-import RouteUtils from "RouteUtils" /* 5361 */;
+import _modDef4121 from "module_4121" /* 4121 */;
+import matchPathCompat from "matchPathCompat" /* 4861 */;
+import RouteUtils from "RouteUtils" /* 4874 */;
+import Constants from "Constants" /* 1072 */;
+import ChannelConstants from "ChannelConstants" /* 4679 */;
 import size from "module_2" /* 2 */;
 
-const Routes = Constants.Routes;
-const RouteParam = RouteUtils.RouteParam;
-const path = Routes.CHANNEL(RouteParam.guildId(), ChannelConstants.StaticChannelRoute.CONJURE, ":projectId?");
-const result = size.fileFinishedImporting("modules/tabs/ChannelTabRoutes.tsx");
-
-export function getRouteTabForLocation(location) {
+function getRouteTabForLocation(location) {
   ({ pathname, search } = location);
   if (search === undefined) {
     search = "";
@@ -51,10 +47,54 @@ export function getRouteTabForLocation(location) {
       const _HermesInternal = HermesInternal;
       obj7.routePath = "" + pathname + search + str;
       const intl = util.intl;
-      obj7.routeLabel = intl.string(_modDef4133.uk6jhJ);
+      obj7.routeLabel = intl.string(_modDef4121.uk6jhJ);
       tmp5 = obj7;
     }
     obj = matchPathCompat;
   }
   return tmp5;
+}
+({ ME: c3, Routes } = Constants);
+({ isStaticChannelRoute: hasOwnProperty, StaticChannelRoute } = ChannelConstants);
+const RouteParam = RouteUtils.RouteParam;
+const path = Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.CONJURE, ":projectId?");
+const RouteParam2 = RouteUtils.RouteParam;
+const RouteParam3 = RouteUtils.RouteParam;
+const path2 = Routes.CHANNEL(RouteParam2.guildId(), RouteParam3.channelId(), ":messageId?");
+const result = size.fileFinishedImporting("modules/tabs/ChannelTabRoutes.tsx");
+
+export function getFriendsTabLocation() {
+  const obj = { kind: "route", routePath: Routes.FRIENDS, routeLabel: null };
+  const intl = util.intl;
+  obj.routeLabel = intl.string(util.t.TdEu5X);
+  return obj;
+}
+export { getRouteTabForLocation };
+export function getTabLocationForPath(path) {
+  const parsePathResult = _mod1100.parsePath(path);
+  const pathname = parsePathResult.pathname;
+  const tmp4 = getRouteTabForLocation({ pathname, search: parsePathResult.search, hash: parsePathResult.hash });
+  if (null != tmp4) {
+    const obj3 = { kind: "route" };
+    const merged = Object.assign(tmp4);
+    return obj3;
+  } else {
+    const obj4 = { path: path2, exact: true };
+    const matchPathResult = matchPathCompat.matchPath(pathname, obj4);
+    if (null != matchPathResult) {
+      if (!hasOwnProperty(matchPathResult.params.channelId)) {
+        const params = matchPathResult.params;
+        const guildId = params.guildId;
+        const obj5 = { kind: "channel", channelId: params.channelId, guildId: null };
+        let tmp9 = null;
+        if (guildId !== React3) {
+          tmp9 = guildId;
+        }
+        obj5.guildId = tmp9;
+        return obj5;
+      }
+    }
+    return null;
+  }
+  const obj2 = { pathname, search: parsePathResult.search, hash: parsePathResult.hash };
 }

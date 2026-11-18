@@ -1,9 +1,9 @@
-// === Module 14548: conjureChangeRows ===
+// === Module 18423: conjureChangeRows ===
 
-// Module 14548 (conjureChangeRows)
+// Module 18423 (conjureChangeRows)
 import util from "util" /* 1113 */;
-import _modDef4133 from "module_4133" /* 4133 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7026 */;
+import _modDef4121 from "module_4121" /* 4121 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6530 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/server_share/conjureChangeRows.tsx");
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/conjure/server_share/conjureC
 export function conjureShareRows(stateFromStores) {
   const obj = { key: "bots", text: null };
   const intl = util.intl;
-  obj.text = intl.string(_modDef4133.eSpjGV);
+  obj.text = intl.string(_modDef4121.eSpjGV);
   items = [obj];
   let prop;
   if (stateFromStores != null) {
@@ -32,7 +32,7 @@ export function conjureShareRows(stateFromStores) {
   if (!usesPreviewAppResult) {
     const obj2 = { key: "test_app", text: null };
     const intl2 = util.intl;
-    obj2.text = intl2.string(_modDef4133["+5f47F"]);
+    obj2.text = intl2.string(_modDef4121["+5f47F"]);
     items.push(obj2);
   }
   let supported_surfaces;
@@ -54,31 +54,31 @@ export function conjureShareRows(stateFromStores) {
   if (items1.includes(ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET)) {
     const obj3 = { key: "profile_widget", text: null };
     const intl3 = util.intl;
-    obj3.text = intl3.string(_modDef4133.u6ckHo);
+    obj3.text = intl3.string(_modDef4121.u6ckHo);
     items.push(obj3);
   }
   if (items1.includes(ConjureProjectTypes.ConjureSupportedSurface.OVERLAY)) {
     const obj4 = { key: "overlay", text: null };
     const intl4 = util.intl;
-    obj4.text = intl4.string(_modDef4133.UZHlmt);
+    obj4.text = intl4.string(_modDef4121.UZHlmt);
     items.push(obj4);
   }
   if (items1.includes(ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD)) {
     const obj5 = { key: "automod", text: null };
     const intl5 = util.intl;
-    obj5.text = intl5.string(_modDef4133.IPtiUf);
+    obj5.text = intl5.string(_modDef4121.IPtiUf);
     items.push(obj5);
   }
   const obj6 = { key: "collaboration", text: null };
   const intl6 = util.intl;
-  obj6.text = intl6.string(_modDef4133["s3/5nF"]);
+  obj6.text = intl6.string(_modDef4121["s3/5nF"]);
   items.push(obj6);
   return items;
 }
 export function conjureAddToAnotherServerRows(stateFromStores) {
   const obj = { key: "bots", text: null };
   const intl = util.intl;
-  obj.text = intl.string(_modDef4133.eSpjGV);
+  obj.text = intl.string(_modDef4121.eSpjGV);
   items = [obj];
   let hasItem;
   if (stateFromStores != null) {
@@ -90,7 +90,7 @@ export function conjureAddToAnotherServerRows(stateFromStores) {
   if (true === hasItem) {
     const obj2 = { key: "channels", text: null };
     const intl2 = util.intl;
-    obj2.text = intl2.string(_modDef4133["D8IMa/"]);
+    obj2.text = intl2.string(_modDef4121["D8IMa/"]);
     items.push(obj2);
   }
   let hasItem1;
@@ -103,7 +103,7 @@ export function conjureAddToAnotherServerRows(stateFromStores) {
   if (true === hasItem1) {
     const obj3 = { key: "automod", text: null };
     const intl3 = util.intl;
-    obj3.text = intl3.string(_modDef4133.IPtiUf);
+    obj3.text = intl3.string(_modDef4121.IPtiUf);
     items.push(obj3);
   }
   return items;
@@ -112,7 +112,7 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   items = [];
   if (null != target) {
     const intl6 = util.intl;
-    const tmp20 = _modDef4133;
+    const tmp20 = _modDef4121;
     if (target.canRemoveBot) {
       let PDLHwR = tmp20["cU/7df"];
       let tmp = importDefault;
@@ -131,7 +131,7 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
       const obj4 = { key: "channels", text: null };
       const intl7 = util.intl;
       const obj5 = { channels: listFormat.format(channelNames.map((item) => "#" + item)) };
-      obj4.text = intl7.formatToPlainString(tmp(4133).DbZ8af, obj5);
+      obj4.text = intl7.formatToPlainString(tmp(4121).DbZ8af, obj5);
       items.push(obj4);
       const formatResult = listFormat.format(channelNames.map((item) => "#" + item));
     }
@@ -143,7 +143,7 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   if (usesPreviewAppResult) {
     const obj6 = { key: "test_app", text: null };
     const intl = util.intl;
-    obj6.text = intl.string(_modDef4133.jKXaUH);
+    obj6.text = intl.string(_modDef4121.jKXaUH);
     items.push(obj6);
   }
   const supported_surfaces = preview_app_chosen.supported_surfaces;
@@ -154,7 +154,7 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   if (true === hasItem) {
     const obj7 = { key: "profile_widget", text: null };
     const intl2 = util.intl;
-    obj7.text = intl2.string(_modDef4133.HHZxrL);
+    obj7.text = intl2.string(_modDef4121.HHZxrL);
     items.push(obj7);
   }
   const supported_surfaces2 = preview_app_chosen.supported_surfaces;
@@ -165,18 +165,18 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   if (true === hasItem1) {
     const obj8 = { key: "overlay", text: null };
     const intl3 = util.intl;
-    obj8.text = intl3.string(_modDef4133.rVTFDs);
+    obj8.text = intl3.string(_modDef4121.rVTFDs);
     items.push(obj8);
   }
   if (tmp3Result.isProjectGuildCollaborationEnabled(preview_app_chosen)) {
     const obj9 = { key: "collaboration", text: null };
     const intl4 = util.intl;
-    obj9.text = intl4.string(_modDef4133["+a1lOS"]);
+    obj9.text = intl4.string(_modDef4121["+a1lOS"]);
     items.push(obj9);
   }
   const obj10 = { key: "only_you", text: null };
   const intl5 = util.intl;
-  obj10.text = intl5.string(_modDef4133.TrTx1Z);
+  obj10.text = intl5.string(_modDef4121.TrTx1Z);
   items.push(obj10);
   return items;
 }

@@ -1,28 +1,28 @@
-// === Module 8145: ChannelActionCreators ===
+// === Module 7648: ChannelActionCreators ===
 
-// Module 8145 (ChannelActionCreators)
+// Module 7648 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import shared from "shared" /* 5317 */;
-import RootNavigationRef from "RootNavigationRef" /* 5487 */;
-import transitionToChannel from "transitionToChannel" /* 6060 */;
-import preloadChannelDefault from "preloadChannel" /* 6062 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6887 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 6894 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6933 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 7075 */;
+import shared from "shared" /* 4830 */;
+import RootNavigationRef from "RootNavigationRef" /* 5000 */;
+import transitionToChannel from "transitionToChannel" /* 5556 */;
+import preloadChannelDefault from "preloadChannel" /* 5558 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6391 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 6398 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6437 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6579 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 8146 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import ReadStateStore from "ReadStateStore" /* 7023 */;
+import ChangelogStore from "ChangelogStore" /* 7649 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import ReadStateStore from "ReadStateStore" /* 6527 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(5163).createChannelRecordFromServer;
+let closure_6 = fn(4676).createChannelRecordFromServer;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AbortCodes: closure_10, Endpoints: closure_11, Routes: closure_12, ChannelTypes: map1 } = Constants);
 const size = fn(2);
@@ -305,8 +305,8 @@ export default {
       await HTTP.post(request);
       closure_128_0 = value;
       if (closure_128_0.body.type === constants2.GROUP_DM) {
-        tmp5(6887).fireSurveyAction(tmp2(6894).SurveyActionTypes.GROUP_DM_CREATED);
-        tmp5(6887);
+        tmp5(6391).fireSurveyAction(tmp2(6398).SurveyActionTypes.GROUP_DM_CREATED);
+        tmp5(6391);
       }
       closure_128_1 = closure_1_6(closure_128_0.body);
       tmp5(572).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
@@ -559,8 +559,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(8138).checkGuildTemplateDirty(closure_128_2);
-        name(8138);
+        const result = name(7641).checkGuildTemplateDirty(closure_128_2);
+        name(7641);
       }
       return closure_128_1;
     })();

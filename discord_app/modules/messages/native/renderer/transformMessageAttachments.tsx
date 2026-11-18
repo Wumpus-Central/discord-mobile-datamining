@@ -1,21 +1,21 @@
-// === Module 15570: transformMessageAttachments ===
+// === Module 14198: transformMessageAttachments ===
 
-// Module 15570 (transformMessageAttachments)
+// Module 14198 (transformMessageAttachments)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6359 */;
-import MediaFormatParamUtils from "MediaFormatParamUtils" /* 6361 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8656 */;
-import noConflictDefault from "noConflict" /* 8887 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 9171 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 9395 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 9396 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 10672 */;
-import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 10724 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11085 */;
-import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 12705 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5861 */;
+import MediaFormatParamUtils from "MediaFormatParamUtils" /* 5863 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8147 */;
+import noConflictDefault from "noConflict" /* 8383 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8582 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8806 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8807 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 9953 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 10005 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 10367 */;
+import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 11990 */;
 import size from "module_2" /* 2 */;
 
 const AttachmentType = RowGeneratorConstants.AttachmentType;

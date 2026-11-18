@@ -1,9 +1,9 @@
-// === Module 11272: MediaViewerItemPresenter ===
+// === Module 10554: MediaViewerItemPresenter ===
 
-// Module 11272 (MediaViewerItemPresenter)
-import MediaViewerEntranceJankExperiment from "MediaViewerEntranceJankExperiment" /* 10788 */;
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 11270 */;
-import MediaViewerItemTransformPresenterDefault from "MediaViewerItemTransformPresenter" /* 11273 */;
+// Module 10554 (MediaViewerItemPresenter)
+import MediaViewerEntranceJankExperiment from "MediaViewerEntranceJankExperiment" /* 10069 */;
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 10552 */;
+import MediaViewerItemTransformPresenterDefault from "MediaViewerItemTransformPresenter" /* 10555 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = tmp5(1655);
@@ -179,7 +179,7 @@ let closure_7 = { platformStyles: { position: "absolute", width: "100%", height:
 const PlatformUtils = fn(1380);
 if (PlatformUtils.isAndroid()) {
   const _parseInt = parseInt;
-  obj2 = fn(5267);
+  obj2 = fn(4780);
 }
 let closure_9 = { code: "(function MediaViewerItemPresenterTsx1(){let[entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,BORDER_RADIUS_END,startScale]=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,BORDER_RADIUS_END]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};})" };
 let size = fn(2);

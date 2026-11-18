@@ -1,11 +1,11 @@
-// === Module 11266: MediaModalImage ===
+// === Module 10548: MediaModalImage ===
 
-// Module 11266 (MediaModalImage)
+// Module 10548 (MediaModalImage)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import useMediaLoadingDefault from "useMediaLoading" /* 11263 */;
-import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 11264 */;
-import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 11265 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import useMediaLoadingDefault from "useMediaLoading" /* 10545 */;
+import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 10546 */;
+import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 10547 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

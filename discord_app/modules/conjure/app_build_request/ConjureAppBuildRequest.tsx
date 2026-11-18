@@ -1,15 +1,15 @@
-// === Module 14633: ConjureAppBuildRequest ===
+// === Module 18489: ConjureAppBuildRequest ===
 
-// Module 14633 (ConjureAppBuildRequest)
+// Module 18489 (ConjureAppBuildRequest)
 import util from "util" /* 1113 */;
-import _modDef4133 from "module_4133" /* 4133 */;
-import createNonce from "createNonce" /* 8863 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 14629 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 14634 */;
-import conjureSendToProject from "conjureSendToProject" /* 14635 */;
+import _modDef4121 from "module_4121" /* 4121 */;
+import createNonce from "createNonce" /* 8359 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 18485 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 18490 */;
+import conjureSendToProject from "conjureSendToProject" /* 18491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
 
 require = fn;
 const size = fn(2);
@@ -22,7 +22,7 @@ export function appBuildRequestSentToast(arr) {
   const obj = { names: null };
   const mapped = arr.map((name) => name.name);
   obj.names = mapped.join(", ");
-  return intl.formatToPlainString(_modDef4133.RZO35O, obj);
+  return intl.formatToPlainString(_modDef4121.RZO35O, obj);
 }
 export function useConjureAppBuildRequestForm(projectId, request, canSend, onDismiss, onSent) {
   importDefault = request;
@@ -102,11 +102,11 @@ export function useConjureAppBuildRequestForm(projectId, request, canSend, onDis
               [tmp, arr] = arg0;
               const mapped = arr.map((name) => {
                 const intl = closure_1_0(1113).intl;
-                return intl.formatToPlainString(closure_1_1(4133).tcDZw9, { name: name.name, projectId: name.projectId });
+                return intl.formatToPlainString(closure_1_1(4121).tcDZw9, { name: name.name, projectId: name.projectId });
               });
               const targets = mapped.join(", ");
               let intl = closure_1_0(1113).intl;
-              return "" + intl.formatToPlainString(closure_1_1(4133).jZlNst, { targets }) + "\n\n" + tmp;
+              return "" + intl.formatToPlainString(closure_1_1(4121).jZlNst, { targets }) + "\n\n" + tmp;
             });
             return arr.join("\n\n");
           })(arr));

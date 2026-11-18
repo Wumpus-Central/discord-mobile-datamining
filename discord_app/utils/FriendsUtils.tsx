@@ -1,10 +1,10 @@
-// === Module 8152: FriendsUtils ===
+// === Module 7655: FriendsUtils ===
 
-// Module 8152 (FriendsUtils)
+// Module 7655 (FriendsUtils)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ValidationUtilsDefault from "ValidationUtils" /* 7668 */;
+import ValidationUtilsDefault from "ValidationUtils" /* 7171 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

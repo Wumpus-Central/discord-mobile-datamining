@@ -1,11 +1,11 @@
-// === Module 16040: orderMarketablePerksForDisplay ===
+// === Module 14707: orderMarketablePerksForDisplay ===
 
-// Module 16040 (orderMarketablePerksForDisplay)
-import Powerups from "Powerups" /* 5521 */;
+// Module 14707 (orderMarketablePerksForDisplay)
+import Powerups from "Powerups" /* 7912 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-let closure_3 = fn(5519).GAME_SERVER_POWERUP_SKU_ID;
+let closure_3 = fn(8245).GAME_SERVER_POWERUP_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx");
 

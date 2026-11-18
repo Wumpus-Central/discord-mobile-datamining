@@ -1,16 +1,16 @@
-// === Module 14808: useConjurePublishScheduleProposal ===
+// === Module 18662: useConjurePublishScheduleProposal ===
 
-// Module 14808 (useConjurePublishScheduleProposal)
-import _modDef4133 from "module_4133" /* 4133 */;
+// Module 18662 (useConjurePublishScheduleProposal)
+import _modDef4121 from "module_4121" /* 4121 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const canPublishProject = fn(7025).canPublishProject;
+const canPublishProject = fn(6529).canPublishProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishScheduleProposal.tsx");
 
@@ -103,9 +103,9 @@ export default function useConjurePublishScheduleProposal(arg0, trigger, arg2) {
   let formatToPlainStringResult = null;
   if (trigger.next_run_at > _slicedToArray(noop.useState(() => Date.now()), 1)[0]) {
     let intl = tmp(1113).intl;
-    const obj2 = { time: tmp(14477).formatPublishScheduleTime(trigger.next_run_at) };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4133.orZDqY, obj2);
-    const tmpResult = tmp(14477);
+    const obj2 = { time: tmp(18369).formatPublishScheduleTime(trigger.next_run_at) };
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4121.orZDqY, obj2);
+    const tmpResult = tmp(18369);
   }
   let obj3 = { summary: null, firstPublish: null, status: null, error: null, onTurnOn: null };
   const tmp4 = _slicedToArray(noop.useState("idle"), 2);

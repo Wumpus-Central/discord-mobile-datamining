@@ -1,10 +1,10 @@
-// === Module 18764: ChannelScreenAnimatedFrame ===
+// === Module 17577: ChannelScreenAnimatedFrame ===
 
-// Module 18764 (ChannelScreenAnimatedFrame)
+// Module 17577 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9071 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 8482 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -12,7 +12,7 @@ const _modDef1655 = _mod1655;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, splitDivider: null };
 let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

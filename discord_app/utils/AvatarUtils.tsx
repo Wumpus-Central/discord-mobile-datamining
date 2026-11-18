@@ -455,7 +455,7 @@ function getEmojiURL(size) {
     str = "webp";
   }
 }
-function getUserAvatarURL(user) {
+function getUserAvatarURL(sidekickUser) {
   if (flag === undefined) {
     flag = false;
   }
@@ -471,9 +471,9 @@ function getUserAvatarURL(user) {
   if (SUPPORTS_WEBP === undefined) {
     tmp3 = canUseWebpResult;
   }
-  let tmp4 = getUserAvatarURLWithoutFallback(user, flag, tmp, tmp2, tmp3);
+  let tmp4 = getUserAvatarURLWithoutFallback(sidekickUser, flag, tmp, tmp2, tmp3);
   if (tmp4 == null) {
-    tmp4 = getDefaultAvatarURL(user.id, user.discriminator, user.isProvisional, tmp);
+    tmp4 = getDefaultAvatarURL(sidekickUser.id, sidekickUser.discriminator, sidekickUser.isProvisional, tmp);
   }
   return tmp4;
 }

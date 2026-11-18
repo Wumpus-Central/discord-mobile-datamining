@@ -1,14 +1,14 @@
-// === Module 14105: GuildProgressItem ===
+// === Module 13409: GuildProgressItem ===
 
-// Module 14105 (GuildProgressItem)
-import GuildProgressUtils from "GuildProgressUtils" /* 13986 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13989 */;
-import GuildProgressCircleDefault from "GuildProgressCircle" /* 14107 */;
+// Module 13409 (GuildProgressItem)
+import GuildProgressUtils from "GuildProgressUtils" /* 13288 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13291 */;
+import GuildProgressCircleDefault from "GuildProgressCircle" /* 13411 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_4 = createStyles.createStyles({ icon: { width: 32, height: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressItem.tsx");
@@ -32,8 +32,7 @@ export default function GuildProgressItem(guild) {
     iconStyle: null,
     title: null,
     isCompleted: null,
-    renderEndComponent: null,
-    fullWidth: true
+    renderEndComponent: null
   };
   const obj3 = { uri: null };
   let obj = guild(completed[3]);

@@ -1,7 +1,7 @@
-// === Module 12494: MoreYouCanDoRow ===
+// === Module 11777: MoreYouCanDoRow ===
 
-// Module 12494 (MoreYouCanDoRow)
-import TableRow from "TableRow" /* 7453 */;
+// Module 11777 (MoreYouCanDoRow)
+import TableRow from "TableRow" /* 6956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

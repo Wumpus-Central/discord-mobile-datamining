@@ -1,14 +1,14 @@
-// === Module 12770: MarkupReactCommandRule ===
+// === Module 12064: MarkupReactCommandRule ===
 
-// Module 12770 (MarkupReactCommandRule)
+// Module 12064 (MarkupReactCommandRule)
 import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5979 */;
-import ToastUtils from "ToastUtils" /* 6008 */;
-import ClipboardUtils from "ClipboardUtils" /* 7953 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 12775 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5475 */;
+import ToastUtils from "ToastUtils" /* 5504 */;
+import ClipboardUtils from "ClipboardUtils" /* 7456 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 12069 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
 
 require = fn;
 function handleTapCommandMention(channelId) {
@@ -114,7 +114,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     const obj2 = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1113).intl;
     obj2.label = intl2.string(tmp(1113).t.oJ1Muw);
-    obj2.IconComponent = tmp(11056).IdIcon;
+    obj2.IconComponent = tmp(10338).IdIcon;
     obj2.onPress = function onPress() {
       ToastUtils.presentIdCopied();
       ClipboardUtils.copy(closure_1);
@@ -126,8 +126,8 @@ function handleLongPressCommandMention(arg0, arg1) {
 }
 const AppLauncherNativeConstants = fn(1501);
 ({ AppLauncherRouteName: hasOwnProperty, useAppLauncherNavigation: closure_6 } = AppLauncherNativeConstants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(6343).SUB_COMMAND_KEY_SEPARATOR;
-const COMMAND_SENTINEL = fn(6344).COMMAND_SENTINEL;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5845).SUB_COMMAND_KEY_SEPARATOR;
+const COMMAND_SENTINEL = fn(5846).COMMAND_SENTINEL;
 const jsxs = fn(21).jsxs;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/native/MarkupReactCommandRule.tsx");
@@ -135,7 +135,7 @@ let result = size.fileFinishedImporting("modules/markup/native/MarkupReactComman
 export default function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(12773).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(12067).AppLauncherContext);
   dependencyMap = closure_6();
   let obj = {
     style,
@@ -184,9 +184,9 @@ export default function MarkupReactCommandRule(node) {
     },
     children: null
   };
-  items = ["/", node(9364).smartOutput(node, output, state)];
+  items = ["/", node(8775).smartOutput(node, output, state)];
   obj.children = items;
-  return jsxs(node(5923).Text, {
+  return jsxs(node(5414).Text, {
     style,
     variant: "body-md/semibold",
     onPress() {

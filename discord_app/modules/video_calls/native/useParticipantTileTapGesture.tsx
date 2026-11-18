@@ -1,7 +1,7 @@
-// === Module 11395: useParticipantTileTapGesture ===
+// === Module 10677: useParticipantTileTapGesture ===
 
-// Module 11395 (useParticipantTileTapGesture)
-import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
+// Module 10677 (useParticipantTileTapGesture)
+import LegacyBaseButton from "LegacyBaseButton" /* 5083 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");

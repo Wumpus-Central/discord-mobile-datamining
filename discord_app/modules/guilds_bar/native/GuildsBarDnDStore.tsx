@@ -1,10 +1,10 @@
-// === Module 19106: GuildsBarDnDStore ===
+// === Module 17917: GuildsBarDnDStore ===
 
-// Module 19106 (GuildsBarDnDStore)
+// Module 17917 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
-import _mod5225 from "module_5225" /* 5225 */;
-import SortedGuildStore from "SortedGuildStore" /* 6954 */;
+import _mod4738 from "module_4738" /* 4738 */;
+import SortedGuildStore from "SortedGuildStore" /* 6458 */;
 import identity from "module_1258" /* 1258 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: require("module_1655").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "scooter", scrollPosition: "kick_scooter", windowSize: true, setStateShallow: true, dropStart: true, dropComplete: true };
+  let obj = { dragSpecs: "Boolean", overSpecs: "description", dropSpecs: "isArray", dragRegion: require("module_1655").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "chestnut", scrollPosition: true, windowSize: true, setStateShallow: true, dropStart: true, dropComplete: true };
   let obj2 = require("module_1655");
   obj.gestureState = require("module_1655").makeMutable(obj);
   let obj3 = require("module_1655");
@@ -80,7 +80,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "find" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -109,7 +109,7 @@ export function useItemDragState(guildId, flag) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = { isDragTarget: false, dragState: "ip", overState: "isArray", itemSize: null, dragDropInProgress };
+        const obj2 = { isDragTarget: false, dragState: "description", overState: "isArray", itemSize: null, dragDropInProgress };
         return obj2;
       }
     }
@@ -198,7 +198,7 @@ export function useItemDragState(guildId, flag) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod5225.shallow);
+  }, _mod4738.shallow);
 }
 export function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

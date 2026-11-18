@@ -1,13 +1,13 @@
-// === Module 19084: InterestSearchShadow ===
+// === Module 17895: InterestSearchShadow ===
 
-// Module 19084 (InterestSearchShadow)
+// Module 17895 (InterestSearchShadow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import LinearGradientDefault from "LinearGradient" /* 5887 */;
-import useToken from "useToken" /* 5896 */;
-import InterestScrollHeader from "InterestScrollHeader" /* 19083 */;
+import LinearGradientDefault from "LinearGradient" /* 5378 */;
+import useToken from "useToken" /* 5387 */;
+import InterestScrollHeader from "InterestScrollHeader" /* 17894 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { backing: null, shadow: null, bar: null, barAndroid: null, fill: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, height: nativeDefault.space.PX_26 + nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.backing = rect;

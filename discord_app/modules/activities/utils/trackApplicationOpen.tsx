@@ -1,6 +1,6 @@
-// === Module 11370: trackApplicationOpen ===
+// === Module 10652: trackApplicationOpen ===
 
-// Module 11370 (trackApplicationOpen)
+// Module 10652 (trackApplicationOpen)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import size from "module_2" /* 2 */;

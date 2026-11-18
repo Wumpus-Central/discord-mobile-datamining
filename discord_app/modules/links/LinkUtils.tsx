@@ -1,17 +1,17 @@
-// === Module 5950: LinkUtils ===
+// === Module 5446: LinkUtils ===
 
-// Module 5950 (LinkUtils)
+// Module 5446 (LinkUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import RegexUtilsDefault from "RegexUtils" /* 5952 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import PermissionStore from "PermissionStore" /* 5242 */;
+import RegexUtilsDefault from "RegexUtils" /* 5448 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import PermissionStore from "PermissionStore" /* 4755 */;
 
 const Constants = fn(1072);
 const ME = Constants.ME;
 const Permissions = Constants.Permissions;
-const CONVERSATION_QUERY_PARAM = fn(5951).CONVERSATION_QUERY_PARAM;
-const mapped = Array.from(fn(5166).StaticChannelRoutes).map((item) => RegexUtilsDefault.escape(item));
+const CONVERSATION_QUERY_PARAM = fn(5447).CONVERSATION_QUERY_PARAM;
+const mapped = Array.from(fn(4679).StaticChannelRoutes).map((item) => RegexUtilsDefault.escape(item));
 const joined = mapped.join("|");
 const regExp = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)?(\\d+|" + joined + ")?");
 const regExp1 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+|" + joined + ")(?:/)(\\d+)");

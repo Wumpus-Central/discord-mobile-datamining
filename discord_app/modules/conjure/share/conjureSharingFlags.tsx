@@ -1,7 +1,7 @@
-// === Module 14427: conjureSharingFlags ===
+// === Module 18328: conjureSharingFlags ===
 
-// Module 14427 (conjureSharingFlags)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7026 */;
+// Module 18328 (conjureSharingFlags)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6530 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/share/conjureSharingFlags.tsx");

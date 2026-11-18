@@ -1,19 +1,19 @@
-// === Module 17129: useHexagonCampaignNewFontBadge ===
+// === Module 15785: useHexagonCampaignNewFontBadge ===
 
-// Module 17129 (useHexagonCampaignNewFontBadge)
+// Module 15785 (useHexagonCampaignNewFontBadge)
 import initialize from "initialize" /* 504 */;
-import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 5340 */;
-import QuestTypes from "QuestTypes" /* 6965 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 17119 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 17120 */;
+import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 4853 */;
+import QuestTypes from "QuestTypes" /* 6469 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 15775 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 15776 */;
 import noop from "module_19" /* 19 */;
-import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 17130 */;
-import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 16880 */;
+import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 15786 */;
+import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15563 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(5335);
+const HexagonCampaignConstants = fn(4848);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: hasOwnProperty, HexagonCampaignPerk: closure_6, HexagonCampaignPerkAvailability: metroImportDefault } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/useHexagonCampaignNewFontBadge.tsx");

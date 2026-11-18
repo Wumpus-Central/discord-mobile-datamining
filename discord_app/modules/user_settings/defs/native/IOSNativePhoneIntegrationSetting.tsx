@@ -1,13 +1,13 @@
-// === Module 18158: IOSNativePhoneIntegrationSetting ===
+// === Module 16960: IOSNativePhoneIntegrationSetting ===
 
-// Module 18158 (IOSNativePhoneIntegrationSetting)
+// Module 16960 (IOSNativePhoneIntegrationSetting)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import UserSettings from "UserSettings" /* 5135 */;
-import SettingsConstants from "SettingsConstants" /* 9213 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 18154 */;
-import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 18159 */;
-import SettingBuilders_mod from "SettingBuilders" /* 12612 */;
+import UserSettings from "UserSettings" /* 4648 */;
+import SettingsConstants from "SettingsConstants" /* 8624 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 16956 */;
+import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 16961 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11897 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

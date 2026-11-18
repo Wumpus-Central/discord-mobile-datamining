@@ -162,6 +162,7 @@ const obj = {
   GLOBAL_DISCOVERY: "/discovery",
   QUEST_HOME_DEPRECATED: "/discovery/quests",
   QUEST_HOME: "/quest-home",
+  QUEST_BAR_PREVIEW: "/quest-bar-preview",
   CONJURE: "/conjure",
   CONJURE_PROJECT: null,
   GLOBAL_DISCOVERY_SERVERS: "/discovery/servers",

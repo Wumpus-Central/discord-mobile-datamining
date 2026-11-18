@@ -1,12 +1,12 @@
-// === Module 15841: useConjureServerWidgetUpsell ===
+// === Module 14473: useConjureServerWidgetUpsell ===
 
-// Module 15841 (useConjureServerWidgetUpsell)
+// Module 14473 (useConjureServerWidgetUpsell)
 import Storage3 from "Storage" /* 510 */;
-import useConjureServerWidgetOffersDefault from "useConjureServerWidgetOffers" /* 15842 */;
+import useConjureServerWidgetOffersDefault from "useConjureServerWidgetOffers" /* 14475 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14474 */;
 
 const require = globalThis.__r;
 
@@ -57,19 +57,19 @@ export function useConjureServerWidgetUpsellDetails(userId, widget, guildId) {
   let obj = require("initialize");
   const getOrFetchApplication = require("useGetOrFetchApplications").useGetOrFetchApplication(applicationId);
   const obj2 = require("useGetOrFetchApplications");
-  const items1 = [ConjureProjectStore];
+  const items1 = [ConjureServerWidgetStore];
   const items2 = [applicationId];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
-    const result = ConjureProjectStore.findProjectByApplicationId(applicationId);
+    const project = ConjureServerWidgetStore.getProject(applicationId);
     let owner_user_id;
-    if (result != null) {
-      owner_user_id = result.owner_user_id;
+    if (project != null) {
+      owner_user_id = project.owner_user_id;
     }
     return owner_user_id;
   }, items2);
   const obj3 = require("initialize");
   const messageAuthorUser = require("conjureMessageAuthors").useMessageAuthorUser(stateFromStores1);
-  const tmp5 = applicationId(11010)(userId, applicationId);
+  const tmp5 = applicationId(10292)(userId, applicationId);
   dependencyMap = tmp5;
   [][0] = tmp5;
   let tmp7 = null;

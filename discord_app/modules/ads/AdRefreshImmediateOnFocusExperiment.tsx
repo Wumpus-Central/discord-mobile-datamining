@@ -1,6 +1,6 @@
-// === Module 17762: AdRefreshImmediateOnFocusExperiment ===
+// === Module 16566: AdRefreshImmediateOnFocusExperiment ===
 
-// Module 17762 (AdRefreshImmediateOnFocusExperiment)
+// Module 16566 (AdRefreshImmediateOnFocusExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

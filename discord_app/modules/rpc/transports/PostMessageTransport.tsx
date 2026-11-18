@@ -1,19 +1,19 @@
-// === Module 11475: PostMessageTransport ===
+// === Module 10757: PostMessageTransport ===
 
-// Module 11475 (PostMessageTransport)
+// Module 10757 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1089 */;
-import RPCErrorDefault from "RPCError" /* 7313 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 11476 */;
+import RPCErrorDefault from "RPCError" /* 6818 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 10758 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5158 */;
-import FramesStore from "FramesStore" /* 7027 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
+import FramesStore from "FramesStore" /* 6531 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6759).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6261).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9, RPCCloseCodes: closure_10, RPCErrors: closure_11, RPCCommands: closure_12 } = Constants);
-const asLaunched = fn(7028).asLaunched;
+const asLaunched = fn(6532).asLaunched;
 let closure_14 = 10 * DurationsDefault.Millis.SECOND;
 const map = new Map();
 const map1 = new Map();
@@ -58,9 +58,9 @@ class PostMessageTransport extends EventEmitter {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
           const obj = closure_1_1(1256);
-          obj2.channel_id = closure_1_0(5231).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = closure_1_0(5231);
-          obj2.guild_id = closure_1_0(5231).getEmbeddedActivityLocationGuildId(tmp2.location);
+          obj2.channel_id = closure_1_0(4744).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(4744);
+          obj2.guild_id = closure_1_0(4744).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj2.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });
@@ -570,30 +570,30 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                       const source = tmp8;
                                       closure_128_0 = undefined;
                                       c3 = 2;
-                                      const obj5 = { source, context, postMessageToRPCClient, version: 1, encoding: "json", logger: tmp60.logger, postClose };
+                                      const obj6 = { source, context, postMessageToRPCClient, version: 1, encoding: "json", logger: tmp59.logger, postClose };
                                       context = 3;
                                       c5 = 1;
-                                      const obj6 = { value: tmp60.validateSocketClient(tmp60.createPostMessageProxySocket(obj5), source.origin, c3.applicationId), done: false };
-                                      return obj6;
+                                      const obj7 = { value: tmp59.validateSocketClient(tmp59.createPostMessageProxySocket(obj6), source.origin, c3.applicationId), done: false };
+                                      return obj7;
                                     }
                                   } else if (1 === tmp8) {
                                     c3 = 0;
-                                    const pendingTicketRefreshes5 = tmp60.pendingTicketRefreshes;
+                                    const pendingTicketRefreshes5 = tmp59.pendingTicketRefreshes;
                                     pendingTicketRefreshes5.delete(source.iframeId);
-                                    throw tmp60;
+                                    throw tmp59;
                                   } else {
                                     if (2 === tmp8) {
                                       c3 = 1;
                                       if (stillMounted()) {
                                         items = [postMessageToRPCClient(self[8]).FRAME, ];
-                                        const obj7 = { cmd: constants.REQUEST_PROXY_TICKET_REFRESH, nonce, evt: "ERROR", data: null };
-                                        const obj8 = { code: stillMounted.UNKNOWN_ERROR, message: "Could not renew the app session" };
-                                        obj7.data = obj8;
-                                        items[1] = obj7;
+                                        const obj8 = { cmd: constants.REQUEST_PROXY_TICKET_REFRESH, nonce, evt: "ERROR", data: null };
+                                        const obj9 = { code: stillMounted.UNKNOWN_ERROR, message: "Could not renew the app session" };
+                                        obj8.data = obj9;
+                                        items[1] = obj8;
                                         postMessageToRPCClient(items, source.origin);
                                       }
                                       c3 = 0;
-                                      const pendingTicketRefreshes4 = tmp60.pendingTicketRefreshes;
+                                      const pendingTicketRefreshes4 = tmp59.pendingTicketRefreshes;
                                       pendingTicketRefreshes4.delete(source.iframeId);
                                       c5 = 3;
                                     } else if (3 === tmp8) {
@@ -602,19 +602,20 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                         throw value;
                                       } else if (arg0 === 2) {
                                         c3 = 0;
-                                        const pendingTicketRefreshes3 = tmp60.pendingTicketRefreshes;
+                                        const pendingTicketRefreshes3 = tmp59.pendingTicketRefreshes;
                                         pendingTicketRefreshes3.delete(source.iframeId);
                                         c5 = 3;
-                                        const obj9 = { value, done: true };
-                                        return obj9;
+                                        const obj10 = { value, done: true };
+                                        return obj10;
                                       } else if (stillMounted()) {
+                                        const obj4 = source(self[16]);
                                         context = 4;
                                         c5 = 1;
-                                        const obj10 = { value: source(self[16]).createProxyTicket(c3.applicationId, postMessageToRPCClient(self[17])(context.surface), context.surface.type), done: false };
-                                        return obj10;
+                                        const obj11 = { value: obj4.createProxyTicket(c3.applicationId, source(self[17]).getProxyTicketChannelId(context.surface), context.surface.type), done: false };
+                                        return obj11;
                                       } else {
                                         c3 = 0;
-                                        const pendingTicketRefreshes2 = tmp60.pendingTicketRefreshes;
+                                        const pendingTicketRefreshes2 = tmp59.pendingTicketRefreshes;
                                         pendingTicketRefreshes2.delete(source.iframeId);
                                         c5 = 3;
                                         return { value: "HermesInternal", done: null };
@@ -627,25 +628,25 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                       if (stillMounted()) {
                                         const items1 = [postMessageToRPCClient(self[8]).FRAME, ];
                                         const obj = { cmd: constants.REQUEST_PROXY_TICKET_REFRESH, nonce, evt: null, data: null };
-                                        const obj11 = { ticket: closure_128_0 };
-                                        obj.data = obj11;
+                                        const obj12 = { ticket: closure_128_0 };
+                                        obj.data = obj12;
                                         items1[1] = obj;
                                         postMessageToRPCClient(items1, source.origin);
                                       }
                                       c3 = 1;
                                     }
                                     c3 = 0;
-                                    const pendingTicketRefreshes = tmp60.pendingTicketRefreshes;
+                                    const pendingTicketRefreshes = tmp59.pendingTicketRefreshes;
                                     pendingTicketRefreshes.delete(source.iframeId);
                                     c5 = 3;
-                                    const obj12 = { value, done: true };
-                                    return obj12;
+                                    const obj13 = { value, done: true };
+                                    return obj13;
                                   }
-                                } catch (tmp60) {
+                                } catch (tmp59) {
                                   if (tmp5 === c3) {
                                     c5 = tmp3;
-                                    throw tmp60;
-                                  } else if (tmp2 === tmp62) {
+                                    throw tmp59;
+                                  } else if (tmp2 === tmp61) {
                                     context = tmp2;
                                   } else {
                                     context = tmp;

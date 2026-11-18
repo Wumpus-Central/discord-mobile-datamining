@@ -1,16 +1,16 @@
-// === Module 10563: YouBannerDecorations ===
+// === Module 9844: YouBannerDecorations ===
 
-// Module 10563 (YouBannerDecorations)
+// Module 9844 (YouBannerDecorations)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1360 */;
-import dismissible_content from "dismissible_content" /* 5143 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5342 */;
-import QuestTypes from "QuestTypes" /* 6965 */;
-import useTrialOffer from "useTrialOffer" /* 9314 */;
-import PromotionsHooks from "PromotionsHooks" /* 10564 */;
-import Tracking from "Tracking" /* 10572 */;
-import QuestUtils from "QuestUtils" /* 10573 */;
+import dismissible_content from "dismissible_content" /* 4656 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4855 */;
+import QuestTypes from "QuestTypes" /* 6469 */;
+import useTrialOffer from "useTrialOffer" /* 8725 */;
+import PromotionsHooks from "PromotionsHooks" /* 9845 */;
+import Tracking from "Tracking" /* 9853 */;
+import QuestUtils from "QuestUtils" /* 9854 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
@@ -18,11 +18,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const useIntlLoaderStore = fn(2190).useIntlLoaderStore;
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 let closure_9 = fn(1390).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, containerFloatingContent: null, endcap: null, buttonsFloating: null };
   const obj2 = {};

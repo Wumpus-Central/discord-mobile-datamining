@@ -1,8 +1,8 @@
-// === Module 12551: useConjureProjectIcon ===
+// === Module 11834: useConjureProjectIcon ===
 
-// Module 12551 (useConjureProjectIcon)
+// Module 11834 (useConjureProjectIcon)
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import prefetchConjureApplicationDefault from "prefetchConjureApplication" /* 12552 */;
+import prefetchConjureApplicationDefault from "prefetchConjureApplication" /* 11835 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 

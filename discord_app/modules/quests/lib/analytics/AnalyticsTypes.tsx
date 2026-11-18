@@ -1,7 +1,7 @@
-// === Module 8845: AnalyticsTypes ===
+// === Module 8342: AnalyticsTypes ===
 
-// Module 8845 (AnalyticsTypes)
-import QuestTypes from "QuestTypes" /* 6965 */;
+// Module 8342 (AnalyticsTypes)
+import QuestTypes from "QuestTypes" /* 6469 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Object.keys(QuestTypes.QuestContent);

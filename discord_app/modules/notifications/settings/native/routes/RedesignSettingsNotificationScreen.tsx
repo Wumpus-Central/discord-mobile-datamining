@@ -1,17 +1,17 @@
-// === Module 18660: RedesignSettingsNotificationScreen ===
+// === Module 17473: RedesignSettingsNotificationScreen ===
 
-// Module 18660 (RedesignSettingsNotificationScreen)
+// Module 17473 (RedesignSettingsNotificationScreen)
 import util from "util" /* 1113 */;
-import _modDef3031 from "module_3031" /* 3031 */;
-import useMountEffectDefault from "useMountEffect" /* 5893 */;
-import SettingBuilders from "SettingBuilders" /* 12612 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18661 */;
-import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 18662 */;
+import _modDef3051 from "module_3051" /* 3051 */;
+import useMountEffectDefault from "useMountEffect" /* 5384 */;
+import SettingBuilders from "SettingBuilders" /* 11897 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17474 */;
+import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 17475 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(18148).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(9213).MobileUserSettings;
+let closure_4 = fn(16950).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8624).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx");
@@ -23,7 +23,7 @@ export default noop.memo(function RedesignSettingsNotificationsScreen() {
     items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection(), , ];
     const obj4 = { label: null, settings: null };
     const intl = util.intl;
-    obj4.label = intl.string(_modDef3031.nvBHcD);
+    obj4.label = intl.string(_modDef3051.nvBHcD);
     const items1 = [, , , , , , , ];
     ({ REDESIGN_SYSTEM_NOTIFICATIONS: arr2[0], REDESIGN_IN_APP_NOTIFICATIONS: arr2[1], REDESIGN_IN_APP_MESSAGE_SOUNDS: arr2[2], REDESIGN_ANDROID_MESSAGE_NOTIFICATIONS: arr2[3], REDESIGN_IOS_NATIVE_PHONE_INTEGRATION: arr2[4], REDESIGN_ANDROID_NOTIFICATION_LIGHTS: arr2[5], REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS: arr2[6], REDESIGN_ANDROID_NOTIFICATION_SOUNDS: arr2[7] } = constants);
     obj4.settings = items1;

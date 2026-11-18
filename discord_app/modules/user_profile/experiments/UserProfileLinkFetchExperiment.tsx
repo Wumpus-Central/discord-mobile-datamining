@@ -1,6 +1,6 @@
-// === Module 8488: UserProfileLinkFetchExperiment ===
+// === Module 7979: UserProfileLinkFetchExperiment ===
 
-// Module 8488 (UserProfileLinkFetchExperiment)
+// Module 7979 (UserProfileLinkFetchExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

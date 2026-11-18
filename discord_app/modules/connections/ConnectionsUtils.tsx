@@ -1,18 +1,18 @@
-// === Module 7477: ConnectionsUtils ===
+// === Module 6980: ConnectionsUtils ===
 
-// Module 7477 (ConnectionsUtils)
+// Module 6980 (ConnectionsUtils)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
 import URLUtilsDefault from "URLUtils" /* 1381 */;
-import getConnectionsRolesDefault from "getConnectionsRoles" /* 7478 */;
-import GuildRoleStore from "GuildRoleStore" /* 5216 */;
-import GuildStore from "GuildStore" /* 5181 */;
+import getConnectionsRolesDefault from "getConnectionsRoles" /* 6981 */;
+import GuildRoleStore from "GuildRoleStore" /* 4729 */;
+import GuildStore from "GuildStore" /* 4694 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(7433);
+const Constants = fn(6936);
 ({ MetadataFields: hasOwnProperty, OperatorTypes: closure_6 } = Constants);
 const PlatformTypes = fn(1072).PlatformTypes;
 const size = fn(2);

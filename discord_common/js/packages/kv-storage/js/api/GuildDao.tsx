@@ -1,8 +1,8 @@
-// === Module 5200: GuildDao ===
+// === Module 4713: GuildDao ===
 
-// Module 5200 (GuildDao)
-import Table from "Table" /* 5193 */;
-import TableId from "TableId" /* 5195 */;
+// Module 4713 (GuildDao)
+import Table from "Table" /* 4706 */;
+import TableId from "TableId" /* 4708 */;
 import size from "module_2" /* 2 */;
 
 let GuildDao;

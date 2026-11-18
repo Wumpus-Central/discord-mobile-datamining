@@ -1,9 +1,9 @@
-// === Module 13156: useCheckpointRouteSounds ===
+// === Module 12455: useCheckpointRouteSounds ===
 
-// Module 13156 (useCheckpointRouteSounds)
-import CheckpointSounds from "CheckpointSounds" /* 13157 */;
+// Module 12455 (useCheckpointRouteSounds)
+import CheckpointSounds from "CheckpointSounds" /* 12456 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13119 */;
+import CheckpointStore from "CheckpointStore" /* 12417 */;
 
 require = fn;
 const size = fn(2);

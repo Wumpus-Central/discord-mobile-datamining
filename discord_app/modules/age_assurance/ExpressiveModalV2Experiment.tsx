@@ -1,9 +1,9 @@
-// === Module 8241: ExpressiveModalV2Experiment ===
+// === Module 12346: ExpressiveModalV2Experiment ===
 
-// Module 8241 (ExpressiveModalV2Experiment)
+// Module 12346 (ExpressiveModalV2Experiment)
 import initialize from "initialize" /* 504 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8216 */;
-import SafetyHubStore from "SafetyHubStore" /* 8242 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7719 */;
+import SafetyHubStore from "SafetyHubStore" /* 7746 */;
 
 require = fn;
 const ApexExperiment = fn(1452);

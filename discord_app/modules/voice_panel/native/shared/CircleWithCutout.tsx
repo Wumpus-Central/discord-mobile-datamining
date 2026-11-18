@@ -1,8 +1,8 @@
-// === Module 20141: CircleWithCutout ===
+// === Module 19412: CircleWithCutout ===
 
-// Module 20141 (CircleWithCutout)
-import inlineStyles from "inlineStyles" /* 8274 */;
-import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11338 */;
+// Module 19412 (CircleWithCutout)
+import inlineStyles from "inlineStyles" /* 7776 */;
+import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 10620 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -67,5 +67,5 @@ export default noop.memo(function CircleWithCutout(arg0) {
   size.children = items2;
   return React4(inlineStylesDefault, size);
 });
-export const getBadgeLeft = fn(11338).getBadgeLeft;
-export const getBadgeTop = fn(11338).getBadgeTop;
+export const getBadgeLeft = fn(10620).getBadgeLeft;
+export const getBadgeTop = fn(10620).getBadgeTop;

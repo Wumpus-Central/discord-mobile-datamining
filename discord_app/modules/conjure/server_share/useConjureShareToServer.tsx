@@ -1,16 +1,16 @@
-// === Module 14532: useConjureShareToServer ===
+// === Module 18414: useConjureShareToServer ===
 
-// Module 14532 (useConjureShareToServer)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7026 */;
-import ConjureUtils from "ConjureUtils" /* 7270 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 7394 */;
+// Module 18414 (useConjureShareToServer)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6530 */;
+import ConjureUtils from "ConjureUtils" /* 6774 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 6897 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import PermissionStore from "PermissionStore" /* 5242 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7387 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import PermissionStore from "PermissionStore" /* 4755 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 6890 */;
 
 const require = globalThis.__r;
 
@@ -66,7 +66,7 @@ function refreshUntilBotJoins(arg0, arg1) {
                           closure_0 = closure_1_0;
                           closure_1 = tmp7 - 1;
                           let _setTimeout = setTimeout;
-                          let timerId = setTimeout(/* F109840 */ function() { ... }, 1500);
+                          let timerId = setTimeout(/* F116104 */ function() { ... }, 1500);
                         }
                         let obj = closure_2_0(closure_2_2[15]);
                       }
@@ -158,7 +158,7 @@ function isPublishable(id) {
   }
   return canPublishResult;
 }
-let isProjectOwner = fn(7025).isProjectOwner;
+let isProjectOwner = fn(6529).isProjectOwner;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/server_share/useConjureShareToServer.tsx");

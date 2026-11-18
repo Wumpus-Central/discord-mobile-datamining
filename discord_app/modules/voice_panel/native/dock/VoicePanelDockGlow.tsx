@@ -1,17 +1,17 @@
-// === Module 19225: VoicePanelDockGlow ===
+// === Module 18036: VoicePanelDockGlow ===
 
-// Module 19225 (VoicePanelDockGlow)
+// Module 18036 (VoicePanelDockGlow)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import ColorUtils from "ColorUtils" /* 5307 */;
-import timing_timing from "timing/timing" /* 5542 */;
-import LinearGradientDefault from "LinearGradient" /* 5887 */;
-import inlineStyles from "inlineStyles" /* 8274 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11276 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12427 */;
-import VoicePanelDockRimLight from "VoicePanelDockRimLight" /* 13934 */;
-import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 13935 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13937 */;
+import ColorUtils from "ColorUtils" /* 4820 */;
+import timing_timing from "timing/timing" /* 5033 */;
+import LinearGradientDefault from "LinearGradient" /* 5378 */;
+import inlineStyles from "inlineStyles" /* 7776 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 10558 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11709 */;
+import VoicePanelDockRimLight from "VoicePanelDockRimLight" /* 13236 */;
+import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 13237 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13239 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 let StyleSheet = fn(17).StyleSheet;
-const getDockInset = fn(12446).getDockInset;
+const getDockInset = fn(11728).getDockInset;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let items = [[0, 1], [0.18, 0.89], [0.36, 0.63], [0.52, 0.4], [0.66, 0.23], [0.78, 0.12], [0.88, 0.05], [0.95, 0.02], [1, 0]];

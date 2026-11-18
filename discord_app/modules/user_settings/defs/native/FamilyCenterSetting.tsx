@@ -1,24 +1,24 @@
-// === Module 17431: FamilyCenterSetting ===
+// === Module 16088: FamilyCenterSetting ===
 
-// Module 17431 (FamilyCenterSetting)
+// Module 16088 (FamilyCenterSetting)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2703 from "module_2703" /* 2703 */;
-import WarningIcon from "WarningIcon" /* 8171 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 17432 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 17433 */;
+import _modDef2723 from "module_2723" /* 2723 */;
+import WarningIcon from "WarningIcon" /* 7674 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 16089 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 16090 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(12612);
+const SettingBuilders = fn(11897);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2703.RZqaJn);
+    return intl.string(_modDef2723.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(7446).GroupIcon,
+  IconComponent: fn(6949).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
     const isParentalConsentBannerActive = useIsParentalConsentBannerActive.useIsParentalConsentBannerActive();
     const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
@@ -37,7 +37,7 @@ const route = SettingBuilders.createRoute({
         if (daysRemaining >= 0) {
           const obj3 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
           const intl = util.intl;
-          obj3.accessibilityLabel = intl.string(_modDef2703.wucWfE);
+          obj3.accessibilityLabel = intl.string(_modDef2723.wucWfE);
           tmp6 = jsx(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
         }
       }

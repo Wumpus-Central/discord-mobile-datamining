@@ -1,6 +1,6 @@
-// === Module 15635: MessageActivityInviteCoverImageStore ===
+// === Module 14262: MessageActivityInviteCoverImageStore ===
 
-// Module 15635 (MessageActivityInviteCoverImageStore)
+// Module 14262 (MessageActivityInviteCoverImageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1456 */;

@@ -1,7 +1,7 @@
-// === Module 9388: GameAutocompleteUtils ===
+// === Module 8799: GameAutocompleteUtils ===
 
-// Module 9388 (GameAutocompleteUtils)
-import GameWidgetLimits from "GameWidgetLimits" /* 7366 */;
+// Module 8799 (GameAutocompleteUtils)
+import GameWidgetLimits from "GameWidgetLimits" /* 6871 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteUtils.tsx");

@@ -1,17 +1,17 @@
-// === Module 10595: QuestRewardUtils ===
+// === Module 9876: QuestRewardUtils ===
 
-// Module 10595 (QuestRewardUtils)
+// Module 9876 (QuestRewardUtils)
 import util from "util" /* 1113 */;
-import _mod4735 from "module_4735" /* 4735 */;
-import QuestTypes from "QuestTypes" /* 6965 */;
-import QuestDataUtils from "QuestDataUtils" /* 8815 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 8824 */;
-import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 10596 */;
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 10597 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10598 */;
-import FractionalPremiumUtils from "FractionalPremiumUtils" /* 10599 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10600 */;
-import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 10601 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import QuestTypes from "QuestTypes" /* 6469 */;
+import QuestDataUtils from "QuestDataUtils" /* 8312 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 8321 */;
+import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 9877 */;
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9878 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9879 */;
+import FractionalPremiumUtils from "FractionalPremiumUtils" /* 9880 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9881 */;
+import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 9882 */;
 import size from "module_2" /* 2 */;
 
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
@@ -133,11 +133,11 @@ export function getCollectibleQuestRewardDuration(config) {
         const date = new Date(config.expiresAt);
         const _Date2 = Date;
         const date1 = new Date(tmp5.expiresAt);
-        const differenceInDaysResult = _mod4735.differenceInDays(date1, date);
+        const diffResult = _modDef2169(date1).diff(date, "days");
         const _Math3 = Math;
         let num = 0;
-        const rounded = Math.floor(differenceInDaysResult / 30);
-        if (25 <= differenceInDaysResult % 30) {
+        const rounded = Math.floor(diffResult / 30);
+        if (25 <= diffResult % 30) {
           num = 1;
         }
         const sum = rounded + num;
@@ -152,21 +152,21 @@ export function getCollectibleQuestRewardDuration(config) {
           const obj3 = { months: sum };
           return intl3.formatToPlainString(util.t.kridzK, obj3);
         } else {
-          const differenceInDaysResult1 = _mod4735.differenceInDays(date1, date);
-          if (differenceInDaysResult1 >= 7) {
+          const diffResult1 = _modDef2169(date1).diff(date, "days");
+          if (diffResult1 >= 7) {
             const _Math = Math;
-            const rounded2 = Math.ceil(differenceInDaysResult1 / 7);
+            const rounded2 = Math.ceil(diffResult1 / 7);
             const intl2 = util.intl;
             const obj4 = { weeks: rounded2 };
             return intl2.formatToPlainString(util.t.EmoBD2, obj4);
           } else {
             const intl = util.intl;
-            const obj = { days: differenceInDaysResult1 };
+            const obj = { days: diffResult1 };
             return intl.formatToPlainString(util.t["k2UNz+"], obj);
           }
-          const tmp3Result2 = _mod4735;
+          const obj6 = _modDef2169(date1);
         }
-        const tmp3Result = _mod4735;
+        const obj5 = _modDef2169(date1);
       }
     }
   }

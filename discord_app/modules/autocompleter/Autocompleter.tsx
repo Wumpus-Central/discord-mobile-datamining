@@ -1,19 +1,19 @@
-// === Module 10681: Autocompleter ===
+// === Module 9962: Autocompleter ===
 
-// Module 10681 (Autocompleter)
+// Module 9962 (Autocompleter)
 import applyDefault from "apply" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1381 */;
 import _modDef2070 from "module_2070" /* 2070 */;
 import StringUtils from "StringUtils" /* 2153 */;
-import findCodedLinks from "findCodedLinks" /* 6045 */;
-import CodedLink from "CodedLink" /* 6049 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6960 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 7082 */;
-import GuildUtilsDefault from "GuildUtils" /* 7083 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 10269 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7298 */;
-import LinkRecord from "LinkRecord" /* 10682 */;
-import RelationshipStore from "RelationshipStore" /* 5252 */;
+import findCodedLinks from "findCodedLinks" /* 5541 */;
+import CodedLink from "CodedLink" /* 5545 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6464 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6586 */;
+import GuildUtilsDefault from "GuildUtils" /* 6587 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9550 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 6803 */;
+import LinkRecord from "LinkRecord" /* 9963 */;
+import RelationshipStore from "RelationshipStore" /* 4765 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
@@ -27,8 +27,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(5240).GUILD_VOCAL_CHANNELS_KEY;
-fn(7079).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4753).GUILD_VOCAL_CHANNELS_KEY;
+fn(6583).AutocompleterResultTypes;
 const React6 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");

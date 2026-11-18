@@ -1,16 +1,15 @@
-// === Module 10088: PremiumGiftPlanSelect ===
+// === Module 9370: PremiumGiftPlanSelect ===
 
-// Module 10088 (PremiumGiftPlanSelect)
+// Module 9370 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import GiftingBadgeExperimentDefault from "GiftingBadgeExperiment" /* 10098 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10106 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 9387 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8558 */;
-import PromotionsStore from "PromotionsStore" /* 9635 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8049 */;
+import PromotionsStore from "PromotionsStore" /* 9049 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +22,7 @@ const jsxProd = fn(21);
 let items = [, ];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1390).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
   const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };
@@ -65,11 +64,8 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) {
   shouldUseDMWishlistGiftingDesign = shouldUseDMWishlistGiftingDesign.shouldUseDMWishlistGiftingDesign;
   let _require;
-  noop = undefined;
-  closure_5 = undefined;
   currentIndex = undefined;
   c7 = undefined;
-  let num;
   closure_9 = undefined;
   let ref;
   let callback;
@@ -103,35 +99,30 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
   const selectPremiumGift = require("useSelectPremiumGift").useSelectPremiumGift("PremiumGiftPlanSelect");
   _slicedToArray = selectPremiumGift;
   const obj6 = require("useSelectPremiumGift");
-  let enabled = GiftingBadgeExperimentDefault.useConfig({ location: "PremiumGiftPlanSelect" }).enabled;
   const items1 = [closure_9];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({ nextTier: closure_9.getNextTier(easing(_undefined2[20]).BadgeId.GIFTING), giftsToNextTier: closure_9.getRemainingToNextTier(easing(_undefined2[20]).BadgeId.GIFTING) }));
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({ nextTier: closure_9.getNextTier(easing(_undefined2[19]).BadgeId.GIFTING), giftsToNextTier: closure_9.getRemainingToNextTier(easing(_undefined2[19]).BadgeId.GIFTING) }));
   ({ nextTier, giftsToNextTier } = stateFromStoresObject);
-  if (enabled) {
-    enabled = null != nextTier;
-  }
-  noop = enabled;
-  const tmp13 = closure_17(width, height, enabled);
+  noop = tmp12;
+  const tmp13 = closure_17(width, height, null != nextTier);
   closure_5 = tmp13;
   [currentIndex] = noop.useState(0);
-  const obj8 = require("initialize");
+  const obj7 = require("initialize");
   [tmp18, c7] = noop.useState(false);
   const items2 = [navigation];
   const effect = noop.useEffect(() => {
     easing = easing.addListener("state", () => {
       state = closure_0.getState();
-      closure_1_7(state.routes[state.index].name === c0(c2[21]).PremiumGiftScreens.PLAN_SELECT);
+      closure_1_7(state.routes[state.index].name === c0(c2[20]).PremiumGiftScreens.PLAN_SELECT);
     });
     return () => {
       c0.removeListener("state", closure_0);
     };
   }, items2);
   const tmp20 = _slicedToArray(noop.useState(null), 2);
-  num = tmp20[0];
+  let num = tmp20[0];
   closure_9 = tmp21;
   ref = noop.useRef([]);
   const items3 = [shouldUseDMWishlistGiftingDesign, ];
-  let tmp75Result = enabled;
   length = undefined;
   if (claimableRewards != null) {
     length = claimableRewards.length;
@@ -142,7 +133,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     closure_9(null);
   }, items3);
   const items4 = [tmp20[1]];
-  callback = obj9.useCallback(() => {
+  callback = obj8.useCallback(() => {
     if (ref.current.length >= items.length) {
       const _Math = Math;
       items = [];
@@ -155,13 +146,13 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       }
     }
   }, items4);
-  const callback1 = obj9.useCallback(() => {
-    _undefined(_undefined2[22])();
+  const callback1 = obj8.useCallback(() => {
+    _undefined(_undefined2[21])();
   }, []);
   let result = 0.86 * width;
   c12 = result;
   const items5 = [selectPremiumGift, result, ref, callback, num, currentIndex, claimableRewards];
-  callback2 = obj9.useCallback((variant) => {
+  callback2 = obj8.useCallback((variant) => {
     let obj = arg1;
     if (arg1 === undefined) {
       obj = { forScreenReader: false };
@@ -220,10 +211,10 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     };
   }, items5);
   const tmp17 = _slicedToArray(noop.useState(false), 2);
-  let tmp31 = null != claimableRewards;
+  let tmp30 = null != claimableRewards;
   const isWindowSmall = require("useIsWindowSmall").useIsWindowSmall();
-  if (tmp31) {
-    tmp31 = claimableRewards.length > 0;
+  if (tmp30) {
+    tmp30 = claimableRewards.length > 0;
   }
   if (isWindowSmall) {
     str = "smallCompact";
@@ -231,13 +222,13 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     str = "compact";
   }
   const items6 = [callback2, str];
-  const memo = obj9.useMemo(() => callback2(str), items6);
+  const memo = obj8.useMemo(() => callback2(str), items6);
   const items7 = [callback2];
-  let memo1 = obj9.useMemo(() => callback2("default"), items7);
+  let memo1 = obj8.useMemo(() => callback2("default"), items7);
   const tmpResult = require("useIsWindowSmall");
   sharedValue = require("module_1655").useSharedValue(false);
   const items8 = [sharedValue, num];
-  const effect2 = obj9.useEffect(() => {
+  const effect2 = obj8.useEffect(() => {
     const result = sharedValue.set(null != num);
   }, items8);
   const tmpResult5 = require("module_1655");
@@ -245,7 +236,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
-  [tmp36, tmp37, tmp38, tmp39] = items9;
+  [tmp35, tmp36, tmp37, tmp38] = items9;
   class PremiumGiftPlanSelectTsx1 {
     constructor() {
       obj = { easing: closure_0, duration: 500 };
@@ -267,10 +258,10 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       return obj1;
     }
   }
-  const items10 = [tmp37, tmp38, tmp39];
+  const items10 = [tmp36, tmp37, tmp38];
   PremiumGiftPlanSelectTsx1.__closure = items10;
   PremiumGiftPlanSelectTsx1.__workletHash = 4508908176572;
-  PremiumGiftPlanSelectTsx1.__initData = tmp36;
+  PremiumGiftPlanSelectTsx1.__initData = tmp35;
   const animatedStyle = require("module_1655").useAnimatedStyle(PremiumGiftPlanSelectTsx1);
   const items11 = [tmp13];
   const sum = result + v16;
@@ -283,7 +274,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
   dependencyMap = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  [tmp47, tmp48, tmp49, tmp50, tmp51, tmp52] = items12;
+  [tmp46, tmp47, tmp48, tmp49, tmp50, tmp51] = items12;
   class PremiumGiftPlanSelectTsx2 {
     constructor(arg0, arg1) {
       diff = arg1 - shouldUseDMWishlistGiftingDesign;
@@ -296,12 +287,12 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       return obj;
     }
   }
-  const items13 = [tmp48, tmp49, tmp50, tmp51, tmp52];
+  const items13 = [tmp47, tmp48, tmp49, tmp50, tmp51];
   PremiumGiftPlanSelectTsx2.__closure = items13;
   PremiumGiftPlanSelectTsx2.__workletHash = 287869632170;
-  PremiumGiftPlanSelectTsx2.__initData = tmp47;
+  PremiumGiftPlanSelectTsx2.__initData = tmp46;
   const items14 = [sum, diff, 16, result1, diff1];
-  const memo2 = obj9.useMemo(() => {
+  const memo2 = obj8.useMemo(() => {
     const obj = _modDef671(closure_5.headerBackgroundColor.color);
     items = [_modDef671(closure_5.headerBackgroundColor.color).alpha(0).hex(), ];
     const alphaResult = _modDef671(closure_5.headerBackgroundColor.color).alpha(0);
@@ -309,60 +300,61 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     items[1] = _modDef671(closure_5.headerBackgroundColor.color).alpha(1).hex();
     return items;
   }, items11);
-  const callback3 = obj9.useCallback(PremiumGiftPlanSelectTsx2, items14);
+  const callback3 = obj8.useCallback(PremiumGiftPlanSelectTsx2, items14);
   if (shouldUseDMWishlistGiftingDesign.isLoadingWishlist) {
-    const obj10 = { style: null, children: null };
+    const obj9 = { style: null, children: null };
     const items15 = [, ];
     ({ container: arr26[0], loadingContainer: arr26[1] } = tmp13);
-    obj10.style = items15;
-    obj10.children = c12(closure_5, { size: "large" });
-    let tmp75Result5 = c12(c7, obj10);
+    obj9.style = items15;
+    obj9.children = c12(closure_5, { size: "large" });
+    let tmp74Result5 = c12(c7, obj9);
   } else if (shouldUseDMWishlistGiftingDesign) {
-    const obj11 = { style: tmp13.container, children: null };
-    const obj12 = { contentContainerStyle: null, children: null };
-    const obj13 = { paddingBottom: bottom };
-    obj12.contentContainerStyle = obj13;
-    if (tmp75Result) {
-      const obj14 = { style: tmp13.badgeBanner, children: null };
-      const obj15 = { onPress: callback1, accessibilityRole: "button", children: null };
-      const obj16 = { giftsToNextTier, nextTierName: null, nextTierIcon: null, analyticsLocation: null };
+    const obj10 = { style: tmp13.container, children: null };
+    const obj11 = { contentContainerStyle: null, children: null };
+    const obj12 = { paddingBottom: bottom };
+    obj11.contentContainerStyle = obj12;
+    let tmp74Result = tmp12;
+    if (tmp12) {
+      const obj13 = { style: tmp13.badgeBanner, children: null };
+      const obj14 = { onPress: callback1, accessibilityRole: "button", children: null };
+      const obj15 = { giftsToNextTier, nextTierName: null, nextTierIcon: null, analyticsLocation: null };
       let str4 = nextTier.name;
       if (str4 == null) {
         str4 = "";
       }
-      obj16.nextTierName = str4;
-      const tmp4Result = tmp4(10130);
+      obj15.nextTierName = str4;
+      const tmp4Result = tmp4(9411);
       const tmp79 = currentIndex;
-      obj16.nextTierIcon = tmp(10103).getGiftingBadgeTierIconUrl(nextTier);
-      obj16.analyticsLocation = tmp4(7947).PREMIUM_GIFT_PLAN_SELECTION;
-      obj15.children = tmp75(tmp4Result, obj16);
-      obj14.children = tmp75(tmp79, obj15);
-      tmp75Result = tmp75(tmp76, obj14);
-      const tmpResult7 = tmp(10103);
+      obj15.nextTierIcon = tmp(9384).getGiftingBadgeTierIconUrl(nextTier);
+      obj15.analyticsLocation = tmp4(7450).PREMIUM_GIFT_PLAN_SELECTION;
+      obj14.children = tmp74(tmp4Result, obj15);
+      obj13.children = tmp74(tmp79, obj14);
+      tmp74Result = tmp74(tmp75, obj13);
+      const tmpResult7 = tmp(9384);
     }
-    const items16 = [tmp75Result, , ];
-    const obj17 = { style: tmp13.dmGiftingContent, children: null };
+    const items16 = [tmp74Result, , ];
+    const obj16 = { style: tmp13.dmGiftingContent, children: null };
     if (0 !== stateFromStoresArray.length) {
       if (undefined === claimableRewards) {
-        obj17.children = null;
-        items16[1] = tmp75(tmp76, obj17);
-        let tmp75Result4 = null != recipientUser;
-        if (tmp75Result4) {
-          const obj18 = { giftRecipient: recipientUser };
-          tmp75Result4 = tmp75(tmp(10165).PremiumGiftWishlistBanner, obj18);
+        obj16.children = null;
+        items16[1] = tmp74(tmp75, obj16);
+        let tmp74Result4 = null != recipientUser;
+        if (tmp74Result4) {
+          const obj17 = { giftRecipient: recipientUser };
+          tmp74Result4 = tmp74(tmp(9446).PremiumGiftWishlistBanner, obj17);
         }
-        items16[2] = tmp75Result4;
-        obj12.children = items16;
-        obj11.children = tmp77(tmp78, obj12);
-        tmp75Result5 = tmp75(tmp76, obj11);
+        items16[2] = tmp74Result4;
+        obj11.children = items16;
+        obj10.children = tmp76(tmp77, obj11);
+        tmp74Result5 = tmp74(tmp75, obj10);
       }
     }
     if (isScreenReaderEnabled) {
-      const obj20 = { horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: null, children: null };
-      const obj21 = { gap: v16, paddingHorizontal: v16 };
-      obj20.contentContainerStyle = obj21;
-      obj20.children = arr14.map((item, index) => callback2(str, { forScreenReader: true })({ item, index }));
-      let tmp75Result6 = tmp75(tmp78, obj20);
+      const obj19 = { horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: null, children: null };
+      const obj20 = { gap: v16, paddingHorizontal: v16 };
+      obj19.contentContainerStyle = obj20;
+      obj19.children = arr14.map((item, index) => callback2(str, { forScreenReader: true })({ item, index }));
+      let tmp74Result6 = tmp74(tmp77, obj19);
     } else {
       let size = { style: animatedStyle, data: arr14, renderItem: memo, width, windowSize: arr14.length, height: null, onConfigurePanGesture: null, loop: false, scrollAnimationDuration: 200, customAnimation: null, onSnapToItem: null };
       if (num == null) {
@@ -374,115 +366,115 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       };
       size.customAnimation = callback3;
       size.onSnapToItem = tmp16;
-      tmp75Result6 = tmp75(tmp4(10131), size);
-      const tmp4Result5 = tmp4(10131);
+      tmp74Result6 = tmp74(tmp4(9412), size);
+      const tmp4Result5 = tmp4(9412);
     }
-    tmp77 = callback2;
+    tmp76 = callback2;
   } else {
     if (tmp18) {
-      tmp18 = c12(tmp4(11279), { animated: true, barStyle: "light-content" });
+      tmp18 = c12(tmp4(10561), { animated: true, barStyle: "light-content" });
     }
     const items17 = [tmp18, , , , , ];
-    const obj22 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    const obj21 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const items18 = [tmp13.closeButtonContainer, ];
-    const obj23 = { paddingTop: top };
-    items18[1] = obj23;
-    obj22.style = items18;
-    obj22.onPress = onClose;
+    const obj22 = { paddingTop: top };
+    items18[1] = obj22;
+    obj21.style = items18;
+    obj21.onPress = onClose;
     const intl = tmp(1113).intl;
-    obj22.accessibilityLabel = intl.string(tmp(1113).t.cpT0Cq);
-    const obj24 = { style: tmp13.closeButton, children: null };
-    const obj25 = { size: "md", style: tmp13.closeButtonIcon };
-    obj24.children = c12(tmp(7559).XSmallIcon, obj25);
-    obj22.children = c12(c7, obj24);
-    items17[1] = c12(currentIndex, obj22);
-    const obj26 = { resizeMode: "cover", style: null, source: null };
+    obj21.accessibilityLabel = intl.string(tmp(1113).t.cpT0Cq);
+    const obj23 = { style: tmp13.closeButton, children: null };
+    const obj24 = { size: "md", style: tmp13.closeButtonIcon };
+    obj23.children = c12(tmp(7062).XSmallIcon, obj24);
+    obj21.children = c12(c7, obj23);
+    items17[1] = c12(currentIndex, obj21);
+    const obj25 = { resizeMode: "cover", style: null, source: null };
     const items19 = [, ];
     ({ headerImageContainer: arr20[0], headerImage: arr20[1] } = tmp13);
-    obj26.style = items19;
-    obj26.source = tmp4(15239);
-    items17[2] = c12(tmp4(6014), obj26);
-    const obj27 = { style: null };
+    obj25.style = items19;
+    obj25.source = tmp4(13867);
+    items17[2] = c12(tmp4(5510), obj25);
+    const obj26 = { style: null };
     const items20 = [, ];
     ({ headerImageContainer: arr21[0], headerOverlay: arr21[1] } = tmp13);
-    obj27.style = items20;
-    items17[3] = c12(c7, obj27);
-    const obj28 = { style: tmp13.headerBackground, start: null, end: null, colors: null };
-    ({ START: obj19.start, END: obj19.end } = callback);
-    obj28.colors = memo2;
-    items17[4] = c12(tmp4(5887), obj28);
-    const obj29 = { contentContainerStyle: null, children: null };
-    const obj30 = { paddingBottom: bottom };
-    obj29.contentContainerStyle = obj30;
-    const obj31 = { style: null, children: null };
-    const obj32 = { paddingTop: top + tmp(5886).NAV_BAR_HEIGHT };
-    obj31.style = obj32;
+    obj26.style = items20;
+    items17[3] = c12(c7, obj26);
+    const obj27 = { style: tmp13.headerBackground, start: null, end: null, colors: null };
+    ({ START: obj18.start, END: obj18.end } = callback);
+    obj27.colors = memo2;
+    items17[4] = c12(tmp4(5378), obj27);
+    const obj28 = { contentContainerStyle: null, children: null };
+    const obj29 = { paddingBottom: bottom };
+    obj28.contentContainerStyle = obj29;
+    const obj30 = { style: null, children: null };
+    const obj31 = { paddingTop: top + tmp(5377).NAV_BAR_HEIGHT };
+    obj30.style = obj31;
     if (null == recipientUser) {
-      const items21 = [tmp63, , , , ];
-      const obj33 = { style: tmp13.title, variant: null, color: "text-overlay-light", children: null };
+      const items21 = [tmp62, , , , ];
+      const obj32 = { style: tmp13.title, variant: null, color: "text-overlay-light", children: null };
       let str2 = "heading-xxl/semibold";
       if (null != recipientUser) {
         str2 = "heading-xl/semibold";
       }
-      obj33.variant = str2;
+      obj32.variant = str2;
       if (null != recipientUser) {
         const intl3 = tmp(1113).intl;
         let username = recipientUser.globalName;
         if (username == null) {
           username = recipientUser.username;
         }
-        const obj34 = { username };
-        let formatToPlainStringResult = intl3.formatToPlainString(tmp(1113).t.m5ggvH, obj34);
+        const obj33 = { username };
+        let formatToPlainStringResult = intl3.formatToPlainString(tmp(1113).t.m5ggvH, obj33);
       } else {
         const intl2 = tmp(1113).intl;
         formatToPlainStringResult = intl2.string(tmp(1113).t.dqQgZv);
       }
-      obj33.children = formatToPlainStringResult;
-      items21[1] = tmp57(tmp(5923).Text, obj33);
-      const obj35 = { style: tmp13.description, variant: "heading-xs/medium", color: "text-overlay-light", children: null };
+      obj32.children = formatToPlainStringResult;
+      items21[1] = tmp56(tmp(5414).Text, obj32);
+      const obj34 = { style: tmp13.description, variant: "heading-xs/medium", color: "text-overlay-light", children: null };
       const intl4 = tmp(1113).intl;
-      obj35.children = intl4.string(tmp(1113).t["30qzrd"]);
-      items21[2] = tmp57(tmp(5923).Text, obj35);
-      let tmp57Result = tmp75Result;
-      if (tmp75Result) {
-        const obj36 = { style: tmp13.badgeBanner, onPress: callback1, accessibilityRole: "button", children: null };
-        const obj37 = { giftsToNextTier, nextTierName: null, nextTierIcon: null, analyticsLocation: null };
+      obj34.children = intl4.string(tmp(1113).t["30qzrd"]);
+      items21[2] = tmp56(tmp(5414).Text, obj34);
+      let tmp56Result = tmp12;
+      if (tmp12) {
+        const obj35 = { style: tmp13.badgeBanner, onPress: callback1, accessibilityRole: "button", children: null };
+        const obj36 = { giftsToNextTier, nextTierName: null, nextTierIcon: null, analyticsLocation: null };
         let str3 = nextTier.name;
         if (str3 == null) {
           str3 = "";
         }
-        obj37.nextTierName = str3;
-        const tmp4Result7 = tmp4(10130);
-        obj37.nextTierIcon = tmp(10103).getGiftingBadgeTierIconUrl(nextTier);
-        obj37.analyticsLocation = tmp4(7947).PREMIUM_GIFT_PLAN_SELECTION;
-        obj36.children = tmp57(tmp4Result7, obj37);
-        tmp57Result = tmp57(tmp58, obj36);
-        const tmpResult8 = tmp(10103);
+        obj36.nextTierName = str3;
+        const tmp4Result7 = tmp4(9411);
+        obj36.nextTierIcon = tmp(9384).getGiftingBadgeTierIconUrl(nextTier);
+        obj36.analyticsLocation = tmp4(7450).PREMIUM_GIFT_PLAN_SELECTION;
+        obj35.children = tmp56(tmp4Result7, obj36);
+        tmp56Result = tmp56(tmp57, obj35);
+        const tmpResult8 = tmp(9384);
       }
-      items21[3] = tmp57Result;
+      items21[3] = tmp56Result;
       if (0 !== stateFromStoresArray.length) {
         if (undefined === claimableRewards) {
-          const obj38 = { children: null };
+          const obj37 = { children: null };
           items21[4] = null;
-          obj31.children = items21;
-          obj29.children = tmp54(tmp59, obj31);
-          items17[5] = tmp57(tmp62, obj29);
-          obj38.children = items17;
-          tmp75Result5 = tmp54(tmp55, obj38);
+          obj30.children = items21;
+          obj28.children = tmp53(tmp58, obj30);
+          items17[5] = tmp56(tmp61, obj28);
+          obj37.children = items17;
+          tmp74Result5 = tmp53(tmp54, obj37);
         }
       }
       if (isScreenReaderEnabled) {
-        const obj39 = { horizontal: true, showsHorizontalScrollIndicator: false, style: tmp13.carousel, contentContainerStyle: null, children: null };
-        const obj40 = { gap: v16, paddingHorizontal: v16 };
-        obj39.contentContainerStyle = obj40;
-        obj39.children = arr14.map((item, index) => callback2("default", { forScreenReader: true })({ item, index }));
-        let tmp57Result3 = tmp57(tmp62, obj39);
+        const obj38 = { horizontal: true, showsHorizontalScrollIndicator: false, style: tmp13.carousel, contentContainerStyle: null, children: null };
+        const obj39 = { gap: v16, paddingHorizontal: v16 };
+        obj38.contentContainerStyle = obj39;
+        obj38.children = arr14.map((item, index) => callback2("default", { forScreenReader: true })({ item, index }));
+        let tmp56Result3 = tmp56(tmp61, obj38);
       } else {
         const size1 = { style: null, data: null, renderItem: null, width: null, height: null, onConfigurePanGesture: null, loop: false, scrollAnimationDuration: 200, customAnimation: null, mode: "parallax", modeConfig: null, onSnapToItem: null };
         const items22 = [tmp13.carousel, animatedStyle];
         size1.style = items22;
         size1.data = arr14;
-        if (tmp75Result) {
+        if (tmp12) {
           memo1 = memo;
         }
         size1.renderItem = memo1;
@@ -495,31 +487,31 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         size1.onConfigurePanGesture = function onConfigurePanGesture(activeOffsetX) {
           activeOffsetX.activeOffsetX([-10, 10]);
         };
-        let tmp71;
-        if (tmp75Result) {
-          tmp71 = callback3;
+        let tmp70;
+        if (tmp12) {
+          tmp70 = callback3;
         }
-        const obj41 = { children: null };
-        size1.customAnimation = tmp71;
+        const obj40 = { children: null };
+        size1.customAnimation = tmp70;
         size1.modeConfig = { parallaxScrollingScale: 1, parallaxScrollingOffset: 40 };
         size1.onSnapToItem = tmp16;
-        const items23 = [tmp57(tmp4(10131), size1), ];
-        const obj42 = { numberOfItems: arr14.length, currentIndex };
-        items23[1] = tmp57(tmp(1187).CarouselPagination, obj42);
-        obj41.children = items23;
-        tmp57Result3 = tmp54(tmp55, obj41);
-        const tmp4Result8 = tmp4(10131);
+        const items23 = [tmp56(tmp4(9412), size1), ];
+        const obj41 = { numberOfItems: arr14.length, currentIndex };
+        items23[1] = tmp56(tmp(1187).CarouselPagination, obj41);
+        obj40.children = items23;
+        tmp56Result3 = tmp53(tmp54, obj40);
+        const tmp4Result8 = tmp4(9412);
       }
     } else {
-      const obj43 = { style: tmp13.avatar, guildId: "r", size: "(function MediaModalOverlayFooterTsx6(){let[interpolate,animationDriver,COLLAPSED,EXPANDED]=this.__closure;return{height:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[0,24],'clamp')};})", user: "(function MediaModalOverlayFooterTsx7(){let[r,g,b,interpolate,animationDriver,COLLAPSED,EXPANDED,a,DISMISSED]=this.__closure;return{backgroundColor:\"rgba(\"+r+\", \"+g+\", \"+b+\", \"+interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[a,1],'clamp')+\")\",paddingVertical:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[8,0],'clamp'),transform:[{translateY:interpolate(animationDriver.get(),[DISMISSED,COLLAPSED],[100,0],'clamp')}]};})" };
+      const obj42 = { style: tmp13.avatar, guildId: "r", size: "Promise", user: null };
       const AvatarSizes = tmp(1187).AvatarSizes;
-      obj43.size = tmp75Result ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
-      obj43.user = recipientUser;
-      tmp57(tmp(1187).Avatar, obj43);
+      obj42.size = tmp12 ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
+      obj42.user = recipientUser;
+      tmp56(tmp(1187).Avatar, obj42);
     }
-    const tmp4Result6 = tmp4(6014);
-    tmp58 = currentIndex;
-    tmp59 = c7;
+    const tmp4Result6 = tmp4(5510);
+    tmp57 = currentIndex;
+    tmp58 = c7;
   }
-  return tmp75Result5;
+  return tmp74Result5;
 };

@@ -1,6 +1,6 @@
-// === Module 11471: EmbeddedAppShimActionCreators ===
+// === Module 10753: EmbeddedAppShimActionCreators ===
 
-// Module 11471 (EmbeddedAppShimActionCreators)
+// Module 10753 (EmbeddedAppShimActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

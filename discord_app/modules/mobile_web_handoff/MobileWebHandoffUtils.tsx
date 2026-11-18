@@ -1,6 +1,6 @@
-// === Module 10218: MobileWebHandoffUtils ===
+// === Module 9499: MobileWebHandoffUtils ===
 
-// Module 10218 (MobileWebHandoffUtils)
+// Module 9499 (MobileWebHandoffUtils)
 import v1 from "v1" /* 1269 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -61,9 +61,9 @@ let closure_4 = async function _createHandoffToken(key) {
           throw error;
         }
       }
-    } catch (tmp18) {
+    } catch (tmp14) {
       c3 = tmp;
-      throw tmp18;
+      throw tmp14;
     }
   }
 };

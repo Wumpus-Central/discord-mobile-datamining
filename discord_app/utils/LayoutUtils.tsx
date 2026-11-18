@@ -1,6 +1,6 @@
-// === Module 16224: LayoutUtils ===
+// === Module 14891: LayoutUtils ===
 
-// Module 16224 (LayoutUtils)
+// Module 14891 (LayoutUtils)
 import size from "module_2" /* 2 */;
 
 function getAnchorCoordsFromLayoutSize(arg0, height) {
@@ -427,7 +427,7 @@ export function getRightWidgetSpecs(arg0, arg1, width) {
   return items;
 }
 export function convertFullCordsToMatchingOrientedCoords(top, top2) {
-  const rect = { top: "Array", bottom: "s", left: "channel_id", right: "space" };
+  const rect = { top: "Array", bottom: "s", left: "channel_id", right: "formatToPlainString" };
   if (null != top2.top) {
     rect.top = top.top;
   }

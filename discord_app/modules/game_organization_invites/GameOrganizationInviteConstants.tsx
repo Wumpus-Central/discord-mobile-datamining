@@ -1,6 +1,6 @@
-// === Module 12573: GameOrganizationInviteConstants ===
+// === Module 11856: GameOrganizationInviteConstants ===
 
-// Module 12573 (GameOrganizationInviteConstants)
+// Module 11856 (GameOrganizationInviteConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/GameOrganizationInviteConstants.tsx");
@@ -16,7 +16,7 @@ export const GAME_ORGANIZATION_JOIN_OUTCOME_ACTION_SHEET_KEY = "GameOrganization
 export const GameOrganizationCantJoinReasons = { NO_CHARACTERS: "NO_CHARACTERS", ERROR: "ERROR" };
 export const GAME_ORGANIZATION_INVITE_EXPIRY_DAYS = 7;
 export const GameOrganizationInviteStates = { RESOLVING: "RESOLVING", RESOLVED: "RESOLVED", ERROR: "ERROR" };
-export const GameOrganizationDisplayNouns = { GUILD: "GUILD" };
+export const GameOrganizationDisplayNouns = { GUILD: "GUILD", ALLIANCE: "ALLIANCE", CLAN: "CLAN" };
 export const GameOrganizationCharacterMode = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", SINGLE: 1, [1]: "SINGLE", MULTI: 2, [2]: "MULTI" };
 export const GameOrganizationInviteAcceptStatus = { JOINED: 1, [1]: "JOINED", FAILED: 2, [2]: "FAILED" };
 export const GameOrganizationInviteAcceptFailureReason = { ALREADY_JOINED: 1, [1]: "ALREADY_JOINED", IN_ANOTHER_ORGANIZATION: 2, [2]: "IN_ANOTHER_ORGANIZATION", GUILD_FULL: 3, [3]: "GUILD_FULL", OTHER: 4, [4]: "OTHER" };

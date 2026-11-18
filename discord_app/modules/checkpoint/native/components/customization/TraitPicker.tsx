@@ -1,29 +1,25 @@
-// === Module 13409: TraitPicker ===
+// === Module 12713: TraitPicker ===
 
-// Module 13409 (TraitPicker)
+// Module 12713 (TraitPicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import _modDef3319 from "module_3319" /* 3319 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5490 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6742 */;
-import CheckpointActionCreators from "CheckpointActionCreators" /* 13126 */;
-import CheckpointTextDefault from "CheckpointText" /* 13137 */;
-import useTraitPickerOptions from "useTraitPickerOptions" /* 13408 */;
-import TraitOptionListDefault from "TraitOptionList" /* 13410 */;
-import TraitOptionDetailsDefault from "TraitOptionDetails" /* 13412 */;
-import useAutoSelectTraitOption from "useAutoSelectTraitOption" /* 13414 */;
-import FinalizeTraitTabs from "FinalizeTraitTabs" /* 13415 */;
+import _modDef3339 from "module_3339" /* 3339 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5003 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6244 */;
+import CheckpointTextDefault from "CheckpointText" /* 12435 */;
+import TraitOptionListDefault from "TraitOptionList" /* 12711 */;
+import TraitOptionDetailsDefault from "TraitOptionDetails" /* 12714 */;
+import useTraitPicker from "useTraitPicker" /* 12716 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function EarnedCountHeader(customizationOption) {
   ({ earnedCount, totalCount } = customizationOption);
-  const tmp = closure_10();
+  const tmp = closure_9();
   const customizationOptionName = CheckpointCustomizationUtils.getCustomizationOptionName(customizationOption.customizationOption);
   const intl = util.intl;
-  const combined = "" + customizationOptionName + ", " + intl.formatToPlainString(_modDef3319.Vfq58K, {
+  const combined = "" + customizationOptionName + ", " + intl.formatToPlainString(_modDef3339.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(arg0) {
@@ -32,117 +28,145 @@ function EarnedCountHeader(customizationOption) {
   });
   const obj3 = { variant: "body-md/medium", color: "text-default", style: tmp.earnedRow, accessibilityRole: "header", accessibilityLabel: combined, children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3319.Vfq58K, {
+  obj3.children = intl2.format(_modDef3339.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(children, arg1) {
-      return closure_1_7(CheckpointTextDefault, { variant: "body-md/semibold", tabularNumbers: true, children }, arg1);
+      return closure_1_5(CheckpointTextDefault, { variant: "body-md/semibold", tabularNumbers: true, children }, arg1);
     }
   });
-  return metroImportDefault(Text_Text.Text, obj3);
+  return hasOwnProperty(Text_Text.Text, obj3);
 }
-function TraitPickerDetails(arg0) {
-  ({ asset, hideRarity } = arg0);
-  return metroImportDefault(hasOwnProperty, { style: closure_10().details, children: metroImportDefault(TraitOptionDetailsDefault, { asset, hideRarity }) });
-}
-function TraitPickerPortrait(selectedAsset) {
-  selectedAsset = selectedAsset.selectedAsset;
-  ({ header, optionList, isRarityVisible } = selectedAsset);
-  const obj = { style: closure_10().container, children: null };
-  items = [header, optionList, ];
-  let tmp3 = null != selectedAsset;
-  if (tmp3) {
-    const obj2 = { asset: selectedAsset, hideRarity: !isRarityVisible };
-    tmp3 = metroImportDefault(TraitPickerDetails, obj2);
+class TraitPickerDetails {
+  constructor(arg0) {
+    option = global.option;
+    ({ customizationOption, title, titleAccessibilityLabel } = global);
+    tmp2 = null;
+    if (null != option) {
+      tmp3 = jsx;
+      tmp4 = View;
+      obj = { style: null, children: null };
+      obj.style = tmp.details;
+      tmp5 = closure_1;
+      tmp6 = closure_2;
+      obj1 = { option: null, hideRarity: null, title: null, titleAccessibilityLabel: null };
+      obj1.option = option;
+      tmp8 = closure_0;
+      tmp7 = closure_1(closure_2[13]);
+      obj3 = closure_0(closure_2[6]);
+      obj1.hideRarity = !obj3.getIsTraitRarityVisible(customizationOption);
+      obj1.title = title;
+      obj1.titleAccessibilityLabel = titleAccessibilityLabel;
+      obj.children = jsx(tmp7, obj1);
+      tmp2 = jsx(View, obj);
+    }
+    return tmp2;
   }
-  items[2] = tmp3;
-  obj.children = items;
-  return React5(hasOwnProperty, obj);
 }
-function TraitPickerLandscape(selectedAsset) {
-  selectedAsset = selectedAsset.selectedAsset;
-  ({ header, optionList, isRarityVisible } = selectedAsset);
-  const tmp = closure_10();
-  const obj = { alwaysBounceVertical: false, contentContainerStyle: tmp.landscapeScrollContent, children: null };
-  items = [metroImportDefault(hasOwnProperty, { style: tmp.landscapeGap }), header, metroImportDefault(hasOwnProperty, { style: tmp.landscapeGap }), , , ];
-  let tmp2Result = null != selectedAsset;
-  if (tmp2Result) {
-    const obj4 = { children: null };
-    const obj5 = { asset: selectedAsset, hideRarity: !isRarityVisible };
-    const items1 = [metroImportDefault(TraitPickerDetails, obj5), ];
-    const obj6 = { style: tmp.landscapeGap };
-    items1[1] = metroImportDefault(hasOwnProperty, obj6);
-    obj4.children = items1;
-    tmp2Result = React5(React6, obj4);
+class TraitPickerOptionList {
+  constructor(arg0) {
+    customizationOption = global.customizationOption;
+    merged = Object.assign(global, Object.assign({ customizationOption: 0 }));
+    obj = {};
+    tmp2 = closure_1(closure_2[4]);
+    merged1 = Object.assign(merged);
+    obj.key = customizationOption;
+    obj.customizationOption = customizationOption;
+    obj2 = closure_0(closure_2[6]);
+    obj.hideRarity = !obj2.getIsTraitRarityVisible(customizationOption);
+    return createElement(tmp2, obj);
   }
-  items[3] = tmp2Result;
-  items[4] = optionList;
-  items[5] = metroImportDefault(hasOwnProperty, { style: tmp.landscapeGap });
-  obj.children = items;
-  return React5(React4, obj);
+}
+class TraitPickerPortrait {
+  constructor(arg0) {
+    ({ header, optionList, details } = global);
+    obj = { style: closure_9().container, children: null };
+    items = [, , ];
+    items[0] = header;
+    items[1] = optionList;
+    items[2] = details;
+    obj.children = items;
+    return jsxs(View, obj);
+  }
+}
+class TraitPickerLandscape {
+  constructor(arg0) {
+    details = global.details;
+    ({ header, optionList } = global);
+    tmp = closure_9();
+    tmp2 = jsxs;
+    obj = { alwaysBounceVertical: false, contentContainerStyle: tmp.landscapeScrollContent, children: null };
+    tmp4 = jsx;
+    tmp5 = View;
+    obj1 = { style: tmp.landscapeGap };
+    tmp3 = ScrollView;
+    items = [, , , , , ];
+    items[0] = jsx(View, obj1);
+    items[1] = header;
+    obj7 = { style: tmp.landscapeGap };
+    items[2] = jsx(View, obj7);
+    tmp2Result = null != details;
+    if (tmp2Result) {
+      tmp7 = Fragment;
+      obj8 = { children: null };
+      items1 = [, ];
+      items1[0] = details;
+      obj9 = { style: null };
+      obj9.style = tmp.landscapeGap;
+      items1[1] = tmp4(tmp5, obj9);
+      obj8.children = items1;
+      tmp2Result = tmp2(Fragment, obj8);
+    }
+    items[3] = tmp2Result;
+    items[4] = optionList;
+    obj10 = { style: tmp.landscapeGap };
+    items[5] = tmp4(tmp5, obj10);
+    obj.children = items;
+    return tmp2(tmp3, obj);
+  }
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const rarityOrder = fn(6375).CHECKPOINT_RARITY_ORDER_MOBILE;
+({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5310);
-let obj2 = { container: { gap: fn(13410).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
-let obj3 = { gap: fn(13410).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(13410).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(13410).CONTENT_INSET };
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
+const createElement = fn(19).createElement;
+const createStyles = fn(4823);
+let obj2 = { container: { gap: fn(12711).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
+let obj3 = { gap: fn(12711).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(12711).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(12711).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(13410).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(12711).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
-let closure_10 = createStyles.createStyles(obj2);
+const React6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitPicker.tsx");
 
-export default function TraitPicker(selectedOptionId) {
-  ({ customizationOption, disabled } = selectedOptionId);
-  ({ isFinalizeRoute, isCurrentTraitBlocked } = selectedOptionId);
-  if (disabled === undefined) {
-    disabled = false;
-  }
-  selectedOptionId = selectedOptionId.selectedOptionId;
-  ({ isLandscape, optionIds, savedOptionId } = selectedOptionId);
-  if (isLandscape === undefined) {
-    isLandscape = false;
-  }
-  ({ onSelectOption, onSelectFinalizeOption } = selectedOptionId);
-  const isTraitRarityVisible = CheckpointCustomizationUtils.getIsTraitRarityVisible(customizationOption);
-  const traitPickerOptions = useTraitPickerOptions.useTraitPickerOptions({ customizationOption, optionIds, savedOptionId, rarityOrder });
-  const availableTraitOptions = traitPickerOptions.availableTraitOptions;
-  ({ totalCount, earnedCount } = traitPickerOptions);
-  const obj3 = { customizationOption, optionIds, savedOptionId, rarityOrder };
-  const obj4 = useAutoSelectTraitOption;
-  const autoSelectTraitOption = obj4.useAutoSelectTraitOption({ availableTraitOptions, selectedOptionId, onSelectOption: CheckpointActionCreators.selectCharacterTrait, isPaused: disabled });
-  items = [availableTraitOptions, selectedOptionId];
+export default function TraitPicker(onSelectOption) {
+  ({ customizationOption, disabled, isLandscape } = onSelectOption);
+  const traitPicker = useTraitPicker.useTraitPicker({ customizationOption, disabled, onSelectOption: onSelectOption.onSelectOption });
   let str = "md";
-  const memo = noop.useMemo(() => {
-    let found = availableTraitOptions.find((optionId) => optionId.optionId === selectedOptionId);
-    if (found == null) {
-      found = availableTraitOptions[0];
-    }
-    return found;
-  }, items);
   if (isLandscape) {
     str = "md";
-    if (useWindowDimensionsDefault().height <= useWindowSizeClassifier.WINDOW_SIZE_THRESHOLD_LARGE) {
+    if (tmp4 <= useWindowSizeClassifier.WINDOW_SIZE_THRESHOLD_LARGE) {
       str = "sm";
     }
   }
-  if (isFinalizeRoute) {
-    const obj6 = { activeCustomizationOption: customizationOption, onSelectOption: onSelectFinalizeOption, isCurrentTraitBlocked, disabled };
-    let tmp8Result = metroImportDefault(FinalizeTraitTabs.FinalizeTraitTabs, obj6);
-    let tmp11 = metroImportDefault;
-  } else {
-    const obj7 = { customizationOption, earnedCount, totalCount };
-    tmp8Result = metroImportDefault(EarnedCountHeader, obj7);
-    tmp11 = metroImportDefault;
-  }
-  const obj8 = { header: tmp8Result, optionList: tmp11(TraitOptionListDefault, { customizationOption, size: str, options: availableTraitOptions, selectedOptionId, disabled, hideRarity: !isTraitRarityVisible, onSelectOption }, customizationOption), selectedAsset: memo, isRarityVisible: isTraitRarityVisible };
-  const merged = Object.assign(obj8);
-  return tmp11(isLandscape ? TraitPickerLandscape : TraitPickerPortrait, {});
+  const obj2 = { header: hasOwnProperty(EarnedCountHeader, { customizationOption, earnedCount: traitPicker.earnedCount, totalCount: traitPicker.totalCount }), optionList: hasOwnProperty(TraitPickerOptionList, { customizationOption, size: str, options: traitPicker.traitOptions, selectedOptionId: traitPicker.selectedOptionId, disabled, onSelectOption: traitPicker.onSelectOption }), details: hasOwnProperty(TraitPickerDetails, { customizationOption, option: traitPicker.selectedOption }) };
+  return hasOwnProperty(isLandscape ? TraitPickerLandscape : TraitPickerPortrait, obj2);
 };
+export function useTraitOptionSize(isLandscape) {
+  let str = "md";
+  if (isLandscape) {
+    str = "md";
+    if (tmp2 <= useWindowSizeClassifier.WINDOW_SIZE_THRESHOLD_LARGE) {
+      str = "sm";
+    }
+  }
+  return str;
+}
+export { TraitPickerDetails };
+export { TraitPickerOptionList };
+export { TraitPickerPortrait };
+export { TraitPickerLandscape };

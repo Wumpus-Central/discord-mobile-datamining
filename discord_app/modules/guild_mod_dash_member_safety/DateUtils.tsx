@@ -1,8 +1,8 @@
-// === Module 8712: guild_mod_dash_member_safety/DateUtils ===
+// === Module 8203: guild_mod_dash_member_safety/DateUtils ===
 
-// Module 8712 (guild_mod_dash_member_safety/DateUtils)
+// Module 8203 (guild_mod_dash_member_safety/DateUtils)
 import util from "util" /* 1113 */;
-import threads_getTimestampStringDefault from "threads/getTimestampString" /* 8713 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 8204 */;
 import size from "module_2" /* 2 */;
 
 function getJoinedAtDateFormatter() {

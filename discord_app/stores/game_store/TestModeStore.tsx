@@ -1,9 +1,9 @@
-// === Module 5969: TestModeStore ===
+// === Module 5465: TestModeStore ===
 
-// Module 5969 (TestModeStore)
+// Module 5465 (TestModeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserSettings from "UserSettings" /* 5135 */;
+import UserSettings from "UserSettings" /* 4648 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2163 */;

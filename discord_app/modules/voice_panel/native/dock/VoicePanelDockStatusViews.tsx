@@ -1,21 +1,22 @@
-// === Module 19250: VoicePanelDockStatusViews ===
+// === Module 18063: VoicePanelDockStatusViews ===
 
-// Module 19250 (VoicePanelDockStatusViews)
+// Module 18063 (VoicePanelDockStatusViews)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5542 */;
-import spring_spring from "spring/spring" /* 5933 */;
-import useChannelName from "useChannelName" /* 5948 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7227 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12427 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13937 */;
+import timing_timing from "timing/timing" /* 5033 */;
+import spring_spring from "spring/spring" /* 5424 */;
+import useChannelName from "useChannelName" /* 5439 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6731 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11709 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13239 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 6367 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import RelationshipStore from "RelationshipStore" /* 5252 */;
-import SpeakingStore from "SpeakingStore" /* 6939 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import SoundboardStore from "SoundboardStore" /* 5869 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import RelationshipStore from "RelationshipStore" /* 4765 */;
+import SpeakingStore from "SpeakingStore" /* 6443 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -24,13 +25,13 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-let closure_12 = fn(19249).useDockUserPlayingSoundboardId;
-const VoicePanelDockConstants = fn(12446);
-({ DOCK_FADE_TIMING: map1, DOCK_TILE_RADIUS, DOCK_TILE_SIZE } = VoicePanelDockConstants);
+let closure_13 = fn(18062).useDockUserPlayingSoundboardId;
+const VoicePanelDockConstants = fn(11728);
+({ DOCK_FADE_TIMING: closure_14, DOCK_TILE_RADIUS, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
-({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
+({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const sum = DOCK_TILE_SIZE + 4;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { face: null, avatar: null, avatarImage: null, ring: null, halo: null, haloDisc: null, guildIcon: null, guildIconAsset: null, avatarShadow: null, titleRow: null, title: null, soundboardEmoji: null, soundboardEmojiText: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -64,17 +65,17 @@ if (PlatformUtils.isIOS()) {
   num = 16;
 }
 obj.soundboardEmojiText = { height: 16, fontSize: num, lineHeight: 20 };
-let closure_18 = createStyles.createStyles(obj);
-let closure_19 = { code: "(function VoicePanelDockStatusViewsTsx1(){let[contentFade]=this.__closure;return{opacity:contentFade.get()};})" };
-let closure_20 = { code: "(function VoicePanelDockStatusViewsTsx2(){let[progress,DOCK_TILE_SIZE,RING_BOX]=this.__closure;const value=progress.get();const startScale=DOCK_TILE_SIZE/RING_BOX;return{opacity:Math.min(value*2,1),transform:[{scale:startScale+(1-startScale)*value}]};})" };
-let closure_21 = noop.memo(function DockSpeakingRing(speaking) {
+let closure_19 = createStyles.createStyles(obj);
+let closure_20 = { code: "(function VoicePanelDockStatusViewsTsx1(){let[contentFade,ringingOpacity]=this.__closure;return{opacity:contentFade.get()*ringingOpacity.get()};})" };
+let closure_21 = { code: "(function VoicePanelDockStatusViewsTsx2(){let[progress,DOCK_TILE_SIZE,RING_BOX]=this.__closure;const value=progress.get();const startScale=DOCK_TILE_SIZE/RING_BOX;return{opacity:Math.min(value*2,1),transform:[{scale:startScale+(1-startScale)*value}]};})" };
+let closure_22 = noop.memo(function DockSpeakingRing(speaking) {
   speaking = speaking.speaking;
   _require = speaking;
   let ICON_VOICE_SPEAKING = speaking.color;
   if (ICON_VOICE_SPEAKING === undefined) {
     ICON_VOICE_SPEAKING = nativeDefault.colors.ICON_VOICE_SPEAKING;
   }
-  const tmp3 = closure_18();
+  const tmp3 = closure_19();
   const token = require("useToken").useToken(ICON_VOICE_SPEAKING);
   let obj = require("useToken");
   const sharedValue = require("module_1655").useSharedValue(0);
@@ -87,7 +88,7 @@ let closure_21 = noop.memo(function DockSpeakingRing(speaking) {
     const result = _undefined2.set(spring_spring.withSpring(num, { mass: 0.3, damping: 16, stiffness: 400 }));
   }, items);
   const obj2 = require("module_1655");
-  const items1 = [closure_20, sharedValue, DOCK_TILE_SIZE, closure_17];
+  const items1 = [closure_21, sharedValue, DOCK_TILE_SIZE, closure_18];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -112,17 +113,17 @@ let closure_21 = noop.memo(function DockSpeakingRing(speaking) {
   const obj4 = { style: null, pointerEvents: "none" };
   const items3 = [tmp3.ring, { borderColor: token }, animatedStyle];
   obj4.style = items3;
-  return closure_15(_modDef1655.View, obj4);
+  return closure_16(_modDef1655.View, obj4);
 });
-let closure_22 = { code: "(function VoicePanelDockStatusViewsTsx3(){let[progress,RING_BOX,HALO_SPEAKING_SIZE]=this.__closure;const value=progress.get();const startScale=RING_BOX/HALO_SPEAKING_SIZE;return{opacity:0.15*Math.min(value*2,1),transform:[{scale:startScale+(1-startScale)*value}]};})" };
-let closure_23 = noop.memo(function DockSpeakerHalo(isSpeaking) {
+let closure_23 = { code: "(function VoicePanelDockStatusViewsTsx3(){let[progress,RING_BOX,HALO_SPEAKING_SIZE]=this.__closure;const value=progress.get();const startScale=RING_BOX/HALO_SPEAKING_SIZE;return{opacity:0.15*Math.min(value*2,1),transform:[{scale:startScale+(1-startScale)*value}]};})" };
+let closure_24 = noop.memo(function DockSpeakerHalo(isSpeaking) {
   isSpeaking = isSpeaking.isSpeaking;
   _require = isSpeaking;
   let ICON_VOICE_SPEAKING = isSpeaking.color;
   if (ICON_VOICE_SPEAKING === undefined) {
     ICON_VOICE_SPEAKING = nativeDefault.colors.ICON_VOICE_SPEAKING;
   }
-  const tmp3 = closure_18();
+  const tmp3 = closure_19();
   const token = require("useToken").useToken(ICON_VOICE_SPEAKING);
   let obj = require("useToken");
   const voicePanelDockSpeakerLevelProps = require("useVoicePanelDockLevelProps").useVoicePanelDockSpeakerLevelProps();
@@ -137,7 +138,7 @@ let closure_23 = noop.memo(function DockSpeakerHalo(isSpeaking) {
     const result = _undefined2.set(spring_spring.withSpring(num, { mass: 0.3, damping: 16, stiffness: 400 }));
   }, items);
   const obj3 = require("module_1655");
-  const items1 = [closure_22, sharedValue, closure_17, 42];
+  const items1 = [closure_23, sharedValue, closure_18, 42];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -170,11 +171,11 @@ let closure_23 = noop.memo(function DockSpeakerHalo(isSpeaking) {
   const obj7 = { style: null };
   const items4 = [tmp3.haloDisc, { backgroundColor: token }];
   obj7.style = items4;
-  obj6.children = closure_15(View, obj7);
-  obj5.children = closure_15(LiveVoiceLevelViewDefault, obj6);
-  return closure_15(_modDef1655.View, obj5);
+  obj6.children = closure_16(View, obj7);
+  obj5.children = closure_16(LiveVoiceLevelViewDefault, obj6);
+  return closure_16(_modDef1655.View, obj5);
 });
-let closure_24 = { code: "(function VoicePanelDockStatusViewsTsx4(){let[interpolate,dim,dimmedOpacity]=this.__closure;return{opacity:interpolate(dim.get(),[0,1],[1,dimmedOpacity])};})" };
+let closure_25 = { code: "(function VoicePanelDockStatusViewsTsx4(){let[interpolate,dim,dimmedOpacity]=this.__closure;return{opacity:interpolate(dim.get(),[0,1],[1,dimmedOpacity])};})" };
 size = fn(2);
 let result1 = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockStatusViews.tsx");
 
@@ -182,12 +183,12 @@ export function DockChannelIcon(streaming) {
   streaming = streaming.streaming;
   let channelId;
   let guildId;
-  const tmp = closure_18();
-  const tmp4Result = guildId(19251)(channelId(575).Shadow.SHADOW_MEDIUM);
-  const context = noop.useContext(guildId(12427));
+  const tmp = closure_19();
+  const tmp4Result = guildId(18064)(channelId(575).Shadow.SHADOW_MEDIUM);
+  const context = noop.useContext(guildId(11709));
   channelId = context.channelId;
   guildId = context.guildId;
-  const tmp4 = guildId(19251);
+  const tmp4 = guildId(18064);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
@@ -221,13 +222,13 @@ export function DockChannelIcon(streaming) {
     obj3.style = items4;
     const obj5 = { streaming, children: null };
     const obj6 = { guild: stateFromStores, size: null, style: null };
-    const tmp2Result = tmp2(19252);
-    obj6.size = tmp5(7730).GuildIconSizes.SMALL_32;
+    const tmp2Result = tmp2(18065);
+    obj6.size = tmp5(7233).GuildIconSizes.SMALL_32;
     obj6.style = tmp.guildIconAsset;
-    obj5.children = closure_15(tmp2(7730), obj6);
-    obj3.children = closure_15(tmp2Result, obj5);
-    let tmp13 = closure_15(View, obj3);
-    const tmp2Result3 = tmp2(7730);
+    obj5.children = closure_16(tmp2(7233), obj6);
+    obj3.children = closure_16(tmp2Result, obj5);
+    let tmp13 = closure_16(View, obj3);
+    const tmp2Result3 = tmp2(7233);
   } else {
     tmp13 = null;
     if (null != stateFromStores1) {
@@ -238,16 +239,16 @@ export function DockChannelIcon(streaming) {
       obj7.style = items5;
       const obj9 = { streaming, children: null };
       const obj10 = { user: stateFromStores1, guildId: "Array", size: tmp5(1187).AvatarSizes.REFRESH_MEDIUM_32 };
-      obj9.children = closure_15(tmp5(1187).Avatar, obj10);
-      obj7.children = closure_15(tmp2(19252), obj9);
-      tmp13 = closure_15(View, obj7);
-      const tmp2Result4 = tmp2(19252);
+      obj9.children = closure_16(tmp5(1187).Avatar, obj10);
+      obj7.children = closure_16(tmp2(18065), obj9);
+      tmp13 = closure_16(View, obj7);
+      const tmp2Result4 = tmp2(18065);
     }
   }
   return tmp13;
 }
 export function DockChannelTitle() {
-  const tmp = closure_18();
+  const tmp = closure_19();
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   items = [ChannelStore];
   const items1 = [channelId];
@@ -267,22 +268,26 @@ export function DockChannelTitle() {
     return channelName;
   }, items3);
   if (stateFromStores) {
-    let VoiceNormalIcon = tmp4(8105).VoiceLockIcon;
+    let VoiceNormalIcon = tmp4(7608).VoiceLockIcon;
   } else {
-    VoiceNormalIcon = tmp4(7442).VoiceNormalIcon;
+    VoiceNormalIcon = tmp4(6945).VoiceNormalIcon;
   }
   const obj2 = channelId(504);
-  const items4 = [closure_15(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }), closure_15(channelId(5923).Text, { variant: "body-md/medium", color: "text-default", lineClamp: 1, style: tmp.title, children: stateFromStores1 })];
+  const items4 = [closure_16(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }), closure_16(channelId(5414).Text, { variant: "body-md/medium", color: "text-default", lineClamp: 1, style: tmp.title, children: stateFromStores1 })];
   obj3.children = items4;
-  return closure_16(View, obj3);
+  return closure_17(View, obj3);
 }
 export function DockUserTitle(userId) {
   userId = userId.userId;
   _require = userId;
+  let flag = userId.ringing;
+  if (flag === undefined) {
+    flag = false;
+  }
   importDefault = undefined;
   let sharedValue;
   noop = undefined;
-  const tmp = closure_18();
+  const tmp = closure_19();
   const context = noop.useContext(require("VoicePanelStateContext"));
   const channelId = context.channelId;
   items = [UserStore];
@@ -290,14 +295,14 @@ export function DockUserTitle(userId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(c0), items1);
   const obj2 = require("initialize");
   let name = require("NicknameUtils").useName(context.guildId, channelId, stateFromStores);
-  const tmp7 = closure_12(channelId, userId);
+  const tmp7 = closure_13(channelId, userId);
   importDefault = tmp7;
   const obj3 = require("NicknameUtils");
   const items2 = [SoundboardStore];
   const items3 = [tmp7];
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
     let soundById;
-    if (null != closure_1) {
+    if (null != c1) {
       soundById = SoundboardStore.getSoundById(tmp);
     }
     return soundById;
@@ -318,64 +323,76 @@ export function DockUserTitle(userId) {
       tmp.current = false;
     } else {
       const result = sharedValue.set(0);
-      const result1 = sharedValue.set(timing_timing.withTiming(1, state));
+      const result1 = sharedValue.set(timing_timing.withTiming(1, gesture));
     }
   }, items4);
   const tmp5Result = require("module_1655");
-  const items5 = [closure_19, sharedValue];
+  const items5 = [AccessibilityStore];
+  const stateFromStores2 = require("initialize").useStateFromStores(items5, () => useReducedMotion.useReducedMotion);
+  const tmp5Result3 = require("initialize");
+  if (flag) {
+    flag = !stateFromStores2;
+  }
+  const tmp2Result = require("useRingingOpacity");
+  const obj5 = { initialOpacity: 1, pulseOpacity: require("useRingingOpacity").RINGING_LOW_OPACITY, startDelay: 0 };
+  const tmp2ResultResult = tmp2Result(flag, { initialOpacity: 1, pulseOpacity: require("useRingingOpacity").RINGING_LOW_OPACITY, startDelay: 0 });
+  const items6 = [closure_20, sharedValue, tmp2ResultResult];
   _require = undefined;
-  [tmp12, tmp13] = items5;
+  importDefault = undefined;
+  [tmp15, tmp16, tmp17] = items6;
   class VoicePanelDockStatusViewsTsx1 {
     constructor() {
-      obj = { opacity: closure_0.get() };
+      obj = { opacity: null };
+      value = closure_0.get();
+      obj.opacity = value * closure_1.get();
       return obj;
     }
   }
-  const items6 = [tmp13];
-  VoicePanelDockStatusViewsTsx1.__closure = items6;
-  VoicePanelDockStatusViewsTsx1.__workletHash = 9926830297549;
-  VoicePanelDockStatusViewsTsx1.__initData = tmp12;
-  let tmp15 = null != stateFromStores1;
+  const items7 = [tmp16, tmp17];
+  VoicePanelDockStatusViewsTsx1.__closure = items7;
+  VoicePanelDockStatusViewsTsx1.__workletHash = 6072831087442;
+  VoicePanelDockStatusViewsTsx1.__initData = tmp15;
+  let str = "text-default";
   const animatedStyle = require("module_1655").useAnimatedStyle(VoicePanelDockStatusViewsTsx1);
-  if (tmp15) {
-    tmp15 = null != stateFromStores1.emojiId || null != stateFromStores1.emojiName;
-    const tmp16 = null != stateFromStores1.emojiId || null != stateFromStores1.emojiName;
+  if (null == stateFromStores1) {
+    str = "text-default";
+    if (userId.dimmed) {
+      str = "text-subtle";
+    }
   }
-  const obj5 = { style: null, children: null };
-  const items7 = [tmp.titleRow, animatedStyle];
-  obj5.style = items7;
-  let tmp19Result = null;
+  let tmp19 = null != stateFromStores1;
+  if (tmp19) {
+    tmp19 = null != stateFromStores1.emojiId || null != stateFromStores1.emojiName;
+    const tmp20 = null != stateFromStores1.emojiId || null != stateFromStores1.emojiName;
+  }
+  const obj6 = { style: null, children: null };
+  const items8 = [tmp.titleRow, animatedStyle];
+  obj6.style = items8;
+  let tmp23Result = null;
   if (null != stateFromStores1) {
-    tmp19Result = null;
-    if (tmp15) {
-      const obj6 = { fastImageStyle: null, textEmojiStyle: null, src: null, name: null };
-      ({ soundboardEmoji: obj8.fastImageStyle, soundboardEmojiText: obj8.textEmojiStyle } = tmp);
-      obj6.src = tmp2(tmp3[30])(stateFromStores1, 16);
-      let str = stateFromStores1.emojiName;
-      if (str == null) {
-        str = "";
+    tmp23Result = null;
+    if (tmp19) {
+      const obj7 = { fastImageStyle: null, textEmojiStyle: null, src: null, name: null };
+      ({ soundboardEmoji: obj10.fastImageStyle, soundboardEmojiText: obj10.textEmojiStyle } = tmp);
+      obj7.src = tmp2(tmp3[32])(stateFromStores1, 16);
+      let str2 = stateFromStores1.emojiName;
+      if (str2 == null) {
+        str2 = "";
       }
-      obj6.name = str;
-      tmp19Result = closure_15(tmp2(tmp3[29]), obj6);
-      const tmp2Result = tmp2(tmp3[29]);
+      obj7.name = str2;
+      tmp23Result = closure_16(tmp2(tmp3[31]), obj7);
+      const tmp2Result2 = tmp2(tmp3[31]);
     }
   }
-  const items8 = [tmp19Result, ];
-  let str2 = "text-default";
-  if (userId.dimmed) {
-    str2 = "text-default";
-    if (null == stateFromStores1) {
-      str2 = "text-subtle";
-    }
-  }
-  const obj7 = { variant: "body-md/medium", color: str2, lineClamp: 1, style: tmp.title, children: null };
+  const items9 = [tmp23Result, ];
+  const obj8 = { variant: "body-md/medium", color: str, lineClamp: 1, style: tmp.title, children: null };
   if (null != stateFromStores1) {
     name = stateFromStores1.name;
   }
-  obj7.children = name;
-  items8[1] = closure_15(require("Text/Text").Text, obj7);
-  obj5.children = items8;
-  return closure_16(require("module_1655").View, obj5);
+  obj8.children = name;
+  items9[1] = closure_16(require("Text/Text").Text, obj8);
+  obj6.children = items9;
+  return closure_17(require("module_1655").View, obj6);
 }
 export function DockFace(userId) {
   userId = userId.userId;
@@ -385,7 +402,7 @@ export function DockFace(userId) {
   let entered = userId.entered;
   let stateFromStores;
   let sharedValue;
-  const tmp = closure_18();
+  const tmp = closure_19();
   const context = stateFromStores.useContext(VoicePanelStateContextDefault);
   const guildId = context.guildId;
   dependencyMap = guildId;
@@ -396,7 +413,7 @@ export function DockFace(userId) {
   const items2 = [SpeakingStore];
   const items3 = [userId];
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => SpeakingStore.isSpeaking(c0), items3);
-  const tmp8 = null != closure_12(context.channelId, userId);
+  const tmp8 = null != closure_13(context.channelId, userId);
   if (tmp8) {
     const REDESIGN_INPUT_CONTROL_SELECTED = tmp2(575).colors.REDESIGN_INPUT_CONTROL_SELECTED;
   }
@@ -424,10 +441,10 @@ export function DockFace(userId) {
     if (c1) {
       num = 1;
     }
-    const result = sharedValue.set(timing_timing.withTiming(num, state));
+    const result = sharedValue.set(timing_timing.withTiming(num, gesture));
   }, items5);
   const tmp5Result = require("module_1655");
-  const items6 = [closure_24, require("module_1655").interpolate, sharedValue, 0.5];
+  const items6 = [closure_25, require("module_1655").interpolate, sharedValue, 0.5];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -452,22 +469,22 @@ export function DockFace(userId) {
   let tmp19 = entered;
   if (entered) {
     const obj5 = { userId, isSpeaking: tmp9, color: REDESIGN_INPUT_CONTROL_SELECTED };
-    tmp19 = closure_15(closure_23, obj5);
+    tmp19 = closure_16(closure_24, obj5);
   }
   const items9 = [tmp19, , ];
   if (entered) {
     const obj6 = { speaking: tmp9, color: REDESIGN_INPUT_CONTROL_SELECTED };
-    entered = closure_15(closure_21, obj6);
+    entered = closure_16(closure_22, obj6);
   }
   items9[1] = entered;
   let tmp24 = null;
   if (null != memo) {
     const obj7 = { style: tmp.avatar, children: null };
     const obj8 = { style: tmp.avatarImage, source: memo };
-    obj7.children = closure_15(tmp2(6014), obj8);
-    tmp24 = closure_15(View, obj7);
+    obj7.children = closure_16(tmp2(5510), obj8);
+    tmp24 = closure_16(View, obj7);
   }
   items9[2] = tmp24;
   obj4.children = items9;
-  return closure_16(_modDef1655.View, obj4);
+  return closure_17(_modDef1655.View, obj4);
 }

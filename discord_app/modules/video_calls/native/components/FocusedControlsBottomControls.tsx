@@ -1,6 +1,6 @@
-// === Module 11545: FocusedControlsBottomControls ===
+// === Module 10827: FocusedControlsBottomControls ===
 
-// Module 11545 (FocusedControlsBottomControls)
+// Module 10827 (FocusedControlsBottomControls)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
@@ -9,14 +9,14 @@ import native from "native" /* 1187 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5542 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5895 */;
-import useBottomVoiceControlsSheetWidthDefault from "useBottomVoiceControlsSheetWidth" /* 11337 */;
-import useCanShowTooltip from "useCanShowTooltip" /* 11546 */;
-import CallPTTButton from "CallPTTButton" /* 11549 */;
+import timing_timing from "timing/timing" /* 5033 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5386 */;
+import useBottomVoiceControlsSheetWidthDefault from "useBottomVoiceControlsSheetWidth" /* 10619 */;
+import useCanShowTooltip from "useCanShowTooltip" /* 10828 */;
+import CallPTTButton from "CallPTTButton" /* 10831 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6811 */;
+import TextStyles from "TextStyles" /* 6315 */;
 
 const _modDef1655 = _mod1655;
 const CallPTTButtonDefault = CallPTTButton;
@@ -740,9 +740,9 @@ class FocusedControlsBottomDrawer {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, TouchableWithoutFeedback: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const ChannelCallStore = fn(11314);
+const ChannelCallStore = fn(10596);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(11315);
+const ChannelCallConstants = fn(10597);
 ({ BOX_MODE_THRESHOLD_WIDTH: closure_10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1072);
 ({ ComponentActions: closure_12, Fonts } = Constants);
@@ -754,7 +754,7 @@ function EXTENDED_CONTROLS_OFFSET_Y(arg0) {
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {
 
 }
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { bottomDrawerContainer: null, visualEffectView: null, visualEffectViewBackground: null, expandedControlsContainer: null, aboveActionBarContainer: null, aboveActionBarChildrenContainer: null, ptbButton: null, tooltipStyle: null, containerStyle: null, labelStyle: null };
 const rect = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
 obj2.bottomDrawerContainer = rect;

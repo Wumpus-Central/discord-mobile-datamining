@@ -1,19 +1,19 @@
-// === Module 11705: GameConsoleDeviceListActionSheet ===
+// === Module 10987: GameConsoleDeviceListActionSheet ===
 
-// Module 11705 (GameConsoleDeviceListActionSheet)
+// Module 10987 (GameConsoleDeviceListActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5923 */;
-import components_Button_Button from "components/Button/Button" /* 5930 */;
-import FastImageDefault from "FastImage" /* 6014 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7425 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11696 */;
-import _modDef11706 from "module_11706" /* 11706 */;
-import _modDef11707 from "module_11707" /* 11707 */;
+import Text_Text from "Text/Text" /* 5414 */;
+import components_Button_Button from "components/Button/Button" /* 5421 */;
+import FastImageDefault from "FastImage" /* 5510 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6928 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10978 */;
+import _modDef10988 from "module_10988" /* 10988 */;
+import _modDef10989 from "module_10989" /* 10989 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 6069 */;
+import GameConsoleStore from "GameConsoleStore" /* 5565 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ function TransferFooter(arg0) {
 function DeviceOption(children) {
   const tmp = closure_14();
   const obj = { style: tmp.deviceOption, children: null };
-  const obj2 = { style: tmp.deviceIcon, source: _modDef11706 };
+  const obj2 = { style: tmp.deviceIcon, source: _modDef10988 };
   items = [closure_1_11(FastImageDefault, obj2), closure_1_11(Text_Text.Text, { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "body-md/semibold", children: children.name })];
   obj.children = items;
   return application_id(metroImportDefault, obj);
@@ -43,7 +43,7 @@ function DeviceOption(children) {
 function EmptyState() {
   const tmp = closure_14();
   const obj = { style: tmp.emptyContainer, children: null };
-  const obj2 = { source: _modDef11707, style: tmp.emptyArt };
+  const obj2 = { source: _modDef10989, style: tmp.emptyArt };
   items = [closure_1_11(FastImageDefault, obj2), , ];
   const obj3 = { style: tmp.emptyHeader, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -61,7 +61,7 @@ get_ActivityIndicator = fn(17);
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { padding: 16, justifyContent: "center", paddingBottom: 90 }, loading: { minHeight: 56 }, footerContainer: { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 }, radioItem: null, deviceIcon: null, deviceOption: null, deviceText: null, emptyContainer: null, emptyArt: null, emptyHeader: null, emptyBody: null, infoBox: null };
 let obj3 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 };
 obj2.radioItem = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xs, padding: 16 };
@@ -113,7 +113,7 @@ export default function GameConsoleListActionSheet(arg0) {
             timestampProducer(true);
             v1 = 1;
             dependencyMap = 1;
-            const obj4 = { value: tmp4(11698).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
+            const obj4 = { value: tmp4(10980).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -124,7 +124,7 @@ export default function GameConsoleListActionSheet(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          v1(5546).hideActionSheet();
+          v1(5037).hideActionSheet();
           const ComponentDispatch = tmp4(1108).ComponentDispatch;
           ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
           dependencyMap = 3;

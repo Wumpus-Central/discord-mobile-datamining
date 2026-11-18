@@ -1,28 +1,28 @@
-// === Module 13375: CheckpointMessagesStatsScreen ===
+// === Module 12678: CheckpointMessagesStatsScreen ===
 
-// Module 13375 (CheckpointMessagesStatsScreen)
+// Module 12678 (CheckpointMessagesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3287 from "module_3287" /* 3287 */;
-import _modDef3319 from "module_3319" /* 3319 */;
-import CheckpointConstants from "CheckpointConstants" /* 6375 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6745 */;
-import ChatIcon from "ChatIcon" /* 8080 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13136 */;
-import CheckpointTextDefault from "CheckpointText" /* 13137 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 13139 */;
-import useIsCheckpointWide from "useIsCheckpointWide" /* 13350 */;
-import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 13371 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13372 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 13373 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13374 */;
-import _modDef13376 from "module_13376" /* 13376 */;
-import _modDef13377 from "module_13377" /* 13377 */;
-import CheckpointStore from "CheckpointStore" /* 13119 */;
+import _modDef3307 from "module_3307" /* 3307 */;
+import _modDef3339 from "module_3339" /* 3339 */;
+import CheckpointConstants from "CheckpointConstants" /* 5877 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6247 */;
+import ChatIcon from "ChatIcon" /* 7583 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12434 */;
+import CheckpointTextDefault from "CheckpointText" /* 12435 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12437 */;
+import useIsCheckpointWide from "useIsCheckpointWide" /* 12654 */;
+import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12674 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12675 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12676 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12677 */;
+import _modDef12679 from "module_12679" /* 12679 */;
+import _modDef12680 from "module_12680" /* 12680 */;
+import CheckpointStore from "CheckpointStore" /* 12417 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5310 */;
+import createStyles from "createStyles" /* 4823 */;
 import size from "module_2" /* 2 */;
 
 const useIsCheckpointWideDefault = useIsCheckpointWide;
@@ -88,9 +88,9 @@ export default function CheckpointMessagesStatsScreen() {
   const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
   if (rounded <= 0 && null != stateFromStores1) {
-    let wWKySP = _modDef3319["2BuyVC"];
+    let wWKySP = _modDef3339["2BuyVC"];
   } else {
-    wWKySP = _modDef3287.wWKySP;
+    wWKySP = _modDef3307.wWKySP;
   }
   const tmp5Result = CheckpointStatsUtils;
   let formatToPlainStringResult;
@@ -98,7 +98,7 @@ export default function CheckpointMessagesStatsScreen() {
     if (null != checkpointTopPercent) {
       const intl2 = util.intl;
       const obj3 = { percent: checkpointTopPercent };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3319.wHn2YM, obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3339.wHn2YM, obj3);
     }
   }
   const obj4 = { centered: tmp4, children: null };
@@ -107,8 +107,8 @@ export default function CheckpointMessagesStatsScreen() {
   const stringResult = intl.string(wWKySP);
   const obj7 = { animatedUri: null, staticUri: null, style: null };
   const tmp2Result = CheckpointScreenDefault;
-  obj7.animatedUri = _modDef13376;
-  obj7.staticUri = _modDef13377;
+  obj7.animatedUri = _modDef12679;
+  obj7.staticUri = _modDef12680;
   const items2 = [tmp.image, ];
   let wideImage = tmp4;
   if (tmp4) {
@@ -147,7 +147,7 @@ export default function CheckpointMessagesStatsScreen() {
     const tmp5Result6 = CheckpointStatsUtils;
     const tmp5Result7 = CheckpointStatsUtils;
     obj16.numCopies = tmp5Result7.formatCheckpointCompactNumber(CheckpointStatsUtils.getCheckpointOdysseyCopies(stateFromStores1));
-    let formatToPlainStringResult1 = intl5.formatToPlainString(_modDef3319.bAxEs2, obj16);
+    let formatToPlainStringResult1 = intl5.formatToPlainString(_modDef3339.bAxEs2, obj16);
     const tmp5Result8 = CheckpointStatsUtils;
   } else if (null != checkpointTopPercent) {
     const intl4 = util.intl;
@@ -157,11 +157,11 @@ export default function CheckpointMessagesStatsScreen() {
           return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    formatToPlainStringResult1 = intl4.format(_modDef3319.TOMBAW, obj17);
+    formatToPlainStringResult1 = intl4.format(_modDef3339.TOMBAW, obj17);
   } else {
     const intl3 = util.intl;
     const obj18 = { numMessages: rounded };
-    formatToPlainStringResult1 = intl3.format(_modDef3319.cYCqz8, obj18);
+    formatToPlainStringResult1 = intl3.format(_modDef3339.cYCqz8, obj18);
   }
   obj15.children = formatToPlainStringResult1;
   items5[2] = timestampProducer(CheckpointTextDefault, obj15);

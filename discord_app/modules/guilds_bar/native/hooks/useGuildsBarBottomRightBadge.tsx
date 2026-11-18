@@ -1,16 +1,16 @@
-// === Module 19118: useGuildsBarBottomRightBadge ===
+// === Module 17929: useGuildsBarBottomRightBadge ===
 
-// Module 19118 (useGuildsBarBottomRightBadge)
+// Module 17929 (useGuildsBarBottomRightBadge)
 import native from "native" /* 1187 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 19119 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 19120 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 19124 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17930 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 17931 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 17935 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_6 = createStyles.createStyles({ bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBottomRightBadge.tsx");

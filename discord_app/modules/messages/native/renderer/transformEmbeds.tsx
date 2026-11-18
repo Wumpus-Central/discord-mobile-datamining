@@ -1,23 +1,24 @@
-// === Module 9394: transformEmbeds ===
+// === Module 8805: transformEmbeds ===
 
-// Module 9394 (transformEmbeds)
+// Module 8805 (transformEmbeds)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import DateUtils from "DateUtils" /* 5132 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6359 */;
-import EmbedUtils from "EmbedUtils" /* 6788 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6815 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8645 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8651 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8666 */;
-import MarkupParsers from "MarkupParsers" /* 9353 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 9395 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 9396 */;
-import utils from "utils" /* 9397 */;
-import NativeChatCapabilities from "NativeChatCapabilities" /* 9398 */;
+import DateUtils from "DateUtils" /* 4645 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5861 */;
+import EmbedUtils from "EmbedUtils" /* 6291 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6319 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8136 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8142 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8157 */;
+import MarkupParsers from "MarkupParsers" /* 8764 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8806 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8807 */;
+import utils from "utils" /* 8808 */;
+import isConjureProjectLinkEmbedDefault from "isConjureProjectLinkEmbed" /* 8809 */;
+import NativeChatCapabilities from "NativeChatCapabilities" /* 8811 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
@@ -70,339 +71,344 @@ export default function transformEmbeds(arg0) {
                   if (tmp3Result16.isUserProfileArticleEmbed(type)) {
                     return [];
                   } else {
-                    let tmp8 = null;
-                    if (closure_1_4) {
-                      tmp8 = null;
-                      if (null != type.thumbnail) {
-                        const thumbnail = type.thumbnail;
-                        ({ proxyURL, width, height } = thumbnail);
-                        let obj2 = {};
-                        let merged = Object.assign(thumbnail);
-                        obj2.width = sanitizeMediaDimension.sanitizeMediaDimension(width);
-                        const tmp3Result17 = sanitizeMediaDimension;
-                        obj2.height = sanitizeMediaDimension.sanitizeMediaDimension(height);
-                        let imageSrc = proxyURL;
-                        if (null != proxyURL) {
-                          const obj7 = RowGeneratorUtilsDefault;
-                          imageSrc = obj7.getImageSrc(proxyURL, width, height, !closure_1_1);
+                    let obj4 = importDefault;
+                    if (isConjureProjectLinkEmbedDefault(type)) {
+                      return [];
+                    } else {
+                      let tmp8 = null;
+                      if (closure_1_4) {
+                        tmp8 = null;
+                        if (null != type.thumbnail) {
+                          const thumbnail = type.thumbnail;
+                          ({ proxyURL, width, height } = thumbnail);
+                          let obj2 = {};
+                          let merged = Object.assign(thumbnail);
+                          obj2.width = sanitizeMediaDimension.sanitizeMediaDimension(width);
+                          const tmp3Result17 = sanitizeMediaDimension;
+                          obj2.height = sanitizeMediaDimension.sanitizeMediaDimension(height);
+                          let imageSrc = proxyURL;
+                          if (null != proxyURL) {
+                            const obj4Result = obj4(8807);
+                            imageSrc = obj4Result.getImageSrc(proxyURL, width, height, !closure_1_1);
+                          }
+                          obj2.proxyURL = imageSrc;
+                          const obj4Result3 = obj4(8807);
+                          if (proxyURL == null) {
+                            proxyURL = thumbnail.url;
+                          }
+                          obj2.url = obj4Result3.getImageSrc(proxyURL, width, height, !closure_1_1);
+                          tmp8 = obj2;
+                          const tmp3Result18 = sanitizeMediaDimension;
                         }
-                        obj2.proxyURL = imageSrc;
-                        const obj8 = RowGeneratorUtilsDefault;
-                        if (proxyURL == null) {
-                          proxyURL = thumbnail.url;
+                      }
+                      let tmp23 = null;
+                      if (closure_1_4) {
+                        tmp23 = null;
+                        if (null != type.image) {
+                          tmp23 = renderEmbedMedia(type.image);
                         }
-                        obj2.url = obj8.getImageSrc(proxyURL, width, height, !closure_1_1);
-                        tmp8 = obj2;
-                        const tmp3Result18 = sanitizeMediaDimension;
                       }
-                    }
-                    let tmp25 = null;
-                    if (closure_1_4) {
-                      tmp25 = null;
-                      if (null != type.image) {
-                        tmp25 = renderEmbedMedia(type.image);
-                      }
-                    }
-                    if (closure_1_4) {
-                      if (null != type.images) {
-                        const images = type.images;
-                        let mapped = images.map(renderEmbedMedia);
-                      }
-                      let tmp31 = tmp8;
-                      if (null != tmp8) {
-                        tmp31 = tmp8;
-                        if (null != type.video) {
-                          let isWebviewVideoResult = type.type === MessageEmbedTypes.VIDEO || type.type === MessageEmbedTypes.RICH || type.type === MessageEmbedTypes.ARTICLE;
-                          if (type.type !== MessageEmbedTypes.GIFV) {
-                            if (isWebviewVideoResult) {
-                              let tmp43 = tmp34;
-                              if (!tmp42) {
-                                let obj3 = {};
-                                const merged1 = Object.assign(tmp34);
-                                ({ proxyURL: proxyURL3, url: url2 } = type.video);
-                                let tmp47 = url2;
-                                if (null != proxyURL3) {
-                                  tmp47 = url2;
-                                  if ("" !== proxyURL3) {
-                                    tmp47 = proxyURL3;
+                      if (closure_1_4) {
+                        if (null != type.images) {
+                          const images = type.images;
+                          let mapped = images.map(renderEmbedMedia);
+                        }
+                        let tmp29 = tmp8;
+                        if (null != tmp8) {
+                          tmp29 = tmp8;
+                          if (null != type.video) {
+                            let isWebviewVideoResult = type.type === MessageEmbedTypes.VIDEO || type.type === MessageEmbedTypes.RICH || type.type === MessageEmbedTypes.ARTICLE;
+                            if (type.type !== MessageEmbedTypes.GIFV) {
+                              if (isWebviewVideoResult) {
+                                let tmp41 = tmp32;
+                                if (!tmp40) {
+                                  let obj3 = {};
+                                  const merged1 = Object.assign(tmp32);
+                                  ({ proxyURL: proxyURL3, url: url2 } = type.video);
+                                  let tmp45 = url2;
+                                  if (null != proxyURL3) {
+                                    tmp45 = url2;
+                                    if ("" !== proxyURL3) {
+                                      tmp45 = proxyURL3;
+                                    }
+                                  }
+                                  obj3.gifvUrlForPortal = tmp45;
+                                  tmp41 = obj3;
+                                }
+                                ({ proxyURL: proxyURL4, url: url3 } = type.video);
+                                let tmp46 = url3;
+                                if (null != proxyURL4) {
+                                  tmp46 = url3;
+                                  if ("" !== proxyURL4) {
+                                    tmp46 = proxyURL4;
                                   }
                                 }
-                                obj3.gifvUrlForPortal = tmp47;
-                                tmp43 = obj3;
+                                tmp29 = tmp41;
+                                if (tmp3Result19.isWebPlayerVideoUrl(tmp46)) {
+                                  const obj5 = {};
+                                  const merged2 = Object.assign(tmp41);
+                                  obj5.inlinePlaybackDisabled = true;
+                                  tmp29 = obj5;
+                                }
+                                tmp3Result19 = MediaFormatTesters;
+                                tmp40 = type.type !== MessageEmbedTypes.GIFV || closure_1_1;
                               }
-                              ({ proxyURL: proxyURL4, url: url3 } = type.video);
-                              let tmp48 = url3;
-                              if (null != proxyURL4) {
-                                tmp48 = url3;
-                                if ("" !== proxyURL4) {
-                                  tmp48 = proxyURL4;
+                              if (isWebviewVideoResult) {
+                                isWebviewVideoResult = renderer_EmbedUtils.isWebviewVideo(type);
+                                const tmp3Result20 = renderer_EmbedUtils;
+                              }
+                              tmp32 = tmp8;
+                              if (isWebviewVideoResult) {
+                                const obj6 = {};
+                                const merged3 = Object.assign(tmp8);
+                                obj6.showPlayButton = true;
+                                tmp32 = obj6;
+                              }
+                            }
+                            const obj7 = {};
+                            const merged4 = Object.assign(tmp8);
+                            obj7.gifv = type.type === MessageEmbedTypes.GIFV;
+                            ({ proxyURL: proxyURL2, url } = type.video);
+                            let tmp39 = url;
+                            if (null != proxyURL2) {
+                              tmp39 = url;
+                              if ("" !== proxyURL2) {
+                                tmp39 = proxyURL2;
+                              }
+                            }
+                            obj7.videoUrl = tmp39;
+                            tmp32 = obj7;
+                          }
+                        }
+                        let tmp51 = tmp29;
+                        if (tmp50) {
+                          const obj8 = {};
+                          const merged5 = Object.assign(tmp29);
+                          const intl = util.intl;
+                          obj8.role = intl.string(util.t.OBp3V3);
+                          const intl2 = util.intl;
+                          obj8.hint = intl2.string(util.t.IPzNKE);
+                          tmp51 = obj8;
+                        }
+                        embedBorderLeftColor = embedBorderLeftColor.embedBorderLeftColor;
+                        if (null != type.color) {
+                          embedBorderLeftColor = processColor(utils_ColorUtils.int2hsl(type.color));
+                          const tmp3Result21 = utils_ColorUtils;
+                        }
+                        if (null != type.url) {
+                          if ("" !== type.url) {
+                            let parseEmbedTitleMarkup = MarkupParsers.parseEmbedTitleMarkupWithoutLinks;
+                          }
+                          if (type.type === MessageEmbedTypes.RICH) {
+                            if (null != type.rawTitle) {
+                              let rawTitle = parseEmbedTitleMarkup(type.rawTitle, channelId);
+                            }
+                            type = type.type;
+                            if (MessageEmbedTypes.IMAGE !== type) {
+                              if (MessageEmbedTypes.VIDEO !== type) {
+                                if (MessageEmbedTypes.GIFV !== type) {
+                                  if (MessageEmbedTypes.RICH === type) {
+                                    if (null != type.rawDescription) {
+                                      const obj9 = { description: type.rawDescription, channelId, isField: false, ignoreCache, showListsAndHeaders, showMaskedLinks };
+                                      let rawDescription = MarkupParsers.parseEmbedDescriptionMarkup(obj9);
+                                      const tmp3Result22 = MarkupParsers;
+                                    }
+                                  } else {
+                                    rawDescription = type.rawDescription;
+                                  }
                                 }
                               }
-                              tmp31 = tmp43;
-                              if (tmp3Result19.isWebPlayerVideoUrl(tmp48)) {
-                                let obj4 = {};
-                                const merged2 = Object.assign(tmp43);
-                                obj4.inlinePlaybackDisabled = true;
-                                tmp31 = obj4;
+                            }
+                            let fields = type.fields;
+                            if (fields == null) {
+                              fields = [];
+                            }
+                            const mapped1 = fields.map((rawName) => {
+                              let result = null;
+                              if (null != rawName.rawName) {
+                                result = channelId(8764).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                                const obj = channelId(8764);
                               }
-                              tmp3Result19 = MediaFormatTesters;
-                              tmp42 = type.type !== MessageEmbedTypes.GIFV || closure_1_1;
+                              let result1 = null;
+                              if (null != rawName.rawValue) {
+                                const obj3 = { description: rawName.rawValue, channelId, isField: true, ignoreCache, replaceMap: { "\t": "" }, showListsAndHeaders, showMaskedLinks };
+                                result1 = channelId(8764).parseEmbedDescriptionMarkup(obj3);
+                                const obj2 = channelId(8764);
+                              }
+                              const obj4 = {};
+                              const merged = Object.assign(rawName);
+                              obj4.name = result;
+                              obj4.value = result1;
+                              return obj4;
+                            });
+                            let calendarFormatResult = null;
+                            if (null != type.timestamp) {
+                              calendarFormatResult = DateUtils.calendarFormat(type.timestamp);
+                              const tmp3Result23 = DateUtils;
                             }
-                            if (isWebviewVideoResult) {
-                              isWebviewVideoResult = renderer_EmbedUtils.isWebviewVideo(type);
-                              const tmp3Result20 = renderer_EmbedUtils;
+                            if (null != type.footer) {
+                              const text = type.footer.text;
+                              let combined = text;
+                              if (null != calendarFormatResult) {
+                                const _HermesInternal = HermesInternal;
+                                combined = "" + text + " | " + calendarFormatResult;
+                              }
+                              const obj10 = {};
+                              const merged6 = Object.assign(type.footer);
+                              obj10.content = combined;
+                              if (null != type.footer.iconProxyURL) {
+                                if ("" !== type.footer.iconProxyURL) {
+                                  let iconURL = type.footer.iconProxyURL;
+                                }
+                                let tmp64 = obj10;
+                                if (null != iconURL) {
+                                  const obj4Result4 = obj4(8807);
+                                  obj10.iconURL = obj4Result4.getImageSrc(iconURL, 16, 16, !closure_1_1);
+                                  tmp64 = obj10;
+                                }
+                              }
+                              iconURL = type.footer.iconURL;
+                            } else if (null != calendarFormatResult) {
+                              const obj11 = { content: calendarFormatResult, text: "" };
+                              tmp64 = obj11;
                             }
-                            tmp34 = tmp8;
-                            if (isWebviewVideoResult) {
-                              const obj5 = {};
-                              const merged3 = Object.assign(tmp8);
-                              obj5.showPlayButton = true;
-                              tmp34 = obj5;
-                            }
-                          }
-                          const obj6 = {};
-                          const merged4 = Object.assign(tmp8);
-                          obj6.gifv = type.type === MessageEmbedTypes.GIFV;
-                          ({ proxyURL: proxyURL2, url } = type.video);
-                          let tmp41 = url;
-                          if (null != proxyURL2) {
-                            tmp41 = url;
-                            if ("" !== proxyURL2) {
-                              tmp41 = proxyURL2;
-                            }
-                          }
-                          obj6.videoUrl = tmp41;
-                          tmp34 = obj6;
-                        }
-                      }
-                      let tmp53 = tmp31;
-                      if (tmp52) {
-                        const obj9 = {};
-                        const merged5 = Object.assign(tmp31);
-                        const intl = util.intl;
-                        obj9.role = intl.string(util.t.OBp3V3);
-                        const intl2 = util.intl;
-                        obj9.hint = intl2.string(util.t.IPzNKE);
-                        tmp53 = obj9;
-                      }
-                      embedBorderLeftColor = embedBorderLeftColor.embedBorderLeftColor;
-                      if (null != type.color) {
-                        embedBorderLeftColor = processColor(utils_ColorUtils.int2hsl(type.color));
-                        const tmp3Result21 = utils_ColorUtils;
-                      }
-                      if (null != type.url) {
-                        if ("" !== type.url) {
-                          let parseEmbedTitleMarkup = MarkupParsers.parseEmbedTitleMarkupWithoutLinks;
-                        }
-                        if (type.type === MessageEmbedTypes.RICH) {
-                          if (null != type.rawTitle) {
-                            let rawTitle = parseEmbedTitleMarkup(type.rawTitle, channelId);
-                          }
-                          type = type.type;
-                          if (MessageEmbedTypes.IMAGE !== type) {
-                            if (MessageEmbedTypes.VIDEO !== type) {
-                              if (MessageEmbedTypes.GIFV !== type) {
-                                if (MessageEmbedTypes.RICH === type) {
-                                  if (null != type.rawDescription) {
-                                    const obj10 = { description: type.rawDescription, channelId, isField: false, ignoreCache, showListsAndHeaders, showMaskedLinks };
-                                    let rawDescription = MarkupParsers.parseEmbedDescriptionMarkup(obj10);
-                                    const tmp3Result22 = MarkupParsers;
-                                  }
+                            if (null == type.author) {
+                              if (type.type !== MessageEmbedTypes.COMPONENTS) {
+                                const obj12 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: type };
+                                let isMediaScanPendingResult = !closure_1_10;
+                                const mediaObscuredReasonFromBitmask = ObscuredMediaUtils.getMediaObscuredReasonFromBitmask(obj12, closure_1_9);
+                                if (!closure_1_10) {
+                                  const obj13 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: type };
+                                  isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj13, closure_1_9);
+                                  const tmp3Result25 = ObscuredMediaUtils;
+                                }
+                                let isVerifiedTeenResult = tmp86;
+                                if (mediaObscuredReasonFromBitmask.length > 0) {
+                                  isVerifiedTeenResult = AgeVerificationUtils.isVerifiedTeen();
+                                  const tmp3Result26 = AgeVerificationUtils;
+                                }
+                                let tmp88 = type.type === MessageEmbedTypes.AUDIO;
+                                if (tmp88) {
+                                  tmp88 = !NativeChatCapabilities.nativeChatSupportsAudioEmbeds();
+                                  const tmp3Result27 = NativeChatCapabilities;
+                                }
+                                let str9 = type.id;
+                                if (str9 == null) {
+                                  str9 = "";
+                                }
+                                const obj14 = { id: str9, type: null, spoiler: null, obscure: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null, provider: null, author: null, rawTitle: null, title: null, url: null, rawDescription: null, description: null, thumbnail: null, image: null, images: null, fields: null, components: null, footer: null, video: null, audio: null, borderLeftColor: null, providerColor: null, headerTextColor: null, bodyTextColor: null, referenceId: null, backgroundColor: null };
+                                if (tmp88) {
+                                  const RICH = MessageEmbedTypes.RICH;
+                                }
+                                obj14.type = RICH;
+                                let str10 = "";
+                                let str11 = "";
+                                if (dependencyMap) {
+                                  const intl3 = util.intl;
+                                  str11 = intl3.string(util.t["F+x38C"]).toUpperCase();
+                                  const str12 = intl3.string(util.t["F+x38C"]);
+                                }
+                                obj14.spoiler = str11;
+                                let stringResult = str10;
+                                if (mediaObscuredReasonFromBitmask.length > 0) {
+                                  const intl4 = util.intl;
+                                  stringResult = intl4.string(util.t.SpxcUR);
+                                }
+                                obj14.obscure = stringResult;
+                                if (isMediaScanPendingResult) {
+                                  const intl5 = util.intl;
+                                  str10 = intl5.string(util.t.MRdR7z);
+                                }
+                                obj14.obscureAwaitingScan = str10;
+                                let tmp91 = tmp86;
+                                if (mediaObscuredReasonFromBitmask.length > 0) {
+                                  tmp91 = closure_1_12;
+                                }
+                                obj14.verifyAge = tmp91;
+                                obj14.obscureHideControls = isVerifiedTeenResult;
+                                obj14.obscureIsOpaque = mediaObscuredReasonFromBitmask.length > 0;
+                                const provider = type.provider;
+                                obj14.provider = provider;
+                                obj14.author = undefined;
+                                obj14.rawTitle = type.rawTitle;
+                                obj14.title = rawTitle;
+                                const url4 = type.url;
+                                obj14.url = url4;
+                                obj14.rawDescription = type.rawDescription;
+                                obj14.description = rawDescription;
+                                obj14.thumbnail = tmp51;
+                                obj14.image = tmp23;
+                                obj14.images = mapped;
+                                obj14.fields = mapped1;
+                                obj14.components = tmp78;
+                                obj14.footer = tmp64;
+                                const video = type.video;
+                                obj14.video = video;
+                                let audio;
+                                if (!tmp88) {
+                                  audio = type.audio;
+                                }
+                                obj14.audio = audio;
+                                obj14.borderLeftColor = embedBorderLeftColor;
+                                ({ embedProviderColor: obj32.providerColor, embedHeaderTextColor: obj32.headerTextColor, embedBodyTextColor: obj32.bodyTextColor } = tmp55);
+                                const referenceId = type.referenceId;
+                                obj14.referenceId = referenceId;
+                                obj14.backgroundColor = backgroundColor;
+                                return obj14;
+                              } else {
+                                const components = type.components;
+                                if (dependencyMap) {
+                                  let mapped2 = components.map((item) => {
+                                    const obj = {};
+                                    const merged = Object.assign(item);
+                                    obj.spoiler = true;
+                                    return obj;
+                                  });
                                 } else {
-                                  rawDescription = type.rawDescription;
+                                  mapped2 = components;
+                                }
+                                closure_1_13(mapped2);
+                              }
+                            } else {
+                              if (null != type.author.iconProxyURL) {
+                                if ("" !== type.author.iconProxyURL) {
+                                  let iconURL2 = type.author.iconProxyURL;
+                                }
+                                if (null != iconURL2) {
+                                  const obj15 = {};
+                                  const merged7 = Object.assign(type.author);
+                                  obj4 = obj4(8807);
+                                  obj15.iconURL = obj4.getImageSrc(iconURL2, 16, 16, !closure_1_1);
+                                  let author = obj15;
+                                } else {
+                                  author = type.author;
                                 }
                               }
+                              iconURL2 = type.author.iconURL;
                             }
                           }
-                          let fields = type.fields;
-                          if (fields == null) {
-                            fields = [];
-                          }
-                          const mapped1 = fields.map((rawName) => {
-                            let result = null;
-                            if (null != rawName.rawName) {
-                              result = channelId(9353).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                              const obj = channelId(9353);
-                            }
-                            let result1 = null;
-                            if (null != rawName.rawValue) {
-                              const obj3 = { description: rawName.rawValue, channelId, isField: true, ignoreCache, replaceMap: { "\t": "" }, showListsAndHeaders, showMaskedLinks };
-                              result1 = channelId(9353).parseEmbedDescriptionMarkup(obj3);
-                              const obj2 = channelId(9353);
-                            }
-                            const obj4 = {};
-                            const merged = Object.assign(rawName);
-                            obj4.name = result;
-                            obj4.value = result1;
-                            return obj4;
-                          });
-                          let calendarFormatResult = null;
-                          if (null != type.timestamp) {
-                            calendarFormatResult = DateUtils.calendarFormat(type.timestamp);
-                            const tmp3Result23 = DateUtils;
-                          }
-                          if (null != type.footer) {
-                            const text = type.footer.text;
-                            let combined = text;
-                            if (null != calendarFormatResult) {
-                              const _HermesInternal = HermesInternal;
-                              combined = "" + text + " | " + calendarFormatResult;
-                            }
-                            const obj11 = {};
-                            const merged6 = Object.assign(type.footer);
-                            obj11.content = combined;
-                            if (null != type.footer.iconProxyURL) {
-                              if ("" !== type.footer.iconProxyURL) {
-                                let iconURL = type.footer.iconProxyURL;
-                              }
-                              let tmp66 = obj11;
-                              if (null != iconURL) {
-                                const obj23 = RowGeneratorUtilsDefault;
-                                obj11.iconURL = obj23.getImageSrc(iconURL, 16, 16, !closure_1_1);
-                                tmp66 = obj11;
-                              }
-                            }
-                            iconURL = type.footer.iconURL;
-                          } else if (null != calendarFormatResult) {
-                            const obj12 = { content: calendarFormatResult, text: "" };
-                            tmp66 = obj12;
-                          }
-                          if (null == type.author) {
-                            if (type.type !== MessageEmbedTypes.COMPONENTS) {
-                              const obj13 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: type };
-                              let isMediaScanPendingResult = !closure_1_10;
-                              const mediaObscuredReasonFromBitmask = ObscuredMediaUtils.getMediaObscuredReasonFromBitmask(obj13, closure_1_9);
-                              if (!closure_1_10) {
-                                const obj14 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: type };
-                                isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj14, closure_1_9);
-                                const tmp3Result25 = ObscuredMediaUtils;
-                              }
-                              let isVerifiedTeenResult = tmp90;
-                              if (mediaObscuredReasonFromBitmask.length > 0) {
-                                isVerifiedTeenResult = AgeVerificationUtils.isVerifiedTeen();
-                                const tmp3Result26 = AgeVerificationUtils;
-                              }
-                              let tmp92 = type.type === MessageEmbedTypes.AUDIO;
-                              if (tmp92) {
-                                tmp92 = !NativeChatCapabilities.nativeChatSupportsAudioEmbeds();
-                                const tmp3Result27 = NativeChatCapabilities;
-                              }
-                              let str9 = type.id;
-                              if (str9 == null) {
-                                str9 = "";
-                              }
-                              const obj15 = { id: str9, type: null, spoiler: null, obscure: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null, provider: null, author: null, rawTitle: null, title: null, url: null, rawDescription: null, description: null, thumbnail: null, image: null, images: null, fields: null, components: null, footer: null, video: null, audio: null, borderLeftColor: null, providerColor: null, headerTextColor: null, bodyTextColor: null, referenceId: null, backgroundColor: null };
-                              if (tmp92) {
-                                const RICH = MessageEmbedTypes.RICH;
-                              }
-                              obj15.type = RICH;
-                              let str10 = "";
-                              let str11 = "";
-                              if (dependencyMap) {
-                                const intl3 = util.intl;
-                                str11 = intl3.string(util.t["F+x38C"]).toUpperCase();
-                                const str12 = intl3.string(util.t["F+x38C"]);
-                              }
-                              obj15.spoiler = str11;
-                              let stringResult = str10;
-                              if (mediaObscuredReasonFromBitmask.length > 0) {
-                                const intl4 = util.intl;
-                                stringResult = intl4.string(util.t.SpxcUR);
-                              }
-                              obj15.obscure = stringResult;
-                              if (isMediaScanPendingResult) {
-                                const intl5 = util.intl;
-                                str10 = intl5.string(util.t.MRdR7z);
-                              }
-                              obj15.obscureAwaitingScan = str10;
-                              let tmp95 = tmp90;
-                              if (mediaObscuredReasonFromBitmask.length > 0) {
-                                tmp95 = closure_1_12;
-                              }
-                              obj15.verifyAge = tmp95;
-                              obj15.obscureHideControls = isVerifiedTeenResult;
-                              obj15.obscureIsOpaque = mediaObscuredReasonFromBitmask.length > 0;
-                              const provider = type.provider;
-                              obj15.provider = provider;
-                              obj15.author = undefined;
-                              obj15.rawTitle = type.rawTitle;
-                              obj15.title = rawTitle;
-                              const url4 = type.url;
-                              obj15.url = url4;
-                              obj15.rawDescription = type.rawDescription;
-                              obj15.description = rawDescription;
-                              obj15.thumbnail = tmp53;
-                              obj15.image = tmp25;
-                              obj15.images = mapped;
-                              obj15.fields = mapped1;
-                              obj15.components = tmp82;
-                              obj15.footer = tmp66;
-                              const video = type.video;
-                              obj15.video = video;
-                              let audio;
-                              if (!tmp92) {
-                                audio = type.audio;
-                              }
-                              obj15.audio = audio;
-                              obj15.borderLeftColor = embedBorderLeftColor;
-                              ({ embedProviderColor: obj32.providerColor, embedHeaderTextColor: obj32.headerTextColor, embedBodyTextColor: obj32.bodyTextColor } = tmp57);
-                              const referenceId = type.referenceId;
-                              obj15.referenceId = referenceId;
-                              obj15.backgroundColor = backgroundColor;
-                              return obj15;
-                            } else {
-                              const components = type.components;
-                              if (dependencyMap) {
-                                let mapped2 = components.map((item) => {
-                                  const obj = {};
-                                  const merged = Object.assign(item);
-                                  obj.spoiler = true;
-                                  return obj;
-                                });
-                              } else {
-                                mapped2 = components;
-                              }
-                              closure_1_13(mapped2);
-                            }
-                          } else {
-                            if (null != type.author.iconProxyURL) {
-                              if ("" !== type.author.iconProxyURL) {
-                                let iconURL2 = type.author.iconProxyURL;
-                              }
-                              if (null != iconURL2) {
-                                const obj16 = {};
-                                const merged7 = Object.assign(type.author);
-                                const obj25 = RowGeneratorUtilsDefault;
-                                obj16.iconURL = obj25.getImageSrc(iconURL2, 16, 16, !closure_1_1);
-                                let author = obj16;
-                              } else {
-                                author = type.author;
-                              }
-                            }
-                            iconURL2 = type.author.iconURL;
-                          }
+                          rawTitle = type.rawTitle;
                         }
-                        rawTitle = type.rawTitle;
+                        parseEmbedTitleMarkup = MarkupParsers.parseEmbedTitleMarkup;
+                        tmp50 = null != tmp29 && type.type === MessageEmbedTypes.GIFV;
+                        tmp55 = embedBorderLeftColor;
                       }
-                      parseEmbedTitleMarkup = MarkupParsers.parseEmbedTitleMarkup;
-                      tmp52 = null != tmp31 && type.type === MessageEmbedTypes.GIFV;
-                      tmp57 = embedBorderLeftColor;
-                    }
-                    let tmp27 = null == tmp25;
-                    if (!tmp27) {
-                      tmp27 = !PlatformUtils.isIOS();
-                      const tmp3Result28 = PlatformUtils;
-                    }
-                    let tmp28 = !tmp27;
-                    if (!tmp27) {
-                      tmp28 = null == type.thumbnail;
-                    }
-                    mapped = null;
-                    if (tmp28) {
+                      let tmp25 = null == tmp23;
+                      if (!tmp25) {
+                        tmp25 = !PlatformUtils.isIOS();
+                        const tmp3Result28 = PlatformUtils;
+                      }
+                      let tmp26 = !tmp25;
+                      if (!tmp25) {
+                        tmp26 = null == type.thumbnail;
+                      }
                       mapped = null;
-                      if (null != tmp25) {
-                        items = [tmp25];
-                        mapped = items;
+                      if (tmp26) {
+                        mapped = null;
+                        if (null != tmp23) {
+                          items = [tmp23];
+                          mapped = items;
+                        }
                       }
                     }
                   }

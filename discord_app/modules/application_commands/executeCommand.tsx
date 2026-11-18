@@ -1,21 +1,21 @@
-// === Module 11355: executeCommand ===
+// === Module 10637: executeCommand ===
 
-// Module 11355 (executeCommand)
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5979 */;
-import UserActionCreatorsAll from "UserActionCreators" /* 7360 */;
-import UploadUtils from "UploadUtils" /* 8857 */;
-import FileUtils from "FileUtils" /* 8886 */;
-import UploadLimits from "UploadLimits" /* 8901 */;
-import MessageQueue from "MessageQueue" /* 9027 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 11227 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 11360 */;
+// Module 10637 (executeCommand)
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5475 */;
+import UserActionCreatorsAll from "UserActionCreators" /* 6865 */;
+import UploadUtils from "UploadUtils" /* 8354 */;
+import FileUtils from "FileUtils" /* 8382 */;
+import UploadLimits from "UploadLimits" /* 8397 */;
+import MessageQueue from "MessageQueue" /* 8438 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 10509 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10642 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 6977 */;
+import EmojiStore from "EmojiStore" /* 6481 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8883 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8379 */;
 import UserStore from "UserStore" /* 1388 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 9018 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8429 */;
 
 const MessageQueueDefault = MessageQueue;
 
@@ -723,8 +723,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     message = { applicationId, channelId: id, guildId: id1, data: tmp, nonce: null, attachments: null, maxSizeCallback: null, analytics_location: null, sectionName: null, source: null };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(8863).createNonce();
-      let obj2 = onMessageSuccess(8863);
+      nonce = onMessageSuccess(8359).createNonce();
+      let obj2 = onMessageSuccess(8359);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -734,7 +734,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     message.source = tmp4;
     const obj5 = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: null };
     ({ messageId: obj4.messageId, onCreate: obj4.onCreate, onSuccess: obj4.onSuccess, onFailure: obj4.onFailure } = interactionLifecycleOptions);
-    const obj7 = { interactionType: onMessageSuccess(6379).InteractionTypes.APPLICATION_COMMAND, applicationId, channelId: id };
+    const obj7 = { interactionType: onMessageSuccess(5881).InteractionTypes.APPLICATION_COMMAND, applicationId, channelId: id };
     obj5.data = obj7;
     InteractionActionCreatorsAll.addQueued(message.nonce, obj5);
     if (null != attachments) {
@@ -785,8 +785,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    const obj10 = { type: onMessageSuccess(9027).MessageDataType.COMMAND, message };
-    message(9027).enqueue(obj10, (ok) => {
+    const obj10 = { type: onMessageSuccess(8438).MessageDataType.COMMAND, message };
+    message(8438).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -801,7 +801,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       }
       const obj = onMessageSuccess(dependencyMap[27]);
     });
-    const obj6 = message(9027);
+    const obj6 = message(8438);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -1131,10 +1131,10 @@ let closure_24 = async function _stageAttachments(arg0) {
             }
             const intl = closure_0(1113).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(11227);
-            obj2.maxSize = closure_0(8886).sizeString(dependencyMap);
+            const obj = closure_2(10509);
+            obj2.maxSize = closure_0(8382).sizeString(dependencyMap);
             obj.setFailed(closure_1_1, constants.ENTITY_TOO_LARGE, intl.formatToPlainString(closure_0(1113).t.fxEKdS, obj2));
-            const obj3 = closure_0(8886);
+            const obj3 = closure_0(8382);
           };
           const obj11 = UploadLimits;
           effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));
@@ -1228,7 +1228,7 @@ let closure_24 = async function _stageAttachments(arg0) {
 };
 const Constants = fn(1072);
 ({ AbortCodes: closure_11, AnalyticEvents: closure_12, MessageTypes: map1, NON_USER_BOT_DISCRIMINATOR: closure_14 } = Constants);
-let closure_15 = fn(5315).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(4828).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 

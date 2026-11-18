@@ -1,11 +1,11 @@
-// === Module 7072: trackAckMessages ===
+// === Module 6576: trackAckMessages ===
 
-// Module 7072 (trackAckMessages)
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6064 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7068 */;
-import GuildStore from "GuildStore" /* 5181 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6956 */;
+// Module 6576 (trackAckMessages)
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5560 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6572 */;
+import GuildStore from "GuildStore" /* 4694 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6460 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;

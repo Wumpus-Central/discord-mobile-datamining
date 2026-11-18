@@ -1,10 +1,10 @@
-// === Module 7869: TextArea ===
+// === Module 7372: TextArea ===
 
-// Module 7869 (TextArea)
-import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 5373 */;
-import Input from "Input" /* 7630 */;
-import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7631 */;
-import TextAreaField from "TextAreaField" /* 7870 */;
+// Module 7372 (TextArea)
+import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 4886 */;
+import Input from "Input" /* 7133 */;
+import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7134 */;
+import TextAreaField from "TextAreaField" /* 7373 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

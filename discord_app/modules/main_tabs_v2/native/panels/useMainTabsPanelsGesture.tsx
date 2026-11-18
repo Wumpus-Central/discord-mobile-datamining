@@ -1,24 +1,24 @@
-// === Module 18761: useMainTabsPanelsGesture ===
+// === Module 17574: useMainTabsPanelsGesture ===
 
-// Module 18761 (useMainTabsPanelsGesture)
+// Module 17574 (useMainTabsPanelsGesture)
 import PlatformUtils2 from "PlatformUtils" /* 1380 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5542 */;
-import timingPresets from "timingPresets" /* 5545 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 12609 */;
+import timing_timing from "timing/timing" /* 5033 */;
+import timingPresets from "timingPresets" /* 5036 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5083 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11894 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const LaunchPadGestureRefContextDefault = tmp(18763);
+const LaunchPadGestureRefContextDefault = tmp(17576);
 require = fn;
-const LaunchPadTypes = fn(12608).LaunchPadTypes;
+const LaunchPadTypes = fn(11893).LaunchPadTypes;
 let PlatformUtils = fn(1380);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(18762);
+const PanelsConfig = fn(17575);
 let closure_6 = PlatformUtils ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
 let closure_7 = { code: "(function useMainTabsPanelsGestureTsx1(width){let[isDragging,translateX,IS_ANDROID,withTiming,timingInstant,isFoldChange,timingStandard]=this.__closure;if(isDragging.get())return;if(translateX.get()===0)return;if(IS_ANDROID){translateX.set(withTiming(width,timingInstant,'animate-always'));}else{translateX.set(isFoldChange?withTiming(width,timingStandard,'respect-motion-settings'):width);}})" };
 let closure_8 = { code: "(function handleAnimationFinish_useMainTabsPanelsGestureTsx2(finished){let[onVisibilityChange,scheduleOnRN,show]=this.__closure;if(!finished)return;if(onVisibilityChange!=null){scheduleOnRN(onVisibilityChange,show);}})" };
@@ -381,5 +381,5 @@ export default function useMainTabsPanelsGesture(canDrag) {
   }, items9);
   const items10 = [memo, sharedValue2, sharedValue3, sharedValue];
   const tmp5Result10 = require("module_1655");
-  return { gesture: memo, panelGestureContext: noop.useMemo(() => ({ gesture: memo, disallowGesture: sharedValue2, edgeSwipeOnly: sharedValue3, translateX, isInMainTabs: true }), items10), isDragging: sharedValue1, translateX: sharedValue, movePanel: callback1, maxWidth: openWidth, isDraggingRef: ref };
+  return { gesture: memo, panelGestureContext: noop.useMemo(() => ({ gesture: memo, disallowGesture: sharedValue2, edgeSwipeOnly: sharedValue3, translateX }), items10), isDragging: sharedValue1, translateX: sharedValue, movePanel: callback1, maxWidth: openWidth, isDraggingRef: ref };
 };

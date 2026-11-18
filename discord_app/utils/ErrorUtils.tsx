@@ -1,7 +1,6 @@
-// === Module 9803: ErrorUtils ===
+// === Module 9218: ErrorUtils ===
 
-// Module 9803 (ErrorUtils)
-import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 9804 */;
+// Module 9218 (ErrorUtils)
 import size from "module_2" /* 2 */;
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
@@ -25,18 +24,4 @@ export function getUnderlyingIOSError(message) {
   } catch (err) {
     return null;
   }
-}
-export function serializeError(arg0) {
-  let error = arg0;
-  if (!Boolean(arg0)) {
-    const _Error = Error;
-    error = new Error("unknown error");
-  }
-  let error1 = error;
-  if (typeof error !== "object") {
-    const _Error2 = Error;
-    const _String = String;
-    error1 = new Error(String(error));
-  }
-  return JSON.stringify(BAGGAGE_HEADER_NAME.normalizeToSize(error1));
 }

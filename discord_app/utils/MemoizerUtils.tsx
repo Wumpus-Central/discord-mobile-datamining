@@ -1,6 +1,6 @@
-// === Module 5944: MemoizerUtils ===
+// === Module 5435: MemoizerUtils ===
 
-// Module 5944 (MemoizerUtils)
+// Module 5435 (MemoizerUtils)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("utils/MemoizerUtils.tsx");

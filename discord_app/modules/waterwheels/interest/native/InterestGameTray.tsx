@@ -1,9 +1,9 @@
-// === Module 19086: InterestGameTray ===
+// === Module 17897: InterestGameTray ===
 
-// Module 19086 (InterestGameTray)
+// Module 17897 (InterestGameTray)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import InterestGameCoverDefault from "InterestGameCover" /* 19076 */;
+import InterestGameCoverDefault from "InterestGameCover" /* 17887 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -138,7 +138,7 @@ function TrayCover(game) {
   return sharedValue2(_modDef1655.View, obj3);
 }
 const View = fn(17).View;
-const InterestGamePickerConstants = fn(19068);
+const InterestGamePickerConstants = fn(17879);
 const SELECTED_BORDER_WIDTH = InterestGamePickerConstants.SELECTED_BORDER_WIDTH;
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
@@ -147,7 +147,7 @@ const jsxProd = fn(21);
 let result = THUMBNAIL_WIDTH / THUMBNAIL_ASPECT_RATIO;
 let closure_10 = THUMBNAIL_WIDTH + FOOTER_THUMBNAIL_GAP;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { tray: { height: result, flex: 1 }, viewport: { position: "absolute", inset: -SELECTED_BORDER_WIDTH, right: 0, overflow: "hidden" }, content: { position: "absolute", inset: SELECTED_BORDER_WIDTH, right: 0 }, item: { position: "absolute", width: THUMBNAIL_WIDTH, height: result }, target: { flex: 1 }, art: { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, stroke: null };
 let obj3 = { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.stroke = { position: "absolute", inset: -SELECTED_BORDER_WIDTH, borderRadius: nativeDefault.radii.xs + SELECTED_BORDER_WIDTH, borderWidth: SELECTED_BORDER_WIDTH, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

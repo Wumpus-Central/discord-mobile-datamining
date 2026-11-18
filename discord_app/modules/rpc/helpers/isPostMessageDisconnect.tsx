@@ -1,7 +1,7 @@
-// === Module 17053: isPostMessageDisconnect ===
+// === Module 15707: isPostMessageDisconnect ===
 
-// Module 17053 (isPostMessageDisconnect)
-import Constants from "Constants" /* 6759 */;
+// Module 15707 (isPostMessageDisconnect)
+import Constants from "Constants" /* 6261 */;
 import size from "module_2" /* 2 */;
 
 const TransportTypes = Constants.TransportTypes;

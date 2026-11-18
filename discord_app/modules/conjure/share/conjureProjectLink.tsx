@@ -1,6 +1,6 @@
-// === Module 12646: conjureProjectLink ===
+// === Module 8810: conjureProjectLink ===
 
-// Module 12646 (conjureProjectLink)
+// Module 8810 (conjureProjectLink)
 import size from "module_2" /* 2 */;
 
 function parseConjureProjectLink(uRL) {

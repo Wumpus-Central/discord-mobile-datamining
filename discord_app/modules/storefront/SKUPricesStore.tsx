@@ -1,6 +1,6 @@
-// === Module 7259: SKUPricesStore ===
+// === Module 6763: SKUPricesStore ===
 
-// Module 7259 (SKUPricesStore)
+// Module 6763 (SKUPricesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;

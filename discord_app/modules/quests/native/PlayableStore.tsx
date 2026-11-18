@@ -1,12 +1,12 @@
-// === Module 17732: PlayableStore ===
+// === Module 16534: PlayableStore ===
 
-// Module 17732 (PlayableStore)
+// Module 16534 (PlayableStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import AdCreativeType from "AdCreativeType" /* 6969 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 7055 */;
-import FramesStore from "FramesStore" /* 7027 */;
+import AdCreativeType from "AdCreativeType" /* 6473 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6559 */;
+import FramesStore from "FramesStore" /* 6531 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
 
 require = fn;
@@ -69,8 +69,8 @@ function handleVisibilityChange() {
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5953).ActivityPanelModes;
-const FramesConstants = fn(7028);
+const ActivityPanelModes = fn(5449).ActivityPanelModes;
+const FramesConstants = fn(6532);
 ({ asLaunched: closure_9, makeFrameId: closure_10, MAIN_SURFACE: closure_11 } = FramesConstants);
 let c3 = null;
 let obj = null;

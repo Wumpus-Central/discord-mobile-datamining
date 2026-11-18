@@ -1,16 +1,16 @@
-// === Module 8708: MemberSafetyStore ===
+// === Module 8199: MemberSafetyStore ===
 
-// Module 8708 (MemberSafetyStore)
+// Module 8199 (MemberSafetyStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 8711 */;
-import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 8715 */;
-import MemberSafetySupplementalUtils from "MemberSafetySupplementalUtils" /* 8716 */;
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 8202 */;
+import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 8206 */;
+import MemberSafetySupplementalUtils from "MemberSafetySupplementalUtils" /* 8207 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5222 */;
-import GuildStore from "GuildStore" /* 5181 */;
+import GuildMemberStore from "GuildMemberStore" /* 4735 */;
+import GuildStore from "GuildStore" /* 4694 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -45,7 +45,7 @@ function handleGuildRoleMemberUpdate(guildId) {
   items = [guildId.userId];
   return dependencyMap[guildId].updateMembersByMemberIds(items);
 }
-let closure_8 = fn(8709).GuildMemberSafetyPageStore;
+let closure_8 = fn(8200).GuildMemberSafetyPageStore;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let c10 = false;
 const dependencyMap = {};

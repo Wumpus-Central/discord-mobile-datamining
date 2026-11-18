@@ -1,11 +1,11 @@
-// === Module 8022: useGuildsUserCanStartStageIn ===
+// === Module 7525: useGuildsUserCanStartStageIn ===
 
-// Module 8022 (useGuildsUserCanStartStageIn)
-import GuildChannelStore from "GuildChannelStore" /* 5240 */;
-import PermissionStore from "PermissionStore" /* 5242 */;
+// Module 7525 (useGuildsUserCanStartStageIn)
+import GuildChannelStore from "GuildChannelStore" /* 4753 */;
+import PermissionStore from "PermissionStore" /* 4755 */;
 
 const require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(5240).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4753).GUILD_VOCAL_CHANNELS_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
 

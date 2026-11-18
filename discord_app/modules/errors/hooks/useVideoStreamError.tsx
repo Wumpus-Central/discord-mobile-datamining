@@ -1,14 +1,14 @@
-// === Module 11398: useVideoStreamError ===
+// === Module 10680: useVideoStreamError ===
 
-// Module 11398 (useVideoStreamError)
-import AVError from "AVError" /* 6255 */;
+// Module 10680 (useVideoStreamError)
+import AVError from "AVError" /* 5751 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 11399 */;
+import AVErrorStore from "AVErrorStore" /* 10681 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MediaEngineContextTypes = fn(6072).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5568).MediaEngineContextTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");
 

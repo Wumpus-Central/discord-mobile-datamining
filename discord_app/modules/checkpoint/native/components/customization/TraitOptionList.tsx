@@ -1,14 +1,14 @@
-// === Module 13410: TraitOptionList ===
+// === Module 12711: TraitOptionList ===
 
-// Module 13410 (TraitOptionList)
+// Module 12711 (TraitOptionList)
 import nativeDefault from "native" /* 575 */;
-import HapticUtils from "HapticUtils" /* 5548 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6742 */;
-import inlineStyles from "inlineStyles" /* 8274 */;
-import TraitOptionItem from "TraitOptionItem" /* 13411 */;
+import HapticUtils from "HapticUtils" /* 5039 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6244 */;
+import inlineStyles from "inlineStyles" /* 7776 */;
+import TraitOptionItem from "TraitOptionItem" /* 12712 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5311 */;
+import AccessibilityStore from "AccessibilityStore" /* 4824 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -24,12 +24,12 @@ function SelectedWindow(size) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6375).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5877).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_13 = createStyles.createStyles({ assetList: { paddingHorizontal: PX_16 }, radioGroup: { flexDirection: "row", gap: PX_12 }, selectorOverlay: { position: "absolute", left: PX_16, top: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitOptionList.tsx");
@@ -89,17 +89,17 @@ export default function TraitOptionList(size) {
   closure_6 = size(504).useStateFromStores(items, () => closure_7.useReducedMotion);
   let obj = size(504);
   let tmp2 = size;
-  closure_7 = options(13353)(options(13386));
-  const tmp4 = options(13353);
-  const isScreenReaderEnabled = size(5562).useIsScreenReaderEnabled();
+  closure_7 = options(12464)(options(12689));
+  const tmp4 = options(12464);
+  const isScreenReaderEnabled = size(5053).useIsScreenReaderEnabled();
   noop.useRef(null);
   const ref = noop.useRef(false);
   closure_11 = noop.useRef(null);
   const bound = Math.max(options.findIndex((optionId) => optionId.optionId === dependencyMap), 0);
-  const tmp8 = options(5911)(bound);
-  let obj2 = size(5562);
+  const tmp8 = options(5402)(bound);
+  let obj2 = size(5053);
   [tmp10, c13] = disabled(noop.useState(options(1496)().width), 2);
-  const width = size(13411).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const width = size(12712).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + closure_11;
   c15 = sum;
   const ref1 = noop.useRef(null);
@@ -232,13 +232,13 @@ export default function TraitOptionList(size) {
   const obj5 = { style: tmp.radioGroup, accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
   const tmp15 = ref;
   const tmp9 = disabled(noop.useState(options(1496)().width), 2);
-  obj5.accessibilityLabel = tmp2(6742).getCustomizationOptionName(size.customizationOption);
+  obj5.accessibilityLabel = tmp2(6244).getCustomizationOptionName(size.customizationOption);
   obj5.children = options.map((traitOption, index) => {
     size = traitOption;
     closure_1 = index;
     const obj = { size, traitOption, accessibilityLabel: null, isSelected: null, showSelectedBorder: null, hideCornerFlag: null, disabled: null, onPress: null };
-    const tmp2 = options(13411);
-    obj.accessibilityLabel = size(6742).getAssetAccessibilityLabel(traitOption, { skipRarity: skipDescription, skipDescription });
+    const tmp2 = options(12712);
+    obj.accessibilityLabel = size(6244).getAssetAccessibilityLabel(traitOption, { skipRarity: skipDescription, skipDescription });
     obj.isSelected = traitOption.optionId === closure_2;
     let tmp5 = isScreenReaderEnabled;
     if (isScreenReaderEnabled) {

@@ -1,18 +1,18 @@
-// === Module 9159: ContextMenu ===
+// === Module 8570: ContextMenu ===
 
-// Module 9159 (ContextMenu)
+// Module 8570 (ContextMenu)
 import util from "util" /* 1113 */;
 import PlatformUtils2 from "PlatformUtils" /* 1380 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import shared from "shared" /* 5317 */;
-import HapticUtils from "HapticUtils" /* 5548 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5562 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6329 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9160 */;
-import ContextMenuState from "ContextMenuState" /* 9161 */;
-import UID from "UID" /* 9162 */;
+import shared from "shared" /* 4830 */;
+import HapticUtils from "HapticUtils" /* 5039 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5053 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5083 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5831 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 8571 */;
+import ContextMenuState from "ContextMenuState" /* 8572 */;
+import UID from "UID" /* 8573 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -123,7 +123,7 @@ export function ContextMenu(triggerOnLongPress) {
   let dividerIndexes = memo.dividerIndexes;
   c13 = dividerIndexes;
   let tmpResult = require("module_1655");
-  const scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight(tmp(9160).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT);
+  const scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight(tmp(8571).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT);
   c14 = scaledTextLineHeight;
   let items4 = [items3, scaledTextLineHeight];
   const memo1 = noop.useMemo(() => {
@@ -183,9 +183,9 @@ export function ContextMenu(triggerOnLongPress) {
   const tmpResult10 = require("useFontScale");
   const isContextMenuActive = require("ContextMenuState").useIsContextMenuActive(contextMenuState);
   const tmpResult11 = require("ContextMenuState");
-  let result = (tmp(9160).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9160).CONTEXT_MENU_ITEM_PADDING) * fontScale;
-  let result1 = 2 * tmp(9160).CONTEXT_MENU_ITEM_PADDING;
-  const sharedValue1 = require("module_1655").useSharedValue(Math.max(result + result1, tmp(9160).CONTEXT_MENU_ITEM_BASE_HEIGHT));
+  let result = (tmp(8571).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(8571).CONTEXT_MENU_ITEM_PADDING) * fontScale;
+  let result1 = 2 * tmp(8571).CONTEXT_MENU_ITEM_PADDING;
+  const sharedValue1 = require("module_1655").useSharedValue(Math.max(result + result1, tmp(8571).CONTEXT_MENU_ITEM_BASE_HEIGHT));
   obj3.useRef(items3);
   let items5 = [isContextMenuActive, contextMenuState];
   const layoutEffect = obj3.useLayoutEffect(() => {
@@ -677,7 +677,7 @@ export function ContextMenu(triggerOnLongPress) {
     let tmp51Result = tmp51(c4, obj5);
   } else {
     const obj6 = { gesture: memo2, children: children(obj4) };
-    tmp51Result = tmp51(tmp(5592).GestureDetector, obj6);
+    tmp51Result = tmp51(tmp(5083).GestureDetector, obj6);
   }
   return tmp51Result;
 }

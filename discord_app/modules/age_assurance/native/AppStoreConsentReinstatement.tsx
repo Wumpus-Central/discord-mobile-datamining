@@ -1,11 +1,11 @@
-// === Module 20414: AppStoreConsentReinstatement ===
+// === Module 19687: AppStoreConsentReinstatement ===
 
-// Module 20414 (AppStoreConsentReinstatement)
+// Module 19687 (AppStoreConsentReinstatement)
 import LoggerDefault from "Logger" /* 3 */;
-import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 8398 */;
-import AppStoreConsentReinstateEndpointExperiment from "AppStoreConsentReinstateEndpointExperiment" /* 20415 */;
+import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 7900 */;
+import AppStoreConsentReinstateEndpointExperiment from "AppStoreConsentReinstateEndpointExperiment" /* 19688 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5990 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5486 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -406,10 +406,10 @@ export function beginAppStoreConsentReinstatement() {
                                             if (obj9.isAppStoreAgeSignalColdLaunch()) {
                                               c2 = 1;
                                               c3 = 1;
-                                              const obj4 = { value: closure_2_0(8390).getAppStoreConsentReinstatementProof(), done: false };
+                                              const obj4 = { value: closure_2_0(7892).getAppStoreConsentReinstatementProof(), done: false };
                                               return obj4;
                                             }
-                                            obj9 = closure_2_0(8398);
+                                            obj9 = closure_2_0(7900);
                                           }
                                         }
                                       } else if (1 === tmp5) {
@@ -426,7 +426,7 @@ export function beginAppStoreConsentReinstatement() {
                                             if (closure_2_7(c2)) {
                                               c2 = 2;
                                               c3 = 1;
-                                              const obj7 = { value: closure_2_0(8391).reinstateAppStoreConsent(closure_128_0), done: false };
+                                              const obj7 = { value: closure_2_0(7893).reinstateAppStoreConsent(closure_128_0), done: false };
                                               return obj7;
                                             }
                                           } else {

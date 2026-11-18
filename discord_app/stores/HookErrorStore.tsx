@@ -1,6 +1,6 @@
-// === Module 6846: HookErrorStore ===
+// === Module 6350: HookErrorStore ===
 
-// Module 6846 (HookErrorStore)
+// Module 6350 (HookErrorStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;

@@ -1,14 +1,14 @@
-// === Module 7696: MemberVerificationActionCreators ===
+// === Module 7199: MemberVerificationActionCreators ===
 
-// Module 7696 (MemberVerificationActionCreators)
+// Module 7199 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 6047 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5543 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 5215 */;
-import GuildMemberStore from "GuildMemberStore" /* 5222 */;
-import InviteStore from "InviteStore" /* 6046 */;
+import ImpersonateStore from "ImpersonateStore" /* 4728 */;
+import GuildMemberStore from "GuildMemberStore" /* 4735 */;
+import InviteStore from "InviteStore" /* 5542 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

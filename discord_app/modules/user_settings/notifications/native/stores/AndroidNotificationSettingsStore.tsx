@@ -1,8 +1,8 @@
-// === Module 18148: AndroidNotificationSettingsStore ===
+// === Module 16950: AndroidNotificationSettingsStore ===
 
-// Module 18148 (AndroidNotificationSettingsStore)
-import _mod5225 from "module_5225" /* 5225 */;
-import PushNotificationDefault from "PushNotification" /* 11539 */;
+// Module 16950 (AndroidNotificationSettingsStore)
+import _mod4738 from "module_4738" /* 4738 */;
+import PushNotificationDefault from "PushNotification" /* 10821 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -127,7 +127,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
   }
 };
 const identity = fn(1258);
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "s", isSoundsEnabled: "channel_id", isNotifyEveryTime: "space" }));
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "s", isSoundsEnabled: "channel_id", isNotifyEveryTime: "formatToPlainString" }));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 
@@ -142,7 +142,7 @@ export function initializeAndroidNotificationSettingsStore() {
   return applyArgumentsResult;
 }
 export function useAndroidNotificationLightsEnabled() {
-  return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod5225.shallow);
+  return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4738.shallow);
 }
 export function setAndroidNotificationLightsEnabled(isLightsEnabled) {
   _require = isLightsEnabled;
@@ -151,7 +151,7 @@ export function setAndroidNotificationLightsEnabled(isLightsEnabled) {
   PushNotificationDefault.setLightsEnabled(isLightsEnabled);
 }
 export function useAndroidNotificationVibrationsEnabled() {
-  return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod5225.shallow);
+  return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4738.shallow);
 }
 export function setAndroidNotificationVibrationsEnabled(isVibrationsEnabled) {
   _require = isVibrationsEnabled;
@@ -160,7 +160,7 @@ export function setAndroidNotificationVibrationsEnabled(isVibrationsEnabled) {
   PushNotificationDefault.setVibrationsEnabled(isVibrationsEnabled);
 }
 export function useAndroidNotificationSoundsEnabled() {
-  return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod5225.shallow);
+  return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4738.shallow);
 }
 export function setAndroidNotificationSoundsEnabled(isSoundsEnabled) {
   _require = isSoundsEnabled;
@@ -169,7 +169,7 @@ export function setAndroidNotificationSoundsEnabled(isSoundsEnabled) {
   PushNotificationDefault.setSoundsEnabled(isSoundsEnabled);
 }
 export function useAndroidMessageNotificationsEnabled() {
-  return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod5225.shallow);
+  return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4738.shallow);
 }
 export function setAndroidMessageNotificationsEnabled(isNotifyEveryTime) {
   _require = isNotifyEveryTime;

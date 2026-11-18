@@ -1,6 +1,6 @@
-// === Module 16955: ThermalStates ===
+// === Module 15605: ThermalStates ===
 
-// Module 16955 (ThermalStates)
+// Module 15605 (ThermalStates)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/constants/ThermalStates.tsx");

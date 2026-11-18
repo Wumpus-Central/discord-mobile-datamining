@@ -1,19 +1,19 @@
-// === Module 20223: AgeVerificationManager ===
+// === Module 19494: AgeVerificationManager ===
 
-// Module 20223 (AgeVerificationManager)
+// Module 19494 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1094 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 6793 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6815 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8414 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8671 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 13083 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 7044 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
-import MessageStore from "MessageStore" /* 6370 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5213 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 6296 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6319 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 7904 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8162 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12381 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6548 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
+import MessageStore from "MessageStore" /* 5872 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4726 */;
 import UserStore from "UserStore" /* 1388 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7892 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
 
 require = fn;
 function handleMessageCreate(channelId) {
@@ -88,7 +88,7 @@ const prototype = function AgeVerificationManager() {
     }
     try {
       if (isAdultStatusResult) {
-        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6793).clear(channelId.channelId));
+        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6296).clear(channelId.channelId));
         const channelId = SelectedChannelStore.getChannelId();
         if (null != channelId) {
           handleLoadChannelMessages(tmp17);
@@ -107,8 +107,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              closure_1_0(12351).preloadForumThreads(channel);
-              const obj = closure_1_0(12351);
+              closure_1_0(11633).preloadForumThreads(channel);
+              const obj = closure_1_0(11633);
             }
           })(tmp17);
           const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(tmp17);

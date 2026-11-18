@@ -1,11 +1,11 @@
-// === Module 8493: useDisplayProfile ===
+// === Module 7984: useDisplayProfile ===
 
-// Module 8493 (useDisplayProfile)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8494 */;
-import DisplayProfileDefault from "DisplayProfile" /* 8551 */;
+// Module 7984 (useDisplayProfile)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7985 */;
+import DisplayProfileDefault from "DisplayProfile" /* 8042 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
-import UserProfileStore from "UserProfileStore" /* 7362 */;
+import UserProfileStore from "UserProfileStore" /* 6867 */;
 
 const require = globalThis.__r;
 
@@ -74,18 +74,18 @@ export function useDisplayProfileWithFetchEffect(arg0, guildId) {
     return tmp2;
   });
 }
-export function getDisplayProfile(id1, guildId) {
+export function getDisplayProfile(id, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
     items = [UserStore, UserProfileStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
-  if (null === id1) {
+  if (null === id) {
     return null;
   } else {
-    const user = obj.getUser(id1);
-    const userProfile = obj2.getUserProfile(id1);
+    const user = obj.getUser(id);
+    const userProfile = obj2.getUserProfile(id);
     let tmp8 = null;
     if (null != user) {
       tmp8 = null;

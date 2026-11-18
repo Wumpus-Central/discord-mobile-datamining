@@ -1,9 +1,9 @@
-// === Module 17002: getFrameProfileContext ===
+// === Module 15652: getFrameProfileContext ===
 
-// Module 17002 (getFrameProfileContext)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5971 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 7030 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 7349 */;
+// Module 15652 (getFrameProfileContext)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5467 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6534 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 6854 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/helpers/getFrameProfileContext.tsx");

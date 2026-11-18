@@ -1,10 +1,10 @@
-// === Module 15795: Slider ===
+// === Module 14427: Slider ===
 
-// Module 15795 (Slider)
+// Module 14427 (Slider)
 import nativeDefault from "native" /* 575 */;
-import HapticUtils from "HapticUtils" /* 5548 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5549 */;
-import _modDef11648 from "module_11648" /* 11648 */;
+import HapticUtils from "HapticUtils" /* 5039 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5040 */;
+import _modDef10930 from "module_10930" /* 10930 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,9 +12,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
-let obj2 = { container: { flexGrow: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
-let obj3 = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+const createStyles = fn(4823);
+let obj2 = { container: { flexGrow: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.SLIDER_INDICATOR_BACKGROUND }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
+let obj3 = { backgroundColor: nativeDefault.colors.SLIDER_INDICATOR_BACKGROUND };
 obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
 let obj4 = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
 obj2.startIcon = { marginRight: nativeDefault.space.PX_8 };
@@ -117,7 +117,7 @@ export function Slider(maxValue) {
   }
   obj4.accessibilityValue = tmp19;
   obj4.testID = testID;
-  const tmp18 = _modDef11648;
+  const tmp18 = _modDef10930;
   let fn;
   if (obj6.isAndroid()) {
     fn = () => true;

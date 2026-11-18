@@ -1,11 +1,11 @@
-// === Module 10674: ForwardingAnalyticsUtils ===
+// === Module 9955: ForwardingAnalyticsUtils ===
 
-// Module 10674 (ForwardingAnalyticsUtils)
+// Module 9955 (ForwardingAnalyticsUtils)
 import apply from "apply" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6064 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5560 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;

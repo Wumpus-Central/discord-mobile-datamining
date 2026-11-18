@@ -1,10 +1,10 @@
-// === Module 8041: useManageResourcePermissions ===
+// === Module 7544: useManageResourcePermissions ===
 
-// Module 8041 (useManageResourcePermissions)
+// Module 7544 (useManageResourcePermissions)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 5242 */;
+import PermissionStore from "PermissionStore" /* 4755 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -60,7 +60,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(8040);
+const PermissionsConstants = fn(7543);
 ({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: metroImportDefault, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9 } = PermissionsConstants);
 const Permissions = fn(1083).Permissions;
 let closure_11 = {

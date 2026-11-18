@@ -1,6 +1,6 @@
-// === Module 16280: OrbChallengeTypes ===
+// === Module 14947: OrbChallengeTypes ===
 
-// Module 16280 (OrbChallengeTypes)
+// Module 14947 (OrbChallengeTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/virtual_currency/OrbChallengeTypes.tsx");

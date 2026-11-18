@@ -1,6 +1,6 @@
-// === Module 12733: isGameOrganizationFull ===
+// === Module 12018: isGameOrganizationFull ===
 
-// Module 12733 (isGameOrganizationFull)
+// Module 12018 (isGameOrganizationFull)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organizations/isGameOrganizationFull.tsx");

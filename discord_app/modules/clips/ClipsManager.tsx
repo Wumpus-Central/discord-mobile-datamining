@@ -1,26 +1,26 @@
-// === Module 20847: clips/ClipsManager ===
+// === Module 20120: clips/ClipsManager ===
 
-// Module 20847 (clips/ClipsManager)
+// Module 20120 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import UserSettings from "UserSettings" /* 5135 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 6093 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6805 */;
-import ClipsExperiment from "ClipsExperiment" /* 15846 */;
-import isClipsEnabled from "isClipsEnabled" /* 16145 */;
-import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20849 */;
-import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20850 */;
+import UserSettings from "UserSettings" /* 4648 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5589 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6309 */;
+import ClipsExperiment from "ClipsExperiment" /* 14479 */;
+import isClipsEnabled from "isClipsEnabled" /* 14812 */;
+import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20122 */;
+import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20123 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5159 */;
+import ChannelStore from "ChannelStore" /* 4672 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6068 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6800 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6304 */;
 import UserStore from "UserStore" /* 1388 */;
 import ClipsStore from "ClipsStore" /* 2139 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7892 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
@@ -144,13 +144,13 @@ let closure_26 = async function _probeHardware() {
   closure_131_6 = closure_2;
   return { classification: closure_132_0(closure_132_3[15]).classifyClipsHardware(closure_131_6, closure_131_4), gpuModels: closure_131_5, videoEncoders: closure_131_6 };
 };
-const getSystemAnalyticsInfo = fn(6087).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8856);
+const getSystemAnalyticsInfo = fn(5583).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8353);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15, CLIPS_DEFAULT_SETTINGS_VERSION: closure_16, ClipsHardwareClassification: closure_17, ClipsLogger: closure_18, CLIP_RUNTIME: closure_19 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6801).StreamTypes;
-const Features = fn(6072).Features;
+const StreamTypes = fn(6305).StreamTypes;
+const Features = fn(5568).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -374,7 +374,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(clas
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(5135).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(4648).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -436,7 +436,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(5135).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(4648).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };

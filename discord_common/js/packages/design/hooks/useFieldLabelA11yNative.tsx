@@ -1,7 +1,7 @@
-// === Module 5373: useFieldLabelA11yNative ===
+// === Module 4886: useFieldLabelA11yNative ===
 
-// Module 5373 (useFieldLabelA11yNative)
-import getNodeText from "getNodeText" /* 5374 */;
+// Module 4886 (useFieldLabelA11yNative)
+import getNodeText from "getNodeText" /* 4887 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

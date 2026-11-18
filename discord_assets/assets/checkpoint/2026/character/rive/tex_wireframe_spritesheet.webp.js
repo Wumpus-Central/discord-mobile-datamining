@@ -1,6 +1,6 @@
-// === Module 13332: ? ===
+// === Module 12635: ? ===
 
-// Module 13332
+// Module 12635
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_wireframe_spritesheet.webp.js");

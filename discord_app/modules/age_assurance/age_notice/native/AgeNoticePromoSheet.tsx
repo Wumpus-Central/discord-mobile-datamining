@@ -1,24 +1,24 @@
-// === Module 17282: AgeNoticePromoSheet ===
+// === Module 15939: AgeNoticePromoSheet ===
 
-// Module 17282 (AgeNoticePromoSheet)
+// Module 15939 (AgeNoticePromoSheet)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import _modDef3355 from "module_3355" /* 3355 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6818 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8201 */;
-import openUserSettings from "openUserSettings" /* 8615 */;
-import openAgeNoticePromoSheet from "openAgeNoticePromoSheet" /* 17281 */;
+import _modDef3375 from "module_3375" /* 3375 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6322 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7704 */;
+import openUserSettings from "openUserSettings" /* 8106 */;
+import openAgeNoticePromoSheet from "openAgeNoticePromoSheet" /* 15938 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const AGE_NOTICE_BLOG_URL = fn(6826).AGE_NOTICE_BLOG_URL;
+const AGE_NOTICE_BLOG_URL = fn(6330).AGE_NOTICE_BLOG_URL;
 const Constants = fn(1072);
 ({ HelpdeskArticles: hasOwnProperty, UserSettingsSections: closure_6 } = Constants);
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { illustration: null, actions: null };
 let size = { width: 198, height: 132, marginTop: nativeDefault.space.PX_16 };
 obj2.illustration = size;
@@ -30,9 +30,9 @@ let result = size.fileFinishedImporting("modules/age_assurance/age_notice/native
 export default function AgeNoticePromoSheet(markAsDismissed) {
   let dismissOnce;
   const tmp = closure_10();
-  const isVerifiedTeen = dismissOnce(6815).useIsVerifiedTeen();
-  let obj = dismissOnce(6815);
-  dismissOnce = dismissOnce(17283).useDismissOnce(markAsDismissed.markAsDismissed);
+  const isVerifiedTeen = dismissOnce(6319).useIsVerifiedTeen();
+  let obj = dismissOnce(6319);
+  dismissOnce = dismissOnce(15940).useDismissOnce(markAsDismissed.markAsDismissed);
   items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -68,7 +68,7 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   }, items4);
   const intl = dismissOnce(1113).intl;
   const string = intl.string;
-  const tmp13 = _modDef3355;
+  const tmp13 = _modDef3375;
   if (isVerifiedTeen) {
     obj3.text = string(tmp13["+7NlgO"]);
     obj3.onPress = callback3;
@@ -82,15 +82,15 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
   const obj5 = { source: null, style: null, resizeMode: "contain" };
-  let obj2 = dismissOnce(17283);
-  obj5.source = tmp14(17284);
+  let obj2 = dismissOnce(15940);
+  obj5.source = tmp14(15941);
   obj5.style = tmp.illustration;
-  obj4.illustration = closure_8(tmp14(6014), obj5);
+  obj4.illustration = closure_8(tmp14(5510), obj5);
   const intl2 = tmp2(1113).intl;
-  obj4.title = intl2.string(tmp14(3355).GdTVPF);
+  obj4.title = intl2.string(tmp14(3375).GdTVPF);
   const intl3 = tmp2(1113).intl;
   const format = intl3.format;
-  const tmp14Result2 = tmp14(3355);
+  const tmp14Result2 = tmp14(3375);
   if (isVerifiedTeen) {
     const obj6 = { handleOnConfirmAgeHook: callback2 };
     let formatResult = format(tmp14Result2["Ga2z/E"], obj6);
@@ -101,13 +101,13 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   obj4.description = formatResult;
   obj4.onDismiss = callback;
   const obj8 = { size: "lg", style: tmp.actions, children: null };
-  const items5 = [closure_8(dismissOnce(5930).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress }), ];
+  const items5 = [closure_8(dismissOnce(5421).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress }), ];
   const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1113).intl;
   obj10.text = intl4.string(dismissOnce(1113).t["NX+WJN"]);
   obj10.onPress = callback1;
-  items5[1] = closure_8(dismissOnce(5930).Button, obj10);
+  items5[1] = closure_8(dismissOnce(5421).Button, obj10);
   obj8.children = items5;
-  obj4.actions = closure_9(dismissOnce(6949).ButtonGroup, obj8);
-  return closure_8(dismissOnce(11903).PromoSheet, obj4);
+  obj4.actions = closure_9(dismissOnce(6453).ButtonGroup, obj8);
+  return closure_8(dismissOnce(11185).PromoSheet, obj4);
 };

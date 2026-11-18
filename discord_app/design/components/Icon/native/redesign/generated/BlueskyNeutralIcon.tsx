@@ -1,9 +1,9 @@
-// === Module 10533: BlueskyNeutralIcon ===
+// === Module 9814: BlueskyNeutralIcon ===
 
-// Module 10533 (BlueskyNeutralIcon)
+// Module 9814 (BlueskyNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6013 */;
-import _mod10534 from "module_10534" /* 10534 */;
+import BaseIconImage from "BaseIconImage" /* 5509 */;
+import _mod9815 from "module_9815" /* 9815 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BlueskyNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10534, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9815, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

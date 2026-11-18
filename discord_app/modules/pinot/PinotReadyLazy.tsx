@@ -1,7 +1,7 @@
-// === Module 16299: PinotReadyLazy ===
+// === Module 14966: PinotReadyLazy ===
 
-// Module 16299 (PinotReadyLazy)
-import getPinotReadyAction from "getPinotReadyAction" /* 16300 */;
+// Module 14966 (PinotReadyLazy)
+import getPinotReadyAction from "getPinotReadyAction" /* 14967 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/pinot/PinotReadyLazy.tsx");

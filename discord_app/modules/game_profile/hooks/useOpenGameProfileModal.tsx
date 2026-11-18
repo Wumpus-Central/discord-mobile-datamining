@@ -1,7 +1,7 @@
-// === Module 10385: useOpenGameProfileModal ===
+// === Module 9666: useOpenGameProfileModal ===
 
-// Module 10385 (useOpenGameProfileModal)
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10389 */;
+// Module 9666 (useOpenGameProfileModal)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9670 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

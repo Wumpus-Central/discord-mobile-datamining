@@ -1,16 +1,16 @@
-// === Module 17697: OrbsArcadeRewardsSheet ===
+// === Module 16499: OrbsArcadeRewardsSheet ===
 
-// Module 17697 (OrbsArcadeRewardsSheet)
+// Module 16499 (OrbsArcadeRewardsSheet)
 import nativeDefault from "native" /* 575 */;
-import OrbsArcadeRewardChainDefault from "OrbsArcadeRewardChain" /* 17698 */;
-import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17705 */;
+import OrbsArcadeRewardChainDefault from "OrbsArcadeRewardChain" /* 16500 */;
+import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 16507 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17685 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16487 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { actionsContainer: { paddingTop: nativeDefault.space.PX_24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,40 +37,46 @@ export default function OrbsArcadeRewardsSheet(gameId) {
     const obj3 = { title: null, subtitle: null };
     const obj4 = { gameName: str };
     obj3.title = intl.formatToPlainString(tmp(1113).t["3CJfUa"], obj4);
-    let currentRun;
+    let allTimeHighScore;
     if (stateFromStores1 != null) {
-      currentRun = stateFromStores1.currentRun;
+      allTimeHighScore = stateFromStores1.allTimeHighScore;
     }
     let formatToPlainStringResult;
-    if (null != currentRun) {
-      const intl2 = tmp(1113).intl;
-      const obj5 = { score: stateFromStores1.enrollmentHighScore };
-      formatToPlainStringResult = intl2.formatToPlainString(tmp(1113).t.bzMn46, obj5);
+    if (null != allTimeHighScore) {
+      let allTimeHighScore1;
+      if (stateFromStores1 != null) {
+        allTimeHighScore1 = stateFromStores1.allTimeHighScore;
+      }
+      if (0 !== allTimeHighScore1) {
+        const intl2 = tmp(1113).intl;
+        const obj5 = { score: stateFromStores1.allTimeHighScore };
+        formatToPlainStringResult = intl2.formatToPlainString(tmp(1113).t.bzMn46, obj5);
+      }
     }
     const obj6 = { header: null, children: null };
     obj3.subtitle = formatToPlainStringResult;
-    obj6.header = closure_4(tmp(7923).BottomSheetTitleHeader, obj3);
+    obj6.header = closure_4(tmp(7426).BottomSheetTitleHeader, obj3);
     const obj7 = { game: stateFromStores, gameState: stateFromStores1 };
     const items4 = [closure_4(OrbsArcadeRewardChainDefault, obj7), ];
-    let obj8 = { game: stateFromStores, sheetKey: "OrbsArcadeRewardsSheet", location: tmp(17695).OrbsArcadeCtaLocation.REWARDS_SHEET, surface: gameId.surface, primaryAction: null, secondaryAction: null, style: null };
-    const tmp10 = OrbsArcadeSheetActionsDefault;
-    const result = tmp(17692).hasOrbsArcadeUnclaimedRewards(stateFromStores1);
-    const OrbsArcadeSheetPrimaryAction = tmp(17705).OrbsArcadeSheetPrimaryAction;
+    let obj8 = { game: stateFromStores, sheetKey: "OrbsArcadeRewardsSheet", location: tmp(16497).OrbsArcadeCtaLocation.REWARDS_SHEET, surface: gameId.surface, primaryAction: null, secondaryAction: null, style: null };
+    const tmp11 = OrbsArcadeSheetActionsDefault;
+    const result = tmp(16494).hasOrbsArcadeUnclaimedRewards(stateFromStores1);
+    const OrbsArcadeSheetPrimaryAction = tmp(16507).OrbsArcadeSheetPrimaryAction;
     obj8.primaryAction = result ? OrbsArcadeSheetPrimaryAction.CLAIM : OrbsArcadeSheetPrimaryAction.PLAY;
-    const tmpResult = tmp(17692);
-    const result1 = tmp(17692).hasOrbsArcadeUnlockedRewards(stateFromStores1);
-    let OrbsArcadeSheetSecondaryAction = tmp(17705).OrbsArcadeSheetSecondaryAction;
+    const tmpResult = tmp(16494);
+    const result1 = tmp(16494).hasOrbsArcadeUnlockedRewards(stateFromStores1);
+    let OrbsArcadeSheetSecondaryAction = tmp(16507).OrbsArcadeSheetSecondaryAction;
     const obj9 = { spacing: 0, children: null };
     obj8.secondaryAction = result1 ? OrbsArcadeSheetSecondaryAction.CLOSE : OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY;
     actionsContainer = actionsContainer.actionsContainer;
     obj8.style = actionsContainer;
-    obj8 = closure_4(tmp10, obj8);
+    obj8 = closure_4(tmp11, obj8);
     items4[1] = obj8;
     obj9.children = items4;
-    OrbsArcadeSheetSecondaryAction = closure_5(tmp(6335).Stack, obj9);
+    OrbsArcadeSheetSecondaryAction = closure_5(tmp(5837).Stack, obj9);
     obj6.children = OrbsArcadeSheetSecondaryAction;
-    closure_4(tmp(7961).ActionSheet, obj6);
-    const tmpResult2 = tmp(17692);
+    closure_4(tmp(7464).ActionSheet, obj6);
+    const tmpResult2 = tmp(16494);
   }
   const obj2 = gameId(504);
 };
