@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "15d2e09fe1ca054619007acfd6d9efe4", name: "lt.messages.15d2e09fe1ca054619007acfd6d9efe4.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/checkpoint", scales: [1], hash: "e977fd0092bdad055bae1f14bae7ffec", name: "Checkpoint2026.compiled.messages", type: "jsona" });

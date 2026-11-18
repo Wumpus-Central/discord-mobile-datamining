@@ -1,7 +1,9 @@
 // === Module 15474: ? ===
 
 // Module 15474
-import registerAsset from "module_1119" /* 1119 */;
+import _mod15472 from "module_15472" /* 15472 */;
 
+let closure_0 = _mod15472({}.toString);
+let closure_1 = _mod15472("".slice);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/standard", width: 144, height: 150, scales: [1], hash: "e32285515cb51d557a374cd91c39dd3d", name: "box_idle", type: "png" });
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

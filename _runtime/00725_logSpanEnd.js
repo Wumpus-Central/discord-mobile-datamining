@@ -2,16 +2,16 @@
 
 // Module 725 (logSpanEnd)
 import spanToJSON from "spanToJSON" /* 683 */;
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function logSpanEnd(spanContext) {
-  if (_mod687.DEBUG_BUILD) {
-    const spanToJSONResult = spanToJSON.spanToJSON(spanContext);
+export function logSpanEnd(self) {
+  if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+    const spanToJSONResult = spanToJSON.spanToJSON(self);
     const description = spanToJSONResult.description;
     let str = "< unknown name >";
     if (undefined !== description) {
@@ -22,10 +22,10 @@ export function logSpanEnd(spanContext) {
     if (undefined !== op) {
       str2 = op;
     }
-    const spanId = spanContext.spanContext().spanId;
+    const spanId = self.spanContext().spanId;
     const tmpResult = spanToJSON;
     let str3 = "";
-    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
+    if (tmpResult2.getRootSpan(self) === self) {
       str3 = "root ";
     }
     const _HermesInternal = HermesInternal;
@@ -35,9 +35,9 @@ export function logSpanEnd(spanContext) {
     tmpResult2 = spanToJSON;
   }
 }
-export function logSpanStart(spanContext) {
-  if (_mod687.DEBUG_BUILD) {
-    const spanToJSONResult = spanToJSON.spanToJSON(spanContext);
+export function logSpanStart(sentrySpan) {
+  if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+    const spanToJSONResult = spanToJSON.spanToJSON(sentrySpan);
     const description = spanToJSONResult.description;
     let str = "< unknown name >";
     if (undefined !== description) {
@@ -51,14 +51,14 @@ export function logSpanStart(spanContext) {
     const parent_span_id = spanToJSONResult.parent_span_id;
     const tmpResult = spanToJSON;
     const tmpResult4 = spanToJSON;
-    const spanIsSampledResult = spanToJSON.spanIsSampled(spanContext);
-    const rootSpan = spanToJSON.getRootSpan(spanContext);
+    const spanIsSampledResult = spanToJSON.spanIsSampled(sentrySpan);
+    const rootSpan = spanToJSON.getRootSpan(sentrySpan);
     let str3 = "unsampled";
     if (spanIsSampledResult) {
       str3 = "sampled";
     }
     let str5 = "";
-    if (rootSpan === spanContext) {
+    if (rootSpan === sentrySpan) {
       str5 = "root ";
     }
     const _HermesInternal = HermesInternal;
@@ -68,12 +68,12 @@ export function logSpanStart(spanContext) {
     const _HermesInternal3 = HermesInternal;
     items[1] = "name: " + str;
     const _HermesInternal4 = HermesInternal;
-    items[2] = "ID: " + spanContext.spanContext().spanId;
+    items[2] = "ID: " + sentrySpan.spanContext().spanId;
     if (parent_span_id) {
       const _HermesInternal5 = HermesInternal;
       items.push("parent ID: " + parent_span_id);
     }
-    if (rootSpan !== spanContext) {
+    if (rootSpan !== sentrySpan) {
       const tmpResult6 = spanToJSON;
       ({ op: op2, description: description2 } = spanToJSON.spanToJSON(rootSpan));
       const _HermesInternal6 = HermesInternal;

@@ -103,9 +103,9 @@ function updateSession(ipAddress) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function closeSession(status, status2) {
-  if (status2) {
-    const obj2 = { status: status2 };
+export function closeSession(status, arg1) {
+  if (arg1) {
+    const obj2 = { status: arg1 };
     let obj = obj2;
   } else {
     obj = {};

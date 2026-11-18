@@ -12,7 +12,7 @@ export function debug(message, attributes) {
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "debug", message, attributes, severityNumber: "alignItems" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "debug", message, attributes, severityNumber: "analyticsLocations" }, obj.scope);
 }
 export function error(message, attributes) {
   let obj = arg2;
@@ -33,14 +33,14 @@ export function info(message, attributes) {
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "info", message, attributes, severityNumber: "alignItems" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "info", message, attributes, severityNumber: "analyticsLocations" }, obj.scope);
 }
 export function trace(message, attributes) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "trace", message, attributes, severityNumber: "alignItems" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "trace", message, attributes, severityNumber: "analyticsLocations" }, obj.scope);
 }
 export function warn(message, attributes) {
   let obj = arg2;

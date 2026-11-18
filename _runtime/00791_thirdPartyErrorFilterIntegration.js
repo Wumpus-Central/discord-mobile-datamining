@@ -15,17 +15,17 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
     name: "ThirdPartyErrorsFilter",
     setup(on) {
       const options = on;
-      on.on("beforeEnvelope", (arg0) => {
-        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+      on.on("beforeEnvelope", (dependencyMap) => {
+        options(closure_1_1[1]).forEachEnvelopeItem(dependencyMap, (exception, arg1) => {
           if ("event" === arg1) {
             const _Array = Array;
             let tmp3;
-            if (Array.isArray(arg0)) {
-              tmp3 = arg0[1];
+            if (Array.isArray(exception)) {
+              tmp3 = exception[1];
             }
             if (tmp3) {
               const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-              arg0[1] = tmp3;
+              exception[1] = tmp3;
               const obj = options(dependencyMap[2]);
             }
           }

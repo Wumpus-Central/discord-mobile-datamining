@@ -1,122 +1,61 @@
 // === Module 4873: ? ===
 
 // Module 4873
-import _mod4594 from "module_4594" /* 4594 */;
-import module_4851_mod from "module_4851" /* 4851 */;
-import module_4852_mod from "module_4852" /* 4852 */;
-import startOfMonth_mod from "startOfMonth" /* 4805 */;
-import requiredArgs_mod from "requiredArgs" /* 4590 */;
-import module_4593_mod from "module_4593" /* 4593 */;
+import AsyncMode from "AsyncMode" /* 4871 */;
 
-let module_4851 = module_4851_mod;
-if (!module_4851) {
-  const obj = { default: module_4851 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4851;
-}
-module_4851 = tmp3;
-let module_4852 = module_4852_mod;
-if (!module_4852) {
-  const obj2 = { default: module_4852 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4852;
-}
-module_4852 = tmp5;
-let startOfMonth = startOfMonth_mod;
-if (!startOfMonth) {
-  const obj3 = { default: startOfMonth };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfMonth;
-}
-startOfMonth = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-let module_4593 = module_4593_mod;
-if (!module_4593) {
-  const obj5 = { default: module_4593 };
-  let tmp11 = obj5;
-} else {
-  tmp11 = module_4593;
-}
-module_4593 = tmp11;
-
-export default function getWeekOfMonth(arg0, weekStartsOn) {
-  requiredArgs.default(1, arguments);
-  const defaultOptions = _mod4594.getDefaultOptions();
-  weekStartsOn = undefined;
-  if (null != weekStartsOn) {
-    weekStartsOn = weekStartsOn.weekStartsOn;
+function getStatics(arg0) {
+  obj = AsyncMode;
+  if (obj.isMemo(arg0)) {
+    let tmp2 = obj;
+  } else {
+    tmp2 = obj2[arg0.$$typeof] || closure_2;
   }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != weekStartsOn) {
-      const locale = weekStartsOn.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
+  return tmp2;
+}
+let closure_2 = { childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true };
+let closure_3 = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
+let obj = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
+const obj2 = {};
+obj2[AsyncMode.ForwardRef] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true };
+obj2[AsyncMode.Memo] = obj;
+let closure_12 = Object.prototype;
+function hoistNonReactStatics(arg0, exports, arg2) {
+  if (typeof exports !== "string") {
+    if (closure_12) {
+      const tmp2 = getPrototypeOf(exports);
+      let tmp3 = tmp2;
+      if (tmp2) {
+        tmp3 = tmp2 !== tmp19;
+      }
+      if (tmp3) {
+        hoistNonReactStatics(arg0, tmp2, arg2);
+      }
+    }
+    obj = getOwnPropertyNames(exports);
+    let combined = obj;
+    if (getOwnPropertySymbols) {
+      combined = obj.concat(tmp7(exports));
+    }
+    let num = 0;
+    const tmp9 = getStatics(arg0);
+    if (0 < combined.length) {
+      if (!closure_3[combined[num]]) {
+        if (!arg2) {
+          if (!tmp10) {
+            if (!tmp9) {
+              try {
+                defineProperty(arg0, tmp11, tmp15);
+              } catch (err) {
+              }
             }
           }
         }
       }
+      num = num + 1;
     }
-    weekStartsOn = weekStartsOn1;
+    tmp10 = getStatics(exports);
   }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
-    }
-  }
-  const defaultResult1 = module_4593.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = module_4851.default(arg0);
-      const _isNaN = isNaN;
-      if (isNaN(defaultResult2)) {
-        return NaN;
-      } else {
-        const diff = defaultResult1 - module_4852.default(startOfMonth.default(arg0));
-        let sum = diff;
-        if (diff <= 0) {
-          sum = diff + 7;
-        }
-        const _Math = Math;
-        return Math.ceil((defaultResult2 - sum) / 7) + 1;
-      }
-    }
-  }
-  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  throw rangeError;
-};
-export default exports.default;
+  return arg0;
+}
+
+export default hoistNonReactStatics;

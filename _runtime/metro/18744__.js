@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 192.33333333333334, height: 416, scales: [3], hash: "950ed1a59e00e0a2f0700a2a2cd2a284", name: "welcome-bg", type: "webp" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "fd7a05931e4df085da6e8b62ffa48f48", name: "SaveIcon", type: "png" });

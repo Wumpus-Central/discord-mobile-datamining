@@ -9,8 +9,8 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const map = new Map();
 const set = new Set();
 
-export function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
+export function addMetadataToStackFrames(stackParser, exception) {
+  closure_0 = stackParser;
   exception = exception.exception;
   if (exception != null) {
     const values = exception.values;
@@ -45,7 +45,7 @@ export function addMetadataToStackFrames(arg0, exception) {
                         continue;
                       }
                     }
-                  })(closure_1_0);
+                  })(stackParser);
                   value = map.get(filename.filename);
                   if (value) {
                     filename.module_metadata = value;

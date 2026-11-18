@@ -2,7 +2,7 @@
 
 // Module 688 (consoleSandbox)
 import _mod685 from "module_685" /* 685 */;
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import _mod689 from "module_689" /* 689 */;
 
 require = arg1;
@@ -38,7 +38,7 @@ function _maybeLog(arg0) {
   dependencyMap = [...arguments].slice();
   let str = _require;
   let fn = dependencyMap;
-  const DEBUG_BUILD = require("module_687").DEBUG_BUILD;
+  const DEBUG_BUILD = require("__SENTRY_DEBUG__").DEBUG_BUILD;
   if (!DEBUG_BUILD) {
     if (DEBUG_BUILD) {
       consoleSandbox(() => {
@@ -66,7 +66,7 @@ export const CONSOLE_LEVELS = ["debug", "info", "warn", "error", "log", "assert"
 export { consoleSandbox };
 export const debug = {
   enable() {
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       let globalSingleton = _mod689.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
       const tmpResult = _mod689;
     } else {
@@ -75,7 +75,7 @@ export const debug = {
     globalSingleton.enabled = true;
   },
   disable() {
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       let globalSingleton = _mod689.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
       const tmpResult = _mod689;
     } else {
@@ -84,7 +84,7 @@ export const debug = {
     globalSingleton.enabled = false;
   },
   isEnabled() {
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       let globalSingleton = _mod689.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
       const tmpResult = _mod689;
     } else {

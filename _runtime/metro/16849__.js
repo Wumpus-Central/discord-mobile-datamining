@@ -1,9 +1,7 @@
 // === Module 16849: ? ===
 
 // Module 16849
-import _mod17 from "module_17" /* 17 */;
-import setupURLPolyfill_mod from "setupURLPolyfill" /* 16850 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const Platform = _mod17.Platform;
-let setupURLPolyfill = setupURLPolyfill_mod;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "152a215f261a7892afe1032dd66353df", name: "EmojiMoneyMouthFaceIcon", type: "png" });

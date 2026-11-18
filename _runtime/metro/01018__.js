@@ -44,8 +44,8 @@ export function isNearToNow(timestamp2) {
   }
   return tmp;
 }
-export function setSpanDurationAsMeasurement(time_to_full_display, _undefined) {
-  ({ timestamp, start_timestamp } = _mod681.spanToJSON(_undefined));
+export function setSpanDurationAsMeasurement(time_to_full_display, activeSpan) {
+  ({ timestamp, start_timestamp } = _mod681.spanToJSON(activeSpan));
   let tmp4 = timestamp;
   if (timestamp) {
     tmp4 = start_timestamp;
@@ -54,7 +54,7 @@ export function setSpanDurationAsMeasurement(time_to_full_display, _undefined) {
     _mod681.setMeasurement(time_to_full_display, 1000 * (timestamp - start_timestamp), "millisecond");
     const tmpResult = _mod681;
   }
-  const spanToJSONResult = _mod681.spanToJSON(_undefined);
+  const spanToJSONResult = _mod681.spanToJSON(activeSpan);
 }
 export function setSpanDurationAsMeasurementOnSpan(time_to_initial_display, span, activeSpan) {
   ({ timestamp, start_timestamp } = _mod681.spanToJSON(span));

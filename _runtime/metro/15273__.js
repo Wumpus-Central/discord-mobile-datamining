@@ -1,7 +1,18 @@
 // === Module 15273: ? ===
 
 // Module 15273
-import registerAsset from "module_1119" /* 1119 */;
+import _mod15266 from "module_15266" /* 15266 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 61, height: 61, scales: [3], hash: "3a3116b60fa5fc30eead27358e20c1e0", name: "asset_platinum_badge_small", type: "webp" });
+export default (arg0, arg1) => {
+  try {
+    const tmp8 = new _mod15266(arg0, arg1);
+    let str = tmp8.range;
+    if (!str) {
+      str = "*";
+    }
+    return str;
+  } catch (err) {
+    return null;
+  }
+};

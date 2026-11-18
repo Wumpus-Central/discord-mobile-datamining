@@ -1,17 +1,7 @@
 // === Module 7578: ? ===
 
 // Module 7578
-import _mod7579 from "module_7579" /* 7579 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function getDistanceForDirection(layout, gestureDirection, arg2) {
-  const invertedMultiplier = _mod7579.getInvertedMultiplier(gestureDirection, arg2);
-  if ("vertical" !== gestureDirection) {
-    if ("vertical-inverted" !== gestureDirection) {
-      return layout.width * invertedMultiplier;
-    }
-  }
-  return layout.height * invertedMultiplier;
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "4f2842b39c98933e8b7bea806132028f", name: "ForumLockIcon", type: "png" });

@@ -1,7 +1,67 @@
 // === Module 15439: ? ===
 
 // Module 15439
-import registerAsset from "module_1119" /* 1119 */;
+import e from "e" /* 1159 */;
+import calendars from "calendars" /* 15440 */;
+import hourCycles from "hourCycles" /* 15441 */;
+import timezones from "timezones" /* 15442 */;
+import weekData from "weekData" /* 15443 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 20, height: 20, scales: [2, 3], hash: "b8e06ae6b6de6ac4efb5803ebe56348e", name: "star", type: "png" });
+export function getCalendarPreferenceDataForRegion(region) {
+  let str = null;
+  if (region) {
+    str = region.toUpperCase();
+  }
+  if (!str) {
+    str = "";
+  }
+  return calendars.calendars[str] || calendars.calendars["001"].map((item) => {
+    let str = "gregory";
+    if ("gregorian" !== item) {
+      let str2 = "islamicc";
+      if ("islamic-civil" !== item) {
+        str2 = item;
+      }
+      str = str2;
+    }
+    return str;
+  });
+}
+export function getHourCyclesPreferenceDataForLocaleOrRegion(locale, region) {
+  const formatted = locale.toLowerCase();
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  let v001 = hourCycles.hourCycles[formatted] || hourCycles.hourCycles[str];
+  if (!v001) {
+    const concat = "".concat;
+    v001 = hourCycles.hourCycles["".concat("", formatted, "-001")];
+  }
+  if (!v001) {
+    v001 = hourCycles.hourCycles["001"];
+  }
+  return e.__spreadArray([], v001, true);
+}
+export function getTimeZonePreferenceForRegion(region) {
+  const formatted = region.toLowerCase();
+  items = [];
+  if (timezones.timezones[formatted]) {
+    return e.__spreadArray(items, timezones.timezones[formatted], true);
+  } else {
+    return items;
+  }
+}
+export function getWeekDataForRegion(region) {
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  if (!str) {
+    str = "001";
+  }
+  return weekData.weekData[str] || weekData.weekData["001"];
+}

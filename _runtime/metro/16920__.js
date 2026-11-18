@@ -1,18 +1,7 @@
 // === Module 16920: ? ===
 
 // Module 16920
+import registerAsset from "module_1119" /* 1119 */;
 
-export function getHostFromUrl(scriptURL) {
-  const match = scriptURL.match(/^(?:https?:\/\/)?(\[[^\]]+\]|[^/:\s]+)(?::\d+)?(?:[/?#]|$)/);
-  let tmp2;
-  if (match != null) {
-    tmp2 = match[1];
-  }
-  if (typeof tmp2 !== "string") {
-    const _Error = Error;
-    const error = new Error("Invalid URL - host not found");
-    throw error;
-  } else {
-    return tmp2;
-  }
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "b1309f8892f138383d8b0b6ff8e23463", name: "vi", type: "png" });

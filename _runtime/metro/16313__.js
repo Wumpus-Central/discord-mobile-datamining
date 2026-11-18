@@ -1,7 +1,54 @@
 // === Module 16313: ? ===
 
 // Module 16313
-import registerAsset from "module_1119" /* 1119 */;
+import _mod16244 from "module_16244" /* 16244 */;
 
+const Ident = _mod16244.TYPE.Ident;
+const Function = _mod16244.TYPE.Function;
+const Colon = _mod16244.TYPE.Colon;
+const RightParenthesis = _mod16244.TYPE.RightParenthesis;
+const obj = {
+  name: "PseudoClassSelector",
+  structure: null,
+  parse() {
+    const self = this;
+    this.eat(Colon);
+    if (this.scanner.tokenType === Function) {
+      const str = self.consumeFunctionName();
+      const formatted = str.toLowerCase();
+      const pseudo = self.pseudo;
+      if (!pseudo.hasOwnProperty(formatted)) {
+        const list = self.createList();
+        list.push(self.Raw(self.scanner.tokenIndex, null, false));
+        self.eat(RightParenthesis);
+      }
+      const scanner = self.scanner;
+      scanner.skipSC();
+      let skipSCResult1 = self.pseudo[formatted];
+      const call = skipSCResult1.call;
+      const scanner2 = self.scanner;
+      skipSCResult1 = scanner2.skipSC();
+      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
+    } else {
+      const element = { type: "PseudoClassSelector", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: self.consume(Ident), children: null };
+      return element;
+    }
+  },
+  generate(name) {
+    const self = this;
+    this.chunk(":");
+    this.chunk(name.name);
+    if (null !== name.children) {
+      self.chunk("(");
+      self.children(name);
+      self.chunk(")");
+    }
+  },
+  walkContext: "function"
+};
+const obj2 = { name: String, children: null };
+const items = [["Raw"], null];
+obj2.children = items;
+obj.structure = obj2;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ebf39623cd7d642af1c5756d58046968", name: "SignPostIcon", type: "png" });
+export default obj;

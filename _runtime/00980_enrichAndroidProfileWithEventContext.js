@@ -181,9 +181,9 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
 export function isValidProfile(samples) {
   return samples.samples.length > 1;
 }
-export function findProfiledTransactionsFromEnvelope(arg0) {
+export function findProfiledTransactionsFromEnvelope(dependencyMap) {
   items = [];
-  _mod681.forEachEnvelopeItem(arg0, (arg0, arg1) => {
+  _mod681.forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
     if ("transaction" === arg1) {
       for (let num = 1; num < arg0.length; num = num + 1) {
         let contexts = arg0[num].contexts;

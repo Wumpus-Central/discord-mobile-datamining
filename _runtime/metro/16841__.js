@@ -1,13 +1,7 @@
 // === Module 16841: ? ===
 
 // Module 16841
-import _mod16789 from "module_16789" /* 16789 */;
-import _mod16798 from "module_16798" /* 16798 */;
-import all from "module_16808" /* 16808 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-let closure_0 = _mod16789(Function.toString);
-if (!all(_mod16798.inspectSource)) {
-  _mod16798.inspectSource = (arg0) => closure_0(arg0);
-}
 
-export default _mod16798.inspectSource;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "11800cac78ee381d38bd7d0b06eed7b0", name: "EmojiFaceVomitingIcon", type: "png" });

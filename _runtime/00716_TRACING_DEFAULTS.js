@@ -2,7 +2,7 @@
 
 // Module 716 (TRACING_DEFAULTS)
 import spanToJSON from "spanToJSON" /* 683 */;
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 704 */;
 import logIgnoredSpan from "logIgnoredSpan" /* 723 */;
@@ -14,7 +14,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const TRACING_DEFAULTS = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };
 
 export { TRACING_DEFAULTS };
-export function startIdleSpan(arg0) {
+export function startIdleSpan(mcpServerSpanConfig) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -28,8 +28,8 @@ export function startIdleSpan(arg0) {
   let currentScope;
   let activeSpan;
   c14 = undefined;
-  function onIdleSpanEnded(arg0) {
-    closure_0 = arg0;
+  function onIdleSpanEnded(bound) {
+    closure_0 = bound;
     c2 = true;
     map.clear();
     const item = items.forEach((fn) => fn());
@@ -59,7 +59,7 @@ export function startIdleSpan(arg0) {
           const obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "cancelled" };
           isRecording.setStatus(obj);
           isRecording.end(closure_0);
-          if (_mod687.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
             const debug = consoleSandbox.debug;
             const _JSON = JSON;
             debug.log("[Tracing] Cancelling span since span ended early", JSON.stringify(isRecording, undefined, 2));
@@ -77,7 +77,7 @@ export function startIdleSpan(arg0) {
           num3 = start_timestamp;
         }
         let tmp14 = num2 - num3 <= (finalTimeout + idleTimeout) / 1000;
-        if (_mod687.DEBUG_BUILD) {
+        if (__SENTRY_DEBUG__.DEBUG_BUILD) {
           const _JSON2 = JSON;
           const json = JSON.stringify(isRecording, undefined, 2);
           if (tmp13) {
@@ -131,7 +131,7 @@ export function startIdleSpan(arg0) {
       const tmp5Result8 = tmp5(tmp6[1]);
       activeSpan = tmp5(tmp6[5]).getActiveSpan();
       const tmp5Result9 = tmp5(tmp6[5]);
-      const startInactiveSpanResult = tmp5(tmp6[14]).startInactiveSpan(arg0);
+      const startInactiveSpanResult = tmp5(tmp6[14]).startInactiveSpan(mcpServerSpanConfig);
       const tmp5Result10 = tmp5(tmp6[14]);
       const tmp5Result11 = tmp5(tmp6[8]);
       tmp5Result11._setSpanForScope(tmp5(tmp6[1]).getCurrentScope(), startInactiveSpanResult);

@@ -207,18 +207,18 @@ function visit(arg0, __sentry_skip_normalization__) {
   return __sentry_skip_normalization__;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-function normalizeToSize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
+function normalizeToSize(error) {
+  let num = normalizeDepth;
+  if (normalizeDepth === undefined) {
     num = 3;
   }
   let num2 = arg2;
   if (arg2 === undefined) {
     num2 = 102400;
   }
-  let tmp = normalize(arg0, num);
+  let tmp = normalize(error, num);
   if (~-str.split(/%..|./).length > num2) {
-    tmp = normalizeToSize(arg0, num - 1, num2);
+    tmp = normalizeToSize(error, num - 1, num2);
   }
   return tmp;
 }

@@ -1,52 +1,7 @@
 // === Module 16915: ? ===
 
 // Module 16915
-import noop from "module_19" /* 19 */;
-import module_16897_mod from "module_16897" /* 16897 */;
-import _isNativeReflectConstruct_mod from "module_16916" /* 16916 */;
-import jsxProd from "jsxProd" /* 21 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-if (noop) {
-  const __esModule = noop.__esModule;
-}
-let module_16897 = module_16897_mod;
-if (!module_16897) {
-  let obj = { default: module_16897 };
-  let tmp4 = obj;
-} else {
-  tmp4 = module_16897;
-}
-module_16897 = tmp4;
-let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
-if (!_isNativeReflectConstruct) {
-  const obj2 = { default: _isNativeReflectConstruct };
-  let tmp6 = obj2;
-} else {
-  tmp6 = _isNativeReflectConstruct;
-}
-_isNativeReflectConstruct = tmp6;
 
-export default () => () => {
-  closure_0 = closure_0.default();
-  return {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
-      }
-    },
-    features: {
-      storybookSwitcher(arg0) {
-        closure_0 = arg0;
-        return (arg0) => {
-          closure_0 = arg0;
-          return function StorybookSwitcherContainer(arg0) {
-            const obj = { storybookUi: emitter, emitter, children: null };
-            const merged = Object.assign(arg0);
-            obj.children = <emitter />;
-            return <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>{null}</_isNativeReflectConstruct.default>;
-          };
-        };
-      }
-    }
-  };
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "64f37efd5319b9b581557604864f042a", name: "ru", type: "png" });

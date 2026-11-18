@@ -1,30 +1,26 @@
 // === Module 4591: ? ===
 
 // Module 4591
-import requiredArgs_mod from "requiredArgs" /* 4590 */;
-import startOfUTCWeek_mod from "startOfUTCWeek" /* 4592 */;
-
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
-  let tmp3 = obj;
-} else {
-  tmp3 = requiredArgs;
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "pl" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = { long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" } };
+    obj3.conjunction = obj4;
+    const obj5 = { long: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" }, narrow: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" }, short: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" } };
+    obj3.disjunction = obj5;
+    const obj6 = { long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" } };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
+  }
 }
-requiredArgs = tmp3;
-let startOfUTCWeek = startOfUTCWeek_mod;
-if (!startOfUTCWeek) {
-  const obj2 = { default: startOfUTCWeek };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfUTCWeek;
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
 }
-startOfUTCWeek = tmp5;
-
-export default function isSameUTCWeek(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfUTCWeek.default(arg0, arg2);
-  const time = defaultResult1.getTime();
-  return time === startOfUTCWeek.default(arg1, arg2).getTime();
-};
-export default exports.default;
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = { data: { conjunction: { long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" }, narrow: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" }, short: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" } } }, locale: "pl" };
+prop.push(obj);

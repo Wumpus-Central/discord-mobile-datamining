@@ -171,8 +171,8 @@ export function rejectedSyncPromise(arg0) {
     fn(closure_0);
   });
 }
-export function resolvedSyncPromise(arg0) {
-  closure_0 = arg0;
+export function resolvedSyncPromise(tmpResult) {
+  closure_0 = tmpResult;
   return new _moduleResult((fn) => {
     fn(closure_0);
   });

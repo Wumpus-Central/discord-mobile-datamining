@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/forums/native/images", width: 120, height: 80, scales: [2, 3], hash: "80a29bcae35fa62f1f957cb01201db17", name: "img_forum_empty_state_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 120, height: 96, scales: [2, 3], hash: "21dd2828907413d4c11bf84cb61743df", name: "search_empty_state_light", type: "png" });

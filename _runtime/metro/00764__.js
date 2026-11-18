@@ -223,6 +223,6 @@ export function stripDataUrlContent(url, arg1) {
     return url;
   }
 }
-export function stripUrlQueryAndFragment(arg0) {
-  return arg0.split(/[?#]/, 1)[0];
+export function stripUrlQueryAndFragment(href) {
+  return href.split(/[?#]/, 1)[0];
 }

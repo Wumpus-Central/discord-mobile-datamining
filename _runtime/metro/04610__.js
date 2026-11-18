@@ -1,32 +1,95 @@
 // === Module 4610: ? ===
 
 // Module 4610
-const obj = { lessThanXSeconds: { standalone: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" }, withPreposition: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" } }, xSeconds: { standalone: { one: "1 Sekunde", other: "{{count}} Sekunden" }, withPreposition: { one: "1 Sekunde", other: "{{count}} Sekunden" } }, halfAMinute: { standalone: "halbe Minute", withPreposition: "halben Minute" }, lessThanXMinutes: { standalone: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" }, withPreposition: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" } }, xMinutes: { standalone: { one: "1 Minute", other: "{{count}} Minuten" }, withPreposition: { one: "1 Minute", other: "{{count}} Minuten" } }, aboutXHours: { standalone: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" }, withPreposition: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" } }, xHours: { standalone: { one: "1 Stunde", other: "{{count}} Stunden" }, withPreposition: { one: "1 Stunde", other: "{{count}} Stunden" } }, xDays: { standalone: { one: "1 Tag", other: "{{count}} Tage" }, withPreposition: { one: "1 Tag", other: "{{count}} Tagen" } }, aboutXWeeks: { standalone: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" }, withPreposition: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" } }, xWeeks: { standalone: { one: "1 Woche", other: "{{count}} Wochen" }, withPreposition: { one: "1 Woche", other: "{{count}} Wochen" } }, aboutXMonths: { standalone: { one: "etwa 1 Monat", other: "etwa {{count}} Monate" }, withPreposition: { one: "etwa 1 Monat", other: "etwa {{count}} Monaten" } }, xMonths: { standalone: { one: "1 Monat", other: "{{count}} Monate" }, withPreposition: { one: "1 Monat", other: "{{count}} Monaten" } }, aboutXYears: { standalone: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahre" }, withPreposition: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahren" } }, xYears: { standalone: { one: "1 Jahr", other: "{{count}} Jahre" }, withPreposition: { one: "1 Jahr", other: "{{count}} Jahren" } }, overXYears: { standalone: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahre" }, withPreposition: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahren" } }, almostXYears: { standalone: { one: "fast 1 Jahr", other: "fast {{count}} Jahre" }, withPreposition: { one: "fast 1 Jahr", other: "fast {{count}} Jahren" } } };
+import _mod2169 from "module_2169" /* 2169 */;
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (null != addSuffix) {
-    if (addSuffix.addSuffix) {
-      let standalone = obj[arg0].withPreposition;
-    }
-    if (typeof standalone === "string") {
-      let tmp5 = standalone;
-      if (null != addSuffix) {
-        tmp5 = standalone;
-        if (addSuffix.addSuffix) {
-          if (!addSuffix.comparison) {
-            let text = `vor ${standalone}`;
-          }
-          text = `in ${standalone}`;
+const fn = function n(moment) {
+  closure_0 = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_");
+  closure_1 = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_");
+  items = [/^ene/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i];
+  const tmp = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
+  let obj = {
+    months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
+    monthsShort(arg0, arg1) {
+      if (arg0) {
+        if (obj.test(arg1)) {
+          let tmp3 = closure_1[arg0.month(arg0)];
+        } else {
+          tmp3 = closure_0[arg0.month(arg0)];
         }
+        obj = /-MMM-/;
+      } else {
+        return closure_0;
       }
-      return tmp5;
-    } else if (1 === arg1) {
-      let one = standalone.one;
-    } else {
-      const _String = String;
-      one = standalone.other.replace("{{count}}", String(arg1));
+    },
+    monthsRegex: tmp,
+    monthsShortRegex: tmp,
+    monthsStrictRegex: /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
+    monthsShortStrictRegex: /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
+    monthsParse: items,
+    longMonthsParse: items,
+    shortMonthsParse: items,
+    weekdays: "domingo_lunes_martes_mi\u00E9rcoles_jueves_viernes_s\u00E1bado".split("_"),
+    weekdaysShort: "dom._lun._mar._mi\u00E9._jue._vie._s\u00E1b.".split("_"),
+    weekdaysMin: "do_lu_ma_mi_ju_vi_s\u00E1".split("_"),
+    weekdaysParseExact: true,
+    longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "DD/MM/YYYY", LL: "D [de] MMMM [de] YYYY", LLL: "D [de] MMMM [de] YYYY H:mm", LLLL: "dddd, D [de] MMMM [de] YYYY H:mm" },
+    calendar: {
+      sameDay() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[hoy a la" + str + "] LT";
+      },
+      nextDay() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[ma\u00F1ana a la" + str + "] LT";
+      },
+      nextWeek() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "dddd [a la" + str + "] LT";
+      },
+      lastDay() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[ayer a la" + str + "] LT";
+      },
+      lastWeek() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[el] dddd [pasado a la" + str + "] LT";
+      },
+      sameElse: "L"
+    },
+    relativeTime: { future: "en %s", past: "hace %s", s: "unos segundos", ss: "%d segundos", m: "un minuto", mm: "%d minutos", h: "una hora", hh: "%d horas", d: "un d\u00EDa", dd: "%d d\u00EDas", w: "una semana", ww: "%d semanas", M: "un mes", MM: "%d meses", y: "un a\u00F1o", yy: "%d a\u00F1os" },
+    dayOfMonthOrdinalParse: /\d{1,2}º/,
+    ordinal: "%d\u00BA",
+    week: { dow: 1, doy: 4 },
+    invalidDate: "Fecha inv\u00E1lida"
+  };
+  return moment.defineLocale("es", obj);
+};
+if (typeof exports === "object") {
+  if (undefined !== module) {
+    if (typeof require === "function") {
+      fn(_mod2169);
     }
   }
-  standalone = obj[arg0].standalone;
-};
-export default exports.default;
+}
+if (typeof globalThis.define === "function") {
+  if (globalThis.define.amd) {
+    globalThis.define(["../moment"], fn);
+  }
+}
+fn(this.moment);

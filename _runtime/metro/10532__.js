@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "856ae0fb80fb3c5e7cc40888f4bebb2b", name: "YoutubeNeutralIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback/light-theme-desaturated", width: 64, height: 64, scales: [2, 3], hash: "9b2f923b8e946c7e2b9908f52890f136", name: "feedback-modal-happy-desaturated", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 16578: ? ===
 
 // Module 16578
-import _mod16568 from "module_16568" /* 16568 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default (arg0, arg1, arg2) => _mod16568(arg0, arg1, arg2) >= 0;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/native/images", width: 375, height: 58, scales: [1, 2, 3], hash: "e5d497e242dfffadb8102108e8df2b1a", name: "clouds_background", type: "png" });

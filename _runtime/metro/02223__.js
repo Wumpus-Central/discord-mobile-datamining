@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/ZGVzaWdu", scales: [1], hash: "397fbbf73a9f377de9a10acf9d0d7f1a", name: "pt-BR.messages.397fbbf73a9f377de9a10acf9d0d7f1a.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/intl", scales: [1], hash: "6aa48a9465730536f802765463ff8869", name: "Mana.compiled.messages", type: "jsona" });

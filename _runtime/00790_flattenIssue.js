@@ -31,8 +31,8 @@ function flattenIssue(path) {
   obj.unionErrors = json1;
   return obj;
 }
-function flattenIssuePath(arr) {
-  const mapped = arr.map((item) => {
+function flattenIssuePath(path) {
+  const mapped = path.map((item) => {
     let str = "<array>";
     if (typeof item !== "number") {
       str = item;
@@ -41,7 +41,7 @@ function flattenIssuePath(arr) {
   });
   return mapped.join(".");
 }
-function formatIssueMessage(issues) {
+function formatIssueMessage(originalException) {
   const set = new Set();
   while (tmp !== undefined) {
     let arr = flattenIssuePath(tmp2.path);
@@ -53,8 +53,8 @@ function formatIssueMessage(issues) {
   const arr2 = Array.from(set);
   if (0 === arr2.length) {
     let str4 = "variable";
-    if (issues.issues.length > 0) {
-      const first = issues.issues[0];
+    if (originalException.issues.length > 0) {
+      const first = originalException.issues[0];
       let tmp10 = undefined !== first;
       if (tmp10) {
         tmp10 = "expected" in first;
@@ -73,11 +73,11 @@ function formatIssueMessage(issues) {
     const _HermesInternal = HermesInternal;
     return "Failed to validate keys: " + _mod696.truncate(arr2.join(", "), 100);
   }
-  tmp = issues.issues[Symbol.iterator]();
+  tmp = originalException.issues[Symbol.iterator]();
 }
-function applyZodErrorsToEvent(arg0, arg1) {
-  let flag = arg1;
-  if (arg1 === undefined) {
+function applyZodErrorsToEvent(arg0) {
+  let flag = saveZodIssuesAsAttachment;
+  if (saveZodIssuesAsAttachment === undefined) {
     flag = false;
   }
   exception = exception.exception;
@@ -175,8 +175,8 @@ export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
   }
   return {
     name: "ZodErrors",
-    processEvent(arg0, arg1) {
-      return applyZodErrorsToEvent(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
+    processEvent(exception, originalException) {
+      return applyZodErrorsToEvent(num, obj.saveZodIssuesAsAttachment, exception, originalException);
     }
   };
 });

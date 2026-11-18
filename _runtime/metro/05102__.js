@@ -1,374 +1,202 @@
 // === Module 5102: ? ===
 
 // Module 5102
-import _mod2169 from "module_2169" /* 2169 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      const _module = _mod2169;
-      const obj2 = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: "%d\u00BA", week: null };
-      const split = "gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre".split;
-      obj2.months = "gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre".split("_");
-      const split2 = "gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic".split;
-      obj2.monthsShort = "gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic".split("_");
-      const split3 = "domenica_luned\u00EC_marted\u00EC_mercoled\u00EC_gioved\u00EC_venerd\u00EC_sabato".split;
-      obj2.weekdays = "domenica_luned\u00EC_marted\u00EC_mercoled\u00EC_gioved\u00EC_venerd\u00EC_sabato".split("_");
-      const split4 = "dom_lun_mar_mer_gio_ven_sab".split;
-      obj2.weekdaysShort = "dom_lun_mar_mer_gio_ven_sab".split("_");
-      const split5 = "do_lu_ma_me_gi_ve_sa".split;
-      obj2.weekdaysMin = "do_lu_ma_me_gi_ve_sa".split("_");
-      obj2.longDateFormat = { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD/MM/YYYY", LL: "D MMMM YYYY", LLL: "D MMMM YYYY HH:mm", LLLL: "dddd D MMMM YYYY HH:mm" };
-      const obj3 = {
-        sameDay() {
-                const self = this;
-                let str = "lle ";
-                if (this.hours() <= 1) {
-                  let str2 = "ll'";
-                  if (0 === self.hours()) {
-                    str2 = " ";
-                  }
-                  str = str2;
-                }
-                return "[Oggi a" + str + "]LT";
-              },
-        nextDay() {
-                const self = this;
-                let str = "lle ";
-                if (this.hours() <= 1) {
-                  let str2 = "ll'";
-                  if (0 === self.hours()) {
-                    str2 = " ";
-                  }
-                  str = str2;
-                }
-                return "[Domani a" + str + "]LT";
-              },
-        nextWeek() {
-                const self = this;
-                let str = "lle ";
-                if (this.hours() <= 1) {
-                  let str2 = "ll'";
-                  if (0 === self.hours()) {
-                    str2 = " ";
-                  }
-                  str = str2;
-                }
-                return "dddd [a" + str + "]LT";
-              },
-        lastDay() {
-                const self = this;
-                let str = "lle ";
-                if (this.hours() <= 1) {
-                  let str2 = "ll'";
-                  if (0 === self.hours()) {
-                    str2 = " ";
-                  }
-                  str = str2;
-                }
-                return "[Ieri a" + str + "]LT";
-              },
-        lastWeek() {
-                const self = this;
-                if (0 === this.day()) {
-                  let str5 = "lle ";
-                  if (self.hours() <= 1) {
-                    let str6 = "ll'";
-                    if (0 === self.hours()) {
-                      str6 = " ";
-                    }
-                    str5 = str6;
-                  }
-                  const _HermesInternal2 = HermesInternal;
-                  let combined = "[La scorsa] dddd [a" + str5 + "]LT";
-                } else {
-                  let str = "lle ";
-                  if (self.hours() <= 1) {
-                    let str2 = "ll'";
-                    if (0 === self.hours()) {
-                      str2 = " ";
-                    }
-                    str = str2;
-                  }
-                  const _HermesInternal = HermesInternal;
-                  combined = "[Lo scorso] dddd [a" + str + "]LT";
-                }
-                return combined;
-              },
-        sameElse: "L"
-      };
-      obj2.calendar = obj3;
-      obj2.relativeTime = { future: "tra %s", past: "%s fa", s: "alcuni secondi", ss: "%d secondi", m: "un minuto", mm: "%d minuti", h: "un'ora", hh: "%d ore", d: "un giorno", dd: "%d giorni", w: "una settimana", ww: "%d settimane", M: "un mese", MM: "%d mesi", y: "un anno", yy: "%d anni" };
-      obj2.dayOfMonthOrdinalParse = /\d{1,2}º/;
-      obj2.week = { dow: 1, doy: 4 };
-      _module.defineLocale("it", obj2);
-    }
-  }
-}
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], function t(defineLocale) {
-      const obj = {
-        months: "gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre".split("_"),
-        monthsShort: "gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic".split("_"),
-        weekdays: "domenica_luned\u00EC_marted\u00EC_mercoled\u00EC_gioved\u00EC_venerd\u00EC_sabato".split("_"),
-        weekdaysShort: "dom_lun_mar_mer_gio_ven_sab".split("_"),
-        weekdaysMin: "do_lu_ma_me_gi_ve_sa".split("_"),
-        longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD/MM/YYYY", LL: "D MMMM YYYY", LLL: "D MMMM YYYY HH:mm", LLLL: "dddd D MMMM YYYY HH:mm" },
-        calendar: {
-          sameDay() {
-            const self = this;
-            let str = "lle ";
-            if (this.hours() <= 1) {
-              let str2 = "ll'";
-              if (0 === self.hours()) {
-                str2 = " ";
-              }
-              str = str2;
-            }
-            return "[Oggi a" + str + "]LT";
-          },
-          nextDay() {
-            const self = this;
-            let str = "lle ";
-            if (this.hours() <= 1) {
-              let str2 = "ll'";
-              if (0 === self.hours()) {
-                str2 = " ";
-              }
-              str = str2;
-            }
-            return "[Domani a" + str + "]LT";
-          },
-          nextWeek() {
-            const self = this;
-            let str = "lle ";
-            if (this.hours() <= 1) {
-              let str2 = "ll'";
-              if (0 === self.hours()) {
-                str2 = " ";
-              }
-              str = str2;
-            }
-            return "dddd [a" + str + "]LT";
-          },
-          lastDay() {
-            const self = this;
-            let str = "lle ";
-            if (this.hours() <= 1) {
-              let str2 = "ll'";
-              if (0 === self.hours()) {
-                str2 = " ";
-              }
-              str = str2;
-            }
-            return "[Ieri a" + str + "]LT";
-          },
-          lastWeek() {
-            const self = this;
-            if (0 === this.day()) {
-              let str5 = "lle ";
-              if (self.hours() <= 1) {
-                let str6 = "ll'";
-                if (0 === self.hours()) {
-                  str6 = " ";
-                }
-                str5 = str6;
-              }
-              const _HermesInternal2 = HermesInternal;
-              let combined = "[La scorsa] dddd [a" + str5 + "]LT";
-            } else {
-              let str = "lle ";
-              if (self.hours() <= 1) {
-                let str2 = "ll'";
-                if (0 === self.hours()) {
-                  str2 = " ";
-                }
-                str = str2;
-              }
-              const _HermesInternal = HermesInternal;
-              combined = "[Lo scorso] dddd [a" + str + "]LT";
-            }
-            return combined;
-          },
-          sameElse: "L"
-        },
-        relativeTime: { future: "tra %s", past: "%s fa", s: "alcuni secondi", ss: "%d secondi", m: "un minuto", mm: "%d minuti", h: "un'ora", hh: "%d ore", d: "un giorno", dd: "%d giorni", w: "una settimana", ww: "%d settimane", M: "un mese", MM: "%d mesi", y: "un anno", yy: "%d anni" },
-        dayOfMonthOrdinalParse: /\d{1,2}º/,
-        ordinal: "%d\u00BA",
-        week: { dow: 1, doy: 4 }
-      };
-      return defineLocale.defineLocale("it", obj);
-    });
-  }
-}
-const moment = this.moment;
-let obj = {
-  months: "gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre".split("_"),
-  monthsShort: "gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic".split("_"),
-  weekdays: "domenica_luned\u00EC_marted\u00EC_mercoled\u00EC_gioved\u00EC_venerd\u00EC_sabato".split("_"),
-  weekdaysShort: "dom_lun_mar_mer_gio_ven_sab".split("_"),
-  weekdaysMin: "do_lu_ma_me_gi_ve_sa".split("_"),
-  longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD/MM/YYYY", LL: "D MMMM YYYY", LLL: "D MMMM YYYY HH:mm", LLLL: "dddd D MMMM YYYY HH:mm" },
-  calendar: {
-    sameDay() {
-      const self = this;
-      let str = "lle ";
-      if (this.hours() <= 1) {
-        let str2 = "ll'";
-        if (0 === self.hours()) {
-          str2 = " ";
-        }
-        str = str2;
-      }
-      return "[Oggi a" + str + "]LT";
-    },
-    nextDay() {
-      const self = this;
-      let str = "lle ";
-      if (this.hours() <= 1) {
-        let str2 = "ll'";
-        if (0 === self.hours()) {
-          str2 = " ";
-        }
-        str = str2;
-      }
-      return "[Domani a" + str + "]LT";
-    },
-    nextWeek() {
-      const self = this;
-      let str = "lle ";
-      if (this.hours() <= 1) {
-        let str2 = "ll'";
-        if (0 === self.hours()) {
-          str2 = " ";
-        }
-        str = str2;
-      }
-      return "dddd [a" + str + "]LT";
-    },
-    lastDay() {
-      const self = this;
-      let str = "lle ";
-      if (this.hours() <= 1) {
-        let str2 = "ll'";
-        if (0 === self.hours()) {
-          str2 = " ";
-        }
-        str = str2;
-      }
-      return "[Ieri a" + str + "]LT";
-    },
-    lastWeek() {
-      const self = this;
-      if (0 === this.day()) {
-        let str5 = "lle ";
-        if (self.hours() <= 1) {
-          let str6 = "ll'";
-          if (0 === self.hours()) {
-            str6 = " ";
-          }
-          str5 = str6;
-        }
-        const _HermesInternal2 = HermesInternal;
-        let combined = "[La scorsa] dddd [a" + str5 + "]LT";
-      } else {
-        let str = "lle ";
-        if (self.hours() <= 1) {
-          let str2 = "ll'";
-          if (0 === self.hours()) {
-            str2 = " ";
-          }
-          str = str2;
-        }
-        const _HermesInternal = HermesInternal;
-        combined = "[Lo scorso] dddd [a" + str + "]LT";
-      }
-      return combined;
-    },
-    sameElse: "L"
-  },
-  relativeTime: { future: "tra %s", past: "%s fa", s: "alcuni secondi", ss: "%d secondi", m: "un minuto", mm: "%d minuti", h: "un'ora", hh: "%d ore", d: "un giorno", dd: "%d giorni", w: "una settimana", ww: "%d settimane", M: "un mese", MM: "%d mesi", y: "un anno", yy: "%d anni" },
-  dayOfMonthOrdinalParse: /\d{1,2}º/,
-  ordinal: "%d\u00BA",
-  week: { dow: 1, doy: 4 }
-};
-moment.defineLocale("it", obj);
-const obj4 = {
-  sameDay() {
-    const self = this;
-    let str = "lle ";
-    if (this.hours() <= 1) {
-      let str2 = "ll'";
-      if (0 === self.hours()) {
-        str2 = " ";
-      }
-      str = str2;
-    }
-    return "[Oggi a" + str + "]LT";
-  },
-  nextDay() {
-    const self = this;
-    let str = "lle ";
-    if (this.hours() <= 1) {
-      let str2 = "ll'";
-      if (0 === self.hours()) {
-        str2 = " ";
-      }
-      str = str2;
-    }
-    return "[Domani a" + str + "]LT";
-  },
-  nextWeek() {
-    const self = this;
-    let str = "lle ";
-    if (this.hours() <= 1) {
-      let str2 = "ll'";
-      if (0 === self.hours()) {
-        str2 = " ";
-      }
-      str = str2;
-    }
-    return "dddd [a" + str + "]LT";
-  },
-  lastDay() {
-    const self = this;
-    let str = "lle ";
-    if (this.hours() <= 1) {
-      let str2 = "ll'";
-      if (0 === self.hours()) {
-        str2 = " ";
-      }
-      str = str2;
-    }
-    return "[Ieri a" + str + "]LT";
-  },
-  lastWeek() {
-    const self = this;
-    if (0 === this.day()) {
-      let str5 = "lle ";
-      if (self.hours() <= 1) {
-        let str6 = "ll'";
-        if (0 === self.hours()) {
-          str6 = " ";
-        }
-        str5 = str6;
-      }
-      const _HermesInternal2 = HermesInternal;
-      let combined = "[La scorsa] dddd [a" + str5 + "]LT";
+let ExclusiveGesture = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      let str = "lle ";
-      if (self.hours() <= 1) {
-        let str2 = "ll'";
-        if (0 === self.hours()) {
-          str2 = " ";
-        }
-        str = str2;
-      }
-      const _HermesInternal = HermesInternal;
-      combined = "[Lo scorso] dddd [a" + str + "]LT";
+      callResult = call(constructResult);
     }
-    return combined;
-  },
-  sameElse: "L"
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+class ComposedGesture {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.gestures = [];
+    tmp3Result.simultaneousGestures = [];
+    tmp3Result.requireGesturesToFail = [];
+    tmp3Result.gestures = items;
+    return tmp3Result;
+  }
+}
+ExclusiveGesture = ComposedGesture;
+_inherits(ComposedGesture, fn(5103).Gesture);
+const entry = {
+  key: "prepareSingleGesture",
+  value: function prepareSingleGesture(item10006, simultaneousGestures, requireGesturesToFail) {
+    if (item10006 instanceof ExclusiveGesture(5103).BaseGesture) {
+      if (item10006.relationsSnapshot == null) {
+        const obj = { simultaneousWith: item10006.config.simultaneousWith, requireToFail: item10006.config.requireToFail };
+        item10006.relationsSnapshot = obj;
+      }
+      const obj2 = {};
+      const merged = Object.assign(item10006.config);
+      const simultaneousWith = item10006.relationsSnapshot.simultaneousWith;
+      if (undefined === simultaneousWith) {
+        items = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, 0);
+        let items1 = items;
+      } else {
+        items1 = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, HermesBuiltin.arraySpread(simultaneousWith, 0));
+      }
+      obj2.simultaneousWith = items1;
+      const requireToFail = item10006.relationsSnapshot.requireToFail;
+      if (undefined === requireToFail) {
+        const items2 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, 0);
+        let items3 = items2;
+      } else {
+        items3 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, HermesBuiltin.arraySpread(requireToFail, 0));
+      }
+      obj2.requireToFail = items3;
+      item10006.config = obj2;
+    } else if (item10006 instanceof ExclusiveGesture) {
+      item10006.simultaneousGestures = simultaneousGestures;
+      item10006.requireGesturesToFail = requireGesturesToFail;
+      item10006.prepare();
+    }
+  }
 };
+let items = [
+  entry,
+  {
+    key: "prepare",
+    value: function prepare() {
+      const self = this;
+      for (const item10006 of tmp) {
+        let prepareSingleGestureResult = self.prepareSingleGesture(item10006, self.simultaneousGestures, self.requireGesturesToFail);
+        continue;
+      }
+    }
+  },
+  {
+    key: "initialize",
+    value: function initialize() {
+      for (const item10006 of tmp) {
+        let initializeResult = item10006.initialize();
+        continue;
+      }
+    }
+  },
+  {
+    key: "toGestureArray",
+    value: function toGestureArray() {
+      const gestures = this.gestures;
+      return gestures.flatMap((toGestureArray) => toGestureArray.toGestureArray());
+    }
+  }
+];
+const importDefaultResultResult = _createClass(ComposedGesture, items);
+class SimultaneousGesture {
+  constructor() {
+    self = this;
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+ExclusiveGesture = SimultaneousGesture;
+_inherits(SimultaneousGesture, importDefaultResultResult);
+const entry1 = {
+  key: "prepare",
+  value: function prepare() {
+    const self = this;
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], tmp[num], self.requireGesturesToFail);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
+  }
+};
+let items1 = [entry1];
+class ExclusiveGesture {
+  constructor() {
+    self = this;
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ExclusiveGesture, importDefaultResultResult);
+const entry2 = {
+  key: "prepare",
+  value: function prepare() {
+    const self = this;
+    items = [];
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let requireGesturesToFail = self.requireGesturesToFail;
+        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], self.simultaneousGestures, requireGesturesToFail.concat(items));
+        items = items.concat(tmp[num]);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
+  }
+};
+let items2 = [entry2];
+
+export const ComposedGesture = importDefaultResultResult;
+export const SimultaneousGesture = _createClass(SimultaneousGesture, items1);
+export const ExclusiveGesture = _createClass(ExclusiveGesture, items2);

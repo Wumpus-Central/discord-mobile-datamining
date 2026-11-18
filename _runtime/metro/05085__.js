@@ -1,26 +1,176 @@
 // === Module 5085: ? ===
 
 // Module 5085
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "uk" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = { long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" } };
-    obj3.conjunction = obj4;
-    const obj5 = { long: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" }, short: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" } };
-    obj3.disjunction = obj5;
-    const obj6 = { long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" } };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
+import _mod17 from "module_17" /* 17 */;
+import handlerIDToTag from "handlerIDToTag" /* 5086 */;
+import _mod5088 from "module_5088" /* 5088 */;
+import gestureStateManager from "gestureStateManager" /* 5089 */;
+import TouchEventType from "TouchEventType" /* 5090 */;
+
+function onGestureHandlerEvent(handlerTag) {
+  const findHandlerResult = handlerIDToTag.findHandler(handlerTag.handlerTag);
+  if (findHandlerResult) {
+    if (null != handlerTag.oldState) {
+      if (handlerTag.oldState === _mod5088.State.UNDETERMINED) {
+        if (handlerTag.state === _mod5088.State.BEGAN) {
+          const handlers11 = findHandlerResult.handlers;
+          const onBegin = handlers11.onBegin;
+          if (onBegin != null) {
+            onBegin(handlerTag);
+          }
+        }
+      }
+      if (handlerTag.oldState === _mod5088.State.BEGAN) {
+        if (handlerTag.state === _mod5088.State.ACTIVE) {
+          const handlers6 = findHandlerResult.handlers;
+          const onStart = handlers6.onStart;
+          if (onStart != null) {
+            onStart(handlerTag);
+          }
+          closure_6[findHandlerResult.handlers.handlerTag] = handlerTag;
+        }
+      }
+      if (handlerTag.oldState !== handlerTag.state) {
+        if (handlerTag.state === _mod5088.State.END) {
+          if (handlerTag.oldState === _mod5088.State.ACTIVE) {
+            const handlers9 = findHandlerResult.handlers;
+            const onEnd2 = handlers9.onEnd;
+            if (onEnd2 != null) {
+              onEnd2(handlerTag, true);
+            }
+          }
+          const handlers10 = findHandlerResult.handlers;
+          const onFinalize2 = handlers10.onFinalize;
+          if (onFinalize2 != null) {
+            onFinalize2(handlerTag, true);
+          }
+          closure_6[findHandlerResult.handlers.handlerTag] = undefined;
+        }
+      }
+      let tmp18 = handlerTag.state !== _mod5088.State.FAILED;
+      if (tmp18) {
+        tmp18 = handlerTag.state !== _mod5088.State.CANCELLED;
+      }
+      if (!tmp18) {
+        tmp18 = handlerTag.oldState === handlerTag.state;
+      }
+      if (!tmp18) {
+        if (handlerTag.oldState === _mod5088.State.ACTIVE) {
+          const handlers7 = findHandlerResult.handlers;
+          const onEnd = handlers7.onEnd;
+          if (onEnd != null) {
+            onEnd(handlerTag, false);
+          }
+        }
+        const handlers8 = findHandlerResult.handlers;
+        const onFinalize = handlers8.onFinalize;
+        if (onFinalize != null) {
+          onFinalize(handlerTag, false);
+        }
+        map.delete(handlerTag.handlerTag);
+        closure_6[findHandlerResult.handlers.handlerTag] = undefined;
+      }
+    } else if (null != handlerTag.eventType) {
+      if (!map.has(handlerTag.handlerTag)) {
+        const GestureStateManager = gestureStateManager.GestureStateManager;
+        const result = map.set(handlerTag.handlerTag, GestureStateManager.create(handlerTag.handlerTag));
+      }
+      value = map.get(handlerTag.handlerTag);
+      const eventType = handlerTag.eventType;
+      if (TouchEventType.TouchEventType.TOUCHES_DOWN === eventType) {
+        const handlers5 = findHandlerResult.handlers;
+        if (handlers5 != null) {
+          const onTouchesDown = handlers5.onTouchesDown;
+          if (onTouchesDown != null) {
+            onTouchesDown(handlerTag, value);
+          }
+        }
+      } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === eventType) {
+        const handlers4 = findHandlerResult.handlers;
+        if (handlers4 != null) {
+          const onTouchesMove = handlers4.onTouchesMove;
+          if (onTouchesMove != null) {
+            onTouchesMove(handlerTag, value);
+          }
+        }
+      } else if (TouchEventType.TouchEventType.TOUCHES_UP === eventType) {
+        const handlers3 = findHandlerResult.handlers;
+        if (handlers3 != null) {
+          const onTouchesUp = handlers3.onTouchesUp;
+          if (onTouchesUp != null) {
+            onTouchesUp(handlerTag, value);
+          }
+        }
+      } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === eventType) {
+        const handlers13 = findHandlerResult.handlers;
+        if (handlers13 != null) {
+          const onTouchesCancelled = handlers13.onTouchesCancelled;
+          if (onTouchesCancelled != null) {
+            onTouchesCancelled(handlerTag, value);
+          }
+        }
+      }
+    } else {
+      const handlers12 = findHandlerResult.handlers;
+      const onUpdate = handlers12.onUpdate;
+      if (onUpdate != null) {
+        onUpdate(handlerTag);
+      }
+      if (tmp9) {
+        const handlers = findHandlerResult.handlers;
+        const onChange = handlers.onChange;
+        if (onChange != null) {
+          const handlers2 = findHandlerResult.handlers;
+          const changeEventCalculator = handlers2.changeEventCalculator;
+          let result1;
+          if (changeEventCalculator != null) {
+            result1 = changeEventCalculator(handlerTag, closure_6[findHandlerResult.handlers.handlerTag]);
+          }
+          onChange(result1);
+        }
+        closure_6[findHandlerResult.handlers.handlerTag] = handlerTag;
+      }
+      tmp9 = findHandlerResult.handlers.onChange && findHandlerResult.handlers.changeEventCalculator;
+    }
+  } else {
+    const result2 = handlerIDToTag.findOldGestureHandler(handlerTag.handlerTag);
+    if (result2) {
+      const obj2 = { nativeEvent: handlerTag };
+      if (null != handlerTag.oldState) {
+        result2.onGestureStateChange(obj2);
+      } else {
+        result2.onGestureEvent(obj2);
+      }
+    }
+    const tmpResult = handlerIDToTag;
   }
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+const DeviceEventEmitter = _mod17.DeviceEventEmitter;
+let closure_3 = null;
+let closure_4 = null;
+const map = new Map();
+let closure_6 = [];
+
+export { onGestureHandlerEvent };
+export function startListening() {
+  if (closure_3) {
+    closure_3.remove();
+    closure_3 = null;
+  }
+  if (closure_4) {
+    closure_4.remove();
+    closure_4 = null;
+  }
+  closure_3 = DeviceEventEmitter.addListener("onGestureHandlerEvent", onGestureHandlerEvent);
+  closure_4 = DeviceEventEmitter.addListener("onGestureHandlerStateChange", onGestureHandlerEvent);
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: { conjunction: { long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" }, short: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" } } }, locale: "uk" };
-prop.push(obj);
+export function stopListening() {
+  if (closure_3) {
+    closure_3.remove();
+    closure_3 = null;
+  }
+  if (closure_4) {
+    closure_4.remove();
+    closure_4 = null;
+  }
+}

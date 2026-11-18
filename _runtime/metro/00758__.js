@@ -8,22 +8,22 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function createCheckInEnvelope(arg0, trace, sdk, arg3, url) {
+export function createCheckInEnvelope(arg0, trace, sdkMetadata, tunnel, dsn) {
   const obj = { sent_at: new Date().toISOString() };
-  sdk = undefined;
-  if (sdk != null) {
-    sdk = sdk.sdk;
+  let sdk;
+  if (sdkMetadata != null) {
+    sdk = sdkMetadata.sdk;
   }
   if (sdk) {
-    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    const obj2 = { name: sdkMetadata.sdk.name, version: sdkMetadata.sdk.version };
     obj.sdk = obj2;
   }
-  let tmp2 = arg3;
-  if (arg3) {
-    tmp2 = url;
+  let tmp2 = tunnel;
+  if (tunnel) {
+    tmp2 = dsn;
   }
   if (tmp2) {
-    obj.dsn = _mod701.dsnToString(url);
+    obj.dsn = _mod701.dsnToString(dsn);
   }
   if (trace) {
     obj.trace = trace;

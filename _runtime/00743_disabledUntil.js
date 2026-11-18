@@ -4,16 +4,15 @@
 import safeDateNow from "safeDateNow" /* 695 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-function parseRetryAfterHeader(arg0) {
-  let safeDateNowResult = arg1;
-  if (arg1 === undefined) {
+function parseRetryAfterHeader(prop1) {
+  if (safeDateNowResult === undefined) {
     safeDateNowResult = safeDateNow.safeDateNow();
   }
-  const parsed = parseInt("" + arg0, 10);
+  const parsed = parseInt("" + prop1, 10);
   if (isNaN(parsed)) {
     const _Date = Date;
     const _HermesInternal = HermesInternal;
-    const parsed1 = Date.parse("" + arg0);
+    const parsed1 = Date.parse("" + prop1);
     const _isNaN = isNaN;
     let num2 = 60000;
     if (!isNaN(parsed1)) {
@@ -40,8 +39,7 @@ export function isRateLimited(all, result) {
 export { parseRetryAfterHeader };
 export function updateRateLimits(arg0, headers) {
   headers = headers.headers;
-  let safeDateNowResult = arg2;
-  if (arg2 === undefined) {
+  if (safeDateNowResult === undefined) {
     safeDateNowResult = safeDateNow.safeDateNow();
   }
   const obj2 = {};

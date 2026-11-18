@@ -7,7 +7,7 @@ import baggageHeaderHasSentryValues from "baggageHeaderHasSentryValues" /* 953 *
 
 require = arg1;
 const dependencyMap = arg6;
-function shouldAttachHeaders(url, dependencyMap) {
+function shouldAttachHeaders(url, endpoints) {
   const locationHref = _mod681.getLocationHref();
   if (locationHref) {
     try {
@@ -16,12 +16,12 @@ function shouldAttachHeaders(url, dependencyMap) {
       const _URL2 = URL;
       const uRL1 = new URL(locationHref);
       let tmp18 = tmp17;
-      if (dependencyMap) {
-        let result = _mod681.stringMatchesSomePattern(str.toString(), dependencyMap);
+      if (endpoints) {
+        let result = _mod681.stringMatchesSomePattern(str.toString(), endpoints);
         if (!result) {
           let result1 = tmp17;
           if (tmp17) {
-            result1 = _mod681.stringMatchesSomePattern(uRL.pathname, dependencyMap);
+            result1 = _mod681.stringMatchesSomePattern(uRL.pathname, endpoints);
             const tmpResult3 = _mod681;
           }
           result = result1;
@@ -35,8 +35,8 @@ function shouldAttachHeaders(url, dependencyMap) {
     }
   } else {
     let result2 = url.match(/^\/(?!\/)/);
-    if (dependencyMap) {
-      result2 = _mod681.stringMatchesSomePattern(url, dependencyMap);
+    if (endpoints) {
+      result2 = _mod681.stringMatchesSomePattern(url, endpoints);
       const tmpResult4 = _mod681;
     }
     return result2;

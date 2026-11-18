@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/oauth2", width: 92, height: 92, scales: [2, 3], hash: "118e914321321b15506a73d46c214571", name: "failure-header", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "481d8ce76f3be0e6139166c2fc65af25", name: "ic_arrow_down", type: "png" });

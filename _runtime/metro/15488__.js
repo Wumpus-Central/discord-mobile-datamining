@@ -1,7 +1,11 @@
 // === Module 15488: ? ===
 
 // Module 15488
-import registerAsset from "module_1119" /* 1119 */;
+import _mod15472 from "module_15472" /* 15472 */;
+import _mod15489 from "module_15489" /* 15489 */;
 
+let closure_2 = _mod15472({}.hasOwnProperty);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 185, height: 32, scales: [2, 3], hash: "dba969ce1008f0b8964b0d6bd348ad3e", name: "img_logo_premium_tier_1_full", type: "png" });
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod15489(arg0), arg1);
+});

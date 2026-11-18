@@ -1,22 +1,7 @@
 // === Module 16553: ? ===
 
 // Module 16553
-import _mod16554 from "module_16554" /* 16554 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default (arg0, arg1) => {
-  if (arg0 instanceof _mod16554) {
-    return arg0;
-  } else {
-    try {
-      const tmp8 = new _mod16554(arg0, arg1);
-      return tmp8;
-    } catch (tmp10) {
-      if (tmp) {
-        throw tmp10;
-      } else {
-        return null;
-      }
-    }
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "6572d140954790b36ebb034e8accf006", name: "UndoIcon", type: "png" });

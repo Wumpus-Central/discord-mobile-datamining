@@ -11,9 +11,9 @@ const _sentrySpan = "_sentrySpan";
 export function _getSpanForScope(currentScope) {
   return currentScope[_sentrySpan];
 }
-export function _setSpanForScope(setPropagationContext, arg1) {
-  if (arg1) {
-    const result = _mod686.addNonEnumerableProperty(setPropagationContext, _sentrySpan, arg1);
+export function _setSpanForScope(currentScope, sentryNonRecordingSpan) {
+  if (sentryNonRecordingSpan) {
+    const result = _mod686.addNonEnumerableProperty(currentScope, _sentrySpan, sentryNonRecordingSpan);
   } else {
     delete tmp2[tmp];
   }

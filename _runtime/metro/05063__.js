@@ -1,26 +1,17 @@
 // === Module 5063: ? ===
 
 // Module 5063
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "de" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = { long: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0} und {1}", start: "{0}, {1}" }, narrow: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0} und {1}", start: "{0}, {1}" }, short: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0} und {1}", start: "{0}, {1}" } };
-    obj3.conjunction = obj4;
-    const obj5 = { long: { end: "{0} oder {1}", middle: "{0}, {1}", pair: "{0} oder {1}", start: "{0}, {1}" }, narrow: { end: "{0} oder {1}", middle: "{0}, {1}", pair: "{0} oder {1}", start: "{0}, {1}" }, short: { end: "{0} oder {1}", middle: "{0}, {1}", pair: "{0} oder {1}", start: "{0}, {1}" } };
-    obj3.disjunction = obj5;
-    const obj6 = { long: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, narrow: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
+import _mod19 from "module_19" /* 19 */;
+import _mod5064 from "module_5064" /* 5064 */;
+
+const useContext = _mod19.useContext;
+
+export function useBottomSheetInternal(arg0) {
+  const tmp = useContext(_mod5064.BottomSheetInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'useBottomSheetInternal' cannot be used out of the BottomSheet!";
+    }
   }
+  return tmp;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
-}
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: { conjunction: { long: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0} und {1}", start: "{0}, {1}" }, narrow: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0} und {1}", start: "{0}, {1}" }, short: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0} und {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} oder {1}", middle: "{0}, {1}", pair: "{0} oder {1}", start: "{0}, {1}" }, narrow: { end: "{0} oder {1}", middle: "{0}, {1}", pair: "{0} oder {1}", start: "{0}, {1}" }, short: { end: "{0} oder {1}", middle: "{0}, {1}", pair: "{0} oder {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, narrow: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} und {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "de" };
-prop.push(obj);

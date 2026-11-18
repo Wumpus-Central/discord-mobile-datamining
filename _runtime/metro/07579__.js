@@ -1,23 +1,7 @@
 // === Module 7579: ? ===
 
 // Module 7579
+import registerAsset from "module_1119" /* 1119 */;
 
-export function getInvertedMultiplier(gestureDirection, arg1) {
-  if ("vertical" === gestureDirection) {
-    return 1;
-  } else if ("vertical-inverted" === gestureDirection) {
-    return -1;
-  } else if ("horizontal" === gestureDirection) {
-    let num2 = 1;
-    if (arg1) {
-      num2 = -1;
-    }
-    return num2;
-  } else if ("horizontal-inverted" === gestureDirection) {
-    let num = -1;
-    if (arg1) {
-      num = 1;
-    }
-    return num;
-  }
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0f660b1a58b1b7d08f5a3d6e321f201a", name: "AnnouncementsLockIcon", type: "png" });

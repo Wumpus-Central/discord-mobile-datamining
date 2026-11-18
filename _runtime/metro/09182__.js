@@ -1,7 +1,32 @@
 // === Module 9182: ? ===
 
 // Module 9182
-import registerAsset from "module_1119" /* 1119 */;
+import colorPropType from "colorPropType" /* 9170 */;
+import _mod9178 from "module_9178" /* 9178 */;
+import merged12 from "merged1" /* 9179 */;
+import merged22 from "merged2" /* 9180 */;
+import emptyFunction_mod from "module_4864" /* 4864 */;
 
+const obj = {};
+const size = Object.assign(_mod9178);
+const merged1 = Object.assign(merged12);
+const merged2 = Object.assign(merged22);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
+let emptyFunction = emptyFunction_mod;
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderWidth = emptyFunction.number;
+obj.borderRadius = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
+obj.tintColor = colorPropType;
+obj.opacity = emptyFunction.number;
+obj.overlayColor = emptyFunction.string;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "a340f3b58cfcad04aa087b4d005eb5bd", name: "ic_archived_thread_embed_16px", type: "png" });
+export default obj;

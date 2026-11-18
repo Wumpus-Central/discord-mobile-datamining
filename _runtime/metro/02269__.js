@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/global_discovery/games", scales: [1], hash: "68963fcf5e499eb7101c7e4aaf9997a8", name: "GlobalDiscoveryGames.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2F1dGhvcml6ZWRfYXBwcw==", scales: [1], hash: "0e8e97c946da7cfee20c7e0f645282ee", name: "fi.messages.0e8e97c946da7cfee20c7e0f645282ee.compiled.messages", type: "jsona" });

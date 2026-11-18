@@ -2,14 +2,14 @@
 
 // Module 786 (_extractErrorData)
 import _mod686 from "module_686" /* 686 */;
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import _mod691 from "module_691" /* 691 */;
 import _mod696 from "module_696" /* 696 */;
 import normalize from "normalize" /* 729 */;
 import setupIntegration from "setupIntegration" /* 751 */;
 
-function _extractErrorData(cause, arg1, arg2) {
+function _extractErrorData(cause, arg1, maxValueLength) {
   try {
     items = ["name", "message", "stack", "line", "column", "fileName", "lineNumber", "columnNumber", "toJSON"];
     const obj = {};
@@ -30,10 +30,10 @@ function _extractErrorData(cause, arg1, arg2) {
             obj[tmp9] = tmp41;
           }
         }
-        if (arg2) {
+        if (maxValueLength) {
           let tmp44Result = _mod696;
           let _HermesInternal2 = HermesInternal;
-          let truncateResult = tmp44Result.truncate("" + tmp41, arg2);
+          let truncateResult = tmp44Result.truncate("" + tmp41, maxValueLength);
         } else {
           let _HermesInternal = HermesInternal;
           truncateResult = "" + tmp41;
@@ -48,7 +48,7 @@ function _extractErrorData(cause, arg1, arg2) {
             name = cause.cause.constructor.name;
           }
           const obj2 = {};
-          obj2[name] = _extractErrorData(cause.cause, false, arg2);
+          obj2[name] = _extractErrorData(cause.cause, false, maxValueLength);
           obj.cause = obj2;
         } else {
           obj.cause = cause.cause;
@@ -76,7 +76,7 @@ function _extractErrorData(cause, arg1, arg2) {
     }
     return obj;
   } catch (tmp32) {
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = consoleSandbox.debug;
       debug.error("Unable to extract extra data from the Error object:", tmp32);
     }

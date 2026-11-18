@@ -5,50 +5,50 @@ import _mod691 from "module_691" /* 691 */;
 
 require = arg1;
 let dependencyMap = arg6;
-function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mechanism, exception_id) {
+function aggregateExceptionsFromError(fn, stackParser, arg2, originalException, source, items, mechanism, length) {
   _require = fn;
-  dependencyMap = arg1;
+  dependencyMap = stackParser;
   aggregateExceptionsFromError = arg2;
   closure_4 = source;
-  if (arg5.length >= arg2 + 1) {
-    return arg5;
+  if (items.length >= arg2 + 1) {
+    return items;
   } else {
     items = [];
-    HermesBuiltin.arraySpread(arg5, 0);
+    HermesBuiltin.arraySpread(items, 0);
     length = items;
     const _Error = Error;
-    if (obj3.isInstanceOf(errors[source], Error)) {
+    if (obj3.isInstanceOf(originalException[source], Error)) {
       let _Array = Array;
-      const tmp = Array.isArray(errors.errors) && { is_exception_group: true };
+      const tmp = Array.isArray(originalException.errors) && { is_exception_group: true };
       let obj = { handled: true, type: "auto.core.linked_errors" };
       let merged = Object.assign(tmp);
       let merged1 = Object.assign(mechanism.mechanism);
-      obj.exception_id = exception_id;
+      obj.exception_id = length;
       mechanism.mechanism = obj;
-      const tmp7 = fn(arg1, errors[source]);
+      const tmp7 = fn(stackParser, originalException[source]);
       length = length.length;
       let obj2 = { handled: true };
       let merged2 = Object.assign(tmp7.mechanism);
       obj2.type = "chained";
       obj2.source = source;
       obj2.exception_id = length;
-      obj2.parent_id = exception_id;
+      obj2.parent_id = length;
       tmp7.mechanism = obj2;
       const items1 = [tmp7];
       HermesBuiltin.arraySpread(length, 1);
-      length = aggregateExceptionsFromError(fn, arg1, arg2, errors[source], source, items1, tmp7, length);
+      length = aggregateExceptionsFromError(fn, stackParser, arg2, originalException[source], source, items1, tmp7, length);
     }
     const _Array2 = Array;
-    if (Array.isArray(errors.errors)) {
-      errors = errors.errors;
+    if (Array.isArray(originalException.errors)) {
+      const errors = originalException.errors;
       const item = errors.forEach((item, index) => {
         if (obj.isInstanceOf(item, Error)) {
           const _Array = Array;
-          const tmp4 = Array.isArray(errors.errors) && { is_exception_group: true };
+          const tmp4 = Array.isArray(originalException.errors) && { is_exception_group: true };
           const obj2 = { handled: true, type: "auto.core.linked_errors" };
           const merged = Object.assign(tmp4);
           const merged1 = Object.assign(mechanism.mechanism);
-          obj2.exception_id = exception_id;
+          obj2.exception_id = length;
           mechanism.mechanism = obj2;
           const tmp13 = closure_0(closure_1, item);
           length = length.length;
@@ -59,7 +59,7 @@ function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mech
           obj3.type = "chained";
           obj3.source = combined;
           obj3.exception_id = length;
-          obj3.parent_id = exception_id;
+          obj3.parent_id = length;
           tmp13.mechanism = obj3;
           items = [tmp13];
           HermesBuiltin.arraySpread(length, 1);
@@ -73,7 +73,7 @@ function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mech
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function applyAggregateErrorsToEvent(exceptionFromError, stackParser, arg2, arg3, exception, originalException) {
+export function applyAggregateErrorsToEvent(exceptionFromError, stackParser, source, arg3, exception, originalException) {
   exception = exception.exception;
   let values;
   if (exception != null) {
@@ -88,7 +88,7 @@ export function applyAggregateErrorsToEvent(exceptionFromError, stackParser, arg
           tmp6 = exception.exception.values[exception.exception.values.length - 1];
         }
         if (tmp6) {
-          exception.exception.values = aggregateExceptionsFromError(exceptionFromError, stackParser, arg3, originalException.originalException, arg2, exception.exception.values, tmp6, 0);
+          exception.exception.values = aggregateExceptionsFromError(exceptionFromError, stackParser, arg3, originalException.originalException, source, exception.exception.values, tmp6, 0);
         }
       }
       obj = _mod691;

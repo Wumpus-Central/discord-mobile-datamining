@@ -5,11 +5,11 @@ import registerSpanErrorInstrumentation from "module_681" /* 681 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export function applySourceContextToFrame(filename, arg1, arg2, arg3) {
+export function applySourceContextToFrame(filename, arr, arg2, arg3) {
   if (filename.filename === arg2) {
     if (filename.lineno) {
-      if (arg1.length) {
-        registerSpanErrorInstrumentation.addContextToFrame(arg1, filename, arg3);
+      if (arr.length) {
+        registerSpanErrorInstrumentation.addContextToFrame(arr, filename, arg3);
       }
     }
   }

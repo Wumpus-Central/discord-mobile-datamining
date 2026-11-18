@@ -1,7 +1,8 @@
 // === Module 7734: ? ===
 
 // Module 7734
-import registerAsset from "module_1119" /* 1119 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "e4080f713973c251e1438e7043339acb", name: "ic_verified_guild_icon_green_24px", type: "png" });
+export default StyleSheet.create({ container: { flex: 1, overflow: "hidden" }, loadingOrErrorView: { position: "absolute", flex: 1, justifyContent: "center", alignItems: "center", height: "100%", width: "100%", backgroundColor: "white" }, loadingProgressBar: { height: 20 }, errorText: { fontSize: 14, textAlign: "center", marginBottom: 2 }, errorTextTitle: { fontSize: 15, fontWeight: "500", marginBottom: 10 }, webView: { backgroundColor: "#ffffff" } });

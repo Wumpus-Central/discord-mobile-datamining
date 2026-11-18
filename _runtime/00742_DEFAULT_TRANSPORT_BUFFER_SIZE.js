@@ -1,7 +1,7 @@
 // === Module 742: DEFAULT_TRANSPORT_BUFFER_SIZE ===
 
 // Module 742 (DEFAULT_TRANSPORT_BUFFER_SIZE)
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import forEachEnvelopeItem from "forEachEnvelopeItem" /* 728 */;
 import SENTRY_BUFFER_FULL_ERROR from "SENTRY_BUFFER_FULL_ERROR" /* 741 */;
@@ -14,11 +14,10 @@ let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
-export function createTransport(bufferSize, arg1) {
+export function createTransport(bufferSize, makeRequest) {
   _require = bufferSize;
-  dependencyMap = arg1;
-  let promiseBuffer = arg2;
-  if (arg2 === undefined) {
+  dependencyMap = makeRequest;
+  if (promiseBuffer === undefined) {
     let num = bufferSize.bufferSize;
     if (!num) {
       num = 64;
@@ -28,9 +27,9 @@ export function createTransport(bufferSize, arg1) {
   }
   closure_3 = {};
   return {
-    send(arg0) {
+    send(dependencyMap) {
       items = [];
-      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+      bufferSize(makeRequest[1]).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
         const result = forEachEnvelopeItem.envelopeItemTypeToDataCategory(arg1);
         if (obj2.isRateLimited(closure_3, result)) {
           items.recordDroppedEvent("ratelimit_backoff", result);
@@ -42,7 +41,7 @@ export function createTransport(bufferSize, arg1) {
       if (0 === items.length) {
         return Promise.resolve({});
       } else {
-        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
+        makeRequest = bufferSize(tmp2[1]).createEnvelope(dependencyMap[0], items);
         function recordEnvelopeLoss(arg0) {
 
         }
@@ -94,14 +93,14 @@ export function createTransport(bufferSize, arg1) {
           });
         }).then((result) => result, (arg0) => {
           if (arg0 === SENTRY_BUFFER_FULL_ERROR.SENTRY_BUFFER_FULL_ERROR) {
-            if (_mod687.DEBUG_BUILD) {
+            if (__SENTRY_DEBUG__.DEBUG_BUILD) {
               const debug = consoleSandbox.debug;
               debug.error("Skipped sending event because buffer is full.");
             }
             if (typeof recordEnvelopeLoss === "function") {
               const queue_overflow = "queue_overflow";
               if (tmpResult.envelopeContainsItemType(closure_1, ["client_report"])) {
-                if (_mod687.DEBUG_BUILD) {
+                if (__SENTRY_DEBUG__.DEBUG_BUILD) {
                   const debug2 = consoleSandbox.debug;
                   const _HermesInternal = HermesInternal;
                   debug2.warn("Dropping client report. Will not send outcomes (reason: " + "queue_overflow" + ").");
@@ -121,8 +120,8 @@ export function createTransport(bufferSize, arg1) {
           }
         });
       }
-      let obj = bufferSize(dependencyMap[1]);
-      tmp2 = dependencyMap;
+      let obj = bufferSize(makeRequest[1]);
+      tmp2 = makeRequest;
     },
     flush(arg0) {
       return promiseBuffer.drain(arg0);

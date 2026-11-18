@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "540091c70b333c8b8937ba1627138192", name: "wumpus-pikachu", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_panel/native/images", width: 13, height: 12, scales: [1, 2, 3, 4], hash: "815e22c11ceae8ad126964a943379a27", name: "badconnection", type: "png" });

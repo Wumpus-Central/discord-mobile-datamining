@@ -8,24 +8,24 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function isMatchingPattern(arr, test) {
+export function isMatchingPattern(description, name) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  const isStringResult = _mod691.isString(arr);
+  const isStringResult = _mod691.isString(description);
   if (!isStringResult) {
     return isStringResult;
   } else {
-    if (tmpResult.isRegExp(test)) {
-      let isMatch = test.test(arr);
+    if (tmpResult.isRegExp(name)) {
+      let isMatch = name.test(description);
     } else {
-      isMatch = _mod691.isString(test);
+      isMatch = _mod691.isString(name);
       if (isMatch) {
         if (flag) {
-          let hasItem = arr === test;
+          let hasItem = description === name;
         } else {
-          hasItem = arr.includes(test);
+          hasItem = description.includes(name);
         }
       }
       const tmpResult2 = _mod691;
@@ -33,11 +33,11 @@ export function isMatchingPattern(arr, test) {
     tmpResult = _mod691;
   }
 }
-export function safeJoin(__v_isVNode, arg1) {
-  if (Array.isArray(__v_isVNode)) {
+export function safeJoin(args, arg1) {
+  if (Array.isArray(args)) {
     items = [];
     let num = 0;
-    if (0 < __v_isVNode.length) {
+    if (0 < args.length) {
       try {
         const push = items.push;
         if (obj.isVueViewModel(tmp2)) {
@@ -93,9 +93,9 @@ export function snipLine(arr, lineno) {
     return text;
   }
 }
-export function stringMatchesSomePattern(transaction) {
-  items = allowUrls;
-  if (allowUrls === undefined) {
+export function stringMatchesSomePattern(name) {
+  items = endpoints;
+  if (endpoints === undefined) {
     items = [];
   }
   let flag = arg2;
@@ -103,19 +103,19 @@ export function stringMatchesSomePattern(transaction) {
     flag = false;
   }
   return items.some((test) => {
-    const isStringResult = _mod691.isString(transaction);
+    const isStringResult = _mod691.isString(name);
     if (!isStringResult) {
       return isStringResult;
     } else {
       if (tmpResult.isRegExp(test)) {
-        let isMatch = test.test(transaction);
+        let isMatch = test.test(name);
       } else {
         isMatch = _mod691.isString(test);
         if (isMatch) {
           if (flag) {
-            let hasItem = transaction === test;
+            let hasItem = name === test;
           } else {
-            hasItem = transaction.includes(test);
+            hasItem = name.includes(test);
           }
         }
         const tmpResult2 = _mod691;

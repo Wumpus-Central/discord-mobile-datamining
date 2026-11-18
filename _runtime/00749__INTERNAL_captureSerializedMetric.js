@@ -1,7 +1,7 @@
 // === Module 749: _INTERNAL_captureSerializedMetric ===
 
 // Module 749 (_INTERNAL_captureSerializedMetric)
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import _mod689 from "module_689" /* 689 */;
 import dateTimestampInSeconds from "dateTimestampInSeconds" /* 702 */;
@@ -96,7 +96,7 @@ export function _INTERNAL_captureMetric(attributes, scope) {
       }
       if (enableMetrics1 != null) {
         if (!enableMetrics1) {
-          if (_mod687.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
             const debug2 = consoleSandbox.debug;
             debug2.warn("metrics option not enabled, metric will not be captured.");
           }
@@ -238,18 +238,18 @@ export function _INTERNAL_captureMetric(attributes, scope) {
       const tmp17Result7 = _mod747;
       const merged3 = Object.assign(_mod747.serializeAttributes(beforeSendMetricResult.attributes, "skip-undefined"));
       obj7.attributes = obj8;
-      if (_mod687.DEBUG_BUILD) {
+      if (__SENTRY_DEBUG__.DEBUG_BUILD) {
         const debug4 = consoleSandbox.debug;
         debug4.log("[Metric]", obj7);
       }
       prop(client, obj7);
       client.emit("afterCaptureMetric", beforeSendMetricResult);
       const tmp17Result8 = _mod747;
-    } else if (_mod687.DEBUG_BUILD) {
+    } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug3 = consoleSandbox.debug;
       debug3.log("`beforeSendMetric` returned `null`, will not send metric.");
     }
-  } else if (_mod687.DEBUG_BUILD) {
+  } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
     const debug = consoleSandbox.debug;
     debug.warn("No client available to capture metric.");
   }

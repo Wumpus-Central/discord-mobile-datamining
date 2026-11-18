@@ -1,20 +1,7 @@
 // === Module 8948: ? ===
 
 // Module 8948
-class MetadataMissingError {
-  constructor(arg0) {
-    obj = { name: "MetadataMissingError" };
-    str = arg0;
-    if (!arg0) {
-      str = "No Exif data";
-    }
-    obj.message = str;
-    error = new Error();
-    obj.stack = error.stack;
-    return;
-  }
-}
-let error = new Error();
-MetadataMissingError.prototype = error;
+import registerAsset from "module_1119" /* 1119 */;
 
-export default { MetadataMissingError };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ea051c7bb088368772b9e8a5e140622d", name: "TagIcon", type: "png" });

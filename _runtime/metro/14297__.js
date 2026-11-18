@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 121, height: 80, scales: [1, 2, 3], hash: "dc39c8debe144867da8663a97ac0ae70", name: "link_expired_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/channel/header/images", width: 24, height: 24, scales: [2, 3, 4], hash: "259a63e8af8c5f3885215d3c5505af89", name: "icon-search", type: "png" });

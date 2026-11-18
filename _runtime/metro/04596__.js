@@ -1,71 +1,26 @@
 // === Module 4596: ? ===
 
 // Module 4596
-import module_2199 from "module_2199" /* 2199 */;
-import module_2200 from "module_2200" /* 2200 */;
-
-if (!module_2199) {
-  const obj2 = { default: module_2199 };
-  let obj = obj2;
-} else {
-  obj = module_2199;
-}
-if (!module_2200) {
-  const obj4 = { default: module_2200 };
-  let obj3 = obj4;
-} else {
-  obj3 = module_2200;
-}
-const date = {
-  ordinalNumber: obj3.default({
-    matchPattern: /^(\d+)(-?[врмт][аи]|-?т?(ен|на)|-?(ев|ева))?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
-    }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
-};
-const obj6 = { matchPatterns: { narrow: /^((пр)?н\.?\s?е\.?)/i, abbreviated: /^((пр)?н\.?\s?е\.?)/i, wide: /^(преди новата ера|новата ера|нова ера)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items = [/^п/i, /^н/i];
-obj7.any = items;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234](-?[врт]?o?)? тримес.?/i, wide: /^[1234](-?[врт]?о?)? тримесечие/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "th" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = { long: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" }, narrow: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" }, short: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" } };
+    obj3.conjunction = obj4;
+    const obj5 = { long: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0}\u0E2B\u0E23\u0E37\u0E2D{1}", start: "{0}, {1}" }, short: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0}\u0E2B\u0E23\u0E37\u0E2D{1}", start: "{0}, {1}" } };
+    obj3.disjunction = obj5;
+    const obj6 = { long: { end: "{0} \u0E41\u0E25\u0E30 {1}", middle: "{0} {1}", pair: "{0} \u0E41\u0E25\u0E30 {1}", start: "{0} {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} \u0E41\u0E25\u0E30 {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" } };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
-};
-const obj9 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj9.any = items1;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { abbreviated: /^(яну|фев|мар|апр|май|юни|юли|авг|сеп|окт|ное|дек)/i, wide: /^(януари|февруари|март|април|май|юни|юли|август|септември|октомври|ноември|декември)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { any: null };
-const items2 = [/^я/i, /^ф/i, /^мар/i, /^ап/i, /^май/i, /^юн/i, /^юл/i, /^ав/i, /^се/i, /^окт/i, /^но/i, /^де/i];
-obj11.any = items2;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[нпвсч]/i, short: /^(нд|пн|вт|ср|чт|пт|сб)/i, abbreviated: /^(нед|пон|вто|сря|чет|пет|съб)/i, wide: /^(неделя|понеделник|вторник|сряда|четвъртък|петък|събота)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { narrow: null, any: null };
-const items3 = [/^н/i, /^п/i, /^в/i, /^с/i, /^ч/i, /^п/i, /^с/i];
-obj13.narrow = items3;
-const items4 = [/^н[ед]/i, /^п[он]/i, /^вт/i, /^ср/i, /^ч[ет]/i, /^п[ет]/i, /^с[ъб]/i];
-obj13.any = items4;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { any: /^(преди о|след о|в по|на о|през|веч|сут|следо)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^преди о/i, pm: /^след о/i, midnight: /^в пол/i, noon: /^на об/i, morning: /^сут/i, afternoon: /^следо/i, evening: /^веч/i, night: /^през н/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
-
-export default date;
-export default exports.default;
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = { data: { conjunction: { long: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" }, narrow: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" }, short: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" } }, disjunction: { long: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0}\u0E2B\u0E23\u0E37\u0E2D{1}", start: "{0}, {1}" }, short: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0}\u0E2B\u0E23\u0E37\u0E2D{1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} \u0E41\u0E25\u0E30 {1}", middle: "{0} {1}", pair: "{0} \u0E41\u0E25\u0E30 {1}", start: "{0} {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} \u0E41\u0E25\u0E30 {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" } } }, locale: "th" };
+prop.push(obj);

@@ -1,33 +1,38 @@
 // === Module 5808: ? ===
 
 // Module 5808
-import _mod5809 from "module_5809" /* 5809 */;
+import _mod26 from "module_26" /* 26 */;
+import renderElement from "renderElement" /* 114 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
+({ codegenNativeCommands, codegenNativeComponent } = get_ActivityIndicator);
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSSearchBar", directEventTypes: { topSearchFocus: { registrationName: "onSearchFocus" }, topSearchBlur: { registrationName: "onSearchBlur" }, topSearchButtonPress: { registrationName: "onSearchButtonPress" }, topCancelButtonPress: { registrationName: "onCancelButtonPress" }, topChangeText: { registrationName: "onChangeText" }, topClose: { registrationName: "onClose" }, topOpen: { registrationName: "onOpen" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSearchFocus: true, onSearchBlur: true, onSearchButtonPress: true, onCancelButtonPress: true, onChangeText: true, onClose: true, onOpen: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { hideWhenScrolling: true, autoCapitalize: true, placeholder: true, placement: true, allowToolbarIntegration: true, obscureBackground: true, hideNavigationBar: true, cancelButtonText: true, barTintColor: _mod26.colorAttribute, tintColor: _mod26.colorAttribute, textColor: _mod26.colorAttribute, autoFocus: true, disableBackButtonOverride: true, inputType: true, hintTextColor: _mod26.colorAttribute, headerIconColor: _mod26.colorAttribute, shouldShowHintSearchIcon: true };
 
-export default function _unsupportedIterableToArray(str, arg1) {
-  if (str) {
-    if (typeof str === "string") {
-      return _mod5809(str, arg1);
-    } else {
-      const toString = {}.toString;
-      const call = toString.call;
-      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
-      let name = substr;
-      if (tmp3) {
-        name = str.constructor.name;
-      }
-      if ("Map" !== name) {
-        if ("Set" !== name) {
-          if ("Arguments" === name) {
-            let arr2 = _mod5809(str, arg1);
-          }
-        }
-        return arr2;
-      }
-      const _Array = Array;
-      arr2 = Array.from(str);
-      const arr = typeof call === "unknown" ? toString() : call(str);
-      tmp3 = "Object" === substr && "Object".constructor;
-    }
+export default module_65.get("RNSSearchBar", () => obj);
+export { __INTERNAL_VIEW_CONFIG };
+export const Commands = {
+  blur(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "blur", []);
+  },
+  focus(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "focus", []);
+  },
+  clearText(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "clearText", []);
+  },
+  toggleCancelButton(nodeFromPublicInstance, arg1) {
+    items = [arg1];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "toggleCancelButton", items);
+  },
+  setText(nodeFromPublicInstance, arg1) {
+    items = [arg1];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "setText", items);
+  },
+  cancelSearch(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "cancelSearch", []);
   }
 };

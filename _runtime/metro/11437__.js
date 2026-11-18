@@ -1,238 +1,105 @@
 // === Module 11437: ? ===
 
 // Module 11437
-const obj = { v: "4.8.0", meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" }, fr: 60, ip: 0, op: 110, w: 1280, h: 720, nm: "FrameEffect_07-5_Out", ddd: 0, assets: null, layers: null, markers: [] };
-const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }, ];
-const obj2 = { id: "comp_0", layers: null };
-const obj3 = { ddd: 0, ind: 3, ty: 2, nm: "smile", refId: "image_0", sr: 1, ks: { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [19.875, 20.125, 0], ix: 2 }, a: { a: 0, k: [17.25, 17.25, 0], ix: 1 }, s: { a: 0, k: [108.7, 108.7, 100], ix: 6 } }, ao: 0, ip: 0, op: 914, st: 0, bm: 0 };
-const items1 = [obj3];
-obj2.layers = items1;
-items[1] = obj2;
-obj.assets = items;
-const obj5 = { ddd: 0, ind: 1, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 0, op: 26, st: -2, bm: 0 };
-const obj6 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [638.82, 93.949, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj7 = { a: 1, k: null, ix: 6 };
-const items2 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: -2, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 9.053, s: [447.217, 447.217, 100] }, { t: 28, s: [0, 0, 100] }];
-obj7.k = items2;
-obj6.s = obj7;
-obj5.ks = obj6;
-const items3 = [obj5, , , , , , , , , , , , , , , , , , , , , , , , , , , ];
-const obj10 = { ddd: 0, ind: 2, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 3, op: 29, st: 1, bm: 0 };
-const obj11 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [638.82, 274.563, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj12 = { a: 1, k: null, ix: 6 };
-const items4 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 1, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 12.053, s: [447.217, 447.217, 100] }, { t: 31, s: [0, 0, 100] }];
-obj12.k = items4;
-obj11.s = obj12;
-obj10.ks = obj11;
-items3[1] = obj10;
-const obj15 = { ddd: 0, ind: 3, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 6, op: 32, st: 4, bm: 0 };
-const obj16 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [638.82, 452.56, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj17 = { a: 1, k: null, ix: 6 };
-const items5 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 4, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 15.053, s: [447.217, 447.217, 100] }, { t: 34, s: [0, 0, 100] }];
-obj17.k = items5;
-obj16.s = obj17;
-obj15.ks = obj16;
-items3[2] = obj15;
-const obj20 = { ddd: 0, ind: 4, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 9, op: 35, st: 7, bm: 0 };
-const obj21 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [638.82, 630.557, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj22 = { a: 1, k: null, ix: 6 };
-const items6 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 7, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 18.053, s: [447.217, 447.217, 100] }, { t: 37, s: [0, 0, 100] }];
-obj22.k = items6;
-obj21.s = obj22;
-obj20.ks = obj21;
-items3[3] = obj20;
-const obj25 = { ddd: 0, ind: 5, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 12, op: 38, st: 10, bm: 0 };
-const obj26 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [458.02, 93.949, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj27 = { a: 1, k: null, ix: 6 };
-const items7 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 10, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 21.053, s: [447.217, 447.217, 100] }, { t: 40, s: [0, 0, 100] }];
-obj27.k = items7;
-obj26.s = obj27;
-obj25.ks = obj26;
-items3[4] = obj25;
-const obj30 = { ddd: 0, ind: 6, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 15, op: 41, st: 13, bm: 0 };
-const obj31 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [458.02, 274.563, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj32 = { a: 1, k: null, ix: 6 };
-const items8 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 13, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 24.053, s: [447.217, 447.217, 100] }, { t: 43, s: [0, 0, 100] }];
-obj32.k = items8;
-obj31.s = obj32;
-obj30.ks = obj31;
-items3[5] = obj30;
-const obj35 = { ddd: 0, ind: 7, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 18, op: 44, st: 16, bm: 0 };
-const obj36 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [458.02, 452.56, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj37 = { a: 1, k: null, ix: 6 };
-const items9 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 16, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 27.053, s: [447.217, 447.217, 100] }, { t: 46, s: [0, 0, 100] }];
-obj37.k = items9;
-obj36.s = obj37;
-obj35.ks = obj36;
-items3[6] = obj35;
-const obj40 = { ddd: 0, ind: 8, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 21, op: 47, st: 19, bm: 0 };
-const obj41 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [458.02, 630.557, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj42 = { a: 1, k: null, ix: 6 };
-const items10 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 19, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 30.053, s: [447.217, 447.217, 100] }, { t: 49, s: [0, 0, 100] }];
-obj42.k = items10;
-obj41.s = obj42;
-obj40.ks = obj41;
-items3[7] = obj40;
-const obj45 = { ddd: 0, ind: 9, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 24, op: 50, st: 22, bm: 0 };
-const obj46 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [278.02, 93.949, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj47 = { a: 1, k: null, ix: 6 };
-const items11 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 22, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 33.053, s: [447.217, 447.217, 100] }, { t: 52, s: [0, 0, 100] }];
-obj47.k = items11;
-obj46.s = obj47;
-obj45.ks = obj46;
-items3[8] = obj45;
-const obj50 = { ddd: 0, ind: 10, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 27, op: 53, st: 25, bm: 0 };
-const obj51 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [278.02, 274.563, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj52 = { a: 1, k: null, ix: 6 };
-const items12 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 25, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 36.053, s: [447.217, 447.217, 100] }, { t: 55, s: [0, 0, 100] }];
-obj52.k = items12;
-obj51.s = obj52;
-obj50.ks = obj51;
-items3[9] = obj50;
-const obj55 = { ddd: 0, ind: 11, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 30, op: 56, st: 28, bm: 0 };
-const obj56 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [278.02, 452.56, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj57 = { a: 1, k: null, ix: 6 };
-const items13 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 28, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 39.053, s: [447.217, 447.217, 100] }, { t: 58, s: [0, 0, 100] }];
-obj57.k = items13;
-obj56.s = obj57;
-obj55.ks = obj56;
-items3[10] = obj55;
-const obj60 = { ddd: 0, ind: 12, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 33, op: 59, st: 31, bm: 0 };
-const obj61 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [278.02, 630.557, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj62 = { a: 1, k: null, ix: 6 };
-const items14 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 31, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 42.053, s: [447.217, 447.217, 100] }, { t: 61, s: [0, 0, 100] }];
-obj62.k = items14;
-obj61.s = obj62;
-obj60.ks = obj61;
-items3[11] = obj60;
-const obj65 = { ddd: 0, ind: 13, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 36, op: 62, st: 34, bm: 0 };
-const obj66 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [94.82, 93.949, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj67 = { a: 1, k: null, ix: 6 };
-const items15 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 34, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 45.053, s: [447.217, 447.217, 100] }, { t: 64, s: [0, 0, 100] }];
-obj67.k = items15;
-obj66.s = obj67;
-obj65.ks = obj66;
-items3[12] = obj65;
-const obj70 = { ddd: 0, ind: 14, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 39, op: 65, st: 37, bm: 0 };
-const obj71 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [94.82, 274.563, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj72 = { a: 1, k: null, ix: 6 };
-const items16 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 37, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 48.053, s: [447.217, 447.217, 100] }, { t: 67, s: [0, 0, 100] }];
-obj72.k = items16;
-obj71.s = obj72;
-obj70.ks = obj71;
-items3[13] = obj70;
-const obj75 = { ddd: 0, ind: 15, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 42, op: 68, st: 40, bm: 0 };
-const obj76 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [94.82, 452.56, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj77 = { a: 1, k: null, ix: 6 };
-const items17 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 40, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 51.053, s: [447.217, 447.217, 100] }, { t: 70, s: [0, 0, 100] }];
-obj77.k = items17;
-obj76.s = obj77;
-obj75.ks = obj76;
-items3[14] = obj75;
-const obj80 = { ddd: 0, ind: 16, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 45, op: 71, st: 43, bm: 0 };
-const obj81 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [94.82, 630.557, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj82 = { a: 1, k: null, ix: 6 };
-const items18 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 43, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 54.053, s: [447.217, 447.217, 100] }, { t: 73, s: [0, 0, 100] }];
-obj82.k = items18;
-obj81.s = obj82;
-obj80.ks = obj81;
-items3[15] = obj80;
-const obj85 = { ddd: 0, ind: 17, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 12, op: 38, st: 10, bm: 0 };
-const obj86 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [820.42, 93.949, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj87 = { a: 1, k: null, ix: 6 };
-const items19 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 10, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 21.053, s: [447.217, 447.217, 100] }, { t: 40, s: [0, 0, 100] }];
-obj87.k = items19;
-obj86.s = obj87;
-obj85.ks = obj86;
-items3[16] = obj85;
-const obj90 = { ddd: 0, ind: 18, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 15, op: 41, st: 13, bm: 0 };
-const obj91 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [820.42, 274.563, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj92 = { a: 1, k: null, ix: 6 };
-const items20 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 13, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 24.053, s: [447.217, 447.217, 100] }, { t: 43, s: [0, 0, 100] }];
-obj92.k = items20;
-obj91.s = obj92;
-obj90.ks = obj91;
-items3[17] = obj90;
-const obj95 = { ddd: 0, ind: 19, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 18, op: 44, st: 16, bm: 0 };
-const obj96 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [820.42, 452.56, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj97 = { a: 1, k: null, ix: 6 };
-const items21 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 16, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 27.053, s: [447.217, 447.217, 100] }, { t: 46, s: [0, 0, 100] }];
-obj97.k = items21;
-obj96.s = obj97;
-obj95.ks = obj96;
-items3[18] = obj95;
-const obj100 = { ddd: 0, ind: 20, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 21, op: 47, st: 19, bm: 0 };
-const obj101 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [820.42, 630.557, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj102 = { a: 1, k: null, ix: 6 };
-const items22 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 19, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 30.053, s: [447.217, 447.217, 100] }, { t: 49, s: [0, 0, 100] }];
-obj102.k = items22;
-obj101.s = obj102;
-obj100.ks = obj101;
-items3[19] = obj100;
-const obj105 = { ddd: 0, ind: 21, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 24, op: 50, st: 22, bm: 0 };
-const obj106 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [1002.02, 93.949, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj107 = { a: 1, k: null, ix: 6 };
-const items23 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 22, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 33.053, s: [447.217, 447.217, 100] }, { t: 52, s: [0, 0, 100] }];
-obj107.k = items23;
-obj106.s = obj107;
-obj105.ks = obj106;
-items3[20] = obj105;
-const obj110 = { ddd: 0, ind: 22, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 27, op: 53, st: 25, bm: 0 };
-const obj111 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [1002.02, 274.563, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj112 = { a: 1, k: null, ix: 6 };
-const items24 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 25, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 36.053, s: [447.217, 447.217, 100] }, { t: 55, s: [0, 0, 100] }];
-obj112.k = items24;
-obj111.s = obj112;
-obj110.ks = obj111;
-items3[21] = obj110;
-const obj115 = { ddd: 0, ind: 23, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 30, op: 56, st: 28, bm: 0 };
-const obj116 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [1002.02, 452.56, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj117 = { a: 1, k: null, ix: 6 };
-const items25 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 28, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 39.053, s: [447.217, 447.217, 100] }, { t: 58, s: [0, 0, 100] }];
-obj117.k = items25;
-obj116.s = obj117;
-obj115.ks = obj116;
-items3[22] = obj115;
-const obj120 = { ddd: 0, ind: 24, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 33, op: 59, st: 31, bm: 0 };
-const obj121 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [1002.02, 630.557, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj122 = { a: 1, k: null, ix: 6 };
-const items26 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 31, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 42.053, s: [447.217, 447.217, 100] }, { t: 61, s: [0, 0, 100] }];
-obj122.k = items26;
-obj121.s = obj122;
-obj120.ks = obj121;
-items3[23] = obj120;
-const obj125 = { ddd: 0, ind: 25, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 36, op: 62, st: 34, bm: 0 };
-const obj126 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [1185.086, 93.949, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj127 = { a: 1, k: null, ix: 6 };
-const items27 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 34, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 45.053, s: [447.217, 447.217, 100] }, { t: 64, s: [0, 0, 100] }];
-obj127.k = items27;
-obj126.s = obj127;
-obj125.ks = obj126;
-items3[24] = obj125;
-const obj130 = { ddd: 0, ind: 26, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 39, op: 65, st: 37, bm: 0 };
-const obj131 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [1185.086, 274.563, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj132 = { a: 1, k: null, ix: 6 };
-const items28 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 37, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 48.053, s: [447.217, 447.217, 100] }, { t: 67, s: [0, 0, 100] }];
-obj132.k = items28;
-obj131.s = obj132;
-obj130.ks = obj131;
-items3[25] = obj130;
-const obj135 = { ddd: 0, ind: 27, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 42, op: 68, st: 40, bm: 0 };
-const obj136 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [1185.086, 452.56, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj137 = { a: 1, k: null, ix: 6 };
-const items29 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 40, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 51.053, s: [447.217, 447.217, 100] }, { t: 70, s: [0, 0, 100] }];
-obj137.k = items29;
-obj136.s = obj137;
-obj135.ks = obj136;
-items3[26] = obj135;
-const obj140 = { ddd: 0, ind: 28, ty: 0, nm: "particle", refId: "comp_0", sr: 1, ks: null, ao: 0, w: 40, h: 40, ip: 45, op: 71, st: 43, bm: 0 };
-const obj141 = { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [1185.086, 630.557, 0], ix: 2 }, a: { a: 0, k: [20, 20, 0], ix: 1 }, s: null };
-const obj142 = { a: 1, k: null, ix: 6 };
-const items30 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0.167, 0.167, 0.167], y: [0.167, 0.167, 0] }, t: 43, s: [0, 0, 100] }, { i: { x: [1, 1, 0.833], y: [1, 1, 17.667] }, o: { x: [0.727, 0.727, 0.333], y: [0, 0, 0] }, t: 54.053, s: [447.217, 447.217, 100] }, { t: 73, s: [0, 0, 100] }];
-obj142.k = items30;
-obj141.s = obj142;
-obj140.ks = obj141;
-items3[27] = obj140;
-obj.layers = items3;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 11375 */;
 
-export default obj;
+const combined = "(" + exports.NUMBER_PATTERN + ")\\s{0,5}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")\\s{0,5}";
+const regExp = new RegExp(combined, "i");
+
+export function parseNumberPattern(str) {
+  str = str.toLowerCase();
+  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
+    let num2 = exports.INTEGER_WORD_DICTIONARY[str];
+  } else {
+    num2 = 1;
+    if ("une" !== str) {
+      num2 = 1;
+      if ("un" !== str) {
+        let num3 = 3;
+        if (!str.match(/quelques?/)) {
+          let num4 = 0.5;
+          if (!str.match(/demi-?/)) {
+            const _parseFloat = parseFloat;
+            num4 = parseFloat(str);
+          }
+          num3 = num4;
+        }
+        num2 = num3;
+      }
+    }
+  }
+  return num2;
+}
+export function parseOrdinalNumberPattern(str) {
+  str = str.toLowerCase();
+  return parseInt(str.replace(/(?:er)$/i, ""));
+}
+export function parseYear(match) {
+  if (obj.test(match)) {
+    const _parseInt3 = parseInt;
+    return -parseInt(match.replace(/BC/i, ""));
+  } else {
+    if (!obj2.test(match)) {
+      if (!obj3.test(match)) {
+        const _parseInt = parseInt;
+        const parsed = parseInt(match);
+        let sum = parsed;
+        if (parsed < 100) {
+          let num3 = 2000;
+          if (parsed > 50) {
+            num3 = 1900;
+          }
+          sum = parsed + num3;
+        }
+        return sum;
+      }
+      obj3 = /C/i;
+    }
+    const _parseInt2 = parseInt;
+    return parseInt(match.replace(/[^\d]+/i, ""));
+  }
+  obj = /AC/i;
+}
+export function parseDuration(arg0) {
+  let str = arg0;
+  const obj = {};
+  let match = regExp.exec(arg0);
+  while (match) {
+    let str2 = match[1];
+    let str3 = str2.toLowerCase();
+    if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
+      let num = exports.INTEGER_WORD_DICTIONARY[str3];
+    } else {
+      num = 1;
+      if ("une" !== str3) {
+        num = 1;
+        if ("un" !== str3) {
+          let num2 = 3;
+          if (!str3.match(/quelques?/)) {
+            let num3 = 0.5;
+            if (!str3.match(/demi-?/)) {
+              let _parseFloat = parseFloat;
+              num3 = parseFloat(str3);
+            }
+            num2 = num3;
+          }
+          num = num2;
+        }
+      }
+    }
+    let str4 = match[2];
+    obj[exports.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num;
+    let substr = str.substring(match[0].length);
+    match = regExp.exec(substr);
+    str = substr;
+  }
+  return obj;
+}
+export const WEEKDAY_DICTIONARY = { dimanche: 0, dim: 0, lundi: 1, lun: 1, mardi: 2, mar: 2, mercredi: 3, mer: 3, jeudi: 4, jeu: 4, vendredi: 5, ven: 5, samedi: 6, sam: 6 };
+export const MONTH_DICTIONARY = { janvier: 1, jan: 1, "jan.": 1, "février": 2, "fév": 2, "fév.": 2, fevrier: 2, fev: 2, "fev.": 2, mars: 3, mar: 3, "mar.": 3, avril: 4, avr: 4, "avr.": 4, mai: 5, juin: 6, jun: 6, juillet: 7, juil: 7, jul: 7, "jul.": 7, "août": 8, aout: 8, septembre: 9, sep: 9, "sep.": 9, sept: 9, "sept.": 9, octobre: 10, oct: 10, "oct.": 10, novembre: 11, nov: 11, "nov.": 11, "décembre": 12, decembre: 12, dec: 12, "dec.": 12 };
+export const INTEGER_WORD_DICTIONARY = { un: 1, deux: 2, trois: 3, quatre: 4, cinq: 5, six: 6, sept: 7, huit: 8, neuf: 9, dix: 10, onze: 11, douze: 12, treize: 13 };
+export const TIME_UNIT_DICTIONARY = { sec: "second", seconde: "second", secondes: "second", min: "minute", mins: "minute", minute: "minute", minutes: "minute", h: "hour", hr: "hour", hrs: "hour", heure: "hour", heures: "hour", jour: "day", jours: "day", semaine: "week", semaines: "week", mois: "month", trimestre: "quarter", trimestres: "quarter", ans: "year", "année": "year", "années": "year" };
+export const NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|[0-9]+|[0-9]+\\.[0-9]+|une?\\b|quelques?|demi-?)";
+export const ORDINAL_NUMBER_PATTERN = "(?:[0-9]{1,2}(?:er)?)";
+export const YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s*(?:AC|AD|p\\.\\s*C(?:hr?)?\\.\\s*n\\.)|[1-2][0-9]{3}|[5-9][0-9])";
+export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);

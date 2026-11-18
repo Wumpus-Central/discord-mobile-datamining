@@ -268,13 +268,13 @@ class Client {
 }
 const entry = {
   key: "captureException",
-  value: function captureException(arg0, arg1, arg2) {
+  value: function captureException(originalException, arg1, arg2) {
     const self = this;
-    dependencyMap = arg0;
+    dependencyMap = originalException;
     closure_2 = arg2;
     const uuid4Result = closure_0(694).uuid4();
     const obj = closure_0(694);
-    if (obj2.checkOrSetAlreadyCaught(arg0)) {
+    if (obj2.checkOrSetAlreadyCaught(originalException)) {
       if (closure_0(687).DEBUG_BUILD) {
         const debug = closure_0(688).debug;
         debug.log(Client);
@@ -296,23 +296,23 @@ let items = [
   entry,
   {
     key: "captureMessage",
-    value: function captureMessage(arg0, arg1, arg2, arg3) {
+    value: function captureMessage(combined1, arg1, arg2, arg3) {
       const self = this;
       dependencyMap = arg3;
       const obj = { event_id: closure_0(694).uuid4() };
       const merged = Object.assign(arg2);
       const obj2 = closure_0(694);
-      let StringResult = arg0;
-      if (!obj3.isParameterizedString(arg0)) {
+      let StringResult = combined1;
+      if (!obj3.isParameterizedString(combined1)) {
         const _String = String;
-        StringResult = String(arg0);
+        StringResult = String(combined1);
       }
       obj3 = closure_0(691);
-      const isPrimitiveResult = closure_0(691).isPrimitive(arg0);
+      const isPrimitiveResult = closure_0(691).isPrimitive(combined1);
       if (isPrimitiveResult) {
         self.eventFromMessage(StringResult, arg1, obj);
       } else {
-        self.eventFromException(arg0, obj);
+        self.eventFromException(combined1, obj);
       }
       let str = "error";
       if (isPrimitiveResult) {
@@ -365,9 +365,9 @@ let items = [
   },
   {
     key: "captureSession",
-    value: function captureSession(arg0) {
-      this.sendSession(arg0);
-      closure_0(709).updateSession(arg0, { init: false });
+    value: function captureSession(attrs) {
+      this.sendSession(attrs);
+      closure_0(709).updateSession(attrs, { init: false });
     }
   },
   {
@@ -514,16 +514,16 @@ items[12] = {
 };
 items[13] = {
   key: "getIntegrationByName",
-  value: function getIntegrationByName(arg0) {
-    return this._integrations[arg0];
+  value: function getIntegrationByName(MobileFeedback) {
+    return this._integrations[MobileFeedback];
   }
 };
 items[14] = {
   key: "addIntegration",
-  value: function addIntegration(arg0) {
-    closure_0(751).setupIntegration(this, arg0, this._integrations);
-    if (!this._integrations[arg0.name]) {
-      items = [arg0];
+  value: function addIntegration(name) {
+    closure_0(751).setupIntegration(this, name, this._integrations);
+    if (!this._integrations[name.name]) {
+      items = [name];
       const result = closure_0(751).afterSetupIntegrations(this, items);
       const tmpResult = closure_0(751);
     }
@@ -532,15 +532,15 @@ items[14] = {
 };
 items[15] = {
   key: "sendEvent",
-  value: function sendEvent(arg0) {
+  value: function sendEvent(type) {
     const self = this;
-    closure_0 = arg0;
+    closure_0 = type;
     let obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
-    self.emit("beforeSendEvent", arg0, obj);
-    let eventEnvelope = closure_0(727).createEventEnvelope(arg0, self._dsn, self._options._metadata, self._options.tunnel);
+    self.emit("beforeSendEvent", type, obj);
+    let eventEnvelope = closure_0(727).createEventEnvelope(type, self._dsn, self._options._metadata, self._options.tunnel);
     for (const item10025 of tmp3) {
       let obj3 = closure_0(728);
       let obj4 = closure_0(728);
@@ -593,15 +593,15 @@ items[16] = {
 };
 items[17] = {
   key: "recordDroppedEvent",
-  value: function recordDroppedEvent(arg0, arg1) {
-    let num = arg2;
-    if (arg2 === undefined) {
+  value: function recordDroppedEvent(before_send, span) {
+    let num = diff;
+    if (diff === undefined) {
       num = 1;
     }
     const self = this;
     if (this._options.sendClientReports) {
       const _HermesInternal = HermesInternal;
-      const combined = "" + arg0 + ":" + arg1;
+      const combined = "" + before_send + ":" + span;
       if (closure_0(687).DEBUG_BUILD) {
         const debug = closure_0(688).debug;
         let str3 = "";
@@ -759,7 +759,7 @@ items[21] = {
 };
 items[22] = {
   key: "_updateSessionFromEvent",
-  value: function _updateSessionFromEvent(status, level) {
+  value: function _updateSessionFromEvent(session, level) {
     let flag = "fatal" === level.level;
     const exception = level.exception;
     let values;
@@ -786,10 +786,10 @@ items[22] = {
         break;
       }
     }
-    let tmp7 = "ok" === status.status;
+    let tmp7 = "ok" === session.status;
     let tmp8 = tmp7;
     if (tmp7) {
-      tmp8 = 0 === status.errors;
+      tmp8 = 0 === session.errors;
     }
     if (!tmp8) {
       if (tmp7) {
@@ -804,7 +804,7 @@ items[22] = {
       }
       const obj3 = {};
       const merged = Object.assign(obj2);
-      let errors = status.errors;
+      let errors = session.errors;
       if (!errors) {
         if (!flag2) {
           flag2 = flag;
@@ -813,8 +813,8 @@ items[22] = {
       }
       const self = this;
       obj3.errors = errors;
-      closure_0(709).updateSession(status, obj3);
-      this.captureSession(status);
+      closure_0(709).updateSession(session, obj3);
+      this.captureSession(session);
       const obj = closure_0(709);
     }
   }
@@ -909,10 +909,9 @@ items[24] = {
 };
 items[25] = {
   key: "_prepareEvent",
-  value: function _prepareEvent(type, integrations, arg2, setLastEventId) {
+  value: function _prepareEvent(type, integrations, clone, setLastEventId) {
     const self = this;
     dependencyMap = integrations;
-    closure_0 = arg2;
     const options = this.getOptions();
     const keys = Object.keys(this._integrations);
     integrations = integrations.integrations;
@@ -935,17 +934,17 @@ items[25] = {
       }
       setLastEventId.setLastEventId(event_id);
     }
-    let obj = closure_0(734);
-    return closure_0(734).prepareEvent(options, type, integrations, arg2, self, setLastEventId).then((contexts) => {
+    let obj = clone(734);
+    return clone(734).prepareEvent(options, type, integrations, clone, self, setLastEventId).then((contexts) => {
       if (null === contexts) {
         return contexts;
       } else {
         self.emit("postprocessEvent", contexts, integrations);
-        const obj = { trace: closure_0(integrations[20]).getTraceContextFromScope(closure_0) };
+        const obj = { trace: clone(integrations[20]).getTraceContextFromScope(clone) };
         const merged = Object.assign(contexts.contexts);
         contexts.contexts = obj;
-        const obj2 = closure_0(integrations[20]);
-        const obj4 = { dynamicSamplingContext: closure_0(integrations[21]).getDynamicSamplingContextFromScope(self, closure_0) };
+        const obj2 = clone(integrations[20]);
+        const obj4 = { dynamicSamplingContext: clone(integrations[21]).getDynamicSamplingContextFromScope(self, clone) };
         const merged1 = Object.assign(contexts.sdkProcessingMetadata);
         contexts.sdkProcessingMetadata = obj4;
         return contexts;
@@ -955,18 +954,16 @@ items[25] = {
 };
 items[26] = {
   key: "_captureEvent",
-  value: function _captureEvent(type) {
+  value: function _captureEvent(type, arg1) {
     let obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
-    let currentScope = arg2;
-    if (arg2 === undefined) {
+    if (currentScope === undefined) {
       currentScope = closure_0(712).getCurrentScope();
       const obj2 = closure_0(712);
     }
-    let isolationScope = arg3;
-    if (arg3 === undefined) {
+    if (isolationScope === undefined) {
       isolationScope = closure_0(712).getIsolationScope();
       const obj3 = closure_0(712);
     }
@@ -1006,12 +1003,11 @@ items[26] = {
 };
 items[27] = {
   key: "_processEvent",
-  value: function _processEvent(type, arg1, arg2, arg3) {
+  value: function _processEvent(type, arg1, currentScope, isolationScope) {
     const self = this;
     dependencyMap = type;
     const data = arg1;
-    let session = arg2;
-    const session2 = arg3;
+    let session = currentScope;
     const options = this.getOptions();
     const sampleRate = options.sampleRate;
     closure_6 = "transaction" === type.type;
@@ -1042,9 +1038,9 @@ items[27] = {
       }
       str2 = str;
     }
-    const _prepareEventResult = self._prepareEvent(type, arg1, arg2, arg3);
+    const _prepareEventResult = self._prepareEvent(type, arg1, currentScope, isolationScope);
     let tmp3 = type.type || "error";
-    let nextPromise = self._prepareEvent(type, arg1, arg2, arg3).then((result) => {
+    let nextPromise = self._prepareEvent(type, arg1, currentScope, isolationScope).then((result) => {
       if (null === result) {
         self.recordDroppedEvent("event_processor", str2);
         let obj2 = { message: "An event processor returned `null`, will not send event." };
@@ -1177,7 +1173,7 @@ items[27] = {
         return nextPromise;
       }
     });
-    return self._prepareEvent(type, arg1, arg2, arg3).then((result) => {
+    return self._prepareEvent(type, arg1, currentScope, isolationScope).then((result) => {
       if (null === result) {
         self.recordDroppedEvent("event_processor", str2);
         let obj2 = { message: "An event processor returned `null`, will not send event." };
@@ -1323,7 +1319,7 @@ items[27] = {
       } else {
         session = session.getSession();
         if (!session) {
-          session = session2.getSession();
+          session = isolationScope.getSession();
         }
         let tmp3 = closure_7;
         if (closure_7) {
@@ -1389,9 +1385,8 @@ items[27] = {
 };
 items[28] = {
   key: "_process",
-  value: function _process(arg0, arg1) {
+  value: function _process(arg0, error) {
     const self = this;
-    closure_0 = arg1;
     this._numProcessing = this._numProcessing + 1;
     const _promiseBuffer = this._promiseBuffer;
     _promiseBuffer.add(arg0).then((result) => {
@@ -1399,8 +1394,8 @@ items[28] = {
       return result;
     }, (arg0) => {
       self._numProcessing = self._numProcessing - 1;
-      if (arg0 === closure_0(_self[4]).SENTRY_BUFFER_FULL_ERROR) {
-        self.recordDroppedEvent("queue_overflow", closure_0);
+      if (arg0 === error(_self[4]).SENTRY_BUFFER_FULL_ERROR) {
+        self.recordDroppedEvent("queue_overflow", error);
       }
       return arg0;
     });

@@ -6,9 +6,9 @@ import forEachEnvelopeItem from "forEachEnvelopeItem" /* 728 */;
 import _mod739 from "module_739" /* 739 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-function eventFromEnvelope(arg0, arg1) {
+function eventFromEnvelope(dependencyMap, arg1) {
   closure_0 = arg1;
-  forEachEnvelopeItem.forEachEnvelopeItem(arg0, (arg0, arg1) => {
+  forEachEnvelopeItem.forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
     if (items.includes(arg1)) {
       const _Array = Array;
       let tmp3;
@@ -31,18 +31,18 @@ export function makeMultiplexedTransport(arg0, arg1) {
   closure_1 = arg1;
   return (arg0) => {
     let tunnel = arg0;
-    function getTransport(arg0, arg1) {
-      let combined = arg0;
+    function getTransport(dsn, arg1) {
+      let combined = dsn;
       if (arg1) {
         const _HermesInternal = HermesInternal;
-        combined = "" + arg0 + ":" + arg1;
+        combined = "" + dsn + ":" + arg1;
       }
       value = map.get(combined);
       if (value) {
-        items = [arg0, value];
+        items = [dsn, value];
         return items;
       } else {
-        const dsnFromStringResult = _mod701.dsnFromString(arg0);
+        const dsnFromStringResult = _mod701.dsnFromString(dsn);
         if (dsnFromStringResult) {
           let merged = tunnel;
           const envelopeEndpointWithUrlEncodedAuth = _mod739.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
@@ -133,7 +133,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
             if (!length) {
               items = ["event"];
             }
-            dependencyMap(728).forEachEnvelopeItem(dependencyMap, /* F82733 */ function() { ... });
+            dependencyMap(728).forEachEnvelopeItem(dependencyMap, /* F80310 */ function() { ... });
             return dependencyMap2;
           }
         }).map((dsn) => {

@@ -1,7 +1,7 @@
 // === Module 723: logIgnoredSpan ===
 
 // Module 723 (logIgnoredSpan)
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import _mod696 from "module_696" /* 696 */;
 
@@ -59,7 +59,7 @@ export function shouldIgnoreSpan(timestamp, ignoreSpans) {
               }
               if (tmp17) {
                 if (tmp23) {
-                  if (_mod687.DEBUG_BUILD) {
+                  if (__SENTRY_DEBUG__.DEBUG_BUILD) {
                     let tmp29 = logIgnoredSpan(timestamp);
                   }
                   iter.return();
@@ -73,7 +73,7 @@ export function shouldIgnoreSpan(timestamp, ignoreSpans) {
         }
         let obj3 = _mod696;
         if (obj3.isMatchingPattern(timestamp.description, tmp8)) {
-          if (_mod687.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
             let tmp35 = logIgnoredSpan(timestamp);
           }
           iter.return();

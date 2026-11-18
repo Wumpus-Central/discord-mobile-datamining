@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/promotions/third_party/voicemod", scales: [1], hash: "0847665ebb4c7a8ea57a089e5a9dcec8", name: "Voicemod.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9oZXhhZ29uX2NhbXBhaWdu", scales: [1], hash: "607ca0a872fbaa4a1cb08a796a9eb734", name: "hi.messages.607ca0a872fbaa4a1cb08a796a9eb734.compiled.messages", type: "jsona" });

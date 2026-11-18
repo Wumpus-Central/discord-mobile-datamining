@@ -83,7 +83,7 @@ function addNativeThreadCpuProfileToHermes(profile, profile2, active_thread_id) 
     const frames = profile2.frames;
     for (const item10032 of frames) {
       let frames1 = arg0.frames;
-      let obj = { function: null, instruction_addr: null, platform: "Array" };
+      let obj = { function: null, instruction_addr: null, platform: "r" };
       ({ function: obj.function, instruction_addr: obj.instruction_addr } = item10032);
       let arr = frames1.push(obj);
       continue;

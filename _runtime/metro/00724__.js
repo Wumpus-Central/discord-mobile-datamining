@@ -137,8 +137,8 @@ let items = [
   },
   {
     key: "updateStartTime",
-    value: function updateStartTime(arg0) {
-      this._startTime = SentrySpan(683).spanTimeInputToSeconds(arg0);
+    value: function updateStartTime(sum) {
+      this._startTime = SentrySpan(683).spanTimeInputToSeconds(sum);
     }
   },
   {
@@ -158,10 +158,10 @@ let items = [
   },
   {
     key: "end",
-    value: function end(arg0) {
+    value: function end(startTime) {
       const self = this;
       if (!this._endTime) {
-        self._endTime = SentrySpan(683).spanTimeInputToSeconds(arg0);
+        self._endTime = SentrySpan(683).spanTimeInputToSeconds(startTime);
         const obj = SentrySpan(683);
         SentrySpan(725).logSpanEnd(self);
         self._onSpanEnded();
@@ -208,24 +208,24 @@ let items = [
   },
   {
     key: "addEvent",
-    value: function addEvent(name, num, arg2) {
+    value: function addEvent(name, startTime, arg2) {
       if (SentrySpan(687).DEBUG_BUILD) {
         const debug = SentrySpan(688).debug;
         debug.log("[Tracing] Adding an event to span:", name);
       }
-      let isArray = num;
-      if (num) {
-        isArray = typeof num === "number";
+      let isArray = startTime;
+      if (startTime) {
+        isArray = typeof startTime === "number";
       }
       if (!isArray) {
         const _Date = Date;
-        isArray = num instanceof Date;
+        isArray = startTime instanceof Date;
       }
       if (!isArray) {
         const _Array = Array;
-        isArray = Array.isArray(num);
+        isArray = Array.isArray(startTime);
       }
-      let tmp7 = num;
+      let tmp7 = startTime;
       if (!isArray) {
         let timestampInSecondsResult = arg2;
         if (!arg2) {
@@ -234,23 +234,23 @@ let items = [
         }
         tmp7 = timestampInSecondsResult;
       }
-      let isArray1 = num;
-      if (num) {
-        isArray1 = typeof num === "number";
+      let isArray1 = startTime;
+      if (startTime) {
+        isArray1 = typeof startTime === "number";
       }
       if (!isArray1) {
         const _Date2 = Date;
-        isArray1 = num instanceof Date;
+        isArray1 = startTime instanceof Date;
       }
       if (!isArray1) {
         const _Array2 = Array;
-        isArray1 = Array.isArray(num);
+        isArray1 = Array.isArray(startTime);
       }
       if (isArray1) {
         let obj = {};
       } else {
-        obj = num;
-        if (!num) {
+        obj = startTime;
+        if (!startTime) {
           obj = {};
         }
       }

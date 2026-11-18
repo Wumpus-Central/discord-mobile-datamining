@@ -6,8 +6,8 @@ import _mod854 from "module_854" /* 854 */;
 require = arg1;
 const module = arg4;
 const dependencyMap = arg6;
-function dynamicRequire(require, arg1) {
-  return require.require(arg1);
+function dynamicRequire(module, process) {
+  return module.require(process);
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
@@ -27,17 +27,17 @@ export function isNodeEnv() {
     const tmp3 = typeof call === "unknown" ? toString() : call(str);
   }
 }
-export function loadModule(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
+export function loadModule(process) {
+  let tmp = module;
+  if (module === undefined) {
     tmp = module;
   }
   try {
-    let tmp3 = dynamicRequire(tmp, arg0);
+    let tmp3 = dynamicRequire(tmp, process);
     if (!tmp3) {
       try {
         const _HermesInternal = HermesInternal;
-        tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
+        tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + process);
       } catch (err) {
       }
     }

@@ -192,7 +192,7 @@ export () => {
                   let found;
                   if (null !== spans) {
                     if (debug1 !== closure_129_4) {
-                      found = closure_129_4.find(/* F147344 */ function() { ... });
+                      found = closure_129_4.find(/* F143690 */ function() { ... });
                     }
                   }
                   closure_128_1 = found;
@@ -308,7 +308,7 @@ export () => {
                       let found;
                       if (null !== spans) {
                         if (debug1 !== closure_129_4) {
-                          found = closure_129_4.find(/* F147346 */ function() { ... });
+                          found = closure_129_4.find(/* F143692 */ function() { ... });
                         }
                       }
                       closure_128_1 = found;

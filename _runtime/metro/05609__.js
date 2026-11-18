@@ -1,13 +1,24 @@
 // === Module 5609: ? ===
 
 // Module 5609
-import _mod17 from "module_17" /* 17 */;
-import _mod19 from "module_19" /* 19 */;
-import _modDef5610 from "module_5610" /* 5610 */;
 
-const use = _mod19.use;
-const Platform = _mod17.Platform;
-
-export function useEnsureGestureHandlerRootView() {
-  use(_modDef5610);
-}
+export default function initCloneArray(arg0) {
+  length = arg0.length;
+  const constructor = new arg0.constructor(length);
+  if (length) {
+    length = typeof arg0[0] === "string";
+  }
+  if (!length) {
+    if (length) {
+      ({ index: tmp.index, input: tmp.input } = arg0);
+    }
+    return constructor;
+  } else {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let callResult = hasOwnProperty("index");
+    } else {
+      callResult = call(arg0, "index");
+    }
+  }
+};

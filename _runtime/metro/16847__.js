@@ -1,10 +1,7 @@
 // === Module 16847: ? ===
 
 // Module 16847
-import _mod16825 from "module_16825" /* 16825 */;
-import _mod16826 from "module_16826" /* 16826 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default Object.keys || (function keys(arg0) {
-  return _mod16826(arg0, _mod16825);
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d28a54af44f7516fe576101d4a6c7e22", name: "EmojiMeltingFaceIcon", type: "png" });

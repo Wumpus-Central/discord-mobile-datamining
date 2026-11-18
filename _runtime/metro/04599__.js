@@ -1,14 +1,26 @@
 // === Module 4599: ? ===
 
 // Module 4599
-import module_2194 from "module_2194" /* 2194 */;
-
-if (!module_2194) {
-  const obj2 = { default: module_2194 };
-  let obj = obj2;
-} else {
-  obj = module_2194;
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "vi" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = { long: { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" } };
+    obj3.conjunction = obj4;
+    const obj5 = { long: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" }, narrow: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" }, short: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" } };
+    obj3.disjunction = obj5;
+    const obj6 = { long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
+  }
 }
-
-export default { date: obj.default({ formats: { full: "EEEE, d. MMMM yyyy", long: "d. MMMM yyyy", medium: "d. M. yyyy", short: "dd.MM.yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'v' {{time}}", long: "{{date}} 'v' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
-export default exports.default;
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = { data: { conjunction: { long: { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" }, narrow: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" }, short: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "vi" };
+prop.push(obj);

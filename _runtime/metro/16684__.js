@@ -1,22 +1,7 @@
 // === Module 16684: ? ===
 
 // Module 16684
-const weakMap = new WeakMap();
+import registerAsset from "module_1119" /* 1119 */;
 
-export default function getInternalSlots(arg0, arg1) {
-  items = arg1;
-  if (undefined === arg1) {
-    items = [];
-  }
-  value = weakMap.get(arg0);
-  if (!value) {
-    const _Object = Object;
-    const obj2 = Object.create(null, items.reduce((acc, item) => {
-      acc[item] = { enumerable: false, writable: true, configurable: true };
-      return acc;
-    }, {}));
-    const result = weakMap.set(arg0, obj2);
-    value = obj2;
-  }
-  return value;
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 87, height: 87, scales: [2, 3], hash: "d299e9311da17e9393089ebfa8d667b1", name: "resubscribed_alert_header", type: "png" });

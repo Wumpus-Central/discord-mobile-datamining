@@ -1,7 +1,7 @@
 // === Module 785: _shouldDropEvent ===
 
 // Module 785 (_shouldDropEvent)
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import _mod697 from "module_697" /* 697 */;
 import setupIntegration from "setupIntegration" /* 751 */;
@@ -191,7 +191,7 @@ export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
     } else {
       try {
         if (_shouldDropEvent(type, closure_0)) {
-          if (_mod687.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
             const debug = consoleSandbox.debug;
             debug.warn("Event dropped due to being a duplicate of previously captured event.");
           }

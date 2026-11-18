@@ -12,10 +12,10 @@ import DEFAULT_ENVIRONMENT2 from "DEFAULT_ENVIRONMENT" /* 722 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function getDynamicSamplingContextFromSpan(spanContext) {
+function getDynamicSamplingContextFromSpan(activeSpan) {
   const client = _mod712.getClient();
   if (client) {
-    const rootSpan = spanToJSON.getRootSpan(spanContext);
+    const rootSpan = spanToJSON.getRootSpan(activeSpan);
     const tmpResult = spanToJSON;
     const spanToJSONResult = spanToJSON.spanToJSON(rootSpan);
     const data = spanToJSONResult.data;
@@ -66,7 +66,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         if (!DEFAULT_ENVIRONMENT) {
           DEFAULT_ENVIRONMENT = DEFAULT_ENVIRONMENT2.DEFAULT_ENVIRONMENT;
         }
-        const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: client.getDsn() || {}.publicKey, trace_id: spanContext.spanContext().traceId, org_id: null };
+        const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: client.getDsn() || {}.publicKey, trace_id: activeSpan.spanContext().traceId, org_id: null };
         const tmp12 = client.getDsn() || {};
         obj2.org_id = _mod701.extractOrgIdFromClient(client);
         client.emit("createDsc", obj2);
@@ -131,25 +131,25 @@ export function getDynamicSamplingContextFromClient(trace_id, getOptions) {
   getOptions.emit("createDsc", obj);
   return obj;
 }
-export function getDynamicSamplingContextFromScope(getOptions, getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
+export function getDynamicSamplingContextFromScope(client, scope) {
+  const propagationContext = scope.getPropagationContext();
   let dsc = propagationContext.dsc;
   if (!dsc) {
-    const options = getOptions.getOptions();
+    const options = client.getOptions();
     let DEFAULT_ENVIRONMENT = options.environment;
     if (!DEFAULT_ENVIRONMENT) {
       DEFAULT_ENVIRONMENT = DEFAULT_ENVIRONMENT2.DEFAULT_ENVIRONMENT;
     }
-    const obj = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: getOptions.getDsn() || {}.publicKey, trace_id: propagationContext.traceId, org_id: null };
-    const tmp4 = getOptions.getDsn() || {};
-    obj.org_id = _mod701.extractOrgIdFromClient(getOptions);
-    getOptions.emit("createDsc", obj);
+    const obj = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: client.getDsn() || {}.publicKey, trace_id: propagationContext.traceId, org_id: null };
+    const tmp4 = client.getDsn() || {};
+    obj.org_id = _mod701.extractOrgIdFromClient(client);
+    client.emit("createDsc", obj);
     dsc = obj;
   }
   return dsc;
 }
 export { getDynamicSamplingContextFromSpan };
-export function spanToBaggageHeader(arg0) {
-  const tmp = getDynamicSamplingContextFromSpan(arg0);
+export function spanToBaggageHeader(activeSpan) {
+  const tmp = getDynamicSamplingContextFromSpan(activeSpan);
   return MAX_BAGGAGE_STRING_LENGTH.dynamicSamplingContextToSentryBaggageHeader(tmp);
 }

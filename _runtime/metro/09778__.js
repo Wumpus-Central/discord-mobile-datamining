@@ -1,33 +1,7 @@
 // === Module 9778: ? ===
 
 // Module 9778
-const require = globalThis.__r;
+import registerAsset from "module_1119" /* 1119 */;
 
-for (const key10013 in require("module_9779")) {
-  arg5[key10013] = require("module_9779")[key10013];
-  continue;
-}
-for (const key10017 in require("ReplacementModesAndroid")) {
-  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
-  continue;
-}
-for (const key10021 in require("purchaseUpdatedListener")) {
-  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
-  continue;
-}
-for (const key10025 in require("module_9793")) {
-  arg5[key10025] = require("module_9793")[key10025];
-  continue;
-}
-for (const key10029 in require("module_9794")) {
-  arg5[key10029] = require("module_9794")[key10029];
-  continue;
-}
-for (const key10033 in require("PurchaseError")) {
-  arg5[key10033] = require("PurchaseError")[key10033];
-  continue;
-}
-for (const key10037 in require("module_9795")) {
-  arg5[key10037] = require("module_9795")[key10037];
-  continue;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e8a96141e48bf46350215d4dadeaaebc", name: "ExperimentalGameControllerLinkIcon", type: "png" });

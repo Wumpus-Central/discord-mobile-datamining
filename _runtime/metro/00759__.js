@@ -1,7 +1,7 @@
 // === Module 759: ? ===
 
 // Module 759
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import _mod712 from "module_712" /* 712 */;
 
@@ -9,11 +9,11 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function initAndBind(arg0, debug) {
-  if (true === debug.debug) {
+export function initAndBind(BrowserClient, merged2) {
+  if (true === merged2.debug) {
     const obj = consoleSandbox;
-    if (_mod687.DEBUG_BUILD) {
-      debug = obj.debug;
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      const debug = obj.debug;
       debug.enable();
     } else {
       obj.consoleSandbox(() => {
@@ -22,14 +22,14 @@ export function initAndBind(arg0, debug) {
     }
   }
   const currentScope = _mod712.getCurrentScope();
-  currentScope.update(debug.initialScope);
-  const obj4 = new arg0(debug);
+  currentScope.update(merged2.initialScope);
+  const obj4 = new BrowserClient(merged2);
   const currentScope1 = _mod712.getCurrentScope();
   currentScope1.setClient(obj4);
   obj4.init();
   return obj4;
 }
-export function setCurrentClient(arg0) {
+export function setCurrentClient(_client) {
   const currentScope = _mod712.getCurrentScope();
-  currentScope.setClient(arg0);
+  currentScope.setClient(_client);
 }

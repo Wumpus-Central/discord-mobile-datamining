@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function captureFeedback(contact_email) {
+export function captureFeedback(contact_email, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};

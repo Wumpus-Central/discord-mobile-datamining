@@ -7,7 +7,7 @@ import _mod701 from "module_701" /* 701 */;
 import normalize from "normalize" /* 729 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-function forEachEnvelopeItem(arg0, fn) {
+function forEachEnvelopeItem(dependencyMap, fn) {
   for (const item10007 of tmp) {
     if (arg1(item10007, item10007[0].type)) {
       obj.return();
@@ -20,17 +20,17 @@ function forEachEnvelopeItem(arg0, fn) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_4 = { session: "session", sessions: "session", attachment: "attachment", transaction: "transaction", event: "error", client_report: "internal", user_report: "default", profile: "profile", profile_chunk: "profile", replay_event: "replay", replay_recording: "replay", check_in: "monitor", feedback: "feedback", span: "span", raw_security: "security", log: "log_item", metric: "metric", trace_metric: "metric" };
 
-export function addItemToEnvelope(arg0, arg1) {
-  const tmp = _slicedToArray(arg0, 2);
+export function addItemToEnvelope(eventEnvelope, attachmentEnvelopeItem) {
+  const tmp = _slicedToArray(eventEnvelope, 2);
   items = [tmp[0], ];
   const items1 = [];
-  items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
+  items1[HermesBuiltin.arraySpread(tmp[1], 0)] = attachmentEnvelopeItem;
   items[1] = items1;
   return items;
 }
-export function createAttachmentEnvelopeItem(data) {
-  if (typeof data.data === "string") {
-    data = data.data;
+export function createAttachmentEnvelopeItem(item10025) {
+  if (typeof item10025.data === "string") {
+    const data = item10025.data;
     const sentryCarrier = _mod689.getSentryCarrier(_mod685.GLOBAL_OBJ);
     if (sentryCarrier.encodePolyfill) {
       let encodePolyfillResult = sentryCarrier.encodePolyfill(data);
@@ -40,9 +40,9 @@ export function createAttachmentEnvelopeItem(data) {
       encodePolyfillResult = encoder.encode(data);
     }
   } else {
-    const data1 = data.data;
+    const data1 = item10025.data;
     const obj2 = { type: "attachment", length: data1.length, filename: null, content_type: null, attachment_type: null };
-    ({ filename: obj3.filename, contentType: obj3.content_type, attachmentType: obj3.attachment_type } = data);
+    ({ filename: obj3.filename, contentType: obj3.content_type, attachmentType: obj3.attachment_type } = item10025);
     items = [obj2, data1];
     return items;
   }
@@ -55,22 +55,22 @@ export function createEnvelope(eventEnvelopeHeaders) {
   items1 = [eventEnvelopeHeaders, items];
   return items1;
 }
-export function createEventEnvelopeHeaders(event_id, sdk, arg2, url) {
+export function createEventEnvelopeHeaders(event_id, sdkMetadataForEnvelopeHeader, tunnel, _dsn) {
   const sdkProcessingMetadata = event_id.sdkProcessingMetadata;
   let prop;
   if (sdkProcessingMetadata != null) {
     prop = sdkProcessingMetadata.dynamicSamplingContext;
   }
   const obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
-  let tmp2 = sdk;
-  if (sdk) {
-    const obj2 = { sdk };
+  let tmp2 = sdkMetadataForEnvelopeHeader;
+  if (sdkMetadataForEnvelopeHeader) {
+    const obj2 = { sdk: sdkMetadataForEnvelopeHeader };
     tmp2 = obj2;
   }
   const merged = Object.assign(tmp2);
-  let tmp4 = arg2 && url;
+  let tmp4 = tunnel && _dsn;
   if (tmp4) {
-    const obj3 = { dsn: _mod701.dsnToString(url) };
+    const obj3 = { dsn: _mod701.dsnToString(_dsn) };
     tmp4 = obj3;
   }
   const merged1 = Object.assign(tmp4);
@@ -86,22 +86,22 @@ export function createSpanEnvelopeItem(arg0) {
   items = [{ type: "span" }, arg0];
   return items;
 }
-export function envelopeContainsItemType(arg0, arg1) {
+export function envelopeContainsItemType(dependencyMap, arg1) {
   closure_0 = arg1;
-  return forEachEnvelopeItem(arg0, (arg0, arg1) => closure_0.includes(arg1));
+  return forEachEnvelopeItem(dependencyMap, (arg0, arg1) => closure_0.includes(arg1));
 }
 export function envelopeItemTypeToDataCategory(arg0) {
   return closure_4[arg0];
 }
 export { forEachEnvelopeItem };
-export function getSdkMetadataForEnvelopeHeader(sdk) {
-  sdk = undefined;
-  if (sdk != null) {
-    sdk = sdk.sdk;
+export function getSdkMetadataForEnvelopeHeader(sdkMetadata) {
+  let sdk;
+  if (sdkMetadata != null) {
+    sdk = sdkMetadata.sdk;
   }
   if (sdk) {
     const obj = { name: null, version: null };
-    ({ name: obj.name, version: obj.version } = sdk.sdk);
+    ({ name: obj.name, version: obj.version } = sdkMetadata.sdk);
     return obj;
   }
 }
@@ -157,7 +157,7 @@ export function parseEnvelope(arr) {
     const obj = require("module_689");
   }
 }
-export function serializeEnvelope(dependencyMap) {
+export function serializeEnvelope(items) {
   function append(json) {
     if (typeof sum === "string") {
       if (typeof json === "string") {
@@ -186,7 +186,7 @@ export function serializeEnvelope(dependencyMap) {
       }
     }
   }
-  const tmp4 = _slicedToArray(dependencyMap, 2);
+  const tmp4 = _slicedToArray(items, 2);
   const require = JSON.stringify(tmp4[0]);
   if (tmp5 === undefined) {
     let tmp22 = require;

@@ -2,7 +2,7 @@
 
 // Module 794 (_INTERNAL_FLAG_BUFFER_SIZE)
 import spanToJSON from "spanToJSON" /* 683 */;
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import _mod712 from "module_712" /* 712 */;
 
@@ -69,7 +69,7 @@ export function _INTERNAL_insertFlagToScope(flagKey, value) {
   closure_0 = flagKey;
   if (typeof value === "boolean") {
     if (values.length > num) {
-      if (_mod687.DEBUG_BUILD) {
+      if (__SENTRY_DEBUG__.DEBUG_BUILD) {
         const debug = consoleSandbox.debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + num);
@@ -91,7 +91,7 @@ export function _INTERNAL_insertToFlagBuffer(arr, flag, result, arg3) {
   closure_0 = flag;
   if (typeof result === "boolean") {
     if (arr.length > arg3) {
-      if (_mod687.DEBUG_BUILD) {
+      if (__SENTRY_DEBUG__.DEBUG_BUILD) {
         const debug = consoleSandbox.debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + arg3);

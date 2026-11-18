@@ -1,7 +1,7 @@
 // === Module 789: markAsInstrumented ===
 
 // Module 789 (markAsInstrumented)
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import GEN_AI_CONVERSATION_ID_ATTRIBUTE from "GEN_AI_CONVERSATION_ID_ATTRIBUTE" /* 703 */;
 import _mod730 from "module_730" /* 730 */;
@@ -282,7 +282,7 @@ function instrumentSupabaseClient(supabaseClient) {
         }
       }
     })(supabaseClient);
-  } else if (_mod687.DEBUG_BUILD) {
+  } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
     const debug = consoleSandbox.debug;
     debug.warn("Supabase integration was not installed because no Supabase client was provided.");
   }
@@ -365,7 +365,7 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
               }
             }
           })(supabaseClient);
-        } else if (_mod687.DEBUG_BUILD) {
+        } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
           let debug = consoleSandbox.debug;
           debug.warn("Supabase integration was not installed because no Supabase client was provided.");
         }

@@ -8,53 +8,53 @@ import _mod721 from "module_721" /* 721 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function mergeScopeData(extra, arg1) {
-  ({ level, breadcrumbs, fingerprint, eventProcessors, attachments, propagationContext, transactionName, span } = arg1);
-  ({ extra, tags, attributes, user, contexts, sdkProcessingMetadata } = arg1);
-  extra.extra = _mod710.merge(extra.extra, extra, 1);
-  extra.tags = _mod710.merge(extra.tags, tags, 1);
-  extra.attributes = _mod710.merge(extra.attributes, attributes, 1);
-  extra.user = _mod710.merge(extra.user, user, 1);
-  extra.contexts = _mod710.merge(extra.contexts, contexts, 1);
-  extra.sdkProcessingMetadata = _mod710.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
+function mergeScopeData(scopeData, scopeData2) {
+  ({ level, breadcrumbs, fingerprint, eventProcessors, attachments, propagationContext, transactionName, span } = scopeData2);
+  ({ extra, tags, attributes, user, contexts, sdkProcessingMetadata } = scopeData2);
+  scopeData.extra = _mod710.merge(scopeData.extra, extra, 1);
+  scopeData.tags = _mod710.merge(scopeData.tags, tags, 1);
+  scopeData.attributes = _mod710.merge(scopeData.attributes, attributes, 1);
+  scopeData.user = _mod710.merge(scopeData.user, user, 1);
+  scopeData.contexts = _mod710.merge(scopeData.contexts, contexts, 1);
+  scopeData.sdkProcessingMetadata = _mod710.merge(scopeData.sdkProcessingMetadata, sdkProcessingMetadata, 2);
   if (level) {
-    extra.level = level;
+    scopeData.level = level;
   }
   if (transactionName) {
-    extra.transactionName = transactionName;
+    scopeData.transactionName = transactionName;
   }
   if (span) {
-    extra.span = span;
+    scopeData.span = span;
   }
   if (breadcrumbs.length) {
     items = [];
-    HermesBuiltin.arraySpread(breadcrumbs, HermesBuiltin.arraySpread(extra.breadcrumbs, 0));
-    extra.breadcrumbs = items;
+    HermesBuiltin.arraySpread(breadcrumbs, HermesBuiltin.arraySpread(scopeData.breadcrumbs, 0));
+    scopeData.breadcrumbs = items;
   }
   if (fingerprint.length) {
     const items1 = [];
-    HermesBuiltin.arraySpread(fingerprint, HermesBuiltin.arraySpread(extra.fingerprint, 0));
-    extra.fingerprint = items1;
+    HermesBuiltin.arraySpread(fingerprint, HermesBuiltin.arraySpread(scopeData.fingerprint, 0));
+    scopeData.fingerprint = items1;
   }
   if (eventProcessors.length) {
     const items2 = [];
-    HermesBuiltin.arraySpread(eventProcessors, HermesBuiltin.arraySpread(extra.eventProcessors, 0));
-    extra.eventProcessors = items2;
+    HermesBuiltin.arraySpread(eventProcessors, HermesBuiltin.arraySpread(scopeData.eventProcessors, 0));
+    scopeData.eventProcessors = items2;
   }
   if (attachments.length) {
     const items3 = [];
-    HermesBuiltin.arraySpread(attachments, HermesBuiltin.arraySpread(extra.attachments, 0));
-    extra.attachments = items3;
+    HermesBuiltin.arraySpread(attachments, HermesBuiltin.arraySpread(scopeData.attachments, 0));
+    scopeData.attachments = items3;
   }
-  const merged = Object.assign(extra.propagationContext);
+  const merged = Object.assign(scopeData.propagationContext);
   const merged1 = Object.assign(propagationContext);
-  extra.propagationContext = {};
+  scopeData.propagationContext = {};
   const obj7 = {};
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function applyScopeDataToEvent(extra, arg1) {
-  ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, extra, tags, user, contexts, level, transactionName } = arg1);
+export function applyScopeDataToEvent(extra, combinedScopeData) {
+  ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, extra, tags, user, contexts, level, transactionName } = combinedScopeData);
   if (Object.keys(extra).length) {
     const obj = {};
     const merged = Object.assign(extra);

@@ -15,9 +15,9 @@ export const linkedErrorsIntegration = registerSpanErrorInstrumentation.defineIn
   closure_1 = obj.key || "cause";
   return {
     name: "LinkedErrors",
-    preprocessEvent(arg0, arg1, getOptions) {
+    preprocessEvent(exception, originalException, getOptions) {
       const options = getOptions.getOptions();
-      const result = registerSpanErrorInstrumentation.applyAggregateErrorsToEvent(_mod893.exceptionFromError, options.stackParser, closure_1, closure_0, arg0, arg1);
+      const result = registerSpanErrorInstrumentation.applyAggregateErrorsToEvent(_mod893.exceptionFromError, options.stackParser, closure_1, closure_0, exception, originalException);
     }
   };
 });

@@ -1,49 +1,7 @@
 // === Module 16839: ? ===
 
 // Module 16839
-import _mod16783 from "module_16783" /* 16783 */;
-import _mod16808 from "module_16808" /* 16808 */;
-import _mod16836 from "module_16836" /* 16836 */;
-import _mod16840 from "module_16840" /* 16840 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod16808(value)) {
-    _mod16840(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
-    } else {
-      _mod16783(arg1, value);
-    }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod16836.f(arg0, arg1, obj2);
-        const tmp3Result = _mod16836;
-      }
-    } catch (err) {
-    }
-  }
-  return arg0;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0450d9d5bb66be25511dd04ee055abfd", name: "EmojiDisguisedFaceIcon", type: "png" });

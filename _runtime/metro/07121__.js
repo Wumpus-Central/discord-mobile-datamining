@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "e0157f8261da28670f8ce7828f01db25", name: "img_account_sync_skype_white", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/user_settings", width: 234, height: 147.5, scales: [2, 3], hash: "251353afd104effe8e007def09df8df2", name: "crunchyroll_link_intro", type: "png" });

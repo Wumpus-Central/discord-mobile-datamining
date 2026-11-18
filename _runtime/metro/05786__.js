@@ -1,27 +1,15 @@
 // === Module 5786: ? ===
 
 // Module 5786
-import _mod19 from "module_19" /* 19 */;
-import value2 from "value2" /* 5565 */;
+import _mod17 from "module_17" /* 17 */;
+import _mod26 from "module_26" /* 26 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-const useMemo = _mod19.useMemo;
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsHostAndroid", directEventTypes: { topTabSelected: { registrationName: "onTabSelected" }, topTabSelectionRejected: { registrationName: "onTabSelectionRejected" }, topTabSelectionPrevented: { registrationName: "onTabSelectionPrevented" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onTabSelected: true, onTabSelectionRejected: true, onTabSelectionPrevented: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { navStateRequest: true, rejectStaleNavStateUpdates: true, tabBarHidden: true, nativeContainerBackgroundColor: _mod26.colorAttribute, colorScheme: true, tabBarRespectsIMEInsets: true };
 
-export (arg0) => {
-  const easing = arg0;
-  items = [, , ];
-  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
-  return useMemo(() => {
-    let ANIMATION_EASING = easing.easing;
-    if (!ANIMATION_EASING) {
-      ANIMATION_EASING = value2.ANIMATION_EASING;
-    }
-    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
-    let ANIMATION_DURATION = easing.duration;
-    if (!ANIMATION_DURATION) {
-      ANIMATION_DURATION = value2.ANIMATION_DURATION;
-    }
-    obj.duration = ANIMATION_DURATION;
-    obj.reduceMotion = easing.reduceMotion;
-    return obj;
-  }, items);
-}
+export default module_65.get("RNSTabsHostAndroid", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

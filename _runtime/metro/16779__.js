@@ -1,8 +1,7 @@
 // === Module 16779: ? ===
 
 // Module 16779
-import _mod16848 from "module_16848" /* 16848 */;
-import module_16780 from "module_16780" /* 16780 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default _mod16848.Object.assign;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CircleMinusIcon-secondary", type: "png" });

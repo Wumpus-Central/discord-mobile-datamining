@@ -1,166 +1,215 @@
 // === Module 14875: ? ===
 
 // Module 14875
-import _mod14846 from "module_14846" /* 14846 */;
+import _mod14876 from "module_14876" /* 14876 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
-const require = globalThis.__r;
-
-function isCommaContextStart(type) {
-  let tmp = null === type;
-  if (!tmp) {
-    let tmp4 = type.type === _mod14846.TYPE.Comma;
-    if (!tmp4) {
-      tmp4 = type.type === _mod14846.TYPE.Function;
-    }
-    if (!tmp4) {
-      tmp4 = type.type === _mod14846.TYPE.LeftParenthesis;
-    }
-    if (!tmp4) {
-      tmp4 = type.type === _mod14846.TYPE.LeftSquareBracket;
-    }
-    if (!tmp4) {
-      tmp4 = type.type === _mod14846.TYPE.LeftCurlyBracket;
-    }
-    if (!tmp4) {
-      let tmp5 = type.type === _mod14846.TYPE.Delim;
-      if (tmp5) {
-        tmp5 = "?" !== type.value;
-      }
-      tmp4 = tmp5;
-    }
-    tmp = tmp4;
-  }
-  return tmp;
-}
-function internalMatch(arr, match, self) {
-  _require = arr;
-  dependencyMap = match;
-  c2 = null;
-  type = null;
-  c4 = -1;
-  closure_5 = 0;
-  let prev = { type: 0, syntax: null, token: null, prev: null };
-  while (true) {
-    let sum = c4 + 1;
-    c4 = sum;
-    let tmp3 = null;
-    if (sum < arr.length) {
-      tmp3 = arr[c4];
-    }
-    type = tmp3;
-    if (null === tmp3) {
-      break;
+const ZodError = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      let tmp10 = _require;
-      if (tmp3.type === require("module_14846").TYPE.WhiteSpace) {
-        continue;
-      } else if (type.type !== tmp10(14846).TYPE.Comment) {
-        break;
-      }
-      continue;
+      callResult = call(constructResult);
     }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-const Match = "Match";
-let c4 = 0;
-
-export default {
-  matchAsList(arr, match, self) {
-    let obj = self;
-    if (!self) {
-      obj = {};
+const util = _mod14876.util;
+class ZodError {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, ZodError);
+    tmp2 = closure_4;
+    obj = closure_4(ZodError);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
     }
-    const str = internalMatch(arr, match, obj);
-    if (null !== str.match) {
-      let prev = str.match;
-      let tmp3 = null;
-      let tmp4 = null;
-      if (null !== prev) {
-        do {
-          prev.prev = tmp3;
-          tmp3 = prev;
-          tmp4 = prev;
-          prev = prev.prev;
-        } while (null !== tmp2);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.issues = [];
+    tmp3Result.addIssue = (arg0) => {
+      items = [];
+      items[HermesBuiltin.arraySpread(issues.issues, 0)] = arg0;
+      issues.issues = items;
+    };
+    tmp3Result.addIssues = () => {
+      items = arg0;
+      if (arg0 === undefined) {
+        items = [];
       }
-      let prev2 = tmp4.prev;
-      str.match = [];
-      if (null !== prev2) {
-        do {
-          type = prev2.type;
-          if (0 !== type) {
-            if (2 !== type) {
-              if (3 !== type) {
-                match = str.match;
-                let obj2 = { token: prev2.token.value, node: prev2.token.node };
-                arr = match.push(obj2);
-              }
-            }
-            let match1 = str.match;
-            let obj5 = { type: null, syntax: null };
-            ({ type: obj3.type, syntax: obj3.syntax } = prev2);
-            let arr2 = match1.push(obj5);
-          }
-          prev2 = prev2.prev;
-        } while (null !== prev2);
-      }
+      const items1 = [...items];
+      closure_0.issues = items1;
+    };
+    prototype = new.target.prototype;
+    if (Object.setPrototypeOf) {
+      _Object = Object;
+      setPrototypeOfResult = Object.setPrototypeOf(tmp3Result, prototype);
+    } else {
+      tmp3Result.__proto__ = prototype;
     }
-    return str;
+    tmp3Result.name = "ZodError";
+    tmp3Result.issues = global;
+    return tmp3Result;
+  }
+}
+_inherits(ZodError, _wrapNativeSuper(Error));
+let items = [
+  {
+    key: "errors",
+    get() {
+      return this.issues;
+    }
   },
-  matchAsTree(arr, match, self) {
-    let obj = self;
-    if (!self) {
-      obj = {};
-    }
-    const str = internalMatch(arr, match, obj);
-    if (null === str.match) {
-      return str;
-    } else {
-      let prev = str.match;
-      let obj2 = { syntax: match.syntax || null, match: [] };
-      str.match = obj2;
-      items = [obj2];
-      let tmp3 = null;
-      let tmp4 = null;
-      if (null !== prev) {
-        do {
-          prev.prev = tmp3;
-          tmp3 = prev;
-          tmp4 = prev;
-          prev = prev.prev;
-        } while (null !== tmp5);
+  {
+    key: "format",
+    value: function format(arg0) {
+      let fn = arg0;
+      if (!arg0) {
+        fn = (message) => message.message;
       }
-      let prev2 = tmp4.prev;
-      if (null !== prev2) {
-        do {
-          type = prev2.type;
-          if (2 === type) {
-            match = obj2.match;
-            let obj3 = { syntax: prev2.syntax, match: [] };
-            arr = match.push(obj3);
-            let arr2 = items.push(obj3);
-            let tmp10 = obj3;
-          } else if (3 === type) {
-            let arr3 = items.pop();
-            tmp10 = items[items.length - 1];
+      let obj = { _errors: [] };
+      function processError(arg0) {
+        const iter = arg0.issues[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp2 = nextResult;
+          if ("invalid_union" === nextResult.code) {
+            let unionErrors = tmp2.unionErrors;
+            let mapped = unionErrors.map(processError);
+          } else if ("invalid_return_type" === tmp2.code) {
+            let tmp32 = processError(tmp2.returnTypeError);
+          } else if ("invalid_arguments" === tmp2.code) {
+            let tmp29 = processError(tmp2.argumentsError);
+          } else if (0 === tmp2.path.length) {
+            let _errors = obj._errors;
+            let arr = _errors.push(fn(tmp2));
           } else {
-            let match1 = obj2.match;
-            let syntax = prev2.syntax;
-            if (!syntax) {
-              syntax = null;
+            let tmp19 = obj;
+            let num = 0;
+            if (0 < tmp2.path.length) {
+              do {
+                let tmp5 = tmp2.path[num];
+                if (num === tmp2.path.length - 1) {
+                  let tmp11 = tmp19[tmp5];
+                  if (!tmp11) {
+                    let obj2 = { _errors: [] };
+                    tmp11 = obj2;
+                  }
+                  tmp19[tmp5] = tmp11;
+                  let _errors1 = tmp19[tmp5]._errors;
+                  let arr2 = _errors1.push(fn(tmp2));
+                } else {
+                  let tmp8 = tmp19[tmp5];
+                  if (!tmp8) {
+                    obj = { _errors: [] };
+                    tmp8 = obj;
+                  }
+                  tmp19[tmp5] = tmp8;
+                }
+                tmp19 = tmp19[tmp5];
+                sum = num + 1;
+                num = sum;
+              } while (sum < tmp2.path.length);
             }
-            let obj4 = { syntax, token: prev2.token.value, node: prev2.token.node };
-            let arr7 = match1.push(obj4);
-            tmp10 = obj2;
           }
-          prev2 = prev2.prev;
-          obj2 = tmp10;
-        } while (null !== prev2);
+          continue;
+        }
       }
-      return str;
+      processError(this);
+      return obj;
     }
   },
-  getTotalIterationCount() {
-    return c4;
+  {
+    key: "toString",
+    value: function toString() {
+      return this.message;
+    }
+  },
+  {
+    key: "message",
+    get() {
+      return JSON.stringify(this.issues, ZodError(14876).util.jsonStringifyReplacer, 2);
+    }
+  },
+  {
+    key: "isEmpty",
+    get() {
+      return 0 === this.issues.length;
+    }
+  },
+  {
+    key: "flatten",
+    value: function flatten() {
+      let fn = arg0;
+      if (arg0 === undefined) {
+        fn = function e(message) {
+          return message.message;
+        };
+      }
+      const fieldErrors = {};
+      const formErrors = [];
+      const iter = this.issues[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp2 = nextResult;
+        if (nextResult.path.length > 0) {
+          let items1 = fieldErrors[tmp2.path[0]];
+          if (!items1) {
+            items1 = [];
+          }
+          fieldErrors[tmp2.path[0]] = items1;
+          let arr3 = fieldErrors[tmp2.path[0]];
+          let arr = arr3.push(fn(tmp2));
+        } else {
+          let arr2 = formErrors.push(fn(tmp2));
+        }
+        continue;
+      }
+      return { formErrors, fieldErrors };
+    }
+  },
+  {
+    key: "formErrors",
+    get() {
+      return this.flatten();
+    }
+  }
+];
+const entry = {
+  key: "assert",
+  value: function assert(arg0) {
+    if (!(arg0 instanceof ZodError)) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error("Not a ZodError: " + arg0);
+      throw error;
+    }
   }
 };
+let items1 = [entry];
+const _moduleResult = _createClass(ZodError, items, items1);
+_moduleResult.create = (arg0) => new _moduleResult(arg0);
+
+export const ZodIssueCode = util.arrayToEnum(["invalid_type", "invalid_literal", "custom", "invalid_union", "invalid_union_discriminator", "invalid_enum_value", "unrecognized_keys", "invalid_arguments", "invalid_return_type", "invalid_date", "invalid_string", "too_small", "too_big", "invalid_intersection_types", "not_multiple_of", "not_finite"]);
+export (arg0) => JSON.stringify(arg0, null, 2).replace(/"([^"]+)":/g, "$1:")
+export const ZodError = _moduleResult;

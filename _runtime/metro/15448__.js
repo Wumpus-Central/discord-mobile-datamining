@@ -1,7 +1,5 @@
 // === Module 15448: ? ===
 
 // Module 15448
-import registerAsset from "module_1119" /* 1119 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 106, height: 26, scales: [2, 3], hash: "cb40a06625eace58731dea1b5da68381", name: "img_logo_nitro_dark", type: "png" });
+export const calendars = ["buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-civil", "islamic-rgsa", "islamic-tbla", "islamic-umalqura", "islamicc", "iso8601", "japanese", "persian", "roc"];

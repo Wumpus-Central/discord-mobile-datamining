@@ -4,9 +4,9 @@
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-function dsnFromString(arg0) {
-  closure_0 = arg0;
-  const match = re4.exec(arg0);
+function dsnFromString(dsn) {
+  closure_0 = dsn;
+  const match = re4.exec(dsn);
   if (match) {
     const tmp5 = _slicedToArray(match.slice(1), 6);
     let str = tmp5[1];
@@ -73,12 +73,12 @@ const re3 = /^o(\d+)\./;
 const re4 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)((?:\[[:.%\w]+\]|[\w.-]+))(?::(\d+))?\/(.+)/;
 
 export { dsnFromString };
-export function dsnToString(url) {
+export function dsnToString(dsn) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
+  ({ host, path, pass, port, projectId, protocol, publicKey } = dsn);
   let str = "";
   if (flag) {
     str = "";
@@ -123,11 +123,11 @@ export function extractOrgIdFromDsnHost(str) {
   }
   return tmp2;
 }
-export function makeDsn(protocol) {
-  if (typeof protocol === "string") {
-    let url = dsnFromString(protocol);
+export function makeDsn(dsn) {
+  if (typeof dsn === "string") {
+    let url = dsnFromString(dsn);
   } else {
-    url = { protocol: protocol.protocol, publicKey: protocol.publicKey || "", pass: protocol.pass || "", host: protocol.host, port: protocol.port || "", path: protocol.path || "", projectId: protocol.projectId };
+    url = { protocol: dsn.protocol, publicKey: dsn.publicKey || "", pass: dsn.pass || "", host: dsn.host, port: dsn.port || "", path: dsn.path || "", projectId: dsn.projectId };
   }
   if (url) {
     let error = url;

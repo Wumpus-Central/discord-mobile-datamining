@@ -14,14 +14,14 @@ export function createMetricContainerEnvelopeItem(items) {
   items[1] = { items };
   return items;
 }
-export function createMetricEnvelope(items, sdk, tunnel, dsn) {
-  sdk = undefined;
-  if (sdk != null) {
-    sdk = sdk.sdk;
+export function createMetricEnvelope(items, _metadata, tunnel, dsn) {
+  let sdk;
+  if (_metadata != null) {
+    sdk = _metadata.sdk;
   }
   const obj = {};
   if (sdk) {
-    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    const obj2 = { name: _metadata.sdk.name, version: _metadata.sdk.version };
     obj.sdk = obj2;
   }
   let tmp2 = tunnel;

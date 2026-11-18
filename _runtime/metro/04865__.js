@@ -1,28 +1,28 @@
 // === Module 4865: ? ===
 
 // Module 4865
-import _typeof_mod from "module_4589" /* 4589 */;
-import requiredArgs_mod from "requiredArgs" /* 4590 */;
+function emptyFunction() {
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+function emptyFunctionWithReset() {
 
-export default function getMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getMonth();
+}
+emptyFunctionWithReset.resetWarningCache = emptyFunction;
+
+export default () => {
+  function shim(arg0, arg1, arg2, arg3, arg4, arg5) {
+    if (arg5 !== shim(dependencyMap[0])) {
+      const _Error = Error;
+      const error = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+      error.name = "Invariant Violation";
+      throw error;
+    }
+  }
+  function getShim() {
+    return shim;
+  }
+  shim.isRequired = shim;
+  const obj = { array: shim, bool: shim, func: shim, number: shim, object: shim, string: shim, symbol: shim, any: shim, arrayOf: getShim, element: shim, elementType: shim, instanceOf: getShim, node: shim, objectOf: getShim, oneOf: getShim, oneOfType: getShim, shape: getShim, exact: getShim, checkPropTypes: emptyFunctionWithReset, resetWarningCache: emptyFunction };
+  obj.PropTypes = obj;
+  return obj;
 };
-export default exports.default;

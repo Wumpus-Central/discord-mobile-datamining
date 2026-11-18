@@ -2,7 +2,7 @@
 
 // Module 682
 import spanToJSON from "spanToJSON" /* 683 */;
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 704 */;
 import instrumentError from "instrumentError" /* 713 */;
@@ -23,7 +23,7 @@ export function registerSpanErrorInstrumentation() {
         const tmpResult = spanToJSON;
       }
       if (rootSpan) {
-        if (_mod687.DEBUG_BUILD) {
+        if (__SENTRY_DEBUG__.DEBUG_BUILD) {
           const debug = consoleSandbox.debug;
           const _HermesInternal = HermesInternal;
           debug.log("[Tracing] Root span: " + "internal_error" + " -> Global error occurred");

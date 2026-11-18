@@ -1,15 +1,7 @@
 // === Module 16833: ? ===
 
 // Module 16833
-import _mod16831 from "module_16831" /* 16831 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default (arg0, arg1) => {
-  const tmp = _mod16831(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
-  }
-  return tmp3;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "fdba56ceeef89e2b55cea1d13fce45dd", name: "EmojiColdFaceIcon", type: "png" });

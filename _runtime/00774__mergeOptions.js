@@ -1,7 +1,7 @@
 // === Module 774: _mergeOptions ===
 
 // Module 774 (_mergeOptions)
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 import uuid4 from "uuid4" /* 694 */;
 import _mod696 from "module_696" /* 696 */;
@@ -94,7 +94,7 @@ function _getEventFilterUrl(exception) {
     }
     return tmp10;
   } catch (err) {
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = consoleSandbox.debug;
       const _HermesInternal = HermesInternal;
       debug.error("Cannot extract url for event " + uuid4.getEventDescription(tmp));
@@ -143,7 +143,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
           flag5 = false;
           if (flag6) {
             flag5 = true;
-            if (_mod687.DEBUG_BUILD) {
+            if (__SENTRY_DEBUG__.DEBUG_BUILD) {
               const debug5 = consoleSandbox.debug;
               const _HermesInternal5 = HermesInternal;
               debug5.warn("Event dropped due to being matched by `ignoreTransactions` option.\nEvent: " + uuid4.getEventDescription(type));
@@ -168,7 +168,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
         }
         if (flag) {
           flag5 = true;
-          if (_mod687.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
             const debug4 = consoleSandbox.debug;
             const _HermesInternal4 = HermesInternal;
             debug4.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + uuid4.getEventDescription(type));
@@ -208,7 +208,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
           }
           if (flag2) {
             flag5 = true;
-            if (_mod687.DEBUG_BUILD) {
+            if (__SENTRY_DEBUG__.DEBUG_BUILD) {
               const debug3 = consoleSandbox.debug;
               const _HermesInternal3 = HermesInternal;
               debug3.warn("Event dropped due to not having an error message, error type or stacktrace.\nEvent: " + uuid4.getEventDescription(type));
@@ -231,7 +231,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
             }
             if (flag3) {
               flag5 = true;
-              if (_mod687.DEBUG_BUILD) {
+              if (__SENTRY_DEBUG__.DEBUG_BUILD) {
                 const debug2 = consoleSandbox.debug;
                 const eventDescription = uuid4.getEventDescription(type);
                 const _HermesInternal2 = HermesInternal;
@@ -256,7 +256,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
               flag5 = false;
               if (!flag4) {
                 flag5 = true;
-                if (_mod687.DEBUG_BUILD) {
+                if (__SENTRY_DEBUG__.DEBUG_BUILD) {
                   const debug = consoleSandbox.debug;
                   const eventDescription1 = uuid4.getEventDescription(type);
                   const _HermesInternal = HermesInternal;

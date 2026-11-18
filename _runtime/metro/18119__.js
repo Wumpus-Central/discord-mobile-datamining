@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "b2da62f020089ccee92860e4defafdb4", name: "zh-CN", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 24, height: 24, scales: [2, 3], hash: "afec4e7bfe67c8da93450ca26af6a62e", name: "NotificationCenter", type: "png" });

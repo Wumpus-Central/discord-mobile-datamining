@@ -122,13 +122,14 @@ export function getFramesFromEvent(exception) {
     }
   }
 }
-export function getFunctionName(name) {
+export function getFunctionName(originalFunction) {
   try {
-    if (name) {
-      name = typeof name === "function";
+    let name = originalFunction;
+    if (originalFunction) {
+      name = typeof originalFunction === "function";
     }
     if (name) {
-      name = name.name;
+      name = originalFunction.name;
     }
     if (!name) {
       name = c4;
@@ -167,11 +168,11 @@ export function normalizeStackTracePath(match1) {
   }
   return substr;
 }
-export function stackParserFromStackParserOptions(arg0) {
-  let applyResult = arg0;
-  if (Array.isArray(arg0)) {
+export function stackParserFromStackParserOptions(defaultStackParser) {
+  let applyResult = defaultStackParser;
+  if (Array.isArray(defaultStackParser)) {
     items = [];
-    HermesBuiltin.arraySpread(arg0, 0);
+    HermesBuiltin.arraySpread(defaultStackParser, 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;

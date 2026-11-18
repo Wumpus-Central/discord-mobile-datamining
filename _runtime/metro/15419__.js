@@ -1,7 +1,21 @@
 // === Module 15419: ? ===
 
 // Module 15419
-import registerAsset from "module_1119" /* 1119 */;
+import _mod15409 from "module_15409" /* 15409 */;
+import BestAvailableLocale from "BestAvailableLocale" /* 15412 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored", width: 24, height: 24, scales: [2, 3], hash: "e7624f04ed4a80ca86e10402e935320b", name: "tier_1_32px", type: "png" });
+export function LookupSupportedLocales(arg0, arg1) {
+  items = [];
+  for (let num = 0; num < arg1.length; num = num + 1) {
+    let str = arg1[num];
+    let replaced = str.replace(_mod15409.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    let BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
+    if (BestAvailableLocaleResult) {
+      let arr = items.push(BestAvailableLocaleResult);
+    }
+  }
+  return items;
+}

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/user_settings", width: 234, height: 147.5, scales: [2, 3], hash: "251353afd104effe8e007def09df8df2", name: "crunchyroll_link_intro", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_scheduled_events/native/images", width: 216, height: 80, scales: [2, 3], hash: "0e2ac412c416f1e5e277ac37a8dd593a", name: "stage-channel-upsell", type: "png" });

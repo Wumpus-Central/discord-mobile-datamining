@@ -1,71 +1,180 @@
 // === Module 4614: ? ===
 
 // Module 4614
-import module_2199 from "module_2199" /* 2199 */;
-import module_2200 from "module_2200" /* 2200 */;
+import _mod2169 from "module_2169" /* 2169 */;
 
-if (!module_2199) {
-  const obj2 = { default: module_2199 };
-  let obj = obj2;
-} else {
-  obj = module_2199;
-}
-if (!module_2200) {
-  const obj4 = { default: module_2200 };
-  let obj3 = obj4;
-} else {
-  obj3 = module_2200;
-}
-const date = {
-  ordinalNumber: obj3.default({
-    matchPattern: /^(\d+)(\.)?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match);
+const fn = function n(moment) {
+  function translate(arg0, arg1, arg2, arg3) {
+    switch (arg2) {
+      case "s":
+        if (arg3) {
+          let str17 = "n\u00E9h\u00E1ny m\u00E1sodperc";
+        } else {
+          str17 = "n\u00E9h\u00E1ny m\u00E1sodperce";
+        }
+        return str17;
+      case "ss":
+        let tmp = arg3;
+        if (!arg3) {
+          tmp = arg1;
+        }
+        let str16 = " m\u00E1sodperce";
+        if (arg0 + tmp) {
+          str16 = " m\u00E1sodperc";
+        }
+        return str16;
+      case "m":
+        if (arg3) {
+          let str14 = " perc";
+        } else {
+          str14 = " perce";
+        }
+        return "egy" + str14;
+      case "mm":
+        if (arg3) {
+          let str13 = " perc";
+        } else {
+          str13 = " perce";
+        }
+        return arg0 + str13;
+      case "h":
+        if (arg3) {
+          let str11 = " \u00F3ra";
+        } else {
+          str11 = " \u00F3r\u00E1ja";
+        }
+        return "egy" + str11;
+      case "hh":
+        if (arg3) {
+          let str10 = " \u00F3ra";
+        } else {
+          str10 = " \u00F3r\u00E1ja";
+        }
+        return arg0 + str10;
+      case "d":
+        if (arg3) {
+          let str8 = " nap";
+        } else {
+          str8 = " napja";
+        }
+        return "egy" + str8;
+      case "dd":
+        if (arg3) {
+          let str7 = " nap";
+        } else {
+          str7 = " napja";
+        }
+        return arg0 + str7;
+      case "M":
+        if (arg3) {
+          let str5 = " h\u00F3nap";
+        } else {
+          str5 = " h\u00F3napja";
+        }
+        return "egy" + str5;
+      case "MM":
+        if (arg3) {
+          let str4 = " h\u00F3nap";
+        } else {
+          str4 = " h\u00F3napja";
+        }
+        return arg0 + str4;
+      case "y":
+        if (arg3) {
+          let str2 = " \u00E9v";
+        } else {
+          str2 = " \u00E9ve";
+        }
+        return "egy" + str2;
+      case "yy":
+        if (arg3) {
+          let str = " \u00E9v";
+        } else {
+          str = " \u00E9ve";
+        }
+        return arg0 + str;
+      default:
+        return "";
     }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
-};
-const obj6 = { matchPatterns: { narrow: /^(v\.? ?Chr\.?|n\.? ?Chr\.?)/i, abbreviated: /^(v\.? ?Chr\.?|n\.? ?Chr\.?)/i, wide: /^(vor Christus|vor unserer Zeitrechnung|nach Christus|unserer Zeitrechnung)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items = [/^v/i, /^n/i];
-obj7.any = items;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](\.)? Quartal/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
   }
+  function week(arg0) {
+    let str = "[m\u00FAlt] ";
+    if (arg0) {
+      str = "";
+    }
+    return str + "[" + dependencyMap[this.day(this)] + "] LT[-kor]";
+  }
+  dependencyMap = "vas\u00E1rnap h\u00E9tf\u0151n kedden szerd\u00E1n cs\u00FCt\u00F6rt\u00F6k\u00F6n p\u00E9nteken szombaton".split(" ");
+  return moment.defineLocale("hu", {
+    months: "janu\u00E1r_febru\u00E1r_m\u00E1rcius_\u00E1prilis_m\u00E1jus_j\u00FAnius_j\u00FAlius_augusztus_szeptember_okt\u00F3ber_november_december".split("_"),
+    monthsShort: "jan._feb._m\u00E1rc._\u00E1pr._m\u00E1j._j\u00FAn._j\u00FAl._aug._szept._okt._nov._dec.".split("_"),
+    monthsParseExact: true,
+    weekdays: "vas\u00E1rnap_h\u00E9tf\u0151_kedd_szerda_cs\u00FCt\u00F6rt\u00F6k_p\u00E9ntek_szombat".split("_"),
+    weekdaysShort: "vas_h\u00E9t_kedd_sze_cs\u00FCt_p\u00E9n_szo".split("_"),
+    weekdaysMin: "v_h_k_sze_cs_p_szo".split("_"),
+    longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "YYYY.MM.DD.", LL: "YYYY. MMMM D.", LLL: "YYYY. MMMM D. H:mm", LLLL: "YYYY. MMMM D., dddd H:mm" },
+    meridiemParse: /de|du/i,
+    isPM(str) {
+      str = str.charAt(1);
+      return "u" === str.toLowerCase();
+    },
+    meridiem(arg0, arg1, arg2) {
+      if (arg0 < 12) {
+        let str2 = "DE";
+        if (true === arg2) {
+          str2 = "de";
+        }
+        let str = str2;
+      } else {
+        str = "DU";
+        if (true === arg2) {
+          str = "du";
+        }
+      }
+      return str;
+    },
+    calendar: {
+      sameDay: "[ma] LT[-kor]",
+      nextDay: "[holnap] LT[-kor]",
+      nextWeek() {
+        const self = this;
+        const call = week.call;
+        if (typeof call === "unknown") {
+          let text = `${"[" + closure_0[self.day(self)]}] LT[-kor]`;
+        } else {
+          text = call(self, true);
+        }
+        return text;
+      },
+      lastDay: "[tegnap] LT[-kor]",
+      lastWeek() {
+        const self = this;
+        const call = week.call;
+        if (typeof call === "unknown") {
+          let text = `${"[m\u00FAlt] [" + closure_0[self.day(self)]}] LT[-kor]`;
+        } else {
+          text = call(self, false);
+        }
+        return text;
+      },
+      sameElse: "L"
+    },
+    relativeTime: { future: "%s m\u00FAlva", past: "%s", s: translate, ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: translate, dd: translate, M: translate, MM: translate, y: translate, yy: translate },
+    dayOfMonthOrdinalParse: /\d{1,2}\./,
+    ordinal: "%d.",
+    week: { dow: 1, doy: 4 }
+  });
 };
-const obj9 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj9.any = items1;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(j[aä]n|feb|mär[z]?|apr|mai|jun[i]?|jul[i]?|aug|sep|okt|nov|dez)\.?/i, wide: /^(januar|februar|märz|april|mai|juni|juli|august|september|oktober|november|dezember)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { narrow: null, any: null };
-const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj11.narrow = items2;
-const items3 = [/^j[aä]/i, /^f/i, /^mär/i, /^ap/i, /^mai/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj11.any = items3;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[smdmf]/i, short: /^(so|mo|di|mi|do|fr|sa)/i, abbreviated: /^(son?|mon?|die?|mit?|don?|fre?|sam?)\.?/i, wide: /^(sonntag|montag|dienstag|mittwoch|donnerstag|freitag|samstag)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { any: null };
-const items4 = [/^so/i, /^mo/i, /^di/i, /^mi/i, /^do/i, /^f/i, /^sa/i];
-obj13.any = items4;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { narrow: /^(vm\.?|nm\.?|Mitternacht|Mittag|morgens|nachm\.?|abends|nachts)/i, abbreviated: /^(vorm\.?|nachm\.?|Mitternacht|Mittag|morgens|nachm\.?|abends|nachts)/i, wide: /^(vormittags|nachmittags|Mitternacht|Mittag|morgens|nachmittags|abends|nachts)/i }, defaultMatchWidth: "wide", parsePatterns: { any: { am: /^v/i, pm: /^n/i, midnight: /^Mitte/i, noon: /^Mitta/i, morning: /morgens/i, afternoon: /nachmittags/i, evening: /abends/i, night: /nachts/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
-
-export default date;
-export default exports.default;
+if (typeof exports === "object") {
+  if (undefined !== module) {
+    if (typeof require === "function") {
+      fn(_mod2169);
+    }
+  }
+}
+if (typeof globalThis.define === "function") {
+  if (globalThis.define.amd) {
+    globalThis.define(["../moment"], fn);
+  }
+}
+fn(this.moment);

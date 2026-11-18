@@ -1,7 +1,7 @@
 // === Module 801: validateMcpServerInstance ===
 
 // Module 801 (validateMcpServerInstance)
-import _mod687 from "module_687" /* 687 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 687 */;
 import consoleSandbox from "consoleSandbox" /* 688 */;
 
 require = arg1;
@@ -91,7 +91,7 @@ export function validateMcpServerInstance(obj) {
   }
   if (!flag) {
     flag = false;
-    if (_mod687.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = consoleSandbox.debug;
       debug.warn("Did not patch MCP server. Interface is incompatible.");
       flag = false;

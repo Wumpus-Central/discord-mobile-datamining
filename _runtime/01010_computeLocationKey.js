@@ -154,7 +154,8 @@ function processResolvedRoutes(arr, children, arg2) {
       children.children = items;
     }
   }
-  if (activeRootSpan == null) {
+  let activeRootSpan = activeSpan;
+  if (activeSpan == null) {
     activeRootSpan = pickSplat.getActiveRootSpan();
   }
   if (activeRootSpan) {
@@ -169,7 +170,7 @@ function processResolvedRoutes(arr, children, arg2) {
       let tmp15 = tmp;
       if (!tmp) {
         tmp15 = tmp;
-        if (!activeRootSpan) {
+        if (!activeSpan) {
           tmp15 = tmp;
           if (undefined !== feedbackAsyncIntegration.WINDOW) {
             const _location = feedbackAsyncIntegration.WINDOW.location;
@@ -449,11 +450,11 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
                                 set.add(children);
                                 if (tmp5) {
                                   children = children.children;
-                                  let item = children.forEach(/* F83645 */ function() { ... });
+                                  let item = children.forEach(/* F81222 */ function() { ... });
                                 }
                                 tmp5 = children.children && !children.index;
                               }
-                              let item1 = set.forEach(/* F125933 */ function() { ... });
+                              let item1 = set.forEach(/* F122649 */ function() { ... });
                             });
                           }
                           tmp2 = children.children && !children.index;
@@ -844,11 +845,11 @@ function addRoutesToAllRoutes(arr) {
                         set.add(children);
                         if (tmp5) {
                           children = children.children;
-                          let item = children.forEach(/* F83645 */ function() { ... });
+                          let item = children.forEach(/* F81222 */ function() { ... });
                         }
                         tmp5 = children.children && !children.index;
                       }
-                      let item1 = set.forEach(/* F125933 */ function() { ... });
+                      let item1 = set.forEach(/* F122649 */ function() { ... });
                     });
                   }
                   tmp5 = children.children && !children.index;
@@ -1582,8 +1583,8 @@ export function createReactRouterV6CompatibleTracingIntegration(instrumentPageLo
     }
     const result1 = pickSplat.initializeRouterUtils(closure_1_7, flag);
   };
-  obj3.afterAllSetup = function afterAllSetup(f125926) {
-    result.afterAllSetup(f125926);
+  obj3.afterAllSetup = function afterAllSetup(f122642) {
+    result.afterAllSetup(f122642);
     const _location = feedbackAsyncIntegration.WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1600,11 +1601,11 @@ export function createReactRouterV6CompatibleTracingIntegration(instrumentPageLo
       const _HermesInternal = HermesInternal;
       obj2[_mod681.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + closure_1;
       obj.attributes = obj2;
-      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f125926, obj);
+      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f122642, obj);
       const tmp2Result = feedbackAsyncIntegration;
     }
     if (closure_11) {
-      weakSet.add(f125926);
+      weakSet.add(f122642);
     }
   };
   return obj3;
@@ -1628,7 +1629,7 @@ export function createV6CompatibleWithSentryReactRouterRouting(arg0, _6) {
                 items = [, ];
                 items[0] = tmp;
                 items[1] = tmp2;
-                tmp3 = closure_1_4(/* F125939 */ function() { ... }, items);
+                tmp3 = closure_1_4(/* F122655 */ function() { ... }, items);
                 obj = {};
                 merged = Object.assign(arg0);
                 return closure_1_9.createElement(closure_0, obj);
@@ -1653,7 +1654,7 @@ export function createV6CompatibleWithSentryReactRouterRouting(arg0, _6) {
         items = [, ];
         items[0] = tmp;
         items[1] = tmp2;
-        tmp3 = closure_1_4(/* F125939 */ function() { ... }, items);
+        tmp3 = closure_1_4(/* F122655 */ function() { ... }, items);
         obj = {};
         merged = Object.assign(arg0);
         return closure_1_9.createElement(closure_0, obj);
@@ -1862,11 +1863,11 @@ export function createV6CompatibleWrapUseRoutes(arg0, _6) {
                           set.add(children);
                           if (tmp5) {
                             children = children.children;
-                            let item = children.forEach(/* F83645 */ function() { ... });
+                            let item = children.forEach(/* F81222 */ function() { ... });
                           }
                           tmp5 = children.children && !children.index;
                         }
-                        let item1 = set.forEach(/* F125933 */ function() { ... });
+                        let item1 = set.forEach(/* F122649 */ function() { ... });
                       });
                     }
                     tmp2 = children.children && !children.index;

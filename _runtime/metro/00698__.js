@@ -61,10 +61,10 @@ export function generateTraceparentHeader() {
   }
   return "00-" + traceId + "-" + spanId + "-" + str;
 }
-export function propagationContextFromHeaders(str, baggage) {
+export function propagationContextFromHeaders(sentryTrace, baggage) {
   let tmp;
-  if (str) {
-    const match = str.match(regExp);
+  if (sentryTrace) {
+    const match = sentryTrace.match(regExp);
     if (match) {
       let flag = true;
       if ("1" !== match[3]) {

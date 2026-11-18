@@ -3439,14 +3439,14 @@ let closure_130_15 = function estats(arg0) {
     }
     throw "The input is not a PNG file!";
   },
-  toRGBA8(img) {
-    ({ width, height } = img);
-    if (null == img.tabs.acTL) {
-      items = [decodeImage(img.data, width, height, img).buffer];
+  toRGBA8(size) {
+    ({ width, height } = size);
+    if (null == size.tabs.acTL) {
+      items = [decodeImage(size.data, width, height, size).buffer];
       return items;
     } else {
-      if (null == img.frames[0].data) {
-        img.frames[0].data = img.data;
+      if (null == size.frames[0].data) {
+        size.frames[0].data = size.data;
       }
       const items1 = [];
       const result = width * height * 4;
@@ -3456,13 +3456,13 @@ let closure_130_15 = function estats(arg0) {
       const uint8Array1 = new Uint8Array(result);
       const _Uint8Array3 = Uint8Array;
       const uint8Array2 = new Uint8Array(result);
-      for (let num5 = 0; num5 < img.frames.length; num5 = num5 + 1) {
-        let tmp18 = img.frames[num5];
+      for (let num5 = 0; num5 < size.frames.length; num5 = num5 + 1) {
+        let tmp18 = size.frames[num5];
         let x = tmp18.rect.x;
         let y = tmp18.rect.y;
         let width2 = tmp18.rect.width;
         let height2 = tmp18.rect.height;
-        let tmp23 = decodeImage(tmp18.data, width2, height2, img);
+        let tmp23 = decodeImage(tmp18.data, width2, height2, size);
         if (0 !== num5) {
           let num6 = 0;
           if (0 < result) {

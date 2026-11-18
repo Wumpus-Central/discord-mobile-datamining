@@ -1,75 +1,26 @@
 // === Module 4589: ? ===
 
 // Module 4589
-import requiredArgs_mod from "requiredArgs" /* 4590 */;
-
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "nl" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = { long: { end: "{0} en {1}", middle: "{0}, {1}", pair: "{0} en {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} & {1}", middle: "{0}, {1}", pair: "{0} & {1}", start: "{0}, {1}" } };
+    obj3.conjunction = obj4;
+    const obj5 = { long: { end: "{0} of {1}", middle: "{0}, {1}", pair: "{0} of {1}", start: "{0}, {1}" }, narrow: { end: "{0} of {1}", middle: "{0}, {1}", pair: "{0} of {1}", start: "{0}, {1}" }, short: { end: "{0} of {1}", middle: "{0}, {1}", pair: "{0} of {1}", start: "{0}, {1}" } };
+    obj3.disjunction = obj5;
+    const obj6 = { long: { end: "{0} en {1}", middle: "{0}, {1}", pair: "{0} en {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
 }
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
-  let tmp3 = obj;
-} else {
-  tmp3 = requiredArgs;
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
 }
-requiredArgs = tmp3;
-
-export default function toDate(getTime) {
-  requiredArgs.default(1, arguments);
-  const call = toString.call;
-  const tmp2 = typeof call === "unknown" ? toString() : call(getTime);
-  if (!(getTime instanceof Date)) {
-    if ("object" === _typeof(getTime)) {
-      return date;
-    }
-    if (typeof getTime !== "number") {
-      if ("[object Number]" !== tmp2) {
-        let tmp4 = typeof getTime !== "string";
-        if (typeof getTime !== "string") {
-          tmp4 = "[object String]" !== tmp2;
-        }
-        if (!tmp4) {
-          const _console = console;
-          tmp4 = typeof console === "undefined";
-        }
-        if (!tmp4) {
-          const _console2 = console;
-          console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
-          const _console3 = console;
-          const _Error = Error;
-          const error = new Error();
-          console.warn(error.stack);
-        }
-        const _Date = Date;
-        date = new Date(NaN);
-      }
-    }
-    const _Date2 = Date;
-    date = new Date(getTime);
-  }
-  date = new Date(getTime.getTime());
-};
-export default exports.default;
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = { data: { conjunction: { long: { end: "{0} en {1}", middle: "{0}, {1}", pair: "{0} en {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} & {1}", middle: "{0}, {1}", pair: "{0} & {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} of {1}", middle: "{0}, {1}", pair: "{0} of {1}", start: "{0}, {1}" }, narrow: { end: "{0} of {1}", middle: "{0}, {1}", pair: "{0} of {1}", start: "{0}, {1}" }, short: { end: "{0} of {1}", middle: "{0}, {1}", pair: "{0} of {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} en {1}", middle: "{0}, {1}", pair: "{0} en {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "nl" };
+prop.push(obj);

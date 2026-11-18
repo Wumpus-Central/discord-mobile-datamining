@@ -1,9 +1,11 @@
 // === Module 5806: ? ===
 
 // Module 5806
+import _mod17 from "module_17" /* 17 */;
+import module_65 from "module_65" /* 65 */;
 
-export default function _arrayWithHoles(arg0) {
-  if (Array.isArray(arg0)) {
-    return arg0;
-  }
-};
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStackHeaderSubview", validAttributes: { type: true, hidesSharedBackground: true, synchronousShadowStateUpdatesEnabled: true } };
+
+export default module_65.get("RNSScreenStackHeaderSubview", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,28 +1,30 @@
 // === Module 4932: ? ===
 
 // Module 4932
-import _typeof_mod from "module_4589" /* 4589 */;
-import requiredArgs_mod from "requiredArgs" /* 4590 */;
+import c from "c" /* 4915 */;
+import _mod4928 from "module_4928" /* 4928 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
+require = arg1;
+function getEnumProperty(enumProperty, arg1) {
+  return enumProperty.enumProperty(arg1);
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function isMonday(arg0) {
-  requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDay();
-};
-export default exports.default;
+export function useRiveEnum(device, instance) {
+  const cResult = c.c(4);
+  [tmp3, tmp4, tmp5] = _mod4928.useRiveProperty(instance, device, getEnumProperty);
+  if (cResult[0] === tmp5) {
+    if (cResult[1] === tmp4) {
+      if (cResult[2] === tmp3) {
+        let tmp6 = cResult[3];
+      }
+      return tmp6;
+    }
+  }
+  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
+  cResult[0] = tmp5;
+  cResult[1] = tmp4;
+  cResult[2] = tmp3;
+  cResult[3] = obj3;
+  tmp6 = obj3;
+}

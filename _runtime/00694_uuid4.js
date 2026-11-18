@@ -11,7 +11,7 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const re3 = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
-export function addContextToFrame(arr, lineno) {
+export function addContextToFrame(arr, lineno, arg2) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 5;
@@ -35,8 +35,8 @@ export function addContextToFrame(arr, lineno) {
     lineno.post_context = substr1.map((item) => require("module_696").snipLine(item, 0));
   }
 }
-export function addExceptionMechanism(exception, data) {
-  exception = exception.exception;
+export function addExceptionMechanism(tmpResult, mechanism) {
+  const exception = tmpResult.exception;
   let first;
   if (exception != null) {
     const values = exception.values;
@@ -45,26 +45,26 @@ export function addExceptionMechanism(exception, data) {
     }
   }
   if (first) {
-    const mechanism = first.mechanism;
+    mechanism = first.mechanism;
     const obj = { type: "generic", handled: true };
     const merged = Object.assign(mechanism);
-    const merged1 = Object.assign(data);
+    const merged1 = Object.assign(mechanism);
     first.mechanism = obj;
-    if (data) {
-      if ("data" in data) {
-        data = undefined;
+    if (mechanism) {
+      if ("data" in mechanism) {
+        let data;
         if (mechanism != null) {
           data = mechanism.data;
         }
         const obj2 = {};
         const merged2 = Object.assign(data);
-        const merged3 = Object.assign(data.data);
+        const merged3 = Object.assign(mechanism.data);
         first.mechanism.data = obj2;
       }
     }
   }
 }
-export function addExceptionTypeValue(exception, arg1, arg2) {
+export function addExceptionTypeValue(exception, combined1, arg2) {
   const tmp = exception.exception || {};
   exception.exception = tmp;
   const tmp2 = tmp.values || [];
@@ -72,8 +72,8 @@ export function addExceptionTypeValue(exception, arg1, arg2) {
   const iter = tmp2[0] || {};
   tmp2[0] = iter;
   if (!iter.value) {
-    let str = arg1;
-    if (!arg1) {
+    let str = combined1;
+    if (!combined1) {
       str = "";
     }
     iter.value = str;
@@ -86,17 +86,17 @@ export function addExceptionTypeValue(exception, arg1, arg2) {
     iter.type = str2;
   }
 }
-export function checkOrSetAlreadyCaught(__sentry_captured__) {
+export function checkOrSetAlreadyCaught(originalException) {
   if ((function isAlreadyCaptured(__sentry_captured__) {
     try {
       return __sentry_captured__.__sentry_captured__;
     } catch (err) {
     }
-  })(__sentry_captured__)) {
+  })(originalException)) {
     return true;
   } else {
     try {
-      const result = _mod686.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
+      const result = _mod686.addNonEnumerableProperty(originalException, "__sentry_captured__", true);
       return false;
     } catch (err) {
     }
