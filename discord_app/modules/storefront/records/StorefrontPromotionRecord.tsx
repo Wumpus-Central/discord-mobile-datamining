@@ -189,28 +189,28 @@ prototype["createFromServer"] = function createFromServer(display_name) {
   let tmp34 = null;
   if (tmp14 != display_name.progress) {
     const progress = display_name.progress;
-    const obj6 = { current: null, target: null, label: null };
+    const obj5 = { current: null, target: null, label: null };
     ({ current: obj4.current, target } = progress);
-    obj6.target = target;
-    obj6.label = progress.label;
-    tmp34 = obj6;
+    obj5.target = target;
+    obj5.label = progress.label;
+    tmp34 = obj5;
   }
   let tmp35 = null;
   if (tmp14 != display_name.tenant_metadata) {
     const tenant_metadata = display_name.tenant_metadata;
     if (tmp14 == tenant_metadata.collectibles) {
-      const obj7 = { collectibles: _Date3 };
-      tmp35 = obj7;
+      const obj6 = { collectibles: _Date3 };
+      tmp35 = obj6;
     } else {
       let collectibles = tenant_metadata.collectibles;
       const type = collectibles.type;
       let tmp36 = require;
       if (StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM === type) {
         const subtype = collectibles.subtype;
-        if (tmp36(9426).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER === subtype) {
+        if (tmp36(8839).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER === subtype) {
           const obj8 = {
-            type: tmp36(9426).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM,
-            subtype: tmp36(9426).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER,
+            type: tmp36(8839).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM,
+            subtype: tmp36(8839).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER,
             collectionId: collectibles.collection_id,
             shopHome: null,
             indexPage: null,
@@ -233,12 +233,12 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           const obj13 = { heroUrl: reward_states.consumed.hero_url };
           obj10.consumed = obj13;
           obj9.rewardStates = obj10;
-          let tmp53;
+          let tmp55;
           if (tmp14 != collectibles.shop_home.style) {
             const obj14 = { contentTheme: collectibles.shop_home.style.content_theme };
-            tmp53 = obj14;
+            tmp55 = obj14;
           }
-          obj9.style = tmp53;
+          obj9.style = tmp55;
           obj8.shopHome = obj9;
           const obj15 = { description: collectibles.index_page.description, rewardStates: null, style: null };
           const reward_states2 = collectibles.index_page.reward_states;
@@ -262,10 +262,10 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           obj8.indexPage = obj15;
           collectibles = parseCollectiblesShared(collectibles.shared);
           obj8.shared = collectibles;
-        } else if (tmp36(9426).StorefrontPromotionCollectAndClaimSubtype.BASIC === subtype) {
+        } else if (tmp36(8839).StorefrontPromotionCollectAndClaimSubtype.BASIC === subtype) {
           const obj21 = {
-            type: tmp36(9426).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM,
-            subtype: tmp36(9426).StorefrontPromotionCollectAndClaimSubtype.BASIC,
+            type: tmp36(8839).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM,
+            subtype: tmp36(8839).StorefrontPromotionCollectAndClaimSubtype.BASIC,
             collectionId: collectibles.collection_id,
             shopHome: null,
             indexPage: null,
@@ -276,24 +276,24 @@ prototype["createFromServer"] = function createFromServer(display_name) {
             description: collectibles.shop_home.description,
             style: null,
           };
-          let tmp50;
+          let tmp52;
           if (tmp14 != collectibles.shop_home.style) {
             const obj23 = { contentTheme: collectibles.shop_home.style.content_theme };
-            tmp50 = obj23;
+            tmp52 = obj23;
           }
-          obj22.style = tmp50;
+          obj22.style = tmp52;
           obj21.shopHome = obj22;
           const obj24 = { description: collectibles.index_page.description, style: null };
-          let tmp51;
+          let tmp53;
           if (tmp14 != collectibles.index_page.style) {
             const obj25 = { contentTheme: collectibles.index_page.style.content_theme };
-            tmp51 = obj25;
+            tmp53 = obj25;
           }
-          obj24.style = tmp51;
+          obj24.style = tmp53;
           obj21.indexPage = obj24;
           obj21.shared = parseCollectiblesShared(collectibles.shared);
         }
-      } else if (tmp36(9426).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
+      } else if (tmp36(8839).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
         const reward = collectibles.reward;
         let nagbar;
         if (reward != tmp14) {
@@ -316,10 +316,10 @@ prototype["createFromServer"] = function createFromServer(display_name) {
             override_title = collected.override_title;
           }
         }
-        let tmp44;
+        let tmp46;
         if (tmp14 != override_title) {
           if ("" !== override_title) {
-            tmp44 = override_title;
+            tmp46 = override_title;
           }
         }
         let flavor;
@@ -328,36 +328,36 @@ prototype["createFromServer"] = function createFromServer(display_name) {
         }
         if (tmp14 == nagbar) {
           if (tmp14 == offer_notice) {
-            if (tmp14 == tmp44) {
+            if (tmp14 == tmp46) {
               if (tmp14 == flavor) {
-                const obj26 = { type: tmp36(9426).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
+                const obj26 = { type: tmp36(8839).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
                 let obj27 = obj26;
               }
             }
           }
         }
-        obj27 = { type: tmp36(9426).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
-        let tmp46;
+        obj27 = { type: tmp36(8839).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
+        let tmp48;
         if (tmp14 != nagbar) {
           const header_text = nagbar.header_text;
           const obj28 = { headerText: header_text, cta: null, helpCenterId: null, icon: null };
-          let tmp47;
+          let tmp49;
           if (tmp14 != nagbar.cta) {
             const text = nagbar.cta.text;
             const obj29 = { text };
-            tmp47 = obj29;
+            tmp49 = obj29;
           }
-          obj28.cta = tmp47;
+          obj28.cta = tmp49;
           const help_center_id = nagbar.help_center_id;
           obj28.helpCenterId = help_center_id;
           const icon = nagbar.icon;
           const obj30 = { nagbar: null };
           obj28.icon = icon;
           obj30.nagbar = obj28;
-          tmp46 = obj30;
+          tmp48 = obj30;
         }
-        const obj31 = { storefront: tmp46, checkout: null, collected: null, flavor: null };
-        let tmp48;
+        const obj31 = { storefront: tmp48, checkout: null, collected: null, flavor: null };
+        let tmp50;
         if (tmp14 != offer_notice) {
           const icon2 = offer_notice.icon;
           const obj32 = { icon: icon2, text: null };
@@ -365,47 +365,61 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           const obj33 = { offerNotice: null };
           obj32.text = text2;
           obj33.offerNotice = obj32;
-          tmp48 = obj33;
+          tmp50 = obj33;
         }
-        obj31.checkout = tmp48;
-        let tmp49;
-        if (tmp14 != tmp44) {
-          const obj35 = { overrideTitle: tmp44 };
-          tmp49 = obj35;
+        obj31.checkout = tmp50;
+        let tmp51;
+        if (tmp14 != tmp46) {
+          const obj34 = { overrideTitle: tmp46 };
+          tmp51 = obj34;
         }
-        obj31.collected = tmp49;
+        obj31.collected = tmp51;
         obj31.flavor = flavor;
         obj27.reward = obj31;
-      } else if (tmp36(9426).StorefrontPromotionCollectiblesType.COLLECTION_SALE !== type) {
-        if (tmp36(9426).StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER === type) {
-          const obj36 = {
-            type: tmp36(9426).StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER,
+      } else if (tmp36(8839).StorefrontPromotionCollectiblesType.COLLECTION_SALE !== type) {
+        if (tmp36(8839).StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER === type) {
+          const navigation2 = collectibles.navigation;
+          const obj35 = {
+            type: tmp36(8839).StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER,
             collectionId: null,
             position: null,
             countdownStyle: null,
             showCountdownCta: null,
             countdownPosition: null,
+            navigation: null,
           };
-          ({ collection_id: obj34.collectionId, position: obj34.position, countdown_style } = collectibles);
+          ({ collection_id: obj36.collectionId, position: obj36.position, countdown_style } = collectibles);
           if (countdown_style == tmp14) {
-            countdown_style = tmp36(9428).CollectionPromotionCountdownStyle.DARK;
+            countdown_style = tmp36(8841).CollectionPromotionCountdownStyle.DARK;
           }
-          obj36.countdownStyle = countdown_style;
+          obj35.countdownStyle = countdown_style;
           let flag = collectibles.show_countdown_cta;
           if (flag == tmp14) {
             flag = true;
           }
-          obj36.showCountdownCta = flag;
+          obj35.showCountdownCta = flag;
           let RIGHT = collectibles.countdown_position;
           if (RIGHT == tmp14) {
-            RIGHT = tmp36(9427).CollectiblesPromotionCountdownPosition.RIGHT;
+            RIGHT = tmp36(8840).CollectiblesPromotionCountdownPosition.RIGHT;
           }
-          obj36.countdownPosition = RIGHT;
+          obj35.countdownPosition = RIGHT;
+          let tab;
+          if (navigation2 != tmp14) {
+            tab = navigation2.tab;
+          }
+          let tmp39;
+          if (tmp14 != tab) {
+            const obj37 = { tab: null };
+            const obj38 = { title: navigation2.tab.title, icon: navigation2.tab.icon };
+            obj37.tab = obj38;
+            tmp39 = obj37;
+          }
+          obj35.navigation = tmp39;
         }
       }
       const navigation = collectibles.navigation;
-      const obj71 = {
-        type: tmp36(9426).StorefrontPromotionCollectiblesType.COLLECTION_SALE,
+      const obj75 = {
+        type: tmp36(8839).StorefrontPromotionCollectiblesType.COLLECTION_SALE,
         collectionId: null,
         countdownStyle: null,
         showCountdownCta: null,
@@ -413,37 +427,37 @@ prototype["createFromServer"] = function createFromServer(display_name) {
         showUpsellBlocks: null,
         navigation: null,
       };
-      ({ collection_id: obj5.collectionId, countdown_style: obj5.countdownStyle, show_countdown_cta } = collectibles);
+      ({ collection_id: obj7.collectionId, countdown_style: obj7.countdownStyle, show_countdown_cta } = collectibles);
       if (show_countdown_cta == tmp14) {
         show_countdown_cta = true;
       }
-      obj71.showCountdownCta = show_countdown_cta;
+      obj75.showCountdownCta = show_countdown_cta;
       let RIGHT2 = collectibles.countdown_position;
       if (RIGHT2 == tmp14) {
-        RIGHT2 = tmp36(9427).CollectiblesPromotionCountdownPosition.RIGHT;
+        RIGHT2 = tmp36(8840).CollectiblesPromotionCountdownPosition.RIGHT;
       }
-      obj71.countdownPosition = RIGHT2;
+      obj75.countdownPosition = RIGHT2;
       let flag2 = collectibles.show_upsell_blocks;
       if (flag2 == tmp14) {
         flag2 = false;
       }
-      obj71.showUpsellBlocks = flag2;
-      let tab;
+      obj75.showUpsellBlocks = flag2;
+      let tab1;
       if (navigation != tmp14) {
-        tab = navigation.tab;
+        tab1 = navigation.tab;
       }
-      let tmp40;
-      if (tmp14 != tab) {
-        const obj72 = { tab: null };
-        const obj73 = { title: navigation.tab.title, icon: navigation.tab.icon };
-        obj72.tab = obj73;
-        tmp40 = obj72;
+      let tmp42;
+      if (tmp14 != tab1) {
+        const obj76 = { tab: null };
+        const obj77 = { title: navigation.tab.title, icon: navigation.tab.icon };
+        obj76.tab = obj77;
+        tmp42 = obj76;
       }
-      obj71.navigation = tmp40;
+      obj75.navigation = tmp42;
     }
   }
   if (typeof prototype === "function") {
-    const tmp58 = new prototype(
+    const tmp60 = new prototype(
       tmp23,
       tmp12,
       tmp11,
@@ -465,22 +479,22 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       application_id,
       name,
     );
-    tmp58.id = id;
-    tmp58.applicationId = application_id;
-    tmp58.name = name;
-    tmp58.displayName = display_name;
-    tmp58.rewardType = reward_type;
-    tmp58.rewardStatus = reward_status;
-    tmp58.rewardConfig = tmp16;
-    tmp58.skuIds = tmp20;
-    tmp58.appliesToAllSkus = applies_to_all_skus;
-    tmp58.includeBundles = include_bundles;
-    tmp58.startsAt = date;
-    tmp58.endsAt = date1;
-    tmp58.redemptionEndsAt = date2;
-    tmp58.progress = tmp34;
-    tmp58.tenantMetadata = tmp35;
-    return tmp58;
+    tmp60.id = id;
+    tmp60.applicationId = application_id;
+    tmp60.name = name;
+    tmp60.displayName = display_name;
+    tmp60.rewardType = reward_type;
+    tmp60.rewardStatus = reward_status;
+    tmp60.rewardConfig = tmp16;
+    tmp60.skuIds = tmp20;
+    tmp60.appliesToAllSkus = applies_to_all_skus;
+    tmp60.includeBundles = include_bundles;
+    tmp60.startsAt = date;
+    tmp60.endsAt = date1;
+    tmp60.redemptionEndsAt = date2;
+    tmp60.progress = tmp34;
+    tmp60.tenantMetadata = tmp35;
+    return tmp60;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

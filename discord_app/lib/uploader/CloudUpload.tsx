@@ -983,7 +983,7 @@ prototype["upload"] = function upload() {
                   let tmp151 = null;
                   if (closure_133_0.allowOptimization) {
                     tmp151 = null;
-                    if (closure_133_0.item.platform === v0(8861).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(8357).UploadPlatform.WEB) {
                       tmp151 = null;
                       if (true !== closure_133_0.item.imageConversionEvaluated) {
                         tmp151 = null;
@@ -995,17 +995,17 @@ prototype["upload"] = function upload() {
                               str2 = "jxr";
                             }
                             str = str2;
-                            obj16 = v0(8909);
+                            obj16 = v0(8405);
                           }
                           tmp151 = str;
-                          obj15 = v0(8909);
+                          obj15 = v0(8405);
                         }
                       }
                     }
                   }
                   closure_132_1 = tmp151;
                   if (null != closure_132_1) {
-                    if (closure_133_0.item.platform === v0(8861).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(8357).UploadPlatform.WEB) {
                       if (null != closure_133_0.item.file) {
                         let tmp195 = null != closure_133_0.mimeType;
                         if (tmp195) {
@@ -1027,11 +1027,11 @@ prototype["upload"] = function upload() {
                           return obj7;
                         } else {
                           if ("heic" === closure_132_1) {
-                            let heicMimeTypeResult = v0(8909).heicMimeType(closure_133_0.item.file);
-                            const obj20 = v0(8909);
+                            let heicMimeTypeResult = v0(8405).heicMimeType(closure_133_0.item.file);
+                            const obj20 = v0(8405);
                           } else {
-                            heicMimeTypeResult = v0(8909).jxrMimeType(closure_133_0.item.file);
-                            const obj19 = v0(8909);
+                            heicMimeTypeResult = v0(8405).jxrMimeType(closure_133_0.item.file);
+                            const obj19 = v0(8405);
                           }
                           closure_133_0.mimeType = heicMimeTypeResult;
                         }
@@ -1042,7 +1042,7 @@ prototype["upload"] = function upload() {
                     closure_133_0.handleComplete(closure_133_0.id);
                   } else {
                     if (closure_133_0.allowOptimization) {
-                      if (closure_133_0.item.platform === v0(8861).UploadPlatform.WEB) {
+                      if (closure_133_0.item.platform === v0(8357).UploadPlatform.WEB) {
                         if (!closure_132_0) {
                           if (true !== closure_133_0.item.imageConversionEvaluated) {
                             c8 = 5;
@@ -1053,7 +1053,7 @@ prototype["upload"] = function upload() {
                         }
                       }
                     }
-                    const uploadPayload = v0(8910).default.getUploadPayload(closure_133_0);
+                    const uploadPayload = v0(8406).default.getUploadPayload(closure_133_0);
                     c8 = 6;
                     c9 = 1;
                     c9 = 3;
@@ -1109,10 +1109,10 @@ prototype["upload"] = function upload() {
                   }
                   if (tmp119) {
                     closure_3 = closure_133_0;
-                    const obj10 = status(7812);
+                    const obj10 = status(7315);
                     c8 = 4;
                     c9 = 1;
-                    const obj14 = { value: status(7812).fromBlob(file).catch(() => null), done: false };
+                    const obj14 = { value: status(7315).fromBlob(file).catch(() => null), done: false };
                     return obj14;
                   } else {
                     closure_133_0.item.file = closure_132_3.convertedFile;
@@ -1168,7 +1168,7 @@ prototype["upload"] = function upload() {
               return obj21;
             } else {
               closure_132_5 = value;
-              uploadTarget = v0(8911).getUploadTarget(closure_133_0.item.target);
+              uploadTarget = v0(8407).getUploadTarget(closure_133_0.item.target);
               if (null != closure_132_5.filename) {
                 if ("" !== closure_132_5.filename) {
                   const currentSize2 = closure_133_0.currentSize;
@@ -1391,7 +1391,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj7 = { value: self, done: true };
               return obj7;
             }
-            obj16 = size(8911);
+            obj16 = size(8407);
           }
         } else {
           if (1 === tmp5) {
@@ -1468,7 +1468,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         if (fileSize == null) {
                           c3 = 2;
                           c4 = 1;
-                          const obj9 = { value: size(8857).getFileData(uri), done: false };
+                          const obj9 = { value: size(8354).getFileData(uri), done: false };
                           return obj9;
                         }
                       }
@@ -1533,14 +1533,11 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
   })();
 };
 CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
-  closure_0 = file;
-  closure_1 = arg1;
-  closure_2 = id;
   return (async () => {
-    if (c9 === 2) {
-      c9 = 3;
+    if (c0 === 2) {
+      c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -1551,165 +1548,21 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
       }
     } else {
       try {
-        c9 = 2;
-        if (0 === c8) {
-          if (arg0 === 1) {
-            c9 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c9 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_5 = tmp3;
-            closure_4 = tmp5;
-            closure_132_0 = undefined;
-            closure_132_1 = undefined;
-            closure_132_2 = undefined;
-            closure_132_3 = undefined;
-            closure_132_4 = undefined;
-            closure_132_5 = undefined;
-            closure_132_6 = undefined;
-            const imageAttachmentMezzanineV2Config = unknown_error(hashTimeMs[26]).getImageAttachmentMezzanineV2Config({ location: "CloudUpload.maybeConvertToWebP" });
-            if (imageAttachmentMezzanineV2Config.enabled) {
-              if (null == size) {
-                const _HermesInternal6 = HermesInternal;
-                logger.warn("webp conversion skipped for " + closure_2 + ": no file");
-                c9 = 3;
-                return { value: null, done: true };
-              } else {
-                if (null != imageAttachmentMezzanineV2Config.maxFileSizeBytes) {
-                  if (size.size > imageAttachmentMezzanineV2Config.maxFileSizeBytes) {
-                    const _HermesInternal5 = HermesInternal;
-                    logger.warn("webp conversion skipped for " + closure_2 + ": too big");
-                    c9 = 3;
-                    return { value: null, done: true };
-                  }
-                }
-                if (compressTimeMs()) {
-                  c9 = 3;
-                  return { value: null, done: true };
-                } else {
-                  const _performance2 = performance;
-                  closure_132_2 = performance.now();
-                  closure_132_3 = { compressTimeMs: 0 };
-                  c7 = 1;
-                  c8 = 2;
-                  c9 = 1;
-                  const obj4 = { value: tmp97(tmp98[28])(tmp98[27], tmp98.paths), done: false };
-                  return obj4;
-                }
-              }
-            } else {
-              const _HermesInternal4 = HermesInternal;
-              logger.warn("webp conversion skipped for " + closure_2 + ": not enabled");
-              c9 = 3;
-              return { value: null, done: true };
-            }
-            const obj9 = unknown_error(hashTimeMs[26]);
-            tmp97 = unknown_error;
-          }
+        c0 = 2;
+        if (arg0 === 1) {
+          c0 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c0 = 3;
+          const obj = { value, done: true };
+          return obj;
         } else {
-          if (1 === tmp8) {
-            c7 = 0;
-            closure_132_7 = closure_6;
-            const _HermesInternal3 = HermesInternal;
-            logger.warn("webp conversion failed for " + closure_133_2 + ":", closure_132_7);
-            let UNKNOWN_ERROR;
-            if (closure_132_1 != null) {
-              UNKNOWN_ERROR = closure_132_1.UNKNOWN_ERROR;
-            }
-            unknown_error = UNKNOWN_ERROR;
-            if (UNKNOWN_ERROR == null) {
-              unknown_error = "unknown_error";
-            }
-            closure_132_3.conversionFailureReason = unknown_error;
-          } else if (2 === tmp8) {
-            if (arg0 === 1) {
-              c9 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 0;
-              c9 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              closure_132_4 = value;
-              closure_132_1 = closure_132_4.ConversionFailureReason;
-              c8 = 3;
-              c9 = 1;
-              const obj6 = { value: closure_132_4.maybeConvertToWebP(closure_133_0), done: false };
-              return obj6;
-            }
-          } else if (arg0 === 1) {
-            c9 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 0;
-            c9 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
-          } else {
-            closure_132_0 = value;
-            if (closure_133_1()) {
-              c7 = 0;
-              c9 = 3;
-              return { value: null, done: true };
-            } else {
-              if (closure_132_0.success) {
-                if (null != closure_132_0.convertedBlob) {
-                  const compressionRatio = closure_132_0.compressionRatio;
-                  ({ sizeBefore, sizeAfter } = closure_132_0);
-                  const _HermesInternal2 = HermesInternal;
-                  logger.log("webp conversion worked for " + closure_133_2 + ": " + sizeBefore + " -> " + sizeAfter + " bytes (" + compressionRatio.toFixed(2) + "x)");
-                  const _File = File;
-                  items = [closure_132_0.convertedBlob];
-                  const obj = { type: "image/webp", lastModified: closure_133_0.lastModified };
-                  file = new File(items, closure_133_0.name, obj);
-                  closure_132_3.convertedFile = file;
-                  closure_132_3.convertedMimeType = "image/webp";
-                  hashTimeMs = closure_132_0.hashTimeMs;
-                  if (hashTimeMs == null) {
-                    hashTimeMs = undefined;
-                  }
-                  closure_132_3.hashTimeMs = hashTimeMs;
-                }
-                c7 = 0;
-              }
-              const reason = closure_132_0.reason;
-              UNKNOWN_ERROR = reason;
-              if (reason == null) {
-                UNKNOWN_ERROR = closure_132_1.UNKNOWN_ERROR;
-              }
-              closure_132_5 = UNKNOWN_ERROR;
-              const _HermesInternal = HermesInternal;
-              logger.log("webp conversion skipped for " + closure_133_2 + ": " + closure_132_5);
-              closure_132_3.conversionFailureReason = closure_132_5;
-            }
-          }
-          const _Math = Math;
-          const _performance = performance;
-          closure_132_6 = Math.round(performance.now() - closure_132_2);
-          compressTimeMs = undefined;
-          if (closure_132_0 != null) {
-            compressTimeMs = closure_132_0.compressTimeMs;
-          }
-          if (compressTimeMs == null) {
-            compressTimeMs = closure_132_6;
-          }
-          closure_132_3.compressTimeMs = compressTimeMs;
-          c9 = 3;
-          const obj8 = { value: closure_132_3, done: true };
-          return obj8;
+          c0 = 3;
+          return { value: null, done: true };
         }
-      } catch (tmp85) {
-        closure_6 = tmp85;
-        if (tmp4 === c7) {
-          c9 = tmp2;
-          throw tmp85;
-        } else {
-          c8 = tmp;
-        }
+      } catch (tmp4) {
+        c0 = tmp;
+        throw tmp4;
       }
     }
   })();
@@ -1750,7 +1603,7 @@ CloudUpload["tryConvertToJpeg"] = function tryConvertToJpeg(arg0) {
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj4 = { value: closure_0(tmp30[28])(tmp30[29], tmp30.paths), done: false };
+                const obj4 = { value: closure_0(tmp30[28])(tmp30[27], tmp30.paths), done: false };
                 return obj4;
               }
             }
@@ -1907,7 +1760,7 @@ prototype["delete"] = function delete() {
             const obj4 = { value, done: true };
             return obj4;
           } else if (null != self.uploadedFilename) {
-            const uploadTarget = v3(8911).getUploadTarget(self.item.target);
+            const uploadTarget = v3(8407).getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
             const HTTP = v3(1285).HTTP;

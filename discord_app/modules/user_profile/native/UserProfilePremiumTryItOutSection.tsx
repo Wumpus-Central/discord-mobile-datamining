@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfilePremiumTryItOutSection.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
-import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
+import openPremiumModalDefault from "../../premium/native/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import usePremiumTryItOutPresetShuffleDefault from "../hooks/usePremiumTryItOutPresetShuffle.tsx";
 import UserProfileUpsellCardV2Default from "UserProfileUpsellCardV2.tsx";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { marginTop: nativeDefault.space.PX_16 },
   cardInner: null,
@@ -90,7 +90,7 @@ export default function UserProfilePremiumTryItOutSection(arg0) {
   const obj4 = { style: tmp.lockCircle, children: null };
   const obj3 = { style: tmp.dividerLine };
   const tmp4 = UserProfileUpsellCardV2Default;
-  obj4.children = closure_5(analyticsLocations(8103).LockIcon, {
+  obj4.children = closure_5(analyticsLocations(7606).LockIcon, {
     size: "xs",
     color: nativeDefault.colors.ICON_MUTED,
     style: tmp.lockIcon,

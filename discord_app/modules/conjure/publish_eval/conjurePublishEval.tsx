@@ -2,7 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef4133 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4121 from "../intl/ConjureUntranslated.messages.js";
 import ConjurePublishEvalTypes from "ConjurePublishEvalTypes.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -118,7 +118,7 @@ let closure_13 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
   })();
 };
 let closure_11 = { quality: null, metExpectations: null, speed: null };
-let obj = { quality: _modDef4133["N94/JU"], metExpectations: _modDef4133["7mnit0"], speed: _modDef4133["J/xftE"] };
+let obj = { quality: _modDef4121["N94/JU"], metExpectations: _modDef4121["7mnit0"], speed: _modDef4121["J/xftE"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_eval/conjurePublishEval.tsx");
 
@@ -242,7 +242,7 @@ export function conjurePublishEvalScoreLabel(dimension, score) {
   obj = { score, dimension: null };
   const intl2 = util.intl;
   obj.dimension = intl2.string(obj[dimension]);
-  return intl.formatToPlainString(_modDef4133.fML8aJ, obj);
+  return intl.formatToPlainString(_modDef4121.fML8aJ, obj);
 }
 export function useConjurePublishEvalForm(pending) {
   _require = pending;

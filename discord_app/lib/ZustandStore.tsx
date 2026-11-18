@@ -12,7 +12,7 @@ export function createZustandStore(arg0) {
   _require = arg0;
   let obj = require("../../_runtime/metro/01258__.js");
   dependencyMap = obj.createWithEqualityFn(
-    require("../../_runtime/metro/05500__.js").subscribeWithSelector((arg0, arg1, arg2) => {
+    require("../../_runtime/metro/05013__.js").subscribeWithSelector((arg0, arg1, arg2) => {
       closure_0 = arg0;
       return closure_0(
         (arg0) => {

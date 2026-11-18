@@ -10,7 +10,7 @@ import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/g
 import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import NitroWumpusFlightRight3dIllustration from "../../../../design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx";
-import PremiumPerksListDefault from "../../../../components_native/premium/PremiumPerksList.tsx";
+import PremiumPerksListDefault from "../components/PremiumPerksList.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1390).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_7 = createStyles.createStyles({
   contentContainer: {
     paddingHorizontal: 36,

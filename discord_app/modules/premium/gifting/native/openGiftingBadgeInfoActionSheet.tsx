@@ -6,8 +6,5 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/premium/gifting/native/openGiftingBadgeInfoActionSheet.tsx");
 
 export default function openGiftingBadgeInfoActionSheet() {
-  ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(10102, dependencyMap.paths),
-    "GiftingBadgeInfoActionSheet",
-  );
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9383, dependencyMap.paths), "GiftingBadgeInfoActionSheet");
 }

@@ -10,9 +10,9 @@ const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const NativeStackNavigator = fn(9139);
+const NativeStackNavigator = fn(8550);
 let closure_10 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = {
   navigator: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,

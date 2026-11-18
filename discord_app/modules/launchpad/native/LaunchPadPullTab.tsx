@@ -1,8 +1,8 @@
 // discord_app/modules/launchpad/native/LaunchPadPullTab.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1655 from "../../../../_runtime/metro/01655__.js";
-import useAnimatedKeyboardHeightDefault from "../../keyboard/native/useAnimatedKeyboardHeight.tsx";
 import useWindowDimensionsSharedValueDefault from "../../screen/useWindowDimensionsSharedValue.native.tsx";
+import useAnimatedKeyboardHeightDefault from "../../keyboard/native/useAnimatedKeyboardHeight.tsx";
 import showLaunchPadDefault from "showLaunchPad.tsx";
 import useLaunchPadPullTabMinimizedDefault from "useLaunchPadPullTabMinimized.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(12608);
+const LaunchPadConstants = fn(11893);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({
@@ -22,9 +22,9 @@ const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT
   LAUNCH_PAD_PULL_TAB_WIDTH,
   LAUNCH_PAD_SPRING_CONFIG: closure_11,
 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(13446).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12753).CHAT_INPUT_HEIGHT;
 let jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };
 let size = {
   position: "absolute",

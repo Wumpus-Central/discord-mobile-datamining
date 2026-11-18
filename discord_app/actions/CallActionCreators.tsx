@@ -101,6 +101,10 @@ export default {
     }
   },
   stopRinging(channelId, items) {
+    if (null == items) {
+      const obj2 = { type: "CALL_STOP_RINGING_SELF", channelId };
+      DispatcherDefault.dispatch(obj2);
+    }
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: timestampProducer.CALL_STOP_RINGING(channelId),

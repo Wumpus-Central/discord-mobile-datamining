@@ -1,7 +1,7 @@
 // discord_app/modules/go_live/native/StreamQualityLiveIndicator.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
+import openPremiumModalDefault from "../../premium/native/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,10 +12,10 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const PremiumConstants = fn(1390);
 ({ PremiumTypes: closure_6, PremiumUpsellTypes: metroImportDefault } = PremiumConstants);
-const ResolutionTypes = fn(6072).ResolutionTypes;
+const ResolutionTypes = fn(5568).ResolutionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   liveIndicator: { flexDirection: "row", alignItems: "center", height: 18 },
   liveTag: {

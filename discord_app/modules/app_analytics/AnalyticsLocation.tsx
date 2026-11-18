@@ -130,7 +130,6 @@ export default {
   GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES: "guild powerups - coachmark - game server new games",
   GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK: "guild powerups - coachmark - boost to unlock",
   GUILD_POWERUPS_COACHMARK_EXPIRING_PERK: "guild powerups - coachmark - expiring perk",
-  GUILD_POWERUPS_COACHMARK_GUILD_THEME_MEMBER: "guild powerups - coachmark - guild theme member",
   GUILD_POWERUPS_COACHMARK: "guild powerups - coachmark",
   GUILD_POWERUPS_MARKETING: "guild powerups - marketing",
   GUILD_POWERUPS_MARKETING_VIDEO_MODAL: "guild powerups - marketing video modal",

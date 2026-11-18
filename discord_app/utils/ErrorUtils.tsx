@@ -1,5 +1,4 @@
 // discord_app/utils/ErrorUtils.tsx
-import BAGGAGE_HEADER_NAME from "../../_runtime/09804_BAGGAGE_HEADER_NAME.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
@@ -23,18 +22,4 @@ export function getUnderlyingIOSError(message) {
   } catch (err) {
     return null;
   }
-}
-export function serializeError(arg0) {
-  let error = arg0;
-  if (!Boolean(arg0)) {
-    const _Error = Error;
-    error = new Error("unknown error");
-  }
-  let error1 = error;
-  if (typeof error !== "object") {
-    const _Error2 = Error;
-    const _String = String;
-    error1 = new Error(String(error));
-  }
-  return JSON.stringify(BAGGAGE_HEADER_NAME.normalizeToSize(error1));
 }

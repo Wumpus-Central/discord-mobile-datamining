@@ -941,11 +941,11 @@ let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
     }
   }
 };
-fn(7064).FetchState;
-fn(13561).FetchState;
-fn(13556).FetchState;
-fn(13562).FetchState;
-const FetchState = fn(13563).FetchState;
+fn(6568).FetchState;
+fn(12868).FetchState;
+fn(12863).FetchState;
+fn(12869).FetchState;
+const FetchState = fn(12870).FetchState;
 const Endpoints = fn(1072).Endpoints;
 let c18 = 600000;
 const map = new Map();

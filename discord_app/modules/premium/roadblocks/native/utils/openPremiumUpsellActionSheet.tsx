@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/premium/roadblocks/native/uti
 
 export default function openPremiumUpsellActionSheet(featureName, analyticsLocations, stack, appEntryKey) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(9047, dependencyMap.paths),
+    asyncRequireImpl(8458, dependencyMap.paths),
     PremiumUpsellActionSheetKey,
     { featureName, analyticsLocations, appEntryKey },
     stack,

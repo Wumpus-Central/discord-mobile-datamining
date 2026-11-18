@@ -5,7 +5,7 @@ import ThemeStore from "../user_settings/ThemeStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const HexagonCampaignPerk = fn(5335).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(4848).HexagonCampaignPerk;
 const SystemTheme = fn(1195).SystemTheme;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/getAppliedHexagonCampaignPerks.tsx");

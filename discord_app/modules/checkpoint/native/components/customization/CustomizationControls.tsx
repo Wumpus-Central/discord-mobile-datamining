@@ -1,6 +1,7 @@
 // discord_app/modules/checkpoint/native/components/customization/CustomizationControls.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import TraitPickerControlsDefault from "TraitPickerControls.tsx";
+import FinalizeTraitPickerDefault from "FinalizeTraitPicker.tsx";
+import TraitPickerDefault from "TraitPicker.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -8,24 +9,42 @@ const result = size.fileFinishedImporting(
   "modules/checkpoint/native/components/customization/CustomizationControls.tsx",
 );
 
-export default function CustomizationControls(arg0) {
-  ({ activeCustomizationOption, isFinalizeRoute } = arg0);
-  ({ isCurrentTraitBlocked, isSaving, isLandscape, onSelectFinalizeOption, onSelectTraitOption } = arg0);
-  let str = "finalize";
-  if (!isFinalizeRoute) {
-    str = activeCustomizationOption;
-  }
-  return jsx(
-    TraitPickerControlsDefault,
-    {
-      activeCustomizationOption,
-      isFinalizeRoute,
-      isCurrentTraitBlocked,
-      disabled,
+export default function CustomizationControls(isFinalizeRoute) {
+  ({ activeCustomizationOption, isSaving, isLandscape, onSelectTraitOption } = isFinalizeRoute);
+  if (isFinalizeRoute.isFinalizeRoute) {
+    const obj2 = {
+      customizationOption: activeCustomizationOption,
+      isCurrentTraitBlocked: tmp,
+      disabled: isSaving,
       isLandscape,
-      onSelectOption,
-      onSelectFinalizeOption,
-    },
-    str,
-  );
+      onSelectOption: onSelectTraitOption,
+      onSelectFinalizeOption: tmp2,
+    };
+    let tmp3Result = jsx(FinalizeTraitPickerDefault, {
+      customizationOption: activeCustomizationOption,
+      isCurrentTraitBlocked: tmp,
+      disabled: isSaving,
+      isLandscape,
+      onSelectOption: onSelectTraitOption,
+      onSelectFinalizeOption: tmp2,
+    });
+  } else {
+    const obj = {
+      customizationOption: activeCustomizationOption,
+      disabled: isSaving,
+      isLandscape,
+      onSelectOption: onSelectTraitOption,
+    };
+    tmp3Result = jsx(
+      TraitPickerDefault,
+      {
+        customizationOption: activeCustomizationOption,
+        disabled: isSaving,
+        isLandscape,
+        onSelectOption: onSelectTraitOption,
+      },
+      activeCustomizationOption,
+    );
+  }
+  return tmp3Result;
 }

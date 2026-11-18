@@ -58,6 +58,7 @@ const items = [
   dismissible_content.DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE,
   dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING,
   dismissible_content.DismissibleContent.NAGBAR_NOTICE_OFFER_EXPIRING,
+  dismissible_content.DismissibleContent.GIFTED_NITRO_EXPIRATION_WINBACK_NAGBAR,
   dismissible_content.DismissibleContent.CLOUD_PLAY_NEW_BADGE,
   dismissible_content.DismissibleContent.CHURN_DISCOUNT_PREMIUM_TAB_BADGE,
   dismissible_content.DismissibleContent.WISHLIST_NUX_TOOLTIP_AND_MODAL,

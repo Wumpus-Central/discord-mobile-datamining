@@ -91,13 +91,13 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9077);
+const SearchConstants = fn(8488);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: closure_10 } = SearchConstants);
-const SearchNavigatorScreens = fn(19516).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9076).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(18792).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(8487).SearchFilterAddLocations;
 const Constants = fn(1072);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(5166).StaticChannelRoute;
+const StaticChannelRoute = fn(4679).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useOnPressSearchItem.tsx");
 
@@ -544,11 +544,11 @@ export function useOnPressSearchHistoryText(searchContext) {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13818).delayUntilNavigationComplete(() => {
+      const result = searchContext(13125).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(13818);
+      let obj2 = searchContext(13125);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

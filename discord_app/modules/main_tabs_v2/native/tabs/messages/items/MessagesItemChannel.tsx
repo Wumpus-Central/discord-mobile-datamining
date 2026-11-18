@@ -2,8 +2,8 @@
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import _mod7898 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
-import _mod15202 from "../../../../../../../_runtime/metro/15202__.js";
+import _mod7401 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod13830 from "../../../../../../../_runtime/metro/13830__.js";
 import MessagesItemChannelBase from "channel/MessagesItemChannelBase.tsx";
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -47,7 +47,7 @@ const memoResult = noop.memo(function MessagesItemChannelFast(arg0) {
 });
 const memoResult1 = noop.memo(function MessagesItemChannelFlash(channelId) {
   items = [channelId.channelId];
-  const tmp = _slicedToArray(_mod7898.useRecyclingState(false, items), 2);
+  const tmp = _slicedToArray(_mod7401.useRecyclingState(false, items), 2);
   closure_0 = tmp2;
   const items1 = [tmp[1]];
   const obj2 = {};
@@ -77,7 +77,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo(function MessagesItemChannelLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod15202.useRecyclingState(false);
+  [tmp2, tmp3] = _mod13830.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

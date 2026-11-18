@@ -5,7 +5,7 @@ import UserProfileAnalyticsUtils from "../../user_profile/UserProfileAnalyticsUt
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const constants = fn(8490).TrackUserProfileEditActions;
+const constants = fn(7981).TrackUserProfileEditActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/profile_customization/native/openPremiumTryItOutModal.tsx");
 
@@ -21,7 +21,7 @@ export function openPremiumTryItOutModal(avatar) {
   });
   const obj2 = { userId: id, action: constants.ENTER_TRY_OUT_PREMIUM_PREVIEW };
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(17208, dependencyMap.paths),
+    asyncRequireImpl(15864, dependencyMap.paths),
     { initialTarget: avatar },
     undefined,
     { presentation: "fullScreenModal", fullScreenGestureEnabled: true },

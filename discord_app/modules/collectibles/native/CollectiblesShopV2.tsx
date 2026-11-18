@@ -10,7 +10,7 @@ import NativePaymentHooksDefault from "../../payments/native/hooks/NativePayment
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import ImprovedMobileShopLoadingExperiment from "../experiments/ImprovedMobileShopLoadingExperiment.tsx";
 import CollectiblesShopManager2 from "../CollectiblesShopManager.tsx";
-import takeWhileDefault from "../../../../_runtime/18524_takeWhile.js";
+import takeWhileDefault from "../../../../_runtime/17337_takeWhile.js";
 import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment.tsx";
 import ShopCategory from "ShopCategory.tsx";
 import ShopNitroUpsellBanner from "ShopNitroUpsellBanner.tsx";
@@ -126,7 +126,7 @@ class CollectiblesShopV2 {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const FeedBlockRecord = fn(8530).FeedBlockRecord;
+const FeedBlockRecord = fn(8021).FeedBlockRecord;
 const CollectiblesShopConstants = fn(1074);
 ({
   COLLECTIBLES_SHOP_CACHE_DURATION_MS: map1,
@@ -137,10 +137,10 @@ const CollectiblesShopConstants = fn(1074);
 let closure_17 = CollectiblesShopConstants.TWELVE_DAYS_COLLECTION_SKU_ID;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_18, COLLECTIBLES_APPLICATION_ID: closure_19, PaymentGateways: closure_20 } = Constants);
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const dependencyMap3 = createStyles.createStyles({
   rootContainer: { height: "100%", width: "100%" },
   spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 },

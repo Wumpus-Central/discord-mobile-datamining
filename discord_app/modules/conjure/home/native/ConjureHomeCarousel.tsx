@@ -5,8 +5,8 @@ import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useMeasuredLayoutDefault from "../../../screen/native/useMeasuredLayout.tsx";
+import SvgCss from "../../../../../_runtime/16232_SvgCss.js";
 import conjureHomeCarouselFan from "../conjureHomeCarouselFan.tsx";
-import SvgCss from "../../../../../_runtime/14840_SvgCss.js";
 import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt.tsx";
 import conjureHomeInspirationEntries from "../conjureHomeInspirationEntries.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 const require = globalThis.__r;
 const _modDef1655 = _mod1655;
 
-const _modDef4133 = tmp7(4133);
+const _modDef4121 = tmp7(4121);
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
@@ -27,14 +27,14 @@ const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
 let obj = {
-  games: fn(7448).GameControllerIcon,
-  apps: fn(8112).AppsIcon,
-  profile_widget: fn(14837).WidgetsIcon,
-  overlay_widget: fn(10522).ScreenIcon,
-  automod: fn(10751).ShieldIcon,
-  chat_bot: fn(12837).RobotIcon,
+  games: fn(6951).GameControllerIcon,
+  apps: fn(7615).AppsIcon,
+  profile_widget: fn(18681).WidgetsIcon,
+  overlay_widget: fn(9803).ScreenIcon,
+  automod: fn(10032).ShieldIcon,
+  chat_bot: fn(12131).RobotIcon,
 };
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" },
   item: null,
@@ -309,7 +309,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
     children: null,
   };
   const intl = tmp2(1113).intl;
-  obj5.accessibilityLabel = intl.string(_modDef4133.Qc4S39);
+  obj5.accessibilityLabel = intl.string(_modDef4121.Qc4S39);
   obj5.ref = ref;
   obj5.onLayout = onLayout;
   let mapped = null;

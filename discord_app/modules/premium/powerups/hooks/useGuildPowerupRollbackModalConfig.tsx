@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2735 from "../GuildPowerups.messages.js";
+import _modDef2755 from "../GuildPowerups.messages.js";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -26,11 +26,11 @@ function getGuildThemeRollbackModalConfig(storeRemovalDate) {
       const intl = util.intl;
       const obj2 = { dateString: tmp3 };
       const _HermesInternal = HermesInternal;
-      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2735["6e2ry1"], obj2);
+      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2755["6e2ry1"], obj2);
       const intl2 = util.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = storeRemovalDate);
-      items = [intl2.formatToPlainString(_modDef2735.jd8fki, obj5)];
+      items = [intl2.formatToPlainString(_modDef2755.jd8fki, obj5)];
       obj.bodies = items;
       return obj;
     }
@@ -40,7 +40,7 @@ function getGuildThemeRollbackModalConfig(storeRemovalDate) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");
 
-export default function useGuildPowerupRollbackModalConfig(guildId, useGuildPowerupNewPerkMarketingVersion) {
+export default function useGuildPowerupRollbackModalConfig(guildId, useMarketablePowerupPerks) {
   _require = guildId;
   items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
@@ -63,7 +63,7 @@ export default function useGuildPowerupRollbackModalConfig(guildId, useGuildPowe
   importDefault = tmp5;
   const tmpResult = require("initialize");
   if (flag) {
-    flag = tmpResult2.useShouldShowGuildThemeRollback(guildId, useGuildPowerupNewPerkMarketingVersion);
+    flag = tmpResult2.useShouldShowGuildThemeRollback(guildId, useMarketablePowerupPerks);
   }
   if (flag) {
     flag = null != stateFromStores;

@@ -1,15 +1,14 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2799 from "GiftingBadge.messages.js";
+import _modDef2819 from "GiftingBadge.messages.js";
 import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
-import GiftingBadgeExperiment2 from "experiments/GiftingBadgeExperiment.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_5 = fn(8558).getSingleRequirementThreshold;
+let closure_5 = fn(8049).getSingleRequirementThreshold;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
@@ -23,7 +22,7 @@ export function getGiftingBadgeAccessibilityLabel(name) {
     str = "";
   }
   const intl = util.intl;
-  return "" + str + ", " + intl.formatToPlainString(_modDef2799.qvx9E4, { count });
+  return "" + str + ", " + intl.formatToPlainString(_modDef2819.qvx9E4, { count });
 }
 export function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
   const tmp = closure_5(currentTier);
@@ -43,14 +42,6 @@ export function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextT
   }
   return Math.min(Math.max(num3, 0), 100);
 }
-export function useIsGiftingBadgesDesktopEnabled(location) {
-  const GiftingBadgeExperiment = GiftingBadgeExperiment2.GiftingBadgeExperiment;
-  return GiftingBadgeExperiment.useConfig({ location }).enabled;
-}
-export function getIsGiftingBadgesDesktopEnabled(location) {
-  const GiftingBadgeExperiment = GiftingBadgeExperiment2.GiftingBadgeExperiment;
-  return GiftingBadgeExperiment.getConfig({ location }).enabled;
-}
 export function getGiftingBadgeTierIconUrl(nextTier) {
   let prop;
   if (nextTier != null) {
@@ -65,22 +56,15 @@ export function getGiftingBadgeTierIconUrl(nextTier) {
   }
   return prop;
 }
-export function useGiftingBadgeCoachmarkVariant(arg0) {
-  ({ location: _location, enabled } = arg0);
-  if (enabled === undefined) {
-    enabled = true;
+export function useGiftingBadgeCoachmarkVariant(location) {
+  let flag = location.enabled;
+  if (flag === undefined) {
+    flag = true;
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(10098).GiftingBadgeExperiment;
-  let enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(10104).GiftingBadgeCoachmarkAudienceExperiment;
-  let str = "-DISABLED";
-  if (enabled2) {
-    str = "";
-  }
-  const enabled3 = GiftingBadgeCoachmarkAudienceExperiment.useConfig({ location: "" + _location + str }).enabled;
-  let obj = { location: "" + _location + str };
+  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(9385).GiftingBadgeCoachmarkAudienceExperiment;
+  const enabled = GiftingBadgeCoachmarkAudienceExperiment.useConfig({ location: location.location }).enabled;
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -93,38 +77,36 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
     }
     return flag;
   });
-  const tmpResult = stateFromStores(504);
-  const result = stateFromStores(5342).useIsDismissibleContentDismissed_UNSAFE(
-    tmp(5143).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
+  let obj = stateFromStores(504);
+  const result = stateFromStores(4855).useIsDismissibleContentDismissed_UNSAFE(
+    stateFromStores(4656).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
   );
-  const tmpResult3 = stateFromStores(5342);
+  let obj2 = stateFromStores(4855);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () =>
-    badgeById.getBadgeById(stateFromStores(dependencyMap[10]).BadgeId.GIFTING),
+    badgeById.getBadgeById(stateFromStores(dependencyMap[9]).BadgeId.GIFTING),
   );
-  if (enabled2) {
-    enabled2 = !result;
+  let tmp4 = !result;
+  if (!result) {
+    tmp4 = flag;
   }
-  if (enabled2) {
-    enabled2 = enabled;
+  let tmp5 = tmp4;
+  if (tmp4) {
+    tmp5 = !enabled;
   }
-  let tmp6 = enabled2;
-  if (enabled2) {
-    tmp6 = !enabled3;
+  if (tmp5) {
+    tmp5 = stateFromStores;
+  }
+  stateFromStores = tmp5;
+  let tmp6 = tmp4;
+  if (tmp4) {
+    tmp6 = enabled;
   }
   if (tmp6) {
-    tmp6 = stateFromStores;
+    tmp6 = null == stateFromStores1;
   }
-  stateFromStores = tmp6;
-  let tmp7 = enabled2;
-  if (enabled2) {
-    tmp7 = enabled3;
-  }
-  if (tmp7) {
-    tmp7 = null == stateFromStores1;
-  }
-  closure_1 = tmp7;
-  const items2 = [tmp6, tmp7];
+  closure_1 = tmp6;
+  const items2 = [tmp5, tmp6];
   const effect = noop.useEffect(() => {
     if (closure_1) {
       const badgeSummary = BadgeDirectoryActionCreators.fetchBadgeSummary(BadgeId.BadgeId.GIFTING);
@@ -132,33 +114,33 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
       const badge = BadgeDirectoryActionCreators.fetchBadge(BadgeId.BadgeId.GIFTING);
     }
   }, items2);
-  if (enabled3) {
-    let tmp10 = null;
-    if (enabled2) {
-      tmp10 = null;
+  if (enabled) {
+    let tmp9 = null;
+    if (tmp4) {
+      tmp9 = null;
       if (null != stateFromStores1) {
-        tmp10 = null;
+        tmp9 = null;
         if (!stateFromStores1.hidden) {
           if (stateFromStores) {
-            tmp10 = "noCount";
+            tmp9 = "noCount";
           } else {
-            tmp10 = null;
+            tmp9 = null;
           }
         }
       }
     }
-    let str2 = tmp10;
+    let str = tmp9;
   } else {
-    str2 = null;
-    if (enabled2) {
-      str2 = null;
+    str = null;
+    if (tmp4) {
+      str = null;
       if (stateFromStores) {
-        str2 = null;
+        str = null;
         if (null != stateFromStores1) {
-          str2 = "count";
+          str = "count";
         }
       }
     }
   }
-  return str2;
+  return str;
 }

@@ -12,10 +12,10 @@ const result = size.fileFinishedImporting("modules/user_settings/quests/native/Q
 
 export function QuestCardPreview(quest) {
   quest = quest.quest;
-  return jsx(quest(15083).QuestContentImpressionTrackerNative, {
+  return jsx(quest(13684).QuestContentImpressionTrackerNative, {
     questOrQuests: quest,
-    questContent: quest(6965).QuestContent.INTERNAL_PREVIEW_TOOL,
-    sourceQuestContent: quest(6965).QuestContent.INTERNAL_PREVIEW_TOOL,
+    questContent: quest(6469).QuestContent.INTERNAL_PREVIEW_TOOL,
+    sourceQuestContent: quest(6469).QuestContent.INTERNAL_PREVIEW_TOOL,
     trackGuildAndChannelMetadata: false,
     children() {
       const obj = { title: null, children: null };

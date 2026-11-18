@@ -20,7 +20,7 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(5163).createChannelRecordFromServer;
+let closure_6 = fn(4676).createChannelRecordFromServer;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_9,
@@ -333,8 +333,8 @@ export default {
       await HTTP.post(request);
       closure_128_0 = value;
       if (closure_128_0.body.type === constants2.GROUP_DM) {
-        tmp5(6887).fireSurveyAction(tmp2(6894).SurveyActionTypes.GROUP_DM_CREATED);
-        tmp5(6887);
+        tmp5(6391).fireSurveyAction(tmp2(6398).SurveyActionTypes.GROUP_DM_CREATED);
+        tmp5(6391);
       }
       closure_128_1 = closure_1_6(closure_128_0.body);
       tmp5(572).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
@@ -630,8 +630,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(8138).checkGuildTemplateDirty(closure_128_2);
-        name(8138);
+        const result = name(7641).checkGuildTemplateDirty(closure_128_2);
+        name(7641);
       }
       return closure_128_1;
     })();

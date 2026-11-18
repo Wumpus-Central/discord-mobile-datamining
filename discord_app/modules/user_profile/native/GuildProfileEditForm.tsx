@@ -10,7 +10,7 @@ import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx"
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
-import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
+import openPremiumModalDefault from "../../premium/native/openPremiumModal.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
@@ -59,7 +59,7 @@ function EditGuildProfileBanner(user) {
         onGifBannerSelect: null,
       };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(17103, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(15759, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -103,7 +103,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1113).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(7928).AnalyticsLocationProvider, obj2);
+  return closure_17(user(7431).AnalyticsLocationProvider, obj2);
 }
 function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
   onButtonPress = onButtonPress.onButtonPress;

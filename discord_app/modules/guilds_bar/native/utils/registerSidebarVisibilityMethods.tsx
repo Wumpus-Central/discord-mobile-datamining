@@ -19,7 +19,14 @@ export function registerGuildVisibilityMethod(fastListRef) {
       } else {
         items = current.getItems();
         const scrollPosition = current.getScrollPosition();
-        const containerSize = current.containerSize;
+        if (current.containerSize > 0) {
+          let num = current.containerSize;
+        } else {
+          num = current.props.chunkBase;
+          if (num == null) {
+            num = 0;
+          }
+        }
         const guilds = GuildStore.getGuilds();
         const node = SortedGuildStore.getGuildsTree();
         const _Set = Set;
@@ -30,7 +37,7 @@ export function registerGuildVisibilityMethod(fastListRef) {
             const layoutStart = recyclerKey.layoutStart;
             let tmp2 = layoutStart + recyclerKey.layoutSize >= closure_0;
             if (tmp2) {
-              tmp2 = layoutStart <= tmp + containerSize;
+              tmp2 = layoutStart <= tmp + num;
             }
             if (tmp2) {
               if (forEach.type === constants.FOLDER) {

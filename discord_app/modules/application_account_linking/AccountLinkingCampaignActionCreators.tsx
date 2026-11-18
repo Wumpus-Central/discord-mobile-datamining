@@ -282,8 +282,8 @@ let closure_12 = async function _fetchAccountLinkingCampaigns() {
     }
   }
 };
-let closure_6 = fn(7930).AccountLinkingCampaignEndpoints;
-const set = new Set(Object.values(fn(16254).DetectableAppNames));
+let closure_6 = fn(7433).AccountLinkingCampaignEndpoints;
+const set = new Set(Object.values(fn(14921).DetectableAppNames));
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/application_account_linking/AccountLinkingCampaignActionCreators.tsx",

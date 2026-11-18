@@ -6,9 +6,9 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
 import matchPathCompat from "../routing/matchPathCompat.tsx";
-import Client from "../../flow/Client.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import ChannelMessagesDefault from "../../lib/ChannelMessages.tsx";
+import Client from "../../flow/Client.tsx";
 import SidebarActionTypes from "../sidebar/SidebarActionTypes.tsx";
 import isChangelogChannelDefault from "../changelog/utils/isChangelogChannel.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
@@ -497,7 +497,7 @@ function handleAppWillBecomeActive() {
     const newLocalMessages = MessageActionCreatorsDefault.fetchNewLocalMessages(channelId, gesture);
   }
 }
-const isTextChannel = fn(5163).isTextChannel;
+const isTextChannel = fn(4676).isTextChannel;
 const Constants = fn(1072);
 ({
   MAX_MESSAGES_PER_CHANNEL: closure_14,
@@ -508,7 +508,7 @@ const Constants = fn(1072);
   Routes: closure_19,
   ChannelTypesSets: closure_20,
 } = Constants);
-const isStaticChannelRoute = fn(5166).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4679).isStaticChannelRoute;
 let closure_22 = 10 * DurationsDefault.Millis.SECOND;
 const logger = new LoggerDefault("MessageManager");
 let closure_26 = 90 * DurationsDefault.Millis.DAY;

@@ -4,7 +4,7 @@ import native from "../../../../../design/void/native.tsx";
 import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05592_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05083_LegacyBaseButton.js";
 import useMessagePreviewHeight from "../../useMessagePreviewHeight.tsx";
 import useMediaModalFooterBackgroundDefault from "useMediaModalFooterBackground.android.tsx";
 import MediaMessagePreviewDefault from "../message_preview/MediaMessagePreview.tsx";
@@ -18,11 +18,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "diversity" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "application" },
   drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 },
-  drawerHeader: { backgroundColor: "r" },
+  drawerHeader: { backgroundColor: "find" },
   messagePreviewContainer: { marginLeft: 6 },
   thumbnailsContainer: { paddingTop: 8 },
 };
@@ -854,7 +854,7 @@ export function MediaModalOverlayFooter(channelId) {
     const items28 = [animatedStyle1, tmp.thumbnailsContainer];
     obj13.style = items28;
     const obj14 = { syncer };
-    obj13.children = tmp81(tmp53(10767), obj14);
+    obj13.children = tmp81(tmp53(10048), obj14);
     tmp81Result = tmp81(tmp53(1655).View, obj13);
   }
   const rect = { bottom: true, left: true, right: true, children: null };

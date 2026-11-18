@@ -65,9 +65,9 @@ let closure_4 = async function _createHandoffToken(key) {
           throw error;
         }
       }
-    } catch (tmp18) {
+    } catch (tmp14) {
       c3 = tmp;
-      throw tmp18;
+      throw tmp14;
     }
   }
 };

@@ -3,8 +3,8 @@ import AccessibilityAnnouncerLiveRegion from "../../../../discord_common/js/pack
 import PortalKeyboard from "../../keyboard/native/PortalKeyboard.tsx";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import common_NotificationsDefault from "../../../components_native/common/Notifications.tsx";
-import PortalKeyboardRenderer from "../../keyboard/native/PortalKeyboardRenderer.tsx";
 import ContextMenuContainer from "../../../design/components/ContextMenu/native/ContextMenuContainer.native.tsx";
+import PortalKeyboardRenderer from "../../keyboard/native/PortalKeyboardRenderer.tsx";
 import MainShared from "../../../components_native/MainShared.tsx";
 import MainViewTooltipActionSheetsV2Default from "../../upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx";
 import FramePoolDefault from "../../frames/native/FramePool.tsx";

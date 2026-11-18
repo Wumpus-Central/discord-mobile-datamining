@@ -1,16 +1,16 @@
 // discord_app/modules/voice_panel/native/dock/useVoicePanelDockContextMenuItems.tsx
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3255 from "VoicePanelDock.messages.js";
+import _modDef3275 from "VoicePanelDock.messages.js";
 import UserPlusIcon from "../../../../design/components/Icon/native/redesign/generated/UserPlusIcon.tsx";
 import ChatIcon from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import VideoIcon2 from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
-import ActivitiesIcon from "../../../../design/components/Icon/native/redesign/generated/ActivitiesIcon.tsx";
 import VideoSlashIcon from "../../../../design/components/Icon/native/redesign/generated/VideoSlashIcon.tsx";
 import trackVoicePanelTabOpened from "../controls/trackVoicePanelTabOpened.tsx";
 import MobilePhoneXIcon from "../../../../design/components/Icon/native/redesign/generated/MobilePhoneXIcon.tsx";
 import MobilePhoneShareIcon2 from "../../../../design/components/Icon/native/redesign/generated/MobilePhoneShareIcon.tsx";
+import ActivitiesIcon from "../../../../design/components/Icon/native/redesign/generated/ActivitiesIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -127,7 +127,7 @@ export default function useVoicePanelDockContextMenuItems(id, arg1) {
         let onPress2 = closure_7;
         const intl2 = util.intl;
         const string = intl2.string;
-        const tmp23 = _modDef3255;
+        const tmp23 = _modDef3275;
         if (closure_7.isVideoEnabled) {
           let stringResult = string(tmp23.q0eP6a);
         } else {

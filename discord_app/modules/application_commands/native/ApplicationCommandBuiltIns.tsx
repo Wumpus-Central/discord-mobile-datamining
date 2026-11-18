@@ -10,8 +10,8 @@ let obj = {
   untranslatedName: "leave",
   displayName: "leave",
   type: fn(2119).ApplicationCommandType.CHAT,
-  inputType: fn(5979).ApplicationCommandInputType.BUILT_IN,
-  applicationId: fn(6343).BuiltInSectionId.BUILT_IN,
+  inputType: fn(5475).ApplicationCommandInputType.BUILT_IN,
+  applicationId: fn(5845).BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
@@ -34,10 +34,10 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(5948).computeChannelName(channel, UserStore, RelationshipStore);
+    const channelName = channel(5439).computeChannelName(channel, UserStore, RelationshipStore);
     const intl5 = channel(1113).intl;
     let obj2 = { name: channelName };
-    const obj5 = channel(5948);
+    const obj5 = channel(5439);
     const intl6 = channel(1113).intl;
     const obj3 = { name: channelName };
     const formatToPlainStringResult = intl5.formatToPlainString(channel(1113).t.hJ5Ap4, obj2);
@@ -71,8 +71,8 @@ obj.execute = function execute(arg0, channel) {
         MessageActionCreatorsDefault.sendBotMessage(channel.id, intl.string(require("util").t["YOsuT/"]));
       }
     };
-    const result = channel(11127).openLeaveGroupDMConfirmationAlert(obj6);
-    const tmp4Result = channel(11127);
+    const result = channel(10409).openLeaveGroupDMConfirmationAlert(obj6);
+    const tmp4Result = channel(10409);
   }
 };
 const items = [obj];

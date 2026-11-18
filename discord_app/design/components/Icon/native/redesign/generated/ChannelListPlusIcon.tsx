@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ChannelListPlusIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod20514 from "../../../../../../../_runtime/metro/20514__.js";
+import _mod19787 from "../../../../../../../_runtime/metro/19787__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function ChannelListPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod20514, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod19787, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

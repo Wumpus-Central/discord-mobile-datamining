@@ -6,7 +6,7 @@ import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 
 const require = fn;
 let closure_3 = ["buttons"];
-let Constants = fn(6759);
+let Constants = fn(6261);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
 const TransportTypes = Constants.TransportTypes;
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
@@ -16,12 +16,12 @@ let closure_12 = ["1402418171662569542"];
 let items = [, ,];
 ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = TransportTypes);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16957);
+const CONTEXT_MENU_ICON_NAMES = fn(15607);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 let items1 = [
-  fn(7317).OAuth2Scopes.RPC,
-  fn(7317).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
+  fn(6822).OAuth2Scopes.RPC,
+  fn(6822).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
   RPC_LOCAL_SCOPE,
   RPC_EMBEDDED_APP_SCOPE,
 ];

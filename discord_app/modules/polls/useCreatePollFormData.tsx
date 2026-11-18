@@ -15,7 +15,7 @@ function createPollCreationImageForMedia(mediaURL, status) {
   const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "Array", stickerId: "isArray" };
   return obj;
 }
-const PollsConstants = fn(9022);
+const PollsConstants = fn(8433);
 ({
   MAX_NUMBER_OF_ANSWERS_PER_POLL: metroImportDefault,
   MIN_NUMBER_OF_ANSWERS_PER_POLL: closure_8,
@@ -309,7 +309,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
       let intl = util.intl;
       obj.question = intl.string(util.t.gPX3oI);
     }
-    if (first.filter((item) => c0(8872).isAnswerFilled(item)).length < React5) {
+    if (first.filter((item) => c0(8368).isAnswerFilled(item)).length < React5) {
       c0 = false;
       let _HermesInternal = HermesInternal;
       let combined = "answer-" + first[0].localCreationAnswerId;
@@ -317,7 +317,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
       obj[combined] = intl2.string(util.t.fYvzEX);
     }
     const item = first.forEach((localCreationAnswerId) => {
-      obj = closure_0(8872);
+      obj = closure_0(8368);
       if (obj.isIncompleteAnswer(localCreationAnswerId)) {
         c0 = false;
         const _HermesInternal = HermesInternal;

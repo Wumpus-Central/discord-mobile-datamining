@@ -215,7 +215,7 @@ export function getSearchTokenPressHandler(_undefined, token, CONTEXT_MENU) {
 export function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   items = [];
-  const keys = Object.keys(items(13826));
+  const keys = Object.keys(items(13133));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

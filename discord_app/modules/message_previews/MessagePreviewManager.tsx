@@ -11,7 +11,7 @@ import MessagePreviewStore from "MessagePreviewStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const isThread = fn(5163).isThread;
+const isThread = fn(4676).isThread;
 const Endpoints = fn(1072).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {

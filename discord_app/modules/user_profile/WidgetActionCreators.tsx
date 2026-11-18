@@ -110,99 +110,6 @@ export default {
   clearPendingWidgets() {
     DispatcherDefault.dispatch({ type: "WIDGET_PENDING_CLEAR" });
   },
-  uploadWidgetAsset(arg0) {
-    closure_0 = arg0;
-    return (async () => {
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_1 = tmp2;
-              closure_0 = tmp5;
-              let body;
-              let upload_url;
-              let upload_filename;
-              closure_128_3 = undefined;
-              const HTTP = closure_0(c2[4]).HTTP;
-              const request = { url: constants.USER_PROFILE_WIDGET_ASSET_UPLOAD, body: null, rejectWithError: true };
-              const obj4 = { filename: closure_0.name, file_size: closure_0.size };
-              request.body = obj4;
-              c2 = 1;
-              c3 = 1;
-              const obj5 = { value: HTTP.post(request), done: false };
-              return obj5;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
-              body = value.body;
-              upload_url = body.upload_url;
-              upload_filename = body.upload_filename;
-              const request1 = { method: "PUT", body: closure_129_0, headers: null };
-              let str2 = "application/octet-stream";
-              if ("" !== closure_129_0.type) {
-                str2 = closure_129_0.type;
-              }
-              const obj7 = { "Content-Type": str2 };
-              request1.headers = obj7;
-              c2 = 2;
-              c3 = 1;
-              const obj8 = { value: fetch(upload_url, request1), done: false };
-              return obj8;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj9 = { value, done: true };
-            return obj9;
-          } else {
-            closure_128_3 = value;
-            if (closure_128_3.ok) {
-              c3 = 3;
-              const obj = { value: upload_filename, done: true };
-              return obj;
-            } else {
-              const _Error = Error;
-              const _HermesInternal = HermesInternal;
-              const error = new Error("Failed to upload widget asset: " + closure_128_3.status);
-              throw error;
-            }
-          }
-        } catch (tmp17) {
-          c3 = tmp;
-          throw tmp17;
-        }
-      }
-    })();
-  },
   uploadWidgetClip(arg0) {
     closure_0 = arg0;
     let obj = arg1;
@@ -226,7 +133,7 @@ export default {
       const request1 = {
         url: upload_url,
         body: closure_129_0,
-        headers: { "Content-Type": closure_0(7370).WIDGET_CLIP_CONTENT_TYPE },
+        headers: { "Content-Type": closure_0(6873).WIDGET_CLIP_CONTENT_TYPE },
         onRequestProgress(direction) {
           let tmp = "upload" === direction.direction;
           if (tmp) {

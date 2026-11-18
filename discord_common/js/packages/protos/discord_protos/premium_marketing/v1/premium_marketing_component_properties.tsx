@@ -35,13 +35,14 @@ import game_exit_panel from "game_exit_panel.tsx";
 import announcement_modal_video_led from "announcement_modal_video_led.tsx";
 import announcement_modal_panel from "announcement_modal_panel.tsx";
 import nitro_home_section_header from "nitro_home_section_header.tsx";
+import orbs_confirmation_modal from "orbs_confirmation_modal.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
 const MessageType = fn(1197).MessageType;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 };
     items[1] = {
       no: 2,
@@ -340,32 +341,41 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
         return require("announcement_modal_video_led").AnnouncementModalVideoLed;
       },
     };
-    obj = { no: 37, name: "announcement_modal_panel", kind: "message", oneof: "properties", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[35]).AnnouncementModalPanel;
-      }
-    }
-    obj.T = T;
-    items[34] = obj;
-    items[35] = {
-      no: 38,
-      name: "nitro_home_section_header",
+    items[34] = {
+      no: 37,
+      name: "announcement_modal_panel",
       kind: "message",
       oneof: "properties",
       T() {
-        return require("nitro_home_section_header").NitroHomeSectionHeader;
+        return require("announcement_modal_panel").AnnouncementModalPanel;
       },
     };
-    items[36] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
-    items[37] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
+    obj = { no: 38, name: "nitro_home_section_header", kind: "message", oneof: "properties", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[36]).NitroHomeSectionHeader;
+      }
+    }
+    obj.T = T;
+    items[35] = obj;
+    items[36] = {
+      no: 39,
+      name: "orbs_confirmation_modal",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("orbs_confirmation_modal").OrbsConfirmationModal;
+      },
+    };
+    items[37] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
+    items[38] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", items, T);
     return tmp1;
   }
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
+  const obj = { properties: { oneofKind: "find" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -882,13 +892,27 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag,
       writeUnknownFields,
     );
   }
+  if ("orbsConfirmationModal" === properties.properties.oneofKind) {
+    const OrbsConfirmationModal = orbs_confirmation_modal.OrbsConfirmationModal;
+    const tagResult36 = tag.tag(39, _mod1197.WireType.LengthDelimited);
+    const joined35 = OrbsConfirmationModal.internalBinaryWrite(
+      properties.properties.orbsConfirmationModal,
+      tag.tag(39, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult35 = OrbsConfirmationModal.internalBinaryWrite(
+      properties.properties.orbsConfirmationModal,
+      tag.tag(39, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
   if ("" !== properties.contentIdentifier) {
     tag.tag(3, _mod1197.WireType.LengthDelimited).string(properties.contentIdentifier);
-    const tagResult36 = tag.tag(3, _mod1197.WireType.LengthDelimited);
+    const tagResult37 = tag.tag(3, _mod1197.WireType.LengthDelimited);
   }
   if (false !== properties.isDefaultBase) {
     tag.tag(18, _mod1197.WireType.Varint).bool(properties.isDefaultBase);
-    const tagResult37 = tag.tag(18, _mod1197.WireType.Varint);
+    const tagResult38 = tag.tag(18, _mod1197.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

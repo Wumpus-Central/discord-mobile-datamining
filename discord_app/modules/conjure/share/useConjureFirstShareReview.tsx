@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/share/useConjureFirstShareReview.tsx
-import _modDef4133 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4121 from "../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -8,17 +8,17 @@ import ConjurePublishStatusStore from "../publish/ConjurePublishStatusStore.tsx"
 const require = globalThis.__r;
 
 const require = fn;
-let items = [fn(7026).ConjureSupportedSurface.BOT, _modDef4133.UnoAgo];
+let items = [fn(6530).ConjureSupportedSurface.BOT, _modDef4121.UnoAgo];
 let items1 = [items, , , , ,];
-let items2 = [fn(7026).ConjureSupportedSurface.ACTIVITY, _modDef4133["I88/iG"]];
+let items2 = [fn(6530).ConjureSupportedSurface.ACTIVITY, _modDef4121["I88/iG"]];
 items1[1] = items2;
-let items3 = [fn(7026).ConjureSupportedSurface.VOICE_CHANNEL, _modDef4133.skjf5I];
+let items3 = [fn(6530).ConjureSupportedSurface.VOICE_CHANNEL, _modDef4121.skjf5I];
 items1[2] = items3;
-let items4 = [fn(7026).ConjureSupportedSurface.PROFILE_WIDGET, _modDef4133.gXY1x1];
+let items4 = [fn(6530).ConjureSupportedSurface.PROFILE_WIDGET, _modDef4121.gXY1x1];
 items1[3] = items4;
-let items5 = [fn(7026).ConjureSupportedSurface.AUTOMOD, _modDef4133.Q9ruoM];
+let items5 = [fn(6530).ConjureSupportedSurface.AUTOMOD, _modDef4121.Q9ruoM];
 items1[4] = items5;
-let items6 = [fn(7026).ConjureSupportedSurface.OVERLAY, _modDef4133.KR5R34];
+let items6 = [fn(6530).ConjureSupportedSurface.OVERLAY, _modDef4121.KR5R34];
 items1[5] = items6;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/useConjureFirstShareReview.tsx");
@@ -242,6 +242,6 @@ export function conjureReviewComponents(arr) {
   });
 }
 export const CONJURE_REVIEW_PERMISSION_LABELS = {
-  screen_capture: _modDef4133["8/7kE7"],
-  connect_user_to_voice: _modDef4133.uvDWXa,
+  screen_capture: _modDef4121["8/7kE7"],
+  connect_user_to_voice: _modDef4121.uvDWXa,
 };

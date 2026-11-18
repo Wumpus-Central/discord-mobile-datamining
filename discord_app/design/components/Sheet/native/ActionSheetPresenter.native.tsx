@@ -29,7 +29,7 @@ function TrackedWrapperInner(sheetKey) {
     name: impressionName,
     properties: impressionProperties,
   };
-  transitionState(6336)(obj);
+  transitionState(5838)(obj);
   const imperativeHandle = registerDismissHandler.useImperativeHandle(
     ref,
     () => ({
@@ -65,11 +65,11 @@ function TrackedWrapperInner(sheetKey) {
     callback2();
     return true;
   }, items2);
-  transitionState(6330)(callback3);
-  const tmp5 = transitionState(6336);
-  return jsx(transitionState(5891).Provider, {
+  transitionState(5832)(callback3);
+  const tmp5 = transitionState(5838);
+  return jsx(transitionState(5382).Provider, {
     value: memo,
-    children: jsx(sheetKey(6325).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }),
+    children: jsx(sheetKey(5827).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }),
   });
 }
 const size = fn(2);
@@ -98,9 +98,9 @@ export function ActionSheetPresenter(appEntryKey) {
     />
   ));
   const obj = appEntryKey(504);
-  return jsx(appEntryKey(13919).TransitionGroup, {
+  return jsx(appEntryKey(13221).TransitionGroup, {
     style: StyleSheet.absoluteFill,
-    component: appEntryKey(6273).TransitionGroupOverlayView,
+    component: appEntryKey(5775).TransitionGroupOverlayView,
     children: mapped,
   });
 }

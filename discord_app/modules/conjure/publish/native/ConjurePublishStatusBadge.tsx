@@ -58,12 +58,12 @@ function ConjurePublishSpinner() {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { dot: null, spinner: null };
 let size = {
-  width: fn(14560).CONJURE_HEADER_BADGE_SIZE,
-  height: fn(14560).CONJURE_HEADER_BADGE_SIZE,
-  borderRadius: fn(14560).CONJURE_HEADER_BADGE_SIZE / 2,
+  width: fn(18431).CONJURE_HEADER_BADGE_SIZE,
+  height: fn(18431).CONJURE_HEADER_BADGE_SIZE,
+  borderRadius: fn(18431).CONJURE_HEADER_BADGE_SIZE / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
 obj2.dot = size;

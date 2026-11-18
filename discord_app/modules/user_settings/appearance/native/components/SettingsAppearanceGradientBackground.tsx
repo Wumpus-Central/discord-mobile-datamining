@@ -19,7 +19,7 @@ if (num == null) {
   num = 0;
 }
 let module_1655 = module_1655_mod;
-let closure_7 = module_1655.createAnimatedComponent(fn(5887).LinearGradientNativeComponent);
+let closure_7 = module_1655.createAnimatedComponent(fn(5378).LinearGradientNativeComponent);
 let obj = { colors: null, locations: [], startPoint: { x: 0, y: 0 }, endPoint: { x: 0, y: 0 } };
 let items = [num, num];
 obj.colors = items;

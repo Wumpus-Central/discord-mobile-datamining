@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod5225 from "../../../../_runtime/metro/05225__.js";
+import _mod4738 from "../../../../_runtime/metro/04738__.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import identity from "../../../../_runtime/metro/01258__.js";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -16,13 +16,13 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     dragSpecs: "Boolean",
-    overSpecs: "ip",
+    overSpecs: "description",
     dropSpecs: "isArray",
     dragRegion: require("../../../../_runtime/metro/01655__.js").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "scooter",
-    scrollPosition: "kick_scooter",
+    listInsets: "chestnut",
+    scrollPosition: true,
     windowSize: true,
     setStateShallow: true,
     dropStart: true,
@@ -93,7 +93,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "find" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -122,7 +122,13 @@ export function useItemDragState(guildId, flag) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = { isDragTarget: false, dragState: "ip", overState: "isArray", itemSize: null, dragDropInProgress };
+        const obj2 = {
+          isDragTarget: false,
+          dragState: "description",
+          overState: "isArray",
+          itemSize: null,
+          dragDropInProgress,
+        };
         return obj2;
       }
     }
@@ -211,7 +217,7 @@ export function useItemDragState(guildId, flag) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod5225.shallow);
+  }, _mod4738.shallow);
 }
 export function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

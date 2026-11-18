@@ -1,10 +1,10 @@
 // discord_app/modules/guild_tag/native/GuildTagCreateGuildListBottomSheet.tsx
 import util from "../../../intl/index.native.tsx";
-import Powerups from "../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import Powerups from "../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import openGuildPowerupsModalDefault from "../../premium/powerups/native/utils/openGuildPowerupsModal.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberCountStore from "../../../stores/GuildMemberCountStore.tsx";
@@ -25,8 +25,8 @@ function GuildRow(guild) {
   obj2.subLabel = formatToPlainStringResult;
   const obj4 = { guild, size: null };
   let obj = guild(504);
-  obj4.size = guild(7730).GuildIconSizes.SMALL_32;
-  obj2.icon = closure_4(analyticsLocation(7730), obj4);
+  obj4.size = guild(7233).GuildIconSizes.SMALL_32;
+  obj2.icon = closure_4(analyticsLocation(7233), obj4);
   obj2.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj2 = { guildId: guild.id, autoOpenPerkId: null, analyticsLocation: null };
@@ -34,7 +34,7 @@ function GuildRow(guild) {
     obj2.analyticsLocation = analyticsLocation;
     openGuildPowerupsModalDefault(obj2);
   };
-  return closure_4(guild(7453).TableRow, obj2);
+  return closure_4(guild(6956).TableRow, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);

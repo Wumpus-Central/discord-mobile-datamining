@@ -68,9 +68,8 @@ let closure_6 = async function _createGatewayCheckoutContext(arg0) {
     }
   })();
 };
-const StripeErrorTypes = fn(5123).StripeErrorTypes;
+const StripeErrorTypes = fn(4636).StripeErrorTypes;
 const PaymentGateways = fn(1083).PaymentGateways;
-const set = new Set(["card_error", "api_connection_error", "validation_error"]);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/BillingUtils.tsx");
 
@@ -102,74 +101,35 @@ export function captureBillingException(error, options) {
   obj2.tags = obj3;
   SentryUtilsDefault.captureException(error, obj2);
 }
-export function isExpectedHttpClientError(status) {
-  let tmp2 = status instanceof HTTPUtils.HTTPResponseError;
+export function isExpectedHttpClientError(error) {
+  let tmp2 = error instanceof HTTPUtils.HTTPResponseError;
   if (tmp2) {
-    tmp2 = status.status >= 400;
+    tmp2 = error.status >= 400;
   }
   if (tmp2) {
-    tmp2 = status.status < 500;
+    tmp2 = error.status < 500;
   }
   if (!tmp2) {
-    let tmp4 = status instanceof BillingErrorDefault;
+    let tmp4 = error instanceof BillingErrorDefault;
     if (tmp4) {
-      tmp4 = null != status.status;
+      tmp4 = null != error.status;
     }
     if (tmp4) {
-      tmp4 = status.status >= 400;
+      tmp4 = error.status >= 400;
     }
     if (tmp4) {
-      tmp4 = status.status < 500;
+      tmp4 = error.status < 500;
     }
     tmp2 = tmp4;
   }
   return tmp2;
 }
-export function isOfTypeStripeError(code) {
-  let hasItem = null != code;
+export function isOfTypeStripeError(type) {
+  let hasItem = null != type;
   if (hasItem) {
-    hasItem = StripeErrorTypes.includes(code.type);
+    hasItem = StripeErrorTypes.includes(type.type);
   }
   return hasItem;
-}
-export function shouldReportExpressCheckoutError(code) {
-  if (code instanceof BillingErrorDefault) {
-    let tmp8 = code.code !== BillingErrorDefault.ErrorCodes.INVALID_PAYMENT_SOURCE;
-    if (tmp8) {
-      let tmp10 = code instanceof HTTPUtils.HTTPResponseError;
-      if (tmp10) {
-        tmp10 = code.status >= 400;
-      }
-      if (tmp10) {
-        tmp10 = code.status < 500;
-      }
-      if (!tmp10) {
-        let tmp11 = code instanceof BillingErrorDefault;
-        if (tmp11) {
-          tmp11 = null != code.status;
-        }
-        if (tmp11) {
-          tmp11 = code.status >= 400;
-        }
-        if (tmp11) {
-          tmp11 = code.status < 500;
-        }
-        tmp10 = tmp11;
-      }
-      tmp8 = !tmp10;
-    }
-    let tmp6 = tmp8;
-  } else {
-    let hasItem = null != code;
-    if (hasItem) {
-      hasItem = StripeErrorTypes.includes(code.type);
-    }
-    tmp6 = !hasItem;
-    if (hasItem) {
-      tmp6 = !set.has(code.type);
-    }
-  }
-  return tmp6;
 }
 export function captureBillingMessage(arg0, tags) {
   const obj2 = {};

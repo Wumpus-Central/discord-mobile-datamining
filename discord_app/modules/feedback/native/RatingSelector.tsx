@@ -1,22 +1,22 @@
 // discord_app/modules/feedback/native/RatingSelector.tsx
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef11236 from "../../../../_runtime/metro/11236__.js";
-import _modDef11241 from "../../../../_runtime/metro/11241__.js";
-import _modDef11246 from "../../../../_runtime/metro/11246__.js";
+import _modDef10518 from "../../../../_runtime/metro/10518__.js";
+import _modDef10523 from "../../../../_runtime/metro/10523__.js";
+import _modDef10528 from "../../../../_runtime/metro/10528__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(11231);
+const Constants = fn(10513);
 ({ DEFAULT_RATINGS: closure_4, FeedbackRating: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-let createStyles = fn(5310);
+let createStyles = fn(4823);
 let closure_7 = createStyles.createStyles({
   ratings: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
   rating: {},
   emoji: { width: 64, height: 64, marginVertical: 24, marginHorizontal: 12 },
 });
-createStyles = fn(5310);
+createStyles = fn(4823);
 let closure_8 = createStyles.createStyles({
   ratings: {
     flexDirection: "column",
@@ -46,9 +46,9 @@ export default function RatingSelector(ratingOptions) {
   closure_3 = tmp2;
   let obj = {};
   let obj2 = { source: null, getLabel: null, rating: null };
-  let obj3 = { selected: _modDef11236, normal: null };
+  let obj3 = { selected: _modDef10518, normal: null };
   tmp = closure_8();
-  obj3.normal = textLabels(11237).useFeedbackModalSadDesaturatedSource();
+  obj3.normal = textLabels(10519).useFeedbackModalSadDesaturatedSource();
   obj2.source = obj3;
   obj2.getLabel = function getLabel() {
     const intl = textLabels(1113).intl;
@@ -57,9 +57,9 @@ export default function RatingSelector(ratingOptions) {
   obj2.rating = constants.BAD;
   obj[constants.BAD] = obj2;
   let obj5 = { source: null, getLabel: null, rating: null };
-  let obj6 = { selected: _modDef11241, normal: null };
-  let obj4 = textLabels(11237);
-  obj6.normal = textLabels(11242).useFeedbackModalNeutralDesaturatedSource();
+  let obj6 = { selected: _modDef10523, normal: null };
+  let obj4 = textLabels(10519);
+  obj6.normal = textLabels(10524).useFeedbackModalNeutralDesaturatedSource();
   obj5.source = obj6;
   obj5.getLabel = function getLabel() {
     const intl = textLabels(1113).intl;
@@ -68,9 +68,9 @@ export default function RatingSelector(ratingOptions) {
   obj5.rating = constants.NEUTRAL;
   obj[constants.NEUTRAL] = obj5;
   const obj8 = { source: null, getLabel: null, rating: null };
-  const obj9 = { selected: _modDef11246, normal: null };
-  let obj7 = textLabels(11242);
-  obj9.normal = textLabels(11247).useFeedbackModalHappyDesaturatedSource();
+  const obj9 = { selected: _modDef10528, normal: null };
+  let obj7 = textLabels(10524);
+  obj9.normal = textLabels(10529).useFeedbackModalHappyDesaturatedSource();
   obj8.source = obj9;
   obj8.getLabel = function getLabel() {
     const intl = textLabels(1113).intl;
@@ -80,7 +80,7 @@ export default function RatingSelector(ratingOptions) {
   obj[constants.GOOD] = obj8;
   closure_129_0 = obj;
   const mapped = ratingOptions.map((item) => textLabels[item]);
-  const obj10 = textLabels(11247);
+  const obj10 = textLabels(10529);
   return (
     <closure_3 style={tmp2.ratings}>
       {mapped.map((rating) => {
@@ -109,7 +109,7 @@ export default function RatingSelector(ratingOptions) {
           obj4.source = normal;
           obj2.icon = jsx(FastImageDefault, { style: closure_3.emoji, source: null });
           obj2.label = tmp[rating];
-          obj.children = jsx(textLabels(8119).RowButton, {
+          obj.children = jsx(textLabels(7622).RowButton, {
             accessibilityRole: "button",
             accessibilityLabel: getLabel(),
             accessibilityState: null,
@@ -143,7 +143,7 @@ export default function RatingSelector(ratingOptions) {
           obj7.source = tmp2;
           obj5.children = jsx(FastImageDefault, { style: closure_3.emoji, source: null });
           tmp16Result = jsx(
-            textLabels(7438).PressableOpacity,
+            textLabels(6941).PressableOpacity,
             {
               accessibilityRole: "button",
               accessibilityLabel: getLabel(),

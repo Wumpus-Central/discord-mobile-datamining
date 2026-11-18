@@ -40,7 +40,7 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
   return jsx(_modDef1655.View, { style: null });
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = {

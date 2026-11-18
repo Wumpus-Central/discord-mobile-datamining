@@ -1,7 +1,7 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationInviteNoFriends.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2565 from "../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2555 from "../GameOrganizationInvitesUntranslated.messages.js";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -20,7 +20,7 @@ function handleAddFriends() {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { alignItems: "center", padding: nativeDefault.space.PX_48 },
   centeredText: { textAlign: "center" },
@@ -42,17 +42,17 @@ export default function GameOrganizationInviteNoFriends(noun) {
     children: null,
   };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef2565["3qrm/9"]);
+  obj3.children = intl.string(_modDef2555["3qrm/9"]);
   items = [React3(Text_Text.Heading, obj3)];
   const obj4 = { variant: "body-md/medium", color: "text-muted", style: tmp.centeredText, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.formatToPlainString(_modDef2565["NyR+6P"], { noun: noun.noun });
+  obj4.children = intl2.formatToPlainString(_modDef2555["NyR+6P"], { noun: noun.noun });
   items[1] = React3(Text_Text.Text, obj4);
   obj2.children = items;
   const items1 = [React4(Stack_Stack.Stack, obj2)];
   const obj5 = { text: null, onPress: null };
   const intl3 = util.intl;
-  obj5.text = intl3.string(_modDef2565.kdLF2T);
+  obj5.text = intl3.string(_modDef2555.kdLF2T);
   obj5.onPress = handleAddFriends;
   items1[1] = React3(components_Button_Button.Button, obj5);
   obj.children = items1;

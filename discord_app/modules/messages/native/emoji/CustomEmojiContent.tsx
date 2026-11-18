@@ -8,7 +8,7 @@ import RoleSubscriptionEmojiUtilsAll from "../../../guild_role_subscriptions/Rol
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
-import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
+import openPremiumModalDefault from "../../../premium/native/openPremiumModal.tsx";
 import StarOutlineIcon from "../../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
 import StarIcon from "../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import EmojiActionCreators from "../../../../actions/EmojiActionCreators.tsx";
@@ -21,7 +21,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const EmojiSourceDataTypes = fn(7731).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(7234).EmojiSourceDataTypes;
 const Constants = fn(1072);
 ({
   UserSettingsSections: closure_11,
@@ -31,7 +31,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   nitroWheel: { height: 32, width: 32 },
   nitroWheelPurple: { tintColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND_NEW },
@@ -341,7 +341,7 @@ export default function CustomEmojiContent(emojiNode) {
         const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         function handleOpenEmojiOptionsMenu() {
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(12005, dependencyMap.paths),
+            asyncRequireImpl(11287, dependencyMap.paths),
             "EmojiOptionsActionSheet",
             { emojiSrc: emojiNode.src },
             "stack",

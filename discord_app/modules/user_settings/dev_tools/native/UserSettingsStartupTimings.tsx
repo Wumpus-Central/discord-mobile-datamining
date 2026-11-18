@@ -24,7 +24,7 @@ function Code(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   code: { fontFamily: fn(1072).Fonts.CODE_BOLD },
@@ -96,7 +96,7 @@ export default function UserSettingsStartupTimings() {
               closure_128_1 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(5493).getAppFirstVisibleTimestamp(), done: false };
+              const obj5 = { value: tmp5(5006).getAppFirstVisibleTimestamp(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -108,9 +108,9 @@ export default function UserSettingsStartupTimings() {
             return obj6;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(11855)(closure_128_0);
+            closure_128_1 = tmp5(11137)(closure_128_0);
             const obj7 = { message: closure_128_1 };
-            tmp2(10338).showShareActionSheet(obj7, "Startup Timing");
+            tmp2(9619).showShareActionSheet(obj7, "Startup Timing");
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -146,7 +146,7 @@ export default function UserSettingsStartupTimings() {
     obj5.children = "" + result + "s (" + Math.round((closure_7 / num) * 100) + "%)";
     const items1 = ["Native: ", React5(Code, obj5)];
     obj4.children = items1;
-    const items2 = [React6(Code, obj4), , , , , , ,];
+    const items2 = [React6(Code, obj4), , , , , , , ,];
     const obj6 = { children: null };
     const obj7 = { color: "text-brand", children: null };
     const result1 = closure_11 / 1000;
@@ -186,48 +186,64 @@ export default function UserSettingsStartupTimings() {
     const items7 = ["TTI (first contentful paint): ", React5(Code, { color: "text-brand", children: str })];
     obj14.children = items7;
     items2[5] = React6(Code, obj14);
+    let did_background_app;
+    if (lastTrackedAppUiViewed2Properties != null) {
+      did_background_app = lastTrackedAppUiViewed2Properties.did_background_app;
+    }
+    let str3 = "";
+    if (null != did_background_app) {
+      let str4 = "no";
+      if (did_background_app) {
+        str4 = "yes";
+      }
+      str3 = str4;
+    }
+    const obj15 = { children: null };
+    const items8 = ["Backgrounded before TTI: ", React5(Code, { color: "text-brand", children: str3 })];
+    obj15.children = items8;
+    items2[6] = React6(Code, obj15);
     let prop;
     if (lastTrackedAppUiViewed2Properties != null) {
       prop = lastTrackedAppUiViewed2Properties.time_display_messages_with_cache_end;
     }
-    let str3 = "";
-    if (null != prop) {
-      str3 = "";
-      if (prop > 0) {
-        str3 = `${tmp14 / 1000}s`;
-      }
-    }
-    const obj15 = { children: null };
-    const items8 = ["Cached Messages Render: ", React5(Code, { color: "text-brand", children: str3 })];
-    obj15.children = items8;
-    items2[6] = React6(Code, obj15);
-    let prop1;
-    if (lastTrackedAppUiViewed2Properties != null) {
-      prop1 = lastTrackedAppUiViewed2Properties.time_display_latest_messages_end;
-    }
     let str5 = "";
-    if (null != prop1) {
+    if (null != prop) {
       str5 = "";
-      if (prop1 > 0) {
+      if (prop > 0) {
         str5 = `${tmp15 / 1000}s`;
       }
     }
     const obj16 = { children: null };
-    const obj17 = { title: "Key Cold Start Times", hasIcons: false, children: null };
-    const obj18 = { label: null };
-    const obj19 = { children: null };
+    const items9 = ["Cached Messages Render: ", React5(Code, { color: "text-brand", children: str5 })];
+    obj16.children = items9;
+    items2[7] = React6(Code, obj16);
+    let prop1;
+    if (lastTrackedAppUiViewed2Properties != null) {
+      prop1 = lastTrackedAppUiViewed2Properties.time_display_latest_messages_end;
+    }
+    let str7 = "";
+    if (null != prop1) {
+      str7 = "";
+      if (prop1 > 0) {
+        str7 = `${tmp16 / 1000}s`;
+      }
+    }
+    const obj17 = { children: null };
+    const obj18 = { title: "Key Cold Start Times", hasIcons: false, children: null };
+    const obj19 = { label: null };
     const obj20 = { children: null };
-    const items9 = ["Latest Messages Render: ", React5(Code, { color: "text-brand", children: str5 })];
-    obj20.children = items9;
-    items2[7] = React6(Code, obj20);
-    obj19.children = items2;
-    obj18.label = React6(refs, obj19);
-    obj17.children = React5(TableRow.TableRow, obj18);
-    items[1] = React5(TableRowGroup.TableRowGroup, obj17);
-    const obj21 = { title: "Legend", hasIcons: false, children: null };
-    const obj22 = { label: null };
-    const obj23 = { children: null };
-    const items10 = [
+    const obj21 = { children: null };
+    const items10 = ["Latest Messages Render: ", React5(Code, { color: "text-brand", children: str7 })];
+    obj21.children = items10;
+    items2[8] = React6(Code, obj21);
+    obj20.children = items2;
+    obj19.label = React6(refs, obj20);
+    obj18.children = React5(TableRow.TableRow, obj19);
+    items[1] = React5(TableRowGroup.TableRowGroup, obj18);
+    const obj22 = { title: "Legend", hasIcons: false, children: null };
+    const obj23 = { label: null };
+    const obj24 = { children: null };
+    const items11 = [
       React5(Code, { children: "\u2615 - Java / Kotlin" }),
       React5(Code, { children: "\u{1F3A8} - React render" }),
       React5(Code, { children: "\u{1F4BE} - CacheStore" }),
@@ -235,12 +251,12 @@ export default function UserSettingsStartupTimings() {
       React5(Code, { children: "\u{1F3C3} - Startup Event" }),
       React5(Code, { children: "\u{1F310} - Socket Event" }),
     ];
-    obj23.children = items10;
-    obj22.label = React6(refs, obj23);
-    obj21.children = React5(TableRow.TableRow, obj22);
-    items[2] = React5(TableRowGroup.TableRowGroup, obj21);
-    const obj24 = { title: "Detailed Times", hasIcons: false, children: null };
-    const items11 = [
+    obj24.children = items11;
+    obj23.label = React6(refs, obj24);
+    obj22.children = React5(TableRow.TableRow, obj23);
+    items[2] = React5(TableRowGroup.TableRowGroup, obj22);
+    const obj25 = { title: "Detailed Times", hasIcons: false, children: null };
+    const items12 = [
       React5(TableCheckboxRow.TableCheckboxRow, {
         label: "Hide the Noise",
         onPress() {
@@ -256,9 +272,9 @@ export default function UserSettingsStartupTimings() {
         checked: !first1,
       }),
     ];
-    obj24.children = items11;
-    items[3] = React6(TableRowGroup.TableRowGroup, obj24);
-    const obj27 = {
+    obj25.children = items12;
+    items[3] = React6(TableRowGroup.TableRowGroup, obj25);
+    const obj28 = {
       title: "Share Timings",
       hasIcons: true,
       children: React5(TableRow.TableRow, {
@@ -268,16 +284,16 @@ export default function UserSettingsStartupTimings() {
         onPress,
       }),
     };
-    items[4] = React5(TableRowGroup.TableRowGroup, obj27);
+    items[4] = React5(TableRowGroup.TableRowGroup, obj28);
     obj.children = items;
-    const items12 = [React6(Stack_Stack.Stack, obj), React5(View, { style: border.border })];
-    obj16.children = items12;
-    return React6(refs, obj16);
+    const items13 = [React6(Stack_Stack.Stack, obj), React5(View, { style: border.border })];
+    obj17.children = items13;
+    return React6(refs, obj17);
   };
   obj5.data = memo;
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(7898).FlashList, obj5);
+  obj4.children = closure_8(tmp10(7401).FlashList, obj5);
   return closure_8(checked, obj4);
 }

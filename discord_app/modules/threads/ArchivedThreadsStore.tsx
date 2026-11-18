@@ -106,14 +106,14 @@ function resortListState(value) {
     const tmp7Result = applyDefault(ChannelStore.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
     let iter = mapped.reverse();
-  } else if (sortOrder === sortOrder(5168).ThreadSortOrder.LATEST_ACTIVITY) {
+  } else if (sortOrder === sortOrder(4681).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = ReadStateStore.lastMessageId(id);
   } else {
     id2 = id.id;
   }
 }
-const ALL_CHANNEL_TYPES = fn(5163).ALL_CHANNEL_TYPES;
+const ALL_CHANNEL_TYPES = fn(4676).ALL_CHANNEL_TYPES;
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;

@@ -3,9 +3,7 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Navigator from "../../../design/components/Navigator/native/Navigator.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
-import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
 import openGiftModal from "openGiftModal.tsx";
 import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails.tsx";
@@ -176,28 +174,23 @@ export default function CollectiblesShopGiftModal(skuId) {
   ({ analyticsLocations, onGiftModalDismiss } = skuId);
   let skuId1;
   ({ lockedRecipientUser, giftingOrigin } = skuId);
-  const GiftingBadgeExperiment = skuId(skuId1[21]).GiftingBadgeExperiment;
-  const enabled = GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftModal" }).enabled;
-  items = [enabled];
   const effect = noop.useEffect(() => {
-    if (enabled) {
-      const badge = BadgeDirectoryActionCreators.fetchBadge(BadgeId.BadgeId.GIFTING);
-    }
-  }, items);
-  const items1 = [CollectiblesCategoryStore];
-  const items2 = [skuId];
-  const stateFromStores = skuId(skuId1[24]).useStateFromStores(
-    items1,
+    const badge = skuId(8054).fetchBadge(skuId(7982).BadgeId.GIFTING);
+  }, []);
+  items = [CollectiblesCategoryStore];
+  const items1 = [skuId];
+  const stateFromStores = skuId(504).useStateFromStores(
+    items,
     () => CollectiblesCategoryStore.getProduct(skuId),
-    items2,
+    items1,
   );
-  let obj = skuId(skuId1[24]);
-  const items3 = [];
-  const obj2 = skuId(skuId1[25]);
+  const obj = skuId(504);
+  const items2 = [];
+  const obj2 = skuId(9796);
   const obj3 = { needsCategory: false, seedCategoryStore: true, shouldFetchProduct: null == stateFromStores };
-  const tmp5 = enabled;
-  const tmp6 = enabled(skuId1[26]);
-  items3[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(skuId1[27]).COLLECTIBLES_MOBILE_GIFT_MODAL;
+  const tmp5 = skuId1;
+  const tmp6 = skuId1(7431);
+  items2[HermesBuiltin.arraySpread(analyticsLocations, 0)] = skuId1(7450).COLLECTIBLES_MOBILE_GIFT_MODAL;
   skuId1 = undefined;
   if (stateFromStores != null) {
     skuId1 = stateFromStores.skuId;
@@ -212,10 +205,10 @@ export default function CollectiblesShopGiftModal(skuId) {
       />
     );
   } else {
-    if (tmpResult.isCollectibleGiftingSupported()) {
+    if (tmp2Result.isCollectibleGiftingSupported()) {
       const obj5 = {
         product: stateFromStores,
-        analyticsLocations: tmp6(items3).analyticsLocations,
+        analyticsLocations: tmp6(items2).analyticsLocations,
         lockedRecipientUser,
         onGiftModalDismiss,
         giftingOrigin,
@@ -224,7 +217,7 @@ export default function CollectiblesShopGiftModal(skuId) {
       tmp15Result = (
         <CollectiblesShopGiftModalContent
           product={stateFromStores}
-          analyticsLocations={tmp6(items3).analyticsLocations}
+          analyticsLocations={tmp6(items2).analyticsLocations}
           lockedRecipientUser={lockedRecipientUser}
           onGiftModalDismiss={onGiftModalDismiss}
           giftingOrigin={giftingOrigin}
@@ -233,12 +226,12 @@ export default function CollectiblesShopGiftModal(skuId) {
       );
     } else {
       const obj6 = { onDismiss: onGiftModalDismiss, title: null };
-      const intl = tmp(tmp2[17]).intl;
-      obj6.title = intl.string(tmp(tmp2[17]).t["JCFN/y"]);
-      tmp15Result = jsx(tmp5(tmp2[30]), { onDismiss: onGiftModalDismiss, title: null });
-      const tmp5Result = tmp5(tmp2[30]);
+      const intl = tmp2(1113).intl;
+      obj6.title = intl.string(tmp2(1113).t["JCFN/y"]);
+      tmp15Result = jsx(tmp5(9512), { onDismiss: onGiftModalDismiss, title: null });
+      const tmp5Result = tmp5(9512);
     }
-    tmpResult = tmp(tmp2[8]);
+    tmp2Result = tmp2(2186);
   }
   return tmp15Result;
 }

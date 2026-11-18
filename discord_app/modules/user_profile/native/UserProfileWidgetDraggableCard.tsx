@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { content: { gap: nativeDefault.space.PX_12 } };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = { gap: nativeDefault.space.PX_12 };
@@ -27,5 +27,5 @@ export default noop.memo(function UserProfileWidgetDraggableCard(title) {
   const tmp = closure_6();
   items = [tmp2Result, children];
   obj.children = items;
-  return React4(Card.Card, { radius: 12, children: hasOwnProperty(View, obj) });
+  return React4(Card.Card, { radius: 12, draggable: true, children: hasOwnProperty(View, obj) });
 });

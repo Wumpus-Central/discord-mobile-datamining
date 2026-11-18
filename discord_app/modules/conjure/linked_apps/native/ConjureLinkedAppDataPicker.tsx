@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/linked_apps/native/ConjureLinkedAppDataPicker.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4133 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4121 from "../../intl/ConjureUntranslated.messages.js";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import ConjureLinkedAppHeaderDefault from "ConjureLinkedAppHeader.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const obj2 = {
   sentence: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", columnGap: nativeDefault.space.PX_8 },
   choices: null,
@@ -42,26 +42,26 @@ export default function ConjureLinkedAppDataPicker(arg0) {
   let tmp9Result = null;
   if (null != link.purpose) {
     const obj3 = { variant: "body-sm/normal", color: "text-default", lineClamp: 1, children: link.purpose };
-    tmp9Result = closure_6(disabled(5923).Text, obj3);
+    tmp9Result = closure_6(disabled(5414).Text, obj3);
   }
   items[1] = tmp9Result;
   let tmp5Result = null;
   if (null != sentence) {
     const obj4 = { style: tmp.sentence, children: null };
     const obj5 = { variant: "body-sm/normal", color: "text-subtle", children: sentence };
-    const items1 = [closure_6(disabled(5923).Text, obj5)];
+    const items1 = [closure_6(disabled(5414).Text, obj5)];
     let tmp9Result3 = null;
     if (tmp4) {
       tmp9Result3 = null;
       if (!tmp3) {
         const obj6 = { variant: "tertiary", size: "sm", text: null, disabled: null, onPress: null };
         const intl = disabled(1113).intl;
-        obj6.text = intl.string(_modDef4133.I5F6YX);
+        obj6.text = intl.string(_modDef4121.I5F6YX);
         obj6.disabled = disabled;
         obj6.onPress = function onPress() {
           return _undefined(true);
         };
-        tmp9Result3 = closure_6(disabled(5930).Button, obj6);
+        tmp9Result3 = closure_6(disabled(5421).Button, obj6);
       }
     }
     items1[1] = tmp9Result3;
@@ -83,11 +83,11 @@ export default function ConjureLinkedAppDataPicker(arg0) {
           build.build,
         ),
       );
-      obj7.children = closure_6(disabled(7755).TableRadioGroup, obj15);
+      obj7.children = closure_6(disabled(7258).TableRadioGroup, obj15);
       tmp9Result4 = closure_6(View, obj7);
     }
   }
   items[3] = tmp9Result4;
   obj.children = items;
-  return closure_7(disabled(6335).Stack, obj);
+  return closure_7(disabled(5837).Stack, obj);
 }

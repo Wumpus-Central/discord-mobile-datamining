@@ -70,7 +70,17 @@ const obj = {
   [37]: "ANNOUNCEMENT_MODAL_PANEL",
   NITRO_HOME_SECTION_HEADER: 38,
   [38]: "NITRO_HOME_SECTION_HEADER",
+  ORBS_CONFIRMATION_MODAL: 39,
+  [39]: "ORBS_CONFIRMATION_MODAL",
 };
+const items = [, , , ,];
+({
+  PREMIUM_TAB: arr[0],
+  MOBILE_BOTTOM_SHEET: arr[1],
+  PREMIUM_TAB_TOOLTIP: arr[2],
+  PREMIUM_TAB_POPOVER: arr[3],
+  NAGBAR: arr[4],
+} = obj);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx");
 
 export const MarketingSurfaceType = obj;
@@ -109,6 +119,7 @@ export const MarketingSurfaceTypeByKind = {
   announcementModalVideoLed: obj.ANNOUNCEMENT_MODAL_VIDEO_LED,
   announcementModalPanel: obj.ANNOUNCEMENT_MODAL_PANEL,
   nitroHomeSectionHeader: obj.NITRO_HOME_SECTION_HEADER,
+  orbsConfirmationModal: obj.ORBS_CONFIRMATION_MODAL,
 };
 export const MarketingSurfaceKindByType = {
   [obj.ANNOUNCEMENT_MODAL_VARIANT_1]: "announcementModalVariant1",
@@ -145,4 +156,6 @@ export const MarketingSurfaceKindByType = {
   [obj.ANNOUNCEMENT_MODAL_VIDEO_LED]: "announcementModalVideoLed",
   [obj.ANNOUNCEMENT_MODAL_PANEL]: "announcementModalPanel",
   [obj.NITRO_HOME_SECTION_HEADER]: "nitroHomeSectionHeader",
+  [obj.ORBS_CONFIRMATION_MODAL]: "orbsConfirmationModal",
 };
+export const MARKETING_SURFACE_TYPES_WITH_LOCALIZED_STRING_VARIABLES = new Set(items);

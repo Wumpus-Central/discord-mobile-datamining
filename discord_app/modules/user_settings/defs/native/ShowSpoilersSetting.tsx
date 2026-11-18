@@ -5,14 +5,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const SpoilerRenderSetting = fn(1072).SpoilerRenderSetting;
-const SettingBuilders = fn(12612);
+const SettingBuilders = fn(11897);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.QgwmVz);
   },
-  parent: fn(9213).MobileUserSettings.CHAT,
-  useValue: fn(5135).RenderSpoilers.useSetting,
+  parent: fn(8624).MobileUserSettings.CHAT,
+  useValue: fn(4648).RenderSpoilers.useSetting,
   onValueChange: function onShowSpoilersChange(arg0) {
     const RenderSpoilers = UserSettings.RenderSpoilers;
     RenderSpoilers.updateSetting(arg0);

@@ -5,7 +5,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let ApexExperiment = fn(1452);
+const ApexExperiment = fn(1452);
 const obj2 = {
   name: "2026-11-wishlist-countdown",
   kind: "user",
@@ -16,26 +16,14 @@ const obj3 = { 1: null, 2: { labelsEnabled: true, reorderEnabled: false } };
 obj3[2] = { labelsEnabled: true, reorderEnabled: true };
 obj2.variations = obj3;
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
-ApexExperiment = fn(1452);
-const obj5 = {
-  name: "2026-11-wishlist-countdown-mobile",
-  kind: "user",
-  defaultConfig: { labelsEnabled: false, reorderEnabled: false },
-  variations: null,
-};
-const obj6 = { 1: null, 2: { labelsEnabled: true, reorderEnabled: false } };
-obj6[2] = { labelsEnabled: true, reorderEnabled: true };
-obj5.variations = obj6;
-const apexExperiment1 = ApexExperiment.createApexExperiment(obj5);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/experiments/WishlistCountdownExperiment.tsx");
 
 export const WishlistCountdownExperiment = apexExperiment;
-export const WishlistCountdownMobileExperiment = apexExperiment1;
-export function useWishlistCountdownConfigPeek(_location) {
-  _require = _location;
+export function useWishlistCountdownConfigPeek(UserProfileWishlistGrid) {
+  _require = UserProfileWishlistGrid;
   items = [AuthenticationStore, ApexExperimentStore];
-  const items1 = [_location];
+  const items1 = [UserProfileWishlistGrid];
   return require("initialize").useStateFromStores(
     items,
     () => apexExperiment.getConfig({ location: _location }, { autoTrackExposure: false }),

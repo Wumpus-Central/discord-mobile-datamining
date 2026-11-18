@@ -5,7 +5,7 @@ import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05592_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05083_LegacyBaseButton.js";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import ContextMenu from "../../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import ContextMenuConstants from "../../../../design/components/ContextMenu/native/ContextMenuConstants.native.tsx";
@@ -99,8 +99,8 @@ function DockPressTargetGuard(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(12428).VoicePanelModes;
-const VoicePanelDockConstants = fn(12446);
+const VoicePanelModes = fn(11710).VoicePanelModes;
+const VoicePanelDockConstants = fn(11728);
 ({
   DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: closure_8,
   DOCK_PULL_SNAP_DISTANCE: closure_9,
@@ -113,7 +113,7 @@ const VoicePanelDockConstants = fn(12446);
   DOCK_PADDING_TOP,
   DOCK_ROW_HEIGHT,
 } = VoicePanelDockConstants);
-const GestureConstants = fn(12447);
+const GestureConstants = fn(11729);
 ({
   FLING_MIN_DISTANCE: map1,
   FLING_MIN_VELOCITY: closure_14,
@@ -124,7 +124,7 @@ const GestureConstants = fn(12447);
 } = GestureConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = {
   dock: { position: "absolute", top: 0, left: 0, paddingTop: DOCK_PADDING_TOP, zIndex: 10 },
   pressTarget: { position: "absolute", top: 0, left: 0, right: 0 },

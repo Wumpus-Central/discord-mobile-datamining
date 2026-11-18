@@ -59,6 +59,7 @@ const obj2 = {
   AURA: "aura",
   ASSEMBLED: "assembled",
   FINALIZE: "finalize",
+  EXIT: "exit",
   SUMMARY: "summary",
 };
 const obj3 = {

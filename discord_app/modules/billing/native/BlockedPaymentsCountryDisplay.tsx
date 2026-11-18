@@ -5,8 +5,8 @@ import native from "../../../design/void/native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef9732 from "../../../../_runtime/metro/09732__.js";
-import _modDef9733 from "../../../../_runtime/metro/09733__.js";
+import _modDef9147 from "../../../../_runtime/metro/09147__.js";
+import _modDef9148 from "../../../../_runtime/metro/09148__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { alignItems: "center" },
   header: { fontSize: 20, fontWeight: "700", color: nativeDefault.colors.TEXT_SUBTLE, marginBottom: 16 },
@@ -41,9 +41,9 @@ export default function BlockedPaymentsCountryDisplay() {
   const obj6 = { style: tmp.image, source: null };
   const tmp8 = FastImageDefault;
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef9732;
+    let tmp2Result = _modDef9147;
   } else {
-    tmp2Result = _modDef9733;
+    tmp2Result = _modDef9148;
   }
   obj6.source = tmp2Result;
   items[2] = hasOwnProperty(tmp8, obj6);

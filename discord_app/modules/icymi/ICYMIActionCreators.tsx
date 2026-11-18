@@ -377,9 +377,9 @@ function fetchDiscoverDehydrated(arg0) {
               c8 = 5;
               c9 = 1;
               const obj21 = {
-                value: closure_0(10662).withDiscoverRequestDeadline(closure_133_10, () => {
+                value: closure_0(9943).withDiscoverRequestDeadline(closure_133_10, () => {
                             const HTTP = closure_0(1285).HTTP;
-                            const request = { url: constants.GRAVITY_ITEMS_DEHYDRATED, query: dependencyMap.toString(), rejectWithError: false, failImmediatelyWhenRateLimited: true, signal, timeout: { deadline: closure_0(10662).DISCOVER_REQUEST_DEADLINE_MS } };
+                            const request = { url: constants.GRAVITY_ITEMS_DEHYDRATED, query: dependencyMap.toString(), rejectWithError: false, failImmediatelyWhenRateLimited: true, signal, timeout: { deadline: closure_0(9943).DISCOVER_REQUEST_DEADLINE_MS } };
                             return HTTP.get(request);
                           }),
                 done: false

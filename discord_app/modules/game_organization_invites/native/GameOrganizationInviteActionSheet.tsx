@@ -1,6 +1,6 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationInviteActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2565 from "../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2555 from "../GameOrganizationInvitesUntranslated.messages.js";
 import UserPlaceholderRowDefault from "../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
 import getGameOrganizationDisplayNounDefault from "../getGameOrganizationDisplayNoun.tsx";
 import useGameOrganizationInviteSuggestionsDefault from "../useGameOrganizationInviteSuggestions.tsx";
@@ -24,7 +24,7 @@ function Loading() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -39,8 +39,8 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   const tmp4 = useGameOrganizationInviteSuggestionsDefault();
   ({ getSendState, handleInvite } = useLinkedGameOrganizationInviteSenderDefault(guildId));
   const tmp5 = useLinkedGameOrganizationInviteSenderDefault(guildId);
-  const data = guildId(16438).useLinkedGameOrganization(guildId).data;
-  const obj = guildId(16438);
+  const data = guildId(15105).useLinkedGameOrganization(guildId).data;
+  const obj = guildId(15105);
   items = [GameOrganizationStore];
   const items1 = [guildId];
   const stateFromStores = guildId(504).useStateFromStores(
@@ -53,11 +53,11 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   if (null != data) {
     const intl2 = tmp6(1113).intl;
     const obj3 = { orgName: data.name, noun: tmp9 };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef2565.VGOQ4v, obj3);
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef2555.VGOQ4v, obj3);
   } else {
     const intl = tmp6(1113).intl;
     const obj4 = { noun: tmp9 };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef2565.BBk7Qw, obj4);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef2555.BBk7Qw, obj4);
   }
   const obj5 = { scrollable: true, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   const intl3 = tmp6(1113).intl;
@@ -71,12 +71,12 @@ export default function GameOrganizationInviteActionSheet(guildId) {
     children: null,
   };
   const intl4 = tmp6(1113).intl;
-  obj8.children = intl4.formatToPlainString(_modDef2565.EnTIIr, {
+  obj8.children = intl4.formatToPlainString(_modDef2555.EnTIIr, {
     noun: getGameOrganizationDisplayNounDefault({ displayNoun: stateFromStores }),
   });
   const items2 = [
-    closure_5(guildId(5923).Heading, obj8),
-    closure_5(guildId(5923).Text, {
+    closure_5(guildId(5414).Heading, obj8),
+    closure_5(guildId(5414).Text, {
       variant: "body-sm/medium",
       color: "text-muted",
       style: tmp.centeredText,
@@ -84,13 +84,13 @@ export default function GameOrganizationInviteActionSheet(guildId) {
     }),
   ];
   obj7.children = items2;
-  const items3 = [closure_6(guildId(6335).Stack, obj7)];
+  const items3 = [closure_6(guildId(5837).Stack, obj7)];
   const obj10 = { size: "md", round: true, onChange: search, placeholder: null };
   const intl5 = tmp6(1113).intl;
-  obj10.placeholder = intl5.formatToPlainString(_modDef2565.cRK6SQ, { noun: tmp9 });
-  items3[1] = closure_5(guildId(7835).SearchBar, obj10);
+  obj10.placeholder = intl5.formatToPlainString(_modDef2555.cRK6SQ, { noun: tmp9 });
+  items3[1] = closure_5(guildId(7338).SearchBar, obj10);
   obj6.children = items3;
-  obj5.header = closure_6(guildId(6335).Stack, obj6);
+  obj5.header = closure_6(guildId(5837).Stack, obj6);
   if (isLoading) {
     let tmp11Result = closure_5(Loading, {});
   } else if (hasNoFriends) {
@@ -101,5 +101,5 @@ export default function GameOrganizationInviteActionSheet(guildId) {
     tmp11Result = closure_5(GameOrganizationInviteListDefault, obj12);
   }
   obj5.children = tmp11Result;
-  return closure_5(guildId(7961).ActionSheet, obj5);
+  return closure_5(guildId(7464).ActionSheet, obj5);
 }

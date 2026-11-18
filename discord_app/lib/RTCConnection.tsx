@@ -16,7 +16,7 @@ import RTCControlSocket from "RTCControlSocket.tsx";
 import DiscordNativeDefault from "DiscordNative.tsx";
 import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
 import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import flatRestDefault from "../../_runtime/06140_flatRest.js";
+import flatRestDefault from "../../_runtime/05636_flatRest.js";
 import DaveJoinTimerDefault from "../modules/rtc/DaveJoinTimer.tsx";
 import DaveRecipientTrackerDefault from "../modules/rtc/DaveRecipientTracker.tsx";
 import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager.tsx";
@@ -113,7 +113,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(6087).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5583).getSystemAnalyticsInfo;
 let Constants = fn(1072);
 ({
   AnalyticEvents: closure_18,
@@ -122,10 +122,10 @@ let Constants = fn(1072);
   RTCConnectionQuality: closure_21,
   BoostedGuildTiers: closure_22,
 } = Constants);
-const StreamSettingsConstants = fn(6168);
+const StreamSettingsConstants = fn(5664);
 ({ ApplicationStreamFPS: closure_23, ApplicationStreamResolutions: closure_24 } = StreamSettingsConstants);
-let closure_25 = fn(6169).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(6072);
+let closure_25 = fn(5665).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5568);
 ({
   ExperimentFlags: closure_26,
   Features: closure_27,
@@ -1588,7 +1588,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
     self._secureFramesLastExecutedTransitionId = undefined;
     const _daveJoinTimer = self._daveJoinTimer;
     _daveJoinTimer.socketLost();
-    const tmp47 = new self(6172)();
+    const tmp47 = new self(5668)();
     self._daveRecipientTracker = tmp47;
     self._daveRecipientsActive = false;
     if (null != self._connection) {
@@ -4253,7 +4253,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(6076).now();
+  const commitReceivedTime = _connection(5572).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;
@@ -4301,7 +4301,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(6076).now();
+  const welcomeReceivedTime = _connection(5572).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;

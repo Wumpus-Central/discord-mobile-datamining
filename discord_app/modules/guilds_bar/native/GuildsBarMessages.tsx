@@ -48,10 +48,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "call_me_tone2",
-    externalChildren: "call_me_hand_tone2",
-    expandedChildren: "Jordan",
-    children: "JO",
+    label: 0.322,
+    externalChildren: 1,
+    expandedChildren: 0.716,
+    children: 0.005,
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -68,9 +68,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "call_me_tone2",
-    externalChildren: "call_me_hand_tone2",
-    expandedChildren: "Jordan",
-    children: "JO",
+    label: 0.322,
+    externalChildren: 1,
+    expandedChildren: 0.716,
+    children: 0.005,
   });
 });

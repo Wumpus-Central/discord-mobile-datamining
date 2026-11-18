@@ -86,6 +86,7 @@ const items2 = [
   dismissible_content.DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK,
   dismissible_content.DismissibleContent.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET,
   dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER,
+  dismissible_content.DismissibleContent.GIFTED_NITRO_EXPIRATION_WINBACK_NAGBAR,
   dismissible_content.DismissibleContent.GAME_SERVER_NEW_GAMES_COACHMARK,
   dismissible_content.DismissibleContent.PREMIUM_SHOP_NAGBAR_NOTICE,
   dismissible_content.DismissibleContent.SHOP_TAB_TOOLTIP,

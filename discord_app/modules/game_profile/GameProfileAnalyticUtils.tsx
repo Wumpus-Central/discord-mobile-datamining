@@ -6,7 +6,7 @@ import ContentInventoryStore from "../content_inventory/ContentInventoryStore.ts
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(10396).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(9677).ContentInventoryFeedKey;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
@@ -151,6 +151,7 @@ export const GameProfileSources = {
   Frame: "frame",
   GuildSpacePopularGames: "guild_space_popular_games",
   GuildSpaceLeaderboard: "guild_space_leaderboard",
+  GlobalDiscoveryGamesJumpBackIn: "global_discovery_games_jump_back_in",
   GlobalDiscoveryGamesBecauseYouPlayed: "global_discovery_games_because_you_played",
   GlobalDiscoveryGamesTrendingShelf: "global_discovery_games_trending_shelf",
   GlobalDiscoveryGamesTrendingTab: "global_discovery_games_trending_tab",

@@ -8,5 +8,5 @@ const result = size.fileFinishedImporting("modules/guild_moderation/native/showB
 
 export default function showBanConfirmModal(merged) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13035, dependencyMap.paths), merged);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12322, dependencyMap.paths), merged);
 }

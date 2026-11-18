@@ -7,20 +7,20 @@ require = fn;
 const Constants = fn(1072);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16957);
+let CONTEXT_MENU_ICON_NAMES = fn(15607);
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS,
   {
-    scope: fn(16956).activityInstanceConnectedParticipantsScope,
+    scope: fn(15606).activityInstanceConnectedParticipantsScope,
     handler(socket) {
       const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
       return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
     },
   },
 );
-CONTEXT_MENU_ICON_NAMES = fn(16957);
+CONTEXT_MENU_ICON_NAMES = fn(15607);
 let obj3 = {
-  scope: fn(16956).activityInstanceConnectedParticipantsScope,
+  scope: fn(15606).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
@@ -29,7 +29,7 @@ let obj3 = {
 obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.REQUEST_PROXY_TICKET_REFRESH,
   {
-    scope: fn(16956).activityInstanceConnectedParticipantsScope,
+    scope: fn(15606).activityInstanceConnectedParticipantsScope,
     handler(socket) {
       socket = socket.socket;
       return (async () => {
@@ -57,33 +57,34 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                const result = value(tmp36[4]).validatePostMessageTransport(socket.transport);
-                const obj12 = value(tmp36[4]);
-                const validateApplicationResult = value(tmp36[4]).validateApplication(socket.application);
-                const obj13 = value(tmp36[4]);
-                if (obj14.isEmbeddedApplication(socket.application)) {
+                const result = value(tmp37[4]).validatePostMessageTransport(socket.transport);
+                const obj13 = value(tmp37[4]);
+                const validateApplicationResult = value(tmp37[4]).validateApplication(socket.application);
+                const obj14 = value(tmp37[4]);
+                if (obj15.isEmbeddedApplication(socket.application)) {
                   let context;
-                  if (tmp3(tmp36[7])(socket)) {
+                  if (tmp3(tmp37[7])(socket)) {
                     context = socket.context;
                   }
                   let surface;
                   if (context != null) {
                     surface = context.surface;
                   }
-                  const tmp29Result = tmp3(tmp36[8])(surface);
                   c3 = 1;
                   value = {};
                   let type;
+                  const tmp29 = tmp3(tmp37[8]);
                   if (context != null) {
                     type = context.source.type;
                   }
-                  if (type === tmp44(tmp36[9]).EmbeddedContextSourceType.FRAME) {
+                  if (type === tmp45(tmp37[9]).EmbeddedContextSourceType.FRAME) {
+                    const tmp45Result = tmp45(tmp37[10]);
                     constants = 3;
                     c5 = 1;
                     const obj4 = {
-                      value: tmp44(tmp36[10]).createProxyTicket(
+                      value: tmp45Result.createProxyTicket(
                         validateApplicationResult,
-                        tmp29Result,
+                        tmp45(tmp37[8]).getProxyTicketChannelId(context.surface),
                         context.surface.type,
                       ),
                       done: false,
@@ -93,23 +94,23 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
                     constants = 2;
                     c5 = 1;
                     const obj5 = {
-                      value: tmp44(tmp36[10]).createProxyTicket(validateApplicationResult, tmp29Result),
+                      value: tmp45(tmp37[10]).createProxyTicket(validateApplicationResult, tmp29Result),
                       done: false,
                     };
                     return obj5;
                   }
-                  const tmp29 = tmp3(tmp36[8]);
+                  tmp29Result = tmp3(tmp37[8])(surface);
                 } else {
                   const obj6 = { errorCode: constants.UNAUTHORIZED_FOR_APPLICATION };
-                  const tmp24 = new tmp3(tmp36[6])(obj6, "This application cannot access this API");
+                  const tmp24 = new tmp3(tmp37[6])(obj6, "This application cannot access this API");
                   throw tmp24;
                 }
-                obj14 = value(tmp36[5]);
+                obj15 = value(tmp37[5]);
               }
             } else if (1 === tmp7) {
               c3 = 0;
               const obj7 = { errorCode: constants.UNKNOWN_ERROR };
-              const tmp18 = new tmp3(tmp36[6])(obj7, "Failed to create proxy ticket");
+              const tmp18 = new tmp3(tmp37[6])(obj7, "Failed to create proxy ticket");
               throw tmp18;
             } else {
               if (2 === tmp7) {
@@ -137,10 +138,10 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
               const obj9 = { value, done: true };
               return obj9;
             }
-          } catch (tmp36) {
+          } catch (tmp37) {
             if (tmp4 === c3) {
               c5 = tmp2;
-              throw tmp36;
+              throw tmp37;
             } else {
               constants = tmp;
             }

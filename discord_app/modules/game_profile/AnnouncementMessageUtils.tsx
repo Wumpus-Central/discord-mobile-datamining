@@ -1,6 +1,7 @@
 // discord_app/modules/game_profile/AnnouncementMessageUtils.tsx
 import util from "../../intl/index.native.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
+import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import MessageRecord from "../../records/MessageRecord.tsx";
 import useFormattedExpirationLabel from "../polls/chat/useFormattedExpirationLabel.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -250,6 +251,30 @@ export function getPollExpiryLabel(poll) {
     result = intl.string(util.t["e+J3JZ"]);
   }
   return result;
+}
+export function getAnnouncementMediaURL(assetURL, arg1, arg2) {
+  const obj = ImageLoaderUtils;
+  const str = obj.getBestMediaProxySize(arg2 * ImageLoaderUtils.getDevicePixelRatio());
+  const str2 = Math.round(str / arg1);
+  const str3 = URLUtilsDefault.toURLSafe(assetURL);
+  let str1 = null;
+  if (null != str3) {
+    const searchParams = str3.searchParams;
+    searchParams.append("format", "webp");
+    if (null != str) {
+      const searchParams2 = str3.searchParams;
+      searchParams2.append("width", str.toString());
+    }
+    if (null != str2) {
+      const searchParams3 = str3.searchParams;
+      searchParams3.append("height", str2.toString());
+    }
+    str1 = str3.toString();
+  }
+  if (str1 == null) {
+    str1 = assetURL;
+  }
+  return str1;
 }
 export function getPosterUrl(proxyUrl, arg1, arg2) {
   const str = URLUtilsDefault.toURLSafe(proxyUrl);

@@ -1,22 +1,22 @@
 // discord_app/modules/virtual_currency/native/orb_wallet/OrbWalletCards.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2333 from "../../messages/OrbWallet.messages.js";
-import LinearGradientDefault from "../../../../../_runtime/05887_LinearGradient.js";
+import _modDef2323 from "../../messages/OrbWallet.messages.js";
+import LinearGradientDefault from "../../../../../_runtime/05378_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef7543 from "../../../../../_runtime/metro/07543__.js";
+import _modDef7046 from "../../../../../_runtime/metro/07046__.js";
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef13629 from "../../../../../_runtime/metro/13629__.js";
-import SvgCss from "../../../../../_runtime/14840_SvgCss.js";
+import _modDef12936 from "../../../../../_runtime/metro/12936__.js";
 import useIsPremiumSubscriber from "../../../premium/useIsPremiumSubscriber.tsx";
 import VirtualCurrencyAnalyticsUtil from "../../VirtualCurrencyAnalyticsUtil.tsx";
 import OrbWalletUtils from "OrbWalletUtils.native.tsx";
+import SvgCss from "../../../../../_runtime/16232_SvgCss.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import OrbChallengesStore from "../../stores/OrbChallengesStore.tsx";
@@ -115,7 +115,7 @@ function OrbWalletNitroGlow() {
     start: obj2.HORIZONTAL_START,
     end: obj2.HORIZONTAL_END,
   });
-  return closure_1_11(_modDef7543, obj3);
+  return closure_1_11(_modDef7046, obj3);
 }
 function OrbWalletShopPrimaryCard() {
   const analyticsLocations = useAnalyticsLocationsDefault(
@@ -126,12 +126,12 @@ function OrbWalletShopPrimaryCard() {
   const ORB_WALLET_SHOP_CTA = AnalyticsLocationDefault.ORB_WALLET_SHOP_CTA;
   closure_129_0 = ORB_WALLET_SHOP_CTA;
   closure_129_1 = callback;
-  const orbWalletAnalyticsPage = analyticsLocations(17567).useOrbWalletAnalyticsPage();
+  const orbWalletAnalyticsPage = analyticsLocations(16224).useOrbWalletAnalyticsPage();
   closure_129_2 = orbWalletAnalyticsPage;
-  const obj = analyticsLocations(17567);
-  const items1 = [analyticsLocations(5143).DismissibleContent.ORB_WALLET_SHOP_CTA_CARD_MOBILE];
+  const obj = analyticsLocations(16224);
+  const items1 = [analyticsLocations(4656).DismissibleContent.ORB_WALLET_SHOP_CTA_CARD_MOBILE];
   const tmp7 = _slicedToArray(
-    analyticsLocations(9572).useSelectedDismissibleContent(items1, {
+    analyticsLocations(8986).useSelectedDismissibleContent(items1, {
       groupName: constants2.ORB_WALLET,
       bypassAutoDismiss: true,
     }),
@@ -165,15 +165,15 @@ function OrbWalletShopPrimaryCard() {
       onClose: null,
     };
     const intl = tmp5(1113).intl;
-    obj4.title = intl.string(_modDef2333.v8QrJf);
+    obj4.title = intl.string(_modDef2323.v8QrJf);
     obj4.graphic = size1;
     const intl2 = tmp5(1113).intl;
-    obj4.graphicAccessibilityLabel = intl2.string(_modDef2333.qa1xyr);
+    obj4.graphicAccessibilityLabel = intl2.string(_modDef2323.qa1xyr);
     const intl3 = tmp5(1113).intl;
-    obj4.subTextDescription = intl3.string(_modDef2333.HACucK);
+    obj4.subTextDescription = intl3.string(_modDef2323.HACucK);
     const intl4 = tmp5(1113).intl;
-    obj4.buttonText = intl4.string(_modDef2333["7raRgL"]);
-    obj4.buttonIcon = _modDef13629;
+    obj4.buttonText = intl4.string(_modDef2323["7raRgL"]);
+    obj4.buttonIcon = _modDef12936;
     obj4.onCtaPress = callback1;
     obj4.onClose = tmp10;
     tmp11 = closure_11(BaseOrbWalletPrimaryCard, obj4);
@@ -268,7 +268,7 @@ function OrbWalletNitroUpsellPrimaryCard() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const DismissibleContentConstants = fn(5156);
+const DismissibleContentConstants = fn(4669);
 ({ ContentDismissActionType: closure_8, DismissibleContentGroupName: closure_9 } = DismissibleContentConstants);
 const PremiumTypes = fn(1390).PremiumTypes;
 const jsxProd = fn(21);
@@ -281,7 +281,7 @@ let obj2 = {
   VERTICAL_START: { x: 0.5, y: 0 },
   VERTICAL_END: { x: 0.5, y: 1 },
 };
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj4 = {
   primaryCard: { gap: nativeDefault.space.PX_16, overflow: "hidden" },
   nitroGlow: { position: "absolute", top: 0, left: 0, right: 0, height: obj2.NITRO_GLOW_HEIGHT },
@@ -308,8 +308,8 @@ obj4.primaryCardText = { flex: 1, gap: nativeDefault.space.PX_4 };
 let obj7 = { flex: 1, gap: nativeDefault.space.PX_4 };
 obj4.primaryCardCloseButton = { position: "absolute", top: nativeDefault.space.PX_4, end: nativeDefault.space.PX_4 };
 let closure_15 = createStyles.createStyles(obj4);
-let size = { asset: fn(17573), width: 56, height: 37 };
-const size1 = { asset: fn(17574), width: 50, height: 37 };
+let size = { asset: fn(16230), width: 56, height: 37 };
+const size1 = { asset: fn(16231), width: 50, height: 37 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/orb_wallet/OrbWalletCards.tsx");
 

@@ -13,10 +13,10 @@ import apply from "../../../../_runtime/00012_apply.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(11315);
+const ChannelCallConstants = fn(10597);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5977).ParticipantTypes;
-const timeout = new fn(5154).Timeout();
+const ParticipantTypes = fn(5473).ParticipantTypes;
+const timeout = new fn(4667).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -29,22 +29,22 @@ let size = {
   x: "Array",
   y: "s",
   width: "channel_id",
-  height: "space",
-  screenOrientation: fn(10054).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: "<string:3951369912>",
-  isInitialized: "<string:1070512209>",
-  isVisible: "BADGE_DIRECTORY_NUX_POPOVER",
+  height: "formatToPlainString",
+  screenOrientation: fn(9334).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: "UNINSTALLING",
+  isInitialized: "#000000",
+  isVisible: "zJrgTG",
 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
   y: "s",
   width: "channel_id",
-  height: "space",
-  screenOrientation: fn(10054).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: "<string:3951369912>",
-  isInitialized: "<string:1070512209>",
-  isVisible: "BADGE_DIRECTORY_NUX_POPOVER",
+  height: "formatToPlainString",
+  screenOrientation: fn(9334).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: "UNINSTALLING",
+  isInitialized: "#000000",
+  isVisible: "zJrgTG",
 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;

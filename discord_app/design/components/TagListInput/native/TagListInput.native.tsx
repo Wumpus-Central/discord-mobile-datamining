@@ -3,23 +3,23 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05887_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05378_LinearGradient.js";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
-import _modDef7543 from "../../../../../_runtime/metro/07543__.js";
+import _modDef7046 from "../../../../../_runtime/metro/07046__.js";
 import useBottomSheetKeyboardHandlingDefault from "../../Sheet/native/useBottomSheetKeyboardHandling.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const TextInput_TextInputDefault = tmp18(8190);
+const TextInput_TextInputDefault = tmp18(7693);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5310);
+let createStyles = fn(4823);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
     placeholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },
@@ -70,7 +70,7 @@ let closure_10 = createStyles.createStyles(() => {
 let closure_11 = { x: 0, y: 0.5 };
 let closure_12 = { x: 1, y: 0.5 };
 let closure_13 = ["transparent", "black"];
-createStyles = fn(5310);
+createStyles = fn(4823);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
   const obj2 = {};
@@ -313,12 +313,12 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     }
   }, items3);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp2(5564).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp2(5055).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = onChangeText;
   }
   if (inActionSheet) {
-    let BottomSheetTextInput = tmp2(8189).BottomSheetTextInput;
+    let BottomSheetTextInput = tmp2(7692).BottomSheetTextInput;
   } else {
     BottomSheetTextInput = TextInput_TextInputDefault;
   }
@@ -400,7 +400,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       obj2.children = items2;
       obj.maskElement = React6(hasOwnProperty, obj2);
       obj.children = children;
-      tmp = React5(_modDef7543, obj);
+      tmp = React5(_modDef7046, obj);
     }
     return tmp;
   }, items7);
@@ -638,7 +638,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   const obj13 = { size: "sm", disabled, isFocused, children: null };
   if (null == icon) {
     const obj14 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
-    icon = tmp46(tmp2(7836).MagnifyingGlassIcon, obj14);
+    icon = tmp46(tmp2(7339).MagnifyingGlassIcon, obj14);
   }
   const items14 = [icon, obj6.wrap(c8(BottomSheetScrollView, obj7))];
   if (null == footer) {

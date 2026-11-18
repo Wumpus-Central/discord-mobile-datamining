@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3127 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef3147 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreators.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -13,13 +13,13 @@ function useValue() {
 function onValueChange(enabled) {
   const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-const SettingBuilders = fn(12612);
+const SettingBuilders = fn(11897);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3127["2gFUEw"]);
+    return intl.string(_modDef3147["2gFUEw"]);
   },
-  parent: fn(9213).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8624).MobileUserSettings.ACCESSIBILITY,
   useValue,
   onValueChange,
 });

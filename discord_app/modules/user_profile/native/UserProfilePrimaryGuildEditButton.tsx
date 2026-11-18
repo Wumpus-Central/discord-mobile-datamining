@@ -6,9 +6,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
-const GuildTagBadgeSize = fn(8421).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7911).GuildTagBadgeSize;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   tag: {
     paddingHorizontal: 6,
@@ -134,7 +134,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     obj4.accessibilityValue = obj5;
     obj4.onPress = function handleOpenSelectPrimaryGuild() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(17173, dependencyMap.paths),
+        asyncRequireImpl(15829, dependencyMap.paths),
         "UserPrimaryGuildListBottomSheet",
         {
           availableGuilds: userAvailableGuildsWithTags,

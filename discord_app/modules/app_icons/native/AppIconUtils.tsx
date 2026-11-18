@@ -194,7 +194,7 @@ let closure_16 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(11146);
+const AppIconConstants = fn(10428);
 ({
   getDefaultIcon: closure_6,
   getIconById: metroImportDefault,

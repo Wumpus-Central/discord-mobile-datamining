@@ -64,7 +64,7 @@ function refreshUntilBotJoins(arg0, arg1) {
                           closure_0 = closure_1_0;
                           closure_1 = tmp7 - 1;
                           let _setTimeout = setTimeout;
-                          let timerId = setTimeout(/* F109840 */ function() { ... }, 1500);
+                          let timerId = setTimeout(/* F116104 */ function() { ... }, 1500);
                         }
                         let obj = closure_2_0(closure_2_2[15]);
                       }
@@ -156,7 +156,7 @@ function isPublishable(id) {
   }
   return canPublishResult;
 }
-let isProjectOwner = fn(7025).isProjectOwner;
+let isProjectOwner = fn(6529).isProjectOwner;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/server_share/useConjureShareToServer.tsx");

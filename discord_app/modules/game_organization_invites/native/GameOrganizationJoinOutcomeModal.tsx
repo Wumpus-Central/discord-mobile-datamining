@@ -11,6 +11,7 @@ import useResolvedGameOrganizationInviteDefault from "../useResolvedGameOrganiza
 import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
 import useGameOrganizationJoinOutcomeDefault from "../useGameOrganizationJoinOutcome.tsx";
 import GameOrganizationJoinSuccessGraphicDefault from "GameOrganizationJoinSuccessGraphic.tsx";
+import GameOrganizationJoinOutcomeChecklistDefault from "GameOrganizationJoinOutcomeChecklist.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -19,46 +20,51 @@ function closeGameOrganizationJoinOutcomeModal() {
 }
 function GameOrganizationJoinOutcomeScreen(arg0) {
   ({ code, result } = arg0);
-  const tmp = closure_7();
   const tmp4 = useResolvedGameOrganizationInviteDefault(code);
-  ({ subtitle, cta } = useGameOrganizationJoinOutcomeDefault(code, result, closeGameOrganizationJoinOutcomeModal));
-  let tmp9Result = null;
+  const tmp = closure_7();
+  ({ rows, cta, isWaitingForGuild } = useGameOrganizationJoinOutcomeDefault(
+    code,
+    result,
+    closeGameOrganizationJoinOutcomeModal,
+  ));
+  let tmp8Result = null;
   if (null != tmp4) {
     const obj = { spacing: nativeDefault.space.PX_48, children: null };
     const obj2 = { character: result.character, organizationIconUrl: tmp4.organization.iconUrl };
     items = [React4(GameOrganizationJoinSuccessGraphicDefault, obj2)];
-    const obj3 = { spacing: nativeDefault.space.PX_8, children: null };
+    const obj3 = { spacing: nativeDefault.space.PX_24, children: null };
     const obj4 = { variant: "heading-xl/semibold", style: tmp.text, accessibilityRole: "header", children: tmp6 };
     const items1 = [React4(Text_Text.Text, obj4)];
-    let tmp11Result = null != subtitle;
-    if (tmp11Result) {
-      const obj5 = { variant: "body-md/normal", color: "text-muted", style: tmp.text, children: subtitle };
-      tmp11Result = React4(Text_Text.Text, obj5);
+    let tmp10Result = null;
+    if (null != rows) {
+      const obj5 = { rows };
+      tmp10Result = React4(GameOrganizationJoinOutcomeChecklistDefault, obj5);
     }
     const obj6 = { children: null };
     const obj7 = { children: null };
-    items1[1] = tmp11Result;
+    items1[1] = tmp10Result;
     obj3.children = items1;
     items[1] = hasOwnProperty(Stack_Stack.Stack, obj3);
     obj.children = items;
     obj7.children = hasOwnProperty(Stack_Stack.Stack, obj);
     const items2 = [React4(ModalContent.ModalContent, obj7)];
     const obj8 = { children: null };
-    const obj17 = { text: null, size: "lg", onPress: null, disabled: null };
+    const obj17 = { text: null, size: "lg", onPress: null, disabled: null, loading: null };
     ({ text: obj9.text, action: obj9.onPress } = cta);
-    obj17.disabled = tmp7;
+    obj17.disabled = isWaitingForGuild;
+    obj17.loading = isWaitingForGuild;
     obj8.children = React4(components_Button_Button.Button, obj17);
     items2[1] = React4(ModalFooter.ModalFooter, obj8);
     obj6.children = items2;
-    tmp9Result = hasOwnProperty(ModalScreen.ModalScreen, obj6);
+    tmp8Result = hasOwnProperty(ModalScreen.ModalScreen, obj6);
   }
-  return tmp9Result;
+  return tmp8Result;
 }
-let closure_3 = fn(12573).GAME_ORGANIZATION_JOIN_OUTCOME_MODAL_KEY;
+let closure_3 = fn(11856).GAME_ORGANIZATION_JOIN_OUTCOME_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const constants = { OUTCOME: "OUTCOME" };
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_7 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -70,7 +76,7 @@ export default function GameOrganizationJoinOutcomeModal(code) {
   const result = code.result;
   importDefault = result;
   items = [code, result];
-  const navigatorScreens = code(7500).useNavigatorScreens(() => {
+  const navigatorScreens = code(7003).useNavigatorScreens(() => {
     const obj = {};
     const obj2 = {
       headerLeft: NavigatorHeader.getHeaderCloseButton(closeGameOrganizationJoinOutcomeModal),
@@ -84,7 +90,7 @@ export default function GameOrganizationJoinOutcomeModal(code) {
     obj[constants.OUTCOME] = obj2;
     return obj;
   }, items);
-  return closure_4(code(12718).Modal, {
+  return closure_4(code(12003).Modal, {
     screens: navigatorScreens,
     initialRouteName: constants.OUTCOME,
     gradientColor: "purple",

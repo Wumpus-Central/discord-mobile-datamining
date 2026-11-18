@@ -88,16 +88,16 @@ let closure_8 = async function _handleEnableSystemNotification() {
   }
 };
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_5 = fn(6900).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13906);
+let closure_5 = fn(6404).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13208);
 ({ EventActionType: closure_6, EventActionLocation: metroImportDefault } = NotificationPermissionConstants);
-let SettingBuilders = fn(12612);
+let SettingBuilders = fn(11897);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(9213).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8624).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_8.apply;
@@ -110,10 +110,10 @@ const pressable = SettingBuilders.createPressable({
   },
   withArrow: true,
 });
-SettingBuilders = fn(12612);
+SettingBuilders = fn(11897);
 let obj4 = {};
 const merged = Object.assign(pressable);
-obj4.parent = fn(18154).MobileNotifSettings.NOTIFICATIONS_REDESIGN;
+obj4.parent = fn(16956).MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 const pressable1 = SettingBuilders.createPressable(obj4);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");

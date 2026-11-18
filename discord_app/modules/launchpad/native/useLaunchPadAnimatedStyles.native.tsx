@@ -3,8 +3,8 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import LaunchPadConstants from "LaunchPadConstants.tsx";
-import useAnimatedKeyboardHeightDefault from "../../keyboard/native/useAnimatedKeyboardHeight.tsx";
 import useWindowDimensionsSharedValueDefault from "../../screen/useWindowDimensionsSharedValue.native.tsx";
+import useAnimatedKeyboardHeightDefault from "../../keyboard/native/useAnimatedKeyboardHeight.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

@@ -2,7 +2,7 @@
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import AnalyticsTypes from "../../quests/lib/analytics/AnalyticsTypes.tsx";
-import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
+import openPremiumModalDefault from "../../premium/native/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import HexagonCampaignAnalytics from "../HexagonCampaignAnalytics.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -10,12 +10,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const premiumEndDate = fn(5335).HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS;
+const premiumEndDate = fn(4848).HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS;
 const Constants = fn(1072);
 ({ AnalyticsObjects: hasOwnProperty, AnalyticsPages: closure_6 } = Constants);
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const EXPIRING_SOON_SHEET = fn(17120).HexagonCampaignContentSurface.EXPIRING_SOON_SHEET;
+const EXPIRING_SOON_SHEET = fn(15776).HexagonCampaignContentSurface.EXPIRING_SOON_SHEET;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignExpiringPromoSheet.tsx");
 

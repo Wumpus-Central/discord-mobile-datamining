@@ -4,9 +4,9 @@ import SampleGameWidgetData from "SampleGameWidgetData.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
 
 require = fn;
-const WIDGET_TITLES_BY_TYPE = fn(7365).WIDGET_TITLES_BY_TYPE;
+const WIDGET_TITLES_BY_TYPE = fn(6870).WIDGET_TITLES_BY_TYPE;
 const dependencyMap = {
-  [fn(7363).WidgetType.FAVORITE_GAMES]: {
+  [fn(6868).WidgetType.FAVORITE_GAMES]: {
     placeholder() {
       return { variant: "details", applicationId: SampleGameWidgetData.SampleGameIds.LEAGUE_OF_LEGENDS };
     },
@@ -15,7 +15,7 @@ const dependencyMap = {
       return intl.string(util.t.xJtdIm);
     },
   },
-  [fn(7363).WidgetType.CURRENT_GAMES]: {
+  [fn(6868).WidgetType.CURRENT_GAMES]: {
     placeholder() {
       return { variant: "details", applicationId: SampleGameWidgetData.SampleGameIds.VALORANT };
     },
@@ -24,7 +24,7 @@ const dependencyMap = {
       return intl.string(util.t.Ae8tRi);
     },
   },
-  [fn(7363).WidgetType.PLAYED_GAMES]: {
+  [fn(6868).WidgetType.PLAYED_GAMES]: {
     placeholder() {
       const obj = { variant: "grid", applicationIds: null };
       items = [
@@ -41,7 +41,7 @@ const dependencyMap = {
       return intl.string(util.t["pBR+4j"]);
     },
   },
-  [fn(7363).WidgetType.WANT_TO_PLAY_GAMES]: {
+  [fn(6868).WidgetType.WANT_TO_PLAY_GAMES]: {
     placeholder() {
       const obj = { variant: "grid", applicationIds: null };
       items = [
@@ -58,7 +58,7 @@ const dependencyMap = {
       return intl.string(util.t.NtoBi1);
     },
   },
-  [fn(7363).WidgetType.APPLICATION]: {
+  [fn(6868).WidgetType.APPLICATION]: {
     placeholder(applicationId) {
       return { variant: "application-widget", applicationId: applicationId.applicationId };
     },
@@ -75,20 +75,7 @@ const dependencyMap = {
       return intl.formatToPlainString(util.t.KfGahB, { applicationName });
     },
   },
-  [fn(7363).WidgetType.PERSONAL]: {
-    placeholder() {
-      return { variant: "personal" };
-    },
-    getAriaLabel() {
-      const intl = util.intl;
-      return intl.string(util.t["1l30oB"]);
-    },
-    getTitle() {
-      const intl = util.intl;
-      return intl.string(util.t.f8kllL);
-    },
-  },
-  [fn(7363).WidgetType.CLIPS_GALLERY]: {
+  [fn(6868).WidgetType.CLIPS_GALLERY]: {
     placeholder() {
       return { variant: "clips-gallery" };
     },

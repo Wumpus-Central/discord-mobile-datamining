@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_4 = createStyles.createStyles({ icon: { width: 32, height: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressItem.tsx");
@@ -31,7 +31,6 @@ export default function GuildProgressItem(guild) {
     title: null,
     isCompleted: null,
     renderEndComponent: null,
-    fullWidth: true,
   };
   const obj3 = { uri: null };
   let obj = guild(completed[3]);

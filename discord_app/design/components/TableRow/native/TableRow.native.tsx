@@ -296,7 +296,7 @@ class TableRowInner {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const React5 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   const obj = {
     padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
@@ -386,9 +386,9 @@ const React5 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   obj2.trailingText = { flexShrink: 1, marginStart: num5 };
   return obj2;
 });
-TableRow.Icon = fn(7465).TableRowIcon;
-TableRow.Arrow = fn(7466).TableRowArrow;
-TableRow.TrailingText = fn(7468).TableRowTrailingText;
+TableRow.Icon = fn(6968).TableRowIcon;
+TableRow.Arrow = fn(6969).TableRowArrow;
+TableRow.TrailingText = fn(6971).TableRowTrailingText;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 

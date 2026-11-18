@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/user_profile/hooks/useActivityT
 export default function useActivityTimer(start) {
   start = start.start;
   let first;
-  const interval = new first(5154).Interval();
+  const interval = new first(4667).Interval();
   first = _slicedToArray(closure_5(interval), 1)[0];
   const tmp3 = _slicedToArray(
     closure_5(() => Date.now()),
@@ -58,11 +58,11 @@ export function formatTime(result1) {
   }
   return combined;
 }
-export function formatTimeForA11yLabel(result1) {
-  const rounded = Math.floor(result1);
+export function formatTimeForA11yLabel(current) {
+  const rounded = Math.floor(current);
   const seconds = rounded % DurationsDefault.Seconds.MINUTE;
-  const rounded1 = Math.floor(result1 / DurationsDefault.Seconds.MINUTE);
+  const rounded1 = Math.floor(current / DurationsDefault.Seconds.MINUTE);
   const minutes = rounded1 % DurationsDefault.Seconds.MINUTE;
-  const hours = Math.floor(result1 / DurationsDefault.Seconds.HOUR);
+  const hours = Math.floor(current / DurationsDefault.Seconds.HOUR);
   return utils.formatTimestampToA11yLabel({ hours, minutes, seconds });
 }

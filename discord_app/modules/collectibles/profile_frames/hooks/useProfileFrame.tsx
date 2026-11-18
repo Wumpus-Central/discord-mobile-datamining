@@ -5,7 +5,7 @@ import CollectiblesPurchaseStore from "../../CollectiblesPurchaseStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isProfileFrameRecord = fn(8503).isProfileFrameRecord;
+const isProfileFrameRecord = fn(7994).isProfileFrameRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrame.tsx");
 

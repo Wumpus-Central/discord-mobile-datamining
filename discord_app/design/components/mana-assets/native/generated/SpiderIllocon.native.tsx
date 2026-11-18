@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/SpiderIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef14740 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SpiderIllocon-1x.png.js";
-import _modDef14741 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SpiderIllocon-2x.png.js";
-import _modDef14742 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SpiderIllocon-3x.png.js";
+import _modDef18594 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SpiderIllocon-1x.png.js";
+import _modDef18595 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SpiderIllocon-2x.png.js";
+import _modDef18596 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SpiderIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14740 }, 3: null };
-const obj2 = { uri: _modDef14740 };
-obj[2] = { uri: _modDef14741 };
-const obj3 = { uri: _modDef14741 };
-obj[3] = { uri: _modDef14742 };
+let obj = { 1: null, 2: { uri: _modDef18594 }, 3: null };
+const obj2 = { uri: _modDef18594 };
+obj[2] = { uri: _modDef18595 };
+const obj3 = { uri: _modDef18595 };
+obj[3] = { uri: _modDef18596 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SpiderIllocon.native.tsx");
 
@@ -28,7 +28,7 @@ export function SpiderIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7765).getAssetSource(obj);
+  obj.source = num(7268).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

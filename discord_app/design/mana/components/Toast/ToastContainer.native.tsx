@@ -216,7 +216,7 @@ function AnimatedToast(cleanUp) {
   let items4 = [tmp.toast, "top" === position ? tmp.toastTop : tmp.toastBottom, animatedStyle];
   obj6.style = items4;
   const merged = Object.assign(entry.toast);
-  obj6.children = jsx(tmp2(16517).Toast, {});
+  obj6.children = jsx(tmp2(15200).Toast, {});
   return jsx(_modDef1655.View, obj6);
 }
 function getItemKey(key) {
@@ -235,7 +235,7 @@ obj2.duration = ANIMATION_DURATION_MS.resolve({});
 obj2.easing = fn(1655).Easing.linear;
 const QUEUE_ENTER_DELAY_MS = nativeDefault.modules.toast.QUEUE_ENTER_DELAY_MS;
 let closure_11 = QUEUE_ENTER_DELAY_MS.resolve({});
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj4 = { container: null, bounds: null, toast: null, toastTop: null, toastBottom: null };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -368,10 +368,16 @@ export function ToastContainer(surface) {
     );
     let tmpResult = tmp2;
     if (flag) {
-      const obj3 = { pointerEvents: "box-none", style: StyleSheet.absoluteFill, children: tmp2 };
+      const obj3 = {
+        pointerEvents: "box-none",
+        style: StyleSheet.absoluteFill,
+        unstable_accessibilityContainerViewIsModal: false,
+        children: tmp2,
+      };
       tmpResult = jsx(OverlayViewDefault, {
         pointerEvents: "box-none",
         style: StyleSheet.absoluteFill,
+        unstable_accessibilityContainerViewIsModal: false,
         children: tmp2,
       });
     }

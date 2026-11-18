@@ -251,8 +251,8 @@ function isCurrentSyncStatus(version) {
   }
   return false;
 }
-let closure_7 = fn(5163).createChannelRecordFromServer;
-const ChannelLoader = fn(5159).ChannelLoader;
+let closure_7 = fn(4676).createChannelRecordFromServer;
+const ChannelLoader = fn(4672).ChannelLoader;
 let closure_16 = new LoggerDefault("GuildBasicChannels");
 const re17 = /^\d+$/;
 class GuildBasicChannels {
@@ -312,9 +312,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    items = [tmp3(5188).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(5188).basicChannels(closure_0);
-    items[1] = tmp3(5188).syncedBasicChannels(closure_0).getKvEntries();
+    items = [tmp3(4701).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(4701).basicChannels(closure_0);
+    items[1] = tmp3(4701).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);
@@ -564,7 +564,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_16.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "r" }, done: true };
+                            const obj5 = { value: { v: "find" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {

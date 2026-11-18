@@ -131,16 +131,16 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
   onReset = onReset.onReset;
   const onContinue = onReset.onContinue;
   if (onReset.hasUnsavedChanges) {
-    onReset(5495).dismissKeyboard();
-    const obj = onReset(5495);
+    onReset(5008).dismissKeyboard();
+    const obj = onReset(5008);
     if (obj2.getIsUserProfileMobileSavePromptEnabled(tmp)) {
-      tmp7(5546).hideActionSheet();
-      const tmp7Result = tmp7(5546);
-      tmp7(6267).close();
-      const tmp4Result = tmp4(6268);
+      tmp7(5037).hideActionSheet();
+      const tmp7Result = tmp7(5037);
+      tmp7(5769).close();
+      const tmp4Result = tmp4(5770);
       const obj3 = { onReset, onContinue, onSave: tmp2 };
       tmp4Result.openAlert(c9, closure_6(UnsavedChangesSavePromptAlert, obj3), undefined, { dismissable: true });
-      const tmp7Result3 = tmp7(6267);
+      const tmp7Result3 = tmp7(5769);
     } else {
       const obj4 = {
         title: null,
@@ -166,10 +166,10 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       obj4.onCancel = function onCancel() {
         onContinue(dependencyMap[10]).close();
       };
-      tmp7(6267).show(obj4);
-      const tmp7Result4 = tmp7(6267);
+      tmp7(5769).show(obj4);
+      const tmp7Result4 = tmp7(5769);
     }
-    obj2 = onReset(15497);
+    obj2 = onReset(14125);
   } else {
     onContinue();
   }

@@ -11,10 +11,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: {
-    minHeight: fn(5936).SMALL_BUTTON_HEIGHT,
+    minHeight: fn(5427).SMALL_BUTTON_HEIGHT,
     borderRadius: nativeDefault.radii.round,
     justifyContent: "center",
     alignItems: "center",

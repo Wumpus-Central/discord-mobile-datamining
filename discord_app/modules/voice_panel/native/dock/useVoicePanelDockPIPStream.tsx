@@ -3,22 +3,42 @@ import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import VoicePanelDockPIPWatchPromptStore from "VoicePanelDockPIPWatchPromptStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const ParticipantTypes = fn(5977).ParticipantTypes;
+const ParticipantTypes = fn(5473).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockPIPStream.tsx");
 
 export default function useVoicePanelDockPIPStream(arg0) {
   _require = arg0;
-  items = [ApplicationStreamingStore, AuthenticationStore, ChannelRTCStore, VoicePanelDockPIPWatchPromptStore];
+  items = [
+    ApplicationStreamingStore,
+    AuthenticationStore,
+    ChannelRTCStore,
+    ChannelStore,
+    VoicePanelDockPIPWatchPromptStore,
+  ];
   return require("initialize").useStateFromStoresObject(items, () => {
     const id = AuthenticationStore.getId();
-    const allActiveStreamsForChannel = ApplicationStreamingStore.getAllActiveStreamsForChannel(id);
+    const channel = ChannelStore.getChannel(id);
+    let isDMResult;
+    if (channel != null) {
+      isDMResult = channel.isDM();
+    }
+    let tmp3 = true === isDMResult;
+    if (!tmp3) {
+      let isGuildStageVoiceResult;
+      if (channel != null) {
+        isGuildStageVoiceResult = channel.isGuildStageVoice();
+      }
+      tmp3 = true === isGuildStageVoiceResult;
+    }
+    const allActiveStreamsForChannel = ApplicationStreamingStore.getAllActiveStreamsForChannel(tmp);
     const found = allActiveStreamsForChannel.find((ownerId) => ownerId.ownerId !== closure_0);
     if (null != found) {
       const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(found);
@@ -27,47 +47,52 @@ export default function useVoicePanelDockPIPStream(arg0) {
       if (participant != null) {
         type = participant.type;
       }
-      let tmp15 = type === ParticipantTypes.STREAM && null != participant.streamId;
-      if (!tmp15) {
-        tmp15 = tmp17;
+      let tmp19 = type === ParticipantTypes.STREAM && null != participant.streamId;
+      if (!tmp19) {
+        tmp19 = tmp21;
       }
-      const obj3 = {
+      const obj = {
         streamKey: encodeStreamKeyResult,
         ownerId: found.ownerId,
-        isWatching: tmp15,
-        isConnecting: !tmp15,
-        hasEnded: found.state === ApplicationStreamStates.ENDED || found.state === tmp16.FAILED,
+        isWatching: tmp19,
+        isConnecting: !tmp19,
+        hasEnded: found.state === ApplicationStreamStates.ENDED || found.state === tmp20.FAILED,
+        isAutoWatchChannel: tmp3,
       };
-      return obj3;
+      return obj;
     } else {
       let found1;
-      if (!VoicePanelDockPIPWatchPromptStore.isDismissed()) {
-        const allApplicationStreamsForChannel = ApplicationStreamingStore.getAllApplicationStreamsForChannel(tmp);
-        found1 = allApplicationStreamsForChannel.find((ownerId) => {
-          let tmp = ownerId.ownerId !== closure_0;
-          if (tmp) {
-            tmp = !VoicePanelDockPIPWatchPromptStore.hasWatched(ownerId.ownerId);
-          }
-          return tmp;
-        });
+      if (!tmp3) {
+        if (!VoicePanelDockPIPWatchPromptStore.isDismissed()) {
+          const allApplicationStreamsForChannel = ApplicationStreamingStore.getAllApplicationStreamsForChannel(tmp);
+          found1 = allApplicationStreamsForChannel.find((ownerId) => {
+            let tmp = ownerId.ownerId !== closure_0;
+            if (tmp) {
+              tmp = !VoicePanelDockPIPWatchPromptStore.hasWatched(ownerId.ownerId);
+            }
+            return tmp;
+          });
+        }
       }
       let encodeStreamKeyResult1;
       if (null != found1) {
         encodeStreamKeyResult1 = StreamKeyUtils.encodeStreamKey(found1);
       }
-      const obj5 = {
+      const obj4 = {
         streamKey: encodeStreamKeyResult1,
         ownerId: null,
         isWatching: false,
         isConnecting: false,
         hasEnded: false,
+        isAutoWatchChannel: null,
       };
       let ownerId;
       if (found1 != null) {
         ownerId = found1.ownerId;
       }
-      obj5.ownerId = ownerId;
-      return obj5;
+      obj4.ownerId = ownerId;
+      obj4.isAutoWatchChannel = tmp3;
+      return obj4;
     }
   });
 }

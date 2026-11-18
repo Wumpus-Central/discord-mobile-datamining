@@ -1,6 +1,7 @@
 // discord_app/modules/display_name_styles/native/useDisplayNameStylesFont.tsx
 import DisplayNameFont from "../../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import useDisplayNameStylesEnabled from "../hooks/useDisplayNameStylesEnabled.tsx";
+import useDisplayNameFontsAvailable from "useDisplayNameFontsAvailable.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const DISPLAY_NAME_STYLES_FONT_FAMILY_MAP = {
@@ -26,9 +27,13 @@ export function useDisplayNameStylesFont(arg0) {
     ignoreDisabledStylesSetting = false;
   }
   const obj = useDisplayNameStylesEnabled;
-  if (obj.useDisplayNameStylesEnabled({ location: "useDisplayNameStylesFont-native" })) {
+  const displayNameStylesEnabled = obj.useDisplayNameStylesEnabled({ location: "useDisplayNameStylesFont-native" });
+  useDisplayNameFontsAvailable;
+  if (displayNameStylesEnabled) {
     if (null != displayNameStyles) {
-      return obj[displayNameStyles.fontId];
+      if (tmp3) {
+        return obj[displayNameStyles.fontId];
+      }
     }
   }
 }

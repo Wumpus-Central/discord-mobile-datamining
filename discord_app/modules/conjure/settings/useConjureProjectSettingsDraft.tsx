@@ -624,8 +624,8 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -646,8 +646,8 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                   if (!first3) {
                     let result = null;
                     if (closure_32) {
-                      result = tmp4(tmp103[18]).conjureProjectNameError(trimmed);
-                      const obj3 = tmp4(tmp103[18]);
+                      result = tmp4(tmp92[18]).conjureProjectNameError(trimmed);
+                      const obj2 = tmp4(tmp92[18]);
                     }
                     if (null != result) {
                       closure_2_22(result);
@@ -659,14 +659,14 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                       if (closure_32) {
                         obj6.name = trimmed;
                       }
-                      let tmp54 = closure_33;
+                      let tmp43 = closure_33;
                       if (closure_33) {
                         obj6.flags = flags;
                       }
                       if (closure_31) {
                         obj6.share_links_enabled = first2;
                       }
-                      let tmp58 = closure_34;
+                      let tmp47 = closure_34;
                       if (closure_34) {
                         items = [];
                         HermesBuiltin.arraySpread(first1, 0);
@@ -675,20 +675,20 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                       if (closure_36) {
                         obj6.uses_preview_app = flag;
                       }
-                      let tmp64 = null == tmp111.guild_id;
-                      if (tmp64) {
-                        tmp64 = null != guild_id;
+                      let tmp53 = null == tmp111.guild_id;
+                      if (tmp53) {
+                        tmp53 = null != guild_id;
                       }
-                      if (tmp64) {
-                        if (!tmp58) {
-                          if (tmp54) {
-                            tmp54 = isGuildCollaboration;
+                      if (tmp53) {
+                        if (!tmp47) {
+                          if (tmp43) {
+                            tmp43 = isGuildCollaboration;
                           }
-                          tmp58 = tmp54;
+                          tmp47 = tmp43;
                         }
-                        tmp64 = tmp58;
+                        tmp53 = tmp47;
                       }
-                      if (tmp64) {
+                      if (tmp53) {
                         obj6.guild_id = guild_id;
                       }
                       closure_21(true);
@@ -698,7 +698,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                       if (changed) {
                         guild_id = 3;
                         c4 = 1;
-                        const obj7 = { value: tmp4(tmp103[19]).updateProjectSettings(tmp4, obj6), done: false };
+                        const obj7 = { value: tmp4(tmp92[19]).updateProjectSettings(tmp4, obj6), done: false };
                         return obj7;
                       }
                     }
@@ -711,11 +711,11 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
           } else if (1 === tmp8) {
             c3 = 0;
             closure_128_21(false);
-            throw tmp103;
+            throw tmp92;
           } else if (2 === tmp8) {
             c3 = 1;
-            const intl = tmp4(tmp103[16]).intl;
-            closure_128_24(intl.string(guild_id(tmp103[17])["9JPr8h"]));
+            const intl = tmp4(tmp92[16]).intl;
+            closure_128_24(intl.string(guild_id(tmp92[17])["9JPr8h"]));
             c3 = 0;
             closure_128_21(false);
             c4 = 3;
@@ -727,15 +727,15 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
             c3 = 0;
             closure_128_21(false);
             c4 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj = { value, done: true };
+            return obj;
           } else {
             closure_128_9(closure_128_29);
-            const obj = { flags: closure_128_12, roleIds: null };
+            const obj8 = { flags: closure_128_12, roleIds: null };
             const items1 = [];
             HermesBuiltin.arraySpread(closure_128_14, 0);
-            obj.roleIds = items1;
-            closure_128_10(obj);
+            obj8.roleIds = items1;
+            closure_128_10(obj8);
             if (null != closure_128_17) {
               closure_128_16.setShareLinksEnabled(closure_128_17);
             }
@@ -744,22 +744,22 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
           }
           if (closure_128_3()) {
             if (!closure_128_6()) {
-              const intl3 = tmp4(tmp103[16]).intl;
-              closure_128_25(intl3.string(guild_id(tmp103[17])["9JPr8h"]));
-              const tmp86 = "experimental";
+              const intl3 = tmp4(tmp92[16]).intl;
+              closure_128_25(intl3.string(guild_id(tmp92[17])["9JPr8h"]));
+              const tmp75 = "experimental";
             }
           } else {
-            const intl2 = tmp4(tmp103[16]).intl;
-            closure_128_24(intl2.string(guild_id(tmp103[17]).XzkNBw));
+            const intl2 = tmp4(tmp92[16]).intl;
+            closure_128_24(intl2.string(guild_id(tmp92[17]).XzkNBw));
           }
           c3 = 0;
           closure_128_21(false);
           c4 = 3;
-        } catch (tmp103) {
+        } catch (tmp92) {
           if (tmp5 === c3) {
             c4 = tmp3;
-            throw tmp103;
-          } else if (tmp2 === tmp105) {
+            throw tmp92;
+          } else if (tmp2 === tmp94) {
             guild_id = tmp2;
           } else {
             guild_id = tmp;

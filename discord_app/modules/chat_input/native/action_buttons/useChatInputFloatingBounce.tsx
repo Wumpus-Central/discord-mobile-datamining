@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChatInputConstants = fn(13446);
+const ChatInputConstants = fn(12753);
 ({
   CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4,
   CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty,

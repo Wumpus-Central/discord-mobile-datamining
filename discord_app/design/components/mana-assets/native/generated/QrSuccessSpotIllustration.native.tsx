@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef16340 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-1x.png.js";
-import _modDef16341 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-2x.png.js";
-import _modDef16342 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-3x.png.js";
+import _modDef15007 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-1x.png.js";
+import _modDef15008 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-2x.png.js";
+import _modDef15009 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16340 }, 3: null };
-let obj2 = { uri: _modDef16340 };
-obj[2] = { uri: _modDef16341 };
-const obj3 = { uri: _modDef16341 };
-obj[3] = { uri: _modDef16342 };
+let obj = { 1: null, 2: { uri: _modDef15007 }, 3: null };
+let obj2 = { uri: _modDef15007 };
+obj[2] = { uri: _modDef15008 };
+const obj3 = { uri: _modDef15008 };
+obj[3] = { uri: _modDef15009 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx",

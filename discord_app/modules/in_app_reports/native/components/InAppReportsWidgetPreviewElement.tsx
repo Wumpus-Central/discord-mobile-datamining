@@ -2,10 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import UserProfileGameWidgetTypes from "../../../user_profile/UserProfileGameWidgetTypes.tsx";
-import UserProfilePersonalWidget from "../../../user_profile/UserProfilePersonalWidget.tsx";
 import UserProfileSharedStylesDefault from "../../../user_profile/native/UserProfileSharedStyles.tsx";
-import UserProfilePersonalWidgetCardDefault from "../../../user_profile/native/UserProfilePersonalWidgetCard.tsx";
 import UserProfileWidgetsBoard from "../../../user_profile/native/UserProfileWidgetsBoard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   title: { lineHeight: 16, marginBottom: 8 },
@@ -25,37 +22,29 @@ const result = size.fileFinishedImporting(
   "modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx",
 );
 
-export default function WidgetPreview(arg0) {
-  ({ widget, userId } = arg0);
+export default function WidgetPreview(widget) {
+  widget = widget.widget;
   const tmp = closure_6();
-  const tmp4 = UserProfileSharedStylesDefault();
-  if (widget instanceof UserProfilePersonalWidget.UserProfilePersonalWidget) {
-    const obj = { userId, widget, disableInteraction: true, cardStyle: null };
-    items = [tmp4.card, tmp.card];
-    obj.cardStyle = items;
-    let tmp6 = React4(UserProfilePersonalWidgetCardDefault, obj);
-  } else {
-    tmp6 = null;
-    if (tmp5Result.isGameWidget(widget)) {
-      tmp6 = null;
-      if (widget.games.length > 0) {
-        const obj2 = { userId, widget, disableInteraction: true, cardStyle: null };
-        const items1 = [tmp4.card, tmp.card];
-        obj2.cardStyle = items1;
-        tmp6 = React4(UserProfileWidgetsBoard.WidgetSection, obj2);
-      }
+  const tmp3 = UserProfileSharedStylesDefault();
+  let tmp5 = null;
+  if (obj.isGameWidget(widget)) {
+    tmp5 = null;
+    if (widget.games.length > 0) {
+      const obj2 = { userId: widget.userId, widget, disableInteraction: true, cardStyle: null };
+      items = [tmp3.card, tmp.card];
+      obj2.cardStyle = items;
+      tmp5 = React4(UserProfileWidgetsBoard.WidgetSection, obj2);
     }
-    tmp5Result = UserProfileGameWidgetTypes;
   }
-  let tmp9 = null;
-  if (null !== tmp6) {
+  let tmp7 = null;
+  if (null !== tmp5) {
     const obj3 = { style: tmp.container, children: null };
     const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "body-sm/medium", children: null };
     const intl = util.intl;
     obj4.children = intl.string(util.t.SpsnDY);
-    const items2 = [React4(Text_Text.Text, obj4), tmp6];
-    obj3.children = items2;
-    tmp9 = hasOwnProperty(View, obj3);
+    const items1 = [React4(Text_Text.Text, obj4), tmp5];
+    obj3.children = items1;
+    tmp7 = hasOwnProperty(View, obj3);
   }
-  return tmp9;
+  return tmp7;
 }

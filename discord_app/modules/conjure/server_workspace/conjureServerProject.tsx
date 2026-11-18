@@ -6,7 +6,7 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const isProjectOwner = fn(7025).isProjectOwner;
+const isProjectOwner = fn(6529).isProjectOwner;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/server_workspace/conjureServerProject.tsx");
 

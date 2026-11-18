@@ -3,8 +3,10 @@ import conjureProjectLinkCard2 from "conjureProjectLinkCard.tsx";
 import loadConjureSharedProjectDefault from "../loadConjureSharedProject.tsx";
 import conjureMessageAuthors from "../../chat/conjureMessageAuthors.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
@@ -25,8 +27,8 @@ export default function useConjureProjectLinkEmbeds(channelId) {
       const iter = item.getContentMessage().codedLinks[Symbol.iterator]();
       while (iter !== undefined) {
         ({ code, url, type } = nextResult);
-        if (type === map(memo1[7]).CodedLinkType.CONJURE_PROJECT) {
-          let tmp2Result = map(memo1[8]);
+        if (type === map(memo1[9]).CodedLinkType.CONJURE_PROJECT) {
+          let tmp2Result = map(memo1[10]);
           let result = tmp2Result.conjureProjectLinkTicket(url);
           let str = result;
           let tmp6 = result;
@@ -61,9 +63,9 @@ export default function useConjureProjectLinkEmbeds(channelId) {
   });
   channelId = channelId.channelId;
   let obj = require("initialize");
-  const items3 = [stateFromStores1];
+  const items3 = [memo2];
   const items4 = [channelId];
-  stateFromStores1 = require("initialize").useStateFromStores(
+  const stateFromStores1 = require("initialize").useStateFromStores(
     items3,
     () => {
       const channel = ChannelStore.getChannel(channelId);
@@ -79,16 +81,18 @@ export default function useConjureProjectLinkEmbeds(channelId) {
     items4,
   );
   const items5 = [stateFromStores1, channelId];
-  const memo2 = stateFromStores.useMemo(() => ({ guildId: stateFromStores1, channelId }), items5);
+  memo2 = stateFromStores.useMemo(() => ({ guildId: stateFromStores1, channelId }), items5);
   let obj2 = require("initialize");
   const items6 = [
-    ConjureSharedProjectStore,
     channelId,
+    ConjureSharedProjectStore,
+    stateFromStores1,
     ConjureProjectStore,
     UserStore,
     require("ApexExperiment").ApexExperimentStore,
-    stateFromStores1,
     memo2,
+    GuildMemberStore,
+    PermissionStore,
   ];
   const items7 = [memo1, memo2];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
@@ -131,7 +135,7 @@ export default function useConjureProjectLinkEmbeds(channelId) {
         }
         let tmp12 = "ready" === type;
         if (tmp12) {
-          tmp12 = null == tmp10.creatorName;
+          tmp12 = null == tmp10.creator;
         }
         if (tmp12) {
           let tmp7Result = conjureMessageAuthors;

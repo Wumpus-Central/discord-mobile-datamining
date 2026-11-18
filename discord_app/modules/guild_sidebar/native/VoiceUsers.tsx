@@ -46,7 +46,7 @@ const jsxProd = fn(21);
 let closure_8 = {};
 let closure_9 = [];
 let c10 = "body-sm/medium";
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_11 = createStyles.createStyles((arg0) => {
   colors = nativeDefault.colors;
   if (arg0) {
@@ -110,10 +110,10 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(9072)());
-  const obj = user(10297);
-  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(10297).useLocalSelfMuteDeaf());
-  const obj2 = user(10297);
+  const tmp3 = closure_11(channel(8483)());
+  const obj = user(9578);
+  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9578).useLocalSelfMuteDeaf());
+  const obj2 = user(9578);
   items = [GuildMemberStore];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(
@@ -164,7 +164,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(18885), obj7, user.id);
+  obj4.children = closure_6(tmp(17698), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);

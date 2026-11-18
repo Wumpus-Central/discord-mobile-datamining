@@ -1,13 +1,13 @@
 // discord_app/modules/pinot/native/PinotChannelDetailsLabel.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3387 from "../Pinot.messages.js";
+import _modDef3407 from "../Pinot.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
 const hitSlop = { top: 8, bottom: 8, left: 4, right: 8 };
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   label: {
     alignSelf: "flex-start",
@@ -43,9 +43,9 @@ export function PinotChannelDetailsLabel(channel) {
   const tmp = closure_5();
   if (obj.useIsPinotChannelLabelVisible(channel.channel, "mobile_channel_details_label")) {
     const intl = tmp2(1113).intl;
-    const stringResult = intl.string(_modDef3387.uneDIi);
+    const stringResult = intl.string(_modDef3407.uneDIi);
     const intl2 = tmp2(1113).intl;
-    stringResult1 = intl2.string(_modDef3387["01KOls"]);
+    stringResult1 = intl2.string(_modDef3407["01KOls"]);
     const obj2 = {
       onPress: function handlePress() {
         ToastActionCreatorsDefault.open("PINOT_CHANNEL_DETAILS_LABEL", { text: stringResult1 });
@@ -58,13 +58,13 @@ export function PinotChannelDetailsLabel(channel) {
       children: null,
     };
     const obj3 = { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult };
-    obj2.children = jsx(tmp2(5923).Text, {
+    obj2.children = jsx(tmp2(5414).Text, {
       variant: "body-xs/medium",
       color: "none",
       style: tmp.text,
       children: stringResult,
     });
-    return jsx(tmp2(7438).PressableOpacity, {
+    return jsx(tmp2(6941).PressableOpacity, {
       onPress: function handlePress() {
         ToastActionCreatorsDefault.open("PINOT_CHANNEL_DETAILS_LABEL", { text: stringResult1 });
       },
@@ -78,5 +78,5 @@ export function PinotChannelDetailsLabel(channel) {
   } else {
     return null;
   }
-  obj = stringResult1(12528);
+  obj = stringResult1(11811);
 }

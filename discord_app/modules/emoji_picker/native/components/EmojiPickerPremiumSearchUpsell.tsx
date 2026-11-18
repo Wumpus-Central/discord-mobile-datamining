@@ -17,7 +17,7 @@ const PremiumConstants = fn(1390);
   SubscriptionPlans: closure_10,
 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_12 = createStyles.createStyles({ nitroIcon: { marginRight: 8, alignSelf: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerPremiumSearchUpsell.tsx");
@@ -49,11 +49,11 @@ export function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
 export function useEmojiPickerPremiumSearchUpsellClick(arg0) {
   let onPress;
   ({ analyticsLocations, useTier0UpsellContent } = arg0);
-  const obj = onPress(11137);
+  const obj = onPress(10419);
   const tmp = usePremiumFeatureUpsellGetNitroDefault(
     useTier0UpsellContent,
     obj.usePremiumUpsellConfig(
-      onPress(11627).getUpsellType(onPress(9048).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
+      onPress(10909).getUpsellType(onPress(8459).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
       analyticsLocations,
     ).onViewAllPerks,
     constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
@@ -77,11 +77,11 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
   let onPress;
   ({ analyticsLocations, useTier0UpsellContent } = guildId);
   const tmp = closure_12();
-  let obj = onPress(11137);
+  let obj = onPress(10419);
   const tmp5 = usePremiumFeatureUpsellGetNitroDefault(
     useTier0UpsellContent,
     obj.usePremiumUpsellConfig(
-      onPress(11627).getUpsellType(onPress(9048).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
+      onPress(10909).getUpsellType(onPress(8459).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
       analyticsLocations,
     ).onViewAllPerks,
     constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
@@ -123,7 +123,7 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
       obj2 = AnalyticsUtilsDefault.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
     }
   }, items1);
-  let obj2 = onPress(11627);
+  let obj2 = onPress(10909);
   const intl = onPress(1113).intl;
   if (guildId.useTier0UpsellContent) {
     let obj3 = { planName: tmp2(2174).getTierDisplayNameByPlanId(PREMIUM_MONTH_TIER_0.PREMIUM_MONTH_TIER_0) };
@@ -142,7 +142,7 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
     stringResult = string(t.pj0XBN);
   }
   obj4.ctaText = stringResult;
-  obj4.icon = jsx(onPress(9446).NitroWheelIcon, {
+  obj4.icon = jsx(onPress(8859).NitroWheelIcon, {
     size: "sm",
     color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
     style: tmp.nitroIcon,

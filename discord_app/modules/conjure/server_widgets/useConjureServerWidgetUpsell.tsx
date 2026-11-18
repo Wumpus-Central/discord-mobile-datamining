@@ -4,7 +4,7 @@ import useConjureServerWidgetOffersDefault from "useConjureServerWidgetOffers.ts
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
-import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
+import ConjureServerWidgetStore from "ConjureServerWidgetStore.tsx";
 
 const require = globalThis.__r;
 
@@ -58,15 +58,15 @@ export function useConjureServerWidgetUpsellDetails(userId, widget, guildId) {
   let obj = require("initialize");
   const getOrFetchApplication = require("useGetOrFetchApplications").useGetOrFetchApplication(applicationId);
   const obj2 = require("useGetOrFetchApplications");
-  const items1 = [ConjureProjectStore];
+  const items1 = [ConjureServerWidgetStore];
   const items2 = [applicationId];
   const stateFromStores1 = require("initialize").useStateFromStores(
     items1,
     () => {
-      const result = ConjureProjectStore.findProjectByApplicationId(applicationId);
+      const project = ConjureServerWidgetStore.getProject(applicationId);
       let owner_user_id;
-      if (result != null) {
-        owner_user_id = result.owner_user_id;
+      if (project != null) {
+        owner_user_id = project.owner_user_id;
       }
       return owner_user_id;
     },
@@ -74,7 +74,7 @@ export function useConjureServerWidgetUpsellDetails(userId, widget, guildId) {
   );
   const obj3 = require("initialize");
   const messageAuthorUser = require("conjureMessageAuthors").useMessageAuthorUser(stateFromStores1);
-  const tmp5 = applicationId(11010)(userId, applicationId);
+  const tmp5 = applicationId(10292)(userId, applicationId);
   dependencyMap = tmp5;
   [][0] = tmp5;
   let tmp7 = null;

@@ -42,7 +42,7 @@ export function openAcceptMessageRequestConfirmModal(arg0) {
 }
 export function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13958, dependencyMap.paths), "SpamMessageHamActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13260, dependencyMap.paths), "SpamMessageHamActionSheet", {
     channel,
     onConfirm,
     onCancel,

@@ -7,12 +7,12 @@ let closure_2 = 3 * DurationsDefault.Millis.DAY;
 let closure_3 = 2 * DurationsDefault.Millis.DAY;
 const HOUR = DurationsDefault.Millis.HOUR;
 const module_560 = fn(560);
-fn(5500);
+fn(5013);
 const obj3 = { name: "shared-spaces-warning-storage", storage: null };
-const module_5500 = fn(5500);
-obj3.storage = module_5500.createJSONStorage(() => require("LocalStorageWrapper"));
+const module_5013 = fn(5013);
+obj3.storage = module_5013.createJSONStorage(() => require("LocalStorageWrapper"));
 const obj7 = module_560.create(
-  module_5500.persist(
+  module_5013.persist(
     () => ({
       channelDismissTimestamps: {},
       userDismissTimestamps: {},

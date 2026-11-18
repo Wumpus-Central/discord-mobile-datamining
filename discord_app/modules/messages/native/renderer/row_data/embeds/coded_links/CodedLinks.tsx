@@ -2,8 +2,8 @@
 import GlobalUtils from "../../../../../../../utils/GlobalUtils.tsx";
 import CodedLink from "../../../../../../coded_links/CodedLink.tsx";
 import ApplicationCodedLink from "../../../../../../coded_links/ApplicationCodedLink.tsx";
-import storefrontCodedLink from "../../../../../../slayer_storefront/storefrontCodedLink.tsx";
 import conjureProjectLink from "../../../../../../conjure/share/conjureProjectLink.tsx";
+import storefrontCodedLink from "../../../../../../slayer_storefront/storefrontCodedLink.tsx";
 import ExperimentEmbed from "ExperimentEmbed.tsx";
 import createAppMessageEmbed from "../../../../../../applications/message_embed/native/createAppMessageEmbed.tsx";
 import createActivityMessageEmbed from "../../../../../../applications/message_embed/native/createActivityMessageEmbed.tsx";
@@ -29,7 +29,6 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx");
 
 export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
-  let guild_id = channel;
   const theme = forcedTheme;
   if (null != message.author) {
     if (0 !== message2.codedLinks.length) {
@@ -38,7 +37,7 @@ export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
       return codedLinks.map((item) => {
         ({ type, code, url } = item);
         if (obj.isApplicationCodedLink(type)) {
-          if (null == guild_id) {
+          if (null == channel) {
             return null;
           } else {
             if (tmpResult.isApplicationCodedLinkMobileSupported(type)) {
@@ -46,7 +45,7 @@ export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
               if (null == applicationCodedLinkData) {
                 return null;
               } else {
-                const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp46, message, theme };
+                const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp45, message, theme };
                 const appLinkGateResult = createAppMessageEmbed.getAppLinkGateResult(obj2);
                 if ("unavailable" === appLinkGateResult.state) {
                   return null;
@@ -97,11 +96,11 @@ export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
             isStaffResult = isStaffPersonalResult;
           }
           if (!isStaffResult) {
-            let tmp38 = null != GuildStore.getGuild("943265993613008967");
-            if (tmp38) {
-              tmp38 = !LurkingStore.isLurking("943265993613008967");
+            let tmp37 = null != GuildStore.getGuild("943265993613008967");
+            if (tmp37) {
+              tmp37 = !LurkingStore.isLurking("943265993613008967");
             }
-            isStaffResult = tmp38;
+            isStaffResult = tmp37;
           }
           let buildOverrideEmbed = null;
           if (isStaffResult) {
@@ -137,25 +136,21 @@ export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
                         if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
                           if (CodedLink.CodedLinkType.USER_WISHLIST !== type) {
                             if (CodedLink.CodedLinkType.USER_PROFILE === type) {
-                              guild_id = undefined;
-                              if (guild_id != null) {
-                                guild_id = guild_id.guild_id;
-                              }
-                              return UserProfileEmbed.createUserProfileEmbed(code, guild_id, theme);
+                              return UserProfileEmbed.createUserProfileEmbed(code, channel, theme);
                             } else if (CodedLink.CodedLinkType.CONJURE_PROJECT === type) {
                               const tmp8 = createConjureProjectLinkEmbedDefault;
                               const result = conjureProjectLink.conjureProjectLinkTicket(url);
-                              let guild_id1;
-                              if (guild_id != null) {
-                                guild_id1 = tmp11.guild_id;
+                              let guild_id;
+                              if (channel != null) {
+                                guild_id = channel.guild_id;
                               }
-                              if (guild_id1 == null) {
-                                guild_id1 = null;
+                              if (guild_id == null) {
+                                guild_id = null;
                               }
-                              const obj7 = { guildId: guild_id1, channelId: null };
+                              const obj7 = { guildId: guild_id, channelId: null };
                               let id;
-                              if (guild_id != null) {
-                                id = tmp11.id;
+                              if (channel != null) {
+                                id = channel.id;
                               }
                               if (id == null) {
                                 id = null;

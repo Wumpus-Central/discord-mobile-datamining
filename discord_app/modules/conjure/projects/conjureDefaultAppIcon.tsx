@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/conjureDefaultAppIcon.tsx
 import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
-import rawDefault from "../../../../_runtime/10084_raw.js";
+import rawDefault from "../../../../_runtime/09366_raw.js";
 import GuildProfileConstants from "../../guild_profile/GuildProfileConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -9,17 +9,17 @@ const BANNER_PALETTE_PRESETS = GuildProfileConstants.BANNER_PALETTE_PRESETS;
 let c4 = 0.12156862745098039;
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureDefaultAppIcon.tsx");
 
-export function getConjureDefaultAppIcon(str, str2) {
+export function getConjureDefaultAppIcon(id, name) {
   let num = 0;
   let num2 = 0;
-  if (0 < str.length) {
+  if (0 < id.length) {
     do {
-      num2 = (31 * num2 + str.charCodeAt(num)) >>> 0;
+      num2 = (31 * num2 + id.charCodeAt(num)) >>> 0;
       num = num + 1;
-      length = str.length;
+      length = id.length;
     } while (num < length);
   }
-  if (null == str2) {
+  if (null == name) {
     const obj3 = { color: tmp2, character: null };
     let toLocaleUpperCaseResult;
     if (undefined != null) {
@@ -31,7 +31,7 @@ export function getConjureDefaultAppIcon(str, str2) {
     obj3.character = toLocaleUpperCaseResult;
     return obj3;
   } else {
-    const replaced = str2.replace(
+    const replaced = name.replace(
       /^(?:[\t-\r \xA0\xAD\u0600-\u0605\u061C\u06DD\u070F\u0890\u0891\u08E2\u1680\u180E\u2000-\u200F\u2028-\u202F\u205F-\u2064\u2066-\u206F\u3000\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD80D[\uDC30-\uDC3F]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F])+/,
       "",
     );
@@ -56,8 +56,8 @@ export function getConjureDefaultAppIcon(str, str2) {
     const obj = rawDefault();
   }
 }
-export function getConjureDefaultAppIconColors(color, token) {
-  const tmp3 = _modDef671(token);
+export function getConjureDefaultAppIconColors(color, internal) {
+  const tmp3 = _modDef671(internal);
   const tmp4 = _modDef671(color);
   const tmp5 = _modDef671(color);
   const mixResult = _modDef671.mix(tmp3, tmp5, c4, "rgb");

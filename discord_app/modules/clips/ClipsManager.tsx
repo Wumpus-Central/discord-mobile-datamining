@@ -146,8 +146,8 @@ let closure_26 = async function _probeHardware() {
     videoEncoders: closure_131_6,
   };
 };
-const getSystemAnalyticsInfo = fn(6087).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8856);
+const getSystemAnalyticsInfo = fn(5583).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8353);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15,
   CLIPS_DEFAULT_SETTINGS_VERSION: closure_16,
@@ -157,8 +157,8 @@ const ClipsConstants = fn(8856);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6801).StreamTypes;
-const Features = fn(6072).Features;
+const StreamTypes = fn(6305).StreamTypes;
+const Features = fn(5568).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -391,7 +391,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(5135).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(4648).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -471,7 +471,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(5135).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(4648).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };

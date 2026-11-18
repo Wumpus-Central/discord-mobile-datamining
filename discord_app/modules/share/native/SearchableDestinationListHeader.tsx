@@ -4,13 +4,13 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Link from "../../../../_runtime/01503_Link.js";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7510 from "../../../../_runtime/metro/07510__.js";
+import _mod7013 from "../../../../_runtime/metro/07013__.js";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const obj2 = {
   headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 },
   headerRightContainer: null,
@@ -78,7 +78,7 @@ export default function SearchableDestinationListHeader(arg0) {
     headerStatusBarHeight = num + nativeDefault.space.PX_8;
   }
   obj3.headerStatusBarHeight = headerStatusBarHeight;
-  return jsx(_mod7510.Header, {
+  return jsx(_mod7013.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

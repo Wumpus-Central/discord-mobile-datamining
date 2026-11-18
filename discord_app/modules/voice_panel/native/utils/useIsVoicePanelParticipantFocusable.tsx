@@ -53,7 +53,7 @@ function isVoicePanelParticipantFocusable(c0, c1, id2) {
     }
   }
 }
-const CallConstants = fn(5977);
+const CallConstants = fn(5473);
 ({
   isActivityParticipant: closure_6,
   isStreamParticipant: metroImportDefault,

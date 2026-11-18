@@ -3,8 +3,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 const require = fn;
-let closure_5 = fn(8490).TrackUserProfileEditActions;
-const widgetShowsGameDetails = fn(7365).widgetShowsGameDetails;
+let closure_5 = fn(7981).TrackUserProfileEditActions;
+const widgetShowsGameDetails = fn(6870).widgetShowsGameDetails;
 const jsx = fn(21).jsx;
 const constants = { REORDER_GAMES: "reorder-games", REMOVE: "remove-widget" };
 const size = fn(2);
@@ -13,177 +13,181 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export default function UserProfileWidgetEditOptionsActionSheet(widget) {
   widget = widget.widget;
   const returnFocusRef = widget.returnFocusRef;
-  let header;
+  let widgetTitle;
   noop = undefined;
-  if (widget instanceof widget(header[5]).UserProfilePersonalWidget) {
-    header = widget.header;
-  } else {
-    header = tmp(tmp2[6]).getWidgetTitle(widget);
-    const tmpResult = tmp(tmp2[6]);
-  }
+  widgetTitle = widget(widgetTitle[5]).getWidgetTitle(widget);
   noop = noop.useRef(true);
   items = [returnFocusRef];
   const effect = noop.useEffect(
     () => () => {
       if (ref2.current) {
         const obj2 = { ref, delay: 100 };
-        const result = widget(header[13]).setAccessibilityFocus(obj2);
-        const obj = widget(header[13]);
+        const result = widget(widgetTitle[12]).setAccessibilityFocus(obj2);
+        const obj = widget(widgetTitle[12]);
       }
     },
     items,
   );
-  let isGameWidgetResult = widget(header[10]).isGameWidget(widget);
+  let obj = widget(widgetTitle[5]);
+  let isGameWidgetResult = widget(widgetTitle[9]).isGameWidget(widget);
   if (isGameWidgetResult) {
-    isGameWidgetResult = tmp(tmp2[6]).widgetMaxGames(widget.type) > 1;
-    const tmpResult5 = tmp(tmp2[6]);
+    isGameWidgetResult = tmp(tmp2[5]).widgetMaxGames(widget.type) > 1;
+    const tmpResult = tmp(tmp2[5]);
   }
   const items1 = [];
   if (isGameWidgetResult) {
-    let obj = { key: constants.REORDER_GAMES, label: null, IconComponent: null, variant: "default", disabled: null };
-    let intl = tmp(tmp2[9]).intl;
-    obj.label = intl.string(tmp(tmp2[9]).t["0dOFq+"]);
-    obj.IconComponent = tmp(tmp2[11]).ArrowsUpDownIcon;
-    obj.disabled = tmp(tmp2[6]).getUniqueWidgetGames(widget).length < 2;
-    items1.push(obj);
-    const tmpResult6 = tmp(tmp2[6]);
+    let obj3 = { key: constants.REORDER_GAMES, label: null, IconComponent: null, variant: "default", disabled: null };
+    let intl = tmp(tmp2[8]).intl;
+    obj3.label = intl.string(tmp(tmp2[8]).t["0dOFq+"]);
+    obj3.IconComponent = tmp(tmp2[10]).ArrowsUpDownIcon;
+    obj3.disabled = tmp(tmp2[5]).getUniqueWidgetGames(widget).length < 2;
+    items1.push(obj3);
+    const tmpResult2 = tmp(tmp2[5]);
   }
-  let obj2 = { key: constants.REMOVE, label: null, IconComponent: null, variant: "danger" };
-  const intl2 = tmp(tmp2[9]).intl;
-  obj2.label = intl2.string(widget(header[9]).t.Mm07Yc);
-  obj2.IconComponent = widget(header[12]).TrashIcon;
-  items1.push(obj2);
-  let obj3 = {
-    header: jsx(widget(header[21]).BottomSheetTitleHeader, { title: header }),
+  let obj4 = { key: constants.REMOVE, label: null, IconComponent: null, variant: "danger" };
+  const intl2 = tmp(tmp2[8]).intl;
+  obj4.label = intl2.string(widget(widgetTitle[8]).t.Mm07Yc);
+  obj4.IconComponent = widget(widgetTitle[11]).TrashIcon;
+  items1.push(obj4);
+  let obj5 = {
+    header: jsx(widget(widgetTitle[20]).BottomSheetTitleHeader, { title: widgetTitle }),
     dismissAccessibilityLabel: null,
     children: null,
   };
-  const intl3 = tmp(tmp2[9]).intl;
-  obj3.dismissAccessibilityLabel = intl3.formatToPlainString(widget(header[9]).t.X5Fk6g, { widgetName: header });
-  const tmpResult4 = widget(header[10]);
-  obj3.children = jsx(widget(header[22]).TableRowGroup, {
+  const intl3 = tmp(tmp2[8]).intl;
+  obj5.dismissAccessibilityLabel = intl3.formatToPlainString(widget(widgetTitle[8]).t.X5Fk6g, {
+    widgetName: widgetTitle,
+  });
+  let obj2 = widget(widgetTitle[9]);
+  obj5.children = jsx(widget(widgetTitle[21]).TableRowGroup, {
     hasIcons: true,
     children: items1.map((label) => {
       let obj = {
         label: label.label,
         variant: label.variant,
         disabled: label.disabled,
-        icon: jsx(widget(header[23]).TableRow.Icon, { IconComponent: label.IconComponent, variant: label.variant }),
+        icon: jsx(widget(widgetTitle[22]).TableRow.Icon, {
+          IconComponent: label.IconComponent,
+          variant: label.variant,
+        }),
         onPress() {
           if (constants2.REORDER_GAMES === label.key) {
             if (obj.isGameWidget(widget)) {
               closure_3.current = false;
-              closure_1_1(5546).hideActionSheet(label(10832).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-              let obj2 = closure_1_1(5546);
+              closure_1_1(5037).hideActionSheet(label(10125).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              let obj2 = closure_1_1(5037);
               const tmp9 = closure_1_6(widget.type);
-              const openLazy = closure_1_1(5546).openLazy;
+              const openLazy = closure_1_1(5037).openLazy;
               const tmp2Result = label(2121);
               if (tmp9) {
                 const obj3 = { widgetType: widget.type, returnFocusRef };
                 openLazy(
-                  tmp2Result(10836, dependencyMap.paths),
+                  tmp2Result(10129, dependencyMap.paths),
                   "UserProfileWidgetGameDetailsReorderActionSheet",
                   obj3,
                 );
               } else {
                 const obj4 = { widgetType: widget.type, returnFocusRef };
                 openLazy(
-                  tmp2Result(10858, dependencyMap.paths),
+                  tmp2Result(10145, dependencyMap.paths),
                   "UserProfileWidgetGameCoverGridReorderActionSheet",
                   obj4,
                 );
               }
-              const tmp10 = closure_1_1(5546);
+              const tmp10 = closure_1_1(5037);
             }
-            obj = label(7364);
+            obj = label(6869);
           } else if (tmp.REMOVE === key) {
             closure_3.current = false;
-            closure_1_1(5546).hideActionSheet(label(10832).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-            const obj5 = closure_1_1(5546);
+            closure_1_1(5037).hideActionSheet(label(10125).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+            const obj5 = closure_1_1(5037);
             const obj7 = {
-              widgetName: header,
+              widgetName: widgetTitle,
               onConfirm() {
-                const result = profileEditAnalyticsOptions(10822).removeWidgetFromPending(profileEditAnalyticsOptions);
-                const obj = profileEditAnalyticsOptions(10822);
-                const obj2 = profileEditAnalyticsOptions(8557);
+                const result = profileEditAnalyticsOptions(10116).removeWidgetFromPending(profileEditAnalyticsOptions);
+                const obj = profileEditAnalyticsOptions(10116);
+                const obj2 = profileEditAnalyticsOptions(8048);
                 const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                 const result1 = obj2.trackUserProfileEditAction({
                   userId: id.getId(),
                   action: constants.WIDGET_REMOVED,
                 });
-                const AccessibilityAnnouncer = profileEditAnalyticsOptions(5319).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = profileEditAnalyticsOptions(4832).AccessibilityAnnouncer;
                 const intl = profileEditAnalyticsOptions(1113).intl;
                 AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1113).t.zzsK7h));
               },
               onDismissWithoutRemoving() {
-                return profileEditAnalyticsOptions(6329).setAccessibilityFocus({ ref, delay: 100 });
+                return profileEditAnalyticsOptions(5831).setAccessibilityFocus({ ref, delay: 100 });
               },
             };
-            label(10859).confirmRemoveWidget(obj7);
-            const obj6 = label(10859);
+            label(10146).confirmRemoveWidget(obj7);
+            const obj6 = label(10146);
           }
         },
       };
       return jsx(
-        widget(header[23]).TableRow,
+        widget(widgetTitle[22]).TableRow,
         {
           label: label.label,
           variant: label.variant,
           disabled: label.disabled,
-          icon: jsx(widget(header[23]).TableRow.Icon, { IconComponent: label.IconComponent, variant: label.variant }),
+          icon: jsx(widget(widgetTitle[22]).TableRow.Icon, {
+            IconComponent: label.IconComponent,
+            variant: label.variant,
+          }),
           onPress() {
             if (constants2.REORDER_GAMES === label.key) {
               if (obj.isGameWidget(widget)) {
                 closure_3.current = false;
-                closure_1_1(5546).hideActionSheet(label(10832).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-                let obj2 = closure_1_1(5546);
+                closure_1_1(5037).hideActionSheet(label(10125).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+                let obj2 = closure_1_1(5037);
                 const tmp9 = closure_1_6(widget.type);
-                const openLazy = closure_1_1(5546).openLazy;
+                const openLazy = closure_1_1(5037).openLazy;
                 const tmp2Result = label(2121);
                 if (tmp9) {
                   const obj3 = { widgetType: widget.type, returnFocusRef };
                   openLazy(
-                    tmp2Result(10836, dependencyMap.paths),
+                    tmp2Result(10129, dependencyMap.paths),
                     "UserProfileWidgetGameDetailsReorderActionSheet",
                     obj3,
                   );
                 } else {
                   const obj4 = { widgetType: widget.type, returnFocusRef };
                   openLazy(
-                    tmp2Result(10858, dependencyMap.paths),
+                    tmp2Result(10145, dependencyMap.paths),
                     "UserProfileWidgetGameCoverGridReorderActionSheet",
                     obj4,
                   );
                 }
-                const tmp10 = closure_1_1(5546);
+                const tmp10 = closure_1_1(5037);
               }
-              obj = label(7364);
+              obj = label(6869);
             } else if (tmp.REMOVE === key) {
               closure_3.current = false;
-              closure_1_1(5546).hideActionSheet(label(10832).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-              const obj5 = closure_1_1(5546);
+              closure_1_1(5037).hideActionSheet(label(10125).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              const obj5 = closure_1_1(5037);
               const obj7 = {
-                widgetName: header,
+                widgetName: widgetTitle,
                 onConfirm() {
                   const result =
-                    profileEditAnalyticsOptions(10822).removeWidgetFromPending(profileEditAnalyticsOptions);
-                  const obj = profileEditAnalyticsOptions(10822);
-                  const obj2 = profileEditAnalyticsOptions(8557);
+                    profileEditAnalyticsOptions(10116).removeWidgetFromPending(profileEditAnalyticsOptions);
+                  const obj = profileEditAnalyticsOptions(10116);
+                  const obj2 = profileEditAnalyticsOptions(8048);
                   const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                   const result1 = obj2.trackUserProfileEditAction({
                     userId: id.getId(),
                     action: constants.WIDGET_REMOVED,
                   });
-                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5319).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(4832).AccessibilityAnnouncer;
                   const intl = profileEditAnalyticsOptions(1113).intl;
                   AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1113).t.zzsK7h));
                 },
                 onDismissWithoutRemoving() {
-                  return profileEditAnalyticsOptions(6329).setAccessibilityFocus({ ref, delay: 100 });
+                  return profileEditAnalyticsOptions(5831).setAccessibilityFocus({ ref, delay: 100 });
                 },
               };
-              label(10859).confirmRemoveWidget(obj7);
-              const obj6 = label(10859);
+              label(10146).confirmRemoveWidget(obj7);
+              const obj6 = label(10146);
             }
           },
         },
@@ -191,8 +195,8 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
       );
     }),
   });
-  return jsx(widget(header[20]).ActionSheet, {
-    header: jsx(widget(header[21]).BottomSheetTitleHeader, { title: header }),
+  return jsx(widget(widgetTitle[19]).ActionSheet, {
+    header: jsx(widget(widgetTitle[20]).BottomSheetTitleHeader, { title: widgetTitle }),
     dismissAccessibilityLabel: null,
     children: null,
   });

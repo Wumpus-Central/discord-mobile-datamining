@@ -42,14 +42,11 @@ export function resolveServerThemeConfig(inExperiment, gatesApex, arg2) {
   }
   return tmp;
 }
-export function getServerThemeEnabled(guildId, GuildPowerupsConstants) {
-  let currentConfig = experiment.getCurrentConfig(
-    { guildId, location: GuildPowerupsConstants },
-    { autoTrackExposure: false },
-  );
+export function getServerThemeEnabled(guildId, location) {
+  let currentConfig = experiment.getCurrentConfig({ guildId, location }, { autoTrackExposure: false });
   if (null != guildId) {
     const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
-    const obj2 = { guildId, location: GuildPowerupsConstants };
+    const obj2 = { guildId, location };
     let defaultConfig = ServerThemeApexShadowExperiment.getConfig(obj2);
   } else {
     defaultConfig = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment.definition.defaultConfig;
@@ -62,20 +59,14 @@ export function getServerThemeEnabled(guildId, GuildPowerupsConstants) {
   }
   return currentConfig.enabled;
 }
-export function useServerThemeEnabled(guildId, useGuildPowerupNewPerkMarketingVersion) {
-  experiment = experiment.useExperiment(
-    { guildId, location: useGuildPowerupNewPerkMarketingVersion },
-    { autoTrackExposure: false },
-  );
+export function useServerThemeEnabled(guildId, location) {
+  experiment = experiment.useExperiment({ guildId, location }, { autoTrackExposure: false });
   const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
   let tmp3 = guildId;
   if (guildId == null) {
     tmp3 = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  let defaultConfig = ServerThemeApexShadowExperiment.useConfig({
-    guildId: tmp3,
-    location: useGuildPowerupNewPerkMarketingVersion,
-  });
+  let defaultConfig = ServerThemeApexShadowExperiment.useConfig({ guildId: tmp3, location });
   if (!experiment.inExperiment) {
     if (null == guildId) {
       defaultConfig = experiment.definition.defaultConfig;
@@ -84,14 +75,11 @@ export function useServerThemeEnabled(guildId, useGuildPowerupNewPerkMarketingVe
   }
   return experiment.enabled;
 }
-export function getServerThemeRollbackEnabled(guildId, GuildPowerupsManager) {
-  let currentConfig = experiment.getCurrentConfig(
-    { guildId, location: GuildPowerupsManager },
-    { autoTrackExposure: false },
-  );
+export function getServerThemeRollbackEnabled(guildId, location) {
+  let currentConfig = experiment.getCurrentConfig({ guildId, location }, { autoTrackExposure: false });
   if (null != guildId) {
     const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
-    const obj2 = { guildId, location: GuildPowerupsManager };
+    const obj2 = { guildId, location };
     let defaultConfig = ServerThemeApexShadowExperiment.getConfig(obj2);
   } else {
     defaultConfig = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment.definition.defaultConfig;
@@ -104,20 +92,14 @@ export function getServerThemeRollbackEnabled(guildId, GuildPowerupsManager) {
   }
   return currentConfig.rollbackEnabled;
 }
-export function useServerThemeRollbackEnabled(guildId, useGuildPowerupNewPerkMarketingVersion) {
-  experiment = experiment.useExperiment(
-    { guildId, location: useGuildPowerupNewPerkMarketingVersion },
-    { autoTrackExposure: false },
-  );
+export function useServerThemeRollbackEnabled(guildId, useMarketablePowerupPerks) {
+  experiment = experiment.useExperiment({ guildId, location: useMarketablePowerupPerks }, { autoTrackExposure: false });
   const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
   let tmp3 = guildId;
   if (guildId == null) {
     tmp3 = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  let defaultConfig = ServerThemeApexShadowExperiment.useConfig({
-    guildId: tmp3,
-    location: useGuildPowerupNewPerkMarketingVersion,
-  });
+  let defaultConfig = ServerThemeApexShadowExperiment.useConfig({ guildId: tmp3, location: useMarketablePowerupPerks });
   if (!experiment.inExperiment) {
     if (null == guildId) {
       defaultConfig = experiment.definition.defaultConfig;

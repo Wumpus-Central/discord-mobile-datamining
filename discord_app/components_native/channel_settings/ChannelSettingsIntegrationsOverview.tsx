@@ -23,7 +23,7 @@ function LinkedLobbyFormSection(channel) {
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7269).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(6773).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -35,16 +35,16 @@ function LinkedLobbyFormSection(channel) {
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(7453).TableRow, obj4);
-    tmp5 = closure_6(tmp(7756).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(6956).TableRow, obj4);
+    tmp5 = closure_6(tmp(7259).TableRowGroup, obj3);
   }
   return tmp5;
 }
-fn(5163).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+fn(4676).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
 const ChannelSettingsSections = fn(1072).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const obj2 = {
   screenContainer: {
     flex: 1,

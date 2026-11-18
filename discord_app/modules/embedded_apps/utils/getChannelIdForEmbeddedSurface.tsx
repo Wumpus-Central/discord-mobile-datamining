@@ -19,3 +19,21 @@ export default function getChannelIdForEmbeddedSurface(type) {
     return type.channelId;
   }
 }
+export function getProxyTicketChannelId(surface) {
+  if (surface.type === EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY) {
+    let channelId = surface.ticketChannelId;
+  } else if (null != surface) {
+    const type = surface.type;
+    if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN !== type) {
+      if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
+        if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
+          if (EmbeddedSurfaceType.EmbeddedSurfaceType.INTERACTION_MODAL !== type) {
+            const OVERLAY = EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY;
+          }
+        }
+      }
+    }
+    channelId = surface.channelId;
+  }
+  return channelId;
+}

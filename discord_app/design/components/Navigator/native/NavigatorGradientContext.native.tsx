@@ -1,5 +1,5 @@
 // discord_app/design/components/Navigator/native/NavigatorGradientContext.native.tsx
-import _mod7510 from "../../../../../_runtime/metro/07510__.js";
+import _mod7013 from "../../../../../_runtime/metro/07013__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("design/components/Navigator/native/Na
 export const NavigatorGradientContext = context;
 export function NavigatorGradientProvider(children) {
   const color = children.color;
-  const headerHeight = _mod7510.useHeaderHeight();
+  const headerHeight = _mod7013.useHeaderHeight();
   items = [color, headerHeight];
   return (
     <context.Provider value={noop.useMemo(() => ({ color, headerHeight }), items)}>

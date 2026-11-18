@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_5 = createStyles.createStyles({
   container: { position: "relative", justifyContent: "center", alignItems: "center" },
   textContainer: { justifyContent: "center", width: "100%" },
@@ -21,8 +21,8 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = closure_5();
-  const logAppLauncherEmptyStateView = flag(13540).useLogAppLauncherEmptyStateView(
-    flag(11354).AppLauncherEmptyStateType.SEARCH_EMPTY,
+  const logAppLauncherEmptyStateView = flag(12847).useLogAppLauncherEmptyStateView(
+    flag(10636).AppLauncherEmptyStateType.SEARCH_EMPTY,
     showsGenericMessage.query,
   );
   items = [flag];
@@ -50,7 +50,7 @@ export default function EmptyState(showsGenericMessage) {
     stringResult = string(t.LSNOYf);
   }
   obj4.children = stringResult;
-  obj3.children = jsx(flag(5923).Text, {
+  obj3.children = jsx(flag(5414).Text, {
     style: tmp.text,
     variant: "body-sm/medium",
     color: "text-default",

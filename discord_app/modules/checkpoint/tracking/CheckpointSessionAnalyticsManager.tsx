@@ -8,25 +8,22 @@ class CheckpointSessionAnalyticsManager {
   constructor() {
     merged = Object.assign({
       sessionId: null,
-      didPlayerShareDataWithDiscord: false,
       stepName: null,
       isForeground: true,
       isStopped: true,
       sessionTimer: null,
       customizationTimer: null,
     });
+    merged[4] = { completedMs: 0, startedAt: null };
     merged[5] = { completedMs: 0, startedAt: null };
-    merged[6] = { completedMs: 0, startedAt: null };
     return merged;
   }
 }
 const prototype = CheckpointSessionAnalyticsManager.prototype;
-prototype["initialize"] = function initialize(arg0) {
-  ({ didPlayerShareDataWithDiscord, isForeground } = arg0);
+prototype["initialize"] = function initialize(isForeground) {
   this.sessionId = v1.v4();
-  this.didPlayerShareDataWithDiscord = didPlayerShareDataWithDiscord;
   this.stepName = null;
-  this.isForeground = isForeground;
+  this.isForeground = isForeground.isForeground;
   this.isStopped = false;
   this.sessionTimer = { completedMs: 0, startedAt: null };
   this.customizationTimer = { completedMs: 0, startedAt: null };
@@ -48,22 +45,15 @@ prototype["stop"] = function stop() {
   this.updateTimers();
 };
 prototype["getAnalyticsProperties"] = function getAnalyticsProperties() {
-  const self = this;
   const obj = {
     checkpoint_session_id: this.sessionId,
-    has_personalized_data: null,
-    checkpoint_availability: null,
-    checkpoint_compact_assets: null,
+    has_personalized_data: null != CheckpointStore.stats,
+    checkpoint_availability: CheckpointStore.availability,
+    checkpoint_compact_assets: CheckpointStore.compactAssets,
     time_spent_ms: null,
     customization_time_spent_ms: null,
   };
-  let didPlayerShareDataWithDiscord = this.didPlayerShareDataWithDiscord;
-  if (didPlayerShareDataWithDiscord) {
-    didPlayerShareDataWithDiscord = null != CheckpointStore.stats;
-  }
-  obj.has_personalized_data = didPlayerShareDataWithDiscord;
-  ({ availability: obj.checkpoint_availability, compactAssets: obj.checkpoint_compact_assets } = CheckpointStore);
-  const sessionTimer = self.sessionTimer;
+  const sessionTimer = this.sessionTimer;
   if (null != sessionTimer.startedAt) {
     const _Date = Date;
     let completedMs = sessionTimer.completedMs + Date.now() - sessionTimer.startedAt;
@@ -71,7 +61,7 @@ prototype["getAnalyticsProperties"] = function getAnalyticsProperties() {
     completedMs = sessionTimer.completedMs;
   }
   obj.time_spent_ms = completedMs;
-  const customizationTimer = self.customizationTimer;
+  const customizationTimer = this.customizationTimer;
   if (null != customizationTimer.startedAt) {
     const _Date2 = Date;
     let completedMs2 = customizationTimer.completedMs + Date.now() - customizationTimer.startedAt;
@@ -128,15 +118,14 @@ prototype["updateTimers"] = function updateTimers() {
 };
 let merged = Object.assign({
   sessionId: null,
-  didPlayerShareDataWithDiscord: false,
   stepName: null,
   isForeground: true,
   isStopped: true,
   sessionTimer: null,
   customizationTimer: null,
 });
+merged[4] = { completedMs: 0, startedAt: null };
 merged[5] = { completedMs: 0, startedAt: null };
-merged[6] = { completedMs: 0, startedAt: null };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/tracking/CheckpointSessionAnalyticsManager.tsx");
 

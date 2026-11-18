@@ -2,7 +2,7 @@
 import autocompleter_sortByMatchScoreDefault from "sortByMatchScore.tsx";
 import AutocompleterDefault from "Autocompleter.tsx";
 import AutocompleterConstants2 from "createAutocompleterResult.tsx";
-import _modDef10685 from "findNextSelectedResult.tsx";
+import _modDef9966 from "findNextSelectedResult.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 import AutocompleterConstants from "AutocompleterConstants.tsx";
 
@@ -14,5 +14,5 @@ for (const key10022 in _module1) {
 
 export default AutocompleterDefault;
 export const createHeaderResult = AutocompleterConstants2.createHeaderResult;
-export const findNextSelectedResult = _modDef10685;
+export const findNextSelectedResult = _modDef9966;
 export const sortByMatchScore = autocompleter_sortByMatchScoreDefault;

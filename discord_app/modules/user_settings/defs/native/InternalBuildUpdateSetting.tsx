@@ -9,7 +9,7 @@ import MobileNativeUpdateStore from "../../../mobile_native_updater/MobileNative
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(12612);
+const SettingBuilders = fn(11897);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Internal Build Update";

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_space/popular_music/PopularMusicSystemMessageCopy.tsx
-import _modDef2605 from "../GuildSpace.messages.js";
+import _modDef2625 from "../GuildSpace.messages.js";
 import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -22,23 +22,23 @@ function getMusicSystemMessageFor(trackTitle, name, BlHpAk) {
   const event = trackTitle.event;
   if (PopularMusicSystemMessageTypes.GuildSpaceMusicEvent.TOP_SONG_CHANGED === event) {
     if (null != trackTitle.trackTitle) {
-      let Cf11AE = _modDef2605.vqPR3w;
+      let Cf11AE = _modDef2625.vqPR3w;
     } else {
-      Cf11AE = _modDef2605.Cf11AE;
+      Cf11AE = _modDef2625.Cf11AE;
     }
     const obj2 = { message: Cf11AE, values: obj };
     return obj2;
   } else if (PopularMusicSystemMessageTypes.GuildSpaceMusicEvent.TOP_ARTIST_CHANGED === event) {
     if (null != trackTitle.artistName) {
-      let ygm9YB = _modDef2605.ZbrKrk;
+      let ygm9YB = _modDef2625.ZbrKrk;
     } else {
-      ygm9YB = _modDef2605.ygm9YB;
+      ygm9YB = _modDef2625.ygm9YB;
     }
     const obj3 = { message: ygm9YB, values: obj };
     return obj3;
   } else if (PopularMusicSystemMessageTypes.GuildSpaceMusicEvent.TOP_LISTENER_CHANGED === event) {
     if (null == name) {
-      let OlxQF3 = _modDef2605.OlxQF3;
+      let OlxQF3 = _modDef2625.OlxQF3;
     } else {
       OlxQF3 = BlHpAk;
     }
@@ -51,8 +51,8 @@ function getMusicSystemMessageFor(trackTitle, name, BlHpAk) {
 const result = size.fileFinishedImporting("modules/guild_space/popular_music/PopularMusicSystemMessageCopy.tsx");
 
 export function getMusicSystemMessage(result, name) {
-  return getMusicSystemMessageFor(result, name, _modDef2605["k41/aX"]);
+  return getMusicSystemMessageFor(result, name, _modDef2625["k41/aX"]);
 }
 export function getMobileMusicSystemMessage(result, name) {
-  return getMusicSystemMessageFor(result, name, _modDef2605.BlHpAk);
+  return getMusicSystemMessageFor(result, name, _modDef2625.BlHpAk);
 }

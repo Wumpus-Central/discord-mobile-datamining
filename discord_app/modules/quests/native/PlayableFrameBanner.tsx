@@ -8,7 +8,7 @@ import PlayableStore from "PlayableStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_6 = createStyles.createStyles((bottom) => {
   const obj = { banner: { bottom } };
   return obj;
@@ -44,12 +44,12 @@ export default function PlayableFrameBanner(frameId) {
   let tmp7 = null;
   if (null != stateFromStores) {
     let obj2 = { style: tmp3.banner, ctaInfo: null, onContainerPress: null, onButtonPress: null };
-    const tmpResult = tmp(17623);
-    obj2.ctaInfo = tmp4(17622).getAdvertiserCtaInfo(stateFromStores);
+    const tmpResult = tmp(16425);
+    obj2.ctaInfo = tmp4(16424).getAdvertiserCtaInfo(stateFromStores);
     obj2.onContainerPress = callback;
     obj2.onButtonPress = callback;
     tmp7 = <tmpResult style={tmp3.banner} ctaInfo={null} onContainerPress={null} onButtonPress={null} />;
-    const tmp4Result = tmp4(17622);
+    const tmp4Result = tmp4(16424);
   }
   return tmp7;
 }

@@ -41,7 +41,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(13981);
+const GuildProgressConstants = fn(13283);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1072);
 ({
@@ -52,7 +52,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -94,14 +94,14 @@ export default function GuildProgressActionSheet(guild) {
             return obj3;
           } else {
             let base64;
-            tmp5(8415).init(View);
-            const obj6 = tmp5(8415);
-            tmp2(13986).hideActionSheet(id.id);
-            const obj7 = tmp2(13986);
+            tmp5(7905).init(View);
+            const obj6 = tmp5(7905);
+            tmp2(13288).hideActionSheet(id.id);
+            const obj7 = tmp2(13288);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(8890).openImagePicker(obj4), done: false };
+            const obj5 = { value: tmp5(8386).openImagePicker(obj4), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -114,8 +114,8 @@ export default function GuildProgressActionSheet(guild) {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            tmp5(8415).updateIcon(closure_129_5, base64);
-            const obj = tmp5(8415);
+            tmp5(7905).updateIcon(closure_129_5, base64);
+            const obj = tmp5(7905);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };

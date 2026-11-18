@@ -184,6 +184,7 @@ obj.Object = passThrough.protectStatics("Object", [
   "getOwnPropertyDescriptor",
   "getOwnPropertyNames",
   "getPrototypeOf",
+  "hasOwn",
   "keys",
   "setPrototypeOf",
 ]);
@@ -192,7 +193,7 @@ obj.ObjectURL = passThrough.protectStatics("URL", ["createObjectURL", "revokeObj
 let passThrough = passThrough_mod;
 obj.Math = passThrough.protectStatics("Math", ["abs"]);
 let passThrough = passThrough_mod;
-obj.Reflect = passThrough.protectStatics("Reflect", ["construct", "defineProperty", "deleteProperty", "get"]);
+obj.Reflect = passThrough.protectStatics("Reflect", ["apply", "construct", "defineProperty", "deleteProperty", "get"]);
 let passThrough = passThrough_mod;
 obj.Symbol = passThrough.protectStatics("Symbol", ["asyncIterator", "iterator", "toStringTag"]);
 let passThrough = passThrough_mod;

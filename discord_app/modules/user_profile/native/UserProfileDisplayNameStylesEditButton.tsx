@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import UsernameWithEffectsDefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
-import _modDef15562 from "../../../../_runtime/metro/15562__.js";
+import _modDef14190 from "../../../../_runtime/metro/14190__.js";
 import getDisplayNameStylesFontNameDefault from "../../display_name_styles/getDisplayNameStylesFontName.tsx";
 import DisplayNameStylesColorSwatchDefault from "../../display_name_styles/native/DisplayNameStylesColorSwatch.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -15,9 +15,9 @@ const noop = fn(19);
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { ggContainer: null, noneIcon: null };
 let size = {
   height: 48,
@@ -101,8 +101,8 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   }, items1);
   const tmp16 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef15562, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef15562, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef14190, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef14190, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = {

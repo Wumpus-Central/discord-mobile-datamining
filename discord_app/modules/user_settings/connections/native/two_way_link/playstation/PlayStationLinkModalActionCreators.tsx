@@ -19,7 +19,7 @@ export default {
       flag = false;
     }
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7602, dependencyMap.paths),
+      asyncRequireImpl(7105, dependencyMap.paths),
       { locationStack, platformType, startAtSignIn: flag },
       c3,
     );

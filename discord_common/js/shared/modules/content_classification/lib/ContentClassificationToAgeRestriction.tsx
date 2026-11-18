@@ -131,7 +131,7 @@ function contentClassificationToAgeRestrictionConclusion(arg0) {
                       tmp29 = require;
                     }
                     const obj5 = {
-                      source: tmp29(5958).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB_CSR,
+                      source: tmp29(5454).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB_CSR,
                       status: EVERYONE2,
                     };
                     AgeRestrictionStatus10 = items.push(obj5);
@@ -177,7 +177,7 @@ function contentClassificationToAgeRestrictionConclusion(arg0) {
                 EVERYONE = AgeRestrictionStatus7.EVERYONE;
                 tmp21 = require;
               }
-              const obj8 = { source: tmp21(5958).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
+              const obj8 = { source: tmp21(5454).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
               AgeRestrictionStatus7 = items.push(obj8);
               someResult1 = themes.some((item) => {
                 const ADULT_THEMES = ContentRatingIGDBTheme.ContentRatingIGDBThemeSets.ADULT_THEMES;

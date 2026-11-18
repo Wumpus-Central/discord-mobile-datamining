@@ -2,13 +2,11 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
 import UserProfileApplicationWidgetTypes from "../UserProfileApplicationWidgetTypes.tsx";
-import UserProfilePersonalWidget from "../UserProfilePersonalWidget.tsx";
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard.tsx";
-import WidgetUtils from "../WidgetUtils.tsx";
 import UserProfileGameWidgetConstants from "../UserProfileGameWidgetConstants.native.tsx";
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet.tsx";
+import WidgetUtils from "../WidgetUtils.tsx";
 import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow.tsx";
 import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover.tsx";
-import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet.tsx";
 import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -20,7 +18,7 @@ function AddGameButton(ref) {
     ref,
     size: "sm",
     variant: "secondary",
-    icon: closure_8(ref(10198).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }),
+    icon: closure_8(ref(9479).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }),
     accessibilityLabel: null,
     disabled: null,
     onPress: null,
@@ -31,29 +29,26 @@ function AddGameButton(ref) {
   obj.onPress = function onPress() {
     return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });
   };
-  return closure_8(ref(7999).IconButton, obj);
+  return closure_8(ref(7502).IconButton, obj);
 }
 function WidgetRenderer(arg0) {
   ({ userId, widget, cardStyle, isEditing } = arg0);
   if (widget instanceof UserProfileApplicationWidgetTypes.ApplicationWidget) {
     const obj2 = { userId, widget, cardStyle, isEditing };
-    let tmp3Result = React5(UserProfileApplicationWidgetCardDefault, obj2);
-  } else if (widget instanceof UserProfilePersonalWidget.UserProfilePersonalWidget) {
-    const obj3 = { userId, widget, cardStyle, isEditing };
-    tmp3Result = React5(UserProfilePersonalWidgetCardDefault, obj3);
+    let tmp2Result = React5(UserProfileApplicationWidgetCardDefault, obj2);
   } else {
     const obj = { userId, widget, cardStyle, isEditing };
-    tmp3Result = React5(memoResult, obj);
+    tmp2Result = React5(memoResult, obj);
   }
-  return tmp3Result;
+  return tmp2Result;
 }
 const View = fn(17).View;
-const UserProfileSections = fn(8490).UserProfileSections;
-const UserProfileWidgetConstants = fn(7365);
+const UserProfileSections = fn(7981).UserProfileSections;
+const UserProfileWidgetConstants = fn(6870);
 ({ widgetSupportsComment: closure_6, widgetSupportsTags: metroImportDefault } = UserProfileWidgetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = {
   board: { gap: nativeDefault.space.PX_16 },
   emptyState: null,
@@ -66,7 +61,7 @@ let obj4 = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
 obj.singleGameEmptyState = {
   flexDirection: "row",
   alignItems: "center",
-  gap: fn(10838).GAME_COVER_DETAILS_GAP,
+  gap: fn(10099).GAME_COVER_DETAILS_GAP,
   paddingVertical: nativeDefault.space.PX_8,
 };
 obj.singleGameEmptyStateText = { flex: 1 };
@@ -329,10 +324,10 @@ export default function UserProfileWidgetsBoard(userId) {
   }
   ({ cardStyle: importDefault, isEditing } = userId);
   const tmp = closure_10();
-  const displayableBoardWidgets = userId(isEditing[31]).useDisplayableBoardWidgets(userId, isEditing);
+  const displayableBoardWidgets = userId(isEditing[29]).useDisplayableBoardWidgets(userId, isEditing);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  let obj = userId(isEditing[31]);
+  let obj = userId(isEditing[29]);
   const trackUserProfileAction = userId(isEditing[8]).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);

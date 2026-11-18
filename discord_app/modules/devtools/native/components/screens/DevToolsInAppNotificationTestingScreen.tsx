@@ -223,12 +223,12 @@ function buildReactionNotification(arg0) {
   }
 }
 const ScrollView = fn(17).ScrollView;
-const createChannelRecord = fn(5163).createChannelRecord;
+const createChannelRecord = fn(4676).createChannelRecord;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_12, InAppNotificationTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -602,15 +602,15 @@ export default function DevToolsInAppNotificationTestingScreen() {
       obj2.children = options.map((label) => {
         closure_0 = label;
         return closure_1_14(
-          closure_1_0(7453).TableRow,
+          closure_1_0(6956).TableRow,
           {
             label: label.label,
             subLabel: label.subLabel,
-            icon: closure_1_14(closure_1_0(14546).BeakerIcon, {}),
+            icon: closure_1_14(closure_1_0(17064).BeakerIcon, {}),
             onPress() {
               return closure_2_0(closure_0);
             },
-            trailing: closure_1_14(closure_1_0(7466).TableRowArrow, {}),
+            trailing: closure_1_14(closure_1_0(6969).TableRowArrow, {}),
           },
           label.label,
         );
@@ -626,15 +626,15 @@ export default function DevToolsInAppNotificationTestingScreen() {
     hasIcons: true,
     children: items3.map((label) =>
       closure_1_14(
-        label(7453).TableRow,
+        label(6956).TableRow,
         {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(label(14546).BeakerIcon, {}),
+          icon: closure_1_14(label(17064).BeakerIcon, {}),
           onPress() {
             return label(label);
           },
-          trailing: closure_1_14(label(7466).TableRowArrow, {}),
+          trailing: closure_1_14(label(6969).TableRowArrow, {}),
         },
         label.label,
       ),

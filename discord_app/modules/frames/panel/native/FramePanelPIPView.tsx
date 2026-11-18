@@ -1,19 +1,19 @@
 // discord_app/modules/frames/panel/native/FramePanelPIPView.tsx
-import FrameRenderTargetDefault from "../../native/FrameRenderTarget.tsx";
 import FrameStackLevel from "../../FrameStackLevel.tsx";
+import FrameRenderTargetDefault from "../../native/FrameRenderTarget.tsx";
 import ActivityPanelPIPView from "../../../activities/panel/native/ActivityPanelPIPView.tsx";
 import FramePanelStateContextDefault from "FramePanelStateContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(7028);
+const FramesConstants = fn(6532);
 ({
   asLaunched: hasOwnProperty,
   FrameLayoutModes: closure_6,
   getPipOrientationLockStateForFrame: metroImportDefault,
 } = FramesConstants);
-let closure_8 = fn(19825).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_8 = fn(19096).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");

@@ -115,10 +115,10 @@ function MemberActionRow(channelId) {
 const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
-const GuildMemberFlags = fn(5228).GuildMemberFlags;
+const GuildMemberFlags = fn(4741).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   actionsContainer: { paddingHorizontal: 12 },
   actionsHeader: { display: "flex", marginBottom: 16 },

@@ -21,7 +21,7 @@ const Constants = fn(1072);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -85,11 +85,11 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(18759);
+        obj = obj(17572);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(5495).dismissKeyboard();
-        const objResult = obj(5495);
+        obj(5008).dismissKeyboard();
+        const objResult = obj(5008);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;
@@ -297,6 +297,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
   const memo = obj3.useMemo(() => {
     const obj = {};
     const merged = Object.assign(panelGestureContext);
+    obj.isInMainTabs = true;
     obj.isNavigatorPanelsBesideChannelList = isNavigatorPanelsBesideChannelList;
     return obj;
   }, items7);

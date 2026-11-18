@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorS
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_5 = fn(9077).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
+let closure_5 = fn(8488).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchCitation.tsx");
@@ -49,7 +49,7 @@ export function SmartSearchCitation(smartSearchQuery) {
             } else {
               closure_0 = tmp3;
               const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-              const result = v2(13842).trackSmartSearchCitationOpened(obj4, v2(13840));
+              const result = v2(13149).trackSmartSearchCitationOpened(obj4, v2(13147));
               if ("conversation" === citation.sourceType) {
                 dependencyMap = 1;
                 v2 = 2;
@@ -57,7 +57,7 @@ export function SmartSearchCitation(smartSearchQuery) {
                 const obj5 = { value: onPressConversationCitation(citation), done: false };
                 return obj5;
               }
-              const obj6 = v2(13842);
+              const obj6 = v2(13149);
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;

@@ -14,7 +14,7 @@ export const GAME_ORGANIZATION_JOIN_OUTCOME_ACTION_SHEET_KEY = "GameOrganization
 export const GameOrganizationCantJoinReasons = { NO_CHARACTERS: "NO_CHARACTERS", ERROR: "ERROR" };
 export const GAME_ORGANIZATION_INVITE_EXPIRY_DAYS = 7;
 export const GameOrganizationInviteStates = { RESOLVING: "RESOLVING", RESOLVED: "RESOLVED", ERROR: "ERROR" };
-export const GameOrganizationDisplayNouns = { GUILD: "GUILD" };
+export const GameOrganizationDisplayNouns = { GUILD: "GUILD", ALLIANCE: "ALLIANCE", CLAN: "CLAN" };
 export const GameOrganizationCharacterMode = {
   UNSPECIFIED: 0,
   [0]: "UNSPECIFIED",

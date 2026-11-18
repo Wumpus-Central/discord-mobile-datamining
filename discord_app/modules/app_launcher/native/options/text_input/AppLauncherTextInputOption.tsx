@@ -12,7 +12,7 @@ const View = fn(17).View;
 const EmojiIntention = fn(1391).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_9 = createStyles.createStyles({
   content: { flex: 1, flexDirection: "row", alignItems: "center" },
   stringOptionInput: { maxHeight: 100, flex: 1, padding: 0, paddingTop: 0 },
@@ -141,7 +141,7 @@ export default function AppLauncherTextInputOption(initialValue) {
     returnKeyType: true,
     multiline: null,
     keyboardType: null,
-    onPressIn: 24,
+    onPressIn: 495,
   };
   const items4 = [inputStyles.text, tmp.stringOptionInput];
   obj6.style = items4;

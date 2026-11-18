@@ -1,9 +1,8 @@
 // discord_app/modules/tabs/ChannelTabsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import utils_PlatformUtils from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import FrecencyDefault from "../../lib/Frecency.tsx";
 import TabsExperimentDefault from "TabsExperiment.tsx";
-import ChannelTabRoutes from "ChannelTabRoutes.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 import DefaultRouteStore from "../../stores/DefaultRouteStore.tsx";
@@ -11,17 +10,60 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-require = fn;
+let handleChannelSelect = fn;
+function pruneOpenedChannels() {
+  const keys = Object.keys(closure_22.usageHistory);
+  for (const item10017 of keys) {
+    if (!set.has(item10017)) {
+      let usageHistory = closure_22.usageHistory;
+      delete tmp2[tmp];
+    }
+    continue;
+  }
+  set = new Set(closure_22.frequently);
+}
+function setFirstPage(tmp12Result) {
+  if ("route" === tmp12Result.kind) {
+    if (tmp12Result.routePath === Routes.FRIENDS) {
+      set.add(tmp12Result.id);
+      let flag = false;
+    }
+    return flag;
+  }
+  set.delete(tmp12Result.id);
+  let tmp3 = "channel" !== tmp12Result.kind;
+  if (!tmp3) {
+    tmp3 = isStaticChannelRoute(tmp12Result.channelId);
+  }
+  if (!tmp3) {
+    if (enabled) {
+      enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
+    }
+    if (enabled) {
+      enabled = handleChannelSelect(1360).isDesktop();
+      const obj2 = handleChannelSelect(1360);
+    }
+    tmp3 = !enabled;
+  }
+  flag = !tmp3;
+  if (!tmp3) {
+    const channelId = tmp12Result.channelId;
+    closure_22.track(channelId);
+    pruneOpenedChannels();
+    closure_18 = closure_18.filter((channelId) => channelId.channelId !== channelId);
+    flag = true;
+  }
+}
 function activateTab(id) {
-  let tmp = null != c11;
+  let tmp = null != c12;
   if (tmp) {
-    tmp = c11 !== id;
+    tmp = c12 !== id;
   }
   if (tmp) {
-    closure_0 = c11;
-    items = [c11];
+    closure_0 = c12;
+    items = [c12];
     HermesBuiltin.arraySpread(
-      closure_12.filter((item) => item !== closure_0),
+      closure_13.filter((item) => item !== closure_0),
       1,
     );
     const currentUser = UserStore.getCurrentUser();
@@ -33,11 +75,11 @@ function activateTab(id) {
     if (true === isStaffResult) {
       num2 = 25;
     }
-    closure_12 = items.slice(0, num2);
+    closure_13 = items.slice(0, num2);
   }
-  c11 = id;
+  c12 = id;
   closure_0 = id;
-  const items1 = [id, ...closure_12.filter((item) => item !== closure_0)];
+  const items1 = [id, ...closure_13.filter((item) => item !== closure_0)];
   const currentUser1 = UserStore.getCurrentUser();
   let isStaffResult1;
   if (currentUser1 != null) {
@@ -47,14 +89,14 @@ function activateTab(id) {
   if (true === isStaffResult1) {
     num4 = 25;
   }
-  closure_12 = items1.slice(0, num4);
+  closure_13 = items1.slice(0, num4);
 }
-function createTab(items1) {
-  let tmp = sourceTabId;
-  if (sourceTabId === undefined) {
-    tmp = c11;
+function createTab(items1, arg1) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    tmp = c12;
   }
-  _require = tmp;
+  handleChannelSelect = tmp;
   let tmp2;
   if (null != tmp) {
     let found = tabs.find((id) => id.id === closure_0);
@@ -79,12 +121,12 @@ function createTab(items1) {
     items[HermesBuiltin.arraySpread(mapped, 0)] = items1;
     let substr1 = items.slice(-11);
   } else {
-    require("ChannelTabPinScope");
+    handleChannelSelect(9984);
     substr1 = mapped;
   }
   const obj2 = { id: null };
-  closure_13 = tmp12 + 1;
-  obj2.id = String(+closure_13);
+  closure_14 = tmp12 + 1;
+  obj2.id = String(+closure_14);
   let merged = Object.assign(items1);
   obj2.pinned = false;
   obj2.entries = substr1;
@@ -102,8 +144,8 @@ function landNavigationAroundPinnedTab(items1) {
     num = 25;
   }
   if (items1.length >= num) {
-    if (null != c11) {
-      closure_15 = c11;
+    if (null != c12) {
+      closure_15 = c12;
       const mapped = items1.map((id) => {
         let tmp = id;
         if (id.id === activeTabId) {
@@ -124,11 +166,8 @@ function landNavigationAroundPinnedTab(items1) {
       );
       items1 = items;
       closure_0 = items1;
-      if (c14 === c11) {
-        c14 = null;
-      }
       items1 = items.map((id) => {
-        if (id.id !== c11) {
+        if (id.id !== c12) {
           return id;
         } else {
           const entries = id.entries;
@@ -155,7 +194,7 @@ function landNavigationAroundPinnedTab(items1) {
   activateTab(tmp3.id);
 }
 function openFirstTabAtCurrentLocation() {
-  const routeTabForLocation = ChannelTabRoutes.getRouteTabForLocation(window.location);
+  const routeTabForLocation = handleChannelSelect(9985).getRouteTabForLocation(window.location);
   if (null != routeTabForLocation) {
     const obj2 = { kind: "route" };
     const merged = Object.assign(routeTabForLocation);
@@ -180,7 +219,7 @@ function openFirstTabAtCurrentLocation() {
   if (flag) {
     const tmp12 = createTab(tmp4);
     items = [tmp12];
-    closure_10 = items;
+    closure_11 = items;
     activateTab(tmp12.id);
     flag = true;
   }
@@ -204,7 +243,7 @@ function handleChannelDelete(channel) {
           tmp = kind.channelId === channel.id;
         }
         if (tmp) {
-          tmp = kind.id !== c11;
+          tmp = kind.id !== c12;
         }
         return tmp;
       }).length
@@ -218,11 +257,11 @@ function handleChannelDelete(channel) {
         }
         let tmp3 = !tmp;
         if (tmp) {
-          tmp3 = kind.id === c11;
+          tmp3 = kind.id === c12;
         }
         return tmp3;
       });
-      closure_12 = closure_12.filter((item) => {
+      closure_13 = closure_13.filter((item) => {
         closure_0 = item;
         return items1.some((id) => id.id === closure_0);
       });
@@ -231,15 +270,29 @@ function handleChannelDelete(channel) {
     return false;
   }
 }
-const isStaticChannelRoute = fn(5166).isStaticChannelRoute;
+const Routes = fn(1072).Routes;
+const isStaticChannelRoute = fn(4679).isStaticChannelRoute;
 let tabs = [];
-let c11 = null;
-let closure_12 = [];
-let closure_13 = 1;
-let c14 = null;
+let c12 = null;
+let closure_13 = [];
+let closure_14 = 1;
 let c15 = null;
 let c16 = false;
 let enabled = false;
+let closure_18 = [];
+let set = new Set();
+let frequently = null;
+let closure_21 = [];
+let closure_22 = new FrecencyDefault({
+  computeBonus() {
+    return 100;
+  },
+  lookupKey(arg0) {
+    return arg0;
+  },
+  afterCompute() {},
+  numFrequentlyItems: 10,
+});
 const PersistedStore = initializeDefault.PersistedStore;
 class ChannelTabsStore extends PersistedStore {}
 const prototype = ChannelTabsStore.prototype;
@@ -302,9 +355,9 @@ prototype["initialize"] = function initialize(enabled) {
   if (activeTabId == null) {
     activeTabId = null;
   }
-  c11 = activeTabId;
-  closure_12 = [];
-  closure_13 =
+  c12 = activeTabId;
+  closure_13 = [];
+  closure_14 =
     tabs.reduce((acc, id) => {
       const NumberResult = Number(id.id);
       let tmp2 = acc;
@@ -316,7 +369,7 @@ prototype["initialize"] = function initialize(enabled) {
       }
       return tmp2;
     }, 0) + 1;
-  let someResult = null == c11;
+  let someResult = null == c12;
   if (!someResult) {
     someResult = tabs.some((id) => id.id === activeTabId);
   }
@@ -329,17 +382,80 @@ prototype["initialize"] = function initialize(enabled) {
     if (id == null) {
       id = null;
     }
-    c11 = id;
+    c12 = id;
   }
+  let openedChannels;
+  if (enabled != null) {
+    openedChannels = enabled.openedChannels;
+  }
+  closure_22.overwriteHistory(
+    (function readSavedUsages(openedChannels) {
+      const obj = {};
+      if (null != openedChannels) {
+        if (typeof openedChannels === "object") {
+          const _Object = Object;
+          const entries = Object.entries(openedChannels);
+          const tmp20 = entries[Symbol.iterator]();
+          while (tmp20 !== undefined) {
+            let tmp5 = _slicedToArray(tmp2, 2);
+            [tmp6, tmp7] = tmp5;
+            let recentUses;
+            if (tmp7 != null) {
+              recentUses = tmp7.recentUses;
+            }
+            if (Array.isArray(recentUses)) {
+              let recentUses1 = tmp7.recentUses;
+              let found = recentUses1.filter((item) => {
+                let tmp = typeof item === "number";
+                if (typeof item === "number") {
+                  tmp = item > 0;
+                }
+                return tmp;
+              });
+            } else {
+              found = [];
+            }
+            let arr3 = found;
+            let totalUses;
+            if (tmp7 != null) {
+              totalUses = tmp7.totalUses;
+            }
+            let tmp13 = typeof totalUses === "number";
+            if (typeof totalUses === "number") {
+              tmp13 = 0 !== arr3.length;
+            }
+            if (tmp13) {
+              let obj2 = { totalUses: tmp7.totalUses, recentUses: null, frecency: -1, score: 0 };
+              obj2.recentUses = arr3;
+              obj[tmp6] = obj2;
+            }
+            continue;
+          }
+          return obj;
+        }
+      }
+      return obj;
+    })(openedChannels),
+  );
+  pruneOpenedChannels();
 };
 prototype["getState"] = function getState() {
-  return { tabs, activeTabId, enabled };
+  const obj = {};
+  const entries = Object.entries(closure_22.usageHistory);
+  while (tmp2 !== undefined) {
+    let tmp5 = _slicedToArray(tmp3, 2);
+    let obj3 = { totalUses: null, recentUses: null };
+    ({ totalUses: obj2.totalUses, recentUses: obj2.recentUses } = tmp5[1]);
+    obj[tmp5[0]] = obj3;
+    continue;
+  }
+  return { tabs, activeTabId, enabled, openedChannels: obj };
 };
 prototype["getTabs"] = function getTabs() {
-  return closure_10;
+  return closure_11;
 };
 prototype["getActiveTabId"] = function getActiveTabId() {
-  return c11;
+  return c12;
 };
 prototype["getActiveTab"] = function getActiveTab() {
   let found = tabs.find((id) => id.id === activeTabId);
@@ -353,7 +469,8 @@ prototype["isEnabled"] = function isEnabled() {
     enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
   }
   if (enabled) {
-    enabled = utils_PlatformUtils.isDesktop();
+    enabled = handleChannelSelect(1360).isDesktop();
+    const obj2 = handleChannelSelect(1360);
   }
   return enabled;
 };
@@ -365,7 +482,8 @@ prototype["isTabBarVisible"] = function isTabBarVisible() {
     enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
   }
   if (enabled) {
-    enabled = utils_PlatformUtils.isDesktop();
+    enabled = handleChannelSelect(1360).isDesktop();
+    const obj2 = handleChannelSelect(1360);
   }
   if (enabled) {
     enabled = tabs.length > 0;
@@ -379,12 +497,24 @@ prototype["getTabUnpinnedAtLimit"] = function getTabUnpinnedAtLimit() {
   }
   return found;
 };
-prototype["isActiveTabFresh"] = function isActiveTabFresh() {
-  let tmp = null != c14;
-  if (tmp) {
-    tmp = c14 === c11;
+prototype["getRecentlyClosed"] = function getRecentlyClosed() {
+  return closure_18;
+};
+prototype["getFrequentlyOpenedChannelIds"] = function getFrequentlyOpenedChannelIds() {
+  frequently = usageHistory.frequently;
+  if (frequently !== frequently) {
+    closure_21 = frequently.filter((item) => {
+      let num;
+      if (usageHistory.usageHistory[item] != null) {
+        num = tmp.totalUses;
+      }
+      if (num == null) {
+        num = 0;
+      }
+      return num >= 2;
+    });
   }
-  return tmp;
+  return closure_21;
 };
 prototype["getMaxTabs"] = function getMaxTabs() {
   const currentUser = UserStore.getCurrentUser();
@@ -443,8 +573,70 @@ let items = [
   },
 ];
 ChannelTabsStore.migrations = items;
+handleChannelSelect = function handleChannelSelect(arg0) {
+  ({ channelId, guildId } = arg0);
+  c15 = null;
+  if (enabled) {
+    enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
+  }
+  if (enabled) {
+    enabled = obj3(1360).isDesktop();
+    const obj2 = obj3(1360);
+  }
+  if (enabled) {
+    if (null != channelId) {
+      if (!isStaticChannelRoute(channelId)) {
+        obj3 = { kind: "channel", channelId, guildId: null };
+        if (guildId == null) {
+          guildId = null;
+        }
+        obj3.guildId = guildId;
+        if (0 === tabs.length) {
+          const tmp14 = createTab(obj3);
+          items = [tmp14];
+          tabs = items;
+          activateTab(tmp14.id);
+        } else {
+          const found = tabs.find((id) => id.id === activeTabId);
+          let tmp7 = null != found;
+          if (tmp7) {
+            tmp7 = "channel" !== found.kind || found.channelId !== channelId;
+            const tmp6 = "channel" !== found.kind || found.channelId !== channelId;
+          }
+          if (tmp7) {
+            if (obj4.wouldNavigationLeavePinnedTab(found, obj3)) {
+              landNavigationAroundPinnedTab(obj3);
+            } else {
+              tabs = tabs.map((id) => {
+                if (id.id !== c12) {
+                  return id;
+                } else {
+                  const entries = id.entries;
+                  items = [];
+                  items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = set;
+                  const substr = items.slice(-50);
+                  const obj = { id: id.id, pinned: true === id.pinned };
+                  const diff = substr.length - 1;
+                  const merged = Object.assign(set);
+                  obj.entries = substr;
+                  obj.index = diff;
+                  return obj;
+                }
+              });
+            }
+            obj4 = obj3(9984);
+          }
+          return tmp7;
+        }
+      }
+    }
+    return false;
+  } else {
+    return false;
+  }
+};
 const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
-  CHANNEL_TABS_OPEN: function handleOpenTab(kind) {
+  CHANNEL_TABS_OPEN: function handleOpenTab(location) {
     const currentUser = UserStore.getCurrentUser();
     let isStaffResult;
     if (currentUser != null) {
@@ -457,65 +649,77 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
     if (tabs.length >= num) {
       return false;
     } else {
-      if ("route" === kind.kind) {
-        ({ routePath: obj3.routePath, routeLabel: obj3.routeLabel } = kind);
-        let obj5 = { kind: "route", routePath: null, routeLabel: null };
-        const obj = { kind: "route", routePath: null, routeLabel: null };
+      if ("route" === location.location.kind) {
+        const obj = { kind: "route", routePath: location.location.routePath, routeLabel: location.location.routeLabel };
+        let obj2 = obj;
       } else {
-        obj5 = { kind: "channel", channelId: null, guildId: null };
-        ({ channelId: obj2.channelId, guildId: obj2.guildId } = kind);
+        obj2 = { kind: "channel", channelId: location.location.channelId, guildId: location.location.guildId };
       }
-      let sourceTabId = kind.sourceTabId;
-      if (sourceTabId == null) {
-        sourceTabId = c11;
-      }
-      const tmp10Result = createTab(obj5, sourceTabId);
+      const tmp12Result = createTab(obj2, undefined === location.sourceTabId ? c12 : location.sourceTabId);
       items = [];
-      items[HermesBuiltin.arraySpread(tabs, 0)] = tmp10Result;
+      items[HermesBuiltin.arraySpread(tabs, 0)] = tmp12Result;
       tabs = items;
-      let tmp5 = true !== kind.active;
+      let tmp5 = true === location.background;
       if (tmp5) {
-        tmp5 = null != c11;
+        tmp5 = null != c12;
       }
       if (!tmp5) {
-        activateTab(tmp10Result.id);
+        activateTab(tmp12Result.id);
       }
-      if (true === kind.fresh) {
-        const id = tmp10Result.id;
-      }
+      setFirstPage(tmp12Result);
     }
   },
   CHANNEL_TABS_CLOSE: function handleCloseTab(tabId) {
-    tabId = tabId.tabId;
-    const findIndexResult = tabs.findIndex((id) => id.id === tabId);
+    let channelId = tabId.tabId;
+    const findIndexResult = tabs.findIndex((id) => id.id === channelId);
     if (-1 === findIndexResult) {
       return false;
     } else if (1 === tabs.length) {
       return false;
     } else {
-      if (c14 === tabId) {
-        c14 = null;
-      }
-      tabs = tabs.filter((id) => id.id !== tabId);
-      closure_12 = closure_12.filter((item) => {
+      tabs = tabs.filter((id) => id.id !== channelId);
+      closure_13 = closure_13.filter((item) => {
         closure_0 = item;
         return items1.some((id) => id.id === closure_0);
       });
-      if (tabs[findIndexResult].id === tmp14) {
+      channelId = undefined;
+      set.delete(tabs[findIndexResult].id);
+      if ("channel" === tabs[findIndexResult].kind) {
+        if (enabled) {
+          enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
+        }
+        if (enabled) {
+          enabled = handleChannelSelect(1360).isDesktop();
+          const obj2 = handleChannelSelect(1360);
+        }
+        if (enabled) {
+          channelId = tmp19.channelId;
+          const obj3 = { channelId, guildId: tmp19.guildId, closedAt: null };
+          const _Date = Date;
+          obj3.closedAt = Date.now();
+          items = [obj3];
+          HermesBuiltin.arraySpread(
+            closure_18.filter((channelId) => channelId.channelId !== channelId),
+            1,
+          );
+          closure_18 = items.slice(0, 10);
+        }
+      }
+      if (tabs[findIndexResult].id === tmp20) {
         const _Math = Math;
-        c11 = null;
-        let id = closure_12[0];
+        c12 = null;
+        let id = closure_13[0];
         if (id == null) {
           id = tabs[Math.min(Math, findIndexResult, tabs.length - 1)].id;
         }
         activateTab(id);
       }
-      tmp14 = c11;
+      tmp20 = c12;
     }
   },
   CHANNEL_TABS_SET_ACTIVE: function handleSetActiveTab(tabId) {
     tabId = tabId.tabId;
-    let tmp = c11 !== tabId;
+    let tmp = c12 !== tabId;
     if (tmp) {
       const tmp4 = null != tabs.find((id) => id.id === tabId);
       if (tmp4) {
@@ -553,8 +757,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
     }
   },
   CHANNEL_TABS_SET_PINNED: function handleSetPinned(arg0) {
-    ({ tabId: require, pinned } = arg0);
-    const found = tabs.find((id) => id.id === _require);
+    ({ tabId: handleChannelSelect, pinned } = arg0);
+    const found = tabs.find((id) => id.id === handleChannelSelect);
     if (null != found) {
       if (found.pinned !== pinned) {
         const found1 = tabs.filter((id) => id.id !== found.id);
@@ -571,59 +775,29 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
     }
     return false;
   },
-  CHANNEL_TABS_BACK: function handleTabHistoryBack() {
+  CHANNEL_TABS_BACK: (arg0) => {
     const found = tabs.find((id) => id.id === activeTabId);
-    let flag = false;
-    if (null != found) {
-      const sum = found.index + -1;
-      const require = sum;
-      closure_1 = tmp3;
-      flag = false;
-      if (null != found.entries[sum]) {
-        if (c14 === c11) {
-          c14 = null;
-        }
-        tabs = tabs.map((id) => {
-          let tmp = id;
-          if (id.id === c11) {
-            const obj = { id: id.id, pinned: true === id.pinned };
-            const merged = Object.assign(closure_1);
-            obj.entries = id.entries;
-            obj.index = sum;
-            tmp = obj;
-          }
-          return tmp;
-        });
-      }
+    let hasItem = null != found;
+    if (hasItem) {
+      hasItem = closure_2_19.has(found.id);
     }
-    return flag;
+    if (hasItem) {
+      hasItem = dependencyMap3(found);
+    }
+    const tmp = handleChannelSelect(arg0);
+    return false !== handleChannelSelect(arg0) || hasItem;
   },
-  CHANNEL_TABS_FORWARD: function handleTabHistoryForward() {
+  CHANNEL_TABS_FORWARD: (arg0) => {
     const found = tabs.find((id) => id.id === activeTabId);
-    let flag = false;
-    if (null != found) {
-      const sum = found.index + 1;
-      const require = sum;
-      closure_1 = tmp3;
-      flag = false;
-      if (null != found.entries[sum]) {
-        if (c14 === c11) {
-          c14 = null;
-        }
-        tabs = tabs.map((id) => {
-          let tmp = id;
-          if (id.id === c11) {
-            const obj = { id: id.id, pinned: true === id.pinned };
-            const merged = Object.assign(closure_1);
-            obj.entries = id.entries;
-            obj.index = sum;
-            tmp = obj;
-          }
-          return tmp;
-        });
-      }
+    let hasItem = null != found;
+    if (hasItem) {
+      hasItem = closure_2_19.has(found.id);
     }
-    return flag;
+    if (hasItem) {
+      hasItem = dependencyMap3(found);
+    }
+    const tmp = handleChannelSelect(arg0);
+    return false !== handleChannelSelect(arg0) || hasItem;
   },
   CHANNEL_TABS_SET_ENABLED: function handleSetEnabled(enabled) {
     enabled = enabled.enabled;
@@ -637,7 +811,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
           enabled2 = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
         }
         if (enabled2) {
-          enabled2 = utils_PlatformUtils.isDesktop();
+          enabled2 = handleChannelSelect(1360).isDesktop();
+          const obj2 = handleChannelSelect(1360);
         }
         tmp3 = enabled2;
       }
@@ -646,131 +821,33 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       }
     } else {
       tabs = [];
-      c11 = null;
-      closure_12 = [];
-      c14 = null;
+      c12 = null;
+      closure_13 = [];
     }
   },
-  CHANNEL_TABS_NAVIGATE_ROUTE: function handleNavigateRoute(routePath) {
-    routePath = routePath.routePath;
-    c15 = null;
-    if (enabled) {
-      enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
+  CHANNEL_TABS_NAVIGATE_ROUTE: (arg0) => {
+    const found = tabs.find((id) => id.id === activeTabId);
+    let hasItem = null != found;
+    if (hasItem) {
+      hasItem = closure_2_19.has(found.id);
     }
-    if (enabled) {
-      enabled = obj3(1360).isDesktop();
-      const obj2 = obj3(1360);
+    if (hasItem) {
+      hasItem = dependencyMap3(found);
     }
-    if (enabled) {
-      obj3 = { kind: "route", routePath, routeLabel: routePath.routeLabel };
-      if (0 === tabs.length) {
-        const tmp16 = createTab(obj3);
-        items = [tmp16];
-        tabs = items;
-        activateTab(tmp16.id);
-      } else {
-        const found = tabs.find((id) => id.id === activeTabId);
-        let tmp7 = null != found;
-        if (tmp7) {
-          tmp7 = "route" !== found.kind || found.routePath !== routePath;
-          const tmp6 = "route" !== found.kind || found.routePath !== routePath;
-        }
-        if (tmp7) {
-          if (obj4.wouldNavigationLeavePinnedTab(found, obj3)) {
-            landNavigationAroundPinnedTab(obj3);
-          } else {
-            if (c14 === c11) {
-              c14 = null;
-            }
-            tabs = tabs.map((id) => {
-              if (id.id !== c11) {
-                return id;
-              } else {
-                const entries = id.entries;
-                items = [];
-                items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = set;
-                const substr = items.slice(-50);
-                const obj = { id: id.id, pinned: true === id.pinned };
-                const diff = substr.length - 1;
-                const merged = Object.assign(set);
-                obj.entries = substr;
-                obj.index = diff;
-                return obj;
-              }
-            });
-          }
-          obj4 = obj3(10703);
-        }
-        return tmp7;
-      }
-    } else {
-      return false;
-    }
+    const tmp = handleChannelSelect(arg0);
+    return false !== handleChannelSelect(arg0) || hasItem;
   },
-  CHANNEL_SELECT: function handleChannelSelect(arg0) {
-    ({ channelId, guildId } = arg0);
-    c15 = null;
-    if (enabled) {
-      enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
+  CHANNEL_SELECT: (arg0) => {
+    const found = tabs.find((id) => id.id === activeTabId);
+    let hasItem = null != found;
+    if (hasItem) {
+      hasItem = closure_2_19.has(found.id);
     }
-    if (enabled) {
-      enabled = obj3(1360).isDesktop();
-      const obj2 = obj3(1360);
+    if (hasItem) {
+      hasItem = dependencyMap3(found);
     }
-    if (enabled) {
-      if (null != channelId) {
-        if (!isStaticChannelRoute(channelId)) {
-          obj3 = { kind: "channel", channelId, guildId: null };
-          if (guildId == null) {
-            guildId = null;
-          }
-          obj3.guildId = guildId;
-          if (0 === tabs.length) {
-            const tmp16 = createTab(obj3);
-            items = [tmp16];
-            tabs = items;
-            activateTab(tmp16.id);
-          } else {
-            const found = tabs.find((id) => id.id === activeTabId);
-            let tmp7 = null != found;
-            if (tmp7) {
-              tmp7 = "channel" !== found.kind || found.channelId !== channelId;
-              const tmp6 = "channel" !== found.kind || found.channelId !== channelId;
-            }
-            if (tmp7) {
-              if (obj4.wouldNavigationLeavePinnedTab(found, obj3)) {
-                landNavigationAroundPinnedTab(obj3);
-              } else {
-                if (c14 === c11) {
-                  c14 = null;
-                }
-                tabs = tabs.map((id) => {
-                  if (id.id !== c11) {
-                    return id;
-                  } else {
-                    const entries = id.entries;
-                    items = [];
-                    items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = set;
-                    const substr = items.slice(-50);
-                    const obj = { id: id.id, pinned: true === id.pinned };
-                    const diff = substr.length - 1;
-                    const merged = Object.assign(set);
-                    obj.entries = substr;
-                    obj.index = diff;
-                    return obj;
-                  }
-                });
-              }
-              obj4 = obj3(10703);
-            }
-            return tmp7;
-          }
-        }
-      }
-      return false;
-    } else {
-      return false;
-    }
+    const tmp = handleChannelSelect(arg0);
+    return false !== handleChannelSelect(arg0) || hasItem;
   },
   CHANNEL_DELETE: handleChannelDelete,
   CONNECTION_OPEN: function handleConnectionOpen() {
@@ -807,7 +884,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         let substr = found.slice(-diff);
         set = new Set(substr.map((id) => id.id));
         items1 = items1.filter((id) => !set.has(id.id));
-        closure_12 = closure_12.filter((item) => {
+        closure_13 = closure_13.filter((item) => {
           closure_0 = item;
           return items1.some((id) => id.id === closure_0);
         });
@@ -820,11 +897,11 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         return tmp6;
       } else {
         const obj4 = { pathname: DefaultRouteStore.defaultRoute };
-        const routeTabForLocation = set(10704).getRouteTabForLocation(obj4);
-        const obj5 = set(10704);
+        const routeTabForLocation = set(9985).getRouteTabForLocation(obj4);
+        const obj5 = set(9985);
         const tmp13 = set;
         const _window = window;
-        const routeTabForLocation1 = set(10704).getRouteTabForLocation(window.location);
+        const routeTabForLocation1 = set(9985).getRouteTabForLocation(window.location);
         if (tmp10 != routeTabForLocation1) {
           const obj6 = { kind: "route" };
           let merged = Object.assign(routeTabForLocation1);
@@ -889,11 +966,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
               flag3 = true;
               if (!tmp13Result.isSameTabLocation(atResult, items1)) {
                 closure_129_0 = items1;
-                if (c14 === c11) {
-                  c14 = tmp10;
-                }
                 items1 = items1.map((id) => {
-                  if (id.id !== c11) {
+                  if (id.id !== c12) {
                     return id;
                   } else {
                     const entries = id.entries;
@@ -910,7 +984,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                 });
                 flag3 = true;
               }
-              tmp13Result = tmp13(10703);
+              tmp13Result = tmp13(9984);
             } else {
               const currentUser1 = UserStore.getCurrentUser();
               let isStaffResult1;
@@ -920,12 +994,12 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
             }
           }
         }
-        const tmp46 = createTab(items1, tmp10);
+        const tmp44 = createTab(items1, tmp10);
         items1 = [];
-        items1[HermesBuiltin.arraySpread(items1, 0)] = tmp46;
-        tmp10 = activateTab(tmp46.id);
+        items1[HermesBuiltin.arraySpread(items1, 0)] = tmp44;
+        tmp10 = activateTab(tmp44.id);
         flag3 = true;
-        const obj7 = set(10704);
+        const obj7 = set(9985);
       }
     } else {
       return false;
@@ -934,14 +1008,12 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
   },
   THREAD_DELETE: handleChannelDelete,
   LOGOUT: function handleLogout() {
-    if (0 === tabs.length) {
-      return false;
-    } else {
-      tabs = [];
-      c11 = null;
-      closure_12 = [];
-      c14 = null;
-    }
+    closure_11 = [];
+    c12 = null;
+    closure_13 = [];
+    set = new Set();
+    closure_18 = [];
+    closure_22.overwriteHistory({});
   },
 });
 const size = fn(2);

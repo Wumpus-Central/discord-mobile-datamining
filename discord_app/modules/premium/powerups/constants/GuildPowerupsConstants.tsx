@@ -1,11 +1,9 @@
 // discord_app/modules/premium/powerups/constants/GuildPowerupsConstants.tsx
 import util from "../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import GameServerConstants from "../../../game_server/GameServerConstants.tsx";
-import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
-import ServerThemeUserExperiment from "../experiments/ServerThemeUserExperiment.tsx";
-import ServerThemeExperiment from "../experiments/ServerThemeExperiment.tsx";
 import GameServerExperiment from "../../../game_server/GameServerExperiment.tsx";
+import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import GameServerConstants from "../../../game_server/GameServerConstants.tsx";
 import PremiumConstants from "../../PremiumConstants.tsx";
 import Constants from "../../../../Constants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -43,13 +41,8 @@ const set2 = new Set(items10);
 const obj4 = { boostPrice: 5, includedInLevel: BoostedGuildTiers.TIER_3 };
 let obj5 = {
   boostPrice: 3,
-  isEnabled(guildId) {
-    let serverThemeUserEnabled = ServerThemeUserExperiment.getServerThemeUserEnabled("GuildPowerupsConstants");
-    if (serverThemeUserEnabled) {
-      serverThemeUserEnabled = ServerThemeExperiment.getServerThemeEnabled(guildId, "GuildPowerupsConstants");
-      const tmpResult = ServerThemeExperiment;
-    }
-    return serverThemeUserEnabled;
+  isEnabled() {
+    return false;
   }
 };
 let obj6 = {

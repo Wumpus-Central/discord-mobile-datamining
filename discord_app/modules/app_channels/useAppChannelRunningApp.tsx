@@ -5,7 +5,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const ChannelTypes = fn(1072).ChannelTypes;
-const FramesConstants = fn(7028);
+const FramesConstants = fn(6532);
 ({ asLaunched: hasOwnProperty, getFrameSurfaceForChannel: closure_6 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelRunningApp.tsx");
@@ -38,7 +38,7 @@ export default function useAppChannelRunningApp(arg0) {
     items1,
   );
   let obj = require("initialize");
-  let tmp4 = stateFromStores(15193)(stateFromStores);
+  let tmp4 = stateFromStores(13821)(stateFromStores);
   const items2 = [FramesStore];
   const items3 = [stateFromStores];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(

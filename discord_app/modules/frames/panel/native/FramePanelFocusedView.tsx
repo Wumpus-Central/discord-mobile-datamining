@@ -1,7 +1,7 @@
 // discord_app/modules/frames/panel/native/FramePanelFocusedView.tsx
 import FramesActionCreatorsDefault from "../../FramesActionCreators.native.tsx";
-import FrameRenderTargetDefault from "../../native/FrameRenderTarget.tsx";
 import FrameStackLevel from "../../FrameStackLevel.tsx";
+import FrameRenderTargetDefault from "../../native/FrameRenderTarget.tsx";
 import ConjureFrameUpdateBarDefault from "../../../conjure/app_channel/native/ConjureFrameUpdateBar.tsx";
 import ActivityPanelFocusedView from "../../../activities/panel/native/ActivityPanelFocusedView.tsx";
 import FramePanelStateContextDefault from "FramePanelStateContext.tsx";
@@ -10,9 +10,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(7028);
+const FramesConstants = fn(6532);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
-const ActivityPanelModes = fn(5953).ActivityPanelModes;
+const ActivityPanelModes = fn(5449).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

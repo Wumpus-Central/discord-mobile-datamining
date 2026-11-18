@@ -15,7 +15,7 @@ const View = fn(17).View;
 const helpdeskUrl = fn(2145).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
 const jsx = fn(21).jsx;
 let closure_7 = { duration: 500 };
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   arrow: null,
   tooltip: { padding: 16 },

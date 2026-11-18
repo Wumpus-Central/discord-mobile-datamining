@@ -5,13 +5,13 @@ import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreato
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(12612);
+const SettingBuilders = fn(11897);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["St+DJK"]);
   },
-  parent: fn(9213).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8624).MobileUserSettings.ACCESSIBILITY,
   useValue: function useReducedMotionSyncSettingValue() {
     items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => "auto" === AccessibilityStore.rawPrefersReducedMotion);

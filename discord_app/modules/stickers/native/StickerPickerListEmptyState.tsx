@@ -6,7 +6,7 @@ const require = fn;
 const ScrollView = fn(17).ScrollView;
 const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const obj = {
   emptyStateContainer: { padding: 0, flex: 1 },
   emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE },
@@ -28,9 +28,9 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
     items,
   );
   const tmp = closure_7();
-  const modalDismissGuardRefreshControl = insetTop(11989).useModalDismissGuardRefreshControl();
+  const modalDismissGuardRefreshControl = insetTop(11271).useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = insetTop(5564).BottomSheetScrollView;
+    let BottomSheetScrollView = insetTop(5055).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }
@@ -53,7 +53,7 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
     emptyStateContainer: obj3.containerStyle,
     emptyStateImage: obj3.imageStyle,
   } = tmp);
-  obj5.source = insetBottom(12079);
+  obj5.source = insetBottom(11361);
   obj5.titleStyle = { marginBottom: 0 };
   obj2.children = jsx(insetTop(1187).RefreshEmptyState, {
     body: null,

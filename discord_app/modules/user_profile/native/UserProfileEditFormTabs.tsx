@@ -27,10 +27,10 @@ function MainPage() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const PROFILE_SIDE_PADDING = fn(7972).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7475).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = {
   tabbedContainer: { marginHorizontal: -PROFILE_SIDE_PADDING },
   stickyTabs: { zIndex: 1, paddingTop: nativeDefault.space.PX_12 },
@@ -148,7 +148,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   const tmp6Result = tmp6(first.useState(num2), 2);
   first = tmp6Result[0];
   absoluteFill = tmp6Result[1];
-  arr5 = tmp15(10856)(userId);
+  arr5 = tmp15(10112)(userId);
   closure_7 = tmp20;
   const items5 = [arr5];
   const memo = first.useMemo(() => arr5.filter(UserProfileGameWidgetTypes.isGameWidget), items5);

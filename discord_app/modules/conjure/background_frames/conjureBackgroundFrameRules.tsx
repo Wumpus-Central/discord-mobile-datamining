@@ -10,7 +10,7 @@ import VoiceChannelAppStore from "../../voice_channel_apps/VoiceChannelAppStore.
 import ConjureBuilderPreviewStore from "../preview/ConjureBuilderPreviewStore.tsx";
 
 require = fn;
-const FrameIntent = fn(7028).FrameIntent;
+const FrameIntent = fn(6532).FrameIntent;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrameRules.tsx");
 

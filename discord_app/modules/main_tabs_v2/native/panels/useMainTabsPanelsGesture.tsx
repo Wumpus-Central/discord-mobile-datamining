@@ -5,18 +5,18 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05592_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05083_LegacyBaseButton.js";
 import useLaunchPadTypeDefault from "../../../launchpad/native/useLaunchPadType.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const LaunchPadGestureRefContextDefault = tmp(18763);
+const LaunchPadGestureRefContextDefault = tmp(17576);
 require = fn;
-const LaunchPadTypes = fn(12608).LaunchPadTypes;
+const LaunchPadTypes = fn(11893).LaunchPadTypes;
 let PlatformUtils = fn(1380);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(18762);
+const PanelsConfig = fn(17575);
 let closure_6 = PlatformUtils
   ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG
   : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
@@ -493,13 +493,7 @@ export default function useMainTabsPanelsGesture(canDrag) {
   return {
     gesture: memo,
     panelGestureContext: noop.useMemo(
-      () => ({
-        gesture: memo,
-        disallowGesture: sharedValue2,
-        edgeSwipeOnly: sharedValue3,
-        translateX,
-        isInMainTabs: true,
-      }),
+      () => ({ gesture: memo, disallowGesture: sharedValue2, edgeSwipeOnly: sharedValue3, translateX }),
       items10,
     ),
     isDragging: sharedValue1,

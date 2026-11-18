@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjureInc
 
 export default function useConjureIncompleteAppNotice(arg0) {
   _require = arg0;
-  const tmp3 = guildId(14403)(arg0);
+  const tmp3 = guildId(18306)(arg0);
   guildId = undefined;
   if (tmp3 != null) {
     guildId = tmp3.guildId;
@@ -50,9 +50,9 @@ export default function useConjureIncompleteAppNotice(arg0) {
     if (tmp7[0] !== arg0) {
       const intl = require("util").intl;
       if ("channel" === missingSurface) {
-        let Lm7IRC = tmp(4133)["1cm4fj"];
+        let Lm7IRC = tmp(4121)["1cm4fj"];
       } else {
-        Lm7IRC = tmp(4133).Lm7IRC;
+        Lm7IRC = tmp(4121).Lm7IRC;
       }
       let str2 = stateFromStores;
       if (stateFromStores == null) {

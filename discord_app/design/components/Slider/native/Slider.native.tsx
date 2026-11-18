@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../modules/haptics/HapticFeedbackTypes.tsx";
-import _modDef11648 from "../../../../../_runtime/metro/11648__.js";
+import _modDef10930 from "../../../../../_runtime/metro/10930__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,16 +10,16 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { flexGrow: 1, flexDirection: "row", alignItems: "center" },
   slider: { flex: 1 },
-  minimumTrackTintColor: { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED },
+  minimumTrackTintColor: { backgroundColor: nativeDefault.colors.SLIDER_INDICATOR_BACKGROUND },
   maximumTrackTintColor: null,
   startIcon: null,
   endIcon: null,
 };
-let obj3 = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+let obj3 = { backgroundColor: nativeDefault.colors.SLIDER_INDICATOR_BACKGROUND };
 obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
 let obj4 = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
 obj2.startIcon = { marginRight: nativeDefault.space.PX_8 };
@@ -139,7 +139,7 @@ export function Slider(maxValue) {
   }
   obj4.accessibilityValue = tmp19;
   obj4.testID = testID;
-  const tmp18 = _modDef11648;
+  const tmp18 = _modDef10930;
   let fn;
   if (obj6.isAndroid()) {
     fn = () => true;

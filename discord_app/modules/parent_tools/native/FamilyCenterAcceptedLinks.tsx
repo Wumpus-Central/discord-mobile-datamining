@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
-import _modDef2703 from "../FamilyCenter.messages.js";
+import _modDef2723 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useUserLinks from "../hooks/useUserLinks.tsx";
@@ -10,14 +10,14 @@ import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterEmptyDefault from "FamilyCenterEmpty.tsx";
 import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow.tsx";
-import _modDef17493 from "../../../../_runtime/metro/17493__.js";
+import _modDef16150 from "../../../../_runtime/metro/16150__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function FamilyCenterAcceptedLinkRow(otherUser) {
   let tmp4Result = null;
   if (undefined !== otherUser.otherUser) {
-    const obj2 = { otherUser: str, actions: null };
+    const obj2 = { otherUser: str, status: constants.ACTIVE, actions: null };
     const intl = str(1113).intl;
     let str1;
     if (str != null) {
@@ -25,25 +25,28 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     }
     const obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     const obj3 = { name: str1 };
-    obj.accessibilityLabel = intl.formatToPlainString(_modDef2703.T7DUoU, obj3);
+    obj.accessibilityLabel = intl.formatToPlainString(_modDef2723.T7DUoU, obj3);
     obj.onPress = function handleDisconnect() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17491, dependencyMap.paths), { otherUser: str });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16148, dependencyMap.paths), { otherUser: str });
     };
     obj.style = tmp.actionButton;
-    const obj4 = { size: str(1187).Icon.Sizes.SMALL, disableColor: true, source: _modDef17493 };
-    obj.children = closure_6(str(1187).Icon, obj4);
-    obj2.actions = closure_6(str(7438).PressableOpacity, obj);
-    tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj2);
+    const obj4 = { size: str(1187).Icon.Sizes.SMALL, disableColor: true, source: _modDef16150 };
+    obj.children = closure_7(str(1187).Icon, obj4);
+    obj2.actions = closure_7(str(6941).PressableOpacity, obj);
+    tmp4Result = closure_7(FamilyCenterLinkRowDefault, obj2);
   }
   return tmp4Result;
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(8752);
-({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_4, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: hasOwnProperty } =
-  FamilyCenterConstants);
+const FamilyCenterConstants = fn(8248);
+({
+  MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_4,
+  MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: hasOwnProperty,
+  UserLinkStatus: closure_6,
+} = FamilyCenterConstants);
 const jsxProd = fn(21);
-({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let createStyles = fn(5310);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+let createStyles = fn(4823);
 let obj2 = {
   container: { marginTop: 24 },
   content: {
@@ -55,8 +58,8 @@ let obj2 = {
   empty: { padding: 20, alignSelf: "center" },
   header: { marginBottom: 10 },
 };
-let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(5310);
+let closure_9 = createStyles.createStyles(obj2);
+createStyles = fn(4823);
 let obj5 = { actionButton: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -68,12 +71,12 @@ let size = {
   width: 32,
 };
 obj5.actionButton = size;
-let closure_9 = createStyles.createStyles(obj5);
+let closure_10 = createStyles.createStyles(obj5);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterAcceptedLinks.tsx");
 
 export default function FamilyCenterAcceptedLinks() {
-  const tmp = closure_8();
+  const tmp = closure_9();
   const tmp4 = useIsInAdultAgeGroupDefault();
   const activeLinkUsers = useUserLinks.useActiveLinkUsers();
   const obj2 = { count: activeLinkUsers.length, max: tmp4 ? React4 : hasOwnProperty };
@@ -82,11 +85,11 @@ export default function FamilyCenterAcceptedLinks() {
   const intl2 = util.intl;
   const obj3 = { style: tmp.container, children: null };
   const ageSpecificText = tmp5Result.useAgeSpecificText(
-    intl.formatToPlainString(_modDef2703["+tnO34"], obj2),
-    intl2.formatToPlainString(_modDef2703["pu6/U0"], obj2),
+    intl.formatToPlainString(_modDef2723["+tnO34"], obj2),
+    intl2.formatToPlainString(_modDef2723["pu6/U0"], obj2),
   );
   items = [
-    timestampProducer(Text_Text.Text, {
+    metroImportDefault(Text_Text.Text, {
       style: tmp.header,
       variant: "body-sm/medium",
       color: "text-default",
@@ -98,17 +101,17 @@ export default function FamilyCenterAcceptedLinks() {
     const obj6 = { style: tmp.empty, children: null };
     const obj7 = { text: null };
     const intl3 = util.intl;
-    obj7.text = intl3.string(_modDef2703.C4ScLD);
-    obj6.children = timestampProducer(FamilyCenterEmptyDefault, obj7);
-    let mapped = timestampProducer(View, obj6);
+    obj7.text = intl3.string(_modDef2723.C4ScLD);
+    obj6.children = metroImportDefault(FamilyCenterEmptyDefault, obj7);
+    let mapped = metroImportDefault(View, obj6);
     const tmp2Result = FamilyCenterEmptyDefault;
   } else {
     mapped = activeLinkUsers.map((otherUser) =>
-      closure_1_6(FamilyCenterAcceptedLinkRow, { otherUser }, "accepted-" + otherUser.id),
+      closure_1_7(FamilyCenterAcceptedLinkRow, { otherUser }, "accepted-" + otherUser.id),
     );
   }
   obj5.children = mapped;
-  items[1] = timestampProducer(View, obj5);
+  items[1] = metroImportDefault(View, obj5);
   obj3.children = items;
-  return metroImportDefault(View, obj3);
+  return React5(View, obj3);
 }

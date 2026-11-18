@@ -1,8 +1,8 @@
 // discord_app/modules/favorites/native/FavoritesGuildHeaderActions.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3681 from "../intl/FavoritesGuild.messages.js";
+import _modDef3701 from "../intl/FavoritesGuild.messages.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef13692 from "../../../../_runtime/metro/13692__.js";
+import _modDef12999 from "../../../../_runtime/metro/12999__.js";
 import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -15,17 +15,17 @@ export function FavoritesGuildHeaderActionButton() {
   const obj = {
     variant: "secondary",
     size: "sm",
-    icon: _modDef13692,
+    icon: _modDef12999,
     onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1,
   };
   const intl = util.intl;
-  obj.accessibilityLabel = intl.string(_modDef3681.G9fGlP);
+  obj.accessibilityLabel = intl.string(_modDef3701.G9fGlP);
   return jsx(IconButton.IconButton, {
     variant: "secondary",
     size: "sm",
-    icon: _modDef13692,
+    icon: _modDef12999,
     onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1,

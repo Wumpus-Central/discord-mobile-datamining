@@ -1,13 +1,14 @@
 // discord_app/modules/checkpoint/CheckpointSounds.tsx
 import CheckpointNavigation from "CheckpointNavigation.tsx";
-import _modDef13158 from "../../../discord_assets/assets/checkpoint/2026/sfx/character-first-machine-scan.mp3.js";
-import _modDef13159 from "../../../discord_assets/assets/checkpoint/2026/sfx/character-second-scan.mp3.js";
-import _modDef13160 from "../../../discord_assets/assets/checkpoint/2026/sfx/transition-data.mp3.js";
-import _modDef13161 from "../../../discord_assets/assets/checkpoint/2026/sfx/transition-lab.mp3.js";
-import _modDef13162 from "../../../discord_assets/assets/checkpoint/2026/sfx/zoom-whoosh.mp3.js";
+import _modDef12457 from "../../../discord_assets/assets/checkpoint/2026/sfx/character-first-machine-scan.mp3.js";
+import _modDef12458 from "../../../discord_assets/assets/checkpoint/2026/sfx/character-second-scan.mp3.js";
+import _modDef12459 from "../../../discord_assets/assets/checkpoint/2026/sfx/summary-reveal.mp3.js";
+import _modDef12460 from "../../../discord_assets/assets/checkpoint/2026/sfx/transition-data.mp3.js";
+import _modDef12461 from "../../../discord_assets/assets/checkpoint/2026/sfx/transition-lab.mp3.js";
+import _modDef12462 from "../../../discord_assets/assets/checkpoint/2026/sfx/zoom-whoosh.mp3.js";
 
 require = fn;
-let items = [_modDef13158, _modDef13159, _modDef13160, _modDef13161, _modDef13162];
+let items = [_modDef12457, _modDef12458, _modDef12459, _modDef12460, _modDef12461, _modDef12462];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointSounds.tsx");
 
@@ -21,15 +22,17 @@ export function getCheckpointRouteSounds(arg0) {
   }
   if (previousRoute === CheckpointNavigation.CheckpointRoute.FINALIZE_CHARACTER) {
     if (route === CheckpointNavigation.CheckpointRoute.SUMMARY) {
-      return [];
+      const obj = { source: _modDef12459, delayMs: 0 };
+      items = [obj];
+      return items;
     }
   }
-  items = [];
+  const items1 = [];
   if (route === CheckpointNavigation.CheckpointRoute.INTRODUCTION) {
-    const obj = { source: _modDef13158, delayMs: 0 };
-    items.push(obj);
-    const obj2 = { source: _modDef13159, delayMs: 2800 };
-    items.push(obj2);
+    const obj2 = { source: _modDef12457, delayMs: 0 };
+    items1.push(obj2);
+    const obj3 = { source: _modDef12458, delayMs: 2800 };
+    items1.push(obj3);
   } else {
     let tmp4 = previousRoute !== CheckpointNavigation.CheckpointRoute.HOME;
     if (tmp4) {
@@ -38,8 +41,8 @@ export function getCheckpointRouteSounds(arg0) {
     }
     if (tmp4) {
       if (null != tmpResult4.getCheckpointRoutePresentation(route).statsScreen) {
-        const obj3 = { source: _modDef13160, delayMs: 0 };
-        items.push(obj3);
+        const obj4 = { source: _modDef12460, delayMs: 0 };
+        items1.push(obj4);
       }
       tmpResult4 = CheckpointNavigation;
     }
@@ -53,12 +56,12 @@ export function getCheckpointRouteSounds(arg0) {
       tmp7 = tmp8;
     }
     if (tmp7) {
-      const obj4 = { source: _modDef13161, delayMs: 0 };
-      items.push(obj4);
+      const obj5 = { source: _modDef12461, delayMs: 0 };
+      items1.push(obj5);
     }
     const tmpResult5 = CheckpointNavigation;
   }
-  return items;
+  return items1;
 }
 export function scheduleCheckpointRouteSounds(arr, arg1) {
   closure_0 = arg1;

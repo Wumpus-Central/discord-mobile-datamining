@@ -705,9 +705,9 @@ function isMessageRenderable(message) {
   return true;
 }
 const ImageSizes = fn(2145).ImageSizes;
-const promiseDeduper = new fn(5430).PromiseDeduper();
-const promiseDeduper3 = new fn(5430).PromiseDeduper();
-const promiseDeduper4 = new fn(5430).PromiseDeduper();
+const promiseDeduper = new fn(4943).PromiseDeduper();
+const promiseDeduper3 = new fn(4943).PromiseDeduper();
+const promiseDeduper4 = new fn(4943).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx",

@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemDragHandle.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05887_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05378_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -197,7 +197,7 @@ const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const colors = ["purple", "orange"];
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, handles: null, handleWithLabel: null, heading: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.handles = {

@@ -112,7 +112,7 @@ function ProfileFrameSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(9413)(previewSkuId);
+  const tmp2 = purchase(8826)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -136,21 +136,21 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(10075), { user, guildId, profileFrame: memo, maxWidth: 280 })];
+  const items1 = [closure_9(purchase(9355), { user, guildId, profileFrame: memo, maxWidth: 280 })];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
-  items1[1] = closure_9(purchase(5887), obj2);
+  items1[1] = closure_9(purchase(5378), obj2);
   obj.children = items1;
   return closure_10(closure_5, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileFrameRecord = fn(8503).isProfileFrameRecord;
+const isProfileFrameRecord = fn(7994).isProfileFrameRecord;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { flex: 1 },
   previewContainer: { overflow: "hidden", height: 300, alignItems: "center" },

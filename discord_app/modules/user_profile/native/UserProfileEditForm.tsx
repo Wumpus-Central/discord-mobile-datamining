@@ -19,7 +19,7 @@ import useSafeAreaAvoidingInputsDefault from "../../safe_area/useSafeAreaAvoidin
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef17101 from "../../../../_runtime/metro/17101__.js";
+import _modDef15757 from "../../../../_runtime/metro/15757__.js";
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles.tsx";
@@ -46,17 +46,17 @@ import 01655__ from "../../../../_runtime/metro/01655__.js";
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
-const useMeasuredLayoutDefault = tmp(8005);
-const useProfileThemeDefault = tmp(8601);
-const useUserProfileBannerHeightDefault = tmp(8604);
-const UserProfileFixedBackgroundDefault = tmp(8611);
-const useBadgesDefault = tmp(8619);
-const UserProfileCustomStatusBubbleDefault = tmp(9543);
-const useTryItOutUpsellScrollTrackingDefault = tmp(17124);
-const useStickyEditFormHeadersDefault = tmp(17125);
-const useScrollToUserProfileEditFormSectionDefault = tmp(17126);
-const EditUserProfileAvatarDefault = tmp(17211);
-const UserProfilePremiumTryItOutUpsellDefault = tmp(17222);
+const useMeasuredLayoutDefault = tmp(7508);
+const useProfileThemeDefault = tmp(8092);
+const useUserProfileBannerHeightDefault = tmp(8095);
+const UserProfileFixedBackgroundDefault = tmp(8102);
+const useBadgesDefault = tmp(8110);
+const UserProfileCustomStatusBubbleDefault = tmp(8957);
+const useTryItOutUpsellScrollTrackingDefault = tmp(15780);
+const useStickyEditFormHeadersDefault = tmp(15781);
+const useScrollToUserProfileEditFormSectionDefault = tmp(15782);
+const EditUserProfileAvatarDefault = tmp(15867);
+const UserProfilePremiumTryItOutUpsellDefault = tmp(15879);
 require = fn;
 function EditUserProfileBanner(arg0) {
   ({ user, displayProfile, pendingBanner, tryItOutBanner, isTryItOut, pendingAvatarSrc, pendingAccentColor, pendingThemeColors, disabled } = arg0);
@@ -521,7 +521,7 @@ function UserProfileEditFormContent(currentUser) {
         obj6.value = tmp16;
         obj6.onFocus = onFocus;
         obj6.onChange = function onChange(globalName) {
-          return _undefined(9407).setPendingChanges({ globalName });
+          return _undefined(8820).setPendingChanges({ globalName });
         };
         obj6.placeholder = _undefined.toString();
         obj6.maxLength = maxLength;
@@ -551,7 +551,7 @@ function UserProfileEditFormContent(currentUser) {
           obj8.value = tmp30;
           obj8.onFocus = onFocus;
           obj8.onChange = function onChange(pronouns) {
-            return _undefined(9407).setPendingChanges({ pronouns });
+            return _undefined(8820).setPendingChanges({ pronouns });
           };
           obj8.maxLength = maxLength2;
           obj8.disabled = isSubmitting;
@@ -574,7 +574,7 @@ function UserProfileEditFormContent(currentUser) {
           obj10.value = tmp41;
           obj10.onFocus = onFocus;
           obj10.onChange = function onChange(bio) {
-            return _undefined(9407).setPendingChanges({ bio });
+            return _undefined(8820).setPendingChanges({ bio });
           };
           obj10.autoFocus = c1 === constants.BIO;
           obj10.maxLength = maxLength;
@@ -585,7 +585,7 @@ function UserProfileEditFormContent(currentUser) {
           if (tmp25) {
             let fn = UserProfileActionCreators.setTryItOutThemeColors;
           } else {
-            fn = (themeColors) => _undefined(9407).setPendingChanges({ themeColors });
+            fn = (themeColors) => _undefined(8820).setPendingChanges({ themeColors });
           }
           obj11.onProfileThemeColorsChanged = fn;
           obj11.pendingAvatarSrc = pendingAvatarSrc;
@@ -641,7 +641,7 @@ function UserProfileEditFormContent(currentUser) {
               currentUser: _undefined,
               onLayout: closure_53.onTryItOutSectionLayout,
               onPreviewPremium() {
-                    return _undefined(17207).openPremiumTryItOutModal();
+                    return _undefined(15863).openPremiumTryItOutModal();
                   }
             };
             tmp12Result9 = gesture(UserProfilePremiumTryItOutSectionDefault, obj21);
@@ -694,7 +694,7 @@ function UserProfileEditFormContent(currentUser) {
     items10[2] = tmp27;
     obj19.children = items10;
     obj18.children = tmp58(tmp59, obj19);
-    return tmp57(tmp4(5371).ThemeContextProvider, obj18);
+    return tmp57(tmp4(4884).ThemeContextProvider, obj18);
   } else if (enabled) {
     tmp = UserProfilePremiumTryItOutUpsellDefault;
     obj = {
@@ -706,26 +706,26 @@ function UserProfileEditFormContent(currentUser) {
     let tmp57Result2 = tmp57(tmp, obj);
   } else {
     let obj29 = { isTryItOut };
-    tmp57Result2 = tmp57(tmp4(17223).UserProfilePremiumUpsellCard, obj29);
+    tmp57Result2 = tmp57(tmp4(15880).UserProfilePremiumUpsellCard, obj29);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7972).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7475).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1072);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_8, PRONOUNS_MAX_LENGTH: closure_9 } = Constants);
-const HexagonCampaignConstants = fn(5335);
+const HexagonCampaignConstants = fn(4848);
 ({ HexagonCampaignPerk: closure_10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 let closure_12 = fn(1082).ProfileCustomizationScrollPositions;
-let closure_13 = fn(17100).UserProfileEditAutoFocusElement;
+let closure_13 = fn(15756).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_17 = [1];
 let closure_18 = module_1655.createAnimatedComponent(ScrollView);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { stickyHeader: { zIndex: 2 }, tabsAnchor: { marginTop: nativeDefault.space.PX_12 } };
 let closure_19 = createStyles.createStyles(obj);
-let obj4 = { assetOrigin: fn(7818).AssetOriginTypes.NEW_ASSET, imageUri: _modDef17101, staticImageUri: _modDef17101, description: "", originalAsset: "alignItems" };
+let obj4 = { assetOrigin: fn(7321).AssetOriginTypes.NEW_ASSET, imageUri: _modDef15757, staticImageUri: _modDef15757, description: "", originalAsset: "analyticsLocations" };
 let closure_24 = { code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");

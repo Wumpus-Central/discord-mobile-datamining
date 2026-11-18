@@ -55,7 +55,7 @@ function toHandle(getGuildId) {
   return combined;
 }
 const AppState = fn(17).AppState;
-const isMultiUserDM = fn(5163).isMultiUserDM;
+const isMultiUserDM = fn(4676).isMultiUserDM;
 let Constants = fn(1072);
 ({
   AnalyticEvents: closure_18,
@@ -64,7 +64,7 @@ let Constants = fn(1072);
   ME: closure_21,
   RTCConnectionStates: closure_22,
 } = Constants);
-Constants = fn(6072);
+Constants = fn(5568);
 ({ Features: closure_23, MediaEngineContextTypes: closure_24 } = Constants);
 let obj = new LoggerDefault("SystemTelecomManager");
 obj.enableNativeLogger(true);
@@ -250,7 +250,7 @@ class SystemTelecomManager {
                     if (null != recipientId) {
                       dependencyMap = 2;
                       c4 = 1;
-                      const obj7 = { value: v0(8145).ensurePrivateChannel(recipientId), done: false };
+                      const obj7 = { value: v0(7648).ensurePrivateChannel(recipientId), done: false };
                       return obj7;
                     }
                   }
@@ -259,7 +259,7 @@ class SystemTelecomManager {
                     hasChannelResult = ChannelStore.hasChannel(channelId);
                   }
                   if (hasChannelResult) {
-                    const tmp55 = v0(8147);
+                    const tmp55 = v0(7650);
                     const call2 = tmp55.call;
                     if (typeof call2 === "unknown") {
                       tmp55(tmp57, true);
@@ -270,9 +270,9 @@ class SystemTelecomManager {
                     tmp56 = channelId;
                   }
                 } else {
-                  v0(6223).setVideoEnabled(closure_129_2);
+                  v0(5719).setVideoEnabled(closure_129_2);
                   closure_129_7();
-                  const obj2 = v0(6223);
+                  const obj2 = v0(5719);
                 }
                 c4 = 3;
               }
@@ -280,7 +280,7 @@ class SystemTelecomManager {
               c4 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              const tmp9 = v0(8147);
+              const tmp9 = v0(7650);
               const call = tmp9.call;
               if (typeof call === "unknown") {
                 tmp9(tmp11, true);
@@ -321,7 +321,7 @@ class SystemTelecomManager {
       }
     };
     obj.handleSessionStart = function handleSessionStart() {
-      obj = obj(16929);
+      obj = obj(15579);
       obj.flushCallPushToken();
     };
     obj.handleConnectionOpen = function handleConnectionOpen(user) {
@@ -369,6 +369,25 @@ class SystemTelecomManager {
         }
       }
     };
+    obj.handleCallStopRingingSelf = function handleCallStopRingingSelf(arg0) {
+      let ringing = null != tmp3;
+      if (ringing) {
+        ringing = "incoming" === tmp3.direction;
+      }
+      if (ringing) {
+        ringing = tmp3.ringing;
+      }
+      if (ringing) {
+        ringing = !tmp3.connected;
+      }
+      if (ringing) {
+        const calls = obj.calls;
+        delete tmp[tmp2];
+        const result = obj.updateActiveCallStatus();
+        const result1 = obj.clearReportCallEndedTimeout(tmp3.uuid);
+        NativeSystemTelecomModule.endCall(tmp3.uuid);
+      }
+    };
     obj.handleCallDelete = function handleCallDelete(arg0) {
       let deletable;
       if (obj.calls[arg0.channelId] != null) {
@@ -410,7 +429,7 @@ class SystemTelecomManager {
       const item = voiceStates.forEach((channelId) => {
         channelId = channelId.channelId;
         ({ guildId, userId, sessionId, selfVideo } = channelId);
-        obj = obj(16930);
+        obj = obj(15580);
         if (obj.isSystemTelecomEnabledForChannel(guildId, channelId)) {
           if (null != channelId) {
             if (userId === currentUserId.currentUserId) {
@@ -471,15 +490,16 @@ prototype["initialize"] = function initialize() {
   const subscription3 = DispatcherDefault.subscribe("CALL_CREATE", this.handleCallCreate);
   const subscription4 = DispatcherDefault.subscribe("CALL_UPDATE", this.handleCallUpdate);
   const subscription5 = DispatcherDefault.subscribe("CALL_DELETE", this.handleCallDelete);
-  const subscription6 = DispatcherDefault.subscribe("CHANNEL_DELETE", this.handleChannelDelete);
-  const subscription7 = DispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
-  const subscription8 = DispatcherDefault.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
-  const subscription9 = DispatcherDefault.subscribe("AUDIO_TOGGLE_SELF_MUTE", this.handleAudioToggleSelfMute);
-  const subscription10 = DispatcherDefault.subscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState);
+  const subscription6 = DispatcherDefault.subscribe("CALL_STOP_RINGING_SELF", this.handleCallStopRingingSelf);
+  const subscription7 = DispatcherDefault.subscribe("CHANNEL_DELETE", this.handleChannelDelete);
+  const subscription8 = DispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  const subscription9 = DispatcherDefault.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+  const subscription10 = DispatcherDefault.subscribe("AUDIO_TOGGLE_SELF_MUTE", this.handleAudioToggleSelfMute);
+  const subscription11 = DispatcherDefault.subscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState);
   const emitterSubscriptions = this.emitterSubscriptions;
   items = [...SystemTelecomPlatform.subscribeToCallPushToken()];
-  items[tmp12] = NativeSystemTelecomModule.onIncomingCall(this.handleIncomingCall);
-  const sum = tmp12 + 1;
+  items[tmp13] = NativeSystemTelecomModule.onIncomingCall(this.handleIncomingCall);
+  const sum = tmp13 + 1;
   items[sum] = NativeSystemTelecomModule.onIncomingCallEnded(this.handleIncomingCallEnded);
   const sum1 = sum + 1;
   items[sum1] = NativeSystemTelecomModule.onSystemStartCall(this.handleSystemStartCall);
@@ -497,6 +517,7 @@ prototype["terminate"] = function terminate() {
   DispatcherDefault.unsubscribe("CALL_CREATE", this.handleCallCreate);
   DispatcherDefault.unsubscribe("CALL_UPDATE", this.handleCallUpdate);
   DispatcherDefault.unsubscribe("CALL_DELETE", this.handleCallDelete);
+  DispatcherDefault.unsubscribe("CALL_STOP_RINGING_SELF", this.handleCallStopRingingSelf);
   DispatcherDefault.unsubscribe("CHANNEL_DELETE", this.handleChannelDelete);
   DispatcherDefault.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
   DispatcherDefault.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
@@ -506,8 +527,8 @@ prototype["terminate"] = function terminate() {
   const item = emitterSubscriptions.forEach((remove) => remove.remove());
   this.emitterSubscriptions = [];
 };
-prototype["clearReportCallEndedTimeout"] = function clearReportCallEndedTimeout(callId) {
-  clearTimeout(this.reportCallEndedTimeouts[callId]);
+prototype["clearReportCallEndedTimeout"] = function clearReportCallEndedTimeout(uuid) {
+  clearTimeout(this.reportCallEndedTimeouts[uuid]);
   delete tmp[tmp2];
 };
 prototype["findCall"] = function findCall(callId) {
@@ -586,26 +607,26 @@ prototype["startCall"] = function startCall(arg0) {
                 const result = self.updateActiveCallStatus();
                 const obj9 = tmp5(1269);
                 const _HermesInternal = HermesInternal;
-                tmp29(8869).setRequestedBy("call:" + obj6.uuid);
-                const obj10 = tmp29(8869);
+                tmp29(8365).setRequestedBy("call:" + obj6.uuid);
+                const obj10 = tmp29(8365);
                 if (obj11.isSystemTelecomEnabled()) {
-                  const obj2 = tmp3(16928);
+                  const obj2 = tmp3(15578);
                   ({ uuid, handle } = obj6);
-                  const tmp42Result = tmp5(5948);
+                  const tmp42Result = tmp5(5439);
                   const startOutgoingCallResult = obj2.startOutgoingCall(
                     uuid,
                     handle,
-                    tmp5(5948).computeChannelName(obj6.channel, UserStore, RelationshipStore),
+                    tmp5(5439).computeChannelName(obj6.channel, UserStore, RelationshipStore),
                     obj6.video,
                   );
-                  tmp3(16928).setCallMuted(obj6.uuid, obj6.muted);
+                  tmp3(15578).setCallMuted(obj6.uuid, obj6.muted);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
                   const obj7 = { value: startOutgoingCallResult, done: false };
                   return obj7;
                 }
-                obj11 = tmp5(16930);
+                obj11 = tmp5(15580);
               }
             }
           }
@@ -756,14 +777,14 @@ prototype["reportCall"] = function reportCall(channelId, callerName) {
     obj8 = SystemTelecomUtils;
   }
 };
-prototype["reportCallEnded"] = function reportCallEnded(callId, arg1) {
+prototype["reportCallEnded"] = function reportCallEnded(uuid, arg1) {
   const self = this;
-  const result = this.clearReportCallEndedTimeout(callId);
-  NativeSystemTelecomModule.reportCallEnded(callId);
+  const result = this.clearReportCallEndedTimeout(uuid);
+  NativeSystemTelecomModule.reportCallEnded(uuid);
   if (null != arg1) {
     const calls = self.calls;
     delete tmp[tmp2];
-    if (self.incomingCalls[arg1] === callId) {
+    if (self.incomingCalls[arg1] === uuid) {
       const incomingCalls = self.incomingCalls;
       delete tmp[tmp2];
     }

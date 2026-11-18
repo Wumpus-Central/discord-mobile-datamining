@@ -191,10 +191,10 @@ function GiftIntentGifModalBody(channelId) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const MessageSendLocation = fn(5315).MessageSendLocation;
+const MessageSendLocation = fn(4828).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   messageContainer: null,

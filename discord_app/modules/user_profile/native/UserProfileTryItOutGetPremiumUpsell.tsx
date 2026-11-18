@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileTryItOutGetPremiumUpsell.tsx
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
-import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
+import openPremiumModalDefault from "../../premium/native/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(9618).useNitroTrialCtaOverride();
+  let nitroTrialCtaOverride = analyticsLocations(9032).useNitroTrialCtaOverride();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   items = [analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -36,7 +36,7 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
     onButtonPress: null,
     onLayout: null,
   };
-  let obj = analyticsLocations(9618);
+  let obj = analyticsLocations(9032);
   const intl = analyticsLocations(1113).intl;
   obj2.text = intl.format(analyticsLocations(1113).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {

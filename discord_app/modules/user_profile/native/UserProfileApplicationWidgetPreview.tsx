@@ -9,14 +9,14 @@ import useApplicationWidgetLayoutRendererPropsDefault from "../../application_wi
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
-const FastImageDefault = tmp4(6014);
-const UserProfileApplicationWidgetHeroImageDefault = tmp4(11005);
+const FastImageDefault = tmp4(5510);
+const UserProfileApplicationWidgetHeroImageDefault = tmp4(10287);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const sum = nativeDefault.space.PX_128 + nativeDefault.space.PX_24;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   preview: { flexDirection: "row", gap: nativeDefault.space.PX_16, minHeight: sum },
   contentColumn: { flex: 3 },

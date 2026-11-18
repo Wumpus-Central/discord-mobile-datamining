@@ -72,7 +72,7 @@ export function getBadgeTitle(badge, displayTier) {
     name2 = badge.name;
   }
   if (tmp3) {
-    const obj2 = { isNitro: tmp3, eyebrow: "Array", displayName: true };
+    const obj2 = { isNitro: tmp3, eyebrow: "Array", displayName: "<string:551485441>" };
     let combined = name2;
     if (null != name) {
       const _HermesInternal = HermesInternal;

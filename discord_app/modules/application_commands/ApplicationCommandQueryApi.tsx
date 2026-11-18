@@ -52,7 +52,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(11114);
+let ApplicationCommandIndexStore = fn(10396);
 ({
   useContextIndexState: closure_6,
   useDiscoveryState: metroImportDefault,
@@ -60,17 +60,17 @@ let ApplicationCommandIndexStore = fn(11114);
   useUserIndexState: closure_9,
 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(6343).BuiltInSectionId;
+const BuiltInSectionId = fn(5845).BuiltInSectionId;
 const NOOP = fn(1072).NOOP;
 let items = [fn(2119).ApplicationCommandType.CHAT];
-let section = { id: "placeholder-section", type: fn(5979).ApplicationCommandSectionType.APPLICATION, name: "" };
+let section = { id: "placeholder-section", type: fn(5475).ApplicationCommandSectionType.APPLICATION, name: "" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "ip", command: "isArray", section: "isArray" };
+    return { application: "Array", command: "channelId", section: "useRef" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -121,7 +121,7 @@ export function getCachedCommand(type, commandId, applicationId) {
         }
       }
     }
-    return { application: "ip", command: "isArray", section: "isArray" };
+    return { application: "Array", command: "channelId", section: "useRef" };
   }
 }
 export function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -462,7 +462,7 @@ export function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "Path" };
+    return { command: "__d", application: "enabled" };
   }, items);
 }
 export function useCommandsForApplication(arg0, arg1, arg2) {

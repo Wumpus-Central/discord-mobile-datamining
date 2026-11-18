@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/share/native/ConjureFirstShareReview.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4133 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4121 from "../../intl/ConjureUntranslated.messages.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -56,7 +56,7 @@ function PrivateCheckbox(appChannelsPrivate) {
   items = [React4(FormCheckbox.FormCheckbox, { checked: isPrivate })];
   const obj3 = { variant: "body-md/medium", color: "text-subtle", children: null };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef4133.RSyIc9);
+  obj3.children = intl.string(_modDef4121.RSyIc9);
   items[1] = React4(Text_Text.Text, obj3);
   obj2.children = items;
   return timestampProducer(Pressables.PressableOpacity, obj2);
@@ -86,15 +86,15 @@ function ContentRow(trailing) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { screen_capture: fn(10522).ScreenIcon, connect_user_to_voice: fn(7442).VoiceNormalIcon };
+let obj = { screen_capture: fn(9803).ScreenIcon, connect_user_to_voice: fn(6945).VoiceNormalIcon };
 let obj2 = {};
-obj2[fn(7026).ConjureSupportedSurface.BOT] = fn(12837).RobotIcon;
-obj2[fn(7026).ConjureSupportedSurface.ACTIVITY] = fn(14568).ActivitiesIcon;
-obj2[fn(7026).ConjureSupportedSurface.VOICE_CHANNEL] = fn(7442).VoiceNormalIcon;
-obj2[fn(7026).ConjureSupportedSurface.PROFILE_WIDGET] = fn(14570).BadgeIcon;
-obj2[fn(7026).ConjureSupportedSurface.AUTOMOD] = fn(10751).ShieldIcon;
-obj2[fn(7026).ConjureSupportedSurface.OVERLAY] = fn(7448).GameControllerIcon;
-const createStyles = fn(5310);
+obj2[fn(6530).ConjureSupportedSurface.BOT] = fn(12131).RobotIcon;
+obj2[fn(6530).ConjureSupportedSurface.ACTIVITY] = fn(18050).ActivitiesIcon;
+obj2[fn(6530).ConjureSupportedSurface.VOICE_CHANNEL] = fn(6945).VoiceNormalIcon;
+obj2[fn(6530).ConjureSupportedSurface.PROFILE_WIDGET] = fn(18439).BadgeIcon;
+obj2[fn(6530).ConjureSupportedSurface.AUTOMOD] = fn(10032).ShieldIcon;
+obj2[fn(6530).ConjureSupportedSurface.OVERLAY] = fn(6951).GameControllerIcon;
+const createStyles = fn(4823);
 let obj4 = {
   sectionTitle: { marginBottom: nativeDefault.space.PX_4 },
   followingSection: null,
@@ -133,10 +133,10 @@ export default function ConjureFirstShareReview(onConjure) {
     isPrivate = appChannelsPrivate.isPrivate;
   }
   if (true === isPrivate) {
-    AppsIcon = AppsIcon(8111).AppsLockIcon;
+    AppsIcon = AppsIcon(7614).AppsLockIcon;
     let tmp4 = AppsIcon;
   } else {
-    AppsIcon = AppsIcon(8112).AppsIcon;
+    AppsIcon = AppsIcon(7615).AppsIcon;
     tmp4 = AppsIcon;
   }
   let tmp8 = null;
@@ -163,7 +163,7 @@ export default function ConjureFirstShareReview(onConjure) {
   ];
   components = review.components;
   const items1 = [
-    closure_4(tmp4(14432).ConjureAppIconTile, {
+    closure_4(tmp4(18333).ConjureAppIconTile, {
       iconURL: identity.iconURL,
       size: 48,
       radius: 12,
@@ -172,8 +172,8 @@ export default function ConjureFirstShareReview(onConjure) {
       onError(text) {
         if (null != text) {
           obj2 = { text, variant: "critical" };
-          appChannelsPrivate(6009).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
-          obj = appChannelsPrivate(6009);
+          appChannelsPrivate(5505).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
+          obj = appChannelsPrivate(5505);
         }
       },
       onConjure: onConjure.onConjureIcon,
@@ -185,24 +185,24 @@ export default function ConjureFirstShareReview(onConjure) {
   ];
   const obj4 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
   let intl = tmp4(1113).intl;
-  obj4.label = intl.string(appChannelsPrivate(4133).knevPu);
+  obj4.label = intl.string(appChannelsPrivate(4121).knevPu);
   ({ name: obj2.value, setName: obj2.onChange } = review);
-  obj4.maxLength = tmp4(7026).MAX_PROJECT_NAME_LENGTH;
+  obj4.maxLength = tmp4(6530).MAX_PROJECT_NAME_LENGTH;
   ({ saving: obj2.disabled, nameError } = review);
   obj4.errorMessage = nameError;
-  items1[1] = closure_4(tmp4(7629).TextInput, obj4);
+  items1[1] = closure_4(tmp4(7132).TextInput, obj4);
   const obj6 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = tmp4(1113).intl;
-  obj6.label = intl2.string(appChannelsPrivate(4133).ynaGa1);
+  obj6.label = intl2.string(appChannelsPrivate(4121).ynaGa1);
   const intl3 = tmp4(1113).intl;
-  obj6.placeholder = intl3.string(appChannelsPrivate(4133)["I+3UTL"]);
+  obj6.placeholder = intl3.string(appChannelsPrivate(4121)["I+3UTL"]);
   ({ description: obj3.value, setDescription: obj3.onChange } = identity);
-  obj6.maxLength = tmp4(7026).MAX_APP_DESCRIPTION_LENGTH;
+  obj6.maxLength = tmp4(6530).MAX_APP_DESCRIPTION_LENGTH;
   obj6.disabled = review.saving;
-  items1[2] = closure_4(tmp4(7869).TextArea, obj6);
+  items1[2] = closure_4(tmp4(7372).TextArea, obj6);
   const obj7 = { title: null, rows: null };
   const intl4 = tmp4(1113).intl;
-  obj7.title = intl4.string(appChannelsPrivate(4133).BqNMms);
+  obj7.title = intl4.string(appChannelsPrivate(4121).BqNMms);
   obj7.rows = items;
   items1[3] = closure_4(RowSection, obj7);
   let tmp11Result = null;
@@ -211,22 +211,22 @@ export default function ConjureFirstShareReview(onConjure) {
     if (null != appChannelsPrivate) {
       const obj13 = { label: null, checked: null, onToggle: null };
       const intl5 = tmp4(1113).intl;
-      obj13.label = intl5.string(tmp12(4133).Td1mlg);
+      obj13.label = intl5.string(tmp12(4121).Td1mlg);
       ({ isPrivate: obj5.checked, setPrivate: obj5.onToggle } = appChannelsPrivate);
-      tmp11Result = closure_4(tmp4(14572).Checkbox, obj13);
+      tmp11Result = closure_4(tmp4(14647).Checkbox, obj13);
     }
   }
   const obj14 = { children: null };
   items1[4] = tmp11Result;
   const obj15 = { title: null, following: null, rows: null };
   const intl6 = tmp4(1113).intl;
-  obj15.title = intl6.string(appChannelsPrivate(4133).LnqeFd);
+  obj15.title = intl6.string(appChannelsPrivate(4121).LnqeFd);
   obj15.following = items.length > 0;
   const devicePermissions = review.devicePermissions;
   obj15.rows = devicePermissions.map((item) => {
     obj = { icon: closure_1_7[item], label: null };
     const intl = AppsIcon(1113).intl;
-    obj.label = intl.string(AppsIcon(14563).CONJURE_REVIEW_PERMISSION_LABELS[item]);
+    obj.label = intl.string(AppsIcon(18434).CONJURE_REVIEW_PERMISSION_LABELS[item]);
     return closure_1_4(ContentRow, obj, item);
   });
   items1[5] = closure_4(RowSection, obj15);

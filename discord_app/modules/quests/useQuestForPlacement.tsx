@@ -74,7 +74,7 @@ export default function useFetchQuestForAdPlacement(MOBILE_HOME_DOCK_AREA) {
     if (!tmpResult2.isQuestExpired(stateFromStores1)) {
       tmp7 = stateFromStores1;
     }
-    tmpResult2 = tmp(8826);
+    tmpResult2 = tmp(8323);
   }
   return tmp7;
 }

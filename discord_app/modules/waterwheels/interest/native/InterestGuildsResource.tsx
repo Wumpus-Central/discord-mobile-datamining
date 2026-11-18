@@ -18,7 +18,7 @@ function availableInterestGuilds(guilds) {
   });
   return found.slice(0, 15);
 }
-const MAX_SELECTIONS = fn(19068).MAX_SELECTIONS;
+const MAX_SELECTIONS = fn(17879).MAX_SELECTIONS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildsResource.tsx");
 class InterestGuildsResource {

@@ -96,10 +96,10 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const SpatialAudioConstants = fn(6225);
+const SpatialAudioConstants = fn(5721);
 const DEFAULT_SPATIAL_AUDIO_OPTIONS = SpatialAudioConstants.DEFAULT_SPATIAL_AUDIO_OPTIONS;
 let closure_7 = SpatialAudioConstants.MIN_POSITIONING_SPATIAL_AUDIO_VERSION;
-const Constants = fn(6072);
+const Constants = fn(5568);
 ({ Features: closure_8, MediaEngineContextTypes: closure_9, SpatialAudioStatus } = Constants);
 let obj = {};
 let isSpatial = {};
@@ -121,7 +121,7 @@ prototype["initialize"] = function initialize(enabled) {
   items = [ApexExperimentStore];
   self.syncWith(items, handleExperimentChange);
   let mediaEngine = MediaEngineStore.getMediaEngine();
-  mediaEngine.on(self(6093).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => {
+  mediaEngine.on(self(5589).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => {
     const result = setSpatialAudioEnabled.setSpatialAudioEnabled(closure_1_13.isSpatial);
     isSpatial = closure_1_13.isSpatial;
     if (isSpatial) {
@@ -129,7 +129,7 @@ prototype["initialize"] = function initialize(enabled) {
     }
     const result1 = setSpatialAudioEnabled.setSpatialAudioActive(isSpatial);
   });
-  mediaEngine.on(self(6093).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
+  mediaEngine.on(self(5589).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
     let flag = arg0 !== global;
     if (flag) {
       global = arg0;

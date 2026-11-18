@@ -40,7 +40,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(8495).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7986).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -52,14 +52,14 @@ function useHandleBuyNow(product) {
           return obj7;
         } else {
           closure_128_4(false);
-          v1(5546).hideAllActionSheets();
-          const obj = v1(5546);
+          v1(5037).hideAllActionSheets();
+          const obj = v1(5037);
           const obj8 = {
             product: closure_128_0,
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile: closure_128_2,
           };
-          v1(10033).open(obj8);
+          v1(9313).open(obj8);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -71,7 +71,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(15214)({
+  const tmp3 = onBuySettled(13842)({
     product,
     analyticsLocations,
     onPurchaseComplete() {

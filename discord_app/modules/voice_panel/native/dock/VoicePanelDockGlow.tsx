@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05887_LinearGradient.js";
-import inlineStyles from "../../../../../_runtime/08274_inlineStyles.js";
+import LinearGradientDefault from "../../../../../_runtime/05378_LinearGradient.js";
+import inlineStyles from "../../../../../_runtime/07776_inlineStyles.js";
 import useStateFromSharedValueDefault from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoicePanelDockRimLight from "VoicePanelDockRimLight.tsx";
@@ -19,7 +19,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 let StyleSheet = fn(17).StyleSheet;
-const getDockInset = fn(12446).getDockInset;
+const getDockInset = fn(11728).getDockInset;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let items = [

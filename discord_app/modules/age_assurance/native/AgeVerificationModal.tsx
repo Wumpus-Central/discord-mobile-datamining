@@ -123,7 +123,7 @@ function AgeVerifyScreen(onComplete) {
 }
 let jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 const obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -145,7 +145,7 @@ export default function AgeVerificationModal(webviewUrl) {
   items = [tmp, webviewUrl, onComplete, onClose, stringResult, flag];
   const memo = flag.useMemo(() => {
     closure_2 = onClose;
-    const isExpressiveModalV2 = flag;
+    closure_3 = flag;
     function handleClose() {
       closure_2();
       onComplete(onClose[8]).pop();
@@ -170,12 +170,7 @@ export default function AgeVerificationModal(webviewUrl) {
           return handleClose(webviewUrl(onClose[9]).HeaderActionButton, obj);
         },
         render() {
-          return handleClose(AgeVerifyScreen, {
-            webviewUrl,
-            onComplete,
-            onClose: handleCloseAfterCompletion,
-            isExpressiveModalV2,
-          });
+          return handleClose(AgeVerifyScreen, { webviewUrl, onComplete, onClose: handleCloseAfterCompletion });
         },
       },
     };

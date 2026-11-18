@@ -13,7 +13,7 @@ import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
 import BotTagDefault from "../../../../applications/native/BotTag.tsx";
-import _modDef12546 from "../../../../../../_runtime/metro/12546__.js";
+import _modDef11829 from "../../../../../../_runtime/metro/11829__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import ConjureAppIconTileDefault from "../../../../conjure/projects/native/ConjureAppIconTile.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -103,7 +103,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef12546, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef11829, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -133,7 +133,7 @@ function UserAvatar(user) {
     status: "done",
     isMobileOnline: true,
     isVROnline: null,
-    style: "heading-xs/semibold",
+    style: "primary",
     autoStatusCutout: null,
   };
   let tmp3 = null;
@@ -275,7 +275,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let c11 = 16;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_12 = createStyles.createStyles(() => {
   const obj = {
     wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },

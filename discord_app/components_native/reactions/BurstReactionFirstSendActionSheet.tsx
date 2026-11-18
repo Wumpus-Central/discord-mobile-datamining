@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { paddingTop: 24, paddingBottom: 24, paddingLeft: 12, paddingRight: 12 },
   fill: null,
@@ -115,7 +115,7 @@ export function openBurstReactionFirstSendActionSheet(arg0) {
     const tmp4Result = DismissibleContentUnsafeUtils;
     const obj4 = { channelId, messageId, emoji };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(5309, dependencyMap.paths),
+      asyncRequireImpl(4822, dependencyMap.paths),
       "BurstReactionFirstSendActionSheet",
       obj4,
     );

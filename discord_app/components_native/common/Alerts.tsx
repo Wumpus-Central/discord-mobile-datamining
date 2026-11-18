@@ -275,7 +275,7 @@ let items2 = [PermissionVADStore];
 obj2.stores = items2;
 items1[1] = obj2;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj3 = { alertWrapper: null, alertContentWrapper: null };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -297,7 +297,7 @@ let closure_18 = {
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_11(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "ip", renderKey: "isArray", props: "isArray" });
+let closure_23 = Object.freeze({ renderAlert: "Array", renderKey: "channelId", props: "useRef" });
 const tmp6 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -329,7 +329,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "ip", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "Array", renderKey: "channelId", props: "useRef" };
       }
     }
   });

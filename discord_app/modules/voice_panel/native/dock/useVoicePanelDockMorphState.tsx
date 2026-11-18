@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(12428).VoicePanelModes;
-const VoicePanelDockConstants = fn(12446);
+const VoicePanelModes = fn(11710).VoicePanelModes;
+const VoicePanelDockConstants = fn(11728);
 ({ DOCK_PRESS_PHYSICS: hasOwnProperty, getVoicePanelDockHeight: closure_6 } = VoicePanelDockConstants);
 let closure_7 = {
   code: "(function useVoicePanelDockMorphStateTsx1(){let[isDockEnabled,getVoicePanelDockHeight,safeArea]=this.__closure;return isDockEnabled?getVoicePanelDockHeight(safeArea.get().bottom):0;})",

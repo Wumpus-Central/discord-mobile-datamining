@@ -5,8 +5,8 @@ import discord_common_shallowEqualDefault from "../../../../discord_common/js/pa
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
-import Client from "../../../flow/Client.tsx";
 import CodedLink from "../../coded_links/CodedLink.tsx";
+import Client from "../../../flow/Client.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(11060).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(5222).getUserCommunicationDisabledVersion;
-const Changeset = fn(9171).Changeset;
+let closure_6 = fn(10342).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(4735).getUserCommunicationDisabledVersion;
+const Changeset = fn(8582).Changeset;
 const Constants = fn(1072);
 ({
   ActivityActionTypes: closure_11,

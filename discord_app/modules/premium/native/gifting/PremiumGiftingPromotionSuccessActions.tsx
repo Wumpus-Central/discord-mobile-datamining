@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 },
   promoDetails: null,
@@ -29,67 +29,58 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
   let onClose;
   let navigation;
   let onCancel;
-  let tmp = closure_7();
+  const tmp = closure_7();
   const nativeGiftContext = onClose(navigation[5]).useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
   const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
   let obj = onClose(navigation[5]);
   navigation = onClose(navigation[6]).useNavigation();
-  const GiftingBadgeExperiment = onClose(navigation[7]).GiftingBadgeExperiment;
-  const enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftingPromotionSuccessActions" }).enabled;
   let obj2 = onClose(navigation[6]);
-  const fetchCollectiblesProduct = onClose(navigation[8]).useFetchCollectiblesProduct(purchase.purchase.skuId);
+  const fetchCollectiblesProduct = onClose(navigation[7]).useFetchCollectiblesProduct(purchase.purchase.skuId);
   const product = fetchCollectiblesProduct.product;
-  c4 = product;
+  noop = product;
   let tmp12Result = null != product;
   if (tmp12Result) {
     tmp12Result = product.items.length > 0;
   }
-  items = [enabled, prePurchaseGiftingBadgeProgress, navigation];
-  onCancel = enabled.useCallback(() => {
-    let tmp = enabled;
-    if (enabled) {
-      tmp = null != prePurchaseGiftingBadgeProgress;
-    }
-    if (tmp) {
-      const obj = { currentProgress: prePurchaseGiftingBadgeProgress };
+  items = [prePurchaseGiftingBadgeProgress, navigation];
+  onCancel = noop.useCallback(() => {
+    if (null != prePurchaseGiftingBadgeProgress) {
+      const obj = { currentProgress: tmp };
       navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
     }
   }, items);
-  const items1 = [product, onClose, onCancel, enabled, prePurchaseGiftingBadgeProgress, navigation];
+  const items1 = [product, onClose, onCancel, prePurchaseGiftingBadgeProgress, navigation];
   const obj4 = { style: tmp.container, children: null };
-  const callback1 = enabled.useCallback(() => {
-    if (null != c4) {
+  const callback1 = noop.useCallback(() => {
+    if (null != c3) {
       const obj3 = { product: tmp, onCancel };
       ProductPurchaseSuccessActionCreatorsDefault.open(obj3);
+    } else if (null != prePurchaseGiftingBadgeProgress) {
+      const obj = { currentProgress: tmp2 };
+      navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
     } else {
-      if (enabled) {
-        if (null != prePurchaseGiftingBadgeProgress) {
-          const obj = { currentProgress: tmp3 };
-          navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
-        }
-      }
       onClose();
     }
   }, items1);
   if (tmp12Result) {
     const obj5 = { style: tmp.promoDetails, product, title: null, subtitle: null };
-    const intl = tmp2(tmp3[12]).intl;
-    obj5.title = intl.string(prePurchaseGiftingBadgeProgress(tmp3[13]).XeLTZl);
+    const intl = tmp2(tmp3[11]).intl;
+    obj5.title = intl.string(prePurchaseGiftingBadgeProgress(tmp3[12]).XeLTZl);
     let name;
     if (product != null) {
       name = product.name;
     }
     obj5.subtitle = name;
-    tmp12Result = onCancel(tmp2(tmp3[11]).PremiumGiftPromotionCollectibleRewardDetails, obj5);
+    tmp12Result = closure_5(tmp2(tmp3[10]).PremiumGiftPromotionCollectibleRewardDetails, obj5);
   }
   const items2 = [tmp12Result];
   const obj6 = { grow: true, text: null, loading: null, onPress: null };
-  const intl2 = tmp2(tmp3[12]).intl;
-  obj6.text = intl2.string(onClose(navigation[12]).t.kMYVwv);
+  const intl2 = tmp2(tmp3[11]).intl;
+  obj6.text = intl2.string(onClose(navigation[11]).t.kMYVwv);
   obj6.loading = fetchCollectiblesProduct.isFetching;
   obj6.onPress = callback1;
-  items2[1] = onCancel(onClose(navigation[14]).Button, obj6);
+  items2[1] = closure_5(onClose(navigation[13]).Button, obj6);
   obj4.children = items2;
-  return closure_6(c4, obj4);
+  return closure_6(onCancel, obj4);
 }

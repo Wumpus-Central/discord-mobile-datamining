@@ -9,7 +9,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
-import _modDef7873 from "../../../../../_runtime/metro/07873__.js";
+import _modDef7376 from "../../../../../_runtime/metro/07376__.js";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import StageSparkleDefault from "../components/StageSparkle.tsx";
 import HotspotStore2 from "../../../hotspot/index.tsx";
@@ -36,7 +36,7 @@ function NavigationBar(guild) {
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef7873 };
+    const obj3 = { source: _modDef7376 };
     obj2.children = gesture(native.Icon, obj3);
     obj.children = gesture(Pressables.PressableOpacity, obj2);
     tmp2 = gesture(metroImportDefault, obj);
@@ -97,13 +97,13 @@ class NotificationToggle {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(6904);
+const StageChannelsConstants = fn(6408);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let constants = fn(5165).GuildScheduledEventPrivacyLevel;
+let constants = fn(4678).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   keyboardAwareView: { flex: 1 },
   closeButtonContainer: { right: 10 },
@@ -228,10 +228,10 @@ export default function StartStageChannelModal(arg0) {
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(6907).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(6411).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(6907);
+                  obj5 = tmp66(6411);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
@@ -245,7 +245,7 @@ export default function StartStageChannelModal(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(6755).APIError(closure_128_1);
+            const aPIError = new closure_0(6257).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -260,8 +260,8 @@ export default function StartStageChannelModal(arg0) {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(8461).hideHotspot(closure_0(8458).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(8461);
+                  tmp66(7952).hideHotspot(closure_0(7949).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(7952);
                 }
               }
             } else if (arg0 === 1) {
@@ -316,7 +316,7 @@ export default function StartStageChannelModal(arg0) {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("../../../../../_runtime/metro/07873__.js");
+      obj.source = require("../../../../../_runtime/metro/07376__.js");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     },

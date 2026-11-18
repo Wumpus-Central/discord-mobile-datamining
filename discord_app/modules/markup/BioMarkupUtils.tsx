@@ -13,7 +13,7 @@ const items = [
   MarkupRulesDefault.PROFILE_BIO_RULES,
   MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }),
 ];
-const MarkupReactRules = fn(6059);
+const MarkupReactRules = fn(5555);
 items[2] = MarkupReactRules.createFetchingGameMentionRule();
 const importDefaultResultResult = combineMarkupRules(items);
 let c2 = importDefaultResultResult;

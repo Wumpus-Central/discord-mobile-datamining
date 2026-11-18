@@ -56,10 +56,10 @@ function stopGuest(streamKey) {
   }
   return flag;
 }
-let closure_7 = fn(16146).isPassTheControllerBlocked;
+let closure_7 = fn(14813).isPassTheControllerBlocked;
 const Constants = fn(1072);
 ({ ApplicationStreamDeleteReasons: closure_8, RTCConnectionStates: closure_9, VoiceFlags: closure_10 } = Constants);
-const StreamTypes = fn(6801).StreamTypes;
+const StreamTypes = fn(6305).StreamTypes;
 let c12 = null;
 let c13 = null;
 let c14 = null;
@@ -165,12 +165,12 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 const rTCConnection = RTCConnectionStore.getRTCConnection();
                 tmp55 = null;
                 if (null != rTCConnection) {
-                  const inputConnection = new inputConnection1(16147).InputConnection(
+                  const inputConnection = new inputConnection1(14814).InputConnection(
                     rTCConnection,
                     AuthenticationStore.getId(),
                   );
                   closure_129_0 = inputConnection;
-                  inputConnection.on(inputConnection1(16148).InputEvent.Disconnect, () => {
+                  inputConnection.on(inputConnection1(14815).InputEvent.Disconnect, () => {
                     if (c12 === inputConnection1) {
                       if (null != _null) {
                         obj2 = {
@@ -208,7 +208,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 c15 = null;
                 let obj = { streamKey, inputHost: null };
                 const tmp59 = InputHostDefault;
-                let guildId = inputConnection1(6805).decodeStreamKey(streamKey).guildId;
+                let guildId = inputConnection1(6309).decodeStreamKey(streamKey).guildId;
                 if (guildId == null) {
                   guildId = null;
                 }
@@ -217,7 +217,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 obj.inputHost = tmp592;
                 _null2 = obj;
                 flag7 = true;
-                const obj7 = inputConnection1(6805);
+                const obj7 = inputConnection1(6309);
               }
               flag5 = flag7;
             }
@@ -264,11 +264,11 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
             const rTCConnection1 = RTCConnectionStore.getRTCConnection();
             tmp14 = null;
             if (null != rTCConnection1) {
-              inputConnection1 = new inputConnection1(16147).InputConnection(
+              inputConnection1 = new inputConnection1(14814).InputConnection(
                 rTCConnection1,
                 AuthenticationStore.getId(),
               );
-              inputConnection1.on(inputConnection1(16148).InputEvent.Disconnect, () => {
+              inputConnection1.on(inputConnection1(14815).InputEvent.Disconnect, () => {
                 if (c12 === inputConnection1) {
                   if (null != _null) {
                     obj2 = {

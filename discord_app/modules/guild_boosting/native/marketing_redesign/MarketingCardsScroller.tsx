@@ -11,7 +11,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const previous = "previous";
 const next = "next";
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   wrapper: { position: "relative" },
   navigationButton: null,
@@ -30,7 +30,7 @@ let size = {
   width: 44,
   zIndex: 1,
 };
-const ColorUtils = fn(5307);
+const ColorUtils = fn(4820);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
 size.borderRadius = nativeDefault.radii.round;
 let items = [{ translateY: -22 }];

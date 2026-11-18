@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/share/native/ConjureShareAccess.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
-import _modDef4133 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4121 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
@@ -27,19 +27,19 @@ function ConjureShareServersSection(servers) {
         hasIcons: true,
         children: current.map((guild) => {
           const obj = { label: guild.name, icon: null };
-          const obj2 = { guild, size: servers(7730).GuildIconSizes.SMALL_32 };
+          const obj2 = { guild, size: servers(7233).GuildIconSizes.SMALL_32 };
           obj.icon = closure_1_5(GuildIconDefault, obj2);
-          return closure_1_5(servers(7453).TableRow, obj, guild.id);
+          return closure_1_5(servers(6956).TableRow, obj, guild.id);
         }),
       };
-      tmp5 = closure_5(servers(7756).TableRowGroup, obj);
+      tmp5 = closure_5(servers(7259).TableRowGroup, obj);
     }
     items = [tmp5, , ,];
     let tmp2Result = null;
     if (candidates.length > 0) {
       if (current.length > 0) {
         const intl = tmp10(1113).intl;
-        title = intl.string(_modDef4133["7SD3ul"]);
+        title = intl.string(_modDef4121["7SD3ul"]);
       }
       let obj2 = { title, hasIcons: true, value: null, onChange: null, children: null };
       let str;
@@ -60,11 +60,11 @@ function ConjureShareServersSection(servers) {
       const obj3 = { value: "", label: null, icon: null, disabled: null };
       const intl2 = tmp10(1113).intl;
       obj3.label = intl2.string(servers(1113).t.PoWNfe);
-      const obj4 = { IconComponent: servers(7639).CircleXIcon };
-      obj3.icon = closure_5(servers(7465).TableRowIcon, obj4);
+      const obj4 = { IconComponent: servers(7142).CircleXIcon };
+      obj3.icon = closure_5(servers(6968).TableRowIcon, obj4);
       obj3.disabled = servers.sharing;
       const items1 = [
-        closure_5(servers(7757).TableRadioRow, obj3),
+        closure_5(servers(7260).TableRadioRow, obj3),
         candidates.map((guild) => {
           const obj = { value: guild.id, label: guild.name, icon: null, disabled: null };
           const obj2 = { guild, size: GuildIcon.GuildIconSizes.SMALL_32 };
@@ -74,7 +74,7 @@ function ConjureShareServersSection(servers) {
         }),
       ];
       obj2.children = items1;
-      tmp2Result = closure_6(servers(7755).TableRadioGroup, obj2);
+      tmp2Result = closure_6(servers(7258).TableRadioGroup, obj2);
     }
     items[1] = tmp2Result;
     let tmp14 = null;
@@ -91,7 +91,7 @@ function ConjureShareServersSection(servers) {
         accessibilityRole: "alert",
         children: servers.error,
       };
-      tmp18 = closure_5(servers(5923).Text, obj6);
+      tmp18 = closure_5(servers(5414).Text, obj6);
     }
     const obj7 = { children: null };
     items[3] = tmp18;
@@ -129,7 +129,7 @@ function ShareLinkRow(project) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { body: { gap: nativeDefault.space.PX_16 }, notice: null, noticeText: null, sharingMode: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.notice = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -161,7 +161,7 @@ export default function ConjureShareAccess(arg0) {
   const callback = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(14439, dependencyMap.paths),
+      asyncRequireImpl(18337, dependencyMap.paths),
       ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY,
       {
         options,

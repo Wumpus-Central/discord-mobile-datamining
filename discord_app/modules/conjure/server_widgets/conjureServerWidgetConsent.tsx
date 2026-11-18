@@ -3,7 +3,7 @@ import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import WidgetActionCreatorsDefault from "../../user_profile/WidgetActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import WidgetStore from "../../user_profile/WidgetStore.tsx";
-import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
+import ConjureServerWidgetStore from "ConjureServerWidgetStore.tsx";
 
 const require = globalThis.__r;
 
@@ -376,10 +376,10 @@ let result = size.fileFinishedImporting("modules/conjure/server_widgets/conjureS
 export function getConjureServerWidgetConsentRequest(clientId, arg1) {
   _require = clientId;
   closure_1 = arg1;
-  const result = ConjureProjectStore.findProjectByApplicationId(clientId);
+  const project = ConjureServerWidgetStore.getProject(clientId);
   let id;
-  if (result != null) {
-    id = result.id;
+  if (project != null) {
+    id = project.id;
   }
   let tmp3 = null;
   if (null != id) {

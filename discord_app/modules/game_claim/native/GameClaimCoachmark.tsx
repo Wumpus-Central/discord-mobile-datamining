@@ -8,8 +8,8 @@ import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
 import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
+import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
 import GameClaimCardStack from "GameClaimCardStack.tsx";
 import UnclaimedGamesActionCreators from "../UnclaimedGamesActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -22,13 +22,13 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ GuildFeatures: hasOwnProperty, RelativeMarketingURLs: closure_6 } = Constants);
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = {
   card: { padding: nativeDefault.space.PX_12 },
   closeButton: null,
@@ -136,9 +136,9 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
               v1 = 1;
               v3 = 1;
               const obj5 = {
-                value: v1(10215).redirectDeveloperPortalWithHandoffToken(
+                value: v1(9496).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(10219).LoginHandoffSource.GAME_CLAIM,
+                  v3(9500).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };

@@ -14,7 +14,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1187).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
@@ -43,7 +43,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
     RelationshipTypes.FRIEND,
   );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(10271).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9552).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -87,13 +87,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = {
-              user,
-              guildId: "r",
-              size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout:
-                '(function MediaModalOverlayFooterTsx7(){let[r,g,b,interpolate,animationDriver,COLLAPSED,EXPANDED,a,DISMISSED]=this.__closure;return{backgroundColor:"rgba("+r+", "+g+", "+b+", "+interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[a,1],\'clamp\')+")",paddingVertical:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[8,0],\'clamp\'),transform:[{translateY:interpolate(animationDriver.get(),[DISMISSED,COLLAPSED],[100,0],\'clamp\')}]};})',
-            };
+            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -103,8 +97,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout:
-                '(function MediaModalOverlayFooterTsx7(){let[r,g,b,interpolate,animationDriver,COLLAPSED,EXPANDED,a,DISMISSED]=this.__closure;return{backgroundColor:"rgba("+r+", "+g+", "+b+", "+interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[a,1],\'clamp\')+")",paddingVertical:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[8,0],\'clamp\'),transform:[{translateY:interpolate(animationDriver.get(),[DISMISSED,COLLAPSED],[100,0],\'clamp\')}]};})',
+              cutout: null,
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>
@@ -124,13 +117,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = {
-              user,
-              guildId: "r",
-              size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout:
-                '(function MediaModalOverlayFooterTsx7(){let[r,g,b,interpolate,animationDriver,COLLAPSED,EXPANDED,a,DISMISSED]=this.__closure;return{backgroundColor:"rgba("+r+", "+g+", "+b+", "+interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[a,1],\'clamp\')+")",paddingVertical:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[8,0],\'clamp\'),transform:[{translateY:interpolate(animationDriver.get(),[DISMISSED,COLLAPSED],[100,0],\'clamp\')}]};})',
-            };
+            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -140,8 +127,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout:
-                '(function MediaModalOverlayFooterTsx7(){let[r,g,b,interpolate,animationDriver,COLLAPSED,EXPANDED,a,DISMISSED]=this.__closure;return{backgroundColor:"rgba("+r+", "+g+", "+b+", "+interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[a,1],\'clamp\')+")",paddingVertical:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[8,0],\'clamp\'),transform:[{translateY:interpolate(animationDriver.get(),[DISMISSED,COLLAPSED],[100,0],\'clamp\')}]};})',
+              cutout: null,
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>

@@ -13,7 +13,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { dm: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -128,7 +128,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     cutouts,
     externalChildren: badge,
     expandedChildren: null,
-    children: "heading-xs/semibold",
+    children: "primary",
   };
   let tmp11Result = null;
   if (null != channel) {
@@ -173,6 +173,6 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     cutouts,
     externalChildren: badge,
     expandedChildren: null,
-    children: "heading-xs/semibold",
+    children: "primary",
   });
 });

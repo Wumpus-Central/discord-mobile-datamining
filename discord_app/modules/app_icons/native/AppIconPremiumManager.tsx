@@ -7,11 +7,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-const getIconById = fn(11146).getIconById;
+const getIconById = fn(10428).getIconById;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const HexagonCampaignPerk = fn(5335).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(4848).HexagonCampaignPerk;
 let closure_9 = new LoggerDefault("AppIconPremiumManager");
-const DEFAULT = fn(5336).FreemiumAppIconIds.DEFAULT;
+const DEFAULT = fn(4849).FreemiumAppIconIds.DEFAULT;
 let closure_11 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost", CAMPAIGN_EXPIRED: "campaign_expired" };
 class AppIconPremiumManager extends tmp3 {
   constructor() {

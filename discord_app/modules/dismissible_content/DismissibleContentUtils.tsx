@@ -497,21 +497,21 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(5145).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(5151);
+const DCFEventTypes = fn(4658).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(4664);
 ({
   addCandidateContent: closure_8,
   removeCandidateContent: closure_9,
   isContentShown: closure_10,
   getCurrentlyShownCounts: closure_11,
 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let c14 = 2592000000;
 let items = [
-  fn(5143).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
-  fn(5143).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION,
-  fn(5143).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
+  fn(4656).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
+  fn(4656).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION,
+  fn(4656).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
 ];
 const set = new Set(items);
 const size = fn(2);

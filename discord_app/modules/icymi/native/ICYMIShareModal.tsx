@@ -266,11 +266,11 @@ class ICYMIShareModal {
 }
 const View = fn(17).View;
 const AbortCodes = fn(1072).AbortCodes;
-const UserRowModes = fn(10266).UserRowModes;
-const MessageSendLocation = fn(5315).MessageSendLocation;
+const UserRowModes = fn(9547).UserRowModes;
+const MessageSendLocation = fn(4828).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   footer: {
     display: "flex",
@@ -348,7 +348,7 @@ export function GameShareModal(content) {
             };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(19382).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18196).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

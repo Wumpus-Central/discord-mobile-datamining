@@ -18,11 +18,9 @@ export function useDisplayableBoardWidgets(id) {
     () =>
       closure_1.filter((games) => {
         let tmp = closure_1_0;
-        let tmp4 =
-          games instanceof flag(dependencyMap[1]).ApplicationWidget ||
-          games instanceof flag(dependencyMap[2]).UserProfilePersonalWidget;
+        let tmp4 = games instanceof flag(dependencyMap[1]).ApplicationWidget;
         if (!tmp4) {
-          let isGameWidgetResult = flag(dependencyMap[3]).isGameWidget(games);
+          let isGameWidgetResult = flag(dependencyMap[2]).isGameWidget(games);
           if (isGameWidgetResult) {
             if (!tmp) {
               tmp = games.games.length > 0;
@@ -30,7 +28,7 @@ export function useDisplayableBoardWidgets(id) {
             isGameWidgetResult = tmp;
           }
           tmp4 = isGameWidgetResult;
-          const tmp2Result = flag(dependencyMap[3]);
+          const tmp2Result = flag(dependencyMap[2]);
         }
         return tmp4;
       }),

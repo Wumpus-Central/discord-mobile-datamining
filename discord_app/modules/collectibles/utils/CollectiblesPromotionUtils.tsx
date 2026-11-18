@@ -1,5 +1,6 @@
 // discord_app/modules/collectibles/utils/CollectiblesPromotionUtils.tsx
 import StorefrontCollectiblesTypes from "../../storefront/collectibles/StorefrontCollectiblesTypes.tsx";
+import CollectiblesSequencedOfferPromotionUtils from "CollectiblesSequencedOfferPromotionUtils.tsx";
 import CollectiblesCollectAndClaimPromotionUtils from "CollectiblesCollectAndClaimPromotionUtils.tsx";
 import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -31,6 +32,11 @@ export function getPromotionForCollectiblesProduct(selectedProduct, tenantMetada
       );
     } else if (StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
       return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(
+        selectedProduct,
+        tenantMetadata,
+      );
+    } else if (StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER === type) {
+      return CollectiblesSequencedOfferPromotionUtils.getSequencedOfferPromotionForCollectiblesProduct(
         selectedProduct,
         tenantMetadata,
       );

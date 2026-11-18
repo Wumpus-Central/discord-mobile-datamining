@@ -14,13 +14,13 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(9558).EmojiPickerSource;
+const EmojiPickerSource = fn(8972).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
 const EmojiIntention = fn(1391).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   header: { flexDirection: "column" },
   searchContainer: { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 },

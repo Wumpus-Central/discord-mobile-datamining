@@ -1,7 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetReorderActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
-import UserProfileApplicationWidgetTypes from "../UserProfileApplicationWidgetTypes.tsx";
 import WidgetUtils from "../WidgetUtils.tsx";
 import useGameCoverLayoutDefault from "useGameCoverLayout.tsx";
 import UserProfileWidgetDraggableCardDefault from "UserProfileWidgetDraggableCard.tsx";
@@ -101,24 +100,21 @@ function CompactApplicationWidget(widget) {
   );
 }
 const View = fn(17).View;
-const widgetShowsGameDetails = fn(7365).widgetShowsGameDetails;
+const widgetShowsGameDetails = fn(6870).widgetShowsGameDetails;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = { list: { gap: nativeDefault.space.PX_16 } };
 let closure_8 = createStyles.createStyles(obj);
 let closure_12 = noop.memo(function CompactWidgetRenderer(widget) {
   widget = widget.widget;
   if (obj.isGameWidget(widget)) {
     const obj2 = { userId: widget.userId, widget };
-    let tmp3Result = <CompactGameWidget userId={widget.userId} widget={widget} />;
-  } else if (widget instanceof UserProfileApplicationWidgetTypes.ApplicationWidget) {
-    const obj3 = { widget };
-    tmp3Result = <CompactApplicationWidget widget={widget} />;
+    let tmpResult = <CompactGameWidget userId={widget.userId} widget={widget} />;
   } else {
-    const obj4 = { title: widget.header };
-    tmp3Result = jsx(UserProfileWidgetDraggableCardDefault, { title: widget.header });
+    const obj3 = { widget };
+    tmpResult = <CompactApplicationWidget widget={widget} />;
   }
-  return tmp3Result;
+  return tmpResult;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetReorderActionSheet.tsx");
@@ -129,9 +125,9 @@ export default function UserProfileWidgetReorderActionSheet(returnFocusRef) {
   items = [AuthenticationStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => id.getId());
   const obj = stateFromStores(504);
-  const displayableBoardWidgets = stateFromStores(11028).useDisplayableBoardWidgets(stateFromStores, true);
+  const displayableBoardWidgets = stateFromStores(10310).useDisplayableBoardWidgets(stateFromStores, true);
   const obj3 = { dismissAccessibilityLabel: null, returnFocusRef: null, children: null };
-  const obj2 = stateFromStores(11028);
+  const obj2 = stateFromStores(10310);
   const intl = stateFromStores(1113).intl;
   obj3.dismissAccessibilityLabel = intl.string(stateFromStores(1113).t["+uBSeT"]);
   obj3.returnFocusRef = returnFocusRef.returnFocusRef;

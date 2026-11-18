@@ -22,6 +22,7 @@ import UserProfileWidgetsBoardTabDefault from "UserProfileWidgetsBoardTab.tsx";
 import UserProfileActivityTabDefault from "UserProfileActivityTab.tsx";
 import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells.tsx";
 import UserProfileConnections from "UserProfileConnections.tsx";
+import CheckpointProfileEntrypointDefault from "../../checkpoint/native/components/CheckpointProfileEntrypoint.tsx";
 import UserProfileWishlistGrid from "UserProfileWishlistGrid.tsx";
 import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid.tsx";
 import BalanceWidgetMenu from "../../virtual_currency/native/BalanceWidgetMenu.tsx";
@@ -31,7 +32,6 @@ import useIsNitroBadgeAutoUnhiddenDefault from "../../badges/useIsNitroBadgeAuto
 import NitroBadgeUnhiddenCoachmarkDefault from "NitroBadgeUnhiddenCoachmark.tsx";
 import OrbWalletProfileIntroductionCoachmarkDefault from "../../virtual_currency/native/orb_wallet/OrbWalletProfileIntroductionCoachmark.tsx";
 import YouExpiringTrialOfferCardDefault from "../../main_tabs_v2/native/tabs/you/YouExpiringTrialOfferCard.tsx";
-import CheckpointProfileEntrypointDefault from "../../checkpoint/native/components/CheckpointProfileEntrypoint.tsx";
 import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -333,11 +333,11 @@ function YouScreenPrimaryInfoSection(arg0) {
   return colors(View, obj6);
 }
 const View = fn(17).View;
-const useIsContentShown = fn(5151).useIsContentShown;
-const UserProfileSections = fn(8490).UserProfileSections;
-let UserProfileThemeTypes = fn(7972).UserProfileThemeTypes;
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
-let closure_12 = fn(17100).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(4664).useIsContentShown;
+const UserProfileSections = fn(7981).UserProfileSections;
+let UserProfileThemeTypes = fn(7475).UserProfileThemeTypes;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
+let closure_12 = fn(15756).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const size = fn(2);
@@ -516,7 +516,7 @@ export default function YouScreenUserProfileContent(user) {
       tmp3Result = state(UserProfileDismissibleUpsellsDefault, obj4);
     }
     items2[1] = tmp3Result;
-    items2[2] = state(CheckpointProfileEntrypointDefault, {});
+    items2[2] = state(CheckpointProfileEntrypointDefault, { source: "user_profile" });
     let tmp3Result2 = enabled;
     if (enabled) {
       const obj5 = { orbWalletEntryRowRef: ref2 };

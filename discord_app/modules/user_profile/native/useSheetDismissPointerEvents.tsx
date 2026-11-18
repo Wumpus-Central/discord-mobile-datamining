@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/useSheetDismissPointerEvents.tsx
 import _mod1655 from "../../../../_runtime/metro/01655__.js";
-import BottomSheetModal from "../../../../_runtime/05564_BottomSheetModal.js";
-import LegacyBaseButton from "../../../../_runtime/05592_LegacyBaseButton.js";
+import BottomSheetModal from "../../../../_runtime/05055_BottomSheetModal.js";
+import LegacyBaseButton from "../../../../_runtime/05083_LegacyBaseButton.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_2 = {

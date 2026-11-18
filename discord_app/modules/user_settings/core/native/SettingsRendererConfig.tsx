@@ -95,7 +95,6 @@ import SameAsDeviceThemeSettingDefault from "../../defs/native/SameAsDeviceTheme
 import LightModeThemeSettingDefault from "../../defs/native/LightModeThemeSetting.tsx";
 import DarkModeThemeSettingDefault from "../../defs/native/DarkModeThemeSetting.tsx";
 import SyncThemeSettingDefault from "../../defs/native/SyncThemeSetting.tsx";
-import DefaultGuildThemePreferenceSettingDefault from "../../defs/native/DefaultGuildThemePreferenceSetting.tsx";
 import AndroidFontScaleSettingDefault from "../../defs/native/AndroidFontScaleSetting.tsx";
 import AndroidClassicChatFontScaleSettingDefault from "../../defs/native/AndroidClassicChatFontScaleSetting.tsx";
 import DmsMessagePreviewsSettingDefault from "../../defs/native/DmsMessagePreviewsSetting.tsx";
@@ -391,7 +390,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   LIGHT_MODE_THEME_PICKER,
   DARK_MODE_THEME_PICKER,
   SYNC_THEME,
-  DEFAULT_GUILD_THEME_PREFERENCE,
   ANDROID_FONT_SCALE,
   ANDROID_CLASSIC_CHAT_FONT_SCALE,
   DMS_MESSAGE_PREVIEWS,
@@ -579,6 +577,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   DOUBLE_TAP_TO_REACT_ENABLED,
   PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   PARENTAL_CONTROLS_DIRECT_MESSAGES,
+  PARENTAL_CONTROLS_MESSAGE_REQUESTS,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -676,7 +675,6 @@ const frozen = Object.freeze({
   [LIGHT_MODE_THEME_PICKER]: LightModeThemeSettingDefault,
   [DARK_MODE_THEME_PICKER]: DarkModeThemeSettingDefault,
   [SYNC_THEME]: SyncThemeSettingDefault,
-  [DEFAULT_GUILD_THEME_PREFERENCE]: DefaultGuildThemePreferenceSettingDefault,
   [ANDROID_FONT_SCALE]: AndroidFontScaleSettingDefault,
   [ANDROID_CLASSIC_CHAT_FONT_SCALE]: AndroidClassicChatFontScaleSettingDefault,
   [DMS_MESSAGE_PREVIEWS]: DmsMessagePreviewsSettingDefault,
@@ -872,7 +870,7 @@ const frozen = Object.freeze({
   [DOUBLE_TAP_TO_REACT_ENABLED]: DoubleTapToReactSettingDefault,
   [PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS]: ParentalControlsSensitiveContentFilterSettingDefault,
   [PARENTAL_CONTROLS_DIRECT_MESSAGES]: ParentalControlsDirectMessagesDefault,
-  [MobileUserSettings.PARENTAL_CONTROLS_MESSAGE_REQUESTS]: ParentalControlsMessageRequestsDefault,
+  [PARENTAL_CONTROLS_MESSAGE_REQUESTS]: ParentalControlsMessageRequestsDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE]: ParentalControlsFriendRequestsEveryoneSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS]:
     ParentalControlsFriendRequestsMutualFriendsSettingDefault,

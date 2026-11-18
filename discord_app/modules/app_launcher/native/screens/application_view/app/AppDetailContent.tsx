@@ -204,18 +204,18 @@ class CommandRow {
   }
 }
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(11114);
+const ApplicationCommandIndexStore = fn(10396);
 ({ useContextIndexState: metroImportDefault, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1501);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_12 = fn(6343).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(5845).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
-  headerSpacer: { height: fn(13616).EXPANDED_HEADER_HEIGHT - fn(13616).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(12923).EXPANDED_HEADER_HEIGHT - fn(12923).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -233,7 +233,7 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(13616).EXPANDED_HEADER_HEIGHT - fn(13616).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(12923).EXPANDED_HEADER_HEIGHT - fn(12923).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {

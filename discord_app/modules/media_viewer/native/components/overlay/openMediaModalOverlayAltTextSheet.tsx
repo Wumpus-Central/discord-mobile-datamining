@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
 
 export default function openMediaModalOverlayAltTextSheet(description) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(10782, dependencyMap.paths),
+    asyncRequireImpl(10063, dependencyMap.paths),
     "MediaModalOverlayAltTextSheet",
     { description: description.description },
   );

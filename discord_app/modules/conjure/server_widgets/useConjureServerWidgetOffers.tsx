@@ -1,32 +1,19 @@
 // discord_app/modules/conjure/server_widgets/useConjureServerWidgetOffers.tsx
 import BackoffDefault from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
-import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
-import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import UserProfileApplicationWidgetTypes from "../../user_profile/UserProfileApplicationWidgetTypes.tsx";
+import ConjureServerWidgetActionCreators from "ConjureServerWidgetActionCreators.tsx";
 import useAddableWidgets from "../../user_profile/hooks/useAddableWidgets.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationWidgetConfigStore from "../../application_widget/ApplicationWidgetConfigStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
-import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
+import ConjureServerWidgetStore from "ConjureServerWidgetStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
-function offersServerWidget(install_scope) {
-  let tmp = "guild" === install_scope.install_scope;
-  if (tmp) {
-    const supported_surfaces = install_scope.supported_surfaces;
-    let hasItem;
-    if (supported_surfaces != null) {
-      hasItem = supported_surfaces.includes(ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET);
-    }
-    tmp = true === hasItem;
-  }
-  return tmp;
-}
-let closure_11 = async function _loadWidgetConfigs(arg0, arg1) {
+let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
   dependencyMap = arg0;
   closure_1 = arg1;
   c11 = 0;
@@ -90,25 +77,25 @@ let closure_11 = async function _loadWidgetConfigs(arg0, arg1) {
                       closure_129_0 = undefined;
                       if (dependencyMap()) {
                         c6 = 3;
-                        const obj5 = { value: { v: "r" }, done: true };
+                        const obj5 = { value: { v: "find" }, done: true };
                         return obj5;
                       } else {
                         c4 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(tmp3[8]).fetchWidgetConfigs(closure_2_3), done: false };
+                        const obj6 = { value: closure_0(tmp3[7]).fetchWidgetConfigs(closure_2_3), done: false };
                         return obj6;
                       }
                     }
                   } else if (1 === tmp8) {
                     c4 = 0;
                     closure_129_1 = closure_3;
-                    if (closure_129_1 instanceof closure_0(tmp3[9]).HTTPResponseError) {
+                    if (closure_129_1 instanceof closure_0(tmp3[8]).HTTPResponseError) {
                       if (429 === closure_129_1.status) {
                         const retryAfter = closure_129_1.retryAfter;
                         closure_0 = retryAfter;
                         if (retryAfter == null) {
-                          closure_0 = closure_0(tmp3[9]).DEFAULT_RATE_LIMIT_RETRY_AFTER_SECS;
+                          closure_0 = closure_0(tmp3[8]).DEFAULT_RATE_LIMIT_RETRY_AFTER_SECS;
                         }
                         closure_129_0 = closure_0;
                         const promise = new Promise((arg0) => setTimeout(arg0, 1000 * closure_1_0));
@@ -143,13 +130,13 @@ let closure_11 = async function _loadWidgetConfigs(arg0, arg1) {
                         return obj10;
                       } else if (closure_130_0()) {
                         c6 = 3;
-                        const obj11 = { value: { v: "r" }, done: true };
+                        const obj11 = { value: { v: "find" }, done: true };
                         return obj11;
                       } else {
                         c4 = 2;
                         c5 = 5;
                         c6 = 1;
-                        const obj12 = { value: closure_0(tmp3[8]).fetchWidgetConfigs(closure_130_3), done: false };
+                        const obj12 = { value: closure_0(tmp3[7]).fetchWidgetConfigs(closure_130_3), done: false };
                         return obj12;
                       }
                     } else {
@@ -300,66 +287,50 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/server_widgets/useConjureServerWidgetOffers.tsx");
 
 export default function useConjureServerWidgetOffers() {
-  items = [GuildStore, stateFromStoresArray(stateFromStores4[11]).ApexExperimentStore];
-  const stateFromStores = stateFromStoresArray(stateFromStores4[10]).useStateFromStores(items, () =>
-    stateFromStoresArray(stateFromStores4[12]).hasEligibleConjureGuild(
+  items = [GuildStore, stateFromStores2(stateFromStores4[10]).ApexExperimentStore];
+  const stateFromStores = stateFromStores2(stateFromStores4[9]).useStateFromStores(items, () =>
+    stateFromStores2(stateFromStores4[11]).hasEligibleConjureGuild(
       GuildStore.getGuildsArray(),
       "useConjureServerWidgetOffers",
     ),
   );
   closure_129_0 = stateFromStores;
-  let obj = stateFromStoresArray(stateFromStores4[10]);
-  let items1 = [ConjureProjectStore];
-  const stateFromStores1 = stateFromStoresArray(stateFromStores4[10]).useStateFromStores(items1, () =>
-    ConjureProjectStore.getSharedWithMeProjectsFetchState(),
+  let obj = stateFromStores2(stateFromStores4[9]);
+  let items1 = [ConjureServerWidgetStore];
+  const stateFromStores1 = stateFromStores2(stateFromStores4[9]).useStateFromStores(items1, () =>
+    ConjureServerWidgetStore.getFetchState(),
   );
   closure_129_1 = stateFromStores1;
-  const obj2 = stateFromStoresArray(stateFromStores4[10]);
-  const items2 = [ConjureProjectStore];
-  const stateFromStores2 = stateFromStoresArray(stateFromStores4[10]).useStateFromStores(items2, () => {
-    const projectsFetchState = ConjureProjectStore.getProjectsFetchState();
-    let type;
-    if (projectsFetchState != null) {
-      type = projectsFetchState.type;
-    }
-    return "loading" === type;
-  });
-  closure_129_2 = stateFromStores2;
-  const items3 = [stateFromStores, stateFromStores1, stateFromStores2];
+  const items2 = [stateFromStores, stateFromStores1];
   const effect = noop.useEffect(() => {
     if ("success" === closure_1) {
       closure_9.succeed();
     }
-    let tmp4 = stateFromStoresArray;
-    if (stateFromStoresArray) {
-      tmp4 = !stateFromStores4;
-    }
-    if (tmp4) {
+    if (stateFromStores2) {
       if ("unattempted" === closure_1) {
-        ConjureActionCreators.listProjects();
+        const conjureServerProfileWidgets = ConjureServerWidgetActionCreators.fetchConjureServerProfileWidgets();
       } else {
         let pending = "error" !== closure_1;
         if (!pending) {
           pending = closure_9.pending;
         }
         if (!pending) {
-          closure_9.fail(() => stateFromStoresArray(stateFromStores4[13]).listProjects());
+          closure_9.fail(() => stateFromStores2(stateFromStores4[12]).fetchConjureServerProfileWidgets());
         }
       }
     }
-  }, items3);
-  let obj3 = stateFromStoresArray(stateFromStores4[10]);
-  const items4 = [ConjureProjectStore];
-  stateFromStoresArray = stateFromStoresArray(stateFromStores4[10]).useStateFromStoresArray(items4, () => {
-    items = [...closure_1_8.getOwnedProjects(), ...closure_1_8.getSharedWithMeProjects()];
-    return items.filter(offersServerWidget);
-  });
-  const items5 = [stateFromStoresArray];
+  }, items2);
+  const obj2 = stateFromStores2(stateFromStores4[9]);
+  const items3 = [ConjureServerWidgetStore];
+  stateFromStores2 = stateFromStores2(stateFromStores4[9]).useStateFromStores(items3, () =>
+    ConjureServerWidgetStore.getProjects(),
+  );
+  const items4 = [stateFromStores2];
   const effect1 = noop.useEffect(() => {
     c0 = false;
     (function loadWidgetConfigs() {
       const self = this;
-      const apply = closure_1_11.apply;
+      const apply = closure_1_10.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -367,40 +338,40 @@ export default function useConjureServerWidgetOffers() {
       }
       return applyArgumentsResult;
     })(
-      stateFromStoresArray.map((application_id) => application_id.application_id),
+      stateFromStores2.map((application_id) => application_id.application_id),
       () => c0,
     );
     return () => {
       c0 = true;
     };
-  }, items5);
-  const obj5 = stateFromStoresArray(stateFromStores4[10]);
-  const items6 = [UserStore];
-  const stateFromStores3 = stateFromStoresArray(stateFromStores4[10]).useStateFromStores(items6, () =>
+  }, items4);
+  const obj4 = stateFromStores2(stateFromStores4[9]);
+  const items5 = [UserStore];
+  const stateFromStores3 = stateFromStores2(stateFromStores4[9]).useStateFromStores(items5, () =>
     currentUser.getCurrentUser(),
   );
   let id;
-  const obj6 = stateFromStoresArray(stateFromStores4[10]);
+  const obj5 = stateFromStores2(stateFromStores4[9]);
   if (stateFromStores3 != null) {
     id = stateFromStores3.id;
   }
-  const tmp11Result = require("useUserProfileWidgets")(id);
-  importDefault = tmp11Result;
-  let tmp11 = require("useUserProfileWidgets");
-  const items7 = [ApplicationWidgetConfigStore];
-  stateFromStores4 = stateFromStoresArray(stateFromStores4[10]).useStateFromStores(items7, () =>
+  const tmp10Result = require("useUserProfileWidgets")(id);
+  importDefault = tmp10Result;
+  let tmp10 = require("useUserProfileWidgets");
+  const items6 = [ApplicationWidgetConfigStore];
+  stateFromStores4 = stateFromStores2(stateFromStores4[9]).useStateFromStores(items6, () =>
     allConfigsByApplication.getAllConfigsByApplication(),
   );
-  const tmpResult = stateFromStoresArray(stateFromStores4[10]);
-  const items8 = [GuildStore];
-  const stateFromStores5 = stateFromStoresArray(stateFromStores4[10]).useStateFromStores(items8, () =>
+  const tmpResult = stateFromStores2(stateFromStores4[9]);
+  const items7 = [GuildStore];
+  const stateFromStores5 = stateFromStores2(stateFromStores4[9]).useStateFromStores(items7, () =>
     GuildStore.getGuilds(),
   );
-  const items9 = [stateFromStoresArray, stateFromStores4, stateFromStores5, tmp11Result];
+  const items8 = [stateFromStores2, stateFromStores4, stateFromStores5, tmp10Result];
   return noop.useMemo(() => {
-    const found = closure_1.filter((item) => item instanceof stateFromStoresArray(7367).ApplicationWidget);
+    const found = closure_1.filter((item) => item instanceof stateFromStores2(6872).ApplicationWidget);
     const map = new Map();
-    const iter = stateFromStoresArray[Symbol.iterator]();
+    const iter = stateFromStores2[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       application_id = nextResult.application_id;
@@ -410,7 +381,7 @@ export default function useConjureServerWidgetOffers() {
       let found1;
       if (arr2 != null) {
         found1 = arr2.find(
-          (status) => status.status === stateFromStoresArray(15843).ApplicationWidgetConfigStatus.PUBLISHED,
+          (status) => status.status === stateFromStores2(14477).ApplicationWidgetConfigStatus.PUBLISHED,
         );
       }
       let tmp6 = found1;
@@ -459,5 +430,5 @@ export default function useConjureServerWidgetOffers() {
       obj.widgets = tmp2;
       return obj;
     });
-  }, items9);
+  }, items8);
 }

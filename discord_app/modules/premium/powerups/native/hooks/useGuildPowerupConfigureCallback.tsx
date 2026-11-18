@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupConfigureCallback.tsx
 import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
-import Powerups from "../../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../../guild_settings/GuildSettingsActionCreators.tsx";
 import GuildSettingsServerTagUtils from "../../../../guild_settings/GuildSettingsServerTagUtils.tsx";
+import Powerups from "../../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import openGuildPowerupsBottomSheet from "../utils/openGuildPowerupsBottomSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 

@@ -6,8 +6,8 @@ const obj = module_560.create((arg0) => {
   state = arg0;
   return {
     utmSourceCurrent: "r",
-    utmMediumCurrent: "ip",
-    utmCampaignCurrent: "done",
+    utmMediumCurrent: "description",
+    utmCampaignCurrent: "application",
     utmContentCurrent: "isArray",
     setUtmCurrentContext(utmSourceCurrent) {
       return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });

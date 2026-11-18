@@ -5,7 +5,8 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
 import useAddableWidgetsDefault from "../hooks/useAddableWidgets.tsx";
 import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton.tsx";
-import UserProfileAddableWidgetCategories from "../UserProfileAddableWidgetCategories.tsx";
+import useApplicationWidgetAffinityDataDefault from "../hooks/useApplicationWidgetAffinityData.tsx";
+import WidgetEmptyStateSuggestionUtils from "../WidgetEmptyStateSuggestionUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
@@ -15,15 +16,15 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_8 = fn(8490).TrackUserProfileEditActions;
-const PROFILE_SIDE_PADDING = fn(7972).PROFILE_SIDE_PADDING;
+let closure_8 = fn(7981).TrackUserProfileEditActions;
+const PROFILE_SIDE_PADDING = fn(7475).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 let closure_14 = [1.3, 1.6, 2.3, 3.3];
 const UserProfileWidgetsEmptyState = "UserProfileWidgetsEmptyState";
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" },
   textContainer: null,
@@ -42,21 +43,28 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 
 export default function UserProfileWidgetsEmptyState() {
   const tmp = closure_16();
-  items = [AuthenticationStore];
+  items = [id];
   _require = require("initialize").useStateFromStores(items, () => id.getId());
   const tmp5 = useAddableWidgetsDefault();
   importDefault = tmp5;
-  const items1 = [tmp5];
-  const memo = compact.useMemo(
-    () => UserProfileAddableWidgetCategories.partitionAddableWidgets(closure_1).interestsWidgets,
+  const tmp6 = useApplicationWidgetAffinityDataDefault(tmp5);
+  dependencyMap = tmp6;
+  const items1 = [tmp5, tmp6];
+  const memo = noop.useMemo(
+    () =>
+      WidgetEmptyStateSuggestionUtils.getWidgetEmptyStateSuggestions({
+        addableWidgets,
+        applicationAffinityData,
+        hasClips: false,
+      }),
     items1,
   );
   let obj = require("initialize");
-  let obj2 = compact;
-  [tmp7, dependencyMap] = compact.useState(0);
-  const sum = tmp7 + PROFILE_SIDE_PADDING;
-  _slicedToArray = sum;
-  compact = require("UserProfileWidgetOptionAddButton").NUMBER_OF_COLUMNS_BY_VARIANT.compact;
+  let obj2 = noop;
+  [tmp8, _slicedToArray] = noop.useState(0);
+  const sum = tmp8 + PROFILE_SIDE_PADDING;
+  noop = sum;
+  const compact = require("UserProfileWidgetOptionAddButton").NUMBER_OF_COLUMNS_BY_VARIANT.compact;
   let found = closure_14.find((item) => {
     const diff = (sum - Math.floor(item) * PX_12) / item - 2 * PX_16;
     const diff1 = compact - 1;
@@ -66,12 +74,11 @@ export default function UserProfileWidgetsEmptyState() {
     found = closure_14[closure_14.length - 1];
   }
   let result = (sum - Math.floor(found) * PX_12) / found;
-  const width = result;
   const callback = obj2.useCallback((nativeEvent) => {
-    dependencyMap(nativeEvent.nativeEvent.layout.width);
+    _slicedToArray(nativeEvent.nativeEvent.layout.width);
   }, []);
-  closure_6 = tmp4(15858)();
-  const tmp6 = _slicedToArray(compact.useState(0), 2);
+  id = tmp4(14495)();
+  const tmp7 = _slicedToArray(noop.useState(0), 2);
   const canConjureCustomWidget = require("ConjureCustomWidget").useCanConjureCustomWidget(UserProfileWidgetsEmptyState);
   const tmp2Result = require("ConjureCustomWidget");
   let isConjureMobileEnabled = require("ConjureMobileExperiment").useIsConjureMobileEnabled(
@@ -89,9 +96,9 @@ export default function UserProfileWidgetsEmptyState() {
   obj6.children = intl2.string(require("util").t.O9SQ1c);
   items2[1] = closure_10(require("Text/Text").Text, obj6);
   obj4.children = items2;
-  const items3 = [closure_11(closure_6, obj4), ,];
-  let tmp15Result = tmp7 > 0 && memo.length > 0;
-  if (tmp15Result) {
+  const items3 = [closure_11(result, obj4), ,];
+  let tmp16Result = tmp8 > 0 && memo.length > 0;
+  if (tmp16Result) {
     const obj7 = {
       horizontal: true,
       style: null,
@@ -111,14 +118,14 @@ export default function UserProfileWidgetsEmptyState() {
       memo.map((widget) => {
         closure_0 = widget;
         return closure_1_10(
-          closure_1(15853),
+          addableWidgets(applicationAffinityData[9]),
           {
             widget,
             variant: "compact",
             width,
             padding,
             onPress() {
-              return closure_6(closure_0);
+              return closure_7(closure_0);
             },
           },
           widget.getUniqueKey(),
@@ -127,13 +134,13 @@ export default function UserProfileWidgetsEmptyState() {
     ];
     if (isConjureMobileEnabled) {
       const obj8 = { width: result, padding: PX_16 };
-      isConjureMobileEnabled = closure_10(tmp4(15860), obj8);
+      isConjureMobileEnabled = closure_10(tmp4(14497), obj8);
     }
     items4[1] = isConjureMobileEnabled;
     obj7.children = items4;
-    tmp15Result = closure_11(width, obj7);
+    tmp16Result = closure_11(compact, obj7);
   }
-  items3[1] = tmp15Result;
+  items3[1] = tmp16Result;
   const obj10 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1113).intl;
   obj10.text = intl4.string(require("util").t["/NKLK5"]);
@@ -141,11 +148,11 @@ export default function UserProfileWidgetsEmptyState() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15862, dependencyMap.paths),
+      asyncRequireImpl(14499, dependencyMap.paths),
       "UserProfileWidgetAddActionSheet",
     );
   };
   items3[2] = closure_10(require("components/Button/Button").Button, obj10);
   obj3.children = items3;
-  return closure_11(closure_6, obj3);
+  return closure_11(result, obj3);
 }

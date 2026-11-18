@@ -51,9 +51,9 @@ function canRenderParticipantVideo(participant) {
   }
   return tmp;
 }
-const CallConstants = fn(5977);
+const CallConstants = fn(5473);
 ({ ParticipantTypes: closure_4, isStreamParticipant: hasOwnProperty, isUserParticipant: closure_6 } = CallConstants);
-const Features = fn(6072).Features;
+const Features = fn(5568).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
 

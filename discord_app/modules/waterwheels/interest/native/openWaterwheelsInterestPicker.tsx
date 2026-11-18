@@ -41,8 +41,8 @@ let closure_7 = async function _openWaterwheelsInterestPicker() {
           closure_129_2 = undefined;
           closure_129_3 = function releaseOpenFlag() {
             if (dependencyMap === c6) {
-              const result = closure_0(19070).setInterestPickerOpen(false);
-              const obj = closure_0(19070);
+              const result = closure_0(17881).setInterestPickerOpen(false);
+              const obj = closure_0(17881);
             }
           };
           closure_129_4 = function cleanup() {
@@ -52,8 +52,8 @@ let closure_7 = async function _openWaterwheelsInterestPicker() {
           closure_129_5 = function handleAccountChange() {
             if (!assert.isValid()) {
               if (dependencyMap === c6) {
-                const result = closure_0(19070).setInterestPickerOpen(false);
-                const obj = closure_0(19070);
+                const result = closure_0(17881).setInterestPickerOpen(false);
+                const obj = closure_0(17881);
               }
               c4.removeChangeListener(closure_1_5);
               assert.dispose();

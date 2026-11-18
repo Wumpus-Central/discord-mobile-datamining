@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1072);
 ({ Endpoints: hasOwnProperty, AnalyticEvents: closure_6, LoggingInviteTypes: metroImportDefault } = Constants);
-const MessageSendLocation = fn(5315).MessageSendLocation;
+const MessageSendLocation = fn(4828).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 

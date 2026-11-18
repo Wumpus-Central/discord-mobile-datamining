@@ -6,7 +6,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 
@@ -34,7 +34,7 @@ export default function useWishlistNUXActionSheet() {
   let obj3 = require("initialize");
   if (stateFromStores1) {
     stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(
-      tmp(5143).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
+      tmp(4656).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
     );
   }
   tmpResult = require("DismissibleContentUnsafeUtils");

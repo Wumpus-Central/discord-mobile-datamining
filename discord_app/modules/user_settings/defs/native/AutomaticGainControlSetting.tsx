@@ -4,18 +4,18 @@ import util from "../../../../intl/index.native.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(12612);
+const SettingBuilders = fn(11897);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.cUMdH0);
   },
-  parent: fn(9213).MobileUserSettings.VOICE,
+  parent: fn(8624).MobileUserSettings.VOICE,
   useValue: function useAutomaticGainControlSettingValue() {
     items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
   },
-  onValueChange: fn(11673).handleAutomaticGainControlChange,
+  onValueChange: fn(10955).handleAutomaticGainControlChange,
   useDescription: function useAutomaticGainControlSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["6EjbvA"]);

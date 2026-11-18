@@ -34,17 +34,17 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
   const obj = {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "Promise",
-    canAccessMedia: "ip",
+    canAccessMedia: "description",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
     rate: "Path",
-    showPip: -0.068,
+    showPip: 624.877,
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: 0.223
+    currentlyDisplayedChannelId: "row"
   };
   return obj;
 });
@@ -284,7 +284,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "ip", rate: false, isPlaying: false, wasPipClosedByUser: "KeyboardBackgroundView" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "description", rate: false, isPlaying: false, wasPipClosedByUser: "response" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

@@ -1040,8 +1040,8 @@ let closure_17 = async function _markOrderAsSigningInProgress(arg0) {
           return obj5;
         } else {
           const tmp6 = asyncGeneratorStep(async () => {
-            if (c5 === 2) {
-              c5 = 3;
+            if (logger === 2) {
+              logger = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp7 === 3) {
               if (arg0 === 1) {
@@ -1054,131 +1054,141 @@ let closure_17 = async function _markOrderAsSigningInProgress(arg0) {
               }
             } else {
               try {
-                c5 = 2;
-                if (0 === c4) {
+                logger = 2;
+                if (0 === c5) {
                   if (arg0 === 1) {
-                    c5 = 3;
+                    logger = 3;
                     throw value;
                   } else if (arg0 === 2) {
-                    c5 = 3;
+                    logger = 3;
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    const orderId = tmp8;
-                    closure_128_0 = undefined;
+                    closure_1 = tmp8;
+                    closure_129_0 = undefined;
+                    let orderSigningConstraintsError;
                     const obj4 = { type: "ORDER_MARK_SIGNING_START", orderId };
-                    tmp4(tmp45[6]).dispatch(obj4);
-                    c3 = 2;
-                    const obj22 = tmp4(tmp45[6]);
-                    c4 = 4;
-                    c5 = 1;
-                    const obj5 = { value: orderId(tmp45[7]).getOrder(orderId), done: false };
+                    closure_1(tmp4[6]).dispatch(obj4);
+                    c4 = 2;
+                    const obj23 = closure_1(tmp4[6]);
+                    c5 = 3;
+                    logger = 1;
+                    const obj5 = { value: orderId(tmp4[7]).getOrder(orderId), done: false };
                     return obj5;
                   }
                 } else if (1 === tmp8) {
-                  c3 = 0;
+                  c4 = 0;
                   c11 = null;
-                  throw tmp45;
+                  throw closure_3;
                 } else if (2 === tmp8) {
-                  c3 = 1;
-                  closure_128_1 = tmp45;
-                  const _Error2 = Error;
-                  const error = new Error("failed to mark order as signing in progress");
-                  const obj6 = { tags: { source: "OrderActionCreators_markOrderAsSigningInProgress" }, extra: null };
-                  const obj8 = { orderId: closure_129_0, response: closure_128_1 };
-                  obj6.extra = obj8;
-                  const result = orderId(tmp45[5]).captureBillingException(error, obj6);
-                  const obj9 = { response: closure_128_1, orderId: closure_129_0 };
-                  logger.error("failed to mark order as signing in progress", obj9);
-                  const obj7 = orderId(tmp45[5]);
-                  const obj10 = { type: "ORDER_MARK_SIGNING_FAIL", orderId: closure_129_0 };
-                  c4 = 3;
-                  c5 = 1;
-                  const obj12 = { value: tmp4(tmp45[6]).dispatch(obj10), done: false };
-                  return obj12;
+                  c4 = 1;
+                  closure_129_2 = closure_3;
+                  orderSigningConstraintsError = orderId(tmp4[7]).getOrderSigningConstraintsError(closure_129_2);
+                  if (null == orderSigningConstraintsError) {
+                    const _Error2 = Error;
+                    const error = new Error("failed to mark order as signing in progress");
+                    const obj6 = { tags: { source: "OrderActionCreators_markOrderAsSigningInProgress" }, extra: null };
+                    const obj9 = { orderId: closure_130_0, response: closure_129_2 };
+                    obj6.extra = obj9;
+                    const result = orderId(tmp4[5]).captureBillingException(error, obj6);
+                    const obj8 = orderId(tmp4[5]);
+                  }
+                  const obj10 = { response: closure_129_2, orderId: closure_130_0 };
+                  logger.error("failed to mark order as signing in progress", obj10);
+                  const obj7 = orderId(tmp4[7]);
+                  const obj11 = { type: "ORDER_MARK_SIGNING_FAIL", orderId: closure_130_0 };
+                  c5 = 6;
+                  logger = 1;
+                  const obj13 = { value: closure_1(tmp4[6]).dispatch(obj11), done: false };
+                  return obj13;
                 } else if (3 === tmp8) {
                   if (arg0 === 1) {
-                    c5 = 3;
+                    logger = 3;
                     throw value;
                   } else if (arg0 === 2) {
-                    c3 = 0;
+                    c4 = 0;
                     c11 = null;
-                    c5 = 3;
-                    const obj13 = { value, done: true };
-                    return obj13;
-                  } else {
-                    throw closure_128_1;
-                  }
-                } else if (4 === tmp8) {
-                  if (arg0 === 1) {
-                    c5 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 0;
-                    c11 = null;
-                    c5 = 3;
+                    logger = 3;
                     const obj14 = { value, done: true };
                     return obj14;
                   } else {
-                    closure_128_0 = value;
-                    if (null == closure_128_0) {
+                    closure_129_0 = value;
+                    if (null == closure_129_0) {
                       const _Error = Error;
                       const _HermesInternal = HermesInternal;
-                      const error1 = new Error("Order " + closure_129_0 + " not found");
+                      const error1 = new Error("Order " + closure_130_0 + " not found");
                       throw error1;
                     } else {
-                      const HTTP = orderId(tmp45[4]).HTTP;
-                      const request = { url: c5.ORDER_SIGN(closure_129_0), body: null, rejectWithError: true };
-                      const obj15 = { expected_revision: closure_128_0.revision };
+                      const HTTP = orderId(tmp4[4]).HTTP;
+                      const request = { url: c5.ORDER_SIGN(closure_130_0), body: null, rejectWithError: true };
+                      const obj15 = { expected_revision: closure_129_0.revision };
                       request.body = obj15;
-                      c4 = 5;
-                      c5 = 1;
+                      c5 = 4;
+                      logger = 1;
                       const obj16 = { value: HTTP.post(request), done: false };
                       return obj16;
                     }
                   }
-                } else if (5 === tmp8) {
+                } else if (4 === tmp8) {
                   if (arg0 === 1) {
-                    c5 = 3;
+                    logger = 3;
                     throw value;
                   } else if (arg0 === 2) {
-                    c3 = 0;
+                    c4 = 0;
                     c11 = null;
-                    c5 = 3;
+                    logger = 3;
                     const obj17 = { value, done: true };
                     return obj17;
                   } else {
-                    const obj19 = { orderId: closure_129_0, revision: closure_128_0.revision };
-                    logger.info("marked order as signing in progress", obj19);
-                    const obj20 = { type: "ORDER_MARK_SIGNING_SUCCESS", orderId: closure_129_0 };
-                    c4 = 6;
-                    c5 = 1;
-                    const obj21 = { value: tmp4(tmp45[6]).dispatch(obj20), done: false };
+                    const obj18 = { orderId: closure_130_0, revision: closure_129_0.revision };
+                    logger.info("marked order as signing in progress", obj18);
+                    const obj20 = { type: "ORDER_MARK_SIGNING_SUCCESS", orderId: closure_130_0 };
+                    c5 = 5;
+                    logger = 1;
+                    const obj21 = { value: closure_1(tmp4[6]).dispatch(obj20), done: false };
                     return obj21;
                   }
+                } else if (5 === tmp8) {
+                  if (arg0 === 1) {
+                    logger = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c4 = 0;
+                    c11 = null;
+                    logger = 3;
+                    const obj22 = { value, done: true };
+                    return obj22;
+                  } else {
+                    c4 = 0;
+                    c11 = null;
+                    logger = 3;
+                    return { value: "HermesInternal", done: null };
+                  }
                 } else if (arg0 === 1) {
-                  c5 = 3;
+                  logger = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  c3 = 0;
+                  c4 = 0;
                   c11 = null;
-                  c5 = 3;
+                  logger = 3;
                   const obj = { value, done: true };
                   return obj;
                 } else {
-                  c3 = 0;
-                  c11 = null;
-                  c5 = 3;
-                  return { value: "HermesInternal", done: null };
+                  orderId = orderSigningConstraintsError;
+                  if (orderSigningConstraintsError == null) {
+                    orderId = closure_129_2;
+                  }
+                  throw orderId;
                 }
-              } catch (tmp45) {
-                if (tmp5 === c3) {
-                  c5 = tmp3;
-                  throw tmp45;
-                } else if (tmp2 === tmp47) {
-                  c4 = tmp2;
+              } catch (tmp56) {
+                closure_3 = tmp56;
+                if (tmp5 === c4) {
+                  logger = tmp3;
+                  throw tmp56;
+                } else if (tmp2 === tmp58) {
+                  c5 = tmp2;
                 } else {
-                  c4 = tmp;
+                  c5 = tmp;
                 }
               }
             }
@@ -1420,7 +1430,7 @@ let closure_19 = async function _cancelOrderSigning() {
     }
   })();
 };
-const OrderStatus = fn(6044).OrderStatus;
+const OrderStatus = fn(5540).OrderStatus;
 const Endpoints = fn(1072).Endpoints;
 const tmp2 = new LoggerDefault("OrderActionCreators");
 let closure_6 = tmp2;

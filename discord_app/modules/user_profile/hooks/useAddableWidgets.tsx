@@ -18,46 +18,46 @@ function hasAddableApplicationWidgetSurfaces(arg0) {
   }
   return tmp3;
 }
-const WIDGET_SORT_ORDER = fn(7365).WIDGET_SORT_ORDER;
+const WIDGET_SORT_ORDER = fn(6870).WIDGET_SORT_ORDER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useAddableWidgets.tsx");
 
 export default function useAddableWidgets() {
-  const DeveloperMode = setting(enabled[5]).DeveloperMode;
+  const DeveloperMode = setting(stateFromStores1[5]).DeveloperMode;
   setting = DeveloperMode.useSetting();
-  items = [stateFromStores3];
-  const stateFromStores = setting(enabled[6]).useStateFromStores(items, () => stateFromStores3.getCurrentUser());
+  items = [currentUser];
+  const stateFromStores = setting(stateFromStores1[6]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let id;
-  let obj = setting(enabled[6]);
+  let obj = setting(stateFromStores1[6]);
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
   const tmp6Result = require("useUserProfileWidgets")(id);
   importDefault = tmp6Result;
   const tmp6 = require("useUserProfileWidgets");
-  enabled = require("UserProfilePersonalWidgetExperiment").useConfig({ location: "useAddableWidgets" }).enabled;
-  const tmp5Result = require("UserProfilePersonalWidgetExperiment");
-  let items1 = [stateFromStores2];
-  const stateFromStores1 = setting(enabled[6]).useStateFromStores(items1, () =>
-    stateFromStores2.getAllConfigsByApplication(),
+  let items1 = [stateFromStores3];
+  stateFromStores1 = setting(stateFromStores1[6]).useStateFromStores(items1, () =>
+    stateFromStores3.getAllConfigsByApplication(),
   );
-  let tmpResult = setting(enabled[6]);
-  let items2 = [stateFromStores2];
-  stateFromStores2 = setting(enabled[6]).useStateFromStores(items2, () => stateFromStores2.getFeaturedApplicationIds());
-  const tmpResult4 = setting(enabled[6]);
-  const items3 = [stateFromStores2];
-  stateFromStores3 = setting(enabled[6]).useStateFromStores(items3, () =>
-    stateFromStores2.getDeveloperApplicationIds(),
+  let tmpResult = setting(stateFromStores1[6]);
+  const items2 = [stateFromStores3];
+  const stateFromStores2 = setting(stateFromStores1[6]).useStateFromStores(items2, () =>
+    stateFromStores3.getFeaturedApplicationIds(),
   );
-  const tmpResult5 = setting(enabled[6]);
-  const isClipsAvailable = setting(enabled[9]).useIsClipsAvailable();
-  const tmpResult6 = setting(enabled[9]);
-  const tmp5Result2 = require("ClipsOnProfileSetterExperiment");
+  const tmpResult4 = setting(stateFromStores1[6]);
+  const items3 = [stateFromStores3];
+  stateFromStores3 = setting(stateFromStores1[6]).useStateFromStores(items3, () =>
+    stateFromStores3.getDeveloperApplicationIds(),
+  );
+  const tmpResult5 = setting(stateFromStores1[6]);
+  const isClipsAvailable = setting(stateFromStores1[8]).useIsClipsAvailable();
+  const tmpResult6 = setting(stateFromStores1[8]);
+  const tmp5Result = require("ClipsOnProfileSetterExperiment");
   const tmp13 =
-    tmp5Result2.useConfig({ location: require("AnalyticsLocation").USER_PROFILE_MODAL_V2 }).enabled && isClipsAvailable;
-  closure_6 = tmp13;
+    tmp5Result.useConfig({ location: require("AnalyticsLocation").USER_PROFILE_MODAL_V2 }).enabled && isClipsAvailable;
+  currentUser = tmp13;
   const items4 = [setting];
-  const effect = stateFromStores1.useEffect(() => {
+  const effect = stateFromStores2.useEffect(() => {
     const featuredWidgetConfigs = ApplicationWidgetConfigActions.fetchFeaturedWidgetConfigs();
     featuredWidgetConfigs.catch(() => {});
     if (setting) {
@@ -66,67 +66,56 @@ export default function useAddableWidgets() {
       const tmpResult = ApplicationWidgetConfigActions;
     }
   }, items4);
-  const items5 = [setting, stateFromStores1, stateFromStores2, stateFromStores3, tmp6Result, tmp13, enabled];
-  return stateFromStores1.useMemo(() => {
-    let found = set1.filter((item) => item instanceof set(7367).ApplicationWidget);
+  const items5 = [setting, stateFromStores1, stateFromStores2, stateFromStores3, tmp6Result, tmp13];
+  return stateFromStores2.useMemo(() => {
+    let found = set1.filter((item) => item instanceof set(6872).ApplicationWidget);
     let set = new Set(found.map((applicationId) => applicationId.applicationId));
     set1 = new Set(set1.map((type) => type.type));
-    let found1 = closure_6.filter((item) => {
-      const ADDABLE_WIDGET_TYPES = set(15848).ADDABLE_WIDGET_TYPES;
+    let found1 = WIDGET_SORT_ORDER.filter((item) => {
+      const ADDABLE_WIDGET_TYPES = set(14481).ADDABLE_WIDGET_TYPES;
       return ADDABLE_WIDGET_TYPES.has(item);
     });
     return found1.flatMap((type) => {
-      if (setting(enabled[15]).WidgetType.APPLICATION === type) {
+      if (setting(stateFromStores1[14]).WidgetType.APPLICATION === type) {
         items = [];
         const arraySpreadResult = HermesBuiltin.arraySpread(stateFromStores2, 0);
-        const tmp21 = set ? stateFromStores3 : [];
-        HermesBuiltin.arraySpread(tmp21, arraySpreadResult);
+        const tmp18 = set ? stateFromStores3 : [];
+        HermesBuiltin.arraySpread(tmp18, arraySpreadResult);
         set = new Set(items);
         const _Object = Object;
-        const values = Object.values(stateFromStores1);
+        const values = Object.values(dependencyMap);
         const mapped = values.map((item) => item[0]);
-        const found = mapped.filter(setting(enabled[16]).isNotNullish);
+        const found = mapped.filter(setting(stateFromStores1[15]).isNotNullish);
         const found1 = found.filter((application_id) => set.has(application_id.application_id));
         const found2 = found1.filter((application_id) => !set.has(application_id.application_id));
         const found3 = found2.filter(hasAddableApplicationWidgetSurfaces);
         return found3.map((applicationId) => {
-          const applicationWidget = new set(dependencyMap[13]).ApplicationWidget({
+          const applicationWidget = new set(dependencyMap[12]).ApplicationWidget({
             applicationId: applicationId.application_id,
           });
           return applicationWidget;
         });
-      } else if (setting(enabled[15]).WidgetType.PERSONAL === type) {
-        if (dependencyMap) {
-          if (set1.has(type)) {
-            let items1 = [];
-          } else {
-            items1 = setting(enabled[17]).createDefaultPersonalWidget();
-            const tmpResult = setting(enabled[17]);
-          }
-        } else {
-          return [];
-        }
-      } else if (setting(enabled[15]).WidgetType.CLIPS_GALLERY === type) {
-        if (closure_1_6) {
+      } else if (setting(stateFromStores1[14]).WidgetType.CLIPS_GALLERY === type) {
+        if (currentUser) {
           if (!set1.has(type)) {
             const obj = { clips: [] };
-            let clipsGalleryWidget = new setting(enabled[18]).ClipsGalleryWidget(obj);
+            let clipsGalleryWidget = new setting(stateFromStores1[16]).ClipsGalleryWidget(obj);
           }
           return clipsGalleryWidget;
         }
         clipsGalleryWidget = [];
       } else {
-        if (tmpResult3.isGameWidgetType(type)) {
+        if (tmpResult.isGameWidgetType(type)) {
           if (set1.has(type)) {
-            let items2 = [];
+            let items1 = [];
           } else {
             const obj2 = { type, games: [] };
-            items2 = new setting(enabled[19]).BaseGameWidget(obj2);
+            items1 = new setting(stateFromStores1[17]).BaseGameWidget(obj2);
           }
         } else {
-          return setting(enabled[16]).assertNever(type);
+          return setting(stateFromStores1[15]).assertNever(type);
         }
-        tmpResult3 = setting(enabled[19]);
+        tmpResult = setting(stateFromStores1[17]);
       }
     });
   }, items5);

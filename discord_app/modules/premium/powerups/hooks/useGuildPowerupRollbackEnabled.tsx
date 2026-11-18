@@ -5,10 +5,10 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");
 
-export default function useGuildPowerupRollbackEnabled(guildId, skuId, useGuildPowerupNewPerkMarketingVersion) {
+export default function useGuildPowerupRollbackEnabled(guildId, skuId, useMarketablePowerupPerks) {
   const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(
     guildId,
-    useGuildPowerupNewPerkMarketingVersion,
+    useMarketablePowerupPerks,
   );
   return skuId.skuId === Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID && serverThemeRollbackEnabled;
 }

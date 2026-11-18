@@ -217,7 +217,6 @@ export const WebUserSettings = {
   APPEARANCE_CLIENT_THEMES: "appearance_client_themes",
   APPEARANCE_SYNC_THEME: "appearance_sync_theme",
   SYNC_PROFILE_THEMES: "sync_profile_themes",
-  APPEARANCE_GUILD_THEME_DEFAULT_PREFERENCE: "appearance_guild_theme_default_preference",
   APPEARANCE_THEME_RELATED_SETTINGS: "appearance_theme_related_settings",
   APPEARANCE_THEME_ACCESSIBLITY_NAVIGATOR: "appearance_theme_accessibility_navigator",
   APPEARANCE_IN_APP_ICON_CATEGORY: "appearance_in_app_icon_category",

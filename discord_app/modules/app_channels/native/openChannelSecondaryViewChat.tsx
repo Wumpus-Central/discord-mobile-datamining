@@ -66,11 +66,11 @@ export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
   const effect = noop.useEffect(() => {
     function handleFrameDeepLinkQueued(channelId) {
       if (channelId.channelId === handleFrameDeepLinkQueued) {
-        const rootNavigationRef = handleFrameDeepLinkQueued(5487).getRootNavigationRef();
+        const rootNavigationRef = handleFrameDeepLinkQueued(5000).getRootNavigationRef();
         handleFrameDeepLinkQueued = tmp;
-        const obj2 = handleFrameDeepLinkQueued(5487);
+        const obj2 = handleFrameDeepLinkQueued(5000);
         const tmp6 = handleFrameDeepLinkQueued;
-        const rootNavigationRef1 = handleFrameDeepLinkQueued(5487).getRootNavigationRef();
+        const rootNavigationRef1 = handleFrameDeepLinkQueued(5000).getRootNavigationRef();
         let num = -1;
         if (null != rootNavigationRef1) {
           num = -1;
@@ -96,7 +96,7 @@ export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
             rootNavigationRef.dispatch(obj);
           }
         }
-        const obj4 = handleFrameDeepLinkQueued(5487);
+        const obj4 = handleFrameDeepLinkQueued(5000);
       }
     }
     if (null != handleFrameDeepLinkQueued) {

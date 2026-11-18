@@ -112,7 +112,7 @@ function EditAvatarDecorationInner(pendingAvatarSrc) {
 function AvatarDecorationSectionPreview(previewSkuId) {
   ({ user, guildId, pendingAvatarSrc } = previewSkuId);
   let purchase;
-  const tmp4 = purchase(9413)(previewSkuId.previewSkuId);
+  const tmp4 = purchase(8826)(previewSkuId.previewSkuId);
   const product = tmp4.product;
   _require = product;
   purchase = tmp4.purchase;
@@ -157,18 +157,18 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   const tmp = closure_13();
   obj3.size = tmp10(1187).AvatarSizes.EDIT_AVATAR_DECORATION;
   const items1 = [
-    closure_10(purchase(8634), obj3),
-    closure_10(purchase(15566), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo }),
+    closure_10(purchase(8125), obj3),
+    closure_10(purchase(14194), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo }),
   ];
   obj.children = items1;
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(8501).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7992).isAvatarDecorationRecord;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let closure_13 = createStyles.createStyles({
   container: { flex: 1 },
   avatarDisplayContainer: {
@@ -185,29 +185,29 @@ const result = size.fileFinishedImporting("modules/user_profile/native/EditAvata
 export default function EditAvatarDecorationActionSheet(arg0) {
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   let selectedAvatarDecoration;
-  const tmp4 = selectedAvatarDecoration(9405)({ analyticsLocations, isTryItOut, guildId });
+  const tmp4 = selectedAvatarDecoration(8818)({ analyticsLocations, isTryItOut, guildId });
   const setPendingAvatarDecoration = tmp4.setPendingAvatarDecoration;
   const tmp = closure_13();
-  const pendingAvatarSrc = setPendingAvatarDecoration(9410).getPendingAvatarSrc({
+  const pendingAvatarSrc = setPendingAvatarDecoration(8823).getPendingAvatarSrc({
     userId: user.id,
     image: tmp4.pendingAvatar,
   });
   const tmp7 = _slicedToArray(noop.useState(currentAvatarDecoration), 2);
   selectedAvatarDecoration = tmp7[0];
-  let obj = setPendingAvatarDecoration(9410);
+  let obj = setPendingAvatarDecoration(8823);
   const obj2 = { userId: user.id, image: tmp4.pendingAvatar };
-  const obj4 = setPendingAvatarDecoration(8570);
+  const obj4 = setPendingAvatarDecoration(8061);
   if (analyticsLocations == null) {
     analyticsLocations = [];
   }
-  const analyticsLocations2 = selectedAvatarDecoration(7928)(
+  const analyticsLocations2 = selectedAvatarDecoration(7431)(
     analyticsLocations,
-    tmp2(7947).EDIT_AVATAR_DECORATION_SHEET,
+    tmp2(7450).EDIT_AVATAR_DECORATION_SHEET,
   ).analyticsLocations;
   items = [selectedAvatarDecoration, setPendingAvatarDecoration];
   const callback = noop.useCallback(() => {
     const obj = first(1256);
-    obj.track(constants.OPEN_POPOUT, { type: first(7947).EDIT_AVATAR_DECORATION_SHEET, is_fullscreen: true });
+    obj.track(constants.OPEN_POPOUT, { type: first(7450).EDIT_AVATAR_DECORATION_SHEET, is_fullscreen: true });
   }, []);
   const callback1 = noop.useCallback((arg0) => {
     let purchasedItem = useShopProductItems.getPurchasedItem(arg0, "firstAvatarDecoration");
@@ -231,8 +231,8 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   const obj7 = { title: null };
   const intl = tmp5(1113).intl;
   obj7.title = intl.string(setPendingAvatarDecoration(1113).t.HykynS);
-  obj6.header = closure_10(setPendingAvatarDecoration(7923).BottomSheetTitleHeader, obj7);
-  const tmp9 = selectedAvatarDecoration(7928);
+  obj6.header = closure_10(setPendingAvatarDecoration(7426).BottomSheetTitleHeader, obj7);
+  const tmp9 = selectedAvatarDecoration(7431);
   const items1 = [
     closure_10(View, {
       style: tmp.container,
@@ -280,10 +280,10 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   obj9.isTryItOut = isTryItOut;
   obj9.onApply = callback1;
   obj9.analyticsLocations = analyticsLocations2;
-  obj9.analyticsSource = selectedAvatarDecoration(7947).EDIT_AVATAR_DECORATION_SHEET;
-  items1[1] = closure_10(selectedAvatarDecoration(9412), obj9);
+  obj9.analyticsSource = selectedAvatarDecoration(7450).EDIT_AVATAR_DECORATION_SHEET;
+  items1[1] = closure_10(selectedAvatarDecoration(8825), obj9);
   obj6.children = items1;
-  obj5.children = closure_11(setPendingAvatarDecoration(5560).BottomSheet, obj6);
-  obj10.children = closure_10(setPendingAvatarDecoration(7928).AnalyticsLocationProvider, obj5);
-  return closure_10(setPendingAvatarDecoration(5371).ThemeContextProvider, obj10);
+  obj5.children = closure_11(setPendingAvatarDecoration(5051).BottomSheet, obj6);
+  obj10.children = closure_10(setPendingAvatarDecoration(7431).AnalyticsLocationProvider, obj5);
+  return closure_10(setPendingAvatarDecoration(4884).ThemeContextProvider, obj10);
 }

@@ -61,15 +61,15 @@ const result = size.fileFinishedImporting("modules/activities/utils/useJoinFromS
 
 export { IconKey };
 export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = {
-  [fn(7482).ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP,
-  [fn(7482).ActivityGamePlatforms.ANDROID]: IconKey.ANDROID,
-  [fn(7482).ActivityGamePlatforms.IOS]: IconKey.IOS,
-  [fn(7482).ActivityGamePlatforms.XBOX]: IconKey.XBOX,
-  [fn(7482).ActivityGamePlatforms.PLAYSTATION_4]: IconKey.PLAYSTATION,
-  [fn(7482).ActivityGamePlatforms.PLAYSTATION_5]: IconKey.PLAYSTATION,
-  [fn(7482).ActivityGamePlatforms.SAMSUNG]: null,
-  [fn(7482).ActivityGamePlatforms.EMBEDDED]: null,
-  [fn(7482).ActivityGamePlatforms.META_QUEST]: IconKey.VR,
+  [fn(6985).ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP,
+  [fn(6985).ActivityGamePlatforms.ANDROID]: IconKey.ANDROID,
+  [fn(6985).ActivityGamePlatforms.IOS]: IconKey.IOS,
+  [fn(6985).ActivityGamePlatforms.XBOX]: IconKey.XBOX,
+  [fn(6985).ActivityGamePlatforms.PLAYSTATION_4]: IconKey.PLAYSTATION,
+  [fn(6985).ActivityGamePlatforms.PLAYSTATION_5]: IconKey.PLAYSTATION,
+  [fn(6985).ActivityGamePlatforms.SAMSUNG]: null,
+  [fn(6985).ActivityGamePlatforms.EMBEDDED]: null,
+  [fn(6985).ActivityGamePlatforms.META_QUEST]: IconKey.VR,
 };
 export { getJoinFromSupportedPlatformsIconKeys };
 export function useJoinFromSupportedPlatformsIconKeys(platforms) {

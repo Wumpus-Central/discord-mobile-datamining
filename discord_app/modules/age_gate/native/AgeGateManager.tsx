@@ -52,8 +52,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
   const source = channelId.source;
-  importDefault = source(6823).getAgeGateType(source);
-  let obj = source(6823);
+  importDefault = source(6327).getAgeGateType(source);
+  let obj = source(6327);
   ModalActionCreatorsDefault.pushLazy(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {

@@ -2,14 +2,14 @@
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
-import FramePoolManagerDefault from "../../frames/native/FramePoolManager.tsx";
 import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame.tsx";
 import conjureAppPictureInPictureFrames from "native/conjureAppPictureInPictureFrames.tsx";
+import FramePoolManagerDefault from "../../frames/native/FramePoolManager.tsx";
 import FramesStore from "../../frames/FramesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5953).ActivityPanelModes;
-const FramesConstants = fn(7028);
+const ActivityPanelModes = fn(5449).ActivityPanelModes;
+const FramesConstants = fn(6532);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFramePlatform.native.tsx");

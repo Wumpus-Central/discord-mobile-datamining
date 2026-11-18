@@ -12,7 +12,7 @@ import GuildBoostSlotsInventoryDefault from "../../../premium/native/GuildBoostS
 import BoostingUnavailablePillDefault from "../../../premium/premium_group/native/BoostingUnavailablePill.tsx";
 import BoostingCountDownPillDefault from "../../../premium/fractional/native/BoostingCountDownPill.tsx";
 import TopPattern from "../../../../design/components/Illustration/native/redesign/generated/TopPattern.tsx";
-import GuildBoostingUpsellDefault from "../../../../components_native/premium/GuildBoostingUpsell.tsx";
+import GuildBoostingUpsellDefault from "../../../guild_boosting/native/GuildBoostingUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 import BillingInfoStore from "../../../../stores/billing/BillingInfoStore.tsx";
@@ -30,11 +30,11 @@ const Constants = fn(1072);
 const FractionalPremiumStates = fn(1390).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(6959).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(6463).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -152,7 +152,7 @@ prototype["render"] = function render() {
   obj3.children = items;
   return colors(hasOwnProperty, obj3);
 };
-UserSettingsPremiumGuildSubscriptions.contextType = fn(5371).ThemeContext;
+UserSettingsPremiumGuildSubscriptions.contextType = fn(4884).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
@@ -176,12 +176,12 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     flag = true;
   }
   let obj = require("useSubscriptionPlansLoaded");
-  ({ fractionalState: c2, endsAt } = flag(8540)({ forceFetch: true }));
-  const tmp3 = flag(8540)({ forceFetch: true });
+  ({ fractionalState: c2, endsAt } = flag(8031)({ forceFetch: true }));
+  const tmp3 = flag(8031)({ forceFetch: true });
   isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
   const tmpResult = require("ReverseTrialUtils");
-  fpDurationText = flag(15362)(endsAt, tmp(15362).CountDownMessageTypes.LONG_TIME_LEFT);
-  const tmp4 = flag(15362);
+  fpDurationText = flag(13990)(endsAt, tmp(13990).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(13990);
   items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {

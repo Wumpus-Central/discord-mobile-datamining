@@ -11,18 +11,18 @@ const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/transitionToChannel.tsx");
 
-export function transitionToChannel(id, openTextInVoiceIfVoiceChannel) {
+export function transitionToChannel(id, transitionExtras) {
   const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
     preloadChannelDefault(channel.guild_id, channel.id);
     const obj = { openChannel: true };
     const obj4 = router_utils;
-    const merged = Object.assign(openTextInVoiceIfVoiceChannel);
+    const merged = Object.assign(transitionExtras);
     obj4.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id), obj);
     let prop;
-    if (openTextInVoiceIfVoiceChannel != null) {
-      prop = openTextInVoiceIfVoiceChannel.openTextInVoiceIfVoiceChannel;
+    if (transitionExtras != null) {
+      prop = transitionExtras.openTextInVoiceIfVoiceChannel;
     }
     if (prop) {
       prop = channel.isGuildVocal();

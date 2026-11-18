@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: {
     flex: 1,
@@ -130,11 +130,19 @@ export default function MediaSlider(controls) {
       closure_1_7(str);
     }, num),
   );
-  const obj3 = { style: null, children: null };
-  const items5 = [tmp.container, controls.style];
-  obj3.style = items5;
+  const obj3 = { text: null };
   const timeFormat = controls(setPaused[10]).getTimeFormat(tmp3);
-  const obj4 = {
+  const intl = tmp9(tmp10[11]).intl;
+  const obj4 = { elapsed: null, duration: null };
+  const tmp9Result = controls(setPaused[10]);
+  obj4.elapsed = controls(setPaused[12]).formatTimeForA11yLabel(tmp3);
+  const tmp9Result4 = controls(setPaused[12]);
+  obj4.duration = controls(setPaused[12]).formatTimeForA11yLabel(ref.current);
+  obj3.text = intl.formatToPlainString(controls(setPaused[11]).t.bnnNER, obj4);
+  const obj5 = { style: null, children: null };
+  const items5 = [tmp.container, controls.style];
+  obj5.style = items5;
+  const obj6 = {
     style: tmp.icon,
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -142,30 +150,30 @@ export default function MediaSlider(controls) {
     hitSlop: null,
     children: null,
   };
-  const intl = tmp9(tmp10[12]).intl;
-  const string = intl.string;
-  const t = tmp9(tmp10[12]).t;
+  const intl2 = tmp9(tmp10[11]).intl;
+  const string = intl2.string;
+  const t = tmp9(tmp10[11]).t;
   if (paused) {
     let stringResult = string(t.RscU7I);
   } else {
     stringResult = string(t.ZcgDJX);
   }
-  obj4.accessibilityLabel = stringResult;
-  obj4.onPress = function onPress() {
+  obj6.accessibilityLabel = stringResult;
+  obj6.onPress = function onPress() {
     if (paused) {
       onPlayPress();
     }
     controls.pause(!paused);
   };
-  obj4.hitSlop = { top: 8, right: 8, bottom: 8, left: 8 };
+  obj6.hitSlop = { top: 8, right: 8, bottom: 8, left: 8 };
   if (paused) {
-    let PauseIcon = tmp9(tmp10[13]).PlayIcon;
+    let PauseIcon = tmp9(tmp10[14]).PlayIcon;
   } else {
-    PauseIcon = tmp9(tmp10[14]).PauseIcon;
+    PauseIcon = tmp9(tmp10[15]).PauseIcon;
   }
-  obj4.children = closure_6(PauseIcon, { size: "md", color: "white" });
-  const items6 = [closure_6(controls(setPaused[11]).PressableOpacity, obj4), , ,];
-  const obj5 = {
+  obj6.children = closure_6(PauseIcon, { size: "md", color: "white" });
+  const items6 = [closure_6(controls(setPaused[13]).PressableOpacity, obj6), , ,];
+  const obj7 = {
     style: null,
     tabularNumbers: true,
     lineClamp: 1,
@@ -174,17 +182,17 @@ export default function MediaSlider(controls) {
     children: timeFormat,
   };
   const items7 = [tmp.centerText, { width: tmp8[0] }];
-  obj5.style = items7;
-  items6[1] = closure_6(controls(setPaused[15]).Text, obj5);
-  const obj6 = { style: tmp.sliderContainer, children: null };
-  const obj7 = {
+  obj7.style = items7;
+  items6[1] = closure_6(controls(setPaused[16]).Text, obj7);
+  const obj8 = { style: tmp.sliderContainer, children: null };
+  const obj9 = {
     pointerEvents: "none",
     style: tmp.progressSliderContainer,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
     children: null,
   };
-  const obj8 = {
+  const obj10 = {
     style: tmp.timelineBackgroundSlider,
     value: 1,
     minimumValue: 0,
@@ -193,18 +201,18 @@ export default function MediaSlider(controls) {
     minimumTrackTintColor: null,
     maximumTrackTintColor: null,
   };
-  const tmp9Result = controls(setPaused[10]);
-  const tmp11Result = paused(setPaused[16]);
-  const obj10 = paused(setPaused[9])("#FFFFFF");
-  obj8.thumbTintColor = paused(setPaused[9])("#FFFFFF").alpha(0).hex();
-  let alphaResult = paused(setPaused[9])("#FFFFFF").alpha(0);
-  const obj12 = paused(setPaused[9])("#FFFFFF");
-  obj8.minimumTrackTintColor = paused(setPaused[9])("#FFFFFF").alpha(0.1).hex();
-  const alphaResult1 = paused(setPaused[9])("#FFFFFF").alpha(0.1);
+  const tmp9Result5 = controls(setPaused[12]);
+  const tmp11Result = paused(setPaused[17]);
   const obj14 = paused(setPaused[9])("#FFFFFF");
-  obj8.maximumTrackTintColor = paused(setPaused[9])("#FFFFFF").alpha(0.1).hex();
-  const items8 = [closure_6(tmp11Result, obj8)];
-  const obj9 = {
+  obj10.thumbTintColor = paused(setPaused[9])("#FFFFFF").alpha(0).hex();
+  let alphaResult = paused(setPaused[9])("#FFFFFF").alpha(0);
+  const obj16 = paused(setPaused[9])("#FFFFFF");
+  obj10.minimumTrackTintColor = paused(setPaused[9])("#FFFFFF").alpha(0.1).hex();
+  const alphaResult1 = paused(setPaused[9])("#FFFFFF").alpha(0.1);
+  const obj18 = paused(setPaused[9])("#FFFFFF");
+  obj10.maximumTrackTintColor = paused(setPaused[9])("#FFFFFF").alpha(0.1).hex();
+  const items8 = [closure_6(tmp11Result, obj10)];
+  const obj11 = {
     style: tmp.downloadProgressSlider,
     value: tmp4[0],
     minimumValue: 0,
@@ -214,17 +222,17 @@ export default function MediaSlider(controls) {
     maximumTrackTintColor: null,
   };
   const alphaResult2 = paused(setPaused[9])("#FFFFFF").alpha(0.1);
-  const tmp11Result3 = paused(setPaused[16]);
-  const obj17 = paused(setPaused[9])("#FFFFFF");
-  obj9.thumbTintColor = paused(setPaused[9])("#FFFFFF").alpha(0).hex();
+  const tmp11Result3 = paused(setPaused[17]);
+  const obj21 = paused(setPaused[9])("#FFFFFF");
+  obj11.thumbTintColor = paused(setPaused[9])("#FFFFFF").alpha(0).hex();
   const alphaResult3 = paused(setPaused[9])("#FFFFFF").alpha(0);
-  const obj19 = paused(setPaused[9])("#FFFFFF");
-  obj9.minimumTrackTintColor = paused(setPaused[9])("#FFFFFF").alpha(0.2).hex();
-  obj9.maximumTrackTintColor = tmp6;
-  items8[1] = closure_6(tmp11Result3, obj9);
-  obj7.children = items8;
-  const items9 = [c7(c5, obj7)];
-  const obj11 = {
+  const obj23 = paused(setPaused[9])("#FFFFFF");
+  obj11.minimumTrackTintColor = paused(setPaused[9])("#FFFFFF").alpha(0.2).hex();
+  obj11.maximumTrackTintColor = tmp6;
+  items8[1] = closure_6(tmp11Result3, obj11);
+  obj9.children = items8;
+  const items9 = [c7(c5, obj9)];
+  const obj12 = {
     style: tmp.playbackSlider,
     accessibilityLabel: null,
     value: null,
@@ -236,20 +244,22 @@ export default function MediaSlider(controls) {
     onValueChange: null,
     onSlidingStart: null,
     onSlidingComplete: null,
+    accessibilityValue: null,
   };
   const alphaResult4 = paused(setPaused[9])("#FFFFFF").alpha(0.2);
-  const intl2 = tmp9(tmp10[12]).intl;
-  obj11.accessibilityLabel = intl2.string(controls(setPaused[12]).t["v//dvn"]);
-  obj11.value = tmp3;
-  obj11.thumbImage = paused(setPaused[17]);
-  obj11.maximumValue = ref.current;
-  obj11.minimumTrackTintColor = paused(setPaused[18]).unsafe_rawColors.WHITE;
-  obj11.onValueChange = tmp12;
-  obj11.onSlidingStart = callback1;
-  obj11.onSlidingComplete = callback2;
-  items9[1] = closure_6(paused(setPaused[16]), obj11);
-  obj6.children = items9;
-  items6[2] = c7(c5, obj6);
+  const intl3 = tmp9(tmp10[11]).intl;
+  obj12.accessibilityLabel = intl3.string(controls(setPaused[11]).t["v//dvn"]);
+  obj12.value = tmp3;
+  obj12.thumbImage = paused(setPaused[18]);
+  obj12.maximumValue = ref.current;
+  obj12.minimumTrackTintColor = paused(setPaused[19]).unsafe_rawColors.WHITE;
+  obj12.onValueChange = tmp12;
+  obj12.onSlidingStart = callback1;
+  obj12.onSlidingComplete = callback2;
+  obj12.accessibilityValue = obj3;
+  items9[1] = closure_6(paused(setPaused[17]), obj12);
+  obj8.children = items9;
+  items6[2] = c7(c5, obj8);
   const obj13 = {
     style: tmp.centerText,
     variant: "body-xs/medium",
@@ -261,9 +271,9 @@ export default function MediaSlider(controls) {
     },
     children: null,
   };
-  const tmp11Result4 = paused(setPaused[16]);
+  const tmp11Result4 = paused(setPaused[17]);
   obj13.children = controls(setPaused[10]).getTimeFormat(ref.current);
-  items6[3] = closure_6(controls(setPaused[15]).Text, obj13);
-  obj3.children = items6;
-  return c7(c5, obj3);
+  items6[3] = closure_6(controls(setPaused[16]).Text, obj13);
+  obj5.children = items6;
+  return c7(c5, obj5);
 }

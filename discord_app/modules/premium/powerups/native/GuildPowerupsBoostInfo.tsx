@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostInfo.tsx
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import getGuildPowerupsBoostInfoText from "../utils/getGuildPowerupsBoostInfoText.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

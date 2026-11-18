@@ -1,16 +1,16 @@
 // discord_app/modules/checkpoint/native/components/customization/TraitOptionDetails.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3319 from "../../../Checkpoint2026.messages.js";
+import _modDef3339 from "../../../Checkpoint2026.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import RarityBadgeDefault from "RarityBadge.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-function AssetDescription(asset) {
-  asset = asset.asset;
+function OptionDescription(option) {
+  option = option.option;
   const tmp = closure_7();
   _require = tmp;
-  if (asset.status === require("CheckpointCharacterAssets").CheckpointTraitOptionStatus.NITRO_LOCKED) {
+  if (option.status === require("CheckpointCharacterAssets").CheckpointTraitOptionStatus.NITRO_LOCKED) {
     const intl = tmp2(1113).intl;
     let obj = {
       subscribeHook(children, arg1) {
@@ -22,9 +22,9 @@ function AssetDescription(asset) {
             style: subscribeLink.subscribeLink,
             onPress() {
               const obj = { analyticsLocations: null };
-              items = [closure_1_1(7947).CHECKPOINT, closure_1_1(7947).CHECKPOINT_TRAIT];
+              items = [closure_1_1(7450).CHECKPOINT, closure_1_1(7450).CHECKPOINT_TRAIT];
               obj.analyticsLocations = items;
-              return closure_1_1(9591)(obj);
+              return closure_1_1(9005)(obj);
             },
             accessibilityRole: "link",
             children,
@@ -33,10 +33,10 @@ function AssetDescription(asset) {
         );
       },
     };
-    let formatResult = intl.format(_modDef3319.E6AfCb, obj);
+    let formatResult = intl.format(_modDef3339.E6AfCb, obj);
   } else {
-    formatResult = tmp2(6742).getPlaintextAssetDescription(asset);
-    const tmp2Result = tmp2(6742);
+    formatResult = tmp2(6244).getPlaintextAssetDescription(option);
+    const tmp2Result = tmp2(6244);
   }
   return closure_4(require("Text/Text").Text, {
     variant: "body-md/medium",
@@ -49,8 +49,8 @@ function AssetDescription(asset) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
-const createStyles = fn(5310);
-const obj2 = {
+const createStyles = fn(4823);
+let obj2 = {
   titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   title: { textTransform: "capitalize" },
   description: null,
@@ -63,30 +63,34 @@ let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitOptionDetails.tsx");
 
-export default function TraitOptionDetails(arg0) {
-  ({ asset, hideRarity } = arg0);
+export default function TraitOptionDetails(accessibilityLabel) {
+  ({ option, hideRarity, title } = accessibilityLabel);
   const tmp = closure_7();
   const obj = { style: tmp.titleRow, children: null };
-  items = [
-    React4(Text_Text.Text, {
-      variant: "body-lg/medium",
-      color: "text-default",
-      style: tmp.title,
-      children: asset.getName(),
-    }),
-  ];
+  const obj2 = {
+    variant: "body-lg/medium",
+    color: "text-default",
+    style: tmp.title,
+    accessibilityLabel: accessibilityLabel.titleAccessibilityLabel,
+    children: null,
+  };
+  if (title == null) {
+    title = option.getName();
+  }
+  obj2.children = title;
+  items = [React4(Text_Text.Text, obj2)];
   let tmp5Result = !hideRarity;
   if (!hideRarity) {
-    tmp5Result = null != asset.rarity;
+    tmp5Result = null != option.rarity;
   }
   if (tmp5Result) {
-    const obj3 = { rarity: asset.rarity };
+    const obj3 = { rarity: option.rarity };
     tmp5Result = React4(RarityBadgeDefault, obj3);
   }
   const obj4 = { children: null };
   items[1] = tmp5Result;
   obj.children = items;
-  const items1 = [hasOwnProperty(View, obj), React4(AssetDescription, { asset })];
+  const items1 = [hasOwnProperty(View, obj), React4(OptionDescription, { option })];
   obj4.children = items1;
   return hasOwnProperty(timestampProducer, obj4);
 }

@@ -8,9 +8,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(9604).useNativeCheckoutStoreOrNull;
+let closure_5 = fn(9018).useNativeCheckoutStoreOrNull;
 const CurrencyCodes = fn(1072).CurrencyCodes;
-fn(9312).GPlayBillingResult;
+fn(8723).GPlayBillingResult;
 let closure_9 = new LoggerDefault("useMobilePurchaseSKU.android");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
@@ -272,20 +272,20 @@ export default function useMobilePurchaseSKU(skuId) {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               closure_1 = tmp9;
-              let tmp52;
+              let tmp65;
               if (closure_15 != null) {
-                tmp52 = closure_15();
+                tmp65 = closure_15();
               }
-              if (true === tmp52) {
+              if (true === tmp65) {
                 const _Error2 = Error;
                 const error = new Error("Purchase already in progress");
                 throw error;
               } else {
-                if (obj17.isNullOrEmpty(platformSkuId)) {
+                if (obj20.isNullOrEmpty(platformSkuId)) {
                   const _Error = Error;
                   const error1 = new Error("Missing google play sku ID");
                   throw error1;
@@ -302,15 +302,15 @@ export default function useMobilePurchaseSKU(skuId) {
                         if (freePurchaseCallback == null) {
                           purchaseSKU = purchaseSKU(tmp4[14]).purchaseSKU;
                         }
-                        const obj5 = {
+                        const obj6 = {
                           expectedAmount: 0,
                           expectedCurrency: constants.USD,
                           loadId: purchaseSKU(tmp4[15]).v4(),
                         };
                         c5 = 4;
                         c6 = 1;
-                        const obj6 = { value: purchaseSKU("collectibles", closure_0, obj5), done: false };
-                        return obj6;
+                        const obj7 = { value: purchaseSKU("collectibles", closure_0, obj6), done: false };
+                        return obj7;
                       }
                     }
                   }
@@ -318,11 +318,11 @@ export default function useMobilePurchaseSKU(skuId) {
                     c4 = 4;
                     c5 = 6;
                     c6 = 1;
-                    const obj7 = { value: purchaseSKU(tmp4[11]).markOrderAsSigningInProgress(orderId), done: false };
-                    return obj7;
+                    const obj9 = { value: purchaseSKU(tmp4[11]).markOrderAsSigningInProgress(orderId), done: false };
+                    return obj9;
                   }
                 }
-                obj17 = purchaseSKU(tmp4[13]);
+                obj20 = purchaseSKU(tmp4[13]);
               }
             }
           } else if (1 === tmp9) {
@@ -355,8 +355,8 @@ export default function useMobilePurchaseSKU(skuId) {
                 }
                 c4 = 0;
                 c6 = 3;
-                const obj8 = { value, done: true };
-                return obj8;
+                const obj10 = { value, done: true };
+                return obj10;
               } else {
                 if (closure_130_14 != null) {
                   closure_130_14();
@@ -370,13 +370,26 @@ export default function useMobilePurchaseSKU(skuId) {
             } else if (5 === tmp9) {
               c4 = 1;
               closure_129_1 = closure_3;
-              const obj10 = { tags: { source: "useMobilePurchaseSKU_markSigning" }, extra: null };
-              const obj11 = { orderId: closure_130_11 };
-              obj10.extra = obj11;
-              const result = purchaseSKU(tmp4[12]).captureBillingException(closure_129_1, obj10);
-              const obj12 = { error: closure_129_1, skuId: closure_130_0, orderId: closure_130_11 };
-              logger.error("Failed to mark order signing-in-progress", obj12);
-              throw closure_129_1;
+              if (obj3.isSpendingLimitError(closure_129_1)) {
+                const result = purchaseSKU(tmp4[16]).showSpendingLimitReachedAlert();
+                if (closure_130_16 != null) {
+                  closure_130_16(false);
+                }
+                closure_130_6();
+                c4 = 0;
+                c6 = 3;
+                const obj11 = { value: undefined, done: true };
+                return obj11;
+              } else {
+                const obj13 = { tags: { source: "useMobilePurchaseSKU_markSigning" }, extra: null };
+                const obj14 = { orderId: closure_130_11 };
+                obj13.extra = obj14;
+                const result1 = purchaseSKU(tmp4[12]).captureBillingException(closure_129_1, obj13);
+                const obj15 = { error: closure_129_1, skuId: closure_130_0, orderId: closure_130_11 };
+                logger.error("Failed to mark order signing-in-progress", obj15);
+                throw closure_129_1;
+              }
+              obj3 = purchaseSKU(tmp4[16]);
             } else if (6 === tmp9) {
               if (arg0 === 1) {
                 c6 = 3;
@@ -384,8 +397,8 @@ export default function useMobilePurchaseSKU(skuId) {
               } else if (arg0 === 2) {
                 c4 = 0;
                 c6 = 3;
-                const obj14 = { value, done: true };
-                return obj14;
+                const obj17 = { value, done: true };
+                return obj17;
               } else {
                 c4 = 1;
               }
@@ -402,7 +415,7 @@ export default function useMobilePurchaseSKU(skuId) {
             c6 = 3;
             return { value: "HermesInternal", done: null };
           }
-          const obj15 = {
+          const obj18 = {
             productId: closure_130_1,
             skuId: closure_130_0,
             isOneTimePurchase: true,
@@ -418,23 +431,23 @@ export default function useMobilePurchaseSKU(skuId) {
           if (closure_130_9 != null) {
             options = closure_130_9.options;
           }
-          obj15.giftInfoOptions = options;
-          obj15.googleOfferId = closure_130_17;
-          obj15.onPurchaseError = closure_130_22;
+          obj18.giftInfoOptions = options;
+          obj18.googleOfferId = closure_130_17;
+          obj18.onPurchaseError = closure_130_22;
           c5 = 7;
           c6 = 1;
-          const obj16 = { value: closure_130_12(obj15), done: false };
-          return obj16;
-        } catch (tmp89) {
-          closure_3 = tmp89;
+          const obj19 = { value: closure_130_12(obj18), done: false };
+          return obj19;
+        } catch (tmp102) {
+          closure_3 = tmp102;
           if (tmp5 === c4) {
             c6 = tmp3;
-            throw tmp89;
-          } else if (tmp2 === tmp91) {
+            throw tmp102;
+          } else if (tmp2 === tmp104) {
             c5 = tmp2;
-          } else if (tmp === tmp91) {
+          } else if (tmp === tmp104) {
             c5 = tmp;
-          } else if (tmp3 === tmp91) {
+          } else if (tmp3 === tmp104) {
             c5 = tmp3;
           } else {
             c5 = tmp6;

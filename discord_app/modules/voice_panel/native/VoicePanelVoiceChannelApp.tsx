@@ -137,9 +137,9 @@ function VoicePanelVoiceChannelAppForChannel(channel) {
   }
   return tmp5;
 }
-const VoicePanelControlsModes = fn(12426).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11708).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { layer: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

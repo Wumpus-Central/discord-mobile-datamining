@@ -3,7 +3,7 @@ import LoggerDefault from "../debug/Logger.tsx";
 import ProcessArgs2 from "../../utils/ProcessArgs.tsx";
 import GatewayZstdUtils from "GatewayZstdUtils.native.tsx";
 import NativeCompressionModule from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
-import _mod16173 from "../../../_runtime/metro/16173__.js";
+import _mod14840 from "../../../_runtime/metro/14840__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [];
@@ -49,7 +49,7 @@ prototype2["getAlgorithm"] = function getAlgorithm() {
 prototype2["usesLegacyCompression"] = function usesLegacyCompression() {
   return false;
 };
-prototype2["feed"] = function feed(arg0) {
+prototype2["feed"] = function feed(buffer) {
   const self = this;
   if (null == this._stream) {
     const _Error2 = Error;
@@ -57,9 +57,9 @@ prototype2["feed"] = function feed(arg0) {
     throw error;
   } else {
     const _ArrayBuffer = ArrayBuffer;
-    if (arg0 instanceof ArrayBuffer) {
+    if (buffer instanceof ArrayBuffer) {
       const _stream = self._stream;
-      const decompressResult = _stream.decompress(arg0);
+      const decompressResult = _stream.decompress(buffer);
       let decodeResult = decompressResult;
       if (null != self._decoder) {
         const _decoder = self._decoder;
@@ -70,7 +70,7 @@ prototype2["feed"] = function feed(arg0) {
       }
     } else {
       const _Error = Error;
-      const error1 = new Error("Expected array buffer, but got " + typeof arg0);
+      const error1 = new Error("Expected array buffer, but got " + typeof buffer);
       throw error1;
     }
   }
@@ -79,7 +79,7 @@ prototype2["close"] = function close() {};
 items.push(fn);
 const fn2 = (arg0) => {
   const tmp2 = new tmp(arg0, new.target, tmp, new.target);
-  tmp2._pako = _mod16173;
+  tmp2._pako = _mod14840;
   tmp2._usesZstd = false;
   tmp2._zstdDecoder = null;
   tmp2._zstdStream = null;
@@ -105,7 +105,7 @@ prototype3["getAlgorithm"] = function getAlgorithm() {
 prototype3["usesLegacyCompression"] = function usesLegacyCompression() {
   return false;
 };
-prototype3["feed"] = function feed(arg0) {
+prototype3["feed"] = function feed(buffer) {
   const self = this;
   if (null == this._inflate) {
     const _Error3 = Error;
@@ -117,9 +117,9 @@ prototype3["feed"] = function feed(arg0) {
     throw error1;
   } else {
     const _ArrayBuffer = ArrayBuffer;
-    if (arg0 instanceof ArrayBuffer) {
+    if (buffer instanceof ArrayBuffer) {
       const _DataView = DataView;
-      const dataView = new DataView(arg0);
+      const dataView = new DataView(buffer);
       let tmp9 = dataView.byteLength >= 4;
       if (tmp9) {
         tmp9 = 65535 === dataView.getUint32(dataView.byteLength - 4, false);
@@ -129,10 +129,10 @@ prototype3["feed"] = function feed(arg0) {
       if (Z_SYNC_FLUSH) {
         Z_SYNC_FLUSH = self._pako.Z_SYNC_FLUSH;
       }
-      _inflate.push(arg0, Z_SYNC_FLUSH);
+      _inflate.push(buffer, Z_SYNC_FLUSH);
     } else {
       const _Error = Error;
-      const error2 = new Error("Expected array buffer, but got " + typeof arg0);
+      const error2 = new Error("Expected array buffer, but got " + typeof buffer);
       throw error2;
     }
   }
@@ -206,7 +206,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = _mod16173;
+  applyArgumentsResult._pako = _mod14840;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/discounts/PremiumDiscountOfferActionSheet.tsx
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import UserOfferActionCreators from "../../UserOfferActionCreators.tsx";
-import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
+import openPremiumModalDefault from "../openPremiumModal.tsx";
 import openPremiumPlanSelectionActionSheetDefault from "../openPremiumPlanSelectionActionSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ const PremiumConstants = fn(1390);
 ({ PremiumTypes: closure_4, SubscriptionPlanInfo: hasOwnProperty } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, AnalyticsObjectTypes, AnalyticsPages, AnalyticsSections } = Constants);
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_9 = {
   page: AnalyticsPages.USER_SETTINGS,

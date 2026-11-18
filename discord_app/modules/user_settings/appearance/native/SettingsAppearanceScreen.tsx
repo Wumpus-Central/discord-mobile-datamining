@@ -10,19 +10,19 @@ import ThemeStore from "../../ThemeStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FontScaleStore = fn(17927);
+const FontScaleStore = fn(16730);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: metroImportDefault, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(9213).MobileUserSettings;
+const MobileUserSettings = fn(8624).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 
 export default noop.memo(function SettingsAppearanceScreen() {
-  nativeStackNavigation(5893)(() => {
+  nativeStackNavigation(5384)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(17928).fetchUserCustomThemes();
-      const obj = closure_0(17928);
+      const userCustomThemes = closure_0(16731).fetchUserCustomThemes();
+      const obj = closure_0(16731);
     }
   });
   items = [ThemeStore, ClientThemesBackgroundStore];
@@ -55,13 +55,13 @@ export default noop.memo(function SettingsAppearanceScreen() {
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "r" });
+          nativeStackNavigation.setOptions({ headerRight: "find" });
         }
       }
       const obj2 = { headerRight: null };
       const intl = util.intl;
       obj2.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () =>
-        nativeStackNavigation(6058).setCustomFontScale(
+        nativeStackNavigation(5554).setCustomFontScale(
           closure_1_0.fontScale,
           closure_1_0.isClassicChatFontScaleEnabled,
         ),
@@ -91,54 +91,50 @@ export default noop.memo(function SettingsAppearanceScreen() {
       SYNC_THEME: arr[4],
     } = constants);
     obj3.settings = items;
-    const items1 = [obj3, , , , , , , ,];
-    const obj4 = { settings: null };
-    const items2 = [constants.DEFAULT_GUILD_THEME_PREFERENCE];
+    const items1 = [obj3, , , , , , ,];
+    const obj4 = { label: null, settings: null };
+    const intl2 = closure_0(1113).intl;
+    obj4.label = intl2.string(closure_0(1113).t.i19n5L);
+    const items2 = [,];
+    ({ ANDROID_FONT_SCALE: arr3[0], ANDROID_CLASSIC_CHAT_FONT_SCALE: arr3[1] } = constants);
     obj4.settings = items2;
     items1[1] = obj4;
-    const obj5 = { label: null, settings: null };
-    const intl2 = closure_0(1113).intl;
-    obj5.label = intl2.string(closure_0(1113).t.i19n5L);
-    const items3 = [,];
-    ({ ANDROID_FONT_SCALE: arr4[0], ANDROID_CLASSIC_CHAT_FONT_SCALE: arr4[1] } = constants);
+    const obj5 = { settings: null };
+    const items3 = [constants.DMS_MESSAGE_PREVIEWS];
     obj5.settings = items3;
     items1[2] = obj5;
     const obj6 = { settings: null };
-    const items4 = [constants.DMS_MESSAGE_PREVIEWS];
+    const items4 = [constants.GAME_MENTIONS_AUTOCOMPLETE];
     obj6.settings = items4;
     items1[3] = obj6;
-    const obj7 = { settings: null };
-    const items5 = [constants.GAME_MENTIONS_AUTOCOMPLETE];
+    const obj7 = { settings: null, subLabel: null };
+    const items5 = [constants.FAVORITES_GUILD_TOGGLE];
     obj7.settings = items5;
-    items1[4] = obj7;
-    const obj8 = { settings: null, subLabel: null };
-    const items6 = [constants.FAVORITES_GUILD_TOGGLE];
-    obj8.settings = items6;
     const intl3 = closure_0(1113).intl;
-    const obj9 = { helpCenterLink: null };
-    const obj = closure_0(12612);
-    obj9.helpCenterLink = nativeStackNavigation(2188).getArticleURL(constants2.FAVORITES_GUILD);
-    obj8.subLabel = intl3.format(nativeStackNavigation(3681).GR2KOG, obj9);
-    items1[5] = obj8;
-    const obj11 = { label: null, settings: null };
+    const obj8 = { helpCenterLink: null };
+    const obj = closure_0(11897);
+    obj8.helpCenterLink = nativeStackNavigation(2188).getArticleURL(constants2.FAVORITES_GUILD);
+    obj7.subLabel = intl3.format(nativeStackNavigation(3701).GR2KOG, obj8);
+    items1[4] = obj7;
+    const obj10 = { label: null, settings: null };
     const intl4 = closure_0(1113).intl;
-    obj11.label = intl4.string(closure_0(1113).t.lEde7i);
-    const items7 = [constants.DMS_HAPPENING_NOW_CARDS];
+    obj10.label = intl4.string(closure_0(1113).t.lEde7i);
+    const items6 = [constants.DMS_HAPPENING_NOW_CARDS];
+    obj10.settings = items6;
+    items1[5] = obj10;
+    const obj11 = { label: null, settings: null };
+    const intl5 = closure_0(1113).intl;
+    obj11.label = intl5.string(closure_0(1113).t["5h0QOP"]);
+    const items7 = [constants.EXACT_SEARCH_RESULT_COUNTS];
     obj11.settings = items7;
     items1[6] = obj11;
-    const obj12 = { label: null, settings: null };
-    const intl5 = closure_0(1113).intl;
-    obj12.label = intl5.string(closure_0(1113).t["5h0QOP"]);
-    const items8 = [constants.EXACT_SEARCH_RESULT_COUNTS];
+    const obj12 = { settings: null };
+    const items8 = [constants.TIMESTAMP_HOUR_CYCLE];
     obj12.settings = items8;
     items1[7] = obj12;
-    const obj13 = { settings: null };
-    const items9 = [constants.TIMESTAMP_HOUR_CYCLE];
-    obj13.settings = items9;
-    items1[8] = obj13;
     obj2.sections = items1;
     return obj.createList(obj2);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(17250), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(15907), { node }, "" + theme + "-" + gradientPresetId);
 });

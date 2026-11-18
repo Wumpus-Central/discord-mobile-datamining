@@ -1,13 +1,13 @@
 // discord_app/modules/report_to_mod/ReportToMod.messages.js
 import AssetJsonUtils from "../asset_json/native/AssetJsonUtils.tsx";
-import _mod2838 from "../../../_runtime/metro/02838__.js";
+import _mod2858 from "../../../_runtime/metro/02858__.js";
 import module_1152_mod from "../../../_runtime/metro/01152__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let module_1152 = module_1152_mod;
 const loader = module_1152.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2838);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2858);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

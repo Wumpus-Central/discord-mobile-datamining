@@ -430,7 +430,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                       let obj2 = closure_2_1(1256);
                     }
                   }
-                  obj = closure_2_0(16191);
+                  obj = closure_2_0(14858);
                 },
                 Math.ceil(Math.random() * closure_2_12),
               );
@@ -580,7 +580,7 @@ function scheduleIntegrityCheck(guild_id) {
   tmp4 = _require;
 }
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ChannelFlags = fn(5166).ChannelFlags;
+const ChannelFlags = fn(4679).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

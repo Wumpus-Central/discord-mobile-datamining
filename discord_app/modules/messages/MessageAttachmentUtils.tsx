@@ -147,10 +147,10 @@ export function useShouldObscure(channel) {
     }
     return canResult;
   });
-  const RenderSpoilers = channel(5135).RenderSpoilers;
+  const RenderSpoilers = channel(4648).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(563);
-  const enabledHarmTypesBitmaskForChannelType = channel(8645).getEnabledHarmTypesBitmaskForChannelType(channel(8651).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(8136).getEnabledHarmTypesBitmaskForChannelType(channel(8142).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 }
 export function getObscuredAlt(arg0) {

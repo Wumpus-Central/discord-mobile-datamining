@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
   FAKE_DATA: { stats: { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } }, character: null },
-  GLOBAL_STATS: { stats: null, character: null, didPlayerShareDataWithDiscord: false },
+  GLOBAL_STATS: { stats: null, character: null },
   ZERO_STATS: null,
   UNAVAILABLE: { availability: CheckpointAvailability.CheckpointAvailability.UNAVAILABLE },
   NO_CHARACTER: null,

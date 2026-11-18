@@ -71,12 +71,12 @@ export default function useUploadAvatar(guildId) {
               let originalMd5;
               closure_128_3 = undefined;
               closure_128_4 = undefined;
-              tmp22(5546).hideActionSheet();
-              const obj13 = tmp22(5546);
+              tmp22(5037).hideActionSheet();
+              const obj13 = tmp22(5037);
               const obj6 = { size };
               dependencyMap = 1;
               c3 = 1;
-              const obj8 = { value: tmp22(8890).openImagePicker(obj6), done: false };
+              const obj8 = { value: tmp22(8386).openImagePicker(obj6), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {
@@ -112,21 +112,21 @@ export default function useUploadAvatar(guildId) {
             }
             const obj10 = { imageUri: base64, description: null, originalMd5: null };
             tmp22 = tmp2;
-            const obj2 = tmp2(17104);
-            obj10.description = tmp2(9410).generateAvatarDescription();
+            const obj2 = tmp2(15760);
+            obj10.description = tmp2(8823).generateAvatarDescription();
             obj10.originalMd5 = originalMd5;
             closure_128_4 = obj2.createPendingImage(obj10);
             if (closure_129_1) {
-              tmp2(9408).setTryItOutAvatar(closure_128_4);
-              const tmp28Result = tmp2(9408);
+              tmp2(8821).setTryItOutAvatar(closure_128_4);
+              const tmp28Result = tmp2(8821);
             } else {
               const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
-              tmp2(9407).setPendingChanges(obj11);
-              const tmp28Result2 = tmp2(9407);
-              const result = tmp2(8552).announcePendingAvatarChange("set");
-              const obj7 = tmp2(8552);
+              tmp2(8820).setPendingChanges(obj11);
+              const tmp28Result2 = tmp2(8820);
+              const result = tmp2(8043).announcePendingAvatarChange("set");
+              const obj7 = tmp2(8043);
             }
-            const obj4 = tmp2(9410);
+            const obj4 = tmp2(8823);
           }
         } catch (tmp38) {
           c3 = tmp;

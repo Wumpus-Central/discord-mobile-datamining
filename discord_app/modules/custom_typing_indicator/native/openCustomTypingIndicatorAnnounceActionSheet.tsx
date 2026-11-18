@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 
 export function openCustomTypingIndicatorAnnounceActionSheet(analyticsLocations) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(13457, dependencyMap.paths),
+    asyncRequireImpl(12764, dependencyMap.paths),
     CustomTypingIndicatorAnnounceActionSheet,
     {
       analyticsLocations,

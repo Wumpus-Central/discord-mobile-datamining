@@ -11,7 +11,6 @@ import Server from "../../../flow/Server.tsx";
 import CommunicationDisabledUtils from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import GuildLeaderboardTypes from "../../guild_space/gaming_leaderboard/GuildLeaderboardTypes.tsx";
 import ReactionUtils from "../../reactions/ReactionUtils.tsx";
-import Client from "../../../flow/Client.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
@@ -23,6 +22,7 @@ import ChannelUtils from "../../../utils/ChannelUtils.tsx";
 import MediaFormatTesters from "../MediaFormatTesters.tsx";
 import InteractionComponentUtils from "../../interaction_components/InteractionComponentUtils.tsx";
 import InteractionTypes from "../../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
+import Client from "../../../flow/Client.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import MemberVerificationModalActionCreators from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
@@ -217,8 +217,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(11060).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(9171);
+let closure_5 = fn(10342).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8582);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1072);
 ({

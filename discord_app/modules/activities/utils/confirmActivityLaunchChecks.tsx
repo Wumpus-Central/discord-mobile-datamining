@@ -181,13 +181,13 @@ let closure_9 = async function _confirmActivityChange(arg0) {
               if (value != null) {
                 _location = value.location;
               }
-              channel = channel.getChannel(closure_1_0(5231).getEmbeddedActivityLocationChannelId(_location));
+              channel = channel.getChannel(closure_1_0(4744).getEmbeddedActivityLocationChannelId(_location));
               if (null != value) {
                 if (null != channel) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(11382)(
+                  shouldClosePopout(10664)(
                     tmp,
                     channel,
                     () => {
@@ -203,7 +203,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
                 }
               }
               fn(true);
-              const obj2 = closure_1_0(5231);
+              const obj2 = closure_1_0(4744);
             });
             c2 = 2;
             c3 = 1;

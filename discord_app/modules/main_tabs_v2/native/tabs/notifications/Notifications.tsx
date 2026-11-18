@@ -143,11 +143,11 @@ class ThemedNotifications {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(10043).YouBarNavigatorScreens;
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const YouBarNavigatorScreens = fn(9323).YouBarNavigatorScreens;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj = {
   containerOuter: { flex: 1 },
   containerOuterTablet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flex: 1 },
@@ -208,8 +208,8 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp11(1113).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1113).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(17236).LeftBackIconWithBadge, {});
-    const items1 = [closure_7(tmp11(7438).PressableOpacity, obj3), ,];
+    obj3.children = closure_7(tmp11(15893).LeftBackIconWithBadge, {});
+    const items1 = [closure_7(tmp11(6941).PressableOpacity, obj3), ,];
     const obj4 = {
       color: "mobile-text-heading-primary",
       variant: "heading-lg/semibold",
@@ -220,13 +220,13 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     };
     const intl2 = tmp11(1113).intl;
     obj4.children = intl2.string(tmp11(1113).t.HcoRu0);
-    items1[1] = closure_7(tmp11(5923).Text, obj4);
+    items1[1] = closure_7(tmp11(5414).Text, obj4);
     const obj5 = { style: tmp.actionButtons, children: null };
-    const obj6 = { ref, type: tmp11(12358).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
+    const obj6 = { ref, type: tmp11(11640).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
     const items2 = [closure_7(ForLaterOpenActionButtonDefault, obj6), ,];
     const obj7 = { type: null, onOpen: null };
     const tmp2Result = ForLaterOpenActionButtonDefault;
-    obj7.type = tmp11(12358).SavedMessageSortTypes.REMINDER;
+    obj7.type = tmp11(11640).SavedMessageSortTypes.REMINDER;
     obj7.onOpen = callback;
     items2[1] = closure_7(ForLaterOpenActionButtonDefault, obj7);
     items2[2] = closure_7(NotificationCenterActionButtonDefault, {});

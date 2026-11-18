@@ -11,30 +11,40 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");
 
 export function hasCrepeMonthlyOrbsPerk(currentUser) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = true;
+  }
   if (obj.canUseMonthlyOrbs(currentUser)) {
-    if (!obj2.isPremiumExactly(currentUser, PremiumTypes.TIER_2)) {
-      let perks;
-      if (currentUser != null) {
-        perks = currentUser.perks;
-      }
-      const perkSource = PerksStateUtils.getPerkSource(perks, user.Perk.MONTHLY_ORBS);
-      let hasItem = null != perkSource;
-      if (hasItem) {
-        hasItem = perkSource.includes(user.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
-      }
-      return hasItem;
+    if (flag) {
+      PremiumUtils;
     }
-    obj2 = PremiumUtils;
+    let perks;
+    if (currentUser != null) {
+      perks = currentUser.perks;
+    }
+    const perkSource = PerksStateUtils.getPerkSource(perks, user.Perk.MONTHLY_ORBS);
+    let hasItem = null != perkSource;
+    if (hasItem) {
+      hasItem = perkSource.includes(user.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+    }
+    return hasItem;
   }
   return false;
 }
 export function useHasXboxMonthlyOrbsPerk() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
   items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let flag = false;
+  if (flag === undefined) {
+    flag = true;
+  }
+  let flag2 = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
-    flag = false;
-    if (!tmpResult.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2)) {
+    if (!flag) {
       let perks;
       if (stateFromStores != null) {
         perks = stateFromStores.perks;
@@ -44,10 +54,12 @@ export function useHasXboxMonthlyOrbsPerk() {
       if (hasItem) {
         hasItem = perkSource.includes(user.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
       }
-      flag = hasItem;
-      const tmpResult2 = PerksStateUtils;
+      flag2 = hasItem;
+      const tmpResult = PerksStateUtils;
+    } else {
+      PremiumUtils;
+      flag2 = false;
     }
-    tmpResult = PremiumUtils;
   }
-  return flag;
+  return flag2;
 }

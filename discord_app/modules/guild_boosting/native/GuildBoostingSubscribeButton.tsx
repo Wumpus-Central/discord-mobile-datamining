@@ -72,14 +72,14 @@ let closure_14 = async function _handleBoostPress() {
   })();
 };
 let View = fn(17).View;
+let closure_7 = fn(6456).PremiumGuildSubscribeModalScenes;
 const Constants = fn(1072);
 ({
-  AnalyticsObjects: metroImportDefault,
-  AnalyticsObjectTypes: closure_8,
-  AnalyticsPages: closure_9,
-  NOOP: closure_10,
+  AnalyticsObjects: closure_8,
+  AnalyticsObjectTypes: closure_9,
+  AnalyticsPages: closure_10,
+  NOOP: closure_11,
 } = Constants);
-let closure_11 = fn(6952).PremiumGuildSubscribeModalScenes;
 const FractionalPremiumStates = fn(1390).FractionalPremiumStates;
 let jsx = fn(21).jsx;
 const size = fn(2);
@@ -128,7 +128,7 @@ export default function GuildBoostingSubscribeButton(guild) {
       obj2.location = obj;
       obj2.intent = intent;
       obj2.onResult = onResult;
-      navigation.push(shouldUseMobileWebRedirectCheckout.CONFIRMATION, obj2);
+      navigation.push(navigation.CONFIRMATION, obj2);
     }
   }, items1);
   let tmp8 = !stateFromStores;
@@ -156,7 +156,7 @@ export default function GuildBoostingSubscribeButton(guild) {
   ];
   jsx = intent.useCallback(() => {
     if (closure_6) {
-      let tmp8 = refs;
+      let tmp8 = closure_2_11;
     } else if (stateFromStores) {
       tmp8 = callback(guild.id, previousGuildSubscriptionSlot);
     } else {

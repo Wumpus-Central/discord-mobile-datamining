@@ -151,12 +151,12 @@ export function useRedeemVirtualCurrency(onSignFailure) {
             closure_1_10(false);
             throw closure_5;
           }
-        } catch (tmp64) {
-          closure_5 = tmp64;
+        } catch (tmp58) {
+          closure_5 = tmp58;
           if (tmp5 === v0) {
             c8 = tmp3;
-            throw tmp64;
-          } else if (tmp2 === tmp66) {
+            throw tmp58;
+          } else if (tmp2 === tmp60) {
             v4 = tmp;
           } else {
             v4 = tmp3;

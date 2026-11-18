@@ -17,7 +17,7 @@ function BurstReactionAnimationContainerInner() {
       dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
       closure_1_4(true);
       _undefined4.current = true;
-      const result = handleEffectReceived(5548).triggerHapticFeedback(c1(5549).IMPACT_HEAVY);
+      const result = handleEffectReceived(5039).triggerHapticFeedback(c1(5040).IMPACT_HEAVY);
     }
     const subscription = _undefined2(_undefined3[10]).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
@@ -171,15 +171,15 @@ function BurstReactionAnimationContainerInner() {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const ContentDismissActionType = fn(4669).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = { background: null, fill: null, dismissTextContainer: null, dismissTextBackground: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.backgroundColor = nativeDefault.colors.BLACK;
-obj3.opacity = fn(5268).BACKDROP_OPACITY;
+obj3.opacity = fn(4781).BACKDROP_OPACITY;
 obj2.background = obj3;
 const obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);

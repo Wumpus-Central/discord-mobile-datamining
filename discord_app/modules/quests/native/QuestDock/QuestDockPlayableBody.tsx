@@ -10,7 +10,7 @@ import PlayableActionCreators from "../../PlayableActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(6962).QuestDockMode;
+const QuestDockMode = fn(6466).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockPlayableBody.tsx");
@@ -100,10 +100,13 @@ export default noop.memo(function QuestDockPlayableBody() {
   };
   obj4.withAnimation = isQuestDockExpanded;
   const intl = tmp3(tmp2[20]).intl;
-  obj5.description = intl.string(questDockPlayable(getQuestImpressionId[20]).t["1uzE2S"]);
+  obj5.description = intl.string(questDockPlayable(getQuestImpressionId[20]).t.vGP84Q);
   const intl2 = tmp3(tmp2[20]).intl;
-  obj5.ctaText = intl2.string(questDockPlayable(getQuestImpressionId[20]).t.U7cCLU);
+  obj5.ctaText = intl2.formatToPlainString(questDockPlayable(getQuestImpressionId[20]).t.dPT1o7, {
+    seconds: questDockPlayable.rewardTimerSeconds,
+  });
   obj5.onCtaPress = callback;
+  const obj6 = { seconds: questDockPlayable.rewardTimerSeconds };
   const tmp10 = setRestingQuestDockMode(getQuestImpressionId[17]);
   obj5.secondaryCta = jsx(questDockPlayable(getQuestImpressionId[21]).IconButton, {
     variant: "secondary-overlay",

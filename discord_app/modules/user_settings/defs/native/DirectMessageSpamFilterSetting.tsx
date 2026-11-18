@@ -5,20 +5,20 @@ import ModerationUtils from "../../../../utils/ModerationUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(12612);
+const SettingBuilders = fn(11897);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.tiCXaH);
   },
-  parent: fn(9213).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8624).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: function useDmSpamFilterSettingOptions() {
     return noop.useMemo(() => {
       const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
       return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
     }, []);
   },
-  useValue: fn(17406).useDerivedDmSpamFilterSettingValue,
+  useValue: fn(16063).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

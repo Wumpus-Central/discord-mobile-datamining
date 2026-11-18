@@ -7,7 +7,7 @@ import VoicePanelStore from "../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const getVoicePanelDockHeight = fn(12446).getVoicePanelDockHeight;
+const getVoicePanelDockHeight = fn(11728).getVoicePanelDockHeight;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockLayout.tsx");
 
@@ -67,13 +67,9 @@ export function useChatDockHeight() {
   } else {
     num = 0;
   }
-  const isNavigatorPanelsBesideChannelList = noop.useContext(
-    MainTabsNavigatorPanelContextDefault,
-  ).isNavigatorPanelsBesideChannelList;
-  if (undefined === isNavigatorPanelsBesideChannelList) {
-    let num2 = num;
-  } else {
-    num2 = 0;
+  let num2 = 0;
+  if (!noop.useContext(MainTabsNavigatorPanelContextDefault).isNavigatorPanelsBesideChannelList) {
+    num2 = num;
   }
   return num2;
 }
@@ -104,13 +100,9 @@ export function useChannelDockHeight() {
   } else {
     num = 0;
   }
-  const isNavigatorPanelsBesideChannelList = noop.useContext(
-    MainTabsNavigatorPanelContextDefault,
-  ).isNavigatorPanelsBesideChannelList;
-  if (undefined === isNavigatorPanelsBesideChannelList) {
-    let num2 = num;
-  } else {
-    num2 = 0;
+  let num2 = 0;
+  if (!noop.useContext(MainTabsNavigatorPanelContextDefault).isNavigatorPanelsBesideChannelList) {
+    num2 = num;
   }
   let num3 = 0;
   if (noop.useContext(MainTabsNavigatorPanelContextDefault).isInMainTabs) {

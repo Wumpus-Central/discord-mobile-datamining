@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/modules/Messages.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
-import _mod5189 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import _mod4702 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
 import requireSortedDescending from "messages/requireSortedDescending.tsx";
 import isReadableChannel from "messages/isReadableChannel.tsx";
 import KvMessage2 from "messages/KvMessage.tsx";
@@ -285,7 +285,7 @@ prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009,
     guildId,
     channel_id,
     KvMessage.fromMessage(guildId, channel_id, item10009, result),
-    _mod5189.ConflictOptions.Skip,
+    _mod4702.ConflictOptions.Skip,
   );
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
@@ -296,7 +296,7 @@ prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, databa
     guildId,
     channelId,
     KvMessage.fromMessage(guildId, channelId, message, result),
-    _mod5189.ConflictOptions.Replace,
+    _mod4702.ConflictOptions.Replace,
   );
   messagesTransactionResult.trimChannel(guildId, channelId, SaveableChannelsStore.saveLimit(channelId));
 };

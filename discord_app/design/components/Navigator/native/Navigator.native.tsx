@@ -8,8 +8,8 @@ import BackPressTracking from "../../../../modules/routing/native/BackPressTrack
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
 import NavigatorBackgroundContext from "NavigatorBackgroundContext.native.tsx";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
-import _mod7510 from "../../../../../_runtime/metro/07510__.js";
-import StackNavigator from "../../../../../_runtime/07561_StackNavigator.js";
+import _mod7013 from "../../../../../_runtime/metro/07013__.js";
+import StackNavigator from "../../../../../_runtime/07064_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -303,7 +303,7 @@ function WrappedNavigationStack(arg0) {
     }),
     1,
   )[0];
-  const tmp5 = navigationContainerRef(5541)();
+  const tmp5 = navigationContainerRef(5032)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
   const obj4 = {
     ref: navigationContainerRef,
@@ -342,13 +342,13 @@ function WrappedNavigationStack(arg0) {
     onStateChange: null,
     children: null,
   });
-  obj5.children = jsx(_mod7510.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj5.children = jsx(_mod7013.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   container: null,
   navbar: null,

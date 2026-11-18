@@ -73,7 +73,7 @@ export function RootThemeContextProvider(children) {
   return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
 }
 export function DisableCustomTheme(children) {
-  themeContext = themeContext(5371).useThemeContext();
+  themeContext = themeContext(4884).useThemeContext();
   items = [themeContext];
   const memo = noop.useMemo(() => {
     const obj2 = {};
@@ -83,5 +83,5 @@ export function DisableCustomTheme(children) {
     obj2.gradient = null;
     return native.createThemedContext(obj2);
   }, items);
-  return jsx(themeContext(5371).ThemeContext.Provider, { value: memo, children: children.children });
+  return jsx(themeContext(4884).ThemeContext.Provider, { value: memo, children: children.children });
 }

@@ -8,8 +8,8 @@ const ConstraintReasonCode = OrderConstants.ConstraintReasonCode;
 const OrderClientErrorCode = PaymentConstants.OrderClientErrorCode;
 const result = size.fileFinishedImporting("modules/payments/OrderSigningErrors.tsx");
 
-export function getOrderSigningError(unsatisfied_constraints) {
-  unsatisfied_constraints = unsatisfied_constraints.unsatisfied_constraints;
+export function getOrderSigningError(body2) {
+  const unsatisfied_constraints = body2.unsatisfied_constraints;
   let someResult;
   if (unsatisfied_constraints != null) {
     someResult = unsatisfied_constraints.some(
@@ -20,7 +20,7 @@ export function getOrderSigningError(unsatisfied_constraints) {
     const tmp102 = new BillingErrorDefault("", BillingErrorDefault.ErrorCodes.BILLING_PURCHASE_BLOCKED_BY_RESTRICTION);
     return tmp102;
   } else {
-    const error = unsatisfied_constraints.error;
+    const error = body2.error;
     let tmp2 = null;
     if (null != error) {
       tmp2 = null;

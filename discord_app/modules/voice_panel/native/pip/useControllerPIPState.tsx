@@ -13,11 +13,11 @@ import PIPSpeakerStore from "PIPSpeakerStore.tsx";
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(20022);
+const useExternalPipSelectedTileDefault = tmp6(19293);
 require = fn;
-const VoicePanelModes = fn(12428).VoicePanelModes;
-const ActivityPanelModes = fn(5953).ActivityPanelModes;
-const asLaunched = fn(7028).asLaunched;
+const VoicePanelModes = fn(11710).VoicePanelModes;
+const ActivityPanelModes = fn(5449).ActivityPanelModes;
+const asLaunched = fn(6532).asLaunched;
 let closure_12 = {
   code: "(function useControllerPIPStateTsx1(){let[scale,pipAvoidanceSpecs,windowDimensions,safeArea]=this.__closure;return{scale:scale.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),windowDimensions:windowDimensions.get(),safeArea:safeArea.get()};})",
 };
@@ -40,7 +40,7 @@ export function useControllerPIPState(channelId) {
   let obj = require("../../../../../_runtime/metro/01655__.js");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
   const ref = noop.useRef({
-    id: "sa",
+    id: "disabled",
     mode: "isArray",
     width: false,
     height: null,

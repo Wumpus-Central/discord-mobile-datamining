@@ -1,17 +1,13 @@
 // discord_app/modules/user_profile/WidgetUtils.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import util from "../../intl/index.native.tsx";
-import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import DismissibleContentUnsafeUtils from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import utils from "../content_classification/utils.tsx";
-import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes.tsx";
 import GameWidgetLimits from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
-import UserProfilePersonalWidget from "UserProfilePersonalWidget.tsx";
 import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes.tsx";
 import useGame2 from "../games/hooks/useGame.tsx";
-import WidgetActionCreatorsDefault from "WidgetActionCreators.tsx";
 import WidgetGameTag from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
+import WidgetActionCreatorsDefault from "WidgetActionCreators.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import UserProfileStore from "UserProfileStore.tsx";
@@ -84,9 +80,8 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7365).WIDGET_TITLES_BY_TYPE;
-const ContentDismissActionType = fn(5156).ContentDismissActionType;
-let closure_9 = fn(10824).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(6870).WIDGET_TITLES_BY_TYPE;
+let closure_8 = fn(10117).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -170,20 +165,6 @@ export function addWidgetToPending(applicationWidget) {
       return uniqueKey === applicationWidget.getUniqueKey();
     })
   ) {
-    if (applicationWidget.type === WidgetType.WidgetType.PERSONAL) {
-      const obj2 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
-        dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK,
-        obj2,
-      );
-      const tmp16Result = DismissibleContentUnsafeUtils;
-      const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
-        dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE,
-        obj3,
-      );
-      const tmp16Result2 = DismissibleContentUnsafeUtils;
-    }
     items = [applicationWidget];
     HermesBuiltin.arraySpread(tmp7, 1);
     WidgetActionCreatorsDefault.setPendingWidgets(items);
@@ -239,7 +220,7 @@ export function addUploadingClipToClipsGalleryWidget(arg0) {
       widgets = [];
     }
   }
-  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[15]).ClipsGalleryWidget);
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[11]).ClipsGalleryWidget);
   if (found == null) {
     found = null;
   }
@@ -250,7 +231,7 @@ export function addUploadingClipToClipsGalleryWidget(arg0) {
   if (clips == null) {
     clips = [];
   }
-  if (clips.length >= closure_9) {
+  if (clips.length >= closure_8) {
     return false;
   } else if (
     clips.some((status) => {
@@ -298,7 +279,7 @@ export function hasUploadingClipInClipsGalleryWidget(arg0) {
       widgets = [];
     }
   }
-  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[15]).ClipsGalleryWidget);
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[11]).ClipsGalleryWidget);
   if (found == null) {
     found = null;
   }
@@ -340,7 +321,7 @@ export function updateUnsavedClipThumbnailInClipsGalleryWidget(arg0, thumbnail) 
       widgets = [];
     }
   }
-  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[15]).ClipsGalleryWidget);
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[11]).ClipsGalleryWidget);
   if (found == null) {
     found = null;
   }
@@ -392,7 +373,7 @@ export function commitUploadedClipInClipsGalleryWidget(arg0, uploadFilename) {
       widgets = [];
     }
   }
-  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[15]).ClipsGalleryWidget);
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[11]).ClipsGalleryWidget);
   if (found == null) {
     found = null;
   }
@@ -449,7 +430,7 @@ export function updateClipTitleInClipsGalleryWidget(arg0, str) {
       widgets = [];
     }
   }
-  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[15]).ClipsGalleryWidget);
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[11]).ClipsGalleryWidget);
   if (found == null) {
     found = null;
   }
@@ -496,7 +477,7 @@ export function reorderClipsInClipsGalleryWidget(arg0, arg1) {
       widgets = [];
     }
   }
-  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[15]).ClipsGalleryWidget);
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[11]).ClipsGalleryWidget);
   if (found == null) {
     found = null;
   }
@@ -543,7 +524,7 @@ export function updateClipTagsInClipsGalleryWidget(arg0, arg1) {
         widgets = [];
       }
     }
-    let found = widgets.find((item) => item instanceof closure_0(dependencyMap[15]).ClipsGalleryWidget);
+    let found = widgets.find((item) => item instanceof closure_0(dependencyMap[11]).ClipsGalleryWidget);
     if (found == null) {
       found = null;
     }
@@ -592,7 +573,7 @@ export function removeTagFromClip(arg0, arg1) {
       widgets = [];
     }
   }
-  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[15]).ClipsGalleryWidget);
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[11]).ClipsGalleryWidget);
   if (found == null) {
     found = null;
   }
@@ -632,7 +613,7 @@ export function removeTagFromClip(arg0, arg1) {
             widgets1 = [];
           }
         }
-        let found3 = widgets1.find((item) => item instanceof closure_0(dependencyMap[15]).ClipsGalleryWidget);
+        let found3 = widgets1.find((item) => item instanceof closure_0(dependencyMap[11]).ClipsGalleryWidget);
         if (found3 == null) {
           found3 = null;
         }
@@ -682,7 +663,7 @@ export function removeClipFromClipsGalleryWidget(arg0) {
       widgets = [];
     }
   }
-  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[15]).ClipsGalleryWidget);
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[11]).ClipsGalleryWidget);
   if (found == null) {
     found = null;
   }
@@ -696,37 +677,6 @@ export function removeClipFromClipsGalleryWidget(arg0) {
       WidgetActionCreatorsDefault.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
     }
   }
-}
-export function updatePersonalWidget(fn) {
-  if (WidgetStore.hasPendingChanges()) {
-    let pendingWidgets = WidgetStore.getPendingWidgets();
-    if (pendingWidgets == null) {
-      pendingWidgets = [];
-    }
-    let widgets = pendingWidgets;
-  } else {
-    const currentUser = UserStore.getCurrentUser();
-    let userProfile = null;
-    if (null != currentUser) {
-      userProfile = UserProfileStore.getUserProfile(currentUser.id);
-    }
-    widgets = undefined;
-    if (userProfile != null) {
-      widgets = userProfile.widgets;
-    }
-    if (widgets == null) {
-      widgets = [];
-    }
-  }
-  let found = widgets.find((item) => item instanceof UserProfilePersonalWidget.UserProfilePersonalWidget);
-  if (found == null) {
-    found = null;
-  }
-  if (found == null) {
-    found = UserProfilePersonalWidget.createDefaultPersonalWidget();
-  }
-  const tmpResult = replaceWidgetInList(fn(found));
-  WidgetActionCreatorsDefault.setPendingWidgets(tmpResult);
 }
 export function updatePendingGameTags(arr, gameId, tags) {
   closure_0 = gameId;

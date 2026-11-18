@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef20496 from "../../../../_runtime/metro/20496__.js";
-import _modDef20497 from "../../../../_runtime/metro/20497__.js";
+import _modDef19769 from "../../../../_runtime/metro/19769__.js";
+import _modDef19770 from "../../../../_runtime/metro/19770__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   assetWrapper: { width: "100%", alignItems: "center" },
   asset: null,
@@ -163,13 +163,13 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef20496;
+    tmp9Result = _modDef19769;
   }
   items = [metroImportDefault(FastImageDefault, { source: tmp9Result, style: tmp.assetImage })];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef20497 };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef19770 };
     obj4.children = metroImportDefault(FastImageDefault, obj5);
     tmp5Result = metroImportDefault(React4, obj4);
     const tmp9Result2 = FastImageDefault;
@@ -193,7 +193,7 @@ prototype["render"] = function render() {
   children[1] = tmp5Result2;
   return React5(React6, { children });
 };
-AssetChooser.contextType = fn(5371).ThemeContext;
+AssetChooser.contextType = fn(4884).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 

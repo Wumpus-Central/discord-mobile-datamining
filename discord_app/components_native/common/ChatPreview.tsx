@@ -40,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(9171);
+const RowGeneratorConstants = fn(8582);
 ({ Changeset: closure_10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5310);
+const createStyles = fn(4823);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -322,12 +322,12 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9132).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(8543).setSelectedConversation(closure_1_0, roleStyle, {
             cacheType: "preview",
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9132);
-          applyArgumentsResult(6060).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(8543);
+          applyArgumentsResult(5556).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -360,8 +360,8 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(6060).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(6060);
+            applyArgumentsResult(5556).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(5556);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
@@ -645,18 +645,18 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = state(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(5371).ThemeContext;
+ChatPreviewBase.contextType = fn(4884).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
 
 export function ChatPreview(channelId) {
   channelId = channelId.channelId;
-  const InlineAttachmentMedia = channelId(5135).InlineAttachmentMedia;
+  const InlineAttachmentMedia = channelId(4648).InlineAttachmentMedia;
   const setting = InlineAttachmentMedia.useSetting();
-  const InlineEmbedMedia = channelId(5135).InlineEmbedMedia;
+  const InlineEmbedMedia = channelId(4648).InlineEmbedMedia;
   const setting1 = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = channelId(5135).RenderEmbeds;
+  const RenderEmbeds = channelId(4648).RenderEmbeds;
   const setting2 = RenderEmbeds.useSetting();
   items = [AccessibilityStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
@@ -664,10 +664,10 @@ export function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(6843).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6843);
-  const isChannelContentGated = channelId(6823).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(6823);
+  const isChannelSpoilerGated = channelId(6347).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6347);
+  const isChannelContentGated = channelId(6327).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(6327);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());
