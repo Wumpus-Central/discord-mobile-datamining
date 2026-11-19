@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "be0495259d7800ba5ff04ac01243104d",
-  name: "LocationIcon",
+  hash: "cb3e9c62b8b2529f17e6e1b9b76c6ce0",
+  name: "StageLockIcon",
   type: "png",
 });

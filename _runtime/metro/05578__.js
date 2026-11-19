@@ -1,25 +1,22 @@
 // _runtime/metro/05578__.js
-import _mod552 from "00552__.js";
 
-export default function toFinite(arg0) {
-  if (arg0) {
-    const tmp3 = _mod552(arg0);
-    if (tmp3 !== Infinity) {
-      if (tmp3 !== -Infinity) {
-      }
+export default function initCloneArray(arg0) {
+  length = arg0.length;
+  const constructor = new arg0.constructor(length);
+  if (length) {
+    length = typeof arg0[0] === "string";
+  }
+  if (!length) {
+    if (length) {
+      ({ index: tmp.index, input: tmp.input } = arg0);
     }
-    let num6 = 1;
-    if (tmp3 < 0) {
-      num6 = -1;
-    }
-    const num4 =
-      179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 *
-      num6;
+    return constructor;
   } else {
-    let num = 0;
-    if (0 === arg0) {
-      num = arg0;
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let callResult = hasOwnProperty("index");
+    } else {
+      callResult = call(arg0, "index");
     }
-    return num;
   }
 }

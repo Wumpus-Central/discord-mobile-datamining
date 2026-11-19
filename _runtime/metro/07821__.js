@@ -1,12 +1,13 @@
 // _runtime/metro/07821__.js
-import _modDef7815 from "07815__.js";
+import _modDef7770 from "07770__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeConvolveMatrix = arg1;
+const LinearGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +26,15 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeConvolveMatrix {
+const jsx = fn(21).jsx;
+class LinearGradient {
   constructor() {
     self = this;
-    tmp = c2(this, FeConvolveMatrix);
+    tmp = c2(this, LinearGradient);
     tmp2 = closure_4;
-    obj = closure_4(FeConvolveMatrix);
+    obj = closure_4(LinearGradient);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,18 +47,24 @@ class FeConvolveMatrix {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeConvolveMatrix, _modDef7815);
+_inherits(LinearGradient, _modDef7770);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeConvolveMatrix(7792).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    const merged = Object.assign({ x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 });
+    const merged1 = Object.assign(LinearGradient(7823)(props, this));
+    return jsx(LinearGradient(7822), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
-importDefaultResultResult.displayName = "FeConvolveMatrix";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(LinearGradient, items);
+importDefaultResultResult.displayName = "LinearGradient";
+importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
 
 export default importDefaultResultResult;

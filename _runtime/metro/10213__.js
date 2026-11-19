@@ -1,5 +1,5 @@
 // _runtime/metro/10213__.js
-import _mod10188 from "10188__.js";
+import _mod10166 from "10166__.js";
 
 const self = this;
 let self2 = this;
@@ -56,20 +56,16 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: { unit: "merkki\u00E4", subject: "merkkijonon" },
-          file: { unit: "tavua", subject: "tiedoston" },
-          array: { unit: "alkiota", subject: "listan" },
-          set: { unit: "alkiota", subject: "joukon" },
-          map: { unit: "alkiota", subject: "kuvauksen" },
-          number: { unit: "", subject: "luvun" },
-          bigint: { unit: "", subject: "suuren kokonaisluvun" },
-          int: { unit: "", subject: "kokonaisluvun" },
-          date: { unit: "", subject: "p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4n" },
+          string: { unit: "tekens", verb: "heeft" },
+          file: { unit: "bytes", verb: "heeft" },
+          array: { unit: "elementen", verb: "heeft" },
+          set: { unit: "elementen", verb: "heeft" },
+          map: { unit: "elementen", verb: "heeft" },
         };
         closure_1 = {
-          regex: "s\u00E4\u00E4nn\u00F6llinen lauseke",
-          email: "s\u00E4hk\u00F6postiosoite",
-          url: "URL-osoite",
+          regex: "invoer",
+          email: "emailadres",
+          url: "URL",
           emoji: "emoji",
           uuid: "UUID",
           uuidv4: "UUIDv4",
@@ -81,26 +77,26 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "ISO-aikaleima",
-          date: "ISO-p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4",
-          time: "ISO-aika",
-          duration: "ISO-kesto",
-          ipv4: "IPv4-osoite",
-          ipv6: "IPv6-osoite",
-          mac: "MAC-osoite",
-          cidrv4: "IPv4-alue",
-          cidrv6: "IPv6-alue",
-          base64: "base64-koodattu merkkijono",
-          base64url: "base64url-koodattu merkkijono",
-          json_string: "JSON-merkkijono",
-          e164: "E.164-luku",
-          credit_card: "luottokortin numero",
-          currency_code: "valuuttakoodi",
+          datetime: "ISO datum en tijd",
+          date: "ISO datum",
+          time: "ISO tijd",
+          duration: "ISO duur",
+          ipv4: "IPv4-adres",
+          ipv6: "IPv6-adres",
+          mac: "MAC-adres",
+          cidrv4: "IPv4-bereik",
+          cidrv6: "IPv6-bereik",
+          base64: "base64-gecodeerde tekst",
+          base64url: "base64 URL-gecodeerde tekst",
+          json_string: "JSON string",
+          e164: "E.164-nummer",
+          credit_card: "creditcardnummer",
+          currency_code: "valutacode",
           iban: "IBAN",
           jwt: "JWT",
-          template_literal: "templaattimerkkijono",
+          template_literal: "invoer",
         };
-        closure_2 = { nan: "NaN" };
+        closure_2 = { nan: "NaN", number: "getal" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -109,135 +105,146 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp35 = closure_2[parsedTypeResult];
-              if (tmp35 == null) {
-                tmp35 = parsedTypeResult;
+              let tmp52 = closure_2[parsedTypeResult];
+              if (tmp52 == null) {
+                tmp52 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
-                const _HermesInternal15 = HermesInternal;
-                let combined = "Virheellinen tyyppi: odotettiin instanceof " + code.expected + ", oli " + tmp35;
+                const _HermesInternal17 = HermesInternal;
+                let combined = "Ongeldige invoer: verwacht instanceof " + code.expected + ", ontving " + tmp52;
               } else {
-                const _HermesInternal14 = HermesInternal;
-                combined = "Virheellinen tyyppi: odotettiin " + expected + ", oli " + tmp35;
+                const _HermesInternal16 = HermesInternal;
+                combined = "Ongeldige invoer: verwacht " + expected + ", ontving " + tmp52;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
-                const _HermesInternal13 = HermesInternal;
-                let combined1 =
-                  "Virheellinen sy\u00F6te: t\u00E4ytyy olla " + closure_2.stringifyPrimitive(code.values[0]);
+                const _HermesInternal15 = HermesInternal;
+                let combined1 = "Ongeldige invoer: verwacht " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
-                const _HermesInternal12 = HermesInternal;
-                combined1 =
-                  "Virheellinen valinta: t\u00E4ytyy olla yksi seuraavista: " + closure_2.joinValues(code.values, "|");
+                const _HermesInternal14 = HermesInternal;
+                combined1 = "Ongeldige optie: verwacht \u00E9\u00E9n van " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str28 = "<";
+              let str34 = "<";
               if (code.inclusive) {
-                str28 = "<=";
+                str34 = "<=";
               }
-              let tmp20 = obj2[code.origin];
-              if (tmp20 == null) {
-                tmp20 = null;
+              let tmp29 = obj2[code.origin];
+              if (tmp29 == null) {
+                tmp29 = null;
               }
-              if (tmp20) {
+              let str35 = "laat";
+              if ("date" !== code.origin) {
+                let str37 = "groot";
+                if ("string" === code.origin) {
+                  str37 = "lang";
+                }
+                str35 = str37;
+              }
+              let str39 = code.origin;
+              if (tmp29) {
+                if (str39 == null) {
+                  str39 = "waarde";
+                }
+                const str1 = code.maximum.toString();
+                let str47 = tmp29.unit;
+                if (str47 == null) {
+                  str47 = "elementen";
+                }
+                const _HermesInternal13 = HermesInternal;
+                let combined2 =
+                  "Te " + str35 + ": verwacht dat " + str39 + " " + str34 + str1 + " " + str47 + " " + tmp29.verb;
+              } else {
+                let str40 = str39;
+                if (str39 == null) {
+                  str40 = "waarde";
+                }
+                const _HermesInternal12 = HermesInternal;
+                combined2 = "Te " + str35 + ": verwacht dat " + str40 + " " + str34 + code.maximum.toString() + " is";
+              }
+              return combined2;
+            case "too_small":
+              let str19 = ">";
+              if (code.inclusive) {
+                str19 = ">=";
+              }
+              let tmp15 = obj2[code.origin];
+              if (tmp15 == null) {
+                tmp15 = null;
+              }
+              let str20 = "vroeg";
+              if ("date" !== code.origin) {
+                let str22 = "klein";
+                if ("string" === code.origin) {
+                  str22 = "kort";
+                }
+                str20 = str22;
+              }
+              ({ origin, minimum } = code);
+              const str64 = minimum.toString();
+              if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let trimmed =
-                  "Liian suuri: " +
-                  tmp20.subject +
-                  " t\u00E4ytyy olla " +
-                  str28 +
-                  code.maximum.toString() +
+                let combined3 =
+                  "Te " +
+                  str20 +
+                  ": verwacht dat " +
+                  origin +
                   " " +
-                  tmp20.unit.trim();
-                const str35 =
-                  "Liian suuri: " +
-                  tmp20.subject +
-                  " t\u00E4ytyy olla " +
-                  str28 +
-                  code.maximum.toString() +
+                  str19 +
+                  str64 +
                   " " +
-                  tmp20.unit;
+                  tmp15.unit +
+                  " " +
+                  tmp15.verb;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                trimmed = "Liian suuri: arvon t\u00E4ytyy olla " + str28 + code.maximum.toString();
+                combined3 = "Te " + str20 + ": verwacht dat " + origin + " " + str19 + str64 + " is";
               }
-              return trimmed;
-            case "too_small":
-              let str20 = ">";
-              if (code.inclusive) {
-                str20 = ">=";
-              }
-              let tmp13 = obj2[code.origin];
-              if (tmp13 == null) {
-                tmp13 = null;
-              }
-              if (tmp13) {
-                const _HermesInternal9 = HermesInternal;
-                let trimmed1 =
-                  "Liian pieni: " +
-                  tmp13.subject +
-                  " t\u00E4ytyy olla " +
-                  str20 +
-                  code.minimum.toString() +
-                  " " +
-                  tmp13.unit.trim();
-                const str27 =
-                  "Liian pieni: " +
-                  tmp13.subject +
-                  " t\u00E4ytyy olla " +
-                  str20 +
-                  code.minimum.toString() +
-                  " " +
-                  tmp13.unit;
-              } else {
-                const _HermesInternal8 = HermesInternal;
-                trimmed1 = "Liian pieni: arvon t\u00E4ytyy olla " + str20 + code.minimum.toString();
-              }
-              return trimmed1;
+              return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                let combined2 = 'Virheellinen sy\u00F6te: t\u00E4ytyy alkaa "' + code.prefix + '"';
+                const _HermesInternal9 = HermesInternal;
+                let combined4 = 'Ongeldige tekst: moet met "' + code.prefix + '" beginnen';
               } else if ("ends_with" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined2 = 'Virheellinen sy\u00F6te: t\u00E4ytyy loppua "' + code.suffix + '"';
+                const _HermesInternal8 = HermesInternal;
+                combined4 = 'Ongeldige tekst: moet op "' + code.suffix + '" eindigen';
               } else if ("includes" === code.format) {
-                const _HermesInternal5 = HermesInternal;
-                combined2 = 'Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 "' + code.includes + '"';
+                const _HermesInternal7 = HermesInternal;
+                combined4 = 'Ongeldige tekst: moet "' + code.includes + '" bevatten';
               } else if ("regex" === code.format) {
-                const _HermesInternal4 = HermesInternal;
-                combined2 =
-                  "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " +
-                  code.pattern;
+                const _HermesInternal6 = HermesInternal;
+                combined4 = "Ongeldige tekst: moet overeenkomen met patroon " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
-                const _HermesInternal3 = HermesInternal;
-                combined2 = "Virheellinen " + format;
+                const _HermesInternal5 = HermesInternal;
+                combined4 = "Ongeldig: " + format;
               }
-              return combined2;
+              return combined4;
             case "not_multiple_of":
-              const _HermesInternal2 = HermesInternal;
-              return "Virheellinen luku: t\u00E4ytyy olla luvun " + code.divisor + " monikerta";
+              const _HermesInternal4 = HermesInternal;
+              return "Ongeldig getal: moet een veelvoud van " + code.divisor + " zijn";
             case "unrecognized_keys":
-              let str4 = "Tuntematon avain";
+              let str3 = "";
               if (code.keys.length > 1) {
-                str4 = "Tuntemattomat avaimet";
+                str3 = "s";
               }
-              const _HermesInternal = HermesInternal;
-              return "" + str4 + ": " + closure_2.joinValues(code.keys, ", ");
+              const _HermesInternal3 = HermesInternal;
+              return "Onbekende key" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
-              return "Virheellinen avain tietueessa";
+              const _HermesInternal2 = HermesInternal;
+              return "Ongeldige key in " + code.origin;
             case "invalid_union":
-              return "Virheellinen unioni";
+              return "Ongeldige invoer";
             case "invalid_element":
-              return "Virheellinen arvo joukossa";
+              const _HermesInternal = HermesInternal;
+              return "Ongeldige waarde in " + code.origin;
             default:
-              return "Virheellinen sy\u00F6te";
+              return "Ongeldige invoer";
           }
         };
         return obj;
@@ -245,7 +252,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod10188);
+    let closure_2 = fn(_mod10166);
     function error() {}
     module.exports = exports.default;
   } else {

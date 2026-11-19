@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
-  width: 58.333333333333336,
-  height: 58.333333333333336,
+  width: 99.66666666666667,
+  height: 66.66666666666667,
   scales: [3],
-  hash: "ce74b8ba7b9a456f1223414bd4a9964d",
-  name: "asset_silver_badge_small",
+  hash: "d43cad1075ad5cce7462b35e4826fb39",
+  name: "asset_opal_badge_small",
   type: "webp",
 });

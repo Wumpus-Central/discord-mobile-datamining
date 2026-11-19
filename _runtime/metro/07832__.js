@@ -1,14 +1,13 @@
 // _runtime/metro/07832__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7815 from "07815__.js";
-import _modDef7833 from "07833__.js";
+import _modDef7770 from "07770__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeMerge = fn;
+const Pattern = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +26,15 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeMerge {
+class Pattern {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeMerge);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeMerge);
-    tmp3 = closure_4;
-    if (metroImportDefault()) {
+    tmp = c2(this, Pattern);
+    tmp2 = closure_4;
+    obj = closure_4(Pattern);
+    tmp3 = closure_3;
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,32 +47,64 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeMerge, _modDef7815);
+_inherits(Pattern, _modDef7770);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
+    const props = this.props;
+    ({ patternTransform, patternUnits, patternContentUnits } = props);
+    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
+    if (!patternTransform) {
+      patternTransform = transform;
+    }
+    if (!patternTransform) {
+      patternTransform = props;
+    }
+    const tmp3Result = Pattern(7754)(patternTransform);
+    const size = {
+      x,
+      y,
+      width,
+      height,
+      name: id,
+      matrix: tmp3Result,
+      patternTransform: tmp3Result,
+      patternUnits: null,
+      patternContentUnits: null,
+    };
+    let num = patternUnits;
+    if (patternUnits) {
+      num = Pattern(7824)[patternUnits];
+    }
+    if (!num) {
+      num = 0;
+    }
+    size.patternUnits = num;
+    let num2 = 1;
+    if (patternContentUnits) {
+      num2 = Pattern(7824)[patternContentUnits];
+    }
+    size.patternContentUnits = num2;
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(FeMerge(7814).extractFilter(this.props));
-    const obj2 = FeMerge(7814);
-    const merged1 = Object.assign(FeMerge(7814).extractFeMerge(this.props, this));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const tmp3 = Pattern(7754);
+    const merged = Object.assign(size);
+    const merged1 = Object.assign(Pattern(7759)({ viewBox, preserveAspectRatio }));
+    obj.children = children;
+    return jsx(Pattern(7833), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Pattern, items);
+importDefaultResultResult.displayName = "Pattern";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

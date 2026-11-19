@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/empty_channel",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/modules/forums/native/images",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "2a77a373d0891300f53f455e7a8b0efa",
-  name: "personalize_32px",
+  hash: "78be237a71ac693684ba99bcd912e5ac",
+  name: "img_forum_empty_state_dark",
   type: "png",
 });

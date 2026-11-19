@@ -1,45 +1,30 @@
 // _runtime/metro/15522__.js
-import _mod15466 from "15466__.js";
-import _mod15491 from "15491__.js";
-import _mod15519 from "15519__.js";
-import _mod15523 from "15523__.js";
+import _mod17 from "00017__.js";
+import replaceByteInByteSequence from "../15523_replaceByteInByteSequence.js";
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
+let closure_0 = null;
+const BlobModule = _mod17.NativeModules.BlobModule;
+let tmp2 = BlobModule;
+if (BlobModule) {
+  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
+}
+if (tmp2) {
+  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
+  if (typeof BlobModule.BLOB_URI_HOST === "string") {
+    let _HermesInternal = HermesInternal;
+    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
   }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod15491(value)) {
-    _mod15523(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
-    } else {
-      _mod15466(arg1, value);
-    }
+}
+replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
+  if (null === closure_0) {
+    const _Error = Error;
+    const error = new Error("Cannot create URL for blob!");
+    throw error;
   } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod15519.f(arg0, arg1, obj2);
-        const tmp3Result = _mod15519;
-      }
-    } catch (err) {}
+    const _HermesInternal = HermesInternal;
+    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
   }
-  return arg0;
 };
+replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
+
+export const URL = replaceByteInByteSequence.URL;

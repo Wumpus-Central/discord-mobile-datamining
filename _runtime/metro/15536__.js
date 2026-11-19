@@ -1,30 +1,45 @@
 // _runtime/metro/15536__.js
-import _mod17 from "00017__.js";
-import replaceByteInByteSequence from "../15537_replaceByteInByteSequence.js";
+import _typeof from "15537__.js";
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
-}
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
+if (_typeof) {
+  if (typeof _typeof === "object") {
+    let _default = _typeof;
   }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
+  let obj = globalThis;
+  const _Intl = Intl;
+  if (typeof Intl === "undefined") {
+    if (undefined !== global) {
+      obj = { PluralRules: _default.default };
+      global.Intl = obj;
+      _default = _default.default;
+      _default.polyfill = true;
+    } else {
+      const _window = window;
+      if (typeof window === "undefined") {
+        const self = this;
+        const obj2 = { PluralRules: _default.default };
+        this.Intl = obj2;
+      }
+    }
+    obj = { PluralRules: _default.default };
+    obj.window.Intl = obj;
   } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
+    const _Intl5 = Intl;
+    if (Intl.PluralRules) {
+      const _Intl2 = Intl;
+      if (Intl.PluralRules.prototype.selectRange) {
+        const items = ["en", "es", "ru", "zh"];
+        const _Intl4 = Intl;
+        if (PluralRules.supportedLocalesOf(items).length < items.length) {
+          const _Intl6 = Intl;
+          Intl.PluralRules = _default.default;
+          _default.default.polyfill = true;
+        }
+      }
+    }
+    const _Intl3 = Intl;
+    Intl.PluralRules = _default.default;
+    _default.default.polyfill = true;
   }
-};
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
-
-export const URL = replaceByteInByteSequence.URL;
+}
+_default = { default: _typeof };

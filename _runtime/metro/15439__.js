@@ -1,68 +1,29 @@
 // _runtime/metro/15439__.js
-import e from "../01159_e.js";
-import calendars from "../15440_calendars.js";
-import hourCycles from "../15441_hourCycles.js";
-import timezones from "../15442_timezones.js";
-import weekData from "../15443_weekData.js";
+const require = globalThis.__r;
 
-require = arg1;
+const require = arg1;
 const dependencyMap = arg6;
 
-export function getCalendarPreferenceDataForRegion(region) {
-  let str = null;
-  if (region) {
-    str = region.toUpperCase();
-  }
-  if (!str) {
-    str = "";
-  }
-  return (
-    calendars.calendars[str] ||
-    calendars.calendars["001"].map((item) => {
-      let str = "gregory";
-      if ("gregorian" !== item) {
-        let str2 = "islamicc";
-        if ("islamic-civil" !== item) {
-          str2 = item;
-        }
-        str = str2;
+export function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) =>
+    (function isSupportedNumberingSystem(item, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
       }
-      return str;
-    })
+      try {
+        const concat = "".concat;
+        const combined = "".concat(str, "-u-nu-");
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+        if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+          if ("123" === memoizedNumberFormat.format(123)) {
+            return false;
+          }
+        }
+        return true;
+      } catch (err) {}
+    })(item, closure_0),
   );
-}
-export function getHourCyclesPreferenceDataForLocaleOrRegion(locale, region) {
-  const formatted = locale.toLowerCase();
-  let str = "";
-  if (region) {
-    str = region.toUpperCase();
-  }
-  let v001 = hourCycles.hourCycles[formatted] || hourCycles.hourCycles[str];
-  if (!v001) {
-    const concat = "".concat;
-    v001 = hourCycles.hourCycles["".concat("", formatted, "-001")];
-  }
-  if (!v001) {
-    v001 = hourCycles.hourCycles["001"];
-  }
-  return e.__spreadArray([], v001, true);
-}
-export function getTimeZonePreferenceForRegion(region) {
-  const formatted = region.toLowerCase();
-  items = [];
-  if (timezones.timezones[formatted]) {
-    return e.__spreadArray(items, timezones.timezones[formatted], true);
-  } else {
-    return items;
-  }
-}
-export function getWeekDataForRegion(region) {
-  let str = "";
-  if (region) {
-    str = region.toUpperCase();
-  }
-  if (!str) {
-    str = "001";
-  }
-  return weekData.weekData[str] || weekData.weekData["001"];
 }

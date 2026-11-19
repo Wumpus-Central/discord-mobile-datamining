@@ -1,46 +1,36 @@
 // _runtime/metro/15485__.js
-import _mod15465 from "15465__.js";
-import _mod15486 from "15486__.js";
+import _mod15476 from "15476__.js";
+import _mod15477 from "15477__.js";
+import _mod15484 from "15484__.js";
 
-let tmp = _mod15465.process && _mod15465.process.versions;
-if (!tmp) {
-  tmp = _mod15465.Deno && _mod15465.Deno.version;
-  const tmp2 = _mod15465.Deno && _mod15465.Deno.version;
-}
-let str = tmp;
-if (tmp) {
-  str = tmp.v8;
-}
-let tmp3;
-if (str) {
-  const parts = str.split(".");
-  if (parts[0] <= 0) {
-    let num3 = +parts[0] + parts[1];
-  } else {
-    num3 = 1;
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (_mod15477(toString)) {
+      const tmp4 = _mod15484(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
+      }
+      tmpResult = _mod15476;
+    }
   }
-  tmp3 = num3;
-  let tmp4 = parts;
-}
-let _module = !tmp3;
-if (!tmp3) {
-  _module = _mod15486;
-}
-if (_module) {
-  const match = _mod15486.match(/Edge\/(\d+)/);
-  let tmp8 = !match;
-  if (match) {
-    tmp8 = match[1] >= 74;
+  const valueOf = arg0.valueOf;
+  if (_mod15477(valueOf)) {
+    const tmp8 = _mod15484(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
+    }
+    tmp5Result = _mod15476;
   }
-  _module = tmp8;
-  tmp4 = match;
-}
-if (_module) {
-  _module = _mod15486.match(/Chrome\/(\d+)/);
-  tmp4 = _module;
-}
-if (_module) {
-  tmp3 = +tmp4[1];
-}
-
-export default tmp3;
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (_mod15477(toString2)) {
+      const tmp10 = _mod15484(toString2, arg0);
+      if (!tmp5Result2(tmp10)) {
+        return tmp10;
+      }
+      tmp5Result2 = _mod15476;
+    }
+  }
+  throw new TypeError("Can't convert object to primitive value");
+};

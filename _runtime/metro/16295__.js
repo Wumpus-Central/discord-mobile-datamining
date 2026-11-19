@@ -1,25 +1,20 @@
 // _runtime/metro/16295__.js
-import _mod16244 from "16244__.js";
+import _mod16235 from "16235__.js";
 
-const Ident = _mod16244.TYPE.Ident;
-const obj = {
-  name: "ClassSelector",
+const Hash = _mod16235.TYPE.Hash;
+let obj = {
+  name: "IdSelector",
   structure: { name: String },
   parse() {
-    const self = this;
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Hash);
+    const obj = { type: "IdSelector", loc: this.getLocation(tokenStart, this.scanner.tokenStart), name: null };
     const scanner = this.scanner;
-    if (!scanner.isDelim(46)) {
-      self.error("Full stop is expected");
-    }
-    self.scanner.next();
-    return {
-      type: "ClassSelector",
-      loc: self.getLocation(self.scanner.tokenStart - 1, self.scanner.tokenEnd),
-      name: self.consume(Ident),
-    };
+    obj.name = scanner.substrToCursor(tokenStart + 1);
+    return obj;
   },
   generate(name) {
-    this.chunk(".");
+    this.chunk("#");
     this.chunk(name.name);
   },
 };

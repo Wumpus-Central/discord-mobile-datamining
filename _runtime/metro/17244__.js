@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "5ec77c8acc74b99b6106b4203580cb98",
-  name: "BugIcon",
+  hash: "d6f5a76861191f4dd121da59ef71950f",
+  name: "ArrowSmallUpIcon",
   type: "png",
 });

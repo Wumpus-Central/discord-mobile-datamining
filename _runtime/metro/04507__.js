@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/promotions/third_party/voicemod",
+  httpServerLocation: "/assets/modules/hexagon_campaign",
   scales: [1],
-  hash: "0847665ebb4c7a8ea57a089e5a9dcec8",
-  name: "Voicemod.compiled.messages",
+  hash: "29581e1de7d4a922ab5eac13e54b4dda",
+  name: "HexagonCampaign.compiled.messages",
   type: "jsona",
 });

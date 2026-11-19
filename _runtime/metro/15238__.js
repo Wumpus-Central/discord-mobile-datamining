@@ -1,16 +1,4 @@
 // _runtime/metro/15238__.js
-let closure_0 = Object.freeze({ loose: true });
-let closure_1 = Object.freeze({});
+import _mod15237 from "15237__.js";
 
-export default (arg0) => {
-  let tmp = arg0;
-  if (arg0) {
-    if (typeof tmp !== "object") {
-      tmp = closure_0;
-    }
-    let tmp2 = tmp;
-  } else {
-    tmp2 = closure_1;
-  }
-  return tmp2;
-};
+export default (arg0, arg1, arg2) => _mod15237(arg1, arg0, arg2);

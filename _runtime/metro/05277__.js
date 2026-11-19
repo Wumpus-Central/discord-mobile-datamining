@@ -1,25 +1,29 @@
 // _runtime/metro/05277__.js
-import _mod19 from "00019__.js";
-import value2 from "../05056_value2.js";
+import _mod5278 from "05278__.js";
 
-const useMemo = _mod19.useMemo;
-
-export (arg0) => {
-  const easing = arg0;
-  items = [, , ];
-  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
-  return useMemo(() => {
-    let ANIMATION_EASING = easing.easing;
-    if (!ANIMATION_EASING) {
-      ANIMATION_EASING = value2.ANIMATION_EASING;
+export default function toPrimitive(arg0, arg1) {
+  if ("object" == obj.default(arg0)) {
+    if (arg0) {
+      let str = arg1;
+      const _Symbol = Symbol;
+      if (undefined !== arg0[Symbol.toPrimitive]) {
+        const call = tmp4.call;
+        if (!str) {
+          str = "default";
+        }
+        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
+        if ("object" != tmpResult.default(tmp5)) {
+          return tmp5;
+        } else {
+          const _TypeError = TypeError;
+          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
+          throw typeError;
+        }
+        tmpResult = _mod5278;
+      } else {
+        return "string" === str ? String : Number(arg0);
+      }
     }
-    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
-    let ANIMATION_DURATION = easing.duration;
-    if (!ANIMATION_DURATION) {
-      ANIMATION_DURATION = value2.ANIMATION_DURATION;
-    }
-    obj.duration = ANIMATION_DURATION;
-    obj.reduceMotion = easing.reduceMotion;
-    return obj;
-  }, items);
+  }
+  return arg0;
 }

@@ -1,22 +1,13 @@
 // _runtime/metro/09110__.js
+import registerAsset from "01119__.js";
 
-export default function areHookInputsEqual(arg0, arg1) {
-  if (arg0.length !== arg1.length) {
-    return false;
-  } else {
-    if (0 < arg1.length) {
-      let num3 = 0;
-      if (0 < arg0.length) {
-        const _Object = Object;
-        while (Object.is(arg0[num3], arg1[num3])) {
-          let sum = num3 + 1;
-          if (sum < arg1.length) {
-            num3 = sum;
-          }
-        }
-        return false;
-      }
-    }
-    return true;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 302,
+  height: 42,
+  scales: [2, 3],
+  hash: "180afb9edd1653ca63d752893222f1c8",
+  name: "img_plan_activated",
+  type: "png",
+});

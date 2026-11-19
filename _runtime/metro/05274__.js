@@ -1,4 +1,9 @@
 // _runtime/metro/05274__.js
-import _modDef5275 from "05275__.js";
 
-export default _modDef5275;
+export default function _classCallCheck(arg0, arg1) {
+  if (!(arg0 instanceof arg1)) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Cannot call a class as a function");
+    throw typeError;
+  }
+}

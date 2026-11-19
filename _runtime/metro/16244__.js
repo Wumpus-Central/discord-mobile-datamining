@@ -1,543 +1,582 @@
 // _runtime/metro/16244__.js
-const require = globalThis.__r;
-
-function tokenize(arg0, arg1) {
-  let str = arg0;
-  _require = arg0;
-  let iter = arg1;
-  function consumeNumericToken() {
-    closure_2 = keys22.consumeNumber(closure_0, closure_2);
-    let num = 0;
-    if (closure_2 < length) {
-      num = closure_0.charCodeAt(tmp3);
-    }
-    const sum = closure_2 + 1;
-    let num2 = 0;
-    if (sum < length) {
-      num2 = closure_0.charCodeAt(sum);
-    }
-    const sum1 = closure_2 + 2;
-    let num3 = 0;
-    if (sum1 < length) {
-      num3 = closure_0.charCodeAt(sum1);
-    }
-    if (obj3.isIdentifierStart(num, num2, num3)) {
-      BadString = _mod16238.TYPE.Dimension;
-      closure_2 = keys22.consumeName(closure_0, closure_2);
-      const tmpResult = keys22;
-    } else {
-      let num4 = 0;
-      if (closure_2 < length) {
-        num4 = closure_0.charCodeAt(tmp7);
-      }
-      if (37 === num4) {
-        BadString = _mod16238.TYPE.Percentage;
-        closure_2 = +closure_2 + 1;
-      } else {
-        BadString = _mod16238.TYPE.Number;
-      }
-    }
-    return tmp8;
+const exports = arg5;
+function normalize(str) {
+  const match = str.match(re1);
+  let tmp2 = null;
+  if (match) {
+    const url = { scheme: match[1], auth: match[2], host: match[3], port: match[4], path: match[5] };
+    tmp2 = url;
   }
-  function consumeIdentLikeToken() {
-    let sum2 = closure_2;
-    let _Function = dependencyMap;
-    closure_2 = keys22.consumeName(closure_0, closure_2);
-    if (obj2.cmpStr(closure_0, closure_2, closure_2, "url")) {
-      let num = 0;
-      if (closure_2 < length) {
-        num = closure_0.charCodeAt(tmp3);
-      }
-      if (40 === num) {
-        const findWhiteSpaceEndResult = keys22.findWhiteSpaceEnd(closure_0, closure_2 + 1);
-        closure_2 = findWhiteSpaceEndResult;
-        let num5 = 0;
-        if (findWhiteSpaceEndResult < length) {
-          num5 = closure_0.charCodeAt(findWhiteSpaceEndResult);
-        }
-        if (34 !== num5) {
-          let num7 = 0;
-          if (closure_2 < length) {
-            num7 = closure_0.charCodeAt(tmp35);
+  if (tmp2) {
+    if (tmp2.path) {
+      str = tmp2.path;
+    } else {
+      return str;
+    }
+  }
+  const parts = str.split(/\/+/);
+  let diff = parts.length - 1;
+  let str2 = "";
+  let str3 = ".";
+  let num = 0;
+  if (0 <= diff) {
+    do {
+      let tmp5 = parts[diff];
+      if (`.` === tmp5) {
+        let spliceResult = parts.splice(diff, 1);
+        let sum = num;
+      } else if (".." === tmp5) {
+        sum = num + 1;
+      } else {
+        sum = num;
+        if (0 < num) {
+          if (`` === tmp5) {
+            let spliceResult1 = parts.splice(diff + 1, num);
+            let num2 = 0;
+          } else {
+            let spliceResult2 = parts.splice(diff, 2);
+            num2 = num - 1;
           }
-          if (39 !== num7) {
-            BadString = _mod16238.TYPE.Url;
-            const findWhiteSpaceEndResult1 = keys22.findWhiteSpaceEnd(closure_0, closure_2);
-            closure_2 = findWhiteSpaceEndResult1;
-            if (findWhiteSpaceEndResult1 < closure_0.length) {
-              const charCodeAtResult = closure_0.charCodeAt(closure_2);
-              const charCodeCategoryResult = _mod16241.charCodeCategory(charCodeAtResult);
-              while (41 !== charCodeCategoryResult) {
-                if (_mod16241.charCodeCategory.Eof !== charCodeCategoryResult) {
-                  if (_mod16241.charCodeCategory.WhiteSpace === charCodeCategoryResult) {
-                    let tmp12Result = keys22;
-                    let findWhiteSpaceEndResult2 = tmp12Result.findWhiteSpaceEnd(closure_0, closure_2);
-                    closure_2 = findWhiteSpaceEndResult2;
-                    let num10 = 0;
-                    if (findWhiteSpaceEndResult2 < length) {
-                      num10 = closure_0.charCodeAt(findWhiteSpaceEndResult2);
-                    }
-                    if (41 !== num10) {
-                      if (closure_2 < closure_0.length) {
-                        let tmp12Result5 = keys22;
-                        closure_2 = tmp12Result5.consumeBadUrlRemnants(closure_0, closure_2);
-                        BadString = _mod16238.TYPE.BadUrl;
-                      }
-                    }
-                    if (closure_2 < closure_0.length) {
-                      let tmp29 = +closure_2;
-                      closure_2 = tmp29 + 1;
-                    }
-                  } else {
-                    if (34 !== charCodeCategoryResult) {
-                      if (39 !== charCodeCategoryResult) {
-                        if (40 !== charCodeCategoryResult) {
-                          if (_mod16241.charCodeCategory.NonPrintable !== charCodeCategoryResult) {
-                            if (92 === charCodeCategoryResult) {
-                              let tmp12Result6 = _mod16241;
-                              let sum = closure_2 + 1;
-                              let num9 = 0;
-                              if (sum < length) {
-                                num9 = closure_0.charCodeAt(sum);
-                              }
-                              let isValidEscapeResult = tmp12Result6.isValidEscape(charCodeAtResult, num9);
-                              let tmp12Result7 = keys22;
-                              if (isValidEscapeResult) {
-                                closure_2 = tmp12Result7.consumeEscaped(closure_0, closure_2) - 1;
-                              } else {
-                                closure_2 = tmp12Result7.consumeBadUrlRemnants(closure_0, closure_2);
-                                BadString = _mod16238.TYPE.BadUrl;
-                              }
-                            }
-                            let sum1 = closure_2 + 1;
-                            closure_2 = sum1;
+          sum = num2;
+        }
+      }
+      diff = diff - 1;
+      num = sum;
+    } while (0 <= diff);
+  }
+  let joined = parts.join("/");
+  if (str2 === joined) {
+    if (isAbsoluteResult) {
+      str3 = "/";
+    }
+    joined = str3;
+  }
+  let tmp13 = joined;
+  if (tmp2) {
+    tmp2.path = joined;
+    if (tmp2.scheme) {
+      str2 = `${tmp2.scheme}:`;
+    }
+    const text = `${str2}//`;
+    let text1 = text;
+    if (tmp2.auth) {
+      text1 = `${str2}//${tmp2.auth + "@"}`;
+    }
+    let sum1 = text1;
+    if (tmp2.host) {
+      sum1 = text1 + tmp2.host;
+    }
+    let text2 = sum1;
+    if (tmp2.port) {
+      text2 = `${tmp16}:${tmp2.port}`;
+    }
+    let sum2 = text2;
+    if (tmp2.path) {
+      sum2 = text2 + tmp2.path;
+    }
+    tmp13 = sum2;
+  }
+  return tmp13;
+}
+function join(arg0, arg1) {
+  let str = arg0;
+  let str2 = "";
+  if ("" === arg0) {
+    str = ".";
+  }
+  let str3 = arg1;
+  if (str2 === arg1) {
+    str3 = ".";
+  }
+  const match = str3.match(re1);
+  let tmp3 = null;
+  if (match) {
+    const url = { scheme: match[1], auth: match[2], host: match[3], port: match[4], path: match[5] };
+    tmp3 = url;
+  }
+  const match1 = str.match(re1);
+  let tmp5 = null;
+  if (match1) {
+    const url1 = { scheme: match1[1], auth: match1[2], host: match1[3], port: match1[4], path: match1[5] };
+    tmp5 = url1;
+  }
+  let str4 = str;
+  if (tmp5) {
+    str4 = tmp5.path || "/";
+    const tmp6 = tmp5.path || "/";
+  }
+  if (tmp3) {
+    if (!tmp3.scheme) {
+      if (tmp5) {
+        tmp3.scheme = tmp5.scheme;
+      }
+      let text = str2;
+      if (tmp3.scheme) {
+        text = `${tmp3.scheme}:`;
+      }
+      const text1 = `${tmp7}//`;
+      let text2 = text1;
+      if (tmp3.auth) {
+        text2 = `${tmp7}//${tmp3.auth + "@"}`;
+      }
+      let sum = text2;
+      if (tmp3.host) {
+        sum = text2 + tmp3.host;
+      }
+      let text3 = sum;
+      if (tmp3.port) {
+        text3 = `${tmp10}:${tmp3.port}`;
+      }
+      let sum1 = text3;
+      if (tmp3.path) {
+        sum1 = text3 + tmp3.path;
+      }
+      return sum1;
+    }
+  }
+  if (!tmp3) {
+    if (!str3.match(re2)) {
+      if (tmp5) {
+        if (!tmp5.host) {
+          if (!tmp5.path) {
+            tmp5.host = str3;
+            let text4 = str2;
+            if (tmp5.scheme) {
+              text4 = `${tmp5.scheme}:`;
+            }
+            const text5 = `${tmp14}//`;
+            let text6 = text5;
+            if (tmp5.auth) {
+              text6 = `${tmp14}//${tmp5.auth + "@"}`;
+            }
+            let sum2 = text6;
+            if (tmp5.host) {
+              sum2 = text6 + tmp5.host;
+            }
+            let text7 = sum2;
+            if (tmp5.port) {
+              text7 = `${tmp17}:${tmp5.port}`;
+            }
+            let sum3 = text7;
+            if (tmp5.path) {
+              sum3 = text7 + tmp5.path;
+            }
+            return sum3;
+          }
+        }
+      }
+      let tmp20 = str3;
+      if ("/" !== str3.charAt(0)) {
+        tmp20 = normalize(`${str4.replace(/\/+$/, str2)}/${str3}`);
+      }
+      let tmp22 = tmp20;
+      if (tmp5) {
+        tmp5.path = tmp20;
+        if (tmp5.scheme) {
+          str2 = `${tmp5.scheme}:`;
+        }
+        const text8 = `${str2}//`;
+        let text9 = text8;
+        if (tmp5.auth) {
+          text9 = `${str2}//${tmp5.auth + "@"}`;
+        }
+        let sum4 = text9;
+        if (tmp5.host) {
+          sum4 = text9 + tmp5.host;
+        }
+        let text10 = sum4;
+        if (tmp5.port) {
+          text10 = `${tmp25}:${tmp5.port}`;
+        }
+        let sum5 = text10;
+        if (tmp5.path) {
+          sum5 = text10 + tmp5.path;
+        }
+        tmp22 = sum5;
+      }
+      return tmp22;
+    }
+  }
+  return str3;
+}
+let fromSetString = function identity(relativeResult) {
+  return relativeResult;
+};
+function isProtoString(arr) {
+  if (arr) {
+    if (arr.length < 9) {
+      return false;
+    } else {
+      if (95 === arr.charCodeAt(length - 1)) {
+        if (95 === arr.charCodeAt(length - 2)) {
+          if (111 === arr.charCodeAt(length - 3)) {
+            if (116 === arr.charCodeAt(length - 4)) {
+              if (111 === arr.charCodeAt(length - 5)) {
+                if (114 === arr.charCodeAt(length - 6)) {
+                  if (112 === arr.charCodeAt(length - 7)) {
+                    if (95 === arr.charCodeAt(length - 8)) {
+                      if (95 === arr.charCodeAt(length - 9)) {
+                        let diff = length - 10;
+                        if (0 <= diff) {
+                          while (36 === arr.charCodeAt(diff)) {
+                            diff = diff - 1;
                           }
+                          return false;
                         }
+                        return true;
                       }
                     }
-                    let tmp12Result8 = keys22;
-                    closure_2 = tmp12Result8.consumeBadUrlRemnants(closure_0, closure_2);
-                    BadString = _mod16238.TYPE.BadUrl;
                   }
                 }
               }
-              closure_2 = +closure_2 + 1;
-            }
-            const tmp2Result2 = keys22;
-          }
-        }
-        _Function = _mod16238.TYPE.Function;
-        BadString = _Function;
-        sum2 = sum2 + 4;
-        closure_2 = sum2;
-        const tmp2Result = keys22;
-      }
-    }
-    let num3 = 0;
-    if (closure_2 < length) {
-      num3 = closure_0.charCodeAt(tmp5);
-    }
-    if (40 === num3) {
-      BadString = _mod16238.TYPE.Function;
-      closure_2 = +closure_2 + 1;
-    } else {
-      BadString = _mod16238.TYPE.Ident;
-    }
-    return tmp6;
-  }
-  function consumeStringToken(arg0) {
-    let tmp = arg0;
-    if (!arg0) {
-      closure_2 = tmp3 + 1;
-      let num = 0;
-      if (+closure_2 < length) {
-        num = closure_0.charCodeAt(tmp3);
-      }
-      tmp = num;
-    }
-    BadString = _mod16238.TYPE.String;
-    if (closure_2 < closure_0.length) {
-      const charCodeAtResult = closure_0.charCodeAt(closure_2);
-      const charCodeCategoryResult = _mod16241.charCodeCategory(charCodeAtResult);
-      while (tmp !== charCodeCategoryResult) {
-        if (_mod16241.charCodeCategory.Eof !== charCodeCategoryResult) {
-          if (_mod16241.charCodeCategory.WhiteSpace === charCodeCategoryResult) {
-            let tmp8Result = _mod16241;
-            if (tmp8Result.isNewline(charCodeAtResult)) {
-              let tmp8Result6 = keys22;
-              closure_2 = closure_2 + tmp8Result6.getNewlineLength(closure_0, closure_2, charCodeAtResult);
-              BadString = _mod16238.TYPE.BadString;
-            }
-          } else if (92 === charCodeCategoryResult) {
-            if (closure_2 !== closure_0.length - 1) {
-              let sum = closure_2 + 1;
-              let num2 = 0;
-              if (sum < length) {
-                num2 = closure_0.charCodeAt(sum);
-              }
-              let tmp8Result7 = _mod16241;
-              if (tmp8Result7.isNewline(num2)) {
-                let tmp8Result8 = keys22;
-                closure_2 = closure_2 + tmp8Result8.getNewlineLength(closure_0, closure_2 + 1, num2);
-              } else {
-                let tmp8Result9 = _mod16241;
-                if (tmp8Result9.isValidEscape(charCodeAtResult, num2)) {
-                  let tmp8Result10 = keys22;
-                  closure_2 = tmp8Result10.consumeEscaped(closure_0, closure_2) - 1;
-                }
-              }
             }
           }
-          let sum1 = closure_2 + 1;
-          closure_2 = sum1;
         }
       }
-      closure_2 = +closure_2 + 1;
+      return false;
     }
+  } else {
+    return false;
   }
-  if (!arg1) {
-    iter = new require("TokenStream")();
-  }
-  if (!str) {
-    str = "";
-  }
-  const StringResult = String(str);
-  _require = StringResult;
-  length = StringResult.length;
-  const tmp5 = require("adoptBuffer")(iter.offsetAndType, length + 1);
-  const tmp6 = require("adoptBuffer")(iter.balance, length + 1);
-  let num = 0;
-  if (0 < length) {
-    num = StringResult.charCodeAt(0);
-  }
-  const isBOMResult = require("16241__.js").isBOM(num);
-  closure_2 = isBOMResult;
-  let num2 = 0;
-  let num3 = 0;
-  let num4 = 0;
-  let num5 = 0;
-  let num6 = 0;
-  if (isBOMResult < length) {
-    do {
-      let charCodeAtResult = StringResult.charCodeAt(closure_2);
-      let BadString = 0;
-      tmp6[num4] = length;
-      let tmp10 = _require;
-      let tmp11 = length;
-      let obj2 = require("16241__.js");
-      let charCodeCategoryResult = obj2.charCodeCategory(charCodeAtResult);
-      let tmp14 = num3;
-      let tmp15 = num4;
-      if (require("16241__.js").charCodeCategory.WhiteSpace === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.WhiteSpace;
-        let tmp10Result = tmp10(tmp11[0]);
-        closure_2 = tmp10Result.findWhiteSpaceEnd(StringResult, closure_2 + 1);
-      } else if (34 === charCodeCategoryResult) {
-        let consumeStringTokenResult = consumeStringToken();
-      } else if (35 === charCodeCategoryResult) {
-        let tmp10Result11 = tmp10(tmp11[1]);
-        let sum = closure_2 + 1;
-        let num25 = 0;
-        if (sum < length) {
-          num25 = StringResult.charCodeAt(sum);
-        }
-        if (!tmp10Result11.isName(num25)) {
-          let tmp10Result12 = tmp10(tmp11[1]);
-          let sum1 = closure_2 + 1;
-          let num26 = 0;
-          if (sum1 < length) {
-            num26 = StringResult.charCodeAt(sum1);
-          }
-          let sum2 = closure_2 + 2;
-          let num27 = 0;
-          if (sum2 < length) {
-            num27 = StringResult.charCodeAt(sum2);
-          }
-          if (!tmp10Result12.isValidEscape(num26, num27)) {
-            BadString = tmp10(tmp11[2]).TYPE.Delim;
-            closure_2 = closure_2 + 1;
-          }
-        }
-        BadString = tmp10(tmp11[2]).TYPE.Hash;
-        let tmp10Result13 = tmp10(tmp11[0]);
-        closure_2 = tmp10Result13.consumeName(StringResult, closure_2 + 1);
-      } else if (39 === charCodeCategoryResult) {
-        let consumeStringTokenResult1 = consumeStringToken();
-      } else if (40 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.LeftParenthesis;
-        closure_2 = closure_2 + 1;
-      } else if (41 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.RightParenthesis;
-        closure_2 = closure_2 + 1;
-      } else if (43 === charCodeCategoryResult) {
-        let tmp10Result14 = tmp10(tmp11[1]);
-        let sum3 = closure_2 + 1;
-        let num23 = 0;
-        if (sum3 < length) {
-          num23 = StringResult.charCodeAt(sum3);
-        }
-        let sum4 = closure_2 + 2;
-        let num24 = 0;
-        if (sum4 < length) {
-          num24 = StringResult.charCodeAt(sum4);
-        }
-        if (tmp10Result14.isNumberStart(charCodeAtResult, num23, num24)) {
-          let consumeNumericTokenResult = consumeNumericToken();
-        } else {
-          BadString = tmp10(tmp11[2]).TYPE.Delim;
-          closure_2 = closure_2 + 1;
-        }
-      } else if (44 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.Comma;
-        closure_2 = closure_2 + 1;
-      } else if (45 === charCodeCategoryResult) {
-        let tmp10Result15 = tmp10(tmp11[1]);
-        let sum5 = closure_2 + 1;
-        let num17 = 0;
-        if (sum5 < length) {
-          num17 = StringResult.charCodeAt(sum5);
-        }
-        let sum6 = closure_2 + 2;
-        let num18 = 0;
-        if (sum6 < length) {
-          num18 = StringResult.charCodeAt(sum6);
-        }
-        if (tmp10Result15.isNumberStart(charCodeAtResult, num17, num18)) {
-          let consumeNumericTokenResult1 = consumeNumericToken();
-        } else {
-          let sum7 = closure_2 + 1;
-          let num19 = 0;
-          if (sum7 < length) {
-            num19 = StringResult.charCodeAt(sum7);
-          }
-          if (45 === num19) {
-            let sum8 = closure_2 + 2;
-            let num20 = 0;
-            if (sum8 < length) {
-              num20 = StringResult.charCodeAt(sum8);
-            }
-            if (62 === num20) {
-              BadString = tmp10(tmp11[2]).TYPE.CDC;
-              closure_2 = closure_2 + 3;
-            }
-          }
-          let tmp10Result16 = tmp10(tmp11[1]);
-          let sum9 = closure_2 + 1;
-          let num21 = 0;
-          if (sum9 < length) {
-            num21 = StringResult.charCodeAt(sum9);
-          }
-          let sum10 = closure_2 + 2;
-          let num22 = 0;
-          if (sum10 < length) {
-            num22 = StringResult.charCodeAt(sum10);
-          }
-          if (tmp10Result16.isIdentifierStart(charCodeAtResult, num21, num22)) {
-            let result = consumeIdentLikeToken();
-          } else {
-            BadString = tmp10(tmp11[2]).TYPE.Delim;
-            closure_2 = closure_2 + 1;
-          }
-        }
-      } else if (46 === charCodeCategoryResult) {
-        let tmp10Result17 = tmp10(tmp11[1]);
-        let sum11 = closure_2 + 1;
-        let num15 = 0;
-        if (sum11 < length) {
-          num15 = StringResult.charCodeAt(sum11);
-        }
-        let sum12 = closure_2 + 2;
-        let num16 = 0;
-        if (sum12 < length) {
-          num16 = StringResult.charCodeAt(sum12);
-        }
-        if (tmp10Result17.isNumberStart(charCodeAtResult, num15, num16)) {
-          let consumeNumericTokenResult2 = consumeNumericToken();
-        } else {
-          BadString = tmp10(tmp11[2]).TYPE.Delim;
-          closure_2 = closure_2 + 1;
-        }
-      } else if (47 === charCodeCategoryResult) {
-        let sum13 = closure_2 + 1;
-        let num14 = 0;
-        if (sum13 < length) {
-          num14 = StringResult.charCodeAt(sum13);
-        }
-        if (42 === num14) {
-          BadString = tmp10(tmp11[2]).TYPE.Comment;
-          let sum14 = StringResult.indexOf("*/", closure_2 + 2) + 2;
-          closure_2 = sum14;
-          if (1 === sum14) {
-            closure_2 = StringResult.length;
-          }
-        } else {
-          BadString = tmp10(tmp11[2]).TYPE.Delim;
-          closure_2 = closure_2 + 1;
-        }
-      } else if (58 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.Colon;
-        closure_2 = closure_2 + 1;
-      } else if (59 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.Semicolon;
-        closure_2 = closure_2 + 1;
-      } else if (60 === charCodeCategoryResult) {
-        let sum15 = closure_2 + 1;
-        let num11 = 0;
-        if (sum15 < length) {
-          num11 = StringResult.charCodeAt(sum15);
-        }
-        if (33 === num11) {
-          let sum16 = closure_2 + 2;
-          let num12 = 0;
-          if (sum16 < length) {
-            num12 = StringResult.charCodeAt(sum16);
-          }
-          if (45 === num12) {
-            let sum17 = closure_2 + 3;
-            let num13 = 0;
-            if (sum17 < length) {
-              num13 = StringResult.charCodeAt(sum17);
-            }
-            if (45 === num13) {
-              BadString = tmp10(tmp11[2]).TYPE.CDO;
-              closure_2 = closure_2 + 4;
-            }
-          }
-        }
-        BadString = tmp10(tmp11[2]).TYPE.Delim;
-        closure_2 = closure_2 + 1;
-      } else if (64 === charCodeCategoryResult) {
-        let tmp10Result18 = tmp10(tmp11[1]);
-        let sum18 = closure_2 + 1;
-        let num8 = 0;
-        if (sum18 < length) {
-          num8 = StringResult.charCodeAt(sum18);
-        }
-        let sum19 = closure_2 + 2;
-        let num9 = 0;
-        if (sum19 < length) {
-          num9 = StringResult.charCodeAt(sum19);
-        }
-        let sum20 = closure_2 + 3;
-        let num10 = 0;
-        if (sum20 < length) {
-          num10 = StringResult.charCodeAt(sum20);
-        }
-        let isIdentifierStartResult = tmp10Result18.isIdentifierStart(num8, num9, num10);
-        let TYPE = tmp10(tmp11[2]).TYPE;
-        if (isIdentifierStartResult) {
-          BadString = TYPE.AtKeyword;
-          let tmp10Result19 = tmp10(tmp11[0]);
-          closure_2 = tmp10Result19.consumeName(StringResult, closure_2 + 1);
-        } else {
-          BadString = TYPE.Delim;
-          closure_2 = closure_2 + 1;
-        }
-      } else if (91 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.LeftSquareBracket;
-        closure_2 = closure_2 + 1;
-      } else if (92 === charCodeCategoryResult) {
-        let tmp10Result20 = tmp10(tmp11[1]);
-        let sum21 = closure_2 + 1;
-        let num7 = 0;
-        if (sum21 < length) {
-          num7 = StringResult.charCodeAt(sum21);
-        }
-        if (tmp10Result20.isValidEscape(charCodeAtResult, num7)) {
-          let result1 = consumeIdentLikeToken();
-        } else {
-          BadString = tmp10(tmp11[2]).TYPE.Delim;
-          closure_2 = closure_2 + 1;
-        }
-      } else if (93 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.RightSquareBracket;
-        closure_2 = closure_2 + 1;
-      } else if (123 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.LeftCurlyBracket;
-        closure_2 = closure_2 + 1;
-      } else if (125 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.RightCurlyBracket;
-        closure_2 = closure_2 + 1;
-      } else if (tmp10(tmp11[1]).charCodeCategory.Digit === charCodeCategoryResult) {
-        let consumeNumericTokenResult3 = consumeNumericToken();
-      } else if (tmp10(tmp11[1]).charCodeCategory.NameStart === charCodeCategoryResult) {
-        let result2 = consumeIdentLikeToken();
-      } else if (tmp10(tmp11[1]).charCodeCategory.Eof !== charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.Delim;
-        closure_2 = closure_2 + 1;
-      }
-      let tmp92 = BadString;
-      if (tmp14 === BadString) {
-        let tmp94 = num2 & 16777215;
-        let tmp95 = tmp6[tmp94];
-        let tmp96 = tmp95 >> 24;
-        tmp6[num4] = tmp94;
-        let sum22 = tmp94 + 1;
-        tmp6[tmp94] = num4;
-        let tmp93 = tmp95;
-        tmp14 = tmp96;
-        if (sum22 < num4) {
-          do {
-            if (tmp6[sum22] === length) {
-              tmp6[sum22] = num4;
-            }
-            sum22 = sum22 + 1;
-            tmp93 = tmp95;
-            tmp14 = tmp96;
-          } while (sum22 < num4);
-        }
-      } else {
-        if (tmp10(tmp11[2]).TYPE.LeftParenthesis !== tmp92) {
-          if (tmp10(tmp11[2]).TYPE.Function !== tmp92) {
-            if (tmp10(tmp11[2]).TYPE.LeftSquareBracket === tmp92) {
-              tmp6[num4] = num2;
-              let RightSquareBracket = tmp10(tmp11[2]).TYPE.RightSquareBracket;
-              tmp93 = (RightSquareBracket << 24) | num4;
-              tmp14 = RightSquareBracket;
-            } else {
-              tmp93 = num2;
-              if (tmp10(tmp11[2]).TYPE.LeftCurlyBracket === tmp92) {
-                tmp6[num4] = num2;
-                let RightCurlyBracket = tmp10(tmp11[2]).TYPE.RightCurlyBracket;
-                tmp93 = (RightCurlyBracket << 24) | num4;
-                tmp14 = RightCurlyBracket;
-              }
-            }
-          }
-        }
-        tmp6[num4] = num2;
-        let RightParenthesis = tmp10(tmp11[2]).TYPE.RightParenthesis;
-        tmp93 = (RightParenthesis << 24) | num4;
-        tmp14 = RightParenthesis;
-      }
-      num4 = num4 + 1;
-      tmp5[tmp15] = (BadString << 24) | closure_2;
-      num2 = tmp93;
-      num3 = tmp14;
-      num5 = tmp93;
-      num6 = num4;
-    } while (closure_2 < length);
-  }
-  tmp5[num6] = (require("16238__.js").TYPE.EOF << 24) | closure_2;
-  tmp6[num6] = length;
-  tmp6[length] = length;
-  if (0 !== num5) {
-    do {
-      tmp102 = tmp6[tmp102] & 16777215;
-      tmp6[tmp102] = length;
-    } while (0 !== num5);
-  }
-  iter.source = StringResult;
-  iter.firstCharOffset = isBOMResult;
-  iter.offsetAndType = tmp5;
-  iter.tokenCount = num6;
-  iter.balance = tmp6;
-  iter.reset();
-  iter.next();
-  return iter;
+}
+const re1 = /^(?:([\w+\-.]+):)?\/\/(?:(\w+:\w+)@)?([\w.-]*)(?::(\d+))?(.*)$/;
+const re2 = /^data:.+\,.+$/;
+const tmp = !("__proto__" in Object.create(null));
+let toSetString = fromSetString;
+if (!tmp) {
+  toSetString = function toSetString(arr) {
+    let text = arr;
+    if (isProtoString(arr)) {
+      text = `$${arr}`;
+    }
+    return text;
+  };
+}
+if (!tmp) {
+  fromSetString = function fromSetString(arr) {
+    let substr = arr;
+    if (isProtoString(arr)) {
+      substr = arr.slice(1);
+    }
+    return substr;
+  };
 }
 
-export * from "module_16238";
-export * from "module_16241";
-export * from "keys2";
-export default tokenize;
+export function getArg(arg0, file, arg2) {
+  if (file in arg0) {
+    return arg0[file];
+  } else if (3 === arguments.length) {
+    return arg2;
+  } else {
+    const _Error = Error;
+    const error = new Error("\"" + file + "\" is a required argument.");
+    throw error;
+  }
+}
+export function urlParse(str) {
+  const match = str.match(re1);
+  let tmp2 = null;
+  if (match) {
+    const url = { scheme: match[1], auth: match[2], host: match[3], port: match[4], path: match[5] };
+    tmp2 = url;
+  }
+  return tmp2;
+}
+export function urlGenerate(scheme) {
+  let str = "";
+  if (scheme.scheme) {
+    str = `${scheme.scheme}:`;
+  }
+  const text = `${str}//`;
+  let text1 = text;
+  if (scheme.auth) {
+    text1 = `${str}//${scheme.auth + "@"}`;
+  }
+  let sum = text1;
+  if (scheme.host) {
+    sum = text1 + scheme.host;
+  }
+  let text2 = sum;
+  if (scheme.port) {
+    text2 = `${tmp3}:${scheme.port}`;
+  }
+  let sum1 = text2;
+  if (scheme.path) {
+    sum1 = text2 + scheme.path;
+  }
+  return sum1;
+}
+export { normalize };
+export { join };
+export (str) => {
+  let isMatch = "/" === str.charAt(0);
+  if (!isMatch) {
+    isMatch = re1.test(str);
+  }
+  return isMatch;
+}
+export function relative(_sourceRoot, arr) {
+  let str = _sourceRoot;
+  if ("" === _sourceRoot) {
+    str = ".";
+  }
+  const replaced = str.replace(/\/$/, "");
+  let num = 0;
+  arr = replaced;
+  let arr2 = replaced;
+  let num2 = 0;
+  if (0 !== arr.indexOf(replaced + "/")) {
+    const lastIndexOfResult = arr.lastIndexOf("/");
+    while (lastIndexOfResult >= 0) {
+      let str2 = arr.slice(0, lastIndexOfResult);
+      if (str2.match(/^([^\/]+:\/)?\/*$/)) {
+        return arr;
+      } else {
+        num = num + 1;
+        arr = str2;
+        num2 = num;
+        arr2 = str2;
+      }
+    }
+    return arr;
+  }
+  const joined = Array(num2 + 1).join("../");
+  return joined + arr.substr(arr2.length + 1);
+}
+export { toSetString };
+export { fromSetString };
+export function compareByOriginalPositions(source, source2, arg2) {
+  source = source.source;
+  source2 = source2.source;
+  let num = 0;
+  if (source !== source2) {
+    let num3 = 1;
+    if (null !== source) {
+      let num4 = -1;
+      let num5 = -1;
+      if (null !== source2) {
+        if (source > source2) {
+          num4 = 1;
+        }
+        num5 = num4;
+      }
+      num3 = num5;
+    }
+    num = num3;
+  }
+  if (0 === num) {
+    num = source.originalLine - source2.originalLine;
+    if (0 === num) {
+      const diff = source.originalColumn - source2.originalColumn;
+      num = diff;
+      if (0 === diff) {
+        num = diff;
+        if (!arg2) {
+          num = source.generatedColumn - source2.generatedColumn;
+          if (0 === num) {
+            num = source.generatedLine - source2.generatedLine;
+            if (0 === num) {
+              const name = source.name;
+              const name2 = source2.name;
+              let num6 = 0;
+              if (name !== name2) {
+                let num8 = 1;
+                if (null !== name) {
+                  let num9 = -1;
+                  let num10 = -1;
+                  if (null !== name2) {
+                    if (name > name2) {
+                      num9 = 1;
+                    }
+                    num10 = num9;
+                  }
+                  num8 = num10;
+                }
+                num6 = num8;
+              }
+            }
+            return num6;
+          }
+        }
+      }
+    }
+  }
+  num6 = num;
+}
+export function compareByGeneratedPositionsDeflated(generatedLine, generatedLine2, arg2) {
+  let diff = generatedLine.generatedLine - generatedLine2.generatedLine;
+  if (0 === diff) {
+    const diff1 = generatedLine.generatedColumn - generatedLine2.generatedColumn;
+    diff = diff1;
+    if (0 === diff1) {
+      diff = diff1;
+      if (!arg2) {
+        const source = generatedLine.source;
+        const source2 = generatedLine2.source;
+        let num = 0;
+        if (source !== source2) {
+          let num3 = 1;
+          if (null !== source) {
+            let num4 = -1;
+            let num5 = -1;
+            if (null !== source2) {
+              if (source > source2) {
+                num4 = 1;
+              }
+              num5 = num4;
+            }
+            num3 = num5;
+          }
+          num = num3;
+        }
+        diff = num;
+        if (0 === num) {
+          diff = generatedLine.originalLine - generatedLine2.originalLine;
+          if (0 === diff) {
+            diff = generatedLine.originalColumn - generatedLine2.originalColumn;
+            if (0 === diff) {
+              const name = generatedLine.name;
+              const name2 = generatedLine2.name;
+              let num6 = 0;
+              if (name !== name2) {
+                let num8 = 1;
+                if (null !== name) {
+                  let num9 = -1;
+                  let num10 = -1;
+                  if (null !== name2) {
+                    if (name > name2) {
+                      num9 = 1;
+                    }
+                    num10 = num9;
+                  }
+                  num8 = num10;
+                }
+                num6 = num8;
+              }
+            }
+            return num6;
+          }
+        }
+      }
+    }
+  }
+  num6 = diff;
+}
+export function compareByGeneratedPositionsInflated(_last, toArrayResult) {
+  let diff = _last.generatedLine - toArrayResult.generatedLine;
+  if (0 === diff) {
+    diff = _last.generatedColumn - toArrayResult.generatedColumn;
+    if (0 === diff) {
+      const source = _last.source;
+      const source2 = toArrayResult.source;
+      let num5 = 0;
+      if (source !== source2) {
+        let num2 = 1;
+        if (null !== source) {
+          let num3 = -1;
+          let num4 = -1;
+          if (null !== source2) {
+            if (source > source2) {
+              num3 = 1;
+            }
+            num4 = num3;
+          }
+          num2 = num4;
+        }
+        num5 = num2;
+      }
+      diff = num5;
+      if (0 === num5) {
+        diff = _last.originalLine - toArrayResult.originalLine;
+        if (0 === diff) {
+          diff = _last.originalColumn - toArrayResult.originalColumn;
+          if (0 === diff) {
+            const name = _last.name;
+            const name2 = toArrayResult.name;
+            let num6 = 0;
+            if (name !== name2) {
+              let num8 = 1;
+              if (null !== name) {
+                let num9 = -1;
+                let num10 = -1;
+                if (null !== name2) {
+                  if (name > name2) {
+                    num9 = 1;
+                  }
+                  num10 = num9;
+                }
+                num8 = num10;
+              }
+              num6 = num8;
+            }
+          }
+          return num6;
+        }
+      }
+    }
+  }
+  num6 = diff;
+}
+export function parseSourceMapInput(str) {
+  return JSON.parse(str.replace(/^\)]}'[^\n]*\n/, ""));
+}
+export function computeSourceURL(arg0, arg1, str) {
+  str = arg1;
+  if (!arg1) {
+    str = "";
+  }
+  let sum = str;
+  if (arg0) {
+    let text = arg0;
+    if (tmp2) {
+      text = `${arg0}/`;
+    }
+    sum = text + str;
+    tmp2 = "/" !== arg0[arg0.length - 1] && "/" !== str[0];
+  }
+  let tmp14Result = sum;
+  if (str) {
+    const match = str.match(re1);
+    let tmp7 = null;
+    if (match) {
+      const url = { scheme: match[1], auth: match[2], host: match[3], port: match[4], path: match[5] };
+      tmp7 = url;
+    }
+    if (tmp7) {
+      if (tmp7.path) {
+        const path = tmp7.path;
+        const lastIndexOfResult = path.lastIndexOf("/");
+        if (lastIndexOfResult >= 0) {
+          tmp7.path = tmp7.path.substring(0, lastIndexOfResult + 1);
+        }
+      }
+      let str6 = "";
+      if (tmp7.scheme) {
+        str6 = `${tmp7.scheme}:`;
+      }
+      const text1 = `${str6}//`;
+      let text2 = text1;
+      if (tmp7.auth) {
+        text2 = `${str6}//${tmp7.auth + "@"}`;
+      }
+      let sum1 = text2;
+      if (tmp7.host) {
+        sum1 = text2 + tmp7.host;
+      }
+      let text3 = sum1;
+      if (tmp7.port) {
+        text3 = `${tmp17}:${tmp7.port}`;
+      }
+      let sum2 = text3;
+      if (tmp7.path) {
+        sum2 = text3 + tmp7.path;
+      }
+      tmp14Result = join(sum2, sum);
+    } else {
+      const _Error = Error;
+      const error = new Error("sourceMapURL could not be parsed");
+      throw error;
+    }
+  }
+  return normalize(tmp14Result);
+}

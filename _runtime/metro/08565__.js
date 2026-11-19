@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/media_channel/native/images",
+  width: 49,
+  height: 50,
   scales: [2, 3],
-  hash: "8d9a4a6e9caf6cfaa5505c9d5954c20b",
-  name: "ThumbsUpIcon",
+  hash: "83d9ad6473cb40e1d6825c7dbdb7f70f",
+  name: "ic_media_post_share_prompt",
   type: "png",
 });

@@ -1,26 +1,19 @@
 // _runtime/metro/16300__.js
-import keys2 from "../16240_keys2.js";
-import _mod16244 from "16244__.js";
+import _mod16235 from "16235__.js";
 
-const Dimension = _mod16244.TYPE.Dimension;
+const Number = _mod16235.TYPE.Number;
 const obj = {
-  name: "Dimension",
-  structure: { value: String, unit: String },
+  name: "Number",
+  structure: { value: String },
   parse() {
-    const tokenStart = this.scanner.tokenStart;
-    const consumeNumberResult = keys2.consumeNumber(this.scanner.source, tokenStart);
-    this.eat(Dimension);
-    const obj2 = {
-      type: "Dimension",
-      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
-      value: this.scanner.source.substring(tokenStart, consumeNumberResult),
-      unit: this.scanner.source.substring(consumeNumberResult, this.scanner.tokenStart),
+    return {
+      type: "Number",
+      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
+      value: this.consume(Number),
     };
-    return obj2;
   },
   generate(value) {
     this.chunk(value.value);
-    this.chunk(value.unit);
   },
 };
 

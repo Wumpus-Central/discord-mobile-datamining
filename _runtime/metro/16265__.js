@@ -1,270 +1,75 @@
 // _runtime/metro/16265__.js
-function getTrace(arg0) {
-  closure_0 = arg0;
-  c1 = null;
-  if (null !== this.matched) {
-    function hasMatch(matched) {
-      if (Array.isArray(matched.match)) {
-        let num = 0;
-        if (0 < matched.match.length) {
-          while (!hasMatch(matched.match[num])) {
-            num = num + 1;
-          }
-          const syntax = matched.syntax;
-          let tmp7 = null !== syntax;
-          if (tmp7) {
-            let tmp8 = "Type" === syntax.type;
-            if (!tmp8) {
-              tmp8 = "Property" === syntax.type;
-            }
-            if (!tmp8) {
-              tmp8 = "Keyword" === syntax.type;
-            }
-            tmp7 = tmp8;
-          }
-          if (tmp7) {
-            items1.unshift(matched.syntax);
-          }
-          return true;
-        }
-      } else if (matched.node === closure_0) {
-        const syntax2 = matched.syntax;
-        let tmp3 = null !== syntax2;
-        if (tmp3) {
-          let tmp2 = "Type" === syntax2.type;
-          if (!tmp2) {
-            tmp2 = "Property" === syntax2.type;
-          }
-          if (!tmp2) {
-            tmp2 = "Keyword" === syntax2.type;
-          }
-          tmp3 = tmp2;
-        }
-        if (tmp3) {
-          items = [matched.syntax];
-          items1 = items;
-        } else {
-          items1 = [];
-        }
-        return true;
-      }
-      return false;
-    }
-    hasMatch(tmp.matched);
+import _mod16237 from "16237__.js";
+
+function getFirstMatchNode(node) {
+  if ("node" in node) {
+    node = node.node;
+  } else {
+    node = getFirstMatchNode(node.match[0]);
   }
-  return c1;
+  return node;
+}
+function getLastMatchNode(node) {
+  if ("node" in node) {
+    node = node.node;
+  } else {
+    node = getLastMatchNode(node.match[node.match.length - 1]);
+  }
+  return node;
 }
 
 export default {
-  getTrace,
-  isType(arg0, arg1) {
-    const self = this;
-    closure_0 = arg1;
-    const call = getTrace.call;
-    if (typeof call === "unknown") {
-      closure_0 = arg0;
-      c1 = null;
-      if (null !== self.matched) {
-        function hasMatch(matched) {
-          if (Array.isArray(matched.match)) {
-            let num = 0;
-            if (0 < matched.match.length) {
-              while (!hasMatch(matched.match[num])) {
-                num = num + 1;
+  matchFragments(arg0, value, matched, arg3, arg4) {
+    closure_0 = arg0;
+    closure_1 = value;
+    closure_2 = arg3;
+    closure_3 = arg4;
+    items = [];
+    if (null !== matched.matched) {
+      function findFragments(matched) {
+        if (null !== matched.syntax) {
+          if (matched.syntax.type === closure_2) {
+            if (matched.syntax.name === closure_3) {
+              if ("node" in matched) {
+                let node = matched.node;
+              } else if ("node" in matched.match[0]) {
+                node = str.node;
+              } else {
+                node = closure_2(str.match[0]);
               }
-              const syntax = matched.syntax;
-              let tmp7 = null !== syntax;
-              if (tmp7) {
-                let tmp8 = "Type" === syntax.type;
-                if (!tmp8) {
-                  tmp8 = "Property" === syntax.type;
+              if ("node" in matched) {
+                let node2 = matched.node;
+              } else if ("node" in matched.match[matched.match.length - 1]) {
+                node2 = str2.node;
+              } else {
+                node2 = closure_3(str2.match[str2.match.length - 1]);
+              }
+              const syntax = node.syntax;
+              syntax.walk(node2, (arg0, arg1, parent) => {
+                if (arg0 === node) {
+                  let iter = arg1;
+                  const obj2 = new _mod16237();
+                  obj2.appendData(iter.data);
+                  while (iter.data !== node2) {
+                    iter = iter.next;
+                    if (null === iter) {
+                      break;
+                    }
+                  }
+                  const obj = { parent, nodes: obj2 };
+                  items.push(obj);
                 }
-                if (!tmp8) {
-                  tmp8 = "Keyword" === syntax.type;
-                }
-                tmp7 = tmp8;
-              }
-              if (tmp7) {
-                items1.unshift(matched.syntax);
-              }
-              return true;
+              });
             }
-          } else if (matched.node === closure_0) {
-            const syntax2 = matched.syntax;
-            let tmp3 = null !== syntax2;
-            if (tmp3) {
-              let tmp2 = "Type" === syntax2.type;
-              if (!tmp2) {
-                tmp2 = "Property" === syntax2.type;
-              }
-              if (!tmp2) {
-                tmp2 = "Keyword" === syntax2.type;
-              }
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              items = [matched.syntax];
-              items1 = items;
-            } else {
-              items1 = [];
-            }
-            return true;
           }
-          return false;
         }
-        hasMatch(self.matched);
+        if (Array.isArray(matched.match)) {
+          const match = matched.match;
+          const item = match.forEach(findFragments);
+        }
       }
-      let callResult = c1;
-    } else {
-      callResult = call(self, arg0);
+      findFragments(matched.matched);
     }
-    return (
-      null !== callResult &&
-      callResult.some((type) => {
-        let tmp = "Type" === type.type;
-        if (tmp) {
-          tmp = type.name === closure_0;
-        }
-        return tmp;
-      })
-    );
-  },
-  isProperty(arg0, arg1) {
-    const self = this;
-    closure_0 = arg1;
-    const call = getTrace.call;
-    if (typeof call === "unknown") {
-      closure_0 = arg0;
-      c1 = null;
-      if (null !== self.matched) {
-        function hasMatch(matched) {
-          if (Array.isArray(matched.match)) {
-            let num = 0;
-            if (0 < matched.match.length) {
-              while (!hasMatch(matched.match[num])) {
-                num = num + 1;
-              }
-              const syntax = matched.syntax;
-              let tmp7 = null !== syntax;
-              if (tmp7) {
-                let tmp8 = "Type" === syntax.type;
-                if (!tmp8) {
-                  tmp8 = "Property" === syntax.type;
-                }
-                if (!tmp8) {
-                  tmp8 = "Keyword" === syntax.type;
-                }
-                tmp7 = tmp8;
-              }
-              if (tmp7) {
-                items1.unshift(matched.syntax);
-              }
-              return true;
-            }
-          } else if (matched.node === closure_0) {
-            const syntax2 = matched.syntax;
-            let tmp3 = null !== syntax2;
-            if (tmp3) {
-              let tmp2 = "Type" === syntax2.type;
-              if (!tmp2) {
-                tmp2 = "Property" === syntax2.type;
-              }
-              if (!tmp2) {
-                tmp2 = "Keyword" === syntax2.type;
-              }
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              items = [matched.syntax];
-              items1 = items;
-            } else {
-              items1 = [];
-            }
-            return true;
-          }
-          return false;
-        }
-        hasMatch(self.matched);
-      }
-      let callResult = c1;
-    } else {
-      callResult = call(self, arg0);
-    }
-    return (
-      null !== callResult &&
-      callResult.some((type) => {
-        let tmp = "Property" === type.type;
-        if (tmp) {
-          tmp = type.name === closure_0;
-        }
-        return tmp;
-      })
-    );
-  },
-  isKeyword(arg0) {
-    const self = this;
-    const call = getTrace.call;
-    if (typeof call === "unknown") {
-      closure_0 = arg0;
-      let items1 = null;
-      if (null !== self.matched) {
-        function hasMatch(matched) {
-          if (Array.isArray(matched.match)) {
-            let num = 0;
-            if (0 < matched.match.length) {
-              while (!hasMatch(matched.match[num])) {
-                num = num + 1;
-              }
-              const syntax = matched.syntax;
-              let tmp7 = null !== syntax;
-              if (tmp7) {
-                let tmp8 = "Type" === syntax.type;
-                if (!tmp8) {
-                  tmp8 = "Property" === syntax.type;
-                }
-                if (!tmp8) {
-                  tmp8 = "Keyword" === syntax.type;
-                }
-                tmp7 = tmp8;
-              }
-              if (tmp7) {
-                items1.unshift(matched.syntax);
-              }
-              return true;
-            }
-          } else if (matched.node === closure_0) {
-            const syntax2 = matched.syntax;
-            let tmp3 = null !== syntax2;
-            if (tmp3) {
-              let tmp2 = "Type" === syntax2.type;
-              if (!tmp2) {
-                tmp2 = "Property" === syntax2.type;
-              }
-              if (!tmp2) {
-                tmp2 = "Keyword" === syntax2.type;
-              }
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              items = [matched.syntax];
-              items1 = items;
-            } else {
-              items1 = [];
-            }
-            return true;
-          }
-          return false;
-        }
-        hasMatch(self.matched);
-      }
-      let callResult = items1;
-    } else {
-      callResult = call(self, arg0);
-    }
-    let someResult = null !== callResult;
-    if (someResult) {
-      someResult = callResult.some((type) => "Keyword" === type.type);
-    }
-    return someResult;
+    return items;
   },
 };

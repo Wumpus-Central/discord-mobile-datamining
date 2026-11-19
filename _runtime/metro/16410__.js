@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "67084cd4f72fc46263204ba0954f5f2f",
-  name: "ClosedCaptionsIcon",
+  hash: "f8bf13e5289aa31d46196df3283f80c3",
+  name: "FullscreenEnterIcon",
   type: "png",
 });

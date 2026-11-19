@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b4bc35e77125dd7a659435efd876e4cc",
-  name: "ChannelListIcon",
+  hash: "44367cf78a4a6bf3f05d89256b2c8ccd",
+  name: "ModerationIcon",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/premium/native/images/perks",
+  width: 300,
+  height: 175,
   scales: [2, 3],
-  hash: "a55e771de04b13c26603a57cb2527fa8",
-  name: "BoostGemIcon",
+  hash: "69d07b73ba14be901804955fa84a0ead",
+  name: "grey_badge",
   type: "png",
 });

@@ -1,42 +1,18 @@
 // _runtime/metro/16301__.js
-import _mod16244 from "16244__.js";
-
-const RightParenthesis = _mod16244.TYPE.RightParenthesis;
-const obj = {
-  name: "Function",
-  structure: null,
-  parse(call, arg1) {
-    const self = this;
-    const str = this.consumeFunctionName();
-    const formatted = str.toLowerCase();
-    if (arg1.hasOwnProperty(formatted)) {
-      const call2 = tmp4.call;
-      typeof call2 === "unknown" ? arg1[formatted](arg1) : call2(self, arg1);
-    } else {
-      call = call.call;
-      if (!self.scanner.eof) {
-        self.eat(RightParenthesis);
-      }
-      const element = {
-        type: "Function",
-        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-        name: str,
-        children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
-      };
-      return element;
-    }
+let obj = {
+  name: "Operator",
+  structure: { value: String },
+  parse() {
+    const tokenStart = this.scanner.tokenStart;
+    this.scanner.next();
+    const obj = { type: "Operator", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
+    const scanner = this.scanner;
+    obj.value = scanner.substrToCursor(tokenStart);
+    return obj;
   },
-  generate(name) {
-    this.chunk(name.name);
-    this.chunk("(");
-    this.children(name);
-    this.chunk(")");
+  generate(value) {
+    this.chunk(value.value);
   },
-  walkContext: "function",
 };
-const obj2 = { name: String, children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

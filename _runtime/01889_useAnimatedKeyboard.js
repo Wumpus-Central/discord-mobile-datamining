@@ -15,7 +15,7 @@ let closure_5 = {
 export function useAnimatedKeyboard() {
   let obj = c0;
   if (c0 === undefined) {
-    obj = { isStatusBarTranslucentAndroid: "__d", isNavigationBarTranslucentAndroid: "enabled" };
+    obj = { isStatusBarTranslucentAndroid: "Array", isNavigationBarTranslucentAndroid: "Path" };
   }
   _require = obj;
   let ref2;

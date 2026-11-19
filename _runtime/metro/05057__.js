@@ -1,4 +1,3 @@
 // _runtime/metro/05057__.js
-import BottomSheetDefault from "../05058_BottomSheet.js";
 
-export default BottomSheetDefault;
+export const State = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };

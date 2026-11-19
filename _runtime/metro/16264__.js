@@ -1,155 +1,170 @@
 // _runtime/metro/16264__.js
-function noop(arg0) {
-  return arg0;
-}
-function generate(type, fn, arg2, arg3) {
-  let str = ",";
-  switch (type.type) {
-    case "Group":
-      closure_0 = fn;
-      generate = arg2;
-      closure_2 = arg3;
-      if (" " !== type.combinator) {
-        if (!arg3) {
-          let combinator = `${" " + type.combinator} `;
-        }
-        const terms = type.terms;
-        const mapped = terms.map((item) => generate(item, closure_0, closure_1, closure_2));
-        const joined = mapped.join(combinator);
-        let explicit = type.explicit;
-        if (!explicit) {
-          explicit = arg2;
-        }
-        let sum1 = joined;
-        if (explicit) {
-          if (arg3) {
-            let str27 = "[";
-          } else {
-            str27 = "[ ";
-          }
-          let str28 = " ]";
-          const sum = str27 + joined;
-          if (arg3) {
-            str28 = "]";
-          }
-          sum1 = sum + str28;
-        }
-        let str29 = "";
-        if (type.disallowEmpty) {
-          str29 = "!";
-        }
-        str = sum1 + str29;
-        return fn(str, type);
-      }
-      combinator = type.combinator;
-      break;
-    case "Multiplier":
-      if (0 !== type.min) {
-        if (0 === type.min) {
-          if (1 === type.max) {
-            let str16 = "?";
-          }
-        }
-        if (1 !== type.min) {
-          if (1 === type.min) {
-            const str18 = "";
-          }
-          let str19 = "";
-          let str20 = "";
-          if (type.comma) {
-            str20 = "#";
-          }
-          if (type.min === type.max) {
-            let text = `${"{" + type.min}}`;
-          } else {
-            const text1 = `{${type.min}`;
-            if (0 !== type.max) {
-              str19 = type.max;
-            }
-            text = `${tmp14 + "," + str19}}`;
-          }
-          const sum2 = str20 + text;
-        }
-        let str25 = "+";
-        if (type.comma) {
-          str25 = "#";
-        }
-      } else {
-        str16 = "*";
-      }
-      return generate(type.term, fn, arg2, arg3) + fn(str16, type);
-    case "Type":
-      let str7 = "";
-      const text2 = `<${type.name}`;
-      if (type.opts) {
-        const opts = type.opts;
-        if ("Range" === opts.type) {
-          let str11 = "-\u221E";
-          if (null !== opts.min) {
-            str11 = opts.min;
-          }
-          let str13 = "\u221E";
-          const text3 = ` [${str11}`;
-          if (null !== opts.max) {
-            str13 = opts.max;
-          }
-          str7 = fn(text3 + "," + str13 + "]", type.opts);
-        } else {
-          const _Error = Error;
-          const error = new Error("Unknown node type `" + opts.type + "`");
-          throw error;
-        }
-      }
-      str = `${tmp + str7}>`;
-      break;
-    case "Property":
-      str = `${"<'" + type.name}'>`;
-      break;
-    case "Keyword":
-      str = type.name;
-      break;
-    case "AtKeyword":
-      str = `@${type.name}`;
-      break;
-    case "Function":
-      str = `${type.name}(`;
-      break;
-    case "String":
-      str = type.value;
-      break;
-    case "Token":
-      str = type.value;
-      break;
-    case "Comma":
-      break;
-    default:
-      const _Error2 = Error;
-      const error1 = new Error("Unknown node type `" + type.type + "`");
-      throw error1;
-  }
-}
+const dependencyMap = Object.create(null);
+const dependencyMap2 = Object.create(null);
 
-export default (arg0, forceBraces) => {
-  let decorate = noop;
-  let flag = false;
-  let flag2 = false;
-  let tmp = forceBraces;
-  if (typeof forceBraces !== "function") {
-    flag = false;
-    flag2 = false;
-    tmp = decorate;
-    if (forceBraces) {
-      const _Boolean = Boolean;
-      const _Boolean2 = Boolean;
-      const BooleanResult = Boolean(forceBraces.forceBraces);
-      if (typeof forceBraces.decorate === "function") {
-        decorate = forceBraces.decorate;
+export default {
+  keyword: function getKeywordDescriptor(str) {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown" ? hasOwnProperty(str) : call(dependencyMap, str)) {
+      return dependencyMap[str];
+    } else {
+      const formatted = str.toLowerCase();
+      const call2 = hasOwnProperty.call;
+      if (typeof call2 === "unknown" ? hasOwnProperty(formatted) : call2(dependencyMap, formatted)) {
+        dependencyMap[str] = dependencyMap[formatted];
+        return dependencyMap[formatted];
+      } else {
+        let tmp3 = length >= 2;
+        if (2 <= formatted.length) {
+          tmp3 = 45 === formatted.charCodeAt(0);
+        }
+        if (tmp3) {
+          tmp3 = 45 === formatted.charCodeAt(1);
+        }
+        let str2 = "";
+        if (!tmp3) {
+          let str3 = "";
+          if (3 <= formatted.length) {
+            str3 = "";
+            if (45 === formatted.charCodeAt(0)) {
+              str3 = "";
+              if (45 !== formatted.charCodeAt(1)) {
+                const index = formatted.indexOf("-", 2);
+                str3 = "";
+                if (-1 !== index) {
+                  str3 = formatted.substring(0, index + 1);
+                }
+              }
+            }
+          }
+          str2 = str3;
+        }
+        const _Object = Object;
+        const obj = {
+          basename: formatted.substr(str2.length),
+          name: formatted,
+          vendor: str2,
+          prefix: str2,
+          custom: tmp3,
+        };
+        const frozen = Object.freeze(obj);
+        dependencyMap[""] = frozen;
+        return frozen;
       }
-      tmp = decorate;
-      flag = Boolean(forceBraces.compact);
-      flag2 = BooleanResult;
-      const BooleanResult1 = Boolean(forceBraces.compact);
     }
-  }
-  return generate(arg0, tmp, flag2, flag);
+  },
+  property: function getPropertyDescriptor(str) {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown" ? hasOwnProperty(str) : call(dependencyMap2, str)) {
+      return dependencyMap2[str];
+    } else {
+      str = str[0];
+      let str2 = "/";
+      if ("/" === str) {
+        if (`/` === str[1]) {
+          str2 = "//";
+        }
+        str = str2;
+      } else {
+        let tmp3 = "_" !== str;
+        if (tmp3) {
+          tmp3 = "*" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "$" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "#" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "+" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "&" !== str;
+        }
+        if (tmp3) {
+          str = "";
+        }
+      }
+      let tmp5 = str.length - tmp4 >= 2;
+      if (tmp5) {
+        tmp5 = 45 === str.charCodeAt(tmp4);
+      }
+      if (tmp5) {
+        tmp5 = 45 === str.charCodeAt(tmp4 + 1);
+      }
+      let arr = str;
+      if (!tmp5) {
+        const formatted = str.toLowerCase();
+        const call2 = hasOwnProperty.call;
+        arr = formatted;
+        if (typeof call2 === "unknown" ? hasOwnProperty(formatted) : call2(dependencyMap2, formatted)) {
+          dependencyMap2[str] = dependencyMap2[formatted];
+          return dependencyMap2[formatted];
+        }
+      }
+      let str10 = "";
+      if (!tmp5) {
+        let str11 = "";
+        if (arr.length - (str.length || 0) >= 3) {
+          str11 = "";
+          if (45 === arr.charCodeAt(tmp8)) {
+            str11 = "";
+            if (45 !== arr.charCodeAt(tmp8 + 1)) {
+              const index = arr.indexOf("-", tmp8 + 2);
+              str11 = "";
+              if (-1 !== index) {
+                str11 = arr.substring(tmp8, index + 1);
+              }
+            }
+          }
+        }
+        str10 = str11;
+      }
+      const substr = arr.substr(0, str.length + str10.length);
+      const _Object = Object;
+      const obj = {
+        basename: arr.substr(substr.length),
+        name: arr.substr(str.length),
+        hack: str,
+        vendor: str10,
+        prefix: substr,
+        custom: tmp5,
+      };
+      const frozen = Object.freeze(obj);
+      dependencyMap2[str] = frozen;
+      return frozen;
+    }
+  },
+  isCustomProperty(callResult, sum) {
+    let num = sum;
+    if (!sum) {
+      num = 0;
+    }
+    let tmp = callResult.length - num >= 2;
+    if (tmp) {
+      tmp = 45 === callResult.charCodeAt(num);
+    }
+    if (tmp) {
+      tmp = 45 === callResult.charCodeAt(num + 1);
+    }
+    return tmp;
+  },
+  vendorPrefix: function getVendorPrefix(str, sum) {
+    let num = sum;
+    if (!sum) {
+      num = 0;
+    }
+    if (str.length - num >= 3) {
+      if (45 === str.charCodeAt(num)) {
+        if (45 !== str.charCodeAt(num + 1)) {
+          const index = str.indexOf("-", num + 2);
+          if (-1 !== index) {
+            return str.substring(num, index + 1);
+          }
+        }
+      }
+    }
+    return "";
+  },
 };

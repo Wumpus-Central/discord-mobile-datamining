@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
-  width: 16,
-  height: 16,
-  scales: [1, 2, 3],
-  hash: "feb0699dba8bf9a96f37b026eba6ef56",
-  name: "arrow-sm-down",
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 160,
+  scales: [1],
+  hash: "332a7ab2f8939700ebbadbbe2c81234f",
+  name: "mallow_1",
   type: "png",
 });

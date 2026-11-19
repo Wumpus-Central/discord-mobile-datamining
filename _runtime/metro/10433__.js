@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BlurpleTwilightIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/modules/guild_identity/images",
+  width: 295,
+  height: 190,
   scales: [2, 3],
-  hash: "f385b38a044809a0b451d707fc7cd058",
-  name: "BlurpleTwilightIcon",
+  hash: "977038e35a08043eb799ac3c20093988",
+  name: "guild_identity_education_dark",
   type: "png",
 });

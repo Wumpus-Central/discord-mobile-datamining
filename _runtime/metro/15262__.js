@@ -1,4 +1,4 @@
 // _runtime/metro/15262__.js
-import _mod15251 from "15251__.js";
+import _mod15260 from "15260__.js";
 
-export default (arg0, arg1, arg2) => _mod15251(arg0, arg1, arg2) <= 0;
+export default (arg0, arg1, arg2) => _mod15260(arg0, arg1, "<", arg2);

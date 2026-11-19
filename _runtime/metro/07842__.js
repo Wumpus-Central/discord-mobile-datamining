@@ -1,12 +1,13 @@
 // _runtime/metro/07842__.js
-import _modDef7815 from "07815__.js";
+import _modDef7770 from "07770__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeTurbulence = arg1;
+const Symbol = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +26,15 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeTurbulence {
+const jsx = fn(21).jsx;
+class Symbol {
   constructor() {
     self = this;
-    tmp = c2(this, FeTurbulence);
+    tmp = c2(this, Symbol);
     tmp2 = closure_4;
-    obj = closure_4(FeTurbulence);
+    obj = closure_4(Symbol);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,18 +47,29 @@ class FeTurbulence {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTurbulence, _modDef7815);
+_inherits(Symbol, _modDef7770);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTurbulence(7792).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    const obj2 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign({ name: props.id });
+    const merged1 = Object.assign(Symbol(7759)(props));
+    obj2.children = props.children;
+    return jsx(Symbol(7843), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTurbulence, items);
-importDefaultResultResult.displayName = "FeTurbulence";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Symbol, items);
+importDefaultResultResult.displayName = "Symbol";
 
 export default importDefaultResultResult;

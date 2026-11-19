@@ -1,22 +1,15 @@
 // _runtime/metro/05609__.js
+import identity from "../00549_identity.js";
+import _mod668 from "00668__.js";
+import constant from "../05610_constant.js";
 
-export default function initCloneArray(arg0) {
-  length = arg0.length;
-  const constructor = new arg0.constructor(length);
-  if (length) {
-    length = typeof arg0[0] === "string";
-  }
-  if (!length) {
-    if (length) {
-      ({ index: tmp.index, input: tmp.input } = arg0);
-    }
-    return constructor;
-  } else {
-    const call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let callResult = hasOwnProperty("index");
-    } else {
-      callResult = call(arg0, "index");
-    }
-  }
+if (_mod668) {
+  let fn = (arg0, arg1) => {
+    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
+    return _mod668(arg0, "toString", obj);
+  };
+} else {
+  fn = identity;
 }
+
+export default fn;

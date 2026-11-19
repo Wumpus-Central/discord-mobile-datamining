@@ -1,77 +1,38 @@
 // _runtime/metro/15464__.js
-import _mod15465 from "15465__.js";
-import _mod15466 from "15466__.js";
-import _mod15467 from "15467__.js";
-import _mod15504 from "15504__.js";
-import _mod15505 from "15505__.js";
-import _mod15521 from "15521__.js";
-import _mod15522 from "15522__.js";
+import withoutSetter from "../15465_withoutSetter.js";
+import _mod15476 from "15476__.js";
+import _mod15478 from "15478__.js";
+import _mod15481 from "15481__.js";
+import _mod15484 from "15484__.js";
+import _mod15485 from "15485__.js";
 
-export default (dontCallGetSet, obj) => {
-  ({ target, global: _global, stat } = dontCallGetSet);
-  const tmp3 = _mod15465;
-  if (_global) {
-    let prototype = tmp3;
-  } else {
-    let tmp4 = tmp3[target];
-    if (stat) {
-      if (!tmp4) {
-        tmp4 = _mod15466(target, {});
-      }
-      prototype = tmp4;
-    } else {
-      prototype = tmp4;
+let closure_3 = withoutSetter("toPrimitive");
+
+export default (arg0, arg1) => {
+  if (_mod15476(arg0)) {
+    if (!_mod15478(arg0)) {
+      let str = arg1;
+      const tmp4 = _mod15481(arg0, closure_3);
       if (tmp4) {
-        prototype = _mod15465[target].prototype;
-      }
-    }
-  }
-  if (prototype) {
-    for (const key10024 in arg1) {
-      let tmp21 = arg1[key10024];
-      if (arg0.dontCallGetSet) {
-        obj = _mod15467;
-        let iter = obj.f(prototype, key10024);
-        value = iter;
-        if (iter) {
-          value = iter.value;
+        if (undefined === str) {
+          str = "default";
         }
-        let tmp7 = value;
-      } else {
-        tmp7 = prototype[key10024];
-      }
-      let sum = key10024;
-      let tmp12 = _mod15504;
-      if (!_global) {
-        let str4 = "#";
-        if (stat) {
-          str4 = ".";
-        }
-        sum = target + str4 + key10024;
-      }
-      if (!tmp12(sum, arg0.forced)) {
-        if (undefined !== tmp7) {
-          if (typeof tmp21 === typeof tmp7) {
-            continue;
-          } else {
-            let tmp22 = _mod15505(tmp21, tmp7);
+        const tmp5 = _mod15484(tmp4, arg0, str);
+        if (_mod15476(tmp5)) {
+          if (!_mod15478(tmp5)) {
+            const tmp9 = new TypeError("Can't convert object to primitive value");
+            throw tmp9;
           }
         }
-        continue;
-      }
-      let sham = arg0.sham;
-      if (!sham) {
-        let sham2 = tmp7;
-        if (tmp7) {
-          sham2 = tmp7.sham;
+        return tmp5;
+      } else {
+        let str2 = str;
+        if (undefined === str) {
+          str2 = "number";
         }
-        sham = sham2;
+        return _mod15485(arg0, str2);
       }
-      if (sham) {
-        let tmp14 = _mod15521(tmp21, "sham", true);
-      }
-      let tmp19 = _mod15522(prototype, key10024, tmp21, arg0);
-      continue;
     }
   }
+  return arg0;
 };

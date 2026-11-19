@@ -1,7 +1,6 @@
 // _runtime/metro/07830__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7814 from "07814__.js";
-import _modDef7815 from "07815__.js";
+import _modDef7770 from "07770__.js";
 import _modDef7831 from "07831__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -9,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeFlood = fn;
+const Path = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeFlood {
+class Path {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeFlood);
+    tmp = closure_3(this, Path);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeFlood);
+    obj = hasOwnProperty(Path);
     tmp3 = closure_4;
     if (metroImportDefault()) {
       tmp7 = globalThis;
@@ -50,34 +49,31 @@ class FeFlood {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeFlood, _modDef7815);
+_inherits(Path, _modDef7770);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const obj = {
+    const props = this.props;
+    const obj = {};
+    const merged = Object.assign(Path(7761).extract(this, props));
+    obj.d = props.d;
+    const obj2 = Path(7761);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(FeFlood(7814).extractFilter(this.props));
-    const merged1 = Object.assign(_modDef7814(this.props));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef7831, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeFlood, items);
-importDefaultResultResult.displayName = "FeFlood";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.floodColor = "black";
-obj.floodOpacity = 1;
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(Path, items);
+importDefaultResultResult.displayName = "Path";
 
 export default importDefaultResultResult;

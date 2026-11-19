@@ -1,4 +1,13 @@
 // _runtime/metro/09165__.js
-import _modDef9166 from "09166__.js";
+import registerAsset from "01119__.js";
 
-export default _modDef9166({ contain: null, cover: null, stretch: null });
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/virtual_currency/images/native",
+  width: 576,
+  height: 324,
+  scales: [1],
+  hash: "83d6f52e41f68a6a0f493020b6be93e9",
+  name: "hero-orbs",
+  type: "png",
+});

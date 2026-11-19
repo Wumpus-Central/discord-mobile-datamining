@@ -1,12 +1,13 @@
 // _runtime/metro/07837__.js
-import _modDef7815 from "07815__.js";
+import _modDef7770 from "07770__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeMorphology = arg1;
+const RadialGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +26,15 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeMorphology {
+const jsx = fn(21).jsx;
+class RadialGradient {
   constructor() {
     self = this;
-    tmp = c2(this, FeMorphology);
+    tmp = c2(this, RadialGradient);
     tmp2 = closure_4;
-    obj = closure_4(FeMorphology);
+    obj = closure_4(RadialGradient);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,18 +47,44 @@ class FeMorphology {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeMorphology, _modDef7815);
+_inherits(RadialGradient, _modDef7770);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeMorphology(7792).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    ({ rx, ry, r, cx, cy, fx } = props);
+    if (undefined === fx) {
+      fx = cx;
+    }
+    let fy = props.fy;
+    const obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
+    if (undefined === fy) {
+      fy = cy;
+    }
+    obj.fy = fy;
+    if (!rx) {
+      rx = r;
+    }
+    obj.rx = rx;
+    if (!ry) {
+      ry = r;
+    }
+    obj.ry = ry;
+    obj.cx = cx;
+    obj.cy = cy;
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(RadialGradient(7823)(props, this));
+    return jsx(RadialGradient(7838), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeMorphology, items);
-importDefaultResultResult.displayName = "FeMorphology";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(RadialGradient, items);
+importDefaultResultResult.displayName = "RadialGradient";
+importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
 
 export default importDefaultResultResult;

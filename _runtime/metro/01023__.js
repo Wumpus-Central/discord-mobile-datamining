@@ -48,8 +48,8 @@ export (client, activeSpan, finalTimeout) => {
   }
 }
 export (client, c4) => {
-  const f81256 = (activeSpan) => {
-    const data = c4(f81256[2]).spanToJSON(activeSpan).data;
+  const f81231 = (activeSpan) => {
+    const data = c4(f81231[2]).spanToJSON(activeSpan).data;
     let prop;
     if (null !== data) {
       if (undefined !== data) {
@@ -58,8 +58,8 @@ export (client, c4) => {
     }
     return true === prop;
   };
-  const f81257 = () => {
-    const debug = c4(f81256[2]).debug;
+  const f81232 = () => {
+    const debug = c4(f81231[2]).debug;
     debug.log("Not sampling transaction as route has been seen before. Pass ignoreEmptyBackNavigationTransactions = false to disable this feature.");
   };
   if (client) {

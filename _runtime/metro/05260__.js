@@ -1,125 +1,50 @@
 // _runtime/metro/05260__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import LegacyBaseButton from "../05083_LegacyBaseButton.js";
-import noop_mod from "00019__.js";
+import ErrorMessages from "../05262_ErrorMessages.js";
+import FlashList from "../05263_FlashList.js";
+import _mod5283 from "05283__.js";
+import _mod5284 from "05284__.js";
+import _mod5322 from "05322__.js";
+import RenderTargetOptions from "../05323_RenderTargetOptions.js";
+import _modDef5324 from "05324__.js";
+import _mod5325 from "05325__.js";
+import Cancellable from "../05326_Cancellable.js";
+import JSFPSMonitor from "../05327_JSFPSMonitor.js";
+import _mod5329 from "05329__.js";
+import runScrollBenchmark from "../05330_runScrollBenchmark.js";
+import _mod5331 from "05331__.js";
+import _mod5332 from "05332__.js";
+import _modDef5333 from "05333__.js";
+import LayoutCommitObserver from "../05334_LayoutCommitObserver.js";
+import get_ActivityIndicator from "05261__.js";
 
-let noop = noop_mod;
-({ useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo((nativeGestureRef) => {
-  nativeGestureRef = nativeGestureRef.nativeGestureRef;
-  const refreshControlGestureRef = nativeGestureRef.refreshControlGestureRef;
-  ({ style, children } = nativeGestureRef);
-  const merged = Object.assign(
-    nativeGestureRef,
-    Object.assign({ nativeGestureRef: 0, refreshControlGestureRef: 0, style: 0, children: 0 }),
-  );
-  let enableContentPanningGesture;
-  const bottomSheetInternal = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetInternal();
-  enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
-  const simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
-  const waitFor = bottomSheetInternal.waitFor;
-  const activeOffsetX = bottomSheetInternal.activeOffsetX;
-  const activeOffsetY = bottomSheetInternal.activeOffsetY;
-  const failOffsetX = bottomSheetInternal.failOffsetX;
-  const failOffsetY = bottomSheetInternal.failOffsetY;
-  const obj = nativeGestureRef(enableContentPanningGesture[2]);
-  const contentPanGestureHandler = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetGestureHandlers()
-    .contentPanGestureHandler;
-  items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
-  const tmp3 = simultaneousHandlers(() => {
-    items = [];
-    if (nativeGestureRef) {
-      items.push(tmp);
-    }
-    if (refreshControlGestureRef) {
-      items.push(tmp3);
-    }
-    if (simultaneousHandlers) {
-      const _Array = Array;
-      const push = items.push;
-      if (Array.isArray(simultaneousHandlers)) {
-        const items1 = [];
-        HermesBuiltin.arraySpread(simultaneousHandlers, 0);
-        HermesBuiltin.apply(items1, items);
-      } else {
-        push(simultaneousHandlers);
-      }
-    }
-    return items;
-  }, items);
-  closure_10 = tmp3;
-  let items1 = [
-    activeOffsetX,
-    activeOffsetY,
-    enableContentPanningGesture,
-    failOffsetX,
-    failOffsetY,
-    tmp3,
-    waitFor,
-    ,
-    ,
-    ,
-  ];
-  ({
-    handleOnChange: arr2[7],
-    handleOnEnd: arr2[8],
-    handleOnFinalize: arr2[9],
-    handleOnStart: arr2[10],
-  } = contentPanGestureHandler);
-  const tmp4 = simultaneousHandlers(() => {
-    const Gesture = LegacyBaseButton.Gesture;
-    const PanResult = Gesture.Pan();
-    const result = Gesture.Pan().enabled(enableContentPanningGesture).shouldCancelWhenOutside(false);
-    const enabledResult = Gesture.Pan().enabled(enableContentPanningGesture);
-    const runOnJSResult = result.runOnJS(false);
-    const onStartResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart);
-    const onChangeResult = result
-      .runOnJS(false)
-      .onStart(contentPanGestureHandler.handleOnStart)
-      .onChange(contentPanGestureHandler.handleOnChange);
-    const onFinalizeResult = result
-      .runOnJS(false)
-      .onStart(contentPanGestureHandler.handleOnStart)
-      .onChange(contentPanGestureHandler.handleOnChange)
-      .onEnd(contentPanGestureHandler.handleOnEnd)
-      .onFinalize(contentPanGestureHandler.handleOnFinalize);
-    let result1 = onFinalizeResult;
-    if (waitFor) {
-      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
-    }
-    let result2 = result1;
-    if (closure_10) {
-      result2 = result1.simultaneousWithExternalGesture(tmp2);
-    }
-    let activeOffsetXResult = result2;
-    if (activeOffsetX) {
-      activeOffsetXResult = result2.activeOffsetX(tmp3);
-    }
-    let activeOffsetYResult = activeOffsetXResult;
-    if (activeOffsetY) {
-      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
-    }
-    let failOffsetXResult = activeOffsetYResult;
-    if (failOffsetX) {
-      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
-    }
-    let failOffsetYResult = failOffsetXResult;
-    if (failOffsetY) {
-      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
-    }
-    return failOffsetYResult;
-  }, items1);
-  const obj3 = { gesture: tmp4, children: null };
-  const obj4 = { value: tmp4, children: null };
-  const obj5 = { style };
-  const merged1 = Object.assign(merged);
-  obj5.children = children;
-  obj4.children = waitFor(refreshControlGestureRef(enableContentPanningGesture[5]).View, obj5);
-  obj3.children = waitFor(nativeGestureRef(enableContentPanningGesture[4]).BottomSheetDraggableContext.Provider, obj4);
-  return waitFor(nativeGestureRef(enableContentPanningGesture[3]).GestureDetector, obj3);
-});
-memoResult.displayName = "BottomSheetDraggableView";
-
-export default memoResult;
+if (get_ActivityIndicator.isNewArch()) {
+  exports.FlashList = FlashList.FlashList;
+  exports.FlashListRef = _mod5322.FlashListRef;
+  exports.FlashListProps = RenderTargetOptions.FlashListProps;
+  exports.ListRenderItem = RenderTargetOptions.ListRenderItem;
+  exports.ListRenderItemInfo = RenderTargetOptions.ListRenderItemInfo;
+  exports.RenderTarget = RenderTargetOptions.RenderTarget;
+  exports.RenderTargetOptions = RenderTargetOptions.RenderTargetOptions;
+  exports.AnimatedFlashList = _modDef5324;
+  exports.useBenchmark = _mod5325.useBenchmark;
+  exports.BenchmarkParams = _mod5325.BenchmarkParams;
+  exports.BenchmarkResult = _mod5325.BenchmarkResult;
+  exports.useDataMultiplier = _mod5329.useDataMultiplier;
+  exports.useFlatListBenchmark = runScrollBenchmark.useFlatListBenchmark;
+  exports.FlatListBenchmarkParams = runScrollBenchmark.FlatListBenchmarkParams;
+  exports.useLayoutState = _mod5283.useLayoutState;
+  exports.useRecyclingState = _mod5331.useRecyclingState;
+  exports.useMappingHelper = _mod5332.useMappingHelper;
+  exports.JSFPSMonitor = JSFPSMonitor.JSFPSMonitor;
+  exports.JSFPSResult = JSFPSMonitor.JSFPSResult;
+  exports.autoScroll = Cancellable.autoScroll;
+  exports.Cancellable = Cancellable.Cancellable;
+  exports.ViewToken = _modDef5333;
+  exports.useFlashListContext = _mod5284.useFlashListContext;
+  exports.LayoutCommitObserver = LayoutCommitObserver.LayoutCommitObserver;
+  exports.LayoutCommitObserverProps = LayoutCommitObserver.LayoutCommitObserverProps;
+} else {
+  const _Error = Error;
+  const error = new Error(ErrorMessages.ErrorMessages.flashListV2OnlySupportsNewArchitecture);
+  throw error;
+}

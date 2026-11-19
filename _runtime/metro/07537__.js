@@ -1,35 +1,13 @@
 // _runtime/metro/07537__.js
-import _mod7538 from "07538__.js";
-import get_ActivityIndicator from "00017__.js";
+import registerAsset from "01119__.js";
 
-({ NativeModules: c3, Platform, TurboModuleRegistry: closure_4, requireNativeComponent: hasOwnProperty } = get_ActivityIndicator);
-
-export () => {
-  try {
-    return hasOwnProperty("RNDatePicker");
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod7538.getInstallationErrorMessage());
-    }
-  }
-}
-export () => {
-  try {
-    if (React4) {
-      RNDatePicker = React4.get("RNDatePicker");
-    } else {
-      RNDatePicker = RNDatePicker.RNDatePicker;
-    }
-    return RNDatePicker;
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod7538.getInstallationErrorMessage());
-    }
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "50398ad483a7c69d1d35b3cb9c9b7bde",
+  name: "ForumSpoilerIcon",
+  type: "png",
+});

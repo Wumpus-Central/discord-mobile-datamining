@@ -1,6 +1,6 @@
 // _runtime/metro/11435__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod11393 from "11393__.js";
+import AbstractTimeExpressionParser from "../11367_AbstractTimeExpressionParser.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -26,27 +26,12 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class FRMergeDateRangeRefiner {
+class PTTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, FRMergeDateRangeRefiner);
+    tmp = closure_0(this, PTTimeExpressionParser);
     tmp2 = c2;
-    obj = c2(FRMergeDateRangeRefiner);
+    obj = c2(PTTimeExpressionParser);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -61,14 +46,22 @@ class FRMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FRMergeDateRangeRefiner;
-_inherits(FRMergeDateRangeRefiner, fn(_mod11393).default);
+_classCallCheck = PTTimeExpressionParser;
+_inherits(PTTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(à|a|au|-)\s*$/i;
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:ao?|\u00E0s?|das|da|de|do)\\s*)?";
   },
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:o)?|\\?)\\s*";
+    },
+  },
+];
 
-export default _createClass(FRMergeDateRangeRefiner, items);
+export default _createClass(PTTimeExpressionParser, items);

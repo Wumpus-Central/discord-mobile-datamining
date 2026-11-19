@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/emojis/default_emojis",
+  httpServerLocation: "/assets/modules/premium/promotions/third_party/code_blurple",
   scales: [1],
-  hash: "42fa967858ccf5cd0fc49ce9badfefd4",
-  name: "DefaultEmojis.compiled.messages",
+  hash: "b59878279e93cc37a1ec280690b41dfd",
+  name: "CodeBlurple.compiled.messages",
   type: "jsona",
 });

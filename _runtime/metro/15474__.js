@@ -1,7 +1,10 @@
 // _runtime/metro/15474__.js
-import _mod15472 from "15472__.js";
+import _mod15458 from "15458__.js";
+import _mod15475 from "15475__.js";
 
-let closure_0 = _mod15472({}.toString);
-let closure_1 = _mod15472("".slice);
+let closure_2 = _mod15458({}.hasOwnProperty);
 
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default Object.hasOwn ||
+  function hasOwn(arg0, arg1) {
+    return closure_2(_mod15475(arg0), arg1);
+  };

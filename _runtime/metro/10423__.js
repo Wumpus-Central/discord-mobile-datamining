@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 120,
-  height: 80,
+  httpServerLocation: "/assets/images/native/custom_app_icons/BeanieIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "17353b23aadfbe0d3f7b9982ef6491bf",
-  name: "img_nitro_file_upload",
+  hash: "5ed4f057d69445a6e4a7fd8ca936d32a",
+  name: "BeanieIcon",
   type: "png",
 });

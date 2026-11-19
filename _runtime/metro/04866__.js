@@ -1,3 +1,7 @@
 // _runtime/metro/04866__.js
+const require = globalThis.__r;
 
-export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+for (const key10013 in require("04867__.js")) {
+  arg5[key10013] = require("04867__.js")[key10013];
+  continue;
+}

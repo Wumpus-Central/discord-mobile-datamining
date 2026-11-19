@@ -1,30 +1,17 @@
 // _runtime/metro/05299__.js
-import _mod5300 from "05300__.js";
-
-export default function _unsupportedIterableToArray(str, arg1) {
-  if (str) {
-    if (typeof str === "string") {
-      return _mod5300(str, arg1);
-    } else {
-      const toString = {}.toString;
-      const call = toString.call;
-      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
-      let name = substr;
-      if (tmp3) {
-        name = str.constructor.name;
-      }
-      if ("Map" !== name) {
-        if ("Set" !== name) {
-          if ("Arguments" === name) {
-            let arr2 = _mod5300(str, arg1);
-          }
-        }
-        return arr2;
-      }
-      const _Array = Array;
-      arr2 = Array.from(str);
-      const arr = typeof call === "unknown" ? toString() : call(str);
-      tmp3 = "Object" === substr && "Object".constructor;
-    }
+function _setPrototypeOf(arg0, arg1) {
+  if (Object.setPrototypeOf) {
+    const _Object = Object;
+    exports = setPrototypeOf.bind();
+  } else {
+    exports = (arg0, arg1) => {
+      arg0.__proto__ = arg1;
+      return arg0;
+    };
   }
+  module.exports = exports;
+  return exports(arg0, arg1);
 }
+let exports = _setPrototypeOf;
+
+export default _setPrototypeOf;

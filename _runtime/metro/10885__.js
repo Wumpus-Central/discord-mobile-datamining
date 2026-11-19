@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "f9f36b748bcc7c6393cf056bc860ba1e",
-  name: "HandRequestSpeakIcon",
+  hash: "31757ea45ee4fb60779fd700caf7d93e",
+  name: "ic_nitro_wheel_gradient_purple",
   type: "png",
 });

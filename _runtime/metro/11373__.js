@@ -1,13 +1,11 @@
 // _runtime/metro/11373__.js
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _mod11374 from "11374__.js";
-import AbstractParserWithWordBoundaryChecking from "../11382_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,77 +24,52 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(?:(?:within|in|for)\\s*)?(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
-    _mod11374.TIME_UNITS_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-const regExp1 = new RegExp(
-  "(?:within|in|for)\\s*(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
-    _mod11374.TIME_UNITS_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-const regExp2 = new RegExp(
-  "(?:within|in|for)\\s*(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
-    _mod11374.TIME_UNITS_NO_ABBR_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-class ENTimeUnitWithinFormatParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, ENTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp = __esModule;
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp;
+  };
+}
+class ENMergeDateTimeRefiner {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ENMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(ENMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = ENMergeDateTimeRefiner;
+_inherits(ENMergeDateTimeRefiner, fn(_mod11374).default);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern(option) {
-    if (this.strictMode) {
-      let tmp2 = regExp2;
-    } else {
-      tmp2 = option.option.forwardDate ? regExp : regExp1;
-    }
-    return tmp2;
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(T|at|after|before|on|of|,|-|\\.|\u2219|:)?\\s*$");
+    return regExp;
   },
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      if (str.match(/^for\s*the\s*\w+/)) {
-        return null;
-      } else {
-        const parseDurationResult = ENTimeUnitWithinFormatParser(11374).parseDuration(arg1[1]);
-        let relativeFromReference = null;
-        if (parseDurationResult) {
-          const ParsingComponents = ENTimeUnitWithinFormatParser(11378).ParsingComponents;
-          relativeFromReference = ParsingComponents.createRelativeFromReference(
-            reference.reference,
-            parseDurationResult,
-          );
-        }
-        return relativeFromReference;
-      }
-      str = arg1[0];
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(ENTimeUnitWithinFormatParser, items);
+export default _createClass(ENMergeDateTimeRefiner, items);

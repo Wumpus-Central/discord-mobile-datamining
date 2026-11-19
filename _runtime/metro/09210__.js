@@ -1,19 +1,13 @@
 // _runtime/metro/09210__.js
-const require = globalThis.__r;
+import registerAsset from "01119__.js";
 
-for (const key10013 in require("RNIapAmazonModule")) {
-  arg5[key10013] = require("RNIapAmazonModule")[key10013];
-  continue;
-}
-for (const key10017 in require("09203__.js")) {
-  arg5[key10017] = require("09203__.js")[key10017];
-  continue;
-}
-for (const key10021 in require("09204__.js")) {
-  arg5[key10021] = require("09204__.js")[key10021];
-  continue;
-}
-for (const key10025 in require("09211__.js")) {
-  arg5[key10025] = require("09211__.js")[key10025];
-  continue;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 51,
+  height: 36,
+  scales: [2, 3],
+  hash: "6a44051f0a6b82f14b7f681cb1af8576",
+  name: "img_classic_mobile",
+  type: "png",
+});

@@ -1,13 +1,13 @@
 // _runtime/metro/09111__.js
-import _mod19 from "00019__.js";
+import registerAsset from "01119__.js";
 
-const useRef = _mod19.useRef;
-let closure_1 = {};
-
-export default function useLazyValue(fn) {
-  const tmp = useRef(closure_1);
-  if (tmp.current === closure_1) {
-    tmp.current = fn();
-  }
-  return tmp.current;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 302,
+  height: 42,
+  scales: [2, 3],
+  hash: "2192040384b5c0bcacd48b43d2555bec",
+  name: "img_plan_activated_light",
+  type: "png",
+});

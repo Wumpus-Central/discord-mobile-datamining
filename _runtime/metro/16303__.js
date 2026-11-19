@@ -1,19 +1,24 @@
 // _runtime/metro/16303__.js
-import _mod16244 from "16244__.js";
+import keys2 from "../16231_keys2.js";
+import _mod16235 from "16235__.js";
 
-const Ident = _mod16244.TYPE.Ident;
-const obj = {
-  name: "Identifier",
-  structure: { name: String },
+const Percentage = _mod16235.TYPE.Percentage;
+let obj = {
+  name: "Percentage",
+  structure: { value: String },
   parse() {
-    return {
-      type: "Identifier",
-      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
-      name: this.consume(Ident),
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Percentage);
+    const obj2 = {
+      type: "Percentage",
+      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
+      value: this.scanner.source.substring(tokenStart, keys2.consumeNumber(this.scanner.source, tokenStart)),
     };
+    return obj2;
   },
-  generate(name) {
-    this.chunk(name.name);
+  generate(value) {
+    this.chunk(value.value);
+    this.chunk("%");
   },
 };
 

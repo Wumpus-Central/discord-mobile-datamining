@@ -1,19 +1,46 @@
 // _runtime/metro/15471__.js
-import _mod15469 from "15469__.js";
+import _mod15451 from "15451__.js";
 import _mod15472 from "15472__.js";
-import _mod15474 from "15474__.js";
 
-let fn = Object;
-let closure_3 = _mod15472("".split);
-if (_mod15469(() => !Object("z").propertyIsEnumerable(0))) {
-  fn = (arg0) => {
-    if ("String" === _mod15474(arg0)) {
-      let tmp2 = closure_3(arg0, "");
-    } else {
-      tmp2 = Object(arg0);
-    }
-    return tmp2;
-  };
+let tmp = _mod15451.process && _mod15451.process.versions;
+if (!tmp) {
+  tmp = _mod15451.Deno && _mod15451.Deno.version;
+  const tmp2 = _mod15451.Deno && _mod15451.Deno.version;
+}
+let str = tmp;
+if (tmp) {
+  str = tmp.v8;
+}
+let tmp3;
+if (str) {
+  const parts = str.split(".");
+  if (parts[0] <= 0) {
+    let num3 = +parts[0] + parts[1];
+  } else {
+    num3 = 1;
+  }
+  tmp3 = num3;
+  let tmp4 = parts;
+}
+let _module = !tmp3;
+if (!tmp3) {
+  _module = _mod15472;
+}
+if (_module) {
+  const match = _mod15472.match(/Edge\/(\d+)/);
+  let tmp8 = !match;
+  if (match) {
+    tmp8 = match[1] >= 74;
+  }
+  _module = tmp8;
+  tmp4 = match;
+}
+if (_module) {
+  _module = _mod15472.match(/Chrome\/(\d+)/);
+  tmp4 = _module;
+}
+if (_module) {
+  tmp3 = +tmp4[1];
 }
 
-export default fn;
+export default tmp3;

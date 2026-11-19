@@ -1,14 +1,16 @@
 // _runtime/metro/16310__.js
-let obj = {
-  name: "Operator",
+import _mod16235 from "16235__.js";
+
+const String = _mod16235.TYPE.String;
+const obj = {
+  name: "String",
   structure: { value: String },
   parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.scanner.next();
-    const obj = { type: "Operator", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
-    const scanner = this.scanner;
-    obj.value = scanner.substrToCursor(tokenStart);
-    return obj;
+    return {
+      type: "String",
+      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
+      value: this.consume(String),
+    };
   },
   generate(value) {
     this.chunk(value.value);

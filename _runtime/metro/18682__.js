@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "07694532fe5b5d77fc59f6774ff08cb4",
-  name: "WidgetsIcon",
-  type: "png",
+  httpServerLocation: "/assets/modules/conjure/home/images",
+  width: 640,
+  height: 360,
+  scales: [1],
+  hash: "c0003a72b8ff1b39e6b2cebe0eda12b2",
+  name: "conjure-home-flappy",
+  type: "svg",
 });

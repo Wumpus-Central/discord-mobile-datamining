@@ -1,29 +1,28 @@
 // _runtime/metro/15453__.js
-const require = globalThis.__r;
+import _mod15454 from "15454__.js";
+import _mod15456 from "15456__.js";
+import text from "../15463_text.js";
+import _mod15474 from "15474__.js";
+import _mod15484 from "15484__.js";
+import _mod15486 from "15486__.js";
+import _mod15488 from "15488__.js";
+import _mod15489 from "15489__.js";
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export function getSupportedNumberingSystems(locale) {
-  _require = locale;
-  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
-  return numberingSystemNames.filter((item) =>
-    (function isSupportedNumberingSystem(item, arg1) {
-      let str = arg1;
-      if (undefined === arg1) {
-        str = "en";
+if (!_mod15454) {
+  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
+    const tmp3 = _mod15456(arg0);
+    const tmp4 = text(arg1);
+    if (!_mod15486) {
+      if (_mod15474(tmp3, tmp4)) {
+        const tmpResult = _mod15488;
+        return tmpResult(!_mod15484(_mod15489.f, tmp3, tmp4), tmp3[tmp4]);
       }
+    } else {
       try {
-        const concat = "".concat;
-        const combined = "".concat(str, "-u-nu-");
-        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
-        if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
-          if ("123" === memoizedNumberFormat.format(123)) {
-            return false;
-          }
-        }
-        return true;
+        return getOwnPropertyDescriptor(tmp3, tmp4);
       } catch (err) {}
-    })(item, closure_0),
-  );
+    }
+  };
 }
+
+export const f = getOwnPropertyDescriptor;

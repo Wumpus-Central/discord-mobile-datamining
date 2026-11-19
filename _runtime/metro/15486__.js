@@ -1,11 +1,19 @@
 // _runtime/metro/15486__.js
-import _mod15465 from "15465__.js";
+import _mod15455 from "15455__.js";
+import element from "../15487_element.js";
+import getOwnPropertyDescriptor from "15454__.js";
 
-const tmp = _mod15465.navigator && _mod15465.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod15455(
+    () =>
+      7 !==
+      Object.defineProperty(element("div"), "a", {
+        get() {
+          return 7;
+        },
+      }).a,
+  );
 }
 
-export default str;
+export default tmp2;

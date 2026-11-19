@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/wumpus",
-  width: 84,
-  height: 66,
-  scales: [1],
-  hash: "540091c70b333c8b8937ba1627138192",
-  name: "wumpus-pikachu",
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 343,
+  height: 112,
+  scales: [2, 3],
+  hash: "a236f8cc27bca615087c819a6d4db4e6",
+  name: "img_clouds_header_tier_2",
   type: "png",
 });

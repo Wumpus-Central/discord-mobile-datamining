@@ -1,12 +1,19 @@
 // _runtime/metro/05198__.js
-import ComposedGestureName from "../05145_ComposedGestureName.js";
-import _mod5199 from "05199__.js";
+import _modDef5195 from "05195__.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const jsx = fn(21).jsx;
 
-export function useCompetingGestures() {
-  items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod5199.useComposedGesture.apply(items1);
+export default function _default(delayLongPress) {
+  let num = delayLongPress.delayLongPress;
+  if (num === undefined) {
+    num = 600;
+  }
+  let extraButtonProps = delayLongPress.extraButtonProps;
+  if (extraButtonProps === undefined) {
+    extraButtonProps = { rippleColor: "transparent", exclusive: true };
+  }
+  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(_modDef5195, { delayLongPress: num, extraButtonProps });
 }

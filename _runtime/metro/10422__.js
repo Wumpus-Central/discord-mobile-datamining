@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 120,
-  height: 80,
+  httpServerLocation: "/assets/images/native/custom_app_icons/CherryBlossomIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "0e96bcd2b2f1118c31b249938bd6d191",
-  name: "img_nitro_animated_avatar",
+  hash: "0958a3140b1354fdc2a2c5ce3e4f3233",
+  name: "CherryBlossomIcon",
   type: "png",
 });

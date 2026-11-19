@@ -1,13 +1,4 @@
 // _runtime/metro/16338__.js
-const obj = {
-  parse: {
-    prelude() {
-      return this.createSingleNodeList(this.SelectorList());
-    },
-    block() {
-      return this.Block(true);
-    },
-  },
-};
+import _mod16339 from "16339__.js";
 
-export default obj;
+export default _mod16339;

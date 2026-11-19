@@ -1,101 +1,74 @@
 // _runtime/metro/15264__.js
-import _mod15236 from "15236__.js";
 import _mod15237 from "15237__.js";
-import _mod15241 from "15241__.js";
+import _slicedToArray from "00032__.js";
 
-export default (num, arg1) => {
-  if (num instanceof _mod15237) {
-    return num;
-  } else {
-    let StringResult = num;
-    if (typeof num === "number") {
-      const _String = String;
-      StringResult = String(num);
-    }
-    if (typeof StringResult !== "string") {
-      return null;
+const require = globalThis.__r;
+
+export default (arr, arg1, arg2) => {
+  let tmp = arg1;
+  _require = arg2;
+  items = [];
+  let tmp2 = null;
+  let tmp3 = null;
+  const sorted = arr.sort((arg0, arg1) => _mod15237(arg0, arg1, closure_0));
+  for (const item10017 of sorted) {
+    if (require("15254__.js")(item10017, tmp, arg2)) {
+      tmp3 = item10017;
+      if (!tmp2) {
+        tmp2 = item10017;
+      }
     } else {
-      let obj = arg1;
-      if (!arg1) {
-        obj = {};
+      if (tmp3) {
+        let items1 = [tmp2];
+        items1[1] = tmp3;
+        arr = items.push(items1);
       }
-      if (obj.rtl) {
-        const safeRe2 = _mod15241.safeRe;
-        const t2 = _mod15241.t;
-        if (obj.includePrerelease) {
-          let obj2 = safeRe2[t2.COERCERTLFULL];
-        } else {
-          obj2 = safeRe2[t2.COERCERTL];
+      tmp3 = null;
+      tmp2 = null;
+    }
+    continue;
+  }
+  if (tmp2) {
+    const items2 = [tmp2, null];
+    items.push(items2);
+  }
+  const items3 = [];
+  while (tmp15 !== undefined) {
+    [first, tmp21] = tmp16;
+    let tmp20 = first;
+    let tmp22 = tmp21;
+    if (first === tmp21) {
+      let arr3 = items3.push(tmp20);
+    } else {
+      if (!tmp22) {
+        if (tmp20 === sorted[0]) {
+          let arr4 = items3.push("*");
         }
-        let match = obj2.exec(StringResult);
-        let tmp6 = null;
-        let tmp8 = null;
-        if (match) {
-          while (true) {
-            let tmp10 = tmp6;
-            let tmp11 = tmp6;
-            if (tmp6) {
-              tmp11 = match.index + match[0].length === tmp10.index + tmp10[0].length;
-            }
-            if (!tmp11) {
-              tmp10 = match;
-            }
-            obj2.lastIndex = match.index + match[1].length + match[2].length;
-            let match1 = obj2.exec(StringResult);
-            tmp8 = tmp10;
-            if (!match1) {
-              break;
-            } else {
-              match = match1;
-              tmp6 = tmp10;
-              if (!tmp10) {
-                continue;
-              } else {
-                match = match1;
-                tmp6 = tmp10;
-                tmp8 = tmp10;
-                if (tmp10.index + tmp10[0].length === StringResult.length) {
-                  break;
-                }
-              }
-              continue;
-            }
-          }
-        }
-        obj2.lastIndex = -1;
-        let match2 = tmp8;
-      } else {
-        const safeRe = _mod15241.safeRe;
-        const t = _mod15241.t;
-        if (obj.includePrerelease) {
-          let tmp3 = safeRe[t.COERCEFULL];
-        } else {
-          tmp3 = safeRe[t.COERCE];
-        }
-        match2 = StringResult.match(tmp3);
       }
-      if (null === match2) {
-        return null;
+      if (tmp22) {
+        if (tmp20 === sorted[0]) {
+          let _HermesInternal3 = HermesInternal;
+          let arr5 = items3.push("<=" + tmp22);
+        } else {
+          let _HermesInternal2 = HermesInternal;
+          let arr6 = items3.push("" + tmp20 + " - " + tmp22);
+        }
       } else {
-        let str2 = "";
-        if (obj.includePrerelease) {
-          str2 = "";
-          if (match2[5]) {
-            const _HermesInternal = HermesInternal;
-            str2 = "-" + match2[5];
-          }
-        }
-        let str4 = "";
-        if (obj.includePrerelease) {
-          str4 = "";
-          if (match2[6]) {
-            const _HermesInternal2 = HermesInternal;
-            str4 = "+" + match2[6];
-          }
-        }
-        const _HermesInternal3 = HermesInternal;
-        return _mod15236("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
+        let _HermesInternal = HermesInternal;
+        let arr13 = items3.push(">=" + tmp20);
       }
     }
+    continue;
   }
+  const joined = items3.join(" || ");
+  if (typeof tmp.raw === "string") {
+    let raw = tmp.raw;
+  } else {
+    const _String = String;
+    raw = String(tmp);
+  }
+  if (joined.length < raw.length) {
+    tmp = joined;
+  }
+  return tmp;
 };

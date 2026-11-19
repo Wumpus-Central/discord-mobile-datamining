@@ -1,13 +1,16 @@
 // _runtime/metro/08477__.js
-import registerAsset from "01119__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3, 4],
-  hash: "abb394aed71d149627aa4dc597482f89",
-  name: "stack-nav-back",
-  type: "png",
-});
+export function createAbortError(signal) {
+  let aborted;
+  if (signal != null) {
+    aborted = signal.aborted;
+  }
+  if (aborted) {
+    if (undefined !== signal.reason) {
+      return signal.reason;
+    }
+  }
+  const error = new Error("The operation was aborted.");
+  error.name = "AbortError";
+  return error;
+}

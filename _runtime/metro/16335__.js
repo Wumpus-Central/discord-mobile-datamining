@@ -1,11 +1,4 @@
 // _runtime/metro/16335__.js
-const obj = {
-  parse: {
-    prelude: null,
-    block() {
-      return this.Block(true);
-    },
-  },
-};
+import _mod16336 from "16336__.js";
 
-export default obj;
+export default _mod16336;

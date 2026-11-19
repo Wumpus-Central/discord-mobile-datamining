@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 49,
-  height: 48.5,
+  httpServerLocation: "/assets/images/native/custom_app_icons/CircuitIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "6922badb2f007833b3becc6f00bcb5a4",
-  name: "img_custom_app_icons",
+  hash: "68832d737c55ed046c40e8d11571a54e",
+  name: "CircuitIcon",
   type: "png",
 });

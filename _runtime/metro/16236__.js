@@ -1,56 +1,55 @@
 // _runtime/metro/16236__.js
-import dumpMapSyntax from "../16259_dumpMapSyntax.js";
-import _mod16278 from "16278__.js";
+import _mod16235 from "16235__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function createSyntax(types) {
-  _require = types;
-  const arr = require("16249__.js")(types);
-  const tmp = require("16237__.js")(types);
-  let tmp3 = require("16258__.js")(arr);
-  obj = {
-    List: require("16246__.js"),
-    SyntaxError: require("sourceFragment"),
-    TokenStream: require("TokenStream"),
-    Lexer: require("dumpMapSyntax"),
-    vendorPrefix: require("16273__.js").vendorPrefix,
-    keyword: require("16273__.js").keyword,
-    property: require("16273__.js").property,
-    isCustomProperty: require("16273__.js").isCustomProperty,
-    definitionSyntax: require("16276__.js"),
-    lexer: null,
-    createLexer(arg0) {
-      return new dumpMapSyntax(arg0, obj, obj.lexer.structure);
-    },
-    tokenize: require("16244__.js"),
-    parse: tmp,
-    walk: arr,
-    generate: require("processChildren")(types),
-    find: arr.find,
-    findLast: arr.findLast,
-    findAll: arr.findAll,
-    clone: require("16277__.js"),
-    fromPlainObject: tmp3.fromPlainObject,
-    toPlainObject: tmp3.toPlainObject,
-    createSyntax(arg0) {
-      return createSyntax(types(obj[12])({}, arg0));
-    },
-    fork(fn) {
-      const tmp3 = _mod16278({}, closure_0);
-      if (typeof fn === "function") {
-        const _Object = Object;
-        let tmp6 = fn(tmp3, Object.assign);
+const WhiteSpace = _mod16235.TYPE.WhiteSpace;
+const Comment = _mod16235.TYPE.Comment;
+
+export default function readSequence(recognizer) {
+  const self = this;
+  const list = this.createList();
+  const obj = { recognizer, space: null, ignoreWS: false, ignoreWSAfter: false };
+  const scanner = this.scanner;
+  scanner.skipSC();
+  if (!this.scanner.eof) {
+    while (true) {
+      let tokenType = self.scanner.tokenType;
+      if (Comment === tokenType) {
+        let iter2 = self.scanner;
+        let nextResult = iter2.next();
       } else {
-        tmp6 = _mod16278(tmp3, fn);
+        if (WhiteSpace === tokenType) {
+          if (obj.ignoreWS) {
+            let iter = self.scanner;
+            let nextResult1 = iter.next();
+          } else {
+            obj.space = self.WhiteSpace();
+          }
+        } else {
+          let getNode = recognizer.getNode;
+          let call = getNode.call;
+          let tmp3 = typeof call === "unknown" ? getNode(obj) : call(self, obj);
+          if (undefined === tmp3) {
+            break;
+          } else {
+            if (null !== obj.space) {
+              let arr = list.push(obj.space);
+              obj.space = null;
+            }
+            let arr3 = list.push(tmp3);
+            if (obj.ignoreWSAfter) {
+              obj.ignoreWSAfter = false;
+              obj.ignoreWS = true;
+            } else {
+              obj.ignoreWS = false;
+            }
+          }
+        }
+        break;
       }
-      return createSyntax(tmp6);
+      if (self.scanner.eof) {
+        break;
+      }
     }
-  };
-  const obj2 = { generic: true, types: types.types, atrules: types.atrules, properties: types.properties, node: types.node };
-  const tmp2 = require("processChildren")(types);
-  obj.lexer = new require("dumpMapSyntax")({ generic: true, types: types.types, atrules: types.atrules, properties: types.properties, node: types.node }, obj);
-  return obj;
+  }
+  return list;
 }
-
-export (arg0) => createSyntax(_mod16278({}, arg0))

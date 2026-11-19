@@ -1,9 +1,28 @@
 // _runtime/metro/05210__.js
-import _mod17 from "00017__.js";
-import 00065__ from "00065__.js";
+import noop from "00019__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { pointerEvents: true, moduleId: true, unstable_forceActive: true } };
+({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
 
-export default module_65.get("RNGestureHandlerRootView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export function useStableCallback(current) {
+  React3(undefined);
+  React2(() => {
+    closure_1.current = current;
+  });
+  duration(
+    () => () => {
+      ref.current = undefined;
+    },
+    [],
+  );
+  return React(() => {
+    items = [...arguments];
+    current = ref.current;
+    let applyResult;
+    if (current != null) {
+      const items1 = [];
+      HermesBuiltin.arraySpread(items, 0);
+      applyResult = HermesBuiltin.apply(items1, ref);
+    }
+    return applyResult;
+  }, []);
+}

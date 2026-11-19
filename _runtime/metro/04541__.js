@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Nvbm5lY3RlZF9hcHBz",
+  httpServerLocation: "/assets/modules/quests/native",
   scales: [1],
-  hash: "a287541f807ae1c930becb7113f9af01",
-  name: "bg.messages.a287541f807ae1c930becb7113f9af01.compiled.messages",
+  hash: "0e3c99f4304b88d181459bf694c28c1f",
+  name: "PlayableReward.compiled.messages",
   type: "jsona",
 });

@@ -1,22 +1,34 @@
 // _runtime/metro/16302__.js
-import _mod16244 from "16244__.js";
+import _mod16235 from "16235__.js";
 
-const Hash = _mod16244.TYPE.Hash;
-let obj = {
-  name: "Hash",
-  structure: { value: String },
-  parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(Hash);
-    const obj = { type: "Hash", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
-    const scanner = this.scanner;
-    obj.value = scanner.substrToCursor(tokenStart + 1);
-    return obj;
+const LeftParenthesis = _mod16235.TYPE.LeftParenthesis;
+const RightParenthesis = _mod16235.TYPE.RightParenthesis;
+const obj = {
+  name: "Parentheses",
+  structure: null,
+  parse(call, arg1) {
+    const self = this;
+    this.eat(LeftParenthesis);
+    call = call.call;
+    if (!self.scanner.eof) {
+      self.eat(RightParenthesis);
+    }
+    const element = {
+      type: "Parentheses",
+      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+      children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
+    };
+    return element;
   },
-  generate(value) {
-    this.chunk("#");
-    this.chunk(value.value);
+  generate(arg0) {
+    this.chunk("(");
+    this.children(arg0);
+    this.chunk(")");
   },
 };
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

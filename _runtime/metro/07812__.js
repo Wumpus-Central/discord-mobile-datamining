@@ -1,14 +1,12 @@
 // _runtime/metro/07812__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7813 from "07813__.js";
-import _modDef7815 from "07815__.js";
+import _modDef7785 from "07785__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const FeBlend = fn;
+const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeBlend {
+class FeTurbulence {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeBlend);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeBlend);
-    tmp3 = closure_4;
-    if (metroImportDefault()) {
+    tmp = c2(this, FeTurbulence);
+    tmp2 = closure_4;
+    obj = closure_4(FeTurbulence);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,36 +45,18 @@ class FeBlend {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeBlend, _modDef7815);
+_inherits(FeTurbulence, _modDef7785);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged = Object.assign(FeBlend(7814).extractFilter(this.props));
-    const obj2 = FeBlend(7814);
-    const merged1 = Object.assign(FeBlend(7814).extractIn(this.props));
-    const obj3 = FeBlend(7814);
-    const merged2 = Object.assign(FeBlend(7814).extractFeBlend(this.props));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const result = FeTurbulence(7762).warnUnimplementedFilter();
+    return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeBlend, items);
-importDefaultResultResult.displayName = "FeBlend";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.mode = "normal";
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

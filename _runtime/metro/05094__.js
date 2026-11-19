@@ -1,94 +1,96 @@
 // _runtime/metro/05094__.js
-import GestureDetectorType from "../05095_GestureDetectorType.js";
-import NativeDetector2 from "../05141_NativeDetector.js";
-import VirtualDetector from "../05166_VirtualDetector.js";
-import transformTapProps from "../05169_transformTapProps.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import noop from "00019__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-const require = globalThis.__r;
-
-require = fn;
-let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
-const useEffect = fn(19).useEffect;
-const jsx = fn(21).jsx;
-
-export default function createNativeWrapper(displayName, arg1) {
-  _require = displayName;
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  let Native = Intercepting;
-  if (Intercepting === undefined) {
-    Native = require("GestureDetectorType").GestureDetectorType.Native;
-  }
-  let str;
-  if (displayName != null) {
-    str = displayName.displayName;
-  }
-  if (!str) {
-    let name;
-    if (displayName != null) {
-      const render = displayName.render;
-      if (render != null) {
-        name = render.name;
-      }
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    str = name;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+let items = [
+  {
+    code: "(function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};})",
+  },
+];
+[tmp4] = items;
+function changeEventCalculator(arg0, arg1) {
+  if (undefined === arg1) {
+    ({ x: obj2.changeX, y: obj2.changeY } = arg0);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
+  } else {
+    obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
   }
-  if (!str) {
-    let tmp4 = typeof displayName === "string";
-    if (typeof displayName === "string") {
-      tmp4 = displayName;
+  const merged = Object.assign(arg0);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__workletHash = 8313798372423;
+changeEventCalculator.__initData = tmp4;
+class HoverGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, HoverGesture);
+    tmp2 = c2;
+    obj = c2(HoverGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
     }
-    str = tmp4;
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "HoverGestureHandler";
+    return tmp3Result;
   }
-  if (!str) {
-    str = "ComponentWrapper";
-  }
-  class ComponentWrapper {
-    constructor(arg0) {
-      closure_0 = displayName;
-      onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER = displayName.onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      closure_1 = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      keys = Object.keys(closure_3(displayName, closure_2));
-      obj = { gestureHandlerProps: null, childProps: null };
-      obj1 = {};
-      merged = Object.assign(closure_1);
-      obj.gestureHandlerProps = obj1;
-      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
-      reduced = keys.reduce(/* F124543 */ function() { ... }, obj);
-      ({ gestureHandlerProps, childProps } = reduced);
-      if (undefined === gestureHandlerProps.disableReanimated) {
-        flag = true;
-        gestureHandlerProps.disableReanimated = true;
-      }
-      tmp3 = closure_0;
-      tmp4 = closure_1;
-      obj3 = closure_0(closure_1[5]);
-      nativeGesture = obj3.useNativeGesture(gestureHandlerProps);
-      closure_2 = nativeGesture;
-      items = [, ];
-      items[0] = nativeGesture;
-      items[1] = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      tmp6 = useEffect(/* F124544 */ function() { ... }, items);
-      tmp7 = Native;
-      if (Native === closure_0(closure_1[3]).GestureDetectorType.Intercepting) {
-        NativeDetector = tmp3(tmp4[3]).InterceptingGestureDetector;
-      } else if (tmp7 === tmp3(tmp4[3]).GestureDetectorType.Virtual) {
-        NativeDetector = tmp3(tmp4[6]).VirtualDetector;
-      } else {
-        NativeDetector = tmp3(tmp4[7]).NativeDetector;
-      }
-      obj6 = { gesture: nativeGesture, children: null };
-      obj7 = {};
-      merged1 = Object.assign(childProps);
-      obj7.ref = displayName.ref;
-      obj6.children = jsx(closure_0, obj7);
-      return jsx(NativeDetector, obj6);
-    }
-  }
-  ComponentWrapper.displayName = str;
-  return ComponentWrapper;
+}
+_classCallCheck = HoverGesture;
+_inherits(HoverGesture, fn(5072).ContinousBaseGesture);
+const entry = {
+  key: "effect",
+  value: function effect(hoverEffect) {
+    this.config.hoverEffect = hoverEffect;
+    return this;
+  },
 };
+const items1 = [
+  entry,
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [arg0];
+      return fn(items);
+    },
+  },
+];
+
+export const hoverGestureHandlerProps = ["hoverEffect"];
+export const HoverGesture = _createClass(HoverGesture, items1);

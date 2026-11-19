@@ -1,63 +1,73 @@
 // _runtime/metro/16320__.js
-import _mod16244 from "16244__.js";
+import _mod16235 from "16235__.js";
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, null, false);
-}
-const WhiteSpace = _mod16244.TYPE.WhiteSpace;
-const Comment = _mod16244.TYPE.Comment;
-const AtKeyword = _mod16244.TYPE.AtKeyword;
-const CDO = _mod16244.TYPE.CDO;
-const CDC = _mod16244.TYPE.CDC;
-const obj = {
-  name: "StyleSheet",
-  structure: null,
-  parse() {
-    const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      do {
-        let tokenType = self.scanner.tokenType;
-        if (WhiteSpace === tokenType) {
-          let iter2 = self.scanner;
-          let nextResult = iter2.next();
-        } else {
-          if (Comment === tokenType) {
-            let source = self.scanner.source;
-            if (33 !== source.charCodeAt(self.scanner.tokenStart + 2)) {
-              let iter = self.scanner;
-              let nextResult1 = iter.next();
-            } else {
-              let CommentResult = self.Comment();
-            }
-          } else if (CDO === tokenType) {
-            CommentResult = self.CDO();
-          } else if (CDC === tokenType) {
-            CommentResult = self.CDC();
-          } else if (AtKeyword === tokenType) {
-            CommentResult = self.parseWithFallback(self.Atrule, consumeRaw);
-          } else {
-            CommentResult = self.parseWithFallback(self.Rule, consumeRaw);
-          }
-          let arr = list.push(CommentResult);
-        }
-      } while (!self.scanner.eof);
+const Ident = _mod16235.TYPE.Ident;
+const String = _mod16235.TYPE.String;
+const Number = _mod16235.TYPE.Number;
+const Function = _mod16235.TYPE.Function;
+const Url = _mod16235.TYPE.Url;
+const Hash = _mod16235.TYPE.Hash;
+const Dimension = _mod16235.TYPE.Dimension;
+const Percentage = _mod16235.TYPE.Percentage;
+const LeftParenthesis = _mod16235.TYPE.LeftParenthesis;
+const LeftSquareBracket = _mod16235.TYPE.LeftSquareBracket;
+const Comma = _mod16235.TYPE.Comma;
+const Delim = _mod16235.TYPE.Delim;
+
+export default function defaultRecognizer(recognizer) {
+  const self = this;
+  const tokenType = this.scanner.tokenType;
+  if (Hash === tokenType) {
+    return self.Hash();
+  } else if (Comma === tokenType) {
+    recognizer.space = null;
+    recognizer.ignoreWSAfter = true;
+    return self.Operator();
+  } else if (LeftParenthesis === tokenType) {
+    return self.Parentheses(self.readSequence, recognizer.recognizer);
+  } else if (LeftSquareBracket === tokenType) {
+    return self.Brackets(self.readSequence, recognizer.recognizer);
+  } else if (String === tokenType) {
+    return self.String();
+  } else if (Dimension === tokenType) {
+    return self.Dimension();
+  } else if (Percentage === tokenType) {
+    return self.Percentage();
+  } else if (Number === tokenType) {
+    return self.Number();
+  } else if (Function === tokenType) {
+    const obj3 = _mod16235;
+    if (obj3.cmpStr(self.scanner.source, self.scanner.tokenStart, self.scanner.tokenEnd, "url(")) {
+      let UrlResult = self.Url();
+    } else {
+      UrlResult = self.Function(self.readSequence, recognizer.recognizer);
     }
-    const element = {
-      type: "StyleSheet",
-      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-      children: list,
-    };
-    return element;
-  },
-  generate(arg0) {
-    this.children(arg0);
-  },
-  walkContext: "stylesheet",
-};
-const obj2 = { children: null };
-const items = [["Comment", "CDO", "CDC", "Atrule", "Rule", "Raw"]];
-obj2.children = items;
-obj.structure = obj2;
-
-export default obj;
+    return UrlResult;
+  } else if (Url === tokenType) {
+    return self.Url();
+  } else if (Ident === tokenType) {
+    if (obj.cmpChar(self.scanner.source, self.scanner.tokenStart, 117)) {
+      if (tmp3Result.cmpChar(self.scanner.source, self.scanner.tokenStart + 1, 43)) {
+        let UnicodeRangeResult = self.UnicodeRange();
+      }
+      return UnicodeRangeResult;
+    }
+    UnicodeRangeResult = self.Identifier();
+    obj = _mod16235;
+  } else if (Delim === tokenType) {
+    const source = self.scanner.source;
+    const charCodeAtResult = source.charCodeAt(self.scanner.tokenStart);
+    if (47 !== charCodeAtResult) {
+      if (42 !== charCodeAtResult) {
+        if (43 !== charCodeAtResult) {
+          if (45 !== charCodeAtResult) {
+            if (35 === charCodeAtResult) {
+              self.error("Hex or identifier is expected", self.scanner.tokenStart + 1);
+            }
+          }
+        }
+      }
+    }
+    return self.Operator();
+  }
+}

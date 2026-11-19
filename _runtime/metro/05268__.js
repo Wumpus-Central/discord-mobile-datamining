@@ -1,16 +1,30 @@
 // _runtime/metro/05268__.js
-import _mod17 from "00017__.js";
-import value2 from "../05056_value2.js";
+import _mod5269 from "05269__.js";
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
-const size = {
-  alignSelf: "center",
-  width: (7.5 * value2.WINDOW_WIDTH) / 100,
-  height: 4,
-  borderRadius: 4,
-  backgroundColor: "rgba(0, 0, 0, 0.75)",
-};
-obj.indicator = size;
-
-export const styles = StyleSheet.create(obj);
+export default function _unsupportedIterableToArray(str, arg1) {
+  if (str) {
+    if (typeof str === "string") {
+      return _mod5269(str, arg1);
+    } else {
+      const toString = {}.toString;
+      const call = toString.call;
+      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
+      let name = substr;
+      if (tmp3) {
+        name = str.constructor.name;
+      }
+      if ("Map" !== name) {
+        if ("Set" !== name) {
+          if ("Arguments" === name) {
+            let arr2 = _mod5269(str, arg1);
+          }
+        }
+        return arr2;
+      }
+      const _Array = Array;
+      arr2 = Array.from(str);
+      const arr = typeof call === "unknown" ? toString() : call(str);
+      tmp3 = "Object" === substr && "Object".constructor;
+    }
+  }
+}

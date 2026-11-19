@@ -1,42 +1,19 @@
 // _runtime/metro/09186__.js
-import colorPropType from "../09170_colorPropType.js";
-import _mod9177 from "09177__.js";
-import emptyFunction_mod from "04864__.js";
-import "module_4864";
+const require = globalThis.__r;
 
-const obj = {};
-const module_9177 = Object.assign(_mod9177);
-obj.color = colorPropType;
-obj.fontFamily = emptyFunction.string;
-obj.fontSize = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
-let emptyFunction = emptyFunction_mod;
-obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
-let emptyFunction = emptyFunction_mod;
-obj.fontVariant = emptyFunction.arrayOf(
-  emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]),
-);
-let emptyFunction = emptyFunction_mod;
-const size = { width: emptyFunction.number, height: emptyFunction.number };
-obj.textShadowOffset = emptyFunction.shape(size);
-obj.textShadowRadius = emptyFunction.number;
-obj.textShadowColor = colorPropType;
-obj.letterSpacing = emptyFunction.number;
-obj.lineHeight = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
-let emptyFunction = emptyFunction_mod;
-obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
-obj.includeFontPadding = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
-let emptyFunction = emptyFunction_mod;
-obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
-obj.textDecorationColor = colorPropType;
-let emptyFunction = emptyFunction_mod;
-obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
-let emptyFunction = emptyFunction_mod;
-obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
-
-export default obj;
+for (const key10013 in require("RNIapAmazonModule")) {
+  arg5[key10013] = require("RNIapAmazonModule")[key10013];
+  continue;
+}
+for (const key10017 in require("09179__.js")) {
+  arg5[key10017] = require("09179__.js")[key10017];
+  continue;
+}
+for (const key10021 in require("09180__.js")) {
+  arg5[key10021] = require("09180__.js")[key10021];
+  continue;
+}
+for (const key10025 in require("09187__.js")) {
+  arg5[key10025] = require("09187__.js")[key10025];
+  continue;
+}

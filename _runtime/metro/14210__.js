@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting",
-  width: 132,
-  height: 145,
+  httpServerLocation: "/assets/modules/guild_scheduled_events/native/images",
+  width: 20,
+  height: 20,
   scales: [1, 2, 3],
-  hash: "79c6466cf28ca8f6510b4a84fb435a2a",
-  name: "wumpus_snowglobe_premium120",
+  hash: "e955954d3b070442dffa061da0dc1d1a",
+  name: "ic_clock",
   type: "png",
 });

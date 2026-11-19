@@ -1,5 +1,5 @@
 // _runtime/metro/07825__.js
-import _modDef7815 from "07815__.js";
+import _modDef7770 from "07770__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
@@ -7,7 +7,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeDropShadow = importDefault;
+const Marker = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,16 +26,15 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const jsxProd = fn(21);
-({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-class FeDropShadow {
+const jsx = fn(21).jsx;
+class Marker {
   constructor() {
     self = this;
-    tmp = c2(this, FeDropShadow);
+    tmp = c2(this, Marker);
     tmp2 = closure_4;
-    obj = closure_4(FeDropShadow);
+    obj = closure_4(Marker);
     tmp3 = closure_3;
-    if (closure_8()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,40 +47,47 @@ class FeDropShadow {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeDropShadow, _modDef7815);
+_inherits(Marker, _modDef7770);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const _in = props.in;
-    let str = "SourceGraphic";
-    if (undefined !== _in) {
-      str = _in;
-    }
-    const obj = { children: null };
-    ({ dx, dy, result } = props);
-    items = [
-      timestampProducer(FeDropShadow(7826), { in: str, stdDeviation: props.stdDeviation }),
-      timestampProducer(FeDropShadow(7828), { dx, dy, result: "offsetblur" }),
-      timestampProducer(FeDropShadow(7830), {
-        floodColor: self.props.floodColor,
-        floodOpacity: self.props.floodOpacity,
-      }),
-      timestampProducer(FeDropShadow(7819), { in2: "offsetblur", operator: "in" }),
-    ];
-    const obj3 = { result, children: null };
-    const items1 = [timestampProducer(FeDropShadow(7834), {}), timestampProducer(FeDropShadow(7834), { in: str })];
-    obj3.children = items1;
-    items[4] = metroImportDefault(FeDropShadow(7832), obj3);
-    obj.children = items;
-    return metroImportDefault(noop.Fragment, obj);
+    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
+    const obj2 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const obj = {
+      name: props.id,
+      refX: props.refX,
+      refY: props.refY,
+      markerUnits: props.markerUnits,
+      orient: String(props.orient),
+      markerWidth,
+      markerHeight,
+    };
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(Marker(7759)({ viewBox, preserveAspectRatio }));
+    obj2.children = children;
+    return jsx(Marker(7826), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(FeDropShadow, items);
-importDefaultResultResult.displayName = "FeDropShadow";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const items = [entry];
+const importDefaultResultResult = _createClass(Marker, items);
+importDefaultResultResult.displayName = "Marker";
+importDefaultResultResult.defaultProps = {
+  refX: 0,
+  refY: 0,
+  orient: "0",
+  markerWidth: 3,
+  markerHeight: 3,
+  markerUnits: "strokeWidth",
+};
 
 export default importDefaultResultResult;

@@ -1,53 +1,81 @@
 // _runtime/metro/15451__.js
-import _mod15368 from "15368__.js";
-import currencies2 from "../15452_currencies.js";
-
-require = arg1;
-const dependencyMap = arg6;
-function isSupportedCurrency(arr3, locale) {
-  let str = locale;
-  if (undefined === locale) {
-    str = "en";
+let _globalThis = typeof globalThis === "object";
+if (typeof globalThis === "object") {
+  _globalThis = globalThis;
+}
+let tmp = _globalThis;
+if (_globalThis) {
+  const _Math = Math;
+  tmp = _globalThis.Math === Math;
+}
+if (tmp) {
+  tmp = _globalThis;
+}
+if (!tmp) {
+  const _window = window;
+  let _window2 = typeof window === "object";
+  if (typeof window === "object") {
+    _window2 = window;
   }
-  try {
-    const obj = { style: "currency", currencyDisplay: "name", currency: arr3 };
-    const memoizedNumberFormat = _mod15368.createMemoizedNumberFormat(str, obj);
-    const str2 = memoizedNumberFormat.format(123);
-    if (str2.substring(0, 3) !== arr3) {
-      if (str3.substring(str3.length - 3) !== arr3) {
-        return true;
-      }
-    }
-    return false;
-  } catch (err) {}
+  let tmp2 = _window2;
+  if (_window2) {
+    const _Math2 = Math;
+    tmp2 = _window2.Math === Math;
+  }
+  if (tmp2) {
+    tmp2 = _window2;
+  }
+  tmp = tmp2;
+}
+if (!tmp) {
+  const _self = self;
+  let _self2 = typeof self === "object";
+  if (typeof self === "object") {
+    _self2 = self;
+  }
+  let tmp3 = _self2;
+  if (_self2) {
+    const _Math3 = Math;
+    tmp3 = _self2.Math === Math;
+  }
+  if (tmp3) {
+    tmp3 = _self2;
+  }
+  tmp = tmp3;
+}
+if (!tmp) {
+  let tmp5 = typeof global === "object";
+  if (typeof global === "object") {
+    tmp5 = global;
+  }
+  let tmp6 = tmp5;
+  if (tmp5) {
+    const _Math4 = Math;
+    tmp6 = tmp5.Math === Math;
+  }
+  if (tmp6) {
+    tmp6 = tmp5;
+  }
+  tmp = tmp6;
+}
+if (!tmp) {
+  let self = typeof this === "object";
+  if (typeof this === "object") {
+    self = this;
+  }
+  let tmp7 = self;
+  if (self) {
+    const _Math5 = Math;
+    tmp7 = self.Math === Math;
+  }
+  if (tmp7) {
+    tmp7 = self;
+  }
+  tmp = tmp7;
+}
+if (!tmp) {
+  const _Function = Function;
+  tmp = Function("return this")();
 }
 
-export function getSupportedCurrencies(locale) {
-  items = [];
-  const currencies = currencies2.currencies;
-  for (let num = 0; num < currencies.length; num = num + 1) {
-    let arr3 = currencies[num];
-    if (3 === arr3.length) {
-      if (isSupportedCurrency(arr3, locale)) {
-        let arr = items.push(arr3);
-      }
-    } else if (5 === arr3.length) {
-      if ("~" === arr3[3]) {
-        let indexOf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
-        let index = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[2]);
-        let indexOf2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
-        let index1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[4]);
-        if (index <= index1) {
-          do {
-            let sum = arr3.substring(0, 2) + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[index];
-            if (isSupportedCurrency(sum, locale)) {
-              let arr2 = items.push(sum);
-            }
-            index = index + 1;
-          } while (index <= index1);
-        }
-      }
-    }
-  }
-  return items;
-}
+export default tmp;
