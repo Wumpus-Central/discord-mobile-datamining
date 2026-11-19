@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8527 from "../../../../../_runtime/metro/08527__.js";
+import _modDef8496 from "../../../../../_runtime/metro/08496__.js";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
-import _modDef13346 from "../../../../../_runtime/metro/13346__.js";
+import _modDef13328 from "../../../../../_runtime/metro/13328__.js";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
 import useSoundboardConfig from "../hooks/useSoundboardConfig.tsx";
 import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton.tsx";
@@ -34,7 +34,7 @@ function DockMuteButton(channelId) {
   const dominantMuteState = muteHandler.dominantMuteState;
   const obj2 = channelId(onPress[11]);
   colors = mute(onPress[9]).colors;
-  const token = channelId(onPress[13]).useToken(mute ? colors.STATUS_DANGER : colors.INTERACTIVE_ICON_DEFAULT);
+  const token = channelId(onPress[13]).useToken(mute ? colors.STATUS_DANGER : colors.CONTROL_SECONDARY_TEXT_DEFAULT);
   const items1 = [dominantMuteState, mute, onPress];
   const callback = dominantMuteState.useCallback(() => {
     if (tmp4) {
@@ -89,9 +89,9 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1113).intl;
   obj.accessibilityLabel = intl.string(channelId(1113).t["6vrfgt"]);
-  obj.icon = _modDef8527;
+  obj.icon = _modDef8496;
   obj.onPress = callback;
-  return closure_9(channelId(7502).IconButton, obj);
+  return closure_9(channelId(7472).IconButton, obj);
 }
 function DockSoundboardButton(arg0) {
   ({ onPress, disabled, disabledAccessibilityHint } = arg0);
@@ -106,7 +106,7 @@ function DockSoundboardButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef13346;
+  obj.icon = _modDef13328;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;
@@ -116,9 +116,9 @@ const View = fn(17).View;
 const InputModes = fn(1072).InputModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
-  actions: { flexDirection: "row", alignItems: "center", gap: fn(11728).DOCK_GAP },
+  actions: { flexDirection: "row", alignItems: "center", gap: fn(11706).DOCK_GAP },
   buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS },
 };
 let closure_11 = createStyles.createStyles(obj);

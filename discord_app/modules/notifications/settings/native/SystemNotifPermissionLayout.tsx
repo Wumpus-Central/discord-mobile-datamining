@@ -126,8 +126,8 @@ function SystemNotifPermissionHeader() {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
-let closure_10 = fn(6404).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13208);
+let closure_10 = fn(6375).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13190);
 ({
   EventActionLocation: closure_11,
   EventActionType: closure_12,
@@ -149,7 +149,7 @@ let obj2 = {
   "444_other": _modDef3051.NQH8GA,
 };
 const redux = noop.createContext(undefined);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj3 = {
   container: { paddingTop: nativeDefault.space.PX_16 },
   card: null,
@@ -185,7 +185,7 @@ export default function SystemNotifPermissionLayout(node) {
   const effect = noop.useEffect(() => {
     closure_1 = async function _loadPermissionStatus() {
       closure_1 = tmp3;
-      await closure_2_1(7713).getNotificationAuthorizationStatus();
+      await closure_2_1(7683).getNotificationAuthorizationStatus();
       if (1 === tmp7) {
         c2 = 0;
         if (closure_129_0) {
@@ -199,15 +199,15 @@ export default function SystemNotifPermissionLayout(node) {
         closure_128_0 = value;
         if (closure_129_0) {
           if (null != closure_128_0) {
-            const result = node(13210).updateNotificationAuthorizationStatus(closure_128_0);
-            node(13210);
+            const result = node(13192).updateNotificationAuthorizationStatus(closure_128_0);
+            node(13192);
           }
           v2(true);
           c2 = 0;
         } else {
           c2 = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       }
       return value;

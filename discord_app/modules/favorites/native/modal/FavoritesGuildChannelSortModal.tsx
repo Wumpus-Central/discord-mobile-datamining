@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildSettingsModalChannelsStore from "../../../guild_settings/GuildSettingsModalChannelsStore.tsx";
 
 require = fn;
-const ALL_CHANNEL_TYPES = fn(4676).ALL_CHANNEL_TYPES;
+const ALL_CHANNEL_TYPES = fn(4645).ALL_CHANNEL_TYPES;
 const FAVORITES = fn(1072).FAVORITES;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -19,9 +19,9 @@ export default function FavoritesGuildChannelSortModal() {
     items = [...closure_1_5];
     GuildSettingsModalChannelsActionCreatorsDefault.startReordering.apply(items);
     return () => {
-      closure_1_1(17719).stopReordering();
-      const obj = closure_1_1(17719);
-      closure_1_1(17719).terminate();
+      closure_1_1(17712).stopReordering();
+      const obj = closure_1_1(17712);
+      closure_1_1(17712).terminate();
     };
   }, []);
   const bottom = useSafeAreaInsetsDefault().bottom;
@@ -35,16 +35,16 @@ export default function FavoritesGuildChannelSortModal() {
       const obj = {
         guildId,
         contentContainerStyle: { paddingBottom: 16 + closure_1_0 },
-        onDone: bottom(17716).closeFavoritesGuildChannelSortModal,
+        onDone: bottom(17709).closeFavoritesGuildChannelSortModal,
       };
       return jsx(GuildSettingsModalChannelsDefault, {
         guildId,
         contentContainerStyle: { paddingBottom: 16 + closure_1_0 },
-        onDone: bottom(17716).closeFavoritesGuildChannelSortModal,
+        onDone: bottom(17709).closeFavoritesGuildChannelSortModal,
       });
     };
     obj.FAVORITES_GUILD_CHANNEL_SORT = obj2;
     return obj;
   }, items);
-  return jsx(bottom(7003).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
+  return jsx(bottom(6973).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
 }

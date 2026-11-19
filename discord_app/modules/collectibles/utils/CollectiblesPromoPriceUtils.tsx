@@ -186,8 +186,8 @@ export function areStorefrontPricingPromotionsActive(arg0) {
 export { getNextStorefrontPromotionBoundary };
 export function useCollectiblesStorefrontPrices(skuId, c7) {
   stateFromStores2 = skuId;
-  stateFromStores2(8871).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
-  const obj = stateFromStores2(8871);
+  stateFromStores2(8844).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
+  const obj = stateFromStores2(8844);
   items = [SKUPricesStore];
   const stateFromStores = stateFromStores2(504).useStateFromStores(items, () => {
     let pricesForSkuId;

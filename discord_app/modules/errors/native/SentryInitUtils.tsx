@@ -33,7 +33,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -575,8 +575,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(6272).increment(obj6, true);
-  const tmp26Result = tmp26(6272);
+  tmp26(6244).increment(obj6, true);
+  const tmp26Result = tmp26(6244);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1072);
@@ -669,13 +669,13 @@ export function initSentry() {
               tunnel: `/error-reporting-proxy/${str2}`,
               autoInitializeNativeSdk: false,
               beforeSend,
-              dist: "35620200000000",
+              dist: "35620300000000",
               dsn: SentryStaffDsn,
               environment: ReleaseChannel,
               tracesSampleRate: 0,
               sampleRate: 1,
               ignoreErrors,
-              release: "discord_android@356.2.0-2+356202",
+              release: "discord_android@356.3.0-2+356203",
               tracePropagationTargets: null,
               integrations: null,
               beforeBreadcrumb: null,
@@ -710,7 +710,7 @@ export function initSentry() {
             };
             tmp15Result13.init(obj3);
             const tmp15Result16 = _mod674;
-            _mod674.setTag("buildNumber", "35620200000000");
+            _mod674.setTag("buildNumber", "35620300000000");
             const tmp15Result17 = _mod674;
             _mod674.setTag("appVersion", constants.Version);
             const tmp15Result18 = _mod674;

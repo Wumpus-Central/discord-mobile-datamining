@@ -24,7 +24,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -55,7 +55,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
         } else {
           channel(c2[10]).transitionToChannel(closure_129_0.id, { navigationReplace: true });
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -74,7 +74,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -103,7 +103,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp9) {
         c1 = tmp;
@@ -113,12 +113,12 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
   };
   importDefault = channel(1502).useNavigation();
   let obj = channel(1502);
-  const isMessageRequestRestrictedViewer = channel(13254).useIsMessageRequestRestrictedViewer();
-  let obj2 = channel(13254);
+  const isMessageRequestRestrictedViewer = channel(13236).useIsMessageRequestRestrictedViewer();
+  let obj2 = channel(13236);
   items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj3 = channel(504);
-  const messageRequestActions = channel(13255).useMessageRequestActions({
+  const messageRequestActions = channel(13237).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
@@ -165,7 +165,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     buttonSecondaryDisabled: null,
     buttonSecondaryLoading: null,
   };
-  let obj4 = channel(13255);
+  let obj4 = channel(13237);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {

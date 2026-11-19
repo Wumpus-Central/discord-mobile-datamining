@@ -32,14 +32,14 @@ function AccountStatusNotice(arg0) {
       const obj3 = { style: tmp.notice, children: null };
       const obj4 = {
         style: tmp.noticeIcon,
-        children: closure_8(tmp2(5527).CircleInformationIcon, { size: "xs", color: "text-link" }),
+        children: closure_8(tmp2(5496).CircleInformationIcon, { size: "xs", color: "text-link" }),
       };
       items = [closure_8(View, obj4), ,];
       const obj5 = { style: tmp.noticeBody, variant: "body-sm/normal", color: "text-default", children: null };
       const intl = tmp2(1113).intl;
       obj6 = { handleOnBlogHook: handleOpenBlog };
       obj5.children = intl.format(obj6[arg0.ageGroup], obj6);
-      items[1] = closure_8(tmp2(5414).Text, obj5);
+      items[1] = closure_8(tmp2(5383).Text, obj5);
       obj7 = {
         style: tmp.noticeDismiss,
         activeOpacity: 0.5,
@@ -52,8 +52,8 @@ function AccountStatusNotice(arg0) {
       const intl2 = tmp2(1113).intl;
       obj7.accessibilityLabel = intl2.string(tmp2(1113).t.WAI6xu);
       obj7.onPress = tmp7;
-      obj7.children = closure_8(tmp2(7062).XSmallIcon, { size: "sm", color: "icon-strong" });
-      items[2] = closure_8(tmp2(6941).PressableOpacity, obj7);
+      obj7.children = closure_8(tmp2(7032).XSmallIcon, { size: "sm", color: "icon-strong" });
+      items[2] = closure_8(tmp2(6911).PressableOpacity, obj7);
       obj3.children = items;
       tmp8 = closure_9(View, obj3);
     }
@@ -108,11 +108,11 @@ function AgeGroupCallToAction(ageGroup) {
   }
 }
 const View = fn(17).View;
-const AGE_NOTICE_BLOG_URL = fn(6330).AGE_NOTICE_BLOG_URL;
-const ContentDismissActionType = fn(4669).ContentDismissActionType;
+const AGE_NOTICE_BLOG_URL = fn(6301).AGE_NOTICE_BLOG_URL;
+const ContentDismissActionType = fn(4638).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   header: { gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 },
   notice: null,
@@ -147,16 +147,16 @@ let obj4 = {
 };
 obj2.description = { gap: nativeDefault.space.PX_8 };
 let closure_10 = createStyles.createStyles(obj2);
-let items = [fn(4656).DismissibleContent.TINY_BRONCO_NOTICE];
+let items = [fn(4625).DismissibleContent.TINY_BRONCO_NOTICE];
 let closure_12 = [];
 let obj6 = {};
-obj6[fn(10486).AgeGroupState.ADULT] = _modDef3375["8TWztV"];
-obj6[fn(10486).AgeGroupState.TEEN] = _modDef3375.qSkhZH;
-obj6[fn(10486).AgeGroupState.UNVERIFIED] = _modDef3375.vGxRDB;
+obj6[fn(10464).AgeGroupState.ADULT] = _modDef3375["8TWztV"];
+obj6[fn(10464).AgeGroupState.TEEN] = _modDef3375.qSkhZH;
+obj6[fn(10464).AgeGroupState.UNVERIFIED] = _modDef3375.vGxRDB;
 let obj7 = {};
-obj7[fn(10486).AgeGroupState.ADULT] = _modDef3375.t5QjmQ;
-obj7[fn(10486).AgeGroupState.TEEN] = _modDef3375["41MDhK"];
-obj7[fn(10486).AgeGroupState.UNVERIFIED] = _modDef3375.m95jW8;
+obj7[fn(10464).AgeGroupState.ADULT] = _modDef3375.t5QjmQ;
+obj7[fn(10464).AgeGroupState.TEEN] = _modDef3375["41MDhK"];
+obj7[fn(10464).AgeGroupState.UNVERIFIED] = _modDef3375.m95jW8;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/AgeNoticeAgeGroupHeader.tsx");
 

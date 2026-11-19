@@ -89,29 +89,9 @@ prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(c1) {
   }
   return tmp5;
 };
-prototype["getUnreadBadges"] = function getUnreadBadges(id) {
-  const badges = this.getBadges(id);
+prototype["getUnreadBadges"] = function getUnreadBadges(userId) {
+  const badges = this.getBadges(userId);
   return badges.filter((has_updates) => true === has_updates.has_updates);
-};
-prototype["getUnreadBadgeCount"] = function getUnreadBadgeCount(id) {
-  let tmp = id;
-  if (id == null) {
-    const currentUser = UserStore.getCurrentUser();
-    id = undefined;
-    if (currentUser != null) {
-      id = currentUser.id;
-    }
-    tmp = id;
-  }
-  let num = 0;
-  if (null != tmp) {
-    const self = this;
-    num = 0;
-    if (this.hasCatalogFor(tmp)) {
-      num = self.getUnreadBadges(tmp).length;
-    }
-  }
-  return num;
 };
 prototype["getBadgeById"] = function getBadgeById(GIFTING, displayedUserId) {
   let tmp = displayedUserId;

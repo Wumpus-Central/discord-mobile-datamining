@@ -31,7 +31,7 @@ function BenefitCard(isLast) {
 }
 function BenefitsCarousel(cardWidth) {
   cardWidth = cardWidth.cardWidth;
-  const noun = cardWidth.noun;
+  const displayNoun = cardWidth.displayNoun;
   _slicedToArray = undefined;
   noop = undefined;
   const sum = cardWidth + PX_12;
@@ -79,27 +79,27 @@ function BenefitsCarousel(cardWidth) {
   };
   const tmp5 = _slicedToArray(noop.useState(0), 2);
   const tmp9 = closure_5;
-  const prop = cardWidth(12221).GAME_ORGANIZATION_BENEFITS;
+  const prop = cardWidth(12204).GAME_ORGANIZATION_BENEFITS;
   obj2.children = prop.map((key, index) => {
     obj = {
       cardWidth,
-      text: key.key.getText(noun),
+      text: key.key.getText(displayNoun),
       Illustration: obj[key.key],
       isLast: index === GameOrganizationBenefits.GAME_ORGANIZATION_BENEFITS.length - 1,
     };
     return timestampProducer(BenefitCard, obj, key.key);
   });
-  obj.children = closure_6(noun(10464), obj2);
+  obj.children = closure_6(displayNoun(10442), obj2);
   const children = [closure_6(closure_5, obj)];
   let tmp10Result = null;
-  if (cardWidth(12221).GAME_ORGANIZATION_BENEFITS.length > 1) {
+  if (cardWidth(12204).GAME_ORGANIZATION_BENEFITS.length > 1) {
     tmp10Result = null;
     if (tmp6 > 0) {
       tmp10Result = null;
       if (tmp7[0] > tmp6) {
         const obj3 = {
           containerStyle: tmp2.pagination,
-          numberOfItems: tmp13(12221).GAME_ORGANIZATION_BENEFITS.length,
+          numberOfItems: tmp13(12204).GAME_ORGANIZATION_BENEFITS.length,
           currentIndex: tmp4,
         };
         tmp10Result = closure_6(tmp13(1187).CarouselPagination, obj3);
@@ -115,11 +115,11 @@ const jsxProd = fn(21);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
 let obj = {
-  "auto-sync": fn(12209).GuildRolesAbstractUI,
-  "linked-channel": fn(12213).GuildChatAbstractUI,
-  "guild-invite": fn(12217).GuildInviteAbstractUI,
+  "auto-sync": fn(12192).GuildRolesAbstractUI,
+  "linked-channel": fn(12196).GuildChatAbstractUI,
+  "guild-invite": fn(12200).GuildInviteAbstractUI,
 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_11 = createStyles.createStyles((width) => {
   obj = {
     carouselContainer: { marginHorizontal: -PX_16 },
@@ -136,7 +136,11 @@ const result = size.fileFinishedImporting(
   "modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationBenefitsCarousel.tsx",
 );
 
-export default function GameOrganizationBenefitsCarousel(noun) {
+export default function GameOrganizationBenefitsCarousel(displayNoun) {
   const width = useWindowDimensionsDefault().width;
-  return timestampProducer(BenefitsCarousel, { cardWidth: Math.min(0.75 * width, 400), noun: noun.noun }, width);
+  return timestampProducer(
+    BenefitsCarousel,
+    { cardWidth: Math.min(0.75 * width, 400), displayNoun: displayNoun.displayNoun },
+    width,
+  );
 }

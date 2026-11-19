@@ -28,7 +28,7 @@ NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1187).AvatarSizes.NORMAL] = {
   avatarMarginRight: nativeDefault.space.PX_8,
   placeholderBarHeight: 14,
 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_8 = createStyles.createStyles((arg0, arg1) => {
   obj = {
     container: {
@@ -113,7 +113,7 @@ export function NameplateDummyUserPreview(hideAvatar) {
   const obj4 = { style: tmp3.avatarContainer, children: null };
   const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
   obj4.children = hasOwnProperty(native.Avatar, {
-    source: importDefault(stateFromStores ? 8936 : 8937),
+    source: importDefault(stateFromStores ? 8910 : 8911),
     size: NORMAL,
     "aria-hidden": true,
     style: tmp3.avatar,

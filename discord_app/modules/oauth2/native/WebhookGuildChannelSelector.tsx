@@ -11,10 +11,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const createChannelRecord = fn(4676).createChannelRecord;
+const createChannelRecord = fn(4645).createChannelRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   selectorGroup: { flexDirection: "column", gap: 8 },
   select: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs },
@@ -56,7 +56,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       const channels = first.channels;
       obj2.items = channels.map((id) => {
         const obj = {
-          label: selectedGuildId(5439).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
+          label: selectedGuildId(5408).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
           value: id.id,
         };
         return obj;
@@ -66,8 +66,8 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         selectedChannelId(onChannelChange[10]).hideActionSheet(WebhookGuildChannelSelector);
       };
       obj2.selectedItem = selectedChannelId;
-      obj.openLazy(asyncRequireImpl(7523, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
-      const tmp7 = asyncRequireImpl(7523, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(7493, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
+      const tmp7 = asyncRequireImpl(7493, dependencyMap.paths);
     }
   }, items);
   const effect = noop.useEffect(() => {
@@ -82,7 +82,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -124,7 +124,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
               ref.current = true;
             }
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp20) {
           v3 = tmp;

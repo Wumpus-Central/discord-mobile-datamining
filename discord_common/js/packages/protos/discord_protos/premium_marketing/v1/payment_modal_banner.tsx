@@ -4,27 +4,48 @@ import localized_string from "../../common/v1/localized_string.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
+const PaymentModalBannerGradient = {
+  UNSPECIFIED: 0,
+  [0]: "UNSPECIFIED",
+  BLURPLE: 1,
+  [1]: "BLURPLE",
+  NITRO_PINK: 2,
+  [2]: "NITRO_PINK",
+};
 const MessageType = fn(1197).MessageType;
 class PaymentModalBanner$Type extends MessageType {
   constructor() {
-    items = [, , , ,];
+    items = [, , , , ,];
     items[0] = { no: 1, name: "asset_url", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "header", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "body", kind: "scalar", T: 9 };
-    obj = { no: 4, name: "header_localized", kind: "message", T: null };
+    items[3] = {
+      no: 4,
+      name: "header_localized",
+      kind: "message",
+      T() {
+        return require("localized_string").LocalizedString;
+      },
+    };
+    obj = { no: 5, name: "body_localized", kind: "message", T: null };
     class T {
       constructor() {
         return closure_1_0(closure_1_1[2]).LocalizedString;
       }
     }
     obj.T = T;
-    items[3] = obj;
-    items[4] = {
-      no: 5,
-      name: "body_localized",
-      kind: "message",
+    items[4] = obj;
+    items[5] = {
+      no: 6,
+      name: "gradient",
+      kind: "enum",
       T() {
-        return require("localized_string").LocalizedString;
+        items = [
+          "discord_protos.premium_marketing.v1.PaymentModalBannerGradient",
+          PaymentModalBannerGradient,
+          "PAYMENT_MODAL_BANNER_GRADIENT_",
+        ];
+        return items;
       },
     };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PaymentModalBanner", items, T);
@@ -33,7 +54,7 @@ class PaymentModalBanner$Type extends MessageType {
 }
 const prototype = PaymentModalBanner$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { assetUrl: "", header: "", body: "" };
+  const obj = { assetUrl: "", header: "", body: "", gradient: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -70,6 +91,8 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (5 === tmp5) {
         let LocalizedString = localized_string.LocalizedString;
         obj.bodyLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.bodyLocalized);
+      } else if (6 === tmp5) {
+        obj.gradient = pos.int32();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -138,6 +161,10 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
       writeUnknownFields,
     );
   }
+  if (0 !== assetUrl.gradient) {
+    tag.tag(6, _mod1197.WireType.Varint).int32(assetUrl.gradient);
+    const tagResult5 = tag.tag(6, _mod1197.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -152,22 +179,35 @@ let items = [
   { no: 1, name: "asset_url", kind: "scalar", T: 9 },
   { no: 2, name: "header", kind: "scalar", T: 9 },
   { no: 3, name: "body", kind: "scalar", T: 9 },
+  {
+    no: 4,
+    name: "header_localized",
+    kind: "message",
+    T() {
+      return require("localized_string").LocalizedString;
+    },
+  },
   ,
 ];
-let obj = { no: 4, name: "header_localized", kind: "message", T: null };
+const obj2 = { no: 5, name: "body_localized", kind: "message", T: null };
 class T {
   constructor() {
     return closure_1_0(closure_1_1[2]).LocalizedString;
   }
 }
-obj.T = T;
-items[3] = obj;
-items[4] = {
-  no: 5,
-  name: "body_localized",
-  kind: "message",
+obj2.T = T;
+items[4] = obj2;
+items[5] = {
+  no: 6,
+  name: "gradient",
+  kind: "enum",
   T() {
-    return require("localized_string").LocalizedString;
+    items = [
+      "discord_protos.premium_marketing.v1.PaymentModalBannerGradient",
+      PaymentModalBannerGradient,
+      "PAYMENT_MODAL_BANNER_GRADIENT_",
+    ];
+    return items;
   },
 };
 const prototype1 = new prototype(
@@ -178,10 +218,13 @@ const prototype1 = new prototype(
   PaymentModalBanner$Type,
   prototype,
   items,
+  fn,
+  dependencyMap,
 );
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/payment_modal_banner.tsx",
 );
 
+export { PaymentModalBannerGradient };
 export const PaymentModalBanner = prototype1;

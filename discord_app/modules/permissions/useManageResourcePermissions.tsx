@@ -58,7 +58,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(7543);
+const PermissionsConstants = fn(7513);
 ({
   CREATE_GUILD_EVENT_CORE_PERMISSIONS: metroImportDefault,
   CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8,
@@ -158,8 +158,8 @@ export function useManageResourcePermissions(channel) {
   return obj4;
 }
 export function getManageResourcePermissions(guild) {
-  let obj = c6;
-  if (c6 === undefined) {
+  let obj = PermissionStore;
+  if (PermissionStore === undefined) {
     obj = PermissionStore;
   }
   let obj2 = UserStore;

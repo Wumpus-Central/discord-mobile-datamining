@@ -505,6 +505,17 @@ export const PAGE_SIZE = 12;
 export const LIMITED_TIME_BADGE_DAYS_THRESHOLD = 60;
 export const MAX_FEED_SIZE = 36;
 export const SHOP_ALL_PAGE_SIZE = 5;
+export const ProductBadgeType = {
+  NONE: "none",
+  NEW: "new",
+  ORBS_EXCLUSIVE: "orbs_exclusive",
+  LIMITED_TIME: "limited_time",
+  NITRO_EXCLUSIVE: "nitro_exclusive",
+  BADGE_OVERRIDE: "badge_override",
+  DYNAMIC: "dynamic",
+  PROMO_DISCOUNT: "promo_discount",
+  PROMO_ORBS_BACK: "promo_orbs_back",
+};
 export const ShopPurchaseType = {
   FIAT: 0,
   [0]: "FIAT",

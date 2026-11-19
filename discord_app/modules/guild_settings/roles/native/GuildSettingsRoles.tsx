@@ -37,8 +37,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
-const isEveryoneRole = fn(4730).isEveryoneRole;
-let closure_15 = fn(19874).GuildSettingsRoleEditSections;
+const isEveryoneRole = fn(4699).isEveryoneRole;
+let closure_15 = fn(19885).GuildSettingsRoleEditSections;
 const Constants = fn(1072);
 ({
   GuildSettingsSections: closure_16,
@@ -49,7 +49,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   container: { flex: 1 },
   scrollContainer: { paddingHorizontal: 12 },
@@ -684,7 +684,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
       let obj10 = {
         style: tmp.emptyRolesIcon,
         size: tmp3(tmp4[44]).Icon.Sizes.LARGE,
-        source: require("../../../../../_runtime/metro/07690__.js"),
+        source: require("../../../../../_runtime/metro/07660__.js"),
       };
       obj9.leading = tmp44(tmp3(tmp4[44]).Icon, obj10);
       let obj11 = { variant: "body-md/semibold", color: "interactive-text-default", children: null };

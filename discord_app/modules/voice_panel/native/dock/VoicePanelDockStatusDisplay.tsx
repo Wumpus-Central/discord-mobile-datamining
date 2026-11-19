@@ -173,9 +173,9 @@ function StatusText(status) {
       ringing = dm2.ringing;
     }
     obj5.ringing = ringing;
-    let tmp53Result = closure_11(tmp26(18063).DockUserTitle, obj5);
+    let tmp53Result = closure_11(tmp26(18056).DockUserTitle, obj5);
   } else {
-    tmp53Result = closure_11(tmp26(18063).DockChannelTitle, {});
+    tmp53Result = closure_11(tmp26(18056).DockChannelTitle, {});
   }
   obj4.children = tmp53Result;
   const items7 = [closure_11(c5, obj4)];
@@ -190,7 +190,7 @@ function StatusText(status) {
       str4 = "text-muted";
     }
     const obj7 = { variant: "body-xs/medium", color: str4, lineClamp: 1, children: stringResult1 };
-    obj6.children = closure_11(tmp26(5414).Text, obj7);
+    obj6.children = closure_11(tmp26(5383).Text, obj7);
     tmp53Result2 = closure_11(_modDef1655.View, obj6);
   }
   items7[1] = tmp53Result2;
@@ -530,10 +530,10 @@ function StatusLayer(exit) {
     }
     obj4.dimmed = tmp35;
     obj4.entered = tmp12[0];
-    let tmp32Result = tmp32(tmp2(18063).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(18056).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(18063).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(18056).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
   const items6 = [sharedValue5(_modDef1655.View, obj3)];
@@ -553,16 +553,16 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(18062);
+const VoicePanelDockStatusStore = fn(18055);
 ({ useDockHasStreamers: closure_9, useDockSubject: closure_10 } = VoicePanelDockStatusStore);
-const VoicePanelDockConstants = fn(11728);
+const VoicePanelDockConstants = fn(11706);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const spring = { mass: 0.6, stiffness: 560, damping: 24 };
-fn(5414).TextStyleSheet["body-md/medium"].lineHeight;
-const lineHeight = fn(5414).TextStyleSheet["body-xs/medium"].lineHeight;
-const createStyles = fn(4823);
+fn(5383).TextStyleSheet["body-md/medium"].lineHeight;
+const lineHeight = fn(5383).TextStyleSheet["body-xs/medium"].lineHeight;
+const createStyles = fn(4792);
 let obj = {
   display: { flexGrow: 1, flexShrink: 1, height: DOCK_TILE_SIZE },
   layer: null,

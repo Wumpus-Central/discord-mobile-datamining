@@ -398,7 +398,7 @@ function validateSplitURLs(items) {
   }
 }
 let closure_3 = ["rawURL"];
-const HTMLParserConstants = fn(9742);
+const HTMLParserConstants = fn(9721);
 ({
   ALLOWED_MAILTO_HEADERS: hasOwnProperty,
   BIDI_CONTROL_CHARACTERS: closure_6,

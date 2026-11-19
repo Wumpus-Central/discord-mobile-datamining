@@ -69,7 +69,7 @@ export default function CheckpointTestingActionSheet(mode) {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         label.action();
       };
-      return closure_4(label(6956).TableRow, obj, label.id);
+      return closure_4(label(6926).TableRow, obj, label.id);
     }),
   });
   obj2.children = items;

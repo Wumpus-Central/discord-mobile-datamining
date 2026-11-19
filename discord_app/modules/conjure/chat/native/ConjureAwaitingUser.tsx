@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { ring: null };
 const rect = {
   position: "absolute",

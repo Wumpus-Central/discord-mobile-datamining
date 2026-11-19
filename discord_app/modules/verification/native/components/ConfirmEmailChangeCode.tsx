@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const setEmailToken = fn(7255).setEmailToken;
+const setEmailToken = fn(7225).setEmailToken;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
@@ -55,7 +55,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -83,7 +83,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
           return obj;
         } else {
           v3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp7) {
         v3 = tmp;
@@ -95,7 +95,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   obj2.headerText = intl.string(isChangeEmail(1113).t["2x/2Uo"]);
   const intl2 = isChangeEmail(1113).intl;
   obj2.confirmButtonText = intl2.string(isChangeEmail(1113).t.PDTjLN);
-  return jsx(navigation(7279), {
+  return jsx(navigation(7249), {
     onFormSubmit: null,
     onSuccess: null,
     onResend: null,

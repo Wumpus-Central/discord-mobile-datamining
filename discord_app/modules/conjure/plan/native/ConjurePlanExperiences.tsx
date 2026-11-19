@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/plan/native/ConjurePlanExperiences.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4121 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppsIcon2 from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import conjurePlanExperienceSurfaces from "../conjurePlanExperienceSurfaces.tsx";
@@ -110,7 +110,7 @@ function ExperienceBlocks(showsRequirements) {
         const obj2 = { channels: true, caption: null, children: null };
         const intl2 = util.intl;
         const obj4 = { count: result.channels.length };
-        obj2.caption = intl2.formatToPlainString(_modDef4121.w8F5sy, obj4);
+        obj2.caption = intl2.formatToPlainString(_modDef4089.w8F5sy, obj4);
         const obj5 = { style: tmp.infoRows, children: null };
         const channels = result.channels;
         obj5.children = channels.map((description) => {
@@ -125,7 +125,7 @@ function ExperienceBlocks(showsRequirements) {
       if (result1.length > 0) {
         const obj6 = { caption: null, children: null };
         const intl3 = util.intl;
-        obj6.caption = intl3.string(_modDef4121.MY6UGJ);
+        obj6.caption = intl3.string(_modDef4089.MY6UGJ);
         const obj7 = { labels: result1 };
         obj6.children = hasOwnProperty(Chips, obj7);
         items1.push(hasOwnProperty(InfoBlock, obj6, "features"));
@@ -226,7 +226,7 @@ function ComponentSection(arg0) {
   items = [hasOwnProperty(View, obj4)];
   const intl = util.intl;
   if (result) {
-    let BM4Ymz = _modDef4121.BM4Ymz;
+    let BM4Ymz = _modDef4089.BM4Ymz;
   } else {
     BM4Ymz = conjurePlanExperienceSections.CONJURE_PLAN_EXPERIENCE_KIND_LABELS[experience.kind];
   }
@@ -274,14 +274,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
-  frame: fn(6951).GameControllerIcon,
-  overlay_widget: fn(18628).WindowTopIcon,
-  user_widget: fn(12978).UserCircleIcon,
-  bot: fn(12131).RobotIcon,
-  commands: fn(12131).RobotIcon,
-  automod: fn(10032).ShieldIcon,
+  frame: fn(6921).GameControllerIcon,
+  overlay_widget: fn(18621).WindowTopIcon,
+  user_widget: fn(12960).UserCircleIcon,
+  bot: fn(12108).RobotIcon,
+  commands: fn(12108).RobotIcon,
+  automod: fn(10010).ShieldIcon,
 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj3 = {
   intro: { gap: nativeDefault.space.PX_8 },
   divider: null,

@@ -2,11 +2,11 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import _modDef3339 from "../../Checkpoint2026.messages.js";
-import LinearGradientDefault from "../../../../../_runtime/05378_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05347_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildsBarAnimatedItemWrapperDefault from "../../../guilds_bar/native/GuildsBarAnimatedItemWrapper.tsx";
 import HomeDrawerShared from "../../../home_drawer/native/HomeDrawerShared.tsx";
-import _modDef17975 from "../../../../../_runtime/metro/17975__.js";
+import _modDef17968 from "../../../../../_runtime/metro/17968__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildsBarDnDStore from "../../../guilds_bar/native/GuildsBarDnDStore.tsx";
@@ -24,9 +24,9 @@ function ExpandedChildren() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(5877).CHECKPOINT_PRIMARY;
-const ContentDismissActionType = fn(4669).ContentDismissActionType;
-const GUILD_ITEM_INSET_LEFT = fn(17914).GUILD_ITEM_INSET_LEFT;
+const CHECKPOINT_PRIMARY = fn(5848).CHECKPOINT_PRIMARY;
+const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const GUILD_ITEM_INSET_LEFT = fn(17907).GUILD_ITEM_INSET_LEFT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const colors = ["#000000", "rgba(0, 0, 0, 0.5)", "#000000"];
@@ -38,7 +38,7 @@ let closure_16 = {
 let closure_17 = {
   code: "(function CheckpointGuildsBarEntrypointTsx2(current){let[dismissed,initialScrollPosition,DISMISS_SCROLL_DISTANCE,scheduleOnRN,onScroll]=this.__closure;if(dismissed.get())return;const initial=initialScrollPosition.get();if(initial==null){initialScrollPosition.set(current);return;}if(Math.abs(current-initial)>=DISMISS_SCROLL_DISTANCE){dismissed.set(true);scheduleOnRN(onScroll);}})",
 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_18 = createStyles.createStyles((width) => {
   const obj = {
     container: { position: "relative" },
@@ -91,7 +91,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -107,7 +107,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
             } else {
               c1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp4(12422).openCheckpoint(tmp4(17973).CHECKPOINT_GUILDS_BAR_SOURCE), done: false };
+              const obj5 = { value: tmp4(12405).openCheckpoint(tmp4(17966).CHECKPOINT_GUILDS_BAR_SOURCE), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -122,7 +122,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
               closure_128_0(constants.TAKE_ACTION);
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp11) {
           dependencyMap = tmp;
@@ -224,7 +224,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     const intl2 = util.intl;
     obj.description = intl2.string(_modDef3339.BFc4lY);
     obj.visible = !isModalOpen;
-    obj.graphic = { type: "image", src: _modDef17975, aspectRatio: "16/9" };
+    obj.graphic = { type: "image", src: _modDef17968, aspectRatio: "16/9" };
     obj.onDismiss = function onDismiss() {
       return _undefined(constants.USER_DISMISS);
     };
@@ -249,8 +249,8 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     overState: "y",
     config: memo1,
     label: null,
-    expandedChildren: "Nitro Server Boost Yearly",
-    children: null,
+    expandedChildren: "\u{1F469}\u200D\u{1F9B1}",
+    children: true,
   };
   const tmpResult2 = require("useCoachmark");
   let intl = tmp(1113).intl;

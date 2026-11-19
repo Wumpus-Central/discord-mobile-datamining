@@ -1,6 +1,6 @@
 // discord_app/design/void/NitroWheel/native/NitroWheel.tsx
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef10463 from "../../../../../_runtime/metro/10463__.js";
+import _modDef10441 from "../../../../../_runtime/metro/10441__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const jsx = fn(21).jsx;
@@ -8,6 +8,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
 
 export default function NitroWheel(style) {
-  const obj = { source: _modDef10463, style: style.style, resizeMode: "contain" };
-  return jsx(FastImageDefault, { source: _modDef10463, style: style.style, resizeMode: "contain" });
+  const obj = { source: _modDef10441, style: style.style, resizeMode: "contain" };
+  return jsx(FastImageDefault, { source: _modDef10441, style: style.style, resizeMode: "contain" });
 }

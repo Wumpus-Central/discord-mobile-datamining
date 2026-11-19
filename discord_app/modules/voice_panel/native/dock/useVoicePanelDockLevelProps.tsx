@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const DEFAULT_VAD_THRESHOLD = fn(2133).DEFAULT_VAD_THRESHOLD;
-let closure_9 = fn(13238).VoicePanelDockHiddenContext;
+let closure_9 = fn(13220).VoicePanelDockHiddenContext;
 const InputModes = fn(1072).InputModes;
 let closure_11 = { tween: true, riseDurationMs: 90, fallDurationMs: 180, tweenFrameRate: 20 };
 const size = fn(2);
@@ -17,14 +17,14 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVo
 
 export function useVoicePanelDockGlowLevelProps() {
   const context = noop.useContext(closure_9);
-  const shouldAnimateSpeakerLevels = num2(12755).useShouldAnimateSpeakerLevels("VoicePanelDock");
-  const obj2 = num2(12755);
+  const shouldAnimateSpeakerLevels = num2(12737).useShouldAnimateSpeakerLevels("VoicePanelDock");
+  const obj2 = num2(12737);
   items = [SelectedChannelStore, ChannelStore];
   const stateFromStores = num2(504).useStateFromStores(items, () =>
     channel.getChannel(voiceChannelId.getVoiceChannelId()),
   );
   const obj3 = num2(504);
-  const obj4 = num2(10969);
+  const obj4 = num2(10947);
   const items1 = [MediaEngineStore, SpeakingStore];
   const stateFromStoresObject = num2(504).useStateFromStoresObject(items1, () => {
     const mode = MediaEngineStore.getMode();
@@ -42,7 +42,7 @@ export function useVoicePanelDockGlowLevelProps() {
     let num = 0;
   } else if (!shouldAnimateSpeakerLevels) {
     num2 = 0;
-    if (!obj4.createMuteHandler(floorDb(10945)(stateFromStores)).mute) {
+    if (!obj4.createMuteHandler(floorDb(10923)(stateFromStores)).mute) {
       num2 = 0;
       if (tmp8) {
         num2 = 1;

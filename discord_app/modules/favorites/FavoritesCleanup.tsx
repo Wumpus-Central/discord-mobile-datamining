@@ -46,7 +46,7 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -77,7 +77,7 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -85,8 +85,8 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4676).THREAD_CHANNEL_TYPES;
-const FavoritesConstants = fn(4685);
+const THREAD_CHANNEL_TYPES = fn(4645).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(4654);
 ({
   FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_10,
   FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_11,

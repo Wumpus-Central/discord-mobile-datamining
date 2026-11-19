@@ -16,7 +16,7 @@ import RTCControlSocket from "RTCControlSocket.tsx";
 import DiscordNativeDefault from "DiscordNative.tsx";
 import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
 import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import flatRestDefault from "../../_runtime/05636_flatRest.js";
+import flatRestDefault from "../../_runtime/05605_flatRest.js";
 import DaveJoinTimerDefault from "../modules/rtc/DaveJoinTimer.tsx";
 import DaveRecipientTrackerDefault from "../modules/rtc/DaveRecipientTracker.tsx";
 import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager.tsx";
@@ -42,6 +42,7 @@ import ServerLadderExperiment2 from "../modules/media_engine/ServerLadderExperim
 import AV1BitrateTuningExperiment from "../modules/media_engine/AV1BitrateTuningExperiment.tsx";
 import NativeMuteManagerDefault from "../modules/calls/NativeMuteManager.native.tsx";
 import VoiceDurationDefault from "VoiceDuration.tsx";
+import SpatialAudioSessionStatsDefault from "../modules/spatial_audio/SpatialAudioSessionStats.tsx";
 import AVError from "../modules/errors/av_errors/AVError.tsx";
 import VideoQuality from "VideoQuality.tsx";
 import VideoHealthManager from "VideoHealthManager.tsx";
@@ -113,7 +114,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5583).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5552).getSystemAnalyticsInfo;
 let Constants = fn(1072);
 ({
   AnalyticEvents: closure_18,
@@ -122,10 +123,10 @@ let Constants = fn(1072);
   RTCConnectionQuality: closure_21,
   BoostedGuildTiers: closure_22,
 } = Constants);
-const StreamSettingsConstants = fn(5664);
+const StreamSettingsConstants = fn(5633);
 ({ ApplicationStreamFPS: closure_23, ApplicationStreamResolutions: closure_24 } = StreamSettingsConstants);
-let closure_25 = fn(5665).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5568);
+let closure_25 = fn(5634).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5537);
 ({
   ExperimentFlags: closure_26,
   Features: closure_27,
@@ -185,6 +186,7 @@ class RTCConnection extends tmp5 {
     obj = new RTCConnection(tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, sessionId, channelId, guildId, streamServerId);
     closure_0 = obj;
     closure_129_0 = obj;
+    obj._spatialAudioSessionStats = null;
     obj._videoEncoderLatencyProfile = closure_34.DEFAULT;
     obj._isStageChannel = null;
     map = new Map();
@@ -228,7 +230,7 @@ class RTCConnection extends tmp5 {
     };
     tmp11 = closure_1;
     tmp12 = closure_2;
-    obj._alertMLSFailureDebouced = closure_1(closure_2[79])(obj._alertMLSFailure, 100);
+    obj._alertMLSFailureDebouced = closure_1(closure_2[80])(obj._alertMLSFailure, 100);
     obj._handleNetworkOnline = function _handleNetworkOnline() {
       obj.expeditedHeartbeat(5000, "network detected online.");
     };
@@ -847,6 +849,11 @@ prototype["destroy"] = function destroy() {
     _voiceDuration.stop();
   }
   self._voiceDuration = null;
+  const _spatialAudioSessionStats = self._spatialAudioSessionStats;
+  if (_spatialAudioSessionStats != null) {
+    _spatialAudioSessionStats.stop();
+  }
+  self._spatialAudioSessionStats = null;
   const _videoQuality = self._videoQuality;
   if (_videoQuality != null) {
     _videoQuality.stop();
@@ -1516,8 +1523,9 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
       }
       obj5.sfuTrailingGapMs = num3;
       const result3 = self._trackVoiceDisconnect(obj5);
-      const result4 = self._trackRemainingSecureFrameTransitions();
-      const result5 = self._trackDaveRecipientSummary();
+      const result4 = self._trackSpatialAudioSessionEnded({ sfuMigration: false });
+      const result5 = self._trackRemainingSecureFrameTransitions();
+      const result6 = self._trackDaveRecipientSummary();
       const nextPromise = codecSurvey.then((result) => {
         const parsed = JSON.parse(result);
         if (null != parsed) {
@@ -1535,7 +1543,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
         throw error;
       });
     }
-    const result6 = self._resetPerConnectionAnalyticsState();
+    const result7 = self._resetPerConnectionAnalyticsState();
     self._inputCurrentlyDetected = false;
     self._connectCompletedTime = 0;
     self._mediaSessionId = null;
@@ -1564,6 +1572,11 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
       _voiceDuration.stop();
     }
     self._voiceDuration = null;
+    const _spatialAudioSessionStats = self._spatialAudioSessionStats;
+    if (_spatialAudioSessionStats != null) {
+      _spatialAudioSessionStats.stop();
+    }
+    self._spatialAudioSessionStats = null;
     const _videoQuality = self._videoQuality;
     if (_videoQuality != null) {
       _videoQuality.stop();
@@ -1588,8 +1601,8 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
     self._secureFramesLastExecutedTransitionId = undefined;
     const _daveJoinTimer = self._daveJoinTimer;
     _daveJoinTimer.socketLost();
-    const tmp47 = new self(5668)();
-    self._daveRecipientTracker = tmp47;
+    const tmp49 = new self(5637)();
+    self._daveRecipientTracker = tmp49;
     self._daveRecipientsActive = false;
     if (null != self._connection) {
       const _connection2 = self._connection;
@@ -1613,10 +1626,10 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
           let _scheduleReconnectResult = self._scheduleReconnect();
         }
         const logger2 = self.logger;
-        const result7 = _scheduleReconnectResult / 1000;
+        const result8 = _scheduleReconnectResult / 1000;
         const _HermesInternal = HermesInternal;
         logger2.warn(
-          "Disconnect was not clean! reason=" + reason + ". Reconnecting in " + result7.toFixed(2) + " seconds.",
+          "Disconnect was not clean! reason=" + reason + ". Reconnecting in " + result8.toFixed(2) + " seconds.",
         );
       }
     }
@@ -1861,6 +1874,43 @@ prototype["_getSfuFragmentAnalyticsProperties"] = function _getSfuFragmentAnalyt
   }
   obj.sfu_unique_id = uniqueId;
   return obj;
+};
+prototype["_getRemoteAudioSourceCount"] = function _getRemoteAudioSourceCount() {
+  const self = this;
+  const _localMediaSinkWantsManager = this._localMediaSinkWantsManager;
+  let audioSSRCs;
+  if (_localMediaSinkWantsManager != null) {
+    audioSSRCs = _localMediaSinkWantsManager.getAudioSSRCs();
+  }
+  if (audioSSRCs == null) {
+    audioSSRCs = {};
+  }
+  const keys = Object.keys(audioSSRCs);
+  return keys.filter((item) => item !== self.userId).length;
+};
+prototype["_trackSpatialAudioSessionEnded"] = function _trackSpatialAudioSessionEnded(arg0) {
+  const self = this;
+  const _spatialAudioSessionStats = this._spatialAudioSessionStats;
+  if (null != _spatialAudioSessionStats) {
+    if (_spatialAudioSessionStats.shouldReport()) {
+      const channel = ChannelStore.getChannel(self.channelId);
+      const obj3 = {};
+      const merged = Object.assign(_spatialAudioSessionStats.getStats());
+      obj3.media_session_id = self.getMediaSessionId();
+      obj3.rtc_connection_id = self.getRTCConnectionId();
+      obj3.sfu_migration = tmp;
+      ({ _numSfuMigrations: obj2.num_sfu_migrations, guildId: obj2.guild_id } = self);
+      let type;
+      if (channel != null) {
+        type = channel.type;
+      }
+      obj3.channel_type = type;
+      obj3.context = self.context;
+      const mediaEngine = MediaEngineStore.getMediaEngine();
+      obj3.spatial_audio_native_version = mediaEngine.getSpatialAudioVersion();
+      AnalyticsUtilsDefault.track(constants.SPATIAL_AUDIO_SESSION_ENDED, obj3);
+    }
+  }
 };
 prototype["_trackVoiceDisconnect"] = function _trackVoiceDisconnect(sfuEndpoint) {
   sfuEndpoint = sfuEndpoint.sfuEndpoint;
@@ -2152,6 +2202,11 @@ prototype["_endSfuMigrationFragment"] = function _endSfuMigrationFragment(_sfuEn
     obj2.duration = Math.max(0, _sfuEndpointLossAt - self._sfuFragmentStartTime);
     obj2.sfuEndpoint = _sfuEndpointBeforeLoss;
     const result2 = self._trackVoiceDisconnect(obj2);
+    const result3 = self._trackSpatialAudioSessionEnded({ sfuMigration: true });
+    const _spatialAudioSessionStats = self._spatialAudioSessionStats;
+    if (_spatialAudioSessionStats != null) {
+      _spatialAudioSessionStats.freeze();
+    }
     self._numSfuMigrations = self._numSfuMigrations + 1;
     const _voiceQuality = self._voiceQuality;
     if (_voiceQuality != null) {
@@ -2161,7 +2216,7 @@ prototype["_endSfuMigrationFragment"] = function _endSfuMigrationFragment(_sfuEn
     if (_voiceQuality2 != null) {
       _voiceQuality2.removeAllListeners();
     }
-    const result3 = self._resetPerConnectionAnalyticsState();
+    const result4 = self._resetPerConnectionAnalyticsState();
     self._rtcConnectionId = v1.v4();
     const obj5 = { type: "RTC_CONNECTION_UPDATE_ID", connection: self };
     DispatcherDefault.dispatch(obj5);
@@ -2183,6 +2238,10 @@ prototype["_startSfuMigrationFragment"] = function _startSfuMigrationFragment(no
     const _voiceDuration = self._voiceDuration;
     if (_voiceDuration != null) {
       _voiceDuration.restartForFragment();
+    }
+    const _spatialAudioSessionStats = self._spatialAudioSessionStats;
+    if (_spatialAudioSessionStats != null) {
+      _spatialAudioSessionStats.restartForFragment(self._getRemoteAudioSourceCount());
     }
     self._inputDetected = self._inputCurrentlyDetected;
     let num = _connection.getNumFastUdpReconnects();
@@ -2261,7 +2320,11 @@ prototype["_getSfuFragmentDuration"] = function _getSfuFragmentDuration() {
 prototype["_freezeSfuFragmentAtEndpointLoss"] = function _freezeSfuFragmentAtEndpointLoss() {
   const self = this;
   this._sfuEndpointLossAt = TimeUtils.now();
-  const _voiceQuality = this._voiceQuality;
+  const _spatialAudioSessionStats = this._spatialAudioSessionStats;
+  if (_spatialAudioSessionStats != null) {
+    _spatialAudioSessionStats.freeze();
+  }
+  const _voiceQuality = self._voiceQuality;
   if (_voiceQuality != null) {
     _voiceQuality.stop();
   }
@@ -2345,7 +2408,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -2383,7 +2446,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
             const obj = tmp2(dependencyMap[59]);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -2573,7 +2636,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
       if (maxResolution === RESOLUTION_1080.RESOLUTION_1080) {
         num = 921600;
       }
-      const result1 = connectResult.setFakeGoLiveEncodePixelCount(num);
+      let result1 = connectResult.setFakeGoLiveEncodePixelCount(num);
       const tmp23Result = tmp23(tmp3[63]);
     }
   }
@@ -2699,11 +2762,26 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
         );
         succeedResult._noiseCancellationError = 0;
         let selectProtocol = dependencyMap;
-        const tmp10 = new VoiceDurationDefault(succeedResult.userId, _undefined);
-        succeedResult._voiceDuration = tmp10;
+        const tmp9 = new VoiceDurationDefault(succeedResult.userId, _undefined);
+        succeedResult._voiceDuration = tmp9;
         const _voiceDuration = succeedResult._voiceDuration;
         const selfMute = _undefined.getSelfMute();
         _voiceDuration.start(selfMute, _undefined.getSelfDeaf());
+        const _spatialAudioSessionStats = succeedResult._spatialAudioSessionStats;
+        if (_spatialAudioSessionStats != null) {
+          _spatialAudioSessionStats.stop();
+        }
+        succeedResult._spatialAudioSessionStats = null;
+        if (succeedResult.context === constants7.DEFAULT) {
+          const tmp18 = new SpatialAudioSessionStatsDefault();
+          succeedResult._spatialAudioSessionStats = tmp18;
+          const _spatialAudioSessionStats2 = succeedResult._spatialAudioSessionStats;
+          const result1 = _spatialAudioSessionStats2.setRemoteAudioSourceCount(
+            succeedResult._getRemoteAudioSourceCount(),
+          );
+          const _spatialAudioSessionStats3 = succeedResult._spatialAudioSessionStats;
+          _spatialAudioSessionStats3.start();
+        }
         succeedResult.protocol = protocol;
         if ("udp" !== protocol) {
           if ("webrtc" === protocol) {
@@ -2730,7 +2808,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
           _undefined.setUdpEndpoint(null);
         } else {
           const _sfuEndpoint = succeedResult._sfuEndpoint;
-          if (!tmp23) {
+          if (!tmp30) {
             const logger6 = succeedResult.logger;
             logger6.info(
               "Retargeting SFU endpoint to " +
@@ -2741,7 +2819,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
             const obj = { address: succeedResult._sfuEndpoint.address, port: succeedResult._sfuEndpoint.port };
             _undefined.setUdpEndpoint(obj);
           }
-          tmp23 = null != config && config.address === _sfuEndpoint.address && config.port === _sfuEndpoint.port;
+          tmp30 = null != config && config.address === _sfuEndpoint.address && config.port === _sfuEndpoint.port;
         }
         socket.once(RTCControlSocket.SocketEvent.Encryption, (_encryptionMode, secretKey) => {
           if (encryption === _connection._connection) {
@@ -3073,6 +3151,10 @@ prototype["_handleSpeaking"] = function _handleSpeaking(arg0, userId, audioSSRC,
       if (_localMediaSinkWantsManager != null) {
         _localMediaSinkWantsManager.setAudioSSRC(userId, audioSSRC);
       }
+      const _spatialAudioSessionStats = self._spatialAudioSessionStats;
+      if (_spatialAudioSessionStats != null) {
+        const result = _spatialAudioSessionStats.setRemoteAudioSourceCount(self._getRemoteAudioSourceCount());
+      }
     }
     tmp2 = null != _connection && self.userId !== userId;
   }
@@ -3239,6 +3321,10 @@ prototype["_handleVideo"] = function _handleVideo(arg0, userId, audioSSRC, ssrc,
           if (null != self._localMediaSinkWantsManager) {
             const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
             _localMediaSinkWantsManager.setAudioSSRC(userId, audioSSRC);
+            const _spatialAudioSessionStats = self._spatialAudioSessionStats;
+            if (_spatialAudioSessionStats != null) {
+              const result = _spatialAudioSessionStats.setRemoteAudioSourceCount(self._getRemoteAudioSourceCount());
+            }
             const mapped = arr.map((rid) => ({
               type: constants9.VIDEO,
               rid: rid.rid,
@@ -3287,7 +3373,7 @@ prototype["_handleVideo"] = function _handleVideo(arg0, userId, audioSSRC, ssrc,
             }
             const _goLiveQualityManager2 = self._goLiveQualityManager;
             if (_goLiveQualityManager2 != null) {
-              const result = _goLiveQualityManager2.updateAudioAndVideoStreamInfo(audioSSRC, items);
+              const result1 = _goLiveQualityManager2.updateAudioAndVideoStreamInfo(audioSSRC, items);
             }
           }
           if (arr != null) {
@@ -4253,7 +4339,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5572).now();
+  const commitReceivedTime = _connection(5541).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;
@@ -4301,7 +4387,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5572).now();
+  const welcomeReceivedTime = _connection(5541).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05083_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05052_LegacyBaseButton.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import MediaEngineActionCreators from "../../../media_engine/MediaEngineActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelDockConstants = fn(11728);
+const VoicePanelDockConstants = fn(11706);
 ({ DOCK_ROW_HEIGHT, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
@@ -41,7 +41,7 @@ getDockPTTIndicatorDrag.__closure = items1;
 getDockPTTIndicatorDrag.__workletHash = 14207531924828;
 getDockPTTIndicatorDrag.__initData = tmp5;
 const diff = result - 1;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   ring: {
     padding: diff,
@@ -153,13 +153,13 @@ export default noop.memo(function VoicePanelDockPTTButton(measureGlowOffset) {
       let withTiming = require;
       let obj2 = dependencyMap;
       if (useReducedMotion.get()) {
-        withTiming = withTiming(5033).withTiming;
+        withTiming = withTiming(5002).withTiming;
         obj2 = { duration: 150 };
         let withTimingResult3 = withTiming(0, obj2);
-        const withTimingResult2 = withTiming(5033);
+        const withTimingResult2 = withTiming(5002);
       } else {
-        withTimingResult3 = withTiming(5424).withSpring(0, closure_10);
-        const withTimingResult4 = withTiming(5424);
+        withTimingResult3 = withTiming(5393).withSpring(0, closure_10);
+        const withTimingResult4 = withTiming(5393);
       }
       const result2 = sharedValue4.set(withTimingResult3);
     }

@@ -102,7 +102,7 @@ export function useCreateUserProfileAnalyticsContext(layout) {
 }
 export function useUserProfileAnalyticsContext() {
   const context = noop.useContext(closure_5);
-  analyticsLocations = analyticsLocations(7431)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7401)().analyticsLocations;
   let obj = { context, trackUserProfileAction: null, trackUserProfileEditAction: null, trackUserProfileEditSaved: null, trackUserProfileWishlistAction: null };
   items = [context, analyticsLocations];
   obj.trackUserProfileAction = noop.useCallback((arg0) => {

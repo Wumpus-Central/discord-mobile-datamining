@@ -10,7 +10,7 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const sendUserMessage = fn(6878).sendUserMessage;
+const sendUserMessage = fn(6848).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const prototype = function ConjureHomeUploadError() {
@@ -19,7 +19,7 @@ const prototype = function ConjureHomeUploadError() {
 class prototype extends Error {
 }
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, content: null, hero: null, badgeRow: null, carousel: null, showcase: null, showcaseTitle: null, error: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_32, gap: PX_32 };
@@ -28,7 +28,7 @@ obj2.hero = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.sp
 obj2.badgeRow = { flexDirection: "row" };
 let obj6 = { marginBottom: null };
 const diff = nativeDefault.space.PX_48 - PX_32;
-obj6.marginBottom = diff - fn(18680).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
+obj6.marginBottom = diff - fn(18674).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
 obj2.carousel = obj6;
 let obj5 = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_32 };
 obj2.showcase = { gap: nativeDefault.space.PX_16 };
@@ -48,7 +48,7 @@ export default function ConjureHomeLanding(focusRequest) {
   }
   _require = undefined;
   let first;
-  let forMeGuildId;
+  let CONJURE_TARGET_USER;
   asyncGeneratorStep = undefined;
   _slicedToArray = undefined;
   noop = undefined;
@@ -60,8 +60,8 @@ export default function ConjureHomeLanding(focusRequest) {
   const navigation = require("useNavigation").useNavigation();
   _require = navigation;
   let obj = require("useNavigation");
-  const tmp7 = first(forMeGuildId[12])();
-  items = [closure_14, tmp7, first(forMeGuildId[11])().bottom];
+  const tmp7 = first(CONJURE_TARGET_USER[12])();
+  items = [closure_14, tmp7, first(CONJURE_TARGET_USER[11])().bottom];
   _require = undefined;
   first = undefined;
   [tmp8, tmp9, tmp10] = items;
@@ -80,20 +80,21 @@ export default function ConjureHomeLanding(focusRequest) {
   first = tmp13[0];
   let obj2 = require("../../../../../_runtime/metro/01655__.js");
   const conjureEligibleGuilds = require("useConjureProjects").useConjureEligibleGuilds("ConjureHomeLanding");
-  let CONJURE_TARGET_USER = first;
+  CONJURE_TARGET_USER = first;
   if (first !== require("conjureTarget").CONJURE_TARGET_USER) {
     CONJURE_TARGET_USER = first;
     if (!conjureEligibleGuilds.some((id) => id.id === first)) {
       CONJURE_TARGET_USER = tmp3(tmp4[14]).CONJURE_TARGET_USER;
     }
   }
-  forMeGuildId = CONJURE_TARGET_USER;
-  if (CONJURE_TARGET_USER === require("conjureTarget").CONJURE_TARGET_USER) {
-    forMeGuildId = focusRequest.forMeGuildId;
+  let tmp15 = null;
+  if (CONJURE_TARGET_USER !== require("conjureTarget").CONJURE_TARGET_USER) {
+    tmp15 = CONJURE_TARGET_USER;
   }
+  CONJURE_TARGET_USER = tmp15;
   asyncGeneratorStep = obj3.useRef(0);
   const tmp3Result = require("useConjureProjects");
-  [tmp16, c4] = noop.useState(true);
+  [tmp17, c4] = noop.useState(true);
   const callback = obj3.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.contentOffset.y < ref.current);
   }, []);
@@ -101,11 +102,12 @@ export default function ConjureHomeLanding(focusRequest) {
     const layout = nativeEvent.nativeEvent.layout;
     closure_3.current = layout.y + layout.height;
   }, []);
-  [obj16.sending, noop] = noop.useState(false);
   const tmp12Result = _slicedToArray(noop.useState(true), 2);
-  [tmp21, c6] = _slicedToArray(noop.useState(null), 2);
+  [tmp21, c5] = noop.useState(false);
+  const tmp12Result4 = _slicedToArray(noop.useState(false), 2);
+  [tmp23, c6] = noop.useState(null);
   const tmp12Result5 = _slicedToArray(noop.useState(null), 2);
-  [tmp23, c7] = _slicedToArray(noop.useState(null), 2);
+  [tmp25, c7] = noop.useState(null);
   const callback2 = obj3.useCallback(() => _undefined2((arg0) => {
     let num = arg0;
     if (arg0 == null) {
@@ -132,7 +134,7 @@ export default function ConjureHomeLanding(focusRequest) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -160,12 +162,12 @@ export default function ConjureHomeLanding(focusRequest) {
               ref2.current = true;
               v0(true);
               v8(null);
-              closure_0(forMeGuildId[16]).setComposerDraft(closure_0(forMeGuildId[17]).CONJURE_HOME_DRAFT_KEY, "");
+              closure_0(CONJURE_TARGET_USER[16]).setComposerDraft(closure_0(CONJURE_TARGET_USER[17]).CONJURE_HOME_DRAFT_KEY, "");
               v0 = 2;
               const obj4 = { guildId, modelSettings: null };
               v8 = 3;
               c7 = 1;
-              const obj5 = { value: first(forMeGuildId[18])(obj4), done: false };
+              const obj5 = { value: first(CONJURE_TARGET_USER[18])(obj4), done: false };
               return obj5;
             }
           }
@@ -177,27 +179,27 @@ export default function ConjureHomeLanding(focusRequest) {
         } else if (2 === tmp10) {
           v0 = 1;
           closure_130_5 = closure_4;
-          closure_0(forMeGuildId[16]).setComposerDraft(closure_0(forMeGuildId[17]).CONJURE_HOME_DRAFT_KEY, closure_130_0);
+          closure_0(CONJURE_TARGET_USER[16]).setComposerDraft(closure_0(CONJURE_TARGET_USER[17]).CONJURE_HOME_DRAFT_KEY, closure_130_0);
           if (closure_130_5 instanceof prototype) {
-            const intl = closure_0(forMeGuildId[23]).intl;
-            let stringResult = intl.string(first(forMeGuildId[24])["903H7m"]);
+            const intl = closure_0(CONJURE_TARGET_USER[23]).intl;
+            let stringResult = intl.string(first(CONJURE_TARGET_USER[24])["903H7m"]);
           } else {
-            stringResult = closure_0(forMeGuildId[25]).getConjureCreateErrorMessage(closure_130_5);
-            const obj11 = closure_0(forMeGuildId[25]);
+            stringResult = closure_0(CONJURE_TARGET_USER[25]).getConjureCreateErrorMessage(closure_130_5);
+            const obj11 = closure_0(CONJURE_TARGET_USER[25]);
           }
           closure_130_4 = stringResult;
           if (ref.current) {
             v8(closure_130_4);
           } else {
             const obj7 = { text: closure_130_4, variant: "critical" };
-            first(forMeGuildId[26]).open("CONJURE_HOME_CREATE_FAILED", obj7);
-            const obj12 = first(forMeGuildId[26]);
+            first(CONJURE_TARGET_USER[26]).open("CONJURE_HOME_CREATE_FAILED", obj7);
+            const obj12 = first(CONJURE_TARGET_USER[26]);
           }
           v0 = 0;
           ref2.current = false;
           v0(false);
           c7 = 3;
-          const obj10 = closure_0(forMeGuildId[16]);
+          const obj10 = closure_0(CONJURE_TARGET_USER[16]);
         } else {
           if (3 === tmp10) {
             if (arg0 === 1) {
@@ -227,7 +229,7 @@ export default function ConjureHomeLanding(focusRequest) {
                     closure_0 = fn;
                     function check() {
                       const messages = ref.getMessages(closure_0);
-                      if (messages.some(/* F143723 */ function() { ... })) {
+                      if (messages.some(/* F143692 */ function() { ... })) {
                         ref.removeChangeListener(check);
                         const _clearTimeout = clearTimeout;
                         clearTimeout(timerId);
@@ -257,7 +259,7 @@ export default function ConjureHomeLanding(focusRequest) {
             v0 = 4;
             v8 = 8;
             c7 = 1;
-            const obj13 = { value: closure_0(forMeGuildId[20]).deleteProject(closure_130_2), done: false };
+            const obj13 = { value: closure_0(CONJURE_TARGET_USER[20]).deleteProject(closure_130_2), done: false };
             return obj13;
           } else if (5 === tmp10) {
             if (arg0 === 1) {
@@ -277,8 +279,8 @@ export default function ConjureHomeLanding(focusRequest) {
               }
               if (current) {
                 const obj16 = { projectId: closure_130_2, entryPoint: "create" };
-                closure_0.dispatch(closure_0(forMeGuildId[21]).StackActions.replace(closure_0(forMeGuildId[22]).ConjureScreenScenes.CHAT, obj16));
-                const str = closure_0(forMeGuildId[21]).StackActions;
+                closure_0.dispatch(closure_0(CONJURE_TARGET_USER[21]).StackActions.replace(closure_0(CONJURE_TARGET_USER[22]).ConjureScreenScenes.CHAT, obj16));
+                const str = closure_0(CONJURE_TARGET_USER[21]).StackActions;
               }
               v0 = 0;
               ref2.current = false;
@@ -343,7 +345,7 @@ export default function ConjureHomeLanding(focusRequest) {
       }
     }
   });
-  const items2 = [forMeGuildId, navigation];
+  const items2 = [tmp15, navigation];
   const callback3 = obj3.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -357,54 +359,55 @@ export default function ConjureHomeLanding(focusRequest) {
   let obj4 = { style: null, children: null };
   const items3 = [tmp2.root, animatedStyle];
   obj4.style = items3;
-  const items4 = [closure_10(first(forMeGuildId[27]), {}), , , ];
+  const items4 = [closure_10(first(CONJURE_TARGET_USER[27]), {}), , , ];
   let obj5 = { style: tmp2.scroll, contentContainerStyle: tmp2.content, keyboardShouldPersistTaps: "handled", onScrollBeginDrag: callback2, onTouchEnd: callback2, onScroll: callback, scrollEventThrottle: 100, children: null };
   const obj6 = { style: tmp2.hero, children: null };
   let obj7 = { style: tmp2.badgeRow, children: null };
   let obj8 = { type: null, variant: "primary" };
   let obj9 = { text: null };
   let intl = tmp3(tmp4[23]).intl;
-  obj9.text = intl.string(first(forMeGuildId[24]).y6T1Nu);
+  obj9.text = intl.string(first(CONJURE_TARGET_USER[24]).y6T1Nu);
   obj8.type = obj9;
   obj7.children = closure_10(require("Badge").Badge, obj8);
   const items5 = [closure_10(c7, obj7), , ];
   let obj10 = { variant: "display-md", color: "text-strong", accessibilityRole: "header", children: null };
   const intl2 = tmp3(tmp4[23]).intl;
-  obj10.children = intl2.string(first(forMeGuildId[24]).doYpEy);
+  obj10.children = intl2.string(first(CONJURE_TARGET_USER[24]).doYpEy);
   items5[1] = closure_10(require("Text/Text").Text, obj10);
   let obj11 = { variant: "body-sm/normal", color: "text-strong", children: null };
   const intl3 = tmp3(tmp4[23]).intl;
-  obj11.children = intl3.string(first(forMeGuildId[24]).BH58fD);
+  obj11.children = intl3.string(first(CONJURE_TARGET_USER[24]).BH58fD);
   items5[2] = closure_10(require("Text/Text").Text, obj11);
   obj6.children = items5;
   const items6 = [closure_11(c7, obj6), , ];
   const tmp12Result6 = _slicedToArray(noop.useState(null), 2);
-  items6[1] = closure_10(c7, { style: tmp2.carousel, onLayout: callback1, children: closure_10(first(forMeGuildId[9]), { onScreen: tmp16 }) });
+  items6[1] = closure_10(c7, { style: tmp2.carousel, onLayout: callback1, children: closure_10(first(CONJURE_TARGET_USER[9]), { onScreen: tmp17 }) });
   let obj13 = { style: tmp2.showcase, children: null };
   const obj14 = { variant: "heading-lg/medium", color: "text-strong", accessibilityRole: "header", style: tmp2.showcaseTitle, children: null };
   const intl4 = tmp3(tmp4[23]).intl;
-  obj14.children = intl4.string(first(forMeGuildId[24]).IiQEVd);
-  const items7 = [closure_10(require("Text/Text").Text, obj14), closure_10(first(forMeGuildId[30]), {})];
+  obj14.children = intl4.string(first(CONJURE_TARGET_USER[24]).IiQEVd);
+  const items7 = [closure_10(require("Text/Text").Text, obj14), closure_10(first(CONJURE_TARGET_USER[30]), {})];
   obj13.children = items7;
   items6[2] = closure_11(c7, obj13);
   obj5.children = items6;
   items4[1] = closure_11(c6, obj5);
-  let tmp28Result = null;
-  if (null != tmp21) {
-    let obj15 = { variant: "body-sm/normal", color: "text-feedback-critical", style: tmp2.error, children: tmp21 };
-    tmp28Result = closure_10(tmp3(tmp4[29]).Text, obj15);
+  let tmp30Result = null;
+  if (null != tmp23) {
+    let obj15 = { variant: "body-sm/normal", color: "text-feedback-critical", style: tmp2.error, children: tmp23 };
+    tmp30Result = closure_10(tmp3(tmp4[29]).Text, obj15);
   }
-  items4[2] = tmp28Result;
+  items4[2] = tmp30Result;
   let obj16 = { projectId: null, canSend: true, running: false, onSendFiles: null, sending: null, focusRequest: null, blurRequest: null, placeholder: null, stackedAccessory: null };
-  let obj12 = { style: tmp2.carousel, onLayout: callback1, children: closure_10(first(forMeGuildId[9]), { onScreen: tmp16 }) };
+  let obj12 = { style: tmp2.carousel, onLayout: callback1, children: closure_10(first(CONJURE_TARGET_USER[9]), { onScreen: tmp17 }) };
   obj16.projectId = require("ConjureHomeTypes").CONJURE_HOME_DRAFT_KEY;
   obj16.onSendFiles = callback3;
+  obj16.sending = tmp21;
   obj16.focusRequest = focusRequest;
-  obj16.blurRequest = tmp23;
+  obj16.blurRequest = tmp25;
   const intl5 = tmp3(tmp4[23]).intl;
-  obj16.placeholder = intl5.string(first(forMeGuildId[24]).Hy0OLY);
-  obj16.stackedAccessory = closure_10(first(forMeGuildId[32]), { target: CONJURE_TARGET_USER, guilds: conjureEligibleGuilds, onChange: tmp13[1] });
-  items4[3] = closure_10(first(forMeGuildId[31]), obj16);
+  obj16.placeholder = intl5.string(first(CONJURE_TARGET_USER[24]).Hy0OLY);
+  obj16.stackedAccessory = closure_10(first(CONJURE_TARGET_USER[32]), { target: CONJURE_TARGET_USER, guilds: conjureEligibleGuilds, onChange: tmp13[1] });
+  items4[3] = closure_10(first(CONJURE_TARGET_USER[31]), obj16);
   obj4.children = items4;
-  return closure_11(first(forMeGuildId[13]).View, obj4);
+  return closure_11(first(CONJURE_TARGET_USER[13]).View, obj4);
 };

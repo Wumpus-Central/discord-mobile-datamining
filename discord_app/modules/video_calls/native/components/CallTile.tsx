@@ -5,14 +5,14 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
-import _modDef6993 from "../../../../../_runtime/metro/06993__.js";
+import _modDef6963 from "../../../../../_runtime/metro/06963__.js";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import RevealProvider from "RevealProvider.tsx";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef11045 from "../../../../../_runtime/metro/11045__.js";
-import _modDef11046 from "../../../../../_runtime/metro/11046__.js";
-import _modDef11047 from "../../../../../_runtime/metro/11047__.js";
-import _modDef11048 from "../../../../../_runtime/metro/11048__.js";
+import _modDef11023 from "../../../../../_runtime/metro/11023__.js";
+import _modDef11024 from "../../../../../_runtime/metro/11024__.js";
+import _modDef11025 from "../../../../../_runtime/metro/11025__.js";
+import _modDef11026 from "../../../../../_runtime/metro/11026__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -30,7 +30,7 @@ class StreamPreviewTile {
     obj1 = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "description", borderRadius: false },
+      style: { aspectRatio: "ip", borderRadius: "pen_fountain" },
       disableTransition: true,
       onPress() {
         return closure_1_8();
@@ -43,17 +43,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef11045;
+    let tmp3 = _modDef11023;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef11046;
+      tmp3 = _modDef11024;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef6993;
+      tmp3 = _modDef6963;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef11047;
+      tmp3 = _modDef11025;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef11048;
+      tmp3 = _modDef11026;
     }
   }
   let tmp14 = null;
@@ -160,13 +160,13 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10596);
+const ChannelCallStore = fn(10574);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5473);
+const CallConstants = fn(5442);
 ({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   liveContainer: { position: "absolute", top: 8, right: 8 },
   titleIcon: { marginRight: 6 },
@@ -185,7 +185,7 @@ let obj3 = {
   paddingHorizontal: 8,
   paddingVertical: 4,
 };
-const ColorUtils = fn(4820);
+const ColorUtils = fn(4789);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;

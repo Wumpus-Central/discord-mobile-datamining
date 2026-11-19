@@ -51,6 +51,7 @@ class SubscriptionRecord extends tmp2 {
       streakStartedAt: tmp7.streakStartedAt,
       eligiblePaymentGateways: tmp7.eligiblePaymentGateways,
       priceChange: tmp7.priceChange,
+      giftSubscription: tmp7.giftSubscription,
     } = global);
     renewalMutations = tmp7.renewalMutations;
     planId = global.items[0].planId;
@@ -203,6 +204,20 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
     fromServer = GooglePlayPriceChangeRecord.createFromServer(id.price_change);
   }
   obj.priceChange = fromServer;
+  const gift_subscription = id.gift_subscription;
+  let tmp24 = gift_subscription;
+  if (null != gift_subscription) {
+    ({
+      id: obj5.id,
+      status: obj5.status,
+      recipient_user_id: obj5.recipientUserId,
+      initial_gift_code: obj5.initialGiftCode,
+      initial_entitlement_id: obj5.initialEntitlementId,
+    } = gift_subscription);
+    tmp24 = { id: null, status: null, recipientUserId: null, initialGiftCode: null, initialEntitlementId: null };
+    const obj9 = { id: null, status: null, recipientUserId: null, initialGiftCode: null, initialEntitlementId: null };
+  }
+  obj.giftSubscription = tmp24;
   return new SubscriptionRecord(obj);
 };
 prototype["getCurrentSubscriptionPlanIdForGroup"] = function getCurrentSubscriptionPlanIdForGroup(items) {

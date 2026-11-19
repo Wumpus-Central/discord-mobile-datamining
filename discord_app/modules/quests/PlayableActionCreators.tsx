@@ -15,7 +15,7 @@ let closure_5 = async function _claimPlayableReward(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -114,7 +114,7 @@ let closure_5 = async function _claimPlayableReward(arg0) {
         closure_133_1(closure_133_2[6]).dispatch(obj10);
         c7 = 0;
         c9 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp36) {
       closure_6 = tmp36;
@@ -128,6 +128,7 @@ let closure_5 = async function _claimPlayableReward(arg0) {
   }
 };
 const Endpoints = fn(1072).Endpoints;
+let c6 = 0;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/PlayableActionCreators.tsx");
 
@@ -142,5 +143,11 @@ export function claimPlayableReward() {
   return applyArgumentsResult;
 }
 export function recordPlayableLaunch(questDockPlayable) {
-  DispatcherDefault.dispatch({ type: "PLAYABLE_LAUNCH", playable: questDockPlayable });
+  const sum = c6 + 1;
+  c6 = sum;
+  DispatcherDefault.dispatch({ type: "PLAYABLE_LAUNCH", playable: questDockPlayable, launchId: sum });
+  return sum;
+}
+export function completePlayableLaunch(recordPlayableLaunchResult, success) {
+  DispatcherDefault.dispatch({ type: "PLAYABLE_LAUNCH_COMPLETE", launchId: recordPlayableLaunchResult, success });
 }

@@ -71,39 +71,46 @@ function updateActivities() {
     if (streamerActiveStreamMetadata != null) {
       pid = streamerActiveStreamMetadata.pid;
     }
-    let tmp28 = null;
+    if (pid == null) {
+      let gamePid;
+      if (streamerActiveStreamMetadata != null) {
+        gamePid = streamerActiveStreamMetadata.gamePid;
+      }
+      pid = gamePid;
+    }
+    let tmp29 = null;
     if (null != pid) {
-      let found = visibleRunningGames.find((pid) => pid.pid === streamerActiveStreamMetadata.pid);
+      let found = visibleRunningGames.find((pid) => pid.pid === pid);
       if (found == null) {
         found = null;
       }
-      tmp28 = found;
+      tmp29 = found;
     }
-    let tmp30 = null == tmp28;
-    if (tmp30) {
+    let tmp31 = null == tmp29;
+    if (tmp31) {
       let id1;
       if (streamerActiveStreamMetadata != null) {
         id1 = streamerActiveStreamMetadata.id;
       }
-      tmp30 = null != id1;
+      tmp31 = null != id1;
     }
-    if (tmp30) {
+    if (tmp31) {
       let found1 = visibleRunningGames.find((id) => id.id === streamerActiveStreamMetadata.id);
       if (found1 == null) {
         found1 = null;
       }
-      tmp28 = found1;
+      tmp29 = found1;
     }
-    if (null != tmp28) {
-      let tmp25 = tmp28;
+    if (null != tmp29) {
+      let tmp25 = tmp29;
       if (null == c21) {
-        let start = tmp28.start;
+        let start = tmp29.start;
         if (start == null) {
           const _Date3 = Date;
           start = Date.now();
         }
         c21 = start;
-        tmp25 = tmp28;
+        tmp25 = tmp29;
       }
     } else {
       c21 = null;
@@ -142,8 +149,8 @@ function updateActivities() {
       return tmp2;
     });
   }
-  let tmp43 = null != tmp25 && null != tmp25.name;
-  if (tmp43) {
+  let tmp44 = null != tmp25 && null != tmp25.name;
+  if (tmp44) {
     if (!someResult) {
       someResult = set.has(tmp25.name);
     }
@@ -153,12 +160,12 @@ function updateActivities() {
       someResult = tmp(tmp2[20]).doesGameHaveRichPresence(tmp25, items3);
       const tmpResult3 = tmp(tmp2[20]);
     }
-    tmp43 = someResult;
+    tmp44 = someResult;
   }
   if (null != tmp25) {
     if (null != tmp25.name) {
-      if (!tmp43) {
-        if (!tmp49) {
+      if (!tmp44) {
+        if (!tmp50) {
           const findGameResult = DetectableGameStore.findGame(tmp25);
           const obj2 = {
             type: tmp(tmp2[17]).ActivityTypes.PLAYING,
@@ -194,9 +201,9 @@ function updateActivities() {
     const merged2 = Object.assign(activity);
     items.push(obj4);
   }
-  const tmp61 = tmp21(streamerActiveStreamMetadata[22])(items, items);
-  let flag = !tmp61;
-  if (!tmp61) {
+  const tmp62 = tmp21(streamerActiveStreamMetadata[22])(items, items);
+  let flag = !tmp62;
+  if (!tmp62) {
     flag = true;
   }
   return flag;

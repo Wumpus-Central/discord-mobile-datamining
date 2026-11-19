@@ -33,15 +33,15 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let balance;
   const tmp2 = closure_11();
   const tmp3 = balance;
-  balance = balance(9331).useFetchVirtualCurrencyBalance().balance;
-  let obj = balance(9331);
-  const orbBalanceEntrypoint = balance(16220).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
+  balance = balance(9308).useFetchVirtualCurrencyBalance().balance;
+  let obj = balance(9308);
+  const orbBalanceEntrypoint = balance(16211).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
   const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
   items = [balance, openBalanceWidgetActionSheet];
   let obj3 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     const obj4 = { balance, onPress: tmp6, showNotificationBadge: orbBalanceEntrypoint.hasUnreadUpdate };
-    isVirtualCurrencyEnabled = closure_9(tmp3(9336).BalanceWidgetPillButton, obj4);
+    isVirtualCurrencyEnabled = closure_9(tmp3(9313).BalanceWidgetPillButton, obj4);
   }
   const items1 = [isVirtualCurrencyEnabled];
   const merged1 = Object.assign(merged);
@@ -73,7 +73,7 @@ function FiltersButton(setSelectedSortMethod) {
   items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16377, dependencyMap.paths),
+      asyncRequireImpl(16368, dependencyMap.paths),
       "QuestHomeSortingFilteringBottomSheet",
       {
         onSortMethodChange: setSelectedSortMethod,
@@ -99,13 +99,13 @@ function FiltersButton(setSelectedSortMethod) {
   return closure_9(setSelectedSortMethod(tmp3[20]).BaseIconButton, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(6466).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(6437).QuestHomeSortMethods;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, AnalyticsPages: metroImportDefault } = Constants);
 let closure_8 = fn(1074).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   headerTitleContainer: {
     width: "100%",

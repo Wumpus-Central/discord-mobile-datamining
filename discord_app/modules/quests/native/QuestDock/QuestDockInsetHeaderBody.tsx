@@ -13,12 +13,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(16538);
+const QuestDockConstants = fn(16529);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const PX_80 = nativeDefault.space.PX_80;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   rewardTile: { borderRadius: nativeDefault.radii.lg },
   wrapper: {
@@ -27,6 +27,7 @@ let obj = {
     justifyContent: "flex-end",
     paddingHorizontal: QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL,
     paddingBottom: QUEST_DOCK_EXPANDED_PADDING_BOTTOM,
+    pointerEvents: "box-none",
   },
   rewardContentContainer: { position: "relative" },
   rewardContentWrapper: null,

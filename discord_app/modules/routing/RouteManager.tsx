@@ -32,7 +32,7 @@ class RouteManager {
     obj.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
       if ("POP" !== REPLACE) {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-          obj = obj2(13673);
+          obj = obj2(13655);
           if (!obj.convertRouteToNavigation(pathname)) {
             obj2(1099).replaceWith(Routes.ME);
             const tmp2Result = obj2(1099);
@@ -192,7 +192,7 @@ obj2.handleConnectionChange = function handleConnectionChange() {
 obj2.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   if ("POP" !== REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-      obj = obj2(13673);
+      obj = obj2(13655);
       if (!obj.convertRouteToNavigation(pathname)) {
         obj2(1099).replaceWith(Routes.ME);
         const tmp2Result = obj2(1099);

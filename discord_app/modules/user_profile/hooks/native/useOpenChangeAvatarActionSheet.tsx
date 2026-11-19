@@ -52,6 +52,7 @@ export default function useOpenChangeAvatarActionSheet(user) {
       },
       handleEditAvatarDecorationSelect: null,
       showRemoveAvatar: null,
+      analyticsLocations: null,
     };
     let editAvatarDecoration;
     let obj = ActionSheetActionCreatorsDefault;
@@ -65,8 +66,9 @@ export default function useOpenChangeAvatarActionSheet(user) {
       };
     }
     obj2.handleEditAvatarDecorationSelect = editAvatarDecoration;
-    const tmp3 = asyncRequireImpl(15859, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(15850, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
+    obj2.analyticsLocations = analyticsLocations;
     obj.openLazy(tmp3, "Change Avatar", obj2);
     const tmp2Result = ProfileCustomizationUtils;
   }, items);

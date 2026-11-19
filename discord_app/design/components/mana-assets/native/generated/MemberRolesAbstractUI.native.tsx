@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/MemberRolesAbstractUI.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef19888 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MemberRolesAbstractUI-1x.png.js";
-import _modDef19889 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MemberRolesAbstractUI-2x.png.js";
-import _modDef19890 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MemberRolesAbstractUI-3x.png.js";
+import _modDef19899 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MemberRolesAbstractUI-1x.png.js";
+import _modDef19900 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MemberRolesAbstractUI-2x.png.js";
+import _modDef19901 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MemberRolesAbstractUI-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19888 }, 3: null };
-let obj2 = { uri: _modDef19888 };
-obj[2] = { uri: _modDef19889 };
-const obj3 = { uri: _modDef19889 };
-obj[3] = { uri: _modDef19890 };
+let obj = { 1: null, 2: { uri: _modDef19899 }, 3: null };
+let obj2 = { uri: _modDef19899 };
+obj[2] = { uri: _modDef19900 };
+const obj3 = { uri: _modDef19900 };
+obj[3] = { uri: _modDef19901 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/MemberRolesAbstractUI.native.tsx",

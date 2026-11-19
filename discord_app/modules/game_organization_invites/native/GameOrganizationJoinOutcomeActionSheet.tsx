@@ -12,7 +12,7 @@ require = fn;
 function hideSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(closure_3);
 }
-let closure_3 = fn(11856).GAME_ORGANIZATION_JOIN_OUTCOME_ACTION_SHEET_KEY;
+let closure_3 = fn(11834).GAME_ORGANIZATION_JOIN_OUTCOME_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

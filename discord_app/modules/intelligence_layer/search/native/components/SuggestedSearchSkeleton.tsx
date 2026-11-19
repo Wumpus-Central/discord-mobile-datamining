@@ -11,13 +11,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 const obj2 = {
   row: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: nativeDefault.space.PX_16,
-    paddingVertical: fn(8488).SEARCH_ROW_TAP_STATE_PADDING,
+    paddingVertical: fn(8457).SEARCH_ROW_TAP_STATE_PADDING,
   },
   icon: null,
   labels: null,
@@ -31,7 +31,7 @@ let size = {
   marginRight: nativeDefault.space.PX_12,
 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(13127).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(13109).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = {
   height: 16,
   width: "72%",

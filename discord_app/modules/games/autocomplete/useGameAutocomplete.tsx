@@ -26,7 +26,7 @@ const obj2 = {
   getIsLoading(arg0, arg1) {
     return GameAutocompleteStore.isFetching(arg0, arg1);
   },
-  retryConfig: { retryableErrors: fn(8799).isRetryableGameSearchError },
+  retryConfig: { retryableErrors: fn(8768).isRetryableGameSearchError },
   staleAfter: 3600,
   failureStaleAfter: 60,
 };

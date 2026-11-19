@@ -6,7 +6,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;
-const SoundboardStyleConstants = fn(18072);
+const SoundboardStyleConstants = fn(18065);
 ({ SOUNDS_PER_ROW: closure_6, SOUND_ROW_PADDING: metroImportDefault } = SoundboardStyleConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
@@ -38,7 +38,7 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -52,12 +52,12 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
               const obj5 = { value, done: true };
               return obj5;
             } else if (c0) {
-              const FrecencyUserSettingsActionCreators = shouldFetch(4653).FrecencyUserSettingsActionCreators;
-              shouldFetch(4943).ignoreErrors(FrecencyUserSettingsActionCreators.loadIfNecessary());
-              const obj2 = shouldFetch(4943);
+              const FrecencyUserSettingsActionCreators = shouldFetch(4622).FrecencyUserSettingsActionCreators;
+              shouldFetch(4912).ignoreErrors(FrecencyUserSettingsActionCreators.loadIfNecessary());
+              const obj2 = shouldFetch(4912);
               c1 = 1;
               c0 = 1;
-              const obj6 = { value: shouldFetch(6738).maybeFetchSoundboardSounds(), done: false };
+              const obj6 = { value: shouldFetch(6709).maybeFetchSoundboardSounds(), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -69,7 +69,7 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         } catch (tmp8) {
           c0 = tmp;
           throw tmp8;

@@ -14,9 +14,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(17926);
+  let obj = id(17919);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(17926).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = id(17919).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: false,
   });
@@ -52,9 +52,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   const memo1 = noop.useMemo(
     () => ({
       onPress() {
-        const result = id(5039).triggerHapticFeedback(id(5039).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = id(5039);
-        const result1 = closure_1(6419).toggleGuildFolderExpand(closure_1_0);
+        const result = id(5008).triggerHapticFeedback(id(5008).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = id(5008);
+        const result1 = closure_1(6390).toggleGuildFolderExpand(closure_1_0);
       },
     }),
     items2,
@@ -71,10 +71,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     sharedId: null,
     cutouts: "HermesInternal",
     overState: "a",
-    preventClipping: 0,
-    config: 4,
-    externalChildren: 8,
-    children: 16,
+    preventClipping: true,
+    config: "/assets/images/platforms",
+    externalChildren: 24,
+    children: 24,
   };
   const obj3 = id(1655);
   obj4.id = "" + id;
@@ -89,10 +89,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(17925).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(17918).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(10308).HourglassIcon, {});
+  obj4.children = jsx(id(10286).HourglassIcon, {});
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     id: null,
     accessibilityActions: null,
@@ -105,9 +105,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     sharedId: null,
     cutouts: "HermesInternal",
     overState: "a",
-    preventClipping: 0,
-    config: 4,
-    externalChildren: 8,
-    children: 16,
+    preventClipping: true,
+    config: "/assets/images/platforms",
+    externalChildren: 24,
+    children: 24,
   });
 });

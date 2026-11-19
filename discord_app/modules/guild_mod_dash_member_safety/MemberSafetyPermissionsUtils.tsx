@@ -9,8 +9,8 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(4690).isGuildOwner;
-let closure_9 = fn(4759).MemberSafetyPagePermissions;
+const isGuildOwner = fn(4659).isGuildOwner;
+let closure_9 = fn(4728).MemberSafetyPagePermissions;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);

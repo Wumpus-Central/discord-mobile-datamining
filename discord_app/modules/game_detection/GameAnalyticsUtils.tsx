@@ -21,12 +21,12 @@ export function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
     return {
       gameName: "Array",
-      gameId: "channelId",
-      exe: "unicodeVersion",
-      distributor: "user",
-      sku: "ip",
-      gameMetadata: "o",
-      rawExePath: "isArray",
+      gameId: "channel_id",
+      exe: "kind",
+      distributor: "useRef",
+      sku: "HermesInternal",
+      gameMetadata: "disabled",
+      rawExePath: "o",
     };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;

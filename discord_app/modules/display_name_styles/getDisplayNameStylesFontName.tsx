@@ -1,6 +1,6 @@
 // discord_app/modules/display_name_styles/getDisplayNameStylesFontName.tsx
 import _modDef3147 from "intl/DisplayNameStyles.messages.js";
-import _modDef4508 from "../hexagon_campaign/HexagonCampaign.messages.js";
+import _modDef4476 from "../hexagon_campaign/HexagonCampaign.messages.js";
 
 const DISPLAY_NAME_STYLES_FONT_NAMES = {};
 DISPLAY_NAME_STYLES_FONT_NAMES[fn(1398).DisplayNameFont.DEFAULT] = _modDef3147.ZEL6mz;
@@ -15,7 +15,7 @@ DISPLAY_NAME_STYLES_FONT_NAMES[fn(1398).DisplayNameFont.PLAYPEN_SANS] = _modDef3
 DISPLAY_NAME_STYLES_FONT_NAMES[fn(1398).DisplayNameFont.ORBITRON] = _modDef3147.pwbAIk;
 DISPLAY_NAME_STYLES_FONT_NAMES[fn(1398).DisplayNameFont.NEW_ROCKER] = _modDef3147["Llo/Ia"];
 DISPLAY_NAME_STYLES_FONT_NAMES[fn(1398).DisplayNameFont.KALAM] = _modDef3147.t9Les4;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1398).DisplayNameFont.HEXAGON] = _modDef4508.ALTlzk;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1398).DisplayNameFont.HEXAGON] = _modDef4476.ALTlzk;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/getDisplayNameStylesFontName.tsx");
 

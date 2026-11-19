@@ -18,7 +18,7 @@ function CategoryItemsBySku(categorySkuId) {
   categorySkuId = categorySkuId.categorySkuId;
   let category;
   retry = undefined;
-  let stateFromStores1;
+  let stateFromStores2;
   closure_6 = undefined;
   let memo;
   let isBillingReady;
@@ -27,40 +27,49 @@ function CategoryItemsBySku(categorySkuId) {
   closure_11 = undefined;
   closure_12 = undefined;
   ({ categoryName, analyticsContext } = categorySkuId);
-  let items12 = closure_18();
+  let items13 = closure_18();
   let stringResult = category;
   const stackNavigation = categorySkuId(category[12]).useStackNavigation();
-  const tmp5 = stackNavigation(category[13])(categorySkuId, { includePricing: true });
-  category = tmp5.category;
-  ({ state, retry } = tmp5);
   let obj = categorySkuId(category[12]);
-  let tmp4 = stackNavigation;
-  items = [c10];
-  const items1 = [categorySkuId];
-  let tmp8 = "ready" === state;
-  let stateFromStores = categorySkuId(category[14]).useStateFromStores(
-    items,
+  items = [c9];
+  const stateFromStores = categorySkuId(category[13]).useStateFromStores(items, () =>
+    _undefined.get("shop_include_unpublished"),
+  );
+  const tmp7 = stackNavigation(category[14])(categorySkuId, {
+    includeUnpublished: stateFromStores,
+    includePricing: true,
+  });
+  category = tmp7.category;
+  ({ state, retry } = tmp7);
+  const obj2 = categorySkuId(category[13]);
+  let tmp4 = c9;
+  const tmp6 = stackNavigation;
+  const items1 = [c10];
+  const items2 = [categorySkuId];
+  let tmp10 = "ready" === state;
+  let stateFromStores1 = categorySkuId(category[13]).useStateFromStores(
+    items1,
     () =>
       "success" === StorefrontCollectionStore.getFetchState(categorySkuId) &&
       StorefrontCollectionStore.hasPricingCoverage(categorySkuId),
-    items1,
-  );
-  if (tmp8) {
-    tmp8 = null != category;
-  }
-  if (tmp8) {
-    tmp8 = stateFromStores;
-  }
-  stateFromStores = tmp8;
-  const obj2 = categorySkuId(category[14]);
-  const tmp6 = c10;
-  const items2 = [tmp6];
-  const items3 = [categorySkuId, tmp8];
-  stateFromStores1 = categorySkuId(stringResult[14]).useStateFromStores(
     items2,
+  );
+  if (tmp10) {
+    tmp10 = null != category;
+  }
+  if (tmp10) {
+    tmp10 = stateFromStores1;
+  }
+  stateFromStores1 = tmp10;
+  const obj3 = categorySkuId(category[13]);
+  const tmp8 = c10;
+  const items3 = [tmp8];
+  const items4 = [categorySkuId, tmp10];
+  stateFromStores2 = categorySkuId(stringResult[13]).useStateFromStores(
+    items3,
     () => {
-      let tmp = stateFromStores;
-      if (stateFromStores) {
+      let tmp = stateFromStores1;
+      if (stateFromStores1) {
         const collection = StorefrontCollectionStore.getCollection(categorySkuId);
         let isOrbsExclusive;
         if (collection != null) {
@@ -70,18 +79,18 @@ function CategoryItemsBySku(categorySkuId) {
       }
       return tmp;
     },
-    items3,
+    items4,
   );
-  const tmpResult = categorySkuId(stringResult[14]);
-  const items4 = [c9];
-  const stateFromStores2 = categorySkuId(stringResult[14]).useStateFromStores(items4, () =>
+  const tmpResult = categorySkuId(stringResult[13]);
+  const items5 = [tmp4];
+  const stateFromStores3 = categorySkuId(stringResult[13]).useStateFromStores(items5, () =>
     _undefined.get("bypass_google_sku_sync"),
   );
-  const tmpResult4 = categorySkuId(stringResult[14]);
-  let tmp12 = categorySkuId(stringResult[15]).isGooglePlayBillingSupported() && !stateFromStores2 && !stateFromStores1;
-  closure_6 = tmp12;
-  const items5 = [category];
-  memo = stateFromStores1.useMemo(() => {
+  const tmpResult4 = categorySkuId(stringResult[13]);
+  let tmp14 = categorySkuId(stringResult[15]).isGooglePlayBillingSupported() && !stateFromStores3 && !stateFromStores2;
+  closure_6 = tmp14;
+  const items6 = [category];
+  memo = stateFromStores2.useMemo(() => {
     if (null != category) {
       let googleSkuIds = collectibles_CollectiblesUtils.getGoogleSkuIds(tmp.products);
     } else {
@@ -90,43 +99,43 @@ function CategoryItemsBySku(categorySkuId) {
     items = [...new Set(googleSkuIds)];
     const sorted = items.sort();
     return sorted.join(",");
-  }, items5);
+  }, items6);
   const tmpResult5 = categorySkuId(stringResult[15]);
-  const items6 = [closure_11];
-  const stateFromStoresObject = categorySkuId(stringResult[14]).useStateFromStoresObject(items6, () => ({
+  const items7 = [closure_11];
+  const stateFromStoresObject = categorySkuId(stringResult[13]).useStateFromStoresObject(items7, () => ({
     isBillingReady: closure_11.isReady(),
     hasConnectionError: closure_11.hasConnectionError(),
   }));
   isBillingReady = stateFromStoresObject.isBillingReady;
-  const tmpResult6 = categorySkuId(stringResult[14]);
-  [tmp16, c9] = stateFromStores(stateFromStores1.useState(0), 2);
-  const tmp15 = stateFromStores(stateFromStores1.useState(0), 2);
-  [hasConnectionError, c10] = stateFromStores(stateFromStores1.useState(false), 2);
-  const tmp18 = stateFromStores(stateFromStores1.useState(null), 2);
-  closure_11 = tmp18[1];
-  let tmp19 = tmp8;
-  if (tmp8) {
-    tmp19 = tmp12;
+  const tmpResult6 = categorySkuId(stringResult[13]);
+  [tmp18, c9] = stateFromStores1(stateFromStores2.useState(0), 2);
+  const tmp17 = stateFromStores1(stateFromStores2.useState(0), 2);
+  [hasConnectionError, c10] = stateFromStores1(stateFromStores2.useState(false), 2);
+  const tmp20 = stateFromStores1(stateFromStores2.useState(null), 2);
+  closure_11 = tmp20[1];
+  let tmp21 = tmp10;
+  if (tmp10) {
+    tmp21 = tmp14;
   }
-  if (tmp19) {
-    let tmp20 = !isBillingReady;
+  if (tmp21) {
+    let tmp22 = !isBillingReady;
     if (isBillingReady) {
-      tmp20 = !("" === memo || tmp18[0] === memo);
-      const tmp21 = "" === memo || tmp18[0] === memo;
+      tmp22 = !("" === memo || tmp20[0] === memo);
+      const tmp23 = "" === memo || tmp20[0] === memo;
     }
-    tmp19 = tmp20;
+    tmp21 = tmp22;
   }
-  closure_12 = tmp19;
-  const items7 = [tmp19, tmp16];
-  const effect = obj6.useEffect(() => {
+  closure_12 = tmp21;
+  const items8 = [tmp21, tmp18];
+  const effect = obj7.useEffect(() => {
     if (closure_12) {
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => _undefined2(true), 30000);
       return () => clearTimeout(closure_0);
     }
-  }, items7);
-  const items8 = [tmp8, tmp12, isBillingReady, memo, tmp16];
-  const effect1 = obj6.useEffect(() => {
+  }, items8);
+  const items9 = [tmp10, tmp14, isBillingReady, memo, tmp18];
+  const effect1 = obj7.useEffect(() => {
     closure_1 = async function _loadSkus() {
       closure_0 = tmp3;
       await closure_2_0(closure_2_2[17]).loadInAppSkus(closure_1_7.split(","));
@@ -147,7 +156,7 @@ function CategoryItemsBySku(categorySkuId) {
       }
       return value;
     };
-    if (stateFromStores) {
+    if (stateFromStores1) {
       if (closure_6) {
         if (isBillingReady) {
           if ("" !== memo) {
@@ -169,10 +178,10 @@ function CategoryItemsBySku(categorySkuId) {
         }
       }
     }
-  }, items8);
-  const items9 = [tmp12, tmp8, retry];
-  const items10 = [stateFromStores1, stackNavigation];
-  const callback = obj6.useCallback(() => {
+  }, items9);
+  const items10 = [tmp14, tmp10, retry];
+  const items11 = [stateFromStores2, stackNavigation];
+  const callback = obj7.useCallback(() => {
     _undefined2(false);
     closure_11(null);
     _undefined((arg0) => arg0 + 1);
@@ -184,52 +193,52 @@ function CategoryItemsBySku(categorySkuId) {
       BillingManager = BillingManager.BillingManager;
       BillingManager.open();
     }
-    if (!stateFromStores) {
+    if (!stateFromStores1) {
       retry();
     }
-  }, items9);
-  const effect2 = obj6.useEffect(() => {
-    if (stateFromStores1) {
+  }, items10);
+  const effect2 = obj7.useEffect(() => {
+    if (stateFromStores2) {
       const obj = { screen: constants.ORBS, analyticsSource: AnalyticsLocationDefault.COLLECTIBLES_SHOP };
       const replaced = stackNavigation.replace(constants3.COLLECTIBLES_SHOP, obj);
     }
-  }, items10);
-  let tmp26 = null == categorySkuId;
-  if (!tmp26) {
-    tmp26 = "" === categorySkuId;
+  }, items11);
+  let tmp28 = null == categorySkuId;
+  if (!tmp28) {
+    tmp28 = "" === categorySkuId;
   }
-  let tmp27 = tmp26;
-  if (!tmp26) {
-    tmp27 = "error" === state;
+  let tmp29 = tmp28;
+  if (!tmp28) {
+    tmp29 = "error" === state;
   }
-  if (!tmp27) {
-    if (tmp12) {
+  if (!tmp29) {
+    if (tmp14) {
       if (!hasConnectionError) {
         hasConnectionError = stateFromStoresObject.hasConnectionError;
       }
-      tmp12 = hasConnectionError;
+      tmp14 = hasConnectionError;
     }
-    tmp27 = tmp12;
+    tmp29 = tmp14;
   }
-  if (!tmp27) {
-    if (tmp8) {
-      if (!tmp19) {
-        if (!stateFromStores1) {
-          const obj3 = { value: true, children: null };
-          const obj4 = { category, analyticsContext };
-          obj3.children = closure_16(CategoryItemsContent, obj4);
-          return closure_16(tmp(stringResult[19]).ImprovedMobileShopLoadingProvider, obj3);
+  if (!tmp29) {
+    if (tmp10) {
+      if (!tmp21) {
+        if (!stateFromStores2) {
+          const obj4 = { value: true, children: null };
+          const obj5 = { category, analyticsContext };
+          obj4.children = closure_16(CategoryItemsContent, obj5);
+          return closure_16(tmp(stringResult[19]).ImprovedMobileShopLoadingProvider, obj4);
         }
       }
     }
   }
-  const obj5 = { style: items12.rootContainer, children: null };
+  const obj6 = { style: items13.rootContainer, children: null };
   let logoUrl;
-  const tmp17 = stateFromStores(stateFromStores1.useState(false), 2);
+  const tmp19 = stateFromStores1(stateFromStores2.useState(false), 2);
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "<string:551485441>" };
+  const obj8 = { logoUrl, buttonColor: "Array", categoryName: -1 };
   let name;
   if (category != null) {
     name = category.name;
@@ -241,38 +250,38 @@ function CategoryItemsBySku(categorySkuId) {
     const intl = tmp(stringResult[21]).intl;
     name = intl.string(tmp(stringResult[21]).t.ZTNur7);
   }
-  obj7.categoryName = name;
-  const items11 = [closure_16(tmp4(stringResult[20]), obj7)];
-  if (tmp27) {
-    const obj8 = { style: items12.errorContainer, children: null };
-    const obj9 = {
+  obj8.categoryName = name;
+  const items12 = [closure_16(tmp6(stringResult[20]), obj8)];
+  if (tmp29) {
+    const obj9 = { style: items13.errorContainer, children: null };
+    const obj10 = {
       variant: "body-md/medium",
       color: "text-default",
       accessibilityLiveRegion: "polite",
       children: null,
     };
     const intl2 = tmp(stringResult[21]).intl;
-    obj9.children = intl2.string(tmp(stringResult[21]).t.eAn6z2);
-    items12 = [closure_16(tmp(stringResult[22]).Text, obj9)];
-    let tmp32Result = !tmp26;
-    if (!tmp26) {
-      const obj10 = { variant: "secondary", text: null, onPress: null };
+    obj10.children = intl2.string(tmp(stringResult[21]).t.eAn6z2);
+    items13 = [closure_16(tmp(stringResult[22]).Text, obj10)];
+    let tmp34Result = !tmp28;
+    if (!tmp28) {
+      const obj11 = { variant: "secondary", text: null, onPress: null };
       const intl3 = tmp(stringResult[21]).intl;
       stringResult = intl3.string(tmp(stringResult[21]).t["+hivLW"]);
-      obj10.text = stringResult;
-      obj10.onPress = callback;
-      tmp32Result = closure_16(tmp(stringResult[23]).Button, obj10);
+      obj11.text = stringResult;
+      obj11.onPress = callback;
+      tmp34Result = closure_16(tmp(stringResult[23]).Button, obj11);
     }
-    items12[1] = tmp32Result;
-    obj8.children = items12;
-    let tmp32Result1 = closure_17(tmp31, obj8);
+    items13[1] = tmp34Result;
+    obj9.children = items13;
+    let tmp34Result1 = closure_17(tmp33, obj9);
   } else {
-    tmp32Result1 = closure_16(tmp(stringResult[24]).ShopCategorySkeleton, {});
+    tmp34Result1 = closure_16(tmp(stringResult[24]).ShopCategorySkeleton, {});
   }
-  items11[1] = tmp32Result1;
-  obj5.children = items11;
-  closure_17(memo, obj5);
-  const tmp4Result = tmp4(stringResult[20]);
+  items12[1] = tmp34Result1;
+  obj6.children = items12;
+  closure_17(memo, obj6);
+  const tmp6Result = tmp6(stringResult[20]);
 }
 function CategoryItemsContent(category) {
   category = category.category;
@@ -426,7 +435,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, UserSettingsSections: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   border: null,

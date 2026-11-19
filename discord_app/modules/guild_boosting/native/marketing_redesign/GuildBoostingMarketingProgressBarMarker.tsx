@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef14713 from "../../../../../_runtime/metro/14713__.js";
-import _modDef14714 from "../../../../../_runtime/metro/14714__.js";
-import _modDef14715 from "../../../../../_runtime/metro/14715__.js";
+import _modDef14699 from "../../../../../_runtime/metro/14699__.js";
+import _modDef14700 from "../../../../../_runtime/metro/14700__.js";
+import _modDef14701 from "../../../../../_runtime/metro/14701__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -28,12 +28,12 @@ function ProgressBarMarkerInnerContent(arg0) {
   if (isTierUnlocked) {
     let PREMIUM_PERK_PINK = tmp2(575).unsafe_rawColors.PREMIUM_PERK_PINK;
   } else {
-    const BoostGemSlashIconResult = BoostGemSlashIcon(4820);
+    const BoostGemSlashIconResult = BoostGemSlashIcon(4789);
     if (BoostGemSlashIconResult1.isThemeDark(tmp4)) {
       num = 0.5;
     }
     PREMIUM_PERK_PINK = BoostGemSlashIconResult.hexWithOpacity(tmp2(575).unsafe_rawColors.WHITE, num);
-    BoostGemSlashIconResult1 = BoostGemSlashIcon(4830);
+    BoostGemSlashIconResult1 = BoostGemSlashIcon(4799);
   }
   items = [isTierUnlocked, sharedValue];
   const effect = noop.useEffect(() => {
@@ -85,7 +85,7 @@ function ProgressBarMarkerInnerContent(arg0) {
     }
     return tmp18;
   } else if (isDisabled) {
-    BoostGemSlashIcon = BoostGemSlashIcon(13402).BoostGemSlashIcon;
+    BoostGemSlashIcon = BoostGemSlashIcon(13384).BoostGemSlashIcon;
     let tmp22Result = closure_6(BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
   } else {
     const obj4 = { source: obj2[tier], style: null };
@@ -96,8 +96,8 @@ function ProgressBarMarkerInnerContent(arg0) {
     const obj5 = { tintColor: isTierUnlocked ? unsafe_rawColors.WHITE : unsafe_rawColors.PREMIUM_PERK_PINK };
     items5[1] = obj5;
     obj4.style = items5;
-    tmp22Result = closure_6(tmp2(5510), obj4);
-    const tmp2Result = tmp2(5510);
+    tmp22Result = closure_6(tmp2(5479), obj4);
+    const tmp2Result = tmp2(5479);
   }
   let obj = require("../../../../../_runtime/metro/01655__.js");
 }
@@ -111,9 +111,9 @@ const TierMarkerPositions = {
   [BoostedGuildTiers.TIER_2]: 0.6666666666666666,
   [BoostedGuildTiers.TIER_3]: 1,
 };
-let obj2 = { [TIER_1]: _modDef14713, [TIER_2]: _modDef14714, [TIER_3]: _modDef14715 };
+let obj2 = { [TIER_1]: _modDef14699, [TIER_2]: _modDef14700, [TIER_3]: _modDef14701 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
-let createStyles = fn(4823);
+let createStyles = fn(4792);
 let obj4 = {
   progressBarMarkerInnerCircle: {
     width: 17.5,
@@ -134,7 +134,7 @@ let closure_11 = { stiffness: 50, damping: 5 };
 let closure_12 = {
   code: "(function GuildBoostingMarketingProgressBarMarkerTsx1(){let[backgroundColor,useReducedMotion,shouldAnimate,scale]=this.__closure;return{backgroundColor:backgroundColor,transform:[{scale:useReducedMotion||!shouldAnimate?1:scale.get()}]};})",
 };
-createStyles = fn(4823);
+createStyles = fn(4792);
 let obj5 = {
   progressBarMarker: null,
   progressBarMarkerBackground: { width: "100%", height: "100%", position: "absolute", borderRadius: 28 },
@@ -275,15 +275,15 @@ export default function ProgressBarMarker(arg0) {
       tmp25Result = tier !== BoostedGuildTiers.NONE;
     }
     if (tmp25Result) {
-      const obj7 = { source: tmp2(11966), style: tmp.progressBarMarkerUnlockedIcon };
-      tmp25Result = closure_6(tmp2(5510), obj7);
-      const tmp2Result = tmp2(5510);
+      const obj7 = { source: tmp2(11944), style: tmp.progressBarMarkerUnlockedIcon };
+      tmp25Result = closure_6(tmp2(5479), obj7);
+      const tmp2Result = tmp2(5479);
     }
     const items7 = [tmp25Result];
     const obj8 = { variant: "body-xs/medium", children: null };
     const tmp5Result = tmp5(1655);
-    obj8.children = tmp5(8655).getTierName(tier, { useLevels: false });
-    items7[1] = closure_6(tmp5(5414).Text, obj8);
+    obj8.children = tmp5(8624).getTierName(tier, { useLevels: false });
+    items7[1] = closure_6(tmp5(5383).Text, obj8);
     obj6.children = items7;
     items5[2] = closure_7(View, obj6);
     obj2.children = items5;

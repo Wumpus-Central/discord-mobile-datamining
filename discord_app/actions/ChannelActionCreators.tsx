@@ -20,7 +20,7 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4676).createChannelRecordFromServer;
+let closure_6 = fn(4645).createChannelRecordFromServer;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_9,
@@ -62,7 +62,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -197,7 +197,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -333,8 +333,8 @@ export default {
       await HTTP.post(request);
       closure_128_0 = value;
       if (closure_128_0.body.type === constants2.GROUP_DM) {
-        tmp5(6391).fireSurveyAction(tmp2(6398).SurveyActionTypes.GROUP_DM_CREATED);
-        tmp5(6391);
+        tmp5(6362).fireSurveyAction(tmp2(6369).SurveyActionTypes.GROUP_DM_CREATED);
+        tmp5(6362);
       }
       closure_128_1 = closure_1_6(closure_128_0.body);
       tmp5(572).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
@@ -355,7 +355,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -468,7 +468,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "isArray" },
+      channel: { id, guild_id: "Array", parent_id: "analyticsLocations" },
       silent: flag2,
     });
     if (flag) {
@@ -482,7 +482,11 @@ export default {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
+    const obj2 = {
+      type: "CHANNEL_DELETE",
+      channel: { id, guild_id: "Array", parent_id: "analyticsLocations" },
+      silent: flag2,
+    };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1285).rejectWithMigratedError();
     const obj8 = flag3(1285);
@@ -630,8 +634,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7641).checkGuildTemplateDirty(closure_128_2);
-        name(7641);
+        const result = name(7611).checkGuildTemplateDirty(closure_128_2);
+        name(7611);
       }
       return closure_128_1;
     })();
@@ -651,7 +655,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -795,7 +799,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {

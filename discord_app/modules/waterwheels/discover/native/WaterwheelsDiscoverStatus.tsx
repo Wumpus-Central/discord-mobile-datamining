@@ -1,7 +1,7 @@
 // discord_app/modules/waterwheels/discover/native/WaterwheelsDiscoverStatus.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2591 from "../../WaterwheelsUntranslated.messages.js";
+import _modDef2561 from "../../Waterwheels.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   container: {
     flex: 1,
@@ -66,7 +66,7 @@ export default function WaterwheelsDiscoverStatus(onRetry) {
     const obj2 = { style: tmp.container, accessibilityLiveRegion: "polite", children: null };
     const obj3 = { variant: "body-md/medium", color: "text-subtle", style: tmp.centered, children: null };
     const intl3 = util.intl;
-    obj3.children = intl3.string(_modDef2591["71GnER"]);
+    obj3.children = intl3.string(_modDef2561["71GnER"]);
     obj2.children = hasOwnProperty(Text_Text.Text, obj3);
     let tmp12Result = hasOwnProperty(View, obj2);
   } else {
@@ -74,7 +74,7 @@ export default function WaterwheelsDiscoverStatus(onRetry) {
     const obj5 = { style: tmp.copy, children: null };
     const obj6 = { variant: "heading-sm/semibold", color: "text-strong", style: tmp.centered, children: null };
     const intl4 = util.intl;
-    const tmp19 = _modDef2591;
+    const tmp19 = _modDef2561;
     if ("empty" === status) {
       let vtx6nV = tmp19.gv4HTM;
       let tmp4 = importDefault;
@@ -88,7 +88,7 @@ export default function WaterwheelsDiscoverStatus(onRetry) {
     if ("empty" === status) {
       const obj = { variant: "body-sm/normal", color: "text-subtle", style: tmp.centered, children: null };
       const intl = util.intl;
-      obj.children = intl.string(tmp4(2591)["9KIqrW"]);
+      obj.children = intl.string(tmp4(2561)["9KIqrW"]);
       tmp14Result = hasOwnProperty(Text_Text.Text, obj);
     }
     items1[1] = tmp14Result;
@@ -96,7 +96,7 @@ export default function WaterwheelsDiscoverStatus(onRetry) {
     const items2 = [timestampProducer(View, obj5)];
     const obj7 = { size: "sm", variant: "secondary", text: null, onPress: null, disabled: null };
     const intl2 = util.intl;
-    obj7.text = intl2.string(tmp4(2591).DClDU4);
+    obj7.text = intl2.string(tmp4(2561).DClDU4);
     obj7.onPress = onRetry.onRetry;
     obj7.disabled = tmp3;
     items2[1] = hasOwnProperty(components_Button_Button.Button, obj7);
@@ -157,11 +157,11 @@ export function WaterwheelsDiscoverRefreshError(retryAfterAt) {
   );
   const obj2 = { variant: "body-sm/medium", color: "text-subtle", style: tmp.bannerText, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2591["4O8kV0"]);
+  obj2.children = intl.string(_modDef2561["4O8kV0"]);
   const items2 = [hasOwnProperty(Text_Text.Text, obj2)];
   const obj3 = { size: "sm", variant: "secondary", text: null, onPress: null, disabled: null };
   const intl2 = util.intl;
-  obj3.text = intl2.string(_modDef2591.DClDU4);
+  obj3.text = intl2.string(_modDef2561.DClDU4);
   obj3.onPress = retryAfterAt.onRetry;
   obj3.disabled = syncExternalStore;
   items2[1] = hasOwnProperty(components_Button_Button.Button, obj3);

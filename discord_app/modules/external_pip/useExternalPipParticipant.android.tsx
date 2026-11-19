@@ -56,11 +56,11 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
     obj = closure_9;
   }
 }
-const ParticipantTypes = fn(5473).ParticipantTypes;
-const VoicePanelModes = fn(11710).VoicePanelModes;
+const ParticipantTypes = fn(5442).ParticipantTypes;
+const VoicePanelModes = fn(11688).VoicePanelModes;
 let closure_9 = {
   participantType: "Path",
-  selectedParticipantId: "content",
+  selectedParticipantId: "context",
   selectedParticipantSpeaking: 0,
   selectedParticipantStreamId: null,
   selectedParticipantUserId: -1,

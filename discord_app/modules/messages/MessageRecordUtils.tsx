@@ -293,7 +293,7 @@ function createMessageRecord(message, arg1) {
   if (reactions == null) {
     reactions = [];
   }
-  const items2 = [...reactions];
+  const items2 = [...reactions.filter(isCurrentReactionType)];
   if (mapped1 == null) {
     mapped1 = [];
   }
@@ -323,7 +323,27 @@ function createMessageRecord(message, arg1) {
   });
   const tmp10Result4 = GiftCodeUtils;
 }
-let MessageRecord = fn(4766);
+function isCurrentReactionType(count_details) {
+  count_details = count_details.count_details;
+  let tmp = null == count_details;
+  if (!tmp) {
+    let tmp2 = null != count_details.vote;
+    if (!tmp2) {
+      let num = count_details.normal;
+      if (num == null) {
+        num = 0;
+      }
+      let num2 = count_details.burst;
+      if (num2 == null) {
+        num2 = 0;
+      }
+      tmp2 = num + num2 > 0;
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+}
+let MessageRecord = fn(4735);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1072);
@@ -461,7 +481,7 @@ export function updateMessageRecord(message, message2) {
               reactions = [];
             }
             const items1 = [];
-            const arraySpreadResult = HermesBuiltin.arraySpread(reactions, 0);
+            const arraySpreadResult = HermesBuiltin.arraySpread(reactions.filter(isCurrentReactionType), 0);
             HermesBuiltin.arraySpread([], arraySpreadResult);
             items = items1.map((item) => {
               const obj = {};

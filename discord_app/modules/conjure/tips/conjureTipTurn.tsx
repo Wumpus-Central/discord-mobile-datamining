@@ -103,6 +103,9 @@ export function hasOpenAsk(newestSettledTurnResult) {
     tmp = null != newestSettledTurnResult.restoreProposal;
   }
   if (!tmp) {
+    tmp = null != newestSettledTurnResult.serverChange;
+  }
+  if (!tmp) {
     tmp = null != newestSettledTurnResult.publishScheduleProposal;
   }
   return tmp;

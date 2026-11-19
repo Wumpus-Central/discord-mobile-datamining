@@ -53,7 +53,7 @@ const SKUProductLines = fn(1072).SKUProductLines;
 const isFractionalPremiumSku = fn(1074).isFractionalPremiumSku;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   topRowWrapper: { width: "100%", marginBottom: 10 },
   rowWrapper: { width: "100%", marginVertical: 10 },
@@ -110,7 +110,7 @@ export function OrbCheckoutOrderSummary(skuId) {
   if (obj.useOrbCheckoutModalContext().isOrdersCheckout) {
     const tmp4 = orbPriceAmount;
   }
-  obj = skuId(14164);
+  obj = skuId(14146);
   items = [SKUStore];
   const items1 = [skuId];
   const stateFromStores = skuId(563).useStateFromStores(items, () => SKUStore.get(skuId), items1);
@@ -131,7 +131,7 @@ export function OrbCheckoutOrderSummary(skuId) {
     tmp8 = isFractionalPremiumSku(skuId);
   }
   const tmp2Result3 = skuId(563);
-  const mobileCheckoutFlow = skuId(14167).getMobileCheckoutFlow({
+  const mobileCheckoutFlow = skuId(14149).getMobileCheckoutFlow({
     sku: stateFromStores,
     product: stateFromStores1,
     usesCollectiblesDetails: tmp8,
@@ -145,7 +145,7 @@ export function OrbCheckoutOrderSummary(skuId) {
   };
   const intl = tmp2(1113).intl;
   obj3.children = intl.string(skuId(1113).t.hws7bC);
-  const items4 = [closure_10(skuId(5414).Text, obj3)];
+  const items4 = [closure_10(skuId(5383).Text, obj3)];
   const scenario = mobileCheckoutFlow.scenario;
   if ("collectibles" === scenario) {
     const obj4 = { product: mobileCheckoutFlow.product, useOrbPrice: true, orbPriceAmount: tmp4 };
@@ -195,10 +195,10 @@ export function OrbCheckoutPaymentSourceDetails(orbAmount) {
 }
 export function OrbCheckoutLegalFinePrint() {
   const tmp = closure_12();
-  skuId = skuId(14164).useOrbCheckoutModalContext().skuId;
+  skuId = skuId(14146).useOrbCheckoutModalContext().skuId;
   items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
-  return closure_10(skuId(5414).Text, {
+  return closure_10(skuId(5383).Text, {
     style: tmp.disclaimer,
     variant: "footnote/normal",
     color: "interactive-text-active",

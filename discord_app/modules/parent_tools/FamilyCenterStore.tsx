@@ -327,7 +327,21 @@ function handleConnectionOpen(linkedUsers) {
   if (null == linkedUsers) {
     return false;
   } else {
-    processLinkedUsers(linkedUsers);
+    processLinkedUsers(
+      linkedUsers.map((item) => {
+        const obj = {};
+        const merged = Object.assign(item);
+        let flag;
+        if (dependencyMap[item.user_id] != null) {
+          flag = tmp2.teen_requires_parental_consent;
+        }
+        if (flag == null) {
+          flag = false;
+        }
+        obj.teen_requires_parental_consent = flag;
+        return obj;
+      }),
+    );
   }
 }
 function handleSetLocationMetadata(countryCode) {
@@ -396,8 +410,8 @@ function reset() {
   c33 = null;
   c20 = false;
 }
-const getCountryCodeByAlpha2 = fn(5487).getCountryCodeByAlpha2;
-const FamilyCenterConstants = fn(8248);
+const getCountryCodeByAlpha2 = fn(5456).getCountryCodeByAlpha2;
+const FamilyCenterConstants = fn(8217);
 ({ FAMILY_CENTER_REFETCH_COOLDOWN: closure_6, FAMILY_CENTER_SUB_ROUTES } = FamilyCenterConstants);
 const FamilyCenterSubPages = FamilyCenterConstants.FamilyCenterSubPages;
 const TeenActionDisplayType = FamilyCenterConstants.TeenActionDisplayType;

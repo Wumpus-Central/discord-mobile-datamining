@@ -123,10 +123,10 @@ function BenefitAvatar(Avatar) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(16670).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(16663).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   horizontalContainer: { flex: 1, flexDirection: "row" },
   benefitAvatarContainer: {

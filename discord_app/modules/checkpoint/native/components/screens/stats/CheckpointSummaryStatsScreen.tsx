@@ -477,7 +477,7 @@ function ItemStat(arg0) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 ({ CHECKPOINT_PRIMARY: metroImportDefault, CHECKPOINT_CONTROL_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -487,7 +487,7 @@ const PX_32 = nativeDefault.space.PX_32;
 let sum = CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
 const PX_24 = nativeDefault.space.PX_24;
 let closure_14 = CHECKPOINT_NAV_HEIGHT + nativeDefault.space.PX_24;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   container: {
     width: "100%",

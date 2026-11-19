@@ -11,7 +11,6 @@ import ConjurePublishActionCreators from "../publish/ConjurePublishActionCreator
 import conjurePreviewControlLease from "conjurePreviewControlLease.tsx";
 import conjureMediaTickets from "../connection/conjureMediaTickets.tsx";
 import conjurePreviewClaims from "conjurePreviewClaims.tsx";
-import conjurePreviewAppPublished from "conjurePreviewAppPublished.tsx";
 import conjureWorkerFetch from "../connection/conjureWorkerFetch.tsx";
 import conjurePreviewModeRequests from "conjurePreviewModeRequests.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -30,7 +29,7 @@ let closure_6 = async function _refetchWidgetData() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -114,7 +113,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -150,7 +149,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
           closure_130_0 = value;
           if (closure_130_0.ok) {
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -176,7 +175,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -211,7 +210,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
         closure_129_0 = value;
         if (closure_129_0.ok) {
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
@@ -464,20 +463,18 @@ export const previewFrameHandlers = {
 export const previewStepHandlers = {
   preview_app_published(has_activity, projectId) {
     projectId = projectId.projectId;
-    const result = conjurePreviewAppPublished.notifyConjurePreviewAppPublished(projectId);
     const project = ConjureProjectStore.getProject(projectId);
     let prop;
     if (project != null) {
       prop = project.preview_application_id;
     }
     if (null != prop) {
-      const result1 = ConjurePublishActionCreators.refreshPreviewApplication(prop);
-      result1.catch(() => {});
+      const result = ConjurePublishActionCreators.refreshPreviewApplication(prop);
+      result.catch(() => {});
       if (true === has_activity.has_activity) {
-        const result2 = prefetchConjurePreviewFrame.prefetchConjurePreviewFrame(projectId, { known: true });
-        const tmpResult2 = prefetchConjurePreviewFrame;
+        const result1 = prefetchConjurePreviewFrame.prefetchConjurePreviewFrame(projectId, { known: true });
+        const tmp4Result = prefetchConjurePreviewFrame;
       }
-      const tmpResult = ConjurePublishActionCreators;
     }
   },
   preview_ready(integration_installed, projectId) {

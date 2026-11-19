@@ -118,8 +118,8 @@ function initializeFromUserSettings() {
     return flag3;
   }
 }
-const createChannelRecord = fn(4676).createChannelRecord;
-const FavoritesConstants = fn(4685);
+const createChannelRecord = fn(4645).createChannelRecord;
+const FavoritesConstants = fn(4654);
 const FAVORITES_AUTO_ADD_THREADS_NEVER = FavoritesConstants.FAVORITES_AUTO_ADD_THREADS_NEVER;
 ({
   FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: hasOwnProperty,

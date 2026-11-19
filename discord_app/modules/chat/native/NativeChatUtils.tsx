@@ -118,7 +118,7 @@ export default {
         const obj = { category: "chat.dispatch", message: null, data: null };
         const _HermesInternal = HermesInternal;
         obj.message = "updateRows dispatch id=" + andIncrementChangesetIdForChat + " ops=" + rows.length;
-        const obj2 = { changesetUpdateId: andIncrementChangesetIdForChat, opCount: rows.length, rows, forceReload };
+        const obj2 = { changesetUpdateId: andIncrementChangesetIdForChat, opCount: rows.length, forceReload };
         obj.data = obj2;
         SentryUtilsDefault.addBreadcrumb(obj);
         const Commands = ChatNativeComponent.Commands;

@@ -4,15 +4,15 @@ import UserSettings from "../../UserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const StickerAnimationSettings = fn(4651).StickerAnimationSettings;
-const SettingBuilders = fn(11897);
+const StickerAnimationSettings = fn(4620).StickerAnimationSettings;
+const SettingBuilders = fn(11875);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.R5nQkS);
   },
-  parent: fn(8624).MobileUserSettings.ACCESSIBILITY,
-  useValue: fn(4648).AnimateStickers.useSetting,
+  parent: fn(8593).MobileUserSettings.ACCESSIBILITY,
+  useValue: fn(4617).AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
     const AnimateStickers = UserSettings.AnimateStickers;
     AnimateStickers.updateSetting(Number(arg0));

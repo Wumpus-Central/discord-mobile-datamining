@@ -24,7 +24,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4753);
+let GuildChannelStore = fn(4722);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
@@ -166,10 +166,11 @@ export function resolveConjureWorkspaceGuildId(ConjureChatStore) {
 export function canAccessConjure(guild, getChannelIdForGuildTransition) {
   return ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guild.id, location: getChannelIdForGuildTransition });
 }
-export function canStartConjureProject(id, location) {
-  let result = PermissionStore.can(constants.MANAGE_CHANNELS, id) && PermissionStore.can(constants.MANAGE_GUILD, id);
+export function canStartConjureProject(guild, ConjureRemix) {
+  let result =
+    PermissionStore.can(constants.MANAGE_CHANNELS, guild) && PermissionStore.can(constants.MANAGE_GUILD, guild);
   if (result) {
-    const obj3 = { guildId: id.id, location };
+    const obj3 = { guildId: guild.id, location: ConjureRemix };
     result = ConjureGuildExperiment.isConjureGuildEnabled(obj3);
   }
   return result;

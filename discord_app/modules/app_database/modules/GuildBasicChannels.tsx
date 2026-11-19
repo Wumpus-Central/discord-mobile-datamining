@@ -251,8 +251,8 @@ function isCurrentSyncStatus(version) {
   }
   return false;
 }
-let closure_7 = fn(4676).createChannelRecordFromServer;
-const ChannelLoader = fn(4672).ChannelLoader;
+let closure_7 = fn(4645).createChannelRecordFromServer;
+const ChannelLoader = fn(4641).ChannelLoader;
 let closure_16 = new LoggerDefault("GuildBasicChannels");
 const re17 = /^\d+$/;
 class GuildBasicChannels {
@@ -312,9 +312,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    items = [tmp3(4701).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(4701).basicChannels(closure_0);
-    items[1] = tmp3(4701).syncedBasicChannels(closure_0).getKvEntries();
+    items = [tmp3(4670).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(4670).basicChannels(closure_0);
+    items[1] = tmp3(4670).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);
@@ -471,7 +471,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -518,7 +518,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: null };
+                          return { value: "HermesInternal", done: "+60" };
                         }
                       } else {
                         try {
@@ -564,7 +564,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_16.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "find" }, done: true };
+                            const obj5 = { value: { v: "r" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {
@@ -576,7 +576,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                               return obj6;
                             } else {
                               c6 = 3;
-                              return { value: "HermesInternal", done: null };
+                              return { value: "HermesInternal", done: "+60" };
                             }
                           } else if (3 === tmp7) {
                             if (arg0 === 1) {
@@ -636,7 +636,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               }
             }
             c10 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } else if (1 === tmp7) {
           c7 = 0;

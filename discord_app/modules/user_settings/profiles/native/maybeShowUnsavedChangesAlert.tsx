@@ -20,7 +20,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
           c3 = 0;
           closure_129_3(false);
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -131,16 +131,16 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
   onReset = onReset.onReset;
   const onContinue = onReset.onContinue;
   if (onReset.hasUnsavedChanges) {
-    onReset(5008).dismissKeyboard();
-    const obj = onReset(5008);
+    onReset(4977).dismissKeyboard();
+    const obj = onReset(4977);
     if (obj2.getIsUserProfileMobileSavePromptEnabled(tmp)) {
-      tmp7(5037).hideActionSheet();
-      const tmp7Result = tmp7(5037);
-      tmp7(5769).close();
-      const tmp4Result = tmp4(5770);
+      tmp7(5006).hideActionSheet();
+      const tmp7Result = tmp7(5006);
+      tmp7(5740).close();
+      const tmp4Result = tmp4(5741);
       const obj3 = { onReset, onContinue, onSave: tmp2 };
       tmp4Result.openAlert(c9, closure_6(UnsavedChangesSavePromptAlert, obj3), undefined, { dismissable: true });
-      const tmp7Result3 = tmp7(5769);
+      const tmp7Result3 = tmp7(5740);
     } else {
       const obj4 = {
         title: null,
@@ -166,10 +166,10 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       obj4.onCancel = function onCancel() {
         onContinue(dependencyMap[10]).close();
       };
-      tmp7(5769).show(obj4);
-      const tmp7Result4 = tmp7(5769);
+      tmp7(5740).show(obj4);
+      const tmp7Result4 = tmp7(5740);
     }
-    obj2 = onReset(14125);
+    obj2 = onReset(14107);
   } else {
     onContinue();
   }

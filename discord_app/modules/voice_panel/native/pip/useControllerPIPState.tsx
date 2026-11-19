@@ -13,18 +13,18 @@ import PIPSpeakerStore from "PIPSpeakerStore.tsx";
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19293);
+const useExternalPipSelectedTileDefault = tmp6(19289);
 require = fn;
-const VoicePanelModes = fn(11710).VoicePanelModes;
-const ActivityPanelModes = fn(5449).ActivityPanelModes;
-const asLaunched = fn(6532).asLaunched;
+const VoicePanelModes = fn(11688).VoicePanelModes;
+const ActivityPanelModes = fn(5418).ActivityPanelModes;
+const asLaunched = fn(6503).asLaunched;
 let closure_12 = {
   code: "(function useControllerPIPStateTsx1(){let[scale,pipAvoidanceSpecs,windowDimensions,safeArea]=this.__closure;return{scale:scale.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),windowDimensions:windowDimensions.get(),safeArea:safeArea.get()};})",
 };
 let closure_13 = {
   code: "(function useControllerPIPStateTsx2(current){let[clampPIPScale,pipState,scale]=this.__closure;const newScale=clampPIPScale({scale:current.scale,width:pipState.width,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,windowDimensions:current.windowDimensions,safeArea:current.safeArea,pipAvoidanceSpecs:current.pipAvoidanceSpecs});if(current.scale!==newScale){scale.set(newScale);}})",
 };
-const size = fn(2);
+let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
 
 export function useControllerPIPState(channelId) {
@@ -39,15 +39,16 @@ export function useControllerPIPState(channelId) {
   ({ windowDimensions, pipAvoidanceSpecs, safeArea } = channelId);
   let obj = require("../../../../../_runtime/metro/01655__.js");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
-  const ref = noop.useRef({
-    id: "disabled",
+  const size = {
+    id: "sa",
     mode: "isArray",
     width: false,
     height: null,
-    containerHeight: "sku",
+    containerHeight: "yes",
     showSecondaryPIP: null,
     scale: sharedValue,
-  });
+  };
+  const ref = noop.useRef(size);
   const obj2 = require("VoicePanelPIPScaleCache");
   items = [PIPSpeakerStore];
   closure_129_0 = channelId;
@@ -55,7 +56,7 @@ export function useControllerPIPState(channelId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => PIPSpeakerStore.getSpeakerId(c0));
   const tmp7 = useIsConnectedToVoiceChannelDefault(channelId);
   closure_129_2 = tmp7;
-  const obj4 = require("initialize");
+  const obj5 = require("initialize");
   const items1 = [EmbeddedActivitiesStore, FramesStore, ChannelStore];
   const items2 = [channelId, tmp7, mode];
   const stateFromStores1 = require("initialize").useStateFromStores(
@@ -107,7 +108,7 @@ export function useControllerPIPState(channelId) {
     items2,
   );
   const tmp9 = useSelfHasVideoDefault(channelId);
-  const obj5 = require("initialize");
+  const obj6 = require("initialize");
   [tmp11, c3] = noop.useState(() => _undefined2.getTargetDimensions(c1));
   let tmp10 = _slicedToArray(
     noop.useState(() => _undefined2.getTargetDimensions(c1)),
@@ -120,8 +121,7 @@ export function useControllerPIPState(channelId) {
     mode,
     selfHasVideo: tmp9,
   });
-  const obj6 = require("VoicePanelPIPUtils");
-  const obj7 = {
+  const obj4 = {
     connected,
     mode,
     focusedId,
@@ -129,6 +129,7 @@ export function useControllerPIPState(channelId) {
     selfHasVideo: tmp9,
     showSecondaryPIP: stateFromStores1,
   };
+  const obj7 = require("VoicePanelPIPUtils");
   ({ participant, dimensions } = calculatePIPStateDefault(channelId, layoutManager, focusedId, stateFromStores, {
     connected,
     mode,

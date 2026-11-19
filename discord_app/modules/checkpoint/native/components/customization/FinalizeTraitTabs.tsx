@@ -103,12 +103,12 @@ function TraitTab(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 ({ CHECKPOINT_DARK_CYAN: metroImportDefault, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   scroll: { flexGrow: 0 },
   scrollContent: { paddingHorizontal: PX_16 },
@@ -186,22 +186,22 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
     const obj = { x: layout.x, width: layout.width };
   }
   const tmp = ref();
-  let tmp4 = activeCustomizationOption(6244).CUSTOMIZATION_OPTION_TO_TRAIT[activeCustomizationOption];
+  let tmp4 = activeCustomizationOption(6215).CUSTOMIZATION_OPTION_TO_TRAIT[activeCustomizationOption];
   closure_5 = tmp4;
   let nitroLockedMessage;
   if (isCurrentTraitBlocked) {
     if (!flag) {
-      nitroLockedMessage = tmp2(6244).getNitroLockedMessage(tmp4);
-      const tmp2Result = tmp2(6244);
+      nitroLockedMessage = tmp2(6215).getNitroLockedMessage(tmp4);
+      const tmp2Result = tmp2(6215);
     }
   }
-  const sum = tmp2(6244).FINALIZE_TAB_OPTIONS.length + 1;
+  const sum = tmp2(6215).FINALIZE_TAB_OPTIONS.length + 1;
   c7 = sum;
-  const FINALIZE_MORE_OPTIONS = tmp2(6244).FINALIZE_MORE_OPTIONS;
+  const FINALIZE_MORE_OPTIONS = tmp2(6215).FINALIZE_MORE_OPTIONS;
   const hasItem = FINALIZE_MORE_OPTIONS.includes(activeCustomizationOption);
   if (null != moreTabOption) {
-    const customizationOptionName = tmp2(6244).getCustomizationOptionName(moreTabOption);
-    const tmp2Result6 = tmp2(6244);
+    const customizationOptionName = tmp2(6215).getCustomizationOptionName(moreTabOption);
+    const tmp2Result6 = tmp2(6215);
   }
   closure_8 = tmp9;
   str = "more";
@@ -243,7 +243,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
   isCurrentTraitBlocked.useRef(0);
   const items1 = [str, stateFromStores];
   const effect = isCurrentTraitBlocked.useEffect(scrollActiveTabIntoView, items1);
-  activeCustomizationOption(5387);
+  activeCustomizationOption(5356);
   if (isCurrentTraitBlocked) {
     let obj = {
       ref,
@@ -302,7 +302,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
       str3 = "tablist";
     }
     obj2.accessibilityRole = str3;
-    const FINALIZE_TAB_OPTIONS = tmp2(6244).FINALIZE_TAB_OPTIONS;
+    const FINALIZE_TAB_OPTIONS = tmp2(6215).FINALIZE_TAB_OPTIONS;
     const items2 = [
       FINALIZE_TAB_OPTIONS.map((item, index) => {
         closure_0 = item;
@@ -373,7 +373,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
         } else if (closure_8) {
           const obj = { selectedOption: activeCustomizationOption, onSelectOption };
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(12723, dependencyMap.paths),
+            asyncRequireImpl(12706, dependencyMap.paths),
             "CheckpointFinalizeTraitPicker",
             obj,
           );
@@ -386,7 +386,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
       handleTabLayout("more", nativeEvent);
     };
     const obj6 = { color: tmp15, size: "xs" };
-    obj3.trailing = str(tmp2(12724).ChevronSmallDownIcon, obj6);
+    obj3.trailing = str(tmp2(12707).ChevronSmallDownIcon, obj6);
     items2[1] = str(ref2, obj3);
     obj2.children = items2;
     obj.children = tmp20(tmp21, obj2);

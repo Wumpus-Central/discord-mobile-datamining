@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   titleWrapper: { flex: 0 },
   titleContainer: { justifyContent: "flex-start" },
@@ -43,7 +43,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -122,8 +122,8 @@ export default function ProfileGIFSelectActionSheet(arg0) {
               const asDataURL = fileReader.readAsDataURL(closure_1_0);
             });
             items = [promise];
-            const obj22 = src(tmp2[7]);
-            items[1] = src(tmp2[7])
+            const obj22 = src(tmp2[8]);
+            items[1] = src(tmp2[8])
               .fromBlob(closure_130_2)
               .catch(() => null);
             c4 = 3;
@@ -145,44 +145,44 @@ export default function ProfileGIFSelectActionSheet(arg0) {
           closure_130_6 = closure_130_4[1];
           if (constants.AVATAR === closure_131_0) {
             const obj17 = { imageUri: closure_130_5, description: null, originalMd5: null };
-            obj4 = closure_0(tmp2[8]);
-            obj17.description = closure_0(tmp2[9]).generateAvatarDescription();
+            obj4 = closure_0(tmp2[9]);
+            obj17.description = closure_0(tmp2[10]).generateAvatarDescription();
             obj17.originalMd5 = closure_130_6;
             closure_130_7 = obj4.createPendingImage(obj17);
             if (closure_131_1 === constants2.PROFILE_TRY_IT_OUT) {
-              closure_0(tmp2[10]).setTryItOutAvatar(closure_130_7);
-              const obj10 = closure_0(tmp2[10]);
+              closure_0(tmp2[11]).setTryItOutAvatar(closure_130_7);
+              const obj10 = closure_0(tmp2[11]);
             } else {
               const obj18 = { guildId: closure_131_2, avatar: closure_130_7 };
-              closure_0(tmp2[11]).setPendingChanges(obj18);
-              const obj7 = closure_0(tmp2[11]);
-              let result = closure_0(tmp2[12]).announcePendingAvatarChange("set");
-              const obj9 = closure_0(tmp2[12]);
+              closure_0(tmp2[12]).setPendingChanges(obj18);
+              const obj7 = closure_0(tmp2[12]);
+              let result = closure_0(tmp2[13]).announcePendingAvatarChange("set");
+              const obj9 = closure_0(tmp2[13]);
             }
-            const obj6 = closure_0(tmp2[9]);
+            const obj6 = closure_0(tmp2[10]);
           } else {
             if (constants.BANNER === tmp64) {
               const obj19 = {
-                assetOrigin: closure_0(tmp2[13]).AssetOriginTypes.NEW_ASSET,
+                assetOrigin: closure_0(tmp2[14]).AssetOriginTypes.NEW_ASSET,
                 imageUri: closure_130_5,
                 description: "",
                 originalAsset: "Array",
                 originalMd5: closure_130_6,
               };
-              closure_130_8 = closure_0(tmp2[8]).createPendingImage(obj19);
+              closure_130_8 = closure_0(tmp2[9]).createPendingImage(obj19);
               if (closure_131_1 !== constants2.PROFILE_TRY_IT_OUT) {
                 const obj21 = { guildId: closure_131_2, banner: closure_130_8 };
-                closure_0(tmp2[11]).setPendingChanges(obj21);
-                const obj = closure_0(tmp2[11]);
+                closure_0(tmp2[12]).setPendingChanges(obj21);
+                const obj = closure_0(tmp2[12]);
               }
-              const obj20 = closure_0(tmp2[8]);
+              const obj20 = closure_0(tmp2[9]);
             }
-            closure_0(tmp2[10]).setTryItOutBanner(closure_130_8);
-            const obj3 = closure_0(tmp2[10]);
+            closure_0(tmp2[11]).setTryItOutBanner(closure_130_8);
+            const obj3 = closure_0(tmp2[11]);
           }
-          src(tmp2[14]).hideActionSheet();
+          src(tmp2[15]).hideActionSheet();
           c5 = 3;
-          const obj11 = src(tmp2[14]);
+          const obj11 = src(tmp2[15]);
         }
       } catch (tmp53) {
         c5 = tmp;
@@ -192,14 +192,21 @@ export default function ProfileGIFSelectActionSheet(arg0) {
   };
   const tmp = closure_9();
   const ref = noop.useRef(null);
-  let obj = { ref, scrollable: true, startExpanded: true, children: null };
-  let obj3 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
-  const intl = util.intl;
-  obj3.title = intl.string(util.t["xsC+/y"]);
-  obj3.trailing = closure_7(NitroWheelIcon.NitroWheelIcon, {});
-  ({ titleWrapper: obj2.titleWrapperStyle, titleContainer: obj2.titleContainerStyle } = tmp);
-  items = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj3)];
-  obj4 = {
+  let obj2 = { ref, scrollable: true, startExpanded: true, children: null };
+  if (obj.useProfileEditSheetNitroUpdatesConfig("profile_gif_select_action_sheet_native").enabled) {
+    obj4 = { title: null };
+    const intl2 = util.intl;
+    obj4.title = intl2.string(util.t["6gUTsS"]);
+    obj5 = obj4;
+  } else {
+    obj5 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
+    const intl = util.intl;
+    obj5.title = intl.string(util.t["xsC+/y"]);
+    obj5.trailing = closure_7(NitroWheelIcon.NitroWheelIcon, {});
+    ({ titleWrapper: obj3.titleWrapperStyle, titleContainer: obj3.titleContainerStyle } = tmp);
+  }
+  items = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj5)];
+  let obj6 = {
     style: tmp.gifPicker,
     children: closure_7(GIFPickerDefault, {
       bottomSheetRef: ref,
@@ -215,9 +222,9 @@ export default function ProfileGIFSelectActionSheet(arg0) {
       },
     }),
   };
-  items[1] = closure_7(View, obj4);
-  obj.children = items;
-  return closure_8(Sheet_BottomSheet.BottomSheet, obj);
+  items[1] = closure_7(View, obj6);
+  obj2.children = items;
+  return closure_8(Sheet_BottomSheet.BottomSheet, obj2);
 }
 export const ProfileAssetType = obj4;
 export const GIFSelectionContext = obj5;

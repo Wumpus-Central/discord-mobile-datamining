@@ -21,7 +21,7 @@ function WatchPrompt(ownerId) {
   let sharedValue;
   ({ hideContent, transitionState } = ownerId);
   const tmp = closure_10();
-  const context = sharedValue.useContext(cleanUp(11709));
+  const context = sharedValue.useContext(cleanUp(11687));
   ({ channelId, guildId } = context);
   items = [UserStore];
   let items1 = [ownerId];
@@ -30,14 +30,14 @@ function WatchPrompt(ownerId) {
   closure_129_0 = ownerId;
   closure_129_1 = streamKey;
   closure_129_2 = isConnecting;
-  const name = cleanUp(5851).useName(guildId, channelId, stateFromStores);
-  const context1 = sharedValue.useContext(cleanUp(11709));
+  const name = cleanUp(5822).useName(guildId, channelId, stateFromStores);
+  const context1 = sharedValue.useContext(cleanUp(11687));
   const channelId2 = context1.channelId;
   closure_129_3 = channelId2;
   const guildId2 = context1.guildId;
   closure_129_4 = guildId2;
-  let obj2 = cleanUp(5851);
-  const analyticsLocations = cleanUp(7431)(cleanUp(7450).STREAM_WATCH_PROMPT_PIP).analyticsLocations;
+  let obj2 = cleanUp(5822);
+  const analyticsLocations = cleanUp(7401)(cleanUp(7420).STREAM_WATCH_PROMPT_PIP).analyticsLocations;
   closure_129_5 = analyticsLocations;
   const items2 = [ownerId, guildId2, isConnecting, analyticsLocations];
   const items3 = [guildId2, channelId2, isConnecting, streamKey, analyticsLocations];
@@ -70,7 +70,7 @@ function WatchPrompt(ownerId) {
   }, items3);
   const tmp12 = transitionState !== require("native").TransitionStates.YEETED;
   dependencyMap = tmp12;
-  const tmp9 = cleanUp(7431);
+  const tmp9 = cleanUp(7401);
   sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(1);
   const items4 = [sharedValue, tmp12, cleanUp];
   const effect = sharedValue.useEffect(() => {
@@ -134,7 +134,7 @@ function WatchPrompt(ownerId) {
     str = "none";
   }
   obj5.pointerEvents = str;
-  const items8 = [closure_7(cleanUp(7235), { style: tmp.border, pointerEvents: "none" }), ,];
+  const items8 = [closure_7(cleanUp(7205), { style: tmp.border, pointerEvents: "none" }), ,];
   const items9 = [tmp.content];
   let hidden = null;
   let obj4 = require("../../../../../_runtime/metro/01655__.js");
@@ -156,7 +156,7 @@ function WatchPrompt(ownerId) {
     const intl2 = tmp5(1113).intl;
     const obj11 = { username: name };
     obj10.children = intl2.formatToPlainString(cleanUp(3275)["g9x8/M"], obj11);
-    tmp20Result = closure_7(tmp5(5414).Text, obj10);
+    tmp20Result = closure_7(tmp5(5383).Text, obj10);
   }
   items10[1] = tmp20Result;
   const obj12 = { size: "sm", variant: "primary-overlay", text: null, onPress: null, loading: null };
@@ -166,10 +166,10 @@ function WatchPrompt(ownerId) {
   obj12.loading = isConnecting;
   items10[2] = closure_7(require("components/Button/Button").Button, obj12);
   obj7.children = items10;
-  items8[1] = closure_8(cleanUp(7235), obj7);
+  items8[1] = closure_8(cleanUp(7205), obj7);
   const items11 = [tmp.dismissButton];
   let hidden1 = null;
-  const tmp2Result = cleanUp(7235);
+  const tmp2Result = cleanUp(7205);
   if (tmp18) {
     hidden1 = tmp.hidden;
   }
@@ -185,7 +185,7 @@ function WatchPrompt(ownerId) {
   const intl4 = tmp5(1113).intl;
   obj14.accessibilityLabel = intl4.string(require("util").t.WAI6xu);
   obj13.children = closure_7(require("IconButton").IconButton, obj14);
-  items8[2] = closure_7(cleanUp(7235), obj13);
+  items8[2] = closure_7(cleanUp(7205), obj13);
   obj5.children = items8;
   return closure_8(cleanUp(1655).View, obj5);
 }
@@ -201,7 +201,7 @@ const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = { duration: 200 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { container: null, border: null, content: null, hidden: null, dismissButton: null, label: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

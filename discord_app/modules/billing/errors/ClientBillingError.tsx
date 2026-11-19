@@ -22,18 +22,36 @@ const metroImportDefault = {
 };
 const set = new Set(["card_error", "api_connection_error", "validation_error"]);
 const set1 = new Set(["setup_intent_authentication_failure", "payment_intent_authentication_failure"]);
-let closure_10 = ["google_pay.", "apple_pay."];
-const set2 = new Set(["BraintreeError", "AdyenCheckoutError"]);
-const re12 = /Failed to fetch|NetworkError|Load failed|Failed to load Stripe\.js/;
-const set3 = new Set(["PAYPAL_TOKENIZATION_REQUEST_ACTIVE"]);
+const set2 = new Set(["email_invalid", "tax_id_invalid"]);
+let closure_11 = ["google_pay.", "apple_pay."];
+const set3 = new Set(["BraintreeError", "AdyenCheckoutError"]);
+const re13 = /Failed to fetch|NetworkError|Load failed|Failed to load Stripe\.js/;
+const set4 = new Set(["PAYPAL_TOKENIZATION_REQUEST_ACTIVE"]);
+let items = [/authentication/gi, "verification"];
+let items1 = [items, , ,];
+const items2 = [/authoriz/gi, "approv"];
+items1[1] = items2;
+const items3 = [/token/gi, "tokn"];
+items1[2] = items3;
+const items4 = [/email/gi, "e_mail"];
+items1[3] = items4;
 let ClientBillingError;
 class ClientBillingError extends Error {
   constructor(arg0, arg1) {
     classifyResult = ClientBillingError.classify(fn);
-    tmp1 = new tmp(ClientBillingError.getMessage(classifyResult), tmp4, tmp3, tmp2, new.target, tmp, fn);
+    tmp1 = new tmp(
+      ClientBillingError.getMessage(classifyResult),
+      tmp4,
+      tmp3,
+      tmp2,
+      new.target,
+      tmp,
+      ClientBillingError,
+      fn,
+    );
     tmp1.classification = classifyResult;
     tmp1.source = global;
-    tmp1.key = tmp1.getKey();
+    tmp1.key = ClientBillingError.getKeyFor(tmp1.classification);
     tmp1.shouldReport = tmp1.getShouldReport();
     tmp6 = undefined;
     if (fn instanceof Error) {
@@ -48,19 +66,10 @@ const prototype = ClientBillingError.prototype;
 ClientBillingError["report"] = function report(source, error, arg2) {
   if (typeof ClientBillingError === "function") {
     const classifyResult = ClientBillingError.classify(error);
-    const tmp10 = new tmp(
-      ClientBillingError.getMessage(classifyResult),
-      tmp7,
-      tmp6,
-      tmp5,
-      tmp4,
-      tmp3,
-      tmp2,
-      ClientBillingError,
-    );
+    const tmp10 = new tmp(ClientBillingError.getMessage(classifyResult), tmp7, tmp6, tmp5, tmp4, tmp3, tmp2);
     tmp10.classification = classifyResult;
     tmp10.source = source;
-    tmp10.key = tmp10.getKey();
+    tmp10.key = ClientBillingError.getKeyFor(tmp10.classification);
     tmp10.shouldReport = tmp10.getShouldReport();
     const _Error = Error;
     let tmp16;
@@ -122,7 +131,7 @@ ClientBillingError["classify"] = function classify(error) {
       }
       code = tmp4;
       if (null != tmp4) {
-        if (closure_10.some((item) => code.startsWith(item))) {
+        if (closure_11.some((item) => code.startsWith(item))) {
           const obj6 = { shape: "stripe_wallet_exception", error };
           let obj9 = obj6;
         }
@@ -131,7 +140,7 @@ ClientBillingError["classify"] = function classify(error) {
       if (null != tmp4) {
         const _Error = Error;
         if (error instanceof Error) {
-          if (set2.has(error.name)) {
+          if (set3.has(error.name)) {
             const obj7 = { shape: "gateway_sdk_error", error };
             obj9 = obj7;
           }
@@ -154,8 +163,40 @@ ClientBillingError["getBillingErrorFieldNames"] = function getBillingErrorFieldN
   return found.sort();
 };
 ClientBillingError["getMessage"] = function getMessage(shape) {
-  if ("string" === shape.shape) {
+  shape = shape.shape;
+  if ("string" === shape) {
     return shape.error;
+  } else if ("stripe_error" === shape) {
+    ({ type, code: code2 } = shape.error);
+    if (null != code2) {
+      const _HermesInternal6 = HermesInternal;
+      let combined = "Stripe " + type + " (" + code2 + ")";
+    } else {
+      const _HermesInternal5 = HermesInternal;
+      combined = "Stripe " + type;
+    }
+    return combined;
+  } else if ("billing_error" === shape) {
+    ({ code, status } = shape.error);
+    const billingErrorFieldNames = ClientBillingError.getBillingErrorFieldNames(shape.error);
+    if (billingErrorFieldNames.length > 0) {
+      const _HermesInternal4 = HermesInternal;
+      let combined1 = "BillingError (field error: " + billingErrorFieldNames.join(", ") + ")";
+    } else if (code > 0) {
+      const _HermesInternal3 = HermesInternal;
+      combined1 = "BillingError (code: " + code + ")";
+    } else {
+      let str4 = "";
+      if (null != status) {
+        const _HermesInternal2 = HermesInternal;
+        str4 = " (HTTP " + status + ")";
+      }
+      combined1 = `BillingError${str4}`;
+    }
+    return combined1;
+  } else if ("stripe_wallet_exception" === shape) {
+    const _HermesInternal = HermesInternal;
+    return "Stripe Wallet Exception (code: " + shape.error.code + ")";
   } else {
     const error = shape.error;
     let keyFor = null;
@@ -230,40 +271,47 @@ ClientBillingError["getKeyFor"] = function getKeyFor(classification) {
     return "unknown" === shape ? "unknown" : undefined;
   }
 };
-prototype["getKey"] = function getKey() {
-  const str = ClientBillingError.getKeyFor(this.classification);
-  return ClientBillingError.getKeyFor(this.classification)
-    .replace(/authentication/g, "verification")
-    .replace(/authoriz/g, "approv");
-};
 prototype["getShouldReport"] = function getShouldReport() {
   const self = this;
   const classification = this.classification;
   const shape = classification.shape;
   if ("billing_error" === shape) {
-    const error2 = classification.error;
-    let tmp15 = error2.code !== BillingErrorDefault.ErrorCodes.INVALID_PAYMENT_SOURCE;
-    if (tmp15) {
-      let tmp17 = ClientBillingError.getBillingErrorFieldNames(error2).length > 0;
-      if (!tmp17) {
-        tmp17 = !BillingUtils.isExpectedHttpClientError(error2);
+    const error = classification.error;
+    let tmp17 = error.code !== BillingErrorDefault.ErrorCodes.INVALID_PAYMENT_SOURCE;
+    if (tmp17) {
+      let tmp19 = ClientBillingError.getBillingErrorFieldNames(error).length > 0;
+      if (!tmp19) {
+        tmp19 = !BillingUtils.isExpectedHttpClientError(error);
       }
-      tmp15 = tmp17;
+      tmp17 = tmp19;
     }
-    return tmp15;
+    return tmp17;
   } else if ("stripe_error" === shape) {
-    let error = classification.error;
-    const hasItem = set.has(error.type);
+    let str6 = classification.error;
+    const hasItem = set.has(str6.type);
     let tmp7 = !hasItem;
     if (!hasItem) {
-      if ("invalid_request_error" !== error.type) {
-        tmp7 = tmp8;
-      } else if (null != error.code) {
-        error = set1.has(error.code);
-        let tmp10 = !error;
-      } else {
-        tmp10 = !self.isStripeWalletSelected();
+      let tmp8 = "invalid_request_error" !== str6.type;
+      if (!tmp8) {
+        let tmp10 = null == str6.code;
+        if (!tmp10) {
+          tmp10 = !set2.has(str6.code);
+        }
+        if (!tmp10) {
+          tmp8 = tmp10;
+        } else {
+          if ("setup_intent_unexpected_state" !== str6.code) {
+            if (null != str6.code) {
+              let tmp12 = !set1.has(str6.code);
+            } else {
+              tmp12 = !self.isStripeWalletSelected();
+            }
+          }
+          str6 = "canceled";
+          tmp12 = "canceled" !== str6.setup_intent.status;
+        }
       }
+      tmp7 = tmp8;
     }
     return tmp7;
   } else if ("http_error" === shape) {
@@ -271,9 +319,9 @@ prototype["getShouldReport"] = function getShouldReport() {
   } else if ("stripe_wallet_exception" === shape) {
     return false;
   } else if ("error" === shape) {
-    return !re12.test(classification.error.message);
+    return !re13.test(classification.error.message);
   } else if ("gateway_sdk_error" === shape) {
-    return !set3.has(classification.error.code);
+    return !set4.has(classification.error.code);
   } else {
     return true;
   }
@@ -342,55 +390,356 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
   const classification = this.classification;
   const shape = classification.shape;
   if ("billing_error" === shape) {
-    const obj2 = { raw_error: null };
-    const obj3 = { code: null, status: null, message: null, fields: null };
+    const obj = { raw_error: null };
+    const obj2 = { code: null, status: null, message: null, fields: null };
     ({ code: obj14.code, status: obj14.status, message: obj14.message } = classification.error);
-    obj3.fields = ClientBillingError.getBillingErrorFieldNames(classification.error);
-    obj2.raw_error = obj3;
-    return obj2;
+    obj2.fields = ClientBillingError.getBillingErrorFieldNames(classification.error);
+    const _Object14 = Object;
+    const _Object15 = Object;
+    const entries = Object.entries(obj2);
+    obj.raw_error = Object.fromEntries(
+      entries.map((item) => {
+        [tmp, arr] = item;
+        if (typeof arr === "string") {
+          items = [
+            tmp,
+            closure_1_15.reduce((acc, item) => {
+              [tmp] = item;
+              return acc.replace(tmp, (str) => {
+                if (str === str.toUpperCase()) {
+                  let formatted = closure_1_0.toUpperCase();
+                } else {
+                  formatted = closure_1_0;
+                }
+                return formatted;
+              });
+            }, arr),
+          ];
+          let tmp2 = items;
+        } else {
+          const _Array = Array;
+          items1 = [tmp];
+          if (Array.isArray(arr)) {
+            items1[1] = arr.map((item) => {
+              let reduced = item;
+              if (typeof item === "string") {
+                reduced = closure_1_15.reduce((acc, item) => {
+                  [tmp] = item;
+                  return acc.replace(tmp, (str) => {
+                    if (str === str.toUpperCase()) {
+                      let formatted = closure_1_0.toUpperCase();
+                    } else {
+                      formatted = closure_1_0;
+                    }
+                    return formatted;
+                  });
+                }, item);
+              }
+              return reduced;
+            });
+            tmp2 = items1;
+          } else {
+            items1[1] = arr;
+            tmp2 = items1;
+          }
+        }
+        return tmp2;
+      }),
+    );
+    return obj;
   } else if ("stripe_error" === shape) {
-    const error2 = classification.error;
-    ({ type, code, decline_code } = error2);
-    const obj5 = { type: null, code: null, decline_code: null, param: null, doc_url: null, message: null };
-    ({ param, doc_url, message: message2 } = error2);
-    obj5.type = type.replace(/authentication/g, "verification").replace(/authoriz/g, "approv");
-    let replaced = code;
-    if (null != code) {
-      replaced = code.replace(/authentication/g, "verification").replace(/authoriz/g, "approv");
-      const str5 = code.replace(/authentication/g, "verification");
-    }
-    obj5.code = replaced;
-    let replaced1 = decline_code;
-    if (null != decline_code) {
-      replaced1 = decline_code.replace(/authentication/g, "verification").replace(/authoriz/g, "approv");
-      const str6 = decline_code.replace(/authentication/g, "verification");
-    }
-    const obj7 = { raw_error: null };
-    obj5.decline_code = replaced1;
-    obj5.param = param;
-    obj5.doc_url = doc_url;
-    obj5.message = message2;
-    obj7.raw_error = obj5;
-    return obj7;
+    const obj3 = { raw_error: null };
+    ({
+      type: obj12.type,
+      code: obj12.code,
+      decline_code: obj12.decline_code,
+      param: obj12.param,
+      doc_url: obj12.doc_url,
+      message: obj12.message,
+    } = classification.error);
+    const _Object12 = Object;
+    const _Object13 = Object;
+    const entries1 = Object.entries({
+      type: null,
+      code: null,
+      decline_code: null,
+      param: null,
+      doc_url: null,
+      message: null,
+    });
+    obj3.raw_error = Object.fromEntries(
+      entries1.map((item) => {
+        [tmp, arr] = item;
+        if (typeof arr === "string") {
+          items = [
+            tmp,
+            closure_1_15.reduce((acc, item) => {
+              [tmp] = item;
+              return acc.replace(tmp, (str) => {
+                if (str === str.toUpperCase()) {
+                  let formatted = closure_1_0.toUpperCase();
+                } else {
+                  formatted = closure_1_0;
+                }
+                return formatted;
+              });
+            }, arr),
+          ];
+          let tmp2 = items;
+        } else {
+          const _Array = Array;
+          items1 = [tmp];
+          if (Array.isArray(arr)) {
+            items1[1] = arr.map((item) => {
+              let reduced = item;
+              if (typeof item === "string") {
+                reduced = closure_1_15.reduce((acc, item) => {
+                  [tmp] = item;
+                  return acc.replace(tmp, (str) => {
+                    if (str === str.toUpperCase()) {
+                      let formatted = closure_1_0.toUpperCase();
+                    } else {
+                      formatted = closure_1_0;
+                    }
+                    return formatted;
+                  });
+                }, item);
+              }
+              return reduced;
+            });
+            tmp2 = items1;
+          } else {
+            items1[1] = arr;
+            tmp2 = items1;
+          }
+        }
+        return tmp2;
+      }),
+    );
+    return obj3;
   } else if ("http_error" === shape) {
-    const obj9 = { raw_error: null };
+    const obj7 = { raw_error: null };
     ({ status: obj10.status, method: obj10.method, message: obj10.message } = classification.error);
-    obj9.raw_error = { status: null, method: null, message: null };
-    return obj9;
+    const _Object10 = Object;
+    const _Object11 = Object;
+    const entries2 = Object.entries({ status: null, method: null, message: null });
+    obj7.raw_error = Object.fromEntries(
+      entries2.map((item) => {
+        [tmp, arr] = item;
+        if (typeof arr === "string") {
+          items = [
+            tmp,
+            closure_1_15.reduce((acc, item) => {
+              [tmp] = item;
+              return acc.replace(tmp, (str) => {
+                if (str === str.toUpperCase()) {
+                  let formatted = closure_1_0.toUpperCase();
+                } else {
+                  formatted = closure_1_0;
+                }
+                return formatted;
+              });
+            }, arr),
+          ];
+          let tmp2 = items;
+        } else {
+          const _Array = Array;
+          items1 = [tmp];
+          if (Array.isArray(arr)) {
+            items1[1] = arr.map((item) => {
+              let reduced = item;
+              if (typeof item === "string") {
+                reduced = closure_1_15.reduce((acc, item) => {
+                  [tmp] = item;
+                  return acc.replace(tmp, (str) => {
+                    if (str === str.toUpperCase()) {
+                      let formatted = closure_1_0.toUpperCase();
+                    } else {
+                      formatted = closure_1_0;
+                    }
+                    return formatted;
+                  });
+                }, item);
+              }
+              return reduced;
+            });
+            tmp2 = items1;
+          } else {
+            items1[1] = arr;
+            tmp2 = items1;
+          }
+        }
+        return tmp2;
+      }),
+    );
+    return obj7;
   } else if ("stripe_wallet_exception" === shape) {
-    const obj12 = { raw_error: null };
+    const obj11 = { raw_error: null };
     ({ code: obj8.code, message: obj8.message } = classification.error);
-    obj12.raw_error = { code: null, message: null };
-    return obj12;
+    const _Object8 = Object;
+    const _Object9 = Object;
+    const entries3 = Object.entries({ code: null, message: null });
+    obj11.raw_error = Object.fromEntries(
+      entries3.map((item) => {
+        [tmp, arr] = item;
+        if (typeof arr === "string") {
+          items = [
+            tmp,
+            closure_1_15.reduce((acc, item) => {
+              [tmp] = item;
+              return acc.replace(tmp, (str) => {
+                if (str === str.toUpperCase()) {
+                  let formatted = closure_1_0.toUpperCase();
+                } else {
+                  formatted = closure_1_0;
+                }
+                return formatted;
+              });
+            }, arr),
+          ];
+          let tmp2 = items;
+        } else {
+          const _Array = Array;
+          items1 = [tmp];
+          if (Array.isArray(arr)) {
+            items1[1] = arr.map((item) => {
+              let reduced = item;
+              if (typeof item === "string") {
+                reduced = closure_1_15.reduce((acc, item) => {
+                  [tmp] = item;
+                  return acc.replace(tmp, (str) => {
+                    if (str === str.toUpperCase()) {
+                      let formatted = closure_1_0.toUpperCase();
+                    } else {
+                      formatted = closure_1_0;
+                    }
+                    return formatted;
+                  });
+                }, item);
+              }
+              return reduced;
+            });
+            tmp2 = items1;
+          } else {
+            items1[1] = arr;
+            tmp2 = items1;
+          }
+        }
+        return tmp2;
+      }),
+    );
+    return obj11;
   } else if ("gateway_sdk_error" === shape) {
     const obj27 = { raw_error: null };
     ({ name: obj6.name, code: obj6.code, message: obj6.message } = classification.error);
-    obj27.raw_error = { name: null, code: null, message: null };
+    const _Object6 = Object;
+    const _Object7 = Object;
+    const entries4 = Object.entries({ name: null, code: null, message: null });
+    obj27.raw_error = Object.fromEntries(
+      entries4.map((item) => {
+        [tmp, arr] = item;
+        if (typeof arr === "string") {
+          items = [
+            tmp,
+            closure_1_15.reduce((acc, item) => {
+              [tmp] = item;
+              return acc.replace(tmp, (str) => {
+                if (str === str.toUpperCase()) {
+                  let formatted = closure_1_0.toUpperCase();
+                } else {
+                  formatted = closure_1_0;
+                }
+                return formatted;
+              });
+            }, arr),
+          ];
+          let tmp2 = items;
+        } else {
+          const _Array = Array;
+          items1 = [tmp];
+          if (Array.isArray(arr)) {
+            items1[1] = arr.map((item) => {
+              let reduced = item;
+              if (typeof item === "string") {
+                reduced = closure_1_15.reduce((acc, item) => {
+                  [tmp] = item;
+                  return acc.replace(tmp, (str) => {
+                    if (str === str.toUpperCase()) {
+                      let formatted = closure_1_0.toUpperCase();
+                    } else {
+                      formatted = closure_1_0;
+                    }
+                    return formatted;
+                  });
+                }, item);
+              }
+              return reduced;
+            });
+            tmp2 = items1;
+          } else {
+            items1[1] = arr;
+            tmp2 = items1;
+          }
+        }
+        return tmp2;
+      }),
+    );
     return obj27;
   } else if ("error" === shape) {
     const obj29 = { raw_error: null };
     ({ name: obj4.name, message: obj4.message } = classification.error);
-    obj29.raw_error = { name: null, message: null };
+    const _Object4 = Object;
+    const _Object5 = Object;
+    const entries5 = Object.entries({ name: null, message: null });
+    obj29.raw_error = Object.fromEntries(
+      entries5.map((item) => {
+        [tmp, arr] = item;
+        if (typeof arr === "string") {
+          items = [
+            tmp,
+            closure_1_15.reduce((acc, item) => {
+              [tmp] = item;
+              return acc.replace(tmp, (str) => {
+                if (str === str.toUpperCase()) {
+                  let formatted = closure_1_0.toUpperCase();
+                } else {
+                  formatted = closure_1_0;
+                }
+                return formatted;
+              });
+            }, arr),
+          ];
+          let tmp2 = items;
+        } else {
+          const _Array = Array;
+          items1 = [tmp];
+          if (Array.isArray(arr)) {
+            items1[1] = arr.map((item) => {
+              let reduced = item;
+              if (typeof item === "string") {
+                reduced = closure_1_15.reduce((acc, item) => {
+                  [tmp] = item;
+                  return acc.replace(tmp, (str) => {
+                    if (str === str.toUpperCase()) {
+                      let formatted = closure_1_0.toUpperCase();
+                    } else {
+                      formatted = closure_1_0;
+                    }
+                    return formatted;
+                  });
+                }, item);
+              }
+              return reduced;
+            });
+            tmp2 = items1;
+          } else {
+            items1[1] = arr;
+            tmp2 = items1;
+          }
+        }
+        return tmp2;
+      }),
+    );
     return obj29;
   } else if ("string" === shape) {
     return {};
@@ -413,11 +762,62 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
         }
       }
       obj31.raw_error_message = tmp3;
-      let obj = obj31;
+      const _Object2 = Object;
+      const _Object3 = Object;
+      const entries6 = Object.entries(obj31);
+      let fromEntriesResult = Object.fromEntries(
+        entries6.map((item) => {
+          [tmp, arr] = item;
+          if (typeof arr === "string") {
+            items = [
+              tmp,
+              closure_1_15.reduce((acc, item) => {
+                [tmp] = item;
+                return acc.replace(tmp, (str) => {
+                  if (str === str.toUpperCase()) {
+                    let formatted = closure_1_0.toUpperCase();
+                  } else {
+                    formatted = closure_1_0;
+                  }
+                  return formatted;
+                });
+              }, arr),
+            ];
+            let tmp2 = items;
+          } else {
+            const _Array = Array;
+            items1 = [tmp];
+            if (Array.isArray(arr)) {
+              items1[1] = arr.map((item) => {
+                let reduced = item;
+                if (typeof item === "string") {
+                  reduced = closure_1_15.reduce((acc, item) => {
+                    [tmp] = item;
+                    return acc.replace(tmp, (str) => {
+                      if (str === str.toUpperCase()) {
+                        let formatted = closure_1_0.toUpperCase();
+                      } else {
+                        formatted = closure_1_0;
+                      }
+                      return formatted;
+                    });
+                  }, item);
+                }
+                return reduced;
+              });
+              tmp2 = items1;
+            } else {
+              items1[1] = arr;
+              tmp2 = items1;
+            }
+          }
+          return tmp2;
+        }),
+      );
     } else {
-      obj = {};
+      fromEntriesResult = {};
     }
-    return obj;
+    return fromEntriesResult;
   }
 };
 prototype["getSentryOptions"] = function getSentryOptions(arg0) {
@@ -433,14 +833,7 @@ prototype["getSentryOptions"] = function getSentryOptions(arg0) {
   obj.selected_element_type = tmp2;
   const merged1 = Object.assign(tags);
   const entries = Object.entries(obj);
-  const found = entries.filter((item) => null != _slicedToArray(item, 2)[1]);
-  obj2.tags = Object.fromEntries(
-    found.map((item) => {
-      [tmp, str] = item;
-      items = [tmp, str.replace(/authentication/g, "verification").replace(/authoriz/g, "approv")];
-      return items;
-    }),
-  );
+  obj2.tags = Object.fromEntries(entries.filter((item) => null != _slicedToArray(item, 2)[1]));
   items = [site, self.key];
   obj2.fingerprint = items;
   const merged2 = Object.assign(extra);

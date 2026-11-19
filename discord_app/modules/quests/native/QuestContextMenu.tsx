@@ -6,7 +6,7 @@ import CopyIcon from "../../../design/components/Icon/native/redesign/generated/
 import parseURLDefault from "../../../utils/native/parseURL.tsx";
 import QuestTypes from "../QuestTypes.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import _modDef6934 from "../../../../_runtime/metro/06934__.js";
+import _modDef6904 from "../../../../_runtime/metro/06904__.js";
 import CheckmarkLargeIcon2 from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
@@ -17,7 +17,7 @@ import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTyp
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
-import _modDef16528 from "../../../../_runtime/metro/16528__.js";
+import _modDef16519 from "../../../../_runtime/metro/16519__.js";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -27,7 +27,7 @@ require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef6934;
+  obj.icon = _modDef6904;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -167,7 +167,7 @@ export default noop.memo(function QuestContextMenu(children) {
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef16528;
+    obj2.iconSource = _modDef16519;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

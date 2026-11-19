@@ -4,17 +4,17 @@ import util from "../../../intl/index.native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef9130 from "../../../../_runtime/metro/09130__.js";
-import _modDef9131 from "../../../../_runtime/metro/09131__.js";
+import _modDef9106 from "../../../../_runtime/metro/09106__.js";
+import _modDef9107 from "../../../../_runtime/metro/09107__.js";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
-import _modDef14173 from "../../../../_runtime/metro/14173__.js";
+import _modDef14155 from "../../../../_runtime/metro/14155__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef14173 };
+  const obj2 = { source: _modDef14155 };
   items = [React6(FastImageDefault, obj2)];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = {
@@ -34,7 +34,7 @@ const PremiumConstants = fn(1390);
 ({ FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS: metroImportDefault, PremiumTypes: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   body: { flex: 1, padding: nativeDefault.space.PX_16 },
   content: null,
@@ -52,17 +52,17 @@ obj2.buttonContainer = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "st
 obj2.description = { textAlign: "center" };
 obj2.header = { height: 112, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 let size = {
-  width: fn(9454).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
-  height: fn(9454).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
+  width: fn(9432).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
+  height: fn(9432).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: null,
 };
 let obj5 = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "stretch" };
-let items = [{ translateX: -fn(9454).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }];
-const obj6 = { translateX: -fn(9454).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
-items[1] = { translateY: -fn(9454).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+let items = [{ translateX: -fn(9432).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }];
+const obj6 = { translateX: -fn(9432).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+items[1] = { translateY: -fn(9432).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
 size.transform = items;
 obj2.fractionNitroIcon = size;
 const size1 = {
@@ -88,9 +88,9 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   ({ onPressExplorePerks, onPressViewCredits } = skuId);
   const tmp = closure_12();
   dependencyMap = tmp;
-  const tmp4 = consumed(5032)();
+  const tmp4 = consumed(5001)();
   noop = tmp4;
-  const fetchFractionalPremiumInfo = skuId(8029).useFetchFractionalPremiumInfo();
+  const fetchFractionalPremiumInfo = skuId(7998).useFetchFractionalPremiumInfo();
   const isFractionalPremiumActive = fetchFractionalPremiumInfo.isFractionalPremiumActive;
   const expiresAt = fetchFractionalPremiumInfo.expiresAt;
   items = [consumed, tmp4];
@@ -100,9 +100,9 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
       const tmp10 = FastImageDefault;
       let obj3 = dependencyMap;
       if (obj2.isThemeDark(closure_3)) {
-        let tmp8Result = _modDef9130;
+        let tmp8Result = _modDef9106;
       } else {
-        tmp8Result = _modDef9131;
+        tmp8Result = _modDef9107;
       }
       obj3 = { source: tmp8Result };
       React6(tmp10, obj3);
@@ -150,7 +150,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   }, []);
   if (consumed) {
     let obj2 = { premiumType: TIER_2.TIER_2 };
-    let tmp12Result = closure_9(tmp2(9025), obj2);
+    let tmp12Result = closure_9(tmp2(8999), obj2);
     let tmp15 = closure_9;
   } else {
     let obj3 = { skuId };
@@ -160,9 +160,9 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   const obj4 = { children: null };
   const items2 = [tmp12Result];
   const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
-  let obj = skuId(8029);
-  obj5.children = tmp15(skuId(9352).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(575).colors.WHITE });
-  items2[1] = tmp15(skuId(6941).PressableOpacity, obj5);
+  let obj = skuId(7998);
+  obj5.children = tmp15(skuId(9329).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(575).colors.WHITE });
+  items2[1] = tmp15(skuId(6911).PressableOpacity, obj5);
   obj4.children = items2;
   const items3 = [closure_10(closure_11, obj4), ,];
   const obj7 = { style: tmp.body, children: null };
@@ -185,14 +185,14 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
       obj10.onPress = onPressViewCredits;
       tmp18 = obj10;
     }
-    const items5 = [tmp15(tmp5(5421).Button, tmp18)];
+    const items5 = [tmp15(tmp5(5390).Button, tmp18)];
     const obj11 = { size: "lg", variant: "secondary", text: null, onPress: null };
     let intl2 = tmp5(1113).intl;
     obj11.text = intl2.string(tmp5(1113).t.TkTvBz);
     obj11.onPress = function onPress() {
       return consumed(description[24]).hideActionSheet();
     };
-    items5[1] = tmp15(tmp5(5421).Button, obj11);
+    items5[1] = tmp15(tmp5(5390).Button, obj11);
     obj9.children = items5;
     items4[2] = closure_10(tmp17, obj9);
     obj8.children = items4;
@@ -201,7 +201,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   const obj12 = { handleDisabled: true, children: null };
   obj7.children = tmp10Result;
   items3[1] = tmp15(expiresAt, obj7);
-  items3[2] = tmp15(skuId(5386).ActionSheetHeaderBar, { variant: "floating" });
+  items3[2] = tmp15(skuId(5355).ActionSheetHeaderBar, { variant: "floating" });
   obj12.children = items3;
-  return closure_10(skuId(5051).BottomSheet, obj12);
+  return closure_10(skuId(5020).BottomSheet, obj12);
 }

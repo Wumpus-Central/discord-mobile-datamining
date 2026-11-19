@@ -1,7 +1,7 @@
 // discord_app/modules/clips/clipPayloadUtils.tsx
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
-const ClipsConstants = fn(8353);
+const ClipsConstants = fn(8322);
 ({
   CLIPS_MAX_PARTICIPANTS: c3,
   CLIPS_MAX_TIMELINE_EVENTS: closure_4,
@@ -10,7 +10,7 @@ const ClipsConstants = fn(8353);
   CLIP_RUNTIME: metroImportDefault,
 } = ClipsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SpeakingFlags = fn(5568).SpeakingFlags;
+const SpeakingFlags = fn(5537).SpeakingFlags;
 const ServerClipGameEventType = {
   UNKNOWN: 0,
   [0]: "UNKNOWN",

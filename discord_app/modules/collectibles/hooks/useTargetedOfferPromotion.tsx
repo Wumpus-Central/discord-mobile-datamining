@@ -25,30 +25,7 @@ export function useEligibleCollectiblesTargetedOfferPromotion() {
   }
   return tmp5;
 }
-export function useTargetedOfferPromotionForCollectiblesProduct(product) {
-  const tmp2 = usePromotionForApplicationDefault(closure_3);
-  let rewardStatus;
-  if (tmp2 != null) {
-    rewardStatus = tmp2.rewardStatus;
-  }
-  let tmp5 = null;
-  if (rewardStatus === StorefrontTypes.StorefrontPromotionRewardEligibilityStatus.EARNED) {
-    tmp5 = null;
-    if (tmp4Result.isCollectiblesTargetedOfferPromotion(tmp2)) {
-      tmp5 = tmp2;
-    }
-    tmp4Result = CollectiblesTargetedOfferPromotionUtils;
-  }
-  const collectiblesPricingPromotionForProduct =
-    CollectiblesPricingPromotionUtils.useCollectiblesPricingPromotionForProduct(product);
-  const tmp4Result3 = CollectiblesPricingPromotionUtils;
-  return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(
-    product,
-    tmp5,
-    collectiblesPricingPromotionForProduct,
-  );
-}
-export function useTargetedOfferPromotionPurchaseCtaText(isFirstParty) {
+export function useTargetedOfferPromotionForCollectiblesProduct(isFirstParty) {
   const tmp2 = usePromotionForApplicationDefault(closure_3);
   let rewardStatus;
   if (tmp2 != null) {
@@ -64,16 +41,11 @@ export function useTargetedOfferPromotionPurchaseCtaText(isFirstParty) {
   }
   const collectiblesPricingPromotionForProduct =
     CollectiblesPricingPromotionUtils.useCollectiblesPricingPromotionForProduct(isFirstParty);
-  const tmp4Result4 = CollectiblesPricingPromotionUtils;
-  const targetedOfferPromotionForCollectiblesProduct =
-    CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(
-      isFirstParty,
-      tmp5,
-      collectiblesPricingPromotionForProduct,
-    );
-  const tmp4Result5 = CollectiblesTargetedOfferPromotionUtils;
-  return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionPurchaseCtaText(
-    targetedOfferPromotionForCollectiblesProduct,
+  const tmp4Result3 = CollectiblesPricingPromotionUtils;
+  return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(
+    isFirstParty,
+    tmp5,
+    collectiblesPricingPromotionForProduct,
   );
 }
 export function useIsFiatExclusiveTargetedOfferPromotion(product) {

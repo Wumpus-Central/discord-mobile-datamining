@@ -13,7 +13,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
 const require = fn;
-const VoicePanelDockStatusStore = fn(18062);
+const VoicePanelDockStatusStore = fn(18055);
 ({
   releaseDockStatus: closure_12,
   initDockStatus: map1,
@@ -21,8 +21,8 @@ const VoicePanelDockStatusStore = fn(18062);
   setDockHasStreamers: closure_15,
   showVoiceMoment: closure_16,
 } = VoicePanelDockStatusStore);
-const ParticipantTypes = fn(5473).ParticipantTypes;
-let result = fn(5871).MAX_SOUND_LENGTH_SECONDS * DurationsDefault.Millis.SECOND;
+const ParticipantTypes = fn(5442).ParticipantTypes;
+let result = fn(5842).MAX_SOUND_LENGTH_SECONDS * DurationsDefault.Millis.SECOND;
 let closure_18 = result + 3 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 let result1 = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockStatus.tsx");

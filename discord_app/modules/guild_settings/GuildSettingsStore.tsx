@@ -69,7 +69,9 @@ function handleFormInit(type) {
         c11 = undefined;
       }
     }
-    if (null != section) {
+    if (section === constants.SOUNDBOARD) {
+      c11 = undefined;
+    } else if (null != section) {
       const obj3 = { key: "landing", name: constants.LANDING };
       items = [obj3];
       if (section === constants.TAG_CUSTOMIZE) {

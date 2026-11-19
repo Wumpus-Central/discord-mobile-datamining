@@ -47,7 +47,7 @@ export default function OrbsArcadeClaimRewardButton(game) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -66,22 +66,22 @@ export default function OrbsArcadeClaimRewardButton(game) {
               let orbsArcadeClaimableRewards;
               let gameState;
               closure_128_3 = undefined;
-              orbsArcadeClaimableRewards = tmp5(16494).getOrbsArcadeClaimableRewards(
+              orbsArcadeClaimableRewards = tmp5(16485).getOrbsArcadeClaimableRewards(
                 game.rewards,
                 gameStateForGame.getGameStateForGame(game.id),
               );
               dependencyMap = 1;
-              const obj6 = tmp5(16494);
+              const obj6 = tmp5(16485);
               c3 = 2;
               c4 = 1;
-              const obj4 = { value: tmp5(16493).claimOrbsArcadeRewards(game.id), done: false };
+              const obj4 = { value: tmp5(16484).claimOrbsArcadeRewards(game.id), done: false };
               return obj4;
             }
           } else if (1 === tmp8) {
             dependencyMap = 0;
             showOrbsArcadeClaimRewardsError();
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -106,15 +106,15 @@ export default function OrbsArcadeClaimRewardButton(game) {
                 showOrbsArcadeClaimRewardsError();
               }
               if (closure_128_3.length > 0) {
-                const result = tmp5(16509).openOrbsArcadeRewardsCollectedModal(
+                const result = tmp5(16500).openOrbsArcadeRewardsCollectedModal(
                   closure_128_3,
                   closure_128_0.entitlements,
                 );
-                const obj = tmp5(16509);
+                const obj = tmp5(16500);
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp24) {
           if (tmp4 === dependencyMap) {
@@ -138,7 +138,7 @@ export default function OrbsArcadeClaimRewardButton(game) {
   obj3.text = intl.string(WK589K);
   obj3.loading = stateFromStores;
   obj3.onPress = callback;
-  return jsx(game(5421).Button, {
+  return jsx(game(5390).Button, {
     grow: true,
     size: game.size,
     variant: "primary",

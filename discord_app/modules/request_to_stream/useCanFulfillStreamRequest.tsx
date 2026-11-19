@@ -43,18 +43,18 @@ function canFulfillStreamRequest(channel_id) {
     const tmp18 = null != obj.getCurrentUserActiveStream();
     const application = channel_id.application;
     id = undefined;
-    const videoPermission = flag(10892).getVideoPermission(channel);
+    const videoPermission = flag(10870).getVideoPermission(channel);
     if (application != null) {
       id = application.id;
     }
-    tmp19(6985).ActivityGamePlatforms.DESKTOP;
-    const obj8 = flag(10892);
+    tmp19(6955).ActivityGamePlatforms.DESKTOP;
+    const obj8 = flag(10870);
     const tmp19Result = flag(1380);
-    const ActivityGamePlatforms = tmp19(6985).ActivityGamePlatforms;
+    const ActivityGamePlatforms = tmp19(6955).ActivityGamePlatforms;
     dependencyMap = flag(1380).isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.IOS;
     const isAndroidResult = flag(1380).isAndroid();
     const obj5 = { guildId: channel.guild_id, location: "canFulfillStreamRequest" };
-    const tmp5 = id(8441).getConfig(obj5).enabled && null == id;
+    const tmp5 = id(8410).getConfig(obj5).enabled && null == id;
     if (null == id) {
       if (!tmp5) {
         const items1 = [false, obj.NOT_RUNNING_GAME];

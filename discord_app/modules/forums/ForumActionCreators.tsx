@@ -29,7 +29,7 @@ let closure_7 = async function _withErrorHandling(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -170,7 +170,7 @@ export default {
     closure_0 = id;
     closure_1 = arg1;
     return (async () => {
-      await v1(8371).unarchiveThreadIfNecessary(tmp4);
+      await v1(8340).unarchiveThreadIfNecessary(tmp4);
       const HTTP = tmp4(1285).HTTP;
       const request = {
         url: closure_1_5.CHANNEL(closure_128_0),
@@ -217,7 +217,7 @@ export default {
     return (async () => {
       const channelId = tmp3;
       channelId(572).dispatch({ type: "FORUM_SEARCH_START", channelId });
-      await channelId(8371).searchThreads(closure_0, channelId, closure_2, closure_3, closure_4);
+      await channelId(8340).searchThreads(closure_0, channelId, closure_2, closure_3, closure_4);
       if (1 === tmp7) {
         dependencyMap = 0;
         channelId(572).dispatch({ type: "FORUM_SEARCH_FAILURE", channelId: closure_129_1 });
@@ -228,12 +228,12 @@ export default {
         throw value;
       } else if (arg0 !== 2) {
         closure_128_0 = value;
-        guild_id(8373).trackForumSearched({
+        guild_id(8342).trackForumSearched({
           guildId: closure_129_0,
           channelId: closure_129_1,
           numSearchResults: closure_128_0.length,
         });
-        guild_id(8373);
+        guild_id(8342);
         channelId(572).dispatch({ type: "FORUM_SEARCH_SUCCESS", channelId: closure_129_1, threadIds: closure_128_0 });
         dependencyMap = 0;
         channelId(572);

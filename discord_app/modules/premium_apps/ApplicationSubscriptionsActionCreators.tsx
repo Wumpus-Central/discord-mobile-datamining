@@ -165,7 +165,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -291,7 +291,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
           return obj;
         }
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp33) {
       closure_5 = tmp33;

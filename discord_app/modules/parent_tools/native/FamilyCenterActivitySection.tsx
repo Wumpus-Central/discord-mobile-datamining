@@ -14,19 +14,19 @@ function FamilyCenterActivitySectionHeader(displayType) {
   let flag = useIsInAdultAgeGroupDefault();
   const activityTypeTextConfigs = FamilyCenterUtils.getActivityTypeTextConfigs();
   value = activityTypeTextConfigs.get(displayType);
-  const actionsForDisplayType = useFamilyCenterActivities.useActionsForDisplayType(displayType);
+  const actionTotalsForDisplayType = useFamilyCenterActivities.useActionTotalsForDisplayType(displayType);
   const formattedTotalForDisplayType = useFamilyCenterActivities.useFormattedTotalForDisplayType(displayType);
   if (displayType === constants.PURCHASES) {
-    length = formattedTotalForDisplayType;
+    let tmp8 = formattedTotalForDisplayType;
     let sectionHeaderResult;
     if (value != null) {
-      sectionHeaderResult = value.sectionHeader(length);
+      sectionHeaderResult = value.sectionHeader(tmp8);
     }
     let sectionDescription;
     if (value != null) {
       sectionDescription = value.sectionDescription;
     }
-    let tmp10 = null;
+    let tmp12 = null;
     if (undefined !== sectionDescription) {
       let sectionDescriptionResult;
       if (value != null) {
@@ -35,35 +35,35 @@ function FamilyCenterActivitySectionHeader(displayType) {
         }
         sectionDescriptionResult = value.sectionDescription(flag);
       }
-      tmp10 = sectionDescriptionResult;
+      tmp12 = sectionDescriptionResult;
     }
     const obj2 = { variant: "body-sm/semibold", style: tmp.header, children: sectionHeaderResult };
     items = [React6(Text_Text.Text, obj2)];
-    let tmp14Result = null;
-    if (null !== tmp10) {
-      const obj3 = { variant: "body-sm/medium", color: "text-muted", style: tmp.description, children: tmp10 };
-      tmp14Result = React6(Text_Text.Text, obj3);
+    let tmp16Result = null;
+    if (null !== tmp12) {
+      const obj3 = { variant: "body-sm/medium", color: "text-muted", style: tmp.description, children: tmp12 };
+      tmp16Result = React6(Text_Text.Text, obj3);
     }
     const obj6 = { children: null };
-    items[1] = tmp14Result;
+    items[1] = tmp16Result;
     obj6.children = items;
     return refs(timestampProducer, obj6);
   }
-  length = actionsForDisplayType.length;
+  tmp8 = actionTotalsForDisplayType;
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(8248);
+const FamilyCenterConstants = fn(8217);
 ({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: metroImportDefault, TeenActionDisplayType: closure_8 } =
   FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-let createStyles = fn(4823);
+let createStyles = fn(4792);
 let obj2 = { header: { marginBottom: nativeDefault.space.PX_4 }, description: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_4 };
 obj2.description = { marginBottom: nativeDefault.space.PX_8 };
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(4823);
+createStyles = fn(4792);
 let obj6 = {
   container: { display: "flex" },
   loadMoreContainer: {
@@ -96,15 +96,15 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMoreButton = closure_13();
-  const actionsForDisplayType = displayType(16118).useActionsForDisplayType(displayType);
-  const obj = displayType(16118);
-  const actionTotalsForDisplayType = displayType(16118).useActionTotalsForDisplayType(displayType);
+  const actionsForDisplayType = displayType(16109).useActionsForDisplayType(displayType);
+  const obj = displayType(16109);
+  const actionTotalsForDisplayType = displayType(16109).useActionTotalsForDisplayType(displayType);
   const callback = noop.useCallback(() => {
     const intl = displayType(1113).intl;
-    displayType(5504).presentFailedToast(intl.string(loadMore(2723).Wu8BK2));
+    displayType(5473).presentFailedToast(intl.string(loadMore(2723).Wu8BK2));
   }, []);
-  const obj2 = displayType(16118);
-  const familyCenterActions = displayType(12385).useFamilyCenterActions({ onError: callback });
+  const obj2 = displayType(16109);
+  const familyCenterActions = displayType(12368).useFamilyCenterActions({ onError: callback });
   const loadMore = familyCenterActions.loadMore;
   const tmp7 = _slicedToArray(noop.useState(closure_7), 2);
   dependencyMap = tmp7[1];
@@ -122,7 +122,7 @@ export default function FamilyCenterActivitySection(displayType) {
     const obj6 = { displayType };
     const items1 = [
       closure_9(FamilyCenterActivitySectionHeader, obj6),
-      substr.map((action) => closure_1_9(loadMore(16124), { action }, action.event_id)),
+      substr.map((action) => closure_1_9(loadMore(16115), { action }, action.event_id)),
     ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
@@ -151,12 +151,12 @@ export default function FamilyCenterActivitySection(displayType) {
           color: "text-overlay-light",
           children: formatToPlainStringResult,
         };
-        obj10.children = closure_9(tmp(5414).Text, obj11);
-        tmp18Result = closure_9(tmp(6941).PressableOpacity, obj10);
+        obj10.children = closure_9(tmp(5383).Text, obj11);
+        tmp18Result = closure_9(tmp(6911).PressableOpacity, obj10);
       }
       obj7.children = tmp18Result;
       closure_9(closure_6, obj7);
     }
   }
-  const obj3 = displayType(12385);
+  const obj3 = displayType(12368);
 }

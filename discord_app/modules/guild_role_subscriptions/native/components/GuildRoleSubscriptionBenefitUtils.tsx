@@ -31,7 +31,7 @@ export function getChannelIconComponentOrDefault(channel, guild) {
     TextIcon = utils_ChannelUtils.getChannelIconComponent(channel);
   }
   if (TextIcon == null) {
-    TextIcon = tmp(7592).TextIcon;
+    TextIcon = tmp(7562).TextIcon;
   }
   return TextIcon;
 }

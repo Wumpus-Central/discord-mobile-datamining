@@ -6,19 +6,16 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import Server from "../flow/Server.tsx";
-import DatabaseDaosDefault from "../modules/app_database/DatabaseDaos.tsx";
 import ReactionUtils from "../modules/reactions/ReactionUtils.tsx";
 import MessageRecordUtils from "../modules/messages/MessageRecordUtils.tsx";
 import InteractionTypes from "../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import ChannelMessagesDefault from "../lib/ChannelMessages.tsx";
-import IOSPushNotificationRawPayloadFixExperiment from "../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
 import GatewayConnectionStore from "../modules/gateway/GatewayConnectionStore.tsx";
 import handleExplicitMediaScanTimeoutForMessage from "../modules/explicit_media_redaction/handleExplicitMediaScanTimeoutForMessage.tsx";
 import MessageQueue from "../lib/MessageQueue.tsx";
 import canEditMessageDefault from "../modules/messages/canEditMessage.tsx";
 import GuildAutomodMessageStoreUtils from "../modules/guild_automod/GuildAutomodMessageStoreUtils.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ImpersonateStore from "../modules/impersonate/ImpersonateStore.tsx";
 import EphemeralMessageStore from "../modules/messages/EphemeralMessageStore.tsx";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
@@ -66,7 +63,7 @@ function reinjectEphemerals(channelId, truncateResult) {
         mutation = truncateResult.mutate((_merge) => {
           _merge._merge(found);
           const _array = _merge._array;
-          const sorted = _array.sort((id, id2) => closure_1_1(found[18]).compare(id.id, id2.id));
+          const sorted = _array.sort((id, id2) => closure_1_1(found[17]).compare(id.id, id2.id));
         }, true);
       }
       return mutation;
@@ -80,100 +77,6 @@ function handleConnectionOpen() {
   set.clear();
   map.clear();
 }
-let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  let id = arg1;
-  closure_2 = arg2;
-  c6 = 0;
-  c7 = 0;
-  c5 = 0;
-  return (async (arg0, value, arg2) => {
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj5 = { value, done: true };
-        return obj5;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c7 = 2;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            closure_4 = tmp3;
-            closure_3 = tmp28;
-            closure_131_0 = closure_0;
-            closure_131_1 = id;
-            closure_131_2 = closure_2;
-            let orCreate;
-            const databaseResult = DatabaseDaosDefault.database();
-            basicChannel = basicChannel.getBasicChannel(closure_0);
-            if (null != databaseResult) {
-              if (null != basicChannel) {
-                c5 = 1;
-                c6 = 2;
-                c7 = 1;
-                const obj7 = {
-                  value: DatabaseDaosDefault.messages(databaseResult).get(basicChannel.guild_id, closure_0, id.id),
-                  done: false,
-                };
-                return obj7;
-              }
-            }
-          }
-        } else {
-          if (1 === tmp7) {
-            c5 = 0;
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else if (null == value) {
-            c5 = 0;
-          }
-          c5 = 0;
-          c7 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-        closure_132_28.log(
-          "Push notification message not in cache, adding directly",
-          closure_131_1.id,
-          closure_131_1.channel_id,
-        );
-        orCreate = closure_132_1(closure_132_2[19]).getOrCreate(closure_131_0);
-        const obj2 = closure_132_1(closure_132_2[19]);
-        closure_132_1(closure_132_2[19]).commit(orCreate.receivePushNotification(closure_131_1, closure_131_2));
-        closure_132_35.emitChange();
-        c7 = 3;
-        const obj3 = closure_132_1(closure_132_2[19]);
-      } catch (tmp27) {
-        if (tmp4 === c5) {
-          c7 = tmp2;
-          throw tmp27;
-        } else {
-          c6 = tmp;
-        }
-        tmp28 = c5;
-      }
-    }
-  })();
-};
 function receiveMediaMentionMessage(item10041) {
   const media_mention = item10041.media_mention;
   let message_id;
@@ -290,7 +193,7 @@ function performAuthorUpdate(guildId) {
       items = [];
       c1 = false;
       const item = channelId.forEach((nick) => {
-        const messageAuthor = guildId(dependencyMap[27]).getMessageAuthor(nick);
+        const messageAuthor = guildId(dependencyMap[24]).getMessageAuthor(nick);
         ({ nick, colorString } = messageAuthor);
         if (nick === nick.nick) {
           if (colorString === nick.colorString) {
@@ -299,7 +202,7 @@ function performAuthorUpdate(guildId) {
         }
         c1 = true;
         items.push(nick.merge({ nick, colorString }));
-        const obj = guildId(dependencyMap[27]);
+        const obj = guildId(dependencyMap[24]);
       });
       if (c1) {
         ChannelMessagesDefault.commit(channelId.reset(items));
@@ -368,18 +271,18 @@ function handleMessageSendFailedAutomod(arg0) {
 }
 const Constants = fn(1072);
 ({
-  BasicPermissions: closure_19,
-  ChannelTypes: closure_20,
-  MessageFlags: closure_21,
-  MessageReferenceTypes: closure_22,
-  MessageStates: closure_23,
-  MessageTypes: closure_24,
-  Permissions: closure_25,
+  BasicPermissions: closure_18,
+  ChannelTypes: closure_19,
+  MessageFlags: closure_20,
+  MessageReferenceTypes: closure_21,
+  MessageStates: closure_22,
+  MessageTypes: closure_23,
+  Permissions: closure_24,
 } = Constants);
 const set = new Set();
 const map = new Map();
 const logger = new LoggerDefault("MessageStore");
-let c29 = false;
+let c28 = false;
 const Store = initializeDefault.Store;
 class MessageStore extends Store {}
 const prototype = MessageStore.prototype;
@@ -555,7 +458,7 @@ prototype["hasCurrentUserSentWaveBlockingMessage"] = function hasCurrentUserSent
   );
 };
 prototype["hasCurrentUserSentMessageSinceAppStart"] = function hasCurrentUserSentMessageSinceAppStart() {
-  return c29;
+  return c28;
 };
 MessageStore.displayName = "MessageStore";
 const messageStore = new MessageStore(DispatcherDefault, {
@@ -779,7 +682,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
           mutation = truncateResult.mutate((_merge) => {
             _merge._merge(found);
             const _array = _merge._array;
-            const sorted = _array.sort((id, id2) => closure_1_1(found[18]).compare(id.id, id2.id));
+            const sorted = _array.sort((id, id2) => closure_1_1(found[17]).compare(id.id, id2.id));
           }, true);
         }
         tmp10 = mutation;
@@ -791,24 +694,15 @@ const messageStore = new MessageStore(DispatcherDefault, {
   },
   LOCAL_MESSAGES_LOADED: function handleLocalMessagesLoaded(channelId) {
     const orCreate = ChannelMessagesDefault.getOrCreate(channelId.channelId);
-    const addCachedMessagesResult = orCreate.addCachedMessages(channelId.messages, channelId.stale);
-    let isForegroundCacheLoad = channelId.isForegroundCacheLoad;
-    if (isForegroundCacheLoad) {
-      isForegroundCacheLoad = channelId.messages.length > 0;
+    const cached = orCreate.cached;
+    let ready = !cached;
+    if (!cached) {
+      ready = orCreate.ready;
     }
-    if (isForegroundCacheLoad) {
-      isForegroundCacheLoad = null == addCachedMessagesResult.jumpTargetId;
+    if (!ready) {
+      ChannelMessagesDefault.commit(orCreate.addCachedMessages(channelId.messages, channelId.stale));
+      const tmpResult = ChannelMessagesDefault;
     }
-    let mutation = addCachedMessagesResult;
-    if (isForegroundCacheLoad) {
-      const obj2 = {
-        initialScrollSequenceId: addCachedMessagesResult.initialScrollSequenceId + 1,
-        suppressRowAnimationSequenceId: addCachedMessagesResult.suppressRowAnimationSequenceId + 1,
-      };
-      mutation = addCachedMessagesResult.mutate(obj2);
-    }
-    ChannelMessagesDefault.commit(mutation);
-    const tmpResult = ChannelMessagesDefault;
   },
   LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: function handleLoadMessageInteractionDataSuccess(messageId) {
     messageId = messageId.messageId;
@@ -838,33 +732,18 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_CREATE: function handleIncomingMessage(isPushNotification) {
     ({ channelId, message, optimistic } = isPushNotification);
     const orCreate = ChannelMessagesDefault.getOrCreate(channelId);
-    const isConnectedResult = GatewayConnectionStore.default.isConnected();
     if (isPushNotification.isPushNotification) {
-      if (tmp3Result.isIOSPushNotificationRawPayloadFixExperimentEnabled()) {
-        (function addPushNotificationMessageIfNotCached() {
-          const self = this;
-          const apply = closure_1_31.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
-        })(channelId, message, isConnectedResult);
-      } else {
-        logger.log("Inserting message tapped on from a push notification", message.id, message.channel_id);
-        ChannelMessagesDefault.commit(orCreate.receivePushNotification(message, isConnectedResult));
-        const tmpResult = ChannelMessagesDefault;
-      }
-      tmp3Result = IOSPushNotificationRawPayloadFixExperiment;
+      logger.log("Inserting message tapped on from a push notification", message.id, message.channel_id);
+      ChannelMessagesDefault.commit(orCreate.receivePushNotification(message));
+      const tmpResult = ChannelMessagesDefault;
     } else {
       let ready = orCreate.ready;
       if (ready) {
-        let tmp6 = !optimistic;
+        let tmp4 = !optimistic;
         if (optimistic) {
-          tmp6 = !orCreate.has(message.id);
+          tmp4 = !orCreate.has(message.id);
         }
-        if (tmp6) {
+        if (tmp4) {
           let hasItem = null != message.nonce;
           if (hasItem) {
             hasItem = message.state !== constants5.SENDING;
@@ -885,11 +764,10 @@ const messageStore = new MessageStore(DispatcherDefault, {
           receiveMediaMentionMessage(message);
           const tmpResult2 = ChannelMessagesDefault;
         }
-        ready = tmp6;
+        ready = tmp4;
       }
-      return ready;
     }
-    const _default = GatewayConnectionStore.default;
+    return ready;
   },
   MESSAGE_SEND_FAILED: function handleSendFailed(channelId) {
     ({ messageId, reason: require } = channelId);
@@ -1075,7 +953,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(6296).getOrCreate(ids.channelId);
+    const orCreate = mutation(6268).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1124,14 +1002,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6296).commit(tmp3);
+        tmp(6268).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(6296);
+        const tmpResult2 = tmp(6268);
       }
     }
-    let obj = mutation(6296);
+    let obj = mutation(6268);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);
@@ -1211,7 +1089,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
         items = [];
         c1 = false;
         const item = channelId.forEach((nick) => {
-          const messageAuthor = guildId(dependencyMap[27]).getMessageAuthor(nick);
+          const messageAuthor = guildId(dependencyMap[24]).getMessageAuthor(nick);
           ({ nick, colorString } = messageAuthor);
           if (nick === nick.nick) {
             if (colorString === nick.colorString) {
@@ -1220,7 +1098,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           c1 = true;
           items.push(nick.merge({ nick, colorString }));
-          const obj = guildId(dependencyMap[27]);
+          const obj = guildId(dependencyMap[24]);
         });
         if (c1) {
           ChannelMessagesDefault.commit(channelId.reset(items));
@@ -1315,7 +1193,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
     message = message.message;
     const currentUser = UserStore.getCurrentUser();
     if (tmp2) {
-      c29 = true;
+      c28 = true;
     }
   },
 });

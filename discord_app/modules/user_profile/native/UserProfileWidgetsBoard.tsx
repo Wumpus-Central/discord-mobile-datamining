@@ -18,7 +18,7 @@ function AddGameButton(ref) {
     ref,
     size: "sm",
     variant: "secondary",
-    icon: closure_8(ref(9479).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }),
+    icon: closure_8(ref(9458).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }),
     accessibilityLabel: null,
     disabled: null,
     onPress: null,
@@ -29,7 +29,7 @@ function AddGameButton(ref) {
   obj.onPress = function onPress() {
     return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });
   };
-  return closure_8(ref(7502).IconButton, obj);
+  return closure_8(ref(7472).IconButton, obj);
 }
 function WidgetRenderer(arg0) {
   ({ userId, widget, cardStyle, isEditing } = arg0);
@@ -43,12 +43,12 @@ function WidgetRenderer(arg0) {
   return tmp2Result;
 }
 const View = fn(17).View;
-const UserProfileSections = fn(7981).UserProfileSections;
-const UserProfileWidgetConstants = fn(6870);
+const UserProfileSections = fn(7950).UserProfileSections;
+const UserProfileWidgetConstants = fn(6840);
 ({ widgetSupportsComment: closure_6, widgetSupportsTags: metroImportDefault } = UserProfileWidgetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   board: { gap: nativeDefault.space.PX_16 },
   emptyState: null,
@@ -61,7 +61,7 @@ let obj4 = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
 obj.singleGameEmptyState = {
   flexDirection: "row",
   alignItems: "center",
-  gap: fn(10099).GAME_COVER_DETAILS_GAP,
+  gap: fn(10077).GAME_COVER_DETAILS_GAP,
   paddingVertical: nativeDefault.space.PX_8,
 };
 obj.singleGameEmptyStateText = { flex: 1 };

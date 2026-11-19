@@ -2,7 +2,7 @@
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import QueryStringUtils from "../../utils/QueryStringUtils.tsx";
-import keysSorter from "../../../_runtime/06478_keysSorter.js";
+import keysSorter from "../../../_runtime/06449_keysSorter.js";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import scopes from "scopes.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -59,7 +59,8 @@ export function parseOAuth2AuthorizeProps(query) {
         return tmp;
       }
     })(guild_id);
-    let str4 = QueryStringUtils.getFirstQueryStringValue(parsed.scope);
+    const scope = parsed.scope;
+    let str4 = QueryStringUtils.getFirstQueryStringValue(scope);
     if (str4 == null) {
       str4 = "";
     }

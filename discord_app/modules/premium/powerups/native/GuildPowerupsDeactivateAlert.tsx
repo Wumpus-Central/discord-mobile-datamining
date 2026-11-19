@@ -64,7 +64,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
       color: "text-feedback-critical",
       children: error,
     };
-    tmp7Result = closure_4(tmp5(5414).Text, obj7);
+    tmp7Result = closure_4(tmp5(5383).Text, obj7);
   }
   const obj8 = { children: null };
   items = [tmp7Result, ,];

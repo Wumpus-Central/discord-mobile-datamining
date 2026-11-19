@@ -18,6 +18,33 @@ import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
 import apply from "../../_runtime/00012_apply.js";
 
 require = fn;
+function getTotalSoundboardSoundCountForTier(items, features) {
+  features = features.features;
+  if (features.has(application_id.MORE_SOUNDBOARD)) {
+    let premiumTier = BoostedGuildTiers.TIER_3;
+  } else {
+    premiumTier = features.premiumTier;
+  }
+  let tmp3 = dependencyMap;
+  const premiumFeatures = features.premiumFeatures;
+  let num;
+  if (premiumFeatures != null) {
+    num = premiumFeatures.additionalSoundSlots;
+  }
+  if (num == null) {
+    num = 0;
+  }
+  const features2 = features.features;
+  const sum = tmp3 + num;
+  if (features2.has(application_id.MORE_SOUNDBOARD)) {
+    tmp3 = guild;
+  }
+  let num2 = 0;
+  if (items >= premiumTier) {
+    num2 = Math.max(0, Math.max(tmp3, sum) - dependencyMap3[premiumTier]);
+  }
+  return dependencyMap3[items] + num2;
+}
 function getGuildTierFromGuild(arg0) {
   guild = GuildStore.getGuild(arg0);
   let premiumTier;
@@ -75,24 +102,24 @@ export function getTotalStickerCountForTier(premiumTier, guild) {
   }
   MAX_STICKER_SLOTS = dependencyMap4[premiumTier];
 }
-export function getIncrementalStickerCountForTier(tier) {
-  return dependencyMap2[tier];
+export function getIncrementalStickerCountForTier(NONE) {
+  return dependencyMap2[NONE];
 }
-export function getTotalSoundboardSoundCountForTier(arg0, features) {
-  if (null != features) {
-    features = features.features;
-    if (features.has(application_id.MORE_SOUNDBOARD)) {
-      let tmp2 = guild;
-    }
-    return tmp2;
-  }
-  tmp2 = dependencyMap3[arg0];
-}
-export function getIncrementalSoundboardSoundCountForTier(arg0) {
-  if (arg0 === BoostedGuildTiers.NONE) {
-    return dependencyMap3[arg0];
+export function getGuildSoundboardTier(guild) {
+  const features = guild.features;
+  if (features.has(application_id.MORE_SOUNDBOARD)) {
+    let premiumTier = BoostedGuildTiers.TIER_3;
   } else {
-    return dependencyMap3[arg0] - dependencyMap3[items[items.indexOf(items, arg0) - 1]];
+    premiumTier = guild.premiumTier;
+  }
+  return premiumTier;
+}
+export { getTotalSoundboardSoundCountForTier };
+export function getIncrementalSoundboardSoundCountForTier(NONE, guild) {
+  if (NONE === BoostedGuildTiers.NONE) {
+    return getTotalSoundboardSoundCountForTier(NONE, guild);
+  } else {
+    return getTotalSoundboardSoundCountForTier(NONE, guild) - getTotalSoundboardSoundCountForTier(items[items.indexOf(items, NONE) - 1], guild);
   }
 }
 export (arg0) => {
@@ -113,16 +140,9 @@ export (arg0) => {
   obj4.description = intl5.string(util.t.JfsnDQ);
   obj4.icon = constants4.STICKER;
   items[1] = obj4;
+  const obj6 = { title: null, description: null, icon: null };
   const intl6 = util.intl;
-  const TIER_1 = BoostedGuildTiers.TIER_1;
-  if (TIER_1 === BoostedGuildTiers.NONE) {
-    let diff = dependencyMap3[TIER_1];
-    let tmp9 = dependencyMap3;
-  } else {
-    tmp9 = dependencyMap3;
-    diff = dependencyMap3[TIER_1] - dependencyMap3[items[items.indexOf(items, TIER_1) - 1]];
-  }
-  const obj6 = { title: intl6.formatToPlainString(util.t.NRuk5m, { soundCount: diff, totalSoundCount: tmp9[BoostedGuildTiers.TIER_1] }), description: null, icon: null };
+  obj6.title = intl6.formatToPlainString(util.t.NRuk5m, { soundCount: dependencyMap3[BoostedGuildTiers.TIER_1] - dependencyMap3[BoostedGuildTiers.NONE], totalSoundCount: dependencyMap3[BoostedGuildTiers.TIER_1] });
   const intl7 = util.intl;
   obj6.description = intl7.string(util.t.Oq7OVl);
   obj6.icon = constants4.SOUNDBOARD;
@@ -174,14 +194,9 @@ export (arg0) => {
   obj16.description = intl20.string(util.t.t4TM28);
   obj16.icon = constants4.STICKER;
   items2[1] = obj16;
+  const obj18 = { title: null, description: null, icon: null };
   const intl21 = util.intl;
-  const TIER_2 = BoostedGuildTiers.TIER_2;
-  if (TIER_2 === BoostedGuildTiers.NONE) {
-    let diff1 = tmp9[TIER_2];
-  } else {
-    diff1 = tmp9[TIER_2] - tmp9[items[items.indexOf(items, TIER_2) - 1]];
-  }
-  const obj18 = { title: intl21.formatToPlainString(util.t.NRuk5m, { soundCount: diff1, totalSoundCount: tmp9[BoostedGuildTiers.TIER_2] }), description: null, icon: null };
+  obj18.title = intl21.formatToPlainString(util.t.NRuk5m, { soundCount: dependencyMap3[BoostedGuildTiers.TIER_2] - dependencyMap3[BoostedGuildTiers.TIER_1], totalSoundCount: dependencyMap3[BoostedGuildTiers.TIER_2] });
   const intl22 = util.intl;
   obj18.description = intl22.string(util.t.pEYlPZ);
   obj18.icon = constants4.SOUNDBOARD;
@@ -208,124 +223,118 @@ export (arg0) => {
   obj23.description = intl28.format(util.t.yvht65, {});
   obj23.icon = constants4.UPLOAD;
   items2[5] = obj23;
-  const obj25 = { title: null, description: null, icon: null };
-  const intl29 = util.intl;
-  obj25.title = intl29.string(util.t.bmaoNI);
-  const intl30 = util.intl;
-  obj25.description = intl30.string(util.t.WZW2Bj);
-  obj25.icon = constants4.STREAM;
-  items2[6] = obj25;
   const obj26 = { title: null, description: null, icon: null };
+  const intl29 = util.intl;
+  obj26.title = intl29.string(util.t.bmaoNI);
+  const intl30 = util.intl;
+  obj26.description = intl30.string(util.t.WZW2Bj);
+  obj26.icon = constants4.STREAM;
+  items2[6] = obj26;
+  const obj27 = { title: null, description: null, icon: null };
   const intl31 = util.intl;
-  obj26.title = intl31.string(util.t.BHtqcV);
+  obj27.title = intl31.string(util.t.BHtqcV);
   const intl32 = util.intl;
-  obj26.description = intl32.string(util.t.ukVcEe);
-  obj26.icon = constants4.CUSTOM_ROLE_ICON;
-  items2[7] = obj26;
-  let tmp14 = null;
+  obj27.description = intl32.string(util.t.ukVcEe);
+  obj27.icon = constants4.CUSTOM_ROLE_ICON;
+  items2[7] = obj27;
+  let tmp9 = null;
   if (arg0) {
-    const obj27 = { title: null, description: null, icon: null };
+    const obj28 = { title: null, description: null, icon: null };
     const intl33 = util.intl;
-    const obj28 = { limit };
-    obj27.title = intl33.formatToPlainString(util.t.T8P3TH, obj28);
-    const intl34 = util.intl;
     const obj29 = { limit };
-    obj27.description = intl34.formatToPlainString(util.t.T8P3TH, obj29);
-    obj27.icon = constants4.STAGE_VIDEO;
-    tmp14 = obj27;
+    obj28.title = intl33.formatToPlainString(util.t.T8P3TH, obj29);
+    const intl34 = util.intl;
+    const obj30 = { limit };
+    obj28.description = intl34.formatToPlainString(util.t.T8P3TH, obj30);
+    obj28.icon = constants4.STAGE_VIDEO;
+    tmp9 = obj28;
   }
-  items2[8] = tmp14;
+  items2[8] = tmp9;
   obj13.perks = items2.filter(GlobalUtils.isNotNullish);
   items1[1] = obj13;
-  const obj30 = { tier: BoostedGuildTiers.TIER_3, title: null, perks: null };
+  const obj31 = { tier: BoostedGuildTiers.TIER_3, title: null, perks: null };
   const intl35 = util.intl;
-  obj30.title = intl35.string(util.t.P7LdcQ);
-  const obj31 = { title: null, description: null, icon: null };
+  obj31.title = intl35.string(util.t.P7LdcQ);
+  const obj32 = { title: null, description: null, icon: null };
   const intl36 = util.intl;
-  obj31.title = intl36.formatToPlainString(util.t.dnLAwl, { adding: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji });
+  obj32.title = intl36.formatToPlainString(util.t.dnLAwl, { adding: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji });
   const intl37 = util.intl;
-  obj31.description = intl37.string(util.t.AfJxnV);
-  obj31.icon = constants4.EMOJI;
-  const items3 = [obj31, , , , , , , ];
-  const obj33 = { title: null, description: null, icon: null };
+  obj32.description = intl37.string(util.t.AfJxnV);
+  obj32.icon = constants4.EMOJI;
+  const items3 = [obj32, , , , , , , ];
+  const obj34 = { title: null, description: null, icon: null };
   const intl38 = util.intl;
-  obj33.title = intl38.formatToPlainString(util.t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_3], total: dependencyMap4[BoostedGuildTiers.TIER_3] });
+  obj34.title = intl38.formatToPlainString(util.t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_3], total: dependencyMap4[BoostedGuildTiers.TIER_3] });
   const intl39 = util.intl;
-  obj33.description = intl39.string(util.t["+ZI4QZ"]);
-  obj33.icon = constants4.STICKER;
-  items3[1] = obj33;
+  obj34.description = intl39.string(util.t["+ZI4QZ"]);
+  obj34.icon = constants4.STICKER;
+  items3[1] = obj34;
+  const obj36 = { title: null, description: null, icon: null };
   const intl40 = util.intl;
-  const TIER_3 = BoostedGuildTiers.TIER_3;
-  if (TIER_3 === BoostedGuildTiers.NONE) {
-    let diff2 = tmp9[TIER_3];
-  } else {
-    diff2 = tmp9[TIER_3] - tmp9[items[items.indexOf(items, TIER_3) - 1]];
-  }
-  const obj35 = { title: intl40.formatToPlainString(util.t.NRuk5m, { soundCount: diff2, totalSoundCount: tmp9[BoostedGuildTiers.TIER_3] }), description: null, icon: null };
+  obj36.title = intl40.formatToPlainString(util.t.NRuk5m, { soundCount: dependencyMap3[BoostedGuildTiers.TIER_3] - dependencyMap3[BoostedGuildTiers.TIER_2], totalSoundCount: dependencyMap3[BoostedGuildTiers.TIER_3] });
   const intl41 = util.intl;
-  obj35.description = intl41.string(util.t["8omJSY"]);
-  obj35.icon = constants4.SOUNDBOARD;
-  items3[2] = obj35;
-  const obj37 = { title: null, description: null, icon: null };
+  obj36.description = intl41.string(util.t["8omJSY"]);
+  obj36.icon = constants4.SOUNDBOARD;
+  items3[2] = obj36;
+  const obj38 = { title: null, description: null, icon: null };
   const intl42 = util.intl;
-  obj37.title = intl42.formatToPlainString(util.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 });
+  obj38.title = intl42.formatToPlainString(util.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 });
   const intl43 = util.intl;
-  obj37.description = intl43.string(util.t["cOkbp/"]);
-  obj37.icon = constants4.AUDIO;
-  items3[3] = obj37;
-  const obj39 = { title: null, description: null, icon: null };
+  obj38.description = intl43.string(util.t["cOkbp/"]);
+  obj38.icon = constants4.AUDIO;
+  items3[3] = obj38;
+  const obj40 = { title: null, description: null, icon: null };
   const intl44 = util.intl;
-  obj39.title = intl44.string(util.t.C2w2cM);
+  obj40.title = intl44.string(util.t.C2w2cM);
   const intl45 = util.intl;
-  const obj40 = { helpdeskArticle: null };
+  const obj41 = { helpdeskArticle: null };
   const obj15 = { adding: dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji };
   const obj17 = { adding: dependencyMap2[BoostedGuildTiers.TIER_2], total: dependencyMap4[BoostedGuildTiers.TIER_2] };
-  const obj19 = { soundCount: diff1, totalSoundCount: tmp9[BoostedGuildTiers.TIER_2] };
+  const obj19 = { soundCount: dependencyMap3[BoostedGuildTiers.TIER_2] - dependencyMap3[BoostedGuildTiers.TIER_1], totalSoundCount: dependencyMap3[BoostedGuildTiers.TIER_2] };
   const obj21 = { bitrate: dependencyMap[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 };
   obj3 = { adding: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji - dependencyMap[BoostedGuildTiers.NONE].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji };
-  const obj32 = { adding: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji };
-  const obj34 = { adding: dependencyMap2[BoostedGuildTiers.TIER_3], total: dependencyMap4[BoostedGuildTiers.TIER_3] };
-  const obj36 = { soundCount: diff2, totalSoundCount: tmp9[BoostedGuildTiers.TIER_3] };
-  const obj38 = { bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 };
+  const obj33 = { adding: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji };
+  const obj35 = { adding: dependencyMap2[BoostedGuildTiers.TIER_3], total: dependencyMap4[BoostedGuildTiers.TIER_3] };
+  const obj37 = { soundCount: dependencyMap3[BoostedGuildTiers.TIER_3] - dependencyMap3[BoostedGuildTiers.TIER_2], totalSoundCount: dependencyMap3[BoostedGuildTiers.TIER_3] };
+  const obj39 = { bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 };
   const obj5 = { adding: dependencyMap2[BoostedGuildTiers.TIER_1], total: dependencyMap4[BoostedGuildTiers.TIER_1] };
-  const obj7 = { soundCount: diff, totalSoundCount: tmp9[BoostedGuildTiers.TIER_1] };
+  const obj7 = { soundCount: dependencyMap3[BoostedGuildTiers.TIER_1] - dependencyMap3[BoostedGuildTiers.NONE], totalSoundCount: dependencyMap3[BoostedGuildTiers.TIER_1] };
   const obj9 = { bitrate: dependencyMap[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 };
-  const tmp2Result = FileSizeUtils;
-  obj40.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.GUILD_VANITY_URL);
-  obj39.description = intl45.format(util.t["3Reosx"], obj40);
-  obj39.icon = constants4.VANITY;
-  items3[4] = obj39;
-  const obj41 = { title: null, description: null, icon: null };
+  obj41.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.GUILD_VANITY_URL);
+  obj40.description = intl45.format(util.t["3Reosx"], obj41);
+  obj40.icon = constants4.VANITY;
+  items3[4] = obj40;
+  const obj43 = { title: null, description: null, icon: null };
   const intl46 = util.intl;
-  const obj43 = { fileSize: null };
-  obj43.fileSize = FileSizeUtils.formatSize(dependencyMap[BoostedGuildTiers.TIER_3].limits.fileSize / 1024, { useKibibytes: true });
-  obj41.title = intl46.formatToPlainString(util.t.t95LnM, obj43);
+  const obj44 = { fileSize: null };
+  obj44.fileSize = FileSizeUtils.formatSize(dependencyMap[BoostedGuildTiers.TIER_3].limits.fileSize / 1024, { useKibibytes: true });
+  obj43.title = intl46.formatToPlainString(util.t.t95LnM, obj44);
   const intl47 = util.intl;
-  obj41.description = intl47.format(util.t.IwDqSL, {});
-  obj41.icon = constants4.UPLOAD;
-  items3[5] = obj41;
-  const obj44 = { title: null, description: null, icon: null };
+  obj43.description = intl47.format(util.t.IwDqSL, {});
+  obj43.icon = constants4.UPLOAD;
+  items3[5] = obj43;
+  const obj45 = { title: null, description: null, icon: null };
   const intl48 = util.intl;
-  obj44.title = intl48.string(util.t.z0GtBG);
+  obj45.title = intl48.string(util.t.z0GtBG);
   const intl49 = util.intl;
-  obj44.description = intl49.string(util.t.v92GNV);
-  obj44.icon = constants4.ANIMATED;
-  items3[6] = obj44;
-  let tmp18 = null;
+  obj45.description = intl49.string(util.t.v92GNV);
+  obj45.icon = constants4.ANIMATED;
+  items3[6] = obj45;
+  let tmp11 = null;
   if (arg0) {
-    const obj45 = { title: null, description: null, icon: null };
+    const obj46 = { title: null, description: null, icon: null };
     const intl50 = util.intl;
-    const obj46 = { limit: limit2 };
-    obj45.title = intl50.formatToPlainString(util.t.T8P3TH, obj46);
-    const intl51 = util.intl;
     const obj47 = { limit: limit2 };
-    obj45.description = intl51.formatToPlainString(util.t.T8P3TH, obj47);
-    obj45.icon = constants4.STAGE_VIDEO;
-    tmp18 = obj45;
+    obj46.title = intl50.formatToPlainString(util.t.T8P3TH, obj47);
+    const intl51 = util.intl;
+    const obj48 = { limit: limit2 };
+    obj46.description = intl51.formatToPlainString(util.t.T8P3TH, obj48);
+    obj46.icon = constants4.STAGE_VIDEO;
+    tmp11 = obj46;
   }
-  items3[7] = tmp18;
-  obj30.perks = items3.filter(GlobalUtils.isNotNullish);
-  items1[2] = obj30;
+  items3[7] = tmp11;
+  obj31.perks = items3.filter(GlobalUtils.isNotNullish);
+  items1[2] = obj31;
   return items1;
 }
 export function getTierName(tier, arg1) {
@@ -660,16 +669,43 @@ export function getGracePeriodEndingDate(arr, arg1) {
 }
 export function getAvailableStickerSlotCount(stickers, tier) {
   const index = items.indexOf(tier);
-  if (-1 === index) {
-    return 0;
-  } else {
+  let num = 0;
+  if (-1 !== index) {
     let num3 = 0;
     if (null != items[index - 1]) {
       num3 = dependencyMap4[tmp3];
     }
     const _Math = Math;
-    return Math.max(0, dependencyMap2[tier] - stickers.slice(num3, dependencyMap4[tier]).length);
+    const _Math2 = Math;
+    const bound = Math.min(length, dependencyMap4[tier]);
+    const _Math3 = Math;
+    num = Math.max(0, dependencyMap2[tier] - (bound - Math.min(length, num3)));
   }
+  return num;
+}
+export function getAvailableSoundboardSoundSlotCount(stateFromStores, tier, guild) {
+  if (tier === BoostedGuildTiers.NONE) {
+    let diff = getTotalSoundboardSoundCountForTier(tier, guild);
+    let tmp2 = getTotalSoundboardSoundCountForTier;
+  } else {
+    tmp2 = getTotalSoundboardSoundCountForTier;
+    diff = getTotalSoundboardSoundCountForTier(tier, guild) - getTotalSoundboardSoundCountForTier(items[items.indexOf(items, tier) - 1], guild);
+    const tmp3 = getTotalSoundboardSoundCountForTier(tier, guild);
+  }
+  const index = items.indexOf(tier);
+  let num2 = 0;
+  if (-1 !== index) {
+    let num4 = 0;
+    if (null != items[index - 1]) {
+      num4 = tmp2(tmp8, guild);
+    }
+    const _Math = Math;
+    const _Math2 = Math;
+    const bound = Math.min(length, tmp2(tier, guild));
+    const _Math3 = Math;
+    num2 = Math.max(0, diff - (bound - Math.min(length, num4)));
+  }
+  return num2;
 }
 export function getAvailableSoundboardSoundCount(premiumFeatures, arg1, arg2) {
   if (-1 === items.indexOf(arg2)) {
@@ -693,9 +729,9 @@ export function getAvailableSoundboardSoundCount(premiumFeatures, arg1, arg2) {
     return Math.max(0, Math.max(tmp4, sum) - arg1.length);
   }
 }
-export function getMaxSoundboardSlots(stateFromStores1) {
+export function getMaxSoundboardSlots(guild) {
   let tmp = dependencyMap;
-  const premiumFeatures = stateFromStores1.premiumFeatures;
+  const premiumFeatures = guild.premiumFeatures;
   let num;
   if (premiumFeatures != null) {
     num = premiumFeatures.additionalSoundSlots;
@@ -703,7 +739,7 @@ export function getMaxSoundboardSlots(stateFromStores1) {
   if (num == null) {
     num = 0;
   }
-  const features = stateFromStores1.features;
+  const features = guild.features;
   const sum = tmp + num;
   if (features.has(application_id.MORE_SOUNDBOARD)) {
     tmp = guild;
@@ -756,7 +792,7 @@ export function getNextPremiumTierForSubscriberCount(arg0) {
 }
 export const TierMarkerPositions = obj3;
 export function getGuildBoostingProgressBarFillFactor(c0) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8665).getGuildPowerupBoostLevelProgress(_require.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8634).getGuildPowerupBoostLevelProgress(_require.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

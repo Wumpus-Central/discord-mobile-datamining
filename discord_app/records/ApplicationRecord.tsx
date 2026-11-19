@@ -8,20 +8,6 @@ import CompanyRecord from "CompanyRecord.tsx";
 import UserRecord from "UserRecord.tsx";
 
 require = fn;
-function createExecutable(os) {
-  const obj = { os: os.os, name: os.name };
-  if (null != os.arguments) {
-    obj.arguments = os.arguments;
-  }
-  let isLauncher = os.is_launcher;
-  if (isLauncher == null) {
-    isLauncher = os.isLauncher;
-  }
-  if (null != isLauncher) {
-    obj.isLauncher = isLauncher;
-  }
-  return obj;
-}
 const Constants = fn(2145);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
 const ApplicationTypes = fn(1365).ApplicationTypes;
@@ -36,13 +22,6 @@ class BasicApplicationRecord extends tmp2 {
       icon: tmp3.icon,
       splash: tmp3.splash,
       primarySkuId: tmp3.primarySkuId,
-      thirdPartySkus,
-    } = global);
-    if (thirdPartySkus == null) {
-      thirdPartySkus = [];
-    }
-    tmp3.thirdPartySkus = thirdPartySkus;
-    ({
       description: tmp3.description,
       bot: tmp3.bot,
       coverImage: tmp3.coverImage,
@@ -98,7 +77,6 @@ BasicApplicationRecord["createFromServer"] = function createFromServer(bot) {
   }
   obj.bot = tmp3;
   ({
-    third_party_skus: obj.thirdPartySkus,
     role_connections_verification_url: obj.roleConnectionsVerificationUrl,
     parent_id: obj.parentId,
     connection_entrypoint_url: obj._connectionEntrypointUrl,
@@ -216,12 +194,7 @@ class ApplicationRecord extends BasicApplicationRecord {
       developers = [];
     }
     tmp2.developers = developers;
-    ({ storeListingSkuId: tmp2.storeListingSkuId, guildId: tmp2.guildId, guild: tmp2.guild, executables } = global);
-    if (executables == null) {
-      executables = [];
-    }
-    tmp2.executables = executables.map(createExecutable);
-    hashes = global.hashes;
+    ({ storeListingSkuId: tmp2.storeListingSkuId, guildId: tmp2.guildId, guild: tmp2.guild, hashes } = global);
     if (hashes == null) {
       hashes = [];
     }
@@ -320,7 +293,6 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
   }
   obj.bot = tmp3;
   ({
-    third_party_skus: obj.thirdPartySkus,
     role_connections_verification_url: obj.roleConnectionsVerificationUrl,
     overlay_warn: obj.overlayWarn,
     overlay_compatibility_hook: obj.overlayCompatibilityHook,
@@ -456,10 +428,8 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     developers: null,
     primarySkuId: null,
     storeListingSkuId: null,
-    thirdPartySkus: null,
     guildId: null,
     guild: null,
-    executables: null,
     hashes: null,
     description: null,
     eulaId: null,
@@ -558,11 +528,6 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     storeListingSkuId = self.storeListingSkuId;
   }
   obj.storeListingSkuId = storeListingSkuId;
-  let thirdPartySkus = id.thirdPartySkus;
-  if (thirdPartySkus == null) {
-    thirdPartySkus = self.thirdPartySkus;
-  }
-  obj.thirdPartySkus = thirdPartySkus;
   let guildId = id.guildId;
   if (guildId == null) {
     guildId = self.guildId;
@@ -573,11 +538,6 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     guild = self.guild;
   }
   obj.guild = guild;
-  let executables = id.executables;
-  if (executables == null) {
-    executables = self.executables;
-  }
-  obj.executables = executables;
   let hashes = id.hashes;
   if (hashes == null) {
     hashes = self.hashes;
@@ -815,5 +775,18 @@ const size = fn(2);
 const result = size.fileFinishedImporting("records/ApplicationRecord.tsx");
 
 export default ApplicationRecord;
-export { createExecutable };
+export function createExecutable(os) {
+  const obj = { os: os.os, name: os.name };
+  if (null != os.arguments) {
+    obj.arguments = os.arguments;
+  }
+  let isLauncher = os.is_launcher;
+  if (isLauncher == null) {
+    isLauncher = os.isLauncher;
+  }
+  if (null != isLauncher) {
+    obj.isLauncher = isLauncher;
+  }
+  return obj;
+}
 export { BasicApplicationRecord };

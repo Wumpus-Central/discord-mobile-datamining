@@ -73,7 +73,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(5871);
+const SoundboardConstants = fn(5842);
 ({ DEFAULT_SOUND_GUILD_ID: closure_8, EMPTY_SOUND_ID_LIST: closure_9 } = SoundboardConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
@@ -204,8 +204,8 @@ prototype["getOverlaySerializedState"] = function getOverlaySerializedState() {
 prototype["getSounds"] = function getSounds() {
   return map;
 };
-prototype["getSoundsForGuild"] = function getSoundsForGuild(arg0) {
-  return map.get(arg0);
+prototype["getSoundsForGuild"] = function getSoundsForGuild(guildId) {
+  return map.get(guildId);
 };
 prototype["getSound"] = function getSound(arg0, arg1) {
   closure_0 = arg1;

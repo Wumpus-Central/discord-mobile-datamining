@@ -9,6 +9,7 @@ import setRunsInBackgroundDefault from "server/commands/setRunsInBackground.tsx"
 import frameRelaunchDeepLinkDefault from "../server/commands/frameRelaunchDeepLink.tsx";
 import pictureInPictureInteractiveDefault from "../server/commands/pictureInPictureInteractive.tsx";
 import voiceSettingsDefault from "server/commands/voiceSettings.tsx";
+import userPopoutDefault from "server/commands/userPopout.tsx";
 import unsupportedDefault from "server/commands/unsupported.tsx";
 import crossPlatformRPCEventHandlersDefault from "../server/events/crossPlatformRPCEventHandlers.tsx";
 import getNativeDiscordCustomThemeDefault from "../../activities/native/getNativeDiscordCustomTheme.tsx";
@@ -19,7 +20,7 @@ import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 import StreamerModeStore from "../../../stores/StreamerModeStore.tsx";
 
-const merged = Object.assign(fn(15613).crossPlatformCommands);
+const merged = Object.assign(fn(15599).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const audioSession = Object.assign(audioSessionDefault);
 const auth = Object.assign(authDefault);
@@ -28,14 +29,15 @@ const setRunsInBackground = Object.assign(setRunsInBackgroundDefault);
 const frameRelaunchDeepLink = Object.assign(frameRelaunchDeepLinkDefault);
 const pictureInPictureInteractive = Object.assign(pictureInPictureInteractiveDefault);
 const voiceSettings = Object.assign(voiceSettingsDefault);
+const userPopout = Object.assign(userPopoutDefault);
 const unsupported = Object.assign(unsupportedDefault);
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(15689);
-const merged11 = Object.assign(
+const discordEnvironmentEvents = fn(15677);
+const merged12 = Object.assign(
   discordEnvironmentEvents.createDiscordEnvironmentEvents(true, getNativeDiscordCustomThemeDefault),
 );
-const merged12 = Object.assign(fn(15691).screenCaptureEvents);
-const merged13 = Object.assign(fn(15692).voiceSettingsEventHandlers);
+const merged13 = Object.assign(fn(15679).screenCaptureEvents);
+const merged14 = Object.assign(fn(15680).voiceSettingsEventHandlers);
 const obj4 = {
   server: NativeRPCServerDefault,
   commands: {},

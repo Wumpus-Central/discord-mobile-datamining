@@ -1,5 +1,6 @@
 // discord_app/modules/conjure/share/native/useConjureProjectLinkEmbeds.tsx
 import conjureProjectLinkCard2 from "conjureProjectLinkCard.tsx";
+import conjureSharedProjectHome from "../conjureSharedProjectHome.tsx";
 import loadConjureSharedProjectDefault from "../loadConjureSharedProject.tsx";
 import conjureMessageAuthors from "../../chat/conjureMessageAuthors.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -7,6 +8,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
+import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
@@ -15,6 +17,7 @@ import ConjureSharedProjectStore from "../ConjureSharedProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
+const ChannelLoader = fn(4641).ChannelLoader;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/useConjureProjectLinkEmbeds.tsx");
 
@@ -27,8 +30,8 @@ export default function useConjureProjectLinkEmbeds(channelId) {
       const iter = item.getContentMessage().codedLinks[Symbol.iterator]();
       while (iter !== undefined) {
         ({ code, url, type } = nextResult);
-        if (type === map(memo1[9]).CodedLinkType.CONJURE_PROJECT) {
-          let tmp2Result = map(memo1[10]);
+        if (type === map(memo1[10]).CodedLinkType.CONJURE_PROJECT) {
+          let tmp2Result = map(memo1[11]);
           let result = tmp2Result.conjureProjectLinkTicket(url);
           let str = result;
           let tmp6 = result;
@@ -92,6 +95,7 @@ export default function useConjureProjectLinkEmbeds(channelId) {
     require("ApexExperiment").ApexExperimentStore,
     memo2,
     GuildMemberStore,
+    GuildStore,
     PermissionStore,
   ];
   const items7 = [memo1, memo2];
@@ -122,27 +126,47 @@ export default function useConjureProjectLinkEmbeds(channelId) {
   const items8 = [memo1, stateFromStoresObject, memo2, stateFromStores];
   const effect = stateFromStores.useEffect(() => {
     if (null != stateFromStores) {
+      items = [];
       const iter = memo1[Symbol.iterator]();
       while (iter !== undefined) {
         ({ applicationId, ticket } = nextResult);
-        let tmp6 = loadConjureSharedProjectDefault(applicationId, ticket);
+        let tmp8 = loadConjureSharedProjectDefault(applicationId, ticket);
         let obj = conjureProjectLinkCard2;
         let conjureProjectLinkCard = obj.readConjureProjectLinkCard(applicationId, ticket, memo2);
-        let tmp10 = conjureProjectLinkCard;
+        let tmp12 = conjureProjectLinkCard;
         let type;
         if (conjureProjectLinkCard != null) {
           type = conjureProjectLinkCard.type;
         }
-        let tmp12 = "ready" === type;
-        if (tmp12) {
-          tmp12 = null == tmp10.creator;
+        let tmp14 = "ready" === type;
+        if (tmp14) {
+          tmp14 = null == tmp12.creator;
         }
-        if (tmp12) {
-          let tmp7Result = conjureMessageAuthors;
-          let messageAuthor = tmp7Result.requestMessageAuthor(tmp10.ownerId);
+        if (tmp14) {
+          let tmp9Result = conjureMessageAuthors;
+          let messageAuthor = tmp9Result.requestMessageAuthor(tmp12.ownerId);
+        }
+        let status = ConjureSharedProjectStore.getStatus(applicationId, ticket);
+        let type1;
+        let tmp22 = status;
+        if (status != null) {
+          type1 = status.type;
+        }
+        let project = null;
+        if ("ready" === type1) {
+          project = ConjureProjectStore.getProject(tmp22.projectId);
+        }
+        let sharedProjectHomeGuildId = null;
+        if (null != project) {
+          let tmp9Result2 = conjureSharedProjectHome;
+          sharedProjectHomeGuildId = tmp9Result2.getSharedProjectHomeGuildId(tmp27);
+        }
+        if (null != sharedProjectHomeGuildId) {
+          let arr = items.push(tmp30);
         }
         continue;
       }
+      const guildIds = ChannelLoader.loadGuildIds(items);
       nextResult = iter.next();
     }
   }, items8);

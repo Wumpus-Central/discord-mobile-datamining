@@ -21,11 +21,11 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 
 require = fn;
-const createChannelRecord = fn(4676).createChannelRecord;
+const createChannelRecord = fn(4645).createChannelRecord;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   empty: {
     flex: 1,
@@ -110,14 +110,14 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   if (stateFromStores == null) {
     stateFromStores = null;
   }
-  const channelContentGate = flag(11702).useChannelContentGate(guildId, stateFromStores);
+  const channelContentGate = flag(11680).useChannelContentGate(guildId, stateFromStores);
   closure_11 = chatInputRef.useRef(channelId);
   chatInputRef.useRef(null);
   ref = chatInputRef.useRef(null);
-  channelId(5402)(() => new channelId(isActive[15])());
-  const tmp10 = channelId(11721)(channelId);
+  channelId(5371)(() => new channelId(isActive[15])());
+  const tmp10 = channelId(11699)(channelId);
   isResourceChannel = tmp10;
-  let obj3 = flag(11702);
+  let obj3 = flag(11680);
   const items3 = [MessageStore];
   const items4 = [channelId, tmp10];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(
@@ -187,17 +187,17 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   let obj4 = { profile: null, children: null };
   const tmp16 = channel;
   const tmp3Result = flag(504);
-  obj4.profile = flag(11938).Profiles.ChatView;
+  obj4.profile = flag(11916).Profiles.ChatView;
   let setInterstitial = stateFromStores;
-  const items10 = [stateFromStores(channelId(13487), { channelId, guildId }), ,];
+  const items10 = [stateFromStores(channelId(13469), { channelId, guildId }), ,];
   let setInterstitialResult = null;
   if (!flag2) {
-    setInterstitialResult = setInterstitial(tmp9(9560), { absolute: true });
+    setInterstitialResult = setInterstitial(tmp9(9539), { absolute: true });
   }
   items10[1] = setInterstitialResult;
   if (null != channelContentGate) {
-    let result = tmp3(11702).renderChannelContentGate(channelContentGate);
-    const tmp3Result2 = tmp3(11702);
+    let result = tmp3(11680).renderChannelContentGate(channelContentGate);
+    const tmp3Result2 = tmp3(11680);
     tmp9(9).setInterstitial(channelContentGate.kind);
     const tmp9Result = tmp9(9);
   } else {
@@ -298,12 +298,12 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
       setInterstitial("EmptyState");
     } else if (channel.isDirectory()) {
       let obj6 = { channel, guildId };
-      setInterstitialResult2 = setInterstitial(tmp9(13501), obj6);
+      setInterstitialResult2 = setInterstitial(tmp9(13483), obj6);
       tmp9(9).setInterstitial("GuildDirectory");
       const tmp9Result3 = tmp9(9);
     } else if (channel.isForumLikeChannel()) {
       let obj7 = { channel };
-      setInterstitialResult2 = setInterstitial(tmp9(13643), obj7);
+      setInterstitialResult2 = setInterstitial(tmp9(13625), obj7);
       tmp9(9).setInterstitial("ForumChannel");
       const tmp9Result4 = tmp9(9);
     } else {
@@ -312,5 +312,5 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   }
   items10[2] = result;
   obj4.children = items10;
-  return tmp16(channelId(11938), obj4);
+  return tmp16(channelId(11916), obj4);
 });

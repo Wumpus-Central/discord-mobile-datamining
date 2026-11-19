@@ -3,7 +3,6 @@ import _mod17 from "../../../../_runtime/metro/00017__.js";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import IOSPushNotificationRawPayloadFixExperiment from "../../notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
 import IOSAnchoredChatScrollerExperiment from "../../messages/native/IOSAnchoredChatScrollerExperiment.tsx";
 import YYTextReplacementExperiment from "../../messages/YYTextReplacementExperiment.tsx";
 import NotificationLoadMessagesExperimentDefault from "../../cache/NotificationLoadMessagesExperiment.tsx";
@@ -43,33 +42,23 @@ function updateIOSExperiments() {
   }
   const NSUserDefaultsBridge2 = NativeModules.NSUserDefaultsBridge;
   if (NSUserDefaultsBridge2 != null) {
-    const setShouldFixPushNotificationRawPayload = NSUserDefaultsBridge2.setShouldFixPushNotificationRawPayload;
-    if (setShouldFixPushNotificationRawPayload != null) {
-      const result1 = setShouldFixPushNotificationRawPayload(
-        IOSPushNotificationRawPayloadFixExperiment.isIOSPushNotificationRawPayloadFixExperimentEnabled(),
-      );
-      const tmpResult3 = IOSPushNotificationRawPayloadFixExperiment;
-    }
-  }
-  const NSUserDefaultsBridge3 = NativeModules.NSUserDefaultsBridge;
-  if (NSUserDefaultsBridge3 != null) {
-    const setShouldUseAnchoredChatScroller = NSUserDefaultsBridge3.setShouldUseAnchoredChatScroller;
+    const setShouldUseAnchoredChatScroller = NSUserDefaultsBridge2.setShouldUseAnchoredChatScroller;
     if (setShouldUseAnchoredChatScroller != null) {
-      const result2 = setShouldUseAnchoredChatScroller(
+      const result1 = setShouldUseAnchoredChatScroller(
         IOSAnchoredChatScrollerExperiment.shouldUseIOSAnchoredChatScroller({
           location: "NativeExperimentBridgeManager",
         }),
       );
-      const tmpResult4 = IOSAnchoredChatScrollerExperiment;
+      const tmpResult2 = IOSAnchoredChatScrollerExperiment;
     }
   }
   const RNVVideo = NativeModules.RNVVideo;
   if (RNVVideo != null) {
-    const result3 = RNVVideo.setOptimizeConfigureAudio(true);
+    const result2 = RNVVideo.setOptimizeConfigureAudio(true);
   }
   const RNVVideo2 = NativeModules.RNVVideo;
   if (RNVVideo2 != null) {
-    const result4 = RNVVideo2.setUseBackgroundProgressQueue(true);
+    const result3 = RNVVideo2.setUseBackgroundProgressQueue(true);
   }
   obj = PlatformUtils;
 }

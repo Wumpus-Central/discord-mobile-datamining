@@ -31,7 +31,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -48,7 +48,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
             const obj4 = { title, body, confirmText, confirmColor: tmp2(1187).ButtonColors.RED };
             v2 = 1;
             c2 = 1;
-            const obj5 = { value: v2(5769).confirm(obj4), done: false };
+            const obj5 = { value: v2(5740).confirm(obj4), done: false };
             return obj5;
           }
         } else {

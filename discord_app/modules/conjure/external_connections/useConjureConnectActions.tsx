@@ -33,7 +33,7 @@ export function useConjureConnectActions(projectId, presentError) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } else {
           try {
@@ -67,16 +67,16 @@ export function useConjureConnectActions(projectId, presentError) {
               callback(closure_129_0.type);
               if ("url" === closure_128_0.type) {
                 const obj8 = { href: closure_128_0.url, trusted: false };
-                type(7166).handleClick(obj8);
+                type(7136).handleClick(obj8);
                 c3 = 3;
-                const obj = type(7166);
+                const obj = type(7136);
               }
               if ("setup" === obj3.externalAuthErrorCopy(closure_128_0.error)) {
                 const intl2 = type(1113).intl;
-                let stringResult = intl2.string(presentError(4121)["jCQ/1B"]);
+                let stringResult = intl2.string(presentError(4089)["jCQ/1B"]);
               } else {
                 const intl = type(1113).intl;
-                stringResult = intl.string(presentError(4121).POxkSh);
+                stringResult = intl.string(presentError(4089).POxkSh);
               }
               closure_1(stringResult);
               obj3 = type(18386);

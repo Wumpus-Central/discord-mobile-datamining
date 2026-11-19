@@ -2,7 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef4121 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4089 from "../intl/ConjureUntranslated.messages.js";
 import ConjurePublishEvalTypes from "ConjurePublishEvalTypes.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -11,12 +11,13 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 import ConjurePublishStatusStore from "../publish/ConjurePublishStatusStore.tsx";
+import ConjurePublishEvalCooldownStore from "ConjurePublishEvalCooldownStore.tsx";
 import ConjurePublishEvalStore from "ConjurePublishEvalStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_13 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
+let closure_14 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
   let projectId = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
@@ -33,7 +34,7 @@ let closure_13 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -103,22 +104,24 @@ let closure_13 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
           }
           const obj14 = {
             type: "CONJURE_PUBLISH_EVAL_SUBMITTED",
+            userId: closure_132_0.userId,
             projectId: closure_132_0.projectId,
             publishTurnId: closure_132_0.publishTurnId,
+            stored: closure_132_1.ok,
           };
-          closure_133_1(closure_133_2[10]).dispatch(obj14);
+          closure_133_1(closure_133_2[11]).dispatch(obj14);
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
-      } catch (tmp30) {
+      } catch (tmp32) {
         c7 = tmp;
-        throw tmp30;
+        throw tmp32;
       }
     }
   })();
 };
-let closure_11 = { quality: null, metExpectations: null, speed: null };
-let obj = { quality: _modDef4121["N94/JU"], metExpectations: _modDef4121["7mnit0"], speed: _modDef4121["J/xftE"] };
+let closure_12 = { quality: null, metExpectations: null, speed: null };
+let obj = { quality: _modDef4089["N94/JU"], metExpectations: _modDef4089["7mnit0"], speed: _modDef4089["J/xftE"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_eval/conjurePublishEval.tsx");
 
@@ -196,41 +199,48 @@ export function requestConjurePublishEval(projectId) {
   if (currentUser != null) {
     id1 = currentUser.id;
   }
-  let someResult = null != id1;
-  if (someResult) {
+  if (null != id1) {
     closure_0 = GuildStore;
     const CONJURE_PUBLISH_EVAL_GUILD_IDS = ConjurePublishEvalTypes.CONJURE_PUBLISH_EVAL_GUILD_IDS;
-    someResult = CONJURE_PUBLISH_EVAL_GUILD_IDS.some((item) => null != guild.getGuild(item));
-  }
-  if (someResult) {
-    const obj2 = { userId: id1, projectId, publishTurnId: null, createdAt: null };
-    const messages = ConjureChatStore.getMessages(projectId);
-    let diff = messages.length - 1;
-    if (0 > diff) {
-      let id2;
-      if (messages[messages.length - 1] != null) {
-        id2 = tmp13.id;
+    if (CONJURE_PUBLISH_EVAL_GUILD_IDS.some((item) => null != guild.getGuild(item))) {
+      const submittedAt = ConjurePublishEvalCooldownStore.getSubmittedAt(id1, projectId);
+      let tmp6 = null != submittedAt;
+      if (tmp6) {
+        const _Date = Date;
+        const diff = Date.now() - submittedAt;
+        tmp6 = diff < ConjurePublishEvalTypes.CONJURE_PUBLISH_EVAL_COOLDOWN_MS;
       }
-      if (id2 == null) {
-        id2 = projectId;
-      }
-      const obj3 = { type: "CONJURE_PUBLISH_EVAL_PENDING", pending: null };
-      obj2.publishTurnId = id2;
-      const _Date = Date;
-      obj2.createdAt = Date.now();
-      obj3.pending = obj2;
-      obj.dispatch(obj3);
-    } else {
-      while ("assistant" !== _Date.role) {
-        diff = diff - 1;
+      if (!tmp6) {
+        const obj2 = { userId: id1, projectId, publishTurnId: null, createdAt: null };
+        const messages = ConjureChatStore.getMessages(projectId);
+        let diff1 = messages.length - 1;
+        if (0 > diff1) {
+          let id2;
+          if (messages[messages.length - 1] != null) {
+            id2 = tmp13.id;
+          }
+          if (id2 == null) {
+            id2 = projectId;
+          }
+          const obj3 = { type: "CONJURE_PUBLISH_EVAL_PENDING", pending: null };
+          obj2.publishTurnId = id2;
+          const _Date2 = Date;
+          obj2.createdAt = Date.now();
+          obj3.pending = obj2;
+          obj.dispatch(obj3);
+        } else {
+          while ("assistant" !== _Date2.role) {
+            diff1 = diff1 - 1;
+          }
+        }
+        let id = _Date2.turn_id;
+        if (id == null) {
+          id = _Date2.id;
+        }
+        id2 = id;
+        obj = DispatcherDefault;
       }
     }
-    let id = _Date.turn_id;
-    if (id == null) {
-      id = _Date.id;
-    }
-    id2 = id;
-    obj = DispatcherDefault;
   }
 }
 export function conjurePublishEvalDimensionLabel(dimension) {
@@ -242,11 +252,11 @@ export function conjurePublishEvalScoreLabel(dimension, score) {
   obj = { score, dimension: null };
   const intl2 = util.intl;
   obj.dimension = intl2.string(obj[dimension]);
-  return intl.formatToPlainString(_modDef4121.fML8aJ, obj);
+  return intl.formatToPlainString(_modDef4089.fML8aJ, obj);
 }
 export function useConjurePublishEvalForm(pending) {
   _require = pending;
-  [tmp2, importDefault] = first1(noop.useState(closure_11), 2);
+  [tmp2, importDefault] = first1(noop.useState(closure_12), 2);
   const tmp3 = first1(noop.useState(""), 2);
   const feedback = tmp3[0];
   const tmp5 = first1(noop.useState(false), 2);
@@ -301,7 +311,7 @@ export function useConjurePublishEvalForm(pending) {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -326,7 +336,7 @@ export function useConjurePublishEvalForm(pending) {
                   const obj4 = {
                     value: (function submitConjurePublishEval() {
                       const self = this;
-                      const apply = closure_1_13.apply;
+                      const apply = closure_1_14.apply;
                       if (typeof apply === "unknown") {
                         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                       } else {

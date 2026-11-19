@@ -1,6 +1,6 @@
 // discord_app/modules/profile_customization/native/EditButton.tsx
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8616 from "../../../../_runtime/metro/08616__.js";
+import _modDef8585 from "../../../../_runtime/metro/08585__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,7 +18,7 @@ export default function EditButton(disabled) {
   const obj = {
     style,
     children: jsx(IconButton.IconButton, {
-      icon: _modDef8616,
+      icon: _modDef8585,
       variant: str,
       size: "sm",
       onPress,
@@ -29,7 +29,7 @@ export default function EditButton(disabled) {
   return (
     <View style={style}>
       {jsx(IconButton.IconButton, {
-        icon: _modDef8616,
+        icon: _modDef8585,
         variant: str,
         size: "sm",
         onPress,

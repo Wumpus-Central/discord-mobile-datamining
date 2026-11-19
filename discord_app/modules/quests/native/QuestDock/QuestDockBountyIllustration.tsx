@@ -5,7 +5,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import BountiesMobileQuestBarExperiment2 from "../../experiments/BountiesMobileQuestBarExperiment.tsx";
 import QuestDockHooks from "QuestDockHooks.tsx";
 import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible.tsx";
-import _modDef16640 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
+import _modDef16631 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -100,7 +100,7 @@ function QuestDock3DOrbsIllustration() {
   };
   const obj4 = { uri: null };
   obj2 = QuestDockHooks;
-  obj4.uri = _modDef16640;
+  obj4.uri = _modDef16631;
   obj3.source = obj4;
   obj3.style = tmp.fill;
   obj3.enableAnimation = !stateFromStores;
@@ -138,11 +138,11 @@ class QuestDockBountyOrbIllustration {
   }
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(6466).QuestsExperimentLocations;
-const QuestDockConstants = fn(16538);
+const QuestsExperimentLocations = fn(6437).QuestsExperimentLocations;
+const QuestDockConstants = fn(16529);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT } = QuestDockConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   frame: { marginRight: -QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT + 5 },
   hands: null,

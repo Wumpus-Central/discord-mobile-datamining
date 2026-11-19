@@ -8,8 +8,8 @@ import SystemNotifPermissionLayoutDefault from "../SystemNotifPermissionLayout.t
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(16950).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8624).MobileUserSettings;
+let closure_4 = fn(16943).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8593).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -24,16 +24,15 @@ export default noop.memo(function RedesignSettingsNotificationsScreen() {
     const obj4 = { label: null, settings: null };
     const intl = util.intl;
     obj4.label = intl.string(_modDef3051.nvBHcD);
-    const items1 = [, , , , , , ,];
+    const items1 = [, , , , , ,];
     ({
-      REDESIGN_SYSTEM_NOTIFICATIONS: arr2[0],
-      REDESIGN_IN_APP_NOTIFICATIONS: arr2[1],
-      REDESIGN_IN_APP_MESSAGE_SOUNDS: arr2[2],
-      REDESIGN_ANDROID_MESSAGE_NOTIFICATIONS: arr2[3],
-      REDESIGN_IOS_NATIVE_PHONE_INTEGRATION: arr2[4],
-      REDESIGN_ANDROID_NOTIFICATION_LIGHTS: arr2[5],
-      REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS: arr2[6],
-      REDESIGN_ANDROID_NOTIFICATION_SOUNDS: arr2[7],
+      REDESIGN_IN_APP_NOTIFICATIONS: arr2[0],
+      REDESIGN_IN_APP_MESSAGE_SOUNDS: arr2[1],
+      REDESIGN_ANDROID_MESSAGE_NOTIFICATIONS: arr2[2],
+      REDESIGN_IOS_NATIVE_PHONE_INTEGRATION: arr2[3],
+      REDESIGN_ANDROID_NOTIFICATION_LIGHTS: arr2[4],
+      REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS: arr2[5],
+      REDESIGN_ANDROID_NOTIFICATION_SOUNDS: arr2[6],
     } = constants);
     obj4.settings = items1;
     items[1] = obj4;

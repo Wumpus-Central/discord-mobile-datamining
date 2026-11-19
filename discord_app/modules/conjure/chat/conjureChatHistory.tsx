@@ -128,6 +128,9 @@ function newMessageFromHistory(ts) {
   if (null != ts.app_build_request) {
     tmp.appBuildRequest = ts.app_build_request;
   }
+  if (null != ts.server_change) {
+    tmp.serverChange = ts.server_change;
+  }
   if (null != ts.source_sha) {
     tmp.sourceSha = ts.source_sha;
   }

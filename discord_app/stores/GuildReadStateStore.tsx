@@ -1064,11 +1064,11 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-const ChannelRecord = fn(4676);
+const ChannelRecord = fn(4645);
 ({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: closure_10 } = ChannelRecord);
-const isGuildNSFW = fn(4690).isGuildNSFW;
-const ChannelFlags = fn(4679).ChannelFlags;
-const ReadStateConstants = fn(6461);
+const isGuildNSFW = fn(4659).isGuildNSFW;
+const ChannelFlags = fn(4648).ChannelFlags;
+const ReadStateConstants = fn(6432);
 ({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1072).NULL_STRING_GUILD_ID;
 let guilds = {};

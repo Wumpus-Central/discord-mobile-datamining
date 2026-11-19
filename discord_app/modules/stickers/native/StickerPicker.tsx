@@ -31,13 +31,13 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   container: { flex: 1 },
   header: { paddingVertical: nativeDefault.space.PX_8 },
   loadingIndicator: { alignItems: "center", justifyContent: "center", flex: 1 },
   emptyState: {
-    marginTop: fn(4651).STICKER_SEARCH_HEADER_HEIGHT,
+    marginTop: fn(4620).STICKER_SEARCH_HEADER_HEIGHT,
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
@@ -55,21 +55,21 @@ export default noop.memo(function StickerPicker(channel) {
   noop = undefined;
   ({ bottomSheetRef, bottomSheetIndex, paddingTop, stickerFormats, inPortalKeyboard } = channel);
   let tmp = closure_17();
-  const fetchStickerPacks = channel(11328).useFetchStickerPacks();
-  let obj = channel(11328);
-  const stickerCategories = channel(11330).useStickerCategories(channel);
-  let obj2 = channel(11330);
+  const fetchStickerPacks = channel(11306).useFetchStickerPacks();
+  let obj = channel(11306);
+  const stickerCategories = channel(11308).useStickerCategories(channel);
+  let obj2 = channel(11308);
   items = [StickersStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => StickersStore.hasLoadedStickerPacks);
   const tmp6 = analyticsLocations(noop.useState(0), 2);
   dependencyMap = tmp7;
   let obj3 = channel(504);
-  analyticsLocations = onPressSticker(7431)(onPressSticker(7450).STICKER_PICKER).analyticsLocations;
-  const tmp9 = onPressSticker(7431);
+  analyticsLocations = onPressSticker(7401)(onPressSticker(7420).STICKER_PICKER).analyticsLocations;
+  const tmp9 = onPressSticker(7401);
   [tmp11, c4] = analyticsLocations(noop.useState(null), 2);
   const tmp10 = analyticsLocations(noop.useState(null), 2);
   let items1 = [channel];
-  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(11237)({ hasCategories: true }));
+  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(11215)({ hasCategories: true }));
   const items2 = [,];
   ({ id: arr4[0], guild_id: arr4[1] } = channel);
   const callback = noop.useCallback((arg0) => {
@@ -171,9 +171,9 @@ export default noop.memo(function StickerPicker(channel) {
       guild_id: channel.guild_id,
     });
   }, items4);
-  const tmp12 = onPressSticker(11237)({ hasCategories: true });
+  const tmp12 = onPressSticker(11215)({ hasCategories: true });
   const items5 = [channel];
-  const isTidaMediaTakedownRegion = channel(5485).useIsTidaMediaTakedownRegion();
+  const isTidaMediaTakedownRegion = channel(5454).useIsTidaMediaTakedownRegion();
   const callback3 = noop.useCallback((renderableSticker) => {
     const result = showStickerDetailActionSheet.showStickerDetailActionSheet({ renderableSticker, channel });
   }, items5);
@@ -187,14 +187,14 @@ export default noop.memo(function StickerPicker(channel) {
     obj8.placeholder = intl.string(tmp2(1113).t.dt5h1C);
     obj8.onChange = callback;
     obj8.onFocus = callback2;
-    obj7.children = closure_15(tmp2(7338).SearchBar, obj8);
+    obj7.children = closure_15(tmp2(7308).SearchBar, obj8);
     tmp19Result = closure_15(closure_5, obj7);
   }
   const items6 = [tmp19Result, ,];
   if (stateFromStores) {
     if (0 === stickerCategories.length) {
       let obj9 = { style: tmp.emptyState, children: null };
-      tmp = closure_15(tmp8(11355), {});
+      tmp = closure_15(tmp8(11333), {});
       obj9.children = tmp;
       let tmp19Result2 = closure_15(closure_5, obj9);
     } else {
@@ -222,17 +222,17 @@ export default noop.memo(function StickerPicker(channel) {
       obj10.stickerFormats = stickerFormats;
       obj10.searchResults = tmp11;
       obj10.inPortalKeyboard = inPortalKeyboard;
-      tmp19Result2 = closure_15(tmp8(11356), obj10);
-      const tmp8Result = tmp8(11356);
+      tmp19Result2 = closure_15(tmp8(11334), obj10);
+      const tmp8Result = tmp8(11334);
     }
   } else {
     const obj11 = { animating: true, size: "large", style: tmp.loadingIndicator };
     items6[1] = closure_15(closure_6, obj11);
     let obj12 = { categories: stickerCategories, categoryIndex: tmp6[0], style: safeAreaStyle };
-    items6[2] = closure_15(tmp8(11362), obj12);
+    items6[2] = closure_15(tmp8(11340), obj12);
     obj6.children = items6;
     obj5.children = closure_16(closure_5, obj6);
-    return closure_15(channel(7431).AnalyticsLocationProvider, obj5);
+    return closure_15(channel(7401).AnalyticsLocationProvider, obj5);
   }
-  let obj4 = channel(5485);
+  let obj4 = channel(5454);
 });

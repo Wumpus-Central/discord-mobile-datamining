@@ -10,7 +10,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(4848);
+const HexagonCampaignConstants = fn(4817);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES: metroImportDefault, HexagonCampaignPerk: closure_8 } =
   HexagonCampaignConstants);
 const size = fn(2);
@@ -27,8 +27,8 @@ export function useHexagonCampaignDisplayNameStyleToggle(user, showEnrollmentErr
   });
   let result = null != tmp3;
   if (result) {
-    result = tmp(4851).isHexagonCampaignDisplayNameStyle(tmp3);
-    const tmpResult = tmp(4851);
+    result = tmp(4820).isHexagonCampaignDisplayNameStyle(tmp3);
+    const tmpResult = tmp(4820);
   }
   let obj2 = {
     userId: user.id,
@@ -81,7 +81,7 @@ export function useHexagonCampaignDisplayNameStyleToggle(user, showEnrollmentErr
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {

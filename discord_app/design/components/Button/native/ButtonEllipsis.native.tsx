@@ -65,7 +65,7 @@ const jsxProd = fn(21);
 let obj = { duration: 500, easing: null };
 const Easing = fn(1655).Easing;
 obj.easing = Easing.inOut(fn(1655).Easing.quad);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   if ("lg" === arg0) {
     let num = 4;
@@ -105,7 +105,7 @@ let items = [
   500,
   fn(1655).withDelay,
   fn(1655).withRepeat,
-  fn(5033).withTiming,
+  fn(5002).withTiming,
   obj,
 ];
 let closure_129_0;

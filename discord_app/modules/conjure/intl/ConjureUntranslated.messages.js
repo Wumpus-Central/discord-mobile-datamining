@@ -1,13 +1,13 @@
 // discord_app/modules/conjure/intl/ConjureUntranslated.messages.js
 import AssetJsonUtils from "../../asset_json/native/AssetJsonUtils.tsx";
-import _mod4122 from "../../../../_runtime/metro/04122__.js";
+import _mod4090 from "../../../../_runtime/metro/04090__.js";
 import module_1152_mod from "../../../../_runtime/metro/01152__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let module_1152 = module_1152_mod;
 const loader = module_1152.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod4122);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod4090);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

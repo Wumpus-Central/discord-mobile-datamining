@@ -22,9 +22,9 @@ function OptionDescription(option) {
             style: subscribeLink.subscribeLink,
             onPress() {
               const obj = { analyticsLocations: null };
-              items = [closure_1_1(7450).CHECKPOINT, closure_1_1(7450).CHECKPOINT_TRAIT];
+              items = [closure_1_1(7420).CHECKPOINT, closure_1_1(7420).CHECKPOINT_TRAIT];
               obj.analyticsLocations = items;
-              return closure_1_1(9005)(obj);
+              return closure_1_1(8979)(obj);
             },
             accessibilityRole: "link",
             children,
@@ -35,8 +35,8 @@ function OptionDescription(option) {
     };
     let formatResult = intl.format(_modDef3339.E6AfCb, obj);
   } else {
-    formatResult = tmp2(6244).getPlaintextAssetDescription(option);
-    const tmp2Result = tmp2(6244);
+    formatResult = tmp2(6215).getPlaintextAssetDescription(option);
+    const tmp2Result = tmp2(6215);
   }
   return closure_4(require("Text/Text").Text, {
     variant: "body-md/medium",
@@ -49,7 +49,7 @@ function OptionDescription(option) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   title: { textTransform: "capitalize" },

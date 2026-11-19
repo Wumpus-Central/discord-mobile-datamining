@@ -1,24 +1,24 @@
 // discord_app/modules/conjure/share/conjureSharedProjectSurfaces.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4121 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4089 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const items = [ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL, _modDef4121.bHLrO8];
+const items = [ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL, _modDef4089.bHLrO8];
 const items1 = [items, , , , , , ,];
-const items2 = [ConjureProjectTypes.ConjureSupportedSurface.ACTIVITY, _modDef4121["hp+8nc"]];
+const items2 = [ConjureProjectTypes.ConjureSupportedSurface.ACTIVITY, _modDef4089["hp+8nc"]];
 items1[1] = items2;
-const items3 = [ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL, _modDef4121["4V2QWl"]];
+const items3 = [ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL, _modDef4089["4V2QWl"]];
 items1[2] = items3;
-const items4 = [ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET, _modDef4121.oJ06Po];
+const items4 = [ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET, _modDef4089.oJ06Po];
 items1[3] = items4;
-const items5 = [ConjureProjectTypes.ConjureSupportedSurface.OVERLAY, _modDef4121.Qbnej2];
+const items5 = [ConjureProjectTypes.ConjureSupportedSurface.OVERLAY, _modDef4089.Qbnej2];
 items1[4] = items5;
-const items6 = [ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS, _modDef4121.pEwndv];
+const items6 = [ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS, _modDef4089.pEwndv];
 items1[5] = items6;
-const items7 = [ConjureProjectTypes.ConjureSupportedSurface.BOT, _modDef4121.HWOzBW];
+const items7 = [ConjureProjectTypes.ConjureSupportedSurface.BOT, _modDef4089.HWOzBW];
 items1[6] = items7;
-const items8 = [ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD, _modDef4121.gsIXM9];
+const items8 = [ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD, _modDef4089.gsIXM9];
 items1[7] = items8;
 const items9 = [
   ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL,
@@ -43,11 +43,11 @@ const items18 = [ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD];
 const items19 = ["automod", items18];
 items11[4] = items19;
 const obj = {
-  app: _modDef4121.BM4Ymz,
-  overlay: _modDef4121["0mGHfU"],
-  profile_widget: _modDef4121.Jipr29,
-  bot: _modDef4121.EbvC13,
-  automod: _modDef4121.tiMvei,
+  app: _modDef4089.BM4Ymz,
+  overlay: _modDef4089["0mGHfU"],
+  profile_widget: _modDef4089.Jipr29,
+  bot: _modDef4089.EbvC13,
+  automod: _modDef4089.tiMvei,
 };
 const result = size.fileFinishedImporting("modules/conjure/share/conjureSharedProjectSurfaces.tsx");
 

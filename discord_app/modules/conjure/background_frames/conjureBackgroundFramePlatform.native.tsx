@@ -8,8 +8,8 @@ import FramePoolManagerDefault from "../../frames/native/FramePoolManager.tsx";
 import FramesStore from "../../frames/FramesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5449).ActivityPanelModes;
-const FramesConstants = fn(6532);
+const ActivityPanelModes = fn(5418).ActivityPanelModes;
+const FramesConstants = fn(6503);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFramePlatform.native.tsx");

@@ -7,12 +7,13 @@ import ClipsDefaultSettingsUtils from "ClipsDefaultSettingsUtils.tsx";
 import clipPOVOverlap from "clipPOVOverlap.tsx";
 import DistributedClipsExperimentDefault from "DistributedClipsExperiment.tsx";
 import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-let closure_39 = async function _migrateDefaultStorage() {
+let closure_48 = async function _migrateDefaultStorage() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -20,10 +21,10 @@ let closure_39 = async function _migrateDefaultStorage() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
+      obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -41,7 +42,7 @@ let closure_39 = async function _migrateDefaultStorage() {
           closure_0 = tmp7;
           closure_128_0 = undefined;
           closure_128_1 = undefined;
-          if (clipsSettings.clipsSettings.storageLocation === collapsedCategories) {
+          if (clipsSettings.clipsSettings.storageLocation === closure_2_19) {
             if (null != DiscordNativeDefault) {
               if (null != DiscordNativeDefault.app) {
                 c3 = 1;
@@ -58,8 +59,8 @@ let closure_39 = async function _migrateDefaultStorage() {
       } else if (1 === tmp7) {
         c3 = 0;
         closure_128_2 = closure_2;
-        closure_129_9.error("Failed to resolve videos path for default storage migration", closure_128_2);
-        const app = closure_129_1(closure_129_2[7]).app;
+        closure_129_10.error("Failed to resolve videos path for default storage migration", closure_128_2);
+        const app = closure_129_1(closure_129_2[8]).app;
         c4 = 2;
         c5 = 1;
         const obj5 = { value: app.getPath("documents"), done: false };
@@ -82,12 +83,12 @@ let closure_39 = async function _migrateDefaultStorage() {
           return obj6;
         } else {
           closure_128_1 = value;
-          closure_128_0 = closure_129_0(closure_129_2[8]).pathJoin(closure_128_1, closure_129_19);
+          closure_128_0 = closure_129_0(closure_129_2[9]).pathJoin(closure_128_1, closure_129_20);
           c3 = 0;
-          obj = closure_129_0(closure_129_2[8]);
+          const obj = closure_129_0(closure_129_2[9]);
         }
-        closure_129_38.clipsSettings.storageLocation = closure_128_0;
-        closure_129_43.emitChange();
+        closure_129_47.clipsSettings.storageLocation = closure_128_0;
+        closure_129_54.emitChange();
       }
       c5 = 3;
       const obj7 = { value, done: true };
@@ -105,17 +106,61 @@ let closure_39 = async function _migrateDefaultStorage() {
 };
 function getKnownSessions() {
   items = [];
-  if (null != c25) {
-    items.push(c25);
-  }
-  let tmp3 = null != c26;
-  if (tmp3) {
-    tmp3 = c26 !== c25;
-  }
-  if (tmp3) {
+  if (null != c26) {
     items.push(c26);
   }
+  let tmp3 = null != c35;
+  if (tmp3) {
+    tmp3 = c35 !== c26;
+  }
+  if (tmp3) {
+    items.push(c35);
+  }
   return items;
+}
+function getGameApplicationIds(game) {
+  closure_0 = game;
+  if (null != game.processGame) {
+    items = [game.id, game.processGame.id];
+    let items1 = items;
+  } else {
+    items1 = [game.id];
+  }
+  return items1.filter((item) => {
+    let tmp = null != item;
+    if (!tmp) {
+      tmp = null == game.id;
+    }
+    return tmp;
+  });
+}
+function getGameExitRevision(game) {
+  closure_0 = game;
+  if (null != game.processGame) {
+    items = [game.id, game.processGame.id];
+    let items1 = items;
+  } else {
+    items1 = [game.id];
+  }
+  const found = items1.filter((item) => {
+    let tmp = null != item;
+    if (!tmp) {
+      tmp = null == game.id;
+    }
+    return tmp;
+  });
+  const items2 = [0];
+  HermesBuiltin.arraySpread(
+    found.map((item) => {
+      let num = map1.get(item);
+      if (num == null) {
+        num = 0;
+      }
+      return num;
+    }),
+    1,
+  );
+  return Math.max.apply(items2);
 }
 function recordPOVMatches(items1, value4) {
   let flag = false;
@@ -127,15 +172,15 @@ function recordPOVMatches(items1, value4) {
     let nextResult1 = iter2.next();
     while (iter2 !== undefined) {
       let tmp7 = nextResult1;
-      obj = clipPOVOverlap;
+      let obj = clipPOVOverlap;
       if (null != obj.getClipPOVOverlapMilliseconds(tmp2, nextResult1)) {
-        items1 = map.get(tmp2.attachmentId);
+        items1 = map5.get(tmp2.attachmentId);
         if (items1 == null) {
           items1 = [];
         }
         items = [];
         items[HermesBuiltin.arraySpread(items1, 0)] = tmp7;
-        let result = map.set(tmp2.attachmentId, items);
+        let result = map5.set(tmp2.attachmentId, items);
         flag = true;
       }
       continue;
@@ -162,7 +207,7 @@ function trackClipMessage(message) {
     }
     if (0 === found.length) {
       return false;
-    } else if (map1.has(message.id)) {
+    } else if (map6.has(message.id)) {
       return false;
     } else {
       const tmp3 = (function getClipPOVReferences(message, found) {
@@ -171,7 +216,7 @@ function trackClipMessage(message) {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp2 = nextResult;
-          obj = clipPOVOverlap;
+          let obj = clipPOVOverlap;
           let clipAttachmentPOVWindow = obj.getClipAttachmentPOVWindow(nextResult);
           if (null != clipAttachmentPOVWindow) {
             let obj3 = {};
@@ -184,7 +229,7 @@ function trackClipMessage(message) {
         }
         return items;
       })(message, found);
-      const result = map1.set(message.id, tmp3);
+      const result = map6.set(message.id, tmp3);
       const message_reference = message.message_reference;
       let message_id;
       if (message_reference != null) {
@@ -214,21 +259,21 @@ function trackClipMessage(message) {
       }
       let flag3 = false;
       if (null != message_id1) {
-        let items1 = map1.get(message_id1);
+        let items1 = map6.get(message_id1);
         if (items1 == null) {
           items1 = [];
         }
-        let value3 = map2.get(message_id1);
+        let value3 = map7.get(message_id1);
         if (value3 == null) {
           value3 = [];
         }
         items = [];
         HermesBuiltin.arraySpread(tmp3, HermesBuiltin.arraySpread(value3, 0));
-        const result1 = map2.set(message_id1, items);
+        const result1 = map7.set(message_id1, items);
         flag3 = recordPOVMatches(items1, tmp3);
         const tmp13Result = recordPOVMatches(items1, tmp3);
       }
-      let value4 = map2.get(message.id);
+      let value4 = map7.get(message.id);
       if (value4 == null) {
         value4 = [];
       }
@@ -239,43 +284,51 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(8353);
+const ClipsConstants = fn(8322);
 ({
-  CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6,
-  ClipSaveTypes: metroImportDefault,
-  ClipsUserEducationType: closure_8,
-  ClipsLogger: closure_9,
-  MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: closure_10,
-  ClipsHardwareClassification: closure_11,
-  ClipsSaveNoOpReason: closure_12,
-  ClipsEnabledSettingsSource: map1,
+  CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroImportDefault,
+  ClipSaveTypes: closure_8,
+  ClipsUserEducationType: closure_9,
+  ClipsLogger: closure_10,
+  MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: closure_11,
+  ClipsHardwareClassification: closure_12,
+  ClipsSaveNoOpReason: map1,
+  ClipsEnabledSettingsSource: closure_14,
   ClipsLengthSettings,
   DEFAULT_CLIPS_BITRATE_PERCENT,
 } = ClipsConstants);
 const Constants = fn(1072);
-({ MessageAttachmentFlags: closure_14, MessageReferenceTypes: closure_15, VoiceFlags: closure_16 } = Constants);
-const StreamSettingsConstants = fn(5664);
+({ MessageAttachmentFlags: closure_15, MessageReferenceTypes: closure_16, VoiceFlags: closure_17 } = Constants);
+const StreamSettingsConstants = fn(5633);
 const ApplicationStreamFPS = StreamSettingsConstants.ApplicationStreamFPS;
-let c18 = "default";
-let c19 = "Discord Clips";
+let c19 = "default";
+let c20 = "Discord Clips";
 const dependencyMap = {};
-let closure_21 = {};
-let closure_22 = [];
-let closure_23 = 0;
-let c24 = null;
+let closure_22 = {};
+let closure_23 = [];
+let closure_24 = 0;
 let c25 = null;
 let c26 = null;
-const dependencyMap2 = {};
-let c28 = null;
-let set = new Set();
-let enabled = false;
-let c31 = false;
-const set1 = new Set();
-const map = new Map();
+let sum = 0;
+let weakMap = new WeakMap();
+let map = new Map();
 map1 = new Map();
 const map2 = new Map();
-let closure_36 = [];
-let obj = {
+const map3 = new Map();
+const map4 = new Map();
+let closure_34 = [];
+let c35 = null;
+const dependencyMap2 = {};
+let c37 = null;
+let set = new Set();
+let enabled = false;
+let c40 = false;
+const set1 = new Set();
+const map5 = new Map();
+const map6 = new Map();
+const map7 = new Map();
+let closure_45 = [];
+let clipsSettings = {
   clipsEnabled: false,
   storageLocation: "default",
   clipsQuality: {
@@ -292,11 +345,11 @@ let obj = {
   enableAutoclipping: "Path",
   showPovClipsInGallery: true,
 };
-obj = {
-  clipsSettings: obj,
+let obj2 = {
+  clipsSettings,
   hardwareClassification: null,
   hardwareClassificationVersion: 0,
-  clipsDefaultSettingsState: fn(15217).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
+  clipsDefaultSettingsState: fn(15203).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
   hasAutoEnabledClipsForHardware: false,
   newClipIds: [],
   hasClips: false,
@@ -309,7 +362,7 @@ const prototype = ClipsStoreClass.prototype;
 prototype["initialize"] = function initialize(arg0) {
   (function migrateDefaultStorage() {
     const self = this;
-    const apply = closure_1_39.apply;
+    const apply = closure_1_48.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -320,43 +373,43 @@ prototype["initialize"] = function initialize(arg0) {
   this.waitFor(RunningGameStore);
 };
 prototype["getClips"] = function getClips() {
-  return closure_20;
+  return closure_21;
 };
 prototype["getClipById"] = function getClipById(arg0) {
   return dependencyMap[arg0];
 };
 prototype["getClipByRemoteId"] = function getClipByRemoteId(arg0) {
-  if (null != closure_21[arg0]) {
+  if (null != closure_22[arg0]) {
     return dependencyMap[tmp];
   }
 };
 prototype["getClipCandidates"] = function getClipCandidates() {
   items = [];
-  if (null != c25) {
-    items.push(c25);
-  }
-  let tmp3 = null != c26;
-  if (tmp3) {
-    tmp3 = c26 !== c25;
-  }
-  if (tmp3) {
+  if (null != c26) {
     items.push(c26);
+  }
+  let tmp3 = null != c35;
+  if (tmp3) {
+    tmp3 = c35 !== c26;
+  }
+  if (tmp3) {
+    items.push(c35);
   }
   return items.flatMap((candidates) => candidates.candidates);
 };
 prototype["getPendingMontageClips"] = function getPendingMontageClips() {
-  return closure_22;
+  return closure_23;
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return obj;
+  return obj2;
 };
 prototype["getSettings"] = function getSettings() {
-  return obj.clipsSettings;
+  return obj2.clipsSettings;
 };
 prototype["getEnableAutoclipping"] = function getEnableAutoclipping() {
-  enabled = obj.clipsSettings.enableAutoclipping;
+  enabled = obj2.clipsSettings.enableAutoclipping;
   if (enabled == null) {
-    enabled = obj.clipsDefaultSettingsState.enableAutoclipping;
+    enabled = obj2.clipsDefaultSettingsState.enableAutoclipping;
   }
   if (enabled == null) {
     const AutoclippingDefaultOverrideExperiment =
@@ -366,38 +419,93 @@ prototype["getEnableAutoclipping"] = function getEnableAutoclipping() {
   return enabled;
 };
 prototype["hasUserSetAutoclippingSettings"] = function hasUserSetAutoclippingSettings() {
-  return null != obj.clipsSettings.enableAutoclipping;
+  return null != obj2.clipsSettings.enableAutoclipping;
 };
 prototype["getLastClipsSession"] = function getLastClipsSession() {
-  return c26;
+  return c35;
 };
 prototype["getActiveClipsSession"] = function getActiveClipsSession() {
-  return c25;
+  return c26;
 };
 prototype["devSetLastClipsSession"] = function devSetLastClipsSession(arg0) {
-  c26 = arg0;
+  c35 = arg0;
   this.emitChange();
 };
+prototype["getGameClipIds"] = function getGameClipIds(pid) {
+  value = null;
+  if (null != pid) {
+    value = map2.get(pid.pid);
+  }
+  let game = value;
+  if (null != value) {
+    if (!value.dismissed) {
+      const value2 = map3.get(value.game.pid);
+      revision = undefined;
+      if (value2 != null) {
+        revision = value2.revision;
+      }
+      if (revision === revision) {
+        return value2.clipIds;
+      } else {
+        game = value.game;
+        if (null != game.processGame) {
+          items = [game.id, game.processGame.id];
+          let items1 = items;
+        } else {
+          items1 = [game.id];
+        }
+        closure_1 = items1.filter((item) => {
+          let tmp = null != item;
+          if (!tmp) {
+            tmp = null == game.id;
+          }
+          return tmp;
+        });
+        const _Object = Object;
+        const values = Object.values(closure_21);
+        const found = values.filter((applicationId) => {
+          let hasItem = closure_1.includes(applicationId.applicationId);
+          if (hasItem) {
+            let num = map.get(applicationId.id);
+            if (num == null) {
+              num = 0;
+            }
+            hasItem = num > game.after;
+          }
+          return hasItem;
+        });
+        const mapped = found.map((id) => id.id);
+        obj2 = { revision, clipIds: mapped };
+        const result = map3.set(value.game.pid, obj2);
+        return mapped;
+      }
+    }
+  }
+  return closure_34;
+};
+prototype["devSetGameClips"] = function devSetGameClips(game, clips) {
+  DispatcherDefault.dispatch({ type: "CLIPS_DEV_SET_GAME_CLIPS", game, clips });
+};
 prototype["getClipsWarningShown"] = function getClipsWarningShown(channelId) {
-  return c24 === channelId;
+  return c25 === channelId;
 };
 prototype["getHardwareClassification"] = function getHardwareClassification() {
-  return obj.hardwareClassification;
+  return obj2.hardwareClassification;
 };
 prototype["getHardwareClassificationVersion"] = function getHardwareClassificationVersion() {
-  return obj.hardwareClassificationVersion;
+  return obj2.hardwareClassificationVersion;
 };
 prototype["getClipsDefaultSettingsState"] = function getClipsDefaultSettingsState() {
-  return obj.clipsDefaultSettingsState;
+  return obj2.clipsDefaultSettingsState;
 };
 prototype["hasFinishedApplyingDefaultSettings"] = function hasFinishedApplyingDefaultSettings() {
-  return c31;
+  return c40;
 };
 prototype["getIsAtMaxSaveClipOperations"] = function getIsAtMaxSaveClipOperations() {
-  return closure_23 >= refs;
+  return closure_24 >= closure_1_11;
 };
 prototype["getLastClipsError"] = function getLastClipsError() {
-  return c28;
+  return c37;
 };
 prototype["isClipsEnabledForUser"] = function isClipsEnabledForUser(userId) {
   let flag;
@@ -420,16 +528,16 @@ prototype["isVoiceRecordingAllowedForUser"] = function isVoiceRecordingAllowedFo
   return flag;
 };
 prototype["hasClips"] = function hasClips() {
-  return obj.hasClips;
+  return obj2.hasClips;
 };
 prototype["hasTakenDecoupledClip"] = function hasTakenDecoupledClip() {
-  return obj.hasTakenDecoupledClip;
+  return obj2.hasTakenDecoupledClip;
 };
 prototype["canShowReminders"] = function canShowReminders() {
-  return obj.clipsSettings.remindersEnabled;
+  return obj2.clipsSettings.remindersEnabled;
 };
 prototype["getNewClipIds"] = function getNewClipIds() {
-  return obj.newClipIds;
+  return obj2.newClipIds;
 };
 prototype["isClipExporting"] = function isClipExporting(arg0) {
   return set.has(arg0);
@@ -444,9 +552,9 @@ prototype["hasRepliedWithClip"] = function hasRepliedWithClip(arg0) {
   return set1.has(arg0);
 };
 prototype["getMatchingPOVReferences"] = function getMatchingPOVReferences(arg0) {
-  value = map.get(arg0);
+  value = map5.get(arg0);
   if (value == null) {
-    value = closure_36;
+    value = closure_45;
   }
   return value;
 };
@@ -454,23 +562,23 @@ ClipsStoreClass.displayName = "ClipsStore";
 ClipsStoreClass.persistKey = "ClipsStore";
 let items = [
   (arg0) => {
-    let clipsSettings = arg0;
+    clipsSettings = arg0;
     if (null == arg0) {
       clipsSettings = obj;
     }
     return { clipsSettings, newClipsCount: 0 };
   },
   (clipsSettings) => {
-    obj = {};
-    const merged = Object.assign(obj);
+    clipsSettings = {};
+    const merged = Object.assign(clipsSettings);
     const merged1 = Object.assign(clipsSettings.clipsSettings);
-    const obj2 = {};
+    obj2 = {};
     const merged2 = Object.assign(clipsSettings);
-    obj2.clipsSettings = obj;
+    obj2.clipsSettings = clipsSettings;
     return obj2;
   },
   (newClipIds) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(newClipIds);
     newClipIds = newClipIds.newClipIds;
     if (newClipIds == null) {
@@ -480,7 +588,7 @@ let items = [
     return obj;
   },
   (hardwareClassification) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(hardwareClassification);
     let prop = hardwareClassification.hardwareClassification;
     if (prop == null) {
@@ -495,7 +603,7 @@ let items = [
     return obj;
   },
   (hasClips) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(hasClips);
     let flag = hasClips.hasClips;
     if (flag == null) {
@@ -505,9 +613,9 @@ let items = [
     return obj;
   },
   (clipsSettings) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(clipsSettings);
-    const obj2 = {};
+    obj2 = {};
     const merged1 = Object.assign(clipsSettings.clipsSettings);
     obj2.decoupledClipsEnabled = obj.decoupledClipsEnabled;
     obj.clipsSettings = obj2;
@@ -516,7 +624,7 @@ let items = [
   (arg0) => arg0,
   (arg0) => arg0,
   (newClipIds) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(newClipIds);
     newClipIds = newClipIds.newClipIds;
     if (newClipIds == null) {
@@ -527,9 +635,9 @@ let items = [
     return obj;
   },
   (clipsSettings) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(clipsSettings);
-    const obj2 = {};
+    obj2 = {};
     const merged1 = Object.assign(clipsSettings.clipsSettings);
     if (typeof clipsSettings.clipsSettings.clipsQuality !== "number") {
       if (null != clipsSettings.clipsSettings.clipsQuality) {
@@ -542,9 +650,9 @@ let items = [
     clipsQuality = obj.clipsQuality;
   },
   (clipsSettings) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(clipsSettings);
-    const obj2 = {};
+    obj2 = {};
     const merged1 = Object.assign(clipsSettings.clipsSettings);
     let remindersEnabled = clipsSettings.clipsSettings.remindersEnabled;
     if (remindersEnabled == null) {
@@ -555,16 +663,16 @@ let items = [
     return obj;
   },
   (arg0) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(arg0);
     obj.hasTakenDecoupledClip = false;
     obj.clipsEducationState = { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 };
     return obj;
   },
   (clipsSettings) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(clipsSettings);
-    const obj2 = {};
+    obj2 = {};
     const merged1 = Object.assign(clipsSettings.clipsSettings);
     let maxAutoClips = clipsSettings.clipsSettings.maxAutoClips;
     if (maxAutoClips == null) {
@@ -580,16 +688,16 @@ let items = [
     return obj;
   },
   (clipsSettings) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(clipsSettings);
     const merged1 = Object.assign(clipsSettings.clipsSettings);
     obj.clipsSettings = {};
     return obj;
   },
   (clipsSettings) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(clipsSettings);
-    const obj2 = {};
+    obj2 = {};
     const merged1 = Object.assign(clipsSettings.clipsSettings);
     let enableAutoclipping = clipsSettings.clipsSettings.enableAutoclipping;
     if (enableAutoclipping == null) {
@@ -600,9 +708,9 @@ let items = [
     return obj;
   },
   (clipsSettings) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(clipsSettings);
-    const obj2 = {};
+    obj2 = {};
     const merged1 = Object.assign(clipsSettings.clipsSettings);
     let showPovClipsInGallery = clipsSettings.clipsSettings.showPovClipsInGallery;
     if (showPovClipsInGallery == null) {
@@ -613,9 +721,9 @@ let items = [
     return obj;
   },
   (clipsSettings) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(clipsSettings);
-    const obj2 = {};
+    obj2 = {};
     const merged1 = Object.assign(clipsSettings.clipsSettings);
     const obj3 = {};
     const merged2 = Object.assign(clipsSettings.clipsSettings.clipsQuality);
@@ -629,9 +737,9 @@ let items = [
     return obj;
   },
   (clipsSettings) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(clipsSettings);
-    const obj2 = {};
+    obj2 = {};
     const merged1 = Object.assign(clipsSettings.clipsSettings);
     obj2.clipsEnabled = clipsSettings.clipsSettings.clipsEnabled && clipsSettings.clipsSettings.decoupledClipsEnabled;
     obj2.decoupledClipsEnabled =
@@ -643,9 +751,9 @@ let items = [
   (clipsSettings) => {
     let tmp2 = clipsSettings;
     if (clipsSettings.clipsSettings.clipsQuality.frameRate === ApplicationStreamFPS.FPS_15) {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(clipsSettings);
-      const obj2 = {};
+      obj2 = {};
       const merged1 = Object.assign(clipsSettings.clipsSettings);
       const obj3 = {};
       const merged2 = Object.assign(clipsSettings.clipsSettings.clipsQuality);
@@ -657,7 +765,7 @@ let items = [
     return tmp2;
   },
   (clipsDefaultSettingsState) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(clipsDefaultSettingsState);
     let INITIAL_CLIPS_DEFAULT_SETTINGS_STATE = clipsDefaultSettingsState.clipsDefaultSettingsState;
     if (INITIAL_CLIPS_DEFAULT_SETTINGS_STATE == null) {
@@ -668,7 +776,7 @@ let items = [
   },
   (hardwareClassification) => {
     hardwareClassification = hardwareClassification.hardwareClassification;
-    obj = {};
+    const obj = {};
     const merged = Object.assign(hardwareClassification);
     let tmp2 = hardwareClassification === constants2.MEETS_AUTO_ENABLE;
     if (!tmp2) {
@@ -688,114 +796,172 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
   CLIPS_SETTINGS_UPDATE: function handleSettingsUpdate(settings) {
     settings = settings.settings;
     if (null != settings.clipsEnabled) {
-      obj = {};
-      const merged = Object.assign(obj.clipsDefaultSettingsState);
+      const obj = {};
+      const merged = Object.assign(obj2.clipsDefaultSettingsState);
       obj.clipsEnabledSource = constants4.USER;
       let clipsDefaultSettingsState = obj;
     } else {
-      clipsDefaultSettingsState = obj.clipsDefaultSettingsState;
+      clipsDefaultSettingsState = obj2.clipsDefaultSettingsState;
     }
-    const obj2 = {};
-    const merged1 = Object.assign(obj);
-    const merged2 = Object.assign(obj.clipsSettings);
+    obj2 = {};
+    const merged1 = Object.assign(obj2);
+    const merged2 = Object.assign(obj2.clipsSettings);
     const merged3 = Object.assign(settings);
     obj2.clipsSettings = {};
     obj2.clipsDefaultSettingsState = clipsDefaultSettingsState;
-    obj = obj2;
     const obj3 = {};
+  },
+  CLIPS_DEV_SET_GAME_CLIPS: function handleDevSetGameClips(arg0) {
+    ({ game, clips } = arg0);
+    const obj = {};
+    const merged = Object.assign(map2.get(game.pid));
+    obj.dismissed = false;
+    value = map2.get(game.pid);
+    let after;
+    if (value != null) {
+      after = value.after;
+    }
+    if (after == null) {
+      after = getGameExitRevision(game);
+    }
+    obj.after = after;
+    obj.game = game;
+    const result = map2.set(game.pid, obj);
+    map3.delete(game.pid);
+    for (const item10031 of clips) {
+      if (!map.has(item10031.id)) {
+        let sum = sum + 1;
+        let result1 = map.set(item10031.id, sum);
+      }
+      continue;
+    }
+  },
+  CLIPS_DISMISS_QUICK_BAR: function handleDismissQuickBar(pid) {
+    value = map2.get(pid.pid);
+    if (null != value) {
+      if (!value.dismissed) {
+        value.dismissed = true;
+      }
+    }
+    return false;
   },
   CLIPS_SAVE_CLIP: function handleSaveClip(arg0) {
     ({ clip, session } = arg0);
-    closure_23 = Math.max(closure_23 - 1, 0);
+    closure_24 = Math.max(closure_24 - 1, 0);
+    sum = sum + 1;
+    if (!map.has(clip.id)) {
+      value = null;
+      if (null != session) {
+        value = weakMap.get(session);
+      }
+      if (value == null) {
+        value = sum;
+      }
+      const result = map.set(clip.id, value);
+    }
     if (null != session) {
       session.recordSavedClip(clip);
       let hasClips = session.hasClips;
       if (hasClips) {
-        let tmp3 = null == _null2;
-        if (!tmp3) {
-          tmp3 = _null2.startedAt <= session.startedAt;
+        let tmp7 = null == _null2;
+        if (!tmp7) {
+          tmp7 = _null2.startedAt <= session.startedAt;
         }
-        hasClips = tmp3;
+        hasClips = tmp7;
       }
       if (hasClips) {
         _null2 = session;
       }
     }
     if (!clip.isCandidate) {
-      obj = {};
-      const merged = Object.assign(obj);
-      let newClipIds = obj.newClipIds;
+      obj2 = {};
+      const merged = Object.assign(obj2);
+      let newClipIds = obj2.newClipIds;
       if (newClipIds == null) {
         newClipIds = [];
       }
       items = [];
       items[HermesBuiltin.arraySpread(newClipIds, 0)] = clip.id;
-      obj.newClipIds = items;
-      closure_20[clip.id] = clip;
+      obj2.newClipIds = items;
+      closure_21[clip.id] = clip;
       if (null != clip.remoteClipId) {
-        closure_21[clip.remoteClipId] = clip.id;
+        closure_22[clip.remoteClipId] = clip.id;
       }
-      obj.hasClips = true;
+      obj2.hasClips = true;
     }
   },
   CLIPS_PROMOTE_CLIP_CANDIDATE: function handlePromoteClipCandidate(arg0) {
     ({ clip, session } = arg0);
+    sum = sum + 1;
+    if (!map.has(clip.id)) {
+      value = null;
+      if (null != session) {
+        value = weakMap.get(session);
+      }
+      if (value == null) {
+        value = sum;
+      }
+      const result = map.set(clip.id, value);
+    }
     if (null != session) {
       session.recordPromotedClip(clip);
       let hasClips = session.hasClips;
       if (hasClips) {
-        let tmp3 = null == _null2;
-        if (!tmp3) {
-          tmp3 = _null2.startedAt <= session.startedAt;
+        let tmp7 = null == _null2;
+        if (!tmp7) {
+          tmp7 = _null2.startedAt <= session.startedAt;
         }
-        hasClips = tmp3;
+        hasClips = tmp7;
       }
       if (hasClips) {
         _null2 = session;
       }
     }
-    obj = {};
-    const merged = Object.assign(obj);
-    let newClipIds = obj.newClipIds;
+    obj2 = {};
+    const merged = Object.assign(obj2);
+    let newClipIds = obj2.newClipIds;
     if (newClipIds == null) {
       newClipIds = [];
     }
     items = [];
     items[HermesBuiltin.arraySpread(newClipIds, 0)] = clip.id;
-    obj.newClipIds = items;
-    closure_20[clip.id] = clip;
-    obj.hasClips = true;
+    obj2.newClipIds = items;
+    closure_21[clip.id] = clip;
+    obj2.hasClips = true;
   },
   CLIPS_SAVE_CLIP_START: function handleSaveClipStart(arg0) {
-    closure_23 = closure_23 + 1;
-    let hasTakenDecoupledClip = obj.hasTakenDecoupledClip;
+    closure_24 = closure_24 + 1;
+    let hasTakenDecoupledClip = obj2.hasTakenDecoupledClip;
     if (!hasTakenDecoupledClip) {
       hasTakenDecoupledClip = tmp === constants.DECOUPLED;
     }
-    obj.hasTakenDecoupledClip = hasTakenDecoupledClip;
+    obj2.hasTakenDecoupledClip = hasTakenDecoupledClip;
   },
   CLIPS_SAVE_CLIP_ERROR: function handleSaveClipError() {
-    closure_23 = Math.max(closure_23 - 1, 0);
+    closure_24 = Math.max(closure_24 - 1, 0);
   },
   CLIPS_SAVE_CLIP_NO_OP: function handleSaveClipNoOp(reason) {
     reason = reason.reason;
     if (!tmp) {
       const _Math = Math;
-      closure_23 = Math.max(closure_23 - 1, 0);
+      closure_24 = Math.max(closure_24 - 1, 0);
     }
   },
   CLIPS_CLEAR_LAST_CLIPS_SESSION: function handleClearLastClipsSession() {
-    if (null == c26) {
+    if (null == c35) {
       return false;
     } else {
-      c26 = null;
+      c35 = null;
     }
   },
   CLIPS_SESSION_START: function handleClipsSessionStart(session) {
-    if (session != null) {
-      session.end();
-    }
     session = session.session;
+    if (_null != null) {
+      _null.end();
+    }
+    _null = session;
+    sum = sum + 1;
+    const result = weakMap.set(session, sum);
   },
   CLIPS_SESSION_STOP: function handleClipsSessionStop() {
     if (null == _null) {
@@ -806,100 +972,102 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
     }
   },
   CLIPS_CLEAR_NEW_CLIP_IDS: function clearNewClipIds() {
-    obj.newClipIds = [];
+    obj2.newClipIds = [];
   },
   CLIPS_REMOVE_SINGLE_NEW_CLIP_ID: function removeSingleNewClipId(clipId) {
     clipId = clipId.clipId;
-    const newClipIds = obj.newClipIds;
-    obj.newClipIds = newClipIds.filter((item) => item !== clipId);
+    const newClipIds = obj2.newClipIds;
+    obj2.newClipIds = newClipIds.filter((item) => item !== clipId);
   },
   CLIPS_LOAD_DIRECTORY_SUCCESS: function handleClipsDirectoryLoaded(arg0) {
-    closure_20 = {};
+    sum = sum + 1;
+    closure_21 = {};
     const iter = arg0.clips[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp2 = nextResult;
       if (!nextResult.isCandidate) {
-        closure_20[tmp2.id] = tmp2;
+        closure_21[tmp2.id] = tmp2;
         if (null != tmp2.remoteClipId) {
-          closure_21[tmp2.remoteClipId] = tmp2.id;
+          closure_22[tmp2.remoteClipId] = tmp2.id;
         }
       }
       continue;
     }
-    obj.hasClips = Object.keys(closure_20).length > 0;
+    obj2.hasClips = Object.keys(closure_21).length > 0;
   },
   CLIPS_DELETE_CLIP: function handleClipsDelete(id) {
-    for (const item10011 of tmp5) {
-      let removeClipResult = item10011.removeClip(arg0.id);
+    sum = sum + 1;
+    map.delete(id.id);
+    for (const item10017 of tmp6) {
+      let removeClipResult = item10017.removeClip(arg0.id);
       continue;
     }
     delete tmp3[tmp2];
     let remoteClipId1;
     if (dependencyMap[id.id] != null) {
-      remoteClipId1 = tmp4.remoteClipId;
+      remoteClipId1 = tmp5.remoteClipId;
     }
     if (null != remoteClipId1) {
-      const remoteClipId = tmp4.remoteClipId;
+      const remoteClipId = tmp5.remoteClipId;
       delete tmp2[tmp];
     }
-    obj.hasClips = Object.keys(dependencyMap).length > 0;
-    const tmp5 = getKnownSessions();
+    obj2.hasClips = Object.keys(dependencyMap).length > 0;
+    const tmp6 = getKnownSessions();
   },
   CLIPS_UPDATE_METADATA: function handleClipMetadataUpdate(clip) {
     clip = clip.clip;
+    sum = sum + 1;
     if (clip.isCandidate) {
       return false;
     } else {
-      closure_20[clip.id] = clip;
+      closure_21[clip.id] = clip;
       if (null != clip.remoteClipId) {
-        closure_21[clip.remoteClipId] = clip.id;
+        closure_22[clip.remoteClipId] = clip.id;
       }
     }
   },
   RTC_CONNECTION_FLAGS: function handleRTCConnectionFlagsUpdate(flags) {
-    obj = { clipsEnabled: FlagUtils.hasFlag(flags.flags, constants6.CLIPS_ENABLED), allowVoiceRecording: null };
+    const obj = { clipsEnabled: FlagUtils.hasFlag(flags.flags, constants6.CLIPS_ENABLED), allowVoiceRecording: null };
     obj.allowVoiceRecording = FlagUtils.hasFlag(flags.flags, constants6.ALLOW_VOICE_RECORDING);
-    closure_27[flags.userId] = obj;
+    closure_36[flags.userId] = obj;
   },
   CLIPS_SHOW_CALL_WARNING: function handleShowCallWarning(channelId) {
     channelId = channelId.channelId;
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
-    if (channelId.channelId !== c24) {
-      c24 = null;
+    if (channelId.channelId !== c25) {
+      c25 = null;
     }
   },
   CLIPS_APPLY_DEFAULT_SETTINGS: function handleApplyDefaultSettings(arg0) {
     ({ classification, decision } = arg0);
-    let MEETS_AUTO_ENABLE = obj.hardwareClassification;
-    obj.hardwareClassificationVersion = hardwareClassificationVersion;
-    obj.hardwareClassification = classification;
-    let tmp = obj.clipsDefaultSettingsState.clipsEnabledSource === constants4.UNSET;
+    let MEETS_AUTO_ENABLE = obj2.hardwareClassification;
+    obj2.hardwareClassificationVersion = hardwareClassificationVersion;
+    obj2.hardwareClassification = classification;
+    let tmp = obj2.clipsDefaultSettingsState.clipsEnabledSource === constants4.UNSET;
     if (tmp) {
       tmp = classification === constants2.MEETS_AUTO_ENABLE;
     }
     if (tmp) {
-      tmp = !obj.hasAutoEnabledClipsForHardware;
+      tmp = !obj2.hasAutoEnabledClipsForHardware;
     }
     let tmp4 = tmp;
     if (tmp) {
-      tmp4 = !obj.clipsSettings.clipsEnabled;
+      tmp4 = !obj2.clipsSettings.clipsEnabled;
     }
     if (tmp) {
-      obj = {};
-      const merged = Object.assign(obj.clipsSettings);
-      obj.clipsEnabled = true;
-      obj.clipsSettings = obj;
-      obj.hasAutoEnabledClipsForHardware = true;
+      clipsSettings = {};
+      const merged = Object.assign(obj2.clipsSettings);
+      clipsSettings.clipsEnabled = true;
+      obj2.clipsSettings = clipsSettings;
+      obj2.hasAutoEnabledClipsForHardware = true;
     }
     if (null != decision) {
-      const obj2 = {
-        defaultState: obj.clipsDefaultSettingsState,
-        clipsEnabled: obj.clipsSettings.clipsEnabled,
-        decision,
-        previousHardwareClassification: null,
-      };
+      obj2 = { defaultState: null, clipsEnabled: null, decision: null, previousHardwareClassification: null };
+      obj2.defaultState = obj2.clipsDefaultSettingsState;
+      obj2.clipsEnabled = obj2.clipsSettings.clipsEnabled;
+      obj2.decision = decision;
       if (tmp4) {
         MEETS_AUTO_ENABLE = constants2.MEETS_AUTO_ENABLE;
       }
@@ -907,24 +1075,24 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
       const result = ClipsDefaultSettingsUtils.applyClipsDefaultSettingsDecision(obj2);
       const obj3 = {};
       ({ clipsEnabled, defaultState } = result);
-      const merged1 = Object.assign(obj);
+      const merged1 = Object.assign(obj2);
       const obj5 = {};
-      const merged2 = Object.assign(obj.clipsSettings);
+      const merged2 = Object.assign(obj2.clipsSettings);
       obj5.clipsEnabled = clipsEnabled;
       obj3.clipsSettings = obj5;
       obj3.clipsDefaultSettingsState = defaultState;
-      obj = obj3;
+      obj2 = obj3;
     }
   },
   CLIPS_APPLY_DEFAULT_SETTINGS_COMPLETE: function handleApplyDefaultSettingsComplete() {
-    if (c31) {
+    if (c40) {
       return false;
     } else {
-      c31 = true;
+      c40 = true;
     }
   },
   CLIPS_INIT: function handleClipsInit() {
-    c28 = null;
+    c37 = null;
   },
   CLIPS_INIT_FAILURE: function handleClipsInitFailure(errMsg) {
     errMsg = errMsg.errMsg;
@@ -932,21 +1100,66 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
   CLIPS_DISMISS_EDUCATION: function handleDismissClipsEducation(educationType) {
     educationType = educationType.educationType;
     if (_Error.Error === educationType) {
-      c28 = null;
+      c37 = null;
     } else if (_Error.Disabled === educationType) {
       const _Date = Date;
-      obj.clipsEducationState.dismissedAt = Date.now();
-      obj.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0;
-      const clipsEducationState = obj.clipsEducationState;
+      obj2.clipsEducationState.dismissedAt = Date.now();
+      obj2.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0;
+      const clipsEducationState = obj2.clipsEducationState;
       clipsEducationState.numberOfTimesDismissed = clipsEducationState.numberOfTimesDismissed + 1;
     }
   },
-  RUNNING_GAMES_CHANGE: function handleRunningGamesChange(added) {
-    if (added.added.length > 0) {
-      const clipsEducationState = obj.clipsEducationState;
+  RUNNING_GAMES_CHANGE: function handleRunningGamesChange(games) {
+    games = games.games;
+    let game;
+    map3.clear();
+    function _loop(arg0) {
+      closure_0 = arg0;
+      if (games.some((pid) => pid.pid === closure_0)) {
+        return 1;
+      } else {
+        const tmp3 = getGameApplicationIds(game.game);
+        for (const item10014 of tmp3) {
+          let sum = sum + 1;
+          let result = map1.set(item10014, sum);
+          continue;
+        }
+        const result1 = map4.set(arg0, game);
+        map2.delete(arg0);
+      }
+    }
+    map = new Map();
+    const obj = map;
+    while (tmp4 !== undefined) {
+      let tmp7 = _slicedToArray(tmp5, 2);
+      game = tmp7[1];
+      let _loopResult = _loop(tmp7[0]);
+      continue;
+    }
+    const iter = games[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp10 = nextResult;
+      value = map2.get(nextResult.pid);
+      if (value == null) {
+        value = obj.get(tmp10.pid);
+      }
+      if (value == null) {
+        let obj3 = { after: null, game: null };
+        obj3.after = getGameExitRevision(tmp10);
+        obj3.game = tmp10;
+        value = obj3;
+      }
+      value.game = tmp10;
+      let result = map2.set(tmp10.pid, value);
+      continue;
+    }
+    if (games.added.length > 0) {
+      const clipsEducationState = map2.clipsEducationState;
       clipsEducationState.numberOfGamesLaunchedSinceDismissal =
         clipsEducationState.numberOfGamesLaunchedSinceDismissal + 1;
     }
+    tmp4 = map2[Symbol.iterator]();
   },
   CLIPS_SET_EXPORTING: function handleSetExporting(clipIds) {
     clipIds = clipIds.clipIds;
@@ -957,42 +1170,53 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
   },
   CLIPS_MONTAGE_RENDER_START: function handleMontageRenderStart(clip) {
     clip = clip.clip;
-    items = [clip, ...closure_22.filter((id) => id.id !== clip.id)];
-    closure_22 = items;
+    items = [clip, ...closure_23.filter((id) => id.id !== clip.id)];
+    closure_23 = items;
   },
   CLIPS_MONTAGE_RENDER_DONE: function handleMontageRenderDone(clip) {
     clip = clip.clip;
     const session = clip.session;
-    closure_22 = closure_22.filter((id) => id.id !== clip.id);
-    closure_20[clip.id] = clip;
+    closure_23 = closure_23.filter((id) => id.id !== clip.id);
+    closure_21[clip.id] = clip;
+    sum = sum + 1;
+    if (!map.has(clip.id)) {
+      value = null;
+      if (null != session) {
+        value = weakMap.get(session);
+      }
+      if (value == null) {
+        value = sum;
+      }
+      const result = map.set(clip.id, value);
+    }
     if (null != session) {
       session.recordMontageClip(clip);
       let hasClips = session.hasClips;
       if (hasClips) {
-        let tmp3 = null == _null2;
-        if (!tmp3) {
-          tmp3 = _null2.startedAt <= session.startedAt;
+        let tmp7 = null == _null2;
+        if (!tmp7) {
+          tmp7 = _null2.startedAt <= session.startedAt;
         }
-        hasClips = tmp3;
+        hasClips = tmp7;
       }
       if (hasClips) {
         _null2 = session;
       }
     }
-    obj = {};
-    const merged = Object.assign(obj);
-    let newClipIds = obj.newClipIds;
+    obj2 = {};
+    const merged = Object.assign(obj2);
+    let newClipIds = obj2.newClipIds;
     if (newClipIds == null) {
       newClipIds = [];
     }
     items = [];
     items[HermesBuiltin.arraySpread(newClipIds, 0)] = clip.id;
-    obj.newClipIds = items;
-    obj.hasClips = true;
+    obj2.newClipIds = items;
+    obj2.hasClips = true;
   },
   CLIPS_MONTAGE_RENDER_ERROR: function handleMontageRenderError(clipId) {
     clipId = clipId.clipId;
-    closure_22 = closure_22.filter((id) => id.id !== clipId);
+    closure_23 = closure_23.filter((id) => id.id !== clipId);
   },
   CLIPS_SET_AUTO_STASH_ENABLED: function handleSetAutoStashEnabled(enabled) {
     enabled = enabled.enabled;
@@ -1010,15 +1234,22 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
     return flag;
   },
   LOGOUT: function reset() {
-    set1.clear();
-    map.clear();
-    map1.clear();
     map2.clear();
-    c25 = null;
+    map3.clear();
+    map4.clear();
+    map1.clear();
+    map.clear();
+    weakMap = new WeakMap();
+    sum = sum + 1;
+    set1.clear();
+    map5.clear();
+    map6.clear();
+    map7.clear();
     c26 = null;
-    c24 = null;
-    closure_27 = {};
-    c31 = false;
+    c35 = null;
+    c25 = null;
+    closure_36 = {};
+    c40 = false;
   },
 });
 const size = fn(2);

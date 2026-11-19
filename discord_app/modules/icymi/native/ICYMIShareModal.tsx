@@ -84,7 +84,7 @@ class ICYMIShareModal {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -131,7 +131,7 @@ class ICYMIShareModal {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "+60" };
                     }
                   } else {
                     try {
@@ -177,7 +177,7 @@ class ICYMIShareModal {
                         return obj;
                       }
                       c1 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "+60" };
                     } catch (tmp17) {
                       c1 = tmp;
                       throw tmp17;
@@ -198,7 +198,7 @@ class ICYMIShareModal {
             );
             tmp3(tmp2[19]).pop();
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp7) {
           c4 = tmp;
@@ -266,11 +266,11 @@ class ICYMIShareModal {
 }
 const View = fn(17).View;
 const AbortCodes = fn(1072).AbortCodes;
-const UserRowModes = fn(9547).UserRowModes;
-const MessageSendLocation = fn(4828).MessageSendLocation;
+const UserRowModes = fn(9526).UserRowModes;
+const MessageSendLocation = fn(4797).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   footer: {
     display: "flex",
@@ -320,7 +320,7 @@ export function GameShareModal(content) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -348,7 +348,7 @@ export function GameShareModal(content) {
             };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(18196).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18189).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

@@ -4,11 +4,11 @@ import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore.tsx";
 
 const module_1655 = fn(1655);
 const obj2 = { customKeyboardHeight: null, keyboardHeight: null, keyboardType: null };
-const useCustomKeyboardHeight = fn(5399);
+const useCustomKeyboardHeight = fn(5368);
 obj2.customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
 const useSystemKeyboardHeight = fn(2023);
 obj2.keyboardHeight = useSystemKeyboardHeight.getSystemKeyboardHeight();
-const useKeyboardType = fn(5010);
+const useKeyboardType = fn(4979);
 obj2.keyboardType = useKeyboardType.getKeyboardType();
 const mutable = module_1655.makeMutable(obj2);
 subscribeToKeyboardUIStore((arg0) => {

@@ -18,12 +18,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const HubConstants = fn(13597);
+const HubConstants = fn(13579);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: closure_10 } = HubConstants);
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { paddingHorizontal: 16 },
@@ -80,7 +80,7 @@ export default function HubEmailConnectionContent(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -301,10 +301,10 @@ export default function HubEmailConnectionContent(arg0) {
     onClick: handleLearnMore,
   };
   const tmp7 = value(noop.useState(null), 2);
-  items1[1] = { paddingBottom: invite(5398)().insets.bottom + invite(575).space.PX_16 };
+  items1[1] = { paddingBottom: invite(5367)().insets.bottom + invite(575).space.PX_16 };
   obj6.contentContainerStyle = items1;
   let obj8 = { style: tmp3.container, children: null };
-  let obj7 = { paddingBottom: invite(5398)().insets.bottom + invite(575).space.PX_16 };
+  let obj7 = { paddingBottom: invite(5367)().insets.bottom + invite(575).space.PX_16 };
   const tmp17 = ref;
   const items2 = [
     closure_12(c6, {
@@ -408,7 +408,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items2[3] = closure_12(invite(7130), obj13);
+  items2[3] = closure_12(invite(7100), obj13);
   obj8.children = items2;
   const items3 = [closure_13(c6, obj8), closure_12(c6, { style: tmp3.growSpacing })];
   const obj17 = { style: tmp3.buttonContainer, children: null };

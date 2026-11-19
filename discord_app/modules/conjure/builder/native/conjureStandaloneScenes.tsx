@@ -2,6 +2,7 @@
 import Constants from "../../../../Constants.tsx";
 import router_utils from "../../../routing/router_utils.tsx";
 import ChannelConstants from "../../../channel/ChannelConstants.tsx";
+import openConjureHomeScreenDefault from "../../home/native/openConjureHomeScreen.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const Routes = Constants.Routes;
@@ -14,6 +15,8 @@ export function projectOpener(guildId, openHere) {
   return (projectId, arg1) => {
     if (arg1 === closure_0) {
       openHere(projectId);
+    } else if (null == arg1) {
+      openConjureHomeScreenDefault(projectId);
     } else {
       router_utils.transitionTo(Routes.CHANNEL(arg1, StaticChannelRoute.CONJURE, projectId));
     }

@@ -141,20 +141,20 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createElement = fn(19).createElement;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
-  container: { gap: fn(12711).TRAIT_OPTION_SPACING },
+  container: { gap: fn(12694).TRAIT_OPTION_SPACING },
   earnedRow: null,
   landscapeGap: null,
   details: null,
   landscapeScrollContent: null,
 };
-let obj3 = { gap: fn(12711).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(12711).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(12711).CONTENT_INSET };
+let obj3 = { gap: fn(12694).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(12694).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(12694).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(12711).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(12694).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 const React6 = createStyles.createStyles(obj2);
 const size = fn(2);

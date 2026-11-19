@@ -143,7 +143,7 @@ import SelectWebBrowserSettingDefault from "../../defs/native/SelectWebBrowserSe
 import ClearWebBrowserDataSettingDefault from "../../defs/native/ClearWebBrowserDataSetting.tsx";
 import NotificationsSettingDefault from "../../defs/native/NotificationsSetting.tsx";
 import InAppNotificationsSetting from "../../defs/native/InAppNotificationsSetting.tsx";
-import SystemNotificationsSetting from "../../defs/native/SystemNotificationsSetting.tsx";
+import SystemNotificationsSettingDefault from "../../defs/native/SystemNotificationsSetting.tsx";
 import ReactionNotificationsSettingsDefault from "../../defs/native/ReactionNotificationsSettings.tsx";
 import CustomStatusNotificationSettingsDefault from "../../defs/native/CustomStatusNotificationSettings.tsx";
 import IOSNativePhoneIntegrationSetting from "../../defs/native/IOSNativePhoneIntegrationSetting.tsx";
@@ -278,7 +278,6 @@ import MobileNotifSettingsRendererConfig from "../../notifications/native/codege
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const InAppNotificationsSettingDefault = InAppNotificationsSetting;
-const SystemNotificationsSettingDefault = SystemNotificationsSetting;
 const IOSNativePhoneIntegrationSettingDefault = IOSNativePhoneIntegrationSetting;
 const EmailNotificationsSettingDefault = EmailNotificationsSetting;
 const AndroidMessageNotificationsSettingDefault = AndroidMessageNotificationsSetting;
@@ -462,7 +461,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS,
   REDESIGN_ANDROID_NOTIFICATION_SOUNDS,
   REDESIGN_IOS_NATIVE_PHONE_INTEGRATION,
-  REDESIGN_SYSTEM_NOTIFICATIONS,
   REDESIGN_COMMUNITY_ACTIVITY_ALERTS,
   REDESIGN_HIGHLIGHT_NOTIFICATIONS,
   REDESIGN_FRIEND_ANNIVERSARY_NOTIFICATIONS,
@@ -749,7 +747,6 @@ const frozen = Object.freeze({
     AndroidNotificationVibrationsSetting.RedesignAndroidNotificationVibrationsSetting,
   [REDESIGN_ANDROID_NOTIFICATION_SOUNDS]: AndroidNotificationSoundsSetting.RedesignAndroidNotificationSoundsSetting,
   [REDESIGN_IOS_NATIVE_PHONE_INTEGRATION]: IOSNativePhoneIntegrationSetting.RedesignIOSNativePhoneIntegrationSetting,
-  [REDESIGN_SYSTEM_NOTIFICATIONS]: SystemNotificationsSetting.RedesignSystemNotificationsSetting,
   [REDESIGN_COMMUNITY_ACTIVITY_ALERTS]: CommunityActivityAlertsSetting.RedesignCommunityActivityAlertsSetting,
   [REDESIGN_HIGHLIGHT_NOTIFICATIONS]: HighlightNotificationsSetting.RedesignHighlightNotificationsSetting,
   [REDESIGN_FRIEND_ANNIVERSARY_NOTIFICATIONS]:

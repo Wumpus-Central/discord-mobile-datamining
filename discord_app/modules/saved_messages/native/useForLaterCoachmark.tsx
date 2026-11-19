@@ -4,15 +4,15 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ContentDismissActionType = fn(4669).ContentDismissActionType;
+const ContentDismissActionType = fn(4638).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let closure_6 = fn(4656).DismissibleContent.FOR_LATER_NOTIFICATIONS_COACHMARK;
+let closure_6 = fn(4625).DismissibleContent.FOR_LATER_NOTIFICATIONS_COACHMARK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/native/useForLaterCoachmark.tsx");
 
 export default function useForLaterCoachmark(targetRef) {
   items = [closure_6];
-  const tmp = _slicedToArray(first(8986).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  const tmp = _slicedToArray(first(8960).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   first = tmp[0];
   dependencyMap = tmp3;
   const items1 = [tmp[1], first];
@@ -34,11 +34,11 @@ export default function useForLaterCoachmark(targetRef) {
       dependencyMap(constants.USER_DISMISS);
     };
     obj.renderImgComponent = function renderImgComponent() {
-      return closure_1_5(first(11672).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
+      return closure_1_5(first(11650).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
     };
     return obj;
   }, items1);
-  let obj = first(8986);
-  const coachmark = first(8993).useCoachmark(targetRef, memo);
+  let obj = first(8960);
+  const coachmark = first(8967).useCoachmark(targetRef, memo);
   return tmp[1];
 }

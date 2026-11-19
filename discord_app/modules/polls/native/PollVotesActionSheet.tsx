@@ -12,8 +12,8 @@ import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef12112 from "../../../../_runtime/metro/12112__.js";
-import _modDef12113 from "../../../../_runtime/metro/12113__.js";
+import _modDef12089 from "../../../../_runtime/metro/12089__.js";
+import _modDef12090 from "../../../../_runtime/metro/12090__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -145,7 +145,7 @@ function PollVotesHeader(message) {
             const obj = { value, done: true };
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } else {
           try {
@@ -238,7 +238,7 @@ function PollVotesHeader(message) {
                 }
                 closure_129_5.current = true;
                 v3 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "+60" };
               }
             }
             const current2 = closure_129_3.current;
@@ -449,9 +449,9 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12112;
+    let tmp2Result = _modDef12089;
   } else {
-    tmp2Result = _modDef12113;
+    tmp2Result = _modDef12090;
   }
   obj2.source = tmp2Result;
   items = [state(tmp8, obj2), ,];
@@ -475,7 +475,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   headerText: { textAlign: "center", paddingHorizontal: 16 },
   subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 },

@@ -15,7 +15,7 @@ let num = 325;
 if (PlatformUtils.isIOS()) {
   num = 300;
 }
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 const obj3 = {
   cardContainer: { width: 250, marginEnd: PX_16, flex: 1 },
   scroller: { height: num, paddingBottom: nativeDefault.space.PX_8 },
@@ -47,8 +47,8 @@ export default function GuildPowerupsLevelsSection(arg0) {
   obj2.title = intl.string(listings(2755)["TXY/b0"]);
   const intl2 = util.intl;
   obj2.description = intl2.string(listings(2755).aJv4PB);
-  const items1 = [closure_5(listings(13370), obj2)];
-  const tmp3 = listings(13370);
+  const items1 = [closure_5(listings(13352), obj2)];
+  const tmp3 = listings(13352);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

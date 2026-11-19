@@ -21,10 +21,10 @@ const _modDef1655 = _mod1655;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const SHARE_PREPARING_MODAL_KEY = fn(9622).SHARE_PREPARING_MODAL_KEY;
+const SHARE_PREPARING_MODAL_KEY = fn(9601).SHARE_PREPARING_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_8 = createStyles.createStyles({
   navbarInner: { flex: 1, justifyContent: "space-between" },
   navbarLeft: { flexShrink: 1, flexDirection: "row", marginRight: 8 },
@@ -143,14 +143,14 @@ export function MediaModalOverlayHeader(arg0) {
           const obj = { accessibilityLabel: null, icon: null, ref: null };
           const intl = _undefined(1113).intl;
           obj.accessibilityLabel = intl.string(_undefined(1113).t.PdRCRg);
-          const tmp4 = _undefined2(9627);
+          const tmp4 = _undefined2(9606);
           if (obj2.isAndroid()) {
-            let tmp2Result = closure_1_6(_undefined(10059).MoreVerticalIcon, {
+            let tmp2Result = closure_1_6(_undefined(10037).MoreVerticalIcon, {
               size: "md",
               color: "interactive-text-active",
             });
           } else {
-            tmp2Result = closure_1_6(_undefined(6933).MoreHorizontalIcon, {
+            tmp2Result = closure_1_6(_undefined(6903).MoreHorizontalIcon, {
               size: "md",
               color: "interactive-text-active",
             });

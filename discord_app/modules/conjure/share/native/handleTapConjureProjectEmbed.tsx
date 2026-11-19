@@ -7,8 +7,8 @@ import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 import ConjureSharedProjectStore from "../ConjureSharedProjectStore.tsx";
 
 const require = fn;
-function runConjureSharedProjectCoverAction(applicationId, arg1, arg2) {
-  const tmp3 = conjureSharedProjectCoverTargetDefault(applicationId, arg1, arg2);
+function runConjureSharedProjectCoverAction(applicationId, arg1, channelId) {
+  const tmp3 = conjureSharedProjectCoverTargetDefault(applicationId, arg1, channelId);
   if (null == tmp3) {
     return false;
   } else if ("open" === tmp3.type) {
@@ -16,8 +16,8 @@ function runConjureSharedProjectCoverAction(applicationId, arg1, arg2) {
     openFrameDefault(obj);
     return true;
   } else {
-    ({ guildId, channelId } = arg2);
-    let flag = null != guildId && null != channelId;
+    channelId = channelId.channelId;
+    let flag = null != channelId;
     if (flag) {
       (function launchOrReport() {
         const self = this;
@@ -28,7 +28,7 @@ function runConjureSharedProjectCoverAction(applicationId, arg1, arg2) {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(applicationId, guildId, channelId);
+      })(applicationId, tmp4, channelId);
       flag = true;
     }
     return flag;
@@ -67,7 +67,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -162,7 +162,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
     }
   }
 };
-const canRemixProject = fn(6529).canRemixProject;
+const canRemixProject = fn(6500).canRemixProject;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/handleTapConjureProjectEmbed.tsx");
 

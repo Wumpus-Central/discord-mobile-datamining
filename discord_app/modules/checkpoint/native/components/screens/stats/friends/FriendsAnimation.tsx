@@ -6,7 +6,7 @@ import CheckpointFriendsRive from "../../../../../../../../discord_common/js/pac
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
-const CHECKPOINT_PRIMARY = fn(5877).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5848).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 let closure_5 = {
   "Avatar01/Stroke": "#000000",

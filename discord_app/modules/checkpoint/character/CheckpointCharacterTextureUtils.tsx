@@ -3,6 +3,38 @@ import getDevicePixelRatioDefault from "../../../utils/getDevicePixelRatio.nativ
 import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+function getCheckpointCharacterTextureUrl(name, textureScale) {
+  ({ url, width, height, widthAt1x } =
+    CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET[name]);
+  if (null == widthAt1x) {
+    return url;
+  } else {
+    const _Math4 = Math;
+    const result = 4096 / Math.max(width, height);
+    const _Math5 = Math;
+    const bound = Math.min((textureScale * widthAt1x) / width, result);
+    let tmp = result >= 1;
+    if (1 <= result) {
+      const _Math = Math;
+      tmp = textureScale >= Math.round(width / widthAt1x);
+    }
+    if (bound < 1) {
+      if (!tmp) {
+        let tmp3 = closure_10[name];
+        if (tmp3 == null) {
+          tmp3 = closure_9;
+        }
+        ({ columns, rows } = tmp3);
+        const _Math2 = Math;
+        const _Math3 = Math;
+        const result1 = columns * Math.round((width / columns) * bound);
+        const _HermesInternal = HermesInternal;
+        return "" + url + "?width=" + result1 + "&height=" + rows * Math.round((height / rows) * bound);
+      }
+    }
+    return url;
+  }
+}
 const CheckpointCharacterTextureType = { SLOT: "slot", TRAIT: "trait", LAYOUT: "layout", ALWAYS: "always" };
 const re4 = /^tex_(aura|base_\d+|outfit)_/;
 const re5 = /^tex_(headwear|shoes|wearable|face)_(\d+)_/;
@@ -97,9 +129,9 @@ export function getCheckpointCharacterTextureRole(name) {
     }
   }
 }
-export function getCheckpointCharacterTextureScale(c4, height, arg2) {
-  let flag = arg2;
-  if (arg2 === undefined) {
+export function getCheckpointCharacterTextureScale(c4, height) {
+  let flag = stateFromStores;
+  if (stateFromStores === undefined) {
     flag = false;
   }
   closure_0 = undefined;
@@ -116,35 +148,11 @@ export function getCheckpointCharacterTextureScale(c4, height, arg2) {
     return found;
   }
 }
-export function getCheckpointCharacterTextureUrl(name, textureScale) {
-  ({ url, width, height, widthAt1x } =
-    CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET[name]);
-  if (null == widthAt1x) {
-    return url;
-  } else {
-    const _Math4 = Math;
-    const result = 4096 / Math.max(width, height);
-    const _Math5 = Math;
-    const bound = Math.min((textureScale * widthAt1x) / width, result);
-    let tmp = result >= 1;
-    if (1 <= result) {
-      const _Math = Math;
-      tmp = textureScale >= Math.round(width / widthAt1x);
-    }
-    if (bound < 1) {
-      if (!tmp) {
-        let tmp3 = closure_10[name];
-        if (tmp3 == null) {
-          tmp3 = closure_9;
-        }
-        ({ columns, rows } = tmp3);
-        const _Math2 = Math;
-        const _Math3 = Math;
-        const result1 = columns * Math.round((width / columns) * bound);
-        const _HermesInternal = HermesInternal;
-        return "" + url + "?width=" + result1 + "&height=" + rows * Math.round((height / rows) * bound);
-      }
-    }
-    return url;
+export { getCheckpointCharacterTextureUrl };
+export function getCheckpointCharacterAuraUrl(name, textureScale, flag) {
+  let num = 1;
+  if (!flag) {
+    num = textureScale;
   }
+  return getCheckpointCharacterTextureUrl(name, num);
 }

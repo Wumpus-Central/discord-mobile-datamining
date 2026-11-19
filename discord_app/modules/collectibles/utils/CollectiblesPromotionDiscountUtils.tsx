@@ -4,10 +4,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPromotionDiscountUtils.tsx");
 
-export function getPromotionPercentOff(rewardConfig) {
+export function getPromotionFiatPercentOff(collectiblesPromotionForProduct) {
   let discount;
-  if (rewardConfig != null) {
-    rewardConfig = rewardConfig.rewardConfig;
+  if (collectiblesPromotionForProduct != null) {
+    const rewardConfig = collectiblesPromotionForProduct.rewardConfig;
     if (rewardConfig != null) {
       discount = rewardConfig.discount;
     }
@@ -18,7 +18,10 @@ export function getPromotionPercentOff(rewardConfig) {
   }
   let amount = null;
   if (type === StorefrontTypes.StorefrontDiscountTypes.PERCENT) {
-    amount = discount.amount;
+    amount = null;
+    if (true === discount.fiatEnabled) {
+      amount = discount.amount;
+    }
   }
   return amount;
 }

@@ -48,7 +48,7 @@ prototype["connect"] = function connect() {
   const self = this;
   this.state = Connecting.Connecting;
   let rtc = this.rtc;
-  rtc.on(self(5683).RTCConnectionEvent.WebTransportAck, this.webTransportAck);
+  rtc.on(self(5652).RTCConnectionEvent.WebTransportAck, this.webTransportAck);
   const rtc2 = this.rtc;
   rtc2.startWebTransport();
   const timerId = setTimeout(() => {

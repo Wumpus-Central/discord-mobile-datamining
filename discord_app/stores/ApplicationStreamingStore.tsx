@@ -3,6 +3,7 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
 import asyncRequireImpl from "../../_runtime/02121_asyncRequireImpl.js";
+import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
 import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import windowSourceMatchesDefault from "../modules/go_live/utils/windowSourceMatches.tsx";
 import getTitleFromPickedStreamContentDefault from "../modules/go_live/utils/getTitleFromPickedStreamContent.tsx";
@@ -53,7 +54,7 @@ const Constants = fn(1072);
   NULL_STRING_GUILD_ID: closure_21,
   BasicPermissions: closure_22,
 } = Constants);
-const StreamTypes = fn(6305).StreamTypes;
+const StreamTypes = fn(6276).StreamTypes;
 const selfStreamParticipantsHidden = {};
 let intent = null;
 let closure_27 = 10 * DurationsDefault.Millis.SECOND;
@@ -563,7 +564,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
       }
       if (tmp2) {
         const tmp6 = getTitleFromPickedStreamContentDefault(content);
-        let obj = { pid, id: null };
+        let obj = { pid, gamePid: pid, id: null };
         id = undefined;
         if (id != null) {
           id = id.id;
@@ -700,7 +701,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    const obj = sourceId(6309);
+    const obj = sourceId(6280);
     const encodeStreamKeyResult = obj.encodeStreamKey({
       streamType,
       guildId,
@@ -729,17 +730,34 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
       if (gameForPID != null) {
         id = gameForPID.id;
       }
-      const obj4 = { id, pid, sourceName, previewDisabled, sourceIcon, sourceId };
-      closure_6[encodeStreamKeyResult] = obj4;
+      const obj6 = {
+        id,
+        pid,
+        gamePid: null,
+        sourceName: null,
+        previewDisabled: null,
+        sourceIcon: null,
+        sourceId: null,
+      };
+      let pid1;
+      if (gameForPID != null) {
+        pid1 = gameForPID.pid;
+      }
+      obj6.gamePid = pid1;
+      obj6.sourceName = sourceName;
+      obj6.previewDisabled = previewDisabled;
+      obj6.sourceIcon = sourceIcon;
+      obj6.sourceId = sourceId;
+      closure_6[encodeStreamKeyResult] = obj6;
       map.delete(encodeStreamKeyResult);
-      const obj5 = {
+      const obj7 = {
         streamType,
         guildId,
         channelId,
         ownerId: AuthenticationStore.getId(),
         state: constants.CONNECTING,
       };
-      const result = map.set(encodeStreamKeyResult, obj5);
+      const result = map.set(encodeStreamKeyResult, obj7);
     }
     if (null != pid) {
       gameForPID = RunningGameStore.getGameForPID(pid);
@@ -747,9 +765,22 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
       gameForPID = null;
       if (null != sourceId) {
         const runningGames = RunningGameStore.getRunningGames();
-        gameForPID = runningGames.find((windowHandle) =>
+        let found = runningGames.find((windowHandle) =>
           windowSourceMatchesDefault(sourceId, windowHandle.windowHandle),
         );
+        if (null == found) {
+          if (sourceId.startsWith("window:")) {
+            const pidFromDesktopSource = CrossPlatformNativeUtilsDefault.getPidFromDesktopSource(sourceId);
+            let gameForPID1 = null;
+            if (null != pidFromDesktopSource) {
+              gameForPID1 = RunningGameStore.getGameForPID(pidFromDesktopSource);
+            }
+          }
+        }
+        if (found == null) {
+          found = null;
+        }
+        gameForPID1 = found;
       }
     }
     const obj2 = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId() };
@@ -792,11 +823,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(6312, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(6283, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(6312, dependencyMap.paths);
+        const promise = asyncRequireImpl(6283, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

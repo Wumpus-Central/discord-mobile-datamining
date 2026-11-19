@@ -4,14 +4,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-const ContentDismissActionType = fn(4669).ContentDismissActionType;
+const ContentDismissActionType = fn(4638).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/NitroBadgeUnhiddenCoachmark.tsx");
 
 export default function NitroBadgeUnhiddenCoachmark(markAsDismissed) {
   ({ targetRef, visible } = markAsDismissed);
   markAsDismissed = markAsDismissed.markAsDismissed;
-  const tmp = markAsDismissed(18968)(targetRef, visible);
+  const tmp = markAsDismissed(18960)(targetRef, visible);
   dependencyMap = tmp;
   items = [visible, tmp, markAsDismissed];
   const memo = noop.useMemo(() => {
@@ -38,11 +38,11 @@ export default function NitroBadgeUnhiddenCoachmark(markAsDismissed) {
     obj.buttonLabel = intl3.string(util.t.hvVgAZ);
     obj.onButtonPress = function onButtonPress() {
       closure_1_1(constants2.TAKE_ACTION);
-      const obj = markAsDismissed(5502);
+      const obj = markAsDismissed(5471);
       obj.openURL(markAsDismissed(2188).getArticleURL(constants.PROFILE_BADGES_MANAGEMENT));
     };
     return obj;
   }, items);
-  const coachmark = visible(8993).useCoachmark(targetRef, memo);
+  const coachmark = visible(8967).useCoachmark(targetRef, memo);
   return null;
 }

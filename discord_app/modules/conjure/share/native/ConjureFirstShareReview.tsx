@@ -1,11 +1,16 @@
 // discord_app/modules/conjure/share/native/ConjureFirstShareReview.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4121 from "../../intl/ConjureUntranslated.messages.js";
-import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import FormCheckbox from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
+import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
+import ConjureProjectTypes from "../../projects/ConjureProjectTypes.tsx";
+import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
+import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
+import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
+import ConjureManagedCopyStatusDefault from "../../managed_copy/native/ConjureManagedCopyStatus.tsx";
+import ConjureAppIdentity from "../../identity/native/ConjureAppIdentity.tsx";
+import useConjureFirstShareReview from "../useConjureFirstShareReview.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -37,48 +42,19 @@ function RowSection(title) {
   }
   return tmp3Result;
 }
-function PrivateCheckbox(appChannelsPrivate) {
-  appChannelsPrivate = appChannelsPrivate.appChannelsPrivate;
-  const isPrivate = appChannelsPrivate.isPrivate;
-  const setPrivate = appChannelsPrivate.setPrivate;
+function ContentRow(arg0) {
+  ({ icon, label } = arg0);
   const tmp = closure_9();
-  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked: isPrivate });
-  ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  obj2 = {
-    style: tmp.privateCheckbox,
-    accessibilityRole,
-    accessibilityState,
-    onPress() {
-      return setPrivate(!isPrivate);
-    },
-    children: null,
-  };
-  items = [React4(FormCheckbox.FormCheckbox, { checked: isPrivate })];
-  const obj3 = { variant: "body-md/medium", color: "text-subtle", children: null };
-  const intl = util.intl;
-  obj3.children = intl.string(_modDef4121.RSyIc9);
-  items[1] = React4(Text_Text.Text, obj3);
-  obj2.children = items;
-  return timestampProducer(Pressables.PressableOpacity, obj2);
-}
-function ContentRow(trailing) {
-  trailing = trailing.trailing;
-  ({ icon, label } = trailing);
-  if (trailing === undefined) {
-    trailing = null;
-  }
-  const tmp2 = closure_9();
-  obj = { style: tmp2.row, children: null };
+  obj = { style: tmp.row, children: null };
   items = [
     React4(icon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }),
     React4(Text_Text.Text, {
       variant: "body-md/semibold",
       color: "text-strong",
       lineClamp: 1,
-      style: tmp2.rowLabel,
+      style: tmp.rowLabel,
       children: label,
     }),
-    trailing,
   ];
   obj.children = items;
   return timestampProducer(View, obj);
@@ -86,23 +62,22 @@ function ContentRow(trailing) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { screen_capture: fn(9803).ScreenIcon, connect_user_to_voice: fn(6945).VoiceNormalIcon };
+let obj = { screen_capture: fn(9782).ScreenIcon, connect_user_to_voice: fn(6915).VoiceNormalIcon };
 let obj2 = {};
-obj2[fn(6530).ConjureSupportedSurface.BOT] = fn(12131).RobotIcon;
-obj2[fn(6530).ConjureSupportedSurface.ACTIVITY] = fn(18050).ActivitiesIcon;
-obj2[fn(6530).ConjureSupportedSurface.VOICE_CHANNEL] = fn(6945).VoiceNormalIcon;
-obj2[fn(6530).ConjureSupportedSurface.PROFILE_WIDGET] = fn(18439).BadgeIcon;
-obj2[fn(6530).ConjureSupportedSurface.AUTOMOD] = fn(10032).ShieldIcon;
-obj2[fn(6530).ConjureSupportedSurface.OVERLAY] = fn(6951).GameControllerIcon;
-const createStyles = fn(4823);
-let obj4 = {
+obj2[fn(6501).ConjureSupportedSurface.BOT] = fn(12108).RobotIcon;
+obj2[fn(6501).ConjureSupportedSurface.ACTIVITY] = fn(18043).ActivitiesIcon;
+obj2[fn(6501).ConjureSupportedSurface.VOICE_CHANNEL] = fn(6915).VoiceNormalIcon;
+obj2[fn(6501).ConjureSupportedSurface.PROFILE_WIDGET] = fn(18432).BadgeIcon;
+obj2[fn(6501).ConjureSupportedSurface.AUTOMOD] = fn(10010).ShieldIcon;
+obj2[fn(6501).ConjureSupportedSurface.OVERLAY] = fn(6921).GameControllerIcon;
+const createStyles = fn(4792);
+const obj4 = {
   sectionTitle: { marginBottom: nativeDefault.space.PX_4 },
   followingSection: null,
   row: null,
   rowLabel: null,
-  privateCheckbox: null,
 };
-const obj5 = { marginBottom: nativeDefault.space.PX_4 };
+let obj5 = { marginBottom: nativeDefault.space.PX_4 };
 obj4.followingSection = { marginTop: -nativeDefault.space.PX_8 };
 let obj6 = { marginTop: -nativeDefault.space.PX_8 };
 obj4.row = {
@@ -112,58 +87,28 @@ obj4.row = {
   minHeight: nativeDefault.space.PX_32 + nativeDefault.space.PX_4,
 };
 obj4.rowLabel = { flex: 1 };
-let obj7 = {
-  flexDirection: "row",
-  alignItems: "center",
-  gap: nativeDefault.space.PX_8,
-  minHeight: nativeDefault.space.PX_32 + nativeDefault.space.PX_4,
-};
-obj4.privateCheckbox = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 let closure_9 = createStyles.createStyles(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/native/ConjureFirstShareReview.tsx");
 
-export default function ConjureFirstShareReview(onConjure) {
-  const review = onConjure.review;
-  let AppsIcon;
-  appChannelsPrivate = undefined;
-  ({ identity, appChannelsPrivate } = review);
-  let isPrivate;
-  if (appChannelsPrivate != null) {
-    isPrivate = appChannelsPrivate.isPrivate;
-  }
-  if (true === isPrivate) {
-    AppsIcon = AppsIcon(7614).AppsLockIcon;
-    let tmp4 = AppsIcon;
-  } else {
-    AppsIcon = AppsIcon(7615).AppsIcon;
-    tmp4 = AppsIcon;
-  }
-  let tmp8 = null;
-  if (review.channelNames.length <= 1) {
-    tmp8 = appChannelsPrivate;
-  }
-  appChannelsPrivate = tmp8;
-  const channelNames = review.channelNames;
+export default function ConjureFirstShareReview(review) {
+  review = review.review;
+  ({ identity, channelNames } = review);
   items = [
-    ...channelNames.map((label) => {
-      obj = { icon: AppsIcon, label, trailing: null };
-      let tmpResult = null;
-      if (null != appChannelsPrivate) {
-        obj2 = { appChannelsPrivate: tmp3 };
-        tmpResult = React4(PrivateCheckbox, obj2);
-      }
-      obj.trailing = tmpResult;
-      return React4(ContentRow, obj, "channel:" + label);
-    }),
+    ...channelNames.map((label) => closure_1_4(ContentRow, { icon: AppsIcon.AppsIcon, label }, "channel:" + label)),
     ...components.map((label) => {
       const surface = label.surface;
       return closure_1_4(ContentRow, { icon: obj2[surface], label: label.label }, surface);
     }),
   ];
   components = review.components;
-  const items1 = [
-    closure_4(tmp4(18333).ConjureAppIconTile, {
+  if (review.managedCopy) {
+    const obj3 = { projectId: review.projectId };
+    let tmpResult = React4(ConjureManagedCopyStatusDefault, obj3);
+    let tmp8 = importDefault;
+    let tmp9 = React4;
+  } else {
+    obj = {
       iconURL: identity.iconURL,
       size: 48,
       radius: 12,
@@ -172,64 +117,54 @@ export default function ConjureFirstShareReview(onConjure) {
       onError(text) {
         if (null != text) {
           obj2 = { text, variant: "critical" };
-          appChannelsPrivate(5505).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
-          obj = appChannelsPrivate(5505);
+          ToastActionCreatorsDefault.open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
         }
       },
-      onConjure: onConjure.onConjureIcon,
-    }),
-    ,
-    ,
-    ,
-    ,
-  ];
-  const obj4 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
-  let intl = tmp4(1113).intl;
-  obj4.label = intl.string(appChannelsPrivate(4121).knevPu);
-  ({ name: obj2.value, setName: obj2.onChange } = review);
-  obj4.maxLength = tmp4(6530).MAX_PROJECT_NAME_LENGTH;
-  ({ saving: obj2.disabled, nameError } = review);
-  obj4.errorMessage = nameError;
-  items1[1] = closure_4(tmp4(7132).TextInput, obj4);
-  const obj6 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
-  const intl2 = tmp4(1113).intl;
-  obj6.label = intl2.string(appChannelsPrivate(4121).ynaGa1);
-  const intl3 = tmp4(1113).intl;
-  obj6.placeholder = intl3.string(appChannelsPrivate(4121)["I+3UTL"]);
-  ({ description: obj3.value, setDescription: obj3.onChange } = identity);
-  obj6.maxLength = tmp4(6530).MAX_APP_DESCRIPTION_LENGTH;
-  obj6.disabled = review.saving;
-  items1[2] = closure_4(tmp4(7372).TextArea, obj6);
-  const obj7 = { title: null, rows: null };
-  const intl4 = tmp4(1113).intl;
-  obj7.title = intl4.string(appChannelsPrivate(4121).BqNMms);
-  obj7.rows = items;
-  items1[3] = closure_4(RowSection, obj7);
-  let tmp11Result = null;
-  if (review.channelNames.length > 1) {
-    tmp11Result = null;
-    if (null != appChannelsPrivate) {
-      const obj13 = { label: null, checked: null, onToggle: null };
-      const intl5 = tmp4(1113).intl;
-      obj13.label = intl5.string(tmp12(4121).Td1mlg);
-      ({ isPrivate: obj5.checked, setPrivate: obj5.onToggle } = appChannelsPrivate);
-      tmp11Result = closure_4(tmp4(14647).Checkbox, obj13);
-    }
+      onConjure: review.onConjureIcon,
+    };
+    const items1 = [React4(ConjureAppIdentity.ConjureAppIconTile, obj), ,];
+    const obj5 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
+    let intl = util.intl;
+    obj5.label = intl.string(_modDef4089.knevPu);
+    ({ name: obj2.value, setName: obj2.onChange } = review);
+    obj5.maxLength = ConjureProjectTypes.MAX_PROJECT_NAME_LENGTH;
+    ({ saving: obj2.disabled, nameError } = review);
+    const obj6 = { children: null };
+    obj5.errorMessage = nameError;
+    items1[1] = React4(TextInput.TextInput, obj5);
+    const obj7 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
+    const intl2 = util.intl;
+    obj7.label = intl2.string(_modDef4089.ynaGa1);
+    const intl3 = util.intl;
+    obj7.placeholder = intl3.string(_modDef4089["I+3UTL"]);
+    ({ description: obj4.value, setDescription: obj4.onChange } = identity);
+    obj7.maxLength = ConjureProjectTypes.MAX_APP_DESCRIPTION_LENGTH;
+    obj7.disabled = review.saving;
+    items1[2] = React4(TextArea.TextArea, obj7);
+    obj6.children = items1;
+    tmp8 = importDefault;
+    tmp9 = React4;
+    tmpResult = timestampProducer(hasOwnProperty, obj6);
   }
-  const obj14 = { children: null };
-  items1[4] = tmp11Result;
-  const obj15 = { title: null, following: null, rows: null };
-  const intl6 = tmp4(1113).intl;
-  obj15.title = intl6.string(appChannelsPrivate(4121).LnqeFd);
-  obj15.following = items.length > 0;
+  const obj8 = { children: null };
+  const items2 = [tmpResult, ,];
+  const obj15 = { title: null, rows: null };
+  const intl4 = util.intl;
+  obj15.title = intl4.string(tmp8(4089).BqNMms);
+  obj15.rows = items;
+  items2[1] = tmp9(RowSection, obj15);
+  const obj16 = { title: null, following: null, rows: null };
+  const intl5 = util.intl;
+  obj16.title = intl5.string(tmp8(4089).LnqeFd);
+  obj16.following = items.length > 0;
   const devicePermissions = review.devicePermissions;
-  obj15.rows = devicePermissions.map((item) => {
+  obj16.rows = devicePermissions.map((item) => {
     obj = { icon: closure_1_7[item], label: null };
-    const intl = AppsIcon(1113).intl;
-    obj.label = intl.string(AppsIcon(18434).CONJURE_REVIEW_PERMISSION_LABELS[item]);
+    const intl = util.intl;
+    obj.label = intl.string(useConjureFirstShareReview.CONJURE_REVIEW_PERMISSION_LABELS[item]);
     return closure_1_4(ContentRow, obj, item);
   });
-  items1[5] = closure_4(RowSection, obj15);
-  obj14.children = items1;
-  return closure_6(closure_5, obj14);
+  items2[2] = tmp9(RowSection, obj16);
+  obj8.children = items2;
+  return timestampProducer(hasOwnProperty, obj8);
 }

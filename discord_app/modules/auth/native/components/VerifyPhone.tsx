@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_6 = fn(17504).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(17505);
+let closure_6 = fn(17497).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(17498);
 ({
   authStateToRegisterTransitionStep: metroImportDefault,
   RegisterTransitionSteps: closure_8,
@@ -35,7 +35,7 @@ export default function VerifyPhone(phone) {
   closure_7 = noop.useRef(false);
   const context = noop.useContext(require("Auth").TrackRegistrationContext);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  onPhoneTokenReceived(17522)(closure_7(sourceState));
+  onPhoneTokenReceived(17515)(closure_7(sourceState));
   items = [context];
   const effect = noop.useEffect(() => {
     if (_undefined()) {
@@ -43,7 +43,7 @@ export default function VerifyPhone(phone) {
       context(obj);
     }
   }, items);
-  onPhoneTokenReceived(5384)(() => () => {
+  onPhoneTokenReceived(5353)(() => () => {
     let tmpResult;
     if (dependencyMap != null) {
       tmpResult = tmp(ref.current);
@@ -57,7 +57,7 @@ export default function VerifyPhone(phone) {
     if (v3()) {
       context({ step: context.PHONE_VERIFICATION, actionType: callback.SUBMITTED });
     }
-    yield onPhoneTokenReceived(7333).verifyPhone(closure_0, closure_0, false);
+    yield onPhoneTokenReceived(7303).verifyPhone(closure_0, closure_0, false);
     if (1 === tmp7) {
       v0 = 0;
       closure_129_1 = closure_3;
@@ -110,7 +110,7 @@ export default function VerifyPhone(phone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -141,7 +141,7 @@ export default function VerifyPhone(phone) {
         } else {
           _undefined(false);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp12) {
         c3 = tmp;
@@ -160,7 +160,7 @@ export default function VerifyPhone(phone) {
     }
     return applyArgumentsResult;
   }, items2);
-  onPhoneTokenReceived(7366)(callback1);
+  onPhoneTokenReceived(7336)(callback1);
   const items3 = [onBail];
   const memo = noop.useMemo(() => {
     let tmp2 = null;
@@ -181,11 +181,11 @@ export default function VerifyPhone(phone) {
     loading: null,
     disableKeyboardAvoidingView: true,
   };
-  const tmp7 = onPhoneTokenReceived(17522);
+  const tmp7 = onPhoneTokenReceived(17515);
   obj.codeType = require("CodeField").CodeType.NUMERIC;
   obj.footer = memo;
   obj.disabled = tmp5;
-  return jsx(onPhoneTokenReceived(7367), {
+  return jsx(onPhoneTokenReceived(7337), {
     title,
     description,
     error: tmp3,

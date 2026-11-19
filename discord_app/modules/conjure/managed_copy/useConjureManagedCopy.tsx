@@ -23,10 +23,10 @@ export default function useConjureManagedCopy(arg0) {
     items1,
   );
 }
-export function useIsConjureManagedCopy(projectId) {
-  _require = projectId;
+export function useIsConjureManagedCopy(id) {
+  _require = id;
   items = [ConjureManagedCopyStore];
-  const items1 = [projectId];
+  const items1 = [id];
   return (
     null !=
     require("initialize").useStateFromStores(

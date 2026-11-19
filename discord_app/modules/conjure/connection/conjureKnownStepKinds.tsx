@@ -41,6 +41,7 @@ let closure_0 = {
   safety_recheck: true,
   saving: true,
   segment_settled: true,
+  server_change: true,
   spend_limit: true,
   terminal_error: true,
   thinking: true,

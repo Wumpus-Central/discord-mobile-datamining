@@ -24,11 +24,11 @@ const prototype = function PushNotificationCacheManager() {
   applyArgumentsResult.handleUserUpdate = function handleUserUpdate() {
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      applyArgumentsResult(10821).setCurrentUser(currentUser.username, currentUser.id);
-      const obj2 = applyArgumentsResult(10821);
+      applyArgumentsResult(10799).setCurrentUser(currentUser.username, currentUser.id);
+      const obj2 = applyArgumentsResult(10799);
     } else {
-      applyArgumentsResult(10821).setCurrentUser(null, null);
-      const obj = applyArgumentsResult(10821);
+      applyArgumentsResult(10799).setCurrentUser(null, null);
+      const obj = applyArgumentsResult(10799);
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
@@ -40,15 +40,15 @@ const prototype = function PushNotificationCacheManager() {
       } else {
         obj4 = {};
         const item = validUsers.forEach((id) => {
-          obj4[id.id] = applyArgumentsResult(4879).getUserTag(id, { identifiable: "always" });
+          obj4[id.id] = applyArgumentsResult(4848).getUserTag(id, { identifiable: "always" });
         });
         obj3 = obj4;
       }
     } else {
       obj3 = {};
     }
-    obj4(10821).setMultiAccountUsers(obj3);
-    const obj = obj4(10821);
+    obj4(10799).setMultiAccountUsers(obj3);
+    const obj = obj4(10799);
   };
   applyArgumentsResult.handleLogout = function handleLogout() {
     const result = PushNotificationDefault.clearPushNotificationLogs();

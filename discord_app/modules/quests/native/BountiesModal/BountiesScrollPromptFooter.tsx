@@ -41,7 +41,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj3.children = closure_7(zIndex(4950).BountiesScrollGradientRive, {
+  obj3.children = closure_7(zIndex(4919).BountiesScrollGradientRive, {
     stateMachine: "State Machine 1",
     fit: "fill",
     alignment: "bottom-center",
@@ -56,10 +56,10 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(_modDef1655.View, obj2);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(6466).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6437).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_9 = createStyles.createStyles(() => {
   const obj = {
     root: { position: "absolute", bottom: 0, left: 0, right: 0 },
@@ -80,8 +80,8 @@ let items = [
   {
     code: "(function BountiesScrollPromptFooterTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})",
   },
-  fn(5033).withTiming,
-  fn(5036).timingStandard,
+  fn(5002).withTiming,
+  fn(5005).timingStandard,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -100,8 +100,8 @@ let items2 = [
   {
     code: "(function BountiesScrollPromptFooterTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})",
   },
-  fn(5033).withTiming,
-  fn(5036).timingStandard,
+  fn(5002).withTiming,
+  fn(5005).timingStandard,
 ];
 let closure_130_0;
 let closure_130_1;

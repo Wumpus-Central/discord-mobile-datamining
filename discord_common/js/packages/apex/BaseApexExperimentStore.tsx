@@ -431,11 +431,11 @@ prototype["registerExperiment"] = function registerExperiment(name) {
 prototype["getRegisteredExperiments"] = function getRegisteredExperiments() {
   return closure_10;
 };
-prototype["getAssignment"] = function getAssignment(installation, id, name) {
+prototype["getAssignment"] = function getAssignment(user, id, name) {
   const self = this;
   let override = this.getOverride(name);
   if (null == override) {
-    override = self.getServerAssignment(installation, id, name);
+    override = self.getServerAssignment(user, id, name);
   }
   return override;
 };

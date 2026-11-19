@@ -7,9 +7,9 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const RowType = fn(6414).RowType;
+const RowType = fn(6385).RowType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,20 +31,20 @@ export default function AddModeratorsActionSheet(channel) {
         row = row.row;
         if (row.rowType === constants.ROLE) {
           closure_1 = closure_1 + 1;
-          let moderatorOverwrite = channel(6440).createModeratorOverwrite(
+          let moderatorOverwrite = channel(6411).createModeratorOverwrite(
             row.id,
             channel(2119).PermissionOverwriteType.ROLE,
             closure_0,
           );
-          const obj2 = channel(6440);
+          const obj2 = channel(6411);
         } else {
           closure_0 = closure_0 + 1;
-          moderatorOverwrite = channel(6440).createModeratorOverwrite(
+          moderatorOverwrite = channel(6411).createModeratorOverwrite(
             row.id,
             channel(2119).PermissionOverwriteType.MEMBER,
             closure_0,
           );
-          const obj = channel(6440);
+          const obj = channel(6411);
         }
         return moderatorOverwrite;
       });
@@ -84,7 +84,7 @@ export default function AddModeratorsActionSheet(channel) {
     }
     return GuildStore.getGuild(guildId);
   });
-  let str = pendingAdditions(5439)(channel, true);
+  let str = pendingAdditions(5408)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -109,26 +109,26 @@ export default function AddModeratorsActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = <tmp13 {...obj7} />;
-      obj4.header = jsx(tmp4(7426).BottomSheetTitleHeader, obj2);
+      obj4.header = jsx(tmp4(7396).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
       const obj6 = {
         inActionSheet: true,
         channel,
         guild: stateFromStores,
-        permission: tmp4(4680).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+        permission: tmp4(4649).MODERATE_STAGE_CHANNEL_PERMISSIONS,
         pendingAdditions,
         setPendingAdditions: tmp2[1],
       };
-      obj5.children = jsx(tmp7(7701), {
+      obj5.children = jsx(tmp7(7671), {
         inActionSheet: true,
         channel,
         guild: stateFromStores,
-        permission: tmp4(4680).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+        permission: tmp4(4649).MODERATE_STAGE_CHANNEL_PERMISSIONS,
         pendingAdditions,
         setPendingAdditions: tmp2[1],
       });
       obj4.children = <View style={tmp.container}>{null}</View>;
-      return jsx(tmp4(5051).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
+      return jsx(tmp4(5020).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
     }
     obj7 = { size: "sm", disabled: tmp11, text: null, onPress: null };
     const intl = tmp4(1113).intl;

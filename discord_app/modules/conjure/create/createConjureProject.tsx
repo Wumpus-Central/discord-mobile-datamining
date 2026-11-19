@@ -13,7 +13,7 @@ let closure_5 = async function _createConjureProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -32,14 +32,8 @@ let closure_5 = async function _createConjureProject(arg0) {
           closure_130_0 = undefined;
           closure_130_1 = undefined;
           closure_130_2 = undefined;
+          ({ guildId: closure_130_0, modelSettings: closure_130_1, templateId: closure_130_2 } = closure_0);
           closure_130_3 = undefined;
-          ({ guildId: closure_130_0, installScope } = closure_0);
-          if (installScope === undefined) {
-            installScope = "user";
-          }
-          closure_130_1 = installScope;
-          ({ modelSettings: closure_130_2, templateId: closure_130_3 } = closure_0);
-          closure_130_4 = undefined;
           c4 = 1;
           c5 = 1;
           return { value: "Path", done: true };
@@ -53,11 +47,16 @@ let closure_5 = async function _createConjureProject(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          const obj6 = { guild_id: closure_130_0, install_scope: closure_130_1 };
+          if (null != closure_130_0) {
+            const obj6 = { guild_id: closure_130_0 };
+            let obj7 = obj6;
+          } else {
+            obj7 = {};
+          }
+          const project = closure_131_0(closure_131_1[2]).createProject(obj7);
           c4 = 2;
           c5 = 1;
-          const obj7 = { value: closure_131_0(closure_131_1[2]).createProject(obj6), done: false };
-          return obj7;
+          const obj3 = closure_131_0(closure_131_1[2]);
         }
       } else if (arg0 === 1) {
         c5 = 3;
@@ -67,25 +66,25 @@ let closure_5 = async function _createConjureProject(arg0) {
         const obj8 = { value, done: true };
         return obj8;
       } else {
-        closure_130_4 = value;
-        const obj9 = { templateId: closure_130_3 };
-        closure_131_3(closure_130_4, obj9);
-        closure_1 = closure_130_2;
-        if (closure_130_2 == null) {
+        closure_130_3 = value;
+        const obj9 = { templateId: closure_130_2 };
+        closure_131_3(closure_130_3, obj9);
+        closure_1 = closure_130_1;
+        if (closure_130_1 == null) {
           closure_1 = closure_131_0(closure_131_1[3]).CONJURE_DEFAULT_TIER_SETTINGS;
         }
-        closure_131_4(closure_130_4, closure_1);
+        closure_131_4(closure_130_3, closure_1);
         c5 = 3;
-        const obj = { value: closure_130_4, done: true };
+        const obj = { value: closure_130_3, done: true };
         return obj;
       }
-    } catch (tmp19) {
+    } catch (tmp22) {
       c5 = tmp;
-      throw tmp19;
+      throw tmp22;
     }
   }
 };
-const ConjureConnectionStore = fn(6878);
+const ConjureConnectionStore = fn(6848);
 ({ ensureConnection: c3, stageModelSettings: closure_4 } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/create/createConjureProject.tsx");

@@ -74,3 +74,20 @@ export function pickBountyVideoRenditionWithFallback(videoRenditions, BOUNTY_MOB
   }
   return tmp;
 }
+export function pickBountyPreviewUrl(questDockBounty, PORTRAIT) {
+  const videoPreviewRenditions = questDockBounty.videoPreviewRenditions;
+  let tmp;
+  if (videoPreviewRenditions != null) {
+    tmp = videoPreviewRenditions[PORTRAIT];
+  }
+  if (null == tmp) {
+    if (null == questDockBounty.videoPreviewRenditions) {
+      const videoPreview = questDockBounty.videoPreview;
+      const tmp4 = videoPreview;
+    } else {
+      const _Object = Object;
+    }
+    tmp = tmp4;
+  }
+  return tmp;
+}

@@ -73,13 +73,14 @@ const obj = {
   ORBS_CONFIRMATION_MODAL: 39,
   [39]: "ORBS_CONFIRMATION_MODAL",
 };
-const items = [, , , ,];
+const items = [, , , , ,];
 ({
   PREMIUM_TAB: arr[0],
   MOBILE_BOTTOM_SHEET: arr[1],
   PREMIUM_TAB_TOOLTIP: arr[2],
   PREMIUM_TAB_POPOVER: arr[3],
   NAGBAR: arr[4],
+  NITRO_HOME_SECTION_HEADER: arr[5],
 } = obj);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx");
 

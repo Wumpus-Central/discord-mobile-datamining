@@ -1,8 +1,8 @@
 // discord_app/modules/expression_picker/ExpressionPickerStore.tsx
 import ExpressionPickerConstants from "ExpressionPickerConstants.tsx";
-import uniqueIdDefault from "../../../_runtime/05839_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/05810_uniqueId.js";
 import identity_mod from "../../../_runtime/metro/01258__.js";
-import 05013__ from "../../../_runtime/metro/05013__.js";
+import 04982__ from "../../../_runtime/metro/04982__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const ExpressionPickerViewType = ExpressionPickerConstants.ExpressionPickerViewT
 let closure_3 = Object.freeze({ activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, showEmojiPacks: false, searchQuery: "", isSearchSuggestion: false, pickerId: uniqueIdDefault("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false });
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-const withEqualityFnResult = identity(module_5013.persist(() => closure_3, {
+const withEqualityFnResult = identity(module_4982.persist(() => closure_3, {
   name: "expression-picker-last-active-view",
   partialize(lastActiveView) {
     return { lastActiveView: lastActiveView.lastActiveView };
@@ -172,7 +172,7 @@ export function setExpressionPickerView(activeView) {
 }
 export function setShowEmojiPacks(showEmojiPacks) {
   _require = showEmojiPacks;
-  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ showEmojiPacks, showSelectedEmojiPackId: "Array" }));
+  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ showEmojiPacks, showSelectedEmojiPackId: "r" }));
 }
 export function setSearchQuery(searchQuery) {
   _require = searchQuery;

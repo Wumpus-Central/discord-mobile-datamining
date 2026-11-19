@@ -18,17 +18,17 @@ export default function useGiftSubscriptionAgreement(code) {
   const effect = noop.useEffect(() => {
     closure_0 = async function _lookUpOnOpen() {
       closure_1 = tmp3;
-      await closure_2_0(11866).resolveGiftCode(closure_0, {
+      await closure_2_0(11844).resolveGiftCode(closure_0, {
         withSubscriptionPlan: true,
         withGiftSubscriptionAgreement: true,
       });
       if (1 === tmp7) {
         c3 = 0;
         closure_128_0 = tmp22;
-        const result = code(11866).reportUnexpectedGiftCodeError(closure_128_0);
+        const result = code(11844).reportUnexpectedGiftCodeError(closure_128_0);
         tmp22(true);
         c5 = 3;
-        code(11866);
+        code(11844);
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;

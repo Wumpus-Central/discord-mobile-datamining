@@ -62,7 +62,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(4823);
+let createStyles = fn(4792);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -204,7 +204,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.leadingDividerText = { flexGrow: 0 };
   return obj9;
 });
-createStyles = fn(4823);
+createStyles = fn(4792);
 let closure_10 = createStyles.createStyleProperties({
   error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT,
   default: "transparent",

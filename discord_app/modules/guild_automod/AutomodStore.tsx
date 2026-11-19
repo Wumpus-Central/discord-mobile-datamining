@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/AutomodStore.tsx
-import _mod4738 from "../../../_runtime/metro/04738__.js";
+import _mod4707 from "../../../_runtime/metro/04707__.js";
 import SystemRulesUtils from "SystemRulesUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,7 +8,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(12326).AutomodTriggerType;
+const AutomodTriggerType = fn(12309).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
 const identity = fn(1258);
@@ -101,7 +101,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -240,7 +240,7 @@ export function useSyncAutomodRules(arg0) {
       items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, _mod4738.shallow),
+    }, _mod4707.shallow),
     2,
   );
   const first = tmp2[0];
@@ -259,7 +259,7 @@ export function useSyncAutomodRules(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -326,7 +326,7 @@ export function useSyncAutomodRulesEffect(arg0) {
       items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, require("../../../_runtime/metro/04738__.js").shallow),
+    }, require("../../../_runtime/metro/04707__.js").shallow),
     2,
   );
   first = tmp2[0];
@@ -345,7 +345,7 @@ export function useSyncAutomodRulesEffect(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -416,7 +416,7 @@ export function useSyncAutomodRulesEffect(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -444,7 +444,7 @@ export function useSyncAutomodRulesEffect(arg0) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp6) {
           c0 = tmp;
@@ -468,5 +468,5 @@ export function useAutomodRulesList(arg0) {
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("../../../_runtime/metro/04738__.js").shallow);
+  }, require("../../../_runtime/metro/04707__.js").shallow);
 }

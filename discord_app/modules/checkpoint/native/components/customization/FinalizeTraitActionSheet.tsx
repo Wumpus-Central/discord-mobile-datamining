@@ -15,7 +15,7 @@ export default function FinalizeTraitActionSheet(onSelectOption) {
   const obj2 = { title: null };
   const intl = onSelectOption(1113).intl;
   obj2.title = intl.string(_modDef3339.Zl5vPW);
-  obj.header = jsx(onSelectOption(7426).BottomSheetTitleHeader, { title: null });
+  obj.header = jsx(onSelectOption(7396).BottomSheetTitleHeader, { title: null });
   const obj3 = { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null };
   const intl2 = onSelectOption(1113).intl;
   obj3.accessibilityLabel = intl2.string(_modDef3339.Zl5vPW);
@@ -24,21 +24,21 @@ export default function FinalizeTraitActionSheet(onSelectOption) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onSelectOption(arg0);
   };
-  const prop = onSelectOption(6244).FINALIZE_MORE_OPTIONS;
+  const prop = onSelectOption(6215).FINALIZE_MORE_OPTIONS;
   obj3.children = prop.map((value) => {
-    const obj = { value, label: onSelectOption(6244).getCustomizationOptionName(value) };
+    const obj = { value, label: onSelectOption(6215).getCustomizationOptionName(value) };
     return jsx(
-      onSelectOption(7260).TableRadioRow,
-      { value, label: onSelectOption(6244).getCustomizationOptionName(value) },
+      onSelectOption(7230).TableRadioRow,
+      { value, label: onSelectOption(6215).getCustomizationOptionName(value) },
       value,
     );
   });
-  obj.children = jsx(onSelectOption(7258).TableRadioGroup, {
+  obj.children = jsx(onSelectOption(7228).TableRadioGroup, {
     hasIcons: false,
     accessibilityLabel: null,
     defaultValue: null,
     onChange: null,
     children: null,
   });
-  return jsx(onSelectOption(7464).ActionSheet, { startExpanded: true, header: null, children: null });
+  return jsx(onSelectOption(7434).ActionSheet, { startExpanded: true, header: null, children: null });
 }

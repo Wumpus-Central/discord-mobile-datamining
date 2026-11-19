@@ -12,9 +12,9 @@ let closure_2 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
 const ThemeTypes = fn(1072).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5431).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5400).IOS_POINTER_STYLE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_8 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
 let module_1655 = module_1655_mod;
 let closure_9 = module_1655.createAnimatedComponent(Pressable);
@@ -70,7 +70,7 @@ export function BaseButton(disabled) {
     onPressOut,
   );
   if (null == pressed) {
-    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
+    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 16 };
     const obj3 = { onLayout, onPressIn, onPressOut };
     obj2.buttonAnimationProps = obj3;
     let obj4 = obj2;

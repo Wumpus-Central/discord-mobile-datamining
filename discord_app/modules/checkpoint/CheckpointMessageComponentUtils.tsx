@@ -167,7 +167,7 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
   }
 }
 let closure_3 = ["powerLevel", "powerLevelUnits"];
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 ({
   CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS: hasOwnProperty,
   CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS: closure_6,
@@ -175,10 +175,10 @@ const CheckpointConstants = fn(5877);
   NATIVE_CHARACTER_LAYER_SIZE: closure_8,
   CheckpointVersions: closure_9,
 } = CheckpointConstants);
-let items = [fn(5572).TimeUnits.HOURS, fn(5572).TimeUnits.MINUTES];
-const items1 = [fn(5900).CheckpointCardTypes.DEFAULT, fn(5900).CheckpointCardTypes.CHARACTER_ONLY];
+let items = [fn(5541).TimeUnits.HOURS, fn(5541).TimeUnits.MINUTES];
+const items1 = [fn(5871).CheckpointCardTypes.DEFAULT, fn(5871).CheckpointCardTypes.CHARACTER_ONLY];
 const set = new Set(items1);
-const items2 = [fn(5900).CheckpointCardTypes.DEFAULT, fn(5900).CheckpointCardTypes.STATS_ONLY];
+const items2 = [fn(5871).CheckpointCardTypes.DEFAULT, fn(5871).CheckpointCardTypes.STATS_ONLY];
 const set1 = new Set(items2);
 const items3 = [128, 256, 512, 768, 1024];
 const items4 = [...items3];

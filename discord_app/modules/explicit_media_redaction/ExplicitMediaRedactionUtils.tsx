@@ -14,7 +14,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
 require = fn;
-const ExplicitMediaRedactionConstants = fn(8139);
+const ExplicitMediaRedactionConstants = fn(8108);
 ({
   EXPLICIT_MEDIA_MIN_HEIGHT: closure_6,
   EXPLICIT_MEDIA_MIN_WIDTH: metroImportDefault,

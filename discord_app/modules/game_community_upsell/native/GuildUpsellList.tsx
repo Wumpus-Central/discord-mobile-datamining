@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const viewabilityConfig = { itemVisiblePercentThreshold: 50, minimumViewTime: 500 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   hidden: { opacity: 0 },
   gridItem: { flex: 1 },

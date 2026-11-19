@@ -6,5 +6,5 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/conjure/share/native/openConjureFirstShareModal.tsx");
 
 export default function openConjureFirstShareModal(merged) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18433, dependencyMap.paths), merged, "ConjureFirstShareModal");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18427, dependencyMap.paths), merged, "ConjureFirstShareModal");
 }

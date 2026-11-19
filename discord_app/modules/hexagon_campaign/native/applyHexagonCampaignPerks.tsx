@@ -94,15 +94,15 @@ let closure_7 = async function _applyHexagonCampaignPerks(arg0) {
   }
   const obj17 = {};
   obj17[closure_131_5.CLIENT_THEME] = () => {
-    dependencyMap(16471).handleSaveTheme(closure_2_6, closure_1_4, closure_1_3);
+    dependencyMap(16462).handleSaveTheme(closure_2_6, closure_1_4, closure_1_3);
     return Promise.resolve(true);
   };
   obj17[closure_131_5.APP_ICON] = () =>
-    dependencyMap(13976).setAppIcon(dependencyMap(4849).LimitedTimeAppIconIds.HEXAGON, closure_1_2, {
+    dependencyMap(13958).setAppIcon(dependencyMap(4818).LimitedTimeAppIconIds.HEXAGON, closure_1_2, {
       showErrorToast: false,
     });
   obj17[closure_131_5.DISPLAY_NAME_STYLE] = () =>
-    dependencyMap(16474).saveHexagonCampaignDisplayNameStyles(dependencyMap2);
+    dependencyMap(16465).saveHexagonCampaignDisplayNameStyles(dependencyMap2);
   closure_130_10 = obj17;
   closure_130_11 = {
     previousPerkValues,
@@ -160,7 +160,7 @@ let closure_7 = async function _applyHexagonCampaignPerks(arg0) {
   };
   return "Path";
 };
-const HexagonCampaignPerk = fn(4848).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(4817).HexagonCampaignPerk;
 const HEXAGON_GRADIENT_PRESET = fn(1240).HEXAGON_GRADIENT_PRESET;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/applyHexagonCampaignPerks.tsx");

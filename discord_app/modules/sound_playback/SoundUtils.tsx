@@ -6,14 +6,14 @@ import SoundpackStore from "../soundpacks/SoundpackStore.tsx";
 import StreamerModeStore from "../../stores/StreamerModeStore.tsx";
 
 require = fn;
-const SoundOutputChannel = fn(5724).SoundOutputChannel;
+const SoundOutputChannel = fn(5693).SoundOutputChannel;
 const logger = new LoggerDefault("SoundUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
 
 export function createSoundForPack(call_calling, soundpack) {
-  let num = _volume;
-  if (_volume === undefined) {
+  let num = c1;
+  if (c1 === undefined) {
     num = 1;
   }
   if (DEFAULT === undefined) {
@@ -33,8 +33,8 @@ export function createSoundForPack(call_calling, soundpack) {
   return mobileAudioSound;
 }
 export function createSound(stage_waiting, vibing_wumpus) {
-  let num = _volume;
-  if (_volume === undefined) {
+  let num = c1;
+  if (c1 === undefined) {
     num = 1;
   }
   if (DEFAULT === undefined) {
@@ -52,9 +52,9 @@ export function createSound(stage_waiting, vibing_wumpus) {
   );
   return mobileAudioSound;
 }
-export function playSound(call_calling) {
-  let num = _volume;
-  if (_volume === undefined) {
+export function playSound(mobileAudioSound) {
+  let num = c1;
+  if (c1 === undefined) {
     num = 1;
   }
   closure_0 = arg2;
@@ -67,9 +67,9 @@ export function playSound(call_calling) {
       const _HermesInternal = HermesInternal;
       logger.log("Unable to find sound for pack name: " + soundpack);
     }
-    let tmp13 = tmp4Result[call_calling];
+    let tmp13 = tmp4Result[mobileAudioSound];
     if (tmp13 == null) {
-      tmp13 = call_calling;
+      tmp13 = mobileAudioSound;
     }
     let outputChannel;
     if (outputChannel != null) {
@@ -94,9 +94,9 @@ export function playSound(call_calling) {
     if (flag === undefined) {
       flag = false;
     }
-    const mobileAudioSound = new sound_playback_SoundUtils.MobileAudioSound(
+    mobileAudioSound = new sound_playback_SoundUtils.MobileAudioSound(
       tmp13,
-      call_calling,
+      mobileAudioSound,
       num,
       outputChannel,
       flag,

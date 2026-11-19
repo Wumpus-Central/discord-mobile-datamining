@@ -5,7 +5,7 @@ import InviteCodeUtils from "../instant_invite/InviteCodeUtils.tsx";
 import CodedLink from "CodedLink.tsx";
 import findCodedLinkUrlsDefault from "findCodedLinkUrls.native.tsx";
 import UnicodeSanitizationUtils from "../markup/UnicodeSanitizationUtils.tsx";
-import keysSorter from "../../../_runtime/06478_keysSorter.js";
+import keysSorter from "../../../_runtime/06449_keysSorter.js";
 import Authorize from "../oauth2/Authorize.tsx";
 import ExperimentEmbedUtils from "../experiments/ExperimentEmbedUtils.tsx";
 import storefrontMessageEmbedCodedLink from "../application_storefront/storefrontMessageEmbedCodedLink.tsx";

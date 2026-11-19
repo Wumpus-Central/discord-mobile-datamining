@@ -1,7 +1,7 @@
 // discord_app/errors/index.tsx
-import BillingErrorDefault from "BillingError.tsx";
 import errors_V6OrEarlierAPIErrorDefault from "V6OrEarlierAPIError.tsx";
 import APIErrorDefault from "APIError.tsx";
+import BillingErrorDefault from "BillingError.tsx";
 import StripeErrorDefault from "StripeError.tsx";
 import NativeDispatchErrorDefault from "NativeDispatchError.tsx";
 import AppliedGuildBoostErrorDefault from "AppliedGuildBoostError.tsx";

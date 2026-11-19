@@ -22,14 +22,16 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
     if (obj.isIOS()) {
       let META_QUEST = ActivityGamePlatforms2.ActivityGamePlatforms.IOS;
     } else {
-      if (tmp7Result.isMetaQuest()) {
-        META_QUEST = ActivityGamePlatforms2.ActivityGamePlatforms.META_QUEST;
-      } else {
-        const tmp7Result2 = utils_PlatformUtils;
-        const ActivityGamePlatforms = ActivityGamePlatforms2.ActivityGamePlatforms;
-        META_QUEST = utils_PlatformUtils.isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.DESKTOP;
-        const isAndroidResult = utils_PlatformUtils.isAndroid();
+      if (!tmp7Result.isMetaQuest()) {
+        if (!tmp7Result3.isOculusWeb()) {
+          const tmp7Result4 = utils_PlatformUtils;
+          const ActivityGamePlatforms = ActivityGamePlatforms2.ActivityGamePlatforms;
+          META_QUEST = utils_PlatformUtils.isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.DESKTOP;
+          const isAndroidResult = utils_PlatformUtils.isAndroid();
+        }
+        tmp7Result3 = utils_PlatformUtils;
       }
+      META_QUEST = ActivityGamePlatforms2.ActivityGamePlatforms.META_QUEST;
       tmp7Result = MetaQuestUtils;
     }
     let platform;
@@ -66,14 +68,16 @@ export function getCurrentActivityGamePlatform() {
   if (obj.isIOS()) {
     let META_QUEST = ActivityGamePlatforms2.ActivityGamePlatforms.IOS;
   } else {
-    if (tmpResult.isMetaQuest()) {
-      META_QUEST = ActivityGamePlatforms2.ActivityGamePlatforms.META_QUEST;
-    } else {
-      const tmpResult2 = utils_PlatformUtils;
-      const ActivityGamePlatforms = ActivityGamePlatforms2.ActivityGamePlatforms;
-      META_QUEST = utils_PlatformUtils.isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.DESKTOP;
-      const isAndroidResult = utils_PlatformUtils.isAndroid();
+    if (!tmpResult.isMetaQuest()) {
+      if (!tmpResult3.isOculusWeb()) {
+        const tmpResult4 = utils_PlatformUtils;
+        const ActivityGamePlatforms = ActivityGamePlatforms2.ActivityGamePlatforms;
+        META_QUEST = utils_PlatformUtils.isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.DESKTOP;
+        const isAndroidResult = utils_PlatformUtils.isAndroid();
+      }
+      tmpResult3 = utils_PlatformUtils;
     }
+    META_QUEST = ActivityGamePlatforms2.ActivityGamePlatforms.META_QUEST;
     tmpResult = MetaQuestUtils;
   }
   return META_QUEST;

@@ -15,7 +15,7 @@ const Constants = fn(1072);
 const EmojiIntention = fn(1391).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   container: { flex: 1 },
   list: { overflow: "hidden", flex: 1 },

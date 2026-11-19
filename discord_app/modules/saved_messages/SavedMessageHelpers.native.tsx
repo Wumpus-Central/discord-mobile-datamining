@@ -18,7 +18,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -90,12 +90,12 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
                     const intl5 = tmp9(1113).intl;
                     obj3.cancelText = intl5.string(closure_0(1113).t.ZGbTcy);
                     obj3.onCancel = function onCancel() {
-                      const SavedMessageSortTypes = displayToast(11640).SavedMessageSortTypes;
-                      return displayToast(11639).showForLaterModal(
+                      const SavedMessageSortTypes = displayToast(11618).SavedMessageSortTypes;
+                      return displayToast(11617).showForLaterModal(
                         closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK,
                       );
                     };
-                    closure_1(5768).show(obj3);
+                    closure_1(5739).show(obj3);
                     return null;
                   } else {
                     let message;
@@ -110,7 +110,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
                       message = intl.string(closure_0(1113).t.R0RpRX);
                     }
                     const obj = { text: message, variant: "critical" };
-                    closure_1(5505).open("SAVED_MESSAGE_CREATE_ERROR", obj);
+                    closure_1(5474).open("SAVED_MESSAGE_CREATE_ERROR", obj);
                     return null;
                   }
                 }),
@@ -175,7 +175,7 @@ let closure_9 = async function _removeSavedMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -282,7 +282,7 @@ let closure_9 = async function _removeSavedMessage(arg0) {
   }
 };
 const AbortCodes = fn(1072).AbortCodes;
-const SavedMessagesConstants = fn(11651);
+const SavedMessagesConstants = fn(11629);
 ({ SAVED_BOOKMARKS_MAX: closure_6, SAVED_REMINDERS_MAX: metroImportDefault } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");

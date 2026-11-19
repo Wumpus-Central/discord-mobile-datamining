@@ -113,11 +113,17 @@ const items = [
   dismissible_content.DismissibleContent.PINOT_MEMBER_SETTING_NEW_BADGE,
   dismissible_content.DismissibleContent.PINOT_MEMBER_COACHMARK,
   dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_STYLING_BADGE,
-  dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
   dismissible_content.DismissibleContent.HEXAGON_CAMPAIGN_PERKS_EXPIRED_PROMO_SHEET,
+  dismissible_content.DismissibleContent.VOICE_PANEL_STREAM_VOLUME_MOVED_NOTICE,
+  dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
   dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_AUTO_CLIPS_RECAP,
   dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_NITRO_TAB_CUE,
-  dismissible_content.DismissibleContent.VOICE_PANEL_STREAM_VOLUME_MOVED_NOTICE,
+  dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FREE_USER_CHAT_UPSELL,
+  dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RECEIVED_CLIP_NOTICE,
+  dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_SENT_MANUAL_CLIP_NOTICE,
+  dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_LAUNCH_ANNOUNCEMENT,
+  dismissible_content.DismissibleContent.ORB_WALLET_SHOP_CTA_CARD_MOBILE,
+  dismissible_content.DismissibleContent.ORB_WALLET_NITRO_UPSELL_CTA_CARD_MOBILE,
 ];
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");

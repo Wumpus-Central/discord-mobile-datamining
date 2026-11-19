@@ -16,12 +16,12 @@ const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const EmojiCategoryTypes = fn(6484).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6455).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: metroImportDefault, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   itemInner: null,
   fadedItem: { backgroundColor: nativeDefault.colors.ICON_TRANSPARENT },

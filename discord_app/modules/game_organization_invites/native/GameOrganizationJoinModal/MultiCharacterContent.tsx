@@ -15,12 +15,12 @@ export default function MultiCharacterContent(characters) {
   if (null == characters) {
     let tmp7 = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
   } else {
-    const obj = { characters, selectedCharacterId: tmp, onSelect: tmp2, noun: tmp3 };
+    const obj = { characters, selectedCharacterId: tmp, onSelect: tmp2, displayNoun: tmp3 };
     tmp7 = jsx(GameOrganizationCharacterListDefault, {
       characters,
       selectedCharacterId: tmp,
       onSelect: tmp2,
-      noun: tmp3,
+      displayNoun: tmp3,
     });
   }
   return tmp7;

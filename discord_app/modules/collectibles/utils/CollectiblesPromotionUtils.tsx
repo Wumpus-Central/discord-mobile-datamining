@@ -3,6 +3,7 @@ import StorefrontCollectiblesTypes from "../../storefront/collectibles/Storefron
 import CollectiblesSequencedOfferPromotionUtils from "CollectiblesSequencedOfferPromotionUtils.tsx";
 import CollectiblesCollectAndClaimPromotionUtils from "CollectiblesCollectAndClaimPromotionUtils.tsx";
 import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils.tsx";
+import CollectiblesCollectionSalePromotionUtils from "CollectiblesCollectionSalePromotionUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPromotionUtils.tsx");
@@ -32,6 +33,11 @@ export function getPromotionForCollectiblesProduct(selectedProduct, tenantMetada
       );
     } else if (StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
       return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(
+        selectedProduct,
+        tenantMetadata,
+      );
+    } else if (StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECTION_SALE === type) {
+      return CollectiblesCollectionSalePromotionUtils.getCollectionSalePromotionForCollectiblesProduct(
         selectedProduct,
         tenantMetadata,
       );

@@ -76,14 +76,14 @@ export function QuestEmbedPreview(questId) {
     const intl = tmp2(1113).intl;
     obj2.title = intl.string(tmp2(1113).t["habP/M"]);
     let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-    obj2.children = jsx(stateFromStores(9999), {
+    obj2.children = jsx(stateFromStores(9977), {
       rowGenerator: memo,
       message: memo1,
       horizontalOffset: 0,
       pointerEvents: "none",
     });
-    tmp6 = jsx(stateFromStores(16621), { title: null, children: null });
-    const tmp9 = stateFromStores(16621);
+    tmp6 = jsx(stateFromStores(16612), { title: null, children: null });
+    const tmp9 = stateFromStores(16612);
   }
   return tmp6;
 }

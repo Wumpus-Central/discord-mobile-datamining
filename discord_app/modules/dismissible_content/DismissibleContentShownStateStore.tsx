@@ -64,7 +64,7 @@ let closure_15 = async function _arbitrateCandidates(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -364,7 +364,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -571,7 +571,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4667).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4636).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -652,9 +652,9 @@ export function isStateInCooldown(shownFatigableCandidate) {
 }
 export function addCandidateContent(content) {
   closure_0 = content;
-  closure_1 = closure_0(4660).bypassesFatigue(content.content);
+  closure_1 = closure_0(4629).bypassesFatigue(content.content);
   dependencyMap = null;
-  let obj = closure_0(4660);
+  let obj = closure_0(4629);
   closure_0(1263).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};

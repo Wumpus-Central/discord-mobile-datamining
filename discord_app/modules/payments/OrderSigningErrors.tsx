@@ -1,6 +1,6 @@
 // discord_app/modules/payments/OrderSigningErrors.tsx
-import BillingErrorDefault from "../../errors/BillingError.tsx";
 import PaymentConstants from "PaymentConstants.tsx";
+import BillingErrorDefault from "../../errors/BillingError.tsx";
 import OrderConstants from "OrderConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

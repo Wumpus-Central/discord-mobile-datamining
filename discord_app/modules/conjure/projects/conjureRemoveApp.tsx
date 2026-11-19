@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/conjureRemoveApp.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4121 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4089 from "../intl/ConjureUntranslated.messages.js";
 import useChannelName from "../../channel/useChannelName.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import ConjureProjectTypes from "ConjureProjectTypes.tsx";
@@ -33,8 +33,8 @@ function readConjureRemoveTarget(project) {
   if (null != guild) {
     const id = guild.id;
     if (id === project.guild_id) {
-      let tmp3 = "in_server" === found(6866).readConjureAppServerPresence(project);
-      const obj = found(6866);
+      let tmp3 = "in_server" === found(6836).readConjureAppServerPresence(project);
+      const obj = found(6836);
     } else {
       tmp3 = "guild" === project.install_scope;
       if (tmp3) {
@@ -47,7 +47,7 @@ function readConjureRemoveTarget(project) {
       }
     }
     if (tmp3) {
-      const result = found(6866).findConjureAppChannels(guild.id, project.application_id);
+      const result = found(6836).findConjureAppChannels(guild.id, project.application_id);
       found = result.filter((item) => PermissionStore.can(constants.MANAGE_CHANNELS, item));
       const obj5 = {
         projectName: project.name,
@@ -90,14 +90,14 @@ function readConjureRemoveTarget(project) {
       obj5.channelNames = found.map(channelName);
       const found1 = result.filter((item) => !found.includes(item));
       obj5.keptChannelNames = found1.map(channelName);
-      const obj2 = found(6866);
-      const tmp7Result = found(6866);
-      obj5.canRemoveBot = tmp7Result.canRemoveConjureBot(guild, found(6866).conjureProductionBotUserId(project));
+      const obj2 = found(6836);
+      const tmp7Result = found(6836);
+      obj5.canRemoveBot = tmp7Result.canRemoveConjureBot(guild, found(6836).conjureProductionBotUserId(project));
       let canRemoveConjureBotResult = null == project.preview_application_id;
       if (!canRemoveConjureBotResult) {
-        const tmp7Result5 = tmp7(6866);
-        canRemoveConjureBotResult = tmp7Result5.canRemoveConjureBot(guild, tmp7(6866).conjurePreviewBotUserId(project));
-        const tmp7Result6 = tmp7(6866);
+        const tmp7Result5 = tmp7(6836);
+        canRemoveConjureBotResult = tmp7Result5.canRemoveConjureBot(guild, tmp7(6836).conjurePreviewBotUserId(project));
+        const tmp7Result6 = tmp7(6836);
       }
       obj5.canRemovePreviewBot = canRemoveConjureBotResult;
       return obj5;
@@ -109,7 +109,6 @@ function channelName(channel) {
   return useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
 }
 const Permissions = fn(1072).Permissions;
-let closure_13 = [];
 let items = [
   ConjureProjectStore,
   GuildStore,
@@ -121,7 +120,7 @@ let items = [
   UserStore,
   RelationshipStore,
 ];
-let closure_17 = [];
+let closure_16 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/conjureRemoveApp.tsx");
 
@@ -150,11 +149,11 @@ export function useConjureRemoveTarget(id) {
           const mapped = found.map((guildId) => {
             project = guildId;
             const obj = { guildId, botUserIds: null };
-            items = [project(6866).conjureProductionBotUserId(project)];
+            items = [project(dependencyMap[12]).conjureProductionBotUserId(project)];
             let result = null;
             if (guildId === project.guild_id) {
-              result = project(6866).conjurePreviewBotUserId(project);
-              const tmpResult = project(6866);
+              result = project(dependencyMap[12]).conjurePreviewBotUserId(project);
+              const tmpResult = project(dependencyMap[12]);
             }
             items[1] = result;
             obj.botUserIds = items.filter((item) => {
@@ -170,134 +169,7 @@ export function useConjureRemoveTarget(id) {
         }
         return found1;
       }
-      found1 = closure_17;
-    },
-    items1,
-    require("apply").isEqual,
-  );
-  closure_129_1 = stateFromStores;
-  const items2 = [stateFromStores];
-  const effect = noop.useEffect(() => {
-    const iter = dependencyMap[Symbol.iterator]();
-    while (iter !== undefined) {
-      ({ guildId, botUserIds } = nextResult);
-      let obj = GuildActionCreatorsDefault;
-      let membersById = obj.requestMembersById(guildId, botUserIds, false);
-      continue;
-    }
-    nextResult = iter.next();
-  }, items2);
-  const obj = require("initialize");
-  const items3 = [id];
-  return require("initialize").useStateFromStores(
-    items,
-    () => {
-      let project = null;
-      if (null != closure_0) {
-        project = ConjureProjectStore.getProject(tmp);
-      }
-      let tmp4 = null;
-      if (null != project) {
-        tmp4 = readConjureRemoveTarget(project);
-      }
-      return tmp4;
-    },
-    items3,
-    require("apply").isEqual,
-  );
-}
-export function readConjureViewedRemoveTarget(project, guildId) {
-  let tmp = null;
-  if (null != guildId) {
-    tmp = null;
-    if (guildId !== project.guild_id) {
-      tmp = readConjureRemoveTarget(project, guildId);
-    }
-  }
-  if (tmp == null) {
-    tmp = readConjureRemoveTarget(project);
-  }
-  return tmp;
-}
-export function useConjureViewedRemoveTarget(id, guildId) {
-  _require = id;
-  closure_1 = guildId;
-  items = [id, guildId];
-  return require("initialize").useStateFromStores(
-    items,
-    () => {
-      let project = null;
-      if (null != closure_0) {
-        project = ConjureProjectStore.getProject(tmp);
-      }
-      let tmp4 = null;
-      if (null != project) {
-        let tmp6 = null;
-        if (null != closure_1) {
-          tmp6 = null;
-          if (closure_1 !== project.guild_id) {
-            tmp6 = readConjureRemoveTarget(project, closure_1);
-          }
-        }
-        if (tmp6 == null) {
-          tmp6 = readConjureRemoveTarget(project);
-        }
-        tmp4 = tmp6;
-      }
-      return tmp4;
-    },
-    items,
-    require("apply").isEqual,
-  );
-}
-export function canRemoveConjureAppFromServer(conjureViewedRemoveTarget, arg1) {
-  return conjureViewedRemoveTarget.canRemoveBot || arg1;
-}
-export function useConjureProjectServers(projectId) {
-  _require = projectId;
-  closure_129_0 = projectId;
-  items = [ConjureProjectStore, ApplicationStore, GuildMemberStore, GuildStore];
-  const items1 = [projectId];
-  const stateFromStores = require("initialize").useStateFromStores(
-    items,
-    () => {
-      let project = null;
-      if (null != project) {
-        project = ConjureProjectStore.getProject(tmp);
-      }
-      if (null != project) {
-        if (null != project.guild_id) {
-          items = [project.guild_id];
-          let result = ConjureProjectTypes.conjureProjectServerIds(project);
-          HermesBuiltin.arraySpread(
-            result.filter((item) => item !== project.guild_id),
-            1,
-          );
-          const found = items.filter((item) => null != guild.getGuild(item));
-          const mapped = found.map((guildId) => {
-            project = guildId;
-            const obj = { guildId, botUserIds: null };
-            items = [project(6866).conjureProductionBotUserId(project)];
-            let result = null;
-            if (guildId === project.guild_id) {
-              result = project(6866).conjurePreviewBotUserId(project);
-              const tmpResult = project(6866);
-            }
-            items[1] = result;
-            obj.botUserIds = items.filter((item) => {
-              let tmp = null != item;
-              if (tmp) {
-                tmp = null == member.getMember(closure_0, item);
-              }
-              return tmp;
-            });
-            return obj;
-          });
-          let found1 = mapped.filter((botUserIds) => botUserIds.botUserIds.length > 0);
-        }
-        return found1;
-      }
-      found1 = closure_17;
+      found1 = closure_16;
     },
     items1,
     require("apply").isEqual,
@@ -315,76 +187,19 @@ export function useConjureProjectServers(projectId) {
     nextResult = iter.next();
   }, items2);
   let obj = require("initialize");
-  const items3 = [projectId];
+  const items3 = [id];
   return require("initialize").useStateFromStores(
     items,
     () => {
-      project = ConjureProjectStore.getProject(project);
-      if (null == project) {
-        let mapped = closure_13;
-      } else {
-        const result = ConjureProjectTypes.conjureProjectServerIds(project);
-        mapped = result.map((guildId) => {
-          guild = guild.getGuild(guildId);
-          let name;
-          if (guild != null) {
-            name = guild.name;
-          }
-          const obj = { guildId, guildName: null, isTestServer: null, removeTarget: null };
-          let stringResult = name;
-          if (name == null) {
-            const intl = project(1113).intl;
-            stringResult = intl.string(dependencyMap(4121)["6bhivN"]);
-          }
-          obj.guildName = stringResult;
-          let usesPreviewAppResult = guildId === project.guild_id;
-          if (usesPreviewAppResult) {
-            usesPreviewAppResult = project(6530).usesPreviewApp(project);
-            const obj2 = project(6530);
-          }
-          if (usesPreviewAppResult) {
-            usesPreviewAppResult = project(6530).conjureProjectServerIds(project).length > 1;
-            const obj3 = project(6530);
-          }
-          obj.isTestServer = usesPreviewAppResult;
-          let tmp13 = readConjureRemoveTarget(project, guildId);
-          if (tmp13 == null) {
-            let tmp20 = null;
-            if (null == name) {
-              const obj4 = {
-                projectName: project.name,
-                appName: null,
-                previewAppName: null,
-                guildId: null,
-                guildName: null,
-                channelNames: null,
-                keptChannelNames: null,
-                canRemoveBot: false,
-                canRemovePreviewBot: false,
-              };
-              application = application.getApplication(project.application_id);
-              let name1;
-              if (application != null) {
-                name1 = application.name;
-              }
-              if (name1 == null) {
-                name1 = project.name;
-              }
-              obj4.appName = name1;
-              obj4.guildId = guildId;
-              const intl2 = project(1113).intl;
-              obj4.guildName = intl2.string(dependencyMap(4121)["6bhivN"]);
-              obj4.channelNames = [];
-              obj4.keptChannelNames = [];
-              tmp20 = obj4;
-            }
-            tmp13 = tmp20;
-          }
-          obj.removeTarget = tmp13;
-          return obj;
-        });
+      let project = null;
+      if (null != closure_0) {
+        project = ConjureProjectStore.getProject(tmp);
       }
-      return mapped;
+      let tmp4 = null;
+      if (null != project) {
+        tmp4 = readConjureRemoveTarget(project);
+      }
+      return tmp4;
     },
     items3,
     require("apply").isEqual,
@@ -420,7 +235,7 @@ export function conjureDeleteProjectItems(target) {
         let obj2 = { channel: null, server: null };
         obj2.channel = tmp3;
         obj2.server = tmp;
-        combined = intl.formatToPlainString(_modDef4121.kCC2X2, obj2);
+        combined = intl.formatToPlainString(_modDef4089.kCC2X2, obj2);
       }
       obj.label = combined;
       let arr = items1.push(obj);
@@ -447,7 +262,7 @@ export function conjureRemoveAppKeptChannels(target) {
     const listFormat = new Intl.ListFormat(util.intl.currentLocale, { type: "conjunction" });
     const intl = util.intl;
     const obj = { channels: listFormat.format(keptChannelNames.map((item) => "#" + item)) };
-    return intl.formatToPlainString(_modDef4121.pE4Cec, obj);
+    return intl.formatToPlainString(_modDef4089.pE4Cec, obj);
   }
 }
 export function conjureTitleWithAppTag(arg0) {
@@ -464,7 +279,7 @@ export function conjureDeleteProjectBody(target) {
   const listFormat = new Intl.ListFormat(util.intl.currentLocale, { type: "conjunction" });
   const items1 = [guildName, ...items.map((guildName) => guildName.guildName)];
   obj.server = listFormat.format(items1);
-  return intl.formatToPlainString(_modDef4121["9CvVB9"], obj);
+  return intl.formatToPlainString(_modDef4089["9CvVB9"], obj);
 }
 export function isPublishedConjureUserApp(project, publishStatus) {
   let isConjureLiveResult = "user" === project.install_scope;

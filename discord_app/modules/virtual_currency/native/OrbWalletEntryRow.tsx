@@ -26,10 +26,10 @@ function OrbWalletEntryBadge(notificationType) {
   }
 }
 const View = fn(17).View;
-const constants = fn(14946).ClientUnreadNotificationType;
+const constants = fn(14932).ClientUnreadNotificationType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 },
   balance: null,

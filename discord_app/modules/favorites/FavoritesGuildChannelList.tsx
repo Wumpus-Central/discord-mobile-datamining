@@ -96,7 +96,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
   if (favoriteChannels == null) {
     favoriteChannels = FavoriteStore.getFavoriteChannels();
   }
-  new Set(favoriteChannels(11192).getAutoAddedThreadsCategoryIds(favoriteChannels));
+  new Set(favoriteChannels(11170).getAutoAddedThreadsCategoryIds(favoriteChannels));
   const isGuildCollapsedResult = UserGuildSettingsStore.isGuildCollapsed(id);
   dependencyMap = isGuildCollapsedResult;
   channel2 = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
@@ -275,8 +275,8 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined,
   });
-  let obj2 = favoriteChannels(11192);
-  const favoritesCategories = favoriteChannels(11180).getFavoritesCategories(favoriteChannels);
+  let obj2 = favoriteChannels(11170);
+  const favoritesCategories = favoriteChannels(11158).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -650,12 +650,12 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
   };
 }
-const ChannelRecord = fn(4676);
+const ChannelRecord = fn(4645);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: closure_10 } = ChannelRecord);
-let closure_19 = fn(4754).createFavoritesGuildChannelRecord;
-const FavoritesConstants = fn(4685);
+let closure_19 = fn(4723).createFavoritesGuildChannelRecord;
+const FavoritesConstants = fn(4654);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(8239).ChannelListChannelNoticeRow;
+const constants = fn(8208).ChannelListChannelNoticeRow;
 const Permissions = fn(1083).Permissions;
 let items = [
   EmbeddedActivitiesStore,

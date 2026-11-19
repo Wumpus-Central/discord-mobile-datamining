@@ -18,8 +18,8 @@ const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = 66 + nativeDefault.space.PX_16;
-let closure_8 = fn(11728).DOCK_TILE_SIZE / 56;
-const createStyles = fn(4823);
+let closure_8 = fn(11706).DOCK_TILE_SIZE / 56;
+const createStyles = fn(4792);
 let obj2 = {
   host: { position: "absolute", top: 0, left: 0, width: 0, height: 0, overflow: "visible" },
   indicator: null,

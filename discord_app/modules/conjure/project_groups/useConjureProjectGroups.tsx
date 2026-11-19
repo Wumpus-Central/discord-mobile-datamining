@@ -10,15 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 function getListedConjureProjects() {
-  const railProjects = ConjureProjectStore.getRailProjects();
-  const sharedWithMeProjects = ConjureProjectStore.getSharedWithMeProjects();
-  for (const item10019 of sharedWithMeProjects) {
-    if (!set.has(item10019.id)) {
-      let arr = railProjects.push(item10019);
-    }
-    continue;
-  }
-  return railProjects;
+  return ConjureProjectStore.getRailProjects();
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/project_groups/useConjureProjectGroups.tsx");

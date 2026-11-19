@@ -114,7 +114,7 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new fn(4750).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4719).SecondaryIndexMap(
   (saveData) => {
     items = [SavedMessagesTypes.SavedMessageSortTypes.ALL];
     if (null != saveData.saveData.dueAt) {
@@ -140,7 +140,7 @@ let closure_7 = 0;
 let set = new Set();
 const set1 = new Set();
 let nextBefore = null;
-let FAILED = fn(11640).BookmarksFetchState.LOADED_FINISHED;
+let FAILED = fn(11618).BookmarksFetchState.LOADED_FINISHED;
 let c12 = false;
 let c13 = null;
 const set2 = new Set();

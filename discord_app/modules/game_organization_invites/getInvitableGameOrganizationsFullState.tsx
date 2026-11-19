@@ -1,8 +1,7 @@
 // discord_app/modules/game_organization_invites/getInvitableGameOrganizationsFullState.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2555 from "GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2557 from "GameOrganizationInvitesUntranslated.messages.js";
 import isGameOrganizationFullDefault from "../game_organizations/isGameOrganizationFull.tsx";
-import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -32,32 +31,36 @@ export default function getInvitableGameOrganizationsFullState(arr) {
   return closure_4;
 }
 export function getGameOrganizationFullSubLabel(data) {
-  let tmp = stateFromStores;
+  let str = stateFromStores;
   if (stateFromStores === undefined) {
-    tmp = null;
+    str = null;
   }
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef2555.xuM052, {
-    orgName: data.name,
-    noun: getGameOrganizationDisplayNounDefault({ displayNoun: tmp, lowercase: true }),
-  });
+  const obj = { orgName: data.name, displayNoun: null };
+  if (str == null) {
+    str = "other";
+  }
+  obj.displayNoun = str;
+  return intl.formatToPlainString(_modDef2557.xuM052, obj);
 }
 export function getInvitableGameOrganizationsFullSubLabel(kind) {
   kind = kind.kind;
   if ("available" !== kind) {
     if ("single_full" === kind) {
-      let displayNoun = kind.displayNoun;
-      if (displayNoun === undefined) {
-        displayNoun = null;
+      let str2 = kind.displayNoun;
+      if (str2 === undefined) {
+        str2 = null;
       }
       const intl2 = util.intl;
-      const obj = { orgName: kind.organization.name, noun: null };
-      const obj2 = { displayNoun, lowercase: true };
-      obj.noun = getGameOrganizationDisplayNounDefault(obj2);
-      return intl2.formatToPlainString(_modDef2555.xuM052, obj);
+      const obj = { orgName: kind.organization.name, displayNoun: null };
+      if (str2 == null) {
+        str2 = "other";
+      }
+      obj.displayNoun = str2;
+      return intl2.formatToPlainString(_modDef2557.xuM052, obj);
     } else if ("all_full" === kind) {
       const intl = util.intl;
-      return intl.string(_modDef2555.bY80Jh);
+      return intl.string(_modDef2557.bY80Jh);
     }
   }
 }

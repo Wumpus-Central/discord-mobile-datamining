@@ -98,9 +98,9 @@ function OptionListSpacer(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
-let obj2 = { message: { paddingHorizontal: fn(12711).CONTENT_INSET }, description: null };
-let obj3 = { paddingHorizontal: fn(12711).CONTENT_INSET };
+const createStyles = fn(4792);
+let obj2 = { message: { paddingHorizontal: fn(12694).CONTENT_INSET }, description: null };
+let obj3 = { paddingHorizontal: fn(12694).CONTENT_INSET };
 obj2.description = { marginTop: nativeDefault.space.PX_4 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

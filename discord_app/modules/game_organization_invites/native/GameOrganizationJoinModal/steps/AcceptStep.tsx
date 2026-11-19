@@ -1,15 +1,24 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationJoinModal/steps/AcceptStep.tsx
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_6 = fn(11856).GameOrganizationInviteAcceptStatus;
-const onPress = fn(12194).closeGameOrganizationJoinModal;
+const View = fn(17).View;
+const GameOrganizationInviteConstants = fn(11834);
+({ GameOrganizationCharacterMode: metroImportDefault, GameOrganizationInviteAcceptStatus: closure_8 } =
+  GameOrganizationInviteConstants);
+const onPress = fn(12173).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4823);
-let closure_10 = createStyles.createStyles({ text: { textAlign: "center" }, buttonGroup: { paddingVertical: 0 } });
+({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4792);
+let obj2 = {
+  text: { textAlign: "center" },
+  buttonGroup: { paddingVertical: 0 },
+  divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE },
+};
+let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/game_organization_invites/native/GameOrganizationJoinModal/steps/AcceptStep.tsx",
@@ -19,11 +28,12 @@ export function AcceptStep(code) {
   code = code.code;
   let character = code.character;
   let navigation;
-  disabled = undefined;
-  _slicedToArray = undefined;
-  noop = async function _handleAcceptInvite() {
-    if (constants === 2) {
-      constants = 3;
+  closure_3 = undefined;
+  let disabled;
+  noop = undefined;
+  closure_6 = async function _handleAcceptInvite() {
+    if (c6 === 2) {
+      c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
@@ -32,17 +42,17 @@ export function AcceptStep(code) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
-        constants = 2;
+        c6 = 2;
         if (0 === c5) {
           if (arg0 === 1) {
-            constants = 3;
+            c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            constants = 3;
+            c6 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
@@ -50,36 +60,36 @@ export function AcceptStep(code) {
             closure_129_0 = undefined;
             closure_129_1 = undefined;
             closure_129_2 = undefined;
-            _slicedToArray(true);
+            noop(true);
             c4 = 2;
             let id;
             if (id != null) {
               id = id.id;
             }
             c5 = 3;
-            constants = 1;
-            const obj5 = { value: character(tmp4[10]).acceptGameOrganizationInvite(code, id), done: false };
+            c6 = 1;
+            const obj5 = { value: character(tmp4[12]).acceptGameOrganizationInvite(code, id), done: false };
             return obj5;
           }
         } else if (1 === tmp8) {
           c4 = 0;
-          closure_130_4(false);
+          closure_130_5(false);
           throw closure_3;
         } else {
           if (2 === tmp8) {
             c4 = 1;
             const obj7 = { text: null };
-            const intl = character(tmp4[14]).intl;
-            obj7.text = intl.string(character(tmp4[14]).t.fEptJP);
-            character(tmp4[13]).open("GAME_ORGANIZATION_INVITE_ACCEPT_ERROR", obj7);
+            const intl = character(tmp4[16]).intl;
+            obj7.text = intl.string(character(tmp4[16]).t.fEptJP);
+            character(tmp4[15]).open("GAME_ORGANIZATION_INVITE_ACCEPT_ERROR", obj7);
             c4 = 0;
-            closure_130_4(false);
-            constants = 3;
-            const obj4 = character(tmp4[13]);
+            closure_130_5(false);
+            c6 = 3;
+            const obj4 = character(tmp4[15]);
           } else {
             if (3 === tmp8) {
               if (arg0 === 1) {
-                constants = 3;
+                c6 = 3;
                 throw value;
               } else if (arg0 !== 2) {
                 closure_129_0 = value;
@@ -98,21 +108,21 @@ export function AcceptStep(code) {
                 closure_129_2 = obj8;
                 if (closure_129_1 === constants.JOINED) {
                   onPress();
-                  character(tmp4[11])(closure_130_0, closure_129_2);
+                  character(tmp4[13])(closure_130_0, closure_129_2);
                 } else {
                   c5 = 4;
-                  constants = 1;
-                  const obj9 = { value: character(tmp4[12])(closure_130_0, closure_129_2), done: false };
+                  c6 = 1;
+                  const obj9 = { value: character(tmp4[14])(closure_130_0, closure_129_2), done: false };
                   return obj9;
                 }
               }
             } else if (arg0 === 1) {
-              constants = 3;
+              c6 = 3;
               throw value;
             } else if (arg0 === 2) {
               c4 = 0;
-              closure_130_4(false);
-              constants = 3;
+              closure_130_5(false);
+              c6 = 3;
               const obj = { value, done: true };
               return obj;
             } else {
@@ -121,15 +131,15 @@ export function AcceptStep(code) {
             c4 = 1;
           }
           c4 = 0;
-          closure_130_4(false);
-          constants = 3;
+          closure_130_5(false);
+          c6 = 3;
           const obj10 = { value, done: true };
           return obj10;
         }
       } catch (tmp59) {
         closure_3 = tmp59;
         if (tmp5 === c4) {
-          constants = tmp3;
+          c6 = tmp3;
           throw tmp59;
         } else if (tmp2 === tmp61) {
           c5 = tmp2;
@@ -139,68 +149,109 @@ export function AcceptStep(code) {
       }
     }
   };
-  const tmp = closure_10();
-  const tmp4 = character(navigation[7])(code);
-  navigation = code(navigation[8]).useNavigation();
-  [disabled, _slicedToArray] = noop.useState(false);
-  items = [navigation, disabled];
+  const tmp = closure_13();
+  const tmp4 = character(navigation[9])(code);
+  navigation = code(navigation[10]).useNavigation();
+  let characterMode;
+  if (tmp4 != null) {
+    characterMode = tmp4.characterMode;
+  }
+  closure_3 = tmp8;
+  const tmp9 = disabled(noop.useState(false), 2);
+  disabled = tmp9[0];
+  noop = tmp9[1];
+  items = [navigation, disabled, characterMode === constants.SINGLE];
   const layoutEffect = noop.useLayoutEffect(() => {
-    const headerBackButton = code(navigation[9]).getHeaderBackButton(undefined, first);
+    let obj = code(navigation[11]);
+    if (closure_3) {
+      let headerCloseButton = obj.getHeaderCloseButton(() => {
+        if (!first) {
+          onPress();
+        }
+      });
+    } else {
+      headerCloseButton = obj.getHeaderBackButton(undefined, first);
+    }
     navigation.setOptions({
       headerLeft(arg0) {
         const obj = {};
         const merged = Object.assign(arg0);
         obj.disabled = disabled;
-        return closure_0(obj);
+        return headerCloseButton(obj);
       },
       gestureEnabled: !first,
     });
+    const obj2 = {
+      headerLeft(arg0) {
+        const obj = {};
+        const merged = Object.assign(arg0);
+        obj.disabled = disabled;
+        return headerCloseButton(obj);
+      },
+      gestureEnabled: !first,
+    };
   }, items);
   if (null == tmp4) {
     return null;
   } else {
     const displayNoun = tmp4.displayNoun;
-    let obj2 = { spacing: tmp2(tmp3[18]).space.PX_48, children: null };
-    let obj3 = { spacing: tmp2(tmp3[18]).space.PX_24, children: null };
-    let obj4 = { variant: "heading-lg/semibold", style: tmp.text, children: null };
-    const intl4 = tmp5(tmp3[14]).intl;
+    let obj2 = { spacing: tmp2(tmp3[8]).space.PX_32, children: null };
+    let tmp17Result = tmp8;
+    if (tmp8) {
+      let obj3 = { children: null };
+      let obj4 = { invite: tmp4 };
+      const items1 = [closure_10(tmp2(tmp3[20]), obj4)];
+      let obj5 = { style: tmp.divider };
+      items1[1] = closure_10(closure_6, obj5);
+      obj3.children = items1;
+      tmp17Result = closure_12(closure_11, obj3);
+    }
+    const items2 = [tmp17Result];
+    const obj6 = { spacing: tmp2(tmp3[8]).space.PX_48, children: null };
+    let obj7 = { spacing: tmp2(tmp3[8]).space.PX_24, children: null };
+    let obj8 = { variant: "heading-lg/semibold", style: tmp.text, children: null };
+    let intl = tmp5(tmp3[16]).intl;
     let str = displayNoun;
     if (displayNoun == null) {
       str = "other";
     }
-    let obj5 = { children: null };
-    const obj6 = { children: null };
-    let obj7 = { displayNoun: str };
-    obj4.children = intl4.formatToPlainString(tmp2(tmp3[20]).WmxMAI, obj7);
-    const items1 = [closure_8(tmp5(tmp3[19]).Text, obj4)];
-    let obj8 = { linkedGuild: tmp4.linkedGuild };
-    items1[1] = closure_8(tmp2(tmp3[21]), obj8);
-    obj3.children = items1;
-    const items2 = [closure_9(tmp5(tmp3[17]).Stack, obj3)];
-    let obj9 = { spacing: tmp2(tmp3[18]).space.PX_24, children: null };
-    let obj10 = { variant: "heading-lg/semibold", children: null };
-    let intl = tmp5(tmp3[14]).intl;
-    obj10.children = intl.string(tmp2(tmp3[20]).yFqGy8);
-    const items3 = [closure_8(tmp5(tmp3[19]).Text, obj10)];
-    const obj11 = { noun: null };
-    const obj12 = { displayNoun, lowercase: true };
-    obj11.noun = tmp2(tmp3[23])(obj12);
-    items3[1] = closure_8(tmp2(tmp3[22]), obj11);
-    obj9.children = items3;
-    items2[1] = closure_9(tmp5(tmp3[17]).Stack, obj9);
-    obj2.children = items2;
-    obj6.children = closure_9(tmp5(tmp3[17]).Stack, obj2);
-    const items4 = [closure_8(tmp5(tmp3[16]).ModalContent, obj6)];
+    let obj9 = { displayNoun: str };
+    obj8.children = intl.formatToPlainString(tmp2(tmp3[22]).WmxMAI, obj9);
+    const items3 = [closure_10(tmp5(tmp3[21]).Text, obj8)];
+    let obj10 = { linkedGuild: tmp4.linkedGuild };
+    items3[1] = closure_10(tmp2(tmp3[23]), obj10);
+    obj7.children = items3;
+    const items4 = [closure_12(tmp5(tmp3[19]).Stack, obj7)];
+    const obj11 = { spacing: tmp2(tmp3[8]).space.PX_24, children: null };
+    let tmp18Result = !tmp8;
+    if (!tmp8) {
+      const obj12 = { variant: "heading-lg/semibold", children: null };
+      const intl2 = tmp5(tmp3[16]).intl;
+      obj12.children = intl2.string(tmp2(tmp3[22]).yFqGy8);
+      tmp18Result = closure_10(tmp5(tmp3[21]).Text, obj12);
+    }
     const obj13 = { children: null };
-    const obj14 = { style: tmp.buttonGroup, children: null };
-    const obj15 = { text: null, size: "lg", loading: null, disabled: null, onPress: null };
-    const intl2 = tmp5(tmp3[14]).intl;
-    obj15.text = intl2.string(tmp2(tmp3[20]).BaZ6nt);
-    obj15.loading = disabled;
-    obj15.disabled = disabled;
-    obj15.onPress = function handleAcceptInvite() {
+    const obj14 = { children: null };
+    const items5 = [tmp18Result];
+    const obj15 = { displayNoun };
+    items5[1] = closure_10(tmp2(tmp3[24]), obj15);
+    obj11.children = items5;
+    items4[1] = closure_12(tmp5(tmp3[19]).Stack, obj11);
+    obj6.children = items4;
+    items2[1] = closure_12(tmp5(tmp3[19]).Stack, obj6);
+    obj2.children = items2;
+    obj14.children = closure_12(tmp5(tmp3[19]).Stack, obj2);
+    const items6 = [closure_10(tmp5(tmp3[18]).ModalContent, obj14)];
+    const obj16 = { children: null };
+    const obj17 = { style: tmp.buttonGroup, children: null };
+    const obj18 = { text: null, size: "lg", loading: null, disabled: null, onPress: null };
+    const intl3 = tmp5(tmp3[16]).intl;
+    obj18.text = intl3.string(tmp2(tmp3[22]).BaZ6nt);
+    obj18.loading = disabled;
+    obj18.disabled = disabled;
+    obj18.onPress = function handleAcceptInvite() {
       const self = this;
-      const apply = closure_5.apply;
+      const apply = closure_6.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -208,18 +259,18 @@ export function AcceptStep(code) {
       }
       return applyArgumentsResult;
     };
-    const items5 = [closure_8(tmp5(tmp3[26]).Button, obj15)];
-    const obj16 = { text: null, size: "lg", variant: "secondary", onPress: null, disabled: null };
-    const intl3 = tmp5(tmp3[14]).intl;
-    obj16.text = intl3.string(tmp5(tmp3[14]).t["ETE/oC"]);
-    obj16.onPress = onPress;
-    obj16.disabled = disabled;
-    items5[1] = closure_8(tmp5(tmp3[26]).Button, obj16);
-    obj14.children = items5;
-    obj13.children = closure_9(tmp5(tmp3[25]).ButtonGroup, obj14);
-    items4[1] = closure_8(tmp5(tmp3[24]).ModalFooter, obj13);
-    obj5.children = items4;
-    return closure_9(tmp5(tmp3[15]).ModalScreen, obj5);
+    const items7 = [closure_10(tmp5(tmp3[27]).Button, obj18)];
+    const obj19 = { text: null, size: "lg", variant: "secondary", onPress: null, disabled: null };
+    const intl4 = tmp5(tmp3[16]).intl;
+    obj19.text = intl4.string(tmp5(tmp3[16]).t["ETE/oC"]);
+    obj19.onPress = onPress;
+    obj19.disabled = disabled;
+    items7[1] = closure_10(tmp5(tmp3[27]).Button, obj19);
+    obj17.children = items7;
+    obj16.children = closure_12(tmp5(tmp3[26]).ButtonGroup, obj17);
+    items6[1] = closure_10(tmp5(tmp3[25]).ModalFooter, obj16);
+    obj13.children = items6;
+    return closure_12(tmp5(tmp3[17]).ModalScreen, obj13);
   }
-  let obj = code(navigation[8]);
+  let obj = code(navigation[10]);
 }

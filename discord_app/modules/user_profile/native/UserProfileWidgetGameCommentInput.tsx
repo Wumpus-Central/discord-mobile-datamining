@@ -8,7 +8,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(7981).TrackUserProfileEditActions;
+let closure_6 = fn(7950).TrackUserProfileEditActions;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetGameCommentInput.tsx");

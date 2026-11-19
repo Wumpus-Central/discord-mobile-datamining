@@ -2,6 +2,7 @@
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import MarketingSurfaceType from "../../../../../../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx";
+import GiftingPromotionPlanEligibility from "GiftingPromotionPlanEligibility.tsx";
 import GiftPromotionReminderExperiment2 from "../../experiments/GiftPromotionReminderExperiment.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -10,7 +11,6 @@ import PromotionsStore from "../../../promotions/PromotionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SubscriptionPlans = fn(1390).SubscriptionPlans;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
@@ -50,41 +50,18 @@ export function getRewardAssetIdMap(arr) {
   const item = arr.forEach((skuId) => map.set(skuId.skuId, skuId.assetId));
   return map;
 }
-export function useShouldShowSelectFreeSkuStep(id, arg1, arg2) {
-  items = [, ,];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
-  id = undefined;
-  if (id != null) {
-    id = id.id;
-  }
-  let tmp3 = null != arg2;
-  const hasItem = items.includes(id);
-  if (tmp3) {
-    tmp3 = arg2.length >= 1;
-  }
-  let tmp4 = arg1;
-  if (arg1) {
-    tmp4 = hasItem;
-  }
-  if (tmp4) {
-    tmp4 = tmp3;
-  }
-  return tmp4;
-}
 export function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
-  items = [, ,];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
     id = id.id;
   }
   let tmp3 = null != arg2;
-  const hasItem = items.includes(id);
+  const result = GiftingPromotionPlanEligibility.isPlanEligibleForGiftingPromotion(id);
   if (tmp3) {
     tmp3 = 1 === arg2.length;
   }
   if (tmp3) {
-    tmp3 = hasItem;
+    tmp3 = result;
   }
   if (tmp3) {
     tmp3 = arg1;
@@ -92,13 +69,11 @@ export function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
   return tmp3;
 }
 export function useIsPlanEligibleForGiftingPromotion(id) {
-  items = [, ,];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
     id = id.id;
   }
-  return items.includes(id);
+  return GiftingPromotionPlanEligibility.isPlanEligibleForGiftingPromotion(id);
 }
 export function createGradientStyle(gradient, arg1) {
   if (null != gradient) {

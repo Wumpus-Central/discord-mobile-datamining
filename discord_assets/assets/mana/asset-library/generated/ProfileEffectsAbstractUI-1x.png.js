@@ -1,0 +1,9 @@
+// discord_assets/assets/mana/asset-library/generated/ProfileEffectsAbstractUI-1x.png.js
+import size from "../../../../../_runtime/metro/00002__.js";
+
+const result = size.fileFinishedImporting(
+  "../discord_assets/assets/mana/asset-library/generated/ProfileEffectsAbstractUI-1x.png.js",
+);
+
+export default "https://cdn.discordapp.com/assets/content/eeff611f232019ce2ef3b40921932b5f64c793b9160a848273dacbdbdab5e01a.png";
+export const metadata = { fileBytes: 52947 };

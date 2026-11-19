@@ -14,7 +14,7 @@ const SubscriptionIntervalTypes = fn(1390).SubscriptionIntervalTypes;
 const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   disclaimer: { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 },
   title: null,
@@ -37,10 +37,10 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp = closure_11();
-  const nativeGiftContext = giftCodeRecord(9371).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(9348).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj = giftCodeRecord(9371);
-  const giftCodeURL = giftCodeRecord(6255).getGiftCodeURL(giftCodeRecord.code);
+  let obj = giftCodeRecord(9348);
+  const giftCodeURL = giftCodeRecord(6226).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
   }
@@ -50,7 +50,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     subscriptionPlanId = tmp2(2174).getPlanIdForPremiumType(premiumType, planInterval);
     const tmp2Result = tmp2(2174);
   }
-  let obj2 = giftCodeRecord(6255);
+  let obj2 = giftCodeRecord(6226);
   const tmp6 = giftCodeURL;
   const tierDisplayNameByPlanId = giftCodeURL(2174).getTierDisplayNameByPlanId(subscriptionPlanId);
   const obj4 = giftCodeURL(2174);
@@ -64,12 +64,12 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     ClipboardUtils.copy(giftCodeURL);
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj3.children = closure_8(giftCodeURL(9517), { giftStyle });
+  obj3.children = closure_8(giftCodeURL(9496), { giftStyle });
   const items1 = [closure_8(View, obj3), , , ,];
   const obj6 = { style: tmp.title, variant: "heading-lg/semibold", children: null };
   const intl = tmp2(1113).intl;
   obj6.children = intl.string(giftCodeRecord(1113).t["/s1xR7"]);
-  items1[1] = closure_8(giftCodeRecord(5414).Text, obj6);
+  items1[1] = closure_8(giftCodeRecord(5383).Text, obj6);
   const obj7 = { style: tmp.description, variant: "body-md/medium", children: null };
   const intl2 = tmp2(1113).intl;
   if (obj5.getInterval(subscriptionPlanId).intervalType === SubscriptionIntervalTypes.YEAR) {
@@ -79,16 +79,16 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   }
   const obj8 = { children: null };
   obj7.children = intl2.format(bUdTqI, { intervalCount: 1, name: tierDisplayNameByPlanId });
-  items1[2] = closure_8(giftCodeRecord(5414).Text, obj7);
+  items1[2] = closure_8(giftCodeRecord(5383).Text, obj7);
   const obj9 = { style: tmp.input, children: null };
   const obj10 = { style: tmp.inputLabel, variant: "heading-sm/semibold", children: null };
   const intl3 = tmp2(1113).intl;
   obj10.children = intl3.string(giftCodeRecord(1113).t["qS+yMo"]);
-  const items2 = [closure_8(giftCodeRecord(5414).Text, obj10)];
+  const items2 = [closure_8(giftCodeRecord(5383).Text, obj10)];
   obj5 = giftCodeURL(2174);
-  items2[1] = closure_8(giftCodeRecord(7511).InputButton, {
+  items2[1] = closure_8(giftCodeRecord(7481).InputButton, {
     text: giftCodeURL,
-    icon: tmp6(5524),
+    icon: tmp6(5493),
     iconPosition: "end",
     onPress: callback,
   });
@@ -97,7 +97,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   const obj12 = { style: tmp.disclaimer, variant: "body-xs/normal", children: null };
   const intl4 = tmp2(1113).intl;
   obj12.children = intl4.string(giftCodeRecord(1113).t.As9eLl);
-  items1[4] = closure_8(giftCodeRecord(5414).Text, obj12);
+  items1[4] = closure_8(giftCodeRecord(5383).Text, obj12);
   obj8.children = items1;
   return closure_10(closure_9, obj8);
 }

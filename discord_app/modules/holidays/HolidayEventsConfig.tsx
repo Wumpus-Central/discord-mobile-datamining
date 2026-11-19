@@ -1,9 +1,9 @@
 // discord_app/modules/holidays/HolidayEventsConfig.tsx
 import HolidayRingtoneExperimentDefault from "HolidayRingtoneExperiment.tsx";
-import _modDef19586 from "../../../_runtime/metro/19586__.js";
-import _modDef19587 from "../../../_runtime/metro/19587__.js";
-import _modDef19588 from "../../../_runtime/metro/19588__.js";
-import _modDef19589 from "../../../_runtime/metro/19589__.js";
+import _modDef19582 from "../../../_runtime/metro/19582__.js";
+import _modDef19583 from "../../../_runtime/metro/19583__.js";
+import _modDef19584 from "../../../_runtime/metro/19584__.js";
+import _modDef19585 from "../../../_runtime/metro/19585__.js";
 
 const obj = {
   experiment: HolidayRingtoneExperimentDefault,
@@ -16,10 +16,10 @@ const obj = {
   startTimeMs: 1797267600000,
   endTimeMs: 1799082000000,
   isDesktopOnly: true,
-  soundpack: fn(10845).Soundpacks.WINTER_HOLIDAY,
+  soundpack: fn(10823).Soundpacks.WINTER_HOLIDAY,
   soundpackLabel: fn(1113).t.Z5OQNp,
-  appSpinnerSources: { movDark: _modDef19586, movLight: _modDef19587, webmDark: _modDef19588, webmLight: _modDef19589 },
-  coachmarkDismissibleContent: fn(4656).DismissibleContent.HOLIDAY_COACHMARK_WINTER_2026,
+  appSpinnerSources: { movDark: _modDef19582, movLight: _modDef19583, webmDark: _modDef19584, webmLight: _modDef19585 },
+  coachmarkDismissibleContent: fn(4625).DismissibleContent.HOLIDAY_COACHMARK_WINTER_2026,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsConfig.tsx");

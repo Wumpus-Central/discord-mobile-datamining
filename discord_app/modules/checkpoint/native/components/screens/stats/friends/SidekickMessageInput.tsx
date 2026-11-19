@@ -12,13 +12,13 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_6, Pressable: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 ({ CHECKPOINT_CONTROL_ICON_SIZE, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   messageInputContainer: null,
   messageInputContainerLarge: null,
@@ -72,7 +72,7 @@ export default function SidekickMessageInput(user) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -143,7 +143,7 @@ export default function SidekickMessageInput(user) {
   [tmp7, c3] = str2(noop.useState(false), 2);
   const size = useWindowDimensionsDefault({ ignoreKeyboard: true });
   const bound = Math.min(size.width, size.height);
-  let messageInputContainerLarge = bound > user(5003).WINDOW_SIZE_THRESHOLD_LARGE;
+  let messageInputContainerLarge = bound > user(4972).WINDOW_SIZE_THRESHOLD_LARGE;
   str2 = undefined;
   const tmp6 = str2(noop.useState(false), 2);
   if (str != null) {
@@ -221,7 +221,7 @@ export default function SidekickMessageInput(user) {
     const intl2 = tmp10(1113).intl;
     obj5.accessibilityLabel = intl2.string(tmp10(1113).t.Ve9Ge6);
     let obj6 = { size: "custom", color: CHECKPOINT_PRIMARY, style: tmp.messageInputIcon };
-    obj5.children = closure_11(tmp10(12393).GiftIcon, obj6);
+    obj5.children = closure_11(tmp10(12376).GiftIcon, obj6);
     const items3 = [closure_11(closure_7, obj5)];
     const obj7 = {
       onPress: function handleSend() {
@@ -254,7 +254,7 @@ export default function SidekickMessageInput(user) {
     const obj8 = { disabled: !tmp12 };
     obj7.accessibilityState = obj8;
     const obj9 = { size: "custom", color: CHECKPOINT_PRIMARY, style: tmp.messageInputIcon };
-    obj7.children = closure_11(tmp10(5521).SendMessageIcon, obj9);
+    obj7.children = closure_11(tmp10(5490).SendMessageIcon, obj9);
     items3[1] = closure_11(closure_7, obj7);
     obj4.children = items3;
     items1[1] = closure_12(closure_8, obj4);

@@ -1,28 +1,50 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../../design/tokens/native/useToken.tsx";
-import QuestHooks from "../QuestHooks.native.tsx";
-import QuestDockCreativeContext from "QuestDockCreativeContext.tsx";
+import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const expandedHeight = fn(16538).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const QuestsExperimentLocations = fn(6437).QuestsExperimentLocations;
+const expandedHeight = fn(16529).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");
 
 export default noop.memo(function QuestDockUnenrolledBackground() {
-  const questDockQuest = QuestDockCreativeContext.useQuestDockQuest();
-  const questDockHeroAsset = QuestHooks.useQuestDockHeroAsset(questDockQuest);
+  const questDockQuest = handleAcceptQuest(16562).useQuestDockQuest();
+  const obj = handleAcceptQuest(16562);
+  const questDockHeroAsset = handleAcceptQuest(16524).useQuestDockHeroAsset(questDockQuest);
   ({ videoAsset, staticUrl } = questDockHeroAsset);
-  const token = useToken.useToken(nativeDefault.colors.CARD_BACKGROUND_DEFAULT);
-  const obj4 = { expandedHeight, imageUrl: staticUrl, videoUrl: null, videoMimetype: null, gradientBaseColor: null };
+  const obj2 = handleAcceptQuest(16524);
+  const token = handleAcceptQuest(5356).useToken(nativeDefault.colors.CARD_BACKGROUND_DEFAULT);
+  const QuestBarStartQuestOnClickExperiment = handleAcceptQuest(16643).QuestBarStartQuestOnClickExperiment;
+  let isEnrolling = QuestBarStartQuestOnClickExperiment.useConfig({
+    location: QuestsExperimentLocations.QUESTS_BAR_MOBILE,
+  }).enabled;
+  const obj3 = handleAcceptQuest(5356);
+  const obj4 = { location: QuestsExperimentLocations.QUESTS_BAR_MOBILE };
+  const questDockAcceptQuest = handleAcceptQuest(16640).useQuestDockAcceptQuest();
+  handleAcceptQuest = questDockAcceptQuest.handleAcceptQuest;
+  items = [handleAcceptQuest];
+  const callback = noop.useCallback(() => {
+    handleAcceptQuest(AnalyticsTypes.QuestContentCTA.QUEST_BAR_HERO);
+  }, items);
+  const obj6 = {
+    expandedHeight,
+    imageUrl: staticUrl,
+    videoUrl: null,
+    videoMimetype: null,
+    gradientBaseColor: null,
+    onPress: null,
+    disabled: null,
+  };
   let url;
+  const obj5 = handleAcceptQuest(16640);
   if (videoAsset != null) {
     url = videoAsset.url;
   }
-  obj4.videoUrl = url;
+  obj6.videoUrl = url;
   let mimetype;
   if (videoAsset != null) {
     mimetype = videoAsset.mimetype;
@@ -30,13 +52,24 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
   if (mimetype == null) {
     mimetype = null;
   }
-  obj4.videoMimetype = mimetype;
-  obj4.gradientBaseColor = token;
+  obj6.videoMimetype = mimetype;
+  obj6.gradientBaseColor = token;
+  let tmp10;
+  if (isEnrolling) {
+    tmp10 = callback;
+  }
+  obj6.onPress = tmp10;
+  if (isEnrolling) {
+    isEnrolling = questDockAcceptQuest.isEnrolling;
+  }
+  obj6.disabled = isEnrolling;
   return jsx(QuestDockVideoBackgroundDefault, {
     expandedHeight,
     imageUrl: staticUrl,
     videoUrl: null,
     videoMimetype: null,
     gradientBaseColor: null,
+    onPress: null,
+    disabled: null,
   });
 });

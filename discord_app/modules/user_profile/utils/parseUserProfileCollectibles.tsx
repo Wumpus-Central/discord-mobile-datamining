@@ -12,7 +12,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles1 = collectibles.collectibles;
   }
   if (null == collectibles1) {
-    return { collectibles: "Array", profileEffect: "channelId", profileFrame: "useRef" };
+    return { collectibles: "ip", profileEffect: "isArray", profileFrame: "isArray" };
   } else {
     items = [];
     collectibles = collectibles.collectibles;

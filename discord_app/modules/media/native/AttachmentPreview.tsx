@@ -6,20 +6,20 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef11154 from "../../../../_runtime/metro/11154__.js";
-import _modDef11155 from "../../../../_runtime/metro/11155__.js";
-import _modDef11156 from "../../../../_runtime/metro/11156__.js";
-import _modDef11157 from "../../../../_runtime/metro/11157__.js";
-import _modDef11158 from "../../../../_runtime/metro/11158__.js";
-import _modDef11159 from "../../../../_runtime/metro/11159__.js";
-import _modDef11160 from "../../../../_runtime/metro/11160__.js";
-import _modDef11161 from "../../../../_runtime/metro/11161__.js";
-import _modDef11162 from "../../../../_runtime/metro/11162__.js";
-import _modDef11163 from "../../../../_runtime/metro/11163__.js";
-import _modDef11164 from "../../../../_runtime/metro/11164__.js";
-import _modDef11165 from "../../../../_runtime/metro/11165__.js";
-import _modDef11166 from "../../../../_runtime/metro/11166__.js";
-import _modDef11167 from "../../../../_runtime/metro/11167__.js";
+import _modDef11132 from "../../../../_runtime/metro/11132__.js";
+import _modDef11133 from "../../../../_runtime/metro/11133__.js";
+import _modDef11134 from "../../../../_runtime/metro/11134__.js";
+import _modDef11135 from "../../../../_runtime/metro/11135__.js";
+import _modDef11136 from "../../../../_runtime/metro/11136__.js";
+import _modDef11137 from "../../../../_runtime/metro/11137__.js";
+import _modDef11138 from "../../../../_runtime/metro/11138__.js";
+import _modDef11139 from "../../../../_runtime/metro/11139__.js";
+import _modDef11140 from "../../../../_runtime/metro/11140__.js";
+import _modDef11141 from "../../../../_runtime/metro/11141__.js";
+import _modDef11142 from "../../../../_runtime/metro/11142__.js";
+import _modDef11143 from "../../../../_runtime/metro/11143__.js";
+import _modDef11144 from "../../../../_runtime/metro/11144__.js";
+import _modDef11145 from "../../../../_runtime/metro/11145__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -37,7 +37,7 @@ class AttachmentIcon {
       }
       let tmp2 = obj4[obj.classifyFileName(obj, str)];
       if (tmp2 == null) {
-        tmp2 = _modDef11165;
+        tmp2 = _modDef11143;
       }
       return tmp2;
     }, items);
@@ -102,7 +102,7 @@ function DefaultAttachmentPreview(fileName) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   fileInfoAttachmentPreviewFile: {
     flexDirection: "row",
@@ -128,20 +128,20 @@ let obj = {
 };
 const metroImportDefault = createStyles.createStyles(obj);
 let obj4 = {
-  archive: _modDef11154,
-  acrobat: _modDef11155,
-  ae: _modDef11156,
-  ai: _modDef11157,
-  audio: _modDef11158,
-  code: _modDef11159,
-  document: _modDef11160,
-  image: _modDef11161,
-  photoshop: _modDef11162,
-  sketch: _modDef11163,
-  spreadsheet: _modDef11164,
-  unknown: _modDef11165,
-  video: _modDef11166,
-  webcode: _modDef11167,
+  archive: _modDef11132,
+  acrobat: _modDef11133,
+  ae: _modDef11134,
+  ai: _modDef11135,
+  audio: _modDef11136,
+  code: _modDef11137,
+  document: _modDef11138,
+  image: _modDef11139,
+  photoshop: _modDef11140,
+  sketch: _modDef11141,
+  spreadsheet: _modDef11142,
+  unknown: _modDef11143,
+  video: _modDef11144,
+  webcode: _modDef11145,
 };
 let closure_12 = noop.memo(function ImageThumbnail(borderRadius) {
   ({ uri, width, height, style, fileName } = borderRadius);
@@ -263,7 +263,7 @@ export default function AttachmentPreview(height) {
       const obj8 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj8.style = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(9719).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(9698).CirclePlayIcon;
       tmp6 = hasOwnProperty(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj8.children = tmp6;
       items[1] = hasOwnProperty(View, obj8);

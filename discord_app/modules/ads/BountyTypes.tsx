@@ -4,11 +4,11 @@ import AssetUtils from "../quests/lib/AssetUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
-function videoRenditionsFromServer(video_renditions) {
-  if (null != video_renditions) {
+function videoRenditionsFromServer(video_preview_renditions) {
+  if (null != video_preview_renditions) {
     const obj = {};
     const _Object = Object;
-    const entries = Object.entries(video_renditions);
+    const entries = Object.entries(video_preview_renditions);
     const tmp4 = entries[Symbol.iterator]();
     while (tmp4 !== undefined) {
       let tmp9 = _slicedToArray(tmp6, 2);
@@ -62,6 +62,7 @@ export function bountyFromServer(creative_content) {
     imagePreview: null,
     videoHls: null,
     videoRenditions: null,
+    videoPreviewRenditions: null,
     cta: null,
     rewardTimerSeconds: null,
     videoDurationSeconds: null,
@@ -70,6 +71,7 @@ export function bountyFromServer(creative_content) {
   obj.imagePreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
   obj.videoHls = AssetUtils.resolveAdCreativeCdnUrl(creative_content.video_hls);
   obj.videoRenditions = videoRenditionsFromServer(creative_content.video_renditions);
+  obj.videoPreviewRenditions = videoRenditionsFromServer(creative_content.video_preview_renditions);
   const cta = creative_content.cta;
   const obj6 = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;

@@ -12,7 +12,6 @@ import ThreadActionUtils from "../modules/threads/ThreadActionUtils.tsx";
 import BasicPermissionUtilsDefault from "../utils/BasicPermissionUtils.tsx";
 import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import isMessageMentioned from "../modules/messages/isMessageMentioned.tsx";
-import IOSPushNotificationRawPayloadFixExperiment from "../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
 import NSFWContentGate from "../modules/age_gate/NSFWContentGate.tsx";
 import networkAwareRetryDefault from "../modules/network/networkAwareRetry.tsx";
 import OverlaySupported from "../modules/overlay/OverlaySupported.tsx";
@@ -123,7 +122,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -171,7 +170,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
         closure_130_67.length = 0;
         closure_130_68 = false;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
@@ -183,7 +182,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
         } else {
           closure_130_79(closure_129_0);
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -819,18 +818,18 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6541).isEventUpcoming;
-const ChannelRecord = fn(4676);
+const isEventUpcoming = fn(6512).isEventUpcoming;
+const ChannelRecord = fn(4645);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_37, AnalyticsObjects: closure_38, AnalyticsSections: closure_39, Endpoints: closure_40, ChannelLayouts: closure_41, OverlayWidgets, CURRENT_APP_CONTEXT: closure_42, ChannelTypes: closure_43, BasicPermissions } = Constants);
 ({ Permissions: closure_45, MessageTypes: closure_46, RelationshipTypes: closure_47, ChannelTypesSets: closure_48, UserNotificationSettings: closure_49, MessageTypesSets: closure_50, AppStates: closure_51 } = Constants);
-const ActivityPanelConstants = fn(5449);
+const ActivityPanelConstants = fn(5418);
 ({ ActivityPanelModes: closure_52, FocusedActivityLayouts: closure_53 } = ActivityPanelConstants);
-const ChannelConstants = fn(4679);
+const ChannelConstants = fn(4648);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
-const GuildScheduledEventStatus = fn(4678).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6461).ReadStateTypes;
+const GuildScheduledEventStatus = fn(4647).GuildScheduledEventStatus;
+const ReadStateTypes = fn(6432).ReadStateTypes;
 const ThreadMemberFlags = fn(1112).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
@@ -946,7 +945,7 @@ class ReadState {
       tmp = ReadStateTypes;
       CHANNEL = ReadStateTypes.CHANNEL;
     }
-    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
+    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
     merged[0] = ReadStateTypes.CHANNEL;
     merged.channelId = global;
     merged.type = CHANNEL;
@@ -1007,7 +1006,7 @@ ReadState["get"] = function get(channelId) {
       if (CHANNEL === undefined) {
         CHANNEL2 = ReadStateTypes.CHANNEL;
       }
-      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
+      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
       merged[0] = ReadStateTypes.CHANNEL;
       merged.channelId = channelId;
       merged.type = CHANNEL2;
@@ -1924,14 +1923,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6576, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(6547, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6576, dependencyMap.paths);
+          const promise = asyncRequireImpl(6547, dependencyMap.paths);
         }
       }
     });
@@ -2983,29 +2982,6 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       }
     });
   },
-  LOCAL_MESSAGES_LOADED: function handleLocalMessagesLoaded(messages) {
-    messages = messages.messages;
-    if (obj.isIOSPushNotificationRawPayloadFixExperimentEnabled()) {
-      if (0 === messages.length) {
-        return false;
-      } else {
-        value = ReadState.get(messages.channelId);
-        id = messages[0].id;
-        let tmp4 = null == value.lastMessageId;
-        if (!tmp4) {
-          tmp4 = require("SnowflakeUtils").compare(id, value.lastMessageId) > 0;
-          const obj3 = require("SnowflakeUtils");
-        }
-        if (tmp4) {
-          value.lastMessageId = id;
-          value.rebuildChannelState();
-        }
-      }
-    } else {
-      return false;
-    }
-    obj = IOSPushNotificationRawPayloadFixExperiment;
-  },
   MESSAGE_CREATE: function handleIncomingMessage(isPushNotification) {
     ({ channelId, message } = isPushNotification);
     value = ReadState.get(channelId);
@@ -3255,7 +3231,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "Path", force: 232, isExplicitUserAction: 108, trackAnalytics: 24 });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "Path", force: true, isExplicitUserAction: "/assets/images/platforms", trackAnalytics: 255 });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3642,7 +3618,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "Path", isExplicitUserAction: "user_message", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "Path", isExplicitUserAction: "premiumHomeRewardsPerkCard", trackAnalytics: null });
     });
     if (context === closure_1_42) {
       const push = navigation.push;

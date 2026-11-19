@@ -11,7 +11,7 @@ function getStripe(payment_gateway_merchant_account_id) {
     let tmp = null;
     if (null != payment_gateway_merchant_account_id) {
       let tmp4;
-      const KEYS_BY_MERCHANT_ACCOUNT_ID = closure_0(6283).StripePaymentSettings.KEYS_BY_MERCHANT_ACCOUNT_ID;
+      const KEYS_BY_MERCHANT_ACCOUNT_ID = closure_0(6255).StripePaymentSettings.KEYS_BY_MERCHANT_ACCOUNT_ID;
       if (KEYS_BY_MERCHANT_ACCOUNT_ID != null) {
         tmp4 = KEYS_BY_MERCHANT_ACCOUNT_ID[payment_gateway_merchant_account_id];
       }
@@ -54,7 +54,7 @@ function getStripe(payment_gateway_merchant_account_id) {
   if (null != value) {
     return value;
   } else {
-    closure_1 = require("../../_runtime/metro/06284__.js").loadStripe(tmp);
+    closure_1 = require("../../_runtime/metro/06256__.js").loadStripe(tmp);
     const tmp6 = (async () => {
       if (c5 === 2) {
         c5 = 3;
@@ -66,7 +66,7 @@ function getStripe(payment_gateway_merchant_account_id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -171,7 +171,7 @@ let closure_15 = async function _authenticatePaymentIntentForPaymentId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -192,10 +192,10 @@ let closure_15 = async function _authenticatePaymentIntentForPaymentId(arg0) {
           let merchantAccountId;
           closure_129_3 = undefined;
           closure_129_4 = undefined;
-          let error;
+          let error2;
           let paymentIntent;
           closure_129_7 = undefined;
-          let error2;
+          let error3;
           c4 = 1;
           c5 = 2;
           c6 = 1;
@@ -204,7 +204,7 @@ let closure_15 = async function _authenticatePaymentIntentForPaymentId(arg0) {
         }
       } else if (1 === tmp7) {
         c4 = 0;
-        const obj5 = { error: tmp52.message };
+        const obj5 = { error };
         c6 = 3;
         const obj6 = { value: obj5, done: true };
         return obj6;
@@ -260,10 +260,10 @@ let closure_15 = async function _authenticatePaymentIntentForPaymentId(arg0) {
           return obj12;
         } else {
           closure_129_4 = value;
-          error = closure_129_4.error;
+          error2 = closure_129_4.error;
           paymentIntent = closure_129_4.paymentIntent;
-          if (null != error) {
-            const obj13 = { error: error.message };
+          if (null != error2) {
+            const obj13 = { error: error2 };
             c4 = 0;
             c6 = 3;
             const obj14 = { value: obj13, done: true };
@@ -323,14 +323,15 @@ let closure_15 = async function _authenticatePaymentIntentForPaymentId(arg0) {
         const obj20 = { value, done: true };
         return obj20;
       } else {
-        error2 = value.error;
-        if (null != error2) {
-          const obj21 = { error: error2.message };
+        error3 = value.error;
+        if (null != error3) {
+          const obj21 = { error: error3 };
         }
         c4 = 0;
         c6 = 3;
       }
     } catch (tmp52) {
+      error = tmp52;
       if (tmp4 === c4) {
         c6 = tmp2;
         throw tmp52;

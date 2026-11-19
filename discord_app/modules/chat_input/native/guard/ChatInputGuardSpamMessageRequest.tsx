@@ -16,19 +16,19 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   items = [c4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj2 = channel(504);
-  dependencyMap = channel(13263).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
+  dependencyMap = channel(13245).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
     navigation.pop();
   }, items1);
-  const obj3 = channel(13263);
-  const messageRequestActions = channel(13255).useMessageRequestActions({
+  const obj3 = channel(13245);
+  const messageRequestActions = channel(13237).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
       const intl = channel(1113).intl;
       obj2.text = intl.string(channel(1113).t["EDYbS+"]);
-      navigation(5505).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
+      navigation(5474).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
     },
     onRejectSuccess: callback,
   });
@@ -60,14 +60,14 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
     buttonSecondaryDisabled: null,
     buttonSecondaryLoading: null,
   };
-  const obj4 = channel(13255);
+  const obj4 = channel(13237);
   const obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
       const intl = channel(1113).intl;
       obj2.text = intl.string(channel(1113).t["EDYbS+"]);
-      navigation(5505).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
+      navigation(5474).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
     },
     onRejectSuccess: callback,
   };
@@ -96,7 +96,7 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   };
   obj6.buttonSecondaryDisabled = tmp7;
   obj6.buttonSecondaryLoading = isUserProfileLoading;
-  return jsx(navigation(13261), {
+  return jsx(navigation(13243), {
     type: "button-action",
     message: null,
     subtext: null,

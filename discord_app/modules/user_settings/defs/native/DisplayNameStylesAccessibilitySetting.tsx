@@ -13,13 +13,13 @@ function useValue() {
 function onValueChange(enabled) {
   const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-const SettingBuilders = fn(11897);
+const SettingBuilders = fn(11875);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef3147["2gFUEw"]);
   },
-  parent: fn(8624).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8593).MobileUserSettings.ACCESSIBILITY,
   useValue,
   onValueChange,
 });

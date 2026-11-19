@@ -137,7 +137,7 @@ function Header(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const MainTabsV2Constants = fn(8474);
+const MainTabsV2Constants = fn(8443);
 ({ ONYX_BORDER_WIDTH, MIN_HEADER_HEIGHT: closure_6 } = MainTabsV2Constants);
 const Constants = fn(1072);
 ({
@@ -146,10 +146,10 @@ const Constants = fn(1072);
   ME: closure_9,
   ThemeTypes: closure_10,
 } = Constants);
-const StaticChannelRoute = fn(4679).StaticChannelRoute;
+const StaticChannelRoute = fn(4648).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   container: { flex: 1 },
   onyxContainerBorder: {

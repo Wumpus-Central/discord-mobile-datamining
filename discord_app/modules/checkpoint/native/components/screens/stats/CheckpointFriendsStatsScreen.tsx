@@ -7,7 +7,7 @@ import CheckpointStore from "../../../../CheckpointStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointTransitionConstants = fn(12440);
+const CheckpointTransitionConstants = fn(12423);
 ({
   CHECKPOINT_FRIENDS_CONTENT_FADE_OUT: closure_8,
   CHECKPOINT_SIDEKICK_CONTENT_FADE_IN: closure_9,
@@ -15,7 +15,7 @@ const CheckpointTransitionConstants = fn(12440);
 } = CheckpointTransitionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = {
   container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 },
   animation: null,

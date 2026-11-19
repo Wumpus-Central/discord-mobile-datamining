@@ -8,11 +8,11 @@ import createStyles from "../../../../../../design/components/Styles/native/crea
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef8711 from "../../../../../../../_runtime/metro/08711__.js";
+import _modDef8680 from "../../../../../../../_runtime/metro/08680__.js";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
-import _modDef8739 from "../../../../../../../_runtime/metro/08739__.js";
-import _modDef8740 from "../../../../../../../_runtime/metro/08740__.js";
+import _modDef8708 from "../../../../../../../_runtime/metro/08708__.js";
+import _modDef8709 from "../../../../../../../_runtime/metro/08709__.js";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../../../stores/billing/SubscriptionStore.tsx";
@@ -48,7 +48,7 @@ export function createReferralTrialEmbedRedeemable(message, theme, id, relevantU
           backgroundColor,
           borderColor: backgroundColor,
           thumbnailCornerRadius: 3,
-          headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8739),
+          headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8708),
           headerText: null,
           headerColor: null,
           thumbnailUrl: null,
@@ -58,7 +58,7 @@ export function createReferralTrialEmbedRedeemable(message, theme, id, relevantU
         obj.headerText = intl.string(util.t.gtNqJQ).toLocaleLowerCase();
         obj.headerColor = headerTextColor;
         const stringResult = intl.string(util.t.gtNqJQ);
-        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8740);
+        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8709);
         let userId;
         if (relevantUserTrialOffer != null) {
           userId = relevantUserTrialOffer.userId;
@@ -177,7 +177,7 @@ export function createReferralTrialEmbedRedeemable(message, theme, id, relevantU
                     const intl8 = util.intl;
                     obj11.acceptLabelText = intl8.string(util.t.bXTClc);
                     obj11.acceptLabelColor = acceptLabelColor;
-                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8711);
+                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8680);
                     tmp33 = obj11;
                     const tmp44Result11 = renderer_EmbedUtils;
                   }

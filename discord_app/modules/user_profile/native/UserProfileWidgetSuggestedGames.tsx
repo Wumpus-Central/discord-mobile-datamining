@@ -7,17 +7,17 @@ import GameCoverImageDefault from "GameCoverImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
-const AccessibilityAnnouncer2 = trackUserProfileEditAction(4832);
-const UserProfileAnalyticsUtils = trackUserProfileEditAction(8048);
-const WidgetUtils = trackUserProfileEditAction(10116);
+const AccessibilityAnnouncer2 = trackUserProfileEditAction(4801);
+const UserProfileAnalyticsUtils = trackUserProfileEditAction(8017);
+const WidgetUtils = trackUserProfileEditAction(10094);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(7981).TrackUserProfileEditActions;
+let closure_7 = fn(7950).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = {
   container: {
     marginTop: nativeDefault.space.PX_16,
