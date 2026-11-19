@@ -1,33 +1,11 @@
 // === Module 5792: ? ===
 
 // Module 5792
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
+import module_65 from "module_65" /* 65 */;
 
-({ Platform, UIManager: closure_0 } = get_ActivityIndicator);
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSSafeAreaView", validAttributes: { edges: true, insetType: true } };
 
-export const isNativePlatformSupported = true;
-export function enableScreens() {
-  flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-  if (flag) {
-    flag = !viewManagerConfig.getViewManagerConfig("RNSScreen");
-  }
-  if (flag) {
-    const _console = console;
-    console.error("Screen native module hasn't been linked. Please check the react-native-screens README for more details");
-  }
-}
-export function enableFreeze() {
-  flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-}
-export function screensEnabled() {
-  return flag;
-}
-export function freezeEnabled() {
-  return flag;
-}
+export default module_65.get("RNSSafeAreaView", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

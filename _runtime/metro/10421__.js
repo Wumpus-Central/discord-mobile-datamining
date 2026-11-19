@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "8c6e7658ce5157dd6c415ee437c71c87", name: "img_nitro_animated_emoji", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/Y2KIcon", width: 60, height: 60, scales: [2, 3], hash: "0e26d39cd35df5b70db021fff662c44e", name: "Y2KIcon", type: "png" });

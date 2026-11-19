@@ -1,73 +1,90 @@
 // === Module 16330: ? ===
 
 // Module 16330
-import _mod16244 from "module_16244" /* 16244 */;
+import _mod16235 from "module_16235" /* 16235 */;
 
-const Delim = _mod16244.TYPE.Delim;
-const Ident = _mod16244.TYPE.Ident;
-const Dimension = _mod16244.TYPE.Dimension;
-const Percentage = _mod16244.TYPE.Percentage;
-const Number = _mod16244.TYPE.Number;
-const Hash = _mod16244.TYPE.Hash;
-const Colon = _mod16244.TYPE.Colon;
-const LeftSquareBracket = _mod16244.TYPE.LeftSquareBracket;
+function consumeRaw() {
+  return this.createSingleNodeList(this.Raw(this.scanner.tokenIndex, null, false));
+}
+function parentheses() {
+  const self = this;
+  const scanner = this.scanner;
+  scanner.skipSC();
+  if (this.scanner.tokenType === Ident) {
+    if (self.lookupNonWSType(1) === Colon) {
+      let singleNodeList = self.createSingleNodeList(self.Declaration());
+    }
+    return singleNodeList;
+  }
+  const call = readSequence.call;
+  singleNodeList = typeof call === "unknown" ? readSequence() : call(self);
+}
+function readSequence() {
+  const self = this;
+  const list = this.createList();
+  const scanner = this.scanner;
+  scanner.skipSC();
+  let tmp2 = null;
+  if (!this.scanner.eof) {
+    while (true) {
+      let tokenType = self.scanner.tokenType;
+      if (WhiteSpace === tokenType) {
+        let WhiteSpaceResult = self.WhiteSpace();
+      } else {
+        if (Comment === tokenType) {
+          let iter = self.scanner;
+          let nextResult = iter.next();
+          WhiteSpaceResult = tmp2;
+        } else {
+          if (Function === tokenType) {
+            let FunctionResult = self.Function(consumeRaw, self.scope.AtrulePrelude);
+          } else {
+            if (Ident === tokenType) {
+              FunctionResult = self.Identifier();
+            } else if (LeftParenthesis !== tokenType) {
+              break;
+            } else {
+              FunctionResult = self.Parentheses(parentheses, self.scope.AtrulePrelude);
+            }
+            break;
+          }
+          WhiteSpaceResult = tmp2;
+          if (null !== tmp2) {
+            let arr = list.push(tmp2);
+            WhiteSpaceResult = null;
+          }
+          let arr3 = list.push(FunctionResult);
+        }
+        break;
+      }
+      tmp2 = WhiteSpaceResult;
+      if (self.scanner.eof) {
+        break;
+      }
+    }
+  }
+  return list;
+}
+const WhiteSpace = _mod16235.TYPE.WhiteSpace;
+const Comment = _mod16235.TYPE.Comment;
+const Ident = _mod16235.TYPE.Ident;
+const Function = _mod16235.TYPE.Function;
+const Colon = _mod16235.TYPE.Colon;
+const LeftParenthesis = _mod16235.TYPE.LeftParenthesis;
 
 export default {
-  getNode(arg0) {
-    const self = this;
-    const tokenType = this.scanner.tokenType;
-    if (LeftSquareBracket === tokenType) {
-      return self.AttributeSelector();
-    } else if (Hash === tokenType) {
-      return self.IdSelector();
-    } else if (Colon === tokenType) {
-      const scanner = self.scanner;
-      if (scanner.lookupType(1) === tmp6) {
-        let result = self.PseudoElementSelector();
-      } else {
-        result = self.PseudoClassSelector();
+  parse: {
+    prelude() {
+      const self = this;
+      const call = readSequence.call;
+      const tmp2 = typeof call === "unknown" ? readSequence() : call(self);
+      if (null === self.getFirstListNode(tmp2)) {
+        self.error("Condition is expected");
       }
-      return result;
-    } else if (Ident === tokenType) {
-      return self.TypeSelector();
-    } else {
-      if (Number !== tokenType) {
-        if (Percentage !== tokenType) {
-          if (Dimension === tokenType) {
-            const source = self.scanner.source;
-            if (46 === source.charCodeAt(self.scanner.tokenStart)) {
-              self.error("Identifier is expected", self.scanner.tokenStart + 1);
-            }
-          } else if (Delim === tokenType) {
-            const source2 = self.scanner.source;
-            const charCodeAtResult = source2.charCodeAt(self.scanner.tokenStart);
-            if (43 !== charCodeAtResult) {
-              if (62 !== charCodeAtResult) {
-                if (126 !== charCodeAtResult) {
-                  if (47 === charCodeAtResult) {
-                    return self.Combinator();
-                  } else if (46 === charCodeAtResult) {
-                    return self.ClassSelector();
-                  } else {
-                    if (42 !== charCodeAtResult) {
-                      if (124 !== charCodeAtResult) {
-                        if (35 === charCodeAtResult) {
-                          return self.IdSelector();
-                        }
-                      }
-                    }
-                    return self.TypeSelector();
-                  }
-                }
-              }
-            }
-            arg0.space = null;
-            arg0.ignoreWSAfter = true;
-            return self.Combinator();
-          }
-        }
-      }
-      return self.Percentage();
+      return tmp2;
+    },
+    block() {
+      return this.Block(false);
     }
   }
 };

@@ -1,7 +1,10 @@
 // === Module 7427: ? ===
 
 // Module 7427
-import registerAsset from "module_1119" /* 1119 */;
+import _mod7429 from "module_7429" /* 7429 */;
+
+const require = globalThis.__r;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "481d8ce76f3be0e6139166c2fc65af25", name: "ic_arrow_down", type: "png" });
+export const useClipboard = require("module_7428").useClipboard;
+export default _mod7429.Clipboard;

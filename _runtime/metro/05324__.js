@@ -1,20 +1,9 @@
 // === Module 5324: ? ===
 
 // Module 5324
-import _mod5309 from "module_5309" /* 5309 */;
-import _mod5325 from "module_5325" /* 5325 */;
+import _mod17 from "module_17" /* 17 */;
+import FlashList from "FlashList" /* 5263 */;
 
+const Animated = _mod17.Animated;
 
-export default function _possibleConstructorReturn(arg0, fn) {
-  if (fn) {
-    _mod5309;
-    return fn;
-  }
-  if (undefined !== fn) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Derived constructors may only return object or undefined");
-    throw typeError;
-  } else {
-    return _mod5325(arg0);
-  }
-};
+export default Animated.createAnimatedComponent(FlashList.FlashList);

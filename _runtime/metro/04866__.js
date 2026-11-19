@@ -1,5 +1,9 @@
 // === Module 4866: ? ===
 
 // Module 4866
+const require = globalThis.__r;
 
-export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+for (const key10013 in require("module_4867")) {
+  arg5[key10013] = require("module_4867")[key10013];
+  continue;
+}

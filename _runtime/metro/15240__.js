@@ -1,24 +1,11 @@
 // === Module 15240: ? ===
 
 // Module 15240
-if (typeof process === "object") {
-  const _process3 = process;
-  if (process.env) {
-    const _process = process;
-    if (process.env.NODE_DEBUG) {
-      const _process2 = process;
-      if (obj.test(process.env.NODE_DEBUG)) {
-        let fn = () => {
-          items = ["SEMVER"];
-          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
-          return console.error.apply(items);
-        };
-      }
-      module.exports = fn;
-      obj = /\bsemver\b/i;
-    }
-  }
-}
-fn = () => {
+import _mod15223 from "module_15223" /* 15223 */;
 
+
+export default (arg0, arg1, arg2) => {
+  const obj = new _mod15223(arg0, arg2);
+  const tmp = new _mod15223(arg1, arg2);
+  return obj.compare(tmp) || obj.compareBuild(tmp);
 };

@@ -1,64 +1,55 @@
 // === Module 16305: ? ===
 
 // Module 16305
-import _mod16244 from "module_16244" /* 16244 */;
+import _mod16235 from "module_16235" /* 16235 */;
 
-const Ident = _mod16244.TYPE.Ident;
-const Number = _mod16244.TYPE.Number;
-const Dimension = _mod16244.TYPE.Dimension;
-const LeftParenthesis = _mod16244.TYPE.LeftParenthesis;
-const RightParenthesis = _mod16244.TYPE.RightParenthesis;
-const Colon = _mod16244.TYPE.Colon;
-const Delim = _mod16244.TYPE.Delim;
-let obj = {
-  name: "MediaFeature",
-  structure: { name: String, value: ["Identifier", "Number", "Dimension", "Ratio", null] },
+const Ident = _mod16235.TYPE.Ident;
+const Function = _mod16235.TYPE.Function;
+const Colon = _mod16235.TYPE.Colon;
+const RightParenthesis = _mod16235.TYPE.RightParenthesis;
+const obj = {
+  name: "PseudoElementSelector",
+  structure: null,
   parse() {
     const self = this;
-    this.eat(LeftParenthesis);
-    const scanner = this.scanner;
-    scanner.skipSC();
-    const scanner2 = this.scanner;
-    scanner2.skipSC();
-    if (this.scanner.tokenType === RightParenthesis) {
-      self.eat(tmp6);
-      const obj = { type: "MediaFeature", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: consumeResult, value: null };
-      return obj;
-    } else {
-      self.eat(Colon);
-      const scanner4 = self.scanner;
-      scanner4.skipSC();
-      const tokenType = self.scanner.tokenType;
-      if (Number === tokenType) {
-        if (self.lookupNonWSType(1) === Delim) {
-          let RatioResult = self.Ratio();
-        } else {
-          RatioResult = self.Number();
-        }
-      } else {
-        if (Dimension === tokenType) {
-          let DimensionResult = self.Dimension();
-          const scanner3 = self.scanner;
-          scanner3.skipSC();
-        } else if (Ident !== tokenType) {
-          self.error("Number, dimension, ratio or identifier is expected");
-          DimensionResult = null;
-        }
-        DimensionResult = self.Identifier();
+    this.eat(Colon);
+    this.eat(Colon);
+    if (this.scanner.tokenType === Function) {
+      const str = self.consumeFunctionName();
+      const formatted = str.toLowerCase();
+      const pseudo = self.pseudo;
+      if (!pseudo.hasOwnProperty(formatted)) {
+        const list = self.createList();
+        list.push(self.Raw(self.scanner.tokenIndex, null, false));
+        self.eat(RightParenthesis);
       }
+      const scanner = self.scanner;
+      scanner.skipSC();
+      let skipSCResult1 = self.pseudo[formatted];
+      const call = skipSCResult1.call;
+      const scanner2 = self.scanner;
+      skipSCResult1 = scanner2.skipSC();
+      const tmp11 = typeof call === "unknown" ? skipSCResult1() : call(self);
+    } else {
+      const element = { type: "PseudoElementSelector", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: self.consume(Ident), children: null };
+      return element;
     }
-    consumeResult = this.consume(Ident);
   },
   generate(name) {
     const self = this;
-    this.chunk("(");
+    this.chunk("::");
     this.chunk(name.name);
-    if (null !== name.value) {
-      self.chunk(":");
-      self.node(name.value);
+    if (null !== name.children) {
+      self.chunk("(");
+      self.children(name);
+      self.chunk(")");
     }
-    self.chunk(")");
-  }
+  },
+  walkContext: "function"
 };
+const obj2 = { name: String, children: null };
+const items = [["Raw"], null];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

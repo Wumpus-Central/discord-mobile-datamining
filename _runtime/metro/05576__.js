@@ -1,30 +1,9 @@
 // === Module 5576: ? ===
 
 // Module 5576
-import baseIteratee from "baseIteratee" /* 583 */;
-import _mod5577 from "module_5577" /* 5577 */;
-import baseFindIndex from "baseFindIndex" /* 5579 */;
+import baseClone from "baseClone" /* 5577 */;
 
 
-export default function findLastIndex(arg0, arg1, arg2) {
-  let num = 0;
-  if (null != arg0) {
-    num = arg0.length;
-  }
-  if (num) {
-    const diff = num - 1;
-    if (undefined === arg2) {
-      return baseFindIndex(arg0, baseIteratee(arg1, 3), diff, true);
-    } else {
-      let sum = _mod5577(arg2);
-      if (arg2 < 0) {
-        sum = num + sum;
-        let tmp7 = max(sum, 0);
-      } else {
-        tmp7 = min(sum, num - 1);
-      }
-    }
-  } else {
-    return -1;
-  }
+export default function cloneDeep(arg0) {
+  return baseClone(arg0, 5);
 };

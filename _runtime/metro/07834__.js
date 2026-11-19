@@ -1,13 +1,15 @@
 // === Module 7834: ? ===
 
 // Module 7834
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7815 from "module_7815" /* 7815 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _modDef7770 from "module_7770" /* 7770 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
+const Polygon = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,19 +29,18 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class FeMergeNode {
+const jsx = fn(21).jsx;
+class Polygon {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_0(this, FeMergeNode);
+    tmp = c2(this, Polygon);
     items1 = [...items];
-    tmp2 = c2;
-    obj = c2(FeMergeNode);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp2 = closure_4;
+    obj = closure_4(Polygon);
+    tmp3 = closure_3;
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -48,25 +49,40 @@ class FeMergeNode {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = props.props.parent;
-      if (parent) {
-        parent.forceUpdate();
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polygon(7835)(points) + "z";
+      }
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(points);
       }
     };
     return tmp3Result;
   }
 }
-_classCallCheck = FeMergeNode;
-_inherits(FeMergeNode, _modDef7815);
+_inherits(Polygon, _modDef7770);
 const entry = {
   key: "render",
   value: function render() {
-    return null;
+    const props = this.props;
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
+      const _HermesInternal = HermesInternal;
+      combined = "M" + Polygon(7835)(points) + "z";
+    }
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polygon(7830), { ref: this.refMethod, d: null });
   }
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(FeMergeNode, items);
-importDefaultResultResult.displayName = "FeMergeNode";
+const importDefaultResultResult = _createClass(Polygon, items);
+importDefaultResultResult.displayName = "Polygon";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

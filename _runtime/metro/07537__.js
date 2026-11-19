@@ -1,37 +1,7 @@
 // === Module 7537: ? ===
 
 // Module 7537
-import _mod7538 from "module_7538" /* 7538 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-({ NativeModules: c3, Platform, TurboModuleRegistry: closure_4, requireNativeComponent: hasOwnProperty } = get_ActivityIndicator);
 
-export () => {
-  try {
-    return hasOwnProperty("RNDatePicker");
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod7538.getInstallationErrorMessage());
-    }
-  }
-}
-export () => {
-  try {
-    if (React4) {
-      RNDatePicker = React4.get("RNDatePicker");
-    } else {
-      RNDatePicker = RNDatePicker.RNDatePicker;
-    }
-    return RNDatePicker;
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod7538.getInstallationErrorMessage());
-    }
-  }
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "50398ad483a7c69d1d35b3cb9c9b7bde", name: "ForumSpoilerIcon", type: "png" });

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 256, height: 212, scales: [2, 3], hash: "13ff76500b381861f2432b0c193716ac", name: "img_bans_empty_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 165, height: 178, scales: [2, 3], hash: "b685c2aca3ddb21997a856f7601ff6ad", name: "img_vanity_urls", type: "png" });

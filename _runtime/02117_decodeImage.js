@@ -653,10 +653,10 @@ const _bin = {
       } while (num < length);
     }
   },
-  readBytes(arg0, arg1, arg2) {
+  readBytes(uint8Array, sum1, uint) {
     items = [];
-    for (let num = 0; num < arg2; num = num + 1) {
-      let arr = items.push(arg0[arg1 + num]);
+    for (let num = 0; num < uint; num = num + 1) {
+      let arr = items.push(uint8Array[sum1 + num]);
     }
     return items;
   },

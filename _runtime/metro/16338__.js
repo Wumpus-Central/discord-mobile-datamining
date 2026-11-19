@@ -1,15 +1,7 @@
 // === Module 16338: ? ===
 
 // Module 16338
-const obj = {
-  parse: {
-    prelude() {
-      return this.createSingleNodeList(this.SelectorList());
-    },
-    block() {
-      return this.Block(true);
-    }
-  }
-};
+import _mod16339 from "module_16339" /* 16339 */;
 
-export default obj;
+
+export default _mod16339;

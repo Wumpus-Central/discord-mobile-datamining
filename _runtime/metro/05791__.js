@@ -1,29 +1,20 @@
 // === Module 5791: ? ===
 
 // Module 5791
-import _mod17 from "module_17" /* 17 */;
+import _modDef5792 from "module_5792" /* 5792 */;
+import noop from "module_19" /* 19 */;
 
-const Image = _mod17.Image;
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const styles = StyleSheet.create({ flex: { flex: 1 } });
 
-export function parseAndroidIconToNativeProps(icon) {
-  if (icon) {
-    if ("imageSource" === icon.type) {
-      const assetSource = Image.resolveAssetSource(icon.imageSource);
-      if (!assetSource) {
-        const _console = console;
-        console.error("[RNScreens] Failed to resolve an asset.");
-      }
-      const obj2 = { imageIconResource: assetSource };
-      return obj2;
-    } else if ("drawableResource" === icon.type) {
-      const obj = { drawableIconResourceName: icon.name };
-      return obj;
-    } else {
-      const _Error = Error;
-      const error = new Error("[RNScreens] Incorrect icon format for Android. You must provide `imageSource` or `drawableResource`.");
-      throw error;
-    }
-  } else {
-    return {};
-  }
+export function SafeAreaView(style) {
+  const obj = {};
+  const merged = Object.assign(style);
+  items = [styles.flex, style.style];
+  obj.style = items;
+  const rect = { top: false, bottom: false, left: false, right: false };
+  const merged1 = Object.assign(style.edges);
+  obj.edges = rect;
+  return jsx(_modDef5792, {});
 }

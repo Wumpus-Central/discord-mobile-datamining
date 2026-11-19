@@ -1,8 +1,36 @@
 // === Module 5285: ? ===
 
 // Module 5285
-import _mod17 from "module_17" /* 17 */;
+import RecyclerViewManager from "RecyclerViewManager" /* 5286 */;
+import _slicedToArray from "module_5265" /* 5265 */;
 
-const StyleSheet = _mod17.StyleSheet;
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
 
-export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });
+export (data) => {
+  let recyclerViewManager = velocityTracker(closure_5(() => {
+    recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
+    return recyclerViewManager;
+  }), 1)[0];
+  velocityTracker = velocityTracker(closure_5(() => {
+    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
+    return velocityTracker;
+  }), 1)[0];
+  items = [data];
+  closure_4(() => {
+    recyclerViewManager.updateProps(closure_0);
+  }, items);
+  const items1 = [data.data];
+  closure_4(() => {
+    recyclerViewManager.processDataUpdate();
+  }, items1);
+  closure_3(() => {
+    recyclerViewManager.restoreIfNeeded();
+    return () => {
+      recyclerViewManager.dispose();
+      velocityTracker.cleanUp();
+    };
+  }, []);
+  return { recyclerViewManager, velocityTracker };
+}

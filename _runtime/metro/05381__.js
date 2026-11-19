@@ -1,31 +1,33 @@
 // === Module 5381: ? ===
 
 // Module 5381
-import pointsDiffer_mod from "pointsDiffer" /* 78 */;
-import processColorElement_mod from "processColorElement" /* 80 */;
-import module_65 from "module_65" /* 65 */;
+import _mod17 from "module_17" /* 17 */;
 
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-const obj = { startPoint: { diff: pointsDiffer }, endPoint: null, colors: null, locations: true, useAngle: true, angleCenter: null, angle: true, borderRadii: true };
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-obj.endPoint = { diff: pointsDiffer };
-let processColorElement = processColorElement_mod;
-if ("default" in processColorElement) {
-  processColorElement = processColorElement.default;
-}
-obj.colors = { process: processColorElement };
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-const obj2 = { uiViewClassName: "RNLinearGradient", validAttributes: obj };
-obj.angleCenter = { diff: pointsDiffer };
+const Image = _mod17.Image;
 
-export default module_65.get("RNLinearGradient", () => obj2);
-export const __INTERNAL_VIEW_CONFIG = obj2;
+export function parsePossibleSources(source) {
+  const uri = source.uri;
+  if (typeof source === "string") {
+    const obj2 = { sourceName: source };
+    let obj = obj2;
+  } else {
+    if (typeof source === "object") {
+      if (!uri) {
+        obj = { sourceJson: null };
+        const _JSON = JSON;
+        obj.sourceJson = JSON.stringify(source);
+      }
+    }
+    if (typeof source !== "object") {
+      if (typeof source === "number") {
+        const obj3 = { sourceDotLottieURI: Image.resolveAssetSource(source).uri };
+      }
+    }
+    if (uri.includes(".lottie")) {
+      const obj4 = { sourceDotLottieURI: uri };
+    } else {
+      const obj5 = { sourceURL: uri };
+    }
+  }
+  return obj;
+}

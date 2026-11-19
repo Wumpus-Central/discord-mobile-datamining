@@ -1,67 +1,13 @@
 // === Module 7777: ? ===
 
 // Module 7777
-import CircleDefault from "Circle" /* 7779 */;
-import _modDef7800 from "module_7800" /* 7800 */;
-import showErrorCSS from "showErrorCSS" /* 7882 */;
-import _mod7883 from "module_7883" /* 7883 */;
-import _fetchText from "_fetchText" /* 7885 */;
-import RNSVGCircle from "RNSVGCircle" /* 7886 */;
+import _mod26 from "module_26" /* 26 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-const require = globalThis.__r;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGClipPath", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true };
 
-for (const key10013 in require("module_7778")) {
-  arg5[key10013] = require("module_7778")[key10013];
-  continue;
-}
-for (const key10017 in require("Circle")) {
-  arg5[key10017] = require("Circle")[key10017];
-  continue;
-}
-
-export const inlineStyles = showErrorCSS.inlineStyles;
-export const loadLocalRawResource = showErrorCSS.loadLocalRawResource;
-export const LocalSvg = showErrorCSS.LocalSvg;
-export const SvgCss = showErrorCSS.SvgCss;
-export const SvgCssUri = showErrorCSS.SvgCssUri;
-export const SvgWithCss = showErrorCSS.SvgWithCss;
-export const SvgWithCssUri = showErrorCSS.SvgWithCssUri;
-export const WithLocalSvg = showErrorCSS.WithLocalSvg;
-export const camelCase = _mod7883.camelCase;
-export const fetchText = _fetchText.fetchText;
-export const parse = _mod7883.parse;
-export const RNSVGCircle = RNSVGCircle.RNSVGCircle;
-export const RNSVGClipPath = RNSVGCircle.RNSVGClipPath;
-export const RNSVGDefs = RNSVGCircle.RNSVGDefs;
-export const RNSVGEllipse = RNSVGCircle.RNSVGEllipse;
-export const RNSVGFeColorMatrix = RNSVGCircle.RNSVGFeColorMatrix;
-export const RNSVGFeComposite = RNSVGCircle.RNSVGFeComposite;
-export const RNSVGFeGaussianBlur = RNSVGCircle.RNSVGFeGaussianBlur;
-export const RNSVGFeMerge = RNSVGCircle.RNSVGFeMerge;
-export const RNSVGFeOffset = RNSVGCircle.RNSVGFeOffset;
-export const RNSVGFilter = RNSVGCircle.RNSVGFilter;
-export const RNSVGForeignObject = RNSVGCircle.RNSVGForeignObject;
-export const RNSVGGroup = RNSVGCircle.RNSVGGroup;
-export const RNSVGImage = RNSVGCircle.RNSVGImage;
-export const RNSVGLine = RNSVGCircle.RNSVGLine;
-export const RNSVGLinearGradient = RNSVGCircle.RNSVGLinearGradient;
-export const RNSVGMarker = RNSVGCircle.RNSVGMarker;
-export const RNSVGMask = RNSVGCircle.RNSVGMask;
-export const RNSVGPath = RNSVGCircle.RNSVGPath;
-export const RNSVGPattern = RNSVGCircle.RNSVGPattern;
-export const RNSVGRadialGradient = RNSVGCircle.RNSVGRadialGradient;
-export const RNSVGRect = RNSVGCircle.RNSVGRect;
-export const RNSVGSvgAndroid = RNSVGCircle.RNSVGSvgAndroid;
-export const RNSVGSvgIOS = RNSVGCircle.RNSVGSvgIOS;
-export const RNSVGSymbol = RNSVGCircle.RNSVGSymbol;
-export const RNSVGText = RNSVGCircle.RNSVGText;
-export const RNSVGTextPath = RNSVGCircle.RNSVGTextPath;
-export const RNSVGTSpan = RNSVGCircle.RNSVGTSpan;
-export const RNSVGUse = RNSVGCircle.RNSVGUse;
-export const Shape = _modDef7800;
-export const SvgAst = _mod7883.SvgAst;
-export const SvgFromUri = _mod7883.SvgFromUri;
-export const SvgFromXml = _mod7883.SvgFromXml;
-export const SvgUri = _mod7883.SvgUri;
-export const SvgXml = _mod7883.SvgXml;
-export default CircleDefault;
+export default module_65.get("RNSVGClipPath", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

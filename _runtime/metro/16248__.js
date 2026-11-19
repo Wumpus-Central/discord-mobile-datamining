@@ -1,18 +1,40 @@
 // === Module 16248: ? ===
 
 // Module 16248
+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split("");
 
-export default function createCustomError(name, message) {
-  closure_0 = name;
-  closure_1 = message;
-  const obj2 = Object.create(SyntaxError.prototype);
-  const error = new Error();
-  obj2.name = name;
-  obj2.message = message;
-  Object.defineProperty(obj2, "stack", {
-    get() {
-      return error.stack || "".replace(/^(.+\n){1,3}/, closure_0 + ": " + closure_1 + "\n");
+export (arg0) => {
+  if (0 <= arg0) {
+    if (arg0 < length.length) {
+      return length[arg0];
     }
-  });
-  return obj2;
-};
+  }
+  const typeError = new TypeError("Must be between 0 and 63: " + arg0);
+  throw typeError;
+}
+export (arg0) => {
+  if (65 <= arg0) {
+    if (arg0 <= 90) {
+      let num4 = arg0 - 65;
+    }
+    return num4;
+  }
+  if (97 <= arg0) {
+    if (arg0 <= 122) {
+      num4 = arg0 - 97 + 26;
+    }
+  }
+  if (48 <= arg0) {
+    if (arg0 <= 57) {
+      num4 = arg0 - 48 + 52;
+    }
+  }
+  num4 = 62;
+  if (43 != arg0) {
+    let num6 = -1;
+    if (47 == arg0) {
+      num6 = 63;
+    }
+    num4 = num6;
+  }
+}

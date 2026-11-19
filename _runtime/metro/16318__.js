@@ -1,41 +1,9 @@
 // === Module 16318: ? ===
 
 // Module 16318
-import _mod16244 from "module_16244" /* 16244 */;
+import defaultRecognizer from "defaultRecognizer" /* 16319 */;
+import _mod16321 from "module_16321" /* 16321 */;
+import _mod16322 from "module_16322" /* 16322 */;
 
-const Comma = _mod16244.TYPE.Comma;
-const obj = {
-  name: "SelectorList",
-  structure: null,
-  parse() {
-    const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      list.push(self.Selector());
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.Selector());
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
-      }
-    }
-    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
-    return element;
-  },
-  generate(arg0) {
-    this.children(arg0, function() {
-      this.chunk(",");
-    });
-  },
-  walkContext: "selector"
-};
-const obj2 = { children: null };
-const items = [["Selector", "Raw"]];
-obj2.children = items;
-obj.structure = obj2;
 
-export default obj;
+export default { AtrulePrelude: defaultRecognizer, Selector: _mod16321, Value: _mod16322 };

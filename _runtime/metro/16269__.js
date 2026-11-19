@@ -1,299 +1,306 @@
 // === Module 16269: ? ===
 
 // Module 16269
-import _mod16246 from "module_16246" /* 16246 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function isValidLocation(start) {
-  let BooleanResult = Boolean(start);
-  if (BooleanResult) {
-    const offset = start.offset;
-    let isFiniteResult = typeof offset === "number";
-    if (typeof offset === "number") {
-      const _isFinite = isFinite;
-      isFiniteResult = isFinite(offset);
-    }
-    if (isFiniteResult) {
-      const _Math = Math;
-      isFiniteResult = Math.floor(offset) === offset;
-    }
-    if (isFiniteResult) {
-      isFiniteResult = offset >= 0;
-    }
-    BooleanResult = isFiniteResult;
+function isObject(arg0) {
+  let tmp = arg0;
+  if (arg0) {
+    const _Object = Object;
+    tmp = arg0.constructor === Object;
   }
-  if (BooleanResult) {
-    const line = start.line;
-    let isFiniteResult1 = typeof line === "number";
-    if (typeof line === "number") {
-      const _isFinite2 = isFinite;
-      isFiniteResult1 = isFinite(line);
-    }
-    if (isFiniteResult1) {
-      const _Math2 = Math;
-      isFiniteResult1 = Math.floor(line) === line;
-    }
-    if (isFiniteResult1) {
-      isFiniteResult1 = line >= 0;
-    }
-    BooleanResult = isFiniteResult1;
-  }
-  if (BooleanResult) {
-    const column = start.column;
-    let isFiniteResult2 = typeof column === "number";
-    if (typeof column === "number") {
-      const _isFinite3 = isFinite;
-      isFiniteResult2 = isFinite(column);
-    }
-    if (isFiniteResult2) {
-      const _Math3 = Math;
-      isFiniteResult2 = Math.floor(column) === column;
-    }
-    if (isFiniteResult2) {
-      isFiniteResult2 = column >= 0;
-    }
-    BooleanResult = isFiniteResult2;
-  }
-  return BooleanResult;
+  return tmp;
 }
-
-export default {
-  getStructureFromConfig(node) {
-    const obj = {};
-    if (node.node) {
-      for (const key10016 in arg0.node) {
-        let call = hasOwnProperty.call;
-        node = arg0.node;
-        if (typeof call === "unknown") {
-          let callResult = hasOwnProperty(key10016);
+function copy(arg0) {
+  let tmp = arg0;
+  if (arg0) {
+    const _Object = Object;
+    tmp = arg0.constructor === Object;
+  }
+  let merged = arg0;
+  if (tmp) {
+    const _Object2 = Object;
+    merged = Object.assign({}, arg0);
+  }
+  return merged;
+}
+function appendOrAssign(str, str2) {
+  if (typeof str2 === "string") {
+    if (typeof str2 === "string") {
+      if (obj2.test(str2)) {
+        if (typeof str === "string") {
+          let sum = str + str2;
         } else {
-          callResult = call(node, key10016);
+          sum = str2.replace(/^\s*\|\s*/, "");
         }
-        if (!callResult) {
+      }
+      obj2 = /^\s*\|/;
+    }
+    let tmp7 = str2;
+    if (!str2) {
+      tmp7 = null;
+    }
+    return tmp7;
+  } else {
+    const _Object = Object;
+    const merged = Object.assign({}, str);
+    for (const key10002 in arg1) {
+      let call2 = hasOwnProperty.call;
+      if (typeof call2 === "unknown") {
+        let call2Result = hasOwnProperty(key10002);
+      } else {
+        call2Result = call2(arg1, key10002);
+      }
+      if (!call2Result) {
+        continue;
+      } else {
+        let call = hasOwnProperty.call;
+        if (typeof call === "unknown") {
+          let callResult = hasOwnProperty(key10002);
+        } else {
+          callResult = call(arg0, key10002);
+        }
+        if (callResult) {
+          let tmp3 = arg0[key10002];
+        }
+        str = arg1[key10002];
+        if (typeof str === "string") {
+          obj = /^\s*\|/;
+          if (obj.test(str)) {
+            if (typeof tmp3 === "string") {
+              let sum1 = tmp3 + str;
+            } else {
+              sum1 = str.replace(/^\s*\|\s*/, "");
+            }
+          }
+        }
+        let tmp4 = str;
+        if (!str) {
+          tmp4 = null;
+        }
+        merged[key10002] = tmp4;
+        continue;
+      }
+      continue;
+    }
+    return merged;
+  }
+}
+function appendOrAssignOrNull(arg0, arg1) {
+  const tmp = appendOrAssign(arg0, arg1);
+  let tmp2 = tmp;
+  if (tmp) {
+    const _Object = Object;
+    tmp2 = tmp.constructor === Object;
+  }
+  if (!tmp2) {
+    let tmp5 = tmp;
+  } else {
+    const _Object2 = Object;
+    tmp5 = null;
+  }
+  return tmp5;
+}
+function mix(arg0, arg1, obj) {
+  for (const key10012 in arg2) {
+    let call2 = hasOwnProperty.call;
+    if (typeof call2 === "unknown") {
+      let call2Result = hasOwnProperty(key10012);
+    } else {
+      call2Result = call2(arg2, key10012);
+    }
+    if (false === call2Result) {
+      continue;
+    } else {
+      if (true === arg2[key10012]) {
+        let tmp22 = key10012 in arg1;
+        if (!tmp22) {
+          if (!tmp22) {
+            continue;
+          } else {
+            arg0[key10012] = copy(arg1[key10012]);
+            continue;
+          }
           continue;
         } else {
-          let tmp4 = arg0.node[key10016];
-          if (tmp4.structure) {
-            let structure = tmp4.structure;
-            let obj2 = { type: null, loc: true };
-            let _String = String;
-            obj2.type = String;
-            let obj3 = { type: "\"" + key10016 + "\"" };
-            for (const key10038 in structure) {
-              let call2 = hasOwnProperty.call;
-              if (typeof call2 === "unknown") {
-                let call2Result = hasOwnProperty(key10038);
-              } else {
-                call2Result = call2(structure, key10038);
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let callResult = hasOwnProperty(key10012);
+          } else {
+            callResult = call(arg1, key10012);
+          }
+        }
+      } else {
+        if (!arg2[key10012]) {
+          continue;
+        } else {
+          if (typeof arg2[key10012] === "function") {
+            let tmp21 = arg2[key10012];
+            arg0[key10012] = tmp21({}, arg0[key10012]);
+            let obj2 = arg0[key10012];
+            if (!obj2) {
+              obj2 = {};
+            }
+            arg0[key10012] = tmp21(obj2, arg1[key10012]);
+            continue;
+          } else {
+            if (isObject(arg2[key10012])) {
+              let obj3 = {};
+              for (const key10064 in arg0[key10012]) {
+                let obj4 = {};
+                let tmp34 = mix(obj4, arg0[key10012][key10064], arg2[key10012]);
+                obj3[key10064] = obj4;
+                continue;
               }
-              if (false === call2Result) {
+              for (const key10067 in arg1[key10012]) {
+                let obj5 = obj3[key10067];
+                if (!obj5) {
+                  obj5 = {};
+                }
+                let tmp36Result = mix(obj5, arg1[key10012][key10067], arg2[key10012]);
+                obj3[key10067] = obj5;
+                continue;
+              }
+              arg0[key10012] = obj3;
+              continue;
+            } else {
+              let _Array = Array;
+              if (!Array.isArray(arg2[key10012])) {
                 continue;
               } else {
-                let _Array = Array;
-                let arr = structure[key10038];
-                if (Array.isArray(structure[key10038])) {
-                  let substr = arr.slice();
-                } else {
-                  substr = [arr];
+                obj = {};
+                let arr = arg2[key10012];
+                let reduced = arr.reduce((acc, item) => {
+                  acc[item] = true;
+                  return acc;
+                }, {});
+                let obj6 = arg0[key10012];
+                if (!obj6) {
+                  obj6 = {};
                 }
-                items = [];
-                obj2[key10038] = substr;
-                let num3 = 0;
-                if (0 < substr.length) {
-                  while (true) {
-                    let tmp11 = substr[num3];
-                    let _String2 = String;
-                    if (tmp11 !== String) {
-                      let _Boolean = Boolean;
-                      if (tmp11 !== Boolean) {
-                        if (null === tmp11) {
-                          let arr2 = items.push("null");
-                        } else if (typeof tmp11 === "string") {
-                          let arr3 = items.push("<" + tmp11 + ">");
-                        } else {
-                          let _Array2 = Array;
-                          if (Array.isArray(tmp11)) {
-                            let arr7 = items.push("List");
-                          } else {
-                            let _Error2 = Error;
-                            let str9 = "Wrong value `";
-                            let str10 = "` in `";
-                            let str11 = ".";
-                            let tmp13 = new.target;
-                            let str12 = "` structure definition";
-                            let tmp14 = new.target;
-                            let error = new Error("Wrong value `" + tmp11 + "` in `" + key10016 + "." + key10038 + "` structure definition");
-                            throw error;
-                          }
-                        }
-                      }
-                      num3 = num3 + 1;
-                      if (num3 >= substr.length) {
-                        break;
-                      }
-                    }
-                    let arr8 = items.push(tmp11.name);
+                let entries = Object.entries(obj6);
+                for (const item10033 of entries) {
+                  let tmp7 = _slicedToArray(item10033, 2);
+                  [tmp8, tmp10] = tmp7;
+                  obj[tmp8] = {};
+                  if (tmp10) {
+                    let tmp15 = mix(obj[tmp9], tmp11, reduced);
                   }
+                  continue;
                 }
-                obj3[key10038] = items.join(" | ");
+                for (const key10050 in arg1[key10012]) {
+                  let call3 = hasOwnProperty.call;
+                  let tmp31 = arg1[key10012];
+                  if (typeof call3 === "unknown") {
+                    let call3Result = hasOwnProperty(key10050);
+                  } else {
+                    call3Result = call3(tmp31, key10050);
+                  }
+                  if (!call3Result) {
+                    continue;
+                  } else {
+                    if (!obj[key10050]) {
+                      obj[key10050] = {};
+                    }
+                    let tmp17 = arg1[key10012];
+                    if (tmp17) {
+                      tmp17 = arg1[key10012][key10050];
+                    }
+                    if (!tmp17) {
+                      continue;
+                    } else {
+                      let tmp19 = mix(obj[key10050], arg1[key10012][key10050], reduced);
+                      continue;
+                    }
+                    continue;
+                  }
+                  continue;
+                }
+                arg0[key10012] = obj;
                 continue;
               }
               continue;
             }
-            let obj4 = {
-              docs: obj3,
-              check: function checkNode(type, fn) {
-                        if (type) {
-                          const _Object = Object;
-                          if (type.constructor === Object) {
-                            for (const key10005 in arg0) {
-                              let call2 = hasOwnProperty.call;
-                              if (typeof call2 === "unknown") {
-                                let call2Result = hasOwnProperty(key10005);
-                              } else {
-                                call2Result = call2(arg0, key10005);
-                              }
-                              if (false === call2Result) {
-                                continue;
-                              } else {
-                                if ("type" === key10005) {
-                                  let flag = true;
-                                  let tmp5 = key10005;
-                                  if (arg0.type !== key10016) {
-                                    let tmp15 = arg1(arg0, "Wrong node type `" + arg0.type + "`, expected `" + tmp14 + "`");
-                                    flag = true;
-                                    tmp5 = key10005;
-                                  }
-                                  if (flag) {
-                                    continue;
-                                  } else {
-                                    let tmp17 = arg1(arg0, "Bad value for `" + key10016 + "." + tmp5 + "`");
-                                    continue;
-                                  }
-                                  continue;
-                                } else if ("loc" === key10005) {
-                                  if (null === arg0.loc) {
-                                    continue;
-                                  } else {
-                                    let text = key10005;
-                                    if (arg0.loc) {
-                                      let _Object2 = Object;
-                                      text = key10005;
-                                      if (arg0.loc.constructor === Object) {
-                                        if (typeof arg0.loc.source !== "string") {
-                                          text = `${key10005}.source`;
-                                        } else if (isValidLocation(arg0.loc.start)) {
-                                          if (isValidLocation(arg0.loc.end)) {
-                                            continue;
-                                          } else {
-                                            text = `${key10005}.end`;
-                                          }
-                                        } else {
-                                          text = `${key10005}.start`;
-                                        }
-                                        continue;
-                                      }
-                                    }
-                                    tmp5 = text;
-                                    flag = false;
-                                  }
-                                } else if (obj2.hasOwnProperty(key10005)) {
-                                  let num = 0;
-                                  let flag2 = false;
-                                  flag = false;
-                                  tmp5 = key10005;
-                                  if (0 < obj2[key10005].length) {
-                                    while (true) {
-                                      let tmp7 = obj2[key10005][num];
-                                      let _String = String;
-                                      let tmp9 = flag2;
-                                      if (String === tmp7) {
-                                        tmp9 = typeof arg0[key10005] === "string";
-                                      } else {
-                                        let _Boolean = Boolean;
-                                        if (Boolean === tmp7) {
-                                          tmp9 = typeof arg0[key10005] === "boolean";
-                                        } else if (null === tmp7) {
-                                          tmp9 = null === arg0[key10005];
-                                        } else if (typeof tmp7 === "string") {
-                                          let tmp12 = arg0[key10005];
-                                          if (tmp12) {
-                                            tmp12 = arg0[key10005].type === tmp7;
-                                          }
-                                          tmp9 = tmp12;
-                                        } else {
-                                          let _Array = Array;
-                                          if (Array.isArray(tmp7)) {
-                                            tmp9 = arg0[key10005] instanceof _mod16246;
-                                          }
-                                        }
-                                      }
-                                      flag = tmp9;
-                                      tmp5 = key10005;
-                                      if (tmp9) {
-                                        break;
-                                      } else {
-                                        num = num + 1;
-                                        flag2 = tmp9;
-                                        flag = tmp9;
-                                        tmp5 = key10005;
-                                        if (num < obj2[key10005].length) {
-                                          continue;
-                                        } else {
-                                          break;
-                                        }
-                                        break;
-                                      }
-                                    }
-                                  }
-                                } else {
-                                  let tmp4 = arg1(arg0, "Unknown field `" + key10005 + "` for " + key10016 + " node type");
-                                  flag = true;
-                                  tmp5 = key10005;
-                                }
-                                continue;
-                              }
-                              continue;
-                            }
-                            const keys = Object.keys();
-                            if (keys !== undefined) {
-                              const first = keys[0];
-                              while (first !== undefined) {
-                                let call3 = hasOwnProperty.call;
-                                let tmp21 = typeof call3 === "unknown" ? hasOwnProperty(first) : call3(obj2, first);
-                                if (!tmp21) {
-                                  if (!tmp21) {
-                                    continue;
-                                  } else {
-                                    let tmp25 = fn(type, `Field \`${key10016}.${tmp20}\` is missed`);
-                                    continue;
-                                  }
-                                  continue;
-                                } else {
-                                  let call = hasOwnProperty.call;
-                                  let tmp23 = false === (typeof call === "unknown" ? hasOwnProperty(first) : call(type, first));
-                                }
-                              }
-                            }
-                          }
-                        }
-                        return fn(type, "Type of node should be an Object");
-                      }
-            };
-            obj[key10016] = obj4;
             continue;
-          } else {
-            let _Error = Error;
-            let str7 = "Missed `structure` field in `";
-            let tmp5 = new.target;
-            let str8 = "` node type definition";
-            let tmp6 = new.target;
-            let error1 = new Error("Missed `structure` field in `" + key10016 + "` node type definition");
-            throw error1;
           }
+          continue;
         }
         continue;
       }
+      continue;
     }
-    return obj;
+    continue;
   }
+  return arg0;
+}
+let obj = {
+  generic: true,
+  types: appendOrAssign,
+  atrules: { prelude: appendOrAssignOrNull, descriptors: appendOrAssignOrNull },
+  properties: appendOrAssign,
+  parseContext: function assign(arg0, arg1) {
+    return Object.assign(arg0, arg1);
+  },
+  scope: null,
+  atrule: ["parse"],
+  pseudo: ["parse"],
+  node: ["name", "structure", "parse", "generate", "walkContext"]
+};
+function deepAssign(arg0, obj) {
+  for (const key10006 in arg1) {
+    let call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let callResult = hasOwnProperty(key10006);
+    } else {
+      callResult = call(arg1, key10006);
+    }
+    if (!callResult) {
+      continue;
+    } else {
+      let tmp2 = arg0[key10006];
+      let tmp3 = tmp2;
+      if (tmp2) {
+        let _Object = Object;
+        tmp3 = tmp2.constructor === Object;
+      }
+      if (tmp3) {
+        let tmp8 = arg1[key10006];
+        let tmp9 = tmp8;
+        if (tmp8) {
+          let _Object4 = Object;
+          tmp9 = tmp8.constructor === Object;
+        }
+        let merged = tmp8;
+        if (tmp9) {
+          let _Object5 = Object;
+          merged = Object.assign({}, tmp8);
+        }
+        let tmp7Result = deepAssign(arg0[key10006], merged);
+        continue;
+      } else {
+        let tmp4 = arg1[key10006];
+        let tmp5 = tmp4;
+        if (tmp4) {
+          let _Object2 = Object;
+          tmp5 = tmp4.constructor === Object;
+        }
+        let merged1 = tmp4;
+        if (tmp5) {
+          let _Object3 = Object;
+          merged1 = Object.assign({}, tmp4);
+        }
+        arg0[key10006] = merged1;
+        continue;
+      }
+      continue;
+    }
+    continue;
+  }
+  return arg0;
+}
+obj.scope = deepAssign;
+
+export default (arg0, arg1) => {
+  mix(arg0, arg1, obj);
+  return arg0;
 };

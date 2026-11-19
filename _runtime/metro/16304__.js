@@ -1,24 +1,54 @@
 // === Module 16304: ? ===
 
 // Module 16304
-import _mod16244 from "module_16244" /* 16244 */;
+import _mod16235 from "module_16235" /* 16235 */;
 
-const Hash = _mod16244.TYPE.Hash;
-let obj = {
-  name: "IdSelector",
-  structure: { name: String },
+const Ident = _mod16235.TYPE.Ident;
+const Function = _mod16235.TYPE.Function;
+const Colon = _mod16235.TYPE.Colon;
+const RightParenthesis = _mod16235.TYPE.RightParenthesis;
+const obj = {
+  name: "PseudoClassSelector",
+  structure: null,
   parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(Hash);
-    const obj = { type: "IdSelector", loc: this.getLocation(tokenStart, this.scanner.tokenStart), name: null };
-    const scanner = this.scanner;
-    obj.name = scanner.substrToCursor(tokenStart + 1);
-    return obj;
+    const self = this;
+    this.eat(Colon);
+    if (this.scanner.tokenType === Function) {
+      const str = self.consumeFunctionName();
+      const formatted = str.toLowerCase();
+      const pseudo = self.pseudo;
+      if (!pseudo.hasOwnProperty(formatted)) {
+        const list = self.createList();
+        list.push(self.Raw(self.scanner.tokenIndex, null, false));
+        self.eat(RightParenthesis);
+      }
+      const scanner = self.scanner;
+      scanner.skipSC();
+      let skipSCResult1 = self.pseudo[formatted];
+      const call = skipSCResult1.call;
+      const scanner2 = self.scanner;
+      skipSCResult1 = scanner2.skipSC();
+      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
+    } else {
+      const element = { type: "PseudoClassSelector", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: self.consume(Ident), children: null };
+      return element;
+    }
   },
   generate(name) {
-    this.chunk("#");
+    const self = this;
+    this.chunk(":");
     this.chunk(name.name);
-  }
+    if (null !== name.children) {
+      self.chunk("(");
+      self.children(name);
+      self.chunk(")");
+    }
+  },
+  walkContext: "function"
 };
+const obj2 = { name: String, children: null };
+const items = [["Raw"], null];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

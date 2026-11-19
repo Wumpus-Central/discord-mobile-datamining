@@ -1,21 +1,7 @@
 // === Module 9109: ? ===
 
 // Module 9109
-import _mod19 from "module_19" /* 19 */;
-import _modDef9110 from "module_9110" /* 9110 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const useRef = _mod19.useRef;
-let closure_3 = [];
 
-export default function useStableMemo(fn, items) {
-  const tmp = useRef();
-  const tmp2 = useRef(closure_3);
-  if (tmp2.current === closure_3) {
-    tmp.current = fn();
-    tmp2.current = items;
-  } else if (!_modDef9110(items, tmp2.current)) {
-    tmp.current = fn();
-    tmp2.current = items;
-  }
-  return tmp.current;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 279, height: 48, scales: [2, 3], hash: "e03e83c5ddeddb7941bbe7457ccf1a98", name: "img_nitro_tier_2_activated_light", type: "png" });

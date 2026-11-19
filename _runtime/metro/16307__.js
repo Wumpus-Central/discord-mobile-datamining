@@ -1,42 +1,51 @@
 // === Module 16307: ? ===
 
 // Module 16307
-import _mod16244 from "module_16244" /* 16244 */;
+import _mod16235 from "module_16235" /* 16235 */;
+import _mod16279 from "module_16279" /* 16279 */;
 
-const Comma = _mod16244.TYPE.Comma;
-const obj = {
-  name: "MediaQueryList",
-  structure: null,
-  parse(arg0) {
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod16279.mode.leftCurlyBracket, true);
+}
+function consumePrelude() {
+  const self = this;
+  const SelectorListResult = this.SelectorList();
+  let tmp2 = "Raw" !== SelectorListResult.type;
+  if (tmp2) {
+    tmp2 = false === self.scanner.eof;
+  }
+  if (tmp2) {
+    tmp2 = self.scanner.tokenType !== LeftCurlyBracket;
+  }
+  if (tmp2) {
+    self.error();
+  }
+  return SelectorListResult;
+}
+const LeftCurlyBracket = _mod16235.TYPE.LeftCurlyBracket;
+
+export default {
+  name: "Rule",
+  structure: { prelude: ["SelectorList", "Raw"], block: ["Block"] },
+  parse() {
     const self = this;
-    const list = this.createList();
-    const scanner = this.scanner;
-    scanner.skipSC();
-    if (!this.scanner.eof) {
-      list.push(self.MediaQuery(arg0));
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.MediaQuery(arg0));
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
+    const tokenIndex = this.scanner.tokenIndex;
+    if (this.parseRulePrelude) {
+      let parseWithFallbackResult = self.parseWithFallback(consumePrelude, consumeRaw);
+    } else {
+      const call = consumeRaw.call;
+      if (typeof call === "unknown") {
+        parseWithFallbackResult = self.Raw(tokenIndex, _mod16279.mode.leftCurlyBracket, true);
+      } else {
+        parseWithFallbackResult = call(self, tokenIndex);
       }
     }
-    const element = { type: "MediaQueryList", loc: self.getLocationFromList(list), children: list };
-    return element;
+    const obj = { type: "Rule", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), prelude: parseWithFallbackResult, block: self.Block(true) };
+    return obj;
   },
-  generate(arg0) {
-    this.children(arg0, function() {
-      this.chunk(",");
-    });
-  }
+  generate(prelude) {
+    this.node(prelude.prelude);
+    this.node(prelude.block);
+  },
+  walkContext: "rule"
 };
-const obj2 = { children: null };
-const items = [["MediaQuery"]];
-obj2.children = items;
-obj.structure = obj2;
-
-export default obj;

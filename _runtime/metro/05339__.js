@@ -1,38 +1,51 @@
 // === Module 5339: ? ===
 
 // Module 5339
-function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
-  try {
-    const iter = arg0[arg5](arg6);
-    value = iter.value;
-    if (iter.done) {
-      fn(value);
-    } else {
-      const resolved = Promise.resolve(value);
-      resolved.then(arg3, arg4);
-    }
-  } catch (tmp13) {
-    fn2(tmp13);
-  }
-}
+import jsxProd from "jsxProd" /* 21 */;
+import _mod5029 from "module_5029" /* 5029 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
+import noop_mod from "module_19" /* 19 */;
 
-export default function _asyncToGenerator(arg0) {
-  closure_0 = arg0;
-  return function() {
-    const self = this;
-    closure_1 = arguments;
-    return new Promise((arg0, arg1) => {
-      _self = arg0;
-      closure_1 = arg1;
-      function _next(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
+let noop = noop_mod;
+({ useCallback: c2, useEffect: c3 } = noop);
+({ memo, forwardRef } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+const memoResult = memo(forwardRef((onFocus, ref) => {
+  onFocus = onFocus.onFocus;
+  const onBlur = onFocus.onBlur;
+  const merged = Object.assign(onFocus, Object.assign({ onFocus: 0, onBlur: 0 }));
+  const shouldHandleKeyboardEvents = _mod5029.useBottomSheetInternal().shouldHandleKeyboardEvents;
+  items = [onFocus, shouldHandleKeyboardEvents];
+  const items1 = [onBlur, shouldHandleKeyboardEvents];
+  const items2 = [shouldHandleKeyboardEvents];
+  const tmp2 = React2((arg0) => {
+    shouldHandleKeyboardEvents.value = true;
+    if (onFocus) {
+      tmp(arg0);
+    }
+  }, items);
+  React3(() => () => {
+    shouldHandleKeyboardEvents.value = false;
+  }, items2);
+  const tmp3 = React2((arg0) => {
+    shouldHandleKeyboardEvents.value = false;
+    if (onBlur) {
+      tmp(arg0);
+    }
+  }, items1);
+  const merged1 = Object.assign(merged);
+  return jsx(LegacyBaseButton.TextInput, {
+    ref,
+    onFocus: tmp2,
+    onBlur: React2((arg0) => {
+      shouldHandleKeyboardEvents.value = false;
+      if (onBlur) {
+        tmp(arg0);
       }
-      function _throw(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
-      }
-      const applyResult = _self.apply(self, closure_1);
-      closure_2 = applyResult;
-      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
-    });
-  };
-};
+    }, items1)
+  });
+}));
+memoResult.displayName = "BottomSheetTextInput";
+
+export default memoResult;

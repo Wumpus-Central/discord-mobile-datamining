@@ -1,14 +1,12 @@
 // === Module 7841: ? ===
 
 // Module 7841
-import _modDef7815 from "module_7815" /* 7815 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeTile = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,38 +26,46 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTile {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+class Stop {
   constructor() {
     self = this;
-    tmp = c2(this, FeTile);
-    tmp2 = closure_4;
-    obj = closure_4(FeTile);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_0(this, Stop);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(Stop);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = () => {
+      const parent = props.props.parent;
+      if (parent) {
+        parent.forceUpdate();
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeTile, _modDef7815);
+_classCallCheck = Stop;
+_inherits(Stop, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTile(7792).warnUnimplementedFilter();
     return null;
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeTile, items);
-importDefaultResultResult.displayName = "FeTile";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+let items = [entry];
+const importDefaultResultResult = _createClass(Stop, items);
+importDefaultResultResult.displayName = "Stop";
 
 export default importDefaultResultResult;

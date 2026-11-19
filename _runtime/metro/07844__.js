@@ -1,9 +1,103 @@
 // === Module 7844: ? ===
 
 // Module 7844
-import module_65 from "module_65" /* 65 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 7754 */;
+import extractPropsDefault from "extractProps" /* 7761 */;
+import extractFontDefault from "extractFont" /* 7768 */;
+import _modDef7770 from "module_7770" /* 7770 */;
+import _modDef7847 from "module_7847" /* 7847 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFilter", validAttributes: { name: true, x: true, y: true, height: true, width: true, filterUnits: true, primitiveUnits: true } };
+const Text = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+_possibleConstructorReturnDefault;
+_isNativeReflectConstruct = fn(7845);
+const jsx = fn(21).jsx;
+class Text {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, Text);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Text);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      let tmp = matrix;
+      if (matrix) {
+        tmp = !matrix.matrix;
+      }
+      if (tmp) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      const propsAndStylesResult = Text(7761).propsAndStyles(matrix);
+      const obj = Text(7761);
+      const merged = Object.assign(propsAndStylesResult, Text(7762).pickNotNil(extractFontDefault(propsAndStylesResult, true)));
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(propsAndStylesResult);
+      }
+      const obj2 = Text(7762);
+    };
+    return tmp3Result;
+  }
+}
+_inherits(Text, _modDef7770);
+const entry = {
+  key: "render",
+  value: function render() {
+    const propsAndStylesResult = Text(7761).propsAndStyles(this.props);
+    const obj2 = {};
+    const obj = Text(7761);
+    const merged = Object.assign(propsAndStylesResult);
+    obj2.x = null;
+    obj2.y = null;
+    const tmp2Result = extractPropsDefault(obj2, this);
+    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
+    tmp2Result.ref = this.refMethod;
+    const obj3 = {};
+    const merged2 = Object.assign(tmp2Result);
+    return jsx(_modDef7847, {});
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(Text, items);
+importDefaultResultResult.displayName = "Text";
 
-export default module_65.get("RNSVGFilter", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

@@ -1,306 +1,148 @@
 // === Module 16278: ? ===
 
 // Module 16278
-import _slicedToArray from "module_32" /* 32 */;
+import _mod16235 from "module_16235" /* 16235 */;
+import _mod16279 from "module_16279" /* 16279 */;
 
-function isObject(arg0) {
-  let tmp = arg0;
-  if (arg0) {
-    const _Object = Object;
-    tmp = arg0.constructor === Object;
-  }
-  return tmp;
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod16279.mode.leftCurlyBracketOrSemicolon, true);
 }
-function copy(arg0) {
-  let tmp = arg0;
-  if (arg0) {
-    const _Object = Object;
-    tmp = arg0.constructor === Object;
-  }
-  let merged = arg0;
-  if (tmp) {
-    const _Object2 = Object;
-    merged = Object.assign({}, arg0);
-  }
-  return merged;
-}
-function appendOrAssign(str, str2) {
-  if (typeof str2 === "string") {
-    if (typeof str2 === "string") {
-      if (obj2.test(str2)) {
-        if (typeof str === "string") {
-          let sum = str + str2;
-        } else {
-          sum = str2.replace(/^\s*\|\s*/, "");
+function isDeclarationBlockAtrule() {
+  const scanner = this.scanner;
+  let lookupTypeResult = scanner.lookupType(1);
+  let num = 1;
+  if (lookupTypeResult) {
+    while (lookupTypeResult !== RightCurlyBracket) {
+      if (lookupTypeResult !== LeftCurlyBracket) {
+        if (lookupTypeResult !== AtKeyword) {
+          let sum = num + 1;
+          let scanner2 = this.scanner;
+          lookupTypeResult = scanner2.lookupType(sum);
+          num = sum;
         }
       }
-      obj2 = /^\s*\|/;
+      let flag = false;
+      return false;
     }
-    let tmp7 = str2;
-    if (!str2) {
-      tmp7 = null;
-    }
-    return tmp7;
-  } else {
-    const _Object = Object;
-    const merged = Object.assign({}, str);
-    for (const key10002 in arg1) {
-      let call2 = hasOwnProperty.call;
-      if (typeof call2 === "unknown") {
-        let call2Result = hasOwnProperty(key10002);
-      } else {
-        call2Result = call2(arg1, key10002);
-      }
-      if (!call2Result) {
-        continue;
-      } else {
-        let call = hasOwnProperty.call;
-        if (typeof call === "unknown") {
-          let callResult = hasOwnProperty(key10002);
-        } else {
-          callResult = call(arg0, key10002);
-        }
-        if (callResult) {
-          let tmp3 = arg0[key10002];
-        }
-        str = arg1[key10002];
-        if (typeof str === "string") {
-          obj = /^\s*\|/;
-          if (obj.test(str)) {
-            if (typeof tmp3 === "string") {
-              let sum1 = tmp3 + str;
-            } else {
-              sum1 = str.replace(/^\s*\|\s*/, "");
-            }
-          }
-        }
-        let tmp4 = str;
-        if (!str) {
-          tmp4 = null;
-        }
-        merged[key10002] = tmp4;
-        continue;
-      }
-      continue;
-    }
-    return merged;
+    return true;
   }
+  return false;
 }
-function appendOrAssignOrNull(arg0, arg1) {
-  const tmp = appendOrAssign(arg0, arg1);
-  let tmp2 = tmp;
-  if (tmp) {
-    const _Object = Object;
-    tmp2 = tmp.constructor === Object;
-  }
-  if (!tmp2) {
-    let tmp5 = tmp;
-  } else {
-    const _Object2 = Object;
-    tmp5 = null;
-  }
-  return tmp5;
-}
-function mix(arg0, arg1, obj) {
-  for (const key10012 in arg2) {
-    let call2 = hasOwnProperty.call;
-    if (typeof call2 === "unknown") {
-      let call2Result = hasOwnProperty(key10012);
-    } else {
-      call2Result = call2(arg2, key10012);
-    }
-    if (false === call2Result) {
-      continue;
-    } else {
-      if (true === arg2[key10012]) {
-        let tmp22 = key10012 in arg1;
-        if (!tmp22) {
-          if (!tmp22) {
-            continue;
-          } else {
-            arg0[key10012] = copy(arg1[key10012]);
-            continue;
-          }
-          continue;
-        } else {
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let callResult = hasOwnProperty(key10012);
-          } else {
-            callResult = call(arg1, key10012);
-          }
-        }
-      } else {
-        if (!arg2[key10012]) {
-          continue;
-        } else {
-          if (typeof arg2[key10012] === "function") {
-            let tmp21 = arg2[key10012];
-            arg0[key10012] = tmp21({}, arg0[key10012]);
-            let obj2 = arg0[key10012];
-            if (!obj2) {
-              obj2 = {};
-            }
-            arg0[key10012] = tmp21(obj2, arg1[key10012]);
-            continue;
-          } else {
-            if (isObject(arg2[key10012])) {
-              let obj3 = {};
-              for (const key10064 in arg0[key10012]) {
-                let obj4 = {};
-                let tmp34 = mix(obj4, arg0[key10012][key10064], arg2[key10012]);
-                obj3[key10064] = obj4;
-                continue;
-              }
-              for (const key10067 in arg1[key10012]) {
-                let obj5 = obj3[key10067];
-                if (!obj5) {
-                  obj5 = {};
-                }
-                let tmp36Result = mix(obj5, arg1[key10012][key10067], arg2[key10012]);
-                obj3[key10067] = obj5;
-                continue;
-              }
-              arg0[key10012] = obj3;
-              continue;
-            } else {
-              let _Array = Array;
-              if (!Array.isArray(arg2[key10012])) {
-                continue;
-              } else {
-                obj = {};
-                let arr = arg2[key10012];
-                let reduced = arr.reduce((acc, item) => {
-                  acc[item] = true;
-                  return acc;
-                }, {});
-                let obj6 = arg0[key10012];
-                if (!obj6) {
-                  obj6 = {};
-                }
-                let entries = Object.entries(obj6);
-                for (const item10033 of entries) {
-                  let tmp7 = _slicedToArray(item10033, 2);
-                  [tmp8, tmp10] = tmp7;
-                  obj[tmp8] = {};
-                  if (tmp10) {
-                    let tmp15 = mix(obj[tmp9], tmp11, reduced);
-                  }
-                  continue;
-                }
-                for (const key10050 in arg1[key10012]) {
-                  let call3 = hasOwnProperty.call;
-                  let tmp31 = arg1[key10012];
-                  if (typeof call3 === "unknown") {
-                    let call3Result = hasOwnProperty(key10050);
-                  } else {
-                    call3Result = call3(tmp31, key10050);
-                  }
-                  if (!call3Result) {
-                    continue;
-                  } else {
-                    if (!obj[key10050]) {
-                      obj[key10050] = {};
-                    }
-                    let tmp17 = arg1[key10012];
-                    if (tmp17) {
-                      tmp17 = arg1[key10012][key10050];
-                    }
-                    if (!tmp17) {
-                      continue;
-                    } else {
-                      let tmp19 = mix(obj[key10050], arg1[key10012][key10050], reduced);
-                      continue;
-                    }
-                    continue;
-                  }
-                  continue;
-                }
-                arg0[key10012] = obj;
-                continue;
-              }
-              continue;
-            }
-            continue;
-          }
-          continue;
-        }
-        continue;
-      }
-      continue;
-    }
-    continue;
-  }
-  return arg0;
-}
+const AtKeyword = _mod16235.TYPE.AtKeyword;
+const Semicolon = _mod16235.TYPE.Semicolon;
+const LeftCurlyBracket = _mod16235.TYPE.LeftCurlyBracket;
+const RightCurlyBracket = _mod16235.TYPE.RightCurlyBracket;
 let obj = {
-  generic: true,
-  types: appendOrAssign,
-  atrules: { prelude: appendOrAssignOrNull, descriptors: appendOrAssignOrNull },
-  properties: appendOrAssign,
-  parseContext: function assign(arg0, arg1) {
-    return Object.assign(arg0, arg1);
-  },
-  scope: null,
-  atrule: ["parse"],
-  pseudo: ["parse"],
-  node: ["name", "structure", "parse", "generate", "walkContext"]
-};
-function deepAssign(arg0, obj) {
-  for (const key10006 in arg1) {
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let callResult = hasOwnProperty(key10006);
-    } else {
-      callResult = call(arg1, key10006);
+  name: "Atrule",
+  structure: { name: String, prelude: ["AtrulePrelude", "Raw", null], block: ["Block", null] },
+  parse() {
+    const self = this;
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(AtKeyword);
+    const scanner = this.scanner;
+    const str = scanner.substrToCursor(tokenStart + 1);
+    const formatted = str.toLowerCase();
+    const scanner2 = this.scanner;
+    scanner2.skipSC();
+    let tmp4 = false === this.scanner.eof;
+    if (tmp4) {
+      tmp4 = self.scanner.tokenType !== LeftCurlyBracket;
     }
-    if (!callResult) {
-      continue;
-    } else {
-      let tmp2 = arg0[key10006];
-      let tmp3 = tmp2;
-      if (tmp2) {
-        let _Object = Object;
-        tmp3 = tmp2.constructor === Object;
-      }
-      if (tmp3) {
-        let tmp8 = arg1[key10006];
-        let tmp9 = tmp8;
-        if (tmp8) {
-          let _Object4 = Object;
-          tmp9 = tmp8.constructor === Object;
-        }
-        let merged = tmp8;
-        if (tmp9) {
-          let _Object5 = Object;
-          merged = Object.assign({}, tmp8);
-        }
-        let tmp7Result = deepAssign(arg0[key10006], merged);
-        continue;
+    if (tmp4) {
+      tmp4 = self.scanner.tokenType !== Semicolon;
+    }
+    if (!tmp4) {
+      const tokenType = self.scanner.tokenType;
+      if (Semicolon === tokenType) {
+        self.scanner.next();
+        let BlockResult = null;
+        const iter = self.scanner;
       } else {
-        let tmp4 = arg1[key10006];
-        let tmp5 = tmp4;
-        if (tmp4) {
-          let _Object2 = Object;
-          tmp5 = tmp4.constructor === Object;
+        BlockResult = null;
+        if (LeftCurlyBracket === tokenType) {
+          const atrule = self.atrule;
+          if (atrule.hasOwnProperty(formatted)) {
+            if (typeof self.atrule[formatted].block === "function") {
+              const block = self.atrule[formatted].block;
+              const call3 = block.call;
+              typeof call3 === "unknown" ? block() : call3(self);
+            }
+          }
+          const call2 = isDeclarationBlockAtrule.call;
+          if (typeof call2 === "unknown") {
+            const scanner4 = self.scanner;
+            let lookupTypeResult = scanner4.lookupType(1);
+            let num = 1;
+            let flag2 = false;
+            if (lookupTypeResult) {
+              flag2 = true;
+              while (lookupTypeResult !== RightCurlyBracket) {
+                flag2 = false;
+                if (lookupTypeResult === LeftCurlyBracket) {
+                  break;
+                } else {
+                  flag2 = false;
+                  if (lookupTypeResult === AtKeyword) {
+                    break;
+                  } else {
+                    let sum = num + 1;
+                    let scanner5 = self.scanner;
+                    lookupTypeResult = scanner5.lookupType(sum);
+                    num = sum;
+                    flag2 = false;
+                    if (!lookupTypeResult) {
+                      break;
+                    }
+                  }
+                }
+              }
+            }
+            let call2Result = flag2;
+          } else {
+            call2Result = call2(self);
+          }
+          BlockResult = self.Block(call2Result);
         }
-        let merged1 = tmp4;
-        if (tmp5) {
-          let _Object3 = Object;
-          merged1 = Object.assign({}, tmp4);
-        }
-        arg0[key10006] = merged1;
-        continue;
       }
-      continue;
+      const obj = { type: "Atrule", loc: self.getLocation(tokenStart, self.scanner.tokenStart), name: str, prelude: null, block: BlockResult };
+      return obj;
+    } else {
+      if (self.parseAtrulePrelude) {
+        ({ AtrulePrelude, parseWithFallback } = self);
+        const element = parseWithFallback(AtrulePrelude.bind(self, str), consumeRaw);
+        let RawResult = element;
+        if (tmp12) {
+          RawResult = null;
+        }
+        tmp12 = "AtrulePrelude" === element.type && null === element.children.head;
+      } else {
+        const call = consumeRaw.call;
+        const tokenIndex = self.scanner.tokenIndex;
+        if (typeof call === "unknown") {
+          RawResult = self.Raw(tokenIndex, _mod16279.mode.leftCurlyBracketOrSemicolon, true);
+        } else {
+          RawResult = call(self, tokenIndex);
+        }
+      }
+      const scanner3 = self.scanner;
+      scanner3.skipSC();
     }
-    continue;
-  }
-  return arg0;
-}
-obj.scope = deepAssign;
-
-export default (arg0, arg1) => {
-  mix(arg0, arg1, obj);
-  return arg0;
+  },
+  generate(name) {
+    const self = this;
+    this.chunk("@");
+    this.chunk(name.name);
+    if (null !== name.prelude) {
+      self.chunk(" ");
+      self.node(name.prelude);
+    }
+    if (name.block) {
+      self.node(name.block);
+    } else {
+      self.chunk(";");
+    }
+  },
+  walkContext: "atrule"
 };
+
+export default obj;

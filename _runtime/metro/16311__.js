@@ -1,31 +1,60 @@
 // === Module 16311: ? ===
 
 // Module 16311
-import _mod16244 from "module_16244" /* 16244 */;
+import _mod16235 from "module_16235" /* 16235 */;
 
-const LeftParenthesis = _mod16244.TYPE.LeftParenthesis;
-const RightParenthesis = _mod16244.TYPE.RightParenthesis;
+function consumeRaw(arg0) {
+  return this.Raw(arg0, null, false);
+}
+const WhiteSpace = _mod16235.TYPE.WhiteSpace;
+const Comment = _mod16235.TYPE.Comment;
+const AtKeyword = _mod16235.TYPE.AtKeyword;
+const CDO = _mod16235.TYPE.CDO;
+const CDC = _mod16235.TYPE.CDC;
 const obj = {
-  name: "Parentheses",
+  name: "StyleSheet",
   structure: null,
-  parse(call, arg1) {
+  parse() {
     const self = this;
-    this.eat(LeftParenthesis);
-    call = call.call;
-    if (!self.scanner.eof) {
-      self.eat(RightParenthesis);
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      do {
+        let tokenType = self.scanner.tokenType;
+        if (WhiteSpace === tokenType) {
+          let iter2 = self.scanner;
+          let nextResult = iter2.next();
+        } else {
+          if (Comment === tokenType) {
+            let source = self.scanner.source;
+            if (33 !== source.charCodeAt(self.scanner.tokenStart + 2)) {
+              let iter = self.scanner;
+              let nextResult1 = iter.next();
+            } else {
+              let CommentResult = self.Comment();
+            }
+          } else if (CDO === tokenType) {
+            CommentResult = self.CDO();
+          } else if (CDC === tokenType) {
+            CommentResult = self.CDC();
+          } else if (AtKeyword === tokenType) {
+            CommentResult = self.parseWithFallback(self.Atrule, consumeRaw);
+          } else {
+            CommentResult = self.parseWithFallback(self.Rule, consumeRaw);
+          }
+          let arr = list.push(CommentResult);
+        }
+      } while (!self.scanner.eof);
     }
-    const element = { type: "Parentheses", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
+    const element = { type: "StyleSheet", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: list };
     return element;
   },
   generate(arg0) {
-    this.chunk("(");
     this.children(arg0);
-    this.chunk(")");
-  }
+  },
+  walkContext: "stylesheet"
 };
 const obj2 = { children: null };
-const items = [[]];
+const items = [["Comment", "CDO", "CDC", "Atrule", "Rule", "Raw"]];
 obj2.children = items;
 obj.structure = obj2;
 

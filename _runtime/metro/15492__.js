@@ -1,18 +1,20 @@
 // === Module 15492: ? ===
 
 // Module 15492
-import _mod15483 from "module_15483" /* 15483 */;
-import _mod15491 from "module_15491" /* 15491 */;
-import _mod15493 from "module_15493" /* 15493 */;
-import _mod15494 from "module_15494" /* 15494 */;
+import _mod15458 from "module_15458" /* 15458 */;
+import _mod15479 from "module_15479" /* 15479 */;
+import f2 from "f" /* 15493 */;
+import _mod15503 from "module_15503" /* 15503 */;
+import _mod15504 from "module_15504" /* 15504 */;
 
+let closure_2 = _mod15458([].concat);
 
-export default _mod15483 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
-  const tmp3 = _mod15493("Symbol");
-  let tmpResultResult = _mod15491(tmp3);
-  if (tmpResultResult) {
-    tmpResultResult = _mod15494(tmp3.prototype, Object(arg0));
-    const tmpResult = _mod15494;
+export default _mod15479("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f2.f(_mod15503(arg0));
+  const f = _mod15504.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = closure_2(fResult, f(arg0));
   }
-  return tmpResultResult;
+  return tmp2;
 });

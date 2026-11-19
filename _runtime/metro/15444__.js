@@ -1,10 +1,5 @@
 // === Module 15444: ? ===
 
 // Module 15444
-const require = globalThis.__r;
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export const shouldPolyfill = require("module_15445").shouldPolyfill;
-export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;
+export const units = ["degree", "acre", "hectare", "percent", "bit", "byte", "gigabit", "gigabyte", "kilobit", "kilobyte", "megabit", "megabyte", "petabyte", "terabit", "terabyte", "day", "hour", "millisecond", "minute", "month", "second", "week", "year", "centimeter", "foot", "inch", "kilometer", "meter", "mile-scandinavian", "mile", "millimeter", "yard", "gram", "kilogram", "ounce", "pound", "stone", "celsius", "fahrenheit", "fluid-ounce", "gallon", "liter", "milliliter"];

@@ -1,32 +1,38 @@
 // === Module 5308: ? ===
 
 // Module 5308
-import _mod5309 from "module_5309" /* 5309 */;
-
-
-export default function toPrimitive(arg0, arg1) {
-  if ("object" == obj.default(arg0)) {
-    if (arg0) {
-      let str = arg1;
-      const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
-        const call = tmp4.call;
-        if (!str) {
-          str = "default";
-        }
-        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
-        if ("object" != tmpResult.default(tmp5)) {
-          return tmp5;
-        } else {
-          const _TypeError = TypeError;
-          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
-          throw typeError;
-        }
-        tmpResult = _mod5309;
-      } else {
-        return "string" === str ? String : Number(arg0);
-      }
+function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
+  try {
+    const iter = arg0[arg5](arg6);
+    value = iter.value;
+    if (iter.done) {
+      fn(value);
+    } else {
+      const resolved = Promise.resolve(value);
+      resolved.then(arg3, arg4);
     }
+  } catch (tmp13) {
+    fn2(tmp13);
   }
-  return arg0;
+}
+
+export default function _asyncToGenerator(arg0) {
+  closure_0 = arg0;
+  return function() {
+    const self = this;
+    closure_1 = arguments;
+    return new Promise((arg0, arg1) => {
+      _self = arg0;
+      closure_1 = arg1;
+      function _next(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
+      }
+      function _throw(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
+      }
+      const applyResult = _self.apply(self, closure_1);
+      closure_2 = applyResult;
+      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
+    });
+  };
 };

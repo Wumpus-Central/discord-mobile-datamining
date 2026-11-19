@@ -84,10 +84,10 @@ function pnpm_decayTs3(arg0, arg1) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "ip",
+      current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "(function useFastestListPropsScrollReportingNativeTsx1(event){let[scrollPosition,horizontal]=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}})",
-      reduceMotion: "(function FastListTsx1(){let[scrollPosValue,interpolate,inputRange,outputRange,horizontal]=this.__closure;const interpolatedValue=scrollPosValue!=null?interpolate(scrollPosValue.get(),inputRange,outputRange):null;return{transform:interpolatedValue!=null?[horizontal?{translateX:interpolatedValue}:{translateY:interpolatedValue}]:undefined};})"
+      startTimestamp: 124,
+      reduceMotion: 160
     };
     let num = obj.velocity;
     if (num == null) {

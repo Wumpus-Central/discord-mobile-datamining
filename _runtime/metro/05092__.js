@@ -1,21 +1,15 @@
 // === Module 5092: ? ===
 
 // Module 5092
-import Animated from "Animated" /* 5093 */;
-import ScrollView from "ScrollView" /* 5188 */;
-import _modDef5190 from "module_5190" /* 5190 */;
-import Touchable from "Touchable" /* 5203 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
+const NativeModules = get_ActivityIndicator.NativeModules;
+let PlatformConstants;
+if (NativeModules != null) {
+  PlatformConstants = NativeModules.PlatformConstants;
+}
+if (PlatformConstants == null) {
+  PlatformConstants = get_ActivityIndicator.Platform.constants;
+}
 
-export const BaseButton = Animated.BaseButton;
-export const BorderlessButton = Animated.BorderlessButton;
-export const PureNativeButton = Animated.PureNativeButton;
-export const RawButton = Animated.RawButton;
-export const RectButton = Animated.RectButton;
-export const FlatList = ScrollView.FlatList;
-export const RefreshControl = ScrollView.RefreshControl;
-export const ScrollView = ScrollView.ScrollView;
-export const Switch = ScrollView.Switch;
-export const TextInput = ScrollView.TextInput;
-export const Pressable = _modDef5190;
-export const Touchable = Touchable.Touchable;
+export default PlatformConstants;

@@ -1,15 +1,7 @@
 // === Module 19955: ? ===
 
 // Module 19955
-import _mod19956 from "module_19956" /* 19956 */;
-import capitalize from "capitalize" /* 19963 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default _mod19956((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/community_settings", width: 88, height: 80, scales: [2, 3], hash: "47e53f4c1a010a8a023be6a3f87eb4e2", name: "channel_setup", type: "png" });

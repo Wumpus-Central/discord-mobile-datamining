@@ -1,9 +1,7 @@
 // === Module 16341: ? ===
 
 // Module 16341
+import _mod16342 from "module_16342" /* 16342 */;
 
-export default {
-  parse() {
-    return this.createSingleNodeList(this.Identifier());
-  }
-};
+
+export default _mod16342;

@@ -6,9 +6,8 @@ import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Defs = importDefault;
+const FePointLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,15 +27,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class Defs {
+class FePointLight {
   constructor() {
     self = this;
-    tmp = c2(this, Defs);
+    tmp = c2(this, FePointLight);
     tmp2 = closure_4;
-    obj = closure_4(Defs);
+    obj = closure_4(FePointLight);
     tmp3 = closure_3;
-    if (closure_6()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,15 +47,17 @@ class Defs {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Defs, fn(19).Component);
+_inherits(FePointLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    return jsx(Defs(7809), { children: this.props.children });
+    const result = FePointLight(7762).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Defs, items);
-importDefaultResultResult.displayName = "Defs";
+const importDefaultResultResult = _createClass(FePointLight, items);
+importDefaultResultResult.displayName = "FePointLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

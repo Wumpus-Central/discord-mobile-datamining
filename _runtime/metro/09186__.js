@@ -1,42 +1,21 @@
 // === Module 9186: ? ===
 
 // Module 9186
-import colorPropType from "colorPropType" /* 9170 */;
-import _mod9177 from "module_9177" /* 9177 */;
-import emptyFunction_mod from "module_4864" /* 4864 */;
-import "module_4864";
+const require = globalThis.__r;
 
-const obj = {};
-const module_9177 = Object.assign(_mod9177);
-obj.color = colorPropType;
-obj.fontFamily = emptyFunction.string;
-obj.fontSize = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
-let emptyFunction = emptyFunction_mod;
-obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
-let emptyFunction = emptyFunction_mod;
-obj.fontVariant = emptyFunction.arrayOf(emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]));
-let emptyFunction = emptyFunction_mod;
-const size = { width: emptyFunction.number, height: emptyFunction.number };
-obj.textShadowOffset = emptyFunction.shape(size);
-obj.textShadowRadius = emptyFunction.number;
-obj.textShadowColor = colorPropType;
-obj.letterSpacing = emptyFunction.number;
-obj.lineHeight = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
-let emptyFunction = emptyFunction_mod;
-obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
-obj.includeFontPadding = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
-let emptyFunction = emptyFunction_mod;
-obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
-obj.textDecorationColor = colorPropType;
-let emptyFunction = emptyFunction_mod;
-obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
-let emptyFunction = emptyFunction_mod;
-obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
-
-export default obj;
+for (const key10013 in require("RNIapAmazonModule")) {
+  arg5[key10013] = require("RNIapAmazonModule")[key10013];
+  continue;
+}
+for (const key10017 in require("module_9179")) {
+  arg5[key10017] = require("module_9179")[key10017];
+  continue;
+}
+for (const key10021 in require("module_9180")) {
+  arg5[key10021] = require("module_9180")[key10021];
+  continue;
+}
+for (const key10025 in require("module_9187")) {
+  arg5[key10025] = require("module_9187")[key10025];
+  continue;
+}

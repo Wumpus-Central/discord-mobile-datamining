@@ -1,12 +1,7 @@
 // === Module 9108: ? ===
 
 // Module 9108
-import _slicedToArray from "module_32" /* 32 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const noop = fn(19);
-({ useCallback: closure_1, useState: c2 } = noop);
 
-export default function useForceUpdate() {
-  closure_0 = _slicedToArray(React2({}), 2)[1];
-  return duration(() => closure_0({}), []);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 275, height: 42, scales: [2, 3], hash: "ad7c8b7fe5cb5b3227b2fba22a45cc38", name: "img_nitro_tier_2_activated_dark", type: "png" });

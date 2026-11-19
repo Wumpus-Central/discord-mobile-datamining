@@ -1,14 +1,16 @@
 // === Module 7839: ? ===
 
 // Module 7839
-import _modDef7815 from "module_7815" /* 7815 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7770 from "module_7770" /* 7770 */;
+import _modDef7840 from "module_7840" /* 7840 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeSpecularLighting = arg1;
+const Rect = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeSpecularLighting {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class Rect {
   constructor() {
     self = this;
-    tmp = c2(this, FeSpecularLighting);
-    tmp2 = closure_4;
-    obj = closure_4(FeSpecularLighting);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, Rect);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Rect);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +52,28 @@ class FeSpecularLighting {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeSpecularLighting, _modDef7815);
+_inherits(Rect, _modDef7770);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeSpecularLighting(7792).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(Rect(7761).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeSpecularLighting, items);
-importDefaultResultResult.displayName = "FeSpecularLighting";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Rect, items);
+importDefaultResultResult.displayName = "Rect";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
 
 export default importDefaultResultResult;

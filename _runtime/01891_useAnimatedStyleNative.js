@@ -61,7 +61,7 @@ export function useAnimatedStyle(pnpm_indexTsx1, items2, arg2, arg3) {
     obj3.remoteState = tmp8(1708).makeShareable(obj5);
     const tmp8Result4 = tmp8(1708);
     obj3.viewDescriptors = tmp8(1829).makeViewDescriptorsSet();
-    obj3.styleUpdaterContainer = { current: "find" };
+    obj3.styleUpdaterContainer = { current: "r" };
     tmp2.current = obj3;
     const tmp8Result5 = tmp8(1829);
   }

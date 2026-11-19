@@ -2,7 +2,10 @@
 
 // Module 7845
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7790 from "module_7790" /* 7790 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 7754 */;
+import extractPropsDefault from "extractProps" /* 7761 */;
+import extractFontDefault from "extractFont" /* 7768 */;
+import _modDef7770 from "module_7770" /* 7770 */;
 import _modDef7846 from "module_7846" /* 7846 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -10,7 +13,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const ForeignObject = fn;
+const TSpan = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,49 +35,68 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class ForeignObject {
+class TSpan {
   constructor() {
     self = this;
-    tmp = closure_3(this, ForeignObject);
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, TSpan);
+    items1 = [...items];
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ForeignObject);
+    obj = hasOwnProperty(TSpan);
     tmp3 = closure_4;
     if (metroImportDefault()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      const propsAndStylesResult = TSpan(7761).propsAndStyles(matrix);
+      const obj = TSpan(7761);
+      const merged = Object.assign(propsAndStylesResult, TSpan(7762).pickNotNil(extractFontDefault(propsAndStylesResult, false)));
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(propsAndStylesResult);
+      }
+      const obj2 = TSpan(7762);
+    };
+    return tmp3Result;
   }
 }
-_inherits(ForeignObject, _modDef7790);
+_inherits(TSpan, _modDef7770);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(ForeignObject(7791).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const propsAndStylesResult = TSpan(7761).propsAndStyles(this.props);
+    const obj2 = {};
+    const obj = TSpan(7761);
+    const merged = Object.assign(propsAndStylesResult);
+    obj2.x = null;
+    obj2.y = null;
+    const tmp2Result = extractPropsDefault(obj2, this);
+    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
+    tmp2Result.ref = this.refMethod;
+    const obj3 = {};
+    const merged2 = Object.assign(tmp2Result);
+    return jsx(_modDef7846, {});
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(ForeignObject, items);
-importDefaultResultResult.displayName = "ForeignObject";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+let items = [entry];
+const importDefaultResultResult = _createClass(TSpan, items);
+importDefaultResultResult.displayName = "TSpan";
+const extractFont = fn(7768);
+extractFont.setTSpan(importDefaultResultResult);
 
 export default importDefaultResultResult;

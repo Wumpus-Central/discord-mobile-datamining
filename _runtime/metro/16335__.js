@@ -1,13 +1,7 @@
 // === Module 16335: ? ===
 
 // Module 16335
-const obj = {
-  parse: {
-    prelude: null,
-    block() {
-      return this.Block(true);
-    }
-  }
-};
+import _mod16336 from "module_16336" /* 16336 */;
 
-export default obj;
+
+export default _mod16336;

@@ -2,6 +2,8 @@
 
 // Module 16332
 
-export default function() {
-  return this.createSingleNodeList(this.Raw(this.scanner.tokenIndex, null, false));
+export default {
+  parse() {
+    return this.createSingleNodeList(this.Identifier());
+  }
 };

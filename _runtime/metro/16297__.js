@@ -1,39 +1,77 @@
 // === Module 16297: ? ===
 
 // Module 16297
-import _mod16244 from "module_16244" /* 16244 */;
+import _mod16235 from "module_16235" /* 16235 */;
 
-const Comment = _mod16244.TYPE.Comment;
-let obj = {
-  name: "Comment",
-  structure: { value: String },
+const WhiteSpace = _mod16235.TYPE.WhiteSpace;
+const Comment = _mod16235.TYPE.Comment;
+const Ident = _mod16235.TYPE.Ident;
+const LeftParenthesis = _mod16235.TYPE.LeftParenthesis;
+const obj = {
+  name: "MediaQuery",
+  structure: null,
   parse() {
     const self = this;
-    const tokenStart = this.scanner.tokenStart;
-    const tokenEnd = this.scanner.tokenEnd;
-    this.eat(Comment);
-    const sum = tokenEnd - tokenStart + 2;
-    let tmp3 = sum >= 2;
-    if (2 <= sum) {
-      const source = self.scanner.source;
-      tmp3 = 42 === source.charCodeAt(tokenEnd - 2);
+    const scanner = this.scanner;
+    scanner.skipSC();
+    const list = this.createList();
+    let tmp2 = null;
+    let tmp3 = null;
+    let tmp4 = null;
+    if (!this.scanner.eof) {
+      while (true) {
+        let tokenType = self.scanner.tokenType;
+        if (Comment === tokenType) {
+          let iter = self.scanner;
+          let nextResult = iter.next();
+          let WhiteSpaceResult = tmp2;
+          let IdentifierResult = tmp3;
+        } else {
+          if (WhiteSpace === tokenType) {
+            WhiteSpaceResult = self.WhiteSpace();
+            IdentifierResult = tmp3;
+          } else {
+            if (Ident === tokenType) {
+              IdentifierResult = self.Identifier();
+              WhiteSpaceResult = tmp2;
+              if (null !== tmp2) {
+                let arr = list.push(tmp2);
+                WhiteSpaceResult = null;
+              }
+              let arr3 = list.push(IdentifierResult);
+            } else {
+              tmp4 = tmp3;
+              if (LeftParenthesis !== tokenType) {
+                break;
+              } else {
+                IdentifierResult = self.MediaFeature();
+              }
+            }
+            break;
+          }
+          break;
+        }
+        tmp2 = WhiteSpaceResult;
+        tmp3 = IdentifierResult;
+        tmp4 = IdentifierResult;
+        if (self.scanner.eof) {
+          break;
+        }
+      }
     }
-    if (tmp3) {
-      const source2 = self.scanner.source;
-      tmp3 = 47 === source2.charCodeAt(tokenEnd - 1);
+    if (null === tmp4) {
+      self.error("Identifier or parenthesis is expected");
     }
-    let diff = tokenEnd;
-    if (tmp3) {
-      diff = tokenEnd - 2;
-    }
-    const obj = { type: "Comment", loc: self.getLocation(tokenStart, self.scanner.tokenStart), value: self.scanner.source.substring(tokenStart + 2, diff) };
-    return obj;
+    const element = { type: "MediaQuery", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  generate(value) {
-    this.chunk("/*");
-    this.chunk(value.value);
-    this.chunk("*/");
+  generate(arg0) {
+    this.children(arg0);
   }
 };
+const obj2 = { children: null };
+const items = [["Identifier", "MediaFeature", "WhiteSpace"]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

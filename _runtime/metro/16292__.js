@@ -1,30 +1,37 @@
 // === Module 16292: ? ===
 
 // Module 16292
-import _mod16244 from "module_16244" /* 16244 */;
+import _mod16235 from "module_16235" /* 16235 */;
 
-const LeftSquareBracket = _mod16244.TYPE.LeftSquareBracket;
-const RightSquareBracket = _mod16244.TYPE.RightSquareBracket;
+const RightParenthesis = _mod16235.TYPE.RightParenthesis;
 const obj = {
-  name: "Brackets",
+  name: "Function",
   structure: null,
   parse(call, arg1) {
     const self = this;
-    this.eat(LeftSquareBracket);
-    call = call.call;
-    if (!self.scanner.eof) {
-      self.eat(RightSquareBracket);
+    const str = this.consumeFunctionName();
+    const formatted = str.toLowerCase();
+    if (arg1.hasOwnProperty(formatted)) {
+      const call2 = tmp4.call;
+      typeof call2 === "unknown" ? arg1[formatted](arg1) : call2(self, arg1);
+    } else {
+      call = call.call;
+      if (!self.scanner.eof) {
+        self.eat(RightParenthesis);
+      }
+      const element = { type: "Function", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: str, children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
+      return element;
     }
-    const element = { type: "Brackets", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
-    return element;
   },
-  generate(arg0) {
-    this.chunk("[");
-    this.children(arg0);
-    this.chunk("]");
-  }
+  generate(name) {
+    this.chunk(name.name);
+    this.chunk("(");
+    this.children(name);
+    this.chunk(")");
+  },
+  walkContext: "function"
 };
-const obj2 = { children: null };
+const obj2 = { name: String, children: null };
 const items = [[]];
 obj2.children = items;
 obj.structure = obj2;

@@ -1,9 +1,11 @@
 // === Module 15474: ? ===
 
 // Module 15474
-import _mod15472 from "module_15472" /* 15472 */;
+import _mod15458 from "module_15458" /* 15458 */;
+import _mod15475 from "module_15475" /* 15475 */;
 
-let closure_0 = _mod15472({}.toString);
-let closure_1 = _mod15472("".slice);
+let closure_2 = _mod15458({}.hasOwnProperty);
 
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod15475(arg0), arg1);
+});

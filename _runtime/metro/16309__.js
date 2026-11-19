@@ -1,18 +1,41 @@
 // === Module 16309: ? ===
 
 // Module 16309
-import _mod16244 from "module_16244" /* 16244 */;
+import _mod16235 from "module_16235" /* 16235 */;
 
-const Number = _mod16244.TYPE.Number;
+const Comma = _mod16235.TYPE.Comma;
 const obj = {
-  name: "Number",
-  structure: { value: String },
+  name: "SelectorList",
+  structure: null,
   parse() {
-    return { type: "Number", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd), value: this.consume(Number) };
+    const self = this;
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      list.push(self.Selector());
+      if (self.scanner.tokenType === Comma) {
+        self.scanner.next();
+        while (!self.scanner.eof) {
+          let arr3 = list.push(self.Selector());
+          if (self.scanner.tokenType !== Comma) {
+            break;
+          }
+        }
+        const iter = self.scanner;
+      }
+    }
+    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  generate(value) {
-    this.chunk(value.value);
-  }
+  generate(arg0) {
+    this.children(arg0, function() {
+      this.chunk(",");
+    });
+  },
+  walkContext: "selector"
 };
+const obj2 = { children: null };
+const items = [["Selector", "Raw"]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

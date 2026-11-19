@@ -1,11 +1,14 @@
 // === Module 15254: ? ===
 
 // Module 15254
-import _mod15237 from "module_15237" /* 15237 */;
+import _mod15252 from "module_15252" /* 15252 */;
 
 
 export default (arg0, arg1, arg2) => {
-  const obj = new _mod15237(arg0, arg2);
-  const tmp = new _mod15237(arg1, arg2);
-  return obj.compare(tmp) || obj.compareBuild(tmp);
+  try {
+    const tmp7 = new _mod15252(arg1, arg2);
+    return tmp7.test(arg0);
+  } catch (err) {
+    return false;
+  }
 };

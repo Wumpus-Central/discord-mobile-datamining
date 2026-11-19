@@ -1,19 +1,7 @@
 // === Module 15480: ? ===
 
 // Module 15480
-import _mod15481 from "module_15481" /* 15481 */;
+import _mod15458 from "module_15458" /* 15458 */;
 
 
-export default (arg0, arg1) => {
-  let tmp3 = _mod15481[arg0];
-  if (!tmp3) {
-    let obj = arg1;
-    if (!arg1) {
-      obj = {};
-    }
-    _mod15481[arg0] = obj;
-    tmp3 = obj;
-    const tmpResult = _mod15481;
-  }
-  return tmp3;
-};
+export default _mod15458({}.isPrototypeOf);

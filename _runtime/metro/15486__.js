@@ -1,13 +1,17 @@
 // === Module 15486: ? ===
 
 // Module 15486
-import _mod15465 from "module_15465" /* 15465 */;
+import _mod15455 from "module_15455" /* 15455 */;
+import element from "element" /* 15487 */;
+import getOwnPropertyDescriptor from "module_15454" /* 15454 */;
 
-const tmp = _mod15465.navigator && _mod15465.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod15455(() => 7 !== Object.defineProperty(element("div"), "a", {
+    get() {
+      return 7;
+    }
+  }).a);
 }
 
-export default str;
+export default tmp2;
