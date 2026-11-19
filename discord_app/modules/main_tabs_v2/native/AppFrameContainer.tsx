@@ -1,14 +1,14 @@
-// === Module 18945: AppFrameContainer ===
+// === Module 18937: AppFrameContainer ===
 
-// Module 18945 (AppFrameContainer)
+// Module 18937 (AppFrameContainer)
 import nativeDefault from "native" /* 575 */;
-import useAppFrameDefault from "useAppFrame" /* 17569 */;
+import useAppFrameDefault from "useAppFrame" /* 17562 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_5 = createStyles.createStyles((arg0, arg1, arg2) => {
   const container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingLeft: null, paddingRight: null };
   let num = 0;

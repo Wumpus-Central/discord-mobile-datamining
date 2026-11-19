@@ -1,14 +1,14 @@
-// === Module 19331: VoicePanelUserSheet ===
+// === Module 19327: VoicePanelUserSheet ===
 
-// Module 19331 (VoicePanelUserSheet)
+// Module 19327 (VoicePanelUserSheet)
 import nativeDefault from "native" /* 575 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7648 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7978 */;
-import UserProfileActivity from "UserProfileActivity" /* 14371 */;
-import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19330 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7948 */;
+import UserProfileActivity from "UserProfileActivity" /* 14358 */;
+import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19326 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import RelationshipStore from "RelationshipStore" /* 4765 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import RelationshipStore from "RelationshipStore" /* 4734 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -130,7 +130,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { wrapper: { gap: 12, padding: 16 }, card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: 16, borderRadius: nativeDefault.radii.lg }, header: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 16 }, user: { display: "flex", gap: 8, flexDirection: "row", alignItems: "center", flex: 1, minWidth: 0 }, avatar: null, username: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: 16, borderRadius: nativeDefault.radii.lg };
 obj2.avatar = { maxWidth: 48, maxHeight: 48, borderRadius: nativeDefault.radii.round };
@@ -153,8 +153,8 @@ export default function VoicePanelUserSheet(userId) {
   const items2 = [UserStore];
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const obj4 = channelId(504);
-  const name = channelId(5851).useName(guildId, channelId, stateFromStores);
-  const live = userId(14422)(userId).live;
+  const name = channelId(5822).useName(guildId, channelId, stateFromStores);
+  const live = userId(14409)(userId).live;
   closure_5 = tmp8;
   const items3 = [null == stateFromStores || null == stateFromStores1 || null == stateFromStores2];
   const effect = stateFromStores.useEffect(() => {
@@ -167,8 +167,8 @@ export default function VoicePanelUserSheet(userId) {
       if (null != stateFromStores2) {
         const avatarURL = stateFromStores.getAvatarURL(guildId, 48, false);
         if (null != avatarURL) {
-          const cachedSourceFromURI = channelId(8942).getCachedSourceFromURI(avatarURL);
-          const tmp2Result = channelId(8942);
+          const cachedSourceFromURI = channelId(8916).getCachedSourceFromURI(avatarURL);
+          const tmp2Result = channelId(8916);
         }
         const avatarDecoration = stateFromStores.avatarDecoration;
         const obj2 = { style: tmp.wrapper, children: null };
@@ -179,13 +179,13 @@ export default function VoicePanelUserSheet(userId) {
           let tmp11Result = closure_10(channelId(1187).Avatar, obj8);
         } else {
           const size = { source: cachedSourceFromURI, resizeMode: "stretch", width: 48, height: 48, style: tmp.avatar };
-          tmp11Result = closure_10(tmp7(5510), size);
-          const tmp7Result = tmp7(5510);
+          tmp11Result = closure_10(tmp7(5479), size);
+          const tmp7Result = tmp7(5479);
         }
         const obj9 = { children: null };
         const items4 = [tmp11Result, ];
         const obj10 = { variant: "body-md/semibold", style: tmp.username, lineClamp: 1, children: name };
-        items4[1] = closure_10(channelId(5414).Text, obj10);
+        items4[1] = closure_10(channelId(5383).Text, obj10);
         obj7.children = items4;
         const items5 = [closure_11(stateFromStores2, obj7), ];
         const obj11 = { userId: stateFromStores.id, currentUserId: stateFromStores2.id, channelId, guildId };
@@ -203,10 +203,10 @@ export default function VoicePanelUserSheet(userId) {
 
         ];
         const obj12 = { user: stateFromStores, channel: stateFromStores1, currentUser: stateFromStores2, style: tmp.card };
-        items6[2] = closure_10(tmp7(14425), obj12);
+        items6[2] = closure_10(tmp7(14412), obj12);
         obj2.children = items6;
         obj9.children = closure_11(stateFromStores2, obj2);
-        return closure_10(channelId(5051).BottomSheet, obj9);
+        return closure_10(channelId(5020).BottomSheet, obj9);
       }
     }
   }

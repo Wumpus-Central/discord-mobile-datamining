@@ -1,11 +1,11 @@
-// === Module 14837: GatewayCompressionHandler ===
+// === Module 14823: GatewayCompressionHandler ===
 
-// Module 14837 (GatewayCompressionHandler)
+// Module 14823 (GatewayCompressionHandler)
 import LoggerDefault from "Logger" /* 3 */;
-import ProcessArgs2 from "ProcessArgs" /* 7707 */;
-import GatewayZstdUtils from "GatewayZstdUtils" /* 14838 */;
-import NativeCompressionModule from "NativeCompressionModule" /* 14839 */;
-import _mod14840 from "module_14840" /* 14840 */;
+import ProcessArgs2 from "ProcessArgs" /* 7677 */;
+import GatewayZstdUtils from "GatewayZstdUtils" /* 14824 */;
+import NativeCompressionModule from "NativeCompressionModule" /* 14825 */;
+import _mod14826 from "module_14826" /* 14826 */;
 import size from "module_2" /* 2 */;
 
 const items = [];
@@ -56,7 +56,7 @@ prototype2["getAlgorithm"] = function getAlgorithm() {
 prototype2["usesLegacyCompression"] = function usesLegacyCompression() {
   return false;
 };
-prototype2["feed"] = function feed(buffer) {
+prototype2["feed"] = function feed(arg0) {
   const self = this;
   if (null == this._stream) {
     const _Error2 = Error;
@@ -64,9 +64,9 @@ prototype2["feed"] = function feed(buffer) {
     throw error;
   } else {
     const _ArrayBuffer = ArrayBuffer;
-    if (buffer instanceof ArrayBuffer) {
+    if (arg0 instanceof ArrayBuffer) {
       const _stream = self._stream;
-      const decompressResult = _stream.decompress(buffer);
+      const decompressResult = _stream.decompress(arg0);
       let decodeResult = decompressResult;
       if (null != self._decoder) {
         const _decoder = self._decoder;
@@ -77,7 +77,7 @@ prototype2["feed"] = function feed(buffer) {
       }
     } else {
       const _Error = Error;
-      const error1 = new Error("Expected array buffer, but got " + typeof buffer);
+      const error1 = new Error("Expected array buffer, but got " + typeof arg0);
       throw error1;
     }
   }
@@ -88,7 +88,7 @@ prototype2["close"] = function close() {
 items.push(fn);
 const fn2 = (arg0) => {
   const tmp2 = new tmp(arg0, new.target, tmp, new.target);
-  tmp2._pako = _mod14840;
+  tmp2._pako = _mod14826;
   tmp2._usesZstd = false;
   tmp2._zstdDecoder = null;
   tmp2._zstdStream = null;
@@ -216,7 +216,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = _mod14840;
+  applyArgumentsResult._pako = _mod14826;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;

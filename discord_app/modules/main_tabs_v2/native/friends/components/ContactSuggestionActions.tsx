@@ -1,10 +1,10 @@
-// === Module 18132: ContactSuggestionActions ===
+// === Module 18125: ContactSuggestionActions ===
 
-// Module 18132 (ContactSuggestionActions)
+// Module 18125 (ContactSuggestionActions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17619 */;
-import _modDef18133 from "module_18133" /* 18133 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17612 */;
+import _modDef18126 from "module_18126" /* 18126 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -26,7 +26,7 @@ let obj4 = { duration: 250, easing: null };
 const Easing4 = fn(1655).Easing;
 obj4.easing = Easing4.out(fn(1655).Easing.quad);
 let closure_11 = { mass: 1, stiffness: 172, damping: 17.3 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj6 = { icon: { position: "absolute", top: 4, zIndex: 2, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 } };
 let closure_12 = createStyles.createStyles(obj6);
 let closure_13 = { code: "(function ContactSuggestionActionsTsx1(){let[right,opacity,scale]=this.__closure;return{right:right.get(),opacity:opacity.get(),transform:[{scale:scale.get()}]};})" };
@@ -312,7 +312,7 @@ export function ContactSuggestionActions(user) {
   const items10 = [tmp.icon, animatedStyle];
   obj8.style = items10;
   const tmp2Result2 = require("module_1655");
-  obj8.children = c5(require("native").Icon, { source: _modDef18133, color: tmp.icon.color });
+  obj8.children = c5(require("native").Icon, { source: _modDef18126, color: tmp.icon.color });
   const items11 = [c5(_modDef1655.View, obj8), ];
   const obj10 = { style: animatedStyle1, children: null };
   const obj11 = { variant: "secondary", size: str, grow: false, text: null, onPress: null };

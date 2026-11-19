@@ -1,19 +1,19 @@
-// === Module 18834: SearchListSection ===
+// === Module 18826: SearchListSection ===
 
-// Module 18834 (SearchListSection)
-import Text_Text from "Text/Text" /* 5414 */;
-import Pressables from "Pressables" /* 6941 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7476 */;
-import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 12724 */;
+// Module 18826 (SearchListSection)
+import Text_Text from "Text/Text" /* 5383 */;
+import Pressables from "Pressables" /* 6911 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7446 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 12707 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4823);
-let closure_5 = createStyles.createStyles({ section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: fn(8488).SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } });
-let obj = { section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: fn(8488).SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } };
+const createStyles = fn(4792);
+let closure_5 = createStyles.createStyles({ section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: fn(8457).SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } });
+let obj = { section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: fn(8457).SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchListSection.tsx");
 

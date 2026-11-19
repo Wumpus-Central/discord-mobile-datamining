@@ -1,20 +1,20 @@
-// === Module 18565: GoatIllocon ===
+// === Module 18558: GoatIllocon ===
 
-// Module 18565 (GoatIllocon)
-import FastImageDefault from "FastImage" /* 5510 */;
-import assetHelpers from "assetHelpers" /* 7268 */;
-import _modDef18566 from "module_18566" /* 18566 */;
-import _modDef18567 from "module_18567" /* 18567 */;
-import _modDef18568 from "module_18568" /* 18568 */;
+// Module 18558 (GoatIllocon)
+import FastImageDefault from "FastImage" /* 5479 */;
+import assetHelpers from "assetHelpers" /* 7238 */;
+import _modDef18559 from "module_18559" /* 18559 */;
+import _modDef18560 from "module_18560" /* 18560 */;
+import _modDef18561 from "module_18561" /* 18561 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18566 }, 3: null };
-const obj2 = { uri: _modDef18566 };
-obj[2] = { uri: _modDef18567 };
-const obj3 = { uri: _modDef18567 };
-obj[3] = { uri: _modDef18568 };
+let obj = { 1: null, 2: { uri: _modDef18559 }, 3: null };
+const obj2 = { uri: _modDef18559 };
+obj[2] = { uri: _modDef18560 };
+const obj3 = { uri: _modDef18560 };
+obj[3] = { uri: _modDef18561 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GoatIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function GoatIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7268).getAssetSource(obj);
+  obj.source = num(7238).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

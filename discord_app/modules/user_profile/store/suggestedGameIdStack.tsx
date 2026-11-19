@@ -1,8 +1,8 @@
-// === Module 10120: suggestedGameIdStack ===
+// === Module 10098: suggestedGameIdStack ===
 
-// Module 10120 (suggestedGameIdStack)
-import WidgetType from "WidgetType" /* 6868 */;
-import GuildProfileConstants from "GuildProfileConstants" /* 9647 */;
+// Module 10098 (suggestedGameIdStack)
+import WidgetType from "WidgetType" /* 6838 */;
+import GuildProfileConstants from "GuildProfileConstants" /* 9626 */;
 import apply from "apply" /* 12 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

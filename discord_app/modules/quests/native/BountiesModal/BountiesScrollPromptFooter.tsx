@@ -1,16 +1,16 @@
-// === Module 16386: BountiesScrollPromptFooter ===
+// === Module 16377: BountiesScrollPromptFooter ===
 
-// Module 16386 (BountiesScrollPromptFooter)
+// Module 16377 (BountiesScrollPromptFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import timingPresets from "timingPresets" /* 5036 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 8854 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16387 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 16388 */;
+import timingPresets from "timingPresets" /* 5005 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 8827 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16378 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 16379 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 require = fn;
 function BountiesScrollPromptFooterContent(zIndex) {
@@ -43,7 +43,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj3.children = closure_7(zIndex(4950).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
+  obj3.children = closure_7(zIndex(4919).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
   const items5 = [closure_7(_modDef1655.View, obj3), ];
   const obj4 = { style: null, onLayout: onContentLayout, children };
   const items6 = [tmp.content, memo1, opacityStyle];
@@ -53,17 +53,17 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(_modDef1655.View, obj2);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(6466).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6437).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { root: { position: "absolute", bottom: 0, left: 0, right: 0 }, content: { flex: 1, minHeight: 97, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, gradient: null };
   const merged = Object.assign(StyleSheet.absoluteFillObject);
   obj.gradient = {};
   return obj;
 });
-let items = [{ code: "(function BountiesScrollPromptFooterTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})" }, fn(5033).withTiming, fn(5036).timingStandard];
+let items = [{ code: "(function BountiesScrollPromptFooterTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})" }, fn(5002).withTiming, fn(5005).timingStandard];
 let closure_129_0;
 let closure_129_1;
 [tmp3, tmp4, tmp5] = items;
@@ -77,7 +77,7 @@ let items1 = [tmp4, tmp5];
 BountiesScrollPromptFooterTsx1.__closure = items1;
 BountiesScrollPromptFooterTsx1.__workletHash = 6190498486460;
 BountiesScrollPromptFooterTsx1.__initData = tmp3;
-let items2 = [{ code: "(function BountiesScrollPromptFooterTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})" }, fn(5033).withTiming, fn(5036).timingStandard];
+let items2 = [{ code: "(function BountiesScrollPromptFooterTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})" }, fn(5002).withTiming, fn(5005).timingStandard];
 let closure_130_0;
 let closure_130_1;
 [tmp6, tmp7, tmp8] = items2;

@@ -1,17 +1,17 @@
-// === Module 12704: FriendsHeader ===
+// === Module 12687: FriendsHeader ===
 
-// Module 12704 (FriendsHeader)
+// Module 12687 (FriendsHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3307 from "module_3307" /* 3307 */;
 import _modDef3339 from "module_3339" /* 3339 */;
-import FriendsIcon from "FriendsIcon" /* 5508 */;
-import CheckpointConstants from "CheckpointConstants" /* 5877 */;
-import CheckpointTextDefault from "CheckpointText" /* 12435 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12682 */;
+import FriendsIcon from "FriendsIcon" /* 5477 */;
+import CheckpointConstants from "CheckpointConstants" /* 5848 */;
+import CheckpointTextDefault from "CheckpointText" /* 12418 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12665 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4823 */;
+import createStyles from "createStyles" /* 4792 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

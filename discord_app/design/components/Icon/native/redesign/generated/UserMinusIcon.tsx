@@ -1,9 +1,9 @@
-// === Module 5517: UserMinusIcon ===
+// === Module 5486: UserMinusIcon ===
 
-// Module 5517 (UserMinusIcon)
+// Module 5486 (UserMinusIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod5518 from "module_5518" /* 5518 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod5487 from "module_5487" /* 5487 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function UserMinusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5518, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5487, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

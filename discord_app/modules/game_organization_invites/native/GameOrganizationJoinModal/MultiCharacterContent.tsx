@@ -1,8 +1,8 @@
-// === Module 12196: MultiCharacterContent ===
+// === Module 12176: MultiCharacterContent ===
 
-// Module 12196 (MultiCharacterContent)
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6931 */;
-import GameOrganizationCharacterListDefault from "GameOrganizationCharacterList" /* 12197 */;
+// Module 12176 (MultiCharacterContent)
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6901 */;
+import GameOrganizationCharacterListDefault from "GameOrganizationCharacterList" /* 12177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,8 +15,8 @@ export default function MultiCharacterContent(characters) {
   if (null == characters) {
     let tmp7 = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
   } else {
-    const obj = { characters, selectedCharacterId: tmp, onSelect: tmp2, noun: tmp3 };
-    tmp7 = jsx(GameOrganizationCharacterListDefault, { characters, selectedCharacterId: tmp, onSelect: tmp2, noun: tmp3 });
+    const obj = { characters, selectedCharacterId: tmp, onSelect: tmp2, displayNoun: tmp3 };
+    tmp7 = jsx(GameOrganizationCharacterListDefault, { characters, selectedCharacterId: tmp, onSelect: tmp2, displayNoun: tmp3 });
   }
   return tmp7;
 };

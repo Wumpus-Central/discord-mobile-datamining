@@ -1,8 +1,8 @@
-// === Module 5605: ConnectionEventFramerateReducer ===
+// === Module 5574: ConnectionEventFramerateReducer ===
 
-// Module 5605 (ConnectionEventFramerateReducer)
+// Module 5574 (ConnectionEventFramerateReducer)
 import logger_Logger from "logger/Logger" /* 4 */;
-import Constants from "Constants" /* 5568 */;
+import Constants from "Constants" /* 5537 */;
 import size from "module_2" /* 2 */;
 
 ({ SpeakingFlags: c2, VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT: c3 } = Constants);

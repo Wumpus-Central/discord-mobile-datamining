@@ -1,10 +1,10 @@
-// === Module 8872: CollectiblesSequencedOfferPromotionUtils ===
+// === Module 8845: CollectiblesSequencedOfferPromotionUtils ===
 
-// Module 8872 (CollectiblesSequencedOfferPromotionUtils)
-import StorefrontTypes from "StorefrontTypes" /* 6764 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8838 */;
-import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 8870 */;
-import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 8873 */;
+// Module 8845 (CollectiblesSequencedOfferPromotionUtils)
+import StorefrontTypes from "StorefrontTypes" /* 6735 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8807 */;
+import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 8843 */;
+import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 8846 */;
 import size from "module_2" /* 2 */;
 
 function isSequencedOfferRewardAvailable(rewardStatus) {
@@ -30,7 +30,7 @@ function isSequencedOfferRewardAvailable(rewardStatus) {
       }
       let tmp7 = actionType === StorefrontTypes.StorefrontPromotionActionType.NON_COMMERCE_ORBS_BACK;
       if (!tmp7) {
-        tmp7 = null != CollectiblesPromotionDiscountUtils.getPromotionPercentOff(rewardStatus);
+        tmp7 = null != CollectiblesPromotionDiscountUtils.getPromotionFiatPercentOff(rewardStatus);
         const tmp3Result = CollectiblesPromotionDiscountUtils;
       }
       tmp5 = tmp7;
@@ -56,12 +56,12 @@ export function isOrbsBackPromotion(rewardConfig) {
   return actionType === StorefrontTypes.StorefrontPromotionActionType.NON_COMMERCE_ORBS_BACK;
 }
 export { isSequencedOfferRewardAvailable };
-export function getSequencedOfferPromotionForCollectiblesProduct(selectedProduct, appliesToAllSkus) {
+export function getSequencedOfferPromotionForCollectiblesProduct(skuId, appliesToAllSkus) {
   if (timestamp === undefined) {
     const _Date = Date;
     timestamp = Date.now();
   }
-  if (!obj.isBundleProduct(selectedProduct)) {
+  if (!obj.isBundleProduct(skuId)) {
     if (appliesToAllSkus.appliesToAllSkus) {
       let tmp8 = null;
       if (tmp3Result.isStorefrontPromotionActive(appliesToAllSkus, timestamp)) {
@@ -73,6 +73,10 @@ export function getSequencedOfferPromotionForCollectiblesProduct(selectedProduct
       tmp3Result = CollectiblesPromoPriceUtils;
     } else {
       const skuIds = appliesToAllSkus.skuIds;
+      let hasItem;
+      if (skuIds != null) {
+        hasItem = skuIds.includes(skuId.skuId);
+      }
       tmp8 = null;
     }
     let tmp5 = tmp8;

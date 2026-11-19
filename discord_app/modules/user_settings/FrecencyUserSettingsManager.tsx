@@ -1,19 +1,19 @@
-// === Module 19572: FrecencyUserSettingsManager ===
+// === Module 19568: FrecencyUserSettingsManager ===
 
-// Module 19572 (FrecencyUserSettingsManager)
+// Module 19568 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4653 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4622 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 10398 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 10397 */;
-import EmojiStore from "EmojiStore" /* 6481 */;
-import SoundboardStore from "SoundboardStore" /* 5869 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 6521 */;
-import FrecencyStore from "FrecencyStore" /* 6581 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 10376 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 10375 */;
+import EmojiStore from "EmojiStore" /* 6452 */;
+import SoundboardStore from "SoundboardStore" /* 5840 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6492 */;
+import FrecencyStore from "FrecencyStore" /* 6552 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -71,7 +71,7 @@ let closure_23 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_23 = async function _saveProtos(arg0) {
           closure_1 = tmp3;
           if (!closure_2_17) {
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           } else {
             resetTimer(colors, false);
             if (!UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS)) {
@@ -110,7 +110,7 @@ let closure_23 = async function _saveProtos(arg0) {
       } else if (1 === tmp7) {
         c3 = 0;
         c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
@@ -139,7 +139,7 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6581).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(6552).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 const FREQUENCY_ITEM_LIMIT = fn(1365).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();

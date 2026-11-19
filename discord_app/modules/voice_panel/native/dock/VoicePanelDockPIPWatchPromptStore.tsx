@@ -1,12 +1,12 @@
-// === Module 19378: VoicePanelDockPIPWatchPromptStore ===
+// === Module 19374: VoicePanelDockPIPWatchPromptStore ===
 
-// Module 19378 (VoicePanelDockPIPWatchPromptStore)
+// Module 19374 (VoicePanelDockPIPWatchPromptStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6309 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6308 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6280 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4726 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
 
 require = fn;
 function markWatched(ownerId) {

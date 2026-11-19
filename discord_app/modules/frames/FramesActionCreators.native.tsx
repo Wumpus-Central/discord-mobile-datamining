@@ -1,9 +1,9 @@
-// === Module 10582: FramesActionCreators ===
+// === Module 10560: FramesActionCreators ===
 
-// Module 10582 (FramesActionCreators)
-import _launchFrameAll from "_launchFrame" /* 10584 */;
+// Module 10560 (FramesActionCreators)
+import _launchFrameAll from "_launchFrame" /* 10562 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import VoiceStateStore from "VoiceStateStore" /* 5471 */;
+import VoiceStateStore from "VoiceStateStore" /* 5440 */;
 
 const require = fn;
 let closure_6 = async function _launchFrameOnNative() {

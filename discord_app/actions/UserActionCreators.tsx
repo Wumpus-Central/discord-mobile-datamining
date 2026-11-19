@@ -1,12 +1,12 @@
-// === Module 6865: UserActionCreators ===
+// === Module 6835: UserActionCreators ===
 
-// Module 6865 (UserActionCreators)
+// Module 6835 (UserActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import AnalyticsSchema from "AnalyticsSchema" /* 1349 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6340 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6311 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserRecord from "UserRecord" /* 1407 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -25,7 +25,7 @@ let closure_9 = async function _fetchProfile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -159,7 +159,7 @@ let closure_9 = async function _fetchProfile(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp91) {
       closure_5 = tmp91;
@@ -187,7 +187,7 @@ let closure_10 = async function _fetchMutualFriends() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -244,7 +244,7 @@ let closure_10 = async function _fetchMutualFriends() {
           closure_131_1(closure_131_2[7]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp32) {
         closure_4 = tmp32;

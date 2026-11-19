@@ -1,12 +1,12 @@
-// === Module 16534: PlayableStore ===
+// === Module 16525: PlayableStore ===
 
-// Module 16534 (PlayableStore)
+// Module 16525 (PlayableStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import AdCreativeType from "AdCreativeType" /* 6473 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6559 */;
-import FramesStore from "FramesStore" /* 6531 */;
+import AdCreativeType from "AdCreativeType" /* 6444 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6530 */;
+import FramesStore from "FramesStore" /* 6502 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
 
 require = fn;
@@ -69,8 +69,8 @@ function handleVisibilityChange() {
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5449).ActivityPanelModes;
-const FramesConstants = fn(6532);
+const ActivityPanelModes = fn(5418).ActivityPanelModes;
+const FramesConstants = fn(6503);
 ({ asLaunched: closure_9, makeFrameId: closure_10, MAIN_SURFACE: closure_11 } = FramesConstants);
 let c3 = null;
 let obj = null;
@@ -92,6 +92,17 @@ prototype["getPlayableForFrame"] = function getPlayableForFrame(frameId) {
     playable = obj.playable;
   }
   return playable;
+};
+prototype["getTimerState"] = function getTimerState(arg0) {
+  let id;
+  if (obj != null) {
+    id = obj.playable.id;
+  }
+  let tmp2 = null;
+  if (id === arg0) {
+    tmp2 = obj;
+  }
+  return tmp2;
 };
 prototype["getPlayingPlayableId"] = function getPlayingPlayableId() {
   let id;
@@ -140,20 +151,83 @@ obj = {
     set = new Set();
   },
   PLAYABLE_LAUNCH: function handlePlayableLaunch(playable) {
-    playable = playable.playable;
+    c3 = { playable: playable.playable, launchId: playable.launchId };
     return false;
+  },
+  PLAYABLE_LAUNCH_COMPLETE: function handlePlayableLaunchComplete(arg0) {
+    let launchId1;
+    ({ launchId, success } = arg0);
+    if (_null != null) {
+      launchId1 = _null.launchId;
+    }
+    if (launchId1 !== launchId) {
+      return false;
+    } else {
+      const playable = _null.playable;
+      if (success) {
+        obj = FramesStore;
+        const mainFrame = FramesStore.getMainFrame();
+        let applicationId;
+        if (mainFrame != null) {
+          applicationId = mainFrame.applicationId;
+        }
+        if (applicationId === playable.applicationId) {
+          if (mainFrame.id === refs(playable.applicationId, closure_1_11)) {
+            const tmp16 = React6(mainFrame);
+            let iframeId;
+            if (tmp16 != null) {
+              iframeId = tmp16.data.iframeId;
+            }
+            let flag2 = null != iframeId;
+            if (flag2) {
+              const id = mainFrame.id;
+              const mainFrame1 = obj.getMainFrame();
+              let id1;
+              if (mainFrame1 != null) {
+                id1 = mainFrame1.id;
+              }
+              let tmp7 = id1 === id && id === refs(playable.applicationId, closure_1_11);
+              if (tmp7) {
+                _null = null;
+                let frameId;
+                if (obj != null) {
+                  frameId = obj.frameId;
+                }
+                if (frameId !== id) {
+                  const obj2 = { playable, frameId: id, remainingMs: 1000 * playable.rewardTimerSeconds, startedAt: null };
+                  obj = obj2;
+                  pauseOrResumeTimer(obj2);
+                }
+                tmp7 = tmp9;
+              }
+              flag2 = tmp7;
+            }
+          }
+          return flag2;
+        }
+        _null = null;
+        flag2 = false;
+      } else {
+        _null = null;
+        return false;
+      }
+    }
   },
   FRAME_IFRAME_MOUNT: function handleFrameIframeMount(frameId) {
     frameId = frameId.frameId;
     obj = FramesStore;
     const frame = FramesStore.getFrame(frameId);
-    let tmp3 = null != c3;
+    let playable;
+    if (_null != null) {
+      playable = _null.playable;
+    }
+    let tmp3 = null != playable;
     if (tmp3) {
       let applicationId;
       if (frame != null) {
         applicationId = frame.applicationId;
       }
-      tmp3 = tmp2.applicationId === applicationId;
+      tmp3 = playable.applicationId === applicationId;
     }
     if (tmp3) {
       const mainFrame = obj.getMainFrame();
@@ -161,17 +235,24 @@ obj = {
       if (mainFrame != null) {
         id = mainFrame.id;
       }
-      let flag = false;
-      if (id === frameId) {
-        flag = false;
-        if (frameId === refs(tmp2.applicationId, closure_1_11)) {
-          c3 = null;
-          const obj2 = { playable: tmp2, frameId, remainingMs: 1000 * tmp2.rewardTimerSeconds, startedAt: null };
+      let tmp7 = id === frameId;
+      if (tmp7) {
+        tmp7 = frameId === refs(playable.applicationId, closure_1_11);
+      }
+      if (tmp7) {
+        _null = null;
+        let frameId1;
+        if (obj != null) {
+          frameId1 = obj.frameId;
+        }
+        if (frameId1 !== frameId) {
+          const obj2 = { playable, frameId, remainingMs: 1000 * playable.rewardTimerSeconds, startedAt: null };
           obj = obj2;
           pauseOrResumeTimer(obj2);
         }
+        tmp7 = tmp11;
       }
-      tmp3 = flag;
+      tmp3 = tmp7;
     }
     return tmp3;
   },
@@ -179,7 +260,7 @@ obj = {
     ({ frameId, applicationId } = arg0);
     let applicationId1;
     if (_null != null) {
-      applicationId1 = _null.applicationId;
+      applicationId1 = _null.playable.applicationId;
     }
     let tmp2 = applicationId1 === applicationId;
     if (tmp2) {

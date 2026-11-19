@@ -1,13 +1,13 @@
-// === Module 12204: GameOrganizationJoinOutcomeChecklist ===
+// === Module 12187: GameOrganizationJoinOutcomeChecklist ===
 
-// Module 12204 (GameOrganizationJoinOutcomeChecklist)
+// Module 12187 (GameOrganizationJoinOutcomeChecklist)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import ClockIcon from "ClockIcon" /* 5532 */;
-import Stack_Stack from "Stack/Stack" /* 5837 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7136 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7443 */;
-import useGameOrganizationJoinOutcome from "useGameOrganizationJoinOutcome" /* 12202 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import ClockIcon from "ClockIcon" /* 5501 */;
+import Stack_Stack from "Stack/Stack" /* 5808 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7106 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7413 */;
+import useGameOrganizationJoinOutcome from "useGameOrganizationJoinOutcome" /* 12182 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function RowIcon(status) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { card: { padding: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, content: { flex: 1 }, divider: null };
 let obj3 = { padding: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.divider = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -39,7 +39,7 @@ export default function GameOrganizationJoinOutcomeChecklist(rows) {
   rows = rows.rows;
   const tmp = closure_6();
   importDefault = tmp;
-  return closure_4(rows(5837).Stack, {
+  return closure_4(rows(5808).Stack, {
     spacing: nativeDefault.space.PX_16,
     style: tmp.card,
     children: rows.map((subtitle, index) => {

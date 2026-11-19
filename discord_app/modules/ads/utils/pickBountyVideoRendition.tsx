@@ -1,8 +1,8 @@
-// === Module 16407: pickBountyVideoRendition ===
+// === Module 16398: pickBountyVideoRendition ===
 
-// Module 16407 (pickBountyVideoRendition)
+// Module 16398 (pickBountyVideoRendition)
 import _modDef38 from "module_38" /* 38 */;
-import BountyAspectRatio from "BountyAspectRatio" /* 9870 */;
+import BountyAspectRatio from "BountyAspectRatio" /* 9849 */;
 import size from "module_2" /* 2 */;
 
 function getRendition(videoRenditions, preferred) {
@@ -70,6 +70,23 @@ export function pickBountyVideoRenditionWithFallback(videoRenditions, BOUNTY_MOB
       tmp5 = obj;
     }
     tmp = tmp5;
+  }
+  return tmp;
+}
+export function pickBountyPreviewUrl(questDockBounty, PORTRAIT) {
+  const videoPreviewRenditions = questDockBounty.videoPreviewRenditions;
+  let tmp;
+  if (videoPreviewRenditions != null) {
+    tmp = videoPreviewRenditions[PORTRAIT];
+  }
+  if (null == tmp) {
+    if (null == questDockBounty.videoPreviewRenditions) {
+      const videoPreview = questDockBounty.videoPreview;
+      const tmp4 = videoPreview;
+    } else {
+      const _Object = Object;
+    }
+    tmp = tmp4;
   }
   return tmp;
 }

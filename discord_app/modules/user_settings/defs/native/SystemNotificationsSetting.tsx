@@ -1,8 +1,8 @@
-// === Module 16957: SystemNotificationsSetting ===
+// === Module 16950: SystemNotificationsSetting ===
 
-// Module 16957 (SystemNotificationsSetting)
+// Module 16950 (SystemNotificationsSetting)
 import util from "util" /* 1113 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7713 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7683 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_8 = async function _handleEnableSystemNotification() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -79,16 +79,16 @@ let closure_8 = async function _handleEnableSystemNotification() {
   }
 };
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_5 = fn(6404).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13208);
+let closure_5 = fn(6375).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13190);
 ({ EventActionType: closure_6, EventActionLocation: metroImportDefault } = NotificationPermissionConstants);
-let SettingBuilders = fn(11897);
+const SettingBuilders = fn(11875);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(8624).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8593).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_8.apply;
@@ -101,13 +101,7 @@ const pressable = SettingBuilders.createPressable({
   },
   withArrow: true
 });
-SettingBuilders = fn(11897);
-let obj4 = {};
-const merged = Object.assign(pressable);
-obj4.parent = fn(16956).MobileNotifSettings.NOTIFICATIONS_REDESIGN;
-const pressable1 = SettingBuilders.createPressable(obj4);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");
 
 export default pressable;
-export const RedesignSystemNotificationsSetting = pressable1;

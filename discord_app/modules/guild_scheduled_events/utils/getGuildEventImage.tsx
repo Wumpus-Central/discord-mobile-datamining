@@ -1,6 +1,6 @@
-// === Module 14607: getGuildEventImage ===
+// === Module 14594: getGuildEventImage ===
 
-// Module 14607 (getGuildEventImage)
+// Module 14594 (getGuildEventImage)
 import Constants from "Constants" /* 1072 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
 import size from "module_2" /* 2 */;

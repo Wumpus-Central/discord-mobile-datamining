@@ -1,20 +1,20 @@
-// === Module 19138: ShopIllocon ===
+// === Module 19130: ShopIllocon ===
 
-// Module 19138 (ShopIllocon)
-import FastImageDefault from "FastImage" /* 5510 */;
-import assetHelpers from "assetHelpers" /* 7268 */;
-import _modDef19139 from "module_19139" /* 19139 */;
-import _modDef19140 from "module_19140" /* 19140 */;
-import _modDef19141 from "module_19141" /* 19141 */;
+// Module 19130 (ShopIllocon)
+import FastImageDefault from "FastImage" /* 5479 */;
+import assetHelpers from "assetHelpers" /* 7238 */;
+import _modDef19131 from "module_19131" /* 19131 */;
+import _modDef19132 from "module_19132" /* 19132 */;
+import _modDef19133 from "module_19133" /* 19133 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19139 }, 3: null };
-const obj2 = { uri: _modDef19139 };
-obj[2] = { uri: _modDef19140 };
-const obj3 = { uri: _modDef19140 };
-obj[3] = { uri: _modDef19141 };
+let obj = { 1: null, 2: { uri: _modDef19131 }, 3: null };
+const obj2 = { uri: _modDef19131 };
+obj[2] = { uri: _modDef19132 };
+const obj3 = { uri: _modDef19132 };
+obj[3] = { uri: _modDef19133 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ShopIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function ShopIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7268).getAssetSource(obj);
+  obj.source = num(7238).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

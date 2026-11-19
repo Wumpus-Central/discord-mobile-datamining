@@ -1,16 +1,16 @@
-// === Module 9223: SKUActionCreators ===
+// === Module 9199: SKUActionCreators ===
 
-// Module 9223 (SKUActionCreators)
+// Module 9199 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import BillingUtils from "BillingUtils" /* 4635 */;
-import StoreUtils from "StoreUtils" /* 6266 */;
-import PurchaseTokenUtils from "PurchaseTokenUtils" /* 6286 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 8030 */;
-import TestModeUtils from "TestModeUtils" /* 9224 */;
+import BillingUtils from "BillingUtils" /* 4605 */;
+import StoreUtils from "StoreUtils" /* 6238 */;
+import PurchaseTokenUtils from "PurchaseTokenUtils" /* 6258 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7999 */;
+import TestModeUtils from "TestModeUtils" /* 9200 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8836 */;
-import SKUStore from "SKUStore" /* 6582 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8805 */;
+import SKUStore from "SKUStore" /* 6553 */;
 
 require = fn;
 let closure_8 = async function _fetchSKU() {
@@ -28,7 +28,7 @@ let closure_8 = async function _fetchSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -110,7 +110,7 @@ let closure_9 = async function _fetchPublicSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -194,7 +194,7 @@ let closure_10 = async function _fetchPublishedSKU(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -302,7 +302,7 @@ let closure_11 = async function _fetchTestSKUsForApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -387,7 +387,7 @@ let closure_12 = async function _previewPurchaseSku(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -511,7 +511,7 @@ let closure_13 = async function _grantChannelBranchEntitlement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -596,7 +596,7 @@ let closure_15 = async function _orderSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -689,7 +689,7 @@ let closure_16 = async function _purchaseSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -753,11 +753,11 @@ let closure_16 = async function _purchaseSKU() {
             billingError = new closure_136_0(closure_136_2[10]).BillingError(closure_135_19);
           }
           closure_135_18 = billingError;
-          let tmp117 = closure_135_18.code !== closure_136_0(closure_136_2[11]).ErrorCodes.CONFIRMATION_REQUIRED;
-          if (tmp117) {
-            tmp117 = closure_135_18.code !== closure_136_0(closure_136_2[11]).ErrorCodes.AUTHENTICATION_REQUIRED;
+          let tmp118 = closure_135_18.code !== closure_136_0(closure_136_2[11]).ErrorCodes.CONFIRMATION_REQUIRED;
+          if (tmp118) {
+            tmp118 = closure_135_18.code !== closure_136_0(closure_136_2[11]).ErrorCodes.AUTHENTICATION_REQUIRED;
           }
-          if (!tmp117) {
+          if (!tmp118) {
             const obj12 = { type: "SKU_PURCHASE_AWAIT_CONFIRMATION", skuId: closure_135_1, isGift: closure_135_6 };
             closure_136_1(closure_136_2[4]).dispatch(obj12);
             const obj16 = closure_136_1(closure_136_2[4]);
@@ -879,8 +879,8 @@ let closure_16 = async function _purchaseSKU() {
             return obj28;
           } else {
             closure_135_17 = value;
-            let dispatch = closure_136_1(closure_136_2[4]).dispatch;
-            let obj = { type: "SKU_PURCHASE_SUCCESS", skuId: closure_135_1, libraryApplications: null, entitlements: null, giftCode: null, loadId: null };
+            let merged2 = closure_136_17;
+            let obj = { skuId: closure_135_1, libraryApplications: null, entitlements: null, giftCode: null, loadId: null };
             if (null != closure_135_17.body.library_applications) {
               const library_applications = closure_135_17.body.library_applications;
               let found = library_applications.filter(closure_136_0(closure_136_2[15]).isNotNullish);
@@ -891,24 +891,23 @@ let closure_16 = async function _purchaseSKU() {
             obj.entitlements = closure_135_17.body.entitlements;
             obj.giftCode = closure_135_17.body.gift_code;
             obj.loadId = closure_135_8;
-            dispatch(obj);
+            merged2(obj);
             obj = {};
-            dispatch = Object.assign(closure_135_17.body);
+            merged2 = Object.assign(closure_135_17.body);
             obj.appliedUserDiscounts = closure_135_17.body.applied_user_discounts;
             obj.redirectConfirmation = false;
             c9 = 0;
             c12 = 3;
-            const tmp165 = closure_136_1(closure_136_2[4]);
           }
           if (null != closure_135_9) {
             closure_135_14.country_code = closure_135_9;
           }
         }
-      } catch (tmp153) {
-        closure_10 = tmp153;
+      } catch (tmp154) {
+        closure_10 = tmp154;
         if (tmp4 === c9) {
           c12 = tmp2;
-          throw tmp153;
+          throw tmp154;
         } else {
           c11 = tmp;
         }
@@ -916,7 +915,11 @@ let closure_16 = async function _purchaseSKU() {
     }
   })();
 };
-let closure_17 = async function _resendPaymentVerificationEmail() {
+function dispatchSKUPurchaseSuccess(arg0) {
+  const merged = Object.assign(arg0);
+  DispatcherDefault.dispatch({ type: "SKU_PURCHASE_SUCCESS" });
+}
+let closure_18 = async function _resendPaymentVerificationEmail() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -927,7 +930,7 @@ let closure_17 = async function _resendPaymentVerificationEmail() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -1075,9 +1078,10 @@ export function purchaseSKU() {
   }
   return applyArgumentsResult;
 }
+export { dispatchSKUPurchaseSuccess };
 export function resendPaymentVerificationEmail() {
   const self = this;
-  const apply = closure_17.apply;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

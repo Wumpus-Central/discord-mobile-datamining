@@ -1,13 +1,13 @@
-// === Module 12433: CheckpointUnavailableScreen ===
+// === Module 12416: CheckpointUnavailableScreen ===
 
-// Module 12433 (CheckpointUnavailableScreen)
+// Module 12416 (CheckpointUnavailableScreen)
 import nativeDefault from "native" /* 575 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12434 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12417 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_64 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

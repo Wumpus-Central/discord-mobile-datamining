@@ -1,8 +1,8 @@
-// === Module 6839: conjureChatHistory ===
+// === Module 6809: conjureChatHistory ===
 
-// Module 6839 (conjureChatHistory)
+// Module 6809 (conjureChatHistory)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 6838 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 6808 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -124,6 +124,9 @@ function newMessageFromHistory(ts) {
   }
   if (null != ts.app_build_request) {
     tmp.appBuildRequest = ts.app_build_request;
+  }
+  if (null != ts.server_change) {
+    tmp.serverChange = ts.server_change;
   }
   if (null != ts.source_sha) {
     tmp.sourceSha = ts.source_sha;

@@ -1,11 +1,11 @@
-// === Module 8346: AdUserActionCreators ===
+// === Module 8315: AdUserActionCreators ===
 
-// Module 8346 (AdUserActionCreators)
+// Module 8315 (AdUserActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import NativeAdsModuleDefault from "NativeAdsModule" /* 8347 */;
+import NativeAdsModuleDefault from "NativeAdsModule" /* 8316 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdUserStore from "AdUserStore" /* 8344 */;
+import AdUserStore from "AdUserStore" /* 8313 */;
 
 let closure_6 = async function _fetchAdUser(arg0) {
   if (c6 === 2) {
@@ -18,7 +18,7 @@ let closure_6 = async function _fetchAdUser(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {

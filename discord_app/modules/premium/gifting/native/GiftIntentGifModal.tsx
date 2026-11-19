@@ -1,14 +1,14 @@
-// === Module 12259: GiftIntentGifModal ===
+// === Module 12242: GiftIntentGifModal ===
 
-// Module 12259 (GiftIntentGifModal)
+// Module 12242 (GiftIntentGifModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6337 */;
-import NavigatorHeader from "NavigatorHeader" /* 7006 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
+import NavigatorHeader from "NavigatorHeader" /* 6976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ let closure_13 = async function _sendGiftIntentGif(arg0) {
     obj12.location_stack = items;
     closure_130_1(closure_130_2[12]).track(closure_130_8.GIFT_INTENT_MESSAGE_SENT, obj12);
     c4 = 3;
-    return { value: "HermesInternal", done: null };
+    return { value: "HermesInternal", done: "+60" };
   }
   const id = closure_129_0.id;
   await closure_130_1(closure_130_2[10]).sendMessage(id, closure_130_1(closure_130_2[11]).parse(closure_129_0, closure_129_3.url), true, { location: closure_130_9.GIFTING });
@@ -170,10 +170,10 @@ function GiftIntentGifModalBody(channelId) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const MessageSendLocation = fn(4828).MessageSendLocation;
+const MessageSendLocation = fn(4797).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, messageContainer: null, pickerContainer: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.messageContainer = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };

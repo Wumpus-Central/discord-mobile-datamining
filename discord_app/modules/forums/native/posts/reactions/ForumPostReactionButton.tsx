@@ -1,21 +1,21 @@
-// === Module 11173: ForumPostReactionButton ===
+// === Module 11151: ForumPostReactionButton ===
 
-// Module 11173 (ForumPostReactionButton)
+// Module 11151 (ForumPostReactionButton)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UserSettings from "UserSettings" /* 4648 */;
-import ReactionUtils from "ReactionUtils" /* 4767 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5405 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import Pressables from "Pressables" /* 6941 */;
-import EmojiDefault from "Emoji" /* 7407 */;
-import useReactionPermissionsDefault from "useReactionPermissions" /* 10070 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 10343 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 10350 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 11174 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11636 */;
+import UserSettings from "UserSettings" /* 4617 */;
+import ReactionUtils from "ReactionUtils" /* 4736 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5374 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import Pressables from "Pressables" /* 6911 */;
+import EmojiDefault from "Emoji" /* 7377 */;
+import useReactionPermissionsDefault from "useReactionPermissions" /* 10048 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 10321 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 10328 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 11152 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11614 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -147,7 +147,7 @@ class ReactionButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 8, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT, minWidth: 32, minHeight: 26, maxHeight: 26 }, selected: null, textEmoji: null, imageEmoji: null, countContainer: null };
 let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 8, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT, minWidth: 32, minHeight: 26, maxHeight: 26 };
 obj2.selected = { borderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT, backgroundColor: nativeDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT };

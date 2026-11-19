@@ -1,16 +1,16 @@
-// === Module 14705: GuildPowerupsMarketingHeader ===
+// === Module 14691: GuildPowerupsMarketingHeader ===
 
-// Module 14705 (GuildPowerupsMarketingHeader)
+// Module 14691 (GuildPowerupsMarketingHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _modDef2755 from "module_2755" /* 2755 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13305 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13330 */;
-import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 14706 */;
-import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 14707 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13287 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13312 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 14692 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 14693 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 8243 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 8212 */;
 
 require = fn;
 function PerkText(children) {
@@ -18,7 +18,7 @@ function PerkText(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef671("#000000");
@@ -78,7 +78,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       }
       const obj7 = { perks: str2 };
       obj2.children = intl.format(_modDef2755["7lwpzR"], obj7);
-      obj.children = jsx(guild(5414).Text, { style: tmp.text, variant: "body-sm/semibold", children: null });
+      obj.children = jsx(guild(5383).Text, { style: tmp.text, variant: "body-sm/semibold", children: null });
       return <View style={tmp.container}>{null}</View>;
     }
   }

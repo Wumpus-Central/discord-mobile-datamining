@@ -1,7 +1,7 @@
-// === Module 4992: getGradientThemeFromFlags ===
+// === Module 4961: getGradientThemeFromFlags ===
 
-// Module 4992 (getGradientThemeFromFlags)
-import native from "native" /* 4884 */;
+// Module 4961 (getGradientThemeFromFlags)
+import native from "native" /* 4853 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx");

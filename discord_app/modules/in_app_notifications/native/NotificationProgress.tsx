@@ -1,6 +1,6 @@
-// === Module 11123: NotificationProgress ===
+// === Module 11101: NotificationProgress ===
 
-// Module 11123 (NotificationProgress)
+// Module 11101 (NotificationProgress)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -11,7 +11,7 @@ const _modDef1655 = _mod1655;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { progress: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 4 }, progressContainerBottom: { width: "100%", position: "absolute", bottom: -1 } };
 let closure_7 = createStyles.createStyles(obj2);
 let closure_8 = { code: "(function NotificationProgressTsx1(){let[percent,width]=this.__closure;const percentRemaining=(typeof percent==='number'?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};})" };

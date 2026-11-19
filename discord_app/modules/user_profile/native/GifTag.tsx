@@ -1,12 +1,12 @@
-// === Module 8123: GifTag ===
+// === Module 8092: GifTag ===
 
-// Module 8123 (GifTag)
+// Module 8092 (GifTag)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import createStyles from "createStyles" /* 4823 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import createStyles from "createStyles" /* 4792 */;
 import n from "module_671" /* 671 */;
 import size from "module_2" /* 2 */;
 

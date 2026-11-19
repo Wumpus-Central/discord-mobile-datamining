@@ -1,6 +1,6 @@
-// === Module 13883: NitroHomeBadgeDirectoryExperiment ===
+// === Module 13865: NitroHomeBadgeDirectoryExperiment ===
 
-// Module 13883 (NitroHomeBadgeDirectoryExperiment)
+// Module 13865 (NitroHomeBadgeDirectoryExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

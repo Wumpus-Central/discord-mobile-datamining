@@ -1,6 +1,6 @@
-// === Module 6859: EmbeddedAppFramePolicyExperiment ===
+// === Module 6829: EmbeddedAppFramePolicyExperiment ===
 
-// Module 6859 (EmbeddedAppFramePolicyExperiment)
+// Module 6829 (EmbeddedAppFramePolicyExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

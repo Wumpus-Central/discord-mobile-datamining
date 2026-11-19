@@ -1,15 +1,15 @@
-// === Module 18782: SuggestedSearchList ===
+// === Module 18774: SuggestedSearchList ===
 
-// Module 18782 (SuggestedSearchList)
+// Module 18774 (SuggestedSearchList)
 import nativeDefault from "native" /* 575 */;
-import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 18784 */;
+import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 18776 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 const obj = { text: { marginBottom: nativeDefault.space.PX_4, marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { marginBottom: nativeDefault.space.PX_4, marginHorizontal: nativeDefault.space.PX_16 };

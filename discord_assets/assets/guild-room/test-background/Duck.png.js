@@ -1,6 +1,6 @@
-// === Module 6382: ? ===
+// === Module 6353: ? ===
 
-// Module 6382
+// Module 6353
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/guild-room/test-background/Duck.png.js");

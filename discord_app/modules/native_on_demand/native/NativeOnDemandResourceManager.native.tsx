@@ -1,11 +1,11 @@
-// === Module 19642: NativeOnDemandResourceManager ===
+// === Module 19638: NativeOnDemandResourceManager ===
 
-// Module 19642 (NativeOnDemandResourceManager)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5719 */;
+// Module 19638 (NativeOnDemandResourceManager)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5688 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
 
 let require = fn;
 const AppStates = fn(1072).AppStates;
@@ -41,7 +41,7 @@ const prototype = function NativeOnDemandResourceManager() {
         const obj7 = { value, done: true };
         return obj7;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -58,7 +58,7 @@ const prototype = function NativeOnDemandResourceManager() {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (applyArgumentsResult.isPastConnectionOpen) {
-              const obj2 = tmp2(9361);
+              const obj2 = tmp2(9338);
               let hasOnDemandResourceResult;
               if (obj2 != null) {
                 hasOnDemandResourceResult = obj2.hasOnDemandResource("krisp");
@@ -69,12 +69,12 @@ const prototype = function NativeOnDemandResourceManager() {
                 if (modeOptions.getModeOptions().autoThreshold) {
                   const Storage = tmp5(510).Storage;
                   const result = Storage.set(constants2.RESTORE_AUTO_THRESHOLD_KEY, true);
-                  tmp2(5719).setMode(modeOptions.getMode(), { autoThreshold: false });
-                  const obj5 = tmp2(5719);
+                  tmp2(5688).setMode(modeOptions.getMode(), { autoThreshold: false });
+                  const obj5 = tmp2(5688);
                 }
                 if (state.getState() === constants.ACTIVE) {
                   applyArgumentsResult.hasFetchedKrisp = true;
-                  const obj6 = tmp2(9361);
+                  const obj6 = tmp2(9338);
                   let onDemandResource;
                   if (obj6 != null) {
                     onDemandResource = obj6.fetchOnDemandResource("krisp");
@@ -98,7 +98,7 @@ const prototype = function NativeOnDemandResourceManager() {
         } else {
           closure_128_0 = value;
           let result1;
-          const obj10 = tmp2(9361);
+          const obj10 = tmp2(9338);
           if (obj10 != null) {
             result1 = obj10.isOnDemandResourcingAvailable();
           }

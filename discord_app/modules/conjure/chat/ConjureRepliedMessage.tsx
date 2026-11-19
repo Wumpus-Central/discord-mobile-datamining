@@ -1,6 +1,6 @@
-// === Module 18495: ConjureRepliedMessage ===
+// === Module 18488: ConjureRepliedMessage ===
 
-// Module 18495 (ConjureRepliedMessage)
+// Module 18488 (ConjureRepliedMessage)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureRepliedMessage.tsx");

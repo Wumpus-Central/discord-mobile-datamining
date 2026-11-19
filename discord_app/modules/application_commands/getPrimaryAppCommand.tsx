@@ -1,14 +1,14 @@
-// === Module 10653: getPrimaryAppCommand ===
+// === Module 10631: getPrimaryAppCommand ===
 
-// Module 10653 (getPrimaryAppCommand)
+// Module 10631 (getPrimaryAppCommand)
 import Server from "Server" /* 2119 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5438 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 10400 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 10404 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5407 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 10378 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 10382 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 10396 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 10374 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ let closure_10 = async function _getPrimaryAppCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -98,7 +98,7 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
   obj.commandTypes = items;
   return ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, { placeholderCount: 1, scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(10396);
+let ApplicationCommandIndexStore = fn(10374);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: closure_6 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";

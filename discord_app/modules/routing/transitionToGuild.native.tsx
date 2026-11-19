@@ -1,8 +1,8 @@
-// === Module 6743: transitionToGuild ===
+// === Module 6714: transitionToGuild ===
 
-// Module 6743 (transitionToGuild)
+// Module 6714 (transitionToGuild)
 import router_utils from "router_utils" /* 1099 */;
-import getGuildTransitionRoute from "getGuildTransitionRoute" /* 6744 */;
+import getGuildTransitionRoute from "getGuildTransitionRoute" /* 6715 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

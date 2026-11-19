@@ -1,15 +1,15 @@
-// === Module 10617: useActionBarHeight ===
+// === Module 10595: useActionBarHeight ===
 
-// Module 10617 (useActionBarHeight)
+// Module 10595 (useActionBarHeight)
 import initialize from "initialize" /* 504 */;
-import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 10621 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10627 */;
+import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 10599 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10605 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 
 require = fn;
 const InputModes = fn(1072).InputModes;
-let closure_5 = fn(5052).ACTION_SHEET_HANDLE_SPACING;
-let sum = 2 * fn(10618).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
+let closure_5 = fn(5021).ACTION_SHEET_HANDLE_SPACING;
+let sum = 2 * fn(10596).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useActionBarHeight.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 11821: PinotChannelLabel ===
+// === Module 11799: PinotChannelLabel ===
 
-// Module 11821 (PinotChannelLabel)
+// Module 11799 (PinotChannelLabel)
 import util from "util" /* 1113 */;
 import _modDef3407 from "module_3407" /* 3407 */;
-import PinotChannelLabelAnchor from "PinotChannelLabelAnchor" /* 11822 */;
-import useAttachPinotMemberCoachmark from "useAttachPinotMemberCoachmark" /* 11823 */;
-import ChannelHeaderShared from "ChannelHeaderShared" /* 11828 */;
+import PinotChannelLabelAnchor from "PinotChannelLabelAnchor" /* 11800 */;
+import useAttachPinotMemberCoachmark from "useAttachPinotMemberCoachmark" /* 11801 */;
+import ChannelHeaderShared from "ChannelHeaderShared" /* 11806 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

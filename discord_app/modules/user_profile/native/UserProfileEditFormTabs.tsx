@@ -1,21 +1,21 @@
-// === Module 15876: UserProfileEditFormTabs ===
+// === Module 15867: UserProfileEditFormTabs ===
 
-// Module 15876 (UserProfileEditFormTabs)
+// Module 15867 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import ChatInputUtils from "ChatInputUtils" /* 5008 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6869 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7508 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8109 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 10098 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 14485 */;
-import UserProfileTabPagesDefault from "UserProfileTabPages" /* 14549 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15875 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 15877 */;
+import ChatInputUtils from "ChatInputUtils" /* 4977 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6839 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7478 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8078 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 10076 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 14472 */;
+import UserProfileTabPagesDefault from "UserProfileTabPages" /* 14536 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15866 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 15868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9328 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9305 */;
 
 const require = globalThis.__r;
 
@@ -26,10 +26,10 @@ function MainPage() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const PROFILE_SIDE_PADDING = fn(7475).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7445).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { tabbedContainer: { marginHorizontal: -PROFILE_SIDE_PADDING }, stickyTabs: { zIndex: 1, paddingTop: nativeDefault.space.PX_12 }, page: null };
 let obj3 = { zIndex: 1, paddingTop: nativeDefault.space.PX_12 };
 obj.page = { paddingHorizontal: PROFILE_SIDE_PADDING, paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
@@ -122,7 +122,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   const tmp6Result = tmp6(first.useState(num2), 2);
   first = tmp6Result[0];
   absoluteFill = tmp6Result[1];
-  arr5 = tmp15(10112)(userId);
+  arr5 = tmp15(10090)(userId);
   closure_7 = tmp20;
   const items5 = [arr5];
   const memo = first.useMemo(() => arr5.filter(UserProfileGameWidgetTypes.isGameWidget), items5);

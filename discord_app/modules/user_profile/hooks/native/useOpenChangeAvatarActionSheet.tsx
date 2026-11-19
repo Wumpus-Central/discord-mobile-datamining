@@ -1,9 +1,9 @@
-// === Module 15857: useOpenChangeAvatarActionSheet ===
+// === Module 15848: useOpenChangeAvatarActionSheet ===
 
-// Module 15857 (useOpenChangeAvatarActionSheet)
+// Module 15848 (useOpenChangeAvatarActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8043 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8012 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -53,7 +53,8 @@ export default function useOpenChangeAvatarActionSheet(user) {
         obj2.openLazy(user(isTryItOut[6])(isTryItOut[7], isTryItOut.paths), "Select GIF Avatar", obj3);
       },
       handleEditAvatarDecorationSelect: null,
-      showRemoveAvatar: null
+      showRemoveAvatar: null,
+      analyticsLocations: null
     };
     let editAvatarDecoration;
     let obj = ActionSheetActionCreatorsDefault;
@@ -63,8 +64,9 @@ export default function useOpenChangeAvatarActionSheet(user) {
       };
     }
     obj2.handleEditAvatarDecorationSelect = editAvatarDecoration;
-    const tmp3 = asyncRequireImpl(15859, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(15850, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
+    obj2.analyticsLocations = analyticsLocations;
     obj.openLazy(tmp3, "Change Avatar", obj2);
     const tmp2Result = ProfileCustomizationUtils;
   }, items);

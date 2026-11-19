@@ -1,7 +1,7 @@
-// === Module 11717: VoicePanelPIPHandoff ===
+// === Module 11695: VoicePanelPIPHandoff ===
 
-// Module 11717 (VoicePanelPIPHandoff)
-import VoicePanelPIPCardThawDefault from "VoicePanelPIPCardThaw" /* 11718 */;
+// Module 11695 (VoicePanelPIPHandoff)
+import VoicePanelPIPCardThawDefault from "VoicePanelPIPCardThaw" /* 11696 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

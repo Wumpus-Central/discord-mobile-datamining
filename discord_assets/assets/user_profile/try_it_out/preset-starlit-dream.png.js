@@ -1,6 +1,6 @@
-// === Module 15847: ? ===
+// === Module 15838: ? ===
 
-// Module 15847
+// Module 15838
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/user_profile/try_it_out/preset-starlit-dream.png.js");

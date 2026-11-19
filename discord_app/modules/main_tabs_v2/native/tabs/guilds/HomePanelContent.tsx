@@ -1,17 +1,17 @@
-// === Module 17913: HomePanelContent ===
+// === Module 17906: HomePanelContent ===
 
-// Module 17913 (HomePanelContent)
+// Module 17906 (HomePanelContent)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1360 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5831 */;
-import ThemedGradientDefault from "ThemedGradient" /* 9560 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 9992 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17598 */;
-import GuildsBarDefault from "GuildsBar" /* 17915 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5802 */;
+import ThemedGradientDefault from "ThemedGradient" /* 9539 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 9970 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17591 */;
+import GuildsBarDefault from "GuildsBar" /* 17908 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 17592 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17585 */;
 
 const _modDef1655 = _mod1655;
 
@@ -177,7 +177,7 @@ function HomeDrawerPanelContent() {
   items7[1] = closure_9(_modDef1655.View, obj11);
   let tmp34Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp34Result2 = closure_9(tmp11(17993), {});
+    tmp34Result2 = closure_9(tmp11(17986), {});
   }
   items7[2] = tmp34Result2;
   obj10.children = items7;
@@ -187,10 +187,10 @@ function HomeDrawerPanelContent() {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1072).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(17914).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(17907).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_11 = createStyles.createStyles((width) => {
   const obj = { container: { flex: 1 }, guildsListContainerGestured: { flex: 1 }, guildLisetContainerDefault: { flex: 1, width }, contentMask: { position: "absolute", top: 0, bottom: 0, right: 0, overflow: "hidden" } };
   return obj;

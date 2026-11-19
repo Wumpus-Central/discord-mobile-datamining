@@ -1,6 +1,6 @@
-// === Module 8051: Constants ===
+// === Module 8020: Constants ===
 
-// Module 8051 (Constants)
+// Module 8020 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/Constants.tsx");

@@ -1,8 +1,8 @@
-// === Module 10770: BaseSocket ===
+// === Module 10748: BaseSocket ===
 
-// Module 10770 (BaseSocket)
+// Module 10748 (BaseSocket)
 import applyDefault from "apply" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 6818 */;
+import RPCErrorDefault from "RPCError" /* 6790 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

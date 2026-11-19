@@ -1,20 +1,20 @@
-// === Module 6844: ConjureActionCreators ===
+// === Module 6814: ConjureActionCreators ===
 
-// Module 6844 (ConjureActionCreators)
+// Module 6814 (ConjureActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5467 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 6850 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 6851 */;
-import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 6853 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 6854 */;
-import createProxyTicket from "createProxyTicket" /* 6856 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5436 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 6820 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 6821 */;
+import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 6823 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 6824 */;
+import createProxyTicket from "createProxyTicket" /* 6826 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReadStateStore from "ReadStateStore" /* 6527 */;
+import ReadStateStore from "ReadStateStore" /* 6498 */;
 import UserStore from "UserStore" /* 1388 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 6845 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 6815 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
 
 require = fn;
 function listProjects() {
@@ -42,7 +42,7 @@ let closure_18 = async function _listProjects() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -190,7 +190,7 @@ let closure_20 = async function _forgetMissingProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     while (true) {
@@ -239,7 +239,7 @@ let closure_20 = async function _forgetMissingProjects() {
             }
           }
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else if (1 === tmp5) {
         c5 = 0;
@@ -268,7 +268,7 @@ let closure_20 = async function _forgetMissingProjects() {
           c5 = 0;
           _require.return();
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         if (3 === tmp5) {
@@ -305,7 +305,7 @@ let closure_20 = async function _forgetMissingProjects() {
           c5 = 0;
           _require.return();
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       }
       c5 = 0;
@@ -396,7 +396,7 @@ let closure_33 = async function _fetchMissingProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -488,7 +488,7 @@ let closure_34 = async function _fetchMissingConjureProjectNow() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -565,7 +565,7 @@ let closure_36 = async function _drainMissingProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     while (true) {
@@ -653,7 +653,7 @@ let closure_38 = async function _requestProjectLimit(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -715,7 +715,7 @@ let closure_38 = async function _requestProjectLimit(arg0) {
           const obj2 = closure_130_1(closure_130_2[9]);
         }
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp37) {
       closure_3 = tmp37;
@@ -754,7 +754,7 @@ let closure_41 = async function _getProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -909,7 +909,7 @@ let closure_49 = async function _postProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -981,17 +981,7 @@ let closure_49 = async function _postProject(arg0) {
     }
   })();
 };
-function patchProject() {
-  const self = this;
-  const apply = closure_51.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_51 = async function _patchProject(arg0) {
+let closure_50 = async function _patchProject(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -1008,7 +998,7 @@ let closure_51 = async function _patchProject(arg0) {
 };
 function fetchConjureApplication() {
   const self = this;
-  const apply = closure_53.apply;
+  const apply = closure_52.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1016,7 +1006,7 @@ function fetchConjureApplication() {
   }
   return applyArgumentsResult;
 }
-let closure_53 = async function _fetchConjureApplication(arg0) {
+let closure_52 = async function _fetchConjureApplication(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1027,7 +1017,7 @@ let closure_53 = async function _fetchConjureApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -1064,7 +1054,7 @@ let closure_53 = async function _fetchConjureApplication(arg0) {
           obj = closure_130_1(closure_130_2[9]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp18) {
       c4 = tmp;
@@ -1072,7 +1062,7 @@ let closure_53 = async function _fetchConjureApplication(arg0) {
     }
   }
 };
-let closure_54 = async function _refreshPreviewApplication(arg0) {
+let closure_53 = async function _refreshPreviewApplication(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1083,7 +1073,7 @@ let closure_54 = async function _refreshPreviewApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -1118,13 +1108,23 @@ let closure_54 = async function _refreshPreviewApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     } catch (tmp11) {
       c1 = tmp;
       throw tmp11;
     }
   }
 };
+function updateProjectSettings() {
+  const self = this;
+  const apply = closure_55.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
 let closure_55 = async function _updateProjectSettings() {
   closure_3 = tmp5;
   closure_2 = tmp2;
@@ -1134,7 +1134,16 @@ let closure_55 = async function _updateProjectSettings() {
     const prop = project.preview_application_id;
   }
   closure_130_1 = prop;
-  await patchProject(closure_0, closure_1);
+  await (function patchProject() {
+    const self = this;
+    const apply = closure_1_50.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })(closure_0, closure_1);
   closure_130_2 = value;
   closure_130_3 = closure_130_2.body.preview_application_id;
   let tmp9 = null != closure_130_1;
@@ -1162,92 +1171,69 @@ let closure_55 = async function _updateProjectSettings() {
     tmp18 = tmp21;
   }
   if (!tmp18) {
-    closure_131_52(closure_130_3).catch(() => {
+    closure_131_51(closure_130_3).catch(() => {
 
     });
-    closure_131_52(closure_130_3);
+    closure_131_51(closure_130_3);
   }
   return closure_130_2;
 };
-let closure_56 = async function _shareConjureProject(arg0) {
-  closure_0 = arg0;
-  c4 = 0;
-  c5 = 0;
-  return (async (arg0, value) => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp5 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+let closure_56 = async function _setConjureProjectServer(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_3 = tmp3;
-            closure_2 = tmp2;
-            closure_130_0 = closure_0;
-            closure_130_1 = undefined;
-            let body;
-            project = project.getProject(closure_0);
-            let prop;
-            if (project != null) {
-              prop = project.preview_application_id;
-            }
-            closure_130_1 = prop;
-            const HTTP = require("HTTPUtils").HTTP;
-            const request = { url: null, body: null, rejectWithError: true };
-            const _HermesInternal = HermesInternal;
-            request.url = "" + Endpoints.CONJURE_PROJECT(closure_0) + "/server";
-            const obj4 = { guild_id, uses_preview_app: true };
-            request.body = obj4;
-            c4 = 1;
-            c5 = 1;
-            const obj5 = { value: HTTP.put(request), done: false };
-            return obj5;
-          }
-        } else if (arg0 === 1) {
+      return { value: "HermesInternal", done: "+60" };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          body = value.body;
-          const obj6 = { type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: body };
-          closure_131_1(closure_131_2[9]).dispatch(obj6);
-          closure_131_62(closure_130_0);
-          let tmp10 = null != closure_130_1;
-          if (tmp10) {
-            tmp10 = closure_130_1 !== body.preview_application_id;
-          }
-          if (tmp10) {
-            closure_131_1(closure_131_2[24])(closure_130_1);
-          }
-          c5 = 3;
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp2;
+          closure_2 = tmp3;
+          closure_130_0 = closure_0;
+          closure_130_1 = undefined;
+          const obj4 = { guild_id: preview_guild_id, preview_guild_id };
+          c4 = 1;
+          c5 = 1;
+          const obj5 = { value: updateProjectSettings(closure_0, obj4), done: false };
+          return obj5;
         }
-      } catch (tmp22) {
-        c5 = tmp;
-        throw tmp22;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        closure_130_1 = closure_131_42.get(closure_130_0);
+        if (null != closure_130_1) {
+          closure_130_1.applied = closure_131_43(closure_130_0);
+        }
+        closure_131_62(closure_130_0);
+        c5 = 3;
+        return { value: "HermesInternal", done: "+60" };
       }
+    } catch (tmp26) {
+      c5 = tmp;
+      throw tmp26;
     }
-  })();
+  }
 };
 let closure_57 = async function _fetchApplicationChannels(arg0) {
   if (c1 === 2) {
@@ -1260,7 +1246,7 @@ let closure_57 = async function _fetchApplicationChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -1336,7 +1322,7 @@ let closure_59 = async function _deleteProject() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -1410,7 +1396,7 @@ let closure_60 = async function _makeConjureProjectPersonal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -1462,7 +1448,7 @@ let closure_60 = async function _makeConjureProjectPersonal(arg0) {
           closure_130_1(closure_130_2[24])(closure_129_1);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp21) {
       c4 = tmp;
@@ -1481,7 +1467,7 @@ let closure_61 = async function _installConjureProjectForOwner(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -1516,7 +1502,7 @@ let closure_61 = async function _installConjureProjectForOwner(arg0) {
       } else {
         dependencyMap(closure_1, value.body);
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp8) {
       c4 = tmp;
@@ -1539,7 +1525,7 @@ function refreshConjureInstallState(id) {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1072).Endpoints;
-const ReadStateTypes = fn(6461).ReadStateTypes;
+const ReadStateTypes = fn(6432).ReadStateTypes;
 const logger = new fn(4).Logger("ConjureActionCreators");
 let c14 = null;
 let c15 = null;
@@ -1789,7 +1775,7 @@ export function applyRemixPreview(id, remix_preview) {
 export { fetchConjureApplication };
 export function refreshPreviewApplication() {
   const self = this;
-  const apply = closure_54.apply;
+  const apply = closure_53.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1797,17 +1783,8 @@ export function refreshPreviewApplication() {
   }
   return applyArgumentsResult;
 }
-export function updateProjectSettings() {
-  const self = this;
-  const apply = closure_55.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-export function shareConjureProject() {
+export { updateProjectSettings };
+export function setConjureProjectServer() {
   const self = this;
   const apply = closure_56.apply;
   if (typeof apply === "unknown") {
@@ -1816,9 +1793,6 @@ export function shareConjureProject() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-}
-export function setGuildHints(first2, arg1) {
-  return patchProject(first2, arg1);
 }
 export function fetchApplicationChannels() {
   const self = this;

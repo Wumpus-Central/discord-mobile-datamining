@@ -2,7 +2,7 @@
 
 // Module 2188 (HelpdeskUtils)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import getLocalizedLinkDefault from "getLocalizedLink" /* 4634 */;
+import getLocalizedLinkDefault from "getLocalizedLink" /* 4604 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 
 require = fn;

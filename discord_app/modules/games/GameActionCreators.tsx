@@ -1,6 +1,6 @@
-// === Module 8960: GameActionCreators ===
+// === Module 8934: GameActionCreators ===
 
-// Module 8960 (GameActionCreators)
+// Module 8934 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameStore from "GameStore" /* 2141 */;
@@ -87,7 +87,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         v3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp10) {
       v3 = tmp;
@@ -124,7 +124,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4667).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4636).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

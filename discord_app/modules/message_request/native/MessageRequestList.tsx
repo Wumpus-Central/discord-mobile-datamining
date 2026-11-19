@@ -1,10 +1,10 @@
-// === Module 19060: MessageRequestList ===
+// === Module 19052: MessageRequestList ===
 
-// Module 19060 (MessageRequestList)
+// Module 19052 (MessageRequestList)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import transitionToChannel from "transitionToChannel" /* 5556 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6337 */;
+import transitionToChannel from "transitionToChannel" /* 5525 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -149,7 +149,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { sectionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 }, rowContainer: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 14, marginBottom: 12 }, actionContainer: { flexDirection: "row", alignItems: "flex-start", height: "100%" }, actionButton: null, acceptButton: null, acceptButtonRestricted: null, pressableRow: null, activityIndicator: null, list: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj2.actionButton = size;
@@ -170,17 +170,17 @@ export default function MessageRequestList(goToMessageRequestPreview) {
   let data;
   const tmp = closure_9();
   const bottom = data(1630)().bottom;
-  data = data(19066)();
-  dependencyMap = goToMessageRequestPreview(19068).useListHasSingleMessageRequest();
-  let obj = goToMessageRequestPreview(19068);
+  data = data(19058)();
+  dependencyMap = goToMessageRequestPreview(19060).useListHasSingleMessageRequest();
+  let obj = goToMessageRequestPreview(19060);
   const tmp2 = data;
-  const isRestricted = goToMessageRequestPreview(13254).useIsMessageRequestRestrictedViewer();
+  const isRestricted = goToMessageRequestPreview(13236).useIsMessageRequestRestrictedViewer();
   if (0 === data.length) {
     const obj3 = { bodyText: null };
     const intl2 = tmp4(1113).intl;
     obj3.bodyText = intl2.string(tmp4(1113).t.SXrqTf);
-    let tmp9Result = closure_7(tmp2(19071), obj3);
-    const tmp2Result = tmp2(19071);
+    let tmp9Result = closure_7(tmp2(19063), obj3);
+    const tmp2Result = tmp2(19063);
   } else {
     items = [tmp.list, ];
     let num = 0;
@@ -223,9 +223,9 @@ export default function MessageRequestList(goToMessageRequestPreview) {
     const intl = tmp4(1113).intl;
     const obj9 = { pendingRequestNumber: data.length };
     obj8.children = intl.format(tmp4(1113).t.evH4Yb, obj9);
-    obj7.children = closure_7(tmp4(5414).Text, obj8);
+    obj7.children = closure_7(tmp4(5383).Text, obj8);
     obj4.ListHeaderComponent = closure_7(closure_5, obj7);
-    tmp9Result = closure_7(tmp4(7401).FlashList, obj4);
+    tmp9Result = closure_7(tmp4(7371).FlashList, obj4);
     tmp4Result = tmp4(1380);
   }
   return tmp9Result;

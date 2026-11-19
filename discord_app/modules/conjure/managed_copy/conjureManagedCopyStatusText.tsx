@@ -1,9 +1,9 @@
-// === Module 18332: conjureManagedCopyStatusText ===
+// === Module 18326: conjureManagedCopyStatusText ===
 
-// Module 18332 (conjureManagedCopyStatusText)
+// Module 18326 (conjureManagedCopyStatusText)
 import util from "util" /* 1113 */;
-import _modDef4121 from "module_4121" /* 4121 */;
-import DateUtils from "DateUtils" /* 4645 */;
+import _modDef4089 from "module_4089" /* 4089 */;
+import DateUtils from "DateUtils" /* 4614 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/managed_copy/conjureManagedCopyStatusText.tsx");
@@ -12,11 +12,11 @@ export function conjureCopySourceLine(sourceName, updatesPaused) {
   sourceName = sourceName.sourceName;
   if (null == sourceName) {
     const intl2 = util.intl;
-    const tmp8 = _modDef4121;
+    const tmp8 = _modDef4089;
     intl2.string(updatesPaused ? tmp8["5wuDGB"] : tmp8.rxvuqx);
   } else {
     const intl = util.intl;
-    const tmp4 = _modDef4121;
+    const tmp4 = _modDef4089;
     const obj = { name: sourceName };
     return intl.formatToPlainString(updatesPaused ? tmp4.HHthpS : tmp4.qpGg7d, obj);
   }
@@ -24,7 +24,7 @@ export function conjureCopySourceLine(sourceName, updatesPaused) {
 export function conjureCopySyncLine(conjureCopyLastSync, updatesPaused) {
   if (updatesPaused) {
     const intl6 = util.intl;
-    return intl6.string(_modDef4121["uV/luq"]);
+    return intl6.string(_modDef4089["uV/luq"]);
   } else {
     if (null != conjureCopyLastSync) {
       if (null != conjureCopyLastSync.atMs) {
@@ -35,22 +35,22 @@ export function conjureCopySyncLine(conjureCopyLastSync, updatesPaused) {
         if ("updated" === status) {
           const intl4 = util.intl;
           const obj2 = { time: dateFormatResult };
-          return intl4.formatToPlainString(_modDef4121["6rQ8So"], obj2);
+          return intl4.formatToPlainString(_modDef4089["6rQ8So"], obj2);
         } else if ("failed" === status) {
           const intl3 = util.intl;
           const obj3 = { time: dateFormatResult };
-          return intl3.formatToPlainString(_modDef4121.HZnsMq, obj3);
+          return intl3.formatToPlainString(_modDef4089.HZnsMq, obj3);
         } else if ("held" === status) {
           const intl2 = util.intl;
-          return intl2.string(_modDef4121.AwPHix);
+          return intl2.string(_modDef4089.AwPHix);
         } else {
           const intl = util.intl;
           const obj = { time: dateFormatResult };
-          return intl.formatToPlainString(_modDef4121.yc0AaP, obj);
+          return intl.formatToPlainString(_modDef4089.yc0AaP, obj);
         }
       }
     }
     const intl5 = util.intl;
-    return intl5.string(_modDef4121.gHndTq);
+    return intl5.string(_modDef4089.gHndTq);
   }
 }

@@ -1,9 +1,9 @@
-// === Module 19011: ChannelPermissionOverwriteEditStore ===
+// === Module 19003: ChannelPermissionOverwriteEditStore ===
 
-// Module 19011 (ChannelPermissionOverwriteEditStore)
+// Module 19003 (ChannelPermissionOverwriteEditStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelPermissionOverwriteEditUtils from "ChannelPermissionOverwriteEditUtils" /* 19012 */;
+import ChannelPermissionOverwriteEditUtils from "ChannelPermissionOverwriteEditUtils" /* 19004 */;
 
 require = fn;
 function getPendingEdits(arg0, arg1) {

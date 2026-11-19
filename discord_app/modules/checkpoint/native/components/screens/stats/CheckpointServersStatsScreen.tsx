@@ -1,23 +1,23 @@
-// === Module 12681: CheckpointServersStatsScreen ===
+// === Module 12664: CheckpointServersStatsScreen ===
 
-// Module 12681 (CheckpointServersStatsScreen)
+// Module 12664 (CheckpointServersStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _modDef3307 from "module_3307" /* 3307 */;
 import _modDef3339 from "module_3339" /* 3339 */;
-import GuildIconDefault from "GuildIcon" /* 7233 */;
-import CheckpointScreen from "CheckpointScreen" /* 12434 */;
-import CheckpointTextDefault from "CheckpointText" /* 12435 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12437 */;
-import _modDef12650 from "module_12650" /* 12650 */;
-import _modDef12651 from "module_12651" /* 12651 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12654 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12682 */;
-import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 12683 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 12684 */;
-import CheckpointTruncatedTextDefault from "CheckpointTruncatedText" /* 12686 */;
+import GuildIconDefault from "GuildIcon" /* 7203 */;
+import CheckpointScreen from "CheckpointScreen" /* 12417 */;
+import CheckpointTextDefault from "CheckpointText" /* 12418 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12420 */;
+import _modDef12633 from "module_12633" /* 12633 */;
+import _modDef12634 from "module_12634" /* 12634 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12637 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12665 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 12666 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 12667 */;
+import CheckpointTruncatedTextDefault from "CheckpointTruncatedText" /* 12669 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12417 */;
+import CheckpointStore from "CheckpointStore" /* 12400 */;
 
 const require = globalThis.__r;
 const CheckpointScreenDefault = CheckpointScreen;
@@ -103,12 +103,12 @@ function GuildCard(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_NAV_HEIGHT, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { width: "100%", flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, globalContainer: null, header: null, heading: null, globalHeading: null, globe: null, title: null, titleText: null, guilds: null, globalGuilds: null, guildCard: null, guildContent: null, guildRankRow: null, guildDetails: null, guildName: null, topGuildIcon: null, guildIcon: null, globalGuildIcon: null, wideContainer: null, wideHeader: null, wideGuildsScroll: null, wideGuildsContent: null };
 let obj3 = { width: "100%", flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.globalContainer = { justifyContent: "flex-start", gap: nativeDefault.space.PX_24 };
@@ -141,12 +141,12 @@ obj2.guildIcon = size1;
 const size2 = { width: 64, height: 64, borderRadius: nativeDefault.radii.none };
 obj2.globalGuildIcon = size2;
 let obj13 = { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_12 };
-obj2.wideContainer = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12654).CHECKPOINT_WIDE_MAX_WIDTH };
-let obj14 = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12654).CHECKPOINT_WIDE_MAX_WIDTH };
+obj2.wideContainer = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12637).CHECKPOINT_WIDE_MAX_WIDTH };
+let obj14 = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12637).CHECKPOINT_WIDE_MAX_WIDTH };
 obj2.wideHeader = { width: "50%", paddingRight: nativeDefault.space.PX_32 };
 obj2.wideGuildsScroll = { flexGrow: 0, width: "50%", alignSelf: "stretch" };
 const obj16 = { flexGrow: 1, justifyContent: "center", paddingTop: CHECKPOINT_NAV_HEIGHT, paddingBottom: CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_32, paddingRight: null };
-const result = 2 * fn(12438).CHECKPOINT_HEADER_BUTTON_SIZE;
+const result = 2 * fn(12421).CHECKPOINT_HEADER_BUTTON_SIZE;
 let sum = result + nativeDefault.space.PX_12;
 obj16.paddingRight = sum + nativeDefault.space.PX_8;
 obj2.wideGuildsContent = obj16;
@@ -187,7 +187,7 @@ export default function CheckpointServersStatsScreen() {
       const obj4 = { style: tmp.heading, children: null };
       const obj5 = { style: tmp.title, children: null };
       const obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-      const items1 = [closure_9(tmp2(12389).ServerIcon, obj6), ];
+      const items1 = [closure_9(tmp2(12372).ServerIcon, obj6), ];
       const obj7 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
       const intl3 = tmp2(1113).intl;
       const tmp18 = CheckpointTextDefault;
@@ -241,8 +241,8 @@ export default function CheckpointServersStatsScreen() {
   const obj12 = { style: tmp.globalHeading, children: null };
   const obj13 = { animatedUri: null, staticUri: null, style: null };
   let obj = require("initialize");
-  obj13.animatedUri = _modDef12650;
-  obj13.staticUri = _modDef12651;
+  obj13.animatedUri = _modDef12633;
+  obj13.staticUri = _modDef12634;
   obj13.style = tmp.globe;
   const items5 = [closure_9(CheckpointApngPlayerDefault, obj13), ];
   const obj14 = { isStepHeading: true, children: null };

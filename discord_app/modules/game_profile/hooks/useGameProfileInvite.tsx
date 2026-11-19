@@ -1,13 +1,13 @@
-// === Module 9708: useGameProfileInvite ===
+// === Module 9687: useGameProfileInvite ===
 
-// Module 9708 (useGameProfileInvite)
+// Module 9687 (useGameProfileInvite)
 import DurationsDefault from "Durations" /* 1089 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7173 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7143 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2141 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 4674 */;
-import InviteStore from "InviteStore" /* 5542 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4643 */;
+import InviteStore from "InviteStore" /* 5511 */;
 
 const require = globalThis.__r;
 
@@ -85,7 +85,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -123,7 +123,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
         throw error;
       }
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     } catch (tmp22) {
       c4 = tmp;
       throw tmp22;

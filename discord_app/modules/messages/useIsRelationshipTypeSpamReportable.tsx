@@ -1,7 +1,7 @@
-// === Module 13414: useIsRelationshipTypeSpamReportable ===
+// === Module 13396: useIsRelationshipTypeSpamReportable ===
 
-// Module 13414 (useIsRelationshipTypeSpamReportable)
-import RelationshipStore from "RelationshipStore" /* 4765 */;
+// Module 13396 (useIsRelationshipTypeSpamReportable)
+import RelationshipStore from "RelationshipStore" /* 4734 */;
 
 const require = globalThis.__r;
 

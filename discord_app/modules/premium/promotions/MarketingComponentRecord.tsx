@@ -1,12 +1,12 @@
-// === Module 9051: MarketingComponentRecord ===
+// === Module 9025: MarketingComponentRecord ===
 
-// Module 9051 (MarketingComponentRecord)
+// Module 9025 (MarketingComponentRecord)
 import DurationsDefault from "Durations" /* 1089 */;
 import ProtoUtils from "ProtoUtils" /* 1234 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
-import MarketingSurfaceTypeUtils from "MarketingSurfaceTypeUtils" /* 9052 */;
-import premium_marketing_component_properties from "premium_marketing_component_properties" /* 9054 */;
-import constants from "constants" /* 9097 */;
+import MarketingSurfaceTypeUtils from "MarketingSurfaceTypeUtils" /* 9026 */;
+import premium_marketing_component_properties from "premium_marketing_component_properties" /* 9028 */;
+import constants from "constants" /* 9072 */;
 import Record from "Record" /* 1408 */;
 
 require = fn;

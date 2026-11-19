@@ -1,10 +1,10 @@
-// === Module 8934: Nameplate ===
+// === Module 8908: Nameplate ===
 
-// Module 8934 (Nameplate)
+// Module 8908 (Nameplate)
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5033 */;
+import timing_timing from "timing/timing" /* 5002 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 require = fn;
 function NameplateInner(isFocused) {
@@ -46,7 +46,7 @@ function NameplateInner(isFocused) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = closure_7(flag3, isPressed, flag, flag2, flag5);
   let obj = require("initialize");
-  const tmp6 = sharedValue(5032)();
+  const tmp6 = sharedValue(5001)();
   let num = 1;
   if (flag6) {
     num = 0;
@@ -110,16 +110,16 @@ function NameplateInner(isFocused) {
     const items5 = [, ];
     ({ left: arr6[0], right: arr6[1] } = backgroundGradientColors);
     obj4.colors = items5;
-    tmp17Result = closure_5(tmp5(5378), obj4);
-    const tmp5Result = tmp5(5378);
+    tmp17Result = closure_5(tmp5(5347), obj4);
+    const tmp5Result = tmp5(5347);
   }
-  const items6 = [tmp17Result, closure_5(sharedValue(5510), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image", enableAnimation: tmp14 })];
+  const items6 = [tmp17Result, closure_5(sharedValue(5479), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image", enableAnimation: tmp14 })];
   obj3.children = items6;
   return closure_6(sharedValue(1655).View, obj3);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_7 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   const obj = { container: { position: "absolute", overflow: "hidden", top: 0, bottom: 0, left: 0, right: 0 }, gradient: null, img: null };
   let num = 1;

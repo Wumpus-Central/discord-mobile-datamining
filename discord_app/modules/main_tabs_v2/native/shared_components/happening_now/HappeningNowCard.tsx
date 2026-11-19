@@ -1,21 +1,21 @@
-// === Module 16762: HappeningNowCard ===
+// === Module 16755: HappeningNowCard ===
 
-// Module 16762 (HappeningNowCard)
-import Text_Text from "Text/Text" /* 5414 */;
-import Card from "Card" /* 6958 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7284 */;
+// Module 16755 (HappeningNowCard)
+import Text_Text from "Text/Text" /* 5383 */;
+import Card from "Card" /* 6928 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(16761);
+const HappeningNowConstants = fn(16754);
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD_MARGIN_RIGHT;
 ({ HAPPENING_NOW_CARD_PADDING: hasOwnProperty, HAPPENING_NOW_CARD_HEIGHT: closure_6, HAPPENING_NOW_BADGE_SIZE } = HappeningNowConstants);
 ({ HAPPENING_NOW_CARD_WIDTH_SMALL_MIN: closure_8, HAPPENING_NOW_CARD_WIDTH_SMALL_MAX: closure_9, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MIN: closure_10, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MAX: closure_11, HAPPENING_NOW_CARD_WIDTH_LARGE_MIN: closure_12, HAPPENING_NOW_CARD_WIDTH_LARGE_MAX: map1, HAPPENING_NOW_CARD_PADDING_RIGHT: closure_14, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MIN: closure_15, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MAX: closure_16, HAPPENING_NOW_CARD_WIDTH_LARGE_PANELS_MAX: closure_17, HAPPENING_NOW_PANELS_CONTAINER_PADDING } = HappeningNowConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 let closure_20 = HAPPENING_NOW_PANELS_CONTAINER_PADDING + HAPPENING_NOW_CARD_MARGIN_RIGHT;
-let createStyles = fn(4823);
+let createStyles = fn(4792);
 let closure_21 = createStyles.createStyles((arg0, arg1, arg2) => {
   if ("small" === arg0) {
     const obj2 = { minWidth, maxWidth };
@@ -58,7 +58,7 @@ let closure_21 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj6.cardBadge = size;
   return obj6;
 });
-createStyles = fn(4823);
+createStyles = fn(4792);
 let obj3 = { cardHeaderMargin: { marginRight: HAPPENING_NOW_BADGE_SIZE + 4 } };
 let closure_22 = createStyles.createStyles(obj3);
 let size = fn(2);

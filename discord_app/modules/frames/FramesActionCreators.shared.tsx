@@ -1,14 +1,14 @@
-// === Module 10584: _launchFrame ===
+// === Module 10562: _launchFrame ===
 
-// Module 10584 (_launchFrame)
+// Module 10562 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import getChannelIdForEmbeddedSurface from "getChannelIdForEmbeddedSurface" /* 6534 */;
-import createProxyTicket from "createProxyTicket" /* 6856 */;
-import leaveFrame from "leaveFrame" /* 6864 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10585 */;
+import getChannelIdForEmbeddedSurface from "getChannelIdForEmbeddedSurface" /* 6505 */;
+import createProxyTicket from "createProxyTicket" /* 6826 */;
+import leaveFrame from "leaveFrame" /* 6834 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10563 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 6531 */;
+import FramesStore from "FramesStore" /* 6502 */;
 
 require = fn;
 let closure_13 = async function _launchFrame(arg0) {
@@ -27,7 +27,7 @@ let closure_13 = async function _launchFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -222,7 +222,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(6864);
+    obj2 = obj2(6834);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -245,7 +245,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -355,9 +355,9 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
     }
   }
 };
-const FramesConstants = fn(6532);
+const FramesConstants = fn(6503);
 ({ FrameIntent: closure_6, FrameLayoutModes: metroImportDefault, getFrameIntentForSurface: closure_8, isLaunched: closure_9, makeFrameId: closure_10 } = FramesConstants);
-const ActivityPanelModes = fn(5449).ActivityPanelModes;
+const ActivityPanelModes = fn(5418).ActivityPanelModes;
 let c12 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");

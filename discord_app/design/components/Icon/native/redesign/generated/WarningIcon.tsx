@@ -1,9 +1,9 @@
-// === Module 7674: WarningIcon ===
+// === Module 7644: WarningIcon ===
 
-// Module 7674 (WarningIcon)
+// Module 7644 (WarningIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod7675 from "module_7675" /* 7675 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod7645 from "module_7645" /* 7645 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function WarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7675, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7645, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

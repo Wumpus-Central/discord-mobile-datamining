@@ -1,10 +1,10 @@
-// === Module 16421: BountiesScrollIndicatorOverlay ===
+// === Module 16412: BountiesScrollIndicatorOverlay ===
 
-// Module 16421 (BountiesScrollIndicatorOverlay)
+// Module 16412 (BountiesScrollIndicatorOverlay)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import LinearGradientDefault from "LinearGradient" /* 5378 */;
-import BountiesScrollIndicatorAnimationDefault from "BountiesScrollIndicatorAnimation" /* 16422 */;
+import LinearGradientDefault from "LinearGradient" /* 5347 */;
+import BountiesScrollIndicatorAnimationDefault from "BountiesScrollIndicatorAnimation" /* 16413 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,8 +15,8 @@ let StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const colors = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
-let closure_9 = 5000 + fn(5036).timingSlowDuration;
-const createStyles = fn(4823);
+let closure_9 = 5000 + fn(5005).timingSlowDuration;
+const createStyles = fn(4792);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };
   const rect = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -73,7 +73,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
             if (closure_1_0) {
               num = closure_2_9;
             }
-            let timeout = setTimeout(/* F142740 */ function() { ... }, num);
+            let timeout = setTimeout(/* F142719 */ function() { ... }, num);
           }, num);
         }, num);
       }, closure_1_9);

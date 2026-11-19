@@ -1,11 +1,11 @@
-// === Module 9887: EarnedDecisionRoundtripTracker ===
+// === Module 9866: EarnedDecisionRoundtripTracker ===
 
-// Module 9887 (EarnedDecisionRoundtripTracker)
+// Module 9866 (EarnedDecisionRoundtripTracker)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import NetStats from "NetStats" /* 8165 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 8168 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8289 */;
-import NetworkStore from "NetworkStore" /* 5704 */;
+import NetStats from "NetStats" /* 8134 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 8137 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8258 */;
+import NetworkStore from "NetworkStore" /* 5673 */;
 
 require = fn;
 function trackRoundtrip(apiResponseTimestamp) {

@@ -1,18 +1,18 @@
-// === Module 16203: PremiumSetting ===
+// === Module 16194: PremiumSetting ===
 
-// Module 16203 (PremiumSetting)
+// Module 16194 (PremiumSetting)
 import util from "util" /* 1113 */;
 import PremiumUtils from "PremiumUtils" /* 2174 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 9011 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 9216 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 16204 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 8985 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 9192 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 16195 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11897);
+const SettingBuilders = fn(11875);
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const currentUser = UserStore.getCurrentUser();
@@ -28,7 +28,7 @@ const route = SettingBuilders.createRoute({
     return stringResult;
   },
   parent: null,
-  IconComponent: fn(8859).NitroWheelIcon,
+  IconComponent: fn(8832).NitroWheelIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

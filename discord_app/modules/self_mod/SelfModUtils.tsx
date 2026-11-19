@@ -1,6 +1,6 @@
-// === Module 8361: SelfModUtils ===
+// === Module 8330: SelfModUtils ===
 
-// Module 8361 (SelfModUtils)
+// Module 8330 (SelfModUtils)
 import UserStore from "UserStore" /* 1388 */;
 
 const size = fn(2);

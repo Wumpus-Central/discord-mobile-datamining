@@ -1,22 +1,78 @@
-// === Module 12688: CheckpointEmojiStatsScreen ===
+// === Module 12671: CheckpointEmojiStatsScreen ===
 
-// Module 12688 (CheckpointEmojiStatsScreen)
+// Module 12671 (CheckpointEmojiStatsScreen)
 import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1113 */;
+import _modDef1345 from "module_1345" /* 1345 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import _modDef3339 from "module_3339" /* 3339 */;
+import EmojiDefault from "Emoji" /* 7377 */;
+import CheckpointTextDefault from "CheckpointText" /* 12418 */;
+import useCheckpointPressSoundDefault from "useCheckpointPressSound" /* 12639 */;
+import CheckpointPressableDefault from "CheckpointPressable" /* 12642 */;
+import _modDef12672 from "module_12672" /* 12672 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
-import CheckpointStore from "CheckpointStore" /* 12417 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import CheckpointStore from "CheckpointStore" /* 12400 */;
 
 const require = globalThis.__r;
 
-const require = fn;
+require = fn;
+function EmojiChip(emoji) {
+  emoji = emoji.emoji;
+  ({ rank, isActive, isReducedMotion, onSelect: importDefault } = emoji);
+  const tmp = closure_12();
+  const obj = {
+    source: _modDef12672,
+    onPress() {
+      return importDefault(emoji);
+    }
+  };
+  let emojiURL;
+  ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj));
+  if (null != emoji.id) {
+    const obj2 = { id: emoji.id, animated: null, size: 48 };
+    let tmp7 = !isReducedMotion;
+    if (!isReducedMotion) {
+      tmp7 = true === emoji.animated;
+    }
+    obj2.animated = tmp7;
+    emojiURL = AvatarUtilsDefault.getEmojiURL(obj2);
+    const tmp2Result = AvatarUtilsDefault;
+  }
+  const obj3 = { size: "sm", style: tmp.emojiChip, shadowColor: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPressIn: null, onPress: null, children: null };
+  let str = "transparent";
+  const tmp4Result = useCheckpointPressSoundDefault(obj);
+  if (!isActive) {
+    str = color;
+  }
+  obj3.shadowColor = str;
+  const intl = util.intl;
+  obj3.accessibilityLabel = intl.formatToPlainString(_modDef3339["S5+pRg"], { emojiName: emoji.name, rank });
+  obj3.accessibilityState = { selected: isActive };
+  obj3.onPressIn = onPressIn;
+  obj3.onPress = onPressWithSound;
+  const obj5 = { style: tmp.emoji, fastImageStyle: tmp.customEmoji, textEmojiStyle: tmp.textEmoji, name: null, src: null };
+  let str2 = "";
+  const obj4 = { emojiName: emoji.name, rank };
+  const tmp2Result3 = CheckpointPressableDefault;
+  if (null == emoji.id) {
+    str2 = emoji.name;
+  }
+  obj5.name = str2;
+  obj5.src = emojiURL;
+  items = [React6(EmojiDefault, obj5), React6(CheckpointTextDefault, { variant: "mono-md/bold", style: tmp.rankText, children: rank })];
+  obj3.children = items;
+  return refs(tmp2Result3, obj3);
+}
 const View = fn(17).View;
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 ({ CHECKPOINT_PRIMARY: closure_8, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = { name: "\u{1F622}", animated: false };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, emojiCubeContainer: { flexGrow: 1, height: "50%", justifyContent: "center", alignItems: "center" }, copy: { flexShrink: 1 }, title: null, titleText: null, titleSpacing: null, number: null, emojis: null, emojiChip: null, emoji: null, customEmoji: null, textEmoji: null, rankText: null, wideContainer: null, wideCubeContainer: null, wideCopy: null };
 let obj3 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -47,8 +103,8 @@ obj10.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 obj2.textEmoji = obj10;
 obj2.rankText = { fontSize: 14, lineHeight: 18 };
 let obj8 = { gap: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_4, paddingRight: nativeDefault.space.PX_8, borderWidth: 1, borderColor: CHECKPOINT_DARK_CYAN, backgroundColor: nativeDefault.colors.BLACK };
-obj2.wideContainer = { flexGrow: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12654).CHECKPOINT_WIDE_MAX_WIDTH };
-let obj12 = { flexGrow: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12654).CHECKPOINT_WIDE_MAX_WIDTH };
+obj2.wideContainer = { flexGrow: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12637).CHECKPOINT_WIDE_MAX_WIDTH };
+let obj12 = { flexGrow: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12637).CHECKPOINT_WIDE_MAX_WIDTH };
 obj2.wideCubeContainer = { width: "50%", alignSelf: "stretch", alignItems: "center", justifyContent: "center", paddingRight: nativeDefault.space.PX_32 };
 let obj13 = { width: "50%", alignSelf: "stretch", alignItems: "center", justifyContent: "center", paddingRight: nativeDefault.space.PX_32 };
 obj2.wideCopy = { width: "50%", paddingLeft: nativeDefault.space.PX_32 };
@@ -58,14 +114,13 @@ let result = size.fileFinishedImporting("modules/checkpoint/native/components/sc
 
 export default function CheckpointEmojiStatsScreen() {
   const tmp = closure_12();
-  _require = tmp;
-  const tmp4 = require("useIsCheckpointWide")();
+  const tmp4 = emoji(12637)();
   const checkpointScreenContentHeight = require("CheckpointScreen").useCheckpointScreenContentHeight(true);
-  const result = Math.min(Math.min(require("useWindowDimensions")({ ignoreKeyboard: true }).width, require("useIsCheckpointWide").CHECKPOINT_WIDE_MAX_WIDTH) / 2, checkpointScreenContentHeight) / 392;
-  let obj = require("CheckpointScreen");
+  const result = Math.min(Math.min(emoji(1496)({ ignoreKeyboard: true }).width, require("useIsCheckpointWide").CHECKPOINT_WIDE_MAX_WIDTH) / 2, checkpointScreenContentHeight) / 392;
+  const obj = require("CheckpointScreen");
   items = [AccessibilityStore];
-  importDefault = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj2 = require("initialize");
+  _require = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj2 = require("initialize");
   const items1 = [CheckpointStore];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => {
     const stats = CheckpointStore.stats;
@@ -75,7 +130,7 @@ export default function CheckpointEmojiStatsScreen() {
     }
     return emojis;
   });
-  let obj3 = require("initialize");
+  const obj3 = require("initialize");
   const items2 = [CheckpointStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
     const globalStats = CheckpointStore.globalStats;
@@ -85,9 +140,9 @@ export default function CheckpointEmojiStatsScreen() {
     }
     return emojis;
   });
-  let obj4 = require("initialize");
+  const obj4 = require("initialize");
   const items3 = [CheckpointStore];
-  let stateFromStores2 = require("initialize").useStateFromStores(items3, () => closure_0(first[14]).hasCheckpointEmojis(CheckpointStore.stats));
+  let stateFromStores2 = require("initialize").useStateFromStores(items3, () => isReducedMotion(onSelect[22]).hasCheckpointEmojis(CheckpointStore.stats));
   let num;
   if (stateFromStores != null) {
     num = stateFromStores.numEmojisSent;
@@ -96,7 +151,7 @@ export default function CheckpointEmojiStatsScreen() {
     num = 0;
   }
   const rounded = Math.round(num);
-  let obj5 = require("initialize");
+  const obj5 = require("initialize");
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.numEmojisSentPercentile;
@@ -118,41 +173,39 @@ export default function CheckpointEmojiStatsScreen() {
   if (emojis == null) {
     emojis = [];
   }
-  [emoji, _slicedToArray] = noop.useState(tmp15 ? closure_11 : emojis[0]);
-  const tmp5Result = require("CheckpointStatsUtils");
-  noop = require("useCheckpointSound")(tmp2(tmp3[16]));
-  let intl = tmp5(tmp3[17]).intl;
+  [emoji, dependencyMap] = noop.useState(tmp15 ? closure_11 : emojis[0]);
+  const intl = tmp5(1113).intl;
   const string = intl.string;
   if (tmp15) {
-    let stringResult = string(tmp2(tmp3[18]).vnG9Sx);
+    let stringResult = string(tmp2(3307).vnG9Sx);
   } else {
-    stringResult = string(tmp2(tmp3[19]).ZTDCIv);
+    stringResult = string(tmp2(3339).ZTDCIv);
   }
   let formatToPlainStringResult;
   if (stateFromStores2) {
     if (null != checkpointTopPercent) {
-      const intl2 = tmp5(tmp3[17]).intl;
+      const intl2 = tmp5(1113).intl;
       const obj6 = { percent: checkpointTopPercent };
-      formatToPlainStringResult = intl2.formatToPlainString(tmp2(tmp3[19]).I1qKWG, obj6);
+      formatToPlainStringResult = intl2.formatToPlainString(tmp2(3339).I1qKWG, obj6);
     }
   }
   if (tmp15) {
-    let EmojiSlightlySmilingFaceIcon = tmp5(tmp3[20]).EmojiFrowningFaceIcon;
+    let EmojiSlightlySmilingFaceIcon = tmp5(12673).EmojiFrowningFaceIcon;
   } else {
-    EmojiSlightlySmilingFaceIcon = tmp5(tmp3[21]).EmojiSlightlySmilingFaceIcon;
+    EmojiSlightlySmilingFaceIcon = tmp5(12428).EmojiSlightlySmilingFaceIcon;
   }
   const obj7 = { centered: tmp4, children: null };
   const obj8 = { style: tmp4 ? tmp.wideContainer : tmp.container, children: null };
   const obj9 = { style: tmp4 ? tmp.wideCubeContainer : tmp.emojiCubeContainer, children: null };
-  const tmp2Result = require("useCheckpointSound");
+  const tmp5Result = require("CheckpointStatsUtils");
   const obj10 = { emoji, scale: null };
-  let tmp25;
-  const tmp2Result5 = require("CheckpointScreen");
+  let tmp24;
+  const tmp2Result = emoji(12417);
   if (tmp4) {
-    tmp25 = result;
+    tmp24 = result;
   }
-  obj10.scale = tmp25;
-  obj9.children = closure_9(require("EmojiCube"), obj10);
+  obj10.scale = tmp24;
+  obj9.children = closure_9(emoji(12675), obj10);
   const items4 = [closure_9(View, obj9), ];
   const obj11 = { style: tmp4 ? tmp.wideCopy : tmp.copy, children: null };
   const items5 = [tmp.title, ];
@@ -165,106 +218,69 @@ export default function CheckpointEmojiStatsScreen() {
   const items6 = [closure_9(EmojiSlightlySmilingFaceIcon, { size: "xs", color }), ];
   const obj14 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const obj13 = { size: "xs", color };
-  const tmp2Result6 = require("EmojiCube");
+  const tmp2Result4 = emoji(12675);
   obj14.children = stringResult.toLocaleUpperCase();
-  items6[1] = closure_9(require("CheckpointText"), obj14);
+  items6[1] = closure_9(emoji(12418), obj14);
   obj12.children = items6;
   const items7 = [closure_10(View, obj12), , , , ];
-  let tmp20Result = tmp14;
+  let tmp19Result = tmp14;
   if (tmp14) {
     const obj15 = { value: stateFromStores1.numEmojisSent };
-    tmp20Result = closure_9(tmp2(tmp3[24]), obj15);
+    tmp19Result = closure_9(tmp2(12657), obj15);
   }
-  items7[1] = tmp20Result;
+  items7[1] = tmp19Result;
   if (stateFromStores2) {
-    const obj16 = { accessible: true, accessibilityLabel: tmp5(tmp3[25]).formatCheckpointStatAccessibilityLabel("emoji", rounded), style: tmp.number, children: null };
+    const obj16 = { accessible: true, accessibilityLabel: tmp5(12659).formatCheckpointStatAccessibilityLabel("emoji", rounded), style: tmp.number, children: null };
     const obj17 = { end: rounded };
-    obj16.children = closure_9(tmp2(tmp3[26]), obj17);
+    obj16.children = closure_9(tmp2(12658), obj17);
     stateFromStores2 = closure_9(View, obj16);
-    const tmp5Result3 = tmp5(tmp3[25]);
+    const tmp5Result3 = tmp5(12659);
   }
   items7[2] = stateFromStores2;
   const obj18 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-  const tmp2Result7 = require("CheckpointText");
+  const tmp2Result5 = emoji(12418);
   if (tmp14) {
-    const intl6 = tmp5(tmp3[17]).intl;
-    const obj19 = { numEmojis: tmp5(tmp3[14]).formatCheckpointCompactNumber(stateFromStores1.numEmojisSent) };
-    let formatToPlainStringResult1 = intl6.formatToPlainString(tmp2(tmp3[19])["660/Rr"], obj19);
-    const tmp5Result4 = tmp5(tmp3[14]);
+    const intl6 = tmp5(1113).intl;
+    const obj19 = { numEmojis: tmp5(6218).formatCheckpointCompactNumber(stateFromStores1.numEmojisSent) };
+    let formatToPlainStringResult1 = intl6.formatToPlainString(tmp2(3339)["660/Rr"], obj19);
+    const tmp5Result4 = tmp5(6218);
   } else if (tmp15) {
-    const intl5 = tmp5(tmp3[17]).intl;
-    formatToPlainStringResult1 = intl5.string(tmp2(tmp3[18]).BHbwK1);
+    const intl5 = tmp5(1113).intl;
+    formatToPlainStringResult1 = intl5.string(tmp2(3307).BHbwK1);
   } else if (null != checkpointTopPercent) {
-    const intl4 = tmp5(tmp3[17]).intl;
+    const intl4 = tmp5(1113).intl;
     const obj20 = {
       percent: checkpointTopPercent,
       percentHook(children, arg1) {
-          return closure_1_9(closure_1(first[27]), { children }, arg1);
+          return closure_1_9(first(onSelect[30]), { children }, arg1);
         }
     };
-    formatToPlainStringResult1 = intl4.format(tmp2(tmp3[19]).o7vDrk, obj20);
+    formatToPlainStringResult1 = intl4.format(tmp2(3339).o7vDrk, obj20);
   } else {
-    const intl3 = tmp5(tmp3[17]).intl;
+    const intl3 = tmp5(1113).intl;
     const obj21 = { numEmojis: rounded };
-    formatToPlainStringResult1 = intl3.format(tmp2(tmp3[19]).NFptic, obj21);
+    formatToPlainStringResult1 = intl3.format(tmp2(3339).NFptic, obj21);
   }
   obj18.children = formatToPlainStringResult1;
-  items7[3] = closure_9(require("CheckpointText"), obj18);
-  let tmp20Result2 = !tmp15;
+  items7[3] = closure_9(emoji(12418), obj18);
+  let tmp19Result2 = !tmp15;
   if (!tmp15) {
     const obj22 = {
       style: tmp.emojis,
-      children: emojis.map((emojiName, index) => {
-          closure_0 = emojiName;
-          let emojiURL;
-          if (null != emojiName.id) {
-            const obj2 = { id: emojiName.id, animated: null, size: 48 };
-            let tmp5 = !closure_1;
-            if (!closure_1) {
-              tmp5 = true === emojiName.animated;
-            }
-            obj2.animated = tmp5;
-            emojiURL = closure_1(first[28]).getEmojiURL(obj2);
-            const obj = closure_1(first[28]);
-          }
-          const tmp6 = closure_1(first[29])(first, emojiName);
-          const obj3 = { size: "sm", style: closure_0.emojiChip, shadowColor: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null };
-          let str = "transparent";
-          if (!tmp6) {
-            str = color;
-          }
-          obj3.shadowColor = str;
-          const intl = closure_0(first[17]).intl;
-          obj3.accessibilityLabel = intl.formatToPlainString(closure_1(first[19])["S5+pRg"], { emojiName: emojiName.name, rank: index + 1 });
-          obj3.accessibilityState = { selected: tmp6 };
-          obj3.onPress = function onPress() {
-            closure_4();
-            closure_3(closure_0);
-          };
-          const obj5 = { style: closure_0.emoji, fastImageStyle: closure_0.customEmoji, textEmojiStyle: closure_0.textEmoji, name: null, src: null };
-          let str2 = "";
-          const obj4 = { emojiName: emojiName.name, rank: index + 1 };
-          const tmp8 = closure_1(first[30]);
-          if (null == emojiName.id) {
-            str2 = emojiName.name;
-          }
-          obj5.name = str2;
-          obj5.src = emojiURL;
-          items = [closure_1_9(closure_1(first[31]), obj5), closure_1_9(closure_1(first[23]), { variant: "mono-md/bold", style: closure_0.rankText, children: index + 1 })];
-          obj3.children = items;
-          let name = emojiName.id;
+      children: emojis.map((emoji, index) => {
+          let name = emoji.id;
           if (name == null) {
-            name = emojiName.name;
+            name = emoji.name;
           }
-          return closure_1_10(tmp8, obj3, name);
+          return React6(EmojiChip, { emoji, rank: index + 1, isActive: _modDef1345(first, emoji), isReducedMotion, onSelect }, name);
         })
     };
-    tmp20Result2 = closure_9(View, obj22);
+    tmp19Result2 = closure_9(View, obj22);
   }
-  items7[4] = tmp20Result2;
+  items7[4] = tmp19Result2;
   obj11.children = items7;
   items4[1] = closure_10(View, obj11);
   obj8.children = items4;
   obj7.children = closure_10(View, obj8);
-  return closure_9(tmp2Result5, obj7);
+  return closure_9(tmp2Result, obj7);
 };

@@ -1,18 +1,18 @@
-// === Module 14245: createConjureProjectLinkEmbed ===
+// === Module 14228: createConjureProjectLinkEmbed ===
 
-// Module 14245 (createConjureProjectLinkEmbed)
+// Module 14228 (createConjureProjectLinkEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4121 from "module_4121" /* 4121 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8592 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8603 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 10373 */;
-import conjureDefaultAppIcon2 from "conjureDefaultAppIcon" /* 11833 */;
-import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 11931 */;
-import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11932 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12731 */;
-import createStyles from "createStyles" /* 4823 */;
+import _modDef4089 from "module_4089" /* 4089 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8561 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8572 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 10351 */;
+import conjureDefaultAppIcon2 from "conjureDefaultAppIcon" /* 11811 */;
+import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 11909 */;
+import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11910 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12713 */;
+import createStyles from "createStyles" /* 4792 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
@@ -40,9 +40,9 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
     if (tmp4) {
       const intl8 = util.intl;
       if ("expired" === conjureProjectLinkCard.type) {
-        let mQma36 = _modDef4121.wahvH2;
+        let mQma36 = _modDef4089.wahvH2;
       } else {
-        mQma36 = _modDef4121.mQma36;
+        mQma36 = _modDef4089.mQma36;
       }
       const stringResult = intl8.string(mQma36);
       const obj3 = {};
@@ -110,7 +110,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
         }
         obj6.linkColor = defaultUsernameColor;
         obj5.nameOnClick = obj6;
-        formatToPartsResult = intl.formatToParts(_modDef4121.dMdop9, obj5);
+        formatToPartsResult = intl.formatToParts(_modDef4089.dMdop9, obj5);
       }
       obj4.creatorContent = formatToPartsResult;
       let creatorAvatarUrl = null;
@@ -131,7 +131,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       let stringResult1 = null;
       if ("ready" !== conjureProjectLinkCard.type) {
         const intl2 = util.intl;
-        stringResult1 = intl2.string(_modDef4121["2DSRxV"]);
+        stringResult1 = intl2.string(_modDef4089["2DSRxV"]);
       }
       obj4.noticeText = stringResult1;
       obj4.iconUrl = iconURL;
@@ -165,19 +165,19 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       let stringResult2 = null;
       if (canRemix) {
         const intl3 = util.intl;
-        stringResult2 = intl3.string(_modDef4121["UsUa/c"]);
+        stringResult2 = intl3.string(_modDef4089["UsUa/c"]);
       }
       obj4.installLabel = stringResult2;
       let stringResult3 = null;
       if (canRemix) {
         const intl4 = util.intl;
-        stringResult3 = intl4.string(_modDef4121["6RGR3m"]);
+        stringResult3 = intl4.string(_modDef4089["6RGR3m"]);
       }
       obj4.remixLabel = stringResult3;
       obj4.coverAction = coverAction;
       if ("launch" === coverAction) {
         const intl6 = util.intl;
-        let stringResult4 = intl6.string(_modDef4121["1cF7L4"]);
+        let stringResult4 = intl6.string(_modDef4089["1cF7L4"]);
       } else {
         stringResult4 = null;
         if ("open" === coverAction) {
@@ -188,7 +188,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       obj4.coverActionLabel = stringResult4;
       const intl7 = util.intl;
       const obj8 = { name: application.name };
-      obj4.accessibilityLabel = intl7.formatToPlainString(_modDef4121.c8DqSD, obj8);
+      obj4.accessibilityLabel = intl7.formatToPlainString(_modDef4089.c8DqSD, obj8);
       return obj4;
     }
   }

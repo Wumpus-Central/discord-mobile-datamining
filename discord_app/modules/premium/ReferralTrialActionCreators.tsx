@@ -1,13 +1,13 @@
-// === Module 8714: ReferralTrialActionCreators ===
+// === Module 8683: ReferralTrialActionCreators ===
 
-// Module 8714 (ReferralTrialActionCreators)
+// Module 8683 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 8715 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 8684 */;
 import UserRecord from "UserRecord" /* 1407 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4726 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
 import Backoff from "Backoff" /* 559 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -141,7 +141,7 @@ let closure_15 = async function _createReferralTrials(arg0) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       while (true) {

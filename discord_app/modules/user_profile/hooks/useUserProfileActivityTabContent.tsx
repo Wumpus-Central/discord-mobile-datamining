@@ -1,15 +1,15 @@
-// === Module 14505: useUserProfileActivityTabContent ===
+// === Module 14492: useUserProfileActivityTabContent ===
 
-// Module 14505 (useUserProfileActivityTabContent)
+// Module 14492 (useUserProfileActivityTabContent)
 import LoggerDefault from "Logger" /* 3 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8902 */;
-import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 14506 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8876 */;
+import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 14493 */;
 import noop from "module_19" /* 19 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8900 */;
-import PresenceStore from "PresenceStore" /* 5561 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6831 */;
-import VoiceStateStore from "VoiceStateStore" /* 5471 */;
-import UserProfileStore from "UserProfileStore" /* 6867 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8874 */;
+import PresenceStore from "PresenceStore" /* 5530 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6801 */;
+import VoiceStateStore from "VoiceStateStore" /* 5440 */;
+import UserProfileStore from "UserProfileStore" /* 6837 */;
 
 require = fn;
 const StatusTypes = fn(1072).StatusTypes;

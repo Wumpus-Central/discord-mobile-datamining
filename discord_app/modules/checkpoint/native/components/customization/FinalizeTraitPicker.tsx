@@ -1,19 +1,19 @@
-// === Module 12710: FinalizeTraitPicker ===
+// === Module 12693: FinalizeTraitPicker ===
 
-// Module 12710 (FinalizeTraitPicker)
+// Module 12693 (FinalizeTraitPicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3339 from "module_3339" /* 3339 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 5921 */;
-import CheckpointTrait from "CheckpointTrait" /* 5922 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6244 */;
-import TraitOptionItem from "TraitOptionItem" /* 12712 */;
-import TraitPicker from "TraitPicker" /* 12713 */;
-import useTraitPicker from "useTraitPicker" /* 12716 */;
-import useLastColorwayIdByOutfitIdDefault from "useLastColorwayIdByOutfitId" /* 12720 */;
-import useLastMoreTabOptionDefault from "useLastMoreTabOption" /* 12721 */;
-import FinalizeTraitTabs from "FinalizeTraitTabs" /* 12722 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 5892 */;
+import CheckpointTrait from "CheckpointTrait" /* 5893 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6215 */;
+import TraitOptionItem from "TraitOptionItem" /* 12695 */;
+import TraitPicker from "TraitPicker" /* 12696 */;
+import useTraitPicker from "useTraitPicker" /* 12699 */;
+import useLastColorwayIdByOutfitIdDefault from "useLastColorwayIdByOutfitId" /* 12703 */;
+import useLastMoreTabOptionDefault from "useLastMoreTabOption" /* 12704 */;
+import FinalizeTraitTabs from "FinalizeTraitTabs" /* 12705 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -83,9 +83,9 @@ function OptionListSpacer(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
-let obj2 = { message: { paddingHorizontal: fn(12711).CONTENT_INSET }, description: null };
-let obj3 = { paddingHorizontal: fn(12711).CONTENT_INSET };
+const createStyles = fn(4792);
+let obj2 = { message: { paddingHorizontal: fn(12694).CONTENT_INSET }, description: null };
+let obj3 = { paddingHorizontal: fn(12694).CONTENT_INSET };
 obj2.description = { marginTop: nativeDefault.space.PX_4 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

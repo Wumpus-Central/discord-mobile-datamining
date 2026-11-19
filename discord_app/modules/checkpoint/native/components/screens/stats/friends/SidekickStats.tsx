@@ -1,17 +1,17 @@
-// === Module 12705: SidekickStats ===
+// === Module 12688: SidekickStats ===
 
-// Module 12705 (SidekickStats)
+// Module 12688 (SidekickStats)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3339 from "module_3339" /* 3339 */;
-import CheckpointConstants from "CheckpointConstants" /* 5877 */;
-import ChatIcon from "ChatIcon" /* 7583 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 10971 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12648 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12676 */;
+import CheckpointConstants from "CheckpointConstants" /* 5848 */;
+import ChatIcon from "ChatIcon" /* 7553 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 10949 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12631 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12659 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4823 */;
+import createStyles from "createStyles" /* 4792 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

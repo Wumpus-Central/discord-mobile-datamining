@@ -1,7 +1,7 @@
-// === Module 5491: RegionalFeatureConfigModels ===
+// === Module 5460: RegionalFeatureConfigModels ===
 
-// Module 5491 (RegionalFeatureConfigModels)
-import MediaTakedownRegulation from "MediaTakedownRegulation" /* 5492 */;
+// Module 5460 (RegionalFeatureConfigModels)
+import MediaTakedownRegulation from "MediaTakedownRegulation" /* 5461 */;
 import size from "module_2" /* 2 */;
 
 class SettingsConfig {

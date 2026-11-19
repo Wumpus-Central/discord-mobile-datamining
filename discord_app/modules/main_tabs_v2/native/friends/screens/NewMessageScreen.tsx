@@ -1,39 +1,39 @@
-// === Module 18920: NewMessageScreen ===
+// === Module 18912: NewMessageScreen ===
 
-// Module 18920 (NewMessageScreen)
+// Module 18912 (NewMessageScreen)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5033 */;
-import useMountEffectDefault from "useMountEffect" /* 5384 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5398 */;
-import components_Button_Button from "components/Button/Button" /* 5421 */;
-import UserPlusIcon from "UserPlusIcon" /* 5513 */;
-import _modDef5514 from "module_5514" /* 5514 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6753 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7431 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7450 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7648 */;
-import HeaderShared from "HeaderShared" /* 8473 */;
-import NoResultsDefault from "NoResults" /* 9993 */;
-import _modDef11015 from "module_11015" /* 11015 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 11016 */;
-import ChatViewDefault from "ChatView" /* 11701 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 12022 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 12024 */;
-import NewMessageUserListDefault from "NewMessageUserList" /* 13155 */;
-import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 18859 */;
-import useOnMessageSendDefault from "useOnMessageSend" /* 18921 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 18922 */;
+import timing_timing from "timing/timing" /* 5002 */;
+import useMountEffectDefault from "useMountEffect" /* 5353 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5367 */;
+import components_Button_Button from "components/Button/Button" /* 5390 */;
+import UserPlusIcon from "UserPlusIcon" /* 5482 */;
+import _modDef5483 from "module_5483" /* 5483 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6724 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7401 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
+import HeaderShared from "HeaderShared" /* 8442 */;
+import NoResultsDefault from "NoResults" /* 9971 */;
+import _modDef10993 from "module_10993" /* 10993 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10994 */;
+import ChatViewDefault from "ChatView" /* 11679 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11999 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 12001 */;
+import NewMessageUserListDefault from "NewMessageUserList" /* 13137 */;
+import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 18851 */;
+import useOnMessageSendDefault from "useOnMessageSend" /* 18913 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 18914 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import RelationshipStore from "RelationshipStore" /* 4765 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6752 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import RelationshipStore from "RelationshipStore" /* 4734 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6723 */;
 
 const require = globalThis.__r;
 const module_1655 = _mod1655;
@@ -98,7 +98,7 @@ let closure_23 = async function _findMatchingPrivateChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -243,20 +243,20 @@ function ChatPreview(channelId) {
   const obj4 = { portal: null };
   const obj3 = { guildId, channelId, chatInputRef: noop.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: channelId.tagListInputRef };
   obj4.portal = channelId(1380).isAndroid();
-  items2[1] = closure_17(channelId(18461).PortalKeyboardRenderer, obj4);
+  items2[1] = closure_17(channelId(18454).PortalKeyboardRenderer, obj4);
   obj2.children = items2;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
 }
 const View = fn(17).View;
-const PrivateChannelRecord = fn(4676).PrivateChannelRecord;
-const UserRowModes = fn(9547).UserRowModes;
+const PrivateChannelRecord = fn(4645).PrivateChannelRecord;
+const UserRowModes = fn(9526).UserRowModes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, ChannelTypes: closure_14, ME: closure_15, Routes: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = module_1655.createAnimatedComponent(fn(5414).Text);
-const createStyles = fn(4823);
+let closure_19 = module_1655.createAnimatedComponent(fn(5383).Text);
+const createStyles = fn(4792);
 let obj = { container: { flex: 1 }, background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, header: null, emptyContainer: null, emptyKeyboardView: null, addFriendsButtonContainer: null };
 const PlatformUtils = fn(1380);
 let str = "center";
@@ -316,7 +316,7 @@ export default function NewMessageScreen(navigation) {
   const effect = obj.useEffect(() => {
     function handleChannelCreate(channel) {
       channel = channel.channel;
-      if (channel.id !== handleChannelCreate(6753).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+      if (channel.id !== handleChannelCreate(6724).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
         if (channel.isPrivate()) {
           if (isPrivateChannelMatch(handleChannelCreate, channel)) {
             dependencyMap(findLocalMatchingPrivateChannelId(handleChannelCreate));
@@ -328,7 +328,7 @@ export default function NewMessageScreen(navigation) {
       const channel = arg0;
       dependencyMap((arg0) => {
         let tmp = arg0;
-        if (arg0 !== handleChannelCreate(6753).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (arg0 !== handleChannelCreate(6724).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           let tmp3 = null;
           if (arg0 !== channel.channel.id) {
             tmp3 = arg0;
@@ -363,7 +363,7 @@ export default function NewMessageScreen(navigation) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -463,7 +463,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = source_page(572);
-          obj2.channel = { id: navigation(6753).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "isArray" };
+          obj2.channel = { id: navigation(6724).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "analyticsLocations" };
           obj.dispatch(obj2);
         };
       }
@@ -491,8 +491,8 @@ export default function NewMessageScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    enabled = tmp13(12021).isGroupDMNitroUpsellAudience(tmp23);
-    const tmp13Result = tmp13(12021);
+    enabled = tmp13(11998).isGroupDMNitroUpsellAudience(tmp23);
+    const tmp13Result = tmp13(11998);
   }
   const items7 = [navigation, selectedUserIds.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
   const layoutEffect = obj.useLayoutEffect(() => {
@@ -529,7 +529,7 @@ export default function NewMessageScreen(navigation) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -629,7 +629,7 @@ export default function NewMessageScreen(navigation) {
     if (!tmp10) {
       if (selectedUserIds.length > 0) {
         if (null == FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
-          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(6753).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(6724).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
         }
         let obj3 = { channelId: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, navigateToChannel, tagListInputRef: ref };
         tmp31Result = closure_17(ChatPreview, obj3, tmp29);
@@ -646,7 +646,7 @@ export default function NewMessageScreen(navigation) {
     items = [];
     if (constants) {
       if (stateFromStores1) {
-        const obj = { icon: _modDef11015, IconComponent: GroupPlusIcon.GroupPlusIcon, label: null, iconVariant: "default", onPress: null };
+        const obj = { icon: _modDef10993, IconComponent: GroupPlusIcon.GroupPlusIcon, label: null, iconVariant: "default", onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t["3hF1W4"]);
         obj.onPress = function onPress() {
@@ -654,7 +654,7 @@ export default function NewMessageScreen(navigation) {
         };
         items.push(obj);
       }
-      const obj2 = { icon: _modDef5514, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
+      const obj2 = { icon: _modDef5483, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t["9nbDJx"]);
       obj2.onPress = function onPress() {
@@ -666,7 +666,7 @@ export default function NewMessageScreen(navigation) {
   }, items11);
   const items13 = [navigation, tmp, insets.bottom];
   const memo1 = obj.useMemo(() => {
-    const obj = { icon: _modDef5514, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
+    const obj = { icon: _modDef5483, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
     const intl = util.intl;
     obj.label = intl.string(util.t["9nbDJx"]);
     obj.onPress = function onPress() {

@@ -1,16 +1,16 @@
-// === Module 12963: AppLauncherChoicesActionSheet ===
+// === Module 12945: AppLauncherChoicesActionSheet ===
 
-// Module 12963 (AppLauncherChoicesActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6464 */;
-import _mod7401 from "module_7401" /* 7401 */;
+// Module 12945 (AppLauncherChoicesActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6435 */;
+import _mod7371 from "module_7371" /* 7371 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod7401;
+  const tmp3 = _mod7371;
   if (scrollable.scrollable) {
     const obj2 = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);

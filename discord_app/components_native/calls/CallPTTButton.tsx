@@ -1,14 +1,14 @@
-// === Module 10831: CallPTTButton ===
+// === Module 10809: CallPTTButton ===
 
-// Module 10831 (CallPTTButton)
+// Module 10809 (CallPTTButton)
 import nativeDefault from "native" /* 575 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10627 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10832 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10605 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
 
 const require = globalThis.__r;
 
@@ -17,15 +17,15 @@ require = fn;
 const InputModes = fn(1072).InputModes;
 const jsx = fn(21).jsx;
 const CallPTTButtonLooks = { BRAND: "brand", BLUR: "blur" };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { button: { margin: 13 }, container: null, buttonBlur: null, buttonBlurPressed: null, textStyle: null, brandButtonContainer: null };
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: null };
-let ColorUtils = fn(4820);
+let ColorUtils = fn(4789);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 obj2.container = obj4;
 obj2.buttonBlur = { backgroundColor: "transparent" };
 const obj5 = { backgroundColor: null };
-ColorUtils = fn(4820);
+ColorUtils = fn(4789);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.6);
 obj2.buttonBlurPressed = obj5;
 obj2.textStyle = { fontSize: 16 };
@@ -105,7 +105,7 @@ export default noop.memo((look) => {
     }
     ref.current = tmp;
   }, items4);
-  const Gesture = tmp2(5083).Gesture;
+  const Gesture = tmp2(5052).Gesture;
   const tmp2Result = require("VoiceChatModalContext");
   const items5 = [closure_12, require("module_1708").scheduleOnRN, tmp9[1], tmp6[1], prop];
   _require = undefined;
@@ -191,7 +191,7 @@ export default noop.memo((look) => {
         obj6.children = <style style={buttonBlurPressed} textStyle={string.textStyle} text={null} onTouchStart={null} onTouchEnd={null} darkenOnPress />;
         onEndResult = <View style={items11}>{null}</View>;
         obj4.children = onEndResult;
-        jsx(tmp2(5083).GestureDetector, { gesture: onEndResult, children: null });
+        jsx(tmp2(5052).GestureDetector, { gesture: onEndResult, children: null });
       }
     }
   }

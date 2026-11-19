@@ -1,20 +1,20 @@
-// === Module 13179: DoubleTapToReactActionSheet ===
+// === Module 13161: DoubleTapToReactActionSheet ===
 
-// Module 13179 (DoubleTapToReactActionSheet)
+// Module 13161 (DoubleTapToReactActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import UserSettings from "UserSettings" /* 4648 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4769 */;
-import timing_timing from "timing/timing" /* 5033 */;
-import spring_spring from "spring/spring" /* 5424 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8618 */;
+import UserSettings from "UserSettings" /* 4617 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4738 */;
+import timing_timing from "timing/timing" /* 5002 */;
+import spring_spring from "spring/spring" /* 5393 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
-import EmojiStore from "EmojiStore" /* 6481 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import EmojiStore from "EmojiStore" /* 6452 */;
 
 const require = globalThis.__r;
 const _modDef1655 = _mod1655;
@@ -121,7 +121,7 @@ const AnalyticEvents = fn(1072).AnalyticEvents;
 const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { emoji: { width: 48, height: 48, zIndex: 2 }, selectedCustomEmoji: { width: 48, height: 48 }, selectedTextEmoji: null, selectedEmojiText: null, content: null, emojiContainer: null, alignCenter: null, emojiSelectRow: null, header: null, emojiName: null, burstContainer: null };
 let PlatformUtils = fn(1380);
 let num = 36;
@@ -321,7 +321,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -337,7 +337,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           } else {
             let tmp22 = tmp2;
             if (memo) {
-              const DoubleTapReactionEmoji = tmp2(4648).DoubleTapReactionEmoji;
+              const DoubleTapReactionEmoji = tmp2(4617).DoubleTapReactionEmoji;
               const obj5 = { emojiId: first.id, emojiName: null, animated: null, disableDoubleTap: false };
               tmp22 = first;
               obj5.emojiName = first.name;
@@ -356,12 +356,12 @@ export default function DoubleTapToReactActionSheet(emoji) {
           const obj = { value, done: true };
           return obj;
         }
-        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7450).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
+        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7420).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
         tmp22(1256).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       } catch (tmp24) {
         c3 = tmp;
         throw tmp24;

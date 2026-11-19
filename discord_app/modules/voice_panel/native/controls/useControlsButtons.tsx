@@ -1,29 +1,29 @@
-// === Module 19401: useControlsButtons ===
+// === Module 19397: useControlsButtons ===
 
-// Module 19401 (useControlsButtons)
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10627 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11709 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19305 */;
-import VoicePanelMicButton from "VoicePanelMicButton" /* 19402 */;
-import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 19405 */;
-import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 19411 */;
-import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 19413 */;
-import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 19415 */;
-import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 19416 */;
-import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 19417 */;
-import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 19420 */;
-import VoicePanelRaiseHandButtonDefault from "VoicePanelRaiseHandButton" /* 19421 */;
-import VoicePanelStageAudienceButtonDefault from "VoicePanelStageAudienceButton" /* 19422 */;
-import VoicePanelLeaveStageButtonDefault from "VoicePanelLeaveStageButton" /* 19424 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19425 */;
+// Module 19397 (useControlsButtons)
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10605 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19301 */;
+import VoicePanelMicButton from "VoicePanelMicButton" /* 19398 */;
+import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 19401 */;
+import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 19407 */;
+import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 19409 */;
+import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 19411 */;
+import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 19412 */;
+import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 19413 */;
+import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 19416 */;
+import VoicePanelRaiseHandButtonDefault from "VoicePanelRaiseHandButton" /* 19417 */;
+import VoicePanelStageAudienceButtonDefault from "VoicePanelStageAudienceButton" /* 19418 */;
+import VoicePanelLeaveStageButtonDefault from "VoicePanelLeaveStageButton" /* 19420 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19421 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 
 const require = globalThis.__r;
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
 
-const useStateFromSharedValueDefault = tmp(10558);
+const useStateFromSharedValueDefault = tmp(10536);
 require = fn;
 function getButtons(c1, stateFromStores, c2, memo) {
   if (c1) {
@@ -113,7 +113,7 @@ function getButtons(c1, stateFromStores, c2, memo) {
     arr2 = items1;
   }
 }
-const VoicePanelControlsConstants = fn(11708);
+const VoicePanelControlsConstants = fn(11686);
 ({ CONTROLS_BUTTON_SIZE_LARGE: closure_6, CONTROLS_BUTTON_SIZE_NORMAL: metroImportDefault } = VoicePanelControlsConstants);
 const InputModes = fn(1072).InputModes;
 const jsx = fn(21).jsx;

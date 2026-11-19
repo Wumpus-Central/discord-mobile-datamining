@@ -1,16 +1,16 @@
-// === Module 11726: useChannelSafeAreaHeightSharedValue ===
+// === Module 11704: useChannelSafeAreaHeightSharedValue ===
 
-// Module 11726 (useChannelSafeAreaHeightSharedValue)
+// Module 11704 (useChannelSafeAreaHeightSharedValue)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useToken from "useToken" /* 5387 */;
-import spring_spring from "spring/spring" /* 5424 */;
-import VoicePanelDockLayout from "VoicePanelDockLayout" /* 11727 */;
-import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11730 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11731 */;
-import useSafeAreaBottomKeyboardInfoControllerDefault from "useSafeAreaBottomKeyboardInfoController" /* 11732 */;
-import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11733 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11735 */;
+import useToken from "useToken" /* 5356 */;
+import spring_spring from "spring/spring" /* 5393 */;
+import VoicePanelDockLayout from "VoicePanelDockLayout" /* 11705 */;
+import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11708 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11709 */;
+import useSafeAreaBottomKeyboardInfoControllerDefault from "useSafeAreaBottomKeyboardInfoController" /* 11710 */;
+import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11711 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11713 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

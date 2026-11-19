@@ -1,6 +1,6 @@
-// === Module 7287: getAuthenticationErrorsFromAPIError ===
+// === Module 7257: getAuthenticationErrorsFromAPIError ===
 
-// Module 7287 (getAuthenticationErrorsFromAPIError)
+// Module 7257 (getAuthenticationErrorsFromAPIError)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/getAuthenticationErrorsFromAPIError.tsx");

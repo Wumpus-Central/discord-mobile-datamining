@@ -1,20 +1,20 @@
-// === Module 5874: MessageRecordUtils ===
+// === Module 5845: MessageRecordUtils ===
 
-// Module 5874 (MessageRecordUtils)
+// Module 5845 (MessageRecordUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import findCodedLinksDefault from "findCodedLinks" /* 5541 */;
-import useMessageAuthor from "useMessageAuthor" /* 6249 */;
-import isMessageMentioned from "isMessageMentioned" /* 6254 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6255 */;
-import transformMessagPollDefault from "transformMessagPoll" /* 6290 */;
-import EmbedUtils from "EmbedUtils" /* 6291 */;
-import StickersUtils from "StickersUtils" /* 6293 */;
-import InteractionRecord from "InteractionRecord" /* 5875 */;
-import MessageRecord_mod from "MessageRecord" /* 4766 */;
+import findCodedLinksDefault from "findCodedLinks" /* 5510 */;
+import useMessageAuthor from "useMessageAuthor" /* 6220 */;
+import isMessageMentioned from "isMessageMentioned" /* 6225 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6226 */;
+import transformMessagPollDefault from "transformMessagPoll" /* 6262 */;
+import EmbedUtils from "EmbedUtils" /* 6263 */;
+import StickersUtils from "StickersUtils" /* 6265 */;
+import InteractionRecord from "InteractionRecord" /* 5846 */;
+import MessageRecord_mod from "MessageRecord" /* 4735 */;
 import UserRecord from "UserRecord" /* 1407 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4765 */;
+import RelationshipStore from "RelationshipStore" /* 4734 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -274,7 +274,7 @@ function createMessageRecord(message, arg1) {
   if (reactions == null) {
     reactions = [];
   }
-  const items2 = [...reactions];
+  const items2 = [...reactions.filter(isCurrentReactionType)];
   if (mapped1 == null) {
     mapped1 = [];
   }
@@ -304,7 +304,27 @@ function createMessageRecord(message, arg1) {
   });
   const tmp10Result4 = GiftCodeUtils;
 }
-let MessageRecord = fn(4766);
+function isCurrentReactionType(count_details) {
+  count_details = count_details.count_details;
+  let tmp = null == count_details;
+  if (!tmp) {
+    let tmp2 = null != count_details.vote;
+    if (!tmp2) {
+      let num = count_details.normal;
+      if (num == null) {
+        num = 0;
+      }
+      let num2 = count_details.burst;
+      if (num2 == null) {
+        num2 = 0;
+      }
+      tmp2 = num + num2 > 0;
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+}
+let MessageRecord = fn(4735);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1072);
@@ -436,7 +456,7 @@ export function updateMessageRecord(message, message2) {
               reactions = [];
             }
             const items1 = [];
-            const arraySpreadResult = HermesBuiltin.arraySpread(reactions, 0);
+            const arraySpreadResult = HermesBuiltin.arraySpread(reactions.filter(isCurrentReactionType), 0);
             HermesBuiltin.arraySpread([], arraySpreadResult);
             items = items1.map((item) => {
               const obj = {};

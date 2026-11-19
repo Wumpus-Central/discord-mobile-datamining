@@ -1,7 +1,7 @@
-// === Module 12682: CheckpointDisplayText ===
+// === Module 12665: CheckpointDisplayText ===
 
-// Module 12682 (CheckpointDisplayText)
-import CheckpointTextDefault from "CheckpointText" /* 12435 */;
+// Module 12665 (CheckpointDisplayText)
+import CheckpointTextDefault from "CheckpointText" /* 12418 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

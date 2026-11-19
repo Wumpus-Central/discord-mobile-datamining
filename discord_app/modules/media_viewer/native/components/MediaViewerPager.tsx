@@ -1,10 +1,10 @@
-// === Module 10563: MediaViewerPager ===
+// === Module 10541: MediaViewerPager ===
 
-// Module 10563 (MediaViewerPager)
+// Module 10541 (MediaViewerPager)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5083 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8130 */;
-import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter" /* 10554 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8099 */;
+import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter" /* 10532 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,12 +1,12 @@
-// === Module 20187: SafetyFlowsUtils ===
+// === Module 20198: SafetyFlowsUtils ===
 
-// Module 20187 (SafetyFlowsUtils)
+// Module 20198 (SafetyFlowsUtils)
 import util from "util" /* 1113 */;
 import _modDef3019 from "module_3019" /* 3019 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6337 */;
-import types from "types" /* 20181 */;
-import constants from "constants" /* 20182 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
+import types from "types" /* 20192 */;
+import constants from "constants" /* 20193 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -115,7 +115,7 @@ export function useOnTaskComplete() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -163,7 +163,7 @@ export function useOnTaskComplete() {
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp15) {
           c4 = tmp;

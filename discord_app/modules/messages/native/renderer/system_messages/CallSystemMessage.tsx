@@ -1,19 +1,19 @@
-// === Module 8630: CallSystemMessage ===
+// === Module 8599: CallSystemMessage ===
 
-// Module 8630 (CallSystemMessage)
+// Module 8599 (CallSystemMessage)
 import util from "util" /* 1113 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
-import DateUtils from "DateUtils" /* 4645 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8614 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8631 */;
-import useIsCallActive from "useIsCallActive" /* 8632 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6528 */;
+import DateUtils from "DateUtils" /* 4614 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8583 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8600 */;
+import useIsCallActive from "useIsCallActive" /* 8601 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 5471 */;
+import VoiceStateStore from "VoiceStateStore" /* 5440 */;
 
 require = fn;
 const ME = fn(1072).ME;
-const ParticipantTypes = fn(5473).ParticipantTypes;
+const ParticipantTypes = fn(5442).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
 

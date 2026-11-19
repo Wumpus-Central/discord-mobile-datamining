@@ -1,15 +1,15 @@
-// === Module 19421: VoicePanelRaiseHandButton ===
+// === Module 19417: VoicePanelRaiseHandButton ===
 
-// Module 19421 (VoicePanelRaiseHandButton)
+// Module 19417 (VoicePanelRaiseHandButton)
 import util from "util" /* 1113 */;
-import useRaiseHandControlDefault from "useRaiseHandControl" /* 10876 */;
-import HandRequestDenyIcon from "HandRequestDenyIcon" /* 10882 */;
-import HandRequestSpeakIcon2 from "HandRequestSpeakIcon" /* 10884 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11709 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 19403 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19404 */;
+import useRaiseHandControlDefault from "useRaiseHandControl" /* 10854 */;
+import HandRequestDenyIcon from "HandRequestDenyIcon" /* 10860 */;
+import HandRequestSpeakIcon2 from "HandRequestSpeakIcon" /* 10862 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 19399 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19400 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 
 require = fn;
 function RaiseHandButtonInner(arg0) {

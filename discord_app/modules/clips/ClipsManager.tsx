@@ -1,26 +1,26 @@
-// === Module 20120: clips/ClipsManager ===
+// === Module 20131: clips/ClipsManager ===
 
-// Module 20120 (clips/ClipsManager)
+// Module 20131 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import UserSettings from "UserSettings" /* 4648 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5589 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6309 */;
-import ClipsExperiment from "ClipsExperiment" /* 14479 */;
-import isClipsEnabled from "isClipsEnabled" /* 14812 */;
-import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20122 */;
-import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20123 */;
+import UserSettings from "UserSettings" /* 4617 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5558 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6280 */;
+import ClipsExperiment from "ClipsExperiment" /* 14466 */;
+import isClipsEnabled from "isClipsEnabled" /* 14798 */;
+import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20133 */;
+import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20134 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6304 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6275 */;
 import UserStore from "UserStore" /* 1388 */;
 import ClipsStore from "ClipsStore" /* 2139 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
@@ -46,7 +46,7 @@ let closure_25 = async function _getCodecSurvey() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -144,13 +144,13 @@ let closure_26 = async function _probeHardware() {
   closure_131_6 = closure_2;
   return { classification: closure_132_0(closure_132_3[15]).classifyClipsHardware(closure_131_6, closure_131_4), gpuModels: closure_131_5, videoEncoders: closure_131_6 };
 };
-const getSystemAnalyticsInfo = fn(5583).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8353);
+const getSystemAnalyticsInfo = fn(5552).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8322);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15, CLIPS_DEFAULT_SETTINGS_VERSION: closure_16, ClipsHardwareClassification: closure_17, ClipsLogger: closure_18, CLIP_RUNTIME: closure_19 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6305).StreamTypes;
-const Features = fn(5568).Features;
+const StreamTypes = fn(6276).StreamTypes;
+const Features = fn(5537).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -270,21 +270,28 @@ prototype["handleClipsInitFailure"] = function handleClipsInitFailure(arg0) {
 prototype["maybeShowClipsWarning"] = function maybeShowClipsWarning(userId) {
   const channelId = RTCConnectionStore.getChannelId();
   if (null != channelId) {
-    if (!ClipsStore.getClipsWarningShown(channelId)) {
-      if (userId !== AuthenticationStore.getId()) {
-        if (ClipsStore.isClipsEnabledForUser(userId)) {
-          const self = this;
-          const result = this.shouldUseClipsInUseNotice();
-          let setting = result;
-          if (!result) {
-            const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
-            setting = ClipsAllowVoiceRecording.getSetting();
-          }
-          if (setting) {
-            const obj2 = { type: "CLIPS_SHOW_CALL_WARNING", channelId };
-            DispatcherDefault.dispatch(obj2);
+    const channel = ChannelStore.getChannel(channelId);
+    let isGuildStageVoiceResult;
+    if (channel != null) {
+      isGuildStageVoiceResult = channel.isGuildStageVoice();
+    }
+    if (!isGuildStageVoiceResult) {
+      if (!ClipsStore.getClipsWarningShown(channelId)) {
+        if (userId !== AuthenticationStore.getId()) {
+          if (ClipsStore.isClipsEnabledForUser(userId)) {
+            const self = this;
+            const result = this.shouldUseClipsInUseNotice();
+            let setting = result;
             if (!result) {
-              self.showClipsToast();
+              const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
+              setting = ClipsAllowVoiceRecording.getSetting();
+            }
+            if (setting) {
+              const obj3 = { type: "CLIPS_SHOW_CALL_WARNING", channelId };
+              DispatcherDefault.dispatch(obj3);
+              if (!result) {
+                self.showClipsToast();
+              }
             }
           }
         }
@@ -332,7 +339,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(clas
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -374,7 +381,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(clas
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(4648).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(4617).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -400,7 +407,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(clas
             const obj = decision(1256);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp42) {
         dependencyMap = tmp;
@@ -422,7 +429,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -436,7 +443,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(4648).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(4617).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };
@@ -452,7 +459,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
         } else {
           v1(572).dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -537,7 +544,7 @@ prototype["updateHardwareClassification"] = function updateHardwareClassificatio
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -652,7 +659,7 @@ prototype["classifyAndApplyHardware"] = function classifyAndApplyHardware() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -737,7 +744,7 @@ prototype["classifyAndApplyHardware"] = function classifyAndApplyHardware() {
             return obj;
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp35) {
         c3 = tmp;

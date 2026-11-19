@@ -1,16 +1,15 @@
-// === Module 15107: GameOrganizationInviteActionSheet ===
+// === Module 15093: GameOrganizationInviteActionSheet ===
 
-// Module 15107 (GameOrganizationInviteActionSheet)
+// Module 15093 (GameOrganizationInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
-import _modDef2555 from "module_2555" /* 2555 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 7976 */;
-import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12019 */;
-import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 15108 */;
-import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 15109 */;
-import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 15110 */;
-import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 15111 */;
+import _modDef2557 from "module_2557" /* 2557 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 7946 */;
+import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 15094 */;
+import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 15095 */;
+import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 15096 */;
+import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 15097 */;
 import noop from "module_19" /* 19 */;
-import GameOrganizationStore from "GameOrganizationStore" /* 15052 */;
+import GameOrganizationStore from "GameOrganizationStore" /* 15038 */;
 
 const require = fn;
 function Loading() {
@@ -26,8 +25,8 @@ function Loading() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
-let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
+const createStyles = fn(4792);
+const obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationInviteActionSheet.tsx");
@@ -39,21 +38,28 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   const tmp4 = useGameOrganizationInviteSuggestionsDefault();
   ({ getSendState, handleInvite } = useLinkedGameOrganizationInviteSenderDefault(guildId));
   const tmp5 = useLinkedGameOrganizationInviteSenderDefault(guildId);
-  const data = guildId(15105).useLinkedGameOrganization(guildId).data;
-  const obj = guildId(15105);
+  const data = guildId(15091).useLinkedGameOrganization(guildId).data;
+  const obj = guildId(15091);
   items = [GameOrganizationStore];
   const items1 = [guildId];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GameOrganizationStore.getDisplayNounByGuildId(guildId), items1);
-  const obj2 = guildId(504);
-  const tmp9 = getGameOrganizationDisplayNounDefault({ displayNoun: stateFromStores, lowercase: true });
   if (null != data) {
     const intl2 = tmp6(1113).intl;
-    const obj3 = { orgName: data.name, noun: tmp9 };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef2555.VGOQ4v, obj3);
+    const obj3 = { orgName: data.name, displayNoun: null };
+    let str2 = stateFromStores;
+    if (stateFromStores == null) {
+      str2 = "other";
+    }
+    obj3.displayNoun = str2;
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef2557.VGOQ4v, obj3);
   } else {
     const intl = tmp6(1113).intl;
-    const obj4 = { noun: tmp9 };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef2555.BBk7Qw, obj4);
+    let str = stateFromStores;
+    if (stateFromStores == null) {
+      str = "other";
+    }
+    const obj4 = { displayNoun: str };
+    formatToPlainStringResult = intl.formatToPlainString(_modDef2557.BBk7Qw, obj4);
   }
   const obj5 = { scrollable: true, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   const intl3 = tmp6(1113).intl;
@@ -62,25 +68,33 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   const obj7 = { spacing: nativeDefault.space.PX_4, children: null };
   const obj8 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centeredText, children: null };
   const intl4 = tmp6(1113).intl;
-  obj8.children = intl4.formatToPlainString(_modDef2555.EnTIIr, { noun: getGameOrganizationDisplayNounDefault({ displayNoun: stateFromStores }) });
-  const items2 = [closure_5(guildId(5414).Heading, obj8), closure_5(guildId(5414).Text, { variant: "body-sm/medium", color: "text-muted", style: tmp.centeredText, children: formatToPlainStringResult })];
+  let str3 = stateFromStores;
+  if (stateFromStores == null) {
+    str3 = "other";
+  }
+  obj8.children = intl4.formatToPlainString(_modDef2557.EnTIIr, { displayNoun: str3 });
+  const items2 = [closure_5(guildId(5383).Heading, obj8), closure_5(guildId(5383).Text, { variant: "body-sm/medium", color: "text-muted", style: tmp.centeredText, children: formatToPlainStringResult })];
   obj7.children = items2;
-  const items3 = [closure_6(guildId(5837).Stack, obj7), ];
+  const items3 = [closure_6(guildId(5808).Stack, obj7), ];
   const obj10 = { size: "md", round: true, onChange: search, placeholder: null };
   const intl5 = tmp6(1113).intl;
-  obj10.placeholder = intl5.formatToPlainString(_modDef2555.cRK6SQ, { noun: tmp9 });
-  items3[1] = closure_5(guildId(7338).SearchBar, obj10);
+  let str4 = stateFromStores;
+  if (stateFromStores == null) {
+    str4 = "other";
+  }
+  obj10.placeholder = intl5.formatToPlainString(_modDef2557.cRK6SQ, { displayNoun: str4 });
+  items3[1] = closure_5(guildId(7308).SearchBar, obj10);
   obj6.children = items3;
-  obj5.header = closure_6(guildId(5837).Stack, obj6);
+  obj5.header = closure_6(guildId(5808).Stack, obj6);
   if (isLoading) {
-    let tmp11Result = closure_5(Loading, {});
+    let tmp9Result = closure_5(Loading, {});
   } else if (hasNoFriends) {
-    const obj11 = { noun: tmp9 };
-    tmp11Result = closure_5(GameOrganizationInviteNoFriendsDefault, obj11);
+    const obj11 = { displayNoun: stateFromStores };
+    tmp9Result = closure_5(GameOrganizationInviteNoFriendsDefault, obj11);
   } else {
     const obj12 = { users, getSendState, onInvite: handleInvite };
-    tmp11Result = closure_5(GameOrganizationInviteListDefault, obj12);
+    tmp9Result = closure_5(GameOrganizationInviteListDefault, obj12);
   }
-  obj5.children = tmp11Result;
-  return closure_5(guildId(7464).ActionSheet, obj5);
+  obj5.children = tmp9Result;
+  return closure_5(guildId(7434).ActionSheet, obj5);
 };

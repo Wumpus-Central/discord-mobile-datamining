@@ -1,26 +1,26 @@
-// === Module 12100: EditAttachmentActionSheet ===
+// === Module 12077: EditAttachmentActionSheet ===
 
-// Module 12100 (EditAttachmentActionSheet)
+// Module 12077 (EditAttachmentActionSheet)
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4832 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import components_Button_Button from "components/Button/Button" /* 5421 */;
-import Stack_Stack from "Stack/Stack" /* 5837 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7246 */;
-import TextArea from "TextArea" /* 7372 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7426 */;
-import ActionSheet from "ActionSheet" /* 7464 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8061 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4801 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import components_Button_Button from "components/Button/Button" /* 5390 */;
+import Stack_Stack from "Stack/Stack" /* 5808 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7216 */;
+import TextArea from "TextArea" /* 7342 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
+import ActionSheet from "ActionSheet" /* 7434 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8030 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5872 */;
+import MessageStore from "MessageStore" /* 5843 */;
 
 require = fn;
-let closure_7 = fn(4828).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(4797).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
-let maxLength = fn(11613).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+let maxLength = fn(11591).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
@@ -52,7 +52,7 @@ export default function EditAttachmentActionSheet(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -147,7 +147,7 @@ export default function EditAttachmentActionSheet(arg0) {
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(8147)(attachment);
+  const tmp5 = attachment(8116)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);

@@ -1,6 +1,6 @@
-// === Module 12502: ? ===
+// === Module 12485: ? ===
 
-// Module 12502
+// Module 12485
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_env_labNight_bg.webp.js");

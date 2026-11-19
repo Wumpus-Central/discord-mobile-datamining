@@ -1,29 +1,29 @@
-// === Module 12671: CheckpointVoiceStatsScreen ===
+// === Module 12654: CheckpointVoiceStatsScreen ===
 
-// Module 12671 (CheckpointVoiceStatsScreen)
+// Module 12654 (CheckpointVoiceStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _modDef3339 from "module_3339" /* 3339 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6247 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12434 */;
-import CheckpointTextDefault from "CheckpointText" /* 12435 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12437 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12654 */;
-import _modDef12672 from "module_12672" /* 12672 */;
-import _modDef12673 from "module_12673" /* 12673 */;
-import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12674 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12675 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12677 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6218 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12417 */;
+import CheckpointTextDefault from "CheckpointText" /* 12418 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12420 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12637 */;
+import _modDef12655 from "module_12655" /* 12655 */;
+import _modDef12656 from "module_12656" /* 12656 */;
+import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12657 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12658 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12660 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12417 */;
+import CheckpointStore from "CheckpointStore" /* 12400 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(5877).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5848).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, title: null, titleText: null, imageContainer: null, image: null, copy: null, number: null, wideBackdrop: null, wideImage: null, wideContainer: null, wideCopy: null, wideTitle: null, wideText: null };
 let obj3 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -88,7 +88,7 @@ export default function CheckpointVoiceStatsScreen() {
   if (stateFromStores != null) {
     prop = stateFromStores.totalVoiceMinutesPercentile;
   }
-  const checkpointTopPercent = stateFromStores1(6247).getCheckpointTopPercent(prop);
+  const checkpointTopPercent = stateFromStores1(6218).getCheckpointTopPercent(prop);
   const intl = tmp4(1113).intl;
   const string = intl.string;
   const tmp2Result = _modDef3339;
@@ -106,9 +106,9 @@ export default function CheckpointVoiceStatsScreen() {
     }
   }
   const obj4 = { animatedUri: null, staticUri: null, style: null };
-  const tmp4Result = stateFromStores1(6247);
-  obj4.animatedUri = _modDef12672;
-  obj4.staticUri = _modDef12673;
+  const tmp4Result = stateFromStores1(6218);
+  obj4.animatedUri = _modDef12655;
+  obj4.staticUri = _modDef12656;
   const items3 = [tmp.image, ];
   let tmp16 = wideText;
   if (wideText) {
@@ -143,7 +143,7 @@ export default function CheckpointVoiceStatsScreen() {
   }
   const obj11 = { style: items7, children: null };
   items7[1] = wideTitle;
-  const items8 = [closure_7(stateFromStores1(10971).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), ];
+  const items8 = [closure_7(stateFromStores1(10949).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), ];
   const obj13 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const obj12 = { size: "xs", color: CHECKPOINT_PRIMARY };
   const tmp2Result6 = CheckpointScreenDefault;

@@ -1,7 +1,7 @@
-// === Module 19668: useInterestPickerCatalog ===
+// === Module 19664: useInterestPickerCatalog ===
 
-// Module 19668 (useInterestPickerCatalog)
-import InterestPickerCatalogs from "InterestPickerCatalogs" /* 17884 */;
+// Module 19664 (useInterestPickerCatalog)
+import InterestPickerCatalogs from "InterestPickerCatalogs" /* 17877 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/useInterestPickerCatalog.tsx");
 
 export default function useInterestPickerCatalog(InterestPickerStep) {
-  interestPickerGameList = interestPickerGameList(17883).useInterestPickerGameList(InterestPickerStep);
+  interestPickerGameList = interestPickerGameList(17876).useInterestPickerGameList(InterestPickerStep);
   items = [interestPickerGameList];
   return noop.useMemo(() => {
     let interestPickerCatalog = null;

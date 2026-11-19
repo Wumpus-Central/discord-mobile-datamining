@@ -1,23 +1,23 @@
-// === Module 8262: GuildBasicChannels ===
+// === Module 8231: GuildBasicChannels ===
 
-// Module 8262 (GuildBasicChannels)
+// Module 8231 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4701 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4742 */;
-import PermissionUtils from "PermissionUtils" /* 4760 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4764 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4670 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4711 */;
+import PermissionUtils from "PermissionUtils" /* 4729 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4733 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6302 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6273 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import GuildMemberStore from "GuildMemberStore" /* 4735 */;
-import GuildRoleStore from "GuildRoleStore" /* 4729 */;
-import GuildStore from "GuildStore" /* 4694 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4673 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import GuildMemberStore from "GuildMemberStore" /* 4704 */;
+import GuildRoleStore from "GuildRoleStore" /* 4698 */;
+import GuildStore from "GuildStore" /* 4663 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4642 */;
 
 require = fn;
 function hasBasicChannelChanged(basicChannel, nextResult) {
@@ -253,8 +253,8 @@ function isCurrentSyncStatus(version) {
   }
   return false;
 }
-let closure_7 = fn(4676).createChannelRecordFromServer;
-const ChannelLoader = fn(4672).ChannelLoader;
+let closure_7 = fn(4645).createChannelRecordFromServer;
+const ChannelLoader = fn(4641).ChannelLoader;
 let closure_16 = new LoggerDefault("GuildBasicChannels");
 const re17 = /^\d+$/;
 class GuildBasicChannels {
@@ -314,9 +314,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    items = [tmp3(4701).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(4701).basicChannels(closure_0);
-    items[1] = tmp3(4701).syncedBasicChannels(closure_0).getKvEntries();
+    items = [tmp3(4670).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(4670).basicChannels(closure_0);
+    items[1] = tmp3(4670).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);
@@ -473,7 +473,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -520,7 +520,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: null };
+                          return { value: "HermesInternal", done: "+60" };
                         }
                       } else {
                         try {
@@ -566,7 +566,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_16.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "find" }, done: true };
+                            const obj5 = { value: { v: "r" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {
@@ -578,7 +578,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                               return obj6;
                             } else {
                               c6 = 3;
-                              return { value: "HermesInternal", done: null };
+                              return { value: "HermesInternal", done: "+60" };
                             }
                           } else if (3 === tmp7) {
                             if (arg0 === 1) {
@@ -638,7 +638,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               }
             }
             c10 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } else if (1 === tmp7) {
           c7 = 0;

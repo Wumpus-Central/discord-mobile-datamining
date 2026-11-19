@@ -1,9 +1,9 @@
-// === Module 12012: useCanInviteToLinkedGameOrganization ===
+// === Module 11990: useCanInviteToLinkedGameOrganization ===
 
-// Module 12012 (useCanInviteToLinkedGameOrganization)
-import GuildMemberStore from "GuildMemberStore" /* 4735 */;
-import GuildRoleStore from "GuildRoleStore" /* 4729 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
+// Module 11990 (useCanInviteToLinkedGameOrganization)
+import GuildMemberStore from "GuildMemberStore" /* 4704 */;
+import GuildRoleStore from "GuildRoleStore" /* 4698 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
 
 const require = globalThis.__r;
 

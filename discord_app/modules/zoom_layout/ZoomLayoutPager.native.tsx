@@ -1,9 +1,9 @@
-// === Module 10565: ZoomLayoutPager ===
+// === Module 10543: ZoomLayoutPager ===
 
-// Module 10565 (ZoomLayoutPager)
+// Module 10543 (ZoomLayoutPager)
 import _modDef1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5083 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 let jsx = fn(21).jsx;
 let obj = {};
-let merged = Object.assign(fn(5425).springStandard);
+let merged = Object.assign(fn(5394).springStandard);
 obj.stiffness = 100;
 obj.overshootClamping = true;
 let closure_8 = { code: "(function ZoomLayoutPagerNativeTsx1(){let[cancelAnimation,translateX,dragging,onEndDrag,onMomentumEnd,isPaging]=this.__closure;var _onMomentumEnd;cancelAnimation(translateX);if(dragging.get()){var _onEndDrag;dragging.set(false);(_onEndDrag=onEndDrag)===null||_onEndDrag===void 0||_onEndDrag();}(_onMomentumEnd=onMomentumEnd)===null||_onMomentumEnd===void 0||_onMomentumEnd();isPaging.set(false);})" };

@@ -1,10 +1,10 @@
-// === Module 5559: ChannelRTCActionCreators ===
+// === Module 5528: ChannelRTCActionCreators ===
 
-// Module 5559 (ChannelRTCActionCreators)
+// Module 5528 (ChannelRTCActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5560 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -50,9 +50,9 @@ export default {
   updateStageVideoLimitBoostUpsellDismissed(channelId, dismissed) {
     DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED", channelId, dismissed });
   },
-  updateChatOpen(id, shown) {
-    _require = id;
-    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown });
+  updateChatOpen(channelId, shown) {
+    _require = channelId;
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId, chatOpen: shown });
     if (shown) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
@@ -63,7 +63,7 @@ export default {
       let ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
       ComponentDispatch.dispatch(constants3.FOCUS_CHAT_BUTTON);
     }
-    const obj2 = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown };
+    const obj2 = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId, chatOpen: shown };
   },
   updateStageAudienceSidebarOpen(channelId, open) {
     DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_STAGE_AUDIENCE_SIDEBAR_OPEN", channelId, open });

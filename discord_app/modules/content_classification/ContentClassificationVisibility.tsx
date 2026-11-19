@@ -1,9 +1,9 @@
-// === Module 12730: ContentClassificationVisibility ===
+// === Module 12712: ContentClassificationVisibility ===
 
-// Module 12730 (ContentClassificationVisibility)
+// Module 12712 (ContentClassificationVisibility)
 import initialize from "initialize" /* 504 */;
-import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5453 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5455 */;
+import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5422 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5424 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

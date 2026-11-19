@@ -1,9 +1,9 @@
-// === Module 16848: EmojiMoneyMouthFaceIcon ===
+// === Module 16841: EmojiMoneyMouthFaceIcon ===
 
-// Module 16848 (EmojiMoneyMouthFaceIcon)
+// Module 16841 (EmojiMoneyMouthFaceIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod16849 from "module_16849" /* 16849 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod16842 from "module_16842" /* 16842 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiMoneyMouthFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16849, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16842, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

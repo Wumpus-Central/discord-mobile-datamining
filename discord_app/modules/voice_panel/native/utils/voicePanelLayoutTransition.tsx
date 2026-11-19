@@ -1,8 +1,8 @@
-// === Module 19302: voicePanelLayoutTransition ===
+// === Module 19298: voicePanelLayoutTransition ===
 
-// Module 19302 (voicePanelLayoutTransition)
-import spring_spring from "spring/spring" /* 5424 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11710 */;
+// Module 19298 (voicePanelLayoutTransition)
+import spring_spring from "spring/spring" /* 5393 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11688 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function voicePanelLayoutTransition_voicePanelLayoutTransitionTsx1(values){let[withSpring,LAYOUT_PHYSICS]=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})" }, spring_spring.withSpring, VoicePanelConstants.LAYOUT_PHYSICS];

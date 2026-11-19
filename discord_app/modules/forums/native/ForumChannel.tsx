@@ -1,32 +1,32 @@
-// === Module 13643: ForumChannel ===
+// === Module 13625: ForumChannel ===
 
-// Module 13643 (ForumChannel)
+// Module 13625 (ForumChannel)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5527 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7197 */;
-import Tracking from "Tracking" /* 8373 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8426 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 8482 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9670 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9675 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 11203 */;
-import ForumPostDataLoader from "ForumPostDataLoader" /* 11633 */;
-import ForumPostDefault from "ForumPost" /* 12795 */;
-import ForumPostPlaceholderDefault from "ForumPostPlaceholder" /* 12823 */;
-import CreateGameInvitePostModalActionCreators from "CreateGameInvitePostModalActionCreators" /* 13652 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5496 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7167 */;
+import Tracking from "Tracking" /* 8342 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8395 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 8451 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9649 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9654 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 11181 */;
+import ForumPostDataLoader from "ForumPostDataLoader" /* 11611 */;
+import ForumPostDefault from "ForumPost" /* 12777 */;
+import ForumPostPlaceholderDefault from "ForumPostPlaceholder" /* 12805 */;
+import CreateGameInvitePostModalActionCreators from "CreateGameInvitePostModalActionCreators" /* 13634 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4756 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6547 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import DraftStore from "DraftStore" /* 8227 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6439 */;
-import TextStyles_mod from "TextStyles" /* 6315 */;
+import LurkingStore from "LurkingStore" /* 4725 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6518 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import DraftStore from "DraftStore" /* 8196 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6410 */;
+import TextStyles_mod from "TextStyles" /* 6286 */;
 
 const require = globalThis.__r;
 
@@ -132,7 +132,7 @@ function SortAndViewOptions(channel) {
   items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13646, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13628, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -148,7 +148,7 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_15(id(5421).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_15(id(10127).ArrowsUpDownIcon, { size: "xxs" }) });
+  return closure_15(id(5390).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_15(id(10105).ArrowsUpDownIcon, { size: "xxs" }) });
 }
 function TagFilter(channel) {
   channel = channel.channel;
@@ -156,10 +156,10 @@ function TagFilter(channel) {
   const intl = channel(1113).intl;
   obj.text = intl.string(channel(1113).t["112vVE"]);
   obj.onPress = function handlePress() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13647, dependencyMap.paths), "ForumTagFilterActionSheet", { channel });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13629, dependencyMap.paths), "ForumTagFilterActionSheet", { channel });
   };
-  obj.icon = closure_15(channel(8947).TagIcon, { size: "xxs" });
-  return closure_15(channel(5421).Button, obj);
+  obj.icon = closure_15(channel(8921).TagIcon, { size: "xxs" });
+  return closure_15(channel(5390).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";
@@ -414,10 +414,10 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12796).useForumChannelStore;
+const useForumChannelStore = fn(12778).useForumChannelStore;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
-let closure_14 = fn(11728).getVoicePanelDockButtonsTop;
+let closure_14 = fn(11706).getVoicePanelDockButtonsTop;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
@@ -428,7 +428,7 @@ const missing_permission_archived_threads = "missing_permission_archived_threads
 const loading_section = "loading_section";
 let items = ["archived_section", "search_section", "missing_permission_search", "missing_permission_archived_threads", "loading_section"];
 const set = new Set(items);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, headerRow: { display: "flex", flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 12, paddingVertical: 8 }, headerLeftContainer: { flexDirection: "row", alignItems: "center", gap: 8 }, headerDivider: null, container: null, noHeight: null, list: null, section: null, divider: null, missingPermissionContainer: null, missingPermissionText: null };
 let size = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, width: "100%", height: 1 };
 obj2.headerDivider = size;
@@ -637,7 +637,7 @@ export default function ForumChannel(channel) {
   const obj14 = { accessibilityLabel: null, icon: null, disabled: null, positionBottom: null, onPress: null, onPressDisabled: null, accessibilityHint: null };
   const intl = tmp2(tmp3[17]).intl;
   obj14.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-  obj14.icon = require("module_13655");
+  obj14.icon = require("module_13637");
   obj14.disabled = tmp17;
   obj14.positionBottom = sum;
   obj14.onPress = callback1;

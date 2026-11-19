@@ -1,21 +1,21 @@
-// === Module 16653: QuestDockBountySmokeLayer ===
+// === Module 16646: QuestDockBountySmokeLayer ===
 
-// Module 16653 (QuestDockBountySmokeLayer)
-import FastImageDefault from "FastImage" /* 5510 */;
-import QuestDockUtils from "QuestDockUtils" /* 16537 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 16627 */;
-import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 16639 */;
-import _modDef16654 from "module_16654" /* 16654 */;
-import _modDef16655 from "module_16655" /* 16655 */;
-import _modDef16656 from "module_16656" /* 16656 */;
+// Module 16646 (QuestDockBountySmokeLayer)
+import FastImageDefault from "FastImage" /* 5479 */;
+import QuestDockUtils from "QuestDockUtils" /* 16528 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 16618 */;
+import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 16630 */;
+import _modDef16647 from "module_16647" /* 16647 */;
+import _modDef16648 from "module_16648" /* 16648 */;
+import _modDef16649 from "module_16649" /* 16649 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 require = fn;
 function QuestDockBountySmokePlaceholder() {
   const obj = { source: null, style: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no-hide-descendants" };
-  const obj2 = { uri: _modDef16655 };
+  const obj2 = { uri: _modDef16648 };
   obj.source = obj2;
   obj.style = StyleSheet.absoluteFillObject;
   return metroImportDefault(FastImageDefault, obj);
@@ -50,7 +50,7 @@ function QuestDockBountySmokeLayerIOS(paused) {
   let tmp18Result = !stateFromStores;
   if (!stateFromStores) {
     const obj3 = { style: tmp7 ? video.video : video.hiddenVideo, source: null, resizeMode: "cover", paused: null, muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", onReadyForDisplay: null, onError: null };
-    const obj4 = { uri: _modDef16656 };
+    const obj4 = { uri: _modDef16649 };
     obj3.source = obj4;
     if (!flag) {
       flag = !tmp5;
@@ -58,7 +58,7 @@ function QuestDockBountySmokeLayerIOS(paused) {
     obj3.paused = flag;
     obj3.onReadyForDisplay = callback;
     obj3.onError = tmp14;
-    tmp18Result = closure_7(tmp(9158).VideoComponent, obj3);
+    tmp18Result = closure_7(tmp(9134).VideoComponent, obj3);
   }
   const children = [tmp18Result, ];
   let tmp20 = !tmp7;
@@ -115,7 +115,7 @@ function QuestDockBountySmokeLayerAndroidAnimated(paused) {
   if (!stateFromStores) {
     tmp4Result = null;
     if (tmp11) {
-      tmp4Result = tmp4(16657);
+      tmp4Result = tmp4(16650);
     }
   }
   const tmp6Result = tmp6(noop.useState(tmp4Result), 2);
@@ -154,17 +154,17 @@ function QuestDockBountySmokeLayerAndroidAnimated(paused) {
     obj3.paused = flag;
     obj3.onLoad = callback;
     obj3.onError = tmp24;
-    tmp28Result = closure_7(tmp(9158).VideoComponent, obj3);
+    tmp28Result = closure_7(tmp(9134).VideoComponent, obj3);
   }
   const children = [tmp28Result, ];
   let tmp30 = !tmp8;
   if (!tmp8) {
     const obj5 = { source: null, style: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no-hide-descendants" };
-    const obj6 = { uri: tmp4(16654) };
+    const obj6 = { uri: tmp4(16647) };
     obj5.source = obj6;
     obj5.style = StyleSheet.absoluteFillObject;
-    tmp30 = closure_7(tmp4(5510), obj5);
-    const tmp4Result2 = tmp4(5510);
+    tmp30 = closure_7(tmp4(5479), obj5);
+    const tmp4Result2 = tmp4(5479);
   }
   children[1] = tmp30;
   return closure_9(closure_8, { children });
@@ -208,9 +208,9 @@ export const QUEST_DOCK_BOUNTY_SMOKE_ART_ASPECT_RATIO = 3.75;
 export { QuestDockBountySmokeSurface };
 export function getQuestDockBountySmokeCollapsedPlaceholderUrl() {
   if (obj.isAndroid()) {
-    let tmp2Result = _modDef16654;
+    let tmp2Result = _modDef16647;
   } else {
-    tmp2Result = _modDef16655;
+    tmp2Result = _modDef16648;
   }
   return tmp2Result;
 }

@@ -1,6 +1,6 @@
-// === Module 18277: PruneGuildModalActionCreators ===
+// === Module 18270: PruneGuildModalActionCreators ===
 
-// Module 18277 (PruneGuildModalActionCreators)
+// Module 18270 (PruneGuildModalActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -34,7 +34,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp5) {
           v3 = tmp;

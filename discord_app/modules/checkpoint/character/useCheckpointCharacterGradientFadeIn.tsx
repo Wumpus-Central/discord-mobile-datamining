@@ -1,13 +1,13 @@
-// === Module 12644: useCheckpointCharacterGradientFadeIn ===
+// === Module 12627: useCheckpointCharacterGradientFadeIn ===
 
-// Module 12644 (useCheckpointCharacterGradientFadeIn)
-import _mod12645 from "module_12645" /* 12645 */;
+// Module 12627 (useCheckpointCharacterGradientFadeIn)
+import _mod12628 from "module_12628" /* 12628 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 require = fn;
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 ({ CHECKPOINT_INTRODUCTION_FADE_IN_DURATION_MS: hasOwnProperty, CHECKPOINT_INTRODUCTION_REVEAL_DURATION_MS: closure_6 } = CheckpointConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/character/useCheckpointCharacterGradientFadeIn.tsx");
@@ -18,7 +18,7 @@ export function useCheckpointCharacterGradientFadeIn(dataBinding) {
   noop = undefined;
   items = [AccessibilityStore];
   const stateFromStores = dataBinding(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp2 = dataBinding.stage === dataBinding(6246).CheckpointCharacterStage.INTRODUCTION && !stateFromStores;
+  const tmp2 = dataBinding.stage === dataBinding(6217).CheckpointCharacterStage.INTRODUCTION && !stateFromStores;
   dependencyMap = tmp2;
   let num = 1;
   let num2 = 1;
@@ -44,7 +44,7 @@ export function useCheckpointCharacterGradientFadeIn(dataBinding) {
       let _requestAnimationFrame = requestAnimationFrame;
       function handleAnimationFrame() {
         const bound = Math.max(Math.min(Date.now() - closure_0, hasOwnProperty), 0);
-        closure_3(_mod12645.easeOutCubic(bound, 0, 1, hasOwnProperty));
+        closure_3(_mod12628.easeOutCubic(bound, 0, 1, hasOwnProperty));
         if (bound < hasOwnProperty) {
           const _requestAnimationFrame = requestAnimationFrame;
           closure_1 = requestAnimationFrame(handleAnimationFrame);

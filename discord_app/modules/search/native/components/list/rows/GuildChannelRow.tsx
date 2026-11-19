@@ -1,13 +1,13 @@
-// === Module 18807: GuildChannelRow ===
+// === Module 18799: GuildChannelRow ===
 
-// Module 18807 (GuildChannelRow)
+// Module 18799 (GuildChannelRow)
 import nativeDefault from "native" /* 575 */;
-import useChannelNameDefault from "useChannelName" /* 5439 */;
-import FastImageDefault from "FastImage" /* 5510 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 7547 */;
-import SearchListRow from "SearchListRow" /* 18785 */;
-import ChannelContent from "ChannelContent" /* 18808 */;
-import renderChannelItem from "renderChannelItem" /* 18810 */;
+import useChannelNameDefault from "useChannelName" /* 5408 */;
+import FastImageDefault from "FastImage" /* 5479 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 7517 */;
+import SearchListRow from "SearchListRow" /* 18777 */;
+import ChannelContent from "ChannelContent" /* 18800 */;
+import renderChannelItem from "renderChannelItem" /* 18802 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,9 +20,9 @@ function GuildChannelLabel(channel) {
   return <View style={closure_6().content}>{null}</View>;
 }
 const View = fn(17).View;
-const layout = fn(8488).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(8457).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { container: { paddingVertical: 10 }, content: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 0 }, simpleIcon: null };
 let size = { width: 20, height: 20, marginRight: 8, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj.simpleIcon = size;

@@ -1,10 +1,10 @@
-// === Module 4875: RouteParam ===
+// === Module 4844: RouteParam ===
 
-// Module 4875 (RouteParam)
+// Module 4844 (RouteParam)
 import RouteConstants from "RouteConstants" /* 1073 */;
 import utils_PathUtils from "utils/PathUtils" /* 1081 */;
-import ChannelConstants from "ChannelConstants" /* 4679 */;
-import escapeRegExpDefault from "escapeRegExp" /* 4876 */;
+import ChannelConstants from "ChannelConstants" /* 4648 */;
+import escapeRegExpDefault from "escapeRegExp" /* 4845 */;
 import size from "module_2" /* 2 */;
 
 const PSEUDO_GUILD_IDS = RouteConstants.PSEUDO_GUILD_IDS;

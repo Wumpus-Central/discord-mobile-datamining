@@ -1,18 +1,18 @@
-// === Module 8749: PremiumGiftingIntentStore ===
+// === Module 8718: PremiumGiftingIntentStore ===
 
-// Module 8749 (PremiumGiftingIntentStore)
+// Module 8718 (PremiumGiftingIntentStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserSettings from "UserSettings" /* 4648 */;
-import FriendAnniversaryUtils from "FriendAnniversaryUtils" /* 8750 */;
-import FriendAnniversaryGate from "FriendAnniversaryGate" /* 8751 */;
-import ExperimentStore from "ExperimentStore" /* 5440 */;
+import UserSettings from "UserSettings" /* 4617 */;
+import FriendAnniversaryUtils from "FriendAnniversaryUtils" /* 8719 */;
+import FriendAnniversaryGate from "FriendAnniversaryGate" /* 8720 */;
+import ExperimentStore from "ExperimentStore" /* 5409 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8055 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8024 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ConsentStore from "ConsentStore" /* 6335 */;
-import RelationshipStore from "RelationshipStore" /* 4765 */;
+import ConsentStore from "ConsentStore" /* 6306 */;
+import RelationshipStore from "RelationshipStore" /* 4734 */;
 
 require = fn;
 function getCurrentTime() {
@@ -101,7 +101,7 @@ function generateFriendAnniversaries(c15) {
   highAffinity = dependencyMap;
   set1 = new Set();
   if (obj2.getFriendAnniversaryGateConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" }).enabled) {
-    const EnableFriendAnniversaryNotifications = highestAffinity(4648).EnableFriendAnniversaryNotifications;
+    const EnableFriendAnniversaryNotifications = highestAffinity(4617).EnableFriendAnniversaryNotifications;
     if (EnableFriendAnniversaryNotifications.getSetting()) {
       closure_15 = c15;
       const friendIDs = RelationshipStore.getFriendIDs();
@@ -122,7 +122,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = closure_11.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8750).categorizeFriendAnniversariesByAffinity(closure_11, (userId) => {
+          const result = highestAffinity(8719).categorizeFriendAnniversariesByAffinity(closure_11, (userId) => {
             const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -131,14 +131,14 @@ function generateFriendAnniversaries(c15) {
             return dmProbability;
           }, true);
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8750);
+          const highestAffinityResult = highestAffinity(8719);
         }
         sampleSizeResult = _null;
       }
       sampleSizeResult = applyDefault.sampleSize(found, c15);
     }
   }
-  obj2 = set2(8751);
+  obj2 = set2(8720);
 }
 const Consents = fn(1072).Consents;
 let closure_10 = { messageGiftIntentLastShownMap: {}, lastShownFriendsListGiftIntents: [], friendsTabBadgeLastDismissedTime: null, lastKnownGiftIntentDismissedAtMs: 0 };

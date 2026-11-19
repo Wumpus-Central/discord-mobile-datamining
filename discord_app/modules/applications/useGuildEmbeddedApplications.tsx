@@ -1,8 +1,8 @@
-// === Module 7664: useGuildEmbeddedApplications ===
+// === Module 7634: useGuildEmbeddedApplications ===
 
-// Module 7664 (useGuildEmbeddedApplications)
+// Module 7634 (useGuildEmbeddedApplications)
 import DurationsDefault from "Durations" /* 1089 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6567 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6538 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
@@ -42,7 +42,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         return obj;
       }
       c3 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     } catch (tmp11) {
       c3 = tmp;
       throw tmp11;

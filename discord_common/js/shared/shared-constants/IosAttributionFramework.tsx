@@ -1,6 +1,6 @@
-// === Module 10572: IosAttributionFramework ===
+// === Module 10550: IosAttributionFramework ===
 
-// Module 10572 (IosAttributionFramework)
+// Module 10550 (IosAttributionFramework)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/IosAttributionFramework.tsx");

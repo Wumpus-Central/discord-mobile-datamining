@@ -1,19 +1,19 @@
-// === Module 19997: CoinsAndBagSpotIllustration ===
+// === Module 20008: CoinsAndBagSpotIllustration ===
 
-// Module 19997 (CoinsAndBagSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7268 */;
-import _modDef19998 from "module_19998" /* 19998 */;
-import _modDef19999 from "module_19999" /* 19999 */;
-import _modDef20000 from "module_20000" /* 20000 */;
+// Module 20008 (CoinsAndBagSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7238 */;
+import _modDef20009 from "module_20009" /* 20009 */;
+import _modDef20010 from "module_20010" /* 20010 */;
+import _modDef20011 from "module_20011" /* 20011 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19998 }, 3: null };
-let obj2 = { uri: _modDef19998 };
-obj[2] = { uri: _modDef19999 };
-const obj3 = { uri: _modDef19999 };
-obj[3] = { uri: _modDef20000 };
+let obj = { 1: null, 2: { uri: _modDef20009 }, 3: null };
+let obj2 = { uri: _modDef20009 };
+obj[2] = { uri: _modDef20010 };
+const obj3 = { uri: _modDef20010 };
+obj[3] = { uri: _modDef20011 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CoinsAndBagSpotIllustration.native.tsx");
 

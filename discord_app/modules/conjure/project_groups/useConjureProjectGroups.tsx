@@ -1,26 +1,18 @@
-// === Module 13709: useConjureProjectGroups ===
+// === Module 13691: useConjureProjectGroups ===
 
-// Module 13709 (useConjureProjectGroups)
-import conjureProjectGroups from "conjureProjectGroups" /* 13710 */;
-import filterConjureProjectsByName from "filterConjureProjectsByName" /* 13711 */;
+// Module 13691 (useConjureProjectGroups)
+import conjureProjectGroups from "conjureProjectGroups" /* 13692 */;
+import filterConjureProjectsByName from "filterConjureProjectsByName" /* 13693 */;
 import noop from "module_19" /* 19 */;
-import SortedGuildStore from "SortedGuildStore" /* 6458 */;
+import SortedGuildStore from "SortedGuildStore" /* 6429 */;
 import UserStore from "UserStore" /* 1388 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getListedConjureProjects() {
-  const railProjects = ConjureProjectStore.getRailProjects();
-  const sharedWithMeProjects = ConjureProjectStore.getSharedWithMeProjects();
-  for (const item10019 of sharedWithMeProjects) {
-    if (!set.has(item10019.id)) {
-      let arr = railProjects.push(item10019);
-    }
-    continue;
-  }
-  return railProjects;
+  return ConjureProjectStore.getRailProjects();
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/project_groups/useConjureProjectGroups.tsx");

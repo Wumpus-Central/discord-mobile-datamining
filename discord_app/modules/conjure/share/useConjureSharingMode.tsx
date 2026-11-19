@@ -1,17 +1,17 @@
-// === Module 18326: useConjureSharingMode ===
+// === Module 18319: useConjureSharingMode ===
 
-// Module 18326 (useConjureSharingMode)
+// Module 18319 (useConjureSharingMode)
 import util from "util" /* 1113 */;
-import _modDef4121 from "module_4121" /* 4121 */;
+import _modDef4089 from "module_4089" /* 4089 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let isProjectOwner = fn(6529).isProjectOwner;
+let isProjectOwner = fn(6500).isProjectOwner;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/useConjureSharingMode.tsx");
 
@@ -46,7 +46,7 @@ export default function useConjureSharingMode(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -193,15 +193,15 @@ export default function useConjureSharingMode(arg0) {
 export function conjureSharingOptions() {
   const obj = { value: "collaborators", label: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef4121["a/Tlqf"]);
+  obj.label = intl.string(_modDef4089["a/Tlqf"]);
   items = [obj, , ];
   const obj2 = { value: "link", label: null };
   const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef4121.e0VakN);
+  obj2.label = intl2.string(_modDef4089.e0VakN);
   items[1] = obj2;
   const obj3 = { value: "public", label: null };
   const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef4121["98MAcX"]);
+  obj3.label = intl3.string(_modDef4089["98MAcX"]);
   items[2] = obj3;
   return items;
 }

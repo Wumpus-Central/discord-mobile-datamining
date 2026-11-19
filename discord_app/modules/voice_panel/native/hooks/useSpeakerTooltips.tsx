@@ -1,19 +1,19 @@
-// === Module 19315: useSpeakerTooltips ===
+// === Module 19311: useSpeakerTooltips ===
 
-// Module 19315 (useSpeakerTooltips)
+// Module 19311 (useSpeakerTooltips)
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 4656 */;
-import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 19318 */;
+import dismissible_content from "dismissible_content" /* 4625 */;
+import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 19314 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConsoleVoiceUpsellStore = fn(19313);
+const ConsoleVoiceUpsellStore = fn(19309);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: closure_6 } = ConsoleVoiceUpsellStore);
-const VoicePanelControlsModes = fn(11708).VoicePanelControlsModes;
-const ContentDismissActionType = fn(4669).ContentDismissActionType;
+const VoicePanelControlsModes = fn(11686).VoicePanelControlsModes;
+const ContentDismissActionType = fn(4638).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_10 = { code: "(function useSpeakerTooltipsTsx1(){let[controlsSpecs]=this.__closure;return controlsSpecs.get().mode;})" };
 let closure_11 = { code: "(function useSpeakerTooltipsTsx2(currentControlsMode,previous){let[scheduleOnRN,setIsShowingControls,VoicePanelControlsModes]=this.__closure;if(currentControlsMode===previous)return;scheduleOnRN(setIsShowingControls,currentControlsMode===VoicePanelControlsModes.FLOATING_DEFAULT);})" };

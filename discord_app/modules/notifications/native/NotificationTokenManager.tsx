@@ -1,6 +1,6 @@
-// === Module 15582: NotificationTokenManager ===
+// === Module 15568: NotificationTokenManager ===
 
-// Module 15582 (NotificationTokenManager)
+// Module 15568 (NotificationTokenManager)
 import _mod17 from "module_17" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
@@ -9,14 +9,14 @@ import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import _modDef3051 from "module_3051" /* 3051 */;
-import PushNotificationDefault from "PushNotification" /* 10821 */;
-import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 13210 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15583 */;
-import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 15589 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15590 */;
+import PushNotificationDefault from "PushNotification" /* 10799 */;
+import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 13192 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15569 */;
+import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 15575 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15576 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import MultiAccountStore from "MultiAccountStore" /* 13211 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 14822 */;
+import MultiAccountStore from "MultiAccountStore" /* 13193 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 14808 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 import size from "module_2" /* 2 */;
@@ -100,8 +100,8 @@ const prototype = NotificationTokenManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const self = this;
   if (obj.isAndroid()) {
-    self._denylistUnsubscribe = tmp(15586).initializeClientNotifDenylist();
-    const tmpResult = tmp(15586);
+    self._denylistUnsubscribe = tmp(15572).initializeClientNotifDenylist();
+    const tmpResult = tmp(15572);
   }
   if (null != self.token) {
     self.handleToken(self.token);

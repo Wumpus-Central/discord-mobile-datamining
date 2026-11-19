@@ -1,14 +1,14 @@
-// === Module 12153: _tryJoinAsFrame ===
+// === Module 12132: _tryJoinAsFrame ===
 
-// Module 12153 (_tryJoinAsFrame)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7648 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 10633 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 12150 */;
+// Module 12132 (_tryJoinAsFrame)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 10611 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 12129 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6528 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import PresenceStore from "PresenceStore" /* 5561 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import PresenceStore from "PresenceStore" /* 5530 */;
 
 require = fn;
 let closure_10 = async function _tryJoinAsFrame(arg0) {
@@ -25,7 +25,7 @@ let closure_10 = async function _tryJoinAsFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ let closure_11 = async function _tryStartAsEmbeddedApp(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -220,7 +220,7 @@ let closure_12 = async function _startFrame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -366,7 +366,7 @@ let closure_13 = async function _startActivity(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -469,7 +469,7 @@ let closure_13 = async function _startActivity(arg0, arg1) {
   })();
 };
 const ActivityFlags = fn(1072).ActivityFlags;
-const MAIN_SURFACE = fn(6532).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6503).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.shared.tsx");
 

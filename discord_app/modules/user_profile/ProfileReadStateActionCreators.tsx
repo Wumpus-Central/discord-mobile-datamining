@@ -1,15 +1,15 @@
-// === Module 14539: ProfileReadStateActionCreators ===
+// === Module 14526: ProfileReadStateActionCreators ===
 
-// Module 14539 (ProfileReadStateActionCreators)
+// Module 14526 (ProfileReadStateActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 6876 */;
-import ProfileReadStateSection from "ProfileReadStateSection" /* 6877 */;
-import ProfileReadStateEndpoints2 from "ProfileReadStateEndpoints" /* 14540 */;
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 6846 */;
+import ProfileReadStateSection from "ProfileReadStateSection" /* 6847 */;
+import ProfileReadStateEndpoints2 from "ProfileReadStateEndpoints" /* 14527 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import WishlistStore from "WishlistStore" /* 8889 */;
+import WishlistStore from "WishlistStore" /* 8863 */;
 import UserStore from "UserStore" /* 1388 */;
-import UserProfileStore from "UserProfileStore" /* 6867 */;
+import UserProfileStore from "UserProfileStore" /* 6837 */;
 
 require = fn;
 function canAckProfileWishlist(id, wishlistId) {
@@ -44,7 +44,7 @@ let closure_10 = async function _ackProfileWishlist(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -173,7 +173,7 @@ let closure_11 = async function _sendWishlistAck(arg0) {
       if (id !== closure_131_1) {
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       } else {
         const obj8 = { type: "PROFILE_READ_STATE_ACK", ownerId: closure_131_0, ackedAt: null };
         const result = closure_132_0(closure_132_2[6]).parseProfileReadState(closure_131_2.body);

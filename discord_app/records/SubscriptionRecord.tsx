@@ -21,7 +21,7 @@ let SubscriptionRecord;
 class SubscriptionRecord extends tmp2 {
   constructor(arg0) {
     tmp7 = new SubscriptionRecord(tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-    ({ id: tmp7.id, type: tmp7.type, items: tmp7.items, createdAt: tmp7.createdAt, canceledAt: tmp7.canceledAt, currentPeriodStart: tmp7.currentPeriodStart, currentPeriodEnd: tmp7.currentPeriodEnd, status: tmp7.status, paymentSourceId: tmp7.paymentSourceId, paymentGateway: tmp7.paymentGateway, paymentGatewayPlanId: tmp7.paymentGatewayPlanId, paymentGatewaySubscriptionId: tmp7.paymentGatewaySubscriptionId, trialId: tmp7.trialId, trialEndsAt: tmp7.trialEndsAt, renewalMutations: tmp7.renewalMutations, currency: tmp7.currency, pauseEndsAt: tmp7.pauseEndsAt, pauseReason: tmp7.pauseReason, metadata: tmp7.metadata, latestInvoice: tmp7.latestInvoice, useStorekitResubscribe: tmp7.useStorekitResubscribe, price: tmp7.price, userId: tmp7.userId, streakStartedAt: tmp7.streakStartedAt, eligiblePaymentGateways: tmp7.eligiblePaymentGateways, priceChange: tmp7.priceChange } = global);
+    ({ id: tmp7.id, type: tmp7.type, items: tmp7.items, createdAt: tmp7.createdAt, canceledAt: tmp7.canceledAt, currentPeriodStart: tmp7.currentPeriodStart, currentPeriodEnd: tmp7.currentPeriodEnd, status: tmp7.status, paymentSourceId: tmp7.paymentSourceId, paymentGateway: tmp7.paymentGateway, paymentGatewayPlanId: tmp7.paymentGatewayPlanId, paymentGatewaySubscriptionId: tmp7.paymentGatewaySubscriptionId, trialId: tmp7.trialId, trialEndsAt: tmp7.trialEndsAt, renewalMutations: tmp7.renewalMutations, currency: tmp7.currency, pauseEndsAt: tmp7.pauseEndsAt, pauseReason: tmp7.pauseReason, metadata: tmp7.metadata, latestInvoice: tmp7.latestInvoice, useStorekitResubscribe: tmp7.useStorekitResubscribe, price: tmp7.price, userId: tmp7.userId, streakStartedAt: tmp7.streakStartedAt, eligiblePaymentGateways: tmp7.eligiblePaymentGateways, priceChange: tmp7.priceChange, giftSubscription: tmp7.giftSubscription } = global);
     renewalMutations = tmp7.renewalMutations;
     planId = global.items[0].planId;
     closure_0 = planId;
@@ -132,6 +132,14 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
     fromServer = GooglePlayPriceChangeRecord.createFromServer(id.price_change);
   }
   obj.priceChange = fromServer;
+  const gift_subscription = id.gift_subscription;
+  let tmp24 = gift_subscription;
+  if (null != gift_subscription) {
+    ({ id: obj5.id, status: obj5.status, recipient_user_id: obj5.recipientUserId, initial_gift_code: obj5.initialGiftCode, initial_entitlement_id: obj5.initialEntitlementId } = gift_subscription);
+    tmp24 = { id: null, status: null, recipientUserId: null, initialGiftCode: null, initialEntitlementId: null };
+    const obj9 = { id: null, status: null, recipientUserId: null, initialGiftCode: null, initialEntitlementId: null };
+  }
+  obj.giftSubscription = tmp24;
   return new SubscriptionRecord(obj);
 };
 prototype["getCurrentSubscriptionPlanIdForGroup"] = function getCurrentSubscriptionPlanIdForGroup(items) {

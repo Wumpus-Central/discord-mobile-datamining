@@ -1,10 +1,10 @@
-// === Module 14492: LibraryApplicationStatisticsActionCreators ===
+// === Module 14479: LibraryApplicationStatisticsActionCreators ===
 
-// Module 14492 (LibraryApplicationStatisticsActionCreators)
+// Module 14479 (LibraryApplicationStatisticsActionCreators)
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LibraryApplicationStatisticsStore from "LibraryApplicationStatisticsStore" /* 14491 */;
+import LibraryApplicationStatisticsStore from "LibraryApplicationStatisticsStore" /* 14478 */;
 
 require = fn;
 let closure_7 = async function _fetchActivityStatistics() {
@@ -18,7 +18,7 @@ let closure_7 = async function _fetchActivityStatistics() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {

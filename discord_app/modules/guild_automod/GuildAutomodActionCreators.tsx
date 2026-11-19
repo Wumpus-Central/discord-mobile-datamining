@@ -1,17 +1,17 @@
-// === Module 12331: GuildAutomodActionCreators ===
+// === Module 12314: GuildAutomodActionCreators ===
 
-// Module 12331 (GuildAutomodActionCreators)
+// Module 12314 (GuildAutomodActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5560 */;
-import AutomodFeedback from "AutomodFeedback" /* 8223 */;
-import DataUtils from "DataUtils" /* 12332 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
+import AutomodFeedback from "AutomodFeedback" /* 8192 */;
+import DataUtils from "DataUtils" /* 12315 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleStore from "GuildRoleStore" /* 4729 */;
-import GuildStore from "GuildStore" /* 4694 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
+import GuildRoleStore from "GuildRoleStore" /* 4698 */;
+import GuildStore from "GuildStore" /* 4663 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
 
 const require = globalThis.__r;
 
@@ -132,7 +132,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -195,7 +195,7 @@ let closure_19 = async function _executeAlertAction() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -228,7 +228,7 @@ let closure_19 = async function _executeAlertAction() {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       } catch (tmp8) {
         c3 = tmp;
         throw tmp8;

@@ -1,21 +1,24 @@
-// === Module 9303: usePromotionMarketingSurface ===
+// === Module 9279: usePromotionMarketingSurface ===
 
-// Module 9303 (usePromotionMarketingSurface)
+// Module 9279 (usePromotionMarketingSurface)
+import passesTrialOfferGateDefault from "passesTrialOfferGate" /* 9282 */;
 import noop from "module_19" /* 19 */;
-import UserOfferStore from "UserOfferStore" /* 8718 */;
-import PromotionsStore from "PromotionsStore" /* 9049 */;
+import UserOfferStore from "UserOfferStore" /* 8687 */;
+import PromotionsStore from "PromotionsStore" /* 9023 */;
 
 const require = globalThis.__r;
 
 const require = fn;
+let c6 = 86400000;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/hooks/usePromotionMarketingSurface.tsx");
 
+export const SET_COUNTDOWN_TIMER_THRESHOLD = 86400000;
 export function usePromotionMarketingSurface(PREMIUM_TAB) {
   _require = PREMIUM_TAB;
   closure_129_0 = () => PromotionsStore.getMarketingComponentBySurface(closure_0);
   const effect = noop.useEffect(() => {
-    const result = PREMIUM_TAB(promotionId[3]).maybeFetchActivePromotions();
+    const result = PREMIUM_TAB(endDate[3]).maybeFetchActivePromotions();
   }, []);
   items = [PromotionsStore, UserOfferStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -24,15 +27,11 @@ export function usePromotionMarketingSurface(PREMIUM_TAB) {
       return null;
     } else {
       const marketingPromotionForEligibility = PromotionsStore.getMarketingPromotionForEligibility(tmp.promotionId);
-      let trialId;
-      if (marketingPromotionForEligibility != null) {
-        trialId = marketingPromotionForEligibility.trialId;
+      let tmp7 = null;
+      if (passesTrialOfferGateDefault(marketingPromotionForEligibility, UserOfferStore)) {
+        tmp7 = tmp;
       }
-      if (null != trialId) {
-        const userTrialOffer = UserOfferStore.getUserTrialOffer(marketingPromotionForEligibility.trialId);
-        return null;
-      }
-      return tmp;
+      return tmp7;
     }
   });
   closure_129_1 = stateFromStores;
@@ -82,7 +81,7 @@ export function usePromotionMarketingSurface(PREMIUM_TAB) {
       const _Date = Date;
       let diff = time - Date.now();
       if (diff > 0) {
-        if (diff < 86400000) {
+        if (diff < c6) {
           function checkExpiry() {
             const diff = time - Date.now();
             if (diff > 0) {
@@ -108,25 +107,21 @@ export function usePromotionMarketingSurface(PREMIUM_TAB) {
 }
 export function usePromotionMarketingComponentData(arg0) {
   _require = arg0;
-  const effect = endDate.useEffect(() => {
-    const result = PREMIUM_TAB(promotionId[3]).maybeFetchActivePromotions();
+  const effect = noop.useEffect(() => {
+    const result = PREMIUM_TAB(endDate[3]).maybeFetchActivePromotions();
   }, []);
   items = [PromotionsStore, UserOfferStore];
-  stateFromStores = require("initialize").useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const tmp = PREMIUM_TAB();
     if (null == tmp) {
       return null;
     } else {
       const marketingPromotionForEligibility = PromotionsStore.getMarketingPromotionForEligibility(tmp.promotionId);
-      let trialId;
-      if (marketingPromotionForEligibility != null) {
-        trialId = marketingPromotionForEligibility.trialId;
+      let tmp7 = null;
+      if (passesTrialOfferGateDefault(marketingPromotionForEligibility, UserOfferStore)) {
+        tmp7 = tmp;
       }
-      if (null != trialId) {
-        const userTrialOffer = UserOfferStore.getUserTrialOffer(marketingPromotionForEligibility.trialId);
-        return null;
-      }
-      return tmp;
+      return tmp7;
     }
   });
   const obj2 = require("initialize");
@@ -146,7 +141,7 @@ export function usePromotionMarketingComponentData(arg0) {
     endDate = stateFromStores1.endDate;
   }
   const items2 = [endDate];
-  const memo = obj.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = { endDate, expired: false };
     closure_1 = { endDate, expired: true };
     return () => {
@@ -163,7 +158,7 @@ export function usePromotionMarketingComponentData(arg0) {
   }, items2);
   const items3 = [endDate];
   let tmp6 = null;
-  if (!endDate.useSyncExternalStore(endDate.useCallback((arg0) => {
+  if (!noop.useSyncExternalStore(noop.useCallback((arg0) => {
     closure_0 = arg0;
     if (null == endDate) {
       return () => {
@@ -174,7 +169,7 @@ export function usePromotionMarketingComponentData(arg0) {
       const _Date = Date;
       let diff = time - Date.now();
       if (diff > 0) {
-        if (diff < 86400000) {
+        if (diff < c6) {
           function checkExpiry() {
             const diff = time - Date.now();
             if (diff > 0) {

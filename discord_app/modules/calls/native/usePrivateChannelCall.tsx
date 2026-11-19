@@ -1,11 +1,11 @@
-// === Module 14561: usePrivateChannelCall ===
+// === Module 14548: usePrivateChannelCall ===
 
-// Module 14561 (usePrivateChannelCall)
+// Module 14548 (usePrivateChannelCall)
 import util from "util" /* 1113 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 9563 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 9542 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 
 const require = globalThis.__r;
 
@@ -62,7 +62,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -83,7 +83,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             if (null == channel) {
               dependencyMap = 1;
               c3 = 1;
-              const obj7 = { value: tmp3(7648).ensurePrivateChannel(tmp32), done: false };
+              const obj7 = { value: tmp3(7618).ensurePrivateChannel(tmp32), done: false };
               return obj7;
             }
             tmp32 = closure_0;
@@ -104,14 +104,14 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
           isPrivateResult = channel.isPrivate();
         }
         if (isPrivateResult) {
-          tmp3(9563)(channel, closure_129_1).onPress();
-          const obj3 = tmp3(9563)(channel, closure_129_1);
+          tmp3(9542)(channel, closure_129_1).onPress();
+          const obj3 = tmp3(9542)(channel, closure_129_1);
         }
         if (closure_129_2 != null) {
           closure_129_2();
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       } catch (tmp25) {
         c3 = tmp;
         throw tmp25;

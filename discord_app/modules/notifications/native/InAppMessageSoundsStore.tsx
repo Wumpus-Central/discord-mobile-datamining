@@ -1,8 +1,8 @@
-// === Module 11080: InAppMessageSoundsStore ===
+// === Module 11058: InAppMessageSoundsStore ===
 
-// Module 11080 (InAppMessageSoundsStore)
+// Module 11058 (InAppMessageSoundsStore)
 import Storage2 from "Storage" /* 510 */;
-import _mod4738 from "module_4738" /* 4738 */;
+import _mod4707 from "module_4707" /* 4707 */;
 import identity from "module_1258" /* 1258 */;
 import size from "module_2" /* 2 */;
 
@@ -26,5 +26,5 @@ export function setInAppMessageSoundsEnabled(isEnabled) {
   closure_3.setState({ isEnabled });
 }
 export function useInAppMessageSoundsEnabled() {
-  return closure_3((isEnabled) => isEnabled.isEnabled, _mod4738.shallow);
+  return closure_3((isEnabled) => isEnabled.isEnabled, _mod4707.shallow);
 }

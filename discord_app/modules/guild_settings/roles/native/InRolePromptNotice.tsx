@@ -1,13 +1,13 @@
-// === Module 19901: InRolePromptNotice ===
+// === Module 19912: InRolePromptNotice ===
 
-// Module 19901 (InRolePromptNotice)
+// Module 19912 (InRolePromptNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import _modDef10726 from "module_10726" /* 10726 */;
-import GuildSettingsUtils from "GuildSettingsUtils" /* 19902 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import _modDef10704 from "module_10704" /* 10704 */;
+import GuildSettingsUtils from "GuildSettingsUtils" /* 19913 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const RoleFlags = fn(1072).RoleFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { promptRow: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" }, promptText: null, icon: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
 obj2.promptText = { marginLeft: nativeDefault.space.PX_4 };
@@ -35,7 +35,7 @@ export default function InRolePromptNotice(role) {
     const tmpResult = GuildSettingsUtils;
     let Icon = native.Icon;
     if (isRolePowerfulResult) {
-      const obj3 = { style: string.icon, source: _modDef10726, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+      const obj3 = { style: string.icon, source: _modDef10704, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
       items = [hasOwnProperty(Icon, obj3), ];
       const obj4 = { style: string.promptText, variant: "body-sm/medium", children: null };
       const intl2 = util.intl;
@@ -47,7 +47,7 @@ export default function InRolePromptNotice(role) {
       obj2.children = items;
       let tmp4Result = timestampProducer(View, obj2);
     } else {
-      const obj5 = { style: string.icon, source: _modDef10726 };
+      const obj5 = { style: string.icon, source: _modDef10704 };
       const items1 = [hasOwnProperty(Icon, obj5), ];
       const obj6 = { style: string.promptText, variant: "body-sm/medium", children: null };
       const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 6133: ? ===
+// === Module 6104: ? ===
 
-// Module 6133
+// Module 6104
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/face/locked_in.png.js");

@@ -1,11 +1,11 @@
-// === Module 12751: VoiceMessagesUIStore ===
+// === Module 12733: VoiceMessagesUIStore ===
 
-// Module 12751 (VoiceMessagesUIStore)
+// Module 12733 (VoiceMessagesUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import spring_spring from "spring/spring" /* 5424 */;
-import springPresets from "springPresets" /* 5425 */;
-import VoiceMessageConstants from "VoiceMessageConstants" /* 12752 */;
+import spring_spring from "spring/spring" /* 5393 */;
+import springPresets from "springPresets" /* 5394 */;
+import VoiceMessageConstants from "VoiceMessageConstants" /* 12734 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 ({ VoiceMessageAnimationState: c2, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageConstants);
 let obj = module_560.create(() => {
-  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "Path", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "Promise", showVoiceMessagesTooltip: "TYPING_START_LOCAL", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: "VENMO_TOKENIZATION_REQUEST_NOT_ACTIVE", isUsingHoldGesture: "No tokenization in progress." };
+  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "Path", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "Promise", showVoiceMessagesTooltip: "auto", savedVoiceMessageUploadData: "80%", isVoiceMessageButtonMounted: "hidden", isUsingHoldGesture: "auto" };
   items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = React2);
   obj.voiceMessageAnimationState = _mod1655.makeMutable(items);
@@ -65,9 +65,9 @@ export function addVoiceMessageWave(arg0) {
   const waveformVersion = obj.getState().waveformVersion;
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    obj = waveformVersion(5424);
+    obj = waveformVersion(5393);
     const result = arg0 / closure_3;
-    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5425).Reanimated3DefaultSpringConfig));
+    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5394).Reanimated3DefaultSpringConfig));
   }
   items = [arg0, waveformVersion];
   waveform.push(items);

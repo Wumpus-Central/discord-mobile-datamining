@@ -1,22 +1,22 @@
-// === Module 9548: SearchableUserList ===
+// === Module 9527: SearchableUserList ===
 
-// Module 9548 (SearchableUserList)
+// Module 9527 (SearchableUserList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import shared from "shared" /* 4830 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 9554 */;
+import shared from "shared" /* 4799 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 9533 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(9547).UserRowModes;
+const UserRowModes = fn(9526).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4823);
-let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, searchBar: { height: "description", minHeight: false }, searchBarRowContainer: null, noResults: null };
+const createStyles = fn(4792);
+let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, searchBar: { height: "ip", minHeight: false }, searchBarRowContainer: null, noResults: null };
 const obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.searchBarRowContainer = { paddingTop: nativeDefault.space.PX_8 };
 let obj4 = { paddingTop: nativeDefault.space.PX_8 };

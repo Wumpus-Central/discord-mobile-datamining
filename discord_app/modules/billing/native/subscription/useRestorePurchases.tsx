@@ -1,6 +1,6 @@
-// === Module 16675: useRestorePurchases ===
+// === Module 16668: useRestorePurchases ===
 
-// Module 16675 (useRestorePurchases)
+// Module 16668 (useRestorePurchases)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -30,7 +30,7 @@ export default function useRestorePurchases() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

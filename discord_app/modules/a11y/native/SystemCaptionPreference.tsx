@@ -1,6 +1,6 @@
-// === Module 16603: SystemCaptionPreference ===
+// === Module 16594: SystemCaptionPreference ===
 
-// Module 16603 (SystemCaptionPreference)
+// Module 16594 (SystemCaptionPreference)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/a11y/native/SystemCaptionPreference.tsx");

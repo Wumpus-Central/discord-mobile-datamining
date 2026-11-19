@@ -1,7 +1,7 @@
-// === Module 18325: useConjureShareLinksEnabled ===
+// === Module 18318: useConjureShareLinksEnabled ===
 
-// Module 18325 (useConjureShareLinksEnabled)
-import ConjureActionCreators from "ConjureActionCreators" /* 6844 */;
+// Module 18318 (useConjureShareLinksEnabled)
+import ConjureActionCreators from "ConjureActionCreators" /* 6814 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ let closure_6 = async function _readShareLinksEnabled(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ export default function useConjureShareLinksEnabled(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -183,7 +183,7 @@ export default function useConjureShareLinksEnabled(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {

@@ -1,6 +1,6 @@
-// === Module 19168: useGiftingPromotionAssetsReady ===
+// === Module 19160: useGiftingPromotionAssetsReady ===
 
-// Module 19168 (useGiftingPromotionAssetsReady)
+// Module 19160 (useGiftingPromotionAssetsReady)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
   if (asset != null) {
     asset = asset.asset;
   }
-  themeAndReducedMotionAwareAssetUrl = themeAndReducedMotionAwareAssetUrl(9407).useThemeAndReducedMotionAwareAssetUrl(asset);
+  themeAndReducedMotionAwareAssetUrl = themeAndReducedMotionAwareAssetUrl(9385).useThemeAndReducedMotionAwareAssetUrl(asset);
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp6[1];
   items = [themeAndReducedMotionAwareAssetUrl];
@@ -41,9 +41,9 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
   if (asset2 != null) {
     asset1 = asset2.asset;
   }
-  let obj = themeAndReducedMotionAwareAssetUrl(9407);
+  let obj = themeAndReducedMotionAwareAssetUrl(9385);
   const tmp8 = null == themeAndReducedMotionAwareAssetUrl || tmp6[0] === themeAndReducedMotionAwareAssetUrl;
-  const themeAndReducedMotionAwareAssetUrl1 = themeAndReducedMotionAwareAssetUrl(9407).useThemeAndReducedMotionAwareAssetUrl(asset1);
+  const themeAndReducedMotionAwareAssetUrl1 = themeAndReducedMotionAwareAssetUrl(9385).useThemeAndReducedMotionAwareAssetUrl(asset1);
   closure_129_0 = themeAndReducedMotionAwareAssetUrl1;
   const tmp5Result = _slicedToArray(noop.useState(null), 2);
   closure_129_1 = tmp5Result[1];

@@ -1,8 +1,8 @@
-// === Module 16803: useDisplayNameStylesNewItems ===
+// === Module 16796: useDisplayNameStylesNewItems ===
 
-// Module 16803 (useDisplayNameStylesNewItems)
+// Module 16796 (useDisplayNameStylesNewItems)
 import noop from "module_19" /* 19 */;
-import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 15786 */;
+import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 15777 */;
 
 const require = globalThis.__r;
 

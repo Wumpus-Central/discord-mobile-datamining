@@ -1,6 +1,6 @@
-// === Module 12418: CheckpointAvailability ===
+// === Module 12401: CheckpointAvailability ===
 
-// Module 12418 (CheckpointAvailability)
+// Module 12401 (CheckpointAvailability)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointAvailability.tsx");

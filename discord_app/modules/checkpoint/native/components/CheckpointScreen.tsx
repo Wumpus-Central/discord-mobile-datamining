@@ -1,6 +1,6 @@
-// === Module 12434: CheckpointScreen ===
+// === Module 12417: CheckpointScreen ===
 
-// Module 12434 (CheckpointScreen)
+// Module 12417 (CheckpointScreen)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
@@ -12,11 +12,11 @@ const _modDef1655 = tmp2(1655);
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 ({ CHECKPOINT_CONTENT_MAX_HEIGHT: closure_6, CHECKPOINT_CONTENT_MAX_WIDTH: metroImportDefault, CHECKPOINT_NAV_HEIGHT: closure_8 } = CheckpointConstants);
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_12 = createStyles.createStyles({ container: { height: "100%", width: "100%" }, scroll: { width: "100%" }, scrollContent: { flexGrow: 1 }, centered: { justifyContent: "center" } });
 let items = [{ code: "(function getKeyboardShift_CheckpointScreenTsx1(containerBottom,windowHeight,keyboardHeight){let[KEYBOARD_GAP]=this.__closure;const overlap=containerBottom+KEYBOARD_GAP-(windowHeight-keyboardHeight);return Math.min(keyboardHeight,Math.max(0,overlap));})" }, nativeDefault.space.PX_16];
 let closure_129_0;

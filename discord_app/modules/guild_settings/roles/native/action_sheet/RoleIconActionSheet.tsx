@@ -1,18 +1,18 @@
-// === Module 19896: RoleIconActionSheet ===
+// === Module 19907: RoleIconActionSheet ===
 
-// Module 19896 (RoleIconActionSheet)
+// Module 19907 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import TableRow from "TableRow" /* 6956 */;
-import TableRowGroup from "TableRowGroup" /* 7259 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7426 */;
-import ActionSheet from "ActionSheet" /* 7464 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 19893 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import TableRow from "TableRow" /* 6926 */;
+import TableRowGroup from "TableRowGroup" /* 7229 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
+import ActionSheet from "ActionSheet" /* 7434 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 19904 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19879 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19890 */;
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
@@ -36,7 +36,7 @@ export default function RoleIconActionSheet(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ export default function RoleIconActionSheet(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -178,18 +178,18 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(19893).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(19893);
+                  closure_0(19904).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(19904);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(19893);
+                const tmp22 = closure_0(19904);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(19897).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(19908).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
@@ -197,8 +197,8 @@ export default function RoleIconActionSheet(arg0) {
             if (1 === tmp7) {
               c6 = 0;
               const intl = closure_0(1113).intl;
-              closure_0(5504).presentError(intl.string(closure_0(1113).t.R0RpRX));
-              const obj2 = closure_0(5504);
+              closure_0(5473).presentError(intl.string(closure_0(1113).t.R0RpRX));
+              const obj2 = closure_0(5473);
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;
@@ -232,7 +232,7 @@ export default function RoleIconActionSheet(arg0) {
       }
       return applyArgumentsResult;
     };
-    const result = guildId(8969).openEmojiPickerActionSheet(obj2, "stack");
+    const result = guildId(8943).openEmojiPickerActionSheet(obj2, "stack");
   };
   items3[1] = closure_7(TableRow.TableRow, obj5);
   let tmp5Result = null;

@@ -1,6 +1,6 @@
-// === Module 6755: GuildSpaceTypes ===
+// === Module 6726: GuildSpaceTypes ===
 
-// Module 6755 (GuildSpaceTypes)
+// Module 6726 (GuildSpaceTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_space/GuildSpaceTypes.tsx");

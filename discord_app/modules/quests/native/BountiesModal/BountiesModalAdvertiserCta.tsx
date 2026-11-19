@@ -1,13 +1,13 @@
-// === Module 16423: BountiesModalAdvertiserCta ===
+// === Module 16414: BountiesModalAdvertiserCta ===
 
-// Module 16423 (BountiesModalAdvertiserCta)
-import QuestContent from "QuestContent" /* 6471 */;
-import AdCreativeType from "AdCreativeType" /* 6473 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8342 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 8854 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9896 */;
+// Module 16414 (BountiesModalAdvertiserCta)
+import QuestContent from "QuestContent" /* 6442 */;
+import AdCreativeType from "AdCreativeType" /* 6444 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8311 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 8827 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9875 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 require = fn;
 function BountiesModalAdvertiserCtaContent(bounty) {
@@ -41,9 +41,9 @@ function BountiesModalAdvertiserCtaContent(bounty) {
   obj3.style = items3;
   return jsx(sourceQuestContent(getQuestImpressionId[12]), { ctaInfo: advertiserCtaInfo, style: null, onContainerPress: callback1, onButtonPress: callback2 });
 }
-let QuestsExperimentLocations = fn(6466).QuestsExperimentLocations;
+let QuestsExperimentLocations = fn(6437).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
-let items = [{ code: "(function BountiesModalAdvertiserCtaTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})" }, fn(5033).withTiming, fn(5036).timingStandard];
+let items = [{ code: "(function BountiesModalAdvertiserCtaTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})" }, fn(5002).withTiming, fn(5005).timingStandard];
 let closure_129_0;
 let closure_129_1;
 [tmp2, tmp3, tmp4] = items;
@@ -57,7 +57,7 @@ let items1 = [tmp3, tmp4];
 BountiesModalAdvertiserCtaTsx1.__closure = items1;
 BountiesModalAdvertiserCtaTsx1.__workletHash = 17397968298384;
 BountiesModalAdvertiserCtaTsx1.__initData = tmp2;
-let items2 = [{ code: "(function BountiesModalAdvertiserCtaTsx2(visible,cleanUp){let[withTiming,timingFast]=this.__closure;return{opacity:withTiming(visible,timingFast,'respect-motion-settings',cleanUp)};})" }, fn(5033).withTiming, fn(5036).timingFast];
+let items2 = [{ code: "(function BountiesModalAdvertiserCtaTsx2(visible,cleanUp){let[withTiming,timingFast]=this.__closure;return{opacity:withTiming(visible,timingFast,'respect-motion-settings',cleanUp)};})" }, fn(5002).withTiming, fn(5005).timingFast];
 let closure_130_0;
 let closure_130_1;
 [tmp5, tmp6, tmp7] = items2;
@@ -79,8 +79,8 @@ export default function BountiesModalAdvertiserCta(visible) {
   visible = visible.visible;
   let merged = Object.assign(visible, Object.assign({ visible: 0 }));
   let animatedStyle;
-  const isBountiesModalTransitionsRefactorEnabled = animatedStyle(16387).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
-  let obj = animatedStyle(16387);
+  const isBountiesModalTransitionsRefactorEnabled = animatedStyle(16378).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
+  let obj = animatedStyle(16378);
   items = [c4];
   let num = 0;
   const stateFromStores = animatedStyle(504).useStateFromStores(items, () => _undefined2.useReducedMotion);
@@ -88,7 +88,7 @@ export default function BountiesModalAdvertiserCta(visible) {
     num = 1;
   }
   const obj2 = animatedStyle(504);
-  const items1 = [closure_10, animatedStyle(5033).withTiming, animatedStyle(1655).interpolate, num, visible, animatedStyle(5036).timingStandard, animatedStyle(5036).timingFast];
+  const items1 = [closure_10, animatedStyle(5002).withTiming, animatedStyle(1655).interpolate, num, visible, animatedStyle(5005).timingStandard, animatedStyle(5005).timingFast];
   animatedStyle = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -121,8 +121,8 @@ export default function BountiesModalAdvertiserCta(visible) {
     return <BountiesModalAdvertiserCtaContent />;
   }, items3);
   const tmp2Result = animatedStyle(1655);
-  const tmp2Result2 = animatedStyle(16388);
-  const visibilityTransition = tmp2Result2.useVisibilityTransition({ visible, entranceTiming: animatedStyle(5036).timingStandard, exitTiming: animatedStyle(5036).timingFast });
+  const tmp2Result2 = animatedStyle(16379);
+  const visibilityTransition = tmp2Result2.useVisibilityTransition({ visible, entranceTiming: animatedStyle(5005).timingStandard, exitTiming: animatedStyle(5005).timingFast });
   let shouldRender = visibilityTransition.shouldRender;
   if (isBountiesModalTransitionsRefactorEnabled) {
     const obj4 = { useReducedMotion: stateFromStores, item: null, entering: null, exiting: null, renderItem: null };

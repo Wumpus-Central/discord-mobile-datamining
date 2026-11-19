@@ -1,8 +1,8 @@
-// === Module 13657: NavigationPathUtils ===
+// === Module 13639: NavigationPathUtils ===
 
-// Module 13657 (NavigationPathUtils)
+// Module 13639 (NavigationPathUtils)
 import Constants from "Constants" /* 1072 */;
-import _mod4867 from "module_4867" /* 4867 */;
+import _mod4836 from "module_4836" /* 4836 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -16,7 +16,7 @@ export function getSelectedSpecialNavigationPath(pathname) {
   }
 }
 export function useSelectedSpecialNavigationPath() {
-  const obj = _mod4867;
+  const obj = _mod4836;
   let FRIENDS;
   if (obj.useLocation().pathname === Routes.FRIENDS) {
     FRIENDS = obj.FRIENDS;

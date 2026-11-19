@@ -1,11 +1,11 @@
-// === Module 8349: InviteTypeUtils ===
+// === Module 8318: InviteTypeUtils ===
 
-// Module 8349 (InviteTypeUtils)
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6541 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 7178 */;
-import Constants from "Constants" /* 8350 */;
-import GuildProfileUtils from "GuildProfileUtils" /* 8351 */;
-import ChannelRecord from "ChannelRecord" /* 4676 */;
+// Module 8318 (InviteTypeUtils)
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6512 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 7148 */;
+import Constants from "Constants" /* 8319 */;
+import GuildProfileUtils from "GuildProfileUtils" /* 8320 */;
+import ChannelRecord from "ChannelRecord" /* 4645 */;
 import size from "module_2" /* 2 */;
 
 const isEventUpcoming = GuildScheduledEventStore.isEventUpcoming;

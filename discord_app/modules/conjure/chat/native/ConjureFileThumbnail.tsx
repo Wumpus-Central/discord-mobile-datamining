@@ -2,9 +2,9 @@
 
 // Module 18356 (ConjureFileThumbnail)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5510 */;
-import FileIcon from "FileIcon" /* 11108 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18334 */;
+import FastImageDefault from "FastImage" /* 5479 */;
+import FileIcon from "FileIcon" /* 11086 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18328 */;
 import useConjureAttachmentImage from "useConjureAttachmentImage" /* 18357 */;
 import noop from "module_19" /* 19 */;
 

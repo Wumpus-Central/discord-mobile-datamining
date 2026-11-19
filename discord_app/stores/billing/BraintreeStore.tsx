@@ -1,6 +1,6 @@
-// === Module 4638: BraintreeStore ===
+// === Module 4608: BraintreeStore ===
 
-// Module 4638 (BraintreeStore)
+// Module 4608 (BraintreeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;

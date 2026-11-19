@@ -1,18 +1,18 @@
-// === Module 18026: YouBarICYMIButton ===
+// === Module 18019: YouBarICYMIButton ===
 
-// Module 18026 (YouBarICYMIButton)
+// Module 18019 (YouBarICYMIButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import RootNavigationRef from "RootNavigationRef" /* 5000 */;
-import FlashIcon from "FlashIcon" /* 14390 */;
-import YouBarButtonDefault from "YouBarButton" /* 18025 */;
-import useICYMITabBadgeDefault from "useICYMITabBadge" /* 18027 */;
+import RootNavigationRef from "RootNavigationRef" /* 4969 */;
+import FlashIcon from "FlashIcon" /* 14377 */;
+import YouBarButtonDefault from "YouBarButton" /* 18018 */;
+import useICYMITabBadgeDefault from "useICYMITabBadge" /* 18020 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const YOU_BAR_BUTTON_ICON_SIZE = fn(16541).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(16532).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_4 = createStyles.createStyles(obj);
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };

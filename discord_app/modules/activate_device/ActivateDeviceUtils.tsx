@@ -1,8 +1,8 @@
-// === Module 15019: ActivateDeviceUtils ===
+// === Module 15005: ActivateDeviceUtils ===
 
-// Module 15019 (ActivateDeviceUtils)
+// Module 15005 (ActivateDeviceUtils)
 import Constants from "Constants" /* 1072 */;
-import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 6990 */;
+import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 6960 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;

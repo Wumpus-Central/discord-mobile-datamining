@@ -1,12 +1,12 @@
-// === Module 12701: SidekickMessageInput ===
+// === Module 12684: SidekickMessageInput ===
 
-// Module 12701 (SidekickMessageInput)
+// Module 12684 (SidekickMessageInput)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5003 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7450 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 9368 */;
-import Tracking from "Tracking" /* 12415 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4972 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 9345 */;
+import Tracking from "Tracking" /* 12398 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_6, Pressable: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 ({ CHECKPOINT_CONTROL_ICON_SIZE, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { messageInputContainer: null, messageInputContainerLarge: null, messageInput: null, messageInputActions: null, messageInputAction: null, giftAction: null, sendAction: null, messageInputIcon: null, disabled: null };
 let obj3 = { height: 104, padding: PX_12, paddingBottom: null, borderWidth: 2, borderColor: CHECKPOINT_PRIMARY, backgroundColor: nativeDefault.colors.BLACK };
 const sum = 18 + CHECKPOINT_CONTROL_ICON_SIZE;
@@ -55,7 +55,7 @@ export default function SidekickMessageInput(user) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -126,7 +126,7 @@ export default function SidekickMessageInput(user) {
   [tmp7, c3] = str2(noop.useState(false), 2);
   const size = useWindowDimensionsDefault({ ignoreKeyboard: true });
   const bound = Math.min(size.width, size.height);
-  let messageInputContainerLarge = bound > user(5003).WINDOW_SIZE_THRESHOLD_LARGE;
+  let messageInputContainerLarge = bound > user(4972).WINDOW_SIZE_THRESHOLD_LARGE;
   str2 = undefined;
   const tmp6 = str2(noop.useState(false), 2);
   if (str != null) {
@@ -192,7 +192,7 @@ export default function SidekickMessageInput(user) {
     const intl2 = tmp10(1113).intl;
     obj5.accessibilityLabel = intl2.string(tmp10(1113).t.Ve9Ge6);
     let obj6 = { size: "custom", color: CHECKPOINT_PRIMARY, style: tmp.messageInputIcon };
-    obj5.children = closure_11(tmp10(12393).GiftIcon, obj6);
+    obj5.children = closure_11(tmp10(12376).GiftIcon, obj6);
     const items3 = [closure_11(closure_7, obj5), ];
     const obj7 = {
       onPress: function handleSend() {
@@ -225,7 +225,7 @@ export default function SidekickMessageInput(user) {
     const obj8 = { disabled: !tmp12 };
     obj7.accessibilityState = obj8;
     const obj9 = { size: "custom", color: CHECKPOINT_PRIMARY, style: tmp.messageInputIcon };
-    obj7.children = closure_11(tmp10(5521).SendMessageIcon, obj9);
+    obj7.children = closure_11(tmp10(5490).SendMessageIcon, obj9);
     items3[1] = closure_11(closure_7, obj7);
     obj4.children = items3;
     items1[1] = closure_12(closure_8, obj4);

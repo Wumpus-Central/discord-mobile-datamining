@@ -1,6 +1,6 @@
-// === Module 8841: CollectionPromotionCountdownStyle ===
+// === Module 8814: CollectionPromotionCountdownStyle ===
 
-// Module 8841 (CollectionPromotionCountdownStyle)
+// Module 8814 (CollectionPromotionCountdownStyle)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectionPromotionCountdownStyle.tsx");

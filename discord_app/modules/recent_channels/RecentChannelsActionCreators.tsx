@@ -1,7 +1,7 @@
-// === Module 11962: RecentChannelsActionCreators ===
+// === Module 11940: RecentChannelsActionCreators ===
 
-// Module 11962 (RecentChannelsActionCreators)
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4653 */;
+// Module 11940 (RecentChannelsActionCreators)
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4622 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_5 = async function _bulkClearRecents(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_5 = async function _bulkClearRecents(arg0) {
         const obj5 = closure_131_1(closure_131_2[4]);
         closure_131_1(closure_131_2[5]).track(closure_131_4.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
         c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp6) {
       c5 = tmp;

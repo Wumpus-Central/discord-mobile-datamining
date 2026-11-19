@@ -1,16 +1,16 @@
-// === Module 19153: IncentivizedAccountLinkConfirmationPromoSheet ===
+// === Module 19145: IncentivizedAccountLinkConfirmationPromoSheet ===
 
-// Module 19153 (IncentivizedAccountLinkConfirmationPromoSheet)
+// Module 19145 (IncentivizedAccountLinkConfirmationPromoSheet)
 import initialize from "initialize" /* 504 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import FastImageDefault from "FastImage" /* 5510 */;
-import PromoSheet from "PromoSheet" /* 11185 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import FastImageDefault from "FastImage" /* 5479 */;
+import PromoSheet from "PromoSheet" /* 11163 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_5 = createStyles.createStyles({ illustration: { width: 150, height: 150 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/IncentivizedAccountLinkConfirmationPromoSheet.tsx");
@@ -22,7 +22,7 @@ export default function IncentivizedAccountLinkConfirmationPromoSheet(arg0) {
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = { source: null, resizeMode: "contain", style: null, enableAnimation: null };
   const obj3 = { uri: null };
-  obj3.uri = importDefault(stateFromStores ? 17376 : 17377);
+  obj3.uri = importDefault(stateFromStores ? 17369 : 17370);
   obj2.source = obj3;
   obj2.style = tmp.illustration;
   obj2.enableAnimation = !stateFromStores;

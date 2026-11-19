@@ -1,6 +1,6 @@
-// === Module 10788: createEmbeddedAppFrameScript ===
+// === Module 10766: createEmbeddedAppFrameScript ===
 
-// Module 10788 (createEmbeddedAppFrameScript)
+// Module 10766 (createEmbeddedAppFrameScript)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/native/webview/createEmbeddedAppFrameScript.tsx");

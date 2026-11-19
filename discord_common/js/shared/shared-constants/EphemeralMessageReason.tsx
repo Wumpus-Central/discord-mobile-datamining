@@ -1,6 +1,6 @@
-// === Module 8757: EphemeralMessageReason ===
+// === Module 8726: EphemeralMessageReason ===
 
-// Module 8757 (EphemeralMessageReason)
+// Module 8726 (EphemeralMessageReason)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/EphemeralMessageReason.tsx");

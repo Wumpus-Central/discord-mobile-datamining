@@ -1,10 +1,10 @@
-// === Module 4635: BillingUtils ===
+// === Module 4605: BillingUtils ===
 
-// Module 4635 (BillingUtils)
+// Module 4605 (BillingUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import BraintreeUtils from "BraintreeUtils" /* 4637 */;
-import BillingErrorDefault from "BillingError" /* 4643 */;
+import BraintreeUtils from "BraintreeUtils" /* 4607 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4613 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let closure_6 = async function _createGatewayCheckoutContext(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ let closure_6 = async function _createGatewayCheckoutContext(arg0) {
     }
   })();
 };
-const StripeErrorTypes = fn(4636).StripeErrorTypes;
+const StripeErrorTypes = fn(4606).StripeErrorTypes;
 const PaymentGateways = fn(1083).PaymentGateways;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/BillingUtils.tsx");
@@ -112,7 +112,7 @@ export function isExpectedHttpClientError(error) {
     tmp2 = error.status < 500;
   }
   if (!tmp2) {
-    let tmp4 = error instanceof BillingErrorDefault;
+    let tmp4 = error instanceof errors_V6OrEarlierAPIErrorDefault;
     if (tmp4) {
       tmp4 = null != error.status;
     }

@@ -1,16 +1,16 @@
-// === Module 14703: GuildBoostingMarketingPersistentCta ===
+// === Module 14689: GuildBoostingMarketingPersistentCta ===
 
-// Module 14703 (GuildBoostingMarketingPersistentCta)
+// Module 14689 (GuildBoostingMarketingPersistentCta)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import LinearGradientDefault from "LinearGradient" /* 5378 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import spring_spring from "spring/spring" /* 5424 */;
-import GuildIcon from "GuildIcon" /* 7233 */;
-import GuildBoostingSubscribeButtonDefault from "GuildBoostingSubscribeButton" /* 13406 */;
+import LinearGradientDefault from "LinearGradient" /* 5347 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import spring_spring from "spring/spring" /* 5393 */;
+import GuildIcon from "GuildIcon" /* 7203 */;
+import GuildBoostingSubscribeButtonDefault from "GuildBoostingSubscribeButton" /* 13388 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 const _modDef1655 = _mod1655;
 const GuildIconDefault = GuildIcon;
@@ -21,7 +21,7 @@ const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { stiffness: 70, damping: 10 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { wrapper: { display: "flex", alignItems: "center", position: "absolute", width: "100%", zIndex: 1, bottom: -76 }, innerWraper: null, guildInfoContainer: null, guildIcon: null, guildIconText: null, guildName: null, buttonContainer: null, button: null, border: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, display: "flex", flexDirection: "row", alignItems: "center", position: "relative", height: 76, width: 343, borderRadius: 76, paddingLeft: 13, paddingVertical: 13, paddingRight: 27 };
 obj2.innerWraper = size;

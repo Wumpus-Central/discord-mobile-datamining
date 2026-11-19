@@ -1,11 +1,11 @@
-// === Module 13156: NewMessagesTagListInput ===
+// === Module 13138: NewMessagesTagListInput ===
 
-// Module 13156 (NewMessagesTagListInput)
+// Module 13138 (NewMessagesTagListInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4832 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 9554 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4801 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 9533 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, header: null, showSearchButton: null };
 let obj4 = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
 const PlatformUtils = fn(1380);

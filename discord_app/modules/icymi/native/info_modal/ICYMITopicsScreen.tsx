@@ -1,29 +1,29 @@
-// === Module 18169: ICYMITopicsScreen ===
+// === Module 18162: ICYMITopicsScreen ===
 
-// Module 18169 (ICYMITopicsScreen)
+// Module 18162 (ICYMITopicsScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4885 */;
-import components_Button_Button from "components/Button/Button" /* 5421 */;
-import GameControllerIcon from "GameControllerIcon" /* 6951 */;
-import BookCheckIcon from "BookCheckIcon" /* 7587 */;
-import ForumIcon from "ForumIcon" /* 7600 */;
-import MusicIcon from "MusicIcon" /* 10854 */;
-import FoodIcon from "FoodIcon" /* 11300 */;
-import BicycleIcon from "BicycleIcon" /* 11302 */;
-import PencilSparkleIcon from "PencilSparkleIcon" /* 11618 */;
-import RobotIcon from "RobotIcon" /* 12131 */;
-import MedalIcon from "MedalIcon" /* 12263 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 12394 */;
-import TvIcon from "TvIcon" /* 13441 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 15569 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 16727 */;
-import ScienceIcon from "ScienceIcon" /* 18171 */;
-import PaintbrushThinIcon from "PaintbrushThinIcon" /* 18172 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4854 */;
+import components_Button_Button from "components/Button/Button" /* 5390 */;
+import GameControllerIcon from "GameControllerIcon" /* 6921 */;
+import BookCheckIcon from "BookCheckIcon" /* 7557 */;
+import ForumIcon from "ForumIcon" /* 7570 */;
+import MusicIcon from "MusicIcon" /* 10832 */;
+import FoodIcon from "FoodIcon" /* 11278 */;
+import BicycleIcon from "BicycleIcon" /* 11280 */;
+import PencilSparkleIcon from "PencilSparkleIcon" /* 11596 */;
+import RobotIcon from "RobotIcon" /* 12108 */;
+import MedalIcon from "MedalIcon" /* 12246 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 12377 */;
+import TvIcon from "TvIcon" /* 13423 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 15555 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 16720 */;
+import ScienceIcon from "ScienceIcon" /* 18164 */;
+import PaintbrushThinIcon from "PaintbrushThinIcon" /* 18165 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18163 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18156 */;
 
 require = fn;
 function WordTopic(categoryid) {
@@ -78,10 +78,10 @@ function WordTopic(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(18170).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(18163).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, footer: null, title: null, subtitle: null, separator: null, topicsContainer: null, scrollContentContainer: null };
 const rect = { position: "absolute", bottom: 0, left: nativeDefault.space.PX_24, right: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_8 };
 obj2.footer = rect;
@@ -119,7 +119,7 @@ export default function ICYMITopicsScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -207,11 +207,11 @@ export default function ICYMITopicsScreen() {
   let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1113).intl;
   obj3.children = intl.string(first(1113).t.Y5d99L);
-  const children = [closure_10(first(5414).Text, obj3), , , , ];
+  const children = [closure_10(first(5383).Text, obj3), , , , ];
   const obj4 = { variant: "body-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1113).intl;
   obj4.children = intl2.string(first(1113).t.MGZsfv);
-  children[1] = closure_10(first(5414).Text, obj4);
+  children[1] = closure_10(first(5383).Text, obj4);
   children[2] = closure_10(closure_6, { style: tmp.separator });
   let obj6 = { showsVerticalScrollIndicator: false, style: tmp.container, contentContainerStyle: tmp.scrollContentContainer, contentInset: { bottom: 72 + bottom }, children: null };
   let obj2 = first(504);
@@ -229,7 +229,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1113).intl;
     obj11.text = intl3.string(tmp7(1113).t.PDTjLN);
     obj11.onPress = callback;
-    obj9.children = closure_10(tmp7(5421).Button, obj11);
+    obj9.children = closure_10(tmp7(5390).Button, obj11);
     tmp12Result = closure_10(closure_6, obj9);
   }
   children[4] = tmp12Result;

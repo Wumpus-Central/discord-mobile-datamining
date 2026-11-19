@@ -1,9 +1,9 @@
-// === Module 13704: MagicWandIcon ===
+// === Module 13686: MagicWandIcon ===
 
-// Module 13704 (MagicWandIcon)
+// Module 13686 (MagicWandIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod13705 from "module_13705" /* 13705 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod13687 from "module_13687" /* 13687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MagicWandIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13705, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13687, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

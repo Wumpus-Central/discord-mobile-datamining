@@ -1,17 +1,17 @@
-// === Module 10063: MediaModalOverlayAltTextSheet ===
+// === Module 10041: MediaModalOverlayAltTextSheet ===
 
-// Module 10063 (MediaModalOverlayAltTextSheet)
+// Module 10041 (MediaModalOverlayAltTextSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5051 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7426 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 10064 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5020 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 10042 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 const obj2 = { container: { padding: nativeDefault.space.PX_16 } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);

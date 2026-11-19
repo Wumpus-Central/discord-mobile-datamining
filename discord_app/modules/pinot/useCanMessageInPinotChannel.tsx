@@ -1,7 +1,7 @@
-// === Module 11815: useCanMessageInPinotChannel ===
+// === Module 11793: useCanMessageInPinotChannel ===
 
-// Module 11815 (useCanMessageInPinotChannel)
-import PermissionStore from "PermissionStore" /* 4755 */;
+// Module 11793 (useCanMessageInPinotChannel)
+import PermissionStore from "PermissionStore" /* 4724 */;
 
 const require = globalThis.__r;
 

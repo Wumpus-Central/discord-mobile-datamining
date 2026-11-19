@@ -1,8 +1,8 @@
-// === Module 10782: getEmbeddedAppShellUrl ===
+// === Module 10760: getEmbeddedAppShellUrl ===
 
-// Module 10782 (getEmbeddedAppShellUrl)
+// Module 10760 (getEmbeddedAppShellUrl)
 import URLUtilsDefault from "URLUtils" /* 1381 */;
-import getNativeShellOriginForEmbeddedApp from "getNativeShellOriginForEmbeddedApp" /* 10783 */;
+import getNativeShellOriginForEmbeddedApp from "getNativeShellOriginForEmbeddedApp" /* 10761 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/native/shell/getEmbeddedAppShellUrl.tsx");

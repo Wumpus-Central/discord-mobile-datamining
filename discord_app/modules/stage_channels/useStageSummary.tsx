@@ -1,9 +1,9 @@
-// === Module 10868: useStageSummary ===
+// === Module 10846: useStageSummary ===
 
-// Module 10868 (useStageSummary)
+// Module 10846 (useStageSummary)
 import util from "util" /* 1113 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6445 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6451 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6416 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6422 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stage_channels/useStageSummary.tsx");

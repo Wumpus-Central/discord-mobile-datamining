@@ -1,17 +1,17 @@
-// === Module 14479: ClipsExperiment ===
+// === Module 14466: ClipsExperiment ===
 
-// Module 14479 (ClipsExperiment)
+// Module 14466 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
 import PlatformUtilsAll from "PlatformUtils" /* 1380 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import DevSettingsStore from "DevSettingsStore" /* 5417 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 8335 */;
+import DevSettingsStore from "DevSettingsStore" /* 5386 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 8304 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const PremiumTypes = fn(1390).PremiumTypes;
-const Features = fn(5568).Features;
+const Features = fn(5537).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 

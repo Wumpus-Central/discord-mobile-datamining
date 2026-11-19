@@ -1,9 +1,9 @@
-// === Module 9096: orbs_confirmation_modal ===
+// === Module 9071: orbs_confirmation_modal ===
 
-// Module 9096 (orbs_confirmation_modal)
+// Module 9071 (orbs_confirmation_modal)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9056 */;
-import theme_aware_asset from "theme_aware_asset" /* 9066 */;
+import localized_string from "localized_string" /* 9030 */;
+import theme_aware_asset from "theme_aware_asset" /* 9034 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

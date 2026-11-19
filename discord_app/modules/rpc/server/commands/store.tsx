@@ -1,9 +1,9 @@
-// === Module 15642: merged15 ===
+// === Module 15629: merged15 ===
 
-// Module 15642 (merged15)
-import RPCErrorDefault from "RPCError" /* 6818 */;
-import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 8035 */;
-import validateTransportType from "validateTransportType" /* 15644 */;
+// Module 15629 (merged15)
+import RPCErrorDefault from "RPCError" /* 6790 */;
+import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 8004 */;
+import validateTransportType from "validateTransportType" /* 15631 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -114,7 +114,7 @@ let closure_13 = async function _getSkusHandler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -265,7 +265,7 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(6261);
+let Constants = fn(6233);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: closure_6, SKUTypes: metroImportDefault } = Constants);
@@ -276,7 +276,7 @@ obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-let CONTEXT_MENU_ICON_NAMES = fn(15607);
+let CONTEXT_MENU_ICON_NAMES = fn(15593);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -292,7 +292,7 @@ let obj5 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
-CONTEXT_MENU_ICON_NAMES = fn(15607);
+CONTEXT_MENU_ICON_NAMES = fn(15593);
 let obj7 = {
   scope: null,
   handler(arg0) {

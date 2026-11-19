@@ -1,9 +1,9 @@
-// === Module 7671: useGuildProfile ===
+// === Module 7641: useGuildProfile ===
 
-// Module 7671 (useGuildProfile)
+// Module 7641 (useGuildProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 7670 */;
+import GuildProfileStore from "GuildProfileStore" /* 7640 */;
 
 const require = globalThis.__r;
 
@@ -31,7 +31,7 @@ export function useGuildProfile(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

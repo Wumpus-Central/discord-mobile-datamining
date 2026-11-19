@@ -1,15 +1,15 @@
-// === Module 16121: FamilyCenterTopUsersBottomSheet ===
+// === Module 16112: FamilyCenterTopUsersBottomSheet ===
 
-// Module 16121 (FamilyCenterTopUsersBottomSheet)
+// Module 16112 (FamilyCenterTopUsersBottomSheet)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import _modDef2723 from "module_2723" /* 2723 */;
-import UserUtilsDefault from "UserUtils" /* 4879 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import TableRow from "TableRow" /* 6956 */;
-import TableRowGroup from "TableRowGroup" /* 7259 */;
-import ActionSheet from "ActionSheet" /* 7464 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 9045 */;
+import UserUtilsDefault from "UserUtils" /* 4848 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import TableRow from "TableRow" /* 6926 */;
+import TableRowGroup from "TableRowGroup" /* 7229 */;
+import ActionSheet from "ActionSheet" /* 7434 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 9019 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
@@ -24,14 +24,14 @@ function UserRow(userActivity) {
     const obj2 = { label: null, subLabel: null, icon: null };
     obj2.label = UserUtilsDefault.getName(user);
     obj2.subLabel = topUserOrGuildDescription;
-    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
     obj2.icon = React4(native.Avatar, obj4);
     return React4(TableRow.TableRow, obj2);
   }
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");

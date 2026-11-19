@@ -1,10 +1,10 @@
-// === Module 9776: GameProfileSkeletonPulse ===
+// === Module 9755: GameProfileSkeletonPulse ===
 
-// Module 9776 (GameProfileSkeletonPulse)
+// Module 9755 (GameProfileSkeletonPulse)
 import initialize from "initialize" /* 504 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 require = fn;
 let c4 = 1300;

@@ -1,19 +1,20 @@
-// === Module 9049: PromotionsStore ===
+// === Module 9023: PromotionsStore ===
 
-// Module 9049 (PromotionsStore)
+// Module 9023 (PromotionsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MarketingSurfaceTypeUtils from "MarketingSurfaceTypeUtils" /* 9052 */;
-import MarketingSurfaceType from "MarketingSurfaceType" /* 9053 */;
-import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9098 */;
-import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 9106 */;
+import MarketingSurfaceTypeUtils from "MarketingSurfaceTypeUtils" /* 9026 */;
+import MarketingSurfaceType from "MarketingSurfaceType" /* 9027 */;
+import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9073 */;
+import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 9081 */;
+import filterActiveMarketingComponentsUnprioritizedDefault from "filterActiveMarketingComponentsUnprioritized" /* 9082 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import PromotionRecord from "PromotionRecord" /* 9050 */;
+import PromotionRecord from "PromotionRecord" /* 9024 */;
 import UserStore from "UserStore" /* 1388 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1389 */;
-import MarketingComponentRecord from "MarketingComponentRecord" /* 9051 */;
+import MarketingComponentRecord from "MarketingComponentRecord" /* 9025 */;
 
 require = fn;
 function createEmptyPromotionsByType() {
@@ -206,9 +207,14 @@ prototype["getMarketingComponentsBySurfaceAcrossPromotions"] = function getMarke
         isStaffResult = currentUser.isStaff();
       }
       if (true === isStaffResult) {
-        const self = this;
-        const prop = this.campaignOverrideComponents;
-        let found = prop.filter((properties) => properties.properties.properties.oneofKind === closure_0);
+        let found = closure_18.filter((properties) => properties.properties.properties.oneofKind === closure_0);
+      }
+      if (null == found) {
+        let items1 = map.get(tmp3);
+        if (items1 == null) {
+          items1 = [];
+        }
+        found = items1;
       }
       return found;
     }
@@ -216,14 +222,10 @@ prototype["getMarketingComponentsBySurfaceAcrossPromotions"] = function getMarke
     if (closure_21 != null) {
       oneofKind = closure_21.properties.properties.oneofKind;
     }
+    found = null;
     if (oneofKind === tmp3) {
       items = [closure_21];
       found = items;
-    } else {
-      found = map.get(tmp3);
-      if (found == null) {
-        found = [];
-      }
     }
   } else {
     return [];
@@ -294,7 +296,7 @@ prototype["getMarketingComponentBySurface"] = function getMarketingComponentBySu
   return marketingComponentByKind;
 };
 prototype["getMarketingComponentByKind"] = function getMarketingComponentByKind(arg0) {
-  closure_0 = arg0;
+  let currentUser2 = arg0;
   if (null != c17) {
     const currentUser = UserStore.getCurrentUser();
     let isStaffResult;
@@ -302,37 +304,86 @@ prototype["getMarketingComponentByKind"] = function getMarketingComponentByKind(
       isStaffResult = currentUser.isStaff();
     }
     if (true === isStaffResult) {
-      const self = this;
-      const prop = this.campaignOverrideComponents;
-      let found = prop.find((properties) => properties.properties.properties.oneofKind === closure_0);
-      if (found == null) {
-        found = null;
-      }
-      return found;
+      let found = closure_18.filter((properties) => properties.properties.properties.oneofKind === closure_0);
     }
+    if (null != found) {
+      let first = found[0];
+      if (first == null) {
+        first = null;
+      }
+      let tmp9Result = first;
+    } else {
+      currentUser2 = UserStore.getCurrentUser();
+      const _Date = Date;
+      const date = new Date();
+      let items1 = map.get(arg0);
+      if (items1 == null) {
+        items1 = [];
+      }
+      tmp9Result = selectActiveMarketingComponentDefault(items1, date, (isIncludedInRollout) => {
+        let isIncludedInRolloutResult = null != closure_0;
+        if (isIncludedInRolloutResult) {
+          isIncludedInRolloutResult = isIncludedInRollout.isIncludedInRollout(tmp.id, date);
+        }
+        return isIncludedInRolloutResult;
+      });
+    }
+    return tmp9Result;
   }
   let oneofKind;
   if (closure_21 != null) {
     oneofKind = closure_21.properties.properties.oneofKind;
   }
+  found = null;
   if (oneofKind === arg0) {
-    return closure_21;
-  } else {
-    const currentUser2 = UserStore.getCurrentUser();
-    const _Date = Date;
-    const date = new Date();
-    items = map.get(arg0);
-    if (items == null) {
-      items = [];
-    }
-    return selectActiveMarketingComponentDefault(items, date, (isIncludedInRollout) => {
-      let isIncludedInRolloutResult = null != closure_1;
-      if (isIncludedInRolloutResult) {
-        isIncludedInRolloutResult = isIncludedInRollout.isIncludedInRollout(tmp.id, date);
-      }
-      return isIncludedInRolloutResult;
-    });
+    items = [closure_21];
+    found = items;
   }
+};
+prototype["getActiveMarketingComponentsBySurfaceUnprioritized"] = function getActiveMarketingComponentsBySurfaceUnprioritized(items) {
+  if (obj.isMarketingSurfaceType(items)) {
+    const tmp3 = MarketingSurfaceType.MarketingSurfaceKindByType[items];
+    let currentUser2 = tmp3;
+    if (null != c17) {
+      const currentUser = UserStore.getCurrentUser();
+      let isStaffResult;
+      if (currentUser != null) {
+        isStaffResult = currentUser.isStaff();
+      }
+      if (true === isStaffResult) {
+        let found = closure_18.filter((properties) => properties.properties.properties.oneofKind === closure_0);
+      }
+      if (found == null) {
+        currentUser2 = UserStore.getCurrentUser();
+        const _Date = Date;
+        const date = new Date();
+        let items1 = map.get(tmp3);
+        if (items1 == null) {
+          items1 = [];
+        }
+        found = filterActiveMarketingComponentsUnprioritizedDefault(items1, date, (isIncludedInRollout) => {
+          let isIncludedInRolloutResult = null != closure_0;
+          if (isIncludedInRolloutResult) {
+            isIncludedInRolloutResult = isIncludedInRollout.isIncludedInRollout(tmp.id, date);
+          }
+          return isIncludedInRolloutResult;
+        });
+      }
+      return found;
+    }
+    let oneofKind;
+    if (closure_21 != null) {
+      oneofKind = closure_21.properties.properties.oneofKind;
+    }
+    found = null;
+    if (oneofKind === tmp3) {
+      items = [closure_21];
+      found = items;
+    }
+  } else {
+    return [];
+  }
+  obj = MarketingSurfaceTypeUtils;
 };
 prototype["hasPromotion"] = function hasPromotion(arg0) {
   closure_0 = arg0;

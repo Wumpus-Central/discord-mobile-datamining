@@ -1,8 +1,8 @@
-// === Module 4972: MicrophoneRive ===
+// === Module 4941: MicrophoneRive ===
 
-// Module 4972 (MicrophoneRive)
-import BaseRive from "BaseRive" /* 4892 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4945 */;
+// Module 4941 (MicrophoneRive)
+import BaseRive from "BaseRive" /* 4861 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4914 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

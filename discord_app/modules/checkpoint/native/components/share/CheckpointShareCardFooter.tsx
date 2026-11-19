@@ -1,12 +1,12 @@
-// === Module 12450: CheckpointShareCardFooter ===
+// === Module 12433: CheckpointShareCardFooter ===
 
-// Module 12450 (CheckpointShareCardFooter)
+// Module 12433 (CheckpointShareCardFooter)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5387 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import inlineStyles from "inlineStyles" /* 7776 */;
-import CheckpointShareCardContext from "CheckpointShareCardContext" /* 12448 */;
-import ArrowLargeRightIcon from "ArrowLargeRightIcon" /* 12451 */;
+import useToken from "useToken" /* 5356 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import inlineStyles from "inlineStyles" /* 7746 */;
+import CheckpointShareCardContext from "CheckpointShareCardContext" /* 12431 */;
+import ArrowLargeRightIcon from "ArrowLargeRightIcon" /* 12434 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let size = { width: 145, height: 28 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { footer: null, portraitFooter: null, characterAndStatsFooter: null, footerTitle: null, footerButton: null, portraitFooterButton: null, characterAndStatsFooterButton: null };
 let obj3 = {};
 const merged = Object.assign(size);

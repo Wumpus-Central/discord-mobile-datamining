@@ -1,13 +1,13 @@
-// === Module 16633: QuestDockDragHandle ===
+// === Module 16624: QuestDockDragHandle ===
 
-// Module 16633 (QuestDockDragHandle)
+// Module 16624 (QuestDockDragHandle)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5386 */;
-import spring_spring from "spring/spring" /* 5424 */;
-import QuestDockUtils from "QuestDockUtils" /* 16537 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 16539 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5355 */;
+import spring_spring from "spring/spring" /* 5393 */;
+import QuestDockUtils from "QuestDockUtils" /* 16528 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 16530 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -15,11 +15,11 @@ const _modDef1655 = _mod1655;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const QuestDockMode = fn(6466).QuestDockMode;
-let closure_6 = fn(16538).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6437).QuestDockMode;
+let closure_6 = fn(16529).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { dragHandleWrapper: null, dragHandle: null, dragHandleOverlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

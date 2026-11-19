@@ -1,6 +1,6 @@
-// === Module 8397: UploadLimits ===
+// === Module 8366: UploadLimits ===
 
-// Module 8397 (UploadLimits)
+// Module 8366 (UploadLimits)
 import size from "module_2" /* 2 */;
 
 let c0 = 20971520;

@@ -1,14 +1,14 @@
-// === Module 18630: conjurePlanExperienceSections ===
+// === Module 18623: conjurePlanExperienceSections ===
 
-// Module 18630 (conjurePlanExperienceSections)
+// Module 18623 (conjurePlanExperienceSections)
 import util from "util" /* 1113 */;
-import _modDef4121 from "module_4121" /* 4121 */;
-import conjurePlanFormat from "conjurePlanFormat" /* 18621 */;
+import _modDef4089 from "module_4089" /* 4089 */;
+import conjurePlanFormat from "conjurePlanFormat" /* 18614 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanExperienceSections.tsx");
 
-export const CONJURE_PLAN_EXPERIENCE_KIND_LABELS = { frame: _modDef4121.Z2bt4u, overlay_widget: _modDef4121["0mGHfU"], user_widget: _modDef4121.Jipr29, bot: _modDef4121.EbvC13, commands: _modDef4121.EbvC13, automod: _modDef4121.tiMvei };
+export const CONJURE_PLAN_EXPERIENCE_KIND_LABELS = { frame: _modDef4089.Z2bt4u, overlay_widget: _modDef4089["0mGHfU"], user_widget: _modDef4089.Jipr29, bot: _modDef4089.EbvC13, commands: _modDef4089.EbvC13, automod: _modDef4089.tiMvei };
 export function conjurePlanExperienceIsApp(experience) {
   let tmp = "frame" === experience.kind;
   if (tmp) {
@@ -69,7 +69,7 @@ export function conjurePlanRequirementsSectionId(arr) {
 export function conjurePlanFrameFeatures(usableInVoice) {
   if (usableInVoice.usableInVoice) {
     const intl = util.intl;
-    items = [intl.string(_modDef4121["4oGg2h"])];
+    items = [intl.string(_modDef4089["4oGg2h"])];
     let items1 = items;
   } else {
     items1 = [];
@@ -77,7 +77,7 @@ export function conjurePlanFrameFeatures(usableInVoice) {
   const items2 = [...items1];
   if (usableInVoice.launchableAnywhere) {
     const intl2 = util.intl;
-    const items3 = [intl2.string(_modDef4121.BTGCfR)];
+    const items3 = [intl2.string(_modDef4089.BTGCfR)];
     let items4 = items3;
   } else {
     items4 = [];
@@ -86,9 +86,9 @@ export function conjurePlanFrameFeatures(usableInVoice) {
   return items2;
 }
 export function conjurePlanRequirementGroups(proposal) {
-  items = [{ key: "permissions", caption: _modDef4121["2UbW6r"], names: proposal.bot_permissions }, ];
-  let obj = { key: "permissions", caption: _modDef4121["2UbW6r"], names: proposal.bot_permissions };
-  items[1] = { key: "intents", caption: _modDef4121["7TKfpj"], names: proposal.privileged_intents };
+  items = [{ key: "permissions", caption: _modDef4089["2UbW6r"], names: proposal.bot_permissions }, ];
+  let obj = { key: "permissions", caption: _modDef4089["2UbW6r"], names: proposal.bot_permissions };
+  items[1] = { key: "intents", caption: _modDef4089["7TKfpj"], names: proposal.privileged_intents };
   return items.flatMap((names) => {
     names = names.names;
     if (null != names) {

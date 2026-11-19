@@ -1,18 +1,18 @@
-// === Module 16573: QuestBottomSheetHooks ===
+// === Module 16564: QuestBottomSheetHooks ===
 
-// Module 16573 (QuestBottomSheetHooks)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import QuestTypes from "QuestTypes" /* 6469 */;
-import AdCreativeType from "AdCreativeType" /* 6473 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8342 */;
-import captureAdUserAction from "captureAdUserAction" /* 9860 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9863 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 16574 */;
+// Module 16564 (QuestBottomSheetHooks)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import QuestTypes from "QuestTypes" /* 6440 */;
+import AdCreativeType from "AdCreativeType" /* 6444 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8311 */;
+import captureAdUserAction from "captureAdUserAction" /* 9839 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9842 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 16565 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(6466).QuestDockMode;
+const QuestDockMode = fn(6437).QuestDockMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx");
 
@@ -86,7 +86,7 @@ export function useMobileActivityPressHandler(questId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -114,7 +114,7 @@ export function useMobileActivityPressHandler(questId) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          const obj7 = { type: tmp4(9863).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(6473).AdCreativeType.QUEST, adCreativeId: closure_128_0, questContentCTA: tmp4(8342).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: tmp4(6469).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: closure_128_1, impressionId: null, questContentPosition: null };
+          const obj7 = { type: tmp4(9842).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(6444).AdCreativeType.QUEST, adCreativeId: closure_128_0, questContentCTA: tmp4(8311).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: tmp4(6440).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: closure_128_1, impressionId: null, questContentPosition: null };
           let id;
           if (closure_128_4 != null) {
             id = closure_128_4.getId();
@@ -125,9 +125,9 @@ export function useMobileActivityPressHandler(questId) {
             questContentPosition = closure_128_4.getQuestContentPosition();
           }
           obj7.questContentPosition = questContentPosition;
-          tmp4(9860).captureAdUserAction(obj7);
+          tmp4(9839).captureAdUserAction(obj7);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp12) {
         dependencyMap = tmp;

@@ -1,8 +1,8 @@
-// === Module 10155: UserProfileConfirmVideoUnstableConnection ===
+// === Module 10133: UserProfileConfirmVideoUnstableConnection ===
 
-// Module 10155 (UserProfileConfirmVideoUnstableConnection)
+// Module 10133 (UserProfileConfirmVideoUnstableConnection)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 5774 */;
+import AlertModal from "AlertModal" /* 5745 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

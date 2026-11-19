@@ -1,15 +1,15 @@
-// === Module 7901: ManualReviewDecidedTeenAlertModal ===
+// === Module 7871: ManualReviewDecidedTeenAlertModal ===
 
-// Module 7901 (ManualReviewDecidedTeenAlertModal)
+// Module 7871 (ManualReviewDecidedTeenAlertModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import _modDef3439 from "module_3439" /* 3439 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import AlertModal from "AlertModal" /* 5774 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import AlertModal from "AlertModal" /* 5745 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6321).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6292).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
@@ -21,7 +21,7 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
       variant: "body-md/normal",
       color: "text-link",
       onPress() {
-        const obj = closure_1_1(7704);
+        const obj = closure_1_1(7674);
         const intl = closure_1_0(1113).intl;
         return obj.openUrl(closure_1_1(2188).getArticleURL(intl.string(closure_1_1(3439).agiNYw)));
       },

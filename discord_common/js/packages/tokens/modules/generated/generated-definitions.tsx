@@ -1678,8 +1678,8 @@ const obj2 = {
           while (iter !== undefined) {
             if ("mobile-visual-refresh" === iter.next()) {
               iter.return();
-              let str2 = "body-xs/normal";
-              return "body-xs/normal";
+              let str2 = "body-sm/normal";
+              return "body-sm/normal";
             }
           }
           return "body-xs/medium";

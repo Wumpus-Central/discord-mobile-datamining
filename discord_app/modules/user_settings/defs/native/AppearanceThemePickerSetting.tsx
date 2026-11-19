@@ -1,23 +1,23 @@
-// === Module 16732: AppearanceThemePickerSetting ===
+// === Module 16725: AppearanceThemePickerSetting ===
 
-// Module 16732 (AppearanceThemePickerSetting)
+// Module 16725 (AppearanceThemePickerSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
-const SettingBuilders = fn(11897);
+const SettingBuilders = fn(11875);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Ksh3ik);
   },
-  parent: fn(8624).MobileUserSettings.APPEARANCE,
+  parent: fn(8593).MobileUserSettings.APPEARANCE,
   usePredicate: function useIsSingleThemePickerVisible() {
     items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
-  useTrailing: fn(16726).useAppearanceSettingTrailing,
+  useTrailing: fn(16719).useAppearanceSettingTrailing,
   screen: {
     route: fn(1072).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {

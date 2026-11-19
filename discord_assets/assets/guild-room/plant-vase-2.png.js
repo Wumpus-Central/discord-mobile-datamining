@@ -1,6 +1,6 @@
-// === Module 6388: ? ===
+// === Module 6359: ? ===
 
-// Module 6388
+// Module 6359
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/guild-room/plant-vase-2.png.js");

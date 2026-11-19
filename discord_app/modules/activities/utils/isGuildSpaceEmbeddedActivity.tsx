@@ -1,11 +1,11 @@
-// === Module 14693: isGuildSpaceEmbeddedActivity ===
+// === Module 14679: isGuildSpaceEmbeddedActivity ===
 
-// Module 14693 (isGuildSpaceEmbeddedActivity)
+// Module 14679 (isGuildSpaceEmbeddedActivity)
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4744 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 6985 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4713 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 6955 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
 
 require = fn;
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 4675: FavoriteStore ===
+// === Module 4644: FavoriteStore ===
 
-// Module 4675 (FavoriteStore)
+// Module 4644 (FavoriteStore)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -120,8 +120,8 @@ function initializeFromUserSettings() {
     return flag3;
   }
 }
-const createChannelRecord = fn(4676).createChannelRecord;
-const FavoritesConstants = fn(4685);
+const createChannelRecord = fn(4645).createChannelRecord;
+const FavoritesConstants = fn(4654);
 const FAVORITES_AUTO_ADD_THREADS_NEVER = FavoritesConstants.FAVORITES_AUTO_ADD_THREADS_NEVER;
 ({ FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: hasOwnProperty, FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_6, FAVORITES_PRUNE_SCOPE_ALL: metroImportDefault, FAVORITES_PRUNE_SCOPE_AUTO_ADDED } = FavoritesConstants);
 const FAVORITES_PRUNE_WHEN_ARCHIVED = FavoritesConstants.FAVORITES_PRUNE_WHEN_ARCHIVED;

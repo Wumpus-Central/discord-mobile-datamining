@@ -1,7 +1,7 @@
 // === Module 18349: ConjureNativeLinkedText ===
 
 // Module 18349 (ConjureNativeLinkedText)
-import Text_Text from "Text/Text" /* 5414 */;
+import Text_Text from "Text/Text" /* 5383 */;
 import conjureMarkup from "conjureMarkup" /* 18350 */;
 import conjureLinkifyBareDomains from "conjureLinkifyBareDomains" /* 18359 */;
 import noop from "module_19" /* 19 */;

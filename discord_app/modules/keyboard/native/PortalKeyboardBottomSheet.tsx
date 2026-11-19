@@ -1,22 +1,22 @@
-// === Module 12874: PortalKeyboardBottomSheet ===
+// === Module 12856: PortalKeyboardBottomSheet ===
 
-// Module 12874 (PortalKeyboardBottomSheet)
+// Module 12856 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4995 */;
-import HapticUtils from "HapticUtils" /* 5039 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5053 */;
-import BottomSheetModal from "BottomSheetModal" /* 5055 */;
-import useMountEffectDefault from "useMountEffect" /* 5384 */;
-import isChannelFocused from "isChannelFocused" /* 6560 */;
-import native from "native" /* 7511 */;
-import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12875 */;
-import useAndroidOrientationSheetResyncDefault from "useAndroidOrientationSheetResync" /* 12876 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4964 */;
+import HapticUtils from "HapticUtils" /* 5008 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5022 */;
+import BottomSheetModal from "BottomSheetModal" /* 5024 */;
+import useMountEffectDefault from "useMountEffect" /* 5353 */;
+import isChannelFocused from "isChannelFocused" /* 6531 */;
+import native from "native" /* 7481 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12857 */;
+import useAndroidOrientationSheetResyncDefault from "useAndroidOrientationSheetResync" /* 12858 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10818 */;
+import NativeMenuStore from "NativeMenuStore" /* 10796 */;
 
 const require = globalThis.__r;
 const BottomSheetModalDefault = BottomSheetModal;
@@ -48,9 +48,9 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PlatformUtils = fn(1380);
 let closure_9 = PlatformUtils.isIOS();
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj3 = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
-let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(7511).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(7511).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
+let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(7481).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(7481).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
 obj3.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
 obj3.headerContainerScreenReaderEnabled = { marginBottom: -nativeDefault.space.PX_8 };
@@ -378,7 +378,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
   obj7.activeOffsetY = [-10, 10];
   let num = 0;
   if (rendersHandle) {
-    num = tmp6(7511).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
+    num = tmp6(7481).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
   }
   obj7.handleHeight = num;
   let merged = Object.assign(tmp5);
@@ -408,7 +408,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
   }
   if (tmp51Result) {
     const obj9 = { animatedSheetIndex: animatedIndex };
-    tmp51Result = tmp51(tmp3(11233), obj9);
+    tmp51Result = tmp51(tmp3(11211), obj9);
   }
   items19[1] = tmp51Result;
   items19[2] = closure_7(require("NavScrim").NavScrim, {});

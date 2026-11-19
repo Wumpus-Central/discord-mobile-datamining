@@ -1,13 +1,13 @@
-// === Module 6895: conjureChatConnection ===
+// === Module 6865: conjureChatConnection ===
 
-// Module 6895 (conjureChatConnection)
+// Module 6865 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import _modDef4121 from "module_4121" /* 4121 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 6840 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 6844 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 6850 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 6896 */;
+import _modDef4089 from "module_4089" /* 4089 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 6810 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 6814 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 6820 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 6866 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -102,7 +102,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef4121["913RMa"]);
+      const stringResult = intl.string(_modDef4089["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -191,7 +191,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef4121["0+RUWx"]);
+      const stringResult = intl.string(_modDef4089["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -224,6 +224,14 @@ let obj2 = {
     if (null != restore_proposal.restore_proposal) {
       const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: tmp, turnId: restore_proposal.turn_id, patch: null };
       obj3 = { restoreProposal: restore_proposal.restore_proposal };
+      obj2.patch = obj3;
+      DispatcherDefault.dispatch(obj2);
+    }
+  },
+  server_change(server_change, arg1) {
+    if (null != server_change.server_change) {
+      const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: tmp, turnId: server_change.turn_id, patch: null };
+      obj3 = { serverChange: server_change.server_change };
       obj2.patch = obj3;
       DispatcherDefault.dispatch(obj2);
     }

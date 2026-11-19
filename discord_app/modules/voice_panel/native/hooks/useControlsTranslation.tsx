@@ -1,14 +1,14 @@
-// === Module 19399: useControlsTranslation ===
+// === Module 19395: useControlsTranslation ===
 
-// Module 19399 (useControlsTranslation)
+// Module 19395 (useControlsTranslation)
 import _mod1655 from "module_1655" /* 1655 */;
-import spring_spring from "spring/spring" /* 5424 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11709 */;
+import spring_spring from "spring/spring" /* 5393 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(11710).MODE_CHANGE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11713).CALL_TILE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(11688).MODE_CHANGE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11691).CALL_TILE_GUTTER;
 let closure_6 = { code: "(function useControlsTranslationTsx1(){let[withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight]=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useControlsTranslation.tsx");

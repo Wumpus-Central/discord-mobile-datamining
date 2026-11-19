@@ -1,10 +1,10 @@
-// === Module 8818: usePendingAvatarSettings ===
+// === Module 8787: usePendingAvatarSettings ===
 
-// Module 8818 (usePendingAvatarSettings)
+// Module 8787 (usePendingAvatarSettings)
 import _mod19 from "module_19" /* 19 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8043 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8820 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8044 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8012 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8789 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8013 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/user_profile/hooks/usePendingAv
 export default function usePendingAvatarSettings(isTryItOut) {
   isTryItOut = isTryItOut.isTryItOut;
   const guildId = isTryItOut.guildId;
-  const tmp2 = guildId(8819)(isTryItOut.analyticsLocations);
+  const tmp2 = guildId(8788)(isTryItOut.analyticsLocations);
   dependencyMap = tmp2;
   items = [UserProfileSettingsStore];
   const stateFromStoresObject = isTryItOut(563).useStateFromStoresObject(items, () => {
@@ -55,11 +55,11 @@ export default function usePendingAvatarSettings(isTryItOut) {
   }, items2);
   let obj2 = { pendingAvatar, pendingAvatarDecoration, pendingErrors, setPendingAvatar: null, setPendingAvatarDecoration: null };
   if (isTryItOut) {
-    setTryItOutAvatar = tmp3(8821).setTryItOutAvatar;
+    setTryItOutAvatar = tmp3(8790).setTryItOutAvatar;
   }
   obj2.setPendingAvatar = setTryItOutAvatar;
   if (isTryItOut) {
-    setTryItOutAvatarDecoration = tmp3(8821).setTryItOutAvatarDecoration;
+    setTryItOutAvatarDecoration = tmp3(8790).setTryItOutAvatarDecoration;
   }
   obj2.setPendingAvatarDecoration = setTryItOutAvatarDecoration;
   return obj2;

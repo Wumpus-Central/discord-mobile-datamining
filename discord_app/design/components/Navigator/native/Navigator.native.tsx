@@ -1,19 +1,19 @@
-// === Module 7003: Navigator ===
+// === Module 6973: Navigator ===
 
-// Module 7003 (Navigator)
+// Module 6973 (Navigator)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import SentryInitUtils from "SentryInitUtils" /* 1243 */;
 import Link from "Link" /* 1503 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import BackPressTracking from "BackPressTracking" /* 5835 */;
-import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7004 */;
-import NavigatorBackgroundContext from "NavigatorBackgroundContext" /* 7005 */;
-import NavigatorHeader from "NavigatorHeader" /* 7006 */;
-import _mod7013 from "module_7013" /* 7013 */;
-import StackNavigator from "StackNavigator" /* 7064 */;
-import NavigatorScreen from "NavigatorScreen" /* 7097 */;
-import useNavigationTheme from "useNavigationTheme" /* 7103 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import BackPressTracking from "BackPressTracking" /* 5806 */;
+import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 6974 */;
+import NavigatorBackgroundContext from "NavigatorBackgroundContext" /* 6975 */;
+import NavigatorHeader from "NavigatorHeader" /* 6976 */;
+import _mod6983 from "module_6983" /* 6983 */;
+import StackNavigator from "StackNavigator" /* 7034 */;
+import NavigatorScreen from "NavigatorScreen" /* 7067 */;
+import useNavigationTheme from "useNavigationTheme" /* 7073 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -262,7 +262,7 @@ function WrappedNavigationStack(arg0) {
     }
     return tmp2;
   }), 1)[0];
-  const tmp5 = navigationContainerRef(5032)();
+  const tmp5 = navigationContainerRef(5001)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
   const obj4 = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
   if (null != navigationTheme) {
@@ -277,7 +277,7 @@ function WrappedNavigationStack(arg0) {
     initialRouteState = tmp8;
   }
   const obj5 = { children: null };
-  const obj6 = { value: "Array", children: 0 };
+  const obj6 = { value: "Array", children: 16 };
   obj4.initialState = initialRouteState;
   obj4.onReady = function onReady() {
     const routingInstrumentation = SentryInitUtils.routingInstrumentation;
@@ -287,13 +287,13 @@ function WrappedNavigationStack(arg0) {
   const merged1 = Object.assign(merged);
   obj4.children = <NavigationStack initialRouteName={initialRouteName} />;
   obj6.children = jsx(Link.NavigationContainer, { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null });
-  obj5.children = jsx(_mod7013.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj5.children = jsx(_mod6983.HeaderBackContext.Provider, { value: "Array", children: 16 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: null, navbar: null, modalBackground: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, gradientNavbar: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,8 +1,8 @@
-// === Module 9225: UserTrialActionCreators ===
+// === Module 9201: UserTrialActionCreators ===
 
-// Module 9225 (UserTrialActionCreators)
+// Module 9201 (UserTrialActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 8715 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 8684 */;
 
 const require = fn;
 const Constants = fn(1072);
@@ -23,7 +23,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {

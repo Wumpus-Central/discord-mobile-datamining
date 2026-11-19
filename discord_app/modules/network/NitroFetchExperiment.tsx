@@ -1,8 +1,8 @@
-// === Module 8493: NitroFetchExperiment ===
+// === Module 8462: NitroFetchExperiment ===
 
-// Module 8493 (NitroFetchExperiment)
+// Module 8462 (NitroFetchExperiment)
 import ApexExperiment2 from "ApexExperiment" /* 1452 */;
-import _mod8494 from "module_8494" /* 8494 */;
+import _mod8463 from "module_8463" /* 8463 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -11,7 +11,7 @@ function synchronizeNetworkLayer() {
   if (tmp !== closure_7) {
     if (tmp) {
       if (null == closure_8) {
-        closure_8 = _mod8494;
+        closure_8 = _mod8463;
       }
       global.XMLHttpRequest = closure_8.XMLHttpRequest;
     } else {
@@ -41,7 +41,7 @@ export function initializeNitroFetchExperiment() {
     if (tmp5 !== closure_7) {
       if (tmp5) {
         if (null == closure_8) {
-          closure_8 = tmp(8494);
+          closure_8 = tmp(8463);
         }
         tmp = global;
         _XMLHttpRequest = closure_8.XMLHttpRequest;

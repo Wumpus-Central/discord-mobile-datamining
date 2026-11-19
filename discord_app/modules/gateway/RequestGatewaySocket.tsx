@@ -1,6 +1,6 @@
-// === Module 8365: RequestGatewaySocket ===
+// === Module 8334: RequestGatewaySocket ===
 
-// Module 8365 (RequestGatewaySocket)
+// Module 8334 (RequestGatewaySocket)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -48,7 +48,7 @@ let closure_10 = async function _withRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -135,7 +135,7 @@ export function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  combined(8178).requestSafeIdleCallback(() => {
+  combined(8147).requestSafeIdleCallback(() => {
     if (map.has(combined)) {
       const obj3 = { bridge_token: combined, cleared_after: null };
       const _performance = performance;
@@ -154,7 +154,7 @@ export function startBridgeTo(arg0) {
       const result = map.set(combined, diff);
     }
   }, { timeout: 5000 });
-  let obj2 = combined(8178);
+  let obj2 = combined(8147);
 }
 export { stopRequest };
 export function withRequest() {

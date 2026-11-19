@@ -1,15 +1,15 @@
-// === Module 20216: handleIncomingURL ===
+// === Module 20227: handleIncomingURL ===
 
-// Module 20216 (handleIncomingURL)
+// Module 20227 (handleIncomingURL)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6402 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8180 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 14988 */;
-import DeepLinkTypes from "DeepLinkTypes" /* 20215 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6373 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8149 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 14974 */;
+import DeepLinkTypes from "DeepLinkTypes" /* 20226 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
 
 require = fn;
@@ -29,7 +29,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -145,17 +145,17 @@ let closure_11 = async function _handleIncomingURL(arg0) {
                     }
                   }
                   c8 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "+60" };
                 } else {
                   const parts = url.split("voice/");
                   if (2 !== parts.length) {
                     c8 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "+60" };
                   } else {
                     const parts1 = parts[1].split("/");
                     if (0 === parts1.length) {
                       c8 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "+60" };
                     } else if ("user" !== parts1[0]) {
                       if ("invite" === parts1[0]) {
                         const obj15 = { payload: null, isAppStartupNavigation: null };

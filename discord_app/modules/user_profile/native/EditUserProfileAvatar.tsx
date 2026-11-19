@@ -1,17 +1,17 @@
-// === Module 15867: EditUserProfileAvatar ===
+// === Module 15858: EditUserProfileAvatar ===
 
-// Module 15867 (EditUserProfileAvatar)
+// Module 15858 (EditUserProfileAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8043 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8012 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_8 = createStyles.createStyles({ editIcon: { position: "absolute", right: -3 }, editButton: { position: "absolute", top: -8, right: -8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/EditUserProfileAvatar.tsx");
@@ -78,7 +78,8 @@ export default function EditUserProfileAvatar(user) {
         obj2.openLazy(user(flag2[13])(flag2[14], flag2.paths), "Select GIF Avatar", obj3);
       },
       handleEditAvatarDecorationSelect: null,
-      showRemoveAvatar: null
+      showRemoveAvatar: null,
+      analyticsLocations: null
     };
     let obj = ActionSheetActionCreatorsDefault;
     if (!flag) {
@@ -87,8 +88,9 @@ export default function EditUserProfileAvatar(user) {
       }
     }
     obj2.handleEditAvatarDecorationSelect = editAvatarDecoration;
-    const tmp3 = asyncRequireImpl(15859, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(15850, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
+    obj2.analyticsLocations = analyticsLocations;
     obj.openLazy(tmp3, "Change Avatar", obj2);
     const tmp2Result = ProfileCustomizationUtils;
   }, items);

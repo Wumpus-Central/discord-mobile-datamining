@@ -1,15 +1,15 @@
-// === Module 17859: useWaterwheelsDiscoverFeed ===
+// === Module 17852: useWaterwheelsDiscoverFeed ===
 
-// Module 17859 (useWaterwheelsDiscoverFeed)
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9941 */;
-import useWaterwheelsCardEligibilityDefault from "useWaterwheelsCardEligibility" /* 17860 */;
-import WaterwheelsDiscoverFeedState from "WaterwheelsDiscoverFeedState" /* 17864 */;
+// Module 17852 (useWaterwheelsDiscoverFeed)
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9920 */;
+import useWaterwheelsCardEligibilityDefault from "useWaterwheelsCardEligibility" /* 17853 */;
+import WaterwheelsDiscoverFeedState from "WaterwheelsDiscoverFeedState" /* 17857 */;
 import noop from "module_19" /* 19 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import ICYMIStore from "ICYMIStore" /* 9931 */;
+import ICYMIStore from "ICYMIStore" /* 9910 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1388 */;
-import InterestPickerSessionStore from "InterestPickerSessionStore" /* 9942 */;
+import InterestPickerSessionStore from "InterestPickerSessionStore" /* 9921 */;
 
 const require = globalThis.__r;
 
@@ -30,15 +30,15 @@ export default function useWaterwheelsDiscoverFeed(arg0) {
   items = [ICYMIStore, ApexExperimentStore, AuthenticationStore, UserStore];
   EMPTY_DISCOVER_SNAPSHOT = EMPTY_DISCOVER_SNAPSHOT(504).useStateFromStores(items, () => discoverSnapshot.getDiscoverSnapshot());
   if (!arg0) {
-    EMPTY_DISCOVER_SNAPSHOT = tmp(9938).EMPTY_DISCOVER_SNAPSHOT;
+    EMPTY_DISCOVER_SNAPSHOT = tmp(9917).EMPTY_DISCOVER_SNAPSHOT;
   }
   const tmp3 = useWaterwheelsCardEligibilityDefault();
   importDefault = tmp3;
   const items1 = [EMPTY_DISCOVER_SNAPSHOT, tmp3];
   const memo = noop.useMemo(() => WaterwheelsDiscoverFeedState.selectWaterwheelsDiscoverEntries(EMPTY_DISCOVER_SNAPSHOT, closure_1), items1);
   const obj = EMPTY_DISCOVER_SNAPSHOT(504);
-  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(17864);
-  return { snapshot: EMPTY_DISCOVER_SNAPSHOT, entries: memo, status: EMPTY_DISCOVER_SNAPSHOT(17864).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length), retry: requestWaterwheelsDiscover };
+  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(17857);
+  return { snapshot: EMPTY_DISCOVER_SNAPSHOT, entries: memo, status: EMPTY_DISCOVER_SNAPSHOT(17857).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length), retry: requestWaterwheelsDiscover };
 };
 export function useWaterwheelsDiscoverInitialRequest(enabled, visible, snapshot) {
   _require = enabled;
@@ -94,14 +94,14 @@ export function useWaterwheelsDiscoverInitialRequest(enabled, visible, snapshot)
           if (!InterestPickerSessionStore.isPickerOpen()) {
             function requestWhenReady() {
               const obj2 = { enabled, visible, snapshot: discoverSnapshot.getDiscoverSnapshot(), hasRequestInFlight: null, isPickerOpen: null };
-              const obj = enabled(17864);
-              obj2.hasRequestInFlight = visible(9941).hasDiscoverRequestInFlight();
+              const obj = enabled(17857);
+              obj2.hasRequestInFlight = visible(9920).hasDiscoverRequestInFlight();
               obj2.isPickerOpen = InterestPickerSessionStore.isPickerOpen();
               if (obj.shouldRequestWaterwheelsDiscover(obj2)) {
-                const dehydrated = visible(9941).fetchDehydrated();
-                const tmp2Result = visible(9941);
+                const dehydrated = visible(9920).fetchDehydrated();
+                const tmp2Result = visible(9920);
               }
-              const obj3 = visible(9941);
+              const obj3 = visible(9920);
             }
             const result = ICYMIActionCreatorsDefault.subscribeDiscoverRequests(requestWhenReady);
             let obj3 = { enabled: tmp, visible: tmp2, snapshot: ICYMIStore.getDiscoverSnapshot(), hasRequestInFlight: null, isPickerOpen: null };

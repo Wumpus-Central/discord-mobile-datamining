@@ -1,9 +1,9 @@
-// === Module 13356: GuildBoostPurchasingUtils ===
+// === Module 13338: GuildBoostPurchasingUtils ===
 
-// Module 13356 (GuildBoostPurchasingUtils)
+// Module 13338 (GuildBoostPurchasingUtils)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5769 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5740 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 
@@ -27,7 +27,7 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {

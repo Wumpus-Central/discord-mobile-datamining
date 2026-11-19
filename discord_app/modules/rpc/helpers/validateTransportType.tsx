@@ -1,9 +1,9 @@
-// === Module 15644: validateTransportType ===
+// === Module 15631: validateTransportType ===
 
-// Module 15644 (validateTransportType)
+// Module 15631 (validateTransportType)
 import Constants from "Constants" /* 1072 */;
-import Constants2 from "Constants" /* 6261 */;
-import RPCErrorDefault from "RPCError" /* 6818 */;
+import Constants2 from "Constants" /* 6233 */;
+import RPCErrorDefault from "RPCError" /* 6790 */;
 import size from "module_2" /* 2 */;
 
 const TransportTypes = Constants2.TransportTypes;

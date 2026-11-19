@@ -1,16 +1,16 @@
-// === Module 6244: CheckpointCustomizationUtils ===
+// === Module 6215: CheckpointCustomizationUtils ===
 
-// Module 6244 (CheckpointCustomizationUtils)
+// Module 6215 (CheckpointCustomizationUtils)
 import util from "util" /* 1113 */;
 import _modDef3339 from "module_3339" /* 3339 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5878 */;
-import CheckpointTraitConfig from "CheckpointTraitConfig" /* 5920 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 5921 */;
-import CheckpointTrait from "CheckpointTrait" /* 5922 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5923 */;
-import CheckpointTraitOptionNames from "CheckpointTraitOptionNames" /* 6245 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6246 */;
-import CheckpointConstants from "CheckpointConstants" /* 5877 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5849 */;
+import CheckpointTraitConfig from "CheckpointTraitConfig" /* 5891 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 5892 */;
+import CheckpointTrait from "CheckpointTrait" /* 5893 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5894 */;
+import CheckpointTraitOptionNames from "CheckpointTraitOptionNames" /* 6216 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6217 */;
+import CheckpointConstants from "CheckpointConstants" /* 5848 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -225,14 +225,14 @@ export function getCheckpointRouteBlockedTrait(activeRoute, arr) {
     return arr[0];
   } else {
     if (tmpResult.isCheckpointCustomizationRoute(activeRoute)) {
-      const tmpResult2 = tmp(6246);
+      const tmpResult2 = tmp(6217);
       const tmp4 = obj4[tmpResult2.getCheckpointRoutePresentation(tmpResult2, activeRoute).characterStage];
       _require = tmp4;
       if (null != tmp4) {
         return arr.find((item) => item === obj3[closure_0]);
       }
     }
-    tmpResult = tmp(6246);
+    tmpResult = tmp(6217);
   }
 }
 export function getChamferedRectPoints(width, height, arg2) {

@@ -1,15 +1,15 @@
-// === Module 10145: UserProfileWidgetGameCoverGridReorderActionSheet ===
+// === Module 10123: UserProfileWidgetGameCoverGridReorderActionSheet ===
 
-// Module 10145 (UserProfileWidgetGameCoverGridReorderActionSheet)
+// Module 10123 (UserProfileWidgetGameCoverGridReorderActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import DragHandle from "DragHandle" /* 6960 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 10112 */;
-import WidgetUtils from "WidgetUtils" /* 10116 */;
-import useGameCoverLayoutDefault from "useGameCoverLayout" /* 10121 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 10132 */;
-import GameCoverImageDefault from "GameCoverImage" /* 10134 */;
-import UserProfileReorderActionSheetDefault from "UserProfileReorderActionSheet" /* 10144 */;
+import DragHandle from "DragHandle" /* 6930 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 10090 */;
+import WidgetUtils from "WidgetUtils" /* 10094 */;
+import useGameCoverLayoutDefault from "useGameCoverLayout" /* 10099 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 10110 */;
+import GameCoverImageDefault from "GameCoverImage" /* 10112 */;
+import UserProfileReorderActionSheetDefault from "UserProfileReorderActionSheet" /* 10122 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -18,9 +18,9 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4823);
-let obj = { grid: { flexDirection: "row", flexWrap: "wrap", gap: fn(10099).GAME_COVER_GRID_GAP }, dragHandle: null };
-let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: fn(10099).GAME_COVER_GRID_GAP };
+const createStyles = fn(4792);
+let obj = { grid: { flexDirection: "row", flexWrap: "wrap", gap: fn(10077).GAME_COVER_GRID_GAP }, dragHandle: null };
+let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: fn(10077).GAME_COVER_GRID_GAP };
 obj.dragHandle = { position: "absolute", top: nativeDefault.space.PX_8, start: 0 };
 let closure_9 = createStyles.createStyles(obj);
 let closure_10 = noop.memo(function ReorderableGameCover(arg0) {

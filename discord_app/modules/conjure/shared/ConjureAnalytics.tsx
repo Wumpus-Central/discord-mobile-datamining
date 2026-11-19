@@ -1,12 +1,12 @@
-// === Module 6896: ConjureAnalytics ===
+// === Module 6866: ConjureAnalytics ===
 
-// Module 6896 (ConjureAnalytics)
+// Module 6866 (ConjureAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5560 */;
-import ConjureUtils from "ConjureUtils" /* 6774 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 6897 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
+import ConjureUtils from "ConjureUtils" /* 6746 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 6867 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
 
 require = fn;
 function projectFields(projectId) {
@@ -155,9 +155,9 @@ function ratingPromptFields(projectId) {
   obj3.is_new_project = tmp10;
   return obj3;
 }
-const isProjectOwner = fn(6529).isProjectOwner;
+const isProjectOwner = fn(6500).isProjectOwner;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_8 = { [fn(6530).ConjureSupportedSurface.APP_CHANNEL]: "app_channel", [fn(6530).ConjureSupportedSurface.VOICE_CHANNEL]: "voice_channel", [fn(6530).ConjureSupportedSurface.PROFILE_WIDGET]: "profile_widget", [fn(6530).ConjureSupportedSurface.AUTOMOD]: "automod", [fn(6530).ConjureSupportedSurface.BOT]: "bot", [fn(6530).ConjureSupportedSurface.APPLICATION_COMMANDS]: "application_commands", [fn(6530).ConjureSupportedSurface.OVERLAY]: "overlay", [fn(6530).ConjureSupportedSurface.ACTIVITY]: "activity" };
+let closure_8 = { [fn(6501).ConjureSupportedSurface.APP_CHANNEL]: "app_channel", [fn(6501).ConjureSupportedSurface.VOICE_CHANNEL]: "voice_channel", [fn(6501).ConjureSupportedSurface.PROFILE_WIDGET]: "profile_widget", [fn(6501).ConjureSupportedSurface.AUTOMOD]: "automod", [fn(6501).ConjureSupportedSurface.BOT]: "bot", [fn(6501).ConjureSupportedSurface.APPLICATION_COMMANDS]: "application_commands", [fn(6501).ConjureSupportedSurface.OVERLAY]: "overlay", [fn(6501).ConjureSupportedSurface.ACTIVITY]: "activity" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
 

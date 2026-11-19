@@ -1,11 +1,11 @@
-// === Module 14528: CheckpointProfileEntrypoint ===
+// === Module 14515: CheckpointProfileEntrypoint ===
 
-// Module 14528 (CheckpointProfileEntrypoint)
+// Module 14515 (CheckpointProfileEntrypoint)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import openCheckpoint from "openCheckpoint" /* 12422 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import openCheckpoint from "openCheckpoint" /* 12405 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CheckpointStore from "CheckpointStore" /* 12417 */;
+import CheckpointStore from "CheckpointStore" /* 12400 */;
 
 require = fn;
 let closure_7 = async function _handlePress(arg0) {
@@ -19,7 +19,7 @@ let closure_7 = async function _handlePress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -49,7 +49,7 @@ let closure_7 = async function _handlePress(arg0) {
       } else {
         closure_129_1(closure_129_2[5]).hideAllActionSheets();
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -59,8 +59,8 @@ let closure_7 = async function _handlePress(arg0) {
 };
 function CheckpointProfileEntrypointRow(source) {
   source = source.source;
-  const checkpointQAMode = source(6248).useCheckpointQAMode("CheckpointProfileEntrypoint");
-  const obj = source(6248);
+  const checkpointQAMode = source(6219).useCheckpointQAMode("CheckpointProfileEntrypoint");
+  const obj = source(6219);
   items = [CheckpointStore];
   const stateFromStores = source(504).useStateFromStores(items, () => isFetching.isFetching);
   const obj3 = { label: null, subLabel: null, icon: null, onPress: null, onLongPress: null, arrow: true, start: true, end: true };
@@ -71,8 +71,8 @@ function CheckpointProfileEntrypointRow(source) {
   if (stateFromStores) {
     let tmp5Result = <ActivityIndicator />;
   } else {
-    const obj4 = { IconComponent: tmp(10015).ExperimentalCheckpointIcon };
-    tmp5Result = jsx(tmp(6956).TableRow.Icon, { IconComponent: tmp(10015).ExperimentalCheckpointIcon });
+    const obj4 = { IconComponent: tmp(9993).ExperimentalCheckpointIcon };
+    tmp5Result = jsx(tmp(6926).TableRow.Icon, { IconComponent: tmp(9993).ExperimentalCheckpointIcon });
   }
   obj3.icon = tmp5Result;
   obj3.onPress = function onPress() {
@@ -90,11 +90,11 @@ function CheckpointProfileEntrypointRow(source) {
   let fn;
   if ("off" !== checkpointQAMode) {
     fn = () => {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14529, dependencyMap.paths), "CheckpointTestingActionSheet", { mode: checkpointQAMode });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14516, dependencyMap.paths), "CheckpointTestingActionSheet", { mode: checkpointQAMode });
     };
   }
   obj3.onLongPress = fn;
-  return jsx(source(6956).TableRow, { label: null, subLabel: null, icon: null, onPress: null, onLongPress: null, arrow: true, start: true, end: true });
+  return jsx(source(6926).TableRow, { label: null, subLabel: null, icon: null, onPress: null, onLongPress: null, arrow: true, start: true, end: true });
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;

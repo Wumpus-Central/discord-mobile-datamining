@@ -1,19 +1,19 @@
-// === Module 20014: AvatarMoatmonsturrExample ===
+// === Module 20025: AvatarMoatmonsturrExample ===
 
-// Module 20014 (AvatarMoatmonsturrExample)
-import assetHelpers from "assetHelpers" /* 7268 */;
-import _modDef20015 from "module_20015" /* 20015 */;
-import _modDef20016 from "module_20016" /* 20016 */;
-import _modDef20017 from "module_20017" /* 20017 */;
+// Module 20025 (AvatarMoatmonsturrExample)
+import assetHelpers from "assetHelpers" /* 7238 */;
+import _modDef20026 from "module_20026" /* 20026 */;
+import _modDef20027 from "module_20027" /* 20027 */;
+import _modDef20028 from "module_20028" /* 20028 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef20015 }, 3: null };
-let obj2 = { uri: _modDef20015 };
-obj[2] = { uri: _modDef20016 };
-const obj3 = { uri: _modDef20016 };
-obj[3] = { uri: _modDef20017 };
+let obj = { 1: null, 2: { uri: _modDef20026 }, 3: null };
+let obj2 = { uri: _modDef20026 };
+obj[2] = { uri: _modDef20027 };
+const obj3 = { uri: _modDef20027 };
+obj[3] = { uri: _modDef20028 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarMoatmonsturrExample.native.tsx");
 

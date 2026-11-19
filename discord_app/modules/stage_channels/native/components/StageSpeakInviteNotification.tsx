@@ -1,18 +1,18 @@
-// === Module 11681: StageSpeakInviteNotification ===
+// === Module 11659: StageSpeakInviteNotification ===
 
-// Module 11681 (StageSpeakInviteNotification)
+// Module 11659 (StageSpeakInviteNotification)
 import nativeDefault from "native" /* 575 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 6405 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 6411 */;
-import speakOnStageDefault from "speakOnStage" /* 11682 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 6376 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 6382 */;
+import speakOnStageDefault from "speakOnStage" /* 11660 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(11074).NOTIFICATION_PREVIEW_LINE_CLAMP;
+let closure_5 = fn(11052).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { iconContainer: null, actions: null };
 let size = { width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj.iconContainer = size;
@@ -33,17 +33,17 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
   const channel = notification.channel;
   guild = notification.guild;
   const tmp = closure_8();
-  let stringResult = guild(5439)(channel);
+  let stringResult = guild(5408)(channel);
   if (stringResult == null) {
     const intl = channel(1113).intl;
     stringResult = intl.string(channel(1113).t["/YzI63"]);
   }
   dependencyMap = stringResult;
-  const tmp6 = guild(10810)();
+  const tmp6 = guild(10788)();
   noop = tmp6;
-  isVoicePanelOpen = channel(10814).useIsVoicePanelOpen(channel.id);
-  let obj = channel(10814);
-  handleDismissNotification = channel(11112).useInAppNotificationContext().handleDismissNotification;
+  isVoicePanelOpen = channel(10792).useIsVoicePanelOpen(channel.id);
+  let obj = channel(10792);
+  handleDismissNotification = channel(11090).useInAppNotificationContext().handleDismissNotification;
   ref = noop.useRef(false);
   items = [handleDismissNotification];
   callback = noop.useCallback((arg0) => {
@@ -76,37 +76,37 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
   }, items3);
   const obj3 = { icon: null, header: null, rightAccessory: null, children: null, onPress: null, notification: null };
   const obj4 = { style: tmp.iconContainer, children: null };
-  const obj2 = channel(11112);
-  obj4.children = ref(channel(10884).HandRequestSpeakIcon, { size: "md", color: guild(575).colors.WHITE });
+  const obj2 = channel(11090);
+  obj4.children = ref(channel(10862).HandRequestSpeakIcon, { size: "md", color: guild(575).colors.WHITE });
   obj3.icon = ref(isVoicePanelOpen, obj4);
   obj3.header = memo;
   const obj6 = { direction: "horizontal", spacing: guild(575).space.PX_8, style: tmp.actions, children: null };
-  const obj7 = { size: "sm", variant: "secondary", icon: ref(channel(7062).XSmallIcon, {}), accessibilityLabel: null, onPress: null };
+  const obj7 = { size: "sm", variant: "secondary", icon: ref(channel(7032).XSmallIcon, {}), accessibilityLabel: null, onPress: null };
   const intl2 = channel(1113).intl;
   obj7.accessibilityLabel = intl2.string(channel(1113).t["1YDv7a"]);
   obj7.onPress = function onPress() {
     const result = StageChannelActionCreators.audienceAckRequestToSpeak(channel, true);
     callback("declined");
   };
-  const items4 = [ref(channel(7502).IconButton, obj7), ];
-  const obj8 = { size: "sm", variant: "primary", icon: ref(channel(7410).CheckmarkSmallIcon, { color: "white" }), accessibilityLabel: null, onPress: null };
+  const items4 = [ref(channel(7472).IconButton, obj7), ];
+  const obj8 = { size: "sm", variant: "primary", icon: ref(channel(7380).CheckmarkSmallIcon, { color: "white" }), accessibilityLabel: null, onPress: null };
   const intl3 = channel(1113).intl;
   obj8.accessibilityLabel = intl3.string(channel(1113).t.MpO0px);
   obj8.onPress = function onPress() {
     speakOnStageDefault(channel);
     callback("accepted");
   };
-  items4[1] = ref(channel(7502).IconButton, obj8);
+  items4[1] = ref(channel(7472).IconButton, obj8);
   obj6.children = items4;
-  obj3.rightAccessory = callback(channel(5837).Stack, obj6);
+  obj3.rightAccessory = callback(channel(5808).Stack, obj6);
   const obj9 = { variant: "heading-sm/medium", color: "text-subtle", lineClamp: handleDismissNotification, children: null };
   const intl4 = channel(1113).intl;
   obj9.children = intl4.string(channel(1113).t.Ul1RJQ);
-  obj3.children = ref(channel(5414).Text, obj9);
+  obj3.children = ref(channel(5383).Text, obj9);
   obj3.onPress = function onPress() {
     StageChannelActionCreatorExtras.openStageChannel(channel);
     callback("notification_clicked");
   };
   obj3.notification = notification;
-  return ref(channel(11120).NotificationPressable, obj3);
+  return ref(channel(11098).NotificationPressable, obj3);
 });

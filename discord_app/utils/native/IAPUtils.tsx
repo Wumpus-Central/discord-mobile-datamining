@@ -1,20 +1,20 @@
-// === Module 9191: IAPUtils ===
+// === Module 9167: IAPUtils ===
 
-// Module 9191 (IAPUtils)
+// Module 9167 (IAPUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import v1 from "v1" /* 1269 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1379 */;
 import PlatformUtils2 from "PlatformUtils" /* 1380 */;
-import DeviceUtils from "DeviceUtils" /* 4780 */;
-import ProductIds from "ProductIds" /* 8082 */;
-import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 9212 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 9213 */;
+import DeviceUtils from "DeviceUtils" /* 4749 */;
+import ProductIds from "ProductIds" /* 8051 */;
+import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 9188 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 9189 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5417 */;
+import DevSettingsStore from "DevSettingsStore" /* 5386 */;
 import UserStore from "UserStore" /* 1388 */;
-import IAPStore from "IAPStore" /* 8722 */;
+import IAPStore from "IAPStore" /* 8691 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ let closure_16 = async function _makeIAPRequest() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ let closure_16 = async function _makeIAPRequest() {
               const obj6 = { requestJSONString, sku, appAccountToken: convertToUUID(currentUser.id), andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM };
               c7 = 2;
               c8 = 1;
-              const obj7 = { value: require("module_9193").requestPurchase(obj6), done: false };
+              const obj7 = { value: require("module_9169").requestPurchase(obj6), done: false };
               return obj7;
             }
           }
@@ -141,7 +141,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
           } else {
             c5 = 1;
             c6 = 1;
-            const obj5 = { value: require("module_9193").clearTransactionIOS(), done: false };
+            const obj5 = { value: require("module_9169").clearTransactionIOS(), done: false };
             return obj5;
           }
         }
@@ -228,7 +228,7 @@ let closure_18 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -425,7 +425,7 @@ let closure_21 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -446,7 +446,7 @@ let closure_21 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("module_9193").getStorefront(), done: false };
+            const obj6 = { value: require("module_9169").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -486,7 +486,7 @@ let closure_21 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5487).convertToAlpha2;
+const convertToAlpha2 = fn(5456).convertToAlpha2;
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
 const NAMESPACE_SNOWFLAKE_UUID = fn(1390).NAMESPACE_SNOWFLAKE_UUID;
@@ -494,9 +494,9 @@ const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 let PlatformUtils = fn(1380);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(9192).default;
+  _default = fn(9168).default;
 }
-let items = [fn(9193).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(9193).ErrorCode.E_UNKNOWN];
+let items = [fn(9169).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(9169).ErrorCode.E_UNKNOWN];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
 let obj = {
@@ -581,8 +581,8 @@ if (PlatformUtils) {
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(4780).getIsRunningOnSimulator();
-      let obj7 = fn(4780);
+      isRunningOnSimulator = fn(4749).getIsRunningOnSimulator();
+      let obj7 = fn(4749);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -595,7 +595,7 @@ if (PlatformUtils) {
   let obj5 = fn(1380);
 }
 if (PlatformUtils) {
-  obj = fn(9214).default;
+  obj = fn(9190).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();

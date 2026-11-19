@@ -12,11 +12,11 @@ import DesignIds from "DesignIds" /* 1359 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1379 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import DeviceUtils from "DeviceUtils" /* 4780 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6273 */;
-import MetricEvents from "MetricEvents" /* 6277 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 15302 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 15303 */;
+import DeviceUtils from "DeviceUtils" /* 4749 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6245 */;
+import MetricEvents from "MetricEvents" /* 6249 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 15288 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 15289 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -35,7 +35,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -554,8 +554,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(6272).increment(obj6, true);
-  const tmp26Result = tmp26(6272);
+  tmp26(6244).increment(obj6, true);
+  const tmp26Result = tmp26(6244);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1072);
@@ -636,7 +636,7 @@ export function initSentry() {
             if (tmp15Result14.isAndroid()) {
               str2 = "android";
             }
-            const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35620200000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@356.2.0-2+356202", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+            const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35620300000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@356.3.0-2+356203", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
             items = [PRIMARY_DOMAIN];
             obj3.tracePropagationTargets = items;
             const items1 = [registerSpanErrorInstrumentation, , ];
@@ -667,7 +667,7 @@ export function initSentry() {
             };
             tmp15Result13.init(obj3);
             const tmp15Result16 = _mod674;
-            _mod674.setTag("buildNumber", "35620200000000");
+            _mod674.setTag("buildNumber", "35620300000000");
             const tmp15Result17 = _mod674;
             _mod674.setTag("appVersion", constants.Version);
             const tmp15Result18 = _mod674;

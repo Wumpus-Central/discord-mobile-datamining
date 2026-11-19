@@ -1,13 +1,13 @@
-// === Module 20249: executeHeadlessTask ===
+// === Module 20260: executeHeadlessTask ===
 
-// Module 20249 (executeHeadlessTask)
+// Module 20260 (executeHeadlessTask)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import fast_connect from "fast_connect" /* 15 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8365 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 14856 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8334 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 14842 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -29,7 +29,7 @@ let closure_10 = async function _executeHeadlessTask() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -367,7 +367,7 @@ let closure_10 = async function _executeHeadlessTask() {
   })();
 };
 const AppState = fn(17).AppState;
-const NativeAppStartup = fn(19453);
+const NativeAppStartup = fn(19449);
 ({ initHeadlessTask: metroImportDefault, applicationReady: closure_8 } = NativeAppStartup);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 6905: conjureModelSettingsConnection ===
+// === Module 6875: conjureModelSettingsConnection ===
 
-// Module 6905 (conjureModelSettingsConnection)
+// Module 6875 (conjureModelSettingsConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 6850 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 6820 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/model_settings/conjureModelSettingsConnection.tsx");

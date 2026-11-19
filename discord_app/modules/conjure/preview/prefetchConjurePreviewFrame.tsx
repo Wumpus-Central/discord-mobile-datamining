@@ -1,14 +1,14 @@
-// === Module 6853: prefetchConjurePreviewFrame ===
+// === Module 6823: prefetchConjurePreviewFrame ===
 
-// Module 6853 (prefetchConjurePreviewFrame)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6534 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6567 */;
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 6854 */;
-import createProxyTicket from "createProxyTicket" /* 6856 */;
-import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 6857 */;
+// Module 6823 (prefetchConjurePreviewFrame)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6505 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6538 */;
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 6824 */;
+import createProxyTicket from "createProxyTicket" /* 6826 */;
+import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 6827 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 6845 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 6815 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
 
 require = fn;
 let closure_7 = async function _loadPolicyAndApplication(arg0) {
@@ -22,7 +22,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -54,7 +54,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -62,7 +62,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
     }
   }
 };
-const isLaunched = fn(6532).isLaunched;
+const isLaunched = fn(6503).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/prefetchConjurePreviewFrame.tsx");
 

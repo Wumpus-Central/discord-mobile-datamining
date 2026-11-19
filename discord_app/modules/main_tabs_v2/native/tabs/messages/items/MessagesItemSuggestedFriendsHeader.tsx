@@ -1,11 +1,11 @@
-// === Module 17674: MessagesItemSuggestedFriendsHeader ===
+// === Module 17667: MessagesItemSuggestedFriendsHeader ===
 
-// Module 17674 (MessagesItemSuggestedFriendsHeader)
+// Module 17667 (MessagesItemSuggestedFriendsHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import ThemedGradientDefault from "ThemedGradient" /* 9560 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import ThemedGradientDefault from "ThemedGradient" /* 9539 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,8 +13,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const sum = fn(5414).TextStyleSheet["body-md/semibold"].lineHeight + nativeDefault.space.PX_24;
-const createStyles = fn(4823);
+const sum = fn(5383).TextStyleSheet["body-md/semibold"].lineHeight + nativeDefault.space.PX_24;
+const createStyles = fn(4792);
 let obj = { headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" }, stickyOverlay: null, headerText: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

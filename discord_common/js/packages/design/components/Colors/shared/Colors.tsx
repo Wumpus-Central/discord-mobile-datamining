@@ -1,6 +1,6 @@
-// === Module 4846: shared/Colors ===
+// === Module 4815: shared/Colors ===
 
-// Module 4846 (shared/Colors)
+// Module 4815 (shared/Colors)
 import _modDef671 from "module_671" /* 671 */;
 import _slicedToArray from "module_32" /* 32 */;
 

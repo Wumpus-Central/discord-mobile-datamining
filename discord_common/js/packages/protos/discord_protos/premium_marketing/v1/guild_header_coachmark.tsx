@@ -1,11 +1,11 @@
-// === Module 9079: guild_header_coachmark ===
+// === Module 9054: guild_header_coachmark ===
 
-// Module 9079 (guild_header_coachmark)
+// Module 9054 (guild_header_coachmark)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9056 */;
-import help_article from "help_article" /* 9057 */;
-import cta_button from "cta_button" /* 9058 */;
-import theme_aware_asset from "theme_aware_asset" /* 9066 */;
+import localized_string from "localized_string" /* 9030 */;
+import help_article from "help_article" /* 9031 */;
+import cta_button from "cta_button" /* 9032 */;
+import theme_aware_asset from "theme_aware_asset" /* 9034 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

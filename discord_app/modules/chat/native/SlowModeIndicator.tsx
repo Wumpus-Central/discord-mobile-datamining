@@ -1,16 +1,16 @@
-// === Module 12777: SlowModeIndicator ===
+// === Module 12759: SlowModeIndicator ===
 
-// Module 12777 (SlowModeIndicator)
+// Module 12759 (SlowModeIndicator)
 import nativeDefault from "native" /* 575 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 8301 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 8270 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SlowmodeStore from "SlowmodeStore" /* 8300 */;
+import SlowmodeStore from "SlowmodeStore" /* 8269 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
 const obj3 = { marginLeft: nativeDefault.space.PX_4 };

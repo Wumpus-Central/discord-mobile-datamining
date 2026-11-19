@@ -1,8 +1,8 @@
-// === Module 10561: StatusBar ===
+// === Module 10539: StatusBar ===
 
-// Module 10561 (StatusBar)
+// Module 10539 (StatusBar)
 import _mod17 from "module_17" /* 17 */;
-import StatusBarManagerDefault from "StatusBarManager" /* 10562 */;
+import StatusBarManagerDefault from "StatusBarManager" /* 10540 */;
 import size from "module_2" /* 2 */;
 
 const StatusBar = _mod17.StatusBar;

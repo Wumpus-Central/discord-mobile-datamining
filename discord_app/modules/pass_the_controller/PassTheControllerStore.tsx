@@ -1,17 +1,17 @@
-// === Module 6303: PassTheControllerStore ===
+// === Module 6274: PassTheControllerStore ===
 
-// Module 6303 (PassTheControllerStore)
+// Module 6274 (PassTheControllerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5589 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6309 */;
-import InputHostDefault from "InputHost" /* 14817 */;
-import InputGuestDefault from "InputGuest" /* 14820 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5558 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6280 */;
+import InputHostDefault from "InputHost" /* 14803 */;
+import InputGuestDefault from "InputGuest" /* 14806 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6304 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6275 */;
 
 require = fn;
 function handleControllerGrab(arg0) {
@@ -58,10 +58,10 @@ function stopGuest(streamKey) {
   }
   return flag;
 }
-let closure_7 = fn(14813).isPassTheControllerBlocked;
+let closure_7 = fn(14799).isPassTheControllerBlocked;
 const Constants = fn(1072);
 ({ ApplicationStreamDeleteReasons: closure_8, RTCConnectionStates: closure_9, VoiceFlags: closure_10 } = Constants);
-const StreamTypes = fn(6305).StreamTypes;
+const StreamTypes = fn(6276).StreamTypes;
 let c12 = null;
 let c13 = null;
 let c14 = null;
@@ -168,9 +168,9 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 const rTCConnection = RTCConnectionStore.getRTCConnection();
                 tmp55 = null;
                 if (null != rTCConnection) {
-                  const inputConnection = new inputConnection1(14814).InputConnection(rTCConnection, AuthenticationStore.getId());
+                  const inputConnection = new inputConnection1(14800).InputConnection(rTCConnection, AuthenticationStore.getId());
                   closure_129_0 = inputConnection;
-                  inputConnection.on(inputConnection1(14815).InputEvent.Disconnect, () => {
+                  inputConnection.on(inputConnection1(14801).InputEvent.Disconnect, () => {
                     if (c12 === inputConnection1) {
                       if (null != _null) {
                         obj2 = { type: "PASS_THE_CONTROLLER_UPDATE", streamKey: _null.streamKey, isHost: true, host: AuthenticationStore.getId(), active: false };
@@ -196,7 +196,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 c15 = null;
                 let obj = { streamKey, inputHost: null };
                 const tmp59 = InputHostDefault;
-                let guildId = inputConnection1(6309).decodeStreamKey(streamKey).guildId;
+                let guildId = inputConnection1(6280).decodeStreamKey(streamKey).guildId;
                 if (guildId == null) {
                   guildId = null;
                 }
@@ -205,7 +205,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
                 obj.inputHost = tmp592;
                 _null2 = obj;
                 flag7 = true;
-                const obj7 = inputConnection1(6309);
+                const obj7 = inputConnection1(6280);
               }
               flag5 = flag7;
             }
@@ -252,8 +252,8 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
             const rTCConnection1 = RTCConnectionStore.getRTCConnection();
             tmp14 = null;
             if (null != rTCConnection1) {
-              inputConnection1 = new inputConnection1(14814).InputConnection(rTCConnection1, AuthenticationStore.getId());
-              inputConnection1.on(inputConnection1(14815).InputEvent.Disconnect, () => {
+              inputConnection1 = new inputConnection1(14800).InputConnection(rTCConnection1, AuthenticationStore.getId());
+              inputConnection1.on(inputConnection1(14801).InputEvent.Disconnect, () => {
                 if (c12 === inputConnection1) {
                   if (null != _null) {
                     obj2 = { type: "PASS_THE_CONTROLLER_UPDATE", streamKey: _null.streamKey, isHost: true, host: AuthenticationStore.getId(), active: false };

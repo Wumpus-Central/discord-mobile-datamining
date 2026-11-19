@@ -1,8 +1,8 @@
-// === Module 8247: FamilyCenterStore ===
+// === Module 8216: FamilyCenterStore ===
 
-// Module 8247 (FamilyCenterStore)
+// Module 8216 (FamilyCenterStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8249 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8218 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -303,7 +303,19 @@ function handleConnectionOpen(linkedUsers) {
   if (null == linkedUsers) {
     return false;
   } else {
-    processLinkedUsers(linkedUsers);
+    processLinkedUsers(linkedUsers.map((item) => {
+      const obj = {};
+      const merged = Object.assign(item);
+      let flag;
+      if (dependencyMap[item.user_id] != null) {
+        flag = tmp2.teen_requires_parental_consent;
+      }
+      if (flag == null) {
+        flag = false;
+      }
+      obj.teen_requires_parental_consent = flag;
+      return obj;
+    }));
   }
 }
 function handleSetLocationMetadata(countryCode) {
@@ -363,8 +375,8 @@ function reset() {
   c33 = null;
   c20 = false;
 }
-const getCountryCodeByAlpha2 = fn(5487).getCountryCodeByAlpha2;
-const FamilyCenterConstants = fn(8248);
+const getCountryCodeByAlpha2 = fn(5456).getCountryCodeByAlpha2;
+const FamilyCenterConstants = fn(8217);
 ({ FAMILY_CENTER_REFETCH_COOLDOWN: closure_6, FAMILY_CENTER_SUB_ROUTES } = FamilyCenterConstants);
 const FamilyCenterSubPages = FamilyCenterConstants.FamilyCenterSubPages;
 const TeenActionDisplayType = FamilyCenterConstants.TeenActionDisplayType;

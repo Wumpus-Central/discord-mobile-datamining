@@ -1,9 +1,9 @@
-// === Module 8437: trackPoggermodeSettingsUpdated ===
+// === Module 8406: trackPoggermodeSettingsUpdated ===
 
-// Module 8437 (trackPoggermodeSettingsUpdated)
+// Module 8406 (trackPoggermodeSettingsUpdated)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import PoggermodeConstants from "PoggermodeConstants" /* 8291 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 8260 */;
 import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 

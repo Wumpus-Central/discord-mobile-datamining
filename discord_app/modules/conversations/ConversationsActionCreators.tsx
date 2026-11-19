@@ -1,17 +1,17 @@
-// === Module 8543: ConversationsActionCreators ===
+// === Module 8512: ConversationsActionCreators ===
 
-// Module 8543 (ConversationsActionCreators)
+// Module 8512 (ConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6391 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 6398 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8162 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8546 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6362 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 6369 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8131 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8515 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 8252 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 8255 */;
-import SelectedConversationStore from "SelectedConversationStore" /* 8544 */;
-import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 8545 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 8221 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 8224 */;
+import SelectedConversationStore from "SelectedConversationStore" /* 8513 */;
+import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 8514 */;
 
 require = fn;
 let closure_10 = async function _fetchChannelConversations(arg0) {
@@ -142,7 +142,7 @@ let closure_12 = async function _fetchConversation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -210,7 +210,7 @@ let closure_13 = async function _hydrateSelectedConversation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -247,7 +247,7 @@ let closure_13 = async function _hydrateSelectedConversation(arg0) {
       const obj5 = { includeReactions: true, includeMessageReferences: true, cacheType: closure_131_2 };
       closure_132_14(closure_131_0, closure_131_1, obj5);
       c6 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     } catch (tmp14) {
       c6 = tmp;
       throw tmp14;
@@ -280,7 +280,7 @@ let closure_15 = async function _fetchConversationMessages() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -313,7 +313,7 @@ let closure_15 = async function _fetchConversationMessages() {
               }
               if (isFullyHydratedResult) {
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "+60" };
               }
             } else {
               if ("preview" === cacheType) {
@@ -323,7 +323,7 @@ let closure_15 = async function _fetchConversationMessages() {
               }
               if (null != hydratedMessages) {
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "+60" };
               }
             }
             if ("preview" === cacheType) {
@@ -378,7 +378,7 @@ let closure_15 = async function _fetchConversationMessages() {
     }
   })();
 };
-const FETCH_LIMIT = fn(5447).FETCH_LIMIT;
+const FETCH_LIMIT = fn(5416).FETCH_LIMIT;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");

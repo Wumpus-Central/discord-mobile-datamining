@@ -1,8 +1,8 @@
-// === Module 8965: computeInitialClearAfter ===
+// === Module 8939: computeInitialClearAfter ===
 
-// Module 8965 (computeInitialClearAfter)
-import UserSettings from "UserSettings" /* 4648 */;
-import Constants from "Constants" /* 8963 */;
+// Module 8939 (computeInitialClearAfter)
+import UserSettings from "UserSettings" /* 4617 */;
+import Constants from "Constants" /* 8937 */;
 import size from "module_2" /* 2 */;
 
 const ClearAfterValues = Constants.ClearAfterValues;

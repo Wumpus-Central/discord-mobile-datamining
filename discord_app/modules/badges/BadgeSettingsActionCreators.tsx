@@ -1,6 +1,6 @@
-// === Module 15778: BadgeSettingsActionCreators ===
+// === Module 15769: BadgeSettingsActionCreators ===
 
-// Module 15778 (BadgeSettingsActionCreators)
+// Module 15769 (BadgeSettingsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {

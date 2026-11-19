@@ -1,23 +1,23 @@
-// === Module 18764: SwipeForMemberListWrapper ===
+// === Module 18756: SwipeForMemberListWrapper ===
 
-// Module 18764 (SwipeForMemberListWrapper)
+// Module 18756 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4999 */;
-import RootNavigationRef from "RootNavigationRef" /* 5000 */;
-import useChatLayout from "useChatLayout" /* 5002 */;
-import ChatInputUtils from "ChatInputUtils" /* 5008 */;
-import useThemeDefault from "useTheme" /* 5032 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5560 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 5832 */;
-import ThemedGradientDefault from "ThemedGradient" /* 9560 */;
-import useChatWidthDefault from "useChatWidth" /* 11912 */;
-import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 13640 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17574 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 17585 */;
-import ChannelDetailsDefault from "ChannelDetails" /* 18766 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4968 */;
+import RootNavigationRef from "RootNavigationRef" /* 4969 */;
+import useChatLayout from "useChatLayout" /* 4971 */;
+import ChatInputUtils from "ChatInputUtils" /* 4977 */;
+import useThemeDefault from "useTheme" /* 5001 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5529 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5803 */;
+import ThemedGradientDefault from "ThemedGradient" /* 9539 */;
+import useChatWidthDefault from "useChatWidth" /* 11890 */;
+import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 13622 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17567 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 17578 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 18758 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,15 +28,15 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(8486);
+const ChannelDetailsStore = fn(8455);
 ({ getIsChannelDetailsSearchActive: metroImportDefault, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(8474).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(8443).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
 const tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
 obj2.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -307,12 +307,12 @@ export default function _default(channelId) {
   gesture3 = undefined;
   disallowGesture2 = undefined;
   disallowGesture3 = undefined;
-  const context = obj.useContext(tmp2(11730));
+  const context = obj.useContext(tmp2(11708));
   const gesture2 = context.gesture;
   importDefault = gesture2;
   const disallowGesture = context.disallowGesture;
   dependencyMap = disallowGesture;
-  let context1 = obj.useContext(tmp12(11730).MainTabsChannelScreenStackContext);
+  let context1 = obj.useContext(tmp12(11708).MainTabsChannelScreenStackContext);
   if (context1 == null) {
     context1 = {};
   }
@@ -470,9 +470,9 @@ export default function _default(channelId) {
   const tmp12Result15 = require("module_1655");
   let tmp63 = null;
   if (tmp12Result16.isJankScreenReportingEnabled()) {
-    let obj4 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp12(17580).getBaseScreenName, resolveClosedName: tmp12(17580).getBaseScreenName, onCoveringChange: callback2 };
-    tmp63 = navigation(tmp2(17583), obj4);
-    const tmp2Result = tmp2(17583);
+    let obj4 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp12(17573).getBaseScreenName, resolveClosedName: tmp12(17573).getBaseScreenName, onCoveringChange: callback2 };
+    tmp63 = navigation(tmp2(17576), obj4);
+    const tmp2Result = tmp2(17576);
   }
   const items30 = [tmp63, ];
   let obj5 = { gesture: memo2, children: null };

@@ -1,11 +1,11 @@
-// === Module 14867: NotifSettingsProtoStore ===
+// === Module 14853: NotifSettingsProtoStore ===
 
-// Module 14867 (NotifSettingsProtoStore)
+// Module 14853 (NotifSettingsProtoStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import notification_settings from "notification_settings" /* 14868 */;
-import EffectiveNotifSettings from "EffectiveNotifSettings" /* 14870 */;
+import notification_settings from "notification_settings" /* 14854 */;
+import EffectiveNotifSettings from "EffectiveNotifSettings" /* 14856 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -99,7 +99,7 @@ function acceptEffectiveSettings(effectiveSettings) {
   }
   return tmp;
 }
-let DeclarativeSettings = fn(14868).DeclarativeSettings;
+let DeclarativeSettings = fn(14854).DeclarativeSettings;
 let closure_9 = DeclarativeSettings.create();
 let c10;
 let c11;

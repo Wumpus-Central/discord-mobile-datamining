@@ -1,9 +1,9 @@
-// === Module 14436: ThreadMinusIcon ===
+// === Module 14423: ThreadMinusIcon ===
 
-// Module 14436 (ThreadMinusIcon)
+// Module 14423 (ThreadMinusIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod14437 from "module_14437" /* 14437 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod14424 from "module_14424" /* 14424 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ThreadMinusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14437, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14424, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

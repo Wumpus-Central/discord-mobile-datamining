@@ -1,6 +1,6 @@
-// === Module 7296: getError ===
+// === Module 7266: getError ===
 
-// Module 7296 (getError)
+// Module 7266 (getError)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/getError.tsx");

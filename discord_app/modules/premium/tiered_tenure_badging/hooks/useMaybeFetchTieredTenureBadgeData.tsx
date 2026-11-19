@@ -1,8 +1,8 @@
-// === Module 13989: useMaybeFetchTieredTenureBadgeData ===
+// === Module 13971: useMaybeFetchTieredTenureBadgeData ===
 
-// Module 13989 (useMaybeFetchTieredTenureBadgeData)
-import useMountEffectDefault from "useMountEffect" /* 5384 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7985 */;
+// Module 13971 (useMaybeFetchTieredTenureBadgeData)
+import useMountEffectDefault from "useMountEffect" /* 5353 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7954 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;

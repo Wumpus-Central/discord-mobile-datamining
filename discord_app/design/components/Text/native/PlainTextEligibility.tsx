@@ -1,6 +1,6 @@
-// === Module 5419: PlainTextEligibility ===
+// === Module 5388: PlainTextEligibility ===
 
-// Module 5419 (PlainTextEligibility)
+// Module 5388 (PlainTextEligibility)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

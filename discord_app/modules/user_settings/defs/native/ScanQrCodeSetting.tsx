@@ -1,15 +1,15 @@
-// === Module 16202: ScanQrCodeSetting ===
+// === Module 16193: ScanQrCodeSetting ===
 
-// Module 16202 (ScanQrCodeSetting)
+// Module 16193 (ScanQrCodeSetting)
 import util from "util" /* 1113 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7706 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7676 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const NativePermissionTypes = fn(6404).NativePermissionTypes;
+const NativePermissionTypes = fn(6375).NativePermissionTypes;
 const apply = fn(12);
-const SettingBuilders = fn(11897);
+const SettingBuilders = fn(11875);
 const debounceResult = apply.debounce(asyncGeneratorStep(async () => {
   if (c3 === 2) {
     c3 = 3;
@@ -21,7 +21,7 @@ const debounceResult = apply.debounce(asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(16106).QrCodeIcon,
+  IconComponent: fn(16097).QrCodeIcon,
   onPress: apply.debounce(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -96,7 +96,7 @@ const pressable = SettingBuilders.createPressable({
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

@@ -1,9 +1,9 @@
-// === Module 5543: InviteCodeUtils ===
+// === Module 5512: InviteCodeUtils ===
 
-// Module 5543 (InviteCodeUtils)
+// Module 5512 (InviteCodeUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef1490 from "module_1490" /* 1490 */;
-import QueryStringUtils from "QueryStringUtils" /* 5544 */;
+import QueryStringUtils from "QueryStringUtils" /* 5513 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

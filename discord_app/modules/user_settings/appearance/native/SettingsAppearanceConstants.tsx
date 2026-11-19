@@ -1,6 +1,6 @@
-// === Module 16739: SettingsAppearanceConstants ===
+// === Module 16732: SettingsAppearanceConstants ===
 
-// Module 16739 (SettingsAppearanceConstants)
+// Module 16732 (SettingsAppearanceConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceConstants.tsx");

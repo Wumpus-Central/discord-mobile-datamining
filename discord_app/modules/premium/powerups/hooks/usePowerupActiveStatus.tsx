@@ -1,16 +1,16 @@
-// === Module 13319: usePowerupActiveStatus ===
+// === Module 13301: usePowerupActiveStatus ===
 
-// Module 13319 (usePowerupActiveStatus)
-import GuildStore from "GuildStore" /* 4694 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 8243 */;
+// Module 13301 (usePowerupActiveStatus)
+import GuildStore from "GuildStore" /* 4663 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 8212 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(8244);
+const GuildPowerupsConstants = fn(8213);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: closure_4, PowerupActiveStatusType: hasOwnProperty, POWERUPS_INCLUDED_IN_LEVEL: closure_6, BOOSTING_TIER_TO_LEVEL_SKU_ID: metroImportDefault } = GuildPowerupsConstants);
 const GuildFeatures = fn(1072).GuildFeatures;
-let closure_9 = fn(8245).GAME_SERVER_POWERUP_SKU_ID;
+let closure_9 = fn(8214).GAME_SERVER_POWERUP_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/usePowerupActiveStatus.tsx");
 
@@ -57,7 +57,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "ip", levelPowerup: "isArray" };
             } else {
               let tmp4;
               if (null != metroImportDefault[tmp22]) {
@@ -110,11 +110,11 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "ip", levelPowerup: "isArray" };
     }
   });
   if (mapped.length <= 0) {
-    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "isArray" };
+    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "analyticsLocations" };
     let first = obj3;
   } else {
     first = mapped[0];
@@ -162,7 +162,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "ip", levelPowerup: "isArray" };
             } else {
               let tmp4;
               if (null != metroImportDefault[tmp22]) {
@@ -215,7 +215,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "description", levelPowerup: "isArray" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "ip", levelPowerup: "isArray" };
     }
   });
 }

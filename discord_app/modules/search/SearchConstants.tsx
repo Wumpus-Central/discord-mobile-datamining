@@ -1,7 +1,7 @@
-// === Module 8488: SearchConstants ===
+// === Module 8457: SearchConstants ===
 
-// Module 8488 (SearchConstants)
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5484 */;
+// Module 8457 (SearchConstants)
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5453 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

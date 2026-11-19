@@ -1,12 +1,12 @@
-// === Module 5584: AudioRouteStore ===
+// === Module 5553: AudioRouteStore ===
 
-// Module 5584 (AudioRouteStore)
+// Module 5553 (AudioRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 5585 */;
-import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 5586 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 5554 */;
+import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 5555 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
 import size from "module_2" /* 2 */;
 
 function handleAudioRouteChanged(arr) {

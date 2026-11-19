@@ -1,6 +1,6 @@
-// === Module 6931: ActivityIndicator/ActivityIndicator ===
+// === Module 6901: ActivityIndicator/ActivityIndicator ===
 
-// Module 6931 (ActivityIndicator/ActivityIndicator)
+// Module 6901 (ActivityIndicator/ActivityIndicator)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;

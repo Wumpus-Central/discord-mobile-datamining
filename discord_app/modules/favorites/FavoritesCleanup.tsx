@@ -1,16 +1,16 @@
-// === Module 11192: FavoritesCleanup ===
+// === Module 11170: FavoritesCleanup ===
 
-// Module 11192 (FavoritesCleanup)
+// Module 11170 (FavoritesCleanup)
 import DurationsDefault from "Durations" /* 1089 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6580 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 11193 */;
+import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6551 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 11171 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import GuildStore from "GuildStore" /* 4694 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
-import ReadStateStore from "ReadStateStore" /* 6527 */;
-import FavoriteStore from "FavoriteStore" /* 4675 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import GuildStore from "GuildStore" /* 4663 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
+import ReadStateStore from "ReadStateStore" /* 6498 */;
+import FavoriteStore from "FavoriteStore" /* 4644 */;
 
 require = fn;
 function getFavoriteThreadIdsForCleanup(categoryIds) {
@@ -48,7 +48,7 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -76,7 +76,7 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -84,8 +84,8 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4676).THREAD_CHANNEL_TYPES;
-const FavoritesConstants = fn(4685);
+const THREAD_CHANNEL_TYPES = fn(4645).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(4654);
 ({ FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_10, FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_11, FAVORITES_PRUNE_WHEN_ARCHIVED: closure_12 } = FavoritesConstants);
 const Permissions = fn(1083).Permissions;
 const size = fn(2);

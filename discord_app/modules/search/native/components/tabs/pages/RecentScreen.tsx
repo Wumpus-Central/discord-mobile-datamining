@@ -1,24 +1,24 @@
-// === Module 18789: RecentScreen ===
+// === Module 18781: RecentScreen ===
 
-// Module 18789 (RecentScreen)
+// Module 18781 (RecentScreen)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6322 */;
-import Pressables from "Pressables" /* 6941 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7704 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13125 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 13128 */;
-import SearchUtils from "SearchUtils" /* 13132 */;
-import TrackingDefault from "Tracking" /* 13146 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13150 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16050 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6293 */;
+import Pressables from "Pressables" /* 6911 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7674 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13107 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 13110 */;
+import SearchUtils from "SearchUtils" /* 13114 */;
+import TrackingDefault from "Tracking" /* 13128 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13132 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6549 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13152 */;
-import SearchHistoryStore from "SearchHistoryStore" /* 18790 */;
-import SearchQueryStore from "SearchQueryStore" /* 13139 */;
+import SearchMessageStore from "SearchMessageStore" /* 6520 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13134 */;
+import SearchHistoryStore from "SearchHistoryStore" /* 18782 */;
+import SearchQueryStore from "SearchQueryStore" /* 13121 */;
 
 require = fn;
 function ClearAllHistory(searchContext) {
@@ -37,8 +37,8 @@ function ClearAllHistory(searchContext) {
   const obj2 = { variant: "body-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1113).intl;
   obj2.children = intl2.string(searchContext(1113).t.LFTAUp);
-  obj.children = jsx(searchContext(5414).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(6941).PressableHighlight, {
+  obj.children = jsx(searchContext(5383).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(6911).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -58,9 +58,9 @@ function ViewAll(onJumpToMedia) {
   obj.children = jsx(Text_Text.Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
   return jsx(Pressables.PressableHighlight, { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null });
 }
-const SearchConstants = fn(8488);
+const SearchConstants = fn(8457);
 ({ EMPTY_SEARCH_QUERY_STRING: closure_10, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11, SearchListItemTypes: closure_12, SearchTabs: map1 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(13141).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(13123).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo(function RecentScreen(searchContext) {
@@ -219,7 +219,7 @@ let closure_20 = noop.memo(function RecentUserScreen(searchContext) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -253,7 +253,7 @@ let closure_20 = noop.memo(function RecentUserScreen(searchContext) {
             const result = tmp2(onPressDMItem[18]).trackSuggestedSearchClicked(obj7);
             tmp5(closure_129_0, closure_129_1);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp20) {
           c4 = tmp;

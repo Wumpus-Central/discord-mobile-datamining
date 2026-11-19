@@ -1,9 +1,9 @@
-// === Module 17041: WrenchIcon ===
+// === Module 17034: WrenchIcon ===
 
-// Module 17041 (WrenchIcon)
+// Module 17034 (WrenchIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod17042 from "module_17042" /* 17042 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod17035 from "module_17035" /* 17035 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function WrenchIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17042, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17035, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

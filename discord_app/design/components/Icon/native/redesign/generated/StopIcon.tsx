@@ -1,9 +1,9 @@
-// === Module 18555: StopIcon ===
+// === Module 18548: StopIcon ===
 
-// Module 18555 (StopIcon)
+// Module 18548 (StopIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod18556 from "module_18556" /* 18556 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod18549 from "module_18549" /* 18549 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function StopIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18556, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18549, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

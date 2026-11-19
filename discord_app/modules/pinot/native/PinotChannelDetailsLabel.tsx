@@ -1,15 +1,15 @@
-// === Module 18898: PinotChannelDetailsLabel ===
+// === Module 18890: PinotChannelDetailsLabel ===
 
-// Module 18898 (PinotChannelDetailsLabel)
+// Module 18890 (PinotChannelDetailsLabel)
 import nativeDefault from "native" /* 575 */;
 import _modDef3407 from "module_3407" /* 3407 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
 const hitSlop = { top: 8, bottom: 8, left: 4, right: 8 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { label: { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", minHeight: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_8, borderWidth: 1, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT }, text: null };
 let obj3 = { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", minHeight: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_8, borderWidth: 1, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
 obj2.text = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
@@ -37,8 +37,8 @@ export function PinotChannelDetailsLabel(channel) {
       children: null
     };
     const obj3 = { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult };
-    obj2.children = jsx(tmp2(5414).Text, { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult });
-    return jsx(tmp2(6941).PressableOpacity, {
+    obj2.children = jsx(tmp2(5383).Text, { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult });
+    return jsx(tmp2(6911).PressableOpacity, {
       onPress: function handlePress() {
           ToastActionCreatorsDefault.open("PINOT_CHANNEL_DETAILS_LABEL", { text: stringResult1 });
         },
@@ -52,5 +52,5 @@ export function PinotChannelDetailsLabel(channel) {
   } else {
     return null;
   }
-  obj = stringResult1(11811);
+  obj = stringResult1(11789);
 }

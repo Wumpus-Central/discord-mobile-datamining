@@ -1,13 +1,13 @@
-// === Module 16563: useQuestForPlacement ===
+// === Module 16554: useQuestForPlacement ===
 
-// Module 16563 (useQuestForPlacement)
+// Module 16554 (useQuestForPlacement)
 import _mod19 from "module_19" /* 19 */;
-import AdCreativeType from "AdCreativeType" /* 6473 */;
-import QuestActionCreators from "QuestActionCreators" /* 9858 */;
-import ReturnFullQuestStatusInDecisionExperiment from "ReturnFullQuestStatusInDecisionExperiment" /* 16564 */;
-import useAdRefreshLoop from "useAdRefreshLoop" /* 16565 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8313 */;
-import QuestStore from "QuestStore" /* 8316 */;
+import AdCreativeType from "AdCreativeType" /* 6444 */;
+import QuestActionCreators from "QuestActionCreators" /* 9837 */;
+import ReturnFullQuestStatusInDecisionExperiment from "ReturnFullQuestStatusInDecisionExperiment" /* 16555 */;
+import useAdRefreshLoop from "useAdRefreshLoop" /* 16556 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8282 */;
+import QuestStore from "QuestStore" /* 8285 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -64,7 +64,7 @@ export default function useFetchQuestForAdPlacement(MOBILE_HOME_DOCK_AREA) {
     if (!tmpResult2.isQuestExpired(stateFromStores1)) {
       tmp7 = stateFromStores1;
     }
-    tmpResult2 = tmp(8323);
+    tmpResult2 = tmp(8292);
   }
   return tmp7;
 };

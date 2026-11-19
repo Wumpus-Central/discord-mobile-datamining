@@ -1,7 +1,7 @@
-// === Module 14501: UserProfileAddableWidgetCategories ===
+// === Module 14488: UserProfileAddableWidgetCategories ===
 
-// Module 14501 (UserProfileAddableWidgetCategories)
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6872 */;
+// Module 14488 (UserProfileAddableWidgetCategories)
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6842 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileAddableWidgetCategories.tsx");

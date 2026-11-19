@@ -1,18 +1,18 @@
-// === Module 11266: EmojiPickerListComponentEmpty ===
+// === Module 11244: EmojiPickerListComponentEmpty ===
 
-// Module 11266 (EmojiPickerListComponentEmpty)
+// Module 11244 (EmojiPickerListComponentEmpty)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import BottomSheetModal from "BottomSheetModal" /* 5055 */;
-import SearchEmpty from "SearchEmpty" /* 11267 */;
-import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 11271 */;
+import BottomSheetModal from "BottomSheetModal" /* 5024 */;
+import SearchEmpty from "SearchEmpty" /* 11245 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 11249 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE }, emptyStateImage: null };
 let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };

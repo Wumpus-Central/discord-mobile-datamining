@@ -1,14 +1,14 @@
-// === Module 18464: AppLauncherActionSheet ===
+// === Module 18457: AppLauncherActionSheet ===
 
-// Module 18464 (AppLauncherActionSheet)
+// Module 18457 (AppLauncherActionSheet)
 import _mod1655 from "module_1655" /* 1655 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5051 */;
-import ActionSheetContextDefault from "ActionSheetContext" /* 5382 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10636 */;
-import AppLauncherContext from "AppLauncherContext" /* 12067 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 12068 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12877 */;
-import getAppDMApplication from "getAppDMApplication" /* 12996 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5020 */;
+import ActionSheetContextDefault from "ActionSheetContext" /* 5351 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10614 */;
+import AppLauncherContext from "AppLauncherContext" /* 12044 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 12045 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12859 */;
+import getAppDMApplication from "getAppDMApplication" /* 12978 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

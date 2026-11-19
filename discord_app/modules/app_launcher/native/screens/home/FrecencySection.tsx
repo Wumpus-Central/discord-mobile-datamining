@@ -1,21 +1,21 @@
-// === Module 12848: FrecencySection ===
+// === Module 12830: FrecencySection ===
 
-// Module 12848 (FrecencySection)
+// Module 12830 (FrecencySection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5560 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 10634 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10636 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12724 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12850 */;
-import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12851 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 10612 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10614 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12707 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12832 */;
+import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12833 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
-import FrecencySectionStore from "FrecencySectionStore" /* 12849 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
+import FrecencySectionStore from "FrecencySectionStore" /* 12831 */;
 
 const require = globalThis.__r;
 
@@ -104,7 +104,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12847).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(12829).getAppLauncherIconSource(app.section.application);
     let obj = { style: disabled ? tmp.appContainerDisabled : tmp.appContainer, disabled, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     const application = app.section.application;
     let name;
@@ -125,22 +125,22 @@ function FrecentApp(app) {
     let tmp3 = null != appLauncherIconSource;
     if (tmp3) {
       const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-      tmp3 = closure_11(onAppSelected(5510), obj2);
+      tmp3 = closure_11(onAppSelected(5479), obj2);
     }
     items = [tmp3, ];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12856).SubmittingOverlay, obj3);
+    items[1] = closure_11(app(12838).SubmittingOverlay, obj3);
     obj.children = items;
-    return closure_12(app(6941).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(6911).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(12849).FrecencySectionSelection;
+let FrecencySectionSelection = fn(12831).FrecencySectionSelection;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_16 }, headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, header: null, scrollView: null, scrollViewContentContainer: null, contextMenuIcon: null, appContainer: null, appContainerDisabled: null, commandContainer: null, appIcon: null, loadingCommandIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, submittingOverlay: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };

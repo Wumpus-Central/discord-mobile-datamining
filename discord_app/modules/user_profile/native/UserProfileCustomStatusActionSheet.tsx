@@ -1,22 +1,22 @@
-// === Module 14127: UserProfileCustomStatusActionSheet ===
+// === Module 14109: UserProfileCustomStatusActionSheet ===
 
-// Module 14127 (UserProfileCustomStatusActionSheet)
+// Module 14109 (UserProfileCustomStatusActionSheet)
 import nativeDefault from "native" /* 575 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5851 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 8125 */;
-import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 8957 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 13428 */;
-import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 14128 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5822 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 8094 */;
+import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 8931 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 13410 */;
+import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 14110 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(7475);
+const Constants = fn(7445);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { statusPreviewContainer: { flexDirection: "row", columnGap: AVATAR_CUSTOM_STATUS_GAP, marginHorizontal: nativeDefault.space.PX_16 }, avatarContainer: { height: AVATAR_CONTAINER_SIZE, width: AVATAR_CONTAINER_SIZE, alignItems: "center", justifyContent: "center" }, avatarStatus: null, customStatusBubble: null };
 let obj3 = { flexDirection: "row", columnGap: AVATAR_CUSTOM_STATUS_GAP, marginHorizontal: nativeDefault.space.PX_16 };
 obj2.avatarStatus = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

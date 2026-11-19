@@ -1,8 +1,8 @@
-// === Module 8288: ArtProfileAnalytics ===
+// === Module 8257: ArtProfileAnalytics ===
 
-// Module 8288 (ArtProfileAnalytics)
-import Timers from "Timers" /* 4667 */;
-import NativeTTIModuleDefault from "NativeTTIModule" /* 8284 */;
+// Module 8257 (ArtProfileAnalytics)
+import Timers from "Timers" /* 4636 */;
+import NativeTTIModuleDefault from "NativeTTIModule" /* 8253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,7 +18,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -80,7 +80,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
         closure_130_6 = obj5;
         closure_131_1(closure_131_2[5]).track(closure_131_5.ANDROID_ART_PROFILE_SNAPSHOT, closure_130_6, { logEventProperties: true });
         c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp6) {
       c5 = tmp;

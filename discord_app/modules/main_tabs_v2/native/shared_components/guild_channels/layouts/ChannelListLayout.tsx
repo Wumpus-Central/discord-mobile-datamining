@@ -1,11 +1,11 @@
-// === Module 11090: ChannelListLayout ===
+// === Module 11068: ChannelListLayout ===
 
-// Module 11090 (ChannelListLayout)
-import UserSettings from "UserSettings" /* 4648 */;
-import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 5484 */;
-import CozyDrawer from "CozyDrawer" /* 11091 */;
-import Compact from "Compact" /* 11093 */;
-import Cozy from "Cozy" /* 11094 */;
+// Module 11068 (ChannelListLayout)
+import UserSettings from "UserSettings" /* 4617 */;
+import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 5453 */;
+import CozyDrawer from "CozyDrawer" /* 11069 */;
+import Compact from "Compact" /* 11071 */;
+import Cozy from "Cozy" /* 11072 */;
 import size from "module_2" /* 2 */;
 
 function getLayoutStyles(layout) {

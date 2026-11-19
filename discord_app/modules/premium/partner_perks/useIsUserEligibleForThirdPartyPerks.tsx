@@ -1,9 +1,9 @@
-// === Module 9281: useIsUserEligibleForThirdPartyPerks ===
+// === Module 9257: useIsUserEligibleForThirdPartyPerks ===
 
-// Module 9281 (useIsUserEligibleForThirdPartyPerks)
+// Module 9257 (useIsUserEligibleForThirdPartyPerks)
 import initialize from "initialize" /* 504 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
-import ThirdPartyPerkUtils from "ThirdPartyPerkUtils" /* 9282 */;
+import ThirdPartyPerkUtils from "ThirdPartyPerkUtils" /* 9258 */;
 import UserStore from "UserStore" /* 1388 */;
 import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 

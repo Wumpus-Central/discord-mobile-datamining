@@ -1,7 +1,7 @@
-// === Module 5597: Camera ===
+// === Module 5566: Camera ===
 
-// Module 5597 (Camera)
-import VideoDefault from "Video" /* 5593 */;
+// Module 5566 (Camera)
+import VideoDefault from "Video" /* 5562 */;
 import noop from "module_19" /* 19 */;
 
 class Camera {

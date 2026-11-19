@@ -1,9 +1,9 @@
-// === Module 8080: StorefrontProductStore ===
+// === Module 8049: StorefrontProductStore ===
 
-// Module 8080 (StorefrontProductStore)
+// Module 8049 (StorefrontProductStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GenericIAPStore from "GenericIAPStore" /* 8081 */;
+import GenericIAPStore from "GenericIAPStore" /* 8050 */;
 
 require = fn;
 function handleNativeStorefront() {

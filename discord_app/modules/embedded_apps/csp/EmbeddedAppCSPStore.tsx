@@ -1,6 +1,6 @@
-// === Module 6858: EmbeddedAppCSPStore ===
+// === Module 6828: EmbeddedAppCSPStore ===
 
-// Module 6858 (EmbeddedAppCSPStore)
+// Module 6828 (EmbeddedAppCSPStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

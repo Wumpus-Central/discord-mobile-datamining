@@ -1,8 +1,8 @@
-// === Module 19223: useUserTileBackground ===
+// === Module 19215: useUserTileBackground ===
 
-// Module 19223 (useUserTileBackground)
-import useProfileTileGradientDefault from "useProfileTileGradient" /* 8119 */;
-import DominantColorUtils from "DominantColorUtils" /* 8942 */;
+// Module 19215 (useUserTileBackground)
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 8088 */;
+import DominantColorUtils from "DominantColorUtils" /* 8916 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_panel/native/card/useUserTileBackground.tsx");

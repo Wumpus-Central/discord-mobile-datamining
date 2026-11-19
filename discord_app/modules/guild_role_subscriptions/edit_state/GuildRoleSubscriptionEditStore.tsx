@@ -1,6 +1,6 @@
-// === Module 16691: GuildRoleSubscriptionEditStore ===
+// === Module 16684: GuildRoleSubscriptionEditStore ===
 
-// Module 16691 (GuildRoleSubscriptionEditStore)
+// Module 16684 (GuildRoleSubscriptionEditStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

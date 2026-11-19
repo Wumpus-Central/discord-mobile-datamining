@@ -1,26 +1,27 @@
-// === Module 15598: ConjureVoiceSessionCoordinator ===
+// === Module 15584: ConjureVoiceSessionCoordinator ===
 
-// Module 15598 (ConjureVoiceSessionCoordinator)
+// Module 15584 (ConjureVoiceSessionCoordinator)
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5719 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5722 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6534 */;
-import RPCErrorDefault from "RPCError" /* 6818 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15600 */;
-import FramesStore from "FramesStore" /* 6531 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5688 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5691 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6505 */;
+import RPCErrorDefault from "RPCError" /* 6790 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15586 */;
+import FramesStore from "FramesStore" /* 6502 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5471 */;
+import VoiceStateStore from "VoiceStateStore" /* 5440 */;
 
 let obj2 = fn;
 const RPCErrors = fn(1072).RPCErrors;
-const Constants = fn(5568);
-({ Features: closure_10, MediaEngineContextTypes: closure_11 } = Constants);
-let closure_12 = { x: 0, y: 0, z: -1 };
-let closure_13 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
+const constants = fn(5690).SpatialAudioOverrideSource;
+const Constants = fn(5537);
+({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
+let closure_13 = { x: 0, y: 0, z: -1 };
+let closure_14 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
 class ConjureVoiceSessionCoordinator {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -78,7 +79,7 @@ prototype["getCapabilities"] = function getCapabilities() {
 prototype["getSpatialCapabilities"] = function getSpatialCapabilities() {
   let available = SpatialAudioForVoiceExperimentDefault.getConfig({ location: "ConjureVoiceSessionCoordinator" }).enabled;
   if (available) {
-    available = MediaEngineStore.supports(constants.SPATIAL_AUDIO);
+    available = MediaEngineStore.supports(constants2.SPATIAL_AUDIO);
   }
   return { available, source_positioning: available, source_gain: false, source_spatial_blend: false, listener_pose: available, room_size: available, reflections: available, acoustics: available, max_sources: 50, max_updates_per_second: 20 };
 };
@@ -137,15 +138,15 @@ prototype["start"] = function start(id) {
               const tmp15 = new RPCErrorDefault(obj, "This app can only start a voice session in a voice channel in the server it is installed in");
               throw tmp15;
             }
-            tmp41Result2 = tmp41(15599);
+            tmp41Result2 = tmp41(15585);
           }
-          tmp41Result = tmp41(15599);
+          tmp41Result = tmp41(15585);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj13 = handleFrameLifecycleChange(15599);
+        obj13 = handleFrameLifecycleChange(15585);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -216,16 +217,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(15601);
+    obj2 = obj2(15587);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(15601).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(15587).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(15601);
+      const tmp11Result = tmp11(15587);
     }
     tmp11 = obj2;
   } else {
@@ -298,13 +299,13 @@ prototype["syncSpatialAudioOverrides"] = function syncSpatialAudioOverrides() {
     if (spatialHolder != null) {
       acoustics = spatialHolder.acoustics;
     }
-    let mergeResult = applyDefault.merge({}, closure_13, acoustics);
+    let mergeResult = applyDefault.merge({}, closure_14, acoustics);
   } else {
     mergeResult = {};
   }
   if (!obj3.isEqual(mergeResult, self.spatialAudioOverrides)) {
     self.spatialAudioOverrides = mergeResult;
-    const result = AudioActionCreatorsDefault.setSpatialAudioOverrides(mergeResult);
+    const result = AudioActionCreatorsDefault.setSpatialAudioOverrides(mergeResult, constants.CONJURE);
     const tmp6Result = AudioActionCreatorsDefault;
   }
   obj3 = applyDefault;
@@ -352,7 +353,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15602).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15588).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }
@@ -489,7 +490,7 @@ prototype["reconcileSession"] = function reconcileSession(item10012) {
           if (0 !== found.length) {
             if (self.withMediaEngineConnection(item10012, (setUserPosition) => {
               for (const item10006 of found) {
-                let setUserPositionResult = arg0.setUserPosition(item10006, closure_12);
+                let setUserPositionResult = arg0.setUserPosition(item10006, closure_13);
                 continue;
               }
             })) {
@@ -554,7 +555,7 @@ prototype["applySources"] = function applySources(sources) {
   closure_2 = items.filter((item) => !set.has(item));
   const result = this.withMediaEngineConnection(sources, (setUserPosition) => {
     for (const item10006 of closure_2) {
-      let setUserPositionResult = arg0.setUserPosition(item10006, closure_12);
+      let setUserPositionResult = arg0.setUserPosition(item10006, closure_13);
       continue;
     }
     for (const item10017 of tmp3) {
@@ -573,7 +574,7 @@ prototype["clearAppliedSources"] = function clearAppliedSources(appliedUserIds) 
     const self = this;
     const result = this.withMediaEngineConnection(appliedUserIds, (setUserPosition) => {
       for (const item10007 of tmp) {
-        let setUserPositionResult = arg0.setUserPosition(item10007, closure_12);
+        let setUserPositionResult = arg0.setUserPosition(item10007, closure_13);
         continue;
       }
     });
@@ -589,7 +590,7 @@ prototype["resetParticipantEffects"] = function resetParticipantEffects(result) 
     const participantIds = self.getParticipantIds(channelId.channelId);
     for (const item10011 of participantIds) {
       if (item10011 !== closure_0) {
-        let setUserPositionResult = arg0.setUserPosition(tmp2, closure_12);
+        let setUserPositionResult = arg0.setUserPosition(tmp2, closure_13);
       }
       continue;
     }
@@ -612,7 +613,7 @@ prototype["withMediaEngineConnection"] = function withMediaEngineConnection(item
       c2 = true;
       closure_1(mediaEngineConnectionId);
     }
-  }, constants2.DEFAULT);
+  }, constants3.DEFAULT);
   return c2;
 };
 prototype["cancelPendingUpdate"] = function cancelPendingUpdate(updateTimer) {

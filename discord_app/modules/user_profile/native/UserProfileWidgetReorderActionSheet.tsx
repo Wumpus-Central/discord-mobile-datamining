@@ -1,14 +1,14 @@
-// === Module 15878: UserProfileWidgetReorderActionSheet ===
+// === Module 15869: UserProfileWidgetReorderActionSheet ===
 
-// Module 15878 (UserProfileWidgetReorderActionSheet)
+// Module 15869 (UserProfileWidgetReorderActionSheet)
 import nativeDefault from "native" /* 575 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6773 */;
-import WidgetUtils from "WidgetUtils" /* 10116 */;
-import useGameCoverLayoutDefault from "useGameCoverLayout" /* 10121 */;
-import UserProfileWidgetDraggableCardDefault from "UserProfileWidgetDraggableCard" /* 10130 */;
-import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 10133 */;
-import UserProfileReorderActionSheetDefault from "UserProfileReorderActionSheet" /* 10144 */;
-import UserProfileApplicationWidgetIconDefault from "UserProfileApplicationWidgetIcon" /* 10307 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6745 */;
+import WidgetUtils from "WidgetUtils" /* 10094 */;
+import useGameCoverLayoutDefault from "useGameCoverLayout" /* 10099 */;
+import UserProfileWidgetDraggableCardDefault from "UserProfileWidgetDraggableCard" /* 10108 */;
+import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 10111 */;
+import UserProfileReorderActionSheetDefault from "UserProfileReorderActionSheet" /* 10122 */;
+import UserProfileApplicationWidgetIconDefault from "UserProfileApplicationWidgetIcon" /* 10285 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -77,9 +77,9 @@ function CompactApplicationWidget(widget) {
   return <tmp5 title={name} titleLeadingIcon={jsx(UserProfileApplicationWidgetIconDefault, { application: getOrFetchApplication })} />;
 }
 const View = fn(17).View;
-const widgetShowsGameDetails = fn(6870).widgetShowsGameDetails;
+const widgetShowsGameDetails = fn(6840).widgetShowsGameDetails;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { list: { gap: nativeDefault.space.PX_16 } };
 let closure_8 = createStyles.createStyles(obj);
 let closure_12 = noop.memo(function CompactWidgetRenderer(widget) {
@@ -102,9 +102,9 @@ export default function UserProfileWidgetReorderActionSheet(returnFocusRef) {
   items = [AuthenticationStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => id.getId());
   const obj = stateFromStores(504);
-  const displayableBoardWidgets = stateFromStores(10310).useDisplayableBoardWidgets(stateFromStores, true);
+  const displayableBoardWidgets = stateFromStores(10288).useDisplayableBoardWidgets(stateFromStores, true);
   const obj3 = { dismissAccessibilityLabel: null, returnFocusRef: null, children: null };
-  const obj2 = stateFromStores(10310);
+  const obj2 = stateFromStores(10288);
   const intl = stateFromStores(1113).intl;
   obj3.dismissAccessibilityLabel = intl.string(stateFromStores(1113).t["+uBSeT"]);
   obj3.returnFocusRef = returnFocusRef.returnFocusRef;

@@ -1,9 +1,9 @@
-// === Module 6928: common/SafeAreaView ===
+// === Module 6898: common/SafeAreaView ===
 
-// Module 6928 (common/SafeAreaView)
+// Module 6898 (common/SafeAreaView)
 import _modDef1345 from "module_1345" /* 1345 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useRefValueDefault from "useRefValue" /* 6929 */;
+import useRefValueDefault from "useRefValue" /* 6899 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

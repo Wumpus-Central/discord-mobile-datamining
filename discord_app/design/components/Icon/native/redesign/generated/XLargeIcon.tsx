@@ -1,9 +1,9 @@
-// === Module 10172: XLargeIcon ===
+// === Module 10150: XLargeIcon ===
 
-// Module 10172 (XLargeIcon)
+// Module 10150 (XLargeIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod10173 from "module_10173" /* 10173 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod10151 from "module_10151" /* 10151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function XLargeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10173, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10151, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

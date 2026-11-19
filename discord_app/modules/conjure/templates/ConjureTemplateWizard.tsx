@@ -1,16 +1,16 @@
-// === Module 18713: ConjureTemplateWizard ===
+// === Module 18705: ConjureTemplateWizard ===
 
-// Module 18713 (ConjureTemplateWizard)
+// Module 18705 (ConjureTemplateWizard)
 import util from "util" /* 1113 */;
-import _modDef4121 from "module_4121" /* 4121 */;
-import ConjureUtils from "ConjureUtils" /* 6774 */;
-import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 18714 */;
+import _modDef4089 from "module_4089" /* 4089 */;
+import ConjureUtils from "ConjureUtils" /* 6746 */;
+import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 18706 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 function conjureTemplateStartMessage(templateName) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef4121["/qSx7+"], { templateName, locale: util.intl.currentLocale });
+  return intl.formatToPlainString(_modDef4089["/qSx7+"], { templateName, locale: util.intl.currentLocale });
 }
 let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
   closure_0 = arg0;
@@ -28,7 +28,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
     }
   })();
 };
-const ConjureConnectionStore = fn(6878);
+const ConjureConnectionStore = fn(6848);
 ({ prepareTemplate: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/ConjureTemplateWizard.tsx");
@@ -196,9 +196,9 @@ export function conjureWizardServerCopy(stateFromStores1) {
   if (server == null) {
     const obj = { title: null, hint: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef4121.vcxYIA);
+    obj.title = intl.string(_modDef4089.vcxYIA);
     const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef4121.auUHPZ);
+    obj.hint = intl2.string(_modDef4089.auUHPZ);
     server = obj;
   }
   return server;

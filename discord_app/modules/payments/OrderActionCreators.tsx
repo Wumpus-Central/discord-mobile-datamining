@@ -1,13 +1,13 @@
-// === Module 6771: OrderActionCreators ===
+// === Module 6743: OrderActionCreators ===
 
-// Module 6771 (OrderActionCreators)
+// Module 6743 (OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import _modDef2355 from "module_2355" /* 2355 */;
-import OrderSigningErrors from "OrderSigningErrors" /* 6772 */;
+import _modDef2357 from "module_2357" /* 2357 */;
+import OrderSigningErrors from "OrderSigningErrors" /* 6744 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingError_mod from "BillingError" /* 4643 */;
+import BillingError_mod from "BillingError" /* 6230 */;
 
 require = fn;
 function isOrderShape(obj) {
@@ -104,7 +104,7 @@ let closure_12 = async function _signOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -226,7 +226,7 @@ let closure_13 = async function _getOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -315,7 +315,7 @@ let closure_15 = async function _fetchOrderEntitlements(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -384,7 +384,7 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -431,7 +431,7 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "+60" };
                 }
               } else {
                 try {
@@ -481,7 +481,7 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                   } else {
                     closure_129_1 = value;
                     c3 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "+60" };
                   }
                 } catch (tmp16) {
                   c3 = tmp;
@@ -595,10 +595,10 @@ let closure_17 = async function _fetchOrderEntitlementsWithRetry(arg0) {
     }
   }
 };
-const ConstraintReasonCode = fn(6770).ConstraintReasonCode;
+const ConstraintReasonCode = fn(6742).ConstraintReasonCode;
 const Endpoints = fn(1072).Endpoints;
 let closure_6 = new LoggerDefault("OrderActionCreators");
-let obj = { [SPENDING_LIMIT_REACHED]: fn(4643).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED, [SPENDING_LIMIT_WILL_EXCEED]: fn(4643).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED };
+let obj = { [SPENDING_LIMIT_REACHED]: fn(6230).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED, [SPENDING_LIMIT_WILL_EXCEED]: fn(6230).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED };
 ({ SPENDING_LIMIT_REACHED, SPENDING_LIMIT_WILL_EXCEED } = ConstraintReasonCode);
 let BillingError = BillingError_mod;
 class OrderSigningFailedWithConstraintsError extends tmp3 {

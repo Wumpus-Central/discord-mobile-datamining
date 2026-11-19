@@ -1,13 +1,13 @@
-// === Module 11654: SavedMessageUtils ===
+// === Module 11632: SavedMessageUtils ===
 
-// Module 11654 (SavedMessageUtils)
+// Module 11632 (SavedMessageUtils)
 import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7648 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 
 const require = globalThis.__r;
 
@@ -29,7 +29,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -74,11 +74,11 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
             if (null == closure_130_2.recipients) {
               c5 = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "+60" };
             } else if (closure_130_2.recipients.length > 1) {
               c5 = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "+60" };
             } else {
               const recipients = closure_130_2.recipients;
               c6 = 3;
@@ -109,7 +109,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
         const obj11 = { openChannel: true, navigationReplace: closure_131_0(closure_131_2[11]).isGuildsOnTopOfTabs() };
         tmp20(CHANNELResult, obj11);
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       } catch (tmp34) {
         closure_4 = tmp34;
         if (tmp4 === c5) {
@@ -122,7 +122,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const ChannelRecord = fn(4676);
+const ChannelRecord = fn(4645);
 ({ PrivateChannelRecord: hasOwnProperty, UnknownChannelRecord: closure_6 } = ChannelRecord);
 const Constants = fn(1072);
 ({ ChannelTypes: closure_9, Routes: closure_10 } = Constants);

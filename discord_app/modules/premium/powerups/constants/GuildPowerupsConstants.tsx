@@ -1,11 +1,11 @@
-// === Module 8244: GuildPowerupsConstants ===
+// === Module 8213: GuildPowerupsConstants ===
 
-// Module 8244 (GuildPowerupsConstants)
+// Module 8213 (GuildPowerupsConstants)
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 4656 */;
-import GameServerExperiment from "GameServerExperiment" /* 6799 */;
-import Powerups from "Powerups" /* 7912 */;
-import GameServerConstants from "GameServerConstants" /* 8245 */;
+import dismissible_content from "dismissible_content" /* 4625 */;
+import GameServerExperiment from "GameServerExperiment" /* 6771 */;
+import Powerups from "Powerups" /* 7882 */;
+import GameServerConstants from "GameServerConstants" /* 8214 */;
 import PremiumConstants from "PremiumConstants" /* 1390 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;

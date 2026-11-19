@@ -1,7 +1,7 @@
-// === Module 15285: hasPerformanceForKrispFullband ===
+// === Module 15271: hasPerformanceForKrispFullband ===
 
-// Module 15285 (hasPerformanceForKrispFullband)
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5693 */;
+// Module 15271 (hasPerformanceForKrispFullband)
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5662 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/device/hasPerformanceForKrispFullband.tsx");

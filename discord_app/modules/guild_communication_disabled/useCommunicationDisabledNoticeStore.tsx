@@ -1,12 +1,12 @@
-// === Module 4736: useCommunicationDisabledNoticeStore ===
+// === Module 4705: useCommunicationDisabledNoticeStore ===
 
-// Module 4736 (useCommunicationDisabledNoticeStore)
+// Module 4705 (useCommunicationDisabledNoticeStore)
 import _mod1258 from "module_1258" /* 1258 */;
-import _mod4738 from "module_4738" /* 4738 */;
+import _mod4707 from "module_4707" /* 4707 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(4737).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(4706).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 const module_561 = fn(561);
 let state = module_561.createStore((arg0, arg1) => {
   _require = arg0;
@@ -54,7 +54,7 @@ export function useCommunicationDisabledNoticeStore(arg0) {
     items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, _mod4738.shallow), 2);
+  }, _mod4707.shallow), 2);
   const first = tmp[0];
   items = [!first.has(arg0), tmp[1]];
   return items;

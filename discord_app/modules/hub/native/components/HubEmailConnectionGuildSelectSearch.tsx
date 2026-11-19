@@ -1,19 +1,19 @@
-// === Module 13623: HubEmailConnectionGuildSelectSearch ===
+// === Module 13605: HubEmailConnectionGuildSelectSearch ===
 
-// Module 13623 (HubEmailConnectionGuildSelectSearch)
+// Module 13605 (HubEmailConnectionGuildSelectSearch)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useNavigation from "useNavigation" /* 1502 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import FastImageDefault from "FastImage" /* 5510 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6585 */;
-import NavigatorHeader from "NavigatorHeader" /* 7006 */;
-import _mod7401 from "module_7401" /* 7401 */;
-import SearchBarNavDefault from "SearchBarNav" /* 13124 */;
-import HubActionCreatorsDefault from "HubActionCreators" /* 13611 */;
-import _modDef13624 from "module_13624" /* 13624 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import FastImageDefault from "FastImage" /* 5479 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6556 */;
+import NavigatorHeader from "NavigatorHeader" /* 6976 */;
+import _mod7371 from "module_7371" /* 7371 */;
+import SearchBarNavDefault from "SearchBarNav" /* 13106 */;
+import HubActionCreatorsDefault from "HubActionCreators" /* 13593 */;
+import _modDef13606 from "module_13606" /* 13606 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ require = fn;
 function EmptyState() {
   const tmp = closure_11();
   const obj = { style: tmp.emptyWrapper, children: null };
-  const obj2 = { style: tmp.emptyStateImage, source: _modDef13624 };
+  const obj2 = { style: tmp.emptyStateImage, source: _modDef13606 };
   items = [React5(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.emptyStateTitle, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -34,10 +34,10 @@ function EmptyState() {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13597).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13579).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, fauxHeader: { paddingHorizontal: 0 }, emptyWrapper: { flex: 1, alignItems: "center", justifyContent: "center", marginTop: 64, paddingHorizontal: 16 }, emptyStateImage: { marginBottom: 24 }, emptyStateTitle: { marginBottom: 4, textAlign: "center" }, error: null };
 let obj3 = { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginBottom: 8 };
@@ -106,7 +106,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "+60" };
             }
           } else {
             try {
@@ -138,7 +138,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6257).APIError(closure_128_0);
+                  const aPIError = new id(6228).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);
@@ -188,7 +188,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   };
   const tmp8Result = SearchBarNavDefault;
   obj6.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingTop: 16 };
-  items[1] = anyErrorMessage(_mod7401.FlashList, obj6);
+  items[1] = anyErrorMessage(_mod7371.FlashList, obj6);
   obj3.children = items;
   return closure_9(closure_10, obj3);
 };

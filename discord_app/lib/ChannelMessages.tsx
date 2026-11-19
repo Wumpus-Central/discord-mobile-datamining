@@ -1,14 +1,13 @@
-// === Module 6296: ChannelMessages ===
+// === Module 6268: ChannelMessages ===
 
-// Module 6296 (ChannelMessages)
+// Module 6268 (ChannelMessages)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5874 */;
-import EnsureReceivedMessagesAddedInOrderExperimentDefault from "EnsureReceivedMessagesAddedInOrderExperiment" /* 6297 */;
-import Client from "Client" /* 6298 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6299 */;
-import SortedArrayUtilsAll from "SortedArrayUtils" /* 6301 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5845 */;
+import EnsureReceivedMessagesAddedInOrderExperimentDefault from "EnsureReceivedMessagesAddedInOrderExperiment" /* 6269 */;
+import Client from "Client" /* 6270 */;
+import SortedArrayUtilsAll from "SortedArrayUtils" /* 6272 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -1057,8 +1056,8 @@ prototype2["mergeDelta"] = function mergeDelta() {
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = items.map((item) => set(5874).createMessageRecord(item));
-    const combined = found.concat(mapped, items1.map((item) => set(5874).createMessageRecord(item)));
+    const mapped = items.map((item) => set(5845).createMessageRecord(item));
+    const combined = found.concat(mapped, items1.map((item) => set(5845).createMessageRecord(item)));
     _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
 };
@@ -1283,7 +1282,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     return truncateTopResult;
   }
 };
-prototype2["receivePushNotification"] = function receivePushNotification(message, isConnectedResult) {
+prototype2["receivePushNotification"] = function receivePushNotification(message) {
   const self = this;
   value = null;
   if (null != message.nonce) {
@@ -1294,18 +1293,12 @@ prototype2["receivePushNotification"] = function receivePushNotification(message
   } else if (null != self.get(message.id, true)) {
     return self;
   } else {
-    const result = IOSPushNotificationRawPayloadFixExperiment.isIOSPushNotificationRawPayloadFixExperimentEnabled();
-    let tmp3 = !result;
-    if (result) {
-      tmp3 = !isConnectedResult;
-    }
-    const obj = { ready: true, cached: tmp3 };
-    const mutation = self.mutate(obj);
-    const tmp5 = mergeMessage(self, message);
-    if (obj3.getConfig({ location: "receiveMessage" }).enabled) {
-      let insertInOrderResult = mutation.insertInOrder(tmp5);
+    const mutation = self.mutate({ ready: true, cached: true });
+    const tmp3 = mergeMessage(self, message);
+    if (obj2.getConfig({ location: "receiveMessage" }).enabled) {
+      let insertInOrderResult = mutation.insertInOrder(tmp3);
     } else {
-      items = [tmp5];
+      items = [tmp3];
       insertInOrderResult = mutation.merge(items);
     }
     return insertInOrderResult;
@@ -1442,7 +1435,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = id(6298).JumpType.ANIMATED;
+        jumpType = id(6270).JumpType.ANIMATED;
       }
       let obj2 = { ready: true, loadingMore: false, jumpType, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
       let flag8;
@@ -1609,7 +1602,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  const result = reversed(6300).requireSortedDescending(messages);
+  const result = reversed(6271).requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
@@ -1622,7 +1615,7 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   if (!stale) {
     cached = self.cached;
   }
-  const obj = reversed(6300);
+  const obj = reversed(6271);
   const obj2 = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
   const initialScrollSequenceId = self.initialScrollSequenceId;
   if (cached) {

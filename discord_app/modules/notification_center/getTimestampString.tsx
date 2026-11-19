@@ -1,6 +1,6 @@
-// === Module 5887: getTimestampString ===
+// === Module 5858: getTimestampString ===
 
-// Module 5887 (getTimestampString)
+// Module 5858 (getTimestampString)
 import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
 import size from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// === Module 10847: sound_playback/SoundUtils ===
+// === Module 10825: sound_playback/SoundUtils ===
 
-// Module 10847 (sound_playback/SoundUtils)
+// Module 10825 (sound_playback/SoundUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import _modDef10848 from "module_10848" /* 10848 */;
-import _modDef10849 from "module_10849" /* 10849 */;
+import _modDef10826 from "module_10826" /* 10826 */;
+import _modDef10827 from "module_10827" /* 10827 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -120,19 +120,19 @@ obj5.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 MetaQuestUtils = fn(1627);
 obj5.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 ({ VOICE: obj2.camera_on, VOICE: obj2.camera_off, VOICE: obj2.deafen, VOICE: obj2.disconnect, NOTIFICATION: obj2.mention1, NOTIFICATION: obj2.mention2, NOTIFICATION: obj2.mention3, NOTIFICATION: obj2.message1, NOTIFICATION: obj2.message2, NOTIFICATION: obj2.message3, VOICE: obj2.mute, VOICE: obj2.ptt_start, VOICE: obj2.ptt_stop, VOICE: obj2.reconnect, VOICE: obj2.stage_waiting, VOICE: obj2.stream_ended, VOICE: obj2.stream_started, VOICE: obj2.stream_user_joined, VOICE: obj2.stream_user_left, VOICE: obj2.soundboard_sound, VOICE: obj2.undeafen, VOICE: obj2.unmute, VOICE: obj2.user_join, VOICE: obj2.user_leave, VOICE: obj2.user_moved, MEDIA: obj2.vibing_wumpus, NOTIFICATION_NO_VIBRATION: obj2.activity_end, NOTIFICATION_NO_VIBRATION: obj2.activity_launch, NOTIFICATION_NO_VIBRATION: obj2.activity_user_join, NOTIFICATION_NO_VIBRATION: obj2.activity_user_left } = obj);
-const obj8 = { stage_waiting: _modDef10848, vibing_wumpus: _modDef10849 };
+const obj8 = { stage_waiting: _modDef10826, vibing_wumpus: _modDef10827 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
-fn = (call_calling, call_calling, _volume, DEFAULT) => {
+fn = (mobileAudioSound, soundboard_sound, c1, DEFAULT) => {
   const merged = Object.assign({ numberOfLoops: 0, playbackRequest: 0, prepareBackoff: null, retryAfter: 0 });
   merged[2] = new BackoffDefault();
-  let tmp3 = obj8[call_calling];
+  let tmp3 = obj8[mobileAudioSound];
   if (tmp3 == null) {
-    tmp3 = call_calling;
+    tmp3 = mobileAudioSound;
   }
   merged.name = tmp3;
-  merged.usage = obj5[call_calling];
-  merged._volume = _volume;
+  merged.usage = obj5[soundboard_sound];
+  merged._volume = importDefault;
   merged.outputChannel = DEFAULT;
   return merged;
 };
@@ -189,35 +189,37 @@ prototype2["play"] = function play() {
     }
   });
 };
-prototype2["playWithListener"] = function playWithListener() {
+prototype2["playWithListener"] = function playWithListener(arg0) {
   const self = this;
+  closure_1 = arg0;
   const sum = this.playbackRequest + 1;
   this.playbackRequest = sum;
   require = sum;
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;
-    _self = arg1;
-    const ensureSoundResult = _self.ensureSound();
-    _self.ensureSound().then((duration) => {
+    closure_1 = arg1;
+    const ensureSoundResult = self.ensureSound();
+    self.ensureSound().then((duration) => {
       if (null != duration) {
         if (sum === self.playbackRequest) {
-          let tmp4 = null != duration.duration;
-          if (tmp4) {
-            tmp4 = 0 !== duration.duration;
+          if (null != duration.duration) {
+            if (0 !== duration.duration) {
+              duration.play();
+              if (closure_1 != null) {
+                tmp7();
+              }
+              let num2 = 1;
+              if (obj.isIOS()) {
+                num2 = 1000;
+              }
+              const _setTimeout = setTimeout;
+              const timerId = setTimeout(() => {
+                closure_1_0(true);
+              }, duration.duration * num2);
+              obj = PlatformUtils;
+            }
           }
-          if (!tmp4) {
-            closure_1("sound has no duration");
-          }
-          duration.play();
-          let num2 = 1;
-          if (obj.isIOS()) {
-            num2 = 1000;
-          }
-          const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => {
-            closure_1_0(true);
-          }, duration.duration * num2);
-          obj = PlatformUtils;
+          closure_1("sound has no duration");
         }
       }
       closure_0(false);
@@ -279,7 +281,7 @@ prototype2["ensureSound"] = function ensureSound() {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } else {
           try {

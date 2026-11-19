@@ -1,12 +1,12 @@
-// === Module 4761: AutomodPermissionUtils ===
+// === Module 4730: AutomodPermissionUtils ===
 
-// Module 4761 (AutomodPermissionUtils)
-import GuildMemberStore from "GuildMemberStore" /* 4735 */;
+// Module 4730 (AutomodPermissionUtils)
+import GuildMemberStore from "GuildMemberStore" /* 4704 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4741).GuildMemberFlags;
+const GuildMemberFlags = fn(4710).GuildMemberFlags;
 let items = [, , ];
 ({ AUTOMOD_QUARANTINED_BIO: arr[0], AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME: arr[1], AUTOMOD_QUARANTINED_SERVER_TAG: arr[2] } = GuildMemberFlags);
 const size = fn(2);

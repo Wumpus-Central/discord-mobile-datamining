@@ -1,11 +1,11 @@
-// === Module 7406: GuildRoleMemberActionCreators ===
+// === Module 7376: GuildRoleMemberActionCreators ===
 
-// Module 7406 (GuildRoleMemberActionCreators)
+// Module 7376 (GuildRoleMemberActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1456 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6419 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6390 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7405 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7375 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;

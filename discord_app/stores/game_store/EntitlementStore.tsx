@@ -1,16 +1,16 @@
-// === Module 8032: EntitlementStore ===
+// === Module 8001: EntitlementStore ===
 
-// Module 8032 (EntitlementStore)
+// Module 8001 (EntitlementStore)
 import applyDefault from "apply" /* 12 */;
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
 import EntitlementTypes from "EntitlementTypes" /* 2173 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 8033 */;
-import EntitlementSourceTypes from "EntitlementSourceTypes" /* 8034 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 8002 */;
+import EntitlementSourceTypes from "EntitlementSourceTypes" /* 8003 */;
 import EntitlementRecord from "EntitlementRecord" /* 2166 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2163 */;
-import SKUStore from "SKUStore" /* 6582 */;
+import SKUStore from "SKUStore" /* 6553 */;
 
 require = fn;
 function addEntitlement(entitlement) {

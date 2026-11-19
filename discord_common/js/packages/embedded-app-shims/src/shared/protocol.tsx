@@ -1,7 +1,7 @@
-// === Module 19541: protocol ===
+// === Module 19537: protocol ===
 
-// Module 19541 (protocol)
-import Safe2 from "Safe" /* 19542 */;
+// Module 19537 (protocol)
+import Safe2 from "Safe" /* 19538 */;
 import size from "module_2" /* 2 */;
 
 const discordEmbeddedAppShim = "discordEmbeddedAppShim";

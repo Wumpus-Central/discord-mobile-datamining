@@ -1,19 +1,19 @@
-// === Module 13654: useCreateGameInvitePost ===
+// === Module 13636: useCreateGameInvitePost ===
 
-// Module 13654 (useCreateGameInvitePost)
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12145 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 12818 */;
+// Module 13636 (useCreateGameInvitePost)
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12124 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 12800 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 6832 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6831 */;
-import SlowmodeStore from "SlowmodeStore" /* 8300 */;
+import LocalActivityStore from "LocalActivityStore" /* 6802 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6801 */;
+import SlowmodeStore from "SlowmodeStore" /* 8269 */;
 
 require = fn;
-const SlowmodeType = fn(8300).SlowmodeType;
+const SlowmodeType = fn(8269).SlowmodeType;
 const ActivityActionTypes = fn(1072).ActivityActionTypes;
-const ChannelFlags = fn(4679).ChannelFlags;
+const ChannelFlags = fn(4648).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/useCreateGameInvitePost.tsx");
 
@@ -129,7 +129,7 @@ export function useCreateGameInvitePost(parentChannel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

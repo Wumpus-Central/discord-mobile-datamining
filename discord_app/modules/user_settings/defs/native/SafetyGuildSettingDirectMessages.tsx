@@ -1,20 +1,20 @@
-// === Module 17427: SafetyGuildSettingDirectMessages ===
+// === Module 17420: SafetyGuildSettingDirectMessages ===
 
-// Module 17427 (SafetyGuildSettingDirectMessages)
+// Module 17420 (SafetyGuildSettingDirectMessages)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4648 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5768 */;
-import common_AlertDefault from "common/Alert" /* 5840 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16040 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 17422 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 17428 */;
-import GuildStore from "GuildStore" /* 4694 */;
+import UserSettings from "UserSettings" /* 4617 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5739 */;
+import common_AlertDefault from "common/Alert" /* 5811 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16031 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 17415 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 17421 */;
+import GuildStore from "GuildStore" /* 4663 */;
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(17419);
+const UserSettingsSafetySelectedGuildStore = fn(17412);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11898).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-const SettingBuilders = fn(11897);
+let closure_6 = fn(11876).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11875);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -52,7 +52,7 @@ const toggle = SettingBuilders.createToggle({
       return stringResult;
     }
   },
-  parent: fn(8624).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8593).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const RestrictedGuildIds = UserSettings.RestrictedGuildIds;

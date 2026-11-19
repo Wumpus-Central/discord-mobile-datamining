@@ -1,11 +1,11 @@
-// === Module 14025: PremiumGroupActionCreators ===
+// === Module 14007: PremiumGroupActionCreators ===
 
-// Module 14025 (PremiumGroupActionCreators)
+// Module 14007 (PremiumGroupActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserRecord from "UserRecord" /* 1407 */;
-import SubscriptionGroupMemberRecord from "SubscriptionGroupMemberRecord" /* 14026 */;
+import SubscriptionGroupMemberRecord from "SubscriptionGroupMemberRecord" /* 14008 */;
 
 require = fn;
 let closure_7 = async function _fetchPremiumGroupMembership() {
@@ -19,7 +19,7 @@ let closure_7 = async function _fetchPremiumGroupMembership() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -138,7 +138,7 @@ let closure_9 = async function _inviteUsersToSubscriptionGroup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -213,7 +213,7 @@ let closure_10 = async function _removeUserFromSubscriptionGroup(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -286,7 +286,7 @@ let closure_11 = async function _fetchSubscriptionGroupMembers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -373,7 +373,7 @@ let closure_12 = async function _acceptSubscriptionGroupInvite(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -455,7 +455,7 @@ let closure_13 = async function _removeSubscriptionGroupInvite(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

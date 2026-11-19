@@ -1,9 +1,9 @@
-// === Module 14979: SignPostIcon ===
+// === Module 14965: SignPostIcon ===
 
-// Module 14979 (SignPostIcon)
+// Module 14965 (SignPostIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod14980 from "module_14980" /* 14980 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod14966 from "module_14966" /* 14966 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function SignPostIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14980, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14966, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

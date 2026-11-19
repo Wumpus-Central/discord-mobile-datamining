@@ -1,8 +1,8 @@
-// === Module 14337: useActivityTimer ===
+// === Module 14324: useActivityTimer ===
 
-// Module 14337 (useActivityTimer)
+// Module 14324 (useActivityTimer)
 import DurationsDefault from "Durations" /* 1089 */;
-import utils from "utils" /* 7921 */;
+import utils from "utils" /* 7891 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/user_profile/hooks/useActivityT
 export default function useActivityTimer(start) {
   start = start.start;
   let first;
-  const interval = new first(4667).Interval();
+  const interval = new first(4636).Interval();
   first = _slicedToArray(closure_5(interval), 1)[0];
   const tmp3 = _slicedToArray(closure_5(() => Date.now()), 2);
   importDefault = tmp3[1];

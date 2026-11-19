@@ -1,19 +1,19 @@
-// === Module 9153: premiumOrbsDeliveredModal ===
+// === Module 9129: premiumOrbsDeliveredModal ===
 
-// Module 9153 (premiumOrbsDeliveredModal)
+// Module 9129 (premiumOrbsDeliveredModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5769 */;
-import NitroOrbsDeliveredModalDefault from "NitroOrbsDeliveredModal" /* 9155 */;
-import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 9190 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5740 */;
+import NitroOrbsDeliveredModalDefault from "NitroOrbsDeliveredModal" /* 9131 */;
+import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 9166 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 8032 */;
+import EntitlementStore from "EntitlementStore" /* 8001 */;
 
 const require = fn;
 function getCoinEntitlements() {
   return EntitlementStore.getForSku(SINGLE_ORB_SKU_ID);
 }
 const jsx = fn(21).jsx;
-const SINGLE_ORB_SKU_ID = fn(9154).SINGLE_ORB_SKU_ID;
+const SINGLE_ORB_SKU_ID = fn(9130).SINGLE_ORB_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_marketing/native/premiumOrbsDeliveredModal.tsx");
 

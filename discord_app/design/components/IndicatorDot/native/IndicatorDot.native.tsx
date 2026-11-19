@@ -1,11 +1,11 @@
-// === Module 8913: IndicatorDot ===
+// === Module 8887: IndicatorDot ===
 
-// Module 8913 (IndicatorDot)
+// Module 8887 (IndicatorDot)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import IndicatorDotShared from "IndicatorDotShared" /* 8914 */;
-import createStyles from "createStyles" /* 4823 */;
+import IndicatorDotShared from "IndicatorDotShared" /* 8888 */;
+import createStyles from "createStyles" /* 4792 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

@@ -1,17 +1,17 @@
-// === Module 19715: SelectedChannelManager ===
+// === Module 19711: SelectedChannelManager ===
 
-// Module 19715 (SelectedChannelManager)
+// Module 19711 (SelectedChannelManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6437 */;
-import transitionToGuild from "transitionToGuild" /* 6743 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6408 */;
+import transitionToGuild from "transitionToGuild" /* 6714 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4726 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4856 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
 
 require = fn;
-const findFirstVoiceChannelId = fn(4726).findFirstVoiceChannelId;
+const findFirstVoiceChannelId = fn(4695).findFirstVoiceChannelId;
 const Constants = fn(1072);
 ({ ChannelTypes: metroImportDefault, Routes: closure_8, ME: closure_9, NULL_STRING_GUILD_ID: closure_10 } = Constants);
 class SelectedChannelManager extends tmp3 {

@@ -1,12 +1,12 @@
-// === Module 8267: GuildVersions ===
+// === Module 8236: GuildVersions ===
 
-// Module 8267 (GuildVersions)
+// Module 8236 (GuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4701 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4670 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4694 */;
+import GuildStore from "GuildStore" /* 4663 */;
 
 require = fn;
 let closure_6 = new LoggerDefault("GuildVersions");
@@ -75,7 +75,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

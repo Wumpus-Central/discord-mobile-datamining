@@ -1,9 +1,9 @@
-// === Module 9095: nitro_home_section_header ===
+// === Module 9070: nitro_home_section_header ===
 
-// Module 9095 (nitro_home_section_header)
+// Module 9070 (nitro_home_section_header)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9056 */;
-import help_article from "help_article" /* 9057 */;
+import localized_string from "localized_string" /* 9030 */;
+import help_article from "help_article" /* 9031 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

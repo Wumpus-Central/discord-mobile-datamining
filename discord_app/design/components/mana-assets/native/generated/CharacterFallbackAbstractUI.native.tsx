@@ -1,19 +1,19 @@
-// === Module 12052: CharacterFallbackAbstractUI ===
+// === Module 12029: CharacterFallbackAbstractUI ===
 
-// Module 12052 (CharacterFallbackAbstractUI)
-import assetHelpers from "assetHelpers" /* 7268 */;
-import _modDef12053 from "module_12053" /* 12053 */;
-import _modDef12054 from "module_12054" /* 12054 */;
-import _modDef12055 from "module_12055" /* 12055 */;
+// Module 12029 (CharacterFallbackAbstractUI)
+import assetHelpers from "assetHelpers" /* 7238 */;
+import _modDef12030 from "module_12030" /* 12030 */;
+import _modDef12031 from "module_12031" /* 12031 */;
+import _modDef12032 from "module_12032" /* 12032 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12053 }, 3: null };
-let obj2 = { uri: _modDef12053 };
-obj[2] = { uri: _modDef12054 };
-const obj3 = { uri: _modDef12054 };
-obj[3] = { uri: _modDef12055 };
+let obj = { 1: null, 2: { uri: _modDef12030 }, 3: null };
+let obj2 = { uri: _modDef12030 };
+obj[2] = { uri: _modDef12031 };
+const obj3 = { uri: _modDef12031 };
+obj[3] = { uri: _modDef12032 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CharacterFallbackAbstractUI.native.tsx");
 

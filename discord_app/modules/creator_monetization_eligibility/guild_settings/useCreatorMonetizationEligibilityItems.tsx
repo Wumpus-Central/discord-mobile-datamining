@@ -1,9 +1,9 @@
-// === Module 19983: useCreatorMonetizationEligibilityItems ===
+// === Module 19994: useCreatorMonetizationEligibilityItems ===
 
-// Module 19983 (useCreatorMonetizationEligibilityItems)
+// Module 19994 (useCreatorMonetizationEligibilityItems)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import formatDurationFromDaysDefault from "formatDurationFromDays" /* 19986 */;
+import formatDurationFromDaysDefault from "formatDurationFromDays" /* 19997 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           tmp13();
         }
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       } catch (tmp16) {
         c2 = tmp;
         throw tmp16;
@@ -135,7 +135,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let handleContactSupportClick;
       if (!noRecentViolations) {
         handleContactSupportClick = function handleContactSupportClick() {
-          const tmp = onEligibilityBecameStale(5498);
+          const tmp = onEligibilityBecameStale(5467);
           return tmp(onEligibilityBecameStale(2188).getSubmitRequestURL());
         };
       }

@@ -1,6 +1,6 @@
-// === Module 17507: AgeGateStore ===
+// === Module 17500: AgeGateStore ===
 
-// Module 17507 (AgeGateStore)
+// Module 17500 (AgeGateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AgeGateConstants from "AgeGateConstants" /* 1097 */;

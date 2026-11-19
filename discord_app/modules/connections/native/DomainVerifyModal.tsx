@@ -1,15 +1,15 @@
-// === Module 7129: DomainVerifyModal ===
+// === Module 7099: DomainVerifyModal ===
 
-// Module 7129 (DomainVerifyModal)
+// Module 7099 (DomainVerifyModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import useNavigation from "useNavigation" /* 1502 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import components_Button_Button from "components/Button/Button" /* 5421 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6337 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6928 */;
-import DomainVerifyUtils from "DomainVerifyUtils" /* 7163 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import components_Button_Button from "components/Button/Button" /* 5390 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6898 */;
+import DomainVerifyUtils from "DomainVerifyUtils" /* 7133 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -312,7 +312,7 @@ const Constants = fn(1072);
 ({ Endpoints: closure_6, PlatformTypes: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 }, dns: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginTop: 16 }, error: { marginTop: 16 }, code: { fontFamily: "monospace", marginBottom: 4 }, button: { marginTop: 16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const constants2 = { DOMAIN: "DOMAIN", PROOF_DNS: "PROOF_DNS", PROOF_HTTP: "PROOF_HTTP" };
@@ -330,7 +330,7 @@ export default function DomainVerifyModal(arg0) {
     const obj2 = { headerTitle: null, headerLeft: null, render: null };
     const intl = onClose(1113).intl;
     obj2.headerTitle = intl.string(onClose(1113).t["7lo8+e"]);
-    obj2.headerLeft = onClose(7006).getHeaderBackButton(onClose);
+    obj2.headerLeft = onClose(6976).getHeaderBackButton(onClose);
     obj2.render = function render() {
       return React5(DomainScreen, { onClose });
     };
@@ -338,8 +338,8 @@ export default function DomainVerifyModal(arg0) {
     const obj4 = { headerTitle: null, headerLeft: null, render: null };
     const intl2 = onClose(1113).intl;
     obj4.headerTitle = intl2.string(onClose(1113).t["7lo8+e"]);
-    const obj3 = onClose(7006);
-    obj4.headerLeft = onClose(7006).getHeaderBackButton(onClose);
+    const obj3 = onClose(6976);
+    obj4.headerLeft = onClose(6976).getHeaderBackButton(onClose);
     obj4.render = function render(domain) {
       return React5(DNSProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -347,8 +347,8 @@ export default function DomainVerifyModal(arg0) {
     const obj6 = { headerTitle: null, headerLeft: null, render: null };
     const intl3 = onClose(1113).intl;
     obj6.headerTitle = intl3.string(onClose(1113).t["7lo8+e"]);
-    const obj5 = onClose(7006);
-    obj6.headerLeft = onClose(7006).getHeaderBackButton(onClose);
+    const obj5 = onClose(6976);
+    obj6.headerLeft = onClose(6976).getHeaderBackButton(onClose);
     obj6.render = function render(domain) {
       return React5(HTTPProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -356,6 +356,6 @@ export default function DomainVerifyModal(arg0) {
     const obj8 = { screens: obj, initialRouteName: constants2.DOMAIN, headerBackTitle: null };
     const intl4 = onClose(1113).intl;
     obj8.headerBackTitle = intl4.string(onClose(1113).t["13/7kX"]);
-    return closure_8(onClose(7003).Navigator, obj8);
+    return closure_8(onClose(6973).Navigator, obj8);
   }
 };

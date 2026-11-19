@@ -1,7 +1,7 @@
-// === Module 8571: ContextMenuConstants ===
+// === Module 8540: ContextMenuConstants ===
 
-// Module 8571 (ContextMenuConstants)
-import HapticUtils from "HapticUtils" /* 5039 */;
+// Module 8540 (ContextMenuConstants)
+import HapticUtils from "HapticUtils" /* 5008 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1380 */;
 import size from "module_2" /* 2 */;
 

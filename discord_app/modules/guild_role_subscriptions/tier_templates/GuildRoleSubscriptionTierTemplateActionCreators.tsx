@@ -1,6 +1,6 @@
-// === Module 20106: GuildRoleSubscriptionTierTemplateActionCreators ===
+// === Module 20117: GuildRoleSubscriptionTierTemplateActionCreators ===
 
-// Module 20106 (GuildRoleSubscriptionTierTemplateActionCreators)
+// Module 20117 (GuildRoleSubscriptionTierTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_5 = async function _getTemplates(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_5 = async function _getTemplates(arg0) {
           const obj = closure_130_1(closure_130_2[2]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp16) {
       c4 = tmp;

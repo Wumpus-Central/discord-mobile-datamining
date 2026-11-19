@@ -1,18 +1,18 @@
-// === Module 19054: ContextMenuCommandItem ===
+// === Module 19046: ContextMenuCommandItem ===
 
-// Module 19054 (ContextMenuCommandItem)
+// Module 19046 (ContextMenuCommandItem)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import FastImageDefault from "FastImage" /* 5510 */;
-import TableRow from "TableRow" /* 6956 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13019 */;
+import FastImageDefault from "FastImage" /* 5479 */;
+import TableRow from "TableRow" /* 6926 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13001 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { commandIcon: null, loadingIcon: null, loadingName: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
 obj2.commandIcon = size;
@@ -44,18 +44,18 @@ export default function ContextMenuCommandItem(item) {
   }, items);
   const tmp = closure_6();
   const tmp5 = item;
-  const applicationCommandsIconSource = item(13019).getApplicationCommandsIconSource(section);
+  const applicationCommandsIconSource = item(13001).getApplicationCommandsIconSource(section);
   const obj2 = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {
     const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-    tmp8Result = jsx(section(5510), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+    tmp8Result = jsx(section(5479), { style: tmp.commandIcon, source: applicationCommandsIconSource });
   }
   obj2.icon = tmp8Result;
-  obj2.trailing = jsx(tmp5(5521).SendMessageIcon, {});
+  obj2.trailing = jsx(tmp5(5490).SendMessageIcon, {});
   obj2.start = start;
   obj2.end = end;
-  return jsx(item(6956).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
+  return jsx(item(6926).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
 };
 export function ContextMenuCommandLoadingItem(arg0) {
   ({ start, end } = arg0);

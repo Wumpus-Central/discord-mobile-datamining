@@ -1,14 +1,14 @@
-// === Module 12703: FriendsAnimation ===
+// === Module 12686: FriendsAnimation ===
 
-// Module 12703 (FriendsAnimation)
+// Module 12686 (FriendsAnimation)
 import initialize from "initialize" /* 504 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UserUtils from "UserUtils" /* 4879 */;
-import CheckpointFriendsRive from "CheckpointFriendsRive" /* 4960 */;
+import UserUtils from "UserUtils" /* 4848 */;
+import CheckpointFriendsRive from "CheckpointFriendsRive" /* 4929 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-const CHECKPOINT_PRIMARY = fn(5877).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5848).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 let closure_5 = { "Avatar01/Stroke": "#000000", "Avatar01/Fill": CHECKPOINT_PRIMARY, "Avatar02/Stroke": "#000000", "Avatar02/Fill": CHECKPOINT_PRIMARY, "Avatar03/Stroke": "#000000", "Avatar03/Fill": CHECKPOINT_PRIMARY, "Avatar04/Stroke": "#000000", "Avatar04/Fill": CHECKPOINT_PRIMARY, "Avatar05/Stroke": "#000000", "Avatar05/Fill": CHECKPOINT_PRIMARY, ConnectorColor: CHECKPOINT_PRIMARY };
 const PlatformUtils = fn(1360);

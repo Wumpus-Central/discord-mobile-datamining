@@ -1,19 +1,19 @@
-// === Module 14247: getGameOrganizationInviteCtaState ===
+// === Module 14230: getGameOrganizationInviteCtaState ===
 
-// Module 14247 (getGameOrganizationInviteCtaState)
+// Module 14230 (getGameOrganizationInviteCtaState)
 import util from "util" /* 1113 */;
-import _modDef2555 from "module_2555" /* 2555 */;
+import _modDef2557 from "module_2557" /* 2557 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/getGameOrganizationInviteCtaState.tsx");
 
-export default function getGameOrganizationInviteCtaState(noun) {
-  noun = noun.noun;
-  if (noun.accepted) {
-    if (noun.canGoToGuild) {
+export default function getGameOrganizationInviteCtaState(displayNoun) {
+  let str = displayNoun.displayNoun;
+  if (displayNoun.accepted) {
+    if (displayNoun.canGoToGuild) {
       const obj2 = { kind: "go_to_server", label: null, actionable: true };
       const intl5 = util.intl;
-      obj2.label = intl5.string(_modDef2555.H1wMHV);
+      obj2.label = intl5.string(_modDef2557.H1wMHV);
       let obj3 = obj2;
     } else {
       obj3 = { kind: "joined", label: null, actionable: false };
@@ -22,21 +22,28 @@ export default function getGameOrganizationInviteCtaState(noun) {
     }
   } else {
     if (tmp2) {
-      const obj4 = { kind: "full", label: null, actionable: false };
       const intl3 = util.intl;
-      const obj5 = { noun };
-      obj4.label = intl3.formatToPlainString(_modDef2555.rMimTG, obj5);
+      if (str == null) {
+        str = "other";
+      }
+      const obj4 = { kind: "full", label: null, actionable: false };
+      const obj5 = { displayNoun: str };
+      obj4.label = intl3.formatToPlainString(_modDef2557.rMimTG, obj5);
       let obj = obj4;
     } else if (tmp) {
       const obj6 = { kind: "awaiting", label: null, actionable: false };
       const intl2 = util.intl;
-      obj6.label = intl2.string(_modDef2555.OkMPbI);
+      obj6.label = intl2.string(_modDef2557.OkMPbI);
       obj = obj6;
     } else {
-      obj = { kind: "join", label: null, actionable: true };
       const intl = util.intl;
-      const obj7 = { noun };
-      obj.label = intl.formatToPlainString(_modDef2555["Cz/ZUM"], obj7);
+      let str2 = str;
+      if (str == null) {
+        str2 = "other";
+      }
+      obj = { kind: "join", label: null, actionable: true };
+      const obj7 = { displayNoun: str2 };
+      obj.label = intl.formatToPlainString(_modDef2557["Cz/ZUM"], obj7);
     }
     return obj;
   }

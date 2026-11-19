@@ -1,16 +1,16 @@
-// === Module 12467: CheckpointCharacterStageLayer ===
+// === Module 12450: CheckpointCharacterStageLayer ===
 
-// Module 12467 (CheckpointCharacterStageLayer)
-import usePrevious from "usePrevious" /* 6325 */;
-import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 12468 */;
-import CheckpointCharacterStageDefault from "CheckpointCharacterStage" /* 12469 */;
+// Module 12450 (CheckpointCharacterStageLayer)
+import usePrevious from "usePrevious" /* 6296 */;
+import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 12451 */;
+import CheckpointCharacterStageDefault from "CheckpointCharacterStage" /* 12452 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CheckpointTransitionConstants = fn(12440);
+const CheckpointTransitionConstants = fn(12423);
 ({ CHECKPOINT_CHARACTER_STAGE_FADE: metroImportDefault, CHECKPOINT_CHARACTER_STAGE_HIDE: closure_8, CHECKPOINT_INSTANT: closure_9, CheckpointCharacterStageHiddenBy: closure_10 } = CheckpointTransitionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

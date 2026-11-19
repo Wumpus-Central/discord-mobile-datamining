@@ -1,14 +1,14 @@
-// === Module 12238: useConjureProjectCreator ===
+// === Module 12221: useConjureProjectCreator ===
 
-// Module 12238 (useConjureProjectCreator)
+// Module 12221 (useConjureProjectCreator)
 import util from "util" /* 1113 */;
-import _modDef4121 from "module_4121" /* 4121 */;
-import UserUtils from "UserUtils" /* 4879 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 11937 */;
-import ListUtils from "ListUtils" /* 12239 */;
+import _modDef4089 from "module_4089" /* 4089 */;
+import UserUtils from "UserUtils" /* 4848 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 11915 */;
+import ListUtils from "ListUtils" /* 12222 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
-import ConjureChatStore from "ConjureChatStore" /* 6836 */;
+import ConjureChatStore from "ConjureChatStore" /* 6806 */;
 
 require = fn;
 function useConjureProjectPeople(project) {
@@ -94,12 +94,12 @@ export default function useConjureProjectCreator(project) {
       if (0 === mapped.length) {
         intl = intl(1113).intl;
         obj2 = { creator: name };
-        let formatToPlainStringResult = intl.formatToPlainString(_modDef4121.t5RWBS, obj2);
+        let formatToPlainStringResult = intl.formatToPlainString(_modDef4089.t5RWBS, obj2);
       } else {
         const intl2 = intl(1113).intl;
-        const obj4 = { creator: name, collaborators: intl(12239).getListSummaryLabel(mapped) };
-        formatToPlainStringResult = intl2.formatToPlainString(_modDef4121["b5uCe/"], obj4);
-        const intlResult = intl(12239);
+        const obj4 = { creator: name, collaborators: intl(12222).getListSummaryLabel(mapped) };
+        formatToPlainStringResult = intl2.formatToPlainString(_modDef4089["b5uCe/"], obj4);
+        const intlResult = intl(12222);
       }
       obj.label = formatToPlainStringResult;
     }
@@ -109,11 +109,11 @@ export function getConjureProjectCreatorLabel(creator, names) {
   if (0 === names.length) {
     const intl2 = util.intl;
     const obj3 = { creator };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef4121.t5RWBS, obj3);
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef4089.t5RWBS, obj3);
   } else {
     const intl = util.intl;
     const obj = { creator, collaborators: ListUtils.getListSummaryLabel(names) };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4121["b5uCe/"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4089["b5uCe/"], obj);
   }
   return formatToPlainStringResult;
 }

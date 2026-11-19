@@ -1,10 +1,10 @@
-// === Module 16035: SensitiveContentFiltersScreen ===
+// === Module 16026: SensitiveContentFiltersScreen ===
 
-// Module 16035 (SensitiveContentFiltersScreen)
+// Module 16026 (SensitiveContentFiltersScreen)
 import util from "util" /* 1113 */;
-import SettingBuilders from "SettingBuilders" /* 11897 */;
-import SettingLayoutDefault from "SettingLayout" /* 15907 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 16036 */;
+import SettingBuilders from "SettingBuilders" /* 11875 */;
+import SettingLayoutDefault from "SettingLayout" /* 15898 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 16027 */;
 import noop from "module_19" /* 19 */;
 
 const SettingsScreenNoticesDefault = SettingsScreenNotices;
@@ -14,7 +14,7 @@ function SensitiveContentFiltersNotices() {
   const obj = { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
   return jsx(SettingsScreenNoticesDefault, { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS });
 }
-const MobileUserSettings = fn(8624).MobileUserSettings;
+const MobileUserSettings = fn(8593).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx");

@@ -1,6 +1,6 @@
-// === Module 19453: NativeAppStartup ===
+// === Module 19449: NativeAppStartup ===
 
-// Module 19453 (NativeAppStartup)
+// Module 19449 (NativeAppStartup)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
@@ -9,14 +9,14 @@ import TokenManagerAll from "TokenManager" /* 1098 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 4718 */;
-import timeRequireDefault from "timeRequire" /* 8197 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15361 */;
-import DeepLinkEventMapping from "DeepLinkEventMapping" /* 20218 */;
-import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 20219 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 4687 */;
+import timeRequireDefault from "timeRequire" /* 8166 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15347 */;
+import DeepLinkEventMapping from "DeepLinkEventMapping" /* 20229 */;
+import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 20230 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4726 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
 
 require = fn;
@@ -251,7 +251,7 @@ let closure_27 = async function _trackFirstLaunched() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -411,7 +411,7 @@ let closure_39 = async function _init(_payload) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -487,7 +487,7 @@ let closure_40 = async function _initializeApp() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -620,7 +620,7 @@ let closure_40 = async function _initializeApp() {
           closure_129_0(closure_129_3[69]);
           const sessionHeartbeatScheduler = closure_129_0(closure_129_3[70]).initSessionHeartbeatScheduler();
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
         if (closure_128_0) {
           let resolved = Promise.resolve();
@@ -702,11 +702,11 @@ let closure_40 = async function _initializeApp() {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[45])(paths[55], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[56]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(15575).updateSaturation(closure_0(4824).default.saturation);
-            obj = closure_0(15575);
-            closure_0(19174).updateVisualRefresh(true);
-            const obj2 = closure_0(19174);
-            closure_0(19175).updateTheme(closure_0(1192).default.theme);
+            closure_0(15561).updateSaturation(closure_0(4793).default.saturation);
+            obj = closure_0(15561);
+            closure_0(19166).updateVisualRefresh(true);
+            const obj2 = closure_0(19166);
+            closure_0(19167).updateTheme(closure_0(1192).default.theme);
             closure_1_0();
           }));
         });
@@ -751,7 +751,7 @@ let closure_41 = async function _initHeadlessTask() {
       obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -850,14 +850,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_19454 = fn(19454);
-const superagentPatch = fn(19456);
+const module_19450 = fn(19450);
+const superagentPatch = fn(19452);
 get_ActivityIndicator = fn(17);
 ({ AppState: closure_6, NativeEventEmitter: metroImportDefault, Linking: closure_8, LogBox: closure_9, NativeModules: closure_10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(19480);
+const logThirdPartyImportsDone = fn(19476);
 let closure_11 = fn(2190).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(8166);
-const ManagerRegistry = fn(19481);
+const AnalyticsTrackingStore = fn(8135);
+const ManagerRegistry = fn(19477);
 const Constants = fn(1072);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -880,7 +880,7 @@ let closure_25 = new DeepLinkProcessorDefault(function handleLinkingEventURL(url
     const mapDeepLinkEventResult = DeepLinkEventMapping.mapDeepLinkEvent(url, closure_1, tmp8);
   });
 });
-const future = new fn(10399).Future();
+const future = new fn(10377).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

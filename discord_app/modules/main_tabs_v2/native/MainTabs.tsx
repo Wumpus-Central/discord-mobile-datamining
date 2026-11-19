@@ -1,15 +1,15 @@
-// === Module 17568: MainTabs ===
+// === Module 17561: MainTabs ===
 
-// Module 17568 (MainTabs)
+// Module 17561 (MainTabs)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 4884 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4995 */;
-import useToken from "useToken" /* 5387 */;
-import useActiveTheme from "useActiveTheme" /* 8484 */;
-import ThemedGradientDefault from "ThemedGradient" /* 9560 */;
-import useAppFrameDefault from "useAppFrame" /* 17569 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 17570 */;
-import AccountSwitcherRailDefault from "AccountSwitcherRail" /* 18905 */;
+import native from "native" /* 4853 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4964 */;
+import useToken from "useToken" /* 5356 */;
+import useActiveTheme from "useActiveTheme" /* 8453 */;
+import ThemedGradientDefault from "ThemedGradient" /* 9539 */;
+import useAppFrameDefault from "useAppFrame" /* 17562 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 17563 */;
+import AccountSwitcherRailDefault from "AccountSwitcherRail" /* 18897 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_7 = createStyles.createStyles((paddingLeft, paddingRight, top) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingLeft, paddingRight }, content: { flex: 1 }, frameBorderClip: null, frameBorderOffset: null };
   const obj3 = {};

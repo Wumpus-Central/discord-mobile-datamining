@@ -1,18 +1,18 @@
-// === Module 13151: SearchTabsLayoutStore ===
+// === Module 13133: SearchTabsLayoutStore ===
 
-// Module 13151 (SearchTabsLayoutStore)
+// Module 13133 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 13128 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13129 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13130 */;
-import SearchUtils from "SearchUtils" /* 13132 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import SearchMessageStore from "SearchMessageStore" /* 6549 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13152 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 13153 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13154 */;
-import SearchQueryStore from "SearchQueryStore" /* 13139 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 13110 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13111 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 13112 */;
+import SearchUtils from "SearchUtils" /* 13114 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import SearchMessageStore from "SearchMessageStore" /* 6520 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13134 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 13135 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13136 */;
+import SearchQueryStore from "SearchQueryStore" /* 13121 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {
@@ -194,7 +194,7 @@ function computeLayoutForAll() {
   return flag;
 }
 SmartSearchResultsStoreDefault;
-const SearchConstants = fn(8488);
+const SearchConstants = fn(8457);
 ({ SearchTabs: closure_10, SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: closure_11, SEARCH_TYPE_TO_SEARCH_RESULT_TABS: closure_12 } = SearchConstants);
 let closure_13 = [];
 const map = new Map();

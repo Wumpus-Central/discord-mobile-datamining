@@ -1,8 +1,8 @@
-// === Module 6567: ApplicationActionCreators ===
+// === Module 6538: ApplicationActionCreators ===
 
-// Module 6567 (ApplicationActionCreators)
+// Module 6538 (ApplicationActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6568 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6539 */;
 import ApplicationRecord from "ApplicationRecord" /* 2143 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 
@@ -30,7 +30,7 @@ let closure_10 = async function _fetchApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -246,7 +246,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {

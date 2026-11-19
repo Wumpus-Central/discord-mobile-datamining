@@ -1,10 +1,10 @@
-// === Module 14490: useApplicationWidgetAffinityData ===
+// === Module 14477: useApplicationWidgetAffinityData ===
 
-// Module 14490 (useApplicationWidgetAffinityData)
-import LibraryApplicationStatisticsActionCreators from "LibraryApplicationStatisticsActionCreators" /* 14492 */;
+// Module 14477 (useApplicationWidgetAffinityData)
+import LibraryApplicationStatisticsActionCreators from "LibraryApplicationStatisticsActionCreators" /* 14479 */;
 import noop from "module_19" /* 19 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 10294 */;
-import LibraryApplicationStatisticsStore from "LibraryApplicationStatisticsStore" /* 14491 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 10272 */;
+import LibraryApplicationStatisticsStore from "LibraryApplicationStatisticsStore" /* 14478 */;
 
 const require = globalThis.__r;
 

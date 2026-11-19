@@ -1,9 +1,9 @@
-// === Module 5587: RTCDebugStore ===
+// === Module 5556: RTCDebugStore ===
 
-// Module 5587 (RTCDebugStore)
+// Module 5556 (RTCDebugStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5588 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5557 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -78,7 +78,7 @@ function updateStats(arr, arg1) {
   }
   return obj2;
 }
-const Constants = fn(5568);
+const Constants = fn(5537);
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 ({ Features: closure_8, SimulcastOverrideQuality: closure_9 } = Constants);
 let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + fn(1072).RTCDebugSections.TRANSPORT + ":" + 0;
@@ -177,7 +177,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: "bal" };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: true };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -312,7 +312,7 @@ const rTCDebugStore = new RTCDebugStore(DispatcherDefault, {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(5589).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
+          replayConnection.on(replayConnection(5558).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
             let num = arg3;
             const obj2 = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };
             if (arg3 == null) {

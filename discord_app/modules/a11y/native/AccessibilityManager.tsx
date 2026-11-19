@@ -1,15 +1,15 @@
-// === Module 15571: AccessibilityManager ===
+// === Module 15557: AccessibilityManager ===
 
-// Module 15571 (AccessibilityManager)
+// Module 15557 (AccessibilityManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4883 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11714 */;
-import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 15572 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 15573 */;
-import updateSaturation from "updateSaturation" /* 15575 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4852 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11692 */;
+import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 15558 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 15559 */;
+import updateSaturation from "updateSaturation" /* 15561 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -56,7 +56,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -89,7 +89,7 @@ export default {
             closure_128_0 = value;
             const result = closure_129_0.updateScreenReaderEnabled(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp12) {
           c3 = tmp;

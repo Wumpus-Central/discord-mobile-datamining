@@ -1,24 +1,24 @@
-// === Module 12044: GameOrganizationInvitePickerRow ===
+// === Module 12021: GameOrganizationInvitePickerRow ===
 
-// Module 12044 (GameOrganizationInvitePickerRow)
+// Module 12021 (GameOrganizationInvitePickerRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2555 from "module_2555" /* 2555 */;
-import useToken from "useToken" /* 5387 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import Stack_Stack from "Stack/Stack" /* 5837 */;
-import GroupIcon from "GroupIcon" /* 6949 */;
-import TableRow from "TableRow" /* 6956 */;
-import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 12046 */;
-import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12047 */;
-import InviteButtonDefault from "InviteButton" /* 12056 */;
+import _modDef2557 from "module_2557" /* 2557 */;
+import useToken from "useToken" /* 5356 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import Stack_Stack from "Stack/Stack" /* 5808 */;
+import GroupIcon from "GroupIcon" /* 6919 */;
+import TableRow from "TableRow" /* 6926 */;
+import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 12023 */;
+import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12024 */;
+import InviteButtonDefault from "InviteButton" /* 12033 */;
 import noop from "module_19" /* 19 */;
 
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
 require = fn;
-let closure_4 = fn(12045).useInstantInviteSendStates;
-const InviteSendStates = fn(8350).InviteSendStates;
+let closure_4 = fn(12022).useInstantInviteSendStates;
+const InviteSendStates = fn(8319).InviteSendStates;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
@@ -57,7 +57,7 @@ export default noop.memo(function GameOrganizationInvitePickerRow(organization) 
       const obj7 = { variant: "body-xs/medium", color: "text-muted", children: null };
       const intl = util.intl;
       const obj8 = { count: memberCount, max: maxMembers };
-      obj7.children = intl.formatToPlainString(_modDef2555.VuENGl, obj8);
+      obj7.children = intl.formatToPlainString(_modDef2557.VuENGl, obj8);
       items1[1] = timestampProducer(Text_Text.Text, obj7);
       obj5.children = items1;
       tmp10 = metroImportDefault(Stack_Stack.Stack, obj5);

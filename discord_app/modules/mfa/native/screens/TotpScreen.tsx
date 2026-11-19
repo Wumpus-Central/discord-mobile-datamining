@@ -1,7 +1,7 @@
-// === Module 17158: TotpScreen ===
+// === Module 17151: TotpScreen ===
 
-// Module 17158 (TotpScreen)
-import MFA from "MFA" /* 17159 */;
+// Module 17151 (TotpScreen)
+import MFA from "MFA" /* 17152 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -49,7 +49,7 @@ export default function TotpScreen(finish) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {

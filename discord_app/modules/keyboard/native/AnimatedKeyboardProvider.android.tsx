@@ -1,7 +1,7 @@
-// === Module 15743: AnimatedKeyboardProvider ===
+// === Module 15731: AnimatedKeyboardProvider ===
 
-// Module 15743 (AnimatedKeyboardProvider)
-import AnimatedKeyboardProviderControllerDefault from "AnimatedKeyboardProviderController" /* 15744 */;
+// Module 15731 (AnimatedKeyboardProvider)
+import AnimatedKeyboardProviderControllerDefault from "AnimatedKeyboardProviderController" /* 15732 */;
 import NativeSafeAreaInsetsModule from "NativeSafeAreaInsetsModule" /* 1642 */;
 
 const result = NativeSafeAreaInsetsModule.setNavigationBarContrastEnforced(false);

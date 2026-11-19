@@ -1,6 +1,6 @@
-// === Module 15953: SettingsAgeGroupResetAlert ===
+// === Module 15944: SettingsAgeGroupResetAlert ===
 
-// Module 15953 (SettingsAgeGroupResetAlert)
+// Module 15944 (SettingsAgeGroupResetAlert)
 import _modDef3343 from "module_3343" /* 3343 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -25,7 +25,7 @@ export default function SettingsAgeGroupResetAlert() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -42,13 +42,13 @@ export default function SettingsAgeGroupResetAlert() {
             dependencyMap = 1;
             c1 = 2;
             c3 = 1;
-            const obj6 = { value: tmp3(6326).resetAgeVerification(), done: false };
+            const obj6 = { value: tmp3(6297).resetAgeVerification(), done: false };
             return obj6;
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;
           const intl = tmp3(1113).intl;
-          tmp3(5504).presentError(intl.string(tmp3(1113).t.fEptJP));
+          tmp3(5473).presentError(intl.string(tmp3(1113).t.fEptJP));
           const _Error = Error;
           const error = new Error("Reset failed");
           throw error;
@@ -61,11 +61,11 @@ export default function SettingsAgeGroupResetAlert() {
           const obj7 = { value, done: true };
           return obj7;
         } else {
-          tmp3(5770).dismissAlert(closure_1_6);
+          tmp3(5741).dismissAlert(closure_1_6);
           closure_128_0.goBack();
           dependencyMap = 0;
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp29) {
         if (tmp4 === dependencyMap) {

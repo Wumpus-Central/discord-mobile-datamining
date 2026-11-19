@@ -1,19 +1,19 @@
-// === Module 11928: useFetchSocialLayerStorefrontEmbedWishlist ===
+// === Module 11906: useFetchSocialLayerStorefrontEmbedWishlist ===
 
-// Module 11928 (useFetchSocialLayerStorefrontEmbedWishlist)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7985 */;
-import WishlistFetchSource from "WishlistFetchSource" /* 8895 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8896 */;
+// Module 11906 (useFetchSocialLayerStorefrontEmbedWishlist)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7954 */;
+import WishlistFetchSource from "WishlistFetchSource" /* 8869 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8870 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 6867 */;
-import WishlistStore from "WishlistStore" /* 8889 */;
+import UserProfileStore from "UserProfileStore" /* 6837 */;
+import WishlistStore from "WishlistStore" /* 8863 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = { user: "a", profile: "Path", wishlistId: "container", wishlist: "(function EmojiSuggestionChatButtonTsx3(){let[emojiAnimationProgress]=this.__closure;return{opacity:1-emojiAnimationProgress.get()};})", updatedAt: "profile_widget", storedUpdatedAt: null, fetching: "messageId", error: "(function CustomizeCommunityTsx1(){let[isNew,brandColor,withSequence,withTiming,Easing,withDelay]=this.__closure;const rawBorderColor=isNew?brandColor+\"FF\":brandColor+\"00\";const borderColor=withSequence(withTiming(rawBorderColor,{duration:1,easing:Easing.in(Easing.ease)}),withDelay(500,withTiming(brandColor+\"00\",{duration:300,easing:Easing.out(Easing.ease)})));return{borderColor:borderColor};})" };
+let closure_8 = { user: "a", profile: "Path", wishlistId: "content", wishlist: "gr", updatedAt: null, storedUpdatedAt: "Speed Line 4", fetching: 4, error: 2 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/useFetchSocialLayerStorefrontEmbedWishlist.tsx");
 

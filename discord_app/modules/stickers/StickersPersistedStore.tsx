@@ -1,13 +1,13 @@
-// === Module 6521: StickersPersistedStore ===
+// === Module 6492: StickersPersistedStore ===
 
-// Module 6521 (StickersPersistedStore)
+// Module 6492 (StickersPersistedStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import FrecencyDefault from "Frecency" /* 5580 */;
+import FrecencyDefault from "Frecency" /* 5549 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import StickersStore from "StickersStore" /* 6522 */;
+import StickersStore from "StickersStore" /* 6493 */;
 
 function handleStickersStoreUpdate() {
   if (StickersStore.isLoaded) {

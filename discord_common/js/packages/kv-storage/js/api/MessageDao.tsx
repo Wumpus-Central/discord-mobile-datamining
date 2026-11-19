@@ -1,8 +1,8 @@
-// === Module 4716: MessageDao ===
+// === Module 4685: MessageDao ===
 
-// Module 4716 (MessageDao)
-import Table from "Table" /* 4706 */;
-import TableId from "TableId" /* 4708 */;
+// Module 4685 (MessageDao)
+import Table from "Table" /* 4675 */;
+import TableId from "TableId" /* 4677 */;
 import size from "module_2" /* 2 */;
 
 let MessageDao;

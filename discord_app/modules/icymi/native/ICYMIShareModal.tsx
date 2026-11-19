@@ -1,18 +1,18 @@
-// === Module 18195: ICYMIShareModal ===
+// === Module 18188: ICYMIShareModal ===
 
-// Module 18195 (ICYMIShareModal)
+// Module 18188 (ICYMIShareModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5398 */;
-import components_Button_Button from "components/Button/Button" /* 5421 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
-import ShareEventUtils from "ShareEventUtils" /* 7501 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 9995 */;
-import ShareChatInputDefault from "ShareChatInput" /* 10017 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5367 */;
+import components_Button_Button from "components/Button/Button" /* 5390 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
+import ShareEventUtils from "ShareEventUtils" /* 7471 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 9973 */;
+import ShareChatInputDefault from "ShareChatInput" /* 9995 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 
 const require = globalThis.__r;
 
@@ -75,7 +75,7 @@ class ICYMIShareModal {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -118,7 +118,7 @@ class ICYMIShareModal {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "+60" };
                   }
                 } else {
                   try {
@@ -161,7 +161,7 @@ class ICYMIShareModal {
                       return obj;
                     }
                     c1 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "+60" };
                   } catch (tmp17) {
                     c1 = tmp;
                     throw tmp17;
@@ -181,7 +181,7 @@ class ICYMIShareModal {
             })());
             tmp3(tmp2[19]).pop();
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp7) {
           c4 = tmp;
@@ -242,11 +242,11 @@ class ICYMIShareModal {
 }
 const View = fn(17).View;
 const AbortCodes = fn(1072).AbortCodes;
-const UserRowModes = fn(9547).UserRowModes;
-const MessageSendLocation = fn(4828).MessageSendLocation;
+const UserRowModes = fn(9526).UserRowModes;
+const MessageSendLocation = fn(4797).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { footer: { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -284,7 +284,7 @@ export function GameShareModal(content) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -305,7 +305,7 @@ export function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(18196).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18189).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

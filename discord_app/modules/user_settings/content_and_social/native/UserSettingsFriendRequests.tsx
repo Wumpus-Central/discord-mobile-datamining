@@ -1,9 +1,9 @@
-// === Module 18939: UserSettingsFriendRequests ===
+// === Module 18931: UserSettingsFriendRequests ===
 
-// Module 18939 (UserSettingsFriendRequests)
+// Module 18931 (UserSettingsFriendRequests)
 import FlagUtilsAll from "FlagUtils" /* 1406 */;
-import UserSettings from "UserSettings" /* 4648 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7326 */;
+import UserSettings from "UserSettings" /* 4617 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7296 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/UserSettingsFriendRequests.tsx");
 
 export default function UserSettingsFriendRequests() {
-  let FriendSourceFlagsSetting = setting(4648).FriendSourceFlagsSetting;
+  let FriendSourceFlagsSetting = setting(4617).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   items = [setting];
   const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);
@@ -37,7 +37,7 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(tmp3);
   };
-  const items1 = [closure_7(setting(7467).TableSwitchRow, obj3), , ];
+  const items1 = [closure_7(setting(7437).TableSwitchRow, obj3), , ];
   const obj4 = { label: null, value: null, onValueChange: null };
   const intl3 = setting(1113).intl;
   obj4.label = intl3.string(setting(1113).t.IqlCSq);
@@ -52,7 +52,7 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[1] = closure_7(setting(7467).TableSwitchRow, obj4);
+  items1[1] = closure_7(setting(7437).TableSwitchRow, obj4);
   const obj5 = { label: null, value: null, onValueChange: null };
   const intl4 = setting(1113).intl;
   obj5.label = intl4.string(setting(1113).t.mozb8f);
@@ -67,8 +67,8 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[2] = closure_7(setting(7467).TableSwitchRow, obj5);
+  items1[2] = closure_7(setting(7437).TableSwitchRow, obj5);
   obj2.children = items1;
-  obj.children = closure_8(setting(7259).TableRowGroup, obj2);
+  obj.children = closure_8(setting(7229).TableRowGroup, obj2);
   return closure_7(View, obj);
 };

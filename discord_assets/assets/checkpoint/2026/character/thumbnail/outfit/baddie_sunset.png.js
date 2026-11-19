@@ -1,6 +1,6 @@
-// === Module 6020: ? ===
+// === Module 5991: ? ===
 
-// Module 6020
+// Module 5991
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/baddie_sunset.png.js");

@@ -1,13 +1,13 @@
-// === Module 10092: InAppReportsShieldElement ===
+// === Module 10070: InAppReportsShieldElement ===
 
-// Module 10092 (InAppReportsShieldElement)
-import ShieldSpotIllustration from "ShieldSpotIllustration" /* 7725 */;
+// Module 10070 (InAppReportsShieldElement)
+import ShieldSpotIllustration from "ShieldSpotIllustration" /* 7695 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_4 = createStyles.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");

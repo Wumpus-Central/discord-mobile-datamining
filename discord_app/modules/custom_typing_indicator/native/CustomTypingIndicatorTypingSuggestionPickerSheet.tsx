@@ -1,20 +1,20 @@
-// === Module 16827: CustomTypingIndicatorTypingSuggestionPickerSheet ===
+// === Module 16820: CustomTypingIndicatorTypingSuggestionPickerSheet ===
 
-// Module 16827 (CustomTypingIndicatorTypingSuggestionPickerSheet)
+// Module 16820 (CustomTypingIndicatorTypingSuggestionPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4123 from "module_4123" /* 4123 */;
-import TableRadioGroup from "TableRadioGroup" /* 7258 */;
-import TableRadioRow from "TableRadioRow" /* 7260 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7426 */;
-import ActionSheet from "ActionSheet" /* 7464 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12761 */;
+import _modDef4091 from "module_4091" /* 4091 */;
+import TableRadioGroup from "TableRadioGroup" /* 7228 */;
+import TableRadioRow from "TableRadioRow" /* 7230 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
+import ActionSheet from "ActionSheet" /* 7434 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12743 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -28,10 +28,10 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(arg0) {
   const obj = { contentStyles: closure_6().content, onDismiss, header: null, dismissAccessibilityLabel: null, children: null };
   let obj2 = { title: null };
   let intl = util.intl;
-  obj2.title = intl.string(_modDef4123["X+ijyw"]);
+  obj2.title = intl.string(_modDef4091["X+ijyw"]);
   obj.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
   const intl2 = util.intl;
-  obj.dismissAccessibilityLabel = intl2.string(_modDef4123.hrl2cG);
+  obj.dismissAccessibilityLabel = intl2.string(_modDef4091.hrl2cG);
   const tmp = closure_6();
   obj.children = jsx(TableRadioGroup.TableRadioGroup, {
     value: tmp2[0],

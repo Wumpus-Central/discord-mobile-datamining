@@ -1,6 +1,6 @@
-// === Module 17232: useMountTimer ===
+// === Module 17225: useMountTimer ===
 
-// Module 17232 (useMountTimer)
+// Module 17225 (useMountTimer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

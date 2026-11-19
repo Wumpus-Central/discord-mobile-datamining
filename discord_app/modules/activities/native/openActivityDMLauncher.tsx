@@ -1,6 +1,6 @@
-// === Module 15136: openActivityDMLauncher ===
+// === Module 15122: openActivityDMLauncher ===
 
-// Module 15136 (openActivityDMLauncher)
+// Module 15122 (openActivityDMLauncher)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {

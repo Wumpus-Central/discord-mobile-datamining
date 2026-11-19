@@ -1,28 +1,28 @@
-// === Module 7980: UserProfileSpeedBumpActionSheet ===
+// === Module 7949: UserProfileSpeedBumpActionSheet ===
 
-// Module 7980 (UserProfileSpeedBumpActionSheet)
+// Module 7949 (UserProfileSpeedBumpActionSheet)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import UserSettings from "UserSettings" /* 4648 */;
-import UserActionCreators from "UserActionCreators" /* 6865 */;
-import TableRow from "TableRow" /* 6956 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7978 */;
-import _modDef7983 from "module_7983" /* 7983 */;
+import UserSettings from "UserSettings" /* 4617 */;
+import UserActionCreators from "UserActionCreators" /* 6835 */;
+import TableRow from "TableRow" /* 6926 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7948 */;
+import _modDef7952 from "module_7952" /* 7952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import GuildMemberStore from "GuildMemberStore" /* 4735 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import GuildMemberStore from "GuildMemberStore" /* 4704 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function InformationTable(speedBumpType) {
   items = undefined;
-  let obj = { icon: _modDef7983, text: null };
+  let obj = { icon: _modDef7952, text: null };
   const intl = items(1113).intl;
   obj.text = intl.string(items(1113).t.kcuWva);
   items = [obj, ];
-  const obj2 = { icon: _modDef7983, text: null };
+  const obj2 = { icon: _modDef7952, text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1113).intl;
     let stringResult = intl3.string(tmp2(1113).t.QxrDY1);
@@ -32,7 +32,7 @@ function InformationTable(speedBumpType) {
   }
   obj2.text = stringResult;
   items[1] = obj2;
-  return closure_12(items(7259).TableRowGroup, {
+  return closure_12(items(7229).TableRowGroup, {
     hasIcons: true,
     children: items.map((icon, index) => {
       const obj = { start: 0 === index, end: items.length === index, icon: application_id(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon.icon }), label: icon.text };
@@ -41,12 +41,12 @@ function InformationTable(speedBumpType) {
   });
 }
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(7981).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(7950).UserProfileAnalyticsTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { button: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 }, tableContainer: null, header: null, bodyText: null, headerText: null, avatar: null, avatarContainer: null, avatarIconContainer: null, suppress: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 };
 obj.tableContainer = { marginBottom: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };

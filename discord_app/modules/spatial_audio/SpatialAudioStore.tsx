@@ -1,14 +1,14 @@
-// === Module 5720: SpatialAudioStore ===
+// === Module 5689: SpatialAudioStore ===
 
-// Module 5720 (SpatialAudioStore)
+// Module 5689 (SpatialAudioStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5722 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5691 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
 import apply from "apply" /* 12 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function applyActiveOptions(arg0) {
   const obj2 = apply;
   const mediaEngine = MediaEngineStore.getMediaEngine();
   let str = "";
-  if (mediaEngine.getSpatialAudioVersion() >= closure_7) {
+  if (mediaEngine.getSpatialAudioVersion() >= metroImportDefault) {
     str = positioningModel;
   }
   const cloneDeepResult = apply.cloneDeep(DEFAULT_SPATIAL_AUDIO_OPTIONS);
@@ -92,13 +92,14 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const SpatialAudioConstants = fn(5721);
+const SpatialAudioConstants = fn(5690);
 const DEFAULT_SPATIAL_AUDIO_OPTIONS = SpatialAudioConstants.DEFAULT_SPATIAL_AUDIO_OPTIONS;
-let closure_7 = SpatialAudioConstants.MIN_POSITIONING_SPATIAL_AUDIO_VERSION;
-const Constants = fn(5568);
-({ Features: closure_8, MediaEngineContextTypes: closure_9, SpatialAudioStatus } = Constants);
+({ MIN_POSITIONING_SPATIAL_AUDIO_VERSION: metroImportDefault, SpatialAudioOverrideSource } = SpatialAudioConstants);
+const Constants = fn(5537);
+({ Features: closure_9, MediaEngineContextTypes: closure_10, SpatialAudioStatus } = Constants);
 let obj = {};
 let isSpatial = {};
+let NONE = SpatialAudioOverrideSource.NONE;
 apply.cloneDeep(DEFAULT_SPATIAL_AUDIO_OPTIONS);
 let global = SpatialAudioStatus.UNKNOWN;
 const set = new Set();
@@ -113,20 +114,20 @@ prototype["initialize"] = function initialize(enabled) {
   if (enabled != null) {
     enabled = enabled.enabled;
   }
-  closure_11 = { enabled };
+  closure_12 = { enabled };
   self.waitFor(ApexExperimentStore, MediaEngineStore, RTCConnectionStore);
   items = [ApexExperimentStore];
   self.syncWith(items, handleExperimentChange);
   let mediaEngine = MediaEngineStore.getMediaEngine();
-  mediaEngine.on(self(5589).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => {
-    const result = setSpatialAudioEnabled.setSpatialAudioEnabled(closure_1_13.isSpatial);
-    isSpatial = closure_1_13.isSpatial;
+  mediaEngine.on(self(5558).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => {
+    const result = setSpatialAudioEnabled.setSpatialAudioEnabled(closure_1_15.isSpatial);
+    isSpatial = closure_1_15.isSpatial;
     if (isSpatial) {
       isSpatial = global === constants.ACTIVE;
     }
     const result1 = setSpatialAudioEnabled.setSpatialAudioActive(isSpatial);
   });
-  mediaEngine.on(self(5589).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
+  mediaEngine.on(self(5558).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
     let flag = arg0 !== global;
     if (flag) {
       global = arg0;
@@ -192,7 +193,10 @@ prototype["getActiveSpatialAudioOptions"] = function getActiveSpatialAudioOption
   return mergeResult;
 };
 prototype["getSpatialAudioOverrides"] = function getSpatialAudioOverrides() {
-  return closure_12;
+  return closure_13;
+};
+prototype["getSpatialAudioOverrideSource"] = function getSpatialAudioOverrideSource() {
+  return NONE;
 };
 prototype["getSpatialAudioStatus"] = function getSpatialAudioStatus() {
   return global;
@@ -200,7 +204,7 @@ prototype["getSpatialAudioStatus"] = function getSpatialAudioStatus() {
 prototype["getExperimentPositioningModel"] = function getExperimentPositioningModel(arg0) {
   const mediaEngine = MediaEngineStore.getMediaEngine();
   let str = "";
-  if (mediaEngine.getSpatialAudioVersion() >= closure_7) {
+  if (mediaEngine.getSpatialAudioVersion() >= metroImportDefault) {
     str = arg0;
   }
   return str;
@@ -250,7 +254,14 @@ obj = {
   },
   AUDIO_SET_SPATIAL_AUDIO_OVERRIDES: function handleSetSpatialAudioOverrides(overrides) {
     overrides = overrides.overrides;
+    if (obj.isEmpty(overrides.overrides)) {
+      let source = SpatialAudioOverrideSource.NONE;
+    } else {
+      source = overrides.source;
+    }
+    NONE = source;
     applyActiveOptions();
+    obj = apply;
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
     let tmp = null == channelId.channelId;
@@ -277,7 +288,8 @@ obj = {
     return tmp;
   },
   LOGOUT: function handleLogout() {
-    closure_12 = {};
+    closure_13 = {};
+    NONE = SpatialAudioOverrideSource.NONE;
     applyActiveOptions();
   }
 };

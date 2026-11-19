@@ -1,6 +1,6 @@
-// === Module 7165: FederatedSocialUtils ===
+// === Module 7135: FederatedSocialUtils ===
 
-// Module 7165 (FederatedSocialUtils)
+// Module 7135 (FederatedSocialUtils)
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

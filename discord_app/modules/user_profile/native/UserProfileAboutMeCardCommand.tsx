@@ -1,14 +1,14 @@
-// === Module 14144: UserProfileAboutMeCardCommand ===
+// === Module 14126: UserProfileAboutMeCardCommand ===
 
-// Module 14144 (UserProfileAboutMeCardCommand)
+// Module 14126 (UserProfileAboutMeCardCommand)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5475 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5560 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8226 */;
-import MarkupReactCommandRule from "MarkupReactCommandRule" /* 12064 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 12069 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5444 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5529 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8195 */;
+import MarkupReactCommandRule from "MarkupReactCommandRule" /* 12041 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 12046 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxs = fn(21).jsxs;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { commandClickable: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, marginEnd: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_12 } };
 let closure_5 = createStyles.createStyles(obj);
 let obj3 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, marginEnd: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_12 };

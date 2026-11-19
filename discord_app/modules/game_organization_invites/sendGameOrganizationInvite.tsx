@@ -1,9 +1,9 @@
-// === Module 12059: sendGameOrganizationInvite ===
+// === Module 12036: sendGameOrganizationInvite ===
 
-// Module 12059 (sendGameOrganizationInvite)
+// Module 12036 (sendGameOrganizationInvite)
 import util from "util" /* 1113 */;
-import shared from "shared" /* 4830 */;
-import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 12060 */;
+import shared from "shared" /* 4799 */;
+import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 12037 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -26,7 +26,7 @@ let closure_7 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -116,8 +116,8 @@ let closure_7 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
     }
   })();
 };
-const setSendState = fn(12045).setSendState;
-const InviteSendStates = fn(8350).InviteSendStates;
+const setSendState = fn(12022).setSendState;
+const InviteSendStates = fn(8319).InviteSendStates;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_organization_invites/sendGameOrganizationInvite.tsx");

@@ -1,7 +1,7 @@
-// === Module 17407: PinotSettingsLazy ===
+// === Module 17400: PinotSettingsLazy ===
 
-// Module 17407 (PinotSettingsLazy)
-import PinotMemberSetting from "PinotMemberSetting" /* 17408 */;
+// Module 17400 (PinotSettingsLazy)
+import PinotMemberSetting from "PinotMemberSetting" /* 17401 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/pinot/native/PinotSettingsLazy.tsx");

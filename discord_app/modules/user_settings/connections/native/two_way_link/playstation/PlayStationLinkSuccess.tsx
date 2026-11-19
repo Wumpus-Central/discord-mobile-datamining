@@ -1,20 +1,20 @@
-// === Module 7113: PlayStationLinkSuccess ===
+// === Module 7083: PlayStationLinkSuccess ===
 
-// Module 7113 (PlayStationLinkSuccess)
+// Module 7083 (PlayStationLinkSuccess)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import components_Button_Button from "components/Button/Button" /* 5421 */;
-import FastImageDefault from "FastImage" /* 5510 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6928 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 6955 */;
-import _modDef6997 from "module_6997" /* 6997 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import components_Button_Button from "components/Button/Button" /* 5390 */;
+import FastImageDefault from "FastImage" /* 5479 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6898 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 6925 */;
+import _modDef6967 from "module_6967" /* 6967 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_7 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
@@ -24,7 +24,7 @@ export function PlayStationLinkSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef6997 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef6967 }), []);
   items = [hasOwnProperty(FastImageDefault, { source: memo, style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;

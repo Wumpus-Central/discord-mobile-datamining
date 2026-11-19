@@ -1,19 +1,19 @@
-// === Module 16725: AdvancedVoiceActivitySetting ===
+// === Module 16718: AdvancedVoiceActivitySetting ===
 
-// Module 16725 (AdvancedVoiceActivitySetting)
+// Module 16718 (AdvancedVoiceActivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5719 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5688 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 
 require = fn;
-const SettingBuilders = fn(11897);
+const SettingBuilders = fn(11875);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.BbESsg);
   },
-  parent: fn(8624).MobileUserSettings.VOICE,
+  parent: fn(8593).MobileUserSettings.VOICE,
   useValue: function useAdvancedVoiceActivitySettingValue() {
     items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);

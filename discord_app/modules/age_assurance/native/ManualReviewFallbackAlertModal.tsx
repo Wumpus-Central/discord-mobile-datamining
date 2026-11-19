@@ -1,11 +1,11 @@
-// === Module 7903: ManualReviewFallbackAlertModal ===
+// === Module 7873: ManualReviewFallbackAlertModal ===
 
-// Module 7903 (ManualReviewFallbackAlertModal)
+// Module 7873 (ManualReviewFallbackAlertModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import _modDef3439 from "module_3439" /* 3439 */;
-import AlertModal from "AlertModal" /* 5774 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 7904 */;
+import AlertModal from "AlertModal" /* 5745 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 7874 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

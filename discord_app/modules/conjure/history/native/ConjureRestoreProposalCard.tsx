@@ -1,11 +1,11 @@
-// === Module 18660: ConjureRestoreProposalCard ===
+// === Module 18653: ConjureRestoreProposalCard ===
 
-// Module 18660 (ConjureRestoreProposalCard)
+// Module 18653 (ConjureRestoreProposalCard)
 import util from "util" /* 1113 */;
-import _modDef4121 from "module_4121" /* 4121 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import components_Button_Button from "components/Button/Button" /* 5421 */;
-import Stack_Stack from "Stack/Stack" /* 5837 */;
+import _modDef4089 from "module_4089" /* 4089 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import components_Button_Button from "components/Button/Button" /* 5390 */;
+import Stack_Stack from "Stack/Stack" /* 5808 */;
 import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18342 */;
 import ConjureHistoryFormat from "ConjureHistoryFormat" /* 18389 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ export default function ConjureRestoreProposalCard(arg0) {
   const relative = ConjureHistoryFormat.formatAuthoredAt(proposal.authored_at).relative;
   const obj2 = { variant: "body-sm/semibold", color: "text-muted", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef4121["t+b0rz"]);
+  obj2.children = intl.string(_modDef4089["t+b0rz"]);
   items = [React3(Text_Text.Text, obj2), , ];
   const items1 = [React3(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: proposal.subject }), ];
   let tmp3Result = null;
@@ -35,7 +35,7 @@ export default function ConjureRestoreProposalCard(arg0) {
   if (null != onRestore) {
     const obj5 = { text: null, variant: "secondary", onPress: null };
     const intl2 = util.intl;
-    obj5.text = intl2.string(_modDef4121.H8Jfhu);
+    obj5.text = intl2.string(_modDef4089.H8Jfhu);
     obj5.onPress = onRestore;
     tmp3Result2 = React3(components_Button_Button.Button, obj5);
   }

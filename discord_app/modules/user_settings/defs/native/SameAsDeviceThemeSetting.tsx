@@ -1,19 +1,19 @@
-// === Module 16769: SameAsDeviceThemeSetting ===
+// === Module 16762: SameAsDeviceThemeSetting ===
 
-// Module 16769 (SameAsDeviceThemeSetting)
+// Module 16762 (SameAsDeviceThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16471 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16462 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
-const SettingBuilders = fn(11897);
+const SettingBuilders = fn(11875);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.c445ix);
   },
-  parent: fn(8624).MobileUserSettings.APPEARANCE,
+  parent: fn(8593).MobileUserSettings.APPEARANCE,
   useValue: function useSameAsDeviceThemeValue() {
     items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());

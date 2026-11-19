@@ -3,10 +3,10 @@
 // Module 18374 (ConjureLinkedAppConnector)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5033 */;
-import timingPresets from "timingPresets" /* 5036 */;
+import timing_timing from "timing/timing" /* 5002 */;
+import timingPresets from "timingPresets" /* 5005 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
 
 const require = globalThis.__r;
 const _modDef1655 = _mod1655;
@@ -20,7 +20,7 @@ const PX_40 = nativeDefault.space.PX_40;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_6 = nativeDefault.space.PX_6;
 let closure_8 = PX_40 - PX_6;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { connector: { width: PX_40, height: PX_12, flexShrink: 0 }, line: null, headStart: null, headEnd: null, packet: null };
 const rect = { position: "absolute", left: 0, right: 0, top: PX_12 / 2, height: 2 * StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj2.line = rect;
@@ -106,7 +106,7 @@ export default function ConjureLinkedAppConnector(flow) {
   if ("sends" === flow) {
     const obj8 = { style: tmp.headEnd, children: null };
     const obj9 = { size: "xxs", color: nativeDefault.colors.ICON_MUTED };
-    obj8.children = closure_6(tmp2(7476).ChevronSmallRightIcon, obj9);
+    obj8.children = closure_6(tmp2(7446).ChevronSmallRightIcon, obj9);
     let tmp15Result3 = closure_6(closure_4, obj8);
   } else {
     tmp15Result3 = null;

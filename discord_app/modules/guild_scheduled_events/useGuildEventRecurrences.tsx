@@ -1,13 +1,13 @@
-// === Module 7936: useGuildEventRecurrences ===
+// === Module 7906: useGuildEventRecurrences ===
 
-// Module 7936 (useGuildEventRecurrences)
+// Module 7906 (useGuildEventRecurrences)
 import applyDefault from "apply" /* 12 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 7483 */;
-import ScheduleUtils from "ScheduleUtils" /* 7486 */;
-import usePrevValueDefault from "usePrevValue" /* 7937 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 7453 */;
+import ScheduleUtils from "ScheduleUtils" /* 7456 */;
+import usePrevValueDefault from "usePrevValue" /* 7907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6541 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6512 */;
 
 const require = globalThis.__r;
 
@@ -25,12 +25,12 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      const tmpResult = tmp(7486);
+      const tmpResult = tmp(7456);
       let _Date = Date;
-      let rRule = tmp(7486).getRRule(byWeekday);
+      let rRule = tmp(7456).getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
       const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
-      const tmpResult2 = tmp(7486);
+      const tmpResult2 = tmp(7456);
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     recurrenceStartTimes = tmp14[0];

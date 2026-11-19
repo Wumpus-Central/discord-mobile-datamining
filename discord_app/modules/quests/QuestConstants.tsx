@@ -1,13 +1,13 @@
-// === Module 6466: QuestConstants ===
+// === Module 6437: QuestConstants ===
 
-// Module 6466 (QuestConstants)
+// Module 6437 (QuestConstants)
 import DurationsDefault from "Durations" /* 1089 */;
-import QuestVariants from "QuestVariants" /* 6467 */;
-import Quests from "Quests" /* 6468 */;
-import QuestTypes from "QuestTypes" /* 6469 */;
-import AdCreativeType from "AdCreativeType" /* 6473 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6474 */;
-import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 6475 */;
+import QuestVariants from "QuestVariants" /* 6438 */;
+import Quests from "Quests" /* 6439 */;
+import QuestTypes from "QuestTypes" /* 6440 */;
+import AdCreativeType from "AdCreativeType" /* 6444 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6445 */;
+import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 6446 */;
 import HTTPUtils_mod from "HTTPUtils" /* 1285 */;
 import GlobalUtils_mod from "GlobalUtils" /* 1255 */;
 import apply from "apply" /* 12 */;
@@ -113,6 +113,7 @@ export const DEFAULT_VIRTUAL_CURRENCY_QUEST_HOME_HERO_ID = "1496993616537587813"
 export const DEFAULT_GENERIC_QUEST_HOME_HERO_ID = "1496993616537587812";
 export const DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID = "1514687533122982012";
 export const BOUNTY_ORB_AMOUNT = 50;
+export const PLAYABLE_REWARD_ORB_QUANTITY = 50;
 export const BOUNTY_CTA_TIMER_MILLISECONDS = 0;
 export const BILLABLE_PLACEMENTS = set1;
 export const NON_BILLABLE_CREATIVE_TYPES = set2;

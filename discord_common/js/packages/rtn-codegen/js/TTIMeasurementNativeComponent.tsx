@@ -1,6 +1,6 @@
-// === Module 10394: TTIMeasurementNativeComponent ===
+// === Module 10372: TTIMeasurementNativeComponent ===
 
-// Module 10394 (TTIMeasurementNativeComponent)
+// Module 10372 (TTIMeasurementNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

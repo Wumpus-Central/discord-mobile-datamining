@@ -1,6 +1,6 @@
-// === Module 9772: groupHTMLTextRuns ===
+// === Module 9751: groupHTMLTextRuns ===
 
-// Module 9772 (groupHTMLTextRuns)
+// Module 9751 (groupHTMLTextRuns)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/html_parser/groupHTMLTextRuns.tsx");

@@ -1,6 +1,6 @@
-// === Module 7327: SettingSearchSessionAnalyticsManager ===
+// === Module 7297: SettingSearchSessionAnalyticsManager ===
 
-// Module 7327 (SettingSearchSessionAnalyticsManager)
+// Module 7297 (SettingSearchSessionAnalyticsManager)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import v1 from "v1" /* 1269 */;

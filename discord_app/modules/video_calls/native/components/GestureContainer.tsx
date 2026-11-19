@@ -1,25 +1,25 @@
-// === Module 11004: GestureContainer ===
+// === Module 10982: GestureContainer ===
 
-// Module 11004 (GestureContainer)
+// Module 10982 (GestureContainer)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5033 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5083 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6337 */;
+import timing_timing from "timing/timing" /* 5002 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6308 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(10596).useChannelCallStore;
-const Constants = fn(10603);
+const useChannelCallStore = fn(10574).useChannelCallStore;
+const Constants = fn(10581);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_6 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
 let closure_9 = { code: "(function GestureContainerTsx1({translationY:translationY}){let[THRESHOLD_TRANSLATE,position]=this.__closure;const boundedGestureY=Math.max(Math.min(translationY,THRESHOLD_TRANSLATE),0)/THRESHOLD_TRANSLATE;const easeOutCubic=1-Math.pow(1-boundedGestureY,3);position.set(easeOutCubic);})" };

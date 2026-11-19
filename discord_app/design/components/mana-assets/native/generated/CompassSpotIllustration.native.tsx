@@ -1,19 +1,19 @@
-// === Module 18932: CompassSpotIllustration ===
+// === Module 18924: CompassSpotIllustration ===
 
-// Module 18932 (CompassSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7268 */;
-import _modDef18933 from "module_18933" /* 18933 */;
-import _modDef18934 from "module_18934" /* 18934 */;
-import _modDef18935 from "module_18935" /* 18935 */;
+// Module 18924 (CompassSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7238 */;
+import _modDef18925 from "module_18925" /* 18925 */;
+import _modDef18926 from "module_18926" /* 18926 */;
+import _modDef18927 from "module_18927" /* 18927 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18933 }, 3: null };
-let obj2 = { uri: _modDef18933 };
-obj[2] = { uri: _modDef18934 };
-const obj3 = { uri: _modDef18934 };
-obj[3] = { uri: _modDef18935 };
+let obj = { 1: null, 2: { uri: _modDef18925 }, 3: null };
+let obj2 = { uri: _modDef18925 };
+obj[2] = { uri: _modDef18926 };
+const obj3 = { uri: _modDef18926 };
+obj[3] = { uri: _modDef18927 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CompassSpotIllustration.native.tsx");
 

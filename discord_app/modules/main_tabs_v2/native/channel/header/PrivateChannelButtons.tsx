@@ -1,50 +1,50 @@
-// === Module 14300: PrivateChannelButtons ===
+// === Module 14283: PrivateChannelButtons ===
 
-// Module 14300 (PrivateChannelButtons)
+// Module 14283 (PrivateChannelButtons)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5560 */;
-import useAlertStore from "useAlertStore" /* 5770 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6402 */;
-import Pressables from "Pressables" /* 6941 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7339 */;
-import openChannelSecondaryViewChatDefault from "openChannelSecondaryViewChat" /* 8490 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 9563 */;
-import useSearchContext from "useSearchContext" /* 13081 */;
-import TrackingDefault from "Tracking" /* 13146 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 14303 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14304 */;
-import ChannelHeader from "ChannelHeader" /* 14305 */;
-import SafetyToolsButton from "SafetyToolsButton" /* 14320 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5529 */;
+import useAlertStore from "useAlertStore" /* 5741 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6373 */;
+import Pressables from "Pressables" /* 6911 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7309 */;
+import openChannelSecondaryViewChatDefault from "openChannelSecondaryViewChat" /* 8459 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 9542 */;
+import useSearchContext from "useSearchContext" /* 13063 */;
+import TrackingDefault from "Tracking" /* 13128 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 14286 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14287 */;
+import ChannelHeader from "ChannelHeader" /* 14288 */;
+import SafetyToolsButton from "SafetyToolsButton" /* 14303 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6528 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6499 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RelationshipStore from "RelationshipStore" /* 4765 */;
+import RelationshipStore from "RelationshipStore" /* 4734 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5471 */;
+import VoiceStateStore from "VoiceStateStore" /* 5440 */;
 
 const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 
 require = fn;
 const View = fn(17).View;
-const NO_PARTICIPANTS = fn(6528).NO_PARTICIPANTS;
-let closure_12 = fn(8486).setIsChannelDetailsSearchActive;
+const NO_PARTICIPANTS = fn(6499).NO_PARTICIPANTS;
+let closure_12 = fn(8455).setIsChannelDetailsSearchActive;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AnalyticsSections: closure_14, ChannelTypes: closure_15, ME: closure_16 } = Constants);
-const ParticipantTypes = fn(5473).ParticipantTypes;
-const CHANGELOG_URL = fn(4725).CHANGELOG_URL;
-let closure_19 = fn(8487).SearchEntrypointAnalyticsLocations;
-const Features = fn(5568).Features;
+const ParticipantTypes = fn(5442).ParticipantTypes;
+const CHANGELOG_URL = fn(4694).CHANGELOG_URL;
+let closure_19 = fn(8456).SearchEntrypointAnalyticsLocations;
+const Features = fn(5537).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const tmp4 = fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.XSMALL];
 let closure_23 = tmp4;
 let obj = { direction: fn(1187).CutoutDirection.RIGHT, radius: tmp4 / 2 + 3, inset: -6 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_25 = createStyles.createStyles(() => {
   obj = { privateChannelButtonsWrapper: { flexDirection: "row", gap: 12, paddingEnd: 1 }, button: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, minHeight: nativeDefault.space.PX_32, minWidth: nativeDefault.space.PX_32, padding: nativeDefault.space.PX_4, justifyContent: "center", flexDirection: "row", alignItems: "center" }, disabledButton: { opacity: 0.6 }, overflowBadge: null };
   const size = { backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: nativeDefault.radii.round, width: height, height, justifyContent: "center", alignItems: "center", marginLeft: -6 };
@@ -87,9 +87,9 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     return isInChannelResult;
   }, items2);
   const tmp2Result = channelId(504);
-  inappropriateConversationSafetyToolsWarningForChannel = channelId(11788).useInappropriateConversationSafetyToolsWarningForChannel(channelId);
+  inappropriateConversationSafetyToolsWarningForChannel = channelId(11766).useInappropriateConversationSafetyToolsWarningForChannel(channelId);
   closure_6 = tmp7;
-  const tmp2Result8 = channelId(11788);
+  const tmp2Result8 = channelId(11766);
   const items3 = [visibleParticipants, totalParticipantCount];
   let stateFromStores2 = channelId(504).useStateFromStores(items3, () => {
     let type;
@@ -117,7 +117,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
   const tmp2Result9 = channelId(504);
   const items4 = [callParticipants];
   const stateFromStores3 = channelId(504).useStateFromStores(items4, () => callParticipants.supports(constants2.VIDEO));
-  const VideoGuardExperiment = tmp2(14301).VideoGuardExperiment;
+  const VideoGuardExperiment = tmp2(14284).VideoGuardExperiment;
   const videoEnabled = VideoGuardExperiment.useConfig({ location: "PrivateChannelButtons" }).videoEnabled;
   closure_7 = tmp10;
   const tmp2Result10 = channelId(504);
@@ -125,8 +125,8 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const isCallActiveNullable = channelId(8632).useIsCallActiveNullable(id);
-  const tmp2Result11 = channelId(8632);
+  const isCallActiveNullable = channelId(8601).useIsCallActiveNullable(id);
+  const tmp2Result11 = channelId(8601);
   const items5 = [inappropriateConversationSafetyToolsWarningForChannel];
   callParticipants = channelId(504).useStateFromStoresObject(items5, () => {
     let isMultiUserDMResult;
@@ -166,20 +166,20 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     tmp15 = callParticipants.length > 0;
   }
   closure_11 = tmp15;
-  const tmp17 = screenIndex(14302)({ context: { type: "channel", channel: stateFromStores } });
+  const tmp17 = screenIndex(14285)({ context: { type: "channel", channel: stateFromStores } });
   application = tmp17.application;
   let obj2 = { context: { type: "channel", channel: stateFromStores } };
   const tmp2Result12 = channelId(504);
-  let tmp18 = null != channelId(6564).useDMAppChannelApplicationId(stateFromStores);
+  let tmp18 = null != channelId(6535).useDMAppChannelApplicationId(stateFromStores);
   if (tmp18) {
     tmp18 = "channel-secondary-view-chat" !== screenIndex;
   }
-  const tmp2Result13 = channelId(6564);
+  const tmp2Result13 = channelId(6535);
   let tmp19 = null;
   if (tmp18) {
     tmp19 = channelId;
   }
-  const channelChatUnread = channelId(8489).useChannelChatUnread(tmp19);
+  const channelChatUnread = channelId(8458).useChannelChatUnread(tmp19);
   const items7 = [stateFromStores];
   ({ hasUnread, mentionCount } = channelChatUnread);
   callback = obj9.useCallback(() => {
@@ -242,7 +242,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
       const obj2 = { settings_type: "user", destination_pane: constants2.SETTINGS_APP_DMS_MENU, source_page: "app_dm_settings", application_id: application.id };
       AppAnalyticsUtilsDefault.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj2);
       const obj4 = { userId: recipientId, channel: stateFromStores, application };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14319, dependencyMap.paths), "AppDMOptionsBottomSheet", obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14302, dependencyMap.paths), "AppDMOptionsBottomSheet", obj4);
     }
   }, items11);
   if (inappropriateConversationSafetyToolsWarningForChannel != null) {
@@ -268,7 +268,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     }
     return tmpResult;
   }, items12);
-  if (screenIndex(6579)(channelId)) {
+  if (screenIndex(6550)(channelId)) {
     let obj3 = {
       style: tmp.button,
       onPress: function handleChangelog() {
@@ -281,8 +281,8 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     };
     const intl6 = tmp2(1113).intl;
     obj3.accessibilityLabel = intl6.string(tmp2(1113).t["+KSnWX"]);
-    obj3.children = closure_21(tmp2(10038).WindowLaunchIcon, { size: "sm" });
-    let tmp28Result = closure_21(tmp2(6941).PressableOpacity, obj3);
+    obj3.children = closure_21(tmp2(10016).WindowLaunchIcon, { size: "sm" });
+    let tmp28Result = closure_21(tmp2(6911).PressableOpacity, obj3);
   } else if (tmp17.isAppDM) {
     let tmp47Result2 = null;
     if (null != application) {
@@ -300,27 +300,27 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
         };
         const intl3 = tmp2(1113).intl;
         obj5.accessibilityLabel = intl3.string(tmp2(1113).t.kkKapG);
-        const items13 = [closure_21(tmp2(7583).ChatIcon, { size: "sm" }), ];
+        const items13 = [closure_21(tmp2(7553).ChatIcon, { size: "sm" }), ];
         if (hasUnread) {
-          let tmp50Result = closure_21(tmp2(14283).ButtonBadge, { badgePosition: "right" });
+          let tmp50Result = closure_21(tmp2(14266).ButtonBadge, { badgePosition: "right" });
         } else {
           tmp50Result = null;
         }
         items13[1] = tmp50Result;
         obj5.children = items13;
-        tmp47Result = closure_22(tmp2(6941).PressableOpacity, obj5);
+        tmp47Result = closure_22(tmp2(6911).PressableOpacity, obj5);
       }
       const items14 = [tmp47Result, , ];
       const obj6 = { style: tmp.button, onPress: callback2, accessibilityLabel: null, accessibilityRole: "button", children: null };
       const intl4 = tmp2(1113).intl;
       obj6.accessibilityLabel = intl4.string(tmp2(1113).t["5h0QOP"]);
-      obj6.children = closure_21(tmp2(7339).MagnifyingGlassIcon, { size: "sm" });
-      items14[1] = closure_21(tmp2(6941).PressableOpacity, obj6);
+      obj6.children = closure_21(tmp2(7309).MagnifyingGlassIcon, { size: "sm" });
+      items14[1] = closure_21(tmp2(6911).PressableOpacity, obj6);
       const obj7 = { style: tmp.button, onPress: callback3, accessibilityLabel: null, accessibilityRole: "button", children: null };
       const intl5 = tmp2(1113).intl;
       obj7.accessibilityLabel = intl5.string(tmp2(1113).t["+1H47t"]);
-      obj7.children = closure_21(tmp2(10331).SettingsIcon, { size: "sm" });
-      items14[2] = closure_21(tmp2(6941).PressableOpacity, obj7);
+      obj7.children = closure_21(tmp2(10309).SettingsIcon, { size: "sm" });
+      items14[2] = closure_21(tmp2(6911).PressableOpacity, obj7);
       obj4.children = items14;
       tmp47Result2 = closure_22(recipientId, obj4);
     }
@@ -366,12 +366,12 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
         tmp16(575).unsafe_rawColors;
         const unsafe_rawColors1 = { size: "sm", color: null };
         unsafe_rawColors1.color = stateFromStores1 ? unsafe_rawColors1.GREEN_360 : unsafe_rawColors1.BRAND_400;
-        closure_21(tmp2(6945).VoiceNormalIcon, unsafe_rawColors1);
+        closure_21(tmp2(6915).VoiceNormalIcon, unsafe_rawColors1);
         const tmp37 = stateFromStores1 ? unsafe_rawColors1.GREEN_360 : unsafe_rawColors1.BRAND_400;
       } else {
         if (stateFromStores1) {
           const obj12 = { size: "sm", color: tmp16(575).unsafe_rawColors.RED_400 };
-          let tmp33Result2 = closure_21(tmp2(8526).PhoneHangUpIcon, obj12);
+          let tmp33Result2 = closure_21(tmp2(8495).PhoneHangUpIcon, obj12);
           let tmp36 = closure_21;
         } else {
           let GREEN_360;
@@ -379,7 +379,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
             GREEN_360 = tmp16(575).unsafe_rawColors.GREEN_360;
           }
           const obj13 = { size: "sm", color: GREEN_360 };
-          tmp33Result2 = closure_21(tmp2(8524).PhoneCallIcon, obj13);
+          tmp33Result2 = closure_21(tmp2(8493).PhoneCallIcon, obj13);
           tmp36 = closure_21;
         }
         const items16 = [
@@ -390,7 +390,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
                   if (0 === index) {
                     num = nativeDefault.space.PX_4;
                   }
-                  obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: native.AvatarSizes.XSMALL, cutout: "(function pnpm_repeatTs1(){let[_nextAnimation,numberOfReps,reverse,callback,getReduceMotionForAnimation,reduceMotion]=this.__closure;const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function repeat(animation,now){const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;if(finished){animation.reps+=1;if(nextAnimation.callback){nextAnimation.callback(true,animation.current);}if(animation.reduceMotion||numberOfReps>0&&animation.reps>=numberOfReps){return true;}const startValue=reverse?nextAnimation.current:animation.startValue;if(reverse){nextAnimation.toValue=animation.startValue;animation.startValue=startValue;}nextAnimation.onStart(nextAnimation,startValue,now,nextAnimation.previousAnimation);return false;}return false;}const repCallback=function(finished){if(callback){callback(finished);}if(!finished&&nextAnimation.callback){nextAnimation.callback(false);}};function onStart(animation,value,now,previousAnimation){animation.startValue=value;animation.reps=0;if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}if(animation.reduceMotion&&reverse&&(numberOfReps<=0||numberOfReps%2===0)){animation.current=animation.startValue;animation.onFrame=function(){return true;};}else{nextAnimation.onStart(nextAnimation,value,now,previousAnimation);}}return{isHigherOrder:true,onFrame:repeat,onStart:onStart,reps:0,current:nextAnimation.current,callback:repCallback,startValue:0,reduceMotion:getReduceMotionForAnimation(reduceMotion)};})" };
+                  obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: native.AvatarSizes.XSMALL, cutout: "absolute" };
                   if (index !== diff) {
                     const tmp7 = obj;
                   }
@@ -405,12 +405,12 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
           const obj15 = { variant: "footnote/semibold", color: "button-outline-primary-text", children: null };
           const items17 = ["+", totalParticipantCount - 5];
           obj15.children = items17;
-          obj14.children = closure_22(tmp2(5414).Text, obj15);
+          obj14.children = closure_22(tmp2(5383).Text, obj15);
           tmp36Result = tmp36(tmp29, obj14);
         }
         items16[2] = tmp36Result;
         obj10.children = items16;
-        const items18 = [closure_22(tmp2(6941).PressableOpacity, obj10), , ];
+        const items18 = [closure_22(tmp2(6911).PressableOpacity, obj10), , ];
         let tmp41 = null;
         if (!isMultiUserDMResult) {
           tmp41 = null;
@@ -439,12 +439,12 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
             const intl2 = tmp2(1113).intl;
             obj16.accessibilityLabel = intl2.string(tmp2(1113).t.oCqlGG);
             if (videoEnabled) {
-              let VideoDenyIcon = tmp2(11086).VideoIcon;
+              let VideoDenyIcon = tmp2(11064).VideoIcon;
             } else {
-              VideoDenyIcon = tmp2(14321).VideoDenyIcon;
+              VideoDenyIcon = tmp2(14304).VideoDenyIcon;
             }
             obj16.children = tmp36(VideoDenyIcon, { size: "sm" });
-            tmp36(tmp2(6941).PressableOpacity, obj16);
+            tmp36(tmp2(6911).PressableOpacity, obj16);
           }
         }
         items18[1] = tmp41;

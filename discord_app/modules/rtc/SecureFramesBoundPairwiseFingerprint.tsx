@@ -1,11 +1,11 @@
-// === Module 9615: SecureFramesBoundPairwiseFingerprint ===
+// === Module 9594: SecureFramesBoundPairwiseFingerprint ===
 
-// Module 9615 (SecureFramesBoundPairwiseFingerprint)
+// Module 9594 (SecureFramesBoundPairwiseFingerprint)
 import byteLengthDefault from "byteLength" /* 206 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
 
 const require = fn;
 function memoizedPairwiseFingerprint(id, secureFramesRosterMapEntry1, arg2, secureFramesRosterMapEntry) {
@@ -28,7 +28,7 @@ function memoizedPairwiseFingerprint(id, secureFramesRosterMapEntry1, arg2, secu
         return uint8Array;
       });
     } else {
-      const obj4 = joined(9593);
+      const obj4 = joined(9572);
       const _Uint8Array = Uint8Array;
       const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
       const _Uint8Array2 = Uint8Array;
@@ -59,7 +59,7 @@ let closure_11 = async function _computeBoundPairwiseFingerprint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -122,8 +122,8 @@ let closure_11 = async function _computeBoundPairwiseFingerprint(arg0) {
     }
   }
 };
-let closure_7 = fn(9609).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-const Features = fn(5568).Features;
+let closure_7 = fn(9588).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+const Features = fn(5537).Features;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesBoundPairwiseFingerprint.tsx");

@@ -1,6 +1,6 @@
-// === Module 15786: DisplayNameStylesSeenStore ===
+// === Module 15777: DisplayNameStylesSeenStore ===
 
-// Module 15786 (DisplayNameStylesSeenStore)
+// Module 15777 (DisplayNameStylesSeenStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

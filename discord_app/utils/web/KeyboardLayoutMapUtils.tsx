@@ -1,9 +1,9 @@
-// === Module 15288: KeyboardLayoutMapUtils ===
+// === Module 15274: KeyboardLayoutMapUtils ===
 
-// Module 15288 (KeyboardLayoutMapUtils)
+// Module 15274 (KeyboardLayoutMapUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
-import keyCodeDefault from "keyCode" /* 15287 */;
+import keyCodeDefault from "keyCode" /* 15273 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1362 */;
@@ -37,7 +37,7 @@ let closure_12 = async function _syncKeyboardLayoutMap() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -148,7 +148,7 @@ let closure_19 = async function _createKeyboardMapper() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -190,7 +190,7 @@ let closure_19 = async function _createKeyboardMapper() {
           }
         });
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -230,7 +230,7 @@ let closure_21 = async function _resetKeyboardMapper() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -263,7 +263,7 @@ let closure_21 = async function _resetKeyboardMapper() {
           obj.reset();
         }
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp10) {
       c2 = tmp;
@@ -346,7 +346,7 @@ function getExactKeyboardEventMatchFromAny(key) {
   }
   return tmp4;
 }
-const KeyboardConstants = fn(8209);
+const KeyboardConstants = fn(8178);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
 const logger = new LoggerDefault("KeyboardLayoutMapUtils");
 const PlatformUtils = fn(1380);

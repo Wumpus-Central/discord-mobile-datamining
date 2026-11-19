@@ -1,22 +1,23 @@
-// === Module 15627: links ===
+// === Module 15613: links ===
 
-// Module 15627 (links)
+// Module 15613 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4744 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4829 */;
-import RPCErrorDefault from "RPCError" /* 6818 */;
-import openUserSettings from "openUserSettings" /* 8106 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10761 */;
-import RPCHelpers from "RPCHelpers" /* 10764 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15600 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15628 */;
-import internalDeepLinks from "internalDeepLinks" /* 15629 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15630 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15632 */;
-import getFrameChannelIdDefault from "getFrameChannelId" /* 15635 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4713 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4798 */;
+import RPCErrorDefault from "RPCError" /* 6790 */;
+import openUserSettings from "openUserSettings" /* 8075 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10739 */;
+import RPCHelpers from "RPCHelpers" /* 10742 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15586 */;
+import createSocketGateDefault from "createSocketGate" /* 15614 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15615 */;
+import internalDeepLinks from "internalDeepLinks" /* 15616 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15617 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15619 */;
+import getFrameChannelIdDefault from "getFrameChannelId" /* 15622 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 require = fn;
@@ -57,7 +58,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -136,7 +137,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
           c5 = 0;
           const obj10 = { errorCode: closure_131_6.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
-          const tmp262 = new closure_131_1(closure_131_2[17])(obj10, "Invalid URL: " + closure_130_1);
+          const tmp262 = new closure_131_1(closure_131_2[18])(obj10, "Invalid URL: " + closure_130_1);
           throw tmp262;
         } else if (arg0 === 1) {
           c7 = 3;
@@ -148,13 +149,13 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
           return obj;
         } else {
           if (value) {
-            closure_131_1(closure_131_2[14])(closure_130_4);
+            closure_131_1(closure_131_2[15])(closure_130_4);
             closure_131_11(closure_130_0, closure_130_4, true);
             const resolved = Promise.resolve({ opened: true });
           } else {
             new Promise((arg0) => {
               closure_0 = arg0;
-              let obj = closure_1_0(application[15]);
+              let obj = closure_1_0(application[16]);
               let obj2 = {
                 href,
                 shouldConfirm: true,
@@ -162,7 +163,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5498)(href);
+                  closure_1(5467)(href);
                   const str = new URL(href);
                   let tmp5 = "client.vibeyard.tools" === str.hostname;
                   if (tmp5) {
@@ -207,7 +208,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   const obj2 = { application_id: id, url: str.toString(), opened: false };
                 }
               };
-              return obj.handleClick(obj2, undefined, undefined, closure_1_0(application[16]).getActivitiesModalContextKey({ application, channelId }));
+              return obj.handleClick(obj2, undefined, undefined, closure_1_0(application[17]).getActivitiesModalContextKey({ application, channelId }));
             });
           }
           c5 = 0;
@@ -225,7 +226,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6261);
+let Constants = fn(6233);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1072);
 ({ RPCCommands, RPCErrors: closure_6, UserSettingsSections: metroImportDefault, AnalyticEvents: closure_8 } = Constants);
@@ -233,112 +234,27 @@ Constants = fn(2145);
 const items = [, ];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = Constants);
 const set = new Set(items);
-const weakMap = new WeakMap();
+let closure_10 = createSocketGateDefault({ cooldownMs: 1000 });
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15607);
+let CONTEXT_MENU_ICON_NAMES = fn(15593);
 let obj3 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     const url = socket.args.url;
     return (async () => {
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
+      const result = v3(dependencyMap[20]).validatePostMessageTransport(socket.transport);
+      await closure_1_10.runExclusive(socket, () => (function openExternalLink() {
+        const self = this;
+        const apply = closure_1_12.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
-          return { value: "HermesInternal", done: null };
+          applyArgumentsResult = apply(self, arguments);
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_1 = tmp6;
-              closure_129_0 = undefined;
-              const result = socket(c2[19]).validatePostMessageTransport(socket.transport);
-              value = weakMap.get(socket);
-              socket = value;
-              if (value == null) {
-                socket = { inFlight: false, readyAt: 0 };
-              }
-              closure_129_0 = socket;
-              if (!socket.inFlight) {
-                const _Date4 = Date;
-                if (Date.now() >= tmp18.readyAt) {
-                  tmp18.inFlight = true;
-                  const result1 = weakMap.set(socket, tmp18);
-                  c4 = 1;
-                  c2 = 2;
-                  c5 = 1;
-                  const obj4 = {
-                    value: (function openExternalLink() {
-                                  const self = this;
-                                  const apply = closure_1_12.apply;
-                                  if (typeof apply === "unknown") {
-                                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                                  } else {
-                                    applyArgumentsResult = apply(self, arguments);
-                                  }
-                                  return applyArgumentsResult;
-                                })(socket, url),
-                    done: false
-                  };
-                  return obj4;
-                }
-              }
-              c5 = 3;
-              const obj5 = { value: { opened: false }, done: true };
-              return obj5;
-            }
-          } else if (1 === tmp6) {
-            c4 = 0;
-            closure_129_0.inFlight = false;
-            const _Date3 = Date;
-            closure_129_0.readyAt = Date.now() + 1000;
-            throw closure_3;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            closure_129_0.inFlight = false;
-            const _Date2 = Date;
-            closure_129_0.readyAt = Date.now() + 1000;
-            c5 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            c4 = 0;
-            closure_129_0.inFlight = false;
-            const _Date = Date;
-            closure_129_0.readyAt = Date.now() + 1000;
-            c5 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-        } catch (tmp21) {
-          closure_3 = tmp21;
-          if (tmp3 === c4) {
-            c5 = tmp2;
-            throw tmp21;
-          } else {
-            c2 = tmp;
-          }
-        }
-      }
+        return applyArgumentsResult;
+      })(v3, closure_1_1), { opened: false });
+      return value;
     })();
   }
 };
@@ -367,16 +283,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15607);
+CONTEXT_MENU_ICON_NAMES = fn(15593);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(10764).validatePostMessageTransport(socket.transport);
-    let obj = socket(10764);
+    let result = socket(10742).validatePostMessageTransport(socket.transport);
+    let obj = socket(10742);
     let tmp = socket;
-    const validateApplicationResult = socket(10764).validateApplication(socket.application);
+    const validateApplicationResult = socket(10742).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -409,7 +325,7 @@ let obj6 = {
       }
       tmpResult = tmp(2151);
     }
-    let obj2 = socket(10764);
+    let obj2 = socket(10742);
   }
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

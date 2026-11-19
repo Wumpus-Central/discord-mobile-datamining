@@ -1,24 +1,24 @@
-// === Module 6411: StageChannelActionCreators ===
+// === Module 6382: StageChannelActionCreators ===
 
-// Module 6411 (StageChannelActionCreators)
+// Module 6382 (StageChannelActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import Server from "Server" /* 2119 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4760 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5858 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6417 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6419 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7191 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7648 */;
-import StageInstanceActionCreators from "StageInstanceActionCreators" /* 7943 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4729 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5829 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6388 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6390 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7161 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7618 */;
+import StageInstanceActionCreators from "StageInstanceActionCreators" /* 7913 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4726 */;
-import VoiceStateStore from "VoiceStateStore" /* 5471 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+import VoiceStateStore from "VoiceStateStore" /* 5440 */;
 
 const HTTPUtils = obj(1285);
-const AppAnalyticsUtils = obj(5560);
-const useStageSpeakingForCurrentUser = obj(6410);
-const StageChannelUtils = obj(6413);
+const AppAnalyticsUtils = obj(5529);
+const useStageSpeakingForCurrentUser = obj(6381);
+const StageChannelUtils = obj(6384);
 require = fn;
 function audienceAckRequestToSpeak(channel, suppress) {
   let flag = arg2;
@@ -82,7 +82,7 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -111,7 +111,7 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
               return obj6;
             } else {
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "+60" };
             }
           }
         } else if (arg0 === 1) {
@@ -146,7 +146,7 @@ let closure_13 = async function _editStage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -166,7 +166,7 @@ let closure_13 = async function _editStage(arg0) {
           return obj5;
         } else {
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else if (arg0 === 1) {
         c3 = 3;
@@ -201,7 +201,7 @@ let closure_14 = async function _endStage(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -229,7 +229,7 @@ let closure_14 = async function _endStage(arg0) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp8) {
         c1 = tmp;
@@ -240,7 +240,7 @@ let closure_14 = async function _endStage(arg0) {
 };
 const Constants = fn(1072);
 ({ AbortCodes: metroImportDefault, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
-const SafetyToastType = fn(6412).SafetyToastType;
+const SafetyToastType = fn(6383).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 

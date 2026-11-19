@@ -1,15 +1,15 @@
-// === Module 14690: ExternalStreamingStore ===
+// === Module 14676: ExternalStreamingStore ===
 
-// Module 14690 (ExternalStreamingStore)
+// Module 14676 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import _modDef1345 from "module_1345" /* 1345 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6979 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6949 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6597 */;
-import StreamerModeStore from "StreamerModeStore" /* 4880 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6568 */;
+import StreamerModeStore from "StreamerModeStore" /* 4849 */;
 
 require = fn;
 function makeTwitchRequest(arg0, query, arg2) {
@@ -98,7 +98,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -291,7 +291,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

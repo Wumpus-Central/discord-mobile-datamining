@@ -1,10 +1,10 @@
-// === Module 11909: ApexActionCreators ===
+// === Module 11887: ApexActionCreators ===
 
-// Module 11909 (ApexActionCreators)
+// Module 11887 (ApexActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import apex_ApexTypes from "apex/ApexTypes" /* 1455 */;
-import experiment from "experiment" /* 8154 */;
+import experiment from "experiment" /* 8123 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
@@ -57,7 +57,7 @@ let closure_9 = async function _fetchUserExperimentAssignments() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -146,7 +146,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {

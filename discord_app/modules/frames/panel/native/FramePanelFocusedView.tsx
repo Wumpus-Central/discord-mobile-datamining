@@ -1,20 +1,23 @@
-// === Module 19269: FramePanelFocusedView ===
+// === Module 19261: FramePanelFocusedView ===
 
-// Module 19269 (FramePanelFocusedView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10582 */;
-import FrameStackLevel from "FrameStackLevel" /* 15682 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 18457 */;
-import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 18757 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19250 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19266 */;
-import PlayableFrameBannerDefault from "PlayableFrameBanner" /* 19272 */;
+// Module 19261 (FramePanelFocusedView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10560 */;
+import FrameStackLevel from "FrameStackLevel" /* 15669 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 18450 */;
+import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 18749 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19242 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19258 */;
+import PlayableActivityFrameHeaderDefault from "PlayableActivityFrameHeader" /* 19263 */;
+import FramePanelHeaderDefault from "FramePanelHeader" /* 19265 */;
+import PlayableFrameImpressionTrackerDefault from "PlayableFrameImpressionTracker" /* 19267 */;
+import PlayableFrameBannerDefault from "PlayableFrameBanner" /* 19268 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6531 */;
+import FramesStore from "FramesStore" /* 6502 */;
 
 require = fn;
-const FramesConstants = fn(6532);
+const FramesConstants = fn(6503);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
-const ActivityPanelModes = fn(5449).ActivityPanelModes;
+const ActivityPanelModes = fn(5418).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -27,7 +30,7 @@ export default noop.memo(function FramePanelFocusedView(transitionState) {
   let landscapeSafeAreasConfig;
   items = [landscapeSafeAreasConfig];
   stateFromStores = transitionState(stateFromStores[5]).useStateFromStores(items, () => {
-    const tmp = memo(landscapeSafeAreasConfig.getMainFrame());
+    const tmp = closure_5(landscapeSafeAreasConfig.getMainFrame());
     let id;
     if (tmp != null) {
       id = tmp.id;
@@ -39,14 +42,26 @@ export default noop.memo(function FramePanelFocusedView(transitionState) {
   const baseActivityPanelFocusedView = obj2.useBaseActivityPanelFocusedView({ context: transitionCleanUp(stateFromStores[7]) });
   const portraitSafeAreasConfig = baseActivityPanelFocusedView.portraitSafeAreasConfig;
   landscapeSafeAreasConfig = baseActivityPanelFocusedView.landscapeSafeAreasConfig;
-  const memo = portraitSafeAreasConfig.useMemo(() => closure_1_8(transitionCleanUp(stateFromStores[8]), {}), []);
-  const items1 = [stateFromStores];
+  const tmp3 = transitionCleanUp(stateFromStores[8])();
+  closure_5 = tmp3;
+  const items1 = [tmp3];
+  const memo = portraitSafeAreasConfig.useMemo(() => {
+    if (null != closure_5) {
+      const obj = { frameId: null, playable: null };
+      ({ frameId: obj.frameId, playable: obj.playable } = closure_5);
+      let tmp5 = React5(PlayableActivityFrameHeaderDefault, obj, closure_5.playable.id);
+    } else {
+      tmp5 = React5(FramePanelHeaderDefault, {});
+    }
+    return tmp5;
+  }, items1);
+  const items2 = [stateFromStores];
   const updateActivityPanelModeToPIP = portraitSafeAreasConfig.useCallback(() => {
     if (null != stateFromStores) {
       FramesActionCreatorsDefault.updateFramePanelMode(tmp, ActivityPanelModes.PIP);
     }
-  }, items1);
-  const items2 = [stateFromStores, memo, landscapeSafeAreasConfig, portraitSafeAreasConfig, transitionCleanUp, transitionState, updateActivityPanelModeToPIP];
+  }, items2);
+  const items3 = [stateFromStores, memo, landscapeSafeAreasConfig, portraitSafeAreasConfig, transitionCleanUp, transitionState, updateActivityPanelModeToPIP];
   return portraitSafeAreasConfig.useMemo(() => {
     const obj = { transitionState, transitionCleanUp, updateActivityPanelModeToPIP, hasActivity: null != stateFromStores, context: FramePanelStateContextDefault, header: memo, children: null };
     let tmp5 = null;
@@ -58,13 +73,16 @@ export default noop.memo(function FramePanelFocusedView(transitionState) {
       const obj4 = { layoutMode: constants.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig };
       obj3.presentation = obj4;
       items = [React5(FrameRenderTargetDefault, obj3), ];
-      const obj5 = { frameId: stateFromStores };
-      items[1] = React5(PlayableFrameBannerDefault, obj5, stateFromStores);
+      const obj5 = { frameId: stateFromStores, children: null };
+      const tmp6Result3 = FrameRenderTargetDefault;
+      const obj6 = { frameId: stateFromStores };
+      obj5.children = React5(PlayableFrameBannerDefault, obj6);
+      items[1] = React5(PlayableFrameImpressionTrackerDefault, obj5, stateFromStores);
       obj2.children = items;
       tmp5 = React6(tmp6Result, obj2);
-      const tmp6Result2 = FrameRenderTargetDefault;
+      const tmp6Result4 = PlayableFrameImpressionTrackerDefault;
     }
     obj.children = tmp5;
     return React5(ActivityPanelFocusedView.BaseActivityPanelFocusedView, obj);
-  }, items2);
+  }, items3);
 });

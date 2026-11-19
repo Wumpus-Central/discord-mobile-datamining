@@ -1,9 +1,9 @@
-// === Module 9312: showMarketingMomentRewardScreen ===
+// === Module 9289: showMarketingMomentRewardScreen ===
 
-// Module 9312 (showMarketingMomentRewardScreen)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7986 */;
+// Module 9289 (showMarketingMomentRewardScreen)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7955 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7987 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7956 */;
 
 require = fn;
 let closure_5 = async function _showMarketingMomentRewardScreen(arg0) {
@@ -17,7 +17,7 @@ let closure_5 = async function _showMarketingMomentRewardScreen(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -55,7 +55,7 @@ let closure_5 = async function _showMarketingMomentRewardScreen(arg0) {
           const obj = closure_130_1(closure_130_2[3]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp21) {
       c4 = tmp;

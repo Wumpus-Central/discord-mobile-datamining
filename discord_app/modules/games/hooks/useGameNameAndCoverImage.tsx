@@ -1,8 +1,8 @@
-// === Module 10132: useGameNameAndCoverImage ===
+// === Module 10110: useGameNameAndCoverImage ===
 
-// Module 10132 (useGameNameAndCoverImage)
+// Module 10110 (useGameNameAndCoverImage)
 import util from "util" /* 1113 */;
-import useGame from "useGame" /* 8959 */;
+import useGame from "useGame" /* 8933 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");

@@ -1,7 +1,7 @@
-// === Module 18315: useConjureManagedCopy ===
+// === Module 18324: useConjureManagedCopy ===
 
-// Module 18315 (useConjureManagedCopy)
-import ConjureManagedCopyStore from "ConjureManagedCopyStore" /* 6887 */;
+// Module 18324 (useConjureManagedCopy)
+import ConjureManagedCopyStore from "ConjureManagedCopyStore" /* 6857 */;
 
 const require = globalThis.__r;
 
@@ -21,10 +21,10 @@ export default function useConjureManagedCopy(arg0) {
     return copy;
   }, items1);
 };
-export function useIsConjureManagedCopy(projectId) {
-  _require = projectId;
+export function useIsConjureManagedCopy(id) {
+  _require = id;
   items = [ConjureManagedCopyStore];
-  const items1 = [projectId];
+  const items1 = [id];
   return null != require("initialize").useStateFromStores(items, () => {
     let copy = null;
     if (null != closure_0) {

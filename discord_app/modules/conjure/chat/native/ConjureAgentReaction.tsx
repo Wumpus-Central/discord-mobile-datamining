@@ -1,17 +1,17 @@
-// === Module 18538: ConjureAgentReaction ===
+// === Module 18531: ConjureAgentReaction ===
 
-// Module 18538 (ConjureAgentReaction)
+// Module 18531 (ConjureAgentReaction)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UserSettings from "UserSettings" /* 4648 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 6840 */;
-import EmojiDefault from "Emoji" /* 7407 */;
+import UserSettings from "UserSettings" /* 4617 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 6810 */;
+import EmojiDefault from "Emoji" /* 7377 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { pill: { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", marginTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, paddingVertical: 2, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, emoji: { width: 18, height: 18 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

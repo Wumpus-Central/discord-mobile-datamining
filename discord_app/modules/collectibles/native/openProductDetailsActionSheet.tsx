@@ -1,10 +1,10 @@
-// === Module 8829: openProductDetailsActionSheet ===
+// === Module 8798: openProductDetailsActionSheet ===
 
-// Module 8829 (openProductDetailsActionSheet)
+// Module 8798 (openProductDetailsActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7986 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7998 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7955 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7967 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "Shop Product Preview";
@@ -32,12 +32,12 @@ export function openProductDetailsActionSheet(arg0, stack) {
   }
   CollectiblesActionCreators.productDetailsOpened(skuId);
   const tmpResult = CollectiblesActionCreators;
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8830, dependencyMap.paths), c3, { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext }, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8799, dependencyMap.paths), c3, { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext }, stack);
   const obj2 = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
 }
 export function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;
   ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile } = skuId);
   CollectiblesActionCreators.productDetailsOpened(skuId);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8830, dependencyMap.paths), c3, { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile }, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8799, dependencyMap.paths), c3, { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile }, stack);
 }

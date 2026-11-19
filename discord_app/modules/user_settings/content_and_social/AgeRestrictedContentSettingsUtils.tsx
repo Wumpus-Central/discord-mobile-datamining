@@ -1,11 +1,11 @@
-// === Module 10402: AgeRestrictedContentSettingsUtils ===
+// === Module 10380: AgeRestrictedContentSettingsUtils ===
 
-// Module 10402 (AgeRestrictedContentSettingsUtils)
-import UserSettings from "UserSettings" /* 4648 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5485 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6319 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6324 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 10403 */;
+// Module 10380 (AgeRestrictedContentSettingsUtils)
+import UserSettings from "UserSettings" /* 4617 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5454 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6290 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6295 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 10381 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;

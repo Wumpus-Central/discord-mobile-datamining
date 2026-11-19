@@ -1,9 +1,9 @@
-// === Module 18541: useConjureProjectEventLine ===
+// === Module 18534: useConjureProjectEventLine ===
 
-// Module 18541 (useConjureProjectEventLine)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 11937 */;
+// Module 18534 (useConjureProjectEventLine)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 11915 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4694 */;
+import GuildStore from "GuildStore" /* 4663 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
   const effect = stateFromStores.useEffect(() => {
     const messageAuthor = conjureMessageAuthors.requestMessageAuthor(actor_user_id);
   }, items);
-  const items1 = [UserStore];
+  const items1 = [moved_to_guild_id];
   const items2 = [actor_user_id];
   stateFromStores = require("initialize").useStateFromStores(items1, () => {
     let user = null;
@@ -58,9 +58,29 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
     const intl = tmp2(tmp3[7]).intl;
     stateFromStores1 = intl.string(tmp6(tmp3[8]).R1tPlP);
   }
-  let tmp10 = null;
+  moved_to_guild_id = undefined;
+  if ("app_removed" === actor_user_id.type) {
+    moved_to_guild_id = actor_user_id.moved_to_guild_id;
+  }
+  const obj3 = require("initialize");
+  const tmp8 = name;
+  const items5 = [tmp8];
+  const items6 = [moved_to_guild_id];
+  const stateFromStores2 = require("initialize").useStateFromStores(items5, () => {
+    let tmp2 = null;
+    if (null != moved_to_guild_id) {
+      guild = GuildStore.getGuild(tmp);
+      name = undefined;
+      if (guild != null) {
+        name = guild.name;
+      }
+      tmp2 = name;
+    }
+    return tmp2;
+  }, items6);
+  let tmp13 = null;
   if (null != stateFromStores) {
-    tmp10 = null;
+    tmp13 = null;
     if (null != name) {
       const obj4 = {
         user: name,
@@ -68,71 +88,93 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
               return closure_1(stateFromStores.id, name, arg1);
             }
       };
-      tmp10 = obj4;
+      tmp13 = obj4;
     }
   }
   const type = actor_user_id.type;
   if ("app_removed" === type) {
-    if (null == tmp10) {
-      const intl11 = tmp2(tmp3[7]).intl;
-      const obj5 = { app: tmp7, server: stateFromStores1 };
-      let formatResult = intl11.format(tmp6(tmp3[8]).Lwsrhg, obj5);
+    if (null != moved_to_guild_id) {
+      let moved_to_guild_name = stateFromStores2;
+      if (stateFromStores2 == null) {
+        moved_to_guild_name = actor_user_id.moved_to_guild_name;
+      }
+      if (moved_to_guild_name == null) {
+        const intl12 = tmp2(tmp3[7]).intl;
+        moved_to_guild_name = intl12.string(tmp6(tmp3[8]).R1tPlP);
+      }
+      if (null == tmp13) {
+        const intl14 = tmp2(tmp3[7]).intl;
+        const obj5 = { app: tmp7, server: stateFromStores1, newServer: moved_to_guild_name };
+        let formatResult = intl14.format(tmp6(tmp3[8]).NVM0sD, obj5);
+      } else {
+        const intl13 = tmp2(tmp3[7]).intl;
+        const obj6 = { app: tmp7, server: stateFromStores1, newServer: moved_to_guild_name };
+        const merged = Object.assign(tmp13);
+        formatResult = intl13.format(tmp6(tmp3[8])["/hlliy"], obj6);
+      }
+      return formatResult;
     } else {
-      const intl10 = tmp2(tmp3[7]).intl;
-      const obj6 = { app: tmp7, server: stateFromStores1 };
-      const merged = Object.assign(tmp10);
-      formatResult = intl10.format(tmp6(tmp3[8]).qqePfT, obj6);
+      if (null == tmp13) {
+        const intl11 = tmp2(tmp3[7]).intl;
+        const obj7 = { app: tmp7, server: stateFromStores1 };
+        let formatResult1 = intl11.format(tmp6(tmp3[8]).Lwsrhg, obj7);
+      } else {
+        const intl10 = tmp2(tmp3[7]).intl;
+        const obj8 = { app: tmp7, server: stateFromStores1 };
+        const merged1 = Object.assign(tmp13);
+        formatResult1 = intl10.format(tmp6(tmp3[8]).qqePfT, obj8);
+      }
+      return formatResult1;
     }
-    return formatResult;
   } else if ("bot_removed" === type) {
-    if (null == tmp10) {
+    if (null == tmp13) {
       const intl9 = tmp2(tmp3[7]).intl;
-      const obj7 = { app: tmp7, server: stateFromStores1 };
-      let formatResult1 = intl9.format(tmp6(tmp3[8]).mT7EQG, obj7);
+      const obj9 = { app: tmp7, server: stateFromStores1 };
+      let formatResult2 = intl9.format(tmp6(tmp3[8]).mT7EQG, obj9);
     } else {
       const intl8 = tmp2(tmp3[7]).intl;
-      const obj8 = { app: tmp7, server: stateFromStores1 };
-      const merged1 = Object.assign(tmp10);
-      formatResult1 = intl8.format(tmp6(tmp3[8])["lA/crI"], obj8);
-    }
-    return formatResult1;
-  } else if ("preview_bot_removed" === type) {
-    if (null == tmp10) {
-      const intl7 = tmp2(tmp3[7]).intl;
-      const obj9 = { app: tmp7, server: stateFromStores1 };
-      let formatResult2 = intl7.format(tmp6(tmp3[8])["4LVIeo"], obj9);
-    } else {
-      const intl6 = tmp2(tmp3[7]).intl;
       const obj10 = { app: tmp7, server: stateFromStores1 };
-      const merged2 = Object.assign(tmp10);
-      formatResult2 = intl6.format(tmp6(tmp3[8]).YJOV6D, obj10);
+      const merged2 = Object.assign(tmp13);
+      formatResult2 = intl8.format(tmp6(tmp3[8])["lA/crI"], obj10);
     }
     return formatResult2;
+  } else if ("preview_bot_removed" === type) {
+    if (null == tmp13) {
+      const intl7 = tmp2(tmp3[7]).intl;
+      const obj11 = { app: tmp7, server: stateFromStores1 };
+      let formatResult3 = intl7.format(tmp6(tmp3[8])["4LVIeo"], obj11);
+    } else {
+      const intl6 = tmp2(tmp3[7]).intl;
+      const obj12 = { app: tmp7, server: stateFromStores1 };
+      const merged3 = Object.assign(tmp13);
+      formatResult3 = intl6.format(tmp6(tmp3[8]).YJOV6D, obj12);
+    }
+    return formatResult3;
   } else if ("app_channel_deleted" === type) {
     let str4 = actor_user_id.channel_name;
     if (str4 == null) {
       str4 = "";
     }
-    if (null == tmp10) {
+    if (null == tmp13) {
       const intl5 = tmp2(tmp3[7]).intl;
-      const obj11 = { channel: str4, server: stateFromStores1 };
-      let formatResult3 = intl5.format(tmp6(tmp3[8])["4VQfid"], obj11);
+      const obj13 = { channel: str4, server: stateFromStores1 };
+      let formatResult4 = intl5.format(tmp6(tmp3[8])["4VQfid"], obj13);
     } else {
       const intl4 = tmp2(tmp3[7]).intl;
-      const obj12 = { channel: str4, server: stateFromStores1 };
-      const merged3 = Object.assign(tmp10);
-      formatResult3 = intl4.format(tmp6(tmp3[8]).RlMIJN, obj12);
+      const obj14 = { channel: str4, server: stateFromStores1 };
+      const merged4 = Object.assign(tmp13);
+      formatResult4 = intl4.format(tmp6(tmp3[8]).RlMIJN, obj14);
     }
-    return formatResult3;
+    return formatResult4;
   } else if ("remixed" === type) {
     const intl3 = tmp2(tmp3[7]).intl;
-    const obj13 = { source: actor_user_id.source_name };
-    return intl3.format(tmp6(tmp3[8]).mHCXtm, obj13);
+    const obj15 = { source: actor_user_id.source_name };
+    return intl3.format(tmp6(tmp3[8]).mHCXtm, obj15);
   } else if ("voice_channel_pin" === type) {
     const intl2 = tmp2(tmp3[7]).intl;
     return intl2.string(tmp6(tmp3[8]).UGAfl9);
   } else {
     return "staff_notice" === type ? actor_user_id.message : undefined;
   }
-  const obj3 = require("initialize");
+  const tmp2Result = require("initialize");
 };

@@ -1,9 +1,9 @@
-// === Module 19507: BlockedDomainManager ===
+// === Module 19503: BlockedDomainManager ===
 
-// Module 19507 (BlockedDomainManager)
+// Module 19503 (BlockedDomainManager)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import js_shim_shim from "js_shim/shim" /* 1366 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
 
 require = fn;
 class BlockedDomainManager extends tmp2 {

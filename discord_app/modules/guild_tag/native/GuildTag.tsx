@@ -1,22 +1,22 @@
-// === Module 9644: GuildTag ===
+// === Module 9623: GuildTag ===
 
-// Module 9644 (GuildTag)
+// Module 9623 (GuildTag)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import FastImageDefault from "FastImage" /* 5510 */;
-import GuildTagUtils from "GuildTagUtils" /* 7910 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import FastImageDefault from "FastImage" /* 5479 */;
+import GuildTagUtils from "GuildTagUtils" /* 7880 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildTagBadgeSize = fn(7911).GuildTagBadgeSize;
+let GuildTagBadgeSize = fn(7881).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { container: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 }, tag: null };
 let PlatformUtils = fn(1380);
 let num = 16;

@@ -1,9 +1,9 @@
-// === Module 11740: ChatViewWrapperBase ===
+// === Module 11718: ChatViewWrapperBase ===
 
-// Module 11740 (ChatViewWrapperBase)
-import LayerScope from "LayerScope" /* 5401 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 11738 */;
-import StickyWrapper from "StickyWrapper" /* 11739 */;
+// Module 11718 (ChatViewWrapperBase)
+import LayerScope from "LayerScope" /* 5370 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 11716 */;
+import StickyWrapper from "StickyWrapper" /* 11717 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

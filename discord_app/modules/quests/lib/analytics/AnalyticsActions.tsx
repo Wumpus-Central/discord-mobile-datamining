@@ -1,20 +1,20 @@
-// === Module 8333: AnalyticsActions ===
+// === Module 8302: AnalyticsActions ===
 
-// Module 8333 (AnalyticsActions)
+// Module 8302 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5560 */;
-import QuestTypes from "QuestTypes" /* 6469 */;
-import AdCreativeType from "AdCreativeType" /* 6473 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8167 */;
-import QuestDataUtils from "QuestDataUtils" /* 8312 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 8336 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 8337 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8339 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8342 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5529 */;
+import QuestTypes from "QuestTypes" /* 6440 */;
+import AdCreativeType from "AdCreativeType" /* 6444 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8136 */;
+import QuestDataUtils from "QuestDataUtils" /* 8281 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 8305 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 8306 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8308 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8311 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8334 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8303 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1362 */;
-import QuestStore from "QuestStore" /* 8316 */;
+import QuestStore from "QuestStore" /* 8285 */;
 
 require = fn;
 function getCommonProperties(adContentId, sourceQuestContent, QUEST, shouldExtendSession) {
@@ -180,7 +180,7 @@ let closure_13 = async function _getCommonClickEventProperties(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {

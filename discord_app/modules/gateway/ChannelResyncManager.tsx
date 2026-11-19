@@ -1,19 +1,19 @@
-// === Module 19516: ChannelResyncManager ===
+// === Module 19512: ChannelResyncManager ===
 
-// Module 19516 (ChannelResyncManager)
+// Module 19512 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
-import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8266 */;
-import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 14858 */;
+import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8235 */;
+import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 14844 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6459 */;
-import GuildStore from "GuildStore" /* 4694 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6302 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6430 */;
+import GuildStore from "GuildStore" /* 4663 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6273 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
 
 require = fn;
 function handleGuildCreate(guild) {
@@ -247,7 +247,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -381,7 +381,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                     let obj2 = closure_2_1(1256);
                   }
                 }
-                obj = closure_2_0(14858);
+                obj = closure_2_0(14844);
               }, Math.ceil(Math.random() * closure_2_12));
             }
             tmp2 = null != closure_1_0 && id.id !== tmp;
@@ -398,7 +398,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp9) {
       c4 = tmp;
@@ -511,7 +511,7 @@ function scheduleIntegrityCheck(guild_id) {
   tmp4 = _require;
 }
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ChannelFlags = fn(4679).ChannelFlags;
+const ChannelFlags = fn(4648).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

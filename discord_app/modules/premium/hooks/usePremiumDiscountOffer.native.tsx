@@ -1,6 +1,6 @@
-// === Module 9047: hooks/usePremiumDiscountOffer ===
+// === Module 9021: hooks/usePremiumDiscountOffer ===
 
-// Module 9047 (hooks/usePremiumDiscountOffer)
+// Module 9021 (hooks/usePremiumDiscountOffer)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

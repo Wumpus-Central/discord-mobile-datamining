@@ -1,12 +1,12 @@
-// === Module 4999: NavigationRouteUtils ===
+// === Module 4968: NavigationRouteUtils ===
 
-// Module 4999 (NavigationRouteUtils)
+// Module 4968 (NavigationRouteUtils)
 import v1 from "v1" /* 1269 */;
 import Link from "Link" /* 1503 */;
-import RootNavigationRef from "RootNavigationRef" /* 5000 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5006 */;
-import Types from "Types" /* 5007 */;
-import ChatInputUtils from "ChatInputUtils" /* 5008 */;
+import RootNavigationRef from "RootNavigationRef" /* 4969 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4975 */;
+import Types from "Types" /* 4976 */;
+import ChatInputUtils from "ChatInputUtils" /* 4977 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -264,7 +264,7 @@ export function navigateToChannel(openChannel) {
   return false;
 }
 export function navigateToRootTab(drawerOpen) {
-  const rootNavigationRef = icymiScreen(5000).getRootNavigationRef();
+  const rootNavigationRef = icymiScreen(4969).getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -283,13 +283,13 @@ export function navigateToRootTab(drawerOpen) {
             const obj2 = { screen, params: null };
             const obj3 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             obj2.params = obj3;
-            const rootNavigationRef1 = tmp(5000).getRootNavigationRef();
+            const rootNavigationRef1 = tmp(4969).getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
                 if (tmp3) {
                   const rootState = rootNavigationRef1.getRootState();
                   const obj4 = { name: "tabs", key: null, params: null };
-                  const tmpResult3 = tmp(5001);
+                  const tmpResult3 = tmp(4970);
                   const _HermesInternal = HermesInternal;
                   obj4.key = "tabs-" + tmp(1269).v4();
                   obj4.params = obj2;
@@ -309,7 +309,7 @@ export function navigateToRootTab(drawerOpen) {
                 }
               }
             }
-            const tmpResult = tmp(5000);
+            const tmpResult = tmp(4969);
           } else {
             const obj6 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             rootNavigationRef.setParams(obj6);
@@ -727,7 +727,7 @@ export function getOpenModalKey() {
 }
 export function useOpenModalKey() {
   let tmp = _slicedToArray(closure_5(() => {
-    const rootNavigationRef = closure_0(5000).getRootNavigationRef();
+    const rootNavigationRef = closure_0(4969).getRootNavigationRef();
     let tmp;
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -760,7 +760,7 @@ export function useOpenModalKey() {
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(5000).getRootNavigationRef();
+        const rootNavigationRef = closure_0(4969).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -787,7 +787,7 @@ export function useOpenModalKey() {
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(5000);
+        const obj = closure_0(4969);
       });
     }
   }, []);
@@ -808,7 +808,7 @@ export function getCurrentNavigationRouteName() {
 }
 export function useCurrentNavigationRouteName() {
   let tmp = _slicedToArray(closure_5(() => {
-    const rootNavigationRef = closure_0(5000).getRootNavigationRef();
+    const rootNavigationRef = closure_0(4969).getRootNavigationRef();
     let tmp;
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -827,7 +827,7 @@ export function useCurrentNavigationRouteName() {
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(5000).getRootNavigationRef();
+        const rootNavigationRef = closure_0(4969).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -840,7 +840,7 @@ export function useCurrentNavigationRouteName() {
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(5000);
+        const obj = closure_0(4969);
       });
     }
   }, []);

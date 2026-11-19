@@ -1,11 +1,11 @@
-// === Module 12775: CustomTypingIndicatorAnimatedEmoji ===
+// === Module 12757: CustomTypingIndicatorAnimatedEmoji ===
 
-// Module 12775 (CustomTypingIndicatorAnimatedEmoji)
+// Module 12757 (CustomTypingIndicatorAnimatedEmoji)
 import user from "user" /* 1401 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5033 */;
-import EmojiDefault from "Emoji" /* 7407 */;
-import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 12776 */;
+import timing_timing from "timing/timing" /* 5002 */;
+import EmojiDefault from "Emoji" /* 7377 */;
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 12758 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
@@ -17,7 +17,7 @@ require = fn;
 const AppStates = fn(1072).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_9 = createStyles.createStyles((width) => {
   const obj = { emojiContainer: { width, height: width, alignItems: "center", justifyContent: "center" }, textEmoji: null, imageEmoji: { width, height: width } };
   const size = { width: 18 * width / 14, height: 18 * width / 14, textAlign: "center", fontSize: 12 * width / 14, lineHeight: 18 * width / 14 };

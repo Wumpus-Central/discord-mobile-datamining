@@ -1,6 +1,6 @@
-// === Module 12011: LinkedGameOrgInvitesExperiment ===
+// === Module 11989: LinkedGameOrgInvitesExperiment ===
 
-// Module 12011 (LinkedGameOrgInvitesExperiment)
+// Module 11989 (LinkedGameOrgInvitesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

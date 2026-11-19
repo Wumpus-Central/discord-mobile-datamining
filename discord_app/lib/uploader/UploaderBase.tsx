@@ -1,15 +1,15 @@
-// === Module 8445: UploaderBase ===
+// === Module 8414: UploaderBase ===
 
-// Module 8445 (UploaderBase)
+// Module 8414 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8384 */;
-import UploadTargets from "UploadTargets" /* 8407 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8353 */;
+import UploadTargets from "UploadTargets" /* 8376 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const AbortCodes = fn(1072).AbortCodes;
-const FileUploadErrorTypes = fn(4828).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4797).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -114,7 +114,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -381,7 +381,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

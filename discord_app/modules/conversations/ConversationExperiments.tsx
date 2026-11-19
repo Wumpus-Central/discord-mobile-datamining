@@ -1,7 +1,7 @@
-// === Module 8541: ConversationExperiments ===
+// === Module 8510: ConversationExperiments ===
 
-// Module 8541 (ConversationExperiments)
-import GuildStore from "GuildStore" /* 4694 */;
+// Module 8510 (ConversationExperiments)
+import GuildStore from "GuildStore" /* 4663 */;
 
 const require = globalThis.__r;
 

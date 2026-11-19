@@ -1,12 +1,12 @@
-// === Module 19387: VoicePanelPIPPushToTalkOverlay ===
+// === Module 19383: VoicePanelPIPPushToTalkOverlay ===
 
-// Module 19387 (VoicePanelPIPPushToTalkOverlay)
+// Module 19383 (VoicePanelPIPPushToTalkOverlay)
 import nativeDefault from "native" /* 575 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5083 */;
-import NativeViewDefault from "NativeView" /* 7235 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10832 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11709 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5052 */;
+import NativeViewDefault from "NativeView" /* 7205 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10810 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11687 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
@@ -14,9 +14,9 @@ import module_1655_mod from "module_1655" /* 1655 */;
 
 const require = globalThis.__r;
 
-const _modDef19388 = tmp4(19388);
+const _modDef19384 = tmp4(19384);
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(11710).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(11688).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let module_1655 = module_1655_mod;
@@ -24,7 +24,7 @@ const NativeView = module_1655.createAnimatedComponent(NativeViewDefault);
 let module_1655 = module_1655_mod;
 let closure_11 = module_1655.createAnimatedComponent(fn(1187).Icon);
 const hitSlop = { top: 6, bottom: 6, left: 6, right: 6 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { iconContainer: null, overlay: null };
 let size = { position: "absolute", width: 32, height: 32, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round };
 obj.iconContainer = size;
@@ -224,7 +224,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   const items11 = [tmp5.iconContainer, animatedStyle];
   obj8.style = items11;
   const tmpResult2 = require("module_1655");
-  obj8.children = closure_7(closure_11, { style: animatedStyle1, size: require("native").Icon.Sizes.SMALL_20, source: _modDef19388, disableColor: true });
+  obj8.children = closure_7(closure_11, { style: animatedStyle1, size: require("native").Icon.Sizes.SMALL_20, source: _modDef19384, disableColor: true });
   obj7.children = closure_7(NativeView, obj8);
   items10[1] = closure_7(require("LegacyBaseButton").GestureDetector, obj7);
   obj5.children = items10;

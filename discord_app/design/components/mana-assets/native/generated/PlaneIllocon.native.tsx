@@ -1,20 +1,20 @@
-// === Module 20201: PlaneIllocon ===
+// === Module 20212: PlaneIllocon ===
 
-// Module 20201 (PlaneIllocon)
-import FastImageDefault from "FastImage" /* 5510 */;
-import assetHelpers from "assetHelpers" /* 7268 */;
-import _modDef13295 from "module_13295" /* 13295 */;
-import _modDef20202 from "module_20202" /* 20202 */;
-import _modDef20203 from "module_20203" /* 20203 */;
+// Module 20212 (PlaneIllocon)
+import FastImageDefault from "FastImage" /* 5479 */;
+import assetHelpers from "assetHelpers" /* 7238 */;
+import _modDef13277 from "module_13277" /* 13277 */;
+import _modDef20213 from "module_20213" /* 20213 */;
+import _modDef20214 from "module_20214" /* 20214 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef20202 }, 3: null };
-const obj2 = { uri: _modDef20202 };
-obj[2] = { uri: _modDef13295 };
-const obj3 = { uri: _modDef13295 };
-obj[3] = { uri: _modDef20203 };
+let obj = { 1: null, 2: { uri: _modDef20213 }, 3: null };
+const obj2 = { uri: _modDef20213 };
+obj[2] = { uri: _modDef13277 };
+const obj3 = { uri: _modDef13277 };
+obj[3] = { uri: _modDef20214 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PlaneIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function PlaneIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7268).getAssetSource(obj);
+  obj.source = num(7238).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

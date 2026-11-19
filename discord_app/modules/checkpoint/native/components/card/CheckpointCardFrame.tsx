@@ -1,9 +1,9 @@
-// === Module 12443: CheckpointCardFrame ===
+// === Module 12426: CheckpointCardFrame ===
 
-// Module 12443 (CheckpointCardFrame)
+// Module 12426 (CheckpointCardFrame)
 import nativeDefault from "native" /* 575 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5898 */;
-import inlineStylesDefault from "inlineStyles" /* 7776 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5869 */;
+import inlineStylesDefault from "inlineStyles" /* 7746 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ let c11 = 0;
 let c12 = 432;
 let c13 = 326;
 const styles = { x: -1, y: 0, width: 433, height: 469 };
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_15 = createStyles.createStyles({ canvas: { overflow: "hidden", transformOrigin: "top left" }, layer: { position: "absolute", top: 0, left: 0 }, cardTexture: { isolation: "isolate" }, textureOverlay: { mixBlendMode: "overlay" }, logo: { position: "absolute", top: 0, left: 0, width: 44, height: 44, alignItems: "center", justifyContent: "center" } });
 let closure_16 = { code: "(function CheckpointCardFrameTsx1(){let[isCharacterSettled,withTiming,CARD_ART_FADE_IN_DURATION_MS]=this.__closure;return{opacity:isCharacterSettled?withTiming(1,{duration:CARD_ART_FADE_IN_DURATION_MS}):0};})" };
 let size = fn(2);
@@ -150,36 +150,36 @@ export default function CheckpointCardFrame(character) {
     const _HermesInternal2 = HermesInternal;
     obj9.id = "" + id + "-top";
     const size3 = { width: canvasWidth, height: num };
-    obj9.children = tmp20(tmp3(7776).Rect, size3);
-    obj8.children = tmp20(tmp3(7776).ClipPath, obj9);
-    const items11 = [tmp20(tmp3(7776).Defs, obj8), ];
+    obj9.children = tmp20(tmp3(7746).Rect, size3);
+    obj8.children = tmp20(tmp3(7746).ClipPath, obj9);
+    const items11 = [tmp20(tmp3(7746).Defs, obj8), ];
     const obj10 = { clipPath: null, children: null };
     const _HermesInternal3 = HermesInternal;
     obj10.clipPath = "url(#" + id + "-top)";
     const obj11 = { rotation: 180, origin: null, children: null };
     const _HermesInternal4 = HermesInternal;
     obj11.origin = "" + x + width / 2 + ", " + c11 + c13 / 2;
-    const size4 = { href: tmp23(12444), x, y: c11 - 0.4348 * c13, width, height: 1.4348 * c13, preserveAspectRatio: "none" };
-    obj11.children = tmp20(tmp3(7776).Image, size4);
-    obj10.children = tmp20(tmp3(7776).G, obj11);
-    items11[1] = tmp20(tmp3(7776).G, obj10);
+    const size4 = { href: tmp23(12427), x, y: c11 - 0.4348 * c13, width, height: 1.4348 * c13, preserveAspectRatio: "none" };
+    obj11.children = tmp20(tmp3(7746).Image, size4);
+    obj10.children = tmp20(tmp3(7746).G, obj11);
+    items11[1] = tmp20(tmp3(7746).G, obj10);
     size2.children = items11;
-    const items12 = [tmp22(tmp23(7776), size2), ];
+    const items12 = [tmp22(tmp23(7746), size2), ];
     const size5 = { style: null, width: null, height: null, children: null };
     const items13 = [, ];
     ({ layer: arr17[0], textureOverlay: arr17[1] } = tmp);
     size5.style = items13;
     size5.width = canvasWidth;
     size5.height = num;
-    const tmp23Result = tmp23(7776);
+    const tmp23Result = tmp23(7746);
     const obj12 = { children: null };
     const obj13 = { id: null, children: null };
     const _HermesInternal5 = HermesInternal;
     obj13.id = "" + id + "-bottom";
     const size6 = { width: canvasWidth, height: num };
-    obj13.children = tmp20(tmp3(7776).Rect, size6);
-    obj12.children = tmp20(tmp3(7776).ClipPath, obj13);
-    const items14 = [tmp20(tmp3(7776).Defs, obj12), ];
+    obj13.children = tmp20(tmp3(7746).Rect, size6);
+    obj12.children = tmp20(tmp3(7746).ClipPath, obj13);
+    const items14 = [tmp20(tmp3(7746).Defs, obj12), ];
     class CheckpointCardFrameTsx1 {
       constructor() {
         opacity = 0;
@@ -199,18 +199,18 @@ export default function CheckpointCardFrame(character) {
     const obj14 = { rotation: 180, origin: null, children: null };
     const _HermesInternal7 = HermesInternal;
     obj14.origin = "" + styles.x + styles.width / 2 + ", " + styles.y + styles.height / 2;
-    const obj15 = { href: tmp23(12444) };
+    const obj15 = { href: tmp23(12427) };
     const merged = Object.assign(styles);
     obj15.opacity = 0.5;
     obj15.preserveAspectRatio = "xMidYMid slice";
-    obj14.children = tmp20(tmp3(7776).Image, obj15);
-    tmp34[1] = tmp20(tmp3(7776).G, obj14);
-    items14[1] = tmp20(tmp3(7776).G, tmp34);
+    obj14.children = tmp20(tmp3(7746).Image, obj15);
+    tmp34[1] = tmp20(tmp3(7746).G, obj14);
+    items14[1] = tmp20(tmp3(7746).G, tmp34);
     size5.children = items14;
-    items12[1] = tmp22(tmp23(7776), size5);
+    items12[1] = tmp22(tmp23(7746), size5);
     obj7.children = items12;
     let tmp22Result = tmp22(closure_9, obj7);
-    const tmp23Result4 = tmp23(7776);
+    const tmp23Result4 = tmp23(7746);
   } else {
     const size7 = { style: null, width: null, height: null, children: null };
     const items15 = [, ];
@@ -221,16 +221,16 @@ export default function CheckpointCardFrame(character) {
     const obj16 = { children: null };
     const obj17 = { id, children: null };
     const size8 = { width: canvasWidth, height: num };
-    obj17.children = tmp20(tmp3(7776).Rect, size8);
-    obj16.children = tmp20(tmp3(7776).ClipPath, obj17);
-    const items16 = [tmp20(tmp3(7776).Defs, obj16), ];
-    const size9 = { href: tmp23(12444), width: canvasWidth, height: num, preserveAspectRatio: "xMidYMid slice", clipPath: null };
+    obj17.children = tmp20(tmp3(7746).Rect, size8);
+    obj16.children = tmp20(tmp3(7746).ClipPath, obj17);
+    const items16 = [tmp20(tmp3(7746).Defs, obj16), ];
+    const size9 = { href: tmp23(12427), width: canvasWidth, height: num, preserveAspectRatio: "xMidYMid slice", clipPath: null };
     const _HermesInternal = HermesInternal;
     size9.clipPath = "url(#" + id + ")";
-    items16[1] = tmp20(tmp3(7776).Image, size9);
+    items16[1] = tmp20(tmp3(7746).Image, size9);
     size7.children = items16;
-    tmp22Result = tmp22(tmp23(7776), size7);
-    const tmp23Result5 = tmp23(7776);
+    tmp22Result = tmp22(tmp23(7746), size7);
+    const tmp23Result5 = tmp23(7746);
   }
   items9[1] = tmp22Result;
   obj6.children = items9;

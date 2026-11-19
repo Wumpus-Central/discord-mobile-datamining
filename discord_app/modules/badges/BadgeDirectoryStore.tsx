@@ -1,13 +1,13 @@
-// === Module 8049: BadgeDirectoryStore ===
+// === Module 8018: BadgeDirectoryStore ===
 
-// Module 8049 (BadgeDirectoryStore)
+// Module 8018 (BadgeDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import privDefault from "priv" /* 1456 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8050 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8054 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8019 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8023 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -92,29 +92,9 @@ prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(c1) {
   }
   return tmp5;
 };
-prototype["getUnreadBadges"] = function getUnreadBadges(id) {
-  const badges = this.getBadges(id);
+prototype["getUnreadBadges"] = function getUnreadBadges(userId) {
+  const badges = this.getBadges(userId);
   return badges.filter((has_updates) => true === has_updates.has_updates);
-};
-prototype["getUnreadBadgeCount"] = function getUnreadBadgeCount(id) {
-  let tmp = id;
-  if (id == null) {
-    const currentUser = UserStore.getCurrentUser();
-    id = undefined;
-    if (currentUser != null) {
-      id = currentUser.id;
-    }
-    tmp = id;
-  }
-  let num = 0;
-  if (null != tmp) {
-    const self = this;
-    num = 0;
-    if (this.hasCatalogFor(tmp)) {
-      num = self.getUnreadBadges(tmp).length;
-    }
-  }
-  return num;
 };
 prototype["getBadgeById"] = function getBadgeById(GIFTING, displayedUserId) {
   let tmp = displayedUserId;

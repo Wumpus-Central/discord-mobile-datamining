@@ -1,37 +1,37 @@
-// === Module 10428: AppIconConstants ===
+// === Module 10406: AppIconConstants ===
 
-// Module 10428 (AppIconConstants)
+// Module 10406 (AppIconConstants)
 import util from "util" /* 1113 */;
-import _modDef4508 from "module_4508" /* 4508 */;
-import AppIconTypes from "AppIconTypes" /* 4849 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4851 */;
+import _modDef4476 from "module_4476" /* 4476 */;
+import AppIconTypes from "AppIconTypes" /* 4818 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4820 */;
+import _modDef10407 from "module_10407" /* 10407 */;
+import _modDef10408 from "module_10408" /* 10408 */;
+import _modDef10409 from "module_10409" /* 10409 */;
+import _modDef10410 from "module_10410" /* 10410 */;
+import _modDef10411 from "module_10411" /* 10411 */;
+import _modDef10412 from "module_10412" /* 10412 */;
+import _modDef10413 from "module_10413" /* 10413 */;
+import _modDef10414 from "module_10414" /* 10414 */;
+import _modDef10415 from "module_10415" /* 10415 */;
+import _modDef10416 from "module_10416" /* 10416 */;
+import _modDef10417 from "module_10417" /* 10417 */;
+import _modDef10418 from "module_10418" /* 10418 */;
+import _modDef10419 from "module_10419" /* 10419 */;
+import _modDef10420 from "module_10420" /* 10420 */;
+import _modDef10421 from "module_10421" /* 10421 */;
+import _modDef10422 from "module_10422" /* 10422 */;
+import _modDef10423 from "module_10423" /* 10423 */;
+import _modDef10424 from "module_10424" /* 10424 */;
+import _modDef10425 from "module_10425" /* 10425 */;
+import _modDef10426 from "module_10426" /* 10426 */;
+import _modDef10427 from "module_10427" /* 10427 */;
+import _modDef10428 from "module_10428" /* 10428 */;
 import _modDef10429 from "module_10429" /* 10429 */;
 import _modDef10430 from "module_10430" /* 10430 */;
 import _modDef10431 from "module_10431" /* 10431 */;
 import _modDef10432 from "module_10432" /* 10432 */;
-import _modDef10433 from "module_10433" /* 10433 */;
-import _modDef10434 from "module_10434" /* 10434 */;
-import _modDef10435 from "module_10435" /* 10435 */;
-import _modDef10436 from "module_10436" /* 10436 */;
-import _modDef10437 from "module_10437" /* 10437 */;
-import _modDef10438 from "module_10438" /* 10438 */;
-import _modDef10439 from "module_10439" /* 10439 */;
-import _modDef10440 from "module_10440" /* 10440 */;
-import _modDef10441 from "module_10441" /* 10441 */;
-import _modDef10442 from "module_10442" /* 10442 */;
-import _modDef10443 from "module_10443" /* 10443 */;
-import _modDef10444 from "module_10444" /* 10444 */;
-import _modDef10445 from "module_10445" /* 10445 */;
-import _modDef10446 from "module_10446" /* 10446 */;
-import _modDef10447 from "module_10447" /* 10447 */;
-import _modDef10448 from "module_10448" /* 10448 */;
-import _modDef10449 from "module_10449" /* 10449 */;
-import _modDef10450 from "module_10450" /* 10450 */;
-import _modDef10451 from "module_10451" /* 10451 */;
-import _modDef10452 from "module_10452" /* 10452 */;
-import _modDef10453 from "module_10453" /* 10453 */;
-import _modDef10454 from "module_10454" /* 10454 */;
-import HexagonCampaignConstants from "HexagonCampaignConstants" /* 4848 */;
+import HexagonCampaignConstants from "HexagonCampaignConstants" /* 4817 */;
 import size from "module_2" /* 2 */;
 
 function getLimitedAlternateIcons() {
@@ -39,9 +39,9 @@ function getLimitedAlternateIcons() {
   if (obj.getHexagonCampaignPerkAvailabilityForCurrentUser(constants.APP_ICON, "AppIconConstants") === constants2.HIDDEN) {
     let items1 = [];
   } else {
-    const obj2 = { id: AppIconTypes.LimitedTimeAppIconIds.HEXAGON, iconSource: _modDef10454, isPremium: HexagonCampaignUtils.isHexagonCampaignPerkPremiumOnly(constants.APP_ICON), expiresAt, name: null };
+    const obj2 = { id: AppIconTypes.LimitedTimeAppIconIds.HEXAGON, iconSource: _modDef10432, isPremium: HexagonCampaignUtils.isHexagonCampaignPerkPremiumOnly(constants.APP_ICON), expiresAt, name: null };
     const intl = util.intl;
-    obj2.name = intl.string(_modDef4508.JC4Pii);
+    obj2.name = intl.string(_modDef4476.JC4Pii);
     items1 = [obj2];
     const tmp2Result = HexagonCampaignUtils;
   }
@@ -56,99 +56,99 @@ function getLimitedAlternateIcons() {
   });
 }
 ({ HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: c3, HexagonCampaignPerk: closure_4, HexagonCampaignPerkAvailability: hasOwnProperty } = HexagonCampaignConstants);
-let obj = { id: AppIconTypes.PremiumAppIconIds.IN_RAINBOWS, iconSource: _modDef10430, isPremium: true, name: null };
+let obj = { id: AppIconTypes.PremiumAppIconIds.IN_RAINBOWS, iconSource: _modDef10408, isPremium: true, name: null };
 let intl = util.intl;
 obj.name = intl.string(util.t.yxJB9E);
 let items = [obj, , , , , , , , , , , , , , , , , , , , , , , ];
-let obj2 = { id: AppIconTypes.PremiumAppIconIds.MIDNIGHT_PRISM, iconSource: _modDef10431, isPremium: true, name: null };
+let obj2 = { id: AppIconTypes.PremiumAppIconIds.MIDNIGHT_PRISM, iconSource: _modDef10409, isPremium: true, name: null };
 let intl2 = util.intl;
 obj2.name = intl2.string(util.t.nshUZZ);
 items[1] = obj2;
-const obj3 = { id: AppIconTypes.PremiumAppIconIds.COLOR_WAVE, iconSource: _modDef10432, isPremium: true, name: null };
+const obj3 = { id: AppIconTypes.PremiumAppIconIds.COLOR_WAVE, iconSource: _modDef10410, isPremium: true, name: null };
 const intl3 = util.intl;
 obj3.name = intl3.string(util.t.MWRYqh);
 items[2] = obj3;
-const obj4 = { id: AppIconTypes.PremiumAppIconIds.BLURPLE_TWILIGHT, iconSource: _modDef10433, isPremium: true, name: null };
+const obj4 = { id: AppIconTypes.PremiumAppIconIds.BLURPLE_TWILIGHT, iconSource: _modDef10411, isPremium: true, name: null };
 const intl4 = util.intl;
 obj4.name = intl4.string(util.t.Mfoe3p);
 items[3] = obj4;
-const obj5 = { id: AppIconTypes.PremiumAppIconIds.BRAND_INVERTED, iconSource: _modDef10434, isPremium: true, name: null };
+const obj5 = { id: AppIconTypes.PremiumAppIconIds.BRAND_INVERTED, iconSource: _modDef10412, isPremium: true, name: null };
 const intl5 = util.intl;
 obj5.name = intl5.string(util.t.h6UXSt);
 items[4] = obj5;
-const obj6 = { id: AppIconTypes.PremiumAppIconIds.BRAND_DARK, iconSource: _modDef10435, name: null, isPremium: true };
+const obj6 = { id: AppIconTypes.PremiumAppIconIds.BRAND_DARK, iconSource: _modDef10413, name: null, isPremium: true };
 const intl6 = util.intl;
 obj6.name = intl6.string(util.t.gZEUBl);
 items[5] = obj6;
-const obj7 = { id: AppIconTypes.PremiumAppIconIds.MATTE_DARK, iconSource: _modDef10436, isPremium: true, name: null };
+const obj7 = { id: AppIconTypes.PremiumAppIconIds.MATTE_DARK, iconSource: _modDef10414, isPremium: true, name: null };
 const intl7 = util.intl;
 obj7.name = intl7.string(util.t.NkshQt);
 items[6] = obj7;
-const obj8 = { id: AppIconTypes.PremiumAppIconIds.MATTE_LIGHT, iconSource: _modDef10437, name: null, isPremium: true };
+const obj8 = { id: AppIconTypes.PremiumAppIconIds.MATTE_LIGHT, iconSource: _modDef10415, name: null, isPremium: true };
 const intl8 = util.intl;
 obj8.name = intl8.string(util.t.G2W302);
 items[7] = obj8;
-const obj9 = { id: AppIconTypes.PremiumAppIconIds.PASTEL, iconSource: _modDef10438, isPremium: true, name: null };
+const obj9 = { id: AppIconTypes.PremiumAppIconIds.PASTEL, iconSource: _modDef10416, isPremium: true, name: null };
 const intl9 = util.intl;
 obj9.name = intl9.string(util.t.mTSkLT);
 items[8] = obj9;
-const obj10 = { id: AppIconTypes.PremiumAppIconIds.PIRATE, iconSource: _modDef10439, isPremium: true, name: null };
+const obj10 = { id: AppIconTypes.PremiumAppIconIds.PIRATE, iconSource: _modDef10417, isPremium: true, name: null };
 const intl10 = util.intl;
 obj10.name = intl10.string(util.t["EgWTY+"]);
 items[9] = obj10;
-const obj11 = { id: AppIconTypes.PremiumAppIconIds.CAMO, iconSource: _modDef10440, isPremium: true, name: null };
+const obj11 = { id: AppIconTypes.PremiumAppIconIds.CAMO, iconSource: _modDef10418, isPremium: true, name: null };
 const intl11 = util.intl;
 obj11.name = intl11.string(util.t.RSKXOK);
 items[10] = obj11;
-const obj12 = { id: AppIconTypes.PremiumAppIconIds.SUNSET, iconSource: _modDef10441, isPremium: true, name: null };
+const obj12 = { id: AppIconTypes.PremiumAppIconIds.SUNSET, iconSource: _modDef10419, isPremium: true, name: null };
 const intl12 = util.intl;
 obj12.name = intl12.string(util.t.ixdjPB);
 items[11] = obj12;
-const obj13 = { id: AppIconTypes.PremiumAppIconIds.GALAXY, iconSource: _modDef10442, isPremium: true, name: null };
+const obj13 = { id: AppIconTypes.PremiumAppIconIds.GALAXY, iconSource: _modDef10420, isPremium: true, name: null };
 const intl13 = util.intl;
 obj13.name = intl13.string(util.t.cb78Ls);
 items[12] = obj13;
-const obj14 = { id: AppIconTypes.PremiumAppIconIds.Y2K, iconSource: _modDef10443, isPremium: true, name: null };
+const obj14 = { id: AppIconTypes.PremiumAppIconIds.Y2K, iconSource: _modDef10421, isPremium: true, name: null };
 const intl14 = util.intl;
 obj14.name = intl14.string(util.t["s+KoXO"]);
 items[13] = obj14;
-const obj15 = { id: AppIconTypes.PremiumAppIconIds.CHERRY_BLOSSOM, iconSource: _modDef10444, isPremium: true, name: null };
+const obj15 = { id: AppIconTypes.PremiumAppIconIds.CHERRY_BLOSSOM, iconSource: _modDef10422, isPremium: true, name: null };
 const intl15 = util.intl;
 obj15.name = intl15.string(util.t["ta/5RB"]);
 items[14] = obj15;
-const obj16 = { id: AppIconTypes.PremiumAppIconIds.BEANIE, iconSource: _modDef10445, isPremium: true, name: null };
+const obj16 = { id: AppIconTypes.PremiumAppIconIds.BEANIE, iconSource: _modDef10423, isPremium: true, name: null };
 const intl16 = util.intl;
 obj16.name = intl16.string(util.t.IoLViw);
 items[15] = obj16;
-const obj17 = { id: AppIconTypes.PremiumAppIconIds.GAMING, iconSource: _modDef10446, isPremium: true, name: null };
+const obj17 = { id: AppIconTypes.PremiumAppIconIds.GAMING, iconSource: _modDef10424, isPremium: true, name: null };
 const intl17 = util.intl;
 obj17.name = intl17.string(util.t["2Tf+c4"]);
 items[16] = obj17;
-const obj18 = { id: AppIconTypes.PremiumAppIconIds.CIRCUIT, iconSource: _modDef10447, isPremium: true, name: null };
+const obj18 = { id: AppIconTypes.PremiumAppIconIds.CIRCUIT, iconSource: _modDef10425, isPremium: true, name: null };
 const intl18 = util.intl;
 obj18.name = intl18.string(util.t.dUpxKb);
 items[17] = obj18;
-const obj19 = { id: AppIconTypes.PremiumAppIconIds.HOLO_WAVES, iconSource: _modDef10448, isPremium: true, name: null };
+const obj19 = { id: AppIconTypes.PremiumAppIconIds.HOLO_WAVES, iconSource: _modDef10426, isPremium: true, name: null };
 const intl19 = util.intl;
 obj19.name = intl19.string(util.t["9mg7g1"]);
 items[18] = obj19;
-const obj20 = { id: AppIconTypes.PremiumAppIconIds.BLUSH, iconSource: _modDef10449, isPremium: true, name: null };
+const obj20 = { id: AppIconTypes.PremiumAppIconIds.BLUSH, iconSource: _modDef10427, isPremium: true, name: null };
 const intl20 = util.intl;
 obj20.name = intl20.string(util.t.nmd90m);
 items[19] = obj20;
-const obj21 = { id: AppIconTypes.PremiumAppIconIds.ANGRY, iconSource: _modDef10450, isPremium: true, name: null };
+const obj21 = { id: AppIconTypes.PremiumAppIconIds.ANGRY, iconSource: _modDef10428, isPremium: true, name: null };
 const intl21 = util.intl;
 obj21.name = intl21.string(util.t["9PUXpM"]);
 items[20] = obj21;
-const obj22 = { id: AppIconTypes.PremiumAppIconIds.MANGA, iconSource: _modDef10451, isPremium: true, name: null };
+const obj22 = { id: AppIconTypes.PremiumAppIconIds.MANGA, iconSource: _modDef10429, isPremium: true, name: null };
 const intl22 = util.intl;
 obj22.name = intl22.string(util.t.hGBbF8);
 items[21] = obj22;
-const obj23 = { id: AppIconTypes.PremiumAppIconIds.CONTROLLER, iconSource: _modDef10452, isPremium: true, name: null };
+const obj23 = { id: AppIconTypes.PremiumAppIconIds.CONTROLLER, iconSource: _modDef10430, isPremium: true, name: null };
 const intl23 = util.intl;
 obj23.name = intl23.string(util.t["4QM2U1"]);
 items[22] = obj23;
-const obj24 = { id: AppIconTypes.PremiumAppIconIds.MUSHROOM, iconSource: _modDef10453, isPremium: true, name: null };
+const obj24 = { id: AppIconTypes.PremiumAppIconIds.MUSHROOM, iconSource: _modDef10431, isPremium: true, name: null };
 const intl24 = util.intl;
 obj24.name = intl24.string(util.t.gnLLSK);
 items[23] = obj24;
@@ -156,7 +156,7 @@ const args = [];
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconConstants.tsx");
 
 export function getDefaultIcon() {
-  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef10429, name: null, isPremium: false };
+  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef10407, name: null, isPremium: false };
   const intl = util.intl;
   obj.name = intl.string(util.t.ANxkLy);
   return obj;
@@ -181,7 +181,7 @@ export function getOfficialAlternateIcons() {
 }
 export { getLimitedAlternateIcons };
 export function getIcons() {
-  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef10429, name: null, isPremium: false };
+  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef10407, name: null, isPremium: false };
   const intl = util.intl;
   obj.name = intl.string(util.t.ANxkLy);
   items = [
@@ -200,7 +200,7 @@ export function getIcons() {
 }
 export function getIconById(currentAppIcon) {
   closure_0 = currentAppIcon;
-  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef10429, name: null, isPremium: false };
+  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef10407, name: null, isPremium: false };
   const intl = util.intl;
   obj.name = intl.string(util.t.ANxkLy);
   items = [
@@ -217,7 +217,7 @@ export function getIconById(currentAppIcon) {
   ];
   let found = items.find((id) => id.id === closure_0);
   if (null == found) {
-    const obj2 = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef10429, name: null, isPremium: false };
+    const obj2 = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef10407, name: null, isPremium: false };
     const intl2 = util.intl;
     obj2.name = intl2.string(util.t.ANxkLy);
     found = obj2;

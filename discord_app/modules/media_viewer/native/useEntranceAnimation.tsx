@@ -1,9 +1,9 @@
-// === Module 10553: useEntranceAnimation ===
+// === Module 10531: useEntranceAnimation ===
 
-// Module 10553 (useEntranceAnimation)
+// Module 10531 (useEntranceAnimation)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5033 */;
+import timing_timing from "timing/timing" /* 5002 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

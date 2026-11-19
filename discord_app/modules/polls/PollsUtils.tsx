@@ -1,25 +1,25 @@
-// === Module 8368: PollsUtils ===
+// === Module 8337: PollsUtils ===
 
-// Module 8368 (PollsUtils)
+// Module 8337 (PollsUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import v1 from "v1" /* 1269 */;
 import utils_StringUtils from "utils/StringUtils" /* 2154 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5851 */;
-import useMessageAuthor from "useMessageAuthor" /* 6249 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6753 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 8369 */;
-import MessageStore from "MessageStore" /* 5872 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
-import RelationshipStore from "RelationshipStore" /* 4765 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5822 */;
+import useMessageAuthor from "useMessageAuthor" /* 6220 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6724 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 8338 */;
+import MessageStore from "MessageStore" /* 5843 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
+import RelationshipStore from "RelationshipStore" /* 4734 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(5405).ReactionTypes.VOTE);
+  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(5374).ReactionTypes.VOTE);
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -94,7 +94,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8433);
+const PollsConstants = fn(8402);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1072);
 ({ ChannelTypesSets: closure_10, Permissions: closure_11 } = Constants);

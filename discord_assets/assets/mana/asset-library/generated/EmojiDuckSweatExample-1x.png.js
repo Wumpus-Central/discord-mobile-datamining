@@ -1,6 +1,6 @@
-// === Module 12768: ? ===
+// === Module 12750: ? ===
 
-// Module 12768
+// Module 12750
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js");

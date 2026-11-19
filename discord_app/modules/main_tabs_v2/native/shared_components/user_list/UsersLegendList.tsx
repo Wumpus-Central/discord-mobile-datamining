@@ -1,8 +1,8 @@
-// === Module 13828: UsersLegendList ===
+// === Module 13810: UsersLegendList ===
 
-// Module 13828 (UsersLegendList)
-import BottomSheetModal from "BottomSheetModal" /* 5055 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 7352 */;
+// Module 13810 (UsersLegendList)
+import BottomSheetModal from "BottomSheetModal" /* 5024 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7322 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ function renderBottomSheetScrollComponent(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_7 = createStyles.createStyles({ row: { overflow: "hidden" } });
 let closure_9 = { code: "(function UsersLegendListTsx1(event){let[scrollPosValue,onScroll,scheduleOnRN]=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){scheduleOnRN(onScroll,{nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}})" };
 let size = fn(2);
@@ -284,5 +284,5 @@ export default noop.memo(function UsersLegendList(insetStart) {
   obj4.sharedValues = memo;
   obj4.stickyHeaderIndices = memo1.stickyHeaderIndices;
   obj4.style = style;
-  return renderListHeader(tmp3(13829).AnimatedLegendList, obj4);
+  return renderListHeader(tmp3(13811).AnimatedLegendList, obj4);
 });

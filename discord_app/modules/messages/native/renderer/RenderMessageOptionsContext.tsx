@@ -1,6 +1,6 @@
-// === Module 8583: RenderMessageOptionsContext ===
+// === Module 8552: RenderMessageOptionsContext ===
 
-// Module 8583 (RenderMessageOptionsContext)
+// Module 8552 (RenderMessageOptionsContext)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/RenderMessageOptionsContext.tsx");

@@ -1,6 +1,6 @@
-// === Module 12706: CheckpointSummaryStatsScreen ===
+// === Module 12689: CheckpointSummaryStatsScreen ===
 
-// Module 12706 (CheckpointSummaryStatsScreen)
+// Module 12689 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,26 +8,26 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _modDef3307 from "module_3307" /* 3307 */;
 import _modDef3339 from "module_3339" /* 3339 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4769 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import FastImageDefault from "FastImage" /* 5510 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 5901 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6247 */;
-import GuildIcon from "GuildIcon" /* 7233 */;
-import EmojiDefault from "Emoji" /* 7407 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7508 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 7888 */;
-import FlagIcon from "FlagIcon" /* 10168 */;
-import CheckpointScreen from "CheckpointScreen" /* 12434 */;
-import CheckpointTextDefault from "CheckpointText" /* 12435 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12648 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12654 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12676 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12682 */;
-import CheckpointRecapCard from "CheckpointRecapCard" /* 12707 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4738 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import FastImageDefault from "FastImage" /* 5479 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 5872 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6218 */;
+import GuildIcon from "GuildIcon" /* 7203 */;
+import EmojiDefault from "Emoji" /* 7377 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7478 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 7858 */;
+import FlagIcon from "FlagIcon" /* 10146 */;
+import CheckpointScreen from "CheckpointScreen" /* 12417 */;
+import CheckpointTextDefault from "CheckpointText" /* 12418 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12631 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12637 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12659 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12665 */;
+import CheckpointRecapCard from "CheckpointRecapCard" /* 12690 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
-import CheckpointStore from "CheckpointStore" /* 12417 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import CheckpointStore from "CheckpointStore" /* 12400 */;
 
 const GuildIconDefault = GuildIcon;
 const CheckpointScreenDefault = CheckpointScreen;
@@ -461,7 +461,7 @@ function ItemStat(arg0) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 ({ CHECKPOINT_PRIMARY: metroImportDefault, CHECKPOINT_CONTROL_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -471,7 +471,7 @@ const PX_32 = nativeDefault.space.PX_32;
 let sum = CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
 const PX_24 = nativeDefault.space.PX_24;
 let closure_14 = CHECKPOINT_NAV_HEIGHT + nativeDefault.space.PX_24;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { width: "100%", maxWidth: 400, alignSelf: "center", flexGrow: 1, alignItems: "center", gap: PX_16, paddingBottom: sum }, noDataContainer: { justifyContent: "center", gap: PX_32 }, noDataWideContainer: { flexDirection: "row", maxWidth: "100%" }, heading: { alignSelf: "stretch", gap: nativeDefault.space.PX_8 }, headingLabel: null, wideContainer: null, wideCardClearControls: null, wideHeading: null, wideStats: null, wideStatsExpanded: null, wideRow: null, wideLeftStat: null, wideRightStat: null, stats: null, noDataDescription: null, noDataDescriptionText: null, row: null, stat: null, statNumber: null, item: null, itemName: null, itemIcon: null, guildAcronym: null, emoji: null, textEmoji: null };
 let obj3 = { alignSelf: "stretch", gap: nativeDefault.space.PX_8 };
 obj2.headingLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };

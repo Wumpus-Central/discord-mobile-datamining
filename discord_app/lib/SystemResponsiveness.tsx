@@ -1,8 +1,8 @@
-// === Module 5709: SystemResponsiveness ===
+// === Module 5678: SystemResponsiveness ===
 
-// Module 5709 (SystemResponsiveness)
+// Module 5678 (SystemResponsiveness)
 import applyDefault from "apply" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5589 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/SystemResponsiveness.tsx");

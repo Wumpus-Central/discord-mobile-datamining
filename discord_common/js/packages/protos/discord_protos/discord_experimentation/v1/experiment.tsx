@@ -1,11 +1,11 @@
-// === Module 8154: experiment ===
+// === Module 8123: experiment ===
 
-// Module 8154 (experiment)
+// Module 8123 (experiment)
 import _mod1197 from "module_1197" /* 1197 */;
 import timestamp from "timestamp" /* 1226 */;
 import wrappers from "wrappers" /* 1227 */;
-import rules from "rules" /* 8155 */;
-import duration from "duration" /* 8156 */;
+import rules from "rules" /* 8124 */;
+import duration from "duration" /* 8125 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

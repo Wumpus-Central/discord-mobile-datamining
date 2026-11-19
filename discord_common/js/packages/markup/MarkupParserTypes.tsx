@@ -1,6 +1,6 @@
-// === Module 8639: MarkupParserTypes ===
+// === Module 8608: MarkupParserTypes ===
 
-// Module 8639 (MarkupParserTypes)
+// Module 8608 (MarkupParserTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/markup/MarkupParserTypes.tsx");

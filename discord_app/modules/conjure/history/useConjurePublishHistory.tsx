@@ -3,7 +3,7 @@
 // Module 18399 (useConjurePublishHistory)
 import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import _modDef4121 from "module_4121" /* 4121 */;
+import _modDef4089 from "module_4089" /* 4089 */;
 import conjurePublishHistoryRequests from "conjurePublishHistoryRequests" /* 18400 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/conjure/history/useConjurePubli
 export function publishHistoryTitle(publishedAt) {
   const intl = util.intl;
   const obj = { date: _modDef2169(publishedAt).format("LLL") };
-  return intl.formatToPlainString(_modDef4121["/spQzC"], obj);
+  return intl.formatToPlainString(_modDef4089["/spQzC"], obj);
 }
 export function useConjurePublishHistory(projectId) {
   _require = projectId;

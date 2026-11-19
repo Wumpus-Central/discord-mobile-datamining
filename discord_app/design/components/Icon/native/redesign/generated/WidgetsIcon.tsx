@@ -1,9 +1,9 @@
-// === Module 18681: WidgetsIcon ===
+// === Module 18675: WidgetsIcon ===
 
-// Module 18681 (WidgetsIcon)
+// Module 18675 (WidgetsIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod18682 from "module_18682" /* 18682 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod18676 from "module_18676" /* 18676 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function WidgetsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18682, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18676, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

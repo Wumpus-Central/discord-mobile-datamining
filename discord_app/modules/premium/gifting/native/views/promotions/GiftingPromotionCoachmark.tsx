@@ -1,24 +1,24 @@
-// === Module 19121: GiftingPromotionCoachmark ===
+// === Module 19113: GiftingPromotionCoachmark ===
 
-// Module 19121 (GiftingPromotionCoachmark)
+// Module 19113 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import usePreviousDefault from "usePrevious" /* 6325 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7431 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7450 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 9368 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import usePreviousDefault from "usePrevious" /* 6296 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7401 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7420 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 9345 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
-import PromotionsStore from "PromotionsStore" /* 9049 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import PromotionsStore from "PromotionsStore" /* 9023 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticsSections: metroImportDefault, AnalyticsObjects: closure_8, AnalyticsPages: closure_9 } = Constants);
-const ContentDismissActionType = fn(4669).ContentDismissActionType;
+const ContentDismissActionType = fn(4638).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { alignItems: "center", padding: nativeDefault.space.PX_16 }, textContainer: null, text: null, countdownBadge: null, imageShared: null };
 let obj3 = { alignItems: "center", padding: nativeDefault.space.PX_16 };
 obj2.textContainer = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_24 };
@@ -46,10 +46,10 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(9407).useThemeAndReducedMotionAwareAssetUrl(asset);
-  const GiftPromotionReminderExperiment = markAsDismissed(9379).GiftPromotionReminderExperiment;
+  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(9385).useThemeAndReducedMotionAwareAssetUrl(asset);
+  const GiftPromotionReminderExperiment = markAsDismissed(9357).GiftPromotionReminderExperiment;
   let enabled = GiftPromotionReminderExperiment.useConfig({ location: "GiftingPromotionCoachmarkActionSheet" }).enabled;
-  let obj2 = markAsDismissed(9407);
+  let obj2 = markAsDismissed(9385);
   const items1 = [PromotionsStore];
   const stateFromStores1 = markAsDismissed(504).useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
   const tmp2Result = markAsDismissed(504);
@@ -57,7 +57,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
   }
-  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(9408).useTickingFormattedLimitedOfferTimeLeft(endDate);
+  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(9386).useTickingFormattedLimitedOfferTimeLeft(endDate);
   importDefault = tmp10;
   const tmp12 = usePreviousDefault(null != stateFromStores1);
   dependencyMap = tmp12;
@@ -80,7 +80,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items2);
-  const tmp2Result2 = markAsDismissed(9408);
+  const tmp2Result2 = markAsDismissed(9386);
   analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.GIFTING_PROMOTION_COACHMARK).analyticsLocations;
   const items3 = [analyticsLocations, markAsDismissed];
   let tmp19Result2 = null;
@@ -100,7 +100,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       obj5.source = obj6;
       obj5.style = tmp.imageShared;
       obj5.enableAnimation = !stateFromStores;
-      tmp19Result = closure_11(tmp11(5510), obj5);
+      tmp19Result = closure_11(tmp11(5479), obj5);
     }
     const items4 = [tmp19Result, , , ];
     if (enabled) {
@@ -108,26 +108,26 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     }
     if (enabled) {
       const obj7 = { text: tickingFormattedLimitedOfferTimeLeft, style: tmp.countdownBadge };
-      enabled = closure_11(tmp11(9410), obj7);
+      enabled = closure_11(tmp11(9388), obj7);
     }
     items4[1] = enabled;
     const obj8 = { style: tmp.textContainer, children: null };
     const obj9 = { style: tmp.text, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: coachmarkComponent.header };
-    const items5 = [closure_11(markAsDismissed(5414).Heading, obj9), ];
+    const items5 = [closure_11(markAsDismissed(5383).Heading, obj9), ];
     const obj10 = { style: tmp.text, variant: "body-md/normal", color: "text-default", children: coachmarkComponent.body };
-    items5[1] = closure_11(markAsDismissed(5414).Text, obj10);
+    items5[1] = closure_11(markAsDismissed(5383).Text, obj10);
     obj8.children = items5;
     items4[2] = closure_12(closure_4, obj8);
     const obj11 = { grow: true, icon: null, text: null, onPress: null };
     const obj12 = { size: "sm", color: tmp11(575).colors.WHITE };
-    obj11.icon = closure_11(markAsDismissed(12393).GiftIcon, obj12);
+    obj11.icon = closure_11(markAsDismissed(12376).GiftIcon, obj12);
     const intl = markAsDismissed(1113).intl;
     obj11.text = intl.string(markAsDismissed(1113).t.Ve9Ge6);
     obj11.onPress = tmp17;
-    items4[3] = closure_11(markAsDismissed(5421).Button, obj11);
+    items4[3] = closure_11(markAsDismissed(5390).Button, obj11);
     obj4.children = items4;
     obj3.children = closure_12(closure_4, obj4);
-    tmp19Result2 = closure_11(markAsDismissed(5051).BottomSheet, obj3);
+    tmp19Result2 = closure_11(markAsDismissed(5020).BottomSheet, obj3);
   }
   return tmp19Result2;
 };

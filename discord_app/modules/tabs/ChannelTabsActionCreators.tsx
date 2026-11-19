@@ -1,130 +1,137 @@
-// === Module 9986: ChannelTabsActionCreators ===
+// === Module 9964: ChannelTabsActionCreators ===
 
-// Module 9986 (ChannelTabsActionCreators)
+// Module 9964 (ChannelTabsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
-import FavoritesUtils from "FavoritesUtils" /* 4697 */;
-import matchPathCompat from "matchPathCompat" /* 4861 */;
-import RouteUtils from "RouteUtils" /* 4874 */;
-import transitionToChannel from "transitionToChannel" /* 5556 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5559 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5560 */;
-import ChannelTabRoutes from "ChannelTabRoutes" /* 9985 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4726 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 9982 */;
+import FavoritesUtils from "FavoritesUtils" /* 4666 */;
+import transitionToChannel from "transitionToChannel" /* 5525 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5528 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5529 */;
+import ChannelTabRoutes from "ChannelTabRoutes" /* 9963 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 9961 */;
 
 require = fn;
-function getPageName(routePath) {
-  const first = routePath.split(/[?#]/)[0];
-  if (first === metroImportDefault.FRIENDS) {
-    return "friends";
-  } else if (first === metroImportDefault.COLLECTIBLES_SHOP) {
-    return "shop";
-  } else if (first === metroImportDefault.QUEST_HOME) {
-    return "quests";
-  } else if (first === metroImportDefault.APPLICATION_STORE) {
-    return "nitro";
-  } else {
-    const RouteParam = RouteUtils.RouteParam;
-    const CHANNELResult = metroImportDefault.CHANNEL(RouteParam.guildId(), StaticChannelRoute.CONJURE, ":projectId?");
-    const obj3 = { path: CHANNELResult, exact: true };
-    let str2 = "other";
-    if (null != obj2.matchPath(first, obj3)) {
-      str2 = "conjure";
-    }
-    return str2;
-  }
-}
-function getTabProperties(found) {
+function getTabProperties(kind) {
   const tabs = ChannelTabsStore.getTabs();
-  const obj = { tab_kind: found.kind, tab_route: null, channel_id: null, guild_id: null, tab_count: null, pinned_tab_count: null };
-  let tmp = null;
-  if ("route" === found.kind) {
-    const first = found.routePath.split(/[?#]/)[0];
-    let str3 = "friends";
-    if (first !== metroImportDefault.FRIENDS) {
-      str3 = "shop";
-      if (first !== metroImportDefault.COLLECTIBLES_SHOP) {
-        str3 = "quests";
-        if (first !== metroImportDefault.QUEST_HOME) {
-          str3 = "nitro";
-          if (first !== metroImportDefault.APPLICATION_STORE) {
-            const RouteParam = RouteUtils.RouteParam;
-            const CHANNELResult = metroImportDefault.CHANNEL(RouteParam.guildId(), StaticChannelRoute.CONJURE, ":projectId?");
-            const obj3 = { path: CHANNELResult, exact: true };
-            let str2 = "other";
-            if (null != obj2.matchPath(first, obj3)) {
-              str2 = "conjure";
-            }
-            str3 = str2;
-            obj2 = matchPathCompat;
-          }
-        }
-      }
-    }
-    tmp = str3;
+  const obj = { tab_kind: kind.kind, tab_route: null, channel_id: null, guild_id: null, tab_count: null, pinned_tab_count: null };
+  let channelTabPageName = null;
+  if ("route" === kind.kind) {
+    channelTabPageName = ChannelTabRoutes.getChannelTabPageName(kind.routePath);
   }
-  obj.tab_route = tmp;
+  obj.tab_route = channelTabPageName;
   let channelId = null;
-  if ("channel" === found.kind) {
-    channelId = found.channelId;
+  if ("channel" === kind.kind) {
+    channelId = kind.channelId;
   }
   obj.channel_id = channelId;
   let guildId = null;
-  if ("channel" === found.kind) {
+  if ("channel" === kind.kind) {
     guildId = null;
-    if (!obj4.isFavoritesGuildId(found.guildId)) {
-      guildId = found.guildId;
+    if (!obj3.isFavoritesGuildId(kind.guildId)) {
+      guildId = kind.guildId;
     }
-    obj4 = FavoritesUtils;
+    obj3 = FavoritesUtils;
   }
   obj.guild_id = guildId;
   obj.tab_count = tabs.length;
   obj.pinned_tab_count = tabs.filter((pinned) => pinned.pinned).length;
   return obj;
 }
-function trackChannelTabOpened(tabs, close, is_new_tab, focused) {
-  let tmp = prop;
+function trackChannelTabOpened(activeTab, newTabPickerSelection) {
+  let prop = newTabPickerSelection.newTabPickerSelection;
+  ({ method, isNewTab, focused } = newTabPickerSelection);
   if (prop === undefined) {
-    tmp = null;
+    prop = null;
   }
-  tabs = ChannelTabsStore.getTabs();
+  const tabs = ChannelTabsStore.getTabs();
   const obj = { friends: 0, shop: 0, quests: 0, nitro: 0, conjure: 0, other: 0 };
   const iter = tabs[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     if ("route" === nextResult.kind) {
-      let tmp6 = getPageName(tmp3.routePath);
-      obj[tmp6] = obj[tmp6] + 1;
+      let obj3 = ChannelTabRoutes;
+      let channelTabPageName = obj3.getChannelTabPageName(tmp3.routePath);
+      obj[channelTabPageName] = obj[channelTabPageName] + 1;
     }
     continue;
   }
   const obj2 = {};
-  const merged = Object.assign(getTabProperties(tabs));
-  obj2.method = close;
-  obj2.is_new_tab = is_new_tab;
+  const merged = Object.assign(getTabProperties(activeTab));
+  obj2.method = method;
+  obj2.is_new_tab = isNewTab;
   obj2.focused = focused;
-  obj2.tab_index = tabs.findIndex((id) => id.id === tabs.id);
-  obj2.is_pinned = tabs.pinned;
-  ({ friends: obj4.friends_tab_count, shop: obj4.shop_tab_count, quests: obj4.quests_tab_count, nitro: obj4.nitro_tab_count, conjure: obj4.conjure_tab_count, other: obj4.other_page_tab_count } = obj);
+  obj2.tab_index = tabs.findIndex((id) => id.id === activeTab.id);
+  obj2.is_pinned = activeTab.pinned;
+  ({ friends: obj5.friends_tab_count, shop: obj5.shop_tab_count, quests: obj5.quests_tab_count, nitro: obj5.nitro_tab_count, conjure: obj5.conjure_tab_count, other: obj5.other_page_tab_count } = obj);
   let section;
-  if (tmp != null) {
-    section = tmp.section;
+  if (prop != null) {
+    section = prop.section;
   }
   if (section == null) {
     section = null;
   }
   obj2.new_tab_section = section;
   let resultIndex;
-  if (tmp != null) {
-    resultIndex = tmp.resultIndex;
+  if (prop != null) {
+    resultIndex = prop.resultIndex;
   }
   if (resultIndex == null) {
     resultIndex = null;
   }
   obj2.new_tab_result_index = resultIndex;
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_OPENED, obj2);
+}
+function dispatchOpenTab(location, method) {
+  let tmp = prop;
+  if (prop === undefined) {
+    tmp = null;
+  }
+  if (null == ChannelTabsStore.getActiveTab()) {
+    const _location = location.location;
+    const obj2 = {};
+    if ("route" === _location.kind) {
+      router_utils.transitionTo(_location.routePath, obj2.transitionExtras);
+    } else {
+      ({ channelId, guildId } = _location);
+      let flag = obj2.openVoiceChat;
+      if (flag === undefined) {
+        flag = true;
+      }
+      const transitionExtras = obj2.transitionExtras;
+      const channel = ChannelStore.getChannel(channelId);
+      if (flag) {
+        flag = null != channel;
+      }
+      if (flag) {
+        flag = channel.isGuildVocal();
+      }
+      if (flag) {
+        ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, true);
+      }
+      if (null != guildId) {
+        const obj3 = { openChannel: true };
+        const obj7 = router_utils;
+        const merged = Object.assign(transitionExtras);
+        obj7.transitionTo(metroImportDefault.CHANNEL(guildId, channelId), obj3);
+        const CHANNELResult = metroImportDefault.CHANNEL(guildId, channelId);
+      } else {
+        transitionToChannel.transitionToChannel(channelId, transitionExtras);
+      }
+    }
+    return null;
+  } else {
+    DispatcherDefault.dispatch(location);
+    const tabs = ChannelTabsStore.getTabs();
+    if (tabs.length <= ChannelTabsStore.getTabs().length) {
+      return null;
+    } else {
+      const obj4 = { method, isNewTab: true, focused: ChannelTabsStore.getActiveTabId() === tabs[tabs.length - 1].id, newTabPickerSelection: tmp };
+      trackChannelTabOpened(tabs[tabs.length - 1], obj4);
+      return tabs[tabs.length - 1];
+    }
+  }
 }
 function navigateActiveTabHistory(arg0) {
   if (ChannelTabsStore.isEnabled()) {
@@ -140,65 +147,56 @@ function navigateActiveTabHistory(arg0) {
       const sum = activeTab.index + arg0;
       if (sum >= 0) {
         if (sum < activeTab.entries.length) {
+          const routePath = tmp17;
           if ("route" === activeTab.entries[sum].kind) {
-            let str3 = "CHANNEL_TABS_FORWARD";
-            if (-1 === arg0) {
-              str3 = "CHANNEL_TABS_BACK";
-            }
-            const obj2 = { type: str3 };
-            DispatcherDefault.dispatch(obj2);
-            router_utils.transitionTo(tmp37.routePath);
-            let Navigated = ChannelTabsStore.Navigated;
-          } else if (null == ChannelStore.getChannel(tmp37.channelId)) {
-            if (null != tmp37.guildId) {
-              let str2 = "CHANNEL_TABS_FORWARD";
-              if (-1 === arg0) {
-                str2 = "CHANNEL_TABS_BACK";
+            let fn = function h() {
+              return router_utils.transitionTo(routePath.routePath);
+            };
+          } else if (null != ChannelStore.getChannel(tmp17.channelId)) {
+            fn = function h() {
+              ({ channelId, guildId } = closure_0);
+              const obj = {};
+              let flag = obj.openVoiceChat;
+              if (flag === undefined) {
+                flag = true;
               }
-              const obj3 = { type: str2 };
-              DispatcherDefault.dispatch(obj3);
-              router_utils.transitionTo(metroImportDefault.CHANNEL(tmp37.guildId, tmp37.channelId));
-              let Noop = ChannelTabsStore.Navigated;
-            } else {
-              Noop = ChannelTabsStore.Noop;
-            }
+              const transitionExtras = obj.transitionExtras;
+              const channel = ChannelStore.getChannel(channelId);
+              if (flag) {
+                flag = null != channel;
+              }
+              if (flag) {
+                flag = channel.isGuildVocal();
+              }
+              if (flag) {
+                ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, true);
+              }
+              if (null != guildId) {
+                const obj2 = { openChannel: true };
+                const obj5 = router_utils;
+                const merged = Object.assign(transitionExtras);
+                obj5.transitionTo(metroImportDefault.CHANNEL(guildId, channelId), obj2);
+                const CHANNELResult = metroImportDefault.CHANNEL(guildId, channelId);
+              } else {
+                transitionToChannel.transitionToChannel(channelId, transitionExtras);
+              }
+            };
+          } else if (null == tmp17.guildId) {
+            return ChannelTabsStore.Noop;
           } else {
-            let str = "CHANNEL_TABS_FORWARD";
-            if (-1 === arg0) {
-              str = "CHANNEL_TABS_BACK";
-            }
-            const obj4 = { type: str };
-            DispatcherDefault.dispatch(obj4);
-            ({ channelId, guildId } = tmp37);
-            const obj5 = {};
-            let flag = obj5.openVoiceChat;
-            if (flag === undefined) {
-              flag = true;
-            }
-            const transitionExtras = obj5.transitionExtras;
-            const channel = ChannelStore.getChannel(channelId);
-            if (flag) {
-              flag = null != channel;
-            }
-            if (flag) {
-              flag = channel.isGuildVocal();
-            }
-            if (flag) {
-              ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, true);
-              const tmp38Result = ChannelRTCActionCreatorsDefault;
-            }
-            if (null != guildId) {
-              const obj8 = { openChannel: true };
-              const obj7 = router_utils;
-              const merged = Object.assign(transitionExtras);
-              obj7.transitionTo(metroImportDefault.CHANNEL(guildId, channelId), obj8);
-              const CHANNELResult = metroImportDefault.CHANNEL(guildId, channelId);
-            } else {
-              transitionToChannel.transitionToChannel(channelId, transitionExtras);
-            }
-            Navigated = ChannelTabsStore.Navigated;
+            ({ guildId: importDefault, channelId: dependencyMap } = tmp17);
+            fn = function h() {
+              return router_utils.transitionTo(metroImportDefault.CHANNEL(importDefault, dependencyMap));
+            };
           }
-          return Navigated;
+          let str = "CHANNEL_TABS_FORWARD";
+          if (-1 === arg0) {
+            str = "CHANNEL_TABS_BACK";
+          }
+          let obj3 = { type: str };
+          DispatcherDefault.dispatch(obj3);
+          fn();
+          return ChannelTabsStore.Navigated;
         }
       }
       return ChannelTabsStore.Noop;
@@ -219,7 +217,8 @@ function selectChannelTab(id, keyboard_cycle, arg2) {
     if (ChannelTabsStore.getActiveTabId() !== id) {
       const obj3 = { type: "CHANNEL_TABS_SET_ACTIVE", tabId: found.id };
       DispatcherDefault.dispatch(obj3);
-      trackChannelTabOpened(found, keyboard_cycle, false, true);
+      const obj7 = { method: keyboard_cycle, isNewTab: false, focused: true };
+      trackChannelTabOpened(found, obj7);
       if (obj === undefined) {
         obj = {};
       }
@@ -227,31 +226,31 @@ function selectChannelTab(id, keyboard_cycle, arg2) {
         router_utils.transitionTo(found.routePath, obj.transitionExtras);
       } else {
         ({ channelId: channelId2, guildId: guildId2 } = found);
-        let obj7 = obj;
+        let obj9 = obj;
         if (obj === undefined) {
-          obj7 = {};
+          obj9 = {};
         }
-        let flag6 = obj7.openVoiceChat;
-        if (flag6 === undefined) {
-          flag6 = true;
+        let flag3 = obj9.openVoiceChat;
+        if (flag3 === undefined) {
+          flag3 = true;
         }
-        const transitionExtras2 = obj7.transitionExtras;
+        const transitionExtras2 = obj9.transitionExtras;
         const channel = ChannelStore.getChannel(channelId2);
-        if (flag6) {
-          flag6 = null != channel;
+        if (flag3) {
+          flag3 = null != channel;
         }
-        if (flag6) {
-          flag6 = channel.isGuildVocal();
+        if (flag3) {
+          flag3 = channel.isGuildVocal();
         }
-        if (flag6) {
+        if (flag3) {
           ChannelRTCActionCreatorsDefault.updateChatOpen(channelId2, true);
           const tmp18Result = ChannelRTCActionCreatorsDefault;
         }
         if (null != guildId2) {
-          const obj9 = { openChannel: true };
-          const obj14 = router_utils;
+          const obj10 = { openChannel: true };
+          const obj15 = router_utils;
           const merged = Object.assign(transitionExtras2);
-          obj14.transitionTo(metroImportDefault.CHANNEL(guildId2, channelId2), obj9);
+          obj15.transitionTo(metroImportDefault.CHANNEL(guildId2, channelId2), obj10);
           const CHANNELResult = metroImportDefault.CHANNEL(guildId2, channelId2);
         } else {
           transitionToChannel.transitionToChannel(channelId2, transitionExtras2);
@@ -260,12 +259,12 @@ function selectChannelTab(id, keyboard_cycle, arg2) {
     } else if ("channel" === found.kind) {
       if (SelectedChannelStore.getCurrentlySelectedChannelId() !== found.channelId) {
         ({ channelId, guildId } = found);
-        const obj10 = {};
-        let flag = obj10.openVoiceChat;
+        const obj11 = {};
+        let flag = obj11.openVoiceChat;
         if (flag === undefined) {
           flag = true;
         }
-        const transitionExtras = obj10.transitionExtras;
+        const transitionExtras = obj11.transitionExtras;
         const channel1 = ChannelStore.getChannel(channelId);
         if (flag) {
           flag = null != channel1;
@@ -277,10 +276,10 @@ function selectChannelTab(id, keyboard_cycle, arg2) {
           ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, true);
         }
         if (null != guildId) {
-          const obj11 = { openChannel: true };
+          const obj12 = { openChannel: true };
           const obj6 = router_utils;
           const merged1 = Object.assign(transitionExtras);
-          obj6.transitionTo(metroImportDefault.CHANNEL(guildId, channelId), obj11);
+          obj6.transitionTo(metroImportDefault.CHANNEL(guildId, channelId), obj12);
           const CHANNELResult1 = metroImportDefault.CHANNEL(guildId, channelId);
         } else {
           transitionToChannel.transitionToChannel(channelId, transitionExtras);
@@ -289,9 +288,38 @@ function selectChannelTab(id, keyboard_cycle, arg2) {
     }
   }
 }
+function trackChannelTabPinToggled(found1, source) {
+  const tabs = ChannelTabsStore.getTabs();
+  const obj2 = { tab_kind: found1.kind, tab_route: null, channel_id: null, guild_id: null, tab_count: null, pinned_tab_count: null };
+  let channelTabPageName = null;
+  if ("route" === found1.kind) {
+    channelTabPageName = ChannelTabRoutes.getChannelTabPageName(found1.routePath);
+  }
+  obj2.tab_route = channelTabPageName;
+  let channelId = null;
+  if ("channel" === found1.kind) {
+    channelId = found1.channelId;
+  }
+  obj2.channel_id = channelId;
+  let guildId = null;
+  if ("channel" === found1.kind) {
+    guildId = null;
+    if (!obj4.isFavoritesGuildId(found1.guildId)) {
+      guildId = found1.guildId;
+    }
+    obj4 = FavoritesUtils;
+  }
+  const obj5 = {};
+  obj2.guild_id = guildId;
+  obj2.tab_count = tabs.length;
+  obj2.pinned_tab_count = tabs.filter((pinned) => pinned.pinned).length;
+  const merged = Object.assign(obj2);
+  obj5.source = source;
+  obj5.pinned = found1.pinned;
+  AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_PIN_TOGGLED, obj5);
+}
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, Routes: metroImportDefault } = Constants);
-const StaticChannelRoute = fn(4679).StaticChannelRoute;
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tabs/ChannelTabsActionCreators.tsx");
@@ -311,29 +339,39 @@ export function showCallViewOnJoin(id) {
   }
 }
 export { trackChannelTabOpened };
-export function openChannelTab(channelId, guildId, close) {
+export function openChannelTab(channelId, guildId, method) {
   let activeTabId = arg3;
   if (arg3 === undefined) {
     activeTabId = ChannelTabsStore.getActiveTabId();
   }
-  if (null != ChannelTabsStore.getActiveTab()) {
-    const obj2 = { type: "CHANNEL_TABS_OPEN", location: null, background: true, sourceTabId: null };
-    const obj6 = { kind: "channel", channelId, guildId };
-    obj2.location = obj6;
-    obj2.sourceTabId = activeTabId;
-    DispatcherDefault.dispatch(obj2);
-    const tabs = ChannelTabsStore.getTabs();
-    if (tabs.length > ChannelTabsStore.getTabs().length) {
-      trackChannelTabOpened(tabs[tabs.length - 1], close, true, ChannelTabsStore.getActiveTabId() === tabs[tabs.length - 1].id, null);
-    }
-  } else {
-    const obj7 = {};
-    let flag = obj7.openVoiceChat;
+  dispatchOpenTab({ type: "CHANNEL_TABS_OPEN", location: { kind: "channel", channelId, guildId }, background: true, sourceTabId: activeTabId }, method);
+  const obj = { type: "CHANNEL_TABS_OPEN", location: { kind: "channel", channelId, guildId }, background: true, sourceTabId: activeTabId };
+}
+export function openChannelTabActive(id, guildId, method, arg3) {
+  let obj = arg3;
+  if (arg3 === undefined) {
+    obj = {};
+  }
+  let sourceTabId = obj.sourceTabId;
+  if (sourceTabId === undefined) {
+    sourceTabId = ChannelTabsStore.getActiveTabId();
+  }
+  let prop = obj.newTabPickerSelection;
+  if (prop === undefined) {
+    prop = null;
+  }
+  let tmp3 = null != dispatchOpenTab({ type: "CHANNEL_TABS_OPEN", location: { kind: "channel", channelId: id, guildId }, sourceTabId }, method, prop);
+  if (tmp3) {
+    tmp3 = SelectedChannelStore.getCurrentlySelectedChannelId() !== id;
+  }
+  if (tmp3) {
+    const obj3 = {};
+    let flag = obj3.openVoiceChat;
     if (flag === undefined) {
       flag = true;
     }
-    const transitionExtras = obj7.transitionExtras;
-    const channel = ChannelStore.getChannel(channelId);
+    const transitionExtras = obj3.transitionExtras;
+    const channel = ChannelStore.getChannel(id);
     if (flag) {
       flag = null != channel;
     }
@@ -341,149 +379,37 @@ export function openChannelTab(channelId, guildId, close) {
       flag = channel.isGuildVocal();
     }
     if (flag) {
-      ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, true);
-    }
-    if (null != guildId) {
-      const obj8 = { openChannel: true };
-      const obj5 = router_utils;
-      const merged = Object.assign(transitionExtras);
-      obj5.transitionTo(metroImportDefault.CHANNEL(guildId, channelId), obj8);
-      const CHANNELResult = metroImportDefault.CHANNEL(guildId, channelId);
-    } else {
-      transitionToChannel.transitionToChannel(channelId, transitionExtras);
-    }
-  }
-}
-export function openChannelTabActive(id, guildId, close) {
-  if (activeTabId === undefined) {
-    activeTabId = ChannelTabsStore.getActiveTabId();
-  }
-  let tmp3 = prop;
-  if (prop === undefined) {
-    tmp3 = null;
-  }
-  if (null != ChannelTabsStore.getActiveTab()) {
-    const obj2 = { type: "CHANNEL_TABS_OPEN", location: null, sourceTabId: null };
-    const obj6 = { kind: "channel", channelId: id, guildId };
-    obj2.location = obj6;
-    obj2.sourceTabId = activeTabId;
-    if (tmp3 === undefined) {
-      tmp3 = null;
-    }
-    DispatcherDefault.dispatch(obj2);
-    const tabs = ChannelTabsStore.getTabs();
-    let tmp22 = null;
-    if (tabs.length > ChannelTabsStore.getTabs().length) {
-      trackChannelTabOpened(tabs[tabs.length - 1], close, true, ChannelTabsStore.getActiveTabId() === tabs[tabs.length - 1].id, tmp3);
-      tmp22 = tmp24;
-    }
-    let tmp29 = null != tmp22;
-    if (tmp29) {
-      tmp29 = SelectedChannelStore.getCurrentlySelectedChannelId() !== id;
-    }
-    if (tmp29) {
-      const obj7 = {};
-      let flag4 = obj7.openVoiceChat;
-      if (flag4 === undefined) {
-        flag4 = true;
-      }
-      const transitionExtras2 = obj7.transitionExtras;
-      const channel = ChannelStore.getChannel(id);
-      if (flag4) {
-        flag4 = null != channel;
-      }
-      if (flag4) {
-        flag4 = channel.isGuildVocal();
-      }
-      if (flag4) {
-        ChannelRTCActionCreatorsDefault.updateChatOpen(id, true);
-        const tmp19Result = ChannelRTCActionCreatorsDefault;
-      }
-      if (null != guildId) {
-        const obj8 = { openChannel: true };
-        const obj14 = router_utils;
-        const merged = Object.assign(transitionExtras2);
-        obj14.transitionTo(metroImportDefault.CHANNEL(guildId, id), obj8);
-        const CHANNELResult = metroImportDefault.CHANNEL(guildId, id);
-      } else {
-        transitionToChannel.transitionToChannel(id, transitionExtras2);
-      }
-    }
-  } else {
-    const obj10 = {};
-    let flag = obj10.openVoiceChat;
-    if (flag === undefined) {
-      flag = true;
-    }
-    const transitionExtras = obj10.transitionExtras;
-    const channel1 = ChannelStore.getChannel(id);
-    if (flag) {
-      flag = null != channel1;
-    }
-    if (flag) {
-      flag = channel1.isGuildVocal();
-    }
-    if (flag) {
       ChannelRTCActionCreatorsDefault.updateChatOpen(id, true);
     }
     if (null != guildId) {
-      const obj11 = { openChannel: true };
-      const obj5 = router_utils;
-      const merged1 = Object.assign(transitionExtras);
-      obj5.transitionTo(metroImportDefault.CHANNEL(guildId, id), obj11);
-      const CHANNELResult1 = metroImportDefault.CHANNEL(guildId, id);
+      const obj4 = { openChannel: true };
+      const obj7 = router_utils;
+      const merged = Object.assign(transitionExtras);
+      obj7.transitionTo(metroImportDefault.CHANNEL(guildId, id), obj4);
+      const CHANNELResult = metroImportDefault.CHANNEL(guildId, id);
     } else {
       transitionToChannel.transitionToChannel(id, transitionExtras);
     }
   }
+  const obj2 = { type: "CHANNEL_TABS_OPEN", location: { kind: "channel", channelId: id, guildId }, sourceTabId };
 }
-export function openFreshTabAt(tabLocationForPath, close) {
+export function openTabWithoutHistory(tabLocationForPath, method) {
   let tmp = prop;
   if (prop === undefined) {
     tmp = null;
   }
-  if (tmp === undefined) {
-    tmp = null;
-  }
-  DispatcherDefault.dispatch({ type: "CHANNEL_TABS_OPEN", location: tabLocationForPath, sourceTabId: null });
-  const tabs = ChannelTabsStore.getTabs();
-  let tmp3 = null;
-  if (tabs.length > ChannelTabsStore.getTabs().length) {
-    trackChannelTabOpened(tabs[tabs.length - 1], close, true, ChannelTabsStore.getActiveTabId() === tabs[tabs.length - 1].id, tmp);
-    tmp3 = tmp5;
-  }
-  let id;
-  if (tmp3 != null) {
-    id = tmp3.id;
-  }
-  if (id == null) {
-    id = null;
-  }
-  return id;
+  return null != dispatchOpenTab({ type: "CHANNEL_TABS_OPEN", location: tabLocationForPath, sourceTabId: null }, method, tmp);
 }
-export function openFriendsTabActive(close) {
-  if (null == ChannelTabsStore.getActiveTab()) {
+export function openFriendsTabActive(method) {
+  const obj = { type: "CHANNEL_TABS_OPEN", location: ChannelTabRoutes.getFriendsTabLocation() };
+  let tmp3 = null != dispatchOpenTab(obj, method);
+  if (tmp3) {
+    tmp3 = router_utils.getHistory().location.pathname !== metroImportDefault.FRIENDS;
+    const tmpResult = router_utils;
+  }
+  if (tmp3) {
     router_utils.transitionTo(metroImportDefault.FRIENDS);
-    return null;
-  } else {
-    const obj2 = { type: "CHANNEL_TABS_OPEN", location: ChannelTabRoutes.getFriendsTabLocation() };
-    DispatcherDefault.dispatch(obj2);
-    const tabs = ChannelTabsStore.getTabs();
-    let tmp7 = null;
-    if (tabs.length > ChannelTabsStore.getTabs().length) {
-      trackChannelTabOpened(tabs[tabs.length - 1], close, true, ChannelTabsStore.getActiveTabId() === tabs[tabs.length - 1].id, null);
-      tmp7 = tmp2;
-    }
-    let id = null;
-    if (null != tmp7) {
-      if (tmp15Result.getHistory().location.pathname !== metroImportDefault.FRIENDS) {
-        router_utils.transitionTo(tmp9.FRIENDS);
-        const tmp15Result2 = router_utils;
-      }
-      id = tmp7.id;
-      tmp15Result = router_utils;
-    }
-    return id;
+    const tmpResult2 = router_utils;
   }
 }
 export function navigateToRoute(routePath, routeLabel) {
@@ -491,7 +417,7 @@ export function navigateToRoute(routePath, routeLabel) {
   DispatcherDefault.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath, routeLabel });
   const activeTab = ChannelTabsStore.getActiveTab();
   if (tmp4) {
-    trackChannelTabOpened(activeTab, "page_navigation", true, true);
+    trackChannelTabOpened(activeTab, { method: "page_navigation", isNewTab: true, focused: true });
   }
   const obj2 = { type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath, routeLabel };
   tmp4 = null != activeTabId && null != activeTab && activeTab.id !== activeTabId;
@@ -556,15 +482,38 @@ export function moveChannelTab(tabId, toIndex) {
   const tabs1 = ChannelTabsStore.getTabs();
   const findIndexResult1 = tabs1.findIndex((id) => id.id === closure_0);
   if (tmp6) {
-    const obj3 = {};
-    const merged = Object.assign(getTabProperties(tabs1[findIndexResult1]));
-    obj3.from_index = findIndexResult;
-    obj3.to_index = findIndexResult1;
-    obj3.is_pinned = tabs1[findIndexResult1].pinned;
-    AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_REORDERED, obj3);
+    const tabs2 = ChannelTabsStore.getTabs();
+    const obj4 = { tab_kind: tabs1[findIndexResult1].kind, tab_route: null, channel_id: null, guild_id: null, tab_count: null, pinned_tab_count: null };
+    let channelTabPageName = null;
+    if ("route" === tabs1[findIndexResult1].kind) {
+      channelTabPageName = ChannelTabRoutes.getChannelTabPageName(tmp8.routePath);
+    }
+    obj4.tab_route = channelTabPageName;
+    let channelId = null;
+    if ("channel" === tabs1[findIndexResult1].kind) {
+      channelId = tmp8.channelId;
+    }
+    obj4.channel_id = channelId;
+    let guildId = null;
+    if ("channel" === tabs1[findIndexResult1].kind) {
+      guildId = null;
+      if (!obj9.isFavoritesGuildId(tmp8.guildId)) {
+        guildId = tmp8.guildId;
+      }
+      obj9 = FavoritesUtils;
+    }
+    const obj5 = {};
+    obj4.guild_id = guildId;
+    obj4.tab_count = tabs2.length;
+    obj4.pinned_tab_count = tabs2.filter((pinned) => pinned.pinned).length;
+    const merged = Object.assign(obj4);
+    obj5.from_index = findIndexResult;
+    obj5.to_index = findIndexResult1;
+    obj5.is_pinned = tabs1[findIndexResult1].pinned;
+    AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_REORDERED, obj5);
     const tmp2Result = AppAnalyticsUtilsDefault;
   }
-  const obj = { type: "CHANNEL_TABS_MOVE", tabId, toIndex };
+  const obj2 = { type: "CHANNEL_TABS_MOVE", tabId, toIndex };
   tmp6 = -1 !== findIndexResult && -1 !== findIndexResult1 && findIndexResult1 !== findIndexResult;
 }
 export function setChannelTabPinned(tabId, pinned, source) {
@@ -578,75 +527,87 @@ export function setChannelTabPinned(tabId, pinned, source) {
   DispatcherDefault.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId, pinned });
   const tabs1 = ChannelTabsStore.getTabs();
   const found1 = tabs1.find((id) => id.id === closure_0);
-  if (tmp7) {
-    const obj4 = {};
-    const merged = Object.assign(getTabProperties(found1));
-    obj4.source = source;
-    obj4.pinned = found1.pinned;
-    AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_PIN_TOGGLED, obj4);
-    const tmp3Result = AppAnalyticsUtilsDefault;
+  if (tmp5) {
+    trackChannelTabPinToggled(found1, source);
   }
   const obj3 = { type: "CHANNEL_TABS_SET_PINNED", tabId, pinned };
-  tmp7 = null != found1 && pinned !== found1.pinned;
+  tmp5 = null != found1 && pinned !== found1.pinned;
 }
-export function trackChannelTabPinToggled(pinned, source) {
-  const obj2 = {};
-  const merged = Object.assign(getTabProperties(pinned));
-  obj2.source = source;
-  obj2.pinned = pinned.pinned;
-  AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_PIN_TOGGLED, obj2);
-}
+export { trackChannelTabPinToggled };
 export function closeChannelTab(tabId, source) {
   closure_0 = tabId;
   const tabs = ChannelTabsStore.getTabs();
   const found = tabs.find((id) => id.id === closure_0);
   if (null != found) {
-    const tmp25 = ChannelTabsStore.getActiveTabId() === tabId;
+    const tmp29 = ChannelTabsStore.getActiveTabId() === tabId;
     const obj2 = { type: "CHANNEL_TABS_CLOSE", tabId };
     DispatcherDefault.dispatch(obj2);
     const tabs1 = ChannelTabsStore.getTabs();
     const someResult = tabs1.some((id) => id.id === closure_0);
     if (!someResult) {
-      const obj3 = {};
-      const merged = Object.assign(getTabProperties(found));
-      obj3.source = source;
-      obj3.was_active = tmp25;
-      obj3.was_pinned = found.pinned;
-      AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_CLOSED, obj3);
-      const tmp26Result = AppAnalyticsUtilsDefault;
+      const tabs2 = ChannelTabsStore.getTabs();
+      const obj3 = { tab_kind: found.kind, tab_route: null, channel_id: null, guild_id: null, tab_count: null, pinned_tab_count: null };
+      let channelTabPageName = null;
+      if ("route" === found.kind) {
+        channelTabPageName = ChannelTabRoutes.getChannelTabPageName(found.routePath);
+      }
+      obj3.tab_route = channelTabPageName;
+      let channelId1 = null;
+      if ("channel" === found.kind) {
+        channelId1 = found.channelId;
+      }
+      obj3.channel_id = channelId1;
+      let guildId1 = null;
+      if ("channel" === found.kind) {
+        guildId1 = null;
+        if (!obj5.isFavoritesGuildId(found.guildId)) {
+          guildId1 = found.guildId;
+        }
+        obj5 = FavoritesUtils;
+      }
+      const obj6 = {};
+      obj3.guild_id = guildId1;
+      obj3.tab_count = tabs2.length;
+      obj3.pinned_tab_count = tabs2.filter((pinned) => pinned.pinned).length;
+      const merged = Object.assign(obj3);
+      obj6.source = source;
+      obj6.was_active = tmp29;
+      obj6.was_pinned = found.pinned;
+      AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_CLOSED, obj6);
+      const tmp30Result = AppAnalyticsUtilsDefault;
     }
-    if (tmp25) {
+    if (tmp29) {
       const activeTab = ChannelTabsStore.getActiveTab();
       if (null != activeTab) {
         if (!someResult) {
-          trackChannelTabOpened(activeTab, "close", false, true);
+          trackChannelTabOpened(activeTab, { method: "close", isNewTab: false, focused: true });
         }
-        const obj4 = {};
+        const obj7 = {};
         if ("route" === activeTab.kind) {
-          router_utils.transitionTo(activeTab.routePath, obj4.transitionExtras);
+          router_utils.transitionTo(activeTab.routePath, obj7.transitionExtras);
         } else {
           ({ channelId, guildId } = activeTab);
-          let flag3 = obj4.openVoiceChat;
-          if (flag3 === undefined) {
-            flag3 = true;
+          let flag = obj7.openVoiceChat;
+          if (flag === undefined) {
+            flag = true;
           }
-          const transitionExtras = obj4.transitionExtras;
+          const transitionExtras = obj7.transitionExtras;
           const channel = ChannelStore.getChannel(channelId);
-          if (flag3) {
-            flag3 = null != channel;
+          if (flag) {
+            flag = null != channel;
           }
-          if (flag3) {
-            flag3 = channel.isGuildVocal();
+          if (flag) {
+            flag = channel.isGuildVocal();
           }
-          if (flag3) {
+          if (flag) {
             ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, true);
-            const tmp26Result2 = ChannelRTCActionCreatorsDefault;
+            const tmp30Result2 = ChannelRTCActionCreatorsDefault;
           }
           if (null != guildId) {
-            const obj5 = { openChannel: true };
-            const obj8 = router_utils;
+            const obj8 = { openChannel: true };
+            const obj11 = router_utils;
             const merged1 = Object.assign(transitionExtras);
-            obj8.transitionTo(metroImportDefault.CHANNEL(guildId, channelId), obj5);
+            obj11.transitionTo(metroImportDefault.CHANNEL(guildId, channelId), obj8);
             const CHANNELResult = metroImportDefault.CHANNEL(guildId, channelId);
           } else {
             transitionToChannel.transitionToChannel(channelId, transitionExtras);

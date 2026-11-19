@@ -1,18 +1,18 @@
-// === Module 5898: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 5869: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 5898 (checkpoint/CheckpointMessageComponentUtils)
+// Module 5869 (checkpoint/CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
 import Server from "Server" /* 2119 */;
 import _modDef3307 from "module_3307" /* 3307 */;
 import _modDef3339 from "module_3339" /* 3339 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4769 */;
-import TimeUtils from "TimeUtils" /* 5572 */;
-import CheckpointUtils from "CheckpointUtils" /* 5886 */;
-import CheckpointCardColorPalette from "CheckpointCardColorPalette" /* 5899 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 5901 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 5921 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6247 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4738 */;
+import TimeUtils from "TimeUtils" /* 5541 */;
+import CheckpointUtils from "CheckpointUtils" /* 5857 */;
+import CheckpointCardColorPalette from "CheckpointCardColorPalette" /* 5870 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 5872 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 5892 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6218 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 const require = globalThis.__r;
@@ -151,12 +151,12 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
   }
 }
 let closure_3 = ["powerLevel", "powerLevelUnits"];
-const CheckpointConstants = fn(5877);
+const CheckpointConstants = fn(5848);
 ({ CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS: hasOwnProperty, CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS: closure_6, CHECKPOINT_2026_POWER_BAR_UNITS: metroImportDefault, NATIVE_CHARACTER_LAYER_SIZE: closure_8, CheckpointVersions: closure_9 } = CheckpointConstants);
-let items = [fn(5572).TimeUnits.HOURS, fn(5572).TimeUnits.MINUTES];
-const items1 = [fn(5900).CheckpointCardTypes.DEFAULT, fn(5900).CheckpointCardTypes.CHARACTER_ONLY];
+let items = [fn(5541).TimeUnits.HOURS, fn(5541).TimeUnits.MINUTES];
+const items1 = [fn(5871).CheckpointCardTypes.DEFAULT, fn(5871).CheckpointCardTypes.CHARACTER_ONLY];
 const set = new Set(items1);
-const items2 = [fn(5900).CheckpointCardTypes.DEFAULT, fn(5900).CheckpointCardTypes.STATS_ONLY];
+const items2 = [fn(5871).CheckpointCardTypes.DEFAULT, fn(5871).CheckpointCardTypes.STATS_ONLY];
 const set1 = new Set(items2);
 const items3 = [128, 256, 512, 768, 1024];
 const items4 = [...items3];

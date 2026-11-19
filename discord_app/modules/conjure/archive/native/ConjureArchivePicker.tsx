@@ -1,10 +1,10 @@
-// === Module 18420: ConjureArchivePicker ===
+// === Module 18418: ConjureArchivePicker ===
 
-// Module 18420 (ConjureArchivePicker)
+// Module 18418 (ConjureArchivePicker)
 import util from "util" /* 1113 */;
-import _modDef4121 from "module_4121" /* 4121 */;
-import FilePickerUtils from "FilePickerUtils" /* 11141 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18334 */;
+import _modDef4089 from "module_4089" /* 4089 */;
+import FilePickerUtils from "FilePickerUtils" /* 11119 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 18328 */;
 import conjureAttachmentRequests from "conjureAttachmentRequests" /* 18355 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -51,7 +51,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
         items = [closure_131_2];
         closure_132_5(closure_131_0, closure_131_1, items);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp14) {
       c6 = tmp;
@@ -97,7 +97,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(6878);
+const ConjureConnectionStore = fn(6848);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 let closure_6 = ["zip", "tar", "gz", "tgz", "bz2", "xz"];
 const size = fn(2);
@@ -120,7 +120,7 @@ export function describeConjureArchiveRejection(bytes) {
     const obj2 = { size: null };
     const tmpResult = ConjureAttachmentTypes;
     obj2.size = tmpResult.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(bytes.contentType));
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4121.ThxcOX, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4089.ThxcOX, obj2);
     const tmpResult2 = ConjureAttachmentTypes;
   }
   return formatToPlainStringResult;

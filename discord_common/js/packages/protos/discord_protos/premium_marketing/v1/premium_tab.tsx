@@ -1,33 +1,51 @@
-// === Module 9059: premium_tab ===
+// === Module 9033: premium_tab ===
 
-// Module 9059 (premium_tab)
+// Module 9033 (premium_tab)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9056 */;
+import localized_string from "localized_string" /* 9030 */;
+import theme_aware_asset from "theme_aware_asset" /* 9034 */;
+import tab_gradient_colors from "tab_gradient_colors" /* 9035 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const MessageType = fn(1197).MessageType;
 class PremiumTab$Type extends MessageType {
   constructor() {
-    items = [, , , , , ];
+    items = [, , , , , , , ];
     items[0] = { no: 1, name: "badge_label", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "acknowledged_badge_label", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "show_hover_gradient", kind: "scalar", T: 8 };
     items[3] = { no: 4, name: "deeplink_section", kind: "scalar", T: 9 };
-    obj = { no: 5, name: "badge_label_localized", kind: "message", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[2]).LocalizedString;
-      }
-    }
-    obj.T = T;
-    items[4] = obj;
+    items[4] = {
+      no: 5,
+      name: "badge_label_localized",
+      kind: "message",
+      T() {
+            return require("localized_string").LocalizedString;
+          }
+    };
     items[5] = {
       no: 6,
       name: "acknowledged_badge_label_localized",
       kind: "message",
       T() {
             return require("localized_string").LocalizedString;
+          }
+    };
+    obj = { no: 7, name: "background_image", kind: "message", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[3]).ThemeAwareAsset;
+      }
+    }
+    obj.T = T;
+    items[6] = obj;
+    items[7] = {
+      no: 8,
+      name: "hover_gradient_colors",
+      kind: "message",
+      T() {
+            return require("tab_gradient_colors").TabGradientColors;
           }
     };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PremiumTab", items, T);
@@ -70,6 +88,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (6 === tmp5) {
         let LocalizedString = localized_string.LocalizedString;
         obj.acknowledgedBadgeLabelLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.acknowledgedBadgeLabelLocalized);
+      } else if (7 === tmp5) {
+        let ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
+        obj.backgroundImage = ThemeAwareAsset.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.backgroundImage);
+      } else if (8 === tmp5) {
+        let TabGradientColors = tab_gradient_colors.TabGradientColors;
+        obj.hoverGradientColors = TabGradientColors.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.hoverGradientColors);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -126,6 +150,18 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(badgeLabel, tag,
     const joined1 = LocalizedString2.internalBinaryWrite(badgeLabel.acknowledgedBadgeLabelLocalized, tag.tag(6, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(badgeLabel.acknowledgedBadgeLabelLocalized, tag.tag(6, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
+  if (badgeLabel.backgroundImage) {
+    const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
+    const tagResult6 = tag.tag(7, _mod1197.WireType.LengthDelimited);
+    const joined2 = ThemeAwareAsset.internalBinaryWrite(badgeLabel.backgroundImage, tag.tag(7, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = ThemeAwareAsset.internalBinaryWrite(badgeLabel.backgroundImage, tag.tag(7, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
+  if (badgeLabel.hoverGradientColors) {
+    const TabGradientColors = tab_gradient_colors.TabGradientColors;
+    const tagResult7 = tag.tag(8, _mod1197.WireType.LengthDelimited);
+    const joined3 = TabGradientColors.internalBinaryWrite(badgeLabel.hoverGradientColors, tag.tag(8, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = TabGradientColors.internalBinaryWrite(badgeLabel.hoverGradientColors, tag.tag(8, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -136,21 +172,44 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(badgeLabel, tag,
   }
   return tag;
 };
-let items = [{ no: 1, name: "badge_label", kind: "scalar", T: 9 }, { no: 2, name: "acknowledged_badge_label", kind: "scalar", T: 9 }, { no: 3, name: "show_hover_gradient", kind: "scalar", T: 8 }, { no: 4, name: "deeplink_section", kind: "scalar", T: 9 }, , ];
-let obj = { no: 5, name: "badge_label_localized", kind: "message", T: null };
+let items = [
+  { no: 1, name: "badge_label", kind: "scalar", T: 9 },
+  { no: 2, name: "acknowledged_badge_label", kind: "scalar", T: 9 },
+  { no: 3, name: "show_hover_gradient", kind: "scalar", T: 8 },
+  { no: 4, name: "deeplink_section", kind: "scalar", T: 9 },
+  {
+    no: 5,
+    name: "badge_label_localized",
+    kind: "message",
+    T() {
+      return require("localized_string").LocalizedString;
+    }
+  },
+  {
+    no: 6,
+    name: "acknowledged_badge_label_localized",
+    kind: "message",
+    T() {
+      return require("localized_string").LocalizedString;
+    }
+  },
+,
+
+];
+let obj = { no: 7, name: "background_image", kind: "message", T: null };
 class T {
   constructor() {
-    return closure_1_0(closure_1_1[2]).LocalizedString;
+    return closure_1_0(closure_1_1[3]).ThemeAwareAsset;
   }
 }
 obj.T = T;
-items[4] = obj;
-items[5] = {
-  no: 6,
-  name: "acknowledged_badge_label_localized",
+items[6] = obj;
+items[7] = {
+  no: 8,
+  name: "hover_gradient_colors",
   kind: "message",
   T() {
-    return require("localized_string").LocalizedString;
+    return require("tab_gradient_colors").TabGradientColors;
   }
 };
 const prototype1 = new prototype("discord_protos.premium_marketing.v1.PremiumTab", items, tmp, T, PremiumTab$Type, prototype, items);

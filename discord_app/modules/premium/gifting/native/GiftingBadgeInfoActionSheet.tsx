@@ -1,26 +1,26 @@
-// === Module 9383: GiftingBadgeInfoActionSheet ===
+// === Module 9361: GiftingBadgeInfoActionSheet ===
 
-// Module 9383 (GiftingBadgeInfoActionSheet)
+// Module 9361 (GiftingBadgeInfoActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef2819 from "module_2819" /* 2819 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 9384 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 9386 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 9362 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 9364 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4824 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8049 */;
+import AccessibilityStore from "AccessibilityStore" /* 4793 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8018 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(8049).getSingleRequirementThreshold;
+let closure_7 = fn(8018).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, headerContainer: null, title: null, description: null, tierCards: null, tierCard: null, iconWrapper: null };
 let obj3 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.headerContainer = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -42,7 +42,7 @@ export default function GiftingBadgeInfoActionSheet() {
   const tmp = closure_11();
   _require = tmp;
   items = [BadgeDirectoryStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => badgeById.getBadgeById(closure_0(7982).BadgeId.GIFTING));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => badgeById.getBadgeById(closure_0(7951).BadgeId.GIFTING));
   let obj = require("initialize");
   const items1 = [AccessibilityStore];
   importDefault = require("initialize").useStateFromStores(items1, () => useReducedMotion.useReducedMotion);

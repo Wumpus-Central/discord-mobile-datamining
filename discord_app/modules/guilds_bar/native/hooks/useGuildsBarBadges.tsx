@@ -1,17 +1,17 @@
-// === Module 17958: useGuildsBarBadges ===
+// === Module 17951: useGuildsBarBadges ===
 
-// Module 17958 (useGuildsBarBadges)
+// Module 17951 (useGuildsBarBadges)
 import native from "native" /* 1187 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4858 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17930 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17960 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4827 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17923 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17953 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11061 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4857 */;
-import GuildMemberStore from "GuildMemberStore" /* 4735 */;
-import GuildStore from "GuildStore" /* 4694 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11039 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4826 */;
+import GuildMemberStore from "GuildMemberStore" /* 4704 */;
+import GuildStore from "GuildStore" /* 4663 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ let closure_3 = ["guildActivityIndicatorSource"];
 const Constants = fn(1072);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_15 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");

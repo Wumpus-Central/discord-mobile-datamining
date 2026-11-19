@@ -1,10 +1,10 @@
-// === Module 11133: DebugUploadManager ===
+// === Module 11111: DebugUploadManager ===
 
-// Module 11133 (DebugUploadManager)
+// Module 11111 (DebugUploadManager)
 import LoggerDefault from "Logger" /* 3 */;
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 
 const require = fn;
 let closure_9 = async function _uploadDebugLogFiles(arg0) {
@@ -18,7 +18,7 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -90,7 +90,7 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
       } else {
         c5 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp35) {
       closure_4 = tmp35;
@@ -124,7 +124,7 @@ let closure_11 = async function _uploadAppLogFiles(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {

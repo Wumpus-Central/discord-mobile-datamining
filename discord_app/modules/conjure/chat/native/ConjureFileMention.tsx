@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { chip: null, thumbnail: null, name: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: 2, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, transform: null };
 let items = [{ translateY: nativeDefault.space.PX_4 }];
@@ -45,17 +45,17 @@ export default function ConjureFileMention(variant) {
   }
   if (name == null) {
     const intl = tmp2(1113).intl;
-    name = intl.string(tmp9(4121).ff9Q4C);
+    name = intl.string(tmp9(4089).ff9Q4C);
   }
   obj4.children = name;
-  items[1] = closure_7(context(5414).Text, obj4);
+  items[1] = closure_7(context(5383).Text, obj4);
   obj2.children = items;
   const tmp6Result = closure_8(closure_6, obj2);
   let tmp8Result = tmp6Result;
   if (null != context) {
     tmp8Result = tmp6Result;
     if (null != conjureStoredAttachment) {
-      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(18334).CONJURE_VIEWABLE_IMAGE_TYPES;
+      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(18328).CONJURE_VIEWABLE_IMAGE_TYPES;
       tmp8Result = tmp6Result;
       if (CONJURE_VIEWABLE_IMAGE_TYPES.has(conjureStoredAttachment.content_type)) {
         let obj5 = {
@@ -70,7 +70,7 @@ export default function ConjureFileMention(variant) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "+60" };
                     }
                   } else {
                     try {
@@ -117,7 +117,7 @@ export default function ConjureFileMention(variant) {
                         return obj;
                       } else {
                         c3 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "+60" };
                       }
                     } catch (tmp13) {
                       c3 = tmp;
@@ -131,7 +131,7 @@ export default function ConjureFileMention(variant) {
         };
         const intl2 = tmp2(1113).intl;
         let obj6 = { name: conjureStoredAttachment.name };
-        obj5.accessibilityLabel = intl2.formatToPlainString(tmp9(4121).GtNukg, obj6);
+        obj5.accessibilityLabel = intl2.formatToPlainString(tmp9(4089).GtNukg, obj6);
         obj5.children = tmp6Result;
         tmp8Result = closure_7(closure_5, obj5);
       }

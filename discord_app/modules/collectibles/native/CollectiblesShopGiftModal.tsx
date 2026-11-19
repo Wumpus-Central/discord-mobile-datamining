@@ -1,17 +1,17 @@
-// === Module 13836: CollectiblesShopGiftModal ===
+// === Module 13818: CollectiblesShopGiftModal ===
 
-// Module 13836 (CollectiblesShopGiftModal)
+// Module 13818 (CollectiblesShopGiftModal)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Navigator from "Navigator" /* 7003 */;
-import NavigatorHeader from "NavigatorHeader" /* 7006 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7986 */;
-import generated_NoResults from "generated/NoResults" /* 8098 */;
-import openGiftModal from "openGiftModal" /* 13835 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13838 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 13841 */;
+import Navigator from "Navigator" /* 6973 */;
+import NavigatorHeader from "NavigatorHeader" /* 6976 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7955 */;
+import generated_NoResults from "generated/NoResults" /* 8067 */;
+import openGiftModal from "openGiftModal" /* 13817 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13820 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 13823 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7987 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7956 */;
 
 require = fn;
 function CollectiblesShopGiftModalContent(product) {
@@ -115,18 +115,18 @@ export default function CollectiblesShopGiftModal(skuId) {
   let skuId1;
   ({ lockedRecipientUser, giftingOrigin } = skuId);
   const effect = noop.useEffect(() => {
-    const badge = skuId(8054).fetchBadge(skuId(7982).BadgeId.GIFTING);
+    const badge = skuId(8023).fetchBadge(skuId(7951).BadgeId.GIFTING);
   }, []);
   items = [CollectiblesCategoryStore];
   const items1 = [skuId];
   const stateFromStores = skuId(504).useStateFromStores(items, () => CollectiblesCategoryStore.getProduct(skuId), items1);
   const obj = skuId(504);
   const items2 = [];
-  const obj2 = skuId(9796);
+  const obj2 = skuId(9775);
   const obj3 = { needsCategory: false, seedCategoryStore: true, shouldFetchProduct: null == stateFromStores };
   const tmp5 = skuId1;
-  const tmp6 = skuId1(7431);
-  items2[HermesBuiltin.arraySpread(analyticsLocations, 0)] = skuId1(7450).COLLECTIBLES_MOBILE_GIFT_MODAL;
+  const tmp6 = skuId1(7401);
+  items2[HermesBuiltin.arraySpread(analyticsLocations, 0)] = skuId1(7420).COLLECTIBLES_MOBILE_GIFT_MODAL;
   skuId1 = undefined;
   if (stateFromStores != null) {
     skuId1 = stateFromStores.skuId;
@@ -143,8 +143,8 @@ export default function CollectiblesShopGiftModal(skuId) {
       const obj6 = { onDismiss: onGiftModalDismiss, title: null };
       const intl = tmp2(1113).intl;
       obj6.title = intl.string(tmp2(1113).t["JCFN/y"]);
-      tmp15Result = jsx(tmp5(9512), { onDismiss: onGiftModalDismiss, title: null });
-      const tmp5Result = tmp5(9512);
+      tmp15Result = jsx(tmp5(9491), { onDismiss: onGiftModalDismiss, title: null });
+      const tmp5Result = tmp5(9491);
     }
     tmp2Result = tmp2(2186);
   }

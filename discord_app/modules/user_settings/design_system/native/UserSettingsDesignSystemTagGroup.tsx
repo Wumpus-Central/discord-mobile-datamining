@@ -1,12 +1,12 @@
-// === Module 17309: UserSettingsDesignSystemTagGroup ===
+// === Module 17302: UserSettingsDesignSystemTagGroup ===
 
-// Module 17309 (UserSettingsDesignSystemTagGroup)
+// Module 17302 (UserSettingsDesignSystemTagGroup)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5387 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import Stack_Stack from "Stack/Stack" /* 5837 */;
-import Card from "Card" /* 6958 */;
-import TagGroup from "TagGroup" /* 15191 */;
+import useToken from "useToken" /* 5356 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import Stack_Stack from "Stack/Stack" /* 5808 */;
+import Card from "Card" /* 6928 */;
+import TagGroup from "TagGroup" /* 15177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, narrow: { width: "60%" } };
 let closure_7 = createStyles.createStyles(obj2);
 let items = [{ id: "art", label: "Art" }, { id: "music", label: "Music" }];

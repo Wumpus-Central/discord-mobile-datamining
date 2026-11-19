@@ -1,6 +1,6 @@
-// === Module 11756: SafetyWarningUtils ===
+// === Module 11734: SafetyWarningUtils ===
 
-// Module 11756 (SafetyWarningUtils)
+// Module 11734 (SafetyWarningUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import UserStore from "UserStore" /* 1388 */;
 

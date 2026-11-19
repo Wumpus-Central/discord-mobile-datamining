@@ -1,6 +1,6 @@
-// === Module 5869: SoundboardStore ===
+// === Module 5840: SoundboardStore ===
 
-// Module 5869 (SoundboardStore)
+// Module 5840 (SoundboardStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
@@ -8,14 +8,14 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import UserSettings from "UserSettings" /* 4648 */;
-import FrecencyDefault from "Frecency" /* 5580 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5727 */;
+import UserSettings from "UserSettings" /* 4617 */;
+import FrecencyDefault from "Frecency" /* 5549 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5696 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5564 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5533 */;
 import UserStore from "UserStore" /* 1388 */;
-import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5870 */;
+import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5841 */;
 import apply_mod from "apply" /* 12 */;
 
 require = fn;
@@ -75,7 +75,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(5871);
+const SoundboardConstants = fn(5842);
 ({ DEFAULT_SOUND_GUILD_ID: closure_8, EMPTY_SOUND_ID_LIST: closure_9 } = SoundboardConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
@@ -207,8 +207,8 @@ prototype["getOverlaySerializedState"] = function getOverlaySerializedState() {
 prototype["getSounds"] = function getSounds() {
   return map;
 };
-prototype["getSoundsForGuild"] = function getSoundsForGuild(arg0) {
-  return map.get(arg0);
+prototype["getSoundsForGuild"] = function getSoundsForGuild(guildId) {
+  return map.get(guildId);
 };
 prototype["getSound"] = function getSound(arg0, arg1) {
   closure_0 = arg1;

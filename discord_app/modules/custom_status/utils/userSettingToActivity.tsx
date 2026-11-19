@@ -1,11 +1,11 @@
-// === Module 8955: userSettingToActivity ===
+// === Module 8929: userSettingToActivity ===
 
-// Module 8955 (userSettingToActivity)
+// Module 8929 (userSettingToActivity)
 import _mod19 from "module_19" /* 19 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4769 */;
-import ActivityTypes from "ActivityTypes" /* 5562 */;
-import EmojiStore from "EmojiStore" /* 6481 */;
-import EmojiPackStore from "EmojiPackStore" /* 4774 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4738 */;
+import ActivityTypes from "ActivityTypes" /* 5531 */;
+import EmojiStore from "EmojiStore" /* 6452 */;
+import EmojiPackStore from "EmojiPackStore" /* 4743 */;
 import size from "module_2" /* 2 */;
 
 function _activityFromSetting(emojiName, stateFromStores) {

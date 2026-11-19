@@ -1,28 +1,28 @@
-// === Module 6832: LocalActivityStore ===
+// === Module 6802: LocalActivityStore ===
 
-// Module 6832 (LocalActivityStore)
+// Module 6802 (LocalActivityStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1345 from "module_1345" /* 1345 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
-import ActivityTypes from "ActivityTypes" /* 5562 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 6985 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 12144 */;
+import ActivityTypes from "ActivityTypes" /* 5531 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 6955 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 12123 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
-import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 6833 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 6834 */;
-import SpotifyStore from "SpotifyStore" /* 6805 */;
+import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 6803 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 6804 */;
+import SpotifyStore from "SpotifyStore" /* 6777 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6308 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6279 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 import DetectableGameStore from "DetectableGameStore" /* 2159 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 14690 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4726 */;
-import SessionsStore from "SessionsStore" /* 5566 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 14676 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4695 */;
+import SessionsStore from "SessionsStore" /* 5535 */;
 
 require = fn;
 function updateActivities() {
@@ -73,39 +73,46 @@ function updateActivities() {
     if (streamerActiveStreamMetadata != null) {
       pid = streamerActiveStreamMetadata.pid;
     }
-    let tmp28 = null;
+    if (pid == null) {
+      let gamePid;
+      if (streamerActiveStreamMetadata != null) {
+        gamePid = streamerActiveStreamMetadata.gamePid;
+      }
+      pid = gamePid;
+    }
+    let tmp29 = null;
     if (null != pid) {
-      let found = visibleRunningGames.find((pid) => pid.pid === streamerActiveStreamMetadata.pid);
+      let found = visibleRunningGames.find((pid) => pid.pid === pid);
       if (found == null) {
         found = null;
       }
-      tmp28 = found;
+      tmp29 = found;
     }
-    let tmp30 = null == tmp28;
-    if (tmp30) {
+    let tmp31 = null == tmp29;
+    if (tmp31) {
       let id1;
       if (streamerActiveStreamMetadata != null) {
         id1 = streamerActiveStreamMetadata.id;
       }
-      tmp30 = null != id1;
+      tmp31 = null != id1;
     }
-    if (tmp30) {
+    if (tmp31) {
       let found1 = visibleRunningGames.find((id) => id.id === streamerActiveStreamMetadata.id);
       if (found1 == null) {
         found1 = null;
       }
-      tmp28 = found1;
+      tmp29 = found1;
     }
-    if (null != tmp28) {
-      let tmp25 = tmp28;
+    if (null != tmp29) {
+      let tmp25 = tmp29;
       if (null == c21) {
-        let start = tmp28.start;
+        let start = tmp29.start;
         if (start == null) {
           const _Date3 = Date;
           start = Date.now();
         }
         c21 = start;
-        tmp25 = tmp28;
+        tmp25 = tmp29;
       }
     } else {
       c21 = null;
@@ -144,8 +151,8 @@ function updateActivities() {
       return tmp2;
     });
   }
-  let tmp43 = null != tmp25 && null != tmp25.name;
-  if (tmp43) {
+  let tmp44 = null != tmp25 && null != tmp25.name;
+  if (tmp44) {
     if (!someResult) {
       someResult = set.has(tmp25.name);
     }
@@ -155,12 +162,12 @@ function updateActivities() {
       someResult = tmp(tmp2[20]).doesGameHaveRichPresence(tmp25, items3);
       const tmpResult3 = tmp(tmp2[20]);
     }
-    tmp43 = someResult;
+    tmp44 = someResult;
   }
   if (null != tmp25) {
     if (null != tmp25.name) {
-      if (!tmp43) {
-        if (!tmp49) {
+      if (!tmp44) {
+        if (!tmp50) {
           const findGameResult = DetectableGameStore.findGame(tmp25);
           const obj2 = { type: tmp(tmp2[17]).ActivityTypes.PLAYING, name: null, application_id: null, timestamps: null };
           ({ name: obj9.name, id } = tmp25);
@@ -191,9 +198,9 @@ function updateActivities() {
     const merged2 = Object.assign(activity);
     items.push(obj4);
   }
-  const tmp61 = tmp21(streamerActiveStreamMetadata[22])(items, items);
-  let flag = !tmp61;
-  if (!tmp61) {
+  const tmp62 = tmp21(streamerActiveStreamMetadata[22])(items, items);
+  let flag = !tmp62;
+  if (!tmp62) {
     flag = true;
   }
   return flag;

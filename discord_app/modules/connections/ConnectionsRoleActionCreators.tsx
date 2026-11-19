@@ -1,6 +1,6 @@
-// === Module 11976: ConnectionsRoleActionCreators ===
+// === Module 11954: ConnectionsRoleActionCreators ===
 
-// Module 11976 (ConnectionsRoleActionCreators)
+// Module 11954 (ConnectionsRoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,7 +18,7 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
         const obj11 = { type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS", roleId: closure_131_1, roleConnectionConfigurations: closure_131_3 };
         closure_132_1(closure_132_2[3]).dispatch(obj11);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp29) {
       c6 = tmp;

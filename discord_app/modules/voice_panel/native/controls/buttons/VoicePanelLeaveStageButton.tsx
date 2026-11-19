@@ -1,9 +1,9 @@
-// === Module 19424: VoicePanelLeaveStageButton ===
+// === Module 19420: VoicePanelLeaveStageButton ===
 
-// Module 19424 (VoicePanelLeaveStageButton)
-import StageChannelActionCreators from "StageChannelActionCreators" /* 6411 */;
+// Module 19420 (VoicePanelLeaveStageButton)
+import StageChannelActionCreators from "StageChannelActionCreators" /* 6382 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -13,13 +13,13 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/controls/b
 export default function LeaveStageButton(arg0) {
   let stateFromStores;
   ({ props, wrapperSpecs } = arg0);
-  const channelId = noop.useContext(stateFromStores(11709)).channelId;
+  const channelId = noop.useContext(stateFromStores(11687)).channelId;
   items = [ChannelStore];
   const items1 = [channelId];
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const obj = channelId(504);
   const tmp = stateFromStores;
-  const voicePanelButtonStyles = channelId(19403).useVoicePanelButtonStyles(wrapperSpecs);
+  const voicePanelButtonStyles = channelId(19399).useVoicePanelButtonStyles(wrapperSpecs);
   let tmp6 = null;
   if (null != stateFromStores) {
     const element = {
@@ -35,8 +35,8 @@ export default function LeaveStageButton(arg0) {
     element.accessibilityLabel = intl.string(tmp3(1113).t.ezLpY6);
     element.style = voicePanelButtonStyles.iconBg;
     const obj3 = { color: voicePanelButtonStyles.iconFill.color };
-    element.children = jsx(tmp3(10859).GroupArrowDownIcon, { color: voicePanelButtonStyles.iconFill.color });
-    tmp6 = jsx(tmp(19404), {
+    element.children = jsx(tmp3(10837).GroupArrowDownIcon, { color: voicePanelButtonStyles.iconFill.color });
+    tmp6 = jsx(tmp(19400), {
       onPress() {
           return StageChannelActionCreators.audienceAckRequestToSpeak(stateFromStores, true);
         },
@@ -45,7 +45,7 @@ export default function LeaveStageButton(arg0) {
       style: null,
       children: null
     });
-    const tmpResult = tmp(19404);
+    const tmpResult = tmp(19400);
   }
   return tmp6;
 };

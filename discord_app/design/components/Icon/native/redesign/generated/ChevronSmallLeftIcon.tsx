@@ -2,7 +2,7 @@
 
 // Module 18375 (ChevronSmallLeftIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
 import _mod18376 from "module_18376" /* 18376 */;
 import noop from "module_19" /* 19 */;
 

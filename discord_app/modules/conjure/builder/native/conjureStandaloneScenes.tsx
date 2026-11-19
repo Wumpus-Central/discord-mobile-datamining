@@ -1,9 +1,10 @@
-// === Module 18296: conjureStandaloneScenes ===
+// === Module 18289: conjureStandaloneScenes ===
 
-// Module 18296 (conjureStandaloneScenes)
+// Module 18289 (conjureStandaloneScenes)
 import Constants from "Constants" /* 1072 */;
 import router_utils from "router_utils" /* 1099 */;
-import ChannelConstants from "ChannelConstants" /* 4679 */;
+import ChannelConstants from "ChannelConstants" /* 4648 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12226 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -16,6 +17,8 @@ export function projectOpener(guildId, openHere) {
   return (projectId, arg1) => {
     if (arg1 === closure_0) {
       openHere(projectId);
+    } else if (null == arg1) {
+      openConjureHomeScreenDefault(projectId);
     } else {
       router_utils.transitionTo(Routes.CHANNEL(arg1, StaticChannelRoute.CONJURE, projectId));
     }

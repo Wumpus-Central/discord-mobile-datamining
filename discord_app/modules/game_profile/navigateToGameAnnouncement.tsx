@@ -1,8 +1,8 @@
-// === Module 9792: navigateToGameAnnouncement ===
+// === Module 9771: navigateToGameAnnouncement ===
 
-// Module 9792 (navigateToGameAnnouncement)
+// Module 9771 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4694 */;
+import GuildStore from "GuildStore" /* 4663 */;
 
 const require = fn;
 let closure_8 = async function _navigateToGameAnnouncement(arg0) {
@@ -16,7 +16,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {

@@ -1,6 +1,6 @@
-// === Module 5934: ? ===
+// === Module 5905: ? ===
 
-// Module 5934
+// Module 5905
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/base/forest.png.js");

@@ -1,9 +1,9 @@
-// === Module 7662: AppChannelApplicationSelector ===
+// === Module 7632: AppChannelApplicationSelector ===
 
-// Module 7662 (AppChannelApplicationSelector)
+// Module 7632 (AppChannelApplicationSelector)
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet" /* 7666 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet" /* 7636 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ export default function AppChannelApplicationSelector(guildId) {
   if (true !== disabled && !hasNoApplications) {
     handlePress = function handlePress() {
       const obj = ActionSheetActionCreatorsDefault;
-      obj.openLazy(asyncRequireImpl(7666, dependencyMap.paths), AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY, { guildId, channelId, selectedApplicationId, onChange });
+      obj.openLazy(asyncRequireImpl(7636, dependencyMap.paths), AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY, { guildId, channelId, selectedApplicationId, onChange });
     };
   }
   obj3.onPress = handlePress;

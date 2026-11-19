@@ -1,25 +1,25 @@
-// === Module 17002: UserSettingsAppIcons ===
+// === Module 16995: UserSettingsAppIcons ===
 
-// Module 17002 (UserSettingsAppIcons)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7431 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9005 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10465 */;
-import AppIconRowsDefault from "AppIconRows" /* 17003 */;
+// Module 16995 (UserSettingsAppIcons)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7401 */;
+import openPremiumModalDefault from "openPremiumModal" /* 8979 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10443 */;
+import AppIconRowsDefault from "AppIconRows" /* 16996 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
-const NitroUpsellButtonDefault = tmp6(10912);
+const NitroUpsellButtonDefault = tmp6(10890);
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ UpsellTypes: closure_8, AnalyticsPages: closure_9 } = Constants);
-const getIconById = fn(10428).getIconById;
-const HexagonCampaignPerk = fn(4848).HexagonCampaignPerk;
+const getIconById = fn(10406).getIconById;
+const HexagonCampaignPerk = fn(4817).HexagonCampaignPerk;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_15 = createStyles.createStyles({ upsellButtonContainer: { padding: 0, position: "absolute", bottom: 56, width: 350, alignSelf: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx");
@@ -40,7 +40,7 @@ export default noop.memo(function UserSettingsAppIcons() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -61,7 +61,7 @@ export default noop.memo(function UserSettingsAppIcons() {
             c5 = 1;
             c7 = 2;
             c8 = 1;
-            const obj6 = { value: stateFromStores(15775).ensureHexagonCampaignEnrollment(constants.APP_ICON), done: false };
+            const obj6 = { value: stateFromStores(15766).ensureHexagonCampaignEnrollment(constants.APP_ICON), done: false };
             return obj6;
           }
         } else if (1 === tmp7) {
@@ -79,18 +79,18 @@ export default noop.memo(function UserSettingsAppIcons() {
             const obj7 = { value, done: true };
             return obj7;
           } else if (value) {
-            const tmp51 = stateFromStores(15775);
+            const tmp51 = stateFromStores(15766);
             dependencyMap = tmp51;
             closure_1 = tmp51.saveHexagonCampaignPreviousAppIcon;
             c7 = 3;
             c8 = 1;
-            const obj9 = { value: stateFromStores(13976).fetchCurrentAppIcon(), done: false };
+            const obj9 = { value: stateFromStores(13958).fetchCurrentAppIcon(), done: false };
             return obj9;
           } else {
             const obj10 = { text: null };
             const intl = stateFromStores(1113).intl;
             obj10.text = intl.string(stateFromStores(1113).t.F8FvUy);
-            closure_1(5505).open("HEXAGON_CAMPAIGN_ENROLLMENT_ERROR", obj10);
+            closure_1(5474).open("HEXAGON_CAMPAIGN_ENROLLMENT_ERROR", obj10);
             c5 = 0;
             closure_132_7(null);
             c8 = 3;
@@ -115,7 +115,7 @@ export default noop.memo(function UserSettingsAppIcons() {
             }
             c7 = 4;
             c8 = 1;
-            const obj15 = { value: stateFromStores(13976).setAppIcon(closure_131_0, premiumType), done: false };
+            const obj15 = { value: stateFromStores(13958).setAppIcon(closure_131_0, premiumType), done: false };
             return obj15;
           }
         } else if (arg0 === 1) {
@@ -129,20 +129,20 @@ export default noop.memo(function UserSettingsAppIcons() {
           return obj16;
         } else {
           if (value) {
-            const result = stateFromStores(15775).markHexagonCampaignPerkApplied(constants.APP_ICON);
-            const obj = stateFromStores(15775);
+            const result = stateFromStores(15766).markHexagonCampaignPerkApplied(constants.APP_ICON);
+            const obj = stateFromStores(15766);
             const obj17 = { perks: null, content: null, contentSurface: null };
             items = [constants.APP_ICON];
             obj17.perks = items;
-            obj17.content = stateFromStores(6469).QuestContent.APP_ICON_SETTINGS;
-            obj17.contentSurface = stateFromStores(15776).HexagonCampaignContentSurface.APP_ICON_PICKER;
-            const result1 = stateFromStores(15776).trackHexagonCampaignPerkAction(obj17);
-            const obj2 = stateFromStores(15776);
+            obj17.content = stateFromStores(6440).QuestContent.APP_ICON_SETTINGS;
+            obj17.contentSurface = stateFromStores(15767).HexagonCampaignContentSurface.APP_ICON_PICKER;
+            const result1 = stateFromStores(15767).trackHexagonCampaignPerkAction(obj17);
+            const obj2 = stateFromStores(15767);
           }
           c5 = 0;
           closure_132_7(null);
           c8 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp68) {
         closure_6 = tmp68;
@@ -166,7 +166,7 @@ export default noop.memo(function UserSettingsAppIcons() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -193,27 +193,27 @@ export default noop.memo(function UserSettingsAppIcons() {
                   TIER_2_LEADING = dependencyMap;
                   if (obj7.isHexagonCampaignAppIcon(id)) {
                     if (tmp8Result.isHexagonCampaignPerkExpiredForCurrentUser(constants2.APP_ICON)) {
-                      num2 = v3(9005);
+                      num2 = v3(8979);
                       obj4 = { analyticsLocation: null, analyticsLocations: null, premiumFeatureCardOrder: null };
                       tmp19 = analyticsLocation;
                       obj4.analyticsLocation = analyticsLocation;
                       obj4.analyticsLocations = analyticsLocations;
-                      TIER_2_LEADING = tmp8(10465).PremiumFeatureCardOrder.TIER_2_LEADING;
+                      TIER_2_LEADING = tmp8(10443).PremiumFeatureCardOrder.TIER_2_LEADING;
                       obj4.premiumFeatureCardOrder = TIER_2_LEADING;
                       num2(obj4);
                     }
-                    tmp8Result = tmp8(4853);
+                    tmp8Result = tmp8(4822);
                   }
                   if (importDefault !== id) {
                     if (tmp29) {
                       if (!closure_2_2) {
                         const obj6 = { initialUpsellKey: constants.APP_ICONS, imageSource: tmp30 };
-                        const result = v3(10419).handleShowUpsellAlert(obj6);
-                        const obj9 = v3(10419);
+                        const result = v3(10397).handleShowUpsellAlert(obj6);
+                        const obj9 = v3(10397);
                       }
                     }
                   }
-                  obj7 = stateFromStores(4851);
+                  obj7 = stateFromStores(4820);
                   if (tmp8Result3.isHexagonCampaignAppIcon(id)) {
                     dependencyMap = num2;
                     v3 = num2;
@@ -238,10 +238,10 @@ export default noop.memo(function UserSettingsAppIcons() {
                     }
                     dependencyMap = 2;
                     v3 = num2;
-                    const obj10 = { value: tmp8(13976).setAppIcon(id, premiumType), done: false };
+                    const obj10 = { value: tmp8(13958).setAppIcon(id, premiumType), done: false };
                     return obj10;
                   }
-                  tmp8Result3 = tmp8(4851);
+                  tmp8Result3 = tmp8(4820);
                 } else {
                   let premiumType1;
                   if (stateFromStores != tmp19) {
@@ -249,7 +249,7 @@ export default noop.memo(function UserSettingsAppIcons() {
                   }
                   dependencyMap = 3;
                   v3 = num2;
-                  const obj11 = { value: stateFromStores(13976).setAppIcon(stateFromStores(4849).FreemiumAppIconIds.DEFAULT, premiumType1), done: false };
+                  const obj11 = { value: stateFromStores(13958).setAppIcon(stateFromStores(4818).FreemiumAppIconIds.DEFAULT, premiumType1), done: false };
                   return obj11;
                 }
               }
@@ -296,8 +296,8 @@ export default noop.memo(function UserSettingsAppIcons() {
   items = [setPending];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => setPending.getCurrentUser());
   let obj = stateFromStores(504);
-  importDefault = stateFromStores(13976).useCurrentAppIcon();
-  let obj2 = stateFromStores(13976);
+  importDefault = stateFromStores(13958).useCurrentAppIcon();
+  let obj2 = stateFromStores(13958);
   const isPremiumResult = stateFromStores(2110).isPremium(stateFromStores);
   dependencyMap = isPremiumResult;
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
@@ -323,7 +323,7 @@ export default noop.memo(function UserSettingsAppIcons() {
     })
   };
   obj5.children = closure_12(closure_6, obj6);
-  const children = [closure_12(stateFromStores(7620).Form, obj5), ];
+  const children = [closure_12(stateFromStores(7590).Form, obj5), ];
   let tmp11Result = !isPremiumResult;
   if (!isPremiumResult) {
     let obj8 = { style: tmp.upsellButtonContainer, children: null };

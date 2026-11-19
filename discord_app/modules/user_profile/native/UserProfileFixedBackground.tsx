@@ -1,10 +1,10 @@
-// === Module 8102: UserProfileFixedBackground ===
+// === Module 8071: UserProfileFixedBackground ===
 
-// Module 8102 (UserProfileFixedBackground)
-import native from "native" /* 4884 */;
-import LinearGradientDefault from "LinearGradient" /* 5378 */;
-import useUserProfileColors from "useUserProfileColors" /* 8103 */;
-import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8104 */;
+// Module 8071 (UserProfileFixedBackground)
+import native from "native" /* 4853 */;
+import LinearGradientDefault from "LinearGradient" /* 5347 */;
+import useUserProfileColors from "useUserProfileColors" /* 8072 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8073 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

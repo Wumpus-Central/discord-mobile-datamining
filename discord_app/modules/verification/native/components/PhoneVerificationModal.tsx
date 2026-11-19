@@ -1,10 +1,10 @@
-// === Module 7330: PhoneVerificationModal ===
+// === Module 7300: PhoneVerificationModal ===
 
-// Module 7330 (PhoneVerificationModal)
-import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 7324 */;
-import AddPhoneDefault from "AddPhone" /* 7332 */;
-import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 7333 */;
-import VerifyPhoneDefault from "VerifyPhone" /* 7365 */;
+// Module 7300 (PhoneVerificationModal)
+import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 7294 */;
+import AddPhoneDefault from "AddPhone" /* 7302 */;
+import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 7303 */;
+import VerifyPhoneDefault from "VerifyPhone" /* 7335 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const VerificationModalScenes = fn(1072).VerificationModalScenes;
-let closure_5 = fn(7331).PHONE_VERIFICATION_MODAL_KEY;
+let closure_5 = fn(7301).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
@@ -114,7 +114,7 @@ export default function PhoneVerificationModal(onClose) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "+60" };
             }
           } else {
             try {
@@ -131,7 +131,7 @@ export default function PhoneVerificationModal(onClose) {
                   c4 = 1;
                   c2 = 2;
                   c1 = 1;
-                  const obj5 = { value: v3(7333).addPhone(reason, reason, reason.reason), done: false };
+                  const obj5 = { value: v3(7303).addPhone(reason, reason, reason.reason), done: false };
                   return obj5;
                 }
               } else if (1 === tmp6) {
@@ -176,7 +176,7 @@ export default function PhoneVerificationModal(onClose) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        closure_1(6337).popWithKey(closure_1_5);
+        closure_1(6308).popWithKey(closure_1_5);
       };
       closure_0.push(VerificationModalScenes.VERIFY_PASSWORD, obj);
     };

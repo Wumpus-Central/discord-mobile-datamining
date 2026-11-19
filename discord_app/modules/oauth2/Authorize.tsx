@@ -1,14 +1,14 @@
-// === Module 6915: Authorize ===
+// === Module 6885: Authorize ===
 
-// Module 6915 (Authorize)
+// Module 6885 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4760 */;
-import QueryStringUtils from "QueryStringUtils" /* 5544 */;
-import keysSorter from "keysSorter" /* 6478 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 6822 */;
-import scopes from "scopes" /* 6916 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4856 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4729 */;
+import QueryStringUtils from "QueryStringUtils" /* 5513 */;
+import keysSorter from "keysSorter" /* 6449 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 6794 */;
+import scopes from "scopes" /* 6886 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -61,7 +61,8 @@ export function parseOAuth2AuthorizeProps(query) {
         return tmp;
       }
     })(guild_id);
-    let str4 = QueryStringUtils.getFirstQueryStringValue(parsed.scope);
+    const scope = parsed.scope;
+    let str4 = QueryStringUtils.getFirstQueryStringValue(scope);
     if (str4 == null) {
       str4 = "";
     }

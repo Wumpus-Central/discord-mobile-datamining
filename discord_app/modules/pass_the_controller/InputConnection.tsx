@@ -1,10 +1,10 @@
-// === Module 14814: InputConnection ===
+// === Module 14800: InputConnection ===
 
-// Module 14814 (InputConnection)
+// Module 14800 (InputConnection)
 import LoggerDefault from "Logger" /* 3 */;
-import RTCConnectionEvent from "RTCConnectionEvent" /* 5683 */;
-import InputEvent from "InputEvent" /* 14815 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5592 */;
+import RTCConnectionEvent from "RTCConnectionEvent" /* 5652 */;
+import InputEvent from "InputEvent" /* 14801 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5561 */;
 
 require = fn;
 const React3 = { Closed: 0, [0]: "Closed", Connecting: 1, [1]: "Connecting", Connected: 2, [2]: "Connected" };
@@ -50,7 +50,7 @@ prototype["connect"] = function connect() {
   const self = this;
   this.state = Connecting.Connecting;
   let rtc = this.rtc;
-  rtc.on(self(5683).RTCConnectionEvent.WebTransportAck, this.webTransportAck);
+  rtc.on(self(5652).RTCConnectionEvent.WebTransportAck, this.webTransportAck);
   const rtc2 = this.rtc;
   rtc2.startWebTransport();
   const timerId = setTimeout(() => {

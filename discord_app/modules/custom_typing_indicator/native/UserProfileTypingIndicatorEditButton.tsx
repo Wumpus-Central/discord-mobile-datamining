@@ -1,12 +1,12 @@
-// === Module 15826: UserProfileTypingIndicatorEditButton ===
+// === Module 15817: UserProfileTypingIndicatorEditButton ===
 
-// Module 15826 (UserProfileTypingIndicatorEditButton)
+// Module 15817 (UserProfileTypingIndicatorEditButton)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;
 fn(19).useCallback;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4669).ContentDismissActionType;
+const ContentDismissActionType = fn(4638).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/UserProfileTypingIndicatorEditButton.tsx");
@@ -16,16 +16,16 @@ export default function UserProfileTypingIndicatorEditButton(isTryItOut) {
   let analyticsLocations;
   const nativeStackNavigation = isTryItOut(1502).useNativeStackNavigation();
   let obj = isTryItOut(1502);
-  const currentCustomTypingIndicatorConfig = isTryItOut(12761).useCurrentCustomTypingIndicatorConfig(isTryItOut);
-  const obj2 = isTryItOut(12761);
-  items = [isTryItOut(4656).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE];
-  const tmp5 = analyticsLocations(isTryItOut(8986).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  const currentCustomTypingIndicatorConfig = isTryItOut(12743).useCurrentCustomTypingIndicatorConfig(isTryItOut);
+  const obj2 = isTryItOut(12743);
+  items = [isTryItOut(4625).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE];
+  const tmp5 = analyticsLocations(isTryItOut(8960).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   dependencyMap = tmp6;
-  const obj3 = isTryItOut(8986);
-  const tmp9 = nativeStackNavigation(7450);
-  analyticsLocations = nativeStackNavigation(7431)(isTryItOut ? tmp9.CUSTOM_TYPING_INDICATOR_PROFILE_ROW_TRY_IT_OUT : tmp9.CUSTOM_TYPING_INDICATOR_PROFILE_ROW).analyticsLocations;
+  const obj3 = isTryItOut(8960);
+  const tmp9 = nativeStackNavigation(7420);
+  analyticsLocations = nativeStackNavigation(7401)(isTryItOut ? tmp9.CUSTOM_TYPING_INDICATOR_PROFILE_ROW_TRY_IT_OUT : tmp9.CUSTOM_TYPING_INDICATOR_PROFILE_ROW).analyticsLocations;
   const items1 = [nativeStackNavigation, isTryItOut, tmp5[1], analyticsLocations];
-  const tmp8 = nativeStackNavigation(7431);
+  const tmp8 = nativeStackNavigation(7401);
   const intl = tmp(1113).intl;
   const tmp10 = useCallback(() => {
     let str = "profile_pending";
@@ -36,15 +36,15 @@ export default function UserProfileTypingIndicatorEditButton(isTryItOut) {
     closure_2(ContentDismissActionType.TAKE_ACTION);
     const obj = { mode: str, analyticsLocations };
   }, items1);
-  const stringResult = intl.string(isTryItOut(12761).getCustomTypingIndicatorSuggestionMessage(currentCustomTypingIndicatorConfig.typingSuggestion));
+  const stringResult = intl.string(isTryItOut(12743).getCustomTypingIndicatorSuggestionMessage(currentCustomTypingIndicatorConfig.typingSuggestion));
   const obj4 = { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null };
   const intl2 = tmp(1113).intl;
-  obj4.label = intl2.string(nativeStackNavigation(4123)["pT+BVM"]);
-  const tmpResult = isTryItOut(12761);
-  obj4.labelTrailing = jsx(isTryItOut(15791).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp5[0] === isTryItOut(4656).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE });
-  obj4.leading = jsx(nativeStackNavigation(12774), { config: currentCustomTypingIndicatorConfig, size: 24 });
+  obj4.label = intl2.string(nativeStackNavigation(4091)["pT+BVM"]);
+  const tmpResult = isTryItOut(12743);
+  obj4.labelTrailing = jsx(isTryItOut(15782).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp5[0] === isTryItOut(4625).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE });
+  obj4.leading = jsx(nativeStackNavigation(12756), { config: currentCustomTypingIndicatorConfig, size: 24 });
   obj4.buttonText = stringResult;
   obj4.accessibilityValue = { text: stringResult };
   obj4.onPress = tmp10;
-  return jsx(isTryItOut(15791).UserProfileEditFormButton, { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null });
+  return jsx(isTryItOut(15782).UserProfileEditFormButton, { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null });
 };

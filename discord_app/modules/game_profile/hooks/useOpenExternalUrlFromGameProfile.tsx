@@ -1,7 +1,7 @@
-// === Module 9673: useOpenExternalUrlFromGameProfile ===
+// === Module 9652: useOpenExternalUrlFromGameProfile ===
 
-// Module 9673 (useOpenExternalUrlFromGameProfile)
-import GameUtilsDefault from "GameUtils" /* 6809 */;
+// Module 9652 (useOpenExternalUrlFromGameProfile)
+import GameUtilsDefault from "GameUtils" /* 6781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -127,7 +127,7 @@ export default function useOpenExternalUrlFromGameProfile(openURL) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -172,7 +172,7 @@ export default function useOpenExternalUrlFromGameProfile(openURL) {
         } else if (1 === tmp7) {
           c3 = 0;
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;

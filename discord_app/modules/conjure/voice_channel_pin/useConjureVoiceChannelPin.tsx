@@ -1,23 +1,23 @@
-// === Module 18544: useConjureVoiceChannelPin ===
+// === Module 18537: useConjureVoiceChannelPin ===
 
-// Module 18544 (useConjureVoiceChannelPin)
-import useChannelName from "useChannelName" /* 5439 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 14674 */;
+// Module 18537 (useConjureVoiceChannelPin)
+import useChannelName from "useChannelName" /* 5408 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 14660 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import GuildChannelStore from "GuildChannelStore" /* 4753 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
-import RelationshipStore from "RelationshipStore" /* 4765 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import GuildChannelStore from "GuildChannelStore" /* 4722 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
+import RelationshipStore from "RelationshipStore" /* 4734 */;
 import UserStore from "UserStore" /* 1388 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
-import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 6894 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
+import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 6864 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4753).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4722).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);
@@ -109,7 +109,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

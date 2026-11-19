@@ -1,11 +1,11 @@
-// === Module 13316: useGuildPowerupRollbackNotificationConfig ===
+// === Module 13298: useGuildPowerupRollbackNotificationConfig ===
 
-// Module 13316 (useGuildPowerupRollbackNotificationConfig)
+// Module 13298 (useGuildPowerupRollbackNotificationConfig)
 import util from "util" /* 1113 */;
 import _modDef2755 from "module_2755" /* 2755 */;
-import dismissible_content from "dismissible_content" /* 4656 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13317 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 8243 */;
+import dismissible_content from "dismissible_content" /* 4625 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13299 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 8212 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, useMa
   items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   if (stateFromStores != null) {
-    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 7912).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 7882).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const obj = require("initialize");
   let tmp5 = null;
@@ -31,7 +31,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, useMa
       tmp6 = null;
       if (null != storeRemovalDate) {
         const tmp8 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-        const obj2 = { dismissibleContent: tmp(4656).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
+        const obj2 = { dismissibleContent: tmp(4625).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
         const intl = tmp(1113).intl;
         const obj3 = { dateString: tmp8 };
         obj2.title = intl.formatToPlainString(_modDef2755["6e2ry1"], obj3);

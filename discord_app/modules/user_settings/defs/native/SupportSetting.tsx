@@ -1,10 +1,10 @@
-// === Module 17013: SupportSetting ===
+// === Module 17006: SupportSetting ===
 
-// Module 17013 (SupportSetting)
+// Module 17006 (SupportSetting)
 import util from "util" /* 1113 */;
-import CircleQuestionIcon from "CircleQuestionIcon" /* 9352 */;
-import SupportUtils from "SupportUtils" /* 17014 */;
-import SettingBuilders from "SettingBuilders" /* 11897 */;
+import CircleQuestionIcon from "CircleQuestionIcon" /* 9329 */;
+import SupportUtils from "SupportUtils" /* 17007 */;
+import SettingBuilders from "SettingBuilders" /* 11875 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({

@@ -1,10 +1,10 @@
-// === Module 4880: StreamerModeStore ===
+// === Module 4849: StreamerModeStore ===
 
-// Module 4880 (StreamerModeStore)
+// Module 4849 (StreamerModeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import OverlayV3Experiment from "OverlayV3Experiment" /* 4881 */;
+import OverlayV3Experiment from "OverlayV3Experiment" /* 4850 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

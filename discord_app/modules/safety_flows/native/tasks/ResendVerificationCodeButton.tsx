@@ -1,6 +1,6 @@
-// === Module 20192: ResendVerificationCodeButton ===
+// === Module 20203: ResendVerificationCodeButton ===
 
-// Module 20192 (ResendVerificationCodeButton)
+// Module 20203 (ResendVerificationCodeButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -40,7 +40,7 @@ export default function ResendVerificationCodeButton(flowId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -135,7 +135,7 @@ export default function ResendVerificationCodeButton(flowId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

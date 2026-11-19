@@ -1,18 +1,18 @@
-// === Module 10129: UserProfileWidgetGameDetailsReorderActionSheet ===
+// === Module 10107: UserProfileWidgetGameDetailsReorderActionSheet ===
 
-// Module 10129 (UserProfileWidgetGameDetailsReorderActionSheet)
+// Module 10107 (UserProfileWidgetGameDetailsReorderActionSheet)
 import nativeDefault from "native" /* 575 */;
-import WidgetUtils from "WidgetUtils" /* 10116 */;
-import useGameCoverLayoutDefault from "useGameCoverLayout" /* 10121 */;
-import UserProfileWidgetDraggableCardDefault from "UserProfileWidgetDraggableCard" /* 10130 */;
-import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 10131 */;
+import WidgetUtils from "WidgetUtils" /* 10094 */;
+import useGameCoverLayoutDefault from "useGameCoverLayout" /* 10099 */;
+import UserProfileWidgetDraggableCardDefault from "UserProfileWidgetDraggableCard" /* 10108 */;
+import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 10109 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { list: { gap: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = noop.memo(function CompactGameWithDetailsCard(arg0) {
@@ -36,7 +36,7 @@ export default function UserProfileWidgetGameDetailsReorderActionSheet(widgetTyp
   const tmp = closure_7();
   items = [AuthenticationStore];
   const stateFromStores = widgetType(504).useStateFromStores(items, () => id.getId());
-  const tmp3 = stateFromStores(10112)(stateFromStores);
+  const tmp3 = stateFromStores(10090)(stateFromStores);
   dependencyMap = tmp3;
   const items1 = [tmp3, widgetType];
   const memo = noop.useMemo(() => {
@@ -59,7 +59,7 @@ export default function UserProfileWidgetGameDetailsReorderActionSheet(widgetTyp
   const intl = widgetType(1113).intl;
   obj2.dismissAccessibilityLabel = intl.string(widgetType(1113).t.rnh54p);
   obj2.returnFocusRef = widgetType.returnFocusRef;
-  const tmp4 = stateFromStores(10144);
+  const tmp4 = stateFromStores(10122);
   obj2.children = <View accessibilityRole="list" style={tmp.list}>{memo.map((game) => <closure_8 key={game.gameId} userId={stateFromStores} game={game} />)}</View>;
   return <tmp4 dismissAccessibilityLabel={null} returnFocusRef={null}>{null}</tmp4>;
 };

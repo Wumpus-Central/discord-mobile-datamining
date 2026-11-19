@@ -1,8 +1,8 @@
-// === Module 9669: useResolveGame ===
+// === Module 9648: useResolveGame ===
 
-// Module 9669 (useResolveGame)
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6773 */;
-import useGame from "useGame" /* 8959 */;
+// Module 9648 (useResolveGame)
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6745 */;
+import useGame from "useGame" /* 8933 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

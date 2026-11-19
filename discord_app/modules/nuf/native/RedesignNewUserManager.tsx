@@ -1,14 +1,14 @@
-// === Module 19657: RedesignNewUserManager ===
+// === Module 19653: RedesignNewUserManager ===
 
-// Module 19657 (RedesignNewUserManager)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4999 */;
-import RootNavigationRef from "RootNavigationRef" /* 5000 */;
-import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 19658 */;
+// Module 19653 (RedesignNewUserManager)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4968 */;
+import RootNavigationRef from "RootNavigationRef" /* 4969 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 19654 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4666 */;
-import NewUserStore from "NewUserStore" /* 7175 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4635 */;
+import NewUserStore from "NewUserStore" /* 7145 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
 
 require = fn;
 function isBlockedByVerification() {
@@ -37,7 +37,7 @@ function isNewUserModalInStack() {
   }
   return someResult;
 }
-const ContactSyncModalStore = fn(13510);
+const ContactSyncModalStore = fn(13492);
 ({ initialize: closure_4, ContactSyncModes: hasOwnProperty } = ContactSyncModalStore);
 const prototype = function RedesignNewUserManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -97,7 +97,7 @@ const prototype = function RedesignNewUserManager() {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "+60" };
               }
             } else {
               try {
@@ -160,7 +160,7 @@ const prototype = function RedesignNewUserManager() {
                           c3 = 0;
                           closure_0._isStartingOnboarding = false;
                           c5 = 3;
-                          return { value: "HermesInternal", done: null };
+                          return { value: "HermesInternal", done: "+60" };
                         } else {
                           keyForOnboardingStep = closure_0(paths[11]).getKeyForOnboardingStep(onboardingStepIndex);
                           if (null != keyForOnboardingStep) {
@@ -184,7 +184,7 @@ const prototype = function RedesignNewUserManager() {
                         c3 = 0;
                         closure_0._isStartingOnboarding = false;
                         c5 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "+60" };
                       }
                     }
                   } else if (arg0 === 1) {
@@ -200,7 +200,7 @@ const prototype = function RedesignNewUserManager() {
                   c3 = 0;
                   closure_0._isStartingOnboarding = false;
                   c5 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "+60" };
                 }
               } catch (tmp58) {
                 closure_2 = tmp58;

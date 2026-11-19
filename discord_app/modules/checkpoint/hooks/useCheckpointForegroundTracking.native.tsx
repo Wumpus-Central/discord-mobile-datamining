@@ -1,7 +1,7 @@
-// === Module 12429: useCheckpointForegroundTracking ===
+// === Module 12413: useCheckpointForegroundTracking ===
 
-// Module 12429 (useCheckpointForegroundTracking)
-import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 12416 */;
+// Module 12413 (useCheckpointForegroundTracking)
+import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 12399 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
 

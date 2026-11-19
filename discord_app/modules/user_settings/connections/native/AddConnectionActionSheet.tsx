@@ -1,14 +1,14 @@
-// === Module 16178: AddConnectionActionSheet ===
+// === Module 16169: AddConnectionActionSheet ===
 
-// Module 16178 (AddConnectionActionSheet)
+// Module 16169 (AddConnectionActionSheet)
 import Constants from "Constants" /* 1072 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 2149 */;
-import shared from "shared" /* 4830 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import TableRow from "TableRow" /* 6956 */;
+import shared from "shared" /* 4799 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import TableRow from "TableRow" /* 6926 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4823 */;
+import createStyles from "createStyles" /* 4792 */;
 import native from "native" /* 1187 */;
 import size from "module_2" /* 2 */;
 
@@ -19,10 +19,10 @@ function AddApplicationIdentityTableRow(application) {
   _require = undefined;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7432)(application));
-  const tmp2 = analyticsLocations(7432)(application);
-  analyticsLocations = analyticsLocations(7431)(analyticsLocations(7450).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7431);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7402)(application));
+  const tmp2 = analyticsLocations(7402)(application);
+  analyticsLocations = analyticsLocations(7401)(analyticsLocations(7420).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7401);
   const tmp4 = closure_7();
   const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
   const obj2 = {

@@ -1,12 +1,12 @@
-// === Module 6776: safeTransitionTo ===
+// === Module 6748: safeTransitionTo ===
 
-// Module 6776 (safeTransitionTo)
+// Module 6748 (safeTransitionTo)
 import router_utils from "router_utils" /* 1099 */;
-import LinkUtils from "LinkUtils" /* 5446 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 6777 */;
-import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 6778 */;
+import LinkUtils from "LinkUtils" /* 5415 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 6749 */;
+import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 6750 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4694 */;
+import GuildStore from "GuildStore" /* 4663 */;
 
 require = fn;
 let closure_6 = async function _safeTransitionTo(arg0) {
@@ -20,7 +20,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -141,7 +141,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       }
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "find" };
+        closure_2 = { guildId: "r" };
       }
       c5 = 2;
       c6 = 1;

@@ -1,13 +1,13 @@
-// === Module 9843: GameProfileFloatingNav ===
+// === Module 9822: GameProfileFloatingNav ===
 
-// Module 9843 (GameProfileFloatingNav)
+// Module 9822 (GameProfileFloatingNav)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import native from "native" /* 7511 */;
-import YouBannerDecorations from "YouBannerDecorations" /* 9844 */;
-import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 13703 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import native from "native" /* 7481 */;
+import YouBannerDecorations from "YouBannerDecorations" /* 9823 */;
+import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 13685 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -108,19 +108,19 @@ function FloatingNav(navigation) {
   GameProfileFloatingNavTsx1.__workletHash = 15050593289877;
   GameProfileFloatingNavTsx1.__initData = tmp11;
   if (isGameProfileCommunitiesMobileEnabled) {
-    let obj3 = { tab: tmp4(9702).GameProfileNavTab.OVERVIEW, IconComponent: tmp4(6951).GameControllerIcon, label: null };
+    let obj3 = { tab: tmp4(9681).GameProfileNavTab.OVERVIEW, IconComponent: tmp4(6921).GameControllerIcon, label: null };
     const intl = tmp4(1113).intl;
     obj3.label = intl.string(tmp4(1113).t.qHmbyh);
     const items3 = [obj3, ];
-    let obj4 = { tab: tmp4(9702).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(6949).GroupIcon, label: null };
+    let obj4 = { tab: tmp4(9681).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(6919).GroupIcon, label: null };
     const intl2 = tmp4(1113).intl;
     obj4.label = intl2.string(tmp4(1113).t["3xFZEo"]);
     items3[1] = obj4;
     const obj5 = { style: tmp3.wrap, pointerEvents: "box-none", onLayout: navigation.onLayout, children: null };
     const obj6 = { colors: memo, style: tmp3.scrim, pointerEvents: "none" };
-    const items4 = [closure_7(tmp(5378), obj6), ];
+    const items4 = [closure_7(tmp(5347), obj6), ];
     const obj7 = { style: tmp3.pill, accessibilityRole: "tablist", children: null };
-    const obj8 = { style: tmp3.pillBlur, pointerEvents: "none", children: closure_7(tmp4(7511).BackgroundBlurFill, {}) };
+    const obj8 = { style: tmp3.pillBlur, pointerEvents: "none", children: closure_7(tmp4(7481).BackgroundBlurFill, {}) };
     const items5 = [closure_7(closure_5, obj8), ];
     const obj9 = { style: tmp3.pillRow, children: null };
     const obj10 = { style: null, pointerEvents: "none" };
@@ -145,7 +145,7 @@ function FloatingNav(navigation) {
           }, tab);
         })
     };
-    items7[1] = closure_7(tmp4(13703).YouScreenNavIconMeasurer, obj11);
+    items7[1] = closure_7(tmp4(13685).YouScreenNavIconMeasurer, obj11);
     obj9.children = items7;
     items5[1] = closure_8(closure_5, obj9);
     obj7.children = items5;
@@ -167,7 +167,7 @@ const PX_48 = nativeDefault.space.PX_48;
 const PX_6 = nativeDefault.space.PX_6;
 const Easing = fn(1655).Easing;
 let closure_13 = Easing.inOut(fn(1655).Easing.cubic);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_14 = createStyles.createStyles((bottom) => {
   const obj = { wrap: null, scrim: null, pill: null, pillBlur: null, pillRow: null, selection: null, item: null, label: null };
   const obj2 = {};

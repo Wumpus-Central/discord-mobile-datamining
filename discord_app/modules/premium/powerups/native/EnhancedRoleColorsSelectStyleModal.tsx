@@ -1,27 +1,27 @@
-// === Module 19899: EnhancedRoleColorsSelectStyleModal ===
+// === Module 19910: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 19899 (EnhancedRoleColorsSelectStyleModal)
+// Module 19910 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
 import _modDef2755 from "module_2755" /* 2755 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4732 */;
-import useThemeDefault from "useTheme" /* 5032 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5051 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5850 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7426 */;
-import RowGeneratorDefault from "RowGenerator" /* 8581 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8611 */;
-import _modDef11676 from "module_11676" /* 11676 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 19878 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19879 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19881 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 19900 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4701 */;
+import useThemeDefault from "useTheme" /* 5001 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5020 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5821 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
+import RowGeneratorDefault from "RowGenerator" /* 8550 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8580 */;
+import _modDef11654 from "module_11654" /* 11654 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 19889 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19890 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19892 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 19911 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4823 */;
+import createStyles from "createStyles" /* 4792 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -117,7 +117,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef11676;
+              message.message.avatarURL = _modDef11654;
             }
           }),
 

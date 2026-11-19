@@ -177,8 +177,8 @@ export function int2rgba(primaryColor, arg1) {
   }
   return "rgba(" + primaryColor >> 16 & 255 + ", " + primaryColor >> 8 & 255 + ", " + 255 & primaryColor + ", " + result + ")";
 }
-export function rgb2int(tmp2Result5) {
-  const match = tmp2Result5.match(re2);
+export function rgb2int(tmp2Result6) {
+  const match = tmp2Result6.match(re2);
   if (null != match) {
     const color1 = { red: null, green: null, blue: null };
     const _parseInt = parseInt;

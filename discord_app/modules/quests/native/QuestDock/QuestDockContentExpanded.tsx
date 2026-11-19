@@ -1,20 +1,20 @@
-// === Module 16632: QuestDockContentExpanded ===
+// === Module 16623: QuestDockContentExpanded ===
 
-// Module 16632 (QuestDockContentExpanded)
+// Module 16623 (QuestDockContentExpanded)
 import _mod1655 from "module_1655" /* 1655 */;
-import spring_spring from "spring/spring" /* 5424 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11731 */;
-import QuestDockUtils from "QuestDockUtils" /* 16537 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 16539 */;
+import spring_spring from "spring/spring" /* 5393 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11709 */;
+import QuestDockUtils from "QuestDockUtils" /* 16528 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 16530 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
 
 require = fn;
-const QuestDockMode = fn(6466).QuestDockMode;
-let closure_5 = fn(16538).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6437).QuestDockMode;
+let closure_5 = fn(16529).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 const obj = { wrapper: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -78,8 +78,8 @@ export default noop.memo(function QuestDockContentExpanded(arg0) {
   QuestDockContentExpandedTsx1.__workletHash = 5435658496809;
   QuestDockContentExpandedTsx1.__initData = tmp6;
   const animatedStyle = _mod1655.useAnimatedStyle(QuestDockContentExpandedTsx1);
-  const obj2 = { style: null, children };
+  const obj2 = { pointerEvents: "box-none", style: null, children };
   const items2 = [tmp.wrapper, animatedStyle];
   obj2.style = items2;
-  return jsx(_modDef1655.View, { style: null, children });
+  return jsx(_modDef1655.View, { pointerEvents: "box-none", style: null, children });
 });

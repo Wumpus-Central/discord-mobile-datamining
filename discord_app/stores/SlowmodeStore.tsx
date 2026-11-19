@@ -1,11 +1,11 @@
-// === Module 8300: SlowmodeStore ===
+// === Module 8269: SlowmodeStore ===
 
-// Module 8300 (SlowmodeStore)
+// Module 8269 (SlowmodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
 
 const require = fn;
 function setCooldown(channel, SendMessage, cooldownMs) {
@@ -23,7 +23,7 @@ function setCooldown(channel, SendMessage, cooldownMs) {
       const sum = cooldownMs + Date.now();
       dependencyMap = sum;
       const obj2 = { rateLimitPerUser: channel.rateLimitPerUser, cooldownMs, cooldownEndTimestamp: sum, timer: null };
-      const timeout = new tmp6(4667).Timeout();
+      const timeout = new tmp6(4636).Timeout();
       obj2.timer = timeout;
       dependencyMap[SendMessage][channel.id] = obj2;
       const timer2 = dependencyMap[SendMessage][channel.id].timer;

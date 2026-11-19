@@ -1,7 +1,7 @@
-// === Module 4854: HexagonCampaignExperiment ===
+// === Module 4823: HexagonCampaignExperiment ===
 
-// Module 4854 (HexagonCampaignExperiment)
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4851 */;
+// Module 4823 (HexagonCampaignExperiment)
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4820 */;
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

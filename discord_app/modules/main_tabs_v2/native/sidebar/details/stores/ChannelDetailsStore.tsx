@@ -1,6 +1,6 @@
-// === Module 8486: ChannelDetailsStore ===
+// === Module 8455: ChannelDetailsStore ===
 
-// Module 8486 (ChannelDetailsStore)
+// Module 8455 (ChannelDetailsStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
@@ -21,7 +21,7 @@ export function deleteChannelStates() {
 }
 export function useIsChannelDetailsSearchActive(arg0) {
   closure_0 = arg0;
-  const f94739 = (isSearchActive) => isSearchActive.isSearchActive;
+  const f94684 = (isSearchActive) => isSearchActive.isSearchActive;
   return obj((states) => {
     states = states.states;
     value = states.get(closure_0);
@@ -30,12 +30,12 @@ export function useIsChannelDetailsSearchActive(arg0) {
       const merged = Object.assign(closure_2);
       value = obj;
     }
-    return f94740(value);
+    return f94685(value);
   });
 }
 export function useChannelDetailsSearchActiveSource(arg0) {
   closure_0 = arg0;
-  const f94740 = (searchActiveSource) => searchActiveSource.searchActiveSource;
+  const f94685 = (searchActiveSource) => searchActiveSource.searchActiveSource;
   return obj((states) => {
     states = states.states;
     value = states.get(closure_0);
@@ -44,7 +44,7 @@ export function useChannelDetailsSearchActiveSource(arg0) {
       const merged = Object.assign(closure_2);
       value = obj;
     }
-    return f94740(value);
+    return f94685(value);
   });
 }
 export function setIsChannelDetailsSearchActive(arg0, isSearchActive, searchActiveSource) {

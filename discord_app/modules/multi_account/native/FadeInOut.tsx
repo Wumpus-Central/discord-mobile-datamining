@@ -1,6 +1,6 @@
-// === Module 18012: FadeInOut ===
+// === Module 18005: FadeInOut ===
 
-// Module 18012 (FadeInOut)
+// Module 18005 (FadeInOut)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

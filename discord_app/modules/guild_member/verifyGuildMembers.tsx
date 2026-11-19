@@ -1,14 +1,14 @@
-// === Module 11569: verifyGuildMembers ===
+// === Module 11547: verifyGuildMembers ===
 
-// Module 11569 (verifyGuildMembers)
+// Module 11547 (verifyGuildMembers)
 import BackoffDefault from "Backoff" /* 559 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6419 */;
-import createMessage from "createMessage" /* 8358 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6390 */;
+import createMessage from "createMessage" /* 8327 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6302 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6273 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4735 */;
+import GuildMemberStore from "GuildMemberStore" /* 4704 */;
 import UserStore from "UserStore" /* 1388 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
@@ -278,8 +278,8 @@ function clearRetryBackoffs() {
   }
   map5.clear();
 }
-let closure_5 = fn(6302).MAX_GUILD_MEMBER_REQUEST_SIZE;
-const GuildMemberFlags = fn(4741).GuildMemberFlags;
+let closure_5 = fn(6273).MAX_GUILD_MEMBER_REQUEST_SIZE;
+const GuildMemberFlags = fn(4710).GuildMemberFlags;
 let c10 = 300000;
 let map = new Map();
 let map1 = new Map();
@@ -291,7 +291,7 @@ const map6 = new Map();
 let c18 = null;
 let Infinity = Infinity;
 let c20 = 0;
-const delayedCall = new fn(4667).DelayedCall(500, () => {
+const delayedCall = new fn(4636).DelayedCall(500, () => {
   (function pruneExpired(arg0) {
     closure_0 = arg0;
     let item = set.forEach((size, index) => {

@@ -1,7 +1,7 @@
-// === Module 18703: useConjureOtherOwnProjects ===
+// === Module 18697: useConjureOtherOwnProjects ===
 
-// Module 18703 (useConjureOtherOwnProjects)
-import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
+// Module 18697 (useConjureOtherOwnProjects)
+import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
 
 const require = globalThis.__r;
 
@@ -15,6 +15,6 @@ export default function useConjureOtherOwnProjects(arg0) {
   const items1 = [arg0];
   return require("initialize").useStateFromStoresArray(items, () => {
     const ownedProjects = ConjureProjectStore.getOwnedProjects();
-    return ownedProjects.filter((item) => !closure_0(dependencyMap[2]).conjureProjectPointsAtGuild(item, closure_1_0));
+    return ownedProjects.filter((item) => closure_0(dependencyMap[2]).conjureServerProjectGuildId(item) !== closure_1_0);
   }, items1);
 };

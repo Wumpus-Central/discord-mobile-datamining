@@ -1,10 +1,10 @@
-// === Module 6890: ConjurePublishStatusStore ===
+// === Module 6860: ConjurePublishStatusStore ===
 
-// Module 6890 (ConjurePublishStatusStore)
+// Module 6860 (ConjurePublishStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
 
 require = fn;
 const map = new Map();

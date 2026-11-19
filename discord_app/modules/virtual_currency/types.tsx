@@ -1,6 +1,6 @@
-// === Module 8053: types ===
+// === Module 8022: types ===
 
-// Module 8053 (types)
+// Module 8022 (types)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/virtual_currency/types.tsx");

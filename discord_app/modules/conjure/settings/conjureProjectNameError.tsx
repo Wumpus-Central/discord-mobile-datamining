@@ -1,9 +1,9 @@
-// === Module 18330: conjureProjectNameError ===
+// === Module 18323: conjureProjectNameError ===
 
-// Module 18330 (conjureProjectNameError)
+// Module 18323 (conjureProjectNameError)
 import util from "util" /* 1113 */;
-import _modDef4121 from "module_4121" /* 4121 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6530 */;
+import _modDef4089 from "module_4089" /* 4089 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6501 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureProjectNameError.tsx");
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/conjure/settings/conjureProje
 export function conjureProjectNameError(trimmed) {
   if ("" === trimmed) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef4121.l669D8);
+    let stringResult = intl2.string(_modDef4089.l669D8);
   } else {
     stringResult = null;
     if (trimmed.length < ConjureProjectTypes.MIN_PROJECT_NAME_LENGTH) {

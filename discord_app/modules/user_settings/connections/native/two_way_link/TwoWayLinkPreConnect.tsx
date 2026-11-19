@@ -1,10 +1,10 @@
-// === Module 6978: TwoWayLinkPreConnect ===
+// === Module 6948: TwoWayLinkPreConnect ===
 
-// Module 6978 (TwoWayLinkPreConnect)
+// Module 6948 (TwoWayLinkPreConnect)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6979 */;
-import TwoWayLinkType from "TwoWayLinkType" /* 6982 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6949 */;
+import TwoWayLinkType from "TwoWayLinkType" /* 6952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ const WebBrowserType = fn(1072).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLink");
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_11 = createStyles.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx");
@@ -59,7 +59,7 @@ export function TwoWayLinkPreConnect(platformType) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -105,7 +105,7 @@ export function TwoWayLinkPreConnect(platformType) {
             return obj5;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -120,7 +120,7 @@ export function TwoWayLinkPreConnect(platformType) {
           c3 = 0;
           if (!closure_129_6.current) {
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           } else {
             let tmp12 = tmp3(tmp42[11]);
             let getCallbackParamsFromURL = tmp12.openURL;

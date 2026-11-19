@@ -1,7 +1,7 @@
-// === Module 18505: conjureTipTurn ===
+// === Module 18498: conjureTipTurn ===
 
-// Module 18505 (conjureTipTurn)
-import conjureChatTurns from "conjureChatTurns" /* 6837 */;
+// Module 18498 (conjureTipTurn)
+import conjureChatTurns from "conjureChatTurns" /* 6807 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureTipTurn.tsx");
@@ -100,6 +100,9 @@ export function hasOpenAsk(newestSettledTurnResult) {
   }
   if (!tmp) {
     tmp = null != newestSettledTurnResult.restoreProposal;
+  }
+  if (!tmp) {
+    tmp = null != newestSettledTurnResult.serverChange;
   }
   if (!tmp) {
     tmp = null != newestSettledTurnResult.publishScheduleProposal;

@@ -2,8 +2,8 @@
 
 // Module 18360 (ConjureGameSettingRow)
 import nativeDefault from "native" /* 575 */;
-import _modDef4121 from "module_4121" /* 4121 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5037 */;
+import _modDef4089 from "module_4089" /* 4089 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5006 */;
 import ConjureGamePickerSheetDefault from "ConjureGamePickerSheet" /* 18363 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -35,7 +35,7 @@ export default function ConjureGameSettingRow(def) {
   }
   if (def.key === def(18362).CONJURE_OVERLAY_GAMES_SETTING_KEY) {
     const intl = tmp2(1113).intl;
-    hint = intl.string(_modDef4121.cqWCNY);
+    hint = intl.string(_modDef4089.cqWCNY);
   } else if (hint == null) {
     hint = def.label;
   }
@@ -48,11 +48,11 @@ export default function ConjureGameSettingRow(def) {
   });
   let joined = mapped.join(", ");
   let obj2 = { style: tmp.container, children: null };
-  const items1 = [items(def(5414).Text, { variant: "body-sm/normal", color: "text-default", children: hint }), , ];
+  const items1 = [items(def(5383).Text, { variant: "body-sm/normal", color: "text-default", children: hint }), , ];
   const obj3 = { label: def.label, subLabel: null, arrow: true, disabled: null, onPress: null };
   if ("" === joined) {
     const intl2 = tmp2(1113).intl;
-    joined = intl2.string(_modDef4121["74Afoq"]);
+    joined = intl2.string(_modDef4089["74Afoq"]);
   }
   const obj4 = { hasIcons: false, children: null };
   obj3.subLabel = joined;
@@ -78,25 +78,25 @@ export default function ConjureGameSettingRow(def) {
     };
     ActionSheetActionCreators.showActionSheet(obj2);
   };
-  const items2 = [items(def(6956).TableRow, obj3), ];
+  const items2 = [items(def(6926).TableRow, obj3), ];
   const obj5 = { label: null, checked: null, disabled: null, onPress: null };
   const intl3 = tmp2(1113).intl;
-  obj5.label = intl3.string(_modDef4121.dbuk9m);
+  obj5.label = intl3.string(_modDef4089.dbuk9m);
   obj5.checked = isArray;
   obj5.disabled = disabled;
   obj5.onPress = function onPress(arg0) {
     dependencyMap(!arg0);
     importDefault([]);
   };
-  items2[1] = items(def(7246).TableCheckboxRow, obj5);
+  items2[1] = items(def(7216).TableCheckboxRow, obj5);
   obj4.children = items2;
-  items1[1] = closure_5(def(7259).TableRowGroup, obj4);
+  items1[1] = closure_5(def(7229).TableRowGroup, obj4);
   let tmp10Result = null;
   if (pickingEmpty) {
     const obj6 = { variant: "body-xs/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: null };
     const intl4 = tmp2(1113).intl;
-    obj6.children = intl4.string(_modDef4121["/++Pf+"]);
-    tmp10Result = tmp10(tmp2(5414).Text, obj6);
+    obj6.children = intl4.string(_modDef4089["/++Pf+"]);
+    tmp10Result = tmp10(tmp2(5383).Text, obj6);
   }
   items1[2] = tmp10Result;
   obj2.children = items1;

@@ -1,10 +1,10 @@
-// === Module 14532: CheckpointTestingOptions ===
+// === Module 14519: CheckpointTestingOptions ===
 
-// Module 14532 (CheckpointTestingOptions)
+// Module 14519 (CheckpointTestingOptions)
 import _modDef3341 from "module_3341" /* 3341 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_2 = fn(14530).getCheckpointMitigationMock;
+let closure_2 = fn(14517).getCheckpointMitigationMock;
 const items = [
   {
     id: "open",
@@ -13,7 +13,7 @@ const items = [
       const tmp = c2();
       const merged = Object.assign(tmp);
       const merged1 = Object.assign(UNAVAILABLE);
-      return UNAVAILABLE(12422).openCheckpoint("qa_menu", {});
+      return UNAVAILABLE(12405).openCheckpoint("qa_menu", {});
     }
   },
 ,
@@ -33,7 +33,7 @@ let closure_3 = asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_3 = asyncGeneratorStep(async () => {
           closure_0 = tmp4;
           c1 = 1;
           c2 = 1;
-          const obj5 = { value: UNAVAILABLE(12424).resetCheckpoint(), done: false };
+          const obj5 = { value: UNAVAILABLE(12408).resetCheckpoint(), done: false };
           return obj5;
         }
       } else if (arg0 === 1) {
@@ -91,7 +91,7 @@ obj2.action = function action() {
   return applyArgumentsResult;
 };
 items[1] = obj2;
-fn(14531).CheckpointMocks.FAKE_DATA;
+fn(14518).CheckpointMocks.FAKE_DATA;
 items[2] = {
   id: "open-fake-data",
   label: _modDef3341.kPBZ5M,
@@ -99,10 +99,10 @@ items[2] = {
     const tmp = c2();
     const merged = Object.assign(tmp);
     const merged1 = Object.assign(UNAVAILABLE);
-    return UNAVAILABLE(12422).openCheckpoint("qa_menu", {});
+    return UNAVAILABLE(12405).openCheckpoint("qa_menu", {});
   }
 };
-fn(14531).CheckpointMocks.GLOBAL_STATS;
+fn(14518).CheckpointMocks.GLOBAL_STATS;
 items[3] = {
   id: "open-global-stats",
   label: _modDef3341.UwiUbM,
@@ -110,10 +110,10 @@ items[3] = {
     const tmp = c2();
     const merged = Object.assign(tmp);
     const merged1 = Object.assign(UNAVAILABLE);
-    return UNAVAILABLE(12422).openCheckpoint("qa_menu", {});
+    return UNAVAILABLE(12405).openCheckpoint("qa_menu", {});
   }
 };
-fn(14531).CheckpointMocks.ZERO_STATS;
+fn(14518).CheckpointMocks.ZERO_STATS;
 items[4] = {
   id: "open-zero-stats",
   label: _modDef3341.BYW9oX,
@@ -121,11 +121,11 @@ items[4] = {
     const tmp = c2();
     const merged = Object.assign(tmp);
     const merged1 = Object.assign(UNAVAILABLE);
-    return UNAVAILABLE(12422).openCheckpoint("qa_menu", {});
+    return UNAVAILABLE(12405).openCheckpoint("qa_menu", {});
   }
 };
 const items1 = [...items];
-const UNAVAILABLE = fn(14531).CheckpointMocks.UNAVAILABLE;
+const UNAVAILABLE = fn(14518).CheckpointMocks.UNAVAILABLE;
 let obj = {
   id: "open",
   label: _modDef3341.yLZjcu,
@@ -133,7 +133,7 @@ let obj = {
     const tmp = c2();
     const merged = Object.assign(tmp);
     const merged1 = Object.assign(UNAVAILABLE);
-    return UNAVAILABLE(12422).openCheckpoint("qa_menu", {});
+    return UNAVAILABLE(12405).openCheckpoint("qa_menu", {});
   }
 };
 const items2 = [
@@ -144,7 +144,7 @@ const items2 = [
       const tmp = c2();
       const merged = Object.assign(tmp);
       const merged1 = Object.assign(UNAVAILABLE);
-      return UNAVAILABLE(12422).openCheckpoint("qa_menu", {});
+      return UNAVAILABLE(12405).openCheckpoint("qa_menu", {});
     }
   }
 ];

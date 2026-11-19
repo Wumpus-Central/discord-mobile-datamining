@@ -1,10 +1,10 @@
-// === Module 8301: SlowmodeUtils ===
+// === Module 8270: SlowmodeUtils ===
 
-// Module 8301 (SlowmodeUtils)
+// Module 8270 (SlowmodeUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
 
 const require = globalThis.__r;
 

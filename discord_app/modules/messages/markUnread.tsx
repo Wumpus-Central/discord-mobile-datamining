@@ -1,13 +1,13 @@
-// === Module 11198: markUnread ===
+// === Module 11176: markUnread ===
 
-// Module 11198 (markUnread)
+// Module 11176 (markUnread)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8371 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8340 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4757 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import MessageStore from "MessageStore" /* 5872 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4726 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import MessageStore from "MessageStore" /* 5843 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = fn;
@@ -22,7 +22,7 @@ let closure_11 = async function _markUnread(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -92,7 +92,7 @@ let closure_11 = async function _markUnread(arg0) {
             const toArrayResult = messages.toArray();
           }
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -123,7 +123,7 @@ let closure_11 = async function _markUnread(arg0) {
     }
   }
 };
-const shouldBadgeMessage = fn(6527).shouldBadgeMessage;
+const shouldBadgeMessage = fn(6498).shouldBadgeMessage;
 const Endpoints = fn(1072).Endpoints;
 let closure_10 = new LoggerDefault("markUnread");
 const size = fn(2);

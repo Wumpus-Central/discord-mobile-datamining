@@ -1,6 +1,6 @@
-// === Module 17502: RegistrationHandoff ===
+// === Module 17495: RegistrationHandoff ===
 
-// Module 17502 (RegistrationHandoff)
+// Module 17495 (RegistrationHandoff)
 import size from "module_2" /* 2 */;
 
 let c0 = false;

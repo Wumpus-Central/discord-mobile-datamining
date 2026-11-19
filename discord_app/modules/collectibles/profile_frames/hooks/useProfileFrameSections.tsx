@@ -1,11 +1,11 @@
-// === Module 15819: useProfileFrameSections ===
+// === Module 15810: useProfileFrameSections ===
 
-// Module 15819 (useProfileFrameSections)
+// Module 15810 (useProfileFrameSections)
 import util from "util" /* 1113 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7999 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7968 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7987 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8002 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7956 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7971 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -29,7 +29,7 @@ export default function useProfileFrameSections() {
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(563);
-  return first(14182)(useMemo(() => {
+  return first(14165)(useMemo(() => {
     let obj = CollectiblesUtils;
     const profileFrames = obj.getProfileFrames(stateFromStores, first);
     const reduced = profileFrames.reduce((premium_purchase, skuId) => {

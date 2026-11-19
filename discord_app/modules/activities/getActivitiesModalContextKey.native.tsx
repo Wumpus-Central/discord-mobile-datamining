@@ -1,6 +1,6 @@
-// === Module 15631: getActivitiesModalContextKey ===
+// === Module 15618: getActivitiesModalContextKey ===
 
-// Module 15631 (getActivitiesModalContextKey)
+// Module 15618 (getActivitiesModalContextKey)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/getActivitiesModalContextKey.native.tsx");

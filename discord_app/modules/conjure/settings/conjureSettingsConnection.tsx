@@ -1,12 +1,12 @@
-// === Module 14678: conjureSettingsConnection ===
+// === Module 14664: conjureSettingsConnection ===
 
-// Module 14678 (conjureSettingsConnection)
+// Module 14664 (conjureSettingsConnection)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 6907 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 14667 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 6877 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 14653 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 6892 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 6862 */;
 
 require = fn;
 function noteSettingsWrite(arg0) {
@@ -37,7 +37,7 @@ let closure_8 = async function _fetchProjectSettings(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -169,7 +169,7 @@ let closure_11 = async function _fetchWithRetry(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -224,7 +224,7 @@ let closure_11 = async function _fetchWithRetry(arg0) {
         const backoff = closure_130_1.backoff;
         backoff.succeed();
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp29) {
       if (tmp4 === c4) {
@@ -285,7 +285,7 @@ let closure_13 = async function _submitProjectSettings(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

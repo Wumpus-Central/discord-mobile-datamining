@@ -1,9 +1,9 @@
-// === Module 12826: useChatInputHeightWorklet ===
+// === Module 12808: useChatInputHeightWorklet ===
 
-// Module 12826 (useChatInputHeightWorklet)
+// Module 12808 (useChatInputHeightWorklet)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import useKeyboardStateSharedValueDefault from "useKeyboardStateSharedValue" /* 12828 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12829 */;
+import useKeyboardStateSharedValueDefault from "useKeyboardStateSharedValue" /* 12810 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12811 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

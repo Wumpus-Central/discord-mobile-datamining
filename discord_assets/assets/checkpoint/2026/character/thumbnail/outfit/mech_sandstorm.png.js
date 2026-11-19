@@ -1,6 +1,6 @@
-// === Module 6108: ? ===
+// === Module 6079: ? ===
 
-// Module 6108
+// Module 6079
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/mech_sandstorm.png.js");

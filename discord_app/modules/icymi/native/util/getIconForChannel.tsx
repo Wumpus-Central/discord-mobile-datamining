@@ -1,13 +1,13 @@
-// === Module 18187: getIconForChannel ===
+// === Module 18180: getIconForChannel ===
 
-// Module 18187 (getIconForChannel)
+// Module 18180 (getIconForChannel)
 import Constants from "Constants" /* 1072 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 6945 */;
-import StageIcon from "StageIcon" /* 7531 */;
-import TextIcon from "TextIcon" /* 7592 */;
-import ImageIcon from "ImageIcon" /* 7599 */;
-import ForumIcon from "ForumIcon" /* 7600 */;
-import AnnouncementsIcon from "AnnouncementsIcon" /* 7605 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 6915 */;
+import StageIcon from "StageIcon" /* 7501 */;
+import TextIcon from "TextIcon" /* 7562 */;
+import ImageIcon from "ImageIcon" /* 7569 */;
+import ForumIcon from "ForumIcon" /* 7570 */;
+import AnnouncementsIcon from "AnnouncementsIcon" /* 7575 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;

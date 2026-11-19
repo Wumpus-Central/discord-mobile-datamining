@@ -1,7 +1,7 @@
-// === Module 11720: VisibleMessagesWindowHandler ===
+// === Module 11698: VisibleMessagesWindowHandler ===
 
-// Module 11720 (VisibleMessagesWindowHandler)
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8582 */;
+// Module 11698 (VisibleMessagesWindowHandler)
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8551 */;
 import size from "module_2" /* 2 */;
 
 const RowType = RowGeneratorConstants.RowType;

@@ -1,9 +1,9 @@
-// === Module 11349: openStickersPremiumUpsellAlert ===
+// === Module 11327: openStickersPremiumUpsellAlert ===
 
-// Module 11349 (openStickersPremiumUpsellAlert)
+// Module 11327 (openStickersPremiumUpsellAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6267 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6786 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6239 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6758 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -72,7 +72,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
           };
           closure_130_1(closure_130_2[7]).openLazy(obj8);
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } catch (tmp11) {
         c4 = tmp;

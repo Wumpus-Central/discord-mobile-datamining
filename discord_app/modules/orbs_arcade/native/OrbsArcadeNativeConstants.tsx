@@ -1,6 +1,6 @@
-// === Module 16490: OrbsArcadeNativeConstants ===
+// === Module 16481: OrbsArcadeNativeConstants ===
 
-// Module 16490 (OrbsArcadeNativeConstants)
+// Module 16481 (OrbsArcadeNativeConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeNativeConstants.tsx");

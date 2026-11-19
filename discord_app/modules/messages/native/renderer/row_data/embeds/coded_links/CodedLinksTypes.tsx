@@ -1,6 +1,6 @@
-// === Module 12731: CodedLinksTypes ===
+// === Module 12713: CodedLinksTypes ===
 
-// Module 12731 (CodedLinksTypes)
+// Module 12713 (CodedLinksTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinksTypes.tsx");

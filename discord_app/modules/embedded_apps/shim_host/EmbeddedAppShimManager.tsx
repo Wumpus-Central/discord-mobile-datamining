@@ -1,13 +1,13 @@
-// === Module 19540: EmbeddedAppShimManager ===
+// === Module 19536: EmbeddedAppShimManager ===
 
-// Module 19540 (EmbeddedAppShimManager)
+// Module 19536 (EmbeddedAppShimManager)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import EmbeddedAppShimActionCreators from "EmbeddedAppShimActionCreators" /* 10753 */;
-import protocol from "protocol" /* 19541 */;
-import embeddedAppShimKeybindsDefault from "embeddedAppShimKeybinds" /* 19544 */;
+import EmbeddedAppShimActionCreators from "EmbeddedAppShimActionCreators" /* 10731 */;
+import protocol from "protocol" /* 19537 */;
+import embeddedAppShimKeybindsDefault from "embeddedAppShimKeybinds" /* 19540 */;
 import _slicedToArray from "module_32" /* 32 */;
-import FramesStore from "FramesStore" /* 6531 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7395 */;
+import FramesStore from "FramesStore" /* 6502 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
 
 require = fn;
 function createParentStateMessage(iframeId) {
@@ -66,7 +66,7 @@ function handleShimPipeOpen(iframeId) {
           }
         }
     };
-    const embeddedAppShimHost = iframeId(19545).createEmbeddedAppShimHost(obj2);
+    const embeddedAppShimHost = iframeId(19541).createEmbeddedAppShimHost(obj2);
     let result = map.set(iframeId, embeddedAppShimHost);
     let frameByIframeId = FramesStore.getFrameByIframeId(iframeId);
     if (null == frameByIframeId) {
@@ -79,7 +79,7 @@ function handleShimPipeOpen(iframeId) {
       obj3 = { muted: frameByIframeId.data.muted };
     }
     const result1 = map1.set(iframeId, obj3);
-    let obj4 = iframeId(19545);
+    let obj4 = iframeId(19541);
   }
 }
 function handleIFrameUnmount(id) {

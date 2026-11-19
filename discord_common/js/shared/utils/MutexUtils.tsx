@@ -1,6 +1,6 @@
-// === Module 15724: MutexUtils ===
+// === Module 15712: MutexUtils ===
 
-// Module 15724 (MutexUtils)
+// Module 15712 (MutexUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/MutexUtils.tsx");

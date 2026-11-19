@@ -1,6 +1,6 @@
-// === Module 10848: ? ===
+// === Module 10826: ? ===
 
-// Module 10848
+// Module 10826
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/sounds/stage_waiting.mp3.js");

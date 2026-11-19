@@ -1,9 +1,9 @@
-// === Module 8766: LabFeatureStore ===
+// === Module 8735: LabFeatureStore ===
 
-// Module 8766 (LabFeatureStore)
+// Module 8735 (LabFeatureStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LabFeatures from "LabFeatures" /* 8767 */;
+import LabFeatures from "LabFeatures" /* 8736 */;
 
 const LabFeaturesDefault = LabFeatures;
 

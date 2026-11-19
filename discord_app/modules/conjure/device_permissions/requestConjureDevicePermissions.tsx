@@ -1,11 +1,11 @@
-// === Module 14661: requestConjureDevicePermissions ===
+// === Module 14648: requestConjureDevicePermissions ===
 
-// Module 14661 (requestConjureDevicePermissions)
+// Module 14648 (requestConjureDevicePermissions)
 import DurationsDefault from "Durations" /* 1089 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import FramesStore from "FramesStore" /* 6531 */;
-import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 14287 */;
+import FramesStore from "FramesStore" /* 6502 */;
+import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 14270 */;
 
 const require = fn;
 let closure_10 = async function _requestConjureDevicePermissions(arg0) {
@@ -19,7 +19,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "+60" };
                 }
               } else {
                 try {
@@ -238,7 +238,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
     }
   }
 };
-const FrameLayoutModes = fn(6532).FrameLayoutModes;
+const FrameLayoutModes = fn(6503).FrameLayoutModes;
 const set = new Set();
 const SECOND = DurationsDefault.Millis.SECOND;
 const size = fn(2);

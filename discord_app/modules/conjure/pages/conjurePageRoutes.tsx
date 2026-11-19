@@ -1,10 +1,10 @@
-// === Module 6750: conjurePageRoutes ===
+// === Module 6721: conjurePageRoutes ===
 
-// Module 6750 (conjurePageRoutes)
+// Module 6721 (conjurePageRoutes)
 import Constants from "Constants" /* 1072 */;
-import ChannelConstants from "ChannelConstants" /* 4679 */;
-import matchPathCompat from "matchPathCompat" /* 4861 */;
-import RouteUtils from "RouteUtils" /* 4874 */;
+import ChannelConstants from "ChannelConstants" /* 4648 */;
+import matchPathCompat from "matchPathCompat" /* 4830 */;
+import RouteUtils from "RouteUtils" /* 4843 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -28,8 +28,8 @@ export function isConjurePagePath(pathname) {
   return null != matchPathCompat.matchPath(pathname, { path: items, exact: true });
 }
 export const CONJURE_SERVER_PROJECT_PATH = CHANNELResult;
-export function conjureServerProjectRoute(guildId, arg1) {
-  return Routes.CHANNEL(guildId, StaticChannelRoute.CONJURE_PROJECT, arg1);
+export function conjureServerProjectRoute(result, arg1) {
+  return Routes.CHANNEL(result, StaticChannelRoute.CONJURE_PROJECT, arg1);
 }
 export function conjureServerHomeRoute(arg0) {
   return Routes.CHANNEL(arg0, StaticChannelRoute.CONJURE);

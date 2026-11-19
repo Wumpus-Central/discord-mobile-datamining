@@ -1,12 +1,12 @@
-// === Module 9032: MobileTrialUtils ===
+// === Module 9006: MobileTrialUtils ===
 
-// Module 9032 (MobileTrialUtils)
+// Module 9006 (MobileTrialUtils)
 import util from "util" /* 1113 */;
 import PremiumConstants from "PremiumConstants" /* 1390 */;
 import PremiumUtils from "PremiumUtils" /* 2174 */;
-import dismissible_content from "dismissible_content" /* 4656 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4855 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 8730 */;
+import dismissible_content from "dismissible_content" /* 4625 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4824 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 8699 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = PremiumConstants.PremiumSubscriptionSKUToPremiumType;

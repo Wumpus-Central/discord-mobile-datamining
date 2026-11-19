@@ -1,14 +1,14 @@
-// === Module 17003: AppIconRows ===
+// === Module 16996: AppIconRows ===
 
-// Module 17003 (AppIconRows)
+// Module 16996 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
-import AppIconTypes from "AppIconTypes" /* 4849 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4851 */;
-import AppIconUtils from "AppIconUtils" /* 13976 */;
-import AppIconRowDefault from "AppIconRow" /* 17004 */;
-import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 17005 */;
+import AppIconTypes from "AppIconTypes" /* 4818 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4820 */;
+import AppIconUtils from "AppIconUtils" /* 13958 */;
+import AppIconRowDefault from "AppIconRow" /* 16997 */;
+import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 16998 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -44,7 +44,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_8(merged(7259).TableRowGroup, obj2);
+    obj.children = closure_8(merged(7229).TableRowGroup, obj2);
     return closure_8(View, obj);
   }
 }
@@ -52,7 +52,7 @@ const View = fn(17).View;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_11 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");

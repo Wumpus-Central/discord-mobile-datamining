@@ -1,13 +1,13 @@
-// === Module 17582: getScreenAnalyticsName ===
+// === Module 17575: getScreenAnalyticsName ===
 
-// Module 17582 (getScreenAnalyticsName)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4999 */;
-import RootNavigationRef from "RootNavigationRef" /* 5000 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
+// Module 17575 (getScreenAnalyticsName)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4968 */;
+import RootNavigationRef from "RootNavigationRef" /* 4969 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(8282).ACCEPT_INVITE_MODAL_KEY;
-const isStaticChannelRoute = fn(4679).isStaticChannelRoute;
+const ACCEPT_INVITE_MODAL_KEY = fn(8251).ACCEPT_INVITE_MODAL_KEY;
+const isStaticChannelRoute = fn(4648).isStaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/getScreenAnalyticsName.tsx");
 

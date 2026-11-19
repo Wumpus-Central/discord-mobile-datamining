@@ -1,10 +1,10 @@
-// === Module 5039: HapticUtils ===
+// === Module 5008: HapticUtils ===
 
-// Module 5039 (HapticUtils)
+// Module 5008 (HapticUtils)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import DeviceUtils from "DeviceUtils" /* 4780 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5040 */;
-import Patterns from "Patterns" /* 5041 */;
+import DeviceUtils from "DeviceUtils" /* 4749 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5009 */;
+import Patterns from "Patterns" /* 5010 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");

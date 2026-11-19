@@ -1,18 +1,18 @@
-// === Module 10135: UserProfileWidgetRemoveGameButton ===
+// === Module 10113: UserProfileWidgetRemoveGameButton ===
 
-// Module 10135 (UserProfileWidgetRemoveGameButton)
+// Module 10113 (UserProfileWidgetRemoveGameButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4832 */;
-import TrashIcon from "TrashIcon" /* 5530 */;
-import IconButton from "IconButton" /* 7502 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8048 */;
-import WidgetUtils from "WidgetUtils" /* 10116 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4801 */;
+import TrashIcon from "TrashIcon" /* 5499 */;
+import IconButton from "IconButton" /* 7472 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8017 */;
+import WidgetUtils from "WidgetUtils" /* 10094 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-let closure_4 = fn(7981).TrackUserProfileEditActions;
+let closure_4 = fn(7950).TrackUserProfileEditActions;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetRemoveGameButton.tsx");

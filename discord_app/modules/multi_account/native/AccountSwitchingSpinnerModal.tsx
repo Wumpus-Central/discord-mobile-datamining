@@ -1,10 +1,10 @@
-// === Module 19638: AccountSwitchingSpinnerModal ===
+// === Module 19634: AccountSwitchingSpinnerModal ===
 
-// Module 19638 (AccountSwitchingSpinnerModal)
+// Module 19634 (AccountSwitchingSpinnerModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6931 */;
-import useAppFrameDefault from "useAppFrame" /* 17569 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6901 */;
+import useAppFrameDefault from "useAppFrame" /* 17562 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ class AccountSwitchingSpinnerModal {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 const hasOwnProperty = createStyles.createStyles((arg0) => {
   let prop;
   if (arg0) {

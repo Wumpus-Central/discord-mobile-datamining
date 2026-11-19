@@ -1,13 +1,13 @@
-// === Module 6733: AuthorizedAppsStore ===
+// === Module 6704: AuthorizedAppsStore ===
 
-// Module 6733 (AuthorizedAppsStore)
+// Module 6704 (AuthorizedAppsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 6734 */;
-import MessageStore from "MessageStore" /* 5872 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 6705 */;
+import MessageStore from "MessageStore" /* 5843 */;
 
 require = fn;
 function recomputeFromAppTokens() {

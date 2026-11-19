@@ -1,6 +1,6 @@
-// === Module 6275: NativeMetricMonitorModule ===
+// === Module 6247: NativeMetricMonitorModule ===
 
-// Module 6275 (NativeMetricMonitorModule)
+// Module 6247 (NativeMetricMonitorModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

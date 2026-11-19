@@ -1,13 +1,13 @@
-// === Module 10581: useRefocusOrLaunchActivity ===
+// === Module 10559: useRefocusOrLaunchActivity ===
 
-// Module 10581 (useRefocusOrLaunchActivity)
+// Module 10559 (useRefocusOrLaunchActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6531 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
+import FramesStore from "FramesStore" /* 6502 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
 
 const require = fn;
-const FrameLayoutModes = fn(6532).FrameLayoutModes;
+const FrameLayoutModes = fn(6503).FrameLayoutModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
 
@@ -36,7 +36,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

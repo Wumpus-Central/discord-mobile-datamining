@@ -1,14 +1,14 @@
-// === Module 17480: EffectiveNotifSettingsLayout ===
+// === Module 17473: EffectiveNotifSettingsLayout ===
 
-// Module 17480 (EffectiveNotifSettingsLayout)
+// Module 17473 (EffectiveNotifSettingsLayout)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef3051 from "module_3051" /* 3051 */;
-import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 17481 */;
+import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 17474 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 14867 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 14853 */;
 
 require = fn;
 function EffectiveSettingsHeader() {
@@ -37,15 +37,15 @@ function EffectiveSettingsHeader() {
     obj3.onPress = callback;
     obj3.loading = loading;
     obj2.action = obj3;
-    obj.children = closure_7(loading(7673).InlineNotice, obj2);
-    tmp8 = closure_7(loading(5837).Stack, obj);
+    obj.children = closure_7(loading(7643).InlineNotice, obj2);
+    tmp8 = closure_7(loading(5808).Stack, obj);
   }
   children[1] = tmp8;
   return closure_9(closure_8, { children });
 }
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj = { notice: { paddingTop: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj);
 const redux = noop.createContext({ unavailable: false, loading: false });

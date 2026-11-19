@@ -1,15 +1,15 @@
-// === Module 17911: FavoritesGuildSidebarHeader ===
+// === Module 17904: FavoritesGuildSidebarHeader ===
 
-// Module 17911 (FavoritesGuildSidebarHeader)
+// Module 17904 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3701 from "module_3701" /* 3701 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import Stack_Stack from "Stack/Stack" /* 5837 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 6945 */;
-import ChatIcon from "ChatIcon" /* 7583 */;
-import TextIcon from "TextIcon" /* 7592 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13809 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import Stack_Stack from "Stack/Stack" /* 5808 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 6915 */;
+import ChatIcon from "ChatIcon" /* 7553 */;
+import TextIcon from "TextIcon" /* 7562 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,10 +58,10 @@ function PlaceholderRows() {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(17772).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(17765).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

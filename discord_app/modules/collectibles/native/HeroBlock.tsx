@@ -1,16 +1,16 @@
-// === Module 17347: HeroBlock ===
+// === Module 17340: HeroBlock ===
 
-// Module 17347 (HeroBlock)
+// Module 17340 (HeroBlock)
 import nativeDefault from "native" /* 575 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8843 */;
-import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 9447 */;
-import SkeletonCardDefault from "SkeletonCard" /* 9794 */;
-import OrbsArcadeExperiment2 from "OrbsArcadeExperiment" /* 16492 */;
-import HeroBlockHeaderDefault from "HeroBlockHeader" /* 17348 */;
-import HeroBlockOrbsArcadeHeaderDefault from "HeroBlockOrbsArcadeHeader" /* 17351 */;
-import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor" /* 17366 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8816 */;
+import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 9425 */;
+import SkeletonCardDefault from "SkeletonCard" /* 9773 */;
+import OrbsArcadeExperiment2 from "OrbsArcadeExperiment" /* 16483 */;
+import HeroBlockHeaderDefault from "HeroBlockHeader" /* 17341 */;
+import HeroBlockOrbsArcadeHeaderDefault from "HeroBlockOrbsArcadeHeader" /* 17344 */;
+import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor" /* 17359 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7987 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7956 */;
 
 require = fn;
 function SkeletonLoading(accessibilityLabel) {
@@ -43,7 +43,7 @@ const View = fn(17).View;
 const constants = fn(1074).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { heroContainer: { width: "100%" }, productCardsContainer: { zIndex: 1 }, skeletonContainer: { flexDirection: "row", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

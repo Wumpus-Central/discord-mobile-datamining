@@ -1,10 +1,10 @@
-// === Module 12354: AgeVerificationRetryScreen ===
+// === Module 12337: AgeVerificationRetryScreen ===
 
-// Module 12354 (AgeVerificationRetryScreen)
+// Module 12337 (AgeVerificationRetryScreen)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6322 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7704 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6293 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7674 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { loadingIndicator: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }, container: { paddingHorizontal: nativeDefault.space.PX_16, flex: 1 }, headerContainer: null, centerText: null, helpLink: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, flex: 1 };
 obj2.headerContainer = { paddingVertical: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -55,7 +55,7 @@ export default function GetStartedScreen(modalSessionId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -69,7 +69,7 @@ export default function GetStartedScreen(modalSessionId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = v3(6322).trackAgeVerificationModalClicked(c0, v3(6322).AgeVerificationModalVersion.RETRY, v3(6322).AgeVerificationModalCta.GET_STARTED);
+              const result = v3(6293).trackAgeVerificationModalClicked(c0, v3(6293).AgeVerificationModalVersion.RETRY, v3(6293).AgeVerificationModalCta.GET_STARTED);
               v1 = 1;
               c0 = 1;
               const obj4 = { value: v1(), done: false };
@@ -84,7 +84,7 @@ export default function GetStartedScreen(modalSessionId) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } catch (tmp5) {
           c0 = tmp;

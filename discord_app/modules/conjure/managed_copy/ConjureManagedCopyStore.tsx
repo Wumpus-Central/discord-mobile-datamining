@@ -1,6 +1,6 @@
-// === Module 6887: ConjureManagedCopyStore ===
+// === Module 6857: ConjureManagedCopyStore ===
 
-// Module 6887 (ConjureManagedCopyStore)
+// Module 6857 (ConjureManagedCopyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -61,15 +61,17 @@ const conjureManagedCopyStore = new ConjureManagedCopyStore(DispatcherDefault, {
     obj.atMs = tmp3;
     const result = map1.set(event.projectId, obj);
   },
-  CONJURE_DOWNSTREAM_UPDATES_SET: function handleDownstreamUpdatesSet(event) {
-    event = event.event;
+  CONJURE_DOWNSTREAM_UPDATES_SET: function handleDownstreamUpdatesSet(arg0) {
+    ({ projectId, event } = arg0);
+    map.delete(projectId);
+    map1.delete(projectId);
     const obj = { enabled: event.enabled, pending: false, error: null };
     let error = event.error;
     if (error == null) {
       error = null;
     }
     obj.error = error;
-    const result = map2.set(event.projectId, obj);
+    const result = map2.set(projectId, obj);
   },
   CONJURE_DOWNSTREAM_UPDATES_REQUEST: function handleDownstreamUpdatesRequest(projectId) {
     projectId = projectId.projectId;

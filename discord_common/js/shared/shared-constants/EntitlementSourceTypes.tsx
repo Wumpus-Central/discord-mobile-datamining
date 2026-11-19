@@ -1,6 +1,6 @@
-// === Module 8034: EntitlementSourceTypes ===
+// === Module 8003: EntitlementSourceTypes ===
 
-// Module 8034 (EntitlementSourceTypes)
+// Module 8003 (EntitlementSourceTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { INVOICE_ITEMS: new Set([5, 10]) };

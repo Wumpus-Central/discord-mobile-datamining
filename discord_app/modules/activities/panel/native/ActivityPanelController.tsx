@@ -1,21 +1,21 @@
-// === Module 19239: ActivityPanelController ===
+// === Module 19231: ActivityPanelController ===
 
-// Module 19239 (ActivityPanelController)
+// Module 19231 (ActivityPanelController)
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2146 */;
-import ChatInputUtils from "ChatInputUtils" /* 5008 */;
-import transitionToChannel from "transitionToChannel" /* 5556 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6437 */;
-import DeviceOrientation from "DeviceOrientation" /* 9334 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10631 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 10744 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 19240 */;
+import ChatInputUtils from "ChatInputUtils" /* 4977 */;
+import transitionToChannel from "transitionToChannel" /* 5525 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6408 */;
+import DeviceOrientation from "DeviceOrientation" /* 9311 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10609 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 10722 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 19232 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import AppFreezeStore from "AppFreezeStore" /* 9918 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10800 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
+import AppFreezeStore from "AppFreezeStore" /* 9897 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10778 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
 
 require = fn;
 class BaseActivityPanelController {
@@ -256,7 +256,7 @@ class BaseActivityPanelController {
   }
 }
 let closure_11 = fn(2145).ACTIVITY_LOCKED_ASPECT_RATIO;
-const ActivityPanelModes = fn(5449).ActivityPanelModes;
+const ActivityPanelModes = fn(5418).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let closure_14 = { x: 0, y: 0, gestureActive: false };
 const FunctionUtils = fn(2161);
@@ -356,6 +356,6 @@ export default function ActivityPanelController(children) {
     }
   }, items1);
   let obj = mode(504);
-  return <BaseActivityPanelController context={connectedActivityInTextChannelId(19243)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
+  return <BaseActivityPanelController context={connectedActivityInTextChannelId(19235)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
 };
 export { BaseActivityPanelController };

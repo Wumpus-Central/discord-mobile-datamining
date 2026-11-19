@@ -1,6 +1,6 @@
-// === Module 11178: buildFavoritesSectionButtons ===
+// === Module 11156: buildFavoritesSectionButtons ===
 
-// Module 11178 (buildFavoritesSectionButtons)
+// Module 11156 (buildFavoritesSectionButtons)
 import _modDef3701 from "module_3701" /* 3701 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_4 = async function _addChannelToFavorites(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_4 = async function _addChannelToFavorites(arg0) {
         obj.channelIds = items;
         value.addFavoriteChannels(obj);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -69,7 +69,7 @@ let closure_5 = async function _removeChannelFromFavorites(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -100,7 +100,7 @@ let closure_5 = async function _removeChannelFromFavorites(arg0) {
       } else {
         const result = value.removeFavoriteChannel(closure_129_0);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -119,7 +119,7 @@ export default function buildFavoritesSectionButtons(channelId) {
     const obj2 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
     const intl2 = channelId(1113).intl;
     obj2.label = intl2.string(_modDef3701.TN4nAX);
-    obj2.IconComponent = channelId(9909).StarIcon;
+    obj2.IconComponent = channelId(9888).StarIcon;
     obj2.onPress = function onPress() {
       return (function removeChannelFromFavorites() {
         const self = this;
@@ -136,7 +136,7 @@ export default function buildFavoritesSectionButtons(channelId) {
     const obj = { label: null, IconComponent: null, onPress: null };
     const intl = channelId(1113).intl;
     obj.label = intl.string(_modDef3701.G9fGlP);
-    obj.IconComponent = channelId(9907).StarOutlineIcon;
+    obj.IconComponent = channelId(9886).StarOutlineIcon;
     obj.onPress = function onPress() {
       return (function addChannelToFavorites() {
         const self = this;

@@ -1,7 +1,7 @@
-// === Module 13415: getApplicationFromBotUserId ===
+// === Module 13397: getApplicationFromBotUserId ===
 
-// Module 13415 (getApplicationFromBotUserId)
-import UserProfileStore from "UserProfileStore" /* 6867 */;
+// Module 13397 (getApplicationFromBotUserId)
+import UserProfileStore from "UserProfileStore" /* 6837 */;
 
 const require = globalThis.__r;
 

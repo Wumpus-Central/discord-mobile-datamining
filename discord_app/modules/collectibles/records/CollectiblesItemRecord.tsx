@@ -1,12 +1,12 @@
-// === Module 7991: CollectiblesItemRecord ===
+// === Module 7960: CollectiblesItemRecord ===
 
-// Module 7991 (CollectiblesItemRecord)
+// Module 7960 (CollectiblesItemRecord)
 import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7992 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7961 */;
 import NameplateRecord from "NameplateRecord" /* 2112 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7993 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7994 */;
-import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord" /* 7995 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7962 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7963 */;
+import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord" /* 7964 */;
 
 require = fn;
 const Constants = fn(1072);

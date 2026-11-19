@@ -1,15 +1,15 @@
-// === Module 6800: GuildOfficialMessageUtils ===
+// === Module 6772: GuildOfficialMessageUtils ===
 
-// Module 6800 (GuildOfficialMessageUtils)
+// Module 6772 (GuildOfficialMessageUtils)
 import _modDef671 from "module_671" /* 671 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import ColorUtils from "ColorUtils" /* 4820 */;
-import shared from "shared" /* 4830 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6574 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 6801 */;
-import ThreadHooks from "ThreadHooks" /* 6802 */;
-import GuildStore from "GuildStore" /* 4694 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
+import ColorUtils from "ColorUtils" /* 4789 */;
+import shared from "shared" /* 4799 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6545 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 6773 */;
+import ThreadHooks from "ThreadHooks" /* 6774 */;
+import GuildStore from "GuildStore" /* 4663 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
 
 const require = globalThis.__r;
 
@@ -45,7 +45,7 @@ function useCanManageGuildOfficialMessages(guild_id, channel, location) {
   }
   return enabled;
 }
-let closure_5 = fn(4828).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+let closure_5 = fn(4797).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_6, GuildFeatures: metroImportDefault, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);

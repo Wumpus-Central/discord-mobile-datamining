@@ -1,11 +1,11 @@
-// === Module 17872: InterestGuildActions ===
+// === Module 17865: InterestGuildActions ===
 
-// Module 17872 (InterestGuildActions)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4859 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6419 */;
+// Module 17865 (InterestGuildActions)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4828 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6390 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4857 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 4674 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4826 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4643 */;
 
 require = fn;
 let closure_8 = async function _joinInterestGuild(arg0) {
@@ -19,7 +19,7 @@ let closure_8 = async function _joinInterestGuild(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {

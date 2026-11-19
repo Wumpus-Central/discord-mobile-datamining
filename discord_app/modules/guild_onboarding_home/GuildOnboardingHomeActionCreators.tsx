@@ -1,16 +1,16 @@
-// === Module 13067: GuildOnboardingHomeActionCreators ===
+// === Module 13049: GuildOnboardingHomeActionCreators ===
 
-// Module 13067 (GuildOnboardingHomeActionCreators)
+// Module 13049 (GuildOnboardingHomeActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import transitionToChannel from "transitionToChannel" /* 5556 */;
+import transitionToChannel from "transitionToChannel" /* 5525 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 4728 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6592 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8423 */;
+import ImpersonateStore from "ImpersonateStore" /* 4697 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6563 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8392 */;
 
 require = fn;
 let closure_10 = async function _fetchGuildHomeSettings() {
@@ -47,7 +47,7 @@ let closure_11 = async function _fetchNewMemberActions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

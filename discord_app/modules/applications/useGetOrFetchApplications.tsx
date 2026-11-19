@@ -1,10 +1,10 @@
-// === Module 6773: useGetOrFetchApplications ===
+// === Module 6745: useGetOrFetchApplications ===
 
-// Module 6773 (useGetOrFetchApplications)
+// Module 6745 (useGetOrFetchApplications)
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6567 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6538 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 

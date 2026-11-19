@@ -1,6 +1,6 @@
-// === Module 6761: SocialLayerStorefrontTypes ===
+// === Module 6732: SocialLayerStorefrontTypes ===
 
-// Module 6761 (SocialLayerStorefrontTypes)
+// Module 6732 (SocialLayerStorefrontTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontTypes.tsx");

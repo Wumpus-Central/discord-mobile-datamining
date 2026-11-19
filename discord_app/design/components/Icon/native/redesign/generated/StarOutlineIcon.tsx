@@ -1,9 +1,9 @@
-// === Module 9907: StarOutlineIcon ===
+// === Module 9886: StarOutlineIcon ===
 
-// Module 9907 (StarOutlineIcon)
+// Module 9886 (StarOutlineIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5509 */;
-import _mod9908 from "module_9908" /* 9908 */;
+import BaseIconImage from "BaseIconImage" /* 5478 */;
+import _mod9887 from "module_9887" /* 9887 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function StarOutlineIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9908, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9887, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

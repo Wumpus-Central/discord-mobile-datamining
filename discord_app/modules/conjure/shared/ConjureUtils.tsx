@@ -1,14 +1,14 @@
-// === Module 6774: ConjureUtils ===
+// === Module 6746: ConjureUtils ===
 
-// Module 6774 (ConjureUtils)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6530 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6565 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 6775 */;
+// Module 6746 (ConjureUtils)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6501 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6536 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 6747 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4753 */;
-import GuildStore from "GuildStore" /* 4694 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4856 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4722 */;
+import GuildStore from "GuildStore" /* 4663 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4825 */;
 
 require = fn;
 function conjureChannelAppId(channel) {
@@ -26,7 +26,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4753);
+let GuildChannelStore = fn(4722);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
@@ -159,10 +159,10 @@ export function resolveConjureWorkspaceGuildId(ConjureChatStore) {
 export function canAccessConjure(guild, getChannelIdForGuildTransition) {
   return ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guild.id, location: getChannelIdForGuildTransition });
 }
-export function canStartConjureProject(id, location) {
-  let result = PermissionStore.can(constants.MANAGE_CHANNELS, id) && PermissionStore.can(constants.MANAGE_GUILD, id);
+export function canStartConjureProject(guild, ConjureRemix) {
+  let result = PermissionStore.can(constants.MANAGE_CHANNELS, guild) && PermissionStore.can(constants.MANAGE_GUILD, guild);
   if (result) {
-    const obj3 = { guildId: id.id, location };
+    const obj3 = { guildId: guild.id, location: ConjureRemix };
     result = ConjureGuildExperiment.isConjureGuildEnabled(obj3);
   }
   return result;

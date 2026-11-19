@@ -1,18 +1,18 @@
-// === Module 10097: InAppReportsWidgetPreviewElement ===
+// === Module 10075: InAppReportsWidgetPreviewElement ===
 
-// Module 10097 (InAppReportsWidgetPreviewElement)
+// Module 10075 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8109 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 10098 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8078 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 10076 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: { backgroundColor: nativeDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

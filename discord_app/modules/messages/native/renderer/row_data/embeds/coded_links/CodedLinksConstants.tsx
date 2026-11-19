@@ -1,6 +1,6 @@
-// === Module 10373: CodedLinksConstants ===
+// === Module 10351: CodedLinksConstants ===
 
-// Module 10373 (CodedLinksConstants)
+// Module 10351 (CodedLinksConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinksConstants.tsx");

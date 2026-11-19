@@ -1,11 +1,11 @@
-// === Module 8870: CollectiblesPromoPriceUtils ===
+// === Module 8843: CollectiblesPromoPriceUtils ===
 
-// Module 8870 (CollectiblesPromoPriceUtils)
-import StorefrontTypes from "StorefrontTypes" /* 6764 */;
+// Module 8843 (CollectiblesPromoPriceUtils)
+import StorefrontTypes from "StorefrontTypes" /* 6735 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SKUPricesStore from "SKUPricesStore" /* 6763 */;
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 8837 */;
+import SKUPricesStore from "SKUPricesStore" /* 6734 */;
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 8806 */;
 
 require = fn;
 function getListedPromotions(pricingPromotionIds, promotions) {
@@ -185,8 +185,8 @@ export function areStorefrontPricingPromotionsActive(arg0) {
 export { getNextStorefrontPromotionBoundary };
 export function useCollectiblesStorefrontPrices(skuId, c7) {
   stateFromStores2 = skuId;
-  stateFromStores2(8871).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
-  const obj = stateFromStores2(8871);
+  stateFromStores2(8844).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
+  const obj = stateFromStores2(8844);
   items = [SKUPricesStore];
   const stateFromStores = stateFromStores2(504).useStateFromStores(items, () => {
     let pricesForSkuId;

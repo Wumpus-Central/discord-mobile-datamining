@@ -1,6 +1,6 @@
-// === Module 17810: VoiceConnectFeedbackExperiment ===
+// === Module 17803: VoiceConnectFeedbackExperiment ===
 
-// Module 17810 (VoiceConnectFeedbackExperiment)
+// Module 17803 (VoiceConnectFeedbackExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
 
 const obj = { kind: "user", name: "2026-09-voice-connect-feedback", defaultConfig: { rtcConnectionJoinSounds: false, showSelfConnectingUI: false }, variations: null };

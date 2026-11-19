@@ -1,7 +1,7 @@
-// === Module 7448: useStartProviderConnection ===
+// === Module 7418: useStartProviderConnection ===
 
-// Module 7448 (useStartProviderConnection)
-import LinkingDefault from "Linking" /* 5502 */;
+// Module 7418 (useStartProviderConnection)
+import LinkingDefault from "Linking" /* 5471 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ export function useStartProviderConnection(provider_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {

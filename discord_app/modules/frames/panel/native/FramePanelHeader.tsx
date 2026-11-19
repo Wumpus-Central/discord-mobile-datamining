@@ -1,17 +1,17 @@
-// === Module 19270: FramePanelHeader ===
+// === Module 19265: FramePanelHeader ===
 
-// Module 19270 (FramePanelHeader)
+// Module 19265 (FramePanelHeader)
 import initialize from "initialize" /* 504 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6773 */;
-import ActivityPanelHeader from "ActivityPanelHeader" /* 19251 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 19253 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19257 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19258 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19266 */;
-import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 19271 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6745 */;
+import ActivityPanelHeader from "ActivityPanelHeader" /* 19243 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 19245 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19249 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19250 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19258 */;
+import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 19266 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6531 */;
+import FramesStore from "FramesStore" /* 6502 */;
 
 require = fn;
 function FramePanelHeaderContentInner(arg0) {
@@ -61,7 +61,7 @@ function FramePanelHeaderContentInner(arg0) {
   return React5(ActivityPanelHeader.BaseActivityPanelContent, obj3);
 }
 const View = fn(17).View;
-const asLaunched = fn(6532).asLaunched;
+const asLaunched = fn(6503).asLaunched;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_10 = noop.memo(function FramePanelHeaderContent(arg0) {

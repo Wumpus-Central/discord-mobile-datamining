@@ -1,9 +1,9 @@
-// === Module 10798: ChannelCallModalManager ===
+// === Module 10776: ChannelCallModalManager ===
 
-// Module 10798 (ChannelCallModalManager)
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6402 */;
+// Module 10776 (ChannelCallModalManager)
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6373 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5471 */;
+import VoiceStateStore from "VoiceStateStore" /* 5440 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 
 require = fn;

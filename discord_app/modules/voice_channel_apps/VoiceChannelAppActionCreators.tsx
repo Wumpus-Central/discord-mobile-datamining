@@ -1,10 +1,10 @@
-// === Module 13806: VoiceChannelAppActionCreators ===
+// === Module 13788: VoiceChannelAppActionCreators ===
 
-// Module 13806 (VoiceChannelAppActionCreators)
+// Module 13788 (VoiceChannelAppActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import leaveFrame from "leaveFrame" /* 6864 */;
-import voiceChannelAppSession from "voiceChannelAppSession" /* 12157 */;
-import FramesStore from "FramesStore" /* 6531 */;
+import leaveFrame from "leaveFrame" /* 6834 */;
+import voiceChannelAppSession from "voiceChannelAppSession" /* 12136 */;
+import FramesStore from "FramesStore" /* 6502 */;
 
 require = fn;
 const size = fn(2);

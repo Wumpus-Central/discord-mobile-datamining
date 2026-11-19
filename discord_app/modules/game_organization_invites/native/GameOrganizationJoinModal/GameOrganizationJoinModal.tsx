@@ -1,28 +1,39 @@
-// === Module 12193: GameOrganizationJoinModal ===
+// === Module 12172: GameOrganizationJoinModal ===
 
-// Module 12193 (GameOrganizationJoinModal)
-import NavigatorHeader from "NavigatorHeader" /* 7006 */;
+// Module 12172 (GameOrganizationJoinModal)
+import NavigatorHeader from "NavigatorHeader" /* 6976 */;
+import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12171 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const GameOrganizationJoinModalConstants = fn(12194);
-const GameOrganizationJoinScenes = GameOrganizationJoinModalConstants.GameOrganizationJoinScenes;
-let closure_3 = GameOrganizationJoinModalConstants.closeGameOrganizationJoinModal;
-const jsx = fn(21).jsx;
-let items = [, ];
-({ VIEW: arr[0], ACCEPT: arr[1] } = GameOrganizationJoinScenes);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationJoinModal.tsx");
-
-export default function GameOrganizationJoinModal(code) {
+function SingleCharacterJoinModal(code) {
   code = code.code;
   items = [code];
-  const navigatorScreens = code(7003).useNavigatorScreens(() => {
+  const navigatorScreens = code(6973).useNavigatorScreens(() => {
+    const obj = {};
+    const obj2 = {
+      headerLeft: NavigatorHeader.getHeaderCloseButton(closure_5),
+      headerTitle() {
+        return null;
+      },
+      render() {
+        return jsx(code(dependencyMap[7]).AcceptStep, { code });
+      }
+    };
+    obj[GameOrganizationJoinScenes.ACCEPT] = obj2;
+    return obj;
+  }, items);
+  return jsx(code(11981).Modal, { screens: navigatorScreens, initialRouteName: GameOrganizationJoinScenes.ACCEPT, gradientColor: "purple" });
+}
+function MultiCharacterJoinModal(code) {
+  code = code.code;
+  items = [code];
+  const navigatorScreens = code(6973).useNavigatorScreens(() => {
     let obj = {};
     const obj2 = {
-      headerLeft: NavigatorHeader.getHeaderCloseButton(closure_3),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(closure_5),
       render() {
-        return jsx(code(12195).ViewStep, { code });
+        return jsx(code(12174).ViewStep, { code });
       }
     };
     obj[GameOrganizationJoinScenes.VIEW] = obj2;
@@ -35,7 +46,7 @@ export default function GameOrganizationJoinModal(code) {
         character = character.character;
       }
       obj.character = character;
-      return jsx(code(12199).AcceptStep, { code, character: null });
+      return jsx(code(12179).AcceptStep, { code, character: null });
     };
     obj[GameOrganizationJoinScenes.ACCEPT] = obj4;
     return obj;
@@ -43,5 +54,28 @@ export default function GameOrganizationJoinModal(code) {
   let obj2 = { screens: navigatorScreens, initialRouteName: GameOrganizationJoinScenes.VIEW, steps: items, headerBackTitle: null, gradientColor: "purple" };
   const intl = code(1113).intl;
   obj2.headerBackTitle = intl.string(code(1113).t["13/7kX"]);
-  return jsx(code(12222).StepModal, { screens: navigatorScreens, initialRouteName: GameOrganizationJoinScenes.VIEW, steps: items, headerBackTitle: null, gradientColor: "purple" });
+  return jsx(code(12205).StepModal, { screens: navigatorScreens, initialRouteName: GameOrganizationJoinScenes.VIEW, steps: items, headerBackTitle: null, gradientColor: "purple" });
+}
+const constants = fn(11834).GameOrganizationCharacterMode;
+const GameOrganizationJoinModalConstants = fn(12173);
+const GameOrganizationJoinScenes = GameOrganizationJoinModalConstants.GameOrganizationJoinScenes;
+let closure_5 = GameOrganizationJoinModalConstants.closeGameOrganizationJoinModal;
+const jsx = fn(21).jsx;
+let items = [, ];
+({ VIEW: arr[0], ACCEPT: arr[1] } = GameOrganizationJoinScenes);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationJoinModal.tsx");
+
+export default function GameOrganizationJoinModal(code) {
+  code = code.code;
+  const tmp = useResolvedGameOrganizationInviteDefault(code);
+  if (null == tmp) {
+    return null;
+  } else if (tmp.characterMode === constants.MULTI) {
+    const obj2 = { code };
+    let tmp5 = <MultiCharacterJoinModal code={code} />;
+  } else {
+    const obj = { code };
+    tmp5 = <SingleCharacterJoinModal code={code} />;
+  }
 };

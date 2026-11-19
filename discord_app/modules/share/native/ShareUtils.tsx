@@ -1,8 +1,8 @@
-// === Module 15043: ShareUtils ===
+// === Module 15029: ShareUtils ===
 
-// Module 15043 (ShareUtils)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5505 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5527 */;
+// Module 15029 (ShareUtils)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5474 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5496 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_6 = async function _sendShareMessage(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -56,8 +56,8 @@ let closure_6 = async function _sendShareMessage(arg0) {
         } else {
           id = closure_130_1.id;
           closure_130_4 = closure_130_0.map((uri) => {
-            const size = { uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: closure_0(8357).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height, preTranscodeSourceSize: uri.originalSize };
-            const cloudUpload = new closure_0(8380).CloudUpload(size, guildId.id);
+            const size = { uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: closure_0(8326).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height, preTranscodeSourceSize: uri.originalSize };
+            const cloudUpload = new closure_0(8349).CloudUpload(size, guildId.id);
             return cloudUpload;
           });
           c1 = closure_130_2;
@@ -80,10 +80,10 @@ let closure_6 = async function _sendShareMessage(arg0) {
                       const obj = { uploadError: { file, guildId: guildId.getGuildId(), code, reason } };
                       closure_1_6.reject(obj);
                       const obj2 = { file, guildId: guildId.getGuildId(), code, reason };
-                      guildId(10413).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
-                      const obj3 = guildId(10413);
+                      guildId(10391).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+                      const obj3 = guildId(10391);
                       const obj4 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
-                      guildId(8426).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+                      guildId(8395).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
                     }
           };
           c4 = 2;
@@ -110,8 +110,8 @@ let closure_6 = async function _sendShareMessage(arg0) {
     }
   }
 };
-const DraftType = fn(8227).DraftType;
-const MessageSendLocation = fn(4828).MessageSendLocation;
+const DraftType = fn(8196).DraftType;
+const MessageSendLocation = fn(4797).MessageSendLocation;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 

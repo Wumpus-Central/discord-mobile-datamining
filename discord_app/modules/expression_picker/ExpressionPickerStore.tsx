@@ -1,10 +1,10 @@
-// === Module 18071: ExpressionPickerStore ===
+// === Module 18064: ExpressionPickerStore ===
 
-// Module 18071 (ExpressionPickerStore)
+// Module 18064 (ExpressionPickerStore)
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1228 */;
-import uniqueIdDefault from "uniqueId" /* 5839 */;
+import uniqueIdDefault from "uniqueId" /* 5810 */;
 import identity_mod from "module_1258" /* 1258 */;
-import module_5013 from "module_5013" /* 5013 */;
+import module_4982 from "module_4982" /* 4982 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const ExpressionPickerViewType = ExpressionPickerConstants.ExpressionPickerViewT
 let closure_3 = Object.freeze({ activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, showEmojiPacks: false, searchQuery: "", isSearchSuggestion: false, pickerId: uniqueIdDefault("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false });
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-const withEqualityFnResult = identity(module_5013.persist(() => closure_3, {
+const withEqualityFnResult = identity(module_4982.persist(() => closure_3, {
   name: "expression-picker-last-active-view",
   partialize(lastActiveView) {
     return { lastActiveView: lastActiveView.lastActiveView };
@@ -174,7 +174,7 @@ export function setExpressionPickerView(activeView) {
 }
 export function setShowEmojiPacks(showEmojiPacks) {
   _require = showEmojiPacks;
-  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ showEmojiPacks, showSelectedEmojiPackId: "Array" }));
+  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ showEmojiPacks, showSelectedEmojiPackId: "r" }));
 }
 export function setSearchQuery(searchQuery) {
   _require = searchQuery;

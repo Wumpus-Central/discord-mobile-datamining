@@ -1,9 +1,9 @@
-// === Module 11666: ForLaterMessageRow ===
+// === Module 11644: ForLaterMessageRow ===
 
-// Module 11666 (ForLaterMessageRow)
+// Module 11644 (ForLaterMessageRow)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import RowGeneratorDefault from "RowGenerator" /* 8581 */;
+import RowGeneratorDefault from "RowGenerator" /* 8550 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { preview: { marginHorizontal: -16, marginTop: -9, overflow: "hidden" }, withoutFooter: { marginTop: -nativeDefault.space.PX_4, marginBottom: -nativeDefault.space.PX_16, borderBottomLeftRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS }, contentWithoutFooter: null, footer: null };
 let obj3 = { marginTop: -nativeDefault.space.PX_4, marginBottom: -nativeDefault.space.PX_16, borderBottomLeftRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS };
 obj2.contentWithoutFooter = { paddingBottom: nativeDefault.space.PX_10 };

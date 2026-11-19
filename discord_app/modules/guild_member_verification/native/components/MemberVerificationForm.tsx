@@ -1,21 +1,21 @@
-// === Module 7242: MemberVerificationForm ===
+// === Module 7212: MemberVerificationForm ===
 
-// Module 7242 (MemberVerificationForm)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4859 */;
+// Module 7212 (MemberVerificationForm)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4828 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7220 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7190 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(7220).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(7190).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1072).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationForm.tsx");
@@ -40,7 +40,7 @@ export default function MemberVerificationForm(guild) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
@@ -63,10 +63,10 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { text: null, variant: "critical" };
                   const intl = closure_1_0(1113).intl;
                   obj2.text = intl.string(closure_1_0(1113).t.StC497);
-                  closure_1_1(5505).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
+                  closure_1_1(5474).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "+60" };
               } else {
                 VerificationLevels(null);
                 closure_2_8(true);

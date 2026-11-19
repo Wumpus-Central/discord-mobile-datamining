@@ -1,15 +1,15 @@
-// === Module 11923: SocialLayerStorefrontEmbedStore ===
+// === Module 11901: SocialLayerStorefrontEmbedStore ===
 
-// Module 11923 (SocialLayerStorefrontEmbedStore)
+// Module 11901 (SocialLayerStorefrontEmbedStore)
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11924 */;
+import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11902 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserProfileStore from "UserProfileStore" /* 6867 */;
-import WishlistStore from "WishlistStore" /* 8889 */;
+import UserProfileStore from "UserProfileStore" /* 6837 */;
+import WishlistStore from "WishlistStore" /* 8863 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SKUStore from "SKUStore" /* 6582 */;
+import SKUStore from "SKUStore" /* 6553 */;
 
 require = fn;
 function computePrice(arg0) {

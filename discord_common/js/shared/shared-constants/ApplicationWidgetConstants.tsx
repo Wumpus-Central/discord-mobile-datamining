@@ -1,6 +1,6 @@
-// === Module 14494: ApplicationWidgetConstants ===
+// === Module 14481: ApplicationWidgetConstants ===
 
-// Module 14494 (ApplicationWidgetConstants)
+// Module 14481 (ApplicationWidgetConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetConstants.tsx");

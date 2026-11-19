@@ -1,11 +1,11 @@
-// === Module 8770: useCurrentChangelog ===
+// === Module 8739: useCurrentChangelog ===
 
-// Module 8770 (useCurrentChangelog)
+// Module 8739 (useCurrentChangelog)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8771 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8740 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
-import ChangelogStore from "ChangelogStore" /* 7649 */;
+import ChangelogStore from "ChangelogStore" /* 7619 */;
 
 require = fn;
 function useChangelog(changelogId, stateFromStores) {
@@ -66,7 +66,7 @@ function useChangelog(changelogId, stateFromStores) {
   }
   return obj4;
 }
-const ChangelogLoadState = fn(4725).ChangelogLoadState;
+const ChangelogLoadState = fn(4694).ChangelogLoadState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/useCurrentChangelog.tsx");
 

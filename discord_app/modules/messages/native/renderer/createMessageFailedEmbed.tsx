@@ -1,13 +1,13 @@
-// === Module 8813: createMessageFailedEmbed ===
+// === Module 8782: createMessageFailedEmbed ===
 
-// Module 8813 (createMessageFailedEmbed)
+// Module 8782 (createMessageFailedEmbed)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8157 */;
-import FileUtils from "FileUtils" /* 8382 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8582 */;
-import _modDef8814 from "module_8814" /* 8814 */;
-import _modDef8815 from "module_8815" /* 8815 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8126 */;
+import FileUtils from "FileUtils" /* 8351 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8551 */;
+import _modDef8783 from "module_8783" /* 8783 */;
+import _modDef8784 from "module_8784" /* 8784 */;
 import size from "module_2" /* 2 */;
 
 const MessageFailureState = RowGeneratorConstants.MessageFailureState;
@@ -24,7 +24,7 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       obj2.failureState = MessageFailureState.UNSPECIFIED;
       obj2.bodyTextColor = colors.failedMessageBodyTextColor;
       colors = renderer_EmbedUtils.getAssetUriForEmbed;
-      obj2.iconURL = colors(_modDef8815);
+      obj2.iconURL = colors(_modDef8784);
       let obj3 = obj2;
     } else {
       obj3 = { type: MessageEmbedTypes.TEXT, numAttachments: null, failureState: null, attachmentsSize: null, bodyTextColor: null };
@@ -51,6 +51,6 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
   }
 };
 export function createAutomodBlockedMessageEmbed(errorMessage) {
-  const obj = { type: MessageEmbedTypes.TEXT, messageSendError: errorMessage.errorMessage, failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE, disableBackgroundColor: true, bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor, iconURL: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8814) };
+  const obj = { type: MessageEmbedTypes.TEXT, messageSendError: errorMessage.errorMessage, failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE, disableBackgroundColor: true, bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor, iconURL: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8783) };
   return obj;
 }

@@ -1,17 +1,17 @@
-// === Module 18610: ConjureNativeCollapsibleSection ===
+// === Module 18603: ConjureNativeCollapsibleSection ===
 
-// Module 18610 (ConjureNativeCollapsibleSection)
+// Module 18603 (ConjureNativeCollapsibleSection)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5414 */;
-import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7476 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12724 */;
+import Text_Text from "Text/Text" /* 5383 */;
+import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7446 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 12707 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4823);
+const createStyles = fn(4792);
 let obj2 = { root: { gap: nativeDefault.space.PX_8 }, header: null, headerTrailing: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
@@ -51,7 +51,7 @@ export default function ConjureNativeCollapsibleSection(showHeader) {
   if (flag) {
     const obj2 = { style: tmp.header, children: null };
     const obj3 = { variant: "body-sm/medium", color: "text-subtle", children: title };
-    items = [React4(tmp4(5414).Text, obj3), ];
+    items = [React4(tmp4(5383).Text, obj3), ];
     const obj4 = { style: tmp.headerTrailing, children: null };
     const items1 = [meta, ];
     let tmp9Result = null;
@@ -68,7 +68,7 @@ export default function ConjureNativeCollapsibleSection(showHeader) {
         obj5.onPress = onToggleExpanded;
         const obj7 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
         obj5.children = React4(ChevronSmallRightIcon, obj7);
-        tmp9Result = React4(tmp4(7511).PressableScale, obj5);
+        tmp9Result = React4(tmp4(7481).PressableScale, obj5);
       }
     }
     items1[1] = tmp9Result;

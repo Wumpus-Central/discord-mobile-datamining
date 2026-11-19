@@ -1,6 +1,6 @@
-// === Module 14688: conjureLinkEmbeds ===
+// === Module 14674: conjureLinkEmbeds ===
 
-// Module 14688 (conjureLinkEmbeds)
+// Module 14674 (conjureLinkEmbeds)
 import URLUtilsDefault from "URLUtils" /* 1381 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -43,7 +43,7 @@ let closure_10 = async function _prefetchConjureLinkEmbeds(arg0) {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     while (true) {
@@ -298,7 +298,7 @@ export function useConjureLinkPrefetch(arg0) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } else {
           try {
@@ -326,7 +326,7 @@ export function useConjureLinkPrefetch(arg0) {
               return obj;
             } else {
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "+60" };
             }
           } catch (tmp7) {
             c0 = tmp;

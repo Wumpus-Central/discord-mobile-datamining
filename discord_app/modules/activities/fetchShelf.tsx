@@ -1,10 +1,10 @@
-// === Module 10625: fetchShelf ===
+// === Module 10603: fetchShelf ===
 
-// Module 10625 (fetchShelf)
+// Module 10603 (fetchShelf)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ApplicationRecord from "ApplicationRecord" /* 2143 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
 
 const require = fn;
 function handleFetchDone(arg0, fn, guildId) {
@@ -29,7 +29,7 @@ let closure_9 = async function _fetchShelf(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {

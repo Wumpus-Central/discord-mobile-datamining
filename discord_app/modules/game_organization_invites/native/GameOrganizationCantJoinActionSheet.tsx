@@ -1,19 +1,18 @@
-// === Module 12191: GameOrganizationCantJoinActionSheet ===
+// === Module 12170: GameOrganizationCantJoinActionSheet ===
 
-// Module 12191 (GameOrganizationCantJoinActionSheet)
-import _modDef2555 from "module_2555" /* 2555 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5037 */;
-import transitionToGuild from "transitionToGuild" /* 6743 */;
-import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12019 */;
-import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12192 */;
+// Module 12170 (GameOrganizationCantJoinActionSheet)
+import _modDef2557 from "module_2557" /* 2557 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5006 */;
+import transitionToGuild from "transitionToGuild" /* 6714 */;
+import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12171 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4694 */;
+import GuildStore from "GuildStore" /* 4663 */;
 
 require = fn;
 function hideSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(hasOwnProperty);
 }
-const GameOrganizationInviteConstants = fn(11856);
+const GameOrganizationInviteConstants = fn(11834);
 ({ GAME_ORGANIZATION_CANT_JOIN_ACTION_SHEET_KEY: hasOwnProperty, GameOrganizationCantJoinReasons: closure_6 } = GameOrganizationInviteConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -38,34 +37,36 @@ export default function GameOrganizationCantJoinActionSheet(arg0) {
   if (null == tmp3) {
     return null;
   } else {
-    let obj2 = { displayNoun: tmp3.displayNoun, lowercase: true };
-    const tmp11 = getGameOrganizationDisplayNounDefault(obj2);
+    let str = tmp3.displayNoun;
+    if (str == null) {
+      str = "other";
+    }
     if (reason === constants.NO_CHARACTERS) {
-      let lXyJMS = _modDef2555.lXyJMS;
+      let lXyJMS = _modDef2557.lXyJMS;
     } else {
-      lXyJMS = _modDef2555["IIR/NZ"];
+      lXyJMS = _modDef2557["IIR/NZ"];
     }
-    const obj3 = { header: jsx(tmp5(7426).BottomSheetTitleHeader, { title: null }), title: null, description: null, actions: null };
+    let obj2 = { header: jsx(tmp5(7396).BottomSheetTitleHeader, { title: null }), title: null, description: null, actions: null };
     const intl = tmp5(1113).intl;
-    const obj4 = { noun: tmp11 };
-    obj3.title = intl.formatToPlainString(_modDef2555.DinVUQ, obj4);
+    const obj3 = { displayNoun: str };
+    obj2.title = intl.formatToPlainString(_modDef2557.DinVUQ, obj3);
     const intl2 = tmp5(1113).intl;
-    const obj5 = { noun: tmp11, guildName: tmp3.linkedGuild.name };
-    obj3.description = intl2.formatToPlainString(lXyJMS, obj5);
+    const obj4 = { displayNoun: str, guildName: tmp3.linkedGuild.name };
+    obj2.description = intl2.formatToPlainString(lXyJMS, obj4);
     if (stateFromStores) {
-      const obj6 = { text: null, size: "lg", onPress: null };
+      const obj5 = { text: null, size: "lg", onPress: null };
       const intl4 = tmp5(1113).intl;
-      obj6.text = intl4.string(_modDef2555.H1wMHV);
-      obj6.onPress = tmp7;
-      let obj7 = obj6;
+      obj5.text = intl4.string(_modDef2557.H1wMHV);
+      obj5.onPress = tmp7;
+      let obj6 = obj5;
     } else {
-      obj7 = { text: null, variant: "secondary", size: "lg", onPress: null };
+      obj6 = { text: null, variant: "secondary", size: "lg", onPress: null };
       const intl3 = tmp5(1113).intl;
-      obj7.text = intl3.string(tmp5(1113).t.cpT0Cq);
-      obj7.onPress = hideSheet;
+      obj6.text = intl3.string(tmp5(1113).t.cpT0Cq);
+      obj6.onPress = hideSheet;
     }
-    obj3.actions = jsx(tmp5(5421).Button, obj7);
-    return jsx(tmp5(11185).PromoSheet, { header: jsx(tmp5(7426).BottomSheetTitleHeader, { title: null }), title: null, description: null, actions: null });
+    obj2.actions = jsx(tmp5(5390).Button, obj6);
+    return jsx(tmp5(11163).PromoSheet, { header: jsx(tmp5(7396).BottomSheetTitleHeader, { title: null }), title: null, description: null, actions: null });
   }
   let obj = guildId(504);
 };

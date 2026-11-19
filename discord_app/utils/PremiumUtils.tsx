@@ -11,12 +11,12 @@ import _modDef2169 from "module_2169" /* 2169 */;
 import PremiumSubscription from "PremiumSubscription" /* 2185 */;
 import _modDef2787 from "module_2787" /* 2787 */;
 import _modDef3535 from "module_3535" /* 3535 */;
-import BillingUtils from "BillingUtils" /* 4635 */;
-import DateUtils from "DateUtils" /* 4645 */;
-import openURLDefault from "openURL" /* 5498 */;
-import PriceUtils from "PriceUtils" /* 6766 */;
-import CheckoutError from "CheckoutError" /* 11875 */;
-import useFPDurationLeft from "useFPDurationLeft" /* 13990 */;
+import BillingUtils from "BillingUtils" /* 4605 */;
+import DateUtils from "DateUtils" /* 4614 */;
+import openURLDefault from "openURL" /* 5467 */;
+import PriceUtils from "PriceUtils" /* 6737 */;
+import CheckoutError from "CheckoutError" /* 11853 */;
+import useFPDurationLeft from "useFPDurationLeft" /* 13972 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
@@ -2181,7 +2181,7 @@ const frozen = Object.freeze({
     return skuId === regex.TIER_0 || skuId === regex.TIER_1 || skuId === regex.TIER_2;
   },
   getIntervalMonths,
-  getUserMaxFileSize: fn(10462).getUserMaxFileSize,
+  getUserMaxFileSize: fn(10440).getUserMaxFileSize,
   getSkuIdForPlan(planId) {
     if (null == dependencyMap2[planId]) {
       const _Error = Error;
@@ -2296,35 +2296,35 @@ const frozen = Object.freeze({
   calculateYearlyPlanMonthlyRateAmount,
   getDaysSincePremium,
   getDaysRemainingUntilSubscriptionCurrentPeriodEnds,
-  canUseAnimatedEmojis: fn(13887).canUseAnimatedEmojis,
-  canUseEmojisEverywhere: fn(13887).canUseEmojisEverywhere,
-  canUseSoundboardEverywhere: fn(13887).canUseSoundboardEverywhere,
-  canUseCustomCallSounds: fn(13887).canUseCustomCallSounds,
-  canUploadLargeFiles: fn(13887).canUploadLargeFiles,
-  canUseBadges: fn(13887).canUseBadges,
-  canUseHighVideoUploadQuality: fn(13887).canUseHighVideoUploadQuality,
-  canEditDiscriminator: fn(13887).canEditDiscriminator,
-  hasBoostDiscount: fn(13887).hasBoostDiscount,
-  canUseAnimatedAvatar: fn(13887).canUseAnimatedAvatar,
-  canInstallPremiumApplications: fn(13887).canInstallPremiumApplications,
-  canUseIncreasedMessageLength: fn(13887).canUseIncreasedMessageLength,
-  canUseIncreasedGuildCap: fn(13887).canUseIncreasedGuildCap,
-  canRedeemPremiumPerks: fn(13887).canRedeemPremiumPerks,
-  canUsePremiumProfileCustomization: fn(13887).canUsePremiumProfileCustomization,
-  canUsePremiumAppIcons: fn(13887).canUsePremiumAppIcons,
-  canUsePremiumGuildMemberProfile: fn(13887).canUsePremiumGuildMemberProfile,
-  canUseClientThemes: fn(13887).canUseClientThemes,
-  canStreamQuality: fn(13887).canStreamQuality,
-  canUseQuestOrbMultiplier: fn(13887).canUseQuestOrbMultiplier,
-  hasFreeBoosts: fn(13887).hasFreeBoosts,
-  canUseCustomStickersEverywhere: fn(13887).canUseCustomStickersEverywhere,
-  canUseCustomBackgrounds: fn(13887).canUseCustomBackgrounds,
-  canUseCollectibles: fn(13887).canUseCollectibles,
-  canUseMonthlyOrbs: fn(13887).canUseMonthlyOrbs,
-  canUseShopDiscounts: fn(13887).canUseShopDiscounts,
-  canUseMoreQuestOrbs: fn(13887).canUseMoreQuestOrbs,
+  canUseAnimatedEmojis: fn(13869).canUseAnimatedEmojis,
+  canUseEmojisEverywhere: fn(13869).canUseEmojisEverywhere,
+  canUseSoundboardEverywhere: fn(13869).canUseSoundboardEverywhere,
+  canUseCustomCallSounds: fn(13869).canUseCustomCallSounds,
+  canUploadLargeFiles: fn(13869).canUploadLargeFiles,
+  canUseBadges: fn(13869).canUseBadges,
+  canUseHighVideoUploadQuality: fn(13869).canUseHighVideoUploadQuality,
+  canEditDiscriminator: fn(13869).canEditDiscriminator,
+  hasBoostDiscount: fn(13869).hasBoostDiscount,
+  canUseAnimatedAvatar: fn(13869).canUseAnimatedAvatar,
+  canInstallPremiumApplications: fn(13869).canInstallPremiumApplications,
+  canUseIncreasedMessageLength: fn(13869).canUseIncreasedMessageLength,
+  canUseIncreasedGuildCap: fn(13869).canUseIncreasedGuildCap,
+  canRedeemPremiumPerks: fn(13869).canRedeemPremiumPerks,
+  canUsePremiumProfileCustomization: fn(13869).canUsePremiumProfileCustomization,
+  canUsePremiumAppIcons: fn(13869).canUsePremiumAppIcons,
+  canUsePremiumGuildMemberProfile: fn(13869).canUsePremiumGuildMemberProfile,
+  canUseClientThemes: fn(13869).canUseClientThemes,
+  canStreamQuality: fn(13869).canStreamQuality,
+  canUseQuestOrbMultiplier: fn(13869).canUseQuestOrbMultiplier,
+  hasFreeBoosts: fn(13869).hasFreeBoosts,
+  canUseCustomStickersEverywhere: fn(13869).canUseCustomStickersEverywhere,
+  canUseCustomBackgrounds: fn(13869).canUseCustomBackgrounds,
+  canUseCollectibles: fn(13869).canUseCollectibles,
+  canUseMonthlyOrbs: fn(13869).canUseMonthlyOrbs,
+  canUseShopDiscounts: fn(13869).canUseShopDiscounts,
+  canUseMoreQuestOrbs: fn(13869).canUseMoreQuestOrbs,
   formatPriceString,
-  StreamQuality: fn(13887).StreamQuality
+  StreamQuality: fn(13869).StreamQuality
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/PremiumUtils.tsx");
@@ -3290,8 +3290,8 @@ export const isPremiumAtLeast = fn(2110).isPremiumAtLeast;
 export const isPremiumAtMost = fn(2110).isPremiumAtMost;
 export const isPremium = fn(2110).isPremium;
 export const isPremiumExactly = fn(2110).isPremiumExactly;
-export const getMaxFileSizeForPremiumType = fn(13887).getMaxFileSizeForPremiumType;
-export const StreamQuality = fn(13887).StreamQuality;
+export const getMaxFileSizeForPremiumType = fn(13869).getMaxFileSizeForPremiumType;
+export const StreamQuality = fn(13869).StreamQuality;
 export function useHasTier2Premium() {
   items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());

@@ -1,13 +1,13 @@
-// === Module 6747: ConjureServerProjectRouteStore ===
+// === Module 6718: ConjureServerProjectRouteStore ===
 
-// Module 6747 (ConjureServerProjectRouteStore)
+// Module 6718 (ConjureServerProjectRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureServerProject from "conjureServerProject" /* 6748 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6529 */;
+import conjureServerProject from "conjureServerProject" /* 6719 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6500 */;
 
 require = fn;
-const StaticChannelRoute = fn(4679).StaticChannelRoute;
+const StaticChannelRoute = fn(4648).StaticChannelRoute;
 let map = new Map();
 const Store = initializeDefault.Store;
 class ConjureServerProjectRouteStore extends Store {
@@ -21,7 +21,7 @@ prototype["getReturnProjectId"] = function getReturnProjectId(id) {
   let tmp2 = null;
   if (null != value) {
     let tmp6 = null;
-    if (obj.isConjureServerProjectIn(ConjureProjectStore.getProject(value), id)) {
+    if (obj.conjureServerProjectGuildId(ConjureProjectStore.getProject(value)) === id) {
       tmp6 = value;
     }
     tmp2 = tmp6;

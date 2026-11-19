@@ -1,12 +1,12 @@
-// === Module 9881: QuestCopyUtils ===
+// === Module 9860: QuestCopyUtils ===
 
-// Module 9881 (QuestCopyUtils)
+// Module 9860 (QuestCopyUtils)
 import util from "util" /* 1113 */;
-import AdCreativeType from "AdCreativeType" /* 6473 */;
-import ClipboardUtils from "ClipboardUtils" /* 7456 */;
-import captureAdUserAction from "captureAdUserAction" /* 9860 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9863 */;
-import QuestConstants from "QuestConstants" /* 6466 */;
+import AdCreativeType from "AdCreativeType" /* 6444 */;
+import ClipboardUtils from "ClipboardUtils" /* 7426 */;
+import captureAdUserAction from "captureAdUserAction" /* 9839 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9842 */;
+import QuestConstants from "QuestConstants" /* 6437 */;
 import size from "module_2" /* 2 */;
 
 ({ QuestHomeSortMethods: c2, RewardFilterTypes: c3, TaskFilterTypes: closure_4 } = QuestConstants);

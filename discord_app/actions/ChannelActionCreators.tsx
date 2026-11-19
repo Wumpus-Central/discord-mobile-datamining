@@ -1,28 +1,28 @@
-// === Module 7648: ChannelActionCreators ===
+// === Module 7618: ChannelActionCreators ===
 
-// Module 7648 (ChannelActionCreators)
+// Module 7618 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import shared from "shared" /* 4830 */;
-import RootNavigationRef from "RootNavigationRef" /* 5000 */;
-import transitionToChannel from "transitionToChannel" /* 5556 */;
-import preloadChannelDefault from "preloadChannel" /* 5558 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6391 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 6398 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6437 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6579 */;
+import shared from "shared" /* 4799 */;
+import RootNavigationRef from "RootNavigationRef" /* 4969 */;
+import transitionToChannel from "transitionToChannel" /* 5525 */;
+import preloadChannelDefault from "preloadChannel" /* 5527 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6362 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 6369 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6408 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6550 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7649 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import ReadStateStore from "ReadStateStore" /* 6527 */;
+import ChangelogStore from "ChangelogStore" /* 7619 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import ReadStateStore from "ReadStateStore" /* 6498 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4676).createChannelRecordFromServer;
+let closure_6 = fn(4645).createChannelRecordFromServer;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AbortCodes: closure_10, Endpoints: closure_11, Routes: closure_12, ChannelTypes: map1 } = Constants);
 const size = fn(2);
@@ -58,7 +58,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -181,7 +181,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -305,8 +305,8 @@ export default {
       await HTTP.post(request);
       closure_128_0 = value;
       if (closure_128_0.body.type === constants2.GROUP_DM) {
-        tmp5(6391).fireSurveyAction(tmp2(6398).SurveyActionTypes.GROUP_DM_CREATED);
-        tmp5(6391);
+        tmp5(6362).fireSurveyAction(tmp2(6369).SurveyActionTypes.GROUP_DM_CREATED);
+        tmp5(6362);
       }
       closure_128_1 = closure_1_6(closure_128_0.body);
       tmp5(572).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
@@ -327,7 +327,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -435,14 +435,14 @@ export default {
     if (flag3 == null) {
       flag3 = false;
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 });
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "analyticsLocations" }, silent: flag2 });
     if (flag) {
       flag3(1099).transitionTo(constants2.FRIENDS);
       const obj6 = flag3(1099);
     }
     const HTTP = flag3(1285).HTTP;
     const request = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "analyticsLocations" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1285).rejectWithMigratedError();
     const obj8 = flag3(1285);
@@ -559,8 +559,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7641).checkGuildTemplateDirty(closure_128_2);
-        name(7641);
+        const result = name(7611).checkGuildTemplateDirty(closure_128_2);
+        name(7611);
       }
       return closure_128_1;
     })();
@@ -580,7 +580,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {
@@ -718,7 +718,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "+60" };
         }
       } else {
         try {

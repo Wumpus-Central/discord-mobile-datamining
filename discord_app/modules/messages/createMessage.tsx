@@ -1,14 +1,14 @@
-// === Module 8358: createMessage ===
+// === Module 8327: createMessage ===
 
-// Module 8358 (createMessage)
+// Module 8327 (createMessage)
 import _modDef38 from "module_38" /* 38 */;
-import createNonce from "createNonce" /* 8359 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 8251 */;
+import createNonce from "createNonce" /* 8328 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 8220 */;
 import UserRecord from "UserRecord" /* 1407 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-const ReferencedMessageState = fn(8251).ReferencedMessageState;
+const ReferencedMessageState = fn(8220).ReferencedMessageState;
 const Constants = fn(1072);
 ({ MessageStates: metroImportDefault, MessageTypes: closure_8, LOCAL_BOT_ID: closure_9, NON_USER_BOT_DISCRIMINATOR: closure_10, MessageFlags: closure_11 } = Constants);
 const size = fn(2);

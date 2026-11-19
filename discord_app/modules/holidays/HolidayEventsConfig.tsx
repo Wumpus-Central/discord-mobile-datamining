@@ -1,11 +1,11 @@
-// === Module 19584: HolidayEventsConfig ===
+// === Module 19580: HolidayEventsConfig ===
 
-// Module 19584 (HolidayEventsConfig)
-import HolidayRingtoneExperimentDefault from "HolidayRingtoneExperiment" /* 19585 */;
-import _modDef19586 from "module_19586" /* 19586 */;
-import _modDef19587 from "module_19587" /* 19587 */;
-import _modDef19588 from "module_19588" /* 19588 */;
-import _modDef19589 from "module_19589" /* 19589 */;
+// Module 19580 (HolidayEventsConfig)
+import HolidayRingtoneExperimentDefault from "HolidayRingtoneExperiment" /* 19581 */;
+import _modDef19582 from "module_19582" /* 19582 */;
+import _modDef19583 from "module_19583" /* 19583 */;
+import _modDef19584 from "module_19584" /* 19584 */;
+import _modDef19585 from "module_19585" /* 19585 */;
 
 const obj = {
   experiment: HolidayRingtoneExperimentDefault,
@@ -18,10 +18,10 @@ const obj = {
   startTimeMs: 1797267600000,
   endTimeMs: 1799082000000,
   isDesktopOnly: true,
-  soundpack: fn(10845).Soundpacks.WINTER_HOLIDAY,
+  soundpack: fn(10823).Soundpacks.WINTER_HOLIDAY,
   soundpackLabel: fn(1113).t.Z5OQNp,
-  appSpinnerSources: { movDark: _modDef19586, movLight: _modDef19587, webmDark: _modDef19588, webmLight: _modDef19589 },
-  coachmarkDismissibleContent: fn(4656).DismissibleContent.HOLIDAY_COACHMARK_WINTER_2026
+  appSpinnerSources: { movDark: _modDef19582, movLight: _modDef19583, webmDark: _modDef19584, webmLight: _modDef19585 },
+  coachmarkDismissibleContent: fn(4625).DismissibleContent.HOLIDAY_COACHMARK_WINTER_2026
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsConfig.tsx");

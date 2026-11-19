@@ -1,7 +1,7 @@
-// === Module 17832: useChannelListFlatData ===
+// === Module 17825: useChannelListFlatData ===
 
-// Module 17832 (useChannelListFlatData)
-import FastList from "FastList" /* 7360 */;
+// Module 17825 (useChannelListFlatData)
+import FastList from "FastList" /* 7330 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -92,7 +92,7 @@ export default function useChannelListFlatData(getItemSize) {
           let tmp39 = getSectionFooterSize(num);
           sum1 = tmp15;
           if (tmp39 > 0) {
-            let SECTION_FOOTER = tmp36(7360).FastListItemTypes.SECTION_FOOTER;
+            let SECTION_FOOTER = tmp36(7330).FastListItemTypes.SECTION_FOOTER;
             let _HermesInternal6 = HermesInternal;
             let str16 = "";
             let str17 = ":";

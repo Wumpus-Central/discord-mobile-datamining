@@ -1,9 +1,9 @@
-// === Module 18941: ClearAllIncomingRequestsAlertModal ===
+// === Module 18933: ClearAllIncomingRequestsAlertModal ===
 
-// Module 18941 (ClearAllIncomingRequestsAlertModal)
+// Module 18933 (ClearAllIncomingRequestsAlertModal)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 5774 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7651 */;
+import AlertModal from "AlertModal" /* 5745 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7621 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ let closure_7 = async function _handleConfirm() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "+60" };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_7 = async function _handleConfirm() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } catch (tmp7) {
       c0 = tmp;

@@ -1,9 +1,9 @@
-// === Module 12087: isMessagePinnable ===
+// === Module 12064: isMessagePinnable ===
 
-// Module 12087 (isMessagePinnable)
-import isSystemMessageDefault from "isSystemMessage" /* 6574 */;
-import ThreadHooks from "ThreadHooks" /* 6802 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
+// Module 12064 (isMessagePinnable)
+import isSystemMessageDefault from "isSystemMessage" /* 6545 */;
+import ThreadHooks from "ThreadHooks" /* 6774 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
 
 require = fn;
 const Constants = fn(1072);

@@ -1,10 +1,10 @@
-// === Module 6414: ChannelPermissionsConstants ===
+// === Module 6385: ChannelPermissionsConstants ===
 
-// Module 6414 (ChannelPermissionsConstants)
+// Module 6385 (ChannelPermissionsConstants)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import ForumPlatformUtilsDefault from "ForumPlatformUtils" /* 6415 */;
-import GuildTiVPlatformUtilsDefault from "GuildTiVPlatformUtils" /* 6416 */;
+import ForumPlatformUtilsDefault from "ForumPlatformUtils" /* 6386 */;
+import GuildTiVPlatformUtilsDefault from "GuildTiVPlatformUtils" /* 6387 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

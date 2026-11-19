@@ -1,15 +1,15 @@
-// === Module 13673: convertRouteToNavigation ===
+// === Module 13655: convertRouteToNavigation ===
 
-// Module 13673 (convertRouteToNavigation)
+// Module 13655 (convertRouteToNavigation)
 import Constants from "Constants" /* 1072 */;
-import matchPathCompat from "matchPathCompat" /* 4861 */;
-import RouteUtils from "RouteUtils" /* 4874 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4999 */;
-import RootNavigationRef from "RootNavigationRef" /* 5000 */;
-import useChatLayout from "useChatLayout" /* 5002 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6565 */;
-import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 8490 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12243 */;
+import matchPathCompat from "matchPathCompat" /* 4830 */;
+import RouteUtils from "RouteUtils" /* 4843 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4968 */;
+import RootNavigationRef from "RootNavigationRef" /* 4969 */;
+import useChatLayout from "useChatLayout" /* 4971 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6536 */;
+import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 8459 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12226 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -90,7 +90,7 @@ export function convertRouteToNavigation(pathname) {
                   const tmpResult24 = NavigationRouteUtils;
                 }
                 if (tmp17) {
-                  const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "Array" };
+                  const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "a" };
                   NavigationRouteUtils.navigateToChannel(obj10);
                   const tmpResult25 = NavigationRouteUtils;
                 }

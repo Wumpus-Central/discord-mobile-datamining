@@ -1,6 +1,6 @@
-// === Module 10746: UIDensityConstants ===
+// === Module 10724: UIDensityConstants ===
 
-// Module 10746 (UIDensityConstants)
+// Module 10724 (UIDensityConstants)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import size from "module_2" /* 2 */;
 

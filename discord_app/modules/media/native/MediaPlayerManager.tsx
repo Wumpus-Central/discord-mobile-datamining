@@ -1,6 +1,6 @@
-// === Module 15708: MediaPlayerManager ===
+// === Module 15696: MediaPlayerManager ===
 
-// Module 15708 (MediaPlayerManager)
+// Module 15696 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -8,17 +8,17 @@ import Constants from "Constants" /* 1072 */;
 import Constants2 from "Constants" /* 1083 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import RootNavigationRef from "RootNavigationRef" /* 5000 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5449 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8162 */;
+import RootNavigationRef from "RootNavigationRef" /* 4969 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5418 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8131 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4671 */;
-import VoicePanelStore from "VoicePanelStore" /* 6403 */;
-import ChannelStore from "ChannelStore" /* 4672 */;
-import MessageStore from "MessageStore" /* 5872 */;
-import PermissionStore from "PermissionStore" /* 4755 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4640 */;
+import VoicePanelStore from "VoicePanelStore" /* 6374 */;
+import ChannelStore from "ChannelStore" /* 4641 */;
+import MessageStore from "MessageStore" /* 5843 */;
+import PermissionStore from "PermissionStore" /* 4724 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15709 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15697 */;
 import module_560 from "module_560" /* 560 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 import size from "module_2" /* 2 */;
@@ -36,17 +36,17 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
   const obj = {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "Promise",
-    canAccessMedia: "description",
+    canAccessMedia: "ip",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
     rate: "Path",
-    showPip: 624.877,
+    showPip: "angle",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "row"
+    currentlyDisplayedChannelId: "ruler"
   };
   return obj;
 });
@@ -286,7 +286,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "description", rate: false, isPlaying: false, wasPipClosedByUser: "response" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "ip", rate: false, isPlaying: false, wasPipClosedByUser: "__didCreateRequest" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

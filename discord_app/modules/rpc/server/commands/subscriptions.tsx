@@ -1,8 +1,8 @@
-// === Module 15649: subscriptions ===
+// === Module 15636: subscriptions ===
 
-// Module 15649 (subscriptions)
+// Module 15636 (subscriptions)
 import applyDefault from "apply" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 6818 */;
+import RPCErrorDefault from "RPCError" /* 6790 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -39,7 +39,7 @@ export default {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "+60" };
           }
         } else {
           try {

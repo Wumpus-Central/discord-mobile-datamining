@@ -1,8 +1,8 @@
-// === Module 6565: ConjureGuildExperiment ===
+// === Module 6536: ConjureGuildExperiment ===
 
-// Module 6565 (ConjureGuildExperiment)
-import ConjureUserExperiment from "ConjureUserExperiment" /* 6566 */;
-import GuildStore from "GuildStore" /* 4694 */;
+// Module 6536 (ConjureGuildExperiment)
+import ConjureUserExperiment from "ConjureUserExperiment" /* 6537 */;
+import GuildStore from "GuildStore" /* 4663 */;
 
 const require = globalThis.__r;
 

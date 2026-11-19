@@ -1,6 +1,6 @@
-// === Module 13729: GameProfileCommunitiesMobileExperiment ===
+// === Module 13711: GameProfileCommunitiesMobileExperiment ===
 
-// Module 13729 (GameProfileCommunitiesMobileExperiment)
+// Module 13711 (GameProfileCommunitiesMobileExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

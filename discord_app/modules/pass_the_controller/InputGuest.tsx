@@ -1,9 +1,9 @@
-// === Module 14820: InputGuest ===
+// === Module 14806: InputGuest ===
 
-// Module 14820 (InputGuest)
+// Module 14806 (InputGuest)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import InputEvent from "InputEvent" /* 14815 */;
+import InputEvent from "InputEvent" /* 14801 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -129,7 +129,7 @@ prototype["_captureMouse"] = function _captureMouse() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "+60" };
       }
     } else {
       try {
