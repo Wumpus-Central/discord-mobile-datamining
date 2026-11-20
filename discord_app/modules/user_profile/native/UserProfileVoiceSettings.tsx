@@ -281,8 +281,8 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = closure_15();
   let tmp9Result = dependencyMap;
-  const trackUserProfileAction = channel(8016).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = channel(8016);
+  const trackUserProfileAction = channel(8015).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = channel(8015);
   items = [MediaEngineStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => selfMute.isSelfMute());
   const obj2 = channel(504);
@@ -302,12 +302,12 @@ function CurrentUserVoiceSettings(channel) {
     const obj4 = { style: null, title: null, titleStyle: null, children: null };
     const items2 = [tmp.card, style];
     obj4.style = items2;
-    const intl = tmp2(1113).intl;
-    obj4.title = intl.string(tmp2(1113).t.NiTd0e);
+    const intl = tmp2(1112).intl;
+    obj4.title = intl.string(tmp2(1112).t.NiTd0e);
     obj4.titleStyle = tmp.cardTitle;
-    const intl2 = tmp2(1113).intl;
+    const intl2 = tmp2(1112).intl;
     const string = intl2.string;
-    const t = tmp2(1113).t;
+    const t = tmp2(1112).t;
     if (stateFromStores) {
       let stringResult = string(t.NHJxcg);
     } else {
@@ -317,7 +317,7 @@ function CurrentUserVoiceSettings(channel) {
     if (stateFromStores) {
       let MicrophoneIcon = tmp2(9564).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10949).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10891).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -325,22 +325,22 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_13(tmp2(7444).UserProfileFormRow, obj5, "mute");
-    tmp9Result = closure_13(tmp2(7444).UserProfileCardRows, obj6);
+    obj6.children = closure_13(tmp2(7443).UserProfileFormRow, obj5, "mute");
+    tmp9Result = closure_13(tmp2(7443).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_13(trackUserProfileAction(7444), obj4);
-    const tmp6Result = trackUserProfileAction(7444);
+    closure_13(trackUserProfileAction(7443), obj4);
+    const tmp6Result = trackUserProfileAction(7443);
   }
   return tmp8;
 }
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, VideoToggleState: closure_10 } = Constants);
-const Permissions = fn(1083).Permissions;
-const maxValue = fn(5537).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+const Permissions = fn(1082).Permissions;
+const maxValue = fn(5539).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_15 = createStyles.createStyles({
   card: { paddingBottom: 0 },
   cardTitle: { marginBottom: 0 },

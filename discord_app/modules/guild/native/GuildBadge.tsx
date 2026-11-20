@@ -1,10 +1,10 @@
 // discord_app/modules/guild/native/GuildBadge.tsx
 import native from "../../../design/void/native.tsx";
 import GuildRecordUtils from "../../../utils/GuildRecordUtils.tsx";
+import _modDef7206 from "../../../../_runtime/metro/07206__.js";
 import _modDef7207 from "../../../../_runtime/metro/07207__.js";
 import _modDef7208 from "../../../../_runtime/metro/07208__.js";
 import _modDef7209 from "../../../../_runtime/metro/07209__.js";
-import _modDef7210 from "../../../../_runtime/metro/07210__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -92,7 +92,7 @@ class GuildBadge {
     return tmp2;
   }
 }
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const jsx = fn(21).jsx;
 let obj = {
   PARTNERED: 0,
@@ -107,14 +107,14 @@ let obj = {
   [4]: "NONE",
 };
 let obj2 = {
-  [VERIFIED]: _modDef7207,
-  [PARTNERED]: _modDef7208,
-  [VERIFIED_BLACK]: _modDef7209,
-  [PARTNERED_BLACK]: _modDef7210,
+  [VERIFIED]: _modDef7206,
+  [PARTNERED]: _modDef7207,
+  [VERIFIED_BLACK]: _modDef7208,
+  [PARTNERED_BLACK]: _modDef7209,
   [obj.NONE]: null,
 };
 ({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);
-GuildBadge.Sizes = fn(1187).Icon.Sizes;
+GuildBadge.Sizes = fn(1186).Icon.Sizes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadge.tsx");
 

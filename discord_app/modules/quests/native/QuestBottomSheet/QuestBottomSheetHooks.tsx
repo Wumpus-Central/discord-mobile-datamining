@@ -10,7 +10,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(6437).QuestDockMode;
+const QuestDockMode = fn(6439).QuestDockMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx");
 
@@ -100,7 +100,7 @@ export function useMobileActivityPressHandler(questId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -129,11 +129,11 @@ export function useMobileActivityPressHandler(questId) {
             return obj5;
           } else {
             const obj7 = {
-              type: tmp4(9842).AdUserActionType.CLICK_INTERNAL,
-              adCreativeType: tmp4(6444).AdCreativeType.QUEST,
+              type: tmp4(9844).AdUserActionType.CLICK_INTERNAL,
+              adCreativeType: tmp4(6446).AdCreativeType.QUEST,
               adCreativeId: closure_128_0,
-              questContentCTA: tmp4(8311).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
-              surfaceId: tmp4(6440).QuestContent.QUEST_BOTTOM_SHEET,
+              questContentCTA: tmp4(8310).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+              surfaceId: tmp4(6442).QuestContent.QUEST_BOTTOM_SHEET,
               sourceQuestContent: closure_128_1,
               impressionId: null,
               questContentPosition: null,
@@ -148,9 +148,9 @@ export function useMobileActivityPressHandler(questId) {
               questContentPosition = closure_128_4.getQuestContentPosition();
             }
             obj7.questContentPosition = questContentPosition;
-            tmp4(9839).captureAdUserAction(obj7);
+            tmp4(9841).captureAdUserAction(obj7);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           dependencyMap = tmp;

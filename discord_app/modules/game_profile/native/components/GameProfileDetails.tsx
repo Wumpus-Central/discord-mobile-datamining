@@ -32,13 +32,13 @@ const IGDB_ATTRIBUTION_LINK = fn(9656).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(8877).PlatformType.DESKTOP] = fn(9782).ScreenIcon;
-obj.mobile = fn(7269).MobilePhoneIcon;
+obj[fn(8877).PlatformType.DESKTOP] = fn(9784).ScreenIcon;
+obj.mobile = fn(7268).MobilePhoneIcon;
 obj[fn(8877).PlatformType.XBOX] = fn(9678).XboxNeutralIcon;
-obj[fn(8877).PlatformType.PLAYSTATION] = fn(9784).PlaystationNeutralIcon;
-obj[fn(8877).PlatformType.NINTENDO] = fn(9786).NintendoSwitchNeutralIcon;
+obj[fn(8877).PlatformType.PLAYSTATION] = fn(9786).PlaystationNeutralIcon;
+obj[fn(8877).PlatformType.NINTENDO] = fn(9788).NintendoSwitchNeutralIcon;
 obj[fn(8877).PlatformType.ROBLOX] = fn(9668).RobloxNeutralIcon;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj3 = {
   container: { gap: nativeDefault.space.PX_8 },
   headerText: null,
@@ -161,7 +161,7 @@ export default function GameProfileDetails(game) {
             }
             if (length.length <= 0) {
               const mapped3 = gameProfileLinks.map((item) =>
-                trackAction(9790)(item, trackAction(575).colors.ICON_SUBTLE),
+                trackAction(9792)(item, trackAction(575).colors.ICON_SUBTLE),
               );
               const found = mapped3.filter((item) => null != item);
               if (found.length > 0) {
@@ -207,7 +207,7 @@ export default function GameProfileDetails(game) {
                   obj = {
                     size: "md",
                     color: trackAction(575).colors.ICON_SUBTLE,
-                    accessibilityLabel: game(9789).getGameProfilePlatformText(item),
+                    accessibilityLabel: game(9791).getGameProfilePlatformText(item),
                   };
                   return closure_1_8(closure_1_10[item], obj, item);
                 }),

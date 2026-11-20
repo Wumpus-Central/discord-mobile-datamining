@@ -328,8 +328,8 @@ export function getExistingRolesRows(guild, sortedGuildRoles, channel, accessPer
     const intl2 = require("util").intl;
     let stringResult = intl2.string(require("util").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1113).intl;
-      stringResult = intl.string(tmp4(1113).t["gnsna/"]);
+      const intl = tmp4(1112).intl;
+      stringResult = intl.string(tmp4(1112).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
     items = [obj];
@@ -395,8 +395,8 @@ export function getExistingRolesRowWithPermissionDisabled(
     const intl2 = require("util").intl;
     let stringResult = intl2.string(require("util").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1113).intl;
-      stringResult = intl.string(tmp4(1113).t["gnsna/"]);
+      const intl = tmp4(1112).intl;
+      stringResult = intl.string(tmp4(1112).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
     items = [obj];
@@ -664,22 +664,22 @@ export function isPrivateTextChannel(type) {
   }
   return hasItem;
 }
-export function canCreatePrivateChannel(first1, canResult, canResult1) {
+export function canCreatePrivateChannel(GUILD_APP, canResult, PermissionStore) {
   let tmp2 = canResult;
-  if (first1 !== constants2.GUILD_TEXT) {
+  if (GUILD_APP !== constants2.GUILD_TEXT) {
     tmp2 = canResult;
-    if (first1 !== constants2.GUILD_ANNOUNCEMENT) {
+    if (GUILD_APP !== constants2.GUILD_ANNOUNCEMENT) {
       tmp2 = canResult;
-      if (first1 !== constants2.GUILD_APP) {
-        const tmp4 = isGuildVocalChannelType(first1);
+      if (GUILD_APP !== constants2.GUILD_APP) {
+        const tmp4 = isGuildVocalChannelType(GUILD_APP);
         let tmp5 = !tmp4;
         if (!tmp4) {
-          tmp5 = first1 !== constants2.GUILD_CATEGORY;
+          tmp5 = GUILD_APP !== constants2.GUILD_CATEGORY;
         }
         if (!tmp5) {
           let tmp6 = canResult;
           if (canResult) {
-            tmp6 = canResult1;
+            tmp6 = PermissionStore;
           }
           tmp5 = tmp6;
         }

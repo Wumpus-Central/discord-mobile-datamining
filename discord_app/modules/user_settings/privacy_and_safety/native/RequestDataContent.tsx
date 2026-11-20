@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const constants = {
@@ -22,7 +22,7 @@ const constants = {
   ADS: "Ads",
   ZENDESK: "Zendesk",
 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles({
   content: { padding: 16 },
   header: { marginBottom: 8 },
@@ -169,15 +169,15 @@ export default noop.memo(function RequestDataContent() {
               message = message1;
             }
             if (!message) {
-              const intl = closure_1_0(1113).intl;
-              message = intl.string(closure_1_0(1113).t["0F5Jyt"]);
+              const intl = closure_1_0(1112).intl;
+              message = intl.string(closure_1_0(1112).t["0F5Jyt"]);
             }
             const obj2 = { title: null, body: null };
-            const intl2 = closure_1_0(1113).intl;
-            obj2.title = intl2.string(closure_1_0(1113).t.OjbtDm);
+            const intl2 = closure_1_0(1112).intl;
+            obj2.title = intl2.string(closure_1_0(1112).t.OjbtDm);
             obj2.body = message;
-            closure_1_1(5739).show(obj2);
-            const obj = closure_1_1(5739);
+            closure_1_1(5741).show(obj2);
+            const obj = closure_1_1(5741);
           },
         )
         .finally(() => closure_1_1(false));
@@ -219,15 +219,15 @@ export default noop.memo(function RequestDataContent() {
             message = message1;
           }
           if (!message) {
-            const intl = closure_1_0(1113).intl;
-            message = intl.string(closure_1_0(1113).t["0F5Jyt"]);
+            const intl = closure_1_0(1112).intl;
+            message = intl.string(closure_1_0(1112).t["0F5Jyt"]);
           }
           const obj2 = { title: null, body: null };
-          const intl2 = closure_1_0(1113).intl;
-          obj2.title = intl2.string(closure_1_0(1113).t.OjbtDm);
+          const intl2 = closure_1_0(1112).intl;
+          obj2.title = intl2.string(closure_1_0(1112).t.OjbtDm);
           obj2.body = message;
-          closure_1_1(5739).show(obj2);
-          const obj = closure_1_1(5739);
+          closure_1_1(5741).show(obj2);
+          const obj = closure_1_1(5741);
         },
       );
     } else {

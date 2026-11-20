@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import NativeGiftContext from "../../../payments/native/NativeGiftContext.tsx";
 import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation.android.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const module_1655 = _mod1655;
+const module_1653 = _mod1653;
 
 require = fn;
 class GiftBackgroundSelect {
@@ -108,8 +108,8 @@ class GiftBackgroundSelect {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-let closure_8 = module_1655.createAnimatedComponent(fn(17).ScrollView);
-const createStyles = fn(4792);
+let closure_8 = module_1653.createAnimatedComponent(fn(17).ScrollView);
+const createStyles = fn(4794);
 let obj = {
   scrollView: { flex: 1, marginTop: nativeDefault.space.PX_24 },
   contentContainer: { justifyContent: "center" },

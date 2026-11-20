@@ -26,7 +26,7 @@ let closure_10 = async function _getPrimaryAppCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -102,12 +102,12 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
     allowApplicationState: true,
   }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(10374);
+let ApplicationCommandIndexStore = fn(10316);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: closure_6 } =
   ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";
-let items = [fn(2119).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(2117).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/getPrimaryAppCommand.tsx");
 

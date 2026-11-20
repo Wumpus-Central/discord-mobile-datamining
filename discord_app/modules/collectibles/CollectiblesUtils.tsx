@@ -292,7 +292,7 @@ export function getBundleItemsPriceSum(bundledProducts, arg1) {
         return acc + num;
       }, 0);
     } else {
-      tmp(1380);
+      tmp(1378);
     }
     DEFAULT = constants2.DEFAULT;
     obj = require("PlatformUtils");
@@ -401,7 +401,7 @@ export function getProductDiscount(product, hasShopDiscount, DISCORD_ORB) {
           return acc + num;
         }, 0);
       } else {
-        tmp(1380);
+        tmp(1378);
       }
       DEFAULT = constants2.DEFAULT;
       obj = require("PlatformUtils");

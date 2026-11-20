@@ -43,10 +43,10 @@ function FilterFooter(inline) {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(6437).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(6439).QuestHomeSortMethods;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   content: { paddingHorizontal: nativeDefault.space.PX_16 },
   bodyContainer: { flex: 1, minHeight: 0 },
@@ -149,13 +149,13 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
       const options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(9860).getFilterTypeText(item.filter),
+          label: onSortMethodChange(9862).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },
           checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter),
         };
-        return ref(onSortMethodChange(7216).TableCheckboxRow, obj, index);
+        return ref(onSortMethodChange(7215).TableCheckboxRow, obj, index);
       });
       return metroImportDefault(TableRowGroup.TableRowGroup, obj, index);
     }),

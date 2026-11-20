@@ -5,21 +5,21 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ButtonHooks from "ButtonHooks.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import module_1655_mod from "../../../../../_runtime/metro/01655__.js";
+import module_1653_mod from "../../../../../_runtime/metro/01653__.js";
 
 require = fn;
 let closure_2 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
-const ThemeTypes = fn(1072).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5400).IOS_POINTER_STYLE;
+const ThemeTypes = fn(1071).ThemeTypes;
+const IOS_POINTER_STYLE = fn(5402).IOS_POINTER_STYLE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
-let module_1655 = module_1655_mod;
-let closure_9 = module_1655.createAnimatedComponent(Pressable);
-let module_1655 = module_1655_mod;
-let closure_10 = module_1655.createAnimatedComponent(TouchableOpacity);
+let module_1653 = module_1653_mod;
+let closure_9 = module_1653.createAnimatedComponent(Pressable);
+let module_1653 = module_1653_mod;
+let closure_10 = module_1653.createAnimatedComponent(TouchableOpacity);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
 
@@ -70,7 +70,7 @@ export function BaseButton(disabled) {
     onPressOut,
   );
   if (null == pressed) {
-    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 16 };
+    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: false };
     const obj3 = { onLayout, onPressIn, onPressOut };
     obj2.buttonAnimationProps = obj3;
     let obj4 = obj2;

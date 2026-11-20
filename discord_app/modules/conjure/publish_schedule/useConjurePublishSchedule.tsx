@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish_schedule/useConjurePublishSchedule.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4089 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -64,7 +64,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
           .catch(() => {
             if (ref.current.value === sum) {
               const intl = util.intl;
-              closure_2_8(intl.string(_modDef4089.n25haz));
+              closure_2_8(intl.string(_modDef4091.n25haz));
               closure_4(false);
             }
           });
@@ -101,7 +101,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -171,7 +171,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
                     closure_129_7(false);
                   }
                   c5 = 3;
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   closure_129_3(closure_128_1);
                   const intl = tmp6(tmp80[6]).intl;

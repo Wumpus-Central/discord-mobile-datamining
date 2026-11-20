@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsBackgroundChat.tsx
-import Link from "../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../_runtime/01501_Link.js";
 import useChatLayoutDefault from "../../../chat/native/useChatLayout.tsx";
-import Portal from "../../../../../_runtime/04984_Portal.js";
+import Portal from "../../../../../_runtime/04986_Portal.js";
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

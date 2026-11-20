@@ -4,7 +4,7 @@ import getGuildTransitionRoute from "getGuildTransitionRoute.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
-const Routes = fn(1072).Routes;
+const Routes = fn(1071).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/transitionToGuild.native.tsx");
 

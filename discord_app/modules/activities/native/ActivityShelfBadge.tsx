@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { badge: null, newBadge: null, updatedBadge: null, elevationShadow: null, badgeText: null };
 const rect = {
   position: "absolute",
@@ -41,12 +41,12 @@ obj2.updatedBadge = {
   height: 16,
   backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND,
 };
-const native = fn(1187);
-obj2.elevationShadow = native.generateBoxShadowStyle(fn(1187).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1186);
+obj2.elevationShadow = native.generateBoxShadowStyle(fn(1186).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj2.badgeText = {
   textTransform: "uppercase",
   marginLeft: 2,
-  fontFamily: fn(1072).Fonts.DISPLAY_EXTRABOLD,
+  fontFamily: fn(1071).Fonts.DISPLAY_EXTRABOLD,
   lineHeight: 16,
   fontSize: 12,
 };

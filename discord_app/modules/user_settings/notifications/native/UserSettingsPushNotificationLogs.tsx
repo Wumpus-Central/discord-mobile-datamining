@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   list: null,
@@ -26,15 +26,15 @@ let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
-  height: fn(7123).InputHeights.MD,
-  width: fn(7123).InputHeights.MD,
+  height: fn(7122).InputHeights.MD,
+  width: fn(7122).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };
 obj2.shareButton = size;
 let obj5 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.log = { paddingBottom: nativeDefault.space.PX_16 };
-obj2.code = { fontFamily: fn(1072).Fonts.CODE_BOLD };
+obj2.code = { fontFamily: fn(1071).Fonts.CODE_BOLD };
 let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting(
@@ -68,7 +68,7 @@ export default function UserSettingsPushNotificationLogs() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -101,7 +101,7 @@ export default function UserSettingsPushNotificationLogs() {
             closure_128_0 = value;
             v1(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -160,7 +160,7 @@ export default function UserSettingsPushNotificationLogs() {
   let obj = { style: tmp9.wrap, children: null };
   let obj2 = { style: tmp9.searchWrap, children: null };
   let items1 = [
-    closure_7(defaultValue(7308).SearchBar, {
+    closure_7(defaultValue(7307).SearchBar, {
       size: "md",
       placeholder: "Filter (regex)",
       onChange: tmp[1],
@@ -168,8 +168,8 @@ export default function UserSettingsPushNotificationLogs() {
     }),
   ];
   let obj3 = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
-  const intl = defaultValue(1113).intl;
-  obj3.accessibilityLabel = intl.string(defaultValue(1113).t.leICvh);
+  const intl = defaultValue(1112).intl;
+  obj3.accessibilityLabel = intl.string(defaultValue(1112).t.leICvh);
   obj3.onPress = asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -181,7 +181,7 @@ export default function UserSettingsPushNotificationLogs() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -198,7 +198,7 @@ export default function UserSettingsPushNotificationLogs() {
             closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp5(11113)(), done: false };
+            const obj4 = { value: tmp5(11055)(), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -210,10 +210,10 @@ export default function UserSettingsPushNotificationLogs() {
           return obj5;
         } else {
           closure_128_0 = value;
-          const obj6 = { message: tmp5(11114)(closure_128_0, false) };
+          const obj6 = { message: tmp5(11056)(closure_128_0, false) };
           tmp2(9598).showShareActionSheet(obj6, "push-notification-logs");
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;
@@ -221,14 +221,14 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj3.children = closure_7(defaultValue(10014).ShareIcon, {});
-  items1[1] = closure_7(defaultValue(6911).PressableOpacity, obj3);
+  obj3.children = closure_7(defaultValue(10017).ShareIcon, {});
+  items1[1] = closure_7(defaultValue(6910).PressableOpacity, obj3);
   obj2.children = items1;
   let items2 = [closure_8(View, obj2)];
   let obj4 = { contentContainerStyle: null, data: null, renderItem: null };
   let obj5 = {};
   const merged = Object.assign(tmp9.list);
-  obj5.paddingBottom = first1(1630)().bottom + first1(575).space.PX_16;
+  obj5.paddingBottom = first1(1628)().bottom + first1(575).space.PX_16;
   obj4.contentContainerStyle = obj5;
   obj4.data = tmp6;
   obj4.renderItem = function renderItem(item) {
@@ -254,7 +254,7 @@ export default function UserSettingsPushNotificationLogs() {
     obj.children = items;
     return React5(View, obj, item.index);
   };
-  items2[1] = closure_7(defaultValue(7371).FlashList, obj4);
+  items2[1] = closure_7(defaultValue(7370).FlashList, obj4);
   obj.children = items2;
   return closure_8(View, obj);
 }

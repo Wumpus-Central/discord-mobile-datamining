@@ -8,19 +8,19 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const RegistrationUIStore = fn(17497);
+const RegistrationUIStore = fn(17324);
 ({
   setRegistrationErrors: closure_6,
   updateRegistrationOptions: metroImportDefault,
   useRegistrationUIStore: closure_8,
 } = RegistrationUIStore);
-const RegistrationConstants = fn(17498);
+const RegistrationConstants = fn(17325);
 ({
   authStateToRegisterTransitionStep: closure_9,
   RegisterTransitionSteps: closure_10,
   RegistrationTransitionActionTypes: closure_11,
 } = RegistrationConstants);
-const AbortCodes = fn(1072).AbortCodes;
+const AbortCodes = fn(1071).AbortCodes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");
 
@@ -61,7 +61,7 @@ export function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -97,7 +97,7 @@ export function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
             closure_130_5 = closure_4;
             if (closure_130_5 instanceof sourceState(navigation[10]).CaptchaCancelError) {
               c7 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             } else {
               authenticationErrorsFromAPIError = sourceState(navigation[11]).getAuthenticationErrorsFromAPIError(
                 closure_130_5,
@@ -186,7 +186,7 @@ export function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
             };
             tmp5.push(sourceState(navigation[13]).AuthStates.VERIFY_PHONE, obj13);
             c7 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp55) {
           closure_4 = tmp55;

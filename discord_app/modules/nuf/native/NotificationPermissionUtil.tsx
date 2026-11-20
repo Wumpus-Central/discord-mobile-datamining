@@ -21,7 +21,7 @@ let closure_13 = async function _requestAndroidNotificationPermission() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -64,7 +64,7 @@ let closure_13 = async function _requestAndroidNotificationPermission() {
           return obj8;
         } else {
           c5 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
         const obj2 = closure_129_1(closure_129_2[11]);
       } else if (arg0 === 1) {
@@ -90,7 +90,7 @@ let closure_13 = async function _requestAndroidNotificationPermission() {
       }
       c3 = 0;
       c5 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp30) {
       closure_2 = tmp30;
       if (tmp4 === c3) {
@@ -113,7 +113,7 @@ let closure_14 = async function _requestPushNotificationPermission(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -167,7 +167,7 @@ let closure_14 = async function _requestPushNotificationPermission(arg0) {
               c6 = 1;
               const obj11 = {
                 value: closure_132_1(closure_132_2[14]).requestPermission((permission_granted) => {
-                  action_location(1256).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
+                  action_location(1255).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
                     action_type,
                     action_location,
                     permission_granted,
@@ -206,7 +206,7 @@ let closure_15 = async function _enableProvisionalPushNotification() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -261,7 +261,7 @@ let closure_15 = async function _enableProvisionalPushNotification() {
           });
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -271,9 +271,9 @@ let closure_15 = async function _enableProvisionalPushNotification() {
 };
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_6, Platform: metroImportDefault } = get_ActivityIndicator);
-const EventActionType = fn(13190).EventActionType;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_12 = fn(6375).NotificationAuthorizationStatus;
+const EventActionType = fn(13160).EventActionType;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+let closure_12 = fn(6377).NotificationAuthorizationStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NotificationPermissionUtil.tsx");
 
@@ -311,7 +311,7 @@ export function useShowReactivationPrompt() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -345,7 +345,7 @@ export function useShowReactivationPrompt() {
               tmp4(true);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c2 = tmp;

@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const MessageFlags = fn(1072).MessageFlags;
+const MessageFlags = fn(1071).MessageFlags;
 const jsx = fn(21).jsx;
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { content: null, blockedMessage: null };
 const tmp2 = new RowGeneratorDefault();
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -37,8 +37,8 @@ export default function AutomodRemovedContentSheet(action) {
       ephemeralIndication = message.ephemeralIndication;
     }
     if (null != ephemeralIndication) {
-      const intl = message(1113).intl;
-      message.message.ephemeralIndication.content = intl.string(message(1113).t.Nb1EQx);
+      const intl = message(1112).intl;
+      message.message.ephemeralIndication.content = intl.string(message(1112).t.Nb1EQx);
     }
   }, []);
   const memo = noop.useMemo(() => {
@@ -55,11 +55,11 @@ export default function AutomodRemovedContentSheet(action) {
     }
     return messageRecord;
   }, items);
-  let intl = message(1113).intl;
+  let intl = message(1112).intl;
   if (null != thread) {
-    let StrErG = tmp5(1113).t["8czF24"];
+    let StrErG = tmp5(1112).t["8czF24"];
   } else {
-    StrErG = tmp5(1113).t.StrErG;
+    StrErG = tmp5(1112).t.StrErG;
   }
   let obj = { title: intl.string(StrErG), subtitle: null };
   let name;
@@ -67,7 +67,7 @@ export default function AutomodRemovedContentSheet(action) {
     name = thread.name;
   }
   let obj2 = {
-    header: jsx(message(7396).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+    header: jsx(message(7395).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
     children: null,
   };
   obj.subtitle = name;
@@ -79,12 +79,12 @@ export default function AutomodRemovedContentSheet(action) {
     let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
   } else {
     const obj6 = { variant: "body-md/normal", color: "text-default", children: action.notice };
-    tmp4Result = jsx(tmp5(5383).Text, { variant: "body-md/normal", color: "text-default", children: action.notice });
+    tmp4Result = jsx(tmp5(5385).Text, { variant: "body-md/normal", color: "text-default", children: action.notice });
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;
-  return jsx(message(7434).ActionSheet, {
-    header: jsx(message(7396).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+  return jsx(message(7433).ActionSheet, {
+    header: jsx(message(7395).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
     children: null,
   });
 }

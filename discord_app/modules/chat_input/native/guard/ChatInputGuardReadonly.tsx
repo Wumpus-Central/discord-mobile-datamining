@@ -18,10 +18,10 @@ function sortChannelsByLastMessageId(id, id2) {
   const obj = SnowflakeUtilsDefault;
   return obj.compare(ReadStateStore.lastMessageId(id2.id), ReadStateStore.lastMessageId(id.id));
 }
-const isTextChannel = fn(4645).isTextChannel;
-let closure_6 = fn(4722).GUILD_SELECTABLE_CHANNELS_KEY;
-const TextAreaCta = fn(12735).TextAreaCta;
-const Constants = fn(1072);
+const isTextChannel = fn(4647).isTextChannel;
+let closure_6 = fn(4724).GUILD_SELECTABLE_CHANNELS_KEY;
+const TextAreaCta = fn(12705).TextAreaCta;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -7,13 +7,14 @@ import timing_timing from "../../../design/animation/reanimated/timing/timing.ts
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import PollsUtils from "../PollsUtils.tsx";
-import formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef12089 from "../../../../_runtime/metro/12089__.js";
-import _modDef12090 from "../../../../_runtime/metro/12090__.js";
+import PollTextUtils from "../PollTextUtils.tsx";
+import chat_formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
+import _modDef12031 from "../../../../_runtime/metro/12031__.js";
+import _modDef12032 from "../../../../_runtime/metro/12032__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -57,6 +58,8 @@ function PollEmoji(emoji) {
 function PollAnswerButton(answer) {
   answer = answer.answer;
   ({ reaction, selected, setSelectedAnswerId } = answer);
+  let str;
+  c3 = undefined;
   const tmp = closure_15();
   let num;
   if (reaction != null) {
@@ -69,14 +72,34 @@ function PollAnswerButton(answer) {
     num = 0;
   }
   items = [setSelectedAnswerId, answer.answer_id];
-  let str = "text-default";
+  str = "text-default";
   const callback = noop.useCallback(() => {
     setSelectedAnswerId(String(answer.answer_id));
   }, items);
   if (selected) {
     str = "interactive-text-active";
   }
-  const intl = util.intl;
+  const text = answer.poll_media.text;
+  c3 = text;
+  const items1 = [text];
+  const items2 = [text, str];
+  const memo = noop.useMemo(() => {
+    let pollPlainText;
+    if (null != c3) {
+      pollPlainText = PollTextUtils.getPollPlainText(tmp);
+    }
+    return pollPlainText;
+  }, items1);
+  const memo1 = noop.useMemo(
+    () =>
+      MarkupUtilsDefault.parsePoll(c3, true, {
+        textVariant: "body-sm/semibold",
+        textColor: str,
+        noStyleAndInteraction: true,
+      }),
+    items2,
+  );
+  const intl = answer(str[17]).intl;
   const obj2 = {
     ref: answer.ref,
     onPress: callback,
@@ -86,52 +109,64 @@ function PollAnswerButton(answer) {
     accessibilityLabel: null,
     children: null,
   };
-  const items1 = [tmp.answerButton];
+  const items3 = [tmp.answerButton];
   let answerSelected;
   if (selected) {
     answerSelected = tmp.answerSelected;
   }
-  items1[1] = answerSelected;
-  obj2.style = items1;
+  items3[1] = answerSelected;
+  obj2.style = items3;
   obj2.accessibilityState = { selected };
-  obj2.accessibilityLabel = intl.formatToPlainString(util.t.wqBc7A, { numVotes: num, option: answer.poll_media.text });
-  let tmp8 = null;
+  obj2.accessibilityLabel = intl.formatToPlainString(answer(str[17]).t.wqBc7A, { numVotes: num, option: memo });
+  let tmp10 = null;
   if (null != answer.poll_media.emoji) {
     const obj3 = { style: tmp.answerEmoji, emoji: answer.poll_media.emoji };
-    tmp8 = state(PollEmoji, obj3);
+    tmp10 = closure_13(PollEmoji, obj3);
   }
-  const items2 = [tmp8, ,];
-  let tmp11 = null;
+  const items4 = [tmp10, ,];
+  let tmp13 = null;
   if (null != answer.poll_media.text) {
-    const obj4 = {
-      style: tmp.answerText,
-      variant: "body-sm/semibold",
-      color: str,
-      lineClamp: 1,
-      children: answer.poll_media.text,
-    };
-    tmp11 = state(Text_Text.Text, obj4);
+    const obj4 = { style: tmp.answerText, variant: "body-sm/semibold", color: str, lineClamp: 1, children: memo1 };
+    tmp13 = closure_13(tmp5(tmp6[19]).Text, obj4);
   }
-  items2[1] = tmp11;
+  items4[1] = tmp13;
   const obj5 = { variant: "body-sm/semibold", color: str, lineClamp: 1, children: null };
-  const items3 = [" ", "(", num.toLocaleString(), ")"];
-  obj5.children = items3;
-  items2[2] = gesture(Text_Text.Text, obj5);
-  obj2.children = items2;
-  return gesture(Pressables.PressableHighlight, obj2);
+  const items5 = [" ", "(", num.toLocaleString(), ")"];
+  obj5.children = items5;
+  items4[2] = closure_14(answer(str[19]).Text, obj5);
+  obj2.children = items4;
+  return closure_14(answer(str[18]).PressableHighlight, obj2);
 }
 function PollVotesHeader(message) {
   message = message.message;
   const selectedAnswerId = message.selectedAnswerId;
   const setSelectedAnswerId = message.setSelectedAnswerId;
+  c3 = undefined;
+  let ref;
   noop = undefined;
+  closure_6 = undefined;
   let tmp = closure_15();
-  items = [message.reactions];
-  const memo = noop.useMemo(() => PollsUtils.getTotalVotes(message.reactions), items);
-  const ref = noop.useRef(null);
-  closure_4 = noop.useRef(null);
-  noop = noop.useRef(false);
-  const items1 = [selectedAnswerId];
+  const poll = message.poll;
+  let text;
+  if (poll != null) {
+    text = poll.question.text;
+  }
+  c3 = text;
+  items = [text];
+  const items1 = [message.reactions];
+  const memo = noop.useMemo(
+    () =>
+      MarkupUtilsDefault.parsePoll(c3, true, {
+        textVariant: "heading-md/semibold",
+        textColor: "mobile-text-heading-primary",
+      }),
+    items,
+  );
+  const memo1 = noop.useMemo(() => PollsUtils.getTotalVotes(message.reactions), items1);
+  ref = noop.useRef(null);
+  noop = noop.useRef(null);
+  closure_6 = noop.useRef(false);
+  const items2 = [selectedAnswerId];
   const effect = noop.useEffect(() => {
     const timerId = setTimeout(
       asyncGeneratorStep(async () => {
@@ -145,7 +180,7 @@ function PollVotesHeader(message) {
             const obj = { value, done: true };
             return obj;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -220,10 +255,10 @@ function PollVotesHeader(message) {
               pageX = closure_128_7.pageX;
               x = closure_128_3[2].x;
               closure_128_11 = !useReducedMotion.useReducedMotion;
-              if (closure_129_5.current) {
+              if (closure_129_6.current) {
                 if (pageX >= scrollPageX) {
                   if (pageX + width > scrollPageX + scrollWidth) {
-                    const current3 = closure_129_3.current;
+                    const current3 = closure_129_4.current;
                     if (current3 != null) {
                       const point = { x: x + width - scrollWidth + 16, y: 0, animated: closure_128_11 };
                       current3.scrollTo(point);
@@ -231,17 +266,17 @@ function PollVotesHeader(message) {
                   }
                 }
               } else {
-                const current = closure_129_3.current;
+                const current = closure_129_4.current;
                 if (current != null) {
                   const point1 = { x: x + width / 2 - scrollWidth / 2, y: 0, animated: closure_128_11 };
                   current.scrollTo(point1);
                 }
-                closure_129_5.current = true;
+                closure_129_6.current = true;
                 v3 = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             }
-            const current2 = closure_129_3.current;
+            const current2 = closure_129_4.current;
             if (current2 != null) {
               const point2 = { x: x - 16, y: 0, animated: closure_128_11 };
               current2.scrollTo(point2);
@@ -254,9 +289,9 @@ function PollVotesHeader(message) {
       }),
       0,
     );
-  }, items1);
-  message(setSelectedAnswerId[19]);
-  let tmp9 = null;
+  }, items2);
+  message(setSelectedAnswerId[21]);
+  let tmp11 = null;
   if (null != message.poll) {
     let obj = { children: null };
     let obj2 = {
@@ -264,15 +299,15 @@ function PollVotesHeader(message) {
       variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
-      children: message.poll.question.text,
+      children: memo,
     };
-    const items2 = [closure_13(tmp5(tmp6[17]).Text, obj2), ,];
+    const items3 = [closure_13(tmp7(tmp8[19]).Text, obj2), ,];
     let obj3 = { style: tmp.subheaderText, variant: "body-md/medium", color: "text-default", children: null };
-    const intl = tmp5(tmp6[15]).intl;
-    let obj4 = { count: memo };
-    obj3.children = intl.format(tmp5(tmp6[15]).t.XRkuof, obj4);
-    items2[1] = closure_13(tmp5(tmp6[17]).Text, obj3);
-    const obj5 = { gesture: tmp8, children: null };
+    const intl = tmp7(tmp8[17]).intl;
+    let obj4 = { count: memo1 };
+    obj3.children = intl.format(tmp7(tmp8[17]).t.XRkuof, obj4);
+    items3[1] = closure_13(tmp7(tmp8[19]).Text, obj3);
+    const obj5 = { gesture: tmp10, children: null };
     const obj11 = {
       ref,
       style: null,
@@ -284,30 +319,30 @@ function PollVotesHeader(message) {
       children: null,
     };
     ({ answerScroll: obj6.style, answerScrollContainer: obj6.contentContainerStyle } = tmp);
-    const intl2 = tmp5(tmp6[15]).intl;
-    obj11.accessibilityLabel = intl2.string(tmp5(tmp6[15]).t["qbir+4"]);
+    const intl2 = tmp7(tmp8[17]).intl;
+    obj11.accessibilityLabel = intl2.string(tmp7(tmp8[17]).t["qbir+4"]);
     const answers = message.poll.answers;
     obj11.children = answers.map((answer) => {
       const tmp = selectedAnswerId === String(answer.answer_id);
       let tmp4;
       if (tmp) {
-        tmp4 = closure_4;
+        tmp4 = closure_5;
       }
       const obj = {
         ref: tmp4,
         answer,
         selected: tmp,
-        reaction: formatPollMessageChatData.reactionForId(message.reactions, String(answer.answer_id)),
+        reaction: chat_formatPollMessageChatData.reactionForId(message.reactions, String(answer.answer_id)),
         setSelectedAnswerId,
       };
       return state(PollAnswerButton, obj, answer.answer_id);
     });
     obj5.children = closure_13(closure_7, obj11);
-    items2[2] = closure_13(tmp5(tmp6[19]).GestureDetector, obj5);
-    obj.children = items2;
-    tmp9 = closure_14(closure_6, obj);
+    items3[2] = closure_13(tmp7(tmp8[21]).GestureDetector, obj5);
+    obj.children = items3;
+    tmp11 = closure_14(closure_6, obj);
   }
-  return tmp9;
+  return tmp11;
 }
 function VotersList(channelId) {
   channelId = channelId.channelId;
@@ -316,8 +351,8 @@ function VotersList(channelId) {
   const reaction = channelId.reaction;
   let analyticsLocations;
   let sharedValue;
-  analyticsLocations = messageId(analyticsLocations[21])().analyticsLocations;
-  const tmp4 = messageId(analyticsLocations[22])({ channelId, messageId, reaction });
+  analyticsLocations = messageId(analyticsLocations[23])().analyticsLocations;
+  const tmp4 = messageId(analyticsLocations[24])({ channelId, messageId, reaction });
   const reactors = tmp4.reactors;
   const tmp = closure_15();
   const tmp2 = messageId;
@@ -352,13 +387,13 @@ function VotersList(channelId) {
     if (stateFromStores != null) {
       id = stateFromStores.id;
     }
-    let nickname = messageId(analyticsLocations[25]).getNickname(guild_id, id, item);
+    let nickname = messageId(analyticsLocations[27]).getNickname(guild_id, id, item);
     if (nickname == null) {
-      nickname = messageId(analyticsLocations[26]).getGlobalName(item);
-      const tmpResult = messageId(analyticsLocations[26]);
+      nickname = messageId(analyticsLocations[28]).getGlobalName(item);
+      const tmpResult = messageId(analyticsLocations[28]);
     }
-    const obj = messageId(analyticsLocations[25]);
-    const userTag = messageId(analyticsLocations[26]).getUserTag(item);
+    const obj = messageId(analyticsLocations[27]);
+    const userTag = messageId(analyticsLocations[28]).getUserTag(item);
     user = user.getUser(item.id);
     const obj2 = {
       start: 0 === index,
@@ -377,12 +412,12 @@ function VotersList(channelId) {
       user = item;
     }
     obj3.user = user;
-    obj3.size = _undefined(analyticsLocations[28]).AvatarSizes.SMALL;
-    obj2.icon = closure_1_13(_undefined(analyticsLocations[28]).Avatar, obj3);
+    obj3.size = _undefined(analyticsLocations[30]).AvatarSizes.SMALL;
+    obj2.icon = closure_1_13(_undefined(analyticsLocations[30]).Avatar, obj3);
     let tmp9Result = nickname;
     if (nickname == null) {
       const obj4 = { user: item };
-      tmp9Result = closure_1_13(messageId(analyticsLocations[29]), obj4);
+      tmp9Result = closure_1_13(messageId(analyticsLocations[31]), obj4);
     }
     obj2.label = tmp9Result;
     let tmp13 = null;
@@ -399,7 +434,7 @@ function VotersList(channelId) {
         messageId,
       });
     };
-    return closure_1_13(_undefined(analyticsLocations[27]).TableRow, obj2);
+    return closure_1_13(_undefined(analyticsLocations[29]).TableRow, obj2);
   }, items1);
   let obj3 = require("initialize");
   let obj4 = sharedValue;
@@ -407,7 +442,7 @@ function VotersList(channelId) {
   if (0 === reactors.length) {
     num = 0;
   }
-  sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(num);
+  sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(num);
   const items2 = [sharedValue, reactors.length];
   const effect = obj4.useEffect(() => {
     if (0 !== reactors.length) {
@@ -416,7 +451,7 @@ function VotersList(channelId) {
       const result1 = sharedValue.set(0);
     }
   }, items2);
-  const obj5 = require("../../../../_runtime/metro/01655__.js");
+  const obj5 = require("../../../../_runtime/metro/01653__.js");
   const items3 = [closure_19, sharedValue];
   _require = undefined;
   [tmp11, tmp12] = items3;
@@ -430,7 +465,7 @@ function VotersList(channelId) {
   PollVotesActionSheetTsx1.__closure = items4;
   PollVotesActionSheetTsx1.__workletHash = 11579760846087;
   PollVotesActionSheetTsx1.__initData = tmp11;
-  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(PollVotesActionSheetTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(PollVotesActionSheetTsx1);
   const obj6 = {
     style: animatedStyle,
     children: closure_13(require("../../../../discord_common/js/packages/flash-list/index.js").BottomSheetFlashList, {
@@ -440,7 +475,7 @@ function VotersList(channelId) {
       onScroll: reactorsOnScrollNative,
     }),
   };
-  return closure_13(tmp2(analyticsLocations[31]).View, obj6);
+  return closure_13(tmp2(analyticsLocations[33]).View, obj6);
 }
 function NoResults() {
   const tmp = closure_15();
@@ -449,9 +484,9 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12089;
+    let tmp2Result = _modDef12031;
   } else {
-    tmp2Result = _modDef12090;
+    tmp2Result = _modDef12032;
   }
   obj2.source = tmp2Result;
   items = [state(tmp8, obj2), ,];
@@ -475,7 +510,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   headerText: { textAlign: "center", paddingHorizontal: 16 },
   subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 },
@@ -527,17 +562,18 @@ export default function PollVotesActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   let stateFromStores;
+  noop = undefined;
   const tmp = closure_15();
   const tmp4 = stateFromStores(noop.useState(channelId.initialAnswerId), 2);
   const selectedAnswerId = tmp4[0];
-  const tmp3 = messageId(selectedAnswerId[21]);
+  const tmp3 = messageId(selectedAnswerId[23]);
   items = [MessageStore];
   stateFromStores = channelId(selectedAnswerId[12]).useStateFromStores(items, () =>
     MessageStore.getMessage(channelId, messageId),
   );
   closure_4 = tmp8;
   const items1 = [null != stateFromStores && null != stateFromStores.poll];
-  const effect = noop.useEffect(() => {
+  const effect = obj.useEffect(() => {
     if (!closure_4) {
       ActionSheetActionCreatorsDefault.hideActionSheet("PollVotesActionSheet");
     }
@@ -547,24 +583,30 @@ export default function PollVotesActionSheet(channelId) {
     reactions = stateFromStores.reactions;
   }
   const items2 = [reactions, selectedAnswerId];
-  const memo = noop.useMemo(() => {
+  const memo = obj.useMemo(() => {
     let reactions;
     if (stateFromStores != null) {
       reactions = stateFromStores.reactions;
     }
     if (null != reactions) {
-      return formatPollMessageChatData.reactionForId(stateFromStores.reactions, first);
+      return chat_formatPollMessageChatData.reactionForId(stateFromStores.reactions, first);
     }
   }, items2);
-  if (null != stateFromStores && null != stateFromStores.poll) {
-    let found;
-    if (stateFromStores != null) {
-      const poll = stateFromStores.poll;
-      if (poll != null) {
-        const answers = poll.answers;
-        found = answers.find((answer_id) => String(answer_id.answer_id) === first);
-      }
+  let found;
+  if (stateFromStores != null) {
+    const poll = stateFromStores.poll;
+    if (poll != null) {
+      const answers = poll.answers;
+      found = answers.find((answer_id) => String(answer_id.answer_id) === first);
     }
+  }
+  let text;
+  if (found != null) {
+    text = found.poll_media.text;
+  }
+  noop = text;
+  [][0] = text;
+  if (null != stateFromStores && null != stateFromStores.poll) {
     let num;
     if (memo != null) {
       const count_details = memo.count_details;
@@ -575,32 +617,28 @@ export default function PollVotesActionSheet(channelId) {
     if (num == null) {
       num = 0;
     }
-    const obj3 = { value: tmp3(messageId(selectedAnswerId[39]).POLL_VOTES).analyticsLocations, children: null };
+    const obj3 = { value: tmp3(messageId(selectedAnswerId[41]).POLL_VOTES).analyticsLocations, children: null };
     const obj4 = { scrollable: true, header: null, children: null };
     const obj5 = { message: stateFromStores, selectedAnswerId, setSelectedAnswerId: tmp4[1] };
     obj4.header = closure_13(PollVotesHeader, obj5);
     const obj6 = { style: tmp.answerName, variant: "body-sm/semibold", color: "text-default", children: null };
-    let text;
-    if (found != null) {
-      text = found.poll_media.text;
-    }
-    const items3 = [text, " - "];
-    const intl = tmp6(tmp2[15]).intl;
+    const items3 = [tmp14, " - "];
+    const intl = tmp6(tmp2[17]).intl;
     const obj7 = { count: num };
-    items3[2] = intl.format(tmp6(tmp2[15]).t["SG/Cyy"], obj7);
+    items3[2] = intl.format(tmp6(tmp2[17]).t["SG/Cyy"], obj7);
     obj6.children = items3;
-    const items4 = [closure_14(tmp6(tmp2[17]).Text, obj6)];
+    const items4 = [closure_14(tmp6(tmp2[19]).Text, obj6)];
     if (null != memo) {
       if (num > 0) {
         const obj8 = { channelId, messageId, reaction: memo };
-        let tmp13Result = closure_13(VotersList, obj8);
+        let tmp15Result = closure_13(VotersList, obj8);
       }
-      items4[1] = tmp13Result;
+      items4[1] = tmp15Result;
       obj4.children = items4;
-      obj3.children = closure_14(tmp6(tmp2[41]).BottomSheet, obj4);
-      return closure_13(tmp6(tmp2[21]).AnalyticsLocationProvider, obj3);
+      obj3.children = closure_14(tmp6(tmp2[43]).BottomSheet, obj4);
+      return closure_13(tmp6(tmp2[23]).AnalyticsLocationProvider, obj3);
     }
-    tmp13Result = closure_13(NoResults, {});
+    tmp15Result = closure_13(NoResults, {});
   } else {
     return null;
   }

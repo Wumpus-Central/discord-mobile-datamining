@@ -5,26 +5,26 @@ import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestsExperimentLocations = fn(6437).QuestsExperimentLocations;
-const expandedHeight = fn(16529).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const QuestsExperimentLocations = fn(6439).QuestsExperimentLocations;
+const expandedHeight = fn(16352).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");
 
 export default noop.memo(function QuestDockUnenrolledBackground() {
-  const questDockQuest = handleAcceptQuest(16562).useQuestDockQuest();
-  const obj = handleAcceptQuest(16562);
-  const questDockHeroAsset = handleAcceptQuest(16524).useQuestDockHeroAsset(questDockQuest);
+  const questDockQuest = handleAcceptQuest(16385).useQuestDockQuest();
+  const obj = handleAcceptQuest(16385);
+  const questDockHeroAsset = handleAcceptQuest(16346).useQuestDockHeroAsset(questDockQuest);
   ({ videoAsset, staticUrl } = questDockHeroAsset);
-  const obj2 = handleAcceptQuest(16524);
-  const token = handleAcceptQuest(5356).useToken(nativeDefault.colors.CARD_BACKGROUND_DEFAULT);
-  const QuestBarStartQuestOnClickExperiment = handleAcceptQuest(16643).QuestBarStartQuestOnClickExperiment;
+  const obj2 = handleAcceptQuest(16346);
+  const token = handleAcceptQuest(5358).useToken(nativeDefault.colors.CARD_BACKGROUND_DEFAULT);
+  const QuestBarStartQuestOnClickExperiment = handleAcceptQuest(16466).QuestBarStartQuestOnClickExperiment;
   let isEnrolling = QuestBarStartQuestOnClickExperiment.useConfig({
     location: QuestsExperimentLocations.QUESTS_BAR_MOBILE,
   }).enabled;
-  const obj3 = handleAcceptQuest(5356);
+  const obj3 = handleAcceptQuest(5358);
   const obj4 = { location: QuestsExperimentLocations.QUESTS_BAR_MOBILE };
-  const questDockAcceptQuest = handleAcceptQuest(16640).useQuestDockAcceptQuest();
+  const questDockAcceptQuest = handleAcceptQuest(16463).useQuestDockAcceptQuest();
   handleAcceptQuest = questDockAcceptQuest.handleAcceptQuest;
   items = [handleAcceptQuest];
   const callback = noop.useCallback(() => {
@@ -40,7 +40,7 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
     disabled: null,
   };
   let url;
-  const obj5 = handleAcceptQuest(16640);
+  const obj5 = handleAcceptQuest(16463);
   if (videoAsset != null) {
     url = videoAsset.url;
   }

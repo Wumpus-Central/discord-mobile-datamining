@@ -11,7 +11,7 @@ import ActivitySessionAnalytics from "../../../activities/ActivitySessionAnalyti
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ApplicationFlags: closure_4, Endpoints: hasOwnProperty, RPCCommands, RPCErrors: closure_6 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/commands/application.tsx");
@@ -72,7 +72,7 @@ export default {
     },
   },
   [RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: fn(6233).RPC_LOCAL_SCOPE,
+    scope: fn(6235).RPC_LOCAL_SCOPE,
     handler(socket) {
       const id = socket.socket.application.id;
       if (null == id) {

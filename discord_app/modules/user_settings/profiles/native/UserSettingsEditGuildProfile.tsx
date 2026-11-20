@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   guildSelector: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -41,10 +41,10 @@ export default function UserSettingsEditGuildProfile(arg0) {
     GuildIdentityActionCreators.setCurrentGuild(guild.id);
   }
   let tmp = closure_10();
-  const tmp4 = guild(7401);
+  const tmp4 = guild(7400);
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmp7 = guild(15873)();
+  const tmp7 = guild(15837)();
   guild = tmp7.guild;
   ({ resetPending: c2, handleSubmit: c3 } = tmp7);
   let obj = stateFromStores(504);
@@ -66,8 +66,8 @@ export default function UserSettingsEditGuildProfile(arg0) {
     if (null != guild) {
       let obj3 = { style: tmp.guildSelector, children: null };
       const obj4 = { icon: null, label: null, arrow: true, onPress: null };
-      const obj5 = { guild, size: tmp5(7203).GuildIconSizes.XSMALL };
-      obj4.icon = closure_7(tmp2(7203), obj5);
+      const obj5 = { guild, size: tmp5(7202).GuildIconSizes.XSMALL };
+      obj4.icon = closure_7(tmp2(7202), obj5);
       obj4.label = guild.name;
       obj4.onPress = function onPress() {
         maybeShowUnsavedChangesAlertDefault({
@@ -92,9 +92,9 @@ export default function UserSettingsEditGuildProfile(arg0) {
           onSave,
         });
       };
-      obj3.children = closure_7(tmp5(6926).TableRow, obj4);
-      const tmp2Result = tmp2(7203);
-      const obj6 = { value: tmp4(guild(7420).USER_SETTINGS_GUILD_PROFILE).analyticsLocations, children: null };
+      obj3.children = closure_7(tmp5(6925).TableRow, obj4);
+      const tmp2Result = tmp2(7202);
+      const obj6 = { value: tmp4(guild(7419).USER_SETTINGS_GUILD_PROFILE).analyticsLocations, children: null };
       if (showGuildSelector) {
         showGuildSelector = tmp14;
       }
@@ -102,13 +102,13 @@ export default function UserSettingsEditGuildProfile(arg0) {
       const obj7 = { currentUser: stateFromStores, header };
       const _HermesInternal = HermesInternal;
       tmp14 = closure_7(hasUnsavedChanges, obj3);
-      items3[1] = closure_7(tmp2(15878), obj7, "" + stateFromStores.id + "-" + guild.id);
+      items3[1] = closure_7(tmp2(15842), obj7, "" + stateFromStores.id + "-" + guild.id);
       obj6.children = items3;
-      return closure_9(tmp5(7401).AnalyticsLocationProvider, obj6);
+      return closure_9(tmp5(7400).AnalyticsLocationProvider, obj6);
     }
   }
   const obj8 = { children: null };
-  const items4 = [header, closure_7(guild(15875), {})];
+  const items4 = [header, closure_7(guild(15839), {})];
   obj8.children = items4;
   return closure_9(closure_8, obj8);
 }

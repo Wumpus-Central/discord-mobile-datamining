@@ -6,8 +6,8 @@ import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const AppStates = fn(1072).AppStates;
-let closure_5 = fn(9841).MIN_QUEST_VIEW_TIME_SECONDS;
+const AppStates = fn(1071).AppStates;
+let closure_5 = fn(9843).MIN_QUEST_VIEW_TIME_SECONDS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/orbs_arcade/native/useTrackOrbsArcadeGameTileViewed.tsx");
 

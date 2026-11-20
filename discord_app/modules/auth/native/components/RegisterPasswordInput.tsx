@@ -51,11 +51,11 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-const RegistrationUIStore = fn(17497);
+const RegistrationUIStore = fn(17324);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   weak: { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL },
   medium: null,
@@ -71,15 +71,15 @@ obj2.passwordStrength = { marginTop: 4, marginBottom: 4 };
 obj2.inputHint = { width: "100%" };
 let closure_13 = createStyles.createStyles(obj2);
 let obj6 = { entering: null, exiting: null };
-const FadeIn = fn(1655).FadeIn;
+const FadeIn = fn(1653).FadeIn;
 obj6.entering = FadeIn.duration(300);
-const FadeOut = fn(1655).FadeOut;
+const FadeOut = fn(1653).FadeOut;
 obj6.exiting = FadeOut.duration(300);
 const obj7 = { layout: null };
-const LinearTransition = fn(1655).LinearTransition;
-const Easing = fn(1655).Easing;
+const LinearTransition = fn(1653).LinearTransition;
+const Easing = fn(1653).Easing;
 const obj5 = { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-obj7.layout = LinearTransition.easing(Easing.inOut(fn(1655).Easing.quad)).duration(300);
+obj7.layout = LinearTransition.easing(Easing.inOut(fn(1653).Easing.quad)).duration(300);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterPasswordInput.tsx");
 
@@ -101,13 +101,13 @@ export function RegisterPasswordInput(ref) {
     autoFocus = false;
   }
   obj2.enabled = autoFocus;
-  isPasswordFocused(15198)(obj2);
+  isPasswordFocused(15162)(obj2);
   const tmp8 = _slicedToArray(noop.useState(false), 2);
   isPasswordFocused = tmp8[0];
   dependencyMap = tmp10;
   const tmp11 = closure_9((errors) => errors.errors);
   user = tmp11;
-  const tmp12 = tmp4(7266)("password", tmp11);
+  const tmp12 = tmp4(7265)("password", tmp11);
   items = [onPasswordChange, tmp11];
   const callback = noop.useCallback((arg0) => {
     if (null != user.password) {
@@ -117,10 +117,10 @@ export function RegisterPasswordInput(ref) {
     onPasswordChange(arg0);
   }, items);
   const tmp14 = onPasswordChange;
-  const tmp6 = isPasswordFocused(15198);
+  const tmp6 = isPasswordFocused(15162);
   const items1 = [PhoneStore];
   stateFromStores = onPasswordChange(504).useStateFromStores(items1, () => {
-    const FRANCE_AND_FRENCH_REGION = onPasswordChange(5458).CountryCodesSets.FRANCE_AND_FRENCH_REGION;
+    const FRANCE_AND_FRENCH_REGION = onPasswordChange(5460).CountryCodesSets.FRANCE_AND_FRENCH_REGION;
     let num = 8;
     if (FRANCE_AND_FRENCH_REGION.has(countryCode.getCountryCode().alpha2)) {
       num = 12;
@@ -162,13 +162,13 @@ export function RegisterPasswordInput(ref) {
     status: null,
   };
   const obj3 = onPasswordChange(504);
-  obj4.ref = onPasswordChange(4959).mergeRefs(ref.ref, ref);
+  obj4.ref = onPasswordChange(4961).mergeRefs(ref.ref, ref);
   obj4.onChange = callback;
   obj4.value = password;
-  let intl = onPasswordChange(1113).intl;
-  obj4.label = intl.string(onPasswordChange(1113).t["CIGa+7"]);
-  const intl2 = onPasswordChange(1113).intl;
-  obj4.accessibilityHint = intl2.string(onPasswordChange(1113).t.cUVsEG);
+  let intl = onPasswordChange(1112).intl;
+  obj4.label = intl.string(onPasswordChange(1112).t["CIGa+7"]);
+  const intl2 = onPasswordChange(1112).intl;
+  obj4.accessibilityHint = intl2.string(onPasswordChange(1112).t.cUVsEG);
   if (returnKeyType == null) {
     returnKeyType = "next";
   }
@@ -183,7 +183,7 @@ export function RegisterPasswordInput(ref) {
   }
   obj4.status = str;
   const children = [
-    closure_11(onPasswordChange(7102).TextInput, obj4),
+    closure_11(onPasswordChange(7101).TextInput, obj4),
     closure_11(PasswordStrength, { password, isPasswordFocused, passwordError: tmp12, passwordScore }),
   ];
   let tmp21Result = null;
@@ -198,7 +198,7 @@ export function RegisterPasswordInput(ref) {
       obj6.color = "text-muted";
       obj6.animated = true;
       obj6.children = memo;
-      tmp21Result = closure_11(tmp14(5383).Text, obj6);
+      tmp21Result = closure_11(tmp14(5385).Text, obj6);
     }
   }
   children[2] = tmp21Result;

@@ -5,7 +5,7 @@ import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplic
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx",

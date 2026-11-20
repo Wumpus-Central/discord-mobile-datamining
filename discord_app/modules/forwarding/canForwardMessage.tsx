@@ -94,7 +94,7 @@ function canForwardMessage(state) {
     }
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   GuildFeatures: closure_6,
   MessageFlags,

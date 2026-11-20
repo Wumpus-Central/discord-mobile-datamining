@@ -4,7 +4,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 let closure_5 = new LoggerDefault("TabsPerformanceTracker");
 let closure_6 = {};
 let closure_7 = {
@@ -34,7 +34,7 @@ export function useTrackTabPerformance(GUILDS) {
         tmp3.layoutEffectTime = performance.now();
         items = [
           closure_1_7,
-          GUILDS(1708).scheduleOnRN,
+          GUILDS(1706).scheduleOnRN,
           function log() {
             if (tmp2) {
               const _performance = performance;
@@ -81,8 +81,8 @@ export function useTrackTabPerformance(GUILDS) {
         TabsPerformanceTrackerTsx1.__closure = items1;
         TabsPerformanceTrackerTsx1.__workletHash = 9222398850673;
         TabsPerformanceTrackerTsx1.__initData = tmp9;
-        GUILDS(1708).scheduleOnUI(TabsPerformanceTrackerTsx1);
-        const obj2 = GUILDS(1708);
+        GUILDS(1706).scheduleOnUI(TabsPerformanceTrackerTsx1);
+        const obj2 = GUILDS(1706);
       }
     }
     let obj = dependencyMap2[tmp2];
@@ -100,7 +100,7 @@ export function useTrackTabPerformance(GUILDS) {
         tmp3.effectTime = performance.now();
         items = [
           closure_1_8,
-          GUILDS(1708).scheduleOnRN,
+          GUILDS(1706).scheduleOnRN,
           function log() {
             if (tmp2) {
               const _performance = performance;
@@ -147,8 +147,8 @@ export function useTrackTabPerformance(GUILDS) {
         TabsPerformanceTrackerTsx2.__closure = items1;
         TabsPerformanceTrackerTsx2.__workletHash = 6249772318354;
         TabsPerformanceTrackerTsx2.__initData = tmp9;
-        GUILDS(1708).scheduleOnUI(TabsPerformanceTrackerTsx2);
-        const obj2 = GUILDS(1708);
+        GUILDS(1706).scheduleOnUI(TabsPerformanceTrackerTsx2);
+        const obj2 = GUILDS(1706);
       }
     }
     let obj = dependencyMap2[tmp2];

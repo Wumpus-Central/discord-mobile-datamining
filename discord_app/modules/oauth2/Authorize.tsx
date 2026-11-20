@@ -2,14 +2,14 @@
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import QueryStringUtils from "../../utils/QueryStringUtils.tsx";
-import keysSorter from "../../../_runtime/06449_keysSorter.js";
+import keysSorter from "../../../_runtime/06451_keysSorter.js";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import scopes from "scopes.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ EMPTY_NUX_SERVER: hasOwnProperty, FAVORITES: closure_6, ME: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/Authorize.tsx");

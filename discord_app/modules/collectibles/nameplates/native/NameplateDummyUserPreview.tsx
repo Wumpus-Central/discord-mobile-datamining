@@ -12,23 +12,23 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = {};
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1187).AvatarSizes.XSMALL_20] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1186).AvatarSizes.XSMALL_20] = {
   padding: nativeDefault.space.PX_4,
   avatarMarginRight: nativeDefault.space.PX_4,
   placeholderBarHeight: 6,
 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1187).AvatarSizes.XSMALL] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1186).AvatarSizes.XSMALL] = {
   padding: 6,
   avatarMarginRight: 6,
   placeholderBarHeight: 8,
 };
 let obj2 = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1187).AvatarSizes.NORMAL] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1186).AvatarSizes.NORMAL] = {
   padding: nativeDefault.space.PX_8,
   avatarMarginRight: nativeDefault.space.PX_8,
   placeholderBarHeight: 14,
 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles((arg0, arg1) => {
   obj = {
     container: {

@@ -7,13 +7,13 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import EmojiStore from "../EmojiStore.tsx";
 
 require = fn;
-const ExpressionSourceRecord = fn(7204);
+const ExpressionSourceRecord = fn(7203);
 ({
   ExpressionSourceGuildRecord: metroImportDefault,
   EmojiSourceDataTypes: closure_8,
   getEmojiSourceData: closure_9,
 } = ExpressionSourceRecord);
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
 
@@ -105,7 +105,7 @@ export function useEmojiAndSource(emojiId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -159,7 +159,7 @@ export function useEmojiAndSource(emojiId) {
             current();
           }
           v3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp34) {
           v3 = tmp;
           throw tmp34;

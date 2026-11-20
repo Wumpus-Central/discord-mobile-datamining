@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildResetAction.tsx
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3701 from "../intl/FavoritesGuild.messages.js";
+import _modDef3703 from "../intl/FavoritesGuild.messages.js";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import FavoritesUtils from "../FavoritesUtils.tsx";
 import FavoritesActionCreators from "../FavoritesActionCreators.tsx";
@@ -9,7 +9,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const Routes = fn(1072).Routes;
+const Routes = fn(1071).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
 
@@ -27,9 +27,9 @@ export default function useFavoritesGuildResetAction() {
     const tmpResult2 = FavoritesActionCreators;
   }, []);
   const intl = util.intl;
-  obj.label = intl.string(_modDef3701.YkET6R);
+  obj.label = intl.string(_modDef3703.YkET6R);
   const intl2 = util.intl;
-  obj.subLabel = intl2.string(_modDef3701.ZzcwNk);
+  obj.subLabel = intl2.string(_modDef3703.ZzcwNk);
   obj.perform = callback;
   return obj;
 }

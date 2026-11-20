@@ -30,13 +30,13 @@ function ClearAllHistory(searchContext) {
     accessibilityLabel: null,
     children: null,
   };
-  const intl = searchContext(1113).intl;
-  obj.accessibilityLabel = intl.string(searchContext(1113).t.LFTAUp);
+  const intl = searchContext(1112).intl;
+  obj.accessibilityLabel = intl.string(searchContext(1112).t.LFTAUp);
   const obj2 = { variant: "body-sm/semibold", color: "text-brand", children: null };
-  const intl2 = searchContext(1113).intl;
-  obj2.children = intl2.string(searchContext(1113).t.LFTAUp);
-  obj.children = jsx(searchContext(5383).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(6911).PressableHighlight, {
+  const intl2 = searchContext(1112).intl;
+  obj2.children = intl2.string(searchContext(1112).t.LFTAUp);
+  obj.children = jsx(searchContext(5385).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(6910).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -68,15 +68,15 @@ function ViewAll(onJumpToMedia) {
     children: null,
   });
 }
-const SearchConstants = fn(8457);
+const SearchConstants = fn(8456);
 ({
   EMPTY_SEARCH_QUERY_STRING: closure_10,
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11,
   SearchListItemTypes: closure_12,
   SearchTabs: map1,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(13123).EMPTY_MEDIA_RESULTS;
-const SearchTypes = fn(1072).SearchTypes;
+const EMPTY_MEDIA_RESULTS = fn(13093).EMPTY_MEDIA_RESULTS;
+const SearchTypes = fn(1071).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo(function RecentScreen(searchContext) {
   searchContext = searchContext.searchContext;
@@ -270,7 +270,7 @@ let closure_20 = noop.memo(function RecentUserScreen(searchContext) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -304,7 +304,7 @@ let closure_20 = noop.memo(function RecentUserScreen(searchContext) {
             const result = tmp2(onPressDMItem[18]).trackSuggestedSearchClicked(obj7);
             tmp5(closure_129_0, closure_129_1);
             c4 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;

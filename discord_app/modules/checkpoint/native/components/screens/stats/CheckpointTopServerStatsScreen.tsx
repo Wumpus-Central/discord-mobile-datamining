@@ -3,7 +3,7 @@ import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3339 from "../../../../Checkpoint2026.messages.js";
+import _modDef3341 from "../../../../Checkpoint2026.messages.js";
 import CheckpointStatsUtils from "../../../../CheckpointStatsUtils.tsx";
 import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
 import ServerIcon from "../../../../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
@@ -138,13 +138,13 @@ export default function CheckpointTopServerStatsScreen() {
   if (null != checkpointTopPercent) {
     const intl2 = util.intl;
     const obj2 = { numDays: rounded, percent: checkpointTopPercent };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3339.BRQODX, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3341.BRQODX, obj2);
   }
   const obj3 = { centered: tmp4, children: null };
   const obj4 = { style: tmp4 ? tmp.wideContainer : tmp.container, children: null };
   const obj5 = { style: tmp4 ? tmp.wideSpotlightContainer : tmp.spotlightContainer, children: null };
   let tmp13Result = null != stateFromStores;
-  const stringResult = intl.string(_modDef3339["M+a+t1"]);
+  const stringResult = intl.string(_modDef3341["M+a+t1"]);
   if (tmp13Result) {
     const obj6 = { style: tmp.spotlight, children: null };
     const items1 = [timestampProducer(CheckpointRankTagDefault, { rank: 1 })];
@@ -208,11 +208,11 @@ export default function CheckpointTopServerStatsScreen() {
         return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
       },
     };
-    let formatResult = intl4.format(_modDef3339.sIDTV1, obj18);
+    let formatResult = intl4.format(_modDef3341.sIDTV1, obj18);
   } else {
     const intl3 = util.intl;
     const obj19 = { numDays: rounded };
-    formatResult = intl3.format(_modDef3339.nLCUQ4, obj19);
+    formatResult = intl3.format(_modDef3341.nLCUQ4, obj19);
   }
   obj17.children = formatResult;
   items6[2] = timestampProducer(CheckpointTextDefault, obj17);

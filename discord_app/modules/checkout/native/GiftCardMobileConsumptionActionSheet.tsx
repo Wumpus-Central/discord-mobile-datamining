@@ -1,16 +1,16 @@
 // discord_app/modules/checkout/native/GiftCardMobileConsumptionActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2391 from "../messages/GiftCard.messages.js";
+import _modDef2393 from "../messages/GiftCard.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: null,
@@ -75,23 +75,23 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   const items3 = [
     closure_6(View, {
       style: tmp.illustration,
-      children: closure_6(markAsDismissed(13966).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
+      children: closure_6(markAsDismissed(13935).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
     }),
     ,
   ];
   const obj5 = { variant: "body-md/medium", color: "text-default", style: tmp.body, children: null };
-  const intl = markAsDismissed(1113).intl;
-  obj5.children = intl.string(_modDef2391.V3DI1E);
-  items3[1] = closure_6(markAsDismissed(5383).Text, obj5);
+  const intl = markAsDismissed(1112).intl;
+  obj5.children = intl.string(_modDef2393.V3DI1E);
+  items3[1] = closure_6(markAsDismissed(5385).Text, obj5);
   const obj6 = { size: "lg", variant: "secondary", grow: true, text: null, onPress: null };
-  const intl2 = markAsDismissed(1113).intl;
-  obj6.text = intl2.string(_modDef2391.YZePWx);
+  const intl2 = markAsDismissed(1112).intl;
+  obj6.text = intl2.string(_modDef2393.YZePWx);
   obj6.onPress = function onPress() {
     return closure_3(ContentDismissActionType.USER_DISMISS);
   };
-  items3[2] = closure_6(markAsDismissed(5390).Button, obj6);
+  items3[2] = closure_6(markAsDismissed(5392).Button, obj6);
   obj3.children = items3;
-  obj2.children = closure_7(markAsDismissed(5808).Stack, obj3);
+  obj2.children = closure_7(markAsDismissed(5810).Stack, obj3);
   obj.children = closure_6(View, obj2);
-  return closure_6(markAsDismissed(5020).BottomSheet, obj);
+  return closure_6(markAsDismissed(5022).BottomSheet, obj);
 }

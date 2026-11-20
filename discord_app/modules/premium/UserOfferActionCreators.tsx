@@ -33,7 +33,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -61,7 +61,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj8 = closure_2;
           if (closure_2 === undefined) {
-            obj8 = { offerId: "Array", paymentGatewayOverride: "Path" };
+            obj8 = { offerId: "Array", paymentGatewayOverride: "analyticsLocations" };
           }
           closure_136_2 = obj8;
           closure_136_3 = closure_3;
@@ -293,8 +293,8 @@ let closure_14 = async function _fetchChurnDiscountOffer() {
   }
   return value;
 };
-let closure_7 = fn(1390).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
-const Constants = fn(1072);
+let closure_7 = fn(1388).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, PaymentGateways: closure_10 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/UserOfferActionCreators.tsx");
@@ -416,7 +416,7 @@ export function triggerUserOffer(triggerType, trigger_location_stack, fn) {
       if (postResultResult.isIOS()) {
         GOOGLE = constants2.APPLE;
       }
-      postResultResult = postResult(1380);
+      postResultResult = postResult(1378);
     }
     const obj5 = {
       payment_gateway: GOOGLE,
@@ -428,7 +428,7 @@ export function triggerUserOffer(triggerType, trigger_location_stack, fn) {
     _JSON = JSON;
     obj5.trigger_metadata = JSON.stringify(tmp5);
     obj5.trigger_uptime_app = UserOfferStore.getUptimeForTrigger();
-    const HTTP = postResult(1285).HTTP;
+    const HTTP = postResult(1284).HTTP;
     const request = { url: constants.USER_OFFER_TRIGGER, body: obj5, rejectWithError: true };
     postResult = HTTP.post(request);
     then = postResult.then;

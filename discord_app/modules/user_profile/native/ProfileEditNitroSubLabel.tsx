@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = {
   container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   text: { flexShrink: 1 },

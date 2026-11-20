@@ -1,11 +1,11 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDock.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
-import _mod1708 from "../../../../../_runtime/metro/01708__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05052_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import ContextMenu from "../../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import ContextMenuConstants from "../../../../design/components/ContextMenu/native/ContextMenuConstants.native.tsx";
@@ -20,7 +20,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function DockPressTarget(arg0) {
@@ -34,8 +34,8 @@ function DockPressTarget(arg0) {
   ({ channel, onExpand } = arg0);
   const contextMenuAnchor = closure_21();
   const tmp = useVoicePanelDockContextMenuItemsDefault(channel, onExpand);
-  const animatedRef = _mod1655.useAnimatedRef();
-  const animatedRef1 = _mod1655.useAnimatedRef();
+  const animatedRef = _mod1653.useAnimatedRef();
+  const animatedRef1 = _mod1653.useAnimatedRef();
   return closure_19(ContextMenu.ContextMenu, {
     items: tmp,
     triggerOnLongPress: true,
@@ -99,8 +99,8 @@ function DockPressTargetGuard(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11688).VoicePanelModes;
-const VoicePanelDockConstants = fn(11706);
+const VoicePanelModes = fn(11630).VoicePanelModes;
+const VoicePanelDockConstants = fn(11648);
 ({
   DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: closure_8,
   DOCK_PULL_SNAP_DISTANCE: closure_9,
@@ -113,7 +113,7 @@ const VoicePanelDockConstants = fn(11706);
   DOCK_PADDING_TOP,
   DOCK_ROW_HEIGHT,
 } = VoicePanelDockConstants);
-const GestureConstants = fn(11707);
+const GestureConstants = fn(11649);
 ({
   FLING_MIN_DISTANCE: map1,
   FLING_MIN_VELOCITY: closure_14,
@@ -124,7 +124,7 @@ const GestureConstants = fn(11707);
 } = GestureConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   dock: { position: "absolute", top: 0, left: 0, paddingTop: DOCK_PADDING_TOP, zIndex: 10 },
   pressTarget: { position: "absolute", top: 0, left: 0, right: 0 },
@@ -248,7 +248,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
     closure_26,
     mode,
     c7,
-    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01706__.js").scheduleOnRN,
     ExternalPipDefault.updateSourceTrackingView,
   ];
   _require = undefined;
@@ -280,7 +280,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   VoicePanelDockTsx3.__closure = items3;
   VoicePanelDockTsx3.__workletHash = 10995549690413;
   VoicePanelDockTsx3.__initData = tmp9;
-  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
     VoicePanelDockTsx2,
     VoicePanelDockTsx3,
   );
@@ -290,14 +290,14 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
     _undefined7(VoicePanelModes.PANEL);
   }, items4);
   c10 = callback;
-  const obj2 = require("../../../../../_runtime/metro/01655__.js");
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue({ x: 0, y: 0 });
+  const obj2 = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue({ x: 0, y: 0 });
   c11 = sharedValue;
-  const tmp5Result = require("../../../../../_runtime/metro/01655__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const tmp5Result = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
   c12 = sharedValue1;
-  const tmp5Result14 = require("../../../../../_runtime/metro/01655__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const tmp5Result14 = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
   c13 = sharedValue2;
   let items5 = [callback, sharedValue1];
   const callback1 = obj.useCallback(() => {
@@ -306,15 +306,15 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
       _undefined11();
     }
   }, items5);
-  const tmp5Result15 = require("../../../../../_runtime/metro/01655__.js");
-  sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
-  const tmp5Result16 = require("../../../../../_runtime/metro/01655__.js");
-  sharedValue4 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
-  const tmp5Result17 = require("../../../../../_runtime/metro/01655__.js");
-  sharedValue5 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
-  const tmp5Result18 = require("../../../../../_runtime/metro/01655__.js");
-  sharedValue6 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
-  const tmp5Result19 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp5Result15 = require("../../../../../_runtime/metro/01653__.js");
+  sharedValue3 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const tmp5Result16 = require("../../../../../_runtime/metro/01653__.js");
+  sharedValue4 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const tmp5Result17 = require("../../../../../_runtime/metro/01653__.js");
+  sharedValue5 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  const tmp5Result18 = require("../../../../../_runtime/metro/01653__.js");
+  sharedValue6 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  const tmp5Result19 = require("../../../../../_runtime/metro/01653__.js");
   let items6 = [closure_27, sharedValue6, sharedValue3, sharedValue4];
   _require = undefined;
   importDefault = undefined;
@@ -384,7 +384,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   VoicePanelDockTsx5.__closure = items9;
   VoicePanelDockTsx5.__workletHash = 14506418013998;
   VoicePanelDockTsx5.__initData = tmp28;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
     VoicePanelDockTsx4,
     VoicePanelDockTsx5,
   );
@@ -487,7 +487,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
       .onBegin(VoicePanelDockTsx6);
     const items5 = [
       closure_31,
-      _mod1708.scheduleOnRN,
+      _mod1706.scheduleOnRN,
       c7,
       sharedValue5,
       sharedValue4,
@@ -543,7 +543,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
       sharedValue4,
       refs,
       closure_2_17,
-      _mod1708.scheduleOnRN,
+      _mod1706.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,
       HapticUtils.HapticFeedbackTypes,
       collapsedCategories,
@@ -619,7 +619,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
       gesture,
       state,
       sharedValue5,
-      _mod1708.scheduleOnRN,
+      _mod1706.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,
       HapticUtils.HapticFeedbackTypes,
       c1,
@@ -747,7 +747,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
     const result = _undefined14.set(true);
     const result1 = _undefined5.set(false);
   }, items13);
-  const tmp5Result20 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp5Result20 = require("../../../../../_runtime/metro/01653__.js");
   const items14 = [closure_35, dockPressProgress];
   _require = undefined;
   [tmp41, tmp42] = items14;
@@ -761,8 +761,8 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   VoicePanelDockTsx12.__closure = items15;
   VoicePanelDockTsx12.__workletHash = 16776422543157;
   VoicePanelDockTsx12.__initData = tmp41;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelDockTsx12);
-  const tmp5Result21 = require("../../../../../_runtime/metro/01655__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelDockTsx12);
+  const tmp5Result21 = require("../../../../../_runtime/metro/01653__.js");
   const items16 = [
     closure_36,
     dockMinimizeProgress,
@@ -862,12 +862,12 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   VoicePanelDockTsx13.__closure = items17;
   VoicePanelDockTsx13.__workletHash = 7399426325973;
   VoicePanelDockTsx13.__initData = tmp44;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelDockTsx13);
-  const tmp5Result22 = require("../../../../../_runtime/metro/01655__.js");
+  const animatedStyle1 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelDockTsx13);
+  const tmp5Result22 = require("../../../../../_runtime/metro/01653__.js");
   ({ dockRef, handleDockLayout, measureGlowOffset } = useMeasureDockGlowOffsetDefault());
   const tmp60 = useMeasureDockGlowOffsetDefault();
-  const animatedRef = require("../../../../../_runtime/metro/01655__.js").useAnimatedRef();
-  const tmp5Result23 = require("../../../../../_runtime/metro/01655__.js");
+  const animatedRef = require("../../../../../_runtime/metro/01653__.js").useAnimatedRef();
+  const tmp5Result23 = require("../../../../../_runtime/metro/01653__.js");
   const tmp5Result24 = require("KeyboardChatScrollView");
   const tmp5Result25 = require("PlatformUtils");
   const isIOSResult = require("PlatformUtils").isIOS();
@@ -876,7 +876,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
     tmp5Result24.useReanimatedKeyboardAnimation().height,
     isIOSResult,
     require("useWindowDimensionsSharedValue").getWindowDimensionsWorklet,
-    require("../../../../../_runtime/metro/01655__.js").measure,
+    require("../../../../../_runtime/metro/01653__.js").measure,
     animatedRef,
   ];
   _require = undefined;
@@ -926,7 +926,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   VoicePanelDockTsx1.__closure = items19;
   VoicePanelDockTsx1.__workletHash = 17112345546547;
   VoicePanelDockTsx1.__initData = tmp63;
-  const animatedStyle2 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelDockTsx1);
+  const animatedStyle2 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelDockTsx1);
   const obj3 = { gesture: memo, children: null };
   const obj4 = { ref: dockRef, style: null, onLayout: handleDockLayout, children: null };
   const items20 = [tmp.dock, animatedStyle1];
@@ -945,11 +945,11 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   const obj6 = { style: null, pointerEvents: "none" };
   const items23 = [tmp.dragHandle, animatedStyle];
   obj6.style = items23;
-  items22[1] = closure_19(_modDef1655.View, obj6);
+  items22[1] = closure_19(_modDef1653.View, obj6);
   const obj7 = { ref: animatedRef, style: null, children: null };
   const items24 = [tmp.row, animatedStyle2];
   obj7.style = items24;
-  const tmp5Result26 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp5Result26 = require("../../../../../_runtime/metro/01653__.js");
   const items25 = [
     closure_19(c5, {
       style: tmp.identity,
@@ -959,8 +959,8 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
     closure_19(VoicePanelDockControlsDefault, { measureGlowOffset }),
   ];
   obj7.children = items25;
-  items22[2] = closure_20(_modDef1655.View, obj7);
+  items22[2] = closure_20(_modDef1653.View, obj7);
   obj4.children = items22;
-  obj3.children = closure_20(_modDef1655.View, obj4);
+  obj3.children = closure_20(_modDef1653.View, obj4);
   return closure_19(require("LegacyBaseButton").GestureDetector, obj3);
 });

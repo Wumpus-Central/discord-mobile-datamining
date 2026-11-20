@@ -9,14 +9,14 @@ import showDataPrivacyRateLimitAlert from "../../privacy_and_safety/native/showD
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
 
 require = fn;
-const Consents = fn(1072).Consents;
-const SettingBuilders = fn(11875);
+const Consents = fn(1071).Consents;
+const SettingBuilders = fn(11817);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(8593).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8592).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useDataToCustomizeDiscordSettingValue() {
     items = [ConsentStore];
     return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));

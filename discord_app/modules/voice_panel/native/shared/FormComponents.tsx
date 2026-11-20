@@ -40,7 +40,7 @@ function VoiceBadges(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { marginHorizontal: 16 },
   voiceBadgesContainer: { flexDirection: "row" },

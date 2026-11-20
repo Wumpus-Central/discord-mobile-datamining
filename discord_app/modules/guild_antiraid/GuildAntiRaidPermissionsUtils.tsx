@@ -5,7 +5,7 @@ import GuildIncidentsStore from "GuildIncidentsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx");
 
@@ -61,8 +61,8 @@ export function useCanReportRaid(guild) {
   );
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(8644).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(8644);
+    hasDetectedActivityResult = tmp(8643).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(8643);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {

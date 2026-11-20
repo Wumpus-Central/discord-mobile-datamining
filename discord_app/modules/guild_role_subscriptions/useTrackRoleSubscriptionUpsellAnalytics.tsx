@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx",

@@ -6,7 +6,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import _modDef8708 from "../../../../_runtime/metro/08708__.js";
+import _modDef8748 from "../../../../_runtime/metro/08748__.js";
 import _modDef9007 from "../../../../_runtime/metro/09007__.js";
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils.tsx";
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils.tsx";
@@ -78,7 +78,7 @@ let closure_27 = async function _handleCancelSubscription() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -137,7 +137,7 @@ let closure_27 = async function _handleCancelSubscription() {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp9) {
         c3 = tmp;
         throw tmp9;
@@ -254,7 +254,7 @@ let closure_30 = async function _onResubscribeClick(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -325,7 +325,7 @@ let closure_30 = async function _onResubscribeClick(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp19) {
         c3 = tmp;
         throw tmp19;
@@ -494,7 +494,7 @@ class PremiumSubscriptionHeader {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -533,7 +533,7 @@ class PremiumSubscriptionHeader {
                 c3 = 0;
                 closure_128_2(false);
                 c4 = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp23) {
               closure_2 = tmp23;
@@ -660,9 +660,9 @@ class PremiumSubscriptionHeader {
 }
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_6, View: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({ SubscriptionIntervalTypes: closure_10, SubscriptionPlanInfo: closure_11 } = PremiumConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   AnalyticsPages: closure_12,
   AnalyticsSections: map1,
@@ -676,7 +676,7 @@ let size = { height: 35, width: 49 };
 const size1 = { height: 36, width: 51 };
 const size2 = { width: 51, height: 36 };
 let obj = { fontSize: 14, marginTop: 10, color: nativeDefault.unsafe_rawColors.WHITE };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj3 = {
   title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
   header: { padding: 16 },
@@ -724,59 +724,59 @@ let obj10 = {};
 obj10[obj8.ACTIVE] = _modDef9096;
 obj10[obj8.ERROR] = _modDef9203;
 obj10[obj8.RESUB] = _modDef9204;
-obj9[fn(2174).Branding.BUNDLE] = obj10;
+obj9[fn(2172).Branding.BUNDLE] = obj10;
 let obj11 = {};
 obj11[obj8.ACTIVE] = _modDef9093;
 obj11[obj8.ERROR] = _modDef9203;
 obj11[obj8.RESUB] = _modDef9204;
-obj9[fn(2174).Branding.TIER_0] = obj11;
+obj9[fn(2172).Branding.TIER_0] = obj11;
 let obj12 = {};
 obj12[obj8.ACTIVE] = _modDef9094;
 obj12[obj8.ERROR] = _modDef9203;
 obj12[obj8.RESUB] = _modDef9204;
-obj9[fn(2174).Branding.TIER_1] = obj12;
+obj9[fn(2172).Branding.TIER_1] = obj12;
 let obj13 = {};
 obj13[obj8.ACTIVE] = _modDef9095;
 obj13[obj8.ERROR] = _modDef9203;
 obj13[obj8.RESUB] = _modDef9204;
-obj9[fn(2174).Branding.TIER_2] = obj13;
+obj9[fn(2172).Branding.TIER_2] = obj13;
 let obj14 = {};
 obj14[obj8.ACTIVE] = _modDef9097;
 obj14[obj8.ERROR] = _modDef9205;
 obj14[obj8.RESUB] = _modDef9206;
-obj9[fn(2174).Branding.PREMIUM_GUILD] = obj14;
+obj9[fn(2172).Branding.PREMIUM_GUILD] = obj14;
 let obj15 = {};
 let obj16 = {};
 obj16[obj8.ACTIVE] = _modDef9207;
 obj16[obj8.ERROR] = _modDef9207;
 obj16[obj8.RESUB] = _modDef9207;
-obj15[fn(2174).Branding.BUNDLE] = obj16;
+obj15[fn(2172).Branding.BUNDLE] = obj16;
 let obj17 = {};
 obj17[obj8.ACTIVE] = _modDef9007;
 obj17[obj8.ERROR] = _modDef9208;
 obj17[obj8.RESUB] = _modDef9209;
-obj15[fn(2174).Branding.TIER_0] = obj17;
+obj15[fn(2172).Branding.TIER_0] = obj17;
 let obj18 = {};
 obj18[obj8.ACTIVE] = _modDef9210;
 obj18[obj8.ERROR] = _modDef9211;
 obj18[obj8.RESUB] = _modDef9212;
-obj15[fn(2174).Branding.TIER_1] = obj18;
+obj15[fn(2172).Branding.TIER_1] = obj18;
 let obj19 = {};
 obj19[obj8.ACTIVE] = _modDef9098;
 obj19[obj8.ERROR] = _modDef9213;
 obj19[obj8.RESUB] = _modDef9214;
-obj15[fn(2174).Branding.TIER_2] = obj19;
+obj15[fn(2172).Branding.TIER_2] = obj19;
 let obj20 = {};
 obj20[obj8.ACTIVE] = _modDef9215;
 obj20[obj8.ERROR] = _modDef9216;
 obj20[obj8.RESUB] = _modDef9217;
-obj15[fn(2174).Branding.PREMIUM_GUILD] = obj20;
+obj15[fn(2172).Branding.PREMIUM_GUILD] = obj20;
 let closure_22 = {
-  [fn(2174).Branding.BUNDLE]: { [obj8.ACTIVE]: size, [obj8.ERROR]: size, [obj8.RESUB]: size },
-  [fn(2174).Branding.TIER_0]: { [obj8.ACTIVE]: { height: 35, width: 29 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
-  [fn(2174).Branding.TIER_1]: { [obj8.ACTIVE]: { height: 35, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
-  [fn(2174).Branding.TIER_2]: { [obj8.ACTIVE]: { height: 37, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
-  [fn(2174).Branding.PREMIUM_GUILD]: {
+  [fn(2172).Branding.BUNDLE]: { [obj8.ACTIVE]: size, [obj8.ERROR]: size, [obj8.RESUB]: size },
+  [fn(2172).Branding.TIER_0]: { [obj8.ACTIVE]: { height: 35, width: 29 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
+  [fn(2172).Branding.TIER_1]: { [obj8.ACTIVE]: { height: 35, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
+  [fn(2172).Branding.TIER_2]: { [obj8.ACTIVE]: { height: 37, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
+  [fn(2172).Branding.PREMIUM_GUILD]: {
     [obj8.ACTIVE]: { width: 51, height: 36 },
     [obj8.ERROR]: size2,
     [obj8.RESUB]: size2,
@@ -787,33 +787,33 @@ let obj22 = {};
 obj22[obj8.ACTIVE] = _modDef9218;
 obj22[obj8.ERROR] = _modDef9218;
 obj22[obj8.RESUB] = _modDef9219;
-obj21[fn(2174).Branding.BUNDLE] = obj22;
+obj21[fn(2172).Branding.BUNDLE] = obj22;
 let obj23 = {};
 obj23[obj8.ACTIVE] = _modDef9101;
 obj23[obj8.ERROR] = _modDef9101;
 obj23[obj8.RESUB] = _modDef9220;
-obj21[fn(2174).Branding.TIER_0] = obj23;
+obj21[fn(2172).Branding.TIER_0] = obj23;
 let obj24 = {};
 obj24[obj8.ACTIVE] = _modDef9221;
 obj24[obj8.ERROR] = _modDef9221;
 obj24[obj8.RESUB] = _modDef9222;
-obj21[fn(2174).Branding.TIER_1] = obj24;
+obj21[fn(2172).Branding.TIER_1] = obj24;
 let obj25 = {};
-obj25[obj8.ACTIVE] = _modDef8708;
-obj25[obj8.ERROR] = _modDef8708;
+obj25[obj8.ACTIVE] = _modDef8748;
+obj25[obj8.ERROR] = _modDef8748;
 obj25[obj8.RESUB] = _modDef9223;
-obj21[fn(2174).Branding.TIER_2] = obj25;
+obj21[fn(2172).Branding.TIER_2] = obj25;
 let obj26 = {};
 obj26[obj8.ACTIVE] = _modDef9224;
 obj26[obj8.ERROR] = _modDef9224;
 obj26[obj8.RESUB] = _modDef9225;
-obj21[fn(2174).Branding.PREMIUM_GUILD] = obj26;
+obj21[fn(2172).Branding.PREMIUM_GUILD] = obj26;
 const dependencyMap3 = {
-  [fn(2174).Branding.BUNDLE]: { height: 33, width: 205 },
-  [fn(2174).Branding.TIER_0]: { height: 32, width: 59 },
-  [fn(2174).Branding.TIER_1]: { height: 16, width: 156 },
-  [fn(2174).Branding.TIER_2]: { height: 32, width: 78 },
-  [fn(2174).Branding.PREMIUM_GUILD]: { height: 17, width: 184 },
+  [fn(2172).Branding.BUNDLE]: { height: 33, width: 205 },
+  [fn(2172).Branding.TIER_0]: { height: 32, width: 59 },
+  [fn(2172).Branding.TIER_1]: { height: 16, width: 156 },
+  [fn(2172).Branding.TIER_2]: { height: 32, width: 78 },
+  [fn(2172).Branding.PREMIUM_GUILD]: { height: 17, width: 184 },
 };
 let closure_25 = { [obj8.ACTIVE]: obj, [obj8.ERROR]: obj, [obj8.RESUB]: obj2 };
 size = fn(2);

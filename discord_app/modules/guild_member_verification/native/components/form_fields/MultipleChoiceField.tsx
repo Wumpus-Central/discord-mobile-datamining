@@ -9,11 +9,11 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { container: { marginVertical: 12, flexDirection: "column" }, formHeader: null };
 const obj3 = {};
 const merged = Object.assign(
-  TextStyles(fn(1083).Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16, {
+  TextStyles(fn(1082).Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16, {
     uppercase: false,
   }),
 );

@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import privDefault from "../../../_runtime/01456_priv.js";
+import privDefault from "../../../_runtime/01454_priv.js";
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
 let obj = {

@@ -82,7 +82,7 @@ class BalanceWidgetPillButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const timestampProducer = createStyles.createStyles({ notificationBadge: { position: "absolute", top: 0, end: 0 } });
 BalanceWidgetPillButton.displayName = "BalanceWidgetPillButton";
 const size = fn(2);

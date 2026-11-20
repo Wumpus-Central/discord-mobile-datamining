@@ -15,8 +15,8 @@ import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4722).GUILD_VOCAL_CHANNELS_KEY;
-const Constants = fn(1072);
+const GUILD_VOCAL_CHANNELS_KEY = fn(4724).GUILD_VOCAL_CHANNELS_KEY;
+const Constants = fn(1071);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/voice_channel_pin/useConjureVoiceChannelPin.tsx");
@@ -122,7 +122,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

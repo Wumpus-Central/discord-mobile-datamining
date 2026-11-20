@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(12173).GameOrganizationJoinScenes;
+let closure_5 = fn(12115).GameOrganizationJoinScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);

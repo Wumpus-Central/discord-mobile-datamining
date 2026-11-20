@@ -18,7 +18,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -154,7 +154,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
     }
   }
 };
-const Routes = fn(1072).Routes;
+const Routes = fn(1071).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/safeTransitionTo.native.tsx");
 

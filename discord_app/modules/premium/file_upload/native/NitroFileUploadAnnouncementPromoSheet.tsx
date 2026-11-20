@@ -6,9 +6,9 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

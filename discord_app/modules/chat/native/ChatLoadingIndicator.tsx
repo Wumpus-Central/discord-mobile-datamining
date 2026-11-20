@@ -2,7 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _mod1655 from "../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
@@ -17,7 +17,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function openLoadingIndicatorDebugBody() {
@@ -53,10 +53,10 @@ function openLoadingIndicatorDebugBody() {
   }
 }
 const View = fn(17).View;
-const AppStates = fn(1072).AppStates;
+const AppStates = fn(1071).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = {
   height: 8,
@@ -245,10 +245,10 @@ export function ChannelHeaderLoadingIndicator() {
   const items2 = [
     closure_19,
     stateFromStores,
-    _mod1655.withRepeat,
-    _mod1655.withSequence,
+    _mod1653.withRepeat,
+    _mod1653.withSequence,
     timing_timing.withTiming,
-    _mod1655.Easing,
+    _mod1653.Easing,
   ];
   c0 = undefined;
   c1 = undefined;
@@ -301,11 +301,11 @@ export function ChannelHeaderLoadingIndicator() {
   ChatLoadingIndicatorTsx1.__workletHash = 6182376502575;
   ChatLoadingIndicatorTsx1.__initData = tmp6;
   let obj4 = { style: tmp.container, children: null };
-  const animatedStyle = _mod1655.useAnimatedStyle(ChatLoadingIndicatorTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(ChatLoadingIndicatorTsx1);
   const obj5 = { style: null };
   const items4 = [tmp.pulse, animatedStyle];
   obj5.style = items4;
-  const items5 = [state(_modDef1655.View, obj5)];
+  const items5 = [state(_modDef1653.View, obj5)];
   const obj6 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t.JwIJMV);

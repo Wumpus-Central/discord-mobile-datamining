@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationAnalyticsUtils.tsx");
 
@@ -59,7 +59,7 @@ export const AgeVerificationDmCta = {
   CONNECT_TO_TEEN: "connect_to_teen",
   MANUAL_REVIEW: "manual_review",
 };
-export const NsfwSpaceWarningModalType = fn(6294).NsfwSpaceWarningModalType;
+export const NsfwSpaceWarningModalType = fn(6296).NsfwSpaceWarningModalType;
 export const NsfwSpaceWarningModalCta = {
   NSFW_CHANNEL_AGREE_CTA: "nsfw_channel_agree_cta",
   NSFW_CHANNEL_DISAGREE_CTA: "nsfw_channel_disagree_cta",

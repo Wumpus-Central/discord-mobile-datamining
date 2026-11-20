@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/share/native/ConjureProjectAboutSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -30,7 +30,7 @@ function Surfaces(project) {
     const obj2 = { spacing: nativeDefault.space.PX_4, children: null };
     const obj3 = { variant: "body-xs/semibold", color: "text-muted", children: null };
     const intl = util.intl;
-    obj3.children = intl.string(_modDef4089["cF++B3"]);
+    obj3.children = intl.string(_modDef4091["cF++B3"]);
     items = [timestampProducer(Text_Text.Text, obj3)];
     const obj4 = { variant: "body-sm/normal", color: "text-default", children: result.join(" \u00B7 ") };
     items[1] = timestampProducer(Text_Text.Text, obj4);
@@ -54,49 +54,28 @@ function RemixActions(project) {
   const guildId = project.guildId;
   const ticket = project.ticket;
   items = [guildId, project, ticket];
-  closure_3 = noop.useCallback((arg0) => {
+  const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(openConjureProjectAboutSheet.CONJURE_PROJECT_ABOUT_SHEET_KEY);
-    openConjureSharedProjectRemixSheetDefault(project, guildId, arg0, ticket);
+    openConjureSharedProjectRemixSheetDefault(project, guildId, ticket);
   }, items);
-  const obj = { direction: "horizontal", spacing: guildId(ticket[5]).space.PX_8, children: null };
-  const obj2 = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
+  const obj = { variant: "primary", size: "md", text: null, onPress: null };
   const intl = project(ticket[12]).intl;
-  obj2.text = intl.string(guildId(ticket[13])["6RGR3m"]);
-  obj2.onPress = function onPress() {
-    return closure_3("remix");
-  };
-  const items1 = [closure_6(project(ticket[26]).Button, obj2)];
-  const obj3 = { grow: true, variant: "primary", size: "md", text: null, onPress: null };
-  const intl2 = project(ticket[12]).intl;
-  obj3.text = intl2.string(guildId(ticket[13])["UsUa/c"]);
-  obj3.onPress = function onPress() {
-    return closure_3("copy");
-  };
-  items1[1] = closure_6(project(ticket[26]).Button, obj3);
-  obj.children = items1;
-  return closure_7(project(ticket[22]).Stack, obj);
+  obj.text = intl.string(guildId(ticket[13]).XWgAfc);
+  obj.onPress = callback;
+  return closure_6(project(ticket[25]).Button, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
-    scroll: { flex: 1, minHeight: 0 },
-    body: {
-      gap: nativeDefault.space.PX_16,
-      paddingHorizontal: nativeDefault.space.PX_16,
-      paddingBottom: arg0 + nativeDefault.space.PX_16,
-    },
+    body: { gap: nativeDefault.space.PX_16, paddingBottom: arg0 + nativeDefault.space.PX_16 },
     identity: null,
     details: null,
     footer: null,
   };
-  const obj2 = {
-    gap: nativeDefault.space.PX_16,
-    paddingHorizontal: nativeDefault.space.PX_16,
-    paddingBottom: arg0 + nativeDefault.space.PX_16,
-  };
+  const obj2 = { gap: nativeDefault.space.PX_16, paddingBottom: arg0 + nativeDefault.space.PX_16 };
   obj.identity = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
   const obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
   obj.details = { flex: 1, minWidth: 0, gap: nativeDefault.space.PX_4 };
@@ -162,7 +141,7 @@ export default function ConjureProjectAboutSheet(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -190,11 +169,11 @@ export default function ConjureProjectAboutSheet(arg0) {
             return obj5;
           } else {
             if (value) {
-              v1(5006).hideActionSheet(tmp4(12213).CONJURE_PROJECT_ABOUT_SHEET_KEY);
-              const obj = v1(5006);
+              v1(5008).hideActionSheet(tmp4(12155).CONJURE_PROJECT_ABOUT_SHEET_KEY);
+              const obj = v1(5008);
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           dependencyMap = tmp;
@@ -207,34 +186,29 @@ export default function ConjureProjectAboutSheet(arg0) {
   if (null != application) {
     let name = application.name;
   } else if ("loading" === tmp3.type) {
-    const intl2 = tmp8(1113).intl;
-    name = intl2.string(tmp8(1113).t.ZTNur7);
+    const intl2 = tmp8(1112).intl;
+    name = intl2.string(tmp8(1112).t.ZTNur7);
   } else {
-    const intl = tmp8(1113).intl;
+    const intl = tmp8(1112).intl;
     if ("expired" === tmp3.type) {
-      let mQma36 = _modDef4089.wahvH2;
+      let mQma36 = _modDef4091.wahvH2;
     } else {
-      mQma36 = _modDef4089.mQma36;
+      mQma36 = _modDef4091.mQma36;
     }
     name = intl.string(mQma36);
   }
-  let obj2 = {
-    scrollable: true,
-    header: closure_6(run(7396).BottomSheetTitleHeader, { title: name }),
-    footer: null,
-    children: null,
-  };
+  let obj2 = { header: closure_6(run(7395).BottomSheetTitleHeader, { title: name }), footer: null, children: null };
   let tmp14Result;
   if (null != tmp9) {
     let obj3 = { style: tmp5Result.footer, ref, onLayout, children: null };
     let obj4 = { bottom: true, children: null };
     let obj5 = { project: tmp9, guildId: source.guildId, ticket };
     obj4.children = closure_6(RemixActions, obj5);
-    obj3.children = closure_6(tmp8(6898).SafeAreaPaddingView, obj4);
+    obj3.children = closure_6(tmp8(6897).SafeAreaPaddingView, obj4);
     tmp14Result = closure_6(View, obj3);
   }
   obj2.footer = tmp14Result;
-  const obj6 = { style: tmp5Result.scroll, contentContainerStyle: tmp5Result.body, children: null };
+  const obj6 = { style: tmp5Result.body, children: null };
   let tmp18Result = null;
   if (null != application) {
     const obj7 = { application, action: type, launching, onPress: callback };
@@ -242,9 +216,9 @@ export default function ConjureProjectAboutSheet(arg0) {
     let tmp14Result4 = null;
     if (launchFailed) {
       const obj8 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
-      const intl3 = tmp8(1113).intl;
-      obj8.children = intl3.string(_modDef4089.hh2nuX);
-      tmp14Result4 = closure_6(tmp8(5383).Text, obj8);
+      const intl3 = tmp8(1112).intl;
+      obj8.children = intl3.string(_modDef4091.hh2nuX);
+      tmp14Result4 = closure_6(tmp8(5385).Text, obj8);
     }
     items1[1] = tmp14Result4;
     const obj9 = { style: tmp5Result.identity, children: null };
@@ -252,13 +226,13 @@ export default function ConjureProjectAboutSheet(arg0) {
     const items2 = [closure_6(ConjureAppSheetIconDefault, obj10)];
     const obj11 = { style: tmp5Result.details, children: null };
     const obj12 = { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: application.name };
-    const items3 = [closure_6(tmp8(5383).Text, obj12)];
+    const items3 = [closure_6(tmp8(5385).Text, obj12)];
     let tmp14Result5 = null;
     if (null != application.description) {
       tmp14Result5 = null;
       if ("" !== str3.trim()) {
         const obj13 = { variant: "body-sm/normal", color: "text-default", children: application.description.trim() };
-        tmp14Result5 = closure_6(tmp8(5383).Text, obj13);
+        tmp14Result5 = closure_6(tmp8(5385).Text, obj13);
       }
       str3 = application.description;
     }
@@ -287,12 +261,12 @@ export default function ConjureProjectAboutSheet(arg0) {
   let tmp14Result6 = null;
   if ("info_only" === tmp3.type) {
     const obj18 = { variant: "body-sm/normal", color: "text-muted", children: null };
-    const intl4 = tmp8(1113).intl;
-    obj18.children = intl4.string(_modDef4089["2DSRxV"]);
-    tmp14Result6 = closure_6(tmp8(5383).Text, obj18);
+    const intl4 = tmp8(1112).intl;
+    obj18.children = intl4.string(_modDef4091["2DSRxV"]);
+    tmp14Result6 = closure_6(tmp8(5385).Text, obj18);
   }
   items4[2] = tmp14Result6;
   obj6.children = items4;
-  obj2.children = closure_7(run(5024).BottomSheetScrollView, obj6);
-  return closure_6(run(7434).ActionSheet, obj2);
+  obj2.children = closure_7(View, obj6);
+  return closure_6(run(7433).ActionSheet, obj2);
 }

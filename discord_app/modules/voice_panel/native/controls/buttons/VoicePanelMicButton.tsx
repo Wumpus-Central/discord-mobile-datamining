@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelMicButton.tsx
 import LoggerDefault from "../../../../debug/Logger.tsx";
-import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
+import _mod1706 from "../../../../../../_runtime/metro/01706__.js";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05052_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05054_LegacyBaseButton.js";
 import MicrophoneDenyIcon from "../../../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
 import MediaEngineActionCreators from "../../../../media_engine/MediaEngineActionCreators.tsx";
 import useMuteStates from "../../../../video_calls/useMuteStates.tsx";
@@ -26,7 +26,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new LoggerDefault("VoicePanelMicButton");
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_17 = createStyles.createStyles({
   text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 },
 });
@@ -55,7 +55,16 @@ export function PTTButton(arg0) {
   closure_129_0 = channelId;
   closure_129_1 = noop.useRef(null);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  items = [ChannelStore, callback3, VoiceStateStore, MediaEngineStore, PermissionStore, callback1, onPressIn];
+  items = [
+    ChannelStore,
+    callback3,
+    VoiceStateStore,
+    MediaEngineStore,
+    PermissionStore,
+    callback1,
+    onPressIn,
+    UserStore,
+  ];
   let items1 = [channelId];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
@@ -64,11 +73,11 @@ export function PTTButton(arg0) {
       if (null != channel) {
         const obj = {
           channel,
-          authenticationStore: AuthenticationStore,
-          voiceStateStore: VoiceStateStore,
-          mediaEngineStore: MediaEngineStore,
-          permissionStore: PermissionStore,
-          impersonateStore: ImpersonateStore,
+          AuthenticationStore,
+          VoiceStateStore,
+          MediaEngineStore,
+          PermissionStore,
+          ImpersonateStore,
         };
         let muteStates = useMuteStates.getMuteStates(obj);
       } else {
@@ -129,7 +138,7 @@ export function PTTButton(arg0) {
     onPress2 = tmp9;
   }
   const obj3 = require("initialize");
-  sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  sharedValue = require("../../../../../../_runtime/metro/01653__.js").useSharedValue(false);
   const tmp11 = onPress2(sharedValue[19])();
   _slicedToArray = tmp11;
   noop = obj.useRef({ active: false, dragging: false });
@@ -176,7 +185,7 @@ export function PTTButton(arg0) {
   const memo = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
-    items = [closure_18, LegacyBaseButton.State, _mod1708.scheduleOnRN, callback3];
+    items = [closure_18, LegacyBaseButton.State, _mod1706.scheduleOnRN, callback3];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -198,7 +207,7 @@ export function PTTButton(arg0) {
     VoicePanelMicButtonTsx1.__workletHash = 6924573797989;
     VoicePanelMicButtonTsx1.__initData = tmp3;
     const manualActivationResult = Gesture.Pan().manualActivation(true);
-    const items2 = [closure_19, _mod1708.scheduleOnRN, callback1];
+    const items2 = [closure_19, _mod1706.scheduleOnRN, callback1];
     c0 = undefined;
     c1 = undefined;
     [tmp7, tmp8, tmp9] = items2;
@@ -218,7 +227,7 @@ export function PTTButton(arg0) {
       .onFinalize(VoicePanelMicButtonTsx2);
   }, items8);
   const effect = obj.useEffect(() => () => callback1(), items9);
-  const tmp6Result = require("../../../../../../_runtime/metro/01655__.js");
+  const tmp6Result = require("../../../../../../_runtime/metro/01653__.js");
   const voicePanelButtonStyles = require("VoicePanelStyles").useVoicePanelButtonStyles(wrapperSpecs);
   const obj4 = { gesture: memo, children: null };
   const element = {
@@ -268,6 +277,7 @@ export function MicButton(arg0) {
     PermissionStore,
     ImpersonateStore,
     GameConsoleStore,
+    UserStore,
   ];
   const items1 = [channelId];
   const stateFromStoresObject = mute(voicePanelButtonStyles[13]).useStateFromStoresObject(
@@ -277,11 +287,11 @@ export function MicButton(arg0) {
       if (null != channel) {
         const obj = {
           channel,
-          authenticationStore: AuthenticationStore,
-          voiceStateStore: VoiceStateStore,
-          mediaEngineStore: MediaEngineStore,
-          permissionStore: PermissionStore,
-          impersonateStore: ImpersonateStore,
+          AuthenticationStore,
+          VoiceStateStore,
+          MediaEngineStore,
+          PermissionStore,
+          ImpersonateStore,
         };
         let muteStates = useMuteStates.getMuteStates(obj);
       } else {

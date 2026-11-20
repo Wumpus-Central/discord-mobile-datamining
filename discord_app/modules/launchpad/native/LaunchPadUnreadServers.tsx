@@ -23,10 +23,10 @@ function renderHistorySection() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   listWrapper: { marginTop: 8 },
   list: { marginBottom: 4, flexShrink: 0 },
@@ -59,7 +59,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(19177), {
+  obj.children = closure_10(onGuildSelect(18996), {
     size: 48,
     borderRadius: 16,
     guildId,

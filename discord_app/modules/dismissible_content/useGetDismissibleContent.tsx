@@ -179,8 +179,8 @@ function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpr
   closure_130_7 = tmp13;
   let result = null != content;
   if (result) {
-    result = tmp(4626).isDismissibleContentBlockedByOverlay(content, first, tmp13);
-    const tmpResult9 = tmp(4626);
+    result = tmp(4628).isDismissibleContentBlockedByOverlay(content, first, tmp13);
+    const tmpResult9 = tmp(4628);
   }
   const tmpResult8 = require("OverlayTrackingUtils");
   const items5 = [DismissibleContentFrameworkStore];
@@ -269,9 +269,9 @@ function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpr
     }, items7),
   };
 }
-const removeCandidateContent = fn(4633).removeCandidateContent;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const UserSettingsTypes = fn(1082).UserSettingsTypes;
+const removeCandidateContent = fn(4635).removeCandidateContent;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const UserSettingsTypes = fn(1081).UserSettingsTypes;
 let closure_12 = {};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useGetDismissibleContent.tsx");

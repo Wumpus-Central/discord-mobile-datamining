@@ -20,7 +20,7 @@ function CommunityPill(guildVisibility) {
   _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
   let ExperimentalWebIcon;
   if (tmp4) {
-    ExperimentalWebIcon = tmp2(11802).ExperimentalWebIcon;
+    ExperimentalWebIcon = tmp2(11744).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,
@@ -41,23 +41,23 @@ function CommunityPill(guildVisibility) {
     let tmp10 = closure_9;
   } else {
     const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(9640), disableColor: true };
-    tmp7Result = closure_9(tmp2(1187).Icon, obj3);
+    tmp7Result = closure_9(tmp2(1186).Icon, obj3);
     tmp10 = closure_9;
   }
   items = [tmp7Result];
   const obj4 = { variant: "body-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
-  const intl2 = tmp2(1113).intl;
-  const t2 = tmp2(1113).t;
+  const intl2 = tmp2(1112).intl;
+  const t2 = tmp2(1112).t;
   obj4.children = intl2.string(tmp4 ? t2.SiZQ0N : t2.K7iRig);
   items[1] = tmp10(require("Text/Text").Text, obj4);
   obj.children = items;
   return closure_10(require("Pressables").PressableOpacity, obj);
 }
 const View = fn(17).View;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   content: { padding: 16 },
   avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 },
@@ -98,7 +98,7 @@ obj2.communityPill = {
   borderRadius: nativeDefault.radii.round,
 };
 obj2.communityPillIcon = { width: 16, height: 16, marginRight: 6 };
-const PlatformUtils = fn(1360);
+const PlatformUtils = fn(1358);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

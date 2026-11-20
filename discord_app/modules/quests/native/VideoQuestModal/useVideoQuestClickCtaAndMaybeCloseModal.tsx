@@ -6,7 +6,7 @@ import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LinkingTypes = fn(1072).LinkingTypes;
+const LinkingTypes = fn(1071).LinkingTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx",

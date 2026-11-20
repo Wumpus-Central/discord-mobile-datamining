@@ -8,7 +8,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ApplicationFlags: hasOwnProperty, ChannelTypes: closure_6 } = Constants);
 const DMAppChannel = "DMAppChannel";
 const size = fn(2);
@@ -61,7 +61,7 @@ export function useDMAppChannelApplicationId(stateFromStores) {
     if (tmpResult.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
       id = data.id;
     }
-    tmpResult = tmp(6540);
+    tmpResult = tmp(6542);
   }
   return id;
 }

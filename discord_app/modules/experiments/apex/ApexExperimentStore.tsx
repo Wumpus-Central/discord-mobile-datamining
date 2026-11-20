@@ -8,7 +8,7 @@ import BaseApexExperimentStore from "../../../../discord_common/js/packages/apex
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 class ApexExperimentStore extends tmp2 {
   constructor() {
     closure_0 = undefined;
@@ -224,4 +224,4 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/apex/ApexExperimentStore.tsx");
 
 export default apexExperimentStore;
-export const ExperimentAssignment = fn(1247).ExperimentAssignment;
+export const ExperimentAssignment = fn(1246).ExperimentAssignment;

@@ -13,7 +13,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -144,7 +144,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
             }
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
         if (safe) {
           const obj10 = {
@@ -183,8 +183,8 @@ let closure_7 = async function _handleContentLinking(arg0) {
     }
   }
 };
-fn(7144).addPostConnectionCallback;
-const Routes = fn(1072).Routes;
+fn(7143).addPostConnectionCallback;
+const Routes = fn(1071).Routes;
 let c6 = null;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/native/handleContentLinking.tsx");

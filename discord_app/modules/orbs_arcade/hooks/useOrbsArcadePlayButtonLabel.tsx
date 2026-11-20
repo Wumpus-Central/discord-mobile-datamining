@@ -47,12 +47,12 @@ export default function useOrbsArcadePlayButtonLabel(orbCost) {
     tmp7 = stateFromStores <= 0;
   }
   if (tmp7) {
-    const intl3 = tmp(1113).intl;
+    const intl3 = tmp(1112).intl;
     if (null == virtualCurrencyBalance || virtualCurrencyBalance - stateFromStores1 >= num) {
       const obj4 = { count: num };
-      let formatToPlainStringResult = intl3.formatToPlainString(tmp(1113).t["L1yi/U"], obj4);
+      let formatToPlainStringResult = intl3.formatToPlainString(tmp(1112).t["L1yi/U"], obj4);
     } else {
-      formatToPlainStringResult = intl3.string(tmp(1113).t.T1eNyO);
+      formatToPlainStringResult = intl3.string(tmp(1112).t.T1eNyO);
     }
     const obj5 = {
       text: formatToPlainStringResult,
@@ -64,17 +64,17 @@ export default function useOrbsArcadePlayButtonLabel(orbCost) {
     if (tmp6) {
       if (null != stateFromStores) {
         const obj6 = { text: null, isPaidPlay: null, canAffordPlay: true };
-        const intl2 = tmp(1113).intl;
+        const intl2 = tmp(1112).intl;
         const obj7 = { count: stateFromStores };
-        obj6.text = intl2.formatToPlainString(tmp(1113).t.onJEzB, obj7);
+        obj6.text = intl2.formatToPlainString(tmp(1112).t.onJEzB, obj7);
         obj6.isPaidPlay = tmp7;
         let obj8 = obj6;
       }
       return obj8;
     }
     obj8 = { text: null, isPaidPlay: null, canAffordPlay: true };
-    const intl = tmp(1113).intl;
-    obj8.text = intl.string(tmp(1113).t["7/xnly"]);
+    const intl = tmp(1112).intl;
+    obj8.text = intl.string(tmp(1112).t["7/xnly"]);
     obj8.isPaidPlay = tmp7;
   }
   const obj3 = require("initialize");

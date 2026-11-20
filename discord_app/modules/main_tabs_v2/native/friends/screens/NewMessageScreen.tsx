@@ -4,20 +4,20 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import router_utils from "../../../../routing/router_utils.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import UserPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/UserPlusIcon.tsx";
-import _modDef5483 from "../../../../../../_runtime/metro/05483__.js";
+import _modDef5485 from "../../../../../../_runtime/metro/05485__.js";
 import FakePlaceholderPrivateChannel from "../../../../channel/FakePlaceholderPrivateChannel.tsx";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import ChannelActionCreatorsDefault from "../../../../../actions/ChannelActionCreators.tsx";
 import HeaderShared from "../../shared_components/HeaderShared.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
-import _modDef10993 from "../../../../../../_runtime/metro/10993__.js";
+import _modDef10935 from "../../../../../../_runtime/metro/10935__.js";
 import GroupPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
 import ChatViewDefault from "../../../../chat/native/ChatView.tsx";
 import getGroupDMRecipientLimitDefault from "../../../../group_dm/getGroupDMRecipientLimit.tsx";
@@ -34,7 +34,7 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import PrivateChannelSortStore from "../../../../../stores/views/PrivateChannelSortStore.tsx";
 
 const require = globalThis.__r;
-const module_1655 = _mod1655;
+const module_1653 = _mod1653;
 
 require = fn;
 function isPrivateChannelMatch(arr, channel) {
@@ -96,7 +96,7 @@ let closure_23 = async function _findMatchingPrivateChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -160,7 +160,7 @@ function Header(recipientLimit) {
   recipientLimit = recipientLimit.recipientLimit;
   items = [recipientLimit, numInGroup];
   const memo = noop.useMemo(() => c1 - (c0 + 1), items);
-  _mod1655;
+  _mod1653;
   const items1 = [closure_24, numInGroup, 5, timing_timing.withTiming];
   c0 = undefined;
   c1 = undefined;
@@ -258,16 +258,16 @@ function ChatPreview(channelId) {
     screenIndex: "new-message",
     secondaryTextFieldRef: channelId.tagListInputRef,
   };
-  obj4.portal = channelId(1380).isAndroid();
-  items2[1] = closure_17(channelId(18454).PortalKeyboardRenderer, obj4);
+  obj4.portal = channelId(1378).isAndroid();
+  items2[1] = closure_17(channelId(18279).PortalKeyboardRenderer, obj4);
   obj2.children = items2;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
 }
 const View = fn(17).View;
-const PrivateChannelRecord = fn(4645).PrivateChannelRecord;
+const PrivateChannelRecord = fn(4647).PrivateChannelRecord;
 const UserRowModes = fn(9526).UserRowModes;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   AnalyticEvents: closure_12,
   AnalyticsSections: map1,
@@ -277,8 +277,8 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = module_1655.createAnimatedComponent(fn(5383).Text);
-const createStyles = fn(4792);
+let closure_19 = module_1653.createAnimatedComponent(fn(5385).Text);
+const createStyles = fn(4794);
 let obj = {
   container: { flex: 1 },
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -287,7 +287,7 @@ let obj = {
   emptyKeyboardView: null,
   addFriendsButtonContainer: null,
 };
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 let str = "center";
 if (PlatformUtils.isAndroid()) {
   str = "flex-start";
@@ -399,7 +399,7 @@ export default function NewMessageScreen(navigation) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -508,7 +508,7 @@ export default function NewMessageScreen(navigation) {
           obj2.channel = {
             id: navigation(6724).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
             guild_id: "Array",
-            parent_id: "analyticsLocations",
+            parent_id: "replace",
           };
           obj.dispatch(obj2);
         };
@@ -548,8 +548,8 @@ export default function NewMessageScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    enabled = tmp13(11998).isGroupDMNitroUpsellAudience(tmp23);
-    const tmp13Result = tmp13(11998);
+    enabled = tmp13(11940).isGroupDMNitroUpsellAudience(tmp23);
+    const tmp13Result = tmp13(11940);
   }
   const items7 = [navigation, selectedUserIds.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
   const layoutEffect = obj.useLayoutEffect(() => {
@@ -593,7 +593,7 @@ export default function NewMessageScreen(navigation) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -714,7 +714,7 @@ export default function NewMessageScreen(navigation) {
     if (constants) {
       if (stateFromStores1) {
         const obj = {
-          icon: _modDef10993,
+          icon: _modDef10935,
           IconComponent: GroupPlusIcon.GroupPlusIcon,
           label: null,
           iconVariant: "default",
@@ -728,7 +728,7 @@ export default function NewMessageScreen(navigation) {
         items.push(obj);
       }
       const obj2 = {
-        icon: _modDef5483,
+        icon: _modDef5485,
         IconComponent: UserPlusIcon.UserPlusIcon,
         label: null,
         iconVariant: "default",
@@ -746,7 +746,7 @@ export default function NewMessageScreen(navigation) {
   const items13 = [navigation, tmp, insets.bottom];
   const memo1 = obj.useMemo(() => {
     const obj = {
-      icon: _modDef5483,
+      icon: _modDef5485,
       IconComponent: UserPlusIcon.UserPlusIcon,
       label: null,
       iconVariant: "default",

@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/native/components/customization/TraitPicker.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3339 from "../../../Checkpoint2026.messages.js";
+import _modDef3341 from "../../../Checkpoint2026.messages.js";
 import useWindowSizeClassifier from "../../../../screen/native/useWindowSizeClassifier.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
@@ -23,7 +23,7 @@ function EarnedCountHeader(customizationOption) {
     "" +
     customizationOptionName +
     ", " +
-    intl.formatToPlainString(_modDef3339.Vfq58K, {
+    intl.formatToPlainString(_modDef3341.Vfq58K, {
       earnedCount,
       totalCount,
       countHook(arg0) {
@@ -39,7 +39,7 @@ function EarnedCountHeader(customizationOption) {
     children: null,
   };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3339.Vfq58K, {
+  obj3.children = intl2.format(_modDef3341.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(children, arg1) {
@@ -141,20 +141,20 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createElement = fn(19).createElement;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
-  container: { gap: fn(12694).TRAIT_OPTION_SPACING },
+  container: { gap: fn(12664).TRAIT_OPTION_SPACING },
   earnedRow: null,
   landscapeGap: null,
   details: null,
   landscapeScrollContent: null,
 };
-let obj3 = { gap: fn(12694).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(12694).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(12694).CONTENT_INSET };
+let obj3 = { gap: fn(12664).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(12664).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(12664).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(12694).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(12664).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 const React6 = createStyles.createStyles(obj2);
 const size = fn(2);

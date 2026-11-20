@@ -7,8 +7,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import PaginationDefault from "../../../../../_runtime/09390_Pagination.js";
-import _modDef10908 from "../../../../../_runtime/metro/10908__.js";
-import _modDef11944 from "../../../../../_runtime/metro/11944__.js";
+import _modDef10850 from "../../../../../_runtime/metro/10850__.js";
+import _modDef11886 from "../../../../../_runtime/metro/11886__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -19,18 +19,18 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: closure_6 } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(19889);
+const GuildSettingsRoleConstants = fn(19709);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: closure_10,
   DEFAULT_TEMPLATE_TYPE: closure_11,
 } = GuildSettingsRoleConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   carousel: { flex: 1 },
@@ -132,10 +132,10 @@ export default function GuildSettingsRoleTemplate(arg0) {
   }, items);
   let items1 = [
     closure_18,
-    require("../../../../../_runtime/metro/01655__.js").interpolate,
+    require("../../../../../_runtime/metro/01653__.js").interpolate,
     tmp10,
     bound,
-    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01653__.js").Extrapolation,
     num,
   ];
   _require = undefined;
@@ -190,7 +190,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_14(_modDef10908, {
+    children: closure_14(_modDef10850, {
       maximumValue: values.length - 1,
       minimumTrackTintColor: values[value].color,
       minimumValue: constants.COSMETIC,
@@ -301,7 +301,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
           const obj = { style: c3.templateContent, children: null };
           items = [
             gesture(native.Icon, {
-              source: _modDef11944,
+              source: _modDef11886,
               size: native.IconSizes.MEDIUM,
               color: nativeDefault.unsafe_rawColors.GREEN_360,
             }),

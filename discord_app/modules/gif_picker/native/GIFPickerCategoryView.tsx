@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-fn(1072).GIFPickerResultTypes;
+fn(1071).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 },
   gifImage: null,

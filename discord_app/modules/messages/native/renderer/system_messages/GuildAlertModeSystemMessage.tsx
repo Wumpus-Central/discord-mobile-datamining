@@ -11,7 +11,7 @@ import getTagPropertiesDefault from "../getTagProperties.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({
   automodUsernameColor: nativeDefault.colors.TEXT_BRAND,
 });

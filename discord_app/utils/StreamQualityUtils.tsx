@@ -12,8 +12,8 @@ import UserStore from "../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const StreamSettingsConstants = fn(5633);
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const StreamSettingsConstants = fn(5635);
 ({
   ApplicationStreamFPS: closure_10,
   ApplicationStreamResolutions: closure_11,
@@ -21,8 +21,8 @@ const StreamSettingsConstants = fn(5633);
   getApplicationFramerate: map1,
   getApplicationResolution: closure_14,
 } = StreamSettingsConstants);
-let closure_15 = fn(1390).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(5537).ResolutionTypes;
+let closure_15 = fn(1388).StreamQualitiesToPremiumType;
+const ResolutionTypes = fn(5539).ResolutionTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("utils/StreamQualityUtils.tsx");
 

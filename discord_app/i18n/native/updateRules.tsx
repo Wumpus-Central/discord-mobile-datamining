@@ -1,6 +1,6 @@
 // discord_app/i18n/native/updateRules.tsx
 import native from "../../design/void/native.tsx";
-import _modDef2070 from "../../../_runtime/metro/02070__.js";
+import _modDef2068 from "../../../_runtime/metro/02068__.js";
 import LinkingDefault from "../../lib/native/Linking.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -44,7 +44,7 @@ class I18nLink {
     if (null == obj.onClick) {
       obj.onClick = () => {
         const obj = LinkingDefault;
-        return obj.openURL(_modDef2070.sanitizeUrl(node.target));
+        return obj.openURL(_modDef2068.sanitizeUrl(node.target));
       };
     }
     obj1 = {
@@ -59,7 +59,7 @@ class I18nLink {
 }
 const jsx = fn(21).jsx;
 let paragraph = {
-  strong: { fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD },
+  strong: { fontFamily: fn(1071).Fonts.PRIMARY_SEMIBOLD },
   italic: { fontStyle: "italic" },
   underline: { textDecorationLine: "underline" },
 };

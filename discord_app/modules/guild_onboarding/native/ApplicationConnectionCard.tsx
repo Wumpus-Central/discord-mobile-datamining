@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");

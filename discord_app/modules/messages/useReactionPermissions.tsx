@@ -8,7 +8,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
 

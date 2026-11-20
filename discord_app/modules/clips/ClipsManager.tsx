@@ -44,7 +44,7 @@ let closure_25 = async function _getCodecSurvey() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -146,8 +146,8 @@ let closure_26 = async function _probeHardware() {
     videoEncoders: closure_131_6,
   };
 };
-const getSystemAnalyticsInfo = fn(5552).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8322);
+const getSystemAnalyticsInfo = fn(5554).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8321);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15,
   CLIPS_DEFAULT_SETTINGS_VERSION: closure_16,
@@ -155,10 +155,10 @@ const ClipsConstants = fn(8322);
   ClipsLogger: closure_18,
   CLIP_RUNTIME: closure_19,
 } = ClipsConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6276).StreamTypes;
-const Features = fn(5537).Features;
+const StreamTypes = fn(6278).StreamTypes;
+const Features = fn(5539).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -356,7 +356,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -398,7 +398,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(4617).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(4619).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -438,11 +438,11 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
             }
             obj8.actual_allow_voice_recording = tmp36;
             obj8.clip_runtime = clip_runtime;
-            decision(1256).track(constants.CLIPS_DEFAULT_SETTINGS_APPLIED, obj8);
-            const obj = decision(1256);
+            decision(1255).track(constants.CLIPS_DEFAULT_SETTINGS_APPLIED, obj8);
+            const obj = decision(1255);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp42) {
         dependencyMap = tmp;
@@ -464,7 +464,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -478,7 +478,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(4617).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(4619).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };
@@ -494,7 +494,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
         } else {
           v1(572).dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
           c2 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -585,7 +585,7 @@ prototype["updateHardwareClassification"] = function updateHardwareClassificatio
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -703,7 +703,7 @@ prototype["classifyAndApplyHardware"] = function classifyAndApplyHardware() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -800,7 +800,7 @@ prototype["classifyAndApplyHardware"] = function classifyAndApplyHardware() {
             return obj;
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp35) {
         c3 = tmp;

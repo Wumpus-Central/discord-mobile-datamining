@@ -11,15 +11,15 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7961).isAvatarDecorationRecord;
-const isNameplateRecord = fn(2112).isNameplateRecord;
-const isProfileEffectRecord = fn(7962).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7963).isProfileFrameRecord;
-let closure_8 = fn(8055).PROFILE_FRAME_ASPECT_RATIO;
+const isAvatarDecorationRecord = fn(7960).isAvatarDecorationRecord;
+const isNameplateRecord = fn(2110).isNameplateRecord;
+const isProfileEffectRecord = fn(7961).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7962).isProfileFrameRecord;
+let closure_8 = fn(8054).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj = {
   tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" },
   framePreview: {

@@ -48,7 +48,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj3.video = hasVideo;
     obj3.channel = channel;
-    let tmp6Result = jsx(tmp(17688).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
+    let tmp6Result = jsx(tmp(17515).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
   } else {
     const obj4 = { channel };
     tmp6Result = <DurationInfo channel={channel} />;
@@ -68,10 +68,10 @@ function DurationInfo(channel) {
   }
   return tmp5;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: closure_8, Permissions: closure_9, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles({
   activeTimestamp: { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 16 },
 });
@@ -99,7 +99,7 @@ export default function ChannelInfo(channel) {
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
   const tmp5 = useEmbeddedAppsForChannelDefault(channel);
   const obj = channel(504);
-  const postsWithUnreadsCount = channel(8498).useUnreadThreadsCountForParent(channel.guild_id, channel.id);
+  const postsWithUnreadsCount = channel(8497).useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     const obj3 = {
       mentionCount: mentionsCount,
@@ -132,9 +132,9 @@ export default function ChannelInfo(channel) {
         }
         if (hasItem) {
           if (tmpResult.hasStream(voiceStates)) {
-            tmp11Result = jsx(tmp(1187).LiveTag, {});
+            tmp11Result = jsx(tmp(1186).LiveTag, {});
           }
-          tmpResult = tmp(5828);
+          tmpResult = tmp(5830);
         }
       }
     }
@@ -144,7 +144,7 @@ export default function ChannelInfo(channel) {
           const obj4 = { embeddedApps: tmp5, muted };
           tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });
         }
-        tmpResult2 = tmp(17798);
+        tmpResult2 = tmp(17625);
       }
     }
     if (null != isSubscriptionGated) {

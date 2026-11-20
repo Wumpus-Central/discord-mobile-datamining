@@ -13,10 +13,10 @@ import apply from "../../../../_runtime/00012_apply.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10575);
+const ChannelCallConstants = fn(10517);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5442).ParticipantTypes;
-const timeout = new fn(4636).Timeout();
+const ParticipantTypes = fn(5444).ParticipantTypes;
+const timeout = new fn(4638).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -28,23 +28,23 @@ let obj2 = {};
 let size = {
   x: "Array",
   y: "s",
-  width: "channel_id",
-  height: "window",
+  width: "analyticsLocations",
+  height: "dispatch",
   screenOrientation: fn(9311).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: null,
-  isInitialized: "#000000",
-  isVisible: 0.24,
+  hasUserInteractedSinceOrientationChange: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006847958532560452,
+  isInitialized: 63394750042971300000000000000000000000000000000000000000000000000000000000000000000000,
+  isVisible: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002831371861810975,
 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
   y: "s",
-  width: "channel_id",
-  height: "window",
+  width: "analyticsLocations",
+  height: "dispatch",
   screenOrientation: fn(9311).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: null,
-  isInitialized: "#000000",
-  isVisible: 0.24,
+  hasUserInteractedSinceOrientationChange: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006847958532560452,
+  isInitialized: 63394750042971300000000000000000000000000000000000000000000000000000000000000000000000,
+  isVisible: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002831371861810975,
 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;
@@ -61,7 +61,7 @@ export function setFocus(focus) {
 }
 export function toggleFocus() {
   const focus = obj3.getState().focus;
-  focus(1263).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
+  focus(1262).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
 }
 export function resetFocusTimer() {
   timeout.stop();
@@ -96,7 +96,7 @@ export function setVoiceChatDrawerState(embeddedActivityLocationChannelId, CLOSE
 }
 export const togglePipFocus = apply.throttle(() => {
   const pipFocus = obj3.getState().pipFocus;
-  pipFocus(1263).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
+  pipFocus(1262).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
 }, 300);
 export function useIsVoiceChatFocused() {
   const voiceChatDrawerState = obj3().voiceChatDrawerState;

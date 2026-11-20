@@ -3,16 +3,16 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef1655 from "../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../_runtime/metro/01653__.js";
 import UnicodeEmojisDefault from "../../emojis/UnicodeEmojis.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef12153 from "../../../../_runtime/metro/12153__.js";
-import _modDef13050 from "../../../../_runtime/metro/13050__.js";
+import _modDef12095 from "../../../../_runtime/metro/12095__.js";
+import _modDef13020 from "../../../../_runtime/metro/13020__.js";
 import MemberActionUtils from "../MemberActionUtils.tsx";
-import _modDef13053 from "../../../../_runtime/metro/13053__.js";
+import _modDef13023 from "../../../../_runtime/metro/13023__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -28,19 +28,19 @@ function ActionChannelInfo(action) {
   const obj = action(563);
   if (null == stateFromStores) {
     const obj2 = { variant: "footnote/normal", color: "text-default", children: null };
-    const intl2 = tmp(1113).intl;
+    const intl2 = tmp(1112).intl;
     const obj3 = { channelName: null };
-    const intl3 = tmp(1113).intl;
-    obj3.channelName = intl3.string(tmp(1113).t.J90oLW);
-    obj2.children = intl2.format(tmp(1113).t.MkzlDL, obj3);
+    const intl3 = tmp(1112).intl;
+    obj3.channelName = intl3.string(tmp(1112).t.J90oLW);
+    obj2.children = intl2.format(tmp(1112).t.MkzlDL, obj3);
     let obj4 = obj2;
   } else {
     obj4 = { variant: "footnote/normal", color: "text-default", children: null };
-    const intl = tmp(1113).intl;
+    const intl = tmp(1112).intl;
     const obj5 = { channelName: tmp4 };
-    obj4.children = intl.format(tmp(1113).t.MkzlDL, obj5);
+    obj4.children = intl.format(tmp(1112).t.MkzlDL, obj5);
   }
-  return closure_12(action(5383).Text, obj4);
+  return closure_12(action(5385).Text, obj4);
 }
 function ChannelActionEmoji(emoji) {
   emoji = emoji.emoji;
@@ -48,7 +48,7 @@ function ChannelActionEmoji(emoji) {
   const tmp = closure_15();
   const obj = {
     style: tmp.emojiPlaceholder,
-    children: closure_12(id(1187).Icon, { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12153 }),
+    children: closure_12(id(1186).Icon, { size: id(1186).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12095 }),
   };
   const tmp6 = closure_12(View, obj);
   id = undefined;
@@ -58,7 +58,7 @@ function ChannelActionEmoji(emoji) {
   if (emoji != null) {
     const name = emoji.name;
   }
-  const obj2 = { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12153 };
+  const obj2 = { size: id(1186).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12095 };
   items = [EmojiStore];
   const items1 = [id];
   const stateFromStores = id(563).useStateFromStores(
@@ -90,7 +90,7 @@ function ChannelActionEmoji(emoji) {
       tmp2Result = tmp6;
       if (null != tmp5Result5.getByName(tmp5Result6.convertSurrogateToName(name, false))) {
         const obj6 = { style: tmp.textEmoji, variant: "heading-lg/medium", children: name };
-        tmp2Result = closure_12(tmp3(5383).Text, obj6);
+        tmp2Result = closure_12(tmp3(5385).Text, obj6);
       }
       tmp5Result6 = UnicodeEmojisDefault;
     }
@@ -138,13 +138,13 @@ function MemberActionChatInputBanner(channel) {
   [first1, [][0]] = noop.useState(require("GuildOnboardingHomeTypes").CHANNEL_ACTION_BANNER_HEIGHT);
   closure_9 = tmp15;
   const tmp2Result = require("useStateFromStores");
-  sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
-  const tmp2Result5 = require("../../../../_runtime/metro/01655__.js");
+  sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const tmp2Result5 = require("../../../../_runtime/metro/01653__.js");
   let num = 0;
   if (completed) {
     num = first1;
   }
-  sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(num);
+  sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(num);
   let items1 = [sharedValue, completed, tmp9, first];
   const effect = obj4.useEffect(() => {
     if (!c3) {
@@ -163,12 +163,12 @@ function MemberActionChatInputBanner(channel) {
     }
     const result1 = sharedValue1.set(0);
   }, items2);
-  const tmp2Result6 = require("../../../../_runtime/metro/01655__.js");
+  const tmp2Result6 = require("../../../../_runtime/metro/01653__.js");
   const items3 = [
     closure_18,
     stateFromStores,
     sharedValue,
-    require("../../../../_runtime/metro/01655__.js").withDelay,
+    require("../../../../_runtime/metro/01653__.js").withDelay,
     completed,
     require("timing/timing").withTiming,
     require("native").DECELERATED_EASING,
@@ -209,15 +209,15 @@ function MemberActionChatInputBanner(channel) {
   MemberActionChatInputBannerTsx1.__closure = items4;
   MemberActionChatInputBannerTsx1.__workletHash = 16275727828088;
   MemberActionChatInputBannerTsx1.__initData = tmp20;
-  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     MemberActionChatInputBannerTsx1,
   );
-  const tmp2Result7 = require("../../../../_runtime/metro/01655__.js");
+  const tmp2Result7 = require("../../../../_runtime/metro/01653__.js");
   const items5 = [
     closure_19,
     stateFromStores,
     sharedValue1,
-    require("../../../../_runtime/metro/01655__.js").withDelay,
+    require("../../../../_runtime/metro/01653__.js").withDelay,
     tmp9,
     completed,
     require("timing/timing").withTiming,
@@ -265,7 +265,7 @@ function MemberActionChatInputBanner(channel) {
   MemberActionChatInputBannerTsx2.__workletHash = 12940138330664;
   MemberActionChatInputBannerTsx2.__initData = tmp28;
   const items7 = [tmp10[1]];
-  const animatedStyle1 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     MemberActionChatInputBannerTsx2,
   );
   const callback = obj4.useCallback((nativeEvent) => {
@@ -296,7 +296,7 @@ function MemberActionChatInputBanner(channel) {
         items[1] = state(View, obj3);
         let tmp6Result = c3;
         if (c3) {
-          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13053 };
+          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13023 };
           tmp6Result = application_id(native.Icon, obj6);
         }
         items[2] = tmp6Result;
@@ -313,7 +313,7 @@ function MemberActionChatInputBanner(channel) {
       const items9 = [tmp.animatedContainer, animatedStyle];
       obj5.style = items9;
       obj5.children = renderAction();
-      tmp45Result = closure_12(_modDef1655.View, obj5);
+      tmp45Result = closure_12(_modDef1653.View, obj5);
     }
     items8[1] = tmp45Result;
     let tmp43Result = null;
@@ -354,7 +354,7 @@ function MemberActionChatInputBanner(channel) {
             obj3.children = items1;
             items[1] = state(View, obj3);
             const obj7 = { style: _undefined.circle, children: null };
-            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef13050 };
+            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef13020 };
             obj7.children = application_id(native.Icon, obj8);
             items[2] = application_id(View, obj7);
             obj.children = items;
@@ -369,7 +369,7 @@ function MemberActionChatInputBanner(channel) {
         const items11 = [tmp.animatedContainer, animatedStyle1];
         obj8.style = items11;
         obj8.children = renderNextAction();
-        items10[1] = closure_12(_modDef1655.View, obj8);
+        items10[1] = closure_12(_modDef1653.View, obj8);
         obj6.children = items10;
         tmp43Result = closure_13(closure_14, obj6);
       }
@@ -379,14 +379,14 @@ function MemberActionChatInputBanner(channel) {
     obj9.children = items8;
     return closure_13(closure_14, obj9);
   }
-  const tmp2Result8 = require("../../../../_runtime/metro/01655__.js");
+  const tmp2Result8 = require("../../../../_runtime/metro/01653__.js");
 }
 const View = fn(17).View;
-const Routes = fn(1072).Routes;
-const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
+const Routes = fn(1071).Routes;
+const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   animatedContainer: { overflow: "hidden" },
   measurement: { opacity: 0, position: "absolute" },
@@ -445,8 +445,8 @@ let closure_19 = {
 };
 const memoResult = noop.memo(function MemberActionChatInputBannerGuarded(channel) {
   channel = channel.channel;
-  const canSeeOnboardingHome = channel(6562).useCanSeeOnboardingHome(channel.guild_id);
-  const obj = channel(6562);
+  const canSeeOnboardingHome = channel(6564).useCanSeeOnboardingHome(channel.guild_id);
+  const obj = channel(6564);
   items = [GuildMemberStore];
   const stateFromStores = channel(563).useStateFromStores(items, () => {
     const selfMember = GuildMemberStore.getSelfMember(channel.guild_id);

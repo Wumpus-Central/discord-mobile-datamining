@@ -2,7 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../intl/index.native.tsx";
 import ClientThemesTypes from "../ClientThemesTypes.tsx";
-import _modDef2955 from "../intl/ClientThemes.messages.js";
+import _modDef2957 from "../intl/ClientThemes.messages.js";
 import HexagonCampaignUtils from "../../hexagon_campaign/HexagonCampaignUtils.tsx";
 import HexagonCampaignPerkAvailability from "../../hexagon_campaign/HexagonCampaignPerkAvailability.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
@@ -16,15 +16,15 @@ const require = globalThis.__r;
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
-  return intl.string(_modDef2955.yl1iMm);
+  return intl.string(_modDef2957.yl1iMm);
 }
-const ClientThemesConstants = fn(1240);
+const ClientThemesConstants = fn(1239);
 ({
   BACKGROUND_GRADIENT_PRESETS_MOBILE: metroImportDefault,
   HEXAGON_GRADIENT_PRESET: closure_8,
   REFRESH_STANDARD_BACKGROUND_THEMES: closure_9,
 } = ClientThemesConstants);
-const HexagonCampaignConstants = fn(4817);
+const HexagonCampaignConstants = fn(4819);
 ({ HexagonCampaignPerk: closure_10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 const MobileThemesUtils = "MobileThemesUtils";
 const size = fn(2);
@@ -181,7 +181,7 @@ export function useAllMobileThemes(mode) {
   let stateFromStores1 = null;
   if (undefined !== customThemeDisplaySettings) {
     const obj2 = {
-      type: tmp(1241).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
+      type: tmp(1240).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
       getName: getCustomThemesName,
       theme: null,
       customThemeSettings: null,
@@ -237,10 +237,10 @@ export function useAllMobileThemes(mode) {
         HermesBuiltin.arraySpread(closure_7, 1);
         tmp17 = items4;
       }
-      tmpResult10 = tmp(4822);
+      tmpResult10 = tmp(4824);
     }
     tmp17 = closure_7;
-    tmpResult9 = tmp(4820);
+    tmpResult9 = tmp(4822);
   }
   if (null != stateFromStores1) {
     const items5 = [];

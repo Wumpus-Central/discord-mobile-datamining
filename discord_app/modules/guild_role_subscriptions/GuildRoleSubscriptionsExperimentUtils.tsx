@@ -4,7 +4,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 let items = [, ,];
 ({
   ROLE_SUBSCRIPTIONS_ENABLED: arr[0],

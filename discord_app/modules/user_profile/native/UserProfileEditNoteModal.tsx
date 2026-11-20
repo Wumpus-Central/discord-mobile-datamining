@@ -20,7 +20,7 @@ export default function UserProfileEditNoteModal(arg0) {
   }
   navigation = undefined;
   onSave = undefined;
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1500).useNavigation();
   [_slicedToArray, onSave] = handleClose.useState(false);
   items = [navigation];
   const effect = handleClose.useEffect(
@@ -32,9 +32,9 @@ export default function UserProfileEditNoteModal(arg0) {
       }),
     items,
   );
-  navigation(1360);
+  navigation(1358);
   const obj3 = { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null };
-  let obj = navigation(1502);
+  let obj = navigation(1500);
   let obj4;
   if (!tmpResult.isAndroid()) {
     obj4 = { height: 56 };
@@ -42,22 +42,22 @@ export default function UserProfileEditNoteModal(arg0) {
   obj3.headerStyle = obj4;
   const obj5 = { root: null };
   const obj6 = { title: null, headerTitle: null, headerLeft: null, render: null };
-  let intl = tmp(1113).intl;
-  obj6.title = intl.string(navigation(1113).t.sHHsOM);
+  let intl = tmp(1112).intl;
+  obj6.title = intl.string(navigation(1112).t.sHHsOM);
   obj6.headerTitle = function headerTitle() {
     const obj = { variant: "heading-md/semibold", accessibilityRole: "header", children: null };
-    const intl = navigation(1113).intl;
-    obj.children = intl.string(navigation(1113).t.sHHsOM);
-    return jsx(navigation(5383).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
+    const intl = navigation(1112).intl;
+    obj.children = intl.string(navigation(1112).t.sHHsOM);
+    return jsx(navigation(5385).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
   };
-  tmpResult = navigation(1360);
-  obj6.headerLeft = navigation(6976).getHeaderCloseButton(handleClose);
+  tmpResult = navigation(1358);
+  obj6.headerLeft = navigation(6975).getHeaderCloseButton(handleClose);
   obj6.render = function render() {
     return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
   obj5.root = obj6;
   obj3.screens = obj5;
-  return jsx(navigation(6973).Navigator, {
+  return jsx(navigation(6972).Navigator, {
     initialRouteName: "root",
     headerStatusBarHeight: 12,
     headerStyle: null,

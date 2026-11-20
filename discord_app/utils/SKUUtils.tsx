@@ -1,13 +1,13 @@
 // discord_app/utils/SKUUtils.tsx
 import util from "../intl/index.native.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
-import _modDef2169 from "../../_runtime/metro/02169__.js";
+import _modDef2167 from "../../_runtime/metro/02167__.js";
 import matchPathCompat from "../modules/routing/matchPathCompat.tsx";
 import StoreUtils from "StoreUtils.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 const GameGenres = Constants.GameGenres;
 ({ SKUTypes: hasOwnProperty, Routes: closure_6, SKUProductLines: metroImportDefault } = Constants);
 const merged = Object.assign(GameGenres);
@@ -283,7 +283,7 @@ export function getReadablePreorderReleaseDate(arg0) {
     let num = 0;
     if (0 < items.length) {
       [tmp3, tmp4] = items[num];
-      const obj = _modDef2169(preorderApproximateReleaseDate, tmp3, true);
+      const obj = _modDef2167(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }

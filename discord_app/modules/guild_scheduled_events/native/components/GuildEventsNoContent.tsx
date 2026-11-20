@@ -7,12 +7,12 @@ import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const Constants = fn(1083);
+const GuildSettingsSections = fn(1071).GuildSettingsSections;
+const Constants = fn(1082);
 ({ Permissions: closure_6, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: {
     display: "flex",
@@ -56,24 +56,24 @@ export default function GuildEventsNoContent(guild) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl = guild(1113).intl;
-  obj3.children = intl.string(guild(1113).t["WgZ+3D"]);
-  const items2 = [closure_7(guild(5383).Text, obj3), ,];
+  const intl = guild(1112).intl;
+  obj3.children = intl.string(guild(1112).t["WgZ+3D"]);
+  const items2 = [closure_7(guild(5385).Text, obj3), ,];
   const obj4 = { style: tmp.subtitle, variant: "body-sm/normal", color: "text-default", children: null };
-  const intl2 = guild(1113).intl;
-  obj4.children = intl2.string(guild(1113).t["v/S/PG"]);
-  items2[1] = closure_7(guild(5383).Text, obj4);
+  const intl2 = guild(1112).intl;
+  obj4.children = intl2.string(guild(1112).t["v/S/PG"]);
+  items2[1] = closure_7(guild(5385).Text, obj4);
   if (stateFromStores) {
     const obj5 = { style: tmp.subtitle, variant: "body-sm/normal", color: "text-default", children: null };
-    const intl3 = tmp2(1113).intl;
+    const intl3 = tmp2(1112).intl;
     const obj6 = {
       onClick() {
         onClose();
         GuildSettingsActionCreatorsDefault.open(guild.id, GuildSettingsSections.ROLES);
       },
     };
-    obj5.children = intl3.format(tmp2(1113).t["K+DH2o"], obj6);
-    stateFromStores = closure_7(tmp2(5383).Text, obj5);
+    obj5.children = intl3.format(tmp2(1112).t["K+DH2o"], obj6);
+    stateFromStores = closure_7(tmp2(5385).Text, obj5);
   }
   items2[2] = stateFromStores;
   obj2.children = items2;

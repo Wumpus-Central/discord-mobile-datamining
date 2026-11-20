@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 

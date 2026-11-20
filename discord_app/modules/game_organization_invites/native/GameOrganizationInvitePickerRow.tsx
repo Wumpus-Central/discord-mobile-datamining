@@ -1,7 +1,7 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationInvitePickerRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2557 from "../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2559 from "../GameOrganizationInvitesUntranslated.messages.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
@@ -15,8 +15,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
 require = fn;
-let closure_4 = fn(12022).useInstantInviteSendStates;
-const InviteSendStates = fn(8319).InviteSendStates;
+let closure_4 = fn(11964).useInstantInviteSendStates;
+const InviteSendStates = fn(8318).InviteSendStates;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
@@ -57,7 +57,7 @@ export default noop.memo(function GameOrganizationInvitePickerRow(organization) 
       const obj7 = { variant: "body-xs/medium", color: "text-muted", children: null };
       const intl = util.intl;
       const obj8 = { count: memberCount, max: maxMembers };
-      obj7.children = intl.formatToPlainString(_modDef2557.VuENGl, obj8);
+      obj7.children = intl.formatToPlainString(_modDef2559.VuENGl, obj8);
       items1[1] = timestampProducer(Text_Text.Text, obj7);
       obj5.children = items1;
       tmp10 = metroImportDefault(Stack_Stack.Stack, obj5);

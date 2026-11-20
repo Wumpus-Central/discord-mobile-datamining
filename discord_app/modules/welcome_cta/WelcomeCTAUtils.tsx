@@ -4,8 +4,8 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const WELCOME_STICKERS = fn(8620).WELCOME_STICKERS;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const WELCOME_STICKERS = fn(8619).WELCOME_STICKERS;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_cta/WelcomeCTAUtils.tsx");
 

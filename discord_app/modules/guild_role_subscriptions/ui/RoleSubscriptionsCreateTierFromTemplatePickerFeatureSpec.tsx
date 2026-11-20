@@ -5,7 +5,7 @@ import ExperimentStore from "../../experiments/ExperimentStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting(

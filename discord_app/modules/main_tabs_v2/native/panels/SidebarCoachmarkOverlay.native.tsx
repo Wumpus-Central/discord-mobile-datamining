@@ -31,7 +31,7 @@ function SidebarCoachmarkOverlayLayer(manager) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const context = noop.createContext(null);

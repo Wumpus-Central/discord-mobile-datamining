@@ -9,10 +9,10 @@ import useChatBadgeDefault from "../hooks/useChatBadge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ComponentActions = fn(1072).ComponentActions;
+const ComponentActions = fn(1071).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { badgeContainer: { position: "absolute", top: -2, right: -2 }, badge: null, notificationBadge: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round };
 obj2.badge = size;

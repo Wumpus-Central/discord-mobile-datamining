@@ -4,20 +4,20 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 
 require = fn;
 let closure_3 = {
-  [fn(7867).AgeSignalsStatus.SHARED]: "SHARED",
-  [fn(7867).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED",
-  [fn(7867).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED",
+  [fn(7866).AgeSignalsStatus.SHARED]: "SHARED",
+  [fn(7866).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED",
+  [fn(7866).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED",
 };
 let closure_4 = {
-  [fn(7867).AgeRangeSource.TIER_A]: "TIER_A",
-  [fn(7867).AgeRangeSource.TIER_B]: "TIER_B",
-  [fn(7867).AgeRangeSource.TIER_C]: "TIER_C",
-  [fn(7867).AgeRangeSource.TIER_D]: "TIER_D",
+  [fn(7866).AgeRangeSource.TIER_A]: "TIER_A",
+  [fn(7866).AgeRangeSource.TIER_B]: "TIER_B",
+  [fn(7866).AgeRangeSource.TIER_C]: "TIER_C",
+  [fn(7866).AgeRangeSource.TIER_D]: "TIER_D",
 };
 let closure_5 = {
-  [fn(7867).SignificantChangeStatus.APPROVED]: "APPROVED",
-  [fn(7867).SignificantChangeStatus.PENDING]: "PENDING",
-  [fn(7867).SignificantChangeStatus.DECLINED]: "DECLINED",
+  [fn(7866).SignificantChangeStatus.APPROVED]: "APPROVED",
+  [fn(7866).SignificantChangeStatus.PENDING]: "PENDING",
+  [fn(7866).SignificantChangeStatus.DECLINED]: "DECLINED",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeAssurance.android.tsx");
@@ -33,6 +33,7 @@ export default {
           googleAgeSignalsStatus: null,
           googleAgeRangeSource: null,
           googleSignificantChangeStatus: null,
+          googleInstallId: null,
         };
         const ageSignalsStatus = ageLower.ageSignalsStatus;
         let tmp;
@@ -52,6 +53,14 @@ export default {
           tmp3 = closure_1_5[significantChangeStatus];
         }
         obj.googleSignificantChangeStatus = tmp3;
+        const installId = ageLower.installId;
+        let tmp4;
+        if (null != installId) {
+          if ("" !== installId) {
+            tmp4 = installId;
+          }
+        }
+        obj.googleInstallId = tmp4;
         return obj;
       }
       await PlayAgeSignals.getAgeSignals();

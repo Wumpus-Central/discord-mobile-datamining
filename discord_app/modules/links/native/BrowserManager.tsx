@@ -21,7 +21,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -52,7 +52,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;
@@ -60,7 +60,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
   }
 };
 const AppState = fn(17).AppState;
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = NativeBrowserManagerModuleDefault;
 } else {

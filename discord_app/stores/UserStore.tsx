@@ -1158,9 +1158,9 @@ function handleGuildStickersFetchSuccess(stickers) {
     return tmp;
   }, false);
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ UserFlags: metroImportDefault, MessageFlags: closure_8, ChannelTypes: closure_9 } = Constants);
-let closure_10 = fn(1390).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
+let closure_10 = fn(1388).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
 let users = {};
 let closure_12 = 0;
 let c13 = "47835198259242069";

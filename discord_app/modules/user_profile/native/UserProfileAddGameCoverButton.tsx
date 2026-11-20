@@ -5,11 +5,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = {
   button: {
-    aspectRatio: fn(10077).GAME_COVER_ASPECT_RATIO,
-    borderRadius: fn(10077).GAME_COVER_BORDER_RADIUS,
+    aspectRatio: fn(10080).GAME_COVER_ASPECT_RATIO,
+    borderRadius: fn(10080).GAME_COVER_BORDER_RADIUS,
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
     alignItems: "center",
     justifyContent: "center",
@@ -32,13 +32,13 @@ export default function UserProfileAddGameCoverButton(ref) {
     style: null,
     children: null,
   };
-  const intl = ref(1113).intl;
-  obj.accessibilityLabel = intl.string(ref(1113).t.E3l3Zx);
+  const intl = ref(1112).intl;
+  obj.accessibilityLabel = intl.string(ref(1112).t.E3l3Zx);
   items = [closure_4().button, { width: ref.coverWidth }];
   obj.style = items;
   const tmp = closure_4();
-  obj.children = jsx(ref(10138).PlusLargeIcon, { size: "md", color: widgetType(575).colors.ICON_MUTED });
-  return jsx(ref(6911).PressableOpacity, {
+  obj.children = jsx(ref(10141).PlusLargeIcon, { size: "md", color: widgetType(575).colors.ICON_MUTED });
+  return jsx(ref(6910).PressableOpacity, {
     ref,
     onPress() {
       return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });

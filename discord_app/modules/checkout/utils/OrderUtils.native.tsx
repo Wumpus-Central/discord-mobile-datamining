@@ -13,7 +13,7 @@ let closure_4 = async function _discardDraftOrder(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_4 = async function _discardDraftOrder(arg0) {
     }
   }
 };
-const OrderStatus = fn(5509).OrderStatus;
+const OrderStatus = fn(5511).OrderStatus;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/utils/OrderUtils.native.tsx");
 

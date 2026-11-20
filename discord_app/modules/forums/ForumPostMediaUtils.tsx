@@ -227,7 +227,7 @@ function useForumPostEmbeds(embeds, flag) {
             }
             tmp = null == thumbnail && null != image.images;
           });
-          let found = mapped.filter(tmp(1255).isNotNullish);
+          let found = mapped.filter(tmp(1254).isNotNullish);
         }
         return found;
       }
@@ -474,7 +474,7 @@ function useForumPostMediaProperties(firstResult, flag) {
   HermesBuiltin.arraySpread(items1, tmp3);
   return items;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MessageAttachmentFlags: closure_8, MessageEmbedMediaFlags: closure_9 } = Constants);
 const ForumPostMediaTypes = { EMBED: "embed", ATTACHMENT: "attachment", COMPONENT: "component" };
 let size = fn(2);

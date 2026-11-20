@@ -3,9 +3,9 @@ import Clickstream from "../../clickstream/Clickstream.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: c3, AnalyticEvents: closure_4 } = Constants);
-const StaticChannelRoute = fn(4648).StaticChannelRoute;
+const StaticChannelRoute = fn(4650).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx",

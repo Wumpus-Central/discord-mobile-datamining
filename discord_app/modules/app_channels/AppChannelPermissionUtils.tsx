@@ -5,7 +5,7 @@ import useAppChannelApplication from "useAppChannelApplication.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
 
 require = fn;
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/AppChannelPermissionUtils.tsx");
 

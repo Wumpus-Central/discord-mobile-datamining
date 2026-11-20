@@ -151,7 +151,7 @@ function computeInitialNavigationStateWithoutLogging() {
     return items3;
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ME: closure_6, Routes: metroImportDefault } = Constants);
 const logger = new LoggerDefault("getInitialNavigationState");
 const size = fn(2);

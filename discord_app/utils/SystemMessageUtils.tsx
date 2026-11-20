@@ -42,7 +42,7 @@ function getSystemMessageUserJoinMobile(id) {
   const obj = SnowflakeUtilsDefault;
   return items[obj.extractTimestamp(obj, id) % items.length];
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MessageEmbedTypes: closure_10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
 let closure_13 = {
   "234395307759108106": "https://groovy.bot/commands",

@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ME = fn(1072).ME;
+const ME = fn(1071).ME;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_channels/native/openChannelSecondaryViewChat.tsx");
 
@@ -66,11 +66,11 @@ export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
   const effect = noop.useEffect(() => {
     function handleFrameDeepLinkQueued(channelId) {
       if (channelId.channelId === handleFrameDeepLinkQueued) {
-        const rootNavigationRef = handleFrameDeepLinkQueued(4969).getRootNavigationRef();
+        const rootNavigationRef = handleFrameDeepLinkQueued(4971).getRootNavigationRef();
         handleFrameDeepLinkQueued = tmp;
-        const obj2 = handleFrameDeepLinkQueued(4969);
+        const obj2 = handleFrameDeepLinkQueued(4971);
         const tmp6 = handleFrameDeepLinkQueued;
-        const rootNavigationRef1 = handleFrameDeepLinkQueued(4969).getRootNavigationRef();
+        const rootNavigationRef1 = handleFrameDeepLinkQueued(4971).getRootNavigationRef();
         let num = -1;
         if (null != rootNavigationRef1) {
           num = -1;
@@ -90,13 +90,13 @@ export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
           if (-1 !== num) {
             const rootState = rootNavigationRef.getRootState();
             const obj = {};
-            const StackActions = tmp6(1503).StackActions;
+            const StackActions = tmp6(1501).StackActions;
             const merged = Object.assign(StackActions.pop(rootState.routes.length - num));
             obj.target = rootState.key;
             rootNavigationRef.dispatch(obj);
           }
         }
-        const obj4 = handleFrameDeepLinkQueued(4969);
+        const obj4 = handleFrameDeepLinkQueued(4971);
       }
     }
     if (null != handleFrameDeepLinkQueued) {

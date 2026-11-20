@@ -17,7 +17,7 @@ let closure_7 = async function _remove2FA() {
       obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_7 = async function _remove2FA() {
               obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -128,7 +128,7 @@ let closure_7 = async function _remove2FA() {
                 c3 = 0;
                 tmp3(tmp30[6]).batchUpdates(() => closure_1_6.setState({ isCheckingLastFactor: false }));
                 c5 = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp30) {
               tmp32 = c3;
@@ -170,13 +170,13 @@ const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let obj3 = module_560.create(() => ({ isCheckingLastFactor: false }));
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["D+aE7g"]);
   },
-  parent: fn(8593).MobileUserSettings.ACCOUNT,
+  parent: fn(8592).MobileUserSettings.ACCOUNT,
   onPress: function remove2FA() {
     const self = this;
     const apply = closure_7.apply;
@@ -198,8 +198,8 @@ const pressable = SettingBuilders.createPressable({
     }
     return tmp;
   },
-  useDescription: fn(15980).use2FARemoveDisableReason,
-  usePredicate: fn(15893).useIsTOTPEnabled,
+  useDescription: fn(15944).use2FARemoveDisableReason,
+  usePredicate: fn(15857).useIsTOTPEnabled,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");

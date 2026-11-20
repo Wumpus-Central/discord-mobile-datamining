@@ -49,7 +49,7 @@ export function _transformMetadataToCamelCase(body) {
                                   if (null != closure_1_0[item]) {
                                     let _Object = Object;
                                     let keys = Object.keys(tmp3);
-                                    reduced = keys.reduce(/* F103439 */ function() { ... }, {});
+                                    reduced = keys.reduce(/* F101759 */ function() { ... }, {});
                                   }
                                   acc[camelCaseResult] = reduced;
                                 }
@@ -131,7 +131,7 @@ export function _transformMetadataToSnakeCase(metadata) {
                                   if (null != closure_1_0[item]) {
                                     let _Object = Object;
                                     let keys = Object.keys(tmp3);
-                                    reduced = keys.reduce(/* F103440 */ function() { ... }, {});
+                                    reduced = keys.reduce(/* F101760 */ function() { ... }, {});
                                   }
                                   acc[snakeCaseResult] = reduced;
                                 }

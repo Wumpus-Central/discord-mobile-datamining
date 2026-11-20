@@ -29,7 +29,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       if (null != dependencyMap[applicationId]) {
         dependencyMap[applicationId].stop();
       }
-      const timeout = new applicationId(4636).Timeout();
+      const timeout = new applicationId(4638).Timeout();
       timeout.start(c9, () =>
         DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }),
       );
@@ -43,7 +43,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       if (null != dependencyMap[applicationId]) {
         dependencyMap[applicationId].stop();
       }
-      const timeout1 = new applicationId(4636).Timeout();
+      const timeout1 = new applicationId(4638).Timeout();
       timeout1.start(num, () =>
         DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }),
       );
@@ -105,7 +105,7 @@ function handleActivityUpdate() {
   });
   return c0;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ActivityActionStates: hasOwnProperty, ActivityActionTypes: closure_6 } = Constants);
 let obj = {};
 const dependencyMap = {};

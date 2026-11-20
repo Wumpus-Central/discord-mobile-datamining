@@ -5,8 +5,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(4659).isGuildOwner;
-const Constants = fn(1072);
+const isGuildOwner = fn(4661).isGuildOwner;
+const Constants = fn(1071);
 ({ GuildFeatures: closure_6, HelpdeskArticles: metroImportDefault, MarketingURLs: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -39,18 +39,18 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(20041);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(20041)(id));
+  const tmp10 = refresh(19861);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(19861)(id));
   let id1;
-  const tmp10Result = refresh(20041)(id);
+  const tmp10Result = refresh(19861)(id);
   if (features != null) {
     id1 = features.id;
   }
-  const tmp9ResultResult = refresh(20042)(id1);
+  const tmp9ResultResult = refresh(19862)(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp9Result = refresh(20042);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(20043)(eligibility));
+  const tmp9Result = refresh(19862);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(19863)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -65,7 +65,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     tmp19 = true === hasItem3;
   }
-  const tmp16 = refresh(20043)(eligibility);
+  const tmp16 = refresh(19863)(eligibility);
   let id2;
   if (features != null) {
     id2 = features.id;
@@ -82,21 +82,21 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (eligibility != null) {
     canApply = eligibility.canApply;
   }
-  const intl = tmp(1113).intl;
+  const intl = tmp(1112).intl;
   const obj2 = { faqUrl: null };
   const tmpResult3 = require("CreatorMonetizationRestrictionsHooks");
-  obj2.faqUrl = refresh(2188).getArticleURL(constants2.CREATOR_FAQ);
-  const tmp9Result3 = refresh(2188);
+  obj2.faqUrl = refresh(2186).getArticleURL(constants2.CREATOR_FAQ);
+  const tmp9Result3 = refresh(2186);
   if (isApplicationRejected) {
     if (tmpResult3.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
       if (true === hasItem) {
-        const intl4 = tmp(1113).intl;
+        const intl4 = tmp(1112).intl;
         const obj3 = { communityGuidelineUrl: constants3.GUIDELINES };
-        let formatResult1 = intl4.format(tmp(1113).t["0o1Q+t"], obj3);
+        let formatResult1 = intl4.format(tmp(1112).t["0o1Q+t"], obj3);
       } else {
-        const intl3 = tmp(1113).intl;
+        const intl3 = tmp(1112).intl;
         const obj4 = { communityGuidelineUrl: constants3.GUIDELINES };
-        formatResult1 = intl3.format(tmp(1113).t.b6h59n, obj4);
+        formatResult1 = intl3.format(tmp(1112).t.b6h59n, obj4);
       }
     }
   }
@@ -106,13 +106,13 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   }
   let formatResult2;
   if (tmp28) {
-    const intl2 = tmp(1113).intl;
+    const intl2 = tmp(1112).intl;
     const obj5 = {
       requestCooldownDuration,
-      creatorRevenuePolicyUrl: tmp9(2188).getArticleURL(constants2.CREATOR_POLICY),
+      creatorRevenuePolicyUrl: tmp9(2186).getArticleURL(constants2.CREATOR_POLICY),
     };
-    formatResult2 = intl2.format(tmp(1113).t.TvX207, obj5);
-    const tmp9Result4 = tmp9(2188);
+    formatResult2 = intl2.format(tmp(1112).t.TvX207, obj5);
+    const tmp9Result4 = tmp9(2186);
   }
   let tmp34 = isExpeditedOnboardingGuild;
   if (isExpeditedOnboardingGuild) {
@@ -132,8 +132,8 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (isApplicationRejected) {
     if (tmp35) {
       if (stateFromStores) {
-        const intl5 = tmp(1113).intl;
-        formatResult3 = intl5.format(tmp(1113).t.wbVIUB, {});
+        const intl5 = tmp(1112).intl;
+        formatResult3 = intl5.format(tmp(1112).t.wbVIUB, {});
       }
     }
   }

@@ -5,7 +5,7 @@ import util from "../../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../../screen/useWindowDimensions.native.tsx";
 import ColorUtils from "../../../../../../utils/ColorUtils.tsx";
 import useA11yRolesNative from "../../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import LinearGradientDefault from "../../../../../../../_runtime/05347_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../../_runtime/05349_LinearGradient.js";
 import useToken from "../../../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
@@ -38,12 +38,12 @@ function GiftingSKUCardItemPreview(arg0) {
     const obj6 = { uri: currentUser(8913) };
     obj5.source = obj6;
     obj5.style = tmp.sampleProfile;
-    const items1 = [closure_10(currentUser(5479), obj5)];
+    const items1 = [closure_10(currentUser(5481), obj5)];
     const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
     items1[1] = closure_10(currentUser(8893), obj7);
     obj4.children = items1;
     tmp8 = closure_11(closure_4, obj4);
-    const tmp19 = currentUser(5479);
+    const tmp19 = currentUser(5481);
   } else {
     tmp8 = null;
     if (isProfileFrameRecord(item)) {
@@ -123,11 +123,11 @@ function GiftingSKUCardPreview(isSelected) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(7961).isAvatarDecorationRecord;
-const isNameplateRecord = fn(2112).isNameplateRecord;
-const isProfileEffectRecord = fn(7962).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7963).isProfileFrameRecord;
-const VerticalGradient = fn(1072).VerticalGradient;
+const isAvatarDecorationRecord = fn(7960).isAvatarDecorationRecord;
+const isNameplateRecord = fn(2110).isNameplateRecord;
+const isProfileEffectRecord = fn(7961).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7962).isProfileFrameRecord;
+const VerticalGradient = fn(1071).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = 100;
@@ -136,7 +136,7 @@ const previewWidth = 150 - nativeDefault.space.PX_32;
 const sum = 100 + nativeDefault.space.PX_40;
 const PX_122 = nativeDefault.space.PX_12;
 let closure_17 = 2 * nativeDefault.space.PX_24;
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj = {
   card: {
     width: 150,
@@ -286,7 +286,7 @@ let closure_22 = noop.memo(function GiftingSKUCard(rewardSkuId) {
     return closure_1_11(Pressables.PressableOpacity, obj3);
   }
 });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_23 = createStyles.createStyles({
   grid: { flexDirection: "column", alignSelf: "center", gap: PX_122 },
   row: { flexDirection: "row", gap: PX_122 },

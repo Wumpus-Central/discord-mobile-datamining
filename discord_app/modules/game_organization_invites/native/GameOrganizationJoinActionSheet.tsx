@@ -9,10 +9,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(11834).GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY;
+let closure_7 = fn(11776).GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { loading: { paddingVertical: nativeDefault.space.PX_32 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

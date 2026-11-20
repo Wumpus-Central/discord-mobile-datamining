@@ -67,7 +67,7 @@ function handleShimPipeOpen(iframeId) {
         }
       },
     };
-    const embeddedAppShimHost = iframeId(19541).createEmbeddedAppShimHost(obj2);
+    const embeddedAppShimHost = iframeId(19359).createEmbeddedAppShimHost(obj2);
     let result = map.set(iframeId, embeddedAppShimHost);
     let frameByIframeId = FramesStore.getFrameByIframeId(iframeId);
     if (null == frameByIframeId) {
@@ -80,7 +80,7 @@ function handleShimPipeOpen(iframeId) {
       obj3 = { muted: frameByIframeId.data.muted };
     }
     const result1 = map1.set(iframeId, obj3);
-    let obj4 = iframeId(19541);
+    let obj4 = iframeId(19359);
   }
 }
 function handleIFrameUnmount(id) {
@@ -108,7 +108,7 @@ function updateParentStates() {
   }
   tmp2 = map[Symbol.iterator]();
 }
-const ComponentActions = fn(1072).ComponentActions;
+const ComponentActions = fn(1071).ComponentActions;
 let closure_6 = { muted: false };
 const map = new Map();
 const map1 = new Map();

@@ -20,7 +20,7 @@ let closure_6 = async function _fetchGameOrganization() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -123,7 +123,7 @@ let closure_7 = async function _fetchLinkableGameOrganizations(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -181,7 +181,7 @@ let closure_7 = async function _fetchLinkableGameOrganizations(arg0) {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organizations/GameOrganizationActionCreators.tsx");
 

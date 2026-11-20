@@ -5,10 +5,10 @@ import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore
 const require = globalThis.__r;
 
 const require = fn;
-let ApplicationCommandFrecencyStore = fn(10376);
+let ApplicationCommandFrecencyStore = fn(10318);
 ({ getFilteredTopCommands: c3, getTopRealCommands: closure_4 } = ApplicationCommandFrecencyStore);
 let ApplicationCommandFrecencyStore = ApplicationCommandFrecencyStore_mod;
-const UserSettingsTypes = fn(1082).UserSettingsTypes;
+const UserSettingsTypes = fn(1081).UserSettingsTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyHooks.tsx");
 

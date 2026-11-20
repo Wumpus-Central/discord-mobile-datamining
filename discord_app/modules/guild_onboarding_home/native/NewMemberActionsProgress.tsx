@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05347_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05349_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildOnboardingHomeSettingsStore from "../GuildOnboardingHomeSettingsStore.tsx";
@@ -20,11 +20,11 @@ function ProgressBar(percent) {
   return refs(View, obj);
 }
 const View = fn(17).View;
-const StaticChannelRoute = fn(4648).StaticChannelRoute;
-const GuildMemberFlags = fn(4710).GuildMemberFlags;
+const StaticChannelRoute = fn(4650).StaticChannelRoute;
+const GuildMemberFlags = fn(4712).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", alignItems: "center" },

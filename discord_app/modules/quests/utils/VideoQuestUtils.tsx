@@ -10,12 +10,12 @@ import QuestStore from "../QuestStore.tsx";
 import VideoQuestUIStore from "../VideoQuestUIStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(10554).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(10496).getVideoQuestWatchCtaText;
 export function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {

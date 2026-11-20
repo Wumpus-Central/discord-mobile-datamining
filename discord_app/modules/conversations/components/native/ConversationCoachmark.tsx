@@ -15,11 +15,11 @@ function NewBadge() {
   return <View style={closure_9().badge}>{null}</View>;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(4625).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
+const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(4627).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
 let items = [TOPICAL_NAVIGATION_HEADER_COACHMARK];
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   badge: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,

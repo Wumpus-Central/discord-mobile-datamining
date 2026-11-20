@@ -4,8 +4,8 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ItemPurchaseType = fn(5509).ItemPurchaseType;
-const PaymentGateways = fn(1083).PaymentGateways;
+const ItemPurchaseType = fn(5511).ItemPurchaseType;
+const PaymentGateways = fn(1082).PaymentGateways;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/checkout/native/useOrbCheckoutOrder.tsx");
 
@@ -16,8 +16,8 @@ export function useOrbCheckoutOrder(skuId) {
   c3 = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  isOrdersCheckout = isOrdersCheckout(14152).useConfig({ location: "orb_checkout_modal" }).enabled;
-  const obj = isOrdersCheckout(14152);
+  isOrdersCheckout = isOrdersCheckout(14121).useConfig({ location: "orb_checkout_modal" }).enabled;
+  const obj = isOrdersCheckout(14121);
   [tmp2, c2] = noop.useState(null);
   let tmp = _slicedToArray(noop.useState(null), 2);
   [tmp4, c3] = noop.useState(isOrdersCheckout);
@@ -47,7 +47,7 @@ export function useOrbCheckoutOrder(skuId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -83,10 +83,10 @@ export function useOrbCheckoutOrder(skuId) {
             v0 = 1;
             closure_128_1 = closure_2;
             if (obj5.isExpectedHttpClientError(closure_128_1)) {
-              if (closure_128_1 instanceof isOrdersCheckout(6230)) {
+              if (closure_128_1 instanceof isOrdersCheckout(6232)) {
                 let tmp56 = closure_128_1;
               } else {
-                tmp56 = new isOrdersCheckout(6230)(closure_128_1);
+                tmp56 = new isOrdersCheckout(6232)(closure_128_1);
               }
               c4(tmp56);
             } else {
@@ -103,10 +103,10 @@ export function useOrbCheckoutOrder(skuId) {
               const _String2 = String;
               obj10.paymentGateway = String(constants2.VIRTUAL_CURRENCY);
               obj9.extra = obj10;
-              const result = skuId(4605).captureBillingException(error, obj9);
-              const obj6 = skuId(4605);
+              const result = skuId(4607).captureBillingException(error, obj9);
+              const obj6 = skuId(4607);
             }
-            obj5 = skuId(4605);
+            obj5 = skuId(4607);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

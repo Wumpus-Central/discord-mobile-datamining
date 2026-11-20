@@ -9,8 +9,8 @@ const require = globalThis.__r;
 
 const require = fn;
 let closure_5 = fn(8992).useNativeCheckoutStoreOrNull;
-const CurrencyCodes = fn(1072).CurrencyCodes;
-fn(8692).GPlayBillingResult;
+const CurrencyCodes = fn(1071).CurrencyCodes;
+fn(8732).GPlayBillingResult;
 let closure_9 = new LoggerDefault("useMobilePurchaseSKU.android");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
@@ -123,7 +123,7 @@ export default function useMobilePurchaseSKU(skuId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -261,7 +261,7 @@ export default function useMobilePurchaseSKU(skuId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -413,7 +413,7 @@ export default function useMobilePurchaseSKU(skuId) {
             }
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
           const obj18 = {
             productId: closure_130_1,

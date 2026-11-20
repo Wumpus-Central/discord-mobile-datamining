@@ -6,7 +6,7 @@ import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.an
 import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7371 from "../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7370 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import InviteSuggestionsActionCreators from "../../../../actions/InviteSuggestionsActionCreators.tsx";
 import CreateGuildModalActionCreatorsDefault from "../CreateGuildModalActionCreators.tsx";
@@ -66,16 +66,16 @@ function GuildInviteSuggestionRows(openInviteSheet) {
     obj3.getItemType = function getItemType(type) {
       return type.type;
     };
-    obj2.children = closure_17(_mod7371.FlashList, obj3);
+    obj2.children = closure_17(_mod7370.FlashList, obj3);
     tmp6Result2 = closure_17(closure_5, obj2);
   }
   return tmp6Result2;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(12022).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(7280).CreateGuildModalStates;
-const Constants = fn(1072);
+let closure_6 = fn(11964).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(7279).CreateGuildModalStates;
+const Constants = fn(1071);
 ({
   AnalyticEvents: closure_12,
   AnalyticsSections: map1,
@@ -85,10 +85,10 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: {
-    marginTop: fn(5346).NAV_BAR_HEIGHT,
+    marginTop: fn(5348).NAV_BAR_HEIGHT,
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
     alignItems: "center",
@@ -107,7 +107,7 @@ let obj2 = {
   separator: null,
 };
 let obj3 = {
-  marginTop: fn(5346).NAV_BAR_HEIGHT,
+  marginTop: fn(5348).NAV_BAR_HEIGHT,
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   alignItems: "center",

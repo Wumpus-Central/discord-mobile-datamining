@@ -46,7 +46,7 @@ const jsxProd = fn(21);
 let closure_8 = {};
 let closure_9 = [];
 let c10 = "body-sm/medium";
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles((arg0) => {
   colors = nativeDefault.colors;
   if (arg0) {
@@ -110,7 +110,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(8452)());
+  const tmp3 = closure_11(channel(8451)());
   const obj = user(9557);
   const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9557).useLocalSelfMuteDeaf());
   const obj2 = user(9557);
@@ -164,7 +164,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(17691), obj7, user.id);
+  obj4.children = closure_6(tmp(17518), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);

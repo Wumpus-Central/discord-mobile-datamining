@@ -12,16 +12,16 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 let closure_7 = fn(6729).WishlistRecommendationReason;
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, SKUProductLines: closure_11 } = Constants);
-let closure_12 = fn(1074).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(7950).UserProfileSections;
+let closure_12 = fn(1073).CollectiblesMobileShopScreen;
+const UserProfileSections = fn(7949).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = {
     title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 },
@@ -161,7 +161,7 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

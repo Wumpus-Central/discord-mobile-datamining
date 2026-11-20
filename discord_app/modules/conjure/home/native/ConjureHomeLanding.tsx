@@ -19,7 +19,7 @@ const prototype = function ConjureHomeUploadError() {
 class prototype extends Error {
 }
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, content: null, hero: null, badgeRow: null, carousel: null, showcase: null, showcaseTitle: null, error: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_32, gap: PX_32 };
@@ -28,7 +28,7 @@ obj2.hero = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.sp
 obj2.badgeRow = { flexDirection: "row" };
 let obj6 = { marginBottom: null };
 const diff = nativeDefault.space.PX_48 - PX_32;
-obj6.marginBottom = diff - fn(18674).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
+obj6.marginBottom = diff - fn(18498).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
 obj2.carousel = obj6;
 let obj5 = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_32 };
 obj2.showcase = { gap: nativeDefault.space.PX_16 };
@@ -75,10 +75,10 @@ export default function ConjureHomeLanding(focusRequest) {
   ConjureHomeLandingTsx1.__closure = items1;
   ConjureHomeLandingTsx1.__workletHash = 1190769444170;
   ConjureHomeLandingTsx1.__initData = tmp8;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ConjureHomeLandingTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(ConjureHomeLandingTsx1);
   const tmp13 = _slicedToArray(noop.useState(require("conjureTarget").CONJURE_TARGET_USER), 2);
   first = tmp13[0];
-  let obj2 = require("../../../../../_runtime/metro/01655__.js");
+  let obj2 = require("../../../../../_runtime/metro/01653__.js");
   const conjureEligibleGuilds = require("useConjureProjects").useConjureEligibleGuilds("ConjureHomeLanding");
   CONJURE_TARGET_USER = first;
   if (first !== require("conjureTarget").CONJURE_TARGET_USER) {
@@ -134,7 +134,7 @@ export default function ConjureHomeLanding(focusRequest) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -229,7 +229,7 @@ export default function ConjureHomeLanding(focusRequest) {
                     closure_0 = fn;
                     function check() {
                       const messages = ref.getMessages(closure_0);
-                      if (messages.some(/* F143692 */ function() { ... })) {
+                      if (messages.some(/* F141536 */ function() { ... })) {
                         ref.removeChangeListener(check);
                         const _clearTimeout = clearTimeout;
                         clearTimeout(timerId);

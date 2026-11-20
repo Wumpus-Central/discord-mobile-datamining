@@ -7,7 +7,7 @@ import GameStore from "../GameStore.tsx";
 const require = fn;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1072).QueryIds.GAME,
+  getQueryId: fn(1071).QueryIds.GAME,
   failureStaleAfter: 15 * DurationsDefault.Seconds.SECOND,
   get(nextResult) {
     if (null == nextResult) {

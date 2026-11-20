@@ -25,7 +25,7 @@ export function openUserProfile(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ export function openUserProfile(arg0) {
           const obj8 = { userId: closure_128_0, channelId: closure_128_1, onClose: closure_128_3 };
           v2 = 2;
           c3 = 1;
-          const obj9 = { value: v2(7948)(obj8), done: false };
+          const obj9 = { value: v2(7947)(obj8), done: false };
           return obj9;
         }
       } catch (tmp29) {

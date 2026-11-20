@@ -51,6 +51,9 @@ prototype["getSpatialAudioVersion"] = function getSpatialAudioVersion() {
 prototype["getSpatialAudioHrtfFiles"] = function getSpatialAudioHrtfFiles() {
   return { directory: null, files: [] };
 };
+prototype["getSpatialAudioStats"] = function getSpatialAudioStats() {
+  return Promise.resolve(null);
+};
 prototype["setInputVolume"] = function setInputVolume() {};
 prototype["setOutputVolume"] = function setOutputVolume() {};
 prototype["getAudioInputDevices"] = function getAudioInputDevices() {

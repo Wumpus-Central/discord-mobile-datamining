@@ -10,8 +10,8 @@ import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const ReadStateTypes = fn(6432).ReadStateTypes;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const ReadStateTypes = fn(6434).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
@@ -86,7 +86,7 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   });
   AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, { source, type: "guild" });
   let obj3 = { source, type: "guild" };
-  return mapped(7357).bulkAck(mapped, onFinished);
+  return mapped(7356).bulkAck(mapped, onFinished);
 }
 export function markChannelsAsRead(arr, source, onFinished) {
   const mapped = arr.map((channelId) => {

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/launchPremiumPlanSelect.tsx
 import Constants from "../../../Constants.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import UserSettingsUtils from "../../../utils/UserSettingsUtils.tsx";
 import PremiumModal from "PremiumModal.tsx";
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils.tsx";
@@ -69,7 +69,7 @@ export function launchPremiumPlanSelect(isBoostPurchaseFlow) {
       onPaymentSuccess,
       onPaymentDismiss,
     };
-    const obj3 = flag2(6308);
+    const obj3 = flag2(6310);
     obj3.pushLazy(asyncRequireImpl(8980, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
     const tmp7 = asyncRequireImpl(8980, dependencyMap.paths);
   }

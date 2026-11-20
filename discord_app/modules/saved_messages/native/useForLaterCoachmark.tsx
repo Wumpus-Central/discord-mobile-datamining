@@ -4,9 +4,9 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let closure_6 = fn(4625).DismissibleContent.FOR_LATER_NOTIFICATIONS_COACHMARK;
+let closure_6 = fn(4627).DismissibleContent.FOR_LATER_NOTIFICATIONS_COACHMARK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/native/useForLaterCoachmark.tsx");
 
@@ -34,7 +34,7 @@ export default function useForLaterCoachmark(targetRef) {
       dependencyMap(constants.USER_DISMISS);
     };
     obj.renderImgComponent = function renderImgComponent() {
-      return closure_1_5(first(11650).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
+      return closure_1_5(first(11592).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
     };
     return obj;
   }, items1);

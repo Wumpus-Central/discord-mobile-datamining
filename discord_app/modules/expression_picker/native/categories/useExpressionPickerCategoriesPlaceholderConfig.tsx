@@ -4,8 +4,8 @@ import FastestListPropsPlaceholder from "../../../fastest_list/props/FastestList
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const CATEGORY_ICON_SIZE = fn(1072).CATEGORY_ICON_SIZE;
-const createStyles = fn(4792);
+const CATEGORY_ICON_SIZE = fn(1071).CATEGORY_ICON_SIZE;
+const createStyles = fn(4794);
 const obj2 = { placeholder: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 } };
 let closure_4 = createStyles.createStyles(obj2);
 let size = fn(2);

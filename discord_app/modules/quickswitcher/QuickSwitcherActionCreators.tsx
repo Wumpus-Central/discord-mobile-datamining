@@ -340,7 +340,7 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -381,7 +381,7 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
           const obj = closure_130_1(closure_130_2[16]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp20) {
       c4 = tmp;
@@ -389,9 +389,9 @@ let closure_28 = async function _openInviteFromQuickSwitcher(arg0) {
     }
   }
 };
-const InAppNavigationType = fn(6436).InAppNavigationType;
-const ChannelRecordBase = fn(4645).ChannelRecordBase;
-const Constants = fn(1072);
+const InAppNavigationType = fn(6438).InAppNavigationType;
+const ChannelRecordBase = fn(4647).ChannelRecordBase;
+const Constants = fn(1071);
 ({
   Layers,
   ME: map1,
@@ -401,26 +401,26 @@ const Constants = fn(1072);
   AnalyticsPages: closure_17,
   Routes: closure_18,
 } = Constants);
-const isStaticChannelRoute = fn(4648).isStaticChannelRoute;
-const CollectibleShopTab = fn(1074).CollectibleShopTab;
+const isStaticChannelRoute = fn(4650).isStaticChannelRoute;
+const CollectibleShopTab = fn(1073).CollectibleShopTab;
 let obj = {};
-obj[fn(9940).AutocompleterQuerySymbols.USER] = fn(9940).AutocompleterResultTypes.USER;
-obj[fn(9940).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(9940).AutocompleterResultTypes.TEXT_CHANNEL;
-obj[fn(9940).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(9940).AutocompleterResultTypes.VOICE_CHANNEL;
-obj[fn(9940).AutocompleterQuerySymbols.GUILD] = fn(9940).AutocompleterResultTypes.GUILD;
-obj[fn(9940).AutocompleterQuerySymbols.GAME_PROFILE] = fn(9940).AutocompleterResultTypes.GAME_PROFILE;
+obj[fn(9943).AutocompleterQuerySymbols.USER] = fn(9943).AutocompleterResultTypes.USER;
+obj[fn(9943).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(9943).AutocompleterResultTypes.TEXT_CHANNEL;
+obj[fn(9943).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(9943).AutocompleterResultTypes.VOICE_CHANNEL;
+obj[fn(9943).AutocompleterQuerySymbols.GUILD] = fn(9943).AutocompleterResultTypes.GUILD;
+obj[fn(9943).AutocompleterQuerySymbols.GAME_PROFILE] = fn(9943).AutocompleterResultTypes.GAME_PROFILE;
 let closure_21 = Object.freeze(obj);
 const regExp = new RegExp(
   "^" +
-    fn(9940).AutocompleterQuerySymbols.USER +
+    fn(9943).AutocompleterQuerySymbols.USER +
     "|" +
-    fn(9940).AutocompleterQuerySymbols.TEXT_CHANNEL +
+    fn(9943).AutocompleterQuerySymbols.TEXT_CHANNEL +
     "|" +
-    fn(9940).AutocompleterQuerySymbols.VOICE_CHANNEL +
+    fn(9943).AutocompleterQuerySymbols.VOICE_CHANNEL +
     "|\\" +
-    fn(9940).AutocompleterQuerySymbols.GUILD +
+    fn(9943).AutocompleterQuerySymbols.GUILD +
     "|\\" +
-    fn(9940).AutocompleterQuerySymbols.GAME_PROFILE,
+    fn(9943).AutocompleterQuerySymbols.GAME_PROFILE,
 );
 let items = [, ,];
 ({ SETTINGS: arr[0], PLAYGROUND: arr[1], SHOP_ORBS_TAB: arr[2] } = InAppNavigationType);
@@ -519,7 +519,7 @@ export function switchToResultInNewTab(type) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -539,7 +539,7 @@ export function switchToResultInNewTab(type) {
                         obj5.recipientIds = items;
                         dependencyMap = 1;
                         c3 = 1;
-                        const obj6 = { value: tmp2(7618).openPrivateChannel(obj5), done: false };
+                        const obj6 = { value: tmp2(7617).openPrivateChannel(obj5), done: false };
                         return obj6;
                       }
                     } else if (arg0 === 1) {
@@ -551,11 +551,11 @@ export function switchToResultInNewTab(type) {
                       return obj7;
                     } else {
                       closure_128_0 = value;
-                      const obj = tmp5(9964);
+                      const obj = tmp5(9967);
                       const obj8 = { sourceTabId: closure_129_3, newTabPickerSelection: closure_129_2 };
                       obj.openChannelTabActive(closure_128_0, null, closure_129_1, obj8);
                       c3 = 3;
-                      return { value: "HermesInternal", done: "+60" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp21) {
                     c3 = tmp;
@@ -574,7 +574,7 @@ export function switchToResultInNewTab(type) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -594,7 +594,7 @@ export function switchToResultInNewTab(type) {
                         obj5.recipientIds = items;
                         dependencyMap = 1;
                         c3 = 1;
-                        const obj6 = { value: tmp2(7618).openPrivateChannel(obj5), done: false };
+                        const obj6 = { value: tmp2(7617).openPrivateChannel(obj5), done: false };
                         return obj6;
                       }
                     } else if (arg0 === 1) {
@@ -606,11 +606,11 @@ export function switchToResultInNewTab(type) {
                       return obj7;
                     } else {
                       closure_128_0 = value;
-                      const obj = tmp5(9964);
+                      const obj = tmp5(9967);
                       const obj8 = { sourceTabId: closure_129_3, newTabPickerSelection: closure_129_2 };
                       obj.openChannelTabActive(closure_128_0, null, closure_129_1, obj8);
                       c3 = 3;
-                      return { value: "HermesInternal", done: "+60" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp21) {
                     c3 = tmp;

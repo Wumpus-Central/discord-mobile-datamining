@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import DisplayNameEffect from "../../../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
-import _modDef3147 from "../../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef3149 from "../../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
@@ -20,7 +20,7 @@ function effectName(arg0) {
   const intl = util.intl;
   let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
   if (OpWJ3f == null) {
-    OpWJ3f = _modDef3147.OpWJ3f;
+    OpWJ3f = _modDef3149.OpWJ3f;
   }
   return intl.string(OpWJ3f);
 }
@@ -69,7 +69,7 @@ function BenchmarkRow(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const EFFECT_ORDER = fn(1397).EFFECT_ORDER;
+const EFFECT_ORDER = fn(1395).EFFECT_ORDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = EFFECT_ORDER.filter((item) => item !== DisplayNameEffect.DisplayNameEffect.PRISM);
@@ -80,7 +80,7 @@ let items = [
   { key: "medium", label: "Medium", name: "NebulaWanderer" },
   { key: "long", label: "Long", name: "GalacticOverlord2049" },
 ];
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },
   container: null,

@@ -14,7 +14,7 @@ import FavoriteStore from "../../favorites/FavoriteStore.tsx";
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
 require = fn;
-const FAVORITES = fn(1072).FAVORITES;
+const FAVORITES = fn(1071).FAVORITES;
 const jsx = fn(21).jsx;
 let c7 = "more-options";
 const size = fn(2);
@@ -31,10 +31,10 @@ export default noop.memo(function GuildsBarFavorites() {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        closure_1_1(17870)(closure_1_5);
+        closure_1_1(17697)(closure_1_5);
       },
       onLongPress() {
-        closure_1_1(17703)();
+        closure_1_1(17530)();
       },
     }),
     [],
@@ -66,8 +66,8 @@ export default noop.memo(function GuildsBarFavorites() {
     onAccessibilityAction,
     label: null,
     externalChildren: null,
-    expandedChildren: "quest_open_game_link",
-    children: "body-md/semibold",
+    expandedChildren: null,
+    children: "quest_open_game_link",
   };
   const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
   let intl = util.intl;
@@ -90,7 +90,7 @@ export default noop.memo(function GuildsBarFavorites() {
     onAccessibilityAction,
     label: null,
     externalChildren: null,
-    expandedChildren: "quest_open_game_link",
-    children: "body-md/semibold",
+    expandedChildren: null,
+    children: "quest_open_game_link",
   });
 });

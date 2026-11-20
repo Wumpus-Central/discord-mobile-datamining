@@ -7,21 +7,26 @@ import CheckpointStore from "../../../../CheckpointStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointTransitionConstants = fn(12423);
+const CheckpointTransitionConstants = fn(12393);
 ({
   CHECKPOINT_FRIENDS_CONTENT_FADE_OUT: closure_8,
   CHECKPOINT_SIDEKICK_CONTENT_FADE_IN: closure_9,
   CHECKPOINT_FRIENDS_CONTENT_FADE_IN: closure_10,
 } = CheckpointTransitionConstants);
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+const PX_32 = nativeDefault.space.PX_32;
+const createStyles = fn(4794);
 let obj2 = {
   container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 },
   animation: null,
   transition: null,
   sidekick: null,
   sidekickDetails: null,
+  wideContainer: null,
+  wideScenePane: null,
+  wideCopy: null,
+  wideTransition: null,
 };
 const rect = { position: "absolute", left: -nativeDefault.space.PX_24, right: -nativeDefault.space.PX_24 };
 obj2.animation = rect;
@@ -30,7 +35,24 @@ let obj3 = { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBott
 obj2.sidekick = { gap: nativeDefault.space.PX_32 };
 let obj4 = { gap: nativeDefault.space.PX_32 };
 obj2.sidekickDetails = { gap: nativeDefault.space.PX_24 };
-let closure_13 = createStyles.createStyles(obj2);
+let obj5 = { gap: nativeDefault.space.PX_24 };
+obj2.wideContainer = {
+  flexDirection: "row",
+  alignItems: "center",
+  alignSelf: "center",
+  width: "100%",
+  maxWidth: fn(12607).CHECKPOINT_WIDE_MAX_WIDTH,
+};
+obj2.wideScenePane = {
+  width: "50%",
+  alignSelf: "stretch",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingRight: PX_32,
+};
+obj2.wideCopy = { width: "50%", paddingLeft: PX_32, paddingVertical: fn(5850).CHECKPOINT_NAV_HEIGHT };
+obj2.wideTransition = { position: "absolute", top: 0, left: PX_32, right: 0, bottom: 0, justifyContent: "center" };
+let closure_15 = createStyles.createStyles(obj2);
 let size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/checkpoint/native/components/screens/stats/CheckpointFriendsStatsScreen.tsx",
@@ -44,10 +66,14 @@ export default function CheckpointFriendsStatsScreen(arg0) {
   _slicedToArray = undefined;
   let sidekickMessageInputKeyboardOffset;
   let animatedRef;
-  let tmp = closure_13();
-  items = [CheckpointStore];
-  let stateFromStores = showsSidekickPair(height[9]).useStateFromStores(items, () => {
-    const stats = CheckpointStore.stats;
+  let current;
+  let ref;
+  exit = undefined;
+  enter = undefined;
+  let tmp = closure_15();
+  items = [ref];
+  let stateFromStores = showsSidekickPair(height[11]).useStateFromStores(items, () => {
+    const stats = ref.stats;
     let users;
     if (stats != null) {
       users = stats.users;
@@ -57,34 +83,32 @@ export default function CheckpointFriendsStatsScreen(arg0) {
   if (stateFromStores == null) {
     stateFromStores = [];
   }
-  let obj = showsSidekickPair(height[9]);
-  const items1 = [CheckpointStore];
-  const stateFromStores1 = showsSidekickPair(height[9]).useStateFromStores(items1, () => {
-    const stats = CheckpointStore.stats;
+  let obj = showsSidekickPair(height[11]);
+  const tmp4 = ref;
+  const items1 = [tmp4];
+  const stateFromStores1 = showsSidekickPair(height[11]).useStateFromStores(items1, () => {
+    const stats = ref.stats;
     let sidekick;
     if (stats != null) {
       sidekick = stats.sidekick;
     }
     return sidekick;
   });
-  const tmp2Result = showsSidekickPair(height[9]);
-  const items2 = [AccessibilityStore];
-  const stateFromStores2 = showsSidekickPair(height[9]).useStateFromStores(
-    items2,
-    () => useReducedMotion.useReducedMotion,
-  );
-  const tmp2Result12 = showsSidekickPair(height[9]);
-  const friendsAnimationState = showsSidekickPair(height[10]).useFriendsAnimationState(route, stateFromStores2);
-  ({ isTransitioning, showsSidekickPair } = friendsAnimationState);
-  const tmp2Result13 = showsSidekickPair(height[10]);
-  const sidekickLeave = showsSidekickPair(height[11]).useSidekickLeave(
+  const tmp2Result = showsSidekickPair(height[11]);
+  const items2 = [current];
+  const stateFromStores2 = showsSidekickPair(height[11]).useStateFromStores(items2, () => current.useReducedMotion);
+  const tmp2Result13 = showsSidekickPair(height[11]);
+  const friendsAnimationState = showsSidekickPair(height[12]).useFriendsAnimationState(route, stateFromStores2);
+  ({ animationState, isTransitioning, showsSidekickPair } = friendsAnimationState);
+  const tmp2Result14 = showsSidekickPair(height[12]);
+  const sidekickLeave = showsSidekickPair(height[13]).useSidekickLeave(
     route,
     stateFromStores2,
     onNextStep,
     onPreviousStep,
   );
-  const tmp2Result14 = showsSidekickPair(height[11]);
-  const size = showsSidekickPair(height[12]).useCheckpointScreenFrame();
+  const tmp2Result15 = showsSidekickPair(height[13]);
+  let size = showsSidekickPair(height[14]).useCheckpointScreenFrame();
   width = size.width;
   height = size.height;
   const items3 = [showsSidekickPair, height, width];
@@ -96,36 +120,35 @@ export default function CheckpointFriendsStatsScreen(arg0) {
     }
     return { top: result - num, height: width + height };
   }, items3);
-  const obj7 = sidekickMessageInputKeyboardOffset;
-  const tmp2Result15 = showsSidekickPair(height[12]);
-  [tmp11, tmp12] = stateFromStores;
-  const tmp10 = _slicedToArray(stateFromStores, 2);
-  let str = showsSidekickPair(height[13]).useName(tmp11);
+  const tmp2Result16 = showsSidekickPair(height[14]);
+  [tmp12, tmp13] = stateFromStores;
+  const tmp11 = _slicedToArray(stateFromStores, 2);
+  let str = showsSidekickPair(height[15]).useName(tmp12);
   if (str == null) {
     str = "";
   }
-  const tmp2Result16 = showsSidekickPair(height[13]);
-  let str2 = showsSidekickPair(height[13]).useName(tmp12);
+  const tmp2Result17 = showsSidekickPair(height[15]);
+  let str2 = showsSidekickPair(height[15]).useName(tmp13);
   if (str2 == null) {
     str2 = "";
   }
-  const tmp2Result17 = showsSidekickPair(height[13]);
+  const tmp2Result18 = showsSidekickPair(height[15]);
   let user;
   if (stateFromStores1 != null) {
     user = stateFromStores1.user;
   }
-  let str3 = showsSidekickPair(height[13]).useName(user);
+  let str3 = showsSidekickPair(height[15]).useName(user);
   if (str3 == null) {
     str3 = "";
   }
-  let tmp14 =
-    route === tmp2(tmp3[14]).CheckpointRoute.SIDEKICK || route === tmp2(tmp3[14]).CheckpointRoute.SIDEKICK_LEAVE;
-  _slicedToArray = tmp14;
-  const tmp2Result18 = showsSidekickPair(height[13]);
-  sidekickMessageInputKeyboardOffset = showsSidekickPair(height[15]).useSidekickMessageInputKeyboardOffset();
+  let tmp15 =
+    route === tmp2(tmp3[16]).CheckpointRoute.SIDEKICK || route === tmp2(tmp3[16]).CheckpointRoute.SIDEKICK_LEAVE;
+  _slicedToArray = tmp15;
   const tmp2Result19 = showsSidekickPair(height[15]);
-  animatedRef = showsSidekickPair(height[16]).useAnimatedRef();
-  const items4 = [tmp14, sidekickMessageInputKeyboardOffset, animatedRef];
+  sidekickMessageInputKeyboardOffset = showsSidekickPair(height[17]).useSidekickMessageInputKeyboardOffset();
+  const tmp2Result20 = showsSidekickPair(height[17]);
+  animatedRef = showsSidekickPair(height[18]).useAnimatedRef();
+  const items4 = [tmp15, sidekickMessageInputKeyboardOffset, animatedRef];
   const memo1 = obj7.useMemo(() => {
     let tmp;
     if (closure_3) {
@@ -134,97 +157,261 @@ export default function CheckpointFriendsStatsScreen(arg0) {
     }
     return tmp;
   }, items4);
-  const obj2 = { keyboardInput: memo1, children: null };
-  const obj3 = { style: tmp.container, children: null };
-  const obj4 = {
-    style: null,
-    pointerEvents: "none",
-    accessibilityElementsHidden: true,
-    importantForAccessibility: "no-hide-descendants",
-    children: null,
-  };
-  const items5 = [tmp.animation, memo];
-  obj4.style = items5;
-  const tmp2Result20 = showsSidekickPair(height[16]);
-  const obj5 = {
-    animationState: friendsAnimationState.animationState,
-    sidekickUser: null,
-    firstUser: null,
-    secondUser: null,
-    twoFriends: null,
-    isReducedMotion: null,
-  };
-  let user1;
-  const tmp20 = width(height[12]);
-  if (stateFromStores1 != null) {
-    user1 = stateFromStores1.user;
+  const tmp2Result21 = showsSidekickPair(height[18]);
+  [tmp20, tmp21] = sidekickMessageInputKeyboardOffset.useState({ messageSent: false, isSending: false });
+  const tmp23 = width(height[10])();
+  current = tmp23;
+  const tmp10Result = _slicedToArray(
+    sidekickMessageInputKeyboardOffset.useState({ messageSent: false, isSending: false }),
+    2,
+  );
+  const checkpointScreenContentHeight = showsSidekickPair(height[14]).useCheckpointScreenContentHeight(true);
+  ref = obj7.useRef(null);
+  const tmp2Result22 = showsSidekickPair(height[14]);
+  [tmp27, c8] = sidekickMessageInputKeyboardOffset.useState(null);
+  enter = obj7.useRef(tmp23);
+  const items5 = [tmp23];
+  const layoutEffect = obj7.useLayoutEffect(() => {
+    closure_9.current = current;
+  }, items5);
+  const items6 = [tmp23];
+  const callback = obj7.useCallback(() => {
+    current = ref.current;
+    if (current != null) {
+      current.measureInWindow((x, y, width, height) => {
+        if (ref.current === current) {
+          const obj = { isWide: tmp, frame: null };
+          const size = { x, y, width, height };
+          obj.frame = size;
+          closure_1_8(obj);
+        }
+      });
+    }
+  }, items6);
+  let isWide;
+  if (tmp27 != null) {
+    isWide = tmp27.isWide;
   }
-  obj5.sidekickUser = user1;
-  obj5.firstUser = tmp11;
-  obj5.secondUser = tmp12;
-  obj5.twoFriends = stateFromStores.length < 2;
-  obj5.isReducedMotion = stateFromStores2;
-  obj4.children = closure_11(width(height[17]), obj5);
-  const items6 = [closure_11(animatedRef, obj4), , ,];
-  let tmp18Result = route === tmp2(tmp3[14]).CheckpointRoute.SQUAD_TRANSITION;
-  if (tmp18Result) {
-    const obj6 = { style: tmp.transition, children: null };
-    const obj8 = { isStepHeading: true, variant: "heading-lg/medium", children: null };
-    const intl = tmp2(tmp3[19]).intl;
-    obj8.children = intl.string(tmp19(tmp3[20])["6RSp5q"]);
-    obj6.children = closure_11(tmp19(tmp3[18]), obj8);
-    tmp18Result = closure_11(tmp22, obj6);
-    const tmp19Result = tmp19(tmp3[18]);
+  let frame = null;
+  if (isWide === tmp23) {
+    frame = tmp27.frame;
   }
-  items6[1] = tmp18Result;
-  const tmp23 = width(height[17]);
-  const tmp19Result5 = width(height[21]);
-  const obj9 = {
-    visible: route === showsSidekickPair(height[14]).CheckpointRoute.SQUAD && !isTransitioning,
+  let num = 0;
+  if (null != frame) {
+    const _Math = Math;
+    const _Math2 = Math;
+    num = Math.max(0, Math.min(frame.width - PX_32, checkpointScreenContentHeight));
+  }
+  let tmp34 = !tmp23;
+  if (!tmp23) {
+    tmp34 = width < width(tmp3[19])({ ignoreKeyboard: true }).width;
+  }
+  const obj2 = { isStepHeading: true, variant: "heading-lg/medium", children: null };
+  const tmp10Result2 = _slicedToArray(sidekickMessageInputKeyboardOffset.useState(null), 2);
+  const intl = tmp2(tmp3[22]).intl;
+  obj2.children = intl.string(width(height[23])["6RSp5q"]);
+  const tmp37 = closure_11(width(height[21]), obj2);
+  const tmp22Result = width(height[21]);
+  const tmp22Result9 = width(height[24]);
+  const obj3 = {
+    visible: route === showsSidekickPair(height[16]).CheckpointRoute.SQUAD && !isTransitioning,
     enter: enter2,
     exit,
     mountAfterDelay: true,
     children: null,
   };
-  const obj10 = { title: null, titleAccessibilityLabel: null, description: null };
-  const tmp28 = route === showsSidekickPair(height[14]).CheckpointRoute.SQUAD && !isTransitioning;
-  const intl2 = tmp2(tmp3[19]).intl;
-  obj10.title = intl2.string(width(height[23]).OzY5Ns);
-  const tmp19Result6 = width(height[22]);
+  const obj4 = { title: null, titleAccessibilityLabel: null, description: null };
+  const tmp41 = route === showsSidekickPair(height[16]).CheckpointRoute.SQUAD && !isTransitioning;
+  const tmp42 = exit;
+  const intl2 = tmp2(tmp3[22]).intl;
+  obj4.title = intl2.string(width(height[26]).OzY5Ns);
+  const tmp22Result10 = width(height[25]);
   const items7 = [str3, str, str2];
-  obj10.titleAccessibilityLabel = showsSidekickPair(height[22]).getSquadTitleAccessibilityLabel(items7);
-  const intl3 = tmp2(tmp3[19]).intl;
-  obj10.description = intl3.string(width(height[20]).EqdLDd);
-  obj9.children = closure_11(tmp19Result6, obj10);
-  items6[2] = closure_11(tmp19Result5, obj9);
-  let tmp21Result = null != stateFromStores1;
-  if (tmp21Result) {
-    if (tmp14) {
-      tmp14 = !isTransitioning;
+  obj4.titleAccessibilityLabel = showsSidekickPair(height[25]).getSquadTitleAccessibilityLabel(items7);
+  const intl3 = tmp2(tmp3[22]).intl;
+  obj4.description = intl3.string(width(height[23]).EqdLDd);
+  obj3.children = closure_11(tmp22Result10, obj4);
+  const items8 = [closure_11(tmp22Result9, obj3)];
+  let tmp38Result = null != stateFromStores1;
+  if (tmp38Result) {
+    if (tmp15) {
+      tmp15 = !isTransitioning;
     }
-    const obj11 = { visible: tmp14, enter, exit, mountAfterDelay: true, style: tmp.sidekick, children: null };
-    const obj12 = { style: tmp.sidekickDetails, children: null };
-    const obj13 = { title: null, titleAccessibilityLabel: null, description: null };
-    const tmp19Result7 = tmp19(tmp3[21]);
-    const intl4 = tmp2(tmp3[19]).intl;
-    obj13.title = intl4.string(tmp19(tmp3[23])["+uwOHt"]);
-    const tmp19Result8 = tmp19(tmp3[22]);
-    obj13.titleAccessibilityLabel = tmp2(tmp3[22]).getSidekickTitleAccessibilityLabel(str3);
-    const intl5 = tmp2(tmp3[19]).intl;
-    obj13.description = intl5.string(tmp19(tmp3[20])["/ctmGw"]);
-    const items8 = [closure_11(tmp19Result8, obj13)];
-    const obj14 = { sidekick: stateFromStores1 };
-    items8[1] = closure_11(tmp19(tmp3[24]), obj14);
-    obj12.children = items8;
-    const items9 = [closure_12(tmp22, obj12)];
-    const obj15 = { user: stateFromStores1.user, username: str3, containerRef: animatedRef };
-    items9[1] = closure_11(tmp19(tmp3[15]), obj15);
-    obj11.children = items9;
-    tmp21Result = closure_12(tmp19Result7, obj11);
-    const tmp2Result22 = tmp2(tmp3[22]);
+    const obj5 = { visible: tmp15, enter, exit: tmp42, mountAfterDelay: true, style: tmp.sidekick, children: null };
+    const obj6 = { style: tmp.sidekickDetails, children: null };
+    const obj8 = { title: null, titleAccessibilityLabel: null, description: null };
+    const tmp22Result11 = tmp22(tmp3[24]);
+    const intl4 = tmp2(tmp3[22]).intl;
+    obj8.title = intl4.string(tmp22(tmp3[26])["+uwOHt"]);
+    const tmp22Result12 = tmp22(tmp3[25]);
+    obj8.titleAccessibilityLabel = tmp2(tmp3[25]).getSidekickTitleAccessibilityLabel(str3);
+    const intl5 = tmp2(tmp3[22]).intl;
+    obj8.description = intl5.string(tmp22(tmp3[23])["/ctmGw"]);
+    const items9 = [closure_11(tmp22Result12, obj8)];
+    const obj9 = { sidekick: stateFromStores1 };
+    items9[1] = closure_11(tmp22(tmp3[27]), obj9);
+    obj6.children = items9;
+    const items10 = [closure_12(animatedRef, obj6)];
+    const obj10 = {
+      user: stateFromStores1.user,
+      username: str3,
+      containerRef: animatedRef,
+      state: tmp20,
+      setState: tmp21,
+    };
+    items10[1] = closure_11(tmp22(tmp3[17]), obj10);
+    obj5.children = items10;
+    tmp38Result = closure_12(tmp22Result11, obj5);
+    const tmp2Result24 = tmp2(tmp3[25]);
   }
-  items6[3] = tmp21Result;
-  obj3.children = items6;
-  obj2.children = closure_12(animatedRef, obj3);
-  return closure_11(tmp20, obj2);
+  items8[1] = tmp38Result;
+  const tmp38Result2 = closure_12(closure_13, { children: items8 });
+  const tmp2Result23 = showsSidekickPair(height[25]);
+  if (tmp23) {
+    const obj11 = { centered: true, keyboardInput: memo1, children: null };
+    const obj12 = { style: null, children: null };
+    const items11 = [tmp.wideContainer];
+    const obj13 = { minHeight: checkpointScreenContentHeight };
+    items11[1] = obj13;
+    obj12.style = items11;
+    const obj14 = {
+      ref,
+      style: tmp.wideScenePane,
+      onLayout: callback,
+      pointerEvents: "none",
+      accessibilityElementsHidden: true,
+      importantForAccessibility: "no-hide-descendants",
+      children: null,
+    };
+    let tmp35Result = null != frame && num > 0;
+    if (tmp35Result) {
+      const obj15 = { style: null, children: null };
+      const size1 = { width: num, height: num };
+      obj15.style = size1;
+      const obj16 = { centerX: frame.x + (frame.width - PX_32) / 2, centerY: frame.y + frame.height / 2, size: num };
+      const obj17 = {
+        animationState,
+        sidekickUser: null,
+        firstUser: null,
+        secondUser: null,
+        twoFriends: null,
+        isReducedMotion: null,
+        artboardFrame: null,
+      };
+      let user1;
+      if (stateFromStores1 != null) {
+        user1 = stateFromStores1.user;
+      }
+      obj17.sidekickUser = user1;
+      obj17.firstUser = tmp12;
+      obj17.secondUser = tmp13;
+      obj17.twoFriends = stateFromStores.length < 2;
+      obj17.isReducedMotion = stateFromStores2;
+      obj17.artboardFrame = obj16;
+      obj15.children = closure_11(tmp22(tmp3[20]), obj17);
+      tmp35Result = closure_11(tmp62, obj15);
+      const tmp22Result14 = tmp22(tmp3[20]);
+    }
+    obj14.children = tmp35Result;
+    const items12 = [closure_11(animatedRef, obj14)];
+    const obj18 = { style: tmp.wideCopy, children: null };
+    const items13 = [tmp38Result2];
+    let tmp35Result5 = route === tmp2(tmp3[16]).CheckpointRoute.SQUAD_TRANSITION;
+    if (tmp35Result5) {
+      const obj19 = { style: tmp.wideTransition, children: tmp37 };
+      tmp35Result5 = closure_11(tmp62, obj19);
+    }
+    items13[1] = tmp35Result5;
+    obj18.children = items13;
+    items12[1] = closure_12(animatedRef, obj18);
+    obj12.children = items12;
+    obj11.children = closure_12(animatedRef, obj12, "wide");
+    let obj20 = obj11;
+  } else {
+    obj20 = { keyboardInput: memo1, children: null };
+    const obj21 = { style: tmp.container, children: null };
+    let tmp52;
+    if (tmp34) {
+      tmp52 = ref;
+    }
+    const obj22 = {
+      ref: tmp52,
+      style: null,
+      onLayout: null,
+      pointerEvents: "none",
+      accessibilityElementsHidden: true,
+      importantForAccessibility: "no-hide-descendants",
+      children: null,
+    };
+    const items14 = [tmp.animation, memo];
+    obj22.style = items14;
+    let tmp53;
+    if (tmp34) {
+      tmp53 = callback;
+    }
+    obj22.onLayout = tmp53;
+    if (tmp34) {
+      let tmp35Result6 = null != frame;
+      if (tmp35Result6) {
+        const obj23 = { centerX: frame.x + frame.width / 2, centerY: frame.y + frame.height / 2, size: null };
+        const _Math3 = Math;
+        obj23.size = Math.min(frame.width, frame.height);
+        const obj24 = {
+          animationState,
+          sidekickUser: null,
+          firstUser: null,
+          secondUser: null,
+          twoFriends: null,
+          isReducedMotion: null,
+          artboardFrame: null,
+        };
+        let user2;
+        if (stateFromStores1 != null) {
+          user2 = stateFromStores1.user;
+        }
+        obj24.sidekickUser = user2;
+        obj24.firstUser = tmp12;
+        obj24.secondUser = tmp13;
+        obj24.twoFriends = stateFromStores.length < 2;
+        obj24.isReducedMotion = stateFromStores2;
+        obj24.artboardFrame = obj23;
+        tmp35Result6 = closure_11(tmp22(tmp3[20]), obj24);
+        const tmp22Result15 = tmp22(tmp3[20]);
+      }
+      let tmp35Result7 = tmp35Result6;
+    } else {
+      const obj25 = {
+        animationState,
+        sidekickUser: null,
+        firstUser: null,
+        secondUser: null,
+        twoFriends: null,
+        isReducedMotion: null,
+        artboardFrame: "disabled",
+      };
+      let user3;
+      if (stateFromStores1 != null) {
+        user3 = stateFromStores1.user;
+      }
+      obj25.sidekickUser = user3;
+      obj25.firstUser = tmp12;
+      obj25.secondUser = tmp13;
+      obj25.twoFriends = stateFromStores.length < 2;
+      obj25.isReducedMotion = stateFromStores2;
+      tmp35Result7 = closure_11(tmp22(tmp3[20]), obj25);
+      const tmp22Result16 = tmp22(tmp3[20]);
+    }
+    obj22.children = tmp35Result7;
+    const items15 = [closure_11(animatedRef, obj22), ,];
+    let tmp35Result8 = route === tmp2(tmp3[16]).CheckpointRoute.SQUAD_TRANSITION;
+    if (tmp35Result8) {
+      const obj26 = { style: tmp.transition, children: tmp37 };
+      tmp35Result8 = closure_11(tmp51, obj26);
+    }
+    items15[1] = tmp35Result8;
+    items15[2] = tmp38Result2;
+    obj21.children = items15;
+    obj20.children = closure_12(animatedRef, obj21, "narrow");
+  }
+  return closure_11(width(height[14]), obj20);
 }

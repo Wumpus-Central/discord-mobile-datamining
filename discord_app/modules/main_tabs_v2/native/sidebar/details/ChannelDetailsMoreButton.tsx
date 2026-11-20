@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx
-import _modDef7909 from "../../../../../../_runtime/metro/07909__.js";
+import _modDef7908 from "../../../../../../_runtime/metro/07908__.js";
 import PressableNavigatorButtonWrapperDefault from "../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
 import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -17,11 +17,11 @@ export default function MoreButton(channel) {
     if (channel.isDM()) {
       const obj = { children: null };
       let obj2 = { accessibilityLabel: null, source: null, onPress: null };
-      const intl = channel(1113).intl;
-      obj2.accessibilityLabel = intl.string(channel(1113).t["UKOtz+"]);
-      obj2.source = _modDef7909;
+      const intl = channel(1112).intl;
+      obj2.accessibilityLabel = intl.string(channel(1112).t["UKOtz+"]);
+      obj2.source = _modDef7908;
       obj2.onPress = tmp;
-      obj.children = jsx(channel(8442).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+      obj.children = jsx(channel(8441).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
       tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { children: null });
     } else {
       tmp2 = null;

@@ -7,7 +7,7 @@ import ConjureSubagentMark from "ConjureSubagentMark.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ConjureNativeStepImagesDefault = tmp5(18600);
+const ConjureNativeStepImagesDefault = tmp5(18424);
 require = fn;
 function TurnStatusLine(epoch) {
   ({ projectId: require, tree, turnActive } = epoch);
@@ -224,7 +224,7 @@ function TimelineRow(inGutter) {
     trailing: null,
   };
   let tmp7 = ConjureNativeStatusLineDefault;
-  obj.line = node(18473).describeNode(node);
+  obj.line = node(18298).describeNode(node);
   obj.live = flag2;
   let tmp9 = !flag2;
   if (!flag2) {
@@ -245,10 +245,10 @@ function TimelineRow(inGutter) {
     let obj3 = {
       variant: "body-xs/normal",
       color: "text-subtle",
-      children: node(18307).describeDuration(node.durationMs),
+      children: node(12199).describeDuration(node.durationMs),
     };
-    tmp4Result = closure_6(node(5383).Text, obj3);
-    const tmp8Result = node(18307);
+    tmp4Result = closure_6(node(5385).Text, obj3);
+    const tmp8Result = node(12199);
   }
   obj.trailing = tmp4Result;
   const children = [closure_6(tmp7, obj), ,];
@@ -302,17 +302,17 @@ function TimelineRow(inGutter) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
-  activityBox: { marginLeft: -fn(18517).RAIL_INDENT },
+  activityBox: { marginLeft: -fn(18341).RAIL_INDENT },
   activityDetail: null,
   stepDetail: null,
   stepLine: null,
   stepCommand: null,
 };
-let obj3 = { marginLeft: -fn(18517).RAIL_INDENT };
-obj2.activityDetail = { paddingLeft: fn(18517).RAIL_INDENT };
-let obj4 = { paddingLeft: fn(18517).RAIL_INDENT };
+let obj3 = { marginLeft: -fn(18341).RAIL_INDENT };
+obj2.activityDetail = { paddingLeft: fn(18341).RAIL_INDENT };
+let obj4 = { paddingLeft: fn(18341).RAIL_INDENT };
 obj2.stepDetail = {
   marginTop: nativeDefault.space.PX_4,
   paddingLeft: nativeDefault.space.PX_12,
@@ -328,7 +328,7 @@ let obj5 = {
   gap: 2,
 };
 obj2.stepLine = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj2.stepCommand = { fontFamily: fn(1072).Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 18 };
+obj2.stepCommand = { fontFamily: fn(1071).Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 18 };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/native/ConjureActivityBox.tsx");

@@ -5,15 +5,19 @@ import size from "../../../../_runtime/metro/00002__.js";
 let closure_0 = ApexExperiment.createApexExperiment({
   name: "2026-10-collectibles-storefront-pricing-integration",
   kind: "user",
-  defaultConfig: { enabled: false },
-  variations: { 0: { enabled: false }, 1: { enabled: true } },
+  defaultConfig: { enabled: false, fetchOnShopButtonPrefetch: false },
+  variations: {
+    0: { enabled: false, fetchOnShopButtonPrefetch: false },
+    1: { enabled: true, fetchOnShopButtonPrefetch: true },
+    2: { enabled: true, fetchOnShopButtonPrefetch: false },
+  },
 });
 const result = size.fileFinishedImporting(
   "modules/collectibles/experiments/CollectiblesStorefrontPricingIntegrationExperiment.tsx",
 );
 
-export function getCollectiblesStorefrontPricingIntegrationEnabled(location) {
-  return closure_0.getConfig({ location }).enabled;
+export function getCollectiblesStorefrontPricingFetchOnShopButtonPrefetch(location) {
+  return closure_0.getConfig({ location }).fetchOnShopButtonPrefetch;
 }
 export function useCollectiblesStorefrontPricingIntegrationEnabled(c7) {
   return closure_0.useConfig({ location: _location }).enabled;

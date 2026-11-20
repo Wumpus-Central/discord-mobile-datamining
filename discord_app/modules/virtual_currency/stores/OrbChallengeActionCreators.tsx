@@ -19,7 +19,7 @@ let closure_5 = async function _claimOrbChallenge() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -112,7 +112,7 @@ let closure_6 = async function _fetchOrbChallenges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -212,7 +212,7 @@ let closure_8 = async function _ackOrbChallengesUnread() {
   });
   return closure_128_0.body;
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/stores/OrbChallengeActionCreators.tsx");
 

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/CrownIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod13734 from "../../../../../../../_runtime/metro/13734__.js";
+import _mod13703 from "../../../../../../../_runtime/metro/13703__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function CrownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13734, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13703, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

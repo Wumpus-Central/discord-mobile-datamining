@@ -55,10 +55,10 @@ function showLurkingAlert(guildId) {
   guildId = guildId.guildId;
   ({ title, body } = guildId);
   const obj2 = { title, body, confirmText: null, cancelText: null, onConfirm: null };
-  const intl = guildId(1113).intl;
-  obj2.confirmText = intl.string(guildId(1113).t["9VLmlZ"]);
-  const intl2 = guildId(1113).intl;
-  obj2.cancelText = intl2.string(guildId(1113).t["2m+Sqk"]);
+  const intl = guildId(1112).intl;
+  obj2.confirmText = intl.string(guildId(1112).t["9VLmlZ"]);
+  const intl2 = guildId(1112).intl;
+  obj2.cancelText = intl2.string(guildId(1112).t["2m+Sqk"]);
   obj2.onConfirm = function onConfirm() {
     const obj2 = { source: constants2.POLL_ALERT };
     GuildActionCreatorsDefault.joinGuild(guild_id, { source: constants2.POLL_ALERT }).catch(
@@ -72,16 +72,16 @@ function handleShowVotesForAnswer(messageId) {
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     if (LurkingStore.isLurking(channel.guild_id)) {
-      const intl = guild_id(1113).intl;
-      const intl2 = guild_id(1113).intl;
+      const intl = guild_id(1112).intl;
+      const intl2 = guild_id(1112).intl;
       guild_id = channel.guild_id;
-      const stringResult = intl.string(guild_id(1113).t["7LpysO"]);
-      const stringResult1 = intl2.string(guild_id(1113).t["5sHHoy"]);
+      const stringResult = intl.string(guild_id(1112).t["7LpysO"]);
+      const stringResult1 = intl2.string(guild_id(1112).t["5sHHoy"]);
       let obj2 = { title: stringResult, body: stringResult1, confirmText: null, cancelText: null, onConfirm: null };
-      const intl3 = guild_id(1113).intl;
-      obj2.confirmText = intl3.string(guild_id(1113).t["9VLmlZ"]);
-      const intl4 = guild_id(1113).intl;
-      obj2.cancelText = intl4.string(guild_id(1113).t["2m+Sqk"]);
+      const intl3 = guild_id(1112).intl;
+      obj2.confirmText = intl3.string(guild_id(1112).t["9VLmlZ"]);
+      const intl4 = guild_id(1112).intl;
+      obj2.cancelText = intl4.string(guild_id(1112).t["2m+Sqk"]);
       obj2.onConfirm = function onConfirm() {
         const obj2 = { source: constants2.POLL_ALERT };
         GuildActionCreatorsDefault.joinGuild(guild_id, { source: constants2.POLL_ALERT }).catch(
@@ -192,7 +192,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
           let obj3 = { id, name: id };
           obj2.emoji = obj3;
           obj2.userId = userId;
-          obj2.reactionType = channelId(5374).ReactionTypes.VOTE;
+          obj2.reactionType = channelId(5376).ReactionTypes.VOTE;
           dispatchResult = obj.dispatch(obj2);
           continue;
         }
@@ -238,7 +238,7 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -428,7 +428,7 @@ let closure_26 = async function _handleClearPollVote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -497,7 +497,7 @@ let closure_26 = async function _handleClearPollVote(arg0) {
             }
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (arg0 === 1) {
         c4 = 3;
@@ -528,7 +528,7 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -690,7 +690,7 @@ let closure_28 = async function _createPoll(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -754,7 +754,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(12085).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(12027).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -790,7 +790,7 @@ let closure_28 = async function _createPoll(arg0) {
             attachmentsToUpload: uploads,
             scheduledTimestamp: closure_129_7,
             onAttachmentUploadError(file, code, reason) {
-              const obj = guildId(10393);
+              const obj = guildId(10335);
               const result = obj.handleUploadMessageAttachmentsErrors({
                 file,
                 guildId: guildId.getGuildId(),
@@ -890,10 +890,10 @@ let closure_29 = async function _endPollEarly(arg0) {
   ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
   return "Path";
 };
-const DraftType = fn(8196).DraftType;
-const PollsInteractionStore = fn(11841);
+const DraftType = fn(8195).DraftType;
+const PollsInteractionStore = fn(11783);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/polls/PollsActionCreators.tsx");

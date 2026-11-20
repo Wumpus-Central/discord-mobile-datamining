@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import SentryInitUtils from "../../../../modules/errors/native/SentryInitUtils.tsx";
-import Link from "../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../_runtime/01501_Link.js";
 import Text_Text from "../../Text/native/Text.tsx";
 import BackPressTracking from "../../../../modules/routing/native/BackPressTracking.android.tsx";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
 import NavigatorBackgroundContext from "NavigatorBackgroundContext.native.tsx";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
-import _mod6983 from "../../../../../_runtime/metro/06983__.js";
-import StackNavigator from "../../../../../_runtime/07034_StackNavigator.js";
+import _mod6982 from "../../../../../_runtime/metro/06982__.js";
+import StackNavigator from "../../../../../_runtime/07033_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -303,7 +303,7 @@ function WrappedNavigationStack(arg0) {
     }),
     1,
   )[0];
-  const tmp5 = navigationContainerRef(5001)();
+  const tmp5 = navigationContainerRef(5003)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
   const obj4 = {
     ref: navigationContainerRef,
@@ -325,7 +325,7 @@ function WrappedNavigationStack(arg0) {
     initialRouteState = tmp8;
   }
   const obj5 = { children: null };
-  const obj6 = { value: "Array", children: 16 };
+  const obj6 = { value: "Array", children: false };
   obj4.initialState = initialRouteState;
   obj4.onReady = function onReady() {
     const routingInstrumentation = SentryInitUtils.routingInstrumentation;
@@ -342,13 +342,13 @@ function WrappedNavigationStack(arg0) {
     onStateChange: null,
     children: null,
   });
-  obj5.children = jsx(_mod6983.HeaderBackContext.Provider, { value: "Array", children: 16 });
+  obj5.children = jsx(_mod6982.HeaderBackContext.Provider, { value: "Array", children: false });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: null,
   navbar: null,

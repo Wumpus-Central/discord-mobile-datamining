@@ -10,7 +10,7 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
 
 require = fn;
-const StatusTypes = fn(1072).StatusTypes;
+const StatusTypes = fn(1071).StatusTypes;
 let closure_10 = new LoggerDefault("useUserProfileActivityTabContent");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivityTabContent.tsx");

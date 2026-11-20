@@ -29,7 +29,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -217,11 +217,11 @@ let closure_12 = async function _deliverGiftCodes() {
     return value.body;
   })();
 };
-let closure_6 = fn(7964).isUnknownCollectiblesItemRecord;
-const Constants = fn(1072);
+let closure_6 = fn(7963).isUnknownCollectiblesItemRecord;
+const Constants = fn(1071);
 ({ COLLECTIBLES_APPLICATION_ID: metroImportDefault, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
-let closure_10 = fn(1390).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11846).default);
+let closure_10 = fn(1388).PREMIUM_SUBSCRIPTION_APPLICATION;
+const merged = Object.assign(fn(11788).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

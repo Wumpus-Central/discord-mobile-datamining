@@ -8,24 +8,24 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const UserSettingsSections = fn(1071).UserSettingsSections;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = { launch: null, new_presets: null };
 let items = [
-  fn(1401).TypingSuggestion.UNSPECIFIED,
-  fn(1401).TypingSuggestion.YAPPING,
-  fn(1401).TypingSuggestion.OVERSHARING,
+  fn(1399).TypingSuggestion.UNSPECIFIED,
+  fn(1399).TypingSuggestion.YAPPING,
+  fn(1399).TypingSuggestion.OVERSHARING,
 ];
 obj.launch = items;
 let items1 = [
-  fn(1401).TypingSuggestion.CHIRPING,
-  fn(1401).TypingSuggestion.KEYSMASHING,
-  fn(1401).TypingSuggestion.PURRING,
+  fn(1399).TypingSuggestion.CHIRPING,
+  fn(1399).TypingSuggestion.KEYSMASHING,
+  fn(1399).TypingSuggestion.PURRING,
 ];
 obj.new_presets = items1;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles(() => {
   obj = {
     content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 },

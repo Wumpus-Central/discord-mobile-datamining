@@ -33,7 +33,7 @@ let closure_11 = async function _runEditValidation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_11 = async function _runEditValidation(arg0) {
               closure_133_12(closure_132_0, closure_132_1);
               c6 = 0;
               c8 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c8 = 3;
@@ -159,7 +159,7 @@ let closure_13 = async function _runEditDrain(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -268,7 +268,7 @@ let closure_13 = async function _runEditDrain(arg0) {
             closure_132_12(closure_131_0, closure_131_1);
           }
           c8 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
         c6 = 0;
         closure_132_8.delete(closure_131_2);
@@ -309,7 +309,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -338,7 +338,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -371,11 +371,11 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                       const channel = tmp50.getChannel(closure_2_0);
                       let channelPermissionOverwrite;
                       if (null != channel) {
-                        channelPermissionOverwrite = closure_0(19004).getChannelPermissionOverwrite(
+                        channelPermissionOverwrite = closure_0(18828).getChannelPermissionOverwrite(
                           channel,
                           closure_2_1,
                         );
-                        const obj10 = closure_0(19004);
+                        const obj10 = closure_0(18828);
                       }
                       if (null == channelPermissionOverwrite) {
                         c6 = 1;
@@ -387,7 +387,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                         while (closure_0 !== undefined) {
                           c5 = 1;
                           ({ flag, value } = nextResult);
-                          let obj11 = closure_0(19004);
+                          let obj11 = closure_0(18828);
                           channelPermissionOverwrite = obj11.applyChannelPermissionOverwriteEdit(
                             channelPermissionOverwrite,
                             flag,
@@ -401,7 +401,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                         c6 = 6;
                         c7 = 1;
                         const obj6 = {
-                          value: readyEdits(7618).updatePermissionOverwrite(closure_2_0, channelPermissionOverwrite),
+                          value: readyEdits(7617).updatePermissionOverwrite(closure_2_0, channelPermissionOverwrite),
                           done: false,
                         };
                         return obj6;
@@ -464,7 +464,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                     return obj14;
                   } else {
                     c7 = 3;
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else if (arg0 === 1) {
                   c7 = 3;
@@ -589,7 +589,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
     }
   }
 };
-let closure_6 = fn(19003).getChannelPermissionOverwriteResourceKey;
+let closure_6 = fn(18827).getChannelPermissionOverwriteResourceKey;
 let closure_7 = 0;
 const set = new Set();
 const size = fn(2);

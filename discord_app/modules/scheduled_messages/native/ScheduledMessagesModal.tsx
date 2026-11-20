@@ -143,13 +143,13 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
   return refs(NitroLimitUpsellBarDefault, obj5);
 }
 const View = fn(17).View;
-const AnalyticsPages = fn(1072).AnalyticsPages;
-const PremiumTypes = fn(1390).PremiumTypes;
-const premiumMax = fn(8422).MAX_SCHEDULED_MESSAGES_PER_USER;
+const AnalyticsPages = fn(1071).AnalyticsPages;
+const PremiumTypes = fn(1388).PremiumTypes;
+const premiumMax = fn(8421).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   modal: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -190,7 +190,7 @@ export default function ScheduledMessagesModal() {
   const intl = require("util").intl;
   const stringResult = intl.string(require("util").t.SZVs3K);
   _require = stringResult;
-  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
   items = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -199,7 +199,7 @@ export default function ScheduledMessagesModal() {
     }
     const result = sharedValue.set(spring_spring.withSpring(num, springPresets.Reanimated3DefaultSpringConfig));
   }, items);
-  let obj = require("../../../../_runtime/metro/01655__.js");
+  let obj = require("../../../../_runtime/metro/01653__.js");
   const items1 = [closure_15, sharedValue];
   _require = undefined;
   [tmp8, tmp9] = items1;
@@ -214,7 +214,7 @@ export default function ScheduledMessagesModal() {
   ScheduledMessagesModalTsx1.__workletHash = 3464659373430;
   ScheduledMessagesModalTsx1.__initData = tmp8;
   const obj3 = { style: tmp.modal, children: null };
-  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(ScheduledMessagesModalTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(ScheduledMessagesModalTsx1);
   const obj5 = {
     title: stringResult,
     headerTitle() {
@@ -226,20 +226,20 @@ export default function ScheduledMessagesModal() {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null,
   };
-  const obj2 = require("../../../../_runtime/metro/01655__.js");
+  const obj2 = require("../../../../_runtime/metro/01653__.js");
   let num = 0;
   if (!tmp4Result.isIOS()) {
-    num = sharedValue(1630)().top;
+    num = sharedValue(1628)().top;
   }
   obj5.headerStatusBarHeight = num + sharedValue(575).space.PX_8;
   tmp4Result = require("PlatformUtils");
-  obj5.headerLeft = require("NavigatorHeader").getHeaderCloseButton(sharedValue(6308).pop);
+  obj5.headerLeft = require("NavigatorHeader").getHeaderCloseButton(sharedValue(6310).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items3 = [closure_10(require("../../../../_runtime/metro/06983__.js").Header, obj5), ,];
+  const items3 = [closure_10(require("../../../../_runtime/metro/06982__.js").Header, obj5), ,];
   const obj6 = { style: null };
   const items4 = [tmp.headerBorder, animatedStyle];
   obj6.style = items4;
-  items3[1] = closure_10(sharedValue(1655).View, obj6);
+  items3[1] = closure_10(sharedValue(1653).View, obj6);
   items3[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
   obj3.children = items3;
   return closure_11(View, obj3);

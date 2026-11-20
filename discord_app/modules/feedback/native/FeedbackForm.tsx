@@ -6,10 +6,10 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let FeedbackRating = fn(10491).FeedbackRating;
+let FeedbackRating = fn(10433).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   ratingsLabel: { textAlign: "center" },
   reasonsHeader: { marginBottom: 8 },

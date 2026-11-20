@@ -5,7 +5,7 @@ import ClientInfoUtils from "../../../../utils/native/ClientInfoUtils.tsx";
 
 require = fn;
 const constants = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
     const intl = util.intl;
@@ -26,7 +26,7 @@ let obj = {
     }
     return combined;
   },
-  usePredicate: fn(4617).DeveloperMode.useSetting,
+  usePredicate: fn(4619).DeveloperMode.useSetting,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppVersionSetting.tsx");
@@ -51,5 +51,5 @@ export default SettingBuilders.createStatic({
     }
     return combined;
   },
-  usePredicate: fn(4617).DeveloperMode.useSetting,
+  usePredicate: fn(4619).DeveloperMode.useSetting,
 });

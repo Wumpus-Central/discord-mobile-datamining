@@ -1,6 +1,6 @@
 // discord_app/modules/waterwheels/interest/native/useInterestCoverColor.tsx
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import privDefault from "../../../../../_runtime/01456_priv.js";
+import privDefault from "../../../../../_runtime/01454_priv.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -56,7 +56,7 @@ function fetchInterestCoverColor(arg0, uri) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ function fetchInterestCoverColor(arg0, uri) {
     return obj2.pending;
   }
 }
-const sum = fn(4799).WCAGContrastRatios.Text + 0.3;
+const sum = fn(4801).WCAGContrastRatios.Text + 0.3;
 let closure_7 = new privDefault({ max: 256 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/interest/native/useInterestCoverColor.tsx");
@@ -182,7 +182,7 @@ export default function useInterestCoverColor(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -218,7 +218,7 @@ export default function useInterestCoverColor(arg0, arg1) {
               v1(obj);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c3 = tmp;

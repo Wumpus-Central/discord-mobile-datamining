@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockBadgedIcon.tsx
-import _mod1708 from "../../../../../_runtime/metro/01708__.js";
+import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ function StreamBadge(progress) {
   const effect = noop.useEffect(() => {
     if (state === native.TransitionStates.YEETED) {
       const tmpResult = timing_timing;
-      items = [closure_14, _mod1708.scheduleOnRN, cleanUp];
+      items = [closure_14, _mod1706.scheduleOnRN, cleanUp];
       c0 = undefined;
       c1 = undefined;
       [tmp11, tmp12, tmp13] = items;
@@ -54,33 +54,33 @@ function StreamBadge(progress) {
   obj.children = tmp3Result;
   return closure_5(state(cleanUp[10]).View, obj);
 }
-const VoicePanelDockConstants = fn(11706);
+const VoicePanelDockConstants = fn(11648);
 ({ DOCK_FADE_TIMING: closure_4, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const sum = DOCK_TILE_SIZE - fn(1187).BADGE_SIZE + 4;
-const sum1 = DOCK_TILE_SIZE - fn(1187).BADGE_SIZE + 3;
-const sum2 = fn(1187).BADGE_SIZE + 4;
+const sum = DOCK_TILE_SIZE - fn(1186).BADGE_SIZE + 4;
+const sum1 = DOCK_TILE_SIZE - fn(1186).BADGE_SIZE + 3;
+const sum2 = fn(1186).BADGE_SIZE + 4;
 let closure_9 = sum2 / 2;
-let closure_10 = sum + fn(1187).BADGE_SIZE / 2;
-let closure_11 = sum1 + fn(1187).BADGE_SIZE / 2;
-const GuildsBarActivityIndicator = fn(17953);
+let closure_10 = sum + fn(1186).BADGE_SIZE / 2;
+let closure_11 = sum1 + fn(1186).BADGE_SIZE / 2;
+const GuildsBarActivityIndicator = fn(17780);
 const mediaIcon = GuildsBarActivityIndicator.getMediaIcon({
   audio: false,
   video: false,
   screenshare: true,
   isCurrentUserConnected: true,
 });
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj3 = { clip: null, badge: null, badgeIndicator: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj3.clip = {};
 let size = {
   position: "absolute",
-  left: sum - fn(1187).BADGE_PADDING,
-  top: sum1 - fn(1187).BADGE_PADDING,
-  width: fn(1187).BADGE_SIZE + 2 * fn(1187).BADGE_PADDING,
-  height: fn(1187).BADGE_SIZE + 2 * fn(1187).BADGE_PADDING,
+  left: sum - fn(1186).BADGE_PADDING,
+  top: sum1 - fn(1186).BADGE_PADDING,
+  width: fn(1186).BADGE_SIZE + 2 * fn(1186).BADGE_PADDING,
+  height: fn(1186).BADGE_SIZE + 2 * fn(1186).BADGE_PADDING,
 };
 obj3.badge = size;
 obj3.badgeIndicator = { top: 0, right: 0, backgroundColor: "transparent" };
@@ -106,15 +106,15 @@ export default function VoicePanelDockBadgedIcon(children) {
   if (streaming) {
     num = 1;
   }
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(num);
   _require = sharedValue;
-  let obj = require("../../../../../_runtime/metro/01655__.js");
+  let obj = require("../../../../../_runtime/metro/01653__.js");
   items = [
     closure_16,
-    require("../../../../../_runtime/metro/01655__.js").interpolate,
+    require("../../../../../_runtime/metro/01653__.js").interpolate,
     sharedValue,
     0.7,
-    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01653__.js").Extrapolation,
     0.8,
   ];
   _require = undefined;
@@ -143,16 +143,16 @@ export default function VoicePanelDockBadgedIcon(children) {
   VoicePanelDockBadgedIconTsx2.__closure = items1;
   VoicePanelDockBadgedIconTsx2.__workletHash = 13214924592294;
   VoicePanelDockBadgedIconTsx2.__initData = tmp5;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     VoicePanelDockBadgedIconTsx2,
   );
-  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01653__.js");
   const items2 = [
     closure_17,
     sharedValue,
-    require("../../../../../_runtime/metro/01655__.js").interpolate,
+    require("../../../../../_runtime/metro/01653__.js").interpolate,
     0.7,
-    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01653__.js").Extrapolation,
     0.8,
     c8,
     require("ClipView").CutoutShape,
@@ -218,7 +218,7 @@ export default function VoicePanelDockBadgedIcon(children) {
   VoicePanelDockBadgedIconTsx3.__workletHash = 6139173483455;
   VoicePanelDockBadgedIconTsx3.__initData = tmp12;
   const items4 = [animatedStyle, sharedValue];
-  const animatedProps = require("../../../../../_runtime/metro/01655__.js").useAnimatedProps(
+  const animatedProps = require("../../../../../_runtime/metro/01653__.js").useAnimatedProps(
     VoicePanelDockBadgedIconTsx3,
   );
   const callback = noop.useCallback(

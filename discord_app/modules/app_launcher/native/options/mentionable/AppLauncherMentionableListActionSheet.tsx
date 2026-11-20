@@ -9,7 +9,7 @@ import GuildMemberStore from "../../../../../stores/GuildMemberStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const AppLauncherMentionableListActionSheet = "AppLauncherMentionableListActionSheet";

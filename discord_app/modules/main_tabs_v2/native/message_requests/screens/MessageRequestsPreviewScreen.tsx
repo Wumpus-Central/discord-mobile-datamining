@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import ReadStateStore from "../../../../../stores/ReadStateStore.tsx";
 
 const require = fn;
-const ME = fn(1072).ME;
+const ME = fn(1071).ME;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -17,7 +17,7 @@ export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
   const ref = noop.useRef(null);
   items = [channelId];
-  const isMessageRequestRestrictedViewer = channelId(13236).useIsMessageRequestRestrictedViewer();
+  const isMessageRequestRestrictedViewer = channelId(13206).useIsMessageRequestRestrictedViewer();
   const effect = noop.useEffect(() => {
     const obj = MessageManagerDefault;
     const messages = obj.fetchMessages({ channelId, messageId: ReadStateStore.lastMessageId(channelId) });
@@ -43,5 +43,5 @@ export default function MessageRequestsScreen(route) {
     });
   }
   obj2.children = tmp5Result;
-  return jsx(channelId(11036).ChannelContainer, { guildId: ME, channelId, children: null });
+  return jsx(channelId(10978).ChannelContainer, { guildId: ME, channelId, children: null });
 }

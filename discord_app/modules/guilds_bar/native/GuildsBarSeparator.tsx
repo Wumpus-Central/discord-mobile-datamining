@@ -1,12 +1,12 @@
 // discord_app/modules/guilds_bar/native/GuildsBarSeparator.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1655 from "../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../_runtime/metro/01653__.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
 import useHomeDrawerGesture from "../../home_drawer/native/useHomeDrawerGesture.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {
@@ -33,14 +33,14 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
   GuildsBarSeparatorTsx1.__closure = items1;
   GuildsBarSeparatorTsx1.__workletHash = 17321522248050;
   GuildsBarSeparatorTsx1.__initData = tmp5;
-  const animatedStyle = _mod1655.useAnimatedStyle(GuildsBarSeparatorTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(GuildsBarSeparatorTsx1);
   const obj4 = { style: null };
   const items2 = [tmp.separator, animatedStyle];
   obj4.style = items2;
-  return jsx(_modDef1655.View, { style: null });
+  return jsx(_modDef1653.View, { style: null });
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = {

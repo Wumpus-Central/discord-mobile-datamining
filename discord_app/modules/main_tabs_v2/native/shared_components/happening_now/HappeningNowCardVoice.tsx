@@ -3,7 +3,7 @@ import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import util from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02119_asyncRequireImpl.js";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserAffinitiesV2Store from "../../../../user_affinities/UserAffinitiesV2Store.tsx";
@@ -36,11 +36,11 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(16754).HappeningNowCardTrackingType;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+let closure_8 = fn(16578).HappeningNowCardTrackingType;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(

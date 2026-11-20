@@ -158,19 +158,6 @@ export function isSegmentOfTurn(value, turnId) {
   }
   return tmp;
 }
-export function turnIdOfSegment(message) {
-  if (null != message.turn_id) {
-    let turn_id = message.turn_id;
-  } else {
-    const id = message.id;
-    turn_id = null;
-    if (id.startsWith(conjureChatHistory.TURN_ENTRY_PREFIX)) {
-      const id1 = message.id;
-      turn_id = id1.slice(conjureChatHistory.TURN_ENTRY_PREFIX.length);
-    }
-  }
-  return turn_id;
-}
 export function findTurnSegment(arr3, activeTurnId) {
   if (null == activeTurnId) {
     return -1;

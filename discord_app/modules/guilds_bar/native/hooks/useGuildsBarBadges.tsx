@@ -16,10 +16,10 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["guildActivityIndicatorSource"];
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_15 = createStyles.createStyles({
   topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" },
 });

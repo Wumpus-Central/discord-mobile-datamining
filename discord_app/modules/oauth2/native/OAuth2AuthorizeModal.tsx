@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   contentContainer: { flex: 1 },
@@ -44,10 +44,10 @@ let result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeMo
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = closure_8();
-  const tmp4 = sharedValue(6883)(arg0);
+  const tmp4 = sharedValue(6882)(arg0);
   _require = tmp4;
-  sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
-  let obj = require("../../../../_runtime/metro/01655__.js");
+  sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  let obj = require("../../../../_runtime/metro/01653__.js");
   items = [closure_9, sharedValue];
   _require = undefined;
   [tmp7, tmp8] = items;
@@ -65,12 +65,12 @@ export default function OAuth2AuthorizeModal(arg0) {
   OAuth2AuthorizeModalTsx1.__workletHash = 9078225687376;
   OAuth2AuthorizeModalTsx1.__initData = tmp7;
   const items2 = [sharedValue];
-  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(OAuth2AuthorizeModalTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(OAuth2AuthorizeModalTsx1);
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: null, children: null };
   const items3 = [tmp.titleContainer];
-  const obj2 = require("../../../../_runtime/metro/01655__.js");
-  items3[1] = { paddingTop: sharedValue(1630)().top + 16 };
+  const obj2 = require("../../../../_runtime/metro/01653__.js");
+  items3[1] = { paddingTop: sharedValue(1628)().top + 16 };
   obj4.style = items3;
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -80,11 +80,11 @@ export default function OAuth2AuthorizeModal(arg0) {
     const result = sharedValue.set(spring_spring.withSpring(num, closure_7));
   }, items2);
   if (null != tmp4.backStep) {
-    const intl2 = tmp5(1113).intl;
-    let stringResult = intl2.string(tmp5(1113).t["13/7kX"]);
+    const intl2 = tmp5(1112).intl;
+    let stringResult = intl2.string(tmp5(1112).t["13/7kX"]);
   } else {
-    const intl = tmp5(1113).intl;
-    stringResult = intl.string(tmp5(1113).t.cpT0Cq);
+    const intl = tmp5(1112).intl;
+    stringResult = intl.string(tmp5(1112).t.cpT0Cq);
   }
   const obj6 = {
     accessibilityRole: "button",
@@ -101,32 +101,32 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj7 = { color: tmp2(575).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp13Result = closure_5(tmp5(12644).ArrowSmallLeftIcon, obj7);
+    let tmp13Result = closure_5(tmp5(12614).ArrowSmallLeftIcon, obj7);
   } else {
     const obj8 = { color: tmp2(575).colors.INTERACTIVE_TEXT_DEFAULT };
-    tmp13Result = closure_5(tmp5(7032).XSmallIcon, obj8);
+    tmp13Result = closure_5(tmp5(7031).XSmallIcon, obj8);
   }
   obj6.children = tmp13Result;
   const items4 = [closure_5(require("Pressables").PressableOpacity, obj6), ,];
   const obj9 = { style: tmp.title, children: null };
   const obj10 = { variant: "heading-md/semibold", accessibilityRole: "header", children: null };
-  const intl3 = tmp5(1113).intl;
+  const intl3 = tmp5(1112).intl;
   obj10.children = intl3.string(require("util").t["y+/PE9"]);
   obj9.children = closure_5(require("Text/Text").Text, obj10);
   items4[1] = closure_5(View, obj9);
   const obj11 = { style: null };
   const items5 = [tmp.titleContainerBorder, animatedStyle];
   obj11.style = items5;
-  items4[2] = closure_5(sharedValue(1655).View, obj11);
+  items4[2] = closure_5(sharedValue(1653).View, obj11);
   obj4.children = items4;
   const items6 = [closure_6(View, obj4)];
   const obj12 = { bottom: true, style: tmp.contentContainer, children: null };
   const obj13 = {};
-  const obj5 = { paddingTop: sharedValue(1630)().top + 16 };
+  const obj5 = { paddingTop: sharedValue(1628)().top + 16 };
   const merged = Object.assign(tmp4);
   obj13.onScroll = callback;
   obj13.centerContent = true;
-  obj12.children = closure_5(sharedValue(14639), obj13);
+  obj12.children = closure_5(sharedValue(14607), obj13);
   items6[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
   obj3.children = items6;
   return closure_6(View, obj3);

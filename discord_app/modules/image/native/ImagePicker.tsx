@@ -3,12 +3,12 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ImagePickerUtils from "ImagePickerUtils.tsx";
-import launchCameraAll from "../../../../_runtime/08358_launchCamera.js";
-import openPickerDefault from "../../../../_runtime/08360_openPicker.js";
+import launchCameraAll from "../../../../_runtime/08357_launchCamera.js";
+import openPickerDefault from "../../../../_runtime/08359_openPicker.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;
-const ThemeTypes = fn(1083).ThemeTypes;
+const ThemeTypes = fn(1082).ThemeTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/image/native/ImagePicker.tsx");
 

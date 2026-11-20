@@ -8,7 +8,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

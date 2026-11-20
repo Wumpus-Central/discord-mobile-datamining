@@ -1,7 +1,7 @@
 // discord_app/design/components/Illustration/native/redesign/generated/WhatYouLoseProfileTier1.tsx
 import shared from "../../../../../shared.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
-import _mod7667 from "../../index.tsx";
+import _mod7666 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 );
 
 export function getWhatYouLoseProfileTier1Source(theme) {
-  return _mod7667.getIllustrationSource(theme, {
+  return _mod7666.getIllustrationSource(theme, {
     dark() {
       return require("../../../../../../../_runtime/metro/09229__.js");
     },
@@ -28,7 +28,7 @@ export function getWhatYouLoseProfileTier1Source(theme) {
 }
 export function useWhatYouLoseProfileTier1Source() {
   const obj = shared;
-  return _mod7667.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod7666.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
       return require("../../../../../../../_runtime/metro/09229__.js");
     },
@@ -42,7 +42,7 @@ export function useWhatYouLoseProfileTier1Source() {
 }
 export function WhatYouLoseProfileTier1(arg0) {
   const obj = shared;
-  const illustrationSource = _mod7667.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod7666.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
       return require("../../../../../../../_runtime/metro/09229__.js");
     },

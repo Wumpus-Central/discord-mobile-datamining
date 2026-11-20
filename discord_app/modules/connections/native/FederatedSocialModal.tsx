@@ -23,7 +23,7 @@ function FederatedSocialModalScreen(onClose) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -156,10 +156,10 @@ function FederatedSocialModalScreen(onClose) {
   obj4.children = items;
   return closure_8(require("common/SafeAreaView").SafeAreaPaddingView, obj4);
 }
-const WebBrowserType = fn(1072).WebBrowserType;
+const WebBrowserType = fn(1071).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({
   container: { padding: 16 },
   description: { textAlign: "center" },

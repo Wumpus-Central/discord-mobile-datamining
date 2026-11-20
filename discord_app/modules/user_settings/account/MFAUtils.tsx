@@ -7,7 +7,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: hasOwnProperty, Permissions: closure_6, UserFlags: metroImportDefault } = Constants);
 const MFAAvailability = {
   AVAILABLE: "available",

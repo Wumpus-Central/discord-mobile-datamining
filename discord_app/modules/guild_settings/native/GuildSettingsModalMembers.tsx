@@ -22,11 +22,11 @@ const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-const GuildSettingsSections = fn(1072).GuildSettingsSections;
+const GuildSettingsSections = fn(1071).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let items = [fn(9940).AutocompleterResultTypes.USER];
-const createStyles = fn(4792);
+let items = [fn(9943).AutocompleterResultTypes.USER];
+const createStyles = fn(4794);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
   searchFieldContainer: null,
@@ -42,7 +42,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
   const sortedGuildRoles = guild.sortedGuildRoles;
   ({ start, end } = guild);
   const tmp = closure_19();
-  dependencyMap = guild(1502).useNavigation();
+  dependencyMap = guild(1500).useNavigation();
   if (null == guild) {
     return null;
   } else {
@@ -58,10 +58,10 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     let formatToPlainStringResult;
     if (found.length > 0) {
       const user = UserStore.getUser(guildMember.userId);
-      let str = guildMember(5822).getNickname(guild.id, undefined, user);
+      let str = guildMember(5824).getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(4848).getGlobalName(user);
-        const tmp9Result = tmp9(4848);
+        str = tmp9(4850).getGlobalName(user);
+        const tmp9Result = tmp9(4850);
       }
       if (str == null) {
         let username;
@@ -75,10 +75,10 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
       }
       const mapped1 = found.map((name) => name.name);
       const joined = mapped1.join(", ");
-      const intl = tmp2(1113).intl;
+      const intl = tmp2(1112).intl;
       const obj3 = { memberName: str, roleNames: joined };
-      formatToPlainStringResult = intl.formatToPlainString(tmp2(1113).t["6eGpWx"], obj3);
-      const obj2 = guildMember(5822);
+      formatToPlainStringResult = intl.formatToPlainString(tmp2(1112).t["6eGpWx"], obj3);
+      const obj2 = guildMember(5824);
       tmp9 = guildMember;
     }
     const obj4 = {
@@ -104,9 +104,9 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(13766), obj4);
+    return closure_15(guildMember(13735), obj4);
   }
-  const obj = guild(1502);
+  const obj = guild(1500);
 });
 let obj4 = { paddingVertical: nativeDefault.space.PX_12 };
 const size = fn(2);
@@ -306,12 +306,12 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { source: closure_1_1(7909), accessibilityLabel: null, ref: null };
-            const intl = closure_1_0(1113).intl;
-            obj.accessibilityLabel = intl.string(closure_1_0(1113).t.ogxXGq);
+            const obj = { source: closure_1_1(7908), accessibilityLabel: null, ref: null };
+            const intl = closure_1_0(1112).intl;
+            obj.accessibilityLabel = intl.string(closure_1_0(1112).t.ogxXGq);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_15(closure_1_0(6910).HeaderActionButton, obj);
+            return closure_1_15(closure_1_0(6909).HeaderActionButton, obj);
           },
         });
       },

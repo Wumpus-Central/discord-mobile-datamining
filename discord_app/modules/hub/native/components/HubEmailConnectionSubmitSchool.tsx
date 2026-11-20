@@ -15,14 +15,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(13579).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13549).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { paddingHorizontal: 16 },
   title: {
-    fontFamily: fn(1072).Fonts.PRIMARY_BOLD,
+    fontFamily: fn(1071).Fonts.PRIMARY_BOLD,
     color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
     fontSize: 24,
     textAlign: "center",
@@ -36,7 +36,7 @@ let obj2 = {
   redesignSubmit: null,
 };
 let obj3 = {
-  fontFamily: fn(1072).Fonts.PRIMARY_BOLD,
+  fontFamily: fn(1071).Fonts.PRIMARY_BOLD,
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
   fontSize: 24,
   textAlign: "center",
@@ -67,7 +67,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

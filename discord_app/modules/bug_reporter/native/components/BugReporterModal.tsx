@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import DurationsDefault from "../../../../utils/Durations.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
@@ -62,7 +62,7 @@ class BugCreateScreen {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -203,7 +203,7 @@ class BugCreateScreen {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -257,7 +257,7 @@ class BugCreateScreen {
               });
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           c3 = tmp;
@@ -398,7 +398,7 @@ class BugCreateScreen {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -430,7 +430,7 @@ class BugCreateScreen {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "+60" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -461,17 +461,17 @@ class BugCreateScreen {
                               if (closure_131_4) {
                                 closure_131_3.succeed();
                                 const obj5 = { text: null, variant: "success", duration: null };
-                                const intl2 = closure_2_0(1113).intl;
-                                obj5.text = intl2.string(closure_2_0(1113).t.jB8yOL);
+                                const intl2 = closure_2_0(1112).intl;
+                                obj5.text = intl2.string(closure_2_0(1112).t.jB8yOL);
                                 obj5.duration = duration;
-                                closure_2_1(5474).open("BUG_REPORT_BUG_SUBMITTED", obj5);
-                                const obj6 = closure_2_1(5474);
+                                closure_2_1(5476).open("BUG_REPORT_BUG_SUBMITTED", obj5);
+                                const obj6 = closure_2_1(5476);
                               } else {
                                 const obj7 = { text: null, variant: "critical" };
-                                const intl = closure_2_0(1113).intl;
-                                obj7.text = intl.string(closure_2_0(1113).t["4t1o0u"]);
-                                closure_2_1(5474).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
-                                const obj4 = closure_2_1(5474);
+                                const intl = closure_2_0(1112).intl;
+                                obj7.text = intl.string(closure_2_0(1112).t["4t1o0u"]);
+                                closure_2_1(5476).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                                const obj4 = closure_2_1(5476);
                               }
                               c6 = 3;
                             }
@@ -517,7 +517,7 @@ class BugCreateScreen {
                         c5 = 1;
                         c6 = 1;
                         const obj11 = {
-                          value: closure_2_0(11110).submitReport(closure_131_0, closure_131_1, closure_131_2),
+                          value: closure_2_0(11052).submitReport(closure_131_0, closure_131_1, closure_131_2),
                           done: false,
                         };
                         return obj11;
@@ -539,22 +539,22 @@ class BugCreateScreen {
                 if (ref.current) {
                   if (first5) {
                     let obj5 = { text: null, variant: "critical", duration: null };
-                    let intl2 = handleSubmit(1113).intl;
-                    obj5.text = intl2.string(handleSubmit(1113).t.Uuqbcm);
+                    let intl2 = handleSubmit(1112).intl;
+                    obj5.text = intl2.string(handleSubmit(1112).t.Uuqbcm);
                     obj5.duration = duration;
-                    screenshot(5474).open("BUG_REPORT_SUBMITTING_BUG", obj5);
+                    screenshot(5476).open("BUG_REPORT_SUBMITTING_BUG", obj5);
                     closure_1_16(true);
                     first8();
-                    let obj9 = screenshot(5474);
+                    let obj9 = screenshot(5476);
                   }
                   priority = 3;
                 } else {
                   callback(true);
                   if (null == priority) {
                     let obj7 = { text: null, variant: "critical" };
-                    let intl = handleSubmit(1113).intl;
-                    obj7.text = intl.string(handleSubmit(1113).t["4t1o0u"]);
-                    screenshot(5474).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                    let intl = handleSubmit(1112).intl;
+                    obj7.text = intl.string(handleSubmit(1112).t["4t1o0u"]);
+                    screenshot(5476).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
                     callback(false);
                     priority = 3;
                     const obj8 = { value: undefined, done: true };
@@ -562,7 +562,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(11109).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(11051).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -697,7 +697,7 @@ class BugCreateScreen {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -730,7 +730,7 @@ class BugCreateScreen {
               closure_128_0 = value;
               closure_1_18(closure_128_0);
               c3 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp13) {
             c3 = tmp;
@@ -916,7 +916,7 @@ class BugCreateScreen {
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
         return ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(11146, dependencyMap.paths),
+          asyncRequireImpl(11088, dependencyMap.paths),
           "BugReporterFeatureActionSheet",
           { features: null != first7 ? first7.features : [], feature: first8, setFeature },
         );
@@ -940,7 +940,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let closure_13 = Object.freeze({ id: "749049128012742676", format_type: 3, name: "Wumpus zipping by on a monowheel" });
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { padding: 16 },
   attachmentCarousel: { justifyContent: "center", minWidth: "100%" },
@@ -1004,6 +1004,6 @@ export default function BugReportModal(screenshotUri) {
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(6973).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(6972).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 }
 export { BugCreateScreen };

@@ -17,10 +17,10 @@ function AddApplicationIdentityTableRow(application) {
   _require = undefined;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7402)(application));
-  const tmp2 = analyticsLocations(7402)(application);
-  analyticsLocations = analyticsLocations(7401)(analyticsLocations(7420).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7401);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7401)(application));
+  const tmp2 = analyticsLocations(7401)(application);
+  analyticsLocations = analyticsLocations(7400)(analyticsLocations(7419).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7400);
   const tmp4 = closure_7();
   const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
   const obj2 = {
@@ -38,7 +38,7 @@ function AddApplicationIdentityTableRow(application) {
   let tmp7Result = null;
   if (null != iconSource) {
     const obj3 = { source: iconSource, style: tmp4.icon, disableColor: true };
-    tmp7Result = closure_5(tmp5(1187).Icon, obj3);
+    tmp7Result = closure_5(tmp5(1186).Icon, obj3);
   }
   obj2.icon = tmp7Result;
   obj2.trailing = closure_5(require("TableRow").TableRow.Arrow, {});

@@ -134,10 +134,18 @@ function resolveChannelScreens(state, isChatLockedOpen) {
     let obj = NavigationRouteUtils;
     let coerceChannelRouteResult = obj.coerceChannelRoute(state.routes[num]);
     if (null != coerceChannelRouteResult) {
-      let obj2 = { index: items.length, type: null, guildId: null, channelId: null, showCreateThread: null };
+      let obj2 = {
+        index: items.length,
+        type: null,
+        guildId: null,
+        channelId: null,
+        subRouteId: null,
+        showCreateThread: null,
+      };
       obj2.type = obj.DEFAULT;
       obj2.guildId = coerceChannelRouteResult.params.guildId;
       obj2.channelId = coerceChannelRouteResult.params.channelId;
+      obj2.subRouteId = coerceChannelRouteResult.params.subRouteId;
       obj2.showCreateThread = coerceChannelRouteResult.params.showCreateThread;
       let arr = items.push(obj2);
     }
@@ -164,8 +172,8 @@ function resolveChannelScreens(state, isChatLockedOpen) {
   }
   return tmp8;
 }
-const ME = fn(1072).ME;
-const isStaticChannelRoute = fn(4648).isStaticChannelRoute;
+const ME = fn(1071).ME;
+const isStaticChannelRoute = fn(4650).isStaticChannelRoute;
 const ChannelScreenType = {
   DEFAULT: 0,
   [0]: "DEFAULT",
@@ -255,7 +263,7 @@ export default function useChannelScreensFromNavigation(arg0) {
   let items1 = [arg0, callback];
   const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(resolveChannelScreens(data.data.state, handleStateChange(4971).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(4973).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {
@@ -279,4 +287,28 @@ export function isActiveTabsGuilds(state) {
     }
     return tmp6;
   }
+}
+export function resolveAllChannelScreens(index) {
+  items = [];
+  for (let num = 0; num <= index.index; num = num + 1) {
+    let obj = NavigationRouteUtils;
+    let coerceChannelRouteResult = obj.coerceChannelRoute(index.routes[num]);
+    if (null != coerceChannelRouteResult) {
+      let obj2 = {
+        index: items.length,
+        type: null,
+        guildId: null,
+        channelId: null,
+        subRouteId: null,
+        showCreateThread: null,
+      };
+      obj2.type = obj.DEFAULT;
+      obj2.guildId = coerceChannelRouteResult.params.guildId;
+      obj2.channelId = coerceChannelRouteResult.params.channelId;
+      obj2.subRouteId = coerceChannelRouteResult.params.subRouteId;
+      obj2.showCreateThread = coerceChannelRouteResult.params.showCreateThread;
+      let arr = items.push(obj2);
+    }
+  }
+  return items;
 }

@@ -7,12 +7,12 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(11005);
+const StageChannelListStore = fn(10947);
 ({ useActiveSpeakerPillScrollHandler: closure_6, useActiveSpeakerPillState: metroImportDefault } =
   StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj = {
   container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" },
   participantItemContainer: {
@@ -38,7 +38,7 @@ let obj3 = {
 };
 obj.participantAvatarText = {
   fontSize: 12,
-  fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD,
+  fontFamily: fn(1071).Fonts.PRIMARY_SEMIBOLD,
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
   lineHeight: 18,
 };
@@ -50,7 +50,7 @@ obj.participantNameplateContainer = {
 };
 let obj4 = {
   fontSize: 12,
-  fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD,
+  fontFamily: fn(1071).Fonts.PRIMARY_SEMIBOLD,
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
   lineHeight: 18,
 };
@@ -74,7 +74,7 @@ export default noop.memo(function ActiveSpeakerTooltip(channel) {
         return items;
       },
       items1,
-      channel(6423).isVersionEqual,
+      channel(6425).isVersionEqual,
     ),
     1,
   )[0];
@@ -101,14 +101,14 @@ export default noop.memo(function ActiveSpeakerTooltip(channel) {
         color: "text-default",
         children: null,
       };
-      const intl = tmp2(1113).intl;
+      const intl = tmp2(1112).intl;
       const obj8 = { count: first.length };
-      obj7.children = intl.format(tmp2(1113).t["+dia6l"], obj8);
-      obj6.children = closure_8(tmp2(5383).Text, obj7);
+      obj7.children = intl.format(tmp2(1112).t["+dia6l"], obj8);
+      obj6.children = closure_8(tmp2(5385).Text, obj7);
       items2[1] = closure_8(View, obj6);
       obj3.children = items2;
       obj2.children = closure_9(View, obj3);
-      tmp5 = closure_8(tmp2(6911).PressableOpacity, obj2);
+      tmp5 = closure_8(tmp2(6910).PressableOpacity, obj2);
     }
   }
   return tmp5;

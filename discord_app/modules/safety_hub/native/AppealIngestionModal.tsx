@@ -13,12 +13,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7690);
+const SafetyHubConstants = fn(7689);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: closure_10 } = SafetyHubConstants);
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   headerContainer: { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 },
@@ -63,7 +63,7 @@ export default function AppealIngestionModal(classificationId) {
   let obj = require("useSafetyHubClassifications");
   let obj2 = {
     initialRouteName: constants.SPEED_BUMP,
-    screens: flag(5371)(() => {
+    screens: flag(5373)(() => {
       const isDsaEligible = c0;
       const isCoppa = flag;
       const isDeveloperClassification = flag2;
@@ -71,10 +71,10 @@ export default function AppealIngestionModal(classificationId) {
       const obj2 = {
         headerLeft: NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close),
         headerTitle() {
-          return closure_1_12(isDsaEligible(5383).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+          return closure_1_12(isDsaEligible(5385).Text, { variant: "body-md/normal", children: "analyticsLocations" });
         },
         render() {
-          return closure_2_12(flag(12344), { isDsaEligible, isCoppa, isDeveloperClassification });
+          return closure_2_12(flag(12314), { isDsaEligible, isCoppa, isDeveloperClassification });
         },
         impressionName: discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
         impressionProperties,
@@ -89,10 +89,10 @@ export default function AppealIngestionModal(classificationId) {
       };
       obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj4.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5383).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5385).Text, { variant: "body-md/normal", children: "analyticsLocations" });
       };
       obj4.render = function render() {
-        return closure_2_12(flag(12353), { isDsaEligible });
+        return closure_2_12(flag(12323), { isDsaEligible });
       };
       obj4.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL;
       obj4.impressionProperties = impressionProperties;
@@ -106,10 +106,10 @@ export default function AppealIngestionModal(classificationId) {
       };
       obj6.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj6.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5383).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5385).Text, { variant: "body-md/normal", children: "analyticsLocations" });
       };
       obj6.render = function render() {
-        return closure_2_12(flag(12355), { isDsaEligible });
+        return closure_2_12(flag(12325), { isDsaEligible });
       };
       obj6.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION;
       obj6.impressionProperties = impressionProperties;
@@ -123,10 +123,10 @@ export default function AppealIngestionModal(classificationId) {
       };
       obj8.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj8.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5383).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5385).Text, { variant: "body-md/normal", children: "analyticsLocations" });
       };
       obj8.render = function render() {
-        return closure_1_12(isCoppa(12357), {});
+        return closure_1_12(isCoppa(12327), {});
       };
       obj8.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT;
       obj8.impressionProperties = impressionProperties;
@@ -140,10 +140,10 @@ export default function AppealIngestionModal(classificationId) {
       };
       obj10.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj10.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(5383).Text, { variant: "body-md/normal", children: "analyticsLocations" });
+        return closure_1_12(isDsaEligible(5385).Text, { variant: "body-md/normal", children: "analyticsLocations" });
       };
       obj10.render = function render() {
-        return closure_1_12(isCoppa(12359), {});
+        return closure_1_12(isCoppa(12329), {});
       };
       obj10.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_THANKS;
       obj10.impressionProperties = impressionProperties;
@@ -153,7 +153,7 @@ export default function AppealIngestionModal(classificationId) {
     headerBackTitle: null,
     headerTitleAlign: "center",
   };
-  const intl = tmp(1113).intl;
+  const intl = tmp(1112).intl;
   obj2.headerBackTitle = intl.string(require("util").t["13/7kX"]);
   return closure_12(require("Navigator").Navigator, obj2);
 }
@@ -275,7 +275,7 @@ export function AppealIngestionModalScreen(children) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -297,7 +297,7 @@ export function AppealIngestionModalScreen(children) {
                 v2 = 2;
                 c5 = 1;
                 const obj6 = {
-                  value: tmp27(12327).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                  value: tmp27(12297).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                   done: false,
                 };
                 return obj6;
@@ -312,8 +312,8 @@ export function AppealIngestionModalScreen(children) {
               if (body != null) {
                 code = body.code;
               }
-              closure_129_4(safetyHubAppealSignal(7689).getRequestReviewErrorFromCode(code));
-              const obj2 = safetyHubAppealSignal(7689);
+              closure_129_4(safetyHubAppealSignal(7688).getRequestReviewErrorFromCode(code));
+              const obj2 = safetyHubAppealSignal(7688);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;

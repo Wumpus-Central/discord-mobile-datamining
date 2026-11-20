@@ -3,7 +3,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const RelativeMarketingURLs = fn(1072).RelativeMarketingURLs;
+const RelativeMarketingURLs = fn(1071).RelativeMarketingURLs;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileGameClaimCta.tsx");
@@ -25,7 +25,7 @@ export default function GameProfileGameClaimCta(trackAction) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -60,7 +60,7 @@ export default function GameProfileGameClaimCta(trackAction) {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -75,10 +75,10 @@ export default function GameProfileGameClaimCta(trackAction) {
   }
   if (someResult == null) {
     let obj = { variant: "secondary", size: "md", text: null, onPress: null };
-    const intl = trackAction(1113).intl;
-    obj.text = intl.string(trackAction(1113).t["mqg+to"]);
+    const intl = trackAction(1112).intl;
+    obj.text = intl.string(trackAction(1112).t["mqg+to"]);
     obj.onPress = callback;
-    let tmp3 = jsx(trackAction(5390).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+    let tmp3 = jsx(trackAction(5392).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {
     tmp3 = null;
   }

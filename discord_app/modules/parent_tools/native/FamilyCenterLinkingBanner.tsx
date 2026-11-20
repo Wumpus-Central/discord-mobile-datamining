@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterLinkingBanner.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2723 from "../FamilyCenter.messages.js";
+import _modDef2725 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
@@ -14,21 +14,21 @@ function FamilyCenterLinkingBannerParentContent() {
   const obj = { style: closure_7().container, children: null };
   const obj2 = { index: 1, header: null, description: null };
   const intl = util.intl;
-  obj2.header = intl.string(_modDef2723["7xxAni"]);
+  obj2.header = intl.string(_modDef2725["7xxAni"]);
   const intl2 = util.intl;
-  obj2.description = intl2.string(_modDef2723["1M9So2"]);
+  obj2.description = intl2.string(_modDef2725["1M9So2"]);
   items = [React4(FamilyCenterLinkingInstructionsRow, obj2), , ,];
   const obj3 = { index: 2, header: null, description: null };
   const intl3 = util.intl;
-  obj3.header = intl3.string(_modDef2723["AXgx+a"]);
+  obj3.header = intl3.string(_modDef2725["AXgx+a"]);
   const intl4 = util.intl;
-  obj3.description = intl4.string(_modDef2723.GzMFnb);
+  obj3.description = intl4.string(_modDef2725.GzMFnb);
   items[1] = React4(FamilyCenterLinkingInstructionsRow, obj3);
   const obj4 = { index: 3, header: null, description: null, isLast: true };
   const intl5 = util.intl;
-  obj4.header = intl5.string(_modDef2723.MZn1tG);
+  obj4.header = intl5.string(_modDef2725.MZn1tG);
   const intl6 = util.intl;
-  obj4.description = intl6.string(_modDef2723["8rLBxD"]);
+  obj4.description = intl6.string(_modDef2725["8rLBxD"]);
   items[2] = React4(FamilyCenterLinkingInstructionsRow, obj4);
   items[3] = React4(FamilyCenterBannerButton.FamilyCenterParentQRCodeButton, {});
   obj.children = items;
@@ -69,7 +69,7 @@ function FamilyCenterLinkingInstructionsRow(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -101,17 +101,17 @@ obj2.art = { marginBottom: nativeDefault.space.PX_12 };
 let obj5 = { marginBottom: nativeDefault.space.PX_12 };
 obj2.header = { marginBottom: nativeDefault.space.PX_8 };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(4792);
+createStyles = fn(4794);
 const obj8 = { container: null };
 const obj6 = { marginBottom: nativeDefault.space.PX_8 };
 obj8.container = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
 let closure_7 = createStyles.createStyles(obj8);
-createStyles = fn(4792);
+createStyles = fn(4794);
 const obj11 = { container: null };
 const obj9 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
 obj11.container = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
 let closure_9 = createStyles.createStyles(obj11);
-createStyles = fn(4792);
+createStyles = fn(4794);
 const obj14 = {
   row: { display: "flex", flexDirection: "row", alignItems: "flex-start" },
   gap: { marginBottom: 12 },
@@ -141,16 +141,16 @@ export default function FamilyCenterLinkingBanner() {
   const intl = util.intl;
   const obj = useAgeSpecificText;
   const intl2 = util.intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2723.zUCWEL), intl2.string(_modDef2723.B0NPbp));
-  const stringResult = intl.string(_modDef2723.zUCWEL);
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2725.zUCWEL), intl2.string(_modDef2725.B0NPbp));
+  const stringResult = intl.string(_modDef2725.zUCWEL);
   const intl3 = util.intl;
   const obj2 = useAgeSpecificText;
   const intl4 = util.intl;
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, children: null };
   const ageSpecificText1 = obj2.useAgeSpecificText(
-    intl3.format(_modDef2723.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }),
-    intl4.string(_modDef2723.JsAEDi),
+    intl3.format(_modDef2725.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }),
+    intl4.string(_modDef2725.JsAEDi),
   );
   obj4.children = React4(WizardHatAndBookSpotIllustration.WizardHatAndBookSpotIllustration, { accessible: false });
   items = [React4(View, obj4), ,];

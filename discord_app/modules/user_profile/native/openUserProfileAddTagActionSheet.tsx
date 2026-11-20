@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/native/openUserProfileAddTagActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import markAccessibilityFocusDefault from "../../a11y/native/markAccessibilityFocus.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const constants = fn(7950).TrackUserProfileEditActions;
+const constants = fn(7949).TrackUserProfileEditActions;
 const UserProfileAddTagActionSheet = "UserProfileAddTagActionSheet";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/openUserProfileAddTagActionSheet.tsx");
@@ -25,7 +25,7 @@ export default function openUserProfileAddTagActionSheet(widgetEdited) {
     widgetEdited: widgetEdited.widgetType,
   };
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(10121, dependencyMap.paths),
+    asyncRequireImpl(10124, dependencyMap.paths),
     UserProfileAddTagActionSheet,
     widgetEdited,
   );

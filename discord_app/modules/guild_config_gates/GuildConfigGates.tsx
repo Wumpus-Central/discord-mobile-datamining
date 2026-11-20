@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GuildConfigGatesStore from "GuildConfigGatesStore.tsx";
 
 require = fn;
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const initialize = fn(504);
 let obj2 = {
   getQueryId(arg0) {
@@ -38,7 +38,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

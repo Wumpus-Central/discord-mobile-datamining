@@ -17,10 +17,10 @@ import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsS
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
-const FileUploadErrorTypes = fn(4797).FileUploadErrorTypes;
-const PremiumConstants = fn(1390);
+const FileUploadErrorTypes = fn(4799).FileUploadErrorTypes;
+const PremiumConstants = fn(1388);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };
 const size = fn(2);

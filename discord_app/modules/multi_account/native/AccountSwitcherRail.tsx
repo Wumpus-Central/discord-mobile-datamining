@@ -15,8 +15,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 import MultiAccountStore from "../MultiAccountStore.tsx";
 import MultiAccountSwitchStore from "../MultiAccountSwitchStore.tsx";
 
-const CircleInformationIcon = CheckmarkSmallIcon(5496);
-const CheckmarkSmallIcon2 = CheckmarkSmallIcon(7380);
+const CircleInformationIcon = CheckmarkSmallIcon(5498);
+const CheckmarkSmallIcon2 = CheckmarkSmallIcon(7379);
 require = fn;
 function RailButton(arg0) {
   closure_0 = closure_22();
@@ -38,9 +38,9 @@ function AccountButton(user) {
   const selected = user.selected;
   ({ disabled, onSelect: importAll } = user);
   dependencyMap = closure_22();
-  const radioA11yNative = user(4854).useRadioA11yNative({ selected, disabled });
+  const radioA11yNative = user(4856).useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  let obj = user(4854);
+  let obj = user(4856);
   closure_4 = tmp5;
   let obj2 = {
     accessibilityRole,
@@ -56,13 +56,13 @@ function AccountButton(user) {
   if (user.hidePersonalInformation) {
     str = "never";
   }
-  obj2.accessibilityLabel = selected(4848).getUserTag(tmp4, { mode: "username", identifiable: str });
+  obj2.accessibilityLabel = selected(4850).getUserTag(tmp4, { mode: "username", identifiable: str });
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
-    const intl2 = tmp(1113).intl;
-    let stringResult = intl2.string(tmp(1113).t.tYX2ps);
+    const intl2 = tmp(1112).intl;
+    let stringResult = intl2.string(tmp(1112).t.tYX2ps);
   } else if (!selected) {
-    const intl = tmp(1113).intl;
-    stringResult = intl.string(tmp(1113).t.wY4y0R);
+    const intl = tmp(1112).intl;
+    stringResult = intl.string(tmp(1112).t.wY4y0R);
   }
   obj2.accessibilityHint = stringResult;
   obj2.disabled = disabled;
@@ -267,22 +267,22 @@ function AccountSwitcherRailContent() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(13193).MultiAccountTokenStatus;
-let Constants = fn(13194);
+const MultiAccountTokenStatus = fn(13163).MultiAccountTokenStatus;
+let Constants = fn(13164);
 ({ MAX_ACCOUNTS: map1, MultiAccountSwitchLocation: closure_14 } = Constants);
-Constants = fn(1072);
+Constants = fn(1071);
 ({ AnalyticEvents: closure_15, AuthStates: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
 const diff = 41 - 2 * nativeDefault.space.PX_4;
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let closure_21 = createStyles.createStyles((width, bottom) => {
   const obj = { gutter: null };
   const rect = { position: "absolute", right: nativeDefault.space.PX_6, bottom, width, alignItems: "center" };
   obj.gutter = rect;
   return obj;
 });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj = {
   accounts: { gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8 },
   button: null,

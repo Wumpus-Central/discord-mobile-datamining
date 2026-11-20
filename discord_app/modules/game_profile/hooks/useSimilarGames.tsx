@@ -5,7 +5,7 @@ import GameStore from "../../games/GameStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-fn(9770).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+fn(9772).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 let closure_5 = [];
 const similarGames = [];
 const size = fn(2);
@@ -16,7 +16,7 @@ export default function useSimilarGames(arg0) {
   if (tmp) {
     tmp = !set.has(arg0);
   }
-  const similarGameIds = data(9769).useSimilarGameIds(arg0, tmp);
+  const similarGameIds = data(9771).useSimilarGameIds(arg0, tmp);
   ({ data, isLoading, error } = similarGameIds);
   if (!tmp) {
     let tmp6 = closure_5;
@@ -24,7 +24,7 @@ export default function useSimilarGames(arg0) {
     tmp6 = data;
   }
   data = tmp6;
-  const obj = data(9769);
+  const obj = data(9771);
   const games = data(8933).useGames(tmp6);
   const tmp3Result = data(8933);
   items = [GameStore];

@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MAX_TIMEOUT_MS = fn(1072).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1071).MAX_TIMEOUT_MS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");
 

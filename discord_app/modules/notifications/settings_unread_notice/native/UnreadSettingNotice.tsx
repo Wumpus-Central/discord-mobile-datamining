@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-let closure_4 = fn(1082).ChannelNotificationSettingsFlags;
+let closure_4 = fn(1081).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.content = {

@@ -11,10 +11,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsx = fn(21).jsx;
-let closure_11 = Object.freeze({ direction: fn(1187).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(4792);
+let closure_11 = Object.freeze({ direction: fn(1186).CutoutDirection.RIGHT, inset: -4 });
+const createStyles = fn(4794);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
@@ -87,16 +87,16 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = { user, guildId: "r", size: closure_0(1186).AvatarSizes.XSMALL, cutout: null };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
             }
             obj4.cutout = tmp3;
-            obj.children = jsx(closure_0(1187).CutoutableAvatarImage, {
+            obj.children = jsx(closure_0(1186).CutoutableAvatarImage, {
               user,
               guildId: "r",
-              size: closure_0(1187).AvatarSizes.XSMALL,
+              size: closure_0(1186).AvatarSizes.XSMALL,
               cutout: null,
             });
             return (
@@ -117,16 +117,16 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = { user, guildId: "r", size: closure_0(1186).AvatarSizes.XSMALL, cutout: null };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
             }
             obj4.cutout = tmp3;
-            obj.children = jsx(closure_0(1187).CutoutableAvatarImage, {
+            obj.children = jsx(closure_0(1186).CutoutableAvatarImage, {
               user,
               guildId: "r",
-              size: closure_0(1187).AvatarSizes.XSMALL,
+              size: closure_0(1186).AvatarSizes.XSMALL,
               cutout: null,
             });
             return (

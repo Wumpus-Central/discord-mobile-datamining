@@ -6,17 +6,17 @@ import useParentalControlSettings from "../../../parent_tools/hooks/useParentalC
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8593).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8592).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsEveryoneSettingValue() {
-    const FriendSourceFlagsSetting = setting(4617).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(4619).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     items = [setting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;

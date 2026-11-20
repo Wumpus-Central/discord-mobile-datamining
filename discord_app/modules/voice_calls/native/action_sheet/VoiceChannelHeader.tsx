@@ -8,7 +8,7 @@ import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
-import _modDef10993 from "../../../../../_runtime/metro/10993__.js";
+import _modDef10935 from "../../../../../_runtime/metro/10935__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import CallStateHooks from "../CallStateHooks.tsx";
 import OngoingCallStatusLabelDefault from "../components/OngoingCallStatusLabel.tsx";
@@ -167,7 +167,7 @@ class VoiceChannelHeader {
 function AddMemberButton(onPress) {
   const obj = {
     onPress: onPress.onPress,
-    iconSource: _modDef10993,
+    iconSource: _modDef10935,
     iconStyle: closure_12().icons,
     accessibilityLabel: null,
   };
@@ -189,11 +189,11 @@ class IconButton {
   }
 }
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Permissions: metroImportDefault, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: {
     alignSelf: "stretch",

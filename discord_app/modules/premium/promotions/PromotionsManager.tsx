@@ -7,7 +7,7 @@ import PromotionsStore from "PromotionsStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const SubscriptionTypes = fn(1083).SubscriptionTypes;
+const SubscriptionTypes = fn(1082).SubscriptionTypes;
 class PromotionsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

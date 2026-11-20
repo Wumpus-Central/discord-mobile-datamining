@@ -201,8 +201,8 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6512).isGuildEventEnded;
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const isGuildEventEnded = fn(6514).isGuildEventEnded;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 let obj = {
   loading: false,
   initialized: false,
@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "Promise",
-  notifCenterActive: "Role",
-  notifCenterTabFocused: true,
+  notifCenterActive: "board",
+  notifCenterTabFocused: null,
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "Role",
-      notifCenterTabFocused: true,
+      notifCenterActive: "board",
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "Role",
-      notifCenterTabFocused: true,
+      notifCenterActive: "board",
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -599,7 +599,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         items = [];
-        obj = id(6517);
+        obj = id(6519);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -711,8 +711,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Promise",
-      notifCenterActive: "Role",
-      notifCenterTabFocused: true,
+      notifCenterActive: "board",
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

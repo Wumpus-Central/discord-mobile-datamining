@@ -28,11 +28,11 @@ function handleSetActiveCommand() {
 }
 const obj = {
   show: false,
-  entrypoint: fn(10614).AppLauncherEntrypoint.NONE,
-  lastShownEntrypoint: fn(10614).AppLauncherEntrypoint.NONE,
+  entrypoint: fn(10556).AppLauncherEntrypoint.NONE,
+  lastShownEntrypoint: fn(10556).AppLauncherEntrypoint.NONE,
   activeViewType: null,
   activeChannelId: null,
-  closeReason: fn(10614).AppLauncherCloseReason.DISMISSED,
+  closeReason: fn(10556).AppLauncherCloseReason.DISMISSED,
   initialState: "ao",
 };
 const Store = initializeDefault.Store;

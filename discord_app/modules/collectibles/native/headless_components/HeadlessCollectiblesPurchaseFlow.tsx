@@ -12,8 +12,8 @@ import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunn
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const application_id = fn(1072).COLLECTIBLES_APPLICATION_ID;
-const PaymentGateways = fn(1083).PaymentGateways;
+const application_id = fn(1071).COLLECTIBLES_APPLICATION_ID;
+const PaymentGateways = fn(1082).PaymentGateways;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(

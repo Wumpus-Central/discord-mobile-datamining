@@ -4,18 +4,18 @@ import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.t
 import useIsUsingClientThemeDefault from "../../../client_themes/native/useIsUsingClientTheme.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import 01655__ from "../../../../../_runtime/metro/01655__.js";
+import 01653__ from "../../../../../_runtime/metro/01653__.js";
 
 const require = globalThis.__r;
 
 const require = fn;
-const RedesignChannelListConstants = fn(5521);
+const RedesignChannelListConstants = fn(5523);
 ({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: closure_6 } = RedesignChannelListConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let closure_10 = module_1655.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(4792);
+let closure_10 = module_1653.createAnimatedComponent(fn(17).Pressable);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles((arg0, arg1) => {
   let num = 5;
   if (arg0) {
@@ -85,9 +85,9 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   let sum = require("useScaledTextLineHeight").scaleTextLineHeight(c12, fontScale) + 8;
   const obj3 = require("useScaledTextLineHeight");
   const tmp9 = c12;
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
-  let obj4 = require("../../../../../_runtime/metro/01655__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(sum);
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  let obj4 = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(sum);
   let items1 = [sharedValue, sharedValue1];
   const items2 = [shown, first, position];
   const callback = obj.useCallback((nativeEvent) => {
@@ -111,8 +111,8 @@ export default noop.memo(function ChannelsUnreadBar(position) {
     AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_UNREAD_BADGE_CLICKED, { is_mention, position });
     _undefined();
   }, items3);
-  let obj5 = require("../../../../../_runtime/metro/01655__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj5 = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
   const items4 = [sharedValue2];
   const items5 = [sharedValue2];
   const callback2 = obj.useCallback(() => {
@@ -121,7 +121,7 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   const callback3 = obj.useCallback(() => {
     const result = _undefined5.set(0);
   }, items5);
-  let obj6 = require("../../../../../_runtime/metro/01655__.js");
+  let obj6 = require("../../../../../_runtime/metro/01653__.js");
   const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
   const items6 = [headerHeight, position, youBarTotalHeight];
   const memo = obj.useMemo(() => {
@@ -147,7 +147,7 @@ export default noop.memo(function ChannelsUnreadBar(position) {
     }, timestampProducer.minimumViewTime + 1);
   }, []);
   const tmp21 = c5(fontScale);
-  const items8 = [c13, shown, position, scrollPosition, listPaddingTop, tmp21, tmp22[0], require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, callback4, sharedValue1, 12, guildChannelsListUnreadBarInsetEnd, sharedValue, require("spring/spring").withSpring, require("springPresets").springStandard, require("../../../../../_runtime/metro/01655__.js").interpolate, sharedValue2, require("springPresets").ON_PRESS_SPRING];
+  const items8 = [c13, shown, position, scrollPosition, listPaddingTop, tmp21, tmp22[0], require("../../../../../_runtime/metro/01706__.js").scheduleOnRN, callback4, sharedValue1, 12, guildChannelsListUnreadBarInsetEnd, sharedValue, require("spring/spring").withSpring, require("springPresets").springStandard, require("../../../../../_runtime/metro/01653__.js").interpolate, sharedValue2, require("springPresets").ON_PRESS_SPRING];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -263,13 +263,13 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   ChannelsUnreadBarTsx1.__closure = items9;
   ChannelsUnreadBarTsx1.__workletHash = 15777306615393;
   ChannelsUnreadBarTsx1.__initData = tmp25;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ChannelsUnreadBarTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(ChannelsUnreadBarTsx1);
   if (first) {
-    let ArrowSmallUpIcon = tmp7(7571).AtIcon;
+    let ArrowSmallUpIcon = tmp7(7570).AtIcon;
   } else if ("bottom" === position) {
-    ArrowSmallUpIcon = tmp7(17245).ArrowSmallDownIcon;
+    ArrowSmallUpIcon = tmp7(17072).ArrowSmallDownIcon;
   } else {
-    ArrowSmallUpIcon = tmp7(17243).ArrowSmallUpIcon;
+    ArrowSmallUpIcon = tmp7(17070).ArrowSmallUpIcon;
   }
   const tmp4Result = nativeDefault;
   if (first) {
@@ -281,7 +281,7 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   const items10 = [tmp6.unreadBar, memo, animatedStyle];
   obj9.style = items10;
   let str2 = "none";
-  const obj8 = require("../../../../../_runtime/metro/01655__.js");
+  const obj8 = require("../../../../../_runtime/metro/01653__.js");
   if (shown) {
     str2 = "auto";
   }
@@ -297,7 +297,7 @@ export default noop.memo(function ChannelsUnreadBar(position) {
     str3 = "text-overlay-light";
   }
   obj10.color = str3;
-  const intl = tmp7(1113).intl;
+  const intl = tmp7(1112).intl;
   const tmp44Result = c8(ArrowSmallUpIcon, { color: MOBILE_UNREADBAR_TEXT_DEFAULT, size: "xxs" });
   const tmp47 = c9;
   const tmp48 = c10;

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/conjureRemoveApp.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4089 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
 import useChannelName from "../../channel/useChannelName.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import ConjureProjectTypes from "ConjureProjectTypes.tsx";
@@ -108,7 +108,7 @@ function readConjureRemoveTarget(project) {
 function channelName(channel) {
   return useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
 }
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 let items = [
   ConjureProjectStore,
   GuildStore,
@@ -235,7 +235,7 @@ export function conjureDeleteProjectItems(target) {
         let obj2 = { channel: null, server: null };
         obj2.channel = tmp3;
         obj2.server = tmp;
-        combined = intl.formatToPlainString(_modDef4089.kCC2X2, obj2);
+        combined = intl.formatToPlainString(_modDef4091.kCC2X2, obj2);
       }
       obj.label = combined;
       let arr = items1.push(obj);
@@ -262,7 +262,7 @@ export function conjureRemoveAppKeptChannels(target) {
     const listFormat = new Intl.ListFormat(util.intl.currentLocale, { type: "conjunction" });
     const intl = util.intl;
     const obj = { channels: listFormat.format(keptChannelNames.map((item) => "#" + item)) };
-    return intl.formatToPlainString(_modDef4089.pE4Cec, obj);
+    return intl.formatToPlainString(_modDef4091.pE4Cec, obj);
   }
 }
 export function conjureTitleWithAppTag(arg0) {
@@ -279,7 +279,7 @@ export function conjureDeleteProjectBody(target) {
   const listFormat = new Intl.ListFormat(util.intl.currentLocale, { type: "conjunction" });
   const items1 = [guildName, ...items.map((guildName) => guildName.guildName)];
   obj.server = listFormat.format(items1);
-  return intl.formatToPlainString(_modDef4089["9CvVB9"], obj);
+  return intl.formatToPlainString(_modDef4091["9CvVB9"], obj);
 }
 export function isPublishedConjureUserApp(project, publishStatus) {
   let isConjureLiveResult = "user" === project.install_scope;

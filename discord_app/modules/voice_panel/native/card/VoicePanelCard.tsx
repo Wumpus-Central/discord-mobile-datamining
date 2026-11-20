@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
-import _mod1708 from "../../../../../_runtime/metro/01708__.js";
-import LinearGradientDefault from "../../../../../_runtime/05347_LinearGradient.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1706 from "../../../../../_runtime/metro/01706__.js";
+import LinearGradientDefault from "../../../../../_runtime/05349_LinearGradient.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
 import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
@@ -26,9 +26,9 @@ import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
 import SpeakingStore from "../../../../stores/SpeakingStore.tsx";
 
 const require = globalThis.__r;
-const module_1655_mod = _mod1655;
+const module_1653_mod = _mod1653;
 
-const NativeViewDefault = tmp10(7205);
+const NativeViewDefault = tmp10(7204);
 require = fn;
 function SelfStreamCard(stream) {
   stream = stream.stream;
@@ -78,10 +78,10 @@ function SelfStreamCard(stream) {
   VoicePanelCardTsx1.__closure = items3;
   VoicePanelCardTsx1.__workletHash = 10409373046786;
   VoicePanelCardTsx1.__initData = tmp5;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelCardTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelCardTsx1);
   const obj3 = { style: tmp.nonUserRoundedCard, children: null };
   let tmp12 = isFocused;
-  let obj2 = require("../../../../../_runtime/metro/01655__.js");
+  let obj2 = require("../../../../../_runtime/metro/01653__.js");
   if (isFocused) {
     const obj4 = { style: tmp.blackBackground };
     tmp12 = closure_24(NativeViewDefault, obj4);
@@ -93,9 +93,9 @@ function SelfStreamCard(stream) {
     str = "body-lg/semibold";
   }
   obj5.variant = str;
-  const intl = tmp2(1113).intl;
+  const intl = tmp2(1112).intl;
   const string2 = intl.string;
-  const t = tmp2(1113).t;
+  const t = tmp2(1112).t;
   if (stateFromStores) {
     let string2Result = string2(t["5q17w5"]);
   } else {
@@ -108,16 +108,16 @@ function SelfStreamCard(stream) {
     obj3.children = items4;
     return closure_26(tmp11, obj3);
   } else {
-    let Text = tmp2(5383).Text;
+    let Text = tmp2(5385).Text;
     let obj6 = {
       style: tmp.selfStreamFocusedSubtitle,
       variant: "body-sm/medium",
       color: "text-overlay-light",
       children: null,
     };
-    const intl2 = tmp2(1113).intl;
+    const intl2 = tmp2(1112).intl;
     let intl3 = intl2.string;
-    let t1 = tmp2(1113).t;
+    let t1 = tmp2(1112).t;
     if (stateFromStores) {
       let intl3Result = intl3(t1.LV1NSN);
     } else {
@@ -128,11 +128,11 @@ function SelfStreamCard(stream) {
     obj6 = [,];
     obj6[0] = closure_24(Text, obj6);
     const obj7 = { size: "lg", variant: "primary-overlay", onPress: string, text: null };
-    intl3 = tmp2(1113).intl;
+    intl3 = tmp2(1112).intl;
     string = intl3.string;
-    stringResult = string(tmp2(1113).t.CpkXwZ);
+    stringResult = string(tmp2(1112).t.CpkXwZ);
     obj7.text = stringResult;
-    Text = closure_24(tmp2(5390).Button, obj7);
+    Text = closure_24(tmp2(5392).Button, obj7);
     obj6[1] = Text;
     t1.children = obj6;
     closure_26(closure_25, t1);
@@ -165,7 +165,7 @@ function useCardPanelMode() {
   VoicePanelCardTsx4.__closure = items1;
   VoicePanelCardTsx4.__workletHash = 6106186389117;
   VoicePanelCardTsx4.__initData = tmp2;
-  return _mod1655.useDerivedValue(VoicePanelCardTsx4);
+  return _mod1653.useDerivedValue(VoicePanelCardTsx4);
 }
 function SpeakingIndicator(arg0) {
   ({ id, userId: c0, isSelf, speakingOrPlayingSoundboard, layout } = arg0);
@@ -258,8 +258,8 @@ function SpeakingIndicator(arg0) {
   VoicePanelCardTsx7.__closure = items2;
   VoicePanelCardTsx7.__workletHash = 2180139685709;
   VoicePanelCardTsx7.__initData = tmp11;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelCardTsx7);
-  const obj4 = require("../../../../../_runtime/metro/01655__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelCardTsx7);
+  const obj4 = require("../../../../../_runtime/metro/01653__.js");
   const items3 = [
     closure_44,
     tmp3,
@@ -356,8 +356,8 @@ function SpeakingIndicator(arg0) {
   VoicePanelCardTsx8.__closure = items4;
   VoicePanelCardTsx8.__workletHash = 14127200655182;
   VoicePanelCardTsx8.__initData = tmp22;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelCardTsx8);
-  const tmp5Result = require("../../../../../_runtime/metro/01655__.js");
+  const animatedStyle1 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelCardTsx8);
+  const tmp5Result = require("../../../../../_runtime/metro/01653__.js");
   const items5 = [
     closure_45,
     tmp3,
@@ -447,7 +447,7 @@ function SpeakingIndicator(arg0) {
   VoicePanelCardTsx9.__closure = items6;
   VoicePanelCardTsx9.__workletHash = 6036845509381;
   VoicePanelCardTsx9.__initData = tmp37;
-  const animatedStyle2 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelCardTsx9);
+  const animatedStyle2 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelCardTsx9);
   const obj5 = { style: tmp4.speakingIndicatorWrapper, layout, pointerEvents: "none", children: null };
   const obj6 = { style: null, layout, children: null };
   const items7 = [tmp4.speakingIndicatorClip, animatedStyle];
@@ -455,7 +455,7 @@ function SpeakingIndicator(arg0) {
   const obj7 = { style: null, layout };
   const items8 = [tmp4.speakingIndicatorUnderlay, animatedStyle1];
   obj7.style = items8;
-  const items9 = [closure_24(module_1655.View, obj7)];
+  const items9 = [closure_24(module_1653.View, obj7)];
   const items10 = [tmp4.speakingIndicatorBar, ,];
   let tmp52 = null;
   if (stateFromStores) {
@@ -464,10 +464,10 @@ function SpeakingIndicator(arg0) {
   }
   items10[1] = tmp52;
   items10[2] = animatedStyle2;
-  items9[1] = closure_24(module_1655.View, { style: items10, layout });
+  items9[1] = closure_24(module_1653.View, { style: items10, layout });
   obj6.children = items9;
-  obj5.children = closure_26(module_1655.View, obj6);
-  return closure_24(module_1655.View, obj5);
+  obj5.children = closure_26(module_1653.View, obj6);
+  return closure_24(module_1653.View, obj5);
 }
 function AnimatedWrapper(arg0) {
   ({ cleanUp, id } = arg0);
@@ -542,8 +542,8 @@ function AnimatedWrapper(arg0) {
   VoicePanelCardTsx15.__closure = items1;
   VoicePanelCardTsx15.__workletHash = 15256278978202;
   VoicePanelCardTsx15.__initData = tmp12;
-  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(VoicePanelCardTsx15);
-  const tmp6Result = require("../../../../../_runtime/metro/01655__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(VoicePanelCardTsx15);
+  const tmp6Result = require("../../../../../_runtime/metro/01653__.js");
   let items2 = [closure_55, focused, id, tmp5, c14, scrollPosition];
   _require = undefined;
   importDefault = undefined;
@@ -573,8 +573,8 @@ function AnimatedWrapper(arg0) {
   VoicePanelCardTsx16.__closure = items3;
   VoicePanelCardTsx16.__workletHash = 11655933282959;
   VoicePanelCardTsx16.__initData = tmp18;
-  const derivedValue1 = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(VoicePanelCardTsx16);
-  const tmp6Result12 = require("../../../../../_runtime/metro/01655__.js");
+  const derivedValue1 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(VoicePanelCardTsx16);
+  const tmp6Result12 = require("../../../../../_runtime/metro/01653__.js");
   const items4 = [closure_56, connected, c20, safeArea, windowDimensions, contentDimensions, wrapperDimensions];
   _require = undefined;
   importDefault = undefined;
@@ -609,9 +609,9 @@ function AnimatedWrapper(arg0) {
   closure_129_0 = id;
   closure_129_1 = tmp8;
   closure_129_2 = transitionState;
-  const derivedValue2 = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(VoicePanelCardTsx17);
-  const tmp6Result13 = require("../../../../../_runtime/metro/01655__.js");
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(transitionState);
+  const derivedValue2 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(VoicePanelCardTsx17);
+  const tmp6Result13 = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(transitionState);
   closure_129_3 = sharedValue;
   const tmp34 = c3(noop.useState(true), 2);
   closure_129_4 = tmp34[1];
@@ -629,7 +629,7 @@ function AnimatedWrapper(arg0) {
       _undefined3(arg0 !== c0);
     }
   }, items6);
-  const tmp6Result14 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp6Result14 = require("../../../../../_runtime/metro/01653__.js");
   const items7 = [closure_48, focused];
   _require = undefined;
   [tmp37, tmp38] = items7;
@@ -647,7 +647,7 @@ function AnimatedWrapper(arg0) {
   VoicePanelCardTsx10.__closure = items8;
   VoicePanelCardTsx10.__workletHash = 13460061917882;
   VoicePanelCardTsx10.__initData = tmp37;
-  const items9 = [closure_49, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, callback];
+  const items9 = [closure_49, require("../../../../../_runtime/metro/01706__.js").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   [tmp39, tmp40, tmp41] = items9;
@@ -665,11 +665,11 @@ function AnimatedWrapper(arg0) {
   VoicePanelCardTsx11.__closure = items10;
   VoicePanelCardTsx11.__workletHash = 15970315567352;
   VoicePanelCardTsx11.__initData = tmp39;
-  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
     VoicePanelCardTsx10,
     VoicePanelCardTsx11,
   );
-  const tmp6Result15 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp6Result15 = require("../../../../../_runtime/metro/01653__.js");
   const items11 = [closure_50, tmp5, focused, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -692,7 +692,7 @@ function AnimatedWrapper(arg0) {
     require("native").TransitionStates,
     sharedVisible,
     isScrollVisible,
-    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01706__.js").scheduleOnRN,
     cleanUp,
     id,
   ];
@@ -772,7 +772,7 @@ function AnimatedWrapper(arg0) {
   VoicePanelCardTsx13.__closure = items14;
   VoicePanelCardTsx13.__workletHash = 3146139627673;
   VoicePanelCardTsx13.__initData = tmp47;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
     VoicePanelCardTsx12,
     VoicePanelCardTsx13,
   );
@@ -783,7 +783,7 @@ function AnimatedWrapper(arg0) {
   if (!isDockEnabled) {
     tmp58 = pIPState.mode === VoicePanelPIPModes.IN_APP;
   }
-  const tmp6Result16 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp6Result16 = require("../../../../../_runtime/metro/01653__.js");
   const token = require("useToken").useToken(tmp(575).modules.mobile.VOICE_TILE_BORDER_RADIUS);
   const tmp6Result17 = require("useToken");
   const items15 = [
@@ -814,13 +814,13 @@ function AnimatedWrapper(arg0) {
     isRTCConnected,
     0.75,
     wrapperOffset,
-    require("../../../../../_runtime/metro/01655__.js").withDelay,
+    require("../../../../../_runtime/metro/01653__.js").withDelay,
     require("timing/timing").withTiming,
     c31,
     c30,
     isScrollVisible,
     closure_57,
-    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01706__.js").scheduleOnRN,
     cleanUp,
     tmp10,
     require("spring/spring").withSpring,
@@ -1190,7 +1190,7 @@ function AnimatedWrapper(arg0) {
   VoicePanelCardTsx19.__closure = items16;
   VoicePanelCardTsx19.__workletHash = 9981854611383;
   VoicePanelCardTsx19.__initData = tmp61;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelCardTsx19);
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelCardTsx19);
   const obj4 = {
     gesturesEnabled: tmp34[0],
     longPressProgress,
@@ -1205,7 +1205,7 @@ function AnimatedWrapper(arg0) {
     onDoubleTap: null,
     onLongPress: null,
   };
-  const tmp6Result18 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp6Result18 = require("../../../../../_runtime/metro/01653__.js");
   const tmpResult = useTapGesturesDefault;
   if (tmp6Result19.isStableActivityParticipant(tmp8)) {
     const fn = () => {
@@ -1221,7 +1221,7 @@ function AnimatedWrapper(arg0) {
       }
     };
   } else if (isSelf) {
-    const tmp6Result20 = tmp6(19303);
+    const tmp6Result20 = tmp6(19123);
   }
   obj4.onDoubleTap = fn;
   let fn2;
@@ -1240,7 +1240,7 @@ function AnimatedWrapper(arg0) {
   const items18 = [pipHandoff, id];
   const effect = obj.useEffect(() => () => _undefined8.removeCard(_undefined), items18);
   const tmpResultResult = tmpResult(obj4);
-  sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
   const items19 = [pipHandoff, id];
   callback1 = obj.useCallback(() => _undefined8.setCardArrivedInPIP(c0), items19);
   const items20 = [tmp58, layoutPhysics, sharedValue1, callback1];
@@ -1248,7 +1248,7 @@ function AnimatedWrapper(arg0) {
     if (c11) {
       const result = sharedValue1.set(0);
       obj = spring_spring;
-      items = [closure_59, _mod1708.scheduleOnRN, callback1];
+      items = [closure_59, _mod1706.scheduleOnRN, callback1];
       c0 = undefined;
       c1 = undefined;
       [tmp9, tmp10, tmp11] = items;
@@ -1339,21 +1339,21 @@ function AnimatedWrapper(arg0) {
   const callback2 = obj.useCallback(VoicePanelCardTsx21, items23);
   let obj5 = { gesture: tmpResultResult, children: null };
   const obj6 = { nativeID: null, style: null, layout: null, children: null };
-  const tmp6Result21 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp6Result21 = require("../../../../../_runtime/metro/01653__.js");
   obj6.nativeID = require("getExternalPipTileNativeId").getExternalPipTileNativeId("card", id);
   const items24 = [tmp3.positionWrapper, animatedStyle];
   obj6.style = items24;
   obj6.layout = callback2;
   obj6.children = children;
-  obj5.children = c24(module_1655.View, obj6);
+  obj5.children = c24(module_1653.View, obj6);
   return c24(require("LegacyBaseButton").GestureDetector, obj5);
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const Pressable = get_ActivityIndicator.Pressable;
-const StreamVolumeMovedStore = fn(14416);
+const StreamVolumeMovedStore = fn(14384);
 ({ clearStreamVolumeMovedHint: closure_11, consumeStreamVolumeMovedHint: closure_12 } = StreamVolumeMovedStore);
-const VoicePanelConstants = fn(11688);
+const VoicePanelConstants = fn(11630);
 ({
   VoicePanelCTACard: map1,
   VoicePanelModes: closure_14,
@@ -1361,25 +1361,25 @@ const VoicePanelConstants = fn(11688);
   SPEAKING_PHYSICS: closure_16,
   VoicePanelCardItemType: closure_17,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11686).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19219).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11691).EDGE_GUTTER;
-const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const ParticipantTypes = fn(5442).ParticipantTypes;
-const SCALE_PHYSICS = fn(11689).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(11628).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19038).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11633).EDGE_GUTTER;
+const ApplicationStreamStates = fn(1071).ApplicationStreamStates;
+const ParticipantTypes = fn(5444).ParticipantTypes;
+const SCALE_PHYSICS = fn(11631).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_24, Fragment: closure_25, jsxs: closure_26 } = jsxProd);
-let module_1655 = module_1655_mod;
-let closure_27 = module_1655.createAnimatedComponent(fn(5383).Text);
-let module_1655 = module_1655_mod;
-const LinearGradient = module_1655.createAnimatedComponent(LinearGradientDefault);
-let tmp6 = fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.XXLARGE];
+let module_1653 = module_1653_mod;
+let closure_27 = module_1653.createAnimatedComponent(fn(5385).Text);
+let module_1653 = module_1653_mod;
+const LinearGradient = module_1653.createAnimatedComponent(LinearGradientDefault);
+let tmp6 = fn(1186).AVATAR_SIZE_MAP[fn(undefined, 1186).AvatarSizes.XXLARGE];
 let obj = {};
 let merged = Object.assign(SCALE_PHYSICS);
 obj.stiffness = 150;
 let closure_30 = { duration: 200 };
 let closure_31 = { duration: 0 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   positionWrapper: null,
   userRoundedCard: null,
@@ -1497,7 +1497,7 @@ let closure_37 = noop.memo(function AnimatedStreamCard(arg0) {
   VoicePanelCardTsx2.__closure = items4;
   VoicePanelCardTsx2.__workletHash = 10075488097657;
   VoicePanelCardTsx2.__initData = tmp10;
-  const items5 = [closure_36, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp9];
+  const items5 = [closure_36, require("../../../../../_runtime/metro/01706__.js").scheduleOnRN, tmp9];
   _require = undefined;
   importDefault = undefined;
   [tmp13, tmp14, tmp15] = items5;
@@ -1515,11 +1515,11 @@ let closure_37 = noop.memo(function AnimatedStreamCard(arg0) {
   VoicePanelCardTsx3.__closure = items6;
   VoicePanelCardTsx3.__workletHash = 10405109597495;
   VoicePanelCardTsx3.__initData = tmp13;
-  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
     VoicePanelCardTsx2,
     VoicePanelCardTsx3,
   );
-  let obj2 = require("../../../../../_runtime/metro/01655__.js");
+  let obj2 = require("../../../../../_runtime/metro/01653__.js");
   const tmpResultResult = require("useVideoStreamError")(
     require("BaseConnectionEvent").MediaEngineContextTypes.STREAM,
     userId,
@@ -1651,8 +1651,8 @@ let closure_42 = noop.memo(function AnimatedUserCardInner(guildId) {
   VoicePanelCardTsx5.__closure = items1;
   VoicePanelCardTsx5.__workletHash = 3534867939077;
   VoicePanelCardTsx5.__initData = tmp7;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelCardTsx5);
-  const tmp6Result = require("../../../../../_runtime/metro/01655__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelCardTsx5);
+  const tmp6Result = require("../../../../../_runtime/metro/01653__.js");
   const items2 = [closure_41, require("spring/spring").withSpring, tmp4, closure_14, layoutPhysics];
   _require = undefined;
   importDefault = undefined;
@@ -1679,7 +1679,7 @@ let closure_42 = noop.memo(function AnimatedUserCardInner(guildId) {
   VoicePanelCardTsx6.__workletHash = 9535486944330;
   VoicePanelCardTsx6.__initData = tmp13;
   let cachedSourceFromURI;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelCardTsx6);
+  const animatedStyle1 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelCardTsx6);
   if (null != avatarURI) {
     cachedSourceFromURI = tmp6(8916).getCachedSourceFromURI(avatarURI);
     const tmp6Result4 = tmp6(8916);
@@ -1701,14 +1701,14 @@ let closure_42 = noop.memo(function AnimatedUserCardInner(guildId) {
     }
   }, items4);
   if (null != avatarDecoration) {
-    const obj2 = { source: cachedSourceFromURI, size: tmp6(1187).AvatarSizes.XXLARGE, avatarDecoration };
-    let tmp21Result = closure_24(tmp6(1187).Avatar, obj2);
+    const obj2 = { source: cachedSourceFromURI, size: tmp6(1186).AvatarSizes.XXLARGE, avatarDecoration };
+    let tmp21Result = closure_24(tmp6(1186).Avatar, obj2);
     let tmp25 = closure_24;
   } else {
     const size = { source: cachedSourceFromURI, resizeMode: "stretch", width: 80, height: 80, style: tmp.image };
-    tmp21Result = closure_24(tmp2(5479), size);
+    tmp21Result = closure_24(tmp2(5481), size);
     tmp25 = closure_24;
-    const tmp2Result = tmp2(5479);
+    const tmp2Result = tmp2(5481);
   }
   const obj3 = { style: tmp.userRoundedCard, layout, children: null };
   const obj4 = { style: null, layout, children: null };
@@ -1729,7 +1729,7 @@ let closure_42 = noop.memo(function AnimatedUserCardInner(guildId) {
   const items6 = [tmp25Result];
   if (null == cachedSourceFromURI) {
     const obj6 = { style: tmp.avatarPlaceholder };
-    let tmp25Result3 = tmp25(tmp2(7205), obj6);
+    let tmp25Result3 = tmp25(tmp2(7204), obj6);
   } else {
     const obj7 = { layout, children: null };
     let prop;
@@ -1745,13 +1745,13 @@ let closure_42 = noop.memo(function AnimatedUserCardInner(guildId) {
       tmp25Result4 = tmp25(Pressable, obj9);
     }
     obj8.children = tmp25Result4;
-    obj7.children = tmp25(tmp2(1655).View, obj8);
-    tmp25Result3 = tmp25(tmp2(1655).View, obj7);
+    obj7.children = tmp25(tmp2(1653).View, obj8);
+    tmp25Result3 = tmp25(tmp2(1653).View, obj7);
   }
   items6[1] = tmp25Result3;
   obj4.children = items6;
-  obj3.children = closure_26(module_1655.View, obj4);
-  return tmp25(module_1655.View, obj3);
+  obj3.children = closure_26(module_1653.View, obj4);
+  return tmp25(module_1653.View, obj3);
 });
 let closure_43 = {
   code: "(function VoicePanelCardTsx7(){let[mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS]=this.__closure;var _focused$get,_focused$get2;const disable=mode.get()!==VoicePanelModes.PIP&&((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{opacity:disable?0:1,borderRadius:withSpring(disable?0:computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}),SPEAKING_PHYSICS,!disable?'animate-always':'animate-never')};})",
@@ -1824,7 +1824,7 @@ let items = [
   {
     code: "(function layoutTransitionFunction_VoicePanelCardTsx14(values,physics,disableAnimation=false){let[withSpring]=this.__closure;const shouldAnimate=!disableAnimation?'respect-motion-settings':'animate-never';return{animations:{originX:withSpring(values.targetOriginX,physics,shouldAnimate),originY:withSpring(values.targetOriginY,physics,shouldAnimate),width:withSpring(values.targetWidth,physics,shouldAnimate),height:withSpring(values.targetHeight,physics,shouldAnimate)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})",
   },
-  fn(5393).withSpring,
+  fn(5395).withSpring,
 ];
 let closure_129_0;
 [tmp14, tmp15] = items;
@@ -1898,9 +1898,9 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   ({ channelId, guildId, isCall, isDockEnabled, mountedCards } = context);
   const thawing = context.pipHandoff.cardThaw.thawing;
   ({ layoutManager, scrollPosition, windowDimensions } = context);
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
   const tmp6 = useStableParticipantDefault(id, channelId, guildId);
-  const obj2 = require("../../../../../_runtime/metro/01655__.js");
+  const obj2 = require("../../../../../_runtime/metro/01653__.js");
   let tmp7 = tmp6;
   if (!obj3.isStableParticipantWithUser(tmp6)) {
     tmp7 = closure_52;
@@ -1926,9 +1926,9 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
     type1 = tmp6.type;
   }
   if (type1 === ParticipantTypes.STREAM) {
-    let DEFAULT = tmp4(5558).MediaEngineContextTypes.STREAM;
+    let DEFAULT = tmp4(5560).MediaEngineContextTypes.STREAM;
   } else {
-    DEFAULT = tmp4(5558).MediaEngineContextTypes.DEFAULT;
+    DEFAULT = tmp4(5560).MediaEngineContextTypes.DEFAULT;
   }
   const tmpResultResult = useVideoStreamErrorDefault(DEFAULT, str);
   useCameraEncodeErrorDefault(str);
@@ -1938,8 +1938,8 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   } else {
     num = 0;
   }
-  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
-  const tmp4Result9 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(num);
+  const tmp4Result9 = require("../../../../../_runtime/metro/01653__.js");
   let tmp16 = null != id2;
   if (tmp16) {
     let isSpeakingResult = SpeakingStore.isSpeaking(id2);
@@ -1948,7 +1948,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
     }
     tmp16 = isSpeakingResult;
   }
-  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(tmp16);
+  const sharedValue2 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(tmp16);
   const items1 = [id2, sharedValue2];
   const layoutEffect = noop.useLayoutEffect(() => {
     function handleChange() {
@@ -1978,7 +1978,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       const result1 = SoundboardStore.removeReactChangeListener(handleChange);
     };
   }, items1);
-  const tmp4Result10 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp4Result10 = require("../../../../../_runtime/metro/01653__.js");
   const cardLayoutCoordsSubscription = require("VoicePanelCardLayoutManager").useCardLayoutCoordsSubscription(
     id,
     layoutManager,
@@ -2008,7 +2008,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   VoicePanelCardTsx22.__closure = items3;
   VoicePanelCardTsx22.__workletHash = 8849523770324;
   VoicePanelCardTsx22.__initData = tmp23;
-  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(VoicePanelCardTsx22);
+  const derivedValue = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(VoicePanelCardTsx22);
   if (isDockEnabled) {
     isDockEnabled = !stateFromStores;
   }
@@ -2053,13 +2053,13 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   if (item.type === closure_17.CTA) {
     const id3 = item.id;
     if (closure_13.NO_VIDEO_PARTICIPANTS === id3) {
-      let tmp41Result = closure_24(tmp(19333), {});
+      let tmp41Result = closure_24(tmp(19153), {});
       let tmp39 = closure_24;
     } else if (closure_13.CALLER_DISCONNECTED === id3) {
-      tmp41Result = closure_24(tmp(19334), {});
+      tmp41Result = closure_24(tmp(19154), {});
       tmp39 = closure_24;
     } else if (closure_13.NO_STAGE_SPEAKERS === id3) {
-      tmp41Result = closure_24(tmp(19335), {});
+      tmp41Result = closure_24(tmp(19155), {});
       tmp39 = closure_24;
     }
     const obj4 = {
@@ -2078,7 +2078,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
     let tmp39Result = null != tmp6;
     if (tmp39Result) {
       const obj5 = { isRinging: tmp9, participant: tmp6, label: null, layout: null };
-      const tmpResult3 = tmp(19347);
+      const tmpResult3 = tmp(19167);
       let userNick;
       if (tmp4Result13.isStableParticipantWithUser(tmp6)) {
         userNick = tmp6.userNick;
@@ -2086,10 +2086,10 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       obj5.label = userNick;
       obj5.layout = callback;
       tmp39Result = tmp39(tmpResult3, obj5);
-      tmp4Result13 = tmp4(19303);
+      tmp4Result13 = tmp4(19123);
     }
     items7[1] = tmp39Result;
-    let result = tmp4(19303).isStableParticipantWithUser(tmp6);
+    let result = tmp4(19123).isStableParticipantWithUser(tmp6);
     if (result) {
       const obj6 = { speakingOrPlayingSoundboard: sharedValue2, id, userId: tmp6.user.id, isSelf, layout: callback };
       result = tmp39(closure_47, obj6);
@@ -2123,7 +2123,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
               }
               obj7.streamId = streamId;
               obj7.isScrollVisible = derivedValue;
-              const VideoSpinnerContext = tmp4(10667).VideoSpinnerContext;
+              const VideoSpinnerContext = tmp4(10609).VideoSpinnerContext;
               obj7.videoSpinnerContext = isSelf ? VideoSpinnerContext.SELF_VIDEO : VideoSpinnerContext.REMOTE_VIDEO;
               obj7.sharedCoords = cardLayoutCoordsSubscription;
               if (isCall) {
@@ -2131,13 +2131,13 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
               }
               obj7.focusOnReady = isCall;
               obj7.layout = callback;
-              let tmp43Result = tmp43(tmp(19324), obj7);
-              const tmpResult4 = tmp(19324);
+              let tmp43Result = tmp43(tmp(19144), obj7);
+              const tmpResult4 = tmp(19144);
             }
             const obj8 = { avError: tmpResultResult, userId: user.id, style: null };
             user = StyleSheet.absoluteFill;
             obj8.style = user;
-            tmp43Result = closure_24(tmp(19336), obj8);
+            tmp43Result = closure_24(tmp(19156), obj8);
             tmp43 = closure_24;
           }
         }
@@ -2184,7 +2184,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       tmp39 = closure_24;
     } else if (ParticipantTypes.ACTIVITY === type2) {
       const obj12 = { sharedVisible: sharedValue1, applicationId: tmp6.applicationId, layout: callback };
-      tmp41Result = closure_24(tmp(19337), obj12, tmp6.id);
+      tmp41Result = closure_24(tmp(19157), obj12, tmp6.id);
       tmp39 = closure_24;
     }
   }
@@ -2198,5 +2198,5 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   };
   tmp41Result = closure_24(closure_42, obj13);
   tmp39 = closure_24;
-  const tmp4Result12 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp4Result12 = require("../../../../../_runtime/metro/01653__.js");
 });

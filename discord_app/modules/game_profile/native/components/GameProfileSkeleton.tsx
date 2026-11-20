@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/native/components/GameProfileSkeleton.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
 import GameProfileSkeletonPulse from "GameProfileSkeletonPulse.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -17,7 +17,7 @@ class GameProfileSkeletonPlaceholder {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED },
   button: null,
@@ -53,7 +53,7 @@ export function GameProfileSkeletonContainer(animationDelayMs) {
   };
   items = [style, skeletonPulseStyle];
   obj2.style = items;
-  return jsx(_modDef1655.View, {
+  return jsx(_modDef1653.View, {
     style: null,
     accessible: false,
     accessibilityElementsHidden: true,

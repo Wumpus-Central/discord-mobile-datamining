@@ -24,20 +24,20 @@ function UnmuteOptions(channel) {
   }, items);
   const obj2 = { icon: null, label: null, onPress: null, start: true, end: true };
   const tmp = closure_13();
-  obj2.icon = closure_10(channel(1187).Icon, { disableColor: true, source: navigation(11095) });
+  obj2.icon = closure_10(channel(1186).Icon, { disableColor: true, source: navigation(11037) });
   const obj4 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = channel(1113).intl;
+  const intl = channel(1112).intl;
   const obj5 = { name: null };
-  const obj3 = { disableColor: true, source: navigation(11095) };
-  obj5.name = channel(5408).computeChannelName(channel, UserStore, RelationshipStore, true);
-  obj4.children = intl.format(channel(1113).t["eC+9rj"], obj5);
-  obj2.label = closure_10(channel(5383).Text, obj4);
+  const obj3 = { disableColor: true, source: navigation(11037) };
+  obj5.name = channel(5410).computeChannelName(channel, UserStore, RelationshipStore, true);
+  obj4.children = intl.format(channel(1112).t["eC+9rj"], obj5);
+  obj2.label = closure_10(channel(5385).Text, obj4);
   obj2.onPress = callback;
-  const items1 = [closure_10(channel(6926).TableRow, obj2)];
+  const items1 = [closure_10(channel(6925).TableRow, obj2)];
   const obj7 = { muteConfig: channel.muteConfig, type: null };
-  const obj6 = channel(5408);
-  const tmp6 = navigation(11096);
-  const MuteSettingType = channel(11096).MuteSettingType;
+  const obj6 = channel(5410);
+  const tmp6 = navigation(11038);
+  const MuteSettingType = channel(11038).MuteSettingType;
   obj7.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
   items1[1] = closure_10(tmp6, obj7);
   obj.children = items1;
@@ -173,16 +173,16 @@ function NotificationSettingsButton(guildMessageNotifications) {
   return closure_11(closure_12, obj4);
 }
 const View = fn(17).View;
-const ChannelSettingsSections = fn(1072).ChannelSettingsSections;
+const ChannelSettingsSections = fn(1071).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 },
   options: { marginBottom: 16 },
   trailing: { flexDirection: "row", alignItems: "center" },
   hint: { marginTop: 8, paddingHorizontal: 12 },
-  headerRightSpacer: { width: fn(8443).MIN_HEADER_HEIGHT },
+  headerRightSpacer: { width: fn(8442).MIN_HEADER_HEIGHT },
 };
 let closure_13 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };

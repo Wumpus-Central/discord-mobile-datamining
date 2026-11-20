@@ -28,7 +28,7 @@ let closure_11 = async function _updateEmoji(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -107,8 +107,8 @@ let closure_11 = async function _updateEmoji(arg0) {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
-const UserSettingsConstants = fn(1082);
+const Endpoints = fn(1071).Endpoints;
+const UserSettingsConstants = fn(1081);
 ({ MAX_FAVORITES: closure_9, UserSettingsDelay: closure_10 } = UserSettingsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/EmojiActionCreators.tsx");
@@ -143,7 +143,7 @@ export function uploadEmoji(guildId) {
   const analyticsLocation = guildId.analyticsLocation;
   ({ image, name, roles, originalMd5 } = guildId);
   DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
-  const HTTP = guildId(1285).HTTP;
+  const HTTP = guildId(1284).HTTP;
   const request = {
     url: Endpoints.GUILD_EMOJIS(guildId),
     body: { image, name, roles },
@@ -159,8 +159,8 @@ export function uploadEmoji(guildId) {
     page = analyticsLocation.page;
   }
   request.context = { client_event_source: page };
-  request.rejectWithError = tmp3(1285).rejectWithMigratedError();
-  const tmp3Result = tmp3(1285);
+  request.rejectWithError = tmp3(1284).rejectWithMigratedError();
+  const tmp3Result = tmp3(1284);
   return HTTP.post(request).then(
     (body) => {
       DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId });
@@ -220,7 +220,7 @@ export function favoriteEmoji(customEmojiFromJoinedGuild) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(4622).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4624).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {
@@ -292,7 +292,7 @@ export function unfavoriteEmoji(customEmojiFromJoinedGuild) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(4622).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4624).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {

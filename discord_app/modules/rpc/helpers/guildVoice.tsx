@@ -6,8 +6,8 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6233).RPC_EMBEDDED_APP_SCOPE;
-const Constants = fn(1072);
+const RPC_EMBEDDED_APP_SCOPE = fn(6235).RPC_EMBEDDED_APP_SCOPE;
+const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, Permissions: closure_8, RPCErrors: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/guildVoice.tsx");

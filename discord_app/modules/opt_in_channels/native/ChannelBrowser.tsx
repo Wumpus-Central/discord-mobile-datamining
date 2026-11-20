@@ -27,11 +27,11 @@ function keyExtractor(section) {
   return "" + section.section + "-" + section.row;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let c15 = "body-xs/medium";
-let PlatformUtils = fn(1380);
+let PlatformUtils = fn(1378);
 PlatformUtils = PlatformUtils.isAndroid();
 if (PlatformUtils) {
   let obj = {};
@@ -47,15 +47,15 @@ if (PlatformUtils) {
     return application_id(ChannelTopicMention, obj, key.key);
   };
   obj.channelMention = obj3;
-  let obj4 = { react: fn(8744).smartOutput };
+  let obj4 = { react: fn(8682).smartOutput };
   obj.guild = obj4;
-  let obj5 = { react: fn(11079).inlineChannelReact };
+  let obj5 = { react: fn(11021).inlineChannelReact };
   obj.channel = obj5;
   let parseTopic = MarkupUtils.reactParserFor(obj);
 } else {
   parseTopic = MarkupUtils.parseTopic;
 }
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj6 = {
   channelMention: { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND },
   container: { flex: 1 },
@@ -96,7 +96,7 @@ let obj11 = { marginRight: nativeDefault.space.PX_4, transform: null };
 let items = [{ scale: 0.75 }];
 obj11.transform = items;
 obj6.selectAllCheckbox = obj11;
-obj6.newBadge = { fontFamily: fn(1072).Fonts.DISPLAY_EXTRABOLD };
+obj6.newBadge = { fontFamily: fn(1071).Fonts.DISPLAY_EXTRABOLD };
 let obj10 = {
   flexDirection: "row",
   justifyContent: "space-between",
@@ -140,13 +140,13 @@ let closure_20 = noop.memo(function CategoryRow(channel) {
   channel = channel.channel;
   const onChannelClick = channel.onChannelClick;
   const tmp = closure_17();
-  const tmp3 = onChannelClick(5408)(channel);
+  const tmp3 = onChannelClick(5410)(channel);
   items = [UserGuildSettingsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () =>
     UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id),
   );
   const obj = channel(504);
-  const checkboxA11yNative = channel(4854).useCheckboxA11yNative({ checked: stateFromStores });
+  const checkboxA11yNative = channel(4856).useCheckboxA11yNative({ checked: stateFromStores });
   const obj3 = {
     style: tmp.categoryContainer,
     onPress() {
@@ -167,25 +167,25 @@ let closure_20 = noop.memo(function CategoryRow(channel) {
   }
   obj3.accessibilityState = accessibilityState;
   const items1 = [
-    closure_12(channel(7229).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }),
+    closure_12(channel(7228).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }),
   ];
   let tmp10Result = null;
   if ("null" !== channel.id) {
     const obj5 = { style: tmp.selectAllContainer, children: null };
     const obj6 = { style: tmp.selectAllCheckbox, children: null };
     const obj7 = { checked: stateFromStores };
-    obj6.children = closure_12(tmp4(7217).FormCheckbox, obj7);
+    obj6.children = closure_12(tmp4(7216).FormCheckbox, obj7);
     const items2 = [closure_12(View, obj6)];
     const obj8 = { variant: "body-xs/semibold", color: "interactive-text-default", children: null };
-    const intl = tmp4(1113).intl;
-    obj8.children = intl.string(tmp4(1113).t.mSQwnW);
-    items2[1] = closure_12(tmp4(5383).Text, obj8);
+    const intl = tmp4(1112).intl;
+    obj8.children = intl.string(tmp4(1112).t.mSQwnW);
+    items2[1] = closure_12(tmp4(5385).Text, obj8);
     obj5.children = items2;
     tmp10Result = closure_13(View, obj5);
   }
   items1[1] = tmp10Result;
   obj3.children = closure_13(closure_14, { children: items1 });
-  return closure_12(channel(6911).PressableOpacity, obj3);
+  return closure_12(channel(6910).PressableOpacity, obj3);
 });
 let closure_21 = noop.memo(function ChannelRow(channel) {
   channel = channel.channel;

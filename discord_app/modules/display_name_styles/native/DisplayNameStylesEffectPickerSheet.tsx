@@ -1,7 +1,7 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesEffectPickerSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3147 from "../intl/DisplayNameStyles.messages.js";
+import _modDef3149 from "../intl/DisplayNameStyles.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import UsernameWithEffectsDefault from "UsernameWithEffects.tsx";
@@ -18,7 +18,7 @@ function EffectTile(arg0) {
   const intl = util.intl;
   let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[effectId];
   if (OpWJ3f == null) {
-    OpWJ3f = _modDef3147.OpWJ3f;
+    OpWJ3f = _modDef3149.OpWJ3f;
   }
   const stringResult = intl.string(OpWJ3f);
   const obj = {
@@ -63,10 +63,10 @@ function EffectTile(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-let EFFECT_ORDER = fn(1397).EFFECT_ORDER;
+let EFFECT_ORDER = fn(1395).EFFECT_ORDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { padding: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_16, alignItems: "center" },
@@ -117,8 +117,8 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   closure_5 = undefined;
   EFFECT_ORDER = undefined;
   const tmp = closure_10();
-  let obj = userId(8030);
-  const displayNameStylesNewEffects = userId(16796).useDisplayNameStylesNewEffects(EFFECT_ORDER);
+  let obj = userId(8029);
+  const displayNameStylesNewEffects = userId(16620).useDisplayNameStylesNewEffects(EFFECT_ORDER);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   [first, closure_5] = first.useState(selectedEffectId);
   closure_6 = tmp7;
@@ -130,14 +130,14 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   if (null != userId) {
     const obj3 = { ref: obj.useBottomSheetRef().bottomSheetRef, header: null, children: null };
     const obj4 = { title: null, trailing: null };
-    const intl = tmp2(1113).intl;
-    obj4.title = intl.string(onSelectEffect(3147).RVtMxT);
+    const intl = tmp2(1112).intl;
+    obj4.title = intl.string(onSelectEffect(3149).RVtMxT);
     const obj5 = { text: null, onPress: null, variant: "primary", size: "sm" };
-    const intl2 = tmp2(1113).intl;
-    obj5.text = intl2.string(tmp2(1113).t.XqMe3N);
+    const intl2 = tmp2(1112).intl;
+    obj5.text = intl2.string(tmp2(1112).t.XqMe3N);
     obj5.onPress = tmp8;
-    obj4.trailing = closure_8(tmp2(5390).Button, obj5);
-    obj3.header = closure_8(onSelectEffect(16799), obj4);
+    obj4.trailing = closure_8(tmp2(5392).Button, obj5);
+    obj3.header = closure_8(onSelectEffect(16623), obj4);
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.contentContainer, children: null };
     const obj8 = {
@@ -164,11 +164,11 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
         );
       }),
     };
-    obj7.children = closure_8(tmp2(5808).Stack, obj8);
+    obj7.children = closure_8(tmp2(5810).Stack, obj8);
     obj6.children = closure_8(closure_5, obj7);
     obj3.children = closure_8(closure_5, obj6);
-    tmp9 = closure_8(tmp2(5020).BottomSheet, obj3);
-    const tmp12 = onSelectEffect(16799);
+    tmp9 = closure_8(tmp2(5022).BottomSheet, obj3);
+    const tmp12 = onSelectEffect(16623);
   }
   return tmp9;
 }

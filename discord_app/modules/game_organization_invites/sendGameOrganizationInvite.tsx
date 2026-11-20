@@ -24,7 +24,7 @@ let closure_7 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -121,8 +121,8 @@ let closure_7 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
     }
   })();
 };
-const setSendState = fn(12022).setSendState;
-const InviteSendStates = fn(8319).InviteSendStates;
+const setSendState = fn(11964).setSendState;
+const InviteSendStates = fn(8318).InviteSendStates;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_organization_invites/sendGameOrganizationInvite.tsx");

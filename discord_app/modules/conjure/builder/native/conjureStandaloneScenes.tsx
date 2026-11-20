@@ -7,18 +7,35 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const Routes = Constants.Routes;
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
-const result = size.fileFinishedImporting("modules/conjure/builder/native/conjureStandaloneScenes.tsx");
+const map = new Map();
+let result = size.fileFinishedImporting("modules/conjure/builder/native/conjureStandaloneScenes.tsx");
 
 export const ConjureScreenScenes = { PROJECTS: "PROJECTS", CHAT: "CHAT", DEBUG: "DEBUG" };
-export function projectOpener(guildId, openHere) {
+export function pushServerProjectScreen(guildId, arg1, project_list) {
+  const CHANNELResult = Routes.CHANNEL(guildId, StaticChannelRoute.CONJURE_PROJECT, arg1);
+  if (null != project_list) {
+    const result = map.set(CHANNELResult, project_list);
+  } else {
+    map.delete(CHANNELResult);
+  }
+  router_utils.transitionTo(CHANNELResult, { navigationReplace: false });
+}
+export function takeServerProjectEntryPoint(guildId, projectId) {
+  const CHANNELResult = Routes.CHANNEL(guildId, StaticChannelRoute.CONJURE_PROJECT, projectId);
+  value = map.get(CHANNELResult);
+  map.delete(CHANNELResult);
+  return value;
+}
+export function projectOpener(guildId, arg1) {
   closure_0 = guildId;
-  return (projectId, arg1) => {
+  closure_1 = arg1;
+  return (arg0, arg1) => {
     if (arg1 === closure_0) {
-      openHere(projectId);
+      closure_1(arg0);
     } else if (null == arg1) {
-      openConjureHomeScreenDefault(projectId);
+      openConjureHomeScreenDefault(arg0);
     } else {
-      router_utils.transitionTo(Routes.CHANNEL(arg1, StaticChannelRoute.CONJURE, projectId));
+      router_utils.transitionTo(Routes.CHANNEL(arg1, StaticChannelRoute.CONJURE_PROJECT, arg0));
     }
   };
 }

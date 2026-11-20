@@ -222,7 +222,7 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
-const EmojiPickerConstants = fn(6455);
+const EmojiPickerConstants = fn(6457);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: closure_6 } = EmojiPickerConstants);
 const constants3 = fn(8946).EmojiPickerRenderingDataType;
 const size = fn(2);

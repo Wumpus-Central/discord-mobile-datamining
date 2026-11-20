@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   button: {
     flexDirection: "row",
@@ -44,7 +44,7 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   let obj = user(504);
   const items1 = [AccessibilityStore];
   const stateFromStores = user(504).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
-  const GifAutoPlay = user(4617).GifAutoPlay;
+  const GifAutoPlay = user(4619).GifAutoPlay;
   const setting = GifAutoPlay.useSetting();
   const obj3 = {
     accessibilityRole: "button",
@@ -55,14 +55,14 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
     style: null,
     children: null,
   };
-  const intl = user(1113).intl;
-  obj3.accessibilityLabel = intl.string(user(1113).t.lsjENp);
+  const intl = user(1112).intl;
+  obj3.accessibilityLabel = intl.string(user(1112).t.lsjENp);
   const obj4 = { text: null };
   const obj2 = user(504);
-  obj4.text = user(15853).getDisplayNameStyleAccessibleValue(displayNameStyles);
+  obj4.text = user(15817).getDisplayNameStyleAccessibleValue(displayNameStyles);
   obj3.accessibilityValue = obj4;
-  const intl2 = user(1113).intl;
-  obj3.accessibilityHint = intl2.string(user(1113).t["4lAcxv"]);
+  const intl2 = user(1112).intl;
+  obj3.accessibilityHint = intl2.string(user(1112).t["4lAcxv"]);
   obj3.onPress = user.onPress;
   obj3.style = tmp.button;
   const obj6 = {
@@ -87,10 +87,10 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
     }
     obj7.effectDisplayType = STATIC;
     obj6.children = closure_6(tmp10, obj7);
-    const items2 = [closure_6(View, obj6), closure_6(tmp2(6939).TableRowArrow, {})];
+    const items2 = [closure_6(View, obj6), closure_6(tmp2(6938).TableRowArrow, {})];
     obj3.children = items2;
-    return closure_7(user(6911).PressableHighlight, obj3);
+    return closure_7(user(6910).PressableHighlight, obj3);
   }
   STATIC = tmp2(9335).EffectDisplayType.STATIC;
-  const obj5 = user(15853);
+  const obj5 = user(15817);
 }

@@ -29,7 +29,7 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -127,14 +127,14 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
     }
   }
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   Endpoints: closure_4,
   Routes: hasOwnProperty,
   DEVICE_TOKEN: closure_6,
   DEVICE_VOIP_TOKEN: metroImportDefault,
 } = Constants);
-const PushNotificationConstants = fn(6307);
+const PushNotificationConstants = fn(6309);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -227,8 +227,8 @@ export function saveProfileAndAccountChanges(avatar) {
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
-      result = avatar(1410).serializeTypingIndicatorStyle(typingIndicatorStyle);
-      const obj3 = avatar(1410);
+      result = avatar(1408).serializeTypingIndicatorStyle(typingIndicatorStyle);
+      const obj3 = avatar(1408);
     }
     user.typing_indicator_style = result;
   }
@@ -252,10 +252,10 @@ export function saveProfileAndAccountChanges(avatar) {
   const obj4 = { headers: null };
   const obj = avatarId(572);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(7284).buildHeadersForMd5({
-    [avatar(7288).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
+  obj4.headers = avatarId(7283).buildHeadersForMd5({
+    [avatar(7287).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
   });
-  let tmpResult = avatarId(7284);
+  let tmpResult = avatarId(7283);
   return saveProfileAndAccountRequest(user, obj4).then(
     (result) => {
       DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });

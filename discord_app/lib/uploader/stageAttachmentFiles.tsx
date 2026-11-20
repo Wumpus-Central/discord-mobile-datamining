@@ -57,7 +57,7 @@ let closure_4 = async function _stageAttachmentFiles() {
   closure_131_2 = closure_2;
   return "Path";
 };
-const AbortCodes = fn(1072).AbortCodes;
+const AbortCodes = fn(1071).AbortCodes;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/stageAttachmentFiles.tsx");
 

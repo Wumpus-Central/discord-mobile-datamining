@@ -11,7 +11,7 @@ import SentryUtils from "utils/SentryUtils.native.tsx";
 import size from "../_runtime/metro/00002__.js";
 
 let GenerateInvite = require;
-let f20318 = dependencyMap;
+let f20138 = dependencyMap;
 const polyfillsEnd = TTITracker.default.imports.polyfillsEnd;
 polyfillsEnd.record();
 const sentryEnd = TTITracker.default.imports.sentryEnd;
@@ -20,87 +20,87 @@ if (isTTITest.isTTITest) {
   installSystrace.installSystrace();
 }
 const AppRegistry = _mod17.AppRegistry;
-AppRegistry.registerComponent("Discord", () => GenerateInvite(f20318[9]).default);
+AppRegistry.registerComponent("Discord", () => GenerateInvite(f20138[9]).default);
 const runnable = AppRegistry.getRunnable("Discord");
 AppRegistry.registerRunnable("Discord", () => {
   GenerateInvite = [...arguments];
-  return GenerateInvite(f20318[10]).default("Main", () => {
+  return GenerateInvite(f20138[10]).default("Main", () => {
     closure_2(...closure_0);
   });
 });
-AppRegistry.registerComponent("Share", () => GenerateInvite(f20318[11]).default);
+AppRegistry.registerComponent("Share", () => GenerateInvite(f20138[11]).default);
 const runnable2 = AppRegistry.getRunnable("Share");
 AppRegistry.registerRunnable("Share", () => {
   GenerateInvite = [...arguments];
-  return GenerateInvite(f20318[10]).default("Share", () => closure_3(...closure_0));
+  return GenerateInvite(f20138[10]).default("Share", () => closure_3(...closure_0));
 });
 GenerateInvite = "BackgroundSync";
-f20318 = () => GenerateInvite(f20318[13]);
+f20138 = () => GenerateInvite(f20138[13]);
 AppRegistry.registerHeadlessTask("BackgroundSync", () => {
-  closure_0 = GenerateInvite(f20318[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+  closure_0 = GenerateInvite(f20138[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20138, arg0);
 });
 if (isTTITest.isTTITest) {
   GenerateInvite = "TTITestAction";
-  f20318 = () => GenerateInvite(f20318[14]);
+  f20138 = () => GenerateInvite(f20138[14]);
   AppRegistry.registerHeadlessTask("TTITestAction", () => {
-    closure_0 = GenerateInvite(f20318[12]).default;
-    return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+    closure_0 = GenerateInvite(f20138[12]).default;
+    return (arg0) => closure_0(GenerateInvite, f20138, arg0);
   });
 }
 GenerateInvite = "Disconnect";
-f20318 = () => GenerateInvite(f20318[15]);
+f20138 = () => GenerateInvite(f20138[15]);
 AppRegistry.registerHeadlessTask("Disconnect", () => {
-  closure_0 = GenerateInvite(f20318[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+  closure_0 = GenerateInvite(f20138[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20138, arg0);
 });
 GenerateInvite = "MarkAsRead";
-f20318 = () => GenerateInvite(f20318[16]);
+f20138 = () => GenerateInvite(f20138[16]);
 AppRegistry.registerHeadlessTask("MarkAsRead", () => {
-  closure_0 = GenerateInvite(f20318[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+  closure_0 = GenerateInvite(f20138[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20138, arg0);
 });
 GenerateInvite = "MuteAction";
-f20318 = () => GenerateInvite(f20318[17]);
+f20138 = () => GenerateInvite(f20138[17]);
 AppRegistry.registerHeadlessTask("MuteAction", () => {
-  closure_0 = GenerateInvite(f20318[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+  closure_0 = GenerateInvite(f20138[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20138, arg0);
 });
 GenerateInvite = "ToggleDeafen";
-f20318 = () => GenerateInvite(f20318[18]);
+f20138 = () => GenerateInvite(f20138[18]);
 AppRegistry.registerHeadlessTask("ToggleDeafen", () => {
-  closure_0 = GenerateInvite(f20318[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+  closure_0 = GenerateInvite(f20138[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20138, arg0);
 });
 GenerateInvite = "ToggleSelfMute";
-f20318 = () => GenerateInvite(f20318[19]);
+f20138 = () => GenerateInvite(f20138[19]);
 AppRegistry.registerHeadlessTask("ToggleSelfMute", () => {
-  closure_0 = GenerateInvite(f20318[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+  closure_0 = GenerateInvite(f20138[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20138, arg0);
 });
 GenerateInvite = "DismissCallAction";
-f20318 = () => GenerateInvite(f20318[20]);
+f20138 = () => GenerateInvite(f20138[20]);
 AppRegistry.registerHeadlessTask("DismissCallAction", () => {
-  closure_0 = GenerateInvite(f20318[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+  closure_0 = GenerateInvite(f20138[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20138, arg0);
 });
 GenerateInvite = "DirectReply";
-f20318 = () => GenerateInvite(f20318[21]);
+f20138 = () => GenerateInvite(f20138[21]);
 AppRegistry.registerHeadlessTask("DirectReply", () => {
-  closure_0 = GenerateInvite(f20318[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+  closure_0 = GenerateInvite(f20138[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20138, arg0);
 });
 GenerateInvite = "SelectVoiceChannel";
-f20318 = () => GenerateInvite(f20318[22]);
+f20138 = () => GenerateInvite(f20138[22]);
 AppRegistry.registerHeadlessTask("SelectVoiceChannel", () => {
-  closure_0 = GenerateInvite(f20318[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+  closure_0 = GenerateInvite(f20138[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20138, arg0);
 });
 GenerateInvite = "GenerateInvite";
-f20318 = () => GenerateInvite(f20318[23]);
+f20138 = () => GenerateInvite(f20138[23]);
 AppRegistry.registerHeadlessTask("GenerateInvite", () => {
-  closure_0 = GenerateInvite(f20318[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20318, arg0);
+  closure_0 = GenerateInvite(f20138[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20138, arg0);
 });
 const result = size.fileFinishedImporting("index.native.tsx");
 
@@ -222,7 +222,7 @@ function global() {
           }
         } else {
           throw (function unknownModuleError(id) {
-            return Error("Requiring unknown module \"" + id + "\".");
+            return Error('Requiring unknown module "' + id + '".');
           })(id);
         }
       })(id, value);
@@ -319,7 +319,7 @@ function global() {
           }
         } else {
           throw (function unknownModuleError(id) {
-            return Error("Requiring unknown module \"" + id + "\".");
+            return Error('Requiring unknown module "' + id + '".');
           })(id);
         }
       })(prototype, value2);
@@ -432,7 +432,7 @@ function global() {
           }
         } else {
           throw (function unknownModuleError(id) {
-            return Error("Requiring unknown module \"" + id + "\".");
+            return Error('Requiring unknown module "' + id + '".');
           })(id);
         }
       })(id, value2);
@@ -446,7 +446,15 @@ function global() {
   _window.__r = metroRequire;
   _window["" + globalThis.__METRO_GLOBAL_PREFIX__ + "__d"] = function define(factory, arg1, dependencyMap) {
     if (!duration.has(arg1)) {
-      const obj = { dependencyMap, factory, hasError: false, importedAll: React4, importedDefault: React4, isInitialized: false, publicModule: null };
+      const obj = {
+        dependencyMap,
+        factory,
+        hasError: false,
+        importedAll: React4,
+        importedDefault: React4,
+        isInitialized: false,
+        publicModule: null,
+      };
       const obj2 = { exports: {} };
       obj.publicModule = obj2;
       const result = duration.set(arg1, obj);
@@ -512,14 +520,12 @@ function global() {
     }
   }
   closure_129_0 = _window2;
-  function stub() {
-  
-  }
+  function stub() {}
   function consoleCreateTaskStub() {
     return {
       run(fn) {
         return fn();
-      }
+      },
     };
   }
   closure_130_0 = function stylizeNoColor(arg0, arg1) {
@@ -540,7 +546,10 @@ function global() {
         const _JSON = JSON;
         const str3 = JSON.stringify(name);
         const str5 = JSON.stringify(name).replace(/^"|"$/g, "");
-        stylizeResult = formatValueCalls.stylize(`'${JSON.stringify(name).replace(/^"|"$/g, "").replace(/'/g, "\\'").replace(/\\"/g, "\"")}'`, "string");
+        stylizeResult = formatValueCalls.stylize(
+          `'${JSON.stringify(name).replace(/^"|"$/g, "").replace(/'/g, "\\'").replace(/\\"/g, '"')}'`,
+          "string",
+        );
         const str7 = JSON.stringify(name).replace(/^"|"$/g, "").replace(/'/g, "\\'");
       } else if (typeof name === "number") {
         stylizeResult = formatValueCalls.stylize("" + name, "number");
@@ -730,10 +739,12 @@ function global() {
                     }
                     const seen1 = formatValueCalls.seen;
                     seen1.pop();
-                    if (mapped.reduce((acc, arr) => {
-                      arr.indexOf("\n") >= 0;
-                      return acc + arr.replace(/\u001b\[\d\d?m/g, "").length + 1;
-                    }, 0) > 60) {
+                    if (
+                      mapped.reduce((acc, arr) => {
+                        arr.indexOf("\n") >= 0;
+                        return acc + arr.replace(/\u001b\[\d\d?m/g, "").length + 1;
+                      }, 0) > 60
+                    ) {
                       if (str17 !== str18) {
                         str17 = `${str18}
      `;
@@ -845,8 +856,14 @@ function global() {
             text = stylize.stylize(str12.slice(1, str12.length - 1), "name");
           } else {
             const str14 = str12.replace(/'/g, "\\'");
-            text = stylize.stylize(str12.replace(/'/g, "\\'").replace(/\\"/g, "\"").replace(/(^"|"$)/g, "'"), "string");
-            const str16 = str12.replace(/'/g, "\\'").replace(/\\"/g, "\"");
+            text = stylize.stylize(
+              str12
+                .replace(/'/g, "\\'")
+                .replace(/\\"/g, '"')
+                .replace(/(^"|"$)/g, "'"),
+              "string",
+            );
+            const str16 = str12.replace(/'/g, "\\'").replace(/\\"/g, '"');
           }
         }
         return text + ": " + stylizeResult1;
@@ -880,9 +897,7 @@ function global() {
       }
     }
   };
-  closure_129_1 = function inspect(arg0, arg1) {
-  
-  };
+  closure_129_1 = function inspect(arg0, arg1) {};
   closure_129_2 = "(index)";
   closure_129_3 = 1;
   closure_129_4 = 2;
@@ -890,7 +905,14 @@ function global() {
   closure_129_6 = [];
   let _console1 = _window2.console;
   if (_window2.nativeLoggingHook) {
-    let obj = { time: stub, timeEnd: stub, timeStamp: stub, count: stub, countReset: stub, createTask: consoleCreateTaskStub };
+    let obj = {
+      time: stub,
+      timeEnd: stub,
+      timeStamp: stub,
+      count: stub,
+      countReset: stub,
+      createTask: consoleCreateTaskStub,
+    };
     if (_console1 == null) {
       _console1 = {};
     }
@@ -1199,11 +1221,13 @@ function global() {
           const _Array2 = Array;
           const _Set = Set;
           const set = new Set();
-          combined = Array.from(arr2.reduce((acc, item) => {
-            const keys = Object.keys(item);
-            item = keys.forEach((item) => acc.add(item));
-            return acc;
-          }, set));
+          combined = Array.from(
+            arr2.reduce((acc, item) => {
+              const keys = Object.keys(item);
+              item = keys.forEach((item) => acc.add(item));
+              return acc;
+            }, set),
+          );
         }
         const items2 = [];
         items3 = [];
@@ -1272,8 +1296,11 @@ function global() {
             length = arr2.length;
           } while (num2 < length);
         }
-        items.nativeLoggingHook(`
-      ${arr8.join("\n")}`, c3);
+        items.nativeLoggingHook(
+          `
+      ${arr8.join("\n")}`,
+          c3,
+        );
       } else {
         items.nativeLoggingHook("", c3);
       }
@@ -1309,7 +1336,7 @@ function global() {
     if (true === _window2.RN$useAlwaysAvailableJSErrorHandling) {
       let _console2 = console;
       let _console3 = console;
-      console.error = function() {
+      console.error = function () {
         items = [...arguments];
         metroImportDefault.apply(this, items);
         if (false !== console.reportErrorsAsExceptions) {
@@ -1363,10 +1390,10 @@ function global() {
       trace: _window2.print || stub,
       warn: _window2.print || stub,
       assert(arg0, arg1) {
-          if (!arg0) {
-            React5(`Assertion failed: ${arg1}`);
-          }
-        },
+        if (!arg0) {
+          React5(`Assertion failed: ${arg1}`);
+        }
+      },
       clear: stub,
       count: stub,
       countReset: stub,
@@ -1381,7 +1408,7 @@ function global() {
       time: stub,
       timeEnd: stub,
       timeStamp: stub,
-      createTask: consoleCreateTaskStub
+      createTask: consoleCreateTaskStub,
     };
     _window2.console = obj2;
     let _Object = Object;
@@ -1402,9 +1429,12 @@ function global() {
     }
   }
   closure_131_0 = 0;
-  closure_131_1 = true === self.RN$useAlwaysAvailableJSErrorHandling ? self.RN$handleException : ((arg0, arg1) => {
-    throw arg0;
-  });
+  closure_131_1 =
+    true === self.RN$useAlwaysAvailableJSErrorHandling
+      ? self.RN$handleException
+      : (arg0, arg1) => {
+          throw arg0;
+        };
   let obj3 = {
     setGlobalHandler(arg0) {
       closure_1 = arg0;
@@ -1468,5059 +1498,13 @@ function global() {
           return str.applyWithGuard(closure_0, self, items, null, str);
         };
       }
-    }
+    },
   };
   closure_131_2 = obj3;
   self.ErrorUtils = obj3;
-  // Metro registry: 20273 module registrations omitted (each __d(factory, id, deps) wires a module rendered above)
+  // Metro registry: 20093 module registrations omitted (each __d(factory, id, deps) wires a module rendered above)
   __r(119);
   return __r(0);
-}
-
-function f23490() {
-  class CanvasManagerNoop {
-    constructor() {
-      tmp = closure_2_7(this, CanvasManagerNoop);
-      return;
-    }
-  }
-  const entry = {
-    key: "reset",
-    value: function reset() {
-  
-    }
-  };
-  const items = [
-    entry,
-    {
-      key: "freeze",
-      value: function freeze() {
-  
-      }
-    },
-    {
-      key: "unfreeze",
-      value: function unfreeze() {
-  
-      }
-    },
-    {
-      key: "lock",
-      value: function lock() {
-  
-      }
-    },
-    {
-      key: "unlock",
-      value: function unlock() {
-  
-      }
-    },
-    {
-      key: "snapshot",
-      value: function snapshot() {
-  
-      }
-    },
-    {
-      key: "addWindow",
-      value: function addWindow() {
-  
-      }
-    },
-    {
-      key: "addShadowRoot",
-      value: function addShadowRoot() {
-  
-      }
-    },
-    {
-      key: "resetShadowRoots",
-      value: function resetShadowRoots() {
-  
-      }
-    }
-  ];
-  return closure_8(CanvasManagerNoop, items);
-}
-
-function f23491() {
-  class StylesheetManager {
-    constructor(arg0) {
-      tmp = closure_2_7(this, StylesheetManager);
-      weakSet = new WeakSet();
-      this.trackedLinkElements = weakSet;
-      tmp3 = new closure_2_68();
-      this.styleMirror = tmp3;
-      ({ mutationCb: this.mutationCb, adoptedStyleSheetCb: this.adoptedStyleSheetCb } = arg0);
-      return;
-    }
-  }
-  const entry = {
-    key: "attachLinkElement",
-    value: function attachLinkElement(nodeName, attributes) {
-      const self = this;
-      if ("_cssText" in attributes.attributes) {
-        const obj = { adds: [], removes: [], texts: [], attributes: null };
-        ({ id: obj2.id, attributes: obj2.attributes } = attributes);
-        const items = [{ id: null, attributes: null }];
-        obj.attributes = items;
-        self.mutationCb(obj);
-        const obj3 = { id: null, attributes: null };
-      }
-      self.trackLinkElement(nodeName);
-    }
-  };
-  let items = [
-    entry,
-    {
-      key: "trackLinkElement",
-      value: function trackLinkElement(nodeName) {
-        const self = this;
-        const trackedLinkElements = this.trackedLinkElements;
-        if (!trackedLinkElements.has(nodeName)) {
-          const trackedLinkElements2 = self.trackedLinkElements;
-          trackedLinkElements2.add(nodeName);
-          const result = self.trackStylesheetInLinkElement(nodeName);
-        }
-      }
-    },
-    {
-      key: "adoptStyleSheets",
-      value: function adoptStyleSheets(adoptedStyleSheets, id) {
-        const self = this;
-        if (0 !== adoptedStyleSheets.length) {
-          const obj2 = { id, styleIds: [] };
-          const items = [];
-          const iter = adoptedStyleSheets[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let tmp4 = nextResult;
-            ({ styleMirror, styleMirror: styleMirror2 } = self);
-            if (styleMirror.has(nextResult)) {
-              id = styleMirror2.getId(tmp4);
-            } else {
-              let addResult = styleMirror2.add(tmp4);
-              id = addResult;
-              let obj = { styleId: addResult, rules: null };
-              let CSSRule = tmp4.rules;
-              if (!CSSRule) {
-                CSSRule = globalThis.CSSRule;
-              }
-              obj.rules = Array.from(CSSRule, (arg0, index) => ({ rule: closure_1_22(arg0), index }));
-              let arr = items.push(obj);
-            }
-            let styleIds = obj2.styleIds;
-            let arr2 = styleIds.push(id);
-            continue;
-          }
-          if (items.length > 0) {
-            obj2.styles = items;
-          }
-          self.adoptedStyleSheetCb(obj2);
-        }
-      }
-    },
-    {
-      key: "reset",
-      value: function reset() {
-        const styleMirror = this.styleMirror;
-        styleMirror.reset();
-        const weakSet = new WeakSet();
-        this.trackedLinkElements = weakSet;
-      }
-    },
-    {
-      key: "trackStylesheetInLinkElement",
-      value: function trackStylesheetInLinkElement(nodeName) {
-  
-      }
-    }
-  ];
-  return closure_8(StylesheetManager, items);
-}
-
-function f23492() {
-  class ProcessedNodeManager {
-    constructor() {
-      tmp = closure_2_7(this, ProcessedNodeManager);
-      weakMap = new WeakMap();
-      this.nodeMap = weakMap;
-      this.active = false;
-      return;
-    }
-  }
-  const entry = {
-    key: "inOtherBuffer",
-    value: function inOtherBuffer(childNodes, childNodes) {
-      closure_0 = childNodes;
-      const nodeMap = this.nodeMap;
-      const value = nodeMap.get(childNodes);
-      let someResult = value;
-      if (value) {
-        const _Array = Array;
-        someResult = Array.from(value).some((item) => item !== closure_0);
-        const arr = Array.from(value);
-      }
-      return someResult;
-    }
-  };
-  let items = [
-    entry,
-    {
-      key: "add",
-      value: function add(arg0, arg1) {
-        const self = this;
-        if (!this.active) {
-          self.active = true;
-          (function onRequestAnimationFrame() {
-            const items = [...arguments];
-            return closure_1_71("requestAnimationFrame")(...items);
-          })(() => {
-            const weakMap = new WeakMap();
-            self.nodeMap = weakMap;
-            self.active = false;
-          });
-        }
-        ({ nodeMap, nodeMap: nodeMap2 } = self);
-        let set = nodeMap2.get(arg0);
-        if (!set) {
-          const _Set = Set;
-          set = new Set();
-        }
-        const result = nodeMap.set(arg0, set.add(arg1));
-      }
-    },
-    {
-      key: "destroy",
-      value: function destroy() {
-  
-      }
-    }
-  ];
-  return closure_8(ProcessedNodeManager, items);
-}
-
-function f23493(arg0) {
-  return 2 * arg0;
-}
-
-function createMirror$2() {
-  return new closure_1_23();
-}
-
-function takeFullSnapshot(arg0) {
-  if (closure_1_104) {
-    tmp(arg0);
-  } else {
-    const _Error = Error;
-    const error = new Error("please take full snapshot after start recording");
-    throw error;
-  }
-}
-
-function f23496() {
-  class ClickDetector {
-    constructor(arg0, arg1) {
-      tmp = arg2;
-      if (arg2 === undefined) {
-        tmp = closure_2_110;
-      }
-      tmp2 = closure_2_7(this, ClickDetector);
-      this._lastMutation = 0;
-      this._lastScroll = 0;
-      this._clicks = [];
-      this._timeout = arg1.timeout / 1000;
-      this._threshold = arg1.threshold / 1000;
-      this._scrollTimeout = arg1.scrollTimeout / 1000;
-      this._replay = arg0;
-      this._ignoreSelector = arg1.ignoreSelector;
-      this._addBreadcrumbEvent = tmp;
-      return;
-    }
-  }
-  const entry = {
-    key: "addListeners",
-    value: function addListeners() {
-      const self = this;
-      const fn = () => {
-        self._lastMutation = Date.now() / 1000;
-      };
-      let f80715 = fn;
-      if (!closure_111) {
-        closure_111 = [];
-        f80715(self[8]).fill(f80715(self[8]).GLOBAL_OBJ, "open", (arg0) => {
-          closure_0 = arg0;
-          return () => {
-            const items = [...arguments];
-            if (closure_111) {
-              try {
-                const item = closure_111.forEach((fn) => fn());
-              } catch (err) {
-              }
-            }
-            return closure_0.apply(f80715(self[8]).GLOBAL_OBJ, items);
-          };
-        });
-        const obj = f80715(self[8]);
-      }
-      closure_111.push(fn);
-      f80715 = () => {
-  
-      };
-      this._teardown = () => {
-        if (typeof f80715 === "function") {
-          let num2 = -1;
-          if (closure_111) {
-            num2 = closure_111.indexOf(f80715);
-          }
-          if (num2 > -1) {
-            closure_111.splice(num2, 1);
-          }
-          self._clicks = [];
-          self._lastMutation = 0;
-          self._lastScroll = 0;
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      };
-    }
-  };
-  let items = [entry, , , , , , , , , , ];
-  const entry1 = {
-    key: "removeListeners",
-    value: function removeListeners() {
-      const self = this;
-      if (this._teardown) {
-        self._teardown();
-      }
-      if (self._checkClickTimeout) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(self._checkClickTimeout);
-      }
-    }
-  };
-  items[1] = entry1;
-  items[2] = {
-    key: "handleClick",
-    value: function handleClick(data, tagName) {
-      const self = this;
-      const _ignoreSelector = this._ignoreSelector;
-      let flag = true;
-      if (closure_1_116.includes(tagName.tagName)) {
-        if ("INPUT" !== tagName.tagName) {
-          if ("A" !== tagName.tagName) {
-            flag = false;
-            if (_ignoreSelector) {
-              flag = false;
-              if (tagName.matches(_ignoreSelector)) {
-                flag = true;
-              }
-            }
-          } else {
-            flag = true;
-            if (!tagName.hasAttribute("download")) {
-              if (tagName.hasAttribute("target")) {
-                flag = true;
-              }
-            }
-          }
-        } else {
-          const items = ["submit", "button"];
-          flag = true;
-          const tmp = tagName.getAttribute("type") || "";
-        }
-      }
-      if (!flag) {
-        data = data.data;
-        let tmp3 = !data;
-        if (data) {
-          tmp3 = typeof data.data.nodeId !== "number";
-        }
-        if (!tmp3) {
-          tmp3 = !data.timestamp;
-        }
-        if (!tmp3) {
-          const timestamp = data.timestamp;
-          let result = timestamp;
-          if (timestamp > 9999999999) {
-            result = timestamp / 1000;
-          }
-          const obj = { timestamp: result, clickBreadcrumb: data, clickCount: 0, node: tagName };
-          const _clicks = self._clicks;
-          if (!_clicks.some((node) => {
-            let tmp2 = node.node === obj.node;
-            if (tmp2) {
-              const _Math = Math;
-              tmp2 = Math.abs(node.timestamp - tmp.timestamp) < 1;
-            }
-            return tmp2;
-          })) {
-            const _clicks1 = self._clicks;
-            _clicks1.push(obj);
-            if (1 === self._clicks.length) {
-              self._scheduleCheckClicks();
-            }
-          }
-        }
-      }
-    }
-  };
-  items[3] = {
-    key: "registerMutation",
-    value: function registerMutation() {
-      if (timestamp === undefined) {
-        const _Date = Date;
-        timestamp = Date.now();
-      }
-      let result = timestamp;
-      if (timestamp > 9999999999) {
-        result = timestamp / 1000;
-      }
-      this._lastMutation = result;
-    }
-  };
-  items[4] = {
-    key: "registerScroll",
-    value: function registerScroll() {
-      if (timestamp === undefined) {
-        const _Date = Date;
-        timestamp = Date.now();
-      }
-      let result = timestamp;
-      if (timestamp > 9999999999) {
-        result = timestamp / 1000;
-      }
-      this._lastScroll = result;
-    }
-  };
-  items[5] = {
-    key: "registerClick",
-    value: function registerClick(node) {
-      this._handleMultiClick(node.closest("button,a") || node);
-    }
-  };
-  items[6] = {
-    key: "_handleMultiClick",
-    value: function _handleMultiClick(arg0) {
-      const item = this._getClicks(arg0).forEach((clickCount) => {
-        clickCount.clickCount = clickCount.clickCount + 1;
-      });
-    }
-  };
-  items[7] = {
-    key: "_getClicks",
-    value: function _getClicks(arg0) {
-      closure_0 = arg0;
-      const _clicks = this._clicks;
-      return _clicks.filter((node) => node.node === closure_0);
-    }
-  };
-  items[8] = {
-    key: "_checkClicks",
-    value: function _checkClicks() {
-      const self = this;
-      const items = [];
-      closure_0 = closure_1_117();
-      const _clicks = this._clicks;
-      const item = _clicks.forEach((mutationAfter) => {
-        mutationAfter = mutationAfter.mutationAfter;
-        let _lastMutation = !mutationAfter;
-        if (!mutationAfter) {
-          _lastMutation = self._lastMutation;
-        }
-        if (_lastMutation) {
-          let diff;
-          if (mutationAfter.timestamp <= self._lastMutation) {
-            diff = self._lastMutation - mutationAfter.timestamp;
-          }
-          mutationAfter.mutationAfter = diff;
-        }
-        const scrollAfter = mutationAfter.scrollAfter;
-        let _lastScroll = !scrollAfter;
-        if (!scrollAfter) {
-          _lastScroll = self._lastScroll;
-        }
-        if (_lastScroll) {
-          let diff1;
-          if (mutationAfter.timestamp <= self._lastScroll) {
-            diff1 = self._lastScroll - mutationAfter.timestamp;
-          }
-          mutationAfter.scrollAfter = diff1;
-        }
-        if (mutationAfter.timestamp + self._timeout <= closure_0) {
-          items.push(mutationAfter);
-        }
-      });
-      const iter = items[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let _clicks1 = self._clicks;
-        let tmp3 = nextResult;
-        let index = _clicks1.indexOf(nextResult);
-        if (index > -1) {
-          let _generateBreadcrumbsResult = self._generateBreadcrumbs(tmp3);
-          let _clicks2 = self._clicks;
-          let spliceResult = _clicks2.splice(tmp5, 1);
-        }
-        continue;
-      }
-      if (self._clicks.length) {
-        self._scheduleCheckClicks();
-      }
-    }
-  };
-  items[9] = {
-    key: "_generateBreadcrumbs",
-    value: function _generateBreadcrumbs(scrollAfter) {
-      const self = this;
-      const _replay = this._replay;
-      let tmp3 = !tmp;
-      if (!(scrollAfter.scrollAfter && scrollAfter.scrollAfter <= self._scrollTimeout)) {
-        tmp3 = !tmp2;
-      }
-      ({ clickCount, clickBreadcrumb } = scrollAfter);
-      if (tmp3) {
-        let _timeout = scrollAfter.mutationAfter;
-        if (!_timeout) {
-          _timeout = self._timeout;
-        }
-        const result = 1000 * Math.min(_timeout, self._timeout);
-        let str = "timeout";
-        if (result < 1000 * self._timeout) {
-          str = "mutation";
-        }
-        const obj = { type: "default", message: null, timestamp: null, category: "ui.slowClickDetected", data: null };
-        ({ message: obj.message, timestamp: obj.timestamp } = clickBreadcrumb);
-        const obj2 = {};
-        const merged = Object.assign(clickBreadcrumb.data);
-        obj2.url = ClickDetector(dependencyMap[8]).GLOBAL_OBJ.location.href;
-        obj2.route = _replay.getCurrentRoute();
-        obj2.timeAfterClickMs = result;
-        obj2.endReason = str;
-        if (!clickCount) {
-          clickCount = 1;
-        }
-        obj2.clickCount = clickCount;
-        obj.data = obj2;
-        self._addBreadcrumbEvent(_replay, obj);
-      } else if (clickCount > 1) {
-        const obj4 = { type: "default", message: null, timestamp: null, category: "ui.multiClick", data: null };
-        ({ message: obj3.message, timestamp: obj3.timestamp } = clickBreadcrumb);
-        const obj7 = {};
-        const merged1 = Object.assign(clickBreadcrumb.data);
-        obj7.url = ClickDetector(dependencyMap[8]).GLOBAL_OBJ.location.href;
-        obj7.route = _replay.getCurrentRoute();
-        obj7.clickCount = clickCount;
-        obj7.metric = true;
-        obj4.data = obj7;
-        self._addBreadcrumbEvent(_replay, obj4);
-      }
-      tmp2 = scrollAfter.mutationAfter && scrollAfter.mutationAfter <= self._threshold;
-    }
-  };
-  items[10] = {
-    key: "_scheduleCheckClicks",
-    value: function _scheduleCheckClicks() {
-      const self = this;
-      if (this._checkClickTimeout) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(self._checkClickTimeout);
-      }
-      self._checkClickTimeout = ClickDetector(dependencyMap[9]).setTimeout(() => self._checkClicks(), 1000);
-    }
-  };
-  return closure_8(ClickDetector, items);
-}
-
-function f23497(arg0) {
-  arg0.Document = 0;
-  arg0[0] = "Document";
-  arg0.DocumentType = 1;
-  arg0[1] = "DocumentType";
-  arg0.Element = 2;
-  arg0[2] = "Element";
-  arg0.Text = 3;
-  arg0[3] = "Text";
-  arg0.CDATA = 4;
-  arg0[4] = "CDATA";
-  arg0.Comment = 5;
-  arg0[5] = "Comment";
-  return arg0;
-}
-
-function handleDomListener(arg0) {
-}
-
-function createResourceEntry(initiatorType) {
-  initiatorType = initiatorType.initiatorType;
-  const items = ["fetch", "xmlhttprequest"];
-  ({ entryType, name, responseEnd, startTime, decodedBodySize, encodedBodySize, responseStatus, transferSize } = initiatorType);
-  if (items.includes(initiatorType)) {
-    return null;
-  } else {
-    const obj = { type: null, start: null, end: null, name: null, data: null };
-    const _HermesInternal = HermesInternal;
-    obj.type = "" + entryType + "." + initiatorType;
-    const obj2 = closure_1_0(closure_1_1[8]);
-    obj.start = ((closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin) + startTime) / 1000;
-    const tmp4 = closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin;
-    const tmp2Result = closure_1_0(closure_1_1[8]);
-    obj.end = ((closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin) + responseEnd) / 1000;
-    obj.name = name;
-    const obj3 = { size: transferSize, statusCode: responseStatus, decodedBodySize, encodedBodySize };
-    obj.data = obj3;
-    return obj;
-  }
-}
-
-function createPaintEntry(arg0) {
-  ({ duration, entryType, name, startTime } = arg0);
-  const obj = closure_1_0(closure_1_1[8]);
-  const result = ((closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin) + startTime) / 1000;
-  return { type: entryType, name, start: result, end: result + duration, data: "fileFinishedImporting" };
-}
-
-function createNavigationEntry(arg0) {
-  ({ duration, domComplete } = arg0);
-  if (0 === duration) {
-    return null;
-  } else {
-    const obj = { type: null, start: null, end: null, name: null, data: null };
-    const _HermesInternal = HermesInternal;
-    obj.type = "" + tmp + "." + tmp13;
-    const obj4 = closure_1_0(closure_1_1[8]);
-    obj.start = ((closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin) + tmp11) / 1000;
-    const tmp14 = closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin;
-    const tmp18Result = closure_1_0(closure_1_1[8]);
-    obj.end = ((closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin) + domComplete) / 1000;
-    obj.name = tmp2;
-    const obj2 = { size: tmp12, decodedBodySize: tmp3, encodedBodySize: tmp4, duration, domInteractive: tmp7, domContentLoadedEventStart: tmp5, domContentLoadedEventEnd: tmp6, loadEventStart: tmp8, loadEventEnd: tmp9, domComplete, redirectCount: tmp10 };
-    obj.data = obj2;
-    return obj;
-  }
-}
-
-function makeReplayDebugLogger() {
-  let captureExceptions = false;
-  let traceInternals = false;
-  let obj = {
-    exception() {
-  
-    },
-    infoTick() {
-  
-    },
-    setConfig(captureExceptions) {
-      captureExceptions = captureExceptions.captureExceptions;
-      traceInternals = captureExceptions.traceInternals;
-    }
-  };
-  const forEach = closure_131.forEach;
-  if (closure_130) {
-    const item = forEach((arg0) => {
-      closure_0 = arg0;
-      obj[arg0] = () => {
-        const items = [...arguments];
-        const debug = closure_3_0(closure_3_1[8]).debug;
-        const items1 = [closure_3_132, ...items];
-        debug[closure_0].apply(items1);
-        if (traceInternals) {
-          const joined = items.join("");
-          let str2 = closure_3_0(closure_3_1[8]).severityLevelFromString(closure_0);
-          if (str2 === undefined) {
-            str2 = "info";
-          }
-          const tmpResult = closure_3_0(closure_3_1[8]);
-          obj = { category: "console", data: { logger: "replay" }, level: str2, message: null };
-          const _HermesInternal = HermesInternal;
-          obj.message = "" + closure_3_132 + joined;
-          const obj2 = { level: str2 };
-          closure_3_0(closure_3_1[8]).addBreadcrumb(obj, obj2);
-          const tmpResult2 = closure_3_0(closure_3_1[8]);
-        }
-      };
-    });
-    obj.exception = (arg0) => {
-      const substr = [...arguments].slice();
-      let error = substr.length;
-      if (error) {
-        error = obj.error;
-      }
-      if (error) {
-        const error2 = obj.error;
-        const items = [];
-        HermesBuiltin.arraySpread(substr, 0);
-        HermesBuiltin.apply(items, obj);
-      }
-      const debug = closure_2_0(closure_2_1[8]).debug;
-      debug.error(closure_2_132, arg0);
-      if (captureExceptions) {
-        obj = { mechanism: { handled: true, type: "auto.function.replay.debug" } };
-        closure_2_0(closure_2_1[8]).captureException(arg0, obj);
-        const tmp10Result = closure_2_0(closure_2_1[8]);
-      } else if (traceInternals) {
-        const obj2 = { category: "console", data: { logger: "replay" }, level: "error", message: null };
-        const _HermesInternal = HermesInternal;
-        obj2.message = "" + closure_2_132 + arg0;
-        const obj3 = { level: "error" };
-        closure_2_0(closure_2_1[8]).addBreadcrumb(obj2, obj3);
-        const tmp10Result2 = closure_2_0(closure_2_1[8]);
-      }
-    };
-    obj.infoTick = () => {
-      const items = [...arguments];
-      const debug = closure_2_0(closure_2_1[8]).debug;
-      const items1 = [closure_2_132, ...items];
-      debug.log.apply(items1);
-      if (traceInternals) {
-        const _setTimeout = setTimeout;
-        const timerId = setTimeout(() => {
-          obj = captureExceptions(traceInternals[8]);
-          obj.addBreadcrumb({ category: "console", data: { logger: "replay" }, level: "info", message: "" + closure_2_132 + items[0] }, { level: "info" });
-        }, 0);
-      }
-    };
-  } else {
-    const item1 = forEach((arg0) => {
-      obj[arg0] = () => {
-  
-      };
-    });
-  }
-  return obj;
-}
-
-function f23503(arg0) {
-  class EventBufferSizeExceededError {
-    constructor() {
-      self = this;
-      tmp = closure_2_7(this, EventBufferSizeExceededError);
-      items = ["Event buffer exceeded maximum size of 20000000."];
-      tmp2 = closure_2_4;
-      obj = closure_2_4(EventBufferSizeExceededError);
-      tmp3 = closure_2_3;
-      if (closure_2_9()) {
-        tmp5 = globalThis;
-        _Reflect = Reflect;
-        constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-      } else {
-        constructResult = obj.apply(self, items);
-      }
-      return tmp3(self, constructResult);
-    }
-  }
-  closure_5(EventBufferSizeExceededError, arg0);
-  return closure_8(EventBufferSizeExceededError);
-}
-
-function f23504() {
-  class EventBufferArray {
-    constructor() {
-      tmp = closure_2_7(this, EventBufferArray);
-      this.events = [];
-      this._totalSize = 0;
-      this.hasCheckout = false;
-      this.waitForCheckout = false;
-      return;
-    }
-  }
-  const items = [
-    {
-      key: "hasEvents",
-      get() {
-        return this.events.length > 0;
-      }
-    },
-    {
-      key: "type",
-      get() {
-        return "sync";
-      }
-    },
-    {
-      key: "destroy",
-      value: function destroy() {
-        this.events = [];
-      }
-    },
-  ,
-  ,
-  ,
-  
-  ];
-  const entry = { key: "addEvent", value: null };
-  closure_0 = closure_2(function(arg0) {
-    const self = this;
-    closure_1 = arg0;
-    c2 = 0;
-    return (function*(arg0) {
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "HermesInternal", done: "+60" };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            const _JSON = JSON;
-            self._totalSize = self._totalSize + JSON.stringify(closure_1).length;
-            if (self._totalSize > closure_1_14) {
-              const tmp8 = new closure_1_134();
-              throw tmp8;
-            } else {
-              const events = self.events;
-              events.push(closure_1);
-              c2 = 3;
-              return { value: "HermesInternal", done: "+60" };
-            }
-          }
-        } catch (tmp10) {
-          c2 = tmp;
-          throw tmp10;
-        }
-      }
-    })();
-  });
-  entry.value = function addEvent(arg0) {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items[3] = entry;
-  items[4] = {
-    key: "finish",
-    value: function finish() {
-      const self = this;
-      return new Promise((fn) => {
-        self.clear();
-        fn(JSON.stringify(self.events));
-      });
-    }
-  };
-  items[5] = {
-    key: "clear",
-    value: function clear() {
-  
-    }
-  };
-  items[6] = {
-    key: "getEarliestTimestamp",
-    value: function getEarliestTimestamp() {
-      const events = this.events;
-      const mapped = events.map((timestamp) => timestamp.timestamp);
-      const first = mapped.sort()[0];
-      let tmp2 = null;
-      if (first) {
-        let result = first;
-        if (first <= 9999999999) {
-          result = 1000 * first;
-        }
-        tmp2 = result;
-      }
-      return tmp2;
-    }
-  };
-  return closure_8(EventBufferArray, items);
-}
-
-function f23505() {
-  class WorkerHandler {
-    constructor(arg0) {
-      tmp = closure_2_7(this, WorkerHandler);
-      this._worker = arg0;
-      this._id = 0;
-      return;
-    }
-  }
-  const entry = {
-    key: "ensureReady",
-    value: function ensureReady() {
-      const self = this;
-      if (!this._ensureReadyPromise) {
-        const promise = new Promise((arg0, arg1) => {
-          closure_0 = arg0;
-          closure_1 = arg1;
-          const _worker = self._worker;
-          const listener = _worker.addEventListener("message", (event) => {
-            if (event.data.success) {
-              closure_0();
-            } else {
-              closure_1();
-            }
-          }, { once: true });
-          const _worker2 = self._worker;
-          const listener1 = _worker2.addEventListener("error", (event) => {
-            closure_1(event);
-          }, { once: true });
-        });
-        self._ensureReadyPromise = promise;
-      }
-      return self._ensureReadyPromise;
-    }
-  };
-  const items = [
-    entry,
-    {
-      key: "destroy",
-      value: function destroy() {
-        if (closure_1_130) {
-          logger.log("Destroying compression worker");
-        }
-        const _worker = this._worker;
-        _worker.terminate();
-      }
-    },
-    {
-      key: "postMessage",
-      value: function postMessage(method, arg1) {
-        const self = this;
-        closure_2 = arg1;
-        let id = this._getAndIncrementId();
-        return new Promise((arg0, arg1) => {
-          id = arg0;
-          method = arg1;
-          function listener(event) {
-            const data = event.data;
-            if (data.method === closure_1) {
-              if (data.id === closure_0) {
-                const _worker = self._worker;
-                const removed = _worker.removeEventListener("message", listener);
-                if (data.success) {
-                  closure_0(data.response);
-                } else {
-                  if (closure_3_130) {
-                    logger.error("Error in compression worker: ", data.response);
-                  }
-                  const _Error = Error;
-                  const error = new Error("Error in compression worker");
-                  closure_1(error);
-                }
-              }
-            }
-          }
-          let _worker = self._worker;
-          const listener1 = _worker.addEventListener("message", listener);
-          const _worker2 = self._worker;
-          _worker2.postMessage({ id, method, arg: listener });
-        });
-      }
-    },
-    {
-      key: "_getAndIncrementId",
-      value: function _getAndIncrementId() {
-        this._id = +this._id + 1;
-        return +this._id;
-      }
-    }
-  ];
-  return closure_8(WorkerHandler, items);
-}
-
-function f23506() {
-  class EventBufferCompressionWorker {
-    constructor(arg0) {
-      tmp = closure_2_7(this, EventBufferCompressionWorker);
-      tmp2 = new closure_2_136(arg0);
-      this._worker = tmp2;
-      this._earliestTimestamp = null;
-      this._totalSize = 0;
-      this.hasCheckout = false;
-      this.waitForCheckout = false;
-      return;
-    }
-  }
-  const items = [
-    {
-      key: "hasEvents",
-      get() {
-        return this._earliestTimestamp;
-      }
-    },
-    {
-      key: "type",
-      get() {
-        return "worker";
-      }
-    },
-    {
-      key: "ensureReady",
-      value: function ensureReady() {
-        const _worker = this._worker;
-        return _worker.ensureReady();
-      }
-    },
-    {
-      key: "destroy",
-      value: function destroy() {
-        const _worker = this._worker;
-        _worker.destroy();
-      }
-    },
-    {
-      key: "addEvent",
-      value: function addEvent(timestamp) {
-        timestamp = timestamp.timestamp;
-        let result = timestamp;
-        if (timestamp <= 9999999999) {
-          result = 1000 * timestamp;
-        }
-        const self = this;
-        const _earliestTimestamp = this._earliestTimestamp;
-        let tmp2 = !_earliestTimestamp;
-        if (_earliestTimestamp) {
-          tmp2 = result < self._earliestTimestamp;
-        }
-        if (tmp2) {
-          self._earliestTimestamp = result;
-        }
-        const json = JSON.stringify(timestamp);
-        self._totalSize = self._totalSize + json.length;
-        if (self._totalSize > closure_1_14) {
-          const tmp7 = new closure_1_134();
-          let rejectResult = Promise.reject(tmp7);
-        } else {
-          rejectResult = self._sendEventToWorker(json);
-        }
-        return rejectResult;
-      }
-    },
-    {
-      key: "finish",
-      value: function finish() {
-        return this._finishRequest();
-      }
-    },
-    {
-      key: "clear",
-      value: function clear() {
-        this._earliestTimestamp = null;
-        this._totalSize = 0;
-        this.hasCheckout = false;
-        const _worker = this._worker;
-        _worker.postMessage("clear").then(null, (error) => {
-          if (closure_1_130) {
-            closure_1_133.exception(error, "Sending \"clear\" message to worker failed", error);
-          }
-        });
-      }
-    },
-    {
-      key: "getEarliestTimestamp",
-      value: function getEarliestTimestamp() {
-        return this._earliestTimestamp;
-      }
-    },
-    {
-      key: "_sendEventToWorker",
-      value: function _sendEventToWorker(json) {
-        const _worker = this._worker;
-        return _worker.postMessage("addEvent", json);
-      }
-    },
-  
-  ];
-  const entry = { key: "_finishRequest", value: null };
-  closure_0 = closure_2(function() {
-    const self = this;
-    c3 = 0;
-    c4 = 0;
-    return (function*() {
-      closure_2 = self;
-      closure_1 = tmp2;
-      const _worker = self._worker;
-      yield _worker.postMessage("finish");
-      closure_129_0 = value;
-      closure_2._earliestTimestamp = null;
-      closure_2._totalSize = 0;
-      return closure_129_0;
-    })();
-  });
-  entry.value = function _finishRequest() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items[9] = entry;
-  return closure_8(EventBufferCompressionWorker, items);
-}
-
-function f23507() {
-  class EventBufferProxy {
-    constructor(arg0) {
-      tmp = closure_2_7(this, EventBufferProxy);
-      tmp2 = new closure_2_135();
-      this._fallback = tmp2;
-      tmp3 = new closure_2_137(arg0);
-      this._compression = tmp3;
-      this._used = this._fallback;
-      this._ensureWorkerIsLoadedPromise = this._ensureWorkerIsLoaded();
-      return;
-    }
-  }
-  let items = [
-    {
-      key: "waitForCheckout",
-      get() {
-        return this._used.waitForCheckout;
-      },
-      set(waitForCheckout) {
-        this._used.waitForCheckout = waitForCheckout;
-      }
-    },
-    {
-      key: "type",
-      get() {
-        return this._used.type;
-      }
-    },
-    {
-      key: "hasEvents",
-      get() {
-        return this._used.hasEvents;
-      }
-    },
-    {
-      key: "hasCheckout",
-      get() {
-        return this._used.hasCheckout;
-      },
-      set(hasCheckout) {
-        this._used.hasCheckout = hasCheckout;
-      }
-    },
-    {
-      key: "destroy",
-      value: function destroy() {
-        const _fallback = this._fallback;
-        _fallback.destroy();
-        const _compression = this._compression;
-        _compression.destroy();
-      }
-    },
-    {
-      key: "clear",
-      value: function clear() {
-        const _used = this._used;
-        return _used.clear();
-      }
-    },
-    {
-      key: "getEarliestTimestamp",
-      value: function getEarliestTimestamp() {
-        const _used = this._used;
-        return _used.getEarliestTimestamp();
-      }
-    },
-    {
-      key: "addEvent",
-      value: function addEvent(arg0) {
-        const _used = this._used;
-        return _used.addEvent(arg0);
-      }
-    },
-  ,
-  ,
-  ,
-  
-  ];
-  const entry = { key: "finish", value: null };
-  closure_2 = closure_2(function() {
-    const self = this;
-    c2 = 0;
-    c3 = 0;
-    return (function*() {
-      _used = self;
-      yield self.ensureWorkerIsLoaded();
-      _used = _used._used;
-      return _used.finish();
-    })();
-  });
-  entry.value = function finish() {
-    const self = this;
-    const apply = closure_2.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items[8] = entry;
-  items[9] = {
-    key: "ensureWorkerIsLoaded",
-    value: function ensureWorkerIsLoaded() {
-      return this._ensureWorkerIsLoadedPromise;
-    }
-  };
-  const entry1 = { key: "_ensureWorkerIsLoaded", value: null };
-  closure_1 = closure_2(function() {
-    const self = this;
-    c6 = 0;
-    c7 = 0;
-    c4 = 0;
-    return (function*() {
-      closure_3 = self;
-      closure_2 = tmp3;
-      closure_1 = tmp5;
-      const _compression = self._compression;
-      yield _compression.ensureReady();
-      yield "HermesInternal";
-      yield closure_3._switchToCompressionWorker();
-      closure_129_0 = closure_5;
-      if (closure_1_130) {
-        closure_1_133.exception(closure_129_0, "Failed to load the compression worker, falling back to simple buffer");
-      }
-    })();
-  });
-  entry1.value = function _ensureWorkerIsLoaded() {
-    const self = this;
-    const apply = closure_1.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items[10] = entry1;
-  const entry2 = { key: "_switchToCompressionWorker", value: null };
-  closure_0 = closure_2(function() {
-    const self = this;
-    c8 = 0;
-    c9 = 0;
-    c6 = 0;
-    return (function*(arg0) {
-      if (c9 === 2) {
-        c9 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "HermesInternal", done: "+60" };
-        }
-      } else {
-        while (true) {
-          c9 = 2;
-          let tmp4 = c8;
-          if (0 === c8) {
-            if (arg0 === 1) {
-              c9 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c9 = 3;
-              let obj3 = { value, done: true };
-              return obj3;
-            } else {
-              _fallback = self;
-              closure_4 = tmp;
-              closure_3 = tmp4;
-              let _fallback2 = self._fallback;
-              events = _fallback2.events;
-              let items = [];
-              ({ hasCheckout, waitForCheckout } = _fallback2);
-              closure_1 = events[Symbol.iterator]();
-              while (closure_1 !== undefined) {
-                let _compression = self._compression;
-                let arr = items.push(_compression.addEvent(tmp20));
-                c6 = 0;
-                continue;
-              }
-              self._compression.hasCheckout = hasCheckout;
-              self._compression.waitForCheckout = waitForCheckout;
-              self._used = self._compression;
-              c6 = 2;
-              let _Promise = Promise;
-              c8 = 3;
-              c9 = 1;
-              let obj4 = { value: Promise.all(items), done: false };
-              return obj4;
-            }
-          } else if (1 === tmp4) {
-            c6 = 0;
-            closure_1.return();
-            throw closure_1_7;
-          } else {
-            if (2 === tmp4) {
-              c6 = 0;
-              closure_131_0 = closure_1_7;
-              if (closure_1_130) {
-                let exceptionResult = closure_1_133.exception(closure_131_0, "Failed to add events when switching buffers.");
-              }
-              c9 = 3;
-            } else if (arg0 === 1) {
-              c9 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              _fallback = _fallback._fallback;
-              let clearResult = _fallback.clear();
-              c6 = 0;
-            }
-            c6 = 0;
-            c9 = 3;
-            let obj = { value, done: true };
-            return obj;
-          }
-        }
-      }
-    })();
-  });
-  entry2.value = function _switchToCompressionWorker() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items[11] = entry2;
-  return closure_8(EventBufferProxy, items);
-}
-
-function f23508(arg0) {
-  class TransportStatusCodeError {
-    constructor(arg0) {
-      self = this;
-      tmp = closure_2_7(this, TransportStatusCodeError);
-      items = [];
-      items[0] = "Transport returned status code " + arg0;
-      tmp2 = closure_2_4;
-      obj = closure_2_4(TransportStatusCodeError);
-      tmp3 = closure_2_3;
-      if (closure_2_9()) {
-        _Reflect = Reflect;
-        constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-      } else {
-        constructResult = obj.apply(self, items);
-      }
-      return tmp3(self, constructResult);
-    }
-  }
-  closure_5(TransportStatusCodeError, arg0);
-  return closure_8(TransportStatusCodeError);
-}
-
-function f23509(arg0) {
-  class RateLimitError {
-    constructor(arg0) {
-      self = this;
-      tmp = closure_2_7(this, RateLimitError);
-      items = ["Rate limit hit"];
-      tmp2 = closure_2_4;
-      obj = closure_2_4(RateLimitError);
-      tmp3 = closure_2_3;
-      if (closure_2_9()) {
-        tmp5 = globalThis;
-        _Reflect = Reflect;
-        constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-      } else {
-        constructResult = obj.apply(self, items);
-      }
-      tmp3Result = tmp3(self, constructResult);
-      tmp3Result.rateLimits = arg0;
-      return tmp3Result;
-    }
-  }
-  closure_5(RateLimitError, arg0);
-  return closure_8(RateLimitError);
-}
-
-function f23510(arg0) {
-  class ReplayDurationLimitError {
-    constructor() {
-      self = this;
-      tmp = closure_2_7(this, ReplayDurationLimitError);
-      items = ["Session is too long, not sending replay"];
-      tmp2 = closure_2_4;
-      obj = closure_2_4(ReplayDurationLimitError);
-      tmp3 = closure_2_3;
-      if (closure_2_9()) {
-        tmp5 = globalThis;
-        _Reflect = Reflect;
-        constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-      } else {
-        constructResult = obj.apply(self, items);
-      }
-      return tmp3(self, constructResult);
-    }
-  }
-  closure_5(ReplayDurationLimitError, arg0);
-  return closure_8(ReplayDurationLimitError);
-}
-
-function f23511() {
-  class ReplayContainer {
-    constructor(arg0) {
-      self = this;
-      f122473 = this;
-      options = arg0.options;
-      tmp = closure_2_7(this, ReplayContainer);
-      this.eventBuffer = null;
-      this.performanceEntries = [];
-      this.replayPerformanceEntries = [];
-      this.recordingMode = "session";
-      this.timeouts = { sessionIdlePause: 300000, sessionIdleExpire: 900000 };
-      this._lastActivity = Date.now();
-      this._isEnabled = false;
-      this._isPaused = false;
-      this._requiresManualStart = false;
-      this._hasInitializedCoreListeners = false;
-      obj = { errorIds: null, traceIds: null, urls: null, initialTimestamp: null, initialUrl: "" };
-      set = new Set();
-      obj.errorIds = set;
-      set1 = new Set();
-      obj.traceIds = set1;
-      obj.urls = [];
-      obj.initialTimestamp = Date.now();
-      this._context = obj;
-      this._recordingOptions = arg0.recordingOptions;
-      this._options = options;
-      obj1 = { maxWait: this._options.flushMaxDelay };
-      obj3 = closure_2_0(closure_2_1[8]);
-      obj7 = {};
-      merged = Object.assign(obj1);
-      obj7.setTimeoutImpl = closure_2_0(closure_2_1[9]).setTimeout;
-      this._debouncedFlush = obj3.debounce(() => f122473._flush(), this._options.flushMinDelay, obj7);
-      f122473 = (timestamp, arg1) => {
-        let flag = false;
-        if (f122473.eventBuffer) {
-          flag = false;
-          if (!f122473.isPaused()) {
-            flag = false;
-            if (f122473.isEnabled()) {
-              timestamp = timestamp.timestamp;
-              let result = timestamp;
-              if (timestamp <= 9999999999) {
-                result = 1000 * timestamp;
-              }
-              const _Date = Date;
-              const sum = result + f122473.timeouts.sessionIdlePause;
-              let tmp4 = sum >= Date.now();
-              if (tmp4) {
-                let flag2 = result <= f122473.getContext().initialTimestamp + f122473.getOptions().maxReplayDuration;
-                if (!flag2) {
-                  flag2 = false;
-                  if (closure_2_130) {
-                    const _HermesInternal = HermesInternal;
-                    closure_2_133.infoTick("Skipping event with timestamp " + result + " because it is after maxReplayDuration");
-                    flag2 = false;
-                  }
-                }
-                tmp4 = flag2;
-              }
-              flag = tmp4;
-            }
-          }
-        }
-        if (flag) {
-          let resolved = closure_2_147(f122473, timestamp, arg1);
-        } else {
-          resolved = Promise.resolve(null);
-        }
-        return resolved;
-      };
-      closure_1 = undefined;
-      c2 = undefined;
-      map = new Map();
-      closure_1 = map;
-      c2 = false;
-      this._throttledAddEvent = () => {
-        const items = [...arguments];
-        const rounded = Math.floor(Date.now() / 1000);
-        closure_0 = rounded - 5;
-        const item = map.forEach((item, index) => {
-          if (index < closure_0) {
-            map.delete(index);
-          }
-        });
-        const items1 = [...map.values()];
-        if (items1.reduce((acc, item) => acc + item, 0) >= 300) {
-          c2 = true;
-          let str = "__SKIPPED";
-          if (!c2) {
-            str = closure_1_177;
-          }
-          return str;
-        } else {
-          c2 = false;
-          const result = map.set(rounded, (map.get(rounded) || 0) + 1);
-          const items2 = [];
-          HermesBuiltin.arraySpread(items, 0);
-          return HermesBuiltin.apply(items2, undefined);
-        }
-      };
-      options1 = this.getOptions();
-      ({ slowClickTimeout, slowClickIgnoreSelectors } = options1);
-      tmp7 = undefined;
-      if (slowClickTimeout) {
-        obj8 = { threshold: null, timeout: null, scrollTimeout: 300, ignoreSelector: null };
-        _Math = Math;
-        num = 3000;
-        obj8.threshold = Math.min(3000, slowClickTimeout);
-        obj8.timeout = slowClickTimeout;
-        str = "";
-        if (slowClickIgnoreSelectors) {
-          str2 = ",";
-          str = slowClickIgnoreSelectors.join(",");
-        }
-        obj8.ignoreSelector = str;
-        tmp7 = obj8;
-      }
-      if (tmp7) {
-        tmp8 = closure_2_115;
-        tmp9 = new.target;
-        tmp10 = new.target;
-        tmp11 = self;
-        tmp12 = tmp7;
-        tmp13 = new closure_2_115(self, tmp7);
-        tmp14 = tmp13;
-        self.clickDetector = tmp13;
-      }
-      if (closure_2_130) {
-        _experiments = options._experiments;
-        tmp15 = closure_2_133;
-        obj9 = { captureExceptions: null, traceInternals: null };
-        obj9.captureExceptions = _experiments.captureExceptions;
-        obj9.traceInternals = _experiments.traceInternals;
-        setConfigResult = closure_2_133.setConfig(obj9);
-      }
-      self._handleVisibilityChange = () => {
-        if ("visible" === closure_0(map[8]).GLOBAL_OBJ.document.visibilityState) {
-          const result = f122473._doChangeToForegroundTasks();
-        } else {
-          const result1 = f122473._doChangeToBackgroundTasks();
-        }
-      };
-      self._handleWindowBlur = () => {
-        const merged = Object.assign({ category: "ui.blur" });
-        const result = f122473._doChangeToBackgroundTasks({ timestamp: Date.now() / 1000, type: "default" });
-      };
-      self._handleWindowFocus = () => {
-        const merged = Object.assign({ category: "ui.focus" });
-        const result = f122473._doChangeToForegroundTasks({ timestamp: Date.now() / 1000, type: "default" });
-      };
-      self._handleKeyboardEvent = (arg0) => {
-        if (f122473.isEnabled()) {
-          f122473.updateUserActivity();
-          ({ metaKey, ctrlKey, altKey, key, target } = arg0);
-          let tmp4 = null;
-          if (target) {
-            let isContentEditable = "INPUT" === target.tagName;
-            if (!isContentEditable) {
-              isContentEditable = "TEXTAREA" === target.tagName;
-            }
-            if (!isContentEditable) {
-              isContentEditable = target.isContentEditable;
-            }
-            tmp4 = null;
-            if (!isContentEditable) {
-              tmp4 = null;
-              if (key) {
-                let tmp5 = metaKey;
-                if (!metaKey) {
-                  tmp5 = ctrlKey;
-                }
-                if (!tmp5) {
-                  tmp5 = altKey;
-                }
-                if (tmp5) {
-                  const tmp9 = closure_0(map[8]).htmlTreeAsString(target, { maxStringLength: 200 }) || "<unknown>";
-                  const obj3 = { category: "ui.keyDown", message: tmp9, data: null };
-                  const obj4 = {};
-                  const merged = Object.assign(closure_2_122(target, tmp9).data);
-                  obj4.metaKey = metaKey;
-                  obj4.shiftKey = tmp3;
-                  obj4.ctrlKey = ctrlKey;
-                  obj4.altKey = altKey;
-                  obj4.key = key;
-                  obj3.data = obj4;
-                  const obj5 = { timestamp: null, type: "default" };
-                  const _Date = Date;
-                  obj5.timestamp = Date.now() / 1000;
-                  const merged1 = Object.assign(obj3);
-                  tmp4 = obj5;
-                  let obj2 = closure_0(map[8]);
-                } else {
-                  tmp4 = null;
-                }
-              }
-            }
-          }
-          if (tmp4) {
-            c1 = tmp4;
-            if ("sentry.transaction" !== tmp4.category) {
-              const items = ["ui.click", "ui.input"];
-              if (items.includes(tmp4.category)) {
-                f122473.triggerUserActivity();
-              } else {
-                const result = f122473.checkAndHandleExpiredSession();
-              }
-              f122473.addUpdate(() => {
-                obj = { type: Custom.Custom, timestamp: null, data: null };
-                let num = _null.timestamp;
-                if (!num) {
-                  num = 0;
-                }
-                obj.timestamp = 1000 * num;
-                const obj2 = { tag: "breadcrumb", payload: null };
-                const normalizer = f122473(map[8]);
-                obj2.payload = normalizer.normalize(_null, 10, 1000);
-                obj.data = obj2;
-                obj.throttledAddEvent(obj);
-                return "console" === _null.category;
-              });
-            }
-          }
-        }
-      };
-      return;
-    }
-  }
-  const entry = {
-    key: "getContext",
-    value: function getContext() {
-      return this._context;
-    }
-  };
-  let items = [
-    entry,
-    {
-      key: "isEnabled",
-      value: function isEnabled() {
-        return this._isEnabled;
-      }
-    },
-    {
-      key: "isPaused",
-      value: function isPaused() {
-        return this._isPaused;
-      }
-    },
-    {
-      key: "isRecordingCanvas",
-      value: function isRecordingCanvas() {
-        return Boolean(this._canvas);
-      }
-    },
-    {
-      key: "getOptions",
-      value: function getOptions() {
-        return this._options;
-      }
-    },
-    {
-      key: "handleException",
-      value: function handleException(error) {
-        if (closure_1_130) {
-          closure_1_133.exception(error);
-        }
-        if (this._options.onError) {
-          const _options = this._options;
-          _options.onError(error);
-        }
-      }
-    },
-    {
-      key: "initializeSampling",
-      value: function initializeSampling(id) {
-        const self = this;
-        const _options = this._options;
-        self._requiresManualStart = _options.errorSampleRate <= 0 && _options.sessionSampleRate <= 0;
-        if (!(_options.errorSampleRate <= 0 && _options.sessionSampleRate <= 0)) {
-          const result = self._initializeSessionForSampling(id);
-          if (self.session) {
-            if (false !== self.session.sampled) {
-              let str2 = "session";
-              if ("buffer" === self.session.sampled) {
-                str2 = "session";
-                if (0 === self.session.segmentId) {
-                  str2 = "buffer";
-                }
-              }
-              self.recordingMode = str2;
-              if (closure_1_130) {
-                const _HermesInternal = HermesInternal;
-                closure_1_133.infoTick("Starting replay in " + self.recordingMode + " mode");
-              }
-              self._initializeRecording();
-            }
-          } else if (closure_1_130) {
-            const _Error = Error;
-            const error = new Error("Unable to initialize and create session");
-            closure_1_133.exception(error);
-          }
-        }
-      }
-    },
-    {
-      key: "start",
-      value: function start() {
-        const self = this;
-        if (this._isEnabled) {
-          if ("session" === self.recordingMode) {
-            if (closure_1_130) {
-              closure_1_133.log("Recording is already in progress");
-            }
-          }
-        }
-        if (self._isEnabled) {
-          if ("buffer" === self.recordingMode) {
-            if (closure_1_130) {
-              closure_1_133.log("Buffering is in progress, call `flush()` to save the replay");
-            }
-          }
-        }
-        if (closure_1_130) {
-          closure_1_133.infoTick("Starting replay in session mode");
-        }
-        self._updateUserActivity();
-        self.session = closure_1_145({ maxReplayDuration: self._options.maxReplayDuration, sessionIdleExpire: self.timeouts.sessionIdleExpire }, { stickySession: self._options.stickySession, sessionSampleRate: 1, allowBuffering: false });
-        self.recordingMode = "session";
-        self._initializeRecording();
-        const obj = { maxReplayDuration: self._options.maxReplayDuration, sessionIdleExpire: self.timeouts.sessionIdleExpire };
-        const obj2 = { stickySession: self._options.stickySession, sessionSampleRate: 1, allowBuffering: false };
-      }
-    },
-    {
-      key: "startBuffering",
-      value: function startBuffering() {
-        const self = this;
-        if (this._isEnabled) {
-          if (closure_1_130) {
-            closure_1_133.log("Buffering is in progress, call `flush()` to save the replay");
-          }
-        } else {
-          if (closure_1_130) {
-            closure_1_133.infoTick("Starting replay in buffer mode");
-          }
-          const obj = { sessionIdleExpire: self.timeouts.sessionIdleExpire, maxReplayDuration: self._options.maxReplayDuration };
-          const obj2 = { stickySession: self._options.stickySession, sessionSampleRate: 0, allowBuffering: true };
-          self.session = closure_1_145(obj, obj2);
-          self.recordingMode = "buffer";
-          self._initializeRecording();
-        }
-      }
-    },
-    {
-      key: "startRecording",
-      value: function startRecording() {
-        const self = this;
-        try {
-          const _canvas = self._canvas;
-          const obj2 = {};
-          const merged = Object.assign(self._recordingOptions);
-          if ("buffer" === self.recordingMode) {
-            let obj3 = { checkoutEveryNms: 60000 };
-          } else {
-            obj3 = self._options._experiments.continuousCheckout;
-            if (obj3) {
-              const obj4 = { checkoutEveryNms: null };
-              const _Math = Math;
-              obj4.checkoutEveryNms = Math.max(360000, self._options._experiments.continuousCheckout);
-              obj3 = obj4;
-            }
-          }
-          const merged1 = Object.assign(obj3);
-          obj2.emit = closure_1_169(self);
-          let str2;
-          if (closure_1_168 != null) {
-            str2 = closure_1_168.userAgent;
-          }
-          if (str2 == null) {
-            str2 = "";
-          }
-          if (obj5.test(str2)) {
-            const obj7 = { sampling: { mousemove: false } };
-            let obj8 = obj7;
-          } else {
-            let str3;
-            if (closure_1_168 != null) {
-              str3 = closure_1_168.userAgent;
-            }
-            if (str3 == null) {
-              str3 = "";
-            }
-            if (obj6.test(str3)) {
-              let maxTouchPoints;
-              if (closure_1_168 != null) {
-                maxTouchPoints = closure_1_168.maxTouchPoints;
-              }
-              if (maxTouchPoints) {
-                let maxTouchPoints1;
-                if (closure_1_168 != null) {
-                  maxTouchPoints1 = closure_1_168.maxTouchPoints;
-                }
-              }
-            }
-            obj8 = {};
-            obj6 = /Macintosh/i;
-          }
-          const merged2 = Object.assign(obj8);
-          obj2.onMutation = self._onMutationHandler.bind(self);
-          if (_canvas) {
-            ({ recordCanvas: obj10.recordCanvas, getCanvasManager: obj10.getCanvasManager, sampling: obj10.sampling, dataURLOptions: obj10.dataURLOptions } = _canvas);
-            let obj17 = { recordCanvas: null, getCanvasManager: null, sampling: null, dataURLOptions: null };
-            const obj9 = { recordCanvas: null, getCanvasManager: null, sampling: null, dataURLOptions: null };
-          } else {
-            obj17 = {};
-          }
-          const merged3 = Object.assign(obj17);
-          self._stopRecording = closure_1_109(obj2);
-          const _onMutationHandler = self._onMutationHandler;
-          obj5 = /iPhone|iPad|iPod/i;
-        } catch (tmp20) {
-          obj.handleException(tmp20);
-        }
-      }
-    },
-    {
-      key: "stopRecording",
-      value: function stopRecording() {
-        const self = this;
-        try {
-          if (self._stopRecording) {
-            self._stopRecording();
-            self._stopRecording = undefined;
-          }
-          return true;
-        } catch (tmp2) {
-          obj.handleException(tmp2);
-          return false;
-        }
-      }
-    },
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  
-  ];
-  const entry1 = { key: "stop", value: null };
-  closure_4 = closure_2(function() {
-    const self = this;
-    closure_1 = arg0;
-    c7 = 0;
-    c8 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (c8 === 2) {
-        c8 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "HermesInternal", done: "+60" };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_4 = self;
-              closure_3 = tmp3;
-              closure_2 = tmp5;
-              closure_130_0 = undefined;
-              let reason;
-              let obj4 = closure_1;
-              if (closure_1 === undefined) {
-                obj4 = {};
-              }
-              let flag = obj4.forceFlush;
-              if (flag === undefined) {
-                flag = false;
-              }
-              closure_130_0 = flag;
-              reason = obj4.reason;
-              c7 = 1;
-              c8 = 1;
-              return { value: "Path", done: true };
-            }
-          } else {
-            if (1 === tmp8) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c8 = 3;
-                const obj5 = { value, done: true };
-                return obj5;
-              } else if (closure_4._isEnabled) {
-                closure_4._isEnabled = false;
-                closure_4.recordingMode = "buffer";
-                c5 = 1;
-                if (closure_1_130) {
-                  let str = "";
-                  if (reason) {
-                    const _HermesInternal = HermesInternal;
-                    str = " triggered by " + reason;
-                  }
-                  logger.log("Stopping Replay" + str);
-                }
-                closure_1_149();
-                closure_4._removeListeners();
-                closure_4.stopRecording();
-                const _debouncedFlush = closure_4._debouncedFlush;
-                _debouncedFlush.cancel();
-                if (closure_130_0) {
-                  c7 = 3;
-                  c8 = 1;
-                  const obj6 = { value: closure_4._flush({ force: true }), done: false };
-                  return obj6;
-                } else {
-                  const eventBuffer = closure_4.eventBuffer;
-                  if (eventBuffer != null) {
-                    eventBuffer.destroy();
-                  }
-                  closure_4.eventBuffer = null;
-                  closure_1_140(closure_4);
-                  c5 = 0;
-                }
-              }
-            } else if (2 === tmp8) {
-              c5 = 0;
-              closure_130_2 = closure_6;
-              closure_4.handleException(closure_130_2);
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              c8 = 3;
-              const obj = { value, done: true };
-              return obj;
-            }
-            c8 = 3;
-          }
-        } catch (tmp41) {
-          closure_6 = tmp41;
-          if (tmp4 === c5) {
-            c8 = tmp2;
-            throw tmp41;
-          } else {
-            c7 = tmp;
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  entry1.value = function stop() {
-    const self = this;
-    const apply = closure_4.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items[11] = entry1;
-  items[12] = {
-    key: "pause",
-    value: function pause() {
-      const self = this;
-      if (!this._isPaused) {
-        self._isPaused = true;
-        self.stopRecording();
-        if (closure_1_130) {
-          closure_1_133.log("Pausing replay");
-        }
-      }
-    }
-  };
-  items[13] = {
-    key: "resume",
-    value: function resume() {
-      const self = this;
-      if (tmp) {
-        self._isPaused = false;
-        self.startRecording();
-        if (closure_1_130) {
-          closure_1_133.log("Resuming replay");
-        }
-      }
-      tmp = this._isPaused && self._checkSession();
-    }
-  };
-  const entry2 = { key: "sendBufferedReplayOrFlush", value: null };
-  closure_3 = closure_2(function() {
-    const self = this;
-    closure_1 = arg0;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function*() {
-      if ("session" === closure_4.recordingMode) {
-        return closure_4.flushImmediate();
-      }
-      const _Date = Date;
-      closure_130_1 = Date.now();
-      if (closure_1_130) {
-        logger.log("Converting buffer to session");
-      }
-      yield closure_4.flushImmediate();
-      closure_130_2 = closure_4.stopRecording();
-      let tmp7 = closure_130_0;
-      if (closure_130_0) {
-        tmp7 = closure_130_2;
-      }
-      if (tmp7) {
-        tmp7 = "session" !== closure_4.recordingMode;
-      }
-      if (tmp7) {
-        closure_4.recordingMode = "session";
-        if (closure_4.session) {
-          closure_4.session.dirty = false;
-          closure_4._updateUserActivity(closure_130_1);
-          const result = closure_4._updateSessionActivity(closure_130_1);
-          closure_4._maybeSaveSession();
-        }
-        closure_4.startRecording();
-      }
-      yield "HermesInternal";
-      closure_4 = self;
-      closure_3 = self;
-      closure_2 = tmp2;
-      let obj4 = closure_1;
-      if (closure_1 === undefined) {
-        obj4 = {};
-      }
-      let flag2 = obj4.continueRecording;
-      if (flag2 === undefined) {
-        flag2 = true;
-      }
-      closure_130_0 = flag2;
-      return "Path";
-    })();
-    iter.next();
-    return iter;
-  });
-  entry2.value = function sendBufferedReplayOrFlush() {
-    const self = this;
-    const apply = closure_3.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items[14] = entry2;
-  items[15] = {
-    key: "addUpdate",
-    value: function addUpdate(fn) {
-      const self = this;
-      let _isEnabled = "buffer" !== this.recordingMode;
-      if (_isEnabled) {
-        _isEnabled = self._isEnabled;
-      }
-      if (_isEnabled) {
-        _isEnabled = true !== tmp;
-      }
-      if (_isEnabled) {
-        self._debouncedFlush();
-      }
-    }
-  };
-  items[16] = {
-    key: "triggerUserActivity",
-    value: function triggerUserActivity() {
-      const self = this;
-      this._updateUserActivity();
-      if (this._stopRecording) {
-        const result = self.checkAndHandleExpiredSession();
-        const result1 = self._updateSessionActivity();
-      } else if (self._checkSession()) {
-        self.resume();
-      }
-    }
-  };
-  items[17] = {
-    key: "updateUserActivity",
-    value: function updateUserActivity() {
-      this._updateUserActivity();
-      const result = this._updateSessionActivity();
-    }
-  };
-  items[18] = {
-    key: "conditionalFlush",
-    value: function conditionalFlush() {
-      const self = this;
-      if ("buffer" === this.recordingMode) {
-        let resolved = Promise.resolve();
-      } else {
-        resolved = self.flushImmediate();
-      }
-      return resolved;
-    }
-  };
-  items[19] = {
-    key: "flush",
-    value: function flush() {
-      return this._debouncedFlush();
-    }
-  };
-  items[20] = {
-    key: "flushImmediate",
-    value: function flushImmediate() {
-      this._debouncedFlush();
-      const _debouncedFlush = this._debouncedFlush;
-      return _debouncedFlush.flush();
-    }
-  };
-  items[21] = {
-    key: "cancelFlush",
-    value: function cancelFlush() {
-      const _debouncedFlush = this._debouncedFlush;
-      _debouncedFlush.cancel();
-    }
-  };
-  items[22] = {
-    key: "getSessionId",
-    value: function getSessionId(arg0) {
-      const self = this;
-      if (arg0) {
-        const session = self.session;
-        let sampled;
-        if (session != null) {
-          sampled = session.sampled;
-        }
-      }
-      const session2 = self.session;
-      let id;
-      if (session2 != null) {
-        id = session2.id;
-      }
-      return id;
-    }
-  };
-  items[23] = {
-    key: "checkAndHandleExpiredSession",
-    value: function checkAndHandleExpiredSession() {
-      const self = this;
-      if (this._lastActivity) {
-        const _lastActivity = self._lastActivity;
-        const sessionIdlePause = self.timeouts.sessionIdlePause;
-        const _Date = Date;
-        const date = new Date();
-        let tmp8 = null === _lastActivity;
-        if (!tmp8) {
-          tmp8 = undefined === sessionIdlePause;
-        }
-        if (!tmp8) {
-          tmp8 = sessionIdlePause < 0;
-        }
-        if (!tmp8) {
-          tmp8 = 0 !== sessionIdlePause && _lastActivity + sessionIdlePause <= tmp6;
-          const tmp9 = 0 !== sessionIdlePause && _lastActivity + sessionIdlePause <= tmp6;
-        }
-        if (tmp8) {
-          if (self.session) {
-            if ("session" === self.session.sampled) {
-              self.pause();
-            }
-          }
-        }
-        tmp6 = +date;
-      }
-      return self._checkSession();
-    }
-  };
-  items[24] = {
-    key: "setInitialState",
-    value: function setInitialState() {
-      const obj = {};
-      const combined = "" + closure_0(dependencyMap[8]).GLOBAL_OBJ.location.pathname + closure_0(dependencyMap[8]).GLOBAL_OBJ.location.hash + closure_0(dependencyMap[8]).GLOBAL_OBJ.location.search;
-      const combined1 = "" + closure_0(dependencyMap[8]).GLOBAL_OBJ.location.origin + combined;
-      obj.performanceEntries = [];
-      obj.replayPerformanceEntries = [];
-      obj._clearContext();
-      obj._context.initialUrl = combined1;
-      obj._context.initialTimestamp = Date.now();
-      const urls = obj._context.urls;
-      urls.push(combined1);
-    }
-  };
-  items[25] = {
-    key: "throttledAddEvent",
-    value: function throttledAddEvent(arg0, arg1) {
-      const self = this;
-      const _throttledAddEventResult = this._throttledAddEvent(arg0, arg1);
-      if (_throttledAddEventResult === closure_177) {
-        let payload = { timestamp: null, type: "default" };
-        const _Date = Date;
-        payload.timestamp = Date.now() / 1000;
-        const merged = Object.assign({ category: "replay.throttled" });
-        self.addUpdate(() => {
-          let num = payload.timestamp;
-          if (!num) {
-            num = 0;
-          }
-          payload = { type: 5, timestamp: num, data: { tag: "breadcrumb", payload, metric: true } };
-          return !closure_2_146(self, payload);
-        });
-      }
-      return _throttledAddEventResult;
-    }
-  };
-  items[26] = {
-    key: "getCurrentRoute",
-    value: function getCurrentRoute() {
-      let lastActiveSpan = this.lastActiveSpan;
-      if (!lastActiveSpan) {
-        lastActiveSpan = closure_0(dependencyMap[8]).getActiveSpan();
-        const obj = closure_0(dependencyMap[8]);
-      }
-      let rootSpan = lastActiveSpan;
-      if (lastActiveSpan) {
-        rootSpan = closure_0(dependencyMap[8]).getRootSpan(lastActiveSpan);
-        const obj2 = closure_0(dependencyMap[8]);
-      }
-      let data = rootSpan;
-      if (rootSpan) {
-        data = closure_0(dependencyMap[8]).spanToJSON(rootSpan).data;
-        const obj4 = closure_0(dependencyMap[8]);
-      }
-      if (!data) {
-        data = {};
-      }
-      const tmp10 = data[closure_0(undefined, dependencyMap[8]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE];
-      if (rootSpan) {
-        if (tmp10) {
-          const items = ["route", "custom"];
-          if (items.includes(tmp10)) {
-            return closure_0(dependencyMap[8]).spanToJSON(rootSpan).description;
-          }
-        }
-      }
-    }
-  };
-  items[27] = {
-    key: "_initializeRecording",
-    value: function _initializeRecording() {
-      const self = this;
-      this.setInitialState();
-      const result = this._updateSessionActivity();
-      if (this._options.useCompression) {
-        const _window = window;
-        if (window.Worker) {
-          let tmp5 = (function _loadWorker(arg0) {
-            try {
-              let tmp3 = arg0;
-              if (!arg0) {
-                tmp3 = (function _getWorkerUrl() {
-                  if (typeof globalThis.__SENTRY_EXCLUDE_REPLAY_WORKER__ !== "undefined") {
-                    if (globalThis.__SENTRY_EXCLUDE_REPLAY_WORKER__) {
-                      return "";
-                    }
-                  }
-                  const blob = new Blob(["var t=Uint8Array,n=Uint16Array,r=Int32Array,e=new t([0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0,0,0,0]),i=new t([0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,0,0]),s=new t([16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15]),a=function(t,e){for(var i=new n(31),s=0;s<31;++s)i[s]=e+=1<<t[s-1];var a=new r(i[30]);for(s=1;s<30;++s)for(var o=i[s];o<i[s+1];++o)a[o]=o-i[s]<<5|s;return{b:i,r:a}},o=a(e,2),h=o.b,f=o.r;h[28]=258,f[258]=28;for(var l=a(i,0).r,u=new n(32768),c=0;c<32768;++c){var v=(43690&c)>>1|(21845&c)<<1;v=(61680&(v=(52428&v)>>2|(13107&v)<<2))>>4|(3855&v)<<4,u[c]=((65280&v)>>8|(255&v)<<8)>>1}var d=function(t,r,e){for(var i=t.length,s=0,a=new n(r);s<i;++s)t[s]&&++a[t[s]-1];var o,h=new n(r);for(s=1;s<r;++s)h[s]=h[s-1]+a[s-1]<<1;if(e){o=new n(1<<r);var f=15-r;for(s=0;s<i;++s)if(t[s])for(var l=s<<4|t[s],c=r-t[s],v=h[t[s]-1]++<<c,d=v|(1<<c)-1;v<=d;++v)o[u[v]>>f]=l}else for(o=new n(i),s=0;s<i;++s)t[s]&&(o[s]=u[h[t[s]-1]++]>>15-t[s]);return o},p=new t(288);for(c=0;c<144;++c)p[c]=8;for(c=144;c<256;++c)p[c]=9;for(c=256;c<280;++c)p[c]=7;for(c=280;c<288;++c)p[c]=8;var g=new t(32);for(c=0;c<32;++c)g[c]=5;var w=d(p,9,0),y=d(g,5,0),m=function(t){return(t+7)/8|0},b=function(n,r,e){return(null==e||e>n.length)&&(e=n.length),new t(n.subarray(r,e))},M=[\"unexpected EOF\",\"invalid block type\",\"invalid length/literal\",\"invalid distance\",\"stream finished\",\"no stream handler\",,\"no callback\",\"invalid UTF-8 data\",\"extra field too long\",\"date not in range 1980-2099\",\"filename too long\",\"stream finishing\",\"invalid zip data\"],E=function(t,n,r){var e=new Error(n||M[t]);if(e.code=t,Error.captureStackTrace&&Error.captureStackTrace(e,E),!r)throw e;return e},z=function(t,n,r){r<<=7&n;var e=n/8|0;t[e]|=r,t[e+1]|=r>>8},_=function(t,n,r){r<<=7&n;var e=n/8|0;t[e]|=r,t[e+1]|=r>>8,t[e+2]|=r>>16},x=function(r,e){for(var i=[],s=0;s<r.length;++s)r[s]&&i.push({s:s,f:r[s]});var a=i.length,o=i.slice();if(!a)return{t:F,l:0};if(1==a){var h=new t(i[0].s+1);return h[i[0].s]=1,{t:h,l:1}}i.sort(function(t,n){return t.f-n.f}),i.push({s:-1,f:25001});var f=i[0],l=i[1],u=0,c=1,v=2;for(i[0]={s:-1,f:f.f+l.f,l:f,r:l};c!=a-1;)f=i[i[u].f<i[v].f?u++:v++],l=i[u!=c&&i[u].f<i[v].f?u++:v++],i[c++]={s:-1,f:f.f+l.f,l:f,r:l};var d=o[0].s;for(s=1;s<a;++s)o[s].s>d&&(d=o[s].s);var p=new n(d+1),g=A(i[c-1],p,0);if(g>e){s=0;var w=0,y=g-e,m=1<<y;for(o.sort(function(t,n){return p[n.s]-p[t.s]||t.f-n.f});s<a;++s){var b=o[s].s;if(!(p[b]>e))break;w+=m-(1<<g-p[b]),p[b]=e}for(w>>=y;w>0;){var M=o[s].s;p[M]<e?w-=1<<e-p[M]++-1:++s}for(;s>=0&&w;--s){var E=o[s].s;p[E]==e&&(--p[E],++w)}g=e}return{t:new t(p),l:g}},A=function(t,n,r){return-1==t.s?Math.max(A(t.l,n,r+1),A(t.r,n,r+1)):n[t.s]=r},D=function(t){for(var r=t.length;r&&!t[--r];);for(var e=new n(++r),i=0,s=t[0],a=1,o=function(t){e[i++]=t},h=1;h<=r;++h)if(t[h]==s&&h!=r)++a;else{if(!s&&a>2){for(;a>138;a-=138)o(32754);a>2&&(o(a>10?a-11<<5|28690:a-3<<5|12305),a=0)}else if(a>3){for(o(s),--a;a>6;a-=6)o(8304);a>2&&(o(a-3<<5|8208),a=0)}for(;a--;)o(s);a=1,s=t[h]}return{c:e.subarray(0,i),n:r}},T=function(t,n){for(var r=0,e=0;e<n.length;++e)r+=t[e]*n[e];return r},k=function(t,n,r){var e=r.length,i=m(n+2);t[i]=255&e,t[i+1]=e>>8,t[i+2]=255^t[i],t[i+3]=255^t[i+1];for(var s=0;s<e;++s)t[i+s+4]=r[s];return 8*(i+4+e)},U=function(t,r,a,o,h,f,l,u,c,v,m){z(r,m++,a),++h[256];for(var b=x(h,15),M=b.t,E=b.l,A=x(f,15),U=A.t,C=A.l,F=D(M),I=F.c,S=F.n,L=D(U),O=L.c,j=L.n,q=new n(19),B=0;B<I.length;++B)++q[31&I[B]];for(B=0;B<O.length;++B)++q[31&O[B]];for(var G=x(q,7),H=G.t,J=G.l,K=19;K>4&&!H[s[K-1]];--K);var N,P,Q,R,V=v+5<<3,W=T(h,p)+T(f,g)+l,X=T(h,M)+T(f,U)+l+14+3*K+T(q,H)+2*q[16]+3*q[17]+7*q[18];if(c>=0&&V<=W&&V<=X)return k(r,m,t.subarray(c,c+v));if(z(r,m,1+(X<W)),m+=2,X<W){N=d(M,E,0),P=M,Q=d(U,C,0),R=U;var Y=d(H,J,0);z(r,m,S-257),z(r,m+5,j-1),z(r,m+10,K-4),m+=14;for(B=0;B<K;++B)z(r,m+3*B,H[s[B]]);m+=3*K;for(var Z=[I,O],$=0;$<2;++$){var tt=Z[$];for(B=0;B<tt.length;++B){var nt=31&tt[B];z(r,m,Y[nt]),m+=H[nt],nt>15&&(z(r,m,tt[B]>>5&127),m+=tt[B]>>12)}}}else N=w,P=p,Q=y,R=g;for(B=0;B<u;++B){var rt=o[B];if(rt>255){_(r,m,N[(nt=rt>>18&31)+257]),m+=P[nt+257],nt>7&&(z(r,m,rt>>23&31),m+=e[nt]);var et=31&rt;_(r,m,Q[et]),m+=R[et],et>3&&(_(r,m,rt>>5&8191),m+=i[et])}else _(r,m,N[rt]),m+=P[rt]}return _(r,m,N[256]),m+P[256]},C=new r([65540,131080,131088,131104,262176,1048704,1048832,2114560,2117632]),F=new t(0),I=function(){for(var t=new Int32Array(256),n=0;n<256;++n){for(var r=n,e=9;--e;)r=(1&r&&-306674912)^r>>>1;t[n]=r}return t}(),S=function(){var t=1,n=0;return{p:function(r){for(var e=t,i=n,s=0|r.length,a=0;a!=s;){for(var o=Math.min(a+2655,s);a<o;++a)i+=e+=r[a];e=(65535&e)+15*(e>>16),i=(65535&i)+15*(i>>16)}t=e,n=i},d:function(){return(255&(t%=65521))<<24|(65280&t)<<8|(255&(n%=65521))<<8|n>>8}}},L=function(s,a,o,h,u){if(!u&&(u={l:1},a.dictionary)){var c=a.dictionary.subarray(-32768),v=new t(c.length+s.length);v.set(c),v.set(s,c.length),s=v,u.w=c.length}return function(s,a,o,h,u,c){var v=c.z||s.length,d=new t(h+v+5*(1+Math.ceil(v/7e3))+u),p=d.subarray(h,d.length-u),g=c.l,w=7&(c.r||0);if(a){w&&(p[0]=c.r>>3);for(var y=C[a-1],M=y>>13,E=8191&y,z=(1<<o)-1,_=c.p||new n(32768),x=c.h||new n(z+1),A=Math.ceil(o/3),D=2*A,T=function(t){return(s[t]^s[t+1]<<A^s[t+2]<<D)&z},F=new r(25e3),I=new n(288),S=new n(32),L=0,O=0,j=c.i||0,q=0,B=c.w||0,G=0;j+2<v;++j){var H=T(j),J=32767&j,K=x[H];if(_[J]=K,x[H]=J,B<=j){var N=v-j;if((L>7e3||q>24576)&&(N>423||!g)){w=U(s,p,0,F,I,S,O,q,G,j-G,w),q=L=O=0,G=j;for(var P=0;P<286;++P)I[P]=0;for(P=0;P<30;++P)S[P]=0}var Q=2,R=0,V=E,W=J-K&32767;if(N>2&&H==T(j-W))for(var X=Math.min(M,N)-1,Y=Math.min(32767,j),Z=Math.min(258,N);W<=Y&&--V&&J!=K;){if(s[j+Q]==s[j+Q-W]){for(var $=0;$<Z&&s[j+$]==s[j+$-W];++$);if($>Q){if(Q=$,R=W,$>X)break;var tt=Math.min(W,$-2),nt=0;for(P=0;P<tt;++P){var rt=j-W+P&32767,et=rt-_[rt]&32767;et>nt&&(nt=et,K=rt)}}}W+=(J=K)-(K=_[J])&32767}if(R){F[q++]=268435456|f[Q]<<18|l[R];var it=31&f[Q],st=31&l[R];O+=e[it]+i[st],++I[257+it],++S[st],B=j+Q,++L}else F[q++]=s[j],++I[s[j]]}}for(j=Math.max(j,B);j<v;++j)F[q++]=s[j],++I[s[j]];w=U(s,p,g,F,I,S,O,q,G,j-G,w),g||(c.r=7&w|p[w/8|0]<<3,w-=7,c.h=x,c.p=_,c.i=j,c.w=B)}else{for(j=c.w||0;j<v+g;j+=65535){var at=j+65535;at>=v&&(p[w/8|0]=g,at=v),w=k(p,w+1,s.subarray(j,at))}c.i=v}return b(d,0,h+m(w)+u)}(s,null==a.level?6:a.level,null==a.mem?u.l?Math.ceil(1.5*Math.max(8,Math.min(13,Math.log(s.length)))):20:12+a.mem,o,h,u)},O=function(t,n,r){for(;r;++n)t[n]=r,r>>>=8},j=function(){function n(n,r){if(\"function\"==typeof n&&(r=n,n={}),this.ondata=r,this.o=n||{},this.s={l:0,i:32768,w:32768,z:32768},this.b=new t(98304),this.o.dictionary){var e=this.o.dictionary.subarray(-32768);this.b.set(e,32768-e.length),this.s.i=32768-e.length}}return n.prototype.p=function(t,n){this.ondata(L(t,this.o,0,0,this.s),n)},n.prototype.push=function(n,r){this.ondata||E(5),this.s.l&&E(4);var e=n.length+this.s.z;if(e>this.b.length){if(e>2*this.b.length-32768){var i=new t(-32768&e);i.set(this.b.subarray(0,this.s.z)),this.b=i}var s=this.b.length-this.s.z;this.b.set(n.subarray(0,s),this.s.z),this.s.z=this.b.length,this.p(this.b,!1),this.b.set(this.b.subarray(-32768)),this.b.set(n.subarray(s),32768),this.s.z=n.length-s+32768,this.s.i=32766,this.s.w=32768}else this.b.set(n,this.s.z),this.s.z+=n.length;this.s.l=1&r,(this.s.z>this.s.w+8191||r)&&(this.p(this.b,r||!1),this.s.w=this.s.i,this.s.i-=2)},n.prototype.flush=function(){this.ondata||E(5),this.s.l&&E(4),this.p(this.b,!1),this.s.w=this.s.i,this.s.i-=2},n}();function q(t,n){n||(n={});var r=function(){var t=-1;return{p:function(n){for(var r=t,e=0;e<n.length;++e)r=I[255&r^n[e]]^r>>>8;t=r},d:function(){return~t}}}(),e=t.length;r.p(t);var i,s=L(t,n,10+((i=n).filename?i.filename.length+1:0),8),a=s.length;return function(t,n){var r=n.filename;if(t[0]=31,t[1]=139,t[2]=8,t[8]=n.level<2?4:9==n.level?2:0,t[9]=3,0!=n.mtime&&O(t,4,Math.floor(new Date(n.mtime||Date.now())/1e3)),r){t[3]=8;for(var e=0;e<=r.length;++e)t[e+10]=r.charCodeAt(e)}}(s,n),O(s,a-8,r.d()),O(s,a-4,e),s}var B=function(){function t(t,n){this.c=S(),this.v=1,j.call(this,t,n)}return t.prototype.push=function(t,n){this.c.p(t),j.prototype.push.call(this,t,n)},t.prototype.p=function(t,n){var r=L(t,this.o,this.v&&(this.o.dictionary?6:2),n&&4,this.s);this.v&&(function(t,n){var r=n.level,e=0==r?0:r<6?1:9==r?3:2;if(t[0]=120,t[1]=e<<6|(n.dictionary&&32),t[1]|=31-(t[0]<<8|t[1])%31,n.dictionary){var i=S();i.p(n.dictionary),O(t,2,i.d())}}(r,this.o),this.v=0),n&&O(r,r.length-4,this.c.d()),this.ondata(r,n)},t.prototype.flush=function(){j.prototype.flush.call(this)},t}(),G=\"undefined\"!=typeof TextEncoder&&new TextEncoder,H=\"undefined\"!=typeof TextDecoder&&new TextDecoder;try{H.decode(F,{stream:!0})}catch(t){}var J=function(){function t(t){this.ondata=t}return t.prototype.push=function(t,n){this.ondata||E(5),this.d&&E(4),this.ondata(K(t),this.d=n||!1)},t}();function K(n,r){if(G)return G.encode(n);for(var e=n.length,i=new t(n.length+(n.length>>1)),s=0,a=function(t){i[s++]=t},o=0;o<e;++o){if(s+5>i.length){var h=new t(s+8+(e-o<<1));h.set(i),i=h}var f=n.charCodeAt(o);f<128||r?a(f):f<2048?(a(192|f>>6),a(128|63&f)):f>55295&&f<57344?(a(240|(f=65536+(1047552&f)|1023&n.charCodeAt(++o))>>18),a(128|f>>12&63),a(128|f>>6&63),a(128|63&f)):(a(224|f>>12),a(128|f>>6&63),a(128|63&f))}return b(i,0,s)}const N=new class{constructor(){this._init()}clear(){this._init()}addEvent(t){if(!t)throw new Error(\"Adding invalid event\");const n=this._hasEvents?\",\":\"\";this.stream.push(n+t),this._hasEvents=!0}finish(){this.stream.push(\"]\",!0);const t=function(t){let n=0;for(const r of t)n+=r.length;const r=new Uint8Array(n);for(let n=0,e=0,i=t.length;n<i;n++){const i=t[n];r.set(i,e),e+=i.length}return r}(this._deflatedData);return this._init(),t}_init(){this._hasEvents=!1,this._deflatedData=[],this.deflate=new B,this.deflate.ondata=(t,n)=>{this._deflatedData.push(t)},this.stream=new J((t,n)=>{this.deflate.push(t,n)}),this.stream.push(\"[\")}},P={clear:()=>{N.clear()},addEvent:t=>N.addEvent(t),finish:()=>N.finish(),compress:t=>function(t){return q(K(t))}(t)};addEventListener(\"message\",function(t){const n=t.data.method,r=t.data.id,e=t.data.arg;if(n in P&&\"function\"==typeof P[n])try{const t=P[n](e);postMessage({id:r,method:n,success:!0,response:t})}catch(t){postMessage({id:r,method:n,success:!1,response:t.message}),console.error(t)}}),postMessage({id:void 0,method:\"init\",success:!0,response:void 0});"]);
-                  return URL.createObjectURL(blob);
-                })();
-              }
-              if (tmp3) {
-                if (closure_1_130) {
-                  let str = "";
-                  if (arg0) {
-                    const _HermesInternal = HermesInternal;
-                    str = " from " + arg0;
-                  }
-                  closure_1_133.log("Using compression worker" + str);
-                }
-                const worker = new globalThis.Worker(tmp4);
-                const tmp18 = new closure_1_138(worker);
-                return tmp18;
-              }
-            } catch (tmp20) {
-              if (closure_1_130) {
-                closure_1_133.exception(tmp20, "Failed to create compression worker");
-              }
-              return tmp;
-            }
-          })(tmp3);
-        }
-        self.eventBuffer = tmp5;
-        self._removeListeners();
-        self._addListeners();
-        self._isEnabled = true;
-        self._isPaused = false;
-        self.startRecording();
-      }
-      if (closure_1_130) {
-        closure_1_133.log("Using simple buffer");
-      }
-      tmp5 = new closure_1_135();
-    }
-  };
-  items[28] = {
-    key: "_initializeSessionForSampling",
-    value: function _initializeSessionForSampling(previousSessionId) {
-      this.session = closure_1_145({ sessionIdleExpire: this.timeouts.sessionIdleExpire, maxReplayDuration: this._options.maxReplayDuration, previousSessionId }, { stickySession: this._options.stickySession, sessionSampleRate: this._options.sessionSampleRate, allowBuffering: this._options.errorSampleRate > 0 });
-    }
-  };
-  items[29] = {
-    key: "_checkSession",
-    value: function _checkSession() {
-      const self = this;
-      if (this.session) {
-        const session = self.session;
-        const obj = { sessionIdleExpire: self.timeouts.sessionIdleExpire, maxReplayDuration: self._options.maxReplayDuration };
-        let tmp2 = closure_1_144(session, obj);
-        if (tmp2) {
-          let tmp3 = "buffer" !== session.sampled;
-          if (!tmp3) {
-            tmp3 = 0 !== session.segmentId;
-          }
-          tmp2 = tmp3;
-        }
-        let flag2 = !tmp2;
-        if (tmp2) {
-          self._refreshSession(session);
-          flag2 = false;
-        }
-        return flag2;
-      } else {
-        return false;
-      }
-    }
-  };
-  const entry3 = { key: "_refreshSession", value: null };
-  closure_2 = closure_2(function(arg0) {
-    const self = this;
-    closure_1 = arg0;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "HermesInternal", done: "+60" };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              closure_3 = self;
-              closure_2 = tmp2;
-              closure_130_0 = closure_1;
-              if (self._isEnabled) {
-                c4 = 1;
-                c5 = 1;
-                const obj5 = { value: self.stop({ reason: "refresh session" }), done: false };
-                return obj5;
-              } else {
-                c5 = 3;
-              }
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_3.initializeSampling(closure_130_0.id);
-          }
-          c5 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } catch (tmp11) {
-          c5 = tmp;
-          throw tmp11;
-        }
-      }
-    })();
-  });
-  entry3.value = function _refreshSession(session) {
-    const self = this;
-    const apply = closure_2.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items[30] = entry3;
-  items[31] = {
-    key: "_addListeners",
-    value: function _addListeners() {
-      let self = this;
-      try {
-        const _document = closure_0(dependencyMap[8]).GLOBAL_OBJ.document;
-        const listener = _document.addEventListener("visibilitychange", self._handleVisibilityChange);
-        const GLOBAL_OBJ = closure_0(dependencyMap[8]).GLOBAL_OBJ;
-        const listener1 = GLOBAL_OBJ.addEventListener("blur", self._handleWindowBlur);
-        const GLOBAL_OBJ2 = closure_0(dependencyMap[8]).GLOBAL_OBJ;
-        const listener2 = GLOBAL_OBJ2.addEventListener("focus", self._handleWindowFocus);
-        const GLOBAL_OBJ3 = closure_0(dependencyMap[8]).GLOBAL_OBJ;
-        const listener3 = GLOBAL_OBJ3.addEventListener("keydown", self._handleKeyboardEvent);
-        if (self.clickDetector) {
-          let clickDetector = self.clickDetector;
-          clickDetector.addListeners();
-        }
-        if (!self._hasInitializedCoreListeners) {
-          (function addGlobalListeners(self) {
-            closure_0 = self;
-            const client = closure_0(dependencyMap[8]).getClient();
-            closure_0(dependencyMap[9]);
-            if (typeof closure_121 === "function") {
-              closure_0 = self;
-              tmp4((name) => {
-                if (closure_0.isEnabled()) {
-                  let obj2 = { category: null };
-                  const _HermesInternal = HermesInternal;
-                  ({ target, message } = (function getDomTarget(event) {
-                    try {
-                      if ("click" === tmp) {
-                        let tmp3 = closure_1_112(event.event);
-                      } else {
-                        tmp3 = closure_1_113(event.event);
-                      }
-                      obj = obj(obj3[8]);
-                      let str2 = obj.htmlTreeAsString(tmp3, { maxStringLength: 200 });
-                      if (!str2) {
-                        str2 = "<unknown>";
-                      }
-                      let str3 = str2;
-                      const obj2 = { target: tmp3, message: str3 };
-                      return obj2;
-                    } catch (err) {
-                      str3 = "<unknown>";
-                    }
-                  })(name));
-                  obj2.category = "ui." + name.name;
-                  const merged = Object.assign(closure_2_122(target, message));
-                  const obj3 = { timestamp: null, type: "default" };
-                  const _Date = Date;
-                  obj3.timestamp = Date.now() / 1000;
-                  const merged1 = Object.assign(obj2);
-                  let clickDetector = "click" === name.name;
-                  if (clickDetector) {
-                    const event = name.event;
-                  }
-                  if (clickDetector) {
-                    clickDetector = closure_0.clickDetector;
-                  }
-                  if (clickDetector) {
-                    let target1;
-                    if (event != null) {
-                      target1 = event.target;
-                    }
-                    clickDetector = target1;
-                  }
-                  let shiftKey = !clickDetector;
-                  if (clickDetector) {
-                    shiftKey = event.altKey;
-                  }
-                  if (!shiftKey) {
-                    shiftKey = event.metaKey;
-                  }
-                  if (!shiftKey) {
-                    shiftKey = event.ctrlKey;
-                  }
-                  if (!shiftKey) {
-                    shiftKey = event.shiftKey;
-                  }
-                  if (!shiftKey) {
-                    const clickDetector2 = closure_0.clickDetector;
-                    const event2 = name.event;
-                    let tmp12 = typeof event2 === "object";
-                    if (typeof event2 === "object") {
-                      tmp12 = event2;
-                    }
-                    if (tmp12) {
-                      tmp12 = "target" in event2;
-                    }
-                    let target2 = event2;
-                    if (tmp12) {
-                      target2 = event2.target;
-                    }
-                    let tmp13 = target2;
-                    if (target2) {
-                      tmp13 = target2;
-                      if (target2 instanceof globalThis.Element) {
-                        tmp13 = target2.closest("button,a") || target2;
-                        const tmp14 = target2.closest("button,a") || target2;
-                      }
-                    }
-                    clickDetector2.handleClick(obj3, tmp13);
-                  }
-                  if ("sentry.transaction" !== obj3.category) {
-                    const items = ["ui.click", "ui.input"];
-                    if (items.includes(obj3.category)) {
-                      closure_0.triggerUserActivity();
-                    } else {
-                      const result = closure_0.checkAndHandleExpiredSession();
-                    }
-                    closure_0.addUpdate(() => {
-                      obj = { type: Custom.Custom, timestamp: null, data: null };
-                      let num = _null.timestamp;
-                      if (!num) {
-                        num = 0;
-                      }
-                      obj.timestamp = 1000 * num;
-                      const obj2 = { tag: "breadcrumb", payload: null };
-                      const normalizer = f122473(map[8]);
-                      obj2.payload = normalizer.normalize(_null, 10, 1000);
-                      obj.data = obj2;
-                      obj.throttledAddEvent(obj);
-                      return "console" === _null.category;
-                    });
-                  }
-                  const tmp2 = (function getDomTarget(event) {
-                    try {
-                      if ("click" === tmp) {
-                        let tmp3 = closure_1_112(event.event);
-                      } else {
-                        tmp3 = closure_1_113(event.event);
-                      }
-                      obj = obj(obj3[8]);
-                      let str2 = obj.htmlTreeAsString(tmp3, { maxStringLength: 200 });
-                      if (!str2) {
-                        str2 = "<unknown>";
-                      }
-                      let str3 = str2;
-                      const obj2 = { target: tmp3, message: str3 };
-                      return obj2;
-                    } catch (err) {
-                      str3 = "<unknown>";
-                    }
-                  })(name);
-                }
-              });
-              closure_129_0 = self;
-              let result = tmp(dependencyMap[9]).addHistoryInstrumentationHandler((arg0) => {
-                if (obj2.isEnabled()) {
-                  const _Date = Date;
-                  ({ from, to } = arg0);
-                  const result = Date.now() / 1000;
-                  obj2 = { type: "navigation.push", start: result, end: result, name: to, data: null };
-                  const obj3 = { previous: from };
-                  obj2.data = obj3;
-                  const urls = obj.getContext().urls;
-                  urls.push(obj2.name);
-                  obj.triggerUserActivity();
-                  obj.addUpdate(() => {
-                    const items = [obj2];
-                    const mapped = items.map((op) => {
-                      const start = op.start;
-                      const obj = { type: Custom.Custom, timestamp: start, data: { tag: "performanceSpan", payload: { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data } } };
-                      let throttledAddEventResult = closure_0.throttledAddEvent(obj);
-                      if (typeof throttledAddEventResult === "string") {
-                        throttledAddEventResult = Promise.resolve(null);
-                      }
-                      return throttledAddEventResult;
-                    });
-                    return false;
-                  });
-                }
-              });
-              closure_130_0 = self;
-              const tmpResult = tmp(dependencyMap[9]);
-              const client1 = tmp(dependencyMap[8]).getClient();
-              if (client1) {
-                client1.on("beforeAddBreadcrumb", (category) => {
-                  if (_true.isEnabled()) {
-                    let merged4 = category;
-                    if (category.category) {
-                      let tmp3 = null;
-                      if (merged4.category) {
-                        const items = ["fetch", "xhr", "sentry.event", "sentry.transaction"];
-                        tmp3 = null;
-                        if (!items.includes(merged4.category)) {
-                          category = merged4.category;
-                          tmp3 = null;
-                          if (!category.startsWith("ui.")) {
-                            if ("console" === merged4.category) {
-                              const data = merged4.data;
-                              let _arguments;
-                              if (data != null) {
-                                _arguments = data.arguments;
-                              }
-                              let nowResult = globalThis;
-                              const _Array = Array;
-                              if (Array.isArray(_arguments)) {
-                                if (0 !== _arguments.length) {
-                                  c0 = false;
-                                  const obj2 = {};
-                                  const mapped = _arguments.map((item) => {
-                                    if (item) {
-                                      if (typeof item === "string") {
-                                        let combined = item;
-                                        if (item.length > closure_2_13) {
-                                          c0 = true;
-                                          const _HermesInternal2 = HermesInternal;
-                                          combined = "" + item.slice(0, closure_2_13) + "\u2026";
-                                        }
-                                        return combined;
-                                      } else if (typeof item !== "object") {
-                                        return item;
-                                      } else {
-                                        try {
-                                          const normalizer = _true(dependencyMap[8]);
-                                          const normalizeResult = normalizer.normalize(item, 7);
-                                          const _JSON = JSON;
-                                          if (JSON.stringify(normalizeResult).length > closure_2_13) {
-                                            c0 = true;
-                                            const _JSON2 = JSON;
-                                            const json = JSON.stringify(normalizeResult, null, 2);
-                                            const _HermesInternal = HermesInternal;
-                                            let combined1 = "" + json.slice(0, closure_2_13) + "\u2026";
-                                          } else {
-                                            combined1 = normalizeResult;
-                                          }
-                                          return combined1;
-                                        } catch (err) {
-                                        }
-                                      }
-                                    } else {
-                                      return item;
-                                    }
-                                  });
-                                  const merged = Object.assign(merged4);
-                                  const obj3 = {};
-                                  const merged1 = Object.assign(merged4.data);
-                                  obj3.arguments = mapped;
-                                  if (c0) {
-                                    const obj4 = { _meta: null };
-                                    const obj5 = { warnings: ["CONSOLE_ARG_TRUNCATED"] };
-                                    obj4._meta = obj5;
-                                    let obj6 = obj4;
-                                  } else {
-                                    obj6 = {};
-                                  }
-                                  const merged2 = Object.assign(obj6);
-                                  obj2.data = obj3;
-                                  let obj7 = { timestamp: null, type: "default" };
-                                  const _Date2 = Date;
-                                  obj7.timestamp = Date.now() / 1000;
-                                  const merged3 = Object.assign(obj2);
-                                }
-                              }
-                              const obj8 = { timestamp: null, type: "default" };
-                              const _Date3 = nowResult.Date;
-                              nowResult = _Date3.now();
-                              obj8.timestamp = nowResult / 1000;
-                              merged4 = Object.assign(merged4);
-                              obj7 = obj8;
-                            } else {
-                              let obj9 = { timestamp: null, type: "default" };
-                              const _Date = Date;
-                              obj9.timestamp = Date.now() / 1000;
-                              const merged5 = Object.assign(merged4);
-                              tmp3 = obj9;
-                            }
-                          }
-                        }
-                      }
-                      if (tmp3) {
-                        c0 = _true;
-                        obj9 = tmp3;
-                        if ("sentry.transaction" !== tmp3.category) {
-                          const items1 = ["ui.click", "ui.input"];
-                          if (items1.includes(tmp3.category)) {
-                            _true.triggerUserActivity();
-                          } else {
-                            const result = _true.checkAndHandleExpiredSession();
-                          }
-                          _true.addUpdate(() => {
-                            obj = { type: Custom.Custom, timestamp: null, data: null };
-                            let num = _null.timestamp;
-                            if (!num) {
-                              num = 0;
-                            }
-                            obj.timestamp = 1000 * num;
-                            const obj2 = { tag: "breadcrumb", payload: null };
-                            const normalizer = f122473(map[8]);
-                            obj2.payload = normalizer.normalize(_null, 10, 1000);
-                            obj.data = obj2;
-                            obj.throttledAddEvent(obj);
-                            return "console" === _null.category;
-                          });
-                        }
-                      }
-                    }
-                  }
-                });
-              }
-              closure_166(self);
-              closure_131_0 = self;
-              const _Object = Object;
-              let merged = Object.assign((type, originalException) => {
-                if (closure_0.isEnabled()) {
-                  if (!closure_0.isPaused()) {
-                    if ("replay_event" === type.type) {
-                      delete tmp[tmp2];
-                      return type;
-                    } else {
-                      const type3 = type.type;
-                      if (type3) {
-                        if ("transaction" !== type.type) {
-                          if ("feedback" !== type.type) {
-                            return type;
-                          }
-                        }
-                      }
-                      if (closure_0.checkAndHandleExpiredSession()) {
-                        if ("feedback" === type.type) {
-                          closure_0.flush();
-                          type.contexts.feedback.replay_id = closure_0.getSessionId();
-                          closure_0.triggerUserActivity();
-                          closure_0.addUpdate(() => {
-                            const timestamp = type.timestamp;
-                            let flag = !timestamp;
-                            if (timestamp) {
-                              obj = { type: Custom.Custom, timestamp: 1000 * type.timestamp, data: null };
-                              const obj2 = { tag: "breadcrumb", payload: null };
-                              const obj3 = { timestamp: type.timestamp, type: "default", category: "sentry.feedback", data: null };
-                              const obj4 = { feedbackId: type.event_id };
-                              obj3.data = obj4;
-                              obj2.payload = obj3;
-                              obj.data = obj2;
-                              obj.throttledAddEvent(obj);
-                              flag = false;
-                            }
-                            return flag;
-                          });
-                          return type;
-                        } else {
-                          type = type.type;
-                          if (!type) {
-                            const exception = type.exception;
-                            let length;
-                            if (exception != null) {
-                              const values = exception.values;
-                              if (values != null) {
-                                length = values.length;
-                              }
-                            }
-                            type = !length;
-                          }
-                          if (!type) {
-                            originalException = originalException.originalException;
-                            let __rrweb__;
-                            if (originalException != null) {
-                              __rrweb__ = originalException.__rrweb__;
-                            }
-                            type = !__rrweb__;
-                          }
-                          if (!type) {
-                            if (!closure_0.getOptions()._experiments.captureExceptions) {
-                              if (closure_2_130) {
-                                logger.log("Ignoring error from rrweb internals", type);
-                              }
-                              return null;
-                            }
-                          }
-                          let tmp20 = "buffer" === closure_0.recordingMode;
-                          if (tmp20) {
-                            tmp20 = type.message !== closure_2_11;
-                          }
-                          if (tmp20) {
-                            const exception2 = type.exception;
-                            let type2 = !exception2;
-                            if (exception2) {
-                              type2 = type.type;
-                            }
-                            tmp20 = !type2;
-                          }
-                          if (tmp20) {
-                            const errorSampleRate = closure_0.getOptions().errorSampleRate;
-                            let tmp22 = undefined !== errorSampleRate;
-                            if (tmp22) {
-                              const _Math = Math;
-                              tmp22 = Math.random() < errorSampleRate;
-                            }
-                            tmp20 = tmp22;
-                          }
-                          let tmp24 = tmp20;
-                          if (!tmp20) {
-                            tmp24 = "session" === closure_0.recordingMode;
-                          }
-                          if (tmp24) {
-                            let obj3 = {};
-                            const merged = Object.assign(type.tags);
-                            obj3.replayId = closure_0.getSessionId();
-                            type.tags = obj3;
-                          }
-                          if (tmp20) {
-                            if ("buffer" === closure_0.recordingMode) {
-                              const session = closure_0.session;
-                              let sampled;
-                              if (session != null) {
-                                sampled = session.sampled;
-                              }
-                              if ("buffer" === sampled) {
-                                const session2 = closure_0.session;
-                                session2.dirty = true;
-                                if (closure_0.getOptions().stickySession) {
-                                  closure_2_141(session2);
-                                }
-                              }
-                            }
-                          }
-                          return type;
-                        }
-                      } else {
-                        const currentScope = closure_2_0(dependencyMap[8]).getCurrentScope();
-                        if (currentScope.getPropagationContext().dsc) {
-                          delete tmp5[tmp4];
-                        }
-                        let obj2 = closure_2_0(dependencyMap[8]);
-                        const activeSpan = closure_2_0(dependencyMap[8]).getActiveSpan();
-                        if (activeSpan) {
-                          const dynamicSamplingContextFromSpan = closure_2_0(dependencyMap[8]).getDynamicSamplingContextFromSpan(activeSpan);
-                          delete tmp3[tmp2];
-                          const tmp6Result2 = closure_2_0(dependencyMap[8]);
-                        }
-                        return type;
-                      }
-                    }
-                  }
-                }
-                return type;
-              }, { id: "Replay" });
-              const tmpResult3 = tmp(dependencyMap[8]);
-              tmp(dependencyMap[8]).addEventProcessor(merged);
-              if (client) {
-                closure_132_0 = self;
-                client.on("beforeSendEvent", (type) => {
-                  if (tmp) {
-                    const exception = type.exception;
-                    let value;
-                    if (exception != null) {
-                      const values = exception.values;
-                      if (values != null) {
-                        if (values[0] != null) {
-                          value = iter.value;
-                        }
-                      }
-                    }
-                    if (typeof value === "string") {
-                      if (value.match(/(reactjs\.org\/docs\/error-decoder\.html\?invariant=|react\.dev\/errors\/)(418|419|422|423|425)/)) {
-                        const obj2 = { category: "replay.hydrate-error", data: null };
-                        const obj3 = { url: closure_2_0(dependencyMap[8]).getLocationHref() };
-                        obj2.data = obj3;
-                        const obj5 = { timestamp: null, type: "default" };
-                        const _Date = Date;
-                        obj5.timestamp = Date.now() / 1000;
-                        const merged = Object.assign(obj2);
-                        if ("sentry.transaction" !== obj5.category) {
-                          const items = ["ui.click", "ui.input"];
-                          if (items.includes(obj5.category)) {
-                            closure_0.triggerUserActivity();
-                          } else {
-                            const result = closure_0.checkAndHandleExpiredSession();
-                          }
-                          closure_0.addUpdate(() => {
-                            obj = { type: Custom.Custom, timestamp: null, data: null };
-                            let num = _null.timestamp;
-                            if (!num) {
-                              num = 0;
-                            }
-                            obj.timestamp = 1000 * num;
-                            const obj2 = { tag: "breadcrumb", payload: null };
-                            const normalizer = f122473(map[8]);
-                            obj2.payload = normalizer.normalize(_null, 10, 1000);
-                            obj.data = obj2;
-                            obj.throttledAddEvent(obj);
-                            return "console" === _null.category;
-                          });
-                        }
-                        const obj4 = closure_2_0(dependencyMap[8]);
-                      }
-                    }
-                  }
-                  tmp = closure_0.isEnabled() && !type.type;
-                });
-                closure_133_0 = self;
-                client.on("afterSendEvent", (type, statusCode) => {
-                  if (closure_0.isEnabled()) {
-                    type = type.type;
-                    if (!type) {
-                      statusCode = statusCode.statusCode;
-                      let tmp4 = !statusCode;
-                      if (statusCode) {
-                        tmp4 = statusCode < 200;
-                      }
-                      if (!tmp4) {
-                        tmp4 = statusCode >= 300;
-                      }
-                      if (!tmp4) {
-                        if ("transaction" === type.type) {
-                          const context = closure_0.getContext();
-                          const contexts = type.contexts;
-                          let trace_id;
-                          if (contexts != null) {
-                            const trace = contexts.trace;
-                            if (trace != null) {
-                              trace_id = trace.trace_id;
-                            }
-                          }
-                          if (trace_id) {
-                            trace_id = context.traceIds.size < 100;
-                          }
-                          if (trace_id) {
-                            const traceIds = context.traceIds;
-                            traceIds.add(type.contexts.trace.trace_id);
-                          }
-                        } else {
-                          const context1 = closure_0.getContext();
-                          let event_id = type.event_id;
-                          if (event_id) {
-                            event_id = context1.errorIds.size < 100;
-                          }
-                          if (event_id) {
-                            const errorIds = context1.errorIds;
-                            errorIds.add(type.event_id);
-                          }
-                          if ("buffer" === closure_0.recordingMode) {
-                            if (type.tags) {
-                              if (type.tags.replayId) {
-                                const beforeErrorSampling = closure_0.getOptions().beforeErrorSampling;
-                                if (typeof beforeErrorSampling !== "function") {
-                                  const timerId = closure_2_0(dependencyMap[9]).setTimeout(closure_2_2(function*() {
-                                    closure_1 = tmp3;
-                                    yield obj.sendBufferedReplayOrFlush();
-                                    if (1 === tmp7) {
-                                      c3 = 0;
-                                      closure_128_0 = closure_2;
-                                      closure_129_0.handleException(closure_128_0);
-                                      c5 = 3;
-                                    } else if (arg0 === 1) {
-                                      c5 = 3;
-                                      throw value;
-                                    } else if (arg0 !== 2) {
-                                      c3 = 0;
-                                    }
-                                    return value;
-                                  }));
-                                  const obj2 = closure_2_0(dependencyMap[9]);
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                });
-                client.on("createDsc", (arg0) => {
-                  const sessionId = closure_0.getSessionId();
-                  let isEnabledResult = sessionId;
-                  if (sessionId) {
-                    isEnabledResult = closure_0.isEnabled();
-                  }
-                  if (isEnabledResult) {
-                    isEnabledResult = "session" === closure_0.recordingMode;
-                  }
-                  if (isEnabledResult) {
-                    isEnabledResult = closure_0.checkAndHandleExpiredSession();
-                  }
-                  if (isEnabledResult) {
-                    arg0.replay_id = sessionId;
-                  }
-                });
-                client.on("spanStart", (lastActiveSpan) => {
-                  closure_0.lastActiveSpan = lastActiveSpan;
-                });
-                client.on("spanEnd", (lastActiveSpan) => {
-                  closure_0.lastActiveSpan = lastActiveSpan;
-                });
-                closure_0 = closure_2((arg0, arg1) => {
-                  let sessionId = arg0;
-                  let includeReplay = arg1;
-                  c3 = 0;
-                  c4 = 0;
-                  return (function*(arg0, value) {
-                    if (c4 === 2) {
-                      c4 = 3;
-                      throw new TypeError("Generator functions may not be called on executing generators");
-                    } else if (tmp4 === 3) {
-                      if (arg0 === 1) {
-                        throw value;
-                      } else if (arg0 === 2) {
-                        const obj2 = { value, done: true };
-                        return obj2;
-                      } else {
-                        return { value: "HermesInternal", done: "+60" };
-                      }
-                    } else {
-                      try {
-                        c4 = 2;
-                        if (0 === c3) {
-                          if (arg0 === 1) {
-                            c4 = 3;
-                            throw value;
-                          } else if (arg0 === 2) {
-                            c4 = 3;
-                            const obj3 = { value, done: true };
-                            return obj3;
-                          } else {
-                            closure_2 = tmp2;
-                            closure_130_0 = sessionId;
-                            closure_130_1 = undefined;
-                            sessionId = sessionId.getSessionId();
-                            closure_130_1 = sessionId;
-                            includeReplay = undefined;
-                            if (includeReplay != null) {
-                              includeReplay = includeReplay.includeReplay;
-                            }
-                            if (includeReplay) {
-                              includeReplay = obj5.isEnabled();
-                            }
-                            if (includeReplay) {
-                              includeReplay = sessionId;
-                            }
-                            if (includeReplay) {
-                              const contexts = tmp16.contexts;
-                              let feedback;
-                              if (contexts != null) {
-                                feedback = contexts.feedback;
-                              }
-                              includeReplay = feedback;
-                            }
-                            if (includeReplay) {
-                              if ("api" === tmp16.contexts.feedback.source) {
-                                c3 = 1;
-                                c4 = 1;
-                                const obj4 = { value: obj5.sendBufferedReplayOrFlush(), done: false };
-                                return obj4;
-                              }
-                            }
-                            c4 = 3;
-                            return { value: "HermesInternal", done: "+60" };
-                          }
-                        } else if (arg0 === 1) {
-                          c4 = 3;
-                          throw value;
-                        } else if (arg0 === 2) {
-                          c4 = 3;
-                          const obj = { value, done: true };
-                          return obj;
-                        }
-                        closure_130_0.contexts.feedback.replay_id = closure_130_1;
-                      } catch (tmp11) {
-                        c4 = tmp;
-                        throw tmp11;
-                      }
-                    }
-                  })();
-                });
-                client.on("beforeSendFeedback", function(arg0, arg1) {
-                  const self = this;
-                  const apply = closure_0.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                });
-                client.on("openFeedbackWidget", closure_2(function*() {
-                  if (c0 === 2) {
-                    c0 = 3;
-                    throw new TypeError("Generator functions may not be called on executing generators");
-                  } else if (tmp3 === 3) {
-                    if (arg0 === 1) {
-                      throw value;
-                    } else if (arg0 === 2) {
-                      const obj2 = { value, done: true };
-                      return obj2;
-                    } else {
-                      return { value: "HermesInternal", done: "+60" };
-                    }
-                  } else {
-                    try {
-                      c0 = 2;
-                      if (0 === c1) {
-                        if (arg0 === 1) {
-                          c0 = 3;
-                          throw value;
-                        } else if (arg0 === 2) {
-                          c0 = 3;
-                          const obj3 = { value, done: true };
-                          return obj3;
-                        } else {
-                          c1 = 1;
-                          c0 = 1;
-                          const obj4 = { value: closure_0.sendBufferedReplayOrFlush(), done: false };
-                          return obj4;
-                        }
-                      } else if (arg0 === 1) {
-                        c0 = 3;
-                        throw value;
-                      } else if (arg0 === 2) {
-                        c0 = 3;
-                        const obj = { value, done: true };
-                        return obj;
-                      } else {
-                        c0 = 3;
-                        return { value: "HermesInternal", done: "+60" };
-                      }
-                    } catch (tmp6) {
-                      c0 = tmp;
-                      throw tmp6;
-                    }
-                  }
-                }));
-              }
-              const tmpResult4 = tmp(dependencyMap[8]);
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-            let obj = closure_0(dependencyMap[8]);
-          })(self);
-          self._hasInitializedCoreListeners = true;
-        }
-        self._performanceCleanupCallback = (function setupPerformanceObserver(self) {
-          dependencyMap = function addPerformanceEntry(arg0) {
-            const performanceEntries = closure_0.performanceEntries;
-            if (!performanceEntries.includes(arg0)) {
-              const performanceEntries1 = closure_0.performanceEntries;
-              performanceEntries1.push(arg0);
-            }
-          };
-          function onEntries(arg0) {
-            const entries = arg0.entries;
-            const item = entries.forEach(closure_1);
-          }
-          const items = [];
-          const items1 = ["navigation", "paint", "resource"];
-          let item = items1.forEach((item) => {
-            items.push(closure_2_0(dependencyMap[9]).addPerformanceInstrumentationHandler(item, onEntries));
-          });
-          closure_0 = closure_125;
-          dependencyMap = self;
-          const result = closure_0(dependencyMap[9]).addLcpInstrumentationHandler((metric) => {
-            const prop = _self.replayPerformanceEntries;
-            prop.push(closure_0(metric.metric));
-          });
-          const obj = closure_0(dependencyMap[9]);
-          closure_0 = closure_127;
-          dependencyMap = self;
-          const result1 = closure_0(dependencyMap[9]).addClsInstrumentationHandler((metric) => {
-            const prop = _self.replayPerformanceEntries;
-            prop.push(closure_0(metric.metric));
-          });
-          const obj2 = closure_0(dependencyMap[9]);
-          closure_0 = closure_128;
-          dependencyMap = self;
-          items.push(result, result1, closure_0(dependencyMap[9]).addInpInstrumentationHandler((metric) => {
-            const prop = _self.replayPerformanceEntries;
-            prop.push(closure_0(metric.metric));
-          }));
-          return () => {
-            const item = items.forEach((fn) => fn());
-          };
-        })(self);
-      } catch (tmp9) {
-        obj.handleException(tmp9);
-      }
-    }
-  };
-  items[32] = {
-    key: "_removeListeners",
-    value: function _removeListeners() {
-      const self = this;
-      try {
-        const _document = closure_0(dependencyMap[8]).GLOBAL_OBJ.document;
-        const removed = _document.removeEventListener("visibilitychange", self._handleVisibilityChange);
-        const GLOBAL_OBJ = closure_0(dependencyMap[8]).GLOBAL_OBJ;
-        const removed1 = GLOBAL_OBJ.removeEventListener("blur", self._handleWindowBlur);
-        const GLOBAL_OBJ2 = closure_0(dependencyMap[8]).GLOBAL_OBJ;
-        const removed2 = GLOBAL_OBJ2.removeEventListener("focus", self._handleWindowFocus);
-        const GLOBAL_OBJ3 = closure_0(dependencyMap[8]).GLOBAL_OBJ;
-        const removed3 = GLOBAL_OBJ3.removeEventListener("keydown", self._handleKeyboardEvent);
-        if (self.clickDetector) {
-          const clickDetector = self.clickDetector;
-          clickDetector.removeListeners();
-        }
-        if (self._performanceCleanupCallback) {
-          const result = self._performanceCleanupCallback();
-        }
-      } catch (tmp9) {
-        obj.handleException(tmp9);
-      }
-    }
-  };
-  items[33] = {
-    key: "_doChangeToBackgroundTasks",
-    value: function _doChangeToBackgroundTasks(arg0) {
-      const self = this;
-      if (this.session) {
-        const obj = { maxReplayDuration: self._options.maxReplayDuration, sessionIdleExpire: self.timeouts.sessionIdleExpire };
-        if (!closure_1_144(self.session, obj)) {
-          if (arg0) {
-            const result = self._createCustomBreadcrumb(arg0);
-          }
-          self.conditionalFlush();
-        }
-      }
-    }
-  };
-  items[34] = {
-    key: "_doChangeToForegroundTasks",
-    value: function _doChangeToForegroundTasks(arg0) {
-      const self = this;
-      if (this.session) {
-        if (self.checkAndHandleExpiredSession()) {
-          if (arg0) {
-            const result = self._createCustomBreadcrumb(arg0);
-          }
-        } else if (closure_1_130) {
-          closure_1_133.log("Document has become active, but session has expired");
-        }
-      }
-    }
-  };
-  items[35] = {
-    key: "_updateUserActivity",
-    value: function _updateUserActivity(arg0) {
-      let timestamp = arg0;
-      if (arg0 === undefined) {
-        const _Date = Date;
-        timestamp = Date.now();
-      }
-      this._lastActivity = timestamp;
-    }
-  };
-  items[36] = {
-    key: "_updateSessionActivity",
-    value: function _updateSessionActivity(arg0) {
-      let timestamp = arg0;
-      if (arg0 === undefined) {
-        const _Date = Date;
-        timestamp = Date.now();
-      }
-      const self = this;
-      if (this.session) {
-        self.session.lastActivity = timestamp;
-        self._maybeSaveSession();
-      }
-    }
-  };
-  items[37] = {
-    key: "_createCustomBreadcrumb",
-    value: function _createCustomBreadcrumb(arg0) {
-      const self = this;
-      const timestamp = arg0;
-      this.addUpdate(() => {
-        const obj = { type: Custom.Custom, timestamp: null, data: null };
-        let num = timestamp.timestamp;
-        if (!num) {
-          num = 0;
-        }
-        obj.timestamp = num;
-        obj.data = { tag: "breadcrumb", payload: timestamp };
-        self.throttledAddEvent(obj);
-      });
-    }
-  };
-  items[38] = {
-    key: "_addPerformanceEntries",
-    value: function _addPerformanceEntries() {
-      let self = this;
-      const performanceEntries = this.performanceEntries;
-      const mapped = performanceEntries.map(closure_124);
-      const found = mapped.filter(Boolean);
-      const combined = found.concat(this.replayPerformanceEntries);
-      this.performanceEntries = [];
-      this.replayPerformanceEntries = [];
-      let found1 = combined;
-      if (this._requiresManualStart) {
-        self = self._context.initialTimestamp / 1000;
-        found1 = combined.filter((start) => start.start >= self);
-      }
-      return Promise.all(found1.map((op) => {
-        const start = op.start;
-        const obj = { type: Custom.Custom, timestamp: start, data: { tag: "performanceSpan", payload: { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data } } };
-        let throttledAddEventResult = closure_0.throttledAddEvent(obj);
-        if (typeof throttledAddEventResult === "string") {
-          throttledAddEventResult = Promise.resolve(null);
-        }
-        return throttledAddEventResult;
-      }));
-    }
-  };
-  items[39] = {
-    key: "_clearContext",
-    value: function _clearContext() {
-      const errorIds = this._context.errorIds;
-      errorIds.clear();
-      const traceIds = this._context.traceIds;
-      traceIds.clear();
-      this._context.urls = [];
-    }
-  };
-  items[40] = {
-    key: "_updateInitialTimestampFromEventBuffer",
-    value: function _updateInitialTimestampFromEventBuffer() {
-      const self = this;
-      ({ session, eventBuffer } = this);
-      if (session) {
-        if (eventBuffer) {
-          if (!self._requiresManualStart) {
-            if (!session.segmentId) {
-              const earliestTimestamp = eventBuffer.getEarliestTimestamp();
-              let tmp2 = earliestTimestamp;
-              if (earliestTimestamp) {
-                tmp2 = earliestTimestamp < self._context.initialTimestamp;
-              }
-              if (tmp2) {
-                self._context.initialTimestamp = earliestTimestamp;
-              }
-            }
-          }
-        }
-      }
-    }
-  };
-  items[41] = {
-    key: "_popEventContext",
-    value: function _popEventContext() {
-      this._clearContext();
-      return { initialTimestamp: this._context.initialTimestamp, initialUrl: this._context.initialUrl, errorIds: Array.from(this._context.errorIds), traceIds: Array.from(this._context.traceIds), urls: this._context.urls };
-    }
-  };
-  const entry4 = { key: "_runFlush", value: null };
-  let dependencyMap = closure_2(function() {
-    let self = this;
-    c6 = 0;
-    c7 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c7 === 2) {
-        c7 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "HermesInternal", done: "+60" };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_3 = self;
-              closure_2 = tmp3;
-              closure_129_8 = self;
-              closure_129_1 = undefined;
-              closure_129_2 = undefined;
-              closure_129_3 = undefined;
-              closure_129_4 = undefined;
-              closure_129_5 = undefined;
-              closure_129_6 = undefined;
-              let client;
-              const sessionId = self.getSessionId();
-              closure_129_1 = sessionId;
-              if (self.session) {
-                if (self.eventBuffer) {
-                  if (sessionId) {
-                    c6 = 1;
-                    c7 = 1;
-                    const obj4 = { value: self._addPerformanceEntries(), done: false };
-                    return obj4;
-                  }
-                }
-              }
-              if (closure_1_130) {
-                logger.error("No session or eventBuffer found to flush.");
-              }
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              const eventBuffer2 = closure_3.eventBuffer;
-              let hasEvents;
-              if (eventBuffer2 != null) {
-                hasEvents = eventBuffer2.hasEvents;
-              }
-              if (hasEvents) {
-                c6 = 3;
-                c7 = 1;
-                const obj7 = {
-                  value: (function addMemoryEntry(arg0) {
-                              self = this;
-                              const apply = closure_1_167.apply;
-                              if (typeof apply === "unknown") {
-                                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                              } else {
-                                applyArgumentsResult = apply(self, arguments);
-                              }
-                              return applyArgumentsResult;
-                            })(closure_3),
-                  done: false
-                };
-                return obj7;
-              }
-            }
-          } else if (2 === tmp8) {
-            c4 = 0;
-            closure_129_0 = closure_5;
-            closure_3.handleException(closure_129_0);
-            closure_3.stop({ reason: "sendReplay" });
-            client = self(tmp5[8]).getClient();
-            if (client) {
-              let str = "ratelimit_backoff";
-              if (!(closure_129_0 instanceof closure_1_173)) {
-                let str2 = "send_error";
-                if (closure_129_0 instanceof closure_1_174) {
-                  str2 = "invalid";
-                }
-                str = str2;
-              }
-              closure_129_6 = str;
-              client.recordDroppedEvent(closure_129_6, "replay");
-            }
-            const obj6 = self(tmp5[8]);
-          } else {
-            if (3 === tmp8) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                const obj8 = { value, done: true };
-                return obj8;
-              } else if (closure_3.eventBuffer) {
-                if (closure_129_1 === closure_3.getSessionId()) {
-                  c4 = 1;
-                  const result = closure_3._updateInitialTimestampFromEventBuffer();
-                  const _Date = Date;
-                  closure_129_2 = Date.now();
-                  if (closure_129_2 - closure_3._context.initialTimestamp > closure_3._options.maxReplayDuration + 30000) {
-                    const tmp20 = new closure_1_174();
-                    throw tmp20;
-                  } else {
-                    closure_129_3 = closure_3._popEventContext();
-                    const session = closure_3.session;
-                    session.segmentId = +session.segmentId + 1;
-                    closure_129_4 = tmp14;
-                    closure_3._maybeSaveSession();
-                    const eventBuffer = closure_3.eventBuffer;
-                    c6 = 4;
-                    c7 = 1;
-                    const obj9 = { value: eventBuffer.finish(), done: false };
-                    return obj9;
-                  }
-                }
-              }
-            } else if (4 === tmp8) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 0;
-                c7 = 3;
-                const obj10 = { value, done: true };
-                return obj10;
-              } else {
-                closure_129_5 = value;
-                const obj11 = {
-                  replayId: closure_129_1,
-                  recordingData: closure_129_5,
-                  segmentId: closure_129_4,
-                  eventContext: closure_129_3,
-                  session: closure_3.session,
-                  timestamp: closure_129_2,
-                  onError(arg0) {
-                              return closure_1_8.handleException(arg0);
-                            }
-                };
-                c6 = 5;
-                c7 = 1;
-                const obj12 = { value: closure_1_175(obj11), done: false };
-                return obj12;
-              }
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              c4 = 0;
-            }
-            c4 = 0;
-            c7 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-          c7 = 3;
-        } catch (tmp52) {
-          closure_5 = tmp52;
-          if (tmp4 === c4) {
-            c7 = tmp2;
-            throw tmp52;
-          } else {
-            c6 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  entry4.value = function _runFlush() {
-    const self = this;
-    const apply = closure_1.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items[42] = entry4;
-  const entry5 = { key: "_flush", value: null };
-  closure_0 = closure_2(function() {
-    const self = this;
-    closure_1 = arg0;
-    c7 = 0;
-    c8 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (c8 === 2) {
-        c8 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "HermesInternal", done: "+60" };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_4 = self;
-              closure_3 = tmp4;
-              closure_2 = self;
-              closure_130_0 = undefined;
-              let obj4 = closure_1;
-              if (closure_1 === undefined) {
-                obj4 = {};
-              }
-              let flag = obj4.force;
-              if (flag === undefined) {
-                flag = false;
-              }
-              closure_130_0 = flag;
-              let started;
-              closure_130_2 = undefined;
-              closure_130_3 = undefined;
-              closure_130_4 = undefined;
-              let eventBuffer;
-              let _flushLock;
-              c7 = 1;
-              c8 = 1;
-              return { value: "Path", done: true };
-            }
-          } else {
-            if (1 === tmp8) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c8 = 3;
-                const obj5 = { value, done: true };
-                return obj5;
-              } else {
-                if (closure_4._isEnabled) {
-                  if (closure_4.checkAndHandleExpiredSession()) {
-                    if (closure_4.session) {
-                      started = closure_4.session.started;
-                      const _Date = Date;
-                      closure_130_2 = Date.now() - started;
-                      const _debouncedFlush = closure_4._debouncedFlush;
-                      _debouncedFlush.cancel();
-                      closure_130_3 = closure_130_2 < closure_4._options.minReplayDuration;
-                      closure_130_4 = closure_130_2 > closure_4._options.maxReplayDuration + 5000;
-                      if (!closure_130_3) {
-                        if (!closure_130_4) {
-                          eventBuffer = closure_4.eventBuffer;
-                          let tmp50 = eventBuffer;
-                          if (eventBuffer) {
-                            tmp50 = 0 === closure_4.session.segmentId;
-                          }
-                          if (tmp50) {
-                            tmp50 = !eventBuffer.hasCheckout;
-                          }
-                          if (tmp50) {
-                            tmp50 = closure_1_130;
-                          }
-                          if (tmp50) {
-                            logger.log("Flushing initial segment without checkout.");
-                          }
-                          _flushLock = closure_4._flushLock;
-                          if (!closure_4._flushLock) {
-                            closure_4._flushLock = closure_4._runFlush();
-                          }
-                          c5 = 2;
-                          c7 = 4;
-                          c8 = 1;
-                          const obj6 = { value: closure_4._flushLock, done: false };
-                          return obj6;
-                        }
-                      }
-                      if (closure_1_130) {
-                        const _Math = Math;
-                        const rounded = Math.floor(closure_130_2 / 1000);
-                        let str = "long";
-                        if (closure_130_3) {
-                          str = "short";
-                        }
-                        const _HermesInternal = HermesInternal;
-                        logger.log("Session duration (" + rounded + "s) is too " + str + ", not sending replay.");
-                      }
-                      if (closure_130_3) {
-                        closure_4._debouncedFlush();
-                      }
-                      c8 = 3;
-                      const obj7 = { value: undefined, done: true };
-                      return obj7;
-                    }
-                  } else if (closure_1_130) {
-                    logger.error("Attempting to finish replay event after session expired.");
-                  }
-                }
-                c8 = 3;
-              }
-            } else if (2 !== tmp8) {
-              if (3 === tmp8) {
-                c5 = 1;
-                closure_130_7 = closure_6;
-                closure_4.handleException(closure_130_7);
-              } else if (arg0 === 1) {
-                c8 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c5 = 0;
-                closure_4._flushLock = undefined;
-                if (_flushLock) {
-                  closure_4._debouncedFlush();
-                }
-                c8 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                c5 = 1;
-              }
-              c5 = 0;
-              closure_4._flushLock = undefined;
-              if (_flushLock) {
-                closure_4._debouncedFlush();
-              }
-            }
-            c5 = 0;
-            closure_4._flushLock = undefined;
-            if (_flushLock) {
-              closure_4._debouncedFlush();
-            }
-            throw closure_6;
-          }
-        } catch (tmp77) {
-          closure_6 = tmp77;
-          if (tmp5 === c5) {
-            c8 = tmp3;
-            throw tmp77;
-          } else if (tmp2 === tmp79) {
-            c7 = tmp;
-          } else {
-            c7 = tmp3;
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  entry5.value = function _flush() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items[43] = entry5;
-  items[44] = {
-    key: "_maybeSaveSession",
-    value: function _maybeSaveSession() {
-      const self = this;
-      if (tmp) {
-        closure_1_141(self.session);
-      }
-      tmp = this.session && self._options.stickySession;
-    }
-  };
-  items[45] = {
-    key: "_onMutationHandler",
-    value: function _onMutationHandler(arr) {
-      const self = this;
-      const ignoreMutations = this._options._experiments.ignoreMutations;
-      let length1;
-      if (ignoreMutations != null) {
-        length1 = ignoreMutations.length;
-      }
-      if (length1) {
-        if (arr.some((target) => {
-          let matchesResult;
-          const obj = (function closestElementOfNode(target) {
-            if (target) {
-              try {
-                let parentElement = target;
-                if (target.nodeType !== target.ELEMENT_NODE) {
-                  parentElement = target.parentElement;
-                }
-                return parentElement;
-              } catch (err) {
-                return null;
-              }
-            } else {
-              return null;
-            }
-          })(target.target);
-          if (obj != null) {
-            matchesResult = obj.matches(tmp2);
-          }
-          return matchesResult;
-        })) {
-          return false;
-        }
-      }
-      const mutationLimit = self._options.mutationLimit;
-      let tmp2 = mutationLimit;
-      if (mutationLimit) {
-        tmp2 = length > mutationLimit;
-      }
-      if (arr.length > self._options.mutationBreadcrumbLimit) {
-        let obj = { category: "replay.mutations", data: null };
-        const obj2 = { count: length, limit: tmp2 };
-        obj.data = obj2;
-        const obj3 = { timestamp: null, type: "default" };
-        const _Date = Date;
-        obj3.timestamp = Date.now() / 1000;
-        const merged = Object.assign(obj);
-        const result = self._createCustomBreadcrumb(obj3);
-      }
-      let flag = !tmp2;
-      if (tmp2) {
-        const obj4 = { reason: "mutationLimit", forceFlush: "session" === self.recordingMode };
-        self.stop(obj4);
-        flag = false;
-      }
-      return flag;
-    }
-  };
-  return closure_8(ReplayContainer, items);
-}
-
-function f23512() {
-  class Replay {
-    constructor() {
-      obj = arg0;
-      if (arg0 === undefined) {
-        obj = {};
-      }
-      num = obj.flushMinDelay;
-      if (num === undefined) {
-        num = 5000;
-      }
-      num2 = obj.flushMaxDelay;
-      if (num2 === undefined) {
-        num2 = 5500;
-      }
-      num3 = obj.minReplayDuration;
-      if (num3 === undefined) {
-        num3 = 4999;
-      }
-      num4 = obj.maxReplayDuration;
-      if (num4 === undefined) {
-        num4 = 3600000;
-      }
-      flag = obj.stickySession;
-      if (flag === undefined) {
-        flag = true;
-      }
-      flag2 = obj.useCompression;
-      if (flag2 === undefined) {
-        flag2 = true;
-      }
-      ({ _experiments, workerUrl } = obj);
-      if (_experiments === undefined) {
-        _experiments = {};
-      }
-      flag3 = obj.maskAllText;
-      if (flag3 === undefined) {
-        flag3 = true;
-      }
-      c0 = flag3;
-      flag4 = obj.maskAllInputs;
-      if (flag4 === undefined) {
-        flag4 = true;
-      }
-      flag5 = obj.blockAllMedia;
-      if (flag5 === undefined) {
-        flag5 = true;
-      }
-      num5 = obj.mutationBreadcrumbLimit;
-      if (num5 === undefined) {
-        num5 = 750;
-      }
-      num6 = obj.mutationLimit;
-      if (num6 === undefined) {
-        num6 = 10000;
-      }
-      num7 = obj.slowClickTimeout;
-      if (num7 === undefined) {
-        num7 = 7000;
-      }
-      prop = obj.slowClickIgnoreSelectors;
-      if (prop === undefined) {
-        prop = [];
-      }
-      prop1 = obj.networkDetailAllowUrls;
-      if (prop1 === undefined) {
-        prop1 = [];
-      }
-      prop2 = obj.networkDetailDenyUrls;
-      if (prop2 === undefined) {
-        prop2 = [];
-      }
-      flag6 = obj.networkCaptureBodies;
-      if (flag6 === undefined) {
-        flag6 = true;
-      }
-      prop3 = obj.networkRequestHeaders;
-      if (prop3 === undefined) {
-        prop3 = [];
-      }
-      prop4 = obj.networkResponseHeaders;
-      if (prop4 === undefined) {
-        prop4 = [];
-      }
-      mask = obj.mask;
-      if (mask === undefined) {
-        mask = [];
-      }
-      maskAttributes = obj.maskAttributes;
-      if (maskAttributes === undefined) {
-        maskAttributes = ["title", "placeholder", "aria-label"];
-      }
-      closure_1 = maskAttributes;
-      unmask = obj.unmask;
-      if (unmask === undefined) {
-        unmask = [];
-      }
-      block = obj.block;
-      if (block === undefined) {
-        block = [];
-      }
-      unblock = obj.unblock;
-      if (unblock === undefined) {
-        unblock = [];
-      }
-      ignore = obj.ignore;
-      if (ignore === undefined) {
-        ignore = [];
-      }
-      ({ maskFn, attachRawBodyFromRequest, beforeAddRecordingEvent, beforeErrorSampling, onError } = obj);
-      if (attachRawBodyFromRequest === undefined) {
-        attachRawBodyFromRequest = false;
-      }
-      self = this;
-      closure_2 = undefined;
-      tmp = closure_2_7(this, Replay);
-      this.name = "Replay";
-      obj1 = { maskTextSelector: null, unmaskTextSelector: null, blockSelector: null, unblockSelector: null, ignoreSelector: null };
-      items = [...[".sentry-mask", "[data-sentry-mask]"]];
-      obj1.maskTextSelector = items.join(",");
-      items1 = [...[]];
-      obj1.unmaskTextSelector = items1.join(",");
-      items2 = [...[".sentry-block", "[data-sentry-block]", "base", "iframe[srcdoc]:not([src])"]];
-      obj1.blockSelector = items2.join(",");
-      items3 = [...[]];
-      obj1.unblockSelector = items3.join(",");
-      items4 = [...[".sentry-ignore", "[data-sentry-ignore]", "input[type=\"file\"]"]];
-      obj1.ignoreSelector = items4.join(",");
-      closure_2 = obj1;
-      obj6 = {
-        maskAllInputs: flag4,
-        maskAllText: flag3,
-        maskInputOptions: { password: true },
-        maskTextFn: maskFn,
-        maskInputFn: maskFn,
-        maskAttributeFn(arg0, str, tagName) {
-              let tmp2 = str;
-              if (flag3) {
-                if (!obj2.unmaskTextSelector) {
-                  if (maskAttributes.includes(arg0)) {
-                    let replaced = str.replace(/[\S]/g, "*");
-                  } else {
-                    replaced = str;
-                    if ("value" === arg0) {
-                      replaced = str;
-                      if ("INPUT" === tagName.tagName) {
-                        const items = ["submit", "button"];
-                        tagName.getAttribute("type") || "";
-                        replaced = str;
-                      }
-                    }
-                  }
-                  let tmp4 = replaced;
-                } else {
-                  tmp4 = str;
-                }
-                tmp2 = tmp4;
-              }
-              return tmp2;
-            }
-      };
-      merged = Object.assign(obj1);
-      obj6.slimDOMOptions = "all";
-      obj6.inlineStylesheet = true;
-      obj6.inlineImages = false;
-      obj6.collectFonts = true;
-      obj6.errorHandler = function errorHandler(arg0) {
-        try {
-          arg0.__rrweb__ = true;
-        } catch (err) {
-        }
-      };
-      obj6.recordCrossOriginIframes = Boolean(_experiments.recordCrossOriginIframes);
-      this._recordingOptions = obj6;
-      obj7 = { flushMinDelay: num, flushMaxDelay: num2, minReplayDuration: Math.min(num3, 50000), maxReplayDuration: Math.min(num4, closure_2_15), stickySession: flag, useCompression: flag2, workerUrl, blockAllMedia: flag5, maskAllInputs: flag4, maskAllText: flag3, mutationBreadcrumbLimit: num5, mutationLimit: num6, slowClickTimeout: num7, slowClickIgnoreSelectors: prop, networkDetailAllowUrls: prop1, networkDetailDenyUrls: prop2, networkCaptureBodies: flag6, networkRequestHeaders: null, networkResponseHeaders: null, beforeAddRecordingEvent, beforeErrorSampling, onError, attachRawBodyFromRequest, _experiments };
-      items5 = [...closure_2_180, ...prop3.map((item) => item.toLowerCase())];
-      obj7.networkRequestHeaders = items5;
-      items6 = [...closure_2_180, ...prop4.map((item) => item.toLowerCase())];
-      obj7.networkResponseHeaders = items6;
-      this._initialOptions = obj7;
-      if (!this._initialOptions.blockAllMedia) {
-        if (self._isInitialized) {
-          tmp9 = closure_2_0;
-          tmp10 = closure_2_1;
-          obj5 = closure_2_0(closure_2_1[8]);
-          if (obj5.isBrowser()) {
-            _Error = Error;
-            tmp11 = new.target;
-            str2 = "Multiple Sentry Session Replay instances are not supported";
-            tmp12 = new.target;
-            error = new Error("Multiple Sentry Session Replay instances are not supported");
-            tmp14 = error;
-            throw error;
-          }
-        }
-        self._isInitialized = true;
-        return;
-      } else {
-        _recordingOptions = self._recordingOptions;
-        if (self._recordingOptions.blockSelector) {
-          tmp4 = closure_2_179;
-          _HermesInternal = HermesInternal;
-          str = "";
-          combined = "" + self._recordingOptions.blockSelector + "," + closure_2_179;
-        } else {
-          combined = closure_2_179;
-        }
-        _recordingOptions.blockSelector = combined;
-        _recordingOptions = self._recordingOptions;
-        _Set = Set;
-        tmp5 = new.target;
-        tmp6 = new.target;
-        set = new Set(["background-image"]);
-        tmp8 = set;
-        _recordingOptions.ignoreCSSAttributes = set;
-      }
-      return;
-    }
-  }
-  let items = [
-    {
-      key: "_isInitialized",
-      get() {
-        return closure_182;
-      },
-      set(arg0) {
-        closure_182 = arg0;
-      }
-    },
-    {
-      key: "afterAllSetup",
-      value: function afterAllSetup(getOptions) {
-        const self = this;
-        const obj = Replay(dependencyMap[8]);
-        if (tmp) {
-          if (self._initialOptions.attachRawBodyFromRequest) {
-            (function _INTERNAL_instrumentRequestInterface() {
-              if (typeof Request !== "undefined") {
-                if (!c183) {
-                  try {
-                    class SentryRequest {
-                      constructor(arg0, arg1) {
-                        tmp = new Request(arg0, arg1);
-                        body = undefined;
-                        if (arg1 != null) {
-                          body = arg1.body;
-                        }
-                        if (null != body) {
-                          tmp3 = closure_2_181;
-                          tmp[closure_2_181] = arg1.body;
-                        }
-                        return tmp;
-                      }
-                    }
-                    SentryRequest.prototype = tmp.prototype;
-                    Request(closure_1[8]).GLOBAL_OBJ.Request = SentryRequest;
-                    c183 = true;
-                  } catch (err) {
-                  }
-                }
-              }
-            })();
-          }
-          self._setup(getOptions);
-          self._initialize(getOptions);
-        }
-      }
-    },
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  
-  ];
-  const entry = {
-    key: "start",
-    value: function start() {
-      if (this._replay) {
-        const _replay = this._replay;
-        _replay.start();
-      }
-    }
-  };
-  items[2] = entry;
-  items[3] = {
-    key: "startBuffering",
-    value: function startBuffering() {
-      if (this._replay) {
-        const _replay = this._replay;
-        _replay.startBuffering();
-      }
-    }
-  };
-  items[4] = {
-    key: "stop",
-    value: function stop() {
-      const self = this;
-      if (this._replay) {
-        const _replay = self._replay;
-        const obj = { forceFlush: "session" === self._replay.recordingMode };
-        let stopResult = _replay.stop(obj);
-      } else {
-        stopResult = Promise.resolve();
-      }
-      return stopResult;
-    }
-  };
-  items[5] = {
-    key: "flush",
-    value: function flush(arg0) {
-      if (this._replay) {
-        ({ _replay, _replay: _replay2 } = this);
-        if (_replay.isEnabled()) {
-          let result = _replay2.sendBufferedReplayOrFlush(arg0);
-        } else {
-          _replay2.start();
-          result = Promise.resolve();
-        }
-      } else {
-        return Promise.resolve();
-      }
-    }
-  };
-  items[6] = {
-    key: "getReplayId",
-    value: function getReplayId(arg0) {
-      const _replay = this._replay;
-      let isEnabledResult;
-      if (_replay != null) {
-        isEnabledResult = _replay.isEnabled();
-      }
-      if (isEnabledResult) {
-        const _replay2 = this._replay;
-        return _replay2.getSessionId(arg0);
-      }
-    }
-  };
-  items[7] = {
-    key: "getRecordingMode",
-    value: function getRecordingMode() {
-      const _replay = this._replay;
-      let isEnabledResult;
-      if (_replay != null) {
-        isEnabledResult = _replay.isEnabled();
-      }
-      return isEnabledResult ? this._replay.recordingMode : undefined;
-    }
-  };
-  items[8] = {
-    key: "_initialize",
-    value: function _initialize(getIntegrationByName) {
-      const self = this;
-      if (this._replay) {
-        const result = self._maybeLoadFromReplayCanvasIntegration(getIntegrationByName);
-        const _replay = self._replay;
-        _replay.initializeSampling();
-      }
-    }
-  };
-  items[9] = {
-    key: "_setup",
-    value: function _setup(getOptions) {
-      const self = this;
-      const options = getOptions.getOptions();
-      const obj = { sessionSampleRate: 0, errorSampleRate: 0 };
-      const merged = Object.assign(this._initialOptions);
-      const parseSampleRateResult = Replay(dependencyMap[8]).parseSampleRate(options.replaysSessionSampleRate);
-      const obj2 = Replay(dependencyMap[8]);
-      const parseSampleRateResult1 = Replay(dependencyMap[8]).parseSampleRate(options.replaysOnErrorSampleRate);
-      if (tmp7) {
-        Replay(dependencyMap[8]).consoleSandbox(() => {
-          console.warn("Replay is disabled because neither `replaysSessionSampleRate` nor `replaysOnErrorSampleRate` are set.");
-        });
-        const tmp3Result = Replay(dependencyMap[8]);
-      }
-      if (null != parseSampleRateResult) {
-        obj.sessionSampleRate = parseSampleRateResult;
-      }
-      if (null != parseSampleRateResult1) {
-        obj.errorSampleRate = parseSampleRateResult1;
-      }
-      const obj3 = Replay(dependencyMap[8]);
-      const obj4 = { options: obj, recordingOptions: self._recordingOptions };
-      tmp7 = null == parseSampleRateResult && null == parseSampleRateResult1;
-      self._replay = new closure_1_178({ options: obj, recordingOptions: self._recordingOptions });
-      const tmp9 = new closure_1_178({ options: obj, recordingOptions: self._recordingOptions });
-    }
-  };
-  items[10] = {
-    key: "_maybeLoadFromReplayCanvasIntegration",
-    value: function _maybeLoadFromReplayCanvasIntegration(getIntegrationByName) {
-      try {
-        const integrationByName = getIntegrationByName.getIntegrationByName("ReplayCanvas");
-        if (integrationByName) {
-          const self = this;
-          this._replay._canvas = obj.getOptions();
-        }
-        obj = integrationByName;
-      } catch (err) {
-      }
-    }
-  };
-  return closure_8(Replay, items);
-}
-
-function getReplay() {
-  const client = closure_1_0(closure_1_1[8]).getClient();
-  let integrationByName;
-  if (client != null) {
-    integrationByName = client.getIntegrationByName("Replay");
-  }
-  return integrationByName;
-}
-
-function f23514(arg0) {
-  return new closure_1_184(arg0);
-}
-
-function saveWebGLVar(obj, arg1, arg2) {
-  if (obj) {
-    if (typeof closure_1_26 === "function") {
-      closure_0 = obj;
-      const dependencyMap = arg1;
-      const items = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"];
-      const found = items.filter((item) => typeof dependencyMap[item] === "function");
-      const _Boolean = Boolean;
-      const name = obj.constructor.name;
-      let value = closure_1_22.get(arg2);
-      if (!value) {
-        const _Map = Map;
-        const map = new Map();
-        const result = closure_1_22.set(arg2, map);
-        value = map;
-      }
-      if (!value.has(name)) {
-        const result1 = value.set(name, []);
-      }
-      const value2 = value.get(name);
-      let length = value2.indexOf(obj);
-      if (-1 === length) {
-        length = value2.length;
-        value2.push(obj);
-      }
-      return length;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-}
-
-function serializeArgs(arg0, arg1, arg2) {
-}
-
-function isInstanceOfWebGLObject(arg0, arg1) {
-}
-
-function f23538() {
-  class CanvasManager {
-    constructor(arg0) {
-      self = this;
-      self = this;
-      tmp = closure_2_3(this, CanvasManager);
-      map = new Map();
-      this.pendingCanvasMutations = map;
-      this.rafStamps = { latestId: 0, invokeId: null };
-      set = new Set();
-      this.shadowDoms = set;
-      weakSet = new WeakSet();
-      this.windowsSet = weakSet;
-      this.windows = [];
-      this.restoreHandlers = [];
-      this.frozen = false;
-      this.locked = false;
-      map1 = new Map();
-      this.snapshotInProgressMap = map1;
-      this.worker = null;
-      this.lastSnapshotTime = 0;
-      this.processMutation = (arg0, arg1) => {
-        let invokeId = !tmp2;
-        if (!(self.rafStamps.invokeId && self.rafStamps.latestId !== self.rafStamps.invokeId)) {
-          invokeId = self.rafStamps.invokeId;
-        }
-        if (!invokeId) {
-          self.rafStamps.invokeId = self.rafStamps.latestId;
-        }
-        const pendingCanvasMutations = self.pendingCanvasMutations;
-        if (!pendingCanvasMutations.has(arg0)) {
-          const pendingCanvasMutations2 = self.pendingCanvasMutations;
-          const result = pendingCanvasMutations2.set(arg0, []);
-        }
-        const pendingCanvasMutations3 = self.pendingCanvasMutations;
-        const value = pendingCanvasMutations3.get(arg0);
-        value.push(arg1);
-      };
-      ({ enableManualSnapshot, sampling } = arg0);
-      str = "all";
-      if (undefined !== sampling) {
-        str = sampling;
-      }
-      sampling = str;
-      recordCanvas = arg0.recordCanvas;
-      f122501 = recordCanvas;
-      errorHandler = arg0.errorHandler;
-      arg0.sampling = str;
-      ({ mutationCb: self.mutationCb, mirror: self.mirror } = arg0);
-      self.options = arg0;
-      if (errorHandler) {
-        closure_2_18 = errorHandler;
-      }
-      if (recordCanvas) {
-        recordCanvas = typeof str === "number";
-      }
-      if (!recordCanvas) {
-        recordCanvas = enableManualSnapshot;
-      }
-      if (recordCanvas) {
-        self.worker = self.initFPSWorker();
-      }
-      addWindowResult = self.addWindow(arg0.win);
-      if (!enableManualSnapshot) {
-        tmp7 = closure_2_20;
-        if (typeof closure_2_20 === "function") {
-          fn = () => {
-            let tmp = fn;
-            let tmp2 = fn;
-            if (fn) {
-              tmp2 = "all" === str;
-            }
-            if (tmp2) {
-              self.startRAFTimestamping();
-              const result = self.startPendingCanvasMutationFlusher();
-            }
-            if (tmp) {
-              tmp = typeof str === "number";
-            }
-            if (tmp) {
-              const canvasFPSObserver = self.initCanvasFPSObserver();
-            }
-          };
-          f122501 = fn;
-          tmp8 = closure_2_18;
-          if (closure_2_18) {
-            fn = () => {
-              const items = [...arguments];
-              try {
-                const items1 = [];
-                HermesBuiltin.arraySpread(items, 0);
-                return HermesBuiltin.apply(items1, undefined);
-              } catch (tmp7) {
-                if (closure_2_18) {
-                  if (true === tmp8(tmp7)) {
-                    return () => {
-  
-                    };
-                  }
-                }
-                throw tmp7;
-              }
-            };
-          }
-          fnResult = fn();
-        } else {
-          str2 = "Trying to call a non-function";
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      return;
-    }
-  }
-  const entry = {
-    key: "reset",
-    value: function reset() {
-      const self = this;
-      const pendingCanvasMutations = this.pendingCanvasMutations;
-      pendingCanvasMutations.clear();
-      const item = this.restoreHandlers.forEach((fn) => {
-        try {
-          fn();
-        } catch (err) {
-        }
-      });
-      this.restoreHandlers = [];
-      const weakSet = new WeakSet();
-      this.windowsSet = weakSet;
-      this.windows = [];
-      this.shadowDoms = new Set();
-      const worker = this.worker;
-      if (worker != null) {
-        worker.terminate();
-      }
-      self.worker = null;
-      const restoreHandlers = this.restoreHandlers;
-      const set = new Set();
-      self.snapshotInProgressMap = new Map();
-    }
-  };
-  let items = [
-    entry,
-    {
-      key: "freeze",
-      value: function freeze() {
-        this.frozen = true;
-      }
-    },
-    {
-      key: "unfreeze",
-      value: function unfreeze() {
-        this.frozen = false;
-      }
-    },
-    {
-      key: "lock",
-      value: function lock() {
-        this.locked = true;
-      }
-    },
-    {
-      key: "unlock",
-      value: function unlock() {
-        this.locked = false;
-      }
-    },
-    {
-      key: "addWindow",
-      value: function addWindow(arg0) {
-        const self = this;
-        closure_1 = arg0;
-        const options = this.options;
-        const sampling = options.sampling;
-        ({ blockClass: closure_3, blockSelector: closure_4, unblockSelector: closure_5, recordCanvas: CanvasManager } = options);
-        const windowsSet = self.windowsSet;
-        if (!windowsSet.has(arg0)) {
-          if (options.enableManualSnapshot) {
-            const windowsSet3 = self.windowsSet;
-            windowsSet3.add(arg0);
-            const windows = self.windows;
-            const _WeakRef2 = WeakRef;
-            const weakRef = new WeakRef(arg0);
-            windows.push(weakRef);
-          } else if (typeof closure_20 === "function") {
-            let fn = () => {
-              let tmp2 = CanvasManager;
-              if (CanvasManager) {
-                tmp2 = "all" === str;
-              }
-              if (tmp2) {
-                const canvasMutationObserver = self.initCanvasMutationObserver(closure_1, closure_1_3, closure_1_4, closure_1_5);
-              }
-              if (CanvasManager) {
-                if (typeof str === "number") {
-                  closure_0 = closure_2_27(closure_1, closure_1_3, closure_1_4, closure_1_5, true);
-                  self.restoreHandlers.push(() => {
-                    closure_0();
-                  });
-                  const restoreHandlers = self.restoreHandlers;
-                }
-              }
-            };
-            closure_129_0 = fn;
-            if (closure_18) {
-              fn = () => {
-                const items = [...arguments];
-                try {
-                  const items1 = [];
-                  HermesBuiltin.arraySpread(items, 0);
-                  return HermesBuiltin.apply(items1, undefined);
-                } catch (tmp7) {
-                  if (closure_2_18) {
-                    if (true === tmp8(tmp7)) {
-                      return () => {
-  
-                      };
-                    }
-                  }
-                  throw tmp7;
-                }
-              };
-            }
-            fn();
-            const windowsSet2 = self.windowsSet;
-            windowsSet2.add(arg0);
-            const windows1 = self.windows;
-            const _WeakRef = WeakRef;
-            const weakRef1 = new WeakRef(arg0);
-            windows1.push(weakRef1);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-      }
-    },
-    {
-      key: "addShadowRoot",
-      value: function addShadowRoot(arg0) {
-        const shadowDoms = this.shadowDoms;
-        const weakRef = new WeakRef(arg0);
-        shadowDoms.add(weakRef);
-      }
-    },
-    {
-      key: "resetShadowRoots",
-      value: function resetShadowRoots() {
-        this.shadowDoms = new Set();
-      }
-    },
-    {
-      key: "snapshot",
-      value: function snapshot(arg0, skipRequestAnimationFrame) {
-        const self = this;
-        closure_0 = arg0;
-        let prop;
-        if (skipRequestAnimationFrame != null) {
-          prop = skipRequestAnimationFrame.skipRequestAnimationFrame;
-        }
-        if (prop) {
-          const _performance = performance;
-          self.takeSnapshot(performance.now(), true, arg0);
-        } else {
-          closure_1_16((arg0) => self.takeSnapshot(arg0, true, closure_0));
-        }
-      }
-    },
-    {
-      key: "initFPSWorker",
-      value: function initFPSWorker() {
-        const self = this;
-        const blob = new Blob(["for(var e=\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\",t=\"undefined\"==typeof Uint8Array?[]:new Uint8Array(256),a=0;a<64;a++)t[e.charCodeAt(a)]=a;var n=function(t){var a,n=new Uint8Array(t),r=n.length,s=\"\";for(a=0;a<r;a+=3)s+=e[n[a]>>2],s+=e[(3&n[a])<<4|n[a+1]>>4],s+=e[(15&n[a+1])<<2|n[a+2]>>6],s+=e[63&n[a+2]];return r%3==2?s=s.substring(0,s.length-1)+\"=\":r%3==1&&(s=s.substring(0,s.length-2)+\"==\"),s};const r=new Map,s=new Map;const i=self;i.onmessage=async function(e){if(!(\"OffscreenCanvas\"in globalThis))return i.postMessage({id:e.data.id});{const{id:t,bitmap:a,width:o,height:f,maxCanvasSize:c,dataURLOptions:g}=e.data,u=async function(e,t,a){const r=e+\"-\"+t;if(\"OffscreenCanvas\"in globalThis){if(s.has(r))return s.get(r);const i=new OffscreenCanvas(e,t);i.getContext(\"2d\");const o=await i.convertToBlob(a),f=await o.arrayBuffer(),c=n(f);return s.set(r,c),c}return\"\"}(o,f,g),[h,d]=function(e,t,a){if(!a)return[e,t];const[n,r]=a;if(e<=n&&t<=r)return[e,t];let s=e,i=t;return s>n&&(i=Math.floor(n*t/e),s=n),i>r&&(s=Math.floor(r*e/t),i=r),[s,i]}(o,f,c),l=new OffscreenCanvas(h,d),w=l.getContext(\"bitmaprenderer\"),p=h===o&&d===f?a:await createImageBitmap(a,{resizeWidth:h,resizeHeight:d,resizeQuality:\"low\"});w?.transferFromImageBitmap(p),a.close();const y=await l.convertToBlob(g),v=y.type,b=await y.arrayBuffer(),m=n(b);if(p.close(),!r.has(t)&&await u===m)return r.set(t,m),i.postMessage({id:t});if(r.get(t)===m)return i.postMessage({id:t});i.postMessage({id:t,type:v,base64:m,width:o,height:f}),r.set(t,m)}};"]);
-        const worker = new globalThis.Worker(URL.createObjectURL(blob));
-        worker.onmessage = (data) => {
-          data = data.data;
-          const id = data.id;
-          const snapshotInProgressMap = self.snapshotInProgressMap;
-          const result = snapshotInProgressMap.set(id, false);
-          if ("base64" in data) {
-            ({ width, height } = data);
-            const obj2 = { id, type: closure_2_19["2D"], commands: null };
-            const obj3 = { property: "clearRect", args: null };
-            const items = [0, 0, width, height];
-            obj3.args = items;
-            const items1 = [obj3, ];
-            const obj4 = { property: "drawImage", args: null };
-            const obj5 = { rr_type: "ImageBitmap", args: null };
-            const obj6 = { rr_type: "Blob", data: null, type: null };
-            const obj7 = { rr_type: "ArrayBuffer", base64: data.base64 };
-            const items2 = [obj7];
-            obj6.data = items2;
-            obj6.type = data.type;
-            const items3 = [obj6];
-            obj5.args = items3;
-            const items4 = [obj5, 0, 0, width, height];
-            obj4.args = items4;
-            items1[1] = obj4;
-            obj2.commands = items1;
-            self.mutationCb(obj2);
-          }
-        };
-        return worker;
-      }
-    },
-    {
-      key: "initCanvasFPSObserver",
-      value: function initCanvasFPSObserver() {
-        const self = this;
-        if (this.windows.length) {
-          function rafCallback(arg0) {
-            self.takeSnapshot(arg0, false);
-            closure_1 = closure_2_16(rafCallback);
-          }
-          closure_1 = closure_16(rafCallback);
-          self.restoreHandlers.push(() => {
-            if (closure_1) {
-              const _cancelAnimationFrame = cancelAnimationFrame;
-              cancelAnimationFrame(closure_1);
-            }
-          });
-          const restoreHandlers = self.restoreHandlers;
-        }
-      }
-    },
-    {
-      key: "initCanvasMutationObserver",
-      value: function initCanvasMutationObserver(WebGLRenderingContext, arg1, arg2, arg3) {
-        closure_27(WebGLRenderingContext, arg1, arg2, arg3, false);
-        const processMutation = this.processMutation;
-        closure_1 = (function initCanvas2DMutationObserver(arg0, CanvasRenderingContext2D, arg2, arg3, arg4) {
-          closure_0 = arg0;
-          closure_2 = arg2;
-          closure_3 = arg3;
-          closure_4 = arg4;
-          closure_5 = [];
-          const ownPropertyNames = Object.getOwnPropertyNames(CanvasRenderingContext2D.CanvasRenderingContext2D.prototype);
-          function _loop(iter) {
-            let property = iter;
-            try {
-              if (typeof CanvasRenderingContext2D.CanvasRenderingContext2D.prototype[iter] !== "function") {
-                return 1;
-              } else {
-                closure_5.push(closure_1_12(tmp3.CanvasRenderingContext2D.prototype, iter, (arg0) => {
-                  closure_0 = arg0;
-                  return function() {
-                    const self = this;
-                    items = [...arguments];
-                    if (!closure_4_13(this.canvas, closure_2, closure_3, closure_4, true)) {
-                      closure_4_17(/* F143530 */ function() { ... }, 0);
-                    }
-                    return property.apply(this, items);
-                  };
-                }));
-              }
-            } catch (err) {
-              let obj = {
-                set(arg0) {
-                    const obj = { type: v2D["2D"], property, args: null, setter: true };
-                    items = [arg0];
-                    obj.args = items;
-                    property(this.canvas, obj);
-                  }
-              };
-              closure_5.push(closure_1_11(CanvasRenderingContext2D.CanvasRenderingContext2D.prototype, tmp, obj));
-            }
-          }
-          const iter = ownPropertyNames[Symbol.iterator]();
-          while (iter !== undefined) {
-            let _loopResult = _loop(iter.next());
-            continue;
-          }
-          return () => {
-            const item = closure_5.forEach((fn) => fn());
-          };
-        })(processMutation.bind(this), WebGLRenderingContext, arg1, arg2, arg3);
-        const processMutation2 = this.processMutation;
-        const bindResult = processMutation2.bind(this);
-        let items = [];
-        const items1 = [...closure_28(WebGLRenderingContext.WebGLRenderingContext.prototype, closure_19.WebGL, bindResult, arg1, arg2, arg3, 0, WebGLRenderingContext)];
-        items.push.apply(items1);
-        if (undefined !== WebGLRenderingContext.WebGL2RenderingContext) {
-          const push = items.push;
-          const items2 = [];
-          HermesBuiltin.arraySpread(closure_28(WebGLRenderingContext.WebGL2RenderingContext.prototype, v2D.WebGL2, bindResult, arg1, arg2, arg3, 0, WebGLRenderingContext), 0);
-          HermesBuiltin.apply(items2, items);
-        }
-        const f136771 = () => {
-  
-        };
-        this.restoreHandlers.push(() => {
-          items();
-          closure_1();
-          if (typeof f136771 === "function") {
-            const item = closure_130_0.forEach((fn) => fn());
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        });
-        const restoreHandlers = this.restoreHandlers;
-      }
-    },
-    {
-      key: "getCanvasElements",
-      value: function getCanvasElements(blockClass, blockSelector, unblockSelector) {
-        closure_0 = blockClass;
-        closure_1 = blockSelector;
-        closure_2 = unblockSelector;
-        const items = [];
-        function searchCanvas(querySelectorAll) {
-          const elements = querySelectorAll.querySelectorAll("canvas");
-          const item = elements.forEach((item) => {
-            if (!closure_2_13(item, blockClass, blockSelector, unblockSelector, true)) {
-              items.push(item);
-            }
-          });
-        }
-        const iter = this.windows[Symbol.iterator]();
-        if (iter === undefined) {
-          const shadowDoms = this.shadowDoms;
-          for (const item10032 of shadowDoms) {
-            let derefResult = item10032.deref();
-            if (derefResult) {
-              let searchCanvasResult = searchCanvas(tmp10);
-            }
-            continue;
-          }
-          return items;
-        } else {
-          const derefResult1 = nextResult.deref();
-          try {
-            let _document = derefResult1;
-            if (derefResult1) {
-              _document = derefResult1.document;
-            }
-            if (_document) {
-              searchCanvas(tmp3);
-            }
-          } catch (err) {
-          }
-        }
-      }
-    },
-    {
-      key: "takeSnapshot",
-      value: function takeSnapshot(lastSnapshotTime, arg1, arg2) {
-        const self = this;
-        closure_1 = arg1;
-        const options = this.options;
-        ({ sampling, dataURLOptions: closure_2, maxCanvasSize: CanvasManager } = options);
-        ({ blockClass, blockSelector, unblockSelector } = options);
-        if ("all" !== sampling) {
-          if (!sampling) {
-            sampling = 2;
-          }
-        }
-        if (self.lastSnapshotTime && lastSnapshotTime - self.lastSnapshotTime < tmp2) {
-          return !tmp3;
-        } else {
-          self.lastSnapshotTime = lastSnapshotTime;
-          if (arg2) {
-            let items = [arg2];
-            let canvasElements = items;
-          } else {
-            canvasElements = self.getCanvasElements(blockClass, blockSelector, unblockSelector);
-          }
-          const item = canvasElements.forEach((width) => {
-            closure_0 = width;
-            const mirror = self.mirror;
-            const id = mirror.getId(width);
-            const mirror2 = self.mirror;
-            if (mirror2.hasNode(width)) {
-              if (width.width) {
-                if (width.height) {
-                  let snapshotInProgressMap = self.snapshotInProgressMap;
-                  if (!snapshotInProgressMap.get(id)) {
-                    const snapshotInProgressMap2 = self.snapshotInProgressMap;
-                    const result = snapshotInProgressMap2.set(id, true);
-                    if (!id) {
-                      let items = ["webgl", "webgl2"];
-                      if (items.includes(width.__context)) {
-                        const context = width.getContext(width.__context);
-                        let prop;
-                        if (context != null) {
-                          const contextAttributes = context.getContextAttributes();
-                          if (contextAttributes != null) {
-                            prop = contextAttributes.preserveDrawingBuffer;
-                          }
-                        }
-                        if (false === prop) {
-                          context.clear(context.COLOR_BUFFER_BIT);
-                        }
-                      }
-                    }
-                    const imageBitmap = globalThis.createImageBitmap(width);
-                    imageBitmap.then((bitmap) => {
-                      const worker = self.worker;
-                      if (worker != null) {
-                        const size = { id, bitmap, width: null, height: null, dataURLOptions: null, maxCanvasSize: null };
-                        ({ width: obj.width, height: obj.height } = closure_0);
-                        size.dataURLOptions = dataURLOptions;
-                        size.maxCanvasSize = maxCanvasSize;
-                        const items = [bitmap];
-                        worker.postMessage(size, items);
-                      }
-                    }).catch((error) => {
-                      let fn = error;
-                      if (typeof closure_2_20 === "function") {
-                        fn = () => {
-                          const snapshotInProgressMap = self.snapshotInProgressMap;
-                          snapshotInProgressMap.delete(id);
-                          throw fn;
-                        };
-                        if (closure_2_18) {
-                          fn = () => {
-                            const items = [...arguments];
-                            try {
-                              const items1 = [];
-                              HermesBuiltin.arraySpread(items, 0);
-                              return HermesBuiltin.apply(items1, undefined);
-                            } catch (tmp7) {
-                              if (closure_2_18) {
-                                if (true === tmp8(tmp7)) {
-                                  return () => {
-  
-                                  };
-                                }
-                              }
-                              throw tmp7;
-                            }
-                          };
-                        }
-                        fn();
-                      } else {
-                        throw new TypeError("Trying to call a non-function");
-                      }
-                    });
-                    const nextPromise = imageBitmap.then((bitmap) => {
-                      const worker = self.worker;
-                      if (worker != null) {
-                        const size = { id, bitmap, width: null, height: null, dataURLOptions: null, maxCanvasSize: null };
-                        ({ width: obj.width, height: obj.height } = closure_0);
-                        size.dataURLOptions = dataURLOptions;
-                        size.maxCanvasSize = maxCanvasSize;
-                        const items = [bitmap];
-                        worker.postMessage(size, items);
-                      }
-                    });
-                  }
-                }
-              }
-            }
-          });
-        }
-      }
-    },
-    {
-      key: "startPendingCanvasMutationFlusher",
-      value: function startPendingCanvasMutationFlusher() {
-        const self = this;
-        closure_1_16(() => self.flushPendingCanvasMutations());
-      }
-    },
-    {
-      key: "startRAFTimestamping",
-      value: function startRAFTimestamping() {
-        const self = this;
-        function setLatestRAFTimestamp(latestId) {
-          self.rafStamps.latestId = latestId;
-          closure_2_16(setLatestRAFTimestamp);
-        }
-        closure_16(setLatestRAFTimestamp);
-      }
-    },
-    {
-      key: "flushPendingCanvasMutations",
-      value: function flushPendingCanvasMutations() {
-        const self = this;
-        const prop = this.pendingCanvasMutations;
-        const item = prop.forEach((item, index) => {
-          const mirror = self.mirror;
-          const result = self.flushPendingCanvasMutationFor(index, mirror.getId(index));
-        });
-        closure_1_16(() => self.flushPendingCanvasMutations());
-      }
-    },
-    {
-      key: "flushPendingCanvasMutationFor",
-      value: function flushPendingCanvasMutationFor(index, id) {
-        const self = this;
-        if (!this.frozen) {
-          if (!self.locked) {
-            const pendingCanvasMutations = self.pendingCanvasMutations;
-            const value = pendingCanvasMutations.get(index);
-            if (value) {
-              if (-1 !== id) {
-                const obj = { id, type: value[0].type, commands: value.map((item) => closure_1_2(item, closure_1_5)) };
-                self.mutationCb(obj);
-                const pendingCanvasMutations2 = self.pendingCanvasMutations;
-                pendingCanvasMutations2.delete(index);
-              }
-            }
-          }
-        }
-      }
-    }
-  ];
-  return closure_4(CanvasManager, items);
-}
-
-function f23539(arg0) {
-  return 2 * arg0;
-}
-
-function createMirror$2() {
-  return new closure_1_8();
-}
-
-function f23541() {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  closure_0 = undefined;
-  closure_1 = undefined;
-  [tmp3, tmp4] = closure_1(obj.maxCanvasSize || [], 2);
-  let obj2 = { quality: obj.quality || "medium", enableManualSnapshot: obj.enableManualSnapshot, maxCanvasSize: null };
-  if (tmp3) {
-    const _Math = Math;
-    let bound = Math.min(tmp3, closure_31);
-    let tmp6 = closure_31;
-  } else {
-    tmp6 = closure_31;
-    bound = closure_31;
-  }
-  const items = [bound, ];
-  let bound1 = tmp6;
-  if (tmp4) {
-    const _Math2 = Math;
-    bound1 = Math.min(tmp4, tmp6);
-  }
-  items[1] = bound1;
-  obj2.maxCanvasSize = items;
-  new Promise((arg0) => {
-    closure_1 = arg0;
-    return arg0;
-  });
-  return {
-    name: "ReplayCanvas",
-    getOptions() {
-      const enableManualSnapshot = obj2.enableManualSnapshot;
-      const maxCanvasSize = obj2.maxCanvasSize;
-      let merged = Object.assign(medium[obj2.quality] || medium.medium);
-      return {
-        enableManualSnapshot,
-        recordCanvas: true,
-        getCanvasManager(arg0) {
-          const obj = {};
-          const merged = Object.assign(arg0);
-          obj.enableManualSnapshot = enableManualSnapshot;
-          obj.maxCanvasSize = maxCanvasSize;
-          obj.errorHandler = function errorHandler(obj) {
-            try {
-              if (typeof obj === "object") {
-                obj.__rrweb__ = true;
-              }
-            } catch (err) {
-            }
-          };
-          const tmp2 = new closure_3_29(obj);
-          closure_0 = tmp2;
-          maxCanvasSize(tmp2);
-          return tmp2;
-        }
-      };
-    },
-    snapshot(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      return closure_0(function*() {
-        if (c2 === 2) {
-          c2 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "HermesInternal", done: "+60" };
-          }
-        } else {
-          try {
-            c2 = 2;
-            if (0 === c1) {
-              if (arg0 === 1) {
-                c2 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c2 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                closure_0 = tmp4;
-                let obj = closure_0;
-                if (!closure_0) {
-                  c1 = 1;
-                  c2 = 1;
-                  const obj4 = { value, done: false };
-                  return obj4;
-                }
-              }
-            } else if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else {
-              obj = value;
-              if (arg0 === 2) {
-                c2 = 3;
-                const obj5 = { value, done: true };
-                return obj5;
-              }
-            }
-            obj.snapshot(closure_128_0, closure_128_1);
-            c2 = 3;
-            return { value: "HermesInternal", done: "+60" };
-          } catch (tmp9) {
-            c2 = tmp;
-            throw tmp9;
-          }
-        }
-      })();
-    }
-  };
 }
 
 function startsWith(str, arg1, arg2) {
@@ -6553,7 +1537,7 @@ function fromCodePoint() {
       } else {
         let _String = String;
         let diff = tmp - 65536;
-        fromCharCodeResult = String.fromCharCode(55296 + (diff >> 10), diff % 1024 + 56320);
+        fromCharCodeResult = String.fromCharCode(55296 + (diff >> 10), (diff % 1024) + 56320);
       }
       num2 = num2 + 1;
       str = str + fromCharCodeResult;
@@ -6584,22 +1568,22 @@ function codePointAt(str, arg1) {
   return str.codePointAt(arg1);
 }
 
-function codePointAt(str, sum) {
-  if (sum >= 0) {
-    if (sum < length) {
-      const charCodeAtResult = str.charCodeAt(sum);
-      sum = charCodeAtResult;
+function codePointAt(str, arg1) {
+  if (arg1 >= 0) {
+    if (arg1 < length) {
+      const charCodeAtResult = str.charCodeAt(arg1);
+      let sum = charCodeAtResult;
       if (charCodeAtResult >= 55296) {
         sum = charCodeAtResult;
         if (charCodeAtResult <= 56319) {
           sum = charCodeAtResult;
-          if (sum + 1 !== length) {
-            const charCodeAtResult1 = str.charCodeAt(sum + 1);
+          if (arg1 + 1 !== length) {
+            const charCodeAtResult1 = str.charCodeAt(arg1 + 1);
             sum = charCodeAtResult;
             if (charCodeAtResult1 >= 56320) {
               sum = charCodeAtResult;
               if (charCodeAtResult1 <= 57343) {
-                sum = charCodeAtResult1 - 56320 + (charCodeAtResult - 55296 << 10) + 65536;
+                sum = charCodeAtResult1 - 56320 + ((charCodeAtResult - 55296) << 10) + 65536;
               }
             }
           }
@@ -7832,7 +2816,7 @@ function matchIdentifierAtIndex(arg0, arg1) {
   return closure_1_7.apply(undefined, items);
 }
 
-function f24859() {
+function f24506() {
   class Parser {
     constructor(arg0, arg1) {
       obj = {};
@@ -8511,7 +3495,10 @@ function f24859() {
                     obj15 = { start: null, end: null };
                     obj15.start = clonePositionResult;
                     obj15.end = self.clonePosition();
-                    errorResult = self.error(closure_1_0(closure_1_1[2]).ErrorKind.EXPECT_ARGUMENT_CLOSING_BRACE, obj15);
+                    errorResult = self.error(
+                      closure_1_0(closure_1_1[2]).ErrorKind.EXPECT_ARGUMENT_CLOSING_BRACE,
+                      obj15,
+                    );
                   } else {
                     tmp12 = arg0;
                     tmp13 = arg1;
@@ -8607,7 +3594,10 @@ function f24859() {
                       bumpSpaceResult2 = self.bumpSpace();
                       tmp15 = closure_1_0;
                       tmp16 = closure_1_1;
-                      result = self.tryParseDecimalInteger(closure_1_0(closure_1_1[2]).ErrorKind.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE, closure_1_0(closure_1_1[2]).ErrorKind.INVALID_PLURAL_ARGUMENT_OFFSET_VALUE);
+                      result = self.tryParseDecimalInteger(
+                        closure_1_0(closure_1_1[2]).ErrorKind.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE,
+                        closure_1_0(closure_1_1[2]).ErrorKind.INVALID_PLURAL_ARGUMENT_OFFSET_VALUE,
+                      );
                       if (result.err) {
                         return result;
                       } else {
@@ -8622,7 +3612,10 @@ function f24859() {
                       obj23 = { start: null, end: null };
                       obj23.start = clonePositionResult3;
                       obj23.end = self.clonePosition();
-                      return self.error(closure_1_0(closure_1_1[2]).ErrorKind.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE, obj23);
+                      return self.error(
+                        closure_1_0(closure_1_1[2]).ErrorKind.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE,
+                        obj23,
+                      );
                     }
                   }
                 }
@@ -8655,7 +3648,14 @@ function f24859() {
                       obj25.val = obj26;
                       obj28 = obj25;
                     } else {
-                      obj27 = { type: null, value: null, options: null, offset: null, pluralType: null, location: null };
+                      obj27 = {
+                        type: null,
+                        value: null,
+                        options: null,
+                        offset: null,
+                        pluralType: null,
+                        location: null,
+                      };
                       tmp26 = closure_1_0;
                       tmp27 = closure_1_1;
                       obj27.type = closure_1_0(closure_1_1[1]).TYPE.plural;
@@ -8950,7 +3950,10 @@ function f24859() {
           } else {
             tmp5 = closure_1_0;
             tmp6 = closure_1_1;
-            result = self.tryParseDecimalInteger(closure_1_0(closure_1_1[2]).ErrorKind.EXPECT_PLURAL_ARGUMENT_SELECTOR, closure_1_0(closure_1_1[2]).ErrorKind.INVALID_PLURAL_ARGUMENT_SELECTOR);
+            result = self.tryParseDecimalInteger(
+              closure_1_0(closure_1_1[2]).ErrorKind.EXPECT_PLURAL_ARGUMENT_SELECTOR,
+              closure_1_0(closure_1_1[2]).ErrorKind.INVALID_PLURAL_ARGUMENT_SELECTOR,
+            );
             if (result.err) {
               return result;
             } else {
@@ -8968,11 +3971,13 @@ function f24859() {
           if ("select" === arg1) {
             tmp24 = closure_1_0;
             tmp25 = closure_1_1;
-            DUPLICATE_PLURAL_ARGUMENT_SELECTOR = closure_1_0(closure_1_1[2]).ErrorKind.DUPLICATE_SELECT_ARGUMENT_SELECTOR;
+            DUPLICATE_PLURAL_ARGUMENT_SELECTOR = closure_1_0(closure_1_1[2]).ErrorKind
+              .DUPLICATE_SELECT_ARGUMENT_SELECTOR;
           } else {
             tmp22 = closure_1_0;
             tmp23 = closure_1_1;
-            DUPLICATE_PLURAL_ARGUMENT_SELECTOR = closure_1_0(closure_1_1[2]).ErrorKind.DUPLICATE_PLURAL_ARGUMENT_SELECTOR;
+            DUPLICATE_PLURAL_ARGUMENT_SELECTOR = closure_1_0(closure_1_1[2]).ErrorKind
+              .DUPLICATE_PLURAL_ARGUMENT_SELECTOR;
           }
           return self.error(DUPLICATE_PLURAL_ARGUMENT_SELECTOR, tmp2);
         } else {
@@ -8991,7 +3996,7 @@ function f24859() {
               if (result1.err) {
                 return result1;
               } else {
-                items1 = [, ];
+                items1 = [,];
                 items1[0] = substr;
                 obj9 = { value: null, location: null };
                 obj9.value = parseMessageResult.val;
@@ -9013,11 +4018,13 @@ function f24859() {
             if ("select" === arg1) {
               tmp13 = closure_1_0;
               tmp14 = closure_1_1;
-              EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT = closure_1_0(closure_1_1[2]).ErrorKind.EXPECT_SELECT_ARGUMENT_SELECTOR_FRAGMENT;
+              EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT = closure_1_0(closure_1_1[2]).ErrorKind
+                .EXPECT_SELECT_ARGUMENT_SELECTOR_FRAGMENT;
             } else {
               tmp11 = closure_1_0;
               tmp12 = closure_1_1;
-              EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT = closure_1_0(closure_1_1[2]).ErrorKind.EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT;
+              EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT = closure_1_0(closure_1_1[2]).ErrorKind
+                .EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT;
             }
             clonePositionResult2 = self.clonePosition();
             obj11 = { start: null, end: null };
@@ -9289,7 +4296,7 @@ function f24859() {
           bumpResult = self.bump();
           while (!self.isEOF()) {
             charResult1 = self.char();
-            tmp6 = charResult1 >= 9 && charResult1 <= 13 || 32 === charResult1 || 133 === charResult1;
+            tmp6 = (charResult1 >= 9 && charResult1 <= 13) || 32 === charResult1 || 133 === charResult1;
             if (!tmp6) {
               tmp7 = charResult1 >= 8206 && charResult1 <= 8207;
               tmp6 = tmp7;
@@ -9341,7 +4348,7 @@ function crc32(arg0, arg1, arg2, arg3) {
   let tmp5 = tmp4;
   if (arg3 < sum) {
     do {
-      tmp4 = tmp4 >>> 8 ^ tmp2[255 & (tmp4 ^ arg1[sum1])];
+      tmp4 = (tmp4 >>> 8) ^ tmp2[255 & (tmp4 ^ arg1[sum1])];
       sum1 = sum1 + 1;
       tmp5 = tmp4;
     } while (sum1 < sum);
@@ -9349,7 +4356,7 @@ function crc32(arg0, arg1, arg2, arg3) {
   return ~tmp5;
 }
 
-function f64337(str) {
+function f63609(str) {
   let sum4;
   let num = 0;
   let num2 = 0;
@@ -9371,7 +4378,7 @@ function f64337(str) {
       let sum1 = num2;
       let sum = charCodeAtResult;
       if (tmp5) {
-        sum = 65536 + (charCodeAtResult - 55296 << 10) + (tmp8 - 56320);
+        sum = 65536 + ((charCodeAtResult - 55296) << 10) + (tmp8 - 56320);
         sum1 = num2 + 1;
       }
       let num4 = 1;
@@ -9413,7 +4420,7 @@ function f64337(str) {
       let sum3 = num8;
       let sum2 = charCodeAtResult2;
       if (tmp15) {
-        sum2 = 65536 + (charCodeAtResult2 - 55296 << 10) + (tmp18 - 56320);
+        sum2 = 65536 + ((charCodeAtResult2 - 55296) << 10) + (tmp18 - 56320);
         sum3 = num8 + 1;
       }
       if (sum2 < 128) {
@@ -9421,25 +4428,25 @@ function f64337(str) {
         buf8[num7] = sum2;
       } else if (sum2 < 2048) {
         let sum5 = num7 + 1;
-        buf8[num7] = 192 | sum2 >>> 6;
+        buf8[num7] = 192 | (sum2 >>> 6);
         sum4 = sum5 + 1;
-        buf8[sum5] = 128 | 63 & sum2;
+        buf8[sum5] = 128 | (63 & sum2);
       } else if (sum2 < 65536) {
         let sum6 = num7 + 1;
-        buf8[num7] = 224 | sum2 >>> 12;
+        buf8[num7] = 224 | (sum2 >>> 12);
         let sum7 = sum6 + 1;
-        buf8[sum6] = 128 | sum2 >>> 6 & 63;
+        buf8[sum6] = 128 | ((sum2 >>> 6) & 63);
         sum4 = sum7 + 1;
-        buf8[sum7] = 128 | 63 & sum2;
+        buf8[sum7] = 128 | (63 & sum2);
       } else {
         let sum8 = num7 + 1;
-        buf8[num7] = 240 | sum2 >>> 18;
+        buf8[num7] = 240 | (sum2 >>> 18);
         let sum9 = sum8 + 1;
-        buf8[sum8] = 128 | sum2 >>> 12 & 63;
+        buf8[sum8] = 128 | ((sum2 >>> 12) & 63);
         let sum10 = sum9 + 1;
-        buf8[sum9] = 128 | sum2 >>> 6 & 63;
+        buf8[sum9] = 128 | ((sum2 >>> 6) & 63);
         sum4 = sum10 + 1;
-        buf8[sum10] = 128 | 63 & sum2;
+        buf8[sum10] = 128 | (63 & sum2);
       }
       num8 = sum3 + 1;
       num7 = sum4;
@@ -9449,7 +4456,7 @@ function f64337(str) {
   return buf8;
 }
 
-function f64338(subarray) {
+function f63610(subarray) {
   if (subarray.length < 65534) {
     if (!subarray.subarray) {
       if (!subarray.subarray) {
@@ -9473,7 +4480,7 @@ function f64338(subarray) {
   }
 }
 
-function f64339(str) {
+function f63611(str) {
   const buf8 = new closure_1_0(closure_1_1[0]).Buf8(str.length);
   for (let num = 0; num < length; num = num + 1) {
     buf8[num] = str.charCodeAt(num);
@@ -9481,7 +4488,7 @@ function f64339(str) {
   return buf8;
 }
 
-function f64340(arg0, arg1) {
+function f63612(arg0, arg1) {
   let sum2;
   let length = arg1;
   if (!arg1) {
@@ -9527,7 +4534,7 @@ function f64340(arg0, arg1) {
             tmp8 = sum;
             if (sum < length) {
               let sum3 = tmp11 + 1;
-              let tmp13 = tmp10 << 6 | 63 & arg0[tmp11];
+              let tmp13 = (tmp10 << 6) | (63 & arg0[tmp11]);
               let diff = tmp9 - 1;
               tmp6 = diff;
               tmp7 = tmp13;
@@ -9556,9 +4563,9 @@ function f64340(arg0, arg1) {
           } else {
             let diff1 = tmp7 - 65536;
             let sum4 = num + 1;
-            array[num] = 55296 | diff1 >> 10 & 1023;
+            array[num] = 55296 | ((diff1 >> 10) & 1023);
             sum1 = sum4 + 1;
-            array[sum4] = 56320 | 1023 & diff1;
+            array[sum4] = 56320 | (1023 & diff1);
             sum2 = tmp8;
           }
         }
@@ -9591,7 +4598,7 @@ function f64340(arg0, arg1) {
   }
 }
 
-function f64341(arg0, arg1) {
+function f63613(arg0, arg1) {
   let length = arg1;
   if (!arg1) {
     length = arg0.length;
@@ -9630,23 +4637,6 @@ function f64341(arg0, arg1) {
   return tmp5;
 }
 
-function parse(arg0) {
-  const obj = new closure_1_0(closure_1_1[0])(arg0);
-  const tmp = closure_1_6(obj);
-  if (obj.pos !== arg0.length) {
-    obj.error("Unexpected input");
-  }
-  let tmp3 = 1 === tmp.terms.length;
-  if (tmp3) {
-    tmp3 = "Group" === tmp.terms[0].type;
-  }
-  let first = tmp;
-  if (tmp3) {
-    first = tmp.terms[0];
-  }
-  return first;
-}
-
 function isoStop(blobReachResult, bellReachResult) {
   let num = 1;
   if (bellReachResult > 0) {
@@ -9657,8 +4647,7 @@ function isoStop(blobReachResult, bellReachResult) {
   return num;
 }
 
-function then() {
-}
+function then() {}
 
 function fetch(arg0, arg1) {
   let DOMException = arg0;
@@ -9684,16 +4673,18 @@ function fetch(arg0, arg1) {
       let obj2;
       obj2.map = {};
       if (undefined instanceof closure_2_9) {
-        const item = undefined.forEach(function(item, index) {
+        const item = undefined.forEach(function (item, index) {
           this.append(index, item);
         }, obj2);
       } else {
         const _Array = Array;
         if (Array.isArray(undefined)) {
-          const item1 = undefined.forEach(function(item) {
+          const item1 = undefined.forEach(function (item) {
             if (2 != item.length) {
               const _TypeError = TypeError;
-              const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
+              const typeError = new TypeError(
+                "Headers constructor: expected name/value pair to be length 2, found" + item.length,
+              );
               throw typeError;
             } else {
               const self = this;
@@ -9765,20 +4756,24 @@ function fetch(arg0, arg1) {
         config(dOMException);
       }, 0);
     };
-    xMLHttpRequest.open(request.method, (function fixUrl(url) {
-      try {
-        let href = url;
-        if ("" === url) {
-          href = url;
-          if (config.location.href) {
-            href = config.location.href;
+    xMLHttpRequest.open(
+      request.method,
+      (function fixUrl(url) {
+        try {
+          let href = url;
+          if ("" === url) {
+            href = url;
+            if (config.location.href) {
+              href = config.location.href;
+            }
           }
+          return href;
+        } catch (err) {
+          return tmp;
         }
-        return href;
-      } catch (err) {
-        return tmp;
-      }
-    })(request.url), true);
+      })(request.url),
+      true,
+    );
     if ("include" === request.credentials) {
       xMLHttpRequest.withCredentials = true;
     } else if ("omit" === request.credentials) {
@@ -9814,7 +4809,7 @@ function fetch(arg0, arg1) {
                 xMLHttpRequest.setRequestHeader(item, StringResult);
               }
             }
-            const typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+            const typeError = new TypeError('Invalid character in header field name: "' + str + '"');
             throw typeError;
           });
           let headers = request.headers;
@@ -9848,7 +4843,7 @@ function fetch(arg0, arg1) {
   });
 }
 
-function f78848(message, name) {
+function f77590(message, name) {
   const error = { message, name, stack: Error(message).stack };
 }
 
@@ -9856,203 +4851,7 @@ function get() {
   return closure_1_0.name;
 }
 
-function isElement$1(nodeType) {
-  return nodeType.nodeType === nodeType.ELEMENT_NODE;
-}
-
-function observe(doc) {
-  let fn = closure_2_97;
-  if (typeof closure_2_86 === "function") {
-    if (closure_2_79) {
-      fn = () => {
-        items = [...arguments];
-        try {
-          const items1 = [];
-          HermesBuiltin.arraySpread(items, 0);
-          return HermesBuiltin.apply(items1, undefined);
-        } catch (tmp7) {
-          if (closure_2_79) {
-            if (true === tmp8(tmp7)) {
-              return () => {
-  
-              };
-            }
-          }
-          throw tmp7;
-        }
-      };
-    }
-    let obj = {
-      onMutation: closure_1_29,
-      mutationCb: closure_1_37,
-      mousemoveCb(positions, source) {
-          const obj = { type: closure_1_73.IncrementalSnapshot, data: { source, positions } };
-          closure_1_103(obj);
-        },
-      mouseInteractionCb(arg0) {
-          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          const merged = Object.assign(arg0);
-          obj.data = { source: closure_1_74.MouseInteraction };
-          closure_1_103(obj);
-        },
-      scrollCb: closure_1_38,
-      viewportResizeCb(arg0) {
-          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          const merged = Object.assign(arg0);
-          obj.data = { source: closure_1_74.ViewportResize };
-          closure_1_103(obj);
-        },
-      inputCb(arg0) {
-          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          const merged = Object.assign(arg0);
-          obj.data = { source: closure_1_74.Input };
-          closure_1_103(obj);
-        },
-      mediaInteractionCb(arg0) {
-          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          const merged = Object.assign(arg0);
-          obj.data = { source: closure_1_74.MediaInteraction };
-          closure_1_103(obj);
-        },
-      styleSheetRuleCb(arg0) {
-          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          const merged = Object.assign(arg0);
-          obj.data = { source: closure_1_74.StyleSheetRule };
-          closure_1_103(obj);
-        },
-      styleDeclarationCb(arg0) {
-          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          const merged = Object.assign(arg0);
-          obj.data = { source: closure_1_74.StyleDeclaration };
-          closure_1_103(obj);
-        },
-      canvasMutationCb: closure_1_39,
-      fontCb(arg0) {
-          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          const merged = Object.assign(arg0);
-          obj.data = { source: closure_1_74.Font };
-          closure_1_103(obj);
-        },
-      selectionCb(arg0) {
-          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          const merged = Object.assign(arg0);
-          obj.data = { source: closure_1_74.Selection };
-          closure_1_103(obj);
-        },
-      customElementCb(arg0) {
-          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          const merged = Object.assign(arg0);
-          obj.data = { source: closure_1_74.CustomElement };
-          closure_1_103(obj);
-        },
-      blockClass: closure_1_3,
-      ignoreClass: closure_1_6,
-      ignoreSelector: closure_1_7,
-      maskAllText: closure_1_8,
-      maskTextClass: closure_1_9,
-      unmaskTextClass: closure_1_10,
-      maskTextSelector: closure_1_11,
-      unmaskTextSelector: closure_1_12,
-      maskInputOptions: closure_1_33,
-      inlineStylesheet: closure_1_13,
-      sampling: closure_1_18,
-      recordDOM: closure_1_20,
-      recordCanvas: closure_1_21,
-      inlineImages: closure_1_25,
-      userTriggeredOnInput: closure_1_23,
-      collectFonts: closure_1_24,
-      doc,
-      maskAttributeFn: closure_1_14,
-      maskInputFn: closure_1_15,
-      maskTextFn: closure_1_16,
-      keepIframeSrcFn: closure_1_27,
-      blockSelector: closure_1_4,
-      unblockSelector: closure_1_5,
-      slimDOMOptions: closure_1_34,
-      dataURLOptions: closure_1_19,
-      mirror: closure_2_108,
-      iframeManager: closure_1_41,
-      stylesheetManager: closure_1_40,
-      shadowDomManager: closure_1_44,
-      processedNodeManager: closure_1_42,
-      canvasManager: closure_1_43,
-      ignoreCSSAttributes: closure_1_28,
-      plugins: null
-    };
-    let mapped;
-    if (closure_1_26 != null) {
-      const found = closure_1_26.filter((observer) => observer.observer);
-      if (found != null) {
-        mapped = found.map((observer) => ({
-          observer: observer.observer,
-          options: observer.options,
-          callback(payload) {
-            const obj = { type: closure_2_73.Plugin, data: { plugin: observer.name, payload } };
-            closure_2_103(obj);
-          }
-        }));
-      }
-    }
-    if (!mapped) {
-      mapped = [];
-    }
-    obj.plugins = mapped;
-    return fn(obj, {});
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-
-function f80709(contentDocument) {
-  try {
-    closure_1_46.push(closure_1_47(contentDocument.contentDocument));
-  } catch (tmp5) {
-    const _console = console;
-    console.warn(tmp5);
-  }
-}
-
-function init() {
-  closure_1_45();
-  closure_1_46.push(closure_1_47(document));
-}
-
-function f80711() {
-  closure_2_103({ type: closure_2_73.DomContentLoaded, data: {} });
-  if ("DOMContentLoaded" === closure_1_22) {
-    if (typeof closure_1_48 === "function") {
-      closure_1_45();
-      const _document = document;
-      closure_1_46.push(closure_1_47(document));
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  const obj = { type: closure_2_73.DomContentLoaded, data: {} };
-}
-
-function f80712() {
-  closure_2_103({ type: closure_2_73.Load, data: {} });
-  if ("load" === closure_1_22) {
-    if (typeof closure_1_48 === "function") {
-      closure_1_45();
-      const _document = document;
-      closure_1_46.push(closure_1_47(document));
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  const obj = { type: closure_2_73.Load, data: {} };
-}
-
-function f80713() {
-  const item = closure_1_46.forEach((fn) => fn());
-  closure_1_42.destroy();
-  closure_2_104 = undefined;
-  closure_2_79 = undefined;
-}
-
-function f81582(arg0, arg1, str) {
+function f79944(arg0, arg1, str) {
   if (typeof str !== "string") {
     ({ length: closure_1_0.minimumSignificantDigits, length: closure_1_0.maximumSignificantDigits } = arg1);
   } else if ("+" === str) {
@@ -10070,7 +4869,7 @@ function f81582(arg0, arg1, str) {
   return "";
 }
 
-function f81584(arg0, arg1) {
+function f79946(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -10082,44 +4881,44 @@ function f81584(arg0, arg1) {
       return tmp2(tmp4, obj);
     case "sign-accounting":
       obj = { currencySign: "accounting" };
-    break;
+      break;
     case "()":
       obj = { currencySign: "accounting" };
-    break;
+      break;
     case "sign-always":
       obj = { signDisplay: "always" };
-    break;
+      break;
     case "+!":
       obj = { signDisplay: "always" };
-    break;
+      break;
     case "sign-accounting-always":
       obj = { signDisplay: "always", currencySign: "accounting" };
-    break;
+      break;
     case "()!":
       obj = { signDisplay: "always", currencySign: "accounting" };
-    break;
+      break;
     case "sign-except-zero":
       obj = { signDisplay: "exceptZero" };
-    break;
+      break;
     case "+?":
       obj = { signDisplay: "exceptZero" };
-    break;
+      break;
     case "sign-accounting-except-zero":
       obj = { signDisplay: "exceptZero", currencySign: "accounting" };
-    break;
+      break;
     case "()?":
       obj = { signDisplay: "exceptZero", currencySign: "accounting" };
-    break;
+      break;
     case "sign-never":
       obj = { signDisplay: "never" };
-    break;
+      break;
     case "+_":
       obj = { signDisplay: "never" };
-    break;
+      break;
   }
 }
 
-function f81585(arg0, arg1) {
+function f79947(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -10131,44 +4930,44 @@ function f81585(arg0, arg1) {
       return tmp2(tmp4, obj);
     case "sign-accounting":
       obj = { currencySign: "accounting" };
-    break;
+      break;
     case "()":
       obj = { currencySign: "accounting" };
-    break;
+      break;
     case "sign-always":
       obj = { signDisplay: "always" };
-    break;
+      break;
     case "+!":
       obj = { signDisplay: "always" };
-    break;
+      break;
     case "sign-accounting-always":
       obj = { signDisplay: "always", currencySign: "accounting" };
-    break;
+      break;
     case "()!":
       obj = { signDisplay: "always", currencySign: "accounting" };
-    break;
+      break;
     case "sign-except-zero":
       obj = { signDisplay: "exceptZero" };
-    break;
+      break;
     case "+?":
       obj = { signDisplay: "exceptZero" };
-    break;
+      break;
     case "sign-accounting-except-zero":
       obj = { signDisplay: "exceptZero", currencySign: "accounting" };
-    break;
+      break;
     case "()?":
       obj = { signDisplay: "exceptZero", currencySign: "accounting" };
-    break;
+      break;
     case "sign-never":
       obj = { signDisplay: "never" };
-    break;
+      break;
     case "+_":
       obj = { signDisplay: "never" };
-    break;
+      break;
   }
 }
 
-function f81586(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f79948(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg1) {
     closure_1_0.minimumIntegerDigits = arg2.length;
   } else {
@@ -10188,7 +4987,7 @@ function f81586(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f81587(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f79949(arg0, arg1, arg2, arg3, arg4, arg5) {
   if ("*" === arg2) {
     closure_1_0.minimumFractionDigits = arg1.length;
   } else {
@@ -10208,7 +5007,7 @@ function f81587(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f81670(arg0, arg1, str) {
+function f80032(arg0, arg1, str) {
   if (typeof str !== "string") {
     ({ length: closure_1_0.minimumSignificantDigits, length: closure_1_0.maximumSignificantDigits } = arg1);
   } else if ("+" === str) {
@@ -10226,7 +5025,7 @@ function f81670(arg0, arg1, str) {
   return "";
 }
 
-function f81672(arg0, arg1) {
+function f80034(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -10238,44 +5037,44 @@ function f81672(arg0, arg1) {
       return tmp2(tmp4, obj);
     case "sign-accounting":
       obj = { currencySign: "accounting" };
-    break;
+      break;
     case "()":
       obj = { currencySign: "accounting" };
-    break;
+      break;
     case "sign-always":
       obj = { signDisplay: "always" };
-    break;
+      break;
     case "+!":
       obj = { signDisplay: "always" };
-    break;
+      break;
     case "sign-accounting-always":
       obj = { signDisplay: "always", currencySign: "accounting" };
-    break;
+      break;
     case "()!":
       obj = { signDisplay: "always", currencySign: "accounting" };
-    break;
+      break;
     case "sign-except-zero":
       obj = { signDisplay: "exceptZero" };
-    break;
+      break;
     case "+?":
       obj = { signDisplay: "exceptZero" };
-    break;
+      break;
     case "sign-accounting-except-zero":
       obj = { signDisplay: "exceptZero", currencySign: "accounting" };
-    break;
+      break;
     case "()?":
       obj = { signDisplay: "exceptZero", currencySign: "accounting" };
-    break;
+      break;
     case "sign-never":
       obj = { signDisplay: "never" };
-    break;
+      break;
     case "+_":
       obj = { signDisplay: "never" };
-    break;
+      break;
   }
 }
 
-function f81673(arg0, arg1) {
+function f80035(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -10287,44 +5086,44 @@ function f81673(arg0, arg1) {
       return tmp2(tmp4, obj);
     case "sign-accounting":
       obj = { currencySign: "accounting" };
-    break;
+      break;
     case "()":
       obj = { currencySign: "accounting" };
-    break;
+      break;
     case "sign-always":
       obj = { signDisplay: "always" };
-    break;
+      break;
     case "+!":
       obj = { signDisplay: "always" };
-    break;
+      break;
     case "sign-accounting-always":
       obj = { signDisplay: "always", currencySign: "accounting" };
-    break;
+      break;
     case "()!":
       obj = { signDisplay: "always", currencySign: "accounting" };
-    break;
+      break;
     case "sign-except-zero":
       obj = { signDisplay: "exceptZero" };
-    break;
+      break;
     case "+?":
       obj = { signDisplay: "exceptZero" };
-    break;
+      break;
     case "sign-accounting-except-zero":
       obj = { signDisplay: "exceptZero", currencySign: "accounting" };
-    break;
+      break;
     case "()?":
       obj = { signDisplay: "exceptZero", currencySign: "accounting" };
-    break;
+      break;
     case "sign-never":
       obj = { signDisplay: "never" };
-    break;
+      break;
     case "+_":
       obj = { signDisplay: "never" };
-    break;
+      break;
   }
 }
 
-function f81674(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f80036(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg1) {
     closure_1_0.minimumIntegerDigits = arg2.length;
   } else {
@@ -10344,7 +5143,7 @@ function f81674(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f81675(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f80037(arg0, arg1, arg2, arg3, arg4, arg5) {
   if ("*" === arg2) {
     closure_1_0.minimumFractionDigits = arg1.length;
   } else {
@@ -10364,7 +5163,7 @@ function f81675(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f82661(key10009) {
+function f81023(key10009) {
   const call = hasOwnProperty.call;
   let tmp2 = typeof call === "unknown" ? hasOwnProperty(key10009) : call(closure_1_0, key10009);
   if (tmp2) {
@@ -10381,7 +5180,7 @@ function update(arg0, arg1, arg2, arg3) {
   let tmp2 = arg0;
   if (0 < arg3) {
     do {
-      tmp = closure_1_3.table[255 & (tmp ^ arg1[arg2 + num])] ^ tmp >>> 8;
+      tmp = closure_1_3.table[255 & (tmp ^ arg1[arg2 + num])] ^ (tmp >>> 8);
       num = num + 1;
       tmp2 = tmp;
     } while (num < arg3);
@@ -10394,7 +5193,7 @@ function crc(uint8Array, sum48, sum13) {
 }
 
 function multVec(items, items1) {
-  items = [, , , ];
+  items = [, , ,];
   items[0] = items[0] * items1[0] + items[1] * items1[1] + items[2] * items1[2] + items[3] * items1[3];
   items[1] = items[4] * items1[0] + items[5] * items1[1] + items[6] * items1[2] + items[7] * items1[3];
   items[2] = items[8] * items1[0] + items[9] * items1[1] + items[10] * items1[2] + items[11] * items1[3];
@@ -10403,7 +5202,12 @@ function multVec(items, items1) {
 }
 
 function dot(multVecResult, items2) {
-  return multVecResult[0] * items2[0] + multVecResult[1] * items2[1] + multVecResult[2] * items2[2] + multVecResult[3] * items2[3];
+  return (
+    multVecResult[0] * items2[0] +
+    multVecResult[1] * items2[1] +
+    multVecResult[2] * items2[2] +
+    multVecResult[3] * items2[3]
+  );
 }
 
 function sml(arg0, items2) {
@@ -10464,16 +5268,27 @@ function encodeLL(arg0, width, height, arg3, arg4, depth, arg6, arg7) {
   return closure_1_5(obj, width, height, arg6, arg7);
 }
 
-function f84306(arg0, arg1) {
+function f82668(arg0, arg1) {
   return arg1[1].lastUsedMs - arg0[1].lastUsedMs;
 }
 
-function f94410(timestamp_ms, timestamp_ms2) {
+function f92783(timestamp_ms, timestamp_ms2) {
   return timestamp_ms.timestamp_ms - timestamp_ms2.timestamp_ms;
 }
 
 function createListState(channelId, sortOrder, tagFilter, tagSetting) {
-  return { loading: false, isInitialLoad: true, hasMore: false, failed: false, threads: [], nextOffset: 0, channelId, sortOrder, tagFilter, tagSetting };
+  return {
+    loading: false,
+    isInitialLoad: true,
+    hasMore: false,
+    failed: false,
+    threads: [],
+    nextOffset: 0,
+    channelId,
+    sortOrder,
+    tagFilter,
+    tagSetting,
+  };
 }
 
 function touchList(arg0, arg1) {
@@ -10498,7 +5313,7 @@ function touchList(arg0, arg1) {
   }
 }
 
-function f98367() {
+function f96761() {
   closure_1_0._zod.run = closure_1_0._zod.parse;
 }
 
@@ -10552,59 +5367,61 @@ function runChecks(memo, arg1, arg2) {
       if (closure_2 == null) {
         resolved = Promise.resolve();
       }
-      closure_2 = resolved.then(closure_2_4(function*() {
-        if (c2 === 2) {
-          c2 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
+      closure_2 = resolved.then(
+        closure_2_4(function* () {
+          if (c2 === 2) {
+            c2 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
           } else {
-            return { value: "HermesInternal", done: "+60" };
-          }
-        } else {
-          try {
-            c2 = 2;
-            if (0 === c1) {
-              if (arg0 === 1) {
+            try {
+              c2 = 2;
+              if (0 === c1) {
+                if (arg0 === 1) {
+                  c2 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c2 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  c1 = 1;
+                  c2 = 1;
+                  const obj4 = { value: checkResult, done: false };
+                  return obj4;
+                }
+              } else if (arg0 === 1) {
                 c2 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c2 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj = { value, done: true };
+                return obj;
               } else {
-                c1 = 1;
-                c2 = 1;
-                const obj4 = { value: checkResult, done: false };
-                return obj4;
-              }
-            } else if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
-              if (tmp4.issues.length !== closure_128_0) {
-                closure_3_10.attachSchema(tmp4.issues, closure_128_0, length);
-                if (!closure_3) {
-                  closure_3 = closure_3_10.aborted(tmp4, closure_128_0);
+                if (tmp4.issues.length !== closure_128_0) {
+                  closure_3_10.attachSchema(tmp4.issues, closure_128_0, length);
+                  if (!closure_3) {
+                    closure_3 = closure_3_10.aborted(tmp4, closure_128_0);
+                  }
                 }
+                c2 = 3;
+                return { value: "HermesInternal", done: null };
               }
-              c2 = 3;
-              return { value: "HermesInternal", done: "+60" };
+            } catch (tmp16) {
+              c2 = tmp;
+              throw tmp16;
             }
-          } catch (tmp16) {
-            c2 = tmp;
-            throw tmp16;
           }
-        }
-      }));
+        }),
+      );
     }
     const iter = arg1[Symbol.iterator]();
     while (iter !== undefined) {
@@ -10620,10 +5437,9 @@ function runChecks(memo, arg1, arg2) {
   }
 }
 
-function handleCanaryResult(arg0, arg1, arg2) {
-}
+function handleCanaryResult(arg0, arg1, arg2) {}
 
-function f98370(value, skipChecks) {
+function f96764(value, skipChecks) {
   closure_0 = value;
   if (skipChecks.skipChecks) {
     const _zod4 = closure_0._zod;
@@ -10733,12 +5549,18 @@ function _loop4() {
       str.push(obj3);
     } else if (obj2.startsWith(closure_1_22)) {
       const obj5 = { location: closure_1.index, length: 9, data: null };
-      const obj6 = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: closure_1_1(closure_1_2[18]).unsafe_rawColors.BRAND_500 };
+      const obj6 = {
+        type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT,
+        color: closure_1_1(closure_1_2[18]).unsafe_rawColors.BRAND_500,
+      };
       obj5.data = obj6;
       str.push(obj5);
     } else if (obj2.startsWith(closure_1_23)) {
       const obj7 = { location: closure_1.index, length: 5, data: null };
-      const obj8 = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: closure_1_1(closure_1_2[18]).unsafe_rawColors.BRAND_500 };
+      const obj8 = {
+        type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT,
+        color: closure_1_1(closure_1_2[18]).unsafe_rawColors.BRAND_500,
+      };
       obj7.data = obj8;
       str.push(obj7);
     }
@@ -10801,7 +5623,7 @@ function blobReach(peak, radius, bound) {
   return num;
 }
 
-function f123089() {
+function f121049() {
   return {
     navigate(arg0, arg1) {
       const navigation = closure_1_0.navigation;
@@ -10814,15 +5636,15 @@ function f123089() {
     back() {
       const navigation = closure_1_0.navigation;
       navigation.goBack();
-    }
+    },
   };
 }
 
-function f123090() {
+function f121050() {
   return { emit: closure_1_0.navigation.emit };
 }
 
-function f123201(offset) {
+function f121161(offset) {
   let tmp2 = closure_1_0;
   if (closure_1_0) {
     const obj2 = { timingFunction: tmp };
@@ -10870,38 +5692,45 @@ function _loop() {
       } else {
         closure_1_7.add(combined);
         const children = closure_1_5.children;
-        children.push(closure_2_4(closure_1_4.filter((id) => {
-          const hasItem = closure_2_1.has(id.id);
-          let tmp2 = !hasItem;
-          if (!hasItem) {
-            tmp2 = null != id.end;
-          }
-          if (tmp2) {
-            tmp2 = null == id.error;
-          }
-          if (tmp2) {
-            const attrs = id.attrs;
-            let str2 = "";
-            if (null != attrs) {
-              const _Object = Object;
-              const entries = Object.entries(attrs);
-              const mapped = entries.map((item) => {
-                [tmp, tmp2] = item;
-                combined = tmp;
-                if (true !== tmp2) {
-                  const _String = String;
-                  const _HermesInternal = HermesInternal;
-                  combined = "" + tmp + "=" + String(tmp2);
+        children.push(
+          closure_2_4(
+            closure_1_4.filter((id) => {
+              const hasItem = closure_2_1.has(id.id);
+              let tmp2 = !hasItem;
+              if (!hasItem) {
+                tmp2 = null != id.end;
+              }
+              if (tmp2) {
+                tmp2 = null == id.error;
+              }
+              if (tmp2) {
+                const attrs = id.attrs;
+                let str2 = "";
+                if (null != attrs) {
+                  const _Object = Object;
+                  const entries = Object.entries(attrs);
+                  const mapped = entries.map((item) => {
+                    [tmp, tmp2] = item;
+                    combined = tmp;
+                    if (true !== tmp2) {
+                      const _String = String;
+                      const _HermesInternal = HermesInternal;
+                      combined = "" + tmp + "=" + String(tmp2);
+                    }
+                    return combined;
+                  });
+                  str2 = mapped.join(" ");
                 }
-                return combined;
-              });
-              str2 = mapped.join(" ");
-            }
-            let _HermesInternal = HermesInternal;
-            tmp2 = "" + id.name + " " + str2 === combined;
-          }
-          return tmp2;
-        }), closure_1_1 + 1, closure_1_4, closure_1_3));
+                let _HermesInternal = HermesInternal;
+                tmp2 = "" + id.name + " " + str2 === combined;
+              }
+              return tmp2;
+            }),
+            closure_1_1 + 1,
+            closure_1_4,
+            closure_1_3,
+          ),
+        );
       }
     }
   }
@@ -10910,7 +5739,7 @@ function _loop() {
   children1.push(closure_2_4(items, closure_1_1 + 1, closure_1_4, closure_1_3));
 }
 
-function f125536(arg0, count) {
+function f123505(arg0, count) {
   return arg0 + count.count + count.descendants;
 }
 
@@ -10921,30 +5750,30 @@ function ot(str) {
   return closure_1_38(closure_1_38({}, found[0]), found[1]);
 }
 
-function f128126() {
+function f126103() {
   return closure_1_0;
 }
 
-function f132645(soft_deleted) {
+function f130606(soft_deleted) {
   return !soft_deleted.soft_deleted;
 }
 
-function f132646(soft_deleted) {
+function f130607(soft_deleted) {
   return soft_deleted.soft_deleted;
 }
 
-function f137173(arg0) {
+function f135042(arg0) {
   closure_1_8.setRequestHeader(arg0, closure_1_6[arg0]);
 }
 
-function f138064(arr) {
+function f135935(arr) {
   return arr.every((item) => {
     const ipV6 = regex.regex.ipV6;
     return ipV6.test(item);
   });
 }
 
-function f138065(arg0, tldBlacklist) {
+function f135936(arg0, tldBlacklist) {
   const _Array = Array;
   if (tldBlacklist.tldBlacklist) {
     if (!isArray(tldBlacklist.tldBlacklist)) {
@@ -10970,7 +5799,7 @@ function f138065(arg0, tldBlacklist) {
   }
 }
 
-function f138066(arg0, arg1, arg2) {
+function f135937(arg0, arg1, arg2) {
   let tmp14;
   let obj = arg1;
   let tmp = arg2;
@@ -11029,9 +5858,7 @@ function f138066(arg0, arg1, arg2) {
   }
   let obj3 = valid;
   let dnsWarnNoRecord = valid.diagnoses.valid;
-  function updateResult(arg0) {
-  
-  }
+  function updateResult(arg0) {}
   let localpart = valid.components.localpart;
   let localpart2 = valid.components.localpart;
   const items2 = [valid.components.localpart];
@@ -11133,7 +5960,7 @@ function f138066(arg0, arg1, arg2) {
             num13 = sum;
             tmp40 = str3;
           }
-        } else if ("\"" === obj6) {
+        } else if ('"' === obj6) {
           if (0 === num4) {
             if (0 === num5) {
               let deprecatedLocalPart = obj7.diagnoses.rfc5321QuotedString;
@@ -11249,7 +6076,8 @@ function f138066(arg0, arg1, arg2) {
                         dnsWarnNoRecord = rfc5322LocalTooLong;
                       }
                     } else {
-                      let tmp134 = localpart2 !== obj7.components.contextComment && localpart2 !== obj7.components.contextFWS;
+                      let tmp134 =
+                        localpart2 !== obj7.components.contextComment && localpart2 !== obj7.components.contextFWS;
                       if (!tmp134) {
                         let deprecatedCFWSNearAt = obj7.diagnoses.deprecatedCFWSNearAt;
                         if (deprecatedCFWSNearAt > dnsWarnNoRecord) {
@@ -11307,7 +6135,9 @@ function f138066(arg0, arg1, arg2) {
                         let str7 = "more atext found where none is allowed, but unrecognized prev context: ";
                         let tmp128 = new.target;
                         let tmp129 = new.target;
-                        let error1 = new Error("more atext found where none is allowed, but unrecognized prev context: " + localpart2);
+                        let error1 = new Error(
+                          "more atext found where none is allowed, but unrecognized prev context: " + localpart2,
+                        );
                         throw error1;
                       }
                     }
@@ -11944,7 +6774,7 @@ function f138066(arg0, arg1, arg2) {
           } else {
             tmp199 = num2;
             if ("\t" !== obj6) {
-              if ("\"" === obj6) {
+              if ('"' === obj6) {
                 obj5.local = obj5.local + obj6;
                 let locals3 = obj10.locals;
                 locals3[num5] = locals3[num5] + obj6;
@@ -12023,7 +6853,7 @@ function f138066(arg0, arg1, arg2) {
             dnsWarnNoRecord = errExpectingQPair;
           }
         } else {
-          let tmp53 = charCodeAtResult4 < 31 && 9 !== charCodeAtResult4 || 127 === charCodeAtResult4;
+          let tmp53 = (charCodeAtResult4 < 31 && 9 !== charCodeAtResult4) || 127 === charCodeAtResult4;
           if (tmp53) {
             let deprecatedQP = obj7.diagnoses.deprecatedQP;
             if (deprecatedQP > dnsWarnNoRecord) {
@@ -12581,7 +7411,7 @@ function t(options) {
   this.options = options;
 }
 
-function f138393(lastyear, lastmonth) {
+function f136264(lastyear, lastmonth) {
   let length;
   const self = this;
   const options = this.options;
@@ -12648,10 +7478,22 @@ function f138393(lastyear, lastmonth) {
                       if (typeof tmp19 === "function") {
                         const tmp29 = closure_1_19[date1.getUTCDay(date1)];
                         if (num11 === num20) {
-                          const obj2 = { mmask: closure_1_58, mdaymask: closure_1_61, nmdaymask: closure_1_63, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_65 };
+                          const obj2 = {
+                            mmask: closure_1_58,
+                            mdaymask: closure_1_61,
+                            nmdaymask: closure_1_63,
+                            wdaymask: closure_1_66.slice(tmp29),
+                            mrange: closure_1_65,
+                          };
                           let obj3 = obj2;
                         } else {
-                          obj3 = { mmask: closure_1_59, mdaymask: closure_1_60, nmdaymask: closure_1_62, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_64 };
+                          obj3 = {
+                            mmask: closure_1_59,
+                            mdaymask: closure_1_60,
+                            nmdaymask: closure_1_62,
+                            wdaymask: closure_1_66.slice(tmp29),
+                            mrange: closure_1_64,
+                          };
                         }
                         const tmp22Result = closure_1_38(closure_1_38(obj, obj3), { wnomask: null });
                         const byweekno = options.byweekno;
@@ -12839,7 +7681,9 @@ function f138393(lastyear, lastmonth) {
                                                                     }
                                                                     let sum17 = num11 + sum16;
                                                                   } else {
-                                                                    throw new TypeError("Trying to call a non-function");
+                                                                    throw new TypeError(
+                                                                      "Trying to call a non-function",
+                                                                    );
                                                                   }
                                                                 } else {
                                                                   sum17 = num12 - num29;
@@ -13124,10 +7968,18 @@ function f138393(lastyear, lastmonth) {
             const result14 = rounded1 % 4;
             const _Math7 = Math;
             const _Math8 = Math;
-            const result15 = Math.floor(19 * result12 + rounded1 - rounded2 - Math.floor((rounded1 - Math.floor((rounded1 + 8) / 25) + 1) / 3) + 15) % 30;
+            const result15 =
+              Math.floor(
+                19 * result12 +
+                  rounded1 -
+                  rounded2 -
+                  Math.floor((rounded1 - Math.floor((rounded1 + 8) / 25) + 1) / 3) +
+                  15,
+              ) % 30;
             const _Math9 = Math;
             const _Math10 = Math;
-            const result16 = Math.floor(32 + 2 * result14 + 2 * Math.floor(result13 / 4) - result15 - result13 % 4) % 7;
+            const result16 =
+              Math.floor(32 + 2 * result14 + 2 * Math.floor(result13 / 4) - result15 - (result13 % 4)) % 7;
             const _Math11 = Math;
             const rounded3 = Math.floor((result12 + 11 * result15 + 22 * result16) / 451);
             const _Math12 = Math;
@@ -13135,9 +7987,23 @@ function f138393(lastyear, lastmonth) {
             const _Date10 = Date;
             const _Date11 = Date;
             const _Math13 = Math;
-            const items8 = [Math.ceil((Date.UTC(lastyear, Math.floor((sum23 - 7 * rounded3 + 114) / 31) - 1, (sum23 - 7 * rounded3 + 114) % 31 + 1 + num59) - Date.UTC(lastyear, 0, 1)) / 86400000)];
+            const items8 = [
+              Math.ceil(
+                (Date.UTC(
+                  lastyear,
+                  Math.floor((sum23 - 7 * rounded3 + 114) / 31) - 1,
+                  ((sum23 - 7 * rounded3 + 114) % 31) + 1 + num59,
+                ) -
+                  Date.UTC(lastyear, 0, 1)) /
+                  86400000,
+              ),
+            ];
             self.eastermask = items8;
-            const UTCResult = Date.UTC(lastyear, Math.floor((sum23 - 7 * rounded3 + 114) / 31) - 1, (sum23 - 7 * rounded3 + 114) % 31 + 1 + num59);
+            const UTCResult = Date.UTC(
+              lastyear,
+              Math.floor((sum23 - 7 * rounded3 + 114) / 31) - 1,
+              ((sum23 - 7 * rounded3 + 114) % 31) + 1 + num59,
+            );
           }
         } else {
           throw new TypeError("Trying to call a non-function");
@@ -13214,12 +8080,12 @@ function get() {
   return this.yearinfo.nmdaymask;
 }
 
-function f138406() {
+function f136277() {
   const items = [closure_1_7(this.yearlen), 0, this.yearlen];
   return items;
 }
 
-function f138407(arg0, arg1) {
+function f136278(arg0, arg1) {
   const yearlen = this.yearlen;
   if (typeof closure_1_8 === "function") {
     const items = [];
@@ -13255,7 +8121,7 @@ function f138407(arg0, arg1) {
   }
 }
 
-function f138408(arg0, arg1, arg2) {
+function f136279(arg0, arg1, arg2) {
   const self = this;
   const sum = this.yearlen + 7;
   if (typeof closure_1_8 === "function") {
@@ -13288,7 +8154,9 @@ function f138408(arg0, arg1, arg2) {
           const diff = tmp13 - 60 * date.getTimezoneOffset() * 1000;
           if (typeof tmp14 === "function") {
             const _Math = Math;
-            const diff1 = Math.round((diff - (tmp16 - 60 * closure_1_18.getTimezoneOffset() * 1000)) / closure_1_17) - self.yearordinal;
+            const diff1 =
+              Math.round((diff - (tmp16 - 60 * closure_1_18.getTimezoneOffset() * 1000)) / closure_1_17) -
+              self.yearordinal;
             items[diff1] = diff1;
             const sum1 = diff1 + 1;
             let num12 = 0;
@@ -13327,7 +8195,7 @@ function f138408(arg0, arg1, arg2) {
   }
 }
 
-function f138409(arg0, arg1, arg2) {
+function f136280(arg0, arg1, arg2) {
   const yearlen = this.yearlen;
   if (typeof closure_1_8 === "function") {
     const items = [];
@@ -13359,7 +8227,9 @@ function f138409(arg0, arg1, arg2) {
           const diff = tmp14 - 60 * date.getTimezoneOffset() * 1000;
           if (typeof tmp15 === "function") {
             const _Math = Math;
-            const diff1 = Math.round((diff - (tmp17 - 60 * closure_1_18.getTimezoneOffset() * 1000)) / closure_1_17) - tmp.yearordinal;
+            const diff1 =
+              Math.round((diff - (tmp17 - 60 * closure_1_18.getTimezoneOffset() * 1000)) / closure_1_17) -
+              tmp.yearordinal;
             items[diff1] = diff1;
             const items2 = [items, diff1, diff1 + 1];
             return items2;
@@ -13380,7 +8250,7 @@ function f138409(arg0, arg1, arg2) {
   }
 }
 
-function f138410(arg0, arg1, arg2, arg3) {
+function f136281(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg2;
   closure_2 = arg3;
@@ -13402,7 +8272,7 @@ function f138410(arg0, arg1, arg2, arg3) {
   obj = closure_4;
 }
 
-function f138411(arg0, arg1, arg2, arg3) {
+function f136282(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg3;
@@ -13431,7 +8301,7 @@ function f138411(arg0, arg1, arg2, arg3) {
   }
 }
 
-function f138412(hour, minute, arg2, arg3) {
+function f136283(hour, minute, arg2, arg3) {
   if (typeof closure_1_49 === "function") {
     let num = arg3;
     const obj = { hour, minute, second: arg2 };
@@ -13446,7 +8316,7 @@ function f138412(hour, minute, arg2, arg3) {
   }
 }
 
-function f138413(arg0) {
+function f136284(arg0) {
   const self = this;
   if (closure_1_39.YEARLY === arg0) {
     const ydayset = self.ydayset;
@@ -13464,7 +8334,7 @@ function f138413(arg0) {
   }
 }
 
-function f138414(arg0) {
+function f136285(arg0) {
   const self = this;
   if (closure_1_39.HOURLY === arg0) {
     const htimeset = self.htimeset;
@@ -13768,7 +8638,7 @@ function t(arg0, arg1) {
                                           } else {
                                             if (tmp54.n) {
                                               if (tmp5.freq <= closure_1_72.MONTHLY) {
-                                                let items16 = [, ];
+                                                let items16 = [,];
                                                 ({ weekday: arr16[0], n: arr16[1] } = tmp54);
                                                 let arr5 = items15.push(items16);
                                               }
@@ -13935,11 +8805,11 @@ function t(arg0, arg1) {
   const tmp4 = closure_1_38({}, closure_1_70);
 }
 
-function f138416(arg0, arg1) {
+function f136287(arg0, arg1) {
   return closure_1_47(arg0, arg1);
 }
 
-function f138417(arg0, arg1) {
+function f136288(arg0, arg1) {
   let tmp = arg1;
   if (undefined === arg1) {
     tmp = closure_1_41;
@@ -13948,17 +8818,17 @@ function f138417(arg0, arg1) {
   return new.target;
 }
 
-function f138418(arg0) {
+function f136289(arg0) {
   const tmp2 = closure_1_0.parseString(arg0) || undefined;
   new closure_1_0(tmp2);
   return Object.create(closure_1_0.prototype);
 }
 
-function f138419(arg0) {
+function f136290(arg0) {
   return closure_1_68(arg0, this.options);
 }
 
-function f138420(arg0, arg1) {
+function f136291(arg0, arg1) {
   let _cacheGetResult = this._cache;
   if (_cacheGetResult) {
     const _cache = tmp._cache;
@@ -13967,14 +8837,14 @@ function f138420(arg0, arg1) {
   return _cacheGetResult;
 }
 
-function f138421(arg0, arg1, arg2) {
+function f136292(arg0, arg1, arg2) {
   if (this._cache) {
     const _cache = tmp._cache;
     return _cache._cacheAdd(arg0, arg1, arg2);
   }
 }
 
-function f138422(iterator) {
+function f136293(iterator) {
   const self = this;
   if (iterator) {
     if (typeof closure_1_40 === "function") {
@@ -14005,7 +8875,7 @@ function f138422(iterator) {
   }
 }
 
-function f138423(getTime, getTime2, arg2, iterator) {
+function f136294(getTime, getTime2, arg2, iterator) {
   let flag = arg2;
   if (undefined === arg2) {
     flag = false;
@@ -14075,7 +8945,7 @@ function f138423(getTime, getTime2, arg2, iterator) {
   }
 }
 
-function f138424(getTime, arg1) {
+function f136295(getTime, arg1) {
   let flag = arg1;
   if (undefined === arg1) {
     flag = false;
@@ -14112,7 +8982,7 @@ function f138424(getTime, arg1) {
   }
 }
 
-function f138425(getTime, arg1) {
+function f136296(getTime, arg1) {
   let flag = arg1;
   if (undefined === arg1) {
     flag = false;
@@ -14149,24 +9019,24 @@ function f138425(getTime, arg1) {
   }
 }
 
-function f138426() {
+function f136297() {
   return this.all().length;
 }
 
-function f138427() {
+function f136298() {
   return closure_1_56(this.origOptions);
 }
 
-function f138428(arg0, arg1, arg2) {
+function f136299(arg0, arg1, arg2) {
   new closure_1_45(this, arg0, arg1, arg2);
   return new.target.toString();
 }
 
-function f138429() {
+function f136300() {
   return closure_1_48(this);
 }
 
-function f138430() {
+function f136301() {
   new closure_1_0(this.origOptions);
   return Object.create(closure_1_0.prototype);
 }
@@ -14196,7 +9066,7 @@ function e(arg0) {
   return callResult;
 }
 
-function f138432(accept) {
+function f136303(accept) {
   ({ _rrule, _exrule, _rdate, _exdate } = this);
   let after = accept;
   let before = _exrule;
@@ -14221,7 +9091,7 @@ function f138432(accept) {
       throw new TypeError("Trying to call a non-function");
     }
   });
-  accept.accept = function(comma) {
+  accept.accept = function (comma) {
     const self = this;
     const NumberResult = Number(comma);
     if (isNaN(NumberResult)) {
@@ -14258,7 +9128,7 @@ function f138432(accept) {
         closure_1_3[Number(item)] = true;
       });
     });
-    accept.accept = function(comma) {
+    accept.accept = function (comma) {
       const NumberResult = Number(comma);
       if (dependencyMap[NumberResult]) {
         return tmp3;
@@ -14312,11 +9182,11 @@ function f138432(accept) {
       tmp13 = _result;
       if ("between" !== method) {
         if ("before" === method) {
-          tmp13 = _result.length && _result[_result.length - 1] || null;
-          const tmp15 = _result.length && _result[_result.length - 1] || null;
+          tmp13 = (_result.length && _result[_result.length - 1]) || null;
+          const tmp15 = (_result.length && _result[_result.length - 1]) || null;
         } else {
-          tmp13 = _result.length && _result[0] || null;
-          const tmp14 = _result.length && _result[0] || null;
+          tmp13 = (_result.length && _result[0]) || null;
+          const tmp14 = (_result.length && _result[0]) || null;
         }
       }
     }
@@ -14327,43 +9197,43 @@ function f138432(accept) {
   tzidResult = this.tzid();
 }
 
-function f138433(arg0) {
+function f136304(arg0) {
   closure_1_77(arg0, this._rrule);
 }
 
-function f138434(arg0) {
+function f136305(arg0) {
   closure_1_77(arg0, this._exrule);
 }
 
-function f138435(arg0) {
+function f136306(arg0) {
   closure_1_78(arg0, this._rdate);
 }
 
-function f138436(arg0) {
+function f136307(arg0) {
   closure_1_78(arg0, this._exdate);
 }
 
-function f138437() {
+function f136308() {
   const _rrule = this._rrule;
   return _rrule.map((item) => closure_1_74(item.toString()));
 }
 
-function f138438() {
+function f136309() {
   const _exrule = this._exrule;
   return _exrule.map((item) => closure_1_74(item.toString()));
 }
 
-function f138439() {
+function f136310() {
   const _rdate = this._rdate;
   return _rdate.map((getTime) => new Date(getTime.getTime()));
 }
 
-function f138440() {
+function f136311() {
   const _exdate = this._exdate;
   return _exdate.map((getTime) => new Date(getTime.getTime()));
 }
 
-function f138441() {
+function f136312() {
   const self = this;
   closure_0 = [];
   let _dtstart = !length;
@@ -14413,7 +9283,15 @@ function f138441() {
           }
           const _Date = Date;
           const date = new Date(valueOfResult);
-          const items = [closure_2_9(date.getUTCFullYear().toString(), 4, "0"), closure_2_9(date.getUTCMonth() + 1, 2, "0"), closure_2_9(date.getUTCDate(), 2, "0"), "T", closure_2_9(date.getUTCHours(), 2, "0"), closure_2_9(date.getUTCMinutes(), 2, "0"), closure_2_9(date.getUTCSeconds(), 2, "0"), ];
+          const items = [
+            closure_2_9(date.getUTCFullYear().toString(), 4, "0"),
+            closure_2_9(date.getUTCMonth() + 1, 2, "0"),
+            closure_2_9(date.getUTCDate(), 2, "0"),
+            "T",
+            closure_2_9(date.getUTCHours(), 2, "0"),
+            closure_2_9(date.getUTCMinutes(), 2, "0"),
+            closure_2_9(date.getUTCSeconds(), 2, "0"),
+          ];
           let str5 = "";
           if (flag) {
             str5 = "Z";
@@ -14455,7 +9333,15 @@ function f138441() {
         }
         const _Date = Date;
         const date = new Date(valueOfResult);
-        const items = [closure_2_9(date.getUTCFullYear().toString(), 4, "0"), closure_2_9(date.getUTCMonth() + 1, 2, "0"), closure_2_9(date.getUTCDate(), 2, "0"), "T", closure_2_9(date.getUTCHours(), 2, "0"), closure_2_9(date.getUTCMinutes(), 2, "0"), closure_2_9(date.getUTCSeconds(), 2, "0"), ];
+        const items = [
+          closure_2_9(date.getUTCFullYear().toString(), 4, "0"),
+          closure_2_9(date.getUTCMonth() + 1, 2, "0"),
+          closure_2_9(date.getUTCDate(), 2, "0"),
+          "T",
+          closure_2_9(date.getUTCHours(), 2, "0"),
+          closure_2_9(date.getUTCMinutes(), 2, "0"),
+          closure_2_9(date.getUTCSeconds(), 2, "0"),
+        ];
         let str5 = "";
         if (flag) {
           str5 = "Z";
@@ -14473,11 +9359,11 @@ function f138441() {
   }
 }
 
-function f138442() {
+function f136313() {
   return this.valueOf().join("\n");
 }
 
-function f138443() {
+function f136314() {
   const self = this;
   const _cache = this._cache;
   const obj2 = Object.create(closure_1_1.prototype);
@@ -14508,14 +9394,13 @@ function f138443() {
   return callResult;
 }
 
-function f140095() {
-}
+function f137978() {}
 
-function f140096(gameId) {
+function f137979(gameId) {
   return gameId.gameId;
 }
 
-function f140097(tags) {
+function f137980(tags) {
   tags = tags.tags;
   if (tags == null) {
     tags = [];
@@ -14523,11 +9408,11 @@ function f140097(tags) {
   return tags;
 }
 
-function f140098(arg0) {
+function f137981(arg0) {
   return arg0.toString();
 }
 
-function f140099(arg0, comment) {
+function f137982(arg0, comment) {
   comment = comment.comment;
   let num;
   if (comment != null) {
@@ -14539,7 +9424,7 @@ function f140099(arg0, comment) {
   return arg0 + num;
 }
 
-function f140463(channelId) {
+function f138345(channelId) {
   let result = closure_3_22.canWithPartialContext(closure_3_31.CONNECT, { channelId: channelId.channel_id });
   if (result) {
     const channel_id = channelId.channel_id;
@@ -14571,7 +9456,7 @@ function f140463(channelId) {
   const obj = { channelId: channelId.channel_id };
 }
 
-function f140464(id) {
+function f138346(id) {
   const user = closure_3_26.getUser(id);
   if (null != user) {
     if (user.bot) {
@@ -14597,23 +9482,23 @@ function f140464(id) {
   }
 }
 
-function f140465(userId) {
+function f138347(userId) {
   userId = userId.userId;
   closure_1_10(userId, closure_3_23.getPrimaryActivity(userId, closure_2_1), userId);
 }
 
-function f140466(event) {
+function f138348(event) {
   return closure_1_13.push({ kind: "guild-event", event, isLive: true });
 }
 
-function f140467(event) {
+function f138349(event) {
   return closure_1_13.push({ kind: "guild-event", event, isLive: false });
 }
 
-function f141145(arg0) {
+function f139019(arg0) {
   return closure_2_0.deleteMessage(closure_1_1, closure_1_0, arg0);
 }
 
-function f142118(arg0) {
+function f139971(arg0) {
   return closure_1_0[arg0];
 }

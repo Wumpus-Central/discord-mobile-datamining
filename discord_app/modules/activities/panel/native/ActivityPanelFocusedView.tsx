@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
 import EmbeddedActivityViewDefault from "../../native/EmbeddedActivityView.tsx";
 import useAnimatedKeyboardHeightDefault from "../../../keyboard/native/useAnimatedKeyboardHeight.tsx";
 import ActivityPanelStateContextDefault from "ActivityPanelStateContext.tsx";
@@ -373,25 +373,25 @@ class BaseActivityPanelFocusedView {
     return tmp48(tmp(tmp2[19]).ThemeContextProvider, obj1);
   }
 }
-const ActivityPanelConstants = fn(5418);
+const ActivityPanelConstants = fn(5420);
 ({
   ACTIVITY_LAYOUT_PHYSICS_GESTURE: metroImportDefault,
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8,
   ActivityPanelModes: closure_9,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(19088);
+const ActivityPanelNativeConstants = fn(18907);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_10,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11,
   DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: closure_12,
 } = ActivityPanelNativeConstants);
-let ThemeTypes = fn(1072).ThemeTypes;
-const IS_IOS = fn(11688).IS_IOS;
-const ActivityLayoutMode = fn(10712).ActivityLayoutMode;
+let ThemeTypes = fn(1071).ThemeTypes;
+const IS_IOS = fn(11630).IS_IOS;
+const ActivityLayoutMode = fn(10654).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = { duration: 300 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   wrapper: {
     position: "absolute",
@@ -513,7 +513,7 @@ export default noop.memo(function ActivityPanelFocusedView(transitionState) {
 });
 export function useBaseActivityPanelFocusedView(context) {
   let isWindowLandscape;
-  const tmp = isWindowLandscape(1630)();
+  const tmp = isWindowLandscape(1628)();
   closure_0 = tmp;
   const wrapperDimensions = noop.useContext(context.context).wrapperDimensions;
   const isLandscape = wrapperDimensions.isLandscape;

@@ -6,9 +6,9 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import openPremiumModalDefault from "../../../premium/native/openPremiumModal.tsx";
-import _modDef11329 from "../../../../../_runtime/metro/11329__.js";
-import _modDef11330 from "../../../../../_runtime/metro/11330__.js";
-import _modDef11331 from "../../../../../_runtime/metro/11331__.js";
+import _modDef11271 from "../../../../../_runtime/metro/11271__.js";
+import _modDef11272 from "../../../../../_runtime/metro/11272__.js";
+import _modDef11273 from "../../../../../_runtime/metro/11273__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
@@ -37,9 +37,9 @@ function PerkRow(perk) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, AnalyticsSections: closure_8, AnalyticsObjects: closure_9 } = Constants);
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({
   SubscriptionPlans: closure_10,
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_11,
@@ -49,7 +49,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef11329,
+    icon: _modDef11271,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -59,7 +59,7 @@ let items = [
   ,
 ];
 let obj = {
-  icon: _modDef11329,
+  icon: _modDef11271,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -67,28 +67,28 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE,
 };
 items[1] = {
-  icon: _modDef11330,
+  icon: _modDef11272,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 let obj2 = {
-  icon: _modDef11330,
+  icon: _modDef11272,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 items[2] = {
-  icon: _modDef11331,
+  icon: _modDef11273,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
   },
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN,
 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj5 = {
   alert: { paddingTop: 18 },
   shortHeightAlert: { height: 500 },
@@ -103,7 +103,7 @@ let obj5 = {
   imageHeader: null,
 };
 let obj3 = {
-  icon: _modDef11331,
+  icon: _modDef11273,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -158,7 +158,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(7401)().analyticsLocations;
+  analyticsLocations = tmp3(7400)().analyticsLocations;
   let obj = {
     cancelText: null,
     confirmColor: null,
@@ -188,15 +188,15 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj.onCancel = onClose;
   items = [tmp.alert];
   let shortHeightAlert = null;
-  if (analyticsLocations(1496)().height <= 580) {
+  if (analyticsLocations(1494)().height <= 580) {
     shortHeightAlert = tmp.shortHeightAlert;
   }
   items[1] = shortHeightAlert;
   obj.style = items;
   let obj2 = { style: tmp.closeContainer, children: null };
   let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(5811);
-  obj3.children = closure_13(native.Icon, { source: analyticsLocations(6913) });
+  const tmp3Result = analyticsLocations(5813);
+  obj3.children = closure_13(native.Icon, { source: analyticsLocations(6912) });
   obj2.children = closure_13(Pressables.PressableOpacity, obj3);
   const items1 = [closure_13(closure_4, obj2)];
   const obj5 = {
@@ -207,10 +207,10 @@ export default function StickersPremiumUpsellAlert(arg0) {
     children: null,
   };
   const obj6 = { source: null, style: null };
-  const obj4 = { source: analyticsLocations(6913) };
-  obj6.source = analyticsLocations(11332);
+  const obj4 = { source: analyticsLocations(6912) };
+  obj6.source = analyticsLocations(11274);
   obj6.style = tmp.imageHeader;
-  const items2 = [closure_13(analyticsLocations(5479), obj6), ,];
+  const items2 = [closure_13(analyticsLocations(5481), obj6), ,];
   const obj7 = { style: tmp.description, variant: "body-md/medium", children: null };
   const intl3 = util.intl;
   if (priceString == null) {
@@ -219,7 +219,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj8 = { children: null };
   obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_13(Text_Text.Text, obj7);
-  const tmp3Result2 = analyticsLocations(5479);
+  const tmp3Result2 = analyticsLocations(5481);
   items2[2] = closure_13(closure_4, {
     style: tmp.perks,
     children: items.map((perk, index) =>

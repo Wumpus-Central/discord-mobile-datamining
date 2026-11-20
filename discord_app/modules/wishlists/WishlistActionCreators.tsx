@@ -43,7 +43,7 @@ function maybeDispatchAdditionalActions(wishlist_items) {
   }
 }
 const getWishlistSkuIds = fn(8864).getWishlistSkuIds;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/WishlistActionCreators.tsx");
@@ -117,7 +117,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -257,7 +257,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -375,7 +375,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

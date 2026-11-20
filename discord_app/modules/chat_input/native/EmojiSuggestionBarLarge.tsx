@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/EmojiSuggestionBarLarge.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1655 from "../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../_runtime/metro/01653__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
 import EmojiPickerListRow from "../../emoji_picker/native/components/EmojiPickerListRow.tsx";
@@ -51,11 +51,11 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
   EmojiSuggestionBarLargeTsx1.__closure = items1;
   EmojiSuggestionBarLargeTsx1.__workletHash = 10647028871878;
   EmojiSuggestionBarLargeTsx1.__initData = tmp10;
-  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(EmojiSuggestionBarLargeTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(EmojiSuggestionBarLargeTsx1);
   let obj2 = { style: null, children: null };
   const items2 = [tmp7.containerLargeWrapper, animatedStyle];
   obj2.style = items2;
-  const tmp8Result2 = require("../../../../_runtime/metro/01655__.js");
+  const tmp8Result2 = require("../../../../_runtime/metro/01653__.js");
   obj2.children = (
     <c4 style={tmp7.containerLarge} ref={ref} onLayout={onLayout}>
       {Array.from({ length }, (arg0, index) => {
@@ -98,7 +98,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
       })}
     </c4>
   );
-  return jsx(_modDef1655.View, { style: null, children: null });
+  return jsx(_modDef1653.View, { style: null, children: null });
 }
 function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) {
   const obj = {};
@@ -110,7 +110,7 @@ function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) 
 const View = fn(17).View;
 const IMAGE_SIZE = fn(8946).IMAGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { containerLargeWrapper: { overflow: "hidden" }, containerLarge: null, emptySlot: null };
   let str = "space-between";

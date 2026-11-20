@@ -30,6 +30,13 @@ let closure_3 = ApexExperiment.createApexExperiment({
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
+let ApexExperiment = ApexExperiment_mod;
+const config = ApexExperiment.createApexExperiment({
+  name: "2026-11-build-a-bear-images",
+  kind: "user",
+  defaultConfig: { canSaveCharacter: false },
+  variations: { 0: { canSaveCharacter: false }, 1: { canSaveCharacter: true } },
+});
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointExperiments.tsx");
 
 export function useIsCheckpointEnabled(CheckpointProfileEntrypoint) {
@@ -49,4 +56,12 @@ export function useCheckpointQAMode(CheckpointProfileEntrypoint) {
 }
 export function useIsCheckpointIntroEnabled(location) {
   return closure_3.useConfig({ location }).enabled;
+}
+export function isCheckpointCharacterSaveEnabled(location) {
+  let canSaveCharacter = closure_1.getConfig({ location }).enabled;
+  if (canSaveCharacter) {
+    const obj2 = { location };
+    canSaveCharacter = config.getConfig(obj2).canSaveCharacter;
+  }
+  return canSaveCharacter;
 }

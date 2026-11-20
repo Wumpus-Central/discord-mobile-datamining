@@ -7,7 +7,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");

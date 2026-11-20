@@ -4,7 +4,7 @@ import useAuthorizationApp from "../hooks/useAuthorizationApp.tsx";
 import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 
 require = fn;
-const FetchState = fn(6704).FetchState;
+const FetchState = fn(6706).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
 

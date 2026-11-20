@@ -46,7 +46,7 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -77,7 +77,7 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -85,14 +85,14 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4645).THREAD_CHANNEL_TYPES;
-const FavoritesConstants = fn(4654);
+const THREAD_CHANNEL_TYPES = fn(4647).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(4656);
 ({
   FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_10,
   FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_11,
   FAVORITES_PRUNE_WHEN_ARCHIVED: closure_12,
 } = FavoritesConstants);
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesCleanup.tsx");
 

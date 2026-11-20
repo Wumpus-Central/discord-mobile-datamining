@@ -10,7 +10,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { list: { gap: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = noop.memo(function CompactGameWithDetailsCard(arg0) {
@@ -42,7 +42,7 @@ export default function UserProfileWidgetGameDetailsReorderActionSheet(widgetTyp
   const tmp = closure_7();
   items = [AuthenticationStore];
   const stateFromStores = widgetType(504).useStateFromStores(items, () => id.getId());
-  const tmp3 = stateFromStores(10090)(stateFromStores);
+  const tmp3 = stateFromStores(10093)(stateFromStores);
   dependencyMap = tmp3;
   const items1 = [tmp3, widgetType];
   const memo = noop.useMemo(() => {
@@ -62,10 +62,10 @@ export default function UserProfileWidgetGameDetailsReorderActionSheet(widgetTyp
   }, items1);
   const obj2 = { dismissAccessibilityLabel: null, returnFocusRef: null, children: null };
   let obj = widgetType(504);
-  const intl = widgetType(1113).intl;
-  obj2.dismissAccessibilityLabel = intl.string(widgetType(1113).t.rnh54p);
+  const intl = widgetType(1112).intl;
+  obj2.dismissAccessibilityLabel = intl.string(widgetType(1112).t.rnh54p);
   obj2.returnFocusRef = widgetType.returnFocusRef;
-  const tmp4 = stateFromStores(10122);
+  const tmp4 = stateFromStores(10125);
   obj2.children = (
     <View accessibilityRole="list" style={tmp.list}>
       {memo.map((game) => (

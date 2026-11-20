@@ -27,7 +27,7 @@ let closure_8 = async function _fetchUnclaimedGames() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -63,7 +63,7 @@ let closure_8 = async function _fetchUnclaimedGames() {
         const obj7 = { type: "UNCLAIMED_GAMES_FETCH_SUCCESS", guildIdToGameIds: body };
         closure_129_1(closure_129_2[4]).dispatch(obj7);
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -71,7 +71,7 @@ let closure_8 = async function _fetchUnclaimedGames() {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 let closure_6 = [];
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(UnclaimedGamesStore, {

@@ -10,8 +10,8 @@ import GuildOnboardingHomeSettingsStore from "../guild_onboarding_home/GuildOnbo
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(8208).ChannelListGuildActionRow;
-const GuildFeatures = fn(1072).GuildFeatures;
+const ChannelListGuildActionRow = fn(8207).ChannelListGuildActionRow;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
 
@@ -74,7 +74,7 @@ export default function useGuildActionRows(id) {
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!hasItem3) {
-        let items2 = [tmp3(4625).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items2 = [tmp3(4627).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       const items3 = [];
       if (hasItem) {

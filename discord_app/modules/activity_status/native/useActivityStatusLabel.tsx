@@ -10,8 +10,8 @@ import PresenceStore from "../../../stores/PresenceStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
-const util = v0wJXSh(1113);
-const VoiceActivityStatus = v0wJXSh(13433);
+const util = v0wJXSh(1112);
+const VoiceActivityStatus = v0wJXSh(13403);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/useActivityStatusLabel.tsx");

@@ -49,7 +49,7 @@ function transformFavoriteGifUrl(assetURL, arg1) {
     return combined;
   }
 }
-fn(1072).GIFPickerResultTypes;
+fn(1071).GIFPickerResultTypes;
 const re6 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;
 const re7 = /(tenor\.com)/;
 const re8 = /-(?:.(?!-))+$/;
@@ -58,9 +58,9 @@ let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerUtil
 
 export const GIF_HEADER_HEIGHT = 56;
 export function useFavoriteGIFsMobile() {
-  sortedFavoriteGIFs = sortedFavoriteGIFs(10031).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+  sortedFavoriteGIFs = sortedFavoriteGIFs(10034).useSortedFavoriteGIFs(transformFavoriteGifUrl);
   items = [sortedFavoriteGIFs];
-  let obj = sortedFavoriteGIFs(10031);
+  let obj = sortedFavoriteGIFs(10034);
   return {
     favorites: sortedFavoriteGIFs,
     favoritesCategory: noop.useMemo(() => {

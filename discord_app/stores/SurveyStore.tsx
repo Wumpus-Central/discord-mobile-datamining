@@ -4,7 +4,7 @@ import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
-import _modDef2169 from "../../_runtime/metro/02169__.js";
+import _modDef2167 from "../../_runtime/metro/02167__.js";
 import surveyFetch from "../actions/surveyFetch.tsx";
 import GuildMemberCountStore from "GuildMemberCountStore.tsx";
 import GuildStore from "GuildStore.tsx";
@@ -174,8 +174,8 @@ function setSurvey(survey) {
   value = Storage.get(closure_1_11);
   let tmp9 = null == value;
   if (!tmp9) {
-    tmp9 = _modDef2169().diff(value, "day") < 7;
-    obj = _modDef2169();
+    tmp9 = _modDef2167().diff(value, "day") < 7;
+    obj = _modDef2167();
   }
   let tmp11 = null;
   if (tmp4) {
@@ -449,7 +449,7 @@ function handleSelectedGuildChange() {
     c17 = null;
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: closure_9, Permissions: closure_10, FIRST_RUN_DATE_KEY: closure_11 } = Constants);
 let obj = { hiddenSurveys: {}, surveyOverride: null, lastFetched: null, lastSeen: null, lastActionTriggered: null };
 let closure_13 = obj;
@@ -590,6 +590,7 @@ const surveyStore = new SurveyStore(DispatcherDefault, {
   },
   LOGOUT: function handleLogout() {
     closure_13.hiddenSurveys = {};
+    c17 = null;
   },
   SURVEY_SEEN: function handleSurveySeen() {
     closure_13.lastSeen = Date.now();

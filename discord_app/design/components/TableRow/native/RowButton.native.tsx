@@ -1,6 +1,6 @@
 // discord_app/design/components/TableRow/native/RowButton.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import TableRow from "TableRow.native.tsx";
 import Card from "../../Card/native/Card.native.tsx";
 import TableRowIcon from "TableRowIcon.native.tsx";
@@ -65,7 +65,7 @@ function RowButtonWrapper(experimental_withBlurBackground) {
     Object.assign({ experimental_withBlurBackground: 0, onPress: 0, disabled: 0, children: 0 }),
   );
   const tmp2 = closure_5();
-  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(0);
   items = [sharedValue];
   closure_2 = noop.useCallback(() => {
     const result = sharedValue.set(1);
@@ -117,7 +117,7 @@ function RowButtonWrapper(experimental_withBlurBackground) {
   return jsx(Card.InternalCard, obj4);
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_5 = createStyles.createStyles(() => {
   const obj = { card: null, cardWithBlur: null };
   const obj2 = {
@@ -131,9 +131,9 @@ let closure_5 = createStyles.createStyles(() => {
   obj.cardWithBlur = { overflow: "hidden" };
   return obj;
 });
-RowButton.Icon = fn(6938).TableRowIcon;
+RowButton.Icon = fn(6937).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(6938).TableRowIconProps;
+export const RowButtonIconProps = fn(6937).TableRowIconProps;
 export { RowButton };

@@ -47,7 +47,7 @@ function useAgeVerificationRunner(onComplete) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -179,8 +179,8 @@ function useAgeVerificationRunner(onComplete) {
     }, items2),
   };
 }
-const AbortCodes = fn(1072).AbortCodes;
-const SafetyToastType = fn(6383).SafetyToastType;
+const AbortCodes = fn(1071).AbortCodes;
+const SafetyToastType = fn(6385).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/hooks/useInitiateAgeVerification.tsx");
 

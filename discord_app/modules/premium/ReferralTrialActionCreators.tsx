@@ -56,7 +56,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -153,7 +153,7 @@ let closure_15 = async function _createReferralTrials(arg0) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -289,7 +289,7 @@ let closure_17 = async function _resolveReferralTrialOffer() {
   closure_131_1(closure_131_2[8]).dispatch({ type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer });
   return { userTrialOffer: closure_130_2 };
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AbortCodes: metroImportDefault, Endpoints: closure_8 } = Constants);
 const CreateReferralStatus = { SUCCESS: 1, [1]: "SUCCESS", FAIL: 2, [2]: "FAIL" };
 class EligibleUserCache {

@@ -18,7 +18,7 @@ function clearAll() {
     map.clear();
   }
 }
-const MessageFlags = fn(1072).MessageFlags;
+const MessageFlags = fn(1071).MessageFlags;
 let closure_4 = [];
 let map = new Map();
 const Store = initializeDefault.Store;

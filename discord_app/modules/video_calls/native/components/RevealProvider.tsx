@@ -41,12 +41,12 @@ function useRevealProviderValue(arg0, channel) {
   }
   stateFromStores1 = tmp;
   const tmp8 = useIsActivityFocusedDefault(channel.id);
-  const tmp10 = tmp2(1380).isIOS() && tmp8;
+  const tmp10 = tmp2(1378).isIOS() && tmp8;
   importDefault = tmp10;
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
 }
-const ChannelCallStore = fn(10574);
+const ChannelCallStore = fn(10516);
 ({
   useChannelCallStore: closure_6,
   focusTimeout: metroImportDefault,

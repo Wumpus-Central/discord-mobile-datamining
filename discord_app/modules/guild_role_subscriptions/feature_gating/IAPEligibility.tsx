@@ -6,7 +6,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 let c4 = "13.2";
-let items = [fn(1072).GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
+let items = [fn(1071).GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx");
 
@@ -73,7 +73,7 @@ export function canUseRoleSubscriptionIAP(guildId) {
 export function useCanUseRoleSubscriptionIAP(guildId) {
   _require = guildId;
   const memo = noop.useMemo(() => {
-    const str = guildId(6491).getSystemVersion();
+    const str = guildId(6493).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");
@@ -118,7 +118,7 @@ export function useCanUseRoleSubscriptionIAP(guildId) {
     }
     return tmp;
   }, []);
-  let memo1 = noop.useMemo(() => guildId(1380).isIOS(), []);
+  let memo1 = noop.useMemo(() => guildId(1378).isIOS(), []);
   items = [GuildStore];
   if (memo1) {
     memo1 = obj.useStateFromStores(items, () => {

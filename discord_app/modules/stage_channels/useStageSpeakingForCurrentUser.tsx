@@ -7,7 +7,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageSpeakingForCurrentUser.tsx");
 
@@ -67,11 +67,11 @@ export function useShouldAgeVerifyToSpeakForCurrentUser(id) {
     items1,
   );
   const obj = channelId(504);
-  const isVerifiedAdult = channelId(6290).useIsVerifiedAdult();
-  const obj2 = channelId(6290);
-  const obj3 = channelId(5454);
+  const isVerifiedAdult = channelId(6292).useIsVerifiedAdult();
+  const obj2 = channelId(6292);
+  const obj3 = channelId(5456);
   return (
-    channelId(5454).useIsFeatureAgeGated(channelId(6295).AgeGatedFeature.STAGE_SPEAKING) &&
+    channelId(5456).useIsFeatureAgeGated(channelId(6297).AgeGatedFeature.STAGE_SPEAKING) &&
     !isVerifiedAdult &&
     stateFromStores
   );
@@ -99,11 +99,11 @@ export function useShouldShowAgeVerificationPopover(id) {
     items1,
   );
   const obj = channelId(504);
-  const isAgeVerified = channelId(6290).useIsAgeVerified();
-  const obj2 = channelId(6290);
-  const obj3 = channelId(5454);
+  const isAgeVerified = channelId(6292).useIsAgeVerified();
+  const obj2 = channelId(6292);
+  const obj3 = channelId(5456);
   return (
-    channelId(5454).useIsFeatureAgeGated(channelId(6295).AgeGatedFeature.STAGE_SPEAKING) &&
+    channelId(5456).useIsFeatureAgeGated(channelId(6297).AgeGatedFeature.STAGE_SPEAKING) &&
     !isAgeVerified &&
     stateFromStores
   );

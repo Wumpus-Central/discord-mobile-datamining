@@ -31,7 +31,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -191,7 +191,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
     }
   })();
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ DebugLogCategory: hasOwnProperty, Endpoints: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/BugReportUtils.tsx");

@@ -12,16 +12,16 @@ import UserSettingsActionCreatorsDefault from "../../../../../actions/UserSettin
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import usePremiumTrialOffer from "../../../hooks/usePremiumTrialOffer.android.tsx";
 import useMessageMaxLengthDefault from "../../../../messages/useMessageMaxLength.tsx";
-import _modDef10398 from "../../../../../../_runtime/metro/10398__.js";
-import _modDef10399 from "../../../../../../_runtime/metro/10399__.js";
-import _modDef10433 from "../../../../../../_runtime/metro/10433__.js";
-import _modDef10434 from "../../../../../../_runtime/metro/10434__.js";
-import _modDef10435 from "../../../../../../_runtime/metro/10435__.js";
-import _modDef10436 from "../../../../../../_runtime/metro/10436__.js";
-import _modDef10437 from "../../../../../../_runtime/metro/10437__.js";
-import _modDef10438 from "../../../../../../_runtime/metro/10438__.js";
-import _modDef10439 from "../../../../../../_runtime/metro/10439__.js";
-import _modDef10441 from "../../../../../../_runtime/metro/10441__.js";
+import _modDef10340 from "../../../../../../_runtime/metro/10340__.js";
+import _modDef10341 from "../../../../../../_runtime/metro/10341__.js";
+import _modDef10375 from "../../../../../../_runtime/metro/10375__.js";
+import _modDef10376 from "../../../../../../_runtime/metro/10376__.js";
+import _modDef10377 from "../../../../../../_runtime/metro/10377__.js";
+import _modDef10378 from "../../../../../../_runtime/metro/10378__.js";
+import _modDef10379 from "../../../../../../_runtime/metro/10379__.js";
+import _modDef10380 from "../../../../../../_runtime/metro/10380__.js";
+import _modDef10381 from "../../../../../../_runtime/metro/10381__.js";
+import _modDef10383 from "../../../../../../_runtime/metro/10383__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UnsyncedUserSettingsStore from "../../../../user_settings/UnsyncedUserSettingsStore.tsx";
@@ -102,7 +102,7 @@ function GlobalEmojiUpsell(arg0) {
     }
   }
   const obj5 = { alertWidth, upsellItem: null };
-  const obj6 = { image: _modDef10398, title: null, description: null };
+  const obj6 = { image: _modDef10340, title: null, description: null };
   const intl4 = util.intl;
   obj6.title = intl4.string(util.t.UNtcBV);
   obj6.description = formatResult1;
@@ -111,7 +111,7 @@ function GlobalEmojiUpsell(arg0) {
 }
 function AnimatedEmojiUpsell(alertWidth) {
   const obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  const obj2 = { image: _modDef10399, title: null, description: null };
+  const obj2 = { image: _modDef10341, title: null, description: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.F6rmyq);
   const intl2 = util.intl;
@@ -137,9 +137,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef10433;
+    let tmp4Result = _modDef10375;
   } else {
-    tmp4Result = _modDef10434;
+    tmp4Result = _modDef10376;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -155,7 +155,7 @@ function CustomProfilesUpsell(alertWidth) {
     imageStyle: createStyles2.useLegacyClassComponentStyles(closure_16).customProfileUpsellImage,
     upsellItem: null,
   };
-  const obj3 = { image: _modDef10435, title: null, description: null };
+  const obj3 = { image: _modDef10377, title: null, description: null };
   const intl = util.intl;
   obj3.title = intl.string(util.t.rTY76D);
   const intl2 = util.intl;
@@ -197,9 +197,9 @@ function LongerMessageUpsell(alertWidth) {
   const tmp5 = useThemeDefault();
   const tmp6 = useMessageMaxLengthDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef10436;
+    let tmp4Result = _modDef10378;
   } else {
-    tmp4Result = _modDef10437;
+    tmp4Result = _modDef10379;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -218,9 +218,9 @@ function GuildCapUpsell(alertWidth) {
   };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef10438;
+    let tmp4Result = _modDef10380;
   } else {
-    tmp4Result = _modDef10439;
+    tmp4Result = _modDef10381;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -327,7 +327,7 @@ class PremiumUpsellAlert {
     obj25.confirmColor = initialUpsellKey(closure_2[41]).ButtonColors.GREEN;
     obj25.confirmText = getNitroText;
     obj25.renderConfirmIcon = function renderConfirmIcon() {
-      const obj = { source: _modDef10441, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
+      const obj = { source: _modDef10383, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
       if (constants2.GLOBAL_EMOJI !== initialUpsellKey) {
         if (constants2.ANIMATED_EMOJI !== initialUpsellKey) {
           if (constants2.CUSTOM_PROFILES !== initialUpsellKey) {
@@ -437,14 +437,14 @@ class PremiumUpsellAlert {
   }
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumTypes: closure_9 } = PremiumConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, UpsellTypes: closure_11 } = Constants);
-const getIcons = fn(10406).getIcons;
+const getIcons = fn(10348).getIcons;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   carousel: { alignItems: "center" },
   upsellContainer: { alignItems: "center" },
@@ -494,7 +494,7 @@ UpsellItem.prototype["render"] = function render() {
   obj.children = items1;
   return gesture(View, obj);
 };
-UpsellItem.contextType = fn(4853).ThemeContext;
+UpsellItem.contextType = fn(4855).ThemeContext;
 UpsellItem.defaultProps = { isInitial: false };
 let c27 = 500;
 let c28 = 32;

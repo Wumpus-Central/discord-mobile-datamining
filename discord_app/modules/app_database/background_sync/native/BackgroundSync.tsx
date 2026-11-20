@@ -33,7 +33,7 @@ let closure_17 = async function _backgroundSync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -273,7 +273,7 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -419,7 +419,7 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -476,15 +476,11 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
               guild_versions: closure_131_5,
               highest_last_message_id: closure_131_6.highest_last_message_id,
               api_code_version: closure_131_6.api_code_version,
-              channel_privacy: closure_132_0(closure_132_2[27]).isChannelMetadataObfuscationEnabled("background-sync"),
+              channel_privacy: true,
             };
             let obj8 = obj7;
-            const obj12 = closure_132_0(closure_132_2[27]);
           } else {
-            obj8 = {
-              channel_privacy: closure_132_0(closure_132_2[27]).isChannelMetadataObfuscationEnabled("background-sync"),
-            };
-            const obj10 = closure_132_0(closure_132_2[27]);
+            obj8 = { channel_privacy: true };
           }
           request.body = obj8;
           request = HTTP.post(request);
@@ -523,8 +519,8 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
               const promise = new Promise((arg0) => setTimeout(arg0, 0));
               c5 = 3;
               c6 = 1;
-              const obj11 = { value: promise, done: false };
-              return obj11;
+              const obj10 = { value: promise, done: false };
+              return obj10;
             } else {
               c6 = 3;
             }
@@ -535,8 +531,8 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj13 = { value, done: true };
-            return obj13;
+            const obj11 = { value, done: true };
+            return obj11;
           } else {
             if (!closure_131_2) {
               if ("active" === closure_132_9.getState()) {
@@ -544,7 +540,7 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
               }
             }
             closure_131_11 = [];
-            const obj14 = {
+            const obj12 = {
               type: "BACKGROUND_SYNC",
               guilds,
               emojis: guilds.map((data_mode) => {
@@ -606,28 +602,28 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
               apiCodeVersion: api_code_version,
               promisesForBackgroundSyncToWaitOn: closure_131_11,
             };
-            closure_132_1(closure_132_2[16]).dispatch(obj14);
+            closure_132_1(closure_132_2[16]).dispatch(obj12);
             c5 = 4;
             c6 = 1;
-            const obj15 = { value: Promise.all(closure_131_11), done: false };
-            return obj15;
+            const obj13 = { value: Promise.all(closure_131_11), done: false };
+            return obj13;
           }
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          closure_132_0(closure_132_2[28]).writeCaches(true);
+          closure_132_0(closure_132_2[27]).writeCaches(true);
           const _Date = Date;
           closure_131_0.time_save_guild_data = Date.now() - closure_131_1;
-          let obj = closure_132_0(closure_132_2[28]);
+          let obj = closure_132_0(closure_132_2[27]);
         }
         c6 = 3;
-        const obj16 = { value, done: true };
-        return obj16;
+        const obj14 = { value, done: true };
+        return obj14;
       }
-    } catch (tmp47) {
+    } catch (tmp41) {
       c6 = tmp;
-      throw tmp47;
+      throw tmp41;
     }
   }
 };
@@ -652,7 +648,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -982,7 +978,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -1048,7 +1044,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
             }
           }
           c12 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -1059,7 +1055,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
           let obj6 = { value, done: true };
           return obj6;
         } else {
-          closure_135_7 = value.filter(closure_136_0(closure_136_2[30]).isNotNullish);
+          closure_135_7 = value.filter(closure_136_0(closure_136_2[29]).isNotNullish);
           let _HermesInternal = HermesInternal;
           let verboseResult = closure_136_14.verbose(
             "Fetched " + closure_135_7.length + " modified messages from the database",
@@ -1111,14 +1107,14 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
     }
   }, "Background Sync");
 }
-const ChannelRecord = fn(4645);
+const ChannelRecord = fn(4647);
 ({ isPrivate: hasOwnProperty, isThread: closure_6 } = ChannelRecord);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(6493);
-const ChannelStore = fn(4641);
-const EmojiStore = fn(6452);
-const GuildStore = fn(4663);
+const StickersStore = fn(6495);
+const ChannelStore = fn(4643);
+const EmojiStore = fn(6454);
+const GuildStore = fn(4665);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;
 const lastSyncTime = "lastSyncTime";

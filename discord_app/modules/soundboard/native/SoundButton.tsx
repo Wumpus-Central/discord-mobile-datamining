@@ -1,17 +1,17 @@
 // discord_app/modules/soundboard/native/SoundButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1655 from "../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../_runtime/metro/01653__.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import getSoundboardEmojiUrlDefault from "utils/getSoundboardEmojiUrl.tsx";
 import openSoundboardSoundPreviewActionSheetDefault from "utils/openSoundboardSoundPreviewActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const module_1655_mod = _mod1655;
+const module_1653_mod = _mod1653;
 
 require = fn;
 function useAnimation(arg0) {
-  items = [closure_11, arg0, _mod1655.withDelay, spring_spring.withSpring, _mod1655.interpolate, closure_8];
+  items = [closure_11, arg0, _mod1653.withDelay, spring_spring.withSpring, _mod1653.interpolate, closure_8];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -71,7 +71,7 @@ function useAnimation(arg0) {
   SoundButtonTsx1.__closure = items1;
   SoundButtonTsx1.__workletHash = 3937789014357;
   SoundButtonTsx1.__initData = tmp;
-  return _mod1655.useAnimatedStyle(SoundButtonTsx1);
+  return _mod1653.useAnimatedStyle(SoundButtonTsx1);
 }
 function SoundButtonEmoji(arg0) {
   ({ sound, sharedValues } = arg0);
@@ -103,10 +103,10 @@ function SoundButtonEmoji(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let module_1655 = module_1655_mod;
-let closure_7 = module_1655.createAnimatedComponent(View);
+let module_1653 = module_1653_mod;
+let closure_7 = module_1653.createAnimatedComponent(View);
 let closure_8 = { damping: 10, stiffness: 300, mass: 1 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   button: null,
   buttonPressed: null,
@@ -122,7 +122,7 @@ let obj = {
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.button = {
   marginTop: 4,
-  height: fn(18065).SOUND_BUTTON_HEIGHT,
+  height: fn(17892).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -134,7 +134,7 @@ obj.button = {
 };
 let obj2 = {
   marginTop: 4,
-  height: fn(18065).SOUND_BUTTON_HEIGHT,
+  height: fn(17892).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -162,7 +162,7 @@ const rect = {
   borderRadius: nativeDefault.radii.lg - 2,
 };
 obj.playingBackground = rect;
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 24;
@@ -192,8 +192,8 @@ const size1 = {
 };
 obj.lock = size1;
 let closure_9 = createStyles.createStyles(obj);
-let module_1655 = module_1655_mod;
-let closure_10 = module_1655.createAnimatedComponent(fn(6911).PressableOpacity);
+let module_1653 = module_1653_mod;
+let closure_10 = module_1653.createAnimatedComponent(fn(6910).PressableOpacity);
 let closure_11 = {
   code: '(function SoundButtonTsx1(){let[animationConfig,withDelay,withSpring,interpolate,SPRING_CONFIG]=this.__closure;var _animationConfig$play,_animationConfig$pres,_animationConfig;const isNotPressed=animationConfig.sharedValues.pressed.get()===0;const isPlaying=animationConfig.sharedValues.playing.get()>0;const shouldDoPlayingAnimation=isNotPressed&&isPlaying;const playingAnimationScaleValue=withDelay((_animationConfig$play=animationConfig.playingAnimationDelay)!==null&&_animationConfig$play!==void 0?_animationConfig$play:0,withSpring(interpolate(animationConfig.sharedValues.playing.get(),[0,1],[1,animationConfig.scaleFactors.playing]),SPRING_CONFIG));const pressedAnimationScaleValue=withSpring(interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[1,animationConfig.scaleFactors.pressed]),SPRING_CONFIG);const rotationScaleValue=interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[0,(_animationConfig$pres=(_animationConfig=animationConfig)===null||_animationConfig===void 0?void 0:_animationConfig.pressedRotationDegrees)!==null&&_animationConfig$pres!==void 0?_animationConfig$pres:0]);return{transform:[{scale:shouldDoPlayingAnimation?playingAnimationScaleValue:pressedAnimationScaleValue},{rotate:rotationScaleValue+"deg"}]};})',
 };

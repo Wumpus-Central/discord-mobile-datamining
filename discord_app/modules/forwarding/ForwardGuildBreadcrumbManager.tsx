@@ -22,12 +22,12 @@ function fetchForwardReferencedGuilds(message_reference) {
       tmp2 = null == BasicGuildStore.getGuildOrStatus(guild_id);
     }
     if (tmp2) {
-      const result = guild_id(19619).queueMessageLinkFetch(() => BasicGuildActionCreators.fetchBasicGuild(guild_id));
-      const obj = guild_id(19619);
+      const result = guild_id(19437).queueMessageLinkFetch(() => BasicGuildActionCreators.fetchBasicGuild(guild_id));
+      const obj = guild_id(19437);
     }
   }
 }
-const MessageReferenceTypes = fn(1072).MessageReferenceTypes;
+const MessageReferenceTypes = fn(1071).MessageReferenceTypes;
 class ForwardGuildBreadcrumbManager extends tmp6 {
   constructor() {
     tmp3 = new ForwardGuildBreadcrumbManager(tmp2, tmp, new.target);

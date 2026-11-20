@@ -6,7 +6,7 @@ import ChannelCallLifecycleStore from "ChannelCallLifecycleStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useTrackActivityVideoPip.tsx");
 
@@ -16,9 +16,9 @@ export default function useTrackActivityPip(arg0) {
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream(),
   );
-  let tmp2 = stateFromStores(6296)(stateFromStores);
+  let tmp2 = stateFromStores(6298)(stateFromStores);
   dependencyMap = tmp2;
-  const tmp3 = stateFromStores(10714)();
+  const tmp3 = stateFromStores(10656)();
   noop = tmp3;
   const items1 = [stateFromStores, tmp2, arg0, tmp3];
   const effect = noop.useEffect(() => {

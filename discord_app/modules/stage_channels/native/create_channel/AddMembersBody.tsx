@@ -48,12 +48,12 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(6385);
+const ChannelPermissionsConstants = fn(6387);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   inputContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 },
   inputDescContainer: null,
@@ -156,13 +156,13 @@ export default function AddMembersBody(pendingAdditions) {
   });
   const items3 = [];
   let obj7 = { title: null, data: null };
-  let intl = guild(1113).intl;
-  obj7.title = intl.string(guild(1113).t["LPJmL/"]);
+  let intl = guild(1112).intl;
+  obj7.title = intl.string(guild(1112).t["LPJmL/"]);
   obj7.data = items2;
   items3.push(obj7);
   const obj8 = { title: null, data: null };
-  let intl2 = guild(1113).intl;
-  obj8.title = intl2.string(guild(1113).t["9Oq93m"]);
+  let intl2 = guild(1112).intl;
+  obj8.title = intl2.string(guild(1112).t["9Oq93m"]);
   obj8.data = membersRows;
   items3.push(obj8);
   const values = Object.values(pendingAdditions);
@@ -184,12 +184,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(5024).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(5026).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(5024).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(5026).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -197,8 +197,8 @@ export default function AddMembersBody(pendingAdditions) {
   const obj10 = { placeholder: null, tags: null, onChangeText: null, onRemove: null, autoFocus: true };
   let obj6 = { filter: filterByQuery };
   const tmp10Result4 = ChannelPermissionsUtilsAll;
-  const intl3 = guild(1113).intl;
-  obj10.placeholder = intl3.string(guild(1113).t.TVZdKh);
+  const intl3 = guild(1112).intl;
+  obj10.placeholder = intl3.string(guild(1112).t.TVZdKh);
   obj10.tags = mapped;
   obj10.onChangeText = function handleQueryChange(str) {
     str = str.trim();
@@ -218,22 +218,22 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(7661), obj10);
+  obj9.children = closure_16(pendingAdditions(7660), obj10);
   const items5 = [closure_16(closure_7, obj9), , ,];
   let tmp27Result = null;
   if (null != inputDesc) {
     const obj11 = { style: tmp3.inputDescContainer, children: null };
     const obj12 = { style: tmp3.inputDescText, variant: "body-xs/medium", color: "text-default", children: inputDesc };
-    obj11.children = closure_16(guild(5383).Text, obj12);
+    obj11.children = closure_16(guild(5385).Text, obj12);
     tmp27Result = closure_16(tmp28, obj11);
   }
   items5[1] = tmp27Result;
   if (canEveryoneRoleResult) {
     const obj13 = { style: tmp3.adminWarning, children: null };
     const obj14 = { type: "warning", message: null, role: "status" };
-    const intl4 = guild(1113).intl;
-    obj14.message = intl4.string(guild(1113).t["5f3HIC"]);
-    obj13.children = closure_16(guild(7643).InlineNotice, obj14);
+    const intl4 = guild(1112).intl;
+    obj14.message = intl4.string(guild(1112).t["5f3HIC"]);
+    obj13.children = closure_16(guild(7642).InlineNotice, obj14);
     canEveryoneRoleResult = closure_16(tmp28, obj13);
   }
   items5[2] = canEveryoneRoleResult;
@@ -241,12 +241,12 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(7666).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(7665).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
-        const intl5 = guild(1113).intl;
+        const intl5 = guild(1112).intl;
         const obj17 = { query: str };
-        obj16.body = intl5.format(guild(1113).t.ErpIY3, obj17);
-        obj15.children = closure_16(guild(1187).EmptyState, obj16);
+        obj16.body = intl5.format(guild(1112).t.ErpIY3, obj17);
+        obj15.children = closure_16(guild(1186).EmptyState, obj16);
         let tmp27Result2 = closure_16(BottomSheetScrollView, obj15);
       }
       const obj18 = { children: null };
@@ -262,10 +262,10 @@ export default function AddMembersBody(pendingAdditions) {
     sections: null,
     keyboardShouldPersistTaps: "always",
   };
-  const tmp4Result = pendingAdditions(7661);
+  const tmp4Result = pendingAdditions(7660);
   obj19.contentContainerStyle = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
-    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5367)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5369)(obj).insets.bottom,
   };
   obj19.renderItem = function renderItem(item) {
     item = item.item;
@@ -368,6 +368,6 @@ export default function AddMembersBody(pendingAdditions) {
   tmp27Result2 = closure_16(BottomSheetSectionList, obj19);
   const obj20 = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
-    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5367)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5369)(obj).insets.bottom,
   };
 }

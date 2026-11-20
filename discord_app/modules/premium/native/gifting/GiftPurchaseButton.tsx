@@ -6,7 +6,7 @@ import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const PRICE_PLACEHOLDER = fn(1390).PRICE_PLACEHOLDER;
+const PRICE_PLACEHOLDER = fn(1388).PRICE_PLACEHOLDER;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/GiftPurchaseButton.tsx");
@@ -63,7 +63,7 @@ export default function GiftPurchaseButton(style) {
     productIdForGift(function* () {
       yield createOrReuseGiftOrder({ planId, recipientUserId, productId: productIdForGift });
       closure_128_0 = value;
-      const premiumTypeFromPlanId = planId(2174).getPremiumTypeFromPlanId(closure_129_0);
+      const premiumTypeFromPlanId = planId(2172).getPremiumTypeFromPlanId(closure_129_0);
       const premiumType = premiumTypeFromPlanId.premiumType;
       const planInterval = premiumTypeFromPlanId.planInterval;
       planId(9345).openGiftModal({
@@ -76,11 +76,11 @@ export default function GiftPurchaseButton(style) {
       });
       yield "HermesInternal";
       const obj7 = { title: null, body: null };
-      const intl = planId(1113).intl;
-      obj7.title = intl.string(planId(1113).t.R0RpRX);
-      const intl2 = planId(1113).intl;
-      obj7.body = intl2.string(planId(1113).t.CKsXk3);
-      tmp3(5740).show(obj7);
+      const intl = planId(1112).intl;
+      obj7.title = intl.string(planId(1112).t.R0RpRX);
+      const intl2 = planId(1112).intl;
+      obj7.body = intl2.string(planId(1112).t.CKsXk3);
+      tmp3(5742).show(obj7);
     }),
     items3,
   );

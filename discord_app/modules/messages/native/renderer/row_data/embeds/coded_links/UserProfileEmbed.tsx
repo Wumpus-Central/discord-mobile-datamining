@@ -9,7 +9,7 @@ import UserProfileStore from "../../../../../../user_profile/UserProfileStore.ts
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
-const InviteTypes = fn(8319).InviteTypes;
+const InviteTypes = fn(8318).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/UserProfileEmbed.tsx",

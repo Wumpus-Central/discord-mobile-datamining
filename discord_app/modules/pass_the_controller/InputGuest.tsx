@@ -168,6 +168,7 @@ prototype["_handleGrabAllow"] = function _handleGrabAllow(arg0) {
 prototype["_handleKeyEvent"] = function _handleKeyEvent(preventDefault) {
   const self = this;
   preventDefault.preventDefault();
+  const result = preventDefault.stopImmediatePropagation();
   if (this.isMouseCaptured) {
     if ("Escape" === preventDefault.code) {
       self._dropController();
@@ -175,7 +176,7 @@ prototype["_handleKeyEvent"] = function _handleKeyEvent(preventDefault) {
   }
   if (null != closure_4[preventDefault.code]) {
     const connection = self.connection;
-    connection.sendKey(self.sessionId, tmp2[preventDefault.code], "keydown" === preventDefault.type);
+    connection.sendKey(self.sessionId, tmp3[preventDefault.code], "keydown" === preventDefault.type);
   } else {
     const logger = self.logger;
     const _HermesInternal = HermesInternal;
@@ -185,6 +186,7 @@ prototype["_handleKeyEvent"] = function _handleKeyEvent(preventDefault) {
 prototype["_handleMouseEvent"] = function _handleMouseEvent(preventDefault) {
   const self = this;
   preventDefault.preventDefault();
+  const result = preventDefault.stopImmediatePropagation();
   if ("mousemove" === preventDefault.type) {
     const connection3 = self.connection;
     connection3.sendMouseMove(self.sessionId, preventDefault.movementX, preventDefault.movementY);
@@ -216,7 +218,7 @@ prototype["_captureMouse"] = function _captureMouse() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

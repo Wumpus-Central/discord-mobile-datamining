@@ -49,10 +49,10 @@ function FriendsEmptyComponent() {
   obj.children = items;
   return timestampProducer(hasOwnProperty, obj);
 }
-const Fonts = fn(1072).Fonts;
+const Fonts = fn(1071).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;

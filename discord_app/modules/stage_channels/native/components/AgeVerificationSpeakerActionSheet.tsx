@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_24 },
   header: { alignItems: "center" },
@@ -38,7 +38,7 @@ export default function AgeVerificationSpeakerActionSheet(onClose) {
     contentStyles: { paddingBottom: useSafeAreaInsetsDefault().bottom },
     header: closure_4(View, {
       style: tmp.header,
-      children: closure_4(onClose(7234).TrafficConeSpotIllustration, { width: 120, height: 120 }),
+      children: closure_4(onClose(7233).TrafficConeSpotIllustration, { width: 120, height: 120 }),
     }),
     children: null,
   };
@@ -49,9 +49,9 @@ export default function AgeVerificationSpeakerActionSheet(onClose) {
     style: tmp.title,
     children: null,
   };
-  const intl = onClose(1113).intl;
-  obj4.children = intl.string(onClose(1113).t.zvubnM);
-  items = [closure_4(onClose(5383).Text, obj4)];
+  const intl = onClose(1112).intl;
+  obj4.children = intl.string(onClose(1112).t.zvubnM);
+  items = [closure_4(onClose(5385).Text, obj4)];
   const obj5 = { style: tmp.footer, children: null };
   const obj6 = {
     size: "lg",
@@ -68,17 +68,17 @@ export default function AgeVerificationSpeakerActionSheet(onClose) {
     },
     text: null,
   };
-  const intl2 = onClose(1113).intl;
-  obj6.text = intl2.string(onClose(1113).t.KXVgjt);
-  const items1 = [closure_4(onClose(5390).Button, obj6)];
+  const intl2 = onClose(1112).intl;
+  obj6.text = intl2.string(onClose(1112).t.KXVgjt);
+  const items1 = [closure_4(onClose(5392).Button, obj6)];
   const obj7 = { size: "lg", onPress: handleDismiss, text: null, variant: "secondary" };
-  const intl3 = onClose(1113).intl;
-  obj7.text = intl3.string(onClose(1113).t.WAI6xu);
-  items1[1] = closure_4(onClose(5390).Button, obj7);
+  const intl3 = onClose(1112).intl;
+  obj7.text = intl3.string(onClose(1112).t.WAI6xu);
+  items1[1] = closure_4(onClose(5392).Button, obj7);
   obj5.children = items1;
   items[1] = closure_5(View, obj5);
   obj3.children = items;
   obj.children = closure_5(View, obj3);
-  return closure_4(onClose(7434).ActionSheet, obj);
+  return closure_4(onClose(7433).ActionSheet, obj);
 }
 export const AGE_VERIFICATION_SPEAKER_SHEET_KEY = "AgeVerificationSpeakerActionSheet";

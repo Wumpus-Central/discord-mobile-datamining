@@ -13,9 +13,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(17907).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(17734).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -38,7 +38,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
   let animatableSourceWithFallback = null;
-  let obj = restrictedGuild(17919);
+  let obj = restrictedGuild(17746);
   const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -57,12 +57,12 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     () => ({
       onPress() {
         const obj2 = { title: null, body: null, cancelText: null, onCancel: null, isDismissable: false };
-        const intl = restrictedGuild(1113).intl;
-        obj2.title = intl.string(restrictedGuild(1113).t.aCAiGl);
-        const intl2 = restrictedGuild(1113).intl;
-        obj2.body = intl2.format(restrictedGuild(1113).t["4cJV9S"], { serverName: name.name });
-        const intl3 = restrictedGuild(1113).intl;
-        obj2.cancelText = intl3.string(restrictedGuild(1113).t.J2TBi3);
+        const intl = restrictedGuild(1112).intl;
+        obj2.title = intl.string(restrictedGuild(1112).t.aCAiGl);
+        const intl2 = restrictedGuild(1112).intl;
+        obj2.body = intl2.format(restrictedGuild(1112).t["4cJV9S"], { serverName: name.name });
+        const intl3 = restrictedGuild(1112).intl;
+        obj2.cancelText = intl3.string(restrictedGuild(1112).t.J2TBi3);
         obj2.onCancel = function onCancel() {
           closure_2_1(dependencyMap[11]).leaveGuild(id.id);
         };
@@ -75,7 +75,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(17919).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(17746).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -84,11 +84,11 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren: "relative",
-    expandedChildren: "row",
-    children: "center",
+    externalChildren: "Path",
+    expandedChildren: "context",
+    children: "profile_widget",
   };
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(17919).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(17746).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: true,
   });
@@ -106,13 +106,13 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(7203).GuildIconSizes.LARGE,
+      size: tmp2(7202).GuildIconSizes.LARGE,
     };
     tmp8Result = jsx(GuildIconDefault, {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(7203).GuildIconSizes.LARGE,
+      size: tmp2(7202).GuildIconSizes.LARGE,
     });
     const tmp9Result = GuildIconDefault;
   }
@@ -121,7 +121,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(17919).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(17746).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -130,8 +130,8 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren: "relative",
-    expandedChildren: "row",
-    children: "center",
+    externalChildren: "Path",
+    expandedChildren: "context",
+    children: "profile_widget",
   });
 });

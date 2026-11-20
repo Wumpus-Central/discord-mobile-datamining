@@ -9,7 +9,7 @@ const result = 5 * DurationsDefault.Seconds.MINUTE;
 const result1 = 15 * DurationsDefault.Seconds.SECOND;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameOrganizationStore, {
-  getQueryId: fn(1072).QueryIds.GAME_ORGANIZATION,
+  getQueryId: fn(1071).QueryIds.GAME_ORGANIZATION,
   get(arg0) {
     return GameOrganizationStore.getGameOrganizationByGuildId(arg0);
   },

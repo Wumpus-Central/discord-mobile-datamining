@@ -8,7 +8,7 @@ require = fn;
 function loadMoreBookmarks() {
   const bookmarks = SavedMessagesActions.fetchBookmarks({ loadMore: true });
 }
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/useBookmarksPagination.tsx");
 

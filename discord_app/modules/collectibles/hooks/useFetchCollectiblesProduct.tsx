@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
-let SKUProductLines = fn(1072).SKUProductLines;
+let SKUProductLines = fn(1071).SKUProductLines;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
 
@@ -50,7 +50,7 @@ export function useFetchCollectiblesProduct(skuId, includeBundles) {
     if (product != null) {
       type = product.type;
     }
-    tmp10 = type === tmp(2114).CollectiblesItemType.BUNDLE;
+    tmp10 = type === tmp(2112).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
     tmp10 = 0 === product.items.length;

@@ -5,7 +5,7 @@ import _modDef9383 from "../../../../../_runtime/metro/09383__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PremiumTypes = fn(1390).PremiumTypes;
+const PremiumTypes = fn(1388).PremiumTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
@@ -27,7 +27,7 @@ export default function PremiumFeaturesLogo(premiumType) {
     resizeMode: "contain",
     source: null,
   };
-  const tmpResult = tmp(5479);
+  const tmpResult = tmp(5481);
   obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   obj.style = premiumType.style;
   obj.source = tmp3;

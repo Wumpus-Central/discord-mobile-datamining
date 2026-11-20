@@ -5,9 +5,9 @@ import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
-const FamilyCenterConstants = fn(8217);
+const FamilyCenterConstants = fn(8216);
 ({ FamilyCenterAction: closure_4, FamilyCenterSubPages } = FamilyCenterConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");
 

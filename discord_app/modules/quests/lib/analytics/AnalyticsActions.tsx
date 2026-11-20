@@ -196,7 +196,7 @@ let closure_13 = async function _getCommonClickEventProperties(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -397,7 +397,7 @@ let closure_15 = async function _trackAdContentClicked() {
   } = closure_0);
   return "Path";
 };
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const items = [, ,];
 ({
   QUEST_CONTENT_VIEWED: arr[0],

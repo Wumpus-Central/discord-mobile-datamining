@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(7640).GuildProfileFetchStatus;
-const ChannelTypes = fn(1072).ChannelTypes;
+const GuildProfileFetchStatus = fn(7639).GuildProfileFetchStatus;
+const ChannelTypes = fn(1071).ChannelTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");

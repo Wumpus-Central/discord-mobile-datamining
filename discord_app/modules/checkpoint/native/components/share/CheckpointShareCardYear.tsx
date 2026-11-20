@@ -1,7 +1,9 @@
 // discord_app/modules/checkpoint/native/components/share/CheckpointShareCardYear.tsx
-import inlineStyles from "../../../../../../_runtime/07746_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07745_inlineStyles.js";
 import CheckpointShareCardContext from "CheckpointShareCardContext.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
+
+const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
@@ -9,17 +11,21 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/share/CheckpointShareCardYear.tsx");
 
-export default function CheckpointShareCardYear(arg0) {
-  ({ path, x } = arg0);
+export default function CheckpointShareCardYear(color) {
+  let primaryBackgroundColor = color.color;
+  ({ path, x } = color);
   const obj = { style: StyleSheet.absoluteFill, children: null };
-  obj.children = jsx(inlineStyles.G, {
-    x,
-    children: jsx(inlineStyles.Path, {
-      d: path,
-      fill: noop.useContext(CheckpointShareCardContext.CheckpointShareCardColorsContext).primaryBackgroundColor,
-    }),
-  });
-  return <tmp style={StyleSheet.absoluteFill}>{null}</tmp>;
+  const obj2 = { x, children: null };
+  const obj3 = { d: path, fill: null };
+  if (primaryBackgroundColor == null) {
+    primaryBackgroundColor = noop.useContext(
+      CheckpointShareCardContext.CheckpointShareCardColorsContext,
+    ).primaryBackgroundColor;
+  }
+  obj3.fill = primaryBackgroundColor;
+  obj2.children = jsx(inlineStyles.Path, { d: path, fill: null });
+  obj.children = jsx(inlineStyles.G, { x, children: null });
+  return jsx(inlineStylesDefault, { style: StyleSheet.absoluteFill, children: null });
 }
 export const YEAR_WIDTH = 44;
 export const YEAR_PATH =

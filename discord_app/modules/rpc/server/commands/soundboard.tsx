@@ -6,9 +6,9 @@ import SoundboardStore from "../../../soundboard/SoundboardStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-let Constants = fn(6233);
+let Constants = fn(6235);
 ({ RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = Constants);
-Constants = fn(1083);
+Constants = fn(1082);
 ({ RPCCommands, RPCErrors: closure_6 } = Constants);
 let obj = {};
 let obj2 = { scope: null, handler: null };
@@ -53,7 +53,7 @@ obj4.handler = function handler(args) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ obj4.handler = function handler(args) {
             closure_128_3 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(6709).maybeFetchSoundboardSounds(), done: false };
+            const obj5 = { value: tmp2(6711).maybeFetchSoundboardSounds(), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -86,14 +86,14 @@ obj4.handler = function handler(args) {
         } else {
           currentUser2 = currentUser.getCurrentUser();
           sound2 = sound.getSound(closure_129_0, closure_129_1);
-          closure_128_2 = tmp5(10927)();
+          closure_128_2 = tmp5(10869)();
           let result = null != sound2;
           if (result) {
             result = null != currentUser2;
           }
           if (result) {
-            result = tmp2(10922).canUseSoundboardSound(currentUser2, sound2, closure_128_2);
-            const obj = tmp2(10922);
+            result = tmp2(10864).canUseSoundboardSound(currentUser2, sound2, closure_128_2);
+            const obj = tmp2(10864);
           }
           closure_128_3 = result;
           if (null == closure_128_2) {
@@ -101,14 +101,14 @@ obj4.handler = function handler(args) {
             const tmp52 = new tmp5(6790)(obj8, "Invalid Channel.");
             throw tmp52;
           } else if (closure_128_3) {
-            if (tmp5(10929)(closure_128_2)) {
+            if (tmp5(10871)(closure_128_2)) {
               if (null != sound2) {
-                items = [tmp5(7420).RPC];
-                tmp2(10922).playSound(sound2, closure_128_2.id, items);
-                const obj4 = tmp2(10922);
+                items = [tmp5(7419).RPC];
+                tmp2(10864).playSound(sound2, closure_128_2.id, items);
+                const obj4 = tmp2(10864);
               }
               c3 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             } else {
               const obj9 = { errorCode: constants.INVALID_PERMISSIONS };
               const tmp32 = new tmp5(6790)(obj9, "Invalid Permissions.");

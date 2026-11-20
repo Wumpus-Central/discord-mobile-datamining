@@ -6,9 +6,9 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx");
 
-export default function getGuildBarNeighbors(arg0) {
+export default function getGuildBarNeighbors(targetId) {
   const guildsTree = SortedGuildStore.getGuildsTree();
-  const node = guildsTree.getNode(arg0);
+  const node = guildsTree.getNode(targetId);
   if (null != node) {
     if (node.type === GuildsTree.GuildsNodeType.GUILD) {
       if (null != node.parentId) {

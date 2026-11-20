@@ -19,10 +19,10 @@ function EducationCoachmarkImg() {
   );
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let closure_9 = fn(4625).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
-const createStyles = fn(4792);
+let closure_9 = fn(4627).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
+const createStyles = fn(4794);
 let obj2 = { upsellImageContainer: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -48,7 +48,7 @@ export default function useBurstToggleCoachmark(targetRef) {
   } else {
     items2 = [];
   }
-  obj2 = first(2174);
+  obj2 = first(2172);
   const tmp5 = _slicedToArray(first(8960).useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;

@@ -9,7 +9,7 @@ import ChangelogStore from "ChangelogStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/useChangelogRenderedAnalytics.tsx");
 

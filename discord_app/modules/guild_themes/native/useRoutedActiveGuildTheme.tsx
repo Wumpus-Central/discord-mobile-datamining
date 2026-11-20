@@ -145,7 +145,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
   }
   return null;
 }
-const ME = fn(1072).ME;
+const ME = fn(1071).ME;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/useRoutedActiveGuildTheme.tsx");
 

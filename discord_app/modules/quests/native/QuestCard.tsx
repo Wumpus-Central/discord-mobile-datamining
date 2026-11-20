@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import design_shared from "../../../../discord_common/js/packages/design/shared.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -31,12 +31,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_6 } = get_ActivityIndicator);
-let QuestsExperimentLocations = fn(6437).QuestsExperimentLocations;
-const Constants = fn(1083);
+let QuestsExperimentLocations = fn(6439).QuestsExperimentLocations;
+const Constants = fn(1082);
 ({ NOOP: closure_10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let result = createStyles.experimental_createToken((theme) => {
   theme = theme.theme;
   const internal = nativeDefault.internal;
@@ -48,7 +48,7 @@ let result = createStyles.experimental_createToken((theme) => {
   const isThemeDarkResult = design_shared.isThemeDark(theme);
   return ColorUtils.hexOpacityToRgba(semanticColor, 0);
 });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let result1 = createStyles.experimental_createToken((theme) => {
   theme = theme.theme;
   const isThemeDarkResult = design_shared.isThemeDark(theme);
@@ -64,13 +64,13 @@ let result1 = createStyles.experimental_createToken((theme) => {
   }
   return ColorUtils.hexOpacityToRgba(semanticColor, num);
 });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let result2 = createStyles.experimental_createToken((theme) => {
   colors = nativeDefault.colors;
   return design_shared.isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
 });
 let PX_16 = nativeDefault.space.PX_16;
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj = {
   container: {
     position: "relative",
@@ -204,7 +204,7 @@ obj.buttonContainers = {
 };
 obj.equalWidthContainer = { flexBasis: 0, flexGrow: 1, flexShrink: 1 };
 let closure_15 = createStyles.createStyles(obj);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_16 = createStyles.createStyleProperties({
   gradientStart: result,
   gradientMid: result1,
@@ -224,7 +224,7 @@ let result3 = size.fileFinishedImporting("modules/quests/native/QuestCard.tsx");
 export const ESTIMATED_CARD_HEIGHT = 348;
 export const QuestCard = noop.memo(function QuestCard(questContent) {
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16560, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16383, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       questContentPosition,
       sourceQuestContent,
@@ -710,7 +710,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -739,7 +739,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                   return obj;
                 } else {
                   v3 = 3;
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp9) {
                 v3 = tmp;
@@ -924,7 +924,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           const obj46 = {
             onPress: function showQuestEnrollmentBlockedBottomSheet() {
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(16607, dependencyMap.paths),
+                asyncRequireImpl(16430, dependencyMap.paths),
                 "QuestEnrollmentBlockedBottomSheet",
                 { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent },
               );
@@ -1099,7 +1099,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             } else {
               const obj5 = { questId: quest.id, questContentPosition, sourceQuestContent };
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(16560, dependencyMap.paths),
+                asyncRequireImpl(16383, dependencyMap.paths),
                 "QuestBottomSheet",
                 obj5,
               );
@@ -1180,7 +1180,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                 impressionId: getQuestImpressionId(),
               };
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(16560, dependencyMap.paths),
+                asyncRequireImpl(16383, dependencyMap.paths),
                 "QuestBottomSheet",
                 { questId: quest.id, questContentPosition, sourceQuestContent },
               );
@@ -1219,7 +1219,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

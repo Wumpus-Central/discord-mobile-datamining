@@ -5,10 +5,10 @@ import conjureProjectSockets from "conjureProjectSockets.tsx";
 import conjureChatConnection from "../chat/conjureChatConnection.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import createNonce from "../../messages/createNonce.tsx";
-import conjureMediaTickets from "conjureMediaTickets.tsx";
-import conjurePreviewClaims from "../preview/conjurePreviewClaims.tsx";
 import conjurePublishConnection from "../publish/conjurePublishConnection.tsx";
 import conjurePublishEvalConnection from "../publish_eval/conjurePublishEvalConnection.tsx";
+import conjureMediaTickets from "conjureMediaTickets.tsx";
+import conjurePreviewClaims from "../preview/conjurePreviewClaims.tsx";
 import conjurePublishScheduleRequests from "../publish_schedule/conjurePublishScheduleRequests.tsx";
 import conjureLinkEmbeds from "../chat/conjureLinkEmbeds.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -378,7 +378,7 @@ let closure_24 = async function _openWithFreshTicket(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -417,7 +417,7 @@ let closure_24 = async function _openWithFreshTicket(arg0) {
           closure_131_5 = closure_5;
           if (closure_131_1.disposed) {
             c8 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           } else {
             closure_132_13(closure_131_0, "failed");
             const _Error = Error;
@@ -504,7 +504,7 @@ let closure_24 = async function _openWithFreshTicket(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp76) {
       closure_5 = tmp76;
@@ -683,28 +683,28 @@ const map1 = new Map();
 let set = new Set();
 const map2 = new Map();
 let obj = {};
-let merged = Object.assign(fn(6868).browserSessionsFrameHandlers);
+let merged = Object.assign(fn(6867).browserSessionsFrameHandlers);
 let merged1 = Object.assign(fn(6865).chatFrameHandlers);
-const merged2 = Object.assign(fn(6869).debugFrameHandlers);
-const merged3 = Object.assign(fn(6871).hostAccessFrameHandlers);
-const merged4 = Object.assign(fn(6873).liveReloadFrameHandlers);
-const merged5 = Object.assign(fn(6874).managedCopyFrameHandlers);
-const merged6 = Object.assign(fn(6875).modelSettingsFrameHandlers);
-const merged7 = Object.assign(fn(6876).previewFrameHandlers);
-const merged8 = Object.assign(fn(14655).publishFrameHandlers);
-const merged9 = Object.assign(fn(14661).publishEvalFrameHandlers);
-const merged10 = Object.assign(fn(14662).publishScheduleFrameHandlers);
-const merged11 = Object.assign(fn(12229).remixFrameHandlers);
-const merged12 = Object.assign(fn(14664).settingsFrameHandlers);
-const merged13 = Object.assign(fn(14666).smartContextFrameHandlers);
+const merged2 = Object.assign(fn(6868).debugFrameHandlers);
+const merged3 = Object.assign(fn(6870).hostAccessFrameHandlers);
+const merged4 = Object.assign(fn(6872).liveReloadFrameHandlers);
+const merged5 = Object.assign(fn(6873).managedCopyFrameHandlers);
+const merged6 = Object.assign(fn(6874).modelSettingsFrameHandlers);
+const merged7 = Object.assign(fn(6875).previewFrameHandlers);
+const merged8 = Object.assign(fn(12178).publishFrameHandlers);
+const merged9 = Object.assign(fn(12196).publishEvalFrameHandlers);
+const merged10 = Object.assign(fn(14621).publishScheduleFrameHandlers);
+const merged11 = Object.assign(fn(12171).remixFrameHandlers);
+const merged12 = Object.assign(fn(14623).settingsFrameHandlers);
+const merged13 = Object.assign(fn(14625).smartContextFrameHandlers);
 let obj2 = {};
-const merged14 = Object.assign(fn(14667).appBuildRequestStepHandlers);
+const merged14 = Object.assign(fn(14626).appBuildRequestStepHandlers);
 const merged15 = Object.assign(fn(6865).chatStepHandlers);
-const merged16 = Object.assign(fn(6869).debugStepHandlers);
-const merged17 = Object.assign(fn(6876).previewStepHandlers);
-const merged18 = Object.assign(fn(14668).projectStepHandlers);
-const merged19 = Object.assign(fn(14655).publishStepHandlers);
-const merged20 = Object.assign(fn(14669).usageStepHandlers);
+const merged16 = Object.assign(fn(6868).debugStepHandlers);
+const merged17 = Object.assign(fn(6875).previewStepHandlers);
+const merged18 = Object.assign(fn(14627).projectStepHandlers);
+const merged19 = Object.assign(fn(12178).publishStepHandlers);
+const merged20 = Object.assign(fn(14628).usageStepHandlers);
 const set1 = new Set([
   "hello",
   "history",

@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
-import _modDef10866 from "../../../../../_runtime/metro/10866__.js";
+import _modDef10808 from "../../../../../_runtime/metro/10808__.js";
 import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
 import GuildProgressBarDefault from "GuildProgressBar.tsx";
@@ -52,14 +52,14 @@ class GuildProgressOverviewView {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   title: {
     fontSize: 16,
     lineHeight: 20,
-    fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD,
+    fontFamily: fn(1071).Fonts.PRIMARY_SEMIBOLD,
     color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
     marginBottom: 2,
   },

@@ -4,8 +4,8 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
 const require = fn;
-const VideoToggleState = fn(1072).VideoToggleState;
-const Constants = fn(5537);
+const VideoToggleState = fn(1071).VideoToggleState;
+const Constants = fn(5539);
 ({ MediaEngineContextTypes: closure_6, Features: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");

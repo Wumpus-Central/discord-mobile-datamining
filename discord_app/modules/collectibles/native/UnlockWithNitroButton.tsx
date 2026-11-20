@@ -11,7 +11,7 @@ import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
 require = fn;
-const ShopCtaEnum = fn(1074).ShopCtaEnum;
+const ShopCtaEnum = fn(1073).ShopCtaEnum;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/UnlockWithNitroButton.tsx");

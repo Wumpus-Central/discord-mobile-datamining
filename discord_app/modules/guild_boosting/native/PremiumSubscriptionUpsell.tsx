@@ -5,14 +5,14 @@ import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05347_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05349_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import PremiumFeatureListDefault from "../../premium/native/components/PremiumFeatureList.tsx";
-import _modDef14057 from "../../../../_runtime/metro/14057__.js";
-import _modDef14058 from "../../../../_runtime/metro/14058__.js";
+import _modDef14026 from "../../../../_runtime/metro/14026__.js";
+import _modDef14027 from "../../../../_runtime/metro/14027__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -21,14 +21,14 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const Gradients = fn(8831).Gradients;
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: metroImportDefault,
   GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8,
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   title: { textAlign: "center" },
   subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" },
@@ -73,13 +73,13 @@ let obj5 = {
 };
 obj2.upsellLabel = {
   color: nativeDefault.unsafe_rawColors.WHITE,
-  fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD,
+  fontFamily: fn(1071).Fonts.PRIMARY_SEMIBOLD,
   fontSize: 16,
   lineHeight: 20,
 };
 let obj6 = {
   color: nativeDefault.unsafe_rawColors.WHITE,
-  fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD,
+  fontFamily: fn(1071).Fonts.PRIMARY_SEMIBOLD,
   fontSize: 16,
   lineHeight: 20,
 };
@@ -143,11 +143,11 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     tmp5Result5 = PremiumUtilsDefault;
-    obj11.source = _modDef14057;
+    obj11.source = _modDef14026;
     const items4 = [React6(FastImageDefault, obj11), ,];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const tmp5Result6 = FastImageDefault;
-    obj12.source = _modDef14058;
+    obj12.source = _modDef14027;
     items4[1] = React6(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

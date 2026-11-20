@@ -1,15 +1,15 @@
 // discord_app/modules/conjure/clarification/native/ConjureClarificationEntityPicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureUtils from "../../shared/ConjureUtils.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import ChannelPickerActionSheetDefault from "../../../channel/native/ChannelPickerActionSheet.tsx";
+import ConjureServerPickerSheetDefault from "../../shared/native/ConjureServerPickerSheet.tsx";
 import ConjureGuildPickerSheetDefault from "../../guild_pickers/native/ConjureGuildPickerSheet.tsx";
 import ConjureClarification from "../ConjureClarification.tsx";
 import useConjureProjectPickerOptionsDefault from "../useConjureProjectPickerOptions.tsx";
-import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet.tsx";
 import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildChannelStore from "../../../../stores/GuildChannelStore.tsx";
@@ -20,6 +20,7 @@ function ServerPicker(onChange) {
   ({ question: require, value } = onChange);
   importDefault = value;
   onChange = onChange.onChange;
+  let found;
   ({ disabled, fallback } = onChange);
   const conjureEligibleGuilds = require("useConjureProjects").useConjureEligibleGuilds(
     "ConjureClarificationEntityPicker",
@@ -27,7 +28,7 @@ function ServerPicker(onChange) {
   if (0 === conjureEligibleGuilds.length) {
     return fallback;
   } else {
-    const found = conjureEligibleGuilds.find((id) => {
+    found = conjureEligibleGuilds.find((id) => {
       const first = value[0];
       id = undefined;
       if (first != null) {
@@ -45,7 +46,7 @@ function ServerPicker(onChange) {
       name = require("ConjureClarification").clarificationPickerPlaceholder("server", false);
       const tmpResult = require("ConjureClarification");
     }
-    const obj3 = { label: name, icon: null, arrow: true, disabled: null, onPress: null };
+    let obj3 = { label: name, icon: null, arrow: true, disabled: null, onPress: null };
     let tmp8Result;
     if (null != found) {
       const obj4 = { guild: found, size: require("GuildIcon").GuildIconSizes.SMALL_32 };
@@ -56,22 +57,47 @@ function ServerPicker(onChange) {
     obj3.disabled = disabled;
     obj3.onPress = function openSheet() {
       const obj2 = {
-        content: jsx(ConjureClarificationServerSheetDefault, {
+        sheetKey: ConjureClarificationPickerSheet,
+        title: question.question,
+        guilds: conjureEligibleGuilds,
+        selectedGuildId: null,
+        onPick: null,
+      };
+      let id;
+      const obj = ActionSheetActionCreators;
+      if (found != null) {
+        id = found.id;
+      }
+      obj2.selectedGuildId = id;
+      obj2.onPick = function onPick(id) {
+        const name = id;
+        items = [id.id];
+        return closure_1_2(
+          require("ConjureClarification").clarificationEntities("server", items, () => name.name, closure_1_1),
+        );
+      };
+      obj.showActionSheet({
+        content: jsx(ConjureServerPickerSheetDefault, {
           sheetKey: ConjureClarificationPickerSheet,
           title: question.question,
           guilds: conjureEligibleGuilds,
-          onPick(id) {
-            const name = id;
-            items = [id.id];
-            return closure_1_2(
-              require("ConjureClarification").clarificationEntities("server", items, () => name.name, closure_1_1),
-            );
-          },
+          selectedGuildId: null,
+          onPick: null,
+        }),
+        key: ConjureClarificationPickerSheet,
+        stackingBehavior: "stack",
+      });
+      const obj3 = {
+        content: jsx(ConjureServerPickerSheetDefault, {
+          sheetKey: ConjureClarificationPickerSheet,
+          title: question.question,
+          guilds: conjureEligibleGuilds,
+          selectedGuildId: null,
+          onPick: null,
         }),
         key: ConjureClarificationPickerSheet,
         stackingBehavior: "stack",
       };
-      ActionSheetActionCreators.showActionSheet(obj2);
     };
     obj2.children = jsx(require("TableRow").TableRow, {
       label: name,
@@ -82,7 +108,7 @@ function ServerPicker(onChange) {
     });
     return jsx(require("TableRowGroup").TableRowGroup, { hasIcons: null != found, children: null });
   }
-  const obj = require("useConjureProjects");
+  let obj = require("useConjureProjects");
 }
 function ProjectPicker(arg0) {
   ({ question: require, value } = arg0);
@@ -237,7 +263,7 @@ function GuildEntityPicker(value) {
                             let obj = { content: null, key: null, stackingBehavior: "stack" };
                             obj4.selectedChannel = found;
                             const intl = util.intl;
-                            obj4.noChannelOptionLabel = intl.string(_modDef4089["jtBVV+"]);
+                            obj4.noChannelOptionLabel = intl.string(_modDef4091["jtBVV+"]);
                             obj4.onSelect = function onSelect(stateFromStores1) {
                               if (null == stateFromStores1) {
                                 items = [];

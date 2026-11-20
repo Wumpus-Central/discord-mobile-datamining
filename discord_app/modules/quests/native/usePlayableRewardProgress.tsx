@@ -9,10 +9,10 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/usePlayableRewardProgress.tsx");
 
-export default function usePlayableRewardProgress(arg0) {
-  _require = arg0;
+export default function usePlayableRewardProgress(playingPlayableId) {
+  _require = playingPlayableId;
   items = [PlayableStore];
-  const items1 = [arg0];
+  const items1 = [playingPlayableId];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
     () => ({ timer: PlayableStore.getTimerState(closure_0), isClaimed: PlayableStore.isPlayableCompleted(closure_0) }),
@@ -24,35 +24,27 @@ export default function usePlayableRewardProgress(arg0) {
     startedAt = timer.startedAt;
   }
   _slicedToArray = tmp3;
-  const obj = require("initialize");
-  [tmp5, noop] = noop.useState(() => {
-    let num = PlayableStore.getRemainingMs(closure_0);
-    if (num == null) {
-      num = 0;
-    }
-    return num;
-  });
-  const items2 = [arg0, timer, null != startedAt, isClaimed];
+  noop = _slicedToArray(noop.useState(0), 2)[1];
+  const items2 = [playingPlayableId, timer, null != startedAt, isClaimed];
   const effect = noop.useEffect(() => {
-    let num = remainingMs.getRemainingMs(interval);
-    if (num == null) {
-      num = 0;
-    }
-    closure_3(num);
     if (closure_2) {
       if (!isClaimed) {
+        let num = rewardRemainingMs.getRewardRemainingMs(interval);
+        if (num == null) {
+          num = 0;
+        }
         if (num > 0) {
           const _setInterval = setInterval;
           interval = setInterval(() => {
-            let num = PlayableStore.getRemainingMs(closure_0);
+            let num = PlayableStore.getRewardRemainingMs(closure_0);
             if (num == null) {
               num = 0;
             }
-            noop(num);
             if (num <= 0) {
               const _clearInterval = clearInterval;
               clearInterval(closure_0);
             }
+            closure_3((arg0) => arg0 + 1);
           }, 250);
           return () => clearInterval(closure_0);
         }
@@ -61,17 +53,11 @@ export default function usePlayableRewardProgress(arg0) {
   }, items2);
   let num = 0;
   if (!isClaimed) {
-    if (!tmp3) {
-      let num2;
-      if (timer != null) {
-        num2 = timer.remainingMs;
-      }
-      if (num2 == null) {
-        num2 = 0;
-      }
-      tmp5 = num2;
+    let num2 = PlayableStore.getRewardRemainingMs(playingPlayableId);
+    if (num2 == null) {
+      num2 = 0;
     }
-    num = tmp5;
+    num = num2;
   }
   return { remainingSeconds: num / 1000, isClaimed };
 }

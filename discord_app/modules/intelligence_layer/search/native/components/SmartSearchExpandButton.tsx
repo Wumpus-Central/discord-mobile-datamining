@@ -1,6 +1,6 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchExpandButton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4312 from "../../SmartSearch.messages.js";
+import _modDef4314 from "../../SmartSearch.messages.js";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     block: { position: "absolute", left: 0, right: 0, bottom: 0, alignItems: "center" },
@@ -40,11 +40,11 @@ let result = size.fileFinishedImporting(
 
 export default noop.memo(function SmartSearchExpandButton(arg0) {
   ({ isCollapsed, onPress } = arg0);
-  const tmp3 = closure_10(onPress(18842).useSearchHostSurfaceColor());
+  const tmp3 = closure_10(onPress(18666).useSearchHostSurfaceColor());
   if (isCollapsed) {
-    let ChevronSmallUpIcon = onPress(12707).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = onPress(12677).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = onPress(14103).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = onPress(14072).ChevronSmallUpIcon;
   }
   items = [onPress];
   const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
@@ -60,8 +60,8 @@ export default noop.memo(function SmartSearchExpandButton(arg0) {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     onPress();
   }, items);
-  const intl = onPress(1113).intl;
-  const tmp10 = _modDef4312;
+  const intl = onPress(1112).intl;
+  const tmp10 = _modDef4314;
   if (isCollapsed) {
     let FKLBbW = tmp10.NuTbB9;
     let tmp11 = importDefault;
@@ -72,7 +72,7 @@ export default noop.memo(function SmartSearchExpandButton(arg0) {
   obj3.accessibilityLabel = intl.string(FKLBbW);
   obj3.onPress = callback;
   const items1 = [closure_7(closure_6, { style: tmp3.surface, pointerEvents: "none" })];
-  const obj = onPress(18842);
+  const obj = onPress(18666);
   const obj4 = { style: tmp3.surface, pointerEvents: "none" };
   items1[1] = closure_7(ChevronSmallUpIcon, { size: "sm", color: tmp11(575).colors.INTERACTIVE_ICON_DEFAULT });
   obj3.children = items1;

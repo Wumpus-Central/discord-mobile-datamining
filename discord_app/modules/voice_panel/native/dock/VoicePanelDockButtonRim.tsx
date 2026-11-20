@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../_runtime/07746_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07745_inlineStyles.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const DOCK_FADE_TIMING = fn(11706).DOCK_FADE_TIMING;
+const DOCK_FADE_TIMING = fn(11648).DOCK_FADE_TIMING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = noop.memo(function ButtonRimGradient(arg0) {
@@ -128,7 +128,7 @@ export default noop.memo(function VoicePanelDockButtonRim(measureGlowOffset) {
       return obj;
     }
   }, items3);
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(1);
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(1);
   const items4 = [sharedValue];
   const items5 = [sharedValue];
   const callback2 = callback.useCallback(() => {
@@ -137,7 +137,7 @@ export default noop.memo(function VoicePanelDockButtonRim(measureGlowOffset) {
   const callback3 = callback.useCallback(() => {
     const result = sharedValue.set(timing_timing.withTiming(1, DOCK_FADE_TIMING));
   }, items5);
-  let obj = require("../../../../../_runtime/metro/01655__.js");
+  let obj = require("../../../../../_runtime/metro/01653__.js");
   const tmp8 = _require;
   const items6 = [closure_11, require("VoicePanelDockRimLight").voicePanelDockRimOpacity, sharedValue];
   _require = undefined;
@@ -165,7 +165,7 @@ export default noop.memo(function VoicePanelDockButtonRim(measureGlowOffset) {
     children: null,
   };
   let tmp19;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     VoicePanelDockButtonRimTsx1,
   );
   if (flag) {
@@ -194,7 +194,7 @@ export default noop.memo(function VoicePanelDockButtonRim(measureGlowOffset) {
     ({ cx: obj6.cx, cy: obj6.cy, strength: obj6.strength } = memo);
     obj5.children = closure_8(closure_10, size);
     obj4.children = closure_8(tmp8(tmp9[10]).VoicePanelDockRimLevel, obj5);
-    tmp22 = closure_8(require("../../../../../_runtime/metro/01655__.js").View, obj4);
+    tmp22 = closure_8(require("../../../../../_runtime/metro/01653__.js").View, obj4);
   }
   items8[1] = tmp22;
   obj3.children = items8;

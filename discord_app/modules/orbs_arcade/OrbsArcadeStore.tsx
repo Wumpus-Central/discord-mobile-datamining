@@ -1,12 +1,13 @@
 // discord_app/modules/orbs_arcade/OrbsArcadeStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import OrbsArcadeRewardUtils from "utils/OrbsArcadeRewardUtils.tsx";
 import OrbsArcadeTypes from "OrbsArcadeTypes.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import VirtualCurrencyStore from "../virtual_currency/stores/VirtualCurrencyStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-const orbs_arcade_game_state = tmp(16480);
+const orbs_arcade_game_state = tmp(16303);
 require = fn;
 function handleBalanceChange(balance) {
   balance = balance.balance;
@@ -34,9 +35,10 @@ let c4 = false;
 let orbsArcadeGames = [];
 new Map();
 new Set();
-let set = new Set();
-let c9 = null;
 let set1 = new Set();
+let set = new Set();
+let c10 = null;
+let set2 = new Set();
 let map = new Map();
 let balance = null;
 const Store = initializeDefault.Store;
@@ -78,15 +80,30 @@ prototype["getGame"] = function getGame(arg0) {
   return found;
 };
 prototype["getGameStateForGame"] = function getGameStateForGame(id) {
-  value = map.get(id);
-  if (value == null) {
-    value = null;
+  let tmp = null;
+  if (!set.has(id)) {
+    value = map.get(id);
+    if (value == null) {
+      value = null;
+    }
+    tmp = value;
   }
-  return value;
+  return tmp;
+};
+prototype["getAllTimeHighScore"] = function getAllTimeHighScore(gameId) {
+  value = map.get(gameId);
+  let num;
+  if (value != null) {
+    num = value.allTimeHighScore;
+  }
+  if (num == null) {
+    num = 0;
+  }
+  return num;
 };
 Object.defineProperty(prototype, "ownedRewardSkuIds", {
   get: function ownedRewardSkuIds() {
-    return set;
+    return set1;
   },
   set: undefined,
 });
@@ -95,12 +112,12 @@ prototype["isClaimingRewards"] = function isClaimingRewards(id) {
 };
 Object.defineProperty(prototype, "isLaunchingAnyGame", {
   get: function isLaunchingAnyGame() {
-    return null != c9;
+    return null != c10;
   },
   set: undefined,
 });
 prototype["isLaunchingGame"] = function isLaunchingGame(id) {
-  return c9 === id;
+  return c10 === id;
 };
 Object.defineProperty(prototype, "heldRunChargeTotal", {
   get: function heldRunChargeTotal() {
@@ -122,16 +139,21 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
       c2 = false;
       c4 = false;
       const _Map = Map;
+      map = new Map();
+      const _Set2 = Set;
+      set = new Set();
       const _Object = Object;
       const values = Object.values(gameStateByGameId);
-      map = new Map(
-        values.map((gameId) => {
-          items = [gameId.gameId, gameId];
-          return items;
-        }),
-      );
+      for (const item10012 of values) {
+        let result = map.set(item10012.gameId, item10012);
+        let obj = OrbsArcadeRewardUtils;
+        if (obj.isOrbsArcadeEnrollmentOver(item10012)) {
+          let addResult = set.add(item10012.gameId);
+        }
+        continue;
+      }
       const _Set = Set;
-      set = new Set(ownedRewardSkuIds);
+      set1 = new Set(ownedRewardSkuIds);
     }
   },
   ORBS_ARCADE_FETCH_GAMES_FAILURE: function handleFetchGamesFailure(userId) {
@@ -151,13 +173,14 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
     }
     const currentRun2 = result.currentRun;
     const result1 = map.set(game_id, result);
+    set.delete(game_id);
     if (null != currentRun2) {
       let id;
       if (currentRun != null) {
         id = currentRun.id;
       }
       if (currentRun2.id !== id) {
-        if (tmp7) {
+        if (tmp8) {
           map.delete(currentRun.id);
         }
         if (null == currentRun2.endedAt) {
@@ -171,19 +194,19 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
                 orbCost = found.orbCost;
               }
             }
-            let tmp13 = null;
+            let tmp14 = null;
             if (null != orbCost) {
-              tmp13 = null;
+              tmp14 = null;
               if (orbCost > 0) {
-                tmp13 = orbCost;
+                tmp14 = orbCost;
               }
             }
-            if (null != tmp13) {
-              const result2 = map.set(currentRun2.id, tmp13);
+            if (null != tmp14) {
+              const result2 = map.set(currentRun2.id, tmp14);
             }
           }
         }
-        tmp7 = null != currentRun && null == currentRun.endedAt;
+        tmp8 = null != currentRun && null == currentRun.endedAt;
       }
     }
   },
@@ -201,6 +224,7 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
       set = new Set(set);
       set.delete(gameId);
       const result = map.set(gameId, gameState);
+      set.delete(gameId);
     }
   },
   ORBS_ARCADE_CLAIM_REWARDS_FAILURE: function handleClaimRewardsFailure(arg0) {
@@ -219,10 +243,10 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
     balance = VirtualCurrencyStore.balance;
   },
   ORBS_ARCADE_LAUNCH_GAME_END: function handleLaunchGameEnd(gameId) {
-    if (c9 !== gameId.gameId) {
+    if (c10 !== gameId.gameId) {
       return false;
     } else {
-      c9 = null;
+      c10 = null;
     }
   },
   VIRTUAL_CURRENCY_BALANCE_UPDATE: handleBalanceChange,
@@ -234,9 +258,10 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
     orbsArcadeGames = [];
     new Map();
     new Set();
+    set1 = new Set();
     set = new Set();
-    c9 = null;
-    const set1 = new Set();
+    c10 = null;
+    const set2 = new Set();
     map = new Map();
     balance = null;
   },

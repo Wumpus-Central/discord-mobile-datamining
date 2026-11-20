@@ -28,13 +28,13 @@ import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let GuildScheduledEventStore = fn(6512);
+let GuildScheduledEventStore = fn(6514);
 ({ eventScheduledToStartWithin: closure_8, isEventUpcoming: closure_9, isGuildScheduledEventActive: closure_10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const MemberListRowTypes = fn(6800).MemberListRowTypes;
-let closure_20 = fn(4722).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(16754).HappeningNowItem;
-const Constants = fn(1072);
+let closure_20 = fn(4724).GUILD_SELECTABLE_CHANNELS_KEY;
+const HappeningNowItem = fn(16578).HappeningNowItem;
+const Constants = fn(1071);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: closure_31, StatusTypes: closure_32 } = Constants);
 let items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];
 const size = fn(2);
@@ -304,7 +304,7 @@ export default function useHappeningNowData(has, guildId) {
                         if (closure_2_3) {
                           const found = embeddedActivitiesForChannel.filter((userIds) => {
                             items = [...userIds.userIds];
-                            return items.some(/* F143451 */ function() { ... });
+                            return items.some(/* F141297 */ function() { ... });
                           });
                           closure_1_4[channel.id] = found.map((activity) => ({ kind: "embedded-activity", userId, voiceState, guildId: set1, activity }));
                         } else {

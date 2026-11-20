@@ -40,7 +40,7 @@ function canReactToMessageInternal(state, getGuildId, items) {
   }
   return tmp6;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MessageStates: metroImportDefault, MessageTypes: closure_8, MessageFlags: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/canReactToMessage.tsx");

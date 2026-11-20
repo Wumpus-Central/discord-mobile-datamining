@@ -52,7 +52,7 @@ function Row(guildId) {
       start: isStart,
       end: isEnd,
     };
-    return jsx(tmp2(7437).TableSwitchRow, {
+    return jsx(tmp2(7436).TableSwitchRow, {
       label: guild.name,
       icon: jsx(GuildIconDefault, { guild }),
       value: !muted,
@@ -64,7 +64,7 @@ function Row(guildId) {
   let obj = guildId(504);
   tmp2 = guildId;
 }
-const HighlightSettings = fn(1072).HighlightSettings;
+const HighlightSettings = fn(1071).HighlightSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -80,7 +80,7 @@ export default function UserSettingsHighlightNotifications() {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(7590).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(7589).Form, { children: tmp3 });
   }
   return tmp4;
 }

@@ -110,7 +110,7 @@ let closure_9 = async function _saveChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -318,8 +318,8 @@ let closure_9 = async function _saveChannel(arg0) {
               tmp5 = isThreadResult;
             }
             if (!tmp5) {
-              const result = closure_1(7611).checkGuildTemplateDirty(guildId);
-              const tmpResult = closure_1(7611);
+              const result = closure_1(7610).checkGuildTemplateDirty(guildId);
+              const tmpResult = closure_1(7610);
             }
             return arg0;
           },
@@ -358,7 +358,7 @@ let closure_10 = async function _deleteChannel(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -412,7 +412,7 @@ let closure_10 = async function _deleteChannel(arg0) {
         }
         closure_130_8();
         c4 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp22) {
       c4 = tmp;
@@ -433,7 +433,7 @@ function removeLinkedLobby(arg0) {
   const HTTP = HTTPUtils.HTTP;
   return HTTP.del({ url: timestampProducer.CHANNEL_LINKED_LOBBY(arg0), rejectWithError: true });
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_6, Layers, ChannelSettingsSections: metroImportDefault } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/ChannelSettingsActionCreators.tsx");

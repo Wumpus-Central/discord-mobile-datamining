@@ -11,9 +11,9 @@ import RTCRegionStore from "../../stores/RTCRegionStore.tsx";
 import StateManager from "../../lib/StateManager.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, VoiceFlags: closure_8 } = Constants);
-const StreamTypes = fn(6276).StreamTypes;
+const StreamTypes = fn(6278).StreamTypes;
 class LocalVoiceStateManager extends tmp3 {
   constructor(arg0) {
     tmp = new LocalVoiceStateManager(new.target);

@@ -13,8 +13,8 @@ function OrbsArcadePaidPlayLabel(count) {
   const size = count.size;
   const tmp = closure_9();
   closure_1 = tmp;
-  const intl = size(1113).intl;
-  const formatResult = intl.format(size(1113).t.oSWYca, {
+  const intl = size(1112).intl;
+  const formatResult = intl.format(size(1112).t.oSWYca, {
     count: count.orbCost,
     orbIconHook() {
       return jsx(
@@ -60,9 +60,9 @@ function OrbsArcadePaidPlayLabel(count) {
   );
 }
 const View = fn(17).View;
-const QuestHomeSection = fn(9834).QuestHomeSection;
+const QuestHomeSection = fn(9836).QuestHomeSection;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({
   paidPlayLabel: { flexDirection: "row", alignItems: "center" },
   paidPlayText: { flexShrink: 1 },

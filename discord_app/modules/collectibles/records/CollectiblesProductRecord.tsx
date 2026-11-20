@@ -5,11 +5,11 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7960);
+const CollectiblesItemRecord = fn(7959);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } =
   CollectiblesItemRecord);
-let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
-const Constants = fn(1072);
+let closure_7 = fn(1073).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
+const Constants = fn(1071);
 ({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: closure_9 } = Constants);
 let CollectiblesProductRecord;
 class CollectiblesProductRecord extends tmp3 {
@@ -261,17 +261,17 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 styles: "to",
                 type: "Array",
                 premiumType: "id",
-                items: "TILDETRIM",
-                categorySkuId: "GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY",
-                categoryWillUnpublishAt: "deaf_man_tone4",
-                isCategoryReward: "deaf_man_medium_dark_skin_tone",
-                prices: "perfMonitorV2Enabled",
-                previewAssets: "clo",
-                googleSkuIds: "customKeyboardHeight",
-                eligibleOffers: "SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS",
-                variants: "SoundboardSoundGridSectionType",
-                bundledProducts: "e",
-                isFirstParty: "flex",
+                items: "<string:374497215>",
+                categorySkuId: "<string:1382006536>",
+                categoryWillUnpublishAt: "<string:1606371960>",
+                isCategoryReward: "<string:3214385490>",
+                prices: "<string:1116885599>",
+                previewAssets: "<string:108093375>",
+                googleSkuIds: "<string:2852147957>",
+                eligibleOffers: "<string:3679608767>",
+                variants: "<string:1382006702>",
+                bundledProducts: "<string:1606373266>",
+                isFirstParty: "en-GM",
               };
               let str;
               if (first != null) {

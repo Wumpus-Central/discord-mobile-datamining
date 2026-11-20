@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   label: { marginHorizontal: 16, marginBottom: 8 },
   container: {
@@ -74,9 +74,9 @@ export default noop.memo(function JoinRequestOtherApplications(arg0) {
   if (0 !== otherGuildJoinRequestsForUser.length) {
     let obj2 = { children: null };
     let obj3 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
-    const intl = tmp2(1113).intl;
-    obj3.children = intl.string(tmp2(1113).t["hxa+G3"]);
-    items = [closure_6(tmp2(5383).Text, obj3)];
+    const intl = tmp2(1112).intl;
+    obj3.children = intl.string(tmp2(1112).t["hxa+G3"]);
+    items = [closure_6(tmp2(5385).Text, obj3)];
     let obj4 = {
       style: tmp.container,
       children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

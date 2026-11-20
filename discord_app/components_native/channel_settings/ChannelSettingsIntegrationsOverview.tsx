@@ -16,8 +16,8 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 require = fn;
 function LinkedLobbyFormSection(channel) {
   channel = channel.channel;
-  importDefault = channel(1502).useNavigation();
-  const obj = channel(1502);
+  importDefault = channel(1500).useNavigation();
+  const obj = channel(1500);
   const linkedLobby = channel.linkedLobby;
   application_id = undefined;
   if (linkedLobby != null) {
@@ -27,24 +27,24 @@ function LinkedLobbyFormSection(channel) {
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
-    const intl = tmp(1113).intl;
-    obj3.title = intl.string(tmp(1113).t.oAvIAg);
+    const intl = tmp(1112).intl;
+    obj3.title = intl.string(tmp(1112).t.oAvIAg);
     const obj4 = { label: getOrFetchApplication.name, icon: null, arrow: true, onPress: null };
     const obj5 = { application: getOrFetchApplication };
     obj4.icon = closure_6(TableRowApplicationIconDefault, obj5);
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(6926).TableRow, obj4);
-    tmp5 = closure_6(tmp(7229).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(6925).TableRow, obj4);
+    tmp5 = closure_6(tmp(7228).TableRowGroup, obj3);
   }
   return tmp5;
 }
-fn(4645).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
-const ChannelSettingsSections = fn(1072).ChannelSettingsSections;
+fn(4647).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+const ChannelSettingsSections = fn(1071).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = {
   screenContainer: {
     flex: 1,

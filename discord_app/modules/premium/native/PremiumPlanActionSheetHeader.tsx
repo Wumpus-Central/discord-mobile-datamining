@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/PremiumPlanActionSheetHeader.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05347_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05349_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import _modDef9000 from "../../../../_runtime/metro/09000__.js";
 import _modDef9001 from "../../../../_runtime/metro/09001__.js";
@@ -18,12 +18,12 @@ const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
 const View = fn(17).View;
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({ PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty } = PremiumConstants);
 const getPremiumGradientColor = fn(8831).getPremiumGradientColor;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   header: { height: 112, justifyContent: "center", alignItems: "center" },
   logoContainer: { position: "absolute", top: 16, left: 16 },

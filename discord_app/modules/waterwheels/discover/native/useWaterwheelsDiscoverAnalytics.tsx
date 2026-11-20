@@ -26,7 +26,7 @@ function toAnalyticsItems(viewableItems) {
   return items;
 }
 const AppState = fn(17).AppState;
-const WATERWHEELS = fn(1072).WATERWHEELS;
+const WATERWHEELS = fn(1071).WATERWHEELS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/discover/native/useWaterwheelsDiscoverAnalytics.tsx");
 

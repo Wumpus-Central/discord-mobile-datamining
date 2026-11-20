@@ -12,7 +12,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, AppStates: closure_6 } = Constants);
 let closure_7 = new LoggerDefault("index.native.tsx");
 const size = fn(2);

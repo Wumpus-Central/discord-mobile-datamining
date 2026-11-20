@@ -7,18 +7,18 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8593).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8592).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsEveryoneSettingValue() {
     const selectedTeenId = controlledSetting(9018).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(16032).ParentalControlledFriendSourceFlags;
+    const ParentalControlledFriendSourceFlags = controlledSetting(15996).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;

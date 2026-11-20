@@ -20,7 +20,7 @@ function GuildDirectoryEditDescription(entry) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -34,7 +34,7 @@ function GuildDirectoryEditDescription(entry) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj3 = tmp4(13080);
+            const obj3 = tmp4(13050);
             dependencyMap = 1;
             c4 = 1;
             const obj5 = {
@@ -51,9 +51,9 @@ function GuildDirectoryEditDescription(entry) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          closure_1(13078).close();
+          closure_1(13048).close();
           c4 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
         c4 = tmp;
@@ -72,9 +72,9 @@ function GuildDirectoryEditDescription(entry) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl = entry(1113).intl;
-  obj4.children = intl.format(entry(1113).t.w9tsNk, { guildName: entry.name });
-  obj3.children = closure_7(entry(5383).Text, obj4);
+  const intl = entry(1112).intl;
+  obj4.children = intl.format(entry(1112).t.w9tsNk, { guildName: entry.name });
+  obj3.children = closure_7(entry(5385).Text, obj4);
   items = [closure_7(closure_5, obj3)];
   let obj6 = {
     onSubmit(arg0, arg1) {
@@ -91,22 +91,22 @@ function GuildDirectoryEditDescription(entry) {
     entry: null,
     directoryChannelId: null,
   };
-  const intl2 = entry(1113).intl;
-  obj6.buttonLabel = intl2.string(entry(1113).t["R3BPH+"]);
+  const intl2 = entry(1112).intl;
+  obj6.buttonLabel = intl2.string(entry(1112).t["R3BPH+"]);
   obj6.entry = entry;
   obj6.directoryChannelId = entry.channelId;
   items[1] = closure_7(GuildDirectoryEditDescriptionTemplateDefault, obj6);
   obj2.children = items;
   obj.children = closure_8(closure_6, obj2);
-  return closure_7(entry(6898).SafeAreaPaddingView, obj);
+  return closure_7(entry(6897).SafeAreaPaddingView, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
-  safeArea: { marginTop: fn(5346).NAV_BAR_HEIGHT, flex: 1 },
+  safeArea: { marginTop: fn(5348).NAV_BAR_HEIGHT, flex: 1 },
   container: { flex: 1 },
   title: { marginBottom: 8, textAlign: "center" },
   header: { alignItems: "center", justifyContent: "center", padding: 16 },

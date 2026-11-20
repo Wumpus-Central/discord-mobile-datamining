@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
@@ -18,10 +18,10 @@ function onMembersLoadFail() {
   ToastActionCreatorsDefault.open("ERROR_OCCURRED_TRY_AGAIN", obj2);
 }
 const View = fn(17).View;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
   containerSearchBar: null,
@@ -112,9 +112,9 @@ export default function GuildSettingsRoleMembers(guild) {
         items = [role.id];
         GuildSettingsActionCreatorsDefault.updateMemberRoles(guild.id, name.id, found, [], items).catch(() => {
           const obj2 = { text: null, variant: "critical" };
-          const intl = name(1113).intl;
-          obj2.text = intl.string(name(1113).t.fEptJP);
-          found(5474).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
+          const intl = name(1112).intl;
+          obj2.text = intl.string(name(1112).t.fEptJP);
+          found(5476).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
         });
       };
       obj2.confirmColor = guild(locked[15]).ButtonColors.RED;
@@ -131,7 +131,7 @@ export default function GuildSettingsRoleMembers(guild) {
       location_section: "Members",
     });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(19895, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
+    obj2.openLazy(asyncRequireImpl(19715, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
       guild,
       role,
     });

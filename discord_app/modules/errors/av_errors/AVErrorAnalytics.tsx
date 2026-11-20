@@ -80,9 +80,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(5552).getSystemAnalyticsInfo;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const Constants = fn(5537);
+const getSystemAnalyticsInfo = fn(5554).getSystemAnalyticsInfo;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const Constants = fn(5539);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");

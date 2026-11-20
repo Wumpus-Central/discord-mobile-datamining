@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/useConjureProjectCreator.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4089 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../utils/UserUtils.tsx";
 import conjureMessageAuthors from "../chat/conjureMessageAuthors.tsx";
 import ListUtils from "../../../utils/ListUtils.tsx";
@@ -106,14 +106,14 @@ export default function useConjureProjectCreator(project) {
       const name = UserUtils.getName(creator);
       const mapped = collaborators.map((item) => creator(closure_1_2[8]).getName(item));
       if (0 === mapped.length) {
-        intl = intl(1113).intl;
+        intl = intl(1112).intl;
         obj2 = { creator: name };
-        let formatToPlainStringResult = intl.formatToPlainString(_modDef4089.t5RWBS, obj2);
+        let formatToPlainStringResult = intl.formatToPlainString(_modDef4091.t5RWBS, obj2);
       } else {
-        const intl2 = intl(1113).intl;
-        const obj4 = { creator: name, collaborators: intl(12222).getListSummaryLabel(mapped) };
-        formatToPlainStringResult = intl2.formatToPlainString(_modDef4089["b5uCe/"], obj4);
-        const intlResult = intl(12222);
+        const intl2 = intl(1112).intl;
+        const obj4 = { creator: name, collaborators: intl(12164).getListSummaryLabel(mapped) };
+        formatToPlainStringResult = intl2.formatToPlainString(_modDef4091["b5uCe/"], obj4);
+        const intlResult = intl(12164);
       }
       obj.label = formatToPlainStringResult;
     }
@@ -123,11 +123,11 @@ export function getConjureProjectCreatorLabel(creator, names) {
   if (0 === names.length) {
     const intl2 = util.intl;
     const obj3 = { creator };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef4089.t5RWBS, obj3);
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef4091.t5RWBS, obj3);
   } else {
     const intl = util.intl;
     const obj = { creator, collaborators: ListUtils.getListSummaryLabel(names) };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4089["b5uCe/"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4091["b5uCe/"], obj);
   }
   return formatToPlainStringResult;
 }

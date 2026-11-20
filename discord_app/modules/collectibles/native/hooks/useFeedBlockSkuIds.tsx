@@ -6,7 +6,7 @@ import ConsentStore from "../../../../stores/ConsentStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Consents = fn(1072).Consents;
+const Consents = fn(1071).Consents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useFeedBlockSkuIds.tsx");
 

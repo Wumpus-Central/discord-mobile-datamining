@@ -9,7 +9,7 @@ import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SubscriptionTypes = fn(1072).SubscriptionTypes;
+const SubscriptionTypes = fn(1071).SubscriptionTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useActiveSubscriptionListingForGroup.tsx");
 

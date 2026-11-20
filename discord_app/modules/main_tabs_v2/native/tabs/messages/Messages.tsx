@@ -27,8 +27,8 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messag
 export default noop.memo(function Messages(style) {
   _require = undefined;
   const tmp3 = useAnalyticsLocationsDefault;
-  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(0);
-  let obj = require("../../../../../../_runtime/metro/01655__.js");
+  const sharedValue = require("../../../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  let obj = require("../../../../../../_runtime/metro/01653__.js");
   const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
   const obj2 = require("useYouBarTotalHeight");
   const youBarTotalHeight1 = require("useYouBarTotalHeight").useYouBarTotalHeight(-16);
@@ -53,7 +53,7 @@ export default noop.memo(function Messages(style) {
   useMessagesReconnectToCallsEffectDefault();
   obj6 = require("PlatformUtils");
   const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(
-    tmp4(17618).DmGdmListRenderTriggerPoint,
+    tmp4(17445).DmGdmListRenderTriggerPoint,
   );
   const layoutEffect = noop.useLayoutEffect(() => {
     TTIAnalyticsUtils.trackAppUIViewed();
@@ -95,11 +95,11 @@ export default noop.memo(function Messages(style) {
     scrollIndicatorInsetBottom: null,
     scrollPosition: null,
   };
-  const tmp4Result4 = require("../../../../../../_runtime/metro/01655__.js");
-  const intl = tmp4(1113).intl;
+  const tmp4Result4 = require("../../../../../../_runtime/metro/01653__.js");
+  const intl = tmp4(1112).intl;
   obj7.accessibilityLabel = intl.string(require("util").t.OIgYlQ);
   obj7.data = tmp10;
-  obj7.handleScrollAnimated = require("../../../../../../_runtime/metro/01655__.js").useAnimatedScrollHandler(
+  obj7.handleScrollAnimated = require("../../../../../../_runtime/metro/01653__.js").useAnimatedScrollHandler(
     MessagesTsx1,
   );
   obj7.insetEnd = youBarTotalHeight;
@@ -114,18 +114,18 @@ export default noop.memo(function Messages(style) {
   obj7.scrollPosition = sharedValue;
   const obj8 = { value: tmp3(AnalyticsLocationDefault.MESSAGES).analyticsLocations, children: null };
   const obj9 = { style: style.style, children: null };
-  const animatedScrollHandler = require("../../../../../../_runtime/metro/01655__.js").useAnimatedScrollHandler(
+  const animatedScrollHandler = require("../../../../../../_runtime/metro/01653__.js").useAnimatedScrollHandler(
     MessagesTsx1,
   );
   const obj10 = { backgroundColor: nativeDefault.colors.PANEL_BG, children: null };
   const items2 = [closure_5(MessagesHeaderDefault, { height: headerSize, scrollPosition: sharedValue }), ,];
   if (tmp10.showFullscreenEmptyState) {
-    let tmp24Result = closure_5(tmp(17621), {});
+    let tmp24Result = closure_5(tmp(17448), {});
   } else {
     if ("legend" === list) {
-      let tmp27 = 17626;
+      let tmp27 = 17453;
     } else {
-      tmp27 = "flash" === list ? 17670 : 17671;
+      tmp27 = "flash" === list ? 17497 : 17498;
     }
     const obj11 = { ref };
     const merged = Object.assign(obj7);
@@ -135,7 +135,7 @@ export default noop.memo(function Messages(style) {
   items2[1] = tmp24Result;
   let tmp24Result2 = null;
   if (!doesLandOnHomeDrawer) {
-    tmp24Result2 = closure_5(tmp4(10370).TTIFirstContentfulPaint, { label: "messages_tabs" });
+    tmp24Result2 = closure_5(tmp4(10312).TTIFirstContentfulPaint, { label: "messages_tabs" });
   }
   items2[2] = tmp24Result2;
   obj10.children = items2;

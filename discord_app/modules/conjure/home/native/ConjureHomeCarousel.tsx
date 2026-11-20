@@ -1,11 +1,11 @@
 // discord_app/modules/conjure/home/native/ConjureHomeCarousel.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useMeasuredLayoutDefault from "../../../screen/native/useMeasuredLayout.tsx";
-import SvgCss from "../../../../../_runtime/16223_SvgCss.js";
+import LocalSvgDefault from "../../../svg/native/LocalSvg.tsx";
 import conjureHomeCarouselFan from "../conjureHomeCarouselFan.tsx";
 import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt.tsx";
 import conjureHomeInspirationEntries from "../conjureHomeInspirationEntries.tsx";
@@ -14,12 +14,12 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
-const _modDef4089 = tmp7(4089);
+const _modDef4091 = tmp7(4091);
 require = fn;
 const View = fn(17).View;
-const AppStates = fn(1072).AppStates;
+const AppStates = fn(1071).AppStates;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = 240 + nativeDefault.space.PX_24;
@@ -27,14 +27,14 @@ const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
 let obj = {
-  games: fn(6921).GameControllerIcon,
-  apps: fn(7585).AppsIcon,
-  profile_widget: fn(18675).WidgetsIcon,
-  overlay_widget: fn(9782).ScreenIcon,
-  automod: fn(10010).ShieldIcon,
-  chat_bot: fn(12108).RobotIcon,
+  games: fn(6920).GameControllerIcon,
+  apps: fn(7584).AppsIcon,
+  profile_widget: fn(18499).WidgetsIcon,
+  overlay_widget: fn(9784).ScreenIcon,
+  automod: fn(10013).ShieldIcon,
+  chat_bot: fn(12050).RobotIcon,
 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" },
   item: null,
@@ -118,7 +118,7 @@ let closure_14 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
   inspiration = inspiration.inspiration;
   ({ index, count, offset, viewportWidth } = inspiration);
   const tmp = closure_12();
-  obj = _mod1655;
+  obj = _mod1653;
   items = [
     closure_13,
     conjureHomeCarouselFan.wrapConjureHomeCarouselDistance,
@@ -183,13 +183,14 @@ let closure_14 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
   const items4 = [React6(View, obj3)];
   const obj7 = { style: tmp.card, children: null };
   const obj8 = { style: tmp.thumbnail, children: null };
-  const size = { asset: conjureHomeInspirationArtDefault[inspiration.id], width: "100%", height: "100%" };
-  obj8.children = React5(SvgCss.LocalSvg, size);
+  const size = { asset: null, width: "100%", height: "100%" };
+  const obj6 = { variant: "body-sm/medium", color: "text-strong", lineClamp: 2, children: inspiration.shortPrompt };
+  const tmp2Result3 = AvatarUtils;
+  size.asset = conjureHomeInspirationArtDefault[inspiration.id];
+  obj8.children = React5(LocalSvgDefault, size);
   const items5 = [React5(View, obj8)];
   const obj9 = { style: tmp.footer, children: null };
   const obj10 = { style: tmp.categoryIcon, children: null };
-  const obj6 = { variant: "body-sm/medium", color: "text-strong", lineClamp: 2, children: inspiration.shortPrompt };
-  const tmp2Result3 = AvatarUtils;
   obj10.children = React5(obj[inspiration.category], { size: "sm", color: nativeDefault.colors.ICON_STRONG });
   const items6 = [React5(View, obj10)];
   const obj12 = { style: tmp.footerText, children: null };
@@ -213,7 +214,7 @@ let closure_14 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
   obj7.children = items5;
   items4[1] = React6(View, obj7);
   obj2.children = items4;
-  return React6(_modDef1655.View, obj2);
+  return React6(_modDef1653.View, obj2);
 });
 let closure_15 = {
   code: "(function ConjureHomeCarouselTsx2(frame){let[offset,CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND,loop]=this.__closure;var _frame$timeSincePrevi;const elapsed=(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:0;offset.set((offset.get()+CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND*elapsed/1000)%loop);})",
@@ -255,9 +256,9 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   }
   importDefault = num;
   const obj4 = require("Link");
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
   let result = closure_10 * memo.length;
-  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01653__.js");
   const items2 = [
     closure_15,
     sharedValue,
@@ -282,7 +283,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   ConjureHomeCarouselTsx2.__closure = items3;
   ConjureHomeCarouselTsx2.__workletHash = 453717571992;
   ConjureHomeCarouselTsx2.__initData = tmp11;
-  frameCallback = require("../../../../../_runtime/metro/01655__.js").useFrameCallback(ConjureHomeCarouselTsx2, false);
+  frameCallback = require("../../../../../_runtime/metro/01653__.js").useFrameCallback(ConjureHomeCarouselTsx2, false);
   onScreen = !stateFromStores;
   if (!stateFromStores) {
     onScreen = stateFromStores1;
@@ -308,8 +309,8 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
     onLayout: null,
     children: null,
   };
-  const intl = tmp2(1113).intl;
-  obj5.accessibilityLabel = intl.string(_modDef4089.Qc4S39);
+  const intl = tmp2(1112).intl;
+  obj5.accessibilityLabel = intl.string(_modDef4091.Qc4S39);
   obj5.ref = ref;
   obj5.onLayout = onLayout;
   let mapped = null;

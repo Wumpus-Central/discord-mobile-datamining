@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 const require = fn;
-const AppStates = fn(1072).AppStates;
+const AppStates = fn(1071).AppStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useCheckpointForegroundTracking.native.tsx");
 

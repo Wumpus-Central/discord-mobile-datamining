@@ -11,7 +11,7 @@ import ReferencedMessageStore2 from "../../../replies/ReferencedMessageStore.tsx
 import MessageCountUtils from "../../../threads/MessageCountUtils.tsx";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import getEmbedThemeColorsDefault from "row_data/embeds/getEmbedThemeColors.tsx";
-import _modDef8562 from "../../../../../_runtime/metro/08562__.js";
+import _modDef8561 from "../../../../../_runtime/metro/08561__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBackgroundStore.tsx";
@@ -84,7 +84,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 };
                 const intl4 = util.intl;
                 obj3.messagePreviewString = intl4.string(util.t.ZTo4HS);
-                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8562);
+                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8561);
                 obj3.backgroundColor = backgroundColor;
                 obj4 = obj3;
                 const tmp15Result2 = renderer_EmbedUtils;
@@ -835,7 +835,7 @@ function createMessageContent(message) {
                   }
                   if (renderPolls) {
                     const obj33 = { theme: forcedTheme, animateEmoji };
-                    const tmp124 = tmp4(tmp5[74])(message, undefined, obj33);
+                    const tmp124 = tmp4(tmp5[74])(message, obj33);
                   }
                   if (renderSharedClientTheme) {
                     const result4 = tmp14(tmp5[75]).formatSharedClientThemeData(
@@ -1484,7 +1484,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp14Result76 = tmp14(tmp5[55]);
     }
-    parseMessageMarkupResult = { content: "Promise", hasSpoilerEmbeds: "Role", hasBailedAst: true };
+    parseMessageMarkupResult = { content: "Promise", hasSpoilerEmbeds: "board", hasBailedAst: null };
     const tmp14Result70 = tmp14(tmp5[45]);
   }
   const obj4 = message(tmp5[39]);

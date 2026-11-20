@@ -64,11 +64,11 @@ class OrbsOnboardingMenuDismissibleContent {
       markAsDismissed = markAsDismissed.markAsDismissed;
       if (
         markAsDismissed.visibleContent ===
-        markAsDismissed(4625).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL
+        markAsDismissed(4627).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL
       ) {
         let obj = { accessibilityLabel: null, onPress: null, trailing: null };
-        const intl = tmp(1113).intl;
-        obj.accessibilityLabel = intl.string(tmp(1113).t.Kt2QDh);
+        const intl = tmp(1112).intl;
+        obj.accessibilityLabel = intl.string(tmp(1112).t.Kt2QDh);
         obj.onPress = function onPress() {
           markAsDismissed(constants2.TAKE_ACTION);
           AnalyticsUtilsDefault.track(constants.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
@@ -78,7 +78,7 @@ class OrbsOnboardingMenuDismissibleContent {
             fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
           });
         };
-        obj.trailing = closure_11(closure_1(17181), {});
+        obj.trailing = closure_11(closure_1(17005), {});
         return closure_11(closure_12, obj);
       } else {
         return null;
@@ -91,7 +91,7 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
   let str;
   str = str(9446).useFetchVirtualCurrencyBalance({ disableFetch: true }).balance;
   let obj = str(9446);
-  const isOrbWalletEntrypointEnabled = str(16211).useIsOrbWalletEntrypointEnabled({
+  const isOrbWalletEntrypointEnabled = str(16175).useIsOrbWalletEntrypointEnabled({
     location: "MobileBalanceWidgetMenu",
   });
   items = [str, isOrbWalletEntrypointEnabled];
@@ -109,41 +109,41 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
     const intl = util.intl;
     obj4.buttonText = intl.string(util.t.WrzJBf);
     obj4.onButtonPress = function onButtonPress() {
-      const obj = isOrbWalletEntrypointEnabled(1256);
+      const obj = isOrbWalletEntrypointEnabled(1255);
       obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, {
         type: "GO_TO_SHOP",
-        source: isOrbWalletEntrypointEnabled(7420).YOU_SCREEN,
+        source: isOrbWalletEntrypointEnabled(7419).YOU_SCREEN,
         balance,
       });
-      const obj2 = { type: "GO_TO_SHOP", source: isOrbWalletEntrypointEnabled(7420).YOU_SCREEN, balance };
-      isOrbWalletEntrypointEnabled(5006).hideActionSheet();
-      const obj3 = isOrbWalletEntrypointEnabled(5006);
+      const obj2 = { type: "GO_TO_SHOP", source: isOrbWalletEntrypointEnabled(7419).YOU_SCREEN, balance };
+      isOrbWalletEntrypointEnabled(5008).hideActionSheet();
+      const obj3 = isOrbWalletEntrypointEnabled(5008);
       const obj5 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      items = [isOrbWalletEntrypointEnabled(7420).COLLECTIBLES_SHOP];
+      items = [isOrbWalletEntrypointEnabled(7419).COLLECTIBLES_SHOP];
       obj5.analyticsLocations = items;
-      obj5.analyticsSource = isOrbWalletEntrypointEnabled(7420).COLLECTIBLES_SHOP;
+      obj5.analyticsSource = isOrbWalletEntrypointEnabled(7419).COLLECTIBLES_SHOP;
       obj5.screen = constants2.ORBS;
-      const result = str(7955).openCollectiblesShopMobile(obj5);
+      const result = str(7954).openCollectiblesShopMobile(obj5);
     };
     obj3.primaryButtonConfig = obj4;
     let obj5 = { buttonText: null, onButtonPress: null };
     const intl2 = util.intl;
     obj5.buttonText = intl2.string(util.t.SymzJC);
     obj5.onButtonPress = function onButtonPress() {
-      const obj = isOrbWalletEntrypointEnabled(1256);
+      const obj = isOrbWalletEntrypointEnabled(1255);
       obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, {
         type: "GO_TO_QUEST_HOME",
-        source: isOrbWalletEntrypointEnabled(7420).YOU_SCREEN,
+        source: isOrbWalletEntrypointEnabled(7419).YOU_SCREEN,
         balance,
       });
-      const obj2 = { type: "GO_TO_QUEST_HOME", source: isOrbWalletEntrypointEnabled(7420).YOU_SCREEN, balance };
-      isOrbWalletEntrypointEnabled(5006).hideActionSheet();
-      const obj3 = isOrbWalletEntrypointEnabled(5006);
-      const obj4 = str(9833);
+      const obj2 = { type: "GO_TO_QUEST_HOME", source: isOrbWalletEntrypointEnabled(7419).YOU_SCREEN, balance };
+      isOrbWalletEntrypointEnabled(5008).hideActionSheet();
+      const obj3 = isOrbWalletEntrypointEnabled(5008);
+      const obj4 = str(9835);
       obj4.openQuestHome({
         mergeExistingRoutes: true,
         filter: constants3.VIRTUAL_CURRENCY,
-        fromContent: str(6440).QuestContent.ORBS_BALANCE_MENU,
+        fromContent: str(6442).QuestContent.ORBS_BALANCE_MENU,
       });
     };
     obj3.secondaryButtonConfig = obj5;
@@ -152,18 +152,18 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
     obj3.openCtaObject = AnalyticsLocationDefault.ORB_WALLET_OPEN_FROM_PROFILE;
     let result = useOrbBalanceEntrypoint.openBalanceWidgetActionSheet(isOrbWalletEntrypointEnabled, obj3);
   }, items);
-  str(16211);
+  str(16175);
   if (isOrbWalletEntrypointEnabled) {
     let obj3 = { ref: orbWalletEntryRowRef.orbWalletEntryRowRef, collapsable: false, children: null };
     let obj4 = { balance: str, notificationType: tmp6, onPress: callback };
-    obj3.children = jsx(tmp(17182).OrbWalletEntryRow, { balance: str, notificationType: tmp6, onPress: callback });
+    obj3.children = jsx(tmp(17006).OrbWalletEntryRow, { balance: str, notificationType: tmp6, onPress: callback });
     let tmp7Result = (
       <View ref={orbWalletEntryRowRef.orbWalletEntryRowRef} collapsable={false}>
         {null}
       </View>
     );
   } else {
-    let intl = tmp(1113).intl;
+    let intl = tmp(1112).intl;
     let str2;
     if (str != null) {
       str2 = str.toString();
@@ -173,7 +173,7 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
     }
     let obj5 = { accessibilityLabel: null, onPress: null, trailing: null };
     const obj6 = { balance: str2 };
-    obj5.accessibilityLabel = intl.formatToPlainString(tmp(1113).t.zPaLL9, obj6);
+    obj5.accessibilityLabel = intl.formatToPlainString(tmp(1112).t.zPaLL9, obj6);
     obj5.onPress = callback;
     const obj7 = { balance: str, onPress: callback, accessible: false };
     obj5.trailing = jsx(isOrbWalletEntrypointEnabled(9324), { balance: str, onPress: callback, accessible: false });
@@ -182,12 +182,12 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
   return tmp7Result;
 }
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: closure_6 } = Constants);
-let closure_7 = fn(1074).CollectiblesMobileShopScreen;
-const DismissibleContentConstants = fn(4638);
+let closure_7 = fn(1073).CollectiblesMobileShopScreen;
+const DismissibleContentConstants = fn(4640);
 ({ ContentDismissActionType: closure_8, DismissibleContentGroupName: closure_9 } = DismissibleContentConstants);
-const RewardFilterTypes = fn(6437).RewardFilterTypes;
+const RewardFilterTypes = fn(6439).RewardFilterTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
@@ -221,11 +221,11 @@ export { OrbsOnboardingMenuDismissibleContent };
 export function useOpenOrbWalletFromYouScreen() {
   balance = balance(9446).useFetchVirtualCurrencyBalance({ disableFetch: true }).balance;
   const obj = balance(9446);
-  const isOrbWalletEntrypointEnabled = balance(16211).useIsOrbWalletEntrypointEnabled({
+  const isOrbWalletEntrypointEnabled = balance(16175).useIsOrbWalletEntrypointEnabled({
     location: "MobileBalanceWidgetMenu",
   });
   items = [balance, isOrbWalletEntrypointEnabled];
-  const obj2 = balance(16211);
+  const obj2 = balance(16175);
   return {
     balance,
     isOrbchievementsEnabled: isOrbWalletEntrypointEnabled,
@@ -243,41 +243,41 @@ export function useOpenOrbWalletFromYouScreen() {
       const intl = util.intl;
       obj4.buttonText = intl.string(util.t.WrzJBf);
       obj4.onButtonPress = function onButtonPress() {
-        const obj = isOrbWalletEntrypointEnabled(1256);
+        const obj = isOrbWalletEntrypointEnabled(1255);
         obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, {
           type: "GO_TO_SHOP",
-          source: isOrbWalletEntrypointEnabled(7420).YOU_SCREEN,
+          source: isOrbWalletEntrypointEnabled(7419).YOU_SCREEN,
           balance,
         });
-        const obj2 = { type: "GO_TO_SHOP", source: isOrbWalletEntrypointEnabled(7420).YOU_SCREEN, balance };
-        isOrbWalletEntrypointEnabled(5006).hideActionSheet();
-        const obj3 = isOrbWalletEntrypointEnabled(5006);
+        const obj2 = { type: "GO_TO_SHOP", source: isOrbWalletEntrypointEnabled(7419).YOU_SCREEN, balance };
+        isOrbWalletEntrypointEnabled(5008).hideActionSheet();
+        const obj3 = isOrbWalletEntrypointEnabled(5008);
         const obj5 = { analyticsLocations: null, analyticsSource: null, screen: null };
-        items = [isOrbWalletEntrypointEnabled(7420).COLLECTIBLES_SHOP];
+        items = [isOrbWalletEntrypointEnabled(7419).COLLECTIBLES_SHOP];
         obj5.analyticsLocations = items;
-        obj5.analyticsSource = isOrbWalletEntrypointEnabled(7420).COLLECTIBLES_SHOP;
+        obj5.analyticsSource = isOrbWalletEntrypointEnabled(7419).COLLECTIBLES_SHOP;
         obj5.screen = constants2.ORBS;
-        const result = str(7955).openCollectiblesShopMobile(obj5);
+        const result = str(7954).openCollectiblesShopMobile(obj5);
       };
       obj3.primaryButtonConfig = obj4;
       let obj5 = { buttonText: null, onButtonPress: null };
       const intl2 = util.intl;
       obj5.buttonText = intl2.string(util.t.SymzJC);
       obj5.onButtonPress = function onButtonPress() {
-        const obj = isOrbWalletEntrypointEnabled(1256);
+        const obj = isOrbWalletEntrypointEnabled(1255);
         obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, {
           type: "GO_TO_QUEST_HOME",
-          source: isOrbWalletEntrypointEnabled(7420).YOU_SCREEN,
+          source: isOrbWalletEntrypointEnabled(7419).YOU_SCREEN,
           balance,
         });
-        const obj2 = { type: "GO_TO_QUEST_HOME", source: isOrbWalletEntrypointEnabled(7420).YOU_SCREEN, balance };
-        isOrbWalletEntrypointEnabled(5006).hideActionSheet();
-        const obj3 = isOrbWalletEntrypointEnabled(5006);
-        const obj4 = str(9833);
+        const obj2 = { type: "GO_TO_QUEST_HOME", source: isOrbWalletEntrypointEnabled(7419).YOU_SCREEN, balance };
+        isOrbWalletEntrypointEnabled(5008).hideActionSheet();
+        const obj3 = isOrbWalletEntrypointEnabled(5008);
+        const obj4 = str(9835);
         obj4.openQuestHome({
           mergeExistingRoutes: true,
           filter: constants3.VIRTUAL_CURRENCY,
-          fromContent: str(6440).QuestContent.ORBS_BALANCE_MENU,
+          fromContent: str(6442).QuestContent.ORBS_BALANCE_MENU,
         });
       };
       obj3.secondaryButtonConfig = obj5;

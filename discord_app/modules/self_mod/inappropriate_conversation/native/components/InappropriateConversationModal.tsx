@@ -109,7 +109,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = closure_15();
   const obj = { style: tmp.container, children: null };
-  items = [closure_13(trackAnalyticsEvent(17214).SafetyChatSpotIllustration, {}), ,];
+  items = [closure_13(trackAnalyticsEvent(17038).SafetyChatSpotIllustration, {}), ,];
   const obj2 = { style: tmp.warningText, children: null };
   const obj3 = {
     variant: "heading-xl/semibold",
@@ -117,32 +117,32 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     accessibilityRole: "header",
     children: null,
   };
-  const intl = trackAnalyticsEvent(1113).intl;
-  obj3.children = intl.string(trackAnalyticsEvent(1113).t.NUMAsF);
-  const items1 = [closure_13(trackAnalyticsEvent(5383).Text, obj3)];
+  const intl = trackAnalyticsEvent(1112).intl;
+  obj3.children = intl.string(trackAnalyticsEvent(1112).t.NUMAsF);
+  const items1 = [closure_13(trackAnalyticsEvent(5385).Text, obj3)];
   const obj4 = { variant: "body-md/medium", style: tmp.takeoverDescription, children: null };
-  const intl2 = trackAnalyticsEvent(1113).intl;
-  obj4.children = intl2.string(trackAnalyticsEvent(1113).t.uicS5l);
-  items1[1] = closure_13(trackAnalyticsEvent(5383).Text, obj4);
+  const intl2 = trackAnalyticsEvent(1112).intl;
+  obj4.children = intl2.string(trackAnalyticsEvent(1112).t.uicS5l);
+  items1[1] = closure_13(trackAnalyticsEvent(5385).Text, obj4);
   obj2.children = items1;
   items[1] = closure_14(closure_7, obj2);
   const obj5 = { style: tmp.ctaContainer, children: null };
   const obj6 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
-  const intl3 = trackAnalyticsEvent(1113).intl;
-  obj6.text = intl3.string(trackAnalyticsEvent(1113).t.lkUb4S);
+  const intl3 = trackAnalyticsEvent(1112).intl;
+  obj6.text = intl3.string(trackAnalyticsEvent(1112).t.lkUb4S);
   obj6.onPress = function onPress() {
     timestampProducer.openURL(React6);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_SMS);
   };
-  const items2 = [closure_13(trackAnalyticsEvent(5390).Button, obj6)];
+  const items2 = [closure_13(trackAnalyticsEvent(5392).Button, obj6)];
   const obj7 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
-  const intl4 = trackAnalyticsEvent(1113).intl;
-  obj7.text = intl4.string(trackAnalyticsEvent(1113).t.ogLlvy);
+  const intl4 = trackAnalyticsEvent(1112).intl;
+  obj7.text = intl4.string(trackAnalyticsEvent(1112).t.ogLlvy);
   obj7.onPress = function onPress() {
     timestampProducer.openURL(refs);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_WEB);
   };
-  items2[1] = closure_13(trackAnalyticsEvent(5390).Button, obj7);
+  items2[1] = closure_13(trackAnalyticsEvent(5392).Button, obj7);
   obj5.children = items2;
   items[2] = closure_14(closure_7, obj5);
   obj.children = items;
@@ -151,7 +151,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
 const useState = fn(19).useState;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const Constants = fn(11720);
+const Constants = fn(11662);
 ({
   CRISIS_TEXT_LINE_SMS_URI: closure_9,
   CRISIS_TEXT_LINE_URL: closure_10,
@@ -160,7 +160,7 @@ const Constants = fn(11720);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: {
     display: "flex",

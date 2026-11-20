@@ -1,5 +1,5 @@
 // discord_app/modules/game_organization_invites/native/openGameOrganizationJoinOutcomeModal.tsx
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import GameOrganizationInviteConstants from "../GameOrganizationInviteConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting(
 );
 
 export default function openGameOrganizationJoinOutcomeModal(code, result) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12181, dependencyMap.paths), { code, result }, closure_3);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12123, dependencyMap.paths), { code, result }, closure_3);
 }

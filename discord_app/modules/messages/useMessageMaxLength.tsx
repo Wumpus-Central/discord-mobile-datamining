@@ -4,7 +4,7 @@ import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MAX_MESSAGE_LENGTH_PREMIUM: closure_4, MAX_MESSAGE_LENGTH: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useMessageMaxLength.tsx");

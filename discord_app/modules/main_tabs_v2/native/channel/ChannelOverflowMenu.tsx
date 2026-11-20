@@ -33,7 +33,7 @@ function ChannelOverflowMenuButton(items) {
 function AppChannelOverflowMenu(channel) {
   return <ChannelOverflowMenuButton items={useAppChannelOverflowMenuItemsDefault(channel.channel)} />;
 }
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelOverflowMenu.tsx");

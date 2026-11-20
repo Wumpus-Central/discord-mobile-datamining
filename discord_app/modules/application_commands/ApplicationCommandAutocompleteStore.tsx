@@ -42,11 +42,11 @@ function handleSetActiveCommand(arg0) {
     tmp5 = null != id && id !== value.commandId;
   }
 }
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 let closure_7 = PlatformUtils.isDesktop();
 const Store = initializeDefault.Store;
 class ApplicationCommandAutocompleteStore extends Store {}

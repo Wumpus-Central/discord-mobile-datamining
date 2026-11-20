@@ -4,7 +4,7 @@ import FavoritesUtils from "../../FavoritesUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
 

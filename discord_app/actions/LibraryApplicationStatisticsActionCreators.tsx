@@ -16,7 +16,7 @@ let closure_7 = async function _fetchActivityStatistics() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_7 = async function _fetchActivityStatistics() {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 let closure_6 = 6 * DurationsDefault.Millis.HOUR;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/LibraryApplicationStatisticsActionCreators.tsx");

@@ -6,9 +6,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import FramesStore from "../FramesStore.tsx";
 
 require = fn;
-const isLaunched = fn(6503).isLaunched;
-const ComponentActions = fn(1072).ComponentActions;
-let closure_8 = fn(10634).OAUTH2_AUTHORIZE_MODAL_KEY;
+const isLaunched = fn(6505).isLaunched;
+const ComponentActions = fn(1071).ComponentActions;
+let closure_8 = fn(10576).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/useInlineFrameOAuthNavigation.tsx");
 
@@ -47,7 +47,7 @@ export default function useInlineFrameOAuthNavigation(arg0) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

@@ -41,9 +41,9 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(13265);
+const GuildProgressConstants = fn(13235);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   UPLOAD_MEDIUM_SIZE: closure_10,
   AnalyticEvents: closure_11,
@@ -52,7 +52,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -79,7 +79,7 @@ export default function GuildProgressActionSheet(guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -94,14 +94,14 @@ export default function GuildProgressActionSheet(guild) {
             return obj3;
           } else {
             let base64;
-            tmp5(7875).init(View);
-            const obj6 = tmp5(7875);
-            tmp2(13270).hideActionSheet(id.id);
-            const obj7 = tmp2(13270);
+            tmp5(7874).init(View);
+            const obj6 = tmp5(7874);
+            tmp2(13240).hideActionSheet(id.id);
+            const obj7 = tmp2(13240);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(8355).openImagePicker(obj4), done: false };
+            const obj5 = { value: tmp5(8354).openImagePicker(obj4), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -114,11 +114,11 @@ export default function GuildProgressActionSheet(guild) {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            tmp5(7875).updateIcon(closure_129_5, base64);
-            const obj = tmp5(7875);
+            tmp5(7874).updateIcon(closure_129_5, base64);
+            const obj = tmp5(7874);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;

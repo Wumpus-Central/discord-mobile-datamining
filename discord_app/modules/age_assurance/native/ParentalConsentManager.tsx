@@ -11,20 +11,20 @@ class ParentalConsentManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       CONNECTION_OPEN_SUPPLEMENTAL() {
-        const result = applyArgumentsResult(19683).isAppStoreConsentReinstatementEnabledForSession();
-        const obj = applyArgumentsResult(19683);
-        const result1 = applyArgumentsResult(7870).beginAppStoreAgeSignalReport(result);
-        const obj2 = applyArgumentsResult(7870);
-        const result2 = applyArgumentsResult(19683).beginAppStoreConsentReinstatement();
+        const result = applyArgumentsResult(19501).isAppStoreConsentReinstatementEnabledForSession();
+        const obj = applyArgumentsResult(19501);
+        const result1 = applyArgumentsResult(7869).beginAppStoreAgeSignalReport(result);
+        const obj2 = applyArgumentsResult(7869);
+        const result2 = applyArgumentsResult(19501).beginAppStoreConsentReinstatement();
       },
       POST_CONNECTION_OPEN() {
-        return applyArgumentsResult(7870).startPendingAppStoreAgeSignalReport();
+        return applyArgumentsResult(7869).startPendingAppStoreAgeSignalReport();
       },
       APP_STATE_UPDATE(arg0) {
         return applyArgumentsResult.handleAppStateUpdate(arg0);
       },
       LOGOUT() {
-        return applyArgumentsResult(19683).cancelAppStoreConsentReinstatement();
+        return applyArgumentsResult(19501).cancelAppStoreConsentReinstatement();
       },
     };
     return applyArgumentsResult;

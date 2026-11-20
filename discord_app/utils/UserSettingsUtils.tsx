@@ -8,7 +8,7 @@ import GuildAvailabilityStore from "../stores/GuildAvailabilityStore.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   AnalyticEvents: hasOwnProperty,
   FriendSourceFlags: closure_6,

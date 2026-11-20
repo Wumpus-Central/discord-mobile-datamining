@@ -5,7 +5,7 @@ import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "../../../gui
 import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ME: closure_4, WATERWHEELS: hasOwnProperty } = Constants);
 const WaterwheelsDiscoverNavigation = "WaterwheelsDiscoverNavigation";
 const size = fn(2);

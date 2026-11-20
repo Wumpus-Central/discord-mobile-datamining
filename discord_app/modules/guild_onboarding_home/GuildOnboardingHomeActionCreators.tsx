@@ -49,7 +49,7 @@ let closure_11 = async function _fetchNewMemberActions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -158,7 +158,7 @@ let closure_12 = async function _clearNewMemberActions() {
     return value;
   })();
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx");

@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/native/UserProfileEffectEditButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const COLLECTIBLES_PREVIEW_SIZE = fn(7445).COLLECTIBLES_PREVIEW_SIZE;
-const NOOP = fn(1083).NOOP;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7444).COLLECTIBLES_PREVIEW_SIZE;
+const NOOP = fn(1082).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { profileEffectPreviewContainer: null, sampleProfile: null, noneIcon: null };
 let size = {
   height: COLLECTIBLES_PREVIEW_SIZE,
@@ -66,7 +66,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   items = [userProfileEffect, guildId, user, isTryItOut];
   let name;
   const callback = userProfileEffect.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15805, dependencyMap.paths), "Profile Effect", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15769, dependencyMap.paths), "Profile Effect", {
       user,
       currentProfileEffect: userProfileEffect,
       guildId,

@@ -4,9 +4,9 @@ import native from "../../../../../design/void/native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import ForumPostMediaUtils from "../../../ForumPostMediaUtils.tsx";
-import _modDef11598 from "../../../../../../_runtime/metro/11598__.js";
-import _modDef12784 from "../../../../../../_runtime/metro/12784__.js";
-import _modDef12785 from "../../../../../../_runtime/metro/12785__.js";
+import _modDef11540 from "../../../../../../_runtime/metro/11540__.js";
+import _modDef12754 from "../../../../../../_runtime/metro/12754__.js";
+import _modDef12755 from "../../../../../../_runtime/metro/12755__.js";
 import ForumPostMedia from "../ForumPostMedia.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -16,25 +16,25 @@ function GIFIcon() {
   const tmp = closure_8();
   return timestampProducer(native.Icon, {
     size: native.Icon.Sizes.CUSTOM,
-    source: _modDef12784,
+    source: _modDef12754,
     disableColor: true,
     style: closure_8().gifIcon,
   });
 }
 function PlayIcon() {
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12785, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12755, disableColor: true });
 }
 function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_8();
   const obj = { style: tmp.extraMediaCountContainer, children: null };
   items = [
     timestampProducer(native.Icon, {
-      source: _modDef11598,
+      source: _modDef11540,
       color: tmp.icon.color,
       size: native.Icon.Sizes.REFRESH_SMALL_16,
     }),
   ];
-  const obj2 = { source: _modDef11598, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+  const obj2 = { source: _modDef11540, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
   items[1] = timestampProducer(Text_Text.Text, {
     style: tmp.extraMediaCount,
     lineClamp: 1,
@@ -76,7 +76,7 @@ function MediaGridColumn(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   gifIcon: null,
   container: null,
@@ -159,7 +159,7 @@ export default function ForumPostGridBody(thread) {
   const media = thread.media;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const tmp4 = _slicedToArray(thread(11185).useSomeAppliedTags(thread, 2), 2);
+  const tmp4 = _slicedToArray(thread(11127).useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   let tmp14Result = first.length > 0;
   items = [media];
@@ -168,7 +168,7 @@ export default function ForumPostGridBody(thread) {
   const isMediaPostResult = thread.isMediaPost();
   closure_129_0 = memo;
   closure_129_1 = isMediaPostResult;
-  const tmp9 = media(11890)();
+  const tmp9 = media(11832)();
   closure_129_2 = tmp9;
   const items1 = [memo];
   const memo1 = noop.useMemo(() => {
@@ -214,7 +214,7 @@ export default function ForumPostGridBody(thread) {
   if (isMediaPostResult) {
     wideAspectRatioGrid = tmp.wideAspectRatioGrid;
   }
-  let obj = thread(11185);
+  let obj = thread(11127);
   let tmp2 = thread;
   items5[1] = wideAspectRatioGrid;
   const items6 = [
@@ -238,7 +238,7 @@ export default function ForumPostGridBody(thread) {
   if (tmp14Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = closure_6(tmp2(12790).ForumPostAppliedTagPills, obj5);
+    obj4.children = closure_6(tmp2(12760).ForumPostAppliedTagPills, obj5);
     tmp14Result = closure_6(View, obj4);
   }
   items6[1] = tmp14Result;

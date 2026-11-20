@@ -6,8 +6,8 @@ import UploadTargets from "UploadTargets.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const AbortCodes = fn(1072).AbortCodes;
-const FileUploadErrorTypes = fn(4797).FileUploadErrorTypes;
+const AbortCodes = fn(1071).AbortCodes;
+const FileUploadErrorTypes = fn(4799).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -89,7 +89,7 @@ class UploaderBase extends EventEmitter {
       hasImage: false,
       hasVideo: false,
       attachmentsCount: 0,
-      items: "analyticsLocations",
+      items: "channel_id",
     };
     return tmp3;
   }
@@ -126,7 +126,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -406,7 +406,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

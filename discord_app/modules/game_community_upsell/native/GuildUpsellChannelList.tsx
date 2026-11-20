@@ -12,12 +12,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_9 = fn(17836).MAX_DISPLAYED_UPSELL_GUILDS;
-const Constants = fn(1072);
+let closure_9 = fn(17663).MAX_DISPLAYED_UPSELL_GUILDS;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG },
   header: null,
@@ -79,35 +79,35 @@ const obj14 = { gap: nativeDefault.space.PX_4 };
 let items = [
   {
     id: "hangout",
-    title: fn(1113).t.ScXySs,
-    description: fn(1113).t.DSCqxM,
-    Icon: fn(14349).BumpingFistsSpotIllustration,
+    title: fn(1112).t.ScXySs,
+    description: fn(1112).t.DSCqxM,
+    Icon: fn(14317).BumpingFistsSpotIllustration,
   },
   ,
 ];
 const obj15 = {
   id: "hangout",
-  title: fn(1113).t.ScXySs,
-  description: fn(1113).t.DSCqxM,
-  Icon: fn(14349).BumpingFistsSpotIllustration,
+  title: fn(1112).t.ScXySs,
+  description: fn(1112).t.DSCqxM,
+  Icon: fn(14317).BumpingFistsSpotIllustration,
 };
 items[1] = {
   id: "gaming",
-  title: fn(1113).t["F+MTAZ"],
-  description: fn(1113).t.srNlJw,
-  Icon: fn(17837).ChatControllersSpotIllustration,
+  title: fn(1112).t["F+MTAZ"],
+  description: fn(1112).t.srNlJw,
+  Icon: fn(17664).ChatControllersSpotIllustration,
 };
 const obj16 = {
   id: "gaming",
-  title: fn(1113).t["F+MTAZ"],
-  description: fn(1113).t.srNlJw,
-  Icon: fn(17837).ChatControllersSpotIllustration,
+  title: fn(1112).t["F+MTAZ"],
+  description: fn(1112).t.srNlJw,
+  Icon: fn(17664).ChatControllersSpotIllustration,
 };
 items[2] = {
   id: "hobbies",
-  title: fn(1113).t["0Ka6B5"],
-  description: fn(1113).t["5oGAp/"],
-  Icon: fn(17841).MiniaturesSpotIllustration,
+  title: fn(1112).t["0Ka6B5"],
+  description: fn(1112).t["5oGAp/"],
+  Icon: fn(17668).MiniaturesSpotIllustration,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");

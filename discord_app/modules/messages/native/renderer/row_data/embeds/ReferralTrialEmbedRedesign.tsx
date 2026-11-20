@@ -8,8 +8,8 @@ import createStyles from "../../../../../../design/components/Styles/native/crea
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef8680 from "../../../../../../../_runtime/metro/08680__.js";
-import _modDef8693 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
+import _modDef8720 from "../../../../../../../_runtime/metro/08720__.js";
+import _modDef8733 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
@@ -21,8 +21,8 @@ import IAPStore from "../../../../../../stores/native/IAPStore.android.tsx";
 const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
-let closure_9 = fn(1390).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
+let closure_9 = fn(1388).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbedRedesign.tsx",
@@ -82,7 +82,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
               learnMoreLink: null,
             };
             const tmp41Result9 = HelpdeskUtilsDefault;
-            obj6.headerImageUrl = _modDef8693;
+            obj6.headerImageUrl = _modDef8733;
             const intl12 = util.intl;
             obj6.headerText = intl12.string(util.t.HtTvXA);
             obj6.headerColor = headerTextColor;
@@ -197,7 +197,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
                     const intl7 = util.intl;
                     obj13.acceptLabelText = intl7.string(util.t.bXTClc);
                     obj13.acceptLabelColor = acceptLabelColor;
-                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8680);
+                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8720);
                     tmp31 = obj13;
                     const tmp39Result7 = renderer_EmbedUtils;
                   }
@@ -252,7 +252,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
         const obj19 = {
           titleText: "",
           titleColor,
-          headerImageUrl: _modDef8693,
+          headerImageUrl: _modDef8733,
           headerText: "",
           headerColor: headerTextColor,
           backgroundColor,

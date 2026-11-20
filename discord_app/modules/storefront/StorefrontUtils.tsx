@@ -75,7 +75,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    const obj2 = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "HermesInternal", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
     return obj2;
   }, items1);
   userPrice = memo.userPrice;
@@ -223,9 +223,9 @@ function formatSKUPrice(arg0, stateFromStores) {
   obj2.userPrice = formatPriceResult2;
   return obj2;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ CurrencyCodes: metroImportDefault, PriceSetAssignmentPurchaseTypes: closure_8, PriceTypes: closure_9, SKUFlags: closure_10, SKUProductLines: closure_11 } = Constants);
-const PremiumTypes = fn(1390).PremiumTypes;
+const PremiumTypes = fn(1388).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontUtils.tsx");
 
@@ -235,7 +235,7 @@ export function transformStorefrontPricesServer(storefront_pricing) {
     const obj = { userPrice: null, prices: null };
     user_price = user_price.user_price;
     obj.userPrice = user_price.map((currency) => ({ currency: currency.currency, amount: currency.amount }));
-    obj.prices = closure_1_1(dependencyMap[6]).mapValues(user_price.prices, (arg0) => closure_1_1(closure_1_2[6]).mapValues(arg0, (arr) => arr.map(/* F90906 */ function() { ... })));
+    obj.prices = closure_1_1(dependencyMap[6]).mapValues(user_price.prices, (arg0) => closure_1_1(closure_1_2[6]).mapValues(arg0, (arr) => arr.map(/* F89281 */ function() { ... })));
     return obj;
   }));
   obj.rewardResultIdMap = applyDefault.mapValues(storefront_pricing.reward_result_id_map, (arg0) => applyDefault.mapValues(arg0, (type) => ({ type: type.type, amount: type.amount })));
@@ -360,7 +360,7 @@ export function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    const obj2 = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "HermesInternal", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
     return obj2;
   }, items1);
   let userPrice = memo.userPrice;

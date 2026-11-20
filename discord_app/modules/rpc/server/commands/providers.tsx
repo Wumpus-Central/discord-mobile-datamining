@@ -21,13 +21,13 @@ let closure_10 = async function _refreshProviderAccessToken() {
   }
   return { access_token: closure_130_0 };
 };
-let Constants = fn(6233);
+let Constants = fn(6235);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
-Constants = fn(1072);
+Constants = fn(1071);
 ({ AnalyticsLocations: hasOwnProperty, ComponentActions: closure_6, PlatformTypes: metroImportDefault } = Constants);
-Constants = fn(2145);
+Constants = fn(2143);
 ({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = Constants);
-Constants = fn(1083);
+Constants = fn(1082);
 ({ RPCCommands, RPCErrors: closure_8 } = Constants);
 const items = [AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID];
 const set = new Set(items);
@@ -185,7 +185,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

@@ -6,7 +6,7 @@ import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -37,11 +37,11 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
     onLayout: null,
   };
   let obj = analyticsLocations(9006);
-  const intl = analyticsLocations(1113).intl;
-  obj2.text = intl.format(analyticsLocations(1113).t.TmfgI2, { onClick: callback });
+  const intl = analyticsLocations(1112).intl;
+  obj2.text = intl.format(analyticsLocations(1112).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {
-    const intl2 = tmp(1113).intl;
-    nitroTrialCtaOverride = intl2.string(tmp(1113).t.pj0XBN);
+    const intl2 = tmp(1112).intl;
+    nitroTrialCtaOverride = intl2.string(tmp(1112).t.pj0XBN);
   }
   obj2.buttonText = nitroTrialCtaOverride;
   obj2.onButtonPress = callback;

@@ -5,8 +5,8 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(4648).ChannelFlags;
-const MessageTypes = fn(1072).MessageTypes;
+const ChannelFlags = fn(4650).ChannelFlags;
+const MessageTypes = fn(1071).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
 
@@ -63,10 +63,10 @@ export function usePrivateChannelWaveEligible(isDM, arg1) {
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
   const obj6 = require("DateUtils");
-  const tmp9 = recipientId(2169)();
+  const tmp9 = recipientId(2167)();
   const isWithinIntervalResult = obj6.isWithinInterval(
-    recipientId(2169)(),
-    recipientId(2169)(extractTimestampResult),
+    recipientId(2167)(),
+    recipientId(2167)(extractTimestampResult),
     1814400000,
   );
   const strangerDangerWarning = require("useStrangerDangerWarning").useStrangerDangerWarning(isDM.id);

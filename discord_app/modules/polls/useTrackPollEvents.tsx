@@ -4,7 +4,7 @@ import PollLayoutTypes from "../../../discord_common/js/shared/shared-constants/
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
 

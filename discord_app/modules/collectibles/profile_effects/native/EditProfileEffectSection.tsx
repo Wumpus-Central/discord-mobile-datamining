@@ -11,16 +11,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isProfileEffectRecord = fn(7962).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7961).isProfileEffectRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   row: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(14171).GUTTER_SIZE,
+    paddingHorizontal: fn(14140).GUTTER_SIZE,
   },
   rowSpacer: null,
   profileEffect: null,
@@ -30,9 +30,9 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(14171).GUTTER_SIZE,
+  paddingHorizontal: fn(14140).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(14171).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(14140).GUTTER_SIZE };
 obj.profileEffect = { overflow: "hidden", width: "100%", height: "100%" };
 obj.sampleProfile = { aspectRatio: fn(8890).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 let closure_9 = createStyles.createStyles(obj);

@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import LinearGradientDefault from "../../../../../_runtime/05347_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05349_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const Gradients = fn(8831).Gradients;
-const PremiumTypes = fn(1390).PremiumTypes;
+const PremiumTypes = fn(1388).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = {
   cardContainer: {
     display: "flex",
@@ -45,8 +45,8 @@ export default function PremiumFeaturesBackground(opacity) {
   items = [closure_6().cardContainer, style];
   obj.style = items;
   const tmp2 = closure_6();
-  obj.start = num(1092).HorizontalGradient.START;
-  obj.end = num(1092).HorizontalGradient.END;
+  obj.start = num(1091).HorizontalGradient.START;
+  obj.end = num(1091).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
   return jsx(LinearGradientDefault, { style: null, colors: mapped, start: null, end: null });

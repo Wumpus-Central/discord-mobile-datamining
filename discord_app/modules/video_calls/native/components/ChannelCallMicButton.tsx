@@ -25,7 +25,7 @@ export function ChannelCallMicButton(disableTint) {
     () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
   );
   const obj = mute(504);
-  const muteHandler = mute(10947).createMuteHandler(tmp3, stateFromStores);
+  const muteHandler = mute(10889).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];
   const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
@@ -39,10 +39,10 @@ export function ChannelCallMicButton(disableTint) {
     lottieComponent: null,
     tintColor: null,
   };
-  const intl = mute(1113).intl;
-  obj3.accessibilityLabel = intl.string(mute(1113).t.B3zz0G);
+  const intl = mute(1112).intl;
+  obj3.accessibilityLabel = intl.string(mute(1112).t.B3zz0G);
   obj3.onPress = muteHandler.onPress;
-  obj3.source = importDefault(mute ? 10951 : 10952);
+  obj3.source = importDefault(mute ? 10893 : 10894);
   if (!flag) {
     flag = mute;
   }

@@ -13,14 +13,14 @@ const View = fn(17).View;
 const UserRowModes = fn(9526).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
     paddingBottom: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
   },
-  searchBar: { height: "ip", minHeight: false },
+  searchBar: { height: "disabled", minHeight: false },
   searchBarRowContainer: null,
   noResults: null,
 };

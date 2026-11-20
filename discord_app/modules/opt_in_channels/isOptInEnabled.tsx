@@ -7,7 +7,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: closure_6, Permissions: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/opt_in_channels/isOptInEnabled.tsx");

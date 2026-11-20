@@ -4,7 +4,7 @@ import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import FastImageDefault from "FastImage.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
 import GuildIcon from "../../modules/guild/native/GuildIcon.tsx";
-import _modDef10480 from "../../../_runtime/metro/10480__.js";
+import _modDef10422 from "../../../_runtime/metro/10422__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -12,10 +12,10 @@ const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1071).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles({
   uploadIcon: { position: "absolute", right: -7, top: -7 },
   avatar: { height: 64, width: 64, borderRadius: 32 },
@@ -48,7 +48,7 @@ export default function IconUploader(disabled) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -129,7 +129,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp8];
   let tmp17 = null;
   if (!flag) {
-    let obj5 = { style: tmp.uploadIcon, source: _modDef10480 };
+    let obj5 = { style: tmp.uploadIcon, source: _modDef10422 };
     tmp17 = closure_7(FastImageDefault, obj5);
   }
   items1[1] = tmp17;

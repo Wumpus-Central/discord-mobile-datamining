@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/native/ConjureProjectList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ConjureActionCreators from "../ConjureActionCreators.tsx";
@@ -39,13 +39,13 @@ function ProjectRow(project) {
   );
   let formatToPlainStringResult;
   if (null != project.updated_at) {
-    const intl = tmp2(1113).intl;
+    const intl = tmp2(1112).intl;
     const obj3 = { time: null };
     const _Date = Date;
     const date = new Date(project.updated_at);
-    obj3.time = tmp2(6517).getRelativeTimestamp(date.getTime());
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4089.AXydi3, obj3);
-    const tmp2Result = tmp2(6517);
+    obj3.time = tmp2(6519).getRelativeTimestamp(date.getTime());
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4091.AXydi3, obj3);
+    const tmp2Result = tmp2(6519);
   }
   const obj4 = {
     label: project.name,
@@ -58,14 +58,14 @@ function ProjectRow(project) {
     onLongPress: null,
   };
   if (stateFromStores) {
-    const intl2 = tmp2(1113).intl;
-    formatToPlainStringResult = intl2.string(_modDef4089.Yh5pAc);
+    const intl2 = tmp2(1112).intl;
+    formatToPlainStringResult = intl2.string(_modDef4091.Yh5pAc);
   }
   obj4.subLabel = formatToPlainStringResult;
   let stringResult;
   if (null != conjureProjectBadge && conjureProjectBadge > 0 && !stateFromStores) {
-    const intl3 = tmp2(1113).intl;
-    stringResult = intl3.string(_modDef4089.hfIuc7);
+    const intl3 = tmp2(1112).intl;
+    stringResult = intl3.string(_modDef4091.hfIuc7);
   }
   obj4.accessibilityHint = stringResult;
   obj4.disabled = stateFromStores;
@@ -80,9 +80,9 @@ function ProjectRow(project) {
       tmp15Result3 = closure_10(ConjureNumberBadgeDefault, obj6);
     }
     const items2 = [tmp15Result3];
-    const obj7 = { IconComponent: tmp2(6903).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
-    const intl4 = tmp2(1113).intl;
-    obj7.accessibilityLabel = intl4.string(tmp2(1113).t["UKOtz+"]);
+    const obj7 = { IconComponent: tmp2(6902).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
+    const intl4 = tmp2(1112).intl;
+    obj7.accessibilityLabel = intl4.string(tmp2(1112).t["UKOtz+"]);
     items2[1] = closure_10(ConjureHeaderIconButtonDefault, obj7);
     obj5.children = items2;
     tmp13Result = closure_11(closure_7, obj5);
@@ -91,7 +91,7 @@ function ProjectRow(project) {
   obj4.trailing = tmp13Result;
   obj4.onPress = project.onPress;
   obj4.onLongPress = onMore;
-  const children = [closure_10(project(6926).TableRow, obj4)];
+  const children = [closure_10(project(6925).TableRow, obj4)];
   let tmp15Result4 = null;
   if (null != conjureProjectBadge) {
     tmp15Result4 = null;
@@ -112,7 +112,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_12 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom },
@@ -168,15 +168,15 @@ export default function ConjureProjectList(guildId) {
   importDefault = tmp3;
   navigation = guildId(navigation[9]).useNavigation();
   let obj = guildId(navigation[9]);
-  ({ mine, shared, fetchState } = require("useConjureServerProjects")(guildId));
+  ({ participating, shared, fetchState } = require("useConjureServerProjects")(guildId));
   const arr = require("useConjureOtherOwnProjects")(guildId);
-  items = [navigation];
-  const callback = memo.useCallback((projectId) => {
-    let str = arg1;
-    if (arg1 === undefined) {
+  items = [guildId];
+  const callback = memo.useCallback((arg0) => {
+    let str = project_list;
+    if (project_list === undefined) {
       str = "project_list";
     }
-    navigation.push(conjureStandaloneScenes.ConjureScreenScenes.CHAT, { projectId, entryPoint: str });
+    const result = conjureStandaloneScenes.pushServerProjectScreen(guildId, arg0, str);
   }, items);
   const items1 = [guildId, callback];
   memo = memo.useMemo(() => conjureStandaloneScenes.projectOpener(guildId, (arg0) => callback(arg0, "create")), items1);
@@ -300,7 +300,7 @@ export default function ConjureProjectList(guildId) {
     const obj7 = { bottom };
     obj5.scrollIndicatorInsets = obj7;
     const items8 = [callback2(tmp(tmp2[31]), {}), , ,];
-    const obj8 = { key: "mine", title: tmp(tmp2[28])["8LfMqp"], projects: mine };
+    const obj8 = { key: "participating", title: null, projects: participating };
     const items9 = [obj8];
     const obj9 = { key: "shared", title: tmp(tmp2[28]).YHDMK6, projects: shared };
     items9[1] = obj9;
@@ -308,15 +308,19 @@ export default function ConjureProjectList(guildId) {
       let tmp = null;
       if (projects.projects.length > 0) {
         const obj = { style: section.section, children: null };
-        const obj2 = {
-          variant: "heading-sm/semibold",
-          color: "text-default",
-          accessibilityRole: "header",
-          children: null,
-        };
-        const intl = util.intl;
-        obj2.children = intl.string(projects.title);
-        items = [refs(Text_Text.Text, obj2)];
+        let tmp5 = null;
+        if (null != projects.title) {
+          const obj2 = {
+            variant: "heading-sm/semibold",
+            color: "text-default",
+            accessibilityRole: "header",
+            children: null,
+          };
+          const intl = util.intl;
+          obj2.children = intl.string(projects.title);
+          tmp5 = refs(Text_Text.Text, obj2);
+        }
+        items = [tmp5];
         const obj3 = { hasIcons: true, children: null };
         projects = projects.projects;
         obj3.children = projects.map((project) =>

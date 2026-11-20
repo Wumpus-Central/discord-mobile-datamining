@@ -8,10 +8,10 @@ import RPCHelpers from "../../RPCHelpers.tsx";
 import QuestStore from "../../../quests/QuestStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ RPCCommands, RPCErrors: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15593);
+let CONTEXT_MENU_ICON_NAMES = fn(15557);
 obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.GET_QUEST_ENROLLMENT_STATUS,
   {
@@ -51,7 +51,7 @@ obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = CONTEXT_MENU_ICON_NAMES.createRPC
     },
   },
 );
-CONTEXT_MENU_ICON_NAMES = fn(15593);
+CONTEXT_MENU_ICON_NAMES = fn(15557);
 let obj3 = {
   scope: fn(6794).OAuth2Scopes.IDENTIFY,
   handler(socket) {
@@ -127,7 +127,7 @@ obj[RPCCommands.QUEST_START_TIMER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
     throw new RPCErrorDefault(obj9, "Quest not found: " + quest_id);
   },
 });
-CONTEXT_MENU_ICON_NAMES = fn(15593);
+CONTEXT_MENU_ICON_NAMES = fn(15557);
 let obj5 = {
   scope: fn(6794).OAuth2Scopes.IDENTIFY,
   handler(socket) {

@@ -3,7 +3,7 @@ import MarkupLinkRule2 from "../markup/MarkupLinkRule.tsx";
 import UnicodeSanitizationUtils from "../markup/UnicodeSanitizationUtils.tsx";
 import HTMLParserRunUtils from "HTMLParserRunUtils.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import t from "../../../_runtime/metro/02070__.js";
+import t from "../../../_runtime/metro/02068__.js";
 
 const require = globalThis.__r;
 const MarkupLinkRuleDefault = MarkupLinkRule2;

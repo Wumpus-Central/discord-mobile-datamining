@@ -118,8 +118,8 @@ function initializeFromUserSettings() {
     return flag3;
   }
 }
-const createChannelRecord = fn(4645).createChannelRecord;
-const FavoritesConstants = fn(4654);
+const createChannelRecord = fn(4647).createChannelRecord;
+const FavoritesConstants = fn(4656);
 const FAVORITES_AUTO_ADD_THREADS_NEVER = FavoritesConstants.FAVORITES_AUTO_ADD_THREADS_NEVER;
 ({
   FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: hasOwnProperty,
@@ -129,7 +129,7 @@ const FAVORITES_AUTO_ADD_THREADS_NEVER = FavoritesConstants.FAVORITES_AUTO_ADD_T
 } = FavoritesConstants);
 const FAVORITES_PRUNE_WHEN_ARCHIVED = FavoritesConstants.FAVORITES_PRUNE_WHEN_ARCHIVED;
 let closure_10 = FavoritesConstants.FAVORITES_UNCATEGORIZED_PARENT_ID;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_11, FAVORITES: closure_12 } = Constants);
 let value2 = false;
 let closure_18 = FAVORITES_AUTO_ADD_THREADS_NEVER;

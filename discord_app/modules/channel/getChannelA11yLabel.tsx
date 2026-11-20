@@ -8,7 +8,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: hasOwnProperty, StatusTypes: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelA11yLabel.tsx");

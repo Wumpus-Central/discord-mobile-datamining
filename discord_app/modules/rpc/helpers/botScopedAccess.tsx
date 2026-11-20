@@ -10,7 +10,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_6, Permissions: metroImportDefault, RPCErrors: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/botScopedAccess.tsx");

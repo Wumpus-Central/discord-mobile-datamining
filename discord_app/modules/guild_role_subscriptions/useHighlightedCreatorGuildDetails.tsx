@@ -3,7 +3,7 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
-const MarketingURLs = fn(1072).MarketingURLs;
+const MarketingURLs = fn(1071).MarketingURLs;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
 

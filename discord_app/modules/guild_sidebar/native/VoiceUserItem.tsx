@@ -10,13 +10,13 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let c8 = "body-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
-const XSMALL_20 = fn(1187).AvatarSizes.XSMALL_20;
-const createStyles = fn(4792);
+const XSMALL_20 = fn(1186).AvatarSizes.XSMALL_20;
+const createStyles = fn(4794);
 let obj = {
   voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 },
   disabled: { opacity: 0.5 },
@@ -37,7 +37,7 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11068);
+const ChannelListLayout = fn(11010);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

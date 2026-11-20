@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import isForwardMessageDefault from "../../../forwarding/isForwardMessage.tsx";
 import MediaFormatTesters from "../../../messages/MediaFormatTesters.tsx";
-import inlineStyles from "../../../../../_runtime/07746_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07745_inlineStyles.js";
 import CirclePlayIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import WaveformIcon from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
 import FileIcon from "../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
@@ -171,7 +171,7 @@ function getBasePreviewableMedia(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MessageEmbedTypes: hasOwnProperty, MessageFlags: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
@@ -184,7 +184,7 @@ const PreviewableMediaTypes = {
   GIF: "gif",
   VOICE_MESSAGE: "voice_message",
 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj3 = { voiceMessageIconOverlay: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

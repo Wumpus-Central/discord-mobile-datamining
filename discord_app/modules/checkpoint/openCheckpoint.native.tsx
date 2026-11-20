@@ -15,7 +15,7 @@ let closure_10 = async function _openCheckpoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -103,10 +103,10 @@ let closure_10 = async function _openCheckpoint(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(12400).CheckpointFetchStates;
-const CheckpointModalConstants = fn(12406);
+const CheckpointFetchStates = fn(12370).CheckpointFetchStates;
+const CheckpointModalConstants = fn(12376);
 ({ CHECKPOINT_MODAL_KEY: metroImportDefault, CHECKPOINT_UNAVAILABLE_MODAL_KEY: closure_8 } = CheckpointModalConstants);
-const AppStates = fn(1072).AppStates;
+const AppStates = fn(1071).AppStates;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/openCheckpoint.native.tsx");
 

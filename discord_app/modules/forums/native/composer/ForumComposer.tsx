@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import KeyboardUIStore from "../../../keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02119_asyncRequireImpl.js";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import useKeyboardTypeDefault from "../../../keyboard/native/useKeyboardType.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -86,7 +86,7 @@ function ActionBar(channel) {
   const tmp6 = useKeyboardTypeDefault();
   closure_7 = tmp6;
   let isMediaChannelResult = channel.isMediaChannel();
-  const tmp8 = tmp6 === channel(1628).KeyboardTypes.MEDIA;
+  const tmp8 = tmp6 === channel(1626).KeyboardTypes.MEDIA;
   closure_8 = tmp8;
   if (!isMediaChannelResult) {
     let tmp9 = stateFromStores1;
@@ -126,8 +126,8 @@ function ActionBar(channel) {
         onPress: null,
         foregroundRipple: true,
       };
-      const intl2 = tmp2(1113).intl;
-      obj6.accessibilityLabel = intl2.string(tmp2(1113).t["112vVE"]);
+      const intl2 = tmp2(1112).intl;
+      obj6.accessibilityLabel = intl2.string(tmp2(1112).t["112vVE"]);
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
@@ -142,8 +142,8 @@ function ActionBar(channel) {
               closure_1_5();
             }
             tmp5 =
-              closure_1_7 !== channel(1628).KeyboardTypes.SYSTEM &&
-              closure_1_7 !== channel(1628).KeyboardTypes.EXPRESSION;
+              closure_1_7 !== channel(1626).KeyboardTypes.SYSTEM &&
+              closure_1_7 !== channel(1626).KeyboardTypes.EXPRESSION;
           },
           title: null,
           tags: null,
@@ -158,15 +158,15 @@ function ActionBar(channel) {
             closure_1_5();
           }
           tmp4 =
-            closure_1_7 !== channel(1628).KeyboardTypes.SYSTEM &&
-            closure_1_7 !== channel(1628).KeyboardTypes.EXPRESSION;
+            closure_1_7 !== channel(1626).KeyboardTypes.SYSTEM &&
+            closure_1_7 !== channel(1626).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11601, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11543, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
-      tmp10 = closure_29(tmp2(6910).HeaderActionButton, obj6);
+      tmp10 = closure_29(tmp2(6909).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(11195).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(11137).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = {
         accessibilityLabel: null,
@@ -175,18 +175,18 @@ function ActionBar(channel) {
         onPress: null,
         foregroundRipple: true,
       };
-      const intl3 = tmp2(1113).intl;
-      obj7.accessibilityLabel = intl3.string(tmp2(1113).t.iZ7Mz9);
+      const intl3 = tmp2(1112).intl;
+      obj7.accessibilityLabel = intl3.string(tmp2(1112).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
       obj7.IconComponent = tmp2(9369).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(6910).HeaderActionButton, obj7);
+      tmp18 = closure_29(tmp2(6909).HeaderActionButton, obj7);
     }
     items4[2] = tmp18;
     const obj8 = { style: tmp.postButtonWrapper, children: null };
-    const intl4 = tmp2(1113).intl;
+    const intl4 = tmp2(1112).intl;
     const string = intl4.string;
-    const t = tmp2(1113).t;
+    const t = tmp2(1112).t;
     if (isEdit) {
       let stringResult = string(t["R3BPH+"]);
     } else {
@@ -198,13 +198,13 @@ function ActionBar(channel) {
     }
     obj9.disabled = submitting;
     const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj9.icon = closure_29(tmp2(7553).ChatIcon, obj10);
+    obj9.icon = closure_29(tmp2(7552).ChatIcon, obj10);
     obj9.onPress = function handleSubmit() {
       if (canPost) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5390).Button, obj9);
+    obj8.children = closure_29(tmp2(5392).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);
@@ -212,15 +212,15 @@ function ActionBar(channel) {
     return closure_30(closure_9, obj3);
   } else {
     const obj11 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
-    let intl = tmp2(1113).intl;
-    obj11.accessibilityLabel = intl.string(tmp2(1113).t.aDZSuz);
+    let intl = tmp2(1112).intl;
+    obj11.accessibilityLabel = intl.string(tmp2(1112).t.aDZSuz);
     const items6 = [,];
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(11599).KeyboardIcon;
+      let ImageIcon = tmp2(11541).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(7569).ImageIcon;
+      ImageIcon = tmp2(7568).ImageIcon;
     }
     obj11.IconComponent = ImageIcon;
     obj11.onPress = function handlePressMediaButton() {
@@ -232,7 +232,7 @@ function ActionBar(channel) {
       }
       const result1 = Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(6910).HeaderActionButton, obj11);
+    closure_29(tmp2(6909).HeaderActionButton, obj11);
   }
   let obj2 = channel(504);
 }
@@ -244,20 +244,20 @@ get_ActivityIndicator = fn(17);
   Text: closure_8,
   View: closure_9,
 } = get_ActivityIndicator);
-const DraftType = fn(8196).DraftType;
-const SlowmodeType = fn(8269).SlowmodeType;
-let Constants = fn(1072);
+const DraftType = fn(8195).DraftType;
+const SlowmodeType = fn(8268).SlowmodeType;
+let Constants = fn(1071);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
-const ChannelFlags = fn(4648).ChannelFlags;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
-const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
-let closure_27 = fn(1112).OpenThreadAnalyticsLocations;
-Constants = fn(1083);
+const ChannelFlags = fn(4650).ChannelFlags;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const ExpressionPickerViewType = fn(1227).ExpressionPickerViewType;
+let closure_27 = fn(1111).OpenThreadAnalyticsLocations;
+Constants = fn(1082);
 ({ NOOP: closure_28, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative" },
   scrollViewContentContainer: { paddingBottom: 16 },
@@ -560,8 +560,8 @@ export default function ForumComposer(parentChannel) {
     }
   }, []);
   const tmp15Result9 = message(isEdit.useState(null), 2);
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
-  const tmp5Result17 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const tmp5Result17 = require("../../../../../_runtime/metro/01653__.js");
   const items7 = [onPressEmoji, sharedValue];
   _require = undefined;
   [tmp35, tmp36] = items7;
@@ -575,7 +575,7 @@ export default function ForumComposer(parentChannel) {
   ForumComposerTsx1.__workletHash = 16005391094673;
   ForumComposerTsx1.__initData = tmp35;
   const items9 = [isEdit, parentChannel.id];
-  const tmp5Result18 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp5Result18 = require("../../../../../_runtime/metro/01653__.js");
   const items10 = [isEdit, parentChannel.id];
   const callback1 = obj.useCallback((name) => {
     if (!isEdit) {
@@ -617,7 +617,7 @@ export default function ForumComposer(parentChannel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -747,7 +747,7 @@ export default function ForumComposer(parentChannel) {
     }
     tmp50 = tmp51;
   }
-  const animatedScrollHandler = require("../../../../../_runtime/metro/01655__.js").useAnimatedScrollHandler(
+  const animatedScrollHandler = require("../../../../../_runtime/metro/01653__.js").useAnimatedScrollHandler(
     ForumComposerTsx1,
   );
   const tmp43 = onClose;
@@ -770,7 +770,7 @@ export default function ForumComposer(parentChannel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

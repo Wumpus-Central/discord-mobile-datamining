@@ -27,9 +27,9 @@ prototype["getFetchedAt"] = function getFetchedAt(arg0) {
   }
   return obj[arg0].fetchedAt;
 };
-prototype["getPromotionsForApplication"] = function getPromotionsForApplication(timestampProducer) {
+prototype["getPromotionsForApplication"] = function getPromotionsForApplication(metroImportDefault) {
   state = undefined;
-  if (obj[timestampProducer] != null) {
+  if (obj[metroImportDefault] != null) {
     state = tmp.state;
   }
   if ("success" === state) {

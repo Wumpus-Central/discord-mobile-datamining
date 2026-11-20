@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/templates/ConjureTemplateWizard.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4089 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,7 +8,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 require = fn;
 function conjureTemplateStartMessage(templateName) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef4089["/qSx7+"], { templateName, locale: util.intl.currentLocale });
+  return intl.formatToPlainString(_modDef4091["/qSx7+"], { templateName, locale: util.intl.currentLocale });
 }
 let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
   closure_0 = arg0;
@@ -26,7 +26,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -197,9 +197,9 @@ export function conjureWizardServerCopy(stateFromStores1) {
   if (server == null) {
     const obj = { title: null, hint: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef4089.vcxYIA);
+    obj.title = intl.string(_modDef4091.vcxYIA);
     const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef4089.auUHPZ);
+    obj.hint = intl2.string(_modDef4091.auUHPZ);
     server = obj;
   }
   return server;

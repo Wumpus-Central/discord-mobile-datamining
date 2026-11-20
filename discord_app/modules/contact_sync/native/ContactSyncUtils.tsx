@@ -25,7 +25,7 @@ let closure_18 = async function _uploadContacts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -107,19 +107,19 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(13494);
+const ContactSyncPersistedStore = fn(13464);
 ({
   useContactSyncStore: closure_6,
   clearDismissState: metroImportDefault,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(13493);
+const ContactSyncConstants = fn(13463);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
   ContactPermissions: closure_10,
   ContactSyncSuggestionsSetting: closure_11,
 } = ContactSyncConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   Endpoints: closure_12,
   PlatformTypes: map1,

@@ -24,8 +24,8 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(5356).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-  let obj = channel(5356);
+  const token = channel(5358).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  let obj = channel(5358);
   items = [ChannelMemberStore, ChannelMemberCountStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let flag = false;
@@ -67,8 +67,8 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(11806);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(7121).ICON_SIZE[token]);
+    const tmpResult = tmp(11748);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(7120).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
 }
@@ -101,10 +101,10 @@ function ChannelLinkedLobbyCoachmark(guild) {
   guild = guild.guild;
   const channel = guild.channel;
   _slicedToArray = undefined;
-  items = [guild(4625).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
+  items = [guild(4627).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
   const tmp = _slicedToArray(guild(8960).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   dependencyMap = tmp2;
-  const tmp3 = tmp[0] === guild(4625).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
+  const tmp3 = tmp[0] === guild(4627).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   _slicedToArray = tmp3;
   const items1 = [channel, guild, tmp[1], tmp3];
   const memo = noop.useMemo(() => {
@@ -143,10 +143,10 @@ function ChannelLinkedLobbyCoachmark(guild) {
   return null;
 }
 const View = fn(17).View;
-const THREAD_CHANNEL_TYPES = fn(4645).THREAD_CHANNEL_TYPES;
-const Constants = fn(1072);
+const THREAD_CHANNEL_TYPES = fn(4647).THREAD_CHANNEL_TYPES;
+const Constants = fn(1071);
 ({ ChannelTypes: closure_15, HelpdeskArticles: closure_16, StatusTypes: closure_17 } = Constants);
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
 const size = fn(2);

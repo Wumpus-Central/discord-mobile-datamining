@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 0.8333333333333334;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
   const size = {

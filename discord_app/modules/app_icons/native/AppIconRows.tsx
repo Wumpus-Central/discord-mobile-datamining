@@ -37,8 +37,8 @@ function BackwardsCompatibleAppIconRows(arg0) {
       hasIcons: true,
       children: null,
     };
-    const intl = merged(1113).intl;
-    obj2.accessibilityLabel = intl.string(merged(1113).t.N4YDao);
+    const intl = merged(1112).intl;
+    obj2.accessibilityLabel = intl.string(merged(1112).t.N4YDao);
     obj2.children = icons.map((id) => {
       const obj = {};
       merged = Object.assign(merged);
@@ -48,7 +48,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_8(merged(7229).TableRowGroup, obj2);
+    obj.children = closure_8(merged(7228).TableRowGroup, obj2);
     return closure_8(View, obj);
   }
 }
@@ -56,7 +56,7 @@ const View = fn(17).View;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");

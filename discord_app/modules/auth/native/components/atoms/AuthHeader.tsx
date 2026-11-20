@@ -6,11 +6,11 @@ import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { header: null };
 const obj3 = {};
 const merged = Object.assign(
-  TextStyles(fn(1072).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+  TextStyles(fn(1071).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
 );
 obj3.textAlign = "center";
 obj2.header = obj3;

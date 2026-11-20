@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_5 = createStyles.createStyles({
   title: { textAlign: "center" },
   body: { marginTop: 8, textAlign: "center", lineHeight: 18 },
@@ -18,10 +18,10 @@ export default function SMSBackupWarningAlert(onConfirm) {
   onConfirm = onConfirm.onConfirm;
   const tmp = closure_5();
   const obj = { cancelText: null, confirmText: null, onConfirm: null, onCancel: null, children: null };
-  const intl = onConfirm(1113).intl;
-  obj.cancelText = intl.string(onConfirm(1113).t["ETE/oC"]);
-  const intl2 = onConfirm(1113).intl;
-  obj.confirmText = intl2.string(onConfirm(1113).t.N86XcP);
+  const intl = onConfirm(1112).intl;
+  obj.cancelText = intl.string(onConfirm(1112).t["ETE/oC"]);
+  const intl2 = onConfirm(1112).intl;
+  obj.confirmText = intl2.string(onConfirm(1112).t.N86XcP);
   obj.onConfirm = function handleConfirm() {
     onConfirm();
     actions_AlertActionCreatorsDefault.close();
@@ -36,13 +36,13 @@ export default function SMSBackupWarningAlert(onConfirm) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl3 = onConfirm(1113).intl;
-  obj2.children = intl3.string(onConfirm(1113).t.Ed4XQB);
-  items = [closure_3(onConfirm(5383).Text, obj2)];
+  const intl3 = onConfirm(1112).intl;
+  obj2.children = intl3.string(onConfirm(1112).t.Ed4XQB);
+  items = [closure_3(onConfirm(5385).Text, obj2)];
   const obj3 = { style: tmp.body, variant: "body-sm/medium", color: "text-default", children: null };
-  const intl4 = onConfirm(1113).intl;
-  obj3.children = intl4.string(onConfirm(1113).t.EDU2Eg);
-  items[1] = closure_3(onConfirm(5383).Text, obj3);
+  const intl4 = onConfirm(1112).intl;
+  obj3.children = intl4.string(onConfirm(1112).t.EDU2Eg);
+  items[1] = closure_3(onConfirm(5385).Text, obj3);
   obj.children = items;
   return closure_4(common_AlertDefault, obj);
 }

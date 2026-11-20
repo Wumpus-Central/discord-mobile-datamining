@@ -27,14 +27,14 @@ function resetAllPendingChanges() {
 let closure_3 = ["handleSubmit"];
 let closure_4 = ["guild", "handleSubmit"];
 const View = fn(17).View;
-const ProfileCustomizationSubsection = fn(1082).ProfileCustomizationSubsection;
-const Constants = fn(1072);
+const ProfileCustomizationSubsection = fn(1081).ProfileCustomizationSubsection;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
 const RootNavigatorScreen = fn(9300).RootNavigatorScreen;
-const UserProfileSections = fn(7950).UserProfileSections;
+const UserProfileSections = fn(7949).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   container: { height: "100%" },
   controls: { paddingTop: 4 },
@@ -280,10 +280,10 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
   }, items6);
   const effect2 = obj5.useEffect(
     () => () => {
-      const result = closure_1_0(7283).resetAndCloseUserProfileForm();
+      const result = closure_1_0(7282).resetAndCloseUserProfileForm();
       hasUnsavedChanges.resetState();
-      const obj = closure_1_0(7283);
-      token(10096).clearPendingWidgets();
+      const obj = closure_1_0(7282);
+      token(10099).clearPendingWidgets();
     },
     [],
   );
@@ -332,7 +332,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -364,7 +364,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
                     closure_128_3(true);
                   }
                   c2 = 3;
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp9) {
                 c2 = tmp;

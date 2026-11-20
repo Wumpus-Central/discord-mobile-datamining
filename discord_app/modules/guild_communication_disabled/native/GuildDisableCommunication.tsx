@@ -17,13 +17,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const GuildDisableCommunicationConstants = fn(4706);
+const GuildDisableCommunicationConstants = fn(4708);
 ({
   DisableCommunicationDuration,
   GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8,
   SET_COMMUNICATION_DISABLED_MODAL_NAME: closure_9,
 } = GuildDisableCommunicationConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let items = [
@@ -70,7 +70,7 @@ let items = [
     },
   },
 ];
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   reasonTextArea: null,
@@ -108,7 +108,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -122,7 +122,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(12279);
+            const obj4 = tmp4(12251);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = {
@@ -144,20 +144,20 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          const intl = user(1113).intl;
-          const obj8 = tmp4(5474);
-          const name = tmp4(5822).getName(closure_129_1, null, closure_129_0);
+          const intl = user(1112).intl;
+          const obj8 = tmp4(5476);
+          const name = tmp4(5824).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";
           }
           const obj = { text: null, variant: "success" };
           const obj7 = { user };
-          obj.text = intl.formatToPlainString(user(1113).t.O9C3Nt, obj7);
+          obj.text = intl.formatToPlainString(user(1112).t.O9C3Nt, obj7);
           obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
           closure_129_2();
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp18) {
         c3 = tmp;

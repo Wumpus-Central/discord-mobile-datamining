@@ -15,34 +15,34 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "count",
-    borderTopRightRadius: "displayName",
-    borderBottomLeftRadius: "Number",
+    borderTopLeftRadius: "create",
+    borderTopRightRadius: "diversity",
+    borderBottomLeftRadius: "Text",
     borderBottomRightRadius: "Button",
     divider: "isArray",
     dividerColor: "isArray",
-    dividerPaddingLeft: "Object",
+    dividerPaddingLeft: "x",
     dividerPaddingRight: "Button",
     placeholderShape: "isArray",
     placeholderShapeColor: "isArray",
-    placeholderShapeCount: "PX_16",
+    placeholderShapeCount: "View",
     placeholderShapeGap: "Button",
     placeholderShapePaddingHorizontal: "isArray",
     placeholderShapePaddingVertical: "isArray",
-    placeholderFeedBackgroundColor: "PX_8",
+    placeholderFeedBackgroundColor: "WireType",
     placeholderFeedColor: "Button",
     placeholderFeedLabelPadding: "isArray",
     placeholderFeedLabelPaddingInnerRatio: "isArray",
-    placeholderFeedLabelSize: "Path",
+    placeholderFeedLabelSize: "__closure",
     placeholderFeedLabelSecondarySize: "Button",
     placeholderFeedPadding: "isArray",
     placeholderFeedShape: "isArray",
     placeholderFeedShapeSize: "channel_id",
     placeholderType: NONE,
     width: "Button",
-    height: "isArray",
-    verticalAlignment: "isArray",
-    horizontalAlignment: "s",
+    height: "GUILD_BANNER",
+    verticalAlignment: "Button",
+    horizontalAlignment: "storeListing",
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7320).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7319).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

@@ -1,22 +1,22 @@
 // discord_common/js/shared/constants/KeyboardConstants.tsx
-import _mod8179 from "../../../../_runtime/metro/08179__.js";
+import _mod8178 from "../../../../_runtime/metro/08178__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const items = [_mod8179.Key.F6, "f6"];
+const items = [_mod8178.Key.F6, "f6"];
 const items1 = [items, , , , , , ,];
-const items2 = [_mod8179.Key.Tab, "tab"];
+const items2 = [_mod8178.Key.Tab, "tab"];
 items1[1] = items2;
-const items3 = [_mod8179.Key.ArrowDown, "down"];
+const items3 = [_mod8178.Key.ArrowDown, "down"];
 items1[2] = items3;
-const items4 = [_mod8179.Key.ArrowUp, "up"];
+const items4 = [_mod8178.Key.ArrowUp, "up"];
 items1[3] = items4;
-const items5 = [_mod8179.Key.ArrowLeft, "left"];
+const items5 = [_mod8178.Key.ArrowLeft, "left"];
 items1[4] = items5;
-const items6 = [_mod8179.Key.ArrowRight, "right"];
+const items6 = [_mod8178.Key.ArrowRight, "right"];
 items1[5] = items6;
-const items7 = [_mod8179.Key.Home, "home"];
+const items7 = [_mod8178.Key.Home, "home"];
 items1[6] = items7;
-const items8 = [_mod8179.Key.End, "end"];
+const items8 = [_mod8178.Key.End, "end"];
 items1[7] = items8;
 const map = new Map(items1);
 const frozen = Object.freeze({
@@ -393,8 +393,8 @@ const merged = Object.assign(
 const frozen2 = Object.freeze(point);
 const result = size.fileFinishedImporting("../discord_common/js/shared/constants/KeyboardConstants.tsx");
 
-export const KeyboardEventKey = _mod8179.Key;
-export const FOCUS_SECTION_JUMP_KEY = _mod8179.Key.F6;
+export const KeyboardEventKey = _mod8178.Key;
+export const FOCUS_SECTION_JUMP_KEY = _mod8178.Key.F6;
 export const NavigationKeyShortcutMap = map;
 export const NavigationShortcuts = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
 export const KeyboardDeviceTypes = {

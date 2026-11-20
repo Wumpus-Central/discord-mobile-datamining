@@ -3,13 +3,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1655 from "../../../../_runtime/metro/01655__.js";
-import _mod1708 from "../../../../_runtime/metro/01708__.js";
+import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1706 from "../../../../_runtime/metro/01706__.js";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05052_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05054_LegacyBaseButton.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
@@ -126,18 +126,18 @@ function BadgeTileContent(badge) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   AnalyticEvents: closure_8,
   AnalyticsObjects: closure_9,
   AnalyticsPages: closure_10,
   AnalyticsSections: closure_11,
 } = Constants);
-const constants3 = fn(5021).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
-const PremiumUpsellTypes = fn(1390).PremiumUpsellTypes;
+const constants3 = fn(5023).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj = {
   gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   grid: null,
@@ -169,7 +169,7 @@ obj.message = {
 };
 obj.messageText = { textAlign: "center" };
 let closure_16 = createStyles.createStyles(obj);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj10 = {
   position: { position: "absolute" },
   fill: { flex: 1 },
@@ -211,8 +211,8 @@ let items = [
   {
     code: "(function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){let[BADGE_GRID_COLUMNS,BADGE_GRID_GAP]=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};})",
   },
-  fn(15796).BADGE_GRID_COLUMNS,
-  fn(15796).BADGE_GRID_GAP,
+  fn(15760).BADGE_GRID_COLUMNS,
+  fn(15760).BADGE_GRID_GAP,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -385,21 +385,21 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
   closure_13 = useStableCallbackDefault(() => {
     _undefined10(c0);
   });
-  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
-  let obj = require("../../../../_runtime/metro/01655__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(null);
+  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  let obj = require("../../../../_runtime/metro/01653__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(null);
   if (typeof sharedValue5 === "function") {
     let point = { x: (index % _require) * (tileSize + importDefault), y: null };
     const _Math = Math;
     point.y = Math.floor(index / _require) * (tileSize + importDefault);
-    sharedValue2 = tmp2(1655).useSharedValue(point.x);
-    let tmp2Result = tmp2(1655);
-    sharedValue3 = tmp2(1655).useSharedValue(point.y);
-    const tmp2Result7 = tmp2(1655);
-    sharedValue4 = tmp2(1655).useSharedValue(point);
-    const tmp2Result8 = tmp2(1655);
-    sharedValue5 = tmp2(1655).useSharedValue(1);
-    const tmp2Result9 = tmp2(1655);
+    sharedValue2 = tmp2(1653).useSharedValue(point.x);
+    let tmp2Result = tmp2(1653);
+    sharedValue3 = tmp2(1653).useSharedValue(point.y);
+    const tmp2Result7 = tmp2(1653);
+    sharedValue4 = tmp2(1653).useSharedValue(point);
+    const tmp2Result8 = tmp2(1653);
+    sharedValue5 = tmp2(1653).useSharedValue(1);
+    const tmp2Result9 = tmp2(1653);
     items = [closure_22, orderShared, badge_id, tmp5, slotOffset, tileSize];
     _require = undefined;
     importDefault = undefined;
@@ -429,8 +429,8 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
       closure_23,
       sharedValue,
       sharedValue2,
-      tmp2(5002).withTiming,
-      tmp2(5005).timingStandard,
+      tmp2(5004).withTiming,
+      tmp2(5007).timingStandard,
       sharedValue3,
     ];
     _require = undefined;
@@ -476,22 +476,22 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     CustomizeBadgesSheetTsx3.__closure = items3;
     CustomizeBadgesSheetTsx3.__workletHash = 7747025592280;
     CustomizeBadgesSheetTsx3.__initData = tmp23;
-    const animatedReaction = tmp2(1655).useAnimatedReaction(CustomizeBadgesSheetTsx2, CustomizeBadgesSheetTsx3);
+    const animatedReaction = tmp2(1653).useAnimatedReaction(CustomizeBadgesSheetTsx2, CustomizeBadgesSheetTsx3);
     let items4 = [
       items15,
       orderShared,
       tileSize,
-      tmp2(15796).BADGE_GRID_GAP,
-      tmp2(1655).clamp,
+      tmp2(15760).BADGE_GRID_GAP,
+      tmp2(1653).clamp,
       sharedValue2,
-      tmp2(15796).BADGE_GRID_COLUMNS,
+      tmp2(15760).BADGE_GRID_COLUMNS,
       sharedValue3,
       slotOffset,
-      tmp2(14503).moveBadgeInDisplayOrder,
+      tmp2(14471).moveBadgeInDisplayOrder,
       badge_id,
-      tmp2(1708).scheduleOnRN,
-      tmp2(5008).triggerHapticFeedback,
-      tmp2(5008).HapticFeedbackTypes,
+      tmp2(1706).scheduleOnRN,
+      tmp2(5010).triggerHapticFeedback,
+      tmp2(5010).HapticFeedbackTypes,
     ];
     _require = undefined;
     importDefault = undefined;
@@ -535,7 +535,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     CustomizeBadgesSheetTsx4.__initData = tmp32;
     let items6 = [badge_id, orderShared, slotOffset, tileSize, sharedValue2, sharedValue3];
     callback = noop.useCallback(CustomizeBadgesSheetTsx4, items6);
-    const tmp2Result10 = tmp2(1655);
+    const tmp2Result10 = tmp2(1653);
     let items7 = [closure_25, scrollOffset];
     _require = undefined;
     [tmp49, tmp50] = items7;
@@ -574,7 +574,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     CustomizeBadgesSheetTsx6.__closure = items10;
     CustomizeBadgesSheetTsx6.__workletHash = 1713421095914;
     CustomizeBadgesSheetTsx6.__initData = tmp53;
-    const animatedReaction1 = tmp2(1655).useAnimatedReaction(CustomizeBadgesSheetTsx5, CustomizeBadgesSheetTsx6);
+    const animatedReaction1 = tmp2(1653).useAnimatedReaction(CustomizeBadgesSheetTsx5, CustomizeBadgesSheetTsx6);
     let items11 = [
       callback,
       scrollRef,
@@ -597,12 +597,12 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
         closure_27,
         c6,
         sharedValue,
-        _mod1708.scheduleOnRN,
+        _mod1706.scheduleOnRN,
         ContextMenuState.hideContextMenu,
         sharedValue4,
         sharedValue2,
         sharedValue3,
-        _mod1655.measure,
+        _mod1653.measure,
         c7,
         sharedValue1,
         sharedValue5,
@@ -683,7 +683,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
         sharedValue1,
         80,
         c8,
-        _mod1655.clamp,
+        _mod1653.clamp,
       ];
       c2 = undefined;
       c3 = undefined;
@@ -729,7 +729,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
         sharedValue3,
         sharedValue5,
         c6,
-        _mod1708.scheduleOnRN,
+        _mod1706.scheduleOnRN,
         HapticUtils.triggerHapticFeedback,
         HapticUtils.HapticFeedbackTypes,
         c9,
@@ -862,7 +862,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
         .onChange(CustomizeBadgesSheetTsx11)
         .onFinalize(CustomizeBadgesSheetTsx12);
     }, items11);
-    const tmp2Result11 = tmp2(1655);
+    const tmp2Result11 = tmp2(1653);
     const items12 = [closure_33, sharedValue, sharedValue4, sharedValue2, sharedValue3, sharedValue5];
     _require = undefined;
     importDefault = undefined;
@@ -923,7 +923,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     CustomizeBadgesSheetTsx13.__closure = items13;
     CustomizeBadgesSheetTsx13.__workletHash = 12364432991215;
     CustomizeBadgesSheetTsx13.__initData = tmp60;
-    closure_22 = tmp2(1655).useAnimatedStyle(CustomizeBadgesSheetTsx13);
+    closure_22 = tmp2(1653).useAnimatedStyle(CustomizeBadgesSheetTsx13);
     const items14 = [badge_id, orderShared, onCommitOrder, slotOffset];
     closure_23 = obj8.useCallback((nativeEvent) => {
       const actionName = nativeEvent.nativeEvent.actionName;
@@ -934,7 +934,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
         if (tmp) {
           num2 = -1;
         }
-        const clampResult = _mod1655.clamp(index + num2, 0, value.length - 1);
+        const clampResult = _mod1653.clamp(index + num2, 0, value.length - 1);
         const result = PendingBadgeSettings.moveBadgeInDisplayOrder(value, index, clampResult);
         if (result !== value) {
           const result1 = _undefined6.set(result);
@@ -950,14 +950,14 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     items15 = [];
     if (!isFirst) {
       let obj3 = { name: "moveup", label: null };
-      let intl = tmp2(1113).intl;
-      obj3.label = intl.string(tmp2(1113).t.eR2XSh);
+      let intl = tmp2(1112).intl;
+      obj3.label = intl.string(tmp2(1112).t.eR2XSh);
       items15.push(obj3);
     }
     if (!isLast) {
       let obj4 = { name: "movedown", label: null };
-      let intl2 = tmp2(1113).intl;
-      obj4.label = intl2.string(tmp2(1113).t.wWi0DL);
+      let intl2 = tmp2(1112).intl;
+      obj4.label = intl2.string(tmp2(1112).t.wWi0DL);
       items15.push(obj4);
     }
     function renderTile(ref) {
@@ -1044,7 +1044,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  let obj2 = require("../../../../_runtime/metro/01655__.js");
+  let obj2 = require("../../../../_runtime/metro/01653__.js");
 });
 let closure_35 = {
   code: "(function CustomizeBadgesSheetTsx14({timeSincePreviousFrame:timeSincePreviousFrame}){let[autoScrollSpeed,autoScrollElapsed,MS_PER_FRAME_60FPS,AUTO_SCROLL_PIXELS_PER_SECOND,scrollTo,scrollRef,roundToNearestPixel,scrollOffset]=this.__closure;const speed=autoScrollSpeed.get();if(speed===0||timeSincePreviousFrame==null||timeSincePreviousFrame<=0){return;}autoScrollElapsed.set(autoScrollElapsed.get()+timeSincePreviousFrame);const elapsed=autoScrollElapsed.get();if(elapsed<MS_PER_FRAME_60FPS){return;}autoScrollElapsed.set(0);const delta=speed*AUTO_SCROLL_PIXELS_PER_SECOND*elapsed/1000;scrollTo(scrollRef,0,Math.max(roundToNearestPixel(scrollOffset.get()+delta),0),false);})",
@@ -1111,10 +1111,10 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   }
   analyticsLocations = useAnalyticsLocationsDefault(
     analyticsLocations1,
-    tmp2(7420).BADGES_REORDER_ACTION_SHEET,
+    tmp2(7419).BADGES_REORDER_ACTION_SHEET,
   ).analyticsLocations;
   noop = analyticsLocations;
-  const context = noop.useContext(tmp2(5351));
+  const context = noop.useContext(tmp2(5353));
   c4 = context;
   const items2 = [context, analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -1210,19 +1210,19 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const items13 = [reorderableBadges];
   memo2 = noop.useMemo(() => reorderableBadges.map((badge_id) => badge_id.badge_id), items13);
   const tmp5Result14 = require("initialize");
-  sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(memo2);
-  onCommitOrder = tmp2(7273)((arr) => {
+  sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(memo2);
+  onCommitOrder = tmp2(7272)((arr) => {
     const result = tenureBadgeHideable(canReorder[28]).setPendingBadgeDisplayOrder(arr);
   });
-  const tmp5Result15 = require("../../../../_runtime/metro/01655__.js");
-  sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const tmp5Result15 = require("../../../../_runtime/metro/01653__.js");
+  sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(false);
   const items14 = [memo2, sharedValue1, sharedValue];
   const effect3 = noop.useEffect(() => {
     if (!sharedValue1.get()) {
       const result = sharedValue.set(memo2);
     }
   }, items14);
-  closure_18 = tmp2(7273)((badgeId) => {
+  closure_18 = tmp2(7272)((badgeId) => {
     const obj = PendingBadgeSettings;
     const result = obj.setPendingBadgeVisibility({
       badgeId: badgeId.badge_id,
@@ -1235,7 +1235,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.mehuPg, { badgeName: badgeId.name }));
   });
-  onPress = tmp2(7273)((badge_id) => {
+  onPress = tmp2(7272)((badge_id) => {
     if (hiddenBadges.some((badge_id) => badge_id.badge_id === badge_id.badge_id)) {
       closure_18(badge_id);
     } else if (set.has(badge_id.badge_id)) {
@@ -1248,7 +1248,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       obj.open(combined, obj2);
     }
   });
-  closure_20 = tmp2(7273)((badgeId) => {
+  closure_20 = tmp2(7272)((badgeId) => {
     const obj = PendingBadgeSettings;
     const result = obj.setPendingBadgeVisibility({
       badgeId: badgeId.badge_id,
@@ -1261,41 +1261,41 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.q3t0Ht, { count: 1 }));
   });
-  onSetHidden = tmp2(7273)((arg0, arg1) => {
+  onSetHidden = tmp2(7272)((arg0, arg1) => {
     if (arg1) {
       closure_20(arg0);
     } else {
       closure_18(arg0);
     }
   });
-  const tmp5Result16 = require("../../../../_runtime/metro/01655__.js");
+  const tmp5Result16 = require("../../../../_runtime/metro/01653__.js");
   const bottomSheetWidth = require("Sheet/BottomSheet").useBottomSheetWidth();
   const tmp5Result17 = require("Sheet/BottomSheet");
   badgeTileSize = require("BadgeGrid").getBadgeTileSize(bottomSheetWidth);
   const sum1 = fixedBadges.length + reorderableBadges.length + hiddenBadges.length;
-  const rounded = Math.ceil(sum1 / tmp5(15796).BADGE_GRID_COLUMNS);
+  const rounded = Math.ceil(sum1 / tmp5(15760).BADGE_GRID_COLUMNS);
   let num = 0;
   if (rounded > 0) {
     let result = rounded * badgeTileSize;
     const diff = rounded - 1;
-    num = result + diff * tmp5(15796).BADGE_GRID_GAP;
+    num = result + diff * tmp5(15760).BADGE_GRID_GAP;
   }
   const tmp5Result18 = require("BadgeGrid");
-  animatedRef = require("../../../../_runtime/metro/01655__.js").useAnimatedRef();
-  const tmp5Result19 = require("../../../../_runtime/metro/01655__.js");
-  scrollOffset = require("../../../../_runtime/metro/01655__.js").useScrollOffset(animatedRef);
-  const tmp5Result20 = require("../../../../_runtime/metro/01655__.js");
-  sharedValue2 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
-  const tmp5Result21 = require("../../../../_runtime/metro/01655__.js");
-  const sharedValue3 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
-  const tmp5Result22 = require("../../../../_runtime/metro/01655__.js");
+  animatedRef = require("../../../../_runtime/metro/01653__.js").useAnimatedRef();
+  const tmp5Result19 = require("../../../../_runtime/metro/01653__.js");
+  scrollOffset = require("../../../../_runtime/metro/01653__.js").useScrollOffset(animatedRef);
+  const tmp5Result20 = require("../../../../_runtime/metro/01653__.js");
+  sharedValue2 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const tmp5Result21 = require("../../../../_runtime/metro/01653__.js");
+  const sharedValue3 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const tmp5Result22 = require("../../../../_runtime/metro/01653__.js");
   const items15 = [
     closure_35,
     sharedValue2,
     sharedValue3,
     16.666666666666668,
     700,
-    require("../../../../_runtime/metro/01655__.js").scrollTo,
+    require("../../../../_runtime/metro/01653__.js").scrollTo,
     animatedRef,
     roundToNearestPixelDefault,
     scrollOffset,
@@ -1351,12 +1351,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   CustomizeBadgesSheetTsx14.__closure = items16;
   CustomizeBadgesSheetTsx14.__workletHash = 4169091470516;
   CustomizeBadgesSheetTsx14.__initData = tmp33;
-  frameCallback = require("../../../../_runtime/metro/01655__.js").useFrameCallback(CustomizeBadgesSheetTsx14, false);
+  frameCallback = require("../../../../_runtime/metro/01653__.js").useFrameCallback(CustomizeBadgesSheetTsx14, false);
   const items17 = [frameCallback];
   const callback1 = obj4.useCallback((arg0) => {
     frameCallback.setActive(arg0);
   }, items17);
-  const tmp5Result23 = require("../../../../_runtime/metro/01655__.js");
+  const tmp5Result23 = require("../../../../_runtime/metro/01653__.js");
   const items18 = [closure_36, sharedValue2];
   _require = undefined;
   [tmp44, tmp45] = items18;
@@ -1369,7 +1369,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   CustomizeBadgesSheetTsx15.__closure = items19;
   CustomizeBadgesSheetTsx15.__workletHash = 17434103373145;
   CustomizeBadgesSheetTsx15.__initData = tmp44;
-  const items20 = [closure_37, sharedValue3, require("../../../../_runtime/metro/01708__.js").scheduleOnRN, callback1];
+  const items20 = [closure_37, sharedValue3, require("../../../../_runtime/metro/01706__.js").scheduleOnRN, callback1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -1392,7 +1392,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   CustomizeBadgesSheetTsx16.__closure = items21;
   CustomizeBadgesSheetTsx16.__workletHash = 12780194212895;
   CustomizeBadgesSheetTsx16.__initData = tmp46;
-  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01653__.js").useAnimatedReaction(
     CustomizeBadgesSheetTsx15,
     CustomizeBadgesSheetTsx16,
   );
@@ -1410,16 +1410,16 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
         onPress: null,
         children: null,
       };
-      const intl2 = tmp5(1113).intl;
-      obj6.ctaText = intl2.string(tmp5(1113).t.pj0XBN);
+      const intl2 = tmp5(1112).intl;
+      obj6.ctaText = intl2.string(tmp5(1112).t.pj0XBN);
       ({ upsellCard: obj22.cardStyle, upsellContent: obj22.contentStyle, upsellCta: obj22.ctaStyle } = tmp);
       obj6.onPress = callback;
       const obj7 = { variant: "body-sm/normal", style: tmp.upsellText, children: null };
-      const intl3 = tmp5(1113).intl;
-      obj7.children = intl3.string(tmp5(1113).t.JrOki0);
-      obj6.children = memo2(tmp5(5383).Text, obj7);
-      tmp56 = memo2(tmp2(15797), obj6);
-      const tmp2Result = tmp2(15797);
+      const intl3 = tmp5(1112).intl;
+      obj7.children = intl3.string(tmp5(1112).t.JrOki0);
+      obj6.children = memo2(tmp5(5385).Text, obj7);
+      tmp56 = memo2(tmp2(15761), obj6);
+      const tmp2Result = tmp2(15761);
     }
     const items22 = [tmp56];
     const obj8 = { accessibilityRole: "list", style: null, children: null };
@@ -1491,12 +1491,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     if (stateFromStoresObject.hasCatalogError) {
       const obj10 = { style: tmp.message, accessibilityRole: "alert", children: null };
       const obj11 = { variant: "body-md/normal", color: "text-muted", style: tmp.messageText, children: null };
-      let intl = tmp5(1113).intl;
-      obj11.children = intl.string(tmp5(1113).t["rTU7/z"]);
-      obj10.children = tmp51(tmp5(5383).Text, obj11);
+      let intl = tmp5(1112).intl;
+      obj11.children = intl.string(tmp5(1112).t["rTU7/z"]);
+      obj10.children = tmp51(tmp5(5385).Text, obj11);
       let obj12 = obj10;
     } else {
-      obj12 = { style: tmp.message, children: tmp51(tmp5(6901).ActivityIndicator, { animating: true, size: "large" }) };
+      obj12 = { style: tmp.message, children: tmp51(tmp5(6900).ActivityIndicator, { animating: true, size: "large" }) };
     }
     tmp51Result = tmp51(c4, obj12);
   }
@@ -1507,13 +1507,13 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     header: null,
     children: null,
   };
-  const intl4 = tmp5(1113).intl;
+  const intl4 = tmp5(1112).intl;
   obj13.dismissAccessibilityLabel = intl4.string(require("util").t.x5SfWU);
   const obj14 = { title: null, subtitle: null };
-  const intl5 = tmp5(1113).intl;
+  const intl5 = tmp5(1112).intl;
   obj14.title = intl5.string(require("util").t.x5SfWU);
-  const intl6 = tmp5(1113).intl;
-  const t = tmp5(1113).t;
+  const intl6 = tmp5(1112).intl;
+  const t = tmp5(1112).t;
   obj14.subtitle = intl6.string(stateFromStores1 ? t["Vzc4+8"] : t.ZuXSRp);
   obj13.header = memo2(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj14);
   obj13.children = memo2(require("BottomSheetModal").BottomSheetScrollView, {

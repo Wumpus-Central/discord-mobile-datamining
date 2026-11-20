@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx
-import asyncRequireImpl from "../../../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02119_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 export default {
   open(initialRouteName) {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(15967, dependencyMap.paths),
+      asyncRequireImpl(15931, dependencyMap.paths),
       { initialRouteName },
       TWO_FA_SETUP_MODAL_KEY,
     );

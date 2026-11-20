@@ -7,7 +7,7 @@ import CollectiblesShopV2 from "../../../collectibles/native/CollectiblesShopV2.
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const constants = fn(1074).CollectiblesMobileShopScreen;
+const constants = fn(1073).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");

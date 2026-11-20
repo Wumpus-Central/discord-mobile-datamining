@@ -20,8 +20,8 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const SceneLoadingIndicator = Text(7071);
-const Form = Text(7590);
+const SceneLoadingIndicator = Text(7070);
+const Form = Text(7589);
 require = fn;
 function TemplateForm(guildId) {
   guildId = guildId.guildId;
@@ -118,21 +118,21 @@ function TemplateForm(guildId) {
           onConfirm: null,
           onCloseCallback: null,
         };
-        const intl = guildId(1113).intl;
-        obj2.title = intl.string(guildId(1113).t.pvRCSu);
-        const intl2 = guildId(1113).intl;
-        obj2.content = intl2.string(guildId(1113).t.DRi46S);
-        const intl3 = guildId(1113).intl;
-        obj2.confirmText = intl3.string(guildId(1113).t["6GQDFu"]);
-        const intl4 = guildId(1113).intl;
-        obj2.cancelText = intl4.string(guildId(1113).t.DmDzZB);
+        const intl = guildId(1112).intl;
+        obj2.title = intl.string(guildId(1112).t.pvRCSu);
+        const intl2 = guildId(1112).intl;
+        obj2.content = intl2.string(guildId(1112).t.DRi46S);
+        const intl3 = guildId(1112).intl;
+        obj2.confirmText = intl3.string(guildId(1112).t["6GQDFu"]);
+        const intl4 = guildId(1112).intl;
+        obj2.cancelText = intl4.string(guildId(1112).t.DmDzZB);
         obj2.onConfirm = function onConfirm() {
           return closure_0(true);
         };
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(5745).showConfirmModal(obj2);
+        guildId(5747).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -175,7 +175,7 @@ function TemplateForm(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -197,7 +197,7 @@ function TemplateForm(guildId) {
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(12141);
+                const obj2 = guildTemplate(12083);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -208,7 +208,7 @@ function TemplateForm(guildId) {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_0 = closure_2;
-              const aPIError = new handleSave(6228).APIError(closure_128_0);
+              const aPIError = new handleSave(6230).APIError(closure_128_0);
               closure_1_7(aPIError);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -378,7 +378,7 @@ function CopyRow(children) {
       color: ICON_FEEDBACK_CRITICAL,
       secondaryColor: tmp10(575).colors.WHITE,
     }),
-    metroImportDefault(tmp4(5383).Text, { variant: "body-sm/normal", children: children.label }),
+    metroImportDefault(tmp4(5385).Text, { variant: "body-sm/normal", children: children.label }),
   ];
   obj.children = items;
   return React5(View, obj);
@@ -386,7 +386,7 @@ function CopyRow(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   container: { flex: 1 },
   containerContent: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
@@ -494,7 +494,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(19933)(guildTemplate.code);
+  const tmp3 = guildTemplate(19753)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

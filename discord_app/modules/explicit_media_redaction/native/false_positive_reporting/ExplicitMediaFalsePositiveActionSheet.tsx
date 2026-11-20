@@ -74,7 +74,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   content: { padding: nativeDefault.space.PX_16 },
   contentContainer: { justifyContent: "center", textAlign: "center", alignItems: "center" },
@@ -96,8 +96,8 @@ obj2.mediaContainer = {
   marginTop: nativeDefault.space.PX_8,
   aspectRatio: "4 / 3",
 };
-const native = fn(1187);
-obj2.elevationShadow = native.generateBoxShadowStyle(fn(1187).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1186);
+obj2.elevationShadow = native.generateBoxShadowStyle(fn(1186).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj2.image = { resizeMode: "contain" };
 let obj5 = {
   width: "100%",

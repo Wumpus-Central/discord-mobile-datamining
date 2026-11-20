@@ -124,7 +124,7 @@ function BountiesModalContentInner(bounty) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -187,8 +187,8 @@ function BountiesModalContentInner(bounty) {
                   if (obj.isAndroid()) {
                     num = 0.15;
                   }
-                  obj = closure_1_0(1380);
-                  const tmpResult = closure_1_0(1380);
+                  obj = closure_1_0(1378);
+                  const tmpResult = closure_1_0(1378);
                   items = [];
                   let num3 = 0;
                   let num4 = 0;
@@ -213,13 +213,13 @@ function BountiesModalContentInner(bounty) {
                   items.push({ time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 });
                   arr = Array.from({ length: 6 }, (arg0, arg1) => 6 - arg1);
                   const obj3 = { time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 };
-                  closure_1_0(5010).triggerPattern(items);
-                  const tmp7Result = closure_1_0(5010);
+                  closure_1_0(5012).triggerPattern(items);
+                  const tmp7Result = closure_1_0(5012);
                 })();
               }
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp39) {
           if (tmp4 === c3) {
@@ -601,19 +601,19 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_17(height(sharedValue[42]).BountyVideoEndAppStoreProvider, obj2);
 }
 const View = fn(17).View;
-const QuestConstants = fn(6437);
+const QuestConstants = fn(6439);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16376);
+const BountiesModalConstants = fn(16198);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } =
   BountiesModalConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
-const ThemeTypes = fn(1083).ThemeTypes;
+const ThemeTypes = fn(1082).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let c18 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_20 = createStyles.createStyles(() => {
   const obj = {
     videoWrapper: { position: "absolute" },

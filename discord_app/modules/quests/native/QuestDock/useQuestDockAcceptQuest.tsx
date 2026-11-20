@@ -6,7 +6,7 @@ import QuestStore from "../../QuestStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const QuestDockMode = fn(6437).QuestDockMode;
+const QuestDockMode = fn(6439).QuestDockMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useQuestDockAcceptQuest.tsx");
 

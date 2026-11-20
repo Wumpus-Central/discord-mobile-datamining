@@ -1,23 +1,23 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockDragHandle.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import ActionSheetHeaderBar from "../../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import QuestDockGestureContext from "QuestDockGestureContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const QuestDockMode = fn(6437).QuestDockMode;
-let closure_6 = fn(16529).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6439).QuestDockMode;
+let closure_6 = fn(16352).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { dragHandleWrapper: null, dragHandle: null, dragHandleOverlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -72,7 +72,7 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   QuestDockDragHandleTsx1.__closure = items1;
   QuestDockDragHandleTsx1.__workletHash = 17506228702630;
   QuestDockDragHandleTsx1.__initData = tmp5;
-  const animatedStyle = _mod1655.useAnimatedStyle(QuestDockDragHandleTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(QuestDockDragHandleTsx1);
   const items2 = [
     closure_11,
     spring_spring.withSpring,
@@ -107,8 +107,8 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   QuestDockDragHandleTsx2.__closure = items3;
   QuestDockDragHandleTsx2.__workletHash = 5329516175324;
   QuestDockDragHandleTsx2.__initData = tmp11;
-  const animatedStyle1 = _mod1655.useAnimatedStyle(QuestDockDragHandleTsx2);
-  const tmp2Result = _mod1655;
+  const animatedStyle1 = _mod1653.useAnimatedStyle(QuestDockDragHandleTsx2);
+  const tmp2Result = _mod1653;
   const items4 = [
     closure_12,
     spring_spring.withSpring,
@@ -144,7 +144,7 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   QuestDockDragHandleTsx3.__workletHash = 1737041725862;
   QuestDockDragHandleTsx3.__initData = tmp18;
   let obj2 = { style: tmp.dragHandleWrapper, children: null };
-  const animatedStyle2 = _mod1655.useAnimatedStyle(QuestDockDragHandleTsx3);
+  const animatedStyle2 = _mod1653.useAnimatedStyle(QuestDockDragHandleTsx3);
   const obj3 = { style: null, layout: QuestDockUtils.dimensionsLayoutTransition, children: null };
   const items6 = [tmp.dragHandle, animatedStyle];
   obj3.style = items6;
@@ -163,7 +163,7 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
     variant: "overlay",
     accessibilityLabel: stringResult,
   });
-  const items8 = [metroImportDefault(_modDef1655.View, obj4)];
+  const items8 = [metroImportDefault(_modDef1653.View, obj4)];
   const obj5 = {
     style: null,
     pointerEvents: "none",
@@ -173,8 +173,8 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   };
   const items9 = [tmp.dragHandleOverlay, animatedStyle1];
   obj5.style = items9;
-  items8[1] = metroImportDefault(_modDef1655.View, obj5);
+  items8[1] = metroImportDefault(_modDef1653.View, obj5);
   obj3.children = items8;
-  obj2.children = React5(_modDef1655.View, obj3);
+  obj2.children = React5(_modDef1653.View, obj3);
   return metroImportDefault(React4, obj2);
 });

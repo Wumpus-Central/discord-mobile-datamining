@@ -2,21 +2,21 @@
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1708 from "../../../../../_runtime/metro/01708__.js";
+import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05052_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
 import useLaunchPadTypeDefault from "../../../launchpad/native/useLaunchPadType.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const LaunchPadGestureRefContextDefault = tmp(17569);
+const LaunchPadGestureRefContextDefault = tmp(17396);
 require = fn;
-const LaunchPadTypes = fn(11871).LaunchPadTypes;
-let PlatformUtils = fn(1380);
+const LaunchPadTypes = fn(11813).LaunchPadTypes;
+let PlatformUtils = fn(1378);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(17568);
+const PanelsConfig = fn(17395);
 let closure_6 = PlatformUtils
   ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG
   : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
@@ -91,20 +91,20 @@ export default function useMainTabsPanelsGesture(canDrag) {
   if (!canDrag.startShown) {
     num = openWidth;
   }
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(num);
   c8 = sharedValue;
-  const obj = require("../../../../../_runtime/metro/01655__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
   c9 = sharedValue1;
   ref = noop.useRef(false);
   items = [ref];
   callback = noop.useCallback((current) => {
     ref.current = current;
   }, items);
-  const tmp5Result = require("../../../../../_runtime/metro/01655__.js");
-  sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
-  const tmp5Result6 = require("../../../../../_runtime/metro/01655__.js");
-  sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const tmp5Result = require("../../../../../_runtime/metro/01653__.js");
+  sharedValue2 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  const tmp5Result6 = require("../../../../../_runtime/metro/01653__.js");
+  sharedValue3 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
   ref = noop.useRef(foldSeam);
   let items1 = [foldSeam, sharedValue1, sharedValue, openWidth];
   const effect = noop.useEffect(() => {
@@ -146,14 +146,14 @@ export default function useMainTabsPanelsGesture(canDrag) {
     useMainTabsPanelsGestureTsx1.__closure = items1;
     useMainTabsPanelsGestureTsx1.__workletHash = 6120850630646;
     useMainTabsPanelsGestureTsx1.__initData = tmp;
-    _mod1708.scheduleOnUI(useMainTabsPanelsGestureTsx1, c7);
+    _mod1706.scheduleOnUI(useMainTabsPanelsGestureTsx1, c7);
   }, items1);
   let items2 = [
     c9,
     sharedValue,
     openWidth,
     onVisibilityChange,
-    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01706__.js").scheduleOnRN,
     onPreMovement,
     c6,
     c8,
@@ -229,9 +229,9 @@ export default function useMainTabsPanelsGesture(canDrag) {
   useMainTabsPanelsGestureTsx3.__initData = tmp13;
   let items4 = [onVisibilityChange, onPreMovement, sharedValue, openWidth];
   callback1 = noop.useCallback(useMainTabsPanelsGestureTsx3, items4);
-  const tmp5Result7 = require("../../../../../_runtime/metro/01655__.js");
-  sharedValue4 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
-  const tmp5Result8 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp5Result7 = require("../../../../../_runtime/metro/01653__.js");
+  sharedValue4 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  const tmp5Result8 = require("../../../../../_runtime/metro/01653__.js");
   let items5 = [ref, sharedValue2];
   [tmp26, tmp27] = items5;
   function useMainTabsPanelsGestureTsx4() {
@@ -255,12 +255,12 @@ export default function useMainTabsPanelsGesture(canDrag) {
   useMainTabsPanelsGestureTsx5.__closure = items8;
   useMainTabsPanelsGestureTsx5.__workletHash = 10653285139228;
   useMainTabsPanelsGestureTsx5.__initData = tmp28;
-  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
     useMainTabsPanelsGestureTsx4,
     useMainTabsPanelsGestureTsx5,
   );
-  const tmp5Result9 = require("../../../../../_runtime/metro/01655__.js");
-  sharedValue5 = require("../../../../../_runtime/metro/01655__.js").useSharedValue({ x: 0, y: 0 });
+  const tmp5Result9 = require("../../../../../_runtime/metro/01653__.js");
+  sharedValue5 = require("../../../../../_runtime/metro/01653__.js").useSharedValue({ x: 0, y: 0 });
   context = obj3.useContext(LaunchPadGestureRefContextDefault);
   let items9 = [
     tmp4,
@@ -380,7 +380,7 @@ export default function useMainTabsPanelsGesture(canDrag) {
       .manualActivation(PlatformUtils2.isAndroid())
       .hitSlop(rect)
       .onTouchesDown(useMainTabsPanelsGestureTsx6);
-    const items4 = [closure_14, c9, _mod1708.scheduleOnRN, callback, c1];
+    const items4 = [closure_14, c9, _mod1706.scheduleOnRN, callback, c1];
     [tmp27, tmp28, tmp29, tmp30, tmp31] = items4;
     function useMainTabsPanelsGestureTsx8() {
       const result = _undefined.set(true);
@@ -431,7 +431,7 @@ export default function useMainTabsPanelsGesture(canDrag) {
       tmp25,
       sharedValue2,
       sharedValue4,
-      _mod1708.scheduleOnRN,
+      _mod1706.scheduleOnRN,
       callback,
       _undefined7,
       callback1,
@@ -489,7 +489,7 @@ export default function useMainTabsPanelsGesture(canDrag) {
       .onFinalize(useMainTabsPanelsGestureTsx10);
   }, items9);
   const items10 = [memo, sharedValue2, sharedValue3, sharedValue];
-  const tmp5Result10 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp5Result10 = require("../../../../../_runtime/metro/01653__.js");
   return {
     gesture: memo,
     panelGestureContext: noop.useMemo(

@@ -36,41 +36,44 @@ function TextRun(arg0) {
 }
 function RunSegment(arg0) {
   ({ segment, heading, styles } = arg0);
-  let linkColor = Object.assign(arg0, Object.assign({ segment: 0, heading: 0, styles: 0 }));
+  const merged = Object.assign(arg0, Object.assign({ segment: 0, heading: 0, styles: 0 }));
   const runs = segment.runs;
   const mapped = runs.map((run, index) => (
     <TextRun
       key={index}
       run={run}
       styles={styles}
-      textVariant={linkColor.textVariant}
-      boldTextVariant={linkColor.boldTextVariant}
-      headingVariants={linkColor.headingVariants}
+      textVariant={merged.textVariant}
+      boldTextVariant={merged.boldTextVariant}
+      headingVariants={merged.headingVariants}
     />
   ));
   const link = segment.link;
-  if (null == link) {
-    return mapped;
-  } else {
+  let tmp4Result = mapped;
+  if (null != link) {
     if (null == heading) {
-      let textVariant = linkColor.textVariant;
+      let textVariant = merged.textVariant;
     } else {
-      textVariant = linkColor.headingVariants[heading];
+      textVariant = merged.headingVariants[heading];
     }
     let obj = {
       variant: textVariant,
-      color: null,
-      accessibilityRole: "link",
+      color: merged.linkColor,
+      accessibilityRole: null,
+      accessible: null,
       style: null,
       onPress: null,
       children: null,
     };
-    linkColor = linkColor.linkColor;
-    obj.color = linkColor;
-    styles = styles.underline;
-    obj.style = styles;
+    let str = "text";
+    if (merged.linksAccessible) {
+      str = "link";
+    }
+    obj.accessibilityRole = str;
+    obj.accessible = merged.linksAccessible && undefined;
+    obj.style = styles.underline;
     obj.onPress = function onPress() {
-      const onLinkPress = linkColor.onLinkPress;
+      const onLinkPress = merged.onLinkPress;
       if (onLinkPress != null) {
         onLinkPress(link);
       }
@@ -78,15 +81,17 @@ function RunSegment(arg0) {
       const obj2 = { href: link };
     };
     obj.children = mapped;
-    jsx(styles(linkColor[3]).Text, {
+    tmp4Result = jsx(styles(merged[3]).Text, {
       variant: textVariant,
-      color: null,
-      accessibilityRole: "link",
+      color: merged.linkColor,
+      accessibilityRole: null,
+      accessible: null,
       style: null,
       onPress: null,
       children: null,
     });
   }
+  return tmp4Result;
 }
 function RunGroup(arg0) {
   ({ group, styles: require } = arg0);
@@ -109,7 +114,7 @@ function RunGroup(arg0) {
   return tmp3;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_4 = createStyles.createStyles({
   italic: { fontStyle: "italic" },
   underline: { textDecorationLine: "underline" },
@@ -121,23 +126,27 @@ export function HTMLText(onLinkPress) {
   const runs = onLinkPress.runs;
   let DEFAULT_TEXT_VARIANT = onLinkPress.textVariant;
   if (DEFAULT_TEXT_VARIANT === undefined) {
-    DEFAULT_TEXT_VARIANT = runs(9750).DEFAULT_TEXT_VARIANT;
+    DEFAULT_TEXT_VARIANT = runs(9751).DEFAULT_TEXT_VARIANT;
   }
   let DEFAULT_BOLD_TEXT_VARIANT = onLinkPress.boldTextVariant;
   if (DEFAULT_BOLD_TEXT_VARIANT === undefined) {
-    DEFAULT_BOLD_TEXT_VARIANT = runs(9750).DEFAULT_BOLD_TEXT_VARIANT;
+    DEFAULT_BOLD_TEXT_VARIANT = runs(9751).DEFAULT_BOLD_TEXT_VARIANT;
   }
   let DEFAULT_HEADING_VARIANTS = onLinkPress.headingVariants;
   if (DEFAULT_HEADING_VARIANTS === undefined) {
-    DEFAULT_HEADING_VARIANTS = runs(9750).DEFAULT_HEADING_VARIANTS;
+    DEFAULT_HEADING_VARIANTS = runs(9751).DEFAULT_HEADING_VARIANTS;
   }
   let native = onLinkPress.headingColor;
   if (native === undefined) {
-    native = runs(9750).DEFAULT_HEADING_COLORS.native;
+    native = runs(9751).DEFAULT_HEADING_COLORS.native;
   }
   let DEFAULT_LINK_COLOR = onLinkPress.linkColor;
   if (DEFAULT_LINK_COLOR === undefined) {
-    DEFAULT_LINK_COLOR = runs(9750).DEFAULT_LINK_COLOR;
+    DEFAULT_LINK_COLOR = runs(9751).DEFAULT_LINK_COLOR;
+  }
+  let flag = onLinkPress.linksAccessible;
+  if (flag === undefined) {
+    flag = true;
   }
   noop = undefined;
   dependencyMap = closure_4();
@@ -149,6 +158,7 @@ export function HTMLText(onLinkPress) {
     headingVariants: DEFAULT_HEADING_VARIANTS,
     headingColor: native,
     linkColor: DEFAULT_LINK_COLOR,
+    linksAccessible: flag,
     onLinkPress: onLinkPress.onLinkPress,
   };
   return memo.map((group, index) => {

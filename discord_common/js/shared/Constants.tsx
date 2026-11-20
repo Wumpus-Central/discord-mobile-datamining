@@ -528,11 +528,11 @@ obj8.QUEST_BAR_PREVIEW = function QUEST_BAR_PREVIEW(arg0) {
   return "" + sum + "/quest-bar-preview?ad_creative_ids=" + arg0;
 };
 const frozen7 = Object.freeze(obj8);
-fn(1081);
+fn(1080);
 const obj7 = {
   TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
 };
-const PathUtils = fn(1081);
+const PathUtils = fn(1080);
 const wrapPathsResult = PathUtils.wrapPaths(frozen7);
 const frozen8 = Object.freeze({
   FACEBOOK_URL: "https://www.facebook.com/discord/",
@@ -543,8 +543,8 @@ const frozen8 = Object.freeze({
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/Constants.tsx");
 
-export const ThemeExtends = fn(1085).ThemeExtends;
-export const ThemeTypes = fn(1085).ThemeTypes;
+export const ThemeExtends = fn(1084).ThemeExtends;
+export const ThemeTypes = fn(1084).ThemeTypes;
 export const APP_URL_PREFIX = sum;
 export const VANITY_URL_PREFIX = text;
 export const PRIMARY_DOMAIN = "discord.com";
@@ -662,10 +662,10 @@ export const BasicPermissions = {
   [1048576]: "CONNECT",
 };
 export const Permissions = frozen5;
-export const NOOP = fn(1086).NOOP;
-export const NOOP_NULL = fn(1086).NOOP_NULL;
-export const NOOP_PROMISE = fn(1086).NOOP_PROMISE;
-export const NOOP_TRUE = fn(1086).NOOP_TRUE;
+export const NOOP = fn(1085).NOOP;
+export const NOOP_NULL = fn(1085).NOOP_NULL;
+export const NOOP_PROMISE = fn(1085).NOOP_PROMISE;
+export const NOOP_TRUE = fn(1085).NOOP_TRUE;
 export const ElevatedPermissionsList = items23;
 export const ElevatedPermissions = applyResult;
 export const RPC_VERSION = 1;
@@ -1308,7 +1308,7 @@ export const SKUFeatureTypes = {
   SECURE_NETWORKING: 13,
   [13]: "SECURE_NETWORKING",
 };
-export const GameGenres = fn(1087).GameGenres;
+export const GameGenres = fn(1086).GameGenres;
 export const PriceTierTypes = {
   GUILD_ROLE_SUBSCRIPTIONS: 1,
   [1]: "GUILD_ROLE_SUBSCRIPTIONS",

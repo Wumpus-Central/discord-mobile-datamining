@@ -6,7 +6,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildNSFWContentLevel: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/AgeGateUtils.tsx");

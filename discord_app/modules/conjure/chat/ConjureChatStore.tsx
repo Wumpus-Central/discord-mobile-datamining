@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef4089 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
 import conjureChatTurns from "conjureChatTurns.tsx";
 import conjureStepTimeline from "conjureStepTimeline.tsx";
 import conjureChatHistory from "conjureChatHistory.tsx";
@@ -1294,7 +1294,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                   items = [];
                   const obj2 = { type: "step", kind: "terminal_error", message: null };
                   const intl = util.intl;
-                  obj2.message = intl.string(_modDef4089.lmiuFX);
+                  obj2.message = intl.string(_modDef4091.lmiuFX);
                   items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                   obj.steps = items;
                   tmp7 = obj;

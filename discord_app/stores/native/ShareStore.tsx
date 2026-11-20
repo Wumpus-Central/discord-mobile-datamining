@@ -17,7 +17,7 @@ function handleTokenUpdated(token) {
   token = token.token;
   return false;
 }
-const AppStates = fn(1072).AppStates;
+const AppStates = fn(1071).AppStates;
 const Store = initializeDefault.Store;
 class ShareStore extends Store {}
 ShareStore.prototype["initialize"] = function initialize() {

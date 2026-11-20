@@ -56,7 +56,7 @@ function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChanne
     }
   }
 }
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/MessageAttachmentUtils.tsx");
 
@@ -147,10 +147,10 @@ export function useShouldObscure(channel) {
     }
     return canResult;
   });
-  const RenderSpoilers = channel(4617).RenderSpoilers;
+  const RenderSpoilers = channel(4619).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(563);
-  const enabledHarmTypesBitmaskForChannelType = channel(8105).getEnabledHarmTypesBitmaskForChannelType(channel(8111).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(8104).getEnabledHarmTypesBitmaskForChannelType(channel(8110).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 }
 export function getObscuredAlt(arg0) {

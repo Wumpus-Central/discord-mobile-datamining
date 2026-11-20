@@ -9,13 +9,13 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8593).MobileUserSettings.ACCOUNT,
+  parent: fn(8592).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountUsernameSettingTrailing() {
     items = [UserStore];
     return initialize.useStateFromStores(items, () =>
@@ -39,7 +39,7 @@ const route = SettingBuilders.createRoute({
     return tmp5;
   },
   screen: {
-    route: fn(1072).UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
+    route: fn(1071).UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
     getComponent() {
       return require("UserSettingsChangeUsername").default;
     },

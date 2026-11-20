@@ -8,7 +8,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import FavoriteStore from "../FavoriteStore.tsx";
 
 require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
 

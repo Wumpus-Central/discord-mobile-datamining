@@ -4,7 +4,7 @@ import LurkingStore from "../LurkingStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const JoinGuildSources = fn(1072).JoinGuildSources;
+const JoinGuildSources = fn(1071).JoinGuildSources;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/native/useIsGameCommunityServerPreview.tsx");
 

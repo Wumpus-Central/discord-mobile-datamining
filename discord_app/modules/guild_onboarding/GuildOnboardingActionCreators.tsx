@@ -129,10 +129,10 @@ function _updateOnboardingResponses(c0, arg1) {
     return catchPromise;
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, AnalyticsPages: closure_11, Endpoints: closure_12 } = Constants);
-const GuildMemberFlags = fn(4710).GuildMemberFlags;
-const ReadStateTypes = fn(6432).ReadStateTypes;
+const GuildMemberFlags = fn(4712).GuildMemberFlags;
+const ReadStateTypes = fn(6434).ReadStateTypes;
 let obj = {
   selectOption(guildId, id, id2, selected) {
     let dispatch = GuildOnboardingPromptsStore.getOnboardingPrompt(id);
@@ -205,22 +205,22 @@ obj.completeOnboarding = function completeOnboarding(c0, c2) {
     tmp = dependencyMap[dependencyMap.length - 1];
   }
   const selectedOptions = GuildOnboardingPromptsStore.getSelectedOptions(c0);
-  const selectedRoleIds = items1(6567).getSelectedRoleIds(selectedOptions);
-  const obj2 = items1(6567);
-  const selectedChannelIds = items1(6567).getSelectedChannelIds(selectedOptions);
+  const selectedRoleIds = items1(6569).getSelectedRoleIds(selectedOptions);
+  const obj2 = items1(6569);
+  const selectedChannelIds = items1(6569).getSelectedChannelIds(selectedOptions);
   if (GuildOnboardingPromptsStore.getEnabled(c0)) {
     let defaultChannelIds = GuildOnboardingPromptsStore.getDefaultChannelIds(c0);
   } else {
     defaultChannelIds = [];
   }
-  const obj3 = items1(6567);
-  const tmp2Result = items1(6567);
-  [arr3, arr4] = items1(6567).getChannelCoverageForOnboarding(c0, dependencyMap, defaultChannelIds);
+  const obj3 = items1(6569);
+  const tmp2Result = items1(6569);
+  [arr3, arr4] = items1(6569).getChannelCoverageForOnboarding(c0, dependencyMap, defaultChannelIds);
   items = [...defaultChannelIds];
   const mapped = items.map((item) => channel.getChannel(item));
-  const found = mapped.filter(tmp2(1255).isNotNullish);
-  const tmp6 = _slicedToArray(items1(6567).getChannelCoverageForOnboarding(c0, dependencyMap, defaultChannelIds), 2);
-  const tmp2Result11 = items1(7356);
+  const found = mapped.filter(tmp2(1254).isNotNullish);
+  const tmp6 = _slicedToArray(items1(6569).getChannelCoverageForOnboarding(c0, dependencyMap, defaultChannelIds), 2);
+  const tmp2Result11 = items1(7355);
   if (null == tmp) {
     items1 = [];
   } else {
@@ -229,13 +229,13 @@ obj.completeOnboarding = function completeOnboarding(c0, c2) {
   }
   const connections = GuildOnboardingPromptsStore.getConnections(c0);
   const set = new Set(items);
-  const providerConnectionState = items1(6567).getProviderConnectionState(connections);
-  const tmp2Result12 = items1(6567);
-  const applicationConnectionState = items1(6567).getApplicationConnectionState(connections);
-  const tmp2Result13 = items1(6567);
+  const providerConnectionState = items1(6569).getProviderConnectionState(connections);
+  const tmp2Result12 = items1(6569);
+  const applicationConnectionState = items1(6569).getApplicationConnectionState(connections);
+  const tmp2Result13 = items1(6569);
   const obj4 = {};
   const obj8 = AnalyticsUtilsDefault;
-  const merged = Object.assign(items1(5529).collectGuildAnalyticsMetadata(c0));
+  const merged = Object.assign(items1(5531).collectGuildAnalyticsMetadata(c0));
   obj4.step = dependencyMap.length - 1;
   let num2 = 0;
   if (null != tmp) {
@@ -255,8 +255,8 @@ obj.completeOnboarding = function completeOnboarding(c0, c2) {
   ({ connected: obj9.application_connections_connected, notConnected: obj9.application_connections_not_connected } =
     applicationConnectionState);
   obj8.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj4);
-  const tmp2Result14 = items1(5529);
-  const tmp2Result15 = items1(7357);
+  const tmp2Result14 = items1(5531);
+  const tmp2Result15 = items1(7356);
   tmp2Result15.ackGuildFeature(
     c0,
     ReadStateTypes.GUILD_ONBOARDING_QUESTION,
@@ -264,13 +264,13 @@ obj.completeOnboarding = function completeOnboarding(c0, c2) {
   );
   _updateOnboardingResponses(c0, true);
   if (ImpersonateStore.isFullServerPreview(c0)) {
-    const result = tmp2(7174).updateImpersonatedChannels(c0, items, []);
-    const tmp2Result16 = tmp2(7174);
+    const result = tmp2(7173).updateImpersonatedChannels(c0, items, []);
+    const tmp2Result16 = tmp2(7173);
     const obj5 = { optInEnabled: defaultChannelIds.length > 0 };
-    const result1 = tmp2(7174).updateImpersonatedData(c0, obj5);
-    const tmp2Result17 = tmp2(7174);
+    const result1 = tmp2(7173).updateImpersonatedData(c0, obj5);
+    const tmp2Result17 = tmp2(7173);
     const _Array = Array;
-    const result2 = tmp2(7174).updateImpersonatedRoles(c0, Array.from(selectedRoleIds));
+    const result2 = tmp2(7173).updateImpersonatedRoles(c0, Array.from(selectedRoleIds));
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
       const member = GuildMemberStore.getMember(c0, currentUser.id);
@@ -283,13 +283,13 @@ obj.completeOnboarding = function completeOnboarding(c0, c2) {
       }
       const obj6 = { memberOptions: null };
       const obj7 = { flags: null };
-      const tmp2Result19 = tmp2(7174);
-      obj7.flags = tmp2(1406).setFlag(num3, GuildMemberFlags.COMPLETED_ONBOARDING, true);
+      const tmp2Result19 = tmp2(7173);
+      obj7.flags = tmp2(1404).setFlag(num3, GuildMemberFlags.COMPLETED_ONBOARDING, true);
       obj6.memberOptions = obj7;
       const result3 = tmp2Result19.updateImpersonatedData(c0, obj6);
-      const tmp2Result20 = tmp2(1406);
+      const tmp2Result20 = tmp2(1404);
     }
-    const tmp2Result18 = tmp2(7174);
+    const tmp2Result18 = tmp2(7173);
   }
   const tmp12Result = SnowflakeUtilsDefault;
 };
@@ -327,7 +327,7 @@ obj.resetOnboarding = function resetOnboarding(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -353,8 +353,8 @@ obj.resetOnboarding = function resetOnboarding(arg0) {
                 v0 = 0;
               }
               const obj6 = { flags: null };
-              const obj2 = v0(7367);
-              obj6.flags = v0(1406).setFlag(v0, constants.COMPLETED_ONBOARDING, false);
+              const obj2 = v0(7366);
+              obj6.flags = v0(1404).setFlag(v0, constants.COMPLETED_ONBOARDING, false);
               dependencyMap = 1;
               c1 = 1;
               const obj7 = { value: obj2.updateGuildSelfMember(closure_0, obj6), done: false };
@@ -370,7 +370,7 @@ obj.resetOnboarding = function resetOnboarding(arg0) {
           return obj;
         }
         c1 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp13) {
         c1 = tmp;
         throw tmp13;

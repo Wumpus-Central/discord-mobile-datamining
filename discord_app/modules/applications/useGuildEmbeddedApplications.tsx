@@ -8,7 +8,7 @@ import ApplicationStore from "ApplicationStore.tsx";
 const require = fn;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1072).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
+  getQueryId: fn(1071).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
   failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   get(arg0, arg1) {
     const guildEmbeddedApplications = ApplicationStore.getGuildEmbeddedApplications(arg1, arg0);
@@ -40,7 +40,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         return obj;
       }
       c3 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp11) {
       c3 = tmp;
       throw tmp11;

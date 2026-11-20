@@ -1,18 +1,18 @@
 // discord_app/modules/forums/native/ForumPostPlaceholder.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1655 from "../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { postPlaceholder: { height: 2 * nativeDefault.space.PX_64, marginBottom: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = {
@@ -30,10 +30,10 @@ export default noop.memo(function ForumPostPlaceholder() {
     closure_8,
     stateFromStores,
     0.55,
-    _mod1655.withDelay,
+    _mod1653.withDelay,
     1000,
-    _mod1655.withRepeat,
-    _mod1655.withSequence,
+    _mod1653.withRepeat,
+    _mod1653.withSequence,
     timing_timing.withTiming,
     _slicedToArray(
       noop.useState(() => {
@@ -85,13 +85,13 @@ export default noop.memo(function ForumPostPlaceholder() {
   ForumPostPlaceholderTsx1.__closure = items2;
   ForumPostPlaceholderTsx1.__workletHash = 3389663500091;
   ForumPostPlaceholderTsx1.__initData = tmp5;
-  const animatedStyle = _mod1655.useAnimatedStyle(ForumPostPlaceholderTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(ForumPostPlaceholderTsx1);
   const obj3 = {
     style: animatedStyle,
     pointerEvents: "none",
     children: jsx(Card.Card, { variant: "secondary", style: tmp.postPlaceholder }),
   };
-  return jsx(_modDef1655.View, {
+  return jsx(_modDef1653.View, {
     style: animatedStyle,
     pointerEvents: "none",
     children: jsx(Card.Card, { variant: "secondary", style: tmp.postPlaceholder }),

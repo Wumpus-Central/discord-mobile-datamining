@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish_eval/conjurePublishEvalConnection.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import v1 from "../../../../_runtime/01269_v1.js";
+import v1 from "../../../../_runtime/01268_v1.js";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

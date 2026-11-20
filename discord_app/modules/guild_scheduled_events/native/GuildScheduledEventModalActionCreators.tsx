@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventModalActionCreators.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
@@ -36,11 +36,11 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
   if (null != recurrenceId) {
     _modDef38(null != guildEvent, "recurrence editing requires a guild event");
     const obj3 = { guildEvent, recurrenceId, onCloseModal: handleClose };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7474, dependencyMap.paths), obj3, closure_13);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7473, dependencyMap.paths), obj3, closure_13);
   } else {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     const obj5 = { guild, targetChannel: tmp, initialGuildEvent: guildEvent, onCloseModal: handleClose };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7511, dependencyMap.paths), obj5, closure_13);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7510, dependencyMap.paths), obj5, closure_13);
   }
 }
 let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
@@ -54,7 +54,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
           const obj = closure_131_0(closure_131_2[32]);
         }
         c5 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp23) {
       c5 = tmp;
@@ -106,17 +106,17 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
     }
   }
 };
-let GuildScheduledEventStore = fn(6512);
+let GuildScheduledEventStore = fn(6514);
 ({ isGuildEventEnded: closure_9, isGuildScheduledEventActive: closure_10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-let closure_12 = fn(4647).GuildScheduledEventUserResponses;
-const GuildEventModalConstants = fn(7450);
+let closure_12 = fn(4649).GuildScheduledEventUserResponses;
+const GuildEventModalConstants = fn(7449);
 ({
   CREATE_GUILD_EVENT_MODAL_KEY: map1,
   GUILD_EVENTS_LIST_ACTION_SHEET_KEY: closure_14,
   START_EVENT_MODAL_KEY: closure_15,
 } = GuildEventModalConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ InstantInviteSources: closure_16, Permissions: closure_17, Routes: closure_18 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -126,7 +126,7 @@ let result = size.fileFinishedImporting(
 
 export { openCreateOrEditGuildEventModal };
 export function openGuildEventListActionSheet(guild) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7896, dependencyMap.paths), gesture, { guild });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7895, dependencyMap.paths), gesture, { guild });
 }
 export function closeGuildEventListActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(gesture);
@@ -134,7 +134,7 @@ export function closeGuildEventListActionSheet() {
 export function openStartGuildEventModal(event, recurrenceId, onCloseActionSheet) {
   ActionSheetActionCreatorsDefault.hideAllActionSheets();
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(7910, dependencyMap.paths),
+    asyncRequireImpl(7909, dependencyMap.paths),
     { event, recurrenceId, onCloseActionSheet },
     colors,
   );
@@ -391,7 +391,7 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
             obj2.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideAllActionSheets();
               ModalActionCreatorsDefault.pushLazy(
-                asyncRequireImpl(7910, dependencyMap.paths),
+                asyncRequireImpl(7909, dependencyMap.paths),
                 { event, recurrenceId, onCloseActionSheet: "Array" },
                 colors,
               );

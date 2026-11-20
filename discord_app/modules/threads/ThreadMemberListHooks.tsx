@@ -9,7 +9,7 @@ import ThreadMemberListStore from "ThreadMemberListStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const StatusTypes = fn(1083).StatusTypes;
+const StatusTypes = fn(1082).StatusTypes;
 let closure_7 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/ThreadMemberListHooks.tsx");

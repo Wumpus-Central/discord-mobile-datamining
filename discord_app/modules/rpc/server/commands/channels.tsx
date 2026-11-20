@@ -70,11 +70,11 @@ let closure_19 = async function _getGuildVoiceSnapshot() {
   });
   return obj;
 };
-const ChannelRecord = fn(4645);
+const ChannelRecord = fn(4647);
 ({ isVoiceChannel: hasOwnProperty, isTextChannel: closure_6 } = ChannelRecord);
-let Constants = fn(6233);
+let Constants = fn(6235);
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
-Constants = fn(1072);
+Constants = fn(1071);
 ({
   Routes: closure_14,
   Permissions: closure_15,
@@ -83,7 +83,7 @@ Constants = fn(1072);
   ChannelTypes: closure_17,
 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15593);
+let CONTEXT_MENU_ICON_NAMES = fn(15557);
 let obj3 = { scope: null, validateAccess: null, handler: null };
 let obj4 = {};
 let items = [
@@ -160,7 +160,7 @@ obj3.handler = function handler(args) {
   obj2 = guildVoice;
 };
 obj[RPCCommands.GET_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNEL, obj3);
-CONTEXT_MENU_ICON_NAMES = fn(15593);
+CONTEXT_MENU_ICON_NAMES = fn(15557);
 let obj6 = { scope: null, validateAccess: null, handler: null };
 let obj7 = {};
 const items1 = [fn(6794).OAuth2Scopes.RPC, fn(6794).OAuth2Scopes.BOT, fn(6794).OAuth2Scopes.SDK_SOCIAL_LAYER];
@@ -191,7 +191,7 @@ obj6.handler = function handler(args) {
     const tmp19 = new guild(6790)(obj3, "Invalid guild");
     throw tmp19;
   }
-  obj = socket(15589);
+  obj = socket(15553);
   const tmp3 = guild;
   const values = guild(12).values(ChannelStore.loadAllGuildAndPrivateChannelsFromDisk());
   let found = values;
@@ -230,7 +230,7 @@ obj6.handler = function handler(args) {
   return obj5;
 };
 obj[RPCCommands.GET_CHANNELS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNELS, obj6);
-CONTEXT_MENU_ICON_NAMES = fn(15593);
+CONTEXT_MENU_ICON_NAMES = fn(15557);
 let obj9 = { scope: null, validateAccess: null, handler: null };
 let obj10 = {};
 const items2 = [
@@ -280,7 +280,7 @@ obj[RPCCommands.GET_CHANNEL_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCComm
   RPCCommands.GET_CHANNEL_PERMISSIONS,
   obj9,
 );
-CONTEXT_MENU_ICON_NAMES = fn(15593);
+CONTEXT_MENU_ICON_NAMES = fn(15557);
 let obj12 = { scope: null, handler: null };
 let obj13 = {};
 const items3 = [fn(6794).OAuth2Scopes.RPC, RPC_EMBEDDED_APP_SCOPE, fn(6794).OAuth2Scopes.SDK_SOCIAL_LAYER];
@@ -458,7 +458,7 @@ obj12.handler = function handler(args) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -630,7 +630,7 @@ obj[RPCCommands.SELECT_VOICE_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand
   RPCCommands.SELECT_VOICE_CHANNEL,
   obj12,
 );
-CONTEXT_MENU_ICON_NAMES = fn(15593);
+CONTEXT_MENU_ICON_NAMES = fn(15557);
 const obj15 = { scope: null, handler: null };
 const obj16 = {};
 const items4 = [fn(6794).OAuth2Scopes.RPC, fn(6794).OAuth2Scopes.RPC_VOICE_READ];
@@ -657,7 +657,7 @@ obj[RPCCommands.GET_SELECTED_VOICE_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCC
   RPCCommands.GET_SELECTED_VOICE_CHANNEL,
   obj15,
 );
-CONTEXT_MENU_ICON_NAMES = fn(15593);
+CONTEXT_MENU_ICON_NAMES = fn(15557);
 obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SELECT_TEXT_CHANNEL, {
   scope: fn(6794).OAuth2Scopes.RPC,
   handler(args) {
@@ -669,9 +669,9 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
       num = 0;
     }
     if (null == channel_id) {
-      socket(1099).transitionTo(constants.ME);
+      socket(1098).transitionTo(constants.ME);
       let nextPromise1 = null;
-      let obj = socket(1099);
+      let obj = socket(1098);
     } else {
       const storeWaitResult = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num);
       const catchPromise = server
@@ -713,11 +713,11 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
         .then((result) => {
           [tmp, tmp2] = result;
           if (null == tmp2.guild_id) {
-            const privateChannel = channel_id(6408).selectPrivateChannel(tmp.id);
-            const obj3 = channel_id(6408);
+            const privateChannel = channel_id(6410).selectPrivateChannel(tmp.id);
+            const obj3 = channel_id(6410);
           } else if (PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
-            socket(1099).replaceWith(closure_1_14.CHANNEL(tmp2.guild_id, tmp.id));
-            const obj2 = socket(1099);
+            socket(1098).replaceWith(closure_1_14.CHANNEL(tmp2.guild_id, tmp.id));
+            const obj2 = socket(1098);
           } else {
             const obj = { errorCode: constants2.INVALID_CHANNEL };
             const tmp9 = new channel_id(6790)(obj, "No permission to see channel");
@@ -757,7 +757,7 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
     return nextPromise1;
   },
 });
-CONTEXT_MENU_ICON_NAMES = fn(15593);
+CONTEXT_MENU_ICON_NAMES = fn(15557);
 const obj18 = {
   scope: fn(6794).OAuth2Scopes.RPC,
   handler(args) {
@@ -769,9 +769,9 @@ const obj18 = {
       num = 0;
     }
     if (null == channel_id) {
-      socket(1099).transitionTo(constants.ME);
+      socket(1098).transitionTo(constants.ME);
       let nextPromise1 = null;
-      let obj = socket(1099);
+      let obj = socket(1098);
     } else {
       const storeWaitResult = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num);
       const catchPromise = server
@@ -813,11 +813,11 @@ const obj18 = {
         .then((result) => {
           [tmp, tmp2] = result;
           if (null == tmp2.guild_id) {
-            const privateChannel = channel_id(6408).selectPrivateChannel(tmp.id);
-            const obj3 = channel_id(6408);
+            const privateChannel = channel_id(6410).selectPrivateChannel(tmp.id);
+            const obj3 = channel_id(6410);
           } else if (PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
-            socket(1099).replaceWith(closure_1_14.CHANNEL(tmp2.guild_id, tmp.id));
-            const obj2 = socket(1099);
+            socket(1098).replaceWith(closure_1_14.CHANNEL(tmp2.guild_id, tmp.id));
+            const obj2 = socket(1098);
           } else {
             const obj = { errorCode: constants2.INVALID_CHANNEL };
             const tmp9 = new channel_id(6790)(obj, "No permission to see channel");

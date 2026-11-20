@@ -78,7 +78,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4636).Interval();
+    const interval = new obj(4638).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -537,7 +537,7 @@ const SpotifyConstants = fn(6778);
   SpotifyEndpoints: closure_16,
   SpotifyResourceTypes: closure_17,
 } = SpotifyConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 const PlatformTypes = Constants.PlatformTypes;
 ({ ActivityFlags: closure_19, AnalyticEvents: closure_20 } = Constants);
 const user = Platforms.get(PlatformTypes.SPOTIFY);
@@ -554,11 +554,11 @@ const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-const timeout = new fn(4636).Timeout();
-const timeout1 = new fn(4636).Timeout();
-const timeout2 = new fn(4636).Timeout();
-const timeout3 = new fn(4636).Timeout();
-const timeout4 = new fn(4636).Timeout();
+const timeout = new fn(4638).Timeout();
+const timeout1 = new fn(4638).Timeout();
+const timeout2 = new fn(4638).Timeout();
+const timeout3 = new fn(4638).Timeout();
+const timeout4 = new fn(4638).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -1338,7 +1338,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(6509);
+        obj9 = device(6511);
       }
       if (null != tmp10) {
         if (!tmp22) {
@@ -1408,8 +1408,8 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
               obj7.author_ids = artists.map((id) => id.id);
               const artists1 = tmp10.artists;
               obj7.author_names = artists1.map((name) => name.name);
-              tmp25(1256).track(constants4.ACTIVITY_UPDATED, obj7);
-              const tmp25Result2 = tmp25(1256);
+              tmp25(1255).track(constants4.ACTIVITY_UPDATED, obj7);
+              const tmp25Result2 = tmp25(1255);
             }
           } else {
             tmp55 = flag;

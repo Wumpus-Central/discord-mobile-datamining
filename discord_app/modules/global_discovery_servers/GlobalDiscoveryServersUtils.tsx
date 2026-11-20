@@ -1,7 +1,7 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
 import util from "../../intl/index.native.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
-import v1 from "../../../_runtime/01269_v1.js";
+import v1 from "../../../_runtime/01268_v1.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
@@ -31,7 +31,7 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "Path";
 };
-const GlobalDiscoveryServersConstants = fn(7877);
+const GlobalDiscoveryServersConstants = fn(7876);
 ({
   GlobalDiscoveryServerTab: closure_6,
   FEATURED_GUILDS_CACHE_DURATION: metroImportDefault,
@@ -40,7 +40,7 @@ const GlobalDiscoveryServersConstants = fn(7877);
   getLanguageOptions: closure_10,
   HUBS_CATEGORY_ID: closure_11,
 } = GlobalDiscoveryServersConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
@@ -217,8 +217,8 @@ export function fromDiscoverableGuildSearchResult(id) {
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "isArray",
-    discoverySplash: "indeks",
-    emojis: "kartotek",
+    discoverySplash: "body-md/medium",
+    emojis: "text-link",
   };
   ({
     approximate_presence_count: obj.presenceCount,

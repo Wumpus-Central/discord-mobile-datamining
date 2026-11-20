@@ -32,7 +32,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   } else if (2 === tmp7) {
     c3 = 0;
     c5 = 3;
-    return { value: "HermesInternal", done: "+60" };
+    return { value: "HermesInternal", done: null };
   } else if (3 === tmp7) {
     if (arg0 === 1) {
       c5 = 3;
@@ -186,7 +186,7 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
     }
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_6, AbortCodes: metroImportDefault, MessageStates: closure_8, MessageFlags: closure_9 } = Constants);
 const InteractionStatusViewState = { SENDING: 0, [0]: "SENDING", CREATED: 1, [1]: "CREATED", FAILED: 2, [2]: "FAILED", TIMED_OUT: 3, [3]: "TIMED_OUT", EPHEMERAL_SUCCESS: 4, [4]: "EPHEMERAL_SUCCESS" };
 const size = fn(2);
@@ -348,4 +348,4 @@ export function canRetryInteractionData(interactionData) {
   }
   return true;
 }
-export const interactionCallbackErrorReason = fn(5850).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(5852).interactionCallbackErrorReason;

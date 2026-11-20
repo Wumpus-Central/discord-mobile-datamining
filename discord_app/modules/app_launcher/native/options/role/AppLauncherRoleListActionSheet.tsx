@@ -90,8 +90,8 @@ class RoleRow {
     return tmp7(guildRole(closure_3[11]).TableRow, obj1, guildRole.id);
   }
 }
-const isEveryoneRole = fn(4699).isEveryoneRole;
-const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
+const isEveryoneRole = fn(4701).isEveryoneRole;
+const DEFAULT_ROLE_COLOR_HEX = fn(1071).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const AppLauncherRoleListActionSheet = "AppLauncherRoleListActionSheet";

@@ -8,9 +8,9 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const GameConsoleConstants = fn(6954);
+const GameConsoleConstants = fn(6953);
 ({ XBOX_HANDOFF_SEARCH_PARAMS: closure_6, XBOX_URL_BASE: metroImportDefault } = GameConsoleConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_8, ZERO_STRING_GUILD_ID: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/getXboxURIForChannel.tsx");

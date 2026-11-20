@@ -6,9 +6,9 @@ import CircleErrorIcon from "../../../design/components/Icon/native/redesign/gen
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_5 = createStyles.createStyles({ header: { alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx");

@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UserRecord from "../../../../records/UserRecord.tsx";
 
 require = fn;
-const MessageStates = fn(1072).MessageStates;
+const MessageStates = fn(1071).MessageStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx");
 

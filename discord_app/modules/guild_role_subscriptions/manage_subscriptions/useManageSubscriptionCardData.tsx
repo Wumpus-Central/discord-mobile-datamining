@@ -7,7 +7,7 @@ import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
+const SubscriptionStatusTypes = fn(1071).SubscriptionStatusTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/manage_subscriptions/useManageSubscriptionCardData.tsx",

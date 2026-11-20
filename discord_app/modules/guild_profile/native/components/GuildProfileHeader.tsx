@@ -16,7 +16,7 @@ const View = fn(17).View;
 const getBadgeTooltip = fn(9632).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 },
   avatarBackground: null,

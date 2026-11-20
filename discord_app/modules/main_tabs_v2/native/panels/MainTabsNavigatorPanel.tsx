@@ -16,12 +16,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ComponentActions: closure_8, ME: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -85,11 +85,11 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(17565);
+        obj = obj(17392);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(4977).dismissKeyboard();
-        const objResult = obj(4977);
+        obj(4979).dismissKeyboard();
+        const objResult = obj(4979);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;

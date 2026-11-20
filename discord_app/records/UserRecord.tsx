@@ -9,76 +9,76 @@ import Record from "../lib/Record.tsx";
 const AvatarUtilsDefault = AvatarUtils;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   LOCAL_BOT_ID: closure_4,
   NON_USER_BOT_DISCRIMINATOR: hasOwnProperty,
   PREMIUM_TYPE_NONE: closure_6,
   UserFlags: metroImportDefault,
 } = Constants);
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({ SKU_ID_PURCHASED_FLAGS: closure_8, PremiumTypes: closure_9, PurchasedFlags: closure_10 } = PremiumConstants);
 class UserRecord extends tmp2 {
   constructor(arg0) {
     closure_0 = undefined;
-    tmp6 = new UserRecord(tmp5, tmp4, tmp3, tmp2, new.target, tmp, global, new.target, undefined);
-    closure_0 = tmp6;
-    tmp6.hasFlag = function hasFlag() {
+    tmp7 = new UserRecord(tmp6, tmp5, tmp4, tmp3, new.target, tmp2, new.target, undefined, tmp);
+    closure_0 = tmp7;
+    tmp7.hasFlag = function hasFlag() {
       return false;
     };
-    tmp6.isStaff = function isStaff() {
+    tmp7.isStaff = function isStaff() {
       return false;
     };
-    tmp6.isStaffPersonal = function isStaffPersonal() {
+    tmp7.isStaffPersonal = function isStaffPersonal() {
       return false;
     };
-    tmp6.hasAnyStaffLevel = function hasAnyStaffLevel() {
+    tmp7.hasAnyStaffLevel = function hasAnyStaffLevel() {
       return false;
     };
     premiumType = global.premium_type;
     if (premiumType == null) {
       premiumType = global.premiumType;
     }
-    ({ id: tmp6.id, username } = global);
+    ({ id: tmp7.id, username } = global);
     if (username == null) {
       username = "";
     }
-    tmp6.username = username;
+    tmp7.username = username;
     discriminator = global.discriminator;
     if (discriminator == null) {
       discriminator = closure_5;
     }
-    tmp6.discriminator = discriminator;
+    tmp7.discriminator = discriminator;
     avatar = global.avatar;
     if (avatar == null) {
       avatar = null;
     }
-    tmp6.avatar = avatar;
+    tmp7.avatar = avatar;
     avatarDecorationData = global.avatar_decoration_data;
     if (avatarDecorationData == null) {
       avatarDecorationData = global.avatarDecorationData;
     }
-    tmp6.avatarDecoration = avatarDecorationData;
+    tmp7.avatarDecoration = avatarDecorationData;
     email = global.email;
     if (email == null) {
       email = null;
     }
-    tmp6.email = email;
+    tmp7.email = email;
     flag = global.verified;
     if (flag == null) {
       flag = false;
     }
-    tmp6.verified = flag;
+    tmp7.verified = flag;
     flag2 = global.bot;
     if (flag2 == null) {
       flag2 = false;
     }
-    tmp6.bot = flag2;
+    tmp7.bot = flag2;
     flag3 = global.system;
     if (flag3 == null) {
       flag3 = false;
     }
-    tmp6.system = flag3;
+    tmp7.system = flag3;
     flag4 = global.mfa_enabled;
     if (flag4 == null) {
       flag4 = global.mfaEnabled;
@@ -86,27 +86,27 @@ class UserRecord extends tmp2 {
     if (flag4 == null) {
       flag4 = false;
     }
-    tmp6.mfaEnabled = flag4;
+    tmp7.mfaEnabled = flag4;
     flag5 = global.mobile;
     if (flag5 == null) {
       flag5 = false;
     }
-    tmp6.mobile = flag5;
+    tmp7.mobile = flag5;
     flag6 = global.desktop;
     if (flag6 == null) {
       flag6 = false;
     }
-    tmp6.desktop = flag6;
-    tmp9 = null;
+    tmp7.desktop = flag6;
+    tmp10 = null;
     if (premiumType !== PREMIUM_TYPE_NONE) {
-      tmp9 = premiumType;
+      tmp10 = premiumType;
     }
-    tmp6.premiumType = tmp9;
+    tmp7.premiumType = tmp10;
     num = global.flags;
     if (num == null) {
       num = 0;
     }
-    tmp6.flags = num;
+    tmp7.flags = num;
     num2 = global.public_flags;
     if (num2 == null) {
       num2 = global.publicFlags;
@@ -114,7 +114,7 @@ class UserRecord extends tmp2 {
     if (num2 == null) {
       num2 = 0;
     }
-    tmp6.publicFlags = num2;
+    tmp7.publicFlags = num2;
     num3 = global.purchased_flags;
     if (num3 == null) {
       num3 = global.purchasedFlags;
@@ -122,7 +122,7 @@ class UserRecord extends tmp2 {
     if (num3 == null) {
       num3 = 0;
     }
-    tmp6.purchasedFlags = num3;
+    tmp7.purchasedFlags = num3;
     num4 = global.premium_usage_flags;
     if (num4 == null) {
       num4 = global.premiumUsageFlags;
@@ -130,27 +130,27 @@ class UserRecord extends tmp2 {
     if (num4 == null) {
       num4 = 0;
     }
-    tmp6.premiumUsageFlags = num4;
+    tmp7.premiumUsageFlags = num4;
     phone = global.phone;
     if (phone == null) {
       phone = null;
     }
-    tmp6.phone = phone;
+    tmp7.phone = phone;
     nsfwAllowed = global.nsfw_allowed;
     if (nsfwAllowed == null) {
       nsfwAllowed = global.nsfwAllowed;
     }
-    tmp6.nsfwAllowed = nsfwAllowed;
+    tmp7.nsfwAllowed = nsfwAllowed;
     ageVerificationStatus = global.age_verification_status;
     if (ageVerificationStatus == null) {
       ageVerificationStatus = global.ageVerificationStatus;
     }
-    tmp6.ageVerificationStatus = ageVerificationStatus;
+    tmp7.ageVerificationStatus = ageVerificationStatus;
     guildMemberAvatars = global.guildMemberAvatars;
     if (guildMemberAvatars == null) {
       guildMemberAvatars = {};
     }
-    tmp6.guildMemberAvatars = guildMemberAvatars;
+    tmp7.guildMemberAvatars = guildMemberAvatars;
     flag7 = global.has_bounced_email;
     if (flag7 == null) {
       flag7 = global.hasBouncedEmail;
@@ -158,7 +158,7 @@ class UserRecord extends tmp2 {
     if (flag7 == null) {
       flag7 = false;
     }
-    tmp6.hasBouncedEmail = flag7;
+    tmp7.hasBouncedEmail = flag7;
     prop = global.personal_connection_id;
     if (prop == null) {
       prop = global.personalConnectionId;
@@ -166,15 +166,15 @@ class UserRecord extends tmp2 {
     if (prop == null) {
       prop = null;
     }
-    tmp6.personalConnectionId = prop;
+    tmp7.personalConnectionId = prop;
     globalName = global.global_name;
     if (globalName == null) {
       globalName = global.globalName;
     }
-    tmp6.globalName = globalName;
-    tmp6.banner = global.banner;
-    tmp12 = closure_0;
-    tmp13 = closure_3;
+    tmp7.globalName = globalName;
+    tmp7.banner = global.banner;
+    tmp13 = closure_0;
+    tmp14 = closure_3;
     obj2 = closure_0(closure_3[3]);
     primary_guild = global.primary_guild;
     if (primary_guild == null) {
@@ -183,25 +183,25 @@ class UserRecord extends tmp2 {
     if (primary_guild == null) {
       primary_guild = null;
     }
-    tmp6.primaryGuild = obj2.ensureUserPrimaryGuild(primary_guild);
-    ({ collectibles: tmp6.collectibles, displayNameStyles } = global);
+    tmp7.primaryGuild = obj2.ensureUserPrimaryGuild(primary_guild);
+    ({ collectibles: tmp7.collectibles, displayNameStyles } = global);
     if (displayNameStyles == null) {
-      tmp12Result = tmp12(tmp13[4]);
-      displayNameStyles = tmp12Result.parseServerDisplayNameStyles(global.display_name_styles);
+      tmp13Result = tmp13(tmp14[4]);
+      displayNameStyles = tmp13Result.parseServerDisplayNameStyles(global.display_name_styles);
     }
-    tmp6.displayNameStyles = displayNameStyles;
+    tmp7.displayNameStyles = displayNameStyles;
     typingIndicatorStyle = global.typingIndicatorStyle;
     if (typingIndicatorStyle == null) {
-      tmp12Result1 = tmp12(tmp13[5]);
-      typingIndicatorStyle = tmp12Result1.parseServerTypingIndicatorStyle(global.typing_indicator_style);
+      tmp13Result1 = tmp13(tmp14[5]);
+      typingIndicatorStyle = tmp13Result1.parseServerTypingIndicatorStyle(global.typing_indicator_style);
     }
-    tmp6.typingIndicatorStyle = typingIndicatorStyle;
+    tmp7.typingIndicatorStyle = typingIndicatorStyle;
     premiumState = global.premiumState;
     if (premiumState == null) {
-      tmp12Result2 = tmp12(tmp13[6]);
-      premiumState = tmp12Result2.parseServerPremiumState(global.premium_state);
+      tmp13Result2 = tmp13(tmp14[6]);
+      premiumState = tmp13Result2.parseServerPremiumState(global.premium_state);
     }
-    tmp6.premiumState = premiumState;
+    tmp7.premiumState = premiumState;
     perks = global.perks;
     activePerksBitmask = undefined;
     if (perks != null) {
@@ -210,16 +210,16 @@ class UserRecord extends tmp2 {
     if (null != activePerksBitmask) {
       perks2 = global.perks;
     } else {
-      tmp12Result3 = tmp12(tmp13[7]);
-      perks2 = tmp12Result3.parseServerPerks(global.perks);
+      tmp13Result3 = tmp13(tmp14[7]);
+      perks2 = tmp13Result3.parseServerPerks(global.perks);
     }
-    tmp6.perks = perks2;
-    tmp12Result4 = tmp12(tmp13[8]);
+    tmp7.perks = perks2;
+    tmp13Result4 = tmp13(tmp14[8]);
     restrictedSchedule = global.restricted_schedule;
     if (restrictedSchedule == null) {
       restrictedSchedule = global.restrictedSchedule;
     }
-    tmp6.restrictedSchedule = tmp12Result4.ensureRestrictedScheduleRecord(restrictedSchedule);
+    tmp7.restrictedSchedule = tmp13Result4.ensureRestrictedScheduleRecord(restrictedSchedule);
     appTransactionIds = global.appTransactionIds;
     if (appTransactionIds == null) {
       appTransactionIds = global.app_transaction_ids;
@@ -227,13 +227,14 @@ class UserRecord extends tmp2 {
     if (appTransactionIds == null) {
       appTransactionIds = null;
     }
-    tmp6.appTransactionIds = appTransactionIds;
-    tmp12Result5 = tmp12(tmp13[9]);
+    tmp7.appTransactionIds = appTransactionIds;
+    tmp13Result5 = tmp13(tmp14[9]);
     storeCountry = global.store_country;
     if (storeCountry == null) {
       storeCountry = global.storeCountry;
     }
-    tmp6.storeCountry = tmp12Result5.parseStoreCountry(storeCountry);
+    tmp7.storeCountry = tmp13Result5.parseStoreCountry(storeCountry);
+    tmp7.labs = global.labs;
     obj1 = {
       hasFlag: {
         writable: false,
@@ -291,16 +292,16 @@ class UserRecord extends tmp2 {
         },
       },
     };
-    definePropertiesResult = Object.defineProperties(tmp6, obj1);
-    globalName1 = tmp6.globalName;
+    definePropertiesResult = Object.defineProperties(tmp7, obj1);
+    globalName1 = tmp7.globalName;
     length = undefined;
     if (globalName1 != null) {
       length = globalName1.length;
     }
     if (0 === length) {
-      tmp6.globalName = null;
+      tmp7.globalName = null;
     }
-    return tmp6;
+    return tmp7;
   }
 }
 const prototype = UserRecord.prototype;

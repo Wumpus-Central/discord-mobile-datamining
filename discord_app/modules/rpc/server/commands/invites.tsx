@@ -4,15 +4,15 @@ import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = fn;
-const InstantInviteSources = fn(1072).InstantInviteSources;
-const Constants = fn(1083);
+const InstantInviteSources = fn(1071).InstantInviteSources;
+const Constants = fn(1082);
 ({ RPCCommands, RPCErrors: closure_6 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15593);
+const CONTEXT_MENU_ICON_NAMES = fn(15557);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 const items = [fn(6794).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(6794).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
-obj4[fn(6233).RPC_SCOPE_CONFIG.ANY] = items;
+obj4[fn(6235).RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
 obj3.handler = function handler(arg0) {
   ({ socket: require, args } = arg0);
@@ -28,7 +28,7 @@ obj3.handler = function handler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -58,10 +58,10 @@ obj3.handler = function handler(arg0) {
                 throw rPCError1;
               } else {
                 const kind = connectedActivityLocation.kind;
-                if (tmp3(10629).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
-                  if (tmp3(10629).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
-                    if (tmp3(10629).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
-                      if (tmp3(10629).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
+                if (tmp3(10571).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
+                  if (tmp3(10571).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
+                    if (tmp3(10571).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
+                      if (tmp3(10571).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
                         const obj8 = { errorCode: constants2.NO_ELIGIBLE_ACTIVITY };
                         const rPCError2 = new tmp3(6791).RPCError(obj8, "Unsupported activity location");
                         throw rPCError2;
@@ -72,7 +72,7 @@ obj3.handler = function handler(arg0) {
                       const obj9 = { errorCode: constants2.INVALID_CHANNEL };
                       const rPCError3 = new tmp3(6791).RPCError(obj9, "Invalid channel");
                       throw rPCError3;
-                    } else if (channel.type === tmp3(1093).ChannelTypes.DM) {
+                    } else if (channel.type === tmp3(1092).ChannelTypes.DM) {
                       const obj10 = { errorCode: constants2.INVALID_CHANNEL };
                       const rPCError4 = new tmp3(6791).RPCError(obj10, "Cannot send invite to a DM");
                       throw rPCError4;
@@ -91,11 +91,11 @@ obj3.handler = function handler(arg0) {
                   obj11.inviteAnalyticsMetadata = obj12;
                   dependencyMap = 2;
                   connectedActivityLocation = 1;
-                  const obj13 = { value: tmp3(10609).sendEmbeddedActivityInviteUser(obj11), done: false };
+                  const obj13 = { value: tmp3(10551).sendEmbeddedActivityInviteUser(obj11), done: false };
                   return obj13;
                 }
-                channel = tmp3(15612).validateOpenInviteDialog(tmp68).channel;
-                const obj5 = tmp3(15612);
+                channel = tmp3(15576).validateOpenInviteDialog(tmp68).channel;
+                const obj5 = tmp3(15576);
               }
             }
           }
@@ -115,7 +115,7 @@ obj3.handler = function handler(arg0) {
         } else {
           c2 = 0;
           connectedActivityLocation = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp61) {
         if (tmp4 === c2) {

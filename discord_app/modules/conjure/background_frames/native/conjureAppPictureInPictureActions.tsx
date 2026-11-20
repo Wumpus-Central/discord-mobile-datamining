@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/background_frames/native/conjureAppPictureInPictureActions.tsx
-import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
 import conjurePreviewSurface from "../../preview/conjurePreviewSurface.tsx";
 import Sheet_showSimpleActionSheet from "../../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
 import EmbeddedAppShimExperiment from "../../../activities/experiments/EmbeddedAppShimExperiment.tsx";
@@ -15,7 +15,7 @@ function getConjureAppPictureInPictureActions(id, c8, c9) {
   _require = id;
   let obj = { label: null, IconComponent: null, onPress: null };
   const intl = require("util").intl;
-  obj.label = intl.formatToPlainString(_modDef4089.dPf03z, { appName });
+  obj.label = intl.formatToPlainString(_modDef4091.dPf03z, { appName });
   obj.IconComponent = require("WindowLaunchIcon").WindowLaunchIcon;
   obj.onPress = function onPress() {
     if (obj.isConjurePreviewSurface(id.surface)) {
@@ -34,7 +34,7 @@ function getConjureAppPictureInPictureActions(id, c8, c9) {
     items.push(getConjureAppSoundButtonDefault(id.id, id.data.userMuted));
   }
   const obj3 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
-  const intl2 = tmp(1113).intl;
+  const intl2 = tmp(1112).intl;
   obj3.label = intl2.string(require("util").t.VkMnR2);
   obj3.IconComponent = require("DoorExitIcon").DoorExitIcon;
   obj3.onPress = function onPress() {
@@ -43,7 +43,7 @@ function getConjureAppPictureInPictureActions(id, c8, c9) {
   items.push(obj3);
   return items;
 }
-const asLaunched = fn(6503).asLaunched;
+const asLaunched = fn(6505).asLaunched;
 const ConjureAppPictureInPicture = "ConjureAppPictureInPicture";
 const size = fn(2);
 let result = size.fileFinishedImporting(

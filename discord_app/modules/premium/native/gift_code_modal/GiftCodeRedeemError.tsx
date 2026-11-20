@@ -1,14 +1,14 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftCodeRedeemError.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../_runtime/01501_Link.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef11867 from "../../../../../_runtime/metro/11867__.js";
-import _modDef11868 from "../../../../../_runtime/metro/11868__.js";
+import _modDef11809 from "../../../../../_runtime/metro/11809__.js";
+import _modDef11810 from "../../../../../_runtime/metro/11810__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: {
@@ -41,9 +41,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp8Result = _modDef11867;
+    let tmp8Result = _modDef11809;
   } else {
-    tmp8Result = _modDef11868;
+    tmp8Result = _modDef11810;
   }
   items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), ,];
   const obj4 = { variant: "heading-xl/semibold", style: tmp.header, children: null };

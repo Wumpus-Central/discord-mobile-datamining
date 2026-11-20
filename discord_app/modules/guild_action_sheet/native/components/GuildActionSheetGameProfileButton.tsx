@@ -1,6 +1,6 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetGameProfileButton.tsx
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef6922 from "../../../../../_runtime/metro/06922__.js";
+import _modDef6921 from "../../../../../_runtime/metro/06921__.js";
 import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import GuildActionSheetAnalyticsUtils from "../GuildActionSheetAnalyticsUtils.tsx";
 import GuildActionSheetTypes from "../GuildActionSheetTypes.tsx";
@@ -29,14 +29,14 @@ function GameProfileButton(applicationId) {
   let tmp6 = null;
   if (null != tmp3Result) {
     const obj3 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-    const intl = tmp4(1113).intl;
-    obj3.label = intl.string(tmp4(1113).t.f7aVGn);
-    obj3.icon = _modDef6922;
+    const intl = tmp4(1112).intl;
+    obj3.label = intl.string(tmp4(1112).t.f7aVGn);
+    obj3.icon = _modDef6921;
     obj3.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_1();
     };
-    tmp6 = jsx(tmp4(7472).IconButton, { variant: "secondary", label: null, icon: null, grow: true, onPress: null });
+    tmp6 = jsx(tmp4(7471).IconButton, { variant: "secondary", label: null, icon: null, grow: true, onPress: null });
   }
   return tmp6;
 }

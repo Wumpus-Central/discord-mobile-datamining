@@ -56,7 +56,7 @@ export function OrbsRewardBackground(arg0) {
   const children = [closure_7(FastImageDefault, obj4)];
   let tmp14Result = !stateFromStores;
   if (!stateFromStores) {
-    tmp14Result = stateFromStores1 === onReady(1092).AppStates.ACTIVE;
+    tmp14Result = stateFromStores1 === onReady(1091).AppStates.ACTIVE;
   }
   if (tmp14Result) {
     const obj6 = {

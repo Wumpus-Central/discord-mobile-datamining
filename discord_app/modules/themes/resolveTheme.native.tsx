@@ -8,7 +8,7 @@ import UnsyncedUserSettingsStore from "../user_settings/UnsyncedUserSettingsStor
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 
 require = fn;
-const ThemeConstants = fn(1195);
+const ThemeConstants = fn(1194);
 ({
   PROTO_THEME_MAP_MOBILE_REFRESH: closure_6,
   SystemTheme: metroImportDefault,

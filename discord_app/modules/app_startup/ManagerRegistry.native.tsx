@@ -67,7 +67,6 @@ const obj = {
   CommunicationDisabledManager: null,
   ConjureBackgroundFramesManager: null,
   ConjureProjectReconnectManager: null,
-  ConjurePublishEvalManager: null,
   ConjureTurnNotificationManager: null,
   ContactSyncLifecycleManager: null,
   CustomStatusManager: null,
@@ -296,12 +295,6 @@ obj.ConjureProjectReconnectManager = {
   actions: ["POST_CONNECTION_OPEN"],
   inlineRequire() {
     return require("ConjureProjectReconnectManager").default;
-  },
-};
-obj.ConjurePublishEvalManager = {
-  actions: ["POST_CONNECTION_OPEN", "CONJURE_PUBLISH_EVAL_PENDING"],
-  inlineRequire() {
-    return require("ConjurePublishEvalManager").default;
   },
 };
 obj.ConjureTurnNotificationManager = {
@@ -1113,6 +1106,7 @@ obj.FriendOnlineTimerManager = {
     "CONNECTION_RESUMED",
     "CONNECTION_CLOSED",
     "CONNECTION_INTERRUPTED",
+    "LOGOUT",
     "SELF_PRESENCE_STORE_UPDATE",
   ],
   inlineRequire() {

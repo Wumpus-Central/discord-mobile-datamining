@@ -5,6 +5,44 @@ import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
 require = fn;
+function setPriceIdState(priceId, arg1) {
+  closure_0 = arg1;
+  if ("application" === priceId.type) {
+    const obj2 = {};
+    const merged = Object.assign(obj4);
+    let str = { type: "application", applicationId: priceId.applicationId };
+    if ("application" === str.type) {
+      const _HermesInternal2 = HermesInternal;
+      str = "application:";
+      let combined = "application:" + str.applicationId;
+    } else {
+      const _HermesInternal = HermesInternal;
+      combined = "skus:" + `application:`.skuId;
+    }
+    obj2[combined] = arg1;
+  } else {
+    const obj = {};
+    const merged1 = Object.assign(obj4);
+    const _Object = Object;
+    const skuIds = priceId.skuIds;
+    const merged2 = Object.assign(
+      Object.fromEntries(
+        skuIds.map((skuId) => {
+          obj = { type: "sku", skuId };
+          if ("application" === obj.type) {
+            const _HermesInternal2 = HermesInternal;
+            let combined = "application:" + obj.applicationId;
+          } else {
+            const _HermesInternal = HermesInternal;
+            combined = "skus:" + obj.skuId;
+          }
+          items = [combined, obj];
+          return items;
+        }),
+      ),
+    );
+  }
+}
 function resetStoreState() {}
 const Store = initializeDefault.Store;
 class SKUPricesStore extends Store {}
@@ -17,11 +55,11 @@ prototype["initialize"] = function initialize() {
 prototype["getPricesForSkuId"] = function getPricesForSkuId(id) {
   if (null != id) {
     let pricingResultId;
-    if (obj5[id] != null) {
+    if (obj4[id] != null) {
       pricingResultId = tmp2.pricingResultId;
     }
     if (null != pricingResultId) {
-      return obj4[pricingResultId];
+      return obj3[pricingResultId];
     }
   }
 };
@@ -54,7 +92,7 @@ prototype["getFetchStateForApplicationId"] = function getFetchStateForApplicatio
 prototype["getPromotionIdsForSkuId"] = function getPromotionIdsForSkuId(skuId) {
   if (null != skuId) {
     let prop;
-    if (obj5[skuId] != null) {
+    if (obj4[skuId] != null) {
       prop = tmp2.storefrontPromotionIds;
     }
     return prop;
@@ -63,19 +101,19 @@ prototype["getPromotionIdsForSkuId"] = function getPromotionIdsForSkuId(skuId) {
 prototype["getOffersForSkuId"] = function getOffersForSkuId(arg0) {
   if (null != arg0) {
     let offerResultIds;
-    if (obj5[arg0] != null) {
+    if (obj4[arg0] != null) {
       offerResultIds = tmp2.offerResultIds;
     }
     if (null != offerResultIds) {
-      const mapped = offerResultIds.map((item) => obj7[item]);
+      const mapped = offerResultIds.map((item) => obj6[item]);
       return mapped.filter(GlobalUtils.isNotNullish);
     }
   }
 };
 prototype["getRewardsForSkuId"] = function getRewardsForSkuId(id) {
   if (null != id) {
-    if (null != obj5[id]) {
-      const mapped = tmp2.rewardResultIds.map((item) => obj6[item]);
+    if (null != obj4[id]) {
+      const mapped = tmp2.rewardResultIds.map((item) => obj5[item]);
       return mapped.filter(GlobalUtils.isNotNullish);
     }
   }
@@ -100,7 +138,7 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
       }
       obj2[combined] = obj;
     } else {
-      const obj3 = {};
+      obj3 = {};
       const merged1 = Object.assign(obj4);
       const _Object = Object;
       const skuIds = priceId.skuIds;
@@ -124,100 +162,38 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
   },
   SKUS_PRICING_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
     ({ priceId, data } = arg0);
-    let str = globalThis;
     const timestamp = Date.now();
-    const obj = { type: "success", fetchedAt: timestamp };
-    let obj9 = obj;
+    setPriceIdState(priceId, { type: "success", fetchedAt: timestamp });
     if ("application" === priceId.type) {
-      const obj2 = {};
-      const merged = Object.assign(obj4);
-      let str2 = { type: "application", applicationId: priceId.applicationId };
-      if ("application" === str2.type) {
-        const _HermesInternal2 = HermesInternal;
-        str2 = "application:";
-        let combined = "application:" + str2.applicationId;
-      } else {
-        const _HermesInternal = HermesInternal;
-        combined = "skus:" + `application:`.skuId;
-      }
-      obj2[combined] = obj;
-    } else {
-      const obj3 = {};
-      const merged1 = Object.assign(obj4);
+      const obj = { type: "skus", skuIds: null };
       const _Object = Object;
+      obj.skuIds = Object.keys(data.skuPriceMap);
+      const obj2 = { type: "success", fetchedAt: timestamp };
+      setPriceIdState(obj, obj2);
+    }
+    const merged = Object.assign({});
+    const merged1 = Object.assign(data.pricingResultIdMap);
+    obj4 = {};
+    const merged2 = Object.assign(obj4);
+    const merged3 = Object.assign(data.skuPriceMap);
+    if ("skus" === priceId.type) {
       const skuIds = priceId.skuIds;
-      const merged2 = Object.assign(
-        Object.fromEntries(
-          skuIds.map((skuId) => {
-            obj = { type: "sku", skuId };
-            if ("application" === obj.type) {
-              const _HermesInternal2 = HermesInternal;
-              let combined = "application:" + obj.applicationId;
-            } else {
-              const _HermesInternal = HermesInternal;
-              combined = "skus:" + obj.skuId;
-            }
-            items = [combined, obj];
-            return items;
-          }),
-        ),
-      );
-      obj4 = obj3;
-      if ("application" !== priceId.type) {
-        obj4 = {};
-        const merged3 = Object.assign(obj4);
-        const merged4 = Object.assign(data.pricingResultIdMap);
-        obj5 = {};
-        const merged5 = Object.assign(obj5);
-        const merged6 = Object.assign(data.skuPriceMap);
-        obj6 = {};
-        const merged7 = Object.assign(obj6);
-        const merged8 = Object.assign(data.rewardResultIdMap);
-        obj7 = {};
-        const merged9 = Object.assign(obj7);
-        const merged10 = Object.assign(data.offerResultIdMap);
-      } else {
-        const obj8 = { type: "skus", skuIds: null };
-        const _Object3 = Object;
-        obj8.skuIds = Object.keys(data.skuPriceMap);
-        obj9 = { type: "success", fetchedAt: timestamp };
-        if ("application" !== obj8.type) {
-          const obj10 = {};
-          const merged11 = Object.assign(obj4);
-          const _Object2 = Object;
-          const skuIds1 = obj8.skuIds;
-          const merged12 = Object.assign(
-            Object.fromEntries(
-              skuIds1.map((skuId) => {
-                obj = { type: "sku", skuId };
-                if ("application" === obj.type) {
-                  const _HermesInternal2 = HermesInternal;
-                  let combined = "application:" + obj.applicationId;
-                } else {
-                  const _HermesInternal = HermesInternal;
-                  combined = "skus:" + obj.skuId;
-                }
-                items = [combined, obj];
-                return items;
-              }),
-            ),
-          );
-          obj4 = obj10;
+      const iter = skuIds[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        if (null == data.skuPriceMap[nextResult]) {
+          delete tmp2[tmp];
         }
-        const obj11 = {};
-        const merged13 = Object.assign(obj4);
-        let obj12 = { type: "application", applicationId: obj8.applicationId };
-        if ("application" === obj12.type) {
-          obj12 = str.HermesInternal.concat;
-          str = "application:";
-          let obj22Result = obj12(obj12.applicationId);
-        } else {
-          const _HermesInternal3 = HermesInternal;
-          obj22Result = "skus:" + obj12.skuId;
-        }
-        obj11[obj22Result] = obj9;
+        continue;
       }
     }
+    const merged4 = Object.assign({});
+    const merged5 = Object.assign(data.rewardResultIdMap);
+    const merged6 = Object.assign({});
+    const merged7 = Object.assign(data.offerResultIdMap);
+    obj3 = {};
+    obj5 = {};
+    obj6 = {};
   },
   SKUS_PRICING_FETCH_FAIL: function handleFetchFail(priceId) {
     priceId = priceId.priceId;
@@ -226,7 +202,7 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
     if ("application" === priceId.type) {
       const obj2 = {};
       const merged = Object.assign(obj4);
-      let obj3 = { type: "application", applicationId: priceId.applicationId };
+      obj3 = { type: "application", applicationId: priceId.applicationId };
       if ("application" === obj3.type) {
         obj3 = str.HermesInternal.concat;
         str = "application:";

@@ -3,7 +3,7 @@ import LoggerDefault from "../../modules/debug/Logger.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
-import MurmurHashV3Default from "../../../_runtime/01251_MurmurHashV3.js";
+import MurmurHashV3Default from "../../../_runtime/01250_MurmurHashV3.js";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -108,7 +108,7 @@ let closure_25 = async function _applyTransactionFromListener(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -159,10 +159,10 @@ let closure_25 = async function _applyTransactionFromListener(arg0) {
                         }
                         const GiftACOMOrderExperiment = ACOMExperiments.GiftACOMOrderExperiment;
                         c6 = 3;
-                        return { value: "HermesInternal", done: "+60" };
+                        return { value: "HermesInternal", done: null };
                       } else if (!tmp61) {
                         c6 = 3;
-                        return { value: "HermesInternal", done: "+60" };
+                        return { value: "HermesInternal", done: null };
                       }
                       const IAPTransactionApplyExperiment = ACOMExperiments.IAPTransactionApplyExperiment;
                       if (IAPTransactionApplyExperiment.getConfig({ location: "IAPTransactionListener" }).enabled) {
@@ -206,7 +206,7 @@ let closure_25 = async function _applyTransactionFromListener(arg0) {
       } else if (1 === tmp9) {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       } else if (2 !== tmp9) {
         if (3 === tmp9) {
           c4 = 2;
@@ -554,7 +554,7 @@ let closure_35 = async function _makeTrackedIAPRequest(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -805,7 +805,7 @@ let closure_39 = async function _updateAppleSubscription() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -853,7 +853,7 @@ let closure_39 = async function _updateAppleSubscription() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -904,7 +904,7 @@ let closure_41 = async function _cancelGenericSubscription(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1015,7 +1015,7 @@ let closure_44 = async function _createGenericSubscription(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1222,7 +1222,7 @@ let closure_45 = async function _modifyGenericSubscription(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1499,7 +1499,7 @@ let closure_46 = async function _resubscribeGenericSubscription(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1699,7 +1699,7 @@ let closure_47 = async function _retryPendingPurchases(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -1876,7 +1876,7 @@ let closure_48 = async function _mobilePurchaseSKU(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -2229,7 +2229,7 @@ let closure_49 = async function _migrateToACOM() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -2321,9 +2321,9 @@ let closure_5 = ["subscription_items"];
 let closure_6 = ["sku_id", "country_code", "is_gift", "gift_info_options"];
 const PremiumPlanPurchasedStore = fn(8989);
 ({ setPaymentSuccess: closure_10, showOldPaymentFlowSuccess: closure_11 } = PremiumPlanPurchasedStore);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ SubscriptionTypes: closure_15, AnalyticEvents: closure_16, CurrencyCodes: closure_17, Endpoints: closure_18, StoreKitErrors } = Constants);
-const PaymentGateways = fn(1083).PaymentGateways;
+const PaymentGateways = fn(1082).PaymentGateways;
 const jsx = fn(21).jsx;
 const localAppleReceiptHash = "localAppleReceiptHash";
 const BILLING = "BILLING";
@@ -2339,8 +2339,8 @@ let result = size.fileFinishedImporting("actions/native/BillingActionCreators.ts
 
 export default {
   applyAppleReceipt,
-  fetchMostRecentSubscription: fn(6239).fetchMostRecentSubscription,
-  fetchIpCountryCode: fn(6239).fetchIpCountryCode,
+  fetchMostRecentSubscription: fn(6241).fetchMostRecentSubscription,
+  fetchIpCountryCode: fn(6241).fetchIpCountryCode,
   init() {
     const self = this;
     return (async () => {
@@ -2354,7 +2354,7 @@ export default {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2470,7 +2470,7 @@ export default {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2543,7 +2543,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2660,7 +2660,7 @@ export default {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2922,7 +2922,7 @@ export default {
                     importer() {
                       return transactionReceipt(paths[32])(paths[31], paths.paths).then((result) => {
                         closure_0 = result.default;
-                        return /* F143597 */ function() { ... };
+                        return /* F141441 */ function() { ... };
                       });
                     },
                     isDismissable: false
@@ -3012,7 +3012,7 @@ export default {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -3120,7 +3120,7 @@ export default {
                       if (jwsRepresentation == null) {
                         transactionReceipt = purchaseResponse.transactionReceipt;
                       }
-                      const v3Result = closure_2_1(1251).v3(transactionReceipt);
+                      const v3Result = closure_2_1(1250).v3(transactionReceipt);
                       closure_130_2 = v3Result;
                       giftOptionsForKey = giftOptionsForKey.getGiftOptionsForKey(v3Result);
                       closure_130_3 = giftOptionsForKey;
@@ -3153,7 +3153,7 @@ export default {
                         str1 = str1.transactionIdentifier.toString();
                         let obj = skipDupCheck(dependencyMap[19]);
                         obj2 = { purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } };
-                        skipDupCheck(dependencyMap[19]).finishTransaction({ purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } }).then(/* F143598 */ function() { ... });
+                        skipDupCheck(dependencyMap[19]).finishTransaction({ purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } }).then(/* F141442 */ function() { ... });
                         if (null != result) {
                           const obj4 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key };
                           transactionReceipt(dependencyMap[21]).dispatch(obj4);
@@ -3194,8 +3194,8 @@ export default {
                     } else if (closure_134_3.length > 0) {
                       const item = closure_134_3.forEach((code) => {
                         if (!set.has(code.code)) {
-                          const result = closure_1_0(4605).captureBillingException(code);
-                          const obj = closure_1_0(4605);
+                          const result = closure_1_0(4607).captureBillingException(code);
+                          const obj = closure_1_0(4607);
                         }
                       });
                       const _Error = Error;

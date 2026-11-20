@@ -281,10 +281,10 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(6704).FetchState;
-const constants = fn(7950).TrackUserProfileProperties;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const StatusTypes = fn(1083).StatusTypes;
+const FetchState = fn(6706).FetchState;
+const constants = fn(7949).TrackUserProfileProperties;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const StatusTypes = fn(1082).StatusTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/UserProfileAnalyticsUtils.tsx");
 

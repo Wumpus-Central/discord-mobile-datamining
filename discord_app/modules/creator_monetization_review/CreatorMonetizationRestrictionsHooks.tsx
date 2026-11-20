@@ -8,8 +8,8 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const FetchState = fn(4717).FetchState;
-const Constants = fn(1072);
+const FetchState = fn(4719).FetchState;
+const Constants = fn(1071);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, GuildFeatures: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx");
@@ -96,8 +96,8 @@ export function useShouldHideGuildPurchaseEntryPoints(id2) {
     }
     let result = flag;
   } else {
-    result = tmp(4716).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
-    const tmpResult4 = tmp(4716);
+    result = tmp(4718).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
+    const tmpResult4 = tmp(4718);
   }
   const tmpResult3 = require("initialize");
 }
@@ -166,8 +166,8 @@ export function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
     }
     let result = flag;
   } else {
-    result = tmp(4716).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
-    const tmpResult4 = tmp(4716);
+    result = tmp(4718).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
+    const tmpResult4 = tmp(4718);
   }
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;

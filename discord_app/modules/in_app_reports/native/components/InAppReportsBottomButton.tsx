@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef2857 from "../../../report_to_mod/ReportToMod.messages.js";
+import _modDef2859 from "../../../report_to_mod/ReportToMod.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 0, alignSelf: "stretch", paddingBottom: 12 },
   paddingHorizontal: { paddingHorizontal: 16 },
@@ -24,7 +24,7 @@ obj2.errorText = {
   color: nativeDefault.unsafe_rawColors.RED_400,
   fontSize: 12,
   lineHeight: 16,
-  fontFamily: fn(1083).Fonts.PRIMARY_SEMIBOLD,
+  fontFamily: fn(1082).Fonts.PRIMARY_SEMIBOLD,
   textAlign: "center",
   marginTop: 12,
 };
@@ -45,7 +45,7 @@ export default function InAppReportsBottomButton(button) {
       const intl2 = util.intl;
       const string = intl2.string;
       if (isModeratorReport) {
-        let stringResult = string(_modDef2857.ZUyreS);
+        let stringResult = string(_modDef2859.ZUyreS);
       } else {
         const intl3 = util.intl;
         const stringResult1 = string(util.t["G+vU89"]);
@@ -66,7 +66,7 @@ export default function InAppReportsBottomButton(button) {
       const intl4 = util.intl;
       const string2 = intl4.string;
       if (isModeratorReport) {
-        let string2Result = string2(_modDef2857.psKFdJ);
+        let string2Result = string2(_modDef2859.psKFdJ);
       } else {
         string2Result = string2(util.t.h6D8Vy);
       }

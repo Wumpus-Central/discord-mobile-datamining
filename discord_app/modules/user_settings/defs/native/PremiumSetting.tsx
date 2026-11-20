@@ -10,7 +10,7 @@ import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx"
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const currentUser = UserStore.getCurrentUser();
@@ -45,7 +45,7 @@ const route = SettingBuilders.createRoute({
     return jsx(PremiumTabBadgeDefault, {});
   },
   screen: {
-    route: fn(1072).UserSettingsSections.PREMIUM,
+    route: fn(1071).UserSettingsSections.PREMIUM,
     getComponent() {
       return require("PremiumSettingScreen").default;
     },

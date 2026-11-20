@@ -16,7 +16,7 @@ function getCategoryForCollection(id) {
   }
   return value;
 }
-let closure_7 = fn(1072).COLLECTIBLES_APPLICATION_ID;
+let closure_7 = fn(1071).COLLECTIBLES_APPLICATION_ID;
 const weakMap = new WeakMap();
 const weakSet = new WeakSet();
 const size = fn(2);

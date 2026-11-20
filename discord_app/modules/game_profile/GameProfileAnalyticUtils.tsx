@@ -1,10 +1,10 @@
 // discord_app/modules/game_profile/GameProfileAnalyticUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01269_v1.js";
+import v1 from "../../../_runtime/01268_v1.js";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
 const ContentInventoryFeedKey = fn(9656).ContentInventoryFeedKey;
 const size = fn(2);

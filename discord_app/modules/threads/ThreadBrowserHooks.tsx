@@ -15,8 +15,8 @@ import JoinedThreadsStore from "JoinedThreadsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(13627).useShouldShowResolvedFlagsForChannel;
-const Permissions = fn(1083).Permissions;
+let closure_5 = fn(13597).useShouldShowResolvedFlagsForChannel;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");
 

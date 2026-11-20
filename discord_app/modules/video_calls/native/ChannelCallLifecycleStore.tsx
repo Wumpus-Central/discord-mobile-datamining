@@ -1,10 +1,10 @@
 // discord_app/modules/video_calls/native/ChannelCallLifecycleStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef1345 from "../../../../_runtime/metro/01345__.js";
+import _modDef1343 from "../../../../_runtime/metro/01343__.js";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
-const VoiceCallOverlayType = fn(10575).VoiceCallOverlayType;
+const VoiceCallOverlayType = fn(10517).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;
@@ -13,23 +13,23 @@ let obj = {};
 let size = {
   x: "Array",
   y: "s",
-  width: "channel_id",
-  height: "window",
+  width: "analyticsLocations",
+  height: "dispatch",
   screenOrientation: fn(9311).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: null,
-  isInitialized: "#000000",
-  isVisible: 0.24,
+  hasUserInteractedSinceOrientationChange: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006847958532560452,
+  isInitialized: 63394750042971300000000000000000000000000000000000000000000000000000000000000000000000,
+  isVisible: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002831371861810975,
 };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
   y: "s",
-  width: "channel_id",
-  height: "window",
+  width: "analyticsLocations",
+  height: "dispatch",
   screenOrientation: fn(9311).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: null,
-  isInitialized: "#000000",
-  isVisible: 0.24,
+  hasUserInteractedSinceOrientationChange: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006847958532560452,
+  isInitialized: 63394750042971300000000000000000000000000000000000000000000000000000000000000000000000,
+  isVisible: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002831371861810975,
 };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 let c10 = true;

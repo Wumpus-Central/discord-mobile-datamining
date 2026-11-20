@@ -5,8 +5,8 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AutomodTriggerType = fn(12309).AutomodTriggerType;
-const Constants = fn(1072);
+const AutomodTriggerType = fn(12279).AutomodTriggerType;
+const Constants = fn(1071);
 ({ GuildFeatures: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/PermissionUtils.tsx");

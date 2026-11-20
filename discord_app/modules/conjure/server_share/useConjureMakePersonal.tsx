@@ -36,7 +36,7 @@ export default function useConjureMakePersonal(id) {
   }
   const items1 = [id, target];
   const memo = obj.useMemo(() => conjureChangeRows.conjureMakePersonalRows(closure_0, target), items1);
-  const items2 = [appName, conjureRemoveTarget, id.id];
+  const items2 = [appName, conjureRemoveTarget, id];
   let obj3 = { appName, rows: memo, keptChannels: null, pending: null, error: null, submit: null };
   let result = null;
   const callback = obj.useCallback(
@@ -51,7 +51,7 @@ export default function useConjureMakePersonal(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -79,8 +79,8 @@ export default function useConjureMakePersonal(id) {
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            const intl2 = id(1113).intl;
-            closure_129_2(intl2.string(tmp3(4089)["d+wTRF"]));
+            const intl2 = id(1112).intl;
+            closure_129_2(intl2.string(tmp3(4091)["d+wTRF"]));
             closure_129_4(null);
             closure_129_1(false);
             c4 = 3;
@@ -96,14 +96,15 @@ export default function useConjureMakePersonal(id) {
           } else {
             dependencyMap = 0;
             closure_129_1(false);
+            tmp3(18168)(closure_129_0, "removed");
             integrationStatus = integrationStatus.getIntegrationStatus(closure_129_0.id);
             let prop;
             if (integrationStatus != null) {
               prop = integrationStatus.owner_authorization_revoked;
             }
             closure_128_0 = true === prop;
-            const intl = id(1113).intl;
-            let obj = tmp3(4089);
+            const intl = id(1112).intl;
+            let obj = tmp3(4091);
             if (closure_128_0) {
               let TWYUzf = obj.tOu7uv;
             } else {
@@ -126,8 +127,8 @@ export default function useConjureMakePersonal(id) {
     items2,
   );
   if (null != target) {
-    result = tmp4(12295).conjureRemoveAppKeptChannels(target);
-    const tmp4Result = tmp4(12295);
+    result = tmp4(12265).conjureRemoveAppKeptChannels(target);
+    const tmp4Result = tmp4(12265);
   }
   obj3.keptChannels = result;
   obj3.error = tmp2[0];

@@ -1,12 +1,13 @@
 // discord_app/modules/conjure/server_share/native/ConjureProjectServer.tsx
 import showConjureProjectServerSheetDefault from "showConjureProjectServerSheet.tsx";
 import openConjureMakePersonalAlertDefault from "openConjureMakePersonalAlert.tsx";
+import openConjureUnpublishUserAppAlertDefault from "../../projects/native/openConjureUnpublishUserAppAlert.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 const require = fn;
-const isProjectOwner = fn(6500).isProjectOwner;
+const isProjectOwner = fn(6502).isProjectOwner;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
@@ -40,32 +41,32 @@ export default function ConjureProjectServer(projectId) {
     items3,
   );
   const obj3 = projectId(504);
-  const tmp6 = projectId(18334).useConjureProjectServerCandidates(projectId).length > 0;
+  const tmp6 = projectId(18165).useConjureProjectServerCandidates(projectId).length > 0;
   if (null != stateFromStores) {
     if (isProjectOwner(stateFromStores)) {
       let stringResult;
       if (!tmp6) {
-        const intl = tmp(1113).intl;
-        stringResult = intl.string(stateFromStores(4089).NXvmoQ);
+        const intl = tmp(1112).intl;
+        stringResult = intl.string(stateFromStores(4091).NXvmoQ);
       }
       const obj5 = { title: null, description: null, hasIcons: false, children: null };
-      const intl2 = tmp(1113).intl;
-      obj5.title = intl2.string(stateFromStores(4089).n431L5);
-      const intl3 = tmp(1113).intl;
+      const intl2 = tmp(1112).intl;
+      obj5.title = intl2.string(stateFromStores(4091).n431L5);
+      const intl3 = tmp(1112).intl;
       if ("guild" === stateFromStores.install_scope) {
         let stringResult1 = stateFromStores1;
         if (stateFromStores1 == null) {
-          const intl4 = tmp(1113).intl;
-          stringResult1 = intl4.string(tmp11(4089)["6bhivN"]);
+          const intl4 = tmp(1112).intl;
+          stringResult1 = intl4.string(tmp11(4091)["6bhivN"]);
         }
         const obj6 = { server: stringResult1 };
-        let formatToPlainStringResult = intl3.formatToPlainString(tmp11(4089)["KWBh/Q"], obj6);
+        let formatToPlainStringResult = intl3.formatToPlainString(tmp11(4091)["KWBh/Q"], obj6);
       } else {
-        formatToPlainStringResult = intl3.string(tmp11(4089)["JQ/7HT"]);
+        formatToPlainStringResult = intl3.string(tmp11(4091)["JQ/7HT"]);
       }
       obj5.description = formatToPlainStringResult;
-      const intl5 = tmp(1113).intl;
-      const tmp11Result = stateFromStores(4089);
+      const intl5 = tmp(1112).intl;
+      const tmp11Result = stateFromStores(4091);
       const obj7 = {
         label: intl5.string("guild" === stateFromStores.install_scope ? tmp11Result["1E5/ay"] : tmp11Result["7SD3ul"]),
         subLabel: stringResult,
@@ -75,20 +76,31 @@ export default function ConjureProjectServer(projectId) {
           return showConjureProjectServerSheetDefault({ projectId });
         },
       };
-      const items4 = [closure_6(tmp(6926).TableRow, obj7)];
+      const items4 = [closure_6(tmp(6925).TableRow, obj7), ,];
       let tmp14Result = null;
       if ("guild" === stateFromStores.install_scope) {
-        const obj8 = { label: null, variant: "danger", onPress: null };
-        const intl6 = tmp(1113).intl;
-        obj8.label = intl6.string(tmp11(4089).j1NMdG);
+        const obj8 = { label: null, onPress: null };
+        const intl6 = tmp(1112).intl;
+        obj8.label = intl6.string(tmp11(4091).ErhKil);
         obj8.onPress = function onPress() {
           return openConjureMakePersonalAlertDefault({ project: stateFromStores });
         };
-        tmp14Result = closure_6(tmp(6926).TableRow, obj8);
+        tmp14Result = closure_6(tmp(6925).TableRow, obj8);
       }
       items4[1] = tmp14Result;
+      let tmp14Result2 = null;
+      if ("guild" === stateFromStores.install_scope) {
+        const obj9 = { label: null, variant: "danger", onPress: null };
+        const intl7 = tmp(1112).intl;
+        obj9.label = intl7.string(tmp11(4091).mS61Dm);
+        obj9.onPress = function onPress() {
+          return openConjureUnpublishUserAppAlertDefault(stateFromStores);
+        };
+        tmp14Result2 = closure_6(tmp(6925).TableRow, obj9);
+      }
+      items4[2] = tmp14Result2;
       obj5.children = items4;
-      return closure_7(tmp(7229).TableRowGroup, obj5);
+      return closure_7(tmp(7228).TableRowGroup, obj5);
     }
   }
   return null;

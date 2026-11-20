@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef3601 from "../IncentivizedAccountLinking.messages.js";
+import _modDef3603 from "../IncentivizedAccountLinking.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
@@ -11,7 +11,7 @@ import IncentivizedAccountLinkConfirmationPromoSheetDefault from "IncentivizedAc
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -21,9 +21,9 @@ const result = size.fileFinishedImporting(
 export default function IncentivizedAccountLinkConfirmationBottomSheet(orbCount) {
   let obj = { title: null, description: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.formatToPlainString(_modDef3601.g56Cg0, { orbCount: orbCount.orbCount });
+  obj.title = intl.formatToPlainString(_modDef3603.g56Cg0, { orbCount: orbCount.orbCount });
   const intl2 = util.intl;
-  obj.description = intl2.string(_modDef3601["Mh/Ooc"]);
+  obj.description = intl2.string(_modDef3603["Mh/Ooc"]);
   let obj2 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = util.intl;
   obj2.text = intl3.string(util.t.aRIFWD);

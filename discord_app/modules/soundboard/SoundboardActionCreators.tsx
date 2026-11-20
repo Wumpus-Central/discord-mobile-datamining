@@ -140,7 +140,7 @@ let closure_15 = async function _uploadSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -237,7 +237,7 @@ let closure_16 = async function _updateSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -333,7 +333,7 @@ let closure_17 = async function _deleteSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -367,7 +367,7 @@ let closure_17 = async function _deleteSound(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c2 = tmp;
@@ -386,7 +386,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -450,10 +450,10 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(5842).DEFAULT_SOUND_GUILD_ID;
-const Constants = fn(1072);
+const DEFAULT_SOUND_GUILD_ID = fn(5844).DEFAULT_SOUND_GUILD_ID;
+const Constants = fn(1071);
 ({ Endpoints: closure_6, AnalyticEvents: metroImportDefault } = Constants);
-const UserSettingsConstants = fn(1082);
+const UserSettingsConstants = fn(1081);
 ({ MAX_FAVORITES: closure_8, UserSettingsDelay: closure_9 } = UserSettingsConstants);
 let c10 = false;
 const size = fn(2);
@@ -556,6 +556,9 @@ export function fetchSoundGuildData() {
 }
 export function playSoundLocally(id, sound) {
   DispatcherDefault.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", sound, channelId: id });
+}
+export function stopSoundLocally(current) {
+  DispatcherDefault.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_STOP_LOCALLY", soundId: current });
 }
 export function reportSoundStartedPlaying(soundId, userId) {
   DispatcherDefault.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_START", soundId, userId });

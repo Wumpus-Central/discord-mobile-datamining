@@ -37,10 +37,10 @@ function AndroidPasskeyRadioGroup(onChange) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const UserSettingsSections = fn(1072).UserSettingsSections;
+const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   scrollContent: { flexGrow: 1 },
   flexContainer: {
@@ -75,9 +75,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx");
 
 export default function WebAuthnRegisterStep() {
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1500).useNavigation();
   const tmp4 = closure_10();
-  const obj = navigation(1502);
+  const obj = navigation(1500);
   const tmp5 = authenticatorSelection;
   [tmp7, tmp8] = authenticatorSelection(onRegisterSuccess.useState(false), 2);
   importDefault = tmp8;
@@ -87,7 +87,7 @@ export default function WebAuthnRegisterStep() {
   const tmp9 = authenticatorSelection(onRegisterSuccess.useState(""), 2);
   const tmp5Result = tmp5(
     onRegisterSuccess.useState(
-      navigation(1380).isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE,
+      navigation(1378).isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE,
     ),
     2,
   );
@@ -100,27 +100,27 @@ export default function WebAuthnRegisterStep() {
   closure_5 = obj2.useMemo(() => obj5[first], items1);
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
-  const obj3 = navigation(1380);
-  const announceError = navigation(15999).useAnnounceError(tmp10);
+  const obj3 = navigation(1378);
+  const announceError = navigation(15963).useAnnounceError(tmp10);
   obj4 = { contentContainerStyle: tmp4.scrollContent, alwaysBounceVertical: false, children: null };
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj5 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_8(navigation(16000).KeyImage, {}), ,];
+  const items3 = [closure_8(navigation(15964).KeyImage, {}), ,];
   const obj6 = { style: tmp4.margin, variant: "body-md/normal", children: null };
-  const intl = tmp(1113).intl;
+  const intl = tmp(1112).intl;
   const string = intl.string;
-  const t = tmp(1113).t;
+  const t = tmp(1112).t;
   if (tmp7) {
     let stringResult = string(t.aVMiX3);
   } else {
     stringResult = string(t.Lh5vTW);
   }
   obj6.children = stringResult;
-  items3[1] = closure_8(navigation(5383).Text, obj6);
+  items3[1] = closure_8(navigation(5385).Text, obj6);
   let tmp17Result = "" !== tmp10;
   if (tmp17Result) {
     const obj7 = { variant: "body-md/normal", color: "text-feedback-critical", children: tmp10 };
-    tmp17Result = closure_8(tmp(5383).Text, obj7);
+    tmp17Result = closure_8(tmp(5385).Text, obj7);
   }
   items3[2] = tmp17Result;
   obj5.children = items3;
@@ -131,16 +131,16 @@ export default function WebAuthnRegisterStep() {
     shouldDisplayAndroidFidoSelector = closure_8(AndroidPasskeyRadioGroup, obj8);
   }
   items4[1] = shouldDisplayAndroidFidoSelector;
-  const intl2 = tmp(1113).intl;
+  const intl2 = tmp(1112).intl;
   const string2 = intl2.string;
-  const t2 = tmp(1113).t;
+  const t2 = tmp(1112).t;
   if (tmp7) {
     let string2Result = string2(t2.wePEBF);
   } else {
     string2Result = string2(t2.oibaQa);
   }
   const obj9 = {
-    children: closure_8(navigation(5390).Button, {
+    children: closure_8(navigation(5392).Button, {
       text: string2Result,
       disabled: tmp7,
       loading: tmp7,
@@ -150,8 +150,8 @@ export default function WebAuthnRegisterStep() {
       size: "lg",
     }),
   };
-  items4[2] = closure_8(navigation(6424).ButtonGroup, obj9);
+  items4[2] = closure_8(navigation(6426).ButtonGroup, obj9);
   rect.children = items4;
-  obj4.children = closure_9(navigation(6898).SafeAreaPaddingView, rect);
+  obj4.children = closure_9(navigation(6897).SafeAreaPaddingView, rect);
   return closure_8(closure_5, obj4);
 }

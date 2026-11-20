@@ -7,8 +7,8 @@ import MuteTimers from "../../lib/MuteTimers.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const UserNotificationSettings = fn(1072).UserNotificationSettings;
-const UserSettingsConstants = fn(1082);
+const UserNotificationSettings = fn(1071).UserNotificationSettings;
+const UserSettingsConstants = fn(1081);
 ({ MuteUntilSeconds: closure_6, ChannelNotificationSettingsFlags: metroImportDefault } = UserSettingsConstants);
 let closure_8 = { ignoreMute: false, ignoreUnreadSetting: true, ignoreNotificationSetting: false };
 const size = fn(2);

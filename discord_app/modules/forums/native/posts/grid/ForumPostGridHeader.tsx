@@ -8,11 +8,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(8387).ForumTimestampFormats;
-const ChannelFlags = fn(4648).ChannelFlags;
+const ForumTimestampFormats = fn(8386).ForumTimestampFormats;
+const ChannelFlags = fn(4650).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({
   pinIcon: { marginEnd: 8 },
   container: { display: "flex", flexDirection: "column", marginBottom: 4 },

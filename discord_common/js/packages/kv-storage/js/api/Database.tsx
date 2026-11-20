@@ -147,15 +147,15 @@ prototype["executeSync"] = function executeSync(table) {
     throw error;
   } else {
     if ("key" in table) {
-      let str2 = table.key[0];
+      let str = table.key[0];
     } else {
-      str2 = table.table;
+      str = table.table;
     }
-    if (str2 == null) {
-      str2 = "";
+    if (str == null) {
+      str = "";
     }
     const _HermesInternal = HermesInternal;
-    return AppStartPerformanceDefault.time("\u{1F4BE}", "SYNC: " + table.type + " " + str2, () => {
+    return AppStartPerformanceDefault.time("\u{1F4BE}", "SYNC: " + table.type + " " + str, () => {
       const raw = self.raw;
       const obj = {};
       const merged = Object.assign(closure_0);
@@ -196,7 +196,7 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import ICYMIStore from "ICYMIStore.tsx";
 
 require = fn;
-function createItem(id, type, unread, arg3, fn) {
+function createItem(id, type, unread, waterwheelsDiscoverEnabled, isWaterwheelsCardEligible) {
   type = type.type;
   if (ICYMITypes.ICYMIItemTypes.MESSAGE === type) {
     if (type.message.id === type.message.channel_id) {
@@ -74,10 +74,10 @@ function createItem(id, type, unread, arg3, fn) {
           return obj9;
         } else if (ICYMITypes.ICYMIItemTypes.DISCOVER_ITEM === type) {
           let tmp6 = null;
-          if (arg3) {
+          if (waterwheelsDiscoverEnabled) {
             let tmp8;
-            if (fn != null) {
-              tmp8 = fn(type.card);
+            if (isWaterwheelsCardEligible != null) {
+              tmp8 = isWaterwheelsCardEligible(type.card);
             }
             tmp6 = null;
             if (false !== tmp8) {
@@ -122,8 +122,8 @@ export default function useICYMIItems() {
   }
   const isWaterwheelsCardEligible = obj.isWaterwheelsCardEligible;
   let stateFromStores1;
-  const waterwheelsDiscoverEnabled = stateFromStores1(9918).useWaterwheelsDiscoverEnabled("icymi_items");
-  const obj2 = stateFromStores1(9918);
+  const waterwheelsDiscoverEnabled = stateFromStores1(9921).useWaterwheelsDiscoverEnabled("icymi_items");
+  const obj2 = stateFromStores1(9921);
   items = [ICYMIStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => ICYMIStore.getUnreadDisplayItems());
   const obj3 = stateFromStores1(504);
@@ -165,7 +165,7 @@ export default function useICYMIItems() {
           let tmp10 = stateFromStoresObject[tmp7.id];
           let tmp11 = null == tmp10;
           if (tmp11) {
-            tmp11 = tmp7.type === stateFromStores1(9914).ICYMIItemTypes.MESSAGE;
+            tmp11 = tmp7.type === stateFromStores1(9917).ICYMIItemTypes.MESSAGE;
           }
           if (tmp11) {
             let message_context = tmp7.data.message_context;
@@ -212,7 +212,7 @@ export default function useICYMIItems() {
           let tmp27 = stateFromStoresObject[tmp24.id];
           let tmp28 = null == tmp27;
           if (tmp28) {
-            tmp28 = tmp24.type === stateFromStores1(9914).ICYMIItemTypes.MESSAGE;
+            tmp28 = tmp24.type === stateFromStores1(9917).ICYMIItemTypes.MESSAGE;
           }
           if (tmp28) {
             let message_context2 = tmp24.data.message_context;

@@ -30,10 +30,10 @@ function CoachmarkImg(badge) {
   return tmp5;
 }
 const View = fn(17).View;
-const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const UserSettingsSections = fn(1071).UserSettingsSections;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({
   image: { width: "100%", height: "100%" },
   imageContainer: { width: 110, height: 72, marginTop: 16 },
@@ -55,7 +55,7 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     const tmpResult = tmp(6844);
   }
   if (null != tieredTenureBadgeData) {
-    items = [tmp(4625).DismissibleContent.TIERED_TENURE_BADGE_COACHMARK];
+    items = [tmp(4627).DismissibleContent.TIERED_TENURE_BADGE_COACHMARK];
     let items1 = items;
   } else {
     items1 = [];
@@ -91,7 +91,7 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     };
     obj.onButtonPress = function onButtonPress() {
       dependencyMap(constants2.TAKE_ACTION);
-      tieredTenureBadgeData(8075).openUserSettings({ screen: constants.PREMIUM });
+      tieredTenureBadgeData(8074).openUserSettings({ screen: constants.PREMIUM });
     };
     const intl3 = util.intl;
     obj.buttonLabel = intl3.string(util.t.RzWDqY);

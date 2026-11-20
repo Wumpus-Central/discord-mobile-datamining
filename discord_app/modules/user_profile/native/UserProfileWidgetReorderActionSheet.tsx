@@ -102,7 +102,7 @@ function CompactApplicationWidget(widget) {
 const View = fn(17).View;
 const widgetShowsGameDetails = fn(6840).widgetShowsGameDetails;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { list: { gap: nativeDefault.space.PX_16 } };
 let closure_8 = createStyles.createStyles(obj);
 let closure_12 = noop.memo(function CompactWidgetRenderer(widget) {
@@ -125,15 +125,15 @@ export default function UserProfileWidgetReorderActionSheet(returnFocusRef) {
   items = [AuthenticationStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => id.getId());
   const obj = stateFromStores(504);
-  const displayableBoardWidgets = stateFromStores(10288).useDisplayableBoardWidgets(stateFromStores, true);
+  const boardWidgets = stateFromStores(10229).useBoardWidgets(stateFromStores);
   const obj3 = { dismissAccessibilityLabel: null, returnFocusRef: null, children: null };
-  const obj2 = stateFromStores(10288);
-  const intl = stateFromStores(1113).intl;
-  obj3.dismissAccessibilityLabel = intl.string(stateFromStores(1113).t["+uBSeT"]);
+  const obj2 = stateFromStores(10229);
+  const intl = stateFromStores(1112).intl;
+  obj3.dismissAccessibilityLabel = intl.string(stateFromStores(1112).t["+uBSeT"]);
   obj3.returnFocusRef = returnFocusRef.returnFocusRef;
   obj3.children = (
     <View accessibilityRole="list" style={tmp.list}>
-      {displayableBoardWidgets.map((widget) => (
+      {boardWidgets.map((widget) => (
         <closure_12 key={widget.getUniqueKey()} userId={stateFromStores} widget={widget} />
       ))}
     </View>

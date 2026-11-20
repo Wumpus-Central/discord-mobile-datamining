@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewActions.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import RelationshipActionCreatorsDefault from "../../../actions/RelationshipActionCreators.tsx";
@@ -12,12 +12,12 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticsPages: closure_6, RelationshipTypes: metroImportDefault } = Constants);
-let closure_8 = fn(11751).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_8 = fn(11693).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 }, buttonRow: null };
 let obj3 = { gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
 obj2.buttonRow = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
@@ -70,7 +70,7 @@ export default function RestrictedMessagePreviewActions(channel) {
   }, items5);
   const items7 = [user.id];
   const callback4 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11752, dependencyMap.paths), closure_8, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11694, dependencyMap.paths), closure_8, {
       userId: user.id,
       channelId: channel.id,
     });

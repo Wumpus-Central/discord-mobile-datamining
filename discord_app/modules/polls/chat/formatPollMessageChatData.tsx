@@ -5,7 +5,7 @@ import CommunicationDisabledUtils from "../../guild_communication_disabled/Commu
 import AutomodPermissionUtils from "../../guild_automod/AutomodPermissionUtils.tsx";
 import UnicodeEmojisDefault from "../../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
-import _mod6261 from "module_6261" /* 6261 */;
+import _mod6263 from "module_6263" /* 6263 */;
 import useFormattedExpirationLabel from "useFormattedExpirationLabel.tsx";
 import PollLayoutTypes from "../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -182,10 +182,10 @@ function computeBasicPollChatData(message, arg1, arg2) {
     return obj6;
   }
 }
-const getPollState = fn(11841).getPollState;
-const Constants = fn(1072);
+const getPollState = fn(11783).getPollState;
+const Constants = fn(1071);
 ({ MessageStates: closure_10, EMPTY_STRING_SNOWFLAKE_ID } = Constants);
-const ThemeTypes = fn(1083).ThemeTypes;
+const ThemeTypes = fn(1082).ThemeTypes;
 let obj = {
   channelId: EMPTY_STRING_SNOWFLAKE_ID,
   selectedAnswerIds: new Set(),
@@ -308,7 +308,7 @@ export default function formatPollMessageChatData(poll, arg1) {
             tmp6 = flag;
           }
           let tmp7 = isExpired;
-          const match = _mod6261.match({
+          const match = _mod6263.match({
             didSelfVote: tmp6,
             hasVoted,
             isExpired,
@@ -408,7 +408,7 @@ export default function formatPollMessageChatData(poll, arg1) {
             obj2.shouldAnimateTransition = tmp20;
             const _Math = Math;
             obj2.votesPercentage = Math.round(100 * num2);
-            const match1 = _mod6261.match(layout_type);
+            const match1 = _mod6263.match(layout_type);
             obj2.votes = match1
               .with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")")
               .otherwise(() => {

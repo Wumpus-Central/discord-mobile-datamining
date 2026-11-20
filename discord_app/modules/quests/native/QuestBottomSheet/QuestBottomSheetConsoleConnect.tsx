@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetConsoleConnect.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
@@ -79,13 +79,13 @@ function ConsoleRow(onPress) {
   }
 }
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ PlatformTypes: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   platformButtonsContainer: {
     display: "flex",
@@ -103,17 +103,17 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16560, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16383, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       initialStep,
       sourceQuestContent,
     });
   }
-  const xboxAndPlaystationAccounts = quest(9836).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(9836);
-  closure_4 = quest(9873).useGetQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(9838).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(9838);
+  closure_4 = quest(9876).useGetQuestImpressionId();
   items = [quest, xboxAndPlaystationAccounts];
-  let obj2 = quest(9873);
+  let obj2 = quest(9876);
   return closure_6(NonInlineConsoleConnection, {
     consoles: xboxAndPlaystationAccounts.useMemo(
       () =>

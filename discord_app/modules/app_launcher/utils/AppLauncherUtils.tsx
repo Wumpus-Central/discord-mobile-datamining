@@ -64,9 +64,9 @@ function getShelfBadgeTypeIfActive(application) {
   NONE = Server.EmbeddedActivityLabelTypes.NONE;
 }
 let closure_3 = ["fakeAppIconURL"];
-const ApplicationFlags = fn(1072).ApplicationFlags;
-const BuiltInSectionId = fn(5816).BuiltInSectionId;
-const MessageSendLocation = fn(4797).MessageSendLocation;
+const ApplicationFlags = fn(1071).ApplicationFlags;
+const BuiltInSectionId = fn(5818).BuiltInSectionId;
+const MessageSendLocation = fn(4799).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -174,7 +174,7 @@ export function executeAppLauncherCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -251,7 +251,7 @@ export function executeAppLauncherCommand(arg0) {
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;

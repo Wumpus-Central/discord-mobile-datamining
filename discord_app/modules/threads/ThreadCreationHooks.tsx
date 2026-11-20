@@ -412,13 +412,13 @@ let closure_26 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(8196).DraftType;
-const SlowmodeType = fn(8269).SlowmodeType;
-const ThreadConstants = fn(1112);
+const DraftType = fn(8195).DraftType;
+const SlowmodeType = fn(8268).SlowmodeType;
+const ThreadConstants = fn(1111);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AbortCodes: closure_14, AnalyticEvents: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, LoggingInviteTypes: closure_18, MAX_MESSAGES_PER_CHANNEL: closure_19, MessageFlags: closure_20 } = Constants);
-const MessageSendLocation = fn(4797).MessageSendLocation;
+const MessageSendLocation = fn(4799).MessageSendLocation;
 const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadCreationHooks.tsx");
@@ -459,7 +459,7 @@ export function useCreateThreadCommon(parentChannel) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -559,24 +559,24 @@ export function useCreateThreadCommon(parentChannel) {
                 }
                 if (null != items1) {
                   if (items1.length > 0) {
-                    const obj4 = closure_1_1(8131);
+                    const obj4 = closure_1_1(8130);
                     id = id.id;
                     const obj3 = { location: constants.THREAD_CREATION };
-                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(8263).parse(id, arg1), obj3);
-                    const obj5 = closure_1_1(8263);
+                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(8262).parse(id, arg1), obj3);
+                    const obj5 = closure_1_1(8262);
                   }
                   return sendStickersResult;
                 }
-                obj = closure_1_1(8131);
-                sendStickersResult = obj.sendMessage(id.id, closure_1_1(8263).parse(id, arg1), undefined, { location: constants.THREAD_CREATION });
-                const obj2 = closure_1_1(8263);
+                obj = closure_1_1(8130);
+                sendStickersResult = obj.sendMessage(id.id, closure_1_1(8262).parse(id, arg1), undefined, { location: constants.THREAD_CREATION });
+                const obj2 = closure_1_1(8262);
                 const obj6 = { location: constants.THREAD_CREATION };
               })(closure_132_7, closure_132_0, closure_132_1, closure_132_2, c7);
               const obj9 = parentMessageId(threadSettings[19]);
             }
             parentMessageId(threadSettings[20]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp42) {
           c7 = tmp;
@@ -633,7 +633,7 @@ export function useCreateForumPostCommon(parentChannel) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

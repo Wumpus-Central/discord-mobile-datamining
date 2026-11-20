@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
 
 const require = fn;
-const MEDIA_MODAL_KEY = fn(1072).MEDIA_MODAL_KEY;
+const MEDIA_MODAL_KEY = fn(1071).MEDIA_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");

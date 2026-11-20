@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish_eval/native/ConjurePublishEvalCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import StarOutlineIcon2 from "../../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
 import StarIcon from "../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
@@ -38,11 +38,11 @@ function ScoreRow(dimension) {
   dimension = dimension.dimension;
   ({ value: importDefault, disabled: dependencyMap, onChange: closure_3 } = dimension);
   const tmp = closure_7();
-  const result = dimension(18301).conjurePublishEvalDimensionLabel(dimension);
+  const result = dimension(12192).conjurePublishEvalDimensionLabel(dimension);
   const obj2 = { style: tmp.scoreRow, children: null };
-  items = [closure_5(dimension(5383).Text, { variant: "body-sm/medium", color: "text-default", children: result })];
+  items = [closure_5(dimension(5385).Text, { variant: "body-sm/medium", color: "text-default", children: result })];
   const obj3 = { style: tmp.stars, accessibilityRole: "radiogroup", accessibilityLabel: result, children: null };
-  const prop = dimension(18650).CONJURE_PUBLISH_RATINGS;
+  const prop = dimension(18491).CONJURE_PUBLISH_RATINGS;
   obj3.children = prop.map((score) =>
     hasOwnProperty(ScoreStar, { dimension, score, value, disabled, onChange }, score),
   );
@@ -54,7 +54,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   card: {
     gap: nativeDefault.space.PX_12,
@@ -103,17 +103,17 @@ let result = size.fileFinishedImporting("modules/conjure/publish_eval/native/Con
 export default function ConjurePublishEvalCard(pending) {
   let conjurePublishEvalForm;
   const tmp = closure_7();
-  conjurePublishEvalForm = conjurePublishEvalForm(18301).useConjurePublishEvalForm(pending.pending);
+  conjurePublishEvalForm = conjurePublishEvalForm(12192).useConjurePublishEvalForm(pending.pending);
   const obj2 = { style: tmp.card, children: null };
   const obj3 = { style: tmp.header, children: null };
   const obj4 = { variant: "heading-md/semibold", children: null };
-  const intl = conjurePublishEvalForm(1113).intl;
-  obj4.children = intl.string(_modDef4089.GVLtfq);
-  items = [closure_5(conjurePublishEvalForm(5383).Heading, obj4)];
+  const intl = conjurePublishEvalForm(1112).intl;
+  obj4.children = intl.string(_modDef4091.GVLtfq);
+  items = [closure_5(conjurePublishEvalForm(5385).Heading, obj4)];
   const obj5 = { variant: "body-sm/normal", color: "text-muted", children: null };
-  const intl2 = conjurePublishEvalForm(1113).intl;
-  obj5.children = intl2.string(_modDef4089["Zj4E+A"]);
-  items[1] = closure_5(conjurePublishEvalForm(5383).Text, obj5);
+  const intl2 = conjurePublishEvalForm(1112).intl;
+  obj5.children = intl2.string(_modDef4091["Zj4E+A"]);
+  items[1] = closure_5(conjurePublishEvalForm(5385).Text, obj5);
   obj3.children = items;
   const items1 = [closure_6(closure_4, obj3), , , ,];
   const obj6 = { style: tmp.scores, children: null };
@@ -136,19 +136,19 @@ export default function ConjurePublishEvalCard(pending) {
     }),
   ];
   const obj7 = { variant: "body-xs/normal", color: "text-muted", children: null };
-  const intl3 = conjurePublishEvalForm(1113).intl;
-  obj7.children = intl3.string(_modDef4089.BvaFUc);
-  items2[1] = closure_5(conjurePublishEvalForm(5383).Text, obj7);
+  const intl3 = conjurePublishEvalForm(1112).intl;
+  obj7.children = intl3.string(_modDef4091.BvaFUc);
+  items2[1] = closure_5(conjurePublishEvalForm(5385).Text, obj7);
   obj6.children = items2;
   items1[1] = closure_6(closure_4, obj6);
   const obj9 = { label: null, placeholder: null, maxLength: null, value: null, onChange: null, disabled: null };
-  const intl4 = conjurePublishEvalForm(1113).intl;
-  obj9.label = intl4.string(_modDef4089.d28g0o);
-  const intl5 = conjurePublishEvalForm(1113).intl;
-  obj9.placeholder = intl5.string(_modDef4089.EBB7lL);
-  obj9.maxLength = conjurePublishEvalForm(18304).CONJURE_PUBLISH_EVAL_FEEDBACK_MAX_LENGTH;
+  const intl4 = conjurePublishEvalForm(1112).intl;
+  obj9.label = intl4.string(_modDef4091.d28g0o);
+  const intl5 = conjurePublishEvalForm(1112).intl;
+  obj9.placeholder = intl5.string(_modDef4091.EBB7lL);
+  obj9.maxLength = conjurePublishEvalForm(12195).CONJURE_PUBLISH_EVAL_FEEDBACK_MAX_LENGTH;
   ({ feedback: obj8.value, setFeedback: obj8.onChange, submitting: obj8.disabled } = conjurePublishEvalForm);
-  items1[2] = closure_5(conjurePublishEvalForm(7342).TextArea, obj9);
+  items1[2] = closure_5(conjurePublishEvalForm(7341).TextArea, obj9);
   let tmp7Result = null;
   if (null != conjurePublishEvalForm.error) {
     const obj19 = {
@@ -157,15 +157,15 @@ export default function ConjurePublishEvalCard(pending) {
       accessibilityRole: "alert",
       children: conjurePublishEvalForm.error,
     };
-    tmp7Result = closure_5(tmp2(5383).Text, obj19);
+    tmp7Result = closure_5(tmp2(5385).Text, obj19);
   }
   items1[3] = tmp7Result;
   const obj20 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
-  const intl6 = tmp2(1113).intl;
-  obj20.text = intl6.string(_modDef4089.CYQood);
+  const intl6 = tmp2(1112).intl;
+  obj20.text = intl6.string(_modDef4091.CYQood);
   obj20.disabled = !conjurePublishEvalForm.canSubmit;
   ({ submitting: obj10.loading, submit: obj10.onPress } = conjurePublishEvalForm);
-  items1[4] = closure_5(conjurePublishEvalForm(5390).Button, obj20);
+  items1[4] = closure_5(conjurePublishEvalForm(5392).Button, obj20);
   obj2.children = items1;
   return closure_6(closure_4, obj2);
 }

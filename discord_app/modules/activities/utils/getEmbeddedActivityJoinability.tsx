@@ -116,7 +116,7 @@ function getEmbeddedActivityJoinability(arg0) {
     }
   }
 }
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const EmbeddedActivityJoinability = {
   CAN_JOIN: 0,
   [0]: "CAN_JOIN",

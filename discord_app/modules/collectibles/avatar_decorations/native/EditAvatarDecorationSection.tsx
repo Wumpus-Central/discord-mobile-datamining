@@ -8,17 +8,17 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7961).isAvatarDecorationRecord;
-const AVATAR_DECORATION_SIZE = fn(1415).AVATAR_DECORATION_SIZE;
+const isAvatarDecorationRecord = fn(7960).isAvatarDecorationRecord;
+const AVATAR_DECORATION_SIZE = fn(1413).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   row: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(14171).GUTTER_SIZE,
+    paddingHorizontal: fn(14140).GUTTER_SIZE,
   },
   rowSpacer: null,
 };
@@ -26,9 +26,9 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(14171).GUTTER_SIZE,
+  paddingHorizontal: fn(14140).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(14171).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(14140).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo((size) => {
   ({ items, selectedSkuId: require, setSelectedAvatarDecoration } = size);

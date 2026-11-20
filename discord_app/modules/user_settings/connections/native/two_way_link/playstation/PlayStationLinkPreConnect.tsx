@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import _modDef7080 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
+import _modDef7079 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(7076).PlayStationLinkModalScenes;
+let closure_4 = fn(7075).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -16,7 +16,7 @@ export function PlayStationLinkPreConnect(arg0) {
   let navigation;
   ({ platformType, autoStart } = arg0);
   const tmp = closure_6();
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1500).useNavigation();
   items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback((arg0) => {
@@ -25,7 +25,7 @@ export function PlayStationLinkPreConnect(arg0) {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef7080 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef7079 }), []);
   const obj2 = {
     platformType,
     onError: callback1,
@@ -36,12 +36,12 @@ export function PlayStationLinkPreConnect(arg0) {
     body: null,
     autoStart: null,
   };
-  const intl = navigation(1113).intl;
-  obj2.title = intl.string(navigation(1113).t["6n+UPR"]);
-  const intl2 = navigation(1113).intl;
-  obj2.body = intl2.string(navigation(1113).t.JaaqIf);
+  const intl = navigation(1112).intl;
+  obj2.title = intl.string(navigation(1112).t["6n+UPR"]);
+  const intl2 = navigation(1112).intl;
+  obj2.body = intl2.string(navigation(1112).t.JaaqIf);
   obj2.autoStart = autoStart;
-  return jsx(navigation(6948).TwoWayLinkPreConnect, {
+  return jsx(navigation(6947).TwoWayLinkPreConnect, {
     platformType,
     onError: callback1,
     onNext: callback,

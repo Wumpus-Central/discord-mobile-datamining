@@ -23,7 +23,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import t_mod from "../../../_runtime/metro/02070__.js";
+import t_mod from "../../../_runtime/metro/02068__.js";
 import combineMarkupRules_mod from "combineMarkupRules.tsx";
 import "apply";
 import apply_mod from "../../../_runtime/00012_apply.js";
@@ -243,14 +243,14 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
   obj.channelId = id;
   return obj;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   ID_REGEX: closure_9,
   MARKDOWN_SPOILER_REGEXP: closure_10,
   MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11,
 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5816).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5817).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5818).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5819).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;
@@ -1058,6 +1058,8 @@ const omitResult5 = apply.omit(importDefaultResult3Result, [
 ]);
 let apply = apply_mod;
 const omitResult6 = apply.omit(importDefaultResult3Result, ["codeBlock", "blockQuote", "br"]);
+let apply = apply_mod;
+const omitResult7 = apply.omit(importDefaultResult3Result, ["codeBlock", "br", "inlineCode"]);
 let items2 = [
   {
     highlightWord: {
@@ -1257,7 +1259,17 @@ const obj25 = {
     },
   },
 };
-const omitResult7 = apply.omit(importDefaultResult3Result, ["codeBlock", "br", "inlineCode"]);
+const pickResult = apply.pick(importDefaultResult3Result, [
+  "escape",
+  "emoticon",
+  "text",
+  "strong",
+  "em",
+  "u",
+  "s",
+  "inlineCode",
+  "timestamp",
+]);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/MarkupRules.tsx");
 
@@ -1271,7 +1283,18 @@ export default {
   GUILD_EVENT_RULES: omitResult6,
   PROFILE_BIO_RULES: omitResult5,
   AUTO_MODERATION_SYSTEM_MESSAGE_RULES: combineMarkupRules(items2),
-  NATIVE_SEARCH_RESULT_LINK_RULES: apply.omit(importDefaultResult3Result, ["codeBlock", "br", "inlineCode"]),
+  NATIVE_SEARCH_RESULT_LINK_RULES: omitResult7,
+  POLL_RULES: apply.pick(importDefaultResult3Result, [
+    "escape",
+    "emoticon",
+    "text",
+    "strong",
+    "em",
+    "u",
+    "s",
+    "inlineCode",
+    "timestamp",
+  ]),
 };
 export { hydrateRoleMention };
 export { hydrateUserMention };

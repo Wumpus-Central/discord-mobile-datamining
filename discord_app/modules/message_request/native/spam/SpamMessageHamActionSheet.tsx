@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   header: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   container: null,
@@ -49,8 +49,8 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
-      const intl = recipientId(1113).intl;
-      obj2.text = intl.string(recipientId(1113).t["EDYbS+"]);
+      const intl = recipientId(1112).intl;
+      obj2.text = intl.string(recipientId(1112).t["EDYbS+"]);
       ToastActionCreatorsDefault.open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
     },
     onAcceptSuccess: function handleAcceptSuccess() {

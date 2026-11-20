@@ -10,10 +10,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const UserFlags = fn(1072).UserFlags;
+const UserFlags = fn(1071).UserFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   header: {
     paddingBottom: 16,

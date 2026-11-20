@@ -6,10 +6,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
-const PlatformUtils = fn(1380);
+const createStyles = fn(4794);
+const PlatformUtils = fn(1378);
 if (PlatformUtils.isAndroid()) {
-  const obj3 = { fontFamily: fn(1083).Fonts.PRIMARY_NORMAL_ITALIC };
+  const obj3 = { fontFamily: fn(1082).Fonts.PRIMARY_NORMAL_ITALIC };
   let obj4 = obj3;
 } else {
   obj4 = { fontStyle: "italic" };

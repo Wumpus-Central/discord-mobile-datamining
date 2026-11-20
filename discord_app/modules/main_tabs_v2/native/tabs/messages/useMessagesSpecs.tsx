@@ -8,13 +8,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_3 = ["height"];
-const DM_WIDTH = fn(1072).DM_WIDTH;
+const DM_WIDTH = fn(1071).DM_WIDTH;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
-  fontScale = fontScale(5398).useFontScale();
-  top = top(1630)().top;
+  fontScale = fontScale(5400).useFontScale();
+  top = top(1628)().top;
   items = [fontScale, top];
   return noop.useMemo(() => {
     const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);

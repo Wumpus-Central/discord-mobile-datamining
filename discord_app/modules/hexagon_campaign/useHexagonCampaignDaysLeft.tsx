@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_5 = 60 * DurationsDefault.Millis.SECOND;
-let closure_6 = Object.values(fn(4817).HexagonCampaignPerk);
+let closure_6 = Object.values(fn(4819).HexagonCampaignPerk);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/useHexagonCampaignDaysLeft.tsx");
 

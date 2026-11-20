@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_5 = createStyles.createStyles({
   container: { position: "relative", justifyContent: "center", alignItems: "center" },
   textContainer: { justifyContent: "center", width: "100%" },
@@ -21,8 +21,8 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = closure_5();
-  const logAppLauncherEmptyStateView = flag(12829).useLogAppLauncherEmptyStateView(
-    flag(10614).AppLauncherEmptyStateType.SEARCH_EMPTY,
+  const logAppLauncherEmptyStateView = flag(12799).useLogAppLauncherEmptyStateView(
+    flag(10556).AppLauncherEmptyStateType.SEARCH_EMPTY,
     showsGenericMessage.query,
   );
   items = [flag];
@@ -41,16 +41,16 @@ export default function EmptyState(showsGenericMessage) {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = { style: tmp.text, variant: "body-sm/medium", color: "text-default", children: null };
-  let intl = flag(1113).intl;
+  let intl = flag(1112).intl;
   let string = intl.string;
-  let t = flag(1113).t;
+  let t = flag(1112).t;
   if (flag) {
     let stringResult = string(t.aOkFv8);
   } else {
     stringResult = string(t.LSNOYf);
   }
   obj4.children = stringResult;
-  obj3.children = jsx(flag(5383).Text, {
+  obj3.children = jsx(flag(5385).Text, {
     style: tmp.text,
     variant: "body-sm/medium",
     color: "text-default",

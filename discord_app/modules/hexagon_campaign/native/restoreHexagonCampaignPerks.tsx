@@ -109,7 +109,7 @@ let closure_12 = async function _restoreExpiredHexagonCampaignPerks() {
   const _Boolean = Boolean;
   return value.every(Boolean);
 };
-const HexagonCampaignConstants = fn(4817);
+const HexagonCampaignConstants = fn(4819);
 ({ DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID: closure_8, HexagonCampaignPerk: closure_9 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/restoreHexagonCampaignPerks.tsx");

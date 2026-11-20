@@ -3,7 +3,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 const require = fn;
-let closure_5 = fn(1074).CollectiblesMobileShopScreen;
+let closure_5 = fn(1073).CollectiblesMobileShopScreen;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx");
 

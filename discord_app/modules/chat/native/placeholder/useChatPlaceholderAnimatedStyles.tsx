@@ -1,12 +1,12 @@
 // discord_app/modules/chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-let obj = { duration: 1300, easing: fn(1187).STANDARD_EASING };
+let obj = { duration: 1300, easing: fn(1186).STANDARD_EASING };
 let closure_4 = {
   code: "(function useChatPlaceholderAnimatedStylesTsx1(){let[visible,animated,useReducedMotion,withRepeat,withSequence,withTiming,timingNone,TIMING_CONFIG]=this.__closure;if(!visible){return{opacity:0};}else if(!animated||useReducedMotion){return{opacity:0.7};}return{opacity:withRepeat(withSequence(withTiming(0.3,timingNone),withTiming(0.7,TIMING_CONFIG),withTiming(0.3,TIMING_CONFIG)),-1)};})",
 };
@@ -23,8 +23,8 @@ export default function useChatPlaceholderAnimatedStyles(arg0) {
     visible,
     animated,
     stateFromStores,
-    _mod1655.withRepeat,
-    _mod1655.withSequence,
+    _mod1653.withRepeat,
+    _mod1653.withSequence,
     timing_timing.withTiming,
     timingPresets.timingNone,
     obj,
@@ -57,5 +57,5 @@ export default function useChatPlaceholderAnimatedStyles(arg0) {
   useChatPlaceholderAnimatedStylesTsx1.__closure = items2;
   useChatPlaceholderAnimatedStylesTsx1.__workletHash = 17414638142691;
   useChatPlaceholderAnimatedStylesTsx1.__initData = tmp2;
-  return _mod1655.useAnimatedStyle(useChatPlaceholderAnimatedStylesTsx1);
+  return _mod1653.useAnimatedStyle(useChatPlaceholderAnimatedStylesTsx1);
 }

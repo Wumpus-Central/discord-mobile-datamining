@@ -49,8 +49,8 @@ function handleAVAudioSessionMode() {
     const result = obj2.setAVAudioSessionMode(VIDEO);
   }
 }
-const AppStates = fn(1072).AppStates;
-const PlatformUtils = fn(1380);
+const AppStates = fn(1071).AppStates;
+const PlatformUtils = fn(1378);
 if (PlatformUtils.isAndroid()) {
   let obj2 = {
     setAVAudioSessionMode() {},

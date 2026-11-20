@@ -34,17 +34,17 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
   const obj = {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "Promise",
-    canAccessMedia: "ip",
+    canAccessMedia: "disabled",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
     rate: "Path",
-    showPip: "angle",
+    showPip: "fist_tone3",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "ruler"
+    currentlyDisplayedChannelId: "+237"
   };
   return obj;
 });
@@ -115,7 +115,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["updateMediaPermissions"] = function updateMediaPermissions() {
   const self = this;
-  self(1263).batchUpdates(() => {
+  self(1262).batchUpdates(() => {
     const activeMediaPlayerSource = obj.getState().activeMediaPlayerSource;
     let channelId;
     if (activeMediaPlayerSource != null) {
@@ -171,7 +171,7 @@ prototype["userDidClosePip"] = function userDidClosePip() {
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
-  self(1263).batchUpdates(() => {
+  self(1262).batchUpdates(() => {
     self.pauseCurrentPlayer();
     obj.setState({ wasPipClosedByUser: true, showPip: false });
   });
@@ -275,7 +275,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
 prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayerPlaybackSourceChanged(source) {
   const self = this;
   source = source.source;
-  source(1263).batchUpdates(() => {
+  source(1262).batchUpdates(() => {
     let id;
     state = obj.getState();
     if (source != null) {
@@ -284,7 +284,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "ip", rate: false, isPlaying: false, wasPipClosedByUser: "__didCreateRequest" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: "nextElementSibling" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

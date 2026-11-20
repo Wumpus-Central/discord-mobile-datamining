@@ -17,9 +17,9 @@ import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 import EmbeddedActivitiesManager from "../EmbeddedActivitiesManager.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, ComponentActions: metroImportDefault } = Constants);
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);

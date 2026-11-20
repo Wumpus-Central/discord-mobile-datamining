@@ -6,7 +6,7 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const CallConstants = fn(5442);
+const CallConstants = fn(5444);
 ({ isStreamParticipant: closure_6, ParticipantTypes: metroImportDefault } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
@@ -81,12 +81,12 @@ export function useShouldForcePipOrientation(channel) {
       }
     }
   }
-  if (activityLockOrientation === channel(2146).EmbeddedActivityOrientationLockState.LANDSCAPE) {
+  if (activityLockOrientation === channel(2144).EmbeddedActivityOrientationLockState.LANDSCAPE) {
     OrientationType = tmp2(9311).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
-    if (activityLockOrientation === tmp2(2146).EmbeddedActivityOrientationLockState.PORTRAIT) {
+    if (activityLockOrientation === tmp2(2144).EmbeddedActivityOrientationLockState.PORTRAIT) {
       LANDSCAPE = tmp2(9311).OrientationType.PORTRAIT;
     }
   }

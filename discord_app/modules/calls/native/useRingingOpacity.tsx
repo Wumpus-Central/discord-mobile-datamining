@@ -1,5 +1,5 @@
 // discord_app/modules/calls/native/useRingingOpacity.tsx
-import _mod1655 from "../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -7,8 +7,8 @@ const require = globalThis.__r;
 
 require = fn;
 let obj = { duration: 1000, easing: null };
-const Easing = fn(1655).Easing;
-obj.easing = Easing.inOut(fn(1655).Easing.ease);
+const Easing = fn(1653).Easing;
+obj.easing = Easing.inOut(fn(1653).Easing.ease);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/calls/native/useRingingOpacity.tsx");
 
@@ -30,18 +30,18 @@ export default function useRingingOpacity(arg0) {
   if (num3 === undefined) {
     num3 = 1000;
   }
-  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(num);
+  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(num);
   items = [sharedValue, arg0, num, num2, num3];
   const effect = num2.useEffect(() => {
     if (closure_0) {
       const result = sharedValue.set(num);
       const withTimingResult = timing_timing.withTiming(num2, obj);
       const withTimingResult1 = timing_timing.withTiming(num, obj);
-      const obj5 = _mod1655;
-      const withRepeatResult = obj5.withRepeat(_mod1655.withSequence(withTimingResult, withTimingResult1), -1);
-      const result1 = sharedValue.set(_mod1655.withDelay(num3, withRepeatResult));
+      const obj5 = _mod1653;
+      const withRepeatResult = obj5.withRepeat(_mod1653.withSequence(withTimingResult, withTimingResult1), -1);
+      const result1 = sharedValue.set(_mod1653.withDelay(num3, withRepeatResult));
     } else {
-      obj = _mod1655;
+      obj = _mod1653;
       obj.cancelAnimation(sharedValue);
       if (0.1 !== 0.1) {
         const result2 = sharedValue.set(timing_timing.withTiming(tmp4, obj));

@@ -9,8 +9,8 @@ import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const findFirstVoiceChannelId = fn(4695).findFirstVoiceChannelId;
-const Constants = fn(1072);
+const findFirstVoiceChannelId = fn(4697).findFirstVoiceChannelId;
+const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, Routes: closure_8, ME: closure_9, NULL_STRING_GUILD_ID: closure_10 } = Constants);
 class SelectedChannelManager extends tmp3 {
   constructor() {

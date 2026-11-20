@@ -8,25 +8,25 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let PlatformUtils = fn(1380);
+let PlatformUtils = fn(1378);
 let num = 58;
 if (PlatformUtils.isAndroid()) {
   num = 48;
 }
-PlatformUtils = fn(1380);
+PlatformUtils = fn(1378);
 let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj4 = {
   titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 },
   horizontalPadding: { paddingHorizontal: 16 },
   thinTitle: { paddingTop: 26 },
-  titleText: { fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE },
+  titleText: { fontFamily: fn(1071).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE },
   error: null,
 };
-const obj5 = { fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
+const obj5 = { fontFamily: fn(1071).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
 obj4.error = { color: nativeDefault.unsafe_rawColors.RED_400 };
 let closure_5 = createStyles.createStyles(obj4);
 const size = fn(2);

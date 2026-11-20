@@ -4,7 +4,7 @@ import GuildMemberCountStore from "../../../../stores/GuildMemberCountStore.tsx"
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/useStickyServerHeaderSubtitle.tsx");
 

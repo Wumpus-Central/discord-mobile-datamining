@@ -4,23 +4,23 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
-const util = ShopIcon(1113);
-const native = ShopIcon(1187);
-const Text_Text = ShopIcon(5383);
-const components_Button_Button = ShopIcon(5390);
-const Pressables = ShopIcon(6911);
-const XSmallIcon = ShopIcon(7032);
+const util = ShopIcon(1112);
+const native = ShopIcon(1186);
+const Text_Text = ShopIcon(5385);
+const components_Button_Button = ShopIcon(5392);
+const Pressables = ShopIcon(6910);
+const XSmallIcon = ShopIcon(7031);
 const NitroWheelIcon = ShopIcon(8832);
-const ShopIcon2 = ShopIcon(12917);
+const ShopIcon2 = ShopIcon(12887);
 require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(7950).TrackUserProfileActions;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const TrackUserProfileActions = fn(7949).TrackUserProfileActions;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let items = [...fn(8831).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   upsellContainer: {
     paddingVertical: 16,

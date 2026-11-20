@@ -44,16 +44,22 @@ const uploadStore = new UploadStore(DispatcherDefault, {
     closure_8 = {};
   },
   UPLOAD_START: function handleUploadStart(arg0) {
-    ({ channelId, file, uploader, message } = arg0);
+    ({ channelId, file } = arg0);
+    ({ uploader, message } = arg0);
     if (!uploader._aborted) {
       if (!uploader._errored) {
-        let tmp2 = dependencyMap[channelId];
-        if (tmp2 == null) {
-          tmp2 = closure_3;
+        let arr = dependencyMap[channelId];
+        if (arr == null) {
+          arr = closure_3;
         }
         closure_5[file.id] = uploader;
         const items1 = [];
-        items1[HermesBuiltin.arraySpread(tmp2, 0)] = file;
+        items1[
+          HermesBuiltin.arraySpread(
+            arr.filter((id) => id.id !== file.id),
+            0,
+          )
+        ] = file;
         dependencyMap[channelId] = items1;
         if (null != message) {
           closure_6[file.id] = message;

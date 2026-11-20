@@ -4,7 +4,7 @@ import NitroCoinStackSpotIllustration2 from "../../../design/components/mana-ass
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EXTERNAL_PRODUCT_SKU_IDS = fn(1074).EXTERNAL_PRODUCT_SKU_IDS;
+const EXTERNAL_PRODUCT_SKU_IDS = fn(1073).EXTERNAL_PRODUCT_SKU_IDS;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");

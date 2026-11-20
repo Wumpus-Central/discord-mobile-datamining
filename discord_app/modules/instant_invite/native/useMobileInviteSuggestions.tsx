@@ -10,8 +10,8 @@ import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const NOOP_NULL = fn(1083).NOOP_NULL;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const NOOP_NULL = fn(1082).NOOP_NULL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/useMobileInviteSuggestions.tsx");
 

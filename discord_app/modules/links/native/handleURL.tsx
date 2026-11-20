@@ -22,7 +22,7 @@ let closure_10 = async function _handleURL(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_10 = async function _handleURL(arg0) {
             if (null != obj.sanitizeUrl(closure_1_0)) {
               let SAFARI = constants.SAFARI;
               if (closure_1_0.startsWith("https:")) {
-                const browserManagerSelectedBrowser = closure_0(5503).getBrowserManagerSelectedBrowser();
+                const browserManagerSelectedBrowser = closure_0(5505).getBrowserManagerSelectedBrowser();
                 let tmp10 = closure_1_1;
                 if (closure_1_1 == null) {
                   tmp10 = browserManagerSelectedBrowser;
@@ -79,50 +79,50 @@ let closure_10 = async function _handleURL(arg0) {
                   if (browserManagerSelectedBrowser !== constants.IN_APP) {
                     SAFARI = browserManagerSelectedBrowser;
                   } else {
-                    closure_0(1380).isIOS() ? constants.SAFARI : constants.CHROME;
-                    const tmp8Result = closure_0(1380);
+                    closure_0(1378).isIOS() ? constants.SAFARI : constants.CHROME;
+                    const tmp8Result = closure_0(1378);
                   }
                 }
-                const obj3 = closure_0(5503);
+                const obj3 = closure_0(5505);
               }
               if (constants.IN_APP === SAFARI) {
-                const result = closure_0(5503).browserManagerOpenUrl(closure_1_0, constants.IN_APP);
+                const result = closure_0(5505).browserManagerOpenUrl(closure_1_0, constants.IN_APP);
                 result.catch(() => {
-                  const intl = closure_2_0(1113).intl;
-                  closure_2_0(5473).presentFailedToast(
-                    "" + intl.string(closure_2_0(1113).t.HryVrx) + " " + closure_1_0,
+                  const intl = closure_2_0(1112).intl;
+                  closure_2_0(5475).presentFailedToast(
+                    "" + intl.string(closure_2_0(1112).t.HryVrx) + " " + closure_1_0,
                   );
                 });
-                const obj7 = closure_0(5503);
-                let isIOSResult = closure_0(1380).isIOS();
+                const obj7 = closure_0(5505);
+                let isIOSResult = closure_0(1378).isIOS();
                 if (isIOSResult) {
                   isIOSResult = open.isOpen();
                 }
                 if (isIOSResult) {
-                  closure_1(5006).hideAllActionSheets();
-                  const tmpResult = closure_1(5006);
+                  closure_1(5008).hideAllActionSheets();
+                  const tmpResult = closure_1(5008);
                 }
-                const obj8 = closure_0(1380);
+                const obj8 = closure_0(1378);
               } else if (constants.CHROME === SAFARI) {
-                const result1 = closure_0(5503).browserManagerOpenUrl(closure_1_0, constants.CHROME);
+                const result1 = closure_0(5505).browserManagerOpenUrl(closure_1_0, constants.CHROME);
                 result1.catch(() => {
-                  const intl = closure_2_0(1113).intl;
-                  closure_2_0(5473).presentFailedToast(
-                    "" + intl.string(closure_2_0(1113).t.HryVrx) + " " + closure_1_0,
+                  const intl = closure_2_0(1112).intl;
+                  closure_2_0(5475).presentFailedToast(
+                    "" + intl.string(closure_2_0(1112).t.HryVrx) + " " + closure_1_0,
                   );
                 });
-                const obj6 = closure_0(5503);
+                const obj6 = closure_0(5505);
               } else {
                 const SAFARI2 = constants.SAFARI;
-                const result2 = closure_0(5503).browserManagerOpenUrl(closure_1_0, constants.SAFARI);
-                const obj5 = closure_0(5503);
+                const result2 = closure_0(5505).browserManagerOpenUrl(closure_1_0, constants.SAFARI);
+                const obj5 = closure_0(5505);
               }
             } else {
-              let intl = closure_0(1113).intl;
-              closure_0(5473).presentFailedToast(intl.string(closure_0(1113).t.XiqzAp));
-              const obj2 = closure_0(5473);
+              let intl = closure_0(1112).intl;
+              closure_0(5475).presentFailedToast(intl.string(closure_0(1112).t.XiqzAp));
+              const obj2 = closure_0(5475);
             }
-            obj = closure_1(2070);
+            obj = closure_1(2068);
           };
           c7 = 1;
           c8 = 1;
@@ -143,7 +143,7 @@ let closure_10 = async function _handleURL(arg0) {
             }
             closure_131_4();
             c8 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           } else {
             closure_131_0 = closure_132_1(closure_132_2[15])(closure_131_0);
             if (obj6.test(closure_131_0)) {
@@ -176,8 +176,8 @@ let closure_10 = async function _handleURL(arg0) {
                     closure_0 = arg0;
                     return new Promise((arg0) => {
                       closure_0 = arg0;
-                      const result = closure_2_1(5469).tryOpenUrlAsUniversalLink(closure_0);
-                      const obj = closure_2_1(5469);
+                      const result = closure_2_1(5471).tryOpenUrlAsUniversalLink(closure_0);
+                      const obj = closure_2_1(5471);
                       result
                         .then(() => {
                           logger.info("Universal link opened successfully.");
@@ -199,7 +199,7 @@ let closure_10 = async function _handleURL(arg0) {
         } else if (2 === tmp8) {
           c6 = 0;
           c8 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         } else {
           if (3 === tmp8) {
             if (arg0 === 1) {
@@ -218,7 +218,7 @@ let closure_10 = async function _handleURL(arg0) {
                   value: (function tryHandleCustomScheme(arg0) {
                     let arr = arg0;
                     closure_0 = arg0;
-                    const iter = closure_0(5470).LINKING_SCHEMAS_VALUES[Symbol.iterator]();
+                    const iter = closure_0(5472).LINKING_SCHEMAS_VALUES[Symbol.iterator]();
                     while (iter !== undefined) {
                       ({ regex, protocol } = nextResult);
                       let match = regex.exec(arr);
@@ -242,9 +242,9 @@ let closure_10 = async function _handleURL(arg0) {
                         logger.info("tryHandleCustomScheme", arr);
                         let promise = new Promise((arg0) => {
                           closure_0 = arg0;
-                          const obj = closure_2_1(5469);
-                          const tryOpenSchemeResult = closure_2_1(5469).tryOpenScheme(closure_0);
-                          closure_2_1(5469)
+                          const obj = closure_2_1(5471);
+                          const tryOpenSchemeResult = closure_2_1(5471).tryOpenScheme(closure_0);
+                          closure_2_1(5471)
                             .tryOpenScheme(closure_0)
                             .then(() => {
                               logger.info("Custom scheme opened successfully.");
@@ -314,7 +314,7 @@ let closure_10 = async function _handleURL(arg0) {
                       }
                       return num;
                     }
-                    const iter = closure_0(5472).LINKING_WHITELIST_VALUES[Symbol.iterator]();
+                    const iter = closure_0(5474).LINKING_WHITELIST_VALUES[Symbol.iterator]();
                     const nextResult = iter.next();
                     while (iter !== undefined) {
                       regex = nextResult.regex;
@@ -364,7 +364,7 @@ let closure_10 = async function _handleURL(arg0) {
   }
 };
 const Linking = fn(17).Linking;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ LinkingTypes: closure_6, WebBrowserType: metroImportDefault } = Constants);
 let closure_8 = new LoggerDefault("handleURL");
 const size = fn(2);

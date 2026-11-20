@@ -7,7 +7,7 @@ import PaymentFlowStartedTriggerPoint from "../../../experiments/trigger_points/
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftAnalytics.tsx");
 

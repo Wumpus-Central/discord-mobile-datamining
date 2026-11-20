@@ -13,8 +13,8 @@ function closeModal() {
   resetChangeEmailStore();
   EmailVerificationModalActionCreatorsDefault.close();
 }
-const resetChangeEmailStore = fn(7225).resetChangeEmailStore;
-const VerificationModalScenes = fn(1072).VerificationModalScenes;
+const resetChangeEmailStore = fn(7224).resetChangeEmailStore;
+const VerificationModalScenes = fn(1071).VerificationModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");

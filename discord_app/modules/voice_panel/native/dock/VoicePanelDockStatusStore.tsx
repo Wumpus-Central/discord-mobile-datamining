@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockStatusStore.tsx
-import _mod4707 from "../../../../../_runtime/metro/04707__.js";
+import _mod4709 from "../../../../../_runtime/metro/04709__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
@@ -28,7 +28,7 @@ let closure_3 = { joined: 3000, left: 1500, streaming: 3000 };
 let c4 = null;
 let closure_5 = [];
 let c6 = null;
-const identity = fn(1258);
+const identity = fn(1257);
 let closure_7 = identity.createWithEqualityFn(() => {
   const obj = {
     channelId: null,
@@ -72,7 +72,7 @@ export function useDockSubject(arg0) {
         moment = obj;
       }
     }
-  }, _mod4707.shallow);
+  }, _mod4709.shallow);
 }
 export function useDockHasStreamers(arg0) {
   closure_0 = arg0;

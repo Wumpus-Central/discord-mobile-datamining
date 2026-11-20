@@ -3,7 +3,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
 

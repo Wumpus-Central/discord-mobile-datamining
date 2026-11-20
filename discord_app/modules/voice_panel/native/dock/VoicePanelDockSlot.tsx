@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockSlot.tsx
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import useBaseAppContainerDimensionsDefault from "../../../screen/native/useBaseAppContainerDimensions.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useStateFromSharedValueDefault from "../../../reanimated/native/useStateFromSharedValue.tsx";
@@ -11,7 +11,7 @@ import useVoicePanelDockMicLiveDefault from "useVoicePanelDockMicLive.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import QuestDockStore from "../../../quests/native/QuestDock/QuestDockStore.tsx";
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function VoicePanelDockSlotDock(micLive) {
@@ -83,8 +83,8 @@ function VoicePanelDockSlotDock(micLive) {
     VoicePanelDockSlotTsx3.__closure = items3;
     VoicePanelDockSlotTsx3.__workletHash = 4300785804393;
     VoicePanelDockSlotTsx3.__initData = tmp23;
-    const animatedReaction = _mod1655.useAnimatedReaction(VoicePanelDockSlotTsx2, VoicePanelDockSlotTsx3);
-    const tmp26 = tmp(10536)(sharedValue);
+    const animatedReaction = _mod1653.useAnimatedReaction(VoicePanelDockSlotTsx2, VoicePanelDockSlotTsx3);
+    const tmp26 = tmp(10478)(sharedValue);
     importDefault = tmp26;
     const items4 = [isDockSlotEmpty, tmp26];
     const effect = noop.useEffect(() => {
@@ -96,7 +96,7 @@ function VoicePanelDockSlotDock(micLive) {
     const effect1 = noop.useEffect(() => () => _undefined.set(false), items5);
     const items6 = [isDockSlotEmpty];
     const callback = noop.useCallback(() => _undefined.set(false), items6);
-    const tmp4Result = _mod1655;
+    const tmp4Result = _mod1653;
     const items7 = [closure_14, isDockInLayout];
     c0 = undefined;
     [tmp32, tmp33] = items7;
@@ -113,8 +113,8 @@ function VoicePanelDockSlotDock(micLive) {
     VoicePanelDockSlotTsx4.__closure = items8;
     VoicePanelDockSlotTsx4.__workletHash = 3748852719938;
     VoicePanelDockSlotTsx4.__initData = tmp32;
-    const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelDockSlotTsx4);
-    _mod1655;
+    const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelDockSlotTsx4);
+    _mod1653;
     const items9 = [closure_15, dockTouched];
     c0 = undefined;
     [tmp38, tmp39] = items9;
@@ -140,8 +140,8 @@ function VoicePanelDockSlotDock(micLive) {
       const items12 = [StyleSheet.absoluteFill, animatedStyle];
       obj5.style = items12;
       obj5.onLayout = callback;
-      obj5.children = metroImportDefault(tmp(18031), { isInSlot: true });
-      items11[1] = metroImportDefault(tmp(1655).View, obj5);
+      obj5.children = metroImportDefault(tmp(17858), { isInSlot: true });
+      items11[1] = metroImportDefault(tmp(1653).View, obj5);
       const obj6 = { style: null, pointerEvents: "none", children: null };
       const items13 = [StyleSheet.absoluteFill];
       class VoicePanelDockSlotTsx2 {
@@ -154,7 +154,7 @@ function VoicePanelDockSlotDock(micLive) {
       obj6.style = items13;
       const obj7 = { micLive };
       obj6.children = metroImportDefault(VoicePanelDockGlow.VoicePanelDockBottomLine, obj7);
-      items11[2] = metroImportDefault(tmp(1655).View, obj6);
+      items11[2] = metroImportDefault(tmp(1653).View, obj6);
       obj3.children = items11;
       tmp40 = React6(React5, obj3);
     }
@@ -162,7 +162,7 @@ function VoicePanelDockSlotDock(micLive) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  obj2 = _mod1655;
+  obj2 = _mod1653;
 }
 function VoicePanelDockSlotContent(width) {
   ({ dockState, isQuestBarExpanded } = width);
@@ -172,9 +172,9 @@ function VoicePanelDockSlotContent(width) {
   c4 = undefined;
   ({ channelId, dockEntryProgress, dockHeight, dockTouched, sheetExitProgress, safeArea, wrapperDimensions } =
     dockState);
-  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(0);
   c1 = sharedValue;
-  const sharedValue1 = _mod1655.useSharedValue(0);
+  const sharedValue1 = _mod1653.useSharedValue(0);
   c2 = sharedValue1;
   items = [closure_17, safeArea];
   c0 = undefined;
@@ -192,7 +192,7 @@ function VoicePanelDockSlotContent(width) {
   VoicePanelDockSlotTsx6.__closure = items1;
   VoicePanelDockSlotTsx6.__workletHash = 8625682694130;
   VoicePanelDockSlotTsx6.__initData = tmp5;
-  const derivedValue = _mod1655.useDerivedValue(VoicePanelDockSlotTsx6);
+  const derivedValue = _mod1653.useDerivedValue(VoicePanelDockSlotTsx6);
   c3 = derivedValue;
   const items2 = [closure_18, wrapperDimensions, sharedValue];
   c0 = undefined;
@@ -211,7 +211,7 @@ function VoicePanelDockSlotContent(width) {
   VoicePanelDockSlotTsx7.__closure = items3;
   VoicePanelDockSlotTsx7.__workletHash = 16889293167603;
   VoicePanelDockSlotTsx7.__initData = tmp8;
-  const derivedValue1 = _mod1655.useDerivedValue(VoicePanelDockSlotTsx7);
+  const derivedValue1 = _mod1653.useDerivedValue(VoicePanelDockSlotTsx7);
   c4 = derivedValue1;
   const items4 = [dockState, derivedValue1, sharedValue1, derivedValue, sharedValue];
   const memo = noop.useMemo(() => {
@@ -226,7 +226,7 @@ function VoicePanelDockSlotContent(width) {
     return obj;
   }, items4);
   const items5 = [dockSlotWidth, sharedValue];
-  const tmpResult = _mod1655;
+  const tmpResult = _mod1653;
   const callback = noop.useCallback((nativeEvent) => {
     const layout = nativeEvent.nativeEvent.layout;
     const result = _undefined2.set(layout.width);
@@ -257,9 +257,9 @@ function VoicePanelDockSlotContent(width) {
   VoicePanelDockSlotTsx8.__closure = items7;
   VoicePanelDockSlotTsx8.__workletHash = 6150077601919;
   VoicePanelDockSlotTsx8.__initData = tmp16;
-  const derivedValue2 = _mod1655.useDerivedValue(VoicePanelDockSlotTsx8);
+  const derivedValue2 = _mod1653.useDerivedValue(VoicePanelDockSlotTsx8);
   const tmp21 = useStateFromSharedValueDefault(isDockInLayout) && !isQuestBarExpanded;
-  const tmpResult3 = _mod1655;
+  const tmpResult3 = _mod1653;
   const items8 = [
     closure_20,
     dockHeight,
@@ -312,7 +312,7 @@ function VoicePanelDockSlotContent(width) {
   VoicePanelDockSlotTsx9.__closure = items9;
   VoicePanelDockSlotTsx9.__workletHash = 11615013865776;
   VoicePanelDockSlotTsx9.__initData = tmp22;
-  const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelDockSlotTsx9);
+  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelDockSlotTsx9);
   const obj4 = { value: memo, children: null };
   const obj5 = {
     style: null,
@@ -329,11 +329,11 @@ function VoicePanelDockSlotContent(width) {
   }
   obj5.importantForAccessibility = str;
   obj5.children = metroImportDefault(VoicePanelDockSlotDock, { micLive: tmp14 });
-  obj4.children = metroImportDefault(_modDef1655.View, obj5);
+  obj4.children = metroImportDefault(_modDef1653.View, obj5);
   return metroImportDefault(VoicePanelStateContextDefault.Provider, obj4);
 }
 const StyleSheet = fn(17).StyleSheet;
-const useVoicePanelDockState = fn(13220).useVoicePanelDockState;
+const useVoicePanelDockState = fn(13190).useVoicePanelDockState;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const slot = StyleSheet.create({ slot: { position: "absolute", left: 0, bottom: 0 } });
@@ -342,7 +342,7 @@ let items = [
     code: "(function getSlotDockShouldMount_VoicePanelDockSlotTsx1(progress,isTouched,{gestureActive:gestureActive}){let[SLOT_DOCK_MOUNT_PROGRESS,SHEET_MORPH_PHYSICS]=this.__closure;if(isTouched||progress>=SLOT_DOCK_MOUNT_PROGRESS)return true;if(!gestureActive&&progress<=SHEET_MORPH_PHYSICS.restDisplacementThreshold)return false;return null;})",
   },
   0.5,
-  fn(11713).SHEET_MORPH_PHYSICS,
+  fn(11655).SHEET_MORPH_PHYSICS,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -400,10 +400,10 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePa
 
 export default noop.memo(function VoicePanelDockSlot(placement) {
   placement = placement.placement;
-  const isMobileRTCV2Enabled = placement(12737).useIsMobileRTCV2Enabled("VoicePanelDockSlot");
+  const isMobileRTCV2Enabled = placement(12707).useIsMobileRTCV2Enabled("VoicePanelDockSlot");
   const tmp2 = useVoicePanelDockState();
-  const obj = placement(12737);
-  const drawerWidth = placement(11892).useDrawerWidth({ whileSliding: "wider" });
+  const obj = placement(12707);
+  const drawerWidth = placement(11834).useDrawerWidth({ whileSliding: "wider" });
   let width = useBaseAppContainerDimensionsDefault().width;
   placement(504);
   [][0] = placement;

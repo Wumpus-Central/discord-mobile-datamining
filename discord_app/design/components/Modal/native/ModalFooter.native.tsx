@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = {
   footer: {
     flexDirection: "column",

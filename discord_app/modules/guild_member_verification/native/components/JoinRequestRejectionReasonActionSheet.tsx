@@ -42,7 +42,7 @@ class JoinRequestRejectionReasonActionSheet {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -149,7 +149,7 @@ class JoinRequestRejectionReasonActionSheet {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const React5 = createStyles.createStyles({ container: { padding: 20 }, buttonGroup: { marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(

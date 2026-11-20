@@ -66,8 +66,8 @@ const obj = {
   [35]: "GAME_EXIT_PANEL",
   ANNOUNCEMENT_MODAL_VIDEO_LED: 36,
   [36]: "ANNOUNCEMENT_MODAL_VIDEO_LED",
-  ANNOUNCEMENT_MODAL_PANEL: 37,
-  [37]: "ANNOUNCEMENT_MODAL_PANEL",
+  ANNOUNCEMENT_MODAL_TWO_PANEL: 37,
+  [37]: "ANNOUNCEMENT_MODAL_TWO_PANEL",
   NITRO_HOME_SECTION_HEADER: 38,
   [38]: "NITRO_HOME_SECTION_HEADER",
   ORBS_CONFIRMATION_MODAL: 39,
@@ -118,7 +118,7 @@ export const MarketingSurfaceTypeByKind = {
   collectionPageMarketingBlock: obj.COLLECTION_PAGE_MARKETING_BLOCK,
   gameExitPanel: obj.GAME_EXIT_PANEL,
   announcementModalVideoLed: obj.ANNOUNCEMENT_MODAL_VIDEO_LED,
-  announcementModalPanel: obj.ANNOUNCEMENT_MODAL_PANEL,
+  announcementModalTwoPanel: obj.ANNOUNCEMENT_MODAL_TWO_PANEL,
   nitroHomeSectionHeader: obj.NITRO_HOME_SECTION_HEADER,
   orbsConfirmationModal: obj.ORBS_CONFIRMATION_MODAL,
 };
@@ -155,7 +155,7 @@ export const MarketingSurfaceKindByType = {
   [obj.COLLECTION_PAGE_MARKETING_BLOCK]: "collectionPageMarketingBlock",
   [obj.GAME_EXIT_PANEL]: "gameExitPanel",
   [obj.ANNOUNCEMENT_MODAL_VIDEO_LED]: "announcementModalVideoLed",
-  [obj.ANNOUNCEMENT_MODAL_PANEL]: "announcementModalPanel",
+  [obj.ANNOUNCEMENT_MODAL_TWO_PANEL]: "announcementModalTwoPanel",
   [obj.NITRO_HOME_SECTION_HEADER]: "nitroHomeSectionHeader",
   [obj.ORBS_CONFIRMATION_MODAL]: "orbsConfirmationModal",
 };

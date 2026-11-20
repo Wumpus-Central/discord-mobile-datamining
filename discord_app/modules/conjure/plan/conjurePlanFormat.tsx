@@ -1,7 +1,10 @@
 // discord_app/modules/conjure/plan/conjurePlanFormat.tsx
+import Constants from "../../../Constants.tsx";
 import Server from "../../../flow/Server.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const Permissions = Constants.Permissions;
+let closure_3 = { READ_MESSAGES: "VIEW_CHANNEL", VIEW_GUILD_INSIGHTS: "VIEW_GUILD_ANALYTICS" };
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanFormat.tsx");
 
 export function formatConjurePlanRequirementLabel(str) {
@@ -14,6 +17,39 @@ export function formatConjurePlanRequirementLabel(str) {
     sum = formatted1 + formatted.slice(1);
   }
   return sum;
+}
+export function conjurePlanPermissionLabel(str, guildPermissionSpecMap) {
+  let tmp2 = str;
+  if (Object.hasOwn(closure_3, str)) {
+    tmp2 = closure_3[str];
+  }
+  let tmp4 = null;
+  if (Object.hasOwn(Permissions, tmp2)) {
+    tmp4 = Permissions[tmp2];
+  }
+  let tmp5 = null;
+  if (null != tmp4) {
+    let title;
+    if (guildPermissionSpecMap != null) {
+      const tmp8 = guildPermissionSpecMap[tmp4.toString(tmp4)];
+      if (tmp8 != null) {
+        title = tmp8.title;
+      }
+    }
+    tmp5 = title;
+  }
+  if (tmp5 == null) {
+    const parts = str.split("_");
+    const formatted = parts.join(" ").toLowerCase();
+    let sum = formatted;
+    if (0 !== formatted.length) {
+      const formatted1 = formatted[0].toUpperCase();
+      sum = formatted1 + formatted.slice(1);
+    }
+    tmp5 = sum;
+    const str3 = parts.join(" ");
+  }
+  return tmp5;
 }
 export function conjurePlanCommandPrefix(type) {
   let str = "\u21EA /";

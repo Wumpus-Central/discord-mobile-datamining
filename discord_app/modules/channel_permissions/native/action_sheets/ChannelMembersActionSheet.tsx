@@ -6,7 +6,7 @@ import useNavigation from "../../../../design/components/Navigator/native/useNav
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05024_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05026_BottomSheetModal.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -29,11 +29,11 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelSettingsSections: closure_9, Permissions: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { paddingHorizontal: 16, flex: 1 },
   sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 },

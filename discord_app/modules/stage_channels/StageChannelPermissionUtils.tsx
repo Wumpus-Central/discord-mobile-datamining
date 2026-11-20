@@ -12,8 +12,8 @@ import StageInstanceStore from "StageInstanceStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(4659).isGuildOwner;
-const Constants = fn(1072);
+const isGuildOwner = fn(4661).isGuildOwner;
+const Constants = fn(1071);
 ({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPermissionUtils.tsx");

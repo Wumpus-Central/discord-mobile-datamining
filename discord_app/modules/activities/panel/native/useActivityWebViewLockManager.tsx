@@ -89,7 +89,7 @@ export default function useActivityWebViewLockManager() {
         return () => {
           if (null == closure_0) {
             const resolved = Promise.resolve();
-            closure_0 = resolved.then(/* F140929 */ function() { ... });
+            closure_0 = resolved.then(/* F138802 */ function() { ... });
           }
         };
       }, items1);

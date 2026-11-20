@@ -499,19 +499,32 @@ class ActivityCard {
         items5[2] = tmp38Result2;
         tmp38Result3 = null;
         if (user.id !== currentUser.id) {
+          if (null != activity.buttons) {
+            num = 0;
+            if (activity.buttons.length > 0) {
+              tmp34 = View;
+              obj34 = { style: null, children: null };
+              obj34.style = tmp.customButtons;
+              buttons = activity.buttons;
+              obj34.children = buttons.map((item, index) =>
+                guild(UserProfileActivityButtons.CustomActivityButton, { index, user, activity, onAction }, index),
+              );
+              tmp38Result3 = tmp38(View, obj34);
+            }
+          }
           if (tmp2(tmp3[23])(activity)) {
-            obj34 = { activity: null, onAction: null };
-            obj34.activity = activity;
-            obj34.onAction = tmp6Result;
-            tmp38Result3 = tmp38(tmp10(tmp3[51]).PlayOnSpotifyButton, obj34);
-          } else if (tmp2(tmp3[33])(activity)) {
-            obj35 = { user: null, currentUser: null, activity: null, application: null, onAction: null };
-            obj35.user = user;
-            obj35.currentUser = currentUser;
+            obj35 = { activity: null, onAction: null };
             obj35.activity = activity;
-            obj35.application = stateFromStores1;
             obj35.onAction = tmp6Result;
-            tmp38Result3 = tmp38(tmp10(tmp3[51]).JoinActivityButton, obj35);
+            tmp38Result3 = tmp38(tmp10(tmp3[51]).PlayOnSpotifyButton, obj35);
+          } else if (tmp2(tmp3[33])(activity)) {
+            obj36 = { user: null, currentUser: null, activity: null, application: null, onAction: null };
+            obj36.user = user;
+            obj36.currentUser = currentUser;
+            obj36.activity = activity;
+            obj36.application = stateFromStores1;
+            obj36.onAction = tmp6Result;
+            tmp38Result3 = tmp38(tmp10(tmp3[51]).JoinActivityButton, obj36);
           } else {
             if (tmp2(tmp3[31])(activity)) {
               tmp10Result2 = tmp10(tmp3[52]);
@@ -535,13 +548,13 @@ class ActivityCard {
                   if (null != deepLinkUri) {
                     if (null != activity.session_id) {
                       if (null != stateFromStores1) {
-                        obj36 = { user: null, currentUser: null, activity: null, application: null, onAction: null };
-                        obj36.user = user;
-                        obj36.currentUser = currentUser;
-                        obj36.activity = activity;
-                        obj36.application = stateFromStores1;
-                        obj36.onAction = tmp6Result;
-                        tmp38Result3 = tmp38(tmp10(tmp3[51]).JoinGameActivityButton, obj36);
+                        obj37 = { user: null, currentUser: null, activity: null, application: null, onAction: null };
+                        obj37.user = user;
+                        obj37.currentUser = currentUser;
+                        obj37.activity = activity;
+                        obj37.application = stateFromStores1;
+                        obj37.onAction = tmp6Result;
+                        tmp38Result3 = tmp38(tmp10(tmp3[51]).JoinGameActivityButton, obj37);
                       }
                     }
                   }
@@ -549,24 +562,11 @@ class ActivityCard {
               }
             }
             if (tmp2(tmp3[53])(activity)) {
-              obj37 = { activity: null, onAction: null };
-              obj37.activity = activity;
-              obj37.onAction = tmp6Result;
-              tmp38Result3 = tmp38(tmp10(tmp3[51]).WatchActivityButton, obj37);
+              obj38 = { activity: null, onAction: null };
+              obj38.activity = activity;
+              obj38.onAction = tmp6Result;
+              tmp38Result3 = tmp38(tmp10(tmp3[51]).WatchActivityButton, obj38);
             } else {
-              if (null != activity.buttons) {
-                num = 0;
-                if (activity.buttons.length > 0) {
-                  tmp34 = View;
-                  obj38 = { style: null, children: null };
-                  obj38.style = tmp.customButtons;
-                  buttons = activity.buttons;
-                  obj38.children = buttons.map((item, index) =>
-                    guild(UserProfileActivityButtons.CustomActivityButton, { index, user, activity, onAction }, index),
-                  );
-                  tmp38Result3 = tmp38(View, obj38);
-                }
-              }
               tmp38Result3 = null;
               if (!tmp2(tmp3[54])(activity)) {
                 if (tmp2(tmp3[55])(activity)) {
@@ -765,8 +765,8 @@ function VoiceCallActivityCard(arg0) {
   dependencyMap = undefined;
   ({ isInChannel, style } = arg0);
   const tmp = closure_24();
-  const tmp5 = stateFromStores(5408)(channel);
-  const tmp4 = stateFromStores(14396)(channel);
+  const tmp5 = stateFromStores(5410)(channel);
+  const tmp4 = stateFromStores(14364)(channel);
   items = [GuildStore];
   stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   let obj = channel(504);
@@ -779,11 +779,11 @@ function VoiceCallActivityCard(arg0) {
     return isPrivateResult;
   });
   let obj2 = channel(504);
-  const tmp9 = stateFromStores(7401);
-  ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7401)(
-    stateFromStores(7420).USER_PROFILE_VOICE_ACTIVITY_CARD,
+  const tmp9 = stateFromStores(7400);
+  ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7400)(
+    stateFromStores(7419).USER_PROFILE_VOICE_ACTIVITY_CARD,
   ));
-  const tmp11 = stateFromStores(14386)({
+  const tmp11 = stateFromStores(14354)({
     display: "voice",
     activity: { type: "VOICE" },
     voiceChannelId: channel.id,
@@ -791,18 +791,18 @@ function VoiceCallActivityCard(arg0) {
     analyticsLocations,
   });
   closure_3 = tmp11;
-  stateFromStores(14387)({ userId: user.id, onAction: tmp11 });
+  stateFromStores(14355)({ userId: user.id, onAction: tmp11 });
   const obj5 = { style: null, title: null, titleStyle: null, children: null };
   const items2 = [tmp.card, style];
   obj5.style = items2;
   const obj3 = { display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations };
   const obj4 = { userId: user.id, onAction: tmp11 };
-  const tmp9Result = stateFromStores(7401)(stateFromStores(7420).USER_PROFILE_VOICE_ACTIVITY_CARD);
+  const tmp9Result = stateFromStores(7400)(stateFromStores(7419).USER_PROFILE_VOICE_ACTIVITY_CARD);
   if (!channel.isDM()) {
     if (!channel.isGroupDM()) {
-      const intl = channel(1113).intl;
+      const intl = channel(1112).intl;
       const string = intl.string;
-      const t = channel(1113).t;
+      const t = channel(1112).t;
       if (isGuildStageVoiceResult) {
         let stringResult = string(t.QygGCN);
       } else {
@@ -819,7 +819,7 @@ function VoiceCallActivityCard(arg0) {
       id = stateFromStores.id;
     }
     obj7.guildId = id;
-    const items3 = [closure_21(tmp2(14408), obj7)];
+    const items3 = [closure_21(tmp2(14376), obj7)];
     const obj8 = { style: tmp.voiceCallContent, children: null };
     if (stateFromStores1) {
       const obj9 = {
@@ -830,9 +830,9 @@ function VoiceCallActivityCard(arg0) {
         children: null,
       };
       const obj10 = { channel };
-      obj9.accessibilityLabel = tmp2(7890)(obj10);
-      const intl3 = channel(1113).intl;
-      obj9.accessibilityHint = intl3.string(channel(1113).t["9C444m"]);
+      obj9.accessibilityLabel = tmp2(7889)(obj10);
+      const intl3 = channel(1112).intl;
+      obj9.accessibilityHint = intl3.string(channel(1112).t["9C444m"]);
       obj9.onPress = function onPress() {
         closure_3({ action: "OPEN_VOICE_CHANNEL" });
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
@@ -842,19 +842,19 @@ function VoiceCallActivityCard(arg0) {
       const obj11 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj12 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj13 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj12.children = closure_21(tmp2(13434), obj13);
+      obj12.children = closure_21(tmp2(13404), obj13);
       const items4 = [closure_21(closure_7, obj12), tmp5];
       obj11.children = items4;
-      obj9.children = closure_22(channel(5383).Text, obj11);
-      let tmp13Result = closure_21(channel(6911).PressableOpacity, obj9);
+      obj9.children = closure_22(channel(5385).Text, obj11);
+      let tmp13Result = closure_21(channel(6910).PressableOpacity, obj9);
     } else {
       const obj14 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj15 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj16 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj15.children = closure_21(tmp2(13434), obj16);
+      obj15.children = closure_21(tmp2(13404), obj16);
       const items5 = [closure_21(closure_7, obj15), tmp5];
       obj14.children = items5;
-      tmp13Result = closure_22(channel(5383).Text, obj14);
+      tmp13Result = closure_22(channel(5385).Text, obj14);
     }
     const items6 = [tmp13Result];
     let tmp18Result2 = null;
@@ -866,11 +866,11 @@ function VoiceCallActivityCard(arg0) {
         onPress: null,
         children: null,
       };
-      const intl4 = channel(1113).intl;
-      obj17.accessibilityHint = intl4.string(channel(1113).t.KLOhbO);
-      const intl5 = channel(1113).intl;
+      const intl4 = channel(1112).intl;
+      obj17.accessibilityHint = intl4.string(channel(1112).t.KLOhbO);
+      const intl5 = channel(1112).intl;
       const obj18 = { guildName: stateFromStores.name };
-      obj17.accessibilityLabel = intl5.formatToPlainString(channel(1113).t["hq/Qze"], obj18);
+      obj17.accessibilityLabel = intl5.formatToPlainString(channel(1112).t["hq/Qze"], obj18);
       obj17.onPress = function onPress() {
         closure_3({ action: "OPEN_VOICE_GUILD" });
         transitionToGuild.transitionToGuild(stateFromStores.id);
@@ -878,11 +878,11 @@ function VoiceCallActivityCard(arg0) {
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
       };
       const obj19 = { variant: "body-xs/medium", children: null };
-      const intl6 = channel(1113).intl;
+      const intl6 = channel(1112).intl;
       const obj20 = { guildName: stateFromStores.name };
-      obj19.children = intl6.format(channel(1113).t["hq/Qze"], obj20);
-      obj17.children = closure_21(channel(5383).Text, obj19);
-      tmp18Result2 = closure_21(channel(6911).PressableOpacity, obj17);
+      obj19.children = intl6.format(channel(1112).t["hq/Qze"], obj20);
+      obj17.children = closure_21(channel(5385).Text, obj19);
+      tmp18Result2 = closure_21(channel(6910).PressableOpacity, obj17);
     }
     items6[1] = tmp18Result2;
     obj8.children = items6;
@@ -890,13 +890,13 @@ function VoiceCallActivityCard(arg0) {
     obj6.children = items3;
     const items7 = [closure_22(closure_7, obj6)];
     const obj21 = { channel, isInChannel, onAction: tmp11 };
-    items7[1] = closure_21(channel(14402).VoiceChannelButtons, obj21);
+    items7[1] = closure_21(channel(14370).VoiceChannelButtons, obj21);
     obj5.children = items7;
     return closure_22(tmp14, obj5);
   }
-  const intl2 = channel(1113).intl;
-  stringResult = intl2.string(channel(1113).t["9FaEzi"]);
-  tmp14 = stateFromStores(7444);
+  const intl2 = channel(1112).intl;
+  stringResult = intl2.string(channel(1112).t["9FaEzi"]);
+  tmp14 = stateFromStores(7443);
 }
 get_ActivityIndicator = fn(17);
 ({
@@ -904,12 +904,12 @@ get_ActivityIndicator = fn(17);
   TouchableWithoutFeedback: closure_6,
   View: metroImportDefault,
 } = get_ActivityIndicator);
-const CARD_PADDING = fn(7445).CARD_PADDING;
-const Constants = fn(1072);
+const CARD_PADDING = fn(7444).CARD_PADDING;
+const Constants = fn(1071);
 ({ Permissions: closure_18, PlatformTypes: closure_19, StatusTypes: closure_20 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   card: { gap: 12 },
   cardTitle: { marginBottom: 0 },
@@ -961,7 +961,7 @@ obj2.voiceSettingsDivider = {
   paddingHorizontal: CARD_PADDING,
 };
 obj2.voiceCallContent = { flex: 1, gap: 4 };
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 12;

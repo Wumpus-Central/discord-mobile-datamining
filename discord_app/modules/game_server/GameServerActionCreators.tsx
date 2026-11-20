@@ -14,8 +14,8 @@ import OwnedGameServersStore from "OwnedGameServersStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GAME_SERVER_COLLECTION_ID = fn(8214).GAME_SERVER_COLLECTION_ID;
-const Constants = fn(1072);
+const GAME_SERVER_COLLECTION_ID = fn(8213).GAME_SERVER_COLLECTION_ID;
+const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_server/GameServerActionCreators.tsx");
@@ -267,7 +267,7 @@ export function optimisticallyMarkGameServerResizing(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "Button" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "HOSTED_FIELDS_INVALID_FIELD_SELECTOR" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.status = GameServerStatus.GameServerStatus.STARTING;
@@ -282,7 +282,7 @@ export function updateMyGameServerName(arg0, name) {
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "Button" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "HOSTED_FIELDS_INVALID_FIELD_SELECTOR" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.name = name;
@@ -295,7 +295,7 @@ export function updateMyGameServerName(arg0, name) {
     const patchResult = HTTP.patch(request);
     resolved = HTTP.patch(request)
       .then(() => {
-        const HTTP = closure_0(1285).HTTP;
+        const HTTP = closure_0(1284).HTTP;
         value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
         value
           .then((body) => {
@@ -313,7 +313,7 @@ export function updateMyGameServerName(arg0, name) {
           .catch(() => {});
       })
       .catch((error) => {
-        const HTTP = closure_0(1285).HTTP;
+        const HTTP = closure_0(1284).HTTP;
         value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
         value
           .then((body) => {
@@ -332,7 +332,7 @@ export function updateMyGameServerName(arg0, name) {
         throw error;
       });
     const nextPromise = HTTP.patch(request).then(() => {
-      const HTTP = closure_0(1285).HTTP;
+      const HTTP = closure_0(1284).HTTP;
       value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
       value
         .then((body) => {
@@ -357,7 +357,7 @@ export function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "Button" };
+    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "HOSTED_FIELDS_INVALID_FIELD_SELECTOR" };
     let obj3 = {};
     let merged = Object.assign(found);
     obj3.status = require("GameServerStatus").GameServerStatus.STARTING;
@@ -371,17 +371,17 @@ export function wakeMyGameServer(arg0) {
     .then((body) => {
       body = body.body;
       let tmp3 = body;
-      if (body.status === closure_0(13284).GameServerStatus.SLEEPING) {
+      if (body.status === closure_0(13254).GameServerStatus.SLEEPING) {
         const obj2 = {};
         const merged = Object.assign(body);
-        obj2.status = closure_0(13284).GameServerStatus.STARTING;
+        obj2.status = closure_0(13254).GameServerStatus.STARTING;
         tmp3 = obj2;
       }
       const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };
       DispatcherDefault.dispatch(obj3);
     })
     .catch((error) => {
-      const HTTP = closure_0(1285).HTTP;
+      const HTTP = closure_0(1284).HTTP;
       value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
       value
         .then((body) => {

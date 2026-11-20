@@ -38,7 +38,7 @@ let closure_26 = async function _handleConnectionOpen(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -181,10 +181,10 @@ function handleLocalPresenceChange() {
   localPresenceState.update();
   return false;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ RTCConnectionStates: closure_16, AppStates: closure_17 } = Constants);
-const UserSettingsTypes = fn(1082).UserSettingsTypes;
-fn(14807).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+const UserSettingsTypes = fn(1081).UserSettingsTypes;
+fn(14771).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_20 = new LoggerDefault("ConnectionStore");
 let closure_21 = 0;
 let c22 = null;
@@ -531,13 +531,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(6280).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(6282).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(14807).socket;
+          const socket = closure_0(14771).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(14807).socket;
+            const socket2 = closure_0(14771).socket;
             socket2.streamDelete(item);
           }
         });

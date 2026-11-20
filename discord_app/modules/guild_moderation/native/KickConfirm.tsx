@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   iconLabelBlock: null,
@@ -115,7 +115,6 @@ export default noop.memo(function KickConfirm(guildId) {
   const conjureServerApp = guildId(onKick[11]).useConjureServerApp(guildId, result);
   ref = obj.useRef("");
   const obj5 = guildId(onKick[11]);
-  const tmp13 = null != conjureServerApp && !conjureServerApp.targetIsPreview;
   [tmp15, c6] = stateFromStores(
     stateFromStores1.useState(() => ({ kicking: false, kickError: false })),
     2,
@@ -141,17 +140,22 @@ export default noop.memo(function KickConfirm(guildId) {
         const obj13 = { variant: "body-lg/semibold", color: "text-feedback-warning", children: stateFromStores.name };
         items5[1] = closure_9(tmp7(tmp5[15]).Text, obj13);
         obj10.children = items5;
-        let obj14 = obj10;
-        const tmp4Result5 = tmp4(tmp5[17]);
+        let obj15 = obj10;
+        const tmp4Result6 = tmp4(tmp5[17]);
       } else {
-        obj14 = { children: null };
-        const obj15 = {
+        const obj14 = {
           style: tmp.conjureTitle,
           variant: "body-lg/semibold",
           color: "mobile-text-heading-primary",
-          children: tmp7(tmp5[18]).formatWithAppTag(tmp4(tmp5[19]).x6FvsZ, conjureServerApp.targetAppName),
+          children: null,
         };
-        const items6 = [closure_9(tmp7(tmp5[15]).Text, obj15)];
+        const tmp4Result7 = tmp4(tmp5[19]);
+        obj15 = { children: null };
+        obj14.children = tmp7(tmp5[18]).formatWithAppTag(
+          tmp13 ? tmp4Result7.m8KWic : tmp4Result7.x6FvsZ,
+          conjureServerApp.targetAppName,
+        );
+        const items6 = [closure_9(tmp7(tmp5[15]).Text, obj14)];
         const obj16 = {
           style: tmp.conjureServerName,
           variant: "body-md/semibold",
@@ -159,19 +163,19 @@ export default noop.memo(function KickConfirm(guildId) {
           children: stateFromStores.name,
         };
         items6[1] = closure_9(tmp7(tmp5[15]).Text, obj16);
-        obj14.children = items6;
+        obj15.children = items6;
         const tmp7Result3 = tmp7(tmp5[18]);
       }
-      items4[1] = closure_11(closure_10, obj14);
+      items4[1] = closure_11(closure_10, obj15);
       obj8.children = items4;
       const items7 = [closure_11(ref, obj8), ,];
       if (tmp13) {
         const obj17 = { style: tmp.conjureRemove, children: null };
         const obj18 = { target: null, onRemoved: null };
-        const tmp4Result6 = tmp4(tmp5[20]);
+        const tmp4Result8 = tmp4(tmp5[20]);
         obj18.target = tmp7(tmp5[21]).conjureRemoveTargetFromServerApp(conjureServerApp);
         obj18.onRemoved = onKick;
-        obj17.children = closure_9(tmp4Result6, obj18);
+        obj17.children = closure_9(tmp4Result8, obj18);
         let tmp20Result = closure_9(tmp22, obj17);
         const tmp7Result4 = tmp7(tmp5[21]);
       } else {
@@ -185,7 +189,7 @@ export default noop.memo(function KickConfirm(guildId) {
           const intl3 = tmp7(tmp5[16]).intl;
           const obj20 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
           let formatResult = intl3.format(tmp7(tmp5[16]).t["/yH0UT"], obj20);
-          const tmp4Result7 = tmp4(tmp5[17]);
+          const tmp4Result9 = tmp4(tmp5[17]);
         } else {
           const intl2 = tmp7(tmp5[16]).intl;
           const obj21 = { server: stateFromStores.name };
@@ -233,7 +237,7 @@ export default noop.memo(function KickConfirm(guildId) {
         const obj28 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
         obj27.children = intl6.format(tmp7(tmp5[16]).t.UktD5J, obj28);
         tmp18Result5 = closure_9(tmp7(tmp5[15]).Text, obj27);
-        const tmp4Result8 = tmp4(tmp5[17]);
+        const tmp4Result10 = tmp4(tmp5[17]);
       }
       const obj29 = { children: null };
       items7[2] = tmp18Result5;

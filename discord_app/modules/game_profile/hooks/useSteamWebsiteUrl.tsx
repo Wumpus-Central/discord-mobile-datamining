@@ -5,7 +5,7 @@ import GameStore from "../../games/GameStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Distributors = fn(1072).Distributors;
+const Distributors = fn(1071).Distributors;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useSteamWebsiteUrl.tsx");
 
@@ -39,8 +39,8 @@ export function useSteamWebsiteUrl(id) {
           const found1 = thirdPartySkus.filter((distributor) => {
             let tmp = distributor.distributor === constants.STEAM;
             if (tmp) {
-              tmp = !id(2153).isNullOrEmpty(distributor.id);
-              const obj = id(2153);
+              tmp = !id(2151).isNullOrEmpty(distributor.id);
+              const obj = id(2151);
             }
             return tmp;
           });

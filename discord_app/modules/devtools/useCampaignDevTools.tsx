@@ -19,7 +19,7 @@ function setCampaignNitro(value) {
   }
   const result = OverridePremiumTypeActions.updateClientPremiumTypeOverride(value, UserStore.getCurrentUser());
 }
-const prop = fn(1390).PREMIUM_TYPE_OVERRIDE_OPTIONS;
+const prop = fn(1388).PREMIUM_TYPE_OVERRIDE_OPTIONS;
 let items = [
   { id: "actual", value: "actual", label: "Use actual Nitro status" },
   ...prop.map((id) => {
@@ -46,7 +46,7 @@ let closure_13 = module_560.create((arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -111,7 +111,7 @@ let closure_13 = module_560.create((arg0) => {
             closure_129_0({ campaignsLoading: false });
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp43) {
         if (tmp5 === c3) {
@@ -152,7 +152,7 @@ export default function useCampaignDevTools() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -274,7 +274,7 @@ export default function useCampaignDevTools() {
   const items1 = [closure_7];
   const stateFromStoresArray = campaigns(504).useStateFromStoresArray(items1, () => closure_7.campaignOverrideRows);
   let obj3 = campaigns(504);
-  const tmp8 = reload(17193)(stateFromStores, stateFromStoresArray);
+  const tmp8 = reload(17017)(stateFromStores, stateFromStoresArray);
   const items2 = [locale];
   stateFromStores1 = campaigns(504).useStateFromStores(items2, () => locale.locale);
   let end_date;

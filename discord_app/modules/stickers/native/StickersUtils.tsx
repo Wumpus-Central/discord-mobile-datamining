@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(11309).useStickerPickerStore;
-const GuildNSFWContentLevel = fn(1072).GuildNSFWContentLevel;
-const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
+const useStickerPickerStore = fn(11251).useStickerPickerStore;
+const GuildNSFWContentLevel = fn(1071).GuildNSFWContentLevel;
+const ExpressionPickerViewType = fn(1227).ExpressionPickerViewType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/native/StickersUtils.tsx");
 

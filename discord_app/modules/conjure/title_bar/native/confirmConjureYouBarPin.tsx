@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/title_bar/native/confirmConjureYouBarPin.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import PinIcon from "../../../../design/components/Icon/native/redesign/generated/PinIcon.tsx";
@@ -11,8 +11,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function ConjureYouBarPinAlert(pin) {
   pin = pin.pin;
-  let intl = pin(1113).intl;
-  let tmp5 = _modDef4089;
+  let intl = pin(1112).intl;
+  let tmp5 = _modDef4091;
   if (pin) {
     let D9HywZ = tmp5.M0Nuhc;
     let tmp6 = importDefault;
@@ -21,21 +21,21 @@ function ConjureYouBarPinAlert(pin) {
     tmp6 = importDefault;
   }
   let obj = { title: intl.string(D9HywZ), content: null, actions: null };
-  const intl2 = tmp2(1113).intl;
-  const tmp6Result = tmp6(4089);
+  const intl2 = tmp2(1112).intl;
+  const tmp6Result = tmp6(4091);
   obj.content = intl2.string(pin ? tmp6Result.nLv5dy : tmp6Result.f0k4Er);
-  const intl3 = tmp2(1113).intl;
-  const tmp6Result2 = tmp6(4089);
+  const intl3 = tmp2(1112).intl;
+  const tmp6Result2 = tmp6(4091);
   let obj2 = { children: null };
   items = [
-    closure_3(pin(5745).AlertActionButton, {
+    closure_3(pin(5747).AlertActionButton, {
       variant: "primary",
       text: intl3.string(pin ? tmp6Result2.I9ZELO : tmp6Result2["7FCFOy"]),
       onPress: function confirm() {
         DispatcherDefault.dispatch({ type: "CONJURE_YOU_BAR_PIN_SET", pinned: pin });
         const obj2 = { type: "CONJURE_YOU_BAR_PIN_SET", pinned: pin };
         const intl = util.intl;
-        const tmp5 = _modDef4089;
+        const tmp5 = _modDef4091;
         const obj4 = { text: intl.string(pin ? tmp5["VM+k4c"] : tmp5["0EEfRN"]), icon: null };
         if (pin) {
           let PinUprightSlashIcon = PinIcon.PinIcon;
@@ -48,12 +48,12 @@ function ConjureYouBarPinAlert(pin) {
     }),
   ];
   let obj4 = { variant: "secondary", text: null };
-  const intl4 = tmp2(1113).intl;
-  obj4.text = intl4.string(pin(1113).t["ETE/oC"]);
-  items[1] = closure_3(pin(5745).AlertActionButton, obj4);
+  const intl4 = tmp2(1112).intl;
+  obj4.text = intl4.string(pin(1112).t["ETE/oC"]);
+  items[1] = closure_3(pin(5747).AlertActionButton, obj4);
   obj2.children = items;
   obj.actions = closure_5(closure_4, obj2);
-  return closure_3(pin(5745).AlertModal, obj);
+  return closure_3(pin(5747).AlertModal, obj);
 }
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);

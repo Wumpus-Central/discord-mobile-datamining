@@ -16,7 +16,7 @@ let closure_7 = async function _sendWave(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -139,8 +139,8 @@ let closure_7 = async function _sendWave(arg0) {
     }
   }
 };
-const AnalyticsSections = fn(1072).AnalyticsSections;
-const MessageSendLocation = fn(4797).MessageSendLocation;
+const AnalyticsSections = fn(1071).AnalyticsSections;
+const MessageSendLocation = fn(4799).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
 

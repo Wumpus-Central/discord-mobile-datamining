@@ -32,7 +32,7 @@ function isActivityInTextSupportedForChannel(channel) {
     return hasItem;
   }
 }
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
 

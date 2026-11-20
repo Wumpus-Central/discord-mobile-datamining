@@ -33,6 +33,7 @@ import ContentInventoryActivityStore from "../content_inventory/ContentInventory
 import ContentInventoryOutboxStore from "../content_inventory/ContentInventoryOutboxStore.tsx";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
 import CreatorMonetizationStore from "../creator_monetization/CreatorMonetizationStore.tsx";
+import DiscordLabsStore from "../discord_labs/DiscordLabsStore.tsx";
 import DismissibleContentShownStateStore from "../dismissible_content/DismissibleContentShownStateStore.tsx";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import RawGuildEmojiStore from "../emojis/RawGuildEmojiStore.tsx";

@@ -4,10 +4,11 @@ import DurationsDefault from "../../../../utils/Durations.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
 import renderMessageMarkup from "../../renderMessageMarkup.tsx";
+import markup_MarkupParser from "../../../../../discord_common/js/packages/markup/MarkupParser.tsx";
 import NativeMarkdownExperiment from "../../../markup_v2/NativeMarkdownExperiment.tsx";
 import ChangeLogStandardTemplate from "../../../../components_native/ChangeLogStandardTemplate.tsx";
 import parseNativeMarkupDefault from "../../../markup_v2/native/parseNativeMarkup.tsx";
-import priv from "../../../../../_runtime/01456_priv.js";
+import priv from "../../../../../_runtime/01454_priv.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const MessageTypes = Constants.MessageTypes;
@@ -15,12 +16,14 @@ let obj = { max: Infinity, maxAge: 15 * DurationsDefault.Millis.MINUTE, updateAg
 let closure_4 = new priv(obj);
 const tmp2 = new priv(obj);
 let closure_5 = new priv(obj);
+const tmp3 = new priv(obj);
+let closure_6 = new priv(obj);
 let obj2 = {};
 let merged = Object.assign(obj);
 obj2.updateAgeOnGet = false;
 const importDefaultResult1 = new priv(obj2);
-const tmp3 = new priv(obj);
-let closure_7 = new priv(obj);
+let tmp4 = new priv(obj);
+let closure_8 = new priv(obj);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/MarkupParsers.tsx");
 
 export function parseEmbedTitleMarkup(rawName, channelId) {
@@ -44,6 +47,30 @@ export function parseEmbedTitleMarkupWithoutLinks(arg0, channelId) {
     value = result;
   }
   return value;
+}
+export function parsePollMarkup(text, arg1) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = true;
+  }
+  if (null != text) {
+    const _HermesInternal = HermesInternal;
+    const combined = "" + text + "-" + flag;
+    value = closure_6.get(combined);
+    if (null == value) {
+      const parsePollToASTResult = MarkupUtilsDefault.parsePollToAST(text, true);
+      if (!flag) {
+        markup_MarkupParser.walkAst(parsePollToASTResult, (type) => {
+          if ("timestamp" === type.type) {
+            type.interactive = false;
+          }
+        });
+      }
+      const result = closure_6.set(combined, parsePollToASTResult);
+      value = parsePollToASTResult;
+    }
+    return value;
+  }
 }
 export function parseEmbedDescriptionMarkup(arg0) {
   ({ description, channelId, isField, replaceMap, showListsAndHeaders } = arg0);
@@ -103,7 +130,7 @@ export function parseMessageMarkup(message, message2, forceHideSimpleEmbedConten
     flag4 = false;
   }
   result = NativeMarkdownExperiment.isNativeMarkdownEnabled({ location: "parseMessageMarkup" });
-  value = closure_7.get(message);
+  value = closure_8.get(message);
   if (null != value) {
     if (value.isInlineReplyPreview === flag) {
       if (value.nativeMarkdownEnabled === result) {
@@ -147,7 +174,7 @@ export function parseMessageMarkup(message, message2, forceHideSimpleEmbedConten
         obj3,
       );
       obj4.nativeMarkdownEnabled = result;
-      const result1 = closure_7.set(message, obj4);
+      const result1 = closure_8.set(message, obj4);
       return obj4;
     }
   }
@@ -189,6 +216,6 @@ export function parseMessageMarkup(message, message2, forceHideSimpleEmbedConten
   );
   obj7.isInlineReplyPreview = flag;
   obj7.nativeMarkdownEnabled = result;
-  result2 = closure_7.set(message, obj7);
+  result2 = closure_8.set(message, obj7);
   return obj7;
 }

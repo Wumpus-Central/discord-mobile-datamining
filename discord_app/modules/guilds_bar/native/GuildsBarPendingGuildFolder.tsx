@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx");
@@ -14,9 +14,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(17919);
+  let obj = id(17746);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(17919).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = id(17746).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: false,
   });
@@ -48,13 +48,13 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   ({ accessibilityActions, onAccessibilityAction } = memo);
   const obj2 = id(504);
   const items2 = [id];
-  const sharedValue = id(1655).useSharedValue("" + id);
+  const sharedValue = id(1653).useSharedValue("" + id);
   const memo1 = noop.useMemo(
     () => ({
       onPress() {
-        const result = id(5008).triggerHapticFeedback(id(5008).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = id(5008);
-        const result1 = closure_1(6390).toggleGuildFolderExpand(closure_1_0);
+        const result = id(5010).triggerHapticFeedback(id(5010).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = id(5010);
+        const result1 = closure_1(6392).toggleGuildFolderExpand(closure_1_0);
       },
     }),
     items2,
@@ -73,26 +73,26 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     overState: "a",
     preventClipping: true,
     config: "/assets/images/platforms",
-    externalChildren: 24,
-    children: 24,
+    externalChildren: 255,
+    children: 255,
   };
-  const obj3 = id(1655);
+  const obj3 = id(1653);
   obj4.id = "" + id;
   obj4.accessibilityActions = accessibilityActions;
   obj4.onAccessibilityAction = onAccessibilityAction;
   obj4.selected = stateFromStores;
   obj4.styles = guildsBarAnimatedWrapperStyles;
-  const intl = id(1113).intl;
-  obj4.label = intl.string(id(1113).t["scsU+l"]);
+  const intl = id(1112).intl;
+  obj4.label = intl.string(id(1112).t["scsU+l"]);
   obj4.sharedId = sharedValue;
   obj4.config = memo1;
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(17918).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(17745).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(10286).HourglassIcon, {});
+  obj4.children = jsx(id(10226).HourglassIcon, {});
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     id: null,
     accessibilityActions: null,
@@ -107,7 +107,7 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     overState: "a",
     preventClipping: true,
     config: "/assets/images/platforms",
-    externalChildren: 24,
-    children: 24,
+    externalChildren: 255,
+    children: 255,
   });
 });

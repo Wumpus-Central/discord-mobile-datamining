@@ -34,15 +34,15 @@ import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.t
 import UserRequiredActionStore from "../../../stores/UserRequiredActionStore.tsx";
 
 require = fn;
-let closure_10 = fn(7403).ApplicationAccountLinkingConstants;
-const PremiumConstants = fn(1390);
+let closure_10 = fn(7402).ApplicationAccountLinkingConstants;
+const PremiumConstants = fn(1388);
 ({
   PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID,
   PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID,
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID,
 } = PremiumConstants);
-const UserSettingsTypes = fn(1082).UserSettingsTypes;
+const UserSettingsTypes = fn(1081).UserSettingsTypes;
 const MainViewTooltipActionSheets = "MainViewTooltipActionSheets";
 let cooldownConfig = { cooldownDurationMs: DurationsDefault.Millis.DAY };
 let items = [

@@ -12,10 +12,10 @@ function canFetchNitroProgramReward() {
 function canFetchXboxProgramReward() {
   return useHasXboxMonthlyOrbsPerk.hasCrepeMonthlyOrbsPerk(UserStore.getCurrentUser());
 }
-const PremiumTypes = fn(1390).PremiumTypes;
+const PremiumTypes = fn(1388).PremiumTypes;
 const dependencyMap = {
-  [fn(14921).RewardProgram.NITRO]: canFetchNitroProgramReward,
-  [fn(14921).RewardProgram.XBOX]: canFetchXboxProgramReward,
+  [fn(14885).RewardProgram.NITRO]: canFetchNitroProgramReward,
+  [fn(14885).RewardProgram.XBOX]: canFetchXboxProgramReward,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");

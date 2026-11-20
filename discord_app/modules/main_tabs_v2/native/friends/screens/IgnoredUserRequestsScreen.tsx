@@ -6,7 +6,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 const require = fn;
 const UserRowModes = fn(9526).UserRowModes;
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx");

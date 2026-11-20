@@ -6,7 +6,7 @@ import MessageRecord from "../../../../records/MessageRecord.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const MessageTypes = fn(1072).MessageTypes;
+const MessageTypes = fn(1071).MessageTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/QuestEmbedPreview.tsx");
@@ -73,17 +73,17 @@ export function QuestEmbedPreview(questId) {
   let tmp6 = null;
   if (null != memo1) {
     let obj2 = { title: null, children: null };
-    const intl = tmp2(1113).intl;
-    obj2.title = intl.string(tmp2(1113).t["habP/M"]);
+    const intl = tmp2(1112).intl;
+    obj2.title = intl.string(tmp2(1112).t["habP/M"]);
     let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-    obj2.children = jsx(stateFromStores(9977), {
+    obj2.children = jsx(stateFromStores(9980), {
       rowGenerator: memo,
       message: memo1,
       horizontalOffset: 0,
       pointerEvents: "none",
     });
-    tmp6 = jsx(stateFromStores(16612), { title: null, children: null });
-    const tmp9 = stateFromStores(16612);
+    tmp6 = jsx(stateFromStores(16435), { title: null, children: null });
+    const tmp9 = stateFromStores(16435);
   }
   return tmp6;
 }

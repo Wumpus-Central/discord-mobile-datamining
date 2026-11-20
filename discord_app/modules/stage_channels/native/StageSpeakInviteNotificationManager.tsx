@@ -18,7 +18,7 @@ import StageInstanceStore from "../StageInstanceStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const InAppNotificationTypes = fn(1072).InAppNotificationTypes;
+const InAppNotificationTypes = fn(1071).InAppNotificationTypes;
 let c12 = null;
 class StageSpeakInviteNotificationManager extends tmp2 {
   constructor() {

@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
 let obj = {
   VIEWER_SWIPE: "number_viewer_swipes",
@@ -21,7 +21,7 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "ip",
+  guildId: "disabled",
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",

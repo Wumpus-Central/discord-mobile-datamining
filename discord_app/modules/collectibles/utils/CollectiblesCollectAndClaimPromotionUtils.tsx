@@ -52,7 +52,7 @@ function getCollectionQualifyingSkuCount(bundledProducts, collectionId) {
   obj = require("CollectiblesUtils");
 }
 let closure_3 = fn(8807).getCollectiblesCollectAndClaim;
-const CollectibleShopTab = fn(1074).CollectibleShopTab;
+const CollectibleShopTab = fn(1073).CollectibleShopTab;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesCollectAndClaimPromotionUtils.tsx");
 

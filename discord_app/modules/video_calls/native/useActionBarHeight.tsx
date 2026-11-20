@@ -5,9 +5,9 @@ import useCanSpeakInChannelDefault from "../../stage_channels/useCanSpeakInChann
 import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const InputModes = fn(1072).InputModes;
-let closure_5 = fn(5021).ACTION_SHEET_HANDLE_SPACING;
-let sum = 2 * fn(10596).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
+const InputModes = fn(1071).InputModes;
+let closure_5 = fn(5023).ACTION_SHEET_HANDLE_SPACING;
+let sum = 2 * fn(10538).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useActionBarHeight.tsx");
 

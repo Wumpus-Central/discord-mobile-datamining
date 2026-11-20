@@ -17,7 +17,7 @@ import NetworkStore from "../../../../../stores/NetworkStore.tsx";
 
 require = fn;
 const AppState = fn(17).AppState;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/quests/native/VideoQuestModal/hooks/useVideoQuestPlayerAnalytics.tsx",
@@ -58,7 +58,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -78,14 +78,14 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               closure_131_1 = undefined;
               closure_131_2 = undefined;
               closure_131_3 = undefined;
-              const VIDEO_MODAL_MOBILE = closure_0(6442).QuestContent.VIDEO_MODAL_MOBILE;
+              const VIDEO_MODAL_MOBILE = closure_0(6444).QuestContent.VIDEO_MODAL_MOBILE;
               closure_131_1 = VIDEO_MODAL_MOBILE;
               c6 = 1;
               closure_131_2 = getQuestImpressionId();
               if (null == ref.current) {
-                const obj8 = closure_0(8312);
-                ref.current = obj8.getAdUser(closure_0(8311).getQuestContentName(VIDEO_MODAL_MOBILE));
-                const obj9 = closure_0(8311);
+                const obj8 = closure_0(8311);
+                ref.current = obj8.getAdUser(closure_0(8310).getQuestContentName(VIDEO_MODAL_MOBILE));
+                const obj9 = closure_0(8310);
               }
               c7 = 2;
               c8 = 1;
@@ -95,7 +95,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
           } else if (1 === tmp8) {
             c6 = 0;
             closure_131_4 = closure_5;
-            const questLogger = closure_0(8293).getQuestLogger();
+            const questLogger = closure_0(8292).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_131_4);
             throw closure_131_4;
           } else if (arg0 === 1) {
@@ -115,9 +115,9 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               sourceQuestContent: null,
             };
             const obj14 = {};
-            const obj13 = closure_0(8302);
-            const merged = Object.assign(closure_0(8311).getContentProperties(closure_131_1));
-            const merged1 = Object.assign(engagedViewEmitter(8258)());
+            const obj13 = closure_0(8301);
+            const merged = Object.assign(closure_0(8310).getContentProperties(closure_131_1));
+            const merged1 = Object.assign(engagedViewEmitter(8257)());
             obj14.impression_id = closure_131_2;
             obj14.video_watch_seconds = closure_131_0.video_watch_seconds;
             obj14.video_position_seconds = closure_131_0.video_position_seconds;
@@ -128,7 +128,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               if (obj.isIOS()) {
                 advertisingId = closure_131_3.advertisingId;
               }
-              obj = closure_0(1380);
+              obj = closure_0(1378);
             }
             obj14.apple_advertising_id = advertisingId;
             let advertisingId1 = null;
@@ -137,18 +137,18 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               if (obj2.isAndroid()) {
                 advertisingId1 = closure_131_3.advertisingId;
               }
-              obj2 = closure_0(1380);
+              obj2 = closure_0(1378);
             }
             obj14.android_advertising_id = advertisingId1;
-            const obj16 = closure_0(8311);
-            const adMetadataSealed = closure_0(8281).getAdMetadataSealed(sourceQuestContent, questId);
+            const obj16 = closure_0(8310);
+            const adMetadataSealed = closure_0(8280).getAdMetadataSealed(sourceQuestContent, questId);
             let metadata_sealed = adMetadataSealed;
             if (adMetadataSealed == null) {
               metadata_sealed = null;
             }
             obj14.metadata_sealed = metadata_sealed;
-            const obj3 = closure_0(8281);
-            const adTrafficMetadataSealed = closure_0(8281).getAdTrafficMetadataSealed(sourceQuestContent, questId);
+            const obj3 = closure_0(8280);
+            const adTrafficMetadataSealed = closure_0(8280).getAdTrafficMetadataSealed(sourceQuestContent, questId);
             let traffic_metadata_sealed = adTrafficMetadataSealed;
             if (adTrafficMetadataSealed == null) {
               traffic_metadata_sealed = null;
@@ -159,7 +159,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
             obj13.trackQuestEvent(obj12);
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp53) {
           closure_5 = tmp53;

@@ -25,7 +25,7 @@ function StaticEffect(useThumbnail) {
   c0 = undefined;
   ({ thumbnailPreviewSrc, accessibilityLabel } = profileEffect);
   [tmp3, c0] = thumbnailUrlOverride.useState(0);
-  const height = reducedMotionSrc(1496)().height;
+  const height = reducedMotionSrc(1494)().height;
   const callback = thumbnailUrlOverride.useCallback((nativeEvent) => {
     memo(nativeEvent.nativeEvent.layout.width);
   }, []);
@@ -78,7 +78,7 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj3.children = jsx(tmp4(5479), {
+    obj3.children = jsx(tmp4(5481), {
       resizeMode: "cover",
       resizeMethod: "resize",
       enableAnimation: true,
@@ -88,14 +88,14 @@ function StaticEffect(useThumbnail) {
       width: null,
       style: null,
     });
-    const tmp4Result = tmp4(5479);
+    const tmp4Result = tmp4(5481);
   }
   return <closure_5 {...obj3} />;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: closure_6 } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles({
   profileEffects: {
     position: "absolute",
@@ -120,7 +120,7 @@ function ProfileEffect(profileEffect) {
   const tmp = c10();
   let ref = tmp;
   const tmp2 = ref(noop.useState(0), 2);
-  const height = memo1(1496)().height;
+  const height = memo1(1494)().height;
   noop = tmp2[0];
   const accessibilityLabel = profileEffect.accessibilityLabel;
   items = [profileEffect.effects];

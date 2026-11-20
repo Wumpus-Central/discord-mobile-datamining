@@ -4,7 +4,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
+const EXPRESSION_FOOTER_HEIGHT = fn(1071).EXPRESSION_FOOTER_HEIGHT;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");
 

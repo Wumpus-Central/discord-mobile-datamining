@@ -2,7 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2561 from "../../waterwheels/Waterwheels.messages.js";
+import _modDef2563 from "../../waterwheels/Waterwheels.messages.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import CompassIcon from "../../../design/components/Icon/native/redesign/generated/CompassIcon.tsx";
@@ -22,7 +22,7 @@ function GuildsBarWaterwheelsExpandedChildren() {
   const obj = { title: null, subtitle: null };
   const obj2 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2561.zFl2A4);
+  obj2.children = intl.string(_modDef2563.zFl2A4);
   obj.title = React5(Text_Text.Text, obj2);
   return React5(HomeDrawerShared.HomeDrawerSharedItem, obj);
 }
@@ -35,10 +35,10 @@ function handleWaterwheelsPress() {
   obj = WaterwheelsDiscoverNavigation;
 }
 const View = fn(17).View;
-const WATERWHEELS = fn(1072).WATERWHEELS;
+const WATERWHEELS = fn(1071).WATERWHEELS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles((marginBottom) => {
   const obj = { stretch: { alignSelf: "stretch", marginBottom: -marginBottom } };
   return obj;
@@ -61,12 +61,12 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: "f",
-    expandedChildren: "guilds-bar-drag-preview",
+    label: "GG",
+    expandedChildren: "+44",
     children: null,
   };
   const intl = util.intl;
-  obj5.label = intl.string(_modDef2561.zFl2A4);
+  obj5.label = intl.string(_modDef2563.zFl2A4);
   obj5.expandedChildren = React5(GuildsBarWaterwheelsExpandedChildren, {});
   colors = nativeDefault.colors;
   obj5.children = React5(CompassIcon.CompassIcon, {

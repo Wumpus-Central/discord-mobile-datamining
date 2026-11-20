@@ -85,8 +85,8 @@ function markServerListStale(guildId) {
   }
   const arraySpreadResult = HermesBuiltin.arraySpread(closure_9, 0);
 }
-const OverlayWidgets = fn(1072).OverlayWidgets;
-const OVERLAY_V3_LAYOUT_ID = fn(14875).OVERLAY_V3_LAYOUT_ID;
+const OverlayWidgets = fn(1071).OverlayWidgets;
+const OVERLAY_V3_LAYOUT_ID = fn(14837).OVERLAY_V3_LAYOUT_ID;
 let items = [];
 let closure_7 = items;
 let closure_8 = items;

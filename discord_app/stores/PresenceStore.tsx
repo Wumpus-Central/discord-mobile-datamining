@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1345 from "../../_runtime/metro/01345__.js";
+import _modDef1343 from "../../_runtime/metro/01343__.js";
 import ActivityTypes from "../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import hasRichActivityDefault from "../modules/activities/utils/hasRichActivity.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
@@ -301,7 +301,7 @@ function updatePresence(arg0) {
       let activities2 = sorted;
       if (null != tmp7[guildId]) {
         activities2 = sorted;
-        if (_modDef1345(tmp25.activities, sorted)) {
+        if (_modDef1343(tmp25.activities, sorted)) {
           activities2 = tmp25.activities;
         }
       }
@@ -396,7 +396,7 @@ function clearPresences(id) {
   }
   tmp2 = keys[Symbol.iterator]();
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ StatusTypes: hasOwnProperty, ClientTypes: closure_6, ME: metroImportDefault, UserFlags: closure_8 } = Constants);
 let closure_9 = Object.freeze([]);
 const presencesForGuilds = {};

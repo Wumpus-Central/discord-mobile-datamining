@@ -1,6 +1,6 @@
 // discord_app/modules/emoji_picker/native/openEmojiPickerActionSheet.tsx
 import EmojiConstants from "../../emojis/EmojiConstants.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import emojis_EmojiActionCreators from "../../emojis/EmojiActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

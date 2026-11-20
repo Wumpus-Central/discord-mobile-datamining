@@ -31,16 +31,16 @@ export default function useChannelSafeAreaHeightSharedValue() {
   const keyboardWillOpenSharedValue = require("useKeyboardType").useKeyboardWillOpenSharedValue();
   const minimum = useKeyboardActionSheetHeightDefault().minimum;
   const obj2 = require("useKeyboardType");
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(minimum);
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(minimum);
   let result = sharedValue.set(minimum);
-  const obj3 = require("../../../../../_runtime/metro/01655__.js");
+  const obj3 = require("../../../../../_runtime/metro/01653__.js");
   const token = require("useToken").useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM);
   const obj5 = require("useToken");
   const channelDockHeight = require("VoicePanelDockLayout").useChannelDockHeight();
   _require = channelDockHeight;
   const obj6 = require("VoicePanelDockLayout");
-  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(channelDockHeight);
-  const obj7 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(channelDockHeight);
+  const obj7 = require("../../../../../_runtime/metro/01653__.js");
   const isChannelFullyOpen = require("useIsChannelFullyOpen").getIsChannelFullyOpen(
     noop.useContext(MainTabsNavigatorPanelContextDefault),
   );
@@ -100,7 +100,7 @@ export default function useChannelSafeAreaHeightSharedValue() {
   useChannelSafeAreaHeightSharedValueAndroidTsx1.__closure = items2;
   useChannelSafeAreaHeightSharedValueAndroidTsx1.__workletHash = 15573495853475;
   useChannelSafeAreaHeightSharedValueAndroidTsx1.__initData = tmp11;
-  return require("../../../../../_runtime/metro/01655__.js").useDerivedValue(
+  return require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
     useChannelSafeAreaHeightSharedValueAndroidTsx1,
   );
 }

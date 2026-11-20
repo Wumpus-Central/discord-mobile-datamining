@@ -1,8 +1,8 @@
 // discord_app/modules/checkpoint/native/components/screens/CheckpointIntroScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
-import _modDef3339 from "../../../Checkpoint2026.messages.js";
+import _modDef1653 from "../../../../../../_runtime/metro/01653__.js";
+import _modDef3341 from "../../../Checkpoint2026.messages.js";
 import CheckpointScreenDefault from "../CheckpointScreen.tsx";
 import CheckpointTextDefault from "../CheckpointText.tsx";
 import useCheckpointHasUserStatsDefault from "../../../hooks/useCheckpointHasUserStats.tsx";
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(5848);
+const CheckpointConstants = fn(5850);
 ({
   CHECKPOINT_CONTROL_SIZE: metroImportDefault,
   CHECKPOINT_INTRODUCTION_FADE_IN_DURATION_MS: closure_8,
@@ -25,7 +25,7 @@ const CheckpointConstants = fn(5848);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: {
     flexGrow: 1,
@@ -86,7 +86,7 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   const items1 = [
     closure_15,
     closure_8,
-    require("../../../../../../_runtime/metro/01655__.js").Easing,
+    require("../../../../../../_runtime/metro/01653__.js").Easing,
     require("timing/timing").withTiming,
     tmp11,
     PX_12,
@@ -122,11 +122,11 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   CheckpointIntroScreenTsx1.__closure = items2;
   CheckpointIntroScreenTsx1.__workletHash = 8997086399243;
   CheckpointIntroScreenTsx1.__initData = tmp13;
-  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     CheckpointIntroScreenTsx1,
   );
   let tmp22 = landscapeContainer;
-  let obj2 = require("../../../../../../_runtime/metro/01655__.js");
+  let obj2 = require("../../../../../../_runtime/metro/01653__.js");
   if (landscapeContainer) {
     const items3 = [tmp.landscapeContent];
     const obj3 = { paddingTop: bound, paddingRight: rect.right + tmp2(575).space.PX_24, paddingBottom: bound };
@@ -162,18 +162,18 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   let tmp20Result = !tmp8;
   if (!tmp8) {
     const obj8 = { style: tmp.globe };
-    tmp20Result = closure_11(tmp2(12632), obj8);
+    tmp20Result = closure_11(tmp2(12602), obj8);
   }
   items6[1] = tmp20Result;
   obj7.children = items6;
-  obj6.children = closure_12(_modDef1655.View, obj7);
+  obj6.children = closure_12(_modDef1653.View, obj7);
   const items7 = [closure_11(View, obj6)];
   const obj9 = { style: null, children: null };
   const items8 = [tmp.descriptions, animatedStyle];
   obj9.style = items8;
   const tmp2Result = CheckpointScreenDefault;
-  const intl = tmp9(1113).intl;
-  const tmp2Result5 = _modDef3339;
+  const intl = tmp9(1112).intl;
+  const tmp2Result5 = _modDef3341;
   const tmp2Result4 = CheckpointTextDefault;
   const items9 = [
     closure_11(tmp2Result4, {
@@ -184,14 +184,14 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   let tmp20Result2 = !tmp8;
   if (!tmp8) {
     const obj11 = { variant: "heading-lg/medium", children: null };
-    const intl2 = tmp9(1113).intl;
-    obj11.children = intl2.string(tmp2(3339)["2GRr6H"]);
-    tmp20Result2 = closure_11(tmp2(12418), obj11);
-    const tmp2Result6 = tmp2(12418);
+    const intl2 = tmp9(1112).intl;
+    obj11.children = intl2.string(tmp2(3341)["2GRr6H"]);
+    tmp20Result2 = closure_11(tmp2(12388), obj11);
+    const tmp2Result6 = tmp2(12388);
   }
   items9[1] = tmp20Result2;
   obj9.children = items9;
-  items7[1] = closure_12(_modDef1655.View, obj9);
+  items7[1] = closure_12(_modDef1653.View, obj9);
   obj5.children = items7;
   obj4.children = closure_12(View, obj5);
   return closure_11(tmp2Result, obj4);

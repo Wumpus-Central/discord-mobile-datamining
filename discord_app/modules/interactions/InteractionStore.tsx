@@ -279,7 +279,7 @@ obj = {
       interactionId: applicationId.id,
       customId: applicationId.customId,
       channelId: applicationId.channelId,
-      modalKey: "fileFinishedImporting",
+      modalKey: "fill",
     };
     if (null != nonce) {
       if (null != dependencyMap[nonce]) {

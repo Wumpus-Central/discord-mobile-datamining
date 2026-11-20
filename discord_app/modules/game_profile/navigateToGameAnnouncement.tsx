@@ -14,7 +14,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -114,7 +114,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -150,7 +150,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
     }
   }
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: hasOwnProperty, JoinGuildSources: closure_6, Routes: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");

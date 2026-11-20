@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import StageChannelPermissions from "../../stage_channels/StageChannelPermissions.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
@@ -60,12 +60,12 @@ function ModeratorActionRow(isDestructive) {
     accessibilityRole: "button",
   });
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4722).GUILD_VOCAL_CHANNELS_KEY;
-const Constants = fn(1072);
+const GUILD_VOCAL_CHANNELS_KEY = fn(4724).GUILD_VOCAL_CHANNELS_KEY;
+const Constants = fn(1071);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
-let GuildMemberFlags = fn(4710).GuildMemberFlags;
+let GuildMemberFlags = fn(4712).GuildMemberFlags;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { cardContainer: { paddingBottom: 0 }, refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_16 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -362,7 +362,7 @@ export default function UserProfileModeratorActions(user) {
           obj2.onSelect = function onSelect(id) {
             return guildId(showUserProfile[34]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11669, dependencyMap.paths), "ChannelPicker", obj2, "stack");
+          obj.openLazy(asyncRequireImpl(11611, dependencyMap.paths), "ChannelPicker", obj2, "stack");
         };
         items7.push(
           <ModeratorActionRow
@@ -400,7 +400,7 @@ export default function UserProfileModeratorActions(user) {
         obj11.onPress = function onPress() {
           trackUserProfileAction({ action: "PRESS_MANAGE_USER" });
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12272, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12244, dependencyMap.paths), {
             userId: user.id,
             guildId: stateFromStores.id,
             onClose() {
@@ -408,7 +408,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              guildId(6308).pop();
+              guildId(6310).pop();
             },
           });
         };

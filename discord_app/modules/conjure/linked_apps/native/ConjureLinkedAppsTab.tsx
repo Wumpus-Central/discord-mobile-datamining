@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/linked_apps/native/ConjureLinkedAppsTab.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AlertModal from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import ConjureLinkedAppBuildSheetDefault from "ConjureLinkedAppBuildSheet.tsx";
@@ -40,7 +40,7 @@ function SettingRow(onBuildChange) {
   };
   return closure_4(require("TableRow").TableRow, obj);
 }
-const canPublishProject = fn(6500).canPublishProject;
+const canPublishProject = fn(6502).canPublishProject;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ConjureLinkedAppSheet = "ConjureLinkedAppSheet";
@@ -60,11 +60,11 @@ export default function ConjureLinkedAppsTab(linkedApps) {
   if (callers.length > 0) {
     let obj2 = { spacing: tmp4(575).space.PX_16, children: null };
     let obj3 = { variant: "body-xs/semibold", color: "text-muted", accessibilityRole: "header", children: null };
-    let intl = tmp2(1113).intl;
+    let intl = tmp2(1112).intl;
     let obj4 = { name: linkedApps.name };
-    obj3.children = intl.formatToPlainString(tmp4(4089).uLPdNT, obj4);
+    obj3.children = intl.formatToPlainString(tmp4(4091).uLPdNT, obj4);
     items = [
-      c4(tmp2(5383).Text, obj3),
+      c4(tmp2(5385).Text, obj3),
       callers.map((project_id) => {
         project_id = project_id.project_id;
         const name = tmp;
@@ -135,11 +135,11 @@ export default function ConjureLinkedAppsTab(linkedApps) {
             onConfirm: null,
           };
           const intl = util.intl;
-          obj2.title = intl.formatToPlainString(_modDef4089.zSfIvv, { name });
+          obj2.title = intl.formatToPlainString(_modDef4091.zSfIvv, { name });
           const intl2 = util.intl;
-          obj2.content = intl2.formatToPlainString(_modDef4089["7TX+mR"], { name });
+          obj2.content = intl2.formatToPlainString(_modDef4091["7TX+mR"], { name });
           const intl3 = util.intl;
-          obj2.confirmText = intl3.string(_modDef4089.vDZEGQ);
+          obj2.confirmText = intl3.string(_modDef4091.vDZEGQ);
           obj2.onConfirm = function onConfirm() {
             return _undefined2(closure_0);
           };
@@ -163,18 +163,18 @@ export default function ConjureLinkedAppsTab(linkedApps) {
       }),
     ];
     obj2.children = items;
-    tmpResult = tmp(tmp2(5808).Stack, obj2);
+    tmpResult = tmp(tmp2(5810).Stack, obj2);
   }
   let items1 = [tmpResult, ,];
   let tmpResult2 = null;
   if (targets.length > 0) {
     let obj5 = { spacing: tmp4(575).space.PX_16, children: null };
     let obj6 = { variant: "body-xs/semibold", color: "text-muted", accessibilityRole: "header", children: null };
-    let intl2 = tmp2(1113).intl;
+    let intl2 = tmp2(1112).intl;
     let obj7 = { name: linkedApps.name };
-    obj6.children = intl2.formatToPlainString(tmp4(4089).L3Bf1s, obj7);
+    obj6.children = intl2.formatToPlainString(tmp4(4091).L3Bf1s, obj7);
     const items2 = [
-      c4(tmp2(5383).Text, obj6),
+      c4(tmp2(5385).Text, obj6),
       targets.map((project_id) => {
         project_id = project_id.project_id;
         const linkedAppTargetSidesResult = linkedApps(_undefined[12]).linkedAppTargetSides(project_id, project_id);
@@ -239,14 +239,14 @@ export default function ConjureLinkedAppsTab(linkedApps) {
       }),
     ];
     obj5.children = items2;
-    tmpResult2 = tmp(tmp2(5808).Stack, obj5);
+    tmpResult2 = tmp(tmp2(5810).Stack, obj5);
   }
   items1[1] = tmpResult2;
   if (!failed) {
     if (!linkedApps.saved) {
       items1[2] = null;
       obj.children = items1;
-      return tmp(linkedApps(5808).Stack, obj);
+      return tmp(linkedApps(5810).Stack, obj);
     }
   }
   let str = "text-muted";
@@ -270,8 +270,8 @@ export default function ConjureLinkedAppsTab(linkedApps) {
     str3 = "assertive";
   }
   obj8.accessibilityLiveRegion = str3;
-  let intl3 = tmp2(1113).intl;
-  const tmp4Result = onOpenSettings(4089);
+  let intl3 = tmp2(1112).intl;
+  const tmp4Result = onOpenSettings(4091);
   obj8.children = intl3.string(failed ? tmp4Result.dIEOrl : tmp4Result["/d6saK"]);
-  c4(linkedApps(5383).Text, obj8);
+  c4(linkedApps(5385).Text, obj8);
 }

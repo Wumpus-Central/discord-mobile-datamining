@@ -1,6 +1,6 @@
 // discord_app/modules/expression_picker/native/ExpressionPickerKeyboard.tsx
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
-import _modDef1655 from "../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../_runtime/metro/01653__.js";
 import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ExpressionPickerDefault from "ExpressionPicker.tsx";
@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const KEYBOARD_ANIMATION_CONFIG = fn(12814).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12784).KEYBOARD_ANIMATION_CONFIG;
 let jsx = fn(21).jsx;
 let closure_7 = {
   code: "(function ExpressionPickerKeyboardTsx1(){let[bottomSheetIndex]=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;})",
@@ -32,12 +32,12 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
   const transitionState = channel.transitionState;
   dependencyMap = transitionState;
   let isScreenReaderEnabled;
-  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(-1);
-  let obj = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(-1);
+  let obj = require("../../../../_runtime/metro/01653__.js");
   let tmp = _require;
-  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
   const ref = isScreenReaderEnabled.useRef(null);
-  const obj2 = require("../../../../_runtime/metro/01655__.js");
+  const obj2 = require("../../../../_runtime/metro/01653__.js");
   isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   const tmp7 = ref(isScreenReaderEnabled.useState(false), 2);
   const animationConfigs = tmp7[0];
@@ -95,8 +95,8 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
   ExpressionPickerKeyboardTsx1.__closure = items5;
   ExpressionPickerKeyboardTsx1.__workletHash = 15440201615969;
   ExpressionPickerKeyboardTsx1.__initData = tmp16;
-  const derivedValue = require("../../../../_runtime/metro/01655__.js").useDerivedValue(ExpressionPickerKeyboardTsx1);
-  const obj6 = require("../../../../_runtime/metro/01655__.js");
+  const derivedValue = require("../../../../_runtime/metro/01653__.js").useDerivedValue(ExpressionPickerKeyboardTsx1);
+  const obj6 = require("../../../../_runtime/metro/01653__.js");
   const items6 = [closure_8, derivedValue, maximum, minimum];
   _require = undefined;
   importDefault = undefined;
@@ -113,7 +113,7 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
   ExpressionPickerKeyboardTsx2.__workletHash = 10164343902621;
   ExpressionPickerKeyboardTsx2.__initData = tmp19;
   const items8 = [isScreenReaderEnabled, chatInputRef];
-  const animatedStyle = tmp(1655).useAnimatedStyle(ExpressionPickerKeyboardTsx2);
+  const animatedStyle = tmp(1653).useAnimatedStyle(ExpressionPickerKeyboardTsx2);
   const items9 = [animationConfigs, onClose, transitionState];
   const callback4 = obj3.useCallback(() => {
     closure_6(true);
@@ -145,9 +145,9 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
     transitionState,
     children: null,
   };
-  const tmpResult = tmp(1655);
+  const tmpResult = tmp(1653);
   const tmp14Result = PortalKeyboardBottomSheetDefault;
-  obj7.children = jsx(_modDef1655.View, {
+  obj7.children = jsx(_modDef1653.View, {
     nativeID: "expression-picker-sheet",
     style: animatedStyle,
     children: jsx(ExpressionPickerDefault, {

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
-import inlineStyles from "../../../../../../_runtime/07746_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07745_inlineStyles.js";
 import TraitOptionItem from "TraitOptionItem.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -27,12 +27,12 @@ function SelectedWindow(size) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(5848).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5850).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_13 = createStyles.createStyles({
   assetList: { paddingHorizontal: PX_16 },
   radioGroup: { flexDirection: "row", gap: PX_12 },
@@ -96,9 +96,9 @@ export default function TraitOptionList(size) {
   closure_6 = size(504).useStateFromStores(items, () => closure_7.useReducedMotion);
   let obj = size(504);
   let tmp2 = size;
-  closure_7 = options(12447)(options(12672));
-  const tmp4 = options(12447);
-  const isScreenReaderEnabled = size(5022).useIsScreenReaderEnabled();
+  closure_7 = options(12417)(options(12642));
+  const tmp4 = options(12417);
+  const isScreenReaderEnabled = size(5024).useIsScreenReaderEnabled();
   noop.useRef(null);
   const ref = noop.useRef(false);
   closure_11 = noop.useRef(null);
@@ -106,10 +106,10 @@ export default function TraitOptionList(size) {
     options.findIndex((optionId) => optionId.optionId === dependencyMap),
     0,
   );
-  const tmp8 = options(5371)(bound);
-  let obj2 = size(5022);
-  [tmp10, c13] = disabled(noop.useState(options(1496)().width), 2);
-  const width = size(12695).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const tmp8 = options(5373)(bound);
+  let obj2 = size(5024);
+  [tmp10, c13] = disabled(noop.useState(options(1494)().width), 2);
+  const width = size(12665).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + closure_11;
   c15 = sum;
   const ref1 = noop.useRef(null);
@@ -263,8 +263,8 @@ export default function TraitOptionList(size) {
   obj4.contentContainerStyle = items2;
   const obj5 = { style: tmp.radioGroup, accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
   const tmp15 = ref;
-  const tmp9 = disabled(noop.useState(options(1496)().width), 2);
-  obj5.accessibilityLabel = tmp2(6215).getCustomizationOptionName(size.customizationOption);
+  const tmp9 = disabled(noop.useState(options(1494)().width), 2);
+  obj5.accessibilityLabel = tmp2(6217).getCustomizationOptionName(size.customizationOption);
   obj5.children = options.map((traitOption, index) => {
     size = traitOption;
     closure_1 = index;
@@ -278,8 +278,8 @@ export default function TraitOptionList(size) {
       disabled: null,
       onPress: null,
     };
-    const tmp2 = options(12695);
-    obj.accessibilityLabel = size(6215).getAssetAccessibilityLabel(traitOption, {
+    const tmp2 = options(12665);
+    obj.accessibilityLabel = size(6217).getAssetAccessibilityLabel(traitOption, {
       skipRarity: skipDescription,
       skipDescription,
     });

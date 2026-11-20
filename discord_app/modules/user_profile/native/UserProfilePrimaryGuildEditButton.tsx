@@ -1,14 +1,14 @@
 // discord_app/modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
-const GuildTagBadgeSize = fn(7881).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7880).GuildTagBadgeSize;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   tag: {
     paddingHorizontal: 6,
@@ -134,7 +134,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     obj4.accessibilityValue = obj5;
     obj4.onPress = function handleOpenSelectPrimaryGuild() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(15820, dependencyMap.paths),
+        asyncRequireImpl(15784, dependencyMap.paths),
         "UserPrimaryGuildListBottomSheet",
         {
           availableGuilds: userAvailableGuildsWithTags,

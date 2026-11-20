@@ -11,7 +11,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = {
   noticeContainer: { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_16 },
   listHeaderNoticeContainer: null,
@@ -29,13 +29,13 @@ let items = [
 const obj6 = { order: 100, predicate: fn(9019).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
 items[1] = {
   order: 150,
-  predicate: fn(16029).shouldShowAgeNoticeUnconfirmedNotice,
-  Component: fn(16029).ContentFiltersUnconfirmedNotice,
+  predicate: fn(15993).shouldShowAgeNoticeUnconfirmedNotice,
+  Component: fn(15993).ContentFiltersUnconfirmedNotice,
 };
 const obj7 = {
   order: 150,
-  predicate: fn(16029).shouldShowAgeNoticeUnconfirmedNotice,
-  Component: fn(16029).ContentFiltersUnconfirmedNotice,
+  predicate: fn(15993).shouldShowAgeNoticeUnconfirmedNotice,
+  Component: fn(15993).ContentFiltersUnconfirmedNotice,
 };
 items[2] = {
   order: 200,
@@ -75,7 +75,7 @@ items[3] = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(16038).SensitiveContentFiltersTeenNotice,
+  Component: fn(16002).SensitiveContentFiltersTeenNotice,
 };
 obj5.SENSITIVE_CONTENT_FILTERS = items;
 const obj9 = {
@@ -88,7 +88,7 @@ const obj9 = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(16038).SensitiveContentFiltersTeenNotice,
+  Component: fn(16002).SensitiveContentFiltersTeenNotice,
 };
 const items1 = [
   { order: 100, predicate: fn(9019).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault },

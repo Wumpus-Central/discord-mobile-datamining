@@ -32,7 +32,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(id1) {
     return isViewingServerShopResult;
   }
 }
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx");
 

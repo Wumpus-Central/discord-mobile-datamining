@@ -6,8 +6,8 @@ import UserRecord from "../../records/UserRecord.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(8220).ReferencedMessageState;
-const Constants = fn(1072);
+const ReferencedMessageState = fn(8219).ReferencedMessageState;
+const Constants = fn(1071);
 ({
   MessageStates: metroImportDefault,
   MessageTypes: closure_8,

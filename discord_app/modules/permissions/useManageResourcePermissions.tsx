@@ -58,13 +58,13 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(7513);
+const PermissionsConstants = fn(7512);
 ({
   CREATE_GUILD_EVENT_CORE_PERMISSIONS: metroImportDefault,
   CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8,
   CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9,
 } = PermissionsConstants);
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 let closure_11 = {
   canCreateExpressions: false,
   canCreateGuildEvent: false,

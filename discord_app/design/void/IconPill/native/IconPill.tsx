@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   pillContainer: {
     flexDirection: "row",
@@ -31,7 +31,7 @@ let obj3 = {
 obj2.pillIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
 let obj4 = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
 obj2.pillText = {
-  fontFamily: fn(1083).Fonts.PRIMARY_NORMAL,
+  fontFamily: fn(1082).Fonts.PRIMARY_NORMAL,
   color: nativeDefault.colors.TEXT_SUBTLE,
   fontSize: 14,
   lineHeight: 18,

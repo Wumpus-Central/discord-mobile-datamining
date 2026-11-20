@@ -7,7 +7,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
 
@@ -21,8 +21,8 @@ export function useRequestToSpeakPermission(id) {
     items1,
   );
   let obj = require("initialize");
-  const canEveryoneRoleResult = stateFromStores(4729).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4729);
+  const canEveryoneRoleResult = stateFromStores(4731).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(4731);
   [tmp4, tmp5] = noop.useState(canEveryoneRoleResult);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

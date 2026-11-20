@@ -6,7 +6,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1450);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-11-waterwheels-discover",
   kind: "user",

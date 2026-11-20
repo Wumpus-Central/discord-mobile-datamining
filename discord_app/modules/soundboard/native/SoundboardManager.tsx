@@ -12,7 +12,8 @@ import BaseSoundboardManager from "../BaseSoundboardManager.tsx";
 
 require = fn;
 let map = new Map();
-let closure_8 = new LoggerDefault("SoundboardManagerNative");
+const weakSet = new WeakSet();
+let closure_9 = new LoggerDefault("SoundboardManagerNative");
 const prototype = function SoundboardManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -21,6 +22,17 @@ const prototype = function SoundboardManager() {
       stop.stop();
     });
     map = new Map();
+  };
+  applyArgumentsResult._stopSound = function _stopSound(soundId, userId) {
+    const combined = "" + userId + "-" + soundId;
+    value = map.get(combined);
+    if (null != value) {
+      value.stop();
+      set.add(value);
+      map.delete(combined);
+      const result = applyArgumentsResult(dependencyMap[6]).reportSoundFinishedPlaying(soundId, userId);
+      const obj2 = applyArgumentsResult(dependencyMap[6]);
+    }
   };
   applyArgumentsResult._playSound = function _playSound(soundId, arg1) {
     let num = arg1;
@@ -67,10 +79,14 @@ const prototype = function SoundboardManager() {
       closure_129_4 = value;
       c4 = 0;
     }
+    let tmp17 = closure_129_4;
     if (closure_129_4) {
+      tmp17 = !set2.has(closure_129_0);
+    }
+    if (tmp17) {
       set.delete(closure_129_1);
-      const result = applyArgumentsResult(tmp3[9]).reportSoundFinishedPlaying(closure_129_2, closure_129_3);
-      applyArgumentsResult(tmp3[9]);
+      const result = applyArgumentsResult(tmp3[6]).reportSoundFinishedPlaying(closure_129_2, closure_129_3);
+      applyArgumentsResult(tmp3[6]);
     }
     await "HermesInternal";
     ({
@@ -93,7 +109,7 @@ const prototype = function SoundboardManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp4 {}
+class prototype extends tmp5 {}
 const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardManager.tsx");

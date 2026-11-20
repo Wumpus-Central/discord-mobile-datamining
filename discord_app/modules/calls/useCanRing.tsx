@@ -7,7 +7,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelTypesSets = fn(1072).ChannelTypesSets;
+const ChannelTypesSets = fn(1071).ChannelTypesSets;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useCanRing.tsx");
 

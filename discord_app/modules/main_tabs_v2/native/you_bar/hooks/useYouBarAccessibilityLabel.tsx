@@ -16,12 +16,12 @@ import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const StatusTypes = fn(1072).StatusTypes;
+const StatusTypes = fn(1071).StatusTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
 
 export function useYouBarAccessibilityLabel(stateFromStores) {
-  _require = id(4848).useName(stateFromStores);
+  _require = id(4850).useName(stateFromStores);
   id = undefined;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -32,7 +32,7 @@ export function useYouBarAccessibilityLabel(stateFromStores) {
   if (setting != null) {
     text = setting.text;
   }
-  let obj = id(4848);
+  let obj = id(4850);
   let tmp6 = null;
   if ("" !== text) {
     tmp6 = text;

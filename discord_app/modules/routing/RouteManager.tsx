@@ -4,7 +4,7 @@ import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import KeybindRouterStore from "KeybindRouterStore.tsx";
 
 let obj2 = fn;
-const Routes = fn(1072).Routes;
+const Routes = fn(1071).Routes;
 class RouteManager {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -25,17 +25,17 @@ class RouteManager {
       obj.connected = isConnectedResult;
       if (tmp2) {
         obj.routeChangeCount = 0;
-        obj2 = obj2(1099);
+        obj2 = obj2(1098);
         obj.executeRouteRewrites(obj2.getHistory().location, "REPLACE");
       }
     };
     obj.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
       if ("POP" !== REPLACE) {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-          obj = obj2(13655);
+          obj = obj2(13625);
           if (!obj.convertRouteToNavigation(pathname)) {
-            obj2(1099).replaceWith(Routes.ME);
-            const tmp2Result = obj2(1099);
+            obj2(1098).replaceWith(Routes.ME);
+            const tmp2Result = obj2(1098);
           }
         }
       }
@@ -67,7 +67,7 @@ class RouteManager {
       clearTimeout(obj.timer);
       state = KeybindRouterStore.getState();
       if (null != state.path) {
-        obj = obj2(1099);
+        obj = obj2(1098);
         obj.transitionTo(state.path);
       }
     };
@@ -77,11 +77,11 @@ class RouteManager {
 const prototype = RouteManager.prototype;
 prototype["initialize"] = function initialize() {
   this.cleanup();
-  const history = obj2(1099).getHistory();
+  const history = obj2(1098).getHistory();
   this.unlistenHistory = history.listen(this.handleRouteChange);
-  const obj = obj2(1099);
+  const obj = obj2(1098);
   state = KeybindRouterStore.getState();
-  state.resetPath(obj2(1099).getHistory().location.pathname);
+  state.resetPath(obj2(1098).getHistory().location.pathname);
   this.unlistenKeyboardChange = KeybindRouterStore.subscribe(this.handleKeybindRouteChange);
   GatewayConnectionStore.addChangeListener(this.handleConnectionChange);
 };
@@ -92,7 +92,7 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
     const obj = rewrites[Symbol.iterator]();
     while (obj !== undefined) {
       let tmp11 = obj2;
-      obj2 = obj2(1099);
+      obj2 = obj2(1098);
       let tmp9Result = tmp9(location, REPLACE);
       if (null != tmp9Result) {
         let obj3 = {
@@ -102,7 +102,7 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
         let obj4 = { replacePath: tmp9Result.path, previousPath: obj2.getHistory().location.pathname };
         obj3.data = obj4;
         let tmp16 = addSentryBreadcrumbDefault(obj3);
-        let tmp11Result = tmp11(1099);
+        let tmp11Result = tmp11(1098);
         let replaceWithResult = tmp11Result.replaceWith(tmp9Result.path, tmp9Result.state);
         obj.return();
         let flag = true;
@@ -134,8 +134,8 @@ prototype["addRouteChangeListener"] = function addRouteChangeListener(hideLaunch
   const self = this;
   closure_0 = hideLaunchPad;
   if (null != this.unlistenHistory) {
-    hideLaunchPad(obj2(1099).getHistory().location, "REPLACE");
-    const obj = obj2(1099);
+    hideLaunchPad(obj2(1098).getHistory().location, "REPLACE");
+    const obj = obj2(1098);
   }
   const listeners = this.listeners;
   listeners.add(hideLaunchPad);
@@ -145,13 +145,13 @@ prototype["addRouteRewriter"] = function addRouteRewriter(voiceRouteRewriter) {
   const self = this;
   closure_0 = voiceRouteRewriter;
   if (null != this.unlistenHistory) {
-    obj2 = obj2(1099);
-    const tmp3 = voiceRouteRewriter(obj2(1099).getHistory().location, obj2.getHistory().action);
+    obj2 = obj2(1098);
+    const tmp3 = voiceRouteRewriter(obj2(1098).getHistory().location, obj2.getHistory().action);
     if (null != tmp3) {
-      tmp(1099).replaceWith(tmp3.path, tmp3.state);
-      const tmpResult = tmp(1099);
+      tmp(1098).replaceWith(tmp3.path, tmp3.state);
+      const tmpResult = tmp(1098);
     }
-    const obj = obj2(1099);
+    const obj = obj2(1098);
     tmp = obj2;
   }
   const rewrites = this.rewrites;
@@ -167,7 +167,7 @@ prototype["removeRouteRewriter"] = function removeRouteRewriter(voiceRouteRewrit
   rewrites.delete(voiceRouteRewriter);
 };
 prototype["getHistory"] = function getHistory() {
-  return obj2(1099).getHistory();
+  return obj2(1098).getHistory();
 };
 obj2 = Object.create(RouteManager.prototype);
 obj2.rewrites = new Set();
@@ -185,17 +185,17 @@ obj2.handleConnectionChange = function handleConnectionChange() {
   obj.connected = isConnectedResult;
   if (tmp2) {
     obj.routeChangeCount = 0;
-    obj2 = obj2(1099);
+    obj2 = obj2(1098);
     obj.executeRouteRewrites(obj2.getHistory().location, "REPLACE");
   }
 };
 obj2.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   if ("POP" !== REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-      obj = obj2(13655);
+      obj = obj2(13625);
       if (!obj.convertRouteToNavigation(pathname)) {
-        obj2(1099).replaceWith(Routes.ME);
-        const tmp2Result = obj2(1099);
+        obj2(1098).replaceWith(Routes.ME);
+        const tmp2Result = obj2(1098);
       }
     }
   }
@@ -227,7 +227,7 @@ obj2.flushRoute = function flushRoute() {
   clearTimeout(obj.timer);
   state = KeybindRouterStore.getState();
   if (null != state.path) {
-    obj = obj2(1099);
+    obj = obj2(1098);
     obj.transitionTo(state.path);
   }
 };

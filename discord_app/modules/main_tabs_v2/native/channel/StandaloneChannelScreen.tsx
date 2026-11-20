@@ -137,19 +137,19 @@ function Header(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const MainTabsV2Constants = fn(8443);
+const MainTabsV2Constants = fn(8442);
 ({ ONYX_BORDER_WIDTH, MIN_HEADER_HEIGHT: closure_6 } = MainTabsV2Constants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   ChannelTypes: metroImportDefault,
   EMPTY_STRING_SNOWFLAKE_ID: closure_8,
   ME: closure_9,
   ThemeTypes: closure_10,
 } = Constants);
-const StaticChannelRoute = fn(4648).StaticChannelRoute;
+const StaticChannelRoute = fn(4650).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   container: { flex: 1 },
   onyxContainerBorder: {
@@ -219,7 +219,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/S
 
 export default noop.memo(function StandaloneChannelScreen(frame) {
   ({ guildId, channelId } = frame);
-  ({ isNavigationTTIVisible, isNavigationScreen } = frame);
+  ({ subRouteId, isNavigationTTIVisible, isNavigationScreen } = frame);
   frame = frame.frame;
   ({ showCreateThread, screenIndex } = frame);
   closure_5 = undefined;
@@ -323,12 +323,12 @@ export default noop.memo(function StandaloneChannelScreen(frame) {
             };
             const items4 = [closure_12(Header, obj6)];
             const obj7 = { style: contentContainer, children: null };
-            let tmp44Result = null;
+            let tmp45Result = null;
             if (canSeeOnboardingHome) {
               const obj8 = { guildId };
-              tmp44Result = closure_12(isNavigationScreen(tmp3[36]), obj8);
+              tmp45Result = closure_12(isNavigationScreen(tmp3[36]), obj8);
             }
-            const items5 = [tmp44Result, closure_12(isNavigationScreen(tmp3[35]), {})];
+            const items5 = [tmp45Result, closure_12(isNavigationScreen(tmp3[35]), {})];
             obj7.children = items5;
             items4[1] = closure_13(navigation, obj7);
             obj5.children = items4;
@@ -341,14 +341,18 @@ export default noop.memo(function StandaloneChannelScreen(frame) {
             items6[2] = closure_12(isNavigationScreen(tmp3[35]), {});
             obj9.children = items6;
             return closure_13(navigation, obj9);
-          } else if (channelId === StaticChannelRoute.CONJURE) {
-            const obj11 = { guildId, inline: true, onBack: null };
+          } else if (channelId === StaticChannelRoute.CONJURE_PROJECT) {
+            const obj11 = { guildId, projectId: subRouteId, inline: true, onBack: null };
             let tmp38;
             if (tmp14) {
               tmp38 = callback;
             }
             obj11.onBack = tmp38;
-            return closure_12(isNavigationScreen(tmp3[38]), obj11, guildId);
+            if (subRouteId == null) {
+              subRouteId = "";
+            }
+            const _HermesInternal = HermesInternal;
+            return closure_12(isNavigationScreen(tmp3[38]), obj11, "" + guildId + ":" + subRouteId);
           } else if (showCreateThread) {
             const obj12 = { style: contentContainer, children: null };
             const obj13 = {
@@ -459,11 +463,11 @@ export default noop.memo(function StandaloneChannelScreen(frame) {
       const obj27 = { style: contentContainer, children: null };
       const items11 = [closure_12(isNavigationScreen(tmp3[33]), { absolute: true }), ,];
       const obj28 = { guildId, gatedChannelId: null };
-      let tmp52;
+      let tmp53;
       if (needSubscriptionToAccess) {
-        tmp52 = channelId;
+        tmp53 = channelId;
       }
-      obj28.gatedChannelId = tmp52;
+      obj28.gatedChannelId = tmp53;
       items11[1] = closure_12(isNavigationScreen(tmp3[34]), obj28);
       items11[2] = closure_12(isNavigationScreen(tmp3[35]), {});
       obj27.children = items11;

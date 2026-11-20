@@ -43,7 +43,7 @@ function getChannelRoleSubscriptionStatus(id) {
   }
   return obj3;
 }
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");

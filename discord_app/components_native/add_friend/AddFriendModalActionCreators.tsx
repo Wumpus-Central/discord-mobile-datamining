@@ -1,5 +1,5 @@
 // discord_app/components_native/add_friend/AddFriendModalActionCreators.tsx
-import asyncRequireImpl from "../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02119_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
@@ -9,12 +9,12 @@ const result = size.fileFinishedImporting("components_native/add_friend/AddFrien
 
 export default {
   openAddFriendModalDeeplink() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14977, dependencyMap.paths));
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14941, dependencyMap.paths));
   },
   openAddFriendModal(sourceMetadata) {
     if (null != UserStore.getCurrentUser()) {
       const obj2 = { sourceMetadata };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14977, dependencyMap.paths), obj2);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14941, dependencyMap.paths), obj2);
     }
   },
 };

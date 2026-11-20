@@ -1,6 +1,6 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuState.native.tsx
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -17,9 +17,9 @@ let items = [
   1,
   0,
   4,
-  fn(1708).scheduleOnRN,
-  fn(5008).triggerHapticFeedback,
-  fn(5008).HapticFeedbackTypes,
+  fn(1706).scheduleOnRN,
+  fn(5010).triggerHapticFeedback,
+  fn(5010).HapticFeedbackTypes,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -102,9 +102,9 @@ export function useIsContextMenuActive(contextMenuState) {
 }
 export { updateContextMenuState };
 export function useContextMenuState() {
-  const sharedValue = _mod1655.useSharedValue(-1);
-  const sharedValue1 = _mod1655.useSharedValue([]);
-  const sharedValue2 = _mod1655.useSharedValue(-1);
+  const sharedValue = _mod1653.useSharedValue(-1);
+  const sharedValue1 = _mod1653.useSharedValue([]);
+  const sharedValue2 = _mod1653.useSharedValue(-1);
   items = [sharedValue, sharedValue1, sharedValue2];
   return noop.useMemo(() => ({ pan: sharedValue, itemMeasurements: sharedValue1, activeIndex: sharedValue2 }), items);
 }

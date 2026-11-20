@@ -23,22 +23,22 @@ export default function useEmojiPickerSearchState(channel, arg1, intention, bypa
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(4622).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(4624).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);
-      channel(1263).batchUpdates(() => {
+      channel(1262).batchUpdates(() => {
         ref.current = current;
         closure_5(closure_1);
       });
-      const obj3 = channel(1263);
+      const obj3 = channel(1262);
     } else {
-      channel(1263).batchUpdates(() => {
+      channel(1262).batchUpdates(() => {
         ref.current = "";
         closure_1_5(null);
         const result = closure_1.set(0);
       });
-      const obj = channel(1263);
+      const obj = channel(1262);
     }
   }, items);
   return obj;

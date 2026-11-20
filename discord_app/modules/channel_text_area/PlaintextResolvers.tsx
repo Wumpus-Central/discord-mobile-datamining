@@ -185,9 +185,9 @@ function matchesUser(arg0, arg1, username) {
   }
   return tmp;
 }
-let closure_8 = fn(4722).GUILD_SELECTABLE_CHANNELS_KEY;
-const Permissions = fn(1072).Permissions;
-const EmojiIntention = fn(1391).EmojiIntention;
+let closure_8 = fn(4724).GUILD_SELECTABLE_CHANNELS_KEY;
+const Permissions = fn(1071).Permissions;
+const EmojiIntention = fn(1389).EmojiIntention;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
 

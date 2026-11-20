@@ -9,8 +9,8 @@ import VoicePanelDockPIPWatchPromptStore from "VoicePanelDockPIPWatchPromptStore
 const require = globalThis.__r;
 
 require = fn;
-const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const ParticipantTypes = fn(5442).ParticipantTypes;
+const ApplicationStreamStates = fn(1071).ApplicationStreamStates;
+const ParticipantTypes = fn(5444).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockPIPStream.tsx");
 

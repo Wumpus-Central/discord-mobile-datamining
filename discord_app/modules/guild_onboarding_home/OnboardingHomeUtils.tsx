@@ -12,9 +12,9 @@ import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore.t
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: metroImportDefault, ME: closure_8 } = Constants);
-const ChannelFlags = fn(4648).ChannelFlags;
+const ChannelFlags = fn(4650).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
 
@@ -41,7 +41,7 @@ export function useCanSeeOnboardingHome(guild_id) {
             return tmp7;
           } else if (ImpersonateStore.isFullServerPreview(closure_0)) {
             const id = has.id;
-            const isSettingsEmptyResult = enabled(6564).isSettingsEmpty(
+            const isSettingsEmptyResult = enabled(6566).isSettingsEmpty(
               GuildOnboardingHomeSettingsStore.getSettings(id),
             );
             hasItem1 = !isSettingsEmptyResult;
@@ -57,7 +57,7 @@ export function useCanSeeOnboardingHome(guild_id) {
               const tmp23 = has(constants.GUILD_ONBOARDING) && !enabled;
             }
             let tmp10 = hasItem1;
-            const enabledResult = enabled(6564);
+            const enabledResult = enabled(6566);
           } else {
             tmp10 = guildHasOnboardingHomeDefault(has);
             if (tmp10) {

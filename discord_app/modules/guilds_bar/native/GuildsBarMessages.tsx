@@ -14,7 +14,7 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
 require = fn;
-const ME = fn(1072).ME;
+const ME = fn(1071).ME;
 const jsx = fn(21).jsx;
 const config = {
   onPress() {
@@ -48,10 +48,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: 0.322,
-    externalChildren: 1,
-    expandedChildren: 0.716,
-    children: "`",
+    label: "BG_GRADIENT_HEXAGON_PROMO_1",
+    externalChildren: 0.6,
+    expandedChildren: 560,
+    children: 24,
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -68,9 +68,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: 0.322,
-    externalChildren: 1,
-    expandedChildren: 0.716,
-    children: "`",
+    label: "BG_GRADIENT_HEXAGON_PROMO_1",
+    externalChildren: 0.6,
+    expandedChildren: 560,
+    children: 24,
   });
 });

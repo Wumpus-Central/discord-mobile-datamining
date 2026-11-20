@@ -8,7 +8,7 @@ import useStableParticipant from "../utils/useStableParticipant.tsx";
 import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
-import 01655__ from "../../../../../_runtime/metro/01655__.js";
+import 01653__ from "../../../../../_runtime/metro/01653__.js";
 
 const require = globalThis.__r;
 const useStableParticipantDefault = useStableParticipant;
@@ -65,9 +65,9 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   const tmp4Result = tmp4(type, id, guildId);
 }
 const jsx = fn(21).jsx;
-let closure_6 = module_1655.createAnimatedComponent(fn(7481).BackgroundBlurView);
+let closure_6 = module_1653.createAnimatedComponent(fn(7480).BackgroundBlurView);
 let closure_7 = { duration: 100 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: null, iconContainer: null, floatingIconWrapper: null, floatingIcon: null, leftMargin: null };
 const rect = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.round, padding: 6 };
 obj.container = rect;
@@ -98,7 +98,7 @@ export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
     return id;
   });
   const tmp4 = useVoicePanelHeaderUserStateIcons(useStableParticipantDefault(stateFromStores, channelId, guildId), guildId);
-  require("../../../../../_runtime/metro/01655__.js");
+  require("../../../../../_runtime/metro/01653__.js");
   const items1 = [closure_10, require("timing/timing").withTiming, isHeaderHidden.isHeaderHidden, closure_7];
   _require = undefined;
   importDefault = undefined;

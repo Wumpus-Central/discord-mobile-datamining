@@ -10,15 +10,15 @@ function formatToastDuration(seconds) {
   const intl = util.intl;
   return intl.formatToPlainString(util.t.geSp4K, { seconds });
 }
-const Accessibility = fn(1072).Accessibility;
+const Accessibility = fn(1071).Accessibility;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3oxlia"]);
   },
-  parent: fn(8593).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8592).MobileUserSettings.ACCESSIBILITY,
   useProps: function useToastDurationSettingProps() {
     items = [AccessibilityStore];
     stateFromStores = stateFromStores(onChange[6]).useStateFromStores(

@@ -285,7 +285,7 @@ function getUserIsStaff() {
   const currentUser = UserStore.getCurrentUser();
   return null != currentUser && currentUser.isStaff();
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ NON_USER_BOT_DISCRIMINATOR: closure_4, StatusTypes: hasOwnProperty } = Constants);
 let c6 = 86400000;
 let c7 = "???";

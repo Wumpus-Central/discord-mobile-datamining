@@ -20,7 +20,7 @@ let closure_7 = async function _resetCampaignDismissibleContent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_7 = async function _resetCampaignDismissibleContent(arg0) {
       } else {
         const result = closure_129_0(closure_129_1[7]).overrideDCFLastDCDismissed(null);
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp20) {
       c3 = tmp;
@@ -105,7 +105,7 @@ export default function useCampaignDismissibleContent(arg0, arg1) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -142,7 +142,7 @@ export default function useCampaignDismissibleContent(arg0, arg1) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -186,7 +186,7 @@ export default function useCampaignDismissibleContent(arg0, arg1) {
                       return obj;
                     }
                     c1 = 3;
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   } catch (tmp6) {
                     c1 = tmp;
                     throw tmp6;
@@ -318,7 +318,7 @@ export default function useCampaignDismissibleContent(arg0, arg1) {
             closure_136_2(false);
           }
           c12 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp83) {
           closure_10 = tmp83;
           if (tmp5 === c9) {

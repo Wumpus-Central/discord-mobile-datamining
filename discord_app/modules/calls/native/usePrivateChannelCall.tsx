@@ -42,9 +42,9 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
         tmp10 = require;
       }
       const obj3 = { text: stringResult, accessibilityHint: null, inCall: false };
-      const intl2 = tmp10(1113).intl;
+      const intl2 = tmp10(1112).intl;
       const string2 = intl2.string;
-      const t2 = tmp10(1113).t;
+      const t2 = tmp10(1112).t;
       if (closure_1) {
         let string2Result = string2(t2.oCqlGG);
       } else {
@@ -74,7 +74,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
               if (null == channel) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj7 = { value: tmp3(7618).ensurePrivateChannel(tmp32), done: false };
+                const obj7 = { value: tmp3(7617).ensurePrivateChannel(tmp32), done: false };
                 return obj7;
               }
               tmp32 = closure_0;
@@ -123,7 +123,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             closure_129_2();
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp25) {
           c3 = tmp;
           throw tmp25;

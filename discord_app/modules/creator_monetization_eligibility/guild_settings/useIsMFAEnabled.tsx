@@ -4,7 +4,7 @@ import GuildSettingsStore from "../../guild_settings/GuildSettingsStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const MFALevels = fn(1072).MFALevels;
+const MFALevels = fn(1071).MFALevels;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx",

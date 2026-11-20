@@ -4,12 +4,12 @@ import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
 import ConsentStore from "../../../stores/ConsentStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Consents: closure_4, PlatformTypes } = Constants);
 let items = [, ,];
 ({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1], XBOX: arr[2] } = PlatformTypes);
 const set = new Set(items);
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1450);
 let obj2 = {
   name: "2026-11-console-connection-coachmark",
   kind: "user",

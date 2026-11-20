@@ -52,7 +52,7 @@ function computeHasRoleSubscriptionsInGuild(id1, rolesSnapshot) {
   }
   return false;
 }
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHasRoleSubscriptionInGuild.tsx");
 

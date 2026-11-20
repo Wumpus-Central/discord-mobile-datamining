@@ -4,23 +4,23 @@ import activityInstanceConnectedParticipants from "../../helpers/activityInstanc
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15593);
+let CONTEXT_MENU_ICON_NAMES = fn(15557);
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS,
   {
-    scope: fn(15592).activityInstanceConnectedParticipantsScope,
+    scope: fn(15556).activityInstanceConnectedParticipantsScope,
     handler(socket) {
       const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
       return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
     },
   },
 );
-CONTEXT_MENU_ICON_NAMES = fn(15593);
+CONTEXT_MENU_ICON_NAMES = fn(15557);
 let obj3 = {
-  scope: fn(15592).activityInstanceConnectedParticipantsScope,
+  scope: fn(15556).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
@@ -29,7 +29,7 @@ let obj3 = {
 obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.REQUEST_PROXY_TICKET_REFRESH,
   {
-    scope: fn(15592).activityInstanceConnectedParticipantsScope,
+    scope: fn(15556).activityInstanceConnectedParticipantsScope,
     handler(socket) {
       socket = socket.socket;
       return (async () => {
@@ -43,7 +43,7 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

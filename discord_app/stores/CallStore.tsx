@@ -42,7 +42,7 @@ function callConnect() {
   }
   return flag;
 }
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 let calls = {};
 const enqueuedRings = {};
 const Store = initializeDefault.Store;

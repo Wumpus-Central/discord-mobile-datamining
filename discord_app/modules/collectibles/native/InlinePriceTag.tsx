@@ -5,10 +5,10 @@ import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import LinearGradientDefault from "../../../../_runtime/05347_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05349_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
@@ -156,7 +156,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(14136, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(14105, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;
@@ -319,12 +319,12 @@ function BundleDiscountV2(discountPercentage) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ShopCtaEnum = fn(1074).ShopCtaEnum;
-const Constants = fn(1072);
+const ShopCtaEnum = fn(1073).ShopCtaEnum;
+const Constants = fn(1071);
 ({ AnalyticsSections: metroImportDefault, CurrencyCodes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj2 = {
   priceTag: { flexDirection: "row", alignItems: "center" },
   strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 },
@@ -391,7 +391,7 @@ obj2.disabled = { opacity: 0.5 };
 let closure_12 = createStyles.createStyles(obj2);
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_19 = createStyles.createStyles(() => {
   const discount = {
     backgroundColor: "rgba(46, 204, 113, 0.25)",

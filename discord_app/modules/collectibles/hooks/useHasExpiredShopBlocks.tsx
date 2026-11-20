@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 const require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useState: closure_4 } = noop);
-const MAX_TIMEOUT_MS = fn(1072).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1071).MAX_TIMEOUT_MS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useHasExpiredShopBlocks.tsx");
 

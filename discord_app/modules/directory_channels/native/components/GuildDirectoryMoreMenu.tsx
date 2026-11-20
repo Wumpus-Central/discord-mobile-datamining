@@ -21,9 +21,9 @@ export default function GuildDirectoryMoreMenu(entry) {
   ({ isEntryAdmin, canRemove } = tmp2);
   if (tmp2.canEdit) {
     let obj = { label: null, IconComponent: null, action: null };
-    let intl = entry(1113).intl;
-    obj.label = intl.string(entry(1113).t.XnuOvN);
-    obj.IconComponent = entry(11180).PencilIcon;
+    let intl = entry(1112).intl;
+    obj.label = intl.string(entry(1112).t.XnuOvN);
+    obj.IconComponent = entry(11122).PencilIcon;
     obj.action = function handleEdit() {
       GuildDirectoryEditDescriptionModalActionCreatorsDefault.open({ entry });
     };
@@ -31,9 +31,9 @@ export default function GuildDirectoryMoreMenu(entry) {
   }
   if (canRemove) {
     let obj2 = { label: null, IconComponent: null, variant: "destructive", action: null };
-    let intl2 = entry(1113).intl;
-    obj2.label = intl2.string(entry(1113).t.KUxYWH);
-    obj2.IconComponent = entry(5499).TrashIcon;
+    let intl2 = entry(1112).intl;
+    obj2.label = intl2.string(entry(1112).t.KUxYWH);
+    obj2.IconComponent = entry(5501).TrashIcon;
     obj2.action = function handleRemove() {
       const obj2 = {
         title: null,
@@ -66,9 +66,9 @@ export default function GuildDirectoryMoreMenu(entry) {
   }
   if (!isEntryAdmin) {
     const obj3 = { label: null, IconComponent: null, variant: "destructive", action: null };
-    let intl3 = entry(1113).intl;
-    obj3.label = intl3.string(entry(1113).t.Aen9eh);
-    obj3.IconComponent = entry(10146).FlagIcon;
+    let intl3 = entry(1112).intl;
+    obj3.label = intl3.string(entry(1112).t.Aen9eh);
+    obj3.IconComponent = entry(10149).FlagIcon;
     obj3.action = function handleReport() {
       const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
     };
@@ -84,13 +84,13 @@ export default function GuildDirectoryMoreMenu(entry) {
         const merged1 = Object.assign(merged);
         obj.size = "sm";
         obj.variant = "secondary";
-        const intl = entry(1113).intl;
-        obj.accessibilityLabel = intl.string(entry(1113).t.PdRCRg);
-        obj.icon = jsx(entry(6903).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-        return jsx(entry(7472).IconButton, { ref: ref.ref });
+        const intl = entry(1112).intl;
+        obj.accessibilityLabel = intl.string(entry(1112).t.PdRCRg);
+        obj.icon = jsx(entry(6902).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+        return jsx(entry(7471).IconButton, { ref: ref.ref });
       },
     };
-    tmp9 = jsx(entry(8539).ContextMenu, {
+    tmp9 = jsx(entry(8538).ContextMenu, {
       items,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -98,10 +98,10 @@ export default function GuildDirectoryMoreMenu(entry) {
         const merged1 = Object.assign(merged);
         obj.size = "sm";
         obj.variant = "secondary";
-        const intl = entry(1113).intl;
-        obj.accessibilityLabel = intl.string(entry(1113).t.PdRCRg);
-        obj.icon = jsx(entry(6903).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-        return jsx(entry(7472).IconButton, { ref: ref.ref });
+        const intl = entry(1112).intl;
+        obj.accessibilityLabel = intl.string(entry(1112).t.PdRCRg);
+        obj.icon = jsx(entry(6902).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+        return jsx(entry(7471).IconButton, { ref: ref.ref });
       },
     });
   }

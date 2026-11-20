@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../_runtime/00012_apply.js";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import privDefault from "../../_runtime/01456_priv.js";
+import privDefault from "../../_runtime/01454_priv.js";
 import StageChannelPermissions from "../modules/stage_channels/StageChannelPermissions.tsx";
 import ThreadSortOrder from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import ForumLayout from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
@@ -56,11 +56,11 @@ function createChannelRecord(type) {
   }
   return new tmp5(type);
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ BITRATE_DEFAULT: hasOwnProperty, ChannelTypes } = Constants);
 const BasicPermissions = Constants.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = Constants);
-const ChannelFlags = fn(4648).ChannelFlags;
+const ChannelFlags = fn(4650).ChannelFlags;
 let items = [, , , , , , , , , ,];
 ({
   GUILD_TEXT: arr[0],
@@ -863,29 +863,29 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     originChannelId: null,
     ownerId: null,
     parent_id: null,
-    parentChannelThreadType: "fileFinishedImporting",
+    parentChannelThreadType: "fill",
     permissionOverwrites_: true,
     position_: true,
     rateLimitPerUser_: true,
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: "audio",
-    safetyWarnings: null,
-    blockedUserWarningDismissed: null,
-    template: null,
-    themeColor: null,
+    rtcRegion: "kiss_person_person_tone3_tone4",
+    safetyWarnings: "kiss_person_person_medium_skin_tone_medium_dark_skin_tone",
+    blockedUserWarningDismissed: true,
+    template: false,
+    themeColor: "android",
     threadMetadata: null,
     topic_: null,
     totalMessageSent: null,
-    type: null,
+    type: "clientHeight",
     userLimit_: null,
-    version: null,
-    videoQualityMode: null,
-    linkedLobby: null,
-    hdStreamingUntil: null,
-    hdStreamingBuyerId: null,
-    voiceHangout: null,
+    version: "\u{1F619}",
+    videoQualityMode: 6.1,
+    linkedLobby: 21,
+    hdStreamingUntil: "1",
+    hdStreamingBuyerId: 0,
+    voiceHangout: "sfu-migration",
   };
   if (null == application_id.available_tags) {
     obj.availableTags = undefined;
@@ -1042,7 +1042,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       hd_streaming_buyer_id: obj.hdStreamingBuyerId,
       voice_hangout: obj.voiceHangout,
     } = application_id);
-    return obj7(4653).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj7(4655).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -1199,7 +1199,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(4653).dangerouslyCast(obj, tmp7);
+  return obj6(4655).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1331,7 +1331,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(4653).dangerouslyCast(obj, tmp7);
+  return obj6(4655).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
 class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
@@ -1506,7 +1506,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.type = GUILD_TEXT;
     obj.version = available_tags.version;
-    return obj8(4653).dangerouslyCast(obj, ForumChannelRecord);
+    return obj8(4655).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {

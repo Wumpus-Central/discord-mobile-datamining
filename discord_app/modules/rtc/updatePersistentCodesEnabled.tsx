@@ -35,7 +35,7 @@ let closure_10 = async function _savePersistentCodesEnabled() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -126,7 +126,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -177,17 +177,17 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
               tmp10 = require;
             }
             let obj5 = { title: stringResult, subtitle: null, confirmText: null, onConfirm: null };
-            const intl2 = tmp10(1113).intl;
+            const intl2 = tmp10(1112).intl;
             const string2 = intl2.string;
-            let intl3 = tmp10(1113).t;
+            let intl3 = tmp10(1112).t;
             if (closure_0) {
               let string2Result = string2(intl3.y015ZY);
             } else {
               string2Result = string2(intl3.E66FQn);
             }
             obj5.subtitle = string2Result;
-            intl3 = tmp10(1113).intl;
-            obj5.confirmText = intl3.string(tmp10(1113).t.aTuFYT);
+            intl3 = tmp10(1112).intl;
+            obj5.confirmText = intl3.string(tmp10(1112).t.aTuFYT);
             closure_1 = asyncGeneratorStep(async () => {
               if (c0 === 2) {
                 c0 = 3;
@@ -199,7 +199,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -217,9 +217,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj4 = {
                         value: closure_1_9(closure_0, () => {
-                          c1(6408).disconnect();
-                          const obj = c1(6408);
-                          const voiceChannel = c1(6408).selectVoiceChannel(dependencyMap);
+                          c1(6410).disconnect();
+                          const obj = c1(6410);
+                          const voiceChannel = c1(6410).selectVoiceChannel(dependencyMap);
                         }),
                         done: false,
                       };
@@ -234,7 +234,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "HermesInternal", done: "+60" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp7) {
                   c0 = tmp;
@@ -265,7 +265,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
         throw value;
       } else if (arg0 !== 2) {
         c1 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       } else {
         c1 = 3;
         let obj = { value, done: true };
@@ -278,7 +278,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
   }
 };
 let closure_7 = fn(9588).SECURE_FRAMES_PUBLIC_KEY_VERSION;
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/updatePersistentCodesEnabled.tsx");
 

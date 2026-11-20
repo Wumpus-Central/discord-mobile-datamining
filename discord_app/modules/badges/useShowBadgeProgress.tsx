@@ -4,7 +4,7 @@ import BadgeUtils from "BadgeUtils.tsx";
 import ConsentStore from "../../stores/ConsentStore.tsx";
 
 require = fn;
-const Consents = fn(1072).Consents;
+const Consents = fn(1071).Consents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useShowBadgeProgress.tsx");
 

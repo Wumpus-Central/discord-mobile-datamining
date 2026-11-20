@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const AgeGateSource = fn(1097).AgeGateSource;
-let closure_6 = fn(19483).ExistingUserAgeGateScreens;
+const AgeGateSource = fn(1096).AgeGateSource;
+let closure_6 = fn(19303).ExistingUserAgeGateScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/AgeAssuranceGateModal.tsx");

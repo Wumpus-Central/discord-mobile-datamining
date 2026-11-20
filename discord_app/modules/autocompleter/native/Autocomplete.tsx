@@ -18,7 +18,7 @@ import GamePlatformBadgeRowDefault from "../../games/native/GamePlatformBadgeRow
 import GameSearchRowExperimentDefault from "../../games/GameSearchRowExperiment.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import StickersHooks from "../../stickers/StickersHooks.tsx";
-import _modDef11549 from "../../../../_runtime/metro/11549__.js";
+import _modDef11491 from "../../../../_runtime/metro/11491__.js";
 import ChannelAutocompleteEmojiUpsellDefault from "../../channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -31,14 +31,14 @@ function AutocompleteLabel(text) {
   return React6(Form.FormRow.Label, { style: closure_11().leading, text: text.text });
 }
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   row: {
-    height: fn(11199).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(11141).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -57,7 +57,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(11199).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(11141).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -134,15 +134,15 @@ export default {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(4848).getName(user);
-      const obj3 = guildId(4848);
+      nick = guildId(4850).getName(user);
+      const obj3 = guildId(4850);
     }
     obj2.label = closure_9(AutocompleteLabel, { text: nick });
     const obj = user(504);
-    obj2.leading = closure_9(user(1187).Avatar, {
+    obj2.leading = closure_9(user(1186).Avatar, {
       status,
       user,
-      size: user(1187).AvatarSizes.SMALL,
+      size: user(1186).AvatarSizes.SMALL,
       guildId,
       autoStatusCutout: true,
     });
@@ -150,8 +150,8 @@ export default {
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj5.usernameStyle = items1;
-    obj2.trailing = closure_9(guildId(10324), obj5);
-    return closure_9(user(7590).FormRow, obj2);
+    obj2.trailing = closure_9(guildId(10266), obj5);
+    return closure_9(user(7589).FormRow, obj2);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -196,7 +196,7 @@ export default {
     ({ channel, category } = onPress);
     const tmp = closure_11();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef11549;
+      let channelIconWithGuild = _modDef11491;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
     }

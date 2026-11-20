@@ -32,7 +32,7 @@ export function useTooltip(ref, memo) {
   closure_129_0 = ref;
   closure_129_1 = ref;
   closure_129_2 = callback;
-  const tmp8 = context(1496)();
+  const tmp8 = context(1494)();
   closure_129_3 = tmp8;
   closure_129_4 = noop.useRef(tmp8);
   const context1 = noop.useContext(require("LayerContext").LayerContext);

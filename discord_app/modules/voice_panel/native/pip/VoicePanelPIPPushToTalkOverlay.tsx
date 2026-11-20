@@ -1,28 +1,28 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1708 from "../../../../../_runtime/metro/01708__.js";
-import LegacyBaseButton from "../../../../../_runtime/05052_LegacyBaseButton.js";
+import _mod1706 from "../../../../../_runtime/metro/01706__.js";
+import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
 import MediaEngineActionCreators from "../../../media_engine/MediaEngineActionCreators.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
-import module_1655_mod from "../../../../../_runtime/metro/01655__.js";
+import module_1653_mod from "../../../../../_runtime/metro/01653__.js";
 
 const require = globalThis.__r;
 
-const _modDef19384 = tmp4(19384);
+const _modDef19204 = tmp4(19204);
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(11688).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(11630).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let module_1655 = module_1655_mod;
-const NativeView = module_1655.createAnimatedComponent(NativeViewDefault);
-let module_1655 = module_1655_mod;
-let closure_11 = module_1655.createAnimatedComponent(fn(1187).Icon);
+let module_1653 = module_1653_mod;
+const NativeView = module_1653.createAnimatedComponent(NativeViewDefault);
+let module_1653 = module_1653_mod;
+let closure_11 = module_1653.createAnimatedComponent(fn(1186).Icon);
 const hitSlop = { top: 6, bottom: 6, left: 6, right: 6 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { iconContainer: null, overlay: null };
 let size = {
   position: "absolute",
@@ -64,7 +64,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   const tmp5 = closure_13();
   let obj = require("VoicePanelPIPStateContext");
   const obj2 = noop;
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
   closure_129_0 = sharedValue;
   closure_129_1 = noop.useRef(false);
   items = [sharedValue];
@@ -78,7 +78,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
       }
     }, items),
   ];
-  const obj3 = require("../../../../../_runtime/metro/01655__.js");
+  const obj3 = require("../../../../../_runtime/metro/01653__.js");
   [tmp8, tmp9] = items1;
   _require = tmp9;
   const WHITE = nativeDefault.unsafe_rawColors.WHITE;
@@ -130,10 +130,10 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   VoicePanelPIPPushToTalkOverlayTsx1.__closure = items3;
   VoicePanelPIPPushToTalkOverlayTsx1.__workletHash = 2861747547438;
   VoicePanelPIPPushToTalkOverlayTsx1.__initData = tmp11;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     VoicePanelPIPPushToTalkOverlayTsx1,
   );
-  const obj4 = require("../../../../../_runtime/metro/01655__.js");
+  const obj4 = require("../../../../../_runtime/metro/01653__.js");
   let items4 = [
     closure_15,
     require("spring/spring").withSpring,
@@ -159,10 +159,10 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   VoicePanelPIPPushToTalkOverlayTsx2.__closure = items5;
   VoicePanelPIPPushToTalkOverlayTsx2.__workletHash = 7041857478120;
   VoicePanelPIPPushToTalkOverlayTsx2.__initData = tmp19;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     VoicePanelPIPPushToTalkOverlayTsx2,
   );
-  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01653__.js");
   const items6 = [
     closure_16,
     require("spring/spring").withSpring,
@@ -195,7 +195,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   VoicePanelPIPPushToTalkOverlayTsx3.__workletHash = 566617135577;
   VoicePanelPIPPushToTalkOverlayTsx3.__initData = tmp26;
   const items8 = [tmp9];
-  const animatedStyle2 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle2 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     VoicePanelPIPPushToTalkOverlayTsx3,
   );
   const obj5 = { children: null };
@@ -206,7 +206,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     const Gesture = LegacyBaseButton.Gesture;
     const Gesture2 = LegacyBaseButton.Gesture;
     const TapResult = Gesture2.Tap();
-    items = [closure_17, _mod1708.scheduleOnRN, c0];
+    items = [closure_17, _mod1706.scheduleOnRN, c0];
     c0 = undefined;
     c1 = undefined;
     [tmp4, tmp5, tmp6] = items;
@@ -230,7 +230,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     const onEndResult = Gesture2.Tap().maxDistance(30).onEnd(VoicePanelPIPPushToTalkOverlayTsx4);
     const PanResult = Gesture3.Pan();
     const result = Gesture3.Pan().maxPointers(1).shouldCancelWhenOutside(false);
-    const items2 = [closure_18, _mod1708.scheduleOnRN, c0];
+    const items2 = [closure_18, _mod1706.scheduleOnRN, c0];
     c0 = undefined;
     c1 = undefined;
     [tmp8, tmp9, tmp10] = items2;
@@ -245,7 +245,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     VoicePanelPIPPushToTalkOverlayTsx5.__workletHash = 1980257520389;
     VoicePanelPIPPushToTalkOverlayTsx5.__initData = tmp8;
     const maxPointersResult = Gesture3.Pan().maxPointers(1);
-    const items4 = [closure_19, _mod1708.scheduleOnRN, c0];
+    const items4 = [closure_19, _mod1706.scheduleOnRN, c0];
     c0 = undefined;
     c1 = undefined;
     [tmp11, tmp12, tmp13] = items4;
@@ -269,11 +269,11 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   const obj8 = { style: null, hitSlop, children: null };
   const items11 = [tmp5.iconContainer, animatedStyle];
   obj8.style = items11;
-  const tmpResult2 = require("../../../../../_runtime/metro/01655__.js");
+  const tmpResult2 = require("../../../../../_runtime/metro/01653__.js");
   obj8.children = closure_7(closure_11, {
     style: animatedStyle1,
     size: require("native").Icon.Sizes.SMALL_20,
-    source: _modDef19384,
+    source: _modDef19204,
     disableColor: true,
   });
   obj7.children = closure_7(NativeView, obj8);

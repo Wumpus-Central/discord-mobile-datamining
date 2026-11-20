@@ -4,7 +4,7 @@ import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocati
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildUpsellModalOpened.tsx");
 

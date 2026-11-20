@@ -8,7 +8,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ActivityActionTypes = fn(1072).ActivityActionTypes;
+const ActivityActionTypes = fn(1071).ActivityActionTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/request_to_stream/useRequestToStreamData.tsx");
 

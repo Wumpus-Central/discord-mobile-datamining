@@ -10,7 +10,7 @@ import GuildDirectoryStore from "GuildDirectoryStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/useAvailableAndAddedGuilds.tsx");
 
@@ -60,7 +60,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -97,7 +97,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           } else {
             closure_128_2(false);
             v3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           v3 = tmp;

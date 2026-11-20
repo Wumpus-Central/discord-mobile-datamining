@@ -2,7 +2,7 @@
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import v1 from "../../../_runtime/01269_v1.js";
+import v1 from "../../../_runtime/01268_v1.js";
 import ClientInfoUtilsAll from "ClientInfoUtils.tsx";
 import PlatformUtils2 from "../PlatformUtils.tsx";
 import DeviceUtils from "DeviceUtils.tsx";
@@ -61,7 +61,7 @@ let closure_16 = async function _makeIAPRequest() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -157,7 +157,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -244,7 +244,7 @@ let closure_18 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -471,7 +471,7 @@ let closure_21 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -532,12 +532,12 @@ let closure_21 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5456).convertToAlpha2;
-const Constants = fn(1072);
+const convertToAlpha2 = fn(5458).convertToAlpha2;
+const Constants = fn(1071);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
-const NAMESPACE_SNOWFLAKE_UUID = fn(1390).NAMESPACE_SNOWFLAKE_UUID;
+const NAMESPACE_SNOWFLAKE_UUID = fn(1388).NAMESPACE_SNOWFLAKE_UUID;
 const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
-let PlatformUtils = fn(1380);
+let PlatformUtils = fn(1378);
 let _default = null;
 if (PlatformUtils.isIOS()) {
   _default = fn(9168).default;
@@ -622,17 +622,17 @@ let obj = {
     return applyArgumentsResult;
   },
 };
-PlatformUtils = fn(1380);
+PlatformUtils = fn(1378);
 PlatformUtils = PlatformUtils.isIOS();
 if (PlatformUtils) {
-  let isIOSResult1 = fn(1380).isIOS();
+  let isIOSResult1 = fn(1378).isIOS();
   if (isIOSResult1) {
     let Identifier = ClientInfoUtilsAll.getConstants().Identifier;
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(4749).getIsRunningOnSimulator();
-      let obj7 = fn(4749);
+      isRunningOnSimulator = fn(4751).getIsRunningOnSimulator();
+      let obj7 = fn(4751);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -642,7 +642,7 @@ if (PlatformUtils) {
     value = DevSettingsStore.get("force_mock_iap");
   }
   PlatformUtils = value;
-  let obj5 = fn(1380);
+  let obj5 = fn(1378);
 }
 if (PlatformUtils) {
   obj = fn(9190).default;

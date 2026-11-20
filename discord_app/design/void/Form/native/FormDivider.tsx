@@ -10,7 +10,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles(() => {
   const obj = {
     divider: {},
@@ -30,7 +30,7 @@ let obj2 = {
   [DARK]: nativeDefault.unsafe_rawColors.WHITE,
   [ONYX]: nativeDefault.unsafe_rawColors.WHITE,
 };
-({ LIGHT, ASH, DARK, ONYX } = fn(1072).ThemeTypes);
+({ LIGHT, ASH, DARK, ONYX } = fn(1071).ThemeTypes);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
 

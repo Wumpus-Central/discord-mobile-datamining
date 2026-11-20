@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
   Pressable: closure_6,
   ActivityIndicator: metroImportDefault,
 } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AppStates: closure_9, ComponentActions: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -65,7 +65,7 @@ let items2 = [tmp7];
 canSeekForward.__closure = items2;
 canSeekForward.__workletHash = 4878964503596;
 canSeekForward.__initData = tmp6;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   container: null,
   loadingContainer: null,
@@ -295,7 +295,7 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
   [first, closure_17] = noop.useState(num);
   let merged = Object.assign(initialProgress);
   [first1, closure_19] = noop.useState({});
-  [first2, closure_21] = noop.useState(onBuffer(16384).PlayerState.LOADING);
+  [first2, closure_21] = noop.useState(onBuffer(16206).PlayerState.LOADING);
   [tmp13, c22] = noop.useState(false);
   noop.useRef(null);
   noop.useRef(0);
@@ -309,7 +309,7 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
   }, items);
   let tmp15 = tmp13;
   if (tmp13) {
-    tmp15 = first2 === tmp8(16384).PlayerState.ENDED;
+    tmp15 = first2 === tmp8(16206).PlayerState.ENDED;
   }
   if (tmp15) {
     if (typeof first === "function") {
@@ -321,8 +321,8 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
   closure_27 = tmp15;
   let obj2 = {};
   const tmp12 = _slicedToArray(noop.useState(false), 2);
-  sharedValue = onBuffer(1655).useSharedValue(false);
-  let items1 = [closure_19, tmp13, flag9, sharedValue, first2, onBuffer(16384).PlayerState, tmp15];
+  sharedValue = onBuffer(1653).useSharedValue(false);
+  let items1 = [closure_19, tmp13, flag9, sharedValue, first2, onBuffer(16206).PlayerState, tmp15];
   onBuffer = undefined;
   _slicedToArray = undefined;
   noop = undefined;
@@ -355,8 +355,8 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
   shouldShowControls.__closure = items2;
   shouldShowControls.__workletHash = 7564458846587;
   shouldShowControls.__initData = tmp20;
-  const tmp8Result = onBuffer(1655);
-  const items3 = [first2, shouldShowControls, onBuffer(5393).withSpring, onBuffer(5394).SUBTLE_SPRING];
+  const tmp8Result = onBuffer(1653);
+  const items3 = [first2, shouldShowControls, onBuffer(5395).withSpring, onBuffer(5396).SUBTLE_SPRING];
   onBuffer = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -382,7 +382,7 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
   AdVideoPlayerTsx4.__closure = items4;
   AdVideoPlayerTsx4.__workletHash = 15853617044197;
   AdVideoPlayerTsx4.__initData = tmp26;
-  const animatedStyle = onBuffer(1655).useAnimatedStyle(AdVideoPlayerTsx4);
+  const animatedStyle = onBuffer(1653).useAnimatedStyle(AdVideoPlayerTsx4);
   if (tmp21) {
     tmp21 = !tmp22;
   }
@@ -390,10 +390,10 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
     tmp21 = obj4.get() || tmp23 === tmp24.PAUSED || tmp23 === tmp24.ENDED || tmp23 === tmp24.ERRORED || tmp25;
     const tmp31 = obj4.get() || tmp23 === tmp24.PAUSED || tmp23 === tmp24.ENDED || tmp23 === tmp24.ERRORED || tmp25;
   }
-  const tmp8Result5 = onBuffer(1655);
-  sharedValue1 = onBuffer(1655).useSharedValue(0);
-  const tmp8Result6 = onBuffer(1655);
-  const items5 = [closure_21, onBuffer(5002).withTiming, sharedValue1, onBuffer(5005).timingFast];
+  const tmp8Result5 = onBuffer(1653);
+  sharedValue1 = onBuffer(1653).useSharedValue(0);
+  const tmp8Result6 = onBuffer(1653);
+  const items5 = [closure_21, onBuffer(5004).withTiming, sharedValue1, onBuffer(5007).timingFast];
   onBuffer = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -408,7 +408,7 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
   AdVideoPlayerTsx5.__closure = items6;
   AdVideoPlayerTsx5.__workletHash = 12359561558571;
   AdVideoPlayerTsx5.__initData = tmp33;
-  const animatedStyle1 = onBuffer(1655).useAnimatedStyle(AdVideoPlayerTsx5);
+  const animatedStyle1 = onBuffer(1653).useAnimatedStyle(AdVideoPlayerTsx5);
   closure_30 = obj.useRef(-1);
   const items7 = [sharedValue];
   const callback1 = obj.useCallback((arg0) => {
@@ -434,7 +434,7 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
       duration,
     }));
   }, []);
-  const tmp8Result7 = onBuffer(1655);
+  const tmp8Result7 = onBuffer(1653);
   [tmp41, c32] = noop.useState(false);
   const items8 = [onReadyForDisplay];
   const items9 = [flag, , , ,];
@@ -466,29 +466,29 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
     initialProgress.ref,
     () => ({
       seekToStart() {
-        if (first2 !== onBuffer(16384).PlayerState.ERRORED) {
+        if (first2 !== onBuffer(16206).PlayerState.ERRORED) {
           callback4(0);
-          if (first2 === onBuffer(16384).PlayerState.ENDED) {
-            callback(onBuffer(16384).PlayerState.PLAYING);
+          if (first2 === onBuffer(16206).PlayerState.ENDED) {
+            callback(onBuffer(16206).PlayerState.PLAYING);
             if (onResumePlayback != null) {
-              tmp8(onBuffer(16384).PlaybackTriggerSource.IMPERATIVE_API);
+              tmp8(onBuffer(16206).PlaybackTriggerSource.IMPERATIVE_API);
             }
           }
         }
       },
       play() {
-        if (first2 === onBuffer(16384).PlayerState.PAUSED) {
-          callback(onBuffer(16384).PlayerState.PLAYING);
+        if (first2 === onBuffer(16206).PlayerState.PAUSED) {
+          callback(onBuffer(16206).PlayerState.PLAYING);
           if (onResumePlayback != null) {
-            tmp5(onBuffer(16384).PlaybackTriggerSource.IMPERATIVE_API);
+            tmp5(onBuffer(16206).PlaybackTriggerSource.IMPERATIVE_API);
           }
         }
       },
       pause() {
-        if (first2 === onBuffer(16384).PlayerState.PLAYING) {
-          callback(onBuffer(16384).PlayerState.PAUSED);
+        if (first2 === onBuffer(16206).PlayerState.PLAYING) {
+          callback(onBuffer(16206).PlayerState.PAUSED);
           if (onPausePlayback != null) {
-            tmp5(onBuffer(16384).PlaybackTriggerSource.IMPERATIVE_API);
+            tmp5(onBuffer(16206).PlaybackTriggerSource.IMPERATIVE_API);
           }
         }
       },
@@ -583,9 +583,9 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
     let ComponentDispatch2 = ComponentDispatchUtils.ComponentDispatch;
     const subscription1 = ComponentDispatch2.subscribe(constants.QUEST_APP_STORE_OVERLAY_FINISHED, callback9);
     return () => {
-      const ComponentDispatch = onBuffer(1108).ComponentDispatch;
+      const ComponentDispatch = onBuffer(1107).ComponentDispatch;
       ComponentDispatch.unsubscribe(onEnd.QUEST_GAME_LINK_OPENED, callback8);
-      const ComponentDispatch2 = onBuffer(1108).ComponentDispatch;
+      const ComponentDispatch2 = onBuffer(1107).ComponentDispatch;
       ComponentDispatch2.unsubscribe(onEnd.QUEST_APP_STORE_OVERLAY_FINISHED, callback9);
     };
   }, items16);
@@ -617,7 +617,7 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
       }
     }
   }, items18);
-  let tmp53 = first2 === tmp8(16384).PlayerState.ERRORED;
+  let tmp53 = first2 === tmp8(16206).PlayerState.ERRORED;
   if (!tmp53) {
     let timestampSec = first1.timestampSec;
     if (typeof closure_17 === "function") {
@@ -727,10 +727,10 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
   }, items26);
   let tmp69 = !tmp67;
   if (tmp67) {
-    tmp69 = first2 === tmp8(16384).PlayerState.PAUSED;
+    tmp69 = first2 === tmp8(16206).PlayerState.PAUSED;
   }
   if (!tmp69) {
-    tmp69 = first2 === tmp8(16384).PlayerState.LOADING;
+    tmp69 = first2 === tmp8(16206).PlayerState.LOADING;
   }
   if (!tmp69) {
     tmp69 = externallyPaused;
@@ -799,10 +799,10 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
     accessibilityLabel: null,
     children: null,
   };
-  const intl = tmp8(1113).intl;
-  const t = tmp8(1113).t;
+  const intl = tmp8(1112).intl;
+  const t = tmp8(1112).t;
   obj6.accessibilityLabel = intl.string(tmp69 ? t.R3aFPe : t.fTMEUi);
-  let tmp80Result = first2 !== tmp8(16384).PlayerState.ERRORED;
+  let tmp80Result = first2 !== tmp8(16206).PlayerState.ERRORED;
   if (tmp80Result) {
     const obj7 = {
       mixWithOthers: "inherit",
@@ -878,13 +878,13 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
             style: null,
             children: null,
           };
-          const intl3 = tmp8(1113).intl;
-          obj11.accessibilityLabel = intl3.string(tmp8(1113).t.KCzjTi);
+          const intl3 = tmp8(1112).intl;
+          obj11.accessibilityLabel = intl3.string(tmp8(1112).t.KCzjTi);
           obj11.onPress = onOpenTranscript;
           obj11.style = tmp.controlButton;
           const obj12 = { color: tmp.icon.color };
-          obj11.children = tmp80(tmp8(16404).TranscriptOutlineIcon, obj12);
-          flag5 = tmp80(tmp8(6911).PressableOpacity, obj11);
+          obj11.children = tmp80(tmp8(16226).TranscriptOutlineIcon, obj12);
+          flag5 = tmp80(tmp8(6910).PressableOpacity, obj11);
         }
         items35[1] = flag5;
         obj10.children = items35;
@@ -900,18 +900,18 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
         };
         const obj14 = { checked: captionsEnabled };
         obj13.accessibilityState = obj14;
-        const intl2 = tmp8(1113).intl;
-        obj13.accessibilityLabel = intl2.string(tmp8(1113).t.bDSZO1);
+        const intl2 = tmp8(1112).intl;
+        obj13.accessibilityLabel = intl2.string(tmp8(1112).t.bDSZO1);
         obj13.onPress = onToggleCaptions;
         obj13.style = tmp.controlButton;
         if (captionsEnabled) {
-          let ClosedCaptionsOutlineIcon = tmp8(16400).ClosedCaptionsIcon;
+          let ClosedCaptionsOutlineIcon = tmp8(16222).ClosedCaptionsIcon;
         } else {
-          ClosedCaptionsOutlineIcon = tmp8(16402).ClosedCaptionsOutlineIcon;
+          ClosedCaptionsOutlineIcon = tmp8(16224).ClosedCaptionsOutlineIcon;
         }
         const obj15 = { color: tmp.icon.color };
         obj13.children = tmp80(ClosedCaptionsOutlineIcon, obj15);
-        tmp80(tmp8(6911).PressableOpacity, obj13);
+        tmp80(tmp8(6910).PressableOpacity, obj13);
       }
     }
     const items36 = [tmp82Result, ,];
@@ -919,23 +919,23 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
     let tmp80Result8 = flag8;
     if (flag8) {
       const obj17 = {
-        disabled: first2 === tmp8(16384).PlayerState.ERRORED,
+        disabled: first2 === tmp8(16206).PlayerState.ERRORED,
         accessibilityRole: "button",
         accessibilityLabel: null,
         onPress: null,
         children: null,
       };
-      const intl4 = tmp8(1113).intl;
-      obj17.accessibilityLabel = intl4.string(tmp8(1113).t.r9s3Uv);
+      const intl4 = tmp8(1112).intl;
+      obj17.accessibilityLabel = intl4.string(tmp8(1112).t.r9s3Uv);
       obj17.onPress = callback1Result;
       const size = { color: tmp.icon.color, width: 16, height: 16 };
-      obj17.children = tmp80(tmp8(16407).SkipBackwardIcon, size);
-      tmp80Result8 = tmp80(tmp8(16406).VideoQuestPlayerControlButton, obj17);
+      obj17.children = tmp80(tmp8(16229).SkipBackwardIcon, size);
+      tmp80Result8 = tmp80(tmp8(16228).VideoQuestPlayerControlButton, obj17);
     }
     const items37 = [tmp80Result8, ,];
     if (!tmp15) {
-      if (first2 !== tmp8(16384).PlayerState.ERRORED) {
-        const t2 = tmp8(1113).t;
+      if (first2 !== tmp8(16206).PlayerState.ERRORED) {
+        const t2 = tmp8(1112).t;
         let K0e7M9 = tmp69 ? t2.R3aFPe : t2.fTMEUi;
       }
       const obj18 = {
@@ -945,16 +945,16 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
         children: null,
       };
       if (!tmp15) {
-        if (first2 !== tmp8(16384).PlayerState.ERRORED) {
+        if (first2 !== tmp8(16206).PlayerState.ERRORED) {
           if (tmp69) {
-            let PauseIcon = tmp8(7089).PlayIcon;
+            let PauseIcon = tmp8(7088).PlayIcon;
           } else {
-            PauseIcon = tmp8(11778).PauseIcon;
+            PauseIcon = tmp8(11720).PauseIcon;
           }
           let tmp80Result9 = tmp80(PauseIcon, { size: "lg" });
         }
         obj18.children = tmp80Result9;
-        items37[1] = tmp80(tmp8(16406).VideoQuestPlayerControlButton, obj18);
+        items37[1] = tmp80(tmp8(16228).VideoQuestPlayerControlButton, obj18);
         if (flag8) {
           const obj19 = {
             disabled: tmp53,
@@ -963,12 +963,12 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
             onPress: null,
             children: null,
           };
-          const intl5 = tmp8(1113).intl;
-          obj19.accessibilityLabel = intl5.string(tmp8(1113).t.zWDcNP);
+          const intl5 = tmp8(1112).intl;
+          obj19.accessibilityLabel = intl5.string(tmp8(1112).t.zWDcNP);
           obj19.onPress = callback1Result1;
           const size1 = { color: tmp.icon.color, width: 16, height: 16 };
-          obj19.children = tmp80(tmp8(16408).SkipForwardIcon, size1);
-          flag8 = tmp80(tmp8(16406).VideoQuestPlayerControlButton, obj19);
+          obj19.children = tmp80(tmp8(16230).SkipForwardIcon, size1);
+          flag8 = tmp80(tmp8(16228).VideoQuestPlayerControlButton, obj19);
         }
         items37[2] = flag8;
         obj16.children = items37;
@@ -986,23 +986,23 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
             style: null,
             children: null,
           };
-          const intl6 = tmp8(1113).intl;
-          obj21.accessibilityLabel = intl6.string(tmp8(1113).t.vKZT5t);
+          const intl6 = tmp8(1112).intl;
+          obj21.accessibilityLabel = intl6.string(tmp8(1112).t.vKZT5t);
           obj21.onPress = onToggleFullscreen;
           obj21.style = tmp.controlButton;
-          obj21.children = tmp80(tmp8(16409).FullscreenEnterIcon, {});
-          obj20.children = tmp80(tmp8(6911).PressableOpacity, obj21);
+          obj21.children = tmp80(tmp8(16231).FullscreenEnterIcon, {});
+          obj20.children = tmp80(tmp8(6910).PressableOpacity, obj21);
           flag6 = tmp80(tmp81, obj20);
         }
         items36[2] = flag6;
         obj9.children = items36;
-        items32[4] = tmp82(tmp76(1655).View, obj9);
+        items32[4] = tmp82(tmp76(1653).View, obj9);
         if (flag7) {
           const obj22 = { style: tmp.progressContainer, children: null };
           const obj23 = { style: null };
           const items39 = [tmp.progress, animatedStyle1];
           obj23.style = items39;
-          obj22.children = tmp80(tmp76(1655).View, obj23);
+          obj22.children = tmp80(tmp76(1653).View, obj23);
           flag7 = tmp80(tmp81, obj22);
         }
         items32[5] = flag7;
@@ -1010,9 +1010,9 @@ export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
         obj5.children = tmp82(tmp83, obj6);
         return tmp80(tmp81, obj5);
       }
-      tmp80Result9 = tmp80(tmp8(10283).RetryIcon, { size: "lg" });
+      tmp80Result9 = tmp80(tmp8(10223).RetryIcon, { size: "lg" });
     }
-    K0e7M9 = tmp8(1113).t.K0e7M9;
+    K0e7M9 = tmp8(1112).t.K0e7M9;
   } else {
     let items40 = [tmp.bufferingSpinner];
     if (!isFullscreen) {

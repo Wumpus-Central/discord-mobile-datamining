@@ -66,7 +66,7 @@ let closure_11 = async function _fetchBookmarks() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -225,7 +225,7 @@ let closure_11 = async function _fetchBookmarks() {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 let closure_8 = null;
 let c9 = 0;
 const size = fn(2);

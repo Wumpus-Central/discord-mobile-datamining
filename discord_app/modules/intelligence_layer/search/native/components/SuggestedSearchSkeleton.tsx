@@ -1,23 +1,23 @@
 // discord_app/modules/intelligence_layer/search/native/components/SuggestedSearchSkeleton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = {
   row: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: nativeDefault.space.PX_16,
-    paddingVertical: fn(8457).SEARCH_ROW_TAP_STATE_PADDING,
+    paddingVertical: fn(8456).SEARCH_ROW_TAP_STATE_PADDING,
   },
   icon: null,
   labels: null,
@@ -31,7 +31,7 @@ let size = {
   marginRight: nativeDefault.space.PX_12,
 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(13109).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(13079).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = {
   height: 16,
   width: "72%",
@@ -50,14 +50,14 @@ let result = size.fileFinishedImporting(
 
 export default function SuggestedSearchSkeleton() {
   const tmp = closure_7();
-  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(0.4);
+  const sharedValue = require("../../../../../../_runtime/metro/01653__.js").useSharedValue(0.4);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = _mod1655;
+    const obj = _mod1653;
     const result = _undefined.set(obj.withRepeat(timing_timing.withTiming(1, { duration: 700 }), -1, true));
   }, items);
-  let obj = require("../../../../../../_runtime/metro/01655__.js");
+  let obj = require("../../../../../../_runtime/metro/01653__.js");
   const items1 = [closure_8, sharedValue];
   _require = undefined;
   [tmp5, tmp6] = items1;
@@ -71,7 +71,7 @@ export default function SuggestedSearchSkeleton() {
   SuggestedSearchSkeletonTsx1.__closure = items2;
   SuggestedSearchSkeletonTsx1.__workletHash = 13808253704974;
   SuggestedSearchSkeletonTsx1.__initData = tmp5;
-  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     SuggestedSearchSkeletonTsx1,
   );
   const obj3 = { style: null, "aria-hidden": true, children: null };
@@ -81,5 +81,5 @@ export default function SuggestedSearchSkeleton() {
   const obj5 = { style: tmp.labels, children: closure_5(View, { style: tmp.line }) };
   items4[1] = closure_5(View, obj5);
   obj3.children = items4;
-  return closure_6(_modDef1655.View, obj3);
+  return closure_6(_modDef1653.View, obj3);
 }

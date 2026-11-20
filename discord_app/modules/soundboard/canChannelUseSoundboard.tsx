@@ -6,7 +6,7 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypesSets: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");

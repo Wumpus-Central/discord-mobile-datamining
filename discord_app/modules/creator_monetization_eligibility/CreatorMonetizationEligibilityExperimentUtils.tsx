@@ -4,7 +4,7 @@ import UserStore from "../../stores/UserStore.tsx";
 import BillingInfoStore from "../../stores/billing/BillingInfoStore.tsx";
 
 require = fn;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const set = new Set(["US"]);
 const size = fn(2);
 const result = size.fileFinishedImporting(

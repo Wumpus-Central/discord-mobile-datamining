@@ -18,7 +18,7 @@ function availableInterestGuilds(guilds) {
   });
   return found.slice(0, 15);
 }
-const MAX_SELECTIONS = fn(17872).MAX_SELECTIONS;
+const MAX_SELECTIONS = fn(17699).MAX_SELECTIONS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildsResource.tsx");
 class InterestGuildsResource {
@@ -100,8 +100,8 @@ prototype["dispose"] = function dispose() {
   const listeners = this.listeners;
   listeners.clear();
 };
-prototype["publish"] = function publish(snapshot) {
-  this.snapshot = snapshot;
+prototype["publish"] = function publish(entryPoint) {
+  this.snapshot = entryPoint;
   const listeners = this.listeners;
   const item = listeners.forEach((fn) => fn());
 };
@@ -121,7 +121,7 @@ prototype["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -180,7 +180,7 @@ prototype["load"] = function load(arg0, arg1, arg2) {
             closure_129_3.publish(closure_128_0);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp32) {
         if (tmp4 === v0) {

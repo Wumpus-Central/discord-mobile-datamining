@@ -22,7 +22,7 @@ function getItemKey(type) {
     return type.type;
   }
 }
-fn(1072).AutoCompleteResultTypes;
+fn(1071).AutoCompleteResultTypes;
 const jsx = fn(21).jsx;
 let closure_7 = {
   code: "(function HorizontalAutocompleteWrapperTsx1(){let[withTiming,toValue]=this.__closure;return{opacity:withTiming(toValue)};})",
@@ -147,7 +147,7 @@ export default function HorizontalAutocompleteWrapper(channel) {
   HorizontalAutocompleteWrapperTsx1.__closure = items5;
   HorizontalAutocompleteWrapperTsx1.__workletHash = 15765485703035;
   HorizontalAutocompleteWrapperTsx1.__initData = tmp13;
-  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     HorizontalAutocompleteWrapperTsx1,
   );
   let obj3 = {

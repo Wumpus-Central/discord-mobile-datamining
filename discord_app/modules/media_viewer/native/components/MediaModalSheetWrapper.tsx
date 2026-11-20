@@ -2,7 +2,7 @@
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const MEDIA_MODAL_KEY = fn(1072).MEDIA_MODAL_KEY;
+const MEDIA_MODAL_KEY = fn(1071).MEDIA_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalSheetWrapper.tsx");

@@ -7,24 +7,24 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ slider: { marginTop: 4 }, text: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsSoundboardVolume.tsx");
 
 export default function SoundboardVolume() {
   const tmp = closure_8();
-  const amplitudinalSoundboardVolume = analyticsLocations(10922).getAmplitudinalSoundboardVolume();
+  const amplitudinalSoundboardVolume = analyticsLocations(10864).getAmplitudinalSoundboardVolume();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const obj2 = { title: null, hasIcons: false, children: null };
-  const intl = analyticsLocations(1113).intl;
-  obj2.title = intl.string(analyticsLocations(1113).t.xbMc8r);
+  const intl = analyticsLocations(1112).intl;
+  obj2.title = intl.string(analyticsLocations(1112).t.xbMc8r);
   const obj3 = { label: null, subLabel: null };
-  const intl2 = analyticsLocations(1113).intl;
-  obj3.label = intl2.string(analyticsLocations(1113).t.kbFsAD);
+  const intl2 = analyticsLocations(1112).intl;
+  obj3.label = intl2.string(analyticsLocations(1112).t.kbFsAD);
   const obj4 = { children: null };
   const obj5 = { style: tmp.slider, children: null };
   const obj6 = {
@@ -35,19 +35,19 @@ export default function SoundboardVolume() {
     },
     accessibilityLabel: null,
   };
-  const obj = analyticsLocations(10922);
-  const intl3 = analyticsLocations(1113).intl;
-  obj6.accessibilityLabel = intl3.string(analyticsLocations(1113).t.kbFsAD);
+  const obj = analyticsLocations(10864);
+  const intl3 = analyticsLocations(1112).intl;
+  obj6.accessibilityLabel = intl3.string(analyticsLocations(1112).t.kbFsAD);
   obj5.children = closure_5(VolumeSliderDefault, obj6);
   items = [closure_5(View, obj5)];
   const obj7 = { style: tmp.text, variant: "body-sm/medium", children: null };
-  const intl4 = analyticsLocations(1113).intl;
+  const intl4 = analyticsLocations(1112).intl;
   const obj8 = { helpCenterArticle: null };
   obj8.helpCenterArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOUNDBOARD);
-  obj7.children = intl4.format(analyticsLocations(1113).t.BPbGq7, obj8);
-  items[1] = closure_5(analyticsLocations(5383).Text, obj7);
+  obj7.children = intl4.format(analyticsLocations(1112).t.BPbGq7, obj8);
+  items[1] = closure_5(analyticsLocations(5385).Text, obj7);
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
-  obj2.children = closure_5(analyticsLocations(6926).TableRow, obj3);
-  return closure_5(analyticsLocations(10900).UserSettingsTableRowGroup, obj2);
+  obj2.children = closure_5(analyticsLocations(6925).TableRow, obj3);
+  return closure_5(analyticsLocations(10842).UserSettingsTableRowGroup, obj2);
 }

@@ -3,10 +3,10 @@ import _modDef9007 from "../../../../../_runtime/metro/09007__.js";
 import _modDef9009 from "../../../../../_runtime/metro/09009__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const PremiumTypes = fn(1390).PremiumTypes;
+const PremiumTypes = fn(1388).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   clouds: { position: "absolute", top: 0, right: 0 },
   wumpus: { position: "absolute", top: 22, right: 22, height: 90 },
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/user_settings/premium/native/
 export default function PremiumFeaturesWumpus(premiumType) {
   premiumType = premiumType.premiumType;
   const tmp = closure_7();
-  const tmp2 = premiumType(7254)();
+  const tmp2 = premiumType(7253)();
   dependencyMap = tmp2;
   items = [premiumType, tmp2];
   const memo = noop.useMemo(() => {
@@ -41,7 +41,7 @@ export default function PremiumFeaturesWumpus(premiumType) {
   }, items);
   ({ wumpusImageSource, cloudsImageSource } = memo);
   const items1 = [
-    closure_4(premiumType(5479), { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }),
+    closure_4(premiumType(5481), { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }),
   ];
   const items2 = [tmp.wumpus];
   let wumpusLeft = premiumType === PremiumTypes.TIER_0;
@@ -50,7 +50,7 @@ export default function PremiumFeaturesWumpus(premiumType) {
   }
   let obj2 = { children: null };
   items2[1] = wumpusLeft;
-  items1[1] = closure_4(premiumType(5479), { style: items2, resizeMode: "contain", source: wumpusImageSource });
+  items1[1] = closure_4(premiumType(5481), { style: items2, resizeMode: "contain", source: wumpusImageSource });
   obj2.children = items1;
   return closure_6(closure_5, obj2);
 }

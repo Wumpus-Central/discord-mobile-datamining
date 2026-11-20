@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2169 from "../../../_runtime/metro/02169__.js";
+import _modDef2167 from "../../../_runtime/metro/02167__.js";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import QueryTokenizerDefault from "../../lib/QueryTokenizer.tsx";
@@ -20,8 +20,8 @@ import UserStore from "../../stores/UserStore.tsx";
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(8457).SearchTabs;
-const Constants = fn(1072);
+const SearchTabs = fn(8456).SearchTabs;
+const Constants = fn(1071);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({
   SearchPopoutModes: map1,
@@ -96,7 +96,7 @@ export function getSearchTabFetchId(searchContext, MESSAGES, searchResultsQuery)
   return "" + channelId + "-" + MESSAGES + "-" + searchResultsQuery;
 }
 export function getChannelActiveAgoTimestamp(arg0) {
-  const diffResult = _modDef2169().diff(_modDef2169(arg0), "s");
+  const diffResult = _modDef2167().diff(_modDef2167(arg0), "s");
   if (diffResult > c19) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -134,7 +134,7 @@ export function getChannelActiveAgoTimestamp(arg0) {
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
-  const obj = _modDef2169();
+  const obj = _modDef2167();
 }
 export function getIndexingErrorText(searchContext) {
   const type = searchContext.type;

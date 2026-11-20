@@ -14,8 +14,8 @@ export default function getRandomCustomStatusPrompt(size) {
       const obj = {
         value: constants.ADD_STATUS,
         label() {
-          const intl = size(1113).intl;
-          return intl.string(size(1113).t.Vq4UmS);
+          const intl = size(1112).intl;
+          return intl.string(size(1112).t.Vq4UmS);
         },
       };
       let tmp3 = obj;

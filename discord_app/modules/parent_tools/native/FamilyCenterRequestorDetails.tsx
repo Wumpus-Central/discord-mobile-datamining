@@ -10,17 +10,17 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 },
   avatar: {
-    borderRadius: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL] / 2,
+    borderRadius: fn(1186).AVATAR_SIZE_MAP[fn(undefined, 1186).AvatarSizes.NORMAL] / 2,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
   detailsContainer: null,
 };
 let obj3 = {
-  borderRadius: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL] / 2,
+  borderRadius: fn(1186).AVATAR_SIZE_MAP[fn(undefined, 1186).AvatarSizes.NORMAL] / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
 obj2.detailsContainer = {

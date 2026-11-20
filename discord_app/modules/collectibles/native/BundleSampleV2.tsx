@@ -183,7 +183,7 @@ obj.fgClip = obj5;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj.fgImage = {};
 const styles = StyleSheet.create(obj);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };

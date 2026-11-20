@@ -15,7 +15,7 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -66,8 +66,8 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
             items = [];
             if (tmp) {
               const obj = { type: "rating", label: null, rating: null, ratingCount: null };
-              const intl = closure_1_0(1113).intl;
-              obj.label = intl.string(closure_1_0(1113).t["9bEWZJ"]);
+              const intl = closure_1_0(1112).intl;
+              obj.label = intl.string(closure_1_0(1112).t["9bEWZJ"]);
               ({ rating: obj.rating, rating_count } = rating);
               obj.ratingCount = rating_count;
               items.push(obj);
@@ -78,11 +78,11 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
             }
             if (tmp5) {
               const obj2 = { type: "age", label: null, ageRating: null, ageRatingLabel: null };
-              const intl2 = closure_1_0(1113).intl;
-              obj2.label = intl2.string(closure_1_0(1113).t.ncrlHJ);
+              const intl2 = closure_1_0(1112).intl;
+              obj2.label = intl2.string(closure_1_0(1112).t.ncrlHJ);
               obj2.ageRating = rating.age_rating;
-              const intl3 = closure_1_0(1113).intl;
-              obj2.ageRatingLabel = intl3.string(closure_1_0(1113).t.wK1svU);
+              const intl3 = closure_1_0(1112).intl;
+              obj2.ageRatingLabel = intl3.string(closure_1_0(1112).t.wK1svU);
               items.push(obj2);
             }
             if (null != rating.chart_rank) {
@@ -90,16 +90,16 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
               if (null != rating.category_id) {
                 appStoreOverlayCategoryLabel = null;
                 if ("" !== rating.category_id) {
-                  appStoreOverlayCategoryLabel = closure_1_0(9878).getAppStoreOverlayCategoryLabel(
+                  appStoreOverlayCategoryLabel = closure_1_0(9881).getAppStoreOverlayCategoryLabel(
                     os.os,
                     rating.category_id,
                   );
-                  const obj3 = closure_1_0(9878);
+                  const obj3 = closure_1_0(9881);
                 }
               }
               const obj4 = { type: "chart", label: null, rank: null, category: null };
-              const intl4 = closure_1_0(1113).intl;
-              obj4.label = intl4.string(closure_1_0(1113).t["x/ERbV"]);
+              const intl4 = closure_1_0(1112).intl;
+              obj4.label = intl4.string(closure_1_0(1112).t["x/ERbV"]);
               obj4.rank = rating.chart_rank;
               if (appStoreOverlayCategoryLabel == null) {
                 appStoreOverlayCategoryLabel = rating.category;

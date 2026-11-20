@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/experiments/ImprovedMobileShopLoadingExperiment.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1450);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-09-improved-mobile-shop-loading",
   kind: "user",

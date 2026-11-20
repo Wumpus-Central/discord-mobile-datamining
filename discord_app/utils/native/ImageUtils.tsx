@@ -3,7 +3,7 @@ import AvatarUtils from "../AvatarUtils.tsx";
 import utils_AvatarUtils from "AvatarUtils.tsx";
 import AttachmentImageLadderExperiment from "../../modules/image_upload/AttachmentImageLadderExperiment.tsx";
 import AttachmentImageLadder from "../../modules/image_upload/AttachmentImageLadder.tsx";
-import _modDef1490 from "../../../_runtime/metro/01490__.js";
+import _modDef1488 from "../../../_runtime/metro/01488__.js";
 import useWindowDimensions from "../../modules/screen/useWindowDimensions.native.tsx";
 import getDevicePixelRatioDefault from "../getDevicePixelRatio.native.tsx";
 import NativeImageManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
@@ -21,7 +21,7 @@ function getSrcWithWidthAndHeight(animated) {
   }
   [tmp4, tmp5] = src.split("?");
   const tmp3 = _slicedToArray(src.split("?"), 2);
-  const parsed = _modDef1490.parse(tmp5);
+  const parsed = _modDef1488.parse(tmp5);
   delete tmp2[tmp];
   items = [tmp4, parsed];
   [tmp10, tmp11] = items;
@@ -70,7 +70,7 @@ function getSrcWithWidthAndHeight(animated) {
   const tmp9 = _slicedToArray(items, 2);
   let text = tmp10;
   if (!tmp6Result.isEmpty(tmp11)) {
-    _modDef1490;
+    _modDef1488;
     text = `${tmp10}?${obj6.stringify(tmp11)}`;
   }
   return text;
@@ -113,7 +113,7 @@ function getPaletteForAvatarMobile(automodAvatarURL) {
   return NativeImageManagerModuleDefault.getDominantColors(ensureAvatarSourceResult);
 }
 const PixelRatio = fn(17).PixelRatio;
-let closure_5 = fn(1072).MEDIA_PROXY_MAX_TARGET_RESOLUTION;
+let closure_5 = fn(1071).MEDIA_PROXY_MAX_TARGET_RESOLUTION;
 const tmp2 = /\.(gif)$/i;
 const re6 = tmp2;
 let tmp3 = /\.(avif)$/i;

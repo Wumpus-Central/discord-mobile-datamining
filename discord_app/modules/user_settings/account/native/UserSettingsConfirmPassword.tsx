@@ -17,10 +17,10 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const UserSettingsSections = fn(1072).UserSettingsSections;
+const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { paddingVertical: 12, paddingHorizontal: 16 },
@@ -59,7 +59,7 @@ class UserSettingsConfirmPasswordInner {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

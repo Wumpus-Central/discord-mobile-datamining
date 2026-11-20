@@ -17,7 +17,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -95,8 +95,8 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
     }
   }
 };
-const FetchState = fn(6704).FetchState;
-let closure_8 = fn(11834).GameOrganizationInviteStates;
+const FetchState = fn(6706).FetchState;
+let closure_8 = fn(11776).GameOrganizationInviteStates;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/game_organization_invites/prefetchGameOrganizationAccountLinkState.tsx",

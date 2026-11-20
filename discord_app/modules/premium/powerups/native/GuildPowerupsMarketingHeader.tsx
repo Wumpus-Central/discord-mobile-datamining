@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import _modDef2755 from "../GuildPowerups.messages.js";
+import _modDef2757 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildPowerupsActionCreators from "../GuildPowerupsActionCreators.tsx";
 import useHasAllocateBoostPermissionDefault from "../hooks/useHasAllocateBoostPermission.tsx";
@@ -20,7 +20,7 @@ function PerkText(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef671("#000000");
@@ -56,7 +56,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
     if (0 !== num) {
       let obj = { style: tmp.container, children: null };
       const obj2 = { style: tmp.text, variant: "body-sm/semibold", children: null };
-      const intl = guild(1113).intl;
+      const intl = guild(1112).intl;
       let str2 = "";
       if (null != arr) {
         str2 = "";
@@ -68,19 +68,19 @@ export default function GuildPowerupsMarketingHeader(guild) {
             obj3.powerup = first;
             let formatResult = <PerkText powerup={null} />;
           } else {
-            const intl2 = guild(1113).intl;
+            const intl2 = guild(1112).intl;
             const obj4 = { perk1: null, perk2: null };
             const obj5 = { powerup: first[0] };
             obj4.perk1 = <PerkText powerup={first[0]} />;
             const obj6 = { powerup: first[1] };
             obj4.perk2 = <PerkText powerup={first[1]} />;
-            formatResult = intl2.format(_modDef2755.MNO3sG, obj4);
+            formatResult = intl2.format(_modDef2757.MNO3sG, obj4);
           }
         }
       }
       const obj7 = { perks: str2 };
-      obj2.children = intl.format(_modDef2755["7lwpzR"], obj7);
-      obj.children = jsx(guild(5383).Text, { style: tmp.text, variant: "body-sm/semibold", children: null });
+      obj2.children = intl.format(_modDef2757["7lwpzR"], obj7);
+      obj.children = jsx(guild(5385).Text, { style: tmp.text, variant: "body-sm/semibold", children: null });
       return <View style={tmp.container}>{null}</View>;
     }
   }

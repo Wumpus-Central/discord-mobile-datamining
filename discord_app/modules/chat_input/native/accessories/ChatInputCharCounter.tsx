@@ -8,12 +8,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MAX_MESSAGE_LENGTH: closure_6, UpsellTypes: metroImportDefault } = Constants);
-const PremiumUpsellTypes = fn(1390).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 } };
 let closure_11 = createStyles.createStyles(obj);
 class ChatCounter {

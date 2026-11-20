@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 const require = fn;
-const MAX_CHANNEL_NAME_LENGTH = fn(1072).MAX_CHANNEL_NAME_LENGTH;
+const MAX_CHANNEL_NAME_LENGTH = fn(1071).MAX_CHANNEL_NAME_LENGTH;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

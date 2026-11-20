@@ -18,7 +18,7 @@ let closure_4 = async function _mintConjureShareLink(arg0) {
     return value.body.ticket;
   })();
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/mintConjureShareLink.tsx");
 

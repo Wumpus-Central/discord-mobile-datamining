@@ -4,6 +4,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import DiscordAppStateDefault from "../../app_state/DiscordAppState.native.tsx";
+import PlayableAnalytics from "PlayableAnalytics.tsx";
 import FramesStore from "../../frames/FramesStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
@@ -11,7 +12,7 @@ require = fn;
 function pauseOrResumeTimer(startedAt) {
   startedAt = startedAt.startedAt;
   obj = FramesStore;
-  const tmp3 = React6(FramesStore.getFrame(startedAt.frameId));
+  const tmp3 = refs(FramesStore.getFrame(startedAt.frameId));
   state = DiscordAppStateDefault.getState();
   let tmp8 = state === ConstantsIOS.AppStates.ACTIVE;
   if (tmp8) {
@@ -32,7 +33,7 @@ function pauseOrResumeTimer(startedAt) {
     }
     return flag;
   }
-  const tmp2Result = React6(obj.getFrame(startedAt.frameId));
+  const tmp2Result = refs(obj.getFrame(startedAt.frameId));
   const state1 = DiscordAppStateDefault.getState();
   let tmp17 = state1 === ConstantsIOS.AppStates.ACTIVE;
   if (tmp17) {
@@ -51,14 +52,53 @@ function pauseOrResumeTimer(startedAt) {
     const obj4 = {};
     const diff = Date.now() - startedAt;
     const merged1 = Object.assign(startedAt);
-    const _Math = Math;
-    obj4.remainingMs = Math.max(0, startedAt.remainingMs - diff);
+    obj4.playedMsBeforeRun = startedAt.playedMsBeforeRun + diff;
     obj4.startedAt = null;
     obj = obj4;
     flag2 = true;
   }
   flag = flag2;
   const tmp4Result = DiscordAppStateDefault;
+}
+function attachPlayable(id, playable, impressionId) {
+  const mainFrame = FramesStore.getMainFrame();
+  id = undefined;
+  if (mainFrame != null) {
+    id = mainFrame.id;
+  }
+  let tmp3 = id === id;
+  if (tmp3) {
+    tmp3 = id === closure_1_11(playable.applicationId, application_id);
+  }
+  if (tmp3) {
+    c3 = null;
+    let frameId;
+    if (obj != null) {
+      frameId = obj.frameId;
+    }
+    if (frameId !== id) {
+      obj = {
+        playable,
+        impressionId,
+        frameId: id,
+        playedMsBeforeRun: 0,
+        rewardReached: false,
+        completionReached: false,
+        startedAt: null,
+      };
+      pauseOrResumeTimer(obj);
+      const obj3 = { event: AnalyticEvents.AD_PLAYABLE_PROGRESSED, properties: null };
+      const obj4 = {
+        progress: 0,
+        threshold_met: obj.rewardReached,
+        reward_timer_seconds: obj.playable.rewardTimerSeconds,
+      };
+      obj3.properties = obj4;
+      PlayableAnalytics.trackPlayableEvent(obj.playable.id, obj.impressionId, obj3);
+    }
+    tmp3 = tmp7;
+  }
+  return tmp3;
 }
 function handleVisibilityChange() {
   let tmp = null != obj;
@@ -67,9 +107,11 @@ function handleVisibilityChange() {
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5418).ActivityPanelModes;
-const FramesConstants = fn(6503);
-({ asLaunched: closure_9, makeFrameId: closure_10, MAIN_SURFACE: closure_11 } = FramesConstants);
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const ActivityPanelModes = fn(5420).ActivityPanelModes;
+const FramesConstants = fn(6505);
+({ asLaunched: closure_10, makeFrameId: closure_11, MAIN_SURFACE: closure_12 } = FramesConstants);
+let c13 = 30000;
 let c3 = null;
 let obj = null;
 let set = new Set();
@@ -90,13 +132,13 @@ prototype["getPlayableForFrame"] = function getPlayableForFrame(frameId) {
   }
   return playable;
 };
-prototype["getTimerState"] = function getTimerState(arg0) {
+prototype["getTimerState"] = function getTimerState(playingPlayableId) {
   let id;
   if (obj != null) {
     id = obj.playable.id;
   }
   let tmp2 = null;
-  if (id === arg0) {
+  if (id === playingPlayableId) {
     tmp2 = obj;
   }
   return tmp2;
@@ -125,21 +167,42 @@ prototype["isRunning"] = function isRunning(arg0) {
   }
   return tmp2;
 };
-prototype["getRemainingMs"] = function getRemainingMs(playingPlayableId) {
-  let tmp = null;
+prototype["getRewardRemainingMs"] = function getRewardRemainingMs(playingPlayableId) {
+  let bound = null;
   if (null != obj) {
-    tmp = null;
+    bound = null;
     if (obj.playable.id === playingPlayableId) {
-      if (null == obj.startedAt) {
-        let remainingMs = obj.remainingMs;
-      } else {
-        const _Math = Math;
-        const _Date = Date;
-        remainingMs = Math.max(0, obj.remainingMs - (Date.now() - obj.startedAt));
-      }
+      const self = this;
+      const _Math = Math;
+      const result = 1000 * obj.playable.rewardTimerSeconds;
+      bound = Math.max(0, result - this.getPlayedMs(playingPlayableId));
     }
   }
-  return tmp;
+  return bound;
+};
+prototype["getPlayedMs"] = function getPlayedMs(id) {
+  let sum = null;
+  if (null != obj) {
+    sum = null;
+    if (obj.playable.id === id) {
+      let num = 0;
+      if (null != obj.startedAt) {
+        const _Date = Date;
+        num = Date.now() - obj.startedAt;
+      }
+      sum = obj.playedMsBeforeRun + num;
+    }
+  }
+  return sum;
+};
+prototype["getCompletionRemainingMs"] = function getCompletionRemainingMs(playingPlayableId) {
+  const playedMs = this.getPlayedMs(playingPlayableId);
+  let bound = null;
+  if (null != playedMs) {
+    const _Math = Math;
+    bound = Math.max(0, c13 - playedMs);
+  }
+  return bound;
 };
 PlayableStore.displayName = "PlayableStore";
 obj = {
@@ -148,7 +211,7 @@ obj = {
     set = new Set();
   },
   PLAYABLE_LAUNCH: function handlePlayableLaunch(playable) {
-    c3 = { playable: playable.playable, launchId: playable.launchId };
+    c3 = { playable: playable.playable, launchId: playable.launchId, impressionId: playable.impressionId };
     return false;
   },
   PLAYABLE_LAUNCH_COMPLETE: function handlePlayableLaunchComplete(arg0) {
@@ -162,47 +225,21 @@ obj = {
     } else {
       const playable = _null.playable;
       if (success) {
-        obj = FramesStore;
         const mainFrame = FramesStore.getMainFrame();
         let applicationId;
         if (mainFrame != null) {
           applicationId = mainFrame.applicationId;
         }
         if (applicationId === playable.applicationId) {
-          if (mainFrame.id === refs(playable.applicationId, closure_1_11)) {
-            const tmp16 = React6(mainFrame);
+          if (mainFrame.id === closure_1_11(playable.applicationId, application_id)) {
+            const tmp8 = refs(mainFrame);
             let iframeId;
-            if (tmp16 != null) {
-              iframeId = tmp16.data.iframeId;
+            if (tmp8 != null) {
+              iframeId = tmp8.data.iframeId;
             }
             let flag2 = null != iframeId;
             if (flag2) {
-              const id = mainFrame.id;
-              const mainFrame1 = obj.getMainFrame();
-              let id1;
-              if (mainFrame1 != null) {
-                id1 = mainFrame1.id;
-              }
-              let tmp7 = id1 === id && id === refs(playable.applicationId, closure_1_11);
-              if (tmp7) {
-                _null = null;
-                let frameId;
-                if (obj != null) {
-                  frameId = obj.frameId;
-                }
-                if (frameId !== id) {
-                  const obj2 = {
-                    playable,
-                    frameId: id,
-                    remainingMs: 1000 * playable.rewardTimerSeconds,
-                    startedAt: null,
-                  };
-                  obj = obj2;
-                  pauseOrResumeTimer(obj2);
-                }
-                tmp7 = tmp9;
-              }
-              flag2 = tmp7;
+              flag2 = attachPlayable(mainFrame.id, playable, tmp12);
             }
           }
           return flag2;
@@ -217,46 +254,27 @@ obj = {
   },
   FRAME_IFRAME_MOUNT: function handleFrameIframeMount(frameId) {
     frameId = frameId.frameId;
-    obj = FramesStore;
     const frame = FramesStore.getFrame(frameId);
     let playable;
     if (_null != null) {
       playable = _null.playable;
     }
-    let tmp3 = null != playable;
-    if (tmp3) {
+    let tmp5Result = null != playable;
+    if (tmp5Result) {
       let applicationId;
       if (frame != null) {
         applicationId = frame.applicationId;
       }
-      tmp3 = playable.applicationId === applicationId;
+      tmp5Result = playable.applicationId === applicationId;
     }
-    if (tmp3) {
-      const mainFrame = obj.getMainFrame();
-      let id;
-      if (mainFrame != null) {
-        id = mainFrame.id;
+    if (tmp5Result) {
+      let impressionId;
+      if (_null != null) {
+        impressionId = _null.impressionId;
       }
-      let tmp7 = id === frameId;
-      if (tmp7) {
-        tmp7 = frameId === refs(playable.applicationId, closure_1_11);
-      }
-      if (tmp7) {
-        _null = null;
-        let frameId1;
-        if (obj != null) {
-          frameId1 = obj.frameId;
-        }
-        if (frameId1 !== frameId) {
-          const obj2 = { playable, frameId, remainingMs: 1000 * playable.rewardTimerSeconds, startedAt: null };
-          obj = obj2;
-          pauseOrResumeTimer(obj2);
-        }
-        tmp7 = tmp11;
-      }
-      tmp3 = tmp7;
+      tmp5Result = attachPlayable(frameId, playable, impressionId);
     }
-    return tmp3;
+    return tmp5Result;
   },
   FRAME_STOP: function handleFrameStop(arg0) {
     ({ frameId, applicationId } = arg0);
@@ -266,20 +284,67 @@ obj = {
     }
     let tmp2 = applicationId1 === applicationId;
     if (tmp2) {
-      tmp2 = frameId === refs(applicationId, closure_1_11);
+      tmp2 = frameId === closure_1_11(applicationId, application_id);
     }
     if (tmp2) {
       _null = null;
     }
+    if (null != obj) {
+      if (obj.frameId === frameId) {
+        const playedMs = playableStore.getPlayedMs(obj.playable.id);
+        obj = PlayableAnalytics;
+        const obj2 = { event: AnalyticEvents.AD_PLAYABLE_CLOSED, properties: null };
+        const obj3 = {
+          elapsed_ms: playedMs,
+          threshold_met: obj.rewardReached,
+          reward_timer_seconds: obj.playable.rewardTimerSeconds,
+        };
+        obj2.properties = obj3;
+        obj.trackPlayableEvent(obj.playable.id, obj.impressionId, obj2);
+        obj = null;
+      }
+    }
     return false;
   },
-  PLAYABLE_REWARD_TIMER_COMPLETE: function handlePlayableRewardTimerComplete(arg0) {
+  PLAYABLE_REWARD_TIMER_COMPLETE: function handlePlayableRewardTimerComplete(playableId) {
+    playableId = playableId.playableId;
+    if (null != obj) {
+      if (obj.playable.id === playableId) {
+        if (!obj.rewardReached) {
+          obj = {};
+          const merged = Object.assign(obj);
+          obj.rewardReached = true;
+          const _Math = Math;
+          const bound = Math.min(1, playableStore.getPlayedMs(playableId) / c13);
+          const obj3 = { event: AnalyticEvents.AD_PLAYABLE_PROGRESSED, properties: null };
+          const obj4 = {
+            progress: bound,
+            threshold_met: obj.rewardReached,
+            reward_timer_seconds: obj.playable.rewardTimerSeconds,
+          };
+          obj3.properties = obj4;
+          PlayableAnalytics.trackPlayableEvent(obj.playable.id, obj.impressionId, obj3);
+        }
+      }
+    }
+    return false;
+  },
+  PLAYABLE_COMPLETION_REACHED: function handlePlayableCompletionReached(arg0) {
     if (null != obj) {
       if (obj.playable.id === tmp) {
-        obj = {};
-        const merged = Object.assign(obj);
-        obj.remainingMs = 0;
-        obj.startedAt = null;
+        if (!obj.completionReached) {
+          obj = {};
+          const merged = Object.assign(obj);
+          obj.completionReached = true;
+          const obj3 = { event: AnalyticEvents.AD_PLAYABLE_PROGRESSED, properties: null };
+          const obj4 = {
+            progress: 1,
+            threshold_met: obj.rewardReached,
+            reward_timer_seconds: obj.playable.rewardTimerSeconds,
+          };
+          obj3.properties = obj4;
+          PlayableAnalytics.trackPlayableEvent(obj.playable.id, obj.impressionId, obj3);
+        }
       }
     }
     return false;
@@ -308,6 +373,7 @@ obj = {
 };
 const playableStore = new PlayableStore(DispatcherDefault, obj);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/quests/native/PlayableStore.tsx");
+let result = size.fileFinishedImporting("modules/quests/native/PlayableStore.tsx");
 
 export default playableStore;
+export const PLAYABLE_COMPLETION_MS = 30000;

@@ -5,8 +5,8 @@ import PopoutWindowStore from "../popout-window/PopoutWindowStore.native.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5418).ActivityPanelModes;
-const PopoutWindowKeys = fn(1072).PopoutWindowKeys;
+const ActivityPanelModes = fn(5420).ActivityPanelModes;
+const PopoutWindowKeys = fn(1071).PopoutWindowKeys;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getEmbeddedActivityPopoutWindowKey.tsx");
 

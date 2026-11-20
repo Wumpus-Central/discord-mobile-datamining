@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/ContactSuggestionActions.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../../../_runtime/metro/01653__.js";
 import AddFriendsScreenUtils from "AddFriendsScreenUtils.tsx";
-import _modDef18126 from "../../../../../../_runtime/metro/18126__.js";
+import _modDef17953 from "../../../../../../_runtime/metro/17953__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -12,19 +12,19 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { duration: 200, easing: null };
-const Easing = fn(1655).Easing;
-obj.easing = Easing.in(fn(1655).Easing.quad);
+const Easing = fn(1653).Easing;
+obj.easing = Easing.in(fn(1653).Easing.quad);
 let obj2 = { duration: 250, easing: null };
-const Easing2 = fn(1655).Easing;
-obj2.easing = Easing2.in(fn(1655).Easing.quad);
+const Easing2 = fn(1653).Easing;
+obj2.easing = Easing2.in(fn(1653).Easing.quad);
 let obj3 = { duration: 250, easing: null };
-const Easing3 = fn(1655).Easing;
-obj3.easing = Easing3.in(fn(1655).Easing.quad);
+const Easing3 = fn(1653).Easing;
+obj3.easing = Easing3.in(fn(1653).Easing.quad);
 let obj4 = { duration: 250, easing: null };
-const Easing4 = fn(1655).Easing;
-obj4.easing = Easing4.out(fn(1655).Easing.quad);
+const Easing4 = fn(1653).Easing;
+obj4.easing = Easing4.out(fn(1653).Easing.quad);
 let closure_11 = { mass: 1, stiffness: 172, damping: 17.3 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj6 = {
   icon: { position: "absolute", top: 4, zIndex: 2, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 },
 };
@@ -64,16 +64,16 @@ export function ContactSuggestionActions(user) {
   const animate = user.animate;
   c4 = animate;
   const tmp = c12();
-  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(30);
+  const sharedValue = require("../../../../../../_runtime/metro/01653__.js").useSharedValue(30);
   c5 = sharedValue;
-  obj = require("../../../../../../_runtime/metro/01655__.js");
-  const sharedValue1 = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(0.5);
+  obj = require("../../../../../../_runtime/metro/01653__.js");
+  const sharedValue1 = require("../../../../../../_runtime/metro/01653__.js").useSharedValue(0.5);
   c6 = sharedValue1;
-  obj2 = require("../../../../../../_runtime/metro/01655__.js");
-  const sharedValue2 = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  obj2 = require("../../../../../../_runtime/metro/01653__.js");
+  const sharedValue2 = require("../../../../../../_runtime/metro/01653__.js").useSharedValue(0);
   c7 = sharedValue2;
-  obj3 = require("../../../../../../_runtime/metro/01655__.js");
-  const sharedValue3 = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(1);
+  obj3 = require("../../../../../../_runtime/metro/01653__.js");
+  const sharedValue3 = require("../../../../../../_runtime/metro/01653__.js").useSharedValue(1);
   c8 = sharedValue3;
   items = [onFinishAnimation, user];
   const callback = noop.useCallback(() => {
@@ -84,7 +84,7 @@ export function ContactSuggestionActions(user) {
       }, 1000);
     }
   }, items);
-  obj4 = require("../../../../../../_runtime/metro/01655__.js");
+  obj4 = require("../../../../../../_runtime/metro/01653__.js");
   const obj5 = noop;
   let items1 = [c13, sharedValue, sharedValue2, sharedValue1];
   _require = undefined;
@@ -105,10 +105,10 @@ export function ContactSuggestionActions(user) {
   ContactSuggestionActionsTsx1.__closure = items2;
   ContactSuggestionActionsTsx1.__workletHash = 1508257222955;
   ContactSuggestionActionsTsx1.__initData = tmp9;
-  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     ContactSuggestionActionsTsx1,
   );
-  const obj6 = require("../../../../../../_runtime/metro/01655__.js");
+  const obj6 = require("../../../../../../_runtime/metro/01653__.js");
   const items3 = [c14, sharedValue3];
   _require = undefined;
   [tmp14, tmp15] = items3;
@@ -123,7 +123,7 @@ export function ContactSuggestionActions(user) {
   ContactSuggestionActionsTsx2.__workletHash = 4559914341574;
   ContactSuggestionActionsTsx2.__initData = tmp14;
   const items5 = [onAddSuggestion, user, added, animate, sharedValue, sharedValue2, sharedValue1, sharedValue3];
-  const animatedStyle1 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     ContactSuggestionActionsTsx2,
   );
   const callback1 = obj5.useCallback(() => {
@@ -137,7 +137,7 @@ export function ContactSuggestionActions(user) {
       const result4 = _undefined9.set(0);
     }
   }, items5);
-  const tmp2Result = require("../../../../../../_runtime/metro/01655__.js");
+  const tmp2Result = require("../../../../../../_runtime/metro/01653__.js");
   const items6 = [c15, added];
   _require = undefined;
   [tmp18, tmp19] = items6;
@@ -153,7 +153,7 @@ export function ContactSuggestionActions(user) {
   const items8 = [
     closure_18,
     animate,
-    require("../../../../../../_runtime/metro/01708__.js").scheduleOnRN,
+    require("../../../../../../_runtime/metro/01706__.js").scheduleOnRN,
     callback,
     sharedValue1,
     require("timing/timing").withTiming,
@@ -165,7 +165,7 @@ export function ContactSuggestionActions(user) {
     require("spring/spring").withSpring,
     c11,
     closure_17,
-    require("../../../../../../_runtime/metro/01655__.js").withDelay,
+    require("../../../../../../_runtime/metro/01653__.js").withDelay,
     c8,
     c10,
     c16,
@@ -378,7 +378,7 @@ export function ContactSuggestionActions(user) {
   ContactSuggestionActionsTsx6.__closure = items9;
   ContactSuggestionActionsTsx6.__workletHash = 3747678974505;
   ContactSuggestionActionsTsx6.__initData = tmp20;
-  const animatedReaction = require("../../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
     ContactSuggestionActionsTsx3,
     ContactSuggestionActionsTsx6,
   );
@@ -386,16 +386,16 @@ export function ContactSuggestionActions(user) {
   const obj8 = { pointerEvents: "none", style: null, children: null };
   const items10 = [tmp.icon, animatedStyle];
   obj8.style = items10;
-  const tmp2Result2 = require("../../../../../../_runtime/metro/01655__.js");
-  obj8.children = c5(require("native").Icon, { source: _modDef18126, color: tmp.icon.color });
-  const items11 = [c5(_modDef1655.View, obj8)];
+  const tmp2Result2 = require("../../../../../../_runtime/metro/01653__.js");
+  obj8.children = c5(require("native").Icon, { source: _modDef17953, color: tmp.icon.color });
+  const items11 = [c5(_modDef1653.View, obj8)];
   const obj10 = { style: animatedStyle1, children: null };
   const obj11 = { variant: "secondary", size: str, grow: false, text: null, onPress: null };
-  const intl = tmp2(1113).intl;
+  const intl = tmp2(1112).intl;
   obj11.text = intl.string(require("util").t.OYkgVk);
   obj11.onPress = callback1;
   obj10.children = c5(require("components/Button/Button").Button, obj11);
-  items11[1] = c5(_modDef1655.View, obj10);
+  items11[1] = c5(_modDef1653.View, obj10);
   obj7.children = items11;
   return c6(c4, obj7);
 }

@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/TypingIndicatorSetting.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4091 from "../../../custom_typing_indicator/intl/CustomTypingIndicator.messages.js";
+import _modDef4093 from "../../../custom_typing_indicator/intl/CustomTypingIndicator.messages.js";
 import UserSettingsProtoActionCreators from "../../UserSettingsProtoActionCreators.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import CustomTypingIndicatorExperiment from "../../../custom_typing_indicator/CustomTypingIndicatorExperiment.tsx";
@@ -11,30 +11,30 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 const TypingIndicatorSetting = "TypingIndicatorSetting";
-let DismissibleBadgeUtils = fn(15934);
+let DismissibleBadgeUtils = fn(15898);
 let closure_6 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
-  fn(4625).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
+  fn(4627).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
   function useCanShowLaunchBadge() {
     return !CustomTypingIndicatorNewPresetsExperiment.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting)
       .enabled;
   },
 );
-DismissibleBadgeUtils = fn(15934);
+DismissibleBadgeUtils = fn(15898);
 let closure_7 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
-  fn(4625).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE,
+  fn(4627).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE,
   function useCanShowNewPresetsBadge() {
     return CustomTypingIndicatorNewPresetsExperiment.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting)
       .enabled;
   },
 );
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef4091["pT+BVM"]);
+    return intl.string(_modDef4093["pT+BVM"]);
   },
   parent: null,
-  IconComponent: fn(16817).ChatDotsIcon,
+  IconComponent: fn(16641).ChatDotsIcon,
   useTrailing() {
     const obj = CustomTypingIndicatorNewPresetsExperiment;
     const DismissibleContent = dismissible_content.DismissibleContent;
@@ -50,7 +50,7 @@ const route = SettingBuilders.createRoute({
     );
   },
   usePreNavigationAction() {
-    enabled = enabled(16816).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
+    enabled = enabled(16640).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
     const tmp = closure_6();
     closure_1 = tmp;
     const tmp2 = closure_7();
@@ -73,7 +73,7 @@ const route = SettingBuilders.createRoute({
     );
   },
   screen: {
-    route: fn(1072).UserSettingsSections.TYPING_INDICATOR,
+    route: fn(1071).UserSettingsSections.TYPING_INDICATOR,
     getComponent() {
       return require("CustomTypingIndicatorEditScreen").default;
     },

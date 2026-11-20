@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/share/useConjureSharingMode.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4089 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -9,7 +9,7 @@ import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let isProjectOwner = fn(6500).isProjectOwner;
+let isProjectOwner = fn(6502).isProjectOwner;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/useConjureSharingMode.tsx");
 
@@ -48,7 +48,7 @@ export default function useConjureSharingMode(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -63,14 +63,15 @@ export default function useConjureSharingMode(arg0) {
             return obj3;
           } else {
             closure_2 = tmp3;
-            closure_1 = tmp34;
+            closure_1 = tmp37;
             closure_129_0 = undefined;
+            closure_129_1 = undefined;
             let conjureSharingChangeResult = null;
             if (null != closure_1) {
               if (null != closure_2) {
                 conjureSharingChangeResult = closure_0(shareLinksEnabled[8]).conjureSharingChange(
-                  tmp42,
-                  tmp22,
+                  tmp45,
+                  tmp25,
                   closure_0,
                 );
                 const obj4 = closure_0(shareLinksEnabled[8]);
@@ -85,11 +86,12 @@ export default function useConjureSharingMode(arg0) {
                 if (0 !== Object.keys(conjureSharingChangeResult).length) {
                   ConjureProjectStore(closure_0);
                   closure_1_7(false);
+                  closure_129_1 = true;
                   c3 = 1;
                   v2 = 3;
                   v3 = 1;
                   const obj6 = {
-                    value: closure_0(shareLinksEnabled[9]).updateProjectSettings(tmp42.id, conjureSharingChangeResult),
+                    value: closure_0(shareLinksEnabled[9]).updateProjectSettings(tmp45.id, conjureSharingChangeResult),
                     done: false,
                   };
                   return obj6;
@@ -97,9 +99,11 @@ export default function useConjureSharingMode(arg0) {
               }
             }
             v3 = 3;
+            return { value: true, done: true };
           }
         } else if (1 === tmp7) {
           c3 = 0;
+          closure_129_1 = false;
           closure_1_7(true);
           v2 = 2;
           v3 = 1;
@@ -110,34 +114,36 @@ export default function useConjureSharingMode(arg0) {
             if (arg0 === 1) {
               v3 = 3;
               throw value;
+            } else if (arg0 === 2) {
+              v3 = 3;
+              const obj8 = { value, done: true };
+              return obj8;
+            } else {
+              ConjureProjectStore(null);
+              v3 = 3;
             }
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            v3 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
+          } else if (arg0 !== 2) {
             if (null != closure_129_0.share_links_enabled) {
               v2(closure_129_0.share_links_enabled);
             }
             c3 = 0;
           }
-          ConjureProjectStore(null);
+          c3 = 0;
+          v3 = 3;
+          const obj = { value, done: true };
+          return obj;
         }
-        v3 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } catch (tmp33) {
+      } catch (tmp36) {
         if (tmp4 === c3) {
           v3 = tmp2;
-          throw tmp33;
+          throw tmp36;
         } else {
           v2 = tmp;
         }
-        tmp34 = c3;
+        tmp37 = c3;
       }
     }
   });
@@ -213,15 +219,15 @@ export default function useConjureSharingMode(arg0) {
 export function conjureSharingOptions() {
   const obj = { value: "collaborators", label: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef4089["a/Tlqf"]);
+  obj.label = intl.string(_modDef4091["a/Tlqf"]);
   items = [obj, ,];
   const obj2 = { value: "link", label: null };
   const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef4089.e0VakN);
+  obj2.label = intl2.string(_modDef4091.e0VakN);
   items[1] = obj2;
   const obj3 = { value: "public", label: null };
   const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef4089["98MAcX"]);
+  obj3.label = intl3.string(_modDef4091["98MAcX"]);
   items[2] = obj3;
   return items;
 }

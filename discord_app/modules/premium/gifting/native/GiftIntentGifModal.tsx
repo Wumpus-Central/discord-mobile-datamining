@@ -57,7 +57,7 @@ let closure_13 = async function _sendGiftIntentGif(arg0) {
     obj12.location_stack = items;
     closure_130_1(closure_130_2[12]).track(closure_130_8.GIFT_INTENT_MESSAGE_SENT, obj12);
     c4 = 3;
-    return { value: "HermesInternal", done: "+60" };
+    return { value: "HermesInternal", done: null };
   }
   const id = closure_129_0.id;
   await closure_130_1(closure_130_2[10]).sendMessage(
@@ -190,11 +190,11 @@ function GiftIntentGifModalBody(channelId) {
   return closure_11(closure_6, obj2);
 }
 const View = fn(17).View;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const MessageSendLocation = fn(4797).MessageSendLocation;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const MessageSendLocation = fn(4799).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   messageContainer: null,

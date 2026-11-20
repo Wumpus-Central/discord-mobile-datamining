@@ -1,6 +1,6 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildSettingsStore from "../../../../guild_settings/GuildSettingsStore.tsx";
@@ -11,9 +11,9 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4722).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(7878).CREATE_NEW_CHANNEL_VALUE;
-const ChannelTypes = fn(1072).ChannelTypes;
+let closure_8 = fn(4724).GUILD_SELECTABLE_CHANNELS_KEY;
+const CREATE_NEW_CHANNEL_VALUE = fn(7877).CREATE_NEW_CHANNEL_VALUE;
+const ChannelTypes = fn(1071).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const size = fn(2);
@@ -23,10 +23,10 @@ const result = size.fileFinishedImporting(
 
 export default function ChannelSetupScreen() {
   const ref = noop.useRef(null);
-  const token = guild(5356).useToken(callback(575).modules.mobile.TABLE_ROW_PADDING);
-  let obj2 = guild(5356);
-  const enableCommunitySharedStyles = guild(19950).useEnableCommunitySharedStyles();
-  let obj3 = guild(19950);
+  const token = guild(5358).useToken(callback(575).modules.mobile.TABLE_ROW_PADDING);
+  let obj2 = guild(5358);
+  const enableCommunitySharedStyles = guild(19770).useEnableCommunitySharedStyles();
+  let obj3 = guild(19770);
   items = [GuildSettingsStore];
   guild = guild(504).useStateFromStoresObject(items, () => props.getProps()).guild;
   const obj4 = guild(504);
@@ -45,9 +45,9 @@ export default function ChannelSetupScreen() {
     return obj2;
   });
   ({ rulesChannel, publicUpdatesChannel } = stateFromStoresObject);
-  const tmp8 = callback(5408)(rulesChannel, true);
+  const tmp8 = callback(5410)(rulesChannel, true);
   if (tmp8 != null) {
-    const tmp12 = tmp4(5408)(publicUpdatesChannel, true);
+    const tmp12 = tmp4(5410)(publicUpdatesChannel, true);
     if (tmp12 != null) {
       let id;
       if (guild != null) {
@@ -97,10 +97,10 @@ export default function ChannelSetupScreen() {
         items = [obj3, ...callback()];
         obj2.items = items;
         obj2.onItemSelect = function onItemSelect(rulesChannelId) {
-          callback(7875).updateGuild({ rulesChannelId });
-          const obj = callback(7875);
+          callback(7874).updateGuild({ rulesChannelId });
+          const obj = callback(7874);
           const obj2 = { rulesChannelId };
-          callback(5006).hideActionSheet();
+          callback(5008).hideActionSheet();
         };
         let rulesChannelId;
         if (guild != null) {
@@ -110,7 +110,7 @@ export default function ChannelSetupScreen() {
           rulesChannelId = null;
         }
         obj2.selectedItem = rulesChannelId;
-        obj.openLazy(asyncRequireImpl(7493, dependencyMap.paths), "SelectRulesChannel", obj2);
+        obj.openLazy(asyncRequireImpl(7492, dependencyMap.paths), "SelectRulesChannel", obj2);
       }, items3);
       if (guild != null) {
         prop = guild.publicUpdatesChannelId;
@@ -127,10 +127,10 @@ export default function ChannelSetupScreen() {
         items = [obj3, ...callback()];
         obj2.items = items;
         obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-          callback(7875).updateGuild({ publicUpdatesChannelId });
-          const obj = callback(7875);
+          callback(7874).updateGuild({ publicUpdatesChannelId });
+          const obj = callback(7874);
           const obj2 = { publicUpdatesChannelId };
-          callback(5006).hideActionSheet();
+          callback(5008).hideActionSheet();
         };
         let prop;
         if (guild != null) {
@@ -140,12 +140,12 @@ export default function ChannelSetupScreen() {
           prop = null;
         }
         obj2.selectedItem = prop;
-        obj.openLazy(asyncRequireImpl(7493, dependencyMap.paths), "SelectUpdatesChannel", obj2);
+        obj.openLazy(asyncRequireImpl(7492, dependencyMap.paths), "SelectUpdatesChannel", obj2);
       }, items4);
       const obj6 = {
         headerRef: ref,
         disableNextStep: false,
-        currentStep: tmp2(19948).EnableCommunityModalSteps.STEP_2,
+        currentStep: tmp2(19768).EnableCommunityModalSteps.STEP_2,
         children: null,
       };
       const obj7 = { style: enableCommunitySharedStyles.content, children: null };
@@ -156,47 +156,47 @@ export default function ChannelSetupScreen() {
         color: "text-subtle",
         children: null,
       };
-      const intl4 = tmp2(1113).intl;
-      obj8.children = intl4.formatToPlainString(tmp2(1113).t.tInpJj, { number: 2, total: 3 });
-      const items5 = [closure_13(tmp2(5383).Text, obj8), , ,];
-      const obj9 = { resizeMode: "contain", source: tmp4(19951)().channelSetup };
-      items5[1] = closure_13(tmp4(5479), obj9);
+      const intl4 = tmp2(1112).intl;
+      obj8.children = intl4.formatToPlainString(tmp2(1112).t.tInpJj, { number: 2, total: 3 });
+      const items5 = [closure_13(tmp2(5385).Text, obj8), , ,];
+      const obj9 = { resizeMode: "contain", source: tmp4(19771)().channelSetup };
+      items5[1] = closure_13(tmp4(5481), obj9);
       const obj10 = {
         style: enableCommunitySharedStyles.header,
         variant: "heading-xl/semibold",
         color: "mobile-text-heading-primary",
         children: null,
       };
-      const intl5 = tmp2(1113).intl;
-      obj10.children = intl5.string(tmp2(1113).t.YtXpEh);
-      items5[2] = closure_13(tmp2(5383).Heading, obj10);
+      const intl5 = tmp2(1112).intl;
+      obj10.children = intl5.string(tmp2(1112).t.YtXpEh);
+      items5[2] = closure_13(tmp2(5385).Heading, obj10);
       const obj11 = {
         style: enableCommunitySharedStyles.description,
         variant: "body-md/medium",
         color: "text-subtle",
         children: null,
       };
-      const intl6 = tmp2(1113).intl;
-      obj11.children = intl6.string(tmp2(1113).t["J/fYR8"]);
-      items5[3] = closure_13(tmp2(5383).Text, obj11);
+      const intl6 = tmp2(1112).intl;
+      obj11.children = intl6.string(tmp2(1112).t["J/fYR8"]);
+      items5[3] = closure_13(tmp2(5385).Text, obj11);
       obj7.children = items5;
       const items6 = [closure_14(View, obj7)];
       const obj12 = { spacing: 24, style: null, children: null };
       const obj13 = { paddingHorizontal: token };
       obj12.style = obj13;
       const obj14 = { helperText: null, hasIcons: false, children: null };
-      const intl7 = tmp2(1113).intl;
-      obj14.helperText = intl7.string(tmp2(1113).t["+Af+Vw"]);
+      const intl7 = tmp2(1112).intl;
+      obj14.helperText = intl7.string(tmp2(1112).t["+Af+Vw"]);
       const obj15 = { label: null, trailing: null, arrow: true, onPress: null };
-      const intl8 = tmp2(1113).intl;
-      obj15.label = intl8.string(tmp2(1113).t.dYrhCO);
+      const intl8 = tmp2(1112).intl;
+      obj15.label = intl8.string(tmp2(1112).t.dYrhCO);
       const obj16 = { text: tmp8 };
-      obj15.trailing = closure_13(tmp2(6926).TableRow.TrailingText, obj16);
+      obj15.trailing = closure_13(tmp2(6925).TableRow.TrailingText, obj16);
       obj15.onPress = callback1;
-      obj14.children = closure_13(tmp2(6926).TableRow, obj15);
-      const items7 = [closure_13(tmp2(7229).TableRowGroup, obj14)];
-      const intl9 = tmp2(1113).intl;
-      const items8 = [intl9.string(tmp2(1113).t.ZFeonu)];
+      obj14.children = closure_13(tmp2(6925).TableRow, obj15);
+      const items7 = [closure_13(tmp2(7228).TableRowGroup, obj14)];
+      const intl9 = tmp2(1112).intl;
+      const items8 = [intl9.string(tmp2(1112).t.ZFeonu)];
       let prop1;
       if (guild != null) {
         prop1 = guild.publicUpdatesChannelId;
@@ -210,8 +210,8 @@ export default function ChannelSetupScreen() {
         tmp24Result = null;
         if (null == prop2) {
           const obj17 = { children: null };
-          const intl10 = tmp2(1113).intl;
-          const items9 = [" ", intl10.string(tmp2(1113).t["0H6Cdy"])];
+          const intl10 = tmp2(1112).intl;
+          const items9 = [" ", intl10.string(tmp2(1112).t["0H6Cdy"])];
           obj17.children = items9;
           tmp24Result = closure_14(closure_15, obj17);
         }
@@ -222,42 +222,42 @@ export default function ChannelSetupScreen() {
       obj19.children = items8;
       obj18.helperText = closure_14(closure_15, obj19);
       const obj20 = { label: null, subLabel: null, trailing: null, arrow: true, onPress: null };
-      const intl11 = tmp2(1113).intl;
-      obj20.label = intl11.string(tmp2(1113).t.vAyDGU);
-      const intl12 = tmp2(1113).intl;
-      obj20.subLabel = intl12.string(tmp2(1113).t.zdWNET);
+      const intl11 = tmp2(1112).intl;
+      obj20.label = intl11.string(tmp2(1112).t.vAyDGU);
+      const intl12 = tmp2(1112).intl;
+      obj20.subLabel = intl12.string(tmp2(1112).t.zdWNET);
       const obj21 = { text: tmp12 };
-      obj20.trailing = closure_13(tmp2(6926).TableRow.TrailingText, obj21);
+      obj20.trailing = closure_13(tmp2(6925).TableRow.TrailingText, obj21);
       obj20.onPress = callback2;
-      obj18.children = closure_13(tmp2(6926).TableRow, obj20);
-      items7[1] = closure_13(tmp2(7229).TableRowGroup, obj18);
+      obj18.children = closure_13(tmp2(6925).TableRow, obj20);
+      items7[1] = closure_13(tmp2(7228).TableRowGroup, obj18);
       obj12.children = items7;
-      items6[1] = closure_14(tmp2(5808).Stack, obj12);
+      items6[1] = closure_14(tmp2(5810).Stack, obj12);
       obj6.children = items6;
-      return closure_14(tmp2(19948).EnableCommunityModalScreen, obj6);
+      return closure_14(tmp2(19768).EnableCommunityModalScreen, obj6);
     } else {
       let prop3;
       if (guild != null) {
         prop3 = guild.publicUpdatesChannelId;
       }
       if (prop3 === CREATE_NEW_CHANNEL_VALUE) {
-        const intl3 = tmp2(1113).intl;
-        let stringResult = intl3.string(tmp2(1113).t.Cla0re);
+        const intl3 = tmp2(1112).intl;
+        let stringResult = intl3.string(tmp2(1112).t.Cla0re);
       } else {
-        let intl2 = tmp2(1113).intl;
-        stringResult = intl2.string(tmp2(1113).t.PoWNfe);
+        let intl2 = tmp2(1112).intl;
+        stringResult = intl2.string(tmp2(1112).t.PoWNfe);
       }
     }
   } else {
-    let intl = tmp2(1113).intl;
+    let intl = tmp2(1112).intl;
     let rulesChannelId1;
     if (guild != null) {
       rulesChannelId1 = guild.rulesChannelId;
     }
     if (rulesChannelId1 === CREATE_NEW_CHANNEL_VALUE) {
-      let PoWNfe = tmp2(1113).t.Cla0re;
+      let PoWNfe = tmp2(1112).t.Cla0re;
     } else {
-      PoWNfe = tmp2(1113).t.PoWNfe;
+      PoWNfe = tmp2(1112).t.PoWNfe;
     }
     intl.string(PoWNfe);
   }

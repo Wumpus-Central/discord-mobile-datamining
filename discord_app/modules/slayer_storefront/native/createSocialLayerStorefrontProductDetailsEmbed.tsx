@@ -3,7 +3,7 @@ import _mod17 from "../../../../_runtime/metro/00017__.js";
 import util from "../../../intl/index.native.tsx";
 import PremiumConstants from "../../premium/PremiumConstants.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
-import _modDef3989 from "../intl/SlayerStorefront.messages.js";
+import _modDef3991 from "../intl/SlayerStorefront.messages.js";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
 import OrbCheckoutUtils from "../../virtual_currency/checkout/OrbCheckoutUtils.tsx";
@@ -223,7 +223,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
                 if (result2) {
                   let stringResult = string(util.t.boqtTA);
                 } else {
-                  stringResult = string(_modDef3989.BKf0MM);
+                  stringResult = string(_modDef3991.BKf0MM);
                 }
                 obj6.acceptLabelText = stringResult;
                 let prop;

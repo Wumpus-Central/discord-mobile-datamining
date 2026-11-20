@@ -2,7 +2,7 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const Keyboard = fn(17).Keyboard;
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");
 
@@ -10,7 +10,7 @@ export default function useNavigatorConfirmChangesOnBack() {
   const ref = noop.useRef(null);
   dependencyMap = noop.useRef(false);
   let obj = {
-    onGoBack: ref(10473)({
+    onGoBack: ref(10415)({
       onBeforeGoBack(navigation) {
         if (navigation.preventable) {
           let current = ref2.current;

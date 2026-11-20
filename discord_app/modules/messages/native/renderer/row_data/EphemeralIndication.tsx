@@ -5,7 +5,7 @@ import ApplicationCommandUserAppUtils from "../../../../application_commands/App
 import GuildAutomodMessageStore from "../../../../guild_automod/GuildAutomodMessageStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ HelpdeskArticles: closure_4, MessageFlags: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/EphemeralIndication.tsx");

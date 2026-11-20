@@ -31,7 +31,7 @@ function handleChannelDelete(channel) {
   delete tmp4[tmp3];
   delete tmp2[tmp];
 }
-const isGuildHomeChannel = fn(4648).isGuildHomeChannel;
+const isGuildHomeChannel = fn(4650).isGuildHomeChannel;
 let c5 = 900000;
 let dependencyMap = {};
 const dependencyMap2 = {};

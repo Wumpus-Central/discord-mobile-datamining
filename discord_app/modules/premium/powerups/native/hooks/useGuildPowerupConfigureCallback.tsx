@@ -8,7 +8,7 @@ import openGuildPowerupsBottomSheet from "../utils/openGuildPowerupsBottomSheet.
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildSettingsSections: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupConfigureCallback.tsx");

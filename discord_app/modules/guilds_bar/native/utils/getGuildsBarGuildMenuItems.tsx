@@ -7,7 +7,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticsSections = fn(1072).AnalyticsSections;
+const AnalyticsSections = fn(1071).AnalyticsSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx");
 
@@ -28,7 +28,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -58,7 +58,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
             items = [closure_128_0];
             value.default(items, constants.GUILD_LIST);
             paths = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           paths = tmp;

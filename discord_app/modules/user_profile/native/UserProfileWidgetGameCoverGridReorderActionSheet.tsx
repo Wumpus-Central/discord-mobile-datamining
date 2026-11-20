@@ -16,9 +16,9 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
-let obj = { grid: { flexDirection: "row", flexWrap: "wrap", gap: fn(10077).GAME_COVER_GRID_GAP }, dragHandle: null };
-let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: fn(10077).GAME_COVER_GRID_GAP };
+const createStyles = fn(4794);
+let obj = { grid: { flexDirection: "row", flexWrap: "wrap", gap: fn(10080).GAME_COVER_GRID_GAP }, dragHandle: null };
+let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: fn(10080).GAME_COVER_GRID_GAP };
 obj.dragHandle = { position: "absolute", top: nativeDefault.space.PX_8, start: 0 };
 let closure_9 = createStyles.createStyles(obj);
 let closure_10 = noop.memo(function ReorderableGameCover(arg0) {
@@ -82,8 +82,8 @@ export default function UserProfileWidgetGameCoverGridReorderActionSheet(widgetT
   ({ ref, onLayout } = tmp4);
   const obj2 = { dismissAccessibilityLabel: null, returnFocusRef: null, children: null };
   let obj = widgetType(504);
-  const intl = widgetType(1113).intl;
-  obj2.dismissAccessibilityLabel = intl.string(widgetType(1113).t.rnh54p);
+  const intl = widgetType(1112).intl;
+  obj2.dismissAccessibilityLabel = intl.string(widgetType(1112).t.rnh54p);
   obj2.returnFocusRef = widgetType.returnFocusRef;
   const obj3 = { ref, onLayout, accessibilityRole: "list", style: tmp.grid, children: null };
   if (isMeasured) {

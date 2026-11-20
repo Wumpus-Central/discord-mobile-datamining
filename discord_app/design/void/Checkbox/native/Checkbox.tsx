@@ -1,7 +1,7 @@
 // discord_app/design/void/Checkbox/native/Checkbox.tsx
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef15295 from "../../../../../_runtime/metro/15295__.js";
-import _modDef15296 from "../../../../../_runtime/metro/15296__.js";
+import _modDef15259 from "../../../../../_runtime/metro/15259__.js";
+import _modDef15260 from "../../../../../_runtime/metro/15260__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const jsx = fn(21).jsx;
@@ -12,10 +12,10 @@ export default function Checkbox(arg0) {
   ({ style, selected } = arg0);
   const obj = { style, source: null };
   if (selected) {
-    obj.source = _modDef15295;
+    obj.source = _modDef15259;
     let tmp5 = obj;
   } else {
-    obj.source = _modDef15296;
+    obj.source = _modDef15260;
     tmp5 = obj;
   }
   return jsx(FastImageDefault, tmp5);

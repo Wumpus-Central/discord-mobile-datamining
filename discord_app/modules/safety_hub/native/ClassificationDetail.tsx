@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3439 from "../../age_assurance/ManualReview.messages.js";
+import _modDef3441 from "../../age_assurance/ManualReview.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
@@ -44,8 +44,8 @@ function ClassificationHeader(classificationTypeText) {
       let X1ngSd = require;
       let obj = dependencyMap;
       if (member_type === SafetyHubModels.MemberType.OWNER) {
-        const intl3 = X1ngSd(1113).intl;
-        X1ngSd = X1ngSd(1113).t.X1ngSd;
+        const intl3 = X1ngSd(1112).intl;
+        X1ngSd = X1ngSd(1112).t.X1ngSd;
         obj = {};
         const merged = Object.assign(obj2);
         tmp3 = guildMetadata == tmp3;
@@ -56,7 +56,7 @@ function ClassificationHeader(classificationTypeText) {
         obj.guildName = obj2;
         let formatResult = intl3.format(X1ngSd, obj);
       } else {
-        const intl2 = X1ngSd(1113).intl;
+        const intl2 = X1ngSd(1112).intl;
         const obj4 = {};
         const merged1 = Object.assign(obj2);
         let name;
@@ -64,14 +64,14 @@ function ClassificationHeader(classificationTypeText) {
           name = guildMetadata.name;
         }
         obj4.guildName = name;
-        formatResult = intl2.format(X1ngSd(1113).t.rmpEPD, obj4);
+        formatResult = intl2.format(X1ngSd(1112).t.rmpEPD, obj4);
       }
     } else {
       const intl = util.intl;
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(5383).Text, {
+  obj.children = closure_13(classificationTypeText(5385).Text, {
     variant: "body-lg/normal",
     style: tmp.headerText,
     color: "mobile-text-heading-primary",
@@ -119,8 +119,8 @@ function ClassificationActionsTaken(arg0) {
   if (0 !== found.length) {
     const obj2 = { style: tmp4.sectionContainer, children: null };
     const obj3 = { plain: redesigned, children: null };
-    const intl = redesigned(1113).intl;
-    obj3.children = intl.string(redesigned(1113).t["O2nYk+"]);
+    const intl = redesigned(1112).intl;
+    obj3.children = intl.string(redesigned(1112).t["O2nYk+"]);
     const items1 = [closure_13(SectionHeader, obj3)];
     const obj4 = { style: tmp4.actionsTaken, children: null };
     const items2 = [
@@ -129,11 +129,11 @@ function ClassificationActionsTaken(arg0) {
     let tmp8Result = null;
     if (null != classificationExpiration) {
       const obj5 = { large: redesigned, children: null };
-      const intl2 = redesigned(1113).intl;
+      const intl2 = redesigned(1112).intl;
       const obj6 = {
         expirationDate: classificationExpiration.toLocaleDateString(stateFromStores, { dateStyle: "medium" }),
       };
-      obj5.children = intl2.format(redesigned(1113).t.TByIjT, obj6);
+      obj5.children = intl2.format(redesigned(1112).t.TByIjT, obj6);
       tmp8Result = closure_13(BulletRow, obj5, "expiration");
     }
     items2[1] = tmp8Result;
@@ -156,7 +156,7 @@ function ManualReviewDecidedUnderageActionsTaken() {
   const obj3 = { style: tmp.actionsTaken, children: null };
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3439.rn3Gto);
+  obj4.children = intl2.string(_modDef3441.rn3Gto);
   obj3.children = state(BulletRow, obj4);
   items[1] = state(React4, obj3);
   obj.children = items;
@@ -179,7 +179,7 @@ function ManualReviewDecidedUnderageGuidance() {
   const obj3 = { style: tmp.actionsTaken, children: null };
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3439["yV/t/V"]);
+  obj4.children = intl2.string(_modDef3441["yV/t/V"]);
   obj3.children = state(BulletRow, obj4);
   items[1] = state(React4, obj3);
   obj.children = items;
@@ -214,18 +214,18 @@ function ClassificationPolicyCard(classificationDescription) {
   };
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(10010).ShieldIcon, {
+  obj3.children = closure_13(policyExplainerLink(10013).ShieldIcon, {
     size: "sm",
     color: nativeDefault.colors.TEXT_LINK,
   });
   items = [closure_13(closure_4, obj3)];
   const obj5 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj6 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = policyExplainerLink(1113).intl;
-  obj6.children = intl.format(policyExplainerLink(1113).t.zxUdpj, {
+  const intl = policyExplainerLink(1112).intl;
+  obj6.children = intl.format(policyExplainerLink(1112).t.zxUdpj, {
     classificationDescription: classificationDescription.classificationTypeText,
   });
-  obj5.children = closure_13(policyExplainerLink(5383).Text, obj6);
+  obj5.children = closure_13(policyExplainerLink(5385).Text, obj6);
   items[1] = closure_13(closure_4, obj5);
   obj2.children = items;
   obj.children = closure_14(tmp2, obj2);
@@ -303,7 +303,7 @@ function ManualReviewDecidedUnderageFooter(arg0) {
   ({ tosLink, communityGuidelinesLink } = arg0);
   const obj = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3439.vPOpia, { tosLink, communityGuidelinesLink });
+  obj.children = intl.format(_modDef3441.vPOpia, { tosLink, communityGuidelinesLink });
   return state(Text_Text.Text, obj);
 }
 function ManualReviewDecidedUnderageView() {
@@ -330,16 +330,16 @@ function ClassificationDetailFooter(onClose) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(7690);
+const SafetyHubConstants = fn(7689);
 ({
   SafetyHubAnalyticsActionSource: closure_9,
   SafetyHubAnalyticsActions: closure_10,
   SafetyHubLinks: closure_11,
 } = SafetyHubConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   container: null,

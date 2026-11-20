@@ -6,7 +6,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const SearchTypes = fn(1072).SearchTypes;
+const SearchTypes = fn(1071).SearchTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchContext.tsx");
 

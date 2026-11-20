@@ -685,3 +685,19 @@ export function getCollectiblesCollectionSequencedOffer(tenantMetadata) {
   }
   return tmp3;
 }
+export function doesStorefrontPromotionCoverSku(appliesToAllSkus, arg1) {
+  appliesToAllSkus = appliesToAllSkus.appliesToAllSkus;
+  if (!appliesToAllSkus) {
+    let tmp3 = null != arg1;
+    if (tmp3) {
+      const skuIds = appliesToAllSkus.skuIds;
+      let hasItem;
+      if (skuIds != null) {
+        hasItem = skuIds.includes(arg1);
+      }
+      tmp3 = true === hasItem;
+    }
+    appliesToAllSkus = tmp3;
+  }
+  return appliesToAllSkus;
+}

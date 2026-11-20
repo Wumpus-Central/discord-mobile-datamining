@@ -69,7 +69,7 @@ let closure_28 = async function _transcodeImageToPng(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -264,7 +264,7 @@ function backwardCompatSend(APP_ASYNC_INDEX_TSX_LOADED) {
   }
   obj = require("PlatformUtils");
 }
-const NativeFeatures = fn(1072).NativeFeatures;
+const NativeFeatures = fn(1071).NativeFeatures;
 const set = new Set(["jpg", "jpeg", "jfif", "png"]);
 const set1 = new Set(["webp", "avif"]);
 const set2 = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]);
@@ -750,7 +750,7 @@ obj2.bounceDock = function bounceDock(arg0) {
             obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -784,7 +784,7 @@ obj2.bounceDock = function bounceDock(arg0) {
               const dock = closure_129_0.dock;
               dock.cancelBounce(closure_128_0);
               c3 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp11) {
             c3 = tmp;
@@ -859,7 +859,7 @@ obj2.copy = function copy(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -888,7 +888,7 @@ obj2.copy = function copy(arg0) {
           return obj;
         }
         v3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp9) {
         v3 = tmp;
         throw tmp9;
@@ -910,7 +910,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -928,7 +928,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             closure_129_0 = undefined;
             closure_129_1 = undefined;
             closure_129_2 = undefined;
-            tmp2(38)(closure_0(1380).isPlatformEmbedded, "Copy image method called outside native app");
+            tmp2(38)(closure_0(1378).isPlatformEmbedded, "Copy image method called outside native app");
             tmp2(38)(typeof DiscordNative.clipboard.copyImage === "function", "Copy image not supported");
             c3 = 1;
             c4 = 1;
@@ -945,7 +945,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(7186).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(7185).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -982,7 +982,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj11 = closure_0(7186);
+            const obj11 = closure_0(7185);
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -1023,7 +1023,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
           return obj;
         } else {
           c4 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp41) {
         c4 = tmp;
@@ -1046,7 +1046,7 @@ obj2.copyImageBlob = function copyImageBlob(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1093,7 +1093,7 @@ obj2.copyImageBlob = function copyImageBlob(arg0, arg1) {
           return obj;
         } else {
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         c3 = tmp;
@@ -1130,7 +1130,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1151,10 +1151,10 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
             closure_133_3 = undefined;
             closure_133_4 = undefined;
             closure_133_5 = undefined;
-            png(38)(unknown(1380).isPlatformEmbedded, "Save image method called outside native app");
+            png(38)(unknown(1378).isPlatformEmbedded, "Save image method called outside native app");
             const tmp84 = png(38);
             let tmp54 = closure_0;
-            const toURLSafeResult = png(1381).toURLSafe(closure_0);
+            const toURLSafeResult = png(1379).toURLSafe(closure_0);
             if (null == toURLSafeResult) {
               c10 = 3;
               const obj4 = { value: constants.ERRORED, done: true };
@@ -1179,7 +1179,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_21, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(7186).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(7185).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -1187,13 +1187,13 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(7186);
+                const obj9 = unknown(7185);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;
               c10 = 1;
             }
-            const obj13 = png(1381);
+            const obj13 = png(1379);
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1311,7 +1311,7 @@ obj2.saveFile = function saveFile(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1403,8 +1403,8 @@ obj2.downloadMLModelFile = function downloadMLModelFile(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   return (async () => {
-    v1(38)(v3(1380).isPlatformEmbedded, "Download ML model file method called outside native app");
-    v1(38)(null != v1(1381).toURLSafe(closure_0), "Could not download ML model, fileSrc was not a valid path");
+    v1(38)(v3(1378).isPlatformEmbedded, "Download ML model file method called outside native app");
+    v1(38)(null != v1(1379).toURLSafe(closure_0), "Could not download ML model, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadMLModelFile(closure_0, closure_1, closure_2);
     return value;
@@ -1438,8 +1438,8 @@ obj2.downloadClipsFile = function downloadClipsFile(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   return (async () => {
-    v1(38)(v3(1380).isPlatformEmbedded, "Download clips file method called outside native app");
-    v1(38)(null != v1(1381).toURLSafe(closure_0), "Could not download clips file, fileSrc was not a valid path");
+    v1(38)(v3(1378).isPlatformEmbedded, "Download clips file method called outside native app");
+    v1(38)(null != v1(1379).toURLSafe(closure_0), "Could not download clips file, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadClipsFile(closure_0, closure_1, closure_2);
     return value;
@@ -1480,8 +1480,8 @@ obj2.downloadOpenH264 = function downloadOpenH264(arg0, arg1, arg2, arg3) {
   closure_2 = arg2;
   closure_3 = arg3;
   return (async () => {
-    v1(38)(v3(1380).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
-    v1(38)(null != v1(1381).toURLSafe(closure_0), "Could not download OpenH264, fileSrc was not a valid path");
+    v1(38)(v3(1378).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
+    v1(38)(null != v1(1379).toURLSafe(closure_0), "Could not download OpenH264, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadOpenH264(closure_0, closure_1, closure_2, closure_3);
     return value;
@@ -1628,7 +1628,7 @@ obj2.waitForIPCReady = function waitForIPCReady() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1772,7 +1772,7 @@ obj2.isAlwaysOnTop = function isAlwaysOnTop(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -2194,7 +2194,7 @@ obj2.stopCPUProfiling = function stopCPUProfiling() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -2958,7 +2958,7 @@ obj2.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

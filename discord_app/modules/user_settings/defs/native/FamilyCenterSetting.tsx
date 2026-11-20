@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/FamilyCenterSetting.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2723 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2725 from "../../../parent_tools/FamilyCenter.messages.js";
 import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import useIsParentalConsentBannerActive from "../../../parent_tools/useIsParentalConsentBannerActive.tsx";
 import useParentalConsentWarning from "../../../parent_tools/useParentalConsentWarning.tsx";
@@ -9,14 +9,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2723.RZqaJn);
+    return intl.string(_modDef2725.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(6919).GroupIcon,
+  IconComponent: fn(6918).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
     const isParentalConsentBannerActive = useIsParentalConsentBannerActive.useIsParentalConsentBannerActive();
     const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
@@ -40,7 +40,7 @@ const route = SettingBuilders.createRoute({
             accessibilityLabel: null,
           };
           const intl = util.intl;
-          obj3.accessibilityLabel = intl.string(_modDef2723.wucWfE);
+          obj3.accessibilityLabel = intl.string(_modDef2725.wucWfE);
           tmp6 = jsx(WarningIcon.WarningIcon, {
             size: "sm",
             color: nativeDefault.colors.ICON_FEEDBACK_WARNING,
@@ -53,7 +53,7 @@ const route = SettingBuilders.createRoute({
     return tmp6;
   },
   screen: {
-    route: fn(1072).UserSettingsSections.FAMILY_CENTER,
+    route: fn(1071).UserSettingsSections.FAMILY_CENTER,
     getComponent() {
       return require("UserSettingsFamilyCenter").default;
     },

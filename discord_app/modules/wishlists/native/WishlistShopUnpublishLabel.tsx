@@ -14,7 +14,7 @@ const rect = {
   position: "absolute",
   top: nativeDefault.space.PX_8,
   left: nativeDefault.space.PX_8,
-  right: nativeDefault.space.PX_8,
+  width: "75%",
   zIndex: 1,
   alignItems: "flex-start",
 };

@@ -55,17 +55,17 @@ function loadThread(channelId) {
       } else {
         const _location = location;
         let obj2 = { path: null, exact: true };
-        const RouteParam = tmp13(4843).RouteParam;
-        const tmp13Result = tmp13(4830);
-        const RouteParam2 = tmp13(4843).RouteParam;
+        const RouteParam = tmp13(4845).RouteParam;
+        const tmp13Result = tmp13(4832);
+        const RouteParam2 = tmp13(4845).RouteParam;
         obj2.path = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj2);
-        const HTTP = tmp13(1285).HTTP;
+        const HTTP = tmp13(1284).HTTP;
         const obj3 = { url: closure_8.CHANNEL(channelId), rejectWithError: null };
         const guildIdResult = RouteParam.guildId();
-        obj3.rejectWithError = tmp13(1285).rejectWithMigratedError();
+        obj3.rejectWithError = tmp13(1284).rejectWithMigratedError();
         value = HTTP.get(obj3);
-        const tmp13Result2 = tmp13(1285);
+        const tmp13Result2 = tmp13(1284);
         const catchPromise = value
           .then((body) => {
             body = body.body;
@@ -105,11 +105,11 @@ function loadThread(channelId) {
     }
   }
 }
-const ChannelRecord = fn(4645);
+const ChannelRecord = fn(4647);
 ({ createChannelRecordFromServer: closure_4, THREAD_CHANNEL_TYPES: hasOwnProperty } = ChannelRecord);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_8, Routes: closure_9 } = Constants);
-const isStaticChannelRoute = fn(4648).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4650).isStaticChannelRoute;
 const dependencyMap = {};
 let c12 = false;
 const size = fn(2);
@@ -151,12 +151,12 @@ export default {
       if (0 === items1.length) {
         return Promise.all(items).then(() => {});
       } else {
-        const HTTP = items1(1285).HTTP;
+        const HTTP = items1(1284).HTTP;
         const request = { url: closure_8.THREADS_BULK, body: null, rejectWithError: null };
         const obj2 = { thread_ids: items1 };
         request.body = obj2;
-        request.rejectWithError = items1(1285).rejectWithMigratedError();
-        const obj4 = items1(1285);
+        request.rejectWithError = items1(1284).rejectWithMigratedError();
+        const obj4 = items1(1284);
         const postResult = HTTP.post(request);
         const catchPromise = HTTP.post(request)
           .then((result) => {

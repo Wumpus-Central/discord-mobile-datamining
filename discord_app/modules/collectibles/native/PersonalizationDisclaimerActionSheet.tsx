@@ -12,10 +12,10 @@ import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesi
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, header: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.header = { paddingVertical: nativeDefault.space.PX_8, alignSelf: "center", textAlign: "center" };

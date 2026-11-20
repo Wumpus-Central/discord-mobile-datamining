@@ -6,7 +6,7 @@ import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/HubActionCreators.tsx");
 
@@ -108,7 +108,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -195,7 +195,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -228,7 +228,7 @@ export default {
                 return obj8;
               } else {
                 c5 = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (1 === tmp7) {

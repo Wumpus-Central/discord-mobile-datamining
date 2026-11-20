@@ -3,7 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import GameRelationshipStore from "GameRelationshipStore.tsx";
 import LifecycleManager from "../../lib/LifecycleManager.tsx";
 
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 class GameRelationshipManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

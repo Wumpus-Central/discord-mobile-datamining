@@ -2,7 +2,7 @@
 import NativeSystemTelecomModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeSystemTelecomModule.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/SystemTelecomUtils.android.tsx");
 

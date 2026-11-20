@@ -73,7 +73,7 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -144,7 +144,7 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
         throw closure_1_6;
       }
       c9 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   }
 };
@@ -339,7 +339,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
   closure_131_2 = num13;
   return "Path";
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_6, PlatformTypes } = Constants);
 let c8 = "https://i.scdn.co/image/";
 const re9 = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/;

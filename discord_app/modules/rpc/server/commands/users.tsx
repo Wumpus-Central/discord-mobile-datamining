@@ -2,11 +2,11 @@
 import transformUserDefault from "../../helpers/transformUser.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
-const Constants = fn(6233);
+const Constants = fn(6235);
 ({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
-const RPCCommands = fn(1072).RPCCommands;
+const RPCCommands = fn(1071).RPCCommands;
 const obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15593);
+let CONTEXT_MENU_ICON_NAMES = fn(15557);
 const obj3 = {
   scope: null,
   handler(args) {
@@ -21,7 +21,7 @@ const obj3 = {
 const items = [RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj[RPCCommands.GET_USER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_USER, obj3);
-CONTEXT_MENU_ICON_NAMES = fn(15593);
+CONTEXT_MENU_ICON_NAMES = fn(15557);
 const obj5 = {
   scope: null,
   handler() {

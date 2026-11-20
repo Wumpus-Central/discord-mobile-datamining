@@ -200,15 +200,15 @@ class VoiceConnection {
         closure_0(Buffer.from(arg0, "base64").buffer);
       });
     };
-    obj.prepareMLSCommitTransition = function prepareMLSCommitTransition(arg0, arg1, arg2) {
+    obj.prepareMLSCommitTransition = function prepareMLSCommitTransition(image, arg1, arg2) {
       const str = Buffer.from(arg1);
       const result = obj.boundConnectionMethod("prepareMLSCommitTransitionB64");
-      result(arg0, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
+      result(image, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
     };
-    obj.processMLSWelcome = function processMLSWelcome(arg0, arg1, arg2) {
+    obj.processMLSWelcome = function processMLSWelcome(image, arg1, arg2) {
       const str = Buffer.from(arg1);
       const result = obj.boundConnectionMethod("processMLSWelcomeB64");
-      result(arg0, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
+      result(image, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
     };
     obj.setOnMLSFailureCallback = obj.callbackSetter("mls-failure-callback", (arg0) => {
       items = [,];

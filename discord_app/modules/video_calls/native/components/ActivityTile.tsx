@@ -40,7 +40,7 @@ function ActivityTileInner(participant) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -67,7 +67,7 @@ function ActivityTileInner(participant) {
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(10717)(obj4), done: false };
+              const obj5 = { value: v1(10659)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -77,8 +77,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(10719).setOrientationLockState(closure_128_3);
-          const obj = tmp2(10719);
+          const result = tmp2(10661).setOrientationLockState(closure_128_3);
+          const obj = tmp2(10661);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -271,14 +271,14 @@ function ActivityTileInner(participant) {
   return tmp23Result;
 }
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(10712).ActivityLayoutMode;
+let ActivityLayoutMode = fn(10654).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const XSMALL = fn(1187).AvatarSizes.XSMALL;
-const androidRippleConfig = fn(1191).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(4792);
+const XSMALL = fn(1186).AvatarSizes.XSMALL;
+const androidRippleConfig = fn(1190).getThemedRippleConfig({ foreground: true });
+const createStyles = fn(4794);
 let obj2 = {
   pressableOpacity: null,
   activityPreview: null,
@@ -320,7 +320,7 @@ let obj4 = {
   marginRight: 16,
 };
 obj2.overflow = {
-  height: fn(1187).AVATAR_SIZE_MAP[XSMALL],
+  height: fn(1186).AVATAR_SIZE_MAP[XSMALL],
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
 };
 obj2.buttonWrapper = { marginTop: 8, alignSelf: "center" };

@@ -4,8 +4,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
-const PlatformUtils = fn(1360);
+const createStyles = fn(4794);
+const PlatformUtils = fn(1358);
 let obj3 = null;
 if (PlatformUtils.isIOS()) {
   obj3 = { lineHeight: 22 };

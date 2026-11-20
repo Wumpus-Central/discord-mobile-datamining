@@ -45,12 +45,12 @@ function getStatusSize(arg0) {
   return metroImportDefault.SMALL;
 }
 const View = fn(17).View;
-const StatusTypes = fn(1072).StatusTypes;
-const StatusConstants = fn(1188);
+const StatusTypes = fn(1071).StatusTypes;
+const StatusConstants = fn(1187);
 ({ STATUS_PADDING: closure_6, StatusSizes: metroImportDefault } = StatusConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles((NORMAL) => {
   const obj = {
     status: { position: "absolute", right: -3, bottom: -3 },
@@ -381,5 +381,5 @@ export default noop.memo(function Avatar(isMobileOnline) {
     tmp10(cutout, obj14);
   }
 });
-export const AvatarSizes = fn(14399).AvatarSizes;
+export const AvatarSizes = fn(14367).AvatarSizes;
 export { getStatusSize };

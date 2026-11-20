@@ -13,7 +13,7 @@ import FamilyCenterControlledSettingsStore from "../FamilyCenterControlledSettin
 const require = globalThis.__r;
 
 require = fn;
-const SafetyToastType = fn(6383).SafetyToastType;
+const SafetyToastType = fn(6385).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
 
@@ -118,7 +118,7 @@ export function useDefaultGuildsRestricted() {
 }
 export function useAllowFriendsFromMutualGuildsOnlyForTeen() {
   const selectedTeen = controlledSetting(9018).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(16032).ParentalControlledFriendSourceFlags;
+  const ParentalControlledFriendSourceFlags = controlledSetting(15996).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -154,7 +154,7 @@ export function useParentalControlledConsent(PERSONALIZATION) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -180,16 +180,16 @@ export function useParentalControlledConsent(PERSONALIZATION) {
               items2 = [closure_0];
             }
             c4 = 1;
-            tmp3(8218).updateTeenConsents(tmp28, items1, items2);
+            tmp3(8217).updateTeenConsents(tmp28, items1, items2);
             c2 = 2;
             c5 = 1;
-            const obj3 = tmp3(8218);
+            const obj3 = tmp3(8217);
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            tmp3(6388).showFailedToast(constants.GENERIC_ERROR);
-            const obj2 = tmp3(6388);
+            tmp3(6390).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = tmp3(6390);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

@@ -3,7 +3,7 @@ import ApplicationFlagUtils from "utils/ApplicationFlagUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ApplicationFlags = fn(1072).ApplicationFlags;
+const ApplicationFlags = fn(1071).ApplicationFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useIsSocialLayerParentApplication.tsx");
 

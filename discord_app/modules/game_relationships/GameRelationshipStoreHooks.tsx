@@ -5,7 +5,7 @@ import GameRelationshipStore from "GameRelationshipStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_relationships/GameRelationshipStoreHooks.tsx");
 

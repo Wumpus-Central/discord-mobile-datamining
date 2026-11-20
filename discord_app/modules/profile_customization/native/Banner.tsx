@@ -5,9 +5,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const BANNER_HEIGHT = fn(1072).BANNER_HEIGHT;
+const BANNER_HEIGHT = fn(1071).BANNER_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_6 = createStyles.createStyles({ root: { width: "100%" }, image: { width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/Banner.tsx");

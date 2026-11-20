@@ -7,7 +7,7 @@ import TrashIcon from "../../../../design/components/Icon/native/redesign/genera
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import PencilIcon from "../../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
-import _modDef11598 from "../../../../../_runtime/metro/11598__.js";
+import _modDef11540 from "../../../../../_runtime/metro/11540__.js";
 import ArrowAngleLeftUpIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -17,7 +17,7 @@ import ICYMIStore from "../../ICYMIStore.tsx";
 require = fn;
 function UploadPlaceholder() {
   const obj = { style: closure_13(false).uploadContainer, children: null };
-  items = [React5(native.Icon, { source: _modDef11598, size: native.IconSizes.SMALL })];
+  items = [React5(native.Icon, { source: _modDef11540, size: native.IconSizes.SMALL })];
   const obj3 = { variant: "body-md/normal", color: "text-strong", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3UB9ad"]);
@@ -29,12 +29,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { background: { backgroundColor, overflow: "hidden" } };
   return obj;
 });
-const createICYMIStyles = fn(18138);
+const createICYMIStyles = fn(17965);
 let closure_13 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {

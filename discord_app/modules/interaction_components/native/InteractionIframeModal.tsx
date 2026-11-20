@@ -11,10 +11,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const BotTagTypes = fn(1365).BotTagTypes;
+const BotTagTypes = fn(1363).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 },
   header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" },

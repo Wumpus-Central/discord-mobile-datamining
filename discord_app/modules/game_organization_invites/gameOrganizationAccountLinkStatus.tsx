@@ -46,7 +46,7 @@ function getGameOrganizationAccountLinkStatus(id) {
     return str;
   }
 }
-const FetchState = fn(6704).FetchState;
+const FetchState = fn(6706).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/gameOrganizationAccountLinkStatus.tsx");
 

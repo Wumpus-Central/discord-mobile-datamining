@@ -27,7 +27,7 @@ let closure_10 = async function _executeHeadlessTask() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -400,9 +400,9 @@ let closure_10 = async function _executeHeadlessTask() {
   })();
 };
 const AppState = fn(17).AppState;
-const NativeAppStartup = fn(19449);
+const NativeAppStartup = fn(19269);
 ({ initHeadlessTask: metroImportDefault, applicationReady: closure_8 } = NativeAppStartup);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_startup/native/executeHeadlessTask.tsx");
 

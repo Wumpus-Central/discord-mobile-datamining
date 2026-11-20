@@ -3,7 +3,7 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import VirtualCurrencyStore from "../virtual_currency/stores/VirtualCurrencyStore.tsx";
 import OrbsArcadeStore from "OrbsArcadeStore.tsx";
 
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/OrbsArcadeAnalytics.tsx");
 

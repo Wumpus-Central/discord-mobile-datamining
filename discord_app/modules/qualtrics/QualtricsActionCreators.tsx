@@ -27,7 +27,7 @@ let closure_11 = async function _fetchSurveyDetails(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -124,13 +124,14 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
         } else {
           closure_5 = tmp3;
           closure_4 = tmp7;
+          closure_132_0 = undefined;
           state = state.getState();
           const displayedQuestions = state.getDisplayedQuestions(closure_0);
           closure_2 = displayedQuestions;
           if (displayedQuestions == null) {
             closure_2 = [];
           }
-          let tmp19 = (function parseSurveyResponses(arg0, arg1, arr) {
+          let tmp29 = (function parseSurveyResponses(arg0, arg1, arr) {
             survey = survey.getSurvey(arg0);
             if (null == survey) {
               return null;
@@ -208,9 +209,9 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
               return obj;
             }
           })(closure_0, closure_1, closure_2);
-          if (null == tmp19) {
+          if (null == tmp29) {
             c9 = 3;
-            const obj5 = { value: { responseId: "null" }, done: true };
+            const obj5 = { value: { responseId: "null", retryable: true }, done: true };
             return obj5;
           } else {
             c6 = 1;
@@ -219,7 +220,7 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
             const request = { url: Endpoints.EMBEDDED_SURVEY_RESPONSE(closure_0), body: null, rejectWithError: true };
             const obj6 = { values_json: null };
             const _JSON = JSON;
-            obj6.values_json = JSON.stringify(tmp19);
+            obj6.values_json = JSON.stringify(tmp29);
             request.body = obj6;
             c8 = 2;
             c9 = 1;
@@ -229,19 +230,35 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
         }
       } else if (1 === tmp7) {
         c6 = 0;
-        closure_132_0 = survey;
-        closure_133_1(closure_133_2[9]).captureException(closure_132_0);
+        closure_132_1 = survey;
+        closure_133_1(closure_133_2[9]).captureException(closure_132_1);
+        let status = null;
+        if (null != closure_132_1) {
+          status = null;
+          if (typeof closure_132_1 === "object") {
+            status = null;
+            if ("status" in closure_132_1) {
+              status = closure_132_1.status;
+            }
+          }
+        }
+        closure_132_0 = status;
+        let tmp26 = 400 === closure_132_0;
+        if (!tmp26) {
+          tmp26 = 429 === closure_132_0;
+        }
+        const obj8 = { responseId: "null", retryable: tmp26 };
         c9 = 3;
-        const obj8 = { value: { responseId: "null" }, done: true };
-        return obj8;
+        const obj9 = { value: obj8, done: true };
+        return obj9;
       } else if (arg0 === 1) {
         c9 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 0;
         c9 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
         value.responseId = value.body.responseId;
         c6 = 0;
@@ -249,11 +266,11 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
         let obj = { value, done: true };
         return obj;
       }
-    } catch (tmp20) {
-      survey = tmp20;
+    } catch (tmp30) {
+      survey = tmp30;
       if (tmp4 === c6) {
         c9 = tmp2;
-        throw tmp20;
+        throw tmp30;
       } else {
         c8 = tmp;
       }
@@ -315,10 +332,10 @@ let closure_13 = async function _fireSurveyAction() {
     return value;
   })();
 };
-const useQualtricsResponseStore = fn(6365).useQualtricsResponseStore;
-const QualtricsConstants = fn(6367);
+const useQualtricsResponseStore = fn(6367).useQualtricsResponseStore;
+const QualtricsConstants = fn(6369);
 ({ QuestionSelectorEnum: closure_8, QuestionTypeEnum: closure_9 } = QualtricsConstants);
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/qualtrics/QualtricsActionCreators.tsx");
 

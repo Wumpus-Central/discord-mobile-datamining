@@ -6,13 +6,13 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(8213);
+const GuildPowerupsConstants = fn(8212);
 ({
   GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP,
   GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4,
   PowerupActiveStatusType: hasOwnProperty,
 } = GuildPowerupsConstants);
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx");
 

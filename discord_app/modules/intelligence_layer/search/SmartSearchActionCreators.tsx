@@ -18,7 +18,7 @@ let closure_8 = async function _fetchAnswer(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -176,18 +176,18 @@ let closure_8 = async function _fetchAnswer(arg0) {
           })(closure_129_10.body.message_citations);
           closure_129_12 = (function resolveSearchStatus(search_status, length) {
             if ("not_qualified" === search_status) {
-              return closure_1_0(13112).SmartSearchStatus.NOT_QUALIFIED;
+              return closure_1_0(13082).SmartSearchStatus.NOT_QUALIFIED;
             } else if ("no_results" === search_status) {
-              return closure_1_0(13112).SmartSearchStatus.EMPTY;
+              return closure_1_0(13082).SmartSearchStatus.EMPTY;
             } else if ("success" === search_status) {
               if (length > 0) {
-                let EMPTY = closure_1_0(13112).SmartSearchStatus.LOADED;
+                let EMPTY = closure_1_0(13082).SmartSearchStatus.LOADED;
               } else {
-                EMPTY = closure_1_0(13112).SmartSearchStatus.EMPTY;
+                EMPTY = closure_1_0(13082).SmartSearchStatus.EMPTY;
               }
               return EMPTY;
             } else {
-              return closure_1_0(13112).SmartSearchStatus.ERROR;
+              return closure_1_0(13082).SmartSearchStatus.ERROR;
             }
           })(closure_129_10.body.search_status, closure_129_11.length);
           const obj15 = {
@@ -239,7 +239,7 @@ let closure_8 = async function _fetchAnswer(arg0) {
   }
 };
 SmartSearchResultsStoreDefault;
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/SmartSearchActionCreators.tsx");
 

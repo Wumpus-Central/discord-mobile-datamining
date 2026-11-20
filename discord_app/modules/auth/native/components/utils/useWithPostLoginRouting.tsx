@@ -8,7 +8,7 @@ import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ LoginStates: metroImportDefault, AuthStates: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useWithPostLoginRouting.tsx");
@@ -76,7 +76,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

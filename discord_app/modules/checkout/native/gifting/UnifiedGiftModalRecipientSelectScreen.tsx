@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const UserRowModes = fn(9526).UserRowModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/checkout/native/gifting/Unifi
 
 export default function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) {
   setRecipientUser = setRecipientUser.setRecipientUser;
-  importDefault = setRecipientUser(1502).useNavigation();
+  importDefault = setRecipientUser(1500).useNavigation();
   const obj2 = {
     style: closure_6().container,
     children: jsx(SearchableUserListDefault, {

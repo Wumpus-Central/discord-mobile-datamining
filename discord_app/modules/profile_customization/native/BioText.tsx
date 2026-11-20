@@ -24,11 +24,11 @@ function LinkButton(arg0) {
   return React5(Pressable, obj);
 }
 const Pressable = fn(17).Pressable;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const CHANGELOG_URL = fn(4694).CHANGELOG_URL;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const CHANGELOG_URL = fn(4696).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles({
   text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 },
   span: {

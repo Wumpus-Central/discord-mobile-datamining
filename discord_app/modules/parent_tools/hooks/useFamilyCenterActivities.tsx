@@ -5,7 +5,7 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const TeenActionDisplayType = fn(8217).TeenActionDisplayType;
+const TeenActionDisplayType = fn(8216).TeenActionDisplayType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/hooks/useFamilyCenterActivities.tsx");
 

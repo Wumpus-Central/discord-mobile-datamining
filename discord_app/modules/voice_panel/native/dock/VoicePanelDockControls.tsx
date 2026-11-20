@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8496 from "../../../../../_runtime/metro/08496__.js";
+import _modDef8495 from "../../../../../_runtime/metro/08495__.js";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
-import _modDef13328 from "../../../../../_runtime/metro/13328__.js";
+import _modDef13298 from "../../../../../_runtime/metro/13298__.js";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
 import useSoundboardConfig from "../hooks/useSoundboardConfig.tsx";
 import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton.tsx";
@@ -87,11 +87,11 @@ function DockHangUpButton(channelId) {
     state.closeChannel(channelId);
   }, items);
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
-  const intl = channelId(1113).intl;
-  obj.accessibilityLabel = intl.string(channelId(1113).t["6vrfgt"]);
-  obj.icon = _modDef8496;
+  const intl = channelId(1112).intl;
+  obj.accessibilityLabel = intl.string(channelId(1112).t["6vrfgt"]);
+  obj.icon = _modDef8495;
   obj.onPress = callback;
-  return closure_9(channelId(7472).IconButton, obj);
+  return closure_9(channelId(7471).IconButton, obj);
 }
 function DockSoundboardButton(arg0) {
   ({ onPress, disabled, disabledAccessibilityHint } = arg0);
@@ -106,19 +106,19 @@ function DockSoundboardButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef13328;
+  obj.icon = _modDef13298;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;
   return React6(IconButton.IconButton, obj);
 }
 const View = fn(17).View;
-const InputModes = fn(1072).InputModes;
+const InputModes = fn(1071).InputModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
-  actions: { flexDirection: "row", alignItems: "center", gap: fn(11706).DOCK_GAP },
+  actions: { flexDirection: "row", alignItems: "center", gap: fn(11648).DOCK_GAP },
   buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS },
 };
 let closure_11 = createStyles.createStyles(obj);

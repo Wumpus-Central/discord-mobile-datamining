@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef11318 from "../../../../../_runtime/metro/11318__.js";
+import _modDef11260 from "../../../../../_runtime/metro/11260__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -33,35 +33,35 @@ function VideoUploadQualityNitroUpsell() {
     const obj6 = { style: tmp3.cardContent, children: null };
     const obj7 = {
       style: tmp3.cardIcon,
-      source: _modDef11318,
-      size: tmp(1187).Icon.Sizes.SMALL,
+      source: _modDef11260,
+      size: tmp(1186).Icon.Sizes.SMALL,
       color: nativeDefault.unsafe_rawColors.PRIMARY_400,
     };
-    const items2 = [closure_9(tmp(1187).Icon, obj7)];
+    const items2 = [closure_9(tmp(1186).Icon, obj7)];
     const obj8 = { variant: "body-sm/medium", color: "text-muted", children: null };
-    const intl2 = tmp(1113).intl;
+    const intl2 = tmp(1112).intl;
     const obj9 = {
       onClick() {
         UserSettingsModalActionCreatorsDefault.setSection(UserSettingsSections.PREMIUM);
         closure_0.push(UserSettingsSections.PREMIUM, { isFromTextSection: true });
       },
     };
-    obj8.children = intl2.format(tmp(1113).t.uW1zul, obj9);
-    items2[1] = closure_9(tmp(5383).Text, obj8);
+    obj8.children = intl2.format(tmp(1112).t.uW1zul, obj9);
+    items2[1] = closure_9(tmp(5385).Text, obj8);
     obj6.children = items2;
     obj5.children = closure_10(View, obj6);
-    obj4.children = closure_9(tmp(6928).Card, obj5);
+    obj4.children = closure_9(tmp(6927).Card, obj5);
     tmp7Result = closure_9(View, obj4);
   }
   children[1] = tmp7Result;
   return closure_10(View, { children });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8593).MobileUserSettings;
-const UserSettingsSections = fn(1072).UserSettingsSections;
+const MobileUserSettings = fn(8592).MobileUserSettings;
+const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   card: {
     marginTop: 8,

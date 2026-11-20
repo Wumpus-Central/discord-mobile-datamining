@@ -5,8 +5,8 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
 import NitroCoinSpotIllustration from "../../../design/components/mana-assets/native/generated/NitroCoinSpotIllustration.native.tsx";
-import OrbsArcadeTypes from "../OrbsArcadeTypes.tsx";
 import OrbsArcadeRewardUtils from "../utils/OrbsArcadeRewardUtils.tsx";
+import OrbsArcadeTypes from "../OrbsArcadeTypes.tsx";
 import OrbsArcadeAnalytics from "../OrbsArcadeAnalytics.tsx";
 import openOrbsArcadeSheets from "openOrbsArcadeSheets.tsx";
 import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview.tsx";
@@ -31,7 +31,7 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const obj2 = { children: null };
   const obj = rewards(504);
   const items2 = [
-    closure_9(rewards(10003).Pile, {
+    closure_9(rewards(10006).Pile, {
       "aria-label": memo,
       shape: rewards(8903).CutoutShape.Circle,
       size: v50,
@@ -42,11 +42,11 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   ];
   const obj4 = { style: tmp.rewardShelfCopy, children: null };
   const obj5 = { variant: "heading-xs/semibold", color: "text-default", children: null };
-  const intl = rewards(1113).intl;
-  obj5.children = intl.string(rewards(1113).t.DCCcdz);
+  const intl = rewards(1112).intl;
+  obj5.children = intl.string(rewards(1112).t.DCCcdz);
   const items3 = [
-    closure_9(rewards(5383).Text, obj5),
-    closure_9(rewards(5383).Text, {
+    closure_9(rewards(5385).Text, obj5),
+    closure_9(rewards(5385).Text, {
       variant: "heading-xs/semibold",
       color: "text-subtle",
       lineClamp: 2,
@@ -136,7 +136,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let c12 = 50;
 let items = [nativeDefault.unsafe_rawColors.TRANSPARENT, "rgba(16, 142, 77, 0.5)"];
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj2 = {
   rewardShelf: {
     flexDirection: "row",
@@ -160,8 +160,8 @@ let obj2 = {
 };
 let size = {
   marginLeft: "auto",
-  width: fn(5396).SMALL_BUTTON_HEIGHT,
-  height: fn(5396).SMALL_BUTTON_HEIGHT,
+  width: fn(5398).SMALL_BUTTON_HEIGHT,
+  height: fn(5398).SMALL_BUTTON_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
 };
@@ -178,7 +178,7 @@ let items2 = [{ scaleX: -1 }];
 obj5.transform = items2;
 obj2.chestLogoMirrored = obj5;
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_17 = createStyles.createStyles((width) => ({
   nitroCoin: { width, height: width, alignItems: "center", justifyContent: "center" },
 }));

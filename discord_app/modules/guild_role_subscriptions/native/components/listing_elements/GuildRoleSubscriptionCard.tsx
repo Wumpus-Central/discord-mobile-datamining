@@ -26,7 +26,7 @@ class Separator {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { section: { gap: 14 }, separator: null };
 let size = {
   width: "100%",
@@ -53,12 +53,12 @@ export function Content(arg0) {
   const obj5 = { separator: closure_6(Separator, {}), children: null };
   const obj6 = { children: null };
   const obj7 = { children: null };
-  const intl = guildId(1113).intl;
-  obj7.children = intl.string(guildId(1113).t["DJ+bGu"]);
+  const intl = guildId(1112).intl;
+  obj7.children = intl.string(guildId(1112).t["DJ+bGu"]);
   items = [
     closure_6(SectionTitle, obj7),
-    closure_6(guildId(1187).Spacer, { size: 8 }),
-    closure_6(guildId(16695).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+    closure_6(guildId(1186).Spacer, { size: 8 }),
+    closure_6(guildId(16519).GuildRoleSubscriptionMemberPreview, { guildId, role }),
   ];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , ,];
@@ -66,9 +66,9 @@ export function Content(arg0) {
   if (first.size > 0) {
     const obj8 = { style: tmp.section, children: null };
     const obj9 = { children: null };
-    const intl2 = guildId(1113).intl;
+    const intl2 = guildId(1112).intl;
     const obj10 = { numEmojis: first.size };
-    obj9.children = intl2.format(guildId(1113).t.oDeFmv, obj10);
+    obj9.children = intl2.format(guildId(1112).t.oDeFmv, obj10);
     const items2 = [closure_6(SectionTitle, obj9)];
     const obj11 = { emojiIds: null, guildId: null };
     const items3 = [];
@@ -84,9 +84,9 @@ export function Content(arg0) {
   if (first1.length > 0) {
     const obj12 = { style: tmp.section, children: null };
     const obj13 = { children: null };
-    const intl3 = guildId(1113).intl;
+    const intl3 = guildId(1112).intl;
     const obj14 = { numChannels: length };
-    obj13.children = intl3.format(guildId(1113).t.l40GUu, obj14);
+    obj13.children = intl3.format(guildId(1112).t.l40GUu, obj14);
     const items4 = [
       closure_6(SectionTitle, obj13),
       first1.map((benefit) =>
@@ -101,9 +101,9 @@ export function Content(arg0) {
   if (first2.length > 0) {
     const obj15 = { style: tmp.section, children: null };
     const obj16 = { children: null };
-    const intl4 = guildId(1113).intl;
+    const intl4 = guildId(1112).intl;
     const obj17 = { numIntangibles: length2 };
-    obj16.children = intl4.format(guildId(1113).t["4V/Mfi"], obj17);
+    obj16.children = intl4.format(guildId(1112).t["4V/Mfi"], obj17);
     const items5 = [
       closure_6(SectionTitle, obj16),
       first2.map((benefit, index) =>
@@ -115,5 +115,5 @@ export function Content(arg0) {
   }
   items1[3] = tmp5Result4;
   obj5.children = items1;
-  return closure_8(guildId(16694).SeparatedList, obj5);
+  return closure_8(guildId(16518).SeparatedList, obj5);
 }

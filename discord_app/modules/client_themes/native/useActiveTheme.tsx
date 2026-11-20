@@ -39,7 +39,7 @@ function useActiveThemeType() {
   }
   return DEFAULT;
 }
-const ThemeConstants = fn(1195);
+const ThemeConstants = fn(1194);
 ({ SystemThemeState: closure_6, ActiveThemeType: metroImportDefault } = ThemeConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useActiveTheme.tsx");

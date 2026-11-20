@@ -12,8 +12,8 @@ import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const InputModes = fn(1072).InputModes;
-const StaticChannelRoute = fn(4648).StaticChannelRoute;
+const InputModes = fn(1071).InputModes;
+const StaticChannelRoute = fn(4650).StaticChannelRoute;
 let closure_11 = {
   LURKER: "lurker",
   VOICE: "voice",
@@ -24,7 +24,7 @@ let closure_11 = {
   APPS: "apps",
   NONE: "none",
 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },

@@ -128,7 +128,7 @@ function readConjureProjectLinkCard(applicationId, ticket, memo2) {
   return null;
 }
 let closure_3 = ["application"];
-const canRemixProject = fn(6500).canRemixProject;
+const canRemixProject = fn(6502).canRemixProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/native/conjureProjectLinkCard.tsx");
 

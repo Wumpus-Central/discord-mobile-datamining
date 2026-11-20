@@ -1,11 +1,11 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx
-import _modDef2755 from "../GuildPowerups.messages.js";
+import _modDef2757 from "../GuildPowerups.messages.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1072).GuildFeatures;
+const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx");
 
@@ -25,7 +25,7 @@ export default function useGuildPowerupTier3OverrideConfig(arg0) {
   ) {
     const obj2 = { shouldShow: true, text: null };
     const intl = require("util").intl;
-    obj2.text = intl.string(_modDef2755.l9n4QZ);
+    obj2.text = intl.string(_modDef2757.l9n4QZ);
     let obj3 = obj2;
   } else {
     obj3 = { shouldShow: false, text: "" };

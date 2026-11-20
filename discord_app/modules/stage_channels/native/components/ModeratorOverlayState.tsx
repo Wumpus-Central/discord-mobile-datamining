@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/components/ModeratorOverlayState.tsx
-import _mod4707 from "../../../../../_runtime/metro/04707__.js";
-import identity from "../../../../../_runtime/metro/01258__.js";
+import _mod4709 from "../../../../../_runtime/metro/04709__.js";
+import identity from "../../../../../_runtime/metro/01257__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
@@ -11,7 +11,7 @@ let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
     dismissOverlay(arg0) {
       const overlayDismissedChannelIds = dependencyMap().overlayDismissedChannelIds;
       overlayDismissedChannelIds.add(arg0);
-      overlayDismissedChannelIds(1263).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
+      overlayDismissedChannelIds(1262).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
     },
   };
   return obj;
@@ -20,11 +20,11 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export function useModeratorOverlayChannelState(id) {
   closure_0 = id;
-  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4707.shallow);
+  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4709.shallow);
   items = [
     !closure_2(
       (overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds,
-      _mod4707.shallow,
+      _mod4709.shallow,
     ).has(id),
     () => closure_1(closure_0),
   ];

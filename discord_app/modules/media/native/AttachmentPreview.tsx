@@ -6,20 +6,20 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef11132 from "../../../../_runtime/metro/11132__.js";
-import _modDef11133 from "../../../../_runtime/metro/11133__.js";
-import _modDef11134 from "../../../../_runtime/metro/11134__.js";
-import _modDef11135 from "../../../../_runtime/metro/11135__.js";
-import _modDef11136 from "../../../../_runtime/metro/11136__.js";
-import _modDef11137 from "../../../../_runtime/metro/11137__.js";
-import _modDef11138 from "../../../../_runtime/metro/11138__.js";
-import _modDef11139 from "../../../../_runtime/metro/11139__.js";
-import _modDef11140 from "../../../../_runtime/metro/11140__.js";
-import _modDef11141 from "../../../../_runtime/metro/11141__.js";
-import _modDef11142 from "../../../../_runtime/metro/11142__.js";
-import _modDef11143 from "../../../../_runtime/metro/11143__.js";
-import _modDef11144 from "../../../../_runtime/metro/11144__.js";
-import _modDef11145 from "../../../../_runtime/metro/11145__.js";
+import _modDef11074 from "../../../../_runtime/metro/11074__.js";
+import _modDef11075 from "../../../../_runtime/metro/11075__.js";
+import _modDef11076 from "../../../../_runtime/metro/11076__.js";
+import _modDef11077 from "../../../../_runtime/metro/11077__.js";
+import _modDef11078 from "../../../../_runtime/metro/11078__.js";
+import _modDef11079 from "../../../../_runtime/metro/11079__.js";
+import _modDef11080 from "../../../../_runtime/metro/11080__.js";
+import _modDef11081 from "../../../../_runtime/metro/11081__.js";
+import _modDef11082 from "../../../../_runtime/metro/11082__.js";
+import _modDef11083 from "../../../../_runtime/metro/11083__.js";
+import _modDef11084 from "../../../../_runtime/metro/11084__.js";
+import _modDef11085 from "../../../../_runtime/metro/11085__.js";
+import _modDef11086 from "../../../../_runtime/metro/11086__.js";
+import _modDef11087 from "../../../../_runtime/metro/11087__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -37,7 +37,7 @@ class AttachmentIcon {
       }
       let tmp2 = obj4[obj.classifyFileName(obj, str)];
       if (tmp2 == null) {
-        tmp2 = _modDef11143;
+        tmp2 = _modDef11085;
       }
       return tmp2;
     }, items);
@@ -102,7 +102,7 @@ function DefaultAttachmentPreview(fileName) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   fileInfoAttachmentPreviewFile: {
     flexDirection: "row",
@@ -128,20 +128,20 @@ let obj = {
 };
 const metroImportDefault = createStyles.createStyles(obj);
 let obj4 = {
-  archive: _modDef11132,
-  acrobat: _modDef11133,
-  ae: _modDef11134,
-  ai: _modDef11135,
-  audio: _modDef11136,
-  code: _modDef11137,
-  document: _modDef11138,
-  image: _modDef11139,
-  photoshop: _modDef11140,
-  sketch: _modDef11141,
-  spreadsheet: _modDef11142,
-  unknown: _modDef11143,
-  video: _modDef11144,
-  webcode: _modDef11145,
+  archive: _modDef11074,
+  acrobat: _modDef11075,
+  ae: _modDef11076,
+  ai: _modDef11077,
+  audio: _modDef11078,
+  code: _modDef11079,
+  document: _modDef11080,
+  image: _modDef11081,
+  photoshop: _modDef11082,
+  sketch: _modDef11083,
+  spreadsheet: _modDef11084,
+  unknown: _modDef11085,
+  video: _modDef11086,
+  webcode: _modDef11087,
 };
 let closure_12 = noop.memo(function ImageThumbnail(borderRadius) {
   ({ uri, width, height, style, fileName } = borderRadius);

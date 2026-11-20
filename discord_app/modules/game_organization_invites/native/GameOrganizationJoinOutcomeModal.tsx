@@ -67,11 +67,11 @@ function GameOrganizationJoinOutcomeScreen(arg0) {
   return timestampProducer(ModalScreen.ModalScreen, obj6);
 }
 const View = fn(17).View;
-let closure_4 = fn(11834).GAME_ORGANIZATION_JOIN_OUTCOME_MODAL_KEY;
+let closure_4 = fn(11776).GAME_ORGANIZATION_JOIN_OUTCOME_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const constants = { OUTCOME: "OUTCOME" };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ graphic: { alignItems: "center" }, text: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -83,7 +83,7 @@ export default function GameOrganizationJoinOutcomeModal(code) {
   const result = code.result;
   importDefault = result;
   items = [code, result];
-  const navigatorScreens = code(6973).useNavigatorScreens(() => {
+  const navigatorScreens = code(6972).useNavigatorScreens(() => {
     const obj = {};
     const obj2 = {
       headerLeft: NavigatorHeader.getHeaderCloseButton(closeGameOrganizationJoinOutcomeModal),
@@ -97,7 +97,7 @@ export default function GameOrganizationJoinOutcomeModal(code) {
     obj[constants.OUTCOME] = obj2;
     return obj;
   }, items);
-  return closure_5(code(11981).Modal, {
+  return closure_5(code(11923).Modal, {
     screens: navigatorScreens,
     initialRouteName: constants.OUTCOME,
     gradientColor: "purple",

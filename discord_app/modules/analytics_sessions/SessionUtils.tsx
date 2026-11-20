@@ -7,8 +7,8 @@ const result1 = size.fileFinishedImporting("modules/analytics_sessions/SessionUt
 
 export const SESSION_IDLE_TIMEOUT_MILLIS = result;
 export const CLIENT_SESSION_STORAGE_VERSION = 1;
-export function isSessionExpired(lastUsedTimestamp) {
-  const sum = result + lastUsedTimestamp.lastUsedTimestamp;
+export function isSessionExpired(_cachedSession) {
+  const sum = result + _cachedSession.lastUsedTimestamp;
   return sum - Date.now() <= 0;
 }
 export function timestampOrZero(arg0) {

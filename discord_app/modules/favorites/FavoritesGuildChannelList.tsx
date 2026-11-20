@@ -96,7 +96,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
   if (favoriteChannels == null) {
     favoriteChannels = FavoriteStore.getFavoriteChannels();
   }
-  new Set(favoriteChannels(11170).getAutoAddedThreadsCategoryIds(favoriteChannels));
+  new Set(favoriteChannels(11112).getAutoAddedThreadsCategoryIds(favoriteChannels));
   const isGuildCollapsedResult = UserGuildSettingsStore.isGuildCollapsed(id);
   dependencyMap = isGuildCollapsedResult;
   channel2 = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
@@ -110,13 +110,13 @@ function computeFavoritesState(favoriteChannels, arg1) {
       continue;
     } else {
       let tmp5 = favoriteChannels;
-      if (tmp21.type === favoriteChannels(1196).FavoriteChannelType.CATEGORY) {
+      if (tmp21.type === favoriteChannels(1195).FavoriteChannelType.CATEGORY) {
         continue;
       } else {
         let tmp8 = closure_19(favoriteChannels, tmp21, channel);
         if (null != tmp21.parentId) {
           if (null != favoriteChannels[tmp21.parentId]) {
-            if (favoriteChannels[tmp21.parentId].type === tmp5(1196).FavoriteChannelType.CATEGORY) {
+            if (favoriteChannels[tmp21.parentId].type === tmp5(1195).FavoriteChannelType.CATEGORY) {
               let parentId = tmp21.parentId;
               if (!(parentId in obj3)) {
                 obj3[parentId] = [];
@@ -275,8 +275,8 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined,
   });
-  let obj2 = favoriteChannels(11170);
-  const favoritesCategories = favoriteChannels(11158).getFavoritesCategories(favoriteChannels);
+  let obj2 = favoriteChannels(11112);
+  const favoritesCategories = favoriteChannels(11100).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -422,7 +422,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
                 isPrivate.id,
               );
             });
-            const found = mapped.filter(items(1255).isNotNullish);
+            const found = mapped.filter(items(1254).isNotNullish);
             const arr = closure_1(12)(items);
             closure_1 = found
               .sortBy((arg0) => {
@@ -650,13 +650,13 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
   };
 }
-const ChannelRecord = fn(4645);
+const ChannelRecord = fn(4647);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: closure_10 } = ChannelRecord);
-let closure_19 = fn(4723).createFavoritesGuildChannelRecord;
-const FavoritesConstants = fn(4654);
+let closure_19 = fn(4725).createFavoritesGuildChannelRecord;
+const FavoritesConstants = fn(4656);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(8208).ChannelListChannelNoticeRow;
-const Permissions = fn(1083).Permissions;
+const constants = fn(8207).ChannelListChannelNoticeRow;
+const Permissions = fn(1082).Permissions;
 let items = [
   EmbeddedActivitiesStore,
   FavoriteStore,

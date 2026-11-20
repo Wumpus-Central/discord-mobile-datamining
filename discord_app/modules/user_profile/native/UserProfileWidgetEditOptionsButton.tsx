@@ -14,20 +14,20 @@ export default function UserProfileWidgetEditOptionsButton(widget) {
     ref,
     size: "sm",
     variant: "secondary",
-    icon: jsx(widget(6903).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }),
+    icon: jsx(widget(6902).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }),
     accessibilityLabel: null,
     onPress: null,
   };
-  const intl = widget(1113).intl;
-  obj.accessibilityLabel = intl.string(widget(1113).t.xpSHSk);
+  const intl = widget(1112).intl;
+  obj.accessibilityLabel = intl.string(widget(1112).t.xpSHSk);
   obj.onPress = function onPress() {
     return openUserProfileWidgetEditOptionsActionSheetDefault({ widget, returnFocusRef: ref });
   };
-  return jsx(widget(7472).IconButton, {
+  return jsx(widget(7471).IconButton, {
     ref,
     size: "sm",
     variant: "secondary",
-    icon: jsx(widget(6903).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }),
+    icon: jsx(widget(6902).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }),
     accessibilityLabel: null,
     onPress: null,
   });

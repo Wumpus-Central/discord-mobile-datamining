@@ -10,14 +10,14 @@ import UploadStore from "../../../stores/UploadStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const RowGeneratorConstants = fn(8551);
+const RowGeneratorConstants = fn(8550);
 ({
   Changeset: closure_6,
   LoadingType: metroImportDefault,
   RowType: closure_8,
   SeparatorType: closure_9,
 } = RowGeneratorConstants);
-const MessageFlags = fn(1072).MessageFlags;
+const MessageFlags = fn(1071).MessageFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/createChannelStream.tsx");
 

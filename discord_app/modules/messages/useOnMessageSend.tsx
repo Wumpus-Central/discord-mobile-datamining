@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
-const MessageStates = fn(1072).MessageStates;
+const MessageStates = fn(1071).MessageStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
 

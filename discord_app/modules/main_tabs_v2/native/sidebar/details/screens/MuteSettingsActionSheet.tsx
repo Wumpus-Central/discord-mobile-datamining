@@ -10,7 +10,7 @@ import RelationshipStore from "../../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 
 require = fn;
-const UserNotificationSettings = fn(1072).UserNotificationSettings;
+const UserNotificationSettings = fn(1071).UserNotificationSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);

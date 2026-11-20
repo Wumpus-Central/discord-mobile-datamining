@@ -1,7 +1,7 @@
 // discord_app/components_native/common/Alerts.tsx
 import discord_common_shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1655 from "../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../_runtime/metro/01653__.js";
 import native from "../../../discord_common/js/packages/design/native.tsx";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
 import OverlayViewDefault from "../../design/void/OverlayView/native/OverlayView.tsx";
@@ -33,7 +33,7 @@ function AlertWrapper(item) {
   if (transitionState === require("native").TransitionStates.MOUNTED) {
     num = 1;
   }
-  const sharedValue = require("../../../_runtime/metro/01655__.js").useSharedValue(num);
+  const sharedValue = require("../../../_runtime/metro/01653__.js").useSharedValue(num);
   let items1 = [transitionState, sharedValue];
   const effect = noop.useEffect(() => {
     let num = 1;
@@ -42,17 +42,17 @@ function AlertWrapper(item) {
     }
     const result = _undefined3.set(num);
   }, items1);
-  let obj2 = require("../../../_runtime/metro/01655__.js");
+  let obj2 = require("../../../_runtime/metro/01653__.js");
   const obj3 = noop;
   const items2 = [
     closure_17,
     sharedValue,
     require("timing/timing").withTiming,
-    require("../../../_runtime/metro/01655__.js").Easing,
+    require("../../../_runtime/metro/01653__.js").Easing,
     closure_16,
     transitionState,
     require("native").TransitionStates,
-    require("../../../_runtime/metro/01708__.js").scheduleOnRN,
+    require("../../../_runtime/metro/01706__.js").scheduleOnRN,
     item.cleanUp,
   ];
   _require = undefined;
@@ -127,14 +127,14 @@ function AlertWrapper(item) {
   AlertsTsx2.__closure = items3;
   AlertsTsx2.__workletHash = 13015713816035;
   AlertsTsx2.__initData = tmp7;
-  const animatedStyle = require("../../../_runtime/metro/01655__.js").useAnimatedStyle(AlertsTsx2);
-  const tmp2Result = require("../../../_runtime/metro/01655__.js");
+  const animatedStyle = require("../../../_runtime/metro/01653__.js").useAnimatedStyle(AlertsTsx2);
+  const tmp2Result = require("../../../_runtime/metro/01653__.js");
   const items4 = [
     closure_18,
     stateFromStores,
     sharedValue,
     require("timing/timing").withTiming,
-    require("../../../_runtime/metro/01655__.js").Easing,
+    require("../../../_runtime/metro/01653__.js").Easing,
     require("spring/spring").withSpring,
     require("springPresets").SUBTLE_SPRING,
     0.7,
@@ -198,7 +198,7 @@ function AlertWrapper(item) {
   AlertsTsx3.__workletHash = 2489423342319;
   AlertsTsx3.__initData = tmp17;
   const items6 = [isDismissable];
-  const animatedStyle1 = require("../../../_runtime/metro/01655__.js").useAnimatedStyle(AlertsTsx3);
+  const animatedStyle1 = require("../../../_runtime/metro/01653__.js").useAnimatedStyle(AlertsTsx3);
   const callback = obj3.useCallback(() => {
     if (c0) {
       actions_AlertActionCreatorsDefault.close();
@@ -206,7 +206,7 @@ function AlertWrapper(item) {
     return true;
   }, items6);
   useBackPressHandlerDefault(callback);
-  const tmp2Result2 = require("../../../_runtime/metro/01655__.js");
+  const tmp2Result2 = require("../../../_runtime/metro/01653__.js");
   let obj4 = { onClose: actions_AlertActionCreatorsDefault.close };
   let obj5 = { dialogKey: renderKey, onDismiss: callback, children: null };
   let obj6 = { style: null, children: null };
@@ -224,10 +224,10 @@ function AlertWrapper(item) {
   const obj8 = { style: null };
   const items8 = [tmp.alertWrapper, animatedStyle];
   obj8.style = items8;
-  obj7.children = closure_11(_modDef1655.View, obj8);
+  obj7.children = closure_11(_modDef1653.View, obj8);
   const items9 = [
     closure_11(c5, obj7),
-    closure_11(_modDef1655.View, { style: animatedStyle1, children: renderAlertResult }),
+    closure_11(_modDef1653.View, { style: animatedStyle1, children: renderAlertResult }),
   ];
   obj6.children = items9;
   obj5.children = closure_12(KeyboardAwareViewDefault, obj6);
@@ -275,7 +275,7 @@ let items2 = [PermissionVADStore];
 obj2.stores = items2;
 items1[1] = obj2;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj3 = { alertWrapper: null, alertContentWrapper: null };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -297,7 +297,7 @@ let closure_18 = {
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_11(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "ip", renderKey: "isArray", props: "isArray" });
+let closure_23 = Object.freeze({ renderAlert: "disabled", renderKey: "isArray", props: "isArray" });
 const tmp6 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -329,7 +329,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "ip", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "disabled", renderKey: "isArray", props: "isArray" };
       }
     }
   });

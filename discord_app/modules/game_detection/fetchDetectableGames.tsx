@@ -18,7 +18,7 @@ let closure_6 = async function _fetchDetectableGames() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_6 = async function _fetchDetectableGames() {
     }
   }
 };
-let closure_5 = fn(12131).detectableGamesPayloadCdnUrl;
+let closure_5 = fn(12073).detectableGamesPayloadCdnUrl;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/fetchDetectableGames.tsx");
 

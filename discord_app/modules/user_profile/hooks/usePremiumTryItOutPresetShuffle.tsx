@@ -10,12 +10,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePremiumTryItOutPresetShuffle.tsx");
 
 export default function usePremiumTryItOutPresetShuffle() {
-  const tmp = callback(5001)();
+  const tmp = callback(5003)();
   const isThemeLightResult = shared.isThemeLight(tmp);
   require = isThemeLightResult;
   items = [isThemeLightResult];
@@ -29,7 +29,7 @@ export default function usePremiumTryItOutPresetShuffle() {
       imageUri: tryItOutPresetConfig.getBannerSrc(false),
       staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
       description: tryItOutPresetConfig.getBannerAltText(),
-      originalAsset: "fileFinishedImporting",
+      originalAsset: "fill",
     });
     const themeColors = tryItOutPresetConfig.themeColors;
     obj2.themeColors = isThemeLightResult ? themeColors.light : themeColors.dark;

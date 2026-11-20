@@ -182,9 +182,9 @@ function trackOptionClicked(code, channel, COPY, _location) {
   obj2.track(constants.INSTANT_INVITE_OPTION_CLICKED, obj3);
   const tmpResult = InviteCodeUtils;
 }
-const ChannelRecordBase = fn(4645).ChannelRecordBase;
-const IOS_COPY_TO_PASTEBOARD = fn(7939).IOS_COPY_TO_PASTEBOARD;
-const Constants = fn(1072);
+const ChannelRecordBase = fn(4647).ChannelRecordBase;
+const IOS_COPY_TO_PASTEBOARD = fn(7938).IOS_COPY_TO_PASTEBOARD;
+const Constants = fn(1071);
 ({ AnalyticEvents: map1, InviteOptionsType: closure_14, Permissions: closure_15 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/instant_invite/native/InstantInviteUtils.tsx");

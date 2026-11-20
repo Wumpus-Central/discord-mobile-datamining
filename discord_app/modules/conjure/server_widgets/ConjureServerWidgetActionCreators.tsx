@@ -18,7 +18,7 @@ let closure_7 = async function _fetchConjureServerProfileWidgets() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_7 = async function _fetchConjureServerProfileWidgets() {
           c2 = 0;
           if (closure_129_4.getId() !== id2) {
             c4 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           } else {
             closure_129_1(closure_129_2[4]).dispatch({ type: "CONJURE_SERVER_PROFILE_WIDGETS_FETCH_FAIL" });
             const obj4 = closure_129_1(closure_129_2[4]);
@@ -82,7 +82,7 @@ let closure_7 = async function _fetchConjureServerProfileWidgets() {
         }
         c2 = 0;
         c4 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
       c4 = 3;
     } catch (tmp30) {
@@ -96,7 +96,7 @@ let closure_7 = async function _fetchConjureServerProfileWidgets() {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/server_widgets/ConjureServerWidgetActionCreators.tsx");
 

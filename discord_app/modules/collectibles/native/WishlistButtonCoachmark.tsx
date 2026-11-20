@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/WishlistButtonCoachmark.tsx");
 
@@ -27,10 +27,10 @@ export default function WishlistButtonCoachmark(anchorRef) {
   let obj = hasNeverWishlisted(8858);
   const tmp3 = _slicedToArray(hasNeverWishlisted(8960).useSelectedDismissibleContent(memo), 2);
   dependencyMap = tmp4;
-  const tmp5 = tmp3[0] === hasNeverWishlisted(4625).DismissibleContent.WISHLIST_MOBILE_NUX_PRODUCT_CARD_COACHMARK;
+  const tmp5 = tmp3[0] === hasNeverWishlisted(4627).DismissibleContent.WISHLIST_MOBILE_NUX_PRODUCT_CARD_COACHMARK;
   _slicedToArray = tmp5;
   const obj2 = hasNeverWishlisted(8960);
-  registerDismiss = hasNeverWishlisted(17347).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
+  registerDismiss = hasNeverWishlisted(17174).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
   let items1 = [tmp5, registerDismiss, tmp3[1]];
   const effect = registerDismiss.useEffect(() => {
     if (closure_2) {
@@ -50,7 +50,7 @@ export default function WishlistButtonCoachmark(anchorRef) {
     };
     return obj;
   }, items2);
-  const obj3 = hasNeverWishlisted(17347);
+  const obj3 = hasNeverWishlisted(17174);
   const coachmark = hasNeverWishlisted(8967).useCoachmark(anchorRef.anchorRef, memo1);
   return null;
 }

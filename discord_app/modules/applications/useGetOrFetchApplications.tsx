@@ -9,7 +9,7 @@ import ApplicationStore from "ApplicationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
 

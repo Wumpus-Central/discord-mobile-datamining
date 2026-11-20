@@ -9,7 +9,7 @@ import StoreListingStore from "../stores/game_store/StoreListingStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StoreListingActionCreators.tsx");
 
@@ -90,9 +90,9 @@ export function fetchStoreListingForSku(skuId) {
   }
   const obj6 = { url: STORE_LISTINGS_SKUResult, rejectWithError: null };
   const obj4 = require("StoreUtils");
-  obj6.rejectWithError = tmp7(1285).rejectWithMigratedError();
+  obj6.rejectWithError = tmp7(1284).rejectWithMigratedError();
   const result1 = obj4.httpGetWithCountryCodeQuery(obj6);
-  const tmp7Result = tmp7(1285);
+  const tmp7Result = tmp7(1284);
   return result1
     .then((body) => {
       const dispatch = DispatcherDefault.dispatch;

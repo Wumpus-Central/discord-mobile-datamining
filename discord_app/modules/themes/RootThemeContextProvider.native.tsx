@@ -10,7 +10,7 @@ import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../user_settings/ThemeStore.tsx";
 
 require = fn;
-const ThemeTypes = fn(1083).ThemeTypes;
+const ThemeTypes = fn(1082).ThemeTypes;
 const jsx = fn(21).jsx;
 const enabledExperiments = ["mobile-visual-refresh-floating", "mobile-visual-refresh"];
 const size = fn(2);

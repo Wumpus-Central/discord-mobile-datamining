@@ -1,4 +1,5 @@
 // discord_app/modules/collectibles/utils/CollectiblesPromoPriceUtils.tsx
+import DurationsDefault from "../../../utils/Durations.tsx";
 import StorefrontTypes from "../../storefront/StorefrontTypes.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -61,11 +62,14 @@ function getNextStorefrontPromotionBoundary(pricingPromotionIds) {
   }
   return tmp2;
 }
-const Constants = fn(1072);
-({ COLLECTIBLES_APPLICATION_ID: closure_6, CurrencyCodes: metroImportDefault, PriceTypes: closure_8 } = Constants);
+let closure_6 = fn(8807).doesStorefrontPromotionCoverSku;
+const Constants = fn(1071);
+({ COLLECTIBLES_APPLICATION_ID: metroImportDefault, CurrencyCodes: closure_8, PriceTypes: closure_9 } = Constants);
+const result = 10 * DurationsDefault.Millis.MINUTE;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPromoPriceUtils.tsx");
+const result1 = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPromoPriceUtils.tsx");
 
+export const COLLECTIBLES_PROMOTION_PRICING_TTL_MS = result;
 export function getCollectiblesPromoPrice(arg0) {
   ({ storefrontPrices, nonPromoPrice } = arg0);
   if (storefrontPrices != null) {
@@ -130,6 +134,25 @@ export function getCollectiblesPremiumPromoPrice(arg0) {
   }
   return tmp6;
 }
+export function isCollectiblesPromotionPricingFresh(type, arg1) {
+  type = undefined;
+  if (type != null) {
+    type = type.type;
+  }
+  let tmp2 = "loading" === type;
+  if (!tmp2) {
+    let type1;
+    if (type != null) {
+      type1 = type.type;
+    }
+    let tmp4 = "success" === type1;
+    if (tmp4) {
+      tmp4 = type.fetchedAt + result > arg1;
+    }
+    tmp2 = tmp4;
+  }
+  return tmp2;
+}
 export function isStorefrontPromotionActive(startsAt, timestamp) {
   let tmp = null == startsAt.startsAt;
   if (!tmp) {
@@ -147,7 +170,7 @@ export function isStorefrontPromotionActive(startsAt, timestamp) {
   return tmp;
 }
 export function areStorefrontPricingPromotionsActive(arg0) {
-  ({ pricingPromotionIds, now: require, promotions: closure_129_0 } = arg0);
+  ({ skuId: require, pricingPromotionIds, now: dependencyMap, promotions: require } = arg0);
   if (pricingPromotionIds == null) {
     pricingPromotionIds = [];
   }
@@ -162,24 +185,30 @@ export function areStorefrontPricingPromotionsActive(arg0) {
   return (
     mapped.length > 0 &&
     mapped.every((startsAt) => {
-      let tmp = null != startsAt;
-      if (tmp) {
-        let tmp3 = null == startsAt.startsAt;
-        if (!tmp3) {
+      let tmp3 = null != startsAt;
+      if (tmp3) {
+        let tmp4 = null == startsAt.startsAt;
+        if (!tmp4) {
           startsAt = startsAt.startsAt;
-          tmp3 = startsAt.getTime() <= stateFromStores2;
+          tmp4 = startsAt.getTime() <= closure_1;
         }
-        let tmp4 = null != startsAt.endsAt;
-        if (tmp4) {
+        let tmp5 = null != startsAt.endsAt;
+        if (tmp5) {
           const endsAt = startsAt.endsAt;
-          tmp4 = endsAt.getTime() <= stateFromStores2;
+          tmp5 = endsAt.getTime() <= closure_1;
         }
-        if (tmp3) {
-          tmp3 = !tmp4;
+        if (tmp4) {
+          tmp4 = !tmp5;
         }
-        tmp = tmp3;
+        tmp3 = tmp4;
       }
-      return tmp;
+      if (tmp3) {
+        tmp3 = startsAt.rewardStatus !== StorefrontTypes.StorefrontPromotionRewardEligibilityStatus.CONSUMED;
+      }
+      if (tmp3) {
+        tmp3 = closure_6(startsAt, stateFromStores2);
+      }
+      return tmp3;
     })
   );
 }
@@ -210,7 +239,7 @@ export function useCollectiblesStorefrontPrices(skuId, c7) {
   stateFromStores2(504).useStateFromStores(items2, () => {
     let promotionsForApplication = null;
     if (closure_1) {
-      promotionsForApplication = StorefrontPromotionStore.getPromotionsForApplication(timestampProducer);
+      promotionsForApplication = StorefrontPromotionStore.getPromotionsForApplication(metroImportDefault);
     }
     return promotionsForApplication;
   });
@@ -234,6 +263,8 @@ export function useCollectiblesStorefrontPrices(skuId, c7) {
       return () => clearTimeout(closure_0);
     }
   }, items3);
+  closure_129_0 = skuId;
+  closure_129_1 = tmp5;
   let items4 = stateFromStores1;
   if (stateFromStores1 == null) {
     items4 = [];

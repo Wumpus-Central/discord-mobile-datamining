@@ -751,9 +751,9 @@ function AddMembers(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const isGuildVocalChannelType = fn(4645).isGuildVocalChannelType;
-let isGuildOwner = fn(4659).isGuildOwner;
-const Constants = fn(1072);
+const isGuildVocalChannelType = fn(4647).isGuildVocalChannelType;
+let isGuildOwner = fn(4661).isGuildOwner;
+const Constants = fn(1071);
 const ChannelTypes = Constants.ChannelTypes;
 ({
   GuildFeatures: closure_15,
@@ -761,10 +761,10 @@ const ChannelTypes = Constants.ChannelTypes;
   AnalyticEvents: closure_17,
   HelpdeskArticles: closure_18,
 } = Constants);
-const RowType = fn(6385).RowType;
+const RowType = fn(6387).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   errorMessage: { marginBottom: 0 },
@@ -774,34 +774,34 @@ let obj2 = {
 const dependencyMap2 = createStyles.createStyles(obj2);
 let obj4 = {};
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj4[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(7562).TextIcon };
-let obj5 = { IconComponent: fn(7562).TextIcon };
-obj4[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(7570).ForumIcon };
-let obj6 = { IconComponent: fn(7570).ForumIcon };
-obj4[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(6915).VoiceNormalIcon };
-let obj7 = { IconComponent: fn(6915).VoiceNormalIcon };
-obj4[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(7501).StageIcon };
-let obj8 = { IconComponent: fn(7501).StageIcon };
-obj4[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(7575).AnnouncementsIcon };
-let obj9 = { IconComponent: fn(7575).AnnouncementsIcon };
-obj4[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(7569).ImageIcon };
-let obj10 = { IconComponent: fn(7569).ImageIcon };
-obj4[ChannelTypes.GUILD_APP] = { IconComponent: fn(7585).AppsIcon };
+obj4[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(7561).TextIcon };
+let obj5 = { IconComponent: fn(7561).TextIcon };
+obj4[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(7569).ForumIcon };
+let obj6 = { IconComponent: fn(7569).ForumIcon };
+obj4[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(6914).VoiceNormalIcon };
+let obj7 = { IconComponent: fn(6914).VoiceNormalIcon };
+obj4[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(7500).StageIcon };
+let obj8 = { IconComponent: fn(7500).StageIcon };
+obj4[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(7574).AnnouncementsIcon };
+let obj9 = { IconComponent: fn(7574).AnnouncementsIcon };
+obj4[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(7568).ImageIcon };
+let obj10 = { IconComponent: fn(7568).ImageIcon };
+obj4[ChannelTypes.GUILD_APP] = { IconComponent: fn(7584).AppsIcon };
 let obj12 = {};
-let obj11 = { IconComponent: fn(7585).AppsIcon };
-obj12[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(7560).TextLockIcon };
-let obj13 = { IconComponent: fn(7560).TextLockIcon };
-obj12[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(7568).ForumLockIcon };
-let obj14 = { IconComponent: fn(7568).ForumLockIcon };
-obj12[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(7578).VoiceLockIcon };
-let obj15 = { IconComponent: fn(7578).VoiceLockIcon };
-obj12[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(7577).StageLockIcon };
-let obj16 = { IconComponent: fn(7577).StageLockIcon };
-obj12[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(7574).AnnouncementsLockIcon };
-let obj17 = { IconComponent: fn(7574).AnnouncementsLockIcon };
-obj12[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(7567).ImageLockIcon };
-let obj18 = { IconComponent: fn(7567).ImageLockIcon };
-obj12[ChannelTypes.GUILD_APP] = { IconComponent: fn(7584).AppsLockIcon };
+let obj11 = { IconComponent: fn(7584).AppsIcon };
+obj12[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(7559).TextLockIcon };
+let obj13 = { IconComponent: fn(7559).TextLockIcon };
+obj12[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(7567).ForumLockIcon };
+let obj14 = { IconComponent: fn(7567).ForumLockIcon };
+obj12[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(7577).VoiceLockIcon };
+let obj15 = { IconComponent: fn(7577).VoiceLockIcon };
+obj12[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(7576).StageLockIcon };
+let obj16 = { IconComponent: fn(7576).StageLockIcon };
+obj12[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(7573).AnnouncementsLockIcon };
+let obj17 = { IconComponent: fn(7573).AnnouncementsLockIcon };
+obj12[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(7566).ImageLockIcon };
+let obj18 = { IconComponent: fn(7566).ImageLockIcon };
+obj12[ChannelTypes.GUILD_APP] = { IconComponent: fn(7583).AppsLockIcon };
 let closure_29 = { CREATE_CHANNEL: "CREATE_CHANNEL", ADD_MEMBERS: "ADD_MEMBERS", ADD_MODERATORS: "ADD_MODERATORS" };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/CreateChannelModal.tsx");

@@ -32,7 +32,7 @@ function isUsableGameProfileInvite(state) {
   }
   return tmp;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ InviteStates: metroImportDefault, QueryIds } = Constants);
 const initialize = fn(504);
 const obj2 = {
@@ -83,7 +83,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -124,7 +124,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
         throw error;
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp22) {
       c4 = tmp;
       throw tmp22;

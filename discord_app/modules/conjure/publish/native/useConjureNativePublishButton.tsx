@@ -1,22 +1,23 @@
 // discord_app/modules/conjure/publish/native/useConjureNativePublishButton.tsx
-import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet.tsx";
 import ConjureSafetyHoldSheetDefault from "ConjureSafetyHoldSheet.tsx";
 import ConjurePublishDestinationSheetDefault from "ConjurePublishDestinationSheet.tsx";
 import useConjurePublishButtonDefault from "../useConjurePublishButton.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
 import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 const require = globalThis.__r;
 
-require = fn;
+const require = fn;
 let obj = {
   showPublishBlocked: ConjurePublishBlockedSheetDefault,
   showSafetyHold: ConjureSafetyHoldSheetDefault,
   promptPublishDestination: ConjurePublishDestinationSheetDefault,
   showError(text) {
     return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_FAILED", { text, variant: "critical" });
+  },
+  showConfirmation(intl) {
+    return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_SUCCEEDED", { text: intl, variant: "success" });
   },
 };
 const size = fn(2);
@@ -53,14 +54,5 @@ export default function useConjureNativePublishButton(arg0, arg1) {
   if (integrationStatusChecked) {
     isLoading = obj2.useApplication(previewAppId).isLoading;
   }
-  const tmp3Result = useConjurePublishButtonDefault(arg0, arg1, isLoading, obj);
-  importDefault = tmp3Result;
-  const items2 = [tmp3Result.confirmation];
-  const effect = noop.useEffect(() => {
-    if (null != confirmation.confirmation) {
-      const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(tmp.confirmation, "polite");
-    }
-  }, items2);
-  return tmp3Result;
+  return useConjurePublishButtonDefault(arg0, arg1, isLoading, obj);
 }

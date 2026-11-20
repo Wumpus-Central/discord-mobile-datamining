@@ -269,7 +269,7 @@ function handleMessageSendFailedAutomod(arg0) {
     return false;
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   BasicPermissions: closure_18,
   ChannelTypes: closure_19,
@@ -953,7 +953,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(6268).getOrCreate(ids.channelId);
+    const orCreate = mutation(6270).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1002,14 +1002,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6268).commit(tmp3);
+        tmp(6270).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(6268);
+        const tmpResult2 = tmp(6270);
       }
     }
-    let obj = mutation(6268);
+    let obj = mutation(6270);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);

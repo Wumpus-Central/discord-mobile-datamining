@@ -375,7 +375,7 @@ function formatMessagePreview(type, isBlocked) {
     flag = true;
   }
 }
-const MessageFlags = fn(1072).MessageFlags;
+const MessageFlags = fn(1071).MessageFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_previews/useFormattedMessagePreview.tsx");
 
@@ -420,8 +420,8 @@ export function useFormattedMessagePreview(message, channel) {
   if (message.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
     stringResult = nick;
     if (message.author.id === stateFromStores) {
-      const intl = tmp(1113).intl;
-      stringResult = intl.string(tmp(1113).t.LuZzxn);
+      const intl = tmp(1112).intl;
+      stringResult = intl.string(tmp(1112).t.LuZzxn);
     }
   }
   const obj2 = require("initialize");

@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   alert: {
     borderRadius: nativeDefault.radii.sm,
@@ -323,9 +323,9 @@ prototype["render"] = function render() {
   }
   return tmp2Result;
 };
-Alert.contextType = fn(4853).ThemeContext;
+Alert.contextType = fn(4855).ThemeContext;
 const obj7 = { borderRadius: nativeDefault.radii.sm };
-Alert.defaultProps = { confirmColor: fn(1187).ButtonColors.BRAND, autoCloseOnConfirm: true };
+Alert.defaultProps = { confirmColor: fn(1186).ButtonColors.BRAND, autoCloseOnConfirm: true };
 const memoResult = noop.memo(function AlertConnected(arg0) {
   const size = useWindowDimensionsDefault();
   const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
@@ -336,7 +336,7 @@ const memoResult = noop.memo(function AlertConnected(arg0) {
     isLandscape: isScreenLandscape,
   });
 });
-memoResult.Colors = fn(1187).ButtonColors;
+memoResult.Colors = fn(1186).ButtonColors;
 let size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alert.tsx");
 

@@ -28,7 +28,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -120,7 +120,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
               }
             } else {
               c4 = 3;
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } else if (2 === tmp5) {
@@ -155,7 +155,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
     }
   }
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: closure_6, Routes: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/navigateToSocialLayerStorefront.tsx");

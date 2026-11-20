@@ -12,7 +12,7 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles({
   wrapper: { minHeight: 16 },
   listStyle: { flex: 0 },

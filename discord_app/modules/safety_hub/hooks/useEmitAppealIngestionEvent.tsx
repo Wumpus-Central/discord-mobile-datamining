@@ -4,8 +4,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
 
 const require = fn;
-let closure_5 = fn(7690).SafetyHubAnalyticsActionSource;
-const Constants = fn(1072);
+let closure_5 = fn(7689).SafetyHubAnalyticsActionSource;
+const Constants = fn(1071);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx");

@@ -70,7 +70,7 @@ function IOSAnchoredChatScrollerRow() {
   const stringResult = intl.string(result ? t.LfEwvz : t["pe/6Ma"]);
   require = stringResult;
   const obj2 = { label: null, subLabel: null, onPress: null };
-  const intl2 = tmp(1113).intl;
+  const intl2 = tmp(1112).intl;
   obj2.label = intl2.string(util.t.iNGJNe);
   obj2.subLabel = stringResult;
   obj2.onPress = function onPress() {
@@ -173,21 +173,21 @@ function ClientClientInfoActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6402).ClipboardListIcon,
+  IconComponent: fn(6404).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(
       Promise.resolve({ default: ClientClientInfoActionSheet }),
       "ClientClientInfoActionSheet",
     );
   },
-  usePredicate: fn(4617).DeveloperMode.useSetting,
+  usePredicate: fn(4619).DeveloperMode.useSetting,
   withArrow: true,
 });
 const size = fn(2);

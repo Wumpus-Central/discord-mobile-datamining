@@ -13,12 +13,12 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, Permissions: closure_10 } = Constants);
-const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1499).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   scrollView: { flex: 1 },

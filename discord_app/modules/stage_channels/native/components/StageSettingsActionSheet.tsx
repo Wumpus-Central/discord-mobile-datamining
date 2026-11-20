@@ -13,12 +13,12 @@ import StageInstanceStore from "../../StageInstanceStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const STAGE_SETTINGS_SHEET_KEY = fn(6379).STAGE_SETTINGS_SHEET_KEY;
-const Constants = fn(1072);
+const STAGE_SETTINGS_SHEET_KEY = fn(6381).STAGE_SETTINGS_SHEET_KEY;
+const Constants = fn(1071);
 ({ ChannelSettingsSections: closure_10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { marginTop: 8 },
   icon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },

@@ -43,8 +43,8 @@ function handleGuildRoleMemberUpdate(guildId) {
   items = [guildId.userId];
   return dependencyMap[guildId].updateMembersByMemberIds(items);
 }
-let closure_8 = fn(8169).GuildMemberSafetyPageStore;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
+let closure_8 = fn(8168).GuildMemberSafetyPageStore;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 let c10 = false;
 const dependencyMap = {};
 const Store = initializeDefault.Store;

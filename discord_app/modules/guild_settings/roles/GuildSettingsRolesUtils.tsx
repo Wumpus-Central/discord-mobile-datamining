@@ -2,7 +2,7 @@
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06556_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/06558_fuzzysearch.js";
 import GuildUtilsDefault from "../../../utils/GuildUtils.tsx";
 import GuildRoleMemberActionCreators from "../GuildRoleMemberActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,8 +12,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(19885).GuildSettingsRoleEditSections;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const constants = fn(19705).GuildSettingsRoleEditSections;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");
 

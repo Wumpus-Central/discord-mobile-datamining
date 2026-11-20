@@ -37,7 +37,7 @@ function getViewerProductId(subscription) {
   }
 }
 const useNativeCheckoutStore = fn(8992).useNativeCheckoutStore;
-const PremiumTypes = fn(1390).PremiumTypes;
+const PremiumTypes = fn(1388).PremiumTypes;
 let closure_6 = { priceString: null, failure: null };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx");
@@ -69,7 +69,7 @@ export function usePremiumTier2DeltaPriceString(plan, subscription, currencyCode
         const tmp2Result = getViewerProductId(subscription);
         let tmp11 = null;
         if (null != tmp2Result) {
-          tmp11 = tmp4(8051).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
+          tmp11 = tmp4(8050).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
         }
         flag = null != tmp11 && tmp11.basePlanId === plan.basePlanId && tmp11.numPremiumGuild < plan.numPremiumGuild;
         const tmp12 =
@@ -81,7 +81,7 @@ export function usePremiumTier2DeltaPriceString(plan, subscription, currencyCode
     if (!tmp7) {
       if (null != currencyCode) {
         if (null != stateFromStores) {
-          const platformName = tmp4(1380).getPlatformName();
+          const platformName = tmp4(1378).getPlatformName();
           if (currencyCode.currencyCode !== stateFromStores.currencyCode) {
             let obj3 = { priceString: null, failure: null };
             const obj4 = {
@@ -101,7 +101,7 @@ export function usePremiumTier2DeltaPriceString(plan, subscription, currencyCode
                   result = diff / 100;
                 }
                 const obj5 = { priceString: null, failure: null };
-                tmp4Result7 = tmp4(1380);
+                tmp4Result7 = tmp4(1378);
                 obj5.priceString = tmp4(6737).formatPrice(result, currencyCode.currencyCode, {
                   convertToMajorUnits: false,
                 });
@@ -118,7 +118,7 @@ export function usePremiumTier2DeltaPriceString(plan, subscription, currencyCode
             };
             obj6.failure = obj7;
           }
-          const tmp4Result = tmp4(1380);
+          const tmp4Result = tmp4(1378);
         }
       }
       obj6 = closure_6;
@@ -135,7 +135,7 @@ export function usePremiumTier2DeltaPriceString(plan, subscription, currencyCode
           if (addOnPrice.majorUnits > 0) {
             let tmp17 = null;
             if (null != tmp3) {
-              tmp17 = tmp4(8051).AppStorePremiumProductIdsToPremiumBundledItems[tmp3];
+              tmp17 = tmp4(8050).AppStorePremiumProductIdsToPremiumBundledItems[tmp3];
             }
             if (null != tmp3) {
               if (null != tmp17) {

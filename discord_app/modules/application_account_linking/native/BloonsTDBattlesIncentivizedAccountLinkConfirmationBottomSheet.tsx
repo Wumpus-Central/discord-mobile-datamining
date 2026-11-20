@@ -1,5 +1,5 @@
 // discord_app/modules/application_account_linking/native/BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet.tsx
-import _modDef3601 from "../IncentivizedAccountLinking.messages.js";
+import _modDef3603 from "../IncentivizedAccountLinking.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
@@ -8,7 +8,7 @@ import IncentivizedAccountLinkConfirmationPromoSheetDefault from "IncentivizedAc
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_3 = fn(1074).CollectiblesMobileShopScreen;
+let closure_3 = fn(1073).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -16,20 +16,20 @@ let result = size.fileFinishedImporting(
 );
 
 export default function BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet() {
-  const bloonsTDBattlesUpsellExperiment = analyticsLocations(19150).bloonsTDBattlesUpsellExperiment;
+  const bloonsTDBattlesUpsellExperiment = analyticsLocations(18969).bloonsTDBattlesUpsellExperiment;
   analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.ACTION_SHEET).analyticsLocations;
   let obj = { title: null, description: null, actions: null };
-  const intl = analyticsLocations(1113).intl;
-  obj.title = intl.formatToPlainString(_modDef3601["WdW7U/"], {
+  const intl = analyticsLocations(1112).intl;
+  obj.title = intl.formatToPlainString(_modDef3603["WdW7U/"], {
     orbCount: bloonsTDBattlesUpsellExperiment.useConfig({
       location: "BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet",
     }).orbQuantity,
   });
-  const intl2 = analyticsLocations(1113).intl;
-  obj.description = intl2.string(_modDef3601.DTk977);
+  const intl2 = analyticsLocations(1112).intl;
+  obj.description = intl2.string(_modDef3603.DTk977);
   let obj2 = { text: null, variant: "primary", size: "lg", onPress: null };
-  const intl3 = analyticsLocations(1113).intl;
-  obj2.text = intl3.string(_modDef3601.Iw0mSJ);
+  const intl3 = analyticsLocations(1112).intl;
+  obj2.text = intl3.string(_modDef3603.Iw0mSJ);
   obj2.onPress = function handleStoreRedirect() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj2 = CollectiblesActionCreators;
@@ -39,6 +39,6 @@ export default function BloonsTDBattlesIncentivizedAccountLinkConfirmationBottom
       screen: constants.FEATURED_PAGE,
     });
   };
-  obj.actions = jsx(analyticsLocations(5390).Button, { text: null, variant: "primary", size: "lg", onPress: null });
+  obj.actions = jsx(analyticsLocations(5392).Button, { text: null, variant: "primary", size: "lg", onPress: null });
   return jsx(IncentivizedAccountLinkConfirmationPromoSheetDefault, { title: null, description: null, actions: null });
 }

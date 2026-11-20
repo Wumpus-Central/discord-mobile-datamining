@@ -599,7 +599,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "id",
+      fetchError: "body",
     };
     value4 = obj;
   }
@@ -800,7 +800,7 @@ function resetProfileFetch(id) {
     }
   }
 }
-const MAX_TIMEOUT_MS = fn(1072).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1071).MAX_TIMEOUT_MS;
 let closure_10 = Symbol("NO GUILD ID");
 let map = new Map();
 let set = new Set();

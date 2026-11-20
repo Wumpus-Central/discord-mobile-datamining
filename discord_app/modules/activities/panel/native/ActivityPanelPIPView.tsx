@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
 import EmbeddedActivityViewDefault from "../../native/EmbeddedActivityView.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import ActivityPanelStateContextDefault from "ActivityPanelStateContext.tsx";
@@ -373,7 +373,7 @@ class BaseActivityPanelPIPView {
   }
 }
 const View = fn(17).View;
-const ActivityPanelConstants = fn(5418);
+const ActivityPanelConstants = fn(5420);
 const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({
   ActivityPanelModes: closure_10,
@@ -381,15 +381,15 @@ const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_12,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: map1,
 } = ActivityPanelConstants);
-let closure_14 = fn(19088).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
-let ThemeTypes = fn(1072).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11689).PIP_WINDOW_OFFSET;
-const ActivityLayoutMode = fn(10712).ActivityLayoutMode;
+let closure_14 = fn(18907).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let ThemeTypes = fn(1071).ThemeTypes;
+const PIP_WINDOW_OFFSET = fn(11631).PIP_WINDOW_OFFSET;
+const ActivityLayoutMode = fn(10654).ActivityLayoutMode;
 let jsx = fn(21).jsx;
 let closure_19 = { duration: 300 };
-const native = fn(1187);
-const boxShadowStyle = native.generateBoxShadowStyle(fn(1187).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(4792);
+const native = fn(1186);
+const boxShadowStyle = native.generateBoxShadowStyle(fn(1186).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
+const createStyles = fn(4794);
 let obj = { wrapper: null, mask: null };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
@@ -459,7 +459,7 @@ export default noop.memo(function ActivityPanelPIPView(transitionState) {
   const tmpResult = transitionState(504);
   const items2 = [memo];
   stateFromStores1 = transitionState(504).useStateFromStores(items2, () => ChannelStore.getChannel(c2));
-  const tmp8 = transitionCleanUp(1630)();
+  const tmp8 = transitionCleanUp(1628)();
   closure_129_0 = tmp8;
   const items3 = [tmp8.right];
   memo = activity.useMemo(() => {

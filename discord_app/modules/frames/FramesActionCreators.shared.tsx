@@ -25,7 +25,7 @@ let closure_13 = async function _launchFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -298,7 +298,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -446,7 +446,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
     }
   }
 };
-const FramesConstants = fn(6503);
+const FramesConstants = fn(6505);
 ({
   FrameIntent: closure_6,
   FrameLayoutModes: metroImportDefault,
@@ -454,7 +454,7 @@ const FramesConstants = fn(6503);
   isLaunched: closure_9,
   makeFrameId: closure_10,
 } = FramesConstants);
-const ActivityPanelModes = fn(5418).ActivityPanelModes;
+const ActivityPanelModes = fn(5420).ActivityPanelModes;
 let c12 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");

@@ -200,8 +200,8 @@ export function useConjureSettingsServers(projectId, flag) {
             name = guild.name;
           }
           if (name == null) {
-            const intl = projectId(1113).intl;
-            name = intl.string(stateFromStores(4089)["6bhivN"]);
+            const intl = projectId(1112).intl;
+            name = intl.string(stateFromStores(4091)["6bhivN"]);
           }
           obj.name = name;
           return obj;

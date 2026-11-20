@@ -8,7 +8,7 @@ import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(1072).PriceSetAssignmentPurchaseTypes;
+const constants = fn(1071).PriceSetAssignmentPurchaseTypes;
 let items = [SKUStore, IAPStoreDefault];
 const size = fn(2);
 const result = size.fileFinishedImporting(

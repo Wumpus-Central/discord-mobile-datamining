@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/WishlistButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef1655 from "../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../_runtime/metro/01653__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import CollectiblesWishlistUtils from "../../wishlists/CollectiblesWishlistUtils.tsx";
@@ -127,7 +127,7 @@ class WishlistButtonBase {
         let result = sharedValue.set(0);
         const _requestAnimationFrame = requestAnimationFrame;
         closure_0 = requestAnimationFrame(() => {
-          items = [closure_2_18, c0(1708).scheduleOnRN, closure_1_12];
+          items = [closure_2_18, c0(1706).scheduleOnRN, closure_1_12];
           c0 = undefined;
           c1 = undefined;
           [tmp3, tmp4, tmp5] = items;
@@ -146,8 +146,8 @@ class WishlistButtonBase {
           WishlistButtonTsx1.__closure = items1;
           WishlistButtonTsx1.__workletHash = 12515096529687;
           WishlistButtonTsx1.__initData = tmp3;
-          const result = sharedValue.set(c0(5002).withTiming(1, obj, "animate-always", WishlistButtonTsx1));
-          obj = c0(5002);
+          const result = sharedValue.set(c0(5004).withTiming(1, obj, "animate-always", WishlistButtonTsx1));
+          obj = c0(5004);
         });
         return () => cancelAnimationFrame(closure_0);
       }
@@ -449,16 +449,16 @@ class WishlistButton {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const ShopCtaEnum = fn(1074).ShopCtaEnum;
-const ThemeTypes = fn(1083).ThemeTypes;
+const ShopCtaEnum = fn(1073).ShopCtaEnum;
+const ThemeTypes = fn(1082).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { duration: 400, easing: null };
-const Easing = fn(1655).Easing;
+const Easing = fn(1653).Easing;
 obj.easing = Easing.bezier(0.67, 0, 0.26, 1);
-let obj2 = { sm: fn(5396).SMALL_BUTTON_HEIGHT, md: fn(5396).MEDIUM_BUTTON_HEIGHT };
+let obj2 = { sm: fn(5398).SMALL_BUTTON_HEIGHT, md: fn(5398).MEDIUM_BUTTON_HEIGHT };
 let value = { sm: "sm", md: "md" };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_17 = createStyles.createStyles((arg0) => {
   obj = {
     button: null,

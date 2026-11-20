@@ -4,14 +4,14 @@ import HelpdeskUtilsDefault from "../../../../../utils/HelpdeskUtils.tsx";
 import useGetOrFetchApplications from "../../../../applications/useGetOrFetchApplications.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const util = BPDKoA(1113);
-const Text_Text = BPDKoA(5383);
+const util = BPDKoA(1112);
+const Text_Text = BPDKoA(5385);
 require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ Fragment: hasOwnProperty, jsxs: closure_6, jsx: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { alignItems: "center" }, divider: null };
 let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;

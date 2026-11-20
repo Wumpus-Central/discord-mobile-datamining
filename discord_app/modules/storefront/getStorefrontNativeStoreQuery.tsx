@@ -4,7 +4,7 @@ import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import StorefrontProductStore from "StorefrontProductStore.tsx";
 
 require = fn;
-const PaymentGateways = fn(1072).PaymentGateways;
+const PaymentGateways = fn(1071).PaymentGateways;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/getStorefrontNativeStoreQuery.tsx");
 

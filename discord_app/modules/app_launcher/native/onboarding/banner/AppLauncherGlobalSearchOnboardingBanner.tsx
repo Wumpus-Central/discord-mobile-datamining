@@ -5,10 +5,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const DEFAULT_CONTENT_PADDING = fn(1501).DEFAULT_CONTENT_PADDING;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const DEFAULT_CONTENT_PADDING = fn(1499).DEFAULT_CONTENT_PADDING;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const obj2 = { appsIcon: null, appsIconImage: null };
 let size = {
   height: 40,
@@ -70,10 +70,10 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
       surfaceMeasurements: null,
       position: "bottom",
     };
-    const intl = markAsDismissed(1113).intl;
-    obj.title = intl.string(markAsDismissed(1113).t.bCPN5y);
-    const intl2 = markAsDismissed(1113).intl;
-    obj.description = intl2.string(markAsDismissed(1113).t["0TBExc"]);
+    const intl = markAsDismissed(1112).intl;
+    obj.title = intl.string(markAsDismissed(1112).t.bCPN5y);
+    const intl2 = markAsDismissed(1112).intl;
+    obj.description = intl2.string(markAsDismissed(1112).t["0TBExc"]);
     obj.onDismiss = function onDismiss() {
       markAsDismissed({ actionType: ContentDismissActionType.TAKE_ACTION });
     };

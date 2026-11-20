@@ -13,8 +13,8 @@ import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1390).PremiumTypes;
-const Constants = fn(1072);
+const PremiumTypes = fn(1388).PremiumTypes;
+const Constants = fn(1071);
 ({
   AnalyticsSections: hasOwnProperty,
   AnalyticsObjects: closure_6,

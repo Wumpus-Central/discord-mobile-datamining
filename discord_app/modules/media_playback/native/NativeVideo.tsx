@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 0;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { overflow: "hidden" }, content: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.content = {};
@@ -382,8 +382,8 @@ export default function NativeVideo(ref) {
       str2 = str4;
     }
     obj8.resizeMode = str2;
-    tmp25Result = tmp25(tmp26(5479), obj8);
-    const tmp26Result = tmp26(5479);
+    tmp25Result = tmp25(tmp26(5481), obj8);
+    const tmp26Result = tmp26(5481);
   }
   items2[1] = tmp25Result;
   obj5.children = items2;

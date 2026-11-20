@@ -1,7 +1,7 @@
 // discord_app/modules/frames/panel/native/PlayableActivityFrameHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05052_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import leaveFrame from "../../leaveFrame.tsx";
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
@@ -11,11 +11,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ActivityPanelModes = fn(5418).ActivityPanelModes;
-const orbAmount = fn(6437).PLAYABLE_REWARD_ORB_QUANTITY;
+const ActivityPanelModes = fn(5420).ActivityPanelModes;
+const orbAmount = fn(6439).PLAYABLE_REWARD_ORB_QUANTITY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   header: null,
   handleWrapper: null,
@@ -67,9 +67,9 @@ export default function PlayableActivityFrameHeader(arg0) {
   ({ frameId: require, playable } = arg0);
   let setMode;
   const tmp = closure_9();
-  const tmp4 = setMode(19264)(playable.id);
+  const tmp4 = setMode(19083)(playable.id);
   let isClaimed = tmp4.isClaimed;
-  const context = noop.useContext(setMode(19258));
+  const context = noop.useContext(setMode(19077));
   setMode = context.setMode;
   ({ wrapperOffset, pipState } = context);
   const obj2 = {
@@ -86,7 +86,7 @@ export default function PlayableActivityFrameHeader(arg0) {
   items = [closure_7(View, obj4), ,];
   const obj6 = { style: tmp.info, children: null };
   const items1 = [
-    closure_7(setMode(16417), {
+    closure_7(setMode(16239), {
       isCompleted: isClaimed,
       totalSeconds: playable.rewardTimerSeconds,
       remainingSeconds: tmp4.remainingSeconds,
@@ -103,7 +103,7 @@ export default function PlayableActivityFrameHeader(arg0) {
   };
   if (isClaimed) {
     const intl = util.intl;
-    let productName = intl.string(tmp2(4540)["08Kgg0"]);
+    let productName = intl.string(tmp2(4542)["08Kgg0"]);
   } else {
     productName = playable.productName;
   }
@@ -123,7 +123,7 @@ export default function PlayableActivityFrameHeader(arg0) {
     obj10.style = items3;
     const intl2 = util.intl;
     const obj11 = { orbAmount };
-    obj10.children = intl2.formatToPlainString(tmp2(4540).Hshnic, obj11);
+    obj10.children = intl2.formatToPlainString(tmp2(4542).Hshnic, obj11);
     isClaimed = closure_7(Text_Text.Text, obj10);
   }
   items2[1] = isClaimed;

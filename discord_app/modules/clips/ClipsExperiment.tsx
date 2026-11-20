@@ -8,8 +8,8 @@ import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1390).PremiumTypes;
-const Features = fn(5537).Features;
+const PremiumTypes = fn(1388).PremiumTypes;
+const Features = fn(5539).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 

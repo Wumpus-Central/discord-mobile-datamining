@@ -1,7 +1,7 @@
 // discord_app/modules/polls/native/PollAnswerInput.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import openEmojiPickerActionSheet from "../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
@@ -94,13 +94,13 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const DraftType = fn(8196).DraftType;
-const PollsConstants = fn(8402);
+const DraftType = fn(8195).DraftType;
+const PollsConstants = fn(8401);
 ({ MAX_POLL_ANSWER_LENGTH: closure_10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
-const EmojiIntention = fn(1391).EmojiIntention;
+const EmojiIntention = fn(1389).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   defaultContainer: { flexDirection: "row", alignItems: "center" },
   inputContainer: { flex: 1 },
@@ -180,7 +180,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12997, dependencyMap.paths), closure_2_11, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12967, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,

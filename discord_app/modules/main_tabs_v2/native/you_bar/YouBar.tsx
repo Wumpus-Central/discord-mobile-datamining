@@ -3,13 +3,13 @@ import apply from "../../../../../_runtime/00012_apply.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
-import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
-import _mod1708 from "../../../../../_runtime/metro/01708__.js";
+import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05052_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
 import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import useConjureEntryPointPlacementDefault from "../../../conjure/title_bar/native/useConjureEntryPointPlacement.tsx";
@@ -29,7 +29,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(16532);
+const YouBarConstants = fn(16355);
 ({
   YOU_BAR_HEIGHT: closure_10,
   YOU_BAR_PADDING: closure_11,
@@ -38,11 +38,11 @@ const YouBarConstants = fn(16532);
   YOU_BAR_AVATAR_SIZE: closure_14,
   YOU_BAR_BUTTON_HIT_SLOP: closure_15,
 } = YouBarConstants);
-const ME = fn(1072).ME;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
+const ME = fn(1071).ME;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { dockRimRow: null, dockRim: null, youRow: null, youRowRight: null, youPressable: null };
 const rect = {
   position: "absolute",
@@ -102,7 +102,7 @@ let closure_26 = noop.memo(function YouBar() {
     str = str2;
   }
   if (isMobileRTCV2Enabled) {
-    let DOCK_SPACE_SPRING_CONFIG = tmp2(11713).DOCK_SPACE_SPRING_CONFIG;
+    let DOCK_SPACE_SPRING_CONFIG = tmp2(11655).DOCK_SPACE_SPRING_CONFIG;
   } else {
     DOCK_SPACE_SPRING_CONFIG = closure_12;
   }
@@ -122,8 +122,8 @@ let closure_26 = noop.memo(function YouBar() {
     return size;
   }, items);
   const tmp2Result16 = require("useConnectionBannerHeight");
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
-  const tmp2Result17 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  const tmp2Result17 = require("../../../../../_runtime/metro/01653__.js");
   let items1 = [
     closure_22,
     require("spring/spring").withSpring,
@@ -165,8 +165,8 @@ let closure_26 = noop.memo(function YouBar() {
   YouBarTsx1.__closure = items2;
   YouBarTsx1.__workletHash = 9061810726804;
   YouBarTsx1.__initData = tmp16;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(YouBarTsx1);
-  const tmp2Result18 = require("../../../../../_runtime/metro/01655__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(YouBarTsx1);
+  const tmp2Result18 = require("../../../../../_runtime/metro/01653__.js");
   const waterwheelsDiscoverEnabled = require("WaterwheelsDiscoverExperiment").useWaterwheelsDiscoverEnabled("YouBar");
   const tmp2Result19 = require("WaterwheelsDiscoverExperiment");
   const tmp2Result20 = require("ICYMIExperiment");
@@ -275,7 +275,7 @@ let closure_26 = noop.memo(function YouBar() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -309,7 +309,7 @@ let closure_26 = noop.memo(function YouBar() {
             const result1 = closure_128_0.showYouAccountActionSheet();
             const result2 = closure_129_2.set(false);
             c3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c3 = tmp;
@@ -375,12 +375,13 @@ let closure_26 = noop.memo(function YouBar() {
   gesture = context.gesture;
   const translateX = context.translateX;
   const tmp2Result25 = require("useYouBarAccessibilityLabel");
-  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
   const items10 = [callback3, gesture, sharedValue1, translateX];
   const memo3 = obj9.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
-    let result = Gesture.Pan().simultaneousWithExternalGesture(gesture);
     const PanResult = Gesture.Pan();
+    let result = Gesture.Pan().hitSlop(hitSlop).simultaneousWithExternalGesture(gesture);
+    const hitSlopResult = Gesture.Pan().hitSlop(hitSlop);
     const activeOffsetXResult = result.activeOffsetX(50);
     const failOffsetXResult = result.activeOffsetX(50).failOffsetX(-10);
     items = [closure_23, sharedValue1, translateX];
@@ -417,7 +418,7 @@ let closure_26 = noop.memo(function YouBar() {
     YouBarTsx3.__workletHash = 12226847969400;
     YouBarTsx3.__initData = tmp8;
     const onBeginResult = result.activeOffsetX(50).failOffsetX(-10).failOffsetY([-40, 40]).onBegin(YouBarTsx2);
-    const items4 = [closure_25, _mod1708.scheduleOnRN, callback3];
+    const items4 = [closure_25, _mod1706.scheduleOnRN, callback3];
     c0 = undefined;
     c1 = undefined;
     [tmp11, tmp12, tmp13] = items4;
@@ -443,7 +444,7 @@ let closure_26 = noop.memo(function YouBar() {
       .onTouchesMove(YouBarTsx3)
       .onEnd(YouBarTsx4);
   }, items10);
-  const AVATAR_SIZE_MAP = tmp2(1187).AVATAR_SIZE_MAP;
+  const AVATAR_SIZE_MAP = tmp2(1186).AVATAR_SIZE_MAP;
   if (null != str) {
     let tmp48 = AVATAR_SIZE_MAP[closure_14];
   } else {
@@ -465,7 +466,7 @@ let closure_26 = noop.memo(function YouBar() {
   let tmp52Result = tmp34;
   if (null != nameplate) {
     const obj6 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp48 };
-    tmp52Result = closure_18(tmp27(18011), obj6);
+    tmp52Result = closure_18(tmp27(17838), obj6);
   }
   items12[1] = tmp52Result;
   const obj7 = { gesture: memo3, children: null };
@@ -485,7 +486,7 @@ let closure_26 = noop.memo(function YouBar() {
     testID: "you_bar_profile_button",
     children: null,
   };
-  let intl = tmp2(1113).intl;
+  let intl = tmp2(1112).intl;
   obj8.accessibilityHint = intl.string(require("util").t.cSgdvE);
   obj8.accessibilityActions = memo2;
   obj8.onAccessibilityAction = callback4;
@@ -504,26 +505,26 @@ let closure_26 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj11 = { hasNameplate: tmp34, canUnpin: tmp28.canPin };
-    let tmp52Result3 = closure_18(tmp27(18017), obj11);
+    let tmp52Result3 = closure_18(tmp27(17844), obj11);
   } else {
     tmp52Result3 = null;
     if (tmp26) {
       const obj12 = { hasNameplate: tmp34 };
-      tmp52Result3 = closure_18(tmp27(18019), obj12);
+      tmp52Result3 = closure_18(tmp27(17846), obj12);
     }
   }
   const items13 = [tmp52Result3, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];
   obj10.children = items13;
   items12[3] = closure_19(ref, obj10);
   obj5.children = items12;
-  const children = [closure_19(_modDef1655.View, obj5)];
+  const children = [closure_19(_modDef1653.View, obj5)];
   if (tmp52Result4) {
     const obj13 = { style: null, pointerEvents: "none", children: null };
     const items15 = [tmp.dockRimRow, memo, animatedStyle];
     obj13.style = items15;
     const obj14 = { style: tmp.dockRim };
-    obj13.children = closure_18(tmp27(13217), obj14);
-    tmp52Result4 = closure_18(tmp27(1655).View, obj13);
+    obj13.children = closure_18(tmp27(13187), obj14);
+    tmp52Result4 = closure_18(tmp27(1653).View, obj13);
   }
   children[1] = tmp52Result4;
   return closure_19(closure_20, { children });

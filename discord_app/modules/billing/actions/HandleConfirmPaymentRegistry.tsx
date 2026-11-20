@@ -4,9 +4,9 @@ import StripeUtilsAll from "../../../utils/StripeUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_4, REDIRECTED_PAYMENT_SOURCES: hasOwnProperty } = Constants);
-const PaymentSourceTypes = fn(1083).PaymentSourceTypes;
+const PaymentSourceTypes = fn(1082).PaymentSourceTypes;
 let obj = {
   [PaymentSourceTypes.GIROPAY]: obj2,
   [PaymentSourceTypes.SOFORT]: obj3,
@@ -98,10 +98,10 @@ prototype["getStripe"] = function getStripe(arg0) {
     if (null != value) {
       return value;
     }
-    await tmp2(6254).getStripe(tmp5);
+    await tmp2(6256).getStripe(tmp5);
     closure_128_1 = value;
     if (null == closure_128_1) {
-      throw tmp5(6240).dispatchConfirmationError("Stripe cannot be null on a redirect.");
+      throw tmp5(6242).dispatchConfirmationError("Stripe cannot be null on a redirect.");
     }
     const stripeByMerchantAccountId = closure_129_1.stripeByMerchantAccountId;
     const result = stripeByMerchantAccountId.set(closure_128_0, closure_128_1);
@@ -133,7 +133,7 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
     const paymentMethod = closure_129_1.paymentMethod;
     const obj10 = { payment_method: paymentMethod, return_url: null };
     let _var = closure_130_1;
-    const aPIBaseURL = _var(1285).getAPIBaseURL();
+    const aPIBaseURL = _var(1284).getAPIBaseURL();
     if (closure_130_1 == null) {
       _var = "";
     }
@@ -145,10 +145,10 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
     const paymentIntent = closure_129_4.paymentIntent;
     const error = closure_129_4.error;
     if (null != error) {
-      throw _var(6240).dispatchConfirmationError(error);
+      throw _var(6242).dispatchConfirmationError(error);
     }
     if (null == paymentIntent) {
-      throw _var(6240).dispatchConfirmationError("paymentIntent not available with successful api call");
+      throw _var(6242).dispatchConfirmationError("paymentIntent not available with successful api call");
     }
     const next_action = paymentIntent.next_action;
     if (next_action != null) {
@@ -158,7 +158,7 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
       }
     }
     if (null == url) {
-      throw _var(6240).dispatchConfirmationError("confirm payment did not return a redirect url");
+      throw _var(6242).dispatchConfirmationError("confirm payment did not return a redirect url");
     }
     return paymentIntent.next_action.redirect_to_url.url;
   })();
@@ -177,7 +177,7 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -231,7 +231,7 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
           closure_128_1 = value;
           closure_129_3.performRedirect(closure_128_1);
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp21) {
         c3 = tmp;
@@ -260,10 +260,10 @@ prototype["confirmDirectPaymentSource"] = function confirmDirectPaymentSource(ar
     const paymentIntent = closure_128_5.paymentIntent;
     const error = closure_128_5.error;
     if (null != error) {
-      throw tmp2(6240).dispatchConfirmationError(error);
+      throw tmp2(6242).dispatchConfirmationError(error);
     }
     if (null == paymentIntent) {
-      throw tmp2(6240).dispatchConfirmationError("paymentIntent not available with successful stripe call");
+      throw tmp2(6242).dispatchConfirmationError("paymentIntent not available with successful stripe call");
     }
     value = {
       pendingCustomerAction: closure_128_4,
@@ -285,7 +285,7 @@ prototype["confirmPayment"] = function confirmPayment() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

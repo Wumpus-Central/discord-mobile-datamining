@@ -163,8 +163,8 @@ function CollectiblesShopGiftModalPlaceholder(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const application_id = fn(1072).COLLECTIBLES_APPLICATION_ID;
-const PaymentGateways = fn(1083).PaymentGateways;
+const application_id = fn(1071).COLLECTIBLES_APPLICATION_ID;
+const PaymentGateways = fn(1082).PaymentGateways;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftModal.tsx");
@@ -175,7 +175,7 @@ export default function CollectiblesShopGiftModal(skuId) {
   let skuId1;
   ({ lockedRecipientUser, giftingOrigin } = skuId);
   const effect = noop.useEffect(() => {
-    const badge = skuId(8023).fetchBadge(skuId(7951).BadgeId.GIFTING);
+    const badge = skuId(8022).fetchBadge(skuId(7950).BadgeId.GIFTING);
   }, []);
   items = [CollectiblesCategoryStore];
   const items1 = [skuId];
@@ -186,11 +186,11 @@ export default function CollectiblesShopGiftModal(skuId) {
   );
   const obj = skuId(504);
   const items2 = [];
-  const obj2 = skuId(9775);
+  const obj2 = skuId(9777);
   const obj3 = { needsCategory: false, seedCategoryStore: true, shouldFetchProduct: null == stateFromStores };
   const tmp5 = skuId1;
-  const tmp6 = skuId1(7401);
-  items2[HermesBuiltin.arraySpread(analyticsLocations, 0)] = skuId1(7420).COLLECTIBLES_MOBILE_GIFT_MODAL;
+  const tmp6 = skuId1(7400);
+  items2[HermesBuiltin.arraySpread(analyticsLocations, 0)] = skuId1(7419).COLLECTIBLES_MOBILE_GIFT_MODAL;
   skuId1 = undefined;
   if (stateFromStores != null) {
     skuId1 = stateFromStores.skuId;
@@ -226,12 +226,12 @@ export default function CollectiblesShopGiftModal(skuId) {
       );
     } else {
       const obj6 = { onDismiss: onGiftModalDismiss, title: null };
-      const intl = tmp2(1113).intl;
-      obj6.title = intl.string(tmp2(1113).t["JCFN/y"]);
+      const intl = tmp2(1112).intl;
+      obj6.title = intl.string(tmp2(1112).t["JCFN/y"]);
       tmp15Result = jsx(tmp5(9491), { onDismiss: onGiftModalDismiss, title: null });
       const tmp5Result = tmp5(9491);
     }
-    tmp2Result = tmp2(2186);
+    tmp2Result = tmp2(2184);
   }
   return tmp15Result;
 }

@@ -6,10 +6,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-const NOTE_MAX_LENGTH = fn(1072).NOTE_MAX_LENGTH;
+const NOTE_MAX_LENGTH = fn(1071).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditNote.tsx");
@@ -65,7 +65,7 @@ export default function UserProfileEditNote(userId) {
             if (closure_5 == null) {
               str = "";
             }
-            closure_1_1(14106)({
+            closure_1_1(14075)({
               location: "UserProfileEditNote",
               hasUnsavedChanges: str !== closure_6,
               onReset() {

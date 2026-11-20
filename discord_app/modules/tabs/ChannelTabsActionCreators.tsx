@@ -342,7 +342,7 @@ function trackChannelTabPinToggled(found1, source) {
   obj5.pinned = found1.pinned;
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_PIN_TOGGLED, obj5);
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, Routes: metroImportDefault } = Constants);
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);

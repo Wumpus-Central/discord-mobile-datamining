@@ -11,7 +11,7 @@ import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(1082).ChannelNotificationSettingsFlags;
+let closure_6 = fn(1081).ChannelNotificationSettingsFlags;
 let closure_7 = {};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/useBatchUpdateSelectOption.tsx");
@@ -128,7 +128,7 @@ export default function useBatchUpdateSelectOption(guildId) {
           items1.reduce((acc, item) => {
             const obj = { flags: null };
             const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-            obj.flags = closure_0(1406).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+            obj.flags = closure_0(1404).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
             acc[item] = obj;
             return acc;
           }, {}),
@@ -137,7 +137,7 @@ export default function useBatchUpdateSelectOption(guildId) {
           differenceResult3.reduce((acc, item) => {
             const obj = { flags: null };
             const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-            obj.flags = closure_0(1406).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+            obj.flags = closure_0(1404).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
             acc[item] = obj;
             return acc;
           }, {}),

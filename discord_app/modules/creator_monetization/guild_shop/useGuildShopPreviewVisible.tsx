@@ -4,7 +4,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Permissions: c3, GuildFeatures: closure_4 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");

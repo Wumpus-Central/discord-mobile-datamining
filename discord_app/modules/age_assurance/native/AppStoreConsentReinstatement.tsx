@@ -91,7 +91,7 @@ let closure_9 = async function _settleAppStoreConsentReinstatement() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -166,7 +166,7 @@ let closure_9 = async function _settleAppStoreConsentReinstatement() {
                             const obj2 = { value, done: true };
                             return obj2;
                           } else {
-                            return { value: "HermesInternal", done: "+60" };
+                            return { value: "HermesInternal", done: null };
                           }
                         } else {
                           try {
@@ -219,7 +219,7 @@ let closure_9 = async function _settleAppStoreConsentReinstatement() {
                                 return obj;
                               }
                               c3 = 3;
-                              return { value: "HermesInternal", done: "+60" };
+                              return { value: "HermesInternal", done: null };
                             }
                           } catch (tmp15) {
                             c3 = tmp;
@@ -354,7 +354,7 @@ export function beginAppStoreConsentReinstatement() {
                   let obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+60" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -386,7 +386,7 @@ export function beginAppStoreConsentReinstatement() {
                                 const obj2 = { value, done: true };
                                 return obj2;
                               } else {
-                                return { value: "HermesInternal", done: "+60" };
+                                return { value: "HermesInternal", done: null };
                               }
                             } else {
                               try {
@@ -409,12 +409,12 @@ export function beginAppStoreConsentReinstatement() {
                                         c2 = 1;
                                         c3 = 1;
                                         const obj4 = {
-                                          value: closure_2_0(7862).getAppStoreConsentReinstatementProof(),
+                                          value: closure_2_0(7861).getAppStoreConsentReinstatementProof(),
                                           done: false,
                                         };
                                         return obj4;
                                       }
-                                      obj9 = closure_2_0(7870);
+                                      obj9 = closure_2_0(7869);
                                     }
                                   }
                                 } else if (1 === tmp5) {
@@ -432,7 +432,7 @@ export function beginAppStoreConsentReinstatement() {
                                         c2 = 2;
                                         c3 = 1;
                                         const obj7 = {
-                                          value: closure_2_0(7863).reinstateAppStoreConsent(closure_128_0),
+                                          value: closure_2_0(7862).reinstateAppStoreConsent(closure_128_0),
                                           done: false,
                                         };
                                         return obj7;

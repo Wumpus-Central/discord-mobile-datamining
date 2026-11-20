@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetsBoardTab.tsx
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard.tsx";
-import useDisplayableBoardWidgets from "../hooks/useDisplayableBoardWidgets.tsx";
+import useDisplayableBoardWidgets from "useDisplayableBoardWidgets.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import ConjureServerWidgetUpsellDefault from "../../conjure/server_widgets/native/ConjureServerWidgetUpsell.tsx";
 import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState.tsx";

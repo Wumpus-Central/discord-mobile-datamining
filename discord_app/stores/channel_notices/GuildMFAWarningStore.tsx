@@ -13,7 +13,7 @@ function handleUserStoreUpdates() {
   }
   return false;
 }
-const MFALevels = fn(1072).MFALevels;
+const MFALevels = fn(1071).MFALevels;
 let mfaEnabled = null;
 const Store = initializeDefault.Store;
 class GuildMFAWarningStore extends Store {}

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NavigatorConstants from "../../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
@@ -110,7 +110,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     return obj.openLazy(
-      asyncRequireImpl(19993, dependencyMap.paths),
+      asyncRequireImpl(19813, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       {
         eligibility,
@@ -249,12 +249,12 @@ class MarketingSections {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const React5 = fn(16663).CREATOR_REVENUE_PORTAL_URL;
-const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const refs = fn(19989).CreatorMonetizationOnboardingMarketingSection;
+const React5 = fn(16487).CREATOR_REVENUE_PORTAL_URL;
+const GuildSettingsSections = fn(1071).GuildSettingsSections;
+const refs = fn(19809).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { flex: 1, padding: 24 },

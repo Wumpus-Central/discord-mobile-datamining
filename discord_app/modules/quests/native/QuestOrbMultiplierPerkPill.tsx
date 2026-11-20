@@ -18,12 +18,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ThemeTypes = fn(1072).ThemeTypes;
+const ThemeTypes = fn(1071).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 0 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   fullGradientContainer: {
     borderRadius: nativeDefault.radii.round,
@@ -127,7 +127,7 @@ export function QuestOrbMultiplierPerkPill(questId) {
     obj16.style = items3;
     if (!tmp13) {
       const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-      tmp21Result = tmp21(orbMultiplierEligibility(5347), obj18);
+      tmp21Result = tmp21(orbMultiplierEligibility(5349), obj18);
     }
     const items4 = [tmp21Result];
     const obj19 = { style: tmp.fullGradientContent, children: closure_8(closure_7, obj13) };

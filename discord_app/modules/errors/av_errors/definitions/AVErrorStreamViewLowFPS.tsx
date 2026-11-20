@@ -10,7 +10,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import StreamRTCConnectionStore from "../../../../stores/StreamRTCConnectionStore.tsx";
 
 require = fn;
-const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
+const ApplicationStreamStates = fn(1071).ApplicationStreamStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
 

@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   AnalyticEvents: hasOwnProperty,
   InstantInviteSources: closure_6,

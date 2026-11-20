@@ -9,14 +9,14 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import TextStyles from "../../rebrand/native/TextStyles.tsx";
 
 require = fn;
-const helpdeskArticle = fn(6285).GUILD_LIMITED_ACCESS_HC_LINK;
+const helpdeskArticle = fn(6287).GUILD_LIMITED_ACCESS_HC_LINK;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(
-  TextStyles(fn(1072).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+  TextStyles(fn(1071).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
 );
 obj3.textAlign = "center";
 obj3.marginVertical = 12;

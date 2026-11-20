@@ -1,5 +1,4 @@
 // discord_app/modules/conjure/share/native/ConjureSharingModeSheet.tsx
-import util from "../../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -16,6 +15,7 @@ export default function ConjureSharingModeSheet(onChange) {
   ({ options, value } = onChange);
   require = value;
   onChange = onChange.onChange;
+  let title = onChange.title;
   items = [onChange, value];
   const callback = noop.useCallback((arg0) => {
     ActionSheetActionCreatorsDefault.hideActionSheet(ConjureSharingModeSheet);
@@ -23,19 +23,31 @@ export default function ConjureSharingModeSheet(onChange) {
       onChange(arg0);
     }
   }, items);
-  let obj = { header: null, children: null };
-  const obj2 = { title: null };
-  const intl = util.intl;
-  obj2.title = intl.string(onChange(4089).jDBYrs);
-  obj.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
-  obj.children = jsx(TableRadioGroup.TableRadioGroup, {
-    value,
-    onChange: callback,
-    hasIcons: false,
-    children: options.map((value) =>
-      jsx(value(dependencyMap[8]).TableRadioRow, { value: value.value, label: value.label }, value.value),
-    ),
+  if (title == null) {
+    const intl = tmp3(1112).intl;
+    title = intl.string(onChange(4091).jDBYrs);
+  }
+  let obj = {
+    header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title }),
+    children: jsx(TableRadioGroup.TableRadioGroup, {
+      value,
+      onChange: callback,
+      hasIcons: false,
+      children: options.map((value) =>
+        jsx(value(dependencyMap[8]).TableRadioRow, { value: value.value, label: value.label }, value.value),
+      ),
+    }),
+  };
+  return jsx(ActionSheet.ActionSheet, {
+    header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title }),
+    children: jsx(TableRadioGroup.TableRadioGroup, {
+      value,
+      onChange: callback,
+      hasIcons: false,
+      children: options.map((value) =>
+        jsx(value(dependencyMap[8]).TableRadioRow, { value: value.value, label: value.label }, value.value),
+      ),
+    }),
   });
-  return jsx(ActionSheet.ActionSheet, { header: null, children: null });
 }
 export const CONJURE_SHARING_MODE_SHEET_KEY = "ConjureSharingModeSheet";

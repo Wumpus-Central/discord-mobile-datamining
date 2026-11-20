@@ -4,7 +4,7 @@ import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard.tsx";
 import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const SKUProductLines = fn(1072).SKUProductLines;
+const SKUProductLines = fn(1071).SKUProductLines;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/WishlistItemCard.tsx");

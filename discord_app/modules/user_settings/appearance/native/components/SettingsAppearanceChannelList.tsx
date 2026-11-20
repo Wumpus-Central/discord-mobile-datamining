@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../../../_runtime/metro/01653__.js";
 import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem.tsx";
 import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem.tsx";
 import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem.tsx";
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { channelPreviewGradient: null, channelPreviewCardContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -71,8 +71,8 @@ export default function ChannelListPreview(useGradientBackground) {
   }
   let obj = { style: items1, accessible: true, accessibilityRole: "image", accessibilityLabel: null, children: null };
   items1[2] = bgSurfaceHigh;
-  const intl = animatedStyles(1113).intl;
-  obj.accessibilityLabel = intl.string(animatedStyles(1113).t.iGxm3x);
+  const intl = animatedStyles(1112).intl;
+  obj.accessibilityLabel = intl.string(animatedStyles(1112).t.iGxm3x);
   let tmp7 = null;
   if (useGradientBackground) {
     let obj2 = { style: tmp.channelPreviewGradient, children: null };
@@ -92,11 +92,11 @@ export default function ChannelListPreview(useGradientBackground) {
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants",
   };
-  items2[1] = closure_5(animatedStyles(7371).FlashList, obj4);
+  items2[1] = closure_5(animatedStyles(7370).FlashList, obj4);
   items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, {
     visible: isNitroLocked,
     theme: themes[themeIndex],
   });
   obj.children = items2;
-  return closure_6(_modDef1655.View, obj);
+  return closure_6(_modDef1653.View, obj);
 }

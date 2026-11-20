@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { width: "100%" },
   card: {
@@ -105,16 +105,16 @@ export default function MarketingPageBannerTile(bannerFields) {
   const obj = helpArticleLinkProps(9286);
   const obj3 = { type: null, name: null, properties: null };
   const buttonActionHandler = helpArticleLinkProps(9286).getButtonActionHandler(obj2);
-  obj3.type = helpArticleLinkProps(1264).ImpressionTypes.VIEW;
-  obj3.name = helpArticleLinkProps(1264).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
+  obj3.type = helpArticleLinkProps(1263).ImpressionTypes.VIEW;
+  obj3.name = helpArticleLinkProps(1263).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   obj3.properties = { component_type: componentType, component_id: componentId, promotion_id: promotionId };
   useTrackImpressionDefault(obj3);
   const tmp2Result = useTrackImpressionDefault;
-  const formatStringWithCommonPremiumParams = helpArticleLinkProps(13862).useFormatStringWithCommonPremiumParams(
+  const formatStringWithCommonPremiumParams = helpArticleLinkProps(13831).useFormatStringWithCommonPremiumParams(
     bannerFields.body,
   );
-  const tmp4Result = helpArticleLinkProps(13862);
-  helpArticleLinkProps = helpArticleLinkProps(13862).getHelpArticleLinkProps(
+  const tmp4Result = helpArticleLinkProps(13831);
+  helpArticleLinkProps = helpArticleLinkProps(13831).getHelpArticleLinkProps(
     bannerFields.helpArticle,
     bannerFields.helpArticleId,
   );
@@ -134,7 +134,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   }
   const items2 = [
     tmp14Result,
-    closure_4(helpArticleLinkProps(5383).Text, {
+    closure_4(helpArticleLinkProps(5385).Text, {
       color: "mobile-text-heading-primary",
       variant: "body-lg/semibold",
       children: bannerFields.header,
@@ -154,11 +154,11 @@ export default function MarketingPageBannerTile(bannerFields) {
       },
       children: helpArticleLinkProps.linkText,
     };
-    tmp14Result3 = closure_4(tmp4(5383).Text, obj10);
+    tmp14Result3 = closure_4(tmp4(5385).Text, obj10);
   }
   items3[2] = tmp14Result3;
   obj9.children = items3;
-  items2[2] = closure_5(helpArticleLinkProps(5383).Text, obj9);
+  items2[2] = closure_5(helpArticleLinkProps(5385).Text, obj9);
   let tmp14Result4 = null != bannerFields.button;
   if (tmp14Result4) {
     const obj11 = { style: tmp.ctaButton, children: null };

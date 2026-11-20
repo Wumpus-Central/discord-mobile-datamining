@@ -22,7 +22,7 @@ let closure_22 = async function _startAudioRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -84,14 +84,14 @@ let closure_22 = async function _startAudioRecording(arg0) {
         if (closure_130_11.getState().recordingId !== closure_129_0) {
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         } else {
           closure_130_9(closure_130_12.STARTED);
           const _Date = Date;
           closure_130_10(Date.now());
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       }
     } catch (tmp22) {
@@ -149,7 +149,7 @@ let closure_26 = async function _endAudioRecording() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -225,7 +225,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -259,7 +259,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
         closure_129_23();
         closure_129_7(closure_128_0);
         c3 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -267,7 +267,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(12733);
+const VoiceMessagesUIStore = fn(12703);
 ({
   addVoiceMessageWave: hasOwnProperty,
   resetVoiceMessageState: closure_6,
@@ -278,7 +278,7 @@ const VoiceMessagesUIStore = fn(12733);
   useVoiceMessagesUIStore: closure_11,
   VoiceMessageRecordingStatus: closure_12,
 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(12734);
+const VoiceMessageConstants = fn(12704);
 ({
   WAVEFORM_WAVE_MAX_VALUE: map1,
   VOICE_RECORDING_MIN_DB: closure_14,
@@ -286,7 +286,7 @@ const VoiceMessageConstants = fn(12734);
   WAVEFORM_MAX_SAMPLES: closure_16,
   VOICE_RECORDING_MAX_DURATION_MILLIS: closure_17,
 } = VoiceMessageConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 let c19 = null;
 let closure_20 = new LoggerDefault("VoiceMessages");
 let closure_21 = apply.throttle((arg0) => {
@@ -306,10 +306,10 @@ let closure_21 = apply.throttle((arg0) => {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMessageUtils.tsx");
 
-export function generateBase64EncodedWaveform(current) {
-  let arr = current;
-  if (current.length > closure_1_16) {
-    arr = downsampleWaveformDefault(current, tmp);
+export function generateBase64EncodedWaveform(items) {
+  let arr = items;
+  if (items.length > closure_1_16) {
+    arr = downsampleWaveformDefault(items, tmp);
   }
   const mapped = arr.map((item) => Math.min(item, closure_1_13));
   const uint8Array = new Uint8Array(mapped);

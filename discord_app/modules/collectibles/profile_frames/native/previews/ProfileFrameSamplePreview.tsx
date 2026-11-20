@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef7016 from "../../../../../../_runtime/metro/07016__.js";
+import _modDef7015 from "../../../../../../_runtime/metro/07015__.js";
 import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
 import ProfileFrameDefault from "../ProfileFrame.tsx";
 import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
@@ -15,10 +15,10 @@ function filterLayer(responsive) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7445).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7444).UserProfileThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   profileFrameContainer: { flex: 1 },
   profileContainer: {
@@ -239,7 +239,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
       backgroundColor: "black",
     },
   };
-  tmp13 = _modDef7016;
+  tmp13 = _modDef7015;
   obj18.uri = _modDef8913;
   obj17.source = obj18;
   obj17.style = tmp.sampleProfile;

@@ -6,10 +6,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const StatusTypes = fn(1072).StatusTypes;
+const StatusTypes = fn(1071).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   channelItemContainer: {
     flexDirection: "row",
@@ -51,14 +51,14 @@ obj2.channelItemTop = {
   alignItems: "center",
 };
 let closure_6 = createStyles.createStyles(obj2);
-let obj6 = { direction: fn(1187).CutoutDirection.BOTTOM_RIGHT, radius: null, imageType: null, inset: -4 };
-const native = fn(1187);
-let num = native.getStatusSize(fn(1187).AvatarSizes.LARGE_48);
+let obj6 = { direction: fn(1186).CutoutDirection.BOTTOM_RIGHT, radius: null, imageType: null, inset: -4 };
+const native = fn(1186);
+let num = native.getStatusSize(fn(1186).AvatarSizes.LARGE_48);
 if (num == null) {
   num = 0;
 }
 obj6.radius = num / 2 + 4;
-obj6.imageType = fn(1187).CutoutType.CIRCULAR;
+obj6.imageType = fn(1186).CutoutType.CIRCULAR;
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/appearance/native/components/SettingsAppearanceChannelRowItem.tsx",
@@ -103,13 +103,13 @@ export default function ChannelRowItem(isUnread) {
   obj6 = { style: tmp2.channelItemContent, children: null };
   const obj7 = { style: tmp2.channelItemTop, children: null };
   const items3 = [
-    React4(tmp6(5383).Text, {
+    React4(tmp6(5385).Text, {
       animated: true,
       style: flag ? animatedStyles.textNormal : animatedStyles.textMuted,
       variant: "heading-sm/semibold",
       children: title,
     }),
-    React4(tmp6(5383).Text, {
+    React4(tmp6(5385).Text, {
       animated: true,
       style: animatedStyles.textMuted,
       variant: "body-xs/medium",
@@ -128,7 +128,7 @@ export default function ChannelRowItem(isUnread) {
     animatedStyles = { animated: true, style: null, variant: "heading-sm/medium", lineClamp: 1, children: null };
     animatedStyles.style = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
     animatedStyles.children = preview;
-    React4(tmp6(5383).Text, animatedStyles);
+    React4(tmp6(5385).Text, animatedStyles);
     const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
   }
   const obj8 = {

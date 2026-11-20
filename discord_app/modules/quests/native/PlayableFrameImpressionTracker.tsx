@@ -22,7 +22,7 @@ export default function PlayableFrameImpressionTracker(frameId) {
     const obj2 = {
       adContentId: stateFromStores.id,
       adCreativeType: tmp(tmp2[5]).AdCreativeType.PLAYABLE,
-      questContent: tmp(tmp2[6]).QuestContent.RUNNING_ACTIVITY,
+      questContent: tmp(tmp2[6]).QuestContent.PLAYABLE_SHEET_MOBILE,
       sourceQuestContent: tmp(tmp2[6]).QuestContent.QUEST_BAR_MOBILE,
       overrideVisibility: true,
       children() {
@@ -32,7 +32,7 @@ export default function PlayableFrameImpressionTracker(frameId) {
     tmp4 = jsx(tmp(tmp2[4]).QuestContentImpressionTrackerNative, {
       adContentId: stateFromStores.id,
       adCreativeType: tmp(tmp2[5]).AdCreativeType.PLAYABLE,
-      questContent: tmp(tmp2[6]).QuestContent.RUNNING_ACTIVITY,
+      questContent: tmp(tmp2[6]).QuestContent.PLAYABLE_SHEET_MOBILE,
       sourceQuestContent: tmp(tmp2[6]).QuestContent.QUEST_BAR_MOBILE,
       overrideVisibility: true,
       children() {

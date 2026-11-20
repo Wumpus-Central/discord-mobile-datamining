@@ -25,7 +25,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -136,7 +136,7 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -252,11 +252,11 @@ let closure_14 = async function _setEventAsActive(arg0) {
   closure_130_1 = flag;
   return "Path";
 };
-let closure_4 = fn(4645).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(4647);
+let closure_4 = fn(4647).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(4649);
 ({ GuildScheduledEventEntityTypes: metroImportDefault, GuildScheduledEventPrivacyLevel: closure_8 } =
   GuildScheduledEventsConstants);
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventUtils.tsx");
 

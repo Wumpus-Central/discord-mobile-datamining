@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/useCaptchaModalEffects.tsx");
 
@@ -15,7 +15,7 @@ export default function useCaptchaModalEffects(arg0) {
     analyticsType = "Guild Join Captcha";
   }
   dependencyMap = noop.useRef(true);
-  analyticsType(5353)(() => () => {
+  analyticsType(5355)(() => () => {
     if (ref.current) {
       if (closure_1_0 != null) {
         tmp(require("SharedCaptchaUtils").CaptchaError.CANCEL);

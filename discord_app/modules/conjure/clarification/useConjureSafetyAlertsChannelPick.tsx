@@ -11,7 +11,7 @@ import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 import BigFlagUtils from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 let closure_9 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/useConjureSafetyAlertsChannelPick.tsx");

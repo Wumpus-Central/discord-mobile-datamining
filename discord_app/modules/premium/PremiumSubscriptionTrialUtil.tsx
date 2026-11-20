@@ -5,7 +5,7 @@ import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
 import UserOfferStore from "../../stores/billing/UserOfferStore.tsx";
 
 require = fn;
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: hasOwnProperty,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_6,

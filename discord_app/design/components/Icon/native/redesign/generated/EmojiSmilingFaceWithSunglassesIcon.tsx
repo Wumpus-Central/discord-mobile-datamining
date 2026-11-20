@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/EmojiSmilingFaceWithSunglassesIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod16854 from "../../../../../../../_runtime/metro/16854__.js";
+import _mod16678 from "../../../../../../../_runtime/metro/16678__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiSmilingFaceWithSunglassesIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16854, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16678, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

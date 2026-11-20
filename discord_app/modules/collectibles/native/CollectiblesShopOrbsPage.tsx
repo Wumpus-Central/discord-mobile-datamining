@@ -7,9 +7,9 @@ import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(1074).CollectiblesMobileShopScreen;
+let closure_6 = fn(1073).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ container: { display: "flex", flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopOrbsPage.tsx");

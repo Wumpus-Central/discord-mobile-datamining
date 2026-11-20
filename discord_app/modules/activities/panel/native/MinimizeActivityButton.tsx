@@ -1,12 +1,12 @@
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
-import _modDef12708 from "../../../../../_runtime/metro/12708__.js";
+import _modDef12678 from "../../../../../_runtime/metro/12678__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ActivityPanelModes = fn(5418).ActivityPanelModes;
+const ActivityPanelModes = fn(5420).ActivityPanelModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles({ buttonParent: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
@@ -21,7 +21,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
     if ("" !== activityName) {
       const obj2 = { style: tmp2.buttonParent, children: null };
       const obj3 = {
-        icon: _modDef12708,
+        icon: _modDef12678,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -30,12 +30,12 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
         maxFontSizeMultiplier: 1,
         shrink: true,
       };
-      const intl2 = setMode(1113).intl;
-      obj3.accessibilityLabel = intl2.string(setMode(1113).t.brPQ5U);
+      const intl2 = setMode(1112).intl;
+      obj3.accessibilityLabel = intl2.string(setMode(1112).t.brPQ5U);
       obj3.onPress = callback;
       obj3.text = activityName;
-      obj2.children = jsx(setMode(5390).Button, {
-        icon: _modDef12708,
+      obj2.children = jsx(setMode(5392).Button, {
+        icon: _modDef12678,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -49,18 +49,18 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
     return tmp3;
   }
   const obj = {
-    icon: _modDef12708,
+    icon: _modDef12678,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",
     variant: "secondary-overlay",
     maxFontSizeMultiplier: 1,
   };
-  const intl = setMode(1113).intl;
-  obj.accessibilityLabel = intl.string(setMode(1113).t.brPQ5U);
+  const intl = setMode(1112).intl;
+  obj.accessibilityLabel = intl.string(setMode(1112).t.brPQ5U);
   obj.onPress = callback;
-  tmp3 = jsx(setMode(7472).IconButton, {
-    icon: _modDef12708,
+  tmp3 = jsx(setMode(7471).IconButton, {
+    icon: _modDef12678,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",

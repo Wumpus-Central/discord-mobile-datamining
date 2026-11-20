@@ -41,8 +41,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         const join_url = body.body.join_url;
         const secret = body.body.secret;
         if (null != join_url) {
-          applicationId(5471).openURL(join_url, constants.SAFARI);
-          const obj3 = applicationId(5471);
+          applicationId(5473).openURL(join_url, constants.SAFARI);
+          const obj3 = applicationId(5473);
           const obj2 = {
             type: "ACTIVITY_JOIN",
             applicationId,
@@ -67,8 +67,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         } else {
           const _HermesInternal = HermesInternal;
           const combined = "" + closure_1_4.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-          applicationId(5471).openURL(combined, constants.SAFARI);
-          const obj6 = applicationId(5471);
+          applicationId(5473).openURL(combined, constants.SAFARI);
+          const obj6 = applicationId(5473);
           const obj8 = {
             type: "ACTIVITY_JOIN",
             applicationId,
@@ -124,14 +124,14 @@ function fetchJoinSecret(applicationId, arg1) {
     },
   );
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   Endpoints: closure_4,
   DiscordConnectDeeplinks: hasOwnProperty,
   WebBrowserType: closure_6,
   ActivityFlags: metroImportDefault,
 } = Constants);
-const ActivityIntent = fn(10712).ActivityIntent;
+const ActivityIntent = fn(10654).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 
@@ -170,7 +170,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

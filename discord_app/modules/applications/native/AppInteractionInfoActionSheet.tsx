@@ -14,7 +14,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { body: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -49,7 +49,7 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata != null) {
     tmp3 =
       interactionMetadata.authorizing_integration_owners[
-        message(undefined, 5407).ApplicationIntegrationType.USER_INSTALL
+        message(undefined, 5409).ApplicationIntegrationType.USER_INSTALL
       ];
   }
   dependencyMap = tmp3;
@@ -58,7 +58,7 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata2 != null) {
     tmp6 =
       interactionMetadata2.authorizing_integration_owners[
-        message(undefined, 5407).ApplicationIntegrationType.GUILD_INSTALL
+        message(undefined, 5409).ApplicationIntegrationType.GUILD_INSTALL
       ];
   }
   noop = tmp6;
@@ -101,28 +101,28 @@ export default function AppInteractionInfoActionSheet(message) {
   }
   if (null != stateFromStores1) {
     const obj5 = { icon: null, label: null, subLabel: null };
-    const obj6 = { guild: stateFromStores1, size: tmp10(7203).GuildIconSizes.SMALL_32 };
-    obj5.icon = closure_7(onBack(7203), obj6);
+    const obj6 = { guild: stateFromStores1, size: tmp10(7202).GuildIconSizes.SMALL_32 };
+    obj5.icon = closure_7(onBack(7202), obj6);
     obj5.label = stateFromStores1.name;
-    let intl2 = tmp10(1113).intl;
+    let intl2 = tmp10(1112).intl;
     const obj7 = { application: message.author.username };
-    obj5.subLabel = intl2.formatToPlainString(tmp10(1113).t.ShLXXB, obj7);
-    let tmp25 = closure_7(tmp10(6926).TableRow, obj5);
-    const tmp28 = onBack(7203);
+    obj5.subLabel = intl2.formatToPlainString(tmp10(1112).t.ShLXXB, obj7);
+    let tmp25 = closure_7(tmp10(6925).TableRow, obj5);
+    const tmp28 = onBack(7202);
   } else {
     tmp25 = null;
     if (null != stateFromStores) {
       const obj8 = { icon: null, label: null, subLabel: null, onPress: null, arrow: true };
-      const obj9 = { user: stateFromStores, size: tmp10(1187).AvatarSizes.REFRESH_MEDIUM_32, guildId };
-      obj8.icon = closure_7(tmp10(1187).Avatar, obj9);
+      const obj9 = { user: stateFromStores, size: tmp10(1186).AvatarSizes.REFRESH_MEDIUM_32, guildId };
+      obj8.icon = closure_7(tmp10(1186).Avatar, obj9);
       obj8.label = stateFromStores.username;
-      let intl = tmp10(1113).intl;
+      let intl = tmp10(1112).intl;
       const obj10 = { application: message.author.username };
-      obj8.subLabel = intl.formatToPlainString(tmp10(1113).t.ShLXXB, obj10);
+      obj8.subLabel = intl.formatToPlainString(tmp10(1112).t.ShLXXB, obj10);
       obj8.onPress = function onPress() {
         return showUserProfileActionSheetDefault({ userId: stateFromStores.id, channelId: message.channel_id });
       };
-      tmp25 = closure_7(tmp10(6926).TableRow, obj8);
+      tmp25 = closure_7(tmp10(6925).TableRow, obj8);
     }
   }
   const obj11 = { header: memo, bodyStyles: tmp.body, children: null };
@@ -130,17 +130,17 @@ export default function AppInteractionInfoActionSheet(message) {
   let tmp29Result = null;
   if (null != tmp16) {
     const obj12 = { icon: null, label: null, subLabel: null, onPress: null, arrow: true };
-    const obj13 = { user: tmp16, size: tmp10(1187).AvatarSizes.REFRESH_MEDIUM_32, guildId };
-    obj12.icon = closure_7(tmp10(1187).Avatar, obj13);
+    const obj13 = { user: tmp16, size: tmp10(1186).AvatarSizes.REFRESH_MEDIUM_32, guildId };
+    obj12.icon = closure_7(tmp10(1186).Avatar, obj13);
     obj12.label = tmp16.username;
-    const intl3 = tmp10(1113).intl;
-    obj12.subLabel = intl3.string(tmp10(1113).t["04gxNg"]);
+    const intl3 = tmp10(1112).intl;
+    obj12.subLabel = intl3.string(tmp10(1112).t["04gxNg"]);
     obj12.onPress = function onPress() {
       return showUserProfileActionSheetDefault({ userId: id.id, channelId: message.channel_id });
     };
-    tmp29Result = closure_7(tmp10(6926).TableRow, obj12);
+    tmp29Result = closure_7(tmp10(6925).TableRow, obj12);
   }
   items5[1] = tmp29Result;
-  obj11.children = closure_8(message(7229).TableRowGroup, { hasIcons: true, children: items5 });
-  return closure_7(message(5020).BottomSheet, obj11);
+  obj11.children = closure_8(message(7228).TableRowGroup, { hasIcons: true, children: items5 });
+  return closure_7(message(5022).BottomSheet, obj11);
 }

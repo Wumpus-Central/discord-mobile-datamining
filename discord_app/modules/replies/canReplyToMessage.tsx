@@ -9,9 +9,9 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ MessageFlags: hasOwnProperty, MessageStates: closure_6 } = Constants);
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/replies/canReplyToMessage.tsx");
 

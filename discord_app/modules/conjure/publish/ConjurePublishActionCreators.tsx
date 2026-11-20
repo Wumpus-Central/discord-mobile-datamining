@@ -32,7 +32,7 @@ let closure_9 = async function _unpublishProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -115,41 +115,99 @@ let closure_9 = async function _unpublishProject(arg0) {
     }
   }
 };
-let closure_10 = async function _unpublishUserApp() {
-  closure_2 = tmp2;
-  closure_1 = tmp3;
-  closure_129_0 = closure_0;
-  await unpublishProject(closure_0, {}).catch(() => null);
-  closure_129_1 = value;
-  if (closure_129_1 != null) {
-    const ok = closure_129_1.ok;
+let closure_10 = async function _unpublishLiveApp(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_2 = tmp2;
+          closure_1 = tmp3;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          let publishStatus;
+          closure_129_3 = undefined;
+          const id = _require.id;
+          closure_129_0 = id;
+          if ("guild" === _require.install_scope) {
+            let obj5 = { alsoRemovePreviewBot: false };
+          } else {
+            obj5 = {};
+          }
+          unpublishProject(id, obj5).catch(() => null);
+          c3 = 1;
+          c4 = 1;
+          const promise2 = unpublishProject(id, obj5);
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        closure_129_1 = value;
+        let ok;
+        if (closure_129_1 != null) {
+          ok = closure_129_1.ok;
+        }
+        if (true !== ok) {
+          c4 = 3;
+          return { value: false, done: true };
+        } else {
+          publishStatus = closure_130_6.getPublishStatus(closure_129_0);
+          if (null != publishStatus) {
+            const obj7 = {
+              type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
+              projectId: closure_129_0,
+              publishState: "not_live",
+              surface: publishStatus.surface,
+              previewAppChannels: publishStatus.previewAppChannels,
+              previewDevicePermissions: publishStatus.previewDevicePermissions,
+            };
+            closure_130_1(closure_130_2[8]).dispatch(obj7);
+            const obj = closure_130_1(closure_130_2[8]);
+          }
+          const currentUser = closure_130_4.getCurrentUser();
+          let id1;
+          if (currentUser != null) {
+            id1 = currentUser.id;
+          }
+          closure_129_3 = id1;
+          if (null != closure_129_3) {
+            const profile = closure_130_0(closure_130_2[9]).fetchProfile(closure_129_3);
+            profile.catch(() => {});
+            const obj3 = closure_130_0(closure_130_2[9]);
+          }
+          c4 = 3;
+          return { value: true, done: true };
+        }
+      }
+    } catch (tmp31) {
+      c4 = tmp;
+      throw tmp31;
+    }
   }
-  if (true !== ok) {
-    return false;
-  }
-  const publishStatus = closure_130_6.getPublishStatus(closure_129_0);
-  if (null != publishStatus) {
-    closure_130_1(closure_130_2[8]).dispatch({
-      type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
-      projectId: closure_129_0,
-      publishState: "not_live",
-      surface: publishStatus.surface,
-      previewAppChannels: publishStatus.previewAppChannels,
-      previewDevicePermissions: publishStatus.previewDevicePermissions,
-    });
-    closure_130_1(closure_130_2[8]);
-  }
-  const currentUser = closure_130_4.getCurrentUser();
-  if (currentUser != null) {
-    const id = currentUser.id;
-  }
-  closure_129_3 = id;
-  if (null != closure_129_3) {
-    const profile = closure_130_0(closure_130_2[9]).fetchProfile(closure_129_3);
-    profile.catch(() => {});
-    closure_130_0(closure_130_2[9]);
-  }
-  return true;
 };
 let closure_11 = async function _refreshPublishedProject(arg0) {
   if (c5 === 2) {
@@ -162,7 +220,7 @@ let closure_11 = async function _refreshPublishedProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -324,7 +382,7 @@ let closure_13 = async function _refreshPublishedApplication() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -365,7 +423,7 @@ let closure_13 = async function _refreshPublishedApplication() {
             closure_132_14(closure_131_0, closure_131_1, closure_131_2);
           }
           c6 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c6 = tmp;
@@ -388,7 +446,7 @@ function reloadAfterPublish(applicationId, arg1, integrationInstalled) {
     const result1 = ConjurePreviewActionCreators.reloadConjureAppFrames(applicationId);
   }
 }
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/ConjurePublishActionCreators.tsx");
 
@@ -410,7 +468,7 @@ export function trackPublishFailed(projectId, message, isPreview) {
   ConjureAnalytics.trackConjureErrored(projectId, obj2);
 }
 export { unpublishProject };
-export function unpublishUserApp() {
+export function unpublishLiveApp() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {

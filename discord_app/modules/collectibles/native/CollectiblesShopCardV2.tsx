@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardV2.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import v1 from "../../../../_runtime/01269_v1.js";
+import v1 from "../../../../_runtime/01268_v1.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import openProductDetailsActionSheet from "openProductDetailsActionSheet.tsx";
@@ -367,7 +367,7 @@ function CollectiblesShopCardV2Inner(product) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const CollectiblesShopConstants = fn(1074);
+const CollectiblesShopConstants = fn(1073);
 ({ EXTERNAL_PRODUCT_SKU_IDS: metroImportDefault, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
@@ -375,7 +375,7 @@ let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   card: null,
   topRowOverlay: null,

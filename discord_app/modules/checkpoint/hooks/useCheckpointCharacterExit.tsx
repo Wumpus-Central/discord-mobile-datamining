@@ -6,7 +6,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const CheckpointTransitionConstants = fn(12423);
+const CheckpointTransitionConstants = fn(12393);
 ({
   CHECKPOINT_CHARACTER_EXIT_TEXTURE_TIMEOUT_MS: closure_6,
   CHECKPOINT_CHARACTER_EXIT_ZOOM_DURATION_MS: metroImportDefault,

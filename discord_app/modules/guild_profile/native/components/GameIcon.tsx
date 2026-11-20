@@ -4,13 +4,13 @@ import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Pressables = FireIcon(6911);
-const FireIcon2 = FireIcon(13714);
+const Pressables = FireIcon(6910);
+const FireIcon2 = FireIcon(13683);
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
 let size = {
   width: 32,

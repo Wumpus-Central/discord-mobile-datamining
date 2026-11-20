@@ -15,7 +15,7 @@ function handleGuildRoleCreateOrUpdate(arg0) {
     c9 = sortedRoles.map((id) => id.id);
   }
 }
-const FormStates = fn(1072).FormStates;
+const FormStates = fn(1071).FormStates;
 let OPEN = FormStates.CLOSED;
 let c8 = false;
 let c9 = null;

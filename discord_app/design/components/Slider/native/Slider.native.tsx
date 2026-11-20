@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../modules/haptics/HapticFeedbackTypes.tsx";
-import _modDef10908 from "../../../../../_runtime/metro/10908__.js";
+import _modDef10850 from "../../../../../_runtime/metro/10850__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flexGrow: 1, flexDirection: "row", alignItems: "center" },
   slider: { flex: 1 },
@@ -139,7 +139,7 @@ export function Slider(maxValue) {
   }
   obj4.accessibilityValue = tmp19;
   obj4.testID = testID;
-  const tmp18 = _modDef10908;
+  const tmp18 = _modDef10850;
   let fn;
   if (obj6.isAndroid()) {
     fn = () => true;

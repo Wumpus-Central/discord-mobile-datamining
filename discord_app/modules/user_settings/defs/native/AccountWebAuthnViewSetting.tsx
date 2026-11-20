@@ -8,13 +8,13 @@ import WebAuthnStore from "../../../webauthn/WebAuthnStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["0N1s81"]);
   },
-  parent: fn(8593).MobileUserSettings.ACCOUNT,
+  parent: fn(8592).MobileUserSettings.ACCOUNT,
   usePreNavigationAction: function useAccountCanUseWebAuthnView() {
     return noop.useCallback(() => {
       currentUser = currentUser.getCurrentUser();
@@ -47,7 +47,7 @@ const route = SettingBuilders.createRoute({
     });
   },
   screen: {
-    route: fn(1072).UserSettingsSections.WEBAUTHN_VIEW,
+    route: fn(1071).UserSettingsSections.WEBAUTHN_VIEW,
     getComponent() {
       return require("PasskeyInitStep").default;
     },

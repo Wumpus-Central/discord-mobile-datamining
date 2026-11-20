@@ -6,9 +6,9 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
-const UserSettingsDelay = fn(1082).UserSettingsDelay;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
+const UserSettingsDelay = fn(1081).UserSettingsDelay;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");
 
@@ -58,7 +58,7 @@ export function markContentAsDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHM
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
     const obj3 = {
-      type: tmp(4625).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK],
+      type: tmp(4627).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK],
       guild_id: guildId,
       action: null,
     };

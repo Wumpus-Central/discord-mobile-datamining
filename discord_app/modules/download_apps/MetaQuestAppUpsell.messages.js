@@ -1,18 +1,18 @@
 // discord_app/modules/download_apps/MetaQuestAppUpsell.messages.js
 import AssetJsonUtils from "../asset_json/native/AssetJsonUtils.tsx";
 import _mod2225 from "../../../_runtime/metro/02225__.js";
-import module_1152_mod from "../../../_runtime/metro/01152__.js";
+import module_1151_mod from "../../../_runtime/metro/01151__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-let module_1152 = module_1152_mod;
-const loader = module_1152.createLoader({
+let module_1151 = module_1151_mod;
+const loader = module_1151.createLoader({
   () => {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2225);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1152 = module_1152_mod;
-const messagesProxy = module_1152.makeMessagesProxy(loader);
+let module_1151 = module_1151_mod;
+const messagesProxy = module_1151.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/download_apps/MetaQuestAppUpsell.messages.js");
 
 export default messagesProxy;

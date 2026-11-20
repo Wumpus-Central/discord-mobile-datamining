@@ -79,7 +79,7 @@ function resolveGoreSettingWithDefaults(isFriend) {
   BLUR2 = ExplicitContentRedaction.BLUR;
   obj = RegionalFeatureConfigUtils;
 }
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx",

@@ -8,8 +8,8 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-const EmojiInteractionPoint = fn(1391).EmojiInteractionPoint;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const EmojiInteractionPoint = fn(1389).EmojiInteractionPoint;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
 

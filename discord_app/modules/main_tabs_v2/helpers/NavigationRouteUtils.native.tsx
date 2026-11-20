@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx
-import v1 from "../../../../_runtime/01269_v1.js";
-import Link from "../../../../_runtime/01503_Link.js";
+import v1 from "../../../../_runtime/01268_v1.js";
+import Link from "../../../../_runtime/01501_Link.js";
 import RootNavigationRef from "../RootNavigationRef.native.tsx";
 import NativeTTIManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import Types from "../Types.tsx";
@@ -26,10 +26,10 @@ function modalRoutesAboveMain(routes) {
     return items;
   }
 }
-function coerceMainRoute(routes) {
-  if (null != routes) {
-    if ("main" === routes.name) {
-      return routes;
+function coerceMainRoute(findLastResult) {
+  if (null != findLastResult) {
+    if ("main" === findLastResult.name) {
+      return findLastResult;
     }
   }
 }
@@ -196,7 +196,7 @@ function popModal(c3, onExited) {
 }
 
 export function navigateToChannel(openChannel) {
-  ({ channelId, guildId, messageId, replaceChannelAndFixRoot } = openChannel);
+  ({ channelId, guildId, messageId, subRouteId, replaceChannelAndFixRoot } = openChannel);
   if (replaceChannelAndFixRoot === undefined) {
     replaceChannelAndFixRoot = false;
   }
@@ -220,7 +220,7 @@ export function navigateToChannel(openChannel) {
             if (null != tmp21) {
               const obj2 = {};
               const merged = Object.assign(tmp21);
-              const obj3 = { channelId, guildId, messageId };
+              const obj3 = { channelId, guildId, messageId, subRouteId };
               obj2.params = obj3;
             } else {
               let combined = channelId;
@@ -230,11 +230,11 @@ export function navigateToChannel(openChannel) {
                 const tmpResult = v1;
               }
               const obj4 = { name: "channel", key: combined, params: null };
-              const obj5 = { channelId, guildId, messageId };
+              const obj5 = { channelId, guildId, messageId, subRouteId };
               obj4.params = obj5;
             }
-            messageId = tmp12.state.routes;
-            tmp21 = messageId[Symbol.iterator]();
+            subRouteId = tmp12.state.routes;
+            tmp21 = subRouteId[Symbol.iterator]();
           }
         }
         return false;
@@ -242,16 +242,18 @@ export function navigateToChannel(openChannel) {
         const tmp5 = coerceChannelRoute(rootNavigationRef.getCurrentRoute());
         if (null != tmp5) {
           if (tmp5.params.channelId === channelId) {
-            const obj6 = {};
-            const CommonActions = Link.CommonActions;
-            const obj7 = { channelId, guildId, messageId };
-            const merged1 = Object.assign(CommonActions.setParams(obj7));
-            obj6.source = tmp5.key;
-            rootNavigationRef.dispatch(obj6);
+            if (tmp5.params.subRouteId === subRouteId) {
+              const obj6 = {};
+              const CommonActions = Link.CommonActions;
+              const obj7 = { channelId, guildId, messageId, subRouteId };
+              const merged1 = Object.assign(CommonActions.setParams(obj7));
+              obj6.source = tmp5.key;
+              rootNavigationRef.dispatch(obj6);
+            }
+            return true;
           }
-          return true;
         }
-        const obj8 = { channelId, guildId, messageId, screenKey: null };
+        const obj8 = { channelId, guildId, messageId, subRouteId, screenKey: null };
         const _HermesInternal = HermesInternal;
         obj8.screenKey = "channel-" + v1.v4();
         rootNavigationRef.navigate("channel", obj8);
@@ -262,7 +264,7 @@ export function navigateToChannel(openChannel) {
   return false;
 }
 export function navigateToRootTab(drawerOpen) {
-  const rootNavigationRef = icymiScreen(4969).getRootNavigationRef();
+  const rootNavigationRef = icymiScreen(4971).getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -281,24 +283,24 @@ export function navigateToRootTab(drawerOpen) {
             const obj2 = { screen, params: null };
             const obj3 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             obj2.params = obj3;
-            const rootNavigationRef1 = tmp(4969).getRootNavigationRef();
+            const rootNavigationRef1 = tmp(4971).getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
                 if (tmp3) {
                   const rootState = rootNavigationRef1.getRootState();
                   const obj4 = { name: "tabs", key: null, params: null };
-                  const tmpResult3 = tmp(4970);
+                  const tmpResult3 = tmp(4972);
                   const _HermesInternal = HermesInternal;
-                  obj4.key = "tabs-" + tmp(1269).v4();
+                  obj4.key = "tabs-" + tmp(1268).v4();
                   obj4.params = obj2;
                   items = [obj4];
                   const items1 = [];
-                  const tmpResult4 = tmp(1269);
+                  const tmpResult4 = tmp(1268);
                   HermesBuiltin.arraySpread(
                     modalRoutesAboveMain(rootState.routes),
                     HermesBuiltin.arraySpread(tmpResult3.wrapRouteForRootNavigator(items), 0),
                   );
-                  let CommonActions = tmp(1503).CommonActions;
+                  let CommonActions = tmp(1501).CommonActions;
                   const obj5 = {};
                   const merged = Object.assign(rootState);
                   obj5.routes = items1;
@@ -310,7 +312,7 @@ export function navigateToRootTab(drawerOpen) {
                 }
               }
             }
-            const tmpResult = tmp(4969);
+            const tmpResult = tmp(4971);
           } else {
             const obj6 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             rootNavigationRef.setParams(obj6);
@@ -737,7 +739,7 @@ export function getOpenModalKey() {
 export function useOpenModalKey() {
   let tmp = _slicedToArray(
     closure_5(() => {
-      const rootNavigationRef = closure_0(4969).getRootNavigationRef();
+      const rootNavigationRef = closure_0(4971).getRootNavigationRef();
       let tmp;
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
@@ -772,7 +774,7 @@ export function useOpenModalKey() {
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(4969).getRootNavigationRef();
+        const rootNavigationRef = closure_0(4971).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -799,7 +801,7 @@ export function useOpenModalKey() {
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(4969);
+        const obj = closure_0(4971);
       });
     }
   }, []);
@@ -821,7 +823,7 @@ export function getCurrentNavigationRouteName() {
 export function useCurrentNavigationRouteName() {
   let tmp = _slicedToArray(
     closure_5(() => {
-      const rootNavigationRef = closure_0(4969).getRootNavigationRef();
+      const rootNavigationRef = closure_0(4971).getRootNavigationRef();
       let tmp;
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
@@ -842,7 +844,7 @@ export function useCurrentNavigationRouteName() {
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(4969).getRootNavigationRef();
+        const rootNavigationRef = closure_0(4971).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -855,7 +857,7 @@ export function useCurrentNavigationRouteName() {
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(4969);
+        const obj = closure_0(4971);
       });
     }
   }, []);

@@ -46,7 +46,7 @@ let closure_9 = async function _authorize(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -189,7 +189,7 @@ let closure_10 = async function _fetchAuthorization(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -304,7 +304,7 @@ let closure_11 = async function _startSamsungAuthorization() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -344,7 +344,7 @@ let closure_11 = async function _startSamsungAuthorization() {
           return obj;
         } else {
           c5 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c5 = tmp;
@@ -410,7 +410,7 @@ let closure_15 = async function _finishUserCodeTwoWayLinkError() {
     return value;
   })();
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_6, Endpoints: metroImportDefault } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/oauth2/actions.tsx");

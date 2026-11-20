@@ -26,7 +26,7 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -115,7 +115,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -214,7 +214,7 @@ let closure_10 = async function _loadCustomActivityLink() {
   }
   return Promise.reject("appId or linkId null");
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/CustomActivityLinkUtils.tsx");

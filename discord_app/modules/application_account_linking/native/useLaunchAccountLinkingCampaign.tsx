@@ -12,8 +12,8 @@ const require = globalThis.__r;
 require = fn;
 const noop = fn(19);
 ({ useEffect: closure_4, useState: hasOwnProperty } = noop);
-const FetchState = fn(6704).FetchState;
-const Consents = fn(1072).Consents;
+const FetchState = fn(6706).FetchState;
+const Consents = fn(1071).Consents;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/application_account_linking/native/useLaunchAccountLinkingCampaign.tsx",

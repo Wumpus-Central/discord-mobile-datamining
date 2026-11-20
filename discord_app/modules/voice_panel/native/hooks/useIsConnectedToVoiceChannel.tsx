@@ -6,7 +6,7 @@ import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const RTCConnectionStates = fn(1072).RTCConnectionStates;
+const RTCConnectionStates = fn(1071).RTCConnectionStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx");
 

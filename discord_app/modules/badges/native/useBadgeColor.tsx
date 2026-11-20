@@ -1,6 +1,6 @@
 // discord_app/modules/badges/native/useBadgeColor.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import privDefault from "../../../../_runtime/01456_priv.js";
+import privDefault from "../../../../_runtime/01454_priv.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 const NEUTRAL_35 = nativeDefault.unsafe_rawColors.NEUTRAL_35;
 let closure_7 = new privDefault({ max: 50 });
-const promiseDeduper = new fn(4912).PromiseDeduper();
+const promiseDeduper = new fn(4914).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/native/useBadgeColor.tsx");
 
@@ -30,7 +30,7 @@ export function useBadgeColor(rasterUrl) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -56,9 +56,9 @@ export function useBadgeColor(rasterUrl) {
                   uri,
                   asyncGeneratorStep(async () => {
                     closure_3 = tmp2;
-                    const tmp14 = value(13925);
+                    const tmp14 = value(13894);
                     const pickBadgeColor = tmp14.pickBadgeColor;
-                    await pickBadgeColor(2025).getDominantColors({ uri });
+                    await pickBadgeColor(2023).getDominantColors({ uri });
                     const tmp8 = pickBadgeColor(value);
                     value = tmp8;
                     if (tmp8 == null) {
@@ -91,7 +91,7 @@ export function useBadgeColor(rasterUrl) {
               closure_1(closure_129_0);
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp23) {
           if (tmp4 === c3) {

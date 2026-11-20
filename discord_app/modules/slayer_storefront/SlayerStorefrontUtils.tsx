@@ -2,7 +2,7 @@
 import applyDefault from "../../../_runtime/00012_apply.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import StoreUtils from "../../utils/StoreUtils.tsx";
-import keysSorter from "../../../_runtime/06449_keysSorter.js";
+import keysSorter from "../../../_runtime/06451_keysSorter.js";
 import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes.tsx";
 import StorefrontUtils from "../storefront/StorefrontUtils.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -189,11 +189,11 @@ const SocialLayerStorefrontConstants = fn(6731);
   STOREFRONT_MARKETING_GUILD_ID: closure_11,
   STOREFRONT_MARKETING_GUILD_ID_TEST: closure_12,
 } = SocialLayerStorefrontConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: map1, Routes: closure_14, SKUProductLines: closure_15 } = Constants);
-const CollectibleShopTab = fn(1074).CollectibleShopTab;
+const CollectibleShopTab = fn(1073).CollectibleShopTab;
 let str = "jpg";
-if (fn(6238).SUPPORTS_WEBP) {
+if (fn(6240).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getRequiredSubscriptionPlanIds(arr) {
@@ -482,7 +482,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, id) {
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "Path" };
+          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "analyticsLocations" };
         } else {
           const obj3 = StoreUtils;
           obj4 = {
@@ -495,7 +495,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, id) {
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "Path" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "analyticsLocations" };
 }
 export function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

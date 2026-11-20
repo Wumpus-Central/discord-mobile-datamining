@@ -2,7 +2,7 @@
 import TTITrackerDefault from "../../tti_analytics/TTITracker.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
@@ -145,44 +145,44 @@ function SortAndViewOptions(channel) {
   items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13628, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13598, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
       },
     });
   }, items);
-  const intl = id(1113).intl;
+  const intl = id(1112).intl;
   const string = intl.string;
-  const t = id(1113).t;
+  const t = id(1112).t;
   if (isMediaChannelResult) {
     let stringResult = string(t.JxU0wr);
   } else {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_15(id(5390).Button, {
+  return closure_15(id(5392).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_15(id(10105).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_15(id(10108).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
   channel = channel.channel;
   const obj = { variant: "secondary", text: null, onPress: null, size: "sm", icon: null };
-  const intl = channel(1113).intl;
-  obj.text = intl.string(channel(1113).t["112vVE"]);
+  const intl = channel(1112).intl;
+  obj.text = intl.string(channel(1112).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13629, dependencyMap.paths),
+      asyncRequireImpl(13599, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
   obj.icon = closure_15(channel(8921).TagIcon, { size: "xxs" });
-  return closure_15(channel(5390).Button, obj);
+  return closure_15(channel(5392).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";
@@ -471,11 +471,11 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12778).useForumChannelStore;
-const Constants = fn(1072);
+const useForumChannelStore = fn(12748).useForumChannelStore;
+const Constants = fn(1071);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
-let closure_14 = fn(11706).getVoicePanelDockButtonsTop;
-const Fonts = fn(1083).Fonts;
+let closure_14 = fn(11648).getVoicePanelDockButtonsTop;
+const Fonts = fn(1082).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 const archived_section = "archived_section";
@@ -491,7 +491,7 @@ let items = [
   "loading_section",
 ];
 const set = new Set(items);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerRow: {
@@ -760,7 +760,7 @@ export default function ForumChannel(channel) {
   };
   const intl = tmp2(tmp3[17]).intl;
   obj14.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-  obj14.icon = require("../../../../_runtime/metro/13637__.js");
+  obj14.icon = require("../../../../_runtime/metro/13607__.js");
   obj14.disabled = tmp17;
   obj14.positionBottom = sum;
   obj14.onPress = callback1;

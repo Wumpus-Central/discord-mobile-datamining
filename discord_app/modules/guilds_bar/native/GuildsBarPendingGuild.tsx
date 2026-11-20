@@ -8,10 +8,10 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 require = fn;
-const GuildRecord = fn(4659);
+const GuildRecord = fn(4661);
 ({ getGuildIconSource: hasOwnProperty, getGuildIconURL: closure_6 } = GuildRecord);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,

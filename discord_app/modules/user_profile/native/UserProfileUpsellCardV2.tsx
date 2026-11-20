@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileUpsellCardV2.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../_runtime/05347_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05349_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const Gradients = fn(8831).Gradients;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { outer: { borderRadius: nativeDefault.radii.lg, padding: 1 }, inner: null, text: null, textCenter: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, padding: 1 };
 obj2.inner = {

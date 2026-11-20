@@ -55,7 +55,7 @@ function convertStreamParametersFromWire(streams) {
   }
   return mapped;
 }
-const Constants = fn(5537);
+const Constants = fn(5539);
 ({
   Features: hasOwnProperty,
   MediaEngineContextTypes: closure_6,
@@ -255,7 +255,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     logger2.error("Connect called with already existing websocket");
     self.cleanupWebSocket((close) => close.close(4000));
   }
-  self.connectionStartTime = self(5541).now();
+  self.connectionStartTime = self(5543).now();
   self.helloTimeout = setTimeout(() => {
     self.handleClose(
       false,
@@ -266,8 +266,8 @@ prototype["createWebSocket"] = function createWebSocket() {
         " ms - did not receive OP_HELLO in time.",
     );
   }, closure_13);
-  const obj = self(5541);
-  obj2 = self(15285);
+  const obj = self(5543);
+  obj2 = self(15249);
   const webSocket = new WebSocket(
     "" +
       self.url +
@@ -591,7 +591,7 @@ prototype["handleHello"] = function handleHello(d) {
       tmp4 = require;
     }
   }
-  const diff = tmp4(5541).now() - self.connectionStartTime;
+  const diff = tmp4(5543).now() - self.connectionStartTime;
   ({ logger, heartbeatInterval } = self);
   if (heartbeatInterval == null) {
     heartbeatInterval = "??";
@@ -600,7 +600,7 @@ prototype["handleHello"] = function handleHello(d) {
     "[HELLO] heartbeat interval: " + heartbeatInterval + ", version: " + self.serverVersion + ", took " + diff + " ms",
   );
   self.startHeartbeater();
-  const tmp4Result = tmp4(5541);
+  const tmp4Result = tmp4(5543);
 };
 prototype["handleReady"] = function handleReady(experiments) {
   const self = this;

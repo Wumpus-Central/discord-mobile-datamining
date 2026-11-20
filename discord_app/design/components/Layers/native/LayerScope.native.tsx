@@ -8,7 +8,7 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(5372).LayerContext);
+  const context = noop.useContext(zIndex(5374).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
   items = [context];
@@ -38,7 +38,7 @@ function Layer(zIndex) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const NOOP = fn(1072).NOOP;
+const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

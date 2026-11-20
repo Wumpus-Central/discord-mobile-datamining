@@ -160,6 +160,13 @@ export default {
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.crash();
   },
+  hangMainThread() {
+    const CrashReportingManager = NativeModules.CrashReportingManager;
+    const hangMainThread = CrashReportingManager.hangMainThread;
+    if (hangMainThread != null) {
+      hangMainThread();
+    }
+  },
   triggerMemoryWarning() {
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.triggerMemoryWarning();

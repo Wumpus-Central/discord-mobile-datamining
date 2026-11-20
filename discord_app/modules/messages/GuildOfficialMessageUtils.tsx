@@ -51,8 +51,8 @@ function useCanManageGuildOfficialMessages(guild_id, channel, location) {
   }
   return enabled;
 }
-let closure_5 = fn(4797).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
-const Constants = fn(1072);
+let closure_5 = fn(4799).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+const Constants = fn(1071);
 ({
   ChannelTypes: closure_6,
   GuildFeatures: metroImportDefault,
@@ -67,8 +67,8 @@ export function getAccessibleGuildOfficialTextColor(officialMessageColor, semant
   if (saturation === undefined) {
     num = 1;
   }
-  let tmp = arg3;
-  if (arg3 === undefined) {
+  let tmp = c4;
+  if (c4 === undefined) {
     tmp = closure_5;
   }
   const int2hexResult = utils_ColorUtils.int2hex(officialMessageColor);

@@ -157,7 +157,7 @@ function CheckpointCharacterStage(stage) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { flexGrow: 1 }, rive: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.rive = {};

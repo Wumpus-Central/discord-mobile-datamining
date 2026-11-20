@@ -23,7 +23,7 @@ let closure_6 = fn(9686).MOBILE_GAME_PROFILE_MAX_WIDTH;
 const jsx = fn(21).jsx;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   container: { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 },
   header: null,
@@ -182,7 +182,7 @@ let closure_16 = noop.memo(function GameProfileSimilarGamesSkeleton(cardWidth) {
       />
     )),
   });
-  return jsx(cardWidth(9753).GameProfileSectionSkeleton, {
+  return jsx(cardWidth(9754).GameProfileSectionSkeleton, {
     style: tmp.container,
     headerStyle: tmp.header,
     showViewAllSkeleton: false,
@@ -207,8 +207,8 @@ export default function GameProfileSimilarGames(trackAction) {
     if (0 !== similarGames.length) {
       const obj3 = { style: null, headerStyle: null, title: null, children: null };
       ({ container: obj2.style, header: obj2.headerStyle } = tmp);
-      const intl = trackAction(1113).intl;
-      obj3.title = intl.string(trackAction(1113).t["6rLyQB"]);
+      const intl = trackAction(1112).intl;
+      obj3.title = intl.string(trackAction(1112).t["6rLyQB"]);
       const obj5 = {
         horizontal: true,
         renderScrollComponent: tmp2(9702),
@@ -223,7 +223,7 @@ export default function GameProfileSimilarGames(trackAction) {
         decelerationRate: "fast",
         snapToInterval: result + tmp5,
       };
-      obj3.children = jsx(trackAction(7371).FlashList, {
+      obj3.children = jsx(trackAction(7370).FlashList, {
         horizontal: true,
         renderScrollComponent: tmp2(9702),
         data: similarGames,
@@ -237,8 +237,8 @@ export default function GameProfileSimilarGames(trackAction) {
         decelerationRate: "fast",
         snapToInterval: result + tmp5,
       });
-      tmp7 = jsx(tmp2(9753), { style: null, headerStyle: null, title: null, children: null });
-      const tmp2Result = tmp2(9753);
+      tmp7 = jsx(tmp2(9754), { style: null, headerStyle: null, title: null, children: null });
+      const tmp2Result = tmp2(9754);
     }
   }
   return tmp7;

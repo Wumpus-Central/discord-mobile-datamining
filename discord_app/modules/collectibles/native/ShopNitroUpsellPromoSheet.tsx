@@ -13,7 +13,7 @@ import DiscountsMegaphoneSpotIllustration from "../../../design/components/mana-
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const AnalyticsPages = fn(1072).AnalyticsPages;
+const AnalyticsPages = fn(1071).AnalyticsPages;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const size = fn(2);

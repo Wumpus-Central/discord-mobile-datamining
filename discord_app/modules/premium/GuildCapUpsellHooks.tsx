@@ -6,7 +6,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const MAX_USER_GUILDS = fn(1072).MAX_USER_GUILDS;
+const MAX_USER_GUILDS = fn(1071).MAX_USER_GUILDS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
 

@@ -4,7 +4,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let items = [, , ,];
-({ USER: arr[0], ROLE: arr[1], CHANNEL: arr[2], EMOJI: arr[3] } = fn(1072).AutoCompleteResultTypes);
+({ USER: arr[0], ROLE: arr[1], CHANNEL: arr[2], EMOJI: arr[3] } = fn(1071).AutoCompleteResultTypes);
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting(

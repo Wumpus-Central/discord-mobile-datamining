@@ -50,7 +50,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
     GuildChannelStore,
     UserProfileStore,
     ApplicationStore,
-    nextExpiry(1452).ApexExperimentStore,
+    nextExpiry(1450).ApexExperimentStore,
   ];
   const items1 = [ConjureClarificationProjectPicker, tmp[0]];
   const stateFromStores = nextExpiry(504).useStateFromStores(
@@ -128,10 +128,10 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
               value = map.get(result);
               if (null == value) {
                 const obj6 = { guildId: result, location: _location };
-                const result1 = nextExpiry(6536).isConjureGuildEnabled(obj6);
+                const result1 = nextExpiry(6538).isConjureGuildEnabled(obj6);
                 const result2 = map.set(result, result1);
                 value = result1;
-                const tmpResult2 = nextExpiry(6536);
+                const tmpResult2 = nextExpiry(6538);
               }
             }
             const obj2 = nextExpiry(6720);
@@ -143,7 +143,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
             return value;
           } else {
             const obj3 = { guildId: id, location: _location };
-            const result = nextExpiry(6536).isConjureGuildEnabled(obj3);
+            const result = nextExpiry(6538).isConjureGuildEnabled(obj3);
             const result1 = map.set(id, result);
             return result;
           }

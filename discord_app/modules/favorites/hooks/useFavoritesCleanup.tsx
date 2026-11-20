@@ -23,7 +23,7 @@ export default function useFavoritesCleanup(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -43,12 +43,12 @@ export default function useFavoritesCleanup(arg0) {
                 metroImportDefault(true);
                 React5(false);
                 c3 = 2;
-                const result = tmp4(11157).setFavoritesAutoAddJoinedThreads(autoAdd);
-                const obj2 = tmp4(11157);
+                const result = tmp4(11099).setFavoritesAutoAddJoinedThreads(autoAdd);
+                const obj2 = tmp4(11099);
                 dependencyMap = 3;
                 c4 = 1;
                 const obj6 = {
-                  value: tmp4(11157).setFavoritesPruneInactiveThreads(first1, first2, first3),
+                  value: tmp4(11099).setFavoritesPruneInactiveThreads(first1, first2, first3),
                   done: false,
                 };
                 return obj6;

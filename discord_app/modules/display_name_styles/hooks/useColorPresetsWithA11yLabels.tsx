@@ -18,11 +18,11 @@ export default function useColorPresetsWithA11yLabels(arg0, arg1) {
     return colorPaletteList.map((colors, index) => {
       colors = colors.colors;
       const obj = { colors, a11yLabel: null };
-      const intl = closure_1_0(1113).intl;
+      const intl = closure_1_0(1112).intl;
       const obj2 = { number: index + 1, hexList: null };
-      const mapped = colors.map(closure_1_0(1090).int2hex);
+      const mapped = colors.map(closure_1_0(1089).int2hex);
       obj2.hexList = mapped.join(", ");
-      obj.a11yLabel = intl.formatToPlainString(closure_1_1(3147).FHfTsV, obj2);
+      obj.a11yLabel = intl.formatToPlainString(closure_1_1(3149).FHfTsV, obj2);
       return obj;
     });
   }, items);

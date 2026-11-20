@@ -24,7 +24,7 @@ let obj2 = {
   [GIFTING_BADGE]: fn(9088).PaymentFlowStep.CONFIRM,
 };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createStyles.createStyles(obj4);
 const size = fn(2);
@@ -179,7 +179,7 @@ export default function PremiumGiftModal(analyticsLocations) {
         currentProgress: currentProgress.currentProgress,
         onSendGift() {
           obj2 = { analyticsLocations: null };
-          items = [analyticsLocations(7420).GIFTING_BADGE_POST_PURCHASE];
+          items = [analyticsLocations(7419).GIFTING_BADGE_POST_PURCHASE];
           obj2.analyticsLocations = items;
           analyticsLocation(9345).openGiftModal(obj2);
         },

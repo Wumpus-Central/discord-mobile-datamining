@@ -1,7 +1,7 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidActionCreators.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef2169 from "../../../_runtime/metro/02169__.js";
+import _modDef2167 from "../../../_runtime/metro/02167__.js";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import GuildSettingsActionCreatorsDefault from "../guild_settings/GuildSettingsActionCreators.tsx";
 import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId.tsx";
@@ -25,7 +25,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -69,7 +69,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -89,9 +89,9 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    _modDef2169();
-    toISOStringResult = _modDef2169().add(tmp8, "hours").toISOString();
-    _modDef2169().add(tmp8, "hours");
+    _modDef2167();
+    toISOStringResult = _modDef2167().add(tmp8, "hours").toISOString();
+    _modDef2167().add(tmp8, "hours");
   }
   let tmp12 = null;
   if (closure_1) {
@@ -143,7 +143,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -195,8 +195,8 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8645).DEFAULT_LOCKDOWN_DURATION;
-const Constants = fn(1072);
+const DEFAULT_LOCKDOWN_DURATION = fn(8644).DEFAULT_LOCKDOWN_DURATION;
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, Endpoints: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");

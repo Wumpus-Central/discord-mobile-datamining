@@ -8,7 +8,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1083).Permissions;
+const Permissions = fn(1082).Permissions;
 let closure_6 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/ForumTagHooks.tsx");

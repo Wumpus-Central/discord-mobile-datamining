@@ -63,7 +63,7 @@ let closure_11 = async function _computeBoundPairwiseFingerprint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -135,7 +135,7 @@ let closure_11 = async function _computeBoundPairwiseFingerprint(arg0) {
   }
 };
 let closure_7 = fn(9588).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-const Features = fn(5537).Features;
+const Features = fn(5539).Features;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesBoundPairwiseFingerprint.tsx");

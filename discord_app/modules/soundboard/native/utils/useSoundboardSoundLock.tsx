@@ -11,7 +11,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5842).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5844).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
 
@@ -38,11 +38,11 @@ export function useSoundboardSoundLock(sound, channel) {
     const obj4 = { isLocked: tmp4, lockedAccessibilityHint: undefined, onLockedPress: tmp8 };
     return obj4;
   } else if (tmp6) {
-    const intl2 = tmp(1113).intl;
-    BARTXV = tmp(1113).t.BARTXV;
+    const intl2 = tmp(1112).intl;
+    BARTXV = tmp(1112).t.BARTXV;
     let stringResult = intl2.string(BARTXV);
   } else if (!sound.available) {
-    let intl = tmp(1113).intl;
-    stringResult = intl.string(tmp(1113).t.MDOXJR);
+    let intl = tmp(1112).intl;
+    stringResult = intl.string(tmp(1112).t.MDOXJR);
   }
 }

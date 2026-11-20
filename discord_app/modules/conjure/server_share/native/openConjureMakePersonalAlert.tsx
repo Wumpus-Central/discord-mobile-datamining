@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/server_share/native/openConjureMakePersonalAlert.tsx
-import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import ConjureChangeListDefault from "ConjureChangeList.tsx";
 import useConjureMakePersonalDefault from "../useConjureMakePersonal.tsx";
@@ -19,7 +19,7 @@ function ConjureMakePersonalAlert(project) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -54,12 +54,12 @@ function ConjureMakePersonalAlert(project) {
             const error = new Error("make personal failed");
             throw error;
           } else {
-            tmp5(5006).hideAllActionSheets();
-            const obj = tmp5(5006);
+            tmp5(5008).hideAllActionSheets();
+            const obj = tmp5(5008);
             const obj7 = { text: closure_128_0, variant: "success" };
-            tmp5(5474).open("CONJURE_MADE_PERSONAL", obj7);
+            tmp5(5476).open("CONJURE_MADE_PERSONAL", obj7);
             c3 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         }
       } catch (tmp19) {
@@ -74,12 +74,12 @@ function ConjureMakePersonalAlert(project) {
   ({ appName, rows } = tmp3);
   let obj = { title: null, extraContent: null, actions: null };
   const intl = require("util").intl;
-  obj.title = intl.formatToPlainString(_modDef4089.cAxBIL, { app: appName });
+  obj.title = intl.formatToPlainString(_modDef4091.cAxBIL, { app: appName });
   items = [closure_4(ConjureChangeListDefault, { rows }), ,];
   let tmp4Result = null;
   if (null != keptChannels) {
     const obj2 = { variant: "body-sm/normal", color: "text-muted", children: keptChannels };
-    tmp4Result = closure_4(tmp5(5383).Text, obj2);
+    tmp4Result = closure_4(tmp5(5385).Text, obj2);
   }
   items[1] = tmp4Result;
   let tmp4Result2 = null;
@@ -90,14 +90,14 @@ function ConjureMakePersonalAlert(project) {
       accessibilityRole: "alert",
       children: error,
     };
-    tmp4Result2 = closure_4(tmp5(5383).Text, obj3);
+    tmp4Result2 = closure_4(tmp5(5385).Text, obj3);
   }
   items[2] = tmp4Result2;
   obj.extraContent = closure_5(require("Stack/Stack").Stack, { spacing: 12, children: items });
   let obj4 = { children: null };
   let obj5 = { variant: "destructive", text: null, onPress: null };
-  const intl2 = tmp5(1113).intl;
-  obj5.text = intl2.string(_modDef4089.j1NMdG);
+  const intl2 = tmp5(1112).intl;
+  obj5.text = intl2.string(_modDef4091.ErhKil);
   obj5.onPress = function submit() {
     const self = this;
     const apply = closure_1.apply;
@@ -110,7 +110,7 @@ function ConjureMakePersonalAlert(project) {
   };
   const items1 = [closure_4(require("AlertModal").AlertActionButton, obj5)];
   let obj6 = { variant: "secondary", text: null };
-  const intl3 = tmp5(1113).intl;
+  const intl3 = tmp5(1112).intl;
   obj6.text = intl3.string(require("util").t["ETE/oC"]);
   items1[1] = closure_4(require("AlertModal").AlertActionButton, obj6);
   obj4.children = items1;

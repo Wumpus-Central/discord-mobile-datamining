@@ -5,20 +5,20 @@ import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
-import hooks_mod from "../../../../../_runtime/metro/02169__.js";
+import hooks_mod from "../../../../../_runtime/metro/02167__.js";
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(17497);
+const RegistrationUIStore = fn(17324);
 ({ updateRegistrationOptions: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(17498);
+const RegistrationConstants = fn(17325);
 ({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: closure_10 } = RegistrationConstants);
-const AuthStates = fn(1072).AuthStates;
+const AuthStates = fn(1071).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   inputGroup: { marginTop: 24, marginBottom: 24 },
   flexGrow: { flexGrow: 1 },

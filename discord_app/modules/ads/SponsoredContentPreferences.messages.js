@@ -31,11 +31,11 @@ import _mod2254 from "../../../_runtime/metro/02254__.js";
 import _mod2255 from "../../../_runtime/metro/02255__.js";
 import _mod2256 from "../../../_runtime/metro/02256__.js";
 import _mod2257 from "../../../_runtime/metro/02257__.js";
-import module_1152_mod from "../../../_runtime/metro/01152__.js";
+import module_1151_mod from "../../../_runtime/metro/01151__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-let module_1152 = module_1152_mod;
-const loader = module_1152.createLoader({
+let module_1151 = module_1151_mod;
+const loader = module_1151.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2227);
     return jsonAsset.then((result) => ({ default: result }));
@@ -161,8 +161,8 @@ const loader = module_1152.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1152 = module_1152_mod;
-const messagesProxy = module_1152.makeMessagesProxy(loader);
+let module_1151 = module_1151_mod;
+const messagesProxy = module_1151.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/ads/SponsoredContentPreferences.messages.js");
 
 export default messagesProxy;

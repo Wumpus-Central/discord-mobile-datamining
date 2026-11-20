@@ -68,7 +68,7 @@ let closure_8 = async function _getEmojiSourceData(arg0) {
   }
   return value;
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: closure_4, GuildFeatures: hasOwnProperty } = Constants);
 const EmojiSourceDataTypes = { GUILD: "GUILD", APPLICATION: "APPLICATION", PACK: "PACK" };
 let ExpressionSourceGuildRecord;
@@ -92,7 +92,7 @@ prototype["getIconSource"] = function getIconSource(size) {
   if (flag === undefined) {
     flag = false;
   }
-  return self(1414).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
+  return self(1412).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
 };
 prototype["hasFeature"] = function hasFeature(arg0) {
   const features = this.features;

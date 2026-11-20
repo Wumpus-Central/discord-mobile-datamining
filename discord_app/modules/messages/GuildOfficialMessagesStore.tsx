@@ -109,7 +109,7 @@ function handleRelationshipUpdate() {
     return false;
   }
 }
-const MessageFlags = fn(1072).MessageFlags;
+const MessageFlags = fn(1071).MessageFlags;
 let obj = {};
 const Store = initializeDefault.Store;
 class GuildOfficialMessagesStore extends Store {}

@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageStore from "../../../../stores/MessageStore.tsx";
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -49,16 +49,16 @@ export default function DeleteMessageElement(message) {
     icon: null,
   };
   let obj = message(504);
-  const intl = message(1113).intl;
-  obj2.title = intl.string(message(1113).t.c9BHL9);
-  const intl2 = message(1113).intl;
-  obj2.disabledTitle = intl2.string(message(1113).t.AT2KSd);
-  const intl3 = message(1113).intl;
-  obj2.description = intl3.string(message(1113).t.dK8S0w);
+  const intl = message(1112).intl;
+  obj2.title = intl.string(message(1112).t.c9BHL9);
+  const intl2 = message(1112).intl;
+  obj2.disabledTitle = intl2.string(message(1112).t.AT2KSd);
+  const intl3 = message(1112).intl;
+  obj2.description = intl3.string(message(1112).t.dK8S0w);
   obj2.disabled = tmp[0];
   obj2.onPress = callback;
-  obj2.icon = jsx(message(5499).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(10296), {
+  obj2.icon = jsx(message(5501).TrashIcon, { color: "text-feedback-critical" });
+  return jsx(reportId(10238), {
     title: null,
     disabledTitle: null,
     description: null,

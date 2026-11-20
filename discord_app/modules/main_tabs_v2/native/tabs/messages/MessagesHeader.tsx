@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../../../_runtime/metro/01653__.js";
 import ButtonConstants from "../../../../../design/components/Button/native/ButtonConstants.native.tsx";
-import _modDef5483 from "../../../../../../_runtime/metro/05483__.js";
+import _modDef5485 from "../../../../../../_runtime/metro/05485__.js";
 import useScaledTextLineHeight from "../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import HeaderDebugOverlayDefault from "../../../../devtools/design_toggles/HeaderDebugOverlay.native.tsx";
-import _modDef7310 from "../../../../../../_runtime/metro/07310__.js";
+import _modDef7309 from "../../../../../../_runtime/metro/07309__.js";
 import MobileVisualRefreshExperiment from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import MessageRequestsButtonDefault from "../../shared_components/MessageRequestsButton.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -15,12 +15,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const SearchTypes = fn(1072).SearchTypes;
+const SearchTypes = fn(1071).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   headerPanel: {
     position: "relative",
@@ -49,7 +49,7 @@ let obj4 = {
   justifyContent: "space-between",
 };
 obj.headerPanelButtons = {
-  height: fn(5396).SMALL_BUTTON_HEIGHT,
+  height: fn(5398).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -65,7 +65,7 @@ let closure_11 = {
   code: "(function MessagesHeaderTsx1(){let[withSpring,scrollPosition,Reanimated3DefaultSpringConfig]=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0,Reanimated3DefaultSpringConfig)};})",
 };
 let obj5 = {
-  height: fn(5396).SMALL_BUTTON_HEIGHT,
+  height: fn(5398).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -107,8 +107,8 @@ export default noop.memo(function MessagesHeader(height) {
   MessagesHeaderTsx1.__closure = items2;
   MessagesHeaderTsx1.__workletHash = 7032090280260;
   MessagesHeaderTsx1.__initData = tmp5;
-  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(MessagesHeaderTsx1);
-  let obj2 = require("../../../../../../_runtime/metro/01655__.js");
+  const animatedStyle = require("../../../../../../_runtime/metro/01653__.js").useAnimatedStyle(MessagesHeaderTsx1);
+  let obj2 = require("../../../../../../_runtime/metro/01653__.js");
   const isHomeDrawerEnabled = require("useHomeDrawerGesture").useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(_undefined2[13]).getRootNavigationRef();
@@ -146,15 +146,15 @@ export default noop.memo(function MessagesHeader(height) {
   let obj3 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
   const tmp16 = HeaderDebugOverlayDefault("bespoke");
   obj3.icon = closure_6(require("PlusLargeIcon").PlusLargeIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-  const intl = tmp3(1113).intl;
+  const intl = tmp3(1112).intl;
   obj3.accessibilityLabel = intl.string(require("util").t.jD1qzM);
   obj3.onPress = callback3;
   const obj5 = { style: memo, children: null };
   const obj6 = { style: tmp.headerPanelTitle, children: null };
   const obj4 = { size: "sm", color: nativeDefault.colors.WHITE };
-  const intl2 = tmp3(1113).intl;
+  const intl2 = tmp3(1112).intl;
   const string = intl2.string;
-  const t = tmp3(1113).t;
+  const t = tmp3(1112).t;
   if (isHomeDrawerEnabled) {
     let stringResult = string(t.YUU0RF);
   } else {
@@ -169,8 +169,8 @@ export default noop.memo(function MessagesHeader(height) {
   });
   const items3 = [closure_6(closure_4, obj6), , ,];
   const obj7 = { style: tmp.headerPanelButtons, children: null };
-  const obj8 = { onPress: callback2, variant: "secondary", size: "sm", icon: _modDef7310, accessibilityLabel: null };
-  const intl3 = tmp3(1113).intl;
+  const obj8 = { onPress: callback2, variant: "secondary", size: "sm", icon: _modDef7309, accessibilityLabel: null };
+  const intl3 = tmp3(1112).intl;
   obj8.accessibilityLabel = intl3.string(require("util").t["5h0QOP"]);
   const items4 = [
     closure_6(require("IconButton").IconButton, obj8),
@@ -182,12 +182,12 @@ export default noop.memo(function MessagesHeader(height) {
     grow: true,
     shrink: true,
     size: "sm",
-    icon: _modDef5483,
+    icon: _modDef5485,
     onPress: callback1,
     maxFontSizeMultiplier: 1,
     text: null,
   };
-  const intl4 = tmp3(1113).intl;
+  const intl4 = tmp3(1112).intl;
   obj9.text = intl4.string(require("util").t.zIJnA6);
   items4[2] = closure_6(require("components/Button/Button").Button, obj9);
   items4[3] = closure_6(require("IconButton").IconButton, obj3);
@@ -196,7 +196,7 @@ export default noop.memo(function MessagesHeader(height) {
   const obj10 = { style: null };
   const items5 = [tmp.headerBorder, animatedStyle];
   obj10.style = items5;
-  items3[2] = closure_6(_modDef1655.View, obj10);
+  items3[2] = closure_6(_modDef1653.View, obj10);
   items3[3] = tmp16;
   obj5.children = items3;
   return closure_7(closure_4, obj5);

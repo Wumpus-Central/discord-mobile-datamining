@@ -28,7 +28,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -113,7 +113,7 @@ const SpotifyConstants = fn(6778);
   SpotifyResourceTypes: closure_8,
   getSpotifyResourceType: closure_9,
 } = SpotifyConstants);
-const PlatformTypes = fn(1072).PlatformTypes;
+const PlatformTypes = fn(1071).PlatformTypes;
 let closure_11 = 30 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyUtils.tsx");

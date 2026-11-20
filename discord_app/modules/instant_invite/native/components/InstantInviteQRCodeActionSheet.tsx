@@ -9,11 +9,11 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ InstantInviteSources: metroImportDefault, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_12,
@@ -56,12 +56,12 @@ const result = size.fileFinishedImporting(
 export default function InstantInviteQRCodeActionSheet(location) {
   const tmp = closure_11();
   if (location.location === constants.ADD_FRIENDS_MODAL) {
-    const intl2 = presentFriendRequestAcceptedToast(1113).intl;
-    let stringResult = intl2.string(presentFriendRequestAcceptedToast(1113).t.VUNqoc);
+    const intl2 = presentFriendRequestAcceptedToast(1112).intl;
+    let stringResult = intl2.string(presentFriendRequestAcceptedToast(1112).t.VUNqoc);
     let tmp6 = presentFriendRequestAcceptedToast;
   } else {
-    const intl = presentFriendRequestAcceptedToast(1113).intl;
-    stringResult = intl.string(presentFriendRequestAcceptedToast(1113).t.DqE26p);
+    const intl = presentFriendRequestAcceptedToast(1112).intl;
+    stringResult = intl.string(presentFriendRequestAcceptedToast(1112).t.DqE26p);
     tmp6 = presentFriendRequestAcceptedToast;
   }
   ({ channel, location: _location } = location);
@@ -71,12 +71,12 @@ export default function InstantInviteQRCodeActionSheet(location) {
     guild = GuildStore.getGuild(channel.guild_id);
     if (null != guild) {
       const obj = { visible: null, plainText: null };
-      const intl5 = tmp6(1113).intl;
+      const intl5 = tmp6(1112).intl;
       const obj2 = { name: guild.name };
-      obj.visible = intl5.format(tmp6(1113).t.VK3zyF, obj2);
-      const intl6 = tmp6(1113).intl;
+      obj.visible = intl5.format(tmp6(1112).t.VK3zyF, obj2);
+      const intl6 = tmp6(1112).intl;
       const obj3 = { name: guild.name };
-      obj.plainText = intl6.formatToPlainString(tmp6(1113).t.VK3zyF, obj3);
+      obj.plainText = intl6.formatToPlainString(tmp6(1112).t.VK3zyF, obj3);
       let tmp12 = obj;
     }
     const channel2 = location.channel;
@@ -84,11 +84,11 @@ export default function InstantInviteQRCodeActionSheet(location) {
     if (null != channel2) {
       tmp13 = null;
       if (null != GuildStore.getGuild(channel2.guild_id)) {
-        const obj4 = { guild: GuildStore.getGuild(channel2.guild_id), size: tmp6(7203).GuildIconSizes.LARGE };
+        const obj4 = { guild: GuildStore.getGuild(channel2.guild_id), size: tmp6(7202).GuildIconSizes.LARGE };
         tmp13 = closure_9(GuildIconDefault, obj4);
       }
     }
-    presentFriendRequestAcceptedToast = tmp6(5473).presentFriendRequestAcceptedToast;
+    presentFriendRequestAcceptedToast = tmp6(5475).presentFriendRequestAcceptedToast;
     const items1 = [presentFriendRequestAcceptedToast];
     const effect = noop.useEffect(() => {
       function handleRelationshipAdd(relationship) {
@@ -104,7 +104,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
     }, items1);
     const obj5 = { header: null, children: null };
     const obj6 = { title: stringResult };
-    obj5.header = closure_9(tmp6(7396).BottomSheetTitleHeader, obj6);
+    obj5.header = closure_9(tmp6(7395).BottomSheetTitleHeader, obj6);
     const obj7 = { style: tmp.container, children: null };
     const obj9 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
     let plainText;
@@ -127,24 +127,24 @@ export default function InstantInviteQRCodeActionSheet(location) {
     let tmp19Result2 = null != tmp12;
     if (tmp19Result2) {
       const obj13 = { variant: "body-md/normal", children: tmp12.visible };
-      tmp19Result2 = closure_9(tmp6(5383).Text, obj13);
+      tmp19Result2 = closure_9(tmp6(5385).Text, obj13);
     }
     items3[1] = tmp19Result2;
     obj7.children = items3;
     obj5.children = closure_10(View, obj7);
-    return closure_9(tmp6(7434).ActionSheet, obj5);
+    return closure_9(tmp6(7433).ActionSheet, obj5);
   }
   tmp12 = null;
   if (_location === constants.ADD_FRIENDS_MODAL) {
     tmp12 = null;
     if (null != stateFromStores) {
       const obj14 = { visible: null, plainText: null };
-      const intl3 = tmp6(1113).intl;
+      const intl3 = tmp6(1112).intl;
       const obj15 = { name: stateFromStores.username };
-      obj14.visible = intl3.format(tmp6(1113).t.zDGAfl, obj15);
-      const intl4 = tmp6(1113).intl;
+      obj14.visible = intl3.format(tmp6(1112).t.zDGAfl, obj15);
+      const intl4 = tmp6(1112).intl;
       const obj16 = { name: stateFromStores.username };
-      obj14.plainText = intl4.formatToPlainString(tmp6(1113).t.zDGAfl, obj16);
+      obj14.plainText = intl4.formatToPlainString(tmp6(1112).t.zDGAfl, obj16);
       tmp12 = obj14;
     }
   }

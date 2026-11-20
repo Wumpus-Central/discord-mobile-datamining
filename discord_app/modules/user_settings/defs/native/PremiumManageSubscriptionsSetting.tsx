@@ -6,7 +6,7 @@ import MapleSyrupExperiments from "../../../premium/experiments/MapleSyrupExperi
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const mapleSyrup2Treatment = MapleSyrupExperiments.useMapleSyrup2Treatment("useTitle");
@@ -23,7 +23,7 @@ const route = SettingBuilders.createRoute({
     return stringResult;
   },
   parent: null,
-  IconComponent: fn(16202).SubscriptionIcon,
+  IconComponent: fn(16166).SubscriptionIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
@@ -35,9 +35,9 @@ const route = SettingBuilders.createRoute({
       return flag;
     }, []);
   },
-  usePredicate: fn(2174).useHasPremiumSubscriptionToDisplay,
+  usePredicate: fn(2172).useHasPremiumSubscriptionToDisplay,
   screen: {
-    route: fn(1072).UserSettingsSections.PREMIUM_MANAGE_PLAN,
+    route: fn(1071).UserSettingsSections.PREMIUM_MANAGE_PLAN,
     getComponent() {
       return require("PremiumManagePlanScreen").default;
     },

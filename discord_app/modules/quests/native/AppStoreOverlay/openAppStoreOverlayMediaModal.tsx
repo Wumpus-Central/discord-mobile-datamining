@@ -107,7 +107,7 @@ let closure_7 = async function _openAppStoreOverlayMediaModal() {
   );
   return "Path";
 };
-const MEDIA_MODAL_KEY = fn(1072).MEDIA_MODAL_KEY;
+const MEDIA_MODAL_KEY = fn(1071).MEDIA_MODAL_KEY;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayMediaModal.tsx");
 

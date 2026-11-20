@@ -4,15 +4,15 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const native = TextArea(1187);
-const shared = TextArea(4799);
-const RedesignCompat = TextArea(7101);
-const TextInput = TextArea(7102);
-const TextArea2 = TextArea(7342);
+const native = TextArea(1186);
+const shared = TextArea(4801);
+const RedesignCompat = TextArea(7100);
+const TextInput = TextArea(7101);
+const TextArea2 = TextArea(7341);
 require = fn;
-const KeyboardThemes = fn(1072).KeyboardThemes;
+const KeyboardThemes = fn(1071).KeyboardThemes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 },
   placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },

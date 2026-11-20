@@ -15,11 +15,11 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiSourceDataTypes = fn(7204).EmojiSourceDataTypes;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const EmojiSourceDataTypes = fn(7203).EmojiSourceDataTypes;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   header: { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 },
   reactionPill: null,

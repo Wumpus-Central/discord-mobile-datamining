@@ -50,7 +50,7 @@ function handleConnectionOpen() {
     prop[tmp19] = Date.now();
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   ME: closure_6,
   MOBILE_GUILD_UPSELL_LIST: metroImportDefault,

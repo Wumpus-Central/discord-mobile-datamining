@@ -15,7 +15,7 @@ function isViewableAppChannel(channel, arg1) {
   }
   return canResult;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: c2, Permissions: c3 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/shared/findLoadedAppChannel.tsx");

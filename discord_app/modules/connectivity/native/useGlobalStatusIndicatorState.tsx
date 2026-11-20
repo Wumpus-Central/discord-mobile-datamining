@@ -4,10 +4,10 @@ import useVoiceStateForRemoteSessionDefault from "../../game_console/hooks/useVo
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
-const useMyCurrentStageChannelDefault = tmp4(10794);
+const useMyCurrentStageChannelDefault = tmp4(10736);
 const require = fn;
-const RTC_PANEL_HEIGHT = fn(10790).RTC_PANEL_HEIGHT;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
+const RTC_PANEL_HEIGHT = fn(10732).RTC_PANEL_HEIGHT;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connectivity/native/useGlobalStatusIndicatorState.tsx");
 
@@ -17,9 +17,9 @@ export function useGlobalStatusIndicatorState() {
   }
   let stateFromStores;
   importDefault = undefined;
-  let hasPipParticipant = stateFromStores(10589).useHasPipParticipant({ isActivityViewFocused: false });
+  let hasPipParticipant = stateFromStores(10531).useHasPipParticipant({ isActivityViewFocused: false });
   const tmp5 = useVoiceStateForRemoteSessionDefault();
-  const obj = stateFromStores(10589);
+  const obj = stateFromStores(10531);
   items = [RTCConnectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => channelId.getChannelId());
   const tmp7 = useIsInvitedToSpeakDefault();
@@ -43,19 +43,19 @@ export function useGlobalStatusIndicatorState() {
     items2,
   );
   const obj3 = stateFromStores(504);
-  let num = stateFromStores(10785).useGetStageRTCPanelHeight(stateFromStores);
-  stateFromStores(4968);
+  let num = stateFromStores(10727).useGetStageRTCPanelHeight(stateFromStores);
+  stateFromStores(4970);
   let tmp12 = null != tmp5;
   if (tmp12) {
     let channelId = tmp5.channelId;
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
-    tmp12 = tmp(6373).getVoiceChannelKey(channelId) !== tmp11;
-    const tmpResult = tmp(6373);
+    tmp12 = tmp(6375).getVoiceChannelKey(channelId) !== tmp11;
+    const tmpResult = tmp(6375);
   }
-  const obj4 = stateFromStores(10785);
-  let isVoicePanelShowing = stateFromStores(10792).useIsVoicePanelShowing();
+  const obj4 = stateFromStores(10727);
+  let isVoicePanelShowing = stateFromStores(10734).useIsVoicePanelShowing();
   const tmp14 = null != useMyCurrentStageChannelDefault();
   if (!isVoicePanelShowing) {
     let tmp15 = !tmp12;

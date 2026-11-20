@@ -34,7 +34,7 @@ let closure_14 = async function _handleManualReviewCta() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -161,8 +161,8 @@ let closure_14 = async function _handleManualReviewCta() {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
-const SafetyToastType = fn(6383).SafetyToastType;
+const Endpoints = fn(1071).Endpoints;
+const SafetyToastType = fn(6385).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;

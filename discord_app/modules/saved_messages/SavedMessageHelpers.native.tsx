@@ -18,7 +18,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -79,23 +79,23 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
                       onCancel: null,
                       isDismissable: false,
                     };
-                    const intl2 = closure_0(1113).intl;
-                    obj3.title = intl2.string(closure_0(1113).t.mlbiZW);
-                    const intl3 = closure_0(1113).intl;
-                    const t = closure_0(1113).t;
+                    const intl2 = closure_0(1112).intl;
+                    obj3.title = intl2.string(closure_0(1112).t.mlbiZW);
+                    const intl3 = closure_0(1112).intl;
+                    const t = closure_0(1112).t;
                     const obj4 = { max: null != closure_1_1.dueAt ? closure_2_7 : closure_2_6 };
                     obj3.body = intl3.formatToPlainString(null != closure_1_1.dueAt ? t.Anr1Dg : t["1zVbEG"], obj4);
-                    const intl4 = tmp9(1113).intl;
-                    obj3.confirmText = intl4.string(closure_0(1113).t.BddRzS);
-                    const intl5 = tmp9(1113).intl;
-                    obj3.cancelText = intl5.string(closure_0(1113).t.ZGbTcy);
+                    const intl4 = tmp9(1112).intl;
+                    obj3.confirmText = intl4.string(closure_0(1112).t.BddRzS);
+                    const intl5 = tmp9(1112).intl;
+                    obj3.cancelText = intl5.string(closure_0(1112).t.ZGbTcy);
                     obj3.onCancel = function onCancel() {
-                      const SavedMessageSortTypes = displayToast(11618).SavedMessageSortTypes;
-                      return displayToast(11617).showForLaterModal(
+                      const SavedMessageSortTypes = displayToast(11560).SavedMessageSortTypes;
+                      return displayToast(11559).showForLaterModal(
                         closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK,
                       );
                     };
-                    closure_1(5739).show(obj3);
+                    closure_1(5741).show(obj3);
                     return null;
                   } else {
                     let message;
@@ -106,11 +106,11 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
                       }
                     }
                     if (message == null) {
-                      const intl = closure_0(1113).intl;
-                      message = intl.string(closure_0(1113).t.R0RpRX);
+                      const intl = closure_0(1112).intl;
+                      message = intl.string(closure_0(1112).t.R0RpRX);
                     }
                     const obj = { text: message, variant: "critical" };
-                    closure_1(5474).open("SAVED_MESSAGE_CREATE_ERROR", obj);
+                    closure_1(5476).open("SAVED_MESSAGE_CREATE_ERROR", obj);
                     return null;
                   }
                 }),
@@ -175,7 +175,7 @@ let closure_9 = async function _removeSavedMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -281,8 +281,8 @@ let closure_9 = async function _removeSavedMessage(arg0) {
     }
   }
 };
-const AbortCodes = fn(1072).AbortCodes;
-const SavedMessagesConstants = fn(11629);
+const AbortCodes = fn(1071).AbortCodes;
+const SavedMessagesConstants = fn(11571);
 ({ SAVED_BOOKMARKS_MAX: closure_6, SAVED_REMINDERS_MAX: metroImportDefault } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");

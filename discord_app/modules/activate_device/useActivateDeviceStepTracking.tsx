@@ -5,7 +5,7 @@ import ActivateDeviceUtils from "ActivateDeviceUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");
 

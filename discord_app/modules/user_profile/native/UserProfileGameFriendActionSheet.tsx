@@ -55,10 +55,10 @@ function GameFriendApplicationRow(application) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 },
   gameIcon: null,
@@ -114,7 +114,7 @@ export default function UserProfileGameFriendActionSheet(user) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

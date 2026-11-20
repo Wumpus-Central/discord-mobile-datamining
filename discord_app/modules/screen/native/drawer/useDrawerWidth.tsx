@@ -5,7 +5,7 @@ import useFoldSeamDefault from "../useFoldSeam.tsx";
 import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
 
 const require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 const DM_WIDTH = Constants.DM_WIDTH;
 ({ MOBILE_GUILD_UPSELL_LIST: hasOwnProperty, WATERWHEELS: closure_6 } = Constants);
 const sum = 260 + DM_WIDTH;

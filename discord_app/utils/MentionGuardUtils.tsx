@@ -36,7 +36,7 @@ function parsedItemUsesEveryoneRole(content) {
   }
   return null;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Permissions: hasOwnProperty, StatusTypes: closure_6 } = Constants);
 const regExp = new RegExp(/@(:?everyone|here)/);
 const size = fn(2);

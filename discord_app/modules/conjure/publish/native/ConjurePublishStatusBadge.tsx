@@ -1,30 +1,30 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishStatusBadge.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ProgressCircleDefault from "../../../premium/native/components/ProgressCircle.tsx";
 import ConjureHeaderIconButton from "../../shared/native/ConjureHeaderIconButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 function ConjurePublishSpinner() {
   const tmp = closure_6();
   const token = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BRAND);
   let obj = require("useToken");
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = _mod1655;
+    const obj = _mod1653;
     const obj2 = timing_timing;
     const result = _undefined.set(
-      obj.withRepeat(obj2.withTiming(360, { duration: 800, easing: _mod1655.Easing.linear }), -1, false),
+      obj.withRepeat(obj2.withTiming(360, { duration: 800, easing: _mod1653.Easing.linear }), -1, false),
     );
     return () => c0(dependencyMap[7]).cancelAnimation(_undefined);
   }, items);
-  let obj2 = require("../../../../../_runtime/metro/01655__.js");
+  let obj2 = require("../../../../../_runtime/metro/01653__.js");
   const items1 = [closure_7, sharedValue];
   _require = undefined;
   [tmp7, tmp8] = items1;
@@ -42,7 +42,7 @@ function ConjurePublishSpinner() {
   ConjurePublishStatusBadgeTsx1.__closure = items2;
   ConjurePublishStatusBadgeTsx1.__workletHash = 4407393143037;
   ConjurePublishStatusBadgeTsx1.__initData = tmp7;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     ConjurePublishStatusBadgeTsx1,
   );
   const obj4 = {
@@ -51,19 +51,19 @@ function ConjurePublishSpinner() {
   };
   const items3 = [tmp.spinner, animatedStyle];
   obj4.style = items3;
-  return jsx(_modDef1655.View, {
+  return jsx(_modDef1653.View, {
     style: null,
     children: jsx(ProgressCircleDefault, { percent: 70, size: 12, strokeWidth: 2, color: token, style: tmp.spinner }),
   });
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { dot: null, spinner: null };
 let size = {
-  width: fn(18425).CONJURE_HEADER_BADGE_SIZE,
-  height: fn(18425).CONJURE_HEADER_BADGE_SIZE,
-  borderRadius: fn(18425).CONJURE_HEADER_BADGE_SIZE / 2,
+  width: fn(18266).CONJURE_HEADER_BADGE_SIZE,
+  height: fn(18266).CONJURE_HEADER_BADGE_SIZE,
+  borderRadius: fn(18266).CONJURE_HEADER_BADGE_SIZE / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
 obj2.dot = size;

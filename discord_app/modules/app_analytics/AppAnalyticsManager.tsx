@@ -14,7 +14,7 @@ import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx"
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 class AppAnalyticsManager extends tmp2 {
   constructor() {

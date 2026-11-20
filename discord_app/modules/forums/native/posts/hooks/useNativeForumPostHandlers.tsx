@@ -22,14 +22,14 @@ import ForumPostMessagesStore from "../../../ForumPostMessagesStore.tsx";
 import ForumPostRecentMessageStore from "../../../ForumPostRecentMessageStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   AnalyticsObjectTypes: closure_11,
   AnalyticsPages: closure_12,
   AnalyticsSections: map1,
   EMPTY_STRING_SNOWFLAKE_ID: closure_14,
 } = Constants);
-let closure_15 = fn(1112).OpenThreadAnalyticsLocations;
+let closure_15 = fn(1111).OpenThreadAnalyticsLocations;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostHandlers.tsx");
 
@@ -37,7 +37,7 @@ export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(5374).ReactionTypes.NORMAL;
+    NORMAL = threadId(5376).ReactionTypes.NORMAL;
   }
   items = [threadId];
   const items1 = [threadId];
@@ -52,7 +52,7 @@ export default function useNativeForumPostHandlers(threadId) {
     const channelIcon = utils_ChannelUtils.getChannelIcon(channel);
     const mapped = mediaItems.map((src) => {
       src = src.src;
-      const str = NORMAL(1381).toURLSafe(src);
+      const str = NORMAL(1379).toURLSafe(src);
       let tmp = null != str;
       if (src.srcIsAnimated) {
         if (tmp) {
@@ -65,16 +65,16 @@ export default function useNativeForumPostHandlers(threadId) {
           tmp = endsWithResult;
         }
         if (tmp) {
-          let isAttachmentPathUrlResult = src.type === threadId(8502).ForumPostMediaTypes.ATTACHMENT;
+          let isAttachmentPathUrlResult = src.type === threadId(8501).ForumPostMediaTypes.ATTACHMENT;
           if (isAttachmentPathUrlResult) {
-            isAttachmentPathUrlResult = callback1(8491).isAttachmentPathUrl(str);
-            const obj5 = callback1(8491);
+            isAttachmentPathUrlResult = callback1(8490).isAttachmentPathUrl(str);
+            const obj5 = callback1(8490);
           }
           if (!isAttachmentPathUrlResult) {
-            let result = src.type === threadId(8502).ForumPostMediaTypes.EMBED;
+            let result = src.type === threadId(8501).ForumPostMediaTypes.EMBED;
             if (result) {
-              result = callback1(8491).isExternalProxiedAttachmentUrl(str);
-              const obj6 = callback1(8491);
+              result = callback1(8490).isExternalProxiedAttachmentUrl(str);
+              const obj6 = callback1(8490);
             }
             isAttachmentPathUrlResult = result;
           }

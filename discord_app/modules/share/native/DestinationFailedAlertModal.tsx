@@ -69,15 +69,15 @@ function FailedUserRow(user) {
     obj4.status = tmp13;
     obj4.isMobileOnline = tmp6;
     obj4.isVROnline = tmp7;
-    obj4.size = tmp2(1187).AvatarSizes.XSMALL;
+    obj4.size = tmp2(1186).AvatarSizes.XSMALL;
     obj4.avatarDecoration = user.avatarDecoration;
-    const items2 = [closure_10(tmp2(1187).Avatar, obj4)];
+    const items2 = [closure_10(tmp2(1186).Avatar, obj4)];
     const obj5 = { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     if (stateFromStores == null) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(5383).Text, obj5);
+    items2[1] = closure_10(tmp2(5385).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -98,13 +98,13 @@ function FailedChannelRow(channel) {
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
   const items1 = [
-    closure_10(channel(10002).GuildIconWithChannelType, {
+    closure_10(channel(10005).GuildIconWithChannelType, {
       "aria-label": "",
       guild: stateFromStores,
       channel,
-      size: channel(10002).GuildIconWithChannelTypeSizes.SMALL_32,
+      size: channel(10005).GuildIconWithChannelTypeSizes.SMALL_32,
     }),
-    closure_10(channel(5383).Text, {
+    closure_10(channel(5385).Text, {
       style: tmp.label,
       variant: "body-md/medium",
       lineClamp: 1,
@@ -152,10 +152,10 @@ function FailedDestinationRow(destination) {
   return tmp3;
 }
 const View = fn(17).View;
-const StatusTypes = fn(1083).StatusTypes;
+const StatusTypes = fn(1082).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: {
     borderWidth: 1,

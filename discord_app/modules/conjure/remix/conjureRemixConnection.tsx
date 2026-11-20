@@ -7,84 +7,160 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 
 require = fn;
 let closure_5 = async function _acceptRemix(arg0) {
-  closure_3 = tmp2;
-  items = [closure_0, ConjureWorkerTickets.mintWorkerTicket(closure_1)];
-  await Promise.all(items);
-  if (1 === tmp5) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c5 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c5 = 3;
-      return { value, done: true };
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      closure_130_0 = value;
-      closure_130_1 = closure_131_3(closure_130_0, 2);
-      closure_130_2 = closure_130_1[0];
-      closure_130_3 = closure_130_1[1];
-      const _URLSearchParams = URLSearchParams;
-      const uRLSearchParams = new URLSearchParams({ ticket: closure_130_2.ticket });
-      closure_130_4 = uRLSearchParams;
-      closure_130_5 = 1;
-      const _fetch = fetch;
-      const _HermesInternal = HermesInternal;
-      const request = { method: "POST", headers: { "content-type": "application/json" }, body: null };
-      const _JSON = JSON;
-      const combined = "" + closure_130_2.baseUrl + "/agent/fork?" + closure_130_4;
-      request.body = JSON.stringify({ dest_ticket: closure_130_3.ticket });
-      const response = fetch(combined, request);
-      response.then(
-        (status) => status.status,
-        () => null,
-      );
-      c4 = 2;
-      c5 = 1;
+      return { value: "HermesInternal", done: null };
     }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c5 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c5 = 3;
-      return { value, done: true };
-    } else {
-      closure_130_6 = value;
-      if (null != closure_130_6) {
-        if (closure_130_6 < 300) {
-          c5 = 3;
-          return { value: "accepted", done: true };
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = false;
+          }
+          closure_131_2 = flag;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          closure_131_6 = undefined;
+          closure_131_7 = undefined;
+          closure_131_8 = undefined;
+          closure_131_9 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Path", done: true };
         }
-      }
-      if (409 === closure_130_6) {
-        c5 = 3;
-        return { value: "unreachable", done: true };
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          items = [closure_131_0, closure_132_0(closure_132_2[3]).mintWorkerTicket(closure_131_1)];
+          c5 = 2;
+          c6 = 1;
+          const obj5 = { value: Promise.all(items), done: false };
+          return obj5;
+        }
       } else {
-        if (null != closure_130_6) {
-          if (closure_130_6 < 500) {
-            if (429 !== closure_130_6) {
-              c5 = 3;
-              return { value: "rejected", done: true };
+        if (2 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_131_3 = value;
+            closure_131_4 = closure_132_3(closure_131_3, 2);
+            closure_131_5 = closure_131_4[0];
+            closure_131_6 = closure_131_4[1];
+            const _URLSearchParams = URLSearchParams;
+            const obj8 = { ticket: closure_131_5.ticket };
+            const uRLSearchParams = new URLSearchParams(obj8);
+            closure_131_7 = uRLSearchParams;
+            closure_131_8 = 1;
+          }
+        } else if (3 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          } else {
+            closure_131_9 = value;
+            if (null != closure_131_9) {
+              if (closure_131_9 < 300) {
+                c6 = 3;
+                return { value: "accepted", done: true };
+              }
+            }
+            if (409 === closure_131_9) {
+              c6 = 3;
+              return { value: "unreachable", done: true };
+            } else {
+              if (null != closure_131_9) {
+                if (closure_131_9 < 500) {
+                  if (429 !== closure_131_9) {
+                    c6 = 3;
+                    return { value: "rejected", done: true };
+                  }
+                }
+              }
+              if (3 === closure_131_8) {
+                c6 = 3;
+                return { value: "unreachable", done: true };
+              } else {
+                const promise = new Promise((arg0) => setTimeout(arg0, 1000));
+                c5 = 4;
+                c6 = 1;
+                const obj10 = { value: promise, done: false };
+                return obj10;
+              }
             }
           }
-        }
-        if (3 === closure_130_5) {
-          c5 = 3;
-          return { value: "unreachable", done: true };
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
         } else {
-          c4 = 3;
-          c5 = 1;
-          new Promise((arg0) => setTimeout(arg0, 1000));
-          return { value: new Promise((arg0) => setTimeout(arg0, 1000)), done: false };
+          closure_131_8 = closure_131_8 + 1;
         }
+        let _fetch = fetch;
+        const _HermesInternal = HermesInternal;
+        let then = "" + closure_131_5.baseUrl + "/agent/fork?" + closure_131_7;
+        let request = { method: "POST", headers: { "content-type": "application/json" }, body: null };
+        let fn = { dest_ticket: closure_131_6.ticket };
+        if (closure_131_2) {
+          let obj11 = { copy: true };
+        } else {
+          obj11 = {};
+        }
+        const merged = Object.assign(obj11);
+        request.body = JSON.stringify(fn);
+        _fetch = _fetch(then, request);
+        then = _fetch.then;
+        fn = (status) => status.status;
+        request = then(fn, () => null);
+        c5 = 3;
+        c6 = 1;
       }
+    } catch (tmp41) {
+      c6 = tmp;
+      throw tmp41;
     }
-  } else if (arg0 === 1) {
-    c5 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    closure_130_5 = closure_130_5 + 1;
   }
-  return value;
 };
 let closure_6 = async function _mintUpstreamTicket(arg0) {
   closure_131_0 = closure_0;

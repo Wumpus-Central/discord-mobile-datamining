@@ -7,7 +7,7 @@ import beginConsoleTransfer from "../../game_console/native/beginConsoleTransfer
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/useOnConnectToConsole.tsx");

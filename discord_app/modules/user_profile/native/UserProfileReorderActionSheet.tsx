@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { content: { gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -25,10 +25,10 @@ export default function UserProfileReorderActionSheet(returnFocusRef) {
   const items1 = [closure_6().content, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.contentContainerStyle = items1;
   const obj3 = { variant: "body-sm/medium", color: "text-subtle", children: null };
-  const intl = returnFocusRef(1113).intl;
-  obj3.children = intl.string(returnFocusRef(1113).t["S7X7/T"]);
-  const items2 = [closure_4(returnFocusRef(5383).Text, obj3), children];
+  const intl = returnFocusRef(1112).intl;
+  obj3.children = intl.string(returnFocusRef(1112).t["S7X7/T"]);
+  const items2 = [closure_4(returnFocusRef(5385).Text, obj3), children];
   obj2.children = items2;
-  obj.children = closure_5(returnFocusRef(5024).BottomSheetScrollView, obj2);
-  return closure_4(returnFocusRef(7434).ActionSheet, obj);
+  obj.children = closure_5(returnFocusRef(5026).BottomSheetScrollView, obj2);
+  return closure_4(returnFocusRef(7433).ActionSheet, obj);
 }

@@ -17,7 +17,7 @@ let closure_8 = async function _joinInterestGuild(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -149,7 +149,7 @@ let closure_8 = async function _joinInterestGuild(arg0) {
     }
   }
 };
-const JoinGuildSources = fn(1072).JoinGuildSources;
+const JoinGuildSources = fn(1071).JoinGuildSources;
 const set = new Set();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildActions.tsx");

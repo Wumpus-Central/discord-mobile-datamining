@@ -1,7 +1,7 @@
 // discord_app/modules/guild_badge/native/GuildBadgeImageSource.tsx
 import shared from "../../../design/shared.tsx";
+import _modDef7206 from "../../../../_runtime/metro/07206__.js";
 import _modDef7207 from "../../../../_runtime/metro/07207__.js";
-import _modDef7208 from "../../../../_runtime/metro/07208__.js";
 import GuildTraits from "../GuildTraits.tsx";
 import BadgeCategory from "../BadgeCategory.tsx";
 import _modDef9640 from "../../../../_runtime/metro/09640__.js";
@@ -11,12 +11,12 @@ import _modDef9643 from "../../../../_runtime/metro/09643__.js";
 
 require = fn;
 const badgeVariants = {};
-badgeVariants[fn(9634).BadgeCategory.STAFF] = { imageSource: _modDef7207 };
-let obj2 = { imageSource: _modDef7207 };
-badgeVariants[fn(9634).BadgeCategory.PARTNERED] = { imageSource: _modDef7208 };
-const obj3 = { imageSource: _modDef7208 };
-badgeVariants[fn(9634).BadgeCategory.VERIFIED] = { imageSource: _modDef7207 };
-const obj4 = { imageSource: _modDef7207 };
+badgeVariants[fn(9634).BadgeCategory.STAFF] = { imageSource: _modDef7206 };
+let obj2 = { imageSource: _modDef7206 };
+badgeVariants[fn(9634).BadgeCategory.PARTNERED] = { imageSource: _modDef7207 };
+const obj3 = { imageSource: _modDef7207 };
+badgeVariants[fn(9634).BadgeCategory.VERIFIED] = { imageSource: _modDef7206 };
+const obj4 = { imageSource: _modDef7206 };
 badgeVariants[fn(9634).BadgeCategory.COMMUNITY] = {
   imageSource: _modDef9640,
   imageSourceLight: _modDef9641,
@@ -25,7 +25,7 @@ badgeVariants[fn(9634).BadgeCategory.COMMUNITY] = {
 const obj5 = { imageSource: _modDef9640, imageSourceLight: _modDef9641, premiumImageSource: _modDef9642 };
 badgeVariants[fn(9634).BadgeCategory.DISCOVERABLE] = { imageSource: _modDef9643 };
 const obj6 = { imageSource: _modDef9643 };
-badgeVariants[fn(9634).BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: _modDef7207 };
+badgeVariants[fn(9634).BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: _modDef7206 };
 badgeVariants[fn(9634).BadgeCategory.NONE] = {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_badge/native/GuildBadgeImageSource.tsx");

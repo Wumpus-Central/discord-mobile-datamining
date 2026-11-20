@@ -272,7 +272,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -304,15 +304,15 @@ let closure_22 = async function _loadMissingApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
     }
   }
 };
-let closure_7 = fn(4722).GUILD_SELECTABLE_CHANNELS_KEY;
-const Permissions = fn(1072).Permissions;
+let closure_7 = fn(4724).GUILD_SELECTABLE_CHANNELS_KEY;
+const Permissions = fn(1071).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureServerAppRemoval.tsx");

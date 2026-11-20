@@ -10,18 +10,18 @@ import UserRecord from "../../../../../../records/UserRecord.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ BANNER_HEIGHT: closure_6, EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_9 = createStyles.createStyles({
   imageContainer: { width: "100%", height: "100%" },
   image: { width: "100%", height: "100%" },
 });
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(12044);
-  heroMediaDimensions = heroMediaDimensions(12861).useHeroMediaDimensions({
+  let obj = heroMediaDimensions(11986);
+  heroMediaDimensions = heroMediaDimensions(12831).useHeroMediaDimensions({
     width: obj.useRequiredAppLauncherContext().width,
   });
   const tmp4 = useEmbeddedActivityBackgroundDefault({

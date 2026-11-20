@@ -117,7 +117,7 @@ function CreateWebhookButton(guild) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -190,10 +190,10 @@ function CreateWebhookButton(guild) {
   obj3.onPress = callback;
   return closure_18(guild(navigation[21]).RowButton, obj3);
 }
-let GuildChannelStore = fn(4722);
+let GuildChannelStore = fn(4724);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_6, GUILD_VOCAL_CHANNELS_KEY: metroImportDefault } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   HelpdeskArticles: map1,
   ChannelSettingsSections: closure_14,
@@ -203,7 +203,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.content = {
@@ -238,7 +238,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
   items = [
-    closure_18(webhookType(5383).Text, { variant: "body-sm/medium", color: "text-muted", children: helpText }),
+    closure_18(webhookType(5385).Text, { variant: "body-sm/medium", color: "text-muted", children: helpText }),
     ,
   ];
   let tmp4Result = webhookType === constants3.INCOMING;
@@ -248,17 +248,17 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(19022).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(18841).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
-      const intl2 = webhookType(1113).intl;
-      dkHRkE = webhookType(1113).t.dkHRkE;
+      const intl2 = webhookType(1112).intl;
+      dkHRkE = webhookType(1112).t.dkHRkE;
       let stringResult = intl2.string(dkHRkE);
     } else {
-      const intl = webhookType(1113).intl;
-      stringResult = intl.string(webhookType(1113).t["4JAVI+"]);
+      const intl = webhookType(1112).intl;
+      stringResult = intl.string(webhookType(1112).t["4JAVI+"]);
     }
     obj2.title = stringResult;
-    closure_18(webhookType(1187).EmptyState, obj2);
+    closure_18(webhookType(1186).EmptyState, obj2);
   } else {
     const obj3 = {
       hasIcons: true,
@@ -279,7 +279,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       }),
     };
     const obj4 = { children: null };
-    items[2] = closure_18(webhookType(7229).TableRowGroup, obj3);
+    items[2] = closure_18(webhookType(7228).TableRowGroup, obj3);
     obj4.children = items;
     return closure_20(closure_19, obj4);
   }
@@ -300,7 +300,7 @@ prototype["render"] = function render() {
   obj.children = items;
   return dependencyMap(closure_1_19, obj);
 };
-WebhooksOverview.contextType = fn(4853).ThemeContext;
+WebhooksOverview.contextType = fn(4855).ThemeContext;
 let closure_26 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting(

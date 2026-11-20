@@ -7,8 +7,8 @@ import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(1072).PriceSetAssignmentPurchaseTypes;
-const PaymentGateways = fn(1083).PaymentGateways;
+const constants = fn(1071).PriceSetAssignmentPurchaseTypes;
+const PaymentGateways = fn(1082).PaymentGateways;
 const PremiumPlanPriceSource = { IAP: "IAP", API: "API" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");

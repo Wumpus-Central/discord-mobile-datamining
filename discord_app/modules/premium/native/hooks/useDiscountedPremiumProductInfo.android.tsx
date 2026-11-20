@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const CurrencyCodes = fn(1083).CurrencyCodes;
+const CurrencyCodes = fn(1082).CurrencyCodes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx");
 

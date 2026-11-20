@@ -9,8 +9,8 @@ import RequestToStreamStore from "RequestToStreamStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-let closure_7 = fn(14393).STREAM_REQUEST_AUTO_WATCH_MAX_AGE;
-const ActivityActionTypes = fn(1072).ActivityActionTypes;
+let closure_7 = fn(14361).STREAM_REQUEST_AUTO_WATCH_MAX_AGE;
+const ActivityActionTypes = fn(1071).ActivityActionTypes;
 class RequestToStreamManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

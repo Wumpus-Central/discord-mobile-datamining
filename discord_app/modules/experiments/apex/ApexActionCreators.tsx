@@ -65,7 +65,7 @@ let closure_9 = async function _fetchUserExperimentAssignments() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -159,7 +159,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -237,13 +237,13 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
               const obj3 = closure_1(572);
               obj3.dispatch({
                 type: "APEX_EXPERIMENTS_FETCH_SUCCESS",
-                unitId: request(1455).INSTALLATION_UNIT_ID,
+                unitId: request(1453).INSTALLATION_UNIT_ID,
                 request,
                 experiments,
               });
               const obj4 = {
                 type: "APEX_EXPERIMENTS_FETCH_SUCCESS",
-                unitId: request(1455).INSTALLATION_UNIT_ID,
+                unitId: request(1453).INSTALLATION_UNIT_ID,
                 request,
                 experiments,
               };
@@ -277,7 +277,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
   }
 };
 let closure_3 = ["installation"];
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/ApexActionCreators.tsx");
 

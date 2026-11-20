@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarAvatar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
-import _mod1708 from "../../../../../_runtime/metro/01708__.js";
+import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05052_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -40,30 +40,30 @@ function YouBarAvatarLarge(transitionState) {
   if (tmp8) {
     num = 1;
   }
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(num);
   c4 = sharedValue;
-  const obj3 = require("../../../../../_runtime/metro/01655__.js");
+  const obj3 = require("../../../../../_runtime/metro/01653__.js");
   let num2 = 1;
   if (!tmp8) {
     num2 = result;
   }
-  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num2);
+  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(num2);
   noop = sharedValue1;
-  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01653__.js");
   if (tmp8) {
     let tmp11 = -closure_17;
   } else {
     tmp11 = -result1;
   }
-  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(tmp11);
+  const sharedValue2 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(tmp11);
   c6 = sharedValue2;
-  const tmp2Result13 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp2Result13 = require("../../../../../_runtime/metro/01653__.js");
   if (tmp8) {
     let diff = -closure_17 - (height - closure_15) / 2;
   } else {
     diff = -result1;
   }
-  const sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(diff);
+  const sharedValue3 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(diff);
   let items2 = [transitionState, sharedValue, sharedValue1, sharedValue2, sharedValue3, result, result1];
   const effect = noop.useEffect(() => {
     const tmp = c0 === native2.TransitionStates.YEETED;
@@ -90,7 +90,7 @@ function YouBarAvatarLarge(transitionState) {
     }
     const result3 = _undefined8.set(diff);
   }, items2);
-  const tmp2Result14 = require("../../../../../_runtime/metro/01655__.js");
+  const tmp2Result14 = require("../../../../../_runtime/metro/01653__.js");
   const avatarDecoration = require("useAvatarDecoration").useAvatarDecoration(stateFromStores);
   const tmp2Result15 = require("useAvatarDecoration");
   const items3 = [c8];
@@ -129,7 +129,7 @@ function YouBarAvatarLarge(transitionState) {
     closure_25,
     transitionState,
     require("native").TransitionStates,
-    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01706__.js").scheduleOnRN,
     transitionState.cleanup,
   ];
   _require = undefined;
@@ -199,8 +199,8 @@ function YouBarAvatarLarge(transitionState) {
   YouBarAvatarTsx2.__closure = items6;
   YouBarAvatarTsx2.__workletHash = 7492548934333;
   YouBarAvatarTsx2.__initData = tmp22;
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(YouBarAvatarTsx2);
-  const tmp2Result17 = require("../../../../../_runtime/metro/01655__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(YouBarAvatarTsx2);
+  const tmp2Result17 = require("../../../../../_runtime/metro/01653__.js");
   const token = require("useToken").useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND);
   require("useToken");
   let tmp40Result = null;
@@ -232,7 +232,7 @@ function YouBarAvatarLarge(transitionState) {
       status: null,
       statusSizeOverride: null,
       cutout: null,
-      statusStyle: "2026-05-av1-bitrate-tuning",
+      statusStyle: "RNSTabsScreenAndroid",
     };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
@@ -242,7 +242,7 @@ function YouBarAvatarLarge(transitionState) {
     obj7.cutout = memo;
     let rect = { right: closure_14 - closure_19, bottom: closure_14 - closure_19 };
     obj7.statusStyle = rect;
-    items8[1] = closure_22(tmp2(1187).Avatar, obj7);
+    items8[1] = closure_22(tmp2(1186).Avatar, obj7);
     let mapped;
     const tmp35Result = tmp35(8903);
     const tmp44 = c6;
@@ -296,7 +296,7 @@ function YouBarAvatarLarge(transitionState) {
     }
     items8[3] = tmp41Result;
     obj4.children = items8;
-    tmp40Result = closure_23(tmp35(1655).View, obj4);
+    tmp40Result = closure_23(tmp35(1653).View, obj4);
     const tmp35Result3 = tmp35(8903);
   }
   return tmp40Result;
@@ -317,8 +317,8 @@ function YouBarAvatar(transitionState) {
   if (transitionState === require("native").TransitionStates.MOUNTED) {
     num = 1;
   }
-  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
-  const obj4 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(num);
+  const obj4 = require("../../../../../_runtime/metro/01653__.js");
   const items2 = [
     closure_29,
     require("spring/spring").withSpring,
@@ -327,7 +327,7 @@ function YouBarAvatar(transitionState) {
     closure_28,
     transitionState,
     require("native").TransitionStates,
-    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01706__.js").scheduleOnRN,
     transitionState.cleanup,
   ];
   _require = undefined;
@@ -389,7 +389,7 @@ function YouBarAvatar(transitionState) {
   YouBarAvatarTsx4.__workletHash = 11641235222673;
   YouBarAvatarTsx4.__initData = tmp6;
   const items4 = [sharedValue, transitionState];
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(YouBarAvatarTsx4);
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(YouBarAvatarTsx4);
   const effect = noop.useEffect(() => {
     let num = 1;
     if (c0 === native2.TransitionStates.YEETED) {
@@ -400,7 +400,7 @@ function YouBarAvatar(transitionState) {
   if (null == stateFromStores) {
     return null;
   } else {
-    let result = (tmp(1187).AVATAR_SIZE_MAP[size2] - tmp(1187).AVATAR_SIZE_MAP[closure_12]) / 2;
+    let result = (tmp(1186).AVATAR_SIZE_MAP[size2] - tmp(1186).AVATAR_SIZE_MAP[closure_12]) / 2;
     const obj5 = { style: null, children: null };
     const rect = { position: "absolute", top: -result, left: -result };
     const items5 = [rect, animatedStyle];
@@ -419,14 +419,14 @@ function YouBarAvatar(transitionState) {
       OFFLINE = StatusTypes.OFFLINE;
     }
     obj6.status = OFFLINE;
-    obj5.children = closure_22(tmp(1187).Avatar, obj6);
-    return closure_22(_modDef1655.View, obj5);
+    obj5.children = closure_22(tmp(1186).Avatar, obj6);
+    return closure_22(_modDef1653.View, obj5);
   }
-  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01653__.js");
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
-const YouBarConstants = fn(16532);
+const YouBarConstants = fn(16355);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_11,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
@@ -439,10 +439,10 @@ const YouBarConstants = fn(16532);
   YOU_BAR_STATUS_OFFSET: closure_19,
   YOU_BAR_AVATAR_LARGE_PX: closure_20,
 } = YouBarConstants);
-const StatusTypes = fn(1072).StatusTypes;
+const StatusTypes = fn(1071).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};
@@ -509,7 +509,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
   YouBarAvatarTsx5.__workletHash = 4651565273867;
   YouBarAvatarTsx5.__initData = tmp6;
   let items3 = [onPress];
-  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(YouBarAvatarTsx5);
+  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(YouBarAvatarTsx5);
   const callback = noop.useCallback(() => {
     if (c1 != null) {
       tmp();
@@ -528,7 +528,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -559,7 +559,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
             value.openUserSettings();
             closure_128_2(false);
             paths = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           paths = tmp;
@@ -573,7 +573,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
   const memo = noop.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const result = Gesture.LongPress().shouldCancelWhenOutside(false);
-    items = [closure_32, _mod1708.scheduleOnRN, c2];
+    items = [closure_32, _mod1706.scheduleOnRN, c2];
     c0 = undefined;
     c1 = undefined;
     [tmp4, tmp5, tmp6] = items;
@@ -588,7 +588,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
     YouBarAvatarTsx6.__workletHash = 9336474323041;
     YouBarAvatarTsx6.__initData = tmp4;
     const LongPressResult = Gesture.LongPress();
-    const items2 = [closure_33, _mod1708.scheduleOnRN, callback1];
+    const items2 = [closure_33, _mod1706.scheduleOnRN, callback1];
     c0 = undefined;
     c1 = undefined;
     [tmp7, tmp8, tmp9] = items2;
@@ -603,7 +603,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
     YouBarAvatarTsx7.__workletHash = 11759750447418;
     YouBarAvatarTsx7.__initData = tmp7;
     const onBeginResult = result.onBegin(YouBarAvatarTsx6);
-    const items4 = [closure_34, _mod1708.scheduleOnRN, c2];
+    const items4 = [closure_34, _mod1706.scheduleOnRN, c2];
     c0 = undefined;
     c1 = undefined;
     [tmp10, tmp11, tmp12] = items4;
@@ -641,8 +641,8 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
     };
     const obj6 = { style: null, children: null };
     size = {
-      height: tmp(1187).AVATAR_SIZE_MAP[closure_12],
-      width: tmp(1187).AVATAR_SIZE_MAP[closure_12],
+      height: tmp(1186).AVATAR_SIZE_MAP[closure_12],
+      width: tmp(1186).AVATAR_SIZE_MAP[closure_12],
       position: "relative",
     };
     let items5 = [size, animatedStyle];
@@ -654,10 +654,10 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
       },
       renderItem: callback2,
     };
-    obj6.children = closure_22(tmp(4853).TransitionGroup, obj7);
-    obj5.children = closure_22(_modDef1655.View, obj6);
+    obj6.children = closure_22(tmp(4855).TransitionGroup, obj7);
+    obj5.children = closure_22(_modDef1653.View, obj6);
     obj4.children = closure_22(closure_7, obj5);
-    tmp16 = closure_22(tmp(5052).GestureDetector, obj4);
+    tmp16 = closure_22(tmp(5054).GestureDetector, obj4);
   }
   return tmp16;
 });

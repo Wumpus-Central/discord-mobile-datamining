@@ -74,12 +74,12 @@ function isQuestRobloxRelated(desktopApplicationIds, distributor) {
   }
   return tmp;
 }
-const QuestConstants = fn(6437);
+const QuestConstants = fn(6439);
 ({ DISCORD_APPLICATION_ID: closure_12, QuestsExperimentLocations } = QuestConstants);
-const isLaunched = fn(6503).isLaunched;
+const isLaunched = fn(6505).isLaunched;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 const SECOND = DurationsDefault.Millis.SECOND;
-const getQuestLogger = fn(8293);
+const getQuestLogger = fn(8292);
 const logger = getQuestLogger.getQuestLogger({ location: QuestsExperimentLocations.QUESTS_MANAGER });
 class QuestProgressManager extends tmp4 {
   constructor() {
@@ -99,9 +99,9 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = applyArgumentsResult(8308).getQuestTaskDetails(
+            const questTaskDetails = applyArgumentsResult(8307).getQuestTaskDetails(
               value,
-              applyArgumentsResult(6445).FirstPartyQuestTaskTypesSets.DESKTOP,
+              applyArgumentsResult(6447).FirstPartyQuestTaskTypesSets.DESKTOP,
             );
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
@@ -165,9 +165,9 @@ class QuestProgressManager extends tmp4 {
                 applyArgumentsResult.terminateHeartbeat(questId, closure_1);
               } else {
                 const _HermesInternal4 = HermesInternal;
-                const timerIdResult = timerId(6280);
+                const timerIdResult = timerId(6282);
                 logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + questId);
-                const encodeStreamKeyResult = timerId(6280).encodeStreamKey(currentUserActiveStream);
+                const encodeStreamKeyResult = timerId(6282).encodeStreamKey(currentUserActiveStream);
                 const obj2 = {
                   questId,
                   streamKey: encodeStreamKeyResult,
@@ -175,15 +175,15 @@ class QuestProgressManager extends tmp4 {
                   executablePath,
                   executableFingerprint: prop,
                 };
-                timerId(9837).sendHeartbeat(obj2);
-                const timerIdResult1 = timerId(9837);
+                timerId(9839).sendHeartbeat(obj2);
+                const timerIdResult1 = timerId(9839);
               }
             } else {
               const _HermesInternal2 = HermesInternal;
               logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + questId);
               const obj3 = { questId, applicationId, executablePath, executableFingerprint: prop };
-              timerId(9837).sendHeartbeat(obj3);
-              const timerIdResult2 = timerId(9837);
+              timerId(9839).sendHeartbeat(obj3);
+              const timerIdResult2 = timerId(9839);
             }
             prop = applyArgumentsResult.calculateHeartbeatDurationMs(questId);
             const _window = window;
@@ -405,7 +405,7 @@ class QuestProgressManager extends tmp4 {
           let hasItem = null != id;
           if (hasItem) {
             const features = id.config.features;
-            hasItem = features.includes(applyArgumentsResult(6438).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+            hasItem = features.includes(applyArgumentsResult(6440).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
           }
           tmp = hasItem;
         }

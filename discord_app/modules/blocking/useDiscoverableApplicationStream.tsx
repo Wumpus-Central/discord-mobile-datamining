@@ -30,7 +30,7 @@ function getDiscoverableApplicationStream(userId) {
   }
   return tmp6;
 }
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/blocking/useDiscoverableApplicationStream.tsx");
 

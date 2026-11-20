@@ -1052,6 +1052,12 @@ export const PremiumUpsellTypes = {
   CLIPS_GUILD_SIDEBAR_COACHMARK_PREMIUM_EARLY_ACCESS_UPSELL:
     "clips_guild_sidebar_coachmark_premium_early_access_upsell",
   CLIPS_GO_LIVE_PREMIUM_EARLY_ACCESS_ROADBLOCK_UPSELL: "clips_go_live_premium_early_access_roadblock_upsell",
+  AUTOCLIPS_EA_LAUNCH_ANNOUNCEMENT_UPSELL: "autoclips_ea_launch_announcement_upsell",
+  AUTOCLIPS_EA_NITRO_TAB_UPSELL: "autoclips_ea_nitro_tab_upsell",
+  AUTOCLIPS_EA_NITRO_MARKETING_CARD_UPSELL: "autoclips_ea_nitro_marketing_card_upsell",
+  AUTOCLIPS_EA_CHAT_UPSELL: "autoclips_ea_chat_upsell",
+  AUTOCLIPS_EA_CAPTURE_MODE_ROADBLOCK_UPSELL: "autoclips_ea_capture_mode_roadblock_upsell",
+  AUTOCLIPS_EA_POST_SESSION_UPSELL: "autoclips_ea_post_session_upsell",
   CUSTOM_NOTIFICATION_SOUNDS_UPSELL: "custom_notification_sounds_upsell",
   CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL: "custom_notification_sounds_settings_inline_upsell",
   HD_STREAMING_VIEWER_UPSELL: "hd_streaming_viewer_upsell",

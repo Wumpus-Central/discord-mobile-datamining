@@ -23,7 +23,7 @@ function PooledFrame(frame) {
   );
   dependencyMap = tmp3;
   if (tmp2.proxyTicket !== proxyTicket) {
-    const obj2 = { iframeId: proxyTicket(10726)(), proxyTicket };
+    const obj2 = { iframeId: proxyTicket(10668)(), proxyTicket };
     tmp3(obj2);
   }
   iframeId = tmp2.iframeId;
@@ -50,7 +50,7 @@ function PooledFrame(frame) {
       return obj;
     });
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(15667).subscribe, () =>
+  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(15631).subscribe, () =>
     FramePoolManagerDefault.getWinningTargetState(id),
   );
   const obj3 = { frame, iframeId, onActivityCrash: callback, presentation: null };
@@ -63,13 +63,13 @@ function PooledFrame(frame) {
     syncExternalStore = obj4;
   }
   obj3.presentation = syncExternalStore;
-  return jsx(proxyTicket(19203), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(proxyTicket(19022), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 }
 const View = fn(17).View;
-const FramesConstants = fn(6503);
+const FramesConstants = fn(6505);
 ({ FrameLayoutModes: metroImportDefault, isLaunched: closure_8 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles({ pool: { position: "absolute", opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");

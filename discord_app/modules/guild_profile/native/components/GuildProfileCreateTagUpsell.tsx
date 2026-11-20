@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_5 = createStyles.createStyles({
   upsell: { minHeight: 44, alignItems: "center", justifyContent: "center" },
 });
@@ -18,9 +18,9 @@ export default function GuildProfileCreateTagUpsell(guildId) {
   guildId = guildId.guildId;
   let creatableGuilds;
   const tmp = closure_5();
-  const guildTagCreationUpsell = guildId(13721).useGuildTagCreationUpsell(
+  const guildTagCreationUpsell = guildId(13690).useGuildTagCreationUpsell(
     "GuildProfileCreateTagUpsell",
-    creatableGuilds(13723),
+    creatableGuilds(13692),
   );
   creatableGuilds = guildTagCreationUpsell.creatableGuilds;
   let tmp5 = null;
@@ -35,9 +35,9 @@ export default function GuildProfileCreateTagUpsell(guildId) {
       children: null,
     };
     const obj3 = { variant: "body-md/medium", color: "text-muted", children: null };
-    const intl = tmp2(1113).intl;
-    obj3.children = intl.string(tmp2(1113).t.J0YWRq);
-    obj2.children = jsx(tmp2(5383).Text, { variant: "body-md/medium", color: "text-muted", children: null });
+    const intl = tmp2(1112).intl;
+    obj3.children = intl.string(tmp2(1112).t.J0YWRq);
+    obj2.children = jsx(tmp2(5385).Text, { variant: "body-md/medium", color: "text-muted", children: null });
     tmp5 = (
       <Pressable
         style={tmp.upsell}

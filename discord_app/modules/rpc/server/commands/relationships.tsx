@@ -7,14 +7,14 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ApplicationFlags: metroImportDefault, RelationshipTypes: closure_8, RPCCommands, RPCErrors: closure_9 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15593);
+const CONTEXT_MENU_ICON_NAMES = fn(15557);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 let items = [fn(6794).OAuth2Scopes.RELATIONSHIPS_READ];
-obj4[fn(6233).RPC_SCOPE_CONFIG.ANY] = items;
+obj4[fn(6235).RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
 obj3.handler = function handler(socket) {
   const deserializer = BigFlagUtilsAll;

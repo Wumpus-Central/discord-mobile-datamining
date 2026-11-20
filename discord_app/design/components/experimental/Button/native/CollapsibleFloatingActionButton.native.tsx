@@ -1,6 +1,6 @@
 // discord_app/design/components/experimental/Button/native/CollapsibleFloatingActionButton.native.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
 import BaseTextButton from "../../../Button/native/BaseTextButton.native.tsx";
 import spring_spring from "../../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../animation/reanimated/spring/springPresets.tsx";
@@ -17,7 +17,7 @@ function CollapsableButton(arg0) {
     closure_7,
     ButtonConstants2.FAB_BUTTON_SIZE,
     spring_spring.withSpring,
-    _mod1655.interpolate,
+    _mod1653.interpolate,
     collapseText,
     20,
     buttonPadding,
@@ -45,7 +45,7 @@ function CollapsableButton(arg0) {
   CollapsibleFloatingActionButtonNativeTsx1.__closure = items1;
   CollapsibleFloatingActionButtonNativeTsx1.__workletHash = 9222180405053;
   CollapsibleFloatingActionButtonNativeTsx1.__initData = tmp4;
-  const animatedStyle = _mod1655.useAnimatedStyle(CollapsibleFloatingActionButtonNativeTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(CollapsibleFloatingActionButtonNativeTsx1);
   const obj2 = {};
   const merged1 = Object.assign(merged);
   obj2.size = "lg";
@@ -57,9 +57,9 @@ function CollapsableButton(arg0) {
   return jsx(BaseTextButton.BaseTextButton, {});
 }
 const jsx = fn(21).jsx;
-const ButtonConstants = fn(5396);
-const buttonPadding = ButtonConstants.getButtonPadding(fn(5396).FAB_BUTTON_SIZE, fn(5396).FAB_BUTTON_ICON_SIZE);
-const createStyles = fn(4792);
+const ButtonConstants = fn(5398);
+const buttonPadding = ButtonConstants.getButtonPadding(fn(5398).FAB_BUTTON_SIZE, fn(5398).FAB_BUTTON_ICON_SIZE);
+const createStyles = fn(4794);
 let closure_6 = createStyles.createStyles({
   textButtonPill: { paddingHorizontal: 20, paddingVertical: buttonPadding },
 });

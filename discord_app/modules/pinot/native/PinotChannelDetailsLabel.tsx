@@ -1,13 +1,13 @@
 // discord_app/modules/pinot/native/PinotChannelDetailsLabel.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3407 from "../Pinot.messages.js";
+import _modDef3409 from "../Pinot.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
 const hitSlop = { top: 8, bottom: 8, left: 4, right: 8 };
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   label: {
     alignSelf: "flex-start",
@@ -42,10 +42,10 @@ export function PinotChannelDetailsLabel(channel) {
   let stringResult1;
   const tmp = closure_5();
   if (obj.useIsPinotChannelLabelVisible(channel.channel, "mobile_channel_details_label")) {
-    const intl = tmp2(1113).intl;
-    const stringResult = intl.string(_modDef3407.uneDIi);
-    const intl2 = tmp2(1113).intl;
-    stringResult1 = intl2.string(_modDef3407["01KOls"]);
+    const intl = tmp2(1112).intl;
+    const stringResult = intl.string(_modDef3409.uneDIi);
+    const intl2 = tmp2(1112).intl;
+    stringResult1 = intl2.string(_modDef3409["01KOls"]);
     const obj2 = {
       onPress: function handlePress() {
         ToastActionCreatorsDefault.open("PINOT_CHANNEL_DETAILS_LABEL", { text: stringResult1 });
@@ -58,13 +58,13 @@ export function PinotChannelDetailsLabel(channel) {
       children: null,
     };
     const obj3 = { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult };
-    obj2.children = jsx(tmp2(5383).Text, {
+    obj2.children = jsx(tmp2(5385).Text, {
       variant: "body-xs/medium",
       color: "none",
       style: tmp.text,
       children: stringResult,
     });
-    return jsx(tmp2(6911).PressableOpacity, {
+    return jsx(tmp2(6910).PressableOpacity, {
       onPress: function handlePress() {
         ToastActionCreatorsDefault.open("PINOT_CHANNEL_DETAILS_LABEL", { text: stringResult1 });
       },
@@ -78,5 +78,5 @@ export function PinotChannelDetailsLabel(channel) {
   } else {
     return null;
   }
-  obj = stringResult1(11789);
+  obj = stringResult1(11731);
 }

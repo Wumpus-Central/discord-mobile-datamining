@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(5521).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(5523).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -48,7 +48,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
     muted = !channelSelected;
   }
   const tmpResult = closure_10(muted);
-  const REFRESH_MEDIUM_32 = channel(1187).AvatarSizes.REFRESH_MEDIUM_32;
+  const REFRESH_MEDIUM_32 = channel(1186).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = AuthenticationStore.getId();
   items = [TypingStore];
   stateFromStores = channel(504).useStateFromStores(items, () => {
@@ -124,8 +124,8 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
         status: null,
-        streaming: "7a573a65dba4ff3ff7c5cfce69573cc3",
-        style: "zh-TW.messages.7a573a65dba4ff3ff7c5cfce69573cc3.compiled.messages",
+        streaming: "c30340cf7cc971807b3562881b6a9701",
+        style: "zh-CN.messages.c30340cf7cc971807b3562881b6a9701.compiled.messages",
         size: "jsona",
         animate: "VOICE_CATEGORY_EXPAND",
         typing: null,
@@ -141,15 +141,15 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
       obj7.size = REFRESH_MEDIUM_32;
       obj7.animate = stateFromStores1;
       obj7.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1187).Avatar, {
+      tmp11Result = jsx(tmp3(1186).Avatar, {
         user: stateFromStores2,
         avatarDecoration: stateFromStores2.avatarDecoration,
         guildId: "Button",
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
         status: null,
-        streaming: "7a573a65dba4ff3ff7c5cfce69573cc3",
-        style: "zh-TW.messages.7a573a65dba4ff3ff7c5cfce69573cc3.compiled.messages",
+        streaming: "c30340cf7cc971807b3562881b6a9701",
+        style: "zh-CN.messages.c30340cf7cc971807b3562881b6a9701.compiled.messages",
         size: "jsona",
         animate: "VOICE_CATEGORY_EXPAND",
         typing: null,

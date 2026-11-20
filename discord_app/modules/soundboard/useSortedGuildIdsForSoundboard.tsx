@@ -7,8 +7,8 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
-const Permissions = fn(1083).Permissions;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
+const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/useSortedGuildIdsForSoundboard.tsx");
 

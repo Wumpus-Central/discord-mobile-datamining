@@ -8,8 +8,8 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4722).GUILD_VOCAL_CHANNELS_KEY;
-const Permissions = fn(1072).Permissions;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4724).GUILD_VOCAL_CHANNELS_KEY;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanCreateAnEvent.tsx");
 

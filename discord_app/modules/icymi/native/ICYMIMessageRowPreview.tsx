@@ -15,7 +15,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
   if (str === undefined) {
     str = "none";
   }
-  const tmp = messageOptions(5001)();
+  const tmp = messageOptions(5003)();
   let obj = createStyles;
   dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: messageOptions(575).colors.TEXT_DEFAULT })(tmp);
   const RenderEmbeds = UserSettings.RenderEmbeds;
@@ -48,7 +48,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     });
     return obj;
   }, items);
-  return setting2(messageOptions(9977), {
+  return setting2(messageOptions(9980), {
     pointerEvents: str,
     horizontalOffset: 0,
     modifyRow(arg0) {
@@ -67,7 +67,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     maxHeight,
   });
 }
-const MessageEmbedTypes = fn(1072).MessageEmbedTypes;
+const MessageEmbedTypes = fn(1071).MessageEmbedTypes;
 const jsx = fn(21).jsx;
 const memoResult = noop.memo(function MediaOnlyRowPreview(message) {
   message = message.message;
@@ -202,11 +202,11 @@ export const MessageRowPreview = noop.memo(function MessageRowPreview(message) {
     obj.pointerEvents = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(5406)(message);
+  const tmp3 = merged(5408)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   const obj2 = {};
-  const merged2 = Object.assign(message(8552).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(8551).DEFAULT_OPTIONS);
   obj2.ignoreMentioned = true;
   obj2.renderReplies = false;
   obj2.renderThreadEmbeds = false;

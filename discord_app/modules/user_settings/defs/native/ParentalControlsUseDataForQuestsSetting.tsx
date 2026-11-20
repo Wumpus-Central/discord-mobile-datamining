@@ -1,18 +1,18 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsUseDataForQuestsSetting.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2723 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2725 from "../../../parent_tools/FamilyCenter.messages.js";
 import ParentalControlledUserSettings from "../../family_center/ParentalControlledUserSettings.tsx";
 import FamilyCenterSaveErrorUtils from "../../../parent_tools/FamilyCenterSaveErrorUtils.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11875);
+const SettingBuilders = fn(11817);
 const toggle = SettingBuilders.createToggle({
   useTitle: function useDataForQuestsSettingTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2723.ZhaNu8);
+    return intl.string(_modDef2725.ZhaNu8);
   },
-  parent: fn(8593).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8592).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToSupportQuestsSettingValue() {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;

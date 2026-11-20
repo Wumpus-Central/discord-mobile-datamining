@@ -53,7 +53,7 @@ function processColorStrings(colorStrings) {
   }
 }
 const processColor = fn(17).processColor;
-const ThemeTypes = fn(1083).ThemeTypes;
+const ThemeTypes = fn(1082).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx");
 

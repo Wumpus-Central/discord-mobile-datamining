@@ -10,13 +10,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function AdTopicRow(adTopic) {
   adTopic = adTopic.adTopic;
-  let AdTopicOptOuts = adTopic(4617).AdTopicOptOuts;
+  let AdTopicOptOuts = adTopic(4619).AdTopicOptOuts;
   const setting = AdTopicOptOuts.useSetting();
   const hasItem = setting.includes(adTopic);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
-  const intl = adTopic(1113).intl;
+  const intl = adTopic(1112).intl;
   obj.label = intl.string(obj[adTopic]);
-  const intl2 = adTopic(1113).intl;
+  const intl2 = adTopic(1112).intl;
   const tmp3 = _modDef2226;
   obj.subLabel = intl2.string(hasItem ? tmp3.B9PPxE : tmp3.Y9ZOp8);
   obj.value = !hasItem;
@@ -32,17 +32,17 @@ function AdTopicRow(adTopic) {
     items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7437).TableSwitchRow, obj);
+  return closure_5(adTopic(7436).TableSwitchRow, obj);
 }
 const View = fn(17).View;
-const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {};
-obj[fn(1196).AdTopic.REAL_MONEY_GAMING] = _modDef2226.pmIitA;
+obj[fn(1195).AdTopic.REAL_MONEY_GAMING] = _modDef2226.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj3 = {
   content: {
     paddingHorizontal: nativeDefault.space.PX_16,

@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 require = fn;
 let useNativeCheckoutStore = fn(8992).useNativeCheckoutStore;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx",

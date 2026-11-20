@@ -80,7 +80,7 @@ function handleUpdate(arg0) {
   dependencyMap[guildId] = obj;
 }
 const GuildOnboardingStatus = fn(6722).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(6701).GuildOnboardingMode;
+const GuildOnboardingMode = fn(6703).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

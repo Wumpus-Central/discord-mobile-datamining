@@ -2,15 +2,15 @@
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02119_asyncRequireImpl.js";
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
-import _mod6261 from "module_6261" /* 6261 */;
+import _mod6263 from "module_6263" /* 6263 */;
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 let closure_5 = new LoggerDefault("BundleUpdater");
 const BundleUpdaterManager = NativeModules.BundleUpdaterManager;
 const nativeEventEmitter = new NativeEventEmitter(BundleUpdaterManager);
@@ -60,7 +60,7 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -123,7 +123,7 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
   })();
 };
 prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
-  const match = _mod6261.match(item10010);
+  const match = _mod6263.match(item10010);
   const withResult = match.with({ type: "OtaCheckAttempt" }, (result) => {
     closure_1_5.verbose("OTA check attempt", result);
     AnalyticsUtilsDefault.track(constants.MOBILE_OTA_CHECK_ATTEMPT, {

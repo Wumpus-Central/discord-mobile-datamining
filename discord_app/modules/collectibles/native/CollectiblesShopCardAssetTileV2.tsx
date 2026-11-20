@@ -82,7 +82,7 @@ function ProductPreviewInner(arg0) {
     const size = { width: COLLECTIBLES_SHOP_CARD_WIDTH, height: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_HEIGHT };
     return size;
   }, items);
-  if (product.type === cardWidth(2114).CollectiblesItemType.BUNDLE) {
+  if (product.type === cardWidth(2112).CollectiblesItemType.BUNDLE) {
     const obj2 = {
       deco: firstAvatarDecoration,
       pfx: firstProfileEffect,
@@ -101,7 +101,7 @@ function ProductPreviewInner(arg0) {
     obj3.style = tmp.externalProductImage;
     return closure_7(FastImageDefault, obj3);
   } else {
-    const ALL = cardWidth(1075).FractionalPremiumSKUsSets.ALL;
+    const ALL = cardWidth(1074).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
       let size = {
         skuId: product.skuId,
@@ -115,15 +115,15 @@ function ProductPreviewInner(arg0) {
       if (first != null) {
         type = first.type;
       }
-      if (cardWidth(2114).CollectiblesItemType.AVATAR_DECORATION === type) {
+      if (cardWidth(2112).CollectiblesItemType.AVATAR_DECORATION === type) {
         const obj5 = { item: first, size: 100 };
         return closure_7(AvatarDecorationSampleV2Default, obj5);
-      } else if (cardWidth(2114).CollectiblesItemType.PROFILE_EFFECT === type) {
+      } else if (cardWidth(2112).CollectiblesItemType.PROFILE_EFFECT === type) {
         const obj6 = { style: tmp.profileEffectContainer, children: null };
         const obj7 = { item: first, hideBackground: true };
         obj6.children = closure_7(ProfileEffectSampleV2Default, obj7);
         return closure_7(closure_5, obj6);
-      } else if (cardWidth(2114).CollectiblesItemType.PROFILE_FRAME === type) {
+      } else if (cardWidth(2112).CollectiblesItemType.PROFILE_FRAME === type) {
         const obj8 = { style: tmp.profileFrameContainer, children: null };
         const obj9 = {
           profileFrame: first,
@@ -133,7 +133,7 @@ function ProductPreviewInner(arg0) {
         };
         obj8.children = closure_7(ProfileFrameSamplePreviewDefault, obj9);
         return closure_7(closure_5, obj8);
-      } else if (cardWidth(2114).CollectiblesItemType.NAMEPLATE === type) {
+      } else if (cardWidth(2112).CollectiblesItemType.NAMEPLATE === type) {
         const obj10 = { item: first };
         return closure_7(NameplateCardPreviewDefault, obj10);
       } else {
@@ -170,11 +170,11 @@ function AssetTileInternal(solidBackground) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const EXTERNAL_PRODUCT_SKU_IDS = fn(1074).EXTERNAL_PRODUCT_SKU_IDS;
+const EXTERNAL_PRODUCT_SKU_IDS = fn(1073).EXTERNAL_PRODUCT_SKU_IDS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const diff = fn(9425).COLLECTIBLES_SHOP_CARD_HEIGHT - 2 * nativeDefault.space.PX_16;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   assetContainer: null,
   overlayContainer: null,

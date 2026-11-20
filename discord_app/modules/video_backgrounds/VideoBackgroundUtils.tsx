@@ -90,13 +90,13 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(5700);
+const VideoBackgroundConstants = fn(5702);
 ({
   DefaultVideoBackground: hasOwnProperty,
   VideoFilterType: closure_6,
   ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: metroImportDefault,
 } = VideoBackgroundConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundUtils.tsx");
 

@@ -7,7 +7,7 @@ import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackProductCardImpression.tsx");
 

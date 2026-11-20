@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/useStickyEditFormHeaders.tsx
-import _mod1655 from "../../../../_runtime/metro/01655__.js";
-import _mod1708 from "../../../../_runtime/metro/01708__.js";
+import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1706 from "../../../../_runtime/metro/01706__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,13 +20,13 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/useStickyEditFormHeaders.tsx");
 
 export default function useStickyEditFormHeaders(sharedValue, animatedRef, onScroll) {
-  sharedValue = _mod1655.useSharedValue(0);
-  const sharedValue1 = _mod1655.useSharedValue(0);
-  const sharedValue2 = _mod1655.useSharedValue(0);
-  const sharedValue3 = _mod1655.useSharedValue(0);
-  const sharedValue4 = _mod1655.useSharedValue(0);
+  sharedValue = _mod1653.useSharedValue(0);
+  const sharedValue1 = _mod1653.useSharedValue(0);
+  const sharedValue2 = _mod1653.useSharedValue(0);
+  const sharedValue3 = _mod1653.useSharedValue(0);
+  const sharedValue4 = _mod1653.useSharedValue(0);
   const ref = noop.useRef(null);
-  items = [_undefined4, sharedValue, onScroll, _mod1708.scheduleOnRN, sharedValue, sharedValue2, sharedValue1];
+  items = [_undefined4, sharedValue, onScroll, _mod1706.scheduleOnRN, sharedValue, sharedValue2, sharedValue1];
   c5 = undefined;
   [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15] = items;
   const obj8 = { onScroll: null };
@@ -55,7 +55,7 @@ export default function useStickyEditFormHeaders(sharedValue, animatedRef, onScr
   useStickyEditFormHeadersTsx1.__workletHash = 3468125991740;
   useStickyEditFormHeadersTsx1.__initData = tmp9;
   obj8.onScroll = useStickyEditFormHeadersTsx1;
-  const animatedScrollHandler = _mod1655.useAnimatedScrollHandler(obj8);
+  const animatedScrollHandler = _mod1653.useAnimatedScrollHandler(obj8);
   const items2 = [_undefined5, sharedValue, sharedValue, sharedValue2];
   [tmp17, tmp18, tmp19, tmp20] = items2;
   function useStickyEditFormHeadersTsx2() {
@@ -72,8 +72,8 @@ export default function useStickyEditFormHeaders(sharedValue, animatedRef, onScr
   useStickyEditFormHeadersTsx2.__closure = items3;
   useStickyEditFormHeadersTsx2.__workletHash = 2869064830561;
   useStickyEditFormHeadersTsx2.__initData = tmp17;
-  const derivedValue = _mod1655.useDerivedValue(useStickyEditFormHeadersTsx2);
-  const tmpResult = _mod1655;
+  const derivedValue = _mod1653.useDerivedValue(useStickyEditFormHeadersTsx2);
+  const tmpResult = _mod1653;
   const items4 = [_undefined6, derivedValue];
   [tmp22, tmp23] = items4;
   function useStickyEditFormHeadersTsx3() {
@@ -86,8 +86,8 @@ export default function useStickyEditFormHeaders(sharedValue, animatedRef, onScr
   useStickyEditFormHeadersTsx3.__closure = items5;
   useStickyEditFormHeadersTsx3.__workletHash = 13231650278188;
   useStickyEditFormHeadersTsx3.__initData = tmp22;
-  const animatedStyle = _mod1655.useAnimatedStyle(useStickyEditFormHeadersTsx3);
-  const tmpResult3 = _mod1655;
+  const animatedStyle = _mod1653.useAnimatedStyle(useStickyEditFormHeadersTsx3);
+  const tmpResult3 = _mod1653;
   const items6 = [closure_6, sharedValue3, sharedValue, sharedValue1, sharedValue, derivedValue];
   c0 = undefined;
   c1 = undefined;
@@ -117,7 +117,7 @@ export default function useStickyEditFormHeaders(sharedValue, animatedRef, onScr
   useStickyEditFormHeadersTsx4.__workletHash = 17221813634962;
   useStickyEditFormHeadersTsx4.__initData = tmp25;
   const items8 = [sharedValue, sharedValue1];
-  const derivedValue1 = _mod1655.useDerivedValue(useStickyEditFormHeadersTsx4);
+  const derivedValue1 = _mod1653.useDerivedValue(useStickyEditFormHeadersTsx4);
   const items9 = [sharedValue4];
   const callback = noop.useCallback((nativeEvent) => {
     const layout = nativeEvent.nativeEvent.layout;
@@ -126,7 +126,7 @@ export default function useStickyEditFormHeaders(sharedValue, animatedRef, onScr
   }, items8);
   const items10 = [animatedRef, sharedValue3];
   const callback1 = noop.useCallback((nativeEvent) => _undefined5.set(nativeEvent.nativeEvent.layout.height), items9);
-  const tmpResult4 = _mod1655;
+  const tmpResult4 = _mod1653;
   return {
     headerStyle: animatedStyle,
     handleHeaderLayout: callback,

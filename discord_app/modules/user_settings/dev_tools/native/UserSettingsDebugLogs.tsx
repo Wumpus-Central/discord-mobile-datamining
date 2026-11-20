@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   searchWrap: null,
@@ -32,8 +32,8 @@ let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
-  height: fn(7123).InputHeights.MD,
-  width: fn(7123).InputHeights.MD,
+  height: fn(7122).InputHeights.MD,
+  width: fn(7122).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };
@@ -42,7 +42,7 @@ let obj4 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItem
 obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj5 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.log = { paddingBottom: nativeDefault.space.PX_16 };
-obj2.code = { fontFamily: fn(1072).Fonts.CODE_BOLD };
+obj2.code = { fontFamily: fn(1071).Fonts.CODE_BOLD };
 let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogs.tsx");

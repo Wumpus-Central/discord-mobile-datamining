@@ -47,7 +47,7 @@ let closure_11 = async function _load(arg0, arg1, arg2) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -188,7 +188,7 @@ let closure_12 = async function _resolveStatus(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -344,7 +344,7 @@ let closure_12 = async function _resolveStatus(arg0) {
 function dispatchStatus(linkCode, status) {
   Dispatcher.dispatch({ type: "CONJURE_SHARED_PROJECT_STATUS", linkCode, status });
 }
-const AbortCodes = fn(1072).AbortCodes;
+const AbortCodes = fn(1071).AbortCodes;
 const subscription = Dispatcher.subscribe("LOGOUT", resetSessionLoads);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/loadConjureSharedProject.tsx");

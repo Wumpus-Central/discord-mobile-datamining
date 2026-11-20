@@ -29,7 +29,7 @@ let closure_8 = async function _stopLurkingAll() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ let closure_8 = async function _stopLurkingAll() {
                           _null = null;
                         }
                         closure_130_1 = _null;
-                        const HTTP = closure_0(1285).HTTP;
+                        const HTTP = closure_0(1284).HTTP;
                         const request = {
                           url: closure_2_6.GUILD_LEAVE(closure_0),
                           body: { lurking: true },
@@ -123,7 +123,7 @@ let closure_8 = async function _stopLurkingAll() {
           return obj;
         }
         c1 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp13) {
         c1 = tmp;
         throw tmp13;
@@ -164,7 +164,7 @@ let closure_9 = async function _stopLurking() {
   closure_129_0 = tmp19;
   return "Path";
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
 

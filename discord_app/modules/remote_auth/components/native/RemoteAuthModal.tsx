@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
@@ -14,13 +14,13 @@ import ButtonGroup from "../../../../design/components/ButtonGroup/native/Button
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import AuthBackgroundArtDefault from "../../../auth/native/components/atoms/AuthBackgroundArt.tsx";
 import useEaseInEaseOutLayoutAnimationsDefault from "../../../animations/native/useEaseInEaseOutLayoutAnimations.tsx";
-import _modDef14986 from "../../../../../_runtime/metro/14986__.js";
+import _modDef14950 from "../../../../../_runtime/metro/14950__.js";
 import QrLoginSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
 import QrSuccessSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1655 = tmp8(1655);
+const _modDef1653 = tmp8(1653);
 require = fn;
 function RemoteAuthBody(remoteAuthFingerprint) {
   remoteAuthFingerprint = remoteAuthFingerprint.remoteAuthFingerprint;
@@ -73,7 +73,7 @@ function RemoteAuthBody(remoteAuthFingerprint) {
     tmp12 = closure_7;
     tmp14 = closure_7(RemoteAuthNotFound, {});
   }
-  return tmp12(_modDef1655.View, { style: tmp.step, entering, exiting, children: tmp14 }, tmp4);
+  return tmp12(_modDef1653.View, { style: tmp.step, entering, exiting, children: tmp14 }, tmp4);
 }
 function RemoteAuthLogin(arg0) {
   ({ handshakeToken: require, setAuthStep: importDefault } = arg0);
@@ -218,10 +218,10 @@ function RemoteAuthLoading() {
   });
 }
 const View = fn(17).View;
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   background: { width: "100%", height: "100%" },
   container: { flex: 1, alignItems: "stretch", alignContent: "center" },
@@ -289,15 +289,15 @@ export default function RemoteAuth(arg0) {
   const obj2 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj2.style = items1;
-  obj2.source = _modDef14986;
+  obj2.source = _modDef14950;
   items[1] = metroImportDefault(FastImageDefault, obj2);
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { skipEntering: true, children: null };
   const obj5 = { style: tmp.mainCard, layout: useEaseInEaseOutLayoutAnimationsDefault().layout, children: null };
   const merged = Object.assign(arg0);
   obj5.children = metroImportDefault(RemoteAuthBody, {});
-  obj4.children = metroImportDefault(_modDef1655.View, obj5);
-  obj3.children = metroImportDefault(_mod1655.LayoutAnimationConfig, obj4);
+  obj4.children = metroImportDefault(_modDef1653.View, obj5);
+  obj3.children = metroImportDefault(_mod1653.LayoutAnimationConfig, obj4);
   items[2] = metroImportDefault(View, obj3);
   obj.children = items;
   return React5(View, obj);

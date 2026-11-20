@@ -7,7 +7,7 @@ import StorefrontPromotionStore from "../../storefront/StorefrontPromotionStore.
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_6 = fn(1072).COLLECTIBLES_APPLICATION_ID;
+let closure_6 = fn(1071).COLLECTIBLES_APPLICATION_ID;
 let c7 = "collectibles_pricing_promotion_eligibility";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPricingPromotionUtils.tsx");

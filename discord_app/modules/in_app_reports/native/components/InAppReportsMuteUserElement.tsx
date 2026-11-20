@@ -8,8 +8,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const MuteUntilSeconds = fn(1082).MuteUntilSeconds;
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const MuteUntilSeconds = fn(1081).MuteUntilSeconds;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");

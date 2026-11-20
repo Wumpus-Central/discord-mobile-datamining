@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish/useConjurePublishProgressLabel.tsx
-import _modDef4089 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
@@ -8,14 +8,14 @@ const require = globalThis.__r;
 
 const require = fn;
 let obj = {
-  preparing: _modDef4089.GQeas1,
-  approval: _modDef4089["TkHHD+"],
-  approved_by_grant: _modDef4089["9+kNt8"],
-  setup: _modDef4089["F+AxgM"],
-  build: _modDef4089.oQeMIy,
-  deploy: _modDef4089.LqZvZ2,
-  discord: _modDef4089.LFcGAT,
-  activating: _modDef4089.ff1Fq1,
+  preparing: _modDef4091.GQeas1,
+  approval: _modDef4091["TkHHD+"],
+  approved_by_grant: _modDef4091["9+kNt8"],
+  setup: _modDef4091["F+AxgM"],
+  build: _modDef4091.oQeMIy,
+  deploy: _modDef4091.LqZvZ2,
+  discord: _modDef4091.LFcGAT,
+  activating: _modDef4091.ff1Fq1,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishProgressLabel.tsx");
@@ -48,13 +48,13 @@ export default function useConjurePublishProgressLabel(arg0) {
   }, items1);
   let formatToPlainStringResult = null;
   if (null != stateFromStores) {
-    const intl = tmp(1113).intl;
+    const intl = tmp(1112).intl;
     const obj2 = { action: null, detail: null };
-    const intl2 = tmp(1113).intl;
+    const intl2 = tmp(1112).intl;
     obj2.action = intl2.string(obj[stateFromStores.stage]);
-    obj2.detail = tmp(18307).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
-    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(4089)["ndkR+x"], obj2);
-    const tmpResult = tmp(18307);
+    obj2.detail = tmp(12199).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
+    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(4091)["ndkR+x"], obj2);
+    const tmpResult = tmp(12199);
   }
   return formatToPlainStringResult;
 }

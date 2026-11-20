@@ -14,13 +14,13 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
 require = fn;
-const ExplicitMediaRedactionConstants = fn(8108);
+const ExplicitMediaRedactionConstants = fn(8107);
 ({
   EXPLICIT_MEDIA_MIN_HEIGHT: closure_6,
   EXPLICIT_MEDIA_MIN_WIDTH: metroImportDefault,
   MESSAGE_SCAN_TIMEOUT: closure_8,
 } = ExplicitMediaRedactionConstants);
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
 

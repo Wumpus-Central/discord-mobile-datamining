@@ -14,6 +14,29 @@ import UserProfileStore from "UserProfileStore.tsx";
 import WidgetStore from "WidgetStore.tsx";
 
 require = fn;
+function getCurrentWidgets() {
+  if (WidgetStore.hasPendingChanges()) {
+    let pendingWidgets = WidgetStore.getPendingWidgets();
+    if (pendingWidgets == null) {
+      pendingWidgets = [];
+    }
+    let widgets = pendingWidgets;
+  } else {
+    const currentUser = UserStore.getCurrentUser();
+    let userProfile = null;
+    if (null != currentUser) {
+      userProfile = UserProfileStore.getUserProfile(currentUser.id);
+    }
+    widgets = undefined;
+    if (userProfile != null) {
+      widgets = userProfile.widgets;
+    }
+    if (widgets == null) {
+      widgets = [];
+    }
+  }
+  return widgets;
+}
 function findGameWidget(widgetType) {
   closure_0 = widgetType;
   if (WidgetStore.hasPendingChanges()) {
@@ -80,8 +103,42 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
+function reorderMovableWidgets(isBoardWidget, arg1, arg2) {
+  const obj = getCurrentWidgets();
+  const flatMapResult = obj.flatMap((item, index) => {
+    if (isBoardWidget(item)) {
+      items = [index];
+      let items1 = items;
+    } else {
+      items1 = [];
+    }
+    return items1;
+  });
+  if (arg1 !== arg2) {
+    if (arg1 >= 0) {
+      if (arg1 < flatMapResult.length) {
+        if (arg2 >= 0) {
+          if (arg2 < flatMapResult.length) {
+            const mapped = flatMapResult.map((item) => obj[item]);
+            mapped.splice(arg2, 0, _slicedToArray(mapped.splice(arg1, 1), 1)[0]);
+            items = [];
+            HermesBuiltin.arraySpread(obj, 0);
+            const entries = flatMapResult.entries();
+            const tmp16 = entries[Symbol.iterator]();
+            while (tmp16 !== undefined) {
+              let tmp5 = _slicedToArray(tmp2, 2);
+              items[tmp5[1]] = mapped[tmp5[0]];
+              continue;
+            }
+            WidgetActionCreatorsDefault.setPendingWidgets(items);
+          }
+        }
+      }
+    }
+  }
+}
 const WIDGET_TITLES_BY_TYPE = fn(6840).WIDGET_TITLES_BY_TYPE;
-let closure_8 = fn(10095).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_8 = fn(10098).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -845,41 +902,9 @@ export function addPendingGameToWidget(ignoreMaxGames) {
   const many = useGame.fetchMany(items2);
   return true;
 }
+export { reorderMovableWidgets };
 export function reorderWidgets(arg0, arg1) {
-  if (arg0 !== arg1) {
-    if (WidgetStore.hasPendingChanges()) {
-      let pendingWidgets = WidgetStore.getPendingWidgets();
-      if (pendingWidgets == null) {
-        pendingWidgets = [];
-      }
-      let widgets = pendingWidgets;
-    } else {
-      const currentUser = UserStore.getCurrentUser();
-      let userProfile = null;
-      if (null != currentUser) {
-        userProfile = UserProfileStore.getUserProfile(currentUser.id);
-      }
-      widgets = undefined;
-      if (userProfile != null) {
-        widgets = userProfile.widgets;
-      }
-      if (widgets == null) {
-        widgets = [];
-      }
-    }
-    if (arg0 >= 0) {
-      if (arg0 < widgets.length) {
-        if (arg1 >= 0) {
-          if (arg1 < widgets.length) {
-            items = [];
-            HermesBuiltin.arraySpread(widgets, 0);
-            items.splice(arg1, 0, _slicedToArray(items.splice(arg0, 1), 1)[0]);
-            WidgetActionCreatorsDefault.setPendingWidgets(items);
-          }
-        }
-      }
-    }
-  }
+  reorderMovableWidgets(() => true, arg0, arg1);
 }
 export function reorderGamesInWidget(widgetType, arg1, arg2) {
   const tmp = findGameWidget(widgetType);

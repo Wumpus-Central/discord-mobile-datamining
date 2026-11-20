@@ -6,13 +6,13 @@ import ParentalConsentStore from "../../parent_tools/ParentalConsentStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_5 = 30 * fn(5541).MS_PER_MINUTE;
-const ApexExperiment = fn(1452);
+let closure_5 = 30 * fn(5543).MS_PER_MINUTE;
+const ApexExperiment = fn(1450);
 let obj2 = {
   name: "2026-10-android-mobile-onboarding-friction-negative-test",
   kind: "user",
-  defaultConfig: fn(17559).CONTROL,
-  variations: { 0: fn(17559).CONTROL, 1: fn(17559).LOW_FRICTION_V1 },
+  defaultConfig: fn(17386).CONTROL,
+  variations: { 0: fn(17386).CONTROL, 1: fn(17386).LOW_FRICTION_V1 },
 };
 let closure_6 = ApexExperiment.createApexExperiment(obj2);
 const size = fn(2);

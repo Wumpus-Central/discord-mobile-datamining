@@ -1,7 +1,7 @@
 // discord_app/components_native/MainChannels.tsx
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../modules/safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1655 from "../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../_runtime/metro/01653__.js";
 import useChatLayoutDefault from "../modules/chat/native/useChatLayout.tsx";
 import HomeDrawerExperiment from "../modules/home_drawer/native/HomeDrawerExperiment.tsx";
 import LayerScope from "../design/components/Layers/native/LayerScope.native.tsx";
@@ -99,7 +99,7 @@ function LeftPanelContent(panelStyles) {
     const items7 = [memo, panelStyles];
     obj7.style = items7;
     obj7.children = tmp15Result;
-    tmp16Result2 = closure_1_11(_modDef1655.View, obj7);
+    tmp16Result2 = closure_1_11(_modDef1653.View, obj7);
   }
   items6[1] = tmp16Result2;
   obj5.children = application_id(LayerScope.LayerScope, { children: items6 });
@@ -143,12 +143,12 @@ function LeftPanelHomeDrawerContainer() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ DM_WIDTH: closure_8, ME: closure_9 } = Constants);
-const HOME_DRAWER_SCREEN = fn(17574).HOME_DRAWER_SCREEN;
+const HOME_DRAWER_SCREEN = fn(17401).HOME_DRAWER_SCREEN;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_14 = createStyles.createStyles(() => {
   let flag = arg0;
   if (arg0 === undefined) {

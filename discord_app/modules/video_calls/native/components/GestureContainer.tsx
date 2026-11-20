@@ -2,22 +2,22 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
-import _mod1708 from "../../../../../_runtime/metro/01708__.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1706 from "../../../../../_runtime/metro/01706__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05052_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05054_LegacyBaseButton.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(10574).useChannelCallStore;
-const Constants = fn(10581);
+const useChannelCallStore = fn(10516).useChannelCallStore;
+const Constants = fn(10523);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_6 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
 let closure_9 = {
@@ -35,7 +35,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/components/G
 export default function GestureContainer(children) {
   const tmp = closure_8();
   const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
-  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(0);
   const Gesture = LegacyBaseButton.Gesture;
   const PanResult = Gesture.Pan();
   items = [closure_9, 200, sharedValue];
@@ -57,7 +57,7 @@ export default function GestureContainer(children) {
     closure_10,
     sharedValue,
     500,
-    _mod1708.scheduleOnRN,
+    _mod1706.scheduleOnRN,
     ModalActionCreatorsDefault,
     timing_timing.withTiming,
     native.DECELERATED_EASING,
@@ -107,7 +107,7 @@ export default function GestureContainer(children) {
     .onEnd(GestureContainerTsx2)
     .activeOffsetY(items4)
     .failOffsetX(items5);
-  const items6 = [closure_11, _mod1655.interpolate, sharedValue, useWindowDimensionsDefault().height];
+  const items6 = [closure_11, _mod1653.interpolate, sharedValue, useWindowDimensionsDefault().height];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -132,11 +132,11 @@ export default function GestureContainer(children) {
   GestureContainerTsx3.__workletHash = 9579755515869;
   GestureContainerTsx3.__initData = tmp18;
   let obj2 = { style: tmp.background, children: null };
-  const animatedStyle = _mod1655.useAnimatedStyle(GestureContainerTsx3);
-  const tmp5Result = _mod1655;
+  const animatedStyle = _mod1653.useAnimatedStyle(GestureContainerTsx3);
+  const tmp5Result = _mod1653;
   obj2.children = jsx(LegacyBaseButton.GestureDetector, {
     gesture: failOffsetXResult,
-    children: jsx(_modDef1655.View, { style: animatedStyle, children: children.children }),
+    children: jsx(_modDef1653.View, { style: animatedStyle, children: children.children }),
   });
   return <View style={tmp.background}>{null}</View>;
 }

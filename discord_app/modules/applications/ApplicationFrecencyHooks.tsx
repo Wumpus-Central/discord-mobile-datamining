@@ -6,7 +6,7 @@ import ApplicationFrecencyStore from "ApplicationFrecencyStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const UserSettingsTypes = fn(1082).UserSettingsTypes;
+const UserSettingsTypes = fn(1081).UserSettingsTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");
 

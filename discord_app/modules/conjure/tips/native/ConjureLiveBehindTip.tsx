@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/tips/native/ConjureLiveBehindTip.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
 import UploadIcon from "../../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
 import useConjureStartPublishDefault from "../../publish/useConjureStartPublish.tsx";
 import ConjureTipHintDefault from "ConjureTipHint.tsx";
@@ -12,7 +12,7 @@ function LiveBehindHint(arg0) {
   closure_0 = useConjureStartPublishDefault(projectId, publish);
   const obj = { icon: UploadIcon.UploadIcon, onDismiss, children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef4089.fWfeZ8, {
+  obj.children = intl.format(_modDef4091.fWfeZ8, {
     onPublish() {
       return closure_0("outdated_notice");
     },
@@ -21,7 +21,7 @@ function LiveBehindHint(arg0) {
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(18495).CONJURE_LIVE_BEHIND_TIP_BASE);
+const merged = Object.assign(fn(18319).CONJURE_LIVE_BEHIND_TIP_BASE);
 obj.render = function render(arg0, context) {
   const publish = context.context.publish;
   let tmp3 = null;

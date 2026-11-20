@@ -2,9 +2,9 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2169 from "../../../_runtime/metro/02169__.js";
+import _modDef2167 from "../../../_runtime/metro/02167__.js";
 import useChannelName from "../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../_runtime/06556_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06558_fuzzysearch.js";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import ChannelListState from "../guild_sidebar/ChannelListState.tsx";
 import RecentChannelsActionCreators from "../recent_channels/RecentChannelsActionCreators.tsx";
@@ -21,12 +21,12 @@ require = fn;
 function setIndex(arg0, index) {
   arg0.index = index;
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Routes: closure_9, ChannelTypes: closure_10 } = Constants);
-const ChannelConstants = fn(4648);
+const ChannelConstants = fn(4650);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(8208).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6432).ReadStateTypes;
+const ChannelListGuildActionRow = fn(8207).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6434).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 
@@ -228,7 +228,7 @@ export function useChannelBrowserChannelCount(arg0) {
 }
 export function getActiveAgoTimestamp(id) {
   const intl = util.intl;
-  const tmp = _modDef2169;
+  const tmp = _modDef2167;
   let lastMessageIdResult = ReadStateStore.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;

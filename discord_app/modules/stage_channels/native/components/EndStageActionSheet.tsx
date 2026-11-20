@@ -8,15 +8,15 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(6379).EXPLICIT_END_STAGE_SHEET_KEY;
+let closure_4 = fn(6381).EXPLICIT_END_STAGE_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" },
   title: {
     fontSize: 24,
-    fontFamily: fn(1072).Fonts.PRIMARY_BOLD,
+    fontFamily: fn(1071).Fonts.PRIMARY_BOLD,
     textAlign: "center",
     color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
   },
@@ -34,33 +34,33 @@ export default function EndStageActionSheet(channel) {
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.title, accessibilityRole: "header", children: null };
-  const intl = channel(1113).intl;
-  obj3.children = intl.string(channel(1113).t.pADdJu);
-  items = [closure_5(channel(1187).LegacyText, obj3), , ,];
+  const intl = channel(1112).intl;
+  obj3.children = intl.string(channel(1112).t.pADdJu);
+  items = [closure_5(channel(1186).LegacyText, obj3), , ,];
   const obj4 = { style: tmp.subtitle, variant: "body-md/medium", color: "text-default", children: null };
-  const intl2 = channel(1113).intl;
-  obj4.children = intl2.string(channel(1113).t.mT7jwN);
-  items[1] = closure_5(channel(5383).Text, obj4);
+  const intl2 = channel(1112).intl;
+  obj4.children = intl2.string(channel(1112).t.mT7jwN);
+  items[1] = closure_5(channel(5385).Text, obj4);
   const obj5 = { style: tmp.cancelButton, children: null };
   const obj6 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = channel(1113).intl;
-  obj6.text = intl3.string(channel(1113).t.xTwqz2);
+  const intl3 = channel(1112).intl;
+  obj6.text = intl3.string(channel(1112).t.xTwqz2);
   obj6.onPress = function handleClose() {
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
     CallsUtils.handleDisconnect(channel);
   };
-  obj5.children = closure_5(channel(5390).Button, obj6);
+  obj5.children = closure_5(channel(5392).Button, obj6);
   items[2] = closure_5(View, obj5);
   const obj7 = { style: tmp.confirmButton, children: null };
   const obj8 = { variant: "destructive", text: null, onPress: null };
-  const intl4 = channel(1113).intl;
-  obj8.text = intl4.string(channel(1113).t.wnWqGg);
+  const intl4 = channel(1112).intl;
+  obj8.text = intl4.string(channel(1112).t.wnWqGg);
   obj8.onPress = function handleConfirmClick() {
     StageChannelActionCreators.endStage(channel);
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
     CallsUtils.handleDisconnect(channel);
   };
-  obj7.children = closure_5(channel(5390).Button, obj8);
+  obj7.children = closure_5(channel(5392).Button, obj8);
   items[3] = closure_5(View, obj7);
   obj2.children = items;
   obj.children = closure_6(View, obj2);

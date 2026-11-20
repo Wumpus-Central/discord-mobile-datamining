@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GameAutocompleteStore from "GameAutocompleteStore.tsx";
 
 require = fn;
-const QueryIds = fn(1072).QueryIds;
+const QueryIds = fn(1071).QueryIds;
 const initialize = fn(504);
 const obj2 = {
   getQueryId(name, arg1) {
@@ -26,7 +26,7 @@ const obj2 = {
   getIsLoading(arg0, arg1) {
     return GameAutocompleteStore.isFetching(arg0, arg1);
   },
-  retryConfig: { retryableErrors: fn(8768).isRetryableGameSearchError },
+  retryConfig: { retryableErrors: fn(8706).isRetryableGameSearchError },
   staleAfter: 3600,
   failureStaleAfter: 60,
 };

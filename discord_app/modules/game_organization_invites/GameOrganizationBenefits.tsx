@@ -1,6 +1,6 @@
 // discord_app/modules/game_organization_invites/GameOrganizationBenefits.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2557 from "GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2559 from "GameOrganizationInvitesUntranslated.messages.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
@@ -8,14 +8,14 @@ const items = [
     key: "auto-sync",
     getText() {
       const intl = util.intl;
-      return intl.string(_modDef2557.WUVzdk);
+      return intl.string(_modDef2559.WUVzdk);
     },
   },
   {
     key: "linked-channel",
     getText() {
       const intl = util.intl;
-      return intl.string(_modDef2557.MEQJ1m);
+      return intl.string(_modDef2559.MEQJ1m);
     },
   },
   {
@@ -26,7 +26,7 @@ const items = [
       if (arg0 == null) {
         displayNoun = "other";
       }
-      return intl.formatToPlainString(_modDef2557["hn+Lsg"], { displayNoun });
+      return intl.formatToPlainString(_modDef2559["hn+Lsg"], { displayNoun });
     },
   },
 ];

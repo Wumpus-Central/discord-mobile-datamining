@@ -19,8 +19,8 @@ import SessionsStore from "../../../../stores/SessionsStore.tsx";
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(19309).setVoiceUpsellDismissed;
-const PlatformTypes = fn(1072).PlatformTypes;
+const setVoiceUpsellDismissed = fn(19129).setVoiceUpsellDismissed;
+const PlatformTypes = fn(1071).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_17 = [];
@@ -253,7 +253,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "r" };
+        const obj = { onPress, ref: "Array" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };

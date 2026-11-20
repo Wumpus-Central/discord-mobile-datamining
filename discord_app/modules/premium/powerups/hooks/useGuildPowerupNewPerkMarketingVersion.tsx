@@ -8,10 +8,10 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(8213);
+const GuildPowerupsConstants = fn(8212);
 ({ GuildPowerupNewPerkMarketingVersion: hasOwnProperty, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: closure_6 } =
   GuildPowerupsConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ GuildFeatures: metroImportDefault, Permissions: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");

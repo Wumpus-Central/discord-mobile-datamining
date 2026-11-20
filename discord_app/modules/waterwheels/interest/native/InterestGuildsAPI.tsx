@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 let c5 = "/users/@me/waterwheels/interest-guilds";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildsAPI.tsx");
@@ -26,7 +26,7 @@ export function createInterestGuildsResource() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

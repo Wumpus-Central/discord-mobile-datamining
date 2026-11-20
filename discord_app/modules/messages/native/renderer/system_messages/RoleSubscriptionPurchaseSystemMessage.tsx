@@ -13,7 +13,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 
 require = fn;
-const SystemChannelFlags = fn(1072).SystemChannelFlags;
+const SystemChannelFlags = fn(1071).SystemChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/RoleSubscriptionPurchaseSystemMessage.tsx",

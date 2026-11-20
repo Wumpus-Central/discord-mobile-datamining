@@ -8,42 +8,27 @@ import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-function getMuteStates(voiceStateStore) {
-  ({ channel, authenticationStore } = voiceStateStore);
-  if (authenticationStore === undefined) {
-    authenticationStore = AuthenticationStore;
-  }
-  voiceStateStore = voiceStateStore.voiceStateStore;
-  if (voiceStateStore === undefined) {
-    voiceStateStore = VoiceStateStore;
-  }
-  let mediaEngineStore = voiceStateStore.mediaEngineStore;
-  if (mediaEngineStore === undefined) {
-    mediaEngineStore = MediaEngineStore;
-  }
-  let permissionStore = voiceStateStore.permissionStore;
-  if (permissionStore === undefined) {
-    permissionStore = PermissionStore;
-  }
-  let impersonateStore = voiceStateStore.impersonateStore;
-  if (impersonateStore === undefined) {
-    impersonateStore = ImpersonateStore;
-  }
+function getMuteStates(VoiceStateStore) {
+  ({ channel, AuthenticationStore } = VoiceStateStore);
+  VoiceStateStore = VoiceStateStore.VoiceStateStore;
+  MediaEngineStore = VoiceStateStore.MediaEngineStore;
+  PermissionStore = VoiceStateStore.PermissionStore;
+  ImpersonateStore = VoiceStateStore.ImpersonateStore;
   let voiceState = null;
   if (null != channel) {
     const guildId = channel.getGuildId();
-    voiceState = voiceStateStore.getVoiceState(guildId, authenticationStore.getId());
+    voiceState = VoiceStateStore.getVoiceState(guildId, AuthenticationStore.getId());
   }
   let guildId1;
   if (channel != null) {
     guildId1 = channel.getGuildId();
   }
-  let isViewingRolesResult = impersonateStore.isViewingRoles(guildId1);
+  let isViewingRolesResult = ImpersonateStore.isViewingRoles(guildId1);
   if (isViewingRolesResult) {
-    isViewingRolesResult = !permissionStore.can(Permissions.SPEAK, channel);
+    isViewingRolesResult = !PermissionStore.can(Permissions.SPEAK, channel);
   }
   const obj = {
-    selfMute: mediaEngineStore.isSelfMute() || mediaEngineStore.isSelfMutedTemporarily(),
+    selfMute: MediaEngineStore.isSelfMute() || MediaEngineStore.isSelfMutedTemporarily(),
     suppress: null,
     mute: null,
   };
@@ -65,7 +50,7 @@ function getMuteStates(voiceStateStore) {
   obj.mute = flag;
   return obj;
 }
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useMuteStates.tsx");
 
@@ -75,11 +60,11 @@ export default function useMuteStates(channel) {
   return require("initialize").useStateFromStoresObject(items, () =>
     getMuteStates({
       channel,
-      authenticationStore: AuthenticationStore,
-      voiceStateStore: VoiceStateStore,
-      mediaEngineStore: MediaEngineStore,
-      permissionStore: PermissionStore,
-      impersonateStore: ImpersonateStore,
+      AuthenticationStore,
+      VoiceStateStore,
+      MediaEngineStore,
+      PermissionStore,
+      ImpersonateStore,
     }),
   );
 }

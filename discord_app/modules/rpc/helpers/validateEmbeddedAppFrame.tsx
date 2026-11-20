@@ -88,7 +88,7 @@ function validateFrame(transport, arg1) {
   }
   obj3 = EmbeddedSurfaceUtils;
 }
-const RPCErrors = fn(1072).RPCErrors;
+const RPCErrors = fn(1071).RPCErrors;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

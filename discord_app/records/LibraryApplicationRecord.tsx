@@ -1,11 +1,11 @@
 // discord_app/records/LibraryApplicationRecord.tsx
 import FlagUtilsAll from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import _modDef2169 from "../../_runtime/metro/02169__.js";
+import _modDef2167 from "../../_runtime/metro/02167__.js";
 import Record from "../lib/Record.tsx";
 import ApplicationStore from "../modules/applications/ApplicationStore.tsx";
 import EntitlementRecord from "EntitlementRecord.tsx";
 
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ LibraryApplicationFlags: hasOwnProperty, Distributors: closure_6, SKUTypes: metroImportDefault } = Constants);
 let LibraryApplicationRecord;
 class LibraryApplicationRecord extends tmp2 {
@@ -52,7 +52,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   };
   let entitlementsResult = null;
   if (null != id.sku.preorder_release_at) {
-    entitlements = _modDef2169;
+    entitlements = _modDef2167;
     entitlementsResult = entitlements(id.sku.preorder_release_at);
   }
   obj2.preorderReleaseAt = entitlementsResult;

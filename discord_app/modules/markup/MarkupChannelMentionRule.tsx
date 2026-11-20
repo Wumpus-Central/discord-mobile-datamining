@@ -1,7 +1,7 @@
 // discord_app/modules/markup/MarkupChannelMentionRule.tsx
 import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
-import _modDef2070 from "../../../_runtime/metro/02070__.js";
+import _modDef2068 from "../../../_runtime/metro/02068__.js";
 import StringUtils from "../../utils/StringUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import LinkUtils from "../links/LinkUtils.tsx";
@@ -304,7 +304,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
     return obj57;
   }
 }
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_9, ME: closure_10 } = Constants);
 let obj = {
   channelMention: {
@@ -373,7 +373,7 @@ let obj2 = {
   },
 };
 obj.channelOrMessageUrl = {
-  order: _modDef2070.defaultRules.url.order - 0.5,
+  order: _modDef2068.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -433,7 +433,7 @@ obj.channelOrMessageUrl = {
   },
 };
 let obj3 = {
-  order: _modDef2070.defaultRules.url.order - 0.5,
+  order: _modDef2068.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -493,7 +493,7 @@ let obj3 = {
   },
 };
 obj.mediaPostLink = {
-  order: _modDef2070.defaultRules.url.order - 0.5,
+  order: _modDef2068.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;

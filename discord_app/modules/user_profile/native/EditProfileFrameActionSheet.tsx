@@ -140,17 +140,17 @@ function ProfileFrameSectionPreview(arg0) {
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
-  items1[1] = closure_9(purchase(5347), obj2);
+  items1[1] = closure_9(purchase(5349), obj2);
   obj.children = items1;
   return closure_10(closure_5, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileFrameRecord = fn(7963).isProfileFrameRecord;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const isProfileFrameRecord = fn(7962).isProfileFrameRecord;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { flex: 1 },
   previewContainer: { overflow: "hidden", height: 300, alignItems: "center" },

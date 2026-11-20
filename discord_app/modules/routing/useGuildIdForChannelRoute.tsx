@@ -4,7 +4,7 @@ import FavoriteStore from "../favorites/FavoriteStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const FAVORITES = fn(1072).FAVORITES;
+const FAVORITES = fn(1071).FAVORITES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");
 

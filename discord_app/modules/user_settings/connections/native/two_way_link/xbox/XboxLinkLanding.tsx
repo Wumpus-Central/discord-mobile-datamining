@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef6923 from "../../../../../../../discord_assets/assets/connections/xbox_link_landing.png.js";
+import _modDef6922 from "../../../../../../../discord_assets/assets/connections/xbox_link_landing.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const XboxLinkModalScenes = fn(6909).XboxLinkModalScenes;
-const Constants = fn(1072);
+const XboxLinkModalScenes = fn(6908).XboxLinkModalScenes;
+const Constants = fn(1071);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: closure_6 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_8 = createStyles.createStyles({ image: { width: 230, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -17,38 +17,38 @@ const result = size.fileFinishedImporting(
 
 export default function XboxLinkLanding() {
   const tmp = closure_8();
-  navigation = navigation(1502).useNavigation();
-  let obj = navigation(1502);
+  navigation = navigation(1500).useNavigation();
+  let obj = navigation(1500);
   const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.XBOX_CONNECTION);
-  let intl = navigation(1113).intl;
+  let intl = navigation(1112).intl;
   items = [navigation];
   const memo = noop.useMemo(() => {
     const obj = { label: null, icon: null };
-    const intl = navigation(1113).intl;
-    obj.label = intl.string(navigation(1113).t.ihQXsb);
-    obj.icon = navigation(6915).VoiceNormalIcon;
+    const intl = navigation(1112).intl;
+    obj.label = intl.string(navigation(1112).t.ihQXsb);
+    obj.icon = navigation(6914).VoiceNormalIcon;
     items = [obj, , ,];
     const obj2 = { label: null, icon: null };
-    const intl2 = navigation(1113).intl;
-    obj2.label = intl2.string(navigation(1113).t.Xt1n4P);
-    obj2.icon = navigation(6917).ScreenStreamIcon;
+    const intl2 = navigation(1112).intl;
+    obj2.label = intl2.string(navigation(1112).t.Xt1n4P);
+    obj2.icon = navigation(6916).ScreenStreamIcon;
     items[1] = obj2;
     const obj3 = { label: null, icon: null };
-    const intl3 = navigation(1113).intl;
-    obj3.label = intl3.string(navigation(1113).t.xqVY3p);
-    obj3.icon = navigation(6919).GroupIcon;
+    const intl3 = navigation(1112).intl;
+    obj3.label = intl3.string(navigation(1112).t.xqVY3p);
+    obj3.icon = navigation(6918).GroupIcon;
     items[2] = obj3;
     const obj4 = { label: null, icon: null };
-    const intl4 = navigation(1113).intl;
-    obj4.label = intl4.string(navigation(1113).t.iQsKVW);
-    obj4.icon = navigation(6921).GameControllerIcon;
+    const intl4 = navigation(1112).intl;
+    obj4.label = intl4.string(navigation(1112).t.iQsKVW);
+    obj4.icon = navigation(6920).GameControllerIcon;
     items[3] = obj4;
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef6923 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef6922 }), []);
   let obj3 = {
     platformType: constants2.XBOX,
     img: memo1,
@@ -59,14 +59,14 @@ export default function XboxLinkLanding() {
     onNext: null,
     valueProps: null,
   };
-  let intl2 = navigation(1113).intl;
-  obj3.headerConnect = intl2.string(navigation(1113).t.m8aahn);
-  let intl3 = navigation(1113).intl;
-  obj3.headerReconnect = intl3.string(navigation(1113).t.z3rAhq);
-  obj3.body = intl.format(navigation(1113).t.CIc3IN, { helpdeskArticleUrl: articleURL });
+  let intl2 = navigation(1112).intl;
+  obj3.headerConnect = intl2.string(navigation(1112).t.m8aahn);
+  let intl3 = navigation(1112).intl;
+  obj3.headerReconnect = intl3.string(navigation(1112).t.z3rAhq);
+  obj3.body = intl.format(navigation(1112).t.CIc3IN, { helpdeskArticleUrl: articleURL });
   obj3.onNext = callback;
   obj3.valueProps = memo;
-  return jsx(navigation(6924).TwoWayLinkLanding, {
+  return jsx(navigation(6923).TwoWayLinkLanding, {
     platformType: constants2.XBOX,
     img: memo1,
     imgStyle: tmp.image,

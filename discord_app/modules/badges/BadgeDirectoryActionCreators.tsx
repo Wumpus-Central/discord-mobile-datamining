@@ -139,7 +139,7 @@ let closure_15 = async function _fetchBadge(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -269,7 +269,7 @@ let closure_17 = async function _ackBadge(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -336,7 +336,7 @@ let closure_17 = async function _ackBadge(arg0) {
     }
   }
 };
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Endpoints: hasOwnProperty, ME: closure_6 } = Constants);
 const map = new Map();
 const map1 = new Map();
@@ -409,7 +409,7 @@ export function fetchBadgeDirectory(id, arg1) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "+60" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -468,7 +468,7 @@ export function fetchBadgeDirectory(id, arg1) {
                   map.delete(closure_128_1);
                 }
                 c4 = 3;
-                return { value: "HermesInternal", done: "+60" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp43) {
               closure_2 = tmp43;

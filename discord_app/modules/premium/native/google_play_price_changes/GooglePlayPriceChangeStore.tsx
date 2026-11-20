@@ -33,7 +33,7 @@ function onInitializeSync() {
   obj = PlatformUtils;
 }
 let items = [, ,];
-({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = fn(1072).SubscriptionStatusTypes);
+({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = fn(1071).SubscriptionStatusTypes);
 const set = new Set(items);
 let c4 = false;
 let priceChange = null;

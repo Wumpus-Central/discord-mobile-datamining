@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/app_channel/native/ConjureFrameUpdateBar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4089 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4091 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import restartFrames from "../../../frames/native/restartFrames.tsx";
@@ -30,10 +30,10 @@ class ConjureFrameUpdateBarContent {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(18745).useConjureFrameUpdateAvailable;
+let closure_6 = fn(18569).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = { container: { flex: 1 }, bar: null, text: null };
 const rect = {
   position: "absolute",

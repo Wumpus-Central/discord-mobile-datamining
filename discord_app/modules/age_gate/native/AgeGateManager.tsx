@@ -8,13 +8,13 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const AgeGateConstants = fn(1097);
+const AgeGateConstants = fn(1096);
 ({
   EXISTING_USER_AGE_GATE_MODAL_KEY: metroImportDefault,
   AgeGateSource: closure_8,
   AgeGateType: closure_9,
 } = AgeGateConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ ChannelTypes: closure_10, GuildNSFWContentLevel: closure_11 } = Constants);
 class AgeGateManager extends tmp4 {
   constructor() {
@@ -52,8 +52,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
   const source = channelId.source;
-  importDefault = source(6298).getAgeGateType(source);
-  let obj = source(6298);
+  importDefault = source(6300).getAgeGateType(source);
+  let obj = source(6300);
   ModalActionCreatorsDefault.pushLazy(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {
@@ -66,7 +66,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId)
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

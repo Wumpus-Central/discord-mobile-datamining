@@ -24,10 +24,10 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4722);
+let GuildChannelStore = fn(4724);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ Permissions: closure_9, ChannelTypes } = Constants);
 let items = [,];
 ({ GUILD_DIRECTORY: arr[0], GUILD_STORE: arr[1] } = ChannelTypes);

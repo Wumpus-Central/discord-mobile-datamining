@@ -30,8 +30,8 @@ function ConnectedInAppNotificationSettingsScreen(channel) {
     }),
   });
 }
-const isMultiUserDM = fn(4645).isMultiUserDM;
-const Constants = fn(1072);
+const isMultiUserDM = fn(4647).isMultiUserDM;
+const Constants = fn(1071);
 ({ ChannelTypes: closure_9, UserSettingsSections: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -138,15 +138,15 @@ export default noop.memo(function InAppNotificationSettingsModal(channelId) {
     const obj2 = {
       headerTitle() {
         const obj = { title: null, subtitle: null };
-        const intl = channelId(1113).intl;
-        obj.title = intl.string(channelId(1113).t.h850Ss);
+        const intl = channelId(1112).intl;
+        obj.title = intl.string(channelId(1112).t.h850Ss);
         let channelName = null;
         if (null != closure_0) {
-          const tmp3Result = channelId(5408);
+          const tmp3Result = channelId(5410);
           channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;
-        return closure_2_11(channelId(6976).NavigatorHeader, obj);
+        return closure_2_11(channelId(6975).NavigatorHeader, obj);
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
       render() {
@@ -156,5 +156,5 @@ export default noop.memo(function InAppNotificationSettingsModal(channelId) {
     obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
     return obj;
   }, items);
-  return closure_11(channelId(6973).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return closure_11(channelId(6972).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });

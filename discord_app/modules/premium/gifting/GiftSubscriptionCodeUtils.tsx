@@ -6,3 +6,10 @@ const result = size.fileFinishedImporting("modules/premium/gifting/GiftSubscript
 export function isPendingGiftSubscriptionCode(giftCode) {
   return null != giftCode.giftSubscriptionAgreement;
 }
+export function needsGiftSubscriptionAgreement(isSubscription) {
+  let tmp = null != isSubscription && isSubscription.isSubscription;
+  if (tmp) {
+    tmp = undefined === isSubscription.giftSubscriptionAgreement;
+  }
+  return tmp;
+}

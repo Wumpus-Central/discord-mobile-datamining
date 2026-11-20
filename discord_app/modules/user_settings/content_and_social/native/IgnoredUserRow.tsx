@@ -9,8 +9,8 @@ const require = fn;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7401)().analyticsLocations;
-  const intl = userRecord(1113).intl;
+  analyticsLocations = analyticsLocations(7400)().analyticsLocations;
+  const intl = userRecord(1112).intl;
   let username = userRecord.globalName;
   if (username == null) {
     username = userRecord.username;
@@ -18,12 +18,12 @@ function IgnoredUserRow(userRecord) {
   function handleOpenProfile() {
     showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
   }
-  const formatToPlainStringResult = intl.formatToPlainString(userRecord(1113).t.e3qAIz, { name: username });
+  const formatToPlainStringResult = intl.formatToPlainString(userRecord(1112).t.e3qAIz, { name: username });
   let obj = {
     accessible: false,
-    icon: jsx(userRecord(1187).Avatar, {
+    icon: jsx(userRecord(1186).Avatar, {
       source: userRecord.getAvatarSource(undefined),
-      size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32,
+      size: userRecord(1186).AvatarSizes.REFRESH_MEDIUM_32,
     }),
     label: null,
     onPress: handleOpenProfile,
@@ -44,7 +44,7 @@ function IgnoredUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16018).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(15982).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -58,24 +58,24 @@ function IgnoredUserRow(userRecord) {
     },
   });
   const obj4 = { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
-  const intl2 = tmp2(1113).intl;
-  obj4.text = intl2.string(userRecord(1113).t["3GZE6a"]);
+  const intl2 = tmp2(1112).intl;
+  obj4.text = intl2.string(userRecord(1112).t["3GZE6a"]);
   obj4.accessibilityLabel = formatToPlainStringResult;
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj.trailing = jsx(userRecord(5390).Button, {
+  obj.trailing = jsx(userRecord(5392).Button, {
     size: "sm",
     variant: "secondary",
     text: null,
     accessibilityLabel: null,
     onPress: null,
   });
-  return jsx(userRecord(6926).TableRow, {
+  return jsx(userRecord(6925).TableRow, {
     accessible: false,
-    icon: jsx(userRecord(1187).Avatar, {
+    icon: jsx(userRecord(1186).Avatar, {
       source: userRecord.getAvatarSource(undefined),
-      size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32,
+      size: userRecord(1186).AvatarSizes.REFRESH_MEDIUM_32,
     }),
     label: null,
     onPress: handleOpenProfile,
@@ -103,7 +103,7 @@ export default function ConnectedIgnoredUserRow(userId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -126,7 +126,7 @@ export default function ConnectedIgnoredUserRow(userId) {
           } else if (1 === tmp6) {
             c2 = 0;
             c0 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c0 = 3;
             throw value;
@@ -138,7 +138,7 @@ export default function ConnectedIgnoredUserRow(userId) {
           } else {
             c2 = 0;
             c0 = 3;
-            return { value: "HermesInternal", done: "+60" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           if (tmp3 === c2) {

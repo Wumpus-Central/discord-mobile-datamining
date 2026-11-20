@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/native/ModerateUserActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useCanToggleCommunicationDisableOnUser from "../../guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx";
 import GuildMemberUtils from "../../guild_member/GuildMemberUtils.tsx";
@@ -13,10 +13,10 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const Permissions = fn(1072).Permissions;
+const Permissions = fn(1071).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_11 = createStyles.createStyles({
   container: { padding: 16, gap: 16 },
   memberRoles: { justifyContent: "flex-start" },
@@ -118,7 +118,7 @@ export default noop.memo(function ModerateUserActionSheet(user) {
         obj2.icon = closure_9(tmp2(tmp3[13]).ActionSheetRow.Icon, obj3);
         obj2.onPress = function onPress() {
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12272, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12244, dependencyMap.paths), {
             userId: user.id,
             guildId: guild.id,
             onClose() {

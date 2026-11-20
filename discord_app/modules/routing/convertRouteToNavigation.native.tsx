@@ -1,5 +1,6 @@
 // discord_app/modules/routing/convertRouteToNavigation.native.tsx
 import Constants from "../../Constants.tsx";
+import ChannelConstants from "../channel/ChannelConstants.tsx";
 import matchPathCompat from "matchPathCompat.tsx";
 import RouteUtils from "RouteUtils.tsx";
 import NavigationRouteUtils from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
@@ -11,6 +12,7 @@ import openConjureHomeScreenDefault from "../conjure/home/native/openConjureHome
 import size from "../../../_runtime/metro/00002__.js";
 
 const Routes = Constants.Routes;
+const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
 const result = size.fileFinishedImporting("modules/routing/convertRouteToNavigation.native.tsx");
 
 export function convertRouteToNavigation(pathname) {
@@ -41,24 +43,41 @@ export function convertRouteToNavigation(pathname) {
         } else {
           const obj3 = { path: null };
           const RouteParam5 = RouteUtils.RouteParam;
-          const tmpResult16 = matchPathCompat;
+          const tmpResult17 = matchPathCompat;
           const RouteParam6 = RouteUtils.RouteParam;
           obj3.path = Routes.CHANNEL(RouteParam5.guildId(), RouteParam6.channelId({ optional: true }), ":messageId?");
-          const matchPathResult = tmpResult16.matchPath(pathname, obj3);
+          const matchPathResult = tmpResult17.matchPath(pathname, obj3);
           if (null != matchPathResult) {
             ({ channelId, guildId, messageId } = matchPathResult.params);
             const navigationReplace = pathname.navigationReplace;
+            let tmp15;
+            if (channelId === StaticChannelRoute.CONJURE_PROJECT) {
+              tmp15 = messageId;
+            }
             if (null == channelId) {
-              if (tmpResult17.getChatLayout().isChatLockedOpen) {
+              if (tmpResult18.getChatLayout().isChatLockedOpen) {
+                if (null != channelId) {
+                  if (null != tmp15) {
+                    const obj4 = {
+                      channelId,
+                      guildId,
+                      subRouteId: tmp15,
+                      replaceChannelAndFixRoot: false !== navigationReplace,
+                      openChannel: true,
+                    };
+                    NavigationRouteUtils.navigateToChannel(obj4);
+                    const tmpResult19 = NavigationRouteUtils;
+                  }
+                }
                 if (null != channelId) {
                   if (false === navigationReplace) {
-                    const tmpResult18 = NavigationRouteUtils;
+                    const tmpResult20 = NavigationRouteUtils;
                     const rootNavigationRef1 = RootNavigationRef.getRootNavigationRef();
                     let currentRoute;
                     if (rootNavigationRef1 != null) {
                       currentRoute = rootNavigationRef1.getCurrentRoute();
                     }
-                    const coerceGuildsRouteResult = tmpResult18.coerceGuildsRoute(currentRoute);
+                    const coerceGuildsRouteResult = tmpResult20.coerceGuildsRoute(currentRoute);
                     let channelId1;
                     if (coerceGuildsRouteResult != null) {
                       const params = coerceGuildsRouteResult.params;
@@ -67,51 +86,52 @@ export function convertRouteToNavigation(pathname) {
                       }
                     }
                     if (channelId1 === channelId) {
-                      const obj4 = { screen: "guilds", guildId, channelId, resetRoot: navigationReplace };
-                      NavigationRouteUtils.navigateToRootTab(obj4);
-                      const tmpResult20 = NavigationRouteUtils;
+                      const obj6 = { screen: "guilds", guildId, channelId, resetRoot: navigationReplace };
+                      NavigationRouteUtils.navigateToRootTab(obj6);
+                      const tmpResult22 = NavigationRouteUtils;
                     } else {
-                      const obj6 = { channelId, guildId, messageId, replaceChannelAndFixRoot: navigationReplace };
-                      NavigationRouteUtils.navigateToChannel(obj6);
-                      const tmpResult21 = NavigationRouteUtils;
+                      const obj7 = { channelId, guildId, messageId, replaceChannelAndFixRoot: navigationReplace };
+                      NavigationRouteUtils.navigateToChannel(obj7);
+                      const tmpResult23 = NavigationRouteUtils;
                     }
-                    const tmpResult19 = RootNavigationRef;
+                    const tmpResult21 = RootNavigationRef;
                   }
                 }
-                const obj7 = { screen: "guilds", guildId, channelId, resetRoot: navigationReplace };
-                NavigationRouteUtils.navigateToRootTab(obj7);
-                const tmpResult22 = NavigationRouteUtils;
+                const obj8 = { screen: "guilds", guildId, channelId, resetRoot: navigationReplace };
+                NavigationRouteUtils.navigateToRootTab(obj8);
+                const tmpResult24 = NavigationRouteUtils;
               } else if (null != channelId) {
                 if (true === navigationReplace) {
-                  if (tmp14) {
-                    const obj8 = {
+                  if (pathname.openChannel) {
+                    const obj9 = {
                       channelId,
                       guildId,
                       messageId,
+                      subRouteId: tmp15,
                       replaceChannelAndFixRoot: navigationReplace,
                       openChannel: true,
                     };
-                    NavigationRouteUtils.navigateToChannel(obj8);
-                    const tmpResult23 = NavigationRouteUtils;
+                    NavigationRouteUtils.navigateToChannel(obj9);
+                    const tmpResult25 = NavigationRouteUtils;
                   }
                 }
                 if (false !== navigationReplace) {
-                  const obj9 = { screen: "guilds", guildId, channelId, resetRoot: navigationReplace };
-                  NavigationRouteUtils.navigateToRootTab(obj9);
-                  const tmpResult24 = NavigationRouteUtils;
+                  const obj10 = { screen: "guilds", guildId, channelId, resetRoot: navigationReplace };
+                  NavigationRouteUtils.navigateToRootTab(obj10);
+                  const tmpResult26 = NavigationRouteUtils;
                 }
-                if (tmp17) {
-                  const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "a" };
-                  NavigationRouteUtils.navigateToChannel(obj10);
-                  const tmpResult25 = NavigationRouteUtils;
+                if (tmp18) {
+                  const obj11 = { channelId, guildId, messageId, subRouteId: tmp15, replaceChannelAndFixRoot: "fill" };
+                  NavigationRouteUtils.navigateToChannel(obj11);
+                  const tmpResult27 = NavigationRouteUtils;
                 }
-                tmp17 = null != channelId && true !== navigationReplace;
+                tmp18 = null != channelId && true !== navigationReplace;
               } else {
-                const obj11 = { screen: "guilds", guildId, channelId, resetRoot: navigationReplace };
-                NavigationRouteUtils.navigateToRootTab(obj11);
-                const tmpResult26 = NavigationRouteUtils;
+                const obj12 = { screen: "guilds", guildId, channelId, resetRoot: navigationReplace };
+                NavigationRouteUtils.navigateToRootTab(obj12);
+                const tmpResult28 = NavigationRouteUtils;
               }
-              tmpResult17 = useChatLayout;
+              tmpResult18 = useChatLayout;
             } else {
               openChannelSecondaryViewChat;
             }
@@ -131,7 +151,7 @@ export function convertRouteToNavigation(pathname) {
             let tmp9 = null == matchPathResult1;
             if (!tmp9) {
               tmp9 = !ConjureGuildExperiment.hasConjureGuildWithoutExposure("convertRouteToNavigation");
-              const tmpResult29 = ConjureGuildExperiment;
+              const tmpResult31 = ConjureGuildExperiment;
             }
             let flag = !tmp9;
             if (!tmp9) {

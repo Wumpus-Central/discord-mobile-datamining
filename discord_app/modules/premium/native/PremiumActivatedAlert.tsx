@@ -6,7 +6,7 @@ import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
-import _modDef8708 from "../../../../_runtime/metro/08708__.js";
+import _modDef8748 from "../../../../_runtime/metro/08748__.js";
 import _modDef9007 from "../../../../_runtime/metro/09007__.js";
 import _modDef9008 from "../../../../_runtime/metro/09008__.js";
 import _modDef9093 from "../../../../_runtime/metro/09093__.js";
@@ -36,10 +36,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
+const SubscriptionStatusTypes = fn(1071).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let obj2 = {
   alert: { overflow: "hidden", paddingBottom: 24 },
   header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" },
@@ -62,10 +62,10 @@ obj2.description = {
   lineHeight: 16,
   textAlign: "center",
   marginTop: 20,
-  color: fn(6434).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+  color: fn(6436).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
 };
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_8 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.TIER_0 === arg0) {
     const obj2 = { headerImage: { marginLeft: -27, width: 88, top: 18 } };
@@ -84,7 +84,7 @@ let closure_8 = createStyles.createStyles((arg0) => {
     return obj;
   }
 });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let closure_9 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.BUNDLE === arg0) {
     const obj2 = { animation: { borderRadius: 6 } };
@@ -178,7 +178,7 @@ export default function PremiumActivatedAlert(onClose) {
         }
       }
     }
-    tmp4Result17 = _modDef8708;
+    tmp4Result17 = _modDef8748;
   }
   items[1] = hasOwnProperty(FastImageDefault, { source: tmp4Result17, style: tmp9.logo });
   let tmp15Result = null;

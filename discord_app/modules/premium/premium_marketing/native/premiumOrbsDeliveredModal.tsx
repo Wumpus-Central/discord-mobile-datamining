@@ -36,7 +36,7 @@ export function openOrbsModalIfDelivered() {
           return null;
         } else {
           for (const item10008 of tmp) {
-            if (item10008.type === closure_0(2173).EntitlementTypes.PURCHASE_REWARD) {
+            if (item10008.type === closure_0(2171).EntitlementTypes.PURCHASE_REWARD) {
               knownCoinEntitlementIds = arg0.knownCoinEntitlementIds;
               if (!knownCoinEntitlementIds.has(item10008.id)) {
                 obj = SnowflakeUtilsDefault;

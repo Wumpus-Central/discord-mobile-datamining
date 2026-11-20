@@ -9,13 +9,13 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-const PremiumConstants = fn(1390);
+const AnalyticEvents = fn(1071).AnalyticEvents;
+const PremiumConstants = fn(1388);
 ({ PremiumTypes: closure_6, PremiumUpsellTypes: metroImportDefault } = PremiumConstants);
-const ResolutionTypes = fn(5537).ResolutionTypes;
+const ResolutionTypes = fn(5539).ResolutionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   liveIndicator: { flexDirection: "row", alignItems: "center", height: 18 },
   liveTag: {
@@ -84,7 +84,7 @@ export default function StreamQualityLiveIndicator(arg0) {
     analyticsLocations.useContext(require("RevealProvider").RevealContext).reveal,
     require("native").STANDARD_EASING,
   ];
-  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     (function StreamQualityLiveIndicatorTsx1Factory(items) {
       [tmp, tmp2, tmp3, tmp4] = items;
       class StreamQualityLiveIndicatorTsx1 {
@@ -107,7 +107,7 @@ export default function StreamQualityLiveIndicator(arg0) {
       return StreamQualityLiveIndicatorTsx1;
     })(items),
   );
-  const obj3 = require("../../../../_runtime/metro/01655__.js");
+  const obj3 = require("../../../../_runtime/metro/01653__.js");
   const maxQuality = require("StreamQualityUtils").useMaxQuality(participant);
   try {
     const isPremiumFPSResult = tmp3(tmp4[14]).isPremiumFPS(maxQuality);

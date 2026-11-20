@@ -40,7 +40,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -140,7 +140,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
     }
   }
 };
-const Endpoints = fn(1072).Endpoints;
+const Endpoints = fn(1071).Endpoints;
 let closure_5 = {};
 let closure_6 = {
   FAILED: 0,

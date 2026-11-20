@@ -8,12 +8,12 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
-  container: { marginBottom: fn(12904).BETWEEN_SECTIONS_MARGIN },
+  container: { marginBottom: fn(12874).BETWEEN_SECTIONS_MARGIN },
   header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 },
 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -49,9 +49,9 @@ export default function FrecencyCommandsSection(commands) {
     let obj = { style: tmp.container, children: null };
     let obj2 = { style: tmp.header, children: null };
     const obj3 = { variant: "body-md/medium", color: "text-default", children: null };
-    const intl = context(1113).intl;
-    obj3.children = intl.string(context(1113).t.acSE0h);
-    obj2.children = arr(context(5383).Heading, obj3);
+    const intl = context(1112).intl;
+    obj3.children = intl.string(context(1112).t.acSE0h);
+    obj2.children = arr(context(5385).Heading, obj3);
     const items1 = [
       arr(View, obj2),
       arr.map((command, index) =>

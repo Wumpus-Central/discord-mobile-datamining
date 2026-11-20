@@ -4,7 +4,7 @@ import FramesStore from "../../frames/FramesStore.tsx";
 import PlayableStore from "PlayableStore.tsx";
 
 require = fn;
-const asLaunched = fn(6503).asLaunched;
+const asLaunched = fn(6505).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/useMainFramePlayable.tsx");
 

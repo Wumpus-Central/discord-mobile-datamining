@@ -238,7 +238,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj8 = { logoUrl, buttonColor: "Array", categoryName: -1 };
+  const obj8 = { logoUrl, buttonColor: "Array", categoryName: "Array" };
   let name;
   if (category != null) {
     name = category.name;
@@ -299,7 +299,7 @@ function CategoryItemsContent(category) {
   });
   let obj = require("useFilteredAndSortedProducts");
   let obj2 = { products: category.products };
-  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
   const items1 = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -308,7 +308,7 @@ function CategoryItemsContent(category) {
     }
     const result = sharedValue.set(spring_spring.withSpring(num, springPresets.Reanimated3DefaultSpringConfig));
   }, items1);
-  let obj3 = require("../../../../_runtime/metro/01655__.js");
+  let obj3 = require("../../../../_runtime/metro/01653__.js");
   const items2 = [closure_20, sharedValue];
   _require = undefined;
   [tmp9, tmp10] = items2;
@@ -323,7 +323,7 @@ function CategoryItemsContent(category) {
   CollectiblesShopViewAllCategoryItemsTsx1.__workletHash = 3426078799765;
   CollectiblesShopViewAllCategoryItemsTsx1.__initData = tmp9;
   let sessionId;
-  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
     CollectiblesShopViewAllCategoryItemsTsx1,
   );
   if (analyticsContext != null) {
@@ -385,7 +385,7 @@ function CategoryItemsContent(category) {
   const obj12 = { logoUrl, buttonColor: null, categoryName: null };
   let toHexStringResult;
   const obj11 = { source: { uri: mobileBgUrl }, style: absoluteFill.absoluteFill };
-  const obj5 = require("../../../../_runtime/metro/01655__.js");
+  const obj5 = require("../../../../_runtime/metro/01653__.js");
   if (backgroundColors != null) {
     const label = backgroundColors.label;
     toHexStringResult = label.toHexString();
@@ -429,13 +429,13 @@ function CategoryItemsContent(category) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_6, View: metroImportDefault, StyleSheet: closure_8 } = get_ActivityIndicator);
-const CollectiblesShopConstants = fn(1074);
+const CollectiblesShopConstants = fn(1073);
 ({ CollectiblesMobileShopScreen: closure_12, TWELVE_DAYS_COLLECTION_SKU_ID: map1 } = CollectiblesShopConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, UserSettingsSections: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj = {
   rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   border: null,

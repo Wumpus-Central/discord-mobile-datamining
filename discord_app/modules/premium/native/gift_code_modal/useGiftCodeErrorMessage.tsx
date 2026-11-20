@@ -63,8 +63,8 @@ export default function useGiftCodeErrorMessage(arg0, id) {
     intl.string(tmp(ilcBeX[5]).t.mdLtb5);
   } else if (null != tmp4) {
     if (!result) {
-      tmp(ilcBeX[7]).getGiftCodeRedeemError(tmp4);
-      const tmpResult4 = tmp(ilcBeX[7]);
+      tmp(ilcBeX[6]).getGiftCodeRedeemError(tmp4);
+      const tmpResult4 = tmp(ilcBeX[6]);
     }
   }
 }

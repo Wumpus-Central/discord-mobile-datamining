@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/EmojiSuggestionBarSmall.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1655 from "../../../../_runtime/metro/01655__.js";
+import _modDef1653 from "../../../../_runtime/metro/01653__.js";
 import EmojiPickerListRow from "../../emoji_picker/native/components/EmojiPickerListRow.tsx";
 import openEmojiActionSheet2 from "../../emoji_picker/native/components/openEmojiActionSheet.tsx";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
@@ -20,7 +20,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
     onOccupiedHeightChange,
   );
   let obj = require("EmojiSuggestionBarUtils");
-  items = [closure_8, require("../../../../_runtime/metro/01655__.js").interpolate, suggestionBarHeight, closure_6];
+  items = [closure_8, require("../../../../_runtime/metro/01653__.js").interpolate, suggestionBarHeight, closure_6];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -38,7 +38,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   EmojiSuggestionBarSmallTsx1.__closure = items1;
   EmojiSuggestionBarSmallTsx1.__workletHash = 1179846537362;
   EmojiSuggestionBarSmallTsx1.__initData = tmp4;
-  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(EmojiSuggestionBarSmallTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(EmojiSuggestionBarSmallTsx1);
   const obj3 = {
     style: null,
     children: displayEmojis.map((emoji, index) => {
@@ -76,7 +76,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   };
   const items2 = [tmp.containerSmall, animatedStyle];
   obj3.style = items2;
-  return jsx(_modDef1655.View, {
+  return jsx(_modDef1653.View, {
     style: null,
     children: displayEmojis.map((emoji, index) => {
       const locked = emoji.locked;
@@ -116,7 +116,7 @@ const jsx = fn(21).jsx;
 const sum = fn(8946).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 let closure_6 = sum + nativeDefault.space.PX_8;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { containerSmall: null };
   const rect = {

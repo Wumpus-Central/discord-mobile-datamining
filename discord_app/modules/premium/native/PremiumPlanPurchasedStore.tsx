@@ -7,7 +7,7 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1390);
+const PremiumConstants = fn(1388);
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
 const module_560 = fn(560);
 const obj3 = module_560.create(() => ({
@@ -23,7 +23,7 @@ export const usePremiumPlanPurchasedStore = obj3;
 export function setInitiatedPurchaseFromNewFlow(productId) {
   productId = productId.productId;
   ({ onPaymentStart, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = productId);
-  productId(1263).batchUpdates(() => {
+  productId(1262).batchUpdates(() => {
     obj3.setState({ productId, initiatedPurchaseFromNewFlow: true, onPaymentSuccess, onPaymentDismiss });
   });
   if (onPaymentStart != null) {

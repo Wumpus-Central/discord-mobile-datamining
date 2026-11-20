@@ -22,7 +22,7 @@ class AccountSwitchingSpinnerModal {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 const hasOwnProperty = createStyles.createStyles((arg0) => {
   let prop;
   if (arg0) {
@@ -32,7 +32,7 @@ const hasOwnProperty = createStyles.createStyles((arg0) => {
     switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: prop },
   };
 });
-AccountSwitchingSpinnerModal.modalConfig = { animation: fn(1092).ModalAnimation.FADE, closable: false };
+AccountSwitchingSpinnerModal.modalConfig = { animation: fn(1091).ModalAnimation.FADE, closable: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
 

@@ -3,20 +3,20 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import InputFieldContainer from "../../Input/native/InputFieldContainer.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const util = prop(1113);
-const native = prop(4957);
-const useToken = prop(5356);
-const Text_Text = prop(5383);
-const useScaledTextLineHeight = prop(5522);
-const useTextField = prop(7110);
-const NativeTextInput = prop(7125);
-const propsForNativeTextInput = prop(7128);
-const useCharacterLimitAnnouncement = prop(7344);
+const util = prop(1112);
+const native = prop(4959);
+const useToken = prop(5358);
+const Text_Text = prop(5385);
+const useScaledTextLineHeight = prop(5524);
+const useTextField = prop(7109);
+const NativeTextInput = prop(7124);
+const propsForNativeTextInput = prop(7127);
+const useCharacterLimitAnnouncement = prop(7343);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_6 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {

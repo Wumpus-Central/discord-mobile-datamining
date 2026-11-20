@@ -8,9 +8,9 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(8213).GuildPowerupNewPerkMarketingVersion;
-const ContentDismissActionType = fn(4638).ContentDismissActionType;
-let closure_8 = fn(4625).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
+const constants = fn(8212).GuildPowerupNewPerkMarketingVersion;
+const ContentDismissActionType = fn(4640).ContentDismissActionType;
+let closure_8 = fn(4627).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx");
 
@@ -66,7 +66,7 @@ export function useAutoDismissGuildPowerupsNewBadge(guildId) {
     GuildPowerupsStore.getStateForGuild(closure_0),
   );
   let obj = require("initialize");
-  const tmp2Result = num(13304)(guildId, stateFromStores);
+  const tmp2Result = num(13274)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

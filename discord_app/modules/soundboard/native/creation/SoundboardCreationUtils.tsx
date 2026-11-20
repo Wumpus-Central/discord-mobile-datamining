@@ -1,6 +1,6 @@
 // discord_app/modules/soundboard/native/creation/SoundboardCreationUtils.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -42,7 +42,7 @@ let closure_9 = async function _pickSoundboardSoundFile() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -377,7 +377,7 @@ export function showAddSoundboardSoundOptions(guildId) {
   obj4.label = intl2.string(require("util").t["/VJ/Sp"]);
   obj4.onPress = function onPress() {
     return ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(19856, dependencyMap.paths),
+      asyncRequireImpl(19674, dependencyMap.paths),
       "SoundboardRecordSoundActionSheet",
       { guildId, analyticsSource: "guild_settings_record" },
     );
@@ -397,7 +397,7 @@ export function showAddSoundboardSoundOptions(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -436,7 +436,7 @@ export function showAddSoundboardSoundOptions(guildId) {
             tmp5(c2[13])(obj);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+60" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;

@@ -6,7 +6,7 @@ const require = globalThis.__r;
 const useGuildPowerupsBoostCountDefault = useGuildPowerupsBoostCount;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({
   AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4,
   BoostedGuildTiers: hasOwnProperty,

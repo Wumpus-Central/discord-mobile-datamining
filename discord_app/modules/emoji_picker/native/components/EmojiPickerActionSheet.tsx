@@ -15,12 +15,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const EmojiPickerSource = fn(8946).EmojiPickerSource;
-const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
-const EmojiIntention = fn(1391).EmojiIntention;
+const EXPRESSION_FOOTER_HEIGHT = fn(1071).EXPRESSION_FOOTER_HEIGHT;
+const EmojiIntention = fn(1389).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   header: { flexDirection: "column" },
   searchContainer: { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 },

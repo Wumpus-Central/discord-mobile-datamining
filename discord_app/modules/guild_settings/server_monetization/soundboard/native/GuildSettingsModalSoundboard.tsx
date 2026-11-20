@@ -24,24 +24,24 @@ function SoundboardSoundRow(arg0) {
   const obj2 = { style: tmp.soundEmoji, children: null };
   if (null == sound.emojiId) {
     if (null == sound.emojiName) {
-      let tmp5Result = closure_11(sound(7569).ImageIcon, { size: "md", color: "icon-subtle" });
+      let tmp5Result = closure_11(sound(7568).ImageIcon, { size: "lg", color: "icon-subtle" });
     }
     const obj3 = { icon: null, label: null, trailing: null, onPress: null };
     obj2.children = tmp5Result;
     obj3.icon = closure_11(closure_6, obj2);
     const obj4 = { variant: "heading-xs/semibold", color: "text-strong", style: tmp.name, children: sound.name };
-    const items2 = [closure_11(sound(5383).Text, obj4)];
+    const items2 = [closure_11(sound(5385).Text, obj4)];
     let tmp12Result = null;
     if (null != stateFromStores) {
       const obj5 = { style: tmp.userRow, children: null };
-      const obj6 = { user: stateFromStores, size: sound(1187).AvatarSizes.XSMALL_20, guildId };
-      const items3 = [closure_11(sound(1187).Avatar, obj6)];
+      const obj6 = { user: stateFromStores, size: sound(1186).AvatarSizes.XSMALL_20, guildId };
+      const items3 = [closure_11(sound(1186).Avatar, obj6)];
       const obj7 = {
         variant: "body-sm/medium",
         color: "text-subtle",
         children: NicknameUtilsDefault.getName(guildId, undefined, stateFromStores),
       };
-      items3[1] = closure_11(sound(5383).Text, obj7);
+      items3[1] = closure_11(sound(5385).Text, obj7);
       obj5.children = items3;
       tmp12Result = closure_12(closure_6, obj5);
     }
@@ -51,13 +51,13 @@ function SoundboardSoundRow(arg0) {
     obj3.label = closure_12(closure_6, obj8);
     let tmp5Result2;
     if (canManage) {
-      tmp5Result2 = closure_11(sound(6939).TableRowArrow, {});
+      tmp5Result2 = closure_11(sound(6938).TableRowArrow, {});
     }
     obj3.trailing = tmp5Result2;
     obj3.onPress = onPress;
     return closure_11(tmp6, obj3);
   }
-  const obj10 = { fastImageStyle: { width: 28, height: 28 }, name: null, src: null };
+  const obj10 = { fastImageStyle: tmp.soundEmojiImage, textEmojiStyle: tmp.soundEmojiText, name: null, src: null };
   let str = sound.emojiName;
   const obj = sound(504);
   if (str == null) {
@@ -73,20 +73,20 @@ function AddSoundButton(guildId) {
   guildId = guildId.guildId;
   const obj = { style: closure_14().addSoundButton, children: null };
   const obj2 = { variant: "primary", text: null, onPress: null };
-  const intl = guildId(1113).intl;
-  obj2.text = intl.string(guildId(1113).t["8Fu/S7"]);
+  const intl = guildId(1112).intl;
+  obj2.text = intl.string(guildId(1112).t["8Fu/S7"]);
   obj2.onPress = function onPress() {
     return SoundboardCreationUtils.showAddSoundboardSoundOptions(guildId);
   };
-  obj.children = closure_11(guildId(5390).Button, obj2);
+  obj.children = closure_11(guildId(5392).Button, obj2);
   return closure_11(closure_6, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const BoostedGuildTiers = fn(1072).BoostedGuildTiers;
+const BoostedGuildTiers = fn(1071).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4792);
+let createStyles = fn(4794);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 },
@@ -96,21 +96,20 @@ let closure_13 = createStyles.createStyles((arg0) => {
   obj.label = { marginBottom: nativeDefault.space.PX_8 };
   return obj;
 });
-createStyles = fn(4792);
+createStyles = fn(4794);
 let obj = { addSoundButton: { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 } };
 let closure_14 = createStyles.createStyles(obj);
-createStyles = fn(4792);
-let obj5 = { soundEmoji: null, name: null, userRow: null };
+createStyles = fn(4794);
+let obj5 = { soundEmoji: null, soundEmojiImage: null, soundEmojiText: null, name: null, userRow: null };
 let size = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  borderRadius: nativeDefault.radii.round,
   width: nativeDefault.space.PX_48,
   height: nativeDefault.space.PX_48,
-  overflow: "hidden",
   alignItems: "center",
   justifyContent: "center",
 };
 obj5.soundEmoji = size;
+obj5.soundEmojiImage = { width: 32, height: 32 };
+obj5.soundEmojiText = { fontSize: 28 };
 let obj4 = { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 };
 obj5.name = { marginBottom: nativeDefault.space.PX_8 };
 let obj7 = { marginBottom: nativeDefault.space.PX_8 };

@@ -4,7 +4,7 @@ import useMobilePurchaseSKUDefault from "../../../billing/native/hooks/useMobile
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const constants = fn(1072).PriceSetAssignmentPurchaseTypes;
+const constants = fn(1071).PriceSetAssignmentPurchaseTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx",

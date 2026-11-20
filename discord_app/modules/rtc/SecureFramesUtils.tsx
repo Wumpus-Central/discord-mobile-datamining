@@ -3,7 +3,7 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import byteLengthDefault from "../../../_runtime/00206_byteLength.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2169 from "../../../_runtime/metro/02169__.js";
+import _modDef2167 from "../../../_runtime/metro/02167__.js";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
@@ -71,7 +71,7 @@ let closure_21 = async function _isPublicKeyMatch(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -149,7 +149,7 @@ let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -217,7 +217,7 @@ let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
         const result = closure_130_1(closure_130_2[11]).addUploadedKeyVersion(closure_129_0);
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "+60" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -245,7 +245,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -273,7 +273,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -291,7 +291,7 @@ let closure_26 = async function _isCurrentUserPublicKeyMatch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -424,7 +424,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
 const SecureFramesConstants = fn(9588);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } =
   SecureFramesConstants);
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesUtils.tsx");
@@ -488,8 +488,8 @@ export function deleteUserPersistentVerifications(userId) {
   let result = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj3);
 }
 export function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  const tmp3 = _modDef2169(timestamp);
-  const diffResult = _modDef2169().diff(tmp3, "s");
+  const tmp3 = _modDef2167(timestamp);
+  const diffResult = _modDef2167().diff(tmp3, "s");
   if (diffResult > 12 * DurationsDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * DurationsDefault.Seconds.DAYS_30));
@@ -531,7 +531,7 @@ export function getSecureFramesUserVerifiedTimestamp(timestamp) {
     const obj8 = { count: diffResult };
     return intl.formatToPlainString(util.t["/w0Qpw"], obj8);
   }
-  const obj = _modDef2169();
+  const obj = _modDef2167();
 }
 export function getUserVerificationDeeplink(userId, arg1) {
   return (

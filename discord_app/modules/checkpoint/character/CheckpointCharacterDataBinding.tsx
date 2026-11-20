@@ -73,10 +73,10 @@ export function getCheckpointCharacterDataBinding(compactAssets) {
   if (flag === undefined) {
     flag = false;
   }
-  obj = textureScale(5892);
+  obj = textureScale(5894);
   const characterFromTraits = obj.getCharacterFromTraits(traits);
   ({ base, shoes, outfit, face, hat, wearable, aura } = characterFromTraits);
-  const tmp4 = textureScale(12620).CHECKPOINT_OUTFIT_OPTION_TO_RIVE_OUTFIT[outfit];
+  const tmp4 = textureScale(12590).CHECKPOINT_OUTFIT_OPTION_TO_RIVE_OUTFIT[outfit];
   dependencyMap = tmp4;
   obj2 = {};
   const item = obj2.forEach((item) => {
@@ -108,14 +108,14 @@ export function getCheckpointCharacterDataBinding(compactAssets) {
     baseColorImage: null,
   };
   if (isHidden) {
-    if (stage === textureScale(6217).CheckpointCharacterStage.FACE) {
-      let tmp6 = dependencyMap2[textureScale(undefined, 6217).CheckpointCharacterStage.IDLE];
+    if (stage === textureScale(6219).CheckpointCharacterStage.FACE) {
+      let tmp6 = dependencyMap2[textureScale(undefined, 6219).CheckpointCharacterStage.IDLE];
     }
     obj3.chapterID = tmp6;
     obj3.faceID = face;
     obj3.shoesID = shoes;
-    obj3.headwearID = textureScale(12620).CHECKPOINT_HAT_OPTION_TO_HEADWEAR_RIVE_ID[hat];
-    obj3.wearableID = textureScale(12620).CHECKPOINT_WEARABLE_OPTION_TO_WEARABLE_RIVE_ID[wearable];
+    obj3.headwearID = textureScale(12590).CHECKPOINT_HAT_OPTION_TO_HEADWEAR_RIVE_ID[hat];
+    obj3.wearableID = textureScale(12590).CHECKPOINT_WEARABLE_OPTION_TO_WEARABLE_RIVE_ID[wearable];
     let num;
     if (tmp4 != null) {
       num = tmp4.riveId;
@@ -124,18 +124,18 @@ export function getCheckpointCharacterDataBinding(compactAssets) {
       num = 0;
     }
     obj3.outfitID = num;
-    obj3.auraImage = textureScale(12453).getCheckpointCharacterAuraUrl(
-      textureScale(12620).CHECKPOINT_AURA_OPTION_TO_AURA_RIVE_TEXTURE[aura].name,
+    obj3.auraImage = textureScale(12423).getCheckpointCharacterAuraUrl(
+      textureScale(12590).CHECKPOINT_AURA_OPTION_TO_AURA_RIVE_TEXTURE[aura].name,
       textureScale,
       flag,
     );
-    const tmpResult = textureScale(12453);
-    obj3.baseColorImage = textureScale(12453).getCheckpointCharacterTextureUrl(
-      textureScale(12620).CHECKPOINT_BASE_OPTION_TO_BASE_RIVE_TEXTURE[base].name,
+    const tmpResult = textureScale(12423);
+    obj3.baseColorImage = textureScale(12423).getCheckpointCharacterTextureUrl(
+      textureScale(12590).CHECKPOINT_BASE_OPTION_TO_BASE_RIVE_TEXTURE[base].name,
       textureScale,
     );
     if ("MobilePortrait" === layout) {
-      if (stage === textureScale(6217).CheckpointCharacterStage.INTRODUCTION) {
+      if (stage === textureScale(6219).CheckpointCharacterStage.INTRODUCTION) {
         let tmp10 = obj2;
       }
       const merged = Object.assign(tmp10);
@@ -143,7 +143,7 @@ export function getCheckpointCharacterDataBinding(compactAssets) {
       return obj3;
     }
     tmp10 = obj[layout];
-    const tmpResult2 = textureScale(12453);
+    const tmpResult2 = textureScale(12423);
   }
   tmp6 = dependencyMap2[stage];
 }

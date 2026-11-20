@@ -15,11 +15,11 @@ function ListItemSeparator() {
   return React5(View, { style: closure_10().listItemSeparator });
 }
 const View = fn(17).View;
-let closure_6 = fn(1074).CollectiblesMobileShopScreen;
-const UserSettingsSections = fn(1072).UserSettingsSections;
+let closure_6 = fn(1073).CollectiblesMobileShopScreen;
+const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   containerWithBackground: null,

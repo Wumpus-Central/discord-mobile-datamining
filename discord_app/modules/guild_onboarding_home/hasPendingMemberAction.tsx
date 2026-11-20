@@ -7,8 +7,8 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore.tsx";
 import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore.tsx";
 
-const GuildFeatures = fn(1072).GuildFeatures;
-const GuildMemberFlags = fn(4710).GuildMemberFlags;
+const GuildFeatures = fn(1071).GuildFeatures;
+const GuildMemberFlags = fn(4712).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
 

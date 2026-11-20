@@ -1,5 +1,5 @@
 // discord_app/modules/premium/gifting/native/openGiftingBadgeInfoActionSheet.tsx
-import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02119_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

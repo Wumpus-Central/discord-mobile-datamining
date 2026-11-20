@@ -1,5 +1,5 @@
 // discord_app/modules/reactions/native/ReactionUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
 import ReactionUtils from "../ReactionUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
@@ -7,8 +7,8 @@ import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackType
 import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import ReactionActionCreators from "../ReactionActionCreators.tsx";
-import _modDef10339 from "../../../../_runtime/metro/10339__.js";
-import _modDef10340 from "../../../../_runtime/metro/10340__.js";
+import _modDef10281 from "../../../../_runtime/metro/10281__.js";
+import _modDef10282 from "../../../../_runtime/metro/10282__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -17,16 +17,16 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1072);
+const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, AnalyticsPages: closure_8, AnalyticsSections: closure_9 } = Constants);
-const EmojiIntention = fn(1391).EmojiIntention;
+const EmojiIntention = fn(1389).EmojiIntention;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(5374).ReactionTypes.NORMAL] = _modDef10339;
-obj[fn(5374).ReactionTypes.BURST] = _modDef10340;
+obj[fn(5376).ReactionTypes.NORMAL] = _modDef10281;
+obj[fn(5376).ReactionTypes.BURST] = _modDef10282;
 let obj2 = {};
-obj2[fn(5374).ReactionTypes.NORMAL] = fn(9369).ReactionIcon;
-obj2[fn(5374).ReactionTypes.BURST] = fn(8958).SuperReactionIcon;
+obj2[fn(5376).ReactionTypes.NORMAL] = fn(9369).ReactionIcon;
+obj2[fn(5376).ReactionTypes.BURST] = fn(8958).SuperReactionIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
 
@@ -159,14 +159,14 @@ export function handleViewReactions(isPoll) {
     const obj4 = { messageId, channelId, emoji: isPoll.emoji };
     const obj6 = ActionSheetActionCreatorsDefault;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(asyncRequireImpl(10322, dependencyMap.paths), "MessageReactions", obj4);
-    const tmp19 = asyncRequireImpl(10322, dependencyMap.paths);
+    obj6.openLazy(asyncRequireImpl(10264, dependencyMap.paths), "MessageReactions", obj4);
+    const tmp19 = asyncRequireImpl(10264, dependencyMap.paths);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
   tmp4 = isPrivateResult ? React5.DM_CHANNEL : React5.GUILD_CHANNEL;
 }
 export function handleViewPreviewReactions(id2, id, emoji) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10338, dependencyMap.paths), "MessagePreviewReactions", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10280, dependencyMap.paths), "MessagePreviewReactions", {
     messageId: id2,
     channelId: id,
     emoji,

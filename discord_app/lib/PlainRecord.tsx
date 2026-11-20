@@ -64,7 +64,7 @@ function isPlainRecordDataEqual(arg0, arg1) {
     return true;
   }
 }
-const TypeTag = fn(4657).TypeTag;
+const TypeTag = fn(4659).TypeTag;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/PlainRecord.tsx");
 

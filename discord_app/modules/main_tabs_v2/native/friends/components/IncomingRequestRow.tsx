@@ -140,10 +140,10 @@ function IncomingGameFriendRequestRow(arg0) {
     acceptRequestAccessibilityLabel: null,
     ignoreRequestAccessibilityLabel: null,
   };
-  const intl = application(1113).intl;
-  obj2.accessibilityLabel = intl.formatToPlainString(application(1113).t.u6lp4x, { name: userTag });
-  const intl2 = application(1113).intl;
-  obj2.acceptedRequestLabel = intl2.format(application(1113).t.gRgJGR, {
+  const intl = application(1112).intl;
+  obj2.accessibilityLabel = intl.formatToPlainString(application(1112).t.u6lp4x, { name: userTag });
+  const intl2 = application(1112).intl;
+  obj2.acceptedRequestLabel = intl2.format(application(1112).t.gRgJGR, {
     applicationNameHook() {
       return jsx(
         ApplicationIconAndNameDefault,
@@ -152,18 +152,18 @@ function IncomingGameFriendRequestRow(arg0) {
       );
     },
   });
-  const intl3 = application(1113).intl;
-  obj2.acceptedRequestAccessibilityLabel = intl3.formatToPlainString(application(1113).t.Ke6fRJ, {
+  const intl3 = application(1112).intl;
+  obj2.acceptedRequestAccessibilityLabel = intl3.formatToPlainString(application(1112).t.Ke6fRJ, {
     name: userTag,
     applicationName: application.name,
   });
-  const intl4 = application(1113).intl;
-  obj2.acceptRequestAccessibilityLabel = intl4.formatToPlainString(application(1113).t.kMUpdH, {
+  const intl4 = application(1112).intl;
+  obj2.acceptRequestAccessibilityLabel = intl4.formatToPlainString(application(1112).t.kMUpdH, {
     name: userTag,
     applicationName: application.name,
   });
-  const intl5 = application(1113).intl;
-  obj2.ignoreRequestAccessibilityLabel = intl5.formatToPlainString(application(1113).t.d8Cw5e, {
+  const intl5 = application(1112).intl;
+  obj2.ignoreRequestAccessibilityLabel = intl5.formatToPlainString(application(1112).t.d8Cw5e, {
     name: userTag,
     applicationName: application.name,
   });
@@ -181,7 +181,7 @@ function IncomingGameFriendRequestRow(arg0) {
   );
 }
 const UserRowModes = fn(9526).UserRowModes;
-const RelationshipTypes = fn(1072).RelationshipTypes;
+const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };
 const size = fn(2);

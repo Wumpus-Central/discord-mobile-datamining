@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: {
     flex: 1,
@@ -42,12 +42,12 @@ obj2.chatInput = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault
 const obj5 = {
   fontSize: 16,
   lineHeight: 20,
-  fontFamily: fn(1072).Fonts.PRIMARY_NORMAL,
+  fontFamily: fn(1071).Fonts.PRIMARY_NORMAL,
   color: nativeDefault.colors.TEXT_STRONG,
   paddingTop: null,
   paddingBottom: null,
 };
-const PlatformUtils = fn(1380);
+const PlatformUtils = fn(1378);
 let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;

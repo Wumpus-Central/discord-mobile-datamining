@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/native/components/GameProfileHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1655 from "../../../../../_runtime/metro/01655__.js";
-import LinearGradientDefault from "../../../../../_runtime/05347_LinearGradient.js";
+import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import LinearGradientDefault from "../../../../../_runtime/05349_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
@@ -11,7 +11,7 @@ import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
 import _modDef9695 from "../../../../../_runtime/metro/09695__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1655 = _mod1655;
+const _modDef1653 = _mod1653;
 const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
@@ -20,7 +20,7 @@ const GameProfileConstants = fn(9686);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   artHero: null,
@@ -97,7 +97,7 @@ const result = size.fileFinishedImporting("modules/game_profile/native/component
 export default function GameProfileHeader(arg0) {
   ({ game, scrollY, onHeightMeasured } = arg0);
   const tmp = closure_8();
-  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue = _mod1653.useSharedValue(0);
   items = [closure_9];
   if (scrollY == null) {
     scrollY = sharedValue;
@@ -115,7 +115,7 @@ export default function GameProfileHeader(arg0) {
   GameProfileHeaderTsx1.__workletHash = 14790445044571;
   GameProfileHeaderTsx1.__initData = tmp5;
   const genres = game.genres;
-  const animatedStyle = _mod1655.useAnimatedStyle(GameProfileHeaderTsx1);
+  const animatedStyle = _mod1653.useAnimatedStyle(GameProfileHeaderTsx1);
   const mapped = genres.map(SKUUtils.getGenreText);
   const joined = mapped.join(", ");
   const l30Rank = game.l30Rank;
@@ -147,7 +147,7 @@ export default function GameProfileHeader(arg0) {
   obj7.colors = items5;
   items4[1] = timestampProducer(LinearGradientDefault, obj7);
   obj4.children = items4;
-  const items6 = [metroImportDefault(_modDef1655.View, obj4)];
+  const items6 = [metroImportDefault(_modDef1653.View, obj4)];
   const obj8 = { style: tmp.headerContent, children: null };
   const obj9 = { style: tmp.shadowContainer, children: null };
   const obj10 = { game, imageSize: 114, size: null, style: null };

@@ -8,7 +8,7 @@ import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelTypes = fn(1072).ChannelTypes;
+const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");
 

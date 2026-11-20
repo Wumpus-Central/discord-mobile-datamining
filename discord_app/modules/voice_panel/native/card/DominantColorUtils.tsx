@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/card/DominantColorUtils.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import privDefault from "../../../../../_runtime/01456_priv.js";
+import privDefault from "../../../../../_runtime/01454_priv.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -81,11 +81,11 @@ export function useDominantRGBFromImage(arg0) {
         let result = closure_1_7.set(str, value2);
         if (null != value2) {
           if (typeof value2 === "number") {
-            let dominantColorsLocalAsset = ref(2025).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-            const obj3 = ref(2025);
+            let dominantColorsLocalAsset = ref(2023).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+            const obj3 = ref(2023);
           } else {
-            dominantColorsLocalAsset = ref(2025).getDominantColors(Image.resolveAssetSource(value2));
-            const obj4 = ref(2025);
+            dominantColorsLocalAsset = ref(2023).getDominantColors(Image.resolveAssetSource(value2));
+            const obj4 = ref(2023);
           }
           dominantColorsLocalAsset
             .then((result) => {
@@ -165,11 +165,11 @@ export function useDominantColorFromImage(avatarURI) {
         let result = closure_1_7.set(str, value2);
         if (null != value2) {
           if (typeof value2 === "number") {
-            let dominantColorsLocalAsset = ref(2025).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-            const obj3 = ref(2025);
+            let dominantColorsLocalAsset = ref(2023).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+            const obj3 = ref(2023);
           } else {
-            dominantColorsLocalAsset = ref(2025).getDominantColors(Image.resolveAssetSource(value2));
-            const obj4 = ref(2025);
+            dominantColorsLocalAsset = ref(2023).getDominantColors(Image.resolveAssetSource(value2));
+            const obj4 = ref(2023);
           }
           dominantColorsLocalAsset
             .then((result) => {

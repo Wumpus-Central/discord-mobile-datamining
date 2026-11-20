@@ -27,7 +27,7 @@ let closure_7 = async function _libDiscoreSmokeTest() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+60" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -122,7 +122,7 @@ function trackLibdiscoreFailure(arg0) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
 }
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const AnalyticEvents = fn(1071).AnalyticEvents;
 const logger = new LoggerDefault("libdiscore");
 let c6 = false;
 const size = fn(2);

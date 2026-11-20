@@ -8,12 +8,12 @@ import GuildLeaderboardSystemMessageCopy from "../../../../guild_space/gaming_le
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import _modDef8729 from "../../../../../../_runtime/metro/08729__.js";
+import _modDef8769 from "../../../../../../_runtime/metro/08769__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-const createStyles = fn(4792);
+const createStyles = fn(4794);
 let closure_5 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.ICON_MUTED });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -116,7 +116,7 @@ export function createGuildSpaceLeaderboardSystemMessage(theme) {
           obj4.previousUsernameOnClick = tmp22Result2Result;
           obj7.content = intl.formatToParts(mobileLeaderboardSystemMessage.message, obj4);
           const tmp22Result3 = formatUsernameOnClickDefault;
-          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8729);
+          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8769);
           obj7.iconTintColor = tmp13.iconTintColor;
           const merged1 = Object.assign(createCommonMessageDefault(theme));
           return obj7;
